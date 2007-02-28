@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r4.ebuild,v 1.14 2007/01/20 16:12:33 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r4.ebuild,v 1.15 2007/02/28 13:41:21 dragonheart Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -72,6 +72,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/1.3.5-files/${P}-errno.patch #139726
 	epatch "${FILESDIR}"/1.3.5-files/${P}-log-prefix-no-empty-strings.patch #148169
+	use extensions && epatch "${FILESDIR}"/1.3.5-files/${P}-linux-headers.patch #165590
 
 	if use imq ; then
 		EPATCH_OPTS="-p1" epatch "${DISTDIR}"/${IMQ_PATCH}

@@ -1,0 +1,10 @@
+--- extensions/libipt_iprange.c.orig	2007-03-01 00:19:36.000000000 +1100
++++ extensions/libipt_iprange.c	2007-03-01 00:19:58.000000000 +1100
+@@ -6,6 +6,7 @@
+ #include <getopt.h>
+ 
+ #include <iptables.h>
++#include <linux/types.h>
+ #include <linux/netfilter_ipv4/ipt_iprange.h>
+ 
+ /* Function which prints out usage message. */
