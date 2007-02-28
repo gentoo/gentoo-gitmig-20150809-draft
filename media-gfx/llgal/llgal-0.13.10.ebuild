@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.10.ebuild,v 1.1 2007/01/29 23:03:03 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.10.ebuild,v 1.2 2007/02/28 22:35:05 vapier Exp $
 
 inherit perl-module
 
@@ -10,10 +10,10 @@ SRC_URI="http://download.gna.org/llgal/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="exif"
-LINS="fr"
 
+LINS="fr"
 for ((i=0; i<${#LINS[@]}; i++)) do
 	IUSE="${IUSE} linguas_${LINS[$i]}"
 done
@@ -32,9 +32,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}/" LOCALES="${LINGUAS}" PREFIX=/usr SYSCONFDIR=/etc \
-	PERL_INSTALLDIRS=vendor MANDIR=/usr/share/man \
-	install install-doc install-man DOCDIR=/usr/share/doc/${P}/ \
-	|| die "Failed to install"
+		PERL_INSTALLDIRS=vendor MANDIR=/usr/share/man \
+		install install-doc install-man DOCDIR=/usr/share/doc/${PF}/ \
+		|| die "Failed to install"
 	fixlocalpod
 	dodoc Changes
 }
