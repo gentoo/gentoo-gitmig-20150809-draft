@@ -85,9 +85,9 @@ MD5 1f40726055a119edf736bd7c7b5620e7 files/digest-iptables-1.3.7 759
 RMD160 ee6a5537941ce5689ee0ef7e302b990a0222142c files/digest-iptables-1.3.7 759
 SHA256 7d47914b31c063817423c4f38b8f047f2f9094f749991b37e12b3987f644d990 files/digest-iptables-1.3.7 759
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFyH5vmdTrptrqvGERAsW0AJ0XjMYGwhv2E54q4y2ac5/PdeJgLACgjAuz
-6KDTPzjCACK4FXJLRdTeS9Q=
-=hwwX
+iD8DBQFF5WtemdTrptrqvGERAjYvAJ9tAXiKW+wKE2wQZee6XBFYf7BK4gCfRTGg
+lts20fuyx8ceFD07zcfgRAs=
+=+rx2
 -----END PGP SIGNATURE-----
