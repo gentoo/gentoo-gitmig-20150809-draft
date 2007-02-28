@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6887 2007/02/28 08:42:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6888 2007/02/28 08:43:24 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -898,17 +898,6 @@ net-dns/bind-dns-keygen
 # 138296, 139016, 139629, 143684
 >=sys-devel/gcc-config-2.0.0_rc1
 app-admin/eselect-compiler
-
-# Petteri Räty <betelgeuse@gentoo.org> (13 Aug 2006)
-# Masked because of bug #132578 
-# http://bugs.gentoo.org/show_bug.cgi?id=132578
-#
-# The from source version net-p2p/azureus has various
-# improvements and will replace the -bin version as
-# soon as it is marked stable. Please migrate to 
-# that version if you want to continue using the ~arch
-# version of Azureus.
-=net-p2p/azureus-bin-2.4*
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (11 Aug 2006)
 # k3b pre-release versions. Apart from being pre-release,
