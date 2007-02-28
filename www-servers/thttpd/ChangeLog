@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.21 2007/02/02 13:36:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.22 2007/02/28 22:48:06 bangert Exp $
+
+*thttpd-2.25b-r7 (28 Feb 2007)
+
+  28 Feb 2007; Thilo Bangert <bangert@gentoo.org>
+  +files/thttpd-2.25/additional-input-validation-httpd.c.diff,
+  +files/thttpd.logrotate, +thttpd-2.25b-r7.ebuild:
+  add logrotate script (bug #150993)
+  run under thttpd user instead of nobody (bug #151227)
+  extra input sanitation for htpasswd (bug #128165)
+  einfo -> elog
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   thttpd-2.25b-r6.ebuild:
