@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.12 2007/02/28 12:34:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.13 2007/02/28 20:11:40 kaiowas Exp $
 
 # Alexander H. Færøy <eroyf@gentoo.org>
 # USE masking for now.
@@ -55,7 +55,6 @@ video_cards_mga
 video_cards_nv
 video_cards_r128
 video_cards_radeon
-video_cards_savage
 video_cards_sis
 input_devices_acecad
 input_devices_aiptek
