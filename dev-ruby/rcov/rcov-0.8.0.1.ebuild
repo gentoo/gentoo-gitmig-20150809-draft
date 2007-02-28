@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.5.0.1.ebuild,v 1.1 2006/06/02 12:44:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.8.0.1.ebuild,v 1.1 2007/02/28 14:55:47 pclouds Exp $
 
 inherit ruby gems
 
