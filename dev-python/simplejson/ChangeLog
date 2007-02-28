@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/simplejson
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.1 2007/02/27 23:59:45 dev-zero Exp $
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> simplejson-1.5.ebuild:
+  Fixed ez_setup sed.
+
+  03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> -simplejson-1.4.ebuild,
+  +simplejson-1.5.ebuild, +metadata.xml:
+  Initial ebuild for bug #129346 (thanks to Brad Walker)
+

@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/beaker
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.1 2007/02/27 23:55:19 dev-zero Exp $
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +beaker-0.6.2.ebuild,
+  +metadata.xml:
+  Initial ebuild
+

@@ -1,0 +1,16 @@
+# ChangeLog for dev-python/webhelpers
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.1 2007/02/28 00:02:24 dev-zero Exp $
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  webhelpers-0.2.2.ebuild:
+  Using nose to run tests
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  webhelpers-0.2.2.ebuild:
+  Fixed routes depenency
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +webhelpers-0.2.2.ebuild, +metadata.xml:
+  Initial ebuild
+

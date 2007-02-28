@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/pylons
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.1 2007/02/28 00:08:39 dev-zero Exp $
+
+  06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +pylons-0.9.4.1.ebuild,
+  +metadata.xml:
+  Initial ebuild
+
