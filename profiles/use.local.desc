@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2629 2007/02/27 23:39:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2630 2007/02/28 09:28:28 drizzt Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -955,6 +955,8 @@ media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservi
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/mpd:icecast - Enable support for Icecast2
+media-sound/mumble:pch - Enable precompiled header support for faster compilation times (gcc >3.4 only)
+media-sound/murmur:pch - Enable precompiled header support for faster compilation times (gcc >3.4 only)
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/ncmpc:clock-screen - Enable clock screen
