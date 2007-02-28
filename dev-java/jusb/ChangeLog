@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jusb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.3 2007/01/06 11:18:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.4 2007/02/28 15:09:42 betelgeuse Exp $
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -jusb-0.4.4.ebuild:
+  Cleanup.
 
 *jusb-0.4.4-r1 (06 Jan 2007)
 
