@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.78 2007/02/06 21:23:12 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.79 2007/02/28 11:23:59 dragonheart Exp $
 
 # Alexander Færøy <eroyf@gentoo.org>
 # Masking for now.
@@ -293,3 +293,7 @@ pcsc-lite
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask specific MIPS ALSA drivers
 -alsa_cards_au1x00
+
+Daniel Black <dragonheart@gentoo.org> (28 Feb 2007)
+# Use mask l7-filter for iptables dependency - bug #150343 until mips tested
+l7-filter

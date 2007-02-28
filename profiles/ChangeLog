@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.148 2007/02/28 10:55:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.149 2007/02/28 11:23:59 dragonheart Exp $
+
+  28 Feb 2007; Daniel Black <dragonheart@gentoo.org>
+  default-linux/mips/use.mask, selinux/2005.1/mips/use.mask,
+  selinux/mips/use.mask, uclibc/mips/use.mask:
+  use.masked l7-filter on mips as per bug #150343 until tested
 
   28 Feb 2007; Christian Birchinger <joker@gentoo.org> package.mask:
   remove package.mask entry for >=media-plugins/audacious-dumb-0.40
