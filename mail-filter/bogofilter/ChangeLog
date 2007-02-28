@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.82 2007/01/15 07:25:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.83 2007/02/28 11:01:55 uberlord Exp $
+
+  28 Feb 2007; Roy Marples <uberlord@gentoo.org> bogofilter-1.1.5.ebuild:
+  Added ~x86-fbsd keyword. When building against berkdb, include the versioned
+  db header dir as /usr/include/db.h is always db-1 on FreeBSD.
 
 *bogofilter-1.1.5 (15 Jan 2007)
 

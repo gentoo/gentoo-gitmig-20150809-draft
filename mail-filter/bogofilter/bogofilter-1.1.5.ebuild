@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.5.ebuild,v 1.2 2007/02/11 10:26:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.5.ebuild,v 1.3 2007/02/28 11:01:55 uberlord Exp $
+
+inherit db-use flag-o-matic
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="gsl berkdb sqlite"
 
 DEPEND="virtual/libiconv
@@ -20,18 +22,25 @@ DEPEND="virtual/libiconv
 #	app-arch/pax" # only needed for bf_tar
 
 src_compile() {
-	local myconf=""
+	local myconf="" berkdb=false
 	myconf="$(use_with !gsl included-gsl)"
 
 	# determine backend: berkdb *is* default
 	if use berkdb && use sqlite ; then
 		elog "Both useflags berkdb and sqlite are in USE:"
 		elog "Using berkdb as database backend."
+		berkdb=true
 	elif use sqlite ; then
 		myconf="${myconf} --with-database=sqlite"
 	elif ! use berkdb ; then
 		elog "Neither berkdb nor sqlite are in USE:"
 		elog "Using berkdb as database backend."
+		berkdb=true
+	fi
+
+	# Include the right berkdb headers for FreeBSD
+	if ${berkdb} ; then
+		append-flags "-I$(db_includedir)"
 	fi
 
 	econf ${myconf} || die "configure failed"
