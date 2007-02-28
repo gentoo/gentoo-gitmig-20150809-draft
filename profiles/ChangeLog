@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.149 2007/02/28 11:23:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.150 2007/02/28 13:53:33 betelgeuse Exp $
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Added gconf local use flag for dev-java/gnu-classpath
 
   28 Feb 2007; Daniel Black <dragonheart@gentoo.org>
   default-linux/mips/use.mask, selinux/2005.1/mips/use.mask,
