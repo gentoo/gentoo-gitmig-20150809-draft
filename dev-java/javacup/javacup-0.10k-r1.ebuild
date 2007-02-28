@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.10k-r1.ebuild,v 1.7 2007/02/20 23:38:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.10k-r1.ebuild,v 1.8 2007/02/28 08:18:50 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -20,7 +20,7 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	find . -name "*.class" -exec rm -f {} \;
 }
 
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar ${PN}.jar
-	dodoc CHANGELOG README
-	dohtml manual.html
+	dodoc CHANGELOG README || die
+	dohtml manual.html || die
 	use source && java-pkg_dosrc java_cup
 }
