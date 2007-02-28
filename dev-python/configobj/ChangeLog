@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/configobj
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.1 2007/02/28 00:28:21 dev-zero Exp $
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> configobj-4.3.2.ebuild:
+  Added ~amd64 keyword
+
+  03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> configobj-4.3.2.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+
