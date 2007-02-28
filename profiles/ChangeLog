@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.144 2007/02/27 22:48:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.145 2007/02/28 08:42:01 betelgeuse Exp $
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  package.mask dev-java/avalon-logkit-bin in favor of dev-java/avalon-logkit
 
   27 Feb 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   beast 0.7.1 mask, bug #163146
