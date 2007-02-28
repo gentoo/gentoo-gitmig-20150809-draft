@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.12 2007/02/03 21:38:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.13 2007/02/28 19:39:31 dang Exp $
 
 inherit python gnome2 eutils
 
@@ -12,13 +12,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="doc gnome"
 
-DEPEND=">=dev-lang/python-2.3
+RDEPEND=">=dev-lang/python-2.3
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=dev-python/gnome-python-2.6.0
 	>=dev-python/pygtk-2.6.0
 	>=dev-python/pyorbit-1.99.0
 	gnome? ( dev-python/gnome-python-desktop )"
+
+DEPEND="${RDEPEND}
+	app-text/scrollkeeper"
 
 DOCS="AUTHORS README.CVS changelog help/"
 
