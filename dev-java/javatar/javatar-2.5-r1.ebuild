@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatar/javatar-2.5-r1.ebuild,v 1.2 2006/12/11 01:47:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatar/javatar-2.5-r1.ebuild,v 1.3 2007/02/28 17:27:21 betelgeuse Exp $
 
-inherit java-pkg-2 eutils
+inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="Java library for creation and extraction of tar archives"
 HOMEPAGE="http://www.trustice.com/java/tar/"
@@ -31,19 +31,16 @@ src_unpack() {
 	java-pkg_jar-from sun-jaf
 }
 
-src_compile() {
-	eant jar $(use_doc docs)
-}
+EANT_DOC_TARGET="docs"
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
 	java-pkg_dolauncher ${PN} --main com.ice.tar.tar
 
-	dodoc doc/LICENSE
-	dohtml doc/*.html
+	dodoc doc/LICENSE || die
+	dohtml doc/*.html || die
 
 	use doc && java-pkg_dojavadoc docs
-
 	use source && java-pkg_dosrc source/com
 }
