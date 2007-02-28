@@ -1,15 +1,15 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.4.1.ebuild,v 1.15 2006/10/14 19:58:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.4.1.ebuild,v 1.16 2007/02/28 15:37:55 seemant Exp $
 
-inherit rpm eutils flag-o-matic versionator toolchain-funcs
+inherit eutils flag-o-matic versionator toolchain-funcs
 
-MY_P=${PN}-$(replace_version_separator 3 '-alt')
-S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
-#PATCHVER="1"
+MY_P=${PN}-$(get_version_component_range 1-3)
+S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Library that allows non-privileged apps to write utmp (login) info, which need root access"
 HOMEPAGE="http://altlinux.org/index.php?module=sisyphus&package=libutempter"
-SRC_URI="ftp://ftp.altlinux.ru/pub/distributions/ALTLinux/Sisyphus/files/SRPMS/${MY_P}.src.rpm"
+SRC_URI="ftp://ftp.altlinux.org/pub/people/ldv/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -20,8 +20,6 @@ DEPEND="!virtual/utempter"
 RDEPEND="!virtual/utempter"
 
 PROVIDE="virtual/utempter"
-
-PATCHDIR="${WORKDIR}/gentoo/patches"
 
 pkg_setup() {
 	enewgroup utmp 406
