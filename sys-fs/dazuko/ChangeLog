@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dazuko
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.22 2007/02/23 16:40:31 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.23 2007/02/28 18:23:51 alonbl Exp $
+
+*dazuko-2.3.3_pre2 (28 Feb 2007)
+
+  28 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> +dazuko-2.3.3_pre2.ebuild:
+  Version bump
 
 *dazuko-2.3.3_pre1-r1 (23 Feb 2007)
 *dazuko-2.3.2-r4 (23 Feb 2007)
