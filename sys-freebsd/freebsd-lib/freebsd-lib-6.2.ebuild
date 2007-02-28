@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2.ebuild,v 1.1 2007/01/15 21:35:34 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2.ebuild,v 1.2 2007/02/28 13:45:48 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -102,7 +102,7 @@ REMOVE_SUBDIRS="libncurses libform libmenu libpanel libedit \
 	libz libbz2 libarchive \
 	libsm libsmdb libsmutil \
 	libbegemot libbsnmp \
-	libsmb libpam libpcap bind libwrap libmagic \
+	libpam libpcap bind libwrap libmagic \
 	libcom_err libtelnet"
 
 src_unpack() {

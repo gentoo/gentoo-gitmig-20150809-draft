@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.49 2007/01/15 21:35:34 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.50 2007/02/28 13:45:48 uberlord Exp $
+
+  28 Feb 2007; Roy Marples <uberlord@gentoo.org> freebsd-lib-6.2.ebuild:
+  Install libsmb for mount_smbfs in usbin.
 
 *freebsd-lib-6.2 (15 Jan 2007)
 
