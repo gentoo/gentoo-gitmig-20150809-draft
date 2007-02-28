@@ -1,15 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.0_rc2.ebuild,v 1.1 2007/02/06 03:01:59 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.0.ebuild,v 1.1 2007/02/28 15:04:04 voxus Exp $
 
 inherit flag-o-matic
 
 MY_P=${P//-tools}
-MY_P=${MY_P/_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="bind tools: dig, nslookup, and host"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"

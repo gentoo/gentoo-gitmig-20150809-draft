@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.0_rc2.ebuild,v 1.3 2007/02/07 22:48:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.0.ebuild,v 1.1 2007/02/28 15:02:18 voxus Exp $
 
 inherit eutils libtool autotools
 
@@ -9,8 +9,7 @@ DLZ_VERSION="9.3.3"
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_/}/${P/_/}.tar.gz
-	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
-	dlz? ( http://dev.gentoo.org/~voxus/bind/ctrix_dlz_${DLZ_VERSION}.patch.bz2	)"
+	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -56,14 +55,7 @@ src_unpack() {
 			"${i}"
 	done
 
-	use dlz && {
-		die "DLZ patch isn't ready yet."
-
-		epatch ${DISTDIR}/ctrix_dlz_${DLZ_VERSION}.patch.bz2
-		epatch ${FILESDIR}/${PN}-dlzbdb-includes.patch
-
-		use odbc && epatch ${FILESDIR}/${P}-missing_odbc_test.patch
-	}
+	use dlz && epatch ${FILESDIR}/${P}-dlzbdb-close_cursor.patch
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i ${S}/bin/Makefile.in
