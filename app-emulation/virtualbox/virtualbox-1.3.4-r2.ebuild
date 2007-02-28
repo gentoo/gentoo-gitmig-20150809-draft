@@ -11,8 +11,8 @@ SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~x86"
-IUSE="additions sdk"
+KEYWORDS="~amd64 ~x86"
+IUSE="additions sdk vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
@@ -55,15 +55,20 @@ src_install() {
 
 	insinto /opt/VirtualBox
 	if use sdk; then
-		doins -r sdk
-		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
+					doins -r sdk
+					make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+					fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
+	fi
+	if use vditool; then
+					doins vditool
+					make_wrapper vditool "./vditool" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+					fperms 0755 /opt/VirtualBox/vditool
 	fi
 
-	rm -rf sdk src tst* testcase additions vboxdrv.ko SUPInstall SUPUninstall
+	rm -rf sdk src tst* testcase additions vditool vboxdrv.ko xpidl SUPInstall SUPUninstall
 
 	doins -r *
-	for each in VBox{BFE,Manage,SDL,SVC,XPCOMIPCD} VirtualBox vditool xpidl ; do
+	for each in VBox{BFE,Manage,SDL,SVC,XPCOMIPCD} VirtualBox ; do
 		fperms 0755 /opt/VirtualBox/${each}
 	done
 	make_wrapper vboxsvc "./VBoxSVC" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
