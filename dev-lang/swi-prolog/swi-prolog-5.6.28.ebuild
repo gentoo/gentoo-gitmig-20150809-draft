@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.28.ebuild,v 1.8 2007/02/27 07:57:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.28.ebuild,v 1.9 2007/02/28 08:01:40 keri Exp $
 
 inherit eutils java-pkg-opt-2
 
@@ -47,6 +47,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-errno.patch
 	epatch "${FILESDIR}"/${PN}-jpl-PLARCH.patch
 	epatch "${FILESDIR}"/${PN}-jpl-LDPATH-r2.patch
+	epatch "${FILESDIR}"/${PN}-jpl-bounded-arith.patch
 	epatch "${FILESDIR}"/${PN}-jpl-junit.patch
 	epatch "${FILESDIR}"/${PN}-jpl-check_java-r1.patch
 	epatch "${FILESDIR}"/${PN}-ltx2htm.patch
