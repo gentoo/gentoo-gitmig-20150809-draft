@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.1 2007/02/28 13:51:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.2 2007/02/28 23:20:30 betelgeuse Exp $
 
-inherit eutils multilib
+inherit eutils flag-o-matic multilib
 
 MY_P=${P/gnu-/}
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java programming language"
@@ -83,6 +83,10 @@ src_compile() {
 	# TODO: check head and report upstream. If gconf is not installed it
 	# it should set this automatically to file
 	use gconf || myconf="${myconf} --enable-default-preferences-peer=file"
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=168800
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=31002
+	replace-flags -O3 -O2
 
 	# don't use econf, because it ends up putting things under /usr, which may
 	# collide with other slots of classpath
