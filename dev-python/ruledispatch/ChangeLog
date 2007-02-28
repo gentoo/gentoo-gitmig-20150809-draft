@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/ruledispatch
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ChangeLog,v 1.1 2007/02/28 00:19:35 dev-zero Exp $
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  ruledispatch-0.5_pre2115.ebuild:
+  Added ~amd64 keyword. Corrected dependencies.
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +ruledispatch-0.5_pre2115.ebuild, -ruledispatch-0.5_pre2247.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+
