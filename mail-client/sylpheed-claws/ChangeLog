@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.122 2007/01/29 00:06:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.123 2007/02/28 09:06:28 gmsoft Exp $
+
+  28 Feb 2007; Guy Martin <gmsoft@gentoo.org> sylpheed-claws-2.6.1.ebuild:
+  Stable on hppa
 
   29 Jan 2007; Jason Wever <weeve@gentoo.org> sylpheed-claws-2.6.1.ebuild:
   Stable on SPARC wrt bug #163611.
