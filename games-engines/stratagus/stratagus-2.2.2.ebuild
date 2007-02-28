@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.2.ebuild,v 1.1 2007/01/15 14:09:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.2.ebuild,v 1.2 2007/02/28 16:12:55 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A realtime strategy game engine"
 HOMEPAGE="http://www.stratagus.org/"
@@ -33,6 +33,7 @@ src_unpack() {
 		-e 's/-O.*\(-fsigned-char\).*/\1"/' \
 		configure \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-lua.patch
 }
 
 src_compile() {
