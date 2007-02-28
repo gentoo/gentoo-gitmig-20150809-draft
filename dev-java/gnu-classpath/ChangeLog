@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.67 2007/01/05 23:29:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.68 2007/02/28 13:51:46 betelgeuse Exp $
+
+*gnu-classpath-0.93 (28 Feb 2007)
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +gnu-classpath-0.93.ebuild:
+  Version bump. This version add the gconf use flag for a preferences
+  backstore and nsplugin for a browser plugin.
 
   05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   gnu-classpath-0.90.ebuild, gnu-classpath-0.92.ebuild:
