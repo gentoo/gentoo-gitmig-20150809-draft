@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/createtorrent
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.1 2007/02/28 22:55:09 armin76 Exp $
+
+*createtorrent-1.1.3 (28 Feb 2007)
+
+  28 Feb 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +createtorrent-1.1.3.ebuild:
+  New ebuild
+
