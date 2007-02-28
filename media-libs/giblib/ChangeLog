@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.19 2007/02/09 03:42:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.20 2007/02/28 19:04:34 welp Exp $
+
+  28 Feb 2007; Peter Weller <welp@gentoo.org> giblib-1.2.4.ebuild:
+  Keyworded x86-fbsd
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
