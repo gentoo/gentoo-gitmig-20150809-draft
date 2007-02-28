@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.3 2006/10/15 15:36:57 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.4 2007/02/28 16:50:47 armin76 Exp $
 
 inherit autotools
 
@@ -14,7 +14,7 @@ IUSE=""
 
 KEYWORDS="~x86"
 
-RDEPEND=">=dev-lang/lua-5.0"
+RDEPEND="=dev-lang/lua-5.0*"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
