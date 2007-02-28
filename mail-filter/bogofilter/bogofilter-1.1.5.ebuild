@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.5.ebuild,v 1.3 2007/02/28 11:01:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.5.ebuild,v 1.4 2007/02/28 11:50:11 tove Exp $
 
 inherit db-use flag-o-matic
 
@@ -22,20 +22,19 @@ DEPEND="virtual/libiconv
 #	app-arch/pax" # only needed for bf_tar
 
 src_compile() {
-	local myconf="" berkdb=false
+	local myconf="" berkdb=true
 	myconf="$(use_with !gsl included-gsl)"
 
 	# determine backend: berkdb *is* default
 	if use berkdb && use sqlite ; then
 		elog "Both useflags berkdb and sqlite are in USE:"
 		elog "Using berkdb as database backend."
-		berkdb=true
 	elif use sqlite ; then
 		myconf="${myconf} --with-database=sqlite"
+		berkdb=false
 	elif ! use berkdb ; then
 		elog "Neither berkdb nor sqlite are in USE:"
 		elog "Using berkdb as database backend."
-		berkdb=true
 	fi
 
 	# Include the right berkdb headers for FreeBSD
