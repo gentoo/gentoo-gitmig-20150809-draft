@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.9 2007/02/22 00:29:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.10 2007/02/28 22:57:00 bangert Exp $
+
+  28 Feb 2007; Thilo Bangert <bangert@gentoo.org> files/webfs.initd:
+  fix typo (bug #165294)
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
