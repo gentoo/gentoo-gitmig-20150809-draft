@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/fastjar
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.1 2007/02/28 12:13:02 betelgeuse Exp $
+
+*fastjar-0.94 (28 Feb 2007)
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +fastjar-0.94.ebuild:
+  Initial addition. Ebuild written by me. Fastjar is a jar implementation
+  written in C.
+
