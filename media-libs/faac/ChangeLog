@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.42 2007/02/17 21:46:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.43 2007/02/28 16:09:18 blubb Exp $
+
+  28 Feb 2007; Simon Stelling <blubb@gentoo.org> faac-1.24-r2.ebuild:
+  stable on amd64; bug 166539
 
   17 Feb 2007; Fabian Groffen <grobian@gentoo.org> faac-1.24.ebuild,
   faac-1.24-r2.ebuild, faac-1.24-r3.ebuild:
