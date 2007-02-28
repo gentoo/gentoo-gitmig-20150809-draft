@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.9.2.ebuild,v 1.1 2007/01/22 00:09:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.10.0.ebuild,v 1.1 2007/02/28 13:35:21 rl03 Exp $
 
 inherit eutils webapp depend.php
 
@@ -40,7 +40,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/config.default.php-2.9.2.patch
+	epatch ${FILESDIR}/config.default.php-2.9.10.patch
 	# bug 152933
 	cd libraries && epatch ${FILESDIR}/common.lib.php.diff
 	cd ..
