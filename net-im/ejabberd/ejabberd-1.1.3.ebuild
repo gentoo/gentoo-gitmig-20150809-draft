@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.3.ebuild,v 1.1 2007/02/27 20:26:12 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.3.ebuild,v 1.2 2007/02/28 07:51:35 opfer Exp $
 
 inherit eutils multilib versionator
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://ejabberd.jabber.ru/"
 SRC_URI="http://process-one.net/en/projects/${PN}/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="mod_irc mod_muc mod_pubsub ldap odbc ssl web"
 
 DEPEND=">=net-im/jabber-base-0.01
@@ -27,34 +27,33 @@ PROVIDE="virtual/jabber-server"
 S=${WORKDIR}/${P}/src
 
 src_compile() {
-	econf ${myconf}                              \
-		$(use_enable mod_irc)                \
-		$(use_enable ldap eldap)             \
-		$(use_enable mod_muc)                \
-		$(use_enable mod_pubsub)             \
-		$(use_enable ssl tls)                \
-		$(use_enable web)                    \
-		$(use_enable odbc)                   \
+	econf ${myconf}								 \
+		$(use_enable mod_irc)				 \
+		$(use_enable ldap eldap)			 \
+		$(use_enable mod_muc)				 \
+		$(use_enable mod_pubsub)			 \
+		$(use_enable ssl tls)				 \
+		$(use_enable web)					 \
+		$(use_enable odbc)					 \
 		|| die "econf failed"
 
 	emake || die "compiling ejabberd core failed"
 }
 
 src_install() {
-	make                                                       \
-		DESTDIR=${D}                                       \
+	make													   \
+		DESTDIR=${D}									   \
 		EJABBERDDIR=${D}/usr/$(get_libdir)/erlang/lib/${P} \
-		ETCDIR=${D}${JABBER_ETC}                           \
-		LOGDIR=${D}${JABBER_LOG}                           \
-	    install \
-	    || die "install failed"
+		ETCDIR=${D}${JABBER_ETC}						   \
+		LOGDIR=${D}${JABBER_LOG}						   \
+		install \
+		|| die "install failed"
 
 	chown -R jabber:jabber "${D}${JABBER_ETC}"
 	chown -R jabber:jabber "${D}${JABBER_LOG}"
 	chown -R jabber:jabber "${D}/usr/$(get_libdir)/erlang/lib/${P}"
 
 	insinto /usr/share/doc/${PF}
-	dodoc doc/release_notes_${PV}.txt
 	dohtml doc/*.{html,png}
 
 	#
