@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.1.0.ebuild,v 1.2 2006/09/02 02:51:22 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.3.0.ebuild,v 1.1 2007/02/28 14:52:17 pclouds Exp $
 
 inherit eutils
 
@@ -12,28 +12,17 @@ HOMEPAGE="http://www.kmc.gr.jp/~ohai/rubysdl.en.html"
 SRC_URI="http://www.kmc.gr.jp/~ohai/rubysdl/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 
-# Optional libraries, not in Portage as of writing:
-#	SGE -- ebuild submitted, not yet in portage CVS
-#	SDLSKK	--	http://www.kmc.gr.jp/~ohai/
-
-# local USE flags "image mixer sge"
-IUSE="image mixer truetype mpeg"
+IUSE="image mixer truetype mpeg sge"
 
 RDEPEND="virtual/ruby
 	>=media-libs/libsdl-1.2.5
 	truetype? ( >=media-libs/sdl-ttf-2.0.6 )
 	image? ( >=media-libs/sdl-image-1.2.2 )
 	mixer? ( >=media-libs/sdl-mixer-1.2.4 )
-	mpeg? ( >=media-libs/smpeg-0.4.4-r1 )"
-#	sge? ( >=media-libs/sge )
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${PN}-1.1.0-sdl-mixer.patch"
-}
+	mpeg? ( >=media-libs/smpeg-0.4.4-r1 )
+	sge? ( media-libs/sge )"
 
 src_compile() {
 	ruby extconf.rb || die "extconf.rb failed"
@@ -51,7 +40,7 @@ src_install () {
 }
 
 pkg_postinst () {
-	if ! use image || ! use mixer || ! use truetype || ! use mpeg ; then
+	if ! use image || ! use mixer || ! use truetype || ! use mpeg || ! use sge; then
 		echo ""
 		ewarn "If any of the following packages are not installed, Ruby/SDL"
 		ewarn "will be missing some functionality. This is ok, but may"
@@ -60,7 +49,7 @@ pkg_postinst () {
 		ewarn "\tmedia-libs/sdl-image\tImage loading (PNG, JPEG, etc.)"
 		ewarn "\tmedia-libs/sdl-mixer\tSound mixing"
 		ewarn "\tmedia-libs/sdl-ttf\tTrueType Fonts"
-		#ewarn "\tmedia-libs/sge\t\tVarious cool graphics extensions"
+		ewarn "\tmedia-libs/sge\t\tVarious cool graphics extensions"
 		ewarn "\tmedia-libs/smpeg\tMPEG playback (including mp3)"
 		ewarn ""
 		ewarn "If you need the functionality offered by these libraries,"
