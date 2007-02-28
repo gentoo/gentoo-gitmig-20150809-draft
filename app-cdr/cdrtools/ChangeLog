@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrtools
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.161 2006/11/12 05:24:44 pylon Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.162 2007/02/28 00:10:16 pylon Exp $
+
+*cdrtools-2.01.01_alpha23 (28 Feb 2007)
+
+  28 Feb 2007; Lars Weiler <pylon@gentoo.org>
+  +cdrtools-2.01.01_alpha23.ebuild:
+  Version bump; removed gnuconfig.eclass functions from bug #160174.
 
 *cdrtools-2.01.01_alpha20 (12 Nov 2006)
 
