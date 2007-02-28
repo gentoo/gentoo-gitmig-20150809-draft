@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.3-r1.ebuild,v 1.1 2007/02/28 10:21:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.3-r1.ebuild,v 1.2 2007/02/28 12:28:15 dragonheart Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -164,7 +164,7 @@ pkg_postinst() {
 	ewarn "lower cost to memory. For more information on the new features"
 	ewarn "in snort 2.6, please take a look at the release notes located in..."
 	ewarn
-	ewarn "  /usr/share/doc/${PF}/RELEASE.NOTES.gz"
+	ewarn "  /usr/share/doc/${PF}/RELEASE.NOTES.bz2"
 	ewarn
 	einfo "To use a database as a backend for snort you will have to"
 	einfo "import the correct tables to the database."
