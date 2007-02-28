@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2-r1.ebuild,v 1.3 2007/02/04 14:20:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2-r1.ebuild,v 1.4 2007/02/28 11:01:02 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2
 
@@ -9,16 +11,14 @@ SRC_URI="mirror://sourceforge/trove4j/${P}.tar.gz"
 HOMEPAGE="http://trove4j.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 RDEPEND=">=virtual/jre-1.4"
-DEPEND=">=virtual/jdk-1.4
-	source? ( app-arch/zip )"
-IUSE="doc source"
+DEPEND=">=virtual/jdk-1.4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	rm -f lib/*.jar
+	cd "${S}"
+	rm -v lib/*.jar
 	rm -fr javadocs/*
 }
 
@@ -33,14 +33,14 @@ src_compile() {
 		javadoc -source $(java-pkg_get-source) -quiet -d ${S}/javadoc $(find * -type d | tr '/' '.')
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	jar cf lib/${PN}.jar -C build gnu || die "failed too make jar"
 }
 
 src_install() {
 	java-pkg_dojar lib/${PN}.jar
-	dodoc *.txt ChangeLog AUTHORS
-	use doc && java-pkg_dohtml -r javadoc
+	dodoc *.txt ChangeLog AUTHORS || die
+	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/*
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/trove
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.6 2007/02/04 14:20:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.7 2007/02/28 11:01:02 betelgeuse Exp $
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> trove-1.0.2-r1.ebuild:
+  Ebuild cleanup and mark stable on amd64.
 
   04 Feb 2007; nixnut <nixnut@gentoo.org> trove-1.0.2-r1.ebuild:
   Stable on ppc wrt bug 165205
