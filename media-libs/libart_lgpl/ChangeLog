@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.41 2007/02/26 22:34:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.42 2007/02/28 18:53:44 dang Exp $
+
+*libart_lgpl-2.3.19 (28 Feb 2007)
+
+  28 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  -libart_lgpl-2.3.18.ebuild, +libart_lgpl-2.3.19.ebuild:
+  Bump to 2.3.19
+  - Fix typo that broke versioning.  Gentoo bug #168649
 
 *libart_lgpl-2.3.18 (26 Feb 2007)
 
