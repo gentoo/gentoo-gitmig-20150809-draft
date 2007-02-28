@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.1.ebuild,v 1.2 2007/02/28 16:11:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.3.ebuild,v 1.1 2007/02/28 16:47:04 pylon Exp $
 
 inherit eutils linux-info
 
@@ -17,6 +17,7 @@ COMMON_DEPEND="!net-misc/openswan
 	dev-libs/gmp"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources
+	<sys-kernel/linux-headers-2.6.18
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
 	smartcard? ( dev-libs/opensc )"
@@ -53,12 +54,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/ipsec-path.patch.bz2
-
-	# Fix for newer sys-kernel/linux-headers; bug #162811
-	if has_version ">=sys-kernel/linux-headers-2.6.18" ; then
-		epatch ${FILESDIR}/linux-headers-2.6.18.patch
-	fi
+	epatch ${FILESDIR}/ipsec-path-${PV}.patch.bz2
 
 	if use curl ; then
 		ebegin "Curl support requested. Enabling curl support"

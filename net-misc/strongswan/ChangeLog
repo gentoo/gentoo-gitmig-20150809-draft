@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.52 2007/02/28 16:11:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.53 2007/02/28 16:47:04 pylon Exp $
+
+*strongswan-2.8.3 (28 Feb 2007)
+
+  28 Feb 2007; Lars Weiler <pylon@gentoo.org>
+  -files/linux-headers-2.6.18.patch, +files/ipsec-path-2.8.3.patch.bz2,
+  strongswan-2.8.0.ebuild, -strongswan-2.8.1.ebuild,
+  +strongswan-2.8.3.ebuild:
+  Version bump. Added dependency to linux-headers as new versions (>=2.6.18)
+  removed some needed functions.
 
   28 Feb 2007; Lars Weiler <pylon@gentoo.org> -strongswan-2.5.7.ebuild,
   -strongswan-2.6.2.ebuild, strongswan-2.8.0.ebuild,
