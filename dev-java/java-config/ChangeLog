@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.142 2007/02/02 23:21:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.143 2007/02/28 10:40:47 betelgeuse Exp $
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  java-config-2.0.31-r3.ebuild:
+  Marked stable on ia64 for bug #162368.
 
   02 Feb 2007; Steve Dibb <beandog@gentoo.org> java-config-2.0.31.ebuild:
   amd64 stable, bug 162368
