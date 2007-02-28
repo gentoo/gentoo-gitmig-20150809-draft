@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.79 2007/02/28 11:23:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.80 2007/02/28 12:34:54 dragonheart Exp $
 
 # Alexander Færøy <eroyf@gentoo.org>
 # Masking for now.
@@ -296,4 +296,4 @@ pcsc-lite
 
 Daniel Black <dragonheart@gentoo.org> (28 Feb 2007)
 # Use mask l7-filter for iptables dependency - bug #150343 until mips tested
-l7-filter
+l7filter
