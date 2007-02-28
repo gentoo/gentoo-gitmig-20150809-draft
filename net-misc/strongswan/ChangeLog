@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.51 2007/02/10 13:36:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.52 2007/02/28 16:11:34 pylon Exp $
+
+  28 Feb 2007; Lars Weiler <pylon@gentoo.org> -strongswan-2.5.7.ebuild,
+  -strongswan-2.6.2.ebuild, strongswan-2.8.0.ebuild,
+  strongswan-2.8.1.ebuild:
+  Clean out old versions.  Resolve bug #163983 with using emake instead of make.
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> strongswan-2.8.0.ebuild:
   amd64 stable, bug 162649

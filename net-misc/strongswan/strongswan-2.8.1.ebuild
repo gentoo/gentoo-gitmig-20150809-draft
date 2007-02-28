@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.1.ebuild,v 1.1 2007/01/20 00:20:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.1.ebuild,v 1.2 2007/02/28 16:11:34 pylon Exp $
 
 inherit eutils linux-info
 
@@ -95,7 +95,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		USERCOMPILE="${CFLAGS}" \
 		FINALCONFDIR=/etc/ipsec \
@@ -111,7 +111,7 @@ src_install() {
 	# make install wants this directory
 	dodir /etc/init.d
 
-	make \
+	emake \
 		DESTDIR="${D}" \
 		USERCOMPILE="${CFLAGS}" \
 		FINALCONFDIR=/etc/ipsec \
