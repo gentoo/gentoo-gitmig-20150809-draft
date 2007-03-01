@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.4 2007/02/03 00:47:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.5 2007/03/01 00:04:41 nyhm Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 LICENSE="Allegro"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 -sparc ~x86"
-IUSE="X alsa arts esd fbcon jack mmx oss sse svga vga"
+IUSE="X alsa arts esd fbcon jack oss svga vga"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
@@ -49,8 +49,9 @@ src_compile() {
 	econf \
 		--enable-linux \
 		--enable-static \
-		$(use_enable mmx) \
-		$(use_enable sse) \
+		--disable-asm \
+		--disable-mmx \
+		--disable-sse \
 		$(use_enable oss ossdigi) \
 		$(use_enable oss ossmidi) \
 		$(use_enable alsa alsadigi) \
@@ -73,7 +74,14 @@ src_compile() {
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
-	# Different format versions of the Allegro documentation
+	if use X ; then
+		newbin setup/setup ${PN}-setup || die "newbin failed"
+		insinto /usr/share/${PN}
+		doins {keyboard,language,setup/setup}.dat || die "doins failed"
+		newicon misc/alex.png ${PN}.png
+		make_desktop_entry ${PN}-setup "Allegro Setup" ${PN}.png "Settings"
+	fi
+
 	dodoc AUTHORS CHANGES THANKS readme.txt todo.txt
 	doman docs/man/*.3
 	doinfo docs/info/${PN}.info
@@ -84,4 +92,8 @@ src_install() {
 	dodoc docs/rtf/*.rtf
 	docinto build
 	dodoc docs/build/*.txt
+}
+
+pkg_postinst() {
+	ewarn "Please run \"revdep-rebuild --library liballeg.so.4.2\""
 }
