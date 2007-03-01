@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/imediff2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.1 2007/02/18 23:11:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.2 2007/03/01 22:13:19 dev-zero Exp $
+
+  01 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
+  imediff2-1.1.1.1.ebuild:
+  Added ~amd64 keyword.
 
 *imediff2-1.1.1.1 (18 Feb 2007)
 
