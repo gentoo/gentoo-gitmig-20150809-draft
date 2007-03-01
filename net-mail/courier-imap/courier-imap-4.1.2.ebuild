@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.3 2007/02/27 17:34:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.4 2007/03/01 21:57:51 chutzpah Exp $
 
 WANT_AUTOCONF="2.6"
 
@@ -72,6 +72,9 @@ src_unpack() {
 
 	# kill unneeded call to AC_PROG_SYSCONFTOOL (bug #168206)
 	epatch "${FILESDIR}"/${P}-aclocal-fix.patch
+
+	# as-needed fix (bug #168769)
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	# These patches should fix problem detecting Berkeley DB.
 	# We now can compile with db4 support.
