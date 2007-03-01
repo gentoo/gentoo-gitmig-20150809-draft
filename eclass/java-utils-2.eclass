@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.58 2007/02/28 10:45:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.59 2007/03/01 12:53:38 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -767,7 +767,7 @@ java-pkg_recordjavadoc()
 # Example: get junit.jar which is needed only for building
 #	java-pkg_jar-from --build-only junit junit.jar
 #
-# @param $opt 
+# @param $opt
 #	--build-only - makes the jar(s) not added into package.env DEPEND line.
 #	  (assumed automatically when called inside src_test)
 #	--with-dependencies - get jars also from requested package's dependencies
@@ -785,7 +785,7 @@ java-pkg_jar-from() {
 	local build_only=""
 	local destdir="."
 	local deep=""
-	
+
 	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
 
 	while [[ "${1}" == --* ]]; do
@@ -873,7 +873,7 @@ java-pkg_jarfrom() {
 # Example Return:
 #	/usr/share/xerces-2/lib/xml-apis.jar:/usr/share/xerces-2/lib/xmlParserAPIs.jar:/usr/share/xalan/lib/xalan.jar
 #
-# @param $opt 
+# @param $opt
 #	--build-only - makes the jar(s) not added into package.env DEPEND line.
 #	  (assumed automatically when called inside src_test)
 #	--with-dependencies - get jars also from requested package's dependencies
@@ -886,7 +886,7 @@ java-pkg_getjars() {
 
 	local build_only=""
 	local deep=""
-	
+
 	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
 
 	while [[ "${1}" == --* ]]; do
@@ -949,7 +949,7 @@ java-pkg_getjar() {
 	debug-print-function ${FUNCNAME} $*
 
 	local build_only=""
-	
+
 	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
 
 	while [[ "${1}" == --* ]]; do
@@ -1775,7 +1775,7 @@ java-pkg_init() {
 	# This also helps prevent unexpected dependencies on random things
 	# from the CLASSPATH.
 	unset CLASSPATH
-	
+
 	# Unset external ANT_ stuff
 	unset ANT_TASKS
 	unset ANT_OPTS
