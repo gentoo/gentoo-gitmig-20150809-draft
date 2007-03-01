@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71.ebuild,v 1.1 2007/03/01 04:40:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71.ebuild,v 1.2 2007/03/01 05:32:15 cardoe Exp $
 
 inherit eutils
 
@@ -15,11 +15,7 @@ DEPEND="sys-fs/fuse
 		net-misc/libupnp"
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS CHANGELOG NEWS README search_help.txt THANKS
 }
