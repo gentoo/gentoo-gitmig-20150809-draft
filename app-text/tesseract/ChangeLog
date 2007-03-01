@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.6 2007/02/26 18:42:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.7 2007/03/01 14:39:41 chutzpah Exp $
+
+  01 Mar 2007; Patrick McLean <chutzpah@gentoo.org>
+  +files/tesseract-1.03-globals.patch, tesseract-1.03-r1.ebuild:
+  Add patch contributed by David Watzke <david@watzke.cz> to fix build errors
+  on some systems (fixes bug #168193)
 
   26 Feb 2007; Michael Cummings <mcummings@gentoo.org>
   tesseract-1.03-r1.ebuild:

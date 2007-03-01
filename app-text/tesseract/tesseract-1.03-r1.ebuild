@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-1.03-r1.ebuild,v 1.4 2007/02/26 18:42:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-1.03-r1.ebuild,v 1.5 2007/03/01 14:39:41 chutzpah Exp $
 
 inherit eutils multilib
 
@@ -20,7 +20,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${FILESDIR}"/tesseract-1.0.xterm-path.patch
+	epatch "${FILESDIR}"/${PN}-1.0.xterm-path.patch
+	epatch "${FILESDIR}"/${P}-globals.patch
 }
 
 src_compile() {
