@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.93 2007/02/26 20:54:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.94 2007/03/01 16:58:44 dang Exp $
+
+  01 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/intltool-0.35.5-update.patch, intltool-0.35.5.ebuild:
+  Revert intltool-extract detection; bug #168832
 
 *intltool-0.35.5 (26 Feb 2007)
 
