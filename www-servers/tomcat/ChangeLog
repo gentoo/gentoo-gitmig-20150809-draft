@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.123 2007/02/27 18:54:16 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.124 2007/03/01 00:11:13 wltjr Exp $
+
+*tomcat-6.0.10 (01 Mar 2007)
+
+  01 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -tomcat-6.0.9_beta.ebuild, -tomcat-6.0.10_pre.ebuild,
+  +tomcat-6.0.10.ebuild:
+  Brand new 0 day release version of Tomcat 6.0.x :). Removed older
+  development versions. Long live tc 6.0.x die <=5.5.x
 
   27 Feb 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-5.5.20-r10.ebuild, tomcat-5.5.22_pre-r1.ebuild:
