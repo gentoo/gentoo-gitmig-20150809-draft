@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.24 2007/02/27 11:04:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.25 2007/03/01 18:17:45 blubb Exp $
+
+  01 Mar 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-soundlibs-10.0-r1.ebuild:
+  only depend on qtlibs if USE=arts is given; arts is discouraged anyway
 
 *emul-linux-x86-soundlibs-10.0-r1 (27 Feb 2007)
 
