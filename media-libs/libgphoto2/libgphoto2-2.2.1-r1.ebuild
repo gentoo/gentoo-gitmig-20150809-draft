@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.18 2007/02/17 00:35:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.19 2007/03/01 21:03:01 zzam Exp $
 
 inherit libtool eutils autotools
 
@@ -29,9 +29,9 @@ DEPEND="${RDEPEND}
 		=app-text/docbook-sgml-dtd-4.2*
 	)"
 
-# By default, drivers for all supported cards will be compiled.
-# If you want to only compile for specific card(s), set CAMERAS
-# environment to a comma-separated list (no spaces) of drivers that
+# By default, drivers for all supported cameras will be compiled.
+# If you want to only compile for specific camera(s), set CAMERAS
+# environment to a space-separated list (no commas) of drivers that
 # you want to build.
 IUSE_CAMERAS="adc65 agfa-cl20 aox barbie canon casio clicksmart310
 	digigr8 digita dimera directory enigma13 fuji gsmart300 hp215 iclick jamcam
