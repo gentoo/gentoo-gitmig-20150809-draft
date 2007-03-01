@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javatar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatar/ChangeLog,v 1.5 2007/02/28 17:27:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatar/ChangeLog,v 1.6 2007/03/01 07:36:23 opfer Exp $
+
+  01 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  javatar-2.5-r1.ebuild:
+  stable x86; bug 168762
 
   28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> javatar-2.5-r1.ebuild:
   Ebuild cleanup.
