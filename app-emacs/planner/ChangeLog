@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/planner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.15 2007/02/28 17:00:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.16 2007/03/01 07:11:13 opfer Exp $
+
+  01 Mar 2007; Christian Faulhammer <opfer@gentoo.org> -planner-3.26.ebuild,
+  -planner-3.30.ebuild, -planner-3.40.ebuild, -planner-3.41.ebuild:
+  clean up
 
   28 Feb 2007; Simon Stelling <blubb@gentoo.org> planner-3.41-r1.ebuild:
   ~amd64; bug 163401
