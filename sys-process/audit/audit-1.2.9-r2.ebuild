@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.2.9-r2.ebuild,v 1.1 2007/02/25 11:29:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.2.9-r2.ebuild,v 1.2 2007/03/01 06:33:47 robbat2 Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -46,7 +46,7 @@ src_install() {
 	gen_usr_ldscript libaudit.so libauparse.so
 	sed -i \
 		-e "s~^dependency_libs=' /$(get_libdir)/libaudit.la'~dependency_libs=' /usr/$(get_libdir)/libaudit.la~g" \
-		${D}/usr/lib/python2.4/site-packages/_audit.la || \
+		${D}/usr/$(get_libdir)/python2.4/site-packages/_audit.la || \
 		die "Failed to fix _libaudit.la for Python"
 
 	# remove RedHat garbage
