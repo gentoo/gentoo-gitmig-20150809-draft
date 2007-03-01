@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.42 2007/02/28 18:53:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.43 2007/03/01 16:43:25 dang Exp $
+
+*libart_lgpl-2.3.19-r1 (01 Mar 2007)
+
+  01 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/libart_lgpl-2.3.19-alloc.patch, -libart_lgpl-2.3.19.ebuild,
+  +libart_lgpl-2.3.19-r1.ebuild:
+  Bump to 2.3.19-r1
+  	- Include real fix for building C++.  Bug #168794 and #168649
 
 *libart_lgpl-2.3.19 (28 Feb 2007)
 

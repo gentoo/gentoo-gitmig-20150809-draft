@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.19.ebuild,v 1.2 2007/02/28 22:13:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.19-r1.ebuild,v 1.1 2007/03/01 16:43:25 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="a LGPL version of libart"
 HOMEPAGE="http://www.levien.com/libart"
@@ -16,3 +16,9 @@ DEPEND="dev-util/pkgconfig"
 RDEPEND=""
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-alloc.patch
+}
