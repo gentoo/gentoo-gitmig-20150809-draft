@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/mips/use.mask,v 1.5 2007/02/28 12:34:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/mips/use.mask,v 1.6 2007/03/01 07:47:37 dragonheart Exp $
 
 # Henrik Brix Andersen <brix@gentoo.org>
 # According to the mips herd, we currently have no way of testing
@@ -13,6 +13,6 @@ php
 # Unmask specific MIPS ALSA drivers
 -alsa_cards_au1x00
 
-Daniel Black <dragonheart@gentoo.org> (28 Feb 2007)
+# Daniel Black <dragonheart@gentoo.org> (28 Feb 2007)
 # Use mask l7-filter for iptables dependency - bug #150343 until mips tested
 l7filter
