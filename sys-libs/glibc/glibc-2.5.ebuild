@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.36 2007/02/25 19:52:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.37 2007/03/01 02:10:10 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -269,7 +269,11 @@ toolchain-glibc_headers_compile() {
 toolchain-glibc_src_test() {
 	cd "${WORKDIR}"/build-${ABI}-${CTARGET}-$1 || die "cd build-${ABI}-${CTARGET}-$1"
 	unset LD_ASSUME_KERNEL
-	make check || die "make check failed for ${ABI}-${CTARGET}-$1"
+	make check && return 0
+	einfo "make check failed - re-running with --ignore-errors to get the rest of the results"
+	make -k check
+	ewarn "make check failed for ${ABI}-${CTARGET}-$1"
+	return 1
 }
 
 toolchain-glibc_pkg_preinst() {
@@ -1125,6 +1129,8 @@ src_compile() {
 }
 
 src_test() {
+	local ret=0
+
 	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
@@ -1134,14 +1140,18 @@ src_test() {
 			export ABI
 			einfo "   Testing ${ABI} glibc"
 			src_test
+			((ret+=$?))
 		done
 		ABI=${OABI}
 		unset OABI
-		return 0
+		[[ ${ret} -ne 0 ]] \
+			&& die "tests failed" \
+			|| return 0
 	fi
 
-	want_linuxthreads && toolchain-glibc_src_test linuxthreads
-	want_nptl && toolchain-glibc_src_test nptl
+	want_linuxthreads && toolchain-glibc_src_test linuxthreads ; ((ret+=$?))
+	want_nptl && toolchain-glibc_src_test nptl ; ((ret+=$?))
+	return ${ret}
 }
 
 src_strip() {
