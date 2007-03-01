@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.88 2007/02/03 00:04:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.89 2007/03/01 12:08:48 genstef Exp $
+
+  01 Mar 2007; <genstef@gentoo.org> pax-utils-0.1.13.ebuild,
+  pax-utils-0.1.14.ebuild, pax-utils-0.1.15.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   03 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   pax-utils-0.1.15.ebuild:
