@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2637 2007/02/28 23:25:25 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2638 2007/03/01 20:43:19 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1831,6 +1831,12 @@ www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revi
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/viewcvs:mod_python - Add mod_python support
 www-apps/viewcvs:standalone - Install the standalone client
+www-apps/viewvc:cvs - Add cvs support
+www-apps/viewvc:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
+www-apps/viewvc:enscript - Add enscript support to colourize code stored in the repository
+www-apps/viewvc:highlight - Add highlight support to colourize code stored in the repository
+www-apps/viewvc:mod_python - Add mod_python support
+www-apps/viewvc:subversion - Add subversion support
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-apps/xrms:intl - Enable different languages
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
