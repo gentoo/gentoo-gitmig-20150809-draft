@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6895 2007/03/01 11:54:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6896 2007/03/01 21:20:26 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen (1 Mar 2007)
+# Broken. Masked for testing. See bug #146443
+media-video/dxr3player
 
 # Denis Dupeyron <calchan@gentoo.org> (28 Feb 2007)
 # Broken, dead upstream. See bug #166598.
