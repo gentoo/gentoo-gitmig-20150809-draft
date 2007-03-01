@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.6 2006/11/01 14:24:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.7 2007/03/01 07:02:07 pva Exp $
 
 inherit eutils
 
@@ -14,10 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="gd sqlite postgres"
 
-RDEPEND="virtual/libc
-	|| ( sqlite? ( =dev-db/sqlite-2* )
-		postgres? ( dev-db/postgresql )
-		sys-libs/gdbm )"
+RDEPEND="postgres? ( dev-db/postgresql )
+		!postgres? ( sqlite? ( =dev-db/sqlite-2* )
+					!sqlite? ( sys-libs/gdbm ) )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
@@ -36,8 +35,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${WORKDIR}"/${P}-iptables-1.3.1.patch
 	epatch "${WORKDIR}"/ipcop-${P}-fetchcounter.patch
+	epatch "${FILESDIR}"/${P}-lable-at-the-end-of-compound.patch
 }
 
 src_compile() {
