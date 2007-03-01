@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20070211.ebuild,v 1.1 2007/02/12 02:05:26 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20070228.ebuild,v 1.1 2007/03/01 01:22:59 troll Exp $
 
 inherit confutils eutils qt4
 
@@ -21,25 +21,24 @@ S="${WORKDIR}/${MY_P}"
 
 PLUGINS="chess echo noughtsandcrosses"
 
-DEPEND="$(qt4_min_version 4.2)
+RDEPEND="$(qt4_min_version 4.2)
 	media-libs/libpng
 	sys-libs/zlib
 	dev-libs/glib
-	doc? ( app-doc/doxygen )
 	jingle? ( ~net-libs/ortp-0.7.1
 		media-libs/speex )
 	sasl? ( dev-libs/cyrus-sasl )
 	spell? ( app-text/aspell )
 	ssl? ( dev-libs/openssl )
-	xscreensaver? ( x11-misc/xscreensaver )"
+	xscreensaver? ( x11-libs/libXScrnSaver )"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
 	if ! (built_with_use x11-libs/qt qt3support); then
-		eerror "In order to compile psi with jingle support (google/talk"
-		eerror "xmpp extension) you will need to recompile qt4 with"
-		eerror "qt3support use flag enabled."
+		eerror "In order to compile Psi, you will need to recompile"
+		eerror "qt-4.2 with qt3support USE-flag enabled."
 		die "Recompile qt4 with qt3support use flag enabled"
 	fi;
 }
