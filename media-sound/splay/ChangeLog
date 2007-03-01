@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/splay
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.14 2007/03/01 17:31:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.15 2007/03/01 18:08:18 aballier Exp $
+
+  01 Mar 2007; Alexis Ballier <aballier@gentoo.org> splay-0.9.5.2.ebuild:
+  Reverting renaming, it breaks cplay, thanks to drac for pointing that quickly
 
   01 Mar 2007; Alexis Ballier <aballier@gentoo.org> splay-0.9.5.2.ebuild:
   Prevent collisions with media-sound/mp3blaster, bug #148293
