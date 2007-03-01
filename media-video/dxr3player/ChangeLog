@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dxr3player
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.14 2007/02/22 01:46:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.15 2007/03/01 20:34:42 welp Exp $
+
+  01 Mar 2007; Peter Weller <welp@gentoo.org> dxr3player-0.10.ebuild:
+  Doesn't work on amd64, amd64 to ~amd64
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
