@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.9-r1.ebuild,v 1.6 2007/01/22 02:00:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.9-r1.ebuild,v 1.7 2007/03/01 10:29:18 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="source test"
+IUSE="doc source test"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
@@ -41,10 +41,14 @@ src_unpack() {
 	use test && java-pkg_jar-from --build-only junit
 }
 
-EANT_BUILD_TARGET="package"
+src_compile() {
+	#precompiled javadocs (needs maven to generate)
+	eant package
+}
 
 src_install() {
 	java-pkg_newjar target/${P}.jar
+	use doc && java-pkg_dojavadoc ../apidocs
 	use source && java-pkg_dosrc src/main/java
 }
 

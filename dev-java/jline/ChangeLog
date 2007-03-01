@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.7 2007/01/22 02:00:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.8 2007/03/01 10:29:18 betelgeuse Exp $
+
+  01 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> jline-0.9.9-r1.ebuild:
+  Add the doc use flag.
 
   22 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   files/maven-build.properties, files/maven-build.xml,
