@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.7 2006/11/23 17:18:54 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.8 2007/03/01 12:45:59 matsuu Exp $
 
 inherit eutils
 
@@ -11,16 +11,13 @@ SRC_URI="http://mydns.bboy.net/download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc sparc x86"
-IUSE="debug mysql nls postgres ssl static zlib"
+IUSE="debug nls postgres ssl static zlib"
 
 RDEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
-	|| (
-		mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql )
-		!postgres? ( virtual/mysql )
-	)"
+	postgres? ( dev-db/postgresql )
+	!postgres? ( virtual/mysql )"
 DEPEND="${RDEPEND}
 	sys-devel/bison"
 
@@ -36,7 +33,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if use mysql || ! use postgres; then
+	if ! use postgres; then
 		myconf="${myconf} --with-mysql"
 	else
 		myconf="${myconf} --without-mysql --with-pgsql"
@@ -60,7 +57,7 @@ src_install() {
 
 	exeinto /etc/init.d; newexe ${FILESDIR}/mydns.rc6 mydns || die
 
-	if use mysql || ! use postgres; then
+	if ! use postgres; then
 		sed -i -e 's/__db__/mysql/g' ${D}/etc/init.d/mydns || die
 		dodoc QUICKSTART.mysql README.mysql
 	else
@@ -75,7 +72,7 @@ pkg_postinst() {
 	einfo
 	einfo "# /usr/sbin/mydns --dump-config > /etc/mydns.conf"
 	einfo "# chmod 0600 /etc/mydns.conf"
-	if use mysql || ! use postgres; then
+	if ! use postgres; then
 		einfo "# mysqladmin -u <useruname> -p create mydns"
 		einfo "# /usr/sbin/mydns --create-tables | mysql -u <username> -p mydns"
 		einfo

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/mydns
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.21 2006/11/23 17:18:54 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.22 2007/03/01 12:45:59 matsuu Exp $
+
+  01 Mar 2007; MATSUU Takuto <matsuu@gentoo.org> mydns-1.1.0.ebuild:
+  Removed mysql USE flag, bug #168179.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mydns-1.1.0.ebuild:
   dev-db/mysql => virtual/mysql
