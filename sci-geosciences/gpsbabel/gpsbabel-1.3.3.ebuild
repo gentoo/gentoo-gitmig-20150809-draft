@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.2.ebuild,v 1.3 2007/03/01 14:34:51 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.3.ebuild,v 1.1 2007/03/01 14:34:51 djay Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="GPSBabel is a waypoints, tracks and routes converter in variety of form"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 
 IUSE="doc usb debug"
 
@@ -28,7 +28,7 @@ DEPEND="doc? ( virtual/tetex dev-libs/libxslt dev-libs/libxml2 dev-lang/perl )
 src_unpack(){
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/gpsbabel-${PV}.patch || die "Unable to apply gpsbabel.patch"
+	epatch "${FILESDIR}"/${P}.patch || die "Unable to apply ${P}.patch"
 }
 
 src_compile() {
@@ -39,7 +39,6 @@ src_compile() {
 	if use doc; then
 		myconf="${myconf} --with-doc=${S}/doc/manual"
 	fi
-	eautoconf
 	econf ${myconf} $(use_enable debug efence)
 	emake || die "emake failed"
 	if use doc; then
@@ -64,6 +63,6 @@ src_install() {
 
 pkg_postinst(){
 	if use debug; then
-		einfo "If you need gpsbabel in debuging mode, use : gpsbabel-debug"
+		einfo "If you need to debug gpsbabel, please use : gpsbabel-debug"
 	fi
 }
