@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.37 2007/03/01 02:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.38 2007/03/01 02:21:06 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -616,6 +616,8 @@ setup_flags() {
 	# we are building when pulling glibc on a multilib profile
 	CFLAGS_BASE=${CFLAGS_BASE-${CFLAGS}}
 	CFLAGS=${CFLAGS_BASE}
+	CXXFLAGS_BASE=${CXXFLAGS_BASE-${CXXFLAGS}}
+	CXXFLAGS=${CXXFLAGS_BASE}
 	ASFLAGS_BASE=${ASFLAGS_BASE-${ASFLAGS}}
 	ASFLAGS=${ASFLAGS_BASE}
 
@@ -684,17 +686,18 @@ setup_flags() {
 		CBUILD_OPT=${CTARGET_OPT}
 	fi
 
-	if $(tc-getCC ${CTARGET}) -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
-		append-flags -finline-limit=2000
-	fi
-
-	# We dont want these flags for glibc
-	filter-ldflags -pie
-
 	# Lock glibc at -O2 -- linuxthreads needs it and we want to be
 	# conservative here.  -fno-strict-aliasing is to work around #155906
 	filter-flags -O?
 	append-flags -O2 -fno-strict-aliasing
+
+	# building glibc with SSP is fraught with difficulty, especially
+	# due to __stack_chk_fail_local which would mean significant changes
+	# to the glibc build process. See bug #94325
+	filter-flags -fstack-protector
+
+	# Don't let the compiler automatically build PIEs unless USE=hardened.
+	use hardened || filter-flags -fPIE
 }
 
 check_kheader_version() {
