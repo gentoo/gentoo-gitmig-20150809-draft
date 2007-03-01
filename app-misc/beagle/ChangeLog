@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.52 2007/02/26 07:40:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.53 2007/03/01 12:42:51 metalgod Exp $
+
+  01 Mar 2007; Luis Medinas <metalgod@gentoo.org> beagle-0.2.16.2.ebuild:
+  Stable on amd64. Bug #168400.
 
   26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   beagle-0.2.16.2.ebuild:
