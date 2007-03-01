@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.0.ebuild,v 1.1 2007/02/27 23:37:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.0.ebuild,v 1.2 2007/03/01 18:47:10 pylon Exp $
 
 inherit eutils games
 
@@ -31,15 +31,15 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${P}-source
 
 pkg_setup() {
-	if ! built_with_use media-libs/libsdl X ; then
-	        die "Please emerge media-libs/libsdl with USE=X"
+	if ! use dedicated && ! built_with_use media-libs/libsdl X ; then
+		die "Please emerge media-libs/libsdl with USE=X"
 	fi
 	games_pkg_setup
 }
 
 src_unpack() {
 	unpack ${P}-source.tar.bz2
-	if use scenarios; then
+	if use scenarios ; then
 		cd ${S}/scenario/
 		unpack ${SCENARIOS}
 	fi
@@ -59,7 +59,7 @@ src_compile() {
 	use png && myopts="${myopts} WITH_PNG=1"
 	use zlib && myopts="${myopts} WITH_ZLIB=1"
 	use unicode && myopts="${myopts} WITH_ICONV=1"
-	if ! use dedicated; then
+	if ! use dedicated ; then
 		myopts="${myopts} WITH_SDL=1"
 		if ! use timidity; then
 			use alsa && myopts="${myopts} MIDI=/usr/bin/aplaymidi"
@@ -92,7 +92,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}/lang"
 	doins lang/*.lng || die "doins failed (lang)"
 
-	if use scenarios; then
+	if use scenarios ; then
 		insinto "${GAMES_DATADIR}/${PN}/scenario"
 		doins scenario/* || die "doins failed (scenario)"
 	fi
@@ -105,8 +105,8 @@ src_install() {
 		newins media/openttd.${i}.png openttd.png
 	done
 
-	if ! use dedicated; then
-		if use timidity || use alsa; then
+	if ! use dedicated ; then
+		if use timidity || use alsa ; then
 			make_desktop_entry "openttd -m extmidi" "OpenTTD" openttd
 		else
 			make_desktop_entry openttd "OpenTTD" openttd
@@ -138,7 +138,7 @@ pkg_postinst() {
 	einfo "correct for whichever version you have."
 	echo
 
-	if ! use scenarios; then
+	if ! use scenarios ; then
 		einfo "Scenarios are now included in a seperate package. To "
 		einfo "install them as well please remerge with the "
 		einfo "\"scenarios\" USE flag."
@@ -153,7 +153,7 @@ pkg_postinst() {
 		echo
 	fi
 
-	if use dedicated; then
+	if use dedicated ; then
 		einfo "You have chosen the dedicated USE flag which builds a "
 		einfo "version of OpenTTD to be used as a game server which "
 		einfo "does not require SDL. You will not be able to play the "
@@ -164,13 +164,13 @@ pkg_postinst() {
 		ewarn "processes when run, including any running client sessions!"
 		echo
 	else
-		if use timidity || use alsa; then
+		if use timidity || use alsa ; then
 			einfo "If you want music, you must copy the gm/ directory"
 			einfo "to ${GAMES_DATADIR}/${PN}/"
 			einfo "You can enable MIDI by running:"
 			einfo "  openttd -m extmidi"
 			echo
-			if use timidity; then
+			if use timidity ; then
 				einfo "You also need soundfonts for timidity, if you don't"
 				einfo "know what that is, do:"
 				echo
