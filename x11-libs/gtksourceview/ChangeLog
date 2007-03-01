@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.88 2007/02/07 11:57:10 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.89 2007/03/01 01:15:26 dang Exp $
+
+*gtksourceview-1.8.4 (01 Mar 2007)
+
+  01 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gtksourceview-1.8.4.ebuild:
+  Bump to 1.8.4
+  * RPM highlighting (Konstantin Ryabitsev)
+  * Fix a problem with search in accented words (Yevgen Muntyan)
+  * Misc lang file fixes
 
 *gtksourceview-1.8.3 (07 Feb 2007)
 
