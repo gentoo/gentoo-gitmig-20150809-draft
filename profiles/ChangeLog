@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.155 2007/02/28 23:25:25 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.156 2007/03/01 11:54:01 calchan Exp $
+
+  01 Mar 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Removed mask on dev-embedded/gpsim-led and dev-embedded/gpsim-logic as they
+  were punted, see bug #96578.
 
   28 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> use.local.desc:
   Add libkarma use flag for amarok
