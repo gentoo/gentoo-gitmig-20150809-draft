@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.2.2.ebuild,v 1.9 2006/02/09 19:53:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.2.2.ebuild,v 1.10 2007/03/01 12:06:04 drac Exp $
 
 DESCRIPTION="Xfce 4 extras ebuild"
 LICENSE="GPL-2 BSD LGPL-2"
@@ -12,7 +12,6 @@ RDEPEND=">=xfce-base/xfce4-${PV}
 	>=xfce-extra/xfce4-systemload-0.3.4-r1
 	>=xfce-extra/xfce4-minicmd-0.3.0-r1
 	>=xfce-extra/xfce4-netload-0.2.3-r1
-	>=xfce-extra/xfce4-artwork-0.0.4-r1
 	>=xfce-extra/xfce4-clipman-0.4.1-r1
 	>=xfce-extra/xfce4-cpugraph-0.2.2-r1
 	>=xfce-extra/xfce4-notes-0.9.7-r1
