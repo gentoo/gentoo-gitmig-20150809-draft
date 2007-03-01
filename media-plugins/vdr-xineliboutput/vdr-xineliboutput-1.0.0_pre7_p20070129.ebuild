@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_pre7_p20070129.ebuild,v 1.1 2007/02/28 12:32:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_pre7_p20070129.ebuild,v 1.2 2007/03/01 20:42:48 zzam Exp $
 
 inherit vdr-plugin eutils multilib
 
-MY_PV=CVS-${PV##*_p}000000
-MY_P=${PN}-${MY_PV}
+TIMESTAMP=CVS-${PV##*_p}000000
+MY_P=${PN}-${TIMESTAMP}
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://users.tkk.fi/~phintuka/vdr/vdr-xineliboutput/"
@@ -41,9 +41,9 @@ DEPEND="${RDEPEND}
 			)
 		)"
 
-S_PV=${PV%_p*}
-S_PV=${S_PV/_/}
-S=${WORKDIR}/xineliboutput-${S_PV}
+MY_PV=${PV%_p*}
+MY_PV=${MY_PV/_/}
+S=${WORKDIR}/xineliboutput-${MY_PV}
 
 VDR_CONFD_FILE=${FILESDIR}/confd-1.0.0_pre6
 
@@ -81,7 +81,7 @@ src_install() {
 	dobin vdr-fbfe vdr-sxfe
 
 	insinto ${VDR_PLUGIN_DIR}
-	doins *.so.${MY_PV}
+	doins *.so.${MY_PV} || die "could not install sub-plugins"
 
 	insinto /usr/$(get_libdir)/xine/plugins/${XINE_LIB_VERSION}
 	doins xineplug_inp_*.so
