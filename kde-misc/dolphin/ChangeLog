@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/dolphin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.8 2007/01/04 09:28:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.9 2007/03/01 01:42:07 troll Exp $
+
+*dolphin-0.8.2 (01 Mar 2007)
+
+  01 Mar 2007; Przemysław Maciąg <troll@gentoo.org> +dolphin-0.8.2.ebuild:
+  Version bump
 
 *dolphin-0.8.1 (04 Jan 2007)
 
