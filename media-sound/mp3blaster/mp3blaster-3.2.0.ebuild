@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.13 2006/11/23 17:42:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.14 2007/03/01 18:54:46 aballier Exp $
 
 inherit toolchain-funcs
 
@@ -32,6 +32,10 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	# Prevents collisions with media-sound/splay
+	sed -i "s/splay.1/splay_mp3blaster.1/" Makefile.in\
+		|| die "sedding makefile failed"
+	mv splay.1 splay_mp3blaster.1 || die "renaming splay man failed"
 	### Looks like NAS support is broken, at least with NAS 1.5 and
 	### mp3player 3.1.1 (Aug 13, agenkin@thpoon.com)
 	### Ditto nas-1.6c-r1, mp3blaster-3.2.0 (2004.06.23 - eradicator)
@@ -46,5 +50,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
+	# Prevent collisions with media-sound/splay
+	mv "${D}/usr/bin/splay" "${D}/usr/bin/splay_mp3blaster"\
+		|| die "moving splay to splay_mp3blaster failed"
 	dodoc ANNOUNCE AUTHORS CREDITS ChangeLog FAQ NEWS README TODO
 }
