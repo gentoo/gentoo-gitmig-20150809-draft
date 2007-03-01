@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.242 2007/03/01 01:03:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.243 2007/03/01 20:28:31 rl03 Exp $
+
+  01 Mar 2007; Renat Lumpau <rl03@gentoo.org> phpmyadmin-2.10.0.1.ebuild:
+  Check for ctype, bug 168921
 
 *phpmyadmin-2.10.0.1 (01 Mar 2007)
 

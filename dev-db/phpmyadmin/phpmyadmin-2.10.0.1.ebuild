@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.10.0.1.ebuild,v 1.1 2007/03/01 01:03:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.10.0.1.ebuild,v 1.2 2007/03/01 20:28:31 rl03 Exp $
 
 inherit eutils webapp depend.php
 
@@ -20,7 +20,7 @@ need_php
 pkg_setup() {
 	webapp_pkg_setup
 
-	if ! PHPCHECKNODIE="yes" require_php_with_use pcre session unicode \
+	if ! PHPCHECKNODIE="yes" require_php_with_use ctype pcre session unicode \
 		|| ! PHPCHECKNODIE="yes" require_php_with_any_use mysql mysqli ; then
 		eerror
 		eerror "${PHP_PKG} needs to be re-installed with all of the following"
