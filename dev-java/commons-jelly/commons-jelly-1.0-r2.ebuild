@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.4 2007/02/10 14:28:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r2.ebuild,v 1.1 2007/03/01 13:39:53 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -39,12 +39,12 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# disables dependency fetching, and remove tests as a dependency of jar
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
-	mkdir -p ${S}/lib
-	cd ${S}/lib
+	mkdir -p "${S}/lib"
+	cd "${S}/lib"
 	java-pkg_jar-from servletapi-2.3,commons-cli-1,commons-lang
 	java-pkg_jar-from commons-discovery,forehead,jakarta-jstl,commons-jexl-1.0
 	java-pkg_jar-from commons-beanutils-1.6,commons-collections

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-jelly
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.6 2007/02/10 14:28:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.7 2007/03/01 13:39:53 betelgeuse Exp $
+
+*commons-jelly-1.0-r2 (01 Mar 2007)
+
+  01 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-jelly-1.0-r1.ebuild, +commons-jelly-1.0-r2.ebuild:
+  Revision bump because java-utils-2.eclass was not handling java-pkg_jar-from
+  calls with commas in the correctly.
 
   10 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-jelly-1.0-r1.ebuild:
