@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.99.5.ebuild,v 1.1 2007/03/01 02:12:55 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.99.5.ebuild,v 1.2 2007/03/01 03:03:42 nyhm Exp $
 
 inherit eutils games
 
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-games/cegui-0.5.0
+	dev-libs/boost
 	virtual/opengl
 	virtual/glu
 	media-libs/libsdl
