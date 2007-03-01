@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.59 2007/03/01 12:53:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.60 2007/03/01 13:15:14 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -816,6 +816,15 @@ java-pkg_jar-from() {
 
 	pushd ${destdir} > /dev/null \
 		|| die "failed to change directory to ${destdir}"
+
+	# When we have commas this functions is called to bring jars from multiple
+	# packages. This affects recording of dependencencies because that syntax uses :
+	# if we don't change them to : gjl and java-config -d -p break
+	if [[ ${target_pkg} = *,* ]]; then
+		build_only="true"
+		java-pkg_record-jar_ ${target_pkg//,/:}
+	fi
+
 	local jar
 	for jar in ${classpath//:/ }; do
 		local jar_name=$(basename "${jar}")
