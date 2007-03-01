@@ -14,3 +14,4 @@ move net-p2p/azureus-bin net-p2p/azureus
 slotmove =app-editors/emacs-18* 1 18
 slotmove app-backup/dar 4 0
 move sys-devel/gcc-hppa64 sys-devel/kgcc64
+move net-misc/djmount net-fs/djmount
