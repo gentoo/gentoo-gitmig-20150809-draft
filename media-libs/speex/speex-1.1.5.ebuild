@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.5.ebuild,v 1.12 2006/04/19 13:11:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.5.ebuild,v 1.13 2007/03/01 16:26:40 genstef Exp $
 
 IUSE="ogg sse"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.speex.org/download/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD as-is"
-KEYWORDS="~x86 ~hppa ~amd64 ~alpha ~ia64 ~ppc ~sparc ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 
 DEPEND="ogg? ( >=media-libs/libogg-1.0 )"
 
