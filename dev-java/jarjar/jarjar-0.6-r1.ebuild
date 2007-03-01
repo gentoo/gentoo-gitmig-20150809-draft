@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.3 2006/09/23 02:05:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.4 2007/03/01 10:59:42 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -14,16 +14,16 @@ IUSE="doc source"
 COMMON_DEP="
 	=dev-java/asm-2.0*
 	=dev-java/gnu-regexp-1*"
-RDEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
-DEPEND=">=virtual/jdk-1.3
+DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	>=dev-java/ant-core-1.4
 	source? ( app-arch/zip )
 	${COMMON_DEP}"
 
 # FIXME looks like it bundles stuff from dev-java/java-getopt, ie
-# gnu.getopt.*, so this should delete the bundled files, and then 
+# gnu.getopt.*, so this should delete the bundled files, and then
 # depend on java-getopt. Should also probably report upstream. -nichoj
 
 src_unpack() {
@@ -36,13 +36,9 @@ src_unpack() {
 	java-pkg_jar-from ant-core ant.jar
 }
 
-src_compile() {
-	eant jar $(use_doc)
-}
-
 src_install() {
 	java-pkg_newjar dist/${P}.jar ${PN}.jar
 
-	use doc && java-pkg_dohtml -r dist/javadoc/*
+	use doc && java-pkg_dojavadoc dist/javadoc
 	use source && java-pkg_dosrc src/main/*
 }
