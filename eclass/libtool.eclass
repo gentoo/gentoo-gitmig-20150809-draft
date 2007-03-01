@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.73 2006/06/04 13:25:56 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.74 2007/03/01 18:48:02 grobian Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -180,7 +180,8 @@ elibtoolize() {
 	[[ ${CHOST} == *"-freebsd"* ]] && \
 		elt_patches="${elt_patches} fbsd-conf fbsd-ltconf"
 
-	useq ppc-macos && elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
+	[[ ${CHOST} == *"-darwin"* ]] && \
+		elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
 
 	for x in ${my_dirlist} ; do
 		local tmp=$(echo "${x}" | sed -e "s|${WORKDIR}||")
@@ -326,7 +327,7 @@ elibtoolize() {
 						fi
 						;;
 					"darwin-"*)
-						useq ppc-macos && \
+						[[ ${CHOST} == *"-darwin"* ]] && \
 							ewarn "  Darwin patch set '${y}' failed to apply!"
 						;;
 				esac
