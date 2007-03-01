@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.14 2007/02/18 12:15:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.15 2007/03/01 00:02:29 weeve Exp $
+
+  01 Mar 2007; Jason Wever <weeve@gentoo.org> judy-1.0.3.ebuild:
+  Stable on SPARC wrt bug #151934.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> judy-1.0.3.ebuild:
   Stable on ppc wrt bug 151934
