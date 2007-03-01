@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/smclone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.14 2007/01/04 17:34:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.15 2007/03/01 02:12:55 nyhm Exp $
+
+*smclone-0.99.5 (01 Mar 2007)
+
+  01 Mar 2007; Tristan Heaven <nyhm@gentoo.org> +smclone-0.99.5.ebuild:
+  Version bump
 
 *smclone-0.99.4 (04 Jan 2007)
 
