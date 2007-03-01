@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.1 2007/02/28 17:29:28 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.2 2007/03/01 00:48:11 xmerlin Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,7 +25,7 @@ DEPEND="
 			dev-perl/Net-DNS
 			dev-perl/libwww-perl
 			dev-perl/perl-ldap
-			perl-core/libnet
+			virtual/perl-libnet
 			dev-perl/Crypt-SSLeay
 			dev-perl/HTML-Parser
 			dev-perl/perl-ldap
@@ -110,6 +110,8 @@ src_install() {
 		rm ${D}/usr/sbin/supervise-ldirectord-config
 	fi
 
+	dodir /var/lib/heartbeat/cores/cluster
+	keepdir /var/lib/heartbeat/cores/cluster
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/heartbeat-init heartbeat
 
@@ -117,4 +119,14 @@ src_install() {
 	if use doc ; then
 		dodoc README doc/*.txt doc/AUTHORS doc/COPYING  || die
 	fi
+}
+
+pkg_postinst() {
+	# Change wrong permissions
+	chown -R cluster:cluster /var/run/heartbeat/ccm
+	chown -R cluster:cluster /var/run/heartbeat/crm
+	chown -R cluster:cluster /var/lib/heartbeat/cores
+	chown -R cluster:cluster /var/lib/heartbeat/crm
+	chown -R cluster:cluster /var/lib/heartbeat/pengine
+	chown -R cluster:cluster /var/lib/heartbeat/cores/cluster
 }
