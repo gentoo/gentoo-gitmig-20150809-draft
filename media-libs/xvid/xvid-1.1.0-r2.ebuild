@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r2.ebuild,v 1.1 2006/10/02 08:19:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r2.ebuild,v 1.2 2007/03/01 17:51:42 genstef Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.xvid.org/downloads/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc altivec"
 
 DEPEND="x86? ( >=dev-lang/nasm-0.98.36 )
