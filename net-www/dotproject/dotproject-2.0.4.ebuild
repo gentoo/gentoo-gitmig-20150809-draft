@@ -1,19 +1,18 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-2.0.4.ebuild,v 1.2 2006/11/23 16:13:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-2.0.4.ebuild,v 1.3 2007/03/01 01:17:54 rl03 Exp $
 
-inherit webapp
+inherit webapp depend.php
 
 DESCRIPTION="dotProject is a PHP web-based project management framework"
 HOMEPAGE="http://www.dotproject.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-RDEPEND="net-www/apache
-	virtual/httpd-php
-	virtual/mysql"
 
 S=${WORKDIR}/${PN}
 LICENSE="GPL-2"
+
+need_php
 
 src_unpack() {
 	unpack ${A}
