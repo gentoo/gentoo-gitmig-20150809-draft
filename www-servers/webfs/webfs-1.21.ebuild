@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21.ebuild,v 1.2 2006/12/10 09:55:56 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21.ebuild,v 1.3 2007/03/01 07:38:09 bangert Exp $
 
 DESCRIPTION="Lightweight HTTP server for static content"
 SRC_URI="http://dl.bytesex.org/releases/${PN}/${P}.tar.gz"
@@ -25,7 +25,10 @@ src_compile() {
 }
 
 src_install() {
-	einstall mandir=${D}/usr/share/man || die "make install failed"
+	local myconf
+	use ssl || myconf="${myconf} USE_SSL=no"
+	use threads && myconf="${myconf} USE_THREADS=yes"
+	einstall ${myconf} mandir=${D}/usr/share/man || die "make install failed"
 	newinitd ${FILESDIR}/${PN}.initd ${PN} || die "newinitd failed"
 	newconfd ${FILESDIR}/${PN}.confd ${PN} || die "newconfd failed"
 	dodoc README COPYING
