@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-serial
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/ChangeLog,v 1.2 2006/08/15 09:54:47 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/ChangeLog,v 1.3 2007/03/02 18:18:30 hd_brummy Exp $
+
+*vdr-serial-0.0.6a-r1 (02 Mar 2007)
+
+  02 Mar 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-serial-0.0.6a.ebuild, +vdr-serial-0.0.6a-r1.ebuild:
+  stabel on x86; new -r1 version will add user 'vdr' to group 'uucp' for full
+  access to device ttyS*
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
