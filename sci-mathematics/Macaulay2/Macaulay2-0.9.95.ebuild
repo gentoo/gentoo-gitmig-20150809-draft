@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95.ebuild,v 1.1 2006/11/12 20:11:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95.ebuild,v 1.2 2007/03/02 23:14:11 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -26,9 +26,15 @@ DEPEND="sys-libs/gdbm
 	dev-util/ctags
 	sys-libs/ncurses"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-etags-gentoo.patch
+	epatch "${FILESDIR}"/${P}-cpp-fix.patch
+	epatch "${FILESDIR}"/${P}-test-fix.patch
+}
 
+src_compile() {
 	cd ${WORKDIR}/factory
 	econf --enable-NTL --prefix=${WORKDIR} || \
 		die "failed to configure factory"
@@ -42,7 +48,7 @@ src_compile() {
 	make install || die "failed to install libfac"
 
 	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
-	cd ${WORKDIR}/${P}
+	cd "${S}"
 	sed -e "/^docm2RelDir/s:Macaulay2:${P}:" \
 		-i include/config.Makefile.in || \
 		die "failed to fix makefile"
@@ -56,11 +62,14 @@ src_compile() {
 }
 
 src_test() {
-	cd ${WORKDIR}/Macaulay2-0.9.2
-	make -k check || die "tests failed"
+	cd "${S}"
+	make check || die "tests failed"
 }
 
 src_install () {
-	cd ${WORKDIR}/Macaulay2-0.9.2
+	cd "${S}"
 	make install || die "install failed"
+
+	# nothing in here, get rid of it
+	rm -fr "${D}"/usr/lib || die "failed to remove empty /usr/lib"
 }
