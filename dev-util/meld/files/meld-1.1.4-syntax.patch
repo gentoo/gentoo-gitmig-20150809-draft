@@ -1,0 +1,41 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN meld-1.1.4.orig/filediff.py meld-1.1.4/filediff.py
+--- meld-1.1.4.orig/filediff.py	2006-05-27 18:45:47.000000000 -0400
++++ meld-1.1.4/filediff.py	2007-03-02 11:37:55.000000000 -0500
+@@ -45,30 +45,15 @@ for sourceview in "gtksourceview sourcev
+         pass
+ 
+ if sourceview_available:
++    import gnomevfs
+     def set_highlighting_enabled(buf, fname, enabled):
+-        # gnome.vfs.get_mime_type seems to be broken. fake it.
+-        extmap = { "xml":"text/xml",
+-                   "glade":"text/xml",
+-                   "cpp":"text/x-cpp",
+-                   "cxx":"text/x-cpp",
+-                   "cc":"text/x-cpp",
+-                   "C":"text/x-cpp",
+-                   "c":"text/x-c",
+-                   "hpp":"text/x-cpp",
+-                   "hxx":"text/x-cpp",
+-                   "hh":"text/x-cpp",
+-                   "H":"text/x-cpp",
+-                   "h":"text/x-cpp",
+-                   "inl":"text/x-cpp",
+-                   "desktop": "application/x-desktop",
+-                   "diff": "text/x-diff",
+-                   "patch": "text/x-diff",
+-                   "html": "text/html",
+-                   "po": "text/x-po",
+-                   "py": "text/x-python" }
+-        ext = fname.split(".")[-1]
+         man = gsv.SourceLanguagesManager()
+-        gsl = man.get_language_from_mime_type( extmap.get(ext, "text/plain") )
++        cwd = gnomevfs.URI(os.getcwd())
++        if str(cwd)[-1] != '/':
++            cwd = cwd.append_string('/')
++        file = cwd.resolve_relative(fname)
++        file_info = gnomevfs.get_file_info(file, gnomevfs.FILE_INFO_GET_MIME_TYPE)
++        gsl = man.get_language_from_mime_type( file_info.mime_type )
+         if gsl:
+             buf.set_language(gsl)
+         buf.set_highlight(enabled)

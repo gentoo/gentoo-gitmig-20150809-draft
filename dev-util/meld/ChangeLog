@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.55 2007/02/28 19:39:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.56 2007/03/02 16:45:49 dang Exp $
+
+*meld-1.1.4-r1 (02 Mar 2007)
+
+  02 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/meld-1.1.4-syntax.patch, +meld-1.1.4-r1.ebuild:
+  Bump to 1.1.4-r1
+  	- Add patch to fix syntax highlighing by fixing mime type detection
 
   28 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> meld-1.1.4.ebuild:
   Add scrollkeeper dep; bug #168704
