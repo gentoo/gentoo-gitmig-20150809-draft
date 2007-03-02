@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.96.94.ebuild,v 1.2 2007/02/28 22:10:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.96.95.ebuild,v 1.1 2007/03/02 12:52:03 twp Exp $
 
 NEED_PYTHON="1.5.2"
 
