@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dclock
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.10 2006/10/14 16:49:42 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.11 2007/03/02 20:26:27 drac Exp $
+
+  02 Mar 2007; Samuli Suominen <drac@gentoo.org> dclock-2.1.2_p8.ebuild:
+  Kill virtual/x11. Use emake.
 
   14 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -dclock-2.1.2_p5.ebuild:
