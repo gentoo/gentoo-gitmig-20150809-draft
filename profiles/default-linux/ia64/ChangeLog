@@ -1,6 +1,10 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.19 2007/02/14 01:46:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.20 2007/03/02 23:02:31 drac Exp $
+
+  02 Mar 2007; Samuli Suominen <drac@gentoo.org> use.mask:
+  battery		
+  http://bugs.gentoo.org/show_bug.cgi?id=157881#c6
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> +2004.3/package.mask,
   +2005.0/package.mask, +2006.0/package.mask:
