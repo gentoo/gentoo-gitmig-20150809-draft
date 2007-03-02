@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fireflier/fireflier-1.1.6.ebuild,v 1.1 2007/02/15 23:42:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fireflier/fireflier-1.1.6.ebuild,v 1.2 2007/03/02 22:02:10 cedk Exp $
 
 inherit eutils kde linux-mod qt3
 
 MY_P=${P/-/_}
-DESCRIPTION="FireFlier, a personnal firewall for Liux based on IPTables"
+DESCRIPTION="FireFlier, a personnal firewall for Linux based on IPTables"
 HOMEPAGE="http://fireflier.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
