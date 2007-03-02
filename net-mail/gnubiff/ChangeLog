@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.15 2007/02/22 01:43:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.16 2007/03/02 12:06:10 nakano Exp $
+
+*gnubiff-2.2.5 (02 Mar 2007)
+
+  02 Mar 2007; Masatomo Nakano <nakano@gentoo.org> +gnubiff-2.2.5.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
