@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.9 2007/02/12 13:03:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.10 2007/03/02 09:22:52 armin76 Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -12,7 +12,7 @@ SLOT="0"
 
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
-DEPEND="|| ( x11-proto/printproto virtual/x11 )
+DEPEND="x11-proto/printproto
 	sys-apps/gawk
 	dev-lang/perl
 	>=media-libs/freetype-2.1.9-r1"
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/1.0/mozilla-1.7.13-as-needed.patch || die "failed to apply as-needed patch"
 
 	# >freetype-2.1* compile patch #166401
-	if has_version '>=media-libs/freetype-2.2*'; then
+	if has_version '>=media-libs/freetype-2.2'; then
 		epatch "${FILESDIR}/1.0/${P}-const.patch"
 	fi
 

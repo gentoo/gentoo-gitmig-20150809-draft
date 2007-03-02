@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.26 2007/02/12 13:03:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.27 2007/03/02 09:22:52 armin76 Exp $
+
+  02 Mar 2007; Raúl Porcel <armin76@gentoo.org> nvu-1.0-r4.ebuild:
+  Fix has_version syntax, bug 168892
 
   12 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   +files/1.0/nvu-1.0-const.patch, -nvu-1.0-r2.ebuild, nvu-1.0-r4.ebuild:
