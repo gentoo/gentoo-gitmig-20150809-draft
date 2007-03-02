@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6-r2.ebuild,v 1.1 2007/02/28 15:10:58 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.7-r3.ebuild,v 1.1 2007/03/02 14:41:51 hkbst Exp $
 
 inherit eutils autotools
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/${P}_glib_automagic.patch
+	epatch ${FILESDIR}/libffi_automagic.patch
 	AT_M4DIR="${S}/m4" eautoreconf
 }
 
@@ -34,12 +35,12 @@ src_unpack() {
 src_compile() {
 	econf --with-glib
 	emake -j1 || die 'make failed'
-#	emake -j1 -C libffi || die 'make libffi failed'
+	emake -j1 -C libffi || die 'make libffi failed'
 }
 
 src_install () {
 	emake -j1 DESTDIR="${D}" install || die "make install failed"
-#	emake -C libffi -j1 DESTDIR="${D}" install || die 'make libffi failed'
+	emake -C libffi -j1 DESTDIR="${D}" install || die 'make libffi failed'
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 	insinto /usr/share/guile/site/srfi
 	doins lib/srfi/srfi*
