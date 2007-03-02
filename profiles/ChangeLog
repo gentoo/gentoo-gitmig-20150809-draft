@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.156 2007/03/01 11:54:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.157 2007/03/02 02:53:56 beandog Exp $
+
+  02 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  add ivtv use flag to mplayer
 
   01 Mar 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Removed mask on dev-embedded/gpsim-led and dev-embedded/gpsim-logic as they

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2638 2007/03/01 20:43:19 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2639 2007/03/02 02:53:56 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1074,6 +1074,7 @@ media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
 media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
+media-video/mplayer:ivtv - Video out for the Hauppauge PVR-350
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:lzo - Enables support for lzo compression
 media-video/mplayer:mmxext - enables mmx2 support
