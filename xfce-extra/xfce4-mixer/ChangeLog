@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.77 2007/02/26 20:00:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.78 2007/03/02 22:34:31 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-mixer-4.4.0-r1.ebuild:
+  Keyworded on x86-fbsd
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-mixer-4.4.0-r1.ebuild:
