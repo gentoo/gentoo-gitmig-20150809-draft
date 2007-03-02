@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.4.2.ebuild,v 1.3 2006/11/25 14:11:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.4.2.ebuild,v 1.4 2007/03/02 10:29:22 genstef Exp $
 
 inherit toolchain-funcs multilib
 
@@ -23,7 +23,7 @@ src_compile() {
 
 src_install () {
 	exeinto $(cups-config --serverbin)/backend
-	has_version '>=net-print/cups-1.2*' && exeopts -m0700
+	has_version '>=net-print/cups-1.2' && exeopts -m0700
 	doexe src/cups-pdf
 
 	insinto /usr/share/cups/model
