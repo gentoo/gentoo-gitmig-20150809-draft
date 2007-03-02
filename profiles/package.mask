@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6897 2007/03/01 21:26:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6898 2007/03/02 20:51:45 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -174,11 +174,6 @@ app-portage/emool
 # Markus Dittrich <markusle@gentoo.org> (20 Feb 2007)
 # new revision, needs more testing
 =sci-visualization/paraview-2.6.0
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (19 Feb 2007)
-# Pending removal 28 Feb 2007, bug #167024
-# See also http://pl.uptime-project.net/board/viewtopic.php?t=1435
-net-misc/yasuc
 
 # Michael Cummings <mcummings@gentoo.org> (18 Feb 2007)
 # Pending removal 17 Mar 2007, bug 165467
