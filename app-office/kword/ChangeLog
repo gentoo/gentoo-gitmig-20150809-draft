@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.92 2007/02/16 11:35:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.93 2007/03/02 04:05:49 jer Exp $
+
+  02 Mar 2007; Jeroen Roovers <jer@gentoo.org> kword-1.6.1-r1.ebuild:
+  Stable for HPPA.
 
 *kword-1.6.2 (16 Feb 2007)
 
