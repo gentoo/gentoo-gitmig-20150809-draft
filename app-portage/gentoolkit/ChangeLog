@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.96 2007/03/02 20:13:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.97 2007/03/02 20:54:48 nixnut Exp $
+
+  02 Mar 2007; nixnut <nixnut@gentoo.org> gentoolkit-0.2.3.ebuild:
+  Stable on ppc wrt bug 169040
 
   02 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   gentoolkit-0.2.3.ebuild:
