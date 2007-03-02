@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.45 2007/03/01 00:29:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.46 2007/03/02 19:24:47 nixnut Exp $
+
+  02 Mar 2007; nixnut <nixnut@gentoo.org> multitail-4.2.0.ebuild:
+  Stable on ppc wrt bug 168280
 
   01 Mar 2007; Jason Wever <weeve@gentoo.org> multitail-4.2.0.ebuild:
   Stable on SPARC wrt bug #168280.
