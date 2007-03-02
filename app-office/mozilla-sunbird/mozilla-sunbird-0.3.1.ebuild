@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.2 2007/02/23 16:24:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.3 2007/03/02 19:16:29 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ MY_PN="${PN/mozilla-}"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="The Mozilla Sunbird Calendar"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
-IUSE="mozbranding"
+IUSE="bindist"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/source/${MY_P}.source.tar.bz2"
 
 # These are in
@@ -65,7 +65,7 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
-	if use mozbranding; then
+	if ! use bindist; then
 		einfo "You are enabling official branding. You may not redistribute this build"
 		einfo "to any users on your network or the internet. Doing so puts yourself into"
 		einfo "a legal problem with mozilla foundation"
@@ -106,7 +106,7 @@ src_compile() {
 	mozconfig_annotate '' --with-system-nss
 	mozconfig_annotate '' --with-system-nspr
 
-	if use mozbranding; then
+	if ! use bindist; then
 		mozconfig_annotate '' --enable-official-branding
 	fi
 
@@ -180,7 +180,7 @@ src_install() {
 	install_mozilla_launcher_stub sunbird "${MOZILLA_FIVE_HOME}"
 
 	# Install icon and .desktop for menu entry
-	if use mozbranding; then
+	if ! use bindist; then
 		doicon "${FILESDIR}"/icon/${PN}-icon.png
 		domenu "${FILESDIR}"/icon/${PN}.desktop
 	else

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.3 2007/02/23 16:24:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.4 2007/03/02 19:16:29 armin76 Exp $
+
+  02 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-sunbird-0.3.ebuild, mozilla-sunbird-0.3.1.ebuild:
+  Remove mozbranding and add bindist, enabling branding by default, bug
+  168409, and remove old
 
   23 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-sunbird-0.3.1.ebuild:
