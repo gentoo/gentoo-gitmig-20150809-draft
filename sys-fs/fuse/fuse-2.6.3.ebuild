@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.3.ebuild,v 1.2 2007/02/23 12:28:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.3.ebuild,v 1.3 2007/03/02 13:26:01 drizzt Exp $
 
 inherit linux-mod eutils libtool
 
@@ -26,7 +26,7 @@ pkg_setup() {
 			older version from viewcvs"
 
 		BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
-					  fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
+					fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
 		BUILD_TARGETS="all"
 		ECONF_PARAMS="--with-kernel=${KV_DIR} --with-kernel-build=${KV_OUT_DIR}"
 	fi
@@ -64,12 +64,12 @@ src_install() {
 
 	if use kernel_linux ; then
 		linux-mod_src_install
+		newinitd ${FILESDIR}/fuse.init fuse
 	else
 		insinto /usr/include/fuse
 		doins include/fuse_kernel.h
+		newinitd ${FILESDIR}/fuse-fbsd.init fuse
 	fi
-
-	newinitd ${FILESDIR}/fuse.init fuse
 
 	rm -rf "${D}/dev"
 }

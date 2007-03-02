@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.78 2007/02/26 17:17:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.79 2007/03/02 13:26:01 drizzt Exp $
+
+  02 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> files/fuse.init,
+  +files/fuse-fbsd.init, fuse-2.6.3.ebuild:
+  Add fuse.init for Gentoo/FreeBSD
 
   26 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> fuse-2.6.1.ebuild:
   Marked stable on amd64 for bug #150978
