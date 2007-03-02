@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.5.ebuild,v 1.7 2007/02/28 21:55:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.5.ebuild,v 1.8 2007/03/02 18:01:51 nixnut Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/joe-editor/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~mips ppc ppc64 sparc x86"
 IUSE="xterm"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
