@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.15 2007/02/21 18:11:33 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.16 2007/03/02 01:57:49 marienz Exp $
+
+*astng-0.17.0 (02 Mar 2007)
+
+  02 Mar 2007; Marien Zwart <marienz@gentoo.org>
+  +files/astng-0.17.0-test-fixes.patch, +astng-0.17.0.ebuild:
+  Version bump, closing bug #168905, thanks to dsd@gentoo.org for reporting.
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org> Manifest:
   Fixed missing chksums.
