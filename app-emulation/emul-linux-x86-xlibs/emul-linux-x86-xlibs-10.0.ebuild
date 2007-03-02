@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.3 2007/02/21 09:29:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.4 2007/03/02 15:02:25 blubb Exp $
 
 inherit emul-libs
 
@@ -41,7 +41,7 @@ LICENSE="fontconfig FTL GPL-2 LGPL-2 glut libdrm libICE libSM libX11 libXau
 		libXaw libXcomposite libXcursor libXdamage libXdmcp libXext libXfixes libXft
 		libXi libXinerama libXmu libXp libXpm libXrandr libXrender libXScrnSaver libXt
 		libXtst libXv libXvMC libXxf86dga libXxf86dga libXxf86vm"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="opengl"
 
 DEPEND=""

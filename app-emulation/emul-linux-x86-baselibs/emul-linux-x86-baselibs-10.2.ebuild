@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.2.ebuild,v 1.1 2007/02/27 10:54:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.2.ebuild,v 1.2 2007/03/02 15:01:34 blubb Exp $
 
 inherit emul-libs
 
@@ -46,7 +46,7 @@ SRC_URI="mirror://gentoo/binutils-2.16.1-r3.tbz2
 LICENSE="|| ( Artistic GPL-2 ) || ( BSD GPL-2 ) BZIP2 CRACKLIB DB
 		GPL-2 || ( GPL-2 AFL-2.1 ) LGPL-2 LGPL-2.1 MIT OPENLDAP openssl
 		PAM ZLIB as-is"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2" # bug 168507

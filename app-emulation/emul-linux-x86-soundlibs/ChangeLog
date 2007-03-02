@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.25 2007/03/01 18:17:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.26 2007/03/02 15:04:01 blubb Exp $
+
+  02 Mar 2007; Simon Stelling <blubb@gentoo.org>
+  -emul-linux-x86-soundlibs-2.3.ebuild,
+  -emul-linux-x86-soundlibs-2.4.ebuild,
+  -emul-linux-x86-soundlibs-2.5.ebuild,
+  -emul-linux-x86-soundlibs-10.0.ebuild,
+  emul-linux-x86-soundlibs-10.0-r1.ebuild:
+  stable on amd64; a bit preliminary as we need this in the 2007.0 release
 
   01 Mar 2007; Simon Stelling <blubb@gentoo.org>
   emul-linux-x86-soundlibs-10.0-r1.ebuild:

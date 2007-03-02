@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-10.0-r1.ebuild,v 1.2 2007/03/01 17:32:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-10.0-r1.ebuild,v 1.3 2007/03/02 15:03:15 blubb Exp $
 
 inherit emul-libs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/atk-1.12.3.tbz2
 	mirror://gentoo/pango-1.14.9.tbz2"
 
 LICENSE="GPL-2 LGPL-2 LGPL-2.1 FTL || ( LGPL-2.1 MPL-1.1 )"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 IUSE="qt3"
 

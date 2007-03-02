@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-10.1.ebuild,v 1.1 2007/02/27 10:27:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-10.1.ebuild,v 1.2 2007/03/02 15:04:44 blubb Exp $
 
 inherit emul-libs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/libsdl-1.2.11-emul2.tbz2
 	mirror://gentoo/smpeg-0.4.4-r8.tbz2"
 
 LICENSE="LGPL-2 LGPL-2.1"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-xlibs-10.0

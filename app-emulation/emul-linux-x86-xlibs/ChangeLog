@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.58 2007/02/21 09:29:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.59 2007/03/02 15:02:25 blubb Exp $
+
+  02 Mar 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-xlibs-10.0.ebuild:
+  stable on amd64; a bit preliminary as we need this in the 2007.0 release
 
   21 Feb 2007; Simon Stelling <blubb@gentoo.org>
   emul-linux-x86-xlibs-10.0.ebuild:
