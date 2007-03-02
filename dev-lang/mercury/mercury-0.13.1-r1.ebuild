@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.8 2007/01/13 09:02:46 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.9 2007/03/02 23:43:00 keri Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-tests-ho_and_type_spec_bug.patch
 	epatch "${FILESDIR}"/${P}-tests-mdbrc.patch
 	epatch "${FILESDIR}"/${P}-tests-string_format.patch
-	epatch "${FILESDIR}"/${P}-tests-tabling_inf_recursion.patch
 	epatch "${FILESDIR}"/${P}-tests-workspace.patch
 	sed -i -e "s:MDB_DOC:${S}/doc/mdb_doc:" "${TESTDIR}"/mdbrc
 }
@@ -108,6 +107,7 @@ src_test() {
 	MERCURY_COMPILER="${TWS}"/compiler/mercury_compile \
 	MMAKE_DIR="${TWS}"/scripts \
 	MERCURY_DEBUGGER_INIT="${TESTDIR}"/mdbrc \
+	MERCURY_SUPPRESS_STACK_TRACE=yes \
 	GRADE=${TEST_GRADE} \
 	MERCURY_ALL_LOCAL_C_INCL_DIRS=" -I${TWS}/boehm_gc \
 					-I${TWS}/boehm_gc/include \
