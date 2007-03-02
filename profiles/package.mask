@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6901 2007/03/02 22:19:19 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6902 2007/03/02 23:24:05 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (2 Mar 2007)
+# Masked for removal. Three wallpapers from 2004
+# not ported to virtual/x11 or pulling virtual/x11.
+# Insane.
+xfce-extra/xfce4-artwork
 
 # Stefan Cornelius <dercorny@gentoo.org> (2 Mar 2007)
 # Masked because it's affected by 7 GLSAs or so, nobody should use it
