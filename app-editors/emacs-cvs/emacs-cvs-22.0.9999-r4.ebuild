@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r2.ebuild,v 1.7 2007/02/08 14:03:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r4.ebuild,v 1.1 2007/03/02 07:16:59 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -40,20 +40,28 @@ DEPEND="sys-libs/ncurses
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="22.0.93"
+SLOT="22.0.95"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 S="${WORKDIR}/emacs"
 
 src_unpack() {
 	cvs_src_unpack
-	cd ${S}
-	epatch "${FILESDIR}/emacs-subdirs-el-gentoo.diff"
-	use ppc-macos && epatch "${FILESDIR}/emacs-cvs-21.3.50-nofink.diff"
+
+	cd "${S}"
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
+	if ! use gzip-el; then
+		# Emacs' build system automatically detects the gzip binary and compresses
+		# el files.	 We don't want that so confuse it with a wrong binary name
+		sed -i -e "s/ gzip/ PrEvEnTcOmPrEsSiOn/" configure.in || die "unable to sed configure.in"
+	fi
+
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
+	epatch "${FILESDIR}/emacs-subdirs-el-gentoo.diff"
+	use ppc-macos && epatch "${FILESDIR}/emacs-cvs-21.3.50-nofink.diff"
+
 	eautoreconf
 }
 
@@ -185,7 +193,7 @@ update-alternatives() {
 
 	for j in emacs emacsclient etags ctags
 	do
-		alternatives_auto_makesym "/usr/share/man/man1/$j.1.${suffix}" "/usr/share/man/man1/$j.emacs-*"
+		alternatives_auto_makesym "/usr/share/man/man1/$j.1${suffix}" "/usr/share/man/man1/$j.emacs-*"
 	done
 }
 
