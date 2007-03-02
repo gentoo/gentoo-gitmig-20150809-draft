@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.268 2007/02/22 15:49:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.269 2007/03/02 13:21:02 zzam Exp $
+
+*udev-105 (02 Mar 2007)
+
+  02 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> +files/udev.rules-105,
+  +files/modprobe-105.sh, +files/udev-start-105.sh, +files/udev-stop-105.sh,
+  +udev-105.ebuild:
+  Version bumped. Cleaned up start/stop scripts regarding check for
+  udev-version. Reordered some rules, added module loading for ide tape
+  devices, scsi medium changers and mmc devices. Do not load module i82365 as
+  that can lead to deadlocks. Make modprobe.sh converted to generic shell and
+  ignore requests silently if kernel has no module support, Bug #168322.
 
   22 Feb 2007; Roy Marples <uberlord@gentoo.org>
   files/udev-start-104-r12.sh, files/udev-stop-104-r8.sh:
