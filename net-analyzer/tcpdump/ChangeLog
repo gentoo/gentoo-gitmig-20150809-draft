@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.91 2007/03/02 07:24:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.92 2007/03/02 17:28:38 weeve Exp $
+
+  02 Mar 2007; Jason Wever <weeve@gentoo.org> tcpdump-3.9.5-r2.ebuild:
+  Stable on SPARC wrt security bug #168916.
 
   02 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   tcpdump-3.9.5-r2.ebuild:
