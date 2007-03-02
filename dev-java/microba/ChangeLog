@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/microba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.6 2007/02/28 18:01:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.7 2007/03/02 19:16:28 nixnut Exp $
+
+  02 Mar 2007; nixnut <nixnut@gentoo.org> microba-0.4.3.ebuild:
+  Stable on ppc wrt bug 154366
 
   28 Feb 2007; Simon Stelling <blubb@gentoo.org> microba-0.4.3.ebuild:
   stable on amd64; bug 154366
