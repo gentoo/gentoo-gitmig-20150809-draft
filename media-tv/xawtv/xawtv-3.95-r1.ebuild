@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.21 2006/12/31 18:07:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.22 2007/03/02 17:26:49 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -78,6 +78,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	epatch "${FILESDIR}/${P}-libquicktime-compat.patch"
+	epatch "${FILESDIR}/${P}-pagemask-fix.patch"
 	eautoreconf
 }
 
