@@ -273,7 +273,7 @@ SUBSYSTEM=="pnp", ENV{MODALIAS}!="?*", RUN+="/bin/sh -c 'while read id; do modpr
 # alias pnp:dPNPb02f analog
 
 
-SUBSYSTEM=="i2o", ACTION=="add", RUN+="/sbin/modprobe i2o_block"
+SUBSYSTEM=="i2o", ACTION=="add", RUN+="modprobe.sh i2o_block"
 SUBSYSTEM=="mmc", ACTION=="add", RUN+="modprobe.sh mmc_block"
 
 # Parts taken from redhat-rules
