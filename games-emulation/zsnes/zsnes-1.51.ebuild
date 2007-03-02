@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.9 2007/03/02 11:45:52 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.10 2007/03/02 23:27:27 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/zsnes/${PN}${PV//./}src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* ~amd64 x86 ~x86-fbsd"
 IUSE="ao custom-cflags opengl png"
 
 RDEPEND="media-libs/libsdl
