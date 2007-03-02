@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.3 2007/03/02 20:02:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.4 2007/03/02 20:29:23 betelgeuse Exp $
 
 inherit autotools eutils flag-o-matic multilib
 
@@ -109,6 +109,7 @@ src_compile() {
 		${myconf} \
 		--enable-jni \
 		--disable-dependency-tracking \
+		--host=${CHOST} \
 		--prefix=/opt/${PN}-${SLOT} \
 		|| die "configure failed"
 	# disabled for now... see above.
