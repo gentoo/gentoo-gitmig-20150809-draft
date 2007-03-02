@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.28 2007/02/25 11:23:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.29 2007/03/02 19:57:56 nixnut Exp $
+
+  02 Mar 2007; nixnut <nixnut@gentoo.org> nut-2.0.4-r1.ebuild:
+  Stable on ppc wrt bug 148013
 
 *nut-2.0.5-r1 (25 Feb 2007)
 
