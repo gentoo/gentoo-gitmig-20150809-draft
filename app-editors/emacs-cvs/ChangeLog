@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.86 2007/03/02 07:16:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.87 2007/03/02 19:08:42 opfer Exp $
+
+  02 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  -emacs-cvs-22.0.94.ebuild, -emacs-cvs-22.0.9999-r3.ebuild:
+  clean up
 
 *emacs-cvs-22.0.9999-r4 (02 Mar 2007)
 *emacs-cvs-22.0.95 (02 Mar 2007)
