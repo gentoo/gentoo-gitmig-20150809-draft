@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r7.ebuild,v 1.7 2007/02/26 04:34:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r7.ebuild,v 1.8 2007/03/02 19:18:07 ranger Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -43,7 +43,7 @@ src_unpack() {
 		insert="#hvc0:2345:respawn:/sbin/agetty -L 9600 hvc0"$'\n'
 		insert="${insert}#hvsi:2345:respawn:/sbin/agetty -L 19200 hvsi0"
 	fi
-	use ppc && insert="psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux"
+	use ppc && insert="#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux"
 	use arm && insert='#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100'
 	use hppa && insert='b0:12345:respawn:/sbin/agetty 9600 ttyB0 vt100'
 	(use arm || use mips || use sh || use sparc) && sed -i '/ttyS0/s:#::' inittab
