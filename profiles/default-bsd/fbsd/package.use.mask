@@ -33,3 +33,5 @@ sys-process/vixie-cron pam
 
 x11-misc/xscreensaver new-login
 
+# media-libs/mesa with xcb actually doesn't work
+media-libs/mesa xcb
