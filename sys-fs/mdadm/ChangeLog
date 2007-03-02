@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.65 2007/03/01 00:47:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.66 2007/03/02 01:41:54 jer Exp $
+
+  02 Mar 2007; Jeroen Roovers <jer@gentoo.org> mdadm-2.6.1.ebuild:
+  Stable for HPPA (bug #166309).
 
   01 Mar 2007; Jason Wever <weeve@gentoo.org> mdadm-2.6.1.ebuild:
   Stable on SPARC wrt bug #166309.
