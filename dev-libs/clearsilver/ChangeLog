@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.28 2007/02/14 12:25:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.29 2007/03/02 23:01:36 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> clearsilver-0.10.4.ebuild:
+  Fixed on g/fbsd wrt bug #169055
 
   14 Feb 2007; Simon Stelling <blubb@gentoo.org>
   +files/clearsilver-0.10.4-libdir.patch, clearsilver-0.10.4.ebuild:
