@@ -1,6 +1,15 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.87 2007/02/22 04:06:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.88 2007/03/02 12:49:26 drac Exp $
+
+*xfce-utils-4.4.0-r3 (02 Mar 2007)
+
+  02 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xfce-utils-4.4.0-xdg_data_dirs.patch, +xfce-utils-4.4.0-r3.ebuild:
+  Fix startxfce4 script so it won't lose
+  /usr/share:/usr/local/share:/usr/kde/3.5/share:/usr/share set by /etc/env.d.
+  This allows KDE applications to show in Xfce Menu when kdelibs-3.5.6-r2 is
+  installed. Big thanks to Arttu arse Hanhela for testing.
 
   22 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   xfce-utils-4.4.0-r2.ebuild:
