@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/powwow
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.8 2006/02/07 03:40:00 mr_bones_ Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.9 2007/03/02 13:56:42 nyhm Exp $
+
+*powwow-1.2.11 (02 Mar 2007)
+
+  02 Mar 2007; Tristan Heaven <nyhm@gentoo.org> +powwow-1.2.11.ebuild:
+  Version bump, bug #168976
 
 *powwow-1.2.10 (07 Feb 2006)
 
