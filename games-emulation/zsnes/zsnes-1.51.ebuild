@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.8 2007/03/01 08:20:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.9 2007/03/02 11:45:52 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -28,6 +28,9 @@ S=${WORKDIR}/${PN}_${PV//./_}/src
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Fixing compilation without libpng installed
+	epatch "${FILESDIR}"/${P}-libpng.patch
 
 	# Workaround for old libz
 	[[ "${ARCH}" = amd64 ]] && epatch "${FILESDIR}"/${P}-gzdirect.patch
