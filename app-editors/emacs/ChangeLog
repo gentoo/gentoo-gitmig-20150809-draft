@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.125 2007/03/02 20:50:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.126 2007/03/02 21:44:02 opfer Exp $
+
+  02 Mar 2007; Christian Faulhammer <opfer@gentoo.org> emacs-21.4-r4.ebuild,
+  emacs-21.4-r7.ebuild:
+  added elisp-site-regen to actually update the site-lisp files
 
   02 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-18.59-r1.ebuild, emacs-21.4-r4.ebuild, emacs-21.4-r7.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.13 2007/03/02 20:50:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.14 2007/03/02 21:44:02 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -163,6 +163,7 @@ update-alternatives() {
 
 pkg_postinst() {
 	update-alternatives
+	elisp-site-regen
 	if use nosendmail ; then
 	ewarn
 	ewarn "You disabled sendmail support for Emacs. If you will install any MTA"
@@ -173,4 +174,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	update-alternatives
+	elisp-site-regen
 }

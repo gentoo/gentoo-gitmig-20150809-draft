@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r7.ebuild,v 1.3 2007/03/02 20:50:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r7.ebuild,v 1.4 2007/03/02 21:44:02 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -183,6 +183,7 @@ update-alternatives() {
 
 pkg_postinst() {
 	update-alternatives
+	elisp-site-regen
 	if use nosendmail; then
 		while read line; do einfo "${line}"; done<<'EOF'
 
@@ -209,4 +210,5 @@ EOF
 
 pkg_postrm() {
 	update-alternatives
+	elisp-site-regen
 }
