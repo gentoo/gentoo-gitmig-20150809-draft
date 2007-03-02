@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.269 2007/02/28 23:07:18 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.270 2007/03/02 17:54:53 armin76 Exp $
+
+  02 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-2.0.0.2.ebuild:
+  Remove mozbranding and add bindist, enabling branding by default, bug 168409
 
   28 Feb 2007; Jose Luis Rivero <yoswink@gentoo.org>
   mozilla-firefox-2.0.0.2.ebuild:

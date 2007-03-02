@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.2.ebuild,v 1.12 2007/02/28 23:07:18 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.2.ebuild,v 1.13 2007/03/02 17:54:53 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 mips ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="java mozdevelop mozbranding xforms restrict-javascript filepicker"
+IUSE="java mozdevelop bindist xforms restrict-javascript filepicker"
 
 MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}"
 SRC_URI="${MOZ_URI}/source/firefox-${PV}-source.tar.bz2
@@ -82,7 +82,7 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
-	if use mozbranding; then
+	if ! use bindist; then
 		einfo "You are enabling official branding. You may not redistribute this build"
 		einfo "to any users on your network or the internet. Doing so puts yourself into"
 		einfo "a legal problem with mozilla foundation"
@@ -134,7 +134,7 @@ src_compile() {
 		echo "ac_cv_visibility_pragma=no" >>  "${S}/.mozconfig"
 	fi
 
-	if use mozbranding; then
+	if ! use bindist; then
 		mozconfig_annotate '' --enable-official-branding
 	fi
 
@@ -221,7 +221,7 @@ src_install() {
 	install_mozilla_launcher_stub firefox "${MOZILLA_FIVE_HOME}"
 
 	# Install icon and .desktop for menu entry
-	if use mozbranding; then
+	if ! use bindist; then
 		doicon "${FILESDIR}"/icon/firefox-icon.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
 			mozilla-firefox-2.0.desktop
