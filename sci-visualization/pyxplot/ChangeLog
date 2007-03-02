@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.3 2007/02/19 12:53:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.4 2007/03/02 15:30:07 bicatali Exp $
+
+*pyxplot-0.6.3 (02 Mar 2007)
+
+  02 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/0.6.3-dont-build-pyx.patch, +files/0.6.3-respect-destdir.patch,
+  metadata.xml, +pyxplot-0.6.3.ebuild:
+  Version bump. Added xdg-utils dependency to plot postcript files. 
+  Cleani, new patches.
 
   19 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> pyxplot-0.5.8.ebuild:
   keyword ~amd64.
