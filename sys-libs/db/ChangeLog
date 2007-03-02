@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.199 2007/02/28 13:22:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.200 2007/03/02 17:33:26 caleb Exp $
+
+  02 Mar 2007; Caleb Tennis <caleb@gentoo.org> -files/db-4.1.25-java.patch,
+  -files/db-4.1.25-uclibc.patch, -files/db-4.1.25_p1-jarlocation.patch,
+  -db-4.0.14-r2.ebuild, -db-4.0.14-r3.ebuild, -db-4.1.25_p1-r3.ebuild,
+  -db-4.1.25_p1-r4.ebuild, -db-4.1.25_p2.ebuild:
+  Okay, I did it. I removed db 4.0 and db 4.1. I announced it on -dev and
+  there are no explicit deps on it, so it shouldn't create any issues.
+  However, if it does, please open a bug and let me know.
 
   28 Feb 2007; Caleb Tennis <caleb@gentoo.org> db-4.4.20_p4.ebuild,
   db-4.5.20_p2.ebuild:
