@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.2-r1.ebuild,v 1.4 2007/01/29 20:18:32 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.2-r1.ebuild,v 1.5 2007/03/02 22:48:33 welp Exp $
 
 inherit xfce44
 
 DESCRIPTION="Media player frontend for xine-lib"
 HOMEPAGE="http://spuriousinterrupt.org/projects/xfmedia"
 SRC_URI="http://spuriousinterrupt.org/projects/${PN}/files/${P}.tar.bz2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="dbus debug startup-notification"
 

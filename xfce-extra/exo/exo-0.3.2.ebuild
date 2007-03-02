@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.5 2007/02/13 20:49:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.6 2007/03/02 22:44:15 welp Exp $
 
 inherit xfce44 python
 
@@ -8,7 +8,7 @@ xfce44
 xfce44_core_package
 
 DESCRIPTION="Extra library"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc hal libnotify python"
 
 RDEPEND=">=dev-lang/perl-5.6

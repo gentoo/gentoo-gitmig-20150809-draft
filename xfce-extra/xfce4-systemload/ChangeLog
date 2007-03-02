@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.32 2007/02/27 19:29:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.33 2007/03/02 22:56:41 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-systemload-0.4.2.ebuild:
+  Keyworded on x86-fbsd
 
   27 Feb 2007; Guy Martin <gmsoft@gentoo.org>
   xfce4-systemload-0.3.6-r1.ebuild:
