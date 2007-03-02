@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.7 2006/10/24 03:33:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.8 2007/03/02 17:06:49 aballier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -32,6 +32,8 @@ src_unpack() {
 	cd ${S}
 	# Makefile does not work correctly, fix
 	epatch ${FILESDIR}/${PN}-1.18.0-install.diff
+	# Do not include compiler.h, bug #168791
+	epatch "${FILESDIR}/${P}-compilerh.patch"
 }
 
 src_compile() {
