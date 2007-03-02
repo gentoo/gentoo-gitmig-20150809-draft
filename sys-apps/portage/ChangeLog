@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.359 2007/02/27 07:39:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.360 2007/03/02 08:22:42 zmedico Exp $
+
+*portage-2.1.2-r13 (02 Mar 2007)
+
+  02 Mar 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r13.ebuild:
+  2.1.2-r13 revbump.  This fixes bugs #168646 and #168823.  Bug #167107
+  tracks fixes since 2.1.2-r9.  For compatibility with rsync mirrors running
+  <rsync-2.6.4, --prune-empty-dirs has been removed from the default rsync
+  options.  See bug #168646 for details.
 
 *portage-2.1.2-r12 (26 Feb 2007)
 
