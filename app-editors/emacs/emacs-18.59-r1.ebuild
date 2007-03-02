@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r1.ebuild,v 1.1 2007/02/14 14:46:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r1.ebuild,v 1.2 2007/03/02 19:27:05 opfer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic alternatives
 
 DESCRIPTION="The extensible self-documenting text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
+	mirror://gentoo/emacs-18-patches.tar.bz2
 	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz"
 
 LICENSE="GPL-1"
@@ -25,9 +26,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${P}-linux22x-elf-glibc21.diff"
-	epatch "${FILESDIR}/${P}-unexelf.patch"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${WORKDIR}/${P}-unexelf.patch"
+	epatch "${WORKDIR}/${P}-gentoo.patch"
+	epatch "${WORKDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {
@@ -37,7 +38,7 @@ src_compile() {
 	local arch
 	case ${ARCH} in
 		x86)   arch=intel386 ;;
-		*)     die "Architecture ${ARCH} not supported" ;;
+		*)	   die "Architecture ${ARCH} not supported" ;;
 	esac
 	local cmd="s/\"s-.*\.h\"/\"s-linux.h\"/;s/\"m-.*\.h\"/\"m-${arch}.h\"/"
 	use X && cmd="${cmd};s/.*\(#define HAVE_X_WINDOWS\).*/\1/"

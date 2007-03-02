@@ -1,3 +1,6 @@
+MD5 f61420b327a9753e57b14fb1d3dae826 emacs-18-patches.tar.bz2 16526
+RMD160 ab0ed5e428fd71f24f44b43945940d7d33670e81 emacs-18-patches.tar.bz2 16526
+SHA256 d8dd29786dbd202b5e7bb3a176d97ae0901b6c1dd4276e253f0f42fcef34cd6e emacs-18-patches.tar.bz2 16526
 MD5 a7a4ed051dc232cdc9cf37208135302a emacs-18.59-linux22x-elf-glibc21.diff.gz 15671
 RMD160 4fab87eead1a66d767d2334d31507695dcf7b4a8 emacs-18.59-linux22x-elf-glibc21.diff.gz 15671
 SHA256 fb810d893938883d50a3a8d7c43fbeb1604d5454f760b8f1f700326c8ee659dd emacs-18.59-linux22x-elf-glibc21.diff.gz 15671

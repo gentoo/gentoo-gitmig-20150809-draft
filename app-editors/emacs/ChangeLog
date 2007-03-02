@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.123 2007/03/02 19:04:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.124 2007/03/02 19:27:05 opfer Exp $
+
+  02 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/emacs-18.59-gcc4.patch, -files/emacs-18.59-gentoo.patch,
+  -files/emacs-18.59-unexelf.patch, emacs-18.59-r1.ebuild:
+  patches are now on Gentoo mirrors as they were too big
 
   02 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   -emacs-21.4-r6.ebuild:
