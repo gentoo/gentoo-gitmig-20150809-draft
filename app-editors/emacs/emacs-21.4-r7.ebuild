@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r7.ebuild,v 1.2 2007/03/02 18:38:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r7.ebuild,v 1.3 2007/03/02 20:50:01 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -15,34 +15,31 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-
 IUSE="X Xaw3d leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
-	X? ( || ( ( x11-libs/libXext
-				x11-libs/libICE
-				x11-libs/libSM
-				x11-libs/libXmu
-				x11-libs/libXpm
-				|| ( media-fonts/font-adobe-100dpi
+	X? ( x11-libs/libXext
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXmu
+			x11-libs/libXpm
+			|| ( media-fonts/font-adobe-100dpi
 					media-fonts/font-adobe-75dpi )
+			>=media-libs/giflib-4.1.0.1b
+			>=media-libs/jpeg-6b-r2
+			>=media-libs/tiff-3.5.5-r3
+			>=media-libs/libpng-1.2.1
+			!arm? (
+				Xaw3d? ( x11-libs/Xaw3d )
+				!Xaw3d? ( x11-libs/libXaw )
+				motif? (
+					lesstif? ( x11-libs/lesstif )
+				!lesstif? ( >=x11-libs/openmotif-2.1.30 ) )
 			)
-			virtual/x11
-		)
-		>=media-libs/giflib-4.1.0.1b
-		>=media-libs/jpeg-6b-r2
-		>=media-libs/tiff-3.5.5-r3
-		>=media-libs/libpng-1.2.1
-		!arm? (
-		Xaw3d? ( x11-libs/Xaw3d )
-		!Xaw3d? ( || ( x11-libs/libXaw virtual/x11 ) )
-		motif? (
-			lesstif? ( x11-libs/lesstif )
-			!lesstif? ( >=x11-libs/openmotif-2.1.30 ) )
-		)
 	)
 	nls? ( sys-devel/gettext )
 	!nosendmail? ( virtual/mta )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
-	X? ( || ( x11-misc/xbitmaps virtual/x11 ) )"
+	X? ( x11-misc/xbitmaps )"
 
 PROVIDE="virtual/emacs virtual/editor"
 
