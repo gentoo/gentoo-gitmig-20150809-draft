@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.17 2007/01/22 20:04:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.18 2007/03/02 09:24:57 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -33,7 +33,7 @@ src_unpack() {
 	eautoreconf
 
 	# This fix fails with db-4.3
-	if has_version "=sys-libs/db-4.2*" && ! has_version ">=sys-libs/db-4.3*"; then
+	if has_version "=sys-libs/db-4.2*" && ! has_version ">=sys-libs/db-4.3"; then
 		local dbfunc="`grep '^#define.*db_env_create' /usr/include/db.h | awk '{print $NF}'`"
 		if [ "${dbfunc}" != "db_env_create" ] ; then
 			sed -i "s:db_env_create:${dbfunc}:g" configure
