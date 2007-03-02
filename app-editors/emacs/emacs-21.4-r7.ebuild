@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r7.ebuild,v 1.1 2007/02/20 22:15:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r7.ebuild,v 1.2 2007/03/02 18:38:54 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -81,6 +81,9 @@ src_compile() {
 
 	# ever since GCC 3.2
 	replace-flags -O[3-9] -O2
+
+	# this fixes bug 152006
+	use ppc64 && append-flags -mno-fp-in-toc -mno-sum-in-toc
 
 	# -march is known to cause signal 6 on some environment
 	filter-flags "-march=*"

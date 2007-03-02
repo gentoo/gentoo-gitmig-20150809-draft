@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.120 2007/02/20 22:15:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.121 2007/03/02 18:38:54 opfer Exp $
+
+  02 Mar 2007; Christian Faulhammer <opfer@gentoo.org> emacs-21.4-r4.ebuild,
+  emacs-21.4-r6.ebuild, emacs-21.4-r7.ebuild,
+  -emacs-22.0.50_pre20050225.ebuild:
+  added flags for PPC64, fixes bug 152006, reported by corsair, solution found
+  by Andrew John Hughes <gnu_andrew@member.fsf.org>; removed stale version as
+  it is in prefix overlay for ppc-macos
 
 *emacs-21.4-r7 (20 Feb 2007)
 
