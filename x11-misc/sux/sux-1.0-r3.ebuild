@@ -1,23 +1,22 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0-r3.ebuild,v 1.5 2006/08/01 14:01:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0-r3.ebuild,v 1.6 2007/03/02 20:12:48 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="\"su\" wrapper which transfers X credentials"
 HOMEPAGE="http://fgouget.free.fr/sux/sux-readme.shtml"
 SRC_URI="http://fgouget.free.fr/sux/sux"
+
 LICENSE="X11"
 SLOT="0"
-
 KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
-S=${WORKDIR}
+
+S="${WORKDIR}"
 
 DEPEND="sys-apps/debianutils"
-RDEPEND="|| ( x11-apps/xauth
-			  virtual/x11
-			)"
+RDEPEND="x11-apps/xauth"
 
 src_unpack() {
 	cp "${DISTDIR}/${A}" .

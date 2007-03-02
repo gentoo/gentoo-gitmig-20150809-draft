@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.19 2006/08/01 14:01:49 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.20 2007/03/02 20:12:48 drac Exp $
+
+  02 Mar 2007; Samuli Suominen <drac@gentoo.org> sux-1.0-r3.ebuild:
+  Kill virtual/x11.
 
   01 Aug 2006; Simon Stelling <blubb@gentoo.org> -sux-1.0-r2.ebuild,
   sux-1.0-r3.ebuild:
