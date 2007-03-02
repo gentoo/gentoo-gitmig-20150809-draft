@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.69 2007/02/28 23:20:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.70 2007/03/02 20:02:07 betelgeuse Exp $
+
+  02 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/0.93-nsplugin.patch, gnu-classpath-0.93.ebuild:
+  Fix compiling with latest versions of firefox or seamonkey. Fixes bug #168780.
 
   28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   gnu-classpath-0.93.ebuild:

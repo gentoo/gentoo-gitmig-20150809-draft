@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.2 2007/02/28 23:20:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.3 2007/03/02 20:02:07 betelgeuse Exp $
 
-inherit eutils flag-o-matic multilib
+inherit autotools eutils flag-o-matic multilib
 
 MY_P=${P/gnu-/}
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java programming language"
@@ -55,6 +55,13 @@ DEPEND="app-arch/zip
 		${REPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/0.93-nsplugin.patch"
+	eautoconf
+}
 
 src_compile() {
 	unset CLASSPATH JAVA_HOME
