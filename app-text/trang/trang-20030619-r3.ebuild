@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.4 2007/02/03 19:28:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.5 2007/03/02 20:55:58 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Trang: Multi-format schema converter based on RELAX NG"
+DESCRIPTION="Multi-format schema converter based on RELAX NG"
 HOMEPAGE="http://thaiopensource.com/relaxng/trang.html"
 SRC_URI="http://www.thaiopensource.com/download/${P}.zip"
 LICENSE="BSD Apache-1.1"
