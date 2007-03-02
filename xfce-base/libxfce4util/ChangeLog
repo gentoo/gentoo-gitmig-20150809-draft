@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.78 2007/02/26 19:48:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.79 2007/03/02 22:37:57 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> libxfce4util-4.4.0-r1.ebuild:
+  Keyworded on x86-fbsd
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org>
   libxfce4util-4.4.0-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4mcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.80 2007/02/26 19:50:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.81 2007/03/02 22:42:40 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> libxfce4mcs-4.4.0.ebuild:
+  Keyworded on x86-fbsd
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org> libxfce4mcs-4.4.0.ebuild:
   Change DESCRIPTION. Adjust HOMEPAGE for bug 165707.

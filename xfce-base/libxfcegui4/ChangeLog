@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.89 2007/02/26 19:45:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.90 2007/03/02 22:39:42 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> libxfcegui4-4.4.0.ebuild:
+  Keyworded on x86-fbsd
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org> libxfcegui4-4.4.0.ebuild:
   Change DESCRIPTION. Adjust HOMEPAGE for bug 165707.
