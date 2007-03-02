@@ -33,10 +33,10 @@ AUX bind-9.3.4-missing_odbc_test.patch 613 RMD160 ec141cef65e470dfc8df4c641ec96b
 MD5 cb5a05fb75f7a95ec8167efc19089a54 files/bind-9.3.4-missing_odbc_test.patch 613
 RMD160 ec141cef65e470dfc8df4c641ec96bfbd5d8cdd1 files/bind-9.3.4-missing_odbc_test.patch 613
 SHA256 5e6465bdb01cbb662333cc2b0a00ad51905a0cda2eb6b7abc3a0b2dd3e701f4e files/bind-9.3.4-missing_odbc_test.patch 613
-AUX bind-9.4.0_rc2-missing_odbc_test.patch 613 RMD160 ec141cef65e470dfc8df4c641ec96bfbd5d8cdd1 SHA1 dbc3a933cac7e474fa62fb2f71e50be91825b963 SHA256 5e6465bdb01cbb662333cc2b0a00ad51905a0cda2eb6b7abc3a0b2dd3e701f4e
-MD5 cb5a05fb75f7a95ec8167efc19089a54 files/bind-9.4.0_rc2-missing_odbc_test.patch 613
-RMD160 ec141cef65e470dfc8df4c641ec96bfbd5d8cdd1 files/bind-9.4.0_rc2-missing_odbc_test.patch 613
-SHA256 5e6465bdb01cbb662333cc2b0a00ad51905a0cda2eb6b7abc3a0b2dd3e701f4e files/bind-9.4.0_rc2-missing_odbc_test.patch 613
+AUX bind-9.4.0-dlzbdb-close_cursor.patch 338 RMD160 3c92206a6c77ac8e9ea854dfc22fda5753b653a9 SHA1 903383e2b142d76a73030c27f2cdab8d100df150 SHA256 4a004d72565d6db683b879851ae8dfaddcf1b39fd0f97a995d9c5d22d72c6395
+MD5 623e6576b78fc810c8ef698d522aeaf8 files/bind-9.4.0-dlzbdb-close_cursor.patch 338
+RMD160 3c92206a6c77ac8e9ea854dfc22fda5753b653a9 files/bind-9.4.0-dlzbdb-close_cursor.patch 338
+SHA256 4a004d72565d6db683b879851ae8dfaddcf1b39fd0f97a995d9c5d22d72c6395 files/bind-9.4.0-dlzbdb-close_cursor.patch 338
 AUX bind-dlzbdb-close_cursor.patch 307 RMD160 1bbf09d393b5db40b483a952db5f39fe60efda7c SHA1 4214a98ca49b6b85366f85d40dd9d5bbfd008151 SHA256 e18fb5668ffaa540d8ec3e01fe40b1f0d1c562a094c06fa902ef67953daed9f5
 MD5 448a6410601bd8ac83e7ac6bc7ba4544 files/bind-dlzbdb-close_cursor.patch 307
 RMD160 1bbf09d393b5db40b483a952db5f39fe60efda7c files/bind-dlzbdb-close_cursor.patch 307
@@ -179,14 +179,14 @@ EBUILD bind-9.3.4.ebuild 8383 RMD160 dd9cc4295f7e46e8035c482ec359f912b989f88c SH
 MD5 e3cb180c8885c49dd194836783921fc6 bind-9.3.4.ebuild 8383
 RMD160 dd9cc4295f7e46e8035c482ec359f912b989f88c bind-9.3.4.ebuild 8383
 SHA256 c328559d719129fdc46e5371decd721e64868ac520f364d6e076daad3b37a6c9 bind-9.3.4.ebuild 8383
-EBUILD bind-9.4.0.ebuild 8201 RMD160 8d15d1463b5805980a762070da2d0f1d171e5e71 SHA1 4d3cfc22660b8e6ea70c14cba137afdfe0a2e572 SHA256 184357860be477274dd85640c2b97355bce023044c6b192ff0bae232d4b6dc2b
-MD5 57a6913b734e7d118f5d6e0f3e0a9583 bind-9.4.0.ebuild 8201
-RMD160 8d15d1463b5805980a762070da2d0f1d171e5e71 bind-9.4.0.ebuild 8201
-SHA256 184357860be477274dd85640c2b97355bce023044c6b192ff0bae232d4b6dc2b bind-9.4.0.ebuild 8201
-MISC ChangeLog 24496 RMD160 cc430a70e80079f8385cce2ad2534412db288089 SHA1 fbc03076049df70514a1451527c8bf8aebbf23cc SHA256 83eea4901906a32f93f998d440e92647c70e78395fa272d27db81bc651bf22b0
-MD5 904b13d262f8210eb3ea8b10119aef79 ChangeLog 24496
-RMD160 cc430a70e80079f8385cce2ad2534412db288089 ChangeLog 24496
-SHA256 83eea4901906a32f93f998d440e92647c70e78395fa272d27db81bc651bf22b0 ChangeLog 24496
+EBUILD bind-9.4.0-r1.ebuild 8346 RMD160 7799ffdfe745ca8e6af37f24db8ca68bc61fafec SHA1 2d7a547f478e1bfb09054bc79631bf3f97ceac73 SHA256 f4fe466b47cbf8eab82afd47028b3d9679a0acd05ff6ee4b922fbd02b295faff
+MD5 55f74138a14927cc5540accc03e46f07 bind-9.4.0-r1.ebuild 8346
+RMD160 7799ffdfe745ca8e6af37f24db8ca68bc61fafec bind-9.4.0-r1.ebuild 8346
+SHA256 f4fe466b47cbf8eab82afd47028b3d9679a0acd05ff6ee4b922fbd02b295faff bind-9.4.0-r1.ebuild 8346
+MISC ChangeLog 24805 RMD160 53022866e498bf1009d07b7ecbb84ad2a4f06033 SHA1 b1e9ca59d025e8babcd6e1db7a27c1bfcd8e66bd SHA256 9a925aece38f704654e22080be8d5d779510cfcb031ddeb9e0c642d96baf72e6
+MD5 4d9f7965049c2ac2ea209016db752e6e ChangeLog 24805
+RMD160 53022866e498bf1009d07b7ecbb84ad2a4f06033 ChangeLog 24805
+SHA256 9a925aece38f704654e22080be8d5d779510cfcb031ddeb9e0c642d96baf72e6 ChangeLog 24805
 MISC metadata.xml 352 RMD160 0c1a848023a0dd76c5173c0a2135beed46e90263 SHA1 24f998969c955accd1fd4f3719bdf83d4e9d432b SHA256 f6f6ae15da16a20d5e0ce76563e3e27901e25787131b8784ffe872ffe3ddd034
 MD5 bf7284c3e31bd3292a01fa046b3220bb metadata.xml 352
 RMD160 0c1a848023a0dd76c5173c0a2135beed46e90263 metadata.xml 352
@@ -233,13 +233,13 @@ SHA256 34a9746ac50c14de6bc2e6383676681b87b0dde42379e8fa8cad2fc5d56b4fd1 files/di
 MD5 e90002b0ea49566f01d00de55bab0a27 files/digest-bind-9.3.4-r1 723
 RMD160 2a25d4a9f6f7e0688054a0da4ada926df2f189dc files/digest-bind-9.3.4-r1 723
 SHA256 34a9746ac50c14de6bc2e6383676681b87b0dde42379e8fa8cad2fc5d56b4fd1 files/digest-bind-9.3.4-r1 723
-MD5 a7601db3e24eedf4c3108e1c7df587ff files/digest-bind-9.4.0 470
-RMD160 f8084be93974d89d44f6410f3bae57c8f34d0189 files/digest-bind-9.4.0 470
-SHA256 0729d99d566d077c321e7ec4100c1d4c5b0e0e37e380c2cfb035bb85da6351c4 files/digest-bind-9.4.0 470
+MD5 a7601db3e24eedf4c3108e1c7df587ff files/digest-bind-9.4.0-r1 470
+RMD160 f8084be93974d89d44f6410f3bae57c8f34d0189 files/digest-bind-9.4.0-r1 470
+SHA256 0729d99d566d077c321e7ec4100c1d4c5b0e0e37e380c2cfb035bb85da6351c4 files/digest-bind-9.4.0-r1 470
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFF5ZlCbwxeDFj+ScoRAmYcAKCZV9SaNxyfLt6AsHVh2j7tvlYuwACfS0FF
-PZmvEUbAwJFPlQaDdbAieo4=
-=K0hM
+iD8DBQFF5+xBbwxeDFj+ScoRAmrxAJ4rnXN/CdO+Yocet4VXt++E4kcDJwCfZ8pP
+BKuwGINb5znSZQEteW9TyHE=
+=s8yh
 -----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.149 2007/02/28 15:02:18 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.150 2007/03/02 09:21:09 voxus Exp $
+
+*bind-9.4.0-r1 (02 Mar 2007)
+
+  02 Mar 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +files/bind-9.4.0-dlzbdb-close_cursor.patch,
+  -files/bind-9.4.0_rc2-missing_odbc_test.patch, -bind-9.4.0.ebuild,
+  +bind-9.4.0-r1.ebuild:
+  Support for /dev/urandom added, patch by Aurélien Requiem <bugs@menfin.net>.
 
 *bind-9.4.0 (28 Feb 2007)
 

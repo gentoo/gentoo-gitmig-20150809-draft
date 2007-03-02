@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.0.ebuild,v 1.1 2007/02/28 15:02:18 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.0-r1.ebuild,v 1.1 2007/03/02 09:21:09 voxus Exp $
 
 inherit eutils libtool autotools
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_/}/${P/_/}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -105,6 +105,12 @@ src_compile() {
 		fi
 	else
 		myconf="${myconf} --disable-linux-caps --disable-threads"
+	fi
+
+	if use urandom; then
+		myconf="${myconf} --with-randomdev=/dev/urandom"
+	else
+		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
 
 	econf \
