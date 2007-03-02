@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r4.ebuild,v 1.1 2007/03/02 07:16:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r4.ebuild,v 1.2 2007/03/02 20:42:02 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -24,7 +24,7 @@ X_DEPEND="x11-libs/libXmu x11-libs/libXpm x11-libs/libXt x11-misc/xbitmaps || ( 
 DEPEND="sys-libs/ncurses
 	sys-libs/zlib
 	spell? ( || ( app-text/ispell app-text/aspell ) )
-	X? ( || ( ( $X_DEPEND ) virtual/x11 ) )
+	X? ( $X_DEPEND )
 	X? ( gif? ( media-libs/giflib )
 		jpeg? ( media-libs/jpeg )
 		tiff? ( media-libs/tiff )
