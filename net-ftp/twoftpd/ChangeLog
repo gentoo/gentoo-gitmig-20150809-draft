@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/twoftpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.3 2007/02/23 19:27:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.4 2007/03/02 19:36:19 bangert Exp $
+
+  02 Mar 2007; Thilo Bangert <bangert@gentoo.org> twoftpd-1.21.ebuild:
+  set build variables correctly
 
   23 Feb 2007; Thilo Bangert <bangert@gentoo.org> twoftpd-1.21.ebuild:
   fix ROOT misuse
