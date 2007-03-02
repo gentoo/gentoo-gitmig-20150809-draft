@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.78 2007/02/28 15:08:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.79 2007/03/02 14:08:17 blubb Exp $
+
+  02 Mar 2007; Simon Stelling <blubb@gentoo.org> +2007.0/package.use.mask,
+  package.use.mask:
+  sync package.use.mask with 2007/package.use.mask and put a fat warning in
+  there; bug 168249
 
   28 Feb 2007; Simon Stelling <blubb@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
