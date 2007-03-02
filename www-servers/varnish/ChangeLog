@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.5 2007/02/22 16:17:26 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.6 2007/03/02 19:39:04 bangert Exp $
+
+  02 Mar 2007; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd:
+  fix path to varnishd (moved to sbin)
 
   22 Feb 2007; Thilo Bangert <bangert@gentoo.org> -varnish-1.0.1.ebuild:
   punt old version
