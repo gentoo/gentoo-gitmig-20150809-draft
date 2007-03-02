@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.2 2007/02/18 12:04:48 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.3 2007/03/02 12:48:14 centic Exp $
+
+  02 Mar 2007; Dominik Stadler <centic@gentoo.org> +files/64asy-gentoo.el,
+  asymptote-1.20.ebuild:
+  Add missing file 64asy-gentoo.el, add check for tk in python, add workaround
+  for problems with types.h and pid_t, fixes Bug 82871, thanks to Andrey
+  Grozin and Emiliano Vavassori for patches and suggestions.
+
+  21 Feb 2007; Dominik Stadler <centic@gentoo.org> asymptote-1.20.ebuild:
+  Fix use-flags again, fixes Bug 167405
 
   18 Feb 2007; Dominik Stadler <centic@gentoo.org> asymptote-1.20.ebuild:
   Use vim-syntax instead of vim, fixes Bug 167405

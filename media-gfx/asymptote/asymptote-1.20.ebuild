@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.20.ebuild,v 1.2 2007/02/18 12:04:48 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.20.ebuild,v 1.3 2007/03/02 12:48:14 centic Exp $
 
 inherit eutils elisp-common
 
@@ -22,7 +22,7 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	emacs? ( virtual/emacs )
 	gsl? ( sci-libs/gsl )
-	vim? ( app-editors/vim )"
+	vim-syntax? ( app-editors/vim )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.5
 	>=sys-devel/bison-1.875
@@ -41,6 +41,14 @@ pkg_setup() {
 			eerror "You have to rebuild dev-libs/boehm-gc enabling c++ support"
 			die
 		fi
+	fi
+
+	if ! built_with_use dev-lang/python tk; then
+		eerror "Please reemerge dev-lang/python with 'tk' support or xasy will"
+		eerror "not work. In order to fix this, execute the following:"
+		eerror "echo \"dev-lang/python tk\" >> /etc/portage/package.use"
+		eerror "and reemerge dev-lang/python before emerging asymptote."
+		die "requires dev-lang/python with use-flag 'tk'!!"
 	fi
 }
 
@@ -65,7 +73,8 @@ src_unpack() {
 src_compile() {
 	for dir in `find /var/cache/fonts -type d`; do addwrite ${dir}; done
 
-	myconf="--with-latex=/usr/share/texmf/tex/latex --disable-gc-debug"
+	# for the CPPFLAGS see http://sourceforge.net/forum/forum.php?thread_id=1683277&forum_id=409349
+	myconf="--with-latex=/usr/share/texmf/tex/latex --disable-gc-debug CPPFLAGS=-DHAVE_SYS_TYPES_H"
 	if use boehm-gc; then
 		myconf="${myconf} --enable-gc=system"
 	else
