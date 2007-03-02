@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.84 2007/02/26 19:36:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.85 2007/03/02 22:13:35 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> xfdesktop-4.4.0-r3.ebuild:
+  Keyworded on x86-fbsd
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org> xfdesktop-4.4.0-r3.ebuild:
   Adjust HOMEPAGE for bug 165707.

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.15 2007/02/22 02:47:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.16 2007/03/02 22:18:12 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> orage-4.4.0.ebuild:
+  Keyworded on x86-fbsd
 
   22 Feb 2007; Joshua Nichols <nichoj@gentoo.org> orage-4.4.0.ebuild:
   Updated homepage. See bug #165707.

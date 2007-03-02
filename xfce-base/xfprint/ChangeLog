@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfprint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.82 2007/02/26 19:39:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.83 2007/03/02 22:16:47 welp Exp $
+
+  02 Mar 2007; Peter Weller <welp@gentoo.org> xfprint-4.4.0.ebuild:
+  Keyworded on x86-fbsd
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org> xfprint-4.4.0.ebuild:
   Change DESCRIPTION. Adjust HOMEPAGE for bug 165707.
