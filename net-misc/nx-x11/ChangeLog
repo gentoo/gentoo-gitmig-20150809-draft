@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.16 2007/02/26 08:27:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.17 2007/03/02 20:40:44 nixnut Exp $
+
+  02 Mar 2007; nixnut <nixnut@gentoo.org> nx-x11-1.5.0-r8.ebuild:
+  Stable on ppc wrt bug 168422
 
   26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   nx-x11-1.5.0-r8.ebuild:
