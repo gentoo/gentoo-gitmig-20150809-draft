@@ -1,29 +1,29 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.4 2006/12/29 20:59:39 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.5 2007/03/02 12:44:36 drizzt Exp $
 
 inherit portability toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="Fuse for FreeBSD"
 HOMEPAGE="http://fuse4bsd.creo.hu/"
-# -sbin is needed for getmntopts.c, hardcoding 6.1 is nasty but can't think of
+# -sbin is needed for getmntopts.c, hardcoding 6.2 is nasty but can't think of
 # any better solution right now
 SRC_URI="http://fuse4bsd.creo.hu/downloads/${P}.tar.gz
-	mirror://gentoo/freebsd-sbin-6.1.tar.bz2"
+	mirror://gentoo/freebsd-sbin-6.2.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
 IUSE=""
 
-DEPEND=">=sys-freebsd/freebsd-sources-6.0
+DEPEND=">=sys-freebsd/freebsd-sources-6.2
 	virtual/pmake"
 RDEPEND="sys-fs/fuse"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	cp "${ROOT}/usr/include/fuse/fuse_kernel.h" fuse_module/
+	cp /usr/include/fuse/fuse_kernel.h fuse_module/
 	cp "${WORKDIR}/sbin/mount/getmntopts.c" mount_fusefs/
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-ports.patch
