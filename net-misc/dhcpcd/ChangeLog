@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.134 2007/03/01 10:53:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.135 2007/03/02 12:20:53 uberlord Exp $
+
+*dhcpcd-3.0.16 (02 Mar 2007)
+
+  02 Mar 2007; Roy Marples <uberlord@gentoo.org> +dhcpcd-3.0.16.ebuild:
+  New release, which sets the minimum MTU to be 576 regardless of what the 
+  DHCP server wants. Fixes #168985.
 
 *dhcpcd-3.0.15 (01 Mar 2007)
 
