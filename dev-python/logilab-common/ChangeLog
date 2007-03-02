@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logilab-common
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.31 2006/11/29 23:54:46 marienz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.32 2007/03/02 00:30:16 marienz Exp $
+
+*logilab-common-0.21.2 (02 Mar 2007)
+
+  02 Mar 2007; Marien Zwart <marienz@gentoo.org>
+  +files/logilab-common-0.21.2-remove-broken-tests.patch,
+  +logilab-common-0.21.2.ebuild:
+  Version bump changing how the tests are run.
 
 *logilab-common-0.21.0 (29 Nov 2006)
 
