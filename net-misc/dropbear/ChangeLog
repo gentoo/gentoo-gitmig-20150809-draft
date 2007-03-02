@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.44 2007/02/27 23:55:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.45 2007/03/02 20:22:21 opfer Exp $
+
+  02 Mar 2007; Christian Faulhammer <opfer@gentoo.org> dropbear-0.49.ebuild:
+  stable x86; bug 168847
 
 *dropbear-0.49 (27 Feb 2007)
 
