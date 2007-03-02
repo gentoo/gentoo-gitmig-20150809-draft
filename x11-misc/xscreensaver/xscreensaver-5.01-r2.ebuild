@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.10 2007/02/24 16:42:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.11 2007/03/02 13:24:23 drac Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -121,6 +121,10 @@ src_install() {
 
 	# Remove "extra" capplet
 	rm -f "${D}/usr/share/applications/gnome-screensaver-properties.desktop"
+
+	# Allways install Settings .desktop for enviroments following
+	# freedesktop.org standard, e.g. xfce-base/xfdesktop and rox-base/xdg-menu
+	domenu "${FILESDIR}/desktop_entries/screensaver-properties.desktop"
 
 	use pam && fperms 755 /usr/bin/xscreensaver
 	pamd_mimic_system xscreensaver auth

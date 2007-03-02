@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.166 2007/02/24 16:42:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.167 2007/03/02 13:24:23 drac Exp $
+
+  02 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xscreensaver-5.01-r2.ebuild:
+  Allways install Settings .desktop for enviroments following f.d.o menu spec,
+  e.g. xfce-base/xfdesktop and rox-base/xdg-menu.
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> xscreensaver-5.01-r2.ebuild:
   Stable on ppc wrt bug 167688
