@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-windowlist
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-windowlist/ChangeLog,v 1.11 2007/02/27 19:36:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-windowlist/ChangeLog,v 1.12 2007/03/03 14:14:59 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-windowlist-0.1.0-r2.ebuild:
+  Stable on ppc wrt bug 154314
 
   27 Feb 2007; Guy Martin <gmsoft@gentoo.org>
   xfce4-windowlist-0.1.0-r2.ebuild:

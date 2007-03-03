@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.33 2007/03/02 22:56:41 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.34 2007/03/03 14:11:44 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-systemload-0.3.6-r1.ebuild:
+  Stable on ppc wrt bug 154314
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-systemload-0.4.2.ebuild:
   Keyworded on x86-fbsd

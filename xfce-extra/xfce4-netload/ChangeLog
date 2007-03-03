@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-netload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.41 2007/03/02 22:54:45 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.42 2007/03/03 14:07:41 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-netload-0.3.3.ebuild:
+  Stable on ppc wrt bug 154314
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-netload-0.4.0.ebuild:
   Keyworded on x86-fbsd
