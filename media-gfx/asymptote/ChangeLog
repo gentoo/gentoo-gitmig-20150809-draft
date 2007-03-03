@@ -1,9 +1,13 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.4 2007/03/02 12:56:19 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.5 2007/03/03 08:12:05 centic Exp $
 
-  02 Mar 2007; Dominik Stadler <centic@gentoo.org> ChangeLog:
-  Re-commit for manifest-signing
+  03 Mar 2007; Dominik Stadler <centic@gentoo.org>
+  +files/asymptote-1.21-configure-ac.patch,
+  +files/asymptote-1.21-makefile.patch, +asymptote-1.21.ebuild:
+  Bump to version 1.21
+
+*asymptote-1.21 (03 Mar 2007)
 
   02 Mar 2007; Dominik Stadler <centic@gentoo.org> +files/64asy-gentoo.el,
   asymptote-1.20.ebuild:
