@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6904 2007/03/03 10:54:25 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6905 2007/03/03 18:11:20 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -342,10 +342,6 @@ net-analyzer/prelude-nagios
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2007)
 # Block for early testing
 >=app-office/dia-0.96_pre3
-
-# Markus Ullmann <jokey@gentoo.org> (01 Feb 2007)
-# pending removal 1st of March, reference bug #164924
-net-analyzer/prelude-nids
 
 # Christian Faulhammer <opfer@gentoo.org> (01 Feb 2007)
 # live ebuild for the 22 branch
