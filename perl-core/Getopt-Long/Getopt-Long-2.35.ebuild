@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/Getopt-Long-2.35.ebuild,v 1.10 2006/10/23 19:04:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/Getopt-Long-2.35.ebuild,v 1.11 2007/03/03 20:34:12 ticho Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/J/JV/JV/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/perl-PodParser

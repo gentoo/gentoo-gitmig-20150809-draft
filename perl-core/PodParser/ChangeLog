@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/PodParser
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.32 2007/03/03 11:29:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.33 2007/03/03 20:36:45 ticho Exp $
+
+  03 Mar 2007; Andrej Kacian <ticho@gentoo.org> PodParser-1.35.ebuild:
+  Stable on x86, bug #169153.
 
   03 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   PodParser-1.35.ebuild:

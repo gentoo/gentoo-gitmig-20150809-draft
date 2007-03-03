@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Simple
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/ChangeLog,v 1.35 2007/03/03 11:32:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/ChangeLog,v 1.36 2007/03/03 20:38:07 ticho Exp $
+
+  03 Mar 2007; Andrej Kacian <ticho@gentoo.org> Test-Simple-0.66.ebuild:
+  Stable on x86, bug #169153.
 
   03 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   Test-Simple-0.66.ebuild:
