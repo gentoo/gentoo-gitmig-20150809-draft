@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.22 2007/02/01 17:25:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.23 2007/03/03 22:08:16 falco Exp $
+
+*fail2ban-0.7.6-r1 (03 Mar 2007)
+
+  03 Mar 2007; Raphael Marichez <falco@gentoo.org> +files/fail2ban.conf.d,
+  +files/fail2ban-0.7.6.init.d.patch, +fail2ban-0.7.6-r1.ebuild:
+  Add support for "force" startup, bypassing an old socket (bug #168071)
 
 *fail2ban-0.7.5-r1 (01 Feb 2007)
 *fail2ban-0.6.2-r1 (01 Feb 2007)
