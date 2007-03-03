@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6906 2007/03/03 18:19:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6907 2007/03/03 20:19:59 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -125,11 +125,6 @@ app-misc/pyge
 # Gustavo Felisberto <humpback@gentoo.org> (23 Feb 2007)
 # Masked for remove from tree. Contact me if you need this
 net-misc/ssh
-
-# Marcelo Goes <vanquirius@gentoo.org> (22 Feb 2007)
-# Masked for testing
-# More information on bug 141617
->=media-gfx/hugin-0.6.1
 
 # Jim Ramsay <lack@gentoo.org> (22 Feb 2007)
 # Pending removal 24 Mar 2007, bug 151446 
