@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/legousbtower-0.5.4.ebuild,v 1.1 2006/06/18 13:59:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/legousbtower-0.5.4.ebuild,v 1.2 2007/03/03 22:46:15 genone Exp $
 
 inherit linux-mod
 
@@ -37,11 +37,11 @@ src_install() {
 
 pkg_postinst() {
 	if [ ${KV_MINOR} -eq 4 ] ; then
-		einfo "You are using the 2.4 kernel series."
-		einfo "These are unsupported."
+		elog "You are using the 2.4 kernel series."
+		elog "These are unsupported."
 	else
-		einfo "You are using the 2.6 kernel series."
-		einfo "This package only provides the header file."
-		einfo "You need to enable the lego usb tower option in the kernel."
+		elog "You are using the 2.6 kernel series."
+		elog "This package only provides the header file."
+		elog "You need to enable the lego usb tower option in the kernel."
 	fi
 }
