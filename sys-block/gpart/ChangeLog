@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/gpart
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.4 2006/01/28 17:25:38 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.5 2007/03/03 05:34:51 vapier Exp $
+
+  03 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/gpart-0.1h-no-_syscall.patch, gpart-0.1h-r1.ebuild:
+  Use syscall() rather than _syscall#() #163800 by Peter Ruskin.
 
   28 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> gpart-0.1h-r1.ebuild:
   Move to -amd64 as per bug #120741 waiting for a solution.

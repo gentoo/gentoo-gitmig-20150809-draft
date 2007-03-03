@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/gpart-0.1h-r1.ebuild,v 1.3 2006/01/28 17:25:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/gpart-0.1h-r1.ebuild,v 1.4 2007/03/03 05:34:51 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="-amd64 ~hppa x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -23,6 +23,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-vfat.patch
 	epatch "${FILESDIR}"/${P}-ntfs.patch
 	epatch "${FILESDIR}"/${P}-PIC.patch
+	epatch "${FILESDIR}"/${P}-no-_syscall.patch
 	epatch "${WORKDIR}"/gpart-0.1h-reiserfs-3.6.patch
 	sed -i -e "/^CFLAGS/s: -O2 : ${CFLAGS} :" make.defs
 }
@@ -30,5 +31,5 @@ src_unpack() {
 src_install() {
 	dobin src/gpart || die
 	doman man/gpart.8
-	dodoc README CHANGES INSTALL LSM
+	dodoc README Changes INSTALL LSM
 }
