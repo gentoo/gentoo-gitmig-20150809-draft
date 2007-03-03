@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.31 2007/03/02 22:32:53 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.32 2007/03/03 14:38:06 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> terminal-0.2.4-r1.ebuild:
+  Stable on ppc wrt bug 153225
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> terminal-0.2.6-r1.ebuild:
   Keyworded on x86-fbsd

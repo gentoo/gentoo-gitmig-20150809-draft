@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.4-r1.ebuild,v 1.6 2007/02/26 19:04:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.4-r1.ebuild,v 1.7 2007/03/03 14:38:06 nixnut Exp $
 
 inherit xfce42
 
 DESCRIPTION="Terminal with close ties to xfce"
 HOMEPAGE="http://www.os-cillation.com/"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~arm ~ia64 ppc ppc64 ~sparc x86"
 
 IUSE="dbus"
 
