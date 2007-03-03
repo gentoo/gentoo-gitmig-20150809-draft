@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6903 2007/03/03 02:35:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6904 2007/03/03 10:54:25 dercorny Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Stefan Cornelius <dercorny@gentoo.org> (3 Mar 2007)
+# Masking wordpress due to a long list of security bugs
+# e.g. check bug #168529
+www-apps/wordpress
 
 # Samuli Suominen <drac@gentoo.org> (2 Mar 2007)
 # Masked for removal. Three wallpapers from 2004
@@ -231,10 +236,6 @@ net-analyzer/netwatch
 # Doesn't build, upstream dead, network dead, bug 166887
 # Pending removal 13 Mar 2007
 net-p2p/mnet
-
-# Steve Dibb <beandog@gentoo.org> (14 Feb 2007)
-# needs testing
->=www-apps/wordpress-2.1
 
 # Michael Hanselmann <hansmi@gentoo.org> (11 Feb 2007)
 # Pending removal March 11th; As upstream, I stopped development on this ages
