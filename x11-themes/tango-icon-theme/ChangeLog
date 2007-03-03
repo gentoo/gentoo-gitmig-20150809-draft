@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.29 2007/02/27 12:41:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.30 2007/03/03 15:14:55 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> tango-icon-theme-0.8.0.ebuild:
+  Stable on ppc wrt bug 161592
 
   27 Feb 2007; Simon Stelling <blubb@gentoo.org>
   tango-icon-theme-0.8.0.ebuild:
