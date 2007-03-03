@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.53 2007/02/11 04:17:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.54 2007/03/03 15:45:39 metalgod Exp $
+
+  03 Mar 2007; Luis Medinas <metalgod@gentoo.org>
+  gtkhtml-sharp-2.16.0.ebuild:
+  Stable on amd64.
 
   11 Feb 2007; Lars Weiler <pylon@gentoo.org> gtkhtml-sharp-2.16.0.ebuild:
   Stable on ppc; bug #164048.
