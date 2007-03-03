@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r1.ebuild,v 1.2 2006/04/02 05:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r1.ebuild,v 1.3 2007/03/03 23:08:50 genone Exp $
 
 IUSE="X"
 
@@ -88,5 +88,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo " Please review the documentation in /usr/share/doc/$PF"
+	elog " Please review the documentation in /usr/share/doc/$PF"
 }

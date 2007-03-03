@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.11.1.ebuild,v 1.2 2007/01/07 00:50:55 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.11.1.ebuild,v 1.3 2007/03/03 23:02:09 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -48,6 +48,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "For additional installation instructions go to"
-	einfo "https://trac.prelude-ids.org/wiki/InstallingLibpreludedb"
+	elog "For additional installation instructions go to"
+	elog "https://trac.prelude-ids.org/wiki/InstallingLibpreludedb"
 }

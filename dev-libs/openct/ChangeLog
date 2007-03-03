@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.39 2007/02/12 14:18:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.40 2007/03/03 23:10:40 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> openct-0.5.0.ebuild,
+  openct-0.6.6.ebuild, openct-0.6.8.ebuild, openct-0.6.9.ebuild,
+  openct-0.6.11-r1.ebuild:
+  Replacing einfo with elog
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org> openct-0.6.11-r1.ebuild:
   stable on amd64; bug 162205

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11-r1.ebuild,v 1.3 2007/02/12 14:18:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11-r1.ebuild,v 1.4 2007/03/03 23:10:40 genone Exp $
 
 inherit eutils multilib
 
@@ -59,19 +59,19 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You need to edit /etc/openct.conf to enable serial readers."
-	einfo
-	einfo "To use hotplugging (USB readers) your kernel has to be compiled"
-	einfo "with CONFIG_HOTPLUG enabled."
-	einfo
-	einfo "You should add \"openct\" to your default runlevel. To do so"
-	einfo "type \"rc-update add openct default\"."
-	einfo
-	einfo "You need to be a member of the (newly created) group openct to"
-	einfo "access smart card readers connected to this system. Set users'"
-	einfo "groups with usermod -G.  root always has access."
-	einfo
+	elog
+	elog "You need to edit /etc/openct.conf to enable serial readers."
+	elog
+	elog "To use hotplugging (USB readers) your kernel has to be compiled"
+	elog "with CONFIG_HOTPLUG enabled."
+	elog
+	elog "You should add \"openct\" to your default runlevel. To do so"
+	elog "type \"rc-update add openct default\"."
+	elog
+	elog "You need to be a member of the (newly created) group openct to"
+	elog "access smart card readers connected to this system. Set users'"
+	elog "groups with usermod -G.  root always has access."
+	elog
 
 	preserve_old_lib_notify "${ROOT}usr/$(get_libdir)/libopenct.so.0"
 
