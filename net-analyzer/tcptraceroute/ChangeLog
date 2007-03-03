@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.34 2007/02/20 00:43:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.35 2007/03/03 11:48:08 gmsoft Exp $
+
+  03 Mar 2007; Guy Martin <gmsoft@gentoo.org>
+  tcptraceroute-1.5_beta7.ebuild:
+  Stable on hppa
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
