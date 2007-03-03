@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r6.ebuild,v 1.1 2007/03/03 06:21:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r6.ebuild,v 1.2 2007/03/03 21:22:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -119,6 +119,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-2.12r-no-_syscall.patch #150852
 	epatch "${FILESDIR}"/${PN}-2.12r-HAVE_asm_page_h.patch #168278
+	use crypt && epatch "${FILESDIR}"/${PN}-2.12r-HAVE_asm_page_h-loop-aes.patch
 
 	# Enable random features
 	local mconfigs="MCONFIG"
