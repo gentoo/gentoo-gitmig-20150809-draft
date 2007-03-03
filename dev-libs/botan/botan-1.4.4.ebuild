@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.7 2005/07/29 23:26:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.8 2007/03/03 22:32:36 genone Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -65,7 +65,7 @@ src_compile() {
 	fi
 
 	cd ${S}
-	einfo "Enabling modules: " ${modules}
+	elog "Enabling modules: " ${modules}
 
 	# FIXME: We might actually be on *BSD or OS X...
 	./configure.pl --noauto gcc-linux-$CHOSTARCH --modules=$modules ||

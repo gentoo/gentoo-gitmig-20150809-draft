@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r1.ebuild,v 1.14 2007/01/08 20:56:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r1.ebuild,v 1.15 2007/03/03 22:38:03 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -49,13 +49,6 @@ pkg_setup() {
 		ewarn "Will default to GNU DB as your SASLdb database backend."
 		ewarn "If you want to build with Berkeley DB support; hit Control-C now."
 		ewarn "Change your USE flag -gdbm and emerge again."
-		echo
-		has_version ">=sys-apps/portage-2.0.50" && (
-		einfo "It would be best practice to add the set of USE flags that you use for this"
-		einfo "package to the file: /etc/portage/package.use. Example:"
-		einfo "\`echo \"dev-libs/cyrus-sasl -gdbm berkdb\" >> /etc/portage/package.use\`"
-		einfo "to build cyrus-sasl with Berkeley database as your SASLdb backend."
-		)
 		echo
 		ewarn "Waiting 10 seconds before starting..."
 		ewarn "(Control-C to abort)..."
@@ -237,9 +230,9 @@ pkg_postinst () {
 	fi
 
 	if use sample; then
-		einfo "You have chosen to install sources for example client and server."
-		einfo "To build these, please type:"
-		einfo "\tcd /usr/share/${PN}-2/examples/sample && make"
+		elog "You have chosen to install sources for example client and server."
+		elog "To build these, please type:"
+		elog "\tcd /usr/share/${PN}-2/examples/sample && make"
 	fi
 
 	if use authdaemond; then

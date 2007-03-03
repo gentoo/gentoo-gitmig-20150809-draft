@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.2.1.ebuild,v 1.6 2006/12/04 19:00:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.2.1.ebuild,v 1.7 2007/03/03 22:40:11 genone Exp $
 
 inherit eutils
 
@@ -19,7 +19,6 @@ DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
 
 src_compile () {
-
 	econf \
 		--with-pkgdocdir=/usr/share/doc/${PF}/html \
 		`use_enable nls` \
@@ -29,16 +28,14 @@ src_compile () {
 }
 
 src_install () {
-
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS INSTALL* NEWS README*
 }
 
 pkg_postinst() {
-
-	einfo
-	einfo "If you are upgrading from <app-dicts/eb-4,"
-	einfo "you may need to rebuild applications depending on eb."
-	einfo
+	elog
+	elog "If you are upgrading from <app-dicts/eb-4,"
+	elog "you may need to rebuild applications depending on eb."
+	elog
 }

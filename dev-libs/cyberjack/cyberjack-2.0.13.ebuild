@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-2.0.13.ebuild,v 1.2 2007/02/17 23:34:10 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-2.0.13.ebuild,v 1.3 2007/03/03 22:34:31 genone Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -68,28 +68,28 @@ src_install() {
 
 pkg_postinst() {
 	local conf="/etc/${PN}/${PN}.conf"
-	einfo
-	einfo "To configure logging, key beep behaviour etc. you need to"
-	einfo "copy ${conf}.default"
-	einfo "to ${conf}"
-	einfo "and modify the latter as needed."
-	einfo
+	elog
+	elog "To configure logging, key beep behaviour etc. you need to"
+	elog "copy ${conf}.default"
+	elog "to ${conf}"
+	elog "and modify the latter as needed."
+	elog
 	useq noudev || {
-		einfo "Please run the following command as root to"
-		einfo "make udevd read the cyberJack rules that were"
-		einfo "just installed onto your system:"
-		einfo
-		einfo "  udevcontrol reload_rules"
-		einfo
-		einfo "To be able to use the cyberJack device, you need to"
-		einfo "be a member of the group 'cyberjack' which has just"
-		einfo "been added to your system. You can add your user to"
-		einfo "the group by running the following command as root:"
-		einfo
-		einfo "  gpasswd -a youruser cyberjack"
-		einfo
-		einfo "Please be aware that you need to re-login to your"
-		einfo "system for the group membership to take effect."
-		einfo
+		elog "Please run the following command as root to"
+		elog "make udevd read the cyberJack rules that were"
+		elog "just installed onto your system:"
+		elog
+		elog "  udevcontrol reload_rules"
+		elog
+		elog "To be able to use the cyberJack device, you need to"
+		elog "be a member of the group 'cyberjack' which has just"
+		elog "been added to your system. You can add your user to"
+		elog "the group by running the following command as root:"
+		elog
+		elog "  gpasswd -a youruser cyberjack"
+		elog
+		elog "Please be aware that you need to re-login to your"
+		elog "system for the group membership to take effect."
+		elog
 	}
 }
