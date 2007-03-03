@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.23 2007/03/01 20:15:20 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.24 2007/03/03 12:38:52 dertobi123 Exp $
+
+  03 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> opal-2.2.5.ebuild:
+  Stable on ppc wrt bug #167643.
 
   01 Mar 2007; René Nussbaumer <killerfox@gentoo.org> opal-2.2.5.ebuild:
   Stable on hppa. See bug #167643.
