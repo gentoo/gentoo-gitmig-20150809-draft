@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.178 2007/01/31 21:09:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.179 2007/03/03 06:13:04 vapier Exp $
+
+  03 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12r-HAVE_asm_page_h.patch, util-linux-2.12r-r5.ebuild:
+  Fix building when asm/page.h is not available #168278 by Daniel Black.
 
   31 Jan 2007; Markus Rothe <corsair@gentoo.org> util-linux-2.12r-r5.ebuild:
   Stable on ppc64; bug #164011
