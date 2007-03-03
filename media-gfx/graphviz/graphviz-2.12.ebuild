@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.7 2007/03/03 12:00:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.8 2007/03/03 17:10:43 dev-zero Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -107,6 +107,14 @@ src_unpack() {
 
 	# no nls, no gettext, no iconv macro, so disable it
 	use nls || sed -i '/^AM_ICONV/d' configure.ac
+
+	# Nuke the dead symlinks for the bindings
+	sed -i \
+		-e '/$(pkgluadir)/d' \
+		-e '/$(pkgperldir)/d' \
+		-e '/$(pkgpythondir)/d' \
+		-e '/$(pkgrubydir)/d' \
+		tclpkg/gv/Makefile.am || die "sed failed"
 
 	eautoreconf
 }
