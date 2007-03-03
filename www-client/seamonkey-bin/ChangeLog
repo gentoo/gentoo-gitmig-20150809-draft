@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.9 2007/03/01 12:46:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.10 2007/03/03 13:11:43 armin76 Exp $
+
+  03 Mar 2007; Raúl Porcel <armin76@gentoo.org> -seamonkey-bin-1.1.ebuild:
+  Remove old
 
   01 Mar 2007; Simon Stelling <blubb@gentoo.org> seamonkey-bin-1.1.1.ebuild:
   stable on amd64; security bug 165555
