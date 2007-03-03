@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.53 2007/03/02 22:14:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.54 2007/03/03 13:18:43 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> mozilla-launcher-1.56.ebuild:
+  Stable on ppc wrt bug 168558
 
   02 Mar 2007; Jeroen Roovers <jer@gentoo.org> mozilla-launcher-1.56.ebuild:
   Stable for HPPA (bug #168558).
