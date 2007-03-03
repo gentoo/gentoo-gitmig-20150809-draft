@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc-logger/cl-irc-logger-0.9.2.ebuild,v 1.4 2005/05/24 18:48:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc-logger/cl-irc-logger-0.9.2.ebuild,v 1.5 2007/03/03 23:23:54 genone Exp $
 
 inherit common-lisp eutils
 
@@ -32,5 +32,5 @@ src_install() {
 
 pkg_postinst() {
 	common-lisp_pkg_postinst
-	while read line; do einfo "${line}"; done <${FILESDIR}/README.Gentoo
+	while read line; do elog "${line}"; done <${FILESDIR}/README.Gentoo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/hyperspec-7.0-r1.ebuild,v 1.1 2006/02/05 21:35:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/hyperspec-7.0-r1.ebuild,v 1.2 2007/03/03 23:30:21 genone Exp $
 
 MY_PV=${PV/./-}
 MY_P=HyperSpec-${MY_PV}
@@ -19,7 +19,7 @@ RESTRICT="mirror fetch"
 S=${WORKDIR}/
 
 pkg_nofetch() {
-	while read line; do einfo "${line}"; done <<EOF
+	while read line; do elog "${line}"; done <<EOF
 
 The HyperSpec cannot be redistributed. Download the ${MY_P}.tar.gz
 file from http://www.lispworks.com/documentation/HyperSpec/ and move it to

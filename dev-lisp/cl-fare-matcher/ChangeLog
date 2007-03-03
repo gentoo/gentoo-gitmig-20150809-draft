@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-fare-matcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fare-matcher/ChangeLog,v 1.7 2007/02/04 00:58:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fare-matcher/ChangeLog,v 1.8 2007/03/03 23:21:21 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org>
+  cl-fare-matcher-1.1-r1.ebuild:
+  Replacing einfo with elog
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

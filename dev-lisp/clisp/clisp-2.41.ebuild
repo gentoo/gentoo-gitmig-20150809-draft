@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.2 2006/12/20 01:13:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.3 2007/03/03 23:26:44 genone Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -31,9 +31,9 @@ PROVIDE="virtual/commonlisp"
 pkg_setup() {
 	if use X; then
 		if use new-clx; then
-			einfo "CLISP will be built with NEW-CLX support which is a C binding to Xorg libraries."
+			elog "CLISP will be built with NEW-CLX support which is a C binding to Xorg libraries."
 		else
-			einfo "CLISP will be built with MIT-CLX support."
+			elog "CLISP will be built with MIT-CLX support."
 		fi
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/hyperspec
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/ChangeLog,v 1.9 2006/04/29 01:07:11 marienz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/ChangeLog,v 1.10 2007/03/03 23:30:21 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> hyperspec-7.0.ebuild,
+  hyperspec-7.0-r1.ebuild:
+  Replacing einfo with elog
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-hyperspec-7.0,
   Manifest:
