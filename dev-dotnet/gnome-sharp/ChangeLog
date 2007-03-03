@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnome-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.53 2007/02/14 19:47:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.54 2007/03/03 07:56:13 metalgod Exp $
+
+  03 Mar 2007; Luis Medinas <metalgod@gentoo.org> gnome-sharp-2.16.0.ebuild:
+  Stable on amd64.
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-sharp-2.16.0.ebuild:
