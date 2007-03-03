@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.3.ebuild,v 1.2 2007/03/02 17:01:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.3.ebuild,v 1.3 2007/03/03 18:32:31 nixnut Exp $
 
 inherit python eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://viewvc.org/"
 SRC_URI="http://viewvc.tigris.org/files/documents/3330/34803/${P}.tar.gz"
 
 LICENSE="viewcvs"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE="cvs cvsgraph enscript highlight mod_python mysql subversion"
 
 RDEPEND="
