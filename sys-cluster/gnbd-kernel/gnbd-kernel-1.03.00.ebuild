@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.7 2007/03/02 23:57:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.8 2007/03/03 00:27:34 xmerlin Exp $
 
 inherit linux-mod linux-info
 
@@ -25,6 +25,17 @@ pkg_setup() {
 	case ${KV_FULL} in
 		2.2.*|2.4.*) die "${P} supports only 2.6 kernels";;
 	esac
+}
+
+src_unpack() {
+    unpack ${A}
+    cd ${S}
+
+	if kernel_is 2 6; then
+		if [ "$KV_PATCH" -ge "18" ] ; then
+			epatch ${FILESDIR}/${PN}-remove-devfs-support.patch || die
+		fi
+	fi
 }
 
 src_compile() {
