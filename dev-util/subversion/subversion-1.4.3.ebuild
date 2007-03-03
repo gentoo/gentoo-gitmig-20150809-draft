@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.4 2007/03/03 16:35:37 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.5 2007/03/03 21:00:31 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -76,10 +76,20 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--with-apr=/usr --with-apr-util=/usr"
+	local apr_suffix=""
 
-	use apache2 && myconf="${myconf} --with-apxs=${APXS2}"
-	use apache2 || myconf="${myconf} --without-apxs"
+	if use apache2; then
+		myconf="--with-apxs=${APXS2}"
+		apache_minor="(best_version apache | cut -d. -f2)"
+		if [ ${apache_minor} -gt 0 ]; then
+			apr_suffix="-1"
+		fi
+	else
+		if has_version ">dev-libs/apr-util-1"; then
+			apr_suffix="-1"
+		fi
+		myconf="--without-apxs"
+	fi
 
 	myconf="${myconf} $(use_enable java javahl)"
 	use java && myconf="${myconf} --without-jikes --with-jdk=${JAVA_HOME}"
@@ -102,8 +112,8 @@ src_compile() {
 		$(use_with berkdb berkeley-db) \
 		$(use_with python) \
 		$(use_enable nls) \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
+		--with-apr="${ROOT}usr/bin/apr${apr_suffix}-config" \
+		--with-apr-util="${ROOT}usr/bin/apu${apr_suffix}-config" \
 		--disable-experimental-libtool \
 		--disable-mod-activation || die "econf failed"
 

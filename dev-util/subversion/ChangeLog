@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.248 2007/03/03 16:35:37 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.249 2007/03/03 21:00:31 pauldv Exp $
+
+  03 Mar 2007; Paul de Vrieze <pauldv@gentoo.org> subversion-1.4.3.ebuild:
+  Fix bug #108777 by preferring the apr version apache was linked against.
+  When apache2 support is not needed, prefer the 1.x apr(-util). This is
+  largely based on the patches by Brian Tarricone <bjt23@cornell.edu> and
+  Georgi Georgiev <chutz@gg3.net>.
 
   03 Mar 2007; Paul de Vrieze <pauldv@gentoo.org> files/70svn-gentoo.el,
   subversion-1.4.3.ebuild:
