@@ -1,6 +1,19 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.7 2007/02/09 00:02:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.8 2007/03/03 16:13:25 hkbst Exp $
+
+*guile-1.8.1-r3 (03 Mar 2007)
+
+  03 Mar 2007; Marijn Schouten <hkBst@gentoo.org>
+  +files/guile-1.8.1-autotools_fixes.patch, +files/guile-1.8-rational.patch,
+  -guile-1.8.1-r1.ebuild, +guile-1.8.1-r3.ebuild:
+  add patch for xbindkeys
+
+*guile-1.8.1-r2 (28 Feb 2007)
+
+  28 Feb 2007; Marijn Schouten <hkBst@gentoo.org>
+  +files/guile-1.8-rational.patch, +guile-1.8.1-r2.ebuild:
+  add guile patched for lilypond 2.11.x
 
   28 Jan 2007; Marijn Schouten <hkBst@gentoo.org> guile-1.8.1-r1.ebuild:
   deprecated depends on discouraged being enabled, bug 164206

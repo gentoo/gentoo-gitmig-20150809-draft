@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.1-r1.ebuild,v 1.3 2007/02/02 18:58:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.1-r3.ebuild,v 1.1 2007/03/03 16:13:25 hkbst Exp $
 
-inherit autotools
+inherit eutils autotools
 
 DESCRIPTION="Scheme interpreter"
 HOMEPAGE="http://www.gnu.org/software/guile/"
@@ -11,14 +11,26 @@ SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
-DEPEND=">=dev-libs/gmp-4.1
-	>=sys-devel/libtool-1.5.6"
+DEPEND=">=dev-libs/gmp-4.1 >=sys-devel/libtool-1.5.6 sys-devel/gettext"
 
 # Guile seems to contain some slotting support, /usr/share/guile/ is slotted, but there are lots of collisions. Most in /usr/share/libguile. Therefore I'm slotting this in the same slot as guile-1.6* for now.
 SLOT="12"
 MAJOR="1.8"
 
 IUSE="networking regex discouraged deprecated elisp nls debug-freelist debug-malloc debug threads"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# for xbindkeys
+	cp /usr/share/gettext/config.rpath .
+	epatch ${FILESDIR}/guile-1.8.1-autotools_fixes.patch
+	eautoreconf
+
+	# for lilypond 2.11.x
+	epatch ${FILESDIR}/guile-1.8-rational.patch
+}
 
 src_compile() {
 #will fail for me if posix is disabled or without modules -- hkBst
