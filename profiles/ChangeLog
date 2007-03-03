@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.158 2007/03/02 23:24:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.159 2007/03/03 16:45:24 peper Exp $
+
+  03 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> use.local.desc:
+  Sort use.local.desc file.
 
   02 Mar 2007; Samuli Suominen <drac@gentoo.org>
   mask xfce4-artwork
