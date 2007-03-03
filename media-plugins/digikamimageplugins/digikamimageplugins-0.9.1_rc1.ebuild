@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.0_rc2.ebuild,v 1.1 2006/12/08 20:51:49 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1_rc1.ebuild,v 1.1 2007/03/03 19:00:45 deathwing00 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -11,14 +11,16 @@ P_DOC="${PN}-doc-0.8.2"
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="DigikamImagePlugins are a collection of plugins for digiKam Image Editor."
-HOMEPAGE="http://www.digikam.org/"
+DESCRIPTION="DigikamImagePlugins are a collection of plugins for digiKam Image
+Editor and ShowFoto. These plugins add new image treatment options like color
+management, filters, or special effects."
+HOMEPAGE="http://extragear.kde.org/apps/digikamimageplugins/"
 SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
 	mirror://sourceforge/digikam/${P_DOC}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="~media-gfx/digikam-${PV}
@@ -28,7 +30,9 @@ DEPEND="~media-gfx/digikam-${PV}
 
 need-kde 3.5
 
-LANGS="br ca cs cy da de el en_GB es et fr ga he it ja lt mt nb nl nn pa pl pt pt_BR ru rw sr sr@Latn sv ta tr zh_CN"
+LANGS="ar bg br ca cs cy da de el en_GB es et fi fr ga gl he is it ja ka lt ms
+mt nb nl nn pa pl pt pt_BR ru rw sk sr sr@Latn sv ta th tr uk vi zh_CN"
+
 LANGS_DOC="da de et it nl pt pt_BR sv"
 
 
