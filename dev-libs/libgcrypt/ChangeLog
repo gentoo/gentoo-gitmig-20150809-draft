@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.88 2007/02/02 13:46:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.89 2007/03/03 22:58:06 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> libgcrypt-1.2.3-r1.ebuild,
+  libgcrypt-1.2.4.ebuild:
+  Replacing einfo with elog/ewarn
 
 *libgcrypt-1.2.4 (02 Feb 2007)
 
