@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20051222.ebuild,v 1.2 2007/01/10 17:45:26 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20051222.ebuild,v 1.3 2007/03/03 13:08:41 calchan Exp $
 
 inherit flag-o-matic
 
@@ -15,6 +15,7 @@ SLOT="0"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-scheme/guile-1.6.3
+	<dev-scheme/guile-1.8
 	>=x11-libs/guile-gtk-1.2.0.31"
 
 src_compile() {
