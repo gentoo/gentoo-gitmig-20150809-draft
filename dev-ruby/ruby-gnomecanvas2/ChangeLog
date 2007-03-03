@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.31 2007/01/31 00:38:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.32 2007/03/03 19:44:41 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> ruby-gnomecanvas2-0.16.0.ebuild:
+  Stable on ppc wrt bug 169094
 
   31 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   ruby-gnomecanvas2-0.14.1.ebuild:
