@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.10 2006/09/11 03:33:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.11 2007/03/03 22:25:43 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,13 +29,13 @@ pkg_setup() {
 	if [[ -z ${VIDEO_CARDS} ]] ; then
 		ewarn "All video drivers will be built since you did not specify"
 		ewarn "via the VIDEO_CARDS variable what video card you use."
-		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
+		ewarn "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
 		echo
 	fi
 	if [[ -z ${INPUT_DEVICES} ]] ; then
 		ewarn "All input drivers will be built since you did not specify"
 		ewarn "via the INPUT_DEVICES variable which input drivers to use."
-		einfo "DirectFB supports: ${IUSE_INPUT_DEVICES} all none"
+		ewarn "DirectFB supports: ${IUSE_INPUT_DEVICES} all none"
 		echo
 	fi
 }

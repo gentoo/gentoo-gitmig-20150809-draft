@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.61 2007/02/07 17:00:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.62 2007/03/03 22:25:43 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> DirectFB-0.9.22.ebuild,
+  DirectFB-0.9.24.ebuild, DirectFB-0.9.25.1.ebuild:
+  Replacing einfo with ewarn
 
   07 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org>
   DirectFB-0.9.25.1.ebuild:
