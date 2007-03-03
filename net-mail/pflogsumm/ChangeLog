@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/pflogsumm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/ChangeLog,v 1.7 2007/02/22 01:49:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/ChangeLog,v 1.8 2007/03/03 12:26:37 ticho Exp $
+
+*pflogsumm-1.1.0-r2 (03 Mar 2007)
+
+  03 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  files/1.1.0-postfix-2.3-logs.patch, -pflogsumm-1.1.0-r1.ebuild,
+  +pflogsumm-1.1.0-r2.ebuild:
+  Fixed the postfix 2.3 compatibility patch, thanks to Kevin Parent <kparent
+  at enersea.net>, bug 168766.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -5,7 +5,7 @@
  	}
  	elsif((($addr, $relay, $delay, $status, $toRmdr) = $logRmdr =~
 -		/to=<([^>]*)>, (?:orig_to=<[^>]*>, )?relay=([^,]+), delay=([^,]+), status=(\S+)(.*)$/o) >= 4)
-+		/to=<([^>]*)>, (?:orig_to=<[^>]*>, )?relay=([^,]+), (?:conn_use=[^,]+, )?delay=([^,]+), (?:delays=[^,]+, )?(?:dsn=[^,]+,)?status=(\S+)(.*)$/o) >= 4)
++		/to=<([^>]*)>, (?:orig_to=<[^>]*>, )?relay=([^,]+), (?:conn_use=[^,]+, )?delay=([^,]+), (?:delays=[^,]+, )?(?:dsn=[^,]+, )?status=(\S+)(.*)$/o) >= 4)
  	{
  
  	    if($opts{'m'} && $addr =~ /^(.*!)*([^!]+)!([^!@]+)@([^\.]+)$/o) {
