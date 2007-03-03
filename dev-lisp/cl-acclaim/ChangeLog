@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-acclaim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.6 2007/02/09 07:32:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.7 2007/03/03 23:16:13 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> cl-acclaim-0.25.ebuild,
+  cl-acclaim-0.25-r1.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/cl-acclaim-0.25.ebuild,v 1.4 2005/05/24 18:48:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/cl-acclaim-0.25.ebuild,v 1.5 2007/03/03 23:16:13 genone Exp $
 
 inherit common-lisp eutils
 
@@ -36,7 +36,7 @@ src_install() {
 
 pkg_postinst(){
 	common-lisp_pkg_postinst
-	while read line; do einfo "${line}"; done <<EOF
+	while read line; do elog "${line}"; done <<EOF
 
 The Acclaim software wants to initally load a slide definition and
 will tell you so.  There are several sample slides on Max-Gerd's site
