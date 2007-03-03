@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.2.ebuild,v 1.1 2007/01/28 11:33:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.2.ebuild,v 1.2 2007/03/03 05:01:48 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.9.2-gznbd.patch
 	epatch "${FILESDIR}"/${PN}-2.9.1-headers.patch
+	epatch "${FILESDIR}"/${PN}-2.9.2-no-page-header.patch
 
 	mkdir -p "${S}"/inc-after/linux
 	mv "${WORKDIR}"/nbd-linux-include.h "${S}"/inc-after/linux/nbd.h
