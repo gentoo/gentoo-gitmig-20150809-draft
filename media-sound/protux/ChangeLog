@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/protux
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.22 2007/02/09 07:59:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.23 2007/03/03 16:11:10 betelgeuse Exp $
+
+*protux-0.50.100 (03 Mar 2007)
+
+  03 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  +protux-0.50.100.ebuild:
+  Version bump for bug #127537. protux is now written entirely in Java so
+  adding java herd with the sound herd as the maintainer.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
