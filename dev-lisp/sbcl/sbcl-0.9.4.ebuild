@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.4.ebuild,v 1.3 2005/09/21 17:23:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.4.ebuild,v 1.4 2007/03/03 23:36:25 genone Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -36,7 +36,7 @@ MY_WORK=${S}/my_work
 
 pkg_setup() {
 	if use hardened && gcc-config -c |grep -qv vanilla; then
-		while read line; do einfo "${line}"; done <<'EOF'
+		while read line; do elog "${line}"; done <<'EOF'
 
 So-called "hardened" compiler features are incompatible with SBCL. You
 must use gcc-config to select a profile with non-hardened features

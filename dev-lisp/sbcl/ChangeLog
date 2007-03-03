@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.99 2007/01/18 04:09:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.100 2007/03/03 23:36:25 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> sbcl-0.9.3.ebuild,
+  sbcl-0.9.4.ebuild, sbcl-0.9.17.ebuild, sbcl-0.9.18.ebuild,
+  sbcl-1.0.ebuild, sbcl-1.0.1.ebuild:
+  Replacing einfo with elog
 
 *sbcl-1.0.1 (18 Jan 2007)
 

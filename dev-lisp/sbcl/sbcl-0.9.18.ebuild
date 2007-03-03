@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.18.ebuild,v 1.3 2007/01/29 01:59:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.18.ebuild,v 1.4 2007/03/03 23:36:25 genone Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -33,19 +33,19 @@ DEPEND=">=dev-lisp/cl-asdf-1.84
 
 PROVIDE="virtual/commonlisp"
 
-sbcl_einfo() {
+sbcl_elog() {
 	local method
 	case $# in
-		0) method=einfo;;
+		0) method=elog;;
 		1) method=$1;;
-		*) die "Invalid number of arguments to scbl_einfo"
+		*) die "Invalid number of arguments to scbl_elog"
 	esac
 	$method ""; while read line; do $method "${line}"; done; $method ""
 }
 
 pkg_setup() {
 	if built_with_use sys-devel/gcc hardened && gcc-config -c |grep -qv vanilla; then
-		sbcl_einfo eerror <<'EOF'
+		sbcl_elog eerror <<'EOF'
 So-called "hardened" compiler features are incompatible with SBCL. You
 must use gcc-config to select a profile with non-hardened features
 (the "vanilla" profile) and "source /etc/profile" before continuing.
@@ -53,7 +53,7 @@ EOF
 		die
 	fi
 	if ! built_with_use sys-libs/glibc nptl && (use x86 || use amd64); then
-		sbcl_einfo eerror <<'EOF'
+		sbcl_elog eerror <<'EOF'
 Building SBCL without NPTL support on at least x86 and amd64
 architectures is not a supported configuration in Gentoo.  Please
 refer to Bug #119016 for more information.
@@ -61,7 +61,7 @@ EOF
 		die
 	fi
 	if (use ppc-macos || use ppc) && use ldb; then
-		sbcl_einfo ewarn <<'EOF'
+		sbcl_elog ewarn <<'EOF'
 Building SBCL on PPC with LDB support is not a supported configuration
 in Gentoo.	Please refer to Bug #121830 for more information.
 Continuing with LDB support disabled.
@@ -102,7 +102,7 @@ EOF
 			>>${S}/customize-target-features.lisp
 	fi
 	if (use ppc-macos || use ppc) && use ldb; then
-		sbcl_einfo ewarn <<'EOF'
+		sbcl_elog ewarn <<'EOF'
 Excluding LDB support for ppc-macos or ppc.
 EOF
 	else
