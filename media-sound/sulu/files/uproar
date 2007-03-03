@@ -1,6 +1,0 @@
-#!/bin/sh
-cd /etc/hotplug
-. hotplug.functions
-mesg setting permissions of $DEVICE
-chgrp users $DEVICE
-chmod g+w $DEVICE
