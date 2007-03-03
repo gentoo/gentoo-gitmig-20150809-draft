@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre7.ebuild,v 1.2 2006/10/31 07:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre7.ebuild,v 1.3 2007/03/03 06:21:29 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 
-LOOP_AES_VER=3.1e
+LOOP_AES_VER=3.1f
 DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/testing/${MY_P}.tar.bz2
