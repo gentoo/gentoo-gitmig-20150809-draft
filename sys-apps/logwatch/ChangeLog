@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.46 2007/03/03 05:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.47 2007/03/03 12:52:06 ticho Exp $
+
+  03 Mar 2007; Andrej Kacian <ticho@gentoo.org> logwatch-7.3.2.ebuild:
+  Stable on x86, bug #159269.
 
 *logwatch-7.3.4 (03 Mar 2007)
 
