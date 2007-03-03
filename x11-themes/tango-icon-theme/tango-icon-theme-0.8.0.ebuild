@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.0.ebuild,v 1.7 2007/03/03 15:14:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.0.ebuild,v 1.8 2007/03/03 16:23:54 drac Exp $
 
 inherit eutils
 
@@ -30,12 +30,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	if use png; then
-		econf --enable-png-creation
-	else
-		econf
-	fi
-
+	econf $(use_enable png png-creation) \
+		$(use_enable png icon-framing)
 	emake || die "emake failed."
 }
 
