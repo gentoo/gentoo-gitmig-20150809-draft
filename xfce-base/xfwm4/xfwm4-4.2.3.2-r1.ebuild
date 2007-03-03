@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.2.3.2-r1.ebuild,v 1.5 2007/02/28 19:43:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.2.3.2-r1.ebuild,v 1.6 2007/03/03 13:27:09 nixnut Exp $
 
 inherit eutils xfce42 versionator
 
 DESCRIPTION="Xfce4 window manager"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 
 MY_PV=$(get_version_component_range 1-3)
 
