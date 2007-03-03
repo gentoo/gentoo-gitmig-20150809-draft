@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2-r1.ebuild,v 1.14 2007/01/19 15:20:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2-r1.ebuild,v 1.15 2007/03/03 23:56:05 genone Exp $
 
 inherit perl-module eutils multilib
 
@@ -28,8 +28,8 @@ mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* Release_Notes TODO"
 
 pkg_setup() {
 	echo ""
-	einfo "If you want GSL library support in PDL,"
-	einfo "you need to emerge sci-libs/gsl first."
+	elog "If you want GSL library support in PDL,"
+	elog "you need to emerge sci-libs/gsl first."
 	echo ""
 	epause 2
 }
@@ -76,12 +76,12 @@ src_install() {
 
 pkg_postinst() {
 	perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl
-	einfo "Building perldl.db done. You can recreate this at any time"
-	einfo "by running"
-	einfo "perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl"
+	elog "Building perldl.db done. You can recreate this at any time"
+	elog "by running"
+	elog "perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl"
 	epause 3
-	einfo "PDL requires that glx and dri support be enabled in"
-	einfo "your X configuration for certain parts of the graphics"
-	einfo "engine to work. See your X's documentation for futher"
-	einfo "information."
+	elog "PDL requires that glx and dri support be enabled in"
+	elog "your X configuration for certain parts of the graphics"
+	elog "engine to work. See your X's documentation for futher"
+	elog "information."
 }
