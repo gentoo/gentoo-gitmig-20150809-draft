@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.161 2007/03/03 18:19:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.162 2007/03/03 19:32:29 armin76 Exp $
+
+  03 Mar 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  Remove mozbranding from sunbird and thunderbird, bug 168409, for firefox
+  we'll have to wait until bug 165555 gets done.
 
   03 Mar 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   Drop net-analyzer/prelude-nagios per bug #165006

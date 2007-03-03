@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2642 2007/03/03 16:45:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2643 2007/03/03 19:32:29 armin76 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -223,7 +223,6 @@ app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
 app-office/kmymoney2:hbci - Adds HBCI online banking support
 app-office/ledger:gnuplot - Enable gnuplot support
-app-office/mozilla-sunbird:mozbranding - Enable official branding
 app-office/mozilla-sunbird:moznopango - Disable pango during runtime
 app-office/openoffice:binfilter - Enable support for legacy StarOffice 5.x and earlier file formats
 app-office/openoffice:branding - Enable Gentoo branded splash screen
@@ -760,7 +759,6 @@ mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
-mail-client/mozilla-thunderbird:mozbranding - Enable official branding
 mail-client/mozilla-thunderbird:mozdom - Enable mozilla DOM
 mail-client/mozilla-thunderbird:moznopango - Disable pango during runtime
 mail-client/mozilla-thunderbird:replytolist - Enable reply-to-list plugin
