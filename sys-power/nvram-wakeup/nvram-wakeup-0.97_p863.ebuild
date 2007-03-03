@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-0.97_p863.ebuild,v 1.3 2007/02/13 17:42:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-0.97_p863.ebuild,v 1.4 2007/03/03 06:27:06 vapier Exp $
 
 inherit flag-o-matic
 
@@ -16,6 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="nls"
+[[ -n ${REV} ]] && RESTRICT="mirror" #168114
 
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND=""

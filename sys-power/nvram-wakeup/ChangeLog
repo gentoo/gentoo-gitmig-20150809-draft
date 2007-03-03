@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nvram-wakeup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.5 2007/02/13 17:42:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.6 2007/03/03 06:27:06 vapier Exp $
+
+  03 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  nvram-wakeup-0.97_p863.ebuild:
+  Restrict mirroring when pulling from cvs (due to the ?) #168114 by Ville Aakko.
 
   13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
   nvram-wakeup-0.97_p863.ebuild:
