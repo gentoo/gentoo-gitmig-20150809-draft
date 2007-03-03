@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.74 2007/03/02 14:00:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.75 2007/03/03 14:46:19 beandog Exp $
+
+  03 Mar 2007; Steve Dibb <beandog@gentoo.org> ivtv-0.9.1.ebuild:
+  Stabling on arches
 
 *ivtv-0.10.1 (02 Mar 2007)
 
