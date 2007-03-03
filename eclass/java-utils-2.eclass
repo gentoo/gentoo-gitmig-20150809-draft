@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.62 2007/03/03 16:51:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.63 2007/03/03 20:37:35 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -185,6 +185,33 @@ JAVA_PKG_QA_VIOLATIONS=0
 # libraries, etc.
 # -----------------------------------------------------------------------------
 
+# -----------------------------------------------------------------------------
+# @ebuild-function java-pkg_doexamples
+#
+# Installs given arguments to /usr/share/doc/${PF}/examples
+# If you give it only one parameter and it is a directory it will install
+# everything in that directory to the examples directory.
+#
+# @example
+#	java-pkg_doexamples demo
+#	java-pkg_doexamples demo/* examples/*
+#
+# @param $* - list of files to install
+# ------------------------------------------------------------------------------
+java-pkg_doexamples() {
+	debug-print-function ${FUNCNAME} $*
+
+	[[ ${#} -lt 1 ]] && die "At least one argument needed"
+
+	java-pkg_check-phase install
+
+	local dest=/usr/share/doc/${PF}/examples
+	if [[ ${#} = 1 && -d ${1} ]]; then
+		INSDESTTREE="${dest}" doins -r ${1}/* || die "Installing examples failed"
+	else
+		INSDESTTREE="${dest}" doins -r "${@}" || die "Installing examples failed"
+	fi
+}
 
 # -----------------------------------------------------------------------------
 # @ebuild-function java-pkg_dojar
