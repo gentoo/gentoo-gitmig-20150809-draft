@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/angband
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.19 2007/03/03 12:46:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.20 2007/03/03 14:57:44 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> angband-3.0.6.ebuild:
+  Stable on ppc wrt bug 168294
 
   03 Mar 2007; Andrej Kacian <ticho@gentoo.org> angband-3.0.6.ebuild:
   Stable on x86, bug #168294.

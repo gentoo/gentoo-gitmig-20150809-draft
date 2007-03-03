@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.6.ebuild,v 1.4 2007/03/03 12:46:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.6.ebuild,v 1.5 2007/03/03 14:57:44 nixnut Exp $
 
 inherit flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.thangorodrim.net/pub/${PN}/Source/${P}.tar.gz"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~ppc-macos ~sparc x86 ~x86-fbsd"
 IUSE="X gtk"
 
 DEPEND=">=sys-libs/ncurses-5
