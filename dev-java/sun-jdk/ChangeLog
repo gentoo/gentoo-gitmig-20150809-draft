@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.188 2007/02/11 20:41:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.189 2007/03/03 20:07:29 betelgeuse Exp $
+
+*sun-jdk-1.4.2.13-r1 (03 Mar 2007)
+
+  03 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +sun-jdk-1.4.2.13-r1.ebuild:
+  Migrate to pax-utils.eclass. Fixes bug #169141.
 
   11 Feb 2007; Joshua Nichols <nichoj@gentoo.org> sun-jdk-1.6.0-r1.ebuild:
   Applied fix for bug #166397 to 1.6.0-r1.
