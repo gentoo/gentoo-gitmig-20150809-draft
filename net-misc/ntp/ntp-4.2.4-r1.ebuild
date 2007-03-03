@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4-r1.ebuild,v 1.1 2007/02/23 11:26:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4-r1.ebuild,v 1.2 2007/03/03 04:47:18 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,14 +15,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="parse-clocks caps selinux ssl ipv6 debug openntpd"
 
-RDEPEND=">=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
 	kernel_linux? ( caps? ( sys-libs/libcap ) )
 	!openntpd? ( !net-misc/openntpd )
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51"
 PDEPEND="openntpd? ( net-misc/openntpd )"
 
 S=${WORKDIR}/${MY_P}
