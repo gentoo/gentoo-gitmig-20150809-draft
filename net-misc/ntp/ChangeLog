@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.95 2007/03/03 12:33:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.96 2007/03/03 15:39:08 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> ntp-4.2.4-r1.ebuild:
+  Stable on ppc wrt bug 169078
 
   03 Mar 2007; Guy Martin <gmsoft@gentoo.org> ntp-4.2.4-r1.ebuild:
   Stable on hppa
