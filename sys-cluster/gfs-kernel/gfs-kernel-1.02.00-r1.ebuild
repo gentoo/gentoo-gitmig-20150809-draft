@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.7 2006/10/19 10:47:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.8 2007/03/03 00:00:09 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -22,10 +22,7 @@ KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
-DEPEND="|| (
-		>=sys-kernel/vanilla-sources-2.6.16
-		>=sys-kernel/gentoo-sources-2.6.16
-	)
+DEPEND=">=virtual/linux-sources-2.6.16
 	>=sys-cluster/dlm-headers-1.02.00-r1
 	>=sys-cluster/cman-headers-1.02.00-r1"
 
@@ -61,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR=${D} module_dir=${D}/lib/modules/${KV_FULL} install || die "install problem"
 	rm -f ${D}/usr/include/linux/* || die
 }
 
