@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.8 2007/02/26 22:03:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.9 2007/03/03 15:09:26 swegener Exp $
+
+  03 Mar 2007; Sven Wegener <swegener@gentoo.org> inn-2.4.3.ebuild:
+  Add db location for bug #168519.
 
 *inn-2.4.3 (11 Feb 2007)
 

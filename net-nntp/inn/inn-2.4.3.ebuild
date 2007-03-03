@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.2 2007/02/26 22:06:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.3 2007/03/03 15:09:26 swegener Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -65,7 +65,7 @@ src_compile() {
 		$(use_with kerberos kerberos /usr) \
 		$(use_with sasl) \
 		$(use_with ssl openssl) \
-		$(use_with berkdb berkeleydb) \
+		$(use_with berkdb berkeleydb /usr) \
 		$(use_enable ipv6) \
 		$(use_enable !inntaggedhash largefiles) \
 		$(use_enable inntaggedhash tagged-hash) \
