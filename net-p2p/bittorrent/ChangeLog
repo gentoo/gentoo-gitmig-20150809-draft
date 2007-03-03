@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.104 2007/02/24 17:29:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.105 2007/03/03 12:33:26 armin76 Exp $
+
+*bittorrent-5.0.7 (03 Mar 2007)
+
+  03 Mar 2007; Raúl Porcel <armin76@gentoo.org> +bittorrent-5.0.7.ebuild:
+  Version bump
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> bittorrent-5.0.5.ebuild:
   Stable on ppc wrt bug 167783
