@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/libupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/ChangeLog,v 1.5 2007/02/27 02:52:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/ChangeLog,v 1.6 2007/03/03 15:22:45 nixnut Exp $
+
+  03 Mar 2007; nixnut <nixnut@gentoo.org> libupnp-1.4.2.ebuild:
+  Added ~ppc wrt bug 168789
 
   27 Feb 2007; Jason Wever <weeve@gentoo.org> libupnp-1.4.2.ebuild:
   Added ~sparc keyword wrt bug #168279.
