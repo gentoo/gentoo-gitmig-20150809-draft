@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.61 2007/03/03 16:27:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.62 2007/03/03 16:51:09 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -262,7 +262,7 @@ java-pkg_dojar() {
 
 depend-java-query() {
 	# Used to have a which call here but it caused endless loops for some people
-	# please tell us why if you you have any idea. Maybe bash 3.1?
+	# that had some weird bashrc voodoo for which.
 	USE="${USE}" /usr/bin/depend-java-query "${@}"
 }
 
