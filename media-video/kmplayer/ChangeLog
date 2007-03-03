@@ -1,6 +1,12 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.88 2007/03/03 16:19:21 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.89 2007/03/03 16:44:05 deathwing00 Exp $
+
+*kmplayer-0.9.4-r1 (03 Mar 2007)
+
+  03 Mar 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +kmplayer-0.9.4-r1.ebuild:
+  Added localization support.
 
 *kmplayer-0.9.4 (03 Mar 2007)
 
