@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1-r1.ebuild,v 1.5 2007/02/28 22:18:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1-r1.ebuild,v 1.6 2007/03/03 05:58:19 vapier Exp $
 
 inherit eutils libtool versionator
 
@@ -41,7 +41,7 @@ src_compile() {
 	if use expat; then
 	    myconf="${myconf} --with-expat"
 	else
-	    myconf="${myconf} --with-xml2"
+	    myconf="${myconf} --with-libxml2"
 	fi
 
 	if use ssl; then
