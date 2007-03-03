@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.18 2007/02/05 17:20:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.19 2007/03/03 11:33:20 mcummings Exp $
+
+  03 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  perl-Test-Simple-0.66.ebuild:
+  Stable on amd64
 
 *perl-Test-Simple-0.67 (05 Feb 2007)
 
