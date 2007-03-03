@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.24.ebuild,v 1.2 2007/01/03 02:36:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.24.ebuild,v 1.3 2007/03/03 15:45:17 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -37,7 +37,8 @@ pkg_setup() {
 	ewarn "performance of the resulting libraries will be degraded"
 	ewarn "considerably."
 	echo
-	ewarn "Also, if you experience failing SANITY tests during"
+	ewarn "For users of <=gcc-4.1.1 only:"
+	ewarn "If you experience failing SANITY tests during"
 	ewarn "atlas' compile please try passing -mfpmath=387; this"
 	ewarn "option might also result in much better performance"
 	ewarn "than using then sse instruction set depending on your"
