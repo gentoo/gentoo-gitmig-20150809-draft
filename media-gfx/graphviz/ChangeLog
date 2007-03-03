@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.109 2007/02/20 16:17:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.110 2007/03/03 12:00:15 dev-zero Exp $
+
+  03 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/graphviz-2.12-configure.patch, files/graphviz-2.12-notcl.patch,
+  graphviz-2.12.ebuild:
+  Dropped all bindings except the one for tcl since it is needed for the tools
+  to work. Cleanups and documentation.
 
   19 Feb 2007; Chris Bainbridge <chrb@gentoo.org> graphviz-2.12.ebuild:
   Remove AM_ICONV macro from configure on non-nls builds, bug #155791
