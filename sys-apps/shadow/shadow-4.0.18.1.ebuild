@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.12 2007/02/26 04:06:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.13 2007/03/03 06:02:09 vapier Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
 DESCRIPTION="Utilities to deal with user accounts"
@@ -23,7 +21,6 @@ RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51-r2
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
