@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Eidetic
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.9 2007/01/15 17:32:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.10 2007/03/03 23:39:42 genone Exp $
+
+  03 Mar 2007; Marius Mauch <genone@gentoo.org> Eidetic-2.003003.ebuild:
+  Replacing einfo with elog
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Eidetic-2.003003.ebuild:

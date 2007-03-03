@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/JKFlow-3.4.2.ebuild,v 1.1 2005/09/12 16:13:15 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/JKFlow-3.4.2.ebuild,v 1.2 2007/03/03 23:42:56 genone Exp $
 
 inherit eutils
 
@@ -50,16 +50,16 @@ pkg_postinst() {
 	chown flows:flows /var/lib/flows/bin/JKFlow.pm
 	chown flows:flows /var/lib/flows/bin/JKFlow_example_routers.xml
 	chown flows:flows /var/lib/flows/bin/JKFlow_example_sites.xml
-	einfo
-	einfo "You will need to add the following line to flowscan.cf:"
-	einfo "	ReportClasses JKFlow"
-	einfo "You must also comment out any other lines that contain"
-	einfo "ReportClasses."
-	einfo
-	einfo "JKFlows configuration is complex. You should review"
-	einfo "the two sample configuration files in /var/lib/flows/bin"
-	einfo "and use them as a basis for configuration for your own"
-	einfo "network. More information can be found at:"
-	einfo "http://users.telenet.be/jurgen.kobierczynski/jkflow/eindwerk.pdf"
-	einfo
+	elog
+	elog "You will need to add the following line to flowscan.cf:"
+	elog "	ReportClasses JKFlow"
+	elog "You must also comment out any other lines that contain"
+	elog "ReportClasses."
+	elog
+	elog "JKFlows configuration is complex. You should review"
+	elog "the two sample configuration files in /var/lib/flows/bin"
+	elog "and use them as a basis for configuration for your own"
+	elog "network. More information can be found at:"
+	elog "http://users.telenet.be/jurgen.kobierczynski/jkflow/eindwerk.pdf"
+	elog
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.10 2007/01/15 17:32:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.11 2007/03/03 23:39:42 genone Exp $
 
 inherit perl-module webapp eutils
 
@@ -60,16 +60,16 @@ src_install() {
 pkg_postinst() {
 	if use mysql
 	then
-		einfo "The SQL scripts for ${PN} are located in /usr/share/${P}/sql."
-		einfo "Use load_db.sh to create your initial database."
-		einfo "Please note this must be ran as a user with database creation"
-		einfo "priviliges."
-		einfo ""
+		elog "The SQL scripts for ${PN} are located in /usr/share/${P}/sql."
+		elog "Use load_db.sh to create your initial database."
+		elog "Please note this must be ran as a user with database creation"
+		elog "priviliges."
+		elog ""
 	fi
 	if use auth
 	then
-		einfo "The README file contains important information on setting up"
-		einfo "cookie authorization with Apache-AuthTicket.  Please be sure"
-		einfo "to read it!"
+		elog "The README file contains important information on setting up"
+		elog "cookie authorization with Apache-AuthTicket.  Please be sure"
+		elog "to read it!"
 	fi
 }

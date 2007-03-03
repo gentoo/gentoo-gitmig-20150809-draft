@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.3 2006/02/25 23:23:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.4 2007/03/03 23:37:47 genone Exp $
 
 inherit eutils
 
@@ -42,11 +42,11 @@ src_install() {
 pkg_postinst() {
 	chown flows:flows /var/lib/flows/bin/CUFlow.pm
 	chown flows:flows /var/lib/flows/bin/CUFlow.cf
-	einfo
-	einfo "Edit /var/lib/flows/bin/CUFlow.cf for your site"
-	einfo "You will need to add the following line to flowscan.cf:"
-	einfo "	ReportClasses CUFlow"
-	einfo "You must also comment out any other lines that contain"
-	einfo "ReportClasses."
-	einfo
+	elog
+	elog "Edit /var/lib/flows/bin/CUFlow.cf for your site"
+	elog "You will need to add the following line to flowscan.cf:"
+	elog "	ReportClasses CUFlow"
+	elog "You must also comment out any other lines that contain"
+	elog "ReportClasses."
+	elog
 }

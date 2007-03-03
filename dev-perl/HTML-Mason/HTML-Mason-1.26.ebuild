@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.26.ebuild,v 1.15 2007/01/20 14:41:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.26.ebuild,v 1.16 2007/03/03 23:41:55 genone Exp $
 
 inherit perl-module
 
@@ -36,17 +36,17 @@ src_install () {
 
 
 pkg_postinst() {
-	einfo
-	einfo "Due to a change in documention in HTML-Mason, you will need to note"
-	einfo "that the documentation in the following files is no longer valid."
-	einfo "These files are present only if you had a previous install of "
-	einfo "HTML-Mason. Feel free to remove these docs from your system: "
-	einfo "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/Interp.pod"
-	einfo "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/ApacheHandler.pod"
-	einfo "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/Request.pod"
-	einfo "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/Component.pod"
-	einfo "Where PERLVERSION is your version of perl (5.6.1, 5.8)"
-	einfo
+	elog
+	elog "Due to a change in documention in HTML-Mason, you will need to note"
+	elog "that the documentation in the following files is no longer valid."
+	elog "These files are present only if you had a previous install of "
+	elog "HTML-Mason. Feel free to remove these docs from your system: "
+	elog "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/Interp.pod"
+	elog "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/ApacheHandler.pod"
+	elog "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/Request.pod"
+	elog "/usr/lib/perl5/site_perl/PERLVERSION/HTML/Mason/Component.pod"
+	elog "Where PERLVERSION is your version of perl (5.6.1, 5.8)"
+	elog
 
 }
 
