@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.ebuild,v 1.9 2007/02/25 11:27:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.ebuild,v 1.10 2007/03/03 11:49:36 ticho Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="bzip2 crypt curl gmp logrotate mailwrapper milter selinux"
+IUSE="bzip2 crypt curl logrotate mailwrapper milter selinux"
 
 DEPEND="virtual/libc
 	bzip2? ( app-arch/bzip2 )
 	crypt? ( >=dev-libs/gmp-4.1.2 )
 	curl? ( >=net-misc/curl-7.10.0 )
-	gmp? ( dev-libs/gmp )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
+	dev-libs/gmp
 	>=sys-libs/zlib-1.2.1-r3
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}
@@ -66,7 +66,6 @@ src_compile() {
 	econf ${myconf} \
 		$(use_enable bzip2) \
 		$(use_with curl libcurl) \
-		$(use_enable gmp dsig) \
 		--disable-experimental \
 		--with-dbdir=/var/lib/clamav || die
 	emake || die
