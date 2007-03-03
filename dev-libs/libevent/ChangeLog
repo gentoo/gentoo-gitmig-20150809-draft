@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.62 2007/02/28 22:59:11 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.63 2007/03/03 14:15:18 beandog Exp $
+
+  03 Mar 2007; Steve Dibb <beandog@gentoo.org> libevent-1.3a.ebuild:
+  amd64 stable, security bug 167583
 
   28 Feb 2007; Jose Luis Rivero <yoswink@gentoo.org> libevent-1.3a.ebuild:
   Stable on alpha wrt security bug #167583
