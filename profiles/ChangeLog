@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.160 2007/03/03 18:11:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.161 2007/03/03 18:19:35 jokey Exp $
+
+  03 Mar 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
+  Drop net-analyzer/prelude-nagios per bug #165006
 
   03 Mar 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   Drop net-analyzer/prelude-nids per bug #164294
