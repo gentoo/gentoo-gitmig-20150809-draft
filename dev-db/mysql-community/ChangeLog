@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql-community
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.11 2007/01/12 18:10:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.12 2007/03/04 12:35:58 vivo Exp $
+
+*mysql-community-5.1.15_beta (04 Mar 2007)
+
+  04 Mar 2007; Francesco Riosa <vivo@gentoo.org>
+  +mysql-community-5.1.15_beta.ebuild:
+  version bump
 
   12 Jan 2007; Luca Longinotti <chtekk@gentoo.org> -files/logrotate.mysql,
   mysql-community-5.0.27-r1.ebuild, mysql-community-5.1.14_beta-r1.ebuild,
