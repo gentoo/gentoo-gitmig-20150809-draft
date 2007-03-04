@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/libnss-mysql
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.6 2006/12/01 16:19:40 chtekk Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.7 2007/03/04 17:09:24 vivo Exp $
+
+  04 Mar 2007; Francesco Riosa <vivo@gentoo.org> libnss-mysql-1.5.ebuild:
+  workaround new portage QA check
 
   01 Dec 2006; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   -libnss-mysql-1.0.ebuild, -libnss-mysql-1.1.ebuild,

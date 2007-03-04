@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5.ebuild,v 1.4 2006/12/01 16:19:40 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5.ebuild,v 1.5 2007/03/04 17:09:24 vivo Exp $
 
 inherit multilib
 
@@ -19,12 +19,13 @@ RDEPEND="${DEPEND}"
 src_install() {
 	dodir "/etc"
 	einstall libdir="${D}/$(get_libdir)"
+	rm -f "${D}/$(get_libdir)/libnss_mysql.la"
 
 	newdoc sample/README README.sample
 	dodoc AUTHORS DEBUGGING FAQ INSTALL NEWS README THANKS \
 		TODO UPGRADING ChangeLog
 
-	for subdir in sample/{,complex,minimal} ; do
+	for subdir in sample/{linux,freebsd,complex,minimal} ; do
 		docinto "${subdir}"
 		dodoc "${subdir}/"{*.sql,*.cfg}
 	done
