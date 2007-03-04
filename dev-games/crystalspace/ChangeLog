@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.26 2007/03/01 07:50:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.27 2007/03/04 07:50:54 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> crystalspace-1.0.ebuild,
+  crystalspace-1.0.1.ebuild:
+  Replacing einfo with elog
 
 *crystalspace-1.0.1 (01 Mar 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.1.ebuild,v 1.1 2007/03/01 07:50:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.1.ebuild,v 1.2 2007/03/04 07:50:54 genone Exp $
 
 inherit flag-o-matic java-pkg-opt-2 multilib
 
@@ -111,13 +111,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Examples coming with this package, need correct light calculation"
-	einfo "Do the following commands, with the root account, to fix that:"
+	elog "Examples coming with this package, need correct light calculation"
+	elog "Do the following commands, with the root account, to fix that:"
 	# Fill cache directory for the examples
 	local dir
 	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
 		terrain terrainf;
 	do
-		einfo "cslight -video=null /usr/share/${PN}/data/maps/${dir}"
+		elog "cslight -video=null /usr/share/${PN}/data/maps/${dir}"
 	done
 }
