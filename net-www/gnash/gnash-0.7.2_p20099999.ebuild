@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.7 2007/02/23 12:38:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.8 2007/03/04 19:12:43 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions qt3 multilib
@@ -100,6 +100,8 @@ src_compile() {
 	if use kde; then
 		myconf="${myconf} --enable-klash --with-qt-incl=${QTDIR}/include
 			--with-qt-lib=${QTDIR}/$(get_libdir)"
+	else
+		myconf="${myconf} --disable-klash"
 	fi
 
 	econf \

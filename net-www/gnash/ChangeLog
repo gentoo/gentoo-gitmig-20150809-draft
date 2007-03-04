@@ -1,8 +1,8 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.37 2007/03/04 19:06:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.38 2007/03/04 19:12:43 genstef Exp $
 
-  04 Mar 2007; <genstef@gentoo.org> ChangeLog:
+  04 Mar 2007; <genstef@gentoo.org> gnash-0.7.2_p20099999.ebuild:
   Add --disable-gnash thanks to g-ranquet <ranquet@imerir.com> in bug 169336
 
   23 Feb 2007; <genstef@gentoo.org> gnash-0.7.2_p20099999.ebuild:
