@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.22.ebuild,v 1.6 2007/03/04 06:56:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.22.ebuild,v 1.7 2007/03/04 20:45:33 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -91,7 +91,7 @@ src_compile() {
 	config_cache hal hal/libhal.h
 	config_cache jpeg jpeglib.h
 	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
-	config_cache lcms lcms.h
+	config_cache lcms lcms.h lcms/lcms.h
 
 	strip-flags
 

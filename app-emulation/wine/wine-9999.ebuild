@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.17 2007/03/04 06:56:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.18 2007/03/04 20:45:33 vapier Exp $
 
 EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
 
@@ -22,9 +22,12 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	dbus? ( sys-apps/dbus )
 	hal? ( sys-apps/hal )
-	X? ( || ( ( x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu
-				x11-libs/libXxf86dga x11-libs/libXxf86vm x11-apps/xmessage )
-		virtual/x11 )
+	X? (
+		x11-libs/libXrandr
+		x11-libs/libXi
+		x11-libs/libXmu
+		x11-libs/libXxf86vm
+		x11-apps/xmessage
 	)
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
@@ -95,7 +98,7 @@ src_compile() {
 	config_cache hal hal/libhal.h
 	config_cache jpeg jpeglib.h
 	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
-	config_cache lcms lcms.h
+	config_cache lcms lcms.h lcms/lcms.h
 
 	strip-flags
 

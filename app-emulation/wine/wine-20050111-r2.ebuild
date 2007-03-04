@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111-r2.ebuild,v 1.12 2006/06/24 07:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111-r2.ebuild,v 1.13 2007/03/04 20:45:33 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -20,9 +20,12 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	media-fonts/corefonts
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	X? ( || ( ( x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu
-				x11-libs/libXxf86dga x11-libs/libXxf86vm x11-apps/xmessage )
-		virtual/x11 )
+	X? (
+		x11-libs/libXrandr
+		x11-libs/libXi
+		x11-libs/libXmu
+		x11-libs/libXxf86vm
+		x11-apps/xmessage
 	)
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
@@ -34,13 +37,11 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/inputproto
-				x11-proto/xextproto
-				x11-proto/xf86dgaproto
-				x11-proto/xf86vidmodeproto
-			)
-			virtual/x11
-		)
+	X? (
+		x11-proto/inputproto
+		x11-proto/xextproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto
 	)
 	sys-devel/bison
 	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
@@ -81,10 +82,9 @@ src_compile() {
 	config_cache glut lib_glut_glutMainLoop
 	config_cache jpeg header_jpeglib_h
 	config_cache oss header_sys_soundcard_h header_machine_soundcard_h header_soundcard_h
-	config_cache lcms header_lcms_h
+	config_cache lcms header_lcms_h header_lcms_lcms_h
 
 	strip-flags
-	use lcms && append-flags -I${ROOT}/usr/include/lcms
 
 	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
 		export DB2PDF=true
