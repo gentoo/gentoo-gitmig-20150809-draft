@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20060719.ebuild,v 1.5 2006/10/21 14:50:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20060719.ebuild,v 1.6 2007/03/04 00:03:33 genone Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ mydoc="examples/*"
 mymake="/usr"
 
 pkg_postinst() {
-	einfo "Example scripts can be found in /usr/share/doc/${P}"
+	elog "Example scripts can be found in /usr/share/doc/${P}"
 }
 
 

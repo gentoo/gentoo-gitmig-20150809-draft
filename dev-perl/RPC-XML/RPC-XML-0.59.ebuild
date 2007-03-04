@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.59.ebuild,v 1.6 2007/01/22 14:18:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.59.ebuild,v 1.7 2007/03/04 00:02:04 genone Exp $
 
 inherit perl-module
 
@@ -33,15 +33,15 @@ pkg_postinst() {
 	[ -n "${HAVE_MP2}" ] && SETWARN=1
 
 	if [ "$SETWARN" == "1" ]; then
-	einfo "Apache2 or mod-perl-1.99 (mod_perl2) were detected."
-	einfo ""
-	einfo "NOTE FROM THE AUTHOR OF RPC-XML"
-	einfo ""
-	einfo "At present, this package does not work with Apache2 and the soon-to-be"
-	einfo "mod_perl2. The changes to the API for location handlers are too drastic to"
-	einfo "try and support both within the same class (I tried, using the compatibility"
-	einfo "layer). Also, mp2 does not currently provide support for <Perl> sections, which"
-	einfo "are the real strength of the Apache::RPC::Server class."
+	ewarn "Apache2 or mod-perl-1.99 (mod_perl2) were detected."
+	ewarn ""
+	ewarn "NOTE FROM THE AUTHOR OF RPC-XML"
+	ewarn ""
+	ewarn "At present, this package does not work with Apache2 and the soon-to-be"
+	ewarn "mod_perl2. The changes to the API for location handlers are too drastic to"
+	ewarn "try and support both within the same class (I tried, using the compatibility"
+	ewarn "layer). Also, mp2 does not currently provide support for <Perl> sections, which"
+	ewarn "are the real strength of the Apache::RPC::Server class."
 	fi
 }
 

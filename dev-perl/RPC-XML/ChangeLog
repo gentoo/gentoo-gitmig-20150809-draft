@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.34 2007/01/22 14:18:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.35 2007/03/04 00:02:04 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> RPC-XML-0.54.ebuild,
+  RPC-XML-0.58.ebuild, RPC-XML-0.59.ebuild:
+  Replacing einfo with elog
 
   22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> RPC-XML-0.59.ebuild:
   Stable on Alpha + IA64.
