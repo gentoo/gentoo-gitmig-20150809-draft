@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/pecl-pdo-oci-1.0.ebuild,v 1.9 2007/03/04 20:44:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/pecl-pdo-oci-1.0.ebuild,v 1.10 2007/03/04 20:48:10 chtekk Exp $
 
 PHP_EXT_NAME="pdo_oci"
 PHP_EXT_PECL_PKG="PDO_OCI"
@@ -18,6 +18,7 @@ IUSE="oci8-instant-client"
 
 DEPEND="dev-php5/pecl-pdo
 		oci8-instant-client? ( dev-db/oracle-instantclient-basic )"
+RDEPEND="${DEPEND}"
 
 need_php_by_category
 
