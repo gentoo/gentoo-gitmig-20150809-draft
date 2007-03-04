@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.3 2007/03/02 19:16:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.4 2007/03/04 07:20:40 genone Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -55,7 +55,7 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
-	einfo "Selected language packs (first will be default): $linguas"
+	elog "Selected language packs (first will be default): $linguas"
 }
 
 pkg_setup(){
@@ -66,9 +66,9 @@ pkg_setup(){
 	fi
 
 	if ! use bindist; then
-		einfo "You are enabling official branding. You may not redistribute this build"
-		einfo "to any users on your network or the internet. Doing so puts yourself into"
-		einfo "a legal problem with mozilla foundation"
+		elog "You are enabling official branding. You may not redistribute this build"
+		elog "to any users on your network or the internet. Doing so puts yourself into"
+		elog "a legal problem with mozilla foundation"
 	fi
 
 	use moznopango && warn_mozilla_launcher_stub

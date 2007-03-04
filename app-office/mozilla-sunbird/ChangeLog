@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.4 2007/03/02 19:16:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.5 2007/03/04 07:20:40 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org>
+  mozilla-sunbird-0.3.1.ebuild:
+  Replacing einfo with elog
 
   02 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   -mozilla-sunbird-0.3.ebuild, mozilla-sunbird-0.3.1.ebuild:
