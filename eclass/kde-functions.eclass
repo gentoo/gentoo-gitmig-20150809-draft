@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.144 2007/03/04 19:06:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.145 2007/03/04 21:48:11 zmedico Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -27,6 +27,7 @@ kde-base/kdeaddons kde-base/kdeaddons-kfile-plugins
 kde-base/kdeaddons kde-base/kicker-applets
 kde-base/kdeaddons kde-base/knewsticker-scripts
 kde-base/kdeaddons kde-base/konq-plugins
+kde-base/kdeaddons kde-base/konqueror-akregator
 kde-base/kdeaddons kde-base/ksig
 kde-base/kdeaddons kde-base/noatun-plugins
 kde-base/kdeaddons kde-base/renamedlg-audio
