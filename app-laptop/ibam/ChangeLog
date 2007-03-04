@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/ibam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.4 2007/01/23 16:15:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.5 2007/03/04 20:05:22 peper Exp $
+
+  04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> ibam-0.4.ebuild:
+  Fix incomplete media-gfx/gnuplot -> sci-visualization/gnuplot move.
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org> ibam-0.4.ebuild:
   Replacing einfo with elog
