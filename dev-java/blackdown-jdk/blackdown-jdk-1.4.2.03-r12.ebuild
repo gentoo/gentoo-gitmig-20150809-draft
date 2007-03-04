@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r12.ebuild,v 1.9 2007/01/31 14:00:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r12.ebuild,v 1.10 2007/03/04 07:52:33 genone Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 versionator
@@ -130,7 +130,7 @@ pkg_postinst() {
 	if has_version "sys-apps/chpax"
 	then
 		echo
-		einfo "setting up conservative PaX flags for jar and javac"
+		elog "setting up conservative PaX flags for jar and javac"
 
 		CHPAX_CONSERVATIVE_FLAGS="pemrxs"
 
