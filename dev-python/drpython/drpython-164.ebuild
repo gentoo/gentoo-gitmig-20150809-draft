@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-164.ebuild,v 1.1 2007/02/14 22:37:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-164.ebuild,v 1.2 2007/03/04 10:13:32 lucass Exp $
 
 inherit distutils eutils multilib
 
@@ -33,7 +33,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "See the DrPython homepage for 20+ available plugins:"
-	einfo "http://sourceforge.net/project/showfiles.php?group_id=83074"
+	elog "See the DrPython homepage for 20+ available plugins:"
+	elog "http://sourceforge.net/project/showfiles.php?group_id=83074"
 }
-
