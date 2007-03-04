@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-2.0_beta17.ebuild,v 1.1 2007/03/01 15:30:00 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-2.0.20.ebuild,v 1.1 2007/03/04 22:34:16 drizzt Exp $
 
 inherit eutils autotools toolchain-funcs flag-o-matic
 
