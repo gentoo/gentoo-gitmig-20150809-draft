@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.23 2007/01/12 17:58:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.24 2007/03/04 07:42:21 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -204,11 +204,11 @@ pkg_postinst() {
 	chmod 0660 ${ROOT}/var/log/mysql/mysql.{log,err}
 
 	# your friendly public service announcement...
-	einfo
-	einfo "You might want to run:"
-	einfo "\"emerge --config =${PF}\""
-	einfo "if this is a new install."
-	einfo
+	elog
+	elog "You might want to run:"
+	elog "\"emerge --config =${PF}\""
+	elog "if this is a new install."
+	elog
 	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 }
 

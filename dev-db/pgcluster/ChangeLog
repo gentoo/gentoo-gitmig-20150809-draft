@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgcluster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/ChangeLog,v 1.7 2007/02/10 23:49:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/ChangeLog,v 1.8 2007/03/04 07:47:02 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> pgcluster-1.3.0c.ebuild:
+  Replacing einfo with elog
 
   10 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   pgcluster-1.3.0c.ebuild:

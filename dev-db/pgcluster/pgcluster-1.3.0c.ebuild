@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.7 2007/02/10 23:49:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.8 2007/03/04 07:47:02 genone Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -178,19 +178,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell"
+	elog "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell"
 
 	if [ ! -f ${PG_DIR}/data/PG_VERSION ] ; then
-		einfo
-		einfo "Execute the following command"
-		einfo "emerge --config =${PF}"
-		einfo "to setup the initial database environment."
+		elog
+		elog "Execute the following command"
+		elog "emerge --config =${PF}"
+		elog "to setup the initial database environment."
 	fi
 
-	einfo
-	einfo "Python modules was removed from PostgreSQL package."
-	einfo "If you need it, please run \"emerge dev-db/pygresql\"."
-	einfo
+	elog
+	elog "Python modules was removed from PostgreSQL package."
+	elog "If you need it, please run \"emerge dev-db/pygresql\"."
+	elog
 }
 
 pkg_config() {
