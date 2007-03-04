@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.65 2007/03/03 12:03:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.66 2007/03/04 00:11:55 jer Exp $
+
+  04 Mar 2007; Jeroen Roovers <jer@gentoo.org> debianutils-2.17.4.ebuild:
+  Stable for HPPA (bug #169082).
 
   03 Mar 2007; Raúl Porcel <armin76@gentoo.org> debianutils-2.17.4.ebuild:
   x86 stable wrt bug 169082
