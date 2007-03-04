@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.2 2007/03/04 07:27:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.3 2007/03/04 23:30:54 kevquinn Exp $
 
 # N.B. This is before inherit of autotools, as autotools.eclass adds the
 # relevant dependencies to DEPEND.
@@ -16,10 +16,31 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="gpm nls"
+# Note; app-text/aspell-0.6 and app-dicts/aspell-en-0.6 must go stable together
+
+# Build PDEPEND from list of language codes provided in the tree.
+# The PDEPEND string is static - this code just makes it easier to maintain.
+def="app-dicts/aspell-en"
+for l in \
+	"af" "be" "bg" "br" "ca" "cs" "cy" "da" "de" "el" \
+	"en" "eo" "es" "et" "fi" "fo" "fr" "ga" "gl" "he" \
+	"hr" "is" "it" "nl" "no" "pl" "pt" "ro" "ru" "sk" \
+	"sl" "sr" "sv" "uk" "vi"; do
+	dep="linguas_${l}? ( app-dicts/aspell-${l} )"
+	[[ -z ${PDEPEND} ]] &&
+		PDEPEND="${dep}" ||
+		PDEPEND="${PDEPEND}
+${dep}"
+	def="!linguas_${l}? ( ${def} )"
+done
+PDEPEND="${PDEPEND}
+${def}"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( sys-libs/gpm )
-	nls? ( virtual/libintl )"
+	nls? ( virtual/libintl )
+	!=app-dicts/aspell-en-0.5*"
+# English dictionary 0.5 is incompatible with aspell-0.6
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
