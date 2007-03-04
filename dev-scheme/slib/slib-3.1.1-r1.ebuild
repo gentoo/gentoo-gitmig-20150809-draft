@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1-r1.ebuild,v 1.2 2007/02/02 06:25:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1-r1.ebuild,v 1.3 2007/03/04 11:04:09 hkbst Exp $
 
 inherit versionator eutils
 
@@ -41,6 +41,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Installing slib for guile..."
-	${ROOT}/usr/bin/guile -c "(use-modules (ice-9 slib)) (require 'new-catalog)"
+	if [ "${ROOT}" == "/" ] ; then
+		einfo "Installing..."
+		guile -c "(use-modules (ice-9 slib)) (require 'new-catalog)" "/"
+	fi
 }
