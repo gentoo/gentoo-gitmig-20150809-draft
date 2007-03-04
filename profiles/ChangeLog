@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.165 2007/03/04 20:02:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.166 2007/03/04 22:36:43 drizzt Exp $
+
+  04 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
+  Unmasked bsdtar2
 
   04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> selinux/packages:
   Fix incomplete sys-apps/fcron -> sys-process/fcron move.
