@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.329 2007/03/03 16:21:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.330 2007/03/04 11:14:50 blubb Exp $
+
+  04 Mar 2007; Simon Stelling <blubb@gentoo.org> postgresql-7.4.16.ebuild,
+  postgresql-8.0.12.ebuild:
+  stable on amd64; security bug 165482
 
   03 Mar 2007; Steve Dibb <beandog@gentoo.org> postgresql-7.3.18.ebuild:
   amd64 stable, security bug 165482
