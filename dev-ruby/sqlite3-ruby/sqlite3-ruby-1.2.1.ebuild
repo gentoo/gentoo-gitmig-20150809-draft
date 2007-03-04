@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.1.ebuild,v 1.2 2007/02/23 12:50:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.1.ebuild,v 1.3 2007/03/04 00:15:40 genone Exp $
 
 inherit ruby
 
@@ -24,9 +24,9 @@ pkg_setup() {
 		eerror "'ruby' to your USE flags and recompile swig"
 		die "swig needs ruby bindings"
 	elif ! use swig ; then
-		einfo "${PN} will work a lot better with swig; it is suggested"
-		einfo "that you install swig with the 'ruby' USE flag, and then"
-		einfo "install ${PN} with the swig USE flag"
+		elog "${PN} will work a lot better with swig; it is suggested"
+		elog "that you install swig with the 'ruby' USE flag, and then"
+		elog "install ${PN} with the swig USE flag"
 		ebeep
 		epause 5
 	fi

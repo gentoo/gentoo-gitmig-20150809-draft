@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rflickr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rflickr/ChangeLog,v 1.1 2007/02/24 12:27:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rflickr/ChangeLog,v 1.2 2007/03/04 00:13:21 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> rflickr-20060201.ebuild:
+  Replacing einfo with elog
 
 *rflickr-20060201 (24 Feb 2007)
 
