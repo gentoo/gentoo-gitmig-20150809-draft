@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/pecl-pdo-mysql
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.18 2006/11/23 20:18:03 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.19 2007/03/04 21:19:28 chtekk Exp $
+
+  04 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  +files/pecl-pdo-mysql-1.0.2-charsetphpini.patch,
+  +files/pecl-pdo-mysql-1.0.2-ztsclientlib.patch, -files/config-sed.patch,
+  -files/pecl-pdo_mysql-readmycnf.patch, -pecl-pdo-mysql-1.0.1.ebuild,
+  pecl-pdo-mysql-1.0.2.ebuild:
+  Fix charset settings, be in sync with dev-lang/php.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   pecl-pdo-mysql-1.0.1.ebuild, pecl-pdo-mysql-1.0.2.ebuild:
