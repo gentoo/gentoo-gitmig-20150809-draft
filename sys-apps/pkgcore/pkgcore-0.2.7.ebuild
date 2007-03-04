@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.5.ebuild,v 1.1 2007/02/19 21:02:30 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.7.ebuild,v 1.1 2007/03/04 16:00:21 marienz Exp $
 
 inherit distutils
 
@@ -40,9 +40,10 @@ src_install() {
 
 	if use doc; then
 		dohtml -r doc dev-notes
+		doman man/*.1
 	fi
 
-	dodoc doc/*.rst
+	dodoc doc/*.rst man/*.rst
 	docinto dev-notes
 	dodoc dev-notes/*.rst
 }
@@ -52,8 +53,15 @@ pkg_postinst() {
 	echo "updating pkgcore plugin cache"
 	pplugincache
 
-	elog "If you still have an /etc/pkgcore/plugins directory from pkgcore 0.1"
-	elog "you can remove it now."
+	if [[ -d "${ROOT}etc/pkgcore/plugins" ]]; then
+		elog "You still have an /etc/pkgcore/plugins from pkgcore 0.1."
+		elog "It is unused by pkgcore >= 0.2, so you can remove it now."
+	fi
+
+	elog "If the new layman sync support causes problems you can disable it"
+	elog "with FEATURES=-layman-sync. If you cannot sync a layman overlay"
+	elog "using pkgcore, file a bug in pkgcore.org trac instead of complaining"
+	elog "to the layman or overlay maintainer."
 }
 
 src_test() {
