@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.20 2007/02/21 23:32:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.21 2007/03/04 20:13:48 peper Exp $
+
+  04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> wmacpi-1.99_p7.ebuild,
+  wmacpi-2.1_rc1.ebuild:
+  Fix incomplete sys-apps/acpi -> sys-power/acpi move.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

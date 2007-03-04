@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-2.1_rc1.ebuild,v 1.4 2006/02/07 21:13:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-2.1_rc1.ebuild,v 1.5 2007/03/04 20:13:48 peper Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile()
 src_install()
 {
 	# Fix for #60685:
-	# acpi and acpi.1 conflict with package sys-apps/acpi
+	# acpi and acpi.1 conflict with package sys-power/acpi
 	mv acpi   acpi-batt-status
 	mv acpi.1 acpi-batt-status.1
 
