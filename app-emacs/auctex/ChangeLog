@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.53 2007/02/22 15:05:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.54 2007/03/04 11:24:38 opfer Exp $
+
+*auctex-11.84-r1 (04 Mar 2007)
+
+  04 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/auctex-11.84-japanes.patch, +auctex-11.84-r1.ebuild:
+  added patch to allow compilation of Japanese (La)TeX files, fix taken from
+  auctex' CVS, fixes bug 169114 reported by MATSUI Tetsushi
+  <VED03370@nifty.ne.jp>
 
   22 Feb 2007; Christian Faulhammer <opfer@gentoo.org> auctex-11.84.ebuild:
   refined the checks for TEXMFSITE further. A non existing directory now lets
