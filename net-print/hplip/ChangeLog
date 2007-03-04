@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.51 2007/03/03 17:01:58 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.52 2007/03/04 23:24:24 genstef Exp $
+
+  04 Mar 2007; <genstef@gentoo.org> hplip-1.7.2.ebuild:
+  Correct DEPEND, bug 168179
 
 *hplip-1.7.2 (03 Mar 2007)
 

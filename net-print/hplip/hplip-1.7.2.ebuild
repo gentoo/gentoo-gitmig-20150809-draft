@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.2.ebuild,v 1.1 2007/03/03 17:01:58 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.2.ebuild,v 1.2 2007/03/04 23:24:24 genstef Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="foomaticdb snmp X qt3 ppds scanner"
+IUSE="foomaticdb snmp qt3 ppds scanner X"
 
 DEPEND=">=dev-lang/python-2.2.0
 	snmp? ( >=net-analyzer/net-snmp-5.0.9 )
@@ -25,10 +25,14 @@ DEPEND=">=dev-lang/python-2.2.0
 	virtual/ghostscript
 	scanner? (
 		>=media-gfx/sane-backends-1.0.9
-		|| (
-			X? ( >=media-gfx/xsane-0.89 )
+		X? ( || (
+			>=media-gfx/xsane-0.89
 			>=media-gfx/sane-frontends-1.0.9
-		)
+			) )
+		!X? ( || ( 
+			>=media-gfx/sane-frontends-1.0.9
+			>=media-gfx/xsane-0.89
+			) )
 	)
 	qt3? ( >=dev-python/PyQt-3.11 =x11-libs/qt-3* )
 	>=dev-libs/libusb-0.1.10a
