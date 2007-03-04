@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6908 2007/03/04 18:44:30 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6909 2007/03/04 18:50:17 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -147,12 +147,6 @@ media-plugins/banshee-official-plugins
 # Alexandre Buisse <nattfodd@gentoo.org> (21 Feb 2007)
 # Depends on xkeyval which was masked earlier today.
 dev-tex/dk-bib
-
-# Luca Longinotti <chtekk@gentoo.org> (21 Feb 2007)
-# Mask pecl-apd, needs PHP 5.0 series (PHP5 version),
-# outdated, use XDebug to get a much better debugger.
-dev-php4/pecl-apd
-dev-php5/pecl-apd
 
 # Luca Longinotti <chtekk@gentoo.org> (21 Feb 2007)
 # Mask PHP 4.3/5.0 series: old, unmaintained, unsupported,
@@ -803,8 +797,7 @@ net-dns/bind-dns-keygen
 =app-text/info2html-2.0
 
 # Luca Longinotti <chtekk@gentoo.org> (29 Aug 2006)
-# Masking media-libs/ming-0.3.0, breaks PHP compilation and ships its own
-# PHP bindings the wrong way
+# Masking media-libs/ming-0.3.0, breaks PHP compilation
 =media-libs/ming-0.3.0
 
 # Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
