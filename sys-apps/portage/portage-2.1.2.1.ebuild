@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2-r13.ebuild,v 1.1 2007/03/02 08:22:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.1.ebuild,v 1.1 2007/03/04 03:10:14 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -33,16 +33,15 @@ SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2
-	${SRC_ARCHIVES}/${PN}-${PV}.tar.bz2
+SRC_URI="mirror://gentoo/${PN}-${PV%.*}.tar.bz2
+	${SRC_ARCHIVES}/${PN}-${PV%.*}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER=""
-[ "${PR}" != "r0" ] && PATCHVER="-${PR}"
+PATCHVER=${PV}
 if [ -n "${PATCHVER}" ]; then
-	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PV}${PATCHVER}.patch.bz2
-	${SRC_ARCHIVES}/${PN}-${PV}${PATCHVER}.patch.bz2"
+	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
+	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
 fi
 
 if [ -n "${PATCHVER_PL}" ]; then
@@ -50,7 +49,7 @@ if [ -n "${PATCHVER_PL}" ]; then
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}${PATCHVER_PL}.patch.bz2 )"
 fi
 
-S="${WORKDIR}"/${PN}-${PV}
+S="${WORKDIR}"/${PN}-${PV%.*}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 portage_docs() {
@@ -65,14 +64,12 @@ src_unpack() {
 	cd "${S}"
 	if [ -n "${PATCHVER}" ]; then
 		cd "${S}"
-		epatch "${WORKDIR}/${PN}-${PV}${PATCHVER}.patch"
+		epatch "${WORKDIR}/${PN}-${PATCHVER}.patch"
 	fi
-	if [ "${PR}" != "r0" ]; then
-		einfo "Setting portage.VERSION to ${PVR} ..."
-		sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
-			die "Failed to patch portage.VERSION"
-		eend 0
-	fi
+	einfo "Setting portage.VERSION to ${PVR} ..."
+	sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
+		die "Failed to patch portage.VERSION"
+	eend 0
 	if [ -n "${PATCHVER_PL}" ]; then
 		use linguas_pl && \
 			epatch "${WORKDIR}/${PN}-man-pl-${PV_PL}${PATCHVER_PL}.patch"
