@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-1.15.2.ebuild,v 1.1 2007/02/11 20:20:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-1.15.2.ebuild,v 1.2 2007/03/04 20:40:41 tgall Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="test"
 
