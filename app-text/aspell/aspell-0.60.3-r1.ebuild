@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.3-r1.ebuild,v 1.3 2007/03/03 11:32:12 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.3-r1.ebuild,v 1.4 2007/03/04 07:27:33 genone Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -58,11 +58,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You will need to install a dictionary now.  Please choose an"
-	einfo "aspell-<LANG> dictionary from the app-dicts category"
-	einfo "After installing an aspell dictionary for your language(s),"
-	einfo "You may use the aspell-import utility to import your personal"
-	einfo "dictionaries from ispell, pspell and the older aspell"
+	elog "You will need to install a dictionary now.  Please choose an"
+	elog "aspell-<LANG> dictionary from the app-dicts category"
+	elog "After installing an aspell dictionary for your language(s),"
+	elog "You may use the aspell-import utility to import your personal"
+	elog "dictionaries from ispell, pspell and the older aspell"
 
 	ewarn ""
 	ewarn "Please re-emerge ALL your aspell-LANG dictionaries"
