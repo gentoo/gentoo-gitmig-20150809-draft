@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.39 2007/02/11 20:19:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.40 2007/03/04 20:26:00 tgall Exp $
+
+  04 Mar 2007; Tom Gall <tgall@gentoo.org>
+  activesupport-1.4.1.ebuild:
+  added ~ppc64
 
 *activesupport-1.4.1 (11 Feb 2007)
 
