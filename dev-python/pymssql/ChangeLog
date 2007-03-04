@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.7 2007/02/21 16:39:19 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.8 2007/03/04 10:02:04 lucass Exp $
+
+  04 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org> -pymssql-0.6.0.ebuild,
+  -pymssql-0.7.1.ebuild, -pymssql-0.7.3.ebuild, pymssql-0.7.4.ebuild:
+  Removed old versions. Added NEED_PYTHON.
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-pymssql-0.6.0, files/digest-pymssql-0.7.1,
