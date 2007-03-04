@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.3.24171.ebuild,v 1.1 2006/06/23 14:21:52 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.3.24171.ebuild,v 1.2 2007/03/04 06:46:04 genone Exp $
 
 MY_PN="VMware-console-2.5.3-24171.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
@@ -44,7 +44,7 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "Before running VMware Remote Console for the first time, you need
+	elog "Before running VMware Remote Console for the first time, you need
 		to configure it by invoking the following command:
 		/usr/bin/vmware-config-console.pl "
 }

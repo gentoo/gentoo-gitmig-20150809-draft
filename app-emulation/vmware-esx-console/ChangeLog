@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-esx-console
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.2 2006/01/31 21:34:19 mattm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.3 2007/03/04 06:46:04 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org>
+  vmware-esx-console-2.5.3.24171.ebuild:
+  Replacing einfo with elog
 
   31 Jan 2006; Matthew Marlowe <mattm@gentoo.org>
   vmware-esx-console-2.5.2.16390.ebuild:
