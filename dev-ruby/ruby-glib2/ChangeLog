@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.38 2007/03/03 19:37:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.39 2007/03/04 18:20:16 opfer Exp $
+
+  04 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  ruby-glib2-0.16.0.ebuild:
+  stable x86; bug 169094
 
   03 Mar 2007; nixnut <nixnut@gentoo.org> ruby-glib2-0.16.0.ebuild:
   Stable on ppc wrt bug 169064
