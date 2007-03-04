@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gdesklets-core
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.69 2006/11/03 02:43:13 nixphoeni Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.70 2007/03/04 02:08:35 nixphoeni Exp $
+
+  04 Mar 2007; Joe Sapp <nixphoeni@gentoo.org>
+  -gdesklets-core-0.34.3-r1.ebuild, gdesklets-core-0.35.2-r1.ebuild,
+  gdesklets-core-0.35.3.ebuild, gdesklets-core-0.35.3-r1.ebuild,
+  gdesklets-core-0.35.4.ebuild:
+  Removed old version and updated HOMEPAGE and SRC_URI. Due to the move of the
+  website, we have to rely on the gentoo mirrors for the pre-0.35.4 versions.
 
 *gdesklets-core-0.35.4 (03 Nov 2006)
 

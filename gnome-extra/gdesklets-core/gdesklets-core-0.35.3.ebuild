@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.7 2006/10/16 01:41:39 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.8 2007/03/04 02:08:35 nixphoeni Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -11,9 +11,9 @@ MY_P="${MY_PN}-${PV/_/}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GNOME Desktop Applets: Core library for desktop applets"
-SRC_URI="http://www.gdesklets.org/downloads/${MY_P}.tar.bz2 \
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2 \
 		doc? ( mirror://gentoo/gdesklets-develbook-${PV}.tar.bz2 )"
-HOMEPAGE="http://www.gdesklets.org"
+HOMEPAGE="http://www.gdesklets.de"
 LICENSE="GPL-2"
 
 SLOT="0"
