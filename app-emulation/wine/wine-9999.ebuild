@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.16 2007/02/10 23:53:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.17 2007/03/04 06:56:15 genone Exp $
 
 EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
 
@@ -121,6 +121,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "~/.wine/config is now deprecated.  For configuration either use"
-	einfo "winecfg or regedit HKCU\\Software\\Wine"
+	elog "~/.wine/config is now deprecated.  For configuration either use"
+	elog "winecfg or regedit HKCU\\Software\\Wine"
 }
