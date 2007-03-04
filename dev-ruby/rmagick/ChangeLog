@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.43 2007/02/22 17:30:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.44 2007/03/04 07:59:21 graaff Exp $
+
+*rmagick-1.15.4 (04 Mar 2007)
+
+  04 Mar 2007; Hans de Graaff <graaff@gentoo.org> +rmagick-1.15.4.ebuild:
+  Version bump:
+  
+   * Fixed: RMagick and rbgsl both export the name ID_call
 
 *rmagick-1.15.3 (22 Feb 2007)
 
