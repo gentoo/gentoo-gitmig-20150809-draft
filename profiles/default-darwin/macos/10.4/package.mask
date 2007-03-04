@@ -21,7 +21,7 @@ dev-lang/ruby
 dev-libs/libxml2
 dev-perl/XML-Parser
 dev-util/intltool
-dev-util/guile
+dev-scheme/guile
 media-libs/a52dec
 net-libs/gnutls
 net-misc/curl

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.29 2007/02/15 15:29:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.30 2007/03/04 10:23:42 hkbst Exp $
 
 aalib				media-libs/aalib
 acl					sys-apps/acl
@@ -48,7 +48,7 @@ gpm					sys-libs/gpm
 gstreamer			media-libs/gstreamer
 gtk					x11-libs/gtk+
 gtkhtml				gnome-extra/gtkhtml
-guile				dev-util/guile
+guile				dev-scheme/guile
 hal					sys-apps/hal
 howl				net-misc/howl
 idn					net-dns/libidn

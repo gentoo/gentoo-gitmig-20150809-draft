@@ -27,7 +27,7 @@ ggi		media-libs/libggi
 tcl		dev-lang/tcl
 tk		dev-lang/tk
 # java		virtual/jre
-guile		dev-util/guile
+guile		dev-scheme/guile
 ruby		dev-lang/ruby
 mysql		dev-db/mysql
 postgres	dev-db/postgresql
