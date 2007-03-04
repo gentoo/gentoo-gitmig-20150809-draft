@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20050518.ebuild,v 1.1 2005/05/21 16:43:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20050518.ebuild,v 1.2 2007/03/04 07:32:53 genone Exp $
 
 inherit eutils
 
@@ -93,7 +93,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "The spam-filter CRM files are installed in /usr/share/${PN}."
-	einfo ""
+	elog ""
+	elog "The spam-filter CRM files are installed in /usr/share/${PN}."
+	elog ""
 }

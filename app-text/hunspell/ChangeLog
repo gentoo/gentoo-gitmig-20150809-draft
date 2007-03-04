@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hunspell
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.21 2006/12/27 03:57:16 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.22 2007/03/04 07:37:50 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> hunspell-1.1.3.ebuild,
+  hunspell-1.1.4.ebuild, hunspell-1.1.4-r1.ebuild, hunspell-1.1.4-r2.ebuild:
+  Replacing einfo with elog
 
   26 Dec 2006; Tom Gall <tgall@gentoo.org>
   hunspell-1.1.4-r2.ebuild:

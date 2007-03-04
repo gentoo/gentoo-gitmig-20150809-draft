@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4.ebuild,v 1.8 2006/07/05 07:37:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4.ebuild,v 1.9 2007/03/04 07:37:50 genone Exp $
 
 inherit eutils multilib
 
@@ -56,7 +56,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To use this package you will also need a dictionary."
-	einfo "Hunspell uses myspell format dictionaries; find them"
-	einfo "in the app-dicts category as myspell-<LANG>."
+	elog "To use this package you will also need a dictionary."
+	elog "Hunspell uses myspell format dictionaries; find them"
+	elog "in the app-dicts category as myspell-<LANG>."
 }

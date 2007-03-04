@@ -1,6 +1,11 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.28 2007/02/21 23:20:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.29 2007/03/04 07:32:53 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> crm114-20040601.ebuild,
+  crm114-20041110.ebuild, crm114-20041231.ebuild, crm114-20050415.ebuild,
+  crm114-20050518.ebuild, crm114-20060118.ebuild, crm114-20060704a.ebuild:
+  Replacing einfo with elog
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

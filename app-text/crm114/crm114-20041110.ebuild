@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20041110.ebuild,v 1.4 2005/03/14 12:14:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20041110.ebuild,v 1.5 2007/03/04 07:32:53 genone Exp $
 
 inherit eutils
 
@@ -40,13 +40,13 @@ src_unpack() {
 	sed -i "s#ln -f -s crm114_tre crm114##" Makefile
 
 	if use mimencode ; then
-		einfo "Using mimencode -- adjusting mailfilter.cf"
+		elog "Using mimencode -- adjusting mailfilter.cf"
 		sed -i 's%#:mime_decoder: /mimencode -u/%:mime_decoder: /mimencode -u/%' \
 			mailfilter.cf
 		sed -i 's%:mime_decoder: /mewdecode/%#:mime_decoder: /mewdecode/%' \
 			mailfilter.cf
 	elif use normalizemime ; then
-		einfo "Using normalizemime -- adjusting mailfilter.cf"
+		elog "Using normalizemime -- adjusting mailfilter.cf"
 		sed -i 's%#:mime_decoder: /normalizemime/%:mime_decoder: /normalizemime/%' mailfilter.cf
 
 		sed -i 's%:mime_decoder: /mewdecode/%#:mime_decoder: /mewdecode/%' \
@@ -94,6 +94,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "The spam-filter CRM files are installed in /usr/share/${PN}."
+	elog "The spam-filter CRM files are installed in /usr/share/${PN}."
 	echo
 }
