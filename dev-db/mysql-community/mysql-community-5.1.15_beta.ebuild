@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.15_beta.ebuild,v 1.1 2007/03/04 12:35:58 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.15_beta.ebuild,v 1.2 2007/03/04 12:38:38 vivo Exp $
 
 MY_EXTRAS_VER="20070217"
 SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
@@ -412,7 +412,7 @@ src_unpack() {
 		&>/dev/null
 		popd &>/dev/null
 	fi
-	
+
 	#mysql_version_is_at_least "5.1.15" \
 	#&& use sphinx \
 	#&& sphinx_src_unpack
