@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.52 2007/03/04 20:49:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.53 2007/03/04 21:58:10 weeve Exp $
+
+  04 Mar 2007; Jason Wever <weeve@gentoo.org> mod_python-3.2.10.ebuild:
+  Stable on SPARC wrt security bug #169286.
 
   04 Mar 2007; Simon Stelling <blubb@gentoo.org> mod_python-3.2.10.ebuild:
   stable on amd64; security bug 169286
