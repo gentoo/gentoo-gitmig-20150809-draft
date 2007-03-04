@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/onphp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.40 2007/02/13 16:55:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.41 2007/03/04 14:02:22 voxus Exp $
+
+  04 Mar 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  -onphp-0.8.4.ebuild, onphp-0.8.5.ebuild:
+  Goes stable on amd64 and x86.
 
 *onphp-0.8.5 (13 Feb 2007)
 
