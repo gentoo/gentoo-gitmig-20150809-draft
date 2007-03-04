@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/innotop/innotop-0.1.160.ebuild,v 1.1 2006/11/15 14:09:09 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/innotop/innotop-1.4.0.ebuild,v 1.1 2007/03/04 16:11:14 vivo Exp $
 
 inherit perl-app
 
 DESCRIPTION="innotop - A text-mode MySQL and InnoDB monitor like mytop, but with many more features"
-HOMEPAGE="http://www.xaprb.com/innotop/"
-SRC_URI="http://www.xaprb.com/innotop/src/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/innotop/"
+SRC_URI="mirror://sourceforge/innotop/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
