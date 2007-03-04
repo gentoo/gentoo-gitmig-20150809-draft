@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.105 2007/02/23 11:44:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.106 2007/03/04 16:28:05 uberlord Exp $
+
+*openvpn-2.1_rc2 (04 Mar 2007)
+
+  04 Mar 2007; Roy Marples <uberlord@gentoo.org> +openvpn-2.1_rc2.ebuild:
+  Bumpage.
 
 *openvpn-2.1_rc1-r2 (23 Feb 2007)
 *openvpn-2.0.7-r2 (23 Feb 2007)
