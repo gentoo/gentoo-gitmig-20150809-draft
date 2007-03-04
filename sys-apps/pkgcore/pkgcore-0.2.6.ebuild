@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.4.ebuild,v 1.1 2007/02/16 17:51:51 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.6.ebuild,v 1.1 2007/03/04 03:23:52 marienz Exp $
 
 inherit distutils
 
@@ -19,6 +19,8 @@ RDEPEND=">=dev-lang/python-2.4
 	>=app-shells/bash-3.0
 	doc? ( >=dev-python/docutils-0.4 )"
 
+DOCS="AUTHORS NEWS"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -30,6 +32,9 @@ src_compile() {
 
 	if use doc; then
 		./build_docs.py || die "doc building failed"
+		for f in man/*.man; do
+			mv "${f}" "${f/%man/1}" || die "${f} manpage rename failed"
+		done
 	fi
 }
 
@@ -38,9 +43,10 @@ src_install() {
 
 	if use doc; then
 		dohtml -r doc dev-notes
+		doman man/*.1
 	fi
 
-	dodoc doc/*.rst
+	dodoc doc/*.rst man/*.rst
 	docinto dev-notes
 	dodoc dev-notes/*.rst
 }
@@ -50,8 +56,10 @@ pkg_postinst() {
 	echo "updating pkgcore plugin cache"
 	pplugincache
 
-	elog "If you still have an /etc/pkgcore/plugins directory from pkgcore 0.1"
-	elog "you can remove it now."
+	if [[ -d "${ROOT}etc/pkgcore/plugins" ]]; then
+		elog "You still have an /etc/pkgcore/plugins from pkgcore 0.1."
+		elog "It is unused by pkgcore >= 0.2, so you can remove it now."
+	fi
 }
 
 src_test() {
