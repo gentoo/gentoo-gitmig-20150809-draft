@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6907 2007/03/03 20:19:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6908 2007/03/04 18:44:30 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1138,11 +1138,6 @@ dev-tex/mpm
 # mask mupad until fixed by upstream, since the binaries
 # contain insecure runpaths, bug #81745, #115892
 sci-mathematics/mupad
-
-# Luca Longinotti <chtekk@gentoo.org> (21 Dec 2005)
-# Doesn't work reliably with new PDO 1.0.X and is
-# in need of new upstream maintainers
-dev-php5/pecl-pdo-firebird
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
 # This is the Gentoo Linux Installer.  This is currently masked because it can
