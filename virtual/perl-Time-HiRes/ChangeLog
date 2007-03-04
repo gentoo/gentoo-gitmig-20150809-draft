@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Time-HiRes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.27 2007/02/17 15:36:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.28 2007/03/04 12:47:05 ticho Exp $
+
+  04 Mar 2007; Andrej Kacian <ticho@gentoo.org> perl-Time-HiRes-1.90.ebuild:
+  Stable on x86, bug #169153.
 
 *perl-Time-HiRes-1.97.05 (17 Feb 2007)
 
