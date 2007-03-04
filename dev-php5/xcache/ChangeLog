@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/xcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/ChangeLog,v 1.3 2007/03/04 00:08:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/ChangeLog,v 1.4 2007/03/04 17:32:23 chtekk Exp $
+
+  04 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/xcache-hardening-0.4.11.patch, metadata.xml, xcache-1.2.0.ebuild:
+  Remove hardenedphp patch (no more hardenedphp now), cleanup.
 
   04 Mar 2007; Marius Mauch <genone@gentoo.org> xcache-1.2.0.ebuild:
   Replacing einfo with elog

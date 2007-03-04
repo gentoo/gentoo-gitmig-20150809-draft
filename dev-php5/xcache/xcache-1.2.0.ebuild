@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.3 2007/03/04 00:08:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.4 2007/03/04 17:32:23 chtekk Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -8,18 +8,19 @@ PHP_EXT_ZENDEXT="yes"
 
 inherit php-ext-source-r1 confutils
 
-DESCRIPTION="Another PHP opcode cache and encoder"
+KEYWORDS="~amd64 ~x86"
+
+DESCRIPTION="Another PHP opcode cache and encoder."
 HOMEPAGE="http://trac.lighttpd.net/xcache/"
 SRC_URI="http://210.51.190.228/pub/XCache/Releases/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	!dev-php5/pecl-apc
-	!dev-php5/eaccelerator"
+DEPEND="!dev-php5/pecl-apc
+		!dev-php5/eaccelerator"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
@@ -30,21 +31,15 @@ pkg_setup() {
 	require_php_sapi_from cgi apache apache2
 }
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	has_hardenedphp && epatch "${FILESDIR}"/${PN}-hardening-0.4.11.patch
-}
-
 src_compile() {
 	has_php
 
 	my_conf="--enable-xcache=shared \
-		--enable-xcache-constant      \
-		--enable-xcache-optimizer     \
-		--enable-xcache-coverager     \
-		--enable-xcache-assembler     \
-		--enable-xcache-encoder       \
+		--enable-xcache-constant    \
+		--enable-xcache-optimizer   \
+		--enable-xcache-coverager   \
+		--enable-xcache-assembler   \
+		--enable-xcache-encoder     \
 		--enable-xcache-decoder"
 
 	enable_extension_with_built_with =${PHP_PKG} apache2 apxs2 /usr/sbin/apxs2 "optimisation for apache2"
@@ -83,7 +78,6 @@ pkg_postinst() {
 	elog "release were installed into /usr/share/php5/xcache/."
 
 	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
-		echo
-		elog "You need to restart your Apache webserver to activate xcache."
+		elog "You need to restart your Apache webserver to enable xcache."
 	fi
 }
