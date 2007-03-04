@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_rc2.ebuild,v 1.1 2007/02/27 15:28:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0-r1.ebuild,v 1.1 2007/03/04 15:56:45 chainsaw Exp $
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
@@ -18,8 +18,9 @@ IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls o
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
+	media-libs/libsamplerate
 	net-misc/curl
-	>=media-sound/audacious-1.3.0_rc2
+	>=media-sound/audacious-1.3.0
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	>=media-libs/libsdl-1.2.5
@@ -28,10 +29,7 @@ RDEPEND="app-arch/unzip
 	alsa? ( >=media-libs/alsa-lib-1.0.9_rc2 )
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.30 )
-	flac? ( >=media-libs/libvorbis-1.0
-		|| ( ~media-libs/flac-1.1.2
-		     ~media-libs/flac-1.1.3 )
-	      )
+	flac? ( >=media-libs/libvorbis-1.0 )
 	jack? ( >=media-libs/bio2jack-0.4
 		media-libs/libsamplerate
 		media-sound/jack-audio-connection-kit )
@@ -51,7 +49,9 @@ RDEPEND="app-arch/unzip
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
-	>=dev-util/pkgconfig-0.9.0"
+	>=dev-util/pkgconfig-0.9.0
+	!media-plugins/audacious-docklet
+	!=media-plugins/audacious-plugins-ugly-1.2.0"
 
 mp3_warning() {
 	if ! useq mad ; then
@@ -64,8 +64,7 @@ mp3_warning() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-freebsd-portability.patch
-	eautoconf
+	epatch ${FILESDIR}/${PV}-unscrew-flac.patch
 }
 
 src_compile() {
