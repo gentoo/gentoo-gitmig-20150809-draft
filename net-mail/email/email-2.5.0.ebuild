@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-2.5.0.ebuild,v 1.4 2006/10/12 01:28:45 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-2.5.0.ebuild,v 1.5 2007/03/04 18:36:00 ticho Exp $
 
 DESCRIPTION="Advanced CLI tool for sending email."
 HOMEPAGE="http://email.cleancode.org"
@@ -16,8 +16,8 @@ DEPEND="virtual/libc"
 src_compile() {
 	local myconf=""
 
-	if [ -f /etc/rc.conf ]; then
-		. /etc/rc.conf
+	if [ -f /etc/conf.d/clock ]; then
+		. /etc/conf.d/clock
 		if [ x$CLOCK = "xUTC" ]; then
 			einfo "Using UTC timestamps (from /etc/rc.conf)"
 			myconf="${myconf} --with-utc"
