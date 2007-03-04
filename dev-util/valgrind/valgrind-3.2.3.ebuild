@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.3.ebuild,v 1.1 2007/02/19 19:00:11 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.3.ebuild,v 1.2 2007/03/04 20:22:42 griffon26 Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -40,7 +40,7 @@ src_unpack() {
 	# "valgrind: failed to start tool 'memcheck' for platform 'ppc32-linux': 
 	#  No such file or directory"
 	if use ppc64 && ! has_multilib_profile; then
-		epatch "${FILESDIR}/${P}-only64bit.patch"
+		epatch "${FILESDIR}/valgrind-3.2.1-only64bit.patch"
 	fi
 
 	# Regenerate autotools files
