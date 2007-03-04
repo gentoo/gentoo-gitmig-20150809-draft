@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.6.ebuild,v 1.6 2006/11/27 00:08:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.6.ebuild,v 1.7 2007/03/04 18:34:23 lucass Exp $
 
 inherit distutils
 
@@ -15,18 +15,17 @@ DOCS="NEWS PLUGINS config style.css"
 
 pkg_postinst() {
 	distutils_pkg_postinst
-	einfo
-	einfo "You can find sample config and style.css in /usr/share/doc/${PF}"
-	einfo
-	einfo "If you are upgrading rawdog from 1.x, you"
-	einfo "need to perform as user the following steps:"
-	einfo
-	einfo "$ cp -R ~/.rawdog ~/.rawdog-old"
-	einfo "$ rm ~/.rawdog/state"
-	einfo "$ rawdog -u"
-	einfo "$ rawdog --upgrade ~/.rawdog-old ~/.rawdog (to copy the state)"
-	einfo "$ rawdog -w"
-	einfo "$ rm -r ~/.rawdog-old (once you're happy with the new version)"
-	einfo
+	elog
+	elog "You can find sample config and style.css in /usr/share/doc/${PF}"
+	elog
+	elog "If you are upgrading rawdog from 1.x, you"
+	elog "need to perform as user the following steps:"
+	elog
+	elog "$ cp -R ~/.rawdog ~/.rawdog-old"
+	elog "$ rm ~/.rawdog/state"
+	elog "$ rawdog -u"
+	elog "$ rawdog --upgrade ~/.rawdog-old ~/.rawdog (to copy the state)"
+	elog "$ rawdog -w"
+	elog "$ rm -r ~/.rawdog-old (once you're happy with the new version)"
+	elog
 }
-
