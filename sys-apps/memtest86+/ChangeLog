@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.35 2007/01/27 14:44:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.36 2007/03/04 16:22:41 armin76 Exp $
+
+  04 Mar 2007; Raúl Porcel <armin76@gentoo.org> memtest86+-1.70.ebuild:
+  x86 stable wrt bug 168486
 
   27 Jan 2007; Michał Januszewski <spock@gentoo.org>
   +files/memtest86+-1.70-gnu_hash.patch,
