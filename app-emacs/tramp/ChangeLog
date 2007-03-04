@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.27 2007/02/21 21:37:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.28 2007/03/04 19:41:07 opfer Exp $
+
+  04 Mar 2007; Christian Faulhammer <opfer@gentoo.org> tramp-2.1.8.ebuild:
+  stable x86; bug 169351
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
