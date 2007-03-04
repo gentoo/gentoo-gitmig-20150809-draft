@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Template-XML
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.13 2007/02/17 15:20:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.14 2007/03/04 19:13:28 opfer Exp $
+
+  04 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  Template-XML-2.16-r1.ebuild:
+  stable x86; bug 141638
 
 *Template-XML-2.17 (17 Feb 2007)
 
