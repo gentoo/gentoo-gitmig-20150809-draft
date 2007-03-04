@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.162 2007/03/03 19:32:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.163 2007/03/04 11:00:48 opfer Exp $
+
+  04 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  hardened/x86/package.mask:
+  masked >=sys-apps/iproute2-2.6.19.20061214 on hardened profiles with kernel
+  2.4 and packages depending on at least that version
 
   03 Mar 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Remove mozbranding from sunbird and thunderbird, bug 168409, for firefox
