@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3.ebuild,v 1.20 2007/03/04 18:30:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3.ebuild,v 1.21 2007/03/04 21:01:55 chtekk Exp $
 
 PHP_EXT_NAME="sqlite"
 PHP_EXT_PECL_PKG="SQLite"
@@ -20,6 +20,15 @@ DEPEND="=dev-db/sqlite-2*"
 RDEPEND="${DEPEND}"
 
 need_php_by_category
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# There is a copy of the sqlite2 sources, so
+	# we make sure the bundled copy is never used
+	# https://bugs.gentoo.org/show_bug.cgi?id=159207
+	rm -Rf libsqlite
+}
 
 src_compile() {
 	has_php
