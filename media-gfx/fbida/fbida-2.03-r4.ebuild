@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03-r4.ebuild,v 1.1 2006/08/08 00:58:30 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03-r4.ebuild,v 1.2 2007/03/04 16:06:33 spock Exp $
 
 inherit eutils
 
@@ -26,7 +26,8 @@ RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	!media-gfx/fbi
 	media-libs/libexif
 	>=media-libs/freetype-2.0
-	>=media-libs/fontconfig-2.2"
+	>=media-libs/fontconfig-2.2
+	media-fonts/ttf-bitstream-vera"
 
 DEPEND="${RDEPEND}
 	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
