@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.239 2007/02/11 14:15:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.240 2007/03/04 13:40:52 mcummings Exp $
+
+  04 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  +files/perl-5.8.8-asm-page-h-compile-failure.patch, perl-5.8.8-r2.ebuild:
+  Bug 168312, patch from Peter for >=2.6.20 kernel headers.
 
   11 Feb 2007; Fabian Groffen <grobian@gentoo.org> perl-5.8.8-r2.ebuild:
   Dropped ppc-macos keyword, see you in prefix

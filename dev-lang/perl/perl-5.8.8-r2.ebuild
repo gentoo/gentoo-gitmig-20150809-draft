@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.29 2007/02/11 14:15:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.30 2007/03/04 13:40:52 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -125,6 +125,11 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/${P}-cplusplus.patch
 
 	has_version '>sys-devel/gcc-4.1.9999' && epatch ${FILESDIR}/${P}-gcc42-command-line.patch
+
+	# Newer linux-headers don't include asm/page.h. Fix this.
+	# Patch from bug 168312, thanks Peter!
+	has_version '>sys-kernel/linux-headers-2.6.20' && epatch ${FILESDIR}/${P}-asm-page-h-compile-failure.patch
+
 
 }
 
