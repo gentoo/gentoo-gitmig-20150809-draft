@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/pecl-pdo-mysql-1.0.2.ebuild,v 1.3 2007/03/04 21:19:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/pecl-pdo-mysql-1.0.2.ebuild,v 1.4 2007/03/04 23:41:45 chtekk Exp $
 
 PHP_EXT_NAME="pdo_mysql"
 PHP_EXT_PECL_PKG="PDO_MYSQL"
@@ -47,6 +47,10 @@ src_unpack() {
 
 src_compile() {
 	has_php
-	my_conf="--with-pdo-mysql=/usr"
+	if has_zts ; then
+		my_conf="--with-pdo-mysql=/usr --enable-maintainer-zts"
+	else
+		my_conf="--with-pdo-mysql=/usr"
+	fi
 	php-ext-pecl-r1_src_compile
 }
