@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.2 2007/02/18 17:48:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.3 2007/03/04 00:08:24 genone Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -79,11 +79,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Decompiler.class.php and the admin/ directory shipped with this"
-	einfo "release were installed into /usr/share/php5/xcache/."
+	elog "Decompiler.class.php and the admin/ directory shipped with this"
+	elog "release were installed into /usr/share/php5/xcache/."
 
 	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
 		echo
-		einfo "You need to restart your Apache webserver to activate xcache."
+		elog "You need to restart your Apache webserver to activate xcache."
 	fi
 }
