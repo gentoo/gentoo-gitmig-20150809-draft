@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.2.8.ebuild,v 1.1 2007/01/06 13:51:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.2.8.ebuild,v 1.2 2007/03/04 18:52:27 graaff Exp $
 
 inherit ruby gems
 
@@ -16,4 +16,5 @@ IUSE=""
 RESTRICT="test"
 
 DEPEND=">=dev-lang/ruby-1.8.2
+	>=dev-ruby/hoe-1.1.2
 	dev-ruby/rmagick"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.9 2007/02/24 16:13:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.10 2007/03/04 18:52:27 graaff Exp $
+
+  04 Mar 2007; Hans de Graaff <graaff@gentoo.org> gruff-0.2.8.ebuild:
+  Add missing dependency on dev-ruby/hoe, #169306.
 
   24 Feb 2007; Steve Dibb <beandog@gentoo.org> gruff-0.1.2.ebuild:
   amd64 stable, bug 155112
