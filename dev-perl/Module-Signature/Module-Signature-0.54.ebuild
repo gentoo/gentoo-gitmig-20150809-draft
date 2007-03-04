@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.54.ebuild,v 1.4 2007/01/07 23:57:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.54.ebuild,v 1.5 2007/03/04 14:45:26 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Module signature file manipulation "
-HOMEPAGE="http://search.cpan.org/~autrijus/${P}/"
+HOMEPAGE="http://search.cpan.org/~autrijus/"
 SRC_URI="mirror://cpan/authors/id/A/AU/AUTRIJUS/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 SRC_TEST="do"
 

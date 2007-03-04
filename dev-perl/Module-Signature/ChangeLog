@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.14 2007/02/22 01:45:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.15 2007/03/04 14:45:26 mcummings Exp $
+
+  04 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  Module-Signature-0.54.ebuild, Module-Signature-0.55.ebuild:
+  Correcting QA notice - test wasn't in IUSE
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
