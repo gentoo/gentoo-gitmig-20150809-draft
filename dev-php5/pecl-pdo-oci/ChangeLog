@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdo-oci
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/ChangeLog,v 1.9 2007/02/22 00:01:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/ChangeLog,v 1.10 2007/03/04 20:44:57 chtekk Exp $
+
+  04 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-pdo-oci-1.0.ebuild:
+  Cleanup.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

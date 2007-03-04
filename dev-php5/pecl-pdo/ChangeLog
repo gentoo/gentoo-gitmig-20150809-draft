@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-pdo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/ChangeLog,v 1.17 2007/02/21 23:59:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/ChangeLog,v 1.18 2007/03/04 20:38:27 chtekk Exp $
+
+  04 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-pdo-1.0.2.ebuild,
+  pecl-pdo-1.0.3.ebuild:
+  Cleanup.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

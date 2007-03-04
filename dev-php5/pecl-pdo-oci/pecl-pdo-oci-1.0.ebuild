@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/pecl-pdo-oci-1.0.ebuild,v 1.8 2006/01/28 16:17:03 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/pecl-pdo-oci-1.0.ebuild,v 1.9 2007/03/04 20:44:57 chtekk Exp $
 
 PHP_EXT_NAME="pdo_oci"
 PHP_EXT_PECL_PKG="PDO_OCI"
@@ -10,13 +10,13 @@ PHP_EXT_ZENDEXT="no"
 inherit php-ext-pecl-r1
 
 KEYWORDS="-* amd64 ia64 x86"
+
 DESCRIPTION="PHP Data Objects (PDO) Driver For Oracle Call Interface (OCI)."
 LICENSE="PHP"
 SLOT="0"
 IUSE="oci8-instant-client"
 
-DEPEND="${DEPEND}
-		dev-php5/pecl-pdo
+DEPEND="dev-php5/pecl-pdo
 		oci8-instant-client? ( dev-db/oracle-instantclient-basic )"
 
 need_php_by_category
@@ -37,7 +37,7 @@ pkg_setup() {
 
 src_compile() {
 	has_php
-	if useq oci8-instant-client ; then
+	if use oci8-instant-client ; then
 		OCI8IC_PKG="`best_version dev-db/oracle-instantclient-basic`"
 		OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g' | sed -e 's|-r.*||g'`"
 		my_conf="--with-pdo-oci=instantclient,/usr,${OCI8IC_PKG}"
