@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-0.21.ebuild,v 1.2 2007/02/13 16:12:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-0.21.ebuild,v 1.3 2007/03/04 07:24:25 genone Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	if ! use obex && ! use http; then
 		eerror "${CATEGORY}/${P} without support for obex nor http is unusable."
-		einfo "Please enable \"obex\" or/and \"http\" USE flags."
+		eerror "Please enable \"obex\" or/and \"http\" USE flags."
 		die "Please enable \"obex\" or/and \"http\" USE flags."
 	fi
 
@@ -28,7 +28,7 @@ pkg_setup() {
 		eerror "You are trying to build ${CATEGORY}/${P} with the \"obex\""
 		eerror "USE flags, but app-pda/libsyncml was built without"
 		eerror "the \"obex\" USE flag."
-		einfo "Please rebuild app-pda/libsyncml with \"obex\" USE flag."
+		eerror "Please rebuild app-pda/libsyncml with \"obex\" USE flag."
 		die "Please rebuild app-pda/libsyncml with \"obex\" USE flag."
 	fi
 
@@ -36,7 +36,7 @@ pkg_setup() {
 		eerror "You are trying to build ${CATEGORY}/${P} with the \"http\""
 		eerror "USE flags, but app-pda/libsyncml was built without"
 		eerror "the \"http\" USE flag."
-		einfo "Please rebuild app-pda/libsyncml with \"http\" USE flag."
+		eerror "Please rebuild app-pda/libsyncml with \"http\" USE flag."
 		die "Please rebuild app-pda/libsyncml with \"http\" USE flag."
 	fi
 }
