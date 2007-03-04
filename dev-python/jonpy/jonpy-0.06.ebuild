@@ -1,39 +1,28 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/jonpy-0.06.ebuild,v 1.5 2006/07/12 15:42:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/jonpy-0.06.ebuild,v 1.6 2007/03/04 10:27:10 lucass Exp $
+
+NEED_PYTHON=2.2
 
 inherit distutils
 
-IUSE=""
-
-HOMEPAGE="http://jonpy.sourceforge.net/"
 DESCRIPTION="Powerful multi-threaded object-oriented CGI/FastCGI/mod_python/html-templating facilities"
+HOMEPAGE="http://jonpy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="ia64 x86"
-
-DEPEND=">=dev-lang/python-2.2"
-RDEPEND="${DEPEND}"
+KEYWORDS="~amd64 ia64 x86"
+IUSE="doc examples"
 
 src_install() {
 	distutils_src_install
 
-	insinto /usr/share/${P}/wt-examples
-	doins ${S}/example/printenv.html ${S}/example/wt/printenv.html.py
-	insinto /usr/share/${P}/wt-examples/cgi-bin
-	doins ${S}/example/cgi-bin/wt.py
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r example
+	fi
 
-	for file in `ls ${S}/doc/`; do
-		dohtml ${S}/doc/${file}
-	done
-
-	dodoc LICENCE README
-}
-
-pkg_postinst() {
-	echo
-	einfo "Examples for the 'wt' module have been installed in /usr/share/${P}/wt-examples"
-	echo
+	if use doc; then
+		dohtml doc/*
+	fi
 }
