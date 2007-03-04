@@ -1,22 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.19.ebuild,v 1.6 2007/01/15 16:45:26 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.21-r1.ebuild,v 1.1 2007/03/04 23:06:43 wltjr Exp $
 
-inherit apache-module autotools java-pkg-opt-2
+inherit apache-module autotools
 
 MY_P="tomcat-connectors-${PV}-src"
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="JK module for connecting Tomcat and Apache using the ajp13 protocol."
 HOMEPAGE="http://tomcat.apache.org/connectors-doc/"
 SRC_URI="mirror://apache/tomcat/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="java"
+IUSE=""
 
-DEPEND="java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* ) )"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/native"
 
@@ -41,16 +39,12 @@ src_unpack() {
 
 src_compile() {
 	local apxs
-	local java_args
 	use apache2 && apxs="${APXS2}"
 	use apache2 || apxs="${APXS1}"
-	use java && java_args="--with-java-home=${JAVA_HOME} \
-				--with-java-platform=2 --enable-jni"
 
 	econf \
 		--with-apxs=${apxs} \
 		--with-apr-config=/usr/bin/apr-config \
-		${java_args} \
 		|| die "econf failed"
 	emake LIBTOOL="/bin/sh $(pwd)/libtool --silent" || die "emake failed"
 }
@@ -60,14 +54,13 @@ src_install() {
 	insinto "${APACHE_CONFDIR}"
 	doins "${FILESDIR}/jk-workers.properties"
 
-	# if using java, install the jni stuff
-	if use java ; then
-		insinto "${APACHE_MODULESDIR}"
-		doins "${S}/jni/jk_jnicb.so"
-	fi
-
 	# call the nifty default src_install :-)
 	apache-module_src_install
+
+	if ! use apache2 ; then
+		sed -i -e 's:/apache2/:/apache/:' "${D}${APACHE_CONFDIR}/modules.d/88_${PN}.conf" \
+			|| die "Could not update jk-workers.properties for apache"
+	fi
 }
 
 pkg_postinst() {
