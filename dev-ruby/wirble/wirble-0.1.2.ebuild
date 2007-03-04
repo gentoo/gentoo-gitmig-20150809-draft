@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.2.ebuild,v 1.1 2007/02/04 03:37:29 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.2.ebuild,v 1.2 2007/03/04 00:21:06 genone Exp $
 
 inherit ruby gems
 
@@ -16,12 +16,12 @@ DEPEND=""
 IUSE=""
 
 pkg_postinst() {
-	einfo "The quick way to use wirble is to make your ~/.irbrc look like this:"
-	einfo "  # load libraries"
-	einfo "  require 'rubygems'"
-	einfo "  require 'wirble'"
-	einfo "  "
-	einfo "  # start wirble (with color)"
-	einfo "  Wirble.init"
-	einfo "  Wirble.colorize"
+	elog "The quick way to use wirble is to make your ~/.irbrc look like this:"
+	elog "  # load libraries"
+	elog "  require 'rubygems'"
+	elog "  require 'wirble'"
+	elog "  "
+	elog "  # start wirble (with color)"
+	elog "  Wirble.init"
+	elog "  Wirble.colorize"
 }
