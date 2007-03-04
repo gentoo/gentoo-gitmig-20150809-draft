@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6909 2007/03/04 18:50:17 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6910 2007/03/04 19:39:18 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -191,10 +191,6 @@ dev-perl/Text-ChaSen
 # Pending removal 17 Mar 2007, doesn't compile, upstream
 # dropped support a long time ago.
 net-irc/cyclone
-
-# Diego Pettenò <flameeyes@gentoo.org> (17 Feb 2007)
-# Mask preview versions
-=dev-lang/ruby-1.8.6_pre*
 
 # Raúl Porcel <armin76@gentoo.org> (17 Feb 2007)
 # Mask beta versions
