@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8.ebuild,v 1.6 2005/01/01 15:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8-r1.ebuild,v 1.1 2007/03/04 18:18:16 anant Exp $
+
+inherit eutils
 
 DESCRIPTION="A command-line compatible rm which destroys file contents before unlinking."
 HOMEPAGE="http://sourceforge.net/projects/srm/"
@@ -16,6 +18,12 @@ DEPEND="virtual/libc
 	sys-apps/grep"
 RDEPEND="virtual/libc
 	!app-misc/secure-delete"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-remove-mount.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
