@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/tct-1.15-r1.ebuild,v 1.5 2007/01/24 03:28:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/tct-1.15-r1.ebuild,v 1.6 2007/03/04 19:52:37 peper Exp $
 
 inherit eutils toolchain-funcs
 
@@ -80,7 +80,7 @@ src_install() {
 pkg_postinst() {
 	echo
 	elog "The authors of The Coroner's Toolkit highly recommend"
-	elog "installing sys-apps/lsof for use by the toolkit."
+	elog "installing sys-process/lsof for use by the toolkit."
 	elog
 	elog "Please read the README and quickstart files installed"
 	elog "in /usr/share/doc/${PF} before using The Coroner's Toolkit."

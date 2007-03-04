@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/tct
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.9 2007/01/24 03:28:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.10 2007/03/04 19:52:37 peper Exp $
+
+  04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> tct-1.15-r1.ebuild:
+  Fix incomplete sys-apps/lsof -> sys-process/lsof move.
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> tct-1.15-r1.ebuild:
   Replacing einfo with elog
