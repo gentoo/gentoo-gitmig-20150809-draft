@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Dependency
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.22 2007/01/14 21:59:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.23 2007/03/04 18:58:34 ticho Exp $
+
+  04 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  Algorithm-Dependency-1.102.ebuild:
+  Stable on x86, bug #169152.
 
   14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Algorithm-Dependency-1.101.ebuild, Algorithm-Dependency-1.102.ebuild:
