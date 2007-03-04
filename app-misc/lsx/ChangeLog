@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lsx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/ChangeLog,v 1.4 2007/02/13 12:58:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/ChangeLog,v 1.5 2007/03/04 06:58:30 genone Exp $
+
+  04 Mar 2007; Marius Mauch <genone@gentoo.org> lsx-0.1.ebuild:
+  Replacing einfo with elog
 
   13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> lsx-0.1.ebuild:
   Add ~amd64 wrt bug #166302.
