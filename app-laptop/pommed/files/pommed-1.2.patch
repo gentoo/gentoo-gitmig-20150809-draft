@@ -1,0 +1,33 @@
+diff -ru pommed-1.2~/gpomme/conffile.c pommed-1.2/gpomme/conffile.c
+--- pommed-1.2~/gpomme/conffile.c	2007-03-04 19:12:57.000000000 +0100
++++ pommed-1.2/gpomme/conffile.c	2007-03-04 20:12:36.000000000 +0100
+@@ -32,6 +32,8 @@
+ #include "gpomme.h"
+ #include "theme.h"
+ 
++#include "conffile.h"
++
+ #define CONFFILE        "/.gpommerc"
+ 
+ static cfg_opt_t cfg_opts[] =
+diff -ru pommed-1.2~/pommed/Makefile pommed-1.2/pommed/Makefile
+--- pommed-1.2~/pommed/Makefile	2007-03-04 19:12:57.000000000 +0100
++++ pommed-1.2/pommed/Makefile	2007-03-04 20:09:49.000000000 +0100
+@@ -11,7 +11,7 @@
+ CONFUSE_CFLAGS = $(shell pkg-config libconfuse --cflags)
+ CONFUSE_LIBS = $(shell pkg-config libconfuse --libs)
+ 
+-CFLAGS = -g -O2 -Wall $(CONFUSE_CFLAGS) $(DBUS_CFLAGS) $(ALSA_CFLAGS)
++CFLAGS += -Wall $(CONFUSE_CFLAGS) $(DBUS_CFLAGS) $(ALSA_CFLAGS)
+ 
+ ifeq ($(ARCH), ppc)
+ LDFLAGS = -lz $(CONFUSE_LIBS) $(DBUS_LIBS) $(ALSA_LIBS)
+@@ -29,7 +29,7 @@
+ 
+ else
+ 
+-LDFLAGS = -lz -lsmbios $(CONFUSE_LIBS) $(DBUS_LIBS) $(ALSA_LIBS)
++LDFLAGS = -lz -lsmbios -lstdc++ $(CONFUSE_LIBS) $(DBUS_LIBS) $(ALSA_LIBS)
+ 
+ SOURCES = pommed.c cd_eject.c evdev.c conffile.c audio.c dbus.c \
+ 		mactel/x1600_backlight.c mactel/gma950_backlight.c \
