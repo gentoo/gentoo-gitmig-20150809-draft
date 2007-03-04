@@ -1,18 +1,21 @@
 # ChangeLog for dev-ruby/IO-Reactor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.3 2007/01/21 08:05:32 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.4 2007/03/04 19:47:26 tgall Exp $
 
-  21 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  04 Mar 2007; Tom Gall <tgall@gentoo.org> IO-Reactor-0.0.6.ebuild:
+  added ~ppc64
+
+  21 Jan 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   IO-Reactor-0.0.6.ebuild:
   Added examples use flag to ebuild, #145222
 
-  08 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  08 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   IO-Reactor-0.0.6.ebuild:
   Added ~x86
 
 *IO-Reactor-0.0.6 (24 Jun 2006)
 
-  24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  24 Jun 2006; Diego PettenÃ² <flameeyes@gentoo.org> +metadata.xml,
   +IO-Reactor-0.0.6.ebuild:
   Initial import, needed for Ruby-MemCache.
 
