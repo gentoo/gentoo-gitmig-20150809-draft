@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jmax
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.14 2007/01/05 17:33:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.15 2007/03/04 22:29:32 dirtyepic Exp $
+
+  04 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/jmax-4.1.0-gcc41.patch, +files/jmax-4.1.0-usercflags.patch,
+  jmax-4.1.0.ebuild:
+  Fix building w/ GCC 4.1 and clean up ebuild.  Bug #152248 by kartebi.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> jmax-4.1.0.ebuild:
   Convert to use elog.

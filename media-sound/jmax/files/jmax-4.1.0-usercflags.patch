@@ -1,0 +1,12 @@
+diff -Naur jmax-4.1.0-orig/configure.in jmax-4.1.0/configure.in
+--- jmax-4.1.0-orig/configure.in	2006-12-03 21:09:56.000000000 -0600
++++ jmax-4.1.0/configure.in	2006-12-03 21:11:11.000000000 -0600
+@@ -207,7 +207,7 @@
+ CFLAGS="$CFLAGS -Wall -Wno-unused"
+ if test "$with_debug" != "yes"
+ then
+-  CFLAGS="$CFLAGS -O3 -funroll-loops -fmove-all-movables -fstrict-aliasing"
++  CFLAGS="$CFLAGS"
+ fi
+ if test "$check_memory" = "yes"
+ then
