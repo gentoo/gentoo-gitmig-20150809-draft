@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.22 2007/02/22 01:42:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.23 2007/03/04 23:16:03 genstef Exp $
+
+  04 Mar 2007; <genstef@gentoo.org> ati-gatos-4.4.0.ebuild:
+  QA: fix invalid has_version usage, bug 168892
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.4 2005/01/20 04:55:57 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.5 2007/03/04 23:16:03 genstef Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if has_version '>=x11-base/xorg-x11-6.7.99*' ; then
+	if has_version '>x11-base/xorg-x11-6.7' ; then
 		einfo "Patching ati-gatos for use with >=x11-base/xorg-x11-6.7.99"
 		epatch ${FILESDIR}/${P}-new-xorg.patch
 	fi
