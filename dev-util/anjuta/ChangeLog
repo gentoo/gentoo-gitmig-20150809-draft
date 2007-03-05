@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.65 2007/02/25 20:53:49 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.66 2007/03/05 03:16:43 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> anjuta-1.2.4.ebuild,
+  anjuta-1.2.4-r1.ebuild, anjuta-2.1.0_beta1.ebuild,
+  anjuta-2.1.1_beta1.ebuild:
+  Replacing einfo with elog
 
   25 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   anjuta-2.1.1_beta1.ebuild:

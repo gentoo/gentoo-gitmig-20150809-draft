@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/bcpp-20050725.ebuild,v 1.4 2006/02/10 05:21:34 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/bcpp-20050725.ebuild,v 1.5 2007/03/05 03:19:10 genone Exp $
 
 DESCRIPTION="Indents C/C++ source code"
 HOMEPAGE="http://invisible-island.net/bcpp/"
@@ -23,10 +23,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Check the documentation for more information on how to"
-	einfo "Run bcpp.  Please note that in order to get help for"
-	einfo "bcpp, please run bcpp -h and not the command by itself."
-	einfo ""
-	einfo "Configuration files are at /etc/bcpp."
-	einfo "To use them, use the -c option followed by the filename."
+	elog "Check the documentation for more information on how to"
+	elog "Run bcpp.  Please note that in order to get help for"
+	elog "bcpp, please run bcpp -h and not the command by itself."
+	elog ""
+	elog "Configuration files are at /etc/bcpp."
+	elog "To use them, use the -c option followed by the filename."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4.ebuild,v 1.6 2005/12/28 14:27:21 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4.ebuild,v 1.7 2007/03/05 03:16:43 genone Exp $
 
 inherit eutils gnome2 multilib
 
@@ -58,11 +58,11 @@ pkg_postinst() {
 		dodoc ${S}/doc
 	fi
 
-	einfo
-	einfo "Some project templates may require additional development"
-	einfo "libraries to function correctly. It goes beyond the scope"
-	einfo "of this ebuild to provide them."
-	einfo
+	elog
+	elog "Some project templates may require additional development"
+	elog "libraries to function correctly. It goes beyond the scope"
+	elog "of this ebuild to provide them."
+	elog
 
 	ewarn "If code autocompletion is missing gtk+ and other pkg-config"
 	ewarn "managed package headers, resolve any errors produced by the"

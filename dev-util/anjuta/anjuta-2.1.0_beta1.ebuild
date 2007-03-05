@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.0_beta1.ebuild,v 1.3 2007/02/02 20:50:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.0_beta1.ebuild,v 1.4 2007/03/05 03:16:43 genone Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -97,8 +97,8 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	ebeep 1
-	einfo "Some project templates may require additional development"
-	einfo "libraries to function correctly. It goes beyond the scope"
-	einfo "of this ebuild to provide them."
+	elog "Some project templates may require additional development"
+	elog "libraries to function correctly. It goes beyond the scope"
+	elog "of this ebuild to provide them."
 	epause 5
 }

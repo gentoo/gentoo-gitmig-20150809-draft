@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.3_pre1.ebuild,v 1.1 2007/02/15 17:15:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.3_pre1.ebuild,v 1.2 2007/03/05 03:25:22 genone Exp $
 
 inherit eutils
 
@@ -34,10 +34,10 @@ pkg_setup() {
 		ewarn "then you should add ccache to your USE."
 	fi
 	echo
-	einfo "The template spec files are now installed by default.  You can find"
-	einfo "them under /usr/share/doc/${PF}/examples"
-	einfo "and they are considered to be the authorative source of information"
-	einfo "on catalyst."
+	elog "The template spec files are now installed by default.  You can find"
+	elog "them under /usr/share/doc/${PF}/examples"
+	elog "and they are considered to be the authorative source of information"
+	elog "on catalyst."
 }
 
 src_install() {
@@ -69,8 +69,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You can find more information about catalyst by checking out the"
-	einfo "catalyst project page at:"
-	einfo "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
+	elog "You can find more information about catalyst by checking out the"
+	elog "catalyst project page at:"
+	elog "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
 	echo
 }

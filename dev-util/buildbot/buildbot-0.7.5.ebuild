@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.2 2007/02/13 13:23:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.3 2007/03/05 03:20:30 genone Exp $
 
 inherit distutils eutils
 
@@ -68,13 +68,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo 'The "buildbot" user and the "buildmaster" and "buildslave" init'
-	einfo "scripts were added to support starting buildbot through gentoo's"
-	einfo "init system.  To use this set up your build master or build slave"
-	einfo "following the buildbot documentation, make sure the resulting"
-	einfo 'directories are owned by the "buildbot" user and point'
-	einfo "${ROOT}etc/conf.d/buildmaster or ${ROOT}etc/conf.d/buildslave"
-	einfo "at the right location.  The scripts can run as a different user"
-	einfo "if desired.  If you need to run more than one master or slave"
-	einfo "just copy the scripts."
+	elog 'The "buildbot" user and the "buildmaster" and "buildslave" init'
+	elog "scripts were added to support starting buildbot through gentoo's"
+	elog "init system.  To use this set up your build master or build slave"
+	elog "following the buildbot documentation, make sure the resulting"
+	elog 'directories are owned by the "buildbot" user and point'
+	elog "${ROOT}etc/conf.d/buildmaster or ${ROOT}etc/conf.d/buildslave"
+	elog "at the right location.  The scripts can run as a different user"
+	elog "if desired.  If you need to run more than one master or slave"
+	elog "just copy the scripts."
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.8 2007/01/04 14:52:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.9 2007/03/05 03:16:43 genone Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -66,11 +66,11 @@ pkg_postinst() {
 
 	gnome2_pkg_postinst
 
-	einfo
-	einfo "Some project templates may require additional development"
-	einfo "libraries to function correctly. It goes beyond the scope"
-	einfo "of this ebuild to provide them."
-	einfo
+	elog
+	elog "Some project templates may require additional development"
+	elog "libraries to function correctly. It goes beyond the scope"
+	elog "of this ebuild to provide them."
+	elog
 
 	ewarn "If code autocompletion is missing gtk+ and other pkg-config"
 	ewarn "managed package headers, resolve any errors produced by the"

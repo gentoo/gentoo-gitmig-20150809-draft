@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.13.ebuild,v 1.2 2007/01/18 15:56:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.13.ebuild,v 1.3 2007/03/05 03:22:00 genone Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -62,9 +62,9 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	bash-completion_pkg_postinst
 
-	einfo "If you just upgraded from a version of bzr older than 0.9"
-	einfo "you should rename your ~/.bazaar/branches.conf to locations.conf"
-	einfo "(see /usr/share/doc/${PF}/NEWS.gz)"
+	elog "If you just upgraded from a version of bzr older than 0.9"
+	elog "you should rename your ~/.bazaar/branches.conf to locations.conf"
+	elog "(see /usr/share/doc/${PF}/NEWS.gz)"
 }
 
 pkg_postrm() {

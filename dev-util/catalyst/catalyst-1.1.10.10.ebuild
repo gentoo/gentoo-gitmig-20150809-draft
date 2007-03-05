@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.5 2006/04/11 23:23:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.6 2007/03/05 03:25:22 genone Exp $
 
 inherit eutils
 
@@ -68,8 +68,8 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "You can find more information about catalyst by checking out the"
-	einfo "catalyst project page at:"
-	einfo "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
+	elog "You can find more information about catalyst by checking out the"
+	elog "catalyst project page at:"
+	elog "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
 	echo
 }
