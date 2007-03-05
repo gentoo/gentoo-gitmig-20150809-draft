@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/package.mask,v 1.5 2007/03/05 00:12:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/package.mask,v 1.6 2007/03/05 00:31:20 dcoutts Exp $
 
 # Christian Faulhammer <opfer@gentoo.org> (05 Dec 2006)
 # this version is badly broken on x86, see bug #153280
