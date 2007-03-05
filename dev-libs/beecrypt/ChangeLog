@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.54 2007/02/07 19:47:17 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.55 2007/03/05 21:47:38 sanchan Exp $
+
+  05 Mar 2007; Sandro Bonazzola <sanchan@gentoo.org> ChangeLog:
+  Removing myself from metadata.xml as I'm stepping back.
 
   07 Feb 2007; Sandro Bonazzola <sanchan@gentoo.org>
   beecrypt-4.1.2-r1.ebuild, beecrypt-4.1.2-r2.ebuild:
