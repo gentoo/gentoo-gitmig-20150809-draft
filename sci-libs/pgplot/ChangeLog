@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.5 2007/02/22 01:24:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.6 2007/03/05 18:58:23 bicatali Exp $
+
+*pgplot-5.2.2-r1 (05 Mar 2007)
+
+  05 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/pgplot-path.patch, metadata.xml, +pgplot-5.2.2-r1.ebuild:
+  General cleaning, added patches, a src_test, now does full 
+  installation, and a longdescrption in metadata.xml. Also tested on 
+  amd64.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
