@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/gwine-0.10.1.ebuild,v 1.4 2007/01/19 22:02:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/gwine-0.10.1.ebuild,v 1.5 2007/03/05 02:21:01 vapier Exp $
 
-inherit gnome2 perl-app
+inherit eutils gnome2 perl-app
 
 DESCRIPTION="Gnome application to manage your wine cellar"
 HOMEPAGE="http://home.gna.org/gwine/"
@@ -24,9 +24,8 @@ DEPEND=">=dev-lang/perl-5.8.0
 
 src_unpack() {
 	unpack ${A}
-	sed -i \
-		-e 's:gconftool:echo:' \
-		"${S}"/Makefile.PL || die
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-package.patch
 }
 
 pkg_postinst() {
