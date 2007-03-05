@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/stratagus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.14 2007/03/05 05:51:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.15 2007/03/05 07:00:51 mr_bones_ Exp $
+
+  05 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/flac-1.1.3.patch, +stratagus-2.1.ebuild:
+  resurrect 2.1 which is still in use
 
 *stratagus-2.2.3 (05 Mar 2007)
 
