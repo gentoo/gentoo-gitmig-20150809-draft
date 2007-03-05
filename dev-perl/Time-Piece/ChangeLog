@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-Piece
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/ChangeLog,v 1.19 2007/02/14 11:01:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/ChangeLog,v 1.20 2007/03/05 13:21:19 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Time-Piece-1.11.ebuild:
+  Stable on x86, bug #169152.
 
   14 Feb 2007; Markus Rothe <corsair@gentoo.org> Time-Piece-1.11.ebuild:
   Added ~ppc64
