@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.79 2007/02/12 19:44:53 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.80 2007/03/05 22:05:49 sanchan Exp $
+
+  05 Mar 2007; Sandro Bonazzola <sanchan@gentoo.org> ChangeLog:
+  Removing myself from metadata.xml as I'm stepping back.
 
 *rpm-4.4.7-r3 (12 Feb 2007)
 *rpm-4.4.6-r4 (12 Feb 2007)
