@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.2 2007/02/20 00:16:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.3 2007/03/05 10:39:09 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -109,6 +109,9 @@ src_unpack() {
 	cd "${S}"
 	# fix some paths and docs in f2py
 	epatch "${FILESDIR}"/${P}-f2py.patch
+
+	# fix cpuinfo for p4 (gentoo bug #169262/ numpy ticket #349)
+	epatch "${FILESDIR}"/${P}-cpuinfo.patch
 
 	# gentoo patch for ATLAS library names
 	sed -i \
