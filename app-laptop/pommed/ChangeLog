@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.1 2007/03/04 19:31:03 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.2 2007/03/05 22:28:31 cedk Exp $
+
+*pommed-1.2-r1 (05 Mar 2007)
+
+  05 Mar 2007; Cedric Krier <cedk@gentoo.org> +pommed-1.2-r1.ebuild:
+  Fix depencie to gtk+-2, add amd64,ppc
 
 *pommed-1.2 (04 Mar 2007)
 
