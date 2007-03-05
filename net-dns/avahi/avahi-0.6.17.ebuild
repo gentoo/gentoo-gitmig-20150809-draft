@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.17.ebuild,v 1.2 2007/02/05 20:06:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.17.ebuild,v 1.3 2007/03/05 21:06:10 swegener Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -46,7 +46,8 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	bookmarks? (
 		dev-python/twisted
 		dev-python/twisted-web
-	)"
+	)
+	kernel_linux? ( sys-libs/libcap )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	doc? (
