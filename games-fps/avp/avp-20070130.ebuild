@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130.ebuild,v 1.1 2007/01/30 22:41:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130.ebuild,v 1.2 2007/03/05 23:32:50 nyhm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="AvP"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="media-libs/openal
