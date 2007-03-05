@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.47 2007/03/02 19:32:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.48 2007/03/05 22:40:53 yoswink Exp $
+
+  05 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> libetpan-0.48.ebuild:
+  Stable on alpha wrt bug #163611
 
   02 Mar 2007; nixnut <nixnut@gentoo.org> libetpan-0.49.ebuild:
   Stable on ppc wrt bug 163611
