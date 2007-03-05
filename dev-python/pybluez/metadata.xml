@@ -3,6 +3,8 @@
 <pkgmetadata>
 <herd>python</herd>
 <longdescription>
-Parse RSS and Atom feeds in Python. 2000 unit tests. Open source.
+PyBluez is an effort to create Python wrappers around bluez to allow Python
+developers to use system bluetooth resources. It works on machines running the
+GNU/Linux operating system and the bluez bluetooth stack.
 </longdescription>
 </pkgmetadata>
