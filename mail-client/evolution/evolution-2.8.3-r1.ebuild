@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r1.ebuild,v 1.1 2007/02/26 17:56:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r1.ebuild,v 1.2 2007/03/05 23:48:38 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -165,6 +165,9 @@ src_unpack() {
 
 	# Fix settings OK button.  Bug #166740
 	epatch "${FILESDIR}"/${P}-missing-groupwise-feature.patch
+
+	# Fix linking against pilot-link wiht --as-needed; bug #154453
+	epatch "${FILESDIR}"/${PN}-2.8.2.1-pilot-link-as-needed.patch
 
 	# Add bogofilter junk plugin source
 	use bogofilter && epatch ${FILESDIR}/${PN}-2.8.2.1-bf-junk.patch.gz
