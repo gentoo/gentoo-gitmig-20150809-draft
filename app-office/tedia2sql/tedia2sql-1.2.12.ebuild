@@ -1,13 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/tedia2sql-1.2.8.ebuild,v 1.8 2006/02/11 21:25:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/tedia2sql-1.2.12.ebuild,v 1.1 2007/03/05 20:59:13 anant Exp $
 
 inherit eutils
 
-MY_PV=${PV//.}
 DESCRIPTION="Convert database ERD designed in Dia into SQL DDL scripts."
 HOMEPAGE="http://tedia2sql.tigris.org/"
-SRC_URI="http://tedia2sql.tigris.org/files/documents/282/2144/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://tedia2sql.tigris.org/files/documents/282/19423/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,14 +15,13 @@ IUSE="doc"
 
 DEPEND=">=dev-lang/perl-5.8
 	>=dev-perl/XML-DOM-1.43
-	>=virtual/perl-Digest-MD5-2.24"
+	>=virtual/perl-Digest-MD5-2.36"
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-gentoo.patch
 }
 
 src_install() {
