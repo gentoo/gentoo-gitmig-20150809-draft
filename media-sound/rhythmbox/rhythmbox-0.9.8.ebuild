@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.8.ebuild,v 1.3 2007/03/05 20:10:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.8.ebuild,v 1.4 2007/03/05 20:50:23 dang Exp $
 
 inherit gnome2 eutils
 
@@ -102,6 +102,8 @@ src_unpack() {
 	gnome2_src_unpack
 	# Fix parallel build; bug #169182
 	epatch "${FILESDIR}"/${P}-multijob-fix.patch
+	# Fix --as-needed build.  Bug #168427
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_compile() {
