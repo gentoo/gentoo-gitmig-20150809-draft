@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.5.0.ebuild,v 1.1 2007/01/13 14:00:08 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.5.0-r1.ebuild,v 1.1 2007/03/05 10:48:41 anant Exp $
 
 DESCRIPTION="C++ computer vision library with emphasize on customizable algorithms and data structures"
 HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P/-}"
 
-MY_DOCDIR="${MY_PREFIX}/share/doc/${PF}"
+MY_DOCDIR="usr/share/doc/${PF}"
 
 src_compile() {
 	./configure \
