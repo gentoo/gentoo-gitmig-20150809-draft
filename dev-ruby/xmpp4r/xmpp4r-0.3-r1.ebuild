@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/xmpp4r-0.3-r1.ebuild,v 1.1 2007/02/17 10:31:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/xmpp4r-0.3-r1.ebuild,v 1.2 2007/03/05 04:38:13 tgall Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby gems
@@ -11,7 +11,7 @@ SRC_URI="http://download.gna.org/xmpp4r/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~ppc64"
 IUSE="examples"
 
 DEPEND=">=dev-lang/ruby-1.8"
