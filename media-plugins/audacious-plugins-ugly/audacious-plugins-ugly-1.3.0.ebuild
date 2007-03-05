@@ -1,24 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins-ugly/audacious-plugins-ugly-1.2.0.ebuild,v 1.2 2007/02/02 02:59:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins-ugly/audacious-plugins-ugly-1.3.0.ebuild,v 1.1 2007/03/05 17:11:15 chainsaw Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Plugins that are not portable code, or depend on unstable libraries."
 HOMEPAGE="http://audacious-media-player.org/"
-SRC_URI="http://audacious-media-player.org/release/${P}.tgz"
+SRC_URI="http://static.audacious-media-player.org/release/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="libnotify mplayer nls"
+IUSE="cube iris libnotify mplayer nls"
 
-RDEPEND="dev-libs/libxml2
-	>=media-sound/audacious-1.2.1
+RDEPEND="!<media-plugins/audacious-plugins-1.3.0
+	dev-libs/libxml2
+	>=media-sound/audacious-1.3.0-r1
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	media-libs/taglib
-	libnotify? ( x11-libs/libnotify )
+	iris? ( >=x11-libs/libXxf86vm-1.0.0 )
+	libnotify? ( >=x11-libs/libnotify-0.4.2 )
 	mplayer? ( media-video/mplayer )"
 
 DEPEND="${RDEPEND}
@@ -32,9 +34,10 @@ src_compile() {
 	is-flag "-O*" || append-flags -O
 
 	econf \
-		--enable-sap \
 		$(use_enable libnotify notify) \
 		$(use_enable mplayer) \
+		$(use_enable cube) \
+		$(use_enable iris) \
 		|| die
 
 	emake || die "make failed"
