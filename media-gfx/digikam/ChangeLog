@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.79 2007/03/03 18:24:01 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.80 2007/03/05 17:31:03 deathwing00 Exp $
+
+  05 Mar 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +digikam-0.7.4-r1.ebuild:
+  Restored obsolete version in order to prevent ia64 and alpha tree break.
 
   03 Mar 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
   -digikam-0.9.0_rc1.ebuild, -digikam-0.9.0_rc2.ebuild:
