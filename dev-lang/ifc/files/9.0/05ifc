@@ -1,6 +1,0 @@
-IA32ROOT=/opt/intel/fortran90
-INTEL_FLEXLM_LICENSE=/opt/intel/fortran90/licenses
-LDPATH=/opt/intel/fortran90/lib
-MANPATH=/opt/intel/fortran90/man
-PATH=/opt/intel/fortran90/bin
-ROOTPATH=/opt/intel/fortran90/bin
