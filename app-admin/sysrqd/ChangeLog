@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/sysrqd
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/ChangeLog,v 1.1 2007/03/05 22:40:06 wschlich Exp $
+
+*sysrqd-9 (05 Mar 2007)
+
+  05 Mar 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +files/sysrqd-9-config.patch, +files/sysrqd.init, +metadata.xml,
+  +sysrqd-9.ebuild:
+  Initial import wrt bug #169104
+
