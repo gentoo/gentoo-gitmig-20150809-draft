@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.6 2007/02/20 14:01:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.7 2007/03/05 07:19:03 mr_bones_ Exp $
+
+*wargus-2.2.3 (05 Mar 2007)
+
+  05 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> +wargus-2.2.3.ebuild:
+  version bump
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org> wargus-2.1-r1.ebuild:
   keyword ~amd64; bug 164914
