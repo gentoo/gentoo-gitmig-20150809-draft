@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Default
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.37 2007/01/19 21:49:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.38 2007/03/05 11:24:30 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Class-Default-1.50.ebuild:
+  Stable on x86, bug #169152.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Class-Default-1.3.ebuild, Class-Default-1.50.ebuild:

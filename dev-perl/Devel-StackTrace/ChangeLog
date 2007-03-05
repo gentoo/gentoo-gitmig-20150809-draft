@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.35 2007/01/19 21:56:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.36 2007/03/05 11:40:25 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  Devel-StackTrace-1.13.ebuild:
+  Stable on x86, bug #169152.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Devel-StackTrace-1.12.ebuild, Devel-StackTrace-1.13.ebuild:

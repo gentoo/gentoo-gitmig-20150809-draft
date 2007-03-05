@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-ssh-perl
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.21 2006/10/20 17:51:18 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.22 2007/03/05 12:54:10 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> net-ssh-perl-1.30.ebuild:
+  Stable on x86, bug #169152.
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -net-ssh-perl-1.25.ebuild, -net-ssh-perl-1.27.ebuild,

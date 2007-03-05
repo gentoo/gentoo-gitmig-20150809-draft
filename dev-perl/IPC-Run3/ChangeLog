@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.17 2007/01/22 13:36:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.18 2007/03/05 12:07:34 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> IPC-Run3-0.036.ebuild:
+  Stable on x86, bug #169152.
 
   22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> IPC-Run3-0.036.ebuild:
   Stable on IA64.

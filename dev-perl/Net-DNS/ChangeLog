@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.102 2007/02/26 16:08:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.103 2007/03/05 12:15:33 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Net-DNS-0.59.ebuild:
+  Stable on x86, bug #169152.
 
   26 Feb 2007; Michael Cummings <mcummings@gentoo.org> Net-DNS-0.59.ebuild:
   Keywording ~mips, tested on swarm

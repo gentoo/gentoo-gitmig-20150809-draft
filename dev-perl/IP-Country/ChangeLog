@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IP-Country
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.25 2007/02/05 02:24:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.26 2007/03/05 12:06:44 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> IP-Country-2.21.ebuild:
+  Stable on x86, bug #169152.
 
 *IP-Country-2.23 (05 Feb 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.81 2007/02/26 14:58:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.82 2007/03/05 11:37:44 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> DBI-1.53.ebuild:
+  Stable on x86, bug #169152.
 
 *DBI-1.54 (26 Feb 2007)
 

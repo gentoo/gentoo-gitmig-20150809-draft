@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/MP3-Tag-0.9708.ebuild,v 1.6 2006/12/28 18:14:34 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/MP3-Tag-0.9708.ebuild,v 1.7 2007/03/05 12:11:41 ticho Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/modules/by-authors/id/I/IL/ILYAZ/modules/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="amd64 ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 SRC_TEST="do"
 
 src_unpack() {

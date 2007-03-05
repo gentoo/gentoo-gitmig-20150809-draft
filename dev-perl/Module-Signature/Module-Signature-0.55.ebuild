@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.55.ebuild,v 1.3 2007/03/04 14:45:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.55.ebuild,v 1.4 2007/03/05 12:14:28 ticho Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AU/AUDREYT/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 SRC_TEST="do"

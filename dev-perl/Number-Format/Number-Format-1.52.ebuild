@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/Number-Format-1.52.ebuild,v 1.4 2007/01/22 14:06:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/Number-Format-1.52.ebuild,v 1.5 2007/03/05 12:19:38 ticho Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/W/WR/WRW/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="amd64 ia64 ppc ~x86"
+KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 
 SRC_TEST="do"

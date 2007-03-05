@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Tail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/ChangeLog,v 1.34 2007/01/15 19:43:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/ChangeLog,v 1.35 2007/03/05 11:52:33 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> File-Tail-0.99.3.ebuild:
+  Stable on x86, bug #169152.
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -File-Tail-0.98-r3.ebuild, File-Tail-0.99.1.ebuild,

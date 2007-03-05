@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/File-DirWalk-0.3.ebuild,v 1.4 2006/10/21 14:08:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/File-DirWalk-0.3.ebuild,v 1.5 2007/03/05 11:47:01 ticho Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_TEST="do"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc sparc ~x86"
+KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE=""
 
 

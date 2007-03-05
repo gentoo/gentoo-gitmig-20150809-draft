@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.51 2007/02/17 15:13:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.52 2007/03/05 12:54:25 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> perl-ldap-0.33-r1.ebuild:
+  Stable on x86, bug #169152.
 
 *perl-ldap-0.34 (17 Feb 2007)
 

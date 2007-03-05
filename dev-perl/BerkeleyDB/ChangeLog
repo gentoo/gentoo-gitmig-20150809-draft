@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.44 2007/01/22 02:57:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.45 2007/03/05 11:17:00 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> BerkeleyDB-0.31.ebuild:
+  Stable on x86, bug #169152.
 
   22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> BerkeleyDB-0.31.ebuild:
   Stable on Alpha + IA64.

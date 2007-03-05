@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.25 2007/01/19 15:48:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.26 2007/03/05 12:26:00 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Socket6-0.19.ebuild:
+  Stable on x86, bug #169152.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org> -Socket6-0.11.ebuild,
   Socket6-0.17.ebuild, -Socket6-0.18.ebuild, Socket6-0.19.ebuild:

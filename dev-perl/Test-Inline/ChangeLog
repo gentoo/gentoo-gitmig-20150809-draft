@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inline
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.46 2007/01/23 13:54:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.47 2007/03/05 12:30:24 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Test-Inline-2.105.ebuild:
+  Stable on x86, bug #169152.
 
   23 Jan 2007; Jeroen Roovers <jer@gentoo.org> Test-Inline-2.201.ebuild:
   Marked ~hppa (bug #163014).

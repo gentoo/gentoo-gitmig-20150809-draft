@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.141.ebuild,v 1.4 2007/01/22 15:50:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.141.ebuild,v 1.5 2007/03/05 12:45:36 ticho Exp $
 
 inherit perl-module eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE="xml"
 SRC_TEST="do"
 

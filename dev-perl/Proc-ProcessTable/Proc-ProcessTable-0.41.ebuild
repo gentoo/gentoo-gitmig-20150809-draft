@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.41.ebuild,v 1.8 2007/01/22 14:15:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.41.ebuild,v 1.9 2007/03/05 12:22:23 ticho Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/D/DU/DURIST/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"

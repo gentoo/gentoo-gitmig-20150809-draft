@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/Devel-Size-Report-0.11.ebuild,v 1.5 2007/01/15 17:26:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/Devel-Size-Report-0.11.ebuild,v 1.6 2007/03/05 11:40:15 ticho Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/T/TE/TELS/devel/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ia64 sparc ~x86"
+KEYWORDS="amd64 ia64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"

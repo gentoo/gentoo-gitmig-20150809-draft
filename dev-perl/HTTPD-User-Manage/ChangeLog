@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTPD-User-Manage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTPD-User-Manage/ChangeLog,v 1.11 2007/02/06 15:05:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTPD-User-Manage/ChangeLog,v 1.12 2007/03/05 12:04:50 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  HTTPD-User-Manage-1.63.ebuild:
+  Stable on x86, bug #169152.
 
 *HTTPD-User-Manage-1.66 (06 Feb 2007)
 

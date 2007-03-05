@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.26 2007/01/14 22:30:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.27 2007/03/05 11:13:23 ticho Exp $
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> BSD-Resource-1.28.ebuild:
+  Stable on x86, bug #169152.
 
   14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   BSD-Resource-1.24.ebuild, -BSD-Resource-1.25.ebuild,
