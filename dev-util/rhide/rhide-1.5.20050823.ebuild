@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.4 2006/09/22 13:10:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.5 2007/03/05 04:15:02 genone Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -275,10 +275,10 @@ src_install() {
 pkg_postinst() {
 	if [[ -x "${ROOT}/usr/bin/rhidex" && ${ETERM_HACK} == "yes" ]] ; then
 		echo
-		einfo "You might consider installing Eterm to be able to use the rhidex"
-		einfo "version of RHIDE that have better keyboard support under X:"
-		echo
-		einfo "  # emerge eterm"
+		elog "You might consider installing Eterm to be able to use the rhidex"
+		elog "version of RHIDE that have better keyboard support under X:"
+		elog
+		elog "  # emerge eterm"
 		echo
 	fi
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.4.1.ebuild,v 1.1 2006/12/17 08:39:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.4.1.ebuild,v 1.2 2007/03/05 04:05:57 genone Exp $
 
 inherit distutils
 
@@ -28,8 +28,8 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	einfo "Optional packages pida integrates with:"
-	einfo "app-misc/mc  (Midnight Commander)"
-	einfo "dev-util/gazpacho (Glade-like interface designer)"
-	einfo "Revision control: cvs, svn, darcs and many others"
+	elog "Optional packages pida integrates with:"
+	elog "app-misc/mc  (Midnight Commander)"
+	elog "dev-util/gazpacho (Glade-like interface designer)"
+	elog "Revision control: cvs, svn, darcs and many others"
 }

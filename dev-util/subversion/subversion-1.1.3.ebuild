@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.23 2006/06/24 15:35:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.24 2007/03/05 04:20:11 genone Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -57,16 +57,16 @@ pkg_setup() {
 
 	if use apache2; then
 		echo
-		einfo "The apache2 subversion module will be built, and libapr from the"
-		einfo "apache package will be used instead of the included."
+		elog "The apache2 subversion module will be built, and libapr from the"
+		elog "apache package will be used instead of the included."
 		echo
 	else
 		echo
-		einfo "Please note that subversion and apache2 cannot be installed"
-		einfo "simultaneously without specifying the apache2 use flag. This is"
-		einfo "because subversion installs its own libapr and libapr-util in that"
-		einfo "case. Specifying the apache2 useflag will also enable the building of"
-		einfo "the apache2 module."
+		elog "Please note that subversion and apache2 cannot be installed"
+		elog "simultaneously without specifying the apache2 use flag. This is"
+		elog "because subversion installs its own libapr and libapr-util in that"
+		elog "case. Specifying the apache2 useflag will also enable the building of"
+		elog "the apache2 module."
 		echo
 	fi
 }
@@ -145,7 +145,7 @@ src_compile() {
 	fi
 
 	if use emacs; then
-		einfo "compiling emacs support"
+		elog "compiling emacs support"
 		elisp-compile ${S}/contrib/client-side/psvn/psvn.el || die "emacs modules failed"
 		elisp-compile ${S}/contrib/client-side/vc-svn.el || die "emacs modules failed"
 	fi
@@ -276,52 +276,52 @@ src_test() {
 pkg_postinst() {
 	use emacs >/dev/null && elisp-site-regen
 
-	einfo "Subversion Server Notes"
-	einfo "-----------------------"
-	einfo
+	elog "Subversion Server Notes"
+	elog "-----------------------"
+	elog
 
-	einfo "If you intend to run a server, a repository needs to be created using"
-	einfo "svnadmin (see man svnadmin) or the following command to create it in"
-	einfo "/var/svn:"
-	einfo
-	einfo "    emerge --config =${CATEGORY}/${PF}"
-	einfo
-	einfo "If you upgraded from an older version of berkely db and experience"
-	einfo "problems with your repository then run the following commands as root:"
-	einfo "    db4_recover -h ${SVN_REPOS_LOC}/repos"
-	einfo "    chown -Rf apache:apache ${SVN_REPOS_LOC}/repos"
-	einfo
-	einfo "Subversion has multiple server types, take your pick:"
-	einfo
-	einfo " - svnserve daemon: "
-	einfo "   1. edit /etc/conf.d/svnserve"
-	einfo "   2. start daemon: /etc/init.d/svnserve start"
-	einfo "   3. make persistent: rc-update add svnserve default"
-	einfo
-	einfo " - svnserve via xinetd:"
-	einfo "   1. edit /etc/xinetd.d/svnserve (remove disable line)"
-	einfo "   2. restart xinetd.d: /etc/init.d/xinetd restart"
-	einfo
-	einfo " - svn over ssh:"
-	einfo "   1. Fix the repository permissions:"
-	einfo "        groupadd svnusers"
-	einfo "        chown -R root:svnusers /var/svn/repos/"
-	einfo "        chmod -R g-w /var/svn/repos"
-	einfo "        chmod -R g+rw /var/svn/repos/db"
-	einfo "        chmod -R g+rw /var/svn/repos/locks"
-	einfo "   2. create an svnserve wrapper in /usr/local/bin to set the umask you"
-	einfo "      want, for example:"
-	einfo "         #!/bin/bash"
-	einfo "         umask 002"
-	einfo "         exec /usr/bin/svnserve \"\$@\""
-	einfo
+	elog "If you intend to run a server, a repository needs to be created using"
+	elog "svnadmin (see man svnadmin) or the following command to create it in"
+	elog "/var/svn:"
+	elog
+	elog "    emerge --config =${CATEGORY}/${PF}"
+	elog
+	elog "If you upgraded from an older version of berkely db and experience"
+	elog "problems with your repository then run the following commands as root:"
+	elog "    db4_recover -h ${SVN_REPOS_LOC}/repos"
+	elog "    chown -Rf apache:apache ${SVN_REPOS_LOC}/repos"
+	elog
+	elog "Subversion has multiple server types, take your pick:"
+	elog
+	elog " - svnserve daemon: "
+	elog "   1. edit /etc/conf.d/svnserve"
+	elog "   2. start daemon: /etc/init.d/svnserve start"
+	elog "   3. make persistent: rc-update add svnserve default"
+	elog
+	elog " - svnserve via xinetd:"
+	elog "   1. edit /etc/xinetd.d/svnserve (remove disable line)"
+	elog "   2. restart xinetd.d: /etc/init.d/xinetd restart"
+	elog
+	elog " - svn over ssh:"
+	elog "   1. Fix the repository permissions:"
+	elog "        groupadd svnusers"
+	elog "        chown -R root:svnusers /var/svn/repos/"
+	elog "        chmod -R g-w /var/svn/repos"
+	elog "        chmod -R g+rw /var/svn/repos/db"
+	elog "        chmod -R g+rw /var/svn/repos/locks"
+	elog "   2. create an svnserve wrapper in /usr/local/bin to set the umask you"
+	elog "      want, for example:"
+	elog "         #!/bin/bash"
+	elog "         umask 002"
+	elog "         exec /usr/bin/svnserve \"\$@\""
+	elog
 
 	if use apache2 >/dev/null; then
-		einfo " - http-based server:"
-		einfo "   1. edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
-		einfo "   2. create an htpasswd file:"
-		einfo "      htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
-		einfo
+		elog " - http-based server:"
+		elog "   1. edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
+		elog "   2. create an htpasswd file:"
+		elog "      htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
+		elog
 	fi
 }
 

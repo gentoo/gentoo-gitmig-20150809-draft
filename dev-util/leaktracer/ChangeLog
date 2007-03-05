@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/leaktracer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.9 2007/02/09 03:14:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.10 2007/03/05 03:52:55 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> leaktracer-2.4.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

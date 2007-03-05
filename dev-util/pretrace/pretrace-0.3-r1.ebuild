@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.3-r1.ebuild,v 1.4 2006/05/16 19:31:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.3-r1.ebuild,v 1.5 2007/03/05 04:09:11 genone Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -25,6 +25,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "See the documentation for instructions, configuration format and"
-	einfo "further indormation."
+	elog "See the documentation for instructions, configuration format and"
+	elog "further indormation."
 }

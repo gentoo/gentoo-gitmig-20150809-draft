@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.1.13.ebuild,v 1.6 2006/12/19 20:15:57 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.1.13.ebuild,v 1.7 2007/03/05 03:57:56 genone Exp $
 
 inherit mono multilib
 
@@ -44,8 +44,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "monodoc's GUI documentation browser has been seperated out into a"
-	einfo "seperate package. If you want the browser, please emerge mono-tools."
-	einfo
+	elog
+	elog "monodoc's GUI documentation browser has been seperated out into a"
+	elog "seperate package. If you want the browser, please emerge mono-tools."
+	elog
 }

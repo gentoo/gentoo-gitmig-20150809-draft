@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fenris
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.14 2007/02/09 03:11:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.15 2007/03/05 03:46:03 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> fenris-0.07m-r2.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

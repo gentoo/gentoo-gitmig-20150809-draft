@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.10 2006/10/14 17:21:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.11 2007/03/05 04:04:53 genone Exp $
 
 inherit eutils qt3 linux-info
 
@@ -72,9 +72,9 @@ pkg_postinst() {
 	[[ ${ROOT} == / ]] && /sbin/modules-update
 
 	echo
-	einfo "Now load the oprofile module by running:"
-	einfo "  # opcontrol --init"
-	einfo "Then read manpages and this html doc:"
-	einfo "  /usr/share/doc/oprofile/oprofile.html"
+	elog "Now load the oprofile module by running:"
+	elog "  # opcontrol --init"
+	elog "Then read manpages and this html doc:"
+	elog "  /usr/share/doc/oprofile/oprofile.html"
 	echo
 }

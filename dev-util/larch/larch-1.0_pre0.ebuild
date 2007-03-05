@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.6 2004/07/14 23:51:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.7 2007/03/05 03:51:59 genone Exp $
 
 MY_P="${P//_/}"
 DESCRIPTION="revision control system ideal for widely distributed development (see \"tla\" also)"
@@ -82,5 +82,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "also have a look at the C-implementation of larch: \"tla\"."
+	elog "also have a look at the C-implementation of larch: \"tla\"."
 }

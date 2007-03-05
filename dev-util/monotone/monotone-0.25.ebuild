@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.25.ebuild,v 1.2 2006/01/16 03:15:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.25.ebuild,v 1.3 2007/03/05 04:00:00 genone Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -68,20 +68,20 @@ src_install() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 
-	einfo
-	einfo "If you are upgrading from:"
-	einfo "  - 0.23 or earlier: keys are now stored in ~/.monotone/keys. You"
-	einfo "    must run 'db migrate' against each of your databases; this "
-	einfo "    will automatically migrate the keys. Command line syntax for"
-	einfo "    'serve' has changed; please adjust startup scripts accordingly."
-	einfo "  - 0.21 or earlier: hooks governing netsync read permission have"
-	einfo "    changed again; see /usr/share/doc/${PF}/NEWS.gz"
-	einfo "  - 0.20 or earlier: you need to run 'db migrate' against each of"
-	einfo "    your databases."
-	einfo
-	einfo "For more details and instructions to upgrade from previous versions,"
-	einfo "please read /usr/share/doc/${PF}/UPGRADE.gz"
-	einfo
+	elog
+	elog "If you are upgrading from:"
+	elog "  - 0.23 or earlier: keys are now stored in ~/.monotone/keys. You"
+	elog "    must run 'db migrate' against each of your databases; this "
+	elog "    will automatically migrate the keys. Command line syntax for"
+	elog "    'serve' has changed; please adjust startup scripts accordingly."
+	elog "  - 0.21 or earlier: hooks governing netsync read permission have"
+	elog "    changed again; see /usr/share/doc/${PF}/NEWS.gz"
+	elog "  - 0.20 or earlier: you need to run 'db migrate' against each of"
+	elog "    your databases."
+	elog
+	elog "For more details and instructions to upgrade from previous versions,"
+	elog "please read /usr/share/doc/${PF}/UPGRADE.gz"
+	elog
 }
 
 pkg_postrm() {

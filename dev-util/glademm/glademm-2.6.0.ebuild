@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.6.0.ebuild,v 1.4 2007/02/05 17:48:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.6.0.ebuild,v 1.5 2007/03/05 03:47:05 genone Exp $
 
 inherit eutils gnome2
 
@@ -27,6 +27,6 @@ src_unpack() {
 
 pkg_postinst() {
 
-	einfo "glademm generated sources have dependencies on packages not required by this ebuild."
+	elog "glademm generated sources have dependencies on packages not required by this ebuild."
 
 }

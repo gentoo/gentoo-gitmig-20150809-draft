@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.32.ebuild,v 1.3 2007/01/20 06:27:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.32.ebuild,v 1.4 2007/03/05 04:00:00 genone Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -91,21 +91,21 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	bash-completion_pkg_postinst
 
-	einfo
-	einfo "For details and instructions to upgrade from previous versions,"
-	einfo "please read /usr/share/doc/${PF}/UPGRADE.gz"
-	einfo
-	einfo "  1. edit /etc/conf.d/monotone"
-	einfo "  2. import the first keys to enable access with"
-	einfo "     env HOME=${homedir} mtn pubkey me@example.net | /etc/init.d/monotone import"
-	einfo "     Thereafter, those with write permission can add other keys via"
-	einfo "     netsync with 'monotone push --key-to-push=IDENT' and then IDENT"
-	einfo "     can be used in the read-permission and write-permission files."
-	einfo "  3. adjust permisions in /etc/monotone/read-permissions"
-	einfo "                      and /etc/monotone/write-permissions"
-	einfo "  4. start the daemon: /etc/init.d/monotone start"
-	einfo "  5. make persistent: rc-update add monotone default"
-	einfo
+	elog
+	elog "For details and instructions to upgrade from previous versions,"
+	elog "please read /usr/share/doc/${PF}/UPGRADE.gz"
+	elog
+	elog "  1. edit /etc/conf.d/monotone"
+	elog "  2. import the first keys to enable access with"
+	elog "     env HOME=${homedir} mtn pubkey me@example.net | /etc/init.d/monotone import"
+	elog "     Thereafter, those with write permission can add other keys via"
+	elog "     netsync with 'monotone push --key-to-push=IDENT' and then IDENT"
+	elog "     can be used in the read-permission and write-permission files."
+	elog "  3. adjust permisions in /etc/monotone/read-permissions"
+	elog "                      and /etc/monotone/write-permissions"
+	elog "  4. start the daemon: /etc/init.d/monotone start"
+	elog "  5. make persistent: rc-update add monotone default"
+	elog
 }
 
 pkg_postrm() {

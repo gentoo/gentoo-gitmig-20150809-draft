@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.59 2007/02/20 17:57:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.60 2007/03/05 03:57:56 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> monodoc-1.1.13.ebuild:
+  Replacing einfo with elog
 
   20 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> monodoc-1.2.1.ebuild:
   Marked stable on amd64 for bug #166463

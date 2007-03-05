@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.25 2007/02/22 21:53:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.26 2007/03/05 03:56:52 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> mono-tools-1.1.17.ebuild,
+  mono-tools-1.1.17-r1.ebuild, mono-tools-1.2.1.ebuild,
+  mono-tools-1.2.3.ebuild:
+  Replacing einfo with elog
 
   22 Feb 2007; Raúl Porcel <armin76@gentoo.org> -mono-tools-1.1.11.ebuild:
   Drop old version depending in mozilla

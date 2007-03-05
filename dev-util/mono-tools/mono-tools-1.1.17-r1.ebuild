@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.1.17-r1.ebuild,v 1.4 2007/02/11 04:21:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.1.17-r1.ebuild,v 1.5 2007/03/05 03:56:52 genone Exp $
 
 inherit eutils mono multilib autotools
 
@@ -29,7 +29,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	if ! use gtkhtml && ! use seamonkey ; then
-		einfo "No browser selected, defaulting to gtkhtml"
+		elog "No browser selected, defaulting to gtkhtml"
 	fi
 }
 

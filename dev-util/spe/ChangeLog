@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/spe
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.29 2006/11/27 23:06:13 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.30 2007/03/05 04:16:20 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> spe-0.8.2.ebuild,
+  spe-0.8.3c.ebuild:
+  Replacing einfo with elog
 
   27 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> spe-0.8.3c.ebuild:
   Add gnome desktop entry, bug 154233. Thanks to CDigger <diggerster@gmail.com>.

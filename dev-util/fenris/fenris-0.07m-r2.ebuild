@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.7 2004/07/24 17:35:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.8 2007/03/05 03:46:03 genone Exp $
 
 inherit eutils
 
@@ -77,8 +77,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "These new tools are installed in /usr/bin:"
-	einfo "fenris fprints getfprints ragnarok fenris-bug ragsplit "
-	einfo "dress aegir nc-aegir spliter.pl"
-	einfo "Please refer to the manpage for fenris for further information"
+	elog "These new tools are installed in /usr/bin:"
+	elog "fenris fprints getfprints ragnarok fenris-bug ragsplit "
+	elog "dress aegir nc-aegir spliter.pl"
+	elog "Please refer to the manpage for fenris for further information"
 }

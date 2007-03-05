@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.13 2007/01/12 17:35:57 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.14 2007/03/05 03:39:46 genone Exp $
 
 IUSE=""
 
@@ -46,18 +46,18 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "If you have existing \$HOME/.colorgccrc files that set the location"
-	einfo "of the compilers, you should remove those lines for maximum"
-	einfo "flexibility.  The colorgcc script now knows how to pass the command"
-	einfo "on to the next step in the PATH without manual tweaking, making it"
-	einfo "easier to use with things like ccache and distcc on a conditional"
-	einfo "basis.  You can tweak the /etc/colorgcc/colorgccrc file to change"
-	einfo "the default settings for everyone (or copy this file as a basis for"
-	einfo "a custom \$HOME/.colorgccrc file)."
-	einfo
-	einfo "NOTE: the symlinks for colorgcc are now located in"
-	einfo "/usr/lib/colorgcc/bin *NOT* /usr/bin/wrappers.  You'll need to"
-	einfo "change any PATH settings that referred to the old location."
+	elog "If you have existing \$HOME/.colorgccrc files that set the location"
+	elog "of the compilers, you should remove those lines for maximum"
+	elog "flexibility.  The colorgcc script now knows how to pass the command"
+	elog "on to the next step in the PATH without manual tweaking, making it"
+	elog "easier to use with things like ccache and distcc on a conditional"
+	elog "basis.  You can tweak the /etc/colorgcc/colorgccrc file to change"
+	elog "the default settings for everyone (or copy this file as a basis for"
+	elog "a custom \$HOME/.colorgccrc file)."
+	elog
+	elog "NOTE: the symlinks for colorgcc are now located in"
+	elog "/usr/lib/colorgcc/bin *NOT* /usr/bin/wrappers.  You'll need to"
+	elog "change any PATH settings that referred to the old location."
 	echo
 	# portage won't delete the old symlinks for users that are upgrading
 	# because the old symlinks still point to /usr/bin/colorgcc which exists...
