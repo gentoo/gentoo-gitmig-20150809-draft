@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.12.1.ebuild,v 1.2 2006/10/13 15:01:21 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.12.1.ebuild,v 1.3 2007/03/05 02:59:11 genone Exp $
 
 inherit distutils eutils
 
@@ -55,7 +55,7 @@ src_test() {
 
 pkg_postinst() {
 	distutils_pkg_postinst
-	einfo 'A couple of important configuration settings (like "disable-msg")'
-	einfo 'moved from the "MASTER" to "MESSAGES CONTROL" section.'
-	einfo 'See "pylint --help".'
+	elog 'A couple of important configuration settings (like "disable-msg")'
+	elog 'moved from the "MASTER" to "MESSAGES CONTROL" section.'
+	elog 'See "pylint --help".'
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-4_beta0.ebuild,v 1.2 2006/07/20 16:35:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-4_beta0.ebuild,v 1.3 2007/03/05 03:10:14 genone Exp $
 
 inherit distutils versionator multilib
 
@@ -33,16 +33,16 @@ src_compile() {
 
 	echo
 	if useq numeric; then
-		einfo "Building with Numeric support"
+		elog "Building with Numeric support"
 		myconf=${myconf/--without-numeric}
 	fi
 	if useq numarray; then
-		einfo "Building with Numarray support"
+		elog "Building with Numarray support"
 		myconf=${myconf/--without-numarray}
 	fi
 	if ! useq numeric && ! useq numarray; then
-		einfo "Support for Numeric or Numarray was not specified."
-		einfo "Building with Numeric support"
+		elog "Support for Numeric or Numarray was not specified."
+		elog "Building with Numeric support"
 		myconf=${myconf/--without-numeric}
 	fi
 	echo

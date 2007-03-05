@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1-r1.ebuild,v 1.1 2006/10/22 15:10:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1-r1.ebuild,v 1.2 2007/03/05 03:08:01 genone Exp $
 
 inherit distutils
 
@@ -47,6 +47,6 @@ src_install() {
 
 pkg_postinst() {
 	echo ""
-	einfo "Please note, that you have to emerge PyQt again, when upgrading from sip-3.x."
+	elog "Please note, that you have to emerge PyQt again, when upgrading from sip-3.x."
 	echo ""
 }

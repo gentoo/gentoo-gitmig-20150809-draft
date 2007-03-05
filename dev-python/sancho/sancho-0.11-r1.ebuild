@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11-r1.ebuild,v 1.17 2006/09/08 21:26:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11-r1.ebuild,v 1.18 2007/03/05 03:06:11 genone Exp $
 
 inherit distutils eutils
 
@@ -46,8 +46,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This version of sancho is modified to allow parallel installation"
-	einfo "with sancho-2.x. \"import sancho0\" will always give you this"
-	einfo "version. \"import sancho\" will give you sancho 2.x if that is"
-	einfo "installed, this version otherwise."
+	elog "This version of sancho is modified to allow parallel installation"
+	elog "with sancho-2.x. \"import sancho0\" will always give you this"
+	elog "version. \"import sancho\" will give you sancho 2.x if that is"
+	elog "installed, this version otherwise."
 }

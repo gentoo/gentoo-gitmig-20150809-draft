@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.7a.ebuild,v 1.1 2007/02/24 21:04:42 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.7a.ebuild,v 1.2 2007/03/05 03:04:35 genone Exp $
 
 inherit distutils
 
@@ -29,8 +29,8 @@ src_install(){
 pkg_postinst() {
 	distutils_pkg_postinst
 
-	einfo "You may also be interested in the following packages: "
-	einfo "dev-python/pysnmp-apps - example programs using pysnmp"
-	einfo "dev-python/pysnmp-mibs - IETF and other mibs"
-	einfo "net-libs/libsmi - to dump MIBs in python format"
+	elog "You may also be interested in the following packages: "
+	elog "dev-python/pysnmp-apps - example programs using pysnmp"
+	elog "dev-python/pysnmp-mibs - IETF and other mibs"
+	elog "net-libs/libsmi - to dump MIBs in python format"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.5.1.ebuild,v 1.2 2005/01/18 18:53:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.5.1.ebuild,v 1.3 2007/03/05 03:02:54 genone Exp $
 
 inherit distutils
 
@@ -47,6 +47,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "For docs in html you need to have tetex in your USE var"
+	elog "For docs in html you need to have tetex in your USE var"
 	echo
 }

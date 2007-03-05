@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/visual
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.15 2006/09/24 10:12:27 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.16 2007/03/05 03:10:14 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> visual-3.2.9.ebuild,
+  visual-4_beta0.ebuild:
+  Replacing einfo with elog
 
   24 Sep 2006; <blubb@gentoo.org> visual-3.2.9.ebuild:
   marked ~amd64
