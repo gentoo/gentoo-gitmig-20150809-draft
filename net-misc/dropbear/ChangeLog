@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.49 2007/03/04 21:50:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.50 2007/03/05 23:22:10 yoswink Exp $
+
+  05 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> dropbear-0.49.ebuild:
+  Stable on alpha wrt security bug #168847
 
   04 Mar 2007; Jason Wever <weeve@gentoo.org> dropbear-0.49.ebuild:
   Stable on SPARC wrt security bug #168847.
