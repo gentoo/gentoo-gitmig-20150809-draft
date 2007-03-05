@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.13 2007/03/05 14:56:41 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.14 2007/03/05 16:14:11 armin76 Exp $
+
+  05 Mar 2007; Raúl Porcel <armin76@gentoo.org> sslwrap-2.0.6-r1.ebuild:
+  x86 stable wrt bug 169464
 
 *sslwrap-2.0.6-r1 (05 Mar 2007)
 
