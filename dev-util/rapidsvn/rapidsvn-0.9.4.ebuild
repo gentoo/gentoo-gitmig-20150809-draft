@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.1 2007/01/10 08:44:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.2 2007/03/05 04:12:03 genone Exp $
 
 inherit eutils libtool autotools
 
@@ -36,7 +36,7 @@ src_compile() {
 	einfo "Checking for subversion compiled with neon support..."
 	if built_with_use dev-util/subversion nowebdav; then
 	    ewarn "SVN (dev-util/subversion) must be compiled with neon support."
-	    einfo "Please re-emerge subversion without the nowebdav USE flag."
+	    ewarn "Please re-emerge subversion without the nowebdav USE flag."
 	    die "SVN merged with nowebdav USE flag"
 	else
 	    einfo "Found neon support; continuing..."

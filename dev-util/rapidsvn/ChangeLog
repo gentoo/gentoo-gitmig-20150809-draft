@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.39 2007/01/10 08:44:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.40 2007/03/05 04:12:03 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> rapidsvn-0.9.3.ebuild,
+  rapidsvn-0.9.4.ebuild:
+  Replacing einfo with ewarn
 
 *rapidsvn-0.9.4 (10 Jan 2007)
 
