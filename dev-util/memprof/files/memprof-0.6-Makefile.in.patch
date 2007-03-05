@@ -1,0 +1,11 @@
+--- memprof-0.6.orig/Makefile.in	2006-08-07 17:49:40.000000000 -0500
++++ memprof-0.6/Makefile.in	2006-11-19 16:10:16.000000000 -0600
+@@ -1012,7 +1012,7 @@
+ 	$(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
+ 
+ install-exec-hook:
+-	cd $(bindir) && ln -sf memprof speedprof
++	cd $(DESTDIR)$(bindir) && ln -sf memprof speedprof
+ 
+ .PHONY: copyrights
+ 
