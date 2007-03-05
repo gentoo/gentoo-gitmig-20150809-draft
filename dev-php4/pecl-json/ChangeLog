@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-json
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-json/ChangeLog,v 1.2 2006/11/23 00:38:51 tomk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-json/ChangeLog,v 1.3 2007/03/05 18:36:19 chtekk Exp $
+
+  05 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-json-1.2.1.ebuild:
+  Cleanup.
 
   23 Nov 2006; Tom Knight <tomk@gentoo.org> pecl-json-1.2.1.ebuild:
   Added ~amd64 KEYWORD, fixes bug #155072
