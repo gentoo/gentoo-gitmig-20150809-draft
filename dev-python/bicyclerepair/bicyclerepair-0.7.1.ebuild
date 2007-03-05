@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1.ebuild,v 1.9 2005/02/12 10:50:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1.ebuild,v 1.10 2007/03/05 02:40:53 genone Exp $
 
 inherit distutils
 
@@ -27,7 +27,7 @@ pkg_postinst() {
 	config_txt=/usr/lib/python${PYTHON_VER}/tools/idle/config.txt
 	if [ -f "${config_txt}" ]; then
 		if [ -z "`grep BicycleRepairMan_Idle ${config_txt}`" ]; then
-			einfo "Appending BicycleRepairman to IDLE.."
+			elog "Appending BicycleRepairman to IDLE.."
 			echo "[BicycleRepairMan_Idle]" >> ${config_txt}
 		fi
 	fi

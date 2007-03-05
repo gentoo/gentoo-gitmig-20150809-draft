@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/csv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.16 2007/02/21 16:46:21 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.17 2007/03/05 02:41:59 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> csv-1.0-r1.ebuild:
+  Replacing einfo with elog
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-csv-0.5.0, files/digest-csv-1.0, files/digest-csv-1.0-r1,

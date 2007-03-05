@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1-r1.ebuild,v 1.4 2005/02/12 10:50:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1-r1.ebuild,v 1.5 2007/03/05 02:40:53 genone Exp $
 
 inherit distutils
 mydoc="NEWS DESIGN"
@@ -29,15 +29,15 @@ pkg_postinst() {
 	if [ -f "${config_txt}" ];
 	then
 		if [ -z "`grep BicycleRepairMan_Idle ${config_txt}`" ]; then
-			einfo "Appending BicycleRepairman to IDLE.."
+			elog "Appending BicycleRepairman to IDLE.."
 			echo "[BicycleRepairMan_Idle]" >> ${config_txt}
 		fi
 	else
-		einfo "BicycleRepairMan won't integrate with IDLE included in Python 2.3*"
+		elog "BicycleRepairMan won't integrate with IDLE included in Python 2.3*"
 	fi
-	einfo " "
-	einfo "To use bicyclerepair with Xemacs or GNU Emacs you must be in Python"
-	einfo "mode and add this to your .emacs or .init.el:"
-	einfo "(load-library '/usr/share/bicyclerepair/bike.el')"
+	elog
+	elog "To use bicyclerepair with Xemacs or GNU Emacs you must be in Python"
+	elog "mode and add this to your .emacs or .init.el:"
+	elog "(load-library '/usr/share/bicyclerepair/bike.el')"
 }
 
