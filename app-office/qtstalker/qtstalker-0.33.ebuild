@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.32.ebuild,v 1.3 2007/03/05 22:59:48 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.33.ebuild,v 1.1 2007/03/05 22:59:48 troll Exp $
 
 inherit qt3 eutils
 
-IUSE="mysql"
+IUSE=""
 LANGS="pl"
 for i in ${LNAGS}; do
 	IUSE="${IUSE} linguas_${i}"
@@ -19,39 +19,47 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="$(qt_min_version 3.3)
-	mysql? ( dev-db/mysql )"
+	>=sys-libs/db-4"
 
 S="${WORKDIR}/${PN}"
 
-# linking erros about missing lqtstalker lib when -jX
-# from MAKEOPTS is being set to anything higher than -j1
+# linking error about missing lqtstalker lib when using -jX
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-sandboxfix_no_fixpath.patch
-	epatch ${FILESDIR}/${PN}-install_docs_with_emerge.patch
-	# without that, qtstalker will use mysql, when only it is installed,
-	# even when we do not want mysql support for this package
-	! use mysql && epatch ${FILESDIR}/${PN}-no_mysql_support.patch
+	epatch ${FILESDIR}/${P}-sandboxfix_no_fixpath.patch
+	epatch ${FILESDIR}/${P}-install_docs_with_emerge.patch
 }
 
 src_compile() {
-	${QTDIR}/bin/qmake ${PN}.pro \
-		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
-		QMAKE_RPATH= \
-		|| die "qmake ${PN}.pro failed"
+	# some Qt4 problems...
+	einfo "Proccessing qmake with .pro files..."
+	PROS="${S}/src/src.pro ${S}/lib/lib.pro ${S}/${PN}.pro `find ${S}/plugins -name \"*.pro\"`"
+	for i in ${PROS}; do
+		pdir="`echo ${i} | sed -e 's/\/[a-zA-Z]*.pro$//'`"
+		pfile="`echo ${i} | sed -e 's/^.*\///'`"
 
-	cd ${S}/lib
-	${QTDIR}/bin/qmake lib.pro \
-		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
-		QMAKE_RPATH= \
-		|| die "qmake ${PN}.pro failed"
+		cd ${pdir}
+		${QTDIR}/bin/qmake ${pfile} \
+			QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
+			QMAKE_RPATH= \
+			QMAKE=/usr/bin/qmake \
+			QMAKE_RPATH= \
+			|| die "qmake ${pfile} failed"
+	done
 
 	cd ${S}
 	emake || die "make failed"
+
+	einfo "Building langpaccks..."
+	for i in ${LINGUAS}; do
+		if [ -f ${PN}_${i}.ts ]; then
+			lrelease ${PN}_${i}.ts
+		fi
+	done
 }
 
 src_install() {
@@ -59,11 +67,13 @@ src_install() {
 	export INSTALL_ROOT="${D}"
 	make install || die "make install failed"
 
+	einfo "Installing docs..."
 	cd ${S}/docs
 	dohtml *{html,png}
 	dodoc AUTHORS BUGS CHANGELOG INSTALL TODO ${S}/README
 
 	# install only needed langpacks
+	einfo "Installing langpacks..."
 	cd ${S}/i18n
 	insinto /usr/share/${PN}/i18n
 	for i in ${LINGUAS}; do

@@ -1,6 +1,14 @@
 # ChangeLog for app-office/qtstalker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.2 2006/11/23 19:35:58 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.3 2007/03/05 22:59:48 troll Exp $
+
+*qtstalker-0.33 (05 Mar 2007)
+
+  05 Mar 2007; Przemysław Maciąg <troll@gentoo.org>
+  +files/qtstalker-0.33-install_docs_with_emerge.patch,
+  +files/qtstalker-0.33-sandboxfix_no_fixpath.patch, +qtstalker-0.33.ebuild:
+  Version bump
+  Some ebuild cleanups
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> qtstalker-0.32.ebuild:
   dev-db/mysql => virtual/mysql
