@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xclass
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.14 2007/02/22 00:02:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.15 2007/03/05 14:15:58 anant Exp $
+
+*xclass-0.8.2-r2 (05 Mar 2007)
+
+  05 Mar 2007; <anant@gentoo.org> +xclass-0.8.2-r2.ebuild:
+  Fix offending header that prevented compile, bump to r2; closes bug #151169
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
