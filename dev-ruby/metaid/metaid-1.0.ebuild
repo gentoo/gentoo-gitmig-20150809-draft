@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/metaid-1.0.ebuild,v 1.2 2006/03/30 03:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/metaid-1.0.ebuild,v 1.3 2007/03/05 03:06:27 tgall Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~ia64 ~ppc64 ~x86"
 IUSE=""
 RESTRICT="test"
 
