@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/btpd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btpd/ChangeLog,v 1.2 2006/08/18 01:23:09 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btpd/ChangeLog,v 1.3 2007/03/05 15:13:52 armin76 Exp $
+
+*btpd-0.12 (05 Mar 2007)
+
+  05 Mar 2007; Raúl Porcel <armin76@gentoo.org> +files/confd_btpd,
+  +files/initd_btpd, metadata.xml, -btpd-0.9.ebuild, -btpd-0.11.ebuild,
+  +btpd-0.12.ebuild:
+  Version bump, bug 143900 and fix bug 146147, and assign to net-p2p herd
 
 *btpd-0.11 (18 Aug 2006)
 

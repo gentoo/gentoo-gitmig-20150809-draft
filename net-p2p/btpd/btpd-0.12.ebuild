@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btpd/btpd-0.9.ebuild,v 1.1 2006/06/21 01:18:42 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btpd/btpd-0.12.ebuild,v 1.1 2007/03/05 15:13:52 armin76 Exp $
 
 DESCRIPTION="BTPD is a bittorrent client consisting of a daemon and client commands"
 HOMEPAGE="http://www.murmeldjur.se/btpd/"
@@ -13,7 +13,8 @@ IUSE=""
 
 RDEPEND="net-misc/curl
 		dev-libs/openssl
-		dev-libs/libevent"
+		dev-libs/libevent
+		sys-apps/shadow"
 DEPEND="${RDEPEND}"
 
 src_compile() {
@@ -23,5 +24,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
+
+	newinitd "${FILESDIR}/initd_btpd" btpd
+	newconfd "${FILESDIR}/confd_btpd" btpd
+
 	dodoc CHANGES COPYRIGHT README
 }
