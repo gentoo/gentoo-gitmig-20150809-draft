@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.148 2006/11/26 23:35:54 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.149 2007/03/05 02:14:43 chtekk Exp $
+
+*php-5.2.1-r3 (05 Mar 2007)
+*php-5.1.6-r11 (05 Mar 2007)
+*php-4.4.6 (05 Mar 2007)
+
+  05 Mar 2007; Luca Longinotti <chtekk@gentoo.org> +files/20php4-envd,
+  +files/20php5-envd, -php-4.4.4-r8.ebuild, +php-4.4.6.ebuild,
+  -php-5.1.6-r8.ebuild, +php-5.1.6-r11.ebuild, +php-5.2.1-r3.ebuild:
+  New PHP versions, fix lots of bugs, add Suhosin support.
 
   26 Nov 2006; Luca Longinotti <chtekk@gentoo.org> -php-4.4.3-r1.ebuild,
   -php-4.4.4-r4.ebuild, -php-5.1.4-r6.ebuild, -php-5.1.6-r4.ebuild:
