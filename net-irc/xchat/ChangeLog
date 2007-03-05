@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.230 2007/02/18 12:44:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.231 2007/03/05 18:50:08 welp Exp $
+
+  05 Mar 2007; Peter Weller <welp@gentoo.org> xchat-2.8.0.ebuild:
+  Keyworded on x86-fbsd
 
   18 Feb 2007; Simon Stelling <blubb@gentoo.org> xchat-2.8.0.ebuild:
   stable on amd64; bug 167328
