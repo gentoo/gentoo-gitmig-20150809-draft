@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6913 2007/03/05 11:33:44 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6914 2007/03/05 13:53:35 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -183,10 +183,6 @@ www-client/mozilla-bin
 # Simon Stelling <blubb@gentoo.org> (20 Feb 2007)
 # This is crap; will remove March 18th 2007
 app-portage/emool
-
-# Markus Dittrich <markusle@gentoo.org> (20 Feb 2007)
-# new revision, needs more testing
-=sci-visualization/paraview-2.6.0
 
 # Michael Cummings <mcummings@gentoo.org> (18 Feb 2007)
 # Pending removal 17 Mar 2007, bug 165467
