@@ -1,6 +1,10 @@
 # ChangeLog for net-news/straw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.7 2007/02/26 16:40:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.8 2007/03/05 16:22:03 dang Exp $
+
+  05 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/straw-0.25.1-setup-fix.patch, straw-0.25.1-r1.ebuild:
+  codegen isn't in the normal install paths; fixes bug #169343
 
 *straw-0.26 (26 Feb 2007)
 

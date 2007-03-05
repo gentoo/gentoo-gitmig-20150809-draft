@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.25.1-r1.ebuild,v 1.2 2005/08/21 19:28:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.25.1-r1.ebuild,v 1.3 2007/03/05 16:22:03 dang Exp $
 
-inherit gnome2 python distutils virtualx
+inherit gnome2 python distutils virtualx eutils
 
 DESCRIPTION="RSS/RDF News Aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"
@@ -45,6 +45,7 @@ pkg_setup() {
 # Olivier Crete <tester@gentoo.org> 
 
 src_compile() {
+	epatch "${FILESDIR}"/${P}-setup-fix.patch
 	export maketype="distutils_src_compile"
 	virtualmake || die "compilation failed"
 }
