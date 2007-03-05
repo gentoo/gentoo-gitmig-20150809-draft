@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2648 2007/03/05 18:07:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2649 2007/03/05 21:54:56 peper Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -291,15 +291,6 @@ dev-db/mysql-community:latin1 - Use LATIN1 encoding instead of UTF8.
 dev-db/mysql-community:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql-community:minimal - Install client programs only, no server
 dev-db/mysql-community:pbxt - Add experimental support for pbxt storage engine
-dev-db/mysql-slotted:big-tables - Make tables contain up to 1.844E+19 rows
-dev-db/mysql-slotted:cluster - Add support for NDB clustering.
-dev-db/mysql-slotted:embedded - Build embedded server (libmysqld)
-dev-db/mysql-slotted:extraengine - Add support for alternative storage engines.
-dev-db/mysql-slotted:latin1 - Use LATIN1 encoding instead of UTF8.
-dev-db/mysql-slotted:max-idx-128 - Raise the max index per table limit from 64 to 128
-dev-db/mysql-slotted:minimal - Install client programs only, no server
-dev-db/mysql-slotted:pbxt - Add experimental support for pbxt storage engine
-dev-db/mysql-slotted:raid - deprecated option, removed in the 5.0 series
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
 dev-db/postgis:proj - Add the Proj library for reprojection features.
@@ -316,7 +307,6 @@ dev-games/crystalspace:cal3d - include support for skeleton anymation
 dev-games/crystalspace:cegui - include support for Crazy Eddie GUI
 dev-games/crystalspace:cg - nvidia toolkit plugin
 dev-games/crystalspace:ode - include support for Open Dynamics Engine
-dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/guichan:allegro - Build the Allegro frontend
 dev-games/ode:double-precision - more precise calculations at the expense of speed
 dev-games/ode:nogyroscopic - disable gyroscopic term maybe improving stability
@@ -485,9 +475,6 @@ dev-lisp/abcl:jad - Enable support for disassembling compiled code using JAD
 dev-lisp/abcl-cvs:jpty - Enable PTY support
 dev-lisp/abcl-cvs:libabcl - Enable ^C handler (from JNI)
 dev-lisp/cl-tbnl:standalone - use TBNL without a front-end (ie. no Apache dependency)
-dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
-dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
-dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
 dev-lisp/clisp:new-clx - Build CLISP with support for the NEW-CLX module which is a C binding to the Xorg libraries
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/ecls:c++ - Build ECL with a C++ compiler
@@ -508,7 +495,6 @@ dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/PDL:badval - Enable badval support in PDL
 dev-perl/RPC-XML:modperl - Enable modperl support
 dev-perl/Template-Toolkit:latex - Enable latex support
-dev-perl/gtk-perl:gnome-print - Enable gnome-print support
 dev-php/PEAR-MDB2:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-php4/eaccelerator:contentcache - Enable content caching.
 dev-php4/eaccelerator:disassembler - Enable the eA disassembler.
@@ -660,7 +646,6 @@ games-simulation/openttd:scenarios - Install additional contributed scenarios
 games-simulation/openttd:timidity - Add sound support (timidity)
 games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/freeciv:auth - Add authentication capability
-games-strategy/freecraft-fcmp:music - Installs optional music data
 games-strategy/freelords:editor - Installs optional map editor
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
@@ -922,9 +907,6 @@ media-plugins/vdr-dvdconvert:projectx - Enables support for projectx
 media-plugins/vdr-pvr350:yaepg - Enables full support for the ouput format of vdr-yaepg
 media-plugins/vdr-softdevice:mmxext - enables mmx2 support
 media-plugins/vdr-weatherng:dxr3 - enables lower osd color deep for dxr3 cards
-media-radio/xastir:ax25 - Enable ax25 support
-media-radio/xastir:festival - Enable festival support
-media-radio/xastir:shape - Enable shapelib support
 media-sound/alsa-driver:midi - Build the sequencer (midi) modules
 media-sound/alsa-tools:midi - Build the sequencer (midi) utilities
 media-sound/alsa-utils:midi - Build the sequencer (midi) utilities
@@ -993,7 +975,6 @@ media-sound/slimserver:alac - Enable support for alac
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/transkode:amarok - Build Amarok script
 media-sound/transkode:wavpack - Add support for wavpack decoding/encoding
-media-sound/zinf:corba - Enables corba interface support
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/kdetv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/mythtv:autostart - Controls whether settings are installed for autostarting MythFrontend on boot
@@ -1129,7 +1110,6 @@ media-video/winki:css - Enables ripping of encrypted DVDs
 media-video/winki:mjpeg - Enables mjpegtools support
 media-video/x264-svn-encoder:mp4 - Enables mp4 encoding support
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
-medua-sound/sonata:tagwriting - Enable support for tag writing (taglib, tagpy)
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/base:signatures - Install community signatures from snort
@@ -1344,15 +1324,6 @@ net-libs/aqbanking:geldkarte - Enable geldkarte backend
 net-libs/aqbanking:hbci - Enable support for HBCI
 net-libs/aqbanking:yellownet - Enable support for Yellownet
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
-net-libs/gecko-sdk:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
-net-libs/gecko-sdk:mozdevelop - Enable features for web developers (e.g. Venkman)
-net-libs/gecko-sdk:moznocompose - Disable building of mozilla's HTML editor component
-net-libs/gecko-sdk:moznoirc - Disable building of mozilla's IRC client
-net-libs/gecko-sdk:moznomail - Disable building mozilla's mail client
-net-libs/gecko-sdk:moznopango - Disable pango during runtime
-net-libs/gecko-sdk:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-net-libs/gecko-sdk:mozsvg - Enable SVG support in mozilla and firefox
-net-libs/gecko-sdk:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-libs/libjingle:ilbc - Build ILBC codec plugin
 net-libs/libjingle:ortp - Build oRTP Channel plugin
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
@@ -1537,7 +1508,6 @@ net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
 net-www/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
-net-www/gplflash:nosound - Disable support for sound
 net-www/mod_auth_ldap:diskcache - Enables support for disk cache.
 net-www/mod_auth_ldap:memcache - Enables support for memory cache.
 net-www/mod_ftpd:dbi - Enables support for libDBI
@@ -1862,7 +1832,6 @@ www-client/mozilla-firefox:moznopango - Disable pango during runtime
 www-client/mozilla-firefox:restrict-javascript - Pull in noscript extension to disable javascript globally, putting user fully in control of the sites he/she visits
 www-client/mozilla-firefox:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
 www-client/mozilla-launcher:aoss - Add support for media-libs/alsa-oss - playing sounds from browser via OSS emulation
-www-client/netscape:moznomail - Do not install Netscape Mail
 www-client/opera:qt-static - Installs binaries statically linked to Qt
 www-client/seamonkey:mozcalendar - Enable mozilla calendar extension
 www-client/seamonkey:mozdevelop - Enable features for web developers (e.g. Venkman)
@@ -1915,7 +1884,6 @@ x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gt
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/adesklets:fontconfig - Support for mananging custom fonts via fontconfig
 x11-misc/dmenu:savedconfig - Add support to user defined configs
-x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/openclipart:gzip - Compresses clip art using gzip
 x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc

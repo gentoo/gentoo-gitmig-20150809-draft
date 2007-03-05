@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.170 2007/03/05 18:07:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.171 2007/03/05 21:54:56 peper Exp $
+
+  05 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> use.local.desc:
+  Remove out-of-date entries.
 
   05 Mar 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   media-video/dvd-slideshow themes useflag
