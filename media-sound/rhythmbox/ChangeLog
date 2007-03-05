@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.89 2007/02/24 21:16:41 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.90 2007/03/05 20:10:02 dang Exp $
+
+  05 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/rhythmbox-0.9.8-multijob-fix.patch, rhythmbox-0.9.8.ebuild:
+  Parallel make fix; bug #169182
 
 *rhythmbox-0.9.8 (25 Feb 2007)
 

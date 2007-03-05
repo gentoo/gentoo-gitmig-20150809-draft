@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.8.ebuild,v 1.2 2007/02/24 21:19:07 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.8.ebuild,v 1.3 2007/03/05 20:10:02 dang Exp $
 
 inherit gnome2 eutils
 
@@ -52,8 +52,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 pkg_setup() {
 
 	if ! use avahi && ! use howl; then
@@ -98,6 +96,12 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 
 export GST_INSPECT=/bin/true
 USE_DESTDIR=1
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	# Fix parallel build; bug #169182
+	epatch "${FILESDIR}"/${P}-multijob-fix.patch
 }
 
 src_compile() {
