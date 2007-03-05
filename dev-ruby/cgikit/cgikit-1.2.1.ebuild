@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/cgikit-1.2.1.ebuild,v 1.2 2007/01/21 08:01:48 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/cgikit-1.2.1.ebuild,v 1.3 2007/03/05 04:49:45 tgall Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.spice-of-life.net/cgikit/index_en.html"
 SRC_URI="http://www.spice-of-life.net/cgikit/archive/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="examples"
 USE_RUBY="ruby18 ruby19"
 
