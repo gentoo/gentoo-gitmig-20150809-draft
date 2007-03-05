@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/fastdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/ChangeLog,v 1.8 2007/01/31 13:34:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/ChangeLog,v 1.9 2007/03/05 15:31:58 anant Exp $
+
+*fastdb-3.36 (05 Mar 2007)
+
+  05 Mar 2007; <anant@gentoo.org> +fastdb-3.36.ebuild:
+  vBump tp 3.36, closes bug #151554
 
   31 Jan 2007; Marius Mauch <genone@gentoo.org> fastdb-2.55.ebuild,
   fastdb-2.92.ebuild:
