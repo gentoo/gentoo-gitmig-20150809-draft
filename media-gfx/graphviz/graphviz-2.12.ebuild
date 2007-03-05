@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.8 2007/03/03 17:10:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.9 2007/03/05 08:04:45 dev-zero Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
 
-inherit eutils autotools multilib
+inherit eutils autotools multilib python
 
 DESCRIPTION="Open Source Graph Visualization Software"
 HOMEPAGE="http://www.graphviz.org/"
@@ -14,7 +14,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
-IUSE="doc examples gnome gtk nls pango X tcl tk"
+IUSE="doc examples gnome gtk nls pango perl python ruby X tcl tk"
 
 RDEPEND=">=media-libs/gd-2.0.28
 	>=sys-libs/zlib-1.2.3
@@ -28,12 +28,18 @@ RDEPEND=">=media-libs/gd-2.0.28
 	pango? ( x11-libs/pango )
 	gnome? ( gnome-base/libgnomeui )
 	gtk? ( >=x11-libs/gtk+-2 )
+	perl? ( dev-lang/perl )
+	python? ( dev-lang/python )
+	ruby? ( dev-lang/ruby )
 	X? ( x11-libs/libXaw x11-libs/libXpm )
 	tcl? ( >=dev-lang/tcl-8.3 )
 	tk? ( >=dev-lang/tk-8.3 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	perl? ( dev-lang/swig )
+	python? ( dev-lang/swig )
+	ruby? ( dev-lang/swig )
 	tcl? ( dev-lang/swig )"
 
 # Dependency description / Maintainer-Info:
@@ -58,8 +64,7 @@ DEPEND="${RDEPEND}
 # - python (enabled via python) *1
 # - ruby (enabled via ruby) *1
 # - tcl (enabled via tcl)
-# *1 = Bindings build, but should be installed to /usr/lib/python2.x/site-packages
-#      rather than /usr/lib/graphviz/python (the same goes for ruby, ...)
+# *1 = The ${P}-bindings.patch takes care that those bindings are installed to the right location
 # *2 = Those bindings don't build because the paths for the headers/libs aren't
 #      detected correctly and/or the options passed to swig are wrong (-php instead of -php4/5)
 
@@ -85,6 +90,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-notcl.patch"
 	epatch "${FILESDIR}/${P}-find-system-libgd.patch"
 	epatch "${FILESDIR}/${P}-configure.patch"
+	epatch "${FILESDIR}/${P}-bindings.patch"
 
 	sed -i \
 		-e 's:LC_COLLATE=C:LC_ALL=C:g' \
@@ -111,9 +117,6 @@ src_unpack() {
 	# Nuke the dead symlinks for the bindings
 	sed -i \
 		-e '/$(pkgluadir)/d' \
-		-e '/$(pkgperldir)/d' \
-		-e '/$(pkgpythondir)/d' \
-		-e '/$(pkgrubydir)/d' \
 		tclpkg/gv/Makefile.am || die "sed failed"
 
 	eautoreconf
@@ -142,10 +145,10 @@ src_compile() {
 		--disable-java \
 		--disable-ocaml \
 		--disable-lua \
-		--disable-perl \
+		$(use_enable perl) \
 		--disable-php \
-		--disable-python \
-		--disable-ruby \
+		$(use_enable python) \
+		$(use_enable ruby) \
 		$(use_with gtk) \
 		$(use_with pango pangocairo) \
 		${myconf} \
@@ -176,4 +179,13 @@ pkg_postinst() {
 	# This actually works if --enable-ltdl is passed
 	# to configure
 	dot -c
+	if use python ; then
+		python_mod_optimize
+	fi
+}
+
+pkg_postrm() {
+	if use python ; then
+		python_mod_cleanup
+	fi
 }
