@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.59 2007/02/10 15:39:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.60 2007/03/05 14:19:11 betelgeuse Exp $
+
+*swt-3.2.2 (05 Mar 2007)
+
+  05 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> +swt-3.2.2.ebuild:
+  Version bump. Adds xulrunner use flag to compile browser support against
+  that (bug #155969). Because of that I dropped amd64 and ppc keywords because
+  I am not sure if it works there. Also silenced cairo signedness warnings
+  with a patch from Hanno Meyer-Thurow <h.mth@web.de> (bug #157826). x86-fbsd
+  I had to drop because they don't have xulrunner keyworded. Version bump is
+  bug #169254.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> swt-3.2-r2.ebuild:
   Stable on ppc wrt bug 151358
