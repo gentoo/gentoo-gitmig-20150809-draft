@@ -1,6 +1,31 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.37 2007/01/01 15:32:24 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.38 2007/03/05 16:11:20 caleb Exp $
+
+  05 Mar 2007; Caleb Tennis <caleb@gentoo.org> -files/7.0.065-r1/05icc-ifc,
+  -files/7.0.065-r1/icc, -files/7.0.065-r2/05icc-ifc, -files/7.0.065-r2/icc,
+  -files/7.0.065/icc, -files/9.0.023/05icc-ifc, -files/9.0.023/icc,
+  -files/9.0.023/iccifc.conf, -files/9.0.023/icpc, -files/9.0.030/05icc-ifc,
+  -files/9.0.030/icc, -files/9.0.030/icpc, -files/9.1.044/05icc-ifc,
+  -files/9.1.044/icc, -files/6.0-r1/05icc-ifc, -files/6.0/05icc,
+  -files/7.0.065/05icc-ifc, -files/9.1.044/icpc, -icc-6.0.ebuild,
+  -icc-6.0-r1.ebuild, -icc-7.0.065.ebuild, -icc-7.0.065-r1.ebuild,
+  -icc-7.0.065-r2.ebuild, -icc-7.1.006.ebuild, -icc-7.1.029.ebuild,
+  -icc-7.1.030.ebuild, -icc-8.0.055.ebuild, -icc-8.1.028.ebuild,
+  -icc-9.0.021.ebuild, -icc-9.0.023.ebuild, -icc-9.0.030.ebuild,
+  -icc-9.1.042.ebuild, -icc-9.1.044.ebuild:
+  removing more versions
+
+  05 Mar 2007; Caleb Tennis <caleb@gentoo.org> -files/7.0.065-r1/05icc-ifc,
+  -files/7.0.065-r1/icc, -files/7.0.065-r2/05icc-ifc,
+  -files/6.0-r1/05icc-ifc, -files/7.0.065-r2/icc, -files/7.0.065/05icc-ifc,
+  -files/6.0/05icc, -files/7.0.065/icc, -icc-6.0.ebuild, -icc-6.0-r1.ebuild,
+  -icc-7.0.065.ebuild, -icc-7.0.065-r1.ebuild, -icc-7.0.065-r2.ebuild,
+  -icc-9.0.023.ebuild:
+  removing other old package masked versions
+
+  05 Mar 2007; Caleb Tennis <caleb@gentoo.org> -icc-9.0.023.ebuild:
+  removing an old masked version
 
   01 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> icc-9.1.045.ebuild:
   Added virtual/libstdc++ to RDEPENDS, acknowledged by Kugelfang.
