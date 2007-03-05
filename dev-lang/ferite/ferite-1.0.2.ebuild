@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.1 2007/03/05 14:34:56 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.2 2007/03/05 17:45:46 anant Exp $
 
 DESCRIPTION="A clean, lightweight, object oriented scripting language"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -12,7 +12,7 @@ DEPEND="virtual/libc
 
 SLOT="1"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha" 
 IUSE=""
 
 src_unpack() {
