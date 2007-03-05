@@ -1,10 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.16 2006/12/21 06:24:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.3.ebuild,v 1.1 2007/03/05 05:51:40 mr_bones_ Exp $
 
-inherit eutils games
+inherit games
 
-MY_PV=040702
 DESCRIPTION="A realtime strategy game engine"
 HOMEPAGE="http://www.stratagus.org/"
 SRC_URI="mirror://sourceforge/stratagus/${P}-src.tar.gz"
@@ -12,50 +11,44 @@ SRC_URI="mirror://sourceforge/stratagus/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug doc flac mp3 mikmod ogg opengl vorbis"
+IUSE="bzip2 debug doc mikmod mng opengl theora vorbis"
 
-RDEPEND="app-arch/bzip2
+RDEPEND="x11-libs/libX11
 	>=dev-lang/lua-5
 	media-libs/libpng
 	media-libs/libsdl
-	sys-libs/zlib
-	flac? ( media-libs/flac )
-	mp3? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
-	ogg? ( vorbis? ( media-libs/libogg media-libs/libvorbis ) )"
-
+	mng? ( media-libs/libmng )
+	opengl? ( virtual/opengl )
+	theora? ( media-libs/libtheora )
+	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
-	x11-libs/libXt
 	doc? ( app-doc/doxygen )"
-
-S=${WORKDIR}/stratagus-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/flac-1.1.3.patch
+	sed -i \
+		-e '/SDLCONFIG --libs/s:"$: -lX11":' \
+		-e 's/-O.*\(-fsigned-char\).*/\1"/' \
+		configure \
+		|| die "sed failed"
 }
 
 src_compile() {
-	local myconf
-
-	if use ogg && use vorbis ; then
-		myconf="--enable-ogg" \
-	else
-		myconf="--disable-ogg"
-	fi
 	econf \
 		$(use_enable debug) \
+		$(use_with bzip2) \
 		$(use_with mikmod) \
-		$(use_with flac) \
-		$(use_with mp3 mad) \
+		$(use_with mng) \
 		$(use_with opengl) \
-		${myconf} \
-		|| die "econf failed"
+		$(use_with theora) \
+		$(use_with vorbis) \
+		|| die
 	emake -j1 || die "emake failed"
 
 	if use doc ; then
-		emake doc || die "making source documentation failed"
+		emake doc || die "emake doc failed"
 	fi
 }
 
