@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-1.0.3.ebuild,v 1.3 2007/03/04 21:04:43 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-1.0.3.ebuild,v 1.4 2007/03/05 01:40:55 chtekk Exp $
 
 PHP_EXT_NAME="pdo"
 PHP_EXT_PECL_PKG="PDO"
@@ -38,6 +38,12 @@ pkg_setup() {
 		eerror
 		die "PHP built to use bundled PDO support"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-verscheck.patch"
 }
 
 src_install() {
