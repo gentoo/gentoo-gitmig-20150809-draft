@@ -1,0 +1,10 @@
+# ChangeLog for games-util/datutil
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/ChangeLog,v 1.1 2007/03/05 12:33:03 drizzt Exp $
+
+*datutil-2.31 (05 Mar 2007)
+
+  05 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> +metadata.xml,
+  +datutil-2.31.ebuild:
+  New ebuild
+
