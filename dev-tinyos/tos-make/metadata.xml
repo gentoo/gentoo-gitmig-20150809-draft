@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
-<maintainer>
-	<email>sanchan@gentoo.org</email>
-</maintainer>
 <longdescription>
 	TinyOS Make System
 	created on 7 Jan 2004

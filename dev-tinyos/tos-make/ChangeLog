@@ -1,6 +1,9 @@
 # ChangeLog for dev-tinyos/tos-make
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-make/ChangeLog,v 1.3 2006/11/14 21:54:51 sanchan Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-make/ChangeLog,v 1.4 2007/03/05 22:40:11 sanchan Exp $
+
+  05 Mar 2007; Sandro Bonazzola <sanchan@gentoo.org> ChangeLog:
+  Removing myself from metadata.xml as I'm stepping back.
 
   14 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
   tos-make-1.1.15.ebuild:
