@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-10.0-r1.ebuild,v 1.4 2007/03/02 15:58:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-10.0-r1.ebuild,v 1.5 2007/03/05 15:19:54 blubb Exp $
 
 inherit emul-libs
 
@@ -35,6 +35,13 @@ src_unpack() {
 	mv -f "${S}/usr/bin/gdk-pixbuf-query-loaders"{,32}
 
 	[[ -f ${S}/usr/lib32/kde3/kcm_kcmgtk.so ]] && rm -f ${S}/usr/lib32/kde3/kcm_kcmgtk.so
+}
+
+pkg_preinst() {
+	#bug 169058
+	for l in ${ROOT}/usr/lib32/{pango,gtk-2.0} ; do
+		[[ -L ${l} ]] && rm -f ${l}
+	done
 }
 
 pkg_postinst() {
