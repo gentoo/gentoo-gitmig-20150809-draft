@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/cerberus-0.3.4.ebuild,v 1.1 2007/02/17 10:34:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/cerberus-0.3.4.ebuild,v 1.2 2007/03/05 04:42:18 tgall Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-ruby/actionmailer-1.3

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cerberus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.1 2007/02/17 10:34:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.2 2007/03/05 04:42:18 tgall Exp $
+
+  04 Mar 2007; Tom Gall <tgall@gentoo.org> cerberus-0.3.4.ebuild:
+  added ~ppc64
 
 *cerberus-0.3.4 (17 Feb 2007)
 
