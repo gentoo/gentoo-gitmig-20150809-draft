@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.429 2007/02/14 17:39:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.430 2007/03/05 22:13:45 deathwing00 Exp $
+
+*kdelibs-3.5.6-r3 (05 Mar 2007)
+*kdelibs-3.5.5-r9 (05 Mar 2007)
+
+  05 Mar 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/kdelibs-3.5.5-vulnerability-20070305.diff,
+  +kdelibs-3.5.5-r9.ebuild, +kdelibs-3.5.6-r3.ebuild:
+  Fixes konqueror dos via javascript read of ftp iframe.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   kdelibs-3.5.5-r8.ebuild:
