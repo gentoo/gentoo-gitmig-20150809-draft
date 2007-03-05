@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.1.29996-r4.ebuild,v 1.4 2007/01/05 18:02:03 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.2.39867.ebuild,v 1.1 2007/03/05 00:05:09 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -40,17 +40,17 @@ DEPEND=">=sys-libs/glibc-2.3.5
 # precompiled binary package thats linked to glibc.
 RDEPEND=">=sys-libs/glibc-2.3.5
 	amd64? (
-			app-emulation/emul-linux-x86-baselibs
-			app-emulation/emul-linux-x86-gtklibs )
+		>=app-emulation/emul-linux-x86-baselibs-2.5.5-r3
+		app-emulation/emul-linux-x86-gtklibs )
 	!amd64? (
-			virtual/xft
-			x11-libs/libX11
-			x11-libs/libXtst
-			x11-libs/libXext
-			x11-libs/libXt
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXrender )
+		virtual/xft
+		x11-libs/libX11
+		x11-libs/libXtst
+		x11-libs/libXext
+		x11-libs/libXt
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXrender )
 	>=dev-lang/perl-5
 	!<sys-apps/dbus-0.62
 	!app-emulation/vmware-player
@@ -80,7 +80,7 @@ src_install() {
 	vmware_src_install
 
 	# Fix the amd64 emulation pam stuff
-	use amd64 && dosed "s:pam_:/emul/linux/x86/lib/security/pam_:" ${config_dir}/pam.d/vmware-authd
+	use amd64 && dosed "s:pam_:/lib32/security/pam_:" ${config_dir}/pam.d/vmware-authd
 
 	echo "${VMWARE_GROUP}" > ${D}${config_dir}/vmwaregroup
 
