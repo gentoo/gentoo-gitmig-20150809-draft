@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.167 2007/03/05 14:17:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.168 2007/03/05 16:49:08 armin76 Exp $
+
+  05 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Removed net-libs/gecko-sdk mask as it's removed
 
   05 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Added the local xulrunner use flag introduced in dev-java/swt-3.2.2.
