@@ -1,26 +1,26 @@
 # ChangeLog for dev-ruby/Ruby-MemCache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/Ruby-MemCache/ChangeLog,v 1.5 2007/03/04 20:08:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/Ruby-MemCache/ChangeLog,v 1.6 2007/03/05 19:39:13 tove Exp $
 
   04 Mar 2007; Tom Gall <tgall@gentoo.org>
   Ruby-MemCache-0.0.4.ebuild:
   added ~ppc64
 
-  05 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org>
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   Ruby-MemCache-0.0.4.ebuild:
   Dummify src_compile.
 
-  08 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
+  08 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   Ruby-MemCache-0.0.4.ebuild:
   Added ~x86
 
-  24 Sep 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   Ruby-MemCache-0.0.4.ebuild:
   Fix DEPEND/RDEPEND.
 
 *Ruby-MemCache-0.0.4 (24 Jun 2006)
 
-  24 Jun 2006; Diego PettenÃ² <flameeyes@gentoo.org> +metadata.xml,
+  24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +Ruby-MemCache-0.0.4.ebuild:
   Initial import, native MemCache access library for Ruby.
 
