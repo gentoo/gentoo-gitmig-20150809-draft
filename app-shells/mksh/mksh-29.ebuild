@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-26c.ebuild,v 1.2 2006/06/14 23:45:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-29.ebuild,v 1.1 2007/03/05 22:18:03 hanno Exp $
 
 DESCRIPTION="MirBSD KSH Shell"
-HOMEPAGE="http://mirbsd.de/mksh/"
-SRC_URI="http://mirbsd.mirsolutions.de/MirOS/dist/mir/mksh/${PN}-R${PV}.cpio.gz"
+HOMEPAGE="http://mirbsd.de/mksh"
+SRC_URI="http://www.mirbsd.org/MirOS/dist/mir/mksh/${PN}-R${PV}.cpio.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="app-arch/cpio"
 RDEPEND=""
@@ -24,8 +24,9 @@ src_compile() {
 src_install() {
 	dobin mksh
 	doman mksh.1
+	dodoc dot.mkshrc
 }
 
 src_test() {
-	./Test.sh
+	./test.sh
 }
