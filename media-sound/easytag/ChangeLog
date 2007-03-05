@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.87 2007/02/22 00:56:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.88 2007/03/05 13:35:29 drac Exp $
+
+*easytag-2.0 (05 Mar 2007)
+
+  05 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  -files/easytag-ape-fix.patch, -easytag-1.99.11.ebuild,
+  -easytag-1.99.12.ebuild, -easytag-1.99.13.ebuild, +easytag-2.0.ebuild:
+  Version bump for bug 168617. Remove old ones.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

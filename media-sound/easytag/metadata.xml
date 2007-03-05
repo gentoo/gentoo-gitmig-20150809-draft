@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>sound</herd>
 <maintainer>
-	<email>wolf31o2@gentoo.org</email>
-	<name>Chris Gianelloni</name>
+	<email>drac@gentoo.org</email>
+	<name>Samuli Suominen</name>
 </maintainer>
-<longdescription>a utility for viewing and editing tags for MP3, MP2, FLAC
-and OGG files. It features a simple and attractive GTK+
+<longdescription>a utility for viewing and editing tags for MP3, MP2, FLAC, AAC,
+MP4 and OGG files. It features a simple and attractive GTK+
 interface</longdescription>
 </pkgmetadata>
