@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.16 2007/02/05 10:05:00 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.17 2007/03/05 00:00:03 ikelos Exp $
+
+  04 Mar 2007; Mike Auty <ikelos@gentoo.org>
+  -vmware-modules-1.0.0.15.ebuild:
+  Bump vmware-any-any to 108.  Remove old vmware-server module ebuild.
 
   05 Feb 2007; Mike Auty <ikelos@gentoo.org>
   vmware-modules-1.0.0.15-r1.ebuild:
