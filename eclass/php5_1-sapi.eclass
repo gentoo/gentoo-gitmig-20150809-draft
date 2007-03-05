@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.37 2007/03/05 01:50:47 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.38 2007/03/05 02:04:03 chtekk Exp $
 
 # ========================================================================
 #
@@ -124,13 +124,15 @@ DEPEND="${DEPEND}
 #
 # They are in PDEPEND because we need PHP installed first!
 PDEPEND="doc? ( app-doc/php-docs )
-		filter? ( dev-php5/pecl-filter )
 		java-external? ( dev-php5/php-java-bridge )
 		mcve? ( dev-php5/pecl-mcve )
 		pdo? ( !dev-php5/pecl-pdo )
 		pdo-external? ( dev-php5/pecl-pdo )
 		yaz? ( dev-php5/pecl-yaz )
 		zip? ( dev-php5/pecl-zip )"
+
+# Until PECL-Filter is stable on all archs
+[[ "${PVR}" == "5.1.6-r11" ]] && PDEPEND="${PDEPEND} filter? ( dev-php5/pecl-filter )"
 
 # Until Suhosin is stable on all archs
 #PDEPEND="${PDEPEND} suhosin? ( dev-php5/suhosin )"
