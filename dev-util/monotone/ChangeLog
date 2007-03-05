@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.38 2007/03/05 04:00:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.39 2007/03/05 09:38:58 dragonheart Exp $
+
+  05 Mar 2007; Daniel Black <dragonheart@gentoo.org> monotone-0.29.ebuild,
+  monotone-0.32.ebuild:
+  bad escaping on einfo comments thanks to johnny in irc
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> monotone-0.24.ebuild,
   monotone-0.25.ebuild, monotone-0.29.ebuild, monotone-0.32.ebuild:

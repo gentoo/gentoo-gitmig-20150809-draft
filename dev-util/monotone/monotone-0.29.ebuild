@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.9 2007/03/05 04:00:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.10 2007/03/05 09:38:58 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -97,7 +97,7 @@ pkg_postinst() {
 	elog
 	elog "  1. edit /etc/conf.d/monotone"
 	elog "  2. import the first keys to enable access with"
-	elog "     env HOME=${homedir} mtn pubkey me@example.net | /etc/init.d/monotone import"
+	elog "     env HOME=\${homedir} mtn pubkey me@example.net | /etc/init.d/monotone import"
 	elog "     Thereafter, those with write permission can add other keys via"
 	elog "     netsync with 'monotone push --key-to-push=IDENT' and then IDENT"
 	elog "     can be used in the read-permission and write-permission files."
