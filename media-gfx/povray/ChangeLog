@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.54 2007/03/04 18:00:33 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.55 2007/03/05 18:40:18 anant Exp $
+
+  05 Mar 2007; <anant@gentoo.org> +povray-3.6.1-r1.ebuild:
+  Big oops, Add back stable ebuild.
 
 *povray-3.6.1-r2 (04 Mar 2007)
 
