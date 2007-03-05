@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.18 2007/02/03 17:18:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.19 2007/03/05 23:09:00 armin76 Exp $
+
+  05 Mar 2007; Raúl Porcel <armin76@gentoo.org> shmux-1.0.ebuild:
+  x86 stable wrt bug 169532
 
   03 Feb 2007; Sven Wegener <swegener@gentoo.org> shmux-1.0.ebuild:
   Add ~amd64 keyword.
