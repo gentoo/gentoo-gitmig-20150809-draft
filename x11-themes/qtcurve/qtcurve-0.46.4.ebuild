@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.46.4.ebuild,v 1.1 2007/03/05 15:30:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.46.4.ebuild,v 1.2 2007/03/05 15:35:10 beandog Exp $
 
 inherit eutils kde-functions
 
@@ -19,7 +19,7 @@ DEPEND="gtk? (
 		>=x11-libs/gtk+-2.0
 	)
 	kde? (
-		kde-base/kdelibs
+		>=kde-base/kdelibs-3.5
 		>=x11-libs/qt-3.3
 	)"
 
