@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.166 2007/03/04 22:36:43 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.167 2007/03/05 14:17:31 betelgeuse Exp $
+
+  05 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Added the local xulrunner use flag introduced in dev-java/swt-3.2.2.
 
   04 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
   Unmasked bsdtar2

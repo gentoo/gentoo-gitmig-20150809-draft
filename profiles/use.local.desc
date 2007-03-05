@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2645 2007/03/05 07:21:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2646 2007/03/05 14:17:31 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -391,6 +391,7 @@ dev-java/quartz:servlet-2_3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2_4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
+dev-java/swt:xulrunner - Build native browser integration against xulrunner
 dev-java/sun-jaxp-bin:dom4j - Enable dom4j
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/tomcat-servlet-api:java5 - Use Java 1.5 source/target for compilation
