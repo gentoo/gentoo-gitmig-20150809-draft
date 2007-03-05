@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.231 2007/03/05 18:50:08 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.232 2007/03/05 22:16:30 swegener Exp $
+
+  05 Mar 2007; Sven Wegener <swegener@gentoo.org>
+  -files/xc268-fix-teprivmsg.diff, -files/xchat-2.6.4-fix-cursor.patch,
+  -files/xchat-2.6.8-fe-text.patch,
+  -files/44_fix_alignment_endianess.dpatch, -files/xc268-sec-url.diff,
+  -files/xchat-2.6.4-fix-proxy.patch, -files/xc245-fix-te-notify.diff,
+  -files/xc268-fix-ja.diff, -xchat-2.4.5-r1.ebuild, -xchat-2.6.8.ebuild,
+  -xchat-2.6.8-r1.ebuild, -xchat-2.6.8-r2.ebuild, -xchat-2.6.8-r3.ebuild:
+  Cleanup.
 
   05 Mar 2007; Peter Weller <welp@gentoo.org> xchat-2.8.0.ebuild:
   Keyworded on x86-fbsd
