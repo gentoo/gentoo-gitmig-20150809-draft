@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.21 2007/02/23 23:26:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.22 2007/03/05 02:47:44 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> numarray-1.5.2-r1.ebuild:
+  Replacing einfo with elog
 
 *numarray-1.5.2-r1 (23 Feb 2007)
 

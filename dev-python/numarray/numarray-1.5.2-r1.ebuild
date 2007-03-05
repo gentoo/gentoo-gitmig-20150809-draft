@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.1 2007/02/23 23:26:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.2 2007/03/05 02:47:44 genone Exp $
 
 NEED_PYTHON=2.3
 
@@ -86,7 +86,7 @@ src_unpack() {
 src_test() {
 	# test with lapack buggy
 	if use lapack; then
-		einfo "no automatic testing with external lapack"
+		elog "no automatic testing with external lapack"
 		return
 	fi
 	ebegin "Testing numarray functions"

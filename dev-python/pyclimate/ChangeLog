@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyclimate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.10 2007/02/09 07:38:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.11 2007/03/05 02:49:35 genone Exp $
+
+  05 Mar 2007; Marius Mauch <genone@gentoo.org> pyclimate-1.2.1-r1.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.1-r1.ebuild,v 1.7 2005/08/26 12:50:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.1-r1.ebuild,v 1.8 2007/03/05 02:49:35 genone Exp $
 
 inherit eutils distutils
 
@@ -41,11 +41,11 @@ src_install() {
 pkg_postinst() {
 	python_version
 	python_mod_optimize /usr/lib/python${PYVER}/site-packages/pyclimate
-	einfo
-	einfo "Try the test script in /usr/share/${PF}/test."
-	einfo "See the examples in /usr/share/${PF}/examples."
-	einfo "Read the doc in /usr/share/doc/${PF}."
-	einfo
+	elog
+	elog "Try the test script in /usr/share/${PF}/test."
+	elog "See the examples in /usr/share/${PF}/examples."
+	elog "Read the doc in /usr/share/doc/${PF}."
+	elog
 }
 
 pkg_postrm() {
