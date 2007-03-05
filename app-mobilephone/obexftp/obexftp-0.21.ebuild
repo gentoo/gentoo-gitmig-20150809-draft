@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.8 2007/01/25 07:57:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.9 2007/03/05 10:30:53 mrness Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit eutils perl-module flag-o-matic autotools
 
@@ -32,7 +34,7 @@ src_unpack() {
 	use nls || epatch "${FILESDIR}/${P}-no_iconv.patch"
 
 	cd "${S}"
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {
