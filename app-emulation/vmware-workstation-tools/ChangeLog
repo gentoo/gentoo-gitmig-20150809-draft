@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.18 2007/02/12 23:24:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.19 2007/03/05 09:32:14 ikelos Exp $
+
+  05 Mar 2007; Mike Auty <ikelos@gentoo.org>
+  vmware-workstation-tools-5.5.2.ebuild:
+  Bump vmware-any-any to 108.
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   files/digest-vmware-workstation-tools-4.5.3-r1, Manifest:
