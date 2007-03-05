@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/glipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.4 2007/01/09 20:53:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.5 2007/03/05 22:01:57 swegener Exp $
+
+*glipper-0.95.1-r1 (05 Mar 2007)
+
+  05 Mar 2007; Sven Wegener <swegener@gentoo.org> +glipper-0.95.1-r1.ebuild:
+  Add support for the gnome USE flag, thanks to Oliver Schinagl and Jakub Moc
+  in bug #158590.
 
   09 Jan 2007; Sven Wegener <swegener@gentoo.org> glipper-0.95.1.ebuild:
   Add proper autotoold dependency for bug #158535.
