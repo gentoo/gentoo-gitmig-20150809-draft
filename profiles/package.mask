@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6915 2007/03/05 15:21:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6916 2007/03/05 16:11:50 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1194,10 +1194,6 @@ dev-lisp/cl-blog
 # issues
 net-misc/zsync
 
-# Karl Trygve Kalleberg <karltk@gentoo.org> (23 Jul 2005)
-# Not available to the general public
-=dev-lang/icc-9.0.023
-
 # <grobian@gentoo.org> (26 Mar 2006)
 # ViewPDF is not maintained anymore.  It is replaced by Vindaloo.
 # However, Vindaloo needs PopplerKit, which doesn't compile.
@@ -1232,16 +1228,6 @@ media-video/dirac
 # 9/10 times, it'll work, the other time it'll either segfault,
 # or emit a syntax error in /etc/auditd.rules .. *hrmph*
 =sys-process/audit-0.9*
-
-# Danny van Dyk <kugelfang@gentoo.org> (27 May 2005)
-# Needs some testing and love before going gold
-=dev-lang/ifc-8.1*
-
-# Danny van Dyk <kugelfang@gentoo.org> (11 May 2005)
-# Masked and scheduled for removal. Won't be removed before new versions hit
-# the the tree
-<dev-lang/icc-7.1.006
-<dev-lang/ifc-7.0.064-r1
 
 # Sven Wegener <swegener@gentoo.org> (05 May 2005)
 # Development versions, without this mask users will not get the upstream
