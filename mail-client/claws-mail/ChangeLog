@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.17 2007/03/02 19:32:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.18 2007/03/05 22:52:20 yoswink Exp $
+
+  05 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  claws-mail-2.6.1.ebuild:
+  Stable on alpha wrt bug #163611
 
   02 Mar 2007; nixnut <nixnut@gentoo.org> claws-mail-2.6.1.ebuild:
   Stable on ppc wrt bug 163611
