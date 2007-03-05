@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.14 2006/09/14 20:49:14 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.15 2007/03/05 11:07:52 anant Exp $
+
+  05 Mar 2007; <anant@gentoo.org> -doc++-3.4.10.ebuild:
+  Remove obsolete doc++ ebuild. Closes bug #150371
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   doc++-3.4.10-r1.ebuild:
