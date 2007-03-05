@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2647 2007/03/05 17:05:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2648 2007/03/05 18:07:01 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1047,6 +1047,7 @@ media-tv/zapping:vdr - Enable Real Time Encoding support (librte)
 media-tv/zapping:zvbi - Enable VBI Decoding Library
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/cinelerra-cvs:css - Enable support for encrypted files through libmpeg3
+media-video/dvd-slideshow:themes - Install theme pack 
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/dxr3player:dxr3 - Support for DXR3 mpeg accelleration cards
