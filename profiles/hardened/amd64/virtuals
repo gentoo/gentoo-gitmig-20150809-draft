@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/virtuals,v 1.11 2005/10/06 03:25:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/virtuals,v 1.12 2007/03/05 17:10:36 phreak Exp $
 
-virtual/alsa            sys-kernel/hardened-sources
-virtual/bootloader	sys-boot/grub-static
-virtual/os-headers	sys-kernel/linux-headers
-virtual/dev-manager	sys-fs/devfsd
+virtual/alsa			sys-kernel/hardened-sources
+virtual/bootloader		sys-boot/grub-static
+virtual/os-headers		sys-kernel/linux-headers
+virtual/dev-manager		sys-fs/udev
