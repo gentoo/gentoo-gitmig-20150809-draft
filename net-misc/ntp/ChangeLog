@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.97 2007/03/06 08:52:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.98 2007/03/06 14:44:30 redhatter Exp $
+
+  06 Mar 2007; Stuart Longland <redhatter@gentoo.org> ntp-4.2.4-r1.ebuild:
+  Tested and working on MIPS.  Marked stable as per bug #169078
 
   06 Mar 2007; Markus Rothe <corsair@gentoo.org> ntp-4.2.4-r1.ebuild:
   Stable on ppc64; bug #169078
