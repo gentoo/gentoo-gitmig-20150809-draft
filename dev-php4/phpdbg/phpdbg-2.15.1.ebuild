@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/phpdbg-2.11.32.ebuild,v 1.6 2007/01/28 06:36:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/phpdbg-2.15.1.ebuild,v 1.1 2007/03/06 21:57:37 chtekk Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_INI="yes"
@@ -8,23 +8,27 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-source-r1
 
-KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+
 DESCRIPTION="A PHP debugger useable with some editors like phpedit."
-SRC_URI="mirror://sourceforge/dbg2/dbg-${PV}${PL}-src.tar.gz"
+SRC_URI="mirror://sourceforge/dbg2/dbg-${PV}.tar.gz"
 HOMEPAGE="http://dd.cron.ru/dbg/"
 LICENSE="dbgphp"
 SLOT="0"
 IUSE=""
 
-S="${WORKDIR}/dbg-${PV}${PL}"
+DEPEND=""
+RDEPEND=""
+
+S="${WORKDIR}/dbg-${PV}"
 
 need_php_by_category
 
 pkg_setup() {
 	has_php
 
-	# phpdbg does not work with Zend Thread Safety (ZTS)
-	# so abort if we are using PHP compiled with ZTS.
+	# phpdbg does not work with Zend Thread Safety (ZTS),
+	# so abort if we're using PHP compiled with ZTS.
 	if has_zts ; then
 		eerror "phpdbg doesn't work with a ZTS enabled PHP."
 		eerror "Please disable ZTS by turning the 'threads'"
@@ -34,8 +38,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	has_php
-
 	my_conf="--enable-dbg=shared --with-dbg-profiler"
 	php-ext-source-r1_src_compile
 }
@@ -43,16 +45,8 @@ src_compile() {
 src_install() {
 	php-ext-source-r1_src_install
 	dodoc-php AUTHORS COPYING INSTALL
+
 	php-ext-base-r1_addtoinifiles "[Debugger]"
 	php-ext-base-r1_addtoinifiles "debugger.enabled" "on"
 	php-ext-base-r1_addtoinifiles "debugger.profiler_enabled" "on"
-}
-
-pkg_postinst() {
-	elog "Please reload Apache to activate the changes."
-}
-
-pkg_postrm() {
-	elog "You need to remove all lines referring to the debugger, and"
-	elog "extension=dbg.so. Please reload Apache to activate the changes."
 }
