@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/pecl-filter-0.11.0.ebuild,v 1.4 2007/03/06 06:29:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/pecl-filter-0.11.0.ebuild,v 1.5 2007/03/06 08:26:25 corsair Exp $
 
 PHP_EXT_NAME="filter"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 
 DESCRIPTION="Extension for safely dealing with input parameters."
 LICENSE="PHP"
