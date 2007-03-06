@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.33 2007/02/11 09:38:44 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.34 2007/03/06 21:33:15 drizzt Exp $
+
+  06 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> ktorrent-2.1.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Emanuele A. Bagnaschi for reporting wrt bug #165072
 
   11 Feb 2007; Ioannis Aslanidis <deathwing00@gentoo.org> ChangeLog:
   Manifest regenerated.
