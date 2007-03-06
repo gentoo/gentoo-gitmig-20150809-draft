@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.1.040.ebuild,v 1.1 2006/11/16 06:26:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.1.040.ebuild,v 1.2 2007/03/06 17:00:34 opfer Exp $
 
 inherit rpm versionator
 
@@ -10,7 +10,7 @@ MINOR=$(get_version_component_range 2 ${PV})
 DESCRIPTION="Intel Fortran Compiler for Linux"
 HOMEPAGE="http://www.intel.com/software/products/compilers/flin/"
 IUSE=""
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 x86"
 LICENSE="ifc-9.0"
 RESTRICT="nostrip fetch"
 SLOT="${MAJOR}.${MINOR}"
