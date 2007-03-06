@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/kpowersave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.13 2007/02/20 14:38:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.14 2007/03/06 22:15:16 genstef Exp $
+
+  06 Mar 2007; <genstef@gentoo.org> -kpowersave-0.6.2.ebuild,
+  kpowersave-0.7.2.ebuild:
+  Do not depend on unsermake
 
   20 Feb 2007; Raúl Porcel <armin76@gentoo.org> kpowersave-0.7.2.ebuild:
   back to ~arch, bug 167596
