@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/libXrandr-1.2.0-r1.ebuild,v 1.1 2007/02/21 00:51:35 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/libXrandr-1.2.1.ebuild,v 1.1 2007/03/06 04:33:22 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # SNAPSHOT="yes"
@@ -18,5 +18,3 @@ RDEPEND="x11-libs/libX11
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
 	x11-proto/renderproto"
-
-PATCHES="${FILESDIR}/${P}-delete-keyword-usage.patch"
