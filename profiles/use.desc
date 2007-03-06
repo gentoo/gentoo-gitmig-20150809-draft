@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.341 2007/03/04 10:23:42 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.342 2007/03/06 01:47:23 chtekk Exp $
 
 # Keep them sorted
 
@@ -60,7 +60,6 @@ cups - Add support for CUPS (Common Unix Printing System)
 curl - Adds support for client-side URL transfer library
 curlwrappers - Adds support for using curl in streams
 db2 - Enables support for IBM DB2 database server
-dba - Enables dbm-compatible layers
 dbase - Adds support for dbase file format
 dbm - Adds support for generic DBM databases.
 dbmaker - Adds support for dbmaker database server
@@ -69,7 +68,6 @@ dbx - Adds database abstraction layer
 debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml .
 dedicated - Adds support for dedicated game servers (some packages do not provide clients and servers at the same time)
 dga - Adds DGA Support (Xfree86) (DGA=Direct Graphic Access)
-dio - Adds direct i/o support
 directfb - Adds support for DirectFB layer (library for FB devices)
 doc - Adds extra documentation (API, Javadoc, etc)
 dri - Enable direct rendering: used for accelerated 3D and some 2D, like DMA
@@ -135,7 +133,6 @@ gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for the guile Scheme interpreter
 hal - Enable Hardware Abstraction Layer (HAL) support
 hardened - activate default security enhancements for toolchain (gcc, glibc, binutils)
-hardenedphp - include the hardened php security patch for the php group of ebuilds
 howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
 hyperwave-api - Adds support for Hyperwave document storage system
 ibm - Add support for IBM ppc64 specific systems
@@ -149,7 +146,6 @@ imagemagick - Enables support for Imagemagick (image converter)
 imap - Adds support for IMAP (Internet Mail Application Protocol)
 imlib - Adds support for imlib, an image loading and rendering library
 informix - Adds support for Informix database
-ingres - Adds support for Ingres database
 inifile - Adds dbm support for .ini files
 innodb - Adds innodb support for mySQL (transaction support)
 interbase - Adds support for Interbase database
@@ -218,7 +214,6 @@ mp3 - Add support for reading mp3 files
 mpeg - Adds libmpeg3 support to various packages.
 mpi - Adds MPI (Message Passing Interface) layer to the apps that support it.
 mplayer - Enable mplayer support for playback or encoding
-msession - Adds support for msession daemon
 msn - Enable MSN Messenger IM protocol support
 msql - Adds support for the MSQL database server
 mssql - Adds support for Microsoft SQL Server database
