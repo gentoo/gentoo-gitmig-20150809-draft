@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.5.9.ebuild,v 1.2 2007/01/21 08:10:22 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.5.9.ebuild,v 1.3 2007/03/06 10:22:38 rbrown Exp $
 
-RUBY_BUG_145222=yes
 inherit db-use ruby
 
 MY_P="${P/ruby-}"
