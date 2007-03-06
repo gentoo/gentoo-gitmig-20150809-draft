@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.10 2007/03/05 22:21:33 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.11 2007/03/06 08:50:50 corsair Exp $
+
+  06 Mar 2007; Markus Rothe <corsair@gentoo.org> mirage-0.8.3.ebuild:
+  Stable on ppc64; bug #169056
 
   05 Mar 2007; David Shakaryan <omp@gentoo.org> -mirage-0.8.2.ebuild:
   Remove older version.
