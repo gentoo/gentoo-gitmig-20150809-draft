@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.155 2007/03/06 19:20:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.156 2007/03/06 19:52:55 killerfox Exp $
+
+  06 Mar 2007; René Nussbaumer <killerfox@gentoo.org> php-5.1.6-r11.ebuild:
+  Stable on hppa. See bug #153911.
 
   06 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> php-4.4.6.ebuild,
   php-5.1.6-r11.ebuild, php-5.2.1-r3.ebuild:
