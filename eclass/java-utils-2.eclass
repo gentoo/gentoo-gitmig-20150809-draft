@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.64 2007/03/05 22:56:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.65 2007/03/06 12:14:49 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1802,9 +1802,9 @@ java-pkg_init() {
 
 	# People do all kinds of weird things.
 	# http://forums.gentoo.org/viewtopic-p-3943166.html
-	local silense="${SILENCE_JAVA_OPTIONS_WARNING}"
+	local silence="${SILENCE_JAVA_OPTIONS_WARNING}"
 	local accept="${I_WANT_GLOBAL_JAVA_OPTIONS}"
-	if [[ -n ${_JAVA_OPTIONS} && -z ${accept} && -z ${silense} ]]; then
+	if [[ -n ${_JAVA_OPTIONS} && -z ${accept} && -z ${silence} ]]; then
 		ewarn "_JAVA_OPTIONS changes what java -version outputs at least for"
 		ewarn "sun-jdk vms and and as such break configure scripts that"
 		ewarn "use it (for example app-office/openoffice) so we filter it out."
