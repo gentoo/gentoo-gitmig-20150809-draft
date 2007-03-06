@@ -1,0 +1,14 @@
+this should really be rewritten to invoke the compiler driver (gcc) rather than
+the linker (ld) ...
+
+--- purgatory/Makefile
++++ purgatory/Makefile
+@@ -59,7 +59,7 @@
+ 
+ $(PURGATORY): $(PURGATORY_OBJS) $(UTIL_LIB)
+ 	$(MKDIR) -p $(@D)
+-	$(LD) $(LDFLAGS) $(EXTRA_LDFLAGS) --no-undefined -e purgatory_start -r -o $@ $(PURGATORY_OBJS) $(UTIL_LIB)
++	$(LD) $(EXTRA_LDFLAGS) --no-undefined -e purgatory_start -r -o $@ $(PURGATORY_OBJS) $(UTIL_LIB)
+ 
+ echo::
+ 	@echo "PURGATORY_C_SRCS $(PURGATORY_C_SRCS)"
