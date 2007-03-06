@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/xcache-1.2.0.ebuild,v 1.1 2007/03/06 14:24:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/xcache-1.2.0.ebuild,v 1.2 2007/03/06 14:53:06 chtekk Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -17,8 +17,8 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="!dev-php5/pecl-apc
-		!dev-php5/eaccelerator"
+DEPEND="!dev-php4/eaccelerator
+		!dev-php4/pecl-apc"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -75,5 +75,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "Decompiler.class.php and the admin/ directory shipped with this"
-	elog "release were installed into /usr/share/php4/xcache/."
+	elog "release were installed into ${ROOT}usr/share/php4/xcache/."
 }
