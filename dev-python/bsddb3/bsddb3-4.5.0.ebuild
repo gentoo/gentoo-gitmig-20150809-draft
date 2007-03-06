@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.5.0.ebuild,v 1.2 2007/03/04 18:29:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.5.0.ebuild,v 1.3 2007/03/06 10:49:17 blubb Exp $
 
 NEED_PYTHON=2.1
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pybsddb/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND=">=sys-libs/db-4.0"
