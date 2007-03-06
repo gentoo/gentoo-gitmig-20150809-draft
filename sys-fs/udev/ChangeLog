@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.271 2007/03/05 18:14:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.272 2007/03/06 15:00:49 zzam Exp $
+
+*udev-106-r1 (06 Mar 2007)
+
+  06 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-106-r1, +udev-106-r1.ebuild:
+  Fixed floppy rule, fix calling modprobe.sh for pnp devices. Rule speedup by
+  not calling modprobe if already loaded.
 
 *udev-106 (05 Mar 2007)
 
