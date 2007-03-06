@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.2-r1.ebuild,v 1.1 2006/12/16 08:51:12 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.6.ebuild,v 1.1 2007/03/06 15:05:21 genstef Exp $
 
 inherit eutils games
 
@@ -29,11 +29,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	unpack ./*.gz
-
-	sed -i 's:xmoto.free.fr:xmoto.tuxfamily.org:' src/WWW.h \
-		|| die "sed WWW.h failed"
-
 	sed -i 's:$(localedir):/usr/share/locale:' po/Makefile.in.in \
 		|| die "sed Makefile.in.in failed"
 }
@@ -44,13 +39,12 @@ src_compile() {
 		--with-localesdir=/usr/share/locale \
 		$(use_enable nls) \
 		|| die
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	doman xmoto{,-edit}.6
 	dodoc README TODO ChangeLog
 
 	doicon extra/xmoto.xpm
