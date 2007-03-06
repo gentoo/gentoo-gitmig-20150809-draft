@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.16 2007/03/05 15:41:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.17 2007/03/06 01:59:15 mr_bones_ Exp $
+
+  06 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> +doc++-3.4.10.ebuild,
+  doc++-3.4.10-r1.ebuild:
+  restore old ebuild and restore dropped keywords to fix dep breakage.
 
   05 Mar 2007; Raúl Porcel <armin76@gentoo.org> doc++-3.4.10-r1.ebuild:
   x86 stable wrt bug 169429
