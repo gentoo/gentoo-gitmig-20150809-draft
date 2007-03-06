@@ -1,5 +1,42 @@
---- libflash-0.4.10/lib/matrix.h.old	2006-01-11 21:23:55.000000000 +0100
-+++ libflash-0.4.10/lib/matrix.h	2006-01-11 21:24:19.000000000 +0100
+diff -Naur libflash-0.4.10-orig/lib/graphic16.h libflash-0.4.10/lib/graphic16.h
+--- libflash-0.4.10-orig/lib/graphic16.h	2001-04-22 22:18:55.000000000 -0600
++++ libflash-0.4.10/lib/graphic16.h	2007-03-05 17:53:38.000000000 -0600
+@@ -24,7 +24,7 @@
+ 
+ class GraphicDevice16: public GraphicDevice {
+ private:
+-	long GraphicDevice16::allocColor(Color color);
++	long allocColor(Color color);
+ 
+ public:
+ 	GraphicDevice16(FlashDisplay *fd);
+diff -Naur libflash-0.4.10-orig/lib/graphic24.h libflash-0.4.10/lib/graphic24.h
+--- libflash-0.4.10-orig/lib/graphic24.h	2001-04-22 22:18:55.000000000 -0600
++++ libflash-0.4.10/lib/graphic24.h	2007-03-05 17:53:38.000000000 -0600
+@@ -24,7 +24,7 @@
+ 
+ class GraphicDevice24: public GraphicDevice {
+ private:
+-	long GraphicDevice24::allocColor(Color color);
++	long allocColor(Color color);
+ 
+ public:
+ 	GraphicDevice24(FlashDisplay *fd);
+diff -Naur libflash-0.4.10-orig/lib/graphic32.h libflash-0.4.10/lib/graphic32.h
+--- libflash-0.4.10-orig/lib/graphic32.h	2001-04-22 22:18:55.000000000 -0600
++++ libflash-0.4.10/lib/graphic32.h	2007-03-05 17:53:38.000000000 -0600
+@@ -24,7 +24,7 @@
+ 
+ class GraphicDevice32: public GraphicDevice {
+ private:
+-	long GraphicDevice32::allocColor(Color color);
++	long allocColor(Color color);
+ 
+ public:
+ 	GraphicDevice32(FlashDisplay *fd);
+diff -Naur libflash-0.4.10-orig/lib/matrix.h libflash-0.4.10/lib/matrix.h
+--- libflash-0.4.10-orig/lib/matrix.h	2001-04-22 22:18:54.000000000 -0600
++++ libflash-0.4.10/lib/matrix.h	2007-03-05 17:53:38.000000000 -0600
 @@ -33,13 +33,13 @@
  #endif
  
@@ -16,36 +53,16 @@
  	{
  		return (long) (x*c+y*d+ty);
  	};
---- libflash-0.4.10/lib/graphic16.h.old	2006-01-11 21:24:39.000000000 +0100
-+++ libflash-0.4.10/lib/graphic16.h	2006-01-11 21:24:52.000000000 +0100
-@@ -24,7 +24,7 @@
+diff -Naur libflash-0.4.10-orig/lib/swf.h libflash-0.4.10/lib/swf.h
+--- libflash-0.4.10-orig/lib/swf.h	2001-04-22 22:18:54.000000000 -0600
++++ libflash-0.4.10/lib/swf.h	2007-03-05 17:54:57.000000000 -0600
+@@ -196,7 +196,9 @@
+ #define true 1
+ #endif
  
- class GraphicDevice16: public GraphicDevice {
- private:
--	long GraphicDevice16::allocColor(Color color);
-+	long allocColor(Color color);
++extern "C" {
+ extern int shape_size,shape_nb,shaperecord_size,shaperecord_nb,style_size,style_nb;
++};
  
- public:
- 	GraphicDevice16(FlashDisplay *fd);
---- libflash-0.4.10/lib/graphic24.h.old	2006-01-11 21:25:06.000000000 +0100
-+++ libflash-0.4.10/lib/graphic24.h	2006-01-11 21:25:39.000000000 +0100
-@@ -24,7 +24,7 @@
+ typedef void (*ScanLineFunc)(void *id, long y, long start, long end);
  
- class GraphicDevice24: public GraphicDevice {
- private:
--	long GraphicDevice24::allocColor(Color color);
-+	long allocColor(Color color);
- 
- public:
- 	GraphicDevice24(FlashDisplay *fd);
---- libflash-0.4.10/lib/graphic32.h.old	2006-01-11 21:26:01.000000000 +0100
-+++ libflash-0.4.10/lib/graphic32.h	2006-01-11 21:26:40.000000000 +0100
-@@ -24,7 +24,7 @@
- 
- class GraphicDevice32: public GraphicDevice {
- private:
--	long GraphicDevice32::allocColor(Color color);
-+	long allocColor(Color color);
- 
- public:
- 	GraphicDevice32(FlashDisplay *fd);
