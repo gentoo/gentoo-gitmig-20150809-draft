@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3-r1.ebuild,v 1.1 2007/03/04 22:40:39 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3-r1.ebuild,v 1.2 2007/03/06 21:08:20 chtekk Exp $
 
 PHP_EXT_NAME="sqlite"
 PHP_EXT_PECL_PKG="SQLite"
@@ -22,7 +22,6 @@ RDEPEND="${DEPEND}"
 need_php_by_category
 
 src_compile() {
-	has_php
 	my_conf="--with-sqlite=/usr"
 	php-ext-pecl-r1_src_compile
 }
