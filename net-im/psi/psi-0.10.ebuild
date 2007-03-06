@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.13 2006/11/13 15:08:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.14 2007/03/06 00:16:31 troll Exp $
 
 inherit eutils qt3
 
@@ -17,7 +17,8 @@ HOMEPAGE="http://psi-im.org/"
 # polish translation contains special texts for patches from extras-version
 HTTPMIRR="http://vivid.dat.pl/psi"
 SRC_URI="mirror://sourceforge/psi/${P}.tar.bz2
-		extras? ( ${HTTPMIRR}/gentoo-psi-0.10.tar.bz2 )
+		extras? ( ${HTTPMIRR}/gentoo-psi-0.10.tar.bz2
+			insecure-patches? ( ${HTTPMIRR}/psi-extras-insecure.tar.bz2 ) )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-0.9.3.tar.bz2 )
 		linguas_bg? ( ${HTTPMIRR}/psi_bg-0.10-a.tar.bz2 )
 		linguas_ca? ( ${HTTPMIRR}/psi_ca-0.9.3.tar.bz2 )
