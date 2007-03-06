@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md4sum
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/ChangeLog,v 1.1 2006/08/21 16:08:48 hanno Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/ChangeLog,v 1.2 2007/03/06 19:03:13 peper Exp $
+
+  06 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> md4sum-0.02.01.ebuild:
+  Add ~amd64 wrt bug #169015.
 
 *md4sum-0.02.01 (21 Aug 2006)
 
