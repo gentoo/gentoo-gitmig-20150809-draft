@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.25 2007/01/20 19:21:32 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.26 2007/03/06 06:52:17 keri Exp $
+
+*qu-prolog-7.4-r1 (06 Mar 2007)
+
+  06 Mar 2007; keri <keri@gentoo.org> +qu-prolog-7.4-r1.ebuild:
+  Add examples to USE
 
   20 Jan 2007; keri <keri@gentoo.org> qu-prolog-7.4.ebuild:
   Remove redundant eclass calls.
