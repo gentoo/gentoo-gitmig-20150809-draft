@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.9 2007/03/06 08:30:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.10 2007/03/06 08:33:06 opfer Exp $
+
+  06 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  Macaulay2-0.9.95-r1.ebuild:
+  correct site file handling
 
 *Macaulay2-0.9.95-r1 (06 Mar 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.1 2007/03/06 08:30:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.2 2007/03/06 08:33:06 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -27,7 +27,7 @@ DEPEND="sys-libs/gdbm
 	sys-libs/ncurses
 	emacs? ( virtual/emacs )"
 
-SITEFILE=70Macaulay2.el
+SITEFILE=70Macaulay2-gentoo.el
 
 src_unpack() {
 	unpack ${A}
