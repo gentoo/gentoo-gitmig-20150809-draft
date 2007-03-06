@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.62 2007/03/06 18:23:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.63 2007/03/06 18:31:03 corsair Exp $
+
+  06 Mar 2007; Markus Rothe <corsair@gentoo.org> timezone-data-2007c.ebuild:
+  Stable on ppc64; bug #169640
 
   06 Mar 2007; Andrej Kacian <ticho@gentoo.org> timezone-data-2007c.ebuild:
   Stable on x86, bug #169640.
