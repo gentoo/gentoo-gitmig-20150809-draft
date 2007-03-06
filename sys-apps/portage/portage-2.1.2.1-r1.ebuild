@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.1.ebuild,v 1.1 2007/03/04 03:10:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.1-r1.ebuild,v 1.1 2007/03/06 21:23:16 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -38,7 +38,7 @@ SRC_URI="mirror://gentoo/${PN}-${PV%.*}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER=${PV}
+PATCHVER=${PVR}
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
