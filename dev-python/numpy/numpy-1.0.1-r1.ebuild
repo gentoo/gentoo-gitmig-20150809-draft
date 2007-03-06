@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.3 2007/03/05 10:39:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.4 2007/03/06 10:06:04 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -30,15 +30,17 @@ FORTRAN="g77 gfortran"
 
 numpy_configure() {
 	local mycblas
-	for d in $(eselect cblas show); do mycblas=${d}; done
-	if [[ -z "${mycblas/reference/}" ]] && [[ -z "${mycblas/atlas/}" ]]; then
-		ewarn "You need to set cblas to atlas or reference. Do:"
-		ewarn "   eselect cblas set <impl>"
-		ewarn "where <impl> is atlas, threaded-atlas or reference"
-		die "setup failed"
+	if use lapack; then
+		for d in $(eselect cblas show); do mycblas=${d}; done
+		if [[ -z "${mycblas/reference/}" ]] && [[ -z "${mycblas/atlas/}" ]]; then
+			ewarn "You need to set cblas to atlas or reference. Do:"
+			ewarn "   eselect cblas set <impl>"
+			ewarn "where <impl> is atlas, threaded-atlas or reference"
+			die "setup failed"
+		fi
 	fi
-
-	[[ -z "${FFLAGS}" ]] && FFLAGS="${CFLAGS}"
+	[[ -z "${F77FLAGS}" ]] && F77FLAGS="${CFLAGS}"
+	[[ -z "${FFLAGS}" ]] && FFLAGS="${F77FLAGS}"
 
 	# remove default values
 	echo "# gentoo config" > site.cfg
