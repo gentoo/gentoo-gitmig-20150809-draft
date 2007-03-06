@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/elfio
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfio/ChangeLog,v 1.1 2007/03/06 16:08:07 drizzt Exp $
+
+*elfio-1.0.3 (06 Mar 2007)
+
+  06 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/elfio-1.0.3-shared.patch, +metadata.xml, +elfio-1.0.3.ebuild:
+  New ebuild, thanks to MATSUU Takuto wrt bug #127026
+
