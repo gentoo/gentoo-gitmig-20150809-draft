@@ -1,0 +1,84 @@
+diff -ur silc-server-1.0.2.orig/apps/silcd/command.c silc-server-1.0.2/apps/silcd/command.c
+--- silc-server-1.0.2.orig/apps/silcd/command.c	2007-03-06 11:21:40.000000000 +0100
++++ silc-server-1.0.2/apps/silcd/command.c	2007-03-06 13:33:28.000000000 +0100
+@@ -2441,10 +2441,22 @@
+ 	  channel = silc_server_create_new_channel(server, server->id, cipher,
+ 						   hmac, channel_name, TRUE);
+ 	  if (!channel) {
+-	    silc_server_command_send_status_data(
+-				  cmd, SILC_COMMAND_JOIN,
+-				  SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
+-				  0, 2, cipher, strlen(cipher));
++	    if (cipher) {
++		silc_server_command_send_status_data(
++				      cmd, SILC_COMMAND_JOIN,
++				      SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
++				      0, 2, cipher, strlen(cipher));
++	    } else if (hmac) {
++		silc_server_command_send_status_data(
++				      cmd, SILC_COMMAND_JOIN,
++				      SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
++				      0, 2, hmac, strlen(hmac));
++	    } else {
++		silc_server_command_send_status_reply(
++				      cmd, SILC_COMMAND_JOIN,
++				      SILC_STATUS_ERR_RESOURCE_LIMIT,
++				      0);
++	    }
+ 	    silc_free(client_id);
+ 	    goto out;
+ 	  }
+@@ -2505,10 +2517,22 @@
+ 	  channel = silc_server_create_new_channel(server, server->id, cipher,
+ 						   hmac, channel_name, TRUE);
+ 	  if (!channel) {
+-	    silc_server_command_send_status_data(
+-				       cmd, SILC_COMMAND_JOIN,
+-				       SILC_STATUS_ERR_UNKNOWN_ALGORITHM, 0,
+-				       2, cipher, strlen(cipher));
++	    if (cipher) {
++		silc_server_command_send_status_data(
++				      cmd, SILC_COMMAND_JOIN,
++				      SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
++				      0, 2, cipher, strlen(cipher));
++	    } else if (hmac) {
++		silc_server_command_send_status_data(
++				      cmd, SILC_COMMAND_JOIN,
++				      SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
++				      0, 2, hmac, strlen(hmac));
++	    } else {
++		silc_server_command_send_status_reply(
++				      cmd, SILC_COMMAND_JOIN,
++				      SILC_STATUS_ERR_RESOURCE_LIMIT,
++				      0);
++	    }
+ 	    silc_free(client_id);
+ 	    goto out;
+ 	  }
+@@ -2541,10 +2565,22 @@
+ 	channel = silc_server_create_new_channel(server, server->id, cipher,
+ 						 hmac, channel_name, TRUE);
+ 	if (!channel) {
+-	  silc_server_command_send_status_data(
+-				       cmd, SILC_COMMAND_JOIN,
+-				       SILC_STATUS_ERR_UNKNOWN_ALGORITHM, 0,
+-				       2, cipher, strlen(cipher));
++	  if (cipher) {
++	      silc_server_command_send_status_data(
++				cmd, SILC_COMMAND_JOIN,
++				SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
++				0, 2, cipher, strlen(cipher));
++	  } else if (hmac) {
++	      silc_server_command_send_status_data(
++				cmd, SILC_COMMAND_JOIN,
++				SILC_STATUS_ERR_UNKNOWN_ALGORITHM,
++				0, 2, hmac, strlen(hmac));
++	  } else {
++	      silc_server_command_send_status_reply(
++				cmd, SILC_COMMAND_JOIN,
++				SILC_STATUS_ERR_RESOURCE_LIMIT,
++				0);
++	  }
+ 	  silc_free(client_id);
+ 	  goto out;
+ 	}
