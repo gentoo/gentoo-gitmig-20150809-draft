@@ -1,24 +1,30 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/xdebug-2.0.0_rc1.ebuild,v 1.4 2006/10/27 19:04:26 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/xdebug-2.0.0_rc3.ebuild,v 1.1 2007/03/06 22:52:25 chtekk Exp $
 
-PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="xdebug"
+PHP_EXT_INI="yes"
+PHP_EXT_ZENDEXT="yes"
 
 inherit php-ext-source-r1
 
-DESCRIPTION="A PHP Debugging and Profiling extension."
-HOMEPAGE="http://www.xdebug.org/"
-SLOT="0"
-MY_P="${P/_/}"
-SRC_URI="http://pecl.php.net/get/${MY_P}.tgz"
-S="${WORKDIR}/xdebug-2.0.0RC1"
-LICENSE="Xdebug"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="${RDEPEND}
-	!dev-php5/ZendOptimizer
-	dev-php/xdebug-client"
+MY_PV="${PV/_/}"
+MY_PV="${MY_PV/rc/RC}"
+
+DESCRIPTION="A PHP Debugging and Profiling extension."
+HOMEPAGE="http://www.xdebug.org/"
+SRC_URI="http://pecl.php.net/get/${PN}-${MY_PV}.tgz"
+LICENSE="Xdebug"
+SLOT="0"
+IUSE=""
+
+S="${WORKDIR}/${PN}-${MY_PV}"
+
+DEPEND="!dev-php4/ZendOptimizer"
+RDEPEND="${DEPEND}
+		dev-php/xdebug-client"
 
 need_php_by_category
 
@@ -66,8 +72,8 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "xdebug.remote_port" '"9000"'
 	php-ext-base-r1_addtoinifiles "xdebug.remote_autostart" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.remote_log" '""'
-	php-ext-base-r1_addtoinifiles "xdebug.allowed_clients" '""'
 	php-ext-base-r1_addtoinifiles "xdebug.idekey" '""'
 	php-ext-base-r1_addtoinifiles "xdebug.var_display_max_data" '"512"'
 	php-ext-base-r1_addtoinifiles "xdebug.var_display_max_depth" '"2"'
+	php-ext-base-r1_addtoinifiles "xdebug.var_display_max_children" '"128"'
 }
