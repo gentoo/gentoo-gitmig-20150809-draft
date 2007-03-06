@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.2 2007/03/06 08:33:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.3 2007/03/06 17:09:09 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -79,7 +79,7 @@ src_install () {
 	use emacs && elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
 
-pkg_postinstall() {
+pkg_postinst() {
 	if use emacs; then
 		elisp-site-regen
 		elog "If you want to set a hot key for Macaulay2 in Emacs add a line similar to"
