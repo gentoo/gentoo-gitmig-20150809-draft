@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.66 2007/03/06 15:28:30 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.67 2007/03/06 16:49:39 rl03 Exp $
+
+  06 Mar 2007; Renat Lumpau <rl03@gentoo.org> -files/postinstall-en.txt,
+  -egroupware-1.0.0.009_p3.ebuild, -egroupware-1.2.104.ebuild,
+  -egroupware-1.2.105.ebuild:
+  Clean out old cruft
 
   06 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org>
   egroupware-1.2.106.ebuild:
