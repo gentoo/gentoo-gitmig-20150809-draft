@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.22 2007/03/05 18:58:30 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.23 2007/03/06 06:18:39 jer Exp $
+
+  06 Mar 2007; Jeroen Roovers <jer@gentoo.org> pecl-zip-1.8.6.ebuild:
+  Stable for HPPA (bug #153911).
 
   05 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-zip-1.8.6.ebuild:
   Keyword on amd64 wrt bug #153911.
