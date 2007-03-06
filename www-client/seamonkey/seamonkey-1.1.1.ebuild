@@ -1,18 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.6 2007/03/03 12:43:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.7 2007/03/06 22:42:12 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PATCH="${PN}-1.1-patches-0.1"
+PATCH="${P}-patches-0.1"
 EMVER="0.94.1"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2
-	http://dev.gentoo.org/~kloeri/dist/${PATCH}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz ) )"
 
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
