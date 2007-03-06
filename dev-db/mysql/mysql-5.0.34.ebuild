@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.34.ebuild,v 1.1 2007/03/04 12:31:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.34.ebuild,v 1.2 2007/03/06 11:43:21 robbat2 Exp $
 
 MY_EXTRAS_VER="20070217"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -358,6 +358,8 @@ src_unpack() {
 	if mysql_check_version_range "4.1 to 5.0.99.99" \
 	&& use berkdb ; then
 		[[ -w "bdb/dist/ltmain.sh" ]] && cp -f "ltmain.sh" "bdb/dist/ltmain.sh"
+		cp -f /usr/share/aclocal/libtool.m4 ${S}/bdb/dist/aclocal/libtool.ac \
+		|| die "Could not copy in libtool.m4"
 		pushd "bdb/dist" \
 		&& sh s_all \
 		|| die "Failed bdb reconfigure" \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.388 2007/03/04 12:31:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.389 2007/03/06 11:43:21 robbat2 Exp $
+
+  06 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.34.ebuild:
+  Bug #167758 - fix to support libtool-1.5.23b.
 
 *mysql-5.0.34 (04 Mar 2007)
 
