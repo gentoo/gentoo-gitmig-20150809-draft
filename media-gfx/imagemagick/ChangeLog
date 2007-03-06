@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.213 2007/02/15 17:57:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.214 2007/03/06 23:54:10 jer Exp $
+
+*imagemagick-6.3.0.5-r1 (06 Mar 2007)
+
+  06 Mar 2007; Jeroen Roovers <jer@gentoo.org>
+  +files/imagemagick-6.3.0.5-parallel-build.patch,
+  +imagemagick-6.3.0.5-r1.ebuild:
+  Sven's patches from bug #155804. Undoing my own previous changes because of
+  the loud sucking noises.'
 
   15 Feb 2007; Jeroen Roovers <jer@gentoo.org>
   +files/imagemagick-6.3.0.5-no-lMagick.patch, imagemagick-6.3.0.5.ebuild:
