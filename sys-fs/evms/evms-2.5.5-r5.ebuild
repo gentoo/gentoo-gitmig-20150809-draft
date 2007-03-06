@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.5 2007/02/04 19:16:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.6 2007/03/06 23:17:45 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -46,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-glib_dep.patch"
 	epatch "${FILESDIR}/${P}-ocfs2.patch"
 	epatch "${FILESDIR}/${P}-use_disk_group.patch"
+	epatch "${FILESDIR}/${P}-getpagesize.patch"
 
 	eautoreconf
 }
@@ -125,7 +126,7 @@ src_test() {
 		einfo "  dd if=/dev/zero of=/tmp/evms_test_file bs=1M count=4096"
 		einfo "- Activate a loop device on this file:"
 		einfo "  losetup /dev/loop0 /tmp/evms_test_file"
-		einfo "- export EVMS_TEST_VOLUME=loop0"
+		einfo "- export EVMS_TEST_VOLUME=loop/0"
 		einfo "The disk has to be at least 4GB!"
 		einfo "To deactivate the loop-device afterwards:"
 		einfo "- losetup -d /dev/loop0"
@@ -148,5 +149,5 @@ src_test() {
 	addwrite /var/lock/evms-engine
 
 	cd "${S}/tests/suite"
-	PATH="${PATH}:/sbin:/${S}/tests" ./run_tests ${EVMS_TEST_VOLUME} || die "tests failed"
+	PATH="${S}/ui/cli:${S}/tests:/sbin:${PATH}" ./run_tests ${EVMS_TEST_VOLUME} || die "tests failed"
 }
