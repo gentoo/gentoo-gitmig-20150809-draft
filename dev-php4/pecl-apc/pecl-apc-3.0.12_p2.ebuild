@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.8 2007/01/28 06:31:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.9 2007/03/06 17:05:32 chtekk Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -10,27 +10,27 @@ PHP_EXT_ZENDEXT="no"
 inherit php-ext-pecl-r1 confutils
 
 KEYWORDS="amd64 ppc ppc64 sparc x86"
-DESCRIPTION="A free, open, and robust framework for caching and optimizing PHP intermediate code."
+
+DESCRIPTION="A free, open, and robust framework for caching and optimizing PHP code."
 LICENSE="PHP"
 SLOT="0"
 IUSE="mmap"
 
-DEPEND="!dev-php4/eaccelerator"
+DEPEND="!dev-php4/eaccelerator !dev-php4/xcache"
 RDEPEND="${DEPEND}"
 
 need_php_by_category
 
 pkg_setup() {
 	has_php
-
 	require_php_sapi_from cgi apache apache2
 }
 
 src_compile() {
 	has_php
 
-	# PECL-APC does not work with Zend Thread Safety (ZTS)
-	# so abort if we are using PHP compiled with ZTS.
+	# PECL-APC does not work with Zend Thread Safety (ZTS),
+	# so abort if we're using PHP compiled with ZTS.
 	if has_zts ; then
 		eerror "PECL-APC doesn't work with a ZTS enabled PHP."
 		eerror "Please disable ZTS by turning the 'threads'"
@@ -73,5 +73,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "The apc.php file shipped with this release of PECL-APC was"
-	elog "installed into /usr/share/php4/apc/."
+	elog "installed into ${ROOT}usr/share/php4/apc/."
 }
