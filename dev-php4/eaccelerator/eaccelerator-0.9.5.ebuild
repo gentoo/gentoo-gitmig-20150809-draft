@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.7 2007/01/28 06:28:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.8 2007/03/06 15:16:35 chtekk Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -11,14 +11,15 @@ PHP_EXT_ZENDEXT="yes"
 inherit php-ext-source-r1
 
 KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+
 DESCRIPTION="A PHP Accelerator & Encoder."
 HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="contentcache debug disassembler session sharedmem"
+IUSE="contentcache debug disassembler inode session sharedmem"
 
-DEPEND="!dev-php4/pecl-apc"
+DEPEND="!dev-php4/pecl-apc !dev-php4/xcache"
 RDEPEND="${DEPEND}"
 
 # Webserver user and group, here for Apache.
@@ -47,6 +48,7 @@ src_compile() {
 	use contentcache && my_conf="${my_conf} --with-eaccelerator-content-caching"
 	use debug && my_conf="${my_conf} --with-eaccelerator-debug"
 	use disassembler && my_conf="${my_conf} --with-eaccelerator-disassembler"
+	! use inode && my_conf="${my_conf} --without-eaccelerator-use-inode"
 	use session && my_conf="${my_conf} --with-eaccelerator-sessions"
 	use sharedmem && my_conf="${my_conf} --with-eaccelerator-shared-memory"
 
@@ -85,18 +87,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_php
-
-	# You only need to restart the webserver if you're using mod_php.
-	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
-		elog
-		elog "You need to restart your Apache webserver to activate eAccelerator."
-		elog
-	fi
-
-	elog
-	elog "Please see the files in ${ROOT}/usr/share/${PN}-php4/ for some examples"
-	elog "and information on how to use the functions that"
+	elog "Please see the files in ${ROOT}usr/share/${PN}-php4/ for some"
+	elog "examples and informations on how to use the functions that"
 	elog "eAccelerator adds to PHP."
-	elog
 }
