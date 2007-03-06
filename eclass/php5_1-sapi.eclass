@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.38 2007/03/05 02:04:03 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.39 2007/03/06 12:46:48 chtekk Exp $
 
 # ========================================================================
 #
@@ -476,13 +476,11 @@ php5_1-sapi_src_compile() {
 		phpconfutils_extension_with		"freetype-dir"	"truetype"		0 "/usr"
 		phpconfutils_extension_with		"t1lib"			"truetype"		0 "/usr"
 		phpconfutils_extension_enable	"gd-jis-conv"	"cjk" 			0
-		phpconfutils_extension_enable	"gd-native-ttf"	"truetype"		0
 		phpconfutils_extension_with 	"gd" 			"gd-external"	1 "/usr"
 	else
 		phpconfutils_extension_with		"freetype-dir"	"truetype"		0 "/usr"
 		phpconfutils_extension_with		"t1lib"			"truetype"		0 "/usr"
 		phpconfutils_extension_enable	"gd-jis-conv"	"cjk"			0
-		phpconfutils_extension_enable	"gd-native-ttf"	"truetype"		0
 		phpconfutils_extension_with		"jpeg-dir"		"gd"			0 "/usr"
 		phpconfutils_extension_with 	"png-dir" 		"gd" 			0 "/usr"
 		phpconfutils_extension_with 	"xpm-dir" 		"xpm" 			0 "/usr/X11R6"
@@ -704,6 +702,9 @@ php5_1-sapi_pkg_postinst() {
 	ewarn "The 'vm-goto' and 'vm-switch' USE flags were also removed,"
 	ewarn "since the alternative VMs aren't really supported upstream."
 	ewarn "Once their state becomes clearer, we'll consider readding them."
+	ewarn "The configure option --enable-gd-native-ttf (enabled by the"
+	ewarn "'truetype' USE flag) was removed at upstreams request,"
+	ewarn "as it's considered old and broken."
 	ewarn "Hardened-PHP was also removed from the PHP 5.1 ebuilds in"
 	ewarn "favour of its successor Suhosin, enable the 'suhosin' USE"
 	ewarn "flag to install it."
