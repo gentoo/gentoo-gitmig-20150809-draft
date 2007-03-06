@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/creole/creole-1.0.1_beta.ebuild,v 1.4 2007/03/06 14:38:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/creole/creole-1.0.1_beta.ebuild,v 1.5 2007/03/06 14:44:46 chtekk Exp $
 
 inherit php-lib-r1
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 MY_P="${PN}-php4-${PV/_/}"
 
 DESCRIPTION="Database abstraction layer for PHP 4."
-HOMEPAGE="http://creole.phpdb.org/trac/wiki"
+HOMEPAGE="http://creole.phpdb.org/trac/wiki/"
 SRC_URI="http://creole.tigris.org/files/documents/996/21587/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
