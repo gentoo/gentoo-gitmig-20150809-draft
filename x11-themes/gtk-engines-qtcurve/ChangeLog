@@ -1,0 +1,8 @@
+# ChangeLog for x11-themes/gtk-engines-qtcurve
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.1 2007/03/06 19:58:59 beandog Exp $
+
+  06 Mar 2007; Steve Dibb <beandog@gentoo.org>
+  gtk-engines-qtcurve-0.46.4.ebuild:
+  drop untested sparc keyword
+
