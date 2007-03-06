@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.372 2007/03/06 20:49:27 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.373 2007/03/06 22:32:10 dsd Exp $
+
+*gentoo-sources-2.6.20-r1 (06 Mar 2007)
+
+  06 Mar 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.20-r1.ebuild:
+  Update to Linux 2.6.20.1. Fix mouse detection issues. Readd sata_promise TX2
+  IDE support. Fix speakup modular build. Fix DVB/cx25840 firmware loading. 3
+  extra sparc64 fixes.
 
 *gentoo-sources-2.6.19-r7 (06 Mar 2007)
 
