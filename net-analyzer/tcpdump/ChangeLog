@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.94 2007/03/05 09:25:25 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.95 2007/03/06 08:43:45 corsair Exp $
+
+  06 Mar 2007; Markus Rothe <corsair@gentoo.org> tcpdump-3.9.5-r2.ebuild:
+  Stable on ppc64; bug #168916
 
   05 Mar 2007; <jrivero@gentoo.org> tcpdump-3.9.5-r2.ebuild:
   Stable on alpha wrt security bug #168916
