@@ -1,0 +1,10 @@
+# ChangeLog for dev-php4/xcache
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.1 2007/03/06 14:24:36 chtekk Exp $
+
+*xcache-1.2.0 (06 Mar 2007)
+
+  06 Mar 2007; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +xcache-1.2.0.ebuild:
+  Add Xcache to PHP4.
+
