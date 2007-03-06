@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.112 2007/03/05 08:04:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.113 2007/03/06 20:13:24 vapier Exp $
+
+  06 Mar 2007; Mike Frysinger <vapier@gentoo.org> graphviz-2.8-r2.ebuild:
+  Drop <media-libs/gd-2.0.34 in favor of tweaking the gd header file on the
+  fly #165460.
 
   05 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/graphviz-2.12-bindings.patch, graphviz-2.12.ebuild:

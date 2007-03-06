@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.14 2007/02/20 16:17:51 vapier Exp $
-
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.15 2007/03/06 20:13:24 vapier Exp $
 
 inherit eutils libtool autotools
 
@@ -37,9 +34,7 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	ruby? ( dev-lang/ruby )
 	X? ( x11-libs/libXaw x11-libs/libXpm )
 	sys-devel/libtool"
-
 DEPEND="${RDEPEND}
-	<media-libs/gd-2.0.34
 	dev-util/pkgconfig
 	tcl? ( dev-lang/swig )
 	tk? ( dev-lang/swig )
@@ -60,6 +55,10 @@ src_unpack() {
 
 	# Make sure SWIG interface is rebuilt
 	touch tclpkg/gv/gv.i
+
+	# Hack around gd issues #165460 ... this is fixed properly in newer graphviz
+	echo '#include <entities.h>' | $(tc-getCPP) -P -dD > entities.h
+	sed -i '1istatic' entities.h
 
 	eautoreconf
 }
