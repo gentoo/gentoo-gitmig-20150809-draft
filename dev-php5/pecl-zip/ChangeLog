@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.23 2007/03/06 06:18:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.24 2007/03/06 08:32:02 corsair Exp $
+
+  06 Mar 2007; Markus Rothe <corsair@gentoo.org> pecl-zip-1.8.6.ebuild:
+  Stable on ppc64; bug #153911
 
   06 Mar 2007; Jeroen Roovers <jer@gentoo.org> pecl-zip-1.8.6.ebuild:
   Stable for HPPA (bug #153911).
