@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r2.ebuild,v 1.6 2007/03/06 03:03:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r2.ebuild,v 1.7 2007/03/06 09:08:09 corsair Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.6"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86"
 IUSE="X svga"
 
 DEPEND="media-libs/libpng
