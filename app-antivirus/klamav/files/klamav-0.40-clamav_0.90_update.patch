@@ -1,0 +1,40 @@
+diff -Naur klamav-0.40-source-orig/klamav-0.40/src/freshklam.cpp klamav-0.40-source/klamav-0.40/src/freshklam.cpp
+--- klamav-0.40-source-orig/klamav-0.40/src/freshklam.cpp	2007-01-02 20:46:37.000000000 +0100
++++ klamav-0.40-source/klamav-0.40/src/freshklam.cpp	2007-02-20 00:09:04.000000000 +0100
+@@ -835,7 +835,9 @@
+     
+ 
+     if (dbdir != dir_combo->url()){
+-        ret = cl_loaddbdir((const char *)dir_combo->url(), &root, &no);
++        //ret = cl_loaddbdir((const char *)dir_combo->url(), &root, &no);
++	 // clamav 0.90 update
++        ret = cl_load((const char *)dir_combo->url(), &root, &no, CL_DB_STDOPT);
+         ////kdDebug() << "ret " << ret << endl;
+         if (no == 0){
+             db = dbdir;
+diff -Naur klamav-0.40-source-orig/klamav-0.40/src/klamav.cpp klamav-0.40-source/klamav-0.40/src/klamav.cpp
+--- klamav-0.40-source-orig/klamav-0.40/src/klamav.cpp	2007-01-02 20:46:37.000000000 +0100
++++ klamav-0.40-source/klamav-0.40/src/klamav.cpp	2007-02-20 00:06:02.000000000 +0100
+@@ -184,6 +184,8 @@
+ 	hide();
+ 	//return false;
+ 
++	// no default ret value
++	return true;
+ }
+ 
+ 
+diff -Naur klamav-0.40-source-orig/klamav-0.40/src/dbviewer.cpp klamav-0.40-source/klamav-0.40/src/dbviewer.cpp
+--- klamav-0.40-source-orig/klamav-0.40/src/dbviewer.cpp	2007-01-02 20:46:37.000000000 +0100
++++ klamav-0.40-source/klamav-0.40/src/dbviewer.cpp	2007-02-20 00:20:02.000000000 +0100
+@@ -815,7 +815,9 @@
+     dbdir = lastDownloadPaths.first();
+ 
+ 
+-    ret = cl_loaddbdir((const char *)dbdir, &root, &no);
++    //ret = cl_loaddbdir((const char *)dbdir, &root, &no);
++    // clamav-0.90 update
++    ret = cl_load((const char *)dbdir, &root, &no, CL_DB_STDOPT);
+     //kdDebug() << "no " << no << endl;
+     cl_free(root);
+     return no;
