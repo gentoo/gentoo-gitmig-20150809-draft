@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r3.ebuild,v 1.3 2006/11/05 10:30:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r3.ebuild,v 1.4 2007/03/06 18:03:52 genstef Exp $
 
 inherit eutils
 
 DESCRIPTION="Load another kernel from the currently executing Linux kernel"
 HOMEPAGE="http://www.xmission.com/~ebiederm/files/kexec/"
 SRC_URI="http://www.xmission.com/~ebiederm/files/kexec/${P}.tar.gz
-	http://lse.sourceforge.net/kdump/patches/1.101-kdump7/kexec-tools-1.101-kdump7.patch"
+	http://lse.sourceforge.net/kdump/patches/1.101-kdump10/kexec-tools-1.101-kdump10.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,9 +18,10 @@ DEPEND="zlib? ( sys-libs/zlib )"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${DISTDIR}"/kexec-tools-1.101-kdump7.patch
+	epatch "${DISTDIR}"/kexec-tools-1.101-kdump10.patch
 	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 	epatch "${FILESDIR}"/${P}-ppc64.patch
+	epatch "${FILESDIR}"/kexec-linux-headers.patch
 }
 
 src_compile() {
@@ -29,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	doman kexec/kexec.8
 	dodoc News AUTHORS TODO

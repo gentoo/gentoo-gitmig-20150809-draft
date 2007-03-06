@@ -1,0 +1,11 @@
+--- kexec-tools-1.101/kexec/arch/i386/kexec-multiboot-x86.c.orig	2007-03-06 18:30:40.000000000 +0100
++++ kexec-tools-1.101/kexec/arch/i386/kexec-multiboot-x86.c	2007-03-06 18:28:51.000000000 +0100
+@@ -47,7 +47,7 @@
+ #include <getopt.h>
+ #include <elf.h>
+ #include <boot/elf_boot.h>
+-#include <asm/page.h>
++#include <sys/user.h>
+ #include <ip_checksum.h>
+ #include "../../kexec.h"
+ #include "../../kexec-elf.h"
