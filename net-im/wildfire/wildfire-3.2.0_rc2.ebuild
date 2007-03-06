@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.2.0_rc2.ebuild,v 1.1 2007/02/06 00:29:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.2.0_rc2.ebuild,v 1.2 2007/03/06 01:00:48 humpback Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Wildfire Jabber server"
 HOMEPAGE="http://jivesoftware.org/messenger/"
-SRC_URI="http://www.jivesoftware.org/builds/wildfire/${PN//-/_}_src_${PV//./_}.tar.gz"
+SRC_URI="mirror://gentoo/${PN//-/_}_src_${PV//./_}.tar.gz"
 RESTRICT=""
 LICENSE="GPL-2"
 
