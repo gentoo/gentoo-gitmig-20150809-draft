@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.81 2007/02/11 12:48:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.82 2007/03/06 08:06:39 graaff Exp $
+
+  06 Mar 2007; Hans de Graaff <graaff@gentoo.org>
+  -files/emodules.info-21.4.8-gentoo.patch,
+  -files/xemacs-21.4.17-gdbm.patch, -xemacs-21.4.17.ebuild,
+  -xemacs-21.4.19-r2.ebuild:
+  Remove old versions and associated patches.
 
 *xemacs-21.4.20-r2 (11 Feb 2007)
 
