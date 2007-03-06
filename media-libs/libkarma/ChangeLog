@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkarma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.2 2007/03/01 20:49:00 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.3 2007/03/06 08:41:48 corsair Exp $
+
+  06 Mar 2007; Markus Rothe <corsair@gentoo.org> libkarma-0.0.6.ebuild:
+  Added ~ppc64; bug #168812
 
   01 Mar 2007; Matti Bickel <mabi@gentoo.org> libkarma-0.0.6.ebuild:
   ~ppc added (bug #168812)
