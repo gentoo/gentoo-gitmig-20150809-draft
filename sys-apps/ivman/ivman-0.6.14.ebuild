@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.11.ebuild,v 1.7 2006/08/05 15:17:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.1 2007/03/06 15:02:24 genstef Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Daemon to mount/unmount devices, based on info from HAL"
 HOMEPAGE="http://ivman.sf.net"
 SRC_URI="mirror://sourceforge/ivman/${P}.tar.bz2"
 LICENSE="GPL-2 QPL"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 SLOT="0"
 
@@ -22,13 +22,21 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
 	dev-util/pkgconfig"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Add support for hotpluggable devices (not removable)
+	epatch "${FILESDIR}"/${PN}-0.6-hotpluggable.patch
+}
+
 src_compile() {
 	econf $(use_enable debug) || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/ivman-0.3.init ivman
