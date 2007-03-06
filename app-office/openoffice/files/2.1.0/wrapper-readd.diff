@@ -46,7 +46,7 @@
  
  create_qstart_wrapper()
  {
-@@ -45,44 +67,60 @@
+@@ -45,50 +67,60 @@
      chmod +x $2
  }
  
@@ -60,7 +60,8 @@
 -create_qstart_wrapper "$PREFIX/bin/oofromtemplate${BINSUFFIX}" "" "slot:5500" || exit 1;
 -create_qstart_wrapper "$PREFIX/bin/ooffice${BINSUFFIX}" "" "" || exit 1;
 -if test "z$VENDORNAME" = "zNovell" -o "z$VENDORNAME" = "zPLD" \
--    -o "z$VENDORNAME" = "zDebian"; then
+-    -o "z$VENDORNAME" = "zDebian" \
+-    -o "z$VENDORNAME" = "zMandriva"; then
 -    for app in calc draw impress math web writer base fromtemplate ffice ; do
 -        echo ".so man1/openoffice$BINSUFFIX.1" >| $MANDIR/man1/oo${app}$BINSUFFIX.1;
 -    done
@@ -76,8 +77,13 @@
 -ln -sf $OOINSTBASE/program/soffice $PREFIX/bin/soffice
 -
 -# no man-page so ...
--if test "z$VENDORNAME" != "zDebian"; then
+-if test "z$VENDORNAME" != "zDebian" -a "z$VENDORNAME" != "zMandriva"; then
 -    install_script $TOOLSDIR/bin/ooconfig $PREFIX/bin/ooconfig
+-    install_script $OOBUILDDIR/ootool$BINSUFFIX $PREFIX/bin/ootool$BINSUFFIX
+-fi
+-
+-if test "z$VENDORNAME" = "zMandriva"; then
+-    install_script $TOOLSDIR/bin/ooconfig $PREFIX/bin/ooconfig$BINSUFFIX
 -    install_script $OOBUILDDIR/ootool$BINSUFFIX $PREFIX/bin/ootool$BINSUFFIX
 -fi
 -
@@ -252,7 +258,7 @@
  Categories=Office;Spreadsheet
 -StartupNotify=false
 +StartupNotify=@STARTUPNOTIFY@
- MimeType=application/vnd.oasis.opendocument.spreadsheet;application/vnd.oasis.opendocument.spreadsheet-template;application/vnd.sun.xml.calc;application/vnd.sun.xml.calc.template;application/vnd.stardivision.calc;application/vnd.stardivision.chart;application/msexcel;application/vnd.ms-excel;text/x-comma-separated-values;text/x-csv;application/vnd.lotus-1-2-3;text/spreadsheet;application/excel;application/x-excel;application/x-ms-excel;application/x-msexcel;application/x-sylk;application/x-xls;application/xls
+ MimeType=application/vnd.oasis.opendocument.spreadsheet;application/vnd.oasis.opendocument.spreadsheet-template;application/vnd.sun.xml.calc;application/vnd.sun.xml.calc.template;application/vnd.stardivision.calc;application/vnd.stardivision.chart;application/msexcel;application/vnd.ms-excel;text/x-comma-separated-values;text/x-csv;application/vnd.lotus-1-2-3;text/spreadsheet;application/excel;application/x-excel;application/x-ms-excel;application/x-msexcel;application/x-sylk;application/x-xls;application/xls@ADD_OPENXML_SPREADSHEET_MIME@
  _Name=OpenOffice.org Calc
  _GenericName=Spreadsheet
 --- desktop/draw.desktop.in.in 
@@ -274,7 +280,7 @@
  Categories=Office;Presentation
 -StartupNotify=false
 +StartupNotify=@STARTUPNOTIFY@
- MimeType=application/vnd.oasis.opendocument.presentation;application/vnd.oasis.opendocument.presentation-template;application/vnd.sun.xml.impress;application/vnd.sun.xml.impress.template;application/vnd.stardivision.impress;application/mspowerpoint;application/vnd.ms-powerpoint
+ MimeType=application/vnd.oasis.opendocument.presentation;application/vnd.oasis.opendocument.presentation-template;application/vnd.sun.xml.impress;application/vnd.sun.xml.impress.template;application/vnd.stardivision.impress;application/mspowerpoint;application/vnd.ms-powerpoint@ADD_OPENXML_PRESENTATION_MIME@
  InitialPreference=5
  _Name=OpenOffice.org Impress
 --- desktop/math.desktop.in.in 
