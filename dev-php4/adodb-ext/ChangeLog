@@ -1,6 +1,12 @@
 # ChangeLog for dev-php4/adodb-ext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/adodb-ext/ChangeLog,v 1.2 2007/02/09 02:55:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/adodb-ext/ChangeLog,v 1.3 2007/03/06 14:15:17 chtekk Exp $
+
+*adodb-ext-504 (06 Mar 2007)
+
+  06 Mar 2007; Luca Longinotti <chtekk@gentoo.org> -adodb-ext-503.ebuild,
+  +adodb-ext-504.ebuild:
+  Version bump.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
