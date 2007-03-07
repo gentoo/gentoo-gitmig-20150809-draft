@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.18 2007/03/04 20:45:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.19 2007/03/07 01:28:23 vapier Exp $
 
 EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
 
@@ -13,7 +13,7 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="alsa arts cups dbus debug esd gif glut hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
+IUSE="alsa arts cups dbus esd hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -35,10 +35,8 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
-	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
-	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	>=media-gfx/fontforge-20060703
@@ -52,7 +50,6 @@ DEPEND="${RDEPEND}
 	X? (
 		x11-proto/inputproto
 		x11-proto/xextproto
-		x11-proto/xf86dgaproto
 		x11-proto/xf86vidmodeproto
 	)
 	sys-devel/bison
@@ -92,13 +89,11 @@ src_compile() {
 	config_cache nas audio/audiolib.h audio/soundlib.h
 	config_cache xml libxml/parser.h libxslt/pattern.h libxslt/transform.h
 	config_cache ldap ldap.h lber.h
-	config_cache gif gif_lib.h
-	config_cache glut glut:glutMainLoop
 	config_cache dbus dbus/dbus.h
 	config_cache hal hal/libhal.h
 	config_cache jpeg jpeglib.h
 	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
-	config_cache lcms lcms.h lcms/lcms.h
+	config_cache lcms lcms.h
 
 	strip-flags
 
@@ -110,8 +105,6 @@ src_compile() {
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
 		$(use_with X x) \
-		$(use_enable debug trace) \
-		$(use_enable debug) \
 		|| die "configure failed"
 
 	emake -j1 depend || die "depend"
