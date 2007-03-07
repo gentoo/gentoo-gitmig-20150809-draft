@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.2 2007/01/17 16:37:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.3 2007/03/07 15:49:57 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,14 +11,14 @@ DESCRIPTION="Data files for Descent 2"
 HOMEPAGE="http://www.interplay.com/games/product.asp?GameID=109"
 SRC_URI=""
 # Don't have a method of applying the ver 1.2 patch in Linux
-# ftp://ftp.interplay.com/pub/patches/d2ptch${MY_PV}.exe
+# http://www.interplay.com/support/product.asp?GameID=109
 # mirror://3dgamers/descent2/d2ptch${MY_PV}.exe
 
 # See readme.txt
 LICENSE="${PN}"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="videos"
 
 # d2x-0.2.5-r2 may include the CD data itself.
 # d2x-0.2.5-r3 does not include the CD data.
@@ -35,30 +35,50 @@ dir=${GAMES_DATADIR}/d2x
 pkg_setup() {
 	games_pkg_setup
 
-	# Could have the $SOW file in $FILESDIR, in a local overlay
+	local m f need_cd="n"
+
+	# Could have the ${SOW} file in ${FILESDIR}, in a local overlay
 	if [[ -e "${FILESDIR}/${SOW}" ]] ; then
 		einfo "Using ${SOW} from ${FILESDIR}"
-	else
-		cdrom_get_cds d2data
-		if [[ -e "${CDROM_ROOT}/d2data/${SOW}" ]] ; then
-			einfo "Found the original Descent 2 CD."
-		else
-			die "You need the original Descent 2 CD"
+		# Check that the movies are available in ${FILESDIR} if needed
+		if use videos ; then
+			for m in {intro,other,robots}-{h,l}.mvl ; do
+				[[ -e "${FILESDIR}/${m}" ]] || need_cd="y"
+			done
 		fi
+	else
+		need_cd="y"
+	fi
+
+	if [[ "${need_cd}" == "y" ]] ; then
+		# The Descent 2 CD is needed
+		cdrom_get_cds "d2data/${SOW}"
 	fi
 }
 
 src_unpack() {
-	local f="${FILESDIR}/${SOW}"
+	local m f="${FILESDIR}/${SOW}"
+
 	[[ -e "${f}" ]] || f="${CDROM_ROOT}/d2data/${SOW}"
+	# Extract level data
 	unarj e "${f}" || die "unarj ${f} failed"
 
-	rm endnote.txt
+	if use videos ; then
+		# Include both high and low resolution movie files
+		for m in {intro,other,robots}-{h,l}.mvl ; do
+			f="${FILESDIR}/${m}"
+			[[ -e "${f}" ]] || f="${CDROM_ROOT}/d2data/${m}"
+			einfo "Copying ${m}"
+			cp -f "${f}" . || die "cp ${f} failed"
+		done
+	fi
+
+	rm -f endnote.txt
 	mkdir doc
-	mv *.txt doc
+	mv -f *.txt doc
 
 	# Remove files not needed by any Linux native client
-	rm *.{bat,dll,exe,ini,lst}
+	rm -f *.{bat,dll,exe,ini,lst}
 }
 
 src_install() {
