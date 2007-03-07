@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.11 2006/12/04 14:42:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.12 2007/03/07 23:00:20 wolf31o2 Exp $
 
 inherit eutils linux-mod
 
@@ -43,7 +43,7 @@ src_unpack() {
 	# fixed to work on 4.6.02.0030 <sfs@steflo.dk>
 	epatch ${FILESDIR}/${PV}-supported_device.patch
 	#Fix problems with the linux >=2.6.14 kernel.
-	if kernel_is 2 6 && [ ${KV_PATCH} -ge 14 ]
+	if kernel_is 2 6 && [[ ${KV_PATCH} -ge 14 ]]
 	then
 		epatch ${FILESDIR}/${PV}-2.6.14.patch
 	fi
