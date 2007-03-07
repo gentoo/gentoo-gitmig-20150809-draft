@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.31 2007/03/05 00:01:45 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.32 2007/03/07 17:43:09 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/vmware-player.rc:
+  Change all instances of [ to [[.
 
   04 Mar 2007; Mike Auty <ikelos@gentoo.org>
   files/digest-vmware-player-1.0.2.29634,
