@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/genext2fs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.7 2007/02/09 06:03:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.8 2007/03/07 00:16:21 vapier Exp $
+
+*genext2fs-1.4 (07 Mar 2007)
+
+  07 Mar 2007; Mike Frysinger <vapier@gentoo.org> +genext2fs-1.4.ebuild:
+  Version bump.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
