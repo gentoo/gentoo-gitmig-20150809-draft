@@ -1,8 +1,8 @@
 
 ;;; ilisp site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
-(setq load-path (cons "@SITELISP@/extra" load-path))
+(add-to-list 'load-path "@SITELISP@")
+(add-to-list 'load-path "@SITELISP@/extra")
 (load "/etc/ilisp/ilisp.el")
 
 (add-hook 'ilisp-load-hook

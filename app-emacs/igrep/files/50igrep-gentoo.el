@@ -1,7 +1,7 @@
 
 ;;; igrep site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 
 (autoload 'igrep "igrep"
   "*Run `grep` PROGRAM to match EXPRESSION in FILES..." t)

@@ -1,4 +1,3 @@
 
-;;; FLIM site-lisp configuration
-
-(setq load-path (cons "@SITELISP@" load-path))
+;;; limit site-lisp configuration
+(add-to-list 'load-path "@SITELISP@")

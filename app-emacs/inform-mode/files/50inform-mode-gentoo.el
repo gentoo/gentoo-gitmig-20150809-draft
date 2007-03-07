@@ -1,7 +1,7 @@
 
 ;;; inform-mode site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 
 (autoload 'inform-mode "inform-mode" "Inform editing mode." t)
 (autoload 'inform-maybe-mode "inform-mode" "Inform/C header editing mode.")

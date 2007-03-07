@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/htmlfontify
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.9 2007/02/09 09:39:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.10 2007/03/07 09:55:47 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50htmlfontify-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
 *htmlfontify-0.20 (09 Feb 2007)
 

@@ -2,8 +2,8 @@
 ;;; ilisp site-lisp configuration (most of this was shamelessly yanked
 ;;; from the ilisp.emacs file distributed with ilisp)
 
-(setq load-path (cons "@SITELISP@" load-path))
-(setq load-path (cons "@SITELISP@/extra" load-path))
+(add-to-list 'load-path "@SITELISP@")
+(add-to-list 'load-path "@SITELISP@/extra")
 
 (autoload 'common-lisp "ilisp" "Inferior generic Common Lisp." t)
 ; (autoload 'allegro "ilisp" "Inferior Allegro Common Lisp." t)

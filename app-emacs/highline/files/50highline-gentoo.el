@@ -1,7 +1,7 @@
 
 ;;; highline site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (require 'highline)
 ;; (global-set-key "\C-c\C-a"     'highline-on)
 ;; (global-set-key "\C-c\C-b"     'highline-off)
