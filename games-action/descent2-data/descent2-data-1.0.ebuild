@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.3 2007/03/07 15:49:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.4 2007/03/07 21:40:39 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -37,13 +37,13 @@ pkg_setup() {
 
 	local m f need_cd="n"
 
-	# Could have the ${SOW} file in ${FILESDIR}, in a local overlay
-	if [[ -e "${FILESDIR}/${SOW}" ]] ; then
-		einfo "Using ${SOW} from ${FILESDIR}"
-		# Check that the movies are available in ${FILESDIR} if needed
+	# Could have the ${SOW} file in ${DISTDIR}
+	if [[ -e "${DISTDIR}/${SOW}" ]] ; then
+		einfo "Using ${SOW} from ${DISTDIR}"
+		# Check that the movies are available in ${DISTDIR} if needed
 		if use videos ; then
 			for m in {intro,other,robots}-{h,l}.mvl ; do
-				[[ -e "${FILESDIR}/${m}" ]] || need_cd="y"
+				[[ -e "${DISTDIR}/${m}" ]] || need_cd="y"
 			done
 		fi
 	else
@@ -57,7 +57,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	local m f="${FILESDIR}/${SOW}"
+	local m f="${DISTDIR}/${SOW}"
 
 	[[ -e "${f}" ]] || f="${CDROM_ROOT}/d2data/${SOW}"
 	# Extract level data
@@ -66,7 +66,7 @@ src_unpack() {
 	if use videos ; then
 		# Include both high and low resolution movie files
 		for m in {intro,other,robots}-{h,l}.mvl ; do
-			f="${FILESDIR}/${m}"
+			f="${DISTDIR}/${m}"
 			[[ -e "${f}" ]] || f="${CDROM_ROOT}/d2data/${m}"
 			einfo "Copying ${m}"
 			cp -f "${f}" . || die "cp ${f} failed"
