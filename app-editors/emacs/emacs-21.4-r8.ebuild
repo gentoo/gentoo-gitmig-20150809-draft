@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r8.ebuild,v 1.1 2007/03/07 04:35:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r8.ebuild,v 1.2 2007/03/07 05:15:42 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -138,11 +138,6 @@ src_install() {
 	mv "${T}/emacs-${SLOT}" "${D}/usr/share/info"
 	mv "${T}/dir" "${D}/usr/share/info/emacs-${SLOT}"
 
-	if has_version 'app-text/aspell' ; then
-		# defaults to aspell if installed
-		elisp-site-file-install "${FILESDIR}/40aspell-gentoo.el"
-	fi
-
 	newenvd "${FILESDIR}/60emacs-${SLOT}.envd" "60emacs-${SLOT}"
 
 	einfo "Fixing manpages..."
@@ -188,7 +183,6 @@ pkg_postinst() {
 		cp ${ROOT}/usr/share/emacs{/${PV},}/site-lisp/subdirs.el
 
 	update-alternatives
-	elisp-site-regen
 
 	if use nosendmail; then
 		while read line; do einfo "${line}"; done<<'EOF'
@@ -214,5 +208,4 @@ EOF
 
 pkg_postrm() {
 	update-alternatives
-	elisp-site-regen
 }
