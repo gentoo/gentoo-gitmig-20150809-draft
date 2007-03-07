@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/aspectj4emacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/ChangeLog,v 1.10 2007/01/27 22:11:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/ChangeLog,v 1.11 2007/03/07 05:36:47 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
   27 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   aspectj4emacs-1.1_beta2.ebuild:
