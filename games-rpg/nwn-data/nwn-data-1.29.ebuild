@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.21 2007/01/26 19:58:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.22 2007/03/07 17:34:19 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -96,7 +96,7 @@ src_unpack() {
 	rm -rf override/*
 	# the following is so ugly, please pretend it doesnt exist
 	declare -a Aarray=(${A})
-	use nowin && if [ "${#Aarray[*]}" == "4" ]
+	use nowin && if [[ "${#Aarray[*]}" == "4" ]]
 	then
 		unpack ${Aarray[1]}
 	fi
@@ -124,7 +124,7 @@ src_unpack() {
 	rm -f data/patch.bif patch.key
 
 	sed -i -e '\:^./nwmain .*:i \
-if [[ -f ./nwmouse.so ]]; then \
+if [[ -f ./nwmouse.so ]] ; then \
 	export XCURSOR_PATH="$(pwd)" \
 	export XCURSOR_THEME=nwmouse \
 	export LD_PRELOAD=./nwmouse.so:$LD_PRELOAD \
@@ -151,12 +151,12 @@ src_install() {
 	cd "${Ddir}"
 	for d in ambient data dmvault hak localvault music override portraits
 	do
-		if [ -d ${d} ]
+		if [[ -d ${d} ]]
 		then
 			cd ${d}
 			for f in $(find . -name '*.*') ; do
 				lcf=$(echo ${f} | tr [:upper:] [:lower:])
-				if [ ${f} != ${lcf} ] && [ -f ${f} ]
+				if [[ ${f} != ${lcf} ]] && [[ -f ${f} ]]
 				then
 					mv ${f} $(echo ${f} | tr [:upper:] [:lower:])
 				fi

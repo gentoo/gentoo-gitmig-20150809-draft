@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.9 2007/02/22 05:29:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.10 2007/03/07 17:34:19 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -72,34 +72,34 @@ NWN_SET=
 get_nwn_set() {
 	# First we check to see if we have CD_ROOT defined already.  If we do,
 	# this will make our lives so much easier.
-	if [ -n "${CD_ROOT}" ]
+	if [[ -n "${CD_ROOT}" ]]
 	then
-		if [ -f "${CD_ROOT}"/KingmakerSetup.exe ]
+		if [[ -f "${CD_ROOT}"/KingmakerSetup.exe ]]
 		then
 			NWN_SET="diamond_dvd"
 			einfo "Neverwinter Nights Diamond DVD found..."
-		elif [ -f "${CD_ROOT}"/ArcadeInstallNWNXP213f.EXE ]
+		elif [[ -f "${CD_ROOT}"/ArcadeInstallNWNXP213f.EXE ]]
 		then
 			NWN_SET="platinum_cd"
 			einfo "Neverwinter Nights Platinum DVD/CD set found..."
-		elif [ -f "${CD_ROOT}"/ArcadeInstallNWN109.exe ]
+		elif [[ -f "${CD_ROOT}"/ArcadeInstallNWN109.exe ]]
 		then
 			NWN_SET="original_cd"
 			einfo "Neverwinter Nights Original/Deluxe CD set found..."
 		fi
 	# Now we check to see if we have CD_ROOT_1 set, which means we have a CD
 	# set, or even a DVD set.
-	elif [ -n "${CD_ROOT_1}" ]
+	elif [[ -n "${CD_ROOT_1}" ]]
 	then
-		if [ -f "${CD_ROOT_1}"/KingmakerSetup.exe ]
+		if [[ -f "${CD_ROOT_1}"/KingmakerSetup.exe ]]
 		then
 			NWN_SET="diamond_dvd"
 			einfo "Neverwinter Nights Diamond DVD found..."
-		elif [ -f "${CD_ROOT_1}"/ArcadeInstallNWNXP213f.EXE ]
+		elif [[ -f "${CD_ROOT_1}"/ArcadeInstallNWNXP213f.EXE ]]
 		then
 			NWN_SET="platinum_cd"
 			einfo "Neverwinter Nights Platinum DVD/CD set found..."
-		elif [ -f "${CD_ROOT_1}"/ArcadeInstallNWN109.exe ]
+		elif [[ -f "${CD_ROOT_1}"/ArcadeInstallNWN109.exe ]]
 		then
 			NWN_SET="original_cd"
 			einfo "Neverwinter Nights Original/Deluxe CD set found..."
@@ -110,15 +110,15 @@ get_nwn_set() {
 		local mline=
 		for mline in $(mount | egrep -e '(iso|cdrom)' | awk '{print $3}')
 		do
-			if [ -f "${mline}"/KingmakerSetup.exe ]
+			if [[ -f "${mline}"/KingmakerSetup.exe ]]
 			then
 				NWN_SET="diamond_dvd"
 				einfo "Neverwinter Nights Diamond DVD found..."
-			elif [ -f "${mline}"/ArcadeInstallNWNXP213f.EXE ]
+			elif [[ -f "${mline}"/ArcadeInstallNWNXP213f.EXE ]]
 			then
 				NWN_SET="platinum_cd"
 				einfo "Neverwinter Nights Platinum DVD/CD set found..."
-			elif [ -f "${mline}"/ArcadeInstallNWN109.exe ]
+			elif [[ -f "${mline}"/ArcadeInstallNWN109.exe ]]
 			then
 				NWN_SET="original_cd"
 				einfo "Neverwinter Nights Original/Original CD set found..."
@@ -128,7 +128,7 @@ get_nwn_set() {
 }
 
 get_cd_set() {
-	while `[ -z "${NWN_SET}" ]`
+	while `[[ -z "${NWN_SET}" ]]`
 	do
 		echo "Please insert your first Neverwinter Nights CD/DVD into your drive and"
 		echo "press any key to continue"
@@ -242,7 +242,7 @@ src_unpack() {
 			rm -rf NWN_Platinum/
 			# If we have the DVD, we're done.  If not, we need to switch CDs and
 			# unpack the files on them.
-			if [ `du -b "${CDROM_ROOT}"/Data_Shared.zip` -lt 700000000 ]
+			if [[ `du -b "${CDROM_ROOT}"/Data_Shared.zip` -lt 700000000 ]]
 			then
 				cdrom_load_next_cd
 				einfo "Unpacking files..."
@@ -347,20 +347,20 @@ src_unpack() {
 	for a in ${A}
 	do
 	    currentlocale=""
-	    if [ -z ${a/*german*/} ]
+	    if [[ -z ${a/*german*/} ]]
 	    then
 	        currentlocale=de
-	    elif [ -z ${a/*spanish*/} ]
+	    elif [[ -z ${a/*spanish*/} ]]
 	    then
 	    	currentlocale=es
-		elif [ -z ${a/*italian*/} ]
+		elif [[ -z ${a/*italian*/} ]]
 		then
 			currentlocale=it
-		elif [ -z ${a/*french*/} ]
+		elif [[ -z ${a/*french*/} ]]
 		then
 			currentlocale=fr
 		fi
-		if [ -n "$currentlocale" ]
+		if [[ -n "$currentlocale" ]]
 		then
 			touch ".metadata/linguas_$currentlocale"
 			mkdir -p $currentlocale
@@ -397,7 +397,7 @@ else \
 	p=${HOME}/.nwn \
 	for i in ${LINGUAS} \
 	do \
-		if [ -z "${LANG}" -a -r ".metadata/linguas_$i" -a -d "$i" ] \
+		if [[ -z "${LANG}" -a -r ".metadata/linguas_$i" -a -d "$i" ]] \
 		then \
 			LANG=$i \
 			p=${HOME}/.nwn \
@@ -454,12 +454,12 @@ src_install() {
 	cd "${Ddir}"
 	for d in ambient data dmvault hak localvault movies music override portraits
 	do
-		if [ -d ${d} ]
+		if [[ -d ${d} ]]
 		then
 			( cd ${d}
 			for f in $(find . -name '*.*') ; do
 				lcf=$(echo ${f} | tr [:upper:] [:lower:])
-				if [ ${f} != ${lcf} ] && [ -f ${f} ]
+				if [[ ${f} != ${lcf} ]] && [[ -f ${f} ]]
 				then
 					mv ${f} ${lcf}
 				fi
@@ -468,11 +468,11 @@ src_install() {
 	done
 	if ! use sou && ! use hou && use nowin
 	then
-		if [ -f data/patch.bif ]
+		if [[ -f data/patch.bif ]]
 		then
 			chmod a-x data/patch.bif
 		fi
-		if [ -f patch.key ]
+		if [[ -f patch.key ]]
 		then
 			chmod a-x patch.key
 		fi
