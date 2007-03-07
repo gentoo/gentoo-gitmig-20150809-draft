@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.3 2007/02/22 10:32:53 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.4 2007/03/07 17:36:28 wolf31o2 Exp $
 
 DESCRIPTION="The backup tool and wonderful emulator's Swiss Army knife program"
 HOMEPAGE="http://ucon64.sourceforge.net/"
@@ -27,7 +27,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ ! -e /usr/include/sys/io.h ]; then
+	if [[ ! -e /usr/include/sys/io.h ]] ; then
 		ewarn "Disabling support for parallel port"
 		myconf="${myconf} --disable-parallel"
 	fi
