@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.7 2006/10/24 22:42:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.8 2007/03/07 16:00:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -71,7 +71,7 @@ src_unpack() {
 
 	cat > "${T}"/d1x <<-EOS
 	#!/bin/sh
-	if [ ! -e "\${HOME}/.d1x" ]; then
+	if [[ ! -e "\${HOME}/.d1x" ]] ; then
 	  mkdir "\${HOME}/.d1x"
 	  cp "${GAMES_DATADIR}/d1x/d1x.ini" "\${HOME}/.d1x/"
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d1x
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/ChangeLog,v 1.7 2006/10/24 22:42:18 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/ChangeLog,v 1.8 2007/03/07 16:00:00 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> d1x-20040118.ebuild:
+  Change all instances of [ to [[.
 
   24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> d1x-20040118.ebuild:
   Moved cdrom_get_cds to src_unpack since binary packages don't require the

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r2.ebuild,v 1.5 2006/10/24 22:31:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r2.ebuild,v 1.6 2007/03/07 15:55:40 wolf31o2 Exp $
 
 inherit flag-o-matic eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 	if use cdinstall ; then
 		if [[ ! -e "${DISTDIR}"/descent2.sow ]] ; then
 			cdrom_get_cds d2data
-			if [ -e ${CDROM_ROOT}/d2data/descent2.sow ] ; then
+			if [[ -e ${CDROM_ROOT}/d2data/descent2.sow ]] ; then
 				export CDROM_ROOT=${CDROM_ROOT}/d2data
 				einfo "Found the original Descent2 CD"
 				einfo "Copying descent2.sow to ${DISTDIR}"
@@ -62,17 +62,17 @@ src_compile() {
 	for ren in sdl $(useq opengl && echo opengl) \
 			$(useq svga && echo svga) $(useq ggi && echo ggi)
 	do
-		[ "${ren}" == "sdl" ] \
+		[[ "${ren}" == "sdl" ]] \
 			&& renconf="" \
 			|| renconf="--with-${ren}"
-		[ "${ren}" == "svga" ] \
+		[[ "${ren}" == "svga" ]] \
 			&& defflags="-DSVGALIB_INPUT" \
 			|| defflags=""
 		make distclean
 		egamesconf \
 			${myconf} \
 			${renconf} \
-			--datadir=${GAMES_DATADIR_BASE} \
+			--datadir="${GAMES_DATADIR_BASE}" \
 			|| die "conf ${ren}"
 		emake CXXFLAGS="${CXXFLAGS} ${defflags}" || die "build ${ren}"
 		mv d2x* my-bins/

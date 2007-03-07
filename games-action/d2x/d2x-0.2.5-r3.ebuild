@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.1 2007/01/09 21:54:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.2 2007/03/07 15:55:40 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -48,10 +48,10 @@ src_compile() {
 	mkdir my-bins
 	for ren in sdl $(useq opengl && echo opengl) \
 			$(useq svga && echo svga) $(useq ggi && echo ggi) ; do
-		[ "${ren}" == "sdl" ] \
+		[[ "${ren}" == "sdl" ]] \
 			&& renconf="" \
 			|| renconf="--with-${ren}"
-		[ "${ren}" == "svga" ] \
+		[[ "${ren}" == "svga" ]] \
 			&& defflags="-DSVGALIB_INPUT" \
 			|| defflags=""
 		make distclean
