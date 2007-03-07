@@ -1,6 +1,10 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.37 2007/02/27 15:31:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.38 2007/03/07 15:59:21 drac Exp $
+
+  07 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  em8300-modules-0.16.0-r1.ebuild:
+  Set KERNEL_LOCATION to KERNEL_DIR for bug 165351. Thanks to Thomas Loeber.
 
   27 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   em8300-modules-0.16.0-r1.ebuild:

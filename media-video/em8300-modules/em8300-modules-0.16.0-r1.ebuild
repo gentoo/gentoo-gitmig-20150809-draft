@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0-r1.ebuild,v 1.3 2007/02/27 15:31:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0-r1.ebuild,v 1.4 2007/03/07 15:59:21 drac Exp $
 
 inherit eutils linux-mod
 
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile() {
 	set_arch_to_kernel
 	cd "${S}"
-	emake || die "emake failed."
+	emake KERNEL_LOCATION="${KERNEL_DIR}" || die "emake failed."
 }
 
 src_install() {
