@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.4.ebuild,v 1.1 2006/12/21 22:14:47 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.4.ebuild,v 1.2 2007/03/07 16:40:50 armin76 Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="Mozilla's Netscape Security Services Library that implements PKI su
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
 
-LICENSE="MPL-1.1"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
