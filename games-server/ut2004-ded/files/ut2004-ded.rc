@@ -30,7 +30,7 @@ stop() {
 } 
 
 reload() { 
-	if [ ! -f /var/run/ucc-bin.pid ]; then
+	if [[ ! -f /var/run/ucc-bin.pid ]] ; then
 		eerror "UT2004 Dedicated Server isn't running"
 		return 1
 	fi 
