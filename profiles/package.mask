@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6929 2007/03/07 15:24:02 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6930 2007/03/07 16:09:45 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Cummings <mcummings@gentoo.org> (7 Mar 2007)
+# Unmaintained, doesn't build, isn't dep'd. Removal planned for March 31st.
+dev-perl/Newt
 
 # Daniel Drake <dsd@gentoo.org> (7 Mar 2007)
 # Unmaintained, replaced by vanilla-sources. Removal due on March 31st.
