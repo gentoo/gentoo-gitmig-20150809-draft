@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.8 2007/03/04 02:08:35 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.9 2007/03/07 04:37:28 nixphoeni Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -86,7 +86,7 @@ pkg_postinst() {
 	einfo "gDesklets Displays are required before the library"
 	einfo "will be usable. The displays are found in -"
 	einfo "           x11-plugins/desklet-*"
-	einfo "or at http://gdesklets.gnomedesktop.org"
+	einfo "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
 	echo
 	einfo "Next you'll need to start gdesklets using"
 	einfo "           /usr/bin/gdesklets start"
