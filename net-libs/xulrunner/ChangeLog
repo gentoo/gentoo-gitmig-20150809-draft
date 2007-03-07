@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.7 2007/01/11 15:59:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.8 2007/03/07 10:40:14 armin76 Exp $
+
+  07 Mar 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.0.4.ebuild:
+  Bump patchset to fix bug 165777 and bug 168893
 
   11 Jan 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.0.4.ebuild:
   license change, bug 150118

@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.6 2007/01/11 15:59:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.7 2007/03/07 10:40:14 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils makeedit multilib autotools mozconfig-2 java-pkg-opt-2
-PVER="0.8"
+PATCH="${P}-patches-0.9"
 
 DESCRIPTION="Mozilla runtime package that can be used to bootstrap XUL+XPCOM applications"
 HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/source/${P}-source.tar.bz2
-	http://gentooexperimental.org/~genstef/dist/${P}-patches-${PVER}.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/source/${P}-source.tar.bz2
+	mirror://gentoo/${PATCH}.tar.bz2"
 
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
@@ -36,7 +36,7 @@ export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 
 src_unpack() {
-	unpack ${P}-source.tar.bz2  ${P}-patches-${PVER}.tar.bz2
+	unpack ${P}-source.tar.bz2  ${PATCH}.tar.bz2
 
 	# Apply our patches
 	cd ${S} || die "cd failed"
@@ -45,7 +45,9 @@ src_unpack() {
 	# until we figured out if we need also the versioning patch
 	EPATCH_EXCLUDE="030_pango-cairo-1.patch.bz2"
 
-	EPATCH_FORCE="yes" epatch ${WORKDIR}/patch
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"/patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
