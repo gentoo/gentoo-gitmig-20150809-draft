@@ -1,6 +1,6 @@
 #!/sbin/runscript
 #
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/vmware-workstation-tools,v 1.1 2006/05/10 16:11:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/vmware-workstation-tools,v 1.2 2007/03/07 21:04:56 wolf31o2 Exp $
 #
 # This script manages the services needed to run VMware software
 
@@ -27,14 +27,14 @@ isLoaded() {
 }
 
 vmware_tools_load_module() {
-   if [ "`isLoaded "$1"`" = 'yes' ]; then
+   if [[ "`isLoaded "$1"`" = 'yes' ]] ; then
       /sbin/rmmod "$1"
    fi
    /sbin/insmod -s -f "/lib/modules/`uname -r`/misc/$1.o" >/dev/null 2>&1 || /sbin/insmod -s -f "$1" >/dev/null 2>&1 || eend 1
 }
 
 vmware_tools_unload_module() {
-   if [ "`isLoaded "$1"`" = 'yes' ]; then
+   if [[ "`isLoaded "$1"`" = 'yes' ]] ; then
       /sbin/rmmod "$1" >/dev/null 2>&1 || eend 1
    fi
 }
@@ -46,7 +46,7 @@ depend ()
 
 checkconfig ()
 {
-	if [ -f $VMWARE_NOT_CONFIGURED ]; then
+	if [[ -f ${VMWARE_NOT_CONFIGURED} ]] ; then
 		eerror "Please run $VMWARE_CONFIG_TOOLS first"
 		eend 1
 		return 1
