@@ -5,4 +5,7 @@
 <maintainer>
 	<email>tools-portage@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>mcummings@gentoo.org</email>
+	<name>Michael Cummings</name>
 </pkgmetadata>
