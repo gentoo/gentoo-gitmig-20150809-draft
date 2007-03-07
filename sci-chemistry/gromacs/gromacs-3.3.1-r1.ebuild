@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.4 2007/02/24 19:06:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.5 2007/03/07 23:12:59 je_fro Exp $
 
 inherit eutils fortran multilib
 
@@ -29,8 +29,6 @@ DEPEND=">=sci-libs/fftw-3.0.1
 		x11-proto/xproto
 		virtual/motif )"
 
-#	mopac7? ( sci-chemistry/mopac7 )
-
 src_unpack() {
 
 	unpack ${A}
@@ -44,11 +42,14 @@ src_unpack() {
 
 	cd "${S}"
 
-# Fix a typo in a couple of files.
+# Fix typos in a couple of files.
 	sed -e "s:_nb_kerne010_x86_64_sse2:_nb_kernel010_x86_64_sse2:" \
 		-i src/gmxlib/nonbonded/nb_kernel_x86_64_sse2/nb_kernel010_x86_64_sse2.intel_syntax.s \
 		-i src/gmxlib/nonbonded/nb_kernel_x86_64_sse2/nb_kernel010_x86_64_sse2.s \
 		|| die "Failed to fix sse2 typo."
+
+	sed -e "s:+0f:-f:" -i share/tutor/gmxdemo/demo \
+		|| die "Failed to fixup demo script."
 
 # Fix a sandbox violation that occurs when re-emerging with mpi.
 	sed "/libdir=\"\$(libdir)\"/ a\	temp_libdir=\"${D}usr/$( get_libdir )\" ; \\\\" \
