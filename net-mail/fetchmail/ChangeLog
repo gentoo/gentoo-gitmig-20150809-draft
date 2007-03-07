@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.127 2007/02/18 21:55:04 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.128 2007/03/07 06:14:18 ticho Exp $
+
+*fetchmail-6.3.7-r1 (07 Mar 2007)
+
+  07 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  +files/fetchmail-6.3.7-poll-again.patch, -fetchmail-6.3.3.ebuild,
+  -fetchmail-6.3.4.ebuild, +fetchmail-6.3.7-r1.ebuild:
+  Apply patch from upstream to fix bug #163782. Removed obsolete ebuilds.
 
   18 Feb 2007; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix broken Manifest. Thanks to drphibes on irc for reporting.

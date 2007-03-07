@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.4.ebuild,v 1.15 2007/01/08 22:30:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.7-r1.ebuild,v 1.1 2007/03/07 06:14:18 ticho Exp $
 
 inherit eutils
 
@@ -12,25 +12,29 @@ SRC_URI="http://download2.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="mips s390 sh"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
-DDEPEND="hesiod? ( net-dns/hesiod )
+DEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( app-crypt/mit-krb5 )
 	nls? ( sys-devel/gettext )
 	elibc_FreeBSD? ( sys-libs/com_err )"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S} || die "cd \${S} failed"
+	unpack ${A}
+	cd "${S}"
 
 	# this patch fixes bug #34788 (ticho@gentoo.org 2004-09-03)
-	epatch ${FILESDIR}/${PN}-6.2.5-broken-headers.patch || die
+	epatch "${FILESDIR}"/${PN}-6.2.5-broken-headers.patch
+
+	# Poll again without SSL on error after USER command (bug #163782).
+	epatch "${FILESDIR}"/${P}-poll-again.patch
 }
 
 src_compile() {
-	econf  --disable-dependency-tracking \
+	econf \
+		--disable-dependency-tracking \
 		--enable-RPA \
 		--enable-NTLM \
 		--enable-SDPS \
@@ -46,16 +50,11 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install || die
 
 	dohtml *.html
 
-	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README \
-		README.NTLM README.SSL TODO COPYING
-
-	# Put installed manpages to correct place
-	doman ${D}/usr/share/man/*.1
-	rm -f ${D}/usr/share/man/*.1
+	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README README.NTLM README.SSL TODO
 
 	newinitd ${FILESDIR}/fetchmail fetchmail
 	newconfd ${FILESDIR}/conf.d-fetchmail fetchmail
