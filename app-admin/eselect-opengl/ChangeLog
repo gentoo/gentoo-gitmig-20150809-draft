@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.27 2007/02/07 14:47:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.28 2007/03/07 21:16:11 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  eselect-opengl-1.0.3.ebuild, eselect-opengl-1.0.4.ebuild,
+  eselect-opengl-1.0.5.ebuild:
+  Change all instances of [ to [[.
 
   07 Feb 2007; Simon Stelling <blubb@gentoo.org>
   eselect-opengl-1.0.5.ebuild:

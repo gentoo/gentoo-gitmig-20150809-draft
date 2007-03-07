@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.3.ebuild,v 1.12 2006/10/08 13:11:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.3.ebuild,v 1.13 2007/03/07 21:16:11 wolf31o2 Exp $
 
 inherit multilib
 
@@ -43,15 +43,17 @@ src_unpack() {
 
 pkg_preinst() {
 	# It needs to be before 04multilib
-	[ -f "${ROOT}/etc/env.d/09opengl" ] && mv ${ROOT}/etc/env.d/09opengl ${ROOT}/etc/env.d/03opengl
+	[[ -f "${ROOT}/etc/env.d/09opengl" ]] && mv ${ROOT}/etc/env.d/09opengl ${ROOT}/etc/env.d/03opengl
 
 	OABI="${ABI}"
 	for ABI in $(get_install_abis); do
-		if [ -e "${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so" ]; then
-			einfo "Removing libMesaGL.so from xorg-x11 profile.  See bug #47598."
+		if [[ -e "${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so" ]]
+		then
+			einfo "Removing libMesaGL.so from xorg-x11 profile. See bug #47598."
 			rm -f ${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so
 		fi
-		if [ -e "${ROOT}/usr/$(get_libdir)/libMesaGL.so" ]; then
+		if [[ -e "${ROOT}/usr/$(get_libdir)/libMesaGL.so" ]]
+		then
 			einfo "Removing libMesaGL.so from /usr/$(get_libdir).  See bug #47598."
 			rm -f ${ROOT}/usr/$(get_libdir)/libMesaGL.so
 		fi
@@ -77,7 +79,7 @@ src_install() {
 
 	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
-	if has_multilib_profile && [ "${MLTEST/set_abi}" = "${MLTEST}" ]; then
+	if has_multilib_profile && [[ "${MLTEST/set_abi}" = "${MLTEST}" ]] ; then
 		OABI="${ABI}"
 		for ABI in $(get_install_abis); do
 			# Install default glext.h
