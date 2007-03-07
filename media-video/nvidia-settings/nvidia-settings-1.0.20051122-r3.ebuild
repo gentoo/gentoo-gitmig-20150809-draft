@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.7 2006/10/30 15:22:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.8 2007/03/07 21:57:40 peper Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -25,8 +25,7 @@ IUSE=
 # This also allows us to optimize out a lot of the other dependancies, as
 # between gtk and xorg-server, almost all libraries and headers are accounted
 # for.
-DEPEND="virtual/libc
-		>=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2
 		dev-util/pkgconfig
 		|| ( ( 	x11-base/xorg-server
 				x11-libs/libXt
@@ -52,7 +51,7 @@ src_unpack() {
 	# This next voodoo is just to work around xmkmf's broken behaviour
 	# after the Xorg move to /usr (or I think, as I have not messed
 	# with it in ages).
-	ln -snf ${ROOT}/usr/include/X11 include
+	ln -snf /usr/include/X11 include
 
 	# Ensure that libNVCtrl.a is actually built
 	# Regardless of how NormalLibXrandr was built

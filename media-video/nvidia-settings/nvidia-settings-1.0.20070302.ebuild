@@ -1,54 +1,54 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20060919.ebuild,v 1.2 2006/10/30 15:22:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20070302.ebuild,v 1.1 2007/03/07 21:57:40 peper Exp $
 
 inherit eutils toolchain-funcs multilib
 
-# The following were added to work with the new nvidia-drivers and
-# nvidia-legacy-drivers ebuilds.
+MY_P="${PN}-1.0"
 NVIDIA_NEW_VERSION="1.0.9625"
 NVIDIA_LEGACY_VERSION="1.0.7182"
-S="${WORKDIR}/${PN}-1.0"
+
 DESCRIPTION="NVIDIA Linux X11 Settings Utility"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-		http://dev.gentoo.org/~azarah/nvidia/${P}.tar.gz"
-#SRC_URI="ftp://download.nvidia.com/XFree86/nvidia-settings/${P}.tar.gz"
+SRC_URI="ftp://download.nvidia.com/XFree86/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=
+IUSE=""
 
 # xorg-server is used in the depends as nvidia-settings builds against some
 # headers in /usr/include/xorg/.
 # This also allows us to optimize out a lot of the other dependancies, as
 # between gtk and xorg-server, almost all libraries and headers are accounted
 # for.
-DEPEND="virtual/libc
-		>=x11-libs/gtk+-2
-		dev-util/pkgconfig
-		x11-base/xorg-server
-		x11-libs/libXt
-		x11-libs/libXv
-		x11-proto/xf86driproto
-		x11-misc/imake
-		x11-misc/gccmakedep"
-RDEPEND="|| (
-			>=x11-drivers/nvidia-drivers-${NVIDIA_NEW_VERSION}
-			>=x11-drivers/nvidia-legacy-drivers-${NVIDIA_LEGACY_VERSION} )
-		>=x11-libs/gtk+-2
-		x11-base/xorg-server
-		x11-libs/libXt"
+DEPEND=">=x11-libs/gtk+-2
+	dev-util/pkgconfig
+	x11-base/xorg-server
+	x11-libs/libXt
+	x11-libs/libXv
+	x11-proto/xf86driproto
+	x11-misc/imake
+	x11-misc/gccmakedep"
+
+RDEPEND=">=x11-libs/gtk+-2
+	x11-base/xorg-server
+	x11-libs/libXt
+	|| ( >=x11-drivers/nvidia-drivers-${NVIDIA_NEW_VERSION}
+		>=x11-drivers/nvidia-legacy-drivers-${NVIDIA_LEGACY_VERSION} )"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src/libXNVCtrl
+
+	cd "${S}/src/libXNVCtrl"
 	einfo "Tweaking libXNVCtrl for build..."
+
 	# This next voodoo is just to work around xmkmf's broken behaviour
 	# after the Xorg move to /usr (or I think, as I have not messed
 	# with it in ages).
-	ln -snf ${ROOT}/usr/include/X11 include
+	#ln -snf /usr/include/X11 include
 
 	# Ensure that libNVCtrl.a is actually built
 	# Regardless of how NormalLibXrandr was built
@@ -64,12 +64,12 @@ src_unpack() {
 
 src_compile() {
 	einfo "Building libXNVCtrl..."
-	cd ${S}/src/libXNVCtrl
+	cd "${S}/src/libXNVCtrl"
 	xmkmf -a || die "Running xmkmf failed!"
 	make clean || die "Cleaning old libXNVCtrl failed"
 	emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" all || die "Building libXNVCtrl failed!"
 
-	cd ${S}
+	cd "${S}"
 	einfo "Building nVidia-Settings..."
 	emake  CC="$(tc-getCC)" || die "Failed to build nvidia-settings"
 }
