@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6927 2007/03/07 12:49:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6928 2007/03/07 13:53:51 dercorny Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
+# Masking app-text/mgv due to security bug 154645
+app-text/mgv
+
+# Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
+# Masking net-misc/xsupplicant due to security bug 154995
+net-misc/xsupplicant
 
 # Stefan Schweizer <genstef@gentoo.org> (6 Mar 2007)
 # This is utterly broken and no longer used, please uninstall immediatelly
