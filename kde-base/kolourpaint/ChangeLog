@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolourpaint
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.63 2007/02/04 02:42:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.64 2007/03/07 23:29:53 genstef Exp $
+
+  07 Mar 2007; <genstef@gentoo.org> ChangeLog:
+  Fix license thanks to sho in bug 169860
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kolourpaint-3.5.2.ebuild:
