@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/serlook/serlook-0.3.3.ebuild,v 1.1 2007/02/10 11:34:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/serlook/serlook-0.3.3.ebuild,v 1.2 2007/03/07 08:14:44 genstef Exp $
 
 inherit kde
 
 DESCRIPTION="tool to inspect and debug serial line data traffic"
 HOMEPAGE="http://serlook.sunsite.dk/"
-SRC_URI="http://serlook.sunsite.dk/${P}.tar.gz"
+SRC_URI="http://serlook.sunsite.dk/${P}.tar.gz
+	mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,11 +16,16 @@ IUSE=""
 
 S="${WORKDIR}"/${PN}
 
-DEPEND="kde-base/unsermake"
+DEPEND=""
 RDEPEND=""
 
-UNSERMAKE="/usr/kde/unsermake/unsermake"
 need-kde 3
+
+src_unpack() {
+	unpack ${A}
+	rm -rf "${S}/admin" "${S}/configure"
+	ln -s "${WORKDIR}/admin" "${S}/admin"
+}
 
 src_install() {
 	kde_src_install
