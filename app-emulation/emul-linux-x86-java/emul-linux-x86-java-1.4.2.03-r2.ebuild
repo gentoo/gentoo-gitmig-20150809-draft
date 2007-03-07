@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.2 2007/01/23 10:50:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.3 2007/03/07 22:04:42 wolf31o2 Exp $
 
 inherit multilib java-vm-2 versionator
 
@@ -37,7 +37,7 @@ RESTRICT="nostrip"
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
-	[ ! -f "$1" ] && return
+	[[ ! -f "$1" ]] && return
 
 	local offset="`gawk '
 		/^[[:space:]]*skip[[:space:]]*=/ {
@@ -55,7 +55,7 @@ get_offset() {
 src_unpack () {
 	local offset="`get_offset ${DISTDIR}/${A}`"
 
-	if [ -z "${offset}" ] ; then
+	if [[ -z "${offset}" ]] ; then
 		eerror "Failed to get offset of tarball!"
 		die "Failed to get offset of tarball!"
 	fi
@@ -68,16 +68,16 @@ unpack_jars() {
 	# New to 1.4.2
 	local PACKED_JARS="lib/tools.jar lib/rt.jar lib/jsse.jar lib/charsets.jar lib/ext/localedata.jar lib/plugin.jar javaws/javaws.jar"
 	local UNPACK_CMD=""
-	if [ -f "$JAVAHOME/lib/unpack" ]; then
+	if [[ -f "$JAVAHOME/lib/unpack" ]]; then
 		UNPACK_CMD="$JAVAHOME/lib/unpack"
 		chmod +x "$UNPACK_CMD"
 		#packerror=""
 		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
-			if [ -f "$JAVAHOME/${i%.jar}.pack" ]; then
+			if [[ -f "$JAVAHOME/${i%.jar}.pack" ]]; then
 				einfo "Creating ${JAVAHOME}/${i}"
 				"$UNPACK_CMD" "$JAVAHOME/${i%.jar}.pack" "$JAVAHOME/$i"
-				if [ ! -f "$JAVAHOME/$i" ]; then
+				if [[ ! -f "$JAVAHOME/$i" ]]; then
 					die "Failed to unpack jar files ${i}." # Please refer\n"
 					#ewarn "to the Troubleshooting section of the Installation\n"
 					#ewarn "Instructions on the download page for more information.n"

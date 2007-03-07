@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.ebuild,v 1.2 2007/02/11 22:32:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.ebuild,v 1.3 2007/03/07 22:04:42 wolf31o2 Exp $
 
 inherit java-vm-2 eutils
 
@@ -50,7 +50,7 @@ QA_TEXTRELS_amd64="opt/${P}/lib/i386/motif21/libmawt.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${At} ]; then
+	if [[ ! -r ${DISTDIR}/${At} ]]; then
 		die "cannot read ${At}. Please check the permission and try again."
 	fi
 

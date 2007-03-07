@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.21 2007/02/11 22:47:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.22 2007/03/07 22:04:42 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  emul-linux-x86-java-1.4.2.03-r2.ebuild,
+  emul-linux-x86-java-1.5.0.10.ebuild, emul-linux-x86-java-1.5.0.11.ebuild,
+  emul-linux-x86-java-1.6.0.ebuild:
+  Change all instances of [ to [[.
 
 *emul-linux-x86-java-1.5.0.11 (11 Feb 2007)
 
