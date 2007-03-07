@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6928 2007/03/07 13:53:51 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6929 2007/03/07 15:24:02 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Daniel Drake <dsd@gentoo.org> (7 Mar 2007)
+# Unmaintained, replaced by vanilla-sources. Removal due on March 31st.
+=sys-kernel/gentoo-sources-2.4*
 
 # Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
 # Masking app-text/mgv due to security bug 154645
