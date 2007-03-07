@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.73 2007/03/07 09:12:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.74 2007/03/07 09:31:49 phreak Exp $
+
+  07 Mar 2007; Christian Heim <phreak@gentoo.org> apr-util-0.9.12-r1.ebuild:
+  Adding a sed to change the config.layout, as it screws up our PREFIX.
 
   07 Mar 2007; Christian Heim <phreak@gentoo.org> apr-util-0.9.12-r1.ebuild:
   Minor syn, whitespace cleanup.
