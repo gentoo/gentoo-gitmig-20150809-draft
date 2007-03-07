@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.4 2007/01/06 22:23:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.5 2007/03/07 17:03:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -33,7 +33,7 @@ src_install() {
 
 pkg_preinst() {
 	games_pkg_preinst
-	if [ -d "${ROOT}${GDIR}/bin/Data" ] ; then
+	if [[ -d "${ROOT}${GDIR}/bin/Data" ]] ; then
 		mv "${ROOT}${GDIR}"/{bin/Data,Data.backup}
 		echo
 		ewarn "Your saved games have been backed up to ${GDIR}/Data.backup."
