@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58.ebuild,v 1.2 2007/03/07 22:26:58 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58.ebuild,v 1.3 2007/03/07 22:32:05 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://sancho-gui.sourceforge.net/"
 SRC_URI="mirror://gentoo/${MY_P}-linux-gtk.sh"
 RESTRICT="strip"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 
