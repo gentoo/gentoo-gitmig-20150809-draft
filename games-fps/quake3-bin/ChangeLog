@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-bin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.22 2006/10/25 16:03:24 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.23 2007/03/07 16:53:48 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> files/q3ded.rc:
+  Change all instances of [ to [[.
 
   25 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-bin-1.32c-r1.ebuild:

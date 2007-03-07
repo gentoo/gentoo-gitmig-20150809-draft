@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d $HOME/.ut2003/System ]; then
+if [[ -d $HOME/.ut2003/System ]] ; then
 	cd "$HOME/.ut2003/System"
 	echo "Editing UT2003.ini in $PWD"
 	cat >> UT2003.ini <<EOT

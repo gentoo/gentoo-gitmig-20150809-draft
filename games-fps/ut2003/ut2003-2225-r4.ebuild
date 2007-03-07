@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.10 2006/10/03 20:25:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.11 2007/03/07 16:57:59 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -48,12 +48,12 @@ pkg_postinst() {
 
 	# here is where we check for the existence of a cdkey...
 	# if we don't find one, we ask the user for it
-	if [ -f ${dir}/System/cdkey ]; then
+	if [[ -f ${dir}/System/cdkey ]] ; then
 		einfo "A cdkey file is already present in ${dir}/System"
 	else
 		ewarn "You MUST run this before playing the game:"
 		ewarn "emerge --config =${CATEGORY}/${PF}"
-		ewarn "That way you can [re]enter your cdkey."
+		ewarn "That way you can (re)enter your cdkey."
 	fi
 	echo
 	einfo "To play the game run:"
@@ -82,11 +82,11 @@ pkg_config() {
 		read CDKEY1
 		einfo "Please re-enter your CD key:"
 		read CDKEY2
-		if [ "$CDKEY1" == "" ] ; then
+		if [[ "${CDKEY1}" == "" ]] ; then
 			echo "You entered a blank CD key.  Try again."
 		else
-			if [ "$CDKEY1" == "$CDKEY2" ] ; then
-				echo "$CDKEY1" | tr a-z A-Z > ${dir}/System/cdkey
+			if [[ "${CDKEY1}" == "${CDKEY2}" ]] ; then
+				echo "${CDKEY1}" | tr a-z A-Z > ${dir}/System/cdkey
 				einfo "Thank you!"
 				chown games:games ${dir}/System/cdkey
 				break

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110-r1.ebuild,v 1.3 2006/12/06 20:18:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110-r1.ebuild,v 1.4 2007/03/07 16:51:30 wolf31o2 Exp $
 
 #ECVS_PASS="anonymous"
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -28,7 +28,7 @@ DEPEND="virtual/opengl
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_unpack() {
-	if [ -z "${ECVS_SERVER}" ] ; then
+	if [[ -z "${ECVS_SERVER}" ]] ; then
 		unpack blackshades-${PV}.tar.bz2
 	else
 		cvs_src_unpack

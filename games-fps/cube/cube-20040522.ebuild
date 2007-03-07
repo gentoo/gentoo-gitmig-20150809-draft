@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.9 2006/12/06 17:20:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.10 2007/03/07 16:52:07 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -66,10 +66,10 @@ src_compile() {
 src_install() {
 	dogamesbin source/src/cube_{client,server} || die "dogamesbin failed"
 	exeinto "${GAMES_LIBDIR}/${PN}"
-	if [ "${ARCH}" == "x86" ] ; then
+	if [[ "${ARCH}" == "x86" ]] ; then
 		newexe bin_unix/linux_client cube_client || die "newexe failed"
 		newexe bin_unix/linux_server cube_server || die "newexe failed"
-	elif [ "${ARCH}" == "ppc" ] ; then
+	elif [[ "${ARCH}" == "ppc" ]] ; then
 		newexe bin_unix/ppc_linux_client cube_client || die "newexe failed"
 		newexe bin_unix/ppc_linux_server cube_server || die "newexe failed"
 	fi

@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.3 2006/12/24 11:30:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.4 2007/03/07 16:52:42 wolf31o2 Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
-if [ ${fromcvs} -eq 1 ] ; then
+if [[ ${fromcvs} -eq 1 ]] ; then
 	ECVS_PASS="anonymous"
 	ECVS_SERVER="icculus.org:/cvs/cvsroot"
 	inherit cvs eutils flag-o-matic games
@@ -43,7 +43,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if [ ${fromcvs} -eq 1 ] ; then
+	if [[ ${fromcvs} -eq 1 ]] ; then
 		cvs_src_unpack
 		cd duke3d/source
 		ECVS_MODULE="buildengine"

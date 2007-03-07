@@ -2,7 +2,7 @@
 # Written by phoen][x <phoenix@gentoo.org>, Sep/21/2002
 # Modifications, enhancements or bugs?  Contact games@gentoo.org
 
-[ -z "${1}" ] \
+[[ -z "${1}" ]] \
 	&& FILE="${HOME}/.ut2003/Benchmark/bench.log" \
 	|| FILE="${1}"
 
@@ -20,7 +20,7 @@ FB_MAX_COUNT=0
 
 while read LINE ; do
 	CURLINE=`expr $CURLINE + 1`
-	if [ ${CURLINE} -eq 1 ] ; then
+	if [[ ${CURLINE} -eq 1 ]] ; then
 		echo ">> Results of the UT2003-demo benchmark"
 		echo ">> Created on ${LINE}"
 		continue

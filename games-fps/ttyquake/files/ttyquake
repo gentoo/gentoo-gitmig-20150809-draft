@@ -2,7 +2,7 @@
 DISPLAY=
 export LD_LIBRARY_PATH=GENTOO_LIBDIR:${LD_LIBRARY_PATH}
 
-if [ `whoami` = "root" ];then
+if [[ `whoami` = "root" ]] ;then
    echo "***********************************"
    echo "* You can't run ttyquake as root. *"
    echo "* Didn't you read the damn README *"
@@ -11,7 +11,7 @@ if [ `whoami` = "root" ];then
    exit
 fi
 
-if [ -u GAMES_BINDIR/squake ];then
+if [[ -u GAMES_BINDIR/squake ]] ;then
    echo "**********************************"
    echo "*  /squake is setuid.  ttyquake  *"
    echo "* won't work unless you turn off *"
