@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/bubblet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/ChangeLog,v 1.7 2007/01/28 04:04:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/ChangeLog,v 1.8 2007/03/07 05:56:44 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50bubblet-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> bubblet-0.74.ebuild:
   Replacing einfo with elog

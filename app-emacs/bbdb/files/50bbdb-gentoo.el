@@ -1,8 +1,8 @@
 
 ;;; bbdb site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
-(setq load-path (cons "@SITELISP@/bits" load-path))
+(add-to-list 'load-path "@SITELISP@")
+(add-to-list 'load-path "@SITELISP@/bits")
 (require 'bbdb)
 (bbdb-initialize)
 

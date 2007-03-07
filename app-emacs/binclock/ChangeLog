@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/binclock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.9 2007/01/28 04:03:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.10 2007/03/07 05:50:39 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50binclock-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> binclock-1.7.ebuild:
   Replacing einfo with elog
