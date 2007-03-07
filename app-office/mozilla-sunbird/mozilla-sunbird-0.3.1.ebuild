@@ -1,11 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.4 2007/03/04 07:20:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.5 2007/03/07 13:36:01 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
+PATCH="${P}-patches-0.1"
 LANGS="ca cs da de es-ES eu fr hu it mn nl pl ru sk sl"
 
 MY_PN="${PN/mozilla-}"
@@ -13,13 +14,9 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="The Mozilla Sunbird Calendar"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 IUSE="bindist"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/source/${MY_P}.source.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/source/${MY_P}.source.tar.bz2
+	mirror://gentoo/${PATCH}.tar.bz2"
 
-# These are in
-#
-#  http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/langpacks/
-#
-# for i in $LANGS $SHORTLANGS; do wget $i.xpi -O ${P}-$i.xpi; done
 for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
 		linguas_${X/-/_}? ( http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/langpacks/${MY_PN}-${PV}.${X}.langpack.xpi )"
@@ -82,8 +79,11 @@ src_unpack() {
 		[[ ${X} != "en" ]] && xpi_unpack "${MY_PN}-${PV}.${X}.langpack.xpi"
 	done
 
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.3-add-missing-LDFLAGS.patch"
+	# Apply our patches
+	cd "${S}" || die "cd failed"
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"/patch
 
 	eautoreconf
 }
