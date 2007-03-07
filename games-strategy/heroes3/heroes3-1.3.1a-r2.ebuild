@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.3 2007/01/26 19:44:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.4 2007/03/07 17:28:50 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -58,19 +58,19 @@ pkg_setup() {
 	use nocd && fullinstall=1
 	use sounds && use videos && use maps && fullinstall=1
 
-	[ ${fullinstall} -eq 1 ] \
+	[[ ${fullinstall} -eq 1 ]] \
 		&& ewarn "The full installation takes about 341 MB of space!"
 
-#	if [ -n "${fullinstall}" ]
+#	if [[ -n "${fullinstall}" ]]
 #	then
 #		langcount=0
 #		for i in ${LINGUAS}
 #		do
 #			i="${i/_/-}"
-#			if [ ${i} != "en" ]
+#			if [[ ${i} != "en" ]]
 #			then
 #				let $((++langcount))
-#				if [ $langcount = 2 ]
+#				if [[ $langcount = 2 ]]
 #				then
 #					eerror "Heroes3 only supports one localization at once!"
 #					die "Localization is only supported when Heroes3 is in a single language!"
@@ -81,7 +81,7 @@ pkg_setup() {
 #		for i in ${LINGUAS}
 #		do
 #			i="${i/_/-}"
-#			if [ ${i} != "en" ]
+#			if [[ ${i} != "en" ]]
 #			then
 #				eerror "Full installation (nocd flag or data + video + maps flags) is needed for ${i} language!"
 #				die "Localization is only supported when Heroes3 is fully locally installed!"
@@ -98,7 +98,7 @@ src_unpack() {
 #	for i in ${LINGUAS}
 #	do
 #		i="${i/_/-}"
-#		if [ ${i} != "en" ]
+#		if [[ ${i} != "en" ]]
 #		then
 #			mkdir localize
 #			cd localize
@@ -139,12 +139,12 @@ src_install() {
 		fi
 	fi
 
-#	if [ -n "${fullinstall}" ]
+#	if [[ -n "${fullinstall}" ]]
 #	then
 #		for i in ${LINGUAS}
 #		do
 #			i="${i/_/-}"
-#			if [ ${i} != "en" ]
+#			if [[ ${i} != "en" ]]
 #			then
 #				find "${S}/localize/${i}" -type f | while read xfile
 #				do
@@ -153,7 +153,8 @@ src_install() {
 #					ebegin "Localizing ${file}"
 #					xdelta patch "${xfile}" "${Ddir}/${file}" "${Ddir}/${file}.xdp"
 #					local retval=$?
-#					if [ $retval = 0 ] ; then
+#					if [[ $retval = 0 ]]
+#					then
 #						mv -f  "${Ddir}/${file}.xdp" "${Ddir}/${file}"
 #					else
 #						rm -f "${Ddir}/${file}.xdp"
