@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.12 2006/10/02 06:31:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.13 2007/03/07 15:23:39 wolf31o2 Exp $
 
 inherit games
 
@@ -24,21 +24,21 @@ RDEPEND="sys-libs/glibc
 S=${WORKDIR}
 
 games-etmod_src_install() {
-	[ -z "${MOD_NAME}" ] && die "what is the name of this etmod ?"
+	[[ -z "${MOD_NAME}" ]] && die "what is the name of this etmod ?"
 
 	local bdir=${GAMES_PREFIX_OPT}/enemy-territory
 	local mdir=${bdir}/${MOD_NAME}
 	MOD_BINS=${MOD_BINS:-${MOD_NAME}}
 
-	if [ -d ${MOD_NAME} ] ; then
+	if [[ -d ${MOD_NAME} ]] ; then
 		dodir "${bdir}"
 		cp -PR ${MOD_NAME} "${D}/${bdir}/"
 	fi
-	if [ -d etmain ] ; then
+	if [[ -d etmain ]] ; then
 		dodir "${bdir}"
 		cp -PR etmain "${D}/${bdir}/"
 	fi
-	if [ ! -z "`ls "${S}"/* 2> /dev/null`" ] ; then
+	if [[ ! -z "`ls "${S}"/* 2> /dev/null`" ]] ; then
 		dodir "${mdir}"
 		cp -PR "${S}"/* "${D}/${mdir}/"
 	fi
@@ -73,7 +73,7 @@ games-etmod_pkg_postinst() {
 	local samplecfg=${FILESDIR}/server.cfg
 	local realcfg=${GAMES_PREFIX_OPT}/enemy-territory/${MOD_NAME}/server.cfg
 
-	if [ -e "${samplecfg}" ] && [ ! -e "${realcfg}" ] ; then
+	if [[ -e "${samplecfg}" ]] && [[ ! -e "${realcfg}" ]] ; then
 		cp "${samplecfg}" "${realcfg}"
 	fi
 
@@ -118,12 +118,12 @@ start() {
 stop() {
 	ebegin "Stopping ${MOD_NAME} dedicated"
 	local pid=\`screen -list | grep et-${MOD_BINS}-ded | awk -F . '{print \$1}' | sed -e s/.//\`
-	if [ -z "\${pid}" ] ; then
+	if [[ -z "\${pid}" ]] ; then
 		eend 1 "Lost screen session"
 	else
 		pid=\`pstree -p \${pid} | sed -e 's:^.*etded\.x86::'\`
 		pid=\${pid:1:\${#pid}-2}
-		if [ -z "\${pid}" ] ; then
+		if [[ -z "\${pid}" ]] ; then
 			eend 1 "Lost etded session"
 		else
 			kill \${pid}
@@ -139,7 +139,7 @@ EOF
 }
 
 games-etmod_make_conf.d() {
-	if [ -e "${FILESDIR}"/${MOD_NAME}.conf.d ] ; then
+	if [[ -e "${FILESDIR}"/${MOD_NAME}.conf.d ]] ; then
 		cp "${FILESDIR}"/${MOD_NAME}.conf.d "${T}"/et-${MOD_NAME}-ded.conf.d
 		return 0
 	fi
