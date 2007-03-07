@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.7-build.xml-jar-target.patch 1148 RMD160 9387b53ab675cc223db2824b0dadd994994ce16e SHA1 59cbb1207313b24b0cbcf0f81e973c1c6d34af09 SHA256 c1a0724bd448bb2d98ae58d72d3b842c8313a9933df13dac56c9ea6e835bb69d
 MD5 79044065870df490120faeed1137a72f files/1.7-build.xml-jar-target.patch 1148
 RMD160 9387b53ab675cc223db2824b0dadd994994ce16e files/1.7-build.xml-jar-target.patch 1148
@@ -8,18 +11,14 @@ EBUILD commons-digester-1.6-r1.ebuild 1642 RMD160 6e6e44af45a5dcf714c43afc690d61
 MD5 260f85ade228b89562efcbe5414d3006 commons-digester-1.6-r1.ebuild 1642
 RMD160 6e6e44af45a5dcf714c43afc690d61a782263f66 commons-digester-1.6-r1.ebuild 1642
 SHA256 6681d54cf1989416acf4444179a06bc31afd229ee83911744e9e4e820526f9ab commons-digester-1.6-r1.ebuild 1642
-EBUILD commons-digester-1.6-r2.ebuild 1509 RMD160 7967fe022f715129f8bd3291bfa9bbe557c32f61 SHA1 d7c78e92de71c593a7197e79c13709d2ceaf72b7 SHA256 3d8628802e0a3455eee95b9f41d8cfc3b53344b97dec5d6ca3c3a1ceb1548a76
-MD5 e6378098e58e151c3c9a634be9c24fec commons-digester-1.6-r2.ebuild 1509
-RMD160 7967fe022f715129f8bd3291bfa9bbe557c32f61 commons-digester-1.6-r2.ebuild 1509
-SHA256 3d8628802e0a3455eee95b9f41d8cfc3b53344b97dec5d6ca3c3a1ceb1548a76 commons-digester-1.6-r2.ebuild 1509
 EBUILD commons-digester-1.7-r2.ebuild 2108 RMD160 c468375ca644a5fd437ef4ad7d2996d6799a81fa SHA1 9a26725557762a6f9b10d4d1f1b460eaf69c3455 SHA256 3624629f1ac9ab5f545f544d8db4d917a100adc25a95b245bbf41621c96401e6
 MD5 c9219cd0097f83c83f95f8bb216a8f93 commons-digester-1.7-r2.ebuild 2108
 RMD160 c468375ca644a5fd437ef4ad7d2996d6799a81fa commons-digester-1.7-r2.ebuild 2108
 SHA256 3624629f1ac9ab5f545f544d8db4d917a100adc25a95b245bbf41621c96401e6 commons-digester-1.7-r2.ebuild 2108
-MISC ChangeLog 5730 RMD160 ef855c8065c264aa21a1b8c70ec66890028d8136 SHA1 edd5bf07cf3426eca73792436440a85e3ac165c6 SHA256 88089c2818c8082426d48ebba8910b3675f8cbc07abcef531e4dfcc96b107c1e
-MD5 5e728d1d6603d9c4db57f64dcb107cd0 ChangeLog 5730
-RMD160 ef855c8065c264aa21a1b8c70ec66890028d8136 ChangeLog 5730
-SHA256 88089c2818c8082426d48ebba8910b3675f8cbc07abcef531e4dfcc96b107c1e ChangeLog 5730
+MISC ChangeLog 5936 RMD160 2af7c952d7d8a646a5cf3c8d1024aa3e1142aa43 SHA1 e9abdd21f439ee6ba5400427b536bd0777e14b77 SHA256 4bd19f4f1824586f9a50fbae452c05bfac481191a17b32639f9e3a4bf0b0acf7
+MD5 35c1fbe587ee8d7932fc60a676baae69 ChangeLog 5936
+RMD160 2af7c952d7d8a646a5cf3c8d1024aa3e1142aa43 ChangeLog 5936
+SHA256 4bd19f4f1824586f9a50fbae452c05bfac481191a17b32639f9e3a4bf0b0acf7 ChangeLog 5936
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
@@ -27,9 +26,13 @@ SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata
 MD5 fcc5e678cf0924a2bcb62d05c27f7c9a files/digest-commons-digester-1.6-r1 274
 RMD160 a8f1d8c75db31f403ee0c269bb325c97673137ee files/digest-commons-digester-1.6-r1 274
 SHA256 bdbe9078daa1c4dd54fd9995c81a6740f952abc5e1ddcbfe6a34bbeb4301cedf files/digest-commons-digester-1.6-r1 274
-MD5 fcc5e678cf0924a2bcb62d05c27f7c9a files/digest-commons-digester-1.6-r2 274
-RMD160 a8f1d8c75db31f403ee0c269bb325c97673137ee files/digest-commons-digester-1.6-r2 274
-SHA256 bdbe9078daa1c4dd54fd9995c81a6740f952abc5e1ddcbfe6a34bbeb4301cedf files/digest-commons-digester-1.6-r2 274
 MD5 2a9227ee129b36e3601a7bc5591d22ed files/digest-commons-digester-1.7-r2 274
 RMD160 4b168dc960c641b72564d1e9e8938c3fedc99065 files/digest-commons-digester-1.7-r2 274
 SHA256 f020b21b6d35afa02686b829693e2d91387441525b8e2e094dceb3ae475bf632 files/digest-commons-digester-1.7-r2 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF7qxFcxLzpIGCsLQRAnlFAKCSa/IFnDWQat09cR+MJyVkkPw4nwCeIqEL
+aPwU1C7xBZKfSf/lDRUaQ5o=
+=R6qs
+-----END PGP SIGNATURE-----
