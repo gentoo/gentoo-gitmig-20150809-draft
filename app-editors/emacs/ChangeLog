@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.126 2007/03/02 21:44:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.127 2007/03/07 04:35:52 opfer Exp $
+
+*emacs-21.4-r8 (07 Mar 2007)
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  +emacs-21.4-r8.ebuild:
+  make subdirs patch obsolete
 
   02 Mar 2007; Christian Faulhammer <opfer@gentoo.org> emacs-21.4-r4.ebuild,
   emacs-21.4-r7.ebuild:
