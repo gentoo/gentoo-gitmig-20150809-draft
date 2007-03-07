@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.89 2007/03/04 12:07:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.90 2007/03/07 04:30:00 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  -emacs-cvs-22.0.95.ebuild, emacs-cvs-22.0.95-r1.ebuild,
+  -emacs-cvs-22.0.9999-r4.ebuild, emacs-cvs-22.0.9999-r5.ebuild:
+  corrected behaviour for copying subdirs.el and clean up
 
 *emacs-cvs-22.0.9999-r5 (04 Mar 2007)
 *emacs-cvs-22.0.95-r1 (04 Mar 2007)

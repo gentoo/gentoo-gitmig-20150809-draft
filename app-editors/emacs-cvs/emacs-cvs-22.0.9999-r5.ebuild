@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r5.ebuild,v 1.1 2007/03/04 12:07:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r5.ebuild,v 1.2 2007/03/07 04:30:00 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -198,7 +198,7 @@ update-alternatives() {
 
 pkg_postinst() {
 	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
-		cp ${ROOT}/usr/share/emacs{/${PV},}/site-lisp/subdirs.el
+		cp ${ROOT}/usr/share/emacs{/${SLOT},}/site-lisp/subdirs.el
 
 	use ppc-macos || update-alternatives
 	elisp-site-regen
