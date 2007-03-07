@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/dcron
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.8 2007/03/06 18:24:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.9 2007/03/07 15:34:21 eroyf Exp $
+
+  07 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> dcron-3.2.ebuild:
+  Stable on MIPS; bug #167566
 
   06 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> dcron-3.2.ebuild:
   Stable on sparc wrt #167566
