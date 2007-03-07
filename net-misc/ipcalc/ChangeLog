@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipcalc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipcalc/ChangeLog,v 1.9 2007/03/06 08:45:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipcalc/ChangeLog,v 1.10 2007/03/07 14:02:06 eroyf Exp $
+
+  07 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> ipcalc-0.41.ebuild:
+  Stable on MIPS; bug 169035
 
   06 Mar 2007; Markus Rothe <corsair@gentoo.org> ipcalc-0.41.ebuild:
   Stable on ppc64; bug #169035
