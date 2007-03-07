@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.104.0.ebuild,v 1.2 2006/05/09 05:32:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.104.0.ebuild,v 1.3 2007/03/07 16:28:51 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -67,7 +67,7 @@ src_install() {
 	local f
 
 	for f in adv* ; do
-		if [ -L "${f}" ] ; then
+		if [[ -L "${f}" ]] ; then
 			dogamesbin "${f}" || die "dogamesbin failed"
 		fi
 	done
