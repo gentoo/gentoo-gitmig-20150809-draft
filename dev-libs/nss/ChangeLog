@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.79 2007/03/07 16:40:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.80 2007/03/07 21:21:10 armin76 Exp $
+
+*nss-3.11.5 (07 Mar 2007)
+
+  07 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/nss-3.9.2-gcc4.patch, -files/nss-3.9.2-ppc64.patch,
+  -files/nss-3.11.1-perl.patch, +files/nss-3.11.5-config-1.patch,
+  -files/nss-3.11-zdefs.patch, +nss-3.11.5.ebuild:
+  Version bump wrt bug 165555 and cleanup old
 
   07 Mar 2007; Raúl Porcel <armin76@gentoo.org> nss-3.11.4.ebuild:
   license change, bug 150118
