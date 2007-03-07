@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.28 2006/10/27 20:15:00 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.29 2007/03/07 17:02:53 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  bsd-games-2.17-r2.ebuild:
+  Change all instances of [ to [[.
 
   27 Oct 2006; Tristan Heaven <nyhm@gentoo.org> bsd-games-2.17-r2.ebuild:
   Fix make check, bug #95060
