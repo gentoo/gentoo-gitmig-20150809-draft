@@ -1,6 +1,15 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.26 2007/03/06 22:33:43 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.27 2007/03/07 13:50:46 genstef Exp $
+
+  07 Mar 2007; <genstef@gentoo.org> -files/klamav-0.32-parallelmake.patch,
+  -files/klamav-0.35.1-gcc-4.1.patch,
+  -files/klamav-0.40-clamav_0.90_update.patch,
+  +files/klamav-0.41-cl_loaddbdir.patch, -klamav-0.17.3.ebuild,
+  -klamav-0.22.1.ebuild, -klamav-0.30.3.ebuild, -klamav-0.32.ebuild,
+  -klamav-0.35.ebuild, -klamav-0.35.1.ebuild, -klamav-0.37.ebuild,
+  -klamav-0.40.ebuild, klamav-0.41.ebuild:
+  Fix compile thanks to jmbsvicetto in bug 169731
 
 *klamav-0.41 (06 Mar 2007)
 
