@@ -2,16 +2,16 @@
 
 PLANESHIFT_DIR="/opt/planeshift"
 
-if [ ! -d "$PLANESHIFT_DIR" ]; then
+if [[ ! -d "${PLANESHIFT_DIR}" ]] ; then
 	echo "Your Planeshift directory is missing. You need to reinstall Planeshift!"
 	exit 1
 fi
 
-cd "$PLANESHIFT_DIR"
+cd "${PLANESHIFT_DIR}"
 
 export CRYSTAL="/opt/crystal/lib/crystalspace"
 export CEL="/opt/crystal/lib/cel"
 
 ./updater $@
 
-chmod g+rw "$PLANESHIFT_DIR" -R 2>/dev/null
+chmod g+rw "${PLANESHIFT_DIR}" -R 2>/dev/null
