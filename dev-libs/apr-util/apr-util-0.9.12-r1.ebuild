@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12-r1.ebuild,v 1.1 2007/03/07 09:11:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12-r1.ebuild,v 1.2 2007/03/07 09:12:17 phreak Exp $
 
 inherit autotools eutils flag-o-matic libtool db-use
 
@@ -22,7 +22,7 @@ DEPEND="dev-libs/expat
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}" 
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-linking.patch
 	epatch "${FILESDIR}"/${P}-db-4.5.patch
