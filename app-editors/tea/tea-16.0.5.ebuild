@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-15.0.0.ebuild,v 1.5 2007/02/07 23:45:40 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-16.0.5.ebuild,v 1.1 2007/03/07 22:20:44 welp Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tea-editor/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome hacking ipv6 sounds spell"
+IUSE="enchant gnome hacking ipv6 sounds spell"
 
 RDEPEND="x11-libs/gtk+
 	gnome? ( x11-libs/gtksourceview
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libX11
 	sounds? ( media-libs/gstreamer )
 	spell? ( app-text/aspell )
+	enchant? ( app-text/enchant )
 	dev-util/pkgconfig"
 
 src_compile() {
@@ -34,6 +35,9 @@ src_compile() {
 	fi
 	if ! use gnome; then
 		myconf="${myconf} --enable-legacy"
+	fi
+	if use enchant; then
+		myconf="${myconf} --enable-enchant"
 	fi
 
 	econf \
