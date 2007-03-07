@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.115 2007/01/06 18:18:56 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.116 2007/03/07 18:03:59 kolmodin Exp $
+
+*ghc-6.6 (07 Mar 2007)
+
+  07 Mar 2007; <kolmodin@gentoo.org> +ghc-6.6.ebuild:
+  Bump version. Big changes ahead... wrt ghc-extra-libs, etc
 
   06 Jan 2007; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild,
   ghc-6.4.1-r2.ebuild, ghc-6.4.1-r3.ebuild, ghc-6.4.2.ebuild:
