@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.6 2007/03/06 23:17:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.7 2007/03/07 09:17:36 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -46,7 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-glib_dep.patch"
 	epatch "${FILESDIR}/${P}-ocfs2.patch"
 	epatch "${FILESDIR}/${P}-use_disk_group.patch"
-	epatch "${FILESDIR}/${P}-getpagesize.patch"
+	epatch "${FILESDIR}/${P}-pagesize.patch"
 
 	eautoreconf
 }

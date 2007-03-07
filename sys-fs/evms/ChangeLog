@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.63 2007/03/06 23:17:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.64 2007/03/07 09:17:36 dev-zero Exp $
+
+  07 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/evms-2.5.5-getpagesize.patch, +files/evms-2.5.5-pagesize.patch,
+  evms-2.5.5-r5.ebuild:
+  Replaced our patch for bug #169623 with the one from debian.
 
   06 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/evms-2.5.5-getpagesize.patch, evms-2.5.5-r5.ebuild:
