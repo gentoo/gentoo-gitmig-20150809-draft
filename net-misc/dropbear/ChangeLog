@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.50 2007/03/05 23:22:10 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.51 2007/03/07 17:28:26 eroyf Exp $
+
+  07 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> dropbear-0.49.ebuild:
+  Stable on MIPS; bug #168847
 
   05 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> dropbear-0.49.ebuild:
   Stable on alpha wrt security bug #168847
