@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.71 2007/02/11 14:25:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.72 2007/03/07 09:11:14 phreak Exp $
+
+*apr-util-0.9.12-r1 (07 Mar 2007)
+
+  07 Mar 2007; Christian Heim <phreak@gentoo.org>
+  +files/apr-util-0.9.12-db-4.5.patch, +apr-util-0.9.12-r1.ebuild:
+  Fixing compilation of apr-util-0.9.12 against >=sys-libs/db-4.4 (#169507,
+  thanks to Michael Edenfield <kutulu at kutulu.org> for pointing at the
+  UPSTREAM patch).
 
   11 Feb 2007; Fabian Groffen <grobian@gentoo.org> apr-util-0.9.12.ebuild,
   apr-util-0.9.13.ebuild, apr-util-1.2.8.ebuild:
