@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224-r1.ebuild,v 1.1 2007/02/26 07:06:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224-r1.ebuild,v 1.2 2007/03/07 01:26:50 peper Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -13,7 +13,7 @@ SRC_URI="http://cor.planetquake.gamespy.com/codered/files/${MY_PN}-linux${PV}-x8
 
 LICENSE="GPL-2 free-noncomm"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dedicated opengl sdl"
 
 UIRDEPEND="media-libs/jpeg
