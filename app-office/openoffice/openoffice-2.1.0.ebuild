@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.17 2007/03/06 19:04:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.18 2007/03/07 22:14:31 wolf31o2 Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -155,7 +155,7 @@ pkg_setup() {
 
 	strip-linguas ${LANGS}
 
-	if [ -z "${LINGUAS}" ]; then
+	if [[ -z "${LINGUAS}" ]]; then
 		export LINGUAS_OOO="en-US"
 		ewarn
 		ewarn " To get a localized build, set the according LINGUAS variable(s). "
@@ -267,7 +267,7 @@ src_compile() {
 
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break
 	export JOBS="1"
-	if [ "${WANT_MP}" == "true" ]; then
+	if [[ "${WANT_MP}" == "true" ]]; then
 		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	fi
 
@@ -346,7 +346,7 @@ pkg_postinst() {
 
 	eselect oodict update --libdir $(get_libdir)
 
-	[ -x /sbin/chpax ] && [ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
+	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	# Add available & useful jars to openoffice classpath
 	use java && /usr/lib/openoffice/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
