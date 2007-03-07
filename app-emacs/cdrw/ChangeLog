@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/cdrw
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/ChangeLog,v 1.7 2006/10/30 16:17:07 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/ChangeLog,v 1.8 2007/03/07 09:30:46 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50cdrw-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
   30 Oct 2006; Christian Faulhammer <opfer@gentoo.org> cdrw-1.2.ebuild:
   replaced app-cdr/cdrtools with virtual/cdrtools, as requested by Lars Weiler

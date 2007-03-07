@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/dircolors
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.11 2007/02/21 21:29:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.12 2007/03/07 09:35:47 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50dircolors-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

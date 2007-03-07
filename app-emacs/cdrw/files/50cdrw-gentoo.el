@@ -1,7 +1,7 @@
 
 ;;; cdrw site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 
 (autoload 'cdrw "cdrw" "CDRW Creation" t)
 (autoload 'cdrw-from-file "cdrw" "Load previously saved mark-file." t)
