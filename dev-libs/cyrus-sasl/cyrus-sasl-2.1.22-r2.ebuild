@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r2.ebuild,v 1.2 2007/03/03 22:38:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r2.ebuild,v 1.3 2007/03/07 22:02:28 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -53,6 +53,7 @@ pkg_setup() {
 		ewarn "(Control-C to abort)..."
 		epause 10
 	fi
+	java-pkg-opt-2_pkg_setup
 }
 
 src_unpack() {
