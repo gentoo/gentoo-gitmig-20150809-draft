@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42-r1.ebuild,v 1.1 2007/03/07 11:02:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42-r1.ebuild,v 1.2 2007/03/07 11:15:54 phreak Exp $
 
 inherit bash-completion eutils
 
@@ -26,7 +26,7 @@ pkg_setup() {
 	elog "If you intend to use the folding functionality (graphical illustration of the patch stack)"
 	elog "then you'll need to remerge this package with USE=graphviz."
 	echo
-	epause
+	epause 5
 }
 
 src_unpack() {
