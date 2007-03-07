@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.174 2007/03/06 22:21:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.175 2007/03/07 17:00:08 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Removing nwn/nwn-data from mask.  I'm sure this will make Mr_Bones_ happy.
 
   06 Mar 2007; <genstef@gentoo.org> package.mask:
   Unsermake is utterly broken and no longer used, please uninstall
