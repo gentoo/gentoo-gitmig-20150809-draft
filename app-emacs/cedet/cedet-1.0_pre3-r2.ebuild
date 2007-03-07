@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.4 2007/03/02 21:22:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.5 2007/03/07 05:04:11 opfer Exp $
 
 inherit elisp eutils
 
@@ -39,7 +39,7 @@ src_install() {
 	find "${S}" -type f -print \
 		| while read target; do
 			local directory=`dirname $target` file=`basename $target`
-			local sub_directory=`basename $directory`
+			local sub_directory=`echo $directory | sed "s%^${S}/*%%;s/^$/./"`
 			case $file in
 				*~ | Makefile | *.texi | *-script | PRERELEASE_CHECKLIST | Project.ede)
 					rm -f ${file}
