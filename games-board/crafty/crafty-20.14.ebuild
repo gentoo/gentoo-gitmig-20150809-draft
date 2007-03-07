@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-20.14.ebuild,v 1.1 2006/10/02 22:47:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-20.14.ebuild,v 1.2 2007/03/07 16:02:59 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
@@ -43,7 +43,8 @@ src_compile() {
 			append-flags -O2 -fno-alias -fforce-mem \
 				-fomit-frame-pointer -fno-gcse -mpreferred-stack-boundary=2
 		else
-			if [ "${CHOST}" == "i686-pc-linux-gnu" ] || [ "${CHOST}" == "i586-pc-linux-gnu" ] ; then
+			if [[ "${CHOST}" == "i686-pc-linux-gnu" ]] \
+			|| [[ "${CHOST}" == "i586-pc-linux-gnu" ]] ; then
 				append-flags -DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
 					-DUSE_ASSEMBLY_A -DUSE_ASSEMBLY_B \
 					-DFAST -DSMP -DCPUS=4 -DCLONE -DDGT
