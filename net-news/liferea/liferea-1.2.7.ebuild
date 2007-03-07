@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.7.ebuild,v 1.1 2007/02/22 18:44:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.7.ebuild,v 1.2 2007/03/07 19:12:29 corsair Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus firefox gtkhtml seamonkey libnotify gnutls xulrunner"
 
 RDEPEND=">=x11-libs/gtk+-2.8
