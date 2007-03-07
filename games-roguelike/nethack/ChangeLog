@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/nethack
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.23 2006/11/18 01:47:57 compnerd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.24 2007/03/07 17:06:27 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  nethack-3.4.3-r1.ebuild:
+  Change all instances of [ to [[.
 
   18 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org> nethack-3.4.3-r1.ebuild:
   drop gnome useflag for gnome-1.x removal
