@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.49 2007/02/17 11:55:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.50 2007/03/07 16:28:11 armin76 Exp $
+
+  07 Mar 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.0-r4.ebuild,
+  -enigmail-0.94.0-r5.ebuild, -enigmail-0.94.1-r2.ebuild:
+  drop old, dropping the stable keywords for the tbird2.0 version as its not
+  stable
 
 *enigmail-0.94.2-r1 (17 Feb 2007)
 *enigmail-0.94.2 (17 Feb 2007)
