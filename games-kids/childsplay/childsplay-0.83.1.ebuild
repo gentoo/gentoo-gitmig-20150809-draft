@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.83.1.ebuild,v 1.1 2006/10/03 20:37:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.83.1.ebuild,v 1.2 2007/03/07 17:02:16 wolf31o2 Exp $
 
 inherit games python
 
@@ -90,7 +90,7 @@ EOF
 	rm ${D}/${_SHAREDIR}/Data/childsplay.score  # this copy won't be used
 
 	for fn in $(ls lib); do
-		if [ -d lib/${fn} ]; then
+		if [[ -d lib/${fn} ]] ; then
 			cp -r lib/${fn} ${D}/${_SHARELIBDATADIR}
 		else
 			cp lib/${fn} ${D}/${_LIBDIR}
