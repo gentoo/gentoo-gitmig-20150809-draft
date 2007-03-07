@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/files/init.d.rc,v 1.1 2004/09/01 04:39:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/files/pvpgn.rc,v 1.1 2007/03/07 17:22:05 wolf31o2 Exp $
 
 opts="reload shutdown"
 
@@ -10,7 +10,7 @@ depend() {
 }
 
 checkconfig() {
-	if [ ! -f /etc/games/pvpgn/NAME.conf ]; then
+	if [[ ! -f /etc/games/pvpgn/NAME.conf ]] ; then
 	    eerror "You must have a NAME.conf configuration file to start NAME"
 	    return 1
 	fi

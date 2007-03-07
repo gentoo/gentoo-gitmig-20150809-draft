@@ -1,6 +1,10 @@
 # ChangeLog for games-server/pvpgn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.10 2007/02/07 14:10:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.11 2007/03/07 17:22:05 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> -files/init.d.rc,
+  +files/pvpgn.rc, pvpgn-1.6.6.ebuild, pvpgn-1.8.0.ebuild:
+  Changed all instances of [ to [[ and renamed init.d.rc to pvpgn.rc.
 
   07 Feb 2007; Tristan Heaven <nyhm@gentoo.org> pvpgn-1.8.0.ebuild:
   Use mirror://berlios
