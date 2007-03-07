@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.240 2007/03/04 13:40:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.241 2007/03/07 22:22:23 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> perl-5.8.8-r2.ebuild:
+  Change all instances of [ to [[.
 
   04 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   +files/perl-5.8.8-asm-page-h-compile-failure.patch, perl-5.8.8-r2.ebuild:

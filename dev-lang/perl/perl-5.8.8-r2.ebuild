@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.30 2007/03/04 13:40:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.31 2007/03/07 22:22:23 wolf31o2 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -53,7 +53,7 @@ pkg_setup() {
 		epause 5
 	fi
 
-	if [ ! -f "${ROOT}/usr/$(get_libdir)/${LIBPERL}" ]
+	if [[ ! -f "${ROOT}/usr/$(get_libdir)/${LIBPERL}" ]]
 	then
 		# Make sure we have libperl installed ...
 		eerror "Cannot find ${ROOT}/usr/$(get_libdir)/${LIBPERL}!  Make sure that you"
@@ -577,11 +577,11 @@ src_remove_extra_files()
 
 pkg_postinst() {
 	INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${MY_PV}'|etc|local|perl$/; print "$line\n" }')
-	if [ "${ROOT}" = "/" ]
+	if [[ "${ROOT}" = "/" ]]
 	then
 		ebegin "Removing old .ph files"
 		for DIR in $INC; do
-			if [ -d ${ROOT}/$DIR ]; then
+			if [[ -d ${ROOT}/$DIR ]]; then
 				for file in $(find ${ROOT}/$DIR -name "*.ph" -type f); do
 					rm ${ROOT}/$file
 					einfo "<< $file"
@@ -590,7 +590,7 @@ pkg_postinst() {
 		done
 		# Silently remove the now empty dirs
 		for DIR in $INC; do
-		   if [ -d ${ROOT}/$DIR ]; then
+		   if [[ -d ${ROOT}/$DIR ]]; then
 		   	find ${ROOT}/$DIR -depth -type d | xargs -r rmdir &> /dev/null
 		   fi
 		done
@@ -608,7 +608,7 @@ pkg_postinst() {
 # of portage will allow us to check what version was just removed - which means
 # we will be able to invoke this only as needed :)
 	# Tried doing this via  -z, but $INC is too big...
-	if [ "${INC}x" != "x" ]; then
+	if [[ "${INC}x" != "x" ]]; then
 		cleaner_msg
 		epause 5
 	fi
