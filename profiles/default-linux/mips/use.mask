@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.82 2007/03/02 22:47:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.83 2007/03/07 14:30:58 eroyf Exp $
 
 # Samuli Suominen <drac@gentoo.org>
 # No batteries on mips.
@@ -59,7 +59,6 @@ video_cards_mga
 video_cards_nv
 video_cards_r128
 video_cards_radeon
-video_cards_savage
 video_cards_sis
 input_devices_acecad
 input_devices_aiptek
