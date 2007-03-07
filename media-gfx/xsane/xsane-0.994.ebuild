@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.991.ebuild,v 1.10 2007/03/07 13:19:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.994.ebuild,v 1.1 2007/03/07 13:19:12 phosphan Exp $
 
 inherit eutils
 
@@ -10,15 +10,16 @@ SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="nls jpeg png tiff gimp"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="nls jpeg png tiff gimp lcms"
 
 RDEPEND="media-gfx/sane-backends
 	>=x11-libs/gtk+-2.0
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	gimp? ( media-gfx/gimp )"
+	gimp? ( media-gfx/gimp )
+	lcms? ( media-libs/lcms )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -33,12 +34,17 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf --enable-gtk2 \
+	local extraCPPflags
+	if use lcms; then
+		extraCPPflags="-I /usr/include/lcms"
+	fi
+	CPPFLAGS="${CPPFLAGS} ${extraCPPflags}" econf --enable-gtk2 \
 		$(use_enable nls) \
 		$(use_enable jpeg) \
 		$(use_enable png) \
 		$(use_enable tiff) \
 		$(use_enable gimp) \
+		$(use_enable lcms) \
 		|| die
 	emake || die
 }
