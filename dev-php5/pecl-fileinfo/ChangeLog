@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-fileinfo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.14 2006/07/22 08:06:41 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.15 2007/03/07 18:08:43 chtekk Exp $
+
+*pecl-fileinfo-1.0.4 (07 Mar 2007)
+
+  07 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  pecl-fileinfo-1.0.3.ebuild, +pecl-fileinfo-1.0.4.ebuild:
+  Version bump, cleanup.
 
   22 Jul 2006; Luca Longinotti <chtekk@gentoo.org>
   files/digest-pecl-fileinfo-1.0.3, Manifest:
