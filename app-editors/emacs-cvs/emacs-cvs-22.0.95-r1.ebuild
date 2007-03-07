@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.95-r1.ebuild,v 1.2 2007/03/07 04:30:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.95-r1.ebuild,v 1.3 2007/03/07 05:21:07 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -140,10 +140,6 @@ src_install () {
 		fi
 	done
 
-	if has_version 'app-text/aspell' ; then
-		# defaults to aspell if installed
-		elisp-site-file-install "${FILESDIR}/40aspell-gentoo.el"
-	fi
 	insinto /etc/env.d
 	cat >"${D}"/etc/env.d/50emacs-cvs-${SLOT} <<EOF
 INFOPATH=/usr/share/info/emacs-${SLOT}

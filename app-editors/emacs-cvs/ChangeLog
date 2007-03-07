@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.90 2007/03/07 04:30:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.91 2007/03/07 05:21:07 opfer Exp $
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/40aspell-gentoo.el, emacs-cvs-22.0.95-r1.ebuild,
+  emacs-cvs-22.0.9999-r5.ebuild, emacs-cvs-23.0.0-r1.ebuild:
+  removed aspell activation, as Emacs detects that itself
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   -emacs-cvs-22.0.95.ebuild, emacs-cvs-22.0.95-r1.ebuild,
