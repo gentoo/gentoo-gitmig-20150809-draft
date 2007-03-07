@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.58 2007/03/07 20:37:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.59 2007/03/07 20:51:23 tester Exp $
+
+*gossip-0.23 (07 Mar 2007)
+
+  07 Mar 2007; Olivier Crête <tester@gentoo.org> +gossip-0.23.ebuild:
+  Version bump
 
   07 Mar 2007; Olivier Crête <tester@gentoo.org> gossip-0.22.ebuild:
   Stable on amd64
