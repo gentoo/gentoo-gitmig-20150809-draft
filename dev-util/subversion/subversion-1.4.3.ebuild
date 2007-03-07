@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.6 2007/03/05 04:20:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.7 2007/03/07 04:52:19 opfer Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -174,7 +174,7 @@ src_install () {
 
 	dobin svn-config
 	if use python; then
-		make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/$(get_libdir)" || die "Installation of subversion python bindings failed"
+		make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}	LD_LIBRARY_PATH="-L${D}/usr/$(get_libdir)" || die "Installation of subversion python bindings failed"
 
 		# move python bindings
 		mkdir -p ${D}${PYTHON_DIR}/site-packages
@@ -285,43 +285,43 @@ pkg_postinst() {
 	elog "svnadmin (see man svnadmin) or the following command to create it in"
 	elog "/var/svn:"
 	elog
-	elog "    emerge --config =${CATEGORY}/${PF}"
+	elog "	  emerge --config =${CATEGORY}/${PF}"
 	elog
 	elog "If you upgraded from an older version of berkely db and experience"
 	elog "problems with your repository then run the following commands as root:"
-	elog "    db4_recover -h ${SVN_REPOS_LOC}/repos"
-	elog "    chown -Rf apache:apache ${SVN_REPOS_LOC}/repos"
+	elog "	  db4_recover -h ${SVN_REPOS_LOC}/repos"
+	elog "	  chown -Rf apache:apache ${SVN_REPOS_LOC}/repos"
 	elog
 	elog "Subversion has multiple server types, take your pick:"
 	elog
 	elog " - svnserve daemon: "
-	elog "   1. edit /etc/conf.d/svnserve"
-	elog "   2. start daemon: /etc/init.d/svnserve start"
-	elog "   3. make persistent: rc-update add svnserve default"
+	elog "	 1. edit /etc/conf.d/svnserve"
+	elog "	 2. start daemon: /etc/init.d/svnserve start"
+	elog "	 3. make persistent: rc-update add svnserve default"
 	elog
 	elog " - svnserve via xinetd:"
-	elog "   1. edit /etc/xinetd.d/svnserve (remove disable line)"
-	elog "   2. restart xinetd.d: /etc/init.d/xinetd restart"
+	elog "	 1. edit /etc/xinetd.d/svnserve (remove disable line)"
+	elog "	 2. restart xinetd.d: /etc/init.d/xinetd restart"
 	elog
 	elog " - svn over ssh:"
-	elog "   1. Fix the repository permissions:"
-	elog "        groupadd svnusers"
-	elog "        chown -R root:svnusers /var/svn/repos/"
-	elog "        chmod -R g-w /var/svn/repos"
-	elog "        chmod -R g+rw /var/svn/repos/db"
-	elog "        chmod -R g+rw /var/svn/repos/locks"
-	elog "   2. create an svnserve wrapper in /usr/local/bin to set the umask you"
-	elog "      want, for example:"
-	elog "         #!/bin/bash"
-	elog "         umask 002"
-	elog "         exec /usr/bin/svnserve \"\$@\""
+	elog "	 1. Fix the repository permissions:"
+	elog "		  groupadd svnusers"
+	elog "		  chown -R root:svnusers /var/svn/repos/"
+	elog "		  chmod -R g-w /var/svn/repos"
+	elog "		  chmod -R g+rw /var/svn/repos/db"
+	elog "		  chmod -R g+rw /var/svn/repos/locks"
+	elog "	 2. create an svnserve wrapper in /usr/local/bin to set the umask you"
+	elog "		want, for example:"
+	elog "		   #!/bin/bash"
+	elog "		   umask 002"
+	elog "		   exec /usr/bin/svnserve \"\$@\""
 	elog
 
 	if use apache2 >/dev/null; then
 		elog " - http-based server:"
-		elog "   1. edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
-		elog "   2. create an htpasswd file:"
-		elog "      htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
+		elog "	 1. edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
+		elog "	 2. create an htpasswd file:"
+		elog "		htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
 		elog
 	fi
 
@@ -334,7 +334,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 	use perl && perl-module_pkg_postrm
 }
 
