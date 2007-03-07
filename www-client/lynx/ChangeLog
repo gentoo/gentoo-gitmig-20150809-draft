@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.66 2007/02/28 19:50:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.67 2007/03/07 15:07:45 eroyf Exp $
+
+  07 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> lynx-2.8.6-r2.ebuild:
+  Stable on MIPS; bug #168596
 
   28 Feb 2007; Markus Rothe <corsair@gentoo.org> lynx-2.8.6-r2.ebuild:
   Stable on ppc64; bug #168596
