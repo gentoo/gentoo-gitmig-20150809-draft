@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/devel-logger-1.0.1-r1.ebuild,v 1.5 2006/01/31 19:44:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/devel-logger-1.0.1-r1.ebuild,v 1.6 2007/03/07 01:59:56 tgall Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://rrr.jin.gr.jp/doc/devel-logger/"
 SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/contrib/${MY_P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha hppa ia64 mips ~ppc sparc x86"
+KEYWORDS="alpha hppa ia64 mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 DEPEND="virtual/ruby"
 USE_RUBY="any"
