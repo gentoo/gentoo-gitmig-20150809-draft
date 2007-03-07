@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.101 2007/03/06 19:10:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.102 2007/03/07 14:14:37 eroyf Exp $
+
+  07 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  gentoolkit-0.2.3.ebuild:
+  Stable on MIPS; bug #169040
 
   06 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoolkit-0.2.3.ebuild:
