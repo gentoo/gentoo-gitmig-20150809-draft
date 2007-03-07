@@ -1,10 +1,10 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/files/visualboyadvance,v 1.4 2004/07/14 22:15:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/files/visualboyadvance,v 1.5 2007/03/07 16:49:27 wolf31o2 Exp $
 
 PN=VisualBoyAdvance
-if ! [ -d ~/.${PN}/save ]; then
+if ! [[ -d ~/.${PN}/save ]] ; then
 	mkdir -p ~/.${PN}/save
 	cd ~/.${PN}
 	ln -s `which ${PN}` .

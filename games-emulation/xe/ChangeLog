@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.6 2007/02/21 23:33:31 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.7 2007/03/07 16:50:52 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> files/xe-20060101:
+  Change all instances of [ to [[.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.14 2006/12/06 17:15:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.15 2007/03/07 16:48:24 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -31,7 +31,7 @@ src_unpack() {
 				|| die "sed configure failed"
 	fi
 
-	if [ $(gcc-major-version) -eq 3 ] ; then
+	if [[ $(gcc-major-version) -eq 3 ]] ; then
 		sed -i \
 			-e "s/-malign-functions/-falign-functions/" \
 			-e "s/-malign-loops/-falign-loops/" \
@@ -51,7 +51,7 @@ src_compile() {
 
 	use gtk && myguis="gtk"
 	use svga && myguis="svgalib"
-	[ -n "${myguis}" ] || myguis="gtk"
+	[[ -n "${myguis}" ]] || myguis="gtk"
 
 	for mygui in ${myguis}; do
 		if [ -f Makefile ] ; then
