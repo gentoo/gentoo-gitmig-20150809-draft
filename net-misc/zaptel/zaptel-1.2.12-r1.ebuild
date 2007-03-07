@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.12-r1.ebuild,v 1.1 2007/01/17 17:51:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.12-r1.ebuild,v 1.2 2007/03/07 20:40:48 solar Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -29,10 +29,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="virtual/libc
-	virtual/linux-sources
+RDEPEND="virtual/libc
 	dev-libs/libusb
 	>=dev-libs/newt-0.50.0"
+
+DEPEND="${RDEPEND} virtual/linux-sources"
 
 # list of echo canceller use flags,
 # first active in this list is selected (=order does matter)
