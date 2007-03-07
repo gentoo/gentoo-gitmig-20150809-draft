@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.5 2006/12/01 22:04:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.6 2007/03/07 16:10:15 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -161,7 +161,7 @@ src_compile() {
 		#disp=1
 		ewarn "GGI support is currently (${PV}) broken :("
 	fi
-	if  [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
+	if  [[ ${disp} -eq 0 ]] || use opengl || use X || use dga || use xv ; then
 		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
 	fi
 }
@@ -191,7 +191,7 @@ src_install() {
 		#disp=1
 		ewarn "GGI support is currently (${PV}) broken :("
 	fi
-	if [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
+	if [[ ${disp} -eq 0 ]] || use opengl || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
 	exeinto "${GAMES_LIBDIR}/${PN}"
@@ -212,7 +212,7 @@ src_install() {
 	# default to sdl since the client is a bit more featureful
 	if use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
-	elif [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
+	elif [[ ${disp} -eq 0 ]] || use opengl || use X || use dga || use xv ; then
 		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
 	elif use svga ; then
 		dosym ${TARGET}.svgalib "${GAMES_BINDIR}/${TARGET}"

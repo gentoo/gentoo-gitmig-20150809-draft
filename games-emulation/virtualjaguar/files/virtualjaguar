@@ -3,28 +3,28 @@
 # Script for launching virtualjaguar 
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.4 2004/12/12 06:49:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.5 2007/03/07 16:14:26 wolf31o2 Exp $
 
 source /sbin/functions.sh
 
 shopt -s nullglob
 
-if [ ! -d ~/.vj/bios ] ; then
+if [[ ! -d ~/.vj/bios ]] ; then
     mkdir -p ~/.vj/bios
 fi
 
-if [ ! -d ~/.vj/eeproms ] ; then
+if [[ ! -d ~/.vj/eeproms ]] ; then
     mkdir -p ~/.vj/eeproms
 fi
 
-if [ ! -d ~/.vj/ROMs ] ; then
+if [[ ! -d ~/.vj/ROMs ]] ; then
     mkdir -p ~/.vj/ROMs
 fi
 
 cd ~/.vj
 
 # check for bios
-if [ -z "`cd ./bios && ls`" ] ; then
+if [[ -z "`cd ./bios && ls`" ]] ; then
 	# if the bios directory is empty, then ... well ...
 	echo
 	eerror "    Put your BIOS file into ~/.vj/bios/"

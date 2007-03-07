@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.8 2006/12/01 22:04:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.9 2007/03/07 16:10:15 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -146,7 +146,7 @@ src_unpack() {
 
 	case ${ARCH} in
 		x86|ia64)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce -ffast-math
-			[ $(gcc-major-version) -eq 3 ] \
+			[[ $(gcc-major-version) -eq 3 ]] \
 				&& append-flags -falign-functions=2 -falign-jumps=2 -falign-loops=2 \
 				|| append-flags -malign-functions=2 -malign-jumps=2 -malign-loops=2
 			;;
@@ -187,7 +187,7 @@ src_compile() {
 		emake DISPLAY_METHOD=xgl || die "emake failed (xgl)"
 		disp=1
 	fi
-	if  [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
+	if  [[ ${disp} -eq 0 ]] || use X || use dga || use xv ; then
 		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
 	fi
 }
@@ -223,7 +223,7 @@ src_install() {
 		make DISPLAY_METHOD=xgl install || die "install failed (xgl)"
 		disp=1
 	fi
-	if [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
+	if [[ ${disp} -eq 0 ]] || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
 
@@ -235,7 +235,7 @@ src_install() {
 
 	if use opengl ; then
 		dosym "${TARGET}.xgl" "${GAMES_BINDIR}/${TARGET}"
-	elif [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
+	elif [[ ${disp} -eq 0 ]] || use X || use dga || use xv ; then
 		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
 	elif use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"

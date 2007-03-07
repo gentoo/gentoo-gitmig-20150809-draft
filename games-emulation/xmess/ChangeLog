@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.57 2007/02/21 23:34:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.58 2007/03/07 16:10:15 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> xmess-0.83.1.ebuild,
+  xmess-0.105.ebuild, xmess-0.106.ebuild:
+  Change all instances of [ to [[.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
