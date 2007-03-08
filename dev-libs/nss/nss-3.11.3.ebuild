@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.3.ebuild,v 1.12 2007/02/04 20:17:09 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.3.ebuild,v 1.13 2007/03/08 22:18:23 beandog Exp $
 
-inherit eutils
+inherit eutils multilib
 
 NSPR_VER="4.6.3"
 RTM_NAME="NSS_${PV//./_}_RTM"

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.4.ebuild,v 1.2 2007/03/07 16:40:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.4.ebuild,v 1.3 2007/03/08 22:18:23 beandog Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 NSPR_VER="4.6.4"
 RTM_NAME="NSS_${PV//./_}_RTM"
