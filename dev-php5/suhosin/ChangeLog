@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.8 2007/03/08 14:12:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.9 2007/03/08 16:31:33 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
+  Fix manifest
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> suhosin-0.9.17.ebuild:
   Stable on sparc wrt security #153911

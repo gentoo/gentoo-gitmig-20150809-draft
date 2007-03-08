@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-filter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/ChangeLog,v 1.20 2007/03/08 14:16:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/ChangeLog,v 1.21 2007/03/08 16:32:46 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
+  Fix manifest
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   pecl-filter-0.11.0.ebuild:
