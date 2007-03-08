@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.23.ebuild,v 1.1 2007/03/07 20:51:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.23.ebuild,v 1.2 2007/03/08 13:14:30 tester Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.imendio.com/wiki/Gossip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="spell dbus libnotify"
 
 #make check breaks in help
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
 G2CONF="${G2CONF} \
+	--disable-telepathy \
 	$(use_enable dbus) \
 	$(use_enable libnotify) \
 	$(use_enable spell aspell)"
