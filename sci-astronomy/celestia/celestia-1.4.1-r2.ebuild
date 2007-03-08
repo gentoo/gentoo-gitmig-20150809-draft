@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.1 2007/02/12 22:44:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.2 2007/03/08 09:45:18 bicatali Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -75,6 +75,9 @@ src_unpack() {
 
 	# fix kde datadir in makefile.am and .desktop location
 	epatch "${FILESDIR}/${P}-kde-datadir.patch"
+
+	# add a desktop file that doesn't end up in lost+found
+	epatch "${FILESDIR}/${P}-kde-desktop.patch"
 
 	# add a ~/.celestia for extra directories
 	epatch "${FILESDIR}/${P}-cfg.patch"
