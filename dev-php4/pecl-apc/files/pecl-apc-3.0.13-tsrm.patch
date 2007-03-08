@@ -1,0 +1,14 @@
+--- php_apc.c	2007/02/28 01:15:18	3.137
++++ php_apc.c	2007/03/08 22:35:45	3.138
+@@ -877,7 +877,11 @@
+ 
+     /* Free up everything */
+     zend_destroy_file_handle(&file_handle TSRMLS_CC);
++#ifdef ZEND_ENGINE_2
+     destroy_op_array(op_array TSRMLS_CC);
++#else
++    destroy_op_array(op_array);
++#endif
+     efree(op_array);
+ 
+     RETURN_TRUE;
