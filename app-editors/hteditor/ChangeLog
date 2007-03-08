@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.25 2007/01/27 10:32:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.26 2007/03/08 11:18:29 dragonheart Exp $
+
+*hteditor-2.0 (08 Mar 2007)
+
+  08 Mar 2007; Daniel Black <dragonheart@gentoo.org> +hteditor-2.0.ebuild:
+  version bump as per bug #169829 thanks to Sebastian Biallas
 
 *hteditor-2.0_beta2 (27 Jan 2007)
 
