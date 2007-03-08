@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.184 2007/03/08 13:54:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.185 2007/03/08 13:54:48 robbat2 Exp $
 
   08 Mar 2007; <genstef@gentoo.org> package.mask:
   remove bogus dmraid mask, bug 139860, treecleaners is dead
