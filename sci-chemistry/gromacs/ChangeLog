@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.19 2007/03/07 23:12:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.20 2007/03/08 01:21:19 weeve Exp $
+
+  08 Mar 2007; Jason Wever <weeve@gentoo.org> gromacs-3.3.1-r1.ebuild:
+  Stable on SPARC wrt bug #168182.
 
   07 Mar 2007; Jeff Gardner <je_fro@gentoo.org> gromacs-3.3.1-r1.ebuild:
   Fix up the demo script so the xterms stay open.
