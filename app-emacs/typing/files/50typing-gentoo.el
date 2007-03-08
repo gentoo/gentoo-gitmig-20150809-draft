@@ -1,6 +1,6 @@
 
 ;;; typing site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 
 (autoload 'typing-of-emacs "typing" "The Typing of Emacs, a game." t)

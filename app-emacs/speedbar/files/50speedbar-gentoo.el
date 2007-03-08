@@ -1,7 +1,7 @@
 
 ;;; speedbar site-lisp configuration
 
-(setq load-path (cons (concat "@SITELISP@") load-path))
+(add-to-list 'load-path "@SITELISP@")
 ;;; necessary for FSF GNU Emacs only
 (autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
 (autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)

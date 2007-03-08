@@ -1,6 +1,6 @@
 
 ;;; uboat site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (autoload 'uboat-death-message "uboat" nil t)
 

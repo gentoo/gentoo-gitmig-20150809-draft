@@ -1,6 +1,6 @@
 
 ;;; thumbs site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (require 'image)
 (require 'thumbs)

@@ -1,5 +1,5 @@
 
 ;;; SEMI site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (require 'mime-setup)

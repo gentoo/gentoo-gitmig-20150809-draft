@@ -1,7 +1,7 @@
 
 ;;; hm--view-process site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 
 (autoload 'view-processes "view-process-mode"
   "Prints a list with processes in the buffer `view-process-buffer-name'.

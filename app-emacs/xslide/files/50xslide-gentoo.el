@@ -1,7 +1,7 @@
 
 ;;; xslide site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (autoload 'xsl-mode "xslide" "Major mode for XSL stylesheets." t)
 ;; Turn on font lock when in XSL mode
 (add-hook 'xsl-mode-hook
