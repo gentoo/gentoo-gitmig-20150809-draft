@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.53 2007/01/28 19:40:16 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.54 2007/03/08 00:42:33 wltjr Exp $
+
+  08 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -netbeans-3.4.1.ebuild:
+  Removed 3.4.1 it's quite old and there is a newer stable version, that is
+  also quite old.
 
 *netbeans-5.5-r4 (28 Jan 2007)
 
