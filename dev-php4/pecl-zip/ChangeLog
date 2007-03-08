@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.26 2007/03/08 14:09:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.27 2007/03/08 16:30:14 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
+  Fix manifest
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> pecl-zip-1.8.6.ebuild:
   Stable on sparc wrt security #153911
