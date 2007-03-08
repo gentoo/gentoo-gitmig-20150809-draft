@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.10 2007/02/10 13:57:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.11 2007/03/08 10:19:49 genstef Exp $
+
+*gorg-0.6.3 (08 Mar 2007)
+
+  08 Mar 2007; <genstef@gentoo.org> +gorg-0.6.3.ebuild:
+  Version bump for neysx, bug 137258
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> gorg-0.6.1.ebuild:
   Add ~amd64
