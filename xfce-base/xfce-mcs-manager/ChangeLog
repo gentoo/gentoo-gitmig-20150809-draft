@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-mcs-manager
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.77 2007/03/02 22:41:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.78 2007/03/08 22:02:52 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce-mcs-manager-4.4.0.ebuild:
+  Stable on sparc wrt #169987
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> xfce-mcs-manager-4.4.0.ebuild:
   Keyworded on x86-fbsd

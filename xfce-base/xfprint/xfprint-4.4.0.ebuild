@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.7 2007/03/02 22:16:47 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.8 2007/03/08 22:04:49 gustavoz Exp $
 
 inherit xfce44
 
@@ -8,7 +8,7 @@ xfce44
 
 DESCRIPTION="Frontend for printing, management and job queue."
 HOMEPAGE="http://www.xfce.org/projects/xfprint"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="cups debug doc"
 
 RDEPEND="cups? ( net-print/cups )
