@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.181 2007/03/08 08:11:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.182 2007/03/08 13:55:59 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  cyrus-sasl-2.1.22-r2.ebuild:
+  Stable on sparc wrt #169512
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   cyrus-sasl-2.1.22-r2.ebuild:
