@@ -1,6 +1,25 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.79 2007/03/02 14:08:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.80 2007/03/08 19:09:09 wolf31o2 Exp $
+
+  08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -2007.0/desktop/make.defaults, +dev/2007.0/desktop/make.defaults,
+  -2007.0/desktop/parent, +dev/2007.0/desktop/parent,
+  -2007.0/desktop/virtuals, +dev/2007.0/desktop/virtuals,
+  -2007.0/make.defaults, +dev/2007.0/make.defaults,
+  -2007.0/no-multilib/make.defaults, +dev/2007.0/no-multilib/make.defaults,
+  -2007.0/no-multilib/package.mask, +dev/2007.0/no-multilib/package.mask,
+  -2007.0/no-multilib/package.use.mask,
+  +dev/2007.0/no-multilib/package.use.mask, -2007.0/no-multilib/parent,
+  +dev/2007.0/no-multilib/parent, -2007.0/no-multilib/use.mask,
+  +dev/2007.0/no-multilib/use.mask, -2007.0/package.use.mask,
+  +dev/2007.0/package.use.mask, -2007.0/packages, +dev/2007.0/packages,
+  -2007.0/parent, +dev/2007.0/parent, -2007.0/server/make.defaults,
+  +dev/2007.0/server/make.defaults, -2007.0/server/parent,
+  +dev/2007.0/server/parent, -2007.0/server/profile.bashrc,
+  +dev/2007.0/server/profile.bashrc, -2007.0/use.mask, +dev/2007.0/use.mask:
+  Moving the 2007.0 profile to dev, where it belongs. If you are using this
+  and you were not asked to do so, you're on your own and you've been warned.
 
   02 Mar 2007; Simon Stelling <blubb@gentoo.org> +2007.0/package.use.mask,
   package.use.mask:
