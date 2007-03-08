@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6936 2007/03/08 16:38:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6937 2007/03/08 16:44:19 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,6 +35,10 @@
 # net-misc/cipe -> bug 137329
 # app-text/biblestudy -> bug 164144
 www-servers/aolserver
+www-misc/nscache
+www-misc/nsopenssl
+www-misc/nssha1
+www-misc/nsxml
 app-emulation/tiger
 sys-apps/evkeyd
 media-libs/libuta
