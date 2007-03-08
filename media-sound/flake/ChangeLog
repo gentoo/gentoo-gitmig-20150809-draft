@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/ChangeLog,v 1.1 2007/03/08 18:23:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/ChangeLog,v 1.2 2007/03/08 21:39:52 zmedico Exp $
+
+  08 Mar 2007; Zac Medico <zmedico@gentoo.org>
+  Fix broken Manifest due to commit without repoman.
 
   08 Mar 2007; Steve Dibb <beandog@gentoo.org> ChangeLog:
   Initial import, thanks to Ben de Groot for ebuild
