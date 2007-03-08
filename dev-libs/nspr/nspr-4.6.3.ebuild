@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.3.ebuild,v 1.13 2007/02/04 20:15:56 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.3.ebuild,v 1.14 2007/03/08 14:23:13 beandog Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig multilib
 
 DESCRIPTION="Netscape Portable Runtime"
 HOMEPAGE="http://www.mozilla.org/projects/nspr/"

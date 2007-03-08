@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.72 2007/03/08 14:17:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.73 2007/03/08 14:23:13 beandog Exp $
+
+  08 Mar 2007; Steve Dibb <beandog@gentoo.org> nspr-4.6.3.ebuild,
+  nspr-4.6.3-r1.ebuild, nspr-4.6.4.ebuild, nspr-4.6.4-r3.ebuild:
+  Adding multilib to inheritance
 
   08 Mar 2007; Steve Dibb <beandog@gentoo.org> nspr-4.6.5-r1.ebuild:
   amd64 stable, bug 169751
