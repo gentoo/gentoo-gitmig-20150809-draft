@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.23 2007/01/02 21:29:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.24 2007/03/08 19:30:25 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  phpsysinfo-2.5.2.ebuild:
+  Stable on sparc wrt #169782
 
 *phpsysinfo-2.5.2 (02 Jan 2007)
 
