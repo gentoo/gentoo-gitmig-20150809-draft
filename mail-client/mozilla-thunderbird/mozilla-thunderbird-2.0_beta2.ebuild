@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.6 2007/03/06 21:52:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.7 2007/03/08 21:50:50 armin76 Exp $
 
 unset ALLOWED_FLAGS	# stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
 
 LANGS="ca cs de el en-GB es-AR es-ES eu fi fr gu-IN he hu it ja ko nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
 SHORTLANGS="es-ES nb-NO sv-SE"
-PATCH="${P}-patches-0.3"
+PATCH="${P}-patches-0.4"
 MY_PV=${PV/_beta2/b2}
 
 DESCRIPTION="Thunderbird Mail Client"

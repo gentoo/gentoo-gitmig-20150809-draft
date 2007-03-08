@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.177 2007/03/06 21:52:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.178 2007/03/08 21:50:50 armin76 Exp $
+
+  08 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-2.0_beta2.ebuild:
+  Bump patchset for g/fbsd wrt bug 169825
 
   06 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-thunderbird-2.0_beta2.ebuild:
