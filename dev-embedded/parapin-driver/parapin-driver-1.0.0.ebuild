@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/parapin-driver/parapin-driver-1.0.0.ebuild,v 1.1 2005/01/30 03:46:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/parapin-driver/parapin-driver-1.0.0.ebuild,v 1.2 2007/03/08 09:55:40 genstef Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -19,10 +19,14 @@ RDEPEND=""
 
 MODULE_NAMES="kparapin(kernel:kparapin) parapindriver(kernel:parapindriver)"
 BUILD_TARGETS="clean modules"
-BUILD_PARAMS="CC=$(tc-getCC) LINUX_SRC=${KV_DIR} -C .."
 
 CONFIG_CHECK="PARPORT"
 PARPORT_ERROR="Please make sure Device Drivers -> Parallel port support is enabled in your kernel"
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="CC=$(tc-getCC) LINUX_SRC=${KV_DIR} -C .."
+}
 
 src_compile() {
 	if kernel_is ge 2 6; then
