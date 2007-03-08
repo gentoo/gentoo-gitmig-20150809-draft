@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/rivatv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.16 2007/02/22 01:39:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.17 2007/03/08 09:51:42 genstef Exp $
+
+  08 Mar 2007; <genstef@gentoo.org> rivatv-0.8.6.ebuild,
+  rivatv-0.8.6-r1.ebuild:
+  Do not use eclass vars before pkg_setup, bug 168051
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
