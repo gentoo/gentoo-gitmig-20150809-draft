@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.249 2007/03/08 14:06:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.250 2007/03/08 17:28:11 dertobi123 Exp $
+
+  08 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  phpmyadmin-2.10.0.2.ebuild:
+  Stable on ppc wrt bug #169376.
 
   08 Mar 2007; Steve Dibb <beandog@gentoo.org> phpmyadmin-2.10.0.2.ebuild:
   amd64 stable, security bug 169376
