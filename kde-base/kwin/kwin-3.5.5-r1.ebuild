@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.5-r1.ebuild,v 1.9 2006/12/11 12:03:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.5-r1.ebuild,v 1.10 2007/03/08 20:27:47 caleb Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -10,17 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="KDE window manager"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility xcomposite"
-RDEPEND="xcomposite? ( || ( (
-			x11-libs/libXcomposite
-			x11-libs/libXdamage
-			) <x11-base/xorg-x11-7 )
-		)"
-DEPEND="${RDEPEND}
-	xcomposite? ( || ( (
-			x11-proto/compositeproto
-			x11-proto/damageproto
-			) <x11-base/xorg-x11-7 )
-		)"
+RDEPEND="xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )"
+DEPEND="${RDEPEND}"
 
 PATCHES="${FILESDIR}/${P}-input-shape.patch"
 

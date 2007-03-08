@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.92 2007/02/09 15:29:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.93 2007/03/08 20:27:47 caleb Exp $
+
+  08 Mar 2007; Caleb Tennis <caleb@gentoo.org> kwin-3.5.5-r1.ebuild,
+  kwin-3.5.5-r2.ebuild, kwin-3.5.6.ebuild:
+  remove <xorg-x11-7 dep per bug #167408
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> kwin-3.5.5-r2.ebuild:
   Stable on amd64 wrt bug #164079.
