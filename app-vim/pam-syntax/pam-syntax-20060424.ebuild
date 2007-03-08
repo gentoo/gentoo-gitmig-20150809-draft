@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/pam-syntax-20060424.ebuild,v 1.8 2007/03/07 14:26:35 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/pam-syntax-20060424.ebuild,v 1.9 2007/03/08 16:47:40 gustavoz Exp $
 
 inherit vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: PAM configuration syntax highlighting"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=735"
 
 LICENSE="as-is"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
