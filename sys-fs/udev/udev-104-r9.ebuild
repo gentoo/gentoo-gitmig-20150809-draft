@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r9.ebuild,v 1.8 2007/02/11 07:19:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r9.ebuild,v 1.9 2007/03/08 13:27:21 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="selinux"
 DEPEND="selinux? ( sys-libs/libselinux )"
 RDEPEND="!sys-apps/coldplug"
 RDEPEND="${DEPEND} ${RDEPEND}
-	>=sys-apps/baselayout-1.11.14"
+	>=sys-apps/baselayout-1.12.5"
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
 
