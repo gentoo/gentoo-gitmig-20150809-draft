@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12-r1.ebuild,v 1.4 2007/03/08 13:43:38 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12-r1.ebuild,v 1.5 2007/03/08 18:17:58 phreak Exp $
 
-WANT_AUTOMAKE="1.8"
+WANT_AUTOMAKE="1.7"
 WANT_AUTOCONF="2.1"
 
 inherit autotools eutils flag-o-matic libtool db-use
