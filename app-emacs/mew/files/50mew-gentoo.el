@@ -1,7 +1,6 @@
 
 ;;; mew site-lisp configuration
-
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 
 (setq mew-icon-directory "/usr/share/mew")
 
