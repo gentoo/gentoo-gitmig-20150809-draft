@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.73 2007/03/08 14:23:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.74 2007/03/08 16:03:40 marienz Exp $
+
+  08 Mar 2007; Marien Zwart <marienz@gentoo.org> Manifest:
+  Recommit Manifest that was broken by cvs problems.
 
   08 Mar 2007; Steve Dibb <beandog@gentoo.org> nspr-4.6.3.ebuild,
   nspr-4.6.3-r1.ebuild, nspr-4.6.4.ebuild, nspr-4.6.4-r3.ebuild:
