@@ -1,27 +1,32 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.0.0_rc1.ebuild,v 1.2 2006/10/27 19:54:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.0.0_rc3.ebuild,v 1.1 2007/03/08 19:26:57 chtekk Exp $
 
-IUSE="libedit"
-DESCRIPTION="Xdebug client for the Common Debugger Protocol (DBGP)."
-HOMEPAGE="http://www.xdebug.org/"
-SLOT="0"
-MY_PV="${PV/_/}"
-SRC_URI="http://pecl.php.net/get/xdebug-${MY_PV}.tgz"
-S="${WORKDIR}/xdebug-2.0.0RC1/debugclient"
-LICENSE="Xdebug"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
+MY_PV="${PV/_/}"
+MY_PV="${MY_PV/rc/RC}"
+
+DESCRIPTION="Xdebug client for the Common Debugger Protocol (DBGP)."
+HOMEPAGE="http://www.xdebug.org/"
+SRC_URI="http://pecl.php.net/get/xdebug-${MY_PV}.tgz"
+LICENSE="Xdebug"
+SLOT="0"
+IUSE="libedit"
+
+S="${WORKDIR}/xdebug-${MY_PV}/debugclient"
+
 DEPEND="libedit? ( || ( dev-libs/libedit sys-freebsd/freebsd-lib ) )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	chmod +x "${S}"/configure
+	chmod +x "${S}/configure"
 }
 
 src_compile() {
 	econf \
-		$(use_with libedit ) \
+		$(use_with libedit) \
 		|| die "Configure of debug client failed!"
 
 	emake || die "Build of debug client failed!"
