@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.2 2007/02/04 17:41:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.3 2007/03/08 20:21:57 caleb Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -30,11 +30,7 @@ DEPEND=">=media-libs/freetype-2
 	hal? ( || ( dev-libs/dbus-qt3-old ( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
 		   =sys-apps/hal-0.5* )
 	zeroconf? ( net-misc/mDNSResponder )
-	xcomposite? ( || ( (
-			x11-libs/libXcomposite
-			x11-libs/libXdamage
-			) <x11-base/xorg-x11-7 )
-		)
+	xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )
 	|| ( (
 			x11-libs/libX11
 			x11-libs/libXau
@@ -63,16 +59,10 @@ RDEPEND="${DEPEND}
 		) <virtual/x11-7 )"
 
 DEPEND="${DEPEND}
-	xcomposite? ( || ( (
-			x11-proto/compositeproto
-			x11-proto/damageproto
-			) <x11-base/xorg-x11-7 )
-		)
-	|| ( (
-			xscreensaver? ( x11-proto/scrnsaverproto )
-			xinerama? ( x11-proto/xineramaproto )
-			x11-apps/bdftopcf
-		) <virtual/x11-7 )
+	xcomposite? ( x11-proto/compositeproto x11-proto/damageproto )
+	xscreensaver? ( x11-proto/scrnsaverproto )
+	xinerama? ( x11-proto/xineramaproto )
+	x11-apps/bdftopcf
 	dev-util/pkgconfig"
 
 need-kde 3.5.6
