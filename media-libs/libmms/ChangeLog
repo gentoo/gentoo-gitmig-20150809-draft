@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.13 2007/03/04 13:27:31 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.14 2007/03/08 00:34:45 weeve Exp $
+
+  08 Mar 2007; Jason Wever <weeve@gentoo.org> libmms-0.3.ebuild:
+  Added ~sparc keyword wrt bug #168465.
 
   04 Mar 2007; Javier Villavicencio <the_paya@gentoo.org> libmms-0.3.ebuild:
   Added ~x86-fbsd keyword, and the fix from bug 168724.
