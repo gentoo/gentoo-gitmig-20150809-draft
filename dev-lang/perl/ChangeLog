@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.241 2007/03/07 22:22:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.242 2007/03/08 16:16:43 mcummings Exp $
+
+  08 Mar 2007; Michael Cummings <mcummings@gentoo.org> perl-5.8.8-r2.ebuild:
+  Change to the call for the lib64 patch to enable it for ppc64 - helps with
+  stage 1 building problems. Thanks ranger :)
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> perl-5.8.8-r2.ebuild:
   Change all instances of [ to [[.

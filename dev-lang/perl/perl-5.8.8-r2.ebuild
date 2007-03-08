@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.31 2007/03/07 22:22:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.32 2007/03/08 16:16:43 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -115,7 +115,8 @@ src_unpack() {
 	# filter it otherwise configure fails. See #125535.
 	epatch ${FILESDIR}/perl-hppa-pa7200-configure.patch
 
-	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
+	#[[ ${get_libdir} == lib64 ]] && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
+	use amd64 || use ppc64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
 
 	[[ ${CHOST} == *-dragonfly* ]] && cd ${S} && epatch ${FILESDIR}/${P}-dragonfly-clean.patch
 	[[ ${CHOST} == *-freebsd* ]] && cd ${S} && epatch ${FILESDIR}/${P}-fbsdhints.patch
