@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.183 2007/03/08 16:34:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.184 2007/03/08 17:16:25 dertobi123 Exp $
+
+  08 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  cyrus-sasl-2.1.22-r2.ebuild:
+  Stable on ppc wrt bug #169512.
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
   Fix manifest
