@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.77 2007/03/07 09:43:17 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.78 2007/03/08 18:52:18 dertobi123 Exp $
+
+  08 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> whois-4.7.20.ebuild:
+  Stable on ppc wrt bug #169099.
 
   07 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> whois-4.7.20.ebuild:
   Stable on MIPS; bug #169099
