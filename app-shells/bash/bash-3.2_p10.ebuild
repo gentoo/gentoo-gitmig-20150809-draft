@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p10.ebuild,v 1.2 2007/03/08 16:54:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p10.ebuild,v 1.3 2007/03/08 19:52:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -140,10 +140,10 @@ pkg_preinst() {
 	if [[ -e ${ROOT}/etc/bash/bash_logout ]] ; then
 		rm -f "${D}"/etc/bash/bash_logout
 	fi
-}
 
-pkg_postinst() {
 	if [[ ! -e ${ROOT}/bin/sh ]] ; then
 		ln -s bash "${ROOT}"/bin/sh
+	else
+		cp -a "${ROOT}"/bin/sh "${D}"/bin/
 	fi
 }
