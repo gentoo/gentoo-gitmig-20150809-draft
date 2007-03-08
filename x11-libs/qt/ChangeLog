@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.415 2007/02/22 14:13:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.416 2007/03/08 13:58:45 caleb Exp $
+
+*qt-4.2.3 (08 Mar 2007)
+
+  08 Mar 2007; Caleb Tennis <caleb@gentoo.org> +qt-4.2.3.ebuild:
+  Version bump. Also, don't use the Qt built in split debug option as portage
+  now supports it via make.conf
 
   22 Feb 2007; Caleb Tennis <caleb@gentoo.org> -qt-4.2.1.ebuild:
   remove old version
