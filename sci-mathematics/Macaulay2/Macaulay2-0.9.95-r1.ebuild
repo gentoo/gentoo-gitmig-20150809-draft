@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.3 2007/03/06 17:09:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.4 2007/03/08 17:41:22 mr_bones_ Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
