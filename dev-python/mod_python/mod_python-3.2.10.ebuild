@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.2.10.ebuild,v 1.6 2007/03/04 21:58:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.2.10.ebuild,v 1.7 2007/03/08 17:37:16 dertobi123 Exp $
 
 inherit python apache-module multilib autotools
 
-KEYWORDS="~alpha amd64 ~ia64 ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86"
 
 DESCRIPTION="An Apache2 module providing an embedded Python interpreter."
 HOMEPAGE="http://www.modpython.org/"
