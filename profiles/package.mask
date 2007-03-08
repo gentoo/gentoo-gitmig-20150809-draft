@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6934 2007/03/08 02:59:43 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6935 2007/03/08 09:22:38 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -837,11 +837,6 @@ media-gfx/xzgv
 # Tuấn Văn <langthang@gentoo.org> (04 Aug 2006)
 # Incomplete patch.
 =net-mail/cyrus-imapd-2.2.12-r5
-
-# Alec Warner <antarus@gentoo.org> (03 Aug 2006)
-# sys-fs/dmraid masked for bug(s) 139860,103912, 
-# 134050, 138823 Waiting on new maintainer.
-sys-fs/dmraid
 
 # Diego Pettenò <flameeyes@gentoo.org> (28 Jul 2006)
 # Masking till all dependencies are fixed, bug #141947
