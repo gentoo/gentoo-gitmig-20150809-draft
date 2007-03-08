@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.36 2007/02/27 23:35:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.37 2007/03/08 18:04:48 alonbl Exp $
+
+  08 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/opensc-0.11.1-pcsc.patch, opensc-0.11.1-r1.ebuild:
+  Fixed pcsc-lite-1.4 support, bug#169579, thanks to Ashu Tiwary
 
   27 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> opensc-0.10.1.ebuild,
   opensc-0.11.0-r1.ebuild:

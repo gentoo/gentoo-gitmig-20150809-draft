@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.1-r1.ebuild,v 1.2 2007/01/29 22:11:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.1-r1.ebuild,v 1.3 2007/03/08 18:04:48 alonbl Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -30,6 +30,7 @@ src_unpack() {
 		epatch ${ELT_PATCH_DIR}/fix-relink/1.5.0
 
 	epatch "${FILESDIR}/${P}-dep.patch"
+	epatch "${FILESDIR}/${P}-pcsc.patch"
 
 	AT_M4DIR="aclocal" eautoreconf
 }
