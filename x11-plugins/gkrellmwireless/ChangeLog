@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmwireless
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.15 2007/02/21 21:35:48 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.16 2007/03/08 14:04:53 lack Exp $
+
+  08 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellmwireless-2.0.3.ebuild:
+  Ensure gkrellm is installed with USE='X'
 
   21 Feb 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
   -gkrellmwireless-0.2.2.ebuild, -gkrellmwireless-2.0.2.ebuild:
