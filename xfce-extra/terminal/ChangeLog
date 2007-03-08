@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.32 2007/03/03 14:38:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.33 2007/03/08 22:21:02 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  terminal-0.2.6-r1.ebuild:
+  Stable on sparc wrt #169987
 
   03 Mar 2007; nixnut <nixnut@gentoo.org> terminal-0.2.4-r1.ebuild:
   Stable on ppc wrt bug 153225

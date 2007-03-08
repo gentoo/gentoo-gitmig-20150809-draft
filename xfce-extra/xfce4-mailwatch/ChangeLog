@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mailwatch
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/ChangeLog,v 1.7 2007/02/26 20:36:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/ChangeLog,v 1.8 2007/03/08 22:27:27 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-mailwatch-1.0.1.ebuild:
+  Stable on sparc wrt #169987
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-mailwatch-1.0.1.ebuild:

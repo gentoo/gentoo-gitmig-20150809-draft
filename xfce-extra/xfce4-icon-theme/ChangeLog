@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-icon-theme/ChangeLog,v 1.42 2007/03/02 22:31:01 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-icon-theme/ChangeLog,v 1.43 2007/03/08 22:22:41 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-icon-theme-4.4.0.ebuild:
+  Stable on sparc wrt #169987
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-icon-theme-4.4.0.ebuild:
   Keyworded on x86-fbsd

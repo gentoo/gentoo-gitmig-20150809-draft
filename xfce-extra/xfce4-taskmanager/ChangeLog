@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-taskmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.7 2007/01/23 13:31:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.8 2007/03/08 22:41:25 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-taskmanager-0.3.2.ebuild:
+  Stable on sparc wrt #169987
 
   23 Jan 2007; Joshua Nichols <nichoj@gentoo.org>
   xfce4-taskmanager-0.3.2.ebuild:

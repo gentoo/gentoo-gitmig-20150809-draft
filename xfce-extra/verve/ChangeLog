@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.8 2007/02/26 20:14:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.9 2007/03/08 22:26:02 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> verve-0.3.5.ebuild:
+  Stable on sparc wrt #169987
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org> verve-0.3.5.ebuild:
   Fix bug 168373.
