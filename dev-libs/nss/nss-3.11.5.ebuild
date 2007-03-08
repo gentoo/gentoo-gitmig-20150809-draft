@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.5.ebuild,v 1.5 2007/03/08 17:37:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.5.ebuild,v 1.6 2007/03/08 22:15:53 beandog Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 NSPR_VER="4.6.3"
 RTM_NAME="NSS_${PV//./_}_RTM"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc
