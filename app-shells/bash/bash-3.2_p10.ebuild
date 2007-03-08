@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p10.ebuild,v 1.1 2007/03/06 01:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p10.ebuild,v 1.2 2007/03/08 16:54:38 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -112,7 +112,6 @@ src_install() {
 
 	dodir /bin
 	mv "${D}"/usr/bin/bash "${D}"/bin/
-	[[ ${USERLAND} != "BSD" ]] && dosym bash /bin/sh
 	dosym bash /bin/rbash
 
 	insinto /etc/bash
@@ -140,5 +139,11 @@ pkg_preinst() {
 	# force users to go through etc-update all the time
 	if [[ -e ${ROOT}/etc/bash/bash_logout ]] ; then
 		rm -f "${D}"/etc/bash/bash_logout
+	fi
+}
+
+pkg_postinst() {
+	if [[ ! -e ${ROOT}/bin/sh ]] ; then
+		ln -s bash "${ROOT}"/bin/sh
 	fi
 }
