@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.280 2007/03/08 17:17:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.281 2007/03/08 17:25:28 alonbl Exp $
+
+  08 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org> Manifest:
+  Cleanup
 
 *gnupg-2.0.3 (08 Mar 2007)
 
