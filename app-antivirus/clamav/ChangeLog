@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.209 2007/03/08 16:59:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.210 2007/03/08 23:49:03 spb Exp $
+
+  08 Mar 2007; Stephen Bennett <spb@gentoo.org> clamav-0.90.1-r1.ebuild:
+  Run eautoreconf in src_unpack, by request of ticho
 
 *clamav-0.90.1-r1 (08 Mar 2007)
 
