@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.6 2007/03/07 13:36:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.7 2007/03/08 21:56:45 armin76 Exp $
+
+  08 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-sunbird-0.3.1.ebuild:
+  Bump patchset for g/fbsd wrt bug 169825
 
   07 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   -files/mozilla-sunbird-0.3-add-missing-LDFLAGS.patch,
