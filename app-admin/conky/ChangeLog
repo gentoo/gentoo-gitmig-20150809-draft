@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.45 2007/02/07 18:55:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.46 2007/03/08 12:19:40 dragonheart Exp $
+
+  08 Mar 2007; Daniel Black <dragonheart@gentoo.org>
+  -files/conky-sigaction.patch, -files/portmon-mpd.patch,
+  -conky-1.4.0-r1.ebuild, -conky-1.4.2.ebuild, -conky-1.4.4.ebuild,
+  conky-1.4.5.ebuild:
+  correct dependencies for USE="-X -ipv6" thanks to Pavel Denisov (bug
+  #169595). Fix for USE=-X thanks to Brenden and Philip and Anthony (bug
+  #166500). Cleanout of old versions
 
   07 Feb 2007; Simon Stelling <blubb@gentoo.org> conky-1.4.5.ebuild:
   stable on amd64; bug 158886

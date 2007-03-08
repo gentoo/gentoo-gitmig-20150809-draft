@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.7 2007/02/07 18:55:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.8 2007/03/08 12:19:40 dragonheart Exp $
 
 inherit eutils
 # used for epause
@@ -32,14 +32,11 @@ DEPEND_COMMON="
 		bmpx? ( media-sound/bmpx
 				>=sys-apps/dbus-0.35
 			)
-		!ipv6? ( >=dev-libs/glib-2.0 )
-	)"
-
+	)
+	!ipv6? ( >=dev-libs/glib-2.0 )"
 RDEPEND="${DEPEND_COMMON}
-	hddtemp? ( app-admin/hddtemp )
-	mpd? ( media-sound/mpd )
 	vim-syntax? ( || ( app-editors/vim
-		app-editors/gvim ) )"
+	app-editors/gvim ) )"
 
 DEPEND="
 	${DEPEND_COMMON}
@@ -63,11 +60,16 @@ src_compile() {
 		mymake="MPD_NO_IPV6=noipv6"
 	fi
 	local myconf
-	myconf="--enable-own-window --enable-proc-uptime"
-	use X && myconf="${myconf} --enable-x11 --enable-double-buffer --enable-xdamage"
+	myconf="--enable-proc-uptime"
+	if useq X; then
+		myconf="${myconf} --enable-x11 --enable-double-buffer --enable-xdamage --enable-own-window"
+		myconf="${myconf} $(use_enable truetype xft)"
+	else
+		myconf="${myconf} --disable-x11 --disable-double-buffer --disable-xdamage --disable-own-window"
+		myconf="${myconf} --disable-xft"
+	fi
 	econf \
 		${myconf} \
-		$(use_enable truetype xft) \
 		$(use_enable audacious) \
 		$(use_enable bmpx) \
 		$(use_enable hddtemp ) \
