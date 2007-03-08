@@ -45,7 +45,7 @@ diff -Naur eclipse-ecj-3.2/compilejdtcore.xml eclipse-ecj-3.2-mod/compilejdtcore
 +	<target name="javadoc" depends="init">
 +	    <mkdir dir="${javadocdir}"/>
 +	    <javadoc destdir="${javadocdir}">
-+		<fileset dir="${srcdir}"/>
++		<packageset dir="${srcdir}"/>
 +	    </javadoc>
 +	</target>
 +	
