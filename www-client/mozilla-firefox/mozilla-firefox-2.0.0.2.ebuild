@@ -1,19 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.2.ebuild,v 1.15 2007/03/08 19:33:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.2.ebuild,v 1.16 2007/03/08 22:05:42 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-PATCH="${P}-patches-0.4"
+PATCH="${P}-patches-0.5"
 LANGS="af ar be bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 
-KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 mips ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="java mozdevelop bindist xforms restrict-javascript filepicker"
@@ -51,6 +51,13 @@ DEPEND="${RDEPEND}
 PDEPEND="restrict-javascript? ( x11-plugins/noscript )"
 
 S="${WORKDIR}/mozilla"
+
+# Needed by src_compile() and src_install().
+# Would do in pkg_setup but that loses the export attribute, they
+# become pure shell variables.
+export MOZ_CO_PROJECT=browser
+export BUILD_OFFICIAL=1
+export MOZILLA_OFFICIAL=1
 
 linguas() {
 	local LANG SLANG
@@ -147,9 +154,6 @@ src_compile() {
 	mozconfig_use_enable mozdevelop xpctools
 	mozconfig_use_extension mozdevelop venkman
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
-
-	# Add build variables
-	mozconfig_build_opts
 
 	# Finalize and report settings
 	mozconfig_final
