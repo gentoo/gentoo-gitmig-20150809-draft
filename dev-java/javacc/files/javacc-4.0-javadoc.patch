@@ -7,7 +7,7 @@ diff -ru javacc/build.xml javacc-patched/build.xml
    </target>
 +   <target name="javadoc" depends="compile">
 +      <javadoc destdir="doc/api" source="1.4">
-+      	<fileset dir="src"/>
++      	<packageset dir="src"/>
 +      </javadoc>
 +   </target>
  

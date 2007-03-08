@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/javacc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.19 2006/09/10 14:48:34 caster Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.20 2007/03/08 15:18:58 betelgeuse Exp $
+
+*javacc-4.0-r4 (08 Mar 2007)
+
+  08 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  files/javacc-4.0-javadoc.patch, +javacc-4.0-r4.ebuild:
+  Add src_test and fix javadoc generation.
 
 *javacc-4.0-r3 (10 Sep 2006)
 
