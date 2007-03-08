@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.53 2007/03/08 14:04:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.54 2007/03/08 16:37:10 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
+  Fix manifest
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> opencdk-0.5.7.ebuild:
   Stable on sparc wrt #169883
