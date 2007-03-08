@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/nekohtml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.3 2007/03/07 20:13:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.4 2007/03/08 01:22:12 wltjr Exp $
+
+  08 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -nekohtml-0.9.5.ebuild:
+  Removed prevision revision since it has issues.
 
 *nekohtml-0.9.5-r1 (07 Mar 2007)
 
