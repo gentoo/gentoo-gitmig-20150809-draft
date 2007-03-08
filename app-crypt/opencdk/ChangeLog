@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.51 2007/02/18 18:24:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.52 2007/03/08 10:57:37 opfer Exp $
+
+  08 Mar 2007; Christian Faulhammer <opfer@gentoo.org> opencdk-0.5.7.ebuild:
+  stable x86; bug 169883
 
   18 Feb 2007; Markus Rothe <corsair@gentoo.org> opencdk-0.5.7.ebuild:
   Stable on ppc64
