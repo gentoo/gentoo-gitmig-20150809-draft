@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/calendar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.20 2007/03/04 18:31:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.21 2007/03/08 16:49:30 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> calendar-1.4a.ebuild:
+  Stable on sparc wrt #169103
 
   04 Mar 2007; Christian Faulhammer <opfer@gentoo.org> calendar-1.4a.ebuild:
   stable x86; bug 169103
