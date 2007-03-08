@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.6 2007/03/05 03:20:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.7 2007/03/08 16:00:12 marienz Exp $
+
+  08 Mar 2007; Marien Zwart <marienz@gentoo.org>
+  +files/buildbot-0.7.5-root-skip-tests.patch, buildbot-0.7.5.ebuild:
+  Fix tests without FEATURES=userpriv. No bump since it only affects the tests.
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> buildbot-0.7.4.ebuild,
   buildbot-0.7.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.3 2007/03/05 03:20:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.4 2007/03/08 16:00:12 marienz Exp $
 
 inherit distutils eutils
 
@@ -25,6 +25,13 @@ DEPEND="${commondepend}
 
 pkg_setup() {
 	enewuser buildbot
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-root-skip-tests.patch"
 }
 
 src_compile() {
