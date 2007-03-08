@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.55 2007/03/06 22:42:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.56 2007/03/08 10:55:24 armin76 Exp $
+
+  08 Mar 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.1.ebuild:
+  Fix nss depend, bug 169877
 
   06 Mar 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.1.ebuild:
   Bump patchset to fix bug 165777 and bug 168893

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.7 2007/03/06 22:42:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.8 2007/03/08 10:55:24 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -21,7 +21,7 @@ IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres
 
 RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.47
-	>=dev-libs/nss-3.10
+	>=dev-libs/nss-3.11.3
 	>=dev-libs/nspr-4.6.1
 	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.4 ) )"
 
