@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.9 2007/03/08 19:13:19 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.13.ebuild,v 1.1 2007/03/08 19:13:19 chtekk Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -9,7 +9,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1 confutils
 
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DESCRIPTION="A free, open, and robust framework for caching and optimizing PHP code."
 LICENSE="PHP"
@@ -28,15 +28,6 @@ pkg_setup() {
 
 src_compile() {
 	has_php
-
-	# PECL-APC does not work with Zend Thread Safety (ZTS),
-	# so abort if we're using PHP compiled with ZTS.
-	if has_zts ; then
-		eerror "PECL-APC doesn't work with a ZTS enabled PHP."
-		eerror "Please disable ZTS by turning the 'threads'"
-		eerror "USE flag off when you compile dev-lang/php."
-		die "PECL-APC does not support ZTS"
-	fi
 
 	my_conf="--enable-apc"
 	enable_extension_enable "apc-mmap" "mmap" 0
