@@ -1,0 +1,17 @@
+diff -ru jruby-0.9.8/src/org/jruby/ext/Readline.java jruby-0.9.8-patched/src/org/jruby/ext/Readline.java
+--- jruby-0.9.8/src/org/jruby/ext/Readline.java	2007-03-05 18:42:13.000000000 -0500
++++ jruby-0.9.8-patched/src/org/jruby/ext/Readline.java	2007-03-07 08:48:25.000000000 -0500
+@@ -85,11 +85,11 @@
+     protected static void initReadline() throws IOException {
+         readline = new ConsoleReader();
+         readline.setUseHistory(false);
+-        readline.setUsePagination(true);
++        //readline.setUsePagination(true);
+         readline.setBellEnabled(false);
+-        ((CandidateListCompletionHandler) readline.getCompletionHandler()).setAlwaysIncludeNewline(false);
++        //((CandidateListCompletionHandler) readline.getCompletionHandler()).setAlwaysIncludeNewline(false);
+         if (currentCompletor == null)
+            currentCompletor = new RubyFileNameCompletor();
+         readline.addCompletor(currentCompletor);
+         history = readline.getHistory();
+         readline.setHistory(history);
