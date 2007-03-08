@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.3 2007/03/07 04:37:28 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.4 2007/03/08 02:25:28 nixphoeni Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -36,6 +36,16 @@ DEPEND="${RDEPEND}
 
 USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+src_unpack() {
+
+	unpack ${A}
+
+	# Apply patch to correct POTFILES.in so testing will work
+	cd ${S}
+	epatch ${FILESDIR}/${P}-POTFILES.in.patch
+
+}
 
 src_install() {
 
