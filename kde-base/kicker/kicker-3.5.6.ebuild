@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.6.ebuild,v 1.1 2007/01/16 20:39:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.6.ebuild,v 1.2 2007/03/08 20:24:46 caleb Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -17,16 +17,13 @@ IUSE="kdehiddenvisibility xcomposite"
 RDEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
-	|| ( (
-			x11-libs/libXau
-			x11-libs/libXfixes
-			x11-libs/libXrender
-			x11-libs/libXtst
-		) <virtual/x11-7 )
-	xcomposite? ( || ( x11-libs/libXcomposite <x11-base/xorg-x11-7 ) )"
+	x11-libs/libXau
+	x11-libs/libXfixes
+	x11-libs/libXrender
+	x11-libs/libXtst
+	xcomposite? ( x11-libs/libXcomposite )"
 
-DEPEND="${RDEPEND}
-	xcomposite? ( || ( x11-proto/compositeproto <x11-base/xorg-x11-7 ) )"
+DEPEND="${RDEPEND}"
 
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="libkonq
