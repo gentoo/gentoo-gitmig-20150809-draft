@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ClamAV
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.15 2007/03/07 16:13:47 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.16 2007/03/08 20:15:42 gustavoz Exp $
+
+  08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  Mail-ClamAV-0.20.ebuild:
+  Stable on sparc wrt #169418
 
   07 Mar 2007; Andrej Kacian <ticho@gentoo.org> Mail-ClamAV-0.20.ebuild:
   Stable on x86, bug #169418.
