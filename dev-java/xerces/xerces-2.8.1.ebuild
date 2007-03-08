@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.8.1.ebuild,v 1.5 2007/02/12 04:57:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.8.1.ebuild,v 1.6 2007/03/08 00:41:50 betelgeuse Exp $
 
 WANT_SPLIT_ANT=true
 JAVA_PKG_IUSE="doc examples source"
@@ -30,8 +30,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-no_dom3.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-no_dom3.patch"
 
 	mkdir tools && cd tools
 	java-pkg_jar-from xml-commons-external-1.3 xml-apis.jar
@@ -48,8 +48,8 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/xercesImpl.jar
 
-	dodoc TODO STATUS README ISSUES
-	dohtml Readme.html
+	dodoc TODO STATUS README ISSUES || die
+	dohtml Readme.html || die
 
 	use doc && java-pkg_dojavadoc build/docs/javadocs
 	if use examples; then
