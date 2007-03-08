@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.40 2007/03/08 14:23:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.41 2007/03/08 14:25:54 betelgeuse Exp $
+
+  08 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -files/digest-azureus-2.5.0.0-r2, -files/digest-azureus-2.5.0.2, Manifest:
+  Cleanup.
 
   08 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   -azureus-2.5.0.0-r2.ebuild, -azureus-2.5.0.2.ebuild:
