@@ -132,7 +132,7 @@ function display () {
   goose="$(echo $2 | cut -d ' ' -f 2-)"  # lop off the prefixed argument useradd needs
   echo -n "$1 "
   # If it's null then display the 'other' information
-  if [[ -z "$goose" -a ! -z "$3" ]]; then 
+  if [ -z "$goose" -a ! -z "$3" ]; then 
     echo "$3" 
   else 
     echo "$goose" 
@@ -147,7 +147,7 @@ function check_group () {
     local uid_not_named="" uid_not_num=""
     grep -v "$^" $gfile | awk -F: '{print $1}' | grep "^${group}$" >/dev/null 2>&1 || uid_not_named=yes  
     grep -v "$^" $gfile | awk -F: '{print $3}' | grep "^${group}$" >/dev/null 2>&1 || uid_not_num=yes
-    if [[ ! -z "$uid_not_named" -a ! -z "$uid_not_num" ]]; then
+    if [ ! -z "$uid_not_named" -a ! -z "$uid_not_num" ]; then
       echo "- Group '$group' does not exist"
       got_error=yes
     fi
