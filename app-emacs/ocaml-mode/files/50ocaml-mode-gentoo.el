@@ -1,7 +1,7 @@
 
 ;;; ocaml-mode site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (setq auto-mode-alist
     (cons '("\\.ml[iylp]?$" . caml-mode) auto-mode-alist))
 (autoload 'caml-mode "caml" "Major mode for editing Caml code." t)
