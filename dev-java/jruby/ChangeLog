@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.15 2007/03/08 03:00:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.16 2007/03/08 04:52:36 nichoj Exp $
+
+  08 Mar 2007; Joshua Nichols <nichoj@gentoo.org> jruby-0.9.8.ebuild:
+  Now will only use javac for compilation. See
+  http://jira.codehaus.org/browse/JRUBY-675 for details.
 
   08 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
   files/jruby-0.9.8-old_jline.patch:
