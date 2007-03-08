@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.ebuild,v 1.1 2007/02/09 21:27:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.ebuild,v 1.2 2007/03/08 11:12:36 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -38,8 +38,10 @@ src_unpack() {
 }
 
 src_test() {
+	#By default libdir is ${HOME}/.maven so it can be /root/.maven
 	ANT_OPTS="-Djava.io.tmpdir=${T}" eant test \
-		-Dgentoo.classpath="$(java-pkg_getjars junit)" -DJunit.present=true
+		-Dgentoo.classpath="$(java-pkg_getjars junit)" \
+		-Dlibdir="libdir"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-io
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.16 2007/02/09 21:27:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.17 2007/03/08 11:12:36 betelgeuse Exp $
+
+  08 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> commons-io-1.3.ebuild:
+  Override libdir so it doesn't get set to /root/.maven
 
 *commons-io-1.3 (09 Feb 2007)
 
