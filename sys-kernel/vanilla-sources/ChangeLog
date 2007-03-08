@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.278 2007/03/03 15:53:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.279 2007/03/08 07:48:22 opfer Exp $
+
+  08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  vanilla-sources-2.6.18.6.ebuild:
+  stable x86; bug 165319
 
 *vanilla-sources-2.6.19.7 (03 Mar 2007)
 
