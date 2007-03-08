@@ -1,11 +1,11 @@
 # ChangeLog for dev-ruby/devel-logger
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/ChangeLog,v 1.11 2007/03/07 01:59:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/ChangeLog,v 1.12 2007/03/08 19:36:19 tove Exp $
 
   06 Mar 2006; Tom Gall <tgall@gentoo.org> devel-logger-1.0.1-r1.ebuild:
   added ~ppc64
 
-  08 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
+  08 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   files/digest-devel-logger-1.0.1, files/digest-devel-logger-1.0.1-r1,
   Manifest:
   Redigest. RMD160 corrupted
