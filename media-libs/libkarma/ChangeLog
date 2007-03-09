@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libkarma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.4 2007/03/09 13:59:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.5 2007/03/09 23:41:04 masterdriverz Exp $
+
+*libkarma-0.0.6-r1 (09 Mar 2007)
+
+  09 Mar 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/libkarma-0.0.6-mono.patch, +files/libkarma-0.0.6-soname.patch,
+  -libkarma-0.0.6.ebuild, +libkarma-0.0.6-r1.ebuild:
+  Add mono useflag and give shared library a SONAME
 
   09 Mar 2007; <genstef@gentoo.org> libkarma-0.0.6.ebuild:
   Add needed libusb depend thanks jmbsvicetto
