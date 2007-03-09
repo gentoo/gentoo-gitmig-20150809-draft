@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.195 2007/03/09 03:26:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.196 2007/03/09 12:01:45 betelgeuse Exp $
+
+  09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Removed dev-java/jess-bin from the tree so removing the mask.
 
   09 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add cdaudio, wav to media-sound/mpfc
