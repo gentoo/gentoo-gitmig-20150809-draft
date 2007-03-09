@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6941 2007/03/09 04:47:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6942 2007/03/09 06:12:11 lisa Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1240,12 +1240,6 @@ gnustep-apps/vindaloo
 # <ka0ttic@gentoo.org> (21 Jul 2005)
 # Masked for testing.
 =dev-cpp/gtkglextmm-1.1.0
-
-# Markus Nigbur <pYrania@gentoo.org> (01 Jul 2005)
-# Masked due to a pretty big bug with crosscompile support.
-# Colin Kingsley <tercel@gentoo.org> (30 Jun 2005)
-# Major revisions. Masked for testing.
-=sys-devel/distcc-2.18.3-r8
 
 # Aaron Walker <ka0ttic@gentoo.org> (30 Jun 2005)
 # Masked due to constant security bugs.
