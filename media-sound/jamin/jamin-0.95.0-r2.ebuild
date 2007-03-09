@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.95.0-r2.ebuild,v 1.3 2007/02/26 08:45:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.95.0-r2.ebuild,v 1.4 2007/03/09 04:36:09 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="osc"
 
 DEPEND=">=media-sound/jack-audio-connection-kit-0.80.0
