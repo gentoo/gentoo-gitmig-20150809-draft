@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/dmd-bin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.1 2007/03/09 14:56:18 anant Exp $
+
+*dmd-bin-1.0.0 (08 Mar 2007)
+
+  08 Mar 2007; <anant@gentoo.org> +files/25dmd, +metadata.xml,
+  +dmd-bin-1.0.0.ebuild:
+  Introduce version 1.0 of the D compiler from Digital Mars. Thanks go to Thomas
+  Kuhne for inputs (bug #46806)
+
