@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/indent
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.29 2007/03/08 18:37:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.30 2007/03/09 18:47:10 nixnut Exp $
+
+  09 Mar 2007; nixnut <nixnut@gentoo.org> indent-2.2.9-r3.ebuild:
+  Stable on ppc wrt bug 169097
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   indent-2.2.9-r3.ebuild:
