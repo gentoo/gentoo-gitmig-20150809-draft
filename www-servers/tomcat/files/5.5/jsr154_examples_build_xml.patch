@@ -1,0 +1,10 @@
+--- apache-tomcat-5.5.20-src/servletapi/jsr154/build.xml	2007-01-26 23:50:15.000000000 -0500
++++ build.xml	2007-01-26 23:56:03.000000000 -0500
+@@ -17,6 +17,7 @@
+   <property name="servlet-api.jar" value="${servlet-api.dist}/lib/servlet-api.jar"/>
+   <path id="examples.classpath">
+     <pathelement location="${servlet-api.build}/classes"/>
++    <pathelement location="${servlet-api.jar}"/>
+   </path>
+ 
+ 
