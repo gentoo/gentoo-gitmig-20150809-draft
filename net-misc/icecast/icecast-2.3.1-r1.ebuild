@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.1-r1.ebuild,v 1.5 2006/09/16 15:17:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.1-r1.ebuild,v 1.6 2007/03/09 04:11:44 beandog Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install() {
 	fperms 600 /etc/icecast2/icecast.xml
 
 	keepdir /var/log/icecast
-	chown icecast ${D}/var/log/icecast
+	fowners icecast:nogroup /var/log/icecast
 
 	rm -rf ${D}/usr/share/doc/icecast
 }
