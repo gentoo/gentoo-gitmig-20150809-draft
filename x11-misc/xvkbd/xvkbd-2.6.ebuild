@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-2.6.ebuild,v 1.11 2006/10/11 11:48:22 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-2.6.ebuild,v 1.12 2007/03/09 07:46:45 drac Exp $
 
 DESCRIPTION="virtual keyboard for X window system"
 HOMEPAGE="http://homepage3.nifty.com/tsato/xvkbd/"
@@ -11,39 +11,28 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="|| ( (
-			x11-libs/libXtst
-			x11-libs/libXmu
-		) <virtual/x11-7 )
+RDEPEND="x11-libs/libXtst
+	x11-libs/libXmu
 	x11-libs/Xaw3d"
-
 DEPEND="${RDEPEND}
-	|| ( ( x11-misc/imake
-		x11-misc/gccmakedep
-		x11-proto/xproto
-		app-text/rman
-		x11-proto/xextproto
-		)
-		<virtual/x11-7
-	)"
-
-pkg_setup() {
-	has_version '<x11-base/xorg-x11-7' && \
-		appdefaultsdir="/etc/X11/app-defaults/" || \
-		appdefaultsdir="/usr/share/X11/app-defaults/"
-}
+	x11-misc/imake
+	x11-misc/gccmakedep
+	x11-proto/xproto
+	app-text/rman
+	x11-proto/xextproto"
 
 src_compile() {
-	xmkmf -a || die
+	xmkmf -a || die "xmkmf failed."
 
 	emake \
-		XAPPLOADDIR="${appdefaultsdir}" \
+		XAPPLOADDIR="/usr/share/X11/app-defaults" \
 		LOCAL_LDFLAGS="${LDFLAGS}" \
-		CDEBUGFLAGS="${CFLAGS}" || die "emake failed"
+		CDEBUGFLAGS="${CFLAGS}" || die "emake failed."
 }
 
 src_install() {
-	emake XAPPLOADDIR="${appdefaultsdir}" DESTDIR="${D}" install || die "make install failed"
+	emake XAPPLOADDIR="/usr/share/X11/app-defaults" DESTDIR="${D}" install \
+	|| die "emake install failed."
 	rm -rf "${D}/usr/lib/X11"
 
 	dodoc README
