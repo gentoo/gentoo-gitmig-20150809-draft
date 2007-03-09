@@ -26,3 +26,9 @@
 -WTF	{what,where,who,why} the fuck
 +WTF	{what,when,where,who,why} the fuck
  WTH	{what,where,who,why} the hell
+--- wtf/acronyms.comp
++++ wtf/acronyms.comp
+@@ -127,2 +127,3 @@
+ ICB	internet citizen's band
++ICE	Internal Compiler Error
+ ICMP	internet control message protocol

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20051104.ebuild,v 1.3 2006/07/18 08:00:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20051104.ebuild,v 1.4 2007/03/09 18:25:53 vapier Exp $
 
 inherit eutils
 
