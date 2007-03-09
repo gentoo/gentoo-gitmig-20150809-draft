@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.11 2007/03/09 13:14:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.12 2007/03/09 18:12:36 nixnut Exp $
+
+  09 Mar 2007; nixnut <nixnut@gentoo.org> xulrunner-1.8.0.4.ebuild:
+  Stable on ppc wrt bug 170101
 
   09 Mar 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.0.4.ebuild:
   x86 stable wrt bug 170101
