@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.4.ebuild,v 1.1 2007/01/12 14:34:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.4.ebuild,v 1.2 2007/03/09 23:17:13 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://joda-time.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc source test"
 
 DEPEND=">=virtual/jdk-1.4
