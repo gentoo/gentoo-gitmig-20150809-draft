@@ -1,11 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-1.02.00-r1.ebuild,v 1.4 2006/10/15 14:03:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-1.02.00-r1.ebuild,v 1.5 2007/03/09 11:19:32 xmerlin Exp $
 
 inherit eutils
 
+CLUSTER_RELEASE="1.02.00"
+MY_P="cluster-${CLUSTER_RELEASE}"
 CVS_RELEASE="20060713"
-MY_P="cluster-${PV}"
 
 DESCRIPTION="GFS Network Block Devices"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -18,8 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=sys-cluster/magma-1.02.00-r1
-	>=sys-cluster/gnbd-headers-1.02.00-r1
+DEPEND="=sys-cluster/magma-${CLUSTER_RELEASE}*
+	=sys-cluster/gnbd-headers-${CLUSTER_RELEASE}*
 	<sys-fs/sysfsutils-2.0.0"
 
 RDEPEND="${DEPEND}"

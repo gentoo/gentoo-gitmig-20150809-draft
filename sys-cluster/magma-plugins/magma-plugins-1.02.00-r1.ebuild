@@ -1,11 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.4 2006/10/15 13:26:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.5 2007/03/09 11:15:04 xmerlin Exp $
 
 inherit eutils
 
+CLUSTER_RELEASE="1.02.00"
+MY_P="cluster-${CLUSTER_RELEASE}"
 CVS_RELEASE="20060713"
-MY_P="cluster-${PV}"
 
 DESCRIPTION="Magma cluster interface plugins"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -19,12 +20,14 @@ KEYWORDS="~amd64 ~ppc x86"
 #IUSE="nogulm"
 IUSE=""
 
-DEPEND=">=sys-cluster/magma-1.02.00-r1
-	>=sys-cluster/dlm-1.02.00-r1
-	>=sys-cluster/cman-1.02.00-r1
+DEPEND="=sys-cluster/magma-${CLUSTER_RELEASE}*
+	=sys-cluster/dlm-${CLUSTER_RELEASE}*
+	=sys-cluster/cman-headers-${CLUSTER_RELEASE}*
 	"
 
-#	!nogulm? ( >=sys-cluster/gulm-1.02.00-r1 )"
+RDEPEND=""
+
+#	!nogulm? ( >=sys-cluster/gulm-${CLUSTER_RELEASE}* )"
 
 
 S="${WORKDIR}/${MY_P}/${PN}"

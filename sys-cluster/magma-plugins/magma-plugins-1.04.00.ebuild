@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.03.00.ebuild,v 1.4 2007/03/09 11:15:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.04.00.ebuild,v 1.1 2007/03/09 11:15:04 xmerlin Exp $
 
-CLUSTER_RELEASE="1.03.00"
+CLUSTER_RELEASE="1.04.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
 
 DESCRIPTION="Magma cluster interface plugins"

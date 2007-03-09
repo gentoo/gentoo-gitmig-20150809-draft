@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.02.00-r1.ebuild,v 1.5 2007/03/09 11:11:59 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.04.00.ebuild,v 1.1 2007/03/09 11:11:59 xmerlin Exp $
 
-CLUSTER_RELEASE="1.02.00"
+CLUSTER_RELEASE="1.04.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
 
 DESCRIPTION="General-purpose Distributed Lock Manager"
@@ -13,7 +13,7 @@ IUSE=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 DEPEND="=sys-cluster/dlm-headers-${CLUSTER_RELEASE}*"
 RDEPEND=""
