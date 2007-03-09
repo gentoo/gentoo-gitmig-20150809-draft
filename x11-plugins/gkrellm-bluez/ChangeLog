@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/gkrellm-bluez
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/ChangeLog,v 1.1 2007/02/23 18:18:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/ChangeLog,v 1.2 2007/03/09 15:40:49 lack Exp $
+
+*gkrellm-bluez-0.2-r1 (09 Mar 2007)
+
+  09 Mar 2007; Jim Ramsay <lack@gentoo.org>
+  +files/gkrellm-bluez-0.2-notheme.patch, -gkrellm-bluez-0.2.ebuild,
+  +gkrellm-bluez-0.2-r1.ebuild:
+  Added patch to fix bug 168417 - Segfault when enabled in the default theme
 
 *gkrellm-bluez-0.2 (23 Feb 2007)
 
