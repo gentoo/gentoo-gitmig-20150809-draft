@@ -1,10 +1,10 @@
 # ChangeLog for app-misc/srm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.10 2007/03/04 18:18:16 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.11 2007/03/09 21:04:10 anant Exp $
 
 *srm-1.2.8-r1 (04 Mar 2007)
 
-  04 Mar 2007; <anant@gentoo.org> +files/srm-1.2.8-remove-mount.patch,
+  04 Mar 2007; Anant Narayanan <anant@gentoo.org> +files/srm-1.2.8-remove-mount.patch,
   -srm-1.2.8.ebuild, +srm-1.2.8-r1.ebuild:
   Add patch to remove troublesome header that prevented compilation, bump to r1;
   this closes bug #169256

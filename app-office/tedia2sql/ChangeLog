@@ -1,10 +1,10 @@
 # ChangeLog for app-office/tedia2sql
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.9 2007/03/05 20:59:13 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.10 2007/03/09 21:04:10 anant Exp $
 
 *tedia2sql-1.2.12 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> -files/tedia2sql-gentoo.patch,
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> -files/tedia2sql-gentoo.patch,
   -tedia2sql-1.2.8.ebuild, +tedia2sql-1.2.12.ebuild:
   vBump to 1.2.12, closes bug #84830
 

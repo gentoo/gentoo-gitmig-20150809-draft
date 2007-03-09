@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.19 2007/03/09 20:43:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.20 2007/03/09 21:04:10 anant Exp $
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 169429
@@ -15,7 +15,7 @@
   05 Mar 2007; Raúl Porcel <armin76@gentoo.org> doc++-3.4.10-r1.ebuild:
   x86 stable wrt bug 169429
 
-  05 Mar 2007; <anant@gentoo.org> -doc++-3.4.10.ebuild:
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> -doc++-3.4.10.ebuild:
   Remove obsolete doc++ ebuild. Closes bug #150371
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
