@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.8.1.ebuild,v 1.10 2005/04/27 20:43:55 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.8.1.ebuild,v 1.11 2007/03/09 19:22:43 lack Exp $
 
-inherit multilib
+inherit gkrellm-plugin
 
 IUSE=""
 MY_P=${P/rellm-/}
@@ -11,19 +11,15 @@ DESCRIPTION="GKrellM2 plugin for monitoring keyboard LEDs"
 SRC_URI="http://heim.ifi.uio.no/~oyvinha/e107_files/downloads/${MY_P}.tar.gz"
 HOMEPAGE="http://www.stud.ifi.uio.no/~oyvinha/gkleds/"
 
-DEPEND="=app-admin/gkrellm-2*"
-
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-src_compile() {
-	make || die
-}
+PLUGIN_SO=gkleds.so
 
-src_install() {
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	doins gkleds.so
-
-	dodoc COPYING Changelog License TODO INSTALL README
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# Includes for gcc-4
+	sed -i -e '/^#include <stdio.h>/a#include <string.h>' src/gkleds_com.h || die "Patch failed"
 }
