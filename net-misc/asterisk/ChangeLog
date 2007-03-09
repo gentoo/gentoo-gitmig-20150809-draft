@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.146 2007/03/09 20:25:10 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.147 2007/03/09 20:57:59 solar Exp $
+
+  09 Mar 2007; <solar@gentoo.org> files/1.2.0/asterisk.rc6:
+  - posix compliant init.d script from Natanael Copa. bug 170080
 
 *asterisk-1.0.12-r1 (09 Mar 2007)
 
