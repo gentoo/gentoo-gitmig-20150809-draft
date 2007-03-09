@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20061015.ebuild,v 1.1 2006/11/03 02:04:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20061015-r1.ebuild,v 1.1 2007/03/09 03:55:37 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools
 
@@ -24,6 +24,8 @@ DEPEND="app-shells/tcsh
 
 S="${WORKDIR}/ncbi"
 
+EXTRA_VIB="asn2all asn2asn"
+
 pkg_setup() {
 	echo
 	ewarn 'Please note that the NCBI toolkit (and especially the X'
@@ -38,7 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-asn2all.patch
+	epatch "${FILESDIR}"/${PN}-extra_vib.patch
 
 	if use ppc64; then
 		epatch "${FILESDIR}"/${PN}-lop.patch
@@ -112,6 +114,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export EXTRA_VIB
 	cd "${WORKDIR}"
 	ncbi/make/makedis.csh || die
 	mkdir "${S}"/cgi
@@ -130,7 +133,9 @@ src_compile() {
 
 src_install() {
 	dobin "${S}"/bin/* || die "Failed to install binaries."
-	dobin "${S}"/build/asn2all || die "Failed to install binaries."
+	for i in ${EXTRA_VIB}; do
+		dobin "${S}"/build/${i} || die "Failed to install binaries."
+	done
 	dolib "${S}"/lib/* || die "Failed to install libraries."
 	mkdir -p "${D}"/usr/include/ncbi
 	cp -RL "${S}"/include/* "${D}"/usr/include/ncbi || \
