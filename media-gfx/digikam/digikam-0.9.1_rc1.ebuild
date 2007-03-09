@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.1_rc1.ebuild,v 1.1 2007/03/03 18:01:37 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.1_rc1.ebuild,v 1.2 2007/03/09 17:20:42 gustavoz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.digikam.org/"
 SRC_URI=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="nfs doc kdehiddenvisibility kdeenablefinal"
 
 DEPEND=">=media-libs/libgphoto2-2.2
