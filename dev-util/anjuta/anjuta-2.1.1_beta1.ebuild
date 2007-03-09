@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.1_beta1.ebuild,v 1.3 2007/03/05 03:16:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.1_beta1.ebuild,v 1.4 2007/03/09 21:21:21 compnerd Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -34,22 +34,22 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	 >=x11-libs/libwnck-2.12
 	 >=sys-devel/binutils-2.15.92
 	   dev-libs/libxslt
+	   sys-devel/autogen
 	 glade? ( >=dev-util/glade-3.1.4 )
 	 inherit-graph? ( >=media-gfx/graphviz-2.2.1 )
 	 sourceview? (
-			>=x11-libs/gtk+-2.10.0
-			>=gnome-base/libgnome-2.14.0
-			>=x11-libs/gtksourceview-1.4.0
-		     )
+					>=x11-libs/gtk+-2.10.0
+					>=gnome-base/libgnome-2.14.0
+					>=x11-libs/gtksourceview-1.4.0
+				 )
 	 subversion? (
-			>=dev-util/subversion-1.1.4
-			>=net-misc/neon-0.24.5
-			dev-libs/apr
-		     )
+					>=dev-util/subversion-1.1.4
+					>=net-misc/neon-0.24.5
+					dev-libs/apr
+				 )
 	 valgrind? ( dev-util/valgrind )"
 DEPEND="${RDEPEND}
 	  dev-lang/perl
-	  sys-devel/autogen
 	>=sys-devel/gettext-0.14
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.20
