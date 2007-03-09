@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/vbs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.5 2007/02/21 18:57:34 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.6 2007/03/09 22:34:48 calchan Exp $
+
+  09 Mar 2007; Denis Dupeyron <calchan@gentoo.org>
+  +files/vbs-1.4.0-gcc-4.1.patch, -files/vbs-gcc-3.4.patch,
+  vbs-1.4.0.ebuild:
+  Cleanups and gcc 4.1 compatibility fixes.
 
   21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> files/digest-vbs-1.4.0,
   Manifest:
