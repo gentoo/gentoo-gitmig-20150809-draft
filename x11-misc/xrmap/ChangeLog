@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrmap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.14 2007/02/22 00:08:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.15 2007/03/09 07:57:25 drac Exp $
+
+  09 Mar 2007; Samuli Suominen <drac@gentoo.org> xrmap-2.29.ebuild,
+  xrmap-2.32.ebuild:
+  Stop using virtual/x11.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
