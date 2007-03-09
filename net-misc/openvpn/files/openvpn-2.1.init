@@ -45,11 +45,11 @@ checkconfig() {
 		return 1
 	fi
 
-	if ! ifconfig "${ifname}" >/dev/null ; then
+	if ! ifconfig "${ifname}" >/dev/null 2>/dev/null ; then
 		# Try and create it
 		echo > /dev/"${ifname}" >/dev/null
 	fi
-	if ! ifconfig "${ifname}" >/dev/null ; then
+	if ! ifconfig "${ifname}" >/dev/null 2>/dev/null ; then
 		eerror "${VPNCONF} requires interface ${ifname}" \
 			"but that does not exist"
 		return 1
