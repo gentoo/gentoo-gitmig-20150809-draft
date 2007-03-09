@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.6.ebuild,v 1.2 2007/01/17 19:53:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.6.ebuild,v 1.3 2007/03/09 15:07:33 gustavoz Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/ijbswa/${P}-stable-src.tar.gz"
 
 IUSE="pcre selinux"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc sparc ~x86 ~x86-fbsd"
 LICENSE="GPL-2"
 
 DEPEND="pcre? ( dev-libs/libpcre )"
