@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/gkrellm-cpufreq-0.5.5.ebuild,v 1.1 2007/02/23 00:27:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/gkrellm-cpufreq-0.5.5.ebuild,v 1.2 2007/03/09 16:57:25 lack Exp $
 
-inherit multilib
+inherit gkrellm-plugin
 
 MY_P=${P/gkrellm/gkrellm2}
 
@@ -15,21 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="=app-admin/gkrellm-2*"
-
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
-
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-	emake || die "emake failed"
-}
+PLUGIN_SO=cpufreq.so
 
 src_install() {
-	dodoc README
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	doins cpufreq.so
+	gkrellm-plugin_src_install
 	exeinto /usr/sbin
 	doexe cpufreqset
 	doexe cpufreqsetgovernor

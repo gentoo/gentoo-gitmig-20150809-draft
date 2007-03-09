@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmbups/gkrellmbups-2.0.2-r1.ebuild,v 1.1 2007/02/21 16:34:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmbups/gkrellmbups-2.0.2-r1.ebuild,v 1.2 2007/03/09 16:53:58 lack Exp $
 
-inherit multilib
+inherit gkrellm-plugin
 
 IUSE="nut"
 DESCRIPTION="GKrellM2 Belkin UPS monitor Plugin"
@@ -13,8 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~ppc ~sparc x86"
 
-RDEPEND=">=app-admin/gkrellm-2
-	nut? ( sys-power/nut )"
+RDEPEND="nut? ( sys-power/nut )"
 
 src_unpack() {
 	unpack ${A}
@@ -23,12 +22,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable nut` || die "configure failed"
-	emake || die
+	econf `use_enable nut` || die "Configure failed"
+	emake || die "Make failed"
 }
 
 src_install () {
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
+	insinto $(gkrellm-plugin_dir)
 	newins src/gkrellmbups gkrellmbups.so
-	dodoc COPYING INSTALL README TODO
+	dodoc INSTALL README TODO
 }
