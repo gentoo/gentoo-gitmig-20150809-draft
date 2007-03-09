@@ -1,10 +1,10 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.3 2007/02/21 19:44:02 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.4 2007/03/09 21:04:11 anant Exp $
 
 *netkit-tftp-0.17-r3 (21 Feb 2007)
 
-  21 Feb 2007; <anant@gentoo.org> +files/man.patch, +files/memset.patch,
+  21 Feb 2007; Anant Narayanan <anant@gentoo.org> +files/man.patch, +files/memset.patch,
   -netkit-tftp-0.17-r2.ebuild, +netkit-tftp-0.17-r3.ebuild:
   Add two patches to install man pages in /usr/share/man instead of /usr/man and
   solve 2 QA warnings. Closes bugs #167800 and #167858

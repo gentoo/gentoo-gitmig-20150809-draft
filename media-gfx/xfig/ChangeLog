@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.36 2007/03/09 20:58:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.37 2007/03/09 21:04:11 anant Exp $
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> xfig-3.2.4-r3.ebuild:
   Stable on ppc wrt bug 169475
@@ -22,7 +22,7 @@
 
 *xfig-3.2.4-r3 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> -xfig-3.2.4-r1.ebuild,
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> -xfig-3.2.4-r1.ebuild,
   +xfig-3.2.4-r3.ebuild:
   Put documentation where it's supposed to be, closes bug #127385
 

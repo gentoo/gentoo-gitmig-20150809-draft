@@ -1,10 +1,10 @@
 # ChangeLog for media-libs/jpgalleg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.6 2007/03/08 19:33:49 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.7 2007/03/09 21:04:11 anant Exp $
 
 *jpgalleg-2.5 (08 Mar 2007)
 
-  08 Mar 2007; <anant@gentoo.org> +jpgalleg-2.5.ebuild:
+  08 Mar 2007; Anant Narayanan <anant@gentoo.org> +jpgalleg-2.5.ebuild:
   vBump to 2.5, thanks to Ryan Patterson, bug #155083
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> jpgalleg-1.1-r1.ebuild:

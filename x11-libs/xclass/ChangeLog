@@ -1,13 +1,13 @@
 # ChangeLog for x11-libs/xclass
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.16 2007/03/05 15:33:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.17 2007/03/09 21:04:11 anant Exp $
 
   05 Mar 2007; Raúl Porcel <armin76@gentoo.org> xclass-0.8.2-r2.ebuild:
   x86 stable wrt bug 169454
 
 *xclass-0.8.2-r2 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> +xclass-0.8.2-r2.ebuild:
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> +xclass-0.8.2-r2.ebuild:
   Fix offending header that prevented compile, bump to r2; closes bug #151169
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:

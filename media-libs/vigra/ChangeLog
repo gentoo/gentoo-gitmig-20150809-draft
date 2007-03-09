@@ -1,10 +1,10 @@
 # ChangeLog for media-libs/vigra
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.8 2007/03/05 10:48:41 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.9 2007/03/09 21:04:11 anant Exp $
 
 *vigra-1.5.0-r1 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> -vigra-1.5.0.ebuild,
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> -vigra-1.5.0.ebuild,
   +vigra-1.5.0-r1.ebuild:
   Install documentation in /usr/share instead of /share.
 

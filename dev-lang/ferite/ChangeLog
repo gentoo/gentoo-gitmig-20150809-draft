@@ -1,13 +1,13 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.18 2007/03/08 20:08:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.19 2007/03/09 21:04:11 anant Exp $
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ferite-1.0.2.ebuild:
   Stable on sparc wrt #169458
 
 *ferite-1.0.2 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> +ferite-1.0.2.ebuild:
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> +ferite-1.0.2.ebuild:
   vBump to 1.0.2, ebuild thanks to Dean Baender. Closes bug #124197
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:

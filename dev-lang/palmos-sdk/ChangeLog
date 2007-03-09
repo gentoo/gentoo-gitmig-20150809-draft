@@ -1,8 +1,8 @@
 # ChangeLog for dev-lang/palmos-sdk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/ChangeLog,v 1.6 2007/03/04 17:38:54 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/ChangeLog,v 1.7 2007/03/09 21:04:11 anant Exp $
 
-  04 Mar 2007; <anant@gentoo.org> -palmos-sdk-3.5.ebuild,
+  04 Mar 2007; Anant Narayanan <anant@gentoo.org> -palmos-sdk-3.5.ebuild,
   -palmos-sdk-4.0.ebuild:
   Remove palmos-sdk-3.5 and 4.0 (no longer provided upstream and it is fetch
   restricted). Generate new Manifest, this closes bug #169200

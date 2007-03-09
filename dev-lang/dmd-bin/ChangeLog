@@ -1,13 +1,13 @@
 # ChangeLog for dev-lang/dmd-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.2 2007/03/09 15:12:46 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.3 2007/03/09 21:04:11 anant Exp $
 
-  08 Mar 2007; <anant@gentoo.org> dmd-bin-1.0.0.ebuild:
+  08 Mar 2007; Anant Narayanan <anant@gentoo.org> dmd-bin-1.0.0.ebuild:
   Change incorrect dependency on libstdc++ and update post-install message.
 
 *dmd-bin-1.0.0 (08 Mar 2007)
 
-  08 Mar 2007; <anant@gentoo.org> +files/25dmd, +metadata.xml,
+  08 Mar 2007; Anant Narayanan <anant@gentoo.org> +files/25dmd, +metadata.xml,
   +dmd-bin-1.0.0.ebuild:
   Introduce version 1.0 of the D compiler from Digital Mars. Thanks go to Thomas
   Kuhne for inputs (bug #46806)

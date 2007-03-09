@@ -1,10 +1,10 @@
 # ChangeLog for dev-util/memprof
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.12 2007/03/05 20:43:28 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.13 2007/03/09 21:04:11 anant Exp $
 
 *memprof-0.6 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> +files/memprof-0.6-Makefile.in.patch,
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> +files/memprof-0.6-Makefile.in.patch,
   +memprof-0.6.ebuild:
   vBump to 0.6, closes bug #154486
 

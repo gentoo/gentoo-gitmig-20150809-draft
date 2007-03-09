@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.15 2007/03/06 18:18:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.16 2007/03/09 21:04:11 anant Exp $
 
   06 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sslwrap-2.0.6-r1.ebuild:
@@ -11,7 +11,7 @@
 
 *sslwrap-2.0.6-r1 (05 Mar 2007)
 
-  05 Mar 2007; <anant@gentoo.org> +sslwrap-2.0.6-r1.ebuild:
+  05 Mar 2007; Anant Narayanan <anant@gentoo.org> +sslwrap-2.0.6-r1.ebuild:
   Replace deprectaed constant with newer one, closes bug #146828
 
   10 Dec 2006; Elfyn McBratney <beu@gentoo.org> metadata.xml:

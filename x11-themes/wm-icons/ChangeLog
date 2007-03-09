@@ -1,10 +1,10 @@
 # ChangeLog for x11-themes/wm-icons
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.20 2007/03/08 19:05:36 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.21 2007/03/09 21:04:11 anant Exp $
 
 *wm-icons-0.4.0 (08 Mar 2007)
 
-  08 Mar 2007; <anant@gentoo.org> +wm-icons-0.4.0.ebuild:
+  08 Mar 2007; Anant Narayanan <anant@gentoo.org> +wm-icons-0.4.0.ebuild:
   vBump to 0.4.0, thanks to Richard Adenling, bug #150838
 
   06 Jan 2007; David Shakaryan <omp@gentoo.org> -wm-icons-0.4.0_pre1.ebuild:

@@ -11,10 +11,6 @@ MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MISC xorg-cf-files-1.0.2.ebuild.orig 599 RMD160 bcd17aad1425d433168b5673ac0572fe7fc2761e SHA1 00659a053875287f7b27069d0410ad69c6e628e9 SHA256 c69284986d1c99baf76a4ccaf740c11cf3439ae3f0c8d4f3730eba01ddfaf32a
-MD5 59c3246a8e5f86aea4e16413dbb9b4fe xorg-cf-files-1.0.2.ebuild.orig 599
-RMD160 bcd17aad1425d433168b5673ac0572fe7fc2761e xorg-cf-files-1.0.2.ebuild.orig 599
-SHA256 c69284986d1c99baf76a4ccaf740c11cf3439ae3f0c8d4f3730eba01ddfaf32a xorg-cf-files-1.0.2.ebuild.orig 599
 MD5 1b24ee98ef44037df3dd9907a43c90f0 files/digest-xorg-cf-files-1.0.2 262
 RMD160 5216b4f6f9b15186b0f6ce1f82f85871a378cefd files/digest-xorg-cf-files-1.0.2 262
 SHA256 965f05e56eeb9b05f9b54bb68b312be2b5e4f6e1efc0107d8af071815591354a files/digest-xorg-cf-files-1.0.2 262
