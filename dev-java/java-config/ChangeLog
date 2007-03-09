@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.145 2007/03/09 00:41:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.146 2007/03/09 14:01:43 betelgeuse Exp $
+
+  09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  java-config-1.3.7.ebuild, java-config-2.0.31.ebuild,
+  java-config-2.0.31-r3.ebuild, java-config-2.0.31-r4.ebuild:
+  Fixed links to the Why we need Java 1.4 document wrt bug #170104.
 
   09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   -java-config-2.0.30.ebuild:
