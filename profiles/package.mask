@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6951 2007/03/09 12:31:14 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6952 2007/03/09 23:57:52 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Cummings <mcummings@gentoo.org> (09 Mar 2007)
+# Masking for removal. This was incorporated into
+# >=dev-perl/XML-LibXML-1.61 upstream.
+dev-perl/XML-LibXML-XPathContext
 
 # Joe Sapp <nixphoeni@gentoo.org> (09 Mar 2007)
 # Masking until I can verify this works with a more recent
