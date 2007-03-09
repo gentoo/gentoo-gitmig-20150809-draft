@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-gamma
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.8 2007/02/22 21:28:32 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.9 2007/03/09 17:10:01 lack Exp $
+
+  09 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-gamma-2.03.ebuild:
+  Updated to use new gkrellm-plugin eclass
 
   22 Feb 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml:
   Accepting maintainership
