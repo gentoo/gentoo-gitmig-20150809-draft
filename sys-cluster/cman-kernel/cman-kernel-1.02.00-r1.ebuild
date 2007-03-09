@@ -1,11 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.10 2007/01/13 01:56:48 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.11 2007/03/09 15:09:07 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
+CLUSTER_RELEASE="1.02.00"
+MY_P="cluster-${CLUSTER_RELEASE}"
 CVS_RELEASE="20060714"
-MY_P="cluster-${PV}"
 
 DESCRIPTION="CMAN cluster kernel module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -37,7 +38,22 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
+
+	if kernel_is 2 6; then
+		if [ "$KV_PATCH" -ge "18" ] ; then
+			sed -i \
+				-e 's|version.h|utsrelease.h|g' \
+				configure \
+				|| die "sed failed"
+
+			sed -i \
+				-e 's|system_utsname.nodename|init_utsname()->nodename|g' \
+				src/cnxman.c \
+				|| die "sed failed"
+		fi
+	fi
 }
+
 
 src_compile() {
 	set_arch_to_kernel
