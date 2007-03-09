@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-smartbookmark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.10 2007/03/09 18:37:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.11 2007/03/09 18:51:55 drac Exp $
+
+  09 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-smartbookmark-0.4.2.ebuild:
+  Fix default URL from bugs.debian.org to bugs.gentoo.org as pointed out by
+  angelos at #gentoo-xfce.
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org>
   xfce4-smartbookmark-0.4.2.ebuild:
