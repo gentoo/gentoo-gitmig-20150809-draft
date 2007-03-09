@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.20.ebuild,v 1.2 2007/02/02 17:02:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.20.ebuild,v 1.3 2007/03/09 17:38:51 vapier Exp $
 
 inherit ssl-cert eutils flag-o-matic
 
@@ -50,7 +50,7 @@ src_install() {
 		tools/importCA.html
 
 	insinto /etc/stunnel
-	donewins ${FILESDIR}/stunnel.conf stunnel.conf
+	newins ${FILESDIR}/stunnel.conf stunnel.conf
 	newinitd ${FILESDIR}/stunnel.rc6 stunnel
 	# Check if there's currently an cert already there
 	if [ ! -f /etc/stunnel/stunnel.key ]; then
