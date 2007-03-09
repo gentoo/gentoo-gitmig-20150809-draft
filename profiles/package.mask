@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6947 2007/03/09 09:12:56 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6948 2007/03/09 11:32:21 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -640,10 +640,6 @@ media-tv/nuppelvideo
 # Timothy Redaelli <drizzt@gentoo.org> (01 Dec 2006)
 # Beta versions
 =app-arch/upx-ucl-2.9*
-
-# Kevin F. Quinn <kevquinn@gentoo.org> (01 Dec 2006)
-# Mask for initial testing; bug #48072
-=app-text/aspell-0.60.4-r2
 
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.
