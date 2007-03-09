@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.6.ebuild,v 1.5 2006/05/17 12:28:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.6.ebuild,v 1.6 2007/03/09 04:54:36 dcoutts Exp $
 
 inherit base
 
@@ -24,7 +24,8 @@ DEPEND=">=net-misc/curl-7.10.2
 #	wxwindows?  ( dev-haskell/wxhaskell )
 
 RDEPEND=">=net-misc/curl-7.10.2
-	virtual/mta"
+	virtual/mta
+	dev-libs/gmp"
 #	wxwindows?  ( dev-haskell/wxhaskell )"
 
 S=${WORKDIR}/${MY_P}

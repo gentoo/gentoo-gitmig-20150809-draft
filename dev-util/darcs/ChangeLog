@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/darcs
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.62 2006/10/20 00:29:27 dcoutts Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.63 2007/03/09 04:54:36 dcoutts Exp $
+
+  09 Mar 2007; Duncan Coutts <dcoutts@gentoo.org> darcs-1.0.4.ebuild,
+  darcs-1.0.5.ebuild, darcs-1.0.6.ebuild, darcs-1.0.7.ebuild,
+  darcs-1.0.8-r1.ebuild:
+  Add dep on dev-libs/gmp as pointed out in bug #169848
 
   20 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/darcs-1.0.8-ghc66.patch:

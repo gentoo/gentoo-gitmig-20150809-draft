@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.8-r1.ebuild,v 1.3 2006/10/16 22:08:53 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.8-r1.ebuild,v 1.4 2007/03/09 04:54:36 dcoutts Exp $
 
 inherit base autotools
 
@@ -21,7 +21,8 @@ DEPEND=">=net-misc/curl-7.10.2
 			>=dev-tex/latex2html-2002.2.1_pre20041025-r1 )"
 
 RDEPEND=">=net-misc/curl-7.10.2
-	virtual/mta"
+	virtual/mta
+	dev-libs/gmp"
 
 S=${WORKDIR}/${MY_P}
 
