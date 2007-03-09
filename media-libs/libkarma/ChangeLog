@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkarma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.3 2007/03/06 08:41:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.4 2007/03/09 13:59:12 genstef Exp $
+
+  09 Mar 2007; <genstef@gentoo.org> libkarma-0.0.6.ebuild:
+  Add needed libusb depend thanks jmbsvicetto
 
   06 Mar 2007; Markus Rothe <corsair@gentoo.org> libkarma-0.0.6.ebuild:
   Added ~ppc64; bug #168812

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.0.6.ebuild,v 1.3 2007/03/06 08:41:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.0.6.ebuild,v 1.4 2007/03/09 13:59:12 genstef Exp $
 
 inherit eutils mono multilib
 
@@ -14,7 +14,9 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="virtual/libiconv
-	media-libs/taglib"
+	media-libs/taglib
+	dev-libs/libusb"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
