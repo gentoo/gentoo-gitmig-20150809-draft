@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.03.00.ebuild,v 1.3 2006/10/15 13:42:21 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.03.00.ebuild,v 1.4 2007/03/09 21:29:01 xmerlin Exp $
 
-MY_P="cluster-${PV}"
+CLUSTER_RELEASE="1.03.00"
+MY_P="cluster-${CLUSTER_RELEASE}"
 
 DESCRIPTION="Shared-disk cluster file system"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -13,17 +14,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-cluster/gfs-headers-1.03.00
-	>=sys-cluster/iddev-1.03.00
+DEPEND="=sys-cluster/gfs-headers-${CLUSTER_RELEASE}*
+	=sys-cluster/iddev-${CLUSTER_RELEASE}*
 	sys-fs/e2fsprogs
 	"
 
 RDEPEND="sys-fs/e2fsprogs
-	>=sys-cluster/ccs-1.03.00
-	>=sys-cluster/cman-1.03.00
-	>=sys-cluster/magma-1.03.00
-	>=sys-cluster/magma-plugins-1.03.00
-	>=sys-cluster/fence-1.03.00
+	=sys-cluster/ccs-${CLUSTER_RELEASE}*
+	=sys-cluster/cman-${CLUSTER_RELEASE}*
+	=sys-cluster/magma-${CLUSTER_RELEASE}*
+	=sys-cluster/magma-plugins-${CLUSTER_RELEASE}*
+	=sys-cluster/fence-${CLUSTER_RELEASE}*
 	"
 
 S="${WORKDIR}/${MY_P}/${PN}"
