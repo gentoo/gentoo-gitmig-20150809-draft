@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.0.0.ebuild,v 1.1 2007/03/09 14:56:18 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.0.0.ebuild,v 1.2 2007/03/09 15:12:46 anant Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ S="${WORKDIR}"
 
 DEPEND="sys-apps/findutils"
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
-	x86? ( sys-libs/libstdc++-v3 )"
+	x86? ( >=virtual/libstdc++-3.3 )"
 
 src_unpack() {
 	unpack ${A}
@@ -75,10 +75,19 @@ END
 }
 
 pkg_postinst () {
-	ewarn "The DMD Configuration file has been disabled,"
-	ewarn "and will be re-enabled when: "
+	ewarn "The DMD Configuration file has been disabled,    "
+	ewarn "and will be re-enabled when:                     "
+	ewarn "                                                 "
 	ewarn "http://d.puremagic.com/issues/show_bug.cgi?id=278"
+	ewarn "                                                 "
 	ewarn "has been fixed. Meanwhile, please supply all your"
-	ewarn "configuration options in the /opt/dmd/bin/dmd"
-	ewarn "shell script."
+	ewarn "configuration options in the /opt/dmd/bin/dmd    "
+	ewarn "shell script.                                    "
+	ewarn "                                                 "
+	ewarn "You may need to run:                             "
+	ewarn "                                                 "
+	ewarn "env-update && source /etc/profile                "
+	ewarn "                                                 "
+	ewarn "to be able to use the compiler immediately.      "
+	ewarn "                                                 "
 }

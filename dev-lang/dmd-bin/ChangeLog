@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/dmd-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.1 2007/03/09 14:56:18 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.2 2007/03/09 15:12:46 anant Exp $
+
+  08 Mar 2007; <anant@gentoo.org> dmd-bin-1.0.0.ebuild:
+  Change incorrect dependency on libstdc++ and update post-install message.
 
 *dmd-bin-1.0.0 (08 Mar 2007)
 
