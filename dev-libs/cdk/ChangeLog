@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.46 2007/02/24 14:37:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.47 2007/03/09 15:22:48 gustavoz Exp $
+
+  09 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  cdk-5.0.20060507.ebuild:
+  Stable on sparc wrt #168106
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> cdk-5.0.20060507.ebuild:
   Stable on ppc wrt bug 168106
