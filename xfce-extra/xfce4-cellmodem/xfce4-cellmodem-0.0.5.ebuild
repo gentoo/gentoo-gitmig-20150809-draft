@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/xfce4-cellmodem-0.0.5.ebuild,v 1.1 2007/02/27 21:03:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/xfce4-cellmodem-0.0.5.ebuild,v 1.2 2007/03/09 11:13:39 opfer Exp $
 
 inherit autotools eutils xfce44
 
@@ -8,7 +8,7 @@ xfce44
 xfce44_gzipped
 
 DESCRIPTION="Panel plugin for monitoring cellular modems - GPRS/UMTS(3G)/HSDPA(3.5G)"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug"
 
 RDEPEND="sys-apps/pciutils

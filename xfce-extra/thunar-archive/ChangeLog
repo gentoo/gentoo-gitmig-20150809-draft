@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.6 2007/02/03 00:11:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.7 2007/03/09 11:11:07 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  thunar-archive-0.2.4.ebuild:
+  stable x86; bug #169987
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org> thunar-archive-0.2.4.ebuild:
   Restored IUSE=debug, see bug #164834.

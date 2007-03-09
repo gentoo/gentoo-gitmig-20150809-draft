@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.36 2007/03/08 22:09:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.37 2007/03/09 10:52:00 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org> exo-0.3.2.ebuild:
+  stable x86; bug #169987
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> exo-0.3.2.ebuild:
   Stable on sparc wrt #169987

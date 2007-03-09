@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.3 2007/02/03 15:22:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.4 2007/03/09 11:12:32 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  thunar-volman-0.1.2.ebuild:
+  stable x86; bug #169987
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> thunar-volman-0.1.2.ebuild:
   add ~amd64, bug 165130

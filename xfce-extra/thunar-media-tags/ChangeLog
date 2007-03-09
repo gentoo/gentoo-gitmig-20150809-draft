@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-media-tags
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/ChangeLog,v 1.5 2007/02/26 21:00:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/ChangeLog,v 1.6 2007/03/09 11:11:36 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  thunar-media-tags-0.1.2.ebuild:
+  stable x86; bug #169987
 
   26 Feb 2007; Samuli Suominen <drac@gentoo.org>
   thunar-media-tags-0.1.2.ebuild:
