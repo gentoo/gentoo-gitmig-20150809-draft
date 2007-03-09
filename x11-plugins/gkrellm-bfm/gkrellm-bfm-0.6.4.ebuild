@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/gkrellm-bfm-0.6.4.ebuild,v 1.1 2007/02/21 19:53:36 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/gkrellm-bfm-0.6.4.ebuild,v 1.2 2007/03/09 16:15:27 lack Exp $
 
-inherit multilib eutils
+inherit gkrellm-plugin
 
 IUSE=""
 S=${WORKDIR}/bfm-${PV}
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-DEPEND="=app-admin/gkrellm-2*"
+PLUGIN_DOCS="SUPPORTED_SYSTEMS"
 
 src_unpack() {
 	unpack "${A}"
@@ -22,11 +22,6 @@ src_unpack() {
 }
 
 src_compile() {
-	emake gkrellm || die
+	emake STRIP=echo gkrellm
 }
 
-src_install () {
-	exeinto /usr/$(get_libdir)/gkrellm2/plugins
-	doexe gkrellm-bfm.so
-	dodoc README README.bubblemon COPYING TODO SUPPORTED_SYSTEMS
-}
