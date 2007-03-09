@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.22 2007/02/23 19:22:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.23 2007/03/09 22:38:13 alonbl Exp $
 
   23 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.1e.ebuild,
   loop-aes-3.1f.ebuild:
@@ -77,7 +77,7 @@
 
   18 Jun 2005; Stefan Schweizer <genstef@gentoo.org> +loop-aes-3.0c.ebuild:
   Version bump adding keyscrub use-flag thanks to Alon Bar-Lev
-  <alon@xor-t.com> in bug 95725
+  <alon.barlev@gmail.com> in bug 95725
 
   05 Feb 2005; Stefan Schweizer <genstef@gentoo.org> loop-aes-3.0b.ebuild:
   Change config check to check for BLK_DEV_LOOP not set as in documentation,
