@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0-r1.ebuild,v 1.3 2007/03/08 00:38:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0-r1.ebuild,v 1.4 2007/03/09 14:58:01 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="app-arch/unzip
 	dev-libs/libxml2
 	media-libs/libsamplerate
 	net-misc/curl
-	>=media-sound/audacious-1.3.0
+	>=media-sound/audacious-1.3.0-r1
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	>=media-libs/libsdl-1.2.5
