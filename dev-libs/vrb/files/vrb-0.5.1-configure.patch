@@ -1,0 +1,31 @@
+--- configure.old	2007-03-08 21:38:59.000000000 +0530
++++ configure	2007-03-08 21:42:37.000000000 +0530
+@@ -341,8 +341,8 @@
+     pgm_warn=( "${pgm_warn[@]}" -Winline )
+ fi
+ 
+-lib_feat=( -fomit-frame-pointer -funsigned-char -funsigned-bitfields -fgnu-linker -frerun-loop-opt -finline -finline-functions -fmove-all-movables )
+-pgm_feat=( -fomit-frame-pointer -funsigned-char -funsigned-bitfields -fgnu-linker -frerun-loop-opt -finline -finline-functions -fmove-all-movables )
++lib_feat=( -fomit-frame-pointer -funsigned-char -funsigned-bitfields -frerun-loop-opt -finline -finline-functions )
++pgm_feat=( -fomit-frame-pointer -funsigned-char -funsigned-bitfields -frerun-loop-opt -finline -finline-functions )
+ 
+ lib_cp_opt=( -pipe )
+ pgm_cp_opt=( -pipe )
+@@ -1268,7 +1268,7 @@
+ 	class_product_src lib "${libname}" | while read srcname; do
+ 	    vmsg 9 "Generating Makefile section: lib ${libname} ${srcname}"
+ 	    srcdir=$( dirname "${srcname}" )
+-	    srcref="-I ${srcdir} -I ${source}/include -I- -I ./include ${srcname}"
++	    srcref="-iquote ${srcdir} -iquote ${source}/include -I ./include ${srcname}"
+ 	    objname=$( echo "${srcname}" | gawk -F/ '{print $NF;}' | gawk -F. 'BEGIN{OFS=".";}{$NF="o";print $0;}' )
+ 	    for lc in arlib solib; do
+ 		[[ "${lc}" = "arlib" ]] && libfeat=( -DARLIBRARY=1 )
+@@ -1398,7 +1398,7 @@
+ 	class_product_src "${pgmclass}" "${pgmname}" | while read srcname; do
+ 	    vmsg 9 "Generating Makefile section: ${pgmclass} ${pgmname} ${srcname}"
+ 	    srcdir=$( dirname "${srcname}" )
+-	    srcref="-I ${srcdir} -I ${source}/include -I- -I ./include ${srcname}"
++ 	    srcref="-iquote ${srcdir} -iquote ${source}/include -I ./include ${srcname}"
+	    objname=$( echo "${srcname}" | gawk -F/ '{print $NF;}' | gawk -F. 'BEGIN{OFS=".";}{$NF="o";print $0;}' )
+ 	    echo "obj/${pgmclass}/${pgmname}/${objname}: ${srcname}"
+ 	    if [[ -n "${asm}" ]]; then
