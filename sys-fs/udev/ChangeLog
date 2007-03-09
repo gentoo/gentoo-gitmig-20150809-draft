@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.273 2007/03/08 13:27:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.274 2007/03/09 15:17:40 zzam Exp $
+
+  09 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/udev.rules-104-r10:
+  Backported fix for calling modprobe.sh for pnp devices from udev-106-r1.ebuild.
 
   08 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> udev-104-r9.ebuild,
   udev-104-r10.ebuild, udev-104-r11.ebuild, udev-104-r12.ebuild,

@@ -247,7 +247,7 @@ SUBSYSTEM=="usb_device", PROGRAM="/bin/sh -c 'K=%k; K=$${K#usbdev}; printf bus/u
 ENV{MODALIAS}=="?*", ACTION=="add", RUN+="modprobe.sh $env{MODALIAS}"
 
 # /etc/modprobe.conf.
-SUBSYSTEM=="pnp", ENV{MODALIAS}!="?*", RUN+="/bin/sh -c 'while read id; do modprobe.sh pnp:d$$id; done < /sys$devpath/id'"
+SUBSYSTEM=="pnp", ENV{MODALIAS}!="?*", RUN+="/bin/sh -c 'while read id; do /lib/udev/modprobe.sh pnp:d$$id; done < /sys$devpath/id'"
 # If you have problems with some pnp modules being loaded, please enter the
 # following aliases into the modprobe configuration files.  These are needed by
 # udev to autoload some modules
