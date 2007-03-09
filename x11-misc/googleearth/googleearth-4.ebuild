@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.ebuild,v 1.5 2007/03/02 06:56:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.ebuild,v 1.6 2007/03/09 07:26:03 drac Exp $
 
 inherit eutils fdo-mime
 
@@ -18,14 +18,13 @@ RDEPEND="x86? (
 	media-libs/fontconfig
 	media-libs/freetype
 	virtual/opengl
-	|| ( ( x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXcursor
-		x11-libs/libXext
-		x11-libs/libXft
-		x11-libs/libXrender )
-		<virtual/x11-7.0 ) )
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXcursor
+	x11-libs/libXext
+	x11-libs/libXft
+	x11-libs/libXrender )
 	amd64? (
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-baselibs
