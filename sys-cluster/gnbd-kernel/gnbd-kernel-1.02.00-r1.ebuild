@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.10 2007/03/09 14:35:01 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.11 2007/03/09 14:43:35 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -39,6 +39,13 @@ src_unpack() {
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -ge "18" ] ; then
 			epatch ${FILESDIR}/${PN}-remove-devfs-support.patch || die
+		fi
+
+		if [ "$KV_PATCH" -ge "18" ] ; then
+			sed -i \
+				-e 's|version.h|utsrelease.h|g' \
+				configure \
+				|| die "sed failed"
 		fi
 
 		if [ "$KV_PATCH" -ge "19" ] ; then
