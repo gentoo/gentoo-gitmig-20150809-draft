@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jvyaml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.7 2007/03/08 13:36:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.8 2007/03/09 00:29:19 betelgeuse Exp $
+
+  09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> jvyaml-0.2.1-r1.ebuild:
+  The test use flag was missing from JAVA_PKG_IUSE.
 
   08 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> jvyaml-0.2.1-r1.ebuild:
   Ebuild cleanup.
