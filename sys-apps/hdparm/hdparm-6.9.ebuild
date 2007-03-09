@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-6.9.ebuild,v 1.3 2007/02/21 05:16:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-6.9.ebuild,v 1.4 2007/03/09 16:03:42 eroyf Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hdparm/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 mips ~ppc ~ppc64 s390 sh sparc ~x86"
 IUSE=""
 
 DEPEND=""
