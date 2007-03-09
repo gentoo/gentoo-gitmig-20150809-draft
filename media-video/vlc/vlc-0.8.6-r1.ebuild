@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.20 2007/03/05 07:31:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.21 2007/03/09 08:31:07 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -66,6 +66,9 @@ RDEPEND="
 		arts? ( kde-base/arts )
 		alsa? ( media-libs/alsa-lib )
 		wxwindows? ( >=x11-libs/wxGTK-2.6.2-r1 )
+		skins? ( >=x11-libs/wxGTK-2.6.2-r1
+			media-libs/freetype
+			media-fonts/ttf-bitstream-vera )
 		ncurses? ( sys-libs/ncurses )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )
@@ -117,18 +120,18 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if use wxwindows; then
+	if use wxwindows || use skins; then
 		WX_GTK_VER="2.6"
 		need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
 	fi
 
 	if use skins && ! use truetype; then
-		eerror "Trying to build with skins support but without truetype."
-		die "You have to use 'truetype' to use 'skins'"
+		ewarn "Trying to build with skins support but without truetype."
+		ewarn "Enabling truetype."
 	fi
 	if use skins && ! use wxwindows; then
-		eerror "Trying to build with skins support but without wxwindows."
-		die "You have to use 'wxwindows' to use 'skins'"
+		ewarn "Trying to build with skins support but without wxwindows."
+		ewarn "Enabling wxwindows."
 	fi
 }
 
@@ -178,6 +181,19 @@ src_compile () {
 		myconf="${myconf} $(use_enable live live555)"
 	fi
 
+	if use truetype || use skins; then
+		myconf="${myconf} --enable-freetype"
+	else
+		myconf="${myconf} --disable-freetype"
+	fi
+
+	if use wxwindows || use skins; then
+		myconf="${myconf} --enable-wxwidgets"
+	else
+		myconf="${myconf} --disable-wxwidgets"
+	fi
+
+
 	econf \
 		$(use_enable altivec) \
 		$(use_enable stream sout) \
@@ -197,7 +213,6 @@ src_compile () {
 		$(use_enable xv xvideo) \
 		$(use_enable xinerama) \
 		$(use_enable opengl glx) $(use_enable opengl) \
-		$(use_enable truetype freetype) \
 		$(use_enable bidi fribidi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdplay) $(use_enable dvd dvdnav) \
 		$(use_enable fbcon fb) \
@@ -209,7 +224,6 @@ src_compile () {
 		$(use_enable esd) \
 		$(use_enable arts) \
 		$(use_enable alsa) \
-		$(use_enable wxwindows wxwidgets) \
 		$(use_enable ncurses) \
 		$(use_enable xosd) \
 		$(use_enable lirc) \
@@ -287,5 +301,5 @@ src_install() {
 		newins "${S}"/share/vlc${res}x${res}.png vlc.png
 	done
 
-	use wxwindows || rm "${D}/usr/share/applications/vlc.desktop"
+	use wxwindows || use skins || rm "${D}/usr/share/applications/vlc.desktop"
 }
