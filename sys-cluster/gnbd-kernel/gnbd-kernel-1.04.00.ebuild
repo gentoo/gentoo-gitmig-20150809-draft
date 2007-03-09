@@ -1,22 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.10 2007/03/09 14:35:01 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.04.00.ebuild,v 1.1 2007/03/09 14:35:01 xmerlin Exp $
 
-inherit eutils linux-mod linux-info
+inherit linux-mod linux-info
 
-CLUSTER_RELEASE="1.02.00"
+CLUSTER_RELEASE="1.04.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
-CVS_RELEASE="20060713"
 
 DESCRIPTION="GFS Network Block Devices module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
-SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz
-	http://dev.gentoo.org/~xmerlin/gfs/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz"
+SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/linux-sources-2.6.16"
@@ -34,15 +31,21 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
 
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -ge "18" ] ; then
 			epatch ${FILESDIR}/${PN}-remove-devfs-support.patch || die
 		fi
 
-		if [ "$KV_PATCH" -ge "19" ] ; then
-			epatch ${FILESDIR}/${PN}-1.03.00-compile-fix-kernel-post-2.6.18.patch || die
+		if [ "$KV_PATCH" -lt "18" ] ; then
+			sed -i \
+				-e 's|utsrelease.h|version.h|g' \
+				configure \
+				|| die "sed failed"
+		fi
+
+		if [ "$KV_PATCH" -lt "19" ] ; then
+			epatch ${FILESDIR}/${P}-compile-fix-kernel-pre-2.6.19.patch || die
 		fi
 	fi
 }
