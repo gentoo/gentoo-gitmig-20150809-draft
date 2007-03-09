@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.1.ebuild,v 1.12 2006/12/28 04:43:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.1.ebuild,v 1.13 2007/03/09 19:07:26 lack Exp $
 
-inherit multilib eutils
+inherit gkrellm-plugin
 
 IUSE=""
 DESCRIPTION="Internet Time plugin for Gkrellm2"
@@ -13,15 +13,11 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-DEPEND=">=app-admin/gkrellm-2"
+PLUGIN_SO=gkrellm_itime.so
 
-src_compile() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-	emake || die "emake failed"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}"/${P}-Makefile.patch || die "Patch failed"
 }
 
-src_install() {
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	doins gkrellm_itime.so
-	dodoc README ChangeLog COPYING
-}
