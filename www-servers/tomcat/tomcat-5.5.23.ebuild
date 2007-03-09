@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.22_pre-r1.ebuild,v 1.2 2007/02/27 18:54:16 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23.ebuild,v 1.1 2007/03/09 17:33:04 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -8,11 +8,9 @@ inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Tomcat Servlet-2.4/JSP-2.0 Container"
 
-MY_P="apache-${P/_pre/}-src"
-MY_PV="${PV/_pre/}"
+MY_P="apache-${P}-src"
 SLOT="5.5"
-#SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
-SRC_URI="http://people.apache.org/~fhanik/${PN}/${PN}-5.5/v${MY_PV}/src/${MY_P}.tar.gz"
+SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
 KEYWORDS="~amd64 -ppc -ppc64 ~x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
@@ -31,7 +29,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.2*
 	>=dev-java/commons-el-1.0
 	>=dev-java/commons-launcher-0.9
 	>=dev-java/commons-logging-1.0.4
-	>=dev-java/commons-modeler-2.0
+	>=dev-java/commons-modeler-1.1
 	>=dev-java/commons-pool-1.2
 	>=dev-java/junit-3.8.1
 	>=dev-java/log4j-1.2.9
@@ -70,17 +68,17 @@ src_unpack() {
 	cd ${S}
 
 	local PATCHES="
-		mainbuild-xml.patch
-		tomcatbuild-xml.patch
-		catalinabuild-xml.patch
-		jasperbuild-xml.patch
+		main_build_xml.patch
+		tomcat_build_xml.patch
+		catalina_build_xml.patch
+		jasper_build_xml.patch
 	"
 	for patch in ${PATCHES}; do
-		epatch "${FILESDIR}/${MY_PV}/${patch}"
+		epatch "${FILESDIR}/${SLOT}/${patch}"
 	done
 	if use examples; then
-		epatch "${FILESDIR}/${MY_PV}/jsr152_examples_build-xml.patch"
-		epatch "${FILESDIR}/${MY_PV}/jsr154_examples_build-xml.patch"
+		epatch "${FILESDIR}/${SLOT}/jsr152_examples_build_xml.patch"
+		epatch "${FILESDIR}/${SLOT}/jsr154_examples_build_xml.patch"
 	fi
 
 	# avoid packed jars :-)
@@ -166,8 +164,8 @@ src_install() {
 	cd ${S}/build/build
 
 	# init.d, conf.d
-	newinitd ${FILESDIR}/${MY_PV}/tomcat.init ${TOMCAT_NAME}
-	newconfd ${FILESDIR}/${MY_PV}/tomcat.conf ${TOMCAT_NAME}
+	newinitd ${FILESDIR}/${SLOT}/tomcat.init ${TOMCAT_NAME}
+	newconfd ${FILESDIR}/${SLOT}/tomcat.conf ${TOMCAT_NAME}
 
 	# create dir structure
 	diropts -m755 -o tomcat -g tomcat

@@ -1,6 +1,26 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.124 2007/03/01 00:11:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.125 2007/03/09 17:33:04 wltjr Exp $
+
+*tomcat-5.5.23 (09 Mar 2007)
+
+  09 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/5.5.22/catalinabuild-xml.patch,
+  -files/5.5.22/jasperbuild-xml.patch,
+  -files/5.5.22/jsr152_examples_build-xml.patch,
+  -files/5.5.22/jsr152build-xml-examples.patch,
+  -files/5.5.22/jsr154_examples_build-xml.patch,
+  -files/5.5.22/jsr154build-xml-examples.patch,
+  -files/5.5.22/mainbuild-xml.patch, -files/5.5.22/tomcat.conf,
+  -files/5.5.22/tomcat.init, -files/5.5.22/tomcatbuild-xml.patch,
+  +files/5.5/catalina_build_xml.patch,
+  +files/5.5/jsr152_examples_build_xml.patch, +files/5.5/tomcat.init,
+  +files/5.5/jasper_build_xml.patch,
+  +files/5.5/jsr154_examples_build_xml.patch,
+  +files/5.5/main_build_xml.patch, +files/5.5/tomcat.conf,
+  +files/5.5/tomcat_build_xml.patch, -tomcat-5.5.22_pre-r1.ebuild,
+  +tomcat-5.5.23.ebuild:
+  Bumped 5.5 to latest release, removed pre-release version
 
 *tomcat-6.0.10 (01 Mar 2007)
 
