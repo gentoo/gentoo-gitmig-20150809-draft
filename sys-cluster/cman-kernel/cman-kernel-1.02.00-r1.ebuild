@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.11 2007/03/09 15:09:07 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.12 2007/03/09 15:12:26 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -63,7 +63,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} module_dir=${D}/lib/modules/${KV_FULL} install || die "install error"
+	emake DESTDIR=${D} install || die "install error"
 	rm -f ${D}/usr/include/cluster/*
 }
 
