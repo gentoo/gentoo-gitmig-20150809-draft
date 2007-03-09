@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9_beta1-r1.ebuild,v 1.1 2007/02/25 19:07:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9_beta1-r1.ebuild,v 1.2 2007/03/09 18:00:54 drac Exp $
 
 inherit eutils python toolchain-funcs
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pysqlite-2
 	>=media-libs/gstreamer-0.10
 	>=media-libs/gst-plugins-good-0.10
-	>=media-plugins/gst-plugins-gnomevfs-0.10
 	>=dev-python/gst-python-0.10
 	>=media-libs/mutagen-1.6
 	dev-python/elementtree
@@ -37,7 +36,8 @@ RDEPEND=">=dev-lang/python-2.4
 	libsexy? ( dev-python/sexy-python )
 	musepack? ( >=media-plugins/gst-plugins-musepack-0.10 )
 	gnome? ( dev-python/gnome-python-extras
-		media-plugins/gst-plugins-gconf )
+		media-plugins/gst-plugins-gconf
+		>=media-plugins/gst-plugins-gnomevfs-0.10 )
 	ipod? ( >=media-libs/libgpod-0.3.2-r1
 		>=media-plugins/gst-plugins-faad-0.10 )
 	cdaudio? ( media-plugins/gst-plugins-cdparanoia
