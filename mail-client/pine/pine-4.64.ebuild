@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.5 2006/12/18 20:15:58 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.6 2007/03/09 17:40:24 vapier Exp $
 
 inherit eutils
 
@@ -151,7 +151,7 @@ src_install() {
 	      mailutil/mailutil
 
 	# Only mailbase should install /etc/mailcap
-#	donewins doc/mailcap.unx mailcap
+#	newins doc/mailcap.unx mailcap
 
 	doman doc/pine.1 doc/pico.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1 \
 	      imap/src/mailutil/mailutil.1

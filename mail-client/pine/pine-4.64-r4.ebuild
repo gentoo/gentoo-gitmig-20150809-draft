@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r4.ebuild,v 1.2 2006/10/07 16:41:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r4.ebuild,v 1.3 2007/03/09 17:40:24 vapier Exp $
 
 inherit eutils
 
@@ -153,7 +153,7 @@ src_install() {
 	dobin bin/pine bin/pico bin/pilot bin/rpdump bin/rpload
 
 	# Only mailbase should install /etc/mailcap
-#	donewins doc/mailcap.unx mailcap
+#	newins doc/mailcap.unx mailcap
 
 	doman doc/pine.1 doc/pico.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1
 	dodoc CPYRIGHT README doc/brochure.txt doc/tech-notes.txt
