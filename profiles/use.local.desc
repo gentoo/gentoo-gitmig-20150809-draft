@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2653 2007/03/09 03:26:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2654 2007/03/09 06:27:45 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1911,8 +1911,6 @@ x11-terms/mrxvt:utempter - Records everytime a user logins in. Useful on multi-u
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt-unicode:iso14755 - Enable ISO-14755 support
-x11-terms/rxvt-unicode:tabs - Install the experimental urxvt-tabbed client
-x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/xterm:paste64 - Enable support for bracketed paste mode
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built.
 x11-themes/redhat-artwork:audacious - Install Audacious theme
