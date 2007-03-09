@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.50 2007/01/31 14:46:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.51 2007/03/09 03:08:07 beandog Exp $
+
+*nas-1.8-r1 (09 Mar 2007)
+*nas-1.7-r2 (09 Mar 2007)
+
+  09 Mar 2007; Steve Dibb <beandog@gentoo.org> +nas-1.7-r2.ebuild,
+  +nas-1.8-r1.ebuild:
+  Add more docs, bug 138492
 
 *nas-1.8 (31 Jan 2007)
 
