@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.6 2007/03/05 18:58:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.7 2007/03/09 02:54:50 bicatali Exp $
+
+*pgplot-5.2.2-r2 (09 Mar 2007)
+
+  09 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/pgplot-drivers.patch, -files/pgplot-path.patch,
+  +files/pgplot-pgdisp.patch, +pgplot-5.2.2-r2.ebuild:
+  Now install pgdisp, more drivers, and more doc. Add a motif and tk flag 
+  to allow these two drivers to be built. Remove drivers using the non 
+  standard fortran %val for gfortran to compile (if g77 selected, drivers
+  won't be removed). Did some cleaning as well.
 
 *pgplot-5.2.2-r1 (05 Mar 2007)
 
