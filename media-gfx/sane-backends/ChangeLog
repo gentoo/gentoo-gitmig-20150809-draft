@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.113 2007/02/26 12:10:06 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.114 2007/03/09 10:15:34 phosphan Exp $
+
+  09 Mar 2007; Patrick Kursawe <phosphan@gentoo.org>
+  -files/canoscan-focus.patch, -files/libusbscanner-device.patch,
+  -files/libusbscanner-device-r1.patch, -files/linux_sg3_err.h,
+  -files/sane-backend-1.0.15-gt68xx-update67.patch,
+  -sane-backends-1.0.15.ebuild, -sane-backends-1.0.15-r3.ebuild,
+  -sane-backends-1.0.18.ebuild:
+  Cleaning up old versions, leaving 1.0.17 because of bug #165315
 
   26 Feb 2007; Patrick Kursawe <phosphan@gentoo.org>
   +files/broken_coolscan.patch, sane-backends-1.0.18-r2.ebuild:
