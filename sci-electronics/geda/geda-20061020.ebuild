@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20061020.ebuild,v 1.4 2007/03/09 06:37:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20061020.ebuild,v 1.5 2007/03/09 06:55:53 calchan Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-scheme/guile-1.6.3
-	>=sci-libs/libgeda-${PV}"
+	=sci-libs/libgeda-${PV}"
 
 pkg_setup() {
 	if has_version ">=dev-scheme/guile-1.8" ; then
