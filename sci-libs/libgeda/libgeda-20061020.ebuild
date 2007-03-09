@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20061020.ebuild,v 1.6 2007/03/09 06:26:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20061020.ebuild,v 1.7 2007/03/09 20:07:20 calchan Exp $
+
+inherit eutils
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgeda - this library provides functions needed for the gEDA core suite"
 SRC_URI="http://www.geda.seul.org/devel/${PV}/libgeda-${PV}.tar.gz"
-
-inherit eutils
 
 IUSE=""
 LICENSE="GPL-2"

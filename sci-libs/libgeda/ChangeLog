@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.31 2007/03/09 06:26:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.32 2007/03/09 20:07:20 calchan Exp $
+
+  09 Mar 2007; Denis Dupeyron <calchan@gentoo.org> libgeda-20060123.ebuild,
+  libgeda-20061020.ebuild:
+  Moved inherit statement before variables, thanks to Michael Sterrett.
 
   09 Mar 2007; Denis Dupeyron <calchan@gentoo.org> libgeda-20060123.ebuild,
   libgeda-20061020.ebuild:
