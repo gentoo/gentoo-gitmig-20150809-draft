@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/jvyaml-0.2.1-r1.ebuild,v 1.3 2007/03/09 00:29:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/jvyaml-0.2.1-r1.ebuild,v 1.4 2007/03/09 11:35:06 betelgeuse Exp $
 
-JAVA_PKG_IUSE="doc source test"
+JAVA_PKG_IUSE="source test"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -34,6 +34,8 @@ src_unpack() {
 	rm -v *.jar || die
 	use test && java-pkg_jar-from --build-only junit
 }
+
+#no javadoc target
 
 src_install() {
 	java-pkg_dojar lib/${PN}.jar
