@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/verve-0.3.5.ebuild,v 1.9 2007/03/09 10:53:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/verve-0.3.5.ebuild,v 1.10 2007/03/09 18:52:35 jer Exp $
 
 inherit xfce44
 
 xfce44
 
 DESCRIPTION="Command line panel plugin"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 sparc x86"
 IUSE="dbus debug"
 
 RDEPEND=">=xfce-extra/exo-0.3.2
