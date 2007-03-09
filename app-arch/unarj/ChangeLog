@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unarj
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.20 2006/11/25 22:39:21 masterdriverz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.21 2007/03/09 20:09:03 jer Exp $
+
+  09 Mar 2007; Jeroen Roovers <jer@gentoo.org> unarj-2.63a-r2.ebuild:
+  Stable for HPPA (xarchiver, perhaps bug #157879).
 
   25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
   unarj-2.63a-r2.ebuild:
