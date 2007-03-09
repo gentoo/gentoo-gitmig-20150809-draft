@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6942 2007/03/09 06:12:11 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6943 2007/03/09 06:14:33 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -637,10 +637,6 @@ media-tv/nuppelvideo
 # Kevin F. Quinn <kevquinn@gentoo.org> (01 Dec 2006)
 # Mask for initial testing; bug #48072
 =app-text/aspell-0.60.4-r2
-
-# Tony Vroon <chainsaw@gentoo.org> (28 Nov 2006)
-# Broken release, Flameeyes will release an -r1
-=media-libs/faad2-2.5
 
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.
