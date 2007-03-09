@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.03.00.ebuild,v 1.7 2007/03/09 15:51:02 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.04.00.ebuild,v 1.1 2007/03/09 15:51:02 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
-CLUSTER_RELEASE="1.03.00"
+CLUSTER_RELEASE="1.04.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
 
 DESCRIPTION="General-purpose Distributed Lock Manager kernel module"
@@ -31,6 +31,20 @@ pkg_setup() {
 	case ${KV_FULL} in
 		2.2.*|2.4.*) die "${P} supports only 2.6 kernels";;
 	esac
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	if kernel_is 2 6; then
+		if [ "$KV_PATCH" -lt "18" ] ; then
+			sed -i \
+				-e 's|utsrelease.h|version.h|g' \
+				configure \
+				|| die "sed failed"
+		fi
+	fi
 }
 
 src_compile() {
