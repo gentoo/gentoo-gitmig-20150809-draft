@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6940 2007/03/09 04:44:06 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6941 2007/03/09 04:47:26 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Steve Dibb <beandog@gentoo.org> (8 Mar 2006)
+# dead upstream, requires xmms to build
+# p.masking for treecleaners
+media-sound/DBMix
 
 # Raúl Porcel <armin76@gentoo.org> (8 Mar 2007)
 # P.masking for treecleaners, pending removal in 60 days
