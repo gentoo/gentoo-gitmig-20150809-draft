@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20061020.ebuild,v 1.3 2007/03/03 14:45:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20061020.ebuild,v 1.4 2007/03/09 06:37:31 calchan Exp $
 
 inherit eutils
 
@@ -24,8 +24,14 @@ SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-scheme/guile-1.6.3
-	<dev-scheme/guile-1.8
 	>=sci-libs/libgeda-${PV}"
+
+pkg_setup() {
+	if has_version ">=dev-scheme/guile-1.8" ; then
+		built_with_use "dev-scheme/guile" deprecated \
+			|| die "You need either <dev-scheme/guile-1.8, or >=dev-scheme/guile-1.8 with USE=deprecated"
+	fi
+}
 
 src_compile() {
 	for subdir in geda-{gattrib,gnetlist,gschem,gsymcheck,symbols,utils}-${PV}; do

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20060123.ebuild,v 1.7 2007/03/03 14:45:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20060123.ebuild,v 1.8 2007/03/09 06:37:31 calchan Exp $
 
 inherit eutils
 
@@ -28,12 +28,18 @@ SLOT="0"
 DEPEND=">=dev-libs/glib-1.2.10
 	>=x11-libs/gtk+-2.2
 	>=dev-scheme/guile-1.6.3
-	<dev-scheme/guile-1.8
 	>=sys-libs/zlib-1.1.0
 	>=media-libs/libpng-1.2.0
 	>=dev-util/pkgconfig-0.15.0
 	>=sci-libs/libgdgeda-2.0.15
 	>=sci-libs/libgeda-${PV}"
+
+pkg_setup() {
+	if has_version ">=dev-scheme/guile-1.8" ; then
+		built_with_use "dev-scheme/guile" deprecated \
+			|| die "You need either <dev-scheme/guile-1.8, or >=dev-scheme/guile-1.8 with USE=deprecated"
+	fi
+}
 
 src_unpack() {
 	unpack geda-${PV}.tar.gz
