@@ -1,9 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.107 2007/03/09 15:34:47 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.108 2007/03/09 20:56:53 uberlord Exp $
 
   09 Mar 2007; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.init:
   Hide ifconfig errors on FreeBSD.
+  Use printf instead of echo -e so we work on all POSIX shells.
 
 *openvpn-2.1_rc2 (04 Mar 2007)
 
