@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libkexiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.2 2007/03/04 07:03:20 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.3 2007/03/09 17:19:10 gustavoz Exp $
+
+  09 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libkexiv2-0.1.1.ebuild:
+  Keyworded ~sparc wrt #169160
 
   04 Mar 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
   libkexiv2-0.1.1.ebuild:
