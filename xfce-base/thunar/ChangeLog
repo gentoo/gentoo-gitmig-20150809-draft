@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.22 2007/03/08 22:15:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.23 2007/03/09 10:44:32 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  thunar-0.8.0-r2.ebuild:
+  stable x86; bug #169987
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   thunar-0.8.0-r2.ebuild:

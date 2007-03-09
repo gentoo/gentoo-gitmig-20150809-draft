@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.86 2007/03/08 22:16:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.87 2007/03/09 10:49:44 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  xfdesktop-4.4.0-r3.ebuild:
+  stable x86; bug #169987
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xfdesktop-4.4.0-r3.ebuild:

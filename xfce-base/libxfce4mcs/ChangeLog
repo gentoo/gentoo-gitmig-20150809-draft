@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4mcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.82 2007/03/08 22:00:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.83 2007/03/09 10:41:53 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  libxfce4mcs-4.4.0.ebuild:
+  stable x86; bug #169987
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libxfce4mcs-4.4.0.ebuild:
