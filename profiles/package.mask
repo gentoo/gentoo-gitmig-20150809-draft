@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6944 2007/03/09 06:20:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6945 2007/03/09 07:20:27 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,13 @@
 ##   End example
 ##
 
-# Steve Dibb <beandog@gentoo.org> (8 Mar 2006)
+# Michael Sterrett <mr_bones_@gentoo.org> (08 Mar 2007)
+# masked for removal on April 9
+# Doesn't work with dev-perl/sdl-perl-2 and no upstream release
+# since 2004.
+games-puzzle/sdlvexed
+
+# Steve Dibb <beandog@gentoo.org> (8 Mar 2007)
 # dead upstream, requires xmms to build
 # p.masking for treecleaners
 media-sound/DBMix

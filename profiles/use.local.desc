@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2654 2007/03/09 06:27:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2655 2007/03/09 07:20:27 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -603,7 +603,6 @@ games-board/freedoko:kdecards - Use the KDE card set
 games-board/freedoko:net - Enable network game support
 games-board/freedoko:pysolcards - Use the PySol card set
 games-board/freedoko:xskatcards - Use the XSkat card set
-games-board/ggz-gtk-client:gaim - Install the Gaim plugin
 games-board/grhino:gtp - Install the GTP (Go/Game Text Protocol) frontend
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/generator:sdlaudio - Enable SDL Audio
