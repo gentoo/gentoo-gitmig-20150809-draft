@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.1.7.ebuild,v 1.2 2007/02/05 15:53:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.1.7.ebuild,v 1.3 2007/03/09 16:36:44 lack Exp $
 
-inherit multilib
+inherit gkrellm-plugin
 
 IUSE=""
+
 MY_PN=gkrellmbgchg2
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -16,15 +17,6 @@ SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
 
-DEPEND="=app-admin/gkrellm-2*"
+PLUGIN_SO=gkrellmbgchg.so
+PLUGIN_DOCS="bgchg_info.sh kdewallpaper.sh"
 
-src_compile() {
-	emake || die
-}
-
-src_install() {
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	doins ${MY_PN/2/}.so
-
-	dodoc ChangeLog README TODO
-}
