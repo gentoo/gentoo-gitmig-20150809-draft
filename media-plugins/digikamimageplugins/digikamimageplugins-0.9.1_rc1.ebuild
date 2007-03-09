@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1_rc1.ebuild,v 1.1 2007/03/03 19:00:45 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1_rc1.ebuild,v 1.2 2007/03/09 17:21:42 gustavoz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE=""
 
 DEPEND="~media-gfx/digikam-${PV}
