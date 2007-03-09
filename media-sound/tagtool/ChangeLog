@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.19 2007/03/09 02:44:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.20 2007/03/09 07:52:11 opfer Exp $
+
+  09 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  tagtool-0.12.1.ebuild, tagtool-0.12.2.ebuild, tagtool-0.12.3.ebuild:
+  addjusted dependency on correct libglade version, fixes bug #137863
 
 *tagtool-0.12.3 (09 Mar 2007)
 
