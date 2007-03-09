@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audtty
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.8 2006/09/29 16:26:04 chainsaw Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.9 2007/03/09 15:26:46 chainsaw Exp $
+
+  09 Mar 2007; Tony Vroon <chainsaw@gentoo.org> audtty-0.1.5a.ebuild:
+  Mark stable on X86 for bug #169823.
 
 *audtty-0.1.5a (29 Sep 2006)
 

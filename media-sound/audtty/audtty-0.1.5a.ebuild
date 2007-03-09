@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.5a.ebuild,v 1.1 2006/09/29 16:26:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.5a.ebuild,v 1.2 2007/03/09 15:26:46 chainsaw Exp $
 
 inherit autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.nenolod.net/audtool/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~x86 ~ppc"
+KEYWORDS="~alpha ~amd64 x86 ~ppc"
 
 DEPEND="sys-libs/ncurses
 	media-sound/audacious"
