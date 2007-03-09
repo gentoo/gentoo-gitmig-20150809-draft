@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6939 2007/03/09 04:15:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6940 2007/03/09 04:44:06 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1283,10 +1283,6 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.10-r1
 =mail-mta/postfix-2.3.0-r1
 =mail-mta/postfix-2.3.2-r1
-
-# Rob Cakebread <pythonhead@gentoo.org> (22 Apr 2005)
-# Versions in portage no longer supported. Abeni 1.0 will be in portage soon after wxGTK-2.6.0
-app-portage/abeni
 
 # Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
 # Tihs package is conflict with postgresql at the moment
