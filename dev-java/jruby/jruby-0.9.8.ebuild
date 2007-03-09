@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.8.ebuild,v 1.2 2007/03/08 04:52:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.8.ebuild,v 1.3 2007/03/09 13:46:32 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -46,6 +46,7 @@ src_unpack() {
 	#epatch ${FILESDIR}/${PN}-0.9.2-haltonfailure.patch
 
 	cd lib
+	rm *.jar
 
 	java-pkg_jar-from --build-only ant-core ant.jar
 	java-pkg_jar-from asm-2.2 asm.jar
