@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc,v 1.9 2007/03/08 16:59:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc,v 1.10 2007/03/09 15:31:10 ticho Exp $
 
 depend() {
 	use net
@@ -45,25 +45,6 @@ start() {
 		chown ${clamav_user} ${logfile}
 		fi	
 
-		if [[ ${MILTER_OPTS} == *--external* ]]; then
-			local clamd_socket_wait_count=0
-			local clamd_socket_wait_max=10
-			local clamd_socket_wait_result=-1
-			ebegin "Waiting for clamd to create ${clamd_socket}"
-			while [[ clamd_socket_wait < clamd_socket_wait_max ]]; do
-				if [ -S "${clamd_socket:-/tmp/clamd}" ]; then
-					clamd_socket_wait_result=0
-					break
-				else
-					echo -n " ."
-					let clamd_socket_wait++
-					sleep 1
-				fi
-			done
-			echo
-			eend $clamd_socket_wait_result "Timeout waiting for ${clamd_socket}"
-		fi
-			
 		ebegin "Starting clamav-milter"
 		start-stop-daemon --start --quiet \
 			--exec /usr/sbin/clamav-milter -- ${MILTER_OPTS} ${MILTER_SOCKET}

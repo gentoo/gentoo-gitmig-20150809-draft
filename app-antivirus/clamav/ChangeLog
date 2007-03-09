@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.210 2007/03/08 23:49:03 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.211 2007/03/09 15:31:10 ticho Exp $
+
+  09 Mar 2007; Andrej Kacian <ticho@gentoo.org> files/clamd.rc:
+  Revert initscript to previous version, as it creates problems. Bug #169561.
 
   08 Mar 2007; Stephen Bennett <spb@gentoo.org> clamav-0.90.1-r1.ebuild:
   Run eautoreconf in src_unpack, by request of ticho
