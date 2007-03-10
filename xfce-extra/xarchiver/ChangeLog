@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.23 2007/03/09 20:10:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.24 2007/03/10 10:29:13 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> xarchiver-0.4.6.ebuild:
+  Keyworded on amd64 wrt bug 169987
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> xarchiver-0.4.6.ebuild:
   Stable for HPPA (Xfce, perhaps bug #169987).
