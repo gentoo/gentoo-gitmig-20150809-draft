@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.31 2007/02/25 09:15:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.32 2007/03/10 14:14:48 mrness Exp $
+
+  10 Mar 2007; Alin Năstac <mrness@gentoo.org>
+  ltmodem-8.31_alpha10-r3.ebuild:
+  Remove references to $ROOT from src_install (#168039).
 
   25 Feb 2007; <genstef@gentoo.org> ltmodem-8.31_alpha10-r3.ebuild:
   use KV_DIR only after linux-mod_pkg_setup, bug 168051

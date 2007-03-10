@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.3 2007/02/25 09:15:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.4 2007/03/10 14:14:48 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -82,11 +82,8 @@ src_install() {
 	dosbin utils/lt_*
 
 	# Add configuration for devfs, udev
-	if [ -e "${ROOT}/dev/.devfsd" ] ; then
-		insinto /etc/devfs.d/; newins "${FILESDIR}/ltmodem_devfs" ltmodem
-	elif [ -e "${ROOT}/dev/.udev" ] ; then
-		insinto /etc/udev/rules.d/; newins "${FILESDIR}/ltmodem_udev" 55-ltmodem.rules
-	fi
+	insinto /etc/devfs.d/; newins "${FILESDIR}/ltmodem_devfs" ltmodem
+	insinto /etc/udev/rules.d/; newins "${FILESDIR}/ltmodem_udev" 55-ltmodem.rules
 
 	# install kernel module
 	if kernel_is 2 4; then
@@ -94,6 +91,15 @@ src_install() {
 		make install "ROOTDIR=${D}" || die "Cannot install drivers"
 	else
 		linux-mod_src_install
+	fi
+}
+
+pkg_preinst() {
+	linux-mod_pkg_preinst
+
+	# Remove obsolete devfs configuration files if the box use udev
+	if [ -e "${ROOT}/dev/.udev" ]; then
+		rm -r "${D}/etc/devfs.d"
 	fi
 }
 
