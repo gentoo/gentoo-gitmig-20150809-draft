@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.23.ebuild,v 1.2 2007/03/08 13:14:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.23.ebuild,v 1.3 2007/03/10 19:19:17 tester Exp $
 
 inherit gnome2 eutils
 
@@ -9,11 +9,8 @@ HOMEPAGE="http://developer.imendio.com/wiki/Gossip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="spell dbus libnotify"
-
-#make check breaks in help
-RESTRICT=test
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="spell dbus libnotify galago"
 
 RDEPEND="|| ( x11-libs/libXScrnSaver
 		virtual/x11 )
@@ -28,6 +25,7 @@ RDEPEND="|| ( x11-libs/libXScrnSaver
 	>=net-libs/loudmouth-1
 	spell? ( app-text/aspell )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
+	galago? ( dev-libs/libgalago )
 	dbus? ( || ( >=dev-libs/dbus-glib-0.71 =sys-apps/dbus-0.6* ) )"
 
 DEPEND="${RDEPEND}
@@ -40,6 +38,7 @@ G2CONF="${G2CONF} \
 	--disable-telepathy \
 	$(use_enable dbus) \
 	$(use_enable libnotify) \
+	$(use_enable galago) \
 	$(use_enable spell aspell)"
 
 DOCS="AUTHORS README COPYING ChangeLog INSTALL NEWS README CONTRIBUTORS TODO"
