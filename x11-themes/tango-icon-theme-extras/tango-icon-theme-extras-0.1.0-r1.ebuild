@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.2 2007/03/10 19:20:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.3 2007/03/10 19:40:13 drac Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ RESTRICT="binchecks strip"
 
 RDEPEND=">=x11-misc/icon-naming-utils-0.6.0
 	media-gfx/imagemagick
-	>=gnome-base/librsvg-2.12.3"
+	>=gnome-base/librsvg-2.12.3
+	>=x11-themes/tango-icon-theme-0.8"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
