@@ -9,10 +9,10 @@ AUX gpart-0.1h-errno.patch 384 RMD160 5ed7a9dd0382aad1eb998509faef8d6795efbfb1 S
 MD5 81eee5d9985df9bf9c23624e46cf945f files/gpart-0.1h-errno.patch 384
 RMD160 5ed7a9dd0382aad1eb998509faef8d6795efbfb1 files/gpart-0.1h-errno.patch 384
 SHA256 fe910231e5cf8640d8b07b2767219f0a3794a57f3b18d3af49d3980ca96058f5 files/gpart-0.1h-errno.patch 384
-AUX gpart-0.1h-no-_syscall.patch 383 RMD160 3d2a66692f4bff27f58167965f7ddd8973196b2b SHA1 adc4ad000e10edcbccc1edc865a4f4fa2b70e918 SHA256 7a75cbc1917c4b7551847da3e1d2eb932e0e89f9348aed0c845ec22e5e1e9f56
-MD5 20f8be81a11b3c813ae0195b60c26ee2 files/gpart-0.1h-no-_syscall.patch 383
-RMD160 3d2a66692f4bff27f58167965f7ddd8973196b2b files/gpart-0.1h-no-_syscall.patch 383
-SHA256 7a75cbc1917c4b7551847da3e1d2eb932e0e89f9348aed0c845ec22e5e1e9f56 files/gpart-0.1h-no-_syscall.patch 383
+AUX gpart-0.1h-no-_syscall.patch 373 RMD160 7eca6b4d2f004a1e667bfdc25e74b87d51c8529d SHA1 9442f29c06c02762a510e4d3550e9633691b447d SHA256 4f8bd601119bec32fe108487c120bd623b2de1e606047125516bc537d3014725
+MD5 f811c6e132b2c0cd2d9cb0fd4933063a files/gpart-0.1h-no-_syscall.patch 373
+RMD160 7eca6b4d2f004a1e667bfdc25e74b87d51c8529d files/gpart-0.1h-no-_syscall.patch 373
+SHA256 4f8bd601119bec32fe108487c120bd623b2de1e606047125516bc537d3014725 files/gpart-0.1h-no-_syscall.patch 373
 AUX gpart-0.1h-ntfs.patch 2430 RMD160 bd6888a82f0e8c8663cc336b48f2f0e67307aea2 SHA1 f7a887558abb8e244de3e5bd0566e407cff21368 SHA256 01617b0fdb729232073d808efb137bc33790c3d071b7d945ce1ac8e0f697761b
 MD5 8161c02116ee4575906587eb09e35bde files/gpart-0.1h-ntfs.patch 2430
 RMD160 bd6888a82f0e8c8663cc336b48f2f0e67307aea2 files/gpart-0.1h-ntfs.patch 2430
@@ -41,7 +41,7 @@ SHA256 5ae63b7619a08f67b55e17c92ca0edf96d8af68d883250200ff5854cc9519e45 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFF6QkD8bi6rjpTunYRAu25AJ4yTnyPLN4aSNbdhcisBXE8n+3cagCguyP4
-90gZfRskzxL1FxLXgLwlvu4=
-=IIO1
+iD8DBQFF8rJO8bi6rjpTunYRAqoGAKCVsXnIV1SZ2Zl4R/mnXtG8m+s3gwCaAsn5
+P2YMHXTosi9GsjiHWvpQj9E=
+=PQ8G
 -----END PGP SIGNATURE-----
