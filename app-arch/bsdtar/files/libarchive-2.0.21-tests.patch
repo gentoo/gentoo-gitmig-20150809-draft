@@ -1,0 +1,17 @@
+Index: libarchive-2.0.21/libarchive/test/test.h
+===================================================================
+--- libarchive-2.0.21.orig/libarchive/test/test.h
++++ libarchive-2.0.21/libarchive/test/test.h
+@@ -54,6 +54,12 @@
+ #error Oops: No config.h and no pre-built configuration in test.h.
+ #endif
+ 
++/* No non-FreeBSD platform will have __FBSDID, so just define it here. */
++#ifdef __FreeBSD__
++#include <sys/cdefs.h>  /* For __FBSDID */
++#else
++#define	__FBSDID(a)     /* null */
++#endif
+ 
+ /*
+  * "list.h" is simply created by "grep DEFINE_TEST"; it has
