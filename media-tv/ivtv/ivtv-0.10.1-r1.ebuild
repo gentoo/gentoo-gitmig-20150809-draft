@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.10.1.ebuild,v 1.1 2007/03/02 14:00:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.10.1-r1.ebuild,v 1.1 2007/03/10 23:13:52 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -50,21 +50,19 @@ pkg_setup() {
 		die "This only works on kernels 2.6.18 through 2.6.20"
 	fi
 
+	if kernel_is 2 6 20; then
+		ewarn
+		ewarn "For 2.6.20.x kernels, this module will *only* work against"
+		ewarn "these versions:"
+		ewarn ">=sys-kernel/gentoo-sources-2.6.20-r1"
+		ewarn ">=sys-kernel/vanilla-sources.2.6.20.2"
+		ewarn ""
+		epause 5
+	fi
+
 	linux-mod_pkg_setup
 
 	BUILD_PARAMS="KDIR=${KV_DIR}"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	if kernel_is 2 6 20; then
-		#epatch "misc/cx25840.diff"
-		ewarn "If your card has the cx2584x chip, then this driver will not work."
-		ewarn "A patch is available for the kernel module, but doesn't work yet"
-		ewarn "in this ebuild."
-		ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=168007"
-	fi
 }
 
 src_compile() {
@@ -93,6 +91,9 @@ src_install() {
 }
 
 pkg_postinst() {
+
+	linux-mod_pkg_postinst
+
 	elog ""
 	elog "This version of the IVTV driver supports the following hardware:"
 	elog "Hauppauge WinTV PVR-250"

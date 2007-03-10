@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.75 2007/03/03 14:46:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.76 2007/03/10 23:13:52 beandog Exp $
+
+*ivtv-0.10.1-r1 (10 Mar 2007)
+*ivtv-0.10.0-r1 (10 Mar 2007)
+
+  10 Mar 2007; Steve Dibb <beandog@gentoo.org> -ivtv-0.10.0.ebuild,
+  +ivtv-0.10.0-r1.ebuild, -ivtv-0.10.1.ebuild, +ivtv-0.10.1-r1.ebuild:
+  Warn about kernel versions, add linux-mod_pkg_postinst, bug 167780
 
   03 Mar 2007; Steve Dibb <beandog@gentoo.org> ivtv-0.9.1.ebuild:
   Stabling on arches
