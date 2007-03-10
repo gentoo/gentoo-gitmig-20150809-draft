@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9-r1.ebuild,v 1.6 2006/08/31 17:43:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9-r1.ebuild,v 1.7 2007/03/10 13:34:21 mrness Exp $
 
 inherit eutils
 
@@ -37,29 +37,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# TODO confdir back to default /etc/wwwoffle
-	# allows to change config file using web interface.
-
 	econf $(use_with zlib) $(use_with gnutls) \
 		$(use_with ipv6) || die "econf failed"
 	emake || die "emake failed"
-
-	if [ -f "${ROOT}/etc/wwwoffle.conf" ] ;	then
-		einfo "Upgrading current configuration file"
-		cp "${ROOT}/etc/wwwoffle.conf" conf/wwwoffle.conf
-		conf/upgrade-config.pl conf/wwwoffle.conf
-
-		# Hack to stop regeneration of config file
-		touch conf/conf-file
-
-		einfo "Changing the default user (and group) to wwwoffle"
-		sed -i -e 's/\(run-[gu]id\)[ \t]*=[ \t]*[a-zA-Z0-9]*[ \t]*$/\1 = wwwoffle/g' \
-			conf/wwwoffle.conf
-	else
-		einfo "Changing the default user (and group) to wwwoffle"
-		sed -i -e 's/#\(run-[gu]id\)[ \t]*=[ \t]*[a-zA-Z0-9]*[ \t]*$/\1 = wwwoffle/g' \
-			conf/wwwoffle.conf.template
-	fi
 }
 
 src_install() {
@@ -70,11 +50,6 @@ src_install() {
 	rmdir "${D}/usr/doc/${PN}"/{it,nl,ru}
 	dodir /usr/share/doc
 	mv "${D}/usr/doc/wwwoffle" "${D}/usr/share/doc/${PF}"
-
-	#Updated configuration file
-	#if [ -f "${ROOT}/etc/wwwoffle.conf" ]; then
-	#	mv "${D}/etc/wwwoffle.conf" "${D}/etc/wwwoffle.conf.updated"
-	#fi
 
 	# install the wwwoffled init script
 	newinitd "${FILESDIR}/${PN}.initd" wwwoffled
@@ -112,15 +87,22 @@ pkg_preinst() {
 	enewgroup wwwoffle
 	enewuser wwwoffle -1 -1 /var/spool/wwwoffle wwwoffle
 
-	# TODO maybe rootjail ${ROOT}
-	source /etc/init.d/functions.sh
-	if [ -L "${svcdir}/started/wwwoffled" ]; then
-		einfo "The wwwoffled init script is running. I'll stop it, merge the new files and
-		restart the script."
-		/etc/init.d/wwwoffled stop
-		# Just to be sure...
-		start-stop-daemon --stop --quiet --name wwwoffled
-		touch "${T}/stopped"
+	# Changing the user:group to wwwoffle:woffle
+	fowners -R wwwoffle:wwwoffle /var/spool/wwwoffle /etc/wwwoffle
+	sed -i -e 's/^[# \t]\(run-[gu]id[ \t]*=[ \t]*\)[a-zA-Z0-9]*[ \t]*$/ \1wwwoffle/g' \
+		"${D}/etc/wwwoffle/wwwoffle.conf"
+
+	# Stop the service if it is started
+	if [ "${ROOT}" = "/" ] ; then
+		source /etc/init.d/functions.sh
+		if [ -L "${svcdir}/started/wwwoffled" ]; then
+			einfo "The wwwoffled init script is running. I'll stop it, merge the new files and
+			restart the script."
+			/etc/init.d/wwwoffled stop
+			# Just to be sure...
+			start-stop-daemon --stop --quiet --name wwwoffled
+			touch "${T}/stopped"
+		fi
 	fi
 }
 
