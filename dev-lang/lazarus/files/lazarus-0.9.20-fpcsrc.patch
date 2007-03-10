@@ -1,0 +1,12 @@
+--- lazarus/ide/include/unix/lazbaseconf.inc
++++ lazarus/ide/include/unix/lazbaseconf.inc
+@@ -24,7 +24,8 @@
+ }
+ 
+ const
+-  DefaultFPCSrcDirs: array[1..14] of string = (
++  DefaultFPCSrcDirs: array[1..15] of string = (
++    '/usr/lib/fpc/@FPCVER@/source',
+     '/usr/share/fpcsrc',
+     '/usr/local/share/fpcsrc',
+     '/usr/fpcsrc',

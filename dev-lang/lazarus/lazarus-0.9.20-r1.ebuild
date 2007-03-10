@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20.ebuild,v 1.2 2006/11/23 07:14:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20-r1.ebuild,v 1.1 2007/03/10 08:44:37 truedfx Exp $
 
 inherit eutils
+
+FPCVER="2.0.4"
 
 SLOT="0" # Note: Slotting Lazarus needs slotting fpc, see DEPEND.
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-linking-exception"
@@ -12,11 +14,11 @@ HOMEPAGE="http://www.lazarus.freepascal.org/"
 IUSE=""
 SRC_URI="mirror://sourceforge/lazarus/${P}-0.tar.gz"
 
-DEPEND="~dev-lang/fpc-2.0.4
+DEPEND="~dev-lang/fpc-${FPCVER}
 	net-misc/rsync
 	>=x11-libs/gtk+-2.0"
 
-S=${WORKDIR}/lazarus
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	if ! built_with_use "dev-lang/fpc" source; then
@@ -24,6 +26,16 @@ pkg_setup() {
 	    eerror "in order for lazarus to work properly."
 	    die "lazarus needs fpc built with the 'source' USE to work."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	sed -e "s/@FPCVER@/${FPCVER}/" "${FILESDIR}"/${P}-fpcsrc.patch \
+		> "${T}"/fpcsrc.patch || die "could not sed fpcsrc patch"
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-lclintf.patch
+	epatch "${T}"/fpcsrc.patch
 }
 
 src_compile() {
@@ -51,10 +63,4 @@ src_install() {
 	dosym ../lazarus/images/mainicon.xpm /usr/share/pixmaps/lazarus.xpm
 
 	make_desktop_entry startlazarus "Lazarus IDE" "lazarus.xpm" || die "Failed making desktop entry!"
-}
-
-pkg_postinst() {
-	ewarn "Although this version of Lazarus uses GTK2, its default interface"
-	ewarn "for projects is still GTK1. Please make sure to change this if you"
-	ewarn "wish to build GTK2 applications."
 }
