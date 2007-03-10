@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.373 2007/03/06 22:32:10 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.374 2007/03/10 04:39:24 dsd Exp $
+
+*gentoo-sources-2.6.20-r2 (10 Mar 2007)
+
+  10 Mar 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.20-r2.ebuild:
+  Update to Linux 2.6.20.2. Fix link speed negociation with r8169 network driver.
 
 *gentoo-sources-2.6.20-r1 (06 Mar 2007)
 
