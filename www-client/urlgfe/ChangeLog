@@ -1,6 +1,10 @@
 # ChangeLog for www-client/urlgfe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/ChangeLog,v 1.18 2007/03/09 20:02:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/ChangeLog,v 1.19 2007/03/10 22:16:53 swegener Exp $
+
+  10 Mar 2007; Sven Wegener <swegener@gentoo.org> -urlgfe-0.98a.ebuild,
+  -urlgfe-0.98b.ebuild:
+  Cleanup.
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> urlgfe-1.0.ebuild:
   Stable on ppc wrt bug 169533
