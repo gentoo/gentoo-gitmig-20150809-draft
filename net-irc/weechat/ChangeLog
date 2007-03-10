@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/weechat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.42 2007/02/24 17:04:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.43 2007/03/10 11:09:42 drizzt Exp $
+
+  10 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> weechat-0.2.3.ebuild:
+  Add ~x86-fbsd keyword
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> weechat-0.2.3.ebuild:
   Stable on ppc wrt bug 164031
