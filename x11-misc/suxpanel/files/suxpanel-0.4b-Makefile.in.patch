@@ -1,0 +1,12 @@
+diff -ur suxpanel-0.4b.orig/Makefile.in suxpanel-0.4b/Makefile.in
+--- suxpanel-0.4b.orig/Makefile.in	2005-07-21 19:06:25.000000000 +0300
++++ suxpanel-0.4b/Makefile.in	2007-03-10 14:21:28.000000000 +0200
+@@ -1,7 +1,7 @@
+ # ----------------------------------------------------------------------------
+ 
+ CC = gcc
+-CFLAGS = -Wall $(GTK_CFLAGS) -O2 -g
++CFLAGS := -Wall $(GTK_CFLAGS) $(CFLAGS)
+ 
+ # ----------------------------------------------------------------------------
+ 

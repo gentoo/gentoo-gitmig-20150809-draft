@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/suxpanel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.4 2007/02/21 23:57:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.5 2007/03/10 12:27:56 drac Exp $
+
+*suxpanel-0.4b (10 Mar 2007)
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  +files/suxpanel-0.4b-Makefile.in.patch, +suxpanel-0.4b.ebuild:
+  Version bump for bug 170255. Thanks to Algardas Pelakauskas for reporting.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
