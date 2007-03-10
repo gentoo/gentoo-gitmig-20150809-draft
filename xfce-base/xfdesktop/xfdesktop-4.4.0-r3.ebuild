@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.0-r3.ebuild,v 1.7 2007/03/09 17:50:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.0-r3.ebuild,v 1.8 2007/03/10 08:49:01 welp Exp $
 
 inherit xfce44
 
@@ -9,7 +9,7 @@ xfce44_core_package
 
 DESCRIPTION="Desktop manager"
 HOMEPAGE="http://www.xfce.org/projects/xfdesktop"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus debug doc minimal"
 
 LANG="ca cs da de el es et eu fi fr he hu ja ko nl pl pt_BR ro ru sk sv uk vi zh_CN zh_TW"
