@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/tangerine-icon-theme
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.1 2007/03/10 19:28:41 drac Exp $
+
+*tangerine-icon-theme-0.15 (10 Mar 2007)
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  +tangerine-icon-theme-0.15.ebuild:
+  Initial commit.
+
