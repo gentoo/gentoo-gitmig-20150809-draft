@@ -1,0 +1,66 @@
+Index: snd-8/makefile.in
+===================================================================
+--- snd-8.orig/makefile.in
++++ snd-8/makefile.in
+@@ -98,8 +98,10 @@ NO_FILES =
+ 
+ main_target: @MAKE_TARGET@
+ 
+-snd: $(SNDLIB_HEADERS) $(SND_HEADERS) $(GX_HEADERS) $(SNDLIB_FILES) $(MIDI_FILES) $(O_FILES) $(GX_FILES) $(GL_FILES)
+-	(cd po && $(MAKE))
++po:
++	cd po && $(MAKE)
++
++snd: $(SNDLIB_HEADERS) $(SND_HEADERS) $(GX_HEADERS) $(SNDLIB_FILES) $(MIDI_FILES) $(O_FILES) $(GX_FILES) $(GL_FILES) po
+ 	$(CC) $(LDFLAGS) $(CFLAGS) $(SNDLIB_FILES) $(MIDI_FILES) $(O_FILES) $(GX_FILES) $(GL_FILES) -o snd $(SNDLIB_LIB) $(GUILE_LIBS) $(GTK_LIBS) $(GL_LIBS) $(MOTIF_LIBS) $(JACK_LIBS) $(AUDIO_LIB) $(FFTW_LIBS) $(GSL_LIBS) $(FAM_LIB) $(LIBS)
+ 
+ xm: 	xen.h
+@@ -157,36 +159,44 @@ allclean:
+ 	rm -f *.a
+ 	rm -f snd sndplay audinfo sndrecord sndinfo
+ 
+-sndplay: $(SNDLIB_HEADERS)
++sndplayobjs: $(SNDLIB_HEADERS)
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 headers.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 io.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 audio.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sound.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sndplay.c
++
++sndplay: sndplayobjs
+ 	$(CC) $(LDFLAGS) $(CFLAGS) headers.o io.o audio.o sound.o sndplay.o -o sndplay $(JACK_LIBS) $(AUDIO_LIB) $(LIBS)
+ 
+-sndrecord: $(SNDLIB_HEADERS)
++sndrecordobjs: $(SNDLIB_HEADERS)
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 headers.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 io.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 audio.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sound.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sndrecord.c
++
++sndrecord: sndrecordobjs
+ 	$(CC) $(LDFLAGS) $(CFLAGS) headers.o io.o audio.o sound.o sndrecord.o -o sndrecord $(JACK_LIBS) $(AUDIO_LIB) $(LIBS)
+ 
+-sndinfo: $(SNDLIB_HEADERS)
++sndinfoobjs: $(SNDLIB_HEADERS)
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 headers.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 io.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 audio.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sound.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sndinfo.c
++
++sndinfo: sndinfoobjs
+ 	$(CC) $(LDFLAGS) $(CFLAGS) headers.o io.o audio.o sound.o sndinfo.o -o sndinfo $(JACK_LIBS) $(AUDIO_LIB) $(LIBS)
+ 
+-audinfo: $(SNDLIB_HEADERS)
++audinfoobjs: $(SNDLIB_HEADERS)
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 headers.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 io.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 audio.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 sound.c
+ 	$(CC) -c $(DEFS) $(CFLAGS) -DUSE_SND=0 audinfo.c
++
++audinfo: audinfoobjs
+ 	$(CC) $(LDFLAGS) $(CFLAGS) headers.o io.o audio.o sound.o audinfo.o -o audinfo $(JACK_LIBS) $(AUDIO_LIB) $(LIBS)
+ 
+ install: snd
