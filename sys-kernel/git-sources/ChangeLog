@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.71 2007/03/07 01:24:55 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.72 2007/03/10 17:05:35 masterdriverz Exp $
+
+*git-sources-2.6.21_rc3-r6 (10 Mar 2007)
+
+  10 Mar 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -git-sources-2.6.20_rc1-r1.ebuild, -git-sources-2.6.20_rc1-r4.ebuild,
+  -git-sources-2.6.20_rc1-r5.ebuild, -git-sources-2.6.20_rc1-r7.ebuild,
+  -git-sources-2.6.20_rc2.ebuild, -git-sources-2.6.20_rc2-r1.ebuild,
+  -git-sources-2.6.20_rc2-r2.ebuild, -git-sources-2.6.20_rc3.ebuild,
+  -git-sources-2.6.20_rc3-r2.ebuild, -git-sources-2.6.20_rc3-r3.ebuild,
+  -git-sources-2.6.20_rc3-r4.ebuild, -git-sources-2.6.20_rc3-r8.ebuild,
+  -git-sources-2.6.20_rc4.ebuild, -git-sources-2.6.20_rc5.ebuild,
+  -git-sources-2.6.20_rc5-r1.ebuild, -git-sources-2.6.20_rc6.ebuild,
+  -git-sources-2.6.20_rc6-r3.ebuild, -git-sources-2.6.20_rc7.ebuild,
+  -git-sources-2.6.20_rc7-r1.ebuild, -git-sources-2.6.20-r1.ebuild,
+  -git-sources-2.6.20-r14.ebuild, -git-sources-2.6.20-r15.ebuild,
+  +git-sources-2.6.21_rc3-r6.ebuild:
+  Version bump
 
 *git-sources-2.6.21_rc2-r4 (07 Mar 2007)
 
