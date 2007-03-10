@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sqlite-ruby
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.28 2007/02/24 15:05:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.29 2007/03/10 10:23:46 eroyf Exp $
+
+  10 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  sqlite-ruby-2.2.3.ebuild:
+  Stable on Alpha; bug #168601
 
   24 Feb 2007; Jeroen Roovers <jer@gentoo.org> sqlite-ruby-2.2.3.ebuild:
   Marked ~hppa (bug #168136).
