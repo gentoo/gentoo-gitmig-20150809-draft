@@ -1,24 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.3 2007/02/27 16:08:56 zzam Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.4 2007/03/10 14:30:24 vapier Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
-DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
-	signals of many (but not all) commonly used remote controls."
-HOMEPAGE="http://www.lirc.org"
-
-SLOT="0"
-LICENSE="GPL-2"
-IUSE="debug doc X hardware-carrier transmitter"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+DESCRIPTION="decode and send infra-red signals of many commonly used remote controls"
+HOMEPAGE="http://www.lirc.org/"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+IUSE="debug doc X hardware-carrier transmitter"
 
 S=${WORKDIR}/${P/_pre/pre}
 
+RDEPEND="
+	X? (
+		x11-libs/libX11
+		x11-libs/libSM
+		x11-libs/libICE
+	)
+	lirc_devices_alsa_usb? ( media-libs/alsa-lib )
+	lirc_devices_audio? ( media-libs/portaudio )
+	lirc_devices_irman? ( media-libs/libirman )"
 
 IUSE_LIRC_DEVICES_DIRECT="
 	all userspace act200l act220l
@@ -51,19 +56,6 @@ IUSE_LIRC_DEVICES_SPECIAL="
 
 IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
-
-
-RDEPEND="virtual/libc
-	sys-apps/coreutils
-	X? ( || ( (	x11-libs/libX11
-			x11-libs/libSM
-			x11-libs/libICE )
-	virtual/x11 ) )
-	lirc_devices_alsa_usb? ( media-libs/alsa-lib )
-	lirc_devices_audio? ( media-libs/portaudio )
-	lirc_devices_irman? ( media-libs/libirman )"
-
-
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
 	all atiusb sasem igorplugusb imon imon_pad imon_pad2keys
@@ -77,22 +69,18 @@ done
 DEPEND="${RDEPEND}
 	virtual/linux-sources"
 
-
 # adding only run-time depends
 RDEPEND="${RDEPEND}
 	lirc_devices_usbirboy? ( app-misc/usbirboy )
 	lirc_devices_inputlirc? ( app-misc/inputlircd )"
-
-
 
 # add all devices to IUSE
 for dev in ${IUSE_LIRC_DEVICES}; do
 	IUSE="${IUSE} lirc_devices_${dev}"
 done
 
-
 add_device() {
-	: $(( lirc_device_count++ ))
+	((lirc_device_count++))
 
 	if [[ ${lirc_device_count} -eq 2 ]]; then
 		ewarn
@@ -232,7 +220,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix a sandbox violation while checking which cc to use for Kernel 2.6.19
 	# and newer
@@ -259,12 +247,12 @@ src_unpack() {
 	sed -i -e '/#define LIRC_DRIVER_DEVICE/d' acconfig.h
 	echo "#define LIRC_DRIVER_DEVICE \"${LIRC_DRIVER_DEVICE}\"" >> acconfig.h
 
-	eautoreconf || die "autoreconf failed"
+	eautoreconf
 }
 
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	newinitd ${FILESDIR}/lircd lircd
 	newinitd ${FILESDIR}/lircmd lircmd
@@ -288,7 +276,7 @@ src_install() {
 
 pkg_preinst() {
 	linux-mod_pkg_preinst
-	[[ -f "${ROOT}/etc/lircd.conf" ]] && cp ${ROOT}/etc/lircd.conf ${IMAGE}/etc
+	[[ -f ${ROOT}/etc/lircd.conf ]] && cp "${ROOT}"/etc/lircd.conf "${D}"/etc/
 }
 
 pkg_postinst() {
@@ -298,4 +286,3 @@ pkg_postinst() {
 	elog "merged, please read the documentation at http://www.lirc.org"
 	echo
 }
-

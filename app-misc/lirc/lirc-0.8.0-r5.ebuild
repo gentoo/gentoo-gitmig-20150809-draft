@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.13 2007/01/06 00:13:25 zzam Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.14 2007/03/10 14:30:24 vapier Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -286,7 +283,7 @@ src_install() {
 
 pkg_preinst() {
 	linux-mod_pkg_preinst
-	[[ -f "${ROOT}/etc/lircd.conf" ]] && cp ${ROOT}/etc/lircd.conf ${IMAGE}/etc
+	[[ -f "${ROOT}/etc/lircd.conf" ]] && cp ${ROOT}/etc/lircd.conf ${D}/etc
 }
 
 pkg_postinst() {
