@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-cpugraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.17 2007/03/10 08:54:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.18 2007/03/10 14:44:44 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-cpugraph-0.3.0.ebuild:
+  Keyworded ~x86-fbsd
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-cpugraph-0.3.0.ebuild:
   Stable on amd64 wrt bug 169987

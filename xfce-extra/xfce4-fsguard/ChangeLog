@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-fsguard
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.13 2007/03/10 08:58:08 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.14 2007/03/10 14:42:45 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-fsguard-0.3.0.ebuild:
+  Keyworded ~x86-fbsd
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-fsguard-0.3.0.ebuild:
   Stable on amd64 wrt bug 169987
