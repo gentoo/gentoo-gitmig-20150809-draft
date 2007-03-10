@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.6.ebuild,v 1.12 2007/03/03 23:10:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.6.ebuild,v 1.13 2007/03/10 14:32:53 vapier Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 
 pkg_preinst() {
 	if [[ -e ${ROOT}/usr/lib/libopenct.so.0 ]] ; then
-		cp "${ROOT}"/usr/lib/libopenct.so.0 "${IMAGE}"/usr/lib/
+		cp "${ROOT}"/usr/lib/libopenct.so.0 "${D}"/usr/lib/
 	fi
 }
 
