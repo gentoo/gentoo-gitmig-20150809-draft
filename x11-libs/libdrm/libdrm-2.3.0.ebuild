@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.3.0.ebuild,v 1.1 2006/11/10 03:48:39 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.3.0.ebuild,v 1.2 2007/03/10 14:53:17 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -10,7 +10,9 @@ inherit x-modular
 DESCRIPTION="X.Org libdrm library"
 HOMEPAGE="http://dri.freedesktop.org/"
 SRC_URI="http://dri.freedesktop.org/libdrm/${P}.tar.gz"
+
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
@@ -18,7 +20,7 @@ pkg_preinst() {
 	x-modular_pkg_preinst
 
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
-		cp -pPR "${ROOT}"/usr/$(get_libdir)/libdrm.so.{1,1.0.0} "${IMAGE}"/usr/$(get_libdir)/
+		cp -pPR "${ROOT}"/usr/$(get_libdir)/libdrm.so.{1,1.0.0} "${D}"/usr/$(get_libdir)/
 	fi
 }
 

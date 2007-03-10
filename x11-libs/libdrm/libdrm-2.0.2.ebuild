@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.0.2.ebuild,v 1.10 2007/01/06 01:03:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.0.2.ebuild,v 1.11 2007/03/10 14:53:17 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -18,7 +18,7 @@ pkg_preinst() {
 	x-modular_pkg_preinst
 
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
-		cp -pPR "${ROOT}"/usr/$(get_libdir)/libdrm.so.{1,1.0.0} "${IMAGE}"/usr/$(get_libdir)/
+		cp -pPR "${ROOT}"/usr/$(get_libdir)/libdrm.so.{1,1.0.0} "${D}"/usr/$(get_libdir)/
 	fi
 }
 
