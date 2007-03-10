@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.107 2007/03/10 23:27:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.108 2007/03/10 23:29:40 caster Exp $
+
+  10 Mar 2007; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.5.0.3.ebuild:
+  Remove unneeded revision.
 
 *ibm-jdk-bin-1.5.0.4 (10 Mar 2007)
 
