@@ -1,6 +1,9 @@
 # ChangeLog for net-news/snownews
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.14 2007/03/10 13:50:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.15 2007/03/10 19:06:35 ticho Exp $
+
+  10 Mar 2007; Andrej Kacian <ticho@gentoo.org> snownews-1.5.7-r2.ebuild:
+  Stable on x86, bug #170262.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> snownews-1.5.7-r2.ebuild:
   Stable on ppc wrt bug 170262
