@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.16.2.ebuild,v 1.11 2007/02/09 22:02:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.16.2.ebuild,v 1.12 2007/03/10 17:07:51 remi Exp $
 
 inherit gnome2 python eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/python-2.2
 	>=gnome-base/libgnome-2.8
 	>=gnome-base/libgnomeui-2.8
 	>=gnome-base/libgnomecanvas-2.8
-	>=gnome-base/gnome-vfs-2.9.3
+	>=gnome-base/gnome-vfs-2.14.0
 	>=gnome-base/gconf-2.11.1
 	>=gnome-base/libbonobo-2.8
 	>=gnome-base/libbonoboui-2.8"
