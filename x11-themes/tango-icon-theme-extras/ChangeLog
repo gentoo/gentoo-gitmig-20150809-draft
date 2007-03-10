@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.10 2007/02/21 19:43:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.11 2007/03/10 19:20:09 drac Exp $
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild:
+  Fix USE -png when imagemagick is also USE -png.
 
 *tango-icon-theme-extras-0.1.0-r1 (21 Feb 2007)
 
