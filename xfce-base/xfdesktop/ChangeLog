@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.89 2007/03/10 08:49:01 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.90 2007/03/10 17:04:52 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> xfdesktop-4.4.0-r3.ebuild:
+  Stable on ppc wrt bug 169987
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfdesktop-4.4.0-r3.ebuild:
   Stable on amd64 wrt bug 169987
