@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.8 2007/02/21 02:47:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.9 2007/03/10 14:27:32 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -90,7 +90,7 @@ pkg_preinst() {
 	# If we use xinetd, then we comment out listen=YES
 	# so that our default config works under xinetd - fixes #78347
 	if use xinetd ; then
-		sed -i '/\listen=YES/s/^/#/g' ${IMAGE}/etc/vsftpd/vsftpd.conf.example
+		sed -i '/\listen=YES/s/^/#/g' "${D}"/etc/vsftpd/vsftpd.conf.example
 	fi
 }
 
