@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-weather
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.30 2007/03/10 14:46:59 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.31 2007/03/10 18:01:31 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-weather-0.6.0.ebuild:
+  Stable on ppc wrt bug 169987
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-weather-0.6.0.ebuild:
   Keyworded ~x86-fbsd

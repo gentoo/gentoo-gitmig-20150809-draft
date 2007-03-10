@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mailwatch
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/ChangeLog,v 1.12 2007/03/10 14:40:33 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/ChangeLog,v 1.13 2007/03/10 18:03:57 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-mailwatch-1.0.1.ebuild:
+  Stable on ppc wrt bug 169987
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-mailwatch-1.0.1.ebuild:
   Keyworded ~x86-fbsd

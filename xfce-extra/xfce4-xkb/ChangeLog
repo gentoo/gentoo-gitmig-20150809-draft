@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-xkb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.15 2007/03/10 09:13:38 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.16 2007/03/10 17:57:03 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-xkb-0.4.3-r1.ebuild:
+  Stable on ppc wrt bug 169987
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-xkb-0.4.3-r1.ebuild:
   Stable on amd64 wrt bug 169987
