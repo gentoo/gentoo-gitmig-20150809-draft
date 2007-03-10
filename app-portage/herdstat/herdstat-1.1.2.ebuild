@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2.ebuild,v 1.3 2007/01/24 03:42:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2.ebuild,v 1.4 2007/03/10 14:49:44 vapier Exp $
 
 inherit bash-completion
 
@@ -49,7 +49,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	chgrp portage ${IMAGE}/var/lib/herdstat
+	chgrp portage ${D}/var/lib/herdstat
 }
 
 pkg_postinst() {

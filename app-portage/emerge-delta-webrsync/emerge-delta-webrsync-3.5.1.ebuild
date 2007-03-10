@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1.ebuild,v 1.6 2006/10/10 18:18:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1.ebuild,v 1.7 2007/03/10 14:51:44 vapier Exp $
 
 DESCRIPTION="emerge-webrsync using patches to minimize bandwidth"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -30,5 +30,5 @@ src_install() {
 }
 
 pkg_preinst() {
-	chgrp portage ${IMAGE}/var/delta-webrsync
+	chgrp portage ${D}/var/delta-webrsync
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91-r1.ebuild,v 1.2 2007/02/28 15:05:55 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91-r1.ebuild,v 1.3 2007/03/10 14:49:44 vapier Exp $
 
 inherit bash-completion eutils
 
@@ -18,11 +18,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc readline test"
 
 RDEPEND=">=dev-cpp/libherdstat-0.2.0
-		 readline? ( sys-libs/readline )"
+	 readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
-		>=sys-apps/sed-4
-		dev-util/pkgconfig
-		doc? ( dev-python/docutils )"
+	>=sys-apps/sed-4
+	dev-util/pkgconfig
+	doc? ( dev-python/docutils )"
 
 pkg_setup() {
 	if has test $FEATURES && ! use test ; then
@@ -32,13 +32,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if ! use readline ; then
-		epatch ${FILESDIR}/${PN}-1.1.91-undefined-lhp.patch
+		epatch "${FILESDIR}"/${PN}-1.1.91-undefined-lhp.patch
 	fi
 
-	epatch ${FILESDIR}/herds-xml-location-update.patch
+	epatch "${FILESDIR}"/herds-xml-location-update.patch
 }
 
 src_compile() {
@@ -69,13 +69,13 @@ src_install() {
 }
 
 pkg_preinst() {
-	chgrp portage ${IMAGE}/var/lib/herdstat
+	chgrp portage "${D}"/var/lib/herdstat
 }
 
 pkg_postinst() {
 	# remove any previous caches, as it's possible that the internal
 	# format has changed, and may cause bugs.
-	rm -f ${ROOT}/var/lib/herdstat/*cache*
+	rm -f "${ROOT}"/var/lib/herdstat/*cache*
 
 	elog
 	elog "You must be in the portage group to use herdstat."

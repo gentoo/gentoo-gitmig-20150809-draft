@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r1.ebuild,v 1.2 2006/11/08 18:00:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r1.ebuild,v 1.3 2007/03/10 14:51:44 vapier Exp $
 
 inherit eutils
 
@@ -33,5 +33,5 @@ src_install() {
 }
 
 pkg_preinst() {
-	chgrp portage ${IMAGE}/var/delta-webrsync
+	chgrp portage ${D}/var/delta-webrsync
 }
