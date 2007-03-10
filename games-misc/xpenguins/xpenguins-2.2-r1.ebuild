@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/xpenguins-2.2-r1.ebuild,v 1.4 2006/12/05 18:19:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/xpenguins-2.2-r1.ebuild,v 1.5 2007/03/10 09:06:35 nyhm Exp $
 
 inherit games
 
@@ -12,21 +12,17 @@ SRC_URI="http://xpenguins.seul.org/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
-src_compile() {
-	egamesconf --with-x || die
-	emake || die "emake failed"
-}
-
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
-	cp -r ../themes/ "${D}${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r ../themes/ || die "doins failed"
 	prepgamesdirs
 }
