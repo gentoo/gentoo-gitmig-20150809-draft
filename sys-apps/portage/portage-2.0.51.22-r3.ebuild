@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.9 2007/02/26 18:40:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.10 2007/03/10 14:31:25 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -111,10 +111,10 @@ src_install() {
 
 pkg_preinst() {
 	if has livecvsportage ${FEATURES} && [ "${ROOT}" = "/" ]; then
-		rm -rf ${IMAGE}/usr/lib/portage/pym/*
-		mv ${IMAGE}/usr/lib/portage/bin/tbz2tool ${T}
-		rm -rf ${IMAGE}/usr/lib/portage/bin/*
-		mv ${T}/tbz2tool ${IMAGE}/usr/lib/portage/bin/
+		rm -rf ${D}/usr/lib/portage/pym/*
+		mv ${D}/usr/lib/portage/bin/tbz2tool ${T}
+		rm -rf ${D}/usr/lib/portage/bin/*
+		mv ${T}/tbz2tool ${D}/usr/lib/portage/bin/
 	else
 		rm /usr/lib/portage/pym/*.pyc >& /dev/null
 		rm /usr/lib/portage/pym/*.pyo >& /dev/null

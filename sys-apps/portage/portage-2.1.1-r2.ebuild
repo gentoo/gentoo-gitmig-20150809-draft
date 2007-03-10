@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.13 2007/02/26 18:40:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.14 2007/03/10 14:31:25 vapier Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -169,10 +169,10 @@ src_install() {
 pkg_preinst() {
 	local portage_base="/usr/lib/portage"
 	if has livecvsportage ${FEATURES} && [ "${ROOT}" = "/" ]; then
-		rm -rf "${IMAGE}"/${portage_base}/pym/*
-		mv "${IMAGE}"/${portage_base}/bin/tbz2tool "${T}"
-		rm -rf "${IMAGE}"/${portage_base}/bin/*
-		mv "${T}"/tbz2tool "${IMAGE}"/${portage_base}/bin/
+		rm -rf "${D}"/${portage_base}/pym/*
+		mv "${D}"/${portage_base}/bin/tbz2tool "${T}"
+		rm -rf "${D}"/${portage_base}/bin/*
+		mv "${T}"/tbz2tool "${D}"/${portage_base}/bin/
 	else
 		for mydir in pym pym/cache pym/elog_modules; do
 			rm "${ROOT}"/${portage_base}/${mydir}/*.pyc >& /dev/null

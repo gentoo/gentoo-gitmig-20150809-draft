@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r7.ebuild,v 1.2 2007/01/20 15:16:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r7.ebuild,v 1.3 2007/03/10 14:30:57 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -414,7 +414,7 @@ remap_dns_vars() {
 			-e 's/\<mac_nameservers_/mac_dns_servers_/g' \
 			-e 's/\<searchdomains_/dns_search_domains_/g' \
 			-e 's/\<mac_searchdomains_/mac_dns_search_domains_/g' \
-			${ROOT}/etc/conf.d/${f} > ${IMAGE}/etc/conf.d/${f}
+			${ROOT}/etc/conf.d/${f} > ${D}/etc/conf.d/${f}
 	fi
 }
 

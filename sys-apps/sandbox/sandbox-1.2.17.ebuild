@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.17.ebuild,v 1.14 2006/07/09 06:36:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.17.ebuild,v 1.15 2007/03/10 14:32:07 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -113,6 +113,6 @@ src_install() {
 }
 
 pkg_preinst() {
-	chown root:portage ${IMAGE}/var/log/sandbox
-	chmod 0770 ${IMAGE}/var/log/sandbox
+	chown root:portage ${D}/var/log/sandbox
+	chmod 0770 ${D}/var/log/sandbox
 }
