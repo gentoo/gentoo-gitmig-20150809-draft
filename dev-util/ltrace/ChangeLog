@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.30 2007/03/10 00:26:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.31 2007/03/10 00:28:00 betelgeuse Exp $
+
+  10 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> -ltrace-0.3.31.ebuild:
+  Remove old version.
 
   10 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   +files/0.4-cross-compile.patch, ltrace-0.4.ebuild:
