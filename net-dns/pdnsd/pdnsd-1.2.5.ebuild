@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.5 2007/01/16 20:47:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.6 2007/03/10 14:03:48 mrness Exp $
 
 inherit eutils
 
@@ -40,45 +40,8 @@ src_compile() {
 	emake all || die "compile problem"
 }
 
-pkg_preinst() {
-	# Duplicated so that binary packages work
-	enewgroup pdnsd
-	enewuser pdnsd -1 -1 /var/lib/pdnsd pdnsd
-}
-
-src_test() {
-	if [ -x /usr/bin/dig ];	then
-		mkdir "${T}/pdnsd"
-		echo -n -e "pd12\0\0\0\0" > "${T}/pdnsd/pdnsd.cache"
-		IPS=$(grep ^nameserver "${ROOT}/etc/resolv.conf" | sed -e 's/nameserver \(.*\)/\tip=\1;/g' | xargs)
-		sed -e "s/\tip=/${IPS}/" -e "s:cache_dir=:cache_dir=${T}/pdnsd:" "${FILESDIR}/pdnsd.conf.test" \
-			> "${T}/pdnsd.conf.test"
-		src/pdnsd -c "${T}/pdnsd.conf.test" -g -s -d -p "${T}/pid" || die "couldn't start daemon"
-		sleep 3
-
-		find "${T}" -ls
-		[ -s "${T}/pid" ] || die "empty or no pid file created"
-		[ -S "${T}/pdnsd/pdnsd.status" ] || die "no socket created"
-		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" server all up || die "failed to start the daemon"
-		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" status || die "failed to communicate with the daemon"
-		sleep 3
-
-		dig @127.0.0.1 -p 33455 www.gentoo.org  | fgrep "status: NOERROR" || die "www.gentoo.org lookup failed"
-		kill $(<"${T}/pid") || die "failed to terminate daemon"
-	fi
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die
-
-	# Copy cache from prev older versions
-	[ -f "${ROOT}/var/lib/pdnsd/pdnsd.cache" ] && \
-		cp "${ROOT}/var/lib/pdnsd/pdnsd.cache" "${D}/var/cache/pdnsd/pdnsd.cache"
-
-	# Don't clobber existing cache - copy prev cache so unmerging prev version
-	# doesn't remove the cache.
-	[ -f "${ROOT}/var/cache/pdnsd/pdnsd.cache" ] && \
-		rm  "${D}/var/cache/pdnsd/pdnsd.cache"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO README.par
 	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
@@ -106,6 +69,42 @@ src_install() {
 	#resolvconf-gentoo support
 	exeinto /etc/resolvconf/update.d
 	newexe "${FILESDIR}/pdnsd.resolvconf" pdnsd
+}
+
+src_test() {
+	if [ -x /usr/bin/dig ];	then
+		mkdir "${T}/pdnsd"
+		echo -n -e "pd12\0\0\0\0" > "${T}/pdnsd/pdnsd.cache"
+		IPS=$(grep ^nameserver /etc/resolv.conf | sed -e 's/nameserver \(.*\)/\tip=\1;/g' | xargs)
+		sed -e "s/\tip=/${IPS}/" -e "s:cache_dir=:cache_dir=${T}/pdnsd:" "${FILESDIR}/pdnsd.conf.test" \
+			> "${T}/pdnsd.conf.test"
+		src/pdnsd -c "${T}/pdnsd.conf.test" -g -s -d -p "${T}/pid" || die "couldn't start daemon"
+		sleep 3
+
+		find "${T}" -ls
+		[ -s "${T}/pid" ] || die "empty or no pid file created"
+		[ -S "${T}/pdnsd/pdnsd.status" ] || die "no socket created"
+		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" server all up || die "failed to start the daemon"
+		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" status || die "failed to communicate with the daemon"
+		sleep 3
+
+		dig @127.0.0.1 -p 33455 www.gentoo.org  | fgrep "status: NOERROR" || die "www.gentoo.org lookup failed"
+		kill $(<"${T}/pid") || die "failed to terminate daemon"
+	fi
+}
+
+pkg_preinst() {
+	# Duplicated so that binary packages work
+	enewgroup pdnsd
+	enewuser pdnsd -1 -1 /var/lib/pdnsd pdnsd
+
+	# Copy cache from older versions
+	[ -f "${ROOT}/var/lib/pdnsd/pdnsd.cache" ] && \
+		cp "${ROOT}/var/lib/pdnsd/pdnsd.cache" "${D}/var/cache/pdnsd/pdnsd.cache"
+
+	# Preserve the cache from previous version
+	[ -f "${ROOT}/var/cache/pdnsd/pdnsd.cache" ] && \
+		cp "${ROOT}/var/cache/pdnsd/pdnsd.cache" "${D}/var/cache/pdnsd/pdnsd.cache"
 }
 
 pkg_postinst() {
