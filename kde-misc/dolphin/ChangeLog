@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/dolphin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.9 2007/03/01 01:42:07 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.10 2007/03/10 23:22:09 troll Exp $
+
+*dolphin-0.8.2-r1 (10 Mar 2007)
+
+  10 Mar 2007; Przemysław Maciąg <troll@gentoo.org>
+  +files/dolphin-0.8.2-tarZip-handlers.patch, +dolphin-0.8.2-r1.ebuild:
+  Added patch to allow browsing archive files (zip and various tar). Patch
+  provided by Filip Brcic (#170335).
 
 *dolphin-0.8.2 (01 Mar 2007)
 
