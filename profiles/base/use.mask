@@ -16,6 +16,7 @@ sse2
 svga
 win32codecs
 real
+nvram
 
 # ppc arch specific USE flags
 altivec
