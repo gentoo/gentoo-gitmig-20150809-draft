@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.32 2007/01/28 06:05:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.33 2007/03/10 21:06:57 uberlord Exp $
+
+  10 Mar 2007; Roy Marples <uberlord@gentoo.org> sword-1.5.9.ebuild:
+  Added ~x86-fbsd keyword.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> sword-1.5.8.ebuild,
   sword-1.5.9.ebuild:
