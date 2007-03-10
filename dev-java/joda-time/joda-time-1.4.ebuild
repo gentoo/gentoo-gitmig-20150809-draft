@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.4.ebuild,v 1.3 2007/03/10 23:46:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.4.ebuild,v 1.4 2007/03/10 23:54:13 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,14 +14,19 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="doc source test"
 
+COMMON_DEP="
+	elibc_glibc? ( >=sys-libs/timezone-data-2007c )
+"
+
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
 	source? ( app-arch/zip )
 	test? (
 		dev-java/junit
 		dev-java/ant
-	)"
-RDEPEND=">=virtual/jre-1.4"
+	)
+	${COMMON_DEP}"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}"
 
