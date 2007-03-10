@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-0.1.1.ebuild,v 1.3 2007/03/09 11:12:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-0.1.1.ebuild,v 1.4 2007/03/10 10:21:06 welp Exp $
 
 inherit xfce44
 
@@ -10,7 +10,7 @@ DESCRIPTION="Thunar thumbnailers plugin"
 HOMEPAGE="http://goodies.xfce.org/projects/thunar-plugins/thunar-thumbnailers"
 SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}${COMPRESS}"
 
-KEYWORDS="~ppc64 x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="dcraw grace tetex"
 
 RDEPEND=">=xfce-base/thunar-${THUNAR_MASTER_VERSION}
