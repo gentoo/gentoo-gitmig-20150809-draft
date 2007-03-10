@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.28 2006/11/15 19:59:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.29 2007/03/10 00:12:21 omp Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ IUSE="nls"
 DESCRIPTION="A GTK/X11 application launcher with nice features such as a history"
 
 PATCH_LEVEL="14"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 SRC_URI="mirror://debian/pool/main/g/grun/${PN}_${PV}.orig.tar.gz
 		mirror://debian/pool/main/g/grun/${PN}_${PV}-${PATCH_LEVEL}.diff.gz"
 HOMEPAGE="http://packages.debian.org/unstable/x11/grun.html"
