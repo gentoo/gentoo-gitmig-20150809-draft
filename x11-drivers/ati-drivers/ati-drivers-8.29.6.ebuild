@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.29.6.ebuild,v 1.2 2006/10/13 15:38:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.29.6.ebuild,v 1.3 2007/03/10 21:40:29 marienz Exp $
 
 IUSE="acpi doc opengl"
 
@@ -209,18 +209,13 @@ src_install() {
 	use x86 && native_dir="lib"
 	use amd64 && native_dir="lib64"
 
-	# Install the libs
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if [ "${MLTEST/set_abi/}" = "${MLTEST}" ] && has_multilib_profile; then
+	if has_multilib_profile; then
 		local OABI=${ABI}
 		for ABI in $(get_install_abis); do
 			src_install-libs
 		done
 		ABI=${OABI}
 		unset OABI
-	elif has_multilib_profile; then
-		src_install-libs
 	elif use amd64; then
 		src_install-libs lib $(get_multilibdir)
 		src_install-libs lib64 $(get_libdir)
