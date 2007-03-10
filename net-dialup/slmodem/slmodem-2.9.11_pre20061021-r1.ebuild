@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r1.ebuild,v 1.2 2006/12/08 11:42:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r1.ebuild,v 1.3 2007/03/10 14:29:31 mrness Exp $
 
 inherit eutils linux-mod multilib
 
@@ -99,19 +99,25 @@ src_install() {
 	echo -e "slusb\nslamr\nsnd-intel8x0m" >> "${D}/etc/hotplug/blacklist.d/${PN}"
 
 	# Add configuration for devfs, udev
-	if [ -e "${ROOT}/dev/.devfsd" ] ; then
-		insinto /etc/devfs.d/; newins "${FILESDIR}/${PN}-2.9.devfs" ${PN}
-	elif [ -e "${ROOT}/dev/.udev" ] ; then
-		dodir /etc/udev/rules.d/
-		echo 'KERNEL=="slamr", NAME="slamr0" GROUP="dialout"' > \
+	insinto /etc/devfs.d/; newins "${FILESDIR}/${PN}-2.9.devfs" ${PN}
+	dodir /etc/udev/rules.d/
+	echo 'KERNEL=="slamr", NAME="slamr0" GROUP="dialout"' > \
+		 "${D}/etc/udev/rules.d/55-${PN}.rules"
+	if use usb; then
+		echo 'KERNEL=="slusb", NAME="slusb0" GROUP="dialout"' >> \
 			 "${D}/etc/udev/rules.d/55-${PN}.rules"
-		if use usb; then
-			echo 'KERNEL=="slusb", NAME="slusb0" GROUP="dialout"' >> \
-				 "${D}/etc/udev/rules.d/55-${PN}.rules"
-		fi
 	fi
 
 	dodoc Changes README "${WORKDIR}/ungrab-winmodem/Readme.txt"
+}
+
+pkg_preinst() {
+	linux-mod_pkg_preinst
+
+	# Remove obsolete devfs configuration files if the box use udev
+	if [ -e "${ROOT}/dev/.udev" ]; then
+		rm -r "${D}/etc/devfs.d"
+	fi
 }
 
 pkg_postinst() {
