@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.2.ebuild,v 1.4 2006/11/23 17:21:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.2.ebuild,v 1.5 2007/03/10 14:42:07 vapier Exp $
 
 inherit eutils autotools webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -11,7 +11,6 @@ MY_PV="$(get_version_component_range 1-3)"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="A Collaboration and Integration Server Environment"
 HOMEPAGE="http://www.open-xchange.org/"
-
 SRC_URI="http://www.mikefetherston.ca/OX/Crystal_OX_Theme.tgz
 	http://dev.gentoo.org/~azarah/OX/Crystal_OX_Theme_Webmail.tar.bz2
 	sieve? ( http://www.pro-nets.de/user/mhoffmann/smartsieve-ox-${SIEVE_VER}.tar.gz )"
@@ -23,11 +22,10 @@ fi
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
+IUSE="ssl doc webdav mysql postgres sieve jikes"
 RESTRICT="primaryuri"
 
-IUSE="ssl doc webdav mysql postgres sieve jikes"
-
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 OX_DB="postgres"
 if use mysql && ! use postgres ; then
@@ -65,7 +63,7 @@ RDEPEND="${RDEPEND}
 #parameter $1 == 1 for config part or == 0 for preinst
 ox_setup() {
 	local config=$1
-	local WORKINGBASE="${IMAGE}" #is used during pkg_*
+	local WORKINGBASE="${D}" #is used during pkg_*
 	if [[ $config -eq 1 ]]; then
 		#executed from in pkg_config
 		WORKINGBASE="${ROOT}"
