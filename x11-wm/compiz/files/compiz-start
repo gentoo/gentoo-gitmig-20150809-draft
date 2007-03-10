@@ -15,7 +15,7 @@ COMPIZ_OPTIONS="--replace --use-cow"
 
 if [ $GLX_WITH_DIRECT -eq 3 ]; then
 	if [ $GLX_RENDER -eq 0 ]; then
-		echo NVIDA detected
+		echo NVIDIA detected
 		export __GL_YIELD="NOTHING" 
 	else
 		echo XGL detected
