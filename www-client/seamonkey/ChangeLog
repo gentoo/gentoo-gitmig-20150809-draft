@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.57 2007/03/09 11:47:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.58 2007/03/10 15:13:15 corsair Exp $
+
+  10 Mar 2007; Markus Rothe <corsair@gentoo.org> seamonkey-1.1.1.ebuild:
+  Stable on ppc64
 
   09 Mar 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.1.ebuild:
   Bump patchset for g/fbsd wrt bug 169825 and fix bug 150419
