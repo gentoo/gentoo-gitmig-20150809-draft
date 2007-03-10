@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.7 2007/01/05 16:47:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.8 2007/03/10 14:24:28 vapier Exp $
 
 inherit vdr-plugin
 
@@ -54,11 +54,10 @@ src_install() {
 }
 
 pkg_preinst() {
-
 	if [[ ! -L ${ROOT}/etc/vdr/channels.conf ]]; then
-	cp ${ROOT}/etc/vdr/channels.conf ${IMAGE}/etc/vdr/channels.d/channels.conf.bak
-	cp ${ROOT}/etc/vdr/channels.conf ${IMAGE}/etc/vdr/channels.d/channels.conf
-	fowners vdr:vdr /etc/vdr/channels.d/{channels.conf,channels.conf.bak}
+		cp "${ROOT}"/etc/vdr/channels.conf "${D}"/etc/vdr/channels.d/channels.conf.bak
+		cp "${ROOT}"/etc/vdr/channels.conf "${D}"/etc/vdr/channels.d/channels.conf
+		fowners vdr:vdr /etc/vdr/channels.d/{channels.conf,channels.conf.bak}
 	fi
 }
 
