@@ -1,27 +1,27 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.9 2007/01/09 15:45:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.10 2007/03/10 15:14:58 vapier Exp $
 
 inherit eutils java-pkg
 
-S=${WORKDIR}/${PN}
-
-At=${PN}${PV}.zip
-
 DESCRIPTION="Orion EJB/J2EE application webserver"
-SRC_URI="http://www.orionserver.com/distributions/${At}"
 HOMEPAGE="http://www.orionserver.com/"
-KEYWORDS="~amd64 ~ppc x86"
+SRC_URI="http://www.orionserver.com/distributions/${PN}${PV}.zip"
+
 LICENSE="ORIONSERVER"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
+IUSE=""
+
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip"
-IUSE=""
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}/${PV}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}/${PV}-gentoo.patch
 }
 
 src_install() {
@@ -32,16 +32,16 @@ src_install() {
 	dodir /opt/${PN}/sbin
 	dodir /var/log/${PN}
 
-	cd ${S}
+	cd "${S}"
 
 	# INSTALL STARTUP SCRIPTS
 	insinto /opt/orion/sbin
 	insopts -m0750
-	doins ${FILESDIR}/${PV}/start_orion.sh
-	doins ${FILESDIR}/${PV}/stop_orion.sh
+	doins "${FILESDIR}"/${PV}/start_orion.sh || die
+	doins "${FILESDIR}"/${PV}/stop_orion.sh || die
 
-	newinitd ${FILESDIR}/${PV}/orion.init orion
-	newconfd ${FILESDIR}/${PV}/orion.conf orion
+	newinitd "${FILESDIR}"/${PV}/orion.init orion
+	newconfd "${FILESDIR}"/${PV}/orion.conf orion
 
 	# CREATE DUMMY LOG & PERSISTENCE DIR
 	dodir /var/log/${PN}
@@ -53,18 +53,18 @@ src_install() {
 	# INSTALL EXTRA FILES
 	local dirs="applications default-web-app demo lib persistence autoupdate.properties"
 	for i in $dirs ; do
-		cp -pPR ${i} ${D}/opt/${PN}/
+		cp -pPR ${i} "${D}"/opt/${PN}/ || die "install ${i} failed"
 	done
 
 	# INSTALL APP CONFIG
-	cd ${S}/config
+	cd "${S}"/config
 	local dirs="application.xml data-sources.xml database-schemas default-web-site.xml global-web-application.xml jms.xml mime.types principals.xml rmi.xml server.xml"
 	for i in $dirs ; do
-		cp -pPR ${i} ${D}/opt/${PN}/config
+		cp -pPR ${i} "${D}"/opt/${PN}/config || die "install ${i} failed"
 	done
 
 	# INSTALL JARS
-	cd ${S}
+	cd "${S}"
 	for i in *.jar ; do
 		java-pkg_dojar $i
 	done
@@ -79,9 +79,9 @@ src_install() {
 pkg_preinst() {
 	enewgroup orion
 	enewuser orion -1 /bin/bash /opt/orion orion
-	chown -R orion:orion ${IMAGE}/opt/${PN}
-	chown -R orion:orion ${IMAGE}/var/log/${PN}
-	chown root:0 ${IMAGE}/etc/conf.d/orion
+	chown -R orion:orion "${D}"/opt/${PN}
+	chown -R orion:orion "${D}"/var/log/${PN}
+	chown root:0 "${D}"/etc/conf.d/orion
 }
 
 pkg_postinst() {
