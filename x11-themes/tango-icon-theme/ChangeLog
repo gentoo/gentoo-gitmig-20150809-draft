@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.32 2007/03/07 14:08:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.33 2007/03/10 19:44:17 drac Exp $
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  tango-icon-theme-0.8.0.ebuild:
+  Add depend for hicolor-icon-theme.
 
   07 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   tango-icon-theme-0.8.0.ebuild:
