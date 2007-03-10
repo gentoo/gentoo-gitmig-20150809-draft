@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r1.ebuild,v 1.6 2007/01/04 19:26:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r1.ebuild,v 1.7 2007/03/10 18:34:34 welp Exp $
 
 WANT_AUTOCONF="latest"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/arj/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="nostrip"
 
@@ -67,7 +67,7 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}/linux-gnu/en/rs/u"
+	cd "${S}/${CHOST#*-*-}/en/rs/u"
 	dobin bin/* || die
 	dodoc doc/arj/* "${S}/ChangeLog"
 }

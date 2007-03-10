@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.26 2007/02/21 19:53:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.27 2007/03/10 18:34:34 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> arj-3.10.22-r1.ebuild:
+  Minor fix in ebuild, keyworded ~x86-fbsd
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
