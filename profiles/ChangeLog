@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.197 2007/03/10 13:38:41 pingu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.198 2007/03/10 23:14:58 beandog Exp $
+
+  10 Mar 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  unmask ivtv
 
   10 Mar 2007; Christian Marie <pingu@gentoo.org> package.mask:
   Removing net-www/bk_edit's mask as it is removed from the tree.
