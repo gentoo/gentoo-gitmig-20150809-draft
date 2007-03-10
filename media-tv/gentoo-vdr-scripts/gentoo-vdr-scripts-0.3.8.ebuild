@@ -1,23 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.8.ebuild,v 1.4 2007/02/17 01:34:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.8.ebuild,v 1.5 2007/03/10 14:48:06 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Scripts necessary for use of vdr as a set-top-box"
 HOMEPAGE="http://www.gentoo.org/"
-LICENSE="GPL-2"
-SLOT="0"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~hd_brummy/distfiles/${P}.tar.bz2"
 
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
-RDEPEND="nvram? ( x86? ( sys-power/nvram-wakeup ) )
-		app-admin/sudo
-		!<media-tv/vdr-dvd-scripts-0.0.2"
-
 IUSE="nvram"
+
+RDEPEND="nvram? ( sys-power/nvram-wakeup )
+	app-admin/sudo
+	!<media-tv/vdr-dvd-scripts-0.0.2"
 
 VDR_HOME=/var/vdr
 
@@ -33,7 +32,7 @@ pkg_setup() {
 
 src_install() {
 	local myopts=""
-	if use x86; then
+	if use nvram ; then
 		myopts="${myopts} NVRAM=1"
 	fi
 
@@ -59,12 +58,12 @@ pkg_preinst() {
 	fi
 	if [[ ${PLUGINS_NEW} > 0 ]]; then
 		einfo "Using existing /etc/conf.d/vdr.plugins"
-		cp ${ROOT}/etc/conf.d/vdr.plugins ${IMAGE}/etc/conf.d/vdr.plugins
+		cp ${ROOT}/etc/conf.d/vdr.plugins ${D}/etc/conf.d/vdr.plugins
 	else
 		einfo "Using PLUGINS from /etc/conf.d/vdr"
 		local PLUGIN
 		for PLUGIN in $(source ${ROOT}/etc/conf.d/vdr;echo $PLUGINS); do
-			echo ${PLUGIN} >> ${IMAGE}/etc/conf.d/vdr.plugins
+			echo ${PLUGIN} >> ${D}/etc/conf.d/vdr.plugins
 		done
 	fi
 }
@@ -91,7 +90,7 @@ pkg_postinst() {
 		elog
 	fi
 
-	if use x86 && use !nvram; then
+	if ! use nvram ; then
 		elog "nvram wakeup is now optional."
 		elog "To make use of it enable the use flag nvram for ${PN}"
 		elog "or just emerge nvram-wakeup."
@@ -138,4 +137,3 @@ pkg_config() {
 		einfo "Edited /etc/sudoers"
 	fi
 }
-

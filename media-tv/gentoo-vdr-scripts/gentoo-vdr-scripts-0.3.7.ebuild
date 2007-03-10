@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.7.ebuild,v 1.5 2007/02/17 01:34:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.7.ebuild,v 1.6 2007/03/10 14:48:06 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 KEYWORDS="~amd64 ~ppc x86"
 
-RDEPEND="nvram? ( x86? ( sys-power/nvram-wakeup ) )
+RDEPEND="nvram? ( sys-power/nvram-wakeup )
 		app-admin/sudo
 		!<media-tv/vdr-dvd-scripts-0.0.2"
 
@@ -59,12 +59,12 @@ pkg_preinst() {
 	fi
 	if [[ ${PLUGINS_NEW} > 0 ]]; then
 		einfo "Using existing /etc/conf.d/vdr.plugins"
-		cp ${ROOT}/etc/conf.d/vdr.plugins ${IMAGE}/etc/conf.d/vdr.plugins
+		cp ${ROOT}/etc/conf.d/vdr.plugins ${D}/etc/conf.d/vdr.plugins
 	else
 		einfo "Using PLUGINS from /etc/conf.d/vdr"
 		local PLUGIN
 		for PLUGIN in $(source ${ROOT}/etc/conf.d/vdr;echo $PLUGINS); do
-			echo ${PLUGIN} >> ${IMAGE}/etc/conf.d/vdr.plugins
+			echo ${PLUGIN} >> ${D}/etc/conf.d/vdr.plugins
 		done
 	fi
 }
