@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.4.ebuild,v 1.5 2007/02/10 16:32:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.4.ebuild,v 1.6 2007/03/10 00:26:19 betelgeuse Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P="${P/-/_}"
 DEB_P="${MY_P}-1"
@@ -23,6 +23,9 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	epatch "${WORKDIR}"/${DEB_P}.diff
+	cd "${S}"
+	epatch "${FILESDIR}/0.4-cross-compile.patch"
+	eautoconf
 }
 
 src_install() {
