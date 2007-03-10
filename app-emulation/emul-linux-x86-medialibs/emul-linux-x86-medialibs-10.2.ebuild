@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-10.2.ebuild,v 1.2 2007/03/02 15:04:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-10.2.ebuild,v 1.3 2007/03/10 20:25:53 beandog Exp $
 
 inherit emul-libs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/fribidi-0.10.7.tbz2
 		mirror://gentoo/libtheora-1.0_alpha6-r1.tbz2
 		mirror://gentoo/xvid-1.1.0-r3.tbz2"
 
-LICENSE="GPL-2 LGPL-2.1 as-is xiph"
+LICENSE="GPL-2 LGPL-2.1 as-is BSD"
 KEYWORDS="-* amd64"
 
 DEPEND=""
