@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.32 2007/03/09 20:07:20 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.33 2007/03/10 14:11:44 calchan Exp $
+
+*libgeda-20070216 (10 Mar 2007)
+
+  10 Mar 2007; Denis Dupeyron <calchan@gentoo.org> +libgeda-20070216.ebuild:
+  Version bump.
 
   09 Mar 2007; Denis Dupeyron <calchan@gentoo.org> libgeda-20060123.ebuild,
   libgeda-20061020.ebuild:
