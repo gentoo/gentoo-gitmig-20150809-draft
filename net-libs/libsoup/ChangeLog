@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.115 2007/01/26 22:52:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.116 2007/03/10 21:15:03 uberlord Exp $
+
+  10 Mar 2007; Roy Marples <uberlord@gentoo.org> libsoup-2.2.99.ebuild:
+  Added ~x86-fbsd keyword.
 
   26 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/libsoup-2.2.99-fix-tests.patch, libsoup-2.2.99.ebuild:
