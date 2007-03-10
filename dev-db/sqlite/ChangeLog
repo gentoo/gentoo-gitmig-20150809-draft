@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.135 2007/02/02 18:23:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.136 2007/03/10 18:18:52 chtekk Exp $
+
+  10 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/sqlite-3.2.1-data-corruption.patch,
+  -files/sqlite3-configure-debug.patch, -files/sqlite-3.2.1-tcl-fix.patch,
+  -files/sqlite-3-test-fix.patch, metadata.xml, -sqlite-2.8.16-r1.ebuild,
+  sqlite-2.8.16-r4.ebuild, -sqlite-3.2.1-r3.ebuild, sqlite-3.3.5-r1.ebuild,
+  -sqlite-3.3.6.ebuild, sqlite-3.3.12.ebuild:
+  Cleanup/fixup ebuilds, remove old ebuilds and patches, fix bug #156299.
 
   02 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.3.12.ebuild:
   The optional tcl support in sqlite must be enabled in sqlite to run tests.

@@ -1,22 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.12.ebuild,v 1.3 2007/02/28 22:03:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.12.ebuild,v 1.4 2007/03/10 18:18:52 chtekk Exp $
 
 inherit eutils alternatives libtool
 
-DESCRIPTION="SQLite: An SQL Database Engine in a C Library"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+
+DESCRIPTION="SQLite: an SQL Database Engine in a C Library."
 HOMEPAGE="http://www.sqlite.org/"
 SRC_URI="http://www.sqlite.org/${P}.tar.gz"
-
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="nothreadsafe doc tcl test debug"
+IUSE="debug doc nothreadsafe tcl"
 
-DEPEND="
-	doc? ( dev-lang/tcl )
-	tcl? ( dev-lang/tcl )
-	test? ( dev-lang/tcl )"
+DEPEND="doc? ( dev-lang/tcl )
+		tcl? ( dev-lang/tcl )"
 
 RDEPEND="tcl? ( dev-lang/tcl )"
 
@@ -25,30 +23,34 @@ ALTERNATIVES="${SOURCE}-3 ${SOURCE}-0"
 
 src_unpack() {
 	# test
-	if has test ${FEATURES}; then
-		if ! has userpriv ${FEATURES}; then
+	if has test ${FEATURES} ; then
+		if ! has userpriv ${FEATURES} ; then
 			ewarn "The userpriv feature must be enabled to run tests."
-			ewarn "Testsuite will not be run."
+			eerror "Testsuite will not be run."
 		fi
-		if ! use test || ! use tcl; then
-			eerror "The test and tcl useflags must be enabled to run tests."
-			ewarn "Please note that turning on tcl installs runtime support"
-			ewarn "too."
-			die "test or tcl use flag disabled"
+		if ! use tcl ; then
+			eerror "The tcl USE flag must be enabled to run tests."
+			ewarn "Please note that turning on tcl installs runtime"
+			ewarn "support too."
+			eerror "Testsuite will not be run."
 		fi
 	fi
 
 	unpack ${A}
+	cd "${S}"
 
-	cd ${P}
-	epatch ${FILESDIR}/sqlite-3.3.3-tcl-fix.patch
-	#epatch ${FILESDIR}/sqlite-3-test-fix-3.3.4.patch
+	epatch "${FILESDIR}"/sqlite-3.3.3-tcl-fix.patch
+	#epatch "${FILESDIR}"/sqlite-3-test-fix-3.3.4.patch
 
-	epatch ${FILESDIR}/sandbox-fix2.patch
+	#epatch "${FILESDIR}"/sandbox-fix1.patch
+	epatch "${FILESDIR}"/sandbox-fix2.patch
 
-	# Fix broken tests that are not portable to 64 arches
-	epatch ${FILESDIR}/sqlite-64bit-test-fix.patch
-	epatch ${FILESDIR}/sqlite-64bit-test-fix2.patch
+	# Fix broken tests that are not portable to 64bit arches
+	epatch "${FILESDIR}"/sqlite-64bit-test-fix.patch
+	epatch "${FILESDIR}"/sqlite-64bit-test-fix2.patch
+
+	# Respect LDFLAGS wrt bug #156299
+	sed -i -e 's/^LTLINK = .*/& $(LDFLAGS)/' Makefile.in
 
 	elibtoolize
 	epunt_cxx
@@ -58,22 +60,23 @@ src_compile() {
 	local myconf="--enable-incore-db --enable-tempdb-in-ram --enable-cross-thread-connections"
 
 	econf ${myconf} \
+		$(use_enable debug) \
 		$(use_enable !nothreadsafe threadsafe) \
 		$(use_enable tcl) \
-		$(use_enable debug) || die
+		|| die "econf failed"
 
-	emake all || die
+	emake all || die "emake all failed"
 
-	if use doc; then
-		emake doc || die
+	if use doc ; then
+		emake doc || die "emake doc failed"
 	fi
 }
 
 src_test() {
-	if use test ; then
+	if use tcl ; then
 		if has userpriv ${FEATURES} ; then
-			cd ${S}
-			if use debug; then
+			cd "${S}"
+			if use debug ; then
 				emake fulltest || die "some test failed"
 			else
 				emake test || die "some test failed"
@@ -86,12 +89,13 @@ src_install () {
 	make \
 		DESTDIR="${D}" \
 		TCLLIBDIR="/usr/$(get_libdir)" \
-		install || die
+		install \
+		|| die "make install failed"
 
 	newbin lemon lemon-${SLOT}
 
-	dodoc README VERSION || die
-	doman sqlite3.1 || die
+	dodoc README VERSION
+	doman sqlite3.1
 
-	use doc && 	dohtml doc/* art/*.gif
+	use doc && dohtml doc/* art/*.gif
 }
