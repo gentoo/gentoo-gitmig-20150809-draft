@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-gui-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.9 2007/03/02 20:57:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.10 2007/03/10 23:32:48 swegener Exp $
+
+*mysql-gui-tools-5.0_p10-r1 (10 Mar 2007)
+
+  10 Mar 2007; Sven Wegener <swegener@gentoo.org>
+  +mysql-gui-tools-5.0_p10-r1.ebuild:
+  Revision bump. Fix nls support, bug #167867. Enable MySQL Workbench, bug
+  #159957. Add local USE flags for all components.
 
 *mysql-gui-tools-5.0_p10 (02 Mar 2007)
 
