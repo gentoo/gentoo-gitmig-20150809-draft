@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gdm-themes-livecd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes-livecd/ChangeLog,v 1.2 2006/09/05 14:52:38 gustavoz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes-livecd/ChangeLog,v 1.3 2007/03/10 21:31:30 wolf31o2 Exp $
+
+  10 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  gdm-themes-livecd-2006.1.ebuild:
+  Stable on ia64. It's just a theme, anyway, so there's nothing arch-specific
+  with it.
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gdm-themes-livecd-2006.1.ebuild:
