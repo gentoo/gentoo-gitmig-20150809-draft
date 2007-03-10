@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.122 2006/07/07 02:33:47 dberkholz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.123 2007/03/10 20:17:17 kugelfang Exp $
+
+  10 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
+  opengl-update-2.2.4.ebuild:
+  QA: Removed all references to dyn_* functions.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update to my new email address.

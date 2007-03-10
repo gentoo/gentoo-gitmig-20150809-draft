@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.4.ebuild,v 1.9 2006/05/03 08:49:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.4.ebuild,v 1.10 2007/03/10 20:17:17 kugelfang Exp $
 
 inherit multilib
 
@@ -68,22 +68,8 @@ pkg_postinst() {
 src_install() {
 	newsbin ${FILESDIR}/opengl-update-${PV} opengl-update || die
 
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if has_multilib_profile && [ "${MLTEST/set_abi}" = "${MLTEST}" ]; then
-		OABI="${ABI}"
-		for ABI in $(get_install_abis); do
-			# Install default glext.h
-			insinto /usr/$(get_libdir)/opengl/global/include
-			doins ${WORKDIR}/glext.h || die
-			doins ${WORKDIR}/glxext.h || die
-		done
-		ABI="${OABI}"
-		unset OABI
-	else
-		# Install default glext.h
-		insinto /usr/$(get_libdir)/opengl/global/include
-		doins ${WORKDIR}/glext.h || die
-		doins ${WORKDIR}/glxext.h || die
-	fi
+	# Install default glext.h
+	insinto /usr/$(get_libdir)/opengl/global/include
+	doins ${WORKDIR}/glext.h || die
+	doins ${WORKDIR}/glxext.h || die
 }
