@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.62 2007/03/10 10:23:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.63 2007/03/10 21:21:17 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> povray-3.6.1-r2.ebuild:
+  Stable on ppc wrt bug 169473
 
   10 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> Manifest:
   Fix Manifest
