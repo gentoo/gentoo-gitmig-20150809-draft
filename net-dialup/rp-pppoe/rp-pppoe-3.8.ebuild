@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.13 2007/01/05 10:18:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.14 2007/03/10 14:22:46 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -56,14 +56,8 @@ src_install () {
 	make RPM_INSTALL_ROOT="${D}" docdir=/usr/share/doc/${PF} install \
 		|| die "install failed"
 
-	#Don't use compiled rp-pppoe plugin; use it from the current version of pppd
+	#Don't use compiled rp-pppoe plugin - see pkg_preinst below
 	rm "${D}/etc/ppp/plugins/rp-pppoe.so"
-	local PPPD_VER=`best_version net-dialup/ppp`
-	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
-	PPPD_VER=${PPPD_VER%%-*} #reduce it to ${PV}
-	if [ -n "${PPPD_VER}" ] && [ -f "${ROOT}/usr/lib/pppd/${PPPD_VER}/rp-pppoe.so" ] ; then
-		dosym /usr/lib/pppd/${PPPD_VER}/rp-pppoe.so /etc/ppp/plugins/rp-pppoe.so
-	fi
 
 	prepalldocs
 
@@ -71,6 +65,16 @@ src_install () {
 		make -C "${S}/gui" install RPM_INSTALL_ROOT="${D}" \
 		datadir=/usr/share/doc/${PF}/ || die "gui install failed"
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe
+	fi
+}
+
+pkg_preinst() {
+	# Use the rp-pppoe plugin that comes with net-dialup/pppd
+	local PPPD_VER=`best_version net-dialup/ppp`
+	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
+	PPPD_VER=${PPPD_VER%%-*} #reduce it to ${PV}
+	if [ -n "${PPPD_VER}" ] && [ -f "${ROOT}/usr/lib/pppd/${PPPD_VER}/rp-pppoe.so" ] ; then
+		dosym /usr/lib/pppd/${PPPD_VER}/rp-pppoe.so /etc/ppp/plugins/rp-pppoe.so
 	fi
 }
 
