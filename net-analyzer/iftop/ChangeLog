@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.33 2007/02/20 00:03:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.34 2007/03/10 19:30:54 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> iftop-0.17.ebuild:
+  Keyworded ~x86-fbsd
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
