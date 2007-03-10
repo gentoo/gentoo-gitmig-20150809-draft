@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.6 2006/09/20 08:59:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.7 2007/03/10 09:39:42 mrness Exp $
 
 opts="${opts} reload rotate"
 
@@ -24,14 +24,14 @@ maxfds() {
 
 checkconfig() {
 	maxfds
-	local CACHE_SWAP=`awk '/^[ \t]*cache_dir[ \t]+/ { printf "%s ", $3 ; }' < /etc/squid/squid.conf`
+	local CACHE_SWAP=$(awk '/^[ \t]*cache_dir[ \t]+/ { printf "%s ", $3 ; }' < /etc/squid/squid.conf)
 	[ -z "$CACHE_SWAP" ] && CACHE_SWAP=/var/cache/squid
 	umask 027
 	for x in $CACHE_SWAP ; do
 		if [ ! -d $x/00 ] ; then
 			ebegin "Initializing cache directories"
-			local INIT_CACHE_RESPONSE=`/usr/sbin/squid -z -N -D 2>&1`
-			if [ $? != 0 ] || [ "$INIT_CACHE_RESPONSE" != "${INIT_CACHE_RESPONSE/erminated abnormally}" ]; then
+			local INIT_CACHE_RESPONSE="$(/usr/sbin/squid -z -N -D 2>&1)"
+			if [ $? != 0 ] || echo "$INIT_CACHE_RESPONSE" | grep -q "erminated abnormally" ; then
 				eend 1
 				echo "$INIT_CACHE_RESPONSE"
 				return 1
@@ -59,7 +59,7 @@ stop() {
 		einfon "Waiting for squid to shutdown ."
 		cnt=0
 		while [ -f /var/run/squid.pid ] ; do
-			cnt=`expr $cnt + 1`
+			cnt=$(expr $cnt + 1)
 			if [ $cnt -gt 60 ] ; then
 				# Waited 120 seconds now. Fail.
 				echo

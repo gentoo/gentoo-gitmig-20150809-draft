@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.125 2007/02/25 20:32:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.126 2007/03/10 09:39:42 mrness Exp $
+
+*squid-2.6.10 (10 Mar 2007)
+
+  10 Mar 2007; Alin Năstac <mrness@gentoo.org>
+  +files/squid-2.6.10-ToS_Hit_ToS_Preserve.patch,
+  +files/squid-2.6.10-gentoo.patch, files/squid.initd,
+  files/squid.initd-logrotate, +squid-2.6.10.ebuild:
+  Version bump (#169947). Remove bash-specific code from init script (#170093).
 
 *squid-2.6.9-r1 (25 Feb 2007)
 
