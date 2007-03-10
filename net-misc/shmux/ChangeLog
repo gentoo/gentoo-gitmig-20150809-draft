@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.19 2007/03/05 23:09:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.20 2007/03/10 20:36:08 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> shmux-1.0.ebuild:
+  Stable on ppc wrt bug 169532
 
   05 Mar 2007; Raúl Porcel <armin76@gentoo.org> shmux-1.0.ebuild:
   x86 stable wrt bug 169532
