@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.196 2007/03/09 12:01:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.197 2007/03/10 13:38:41 pingu Exp $
+
+  10 Mar 2007; Christian Marie <pingu@gentoo.org> package.mask:
+  Removing net-www/bk_edit's mask as it is removed from the tree.
 
   09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Removed dev-java/jess-bin from the tree so removing the mask.
