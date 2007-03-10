@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.7 2007/03/10 14:43:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.8 2007/03/10 14:43:24 vapier Exp $
 
 inherit eutils
 
@@ -115,7 +115,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	${D}/usr/lib/fpc/${MY_PV}/samplecfg /usr/lib/fpc/${MY_PV} ${IMAGE}/etc
+	${D}/usr/lib/fpc/${MY_PV}/samplecfg /usr/lib/fpc/${MY_PV} ${D}/etc
 	case ${ARCH} in
 	x86)
 		FPCARCH=386
