@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.36 2007/03/03 19:55:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.37 2007/03/10 15:28:07 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> xxdiff-3.2.ebuild:
+  Stable on ppc wrt bug 166983
 
   03 Mar 2007; Simon Stelling <blubb@gentoo.org> xxdiff-3.2.ebuild:
   stable on amd64; bug 166983
