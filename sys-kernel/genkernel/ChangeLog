@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.163 2007/03/09 21:15:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.164 2007/03/10 21:30:16 wolf31o2 Exp $
+
+  10 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  genkernel-3.4.7_pre4.ebuild:
+  Marking genkernel 3.4.7_pre4 unstable, sincce it was an accident it went
+  stable.
 
 *genkernel-3.4.7_pre4 (09 Mar 2007)
 
