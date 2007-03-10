@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.34 2007/03/10 13:43:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.35 2007/03/10 14:12:08 lucass Exp $
+
+  10 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org> -pyxdg-0.8.ebuild,
+  -pyxdg-0.11.ebuild, -pyxdg-0.12.ebuild, -pyxdg-0.13.ebuild,
+  -pyxdg-0.14.ebuild, pyxdg-0.15.ebuild:
+  Minor cleanup in 0.15. Dropped old versions.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> pyxdg-0.15.ebuild:
   Stable on ppc wrt bug 148938
