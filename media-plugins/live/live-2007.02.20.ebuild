@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2007.02.20.ebuild,v 1.1 2007/03/03 14:43:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2007.02.20.ebuild,v 1.2 2007/03/10 09:27:20 aballier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -51,9 +51,12 @@ src_install() {
 	done
 
 	# Should we really install these?
-	find live-shared/testProgs -type f -perm +111 -print0 | \
+	find live-static/testProgs -type f -perm +111 -print0 | \
 		xargs -0 dobin
 
+	#install included live555MediaServer aplication
+	dobin live-static/mediaServer/live555MediaServer
+
 	# install docs
-	dodoc README
+	dodoc live-static/README
 }
