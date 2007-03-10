@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.6 2007/03/08 21:56:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.7 2007/03/10 15:11:11 corsair Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -24,7 +24,7 @@ for X in ${LANGS} ; do
 	# english is handled internally
 done
 
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~ppc64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 
