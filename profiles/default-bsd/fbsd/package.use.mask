@@ -1,3 +1,6 @@
+# arj doesn't work
+xfce-extra/xarchiver arj
+
 app-text/crm114 mew mimencode test
 
 # ptex isn't tested yet
