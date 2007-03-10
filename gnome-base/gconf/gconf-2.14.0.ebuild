@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.14.0.ebuild,v 1.15 2007/01/16 13:45:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.14.0.ebuild,v 1.16 2007/03/10 15:02:17 vapier Exp $
 
 inherit gnome2
 
@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.10
 	>=gnome-base/orbit-2.4
 	>=dev-libs/libxml2-2
 	dev-libs/popt"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
@@ -45,7 +44,8 @@ src_install() {
 	touch "${D}"/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
 	touch "${D}"/etc/gconf/gconf.xml.defaults/.keep${SLOT}
 
-	dodir /etc/env.d
+	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > 50gconf
+	doenvd 50gconf || die
 	dodir /root/.gconfd
 }
 
@@ -70,8 +70,6 @@ kill_gconf() {
 
 pkg_preinst() {
 	kill_gconf
-
-	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${IMAGE}/etc/env.d/50gconf
 }
 
 pkg_postinst() {
