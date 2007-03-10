@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.4 2007/01/31 14:31:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.5 2007/03/10 14:43:02 vapier Exp $
 
 inherit eutils
 
@@ -130,7 +130,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	${IMAGE}/usr/lib/fpc/${PV}/samplecfg /usr/lib/fpc/${PV} ${IMAGE}/etc
+	${D}/usr/lib/fpc/${PV}/samplecfg /usr/lib/fpc/${PV} ${IMAGE}/etc
 	case ${ARCH} in
 		x86)	FPC_ARCH="386" ;;
 		ppc)	FPC_ARCH="ppc" ;;
@@ -138,7 +138,7 @@ pkg_preinst() {
 		sparc)	FPC_ARCH="sparc" ;;
 		*) die "This ebuild doesn't support ${ARCH}." ;;
 	esac
-	ln -s ../lib/fpc/${PV}/ppc${FPC_ARCH} ${IMAGE}/usr/bin/
+	ln -s ../lib/fpc/${PV}/ppc${FPC_ARCH} ${D}/usr/bin/
 }
 
 pkg_postinst() {
