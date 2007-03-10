@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.4 2007/02/10 09:09:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.5 2007/03/10 14:50:27 vapier Exp $
 
 inherit eutils linux-mod
 
@@ -13,11 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-RDEPEND=">=net-dialup/capi4k-utils-20050718
-	sys-devel/bc"
-
-S="${WORKDIR}/${MY_P}/drivers/isdn/hardware/mISDN"
-
 # list of echo canceller use flags,
 # first active in this list is selected (=order does matter)
 MISDN_EC_FLAGS="ecmg2 eckb1 ecmark2"
@@ -28,6 +23,11 @@ MISDN_KCONFIG=("AVM_FRITZ" "HFCPCI" "HFCMULTI" "HFCUSB" "HFCMINI" "XHFC" "SPEEDF
 
 IUSE="ecaggressive ${MISDN_EC_FLAGS}"
 for i in ${MISDN_MODULES[@]}; do IUSE="${IUSE} misdn_cards_${i}"; done
+
+RDEPEND=">=net-dialup/capi4k-utils-20050718
+	sys-devel/bc"
+
+S=${WORKDIR}/${MY_P}/drivers/isdn/hardware/mISDN
 
 ### Begin: Helper functions
 
@@ -165,11 +165,11 @@ src_install() {
 
 pkg_preinst() {
 	if [ -e "${ROOT}"/etc/misdn-init.conf ]; then
-		cp "${ROOT}"/etc/misdn-init.conf "${IMAGE}"/etc
+		cp "${ROOT}"/etc/misdn-init.conf "${D}"/etc
 	else
-		sed -i -e "s:/etc/misdn-init.conf:${IMAGE}\0:" "${IMAGE}"/usr/sbin/misdn-init
-		"${IMAGE}"/usr/sbin/misdn-init config
-		sed -i -e "s:${IMAGE}/etc/misdn-init.conf:/etc/misdn-init.conf:" "${IMAGE}"/usr/sbin/misdn-init
+		sed -i -e "s:/etc/misdn-init.conf:${D}\0:" "${D}"/usr/sbin/misdn-init
+		"${D}"/usr/sbin/misdn-init config
+		sed -i -e "s:${D}/etc/misdn-init.conf:/etc/misdn-init.conf:" "${D}"/usr/sbin/misdn-init
 	fi
 }
 
