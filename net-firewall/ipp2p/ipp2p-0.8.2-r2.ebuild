@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r2.ebuild,v 1.5 2007/01/16 17:12:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r2.ebuild,v 1.6 2007/03/10 11:11:19 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -41,15 +41,15 @@ src_unpack() {
 }
 
 src_compile() {
-	local IPTABLES_VERSION="$("${ROOT}"/sbin/iptables --version | cut -f2 -dv)"
+	local IPTABLES_VERSION="$(/sbin/iptables --version | cut -f2 -dv)"
 	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" \
-	    IPTABLES_SRC="${ROOT}/usr" IPTABLES_VERSION="${IPTABLES_VERSION}" libipt_ipp2p.so \
+	    IPTABLES_SRC="/usr" IPTABLES_VERSION="${IPTABLES_VERSION}" libipt_ipp2p.so \
 	    || die "Failed to build iptables module"
 
 	local myARCH="${ARCH}"
 	ARCH="$(tc-arch-kernel)"
 	emake KERNEL_SRC="${KV_DIR}" \
-	    IPTABLES_SRC="${ROOT}/usr" IPTABLES_VERSION="${IPTABLES_VERSION}" \
+	    IPTABLES_SRC="/usr" IPTABLES_VERSION="${IPTABLES_VERSION}" \
 	    || die "Failed to build kernel module."
 	ARCH="${myARCH}"
 }
