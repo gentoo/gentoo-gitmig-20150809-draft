@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.40 2007/02/04 19:10:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.41 2007/03/10 11:31:10 eroyf Exp $
+
+  10 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  htmltidy-5.10.26-r2.ebuild:
+  Stable on MIPS.
 
   04 Feb 2007; Steve Dibb <beandog@gentoo.org> htmltidy-5.10.26-r2.ebuild:
   amd64 stable, bug 155327
