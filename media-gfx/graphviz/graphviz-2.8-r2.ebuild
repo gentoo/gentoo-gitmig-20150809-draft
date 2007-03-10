@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.15 2007/03/06 20:13:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.16 2007/03/10 22:22:14 vapier Exp $
 
-inherit eutils libtool autotools
+inherit eutils libtool autotools toolchain-funcs
 
 DESCRIPTION="Open Source Graph Visualization Software"
 HOMEPAGE="http://www.graphviz.org/"
