@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.1 2007/02/28 00:28:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.2 2007/03/10 09:20:27 lucass Exp $
+
+*configobj-4.4.0 (10 Mar 2007)
+
+  10 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -configobj-4.3.2.ebuild, +configobj-4.4.0.ebuild:
+  Version bump: added src_test. Removed 4.3.2.
 
   05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> configobj-4.3.2.ebuild:
   Added ~amd64 keyword
