@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r3.ebuild,v 1.13 2007/01/08 15:33:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r3.ebuild,v 1.14 2007/03/10 14:26:22 vapier Exp $
 
 inherit eutils versionator pam
 
@@ -280,13 +280,13 @@ pkg_preinst() {
 	if [[ ! -r ${ROOT}/${PRIVATE_DST}/secrets.tdb \
 		&& -r ${ROOT}/${PRIVATE_SRC}/secrets.tdb ]]; then
 		ebegin "Copying ${ROOT}/${PRIVATE_SRC}/* to ${ROOT}/${PRIVATE_DST}/"
-			mkdir -p ${IMAGE}/${PRIVATE_DST}
-			cp -pPRf ${ROOT}/${PRIVATE_SRC}/* ${IMAGE}/${PRIVATE_DST}/
+			mkdir -p ${D}/${PRIVATE_DST}
+			cp -pPRf ${ROOT}/${PRIVATE_SRC}/* ${D}/${PRIVATE_DST}/
 		eend $?
 	fi
 
 	if [[ ! -f "${ROOT}/etc/samba/smb.conf" ]]; then
-		touch ${IMAGE}/etc/samba/smb.conf
+		touch ${D}/etc/samba/smb.conf
 	fi
 }
 

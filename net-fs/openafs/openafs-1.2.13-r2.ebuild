@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13-r2.ebuild,v 1.1 2005/09/02 16:50:36 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13-r2.ebuild,v 1.2 2007/03/10 14:26:12 vapier Exp $
 
 inherit fixheadtails flag-o-matic eutils toolchain-funcs versionator
 
@@ -255,17 +255,17 @@ pkg_preinst() {
 	if [ ! -e ${ROOT}etc/openafs/CellServDB ] \
 		|| grep "GCO Public CellServDB" ${ROOT}etc/openafs/CellServDB &> /dev/null
 	then
-		cp ${CONFDIR}/CellServDB ${IMAGE}etc/openafs
+		cp ${CONFDIR}/CellServDB ${D}etc/openafs
 	fi
 	# cacheinfo: use a default location cache, 50 megabyte in size
 	# (should be safe for about any root partition, the user can increase
 	# the size as required)
 	if [ ! -e ${ROOT}etc/openafs/cacheinfo ]; then
-		echo "/afs:/var/cache/openafs:50000" > ${IMAGE}etc/openafs/cacheinfo
+		echo "/afs:/var/cache/openafs:50000" > ${D}etc/openafs/cacheinfo
 	fi
 	# ThisCell: default to "openafs.org"
 	if [ ! -e ${ROOT}etc/openafs/ThisCell ]; then
-		echo "openafs.org" > ${IMAGE}etc/openafs/ThisCell
+		echo "openafs.org" > ${D}etc/openafs/ThisCell
 	fi
 }
 

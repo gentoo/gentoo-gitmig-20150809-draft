@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.10.ebuild,v 1.8 2007/02/23 22:12:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.10.ebuild,v 1.9 2007/03/10 14:25:03 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -87,7 +87,7 @@ src_install() {
 
 pkg_preinst() {
 	if [[ -s ${ROOT}/etc/exports ]] ; then
-		rm -f "${IMAGE}"/etc/exports
+		rm -f "${D}"/etc/exports
 	fi
 }
 
