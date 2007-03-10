@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.89 2007/03/10 08:30:33 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.90 2007/03/10 16:46:40 nixnut Exp $
+
+  10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-panel-4.4.0.ebuild:
+  Stable on ppc wrt bug 169987
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-panel-4.4.0.ebuild:
   Stable on amd64 wrt bug 169987
