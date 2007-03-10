@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.0.3.ebuild,v 1.3 2007/03/10 22:26:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.0.3.ebuild,v 1.4 2007/03/10 22:28:22 vapier Exp $
 
 if [[ ${PV} == "9999" ]] ; then
 	ECVS_SERVER="savannah.gnu.org:/cvsroot/nano"
@@ -9,10 +9,10 @@ if [[ ${PV} == "9999" ]] ; then
 	ECVS_USER="anonymous"
 	inherit cvs
 else
+	MY_P=${PN}-${PV/_}
 	SRC_URI="http://www.nano-editor.org/dist/v${PV:0:3}/${MY_P}.tar.gz"
 fi
 
-MY_P=${PN}-${PV/_}
 DESCRIPTION="GNU GPL'd Pico clone with more functionality"
 HOMEPAGE="http://www.nano-editor.org/"
 
