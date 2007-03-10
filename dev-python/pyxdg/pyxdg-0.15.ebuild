@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.15.ebuild,v 1.3 2006/11/20 18:05:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.15.ebuild,v 1.4 2007/03/10 11:09:50 welp Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.freedesktop.org/~lanius/${P}.tar.gz"
 HOMEPAGE="http://pyxdg.freedesktop.org/"
 LICENSE="LGPL-2"
 
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
+KEYWORDS="amd64 ~ia64 ~ppc x86 ~x86-fbsd"
 DEPEND=">=dev-lang/python-2.4"
 SLOT="0"
 IUSE=""
