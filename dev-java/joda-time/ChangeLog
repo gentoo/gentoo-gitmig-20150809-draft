@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joda-time
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.19 2007/03/09 23:17:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.20 2007/03/10 23:46:23 betelgeuse Exp $
+  
+  10 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> joda-time-1.4.ebuild:
+  Add a note about tests most likely failing with <sys-libs/timezone-data-2007c.
 
   09 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   joda-time-1.4.ebuild:
