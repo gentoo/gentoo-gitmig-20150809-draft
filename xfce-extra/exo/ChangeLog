@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.38 2007/03/09 17:44:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.39 2007/03/10 07:50:32 drac Exp $
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org> exo-0.3.2.ebuild:
+  Better description as requested by nightmorph.
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> exo-0.3.2.ebuild:
   Stable for HPPA (bug #169987).
