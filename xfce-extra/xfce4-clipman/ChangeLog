@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-clipman
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.28 2007/03/09 18:33:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.29 2007/03/10 07:40:46 drac Exp $
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-clipman-0.4.1-r1.ebuild, -xfce4-clipman-0.4.1-r2.ebuild:
+  Porting to modular X.
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> xfce4-clipman-0.8.0.ebuild:
   Stable for HPPA (bug #169987).
