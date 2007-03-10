@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.54 2007/03/08 00:42:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.55 2007/03/10 14:48:57 opfer Exp $
+
+  10 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  netbeans-3.6-r1.ebuild:
+  stable x86, bug 102099
 
   08 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -netbeans-3.4.1.ebuild:
