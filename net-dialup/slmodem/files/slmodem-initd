@@ -17,7 +17,7 @@ checkconfig() {
 	fi
 }
 
-function loadsalsa {
+loadsalsa {
 	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
@@ -25,7 +25,7 @@ function loadsalsa {
 	return ${?}
 }
 
-function loadsmodule {
+loadsmodule {
 	modprobe ${MODULE}
 
 	if [ "$?" -gt 0 ]; then
@@ -60,7 +60,7 @@ start() {
 	# either if we use alsa or not, the only thing we need is 
 	# ttySL0, which is created by slmodemd when started (points to a pts)
 
-	if [ "${MODULE}" == "alsa" ]; then
+	if [ "${MODULE}" = "alsa" ]; then
 		loadsalsa
 	else
 		loadsmodule
@@ -80,15 +80,10 @@ stop() {
 	[ -e /var/run/slmodemd.pid ] && rm /var/run/slmodemd.pid
 	unlink ${LN_DEV} 2> /dev/null
 	eend ${result}
-	if [ ! "${MODULE}" == "alsa" ];	then
-		ebegin "Waiting for ${MODULE} modem driver unload"
-		if [ "$RC_NOCOLOR" != "yes" ]; then
-			echo -e "\e[A\e[44G   "
-			echo -ne "\e[A\e[44G"
-		fi
-		for ((a=0,result=1; result==1 && a <= 5 ; a++))
-		do
-			sleep 0.25
+	if [ ! "${MODULE}" = "alsa" ];	then
+		ebegin "Waiting for ${MODULE} modem driver unload..."
+		for a in $(seq 0 2); do
+			sleep 1
 			echo -n "."
 			modprobe -r slamr 2> /dev/null && result=0
 		done
