@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.2.ebuild,v 1.2 2007/03/09 01:36:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.2-r1.ebuild,v 1.1 2007/03/10 13:59:27 beandog Exp $
 
 inherit mono
 
@@ -12,9 +12,9 @@ IUSE="mplayer"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND=">=dev-lang/mono-1.1
-	>=dev-dotnet/art-sharp-2.8
-	>=dev-dotnet/gnome-sharp-2.8
-	>=dev-dotnet/glade-sharp-2.8"
+	>=dev-dotnet/gtk-sharp-2.10
+	>=dev-dotnet/gnome-sharp-2.8.0
+	>=dev-dotnet/glade-sharp-2.10.0"
 RDEPEND="mplayer? ( media-video/mplayer )"
 
 src_install() {
