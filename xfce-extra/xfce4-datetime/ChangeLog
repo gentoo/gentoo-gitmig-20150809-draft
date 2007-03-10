@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-datetime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.21 2007/03/09 18:35:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.22 2007/03/10 08:55:17 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-datetime-0.5.0.ebuild:
+  Stable on amd64 wrt bug 169987
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> xfce4-datetime-0.5.0.ebuild:
   Stable for HPPA (bug #169987).

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.35 2007/03/09 17:54:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.36 2007/03/10 09:21:07 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> terminal-0.2.6-r1.ebuild:
+  Stable on amd64 wrt bug 169987
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> terminal-0.2.6-r1.ebuild:
   Stable for HPPA (bug #169987).

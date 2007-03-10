@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-timer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer/ChangeLog,v 1.6 2007/03/09 18:43:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer/ChangeLog,v 1.7 2007/03/10 09:12:52 welp Exp $
+
+  10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-timer-0.5.1.ebuild:
+  Stable on amd64 wrt bug 169987
 
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> xfce4-timer-0.5.1.ebuild:
   Stable for HPPA (bug #169987).
