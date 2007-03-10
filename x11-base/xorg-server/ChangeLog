@@ -1,6 +1,18 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.219 2007/02/19 21:34:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.220 2007/03/10 00:39:54 dberkholz Exp $
+
+*xorg-server-1.2.99.901 (10 Mar 2007)
+
+  10 Mar 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xorg-server-1.2.99.901.ebuild:
+  Bump to 1.3 RC1. This contains RandR 1.2 for monitor hotplugging etc,
+  assuming you have a supported driver (only intel at present, radeon in the
+  works), and you also need the updated libXrandr and x11-apps/xrandr. It also
+  merges the damage-tracking work for EXA (the newer acceleration
+  architecture) as well as some other fixes. It does NOT contain input-device
+  hotplugging despite the higher version number than 1.2.99.0, because of a
+  change in release-versioning plans.
 
 *xorg-server-1.2.0-r1 (19 Feb 2007)
 
