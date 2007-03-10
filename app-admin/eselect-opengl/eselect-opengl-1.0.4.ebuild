@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.4.ebuild,v 1.4 2007/03/07 21:16:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.4.ebuild,v 1.5 2007/03/10 20:06:07 kugelfang Exp $
 
 inherit multilib
 
@@ -76,22 +76,8 @@ src_install() {
 	insinto /usr/share/eselect/modules
 	doins opengl.eselect
 
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if has_multilib_profile && [[ "${MLTEST/set_abi}" = "${MLTEST}" ]] ; then
-		OABI="${ABI}"
-		for ABI in $(get_install_abis); do
-			# Install default glext.h
-			insinto /usr/$(get_libdir)/opengl/global/include
-			doins ${WORKDIR}/glext.h || die
-			doins ${WORKDIR}/glxext.h || die
-		done
-		ABI="${OABI}"
-		unset OABI
-	else
-		# Install default glext.h
-		insinto /usr/$(get_libdir)/opengl/global/include
-		doins ${WORKDIR}/glext.h || die
-		doins ${WORKDIR}/glxext.h || die
-	fi
+	# Install default glext.h
+	insinto /usr/$(get_libdir)/opengl/global/include
+	doins ${WORKDIR}/glext.h || die
+	doins ${WORKDIR}/glxext.h || die
 }
