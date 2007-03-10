@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.42 2007/03/10 10:14:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.43 2007/03/10 14:54:55 drac Exp $
+
+  10 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-extras-4.4.0-r1.ebuild, xfce4-extras-4.4.0-r2.ebuild:
+  Remove ~x86-fbsd from KEYWORDS. Commit for welp.
 
   10 Mar 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-extras-4.4.0-r2.ebuild:
