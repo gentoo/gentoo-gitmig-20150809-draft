@@ -4,5 +4,10 @@
 <herd>no-herd</herd>
 <maintainer>
   <email>kingtaco@gentoo.org</email>
+  <description>Proxy maintainer</description>
+</maintainer>
+<maintainer>
+  <email>pacho@condmat1.ciencias.uniovi.es</email>
+  <name>Pacho Ramos</name>
 </maintainer>
 </pkgmetadata>
