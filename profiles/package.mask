@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6953 2007/03/10 13:38:41 pingu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6954 2007/03/10 14:15:01 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -314,14 +314,6 @@ net-p2p/mnet
 # Pending removal March 11th; As upstream, I stopped development on this ages
 # ago.
 app-portage/portage-prefpane
-
-# Samuli Suominen <drac@gentoo.org> (11 Feb 2007)
-# CVS is dead for 3 years. Bad USE of static. Libtool is broken
-# and it is maintainer-needed.
-dev-libs/libtc
-dev-libs/tc2
-dev-libs/tc2-modules
-media-video/tcvp
 
 # Mike Frysinger <vapier@gentoo.org> (11 Feb 2007)
 # Use mdadm; this package is dead.
