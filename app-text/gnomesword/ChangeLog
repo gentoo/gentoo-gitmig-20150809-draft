@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.18 2007/03/09 01:33:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.19 2007/03/10 21:20:34 uberlord Exp $
+
+  10 Mar 2007; Roy Marples <uberlord@gentoo.org> gnomesword-2.2.2.1.ebuild:
+  Added ~x86-fbsd keyword.
 
 *gnomesword-2.2.2.1 (09 Mar 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.10 2007/01/28 06:06:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.11 2007/03/10 21:22:21 uberlord Exp $
 
 CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"
@@ -36,7 +36,7 @@ SRC_URI="${CROSSWIREFTP}/KJV.zip
 RESTRICT="nomirror"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="intl"
 
 S=${WORKDIR}

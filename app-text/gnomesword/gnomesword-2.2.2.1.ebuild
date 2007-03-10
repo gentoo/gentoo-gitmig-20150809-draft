@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.2.2.1.ebuild,v 1.1 2007/03/09 01:33:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.2.2.1.ebuild,v 1.2 2007/03/10 21:20:34 uberlord Exp $
 
 inherit libtool gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnomesword.sf.net/"
 SRC_URI="mirror://sourceforge/gnomesword/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="spell"
 RDEPEND="=gnome-extra/gtkhtml-3*
 	=app-text/sword-1.5.9*
