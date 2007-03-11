@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p10-r1.ebuild,v 1.1 2007/03/10 23:32:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p10-r1.ebuild,v 1.2 2007/03/11 11:13:55 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -66,8 +66,8 @@ src_compile() {
 	cd "${S}"/mysql-gui-common
 	use nls || sed -i -e "/^SUBDIRS = / s/\\bpo\\b//" Makefile.{am,in}
 	gnome2_src_compile \
-		--enable-grt \
-		--enable-canvas \
+		$(use_enable workbench grt) \
+		$(use_enable workbench canvas) \
 		$(use_enable nls i18n) \
 
 	if use administrator
