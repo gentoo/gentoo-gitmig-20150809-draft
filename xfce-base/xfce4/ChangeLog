@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.89 2007/03/10 18:58:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.90 2007/03/11 10:02:02 drac Exp $
+
+  11 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
+  Stop installing xffm and xfcalendar.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-4.4.0.ebuild:
   Stable on ppc wrt bug 169987

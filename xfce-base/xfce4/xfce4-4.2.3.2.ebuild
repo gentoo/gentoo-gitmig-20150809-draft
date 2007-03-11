@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.14 2007/01/18 14:56:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.15 2007/03/11 10:02:02 drac Exp $
 
 inherit versionator
 
@@ -31,12 +31,9 @@ RDEPEND="${DEPEND}
 	~xfce-extra/xfce4-toys-${MY_PV}
 	~xfce-extra/xfce4-trigger-launcher-${MY_PV}
 	~xfce-extra/xfwm4-themes-${MY_PV}
-	~xfce-extra/xfcalendar-${MY_PV}
 	~xfce-extra/xfce4-appfinder-${MY_PV}
 	~xfce-extra/xfce4-icon-theme-${MY_PV}
-	~xfce-base/xffm-${MY_PV}
-	~xfce-extra/xfce4-mixer-${MY_PV}
-	!xfce-base/xfce4-base"
+	~xfce-extra/xfce4-mixer-${MY_PV}"
 
 src_install() {
 	dodir /etc/X11/Sessions
@@ -45,8 +42,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	ewarn "As of Xfce 4.2 xfce-base/xfce4-base is deprecated, please remove it."
 	einfo
 	einfo "For extra functionality please emerge xfce-base/xfce4-extras."
 	einfo "To start Xfce the default script is startxfce4."
