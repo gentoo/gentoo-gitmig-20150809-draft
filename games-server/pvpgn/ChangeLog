@@ -1,6 +1,9 @@
 # ChangeLog for games-server/pvpgn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.11 2007/03/07 17:22:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.12 2007/03/11 05:52:35 mr_bones_ Exp $
+
+  11 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> pvpgn-1.8.0.ebuild:
+  fix sed with patch from Nikolay Shley (bug #170170)
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> -files/init.d.rc,
   +files/pvpgn.rc, pvpgn-1.6.6.ebuild, pvpgn-1.8.0.ebuild:

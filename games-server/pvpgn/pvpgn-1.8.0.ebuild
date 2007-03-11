@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.4 2007/03/07 17:22:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.5 2007/03/11 05:52:35 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -55,12 +55,13 @@ src_install() {
 	for f in bnetd d2cs d2dbs ; do
 		newinitd "${FILESDIR}/${PN}.rc" ${f}
 		sed -i \
-			-e "s:NAME:${f}:g" \
-			-e "s:GAMES_BINDIR:${GAMES_BINDIR}:g" \
-			-e "s:GAMES_USER:${GAMES_USER_DED}:g" \
-			-e "s:GAMES_GROUP:${GAMES_GROUP}:g" \
-			"${D}/etc/${PN}/${f}" \
-			|| die "sed failed"
+				-e "s:NAME:${f}:g" \
+				-e "s:GAMES_BINDIR:${GAMES_BINDIR}:g" \
+				-e "s:GAMES_USER:${GAMES_USER_DED}:g" \
+				-e "s:GAMES_GROUP:${GAMES_GROUP}:g" \
+				"${D}/etc/games/${PN}/${f}.conf" \
+				"${D}/etc/init.d/${f}" \
+				|| die "sed failed"
 	done
 
 	prepgamesdirs
