@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6957 2007/03/11 16:28:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6958 2007/03/11 19:16:59 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (11 Mar 2007)
+# Mask for removal in 60 days, for treecleaners
+# Bug 153355, use net-misc/aria2
+net-misc/aria
 
 # Stefan Schweizer <genstef@gentoo.org> (11 Mar 2007)
 # mask dev-util/scons-0.96.95 because it fails with qt3 apps, bug 169101
