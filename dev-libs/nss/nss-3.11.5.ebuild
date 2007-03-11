@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.5.ebuild,v 1.8 2007/03/11 00:59:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.5.ebuild,v 1.9 2007/03/11 12:31:42 armin76 Exp $
 
 inherit eutils flag-o-matic multilib
 
-NSPR_VER="4.6.3"
+NSPR_VER="4.6.5"
 RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Netscape Security Services Library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
@@ -12,11 +12,10 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="virtual/libc
-	app-arch/zip
+DEPEND="app-arch/zip
 	>=dev-libs/nspr-${NSPR_VER}"
 
 src_unpack() {

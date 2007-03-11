@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.89 2007/03/11 00:59:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.90 2007/03/11 12:31:42 armin76 Exp $
+
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> nss-3.11.5.ebuild:
+  3.11.5 needs nspr-4.6.5
 
   11 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> nss-3.11.5.ebuild:
   Stable on Alpha + IA64.
