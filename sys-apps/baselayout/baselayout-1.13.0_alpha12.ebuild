@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha12.ebuild,v 1.4 2007/03/10 14:30:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha12.ebuild,v 1.5 2007/03/11 01:56:15 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -186,6 +186,7 @@ pkg_postinst() {
 		svcdir="${svcdir:-/var/lib/init.d}"
 		einfo "Moving state from ${ROOT}${svcdir} to ${ROOT}lib/rcscripts/init.d"
 		cp -RPp "${ROOT}${svcdir}"/* "${ROOT}"lib/rcscripts/init.d
+		rm -rf "${ROOT}"lib/rcscripts/init.d/daemons
 		umount "${ROOT}${svcdir}" 2>/dev/null
 		rm -rf "${ROOT}${svcdir}"
 		)
@@ -276,6 +277,7 @@ pkg_postrm() {
 		einfo "Moving state from ${ROOT}lib/rcscripts/init.d to ${ROOT}${svcdir}"
 		mkdir -p "${ROOT}${svcdir}"
 		cp -RPp "${ROOT}lib/rcscripts/init.d"/* "${ROOT}${svcdir}"
+		rm -rf "${ROOT}${svcdir}"/daemons
 		umount "${ROOT}lib/rcscripts/init.d" 2>/dev/null
 		rm -rf "${ROOT}lib/rcscripts/init.d"
 		)
