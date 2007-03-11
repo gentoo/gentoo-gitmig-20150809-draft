@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.39 2007/03/10 17:48:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.40 2007/03/11 10:29:02 drac Exp $
+
+  11 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-systemload-0.3.6.ebuild, -xfce4-systemload-0.3.6-r1.ebuild:
+  Porting to Modular X.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-systemload-0.4.2.ebuild:
   Stable on ppc wrt bug 169987
