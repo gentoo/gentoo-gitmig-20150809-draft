@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/haskell-src
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.1 2007/03/11 16:43:35 kolmodin Exp $
+
+*haskell-src-1.0 (11 Mar 2007)
+
+  11 Mar 2007; <kolmodin@gentoo.org> +metadata.xml, +haskell-src-1.0.ebuild:
+  Add dummy package meant for GHC 6.4
+
