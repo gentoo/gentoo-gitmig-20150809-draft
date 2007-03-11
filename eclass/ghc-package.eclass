@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.20 2006/10/04 17:45:35 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.21 2007/03/11 15:53:31 kolmodin Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 # Maintained by: Haskell herd <haskell@gentoo.org>
@@ -250,6 +250,12 @@ ghc-listpkg() {
 	done
 }
 
+# exported function: check if we have a consistent ghc installation
+ghc-package_pkg_setup() {
+	#place holder for sanity check of ghc vs ghc-bin version issues
+	return
+}
+
 # exported function: registers the package-specific package
 # configuration file
 ghc-package_pkg_postinst() {
@@ -264,4 +270,4 @@ ghc-package_pkg_prerm() {
 	ghc-unregister-pkg "$(ghc-localpkgconf)"
 }
 
-EXPORT_FUNCTIONS pkg_postinst pkg_prerm
+EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm
