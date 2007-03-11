@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.3-r1.ebuild,v 1.1 2007/03/11 16:33:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.3-r1.ebuild,v 1.2 2007/03/11 21:18:44 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -12,7 +12,7 @@ SHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP ko-KR nb-NO nl-NL pl
 EMVER=${PV}
 TBVER="2.0b2"
 MY_TBVER="2.0_beta2"
-TBPVER="0.2"
+TBPVER="0.4"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://enigmail.mozdev.org"
@@ -89,7 +89,10 @@ src_unpack() {
 	cd ${S} || die "cd failed"
 
 	# Apply our patches
-	EPATCH_FORCE="yes" epatch "${WORKDIR}"/patch
+	cd "${S}" || die "cd failed"
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"/patch
 
 	# Unpack the enigmail plugin
 	cd ${S}/mailnews/extensions || die

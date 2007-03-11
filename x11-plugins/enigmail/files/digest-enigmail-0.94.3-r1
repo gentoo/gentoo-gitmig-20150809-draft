@@ -67,9 +67,9 @@ SHA256 afa3b754d9372cc531752e83909c6147cdc10d7a5ef42f364dc8cbbc686af93c enigmail
 MD5 ea388891cc3e67a5c69345608e2ca127 enigmail-zh-CN-0.9x.xpi 31747
 RMD160 a65e2a014777d1d13c9d45e14b6f9abec03b75f2 enigmail-zh-CN-0.9x.xpi 31747
 SHA256 628141041a7b316ede43cb0fda01d834dc02b344f6ad6b491d4329d2eead7512 enigmail-zh-CN-0.9x.xpi 31747
-MD5 dcb39e065bd6820cc3d57dd654f1453c mozilla-thunderbird-2.0_beta2-patches-0.2.tar.bz2 26151
-RMD160 69590103844c3b8f2869843b4781ee2d37520ed1 mozilla-thunderbird-2.0_beta2-patches-0.2.tar.bz2 26151
-SHA256 87d107b17745d1be1cfe488276bb9c70afdfbebb9d02a52ecdac43559e3324c8 mozilla-thunderbird-2.0_beta2-patches-0.2.tar.bz2 26151
+MD5 ff7a931c994fcc68d50cbb10b32aa2dd mozilla-thunderbird-2.0_beta2-patches-0.4.tar.bz2 26971
+RMD160 22b58906b2e9dcae0835046ef865c422e00d5e99 mozilla-thunderbird-2.0_beta2-patches-0.4.tar.bz2 26971
+SHA256 d11820b6d25d0bf8f0788c920188458acd5f357c56dbd9ab5928509ce72ef21b mozilla-thunderbird-2.0_beta2-patches-0.4.tar.bz2 26971
 MD5 b633623c460ffef9ba805dd071729890 thunderbird-2.0b2-source.tar.bz2 37092627
 RMD160 8c4a3c950bbe8a52a9a901a48fb0d5f248b578f7 thunderbird-2.0b2-source.tar.bz2 37092627
 SHA256 9556338b782c93e737dc084f5096352cb5500a7ae839fa2e6a2d46ebad433b16 thunderbird-2.0b2-source.tar.bz2 37092627
