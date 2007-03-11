@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/mousepad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/ChangeLog,v 1.33 2007/03/10 16:44:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/ChangeLog,v 1.34 2007/03/11 10:16:54 drac Exp $
+
+  11 Mar 2007; Samuli Suominen <drac@gentoo.org> mousepad-0.2.2.ebuild,
+  -mousepad-0.2.2-r1.ebuild:
+  Porting to Modular X.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> mousepad-0.2.12.ebuild:
   Stable on ppc wrt bug 169987
