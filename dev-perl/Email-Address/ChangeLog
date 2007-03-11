@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-Address
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.28 2007/03/05 11:42:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.29 2007/03/11 00:06:06 mcummings Exp $
+
+*Email-Address-1.88.6 (11 Mar 2007)
+
+  11 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  +Email-Address-1.88.6.ebuild:
+  Version bump
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Email-Address-1.88.4.ebuild:
   Stable on x86, bug #169152.
