@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.422.ebuild,v 1.1 2007/03/10 14:11:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.423.ebuild,v 1.1 2007/03/11 14:32:58 armin76 Exp $
 
 inherit eutils
 
@@ -11,15 +11,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc64 ~x86"
-IUSE=""
+IUSE="perl"
 
-DEPEND="dev-lang/perl"
+DEPEND="perl? ( dev-lang/perl )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch ${FILESDIR}/dbhub-gentoo.patch
+}
+
+src_compile() {
+	econf $(use_enable perl) || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
