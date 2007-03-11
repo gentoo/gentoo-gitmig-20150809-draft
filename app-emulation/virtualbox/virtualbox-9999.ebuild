@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions sdk vboxbfe vditool wrapper"
+IUSE="additions alsa sdk vboxbfe vditool wrapper"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
