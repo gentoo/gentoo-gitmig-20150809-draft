@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.38 2007/03/04 01:15:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.39 2007/03/11 00:02:29 tgall Exp $
+
+  10 Mar 2007; Tom Gall <tgall@gentoo.org> fxruby-1.6.4.ebuild:
+  added ~ppc64
 
   04 Mar 2007; Jeroen Roovers <jer@gentoo.org> fxruby-1.4.7.ebuild,
   fxruby-1.6.4.ebuild:
@@ -21,7 +24,7 @@
   Fix depend on all fox versions, only seems to build with fox-1.2*. Bug
   #162562.
 
-  21 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  21 Jan 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   fxruby-1.2.6.ebuild, fxruby-1.4.7.ebuild, fxruby-1.6.4.ebuild:
   Added examples use flag to ebuild, #145222
 
@@ -32,7 +35,7 @@
   +fxruby-1.6.4.ebuild:
   revision bumps (bug #88924)
 
-  29 Oct 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  29 Oct 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   -fxruby-1.0.25.ebuild, -fxruby-1.0.29-r1.ebuild:
   Removed fxruby-1.0* due to #153234
 
@@ -59,7 +62,7 @@
   23 Sep 2005; Caleb Tennis <caleb@gentoo.org> fxruby-1.2.6.ebuild:
   x86 stable
 
-  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> fxruby-1.0.25.ebuild,
+  02 Sep 2005; Diego PettenÃ² <flameeyes@gentoo.org> fxruby-1.0.25.ebuild,
   fxruby-1.0.28-r1.ebuild, fxruby-1.0.29.ebuild, fxruby-1.2.2.ebuild,
   fxruby-1.2.4.ebuild:
   Don't use -d option with cp.
@@ -74,7 +77,7 @@
   04 May 2005; Guy Martin <gmsoft@gentoo.org> fxruby-1.2.2.ebuild:
   Stable on hppa.
 
-  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> fxruby-1.2.2.ebuild:
+  14 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> fxruby-1.2.2.ebuild:
   Stable on alpha.
 
   26 Mar 2005; Jason Wever <weeve@gentoo.org> fxruby-1.2.2.ebuild:
@@ -91,7 +94,7 @@
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> fxruby-1.2.2.ebuild:
+  23 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> fxruby-1.2.2.ebuild:
   ~alpha keyword.
 
 *fxruby-1.2.2 (22 Oct 2004)
