@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.6 2007/01/27 12:54:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.7 2007/03/11 09:59:23 mrness Exp $
+
+*nsis-2.24 (11 Mar 2007)
+
+  11 Mar 2007; Alin Năstac <mrness@gentoo.org>
+  -files/nsis-2.21-config.patch, -files/nsis-2.22-config.patch,
+  +files/nsis-2.24-no-strict-aliasing.patch, -nsis-2.21.ebuild,
+  -nsis-2.22.ebuild, +nsis-2.24.ebuild:
+  Remove obsolete versions. Version bump. Strip Windows binaries.
 
   27 Jan 2007; Alin Năstac <mrness@gentoo.org>
   +files/nsis-2.23-32bit.patch, nsis-2.23.ebuild:
