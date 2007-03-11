@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2.ebuild,v 1.2 2007/02/12 00:00:33 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2.ebuild,v 1.3 2007/03/11 10:59:41 welp Exp $
 
 inherit cron pam eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc pam selinux"
 
 DEPEND="app-editors/nano
