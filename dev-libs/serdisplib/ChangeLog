@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/serdisplib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.2 2007/02/24 20:25:25 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.3 2007/03/11 09:58:51 rbu Exp $
+
+*serdisplib-1.97.5 (11 Mar 2007)
+
+  11 Mar 2007; Robert Buchholz <rbu@gentoo.org> +serdisplib-1.97.5.ebuild:
+  Version bump
 
 *serdisplib-1.97.4 (24 Feb 2007)
 
