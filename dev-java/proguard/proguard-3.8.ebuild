@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-3.6.ebuild,v 1.5 2007/02/03 04:59:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-3.8.ebuild,v 1.1 2007/03/11 23:50:34 fordfrog Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -23,18 +23,23 @@ S=${WORKDIR}/${PN}${PV}
 src_unpack() {
 	unpack ${A}
 	cp ${FILESDIR}/build.xml "${S}"
+	rm ${S}/lib/*.jar
+	cd "${S}" && java-ant_rewrite-classpath
 }
 
 src_compile() {
-	eant -lib `java-config -p sun-j2me-bin,ant-core` proguard
+	eant -Dgentoo.classpath=$(java-pkg_getjars sun-j2me-bin,ant-core) proguard
 }
 
 src_install() {
 	cd "${S}"
 	java-pkg_dojar dist/*
+	java-pkg_dolauncher ${PN} --main proguard.ProGuard
+	java-pkg_dolauncher ${PN}gui --main proguard.gui.ProGuardGUI
+	java-pkg_dolauncher ${PN}_retrace --main proguard.retrace.ReTrace
 
 	if use doc; then
-		java-pkg_dohtml docs/*
+		java-pkg_dojavadoc docs
 	fi
 
 	if use examples; then
