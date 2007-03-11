@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.199 2007/03/11 14:04:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.200 2007/03/11 15:40:56 tomk Exp $
+
+  11 Mar 2007; Tom Knight <tomk@gentoo.org> use.local.desc:
+  Added five local USE flags for mail-filter/spamassassin-fuzzyocr
 
   11 Mar 2007; <genstef@gentoo.org> package.mask:
   mask dev-util/scons-0.96.95 because it fails with qt3 apps, bug 169101
