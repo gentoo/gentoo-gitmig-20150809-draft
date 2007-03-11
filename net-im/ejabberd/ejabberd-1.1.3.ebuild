@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.3.ebuild,v 1.2 2007/02/28 07:51:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.3.ebuild,v 1.3 2007/03/11 19:04:23 corsair Exp $
 
 inherit eutils multilib versionator
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://ejabberd.jabber.ru/"
 SRC_URI="http://process-one.net/en/projects/${PN}/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="mod_irc mod_muc mod_pubsub ldap odbc ssl web"
 
 DEPEND=">=net-im/jabber-base-0.01
