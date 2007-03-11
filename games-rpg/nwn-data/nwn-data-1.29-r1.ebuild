@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.10 2007/03/07 17:34:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.11 2007/03/11 16:45:49 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -397,7 +397,7 @@ else \
 	p=${HOME}/.nwn \
 	for i in ${LINGUAS} \
 	do \
-		if [[ -z "${LANG}" -a -r ".metadata/linguas_$i" -a -d "$i" ]] \
+		if [[ -z "${LANG}" ]] && [[ -r ".metadata/linguas_$i" -a -d "$i" ]] \
 		then \
 			LANG=$i \
 			p=${HOME}/.nwn \
