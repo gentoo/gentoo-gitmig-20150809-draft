@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mpack
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.10 2006/09/08 22:38:00 dang Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.11 2007/03/11 01:19:13 ticho Exp $
+
+*mpack-1.6 (11 Mar 2007)
+
+  11 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  +files/mpack-1.6-gentoo.patch, +mpack-1.6.ebuild:
+  Version bump. Fixes bug #161274, reported by Rossen Apostolov <rossen at
+  protein.osaka-u.ac.jp>.
 
   08 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> mpack-1.5-r1.ebuild:
   Marked stable on amd64 for bug #146090
