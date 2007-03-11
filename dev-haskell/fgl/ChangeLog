@@ -1,9 +1,9 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.1 2007/03/11 15:57:36 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.2 2007/03/11 16:22:38 kolmodin Exp $
 
 *fgl-5.2 (11 Mar 2007)
 
   11 Mar 2007; <kolmodin@gentoo.org> +fgl-5.2.ebuild:
-  Add dummy package ment for GHC 6.4
+  Add dummy package meant for GHC 6.4
 
