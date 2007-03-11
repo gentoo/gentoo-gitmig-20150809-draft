@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6-r3.ebuild,v 1.2 2007/03/03 12:12:01 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6-r3.ebuild,v 1.3 2007/03/11 13:01:57 hkbst Exp $
 
 inherit eutils autotools
 
@@ -17,10 +17,13 @@ DEPEND="dev-scheme/guile =dev-libs/glib-2* !=dev-libs/libffi-4*"
 
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	if has_version =guile-1.8*; then
+pkg_setup() {
+	if has_version =dev-scheme/guile-1.8*; then
 		built_with_use dev-scheme/guile deprecated || die "guile must be built with deprecated use flag"
 	fi
+}
+
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/${P}_glib_automagic.patch
