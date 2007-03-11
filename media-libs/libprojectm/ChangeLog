@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.6 2007/03/11 01:11:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.7 2007/03/11 23:40:36 welp Exp $
+
+*libprojectm-0.99-r1 (11 Mar 2007)
+
+  11 Mar 2007; Peter Weller <welp@gentoo.org> +files/libprojectm-fbsd.patch,
+  +libprojectm-0.99-r1.ebuild:
+  Added patch to let it compile on x86-fbsd, keyworded x86-fbsd
 
   11 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
   libprojectm-0.99.ebuild:
