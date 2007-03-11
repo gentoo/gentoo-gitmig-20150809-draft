@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.17 2007/03/09 13:46:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.18 2007/03/11 20:15:10 nichoj Exp $
+
+*jruby-0.9.8-r1 (11 Mar 2007)
+
+  11 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
+  +files/jruby-0.9.8-sandbox.patch, +jruby-0.9.8-r1.ebuild:
+  Revision bump to address #170058 and to use recently released jline-0.9.91
+  so we have one less patch to apply.
 
   09 Mar 2007; Joshua Nichols <nichoj@gentoo.org> jruby-0.9.8.ebuild:
   Removed bundled jars while building.
