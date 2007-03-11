@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.37 2007/03/10 14:50:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.38 2007/03/11 20:24:32 nichoj Exp $
+
+  11 Mar 2007; Joshua Nichols <nichoj@gentoo.org> bsf-2.3.0-r5.ebuild:
+  amd64 stable, see bug #170253.
 
   10 Mar 2007; Christian Faulhammer <opfer@gentoo.org> bsf-2.3.0-r5.ebuild:
   stable x86, bug 170253
