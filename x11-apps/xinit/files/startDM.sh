@@ -1,35 +1,28 @@
-#!/bin/bash
+#!/bin/sh
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/startDM.sh,v 1.2 2006/07/01 00:48:30 vapier Exp $
-#
-# Author: Martin Schlemmer <azarah@gentoo.org>
-
-source /etc/init.d/functions.sh
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/startDM.sh,v 1.3 2007/03/11 02:01:24 uberlord Exp $
 
 # We need to source /etc/profile for stuff like $LANG to work
 # bug #10190.
-source /etc/profile
+. /etc/profile
+
+. /etc/init.d/functions.sh
+
+# baselayout-1 compat
+if ! type get_options >/dev/null 2>/dev/null ; then
+	[ -r "${svclib}"/sh/rc-services.sh ] && . "${svclib}"/sh/rc-services.sh
+fi
 
 # Great new Gnome2 feature, AA
 # We enable this by default
 export GDK_USE_XFT=1
 
-if [[ -e ${svcdir}/options/xdm/service ]] ; then
-	retval=0
-	EXE=$(<"${svcdir}"/options/xdm/service)
+export SVCNAME=xdm
+EXEC="$(get_options service)"
+NAME="$(get_options name)"
 
-	/sbin/start-stop-daemon --start --quiet --exec ${EXE}
-	retval=$?
-	# Fix bug #26125 for slower systems
-	wait; sleep 2
-
-	if [[ ${retval} -ne 0 ]] ; then
-		# there was a error running the DM
-		einfo "ERROR: could not start the Display Manager..."
-		# make sure we do not have a misbehaving DM
-		killall -9 ${EXE##*/}
-	fi
-fi
+start-stop-daemon --start --exec ${EXEC} ${NAME:+--name }${NAME} || \
+eerror "ERROR: could not start the Display Manager"
 
 # vim:ts=4
