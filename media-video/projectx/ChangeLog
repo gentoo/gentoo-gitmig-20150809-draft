@@ -1,6 +1,10 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.21 2007/03/11 20:29:42 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.22 2007/03/11 22:11:27 sbriesen Exp $
+
+  11 Mar 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  files/build-0.90.4.xml, projectx-0.90.4.00-r2.ebuild:
+  build.xml + ebuild cleanups.
 
   11 Mar 2007; Stefan Briesenick <sbriesen@gentoo.org>
   -files/build-0.90.3.xml, -projectx-0.90.3.00.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r2.ebuild,v 1.3 2006/12/27 13:23:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r2.ebuild,v 1.4 2007/03/11 22:11:27 sbriesen Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -23,12 +23,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X doc source"
 
-RDEPEND=">=virtual/jre-1.4
-	dev-java/commons-net
+COMMON_DEP="dev-java/commons-net
 	=dev-java/jakarta-oro-2.0*"
 
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
+
 DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
+	${COMMON_DEP}
 	app-arch/unzip
 	dev-java/ant-core
 	source? ( app-arch/zip )"
@@ -62,7 +64,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant jar $(use_doc docs) -Dmanifest.mainclass=$(mainclass)
+	eant build $(use_doc) -Dmanifest.mainclass=$(mainclass)
 }
 
 src_install() {
@@ -80,6 +82,6 @@ src_install() {
 	fi
 
 	dodoc *.txt
-	use doc && java-pkg_dohtml -r apidocs/
-	use source && java-pkg_dosrc src/.
+	use doc && java-pkg_dojavadoc apidocs
+	use source && java-pkg_dosrc src
 }

@@ -8,8 +8,7 @@
 	<property name="dist.dir" value="dist" />
 	<property name="lib.dir" value="lib" />
 	<property name="resources.dir" value="resources" />
-	<property name="htmls.dir" value="htmls" />
-	<property name="jarfile" value="${dist.dir}/${ant.project.name}.jar" />
+	<property name="project.jar" value="${dist.dir}/${ant.project.name}.jar" />
 	<property name="target.jdk" value="1.4" />
 
 	<!-- classpath -->
@@ -22,33 +21,26 @@
 	<!-- init -->
 	<target name="init">
 		<mkdir dir="${dist.dir}" />
-		<mkdir dir="${build.dir}" />
 		<mkdir dir="${docs.dir}" />
+		<mkdir dir="${build.dir}" />
 	</target>	
 
 	<!-- compile everything -->
 	<target name="compile" depends="init">
-		<mkdir dir="${build.dir}" />
-		<javac srcdir="${src.dir}" 
+		<javac srcdir="${src.dir}"
 			destdir="${build.dir}"
 			source="${target.jdk}"
 			target="${target.jdk}"
 			classpathref="refcp"
 			encoding="ISO-8859-1"/>
-		
 		<copy todir="${build.dir}">
 			<fileset dir="${resources.dir}" />
-			<fileset file="${htmls.dir}" />
-		</copy>
-
-		<copy todir="${build.dir}/${htmls.dir}">
-			<fileset dir="${htmls.dir}" />
 		</copy>
 	</target>
 
-	<!-- build the jar file -->
-	<target name="jar" depends="compile">
-		<jar jarfile="${jarfile}" basedir="${build.dir}">
+	<!-- build the jar files -->
+	<target name="build" depends="compile">
+		<jar jarfile="${project.jar}" basedir="${build.dir}">
 			<manifest>
 				<attribute name="Main-Class" value="${manifest.mainclass}" />
 			</manifest>
@@ -56,7 +48,7 @@
 	</target>
 	
 	<!-- generate javadocs -->
-	<target name="docs" depends="init">
+	<target name="javadoc" depends="init">
 		<javadoc sourcepath="${src.dir}"
 			packagenames="net.*, edu.*"
            		destdir="${docs.dir}"
@@ -73,7 +65,6 @@
 		<delete dir="${build.dir}" />
 		<delete dir="${docs.dir}" />
 		<delete dir="${dist.dir}" />
-		<delete dir="${lib.dir}" />
 	</target>
 
         <!-- zip the sources -->
