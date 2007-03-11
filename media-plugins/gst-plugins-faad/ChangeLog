@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.45 2007/03/03 07:30:33 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.46 2007/03/11 23:16:54 ticho Exp $
+
+  11 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  gst-plugins-faad-0.10.1.ebuild:
+  Stable on x86, bug #143342.
 
   03 Mar 2007; Luis Medinas <metalgod@gentoo.org>
   gst-plugins-faad-0.10.1.ebuild:
