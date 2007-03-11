@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/browserlauncher2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/browserlauncher2/ChangeLog,v 1.1 2007/03/11 20:16:31 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/browserlauncher2/ChangeLog,v 1.2 2007/03/11 22:50:33 sbriesen Exp $
+
+  11 Mar 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  browserlauncher2-1.0.ebuild:
+  ant_src_unpack -> src_unpack
 
 *browserlauncher2-1.0 (11 Mar 2007)
 
