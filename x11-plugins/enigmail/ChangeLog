@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.50 2007/03/07 16:28:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.51 2007/03/11 16:33:50 armin76 Exp $
+
+*enigmail-0.94.3-r1 (11 Mar 2007)
+*enigmail-0.94.3 (11 Mar 2007)
+
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.2.ebuild,
+  -enigmail-0.94.2-r1.ebuild, +enigmail-0.94.3.ebuild,
+  +enigmail-0.94.3-r1.ebuild:
+  Version bump, wrt security bug, and make it work with tb-2.0, bug 170418
 
   07 Mar 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.0-r4.ebuild,
   -enigmail-0.94.0-r5.ebuild, -enigmail-0.94.1-r2.ebuild:

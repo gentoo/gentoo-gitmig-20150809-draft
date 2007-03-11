@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.2.ebuild,v 1.1 2007/02/17 11:55:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.3-r1.ebuild,v 1.1 2007/03/11 16:33:50 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -10,16 +10,18 @@ LANGS="de el es-AR es-ES nb-NO pt-BR sv-SE zh-CN"
 SHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP ko-KR nb-NO nl-NL pl-PL pt-PT ru-RU sk-SK sl-SI sv-SE"
 
 EMVER=${PV}
-TBVER="1.5.0.7"
-TBPVER="0.1"
+TBVER="2.0b2"
+MY_TBVER="2.0_beta2"
+TBPVER="0.2"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://enigmail.mozdev.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/source/thunderbird-${TBVER}-source.tar.bz2
-	mirror://gentoo/mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2
+	http://dev.gentooexperimental.org/~anarchy/dist/mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2
+	mirror://gentoo/mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE=""
@@ -36,7 +38,7 @@ for X in ${SHORTLANGS} ; do
 done
 #( mirror://gentoo/${PN}-${X}-0.9x.xpi )"
 
-DEPEND=">=mail-client/mozilla-thunderbird-${TBVER}"
+DEPEND=">=mail-client/mozilla-thunderbird-${MY_TBVER}"
 RDEPEND="${DEPEND}
 	>=app-crypt/gnupg-1.4.5
 	>=www-client/mozilla-launcher-1.37"
@@ -77,7 +79,7 @@ linguas() {
 }
 
 src_unpack() {
-	unpack thunderbird-${TBVER}-source.tar.bz2 mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2 || die "unpack failed"
+	unpack thunderbird-${TBVER}-source.tar.bz2 mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2 || die "unpack failed"
 
 	linguas
 	for X in ${linguas}; do
@@ -87,9 +89,7 @@ src_unpack() {
 	cd ${S} || die "cd failed"
 
 	# Apply our patches
-	EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" \
-	epatch ${WORKDIR}/patch
+	EPATCH_FORCE="yes" epatch "${WORKDIR}"/patch
 
 	# Unpack the enigmail plugin
 	cd ${S}/mailnews/extensions || die
@@ -177,11 +177,8 @@ src_install() {
 	cd ${D}${MOZILLA_FIVE_HOME}/extensions/${emid}
 	unzip ${S}/dist/bin/*.xpi
 
-	# Fix registration on AMD64 per bug #143158
-	if use amd64; then
-		sed -i -e "s/_x86_64-gcc3//" \
-		${D}${MOZILLA_FIVE_HOME}/extensions/${emid}/install.rdf
-	fi
+	# Fix module to work with 2.0_beta2
+	sed -i -e "s/2\.0a1/2.0b2/" ${D}${MOZILLA_FIVE_HOME}/extensions/${emid}/install.rdf
 
 	# these files will be picked up by mozilla-launcher -register
 	dodir ${MOZILLA_FIVE_HOME}/{chrome,extensions}.d
