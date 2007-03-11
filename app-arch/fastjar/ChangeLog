@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/fastjar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.2 2007/03/02 18:38:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.3 2007/03/11 20:51:02 nichoj Exp $
+
+  11 Mar 2007; Joshua Nichols <nichoj@gentoo.org> fastjar-0.94.ebuild:
+  Added ~amd64, see bug #168713.
 
   02 Mar 2007; nixnut <nixnut@gentoo.org> fastjar-0.94.ebuild:
   Added ~ppc wrt bug 168713
