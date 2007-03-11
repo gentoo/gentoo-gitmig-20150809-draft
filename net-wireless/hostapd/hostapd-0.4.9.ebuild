@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.3 2006/09/03 09:04:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.4 2007/03/11 00:50:46 betelgeuse Exp $
 
 inherit toolchain-funcs
 
@@ -59,7 +59,7 @@ src_unpack() {
 
 	if use madwifi; then
 		# Add include path for madwifi-driver headers
-		echo "CFLAGS += -I${ROOT}/usr/include/madwifi" >> ${CONFIG}
+		echo "CFLAGS += -I/usr/include/madwifi" >> ${CONFIG}
 		echo "CONFIG_DRIVER_MADWIFI=y"                 >> ${CONFIG}
 	fi
 }
