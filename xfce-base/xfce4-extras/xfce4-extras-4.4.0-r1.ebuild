@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0-r1.ebuild,v 1.3 2007/03/10 14:54:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0-r1.ebuild,v 1.4 2007/03/11 11:43:44 drac Exp $
 
 DESCRIPTION="Meta ebuild for panel plugins and other extra applications"
 HOMEPAGE="http://www.xfce.org/"
@@ -9,7 +9,7 @@ SRC_URI=""
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="battery lm_sensors wlan"
+IUSE="battery lm_sensors wifi"
 
 RDEPEND=">=xfce-base/xfce4-4.4
 	>=xfce-extra/xfce4-clipman-0.8
@@ -28,5 +28,5 @@ RDEPEND=">=xfce-base/xfce4-4.4
 	>=xfce-extra/xfce4-taskmanager-0.3.2
 	>=xfce-extra/xfce4-timer-0.5.1
 	battery? ( >=xfce-extra/xfce4-battery-0.5 )
-	wlan? ( >=xfce-extra/xfce4-wavelan-0.5.4 )
+	wifi? ( >=xfce-extra/xfce4-wavelan-0.5.4 )
 	lm_sensors? ( >=xfce-extra/xfce4-sensors-0.10.0 )"
