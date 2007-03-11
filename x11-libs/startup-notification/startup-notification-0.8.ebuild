@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.8.ebuild,v 1.15 2006/12/02 09:16:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.8.ebuild,v 1.16 2007/03/11 14:34:42 drac Exp $
 
 inherit gnome.org
 
@@ -12,12 +12,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="|| ( (	x11-libs/libX11 x11-libs/libSM ) virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libSM
+	x11-libs/libICE"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto
+	x11-libs/libXt"
 
 src_install() {
-	make DESTDIR="${D}" install || die
-
-	dodoc AUTHORS ChangeLog INSTALL NEWS README doc/startup-notification.txt
+	emake DESTDIR="${D}" install || die "make install failed."
+	dodoc AUTHORS ChangeLog NEWS README doc/startup-notification.txt
 }
