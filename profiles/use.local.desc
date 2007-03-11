@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2660 2007/03/10 23:28:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2661 2007/03/11 07:28:44 welp Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1944,8 +1944,8 @@ x11-wm/windowmaker:modelock - Enable XKB language status lock support. README sa
 xfce-base/thunar:plugins - Enable trash panel plugin.
 xfce-base/xfce4-extras:battery - Pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:wlan - Pulls in xfce4-wavelan dependency.
-xfce-extra/thunar-thumbnailers:dcraw - Enable .agr thumbnailers, grace support.
-xfce-extra/thunar-thumbnailers:grace - Enable .raw thumbnailers, dcraw support.
+xfce-extra/thunar-thumbnailers:dcraw - Enable .agr thumbnailers, dcraw support.
+xfce-extra/thunar-thumbnailers:grace - Enable .raw thumbnailers, grace support.
 xfce-extra/xarchiver:7zip - Adds support for 7zip archives.
 xfce-extra/xarchiver:arj - Adds support for arj archives.
 xfce-extra/xarchiver:lha - Adds support for lha archives.
