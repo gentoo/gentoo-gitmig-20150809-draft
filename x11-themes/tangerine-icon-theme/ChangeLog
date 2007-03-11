@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/tangerine-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.2 2007/03/11 16:34:29 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.3 2007/03/11 16:55:06 drac Exp $
+
+  11 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  tangerine-icon-theme-0.15.ebuild:
+  Use Gentoo logo instead of Ubuntu logo as start-here.svg
+  Bug 170427. Thanks to Pacho Ramos for reporting.
 
   11 Mar 2007; Peter Weller <welp@gentoo.org>
   tangerine-icon-theme-0.15.ebuild:

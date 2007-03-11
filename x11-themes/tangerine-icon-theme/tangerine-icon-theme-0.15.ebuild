@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.15.ebuild,v 1.2 2007/03/11 16:34:29 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.15.ebuild,v 1.3 2007/03/11 16:55:06 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="a derivative of the standard Tango theme, using a more orange approach"
 HOMEPAGE="http://packages.ubuntu.com/feisty/x11/tangerine-icon-theme"
-SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/t/tangerine-icon-theme/tangerine-icon-theme_0.15.orig.tar.gz"
+SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/t/${PN}/${PN}_${PV}.orig.tar.gz
+	http://www.gentoo.org/images/gentoo-logo.svg"
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
@@ -28,6 +29,11 @@ pkg_setup() {
 	if use png && ! built_with_use media-gfx/imagemagick png; then
 		die "Build media-gfx/imagemagick with USE=png."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cp "${DISTDIR}"/gentoo-logo.svg "${S}"/scalable/places/start-here.svg
 }
 
 src_compile() {
