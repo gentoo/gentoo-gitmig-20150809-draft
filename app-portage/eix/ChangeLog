@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.149 2007/03/11 14:13:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.150 2007/03/11 15:52:01 nixnut Exp $
+
+  11 Mar 2007; nixnut <nixnut@gentoo.org> eix-0.8.8.ebuild:
+  Stable on ppc wrt bug 170310
 
   11 Mar 2007; Raúl Porcel <armin76@gentoo.org> eix-0.8.8.ebuild:
   x86 stable wrt bug 170310
