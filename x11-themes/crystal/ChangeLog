@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.30 2007/03/11 15:32:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.31 2007/03/11 20:01:23 armin76 Exp $
+
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> crystal-1.0.2.ebuild:
+  x86 stable wrt bug 168233
 
   11 Mar 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
   crystal-1.0.2.ebuild:
