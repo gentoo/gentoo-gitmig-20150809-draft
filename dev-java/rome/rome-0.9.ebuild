@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/rome-0.9.ebuild,v 1.3 2007/03/08 07:05:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/rome-0.9.ebuild,v 1.4 2007/03/11 13:07:28 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -28,16 +28,16 @@ RDEPEND=">=virtual/jre-1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Patch build.xml so the tests pass
-	epatch ${FILESDIR}/${P}-build.xml-test-upstream.patch
+	epatch "${FILESDIR}/${P}-build.xml-test-upstream.patch"
 
 	# Symlink jars
 	mkdir -p target/lib
 	cd target/lib
 	java-pkg_jar-from jdom-1.0
-	use test && java-pkg_jar-from junit
+	use test && java-pkg_jar-from --build-only junit
 }
 
 src_install() {
