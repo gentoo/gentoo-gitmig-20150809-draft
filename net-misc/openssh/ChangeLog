@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.232 2007/03/05 04:54:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.233 2007/03/11 19:23:39 vapier Exp $
+
+*openssh-4.6_p1 (11 Mar 2007)
+
+  11 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.6_p1-include-string-header.patch, +openssh-4.6_p1.ebuild:
+  Version bump #170385 by Wolfram Schlich.
 
 *openssh-4.5_p1-r2 (05 Mar 2007)
 
