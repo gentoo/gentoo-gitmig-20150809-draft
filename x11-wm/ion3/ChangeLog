@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.44 2007/02/21 22:37:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.45 2007/03/11 09:40:37 mabi Exp $
+
+*ion3-20070203 (11 Mar 2007)
+
+  11 Mar 2007; Matti Bickel <mabi@gentoo.org>
+  +files/20070203/201_all_fix-paths.patch,
+  +files/20070203/202_all_fix-menus.patch,
+  +files/20070203/205_all_ion-lock.patch,
+  +files/20070203/207_all_bindings-manpage.patch, +ion3-20070203.ebuild:
+  Version bump (warning: no xinerama, no xft support)
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
