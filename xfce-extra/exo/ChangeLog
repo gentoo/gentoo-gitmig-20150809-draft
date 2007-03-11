@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.41 2007/03/10 16:55:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.42 2007/03/11 10:22:47 drac Exp $
+
+  11 Mar 2007; Samuli Suominen <drac@gentoo.org> exo-0.3.0.ebuild,
+  -exo-0.3.0-r1.ebuild:
+  Drop version using virtual/x11 and port old to Modular X.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> exo-0.3.2.ebuild:
   Stable on ppc wrt bug 169987
