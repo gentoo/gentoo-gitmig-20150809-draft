@@ -13,7 +13,7 @@ if [ -e /dev/.udev_populate ]; then
 	fi
 fi
 
-source /sbin/functions.sh
+. /etc/init.d/functions.sh
 
 MODPROBE=/sbin/modprobe
 MODLIST=$("${MODPROBE}" -q -i --show-depends "${@}" 2>/dev/null \

@@ -10,7 +10,7 @@ if [[ -e /dev/.udev_populate ]]; then
 	fi
 fi
 
-source /sbin/functions.sh
+. /etc/init.d/functions.sh
 
 MODPROBE=/sbin/modprobe
 MODLIST=$("${MODPROBE}" -q -i --show-depends "${@}" | sed "s#^insmod /lib.*/\(.*\)\.ko.*#\1#g" | sed 's|-|_|g')

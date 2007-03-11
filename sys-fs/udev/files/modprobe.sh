@@ -3,7 +3,7 @@
 : ${VERBOSE:=no}
 [[ -e /dev/.udev_populate ]] && VERBOSE=yes
 
-source /sbin/functions.sh </dev/console
+. /etc/init.d/functions.sh </dev/console
 
 MODPROBE=/sbin/modprobe
 MODLIST=$("${MODPROBE}" -i --show-depends "${@}" | sed "s#^insmod /lib.*/\(.*\)\.ko.*#\1#g" | sed 's|-|_|g')
