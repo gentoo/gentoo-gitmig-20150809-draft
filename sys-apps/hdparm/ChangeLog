@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.93 2007/03/10 20:10:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.94 2007/03/11 05:30:56 tester Exp $
+
+  11 Mar 2007; Olivier Crête <tester@gentoo.org> hdparm-6.9.ebuild:
+  Stable on amd64 per bug #170122
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> hdparm-6.9.ebuild:
   Stable on ppc wrt bug 170122
