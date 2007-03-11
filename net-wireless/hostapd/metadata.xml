@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>mobile</herd>
-  <longdescription>User space daemon for the hostap-driver.
-  Extended IEEE 802.11 management, IEEE 802.1X Authenticator,
-  RADIUS Authentication client, RADIUS Accounting client</longdescription>
+	<herd>mobile</herd>
+	<longdescription>
+		User space daemon for the hostap-driver.
+		Extended IEEE 802.11 management, IEEE 802.1X Authenticator,
+		RADIUS Authentication client, RADIUS Accounting client
+	</longdescription>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.70 2007/03/11 00:50:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.71 2007/03/11 00:53:22 betelgeuse Exp $
+
+  11 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Fix metadata.xml white space.
 
   11 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> hostapd-0.4.9.ebuild,
   hostapd-0.5.7.ebuild:
