@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1-r1.ebuild,v 1.2 2007/03/01 07:25:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1-r1.ebuild,v 1.3 2007/03/11 20:53:00 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/ws/soap/version-${PV}/soap-src-${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="doc source"
 
 CDEPEND="dev-java/sun-javamail
