@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.15.ebuild,v 1.1 2007/03/10 19:28:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.15.ebuild,v 1.2 2007/03/11 16:34:29 welp Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/t/tangerine-icon-theme/tange
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="png"
 
 RESTRICT="binchecks strip"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tangerine-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.1 2007/03/10 19:28:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.2 2007/03/11 16:34:29 welp Exp $
+
+  11 Mar 2007; Peter Weller <welp@gentoo.org>
+  tangerine-icon-theme-0.15.ebuild:
+  Keyworded ~amd64 wrt bug 170414
 
 *tangerine-icon-theme-0.15 (10 Mar 2007)
 
