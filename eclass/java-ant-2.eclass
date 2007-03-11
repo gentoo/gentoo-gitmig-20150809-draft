@@ -10,7 +10,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.18 2007/03/01 14:01:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.19 2007/03/11 22:51:25 nichoj Exp $
 
 inherit java-utils-2
 
@@ -130,8 +130,7 @@ JAVA_PKG_BSFIX_SOURCE_TAGS=${JAVA_PKG_BSFIX_SOURCE_TAGS:-"javadoc javac xjavac j
 # ------------------------------------------------------------------------------
 post_src_unpack() {
 	if java-pkg_func-exists ant_src_unpack; then
-		java-pkg_announce-qa-violation "Using old ant_src_unpack. Should be src_unpack"
-		ant_src_unpack
+		die "ant_src_unpack is no longer support, should use just src_unpack"
 	fi
 	java-ant_bsfix
 	[[ "${JAVA_ANT_IGNORE_SYSTEM_CLASSES}" ]] \
