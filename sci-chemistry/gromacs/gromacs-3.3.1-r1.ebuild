@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.6 2007/03/08 01:21:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.7 2007/03/11 18:03:56 swegener Exp $
 
 inherit eutils fortran multilib
 
@@ -77,85 +77,85 @@ src_compile() {
 	# For more info:
 	# http://lists.debian.org/debian-gcc/2002/debian-gcc-200201/msg00150.html
 
-# We will compile single precision by default, and suffix double-precision with _d.
-# Sparc is the only arch I can test on that needs to use fortran.
-local myconf ;
+	# We will compile single precision by default, and suffix double-precision with _d.
+	# Sparc is the only arch I can test on that needs to use fortran.
+	local myconf ;
 
-case "${ARCH}" in
+	case "${ARCH}" in
 
-	x86)
-			myconf="$myconf $(use_enable sse ia32-sse)"
-			myconf="$myconf $(use_enable sse2 ia32-sse)"
-			myconf="$myconf $(use_enable 3dnow ia32-3dnow)"
+		x86)
+				myconf="$myconf $(use_enable sse ia32-sse)"
+				myconf="$myconf $(use_enable sse2 ia32-sse)"
+				myconf="$myconf $(use_enable 3dnow ia32-3dnow)"
 
-# If you don't enable at least one of the above, you must use g77, not gfortran.
-			if ! use sse && ! use sse2 && ! use 3dnow ; then
+	# If you don't enable at least one of the above, you must use g77, not gfortran.
+				if ! use sse && ! use sse2 && ! use 3dnow ; then
 
-				if ! has_version "=sys-devel/gcc-3*" ; then
-					die "If you must run gromacs without sse (not recommended) gfortran will not work."
-				else myconf="$myconf --enable-fortran" && fortran_pkg_setup
+					if ! has_version "=sys-devel/gcc-3*" ; then
+						die "If you must run gromacs without sse (not recommended) gfortran will not work."
+					else myconf="$myconf --enable-fortran" && fortran_pkg_setup
 
+					fi
 				fi
-			fi
-		;;
+			;;
 
-	amd64)
-			myconf="$myconf --enable-x86-64-sse"
-		;;
+		amd64)
+				myconf="$myconf --enable-x86-64-sse"
+			;;
 
-	ppc)
-			if use altivec ; then
-				myconf="$myconf --enable-ppc-altivec --disable-fortran"
-			else
+		ppc)
+				if use altivec ; then
+					myconf="$myconf --enable-ppc-altivec --disable-fortran"
+				else
+					if ! has_version "=sys-devel/gcc-3*" ; then
+
+						die "If you must run gromacs without sse (not recommended) gfortran will not work."
+					fi
+					myconf="$myconf --enable-fortran" && fortran_pkg_setup
+				fi
+			;;
+
+		ppc64)
+				if use altivec ; then
+					myconf="$myconf --enable-ppc-altivec --disable-fortran"
+				else
+					if ! has_version "=sys-devel/gcc-3*" ; then
+						die "If you must run gromacs without sse (not recommended) gfortran will not work."
+					fi
+					myconf="$myconf --enable-fortran" && fortran_pkg_setup
+				fi
+			;;
+
+		sparc)
 				if ! has_version "=sys-devel/gcc-3*" ; then
 
 					die "If you must run gromacs without sse (not recommended) gfortran will not work."
+				else
+					myconf="$myconf --enable-fortran" && fortran_pkg_setup
 				fi
-				myconf="$myconf --enable-fortran" && fortran_pkg_setup
-			fi
-		;;
+			;;
 
-	ppc64)
-			if use altivec ; then
-				myconf="$myconf --enable-ppc-altivec --disable-fortran"
-			else
-				if ! has_version "=sys-devel/gcc-3*" ; then
-					die "If you must run gromacs without sse (not recommended) gfortran will not work."
-				fi
-				myconf="$myconf --enable-fortran" && fortran_pkg_setup
-			fi
-		;;
+		ia64)
+				myconf="$myconf --enable-ia64-asm"
+			;;
 
-	sparc)
-			if ! has_version "=sys-devel/gcc-3*" ; then
+		alpha)
+				myconf="$myconf --enable-axp-asm"
+			;;
 
-				die "If you must run gromacs without sse (not recommended) gfortran will not work."
-			else
-				myconf="$myconf --enable-fortran" && fortran_pkg_setup
-			fi
-		;;
+	esac
 
-	ia64)
-			myconf="$myconf --enable-ia64-asm"
-		;;
+	myconf="--enable-shared \
+			--datadir=/usr/share \
+			--bindir=/usr/bin \
+			--libdir=/usr/$(get_libdir) \
+			--with-fft=fftw3 \
+			$(use_with X x) \
+			${myconf}"
 
-	alpha)
-			myconf="$myconf --enable-axp-asm"
-		;;
+	#		$(use_with mopac7 qmmm-mopac) \
 
-esac
-
-myconf="--enable-shared \
-		--datadir=/usr/share \
-		--bindir=/usr/bin \
-		--libdir=/usr/$(get_libdir) \
-		--with-fft=fftw3 \
-		$(use_with X x) \
-		${myconf}"
-
-#		$(use_with mopac7 qmmm-mopac) \
-
-cd "${WORKDIR}"/${P}-single
+	cd "${WORKDIR}"/${P}-single
 	econf ${myconf} --enable-float || die "configure single-precision failed"
 
 	emake || die "emake single failed"
