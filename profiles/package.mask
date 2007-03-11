@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6955 2007/03/10 23:14:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6956 2007/03/11 14:04:34 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (11 Mar 2007)
+# mask dev-util/scons-0.96.95 because it fails with qt3 apps, bug 169101
+=dev-util/scons-0.96.95
 
 # Michael Cummings <mcummings@gentoo.org> (09 Mar 2007)
 # Masking for removal. This was incorporated into
