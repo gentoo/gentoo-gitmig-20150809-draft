@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.1-r1.ebuild,v 1.3 2007/03/08 23:58:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.1-r1.ebuild,v 1.4 2007/03/11 05:57:37 ticho Exp $
 
 inherit autotools eutils flag-o-matic fixheadtails
 
@@ -104,6 +104,7 @@ src_install() {
 		-e "s:.*\(DatabaseOwner\) .*:\1 clamav:" \
 		-e "s:^\#\(UpdateLogFile\) .*:\1 /var/log/clamav/freshclam.log:" \
 		-e "s:^\#\(NotifyClamd\).*:\1 /etc/clamd.conf:" \
+		-e "s:^\#\(ScriptedUpdates\).*:\1 yes:" \
 		${D}/etc/freshclam.conf
 
 	if use milter ; then
