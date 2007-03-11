@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.029.ebuild,v 1.2 2007/02/27 15:55:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.029-r1.ebuild,v 1.1 2007/03/11 18:19:07 ian Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/demerge/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
-		>=dev-perl/PortageXS-0.02.03
+		>=dev-perl/PortageXS-0.02.04
 		dev-perl/Term-ANSIColor"
 RDEPEND="${DEPEND}
 		sys-apps/portage"
