@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joda-time
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.21 2007/03/10 23:54:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.22 2007/03/11 00:02:49 betelgeuse Exp $
+
+  11 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> joda-time-1.4.ebuild:
+  Marked stable on x86 wrt bug #156814.
 
   10 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> joda-time-1.4.ebuild:
   Add a depend on >=sys-libs/timezone-data-2007c when elibc is glibc.
