@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sgrep
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgrep/ChangeLog,v 1.5 2007/02/05 20:58:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgrep/ChangeLog,v 1.6 2007/03/12 23:29:48 leonardop Exp $
+
+  12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
+  Replacing text-markup herd with the new sgml herd.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
