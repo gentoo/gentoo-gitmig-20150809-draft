@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.10 2006/10/24 22:41:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.11 2007/03/12 13:16:23 genone Exp $
 
 inherit eutils multilib games
 
@@ -110,7 +110,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the game run:"
-	einfo " descent3"
+	elog "To play the game run:"
+	elog " descent3"
 	echo
 }

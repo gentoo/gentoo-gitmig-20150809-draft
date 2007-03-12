@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.7 2006/06/06 15:44:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.8 2007/03/12 13:21:44 genone Exp $
 
 inherit eutils games
 
@@ -51,9 +51,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if ! built_with_use media-libs/sdl-mixer vorbis ; then
-		einfo "${PN} will not have sound since sdl-mixer"
-		einfo "is built with USE=-vorbis"
-		einfo "Please emerge sdl-mixer with USE=vorbis"
-		einfo "if you want sound support"
+		elog "${PN} will not have sound since sdl-mixer"
+		elog "is built with USE=-vorbis"
+		elog "Please emerge sdl-mixer with USE=vorbis"
+		elog "if you want sound support"
 	fi
 }

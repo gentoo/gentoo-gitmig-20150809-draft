@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.8 2007/03/07 16:00:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.9 2007/03/12 13:15:09 genone Exp $
 
 inherit eutils games
 
@@ -121,8 +121,8 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "You may want to install the additional map package, which contains"
-	einfo "popular third-party multiplayer maps."
+	elog "You may want to install the additional map package, which contains"
+	elog "popular third-party multiplayer maps."
 	echo
-	einfo "To do so, run: emerge games-fps/descent1-maps"
+	elog "To do so, run: emerge games-fps/descent1-maps"
 }

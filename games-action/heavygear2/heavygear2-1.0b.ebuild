@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.15 2006/10/24 22:25:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.16 2007/03/12 13:19:33 genone Exp $
 
 inherit eutils games
 
@@ -75,9 +75,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if ! use videos ; then
-		einfo "You will need to mount the Heavy Gear II CD to see the cut-scene videos."
+		elog "You will need to mount the Heavy Gear II CD to see the cut-scene videos."
 		echo
 	fi
-	einfo "To play the game run:"
-	einfo " hg2"
+	elog "To play the game run:"
+	elog " hg2"
 }

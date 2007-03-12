@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.14 2006/10/24 22:43:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.15 2007/03/12 13:18:32 genone Exp $
 
 inherit eutils games
 
@@ -65,6 +65,6 @@ pkg_postinst() {
 	ewarn "service.  One affects the game when running a server, the other when running as"
 	ewarn "a client.  For more information, see bug #82149."
 	echo
-	einfo "To play the game run:"
-	einfo " fakk2"
+	elog "To play the game run:"
+	elog " fakk2"
 }

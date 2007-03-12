@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.8 2007/02/22 05:19:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.9 2007/03/12 13:17:28 genone Exp $
 
 inherit eutils games
 
@@ -61,10 +61,10 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the game run:"
-	einfo " descent3-demo"
-	echo
-	einfo "If the game appears blank, then run it windowed with:"
-	einfo " descent3-demo -w"
+	elog "To play the game run:"
+	elog " descent3-demo"
+	elog
+	elog "If the game appears blank, then run it windowed with:"
+	elog " descent3-demo -w"
 	echo
 }
