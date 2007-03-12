@@ -1,8 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.8 2006/10/17 02:45:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.9 2007/03/12 14:56:01 nyhm Exp $
 
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="platform game inspired by games like Manic Miner and Jet Set Willy"
@@ -17,22 +16,23 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
-	media-libs/sdl-mixer
-	sys-libs/zlib"
+DEPEND="media-libs/libsdl
+	media-libs/sdl-mixer"
 
 S=${WORKDIR}/Pachi
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-autotools.patch"
+	epatch "${FILESDIR}"/${PV}-autotools.patch
+	rm -f missing
 	eautoreconf
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -rf "${D}/usr/share/games/doc"
+	newicon Tgfx/icon.bmp ${PN}.bmp
+	make_desktop_entry ${PN} Pachi /usr/share/pixmaps/${PN}.bmp
 	dodoc AUTHORS ChangeLog README
 	prepgamesdirs
 }
