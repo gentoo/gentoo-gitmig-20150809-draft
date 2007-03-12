@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r1.ebuild,v 1.5 2007/01/28 05:27:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r1.ebuild,v 1.6 2007/03/12 18:34:28 armin76 Exp $
 
 IUSE="static moneyplex"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.geocities.com/cprados/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc"
+KEYWORDS="ppc x86"
 
 src_compile() {
 	local myconf
