@@ -1,6 +1,9 @@
 # ChangeLog for games-action/phobiaii
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.10 2006/11/27 01:29:22 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.11 2007/03/12 20:08:26 nyhm Exp $
+
+  12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> phobiaii-1.1.ebuild:
+  Install menu entry, bug #159760
 
   27 Nov 2006; <blubb@gentoo.org> phobiaii-1.1.ebuild:
   stable on amd64

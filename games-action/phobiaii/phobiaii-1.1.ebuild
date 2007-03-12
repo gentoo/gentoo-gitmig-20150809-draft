@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.13 2006/11/27 01:29:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.14 2007/03/12 20:08:26 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_P="linuxphobia-${PV}"
 DESCRIPTION="Just a moment ago, you were safe inside your ship, behind five inch armour"
@@ -15,7 +15,6 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND=""
 RDEPEND="media-libs/sdl-mixer
 	media-libs/libsdl
 	x86? ( sys-libs/lib-compat )
@@ -25,13 +24,12 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-
-	games_make_wrapper ${PN/ii/II} ./linuxphobia "${dir}"
-
+	games_make_wrapper phobiaII ./linuxphobia "${dir}"
+	newicon phobia2.ico ${PN}.ico
+	make_desktop_entry phobiaII "Phobia II" /usr/share/pixmaps/${PN}.ico
 	insinto "${dir}"
 	doins -r * || die "doins failed"
-
-	rm -rf "${D}/${dir}"/{*.desktop,*.sh,*.ico,/pics/.xvpics}
+	rm -rf "${D}/${dir}"/{*.desktop,*.sh,/pics/.xvpics}
 	fperms 750 "${dir}"/linuxphobia
 	prepgamesdirs
 }
