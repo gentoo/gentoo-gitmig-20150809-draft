@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.95-r1.ebuild,v 1.3 2007/03/07 05:21:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.95-r1.ebuild,v 1.4 2007/03/12 09:05:57 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -195,7 +195,7 @@ pkg_postinst() {
 	# ecompress from Portage 2.2.* does auto-compression
 	# which is not desired for the dir file, so remove it to
 	# let it be recreated
-	rm "${D}/usr/share/info/emacs-${SLOT}/dir.bz2" 2> /dev/null
+	rm "${ROOT}/usr/share/info/emacs-${SLOT}/dir.*" 2> /dev/null
 
 	if use X; then
 		elog "You need to install some fonts for Emacs.	 Under monolithic"
