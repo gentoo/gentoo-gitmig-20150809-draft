@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.2.ebuild,v 1.2 2007/02/17 16:27:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.2.ebuild,v 1.3 2007/03/12 22:47:54 vapier Exp $
 
 inherit eutils
 
@@ -76,9 +76,9 @@ pkg_preinst() {
 	# For RC3 - filter out RgbPath line since it also seems to break things
 	XORGCONF="/etc/X11/xorg.conf"
 	if [ -e ${XORGCONF} ]; then
-		mkdir -p "${IMAGE}/etc/X11"
-		sed "/ModulePath/d" ${XORGCONF}	> ${IMAGE}${XORGCONF}
-		sed -i "/RgbPath/d" ${IMAGE}${XORGCONF}
+		mkdir -p "${D}/etc/X11"
+		sed "/ModulePath/d" ${XORGCONF}	> "${D}"${XORGCONF}
+		sed -i "/RgbPath/d" "${D}"${XORGCONF}
 	fi
 }
 
