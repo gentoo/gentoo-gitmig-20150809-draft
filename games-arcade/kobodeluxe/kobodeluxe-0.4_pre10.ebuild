@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.14 2007/02/17 19:10:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.15 2007/03/12 13:37:23 genone Exp $
 
 inherit flag-o-matic eutils games
 
@@ -52,9 +52,9 @@ src_install () {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "The location of the highscore files has changed.  If this isn't the"
-	einfo "first time you've installed ${PN} and you'd like to keep the high"
-	einfo "scores from a previous version of ${PN}, please move all the files"
-	einfo "in /var/lib/games/kobodeluxe/ to ${GAMES_STATEDIR}/${PN}. If you"
-	einfo "have a /var/lib/games/kobodeluxe/ directory it may be removed."
+	elog "The location of the highscore files has changed.  If this isn't the"
+	elog "first time you've installed ${PN} and you'd like to keep the high"
+	elog "scores from a previous version of ${PN}, please move all the files"
+	elog "in /var/lib/games/kobodeluxe/ to ${GAMES_STATEDIR}/${PN}. If you"
+	elog "have a /var/lib/games/kobodeluxe/ directory it may be removed."
 }
