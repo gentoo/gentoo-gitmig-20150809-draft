@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.0.ebuild,v 1.14 2007/03/12 00:34:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.0.ebuild,v 1.15 2007/03/12 17:08:43 drac Exp $
 
 inherit xfce44
 
@@ -40,4 +40,11 @@ src_install() {
 	dodir /etc/X11/Sessions
 	echo startxfce4 > ${D}/etc/X11/Sessions/Xfce4
 	fperms 755 /etc/X11/Sessions/Xfce4
+}
+
+pkg_postinst() {
+	elog
+	elog "Run Xfce4 from your favourite Display Manager by using"
+	elog "XSESSION=\"Xfce4\" in /etc/rc.conf"
+	elog
 }
