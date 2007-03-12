@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.2 2006/01/08 23:29:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.3 2007/03/12 11:57:49 armin76 Exp $
 #
 # mozextention.eclass: installing firefox extensions and language packs
 
