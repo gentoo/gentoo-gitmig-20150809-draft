@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.4.ebuild,v 1.4 2007/03/12 14:26:24 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.4.ebuild,v 1.5 2007/03/12 17:49:42 armin76 Exp $
 
 inherit gkrellm-plugin
 
@@ -15,7 +15,7 @@ DEPEND="lirc? ( app-misc/lirc )"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc"
+KEYWORDS="ppc ~sparc x86"
 
 PLUGIN_SO=radio.so
 
