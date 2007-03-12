@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/gkrellm-vaiobright-2.5.ebuild,v 1.4 2004/06/24 22:58:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/gkrellm-vaiobright-2.5.ebuild,v 1.5 2007/03/12 15:11:43 lack Exp $
+
+inherit gkrellm-plugin
 
 IUSE=""
 
@@ -16,12 +18,5 @@ SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 -*"
 
-src_compile() {
-	make || die
-}
+PLUGIN_SO=vaiobright.so
 
-src_install () {
-	insinto /usr/lib/gkrellm2/plugins
-	doins vaiobright.so
-	dodoc README
-}

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-vaiobright
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.5 2007/02/21 15:27:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.6 2007/03/12 15:11:43 lack Exp $
+
+  12 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-vaiobright-2.5.ebuild,
+  gkrellm-vaiobright-2.5-r1.ebuild:
+  Updated to use new gkrellm-plugin eclass
 
 *gkrellm-vaiobright-2.5-r1 (21 Feb 2007)
 
