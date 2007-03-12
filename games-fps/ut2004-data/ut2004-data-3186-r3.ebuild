@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.11 2006/11/10 12:00:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.12 2007/03/12 15:44:29 genone Exp $
 
 inherit eutils games games-ut2k4mod
 
@@ -210,7 +210,7 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	echo
-	einfo "This is only the data portion of the game.  To play UT2004, you"
-	einfo "still need to emerge ut2004."
+	elog "This is only the data portion of the game.  To play UT2004, you"
+	elog "still need to emerge ut2004."
 	echo
 }

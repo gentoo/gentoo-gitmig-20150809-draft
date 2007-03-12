@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.6 2006/03/22 16:03:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.7 2007/03/12 15:47:00 genone Exp $
 
 inherit games
 
@@ -35,17 +35,17 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "Before you can play, you must make sure"
-	einfo "wmquake can find your Quake .pak files"
-	echo
-	einfo "You have 2 choices to do this"
-	einfo "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
-	einfo "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake1/id1"
-	echo
-	einfo "Example:"
-	einfo "my pak*.pak files are in /mnt/secondary/Games/Quake/Id1/"
-	einfo "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake1/id1/pak0.pak"
-	echo
-	einfo "You only need pak0.pak to play the demo version,"
-	einfo "the others are needed for registered version"
+	elog "Before you can play, you must make sure"
+	elog "wmquake can find your Quake .pak files"
+	elog
+	elog "You have 2 choices to do this"
+	elog "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
+	elog "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake1/id1"
+	elog
+	elog "Example:"
+	elog "my pak*.pak files are in /mnt/secondary/Games/Quake/Id1/"
+	elog "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake1/id1/pak0.pak"
+	elog
+	elog "You only need pak0.pak to play the demo version,"
+	elog "the others are needed for registered version"
 }

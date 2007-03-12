@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.9 2006/12/05 18:11:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.10 2007/03/12 15:47:55 genone Exp $
 
 #ECVS_SERVER="wolfgl.cvs.sourceforge.net:/cvsroot/wolfgl"
 #ECVS_MODULE="wolfgl"
@@ -51,8 +51,8 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "This installed the shareware data files for"
-	einfo "Wolfenstein 3D and Spear Of Destiny."
-	einfo "If you wish to play the full versions just"
-	einfo "copy the data files to ${GAMES_DATADIR}/${PN}/"
+	elog "This installed the shareware data files for"
+	elog "Wolfenstein 3D and Spear Of Destiny."
+	elog "If you wish to play the full versions just"
+	elog "copy the data files to ${GAMES_DATADIR}/${PN}/"
 }
