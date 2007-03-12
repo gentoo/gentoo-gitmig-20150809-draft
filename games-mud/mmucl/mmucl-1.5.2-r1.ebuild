@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/mmucl-1.5.2-r1.ebuild,v 1.3 2005/08/29 19:51:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/mmucl-1.5.2-r1.ebuild,v 1.4 2007/03/12 17:03:58 genone Exp $
 
 inherit games
 
@@ -54,5 +54,5 @@ src_install () {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "The executable for this is mmucl2."
+	elog "The executable for this is mmucl2."
 }

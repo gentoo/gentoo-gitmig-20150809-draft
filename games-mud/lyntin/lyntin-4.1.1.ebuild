@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.10 2006/11/05 01:00:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.11 2007/03/12 17:02:52 genone Exp $
 
 inherit eutils games distutils
 
@@ -37,14 +37,14 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if use tk ; then
-		einfo "To start lyntin in GUI mode, create a config file"
-		einfo "with this in it:"
-		echo
-		einfo "[Lyntin]"
-		einfo "ui:    tk"
-		echo
-		einfo "Then start lyntin like this:"
-		einfo
-		einfo "runlyntin -c /path/to/config_file\n"
+		elog "To start lyntin in GUI mode, create a config file"
+		elog "with this in it:"
+		elog
+		elog "[Lyntin]"
+		elog "ui:    tk"
+		elog
+		elog "Then start lyntin like this:"
+		elog
+		elog "runlyntin -c /path/to/config_file\n"
 	fi
 }
