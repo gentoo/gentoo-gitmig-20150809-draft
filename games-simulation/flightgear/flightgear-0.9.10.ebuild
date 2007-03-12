@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.10.ebuild,v 1.3 2007/01/12 23:57:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.10.ebuild,v 1.4 2007/03/12 19:15:12 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
@@ -36,6 +36,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	insinto "${GAMES_DATADIR}"/${MY_PN}
 	doins -r ../data/* || die "doins failed"
+	newicon ../data/Aircraft/T38/thumbnail.jpg ${PN}.jpg
+	make_desktop_entry fgfs FlightGear /usr/share/pixmaps/${PN}.jpg
 	dodoc AUTHORS ChangeLog NEWS README Thanks
 	prepgamesdirs
 }

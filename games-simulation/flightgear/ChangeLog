@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.26 2007/01/12 23:57:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.27 2007/03/12 19:15:12 nyhm Exp $
+
+  12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> flightgear-0.9.10.ebuild:
+  Install menu entry, bug #160210
 
   12 Jan 2007; Tristan Heaven <nyhm@gentoo.org> flightgear-0.9.10.ebuild:
   Allow sdl to be used instead of glut
