@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.14 2007/01/22 11:03:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.15 2007/03/12 18:41:10 alonbl Exp $
+
+*aircrack-ng-0.7-r1 (12 Mar 2007)
+
+  12 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/aircrack-ng-0.7-make.patch, +aircrack-ng-0.7-r1.ebuild:
+  Added userland only support, bug#170404, thanks to ebfe
 
 *aircrack-ng-0.7 (22 Jan 2007)
 
