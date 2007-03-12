@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtkglext
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.20 2006/10/21 01:18:06 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.21 2007/03/12 16:46:59 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> pygtkglext-1.0.1-r1.ebuild:
+  x86 stable
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   pygtkglext-1.0.1-r1.ebuild:
