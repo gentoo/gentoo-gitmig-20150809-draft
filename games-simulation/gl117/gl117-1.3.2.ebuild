@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.2.ebuild,v 1.6 2006/12/19 22:52:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.2.ebuild,v 1.7 2007/03/12 15:59:24 nyhm Exp $
 
 inherit eutils games
 
@@ -31,6 +31,9 @@ pkg_setup() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog FAQ NEWS README
+	newicon doc/src/falcon.jpg ${PN}.jpg
+	make_desktop_entry gl-117 GL-117 /usr/share/pixmaps/${PN}.jpg
+	doman doc/gl-117.6
+	dodoc doc/gl-117.pdf AUTHORS ChangeLog FAQ NEWS README
 	prepgamesdirs
 }
