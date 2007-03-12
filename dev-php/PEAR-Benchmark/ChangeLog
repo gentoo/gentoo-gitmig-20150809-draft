@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.27 2007/03/09 18:26:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.28 2007/03/12 17:56:43 gustavoz Exp $
+
+  12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  PEAR-Benchmark-1.2.6.ebuild:
+  Stable on sparc wrt #157466
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> PEAR-Benchmark-1.2.6.ebuild:
   Stable on ppc wrt bug 157466
