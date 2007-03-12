@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-smartbookmark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.14 2007/03/10 17:39:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.15 2007/03/12 01:49:32 kloeri Exp $
+
+  12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
+  xfce4-smartbookmark-0.4.2.ebuild:
+  Add ~alpha + ~ia64 keywords.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-smartbookmark-0.4.2.ebuild:
   Stable on ppc wrt bug 169987

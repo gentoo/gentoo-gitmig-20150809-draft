@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.14 2007/03/10 17:59:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.15 2007/03/12 01:56:08 kloeri Exp $
+
+  12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> verve-0.3.5.ebuild:
+  Add ~alpha + ~ia64 keywords.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> verve-0.3.5.ebuild:
   Stable on ppc wrt bug 169987
