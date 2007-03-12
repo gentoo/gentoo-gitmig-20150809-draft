@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.26 2007/02/22 02:01:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.27 2007/03/12 20:12:51 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> libsvg-0.1.4.ebuild:
+  x86 stable
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
