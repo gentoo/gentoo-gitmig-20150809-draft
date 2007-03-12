@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.4 2006/12/06 20:09:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.5 2007/03/12 17:25:48 genone Exp $
 
 inherit games
 
@@ -37,7 +37,7 @@ dir="${GAMES_PREFIX_OPT}/nwn"
 
 pkg_setup() {
 	games_pkg_setup
-	einfo "This package is pre-compiled so it will work on both x86 and amd64."
+	elog "This package is pre-compiled so it will work on both x86 and amd64."
 }
 
 src_unpack() {
@@ -61,10 +61,10 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "When starting nwn the next time, nwmouse will scan the nwmain"
-	einfo "binary for its hooks, store this information in:"
-	einfo "  ${dir}/nwmouse.ini"
-	einfo "and exit. This is normal."
-	einfo
-	einfo "You will have to remove this file whenever you update nwn."
+	elog "When starting nwn the next time, nwmouse will scan the nwmain"
+	elog "binary for its hooks, store this information in:"
+	elog "  ${dir}/nwmouse.ini"
+	elog "and exit. This is normal."
+	elog
+	elog "You will have to remove this file whenever you update nwn."
 }
