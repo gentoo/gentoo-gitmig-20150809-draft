@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1-r1.ebuild,v 1.2 2006/12/01 20:59:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1-r1.ebuild,v 1.3 2007/03/12 13:52:37 genone Exp $
 
 inherit eutils games
 
@@ -66,5 +66,5 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To enable speech, just emerge dev-tcltk/snack"
+	elog "To enable speech, just emerge dev-tcltk/snack"
 }

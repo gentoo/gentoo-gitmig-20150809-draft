@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.4 2007/02/22 05:22:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.5 2007/03/12 13:47:01 genone Exp $
 
 inherit eutils games
 
@@ -80,8 +80,8 @@ src_install() {
 pkg_postinst () {
 	games_pkg_postinst
 	if use altenburgcards; then
-		einfo "License Info:"
-		einfo "Verwendung der ASS Altenburger Spielkarten mit Genehmigung"
-		einfo "der Spielkartenfabrik Altenburg GmbH"
+		elog "License Info:"
+		elog "Verwendung der ASS Altenburger Spielkarten mit Genehmigung"
+		elog "der Spielkartenfabrik Altenburg GmbH"
 	fi
 }

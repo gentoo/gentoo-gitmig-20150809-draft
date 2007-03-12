@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.2 2007/02/13 17:29:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.3 2007/03/12 13:48:12 genone Exp $
 
 inherit eutils versionator games
 
@@ -42,6 +42,6 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "To use this engine you need to install a chess GUI that talk UCI"
-	einfo "emerge games-board/glchess to have one"
+	elog "To use this engine you need to install a chess GUI that talk UCI"
+	elog "emerge games-board/glchess to have one"
 }

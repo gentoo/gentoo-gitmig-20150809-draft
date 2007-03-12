@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0.ebuild,v 1.3 2007/03/07 16:47:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0.ebuild,v 1.4 2007/03/12 13:51:29 genone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -24,11 +24,11 @@ S=${WORKDIR}/${PN}_src_${PV}
 
 pkg_setup() {
 	games_pkg_setup
-	einfo "If you experience problems building pouetchess with nvidia drivers,"
-	einfo "you can try:"
-	einfo "eselect opengl set xorg-x11"
-	einfo "emerge pouetchess"
-	einfo "eselect opengl set nvidia"
+	elog "If you experience problems building pouetchess with nvidia drivers,"
+	elog "you can try:"
+	elog "eselect opengl set xorg-x11"
+	elog "emerge pouetchess"
+	elog "eselect opengl set nvidia"
 }
 
 src_unpack() {

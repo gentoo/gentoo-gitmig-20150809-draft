@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.11 2006/06/23 05:37:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.12 2007/03/12 13:53:42 genone Exp $
 
 inherit eutils kde
 
@@ -25,8 +25,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you updated from an older version, please do a"
-	einfo "    rm ~/.kde/share/apps/slibo/sliboui.rc"
-	einfo "to get rid of old configuration files, otherwise"
-	einfo "new menu items etc. will not appear"
+	elog "If you updated from an older version, please do a"
+	elog "    rm ~/.kde/share/apps/slibo/sliboui.rc"
+	elog "to get rid of old configuration files, otherwise"
+	elog "new menu items etc. will not appear"
 }

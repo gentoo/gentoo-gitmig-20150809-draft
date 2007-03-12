@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-20.13.ebuild,v 1.2 2007/03/07 16:02:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-20.13.ebuild,v 1.3 2007/03/12 13:44:57 genone Exp $
 
 inherit flag-o-matic games
 
@@ -68,11 +68,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo
-	einfo "Note: No books or tablebases have been installed. If you want them, just"
-	einfo "      download them from ${HOMEPAGE}."
-	einfo "      You will find documentation there too. In most cases you take now "
-	einfo "      your xboard compatible application, (xboard, eboard, knights) and "
-	einfo "      just play chess against computer opponent. Have fun."
-	einfo
+	elog
+	elog "Note: No books or tablebases have been installed. If you want them, just"
+	elog "      download them from ${HOMEPAGE}."
+	elog "      You will find documentation there too. In most cases you take now "
+	elog "      your xboard compatible application, (xboard, eboard, knights) and "
+	elog "      just play chess against computer opponent. Have fun."
+	elog
 }
