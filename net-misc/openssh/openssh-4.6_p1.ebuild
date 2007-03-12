@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.6_p1.ebuild,v 1.1 2007/03/11 19:23:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.6_p1.ebuild,v 1.2 2007/03/12 07:13:18 vapier Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -49,9 +49,13 @@ S=${WORKDIR}/${PARCH}
 pkg_setup() {
 	# this sucks, but i'd rather have people unable to `emerge -u openssh`
 	# than not be able to log in to their server any more
-	local fail=""
-	[[ -z ${X509_PATCH}	   ]] && use X509	   && fail="${fail} X509"
-	[[ -z ${SECURID_PATCH} ]] && use smartcard && fail="${fail} smartcard"
+	maybe_fail() { [[ -z ${!2} ]] && use ${1} && echo ${1} ; }
+	local fail="
+		$(maybe_fail X509 X509_PATCH)
+		$(maybe_fail smartcard SECURID_PATCH)
+		$(maybe_fail ldap LDAP_PATCH)
+	"
+	fail=$(echo ${fail})
 	if [[ -n ${fail} ]] ; then
 		eerror "Sorry, but this version does not yet support features"
 		eerror "that you requested:	 ${fail}"
@@ -80,7 +84,7 @@ src_unpack() {
 				"${FILESDIR}"/${PN}-4.3_p2-securid-hpn-glue.patch
 			use ldap && epatch "${FILESDIR}"/openssh-4.0_p1-smartcard-ldap-happy.patch
 		fi
-		if use ldap ; then
+		if [[ -n ${LDAP_PATCH} ]] && use ldap ; then
 			epatch "${DISTDIR}"/${LDAP_PATCH} "${FILESDIR}"/${PN}-4.4_p1-ldap-hpn-glue.patch
 		fi
 	elif [[ -n ${SECURID_PATCH} ]] && use smartcard || use ldap ; then
