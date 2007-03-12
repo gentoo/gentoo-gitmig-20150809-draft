@@ -37,7 +37,40 @@ AUX wvstreams-4.2.2-wireless-user.patch 462 RMD160 2c206e7d3373813c733e2f0b10436
 MD5 d6b7827616d5527165007c1afeedfd06 files/wvstreams-4.2.2-wireless-user.patch 462
 RMD160 2c206e7d3373813c733e2f0b10436a0fd88dccf8 files/wvstreams-4.2.2-wireless-user.patch 462
 SHA256 ee6cf04970b7ee20c406b8cd30a1ae36754eaa32edc76b44514bac5e462fb8b4 files/wvstreams-4.2.2-wireless-user.patch 462
+AUX wvstreams-4.3-64bit.patch 559 RMD160 9a2bf2ea25d637c262c61c1d5f7b31075999b3ca SHA1 d28e28e2f59437a11cbb0562c203c284270988b7 SHA256 7902099576d9e320e6fd19b0c8fad203348dce5bc946201e8c9becd311667af7
+MD5 b3e08e99de6c41b2078129630d8c62e0 files/wvstreams-4.3-64bit.patch 559
+RMD160 9a2bf2ea25d637c262c61c1d5f7b31075999b3ca files/wvstreams-4.3-64bit.patch 559
+SHA256 7902099576d9e320e6fd19b0c8fad203348dce5bc946201e8c9becd311667af7 files/wvstreams-4.3-64bit.patch 559
+AUX wvstreams-4.3-MOC-fix.patch 488 RMD160 94b8dea2b2bf2c634173906e29b4bb1a7f4a51d8 SHA1 3b422083c4e1856d24a17092843ceab707d6d8cf SHA256 f80cb4f43c80bcf256d397e72d0bf45f98e3bc93d93c2b37d0eb98caacfc94be
+MD5 aecda7bb5ad7f28ad2a12e4c10bb84d7 files/wvstreams-4.3-MOC-fix.patch 488
+RMD160 94b8dea2b2bf2c634173906e29b4bb1a7f4a51d8 files/wvstreams-4.3-MOC-fix.patch 488
+SHA256 f80cb4f43c80bcf256d397e72d0bf45f98e3bc93d93c2b37d0eb98caacfc94be files/wvstreams-4.3-MOC-fix.patch 488
+AUX wvstreams-4.3-as-needed.patch 1805 RMD160 05b70f9280a0592bd2effcf60988d3c7732df447 SHA1 ba428bbfc676b3059bbbcbfded294c5d540ef741 SHA256 147ddb92fc82ff034d5d2e896b9db897b6c4bbcd8e176dcc68729af624a51025
+MD5 d556456abed0a55f709b1ab7810047dd files/wvstreams-4.3-as-needed.patch 1805
+RMD160 05b70f9280a0592bd2effcf60988d3c7732df447 files/wvstreams-4.3-as-needed.patch 1805
+SHA256 147ddb92fc82ff034d5d2e896b9db897b6c4bbcd8e176dcc68729af624a51025 files/wvstreams-4.3-as-needed.patch 1805
+AUX wvstreams-4.3-external-xplc.patch 1205 RMD160 9f6097f47c234b3ce2adc0f1b667fab4d8a31520 SHA1 265e6f194d45292c9a23a6aacb695ea628ab333f SHA256 e369bb507059aa6087b42ccfc2bee7f8c9a6b9a7872f71a6f4296836f453930a
+MD5 11211b97d0560d12f76b5431a95e9c95 files/wvstreams-4.3-external-xplc.patch 1205
+RMD160 9f6097f47c234b3ce2adc0f1b667fab4d8a31520 files/wvstreams-4.3-external-xplc.patch 1205
+SHA256 e369bb507059aa6087b42ccfc2bee7f8c9a6b9a7872f71a6f4296836f453930a files/wvstreams-4.3-external-xplc.patch 1205
+AUX wvstreams-4.3-linux-serial.patch 1632 RMD160 b813faeb6aa21f31b362c87b48f5d48d2f12bd79 SHA1 3bb93a937d66116e5df500f629cc851985fbcb11 SHA256 bb685b64b9490c3d3af95e4bbf3335f810fbdeb454df59d37bb6868aac33106d
+MD5 bb7ed6e7092433869c6a65f6c227127d files/wvstreams-4.3-linux-serial.patch 1632
+RMD160 b813faeb6aa21f31b362c87b48f5d48d2f12bd79 files/wvstreams-4.3-linux-serial.patch 1632
+SHA256 bb685b64b9490c3d3af95e4bbf3335f810fbdeb454df59d37bb6868aac33106d files/wvstreams-4.3-linux-serial.patch 1632
+AUX wvstreams-4.3-sane-cflags.patch 1566 RMD160 609e48c40707946ef69187f643fa1e2f59584a67 SHA1 910f62e0ab75a835a82a176d0b08ec1a7abfcb00 SHA256 ef649c68e9334f06fa526c07bdf2aab88ee53db89f6917e5972677244db254f7
+MD5 a31feb9828c520c7a2df8ba48534e2ab files/wvstreams-4.3-sane-cflags.patch 1566
+RMD160 609e48c40707946ef69187f643fa1e2f59584a67 files/wvstreams-4.3-sane-cflags.patch 1566
+SHA256 ef649c68e9334f06fa526c07bdf2aab88ee53db89f6917e5972677244db254f7 files/wvstreams-4.3-sane-cflags.patch 1566
+AUX wvstreams-4.3-uniconfd-ini.patch 796 RMD160 1ded678370f6abb9615b62bebe544566cedb055d SHA1 e97dc392b054370427874c51c70b1c4f764cf880 SHA256 e194c877f2d253eadb7c1784c695f4562675ea7c865ad07e629585180d6bbeee
+MD5 13f791bb5b4ae8fd7aef57387f4ff7be files/wvstreams-4.3-uniconfd-ini.patch 796
+RMD160 1ded678370f6abb9615b62bebe544566cedb055d files/wvstreams-4.3-uniconfd-ini.patch 796
+SHA256 e194c877f2d253eadb7c1784c695f4562675ea7c865ad07e629585180d6bbeee files/wvstreams-4.3-uniconfd-ini.patch 796
+AUX wvstreams-4.3-wireless-user.patch 489 RMD160 cc3bc883c746b509a99cce7559b11f0c40d4dae6 SHA1 dd1bbd221fc43f9b7b9dbac850d6f8658dc576a7 SHA256 10caaf927e595b46d7d0ca32cc989f68b8e6abf928160a04cfab2d055d7ca168
+MD5 06e4e9e86fafa01bae1b3fcd517c7cde files/wvstreams-4.3-wireless-user.patch 489
+RMD160 cc3bc883c746b509a99cce7559b11f0c40d4dae6 files/wvstreams-4.3-wireless-user.patch 489
+SHA256 10caaf927e595b46d7d0ca32cc989f68b8e6abf928160a04cfab2d055d7ca168 files/wvstreams-4.3-wireless-user.patch 489
 DIST wvstreams-4.2.2.tar.gz 1269821 RMD160 dece6092e847976d01568f20707701a8241d30d2 SHA1 a44a9ded6339fb2c53eb472d0763e4cf6b0c0534 SHA256 8fa45a6bfe4d6ac3d9a457543844873090d0c7da817991ac0cd547732f475a14
+DIST wvstreams-4.3.tar.gz 1294177 RMD160 fb6c480903cb725bf4911a05bfa1ef12bf05dfec SHA1 9347696d28a482c0be741a222436f0529283c304 SHA256 54b2a693ef67fde375292d768fc6471bb00105870714cc4051289986a51aabb9
 EBUILD wvstreams-4.2.2-r2.ebuild 2501 RMD160 5cbae61a26d20d2234160df64009b9c86549fae4 SHA1 5686270c6bca044fbf722712f940c414b26b1a8a SHA256 7eba6e6b030546b58eb40c44dc900916e09024687292cbc9464583c3510d4d35
 MD5 8f737e2ff600fb4bb676f1b6a611c963 wvstreams-4.2.2-r2.ebuild 2501
 RMD160 5cbae61a26d20d2234160df64009b9c86549fae4 wvstreams-4.2.2-r2.ebuild 2501
@@ -50,10 +83,14 @@ EBUILD wvstreams-4.2.2.ebuild 2537 RMD160 93309344254038873a0c706117c850e280e01a
 MD5 bfef0ede67c42cb43776f76d6ec982e3 wvstreams-4.2.2.ebuild 2537
 RMD160 93309344254038873a0c706117c850e280e01ab0 wvstreams-4.2.2.ebuild 2537
 SHA256 01d7807c175eaa446084241b2e123ed87449a3289c62992686f0e37db77b22c3 wvstreams-4.2.2.ebuild 2537
-MISC ChangeLog 16026 RMD160 360fbb6312160d2b2fe92e411e416f8990b807d0 SHA1 a6d80c0fbb4c650ff1e888e9f0b00d1782310b18 SHA256 169cdc32987bf5d49b1f8fea6e2b8f2e478a02b08cd2c3c6967539f151291d1f
-MD5 20da2ea2d1ab507cabc32f34f63d2507 ChangeLog 16026
-RMD160 360fbb6312160d2b2fe92e411e416f8990b807d0 ChangeLog 16026
-SHA256 169cdc32987bf5d49b1f8fea6e2b8f2e478a02b08cd2c3c6967539f151291d1f ChangeLog 16026
+EBUILD wvstreams-4.3.ebuild 2428 RMD160 1df38d7e78513f7f9c0c3e31759a30a263305c70 SHA1 714c53f0ce5b75e1013e5e91622710f10e08def9 SHA256 b55462b31f24f96222c42d6375c4a4b5121d95b6762923d758e1f3bcc33b14b0
+MD5 849b876072d6d716c619cbab4fccf7a8 wvstreams-4.3.ebuild 2428
+RMD160 1df38d7e78513f7f9c0c3e31759a30a263305c70 wvstreams-4.3.ebuild 2428
+SHA256 b55462b31f24f96222c42d6375c4a4b5121d95b6762923d758e1f3bcc33b14b0 wvstreams-4.3.ebuild 2428
+MISC ChangeLog 16523 RMD160 3bdaefec89a22cabe05bd36bd2efde85c6081463 SHA1 74c68cdacedaadb28a5a491d937ac324a0b82f2e SHA256 8b63a84dd389bd275aa6ca7b18eea04c8509ab1a1fba758776fa64c04a03cfb2
+MD5 3c984cfeef5c55e8cb73f0b6e05b51b2 ChangeLog 16523
+RMD160 3bdaefec89a22cabe05bd36bd2efde85c6081463 ChangeLog 16523
+SHA256 8b63a84dd389bd275aa6ca7b18eea04c8509ab1a1fba758776fa64c04a03cfb2 ChangeLog 16523
 MISC metadata.xml 313 RMD160 e543c31d8ddc948a387dcdcc8638a848c587177b SHA1 a40d5fd17e50dc9f983efc63e5cbb8b407b95c7a SHA256 1ec30d4508abc443f3e9c4829b0e7d7e5c588419344203476818a29f71b98a37
 MD5 227de7f678ad662524292836709de75f metadata.xml 313
 RMD160 e543c31d8ddc948a387dcdcc8638a848c587177b metadata.xml 313
@@ -67,10 +104,13 @@ SHA256 af8d2d360c3e497dcd8a2f2cc57ec947b2c99a440dff184197b350e60491f451 files/di
 MD5 ce2f63ffae6742f96ede8200eb39c3d1 files/digest-wvstreams-4.2.2-r3 250
 RMD160 ad134621ec5ac0b3b3884506e3abfbf770e34b52 files/digest-wvstreams-4.2.2-r3 250
 SHA256 af8d2d360c3e497dcd8a2f2cc57ec947b2c99a440dff184197b350e60491f451 files/digest-wvstreams-4.2.2-r3 250
+MD5 573eed9105c7a3828296d072fbc449eb files/digest-wvstreams-4.3 244
+RMD160 323f0e3ef47ac41b690134fc8b9a73f5ffbbd9ca files/digest-wvstreams-4.3 244
+SHA256 e3bb902f085262bd9e556d98911fdf2940e54befc15a71c88e4eb726df6a1692 files/digest-wvstreams-4.3 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFFy3TyJnxX6mF440QRAhxBAKC1/zOnx95TCuNSAst7dZI7ftz6xgCgp15p
-M/o9/MubKoHzlptOB0ggpeg=
-=XeWV
+iD8DBQFF9XfdJnxX6mF440QRAjHoAKC6WbJLmcm39vh1o0MlPdAkDNtckACg61hm
+uKIGZdcUuaLfqMvTuIUxV/Q=
+=sLWd
 -----END PGP SIGNATURE-----
