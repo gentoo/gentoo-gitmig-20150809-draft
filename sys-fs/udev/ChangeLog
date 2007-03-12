@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.279 2007/03/11 00:42:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.280 2007/03/12 14:52:16 zzam Exp $
+
+*udev-106-r2 (12 Mar 2007)
+
+  12 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-106-r2, +files/udev-start-106-r2.sh,
+  +udev-106-r2.ebuild:
+  Now support kernel cmdline gentoo=nocoldplug to disable udev coldplug. Do
+  not install persistent net rules for s390 arch, as it has no persistent mac
+  addresses. No longer ignore device mapper devices, but look up the name and
+  create /dev/mapper/NAME, that allows hal to get the events, Bug #137831. Do
+  not apply normal rules to network devices, Bug #166652.
 
   11 Mar 2007; Roy Marples <uberlord@gentoo.org> files/modprobe-104-r12.sh,
   files/modprobe-105.sh, files/modprobe.sh:
