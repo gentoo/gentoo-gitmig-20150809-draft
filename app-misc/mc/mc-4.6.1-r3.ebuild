@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r3.ebuild,v 1.2 2007/01/28 05:19:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r3.ebuild,v 1.3 2007/03/12 11:57:16 the_paya Exp $
 
 inherit flag-o-matic eutils
 
@@ -65,6 +65,9 @@ src_unpack() {
 	#  - not using bindnow-flags() because cons.saver is only built on GNU/Linux
 	sed -i -e "s:^\(cons_saver_LDADD = .*\):\1 -Wl,-z,now:" \
 		src/Makefile.in
+	# Correctly generate charset.alias.
+	# Fixes bugs  71275, 105960 and 169678
+	epatch ${FILESDIR}/${P}-charset-locale-aliases.patch
 }
 
 src_compile() {
@@ -131,9 +134,6 @@ src_install() {
 	doins ${FILESDIR}/ebuild.syntax
 	cd ${D}/usr/share/mc/syntax
 	epatch ${FILESDIR}/${PN}-4.6.0-ebuild-syntax.patch
-
-	# http://bugs.gentoo.org/show_bug.cgi?id=71275
-	rm -f ${D}/usr/share/locale/locale.alias
 }
 
 pkg_postinst() {
