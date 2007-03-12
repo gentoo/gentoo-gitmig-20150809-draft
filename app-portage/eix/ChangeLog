@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.151 2007/03/12 00:28:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.152 2007/03/12 13:20:22 gustavoz Exp $
+
+  12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> eix-0.8.8.ebuild:
+  Stable on sparc wrt #170310
 
   12 Mar 2007; Jeroen Roovers <jer@gentoo.org> eix-0.8.8.ebuild:
   Stable for HPPA (bug #170310).
