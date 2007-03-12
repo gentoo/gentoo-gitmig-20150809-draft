@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-app_conference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.6 2007/02/22 02:02:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.7 2007/03/12 20:23:10 opfer Exp $
+
+  12 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  asterisk-app_conference-0.0.1_pre20060210.ebuild:
+  stable x86, bug 152507
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

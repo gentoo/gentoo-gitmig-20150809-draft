@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/asterisk-app_conference-0.0.1_pre20060210.ebuild,v 1.1 2006/05/06 15:18:49 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/asterisk-app_conference-0.0.1_pre20060210.ebuild,v 1.2 2007/03/12 20:23:10 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.netdomination.org/pub/asterisk/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
