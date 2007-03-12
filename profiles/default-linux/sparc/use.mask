@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.107 2007/02/14 20:05:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.108 2007/03/12 16:53:05 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -202,6 +202,8 @@ alsa_cards_es18xx
 alsa_cards_gusclassic
 alsa_cards_gusextreme
 alsa_cards_gusmax
+alsa_cards_hdsp
+alsa_cards_hdspm
 alsa_cards_interwave
 alsa_cards_interwave-stb
 alsa_cards_opl3sa2
