@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.6a-r1.ebuild,v 1.4 2007/03/12 22:11:25 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.0.ebuild,v 1.1 2007/03/12 22:11:25 rbu Exp $
 
 inherit eutils linux-info perl-module python multilib
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="perl python"
 
 DEPEND="dev-libs/libusb
-	dev-libs/libdaemon
-	>=dev-libs/libg15-1.1.0
+	>=dev-libs/libg15-1.2.0
+	>=dev-libs/libg15render-1.2
 	perl? ( >=dev-perl/Inline-0.4 )
 	python? ( dev-lang/python )"
 
@@ -96,6 +96,7 @@ src_install() {
 
 		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/g15daemon
 		doins g15daemon.py
+
 		docinto python
 		dodoc AUTHORS
 	fi
@@ -112,6 +113,7 @@ pkg_postinst() {
 	elog "To use g15daemon, you need to add g15daemon to the default runlevel."
 	elog "This can be done with:"
 	elog "# /sbin/rc-update add g15daemon default"
+	elog "You can edit some g15daemon options at /etc/conf.d/g15daemon"
 	elog ""
 	elog "To have all new keys working in X11, you'll need create a "
 	elog "specific xmodmap in your home directory or edit the existent one."
@@ -121,9 +123,6 @@ pkg_postinst() {
 	elog ""
 	elog "Adding keycodes to an existing xmodmap:"
 	elog "cat /usr/share/g15daemon/contrib/xmodmaprc >> ~/.Xmodmap"
-	elog ""
-	elog "Note: the daemon now supports to use the small round key"
-	elog "instead of MR for switching LCD clients. see /etc/conf.d/g15daemon"
 }
 
 pkg_postrm() {

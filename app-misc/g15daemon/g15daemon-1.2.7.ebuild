@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.7.ebuild,v 1.1 2007/02/18 19:38:16 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.7.ebuild,v 1.2 2007/03/12 22:11:25 rbu Exp $
 
 inherit eutils linux-info perl-module python multilib
 
@@ -66,13 +66,13 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" \
+		docdir=/usr/share/doc/${PF} install || die "make install failed"
 
 	# remove odd docs installed my make
-	rm "${D}/usr/share/doc/${P}/"{LICENSE,README.usage}
-	gzip "${D}/usr/share/doc/${P}/"*
+	rm "${D}/usr/share/doc/${PF}/"{LICENSE,README.usage}
 
-	insinto /usr/share/g15daemon/contrib
+	insinto /usr/share/${PN}/contrib
 	doins contrib/xmodmaprc
 	doins contrib/xmodmap.sh
 	if use perl; then
@@ -85,6 +85,7 @@ src_install() {
 	if use perl; then
 		ebegin "Installing Perl Bindings (G15Daemon.pm)"
 		cd "${WORKDIR}/G15Daemon-0.2"
+		docinto perl
 		perl-module_src_install
 	fi
 
@@ -95,13 +96,16 @@ src_install() {
 
 		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/g15daemon
 		doins g15daemon.py
-		newdoc AUTHORS pyg15daemon_AUTHORS
+		docinto python
+		dodoc AUTHORS
 	fi
+
+	prepalldocs
 }
 
 pkg_postinst() {
 	if use python; then
-		python_mod_optimize "/usr/lib/python*/site-packages/g15daemon"
+		python_mod_optimize "${ROOT}/usr/$(get_libdir)/python*/site-packages/g15daemon"
 		echo ""
 	fi
 
@@ -122,6 +126,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if use python; then
-		python_mod_cleanup "/usr/lib/python*/site-packages/g15daemon"
+		python_mod_cleanup "/usr/$(get_libdir)/python*/site-packages/g15daemon"
 	fi
 }
