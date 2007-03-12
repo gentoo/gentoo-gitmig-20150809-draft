@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wavelan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.25 2007/03/11 13:40:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.26 2007/03/12 13:41:10 drac Exp $
+
+  12 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-wavelan-0.4.1-r1.ebuild, xfce4-wavelan-0.5.4.ebuild:
+  Remove sparc keyword as wifi doesn't generally work on sparc.
 
   11 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
   xfce4-wavelan-0.4.1-r1.ebuild, xfce4-wavelan-0.5.4.ebuild:
