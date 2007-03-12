@@ -1,19 +1,18 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.8 2006/08/15 19:35:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.9 2007/03/12 19:56:07 swegener Exp $
 
-opts="${opts} reload monitor dump"
+opts="reload monitor dump"
 
-# Default instance
-PDNS_INSTANCE="default"
+PDNS_INSTANCE="${SVCNAME#pdns[.-]}"
 PDNS_CONFIG=""
 
-# Multiple instances support
-if [[ ${SVCNAME:0:5} = pdns[.-] && -n ${SVCNAME:5} ]]
+if [ -n "${PDNS_INSTANCE}" ] && [ "${PDNS_INSTANCE}" != "pdns" ]
 then
-	PDNS_INSTANCE="${SVCNAME:5}"
 	PDNS_CONFIG="--config-name=${PDNS_INSTANCE}"
+else
+	PDNS_INSTANCE="default"
 fi
 
 depend() {
@@ -46,6 +45,6 @@ dump() {
 
 monitor() {
        ebegin "Starting PowerDNS (${PDNS_INSTANCE}) in monitor mode"
-       /usr/sbin/pdns_server ${PDNS_CONFIG} --daemon=no --guardian=no --control-console=yes --loglevel=9
+       /usr/sbin/pdns_server ${PDNS_CONFIG} --daemon=no --guardian=no --control-console=yes --loglevel=9 --log-dns-details=yes --query-logging=yes
        eend $?
 }
