@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ddrmat/ddrmat-0.12.ebuild,v 1.5 2006/06/13 10:15:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ddrmat/ddrmat-0.12.ebuild,v 1.6 2007/03/12 13:24:24 genone Exp $
 
 DESCRIPTION="Kernel module for parallel port Playstation joystick (i.e. DDR mats) adapters"
 HOMEPAGE="http://www.icculus.org/pyddr/"
@@ -26,7 +26,7 @@ src_install() {
 
 pkg_postinst() {
 	[[ ${ROOT} == "/" ]] && /sbin/modules-update
-	einfo "You can insert the ddrmat module via \"modprobe ddrmat gc=0,7\" or"
-	einfo "you can add \"ddrmat\" to your \"/etc/modules.autoload\" to load it"
-	einfo "when the system is started."
+	elog "You can insert the ddrmat module via \"modprobe ddrmat gc=0,7\" or"
+	elog "you can add \"ddrmat\" to your \"/etc/modules.autoload\" to load it"
+	elog "when the system is started."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.10 2005/08/11 23:54:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.11 2007/03/12 13:22:54 genone Exp $
 
 inherit games
 
@@ -55,8 +55,8 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "First you must start a server by running \`bubnbros-server\`."
-	einfo "Afterwards you can start the client by running \`bubnbros\`"
-	einfo "or \`bubnbros-x\`.  Note that the X version of the game"
-	einfo "doesn't support sound and music."
+	elog "First you must start a server by running \`bubnbros-server\`."
+	elog "Afterwards you can start the client by running \`bubnbros\`"
+	elog "or \`bubnbros-x\`.  Note that the X version of the game"
+	elog "doesn't support sound and music."
 }
