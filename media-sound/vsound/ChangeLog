@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/vsound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.14 2007/02/22 01:35:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.15 2007/03/12 04:27:15 dirtyepic Exp $
+
+*vsound-0.6-r1 (12 Mar 2007)
+
+  12 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/vsound-0.6-stdout.patch, -vsound-0.5.ebuild, +vsound-0.6-r1.ebuild:
+  Added patch to fix --stdout option.  Thanks to Michael Higgins in Bug #117320.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
