@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.60 2007/01/23 16:19:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.61 2007/03/12 01:56:04 josejx Exp $
+
+*pbbuttonsd-0.8.0 (12 Mar 2007)
+
+  12 Mar 2007; Joseph Jezak <josejx@gentoo.org> +pbbuttonsd-0.8.0.ebuild:
+  New version of pbbuttonsd, supports the MacBook and MacBook Pro.
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org> pbbuttonsd-0.6.6.ebuild,
   pbbuttonsd-0.7.4.ebuild, pbbuttonsd-0.7.8.ebuild, pbbuttonsd-0.7.9.ebuild:
