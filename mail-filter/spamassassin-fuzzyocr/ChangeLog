@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.4 2007/02/08 23:41:47 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.5 2007/03/12 19:01:12 tomk Exp $
+
+*spamassassin-fuzzyocr-3.5.1 (11 Mar 2007)
+
+  11 Mar 2007; Tom Knight <tomk@gentoo.org> +files/disablegocr.patch,
+  +files/disableocrad.patch, +files/enabletesseract.patch,
+  +files/fuzzyocr.logrotate, +spamassassin-fuzzyocr-3.5.1.ebuild:
+  Version bump to 3.5.1, thanks to everyone who helped out. Fixes bug #158445
 
   08 Feb 2007; Patrick McLean <chutzpah@gentoo.org> metadata.xml:
   Add myself as co-maintainer.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-2.3b.ebuild,v 1.3 2006/12/12 13:04:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-2.3b.ebuild,v 1.4 2007/03/12 19:01:12 tomk Exp $
 
 inherit perl-module
 
