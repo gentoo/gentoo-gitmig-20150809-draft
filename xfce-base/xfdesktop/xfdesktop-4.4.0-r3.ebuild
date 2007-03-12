@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.0-r3.ebuild,v 1.10 2007/03/12 00:09:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.0-r3.ebuild,v 1.11 2007/03/12 17:24:58 drac Exp $
 
 inherit xfce44
 
@@ -67,4 +67,14 @@ src_install() {
 			fi
 		done
 	done
+}
+
+pkg_postinst() {
+	xfce44_pkg_postinst
+
+	if ! use dbus; then
+		elog
+		elog "You need USE=\"dbus\" to enable desktop icons."
+		elog
+	fi
 }
