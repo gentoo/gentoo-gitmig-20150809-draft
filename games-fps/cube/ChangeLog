@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/cube
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.17 2007/03/07 16:52:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.18 2007/03/12 14:16:46 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> cube-20040522.ebuild,
+  cube-20050829.ebuild:
+  Replacing einfo with elog
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> cube-20040522.ebuild:
   Change all instances of [ to [[.

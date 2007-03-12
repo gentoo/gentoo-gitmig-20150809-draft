@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.10 2007/03/07 16:52:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.11 2007/03/12 14:16:46 genone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -92,8 +92,8 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "You now have 2 clients and 2 servers:"
-	einfo "cube_client-bin      prebuilt version (needed to play on public multiplayer servers)"
-	einfo "cube_client          custom client built from source"
-	einfo "Parallel versions of the server have been installed"
+	elog "You now have 2 clients and 2 servers:"
+	elog "cube_client-bin      prebuilt version (needed to play on public multiplayer servers)"
+	elog "cube_client          custom client built from source"
+	elog "Parallel versions of the server have been installed"
 }
