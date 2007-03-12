@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/mplus-fonts
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.51 2006/11/26 23:03:15 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.52 2007/03/12 19:33:13 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> mplus-fonts-2.2.4.ebuild:
+  x86 stable
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   mplus-fonts-2.2.4.ebuild:
