@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-Audit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.36 2007/03/11 21:09:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.37 2007/03/12 18:06:08 kloeri Exp $
+
+  12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Mail-Audit-2.218.ebuild:
+  Add ~alpha keyword, bug 170491.
 
 *Mail-Audit-2.218 (11 Mar 2007)
 
