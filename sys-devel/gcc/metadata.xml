@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>toolchain</herd>
-<maintainer>
+<maintainer restrict="the D language addon">
  <email>anant@gentoo.org</email>
- <role>maintains the D language addon</role>
 </maintainer>
 </pkgmetadata>
