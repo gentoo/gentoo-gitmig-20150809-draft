@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/skystreets-0.2.4.ebuild,v 1.4 2005/09/26 17:39:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/skystreets-0.2.4.ebuild,v 1.5 2007/03/12 16:10:33 nyhm Exp $
 
 inherit eutils games
 
-DESCRIPTION="A clone of the old dos Skyroads game"
+DESCRIPTION="A remake of the old DOS game Skyroads"
 HOMEPAGE="http://skystreets.kaosfusion.com/"
 SRC_URI="http://skystreets.kaosfusion.com/${P}.tar.bz2"
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
+	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-image"
 
@@ -24,7 +25,9 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon gfx/sunscene.png ${PN}.png
+	make_desktop_entry ${PN} SkyStreets
 	dodoc AUTHORS BUGS CODE ChangeLog README TODO
 	prepgamesdirs
 }
