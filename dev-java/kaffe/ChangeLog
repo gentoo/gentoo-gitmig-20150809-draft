@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.67 2007/02/28 12:16:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.68 2007/03/12 17:35:41 betelgeuse Exp $
+
+  12 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> kaffe-1.1.7-r5.ebuild:
+  Use interpreter on ppc64 so that kaffe may be keyworded there some day too.
 
 *kaffe-1.1.7-r5 (28 Feb 2007)
 

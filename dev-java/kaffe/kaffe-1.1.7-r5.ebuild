@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.1 2007/02/28 12:16:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.2 2007/03/12 17:35:41 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -87,7 +87,7 @@ src_compile() {
 	# according to dalibor, this is needed on ppc because jit is
 	# not complete
 	# TODO needs testing!
-	use ppc && confargs="${confargs} --with-engine=intrp"
+	[[ ${ARCH} = ppc || ${ARCH} = ppc64 ]] && confargs="${confargs} --with-engine=intrp"
 
 	# Use fastjar or kaffe tries to use the jar tool which does
 	# not work before kaffe is installed if kaffe is the first jdk
