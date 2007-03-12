@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.69 2006/04/27 22:41:29 antarus Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.70 2007/03/12 21:49:45 vapier Exp $
+
+  12 Mar 2007; Mike Frysinger <vapier@gentoo.org> files/updatedb.conf:
+  Exclude selinuxfs from the db #170120 by Vlastimil Holer.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
