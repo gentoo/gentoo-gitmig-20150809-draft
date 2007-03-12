@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.14 2007/03/11 16:41:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.15 2007/03/12 12:54:55 gustavoz Exp $
+
+  12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild:
+  Stable on sparc wrt #170414
 
   11 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   tango-icon-theme-extras-0.1.0-r1.ebuild:
