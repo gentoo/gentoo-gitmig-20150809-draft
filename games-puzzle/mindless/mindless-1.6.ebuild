@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.5 2006/12/06 17:11:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.6 2007/03/12 17:12:34 genone Exp $
 
 inherit games
 
@@ -43,8 +43,8 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "The first time you start ${PN} you need to tell it where to find"
-	einfo "the text database of cards.  This file has been installed at:"
-	einfo "${DATAFILE}"
+	elog "The first time you start ${PN} you need to tell it where to find"
+	elog "the text database of cards.  This file has been installed at:"
+	elog "${DATAFILE}"
 	echo
 }

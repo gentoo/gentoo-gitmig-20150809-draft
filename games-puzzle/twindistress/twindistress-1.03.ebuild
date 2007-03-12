@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.03.ebuild,v 1.7 2006/08/15 15:11:58 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.03.ebuild,v 1.8 2007/03/12 17:13:55 genone Exp $
 
 inherit eutils games
 
@@ -48,7 +48,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "If sdl_mixer isn't built with ogg vorbis support, then you won't"
-	einfo "be able to hear the music"
+	elog "If sdl_mixer isn't built with ogg vorbis support, then you won't"
+	elog "be able to hear the music"
 	echo
 }
