@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.42 2007/02/05 06:29:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.43 2007/03/12 17:05:40 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> tintin-1.96.5.ebuild,
+  tintin-1.96.6.ebuild:
+  Replacing einfo with ewarn
 
 *tintin-1.96.6 (05 Feb 2007)
 
