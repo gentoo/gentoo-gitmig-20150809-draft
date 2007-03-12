@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta-r1.ebuild,v 1.1 2006/10/30 20:43:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta-r1.ebuild,v 1.2 2007/03/12 14:29:13 genone Exp $
 
 MOD_DESC="Green slimeballs mod for kids"
 MOD_NAME="Chex Trek: Beyond the Quest"
@@ -32,7 +32,7 @@ src_unpack() {
 
 pkg_postinst() {
 	games-mods_pkg_postinst
-	einfo "Press 'E' to open doors in the game."
-	einfo "Press 'M' to toggle the map."
+	elog "Press 'E' to open doors in the game."
+	elog "Press 'M' to toggle the map."
 	echo
 }

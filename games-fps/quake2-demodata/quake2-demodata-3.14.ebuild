@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.2 2006/06/27 20:55:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.3 2007/03/12 14:51:22 genone Exp $
 
 inherit eutils versionator games
 
@@ -75,13 +75,13 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "This is just the demo data. To play, install a client"
-	einfo "such as games-fps/qudos"
+	elog "This is just the demo data. To play, install a client"
+	elog "such as games-fps/qudos"
 	echo
 
 	if use symlink ; then
-		einfo "baseq2 has been symlinked to demo, for convenience, within:"
-		einfo "${dir}"
+		elog "baseq2 has been symlinked to demo, for convenience, within:"
+		elog "${dir}"
 		echo
 	fi
 }

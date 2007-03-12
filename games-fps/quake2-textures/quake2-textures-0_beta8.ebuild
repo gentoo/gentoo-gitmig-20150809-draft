@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/quake2-textures-0_beta8.ebuild,v 1.2 2006/10/19 20:58:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/quake2-textures-0_beta8.ebuild,v 1.3 2007/03/12 14:52:17 genone Exp $
 
 inherit eutils versionator games
 
@@ -34,7 +34,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "Use a recent Quake 2 client to take advantage of"
-	einfo "these textures, e.g. qudos or quake2-icculus."
+	elog "Use a recent Quake 2 client to take advantage of"
+	elog "these textures, e.g. qudos or quake2-icculus."
 	echo
 }

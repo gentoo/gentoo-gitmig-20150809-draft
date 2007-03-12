@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.4 2005/11/05 22:43:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.5 2007/03/12 14:49:51 genone Exp $
 
 inherit games
 
@@ -27,5 +27,5 @@ src_install () {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Use a client like quakeforge (nq-glx) to take advantage of these"
+	elog "Use a client like quakeforge (nq-glx) to take advantage of these"
 }

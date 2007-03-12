@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.10 2007/03/07 16:52:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.11 2007/03/12 14:37:15 genone Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -107,6 +107,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Just put the data files in ${GAMES_DATADIR}/${PN}"
-	einfo "before playing !"
+	elog "Just put the data files in ${GAMES_DATADIR}/${PN}"
+	elog "before playing !"
 }

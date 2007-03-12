@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.5 2006/10/05 12:06:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.6 2007/03/12 14:27:56 genone Exp $
 
 inherit eutils games
 
@@ -70,20 +70,20 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	if ! use cdinstall; then
-		einfo "You need to copy pak000.pk4, pak001.pk4, pak002.pk4, pak003.pk4, and"
-		einfo "pak004.pk4 from either your installation media or your hard drive to"
-		einfo "${dir}/base before running the game,"
-		einfo "or 'emerge games-fps/doom3-data' to install from CD."
+		elog "You need to copy pak000.pk4, pak001.pk4, pak002.pk4, pak003.pk4, and"
+		elog "pak004.pk4 from either your installation media or your hard drive to"
+		elog "${dir}/base before running the game,"
+		elog "or 'emerge games-fps/doom3-data' to install from CD."
 		echo
 		if ! use roe
 		then
-			einfo "To use the Resurrection of Evil expansion pack, you also need to copy"
-			einfo "pak000.pk4 to ${dir}/d3xp from the RoE CD before running the game,"
-			einfo "or 'emerge doom3-roe' to install from CD."
+			elog "To use the Resurrection of Evil expansion pack, you also need to copy"
+			elog "pak000.pk4 to ${dir}/d3xp from the RoE CD before running the game,"
+			elog "or 'emerge doom3-roe' to install from CD."
 		fi
 	fi
 	echo
-	einfo "To play the game run:"
-	einfo " doom3"
+	elog "To play the game run:"
+	elog " doom3"
 	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.16 2006/12/05 17:24:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.17 2007/03/12 15:05:00 genone Exp $
 
 inherit eutils games
 
@@ -115,17 +115,17 @@ pkg_postinst() {
 	# same warning used in quake1 / quakeforge / nprquake-sdl
 	games_pkg_postinst
 	echo
-	einfo "Before you can play, you must make sure"
-	einfo "${PN} can find your Quake .pak files"
-	echo
-	einfo "You have 2 choices to do this"
-	einfo "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
-	einfo "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake1/id1"
-	echo
-	einfo "Example:"
-	einfo "my pak*.pak files are in /mnt/secondary/Games/Quake/Id1/"
-	einfo "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake1/id1/pak0.pak"
-	echo
-	einfo "You only need pak0.pak to play the demo version,"
-	einfo "the others are needed for registered version"
+	elog "Before you can play, you must make sure"
+	elog "${PN} can find your Quake .pak files"
+	elog
+	elog "You have 2 choices to do this"
+	elog "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
+	elog "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake1/id1"
+	elog
+	elog "Example:"
+	elog "my pak*.pak files are in /mnt/secondary/Games/Quake/Id1/"
+	elog "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake1/id1/pak0.pak"
+	elog
+	elog "You only need pak0.pak to play the demo version,"
+	elog "the others are needed for registered version"
 }

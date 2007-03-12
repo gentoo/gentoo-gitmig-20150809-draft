@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/rott-1.0.ebuild,v 1.8 2006/05/06 23:07:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/rott-1.0.ebuild,v 1.9 2007/03/12 15:08:23 genone Exp $
 
 inherit eutils games
 
@@ -45,7 +45,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "The shareware version has been installed."
-	einfo "To play the full version, just copy the"
-	einfo "data files to ${GAMES_DATADIR}/${PN}/"
+	elog "The shareware version has been installed."
+	elog "To play the full version, just copy the"
+	elog "data files to ${GAMES_DATADIR}/${PN}/"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c.ebuild,v 1.6 2007/01/31 08:01:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c.ebuild,v 1.7 2007/03/12 14:56:24 genone Exp $
 
 inherit eutils games
 
@@ -110,10 +110,10 @@ pkg_postinst() {
 	ewarn "For more information, please see bug #82149."
 	if use dedicated; then
 		echo
-		einfo "To start a dedicated server, run"
-		einfo "  /etc/init.d/q3ded start"
-		echo
-		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account."
+		elog "To start a dedicated server, run"
+		elog "  /etc/init.d/q3ded start"
+		elog
+		elog "The dedicated server is started under the ${GAMES_USER_DED} user account."
 	fi
 
 	# IA32 Emulation required for amd64

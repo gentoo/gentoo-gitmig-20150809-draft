@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.7 2006/10/24 22:48:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.8 2007/03/12 14:35:47 genone Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "This is just the data portion of the game.  You will need to emerge"
-	einfo "games-fps/doom3 to play the game."
+	elog "This is just the data portion of the game.  You will need to emerge"
+	elog "games-fps/doom3 to play the game."
 	echo
 }

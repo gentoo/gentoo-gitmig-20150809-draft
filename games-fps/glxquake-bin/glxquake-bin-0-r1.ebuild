@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/glxquake-bin-0-r1.ebuild,v 1.3 2006/12/05 15:11:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/glxquake-bin-0-r1.ebuild,v 1.4 2007/03/12 14:42:34 genone Exp $
 
 inherit games
 
@@ -35,9 +35,9 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play with it, create a subdirectory called id1"
-	einfo "Copy the pak0.pak, and eventually pak1.pak into this subdirectory"
-	einfo "You can eventually get pak0.pak emerging games-fps/quake1-demodata"
-	einfo "The file pak0.pak will be on the ${GAMES_DATADIR}/quake1/demo/"
-	einfo "You can now run glxquake by executing glquake"
+	elog "To play with it, create a subdirectory called id1"
+	elog "Copy the pak0.pak, and eventually pak1.pak into this subdirectory"
+	elog "You can eventually get pak0.pak emerging games-fps/quake1-demodata"
+	elog "The file pak0.pak will be on the ${GAMES_DATADIR}/quake1/demo/"
+	elog "You can now run glxquake by executing glquake"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.4 2007/03/07 16:52:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.5 2007/03/12 14:37:15 genone Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -115,10 +115,10 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Put the data files in ${GAMES_DATADIR}/${PN} before playing"
-	einfo ""
-	einfo "For the shareware version, get the zip file at"
-	einfo "ftp://ftp.3drealms.com/share/3dduke13.zip, unzip in some temporary"
-	einfo "directory, unzip again the file DN3DSW13.SHR. You should have now"
-	einfo "the DUKE3D.GRP file. Move only this in ${GAMES_DATADIR}/${PN}"
+	elog "Put the data files in ${GAMES_DATADIR}/${PN} before playing"
+	elog ""
+	elog "For the shareware version, get the zip file at"
+	elog "ftp://ftp.3drealms.com/share/3dduke13.zip, unzip in some temporary"
+	elog "directory, unzip again the file DN3DSW13.SHR. You should have now"
+	elog "the DUKE3D.GRP file. Move only this in ${GAMES_DATADIR}/${PN}"
 }

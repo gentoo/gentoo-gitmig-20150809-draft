@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1-r1.ebuild,v 1.2 2006/09/28 21:11:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1-r1.ebuild,v 1.3 2007/03/12 14:24:33 genone Exp $
 
 inherit eutils games
 
@@ -33,10 +33,10 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if use doomsday; then
-		einfo "To use the doomsday engine, run doomsday-demo"
+		elog "To use the doomsday engine, run doomsday-demo"
 	else
-		einfo "A Doom engine is required to play the wad"
-		einfo "Enable the doomsday use flag if you want to use"
-		einfo "	the doomsday engine"
+		elog "A Doom engine is required to play the wad"
+		elog "Enable the doomsday use flag if you want to use"
+		elog "	the doomsday engine"
 	fi
 }

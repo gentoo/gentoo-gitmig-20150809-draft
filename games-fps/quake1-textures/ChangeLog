@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-textures
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.4 2007/02/21 23:59:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.5 2007/03/12 14:49:51 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org>
+  quake1-textures-20040716.ebuild, quake1-textures-20050820.ebuild:
+  Replacing einfo with elog
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

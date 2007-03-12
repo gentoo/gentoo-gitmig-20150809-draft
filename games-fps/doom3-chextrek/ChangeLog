@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-chextrek
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/ChangeLog,v 1.6 2006/10/30 20:43:35 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/ChangeLog,v 1.7 2007/03/12 14:29:13 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org>
+  doom3-chextrek-0.5_beta.ebuild, doom3-chextrek-0.5_beta-r1.ebuild:
+  Replacing einfo with elog
 
 *doom3-chextrek-0.5_beta-r1 (30 Oct 2006)
 

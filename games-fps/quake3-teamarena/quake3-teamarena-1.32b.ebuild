@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.5 2006/10/24 22:52:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.6 2007/03/12 15:00:33 genone Exp $
 
 inherit eutils games
 
@@ -43,12 +43,12 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if ! use cdinstall ; then
-		einfo "You need to copy PAK0.PK3 from your Team Arena CD into"
-		einfo "${dir}/missionpack and name it pak0.pk3."
-		einfo "Or if you have got a Window installation of Q3 make a symlink to save space."
-		echo
-		einfo "Or, re-emerge quake3-teamarena with USE=cdinstall."
+		elog "You need to copy PAK0.PK3 from your Team Arena CD into"
+		elog "${dir}/missionpack and name it pak0.pk3."
+		elog "Or if you have got a Window installation of Q3 make a symlink to save space."
+		elog
+		elog "Or, re-emerge quake3-teamarena with USE=cdinstall."
 		echo
 	fi
-	einfo "There is currently no icon for Q3TA.  This will be resolved soon."
+	elog "There is currently no icon for Q3TA.  This will be resolved soon."
 }

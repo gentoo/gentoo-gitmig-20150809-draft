@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.4 2006/12/05 14:58:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.5 2007/03/12 14:38:40 genone Exp $
 
 inherit games
 
@@ -48,11 +48,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "NOTE that this client doesnt include .pak files. You need to copy them from"
-	einfo "your quake1 CD (see also: http://www.idsoftware.com/store/index.php?view=quake&page=2), "
-	einfo "(note that quake1 shareware packs are free) and put them in"
-	einfo "  ${GAMES_PREFIX_OPT}/quake1/id1 (all names lowercase)"
-	einfo "You may also want to check:"
-	einfo "--> http://fuhquake.quakeworld.nu  -- complete howto on commands and variables"
-	einfo "--> http://equake.quakeworld.nu -- free package containing various files"
+	elog "NOTE that this client doesnt include .pak files. You need to copy them from"
+	elog "your quake1 CD (see also: http://www.idsoftware.com/store/index.php?view=quake&page=2), "
+	elog "(note that quake1 shareware packs are free) and put them in"
+	elog "  ${GAMES_PREFIX_OPT}/quake1/id1 (all names lowercase)"
+	elog "You may also want to check:"
+	elog "--> http://fuhquake.quakeworld.nu  -- complete howto on commands and variables"
+	elog "--> http://equake.quakeworld.nu -- free package containing various files"
 }

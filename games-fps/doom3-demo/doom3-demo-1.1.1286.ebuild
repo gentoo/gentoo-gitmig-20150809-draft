@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.18 2006/11/07 20:44:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.19 2007/03/12 14:33:32 genone Exp $
 
 inherit eutils games
 
@@ -67,6 +67,6 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "To play the game run:"
-	einfo " doom3-demo"
+	elog "To play the game run:"
+	elog " doom3-demo"
 }

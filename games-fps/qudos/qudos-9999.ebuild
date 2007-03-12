@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.4 2006/12/05 17:54:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.5 2007/03/12 15:07:20 genone Exp $
 
 inherit eutils subversion toolchain-funcs games
 
@@ -56,7 +56,7 @@ pkg_setup() {
 	local alert_user
 
 	if ! use qmax && $( use opengl || use sdl ) ; then
-		einfo "The 'qmax' graphical improvements are recommended."
+		elog "The 'qmax' graphical improvements are recommended."
 		echo
 		alert_user=y
 	fi
@@ -80,7 +80,7 @@ pkg_setup() {
 	[[ -z "${snd_drv}" ]] && snd_drv="oss"
 
 	if default_client ; then
-		einfo "Selected the ${snd_drv} sound driver."
+		elog "Selected the ${snd_drv} sound driver."
 		echo
 		if [[ "${snd_drv}" = "alsa" ]] ; then
 			ewarn "The ALSA sound driver for this game is incomplete."

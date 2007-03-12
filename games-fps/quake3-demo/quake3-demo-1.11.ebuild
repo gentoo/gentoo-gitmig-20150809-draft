@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.21 2007/01/05 00:00:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.22 2007/03/12 14:58:51 genone Exp $
 
 inherit eutils games
 
@@ -73,6 +73,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the game run:"
-	einfo " q3demo"
+	elog "To play the game run:"
+	elog " q3demo"
 }

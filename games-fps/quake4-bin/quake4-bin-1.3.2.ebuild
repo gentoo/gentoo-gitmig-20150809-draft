@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.5 2007/01/31 08:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.6 2007/03/12 15:02:39 genone Exp $
 
 inherit eutils versionator games
 
@@ -104,15 +104,15 @@ pkg_postinst() {
 
 	if ! use cdinstall
 	then
-		einfo "You need to copy pak001.pk4 through pak012.pk4, along with"
-		einfo "zpak*.pk4 from either your installation media or your hard drive"
-		einfo "to ${dir}/q4base before running the game."
+		elog "You need to copy pak001.pk4 through pak012.pk4, along with"
+		elog "zpak*.pk4 from either your installation media or your hard drive"
+		elog "to ${dir}/q4base before running the game."
 		echo
 	fi
 	if use opengl || ! use dedicated
 	then
-		einfo "To play the game run:"
-		einfo " quake4"
+		elog "To play the game run:"
+		elog " quake4"
 		echo
 	fi
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.4 2006/09/27 09:32:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.5 2007/03/12 14:47:19 genone Exp $
 
 inherit eutils versionator games
 
@@ -65,13 +65,13 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "This is just the demo data."
-	einfo "You will still need a Quake 1 client, to play, such as darkplaces."
+	elog "This is just the demo data."
+	elog "You will still need a Quake 1 client, to play, such as darkplaces."
 	echo
 
 	if use symlink ; then
-		einfo "id1 has been symlinked to demo, for convenience, within:"
-		einfo "${dir}"
+		elog "id1 has been symlinked to demo, for convenience, within:"
+		elog "${dir}"
 		echo
 	fi
 }

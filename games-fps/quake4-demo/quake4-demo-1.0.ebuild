@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.12 2006/11/07 02:07:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.13 2007/03/12 15:03:33 genone Exp $
 
 inherit eutils games
 
@@ -96,7 +96,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "To play the game run:"
-	einfo " quake4-demo"
+	elog "To play the game run:"
+	elog " quake4-demo"
 	echo
 }

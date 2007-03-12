@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.40.ebuild,v 1.4 2006/12/05 17:10:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.40.ebuild,v 1.5 2007/03/12 14:43:43 genone Exp $
 
 inherit eutils games
 
@@ -69,8 +69,8 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Version ${PV} of ${PN} may give problems if there are"
-	einfo "config-files from earlier versions.  Removing the ~/.legends dir"
-	einfo "and restarting will solve this."
+	elog "Version ${PV} of ${PN} may give problems if there are"
+	elog "config-files from earlier versions.  Removing the ~/.legends dir"
+	elog "and restarting will solve this."
 	echo
 }

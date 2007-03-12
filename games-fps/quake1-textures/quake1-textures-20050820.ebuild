@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20050820.ebuild,v 1.1 2006/06/19 20:28:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20050820.ebuild,v 1.2 2007/03/12 14:49:51 genone Exp $
 
 inherit eutils games
 
@@ -47,5 +47,5 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "Use a Quake 1 client (e.g. darkplaces) to take advantage of these."
+	elog "Use a Quake 1 client (e.g. darkplaces) to take advantage of these."
 }
