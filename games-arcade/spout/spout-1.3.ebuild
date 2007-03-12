@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.5 2007/02/21 17:00:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.6 2007/03/12 13:43:23 genone Exp $
 
 inherit eutils games
 
@@ -29,14 +29,14 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "To play in fullscreen mode, do 'spout f'."
-	einfo "To play in a greater resolution, do 'spout x', where"
-	einfo "x is an integer; the larger x is, the higher the resolution."
+	elog "To play in fullscreen mode, do 'spout f'."
+	elog "To play in a greater resolution, do 'spout x', where"
+	elog "x is an integer; the larger x is, the higher the resolution."
 	echo
-	einfo "To play:"
-	einfo "Accelerate - spacebar, enter, z, x"
-	einfo "Pause - escape"
-	einfo "Exit - shift+escape"
-	einfo "Rotate - left or right"
+	elog "To play:"
+	elog "Accelerate - spacebar, enter, z, x"
+	elog "Pause - escape"
+	elog "Exit - shift+escape"
+	elog "Rotate - left or right"
 	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.4 2006/11/19 15:44:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.5 2007/03/12 13:42:27 genone Exp $
 
 inherit eutils games
 
@@ -52,7 +52,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "If you want to use a DDR pad with pyDance,"
-	einfo "all you need to do is emerge the games-arcade/ddrmat kernel module."
+	elog "If you want to use a DDR pad with pyDance,"
+	elog "all you need to do is emerge the games-arcade/ddrmat kernel module."
 	echo
 }
