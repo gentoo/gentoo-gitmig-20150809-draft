@@ -1,6 +1,11 @@
 # ChangeLog for games-util/biounzip
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/ChangeLog,v 1.1 2006/01/09 23:29:05 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/ChangeLog,v 1.2 2007/03/12 14:23:31 wolf31o2 Exp $
+
+  12 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/biounzip-1.1a-64bit.patch, biounzip-1.1a.ebuild:
+  Added a patch from Andrei Slavoiu <ansla80@yahoo.com> to fix biounzip on
+  64-bit machines and closing bug #169867.
 
 *biounzip-1.1a (09 Jan 2006)
 

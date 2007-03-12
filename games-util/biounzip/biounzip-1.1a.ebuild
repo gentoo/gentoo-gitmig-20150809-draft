@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.2 2007/01/26 19:11:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.3 2007/03/12 14:23:31 wolf31o2 Exp $
 
 inherit eutils
 
@@ -16,6 +16,12 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/libc sys-libs/zlib"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-64bit.patch
+}
 
 src_compile() {
 	sed -i -e "s#-march=athlon-xp#${CFLAGS}#" Makefile || die
