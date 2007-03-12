@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-3.1.ebuild,v 1.9 2007/02/04 08:48:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-3.1.ebuild,v 1.10 2007/03/12 19:35:08 leio Exp $
 
 inherit eutils
 
@@ -22,7 +22,8 @@ RDEPEND="||	(
 				)
 				virtual/x11
 			)
-		dev-libs/libxml2"
+		dev-libs/libxml2
+		>=dev-libs/glib-2.6"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -34,7 +35,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-3.0-libxml.diff"
 }
-
 
 src_compile() {
 	local xkbbase
