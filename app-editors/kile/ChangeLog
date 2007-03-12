@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.92 2007/03/12 14:56:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.93 2007/03/12 23:33:41 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> kile-1.9.3.ebuild:
   x86 stable
