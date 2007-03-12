@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.157 2007/03/12 13:15:09 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.158 2007/03/12 18:14:02 kloeri Exp $
+
+  12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> nano-2.0.3.ebuild:
+  Stable on Alpha, bug 170333.
 
   12 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> nano-2.0.3.ebuild:
   Stable on MIPS; bug #170333
