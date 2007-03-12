@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.12 2007/03/10 09:56:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.13 2007/03/12 14:24:17 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -17,6 +17,7 @@ djbfft
 dvb
 dmi
 emboss
+galago
 glitz
 hal
 i8x0
