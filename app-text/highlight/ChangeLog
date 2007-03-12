@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.9 2007/03/03 18:30:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.10 2007/03/12 22:28:17 leonardop Exp $
+
+  12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
+  Replacing text-markup herd with the new sgml and tex herds.
 
   03 Mar 2007; nixnut <nixnut@gentoo.org> highlight-2.4.8.ebuild:
   Added ~ppc wrt bug 129395
