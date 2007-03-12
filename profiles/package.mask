@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6959 2007/03/12 15:21:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6960 2007/03/12 15:36:01 matsuu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,11 @@
 ##   End example
 ##
 
-# MATSUU Takuto <matsuu@gentoo.org> (13 Mar 2007)
+# MATSUU Takuto <matsuu@gentoo.org> (12 Mar 2007)
+# Masked due to security issues bug #159542
+app-admin/lsat
+
+# MATSUU Takuto <matsuu@gentoo.org> (12 Mar 2007)
 # Mask for removal. Use app-text/hyperestraier, bug 168179
 app-text/estraier
 
