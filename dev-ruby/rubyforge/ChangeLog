@@ -1,8 +1,11 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.4 2007/01/05 00:24:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.5 2007/03/12 14:54:22 tgall Exp $
 
-  05 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> rubyforge-0.3.1.ebuild:
+  12 Mar 2007; Tom Gall <tgall@gentoo.org> rubyforge-0.3.1.ebuild:
+  added ~ppc64
+
+  05 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org> rubyforge-0.3.1.ebuild:
   Add ~ia64 keyword.
 
 *rubyforge-0.3.1 (18 Dec 2006)
@@ -15,7 +18,7 @@
 
 *rubyforge-0.3.0 (03 Dec 2006)
 
-  03 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  03 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org> +metadata.xml,
   +rubyforge-0.3.0.ebuild:
   Added rubyforge, part of #147065. Ebuild by Guillaume Benny <guillaume.benny@sympatico.ca>
 
