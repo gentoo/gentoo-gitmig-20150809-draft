@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.14 2007/02/26 09:54:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.15 2007/03/12 17:30:01 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> tls-1.5.0.ebuild:
+  x86 stable
 
   26 Feb 2007; Simon Stelling <blubb@gentoo.org> tls-1.5.0.ebuild:
   amd64 stable; bug 168364
