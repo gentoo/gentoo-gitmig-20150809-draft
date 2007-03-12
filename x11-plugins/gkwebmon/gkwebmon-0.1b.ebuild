@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/gkwebmon-0.1b.ebuild,v 1.6 2004/06/24 23:00:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/gkwebmon-0.1b.ebuild,v 1.7 2007/03/12 19:26:31 lack Exp $
+
+inherit gkrellm-plugin
 
 IUSE=""
 
@@ -12,13 +14,3 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha"
 
-DEPEND="=app-admin/gkrellm-2*"
-
-src_compile() {
-	make || die
-}
-
-src_install() {
-	insinto /usr/lib/gkrellm2/plugins
-	doins gkwebmon.so
-}
