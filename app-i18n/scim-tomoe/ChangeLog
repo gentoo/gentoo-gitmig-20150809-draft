@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim-tomoe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.4 2007/01/06 05:57:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.5 2007/03/12 00:15:13 matsuu Exp $
+
+*scim-tomoe-0.5.0-r1 (12 Mar 2007)
+
+  12 Mar 2007; MATSUU Takuto <matsuu@gentoo.org> -scim-tomoe-0.2.0.ebuild,
+  -scim-tomoe-0.3.0.ebuild, -scim-tomoe-0.5.0.ebuild,
+  +scim-tomoe-0.5.0-r1.ebuild:
+  Fixed wrong install directory, bug #170346.
 
 *scim-tomoe-0.5.0 (06 Jan 2007)
 
