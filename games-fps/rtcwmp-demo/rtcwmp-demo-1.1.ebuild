@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.7 2006/12/05 17:57:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.8 2007/03/12 15:15:26 genone Exp $
 
 inherit eutils games
 
@@ -71,15 +71,15 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Install 'rtcwsp-demo' for single-player"
-	echo
-	einfo "Run 'rtcwmp-demo' for multi-player"
+	elog "Install 'rtcwsp-demo' for single-player"
+	elog
+	elog "Run 'rtcwmp-demo' for multi-player"
 	if use dedicated; then
-		echo
-		einfo "Start a dedicated server with"
-		einfo "'/etc/init.d/rtcwmp-demo-ded start'"
-		echo
-		einfo "Start the server at boot with"
-		einfo "'rc-update add rtcwmp-demo-ded default'"
+		elog
+		elog "Start a dedicated server with"
+		elog "'/etc/init.d/rtcwmp-demo-ded start'"
+		elog
+		elog "Start the server at boot with"
+		elog "'rc-update add rtcwmp-demo-ded default'"
 	fi
 }

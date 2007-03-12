@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.21 2007/01/09 22:17:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.22 2007/03/12 15:19:54 genone Exp $
 
 inherit eutils games
 
@@ -79,6 +79,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the game run:"
-	einfo " sof"
+	elog "To play the game run:"
+	elog " sof"
 }

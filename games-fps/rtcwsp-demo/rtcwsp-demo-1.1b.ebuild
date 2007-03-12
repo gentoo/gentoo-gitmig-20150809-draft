@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b.ebuild,v 1.7 2006/12/05 17:59:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b.ebuild,v 1.8 2007/03/12 15:16:42 genone Exp $
 
 inherit eutils games
 
@@ -56,7 +56,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Install 'rtcwmp-demo' for multi-player"
-	echo
-	einfo "Run '${PN}' for single-player"
+	elog "Install 'rtcwmp-demo' for multi-player"
+	elog
+	elog "Run '${PN}' for single-player"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.11 2007/03/07 16:57:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.12 2007/03/12 15:28:47 genone Exp $
 
 inherit eutils games
 
@@ -49,16 +49,16 @@ pkg_postinst() {
 	# here is where we check for the existence of a cdkey...
 	# if we don't find one, we ask the user for it
 	if [[ -f ${dir}/System/cdkey ]] ; then
-		einfo "A cdkey file is already present in ${dir}/System"
+		elog "A cdkey file is already present in ${dir}/System"
 	else
 		ewarn "You MUST run this before playing the game:"
 		ewarn "emerge --config =${CATEGORY}/${PF}"
 		ewarn "That way you can (re)enter your cdkey."
 	fi
-	echo
-	einfo "To play the game run:"
-	einfo " ut2003"
-	echo
+	elog
+	elog "To play the game run:"
+	elog " ut2003"
+	ewarn
 	ewarn "If you are not installing for the first time and you plan on running"
 	ewarn "a server, you will probably need to edit your"
 	ewarn "~/.ut2003/System/UT2003.ini file and add a line that says"

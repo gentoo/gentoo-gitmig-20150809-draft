@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.5 2007/01/31 08:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.6 2007/03/12 15:13:51 genone Exp $
 
 inherit eutils games
 
@@ -76,22 +76,22 @@ pkg_postinst() {
 	ewarn "other when running as a client."
 	ewarn "For more information, see bug #82149."
 	echo
-	einfo "You need to copy pak0.pk3, mp_pak0.pk3, mp_pak1.pk3, mp_pak2.pk3,"
-	einfo "sp_pak1.pk3 and sp_pak2.pk3 from a Window installation into ${dir}/main/"
-	echo
-	einfo "To play the game run:"
-	einfo " rtcwsp (single-player)"
-	einfo " rtcwmp (multi-player)"
-	echo
+	elog "You need to copy pak0.pk3, mp_pak0.pk3, mp_pak1.pk3, mp_pak2.pk3,"
+	elog "sp_pak1.pk3 and sp_pak2.pk3 from a Window installation into ${dir}/main/"
+	elog
+	elog "To play the game run:"
+	elog " rtcwsp (single-player)"
+	elog " rtcwmp (multi-player)"
+	elog
 	if use dedicated
 	then
-		einfo "To start a dedicated server run:"
-		einfo " /etc/init.d/wolf-ded start"
-		echo
-		einfo "To run the dedicated server at boot, type:"
-		einfo " rc-update add wolf-ded default"
-		echo
-		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account"
+		elog "To start a dedicated server run:"
+		elog " /etc/init.d/wolf-ded start"
+		elog
+		elog "To run the dedicated server at boot, type:"
+		elog " rc-update add wolf-ded default"
+		elog
+		elog "The dedicated server is started under the ${GAMES_USER_DED} user account"
 		echo
 	fi
 }

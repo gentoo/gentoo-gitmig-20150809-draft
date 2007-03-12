@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.15 2006/12/05 18:10:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.16 2007/03/12 15:27:03 genone Exp $
 
 inherit eutils games
 
@@ -165,9 +165,9 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "You might want to install the bonus packs too."
-	einfo "Many servers on the internet use them, and the"
-	einfo "majority of players do too."
-	echo
-	einfo "Just run: emerge unreal-tournament-bonuspacks"
+	elog "You might want to install the bonus packs too."
+	elog "Many servers on the internet use them, and the"
+	elog "majority of players do too."
+	elog
+	elog "Just run: emerge unreal-tournament-bonuspacks"
 }
