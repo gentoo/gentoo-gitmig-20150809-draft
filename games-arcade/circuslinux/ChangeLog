@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/circuslinux
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.13 2006/09/20 16:43:55 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.14 2007/03/12 20:43:01 nyhm Exp $
+
+  12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> circuslinux-1.0.3.ebuild:
+  Install menu entry, bug #159850
 
   20 Sep 2006; <blubb@gentoo.org> circuslinux-1.0.3.ebuild:
   stable on amd64

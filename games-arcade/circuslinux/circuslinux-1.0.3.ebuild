@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.14 2006/09/20 16:43:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.15 2007/03/12 20:43:01 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="clone of the Atari 2600 game \"Circus Atari\""
 SRC_URI="ftp://ftp.sonic.net/pub/users/nbs/unix/x/circus-linux/${P}.tar.gz"
@@ -31,7 +31,9 @@ src_unpack() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon data/images/${PN}-icon.xpm ${PN}.xpm
+	make_desktop_entry ${PN} "Circus Linux!" ${PN}.xpm
 	dodoc *.txt
 	prepgamesdirs
 }
