@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.9 2007/03/07 16:10:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.10 2007/03/12 14:07:09 genone Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -249,12 +249,12 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Your available MAME binaries are: ${TARGET}"
+	elog "Your available MAME binaries are: ${TARGET}"
 	if use X || use dga || use xv ; then
-		einfo " ${TARGET}.x11"
+		elog " ${TARGET}.x11"
 	fi
-	use sdl > /dev/null                 && einfo " ${TARGET}.SDL"
-	use ggi > /dev/null                 && einfo " ${TARGET}.ggi"
-	use svga > /dev/null                && einfo " ${TARGET}.svgalib"
-	use opengl > /dev/null              && einfo " ${TARGET}.xgl"
+	use sdl > /dev/null                 && elog " ${TARGET}.SDL"
+	use ggi > /dev/null                 && elog " ${TARGET}.ggi"
+	use svga > /dev/null                && elog " ${TARGET}.svgalib"
+	use opengl > /dev/null              && elog " ${TARGET}.xgl"
 }
