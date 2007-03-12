@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.20 2007/02/22 02:22:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.21 2007/03/12 19:46:15 opfer Exp $
+
+  12 Mar 2007; Christian Faulhammer <opfer@gentoo.org> pmd-3.8-r1.ebuild:
+  stable x86, bug 170599
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
