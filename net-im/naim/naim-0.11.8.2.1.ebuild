@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.2.1.ebuild,v 1.2 2007/01/20 12:07:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.2.1.ebuild,v 1.3 2007/03/12 20:19:45 swegener Exp $
 
 
 DESCRIPTION="An ncurses based AOL Instant Messenger"
@@ -40,9 +40,9 @@ src_compile() {
 		${myconf} \
 		|| die "configure failed"
 
-	# Use make instead of emake, because naim doesn't compile with ${MAKEOPTS} > 1
+	# Use -j1, because naim doesn't compile with ${MAKEOPTS} > 1
 	# see bug #139329
-	make || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
