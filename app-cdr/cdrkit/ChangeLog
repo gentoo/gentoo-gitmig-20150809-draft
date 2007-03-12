@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.23 2007/03/11 20:24:35 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.24 2007/03/12 11:21:37 opfer Exp $
+
+  12 Mar 2007; Christian Faulhammer <opfer@gentoo.org> cdrkit-1.1.2.ebuild:
+  stable x86, bug 170482
 
   11 Mar 2007; Lars Weiler <pylon@gentoo.org> cdrkit-1.1.2.ebuild:
   Stable on ppc; bug #170482.
