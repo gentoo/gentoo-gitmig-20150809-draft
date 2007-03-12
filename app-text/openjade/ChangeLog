@@ -1,6 +1,9 @@
 # ChangeLog for app-text/openjade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.49 2007/01/26 20:53:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.50 2007/03/12 22:52:54 leonardop Exp $
+
+  12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
+  Replacing text-markup herd with the new sgml herd.
 
   26 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
   +files/openjade-1.3.2-la-fix.patch, +files/openjade-1.3.2-ldflags.patch,
