@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.4-r1.ebuild,v 1.1 2007/02/22 11:12:46 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.4-r2.ebuild,v 1.1 2007/03/12 18:02:16 voxus Exp $
 
-inherit eutils libtool autotools
+inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
 DLZ_VERSION="9.3.3"
 
@@ -110,6 +110,9 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-linux-caps --disable-threads"
 	fi
+
+	# bug #158664
+	gcc-specs-ssp && replace-flags -O[23s] -O
 
 	econf \
 		--sysconfdir=/etc/bind \
