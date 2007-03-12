@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6958 2007/03/11 19:16:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6959 2007/03/12 15:21:30 matsuu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# MATSUU Takuto <matsuu@gentoo.org> (13 Mar 2007)
+# Mask for removal. Use app-text/hyperestraier, bug 168179
+app-text/estraier
 
 # Raúl Porcel <armin76@gentoo.org> (11 Mar 2007)
 # Mask for removal in 60 days, for treecleaners
