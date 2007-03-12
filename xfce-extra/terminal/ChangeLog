@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.38 2007/03/11 10:34:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.39 2007/03/12 00:21:32 kloeri Exp $
+
+  12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
+  terminal-0.2.6-r1.ebuild:
+  Stable on Alpha + IA64.
 
   11 Mar 2007; Samuli Suominen <drac@gentoo.org> terminal-0.2.4.ebuild,
   -terminal-0.2.4-r1.ebuild:
