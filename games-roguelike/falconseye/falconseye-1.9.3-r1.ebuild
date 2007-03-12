@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.3-r1.ebuild,v 1.6 2007/03/07 17:04:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.3-r1.ebuild,v 1.7 2007/03/12 17:15:10 genone Exp $
 
 DESCRIPTION="A graphical version of nethack"
 SRC_URI="mirror://sourceforge/falconseye/nethack_source_331_jtp_193.zip"
@@ -54,6 +54,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Falconseye now supports a ~/.falconseyerc file to set options."
-	einfo "Click ? then 'List of game options' in falconseye for more info."
+	elog "Falconseye now supports a ~/.falconseyerc file to set options."
+	elog "Click ? then 'List of game options' in falconseye for more info."
 }

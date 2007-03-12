@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-070104.ebuild,v 1.1 2007/01/05 17:34:58 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-070104.ebuild,v 1.2 2007/03/12 17:20:56 genone Exp $
 
 inherit games
 
@@ -48,6 +48,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To start playing right away:"
-	einfo "$ tomenet europe.tomenet.net"
+	elog "To start playing right away:"
+	elog "$ tomenet europe.tomenet.net"
 }

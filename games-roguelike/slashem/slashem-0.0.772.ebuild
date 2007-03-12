@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.3 2006/11/18 02:01:59 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.4 2007/03/12 17:18:20 genone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -170,5 +170,5 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "You may want to look at /etc/skel/.slashemrc for interesting options"
+	elog "You may want to look at /etc/skel/.slashemrc for interesting options"
 }

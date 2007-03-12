@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.17 2007/03/07 17:06:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.18 2007/03/12 17:16:45 genone Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -178,5 +178,5 @@ pkg_postinst() {
 		ewarn "the qt frontend may be a little unstable with this version of qt"
 		ewarn "please see Bug 32629 for more information"
 	fi
-	einfo "You may want to look at /etc/skel/.nethackrc for interesting options"
+	elog "You may want to look at /etc/skel/.nethackrc for interesting options"
 }
