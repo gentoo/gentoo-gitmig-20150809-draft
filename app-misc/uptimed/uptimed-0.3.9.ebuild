@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.9.ebuild,v 1.2 2007/03/12 10:52:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.9.ebuild,v 1.3 2007/03/12 13:53:09 gustavoz Exp $
 
 WANT_AUTOMAKE=1.5
 
@@ -12,7 +12,7 @@ SRC_URI="http://podgorny.cz/uptimed/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 src_unpack() {
