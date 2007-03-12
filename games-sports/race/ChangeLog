@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/race
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/ChangeLog,v 1.7 2007/02/08 21:52:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/ChangeLog,v 1.8 2007/03/12 17:36:28 nyhm Exp $
+
+  12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> race-0.5.ebuild:
+  Install menu entry, bug #160244
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
