@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sxid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.19 2007/01/24 15:00:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.20 2007/03/12 18:08:35 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> sxid-4.0.4-r1.ebuild:
+  x86 stable
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> sxid-4.0.4.ebuild,
   sxid-4.0.4-r1.ebuild:
