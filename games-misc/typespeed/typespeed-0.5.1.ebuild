@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.5.1.ebuild,v 1.2 2006/07/10 05:30:51 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.5.1.ebuild,v 1.3 2007/03/12 15:54:32 genone Exp $
 
 inherit eutils games
 
@@ -46,11 +46,11 @@ src_install() {
 
 pkg_postrm() {
 	echo
-	einfo "${PN} scorefiles was installed into ${GAMES_STATEDIR}/${PN}"
-	einfo "and haven't been removed."
-	einfo "To get rid of ${PN} completely, you can safely remove"
-	einfo "${GAMES_STATEDIR}/${PN} running:"
-	echo
-	einfo "rm -rf ${GAMES_STATEDIR}/${PN}"
+	elog "${PN} scorefiles was installed into ${GAMES_STATEDIR}/${PN}"
+	elog "and haven't been removed."
+	elog "To get rid of ${PN} completely, you can safely remove"
+	elog "${GAMES_STATEDIR}/${PN} running:"
+	elog
+	elog "rm -rf ${GAMES_STATEDIR}/${PN}"
 	echo
 }

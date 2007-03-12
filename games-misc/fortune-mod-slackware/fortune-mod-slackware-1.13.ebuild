@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.13.ebuild,v 1.2 2007/02/08 08:01:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.13.ebuild,v 1.3 2007/03/12 15:52:47 genone Exp $
 
 # this ebuild now uses the offensive flag since AOLS
 # is not exactly 'G' rated :)
@@ -21,9 +21,9 @@ S=${WORKDIR}
 
 pkg_setup() {
 	if ! use offensive ; then
-		einfo "These fortunes have offensive content. Enable offensive USE Flag"
-		einfo "ex: USE=\"offensive\" emerge ${PN}"
-		einfo " or add to package.use file: games-misc/fortune-mod-slackware offensive"
+		elog "These fortunes have offensive content. Enable offensive USE Flag"
+		elog "ex: USE=\"offensive\" emerge ${PN}"
+		elog " or add to package.use file: games-misc/fortune-mod-slackware offensive"
 		exit 1
 	fi
 }

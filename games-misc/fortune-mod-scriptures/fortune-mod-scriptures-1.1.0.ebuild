@@ -1,6 +1,6 @@
-# Copyright 2006-2006 Gentoo Foundation
+# Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/fortune-mod-scriptures-1.1.0.ebuild,v 1.1 2006/10/20 19:11:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/fortune-mod-scriptures-1.1.0.ebuild,v 1.2 2007/03/12 15:51:52 genone Exp $
 
 DESCRIPTION="Fortune modules from the King James Bible scriptures"
 HOMEPAGE="http://scriptures.nephi.org/"
@@ -18,15 +18,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This package contains twelve fortune modules:"
-	einfo "acts - The Acts of the Apostles"
-	einfo "bible - King James Version of the Holy Bible"
-	einfo "eccl - Ecclesiastes"
-	einfo "epistles - New Testament Epistles (Romans to Jude)"
-	einfo "gospels - The Four Gospels (Matthew, Mark, Luke, John)"
-	einfo "isaiah - The Book of Isaiah"
-	einfo "nt - The New Testament"
-	einfo "ot - The Old Testament"
-	einfo "proverbs - Proverbs"
-	einfo "psalms - Psalms"
+	elog "This package contains twelve fortune modules:"
+	elog "acts - The Acts of the Apostles"
+	elog "bible - King James Version of the Holy Bible"
+	elog "eccl - Ecclesiastes"
+	elog "epistles - New Testament Epistles (Romans to Jude)"
+	elog "gospels - The Four Gospels (Matthew, Mark, Luke, John)"
+	elog "isaiah - The Book of Isaiah"
+	elog "nt - The New Testament"
+	elog "ot - The Old Testament"
+	elog "proverbs - Proverbs"
+	elog "psalms - Psalms"
 }

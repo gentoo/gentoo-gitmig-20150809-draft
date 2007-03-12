@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-slackware
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.4 2006/07/31 05:02:30 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.5 2007/03/12 15:52:47 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org>
+  fortune-mod-slackware-1.13.ebuild:
+  Replacing einfo with elog
 
 *fortune-mod-slackware-1.13 (31 Jul 2006)
 
