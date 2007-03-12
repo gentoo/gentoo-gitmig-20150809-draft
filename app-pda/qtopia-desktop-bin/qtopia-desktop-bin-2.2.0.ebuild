@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.2 2007/01/24 03:33:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.3 2007/03/12 05:11:04 nerdboy Exp $
 
 inherit eutils rpm multilib
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.trolltech.com/developer/downloads/qtopia/desktopdownloads"
 
 LICENSE="trolltech_PUL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
