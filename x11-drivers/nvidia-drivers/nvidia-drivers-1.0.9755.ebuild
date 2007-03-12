@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9755.ebuild,v 1.1 2007/03/07 23:14:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9755.ebuild,v 1.2 2007/03/12 22:53:09 vapier Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -356,7 +356,7 @@ src_install-libs() {
 
 pkg_preinst() {
 	# Can we make up our minds ?!?!?
-	local NV_D=${IMAGE:-${D}}
+	local NV_D=${D}
 
 	if ! has_version x11-base/xorg-server ; then
 		for dir in lib lib32 lib64 ; do
