@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.22.ebuild,v 1.6 2007/03/07 20:37:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.22.ebuild,v 1.7 2007/03/12 21:47:54 tester Exp $
 
 inherit gnome2 eutils
 
@@ -24,6 +24,7 @@ RDEPEND="|| ( x11-libs/libXScrnSaver
 	>=dev-libs/libxml2-2.6.16
 	>=dev-libs/libxslt-1
 	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-vfs-2
 	>=net-libs/loudmouth-1
 	spell? ( app-text/aspell )
