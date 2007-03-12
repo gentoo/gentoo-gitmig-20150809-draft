@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.16 2007/02/22 01:27:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.17 2007/03/12 20:46:10 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> toolame-02l-r2.ebuild:
+  x86 stable
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
