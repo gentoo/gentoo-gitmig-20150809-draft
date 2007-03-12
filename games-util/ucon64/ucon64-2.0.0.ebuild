@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.4 2007/03/07 17:36:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.5 2007/03/12 18:23:00 genone Exp $
 
 DESCRIPTION="The backup tool and wonderful emulator's Swiss Army knife program"
 HOMEPAGE="http://ucon64.sourceforge.net/"
@@ -46,15 +46,15 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "In order to use ${PN}, please create the directory ~/.ucon64/dat"
-	einfo "The command to do that is:"
-	einfo "    mkdir -p ~/.ucon64/dat"
-	einfo "Then, you can copy your DAT file collection to ~/.ucon64/dat"
-	echo
-	einfo "To enable Discmage support, cp /usr/lib/discmage.so to ~/.ucon64"
-	einfo "The command to do that is:"
-	einfo "    cp /usr/lib/discmage.so ~/.ucon64/"
-	echo
-	einfo "Be sure to check ~/.ucon64rc for some options after"
-	einfo "you've run uCON64 for the first time"
+	elog "In order to use ${PN}, please create the directory ~/.ucon64/dat"
+	elog "The command to do that is:"
+	elog "    mkdir -p ~/.ucon64/dat"
+	elog "Then, you can copy your DAT file collection to ~/.ucon64/dat"
+	elog
+	elog "To enable Discmage support, cp /usr/lib/discmage.so to ~/.ucon64"
+	elog "The command to do that is:"
+	elog "    cp /usr/lib/discmage.so ~/.ucon64/"
+	elog
+	elog "Be sure to check ~/.ucon64rc for some options after"
+	elog "you've run uCON64 for the first time"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-util/atlas
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.12 2007/03/10 13:09:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.13 2007/03/12 18:20:22 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> atlas-0.2.2-r1.ebuild,
+  atlas-0.3.0.ebuild, atlas-0.3.1.ebuild:
+  Replacing einfo with elog
 
 *atlas-0.3.1 (10 Mar 2007)
 
