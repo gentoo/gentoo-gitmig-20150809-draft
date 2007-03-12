@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsvg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.14 2007/03/12 20:41:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.15 2007/03/12 20:49:55 drac Exp $
+
+  12 Mar 2007; Samuli Suominen <drac@gentoo.org> xsvg-0.2.1.ebuild:
+  dodoc AUTHORS ChangeLog NEWS README
 
   12 Mar 2007; Samuli Suominen <drac@gentoo.org>
   +files/xsvg-0.2.1-asneeded.patch, metadata.xml, xsvg-0.2.1.ebuild:

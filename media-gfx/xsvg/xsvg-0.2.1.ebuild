@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.2.1.ebuild,v 1.5 2007/03/12 20:44:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.2.1.ebuild,v 1.6 2007/03/12 20:49:55 drac Exp $
 
 inherit autotools eutils
 
@@ -25,4 +25,5 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog NEWS README
 }
