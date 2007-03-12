@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.11 2007/03/11 16:45:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.12 2007/03/12 13:16:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -231,18 +231,20 @@ src_unpack() {
 			unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
 			unshield x "${CDROM_ROOT}"/data2.cab || die "unpacking"
 			# We have to adjust the files after unpacking the cab file.
-			rm -rf _*
+			mkdir -p miles/
+			mkdir -p ambient/
+			mkdir -p utils/nwupdateskins/
 			mv -f NWN_Platinum/Miles/* miles/
 			mv -f NWN_Platinum/ambient/*.wav ambient/
 			mv -f NWN_Platinum/docs .
 			mv -f NWN_Platinum/modules .
 			mv -f NWN_Platinum/nwm .
-			mv -f NWN_Platinum/nwm .
 			mv -f NWN_Platinum/utils/nwupdateskins/*.bmp utils/nwupdateskins/
 			rm -rf NWN_Platinum/
+			rm -rf _*
 			# If we have the DVD, we're done.  If not, we need to switch CDs and
 			# unpack the files on them.
-			if [[ `du -b "${CDROM_ROOT}"/Data_Shared.zip` -lt 700000000 ]]
+			if [[ $(du -b "${CDROM_ROOT}"/Data_Shared.zip | awk '{print $1}') -lt 700000000 ]]
 			then
 				cdrom_load_next_cd
 				einfo "Unpacking files..."
@@ -397,7 +399,7 @@ else \
 	p=${HOME}/.nwn \
 	for i in ${LINGUAS} \
 	do \
-		if [[ -z "${LANG}" ]] && [[ -r ".metadata/linguas_$i" -a -d "$i" ]] \
+		if [ -z "${LANG}" -a -r ".metadata/linguas_$i" -a -d "$i" ] \
 		then \
 			LANG=$i \
 			p=${HOME}/.nwn \
