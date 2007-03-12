@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.5 2005/10/07 19:48:57 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.6 2007/03/12 19:55:57 xmerlin Exp $
 
 depend() {
 	use dns logger
 	need net
 	need fenced
+	after gnbd-srv
 }
 
 load_modules() {
