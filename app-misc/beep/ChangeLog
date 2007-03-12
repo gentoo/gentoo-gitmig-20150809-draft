@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beep
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.22 2006/09/16 13:58:22 dertobi123 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.23 2007/03/12 14:45:21 armin76 Exp $
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> beep-1.2.2-r1.ebuild:
+  x86 stable
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   beep-1.2.2-r1.ebuild:
