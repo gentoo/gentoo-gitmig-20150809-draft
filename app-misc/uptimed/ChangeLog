@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.42 2007/03/10 15:44:50 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.43 2007/03/12 10:52:09 armin76 Exp $
+
+*uptimed-0.3.10 (12 Mar 2007)
+
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> uptimed-0.3.9.ebuild,
+  +uptimed-0.3.10.ebuild:
+  Version bump thanks to <thomas at nosredna dot net>, bug 170204, and stable
+  x86, bug 170548
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> uptimed-0.3.7.ebuild:
   Keyworded ~x86-fbsd
