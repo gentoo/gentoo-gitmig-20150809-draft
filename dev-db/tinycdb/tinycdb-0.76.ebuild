@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.76.ebuild,v 1.1 2007/03/12 14:50:16 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.76.ebuild,v 1.2 2007/03/12 14:51:43 hattya Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {
 
-	einstall install-sharedlib install-piclib || die 
+	einstall install-sharedlib install-piclib || die
 	dodoc NEWS
 
 }

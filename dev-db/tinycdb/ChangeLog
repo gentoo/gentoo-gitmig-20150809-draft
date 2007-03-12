@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.11 2007/03/12 14:50:16 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.12 2007/03/12 14:51:43 hattya Exp $
+
+  12 Mar 2007; Akinori Hattori <hattya@gentoo.org> tinycdb-0.76.ebuild:
+  remove trailing whitespace.
 
 *tinycdb-0.76 (12 Mar 2007)
 
