@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gifsicle
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.12 2006/08/30 09:13:15 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.13 2007/03/12 14:05:42 gustavoz Exp $
+
+  12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> gifsicle-1.44.ebuild:
+  Keyworded ~sparc wrt #170430
 
   30 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -gifsicle-1.40.ebuild:
