@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.6-r1.ebuild,v 1.1 2007/01/22 06:35:18 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.6-r1.ebuild,v 1.2 2007/03/12 17:40:26 lack Exp $
 
-inherit multilib
+inherit gkrellm-plugin
 
 DESCRIPTION="a GKrellM2 plugin which displays the top three processes"
 SRC_URI="http://psychology.rutgers.edu/~zaimi/html/${PN}/${PN}_2.2-6.tar.gz"
@@ -14,24 +14,28 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 
 IUSE=""
 
-DEPEND=">=app-admin/gkrellm-2"
+PLUGIN_SERVER_SO=gkrelltopd.so
+PLUGIN_SO=gkrelltop2.so
 
 src_compile() {
 	# Unfortunately, the supplied Makefile won't work properly on
 	# non-x86, so we have to do this the hard way.
 	CONFIG="-DLINUX -DGKRELLM2 -fPIC `pkg-config gtk+-2.0 --cflags`"
 	LIBS="`pkg-config gtk+-2.0 --libs` -shared"
-	OBJS="top_three2.o gkrelltop2.o"
+	OBJS="top_three2.o"
+	XOBJS="${OBJS} gkrelltop2.o"
+	DOBJS="${OBJS} gkrelltopd.o"
 	gcc -c $CONFIG $CFLAGS top_three.c -o top_three2.o || die
-	gcc -c $CONFIG $CFLAGS gkrelltop.c -o gkrelltop2.o || die
+	if built_with_use app-admin/gkrellm X; then
+		gcc -c $CONFIG $CFLAGS gkrelltop.c -o gkrelltop2.o || die
+		gcc $LIBS $CONFIG $CFLAGS -o gkrelltop2.so $XOBJS || die
+	fi
 	gcc -c $CONFIG $CFLAGS gkrelltopd.c -o gkrelltopd.o || die
-	gcc $LIBS $CONFIG $CFLAGS -o gkrelltop2.so $OBJS || die
-	gcc $LIBS $CONFIG $CFLAGS -o gkrelltopd.so $OBJS || die
+	gcc $LIBS $CONFIG $CFLAGS -o gkrelltopd.so $DOBJS || die
 }
 
-src_install() {
-	dodoc README
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	doins gkrelltop2.so
-	doins gkrelltopd.so
+pkg_postinst() {
+	einfo "To enable the gkrelltopd server plugin, you must add the following"
+	einfo "line to /etc/gkrellmd.conf:"
+	einfo "\tplugin-enable gkrelltopd"
 }
