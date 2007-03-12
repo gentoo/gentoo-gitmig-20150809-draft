@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.5 2006/12/12 22:45:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.6 2007/03/12 14:14:34 genone Exp $
 
 inherit eutils games
 
@@ -81,8 +81,8 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "If you want to use the new \"modern\" theme for ${PN},"
-	einfo "add the following line to the [scummvm] section of"
-	einfo "your ~/.scummvmrc file (after running scummvm once):"
-	einfo "themepath=${GAMES_DATADIR}/${PN}/engines/"
+	elog "If you want to use the new \"modern\" theme for ${PN},"
+	elog "add the following line to the [scummvm] section of"
+	elog "your ~/.scummvmrc file (after running scummvm once):"
+	elog "themepath=${GAMES_DATADIR}/${PN}/engines/"
 }
