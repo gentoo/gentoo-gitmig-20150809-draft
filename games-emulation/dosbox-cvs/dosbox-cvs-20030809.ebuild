@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.15 2006/05/12 16:58:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.16 2007/03/12 13:56:49 genone Exp $
 
 inherit games cvs
 
@@ -45,7 +45,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "If you're using ati-drivers, you may need to use output=overlay"
-	einfo "in the dosbox config file (see bug #57188)."
+	elog "If you're using ati-drivers, you may need to use output=overlay"
+	elog "in the dosbox config file (see bug #57188)."
 	echo
 }

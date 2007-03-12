@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.3 2006/11/23 22:33:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.4 2007/03/12 14:00:01 genone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -55,11 +55,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Please run ${PN} to create the necessary directories"
-	einfo "in your home directory.  After that you may place ROM files"
-	einfo "in ~/.vj/ROMs and they will be detected when you run virtualjaguar."
-	einfo "You may then select which ROM to run from inside the emulator."
-	echo
-	einfo "If you have previously run a version of ${PV} please note that"
-	einfo "the location of the ROMs has changed."
+	elog "Please run ${PN} to create the necessary directories"
+	elog "in your home directory.  After that you may place ROM files"
+	elog "in ~/.vj/ROMs and they will be detected when you run virtualjaguar."
+	elog "You may then select which ROM to run from inside the emulator."
+	elog
+	elog "If you have previously run a version of ${PV} please note that"
+	elog "the location of the ROMs has changed."
 }
