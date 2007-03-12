@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.10 2007/02/15 14:28:44 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.11 2007/03/12 22:32:43 mabi Exp $
+
+  12 Mar 2007; Matti Bickel <mabi@gentoo.org> bigloo-2.9a.ebuild:
+  ~ppc added (bug #149188)
 
 *bigloo-2.9a (15 Feb 2007)
 
