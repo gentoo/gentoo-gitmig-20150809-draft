@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.5.ebuild,v 1.3 2007/01/14 08:36:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.5.ebuild,v 1.4 2007/03/12 20:58:23 nyhm Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools versionator games
 
 MY_PV=$(get_version_component_range -2)
@@ -23,7 +21,7 @@ RDEPEND="dev-games/physfs
 	media-libs/libpng
 	media-libs/libsdl
 	media-libs/libvorbis
-	media-libs/openal
+	>=media-libs/openal-0.0.8-r1
 	media-libs/sdl-net
 	virtual/glu
 	virtual/opengl
