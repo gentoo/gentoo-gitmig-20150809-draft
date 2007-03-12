@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-bfm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/ChangeLog,v 1.9 2007/03/09 16:15:27 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/ChangeLog,v 1.10 2007/03/12 17:53:52 gustavoz Exp $
+
+  12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellm-bfm-0.6.4.ebuild:
+  Stable on sparc
 
   09 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-bfm-0.6.4.ebuild:
   Updated to use new gkrellm-plugin eclass
