@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2pdbdoc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/ChangeLog,v 1.16 2006/10/10 21:15:54 g2boojum Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/ChangeLog,v 1.17 2007/03/12 23:32:34 leonardop Exp $
+
+  12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
+  Removing text-markup herd, leaving g2boojum as maintainer.
 
   10 Oct 2006; Grant Goodyear <g2boojum@gentoo.org>
   -txt2pdbdoc-1.4.2.ebuild, txt2pdbdoc-1.4.4.ebuild:
