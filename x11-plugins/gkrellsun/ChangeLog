@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellsun
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.26 2007/03/12 17:46:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.27 2007/03/12 17:52:07 lack Exp $
+
+  12 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellsun-1.0.0-r1.ebuild:
+  Updated to use new gkrellm-plugin eclass
 
   12 Mar 2007; Jim Ramsay <lack@gentoo.org> -gkrellsun-0.12.1.ebuild,
   -gkrellsun-0.12.2.ebuild:
