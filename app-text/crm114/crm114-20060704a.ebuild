@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20060704a.ebuild,v 1.2 2007/03/04 07:32:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20060704a.ebuild,v 1.3 2007/03/12 15:25:48 armin76 Exp $
 
 inherit eutils
 #http://crm114.sourceforge.net/crm114-20060704a-BlameRobert.src.tar.gz
@@ -14,7 +14,7 @@ SRC_URI="http://crm114.sourceforge.net/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 
 TREVERS="0.7.4"
 
