@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.45.ebuild,v 1.1 2006/12/23 16:46:48 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.45.ebuild,v 1.2 2007/03/12 19:50:14 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -139,6 +139,7 @@ src_unpack() {
 	unpack "${A}"
 
 	cd "${S}"
+	epatch ${FILESDIR}/xmltv-na_dd-xmltwig.patch
 }
 
 src_compile() {
