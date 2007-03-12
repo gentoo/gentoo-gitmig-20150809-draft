@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.9 2007/01/09 23:55:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.10 2007/03/12 17:59:25 genone Exp $
 
 inherit games
 
@@ -63,7 +63,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "The server can be started with the /etc/init.d/ut2004-ded init script."
+	elog "The server can be started with the /etc/init.d/ut2004-ded init script."
 	echo
 	ewarn "You should take the time to edit the default server INI."
 	ewarn "Consult the INI Reference at http://unrealadmin.org/"

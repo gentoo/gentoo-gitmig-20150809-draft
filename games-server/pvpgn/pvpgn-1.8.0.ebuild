@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.6 2007/03/12 16:24:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.7 2007/03/12 17:57:54 genone Exp $
 
 inherit eutils games
 
@@ -74,20 +74,20 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "  If this is a first installation you have to configure package by"
-	einfo "editing the configuration files provided in \"${GAMES_SYSCONFDIR}/pvpgn\". Also you"
-	einfo "should read the documentation from /usr/share/docs/${PF}/"
-	einfo
-	einfo "  If you are upgrading you MUST read /usr/share/docs/${PF}/UPDATE.gz"
-	einfo "and update your configuration acordingly."
+	elog "  If this is a first installation you have to configure package by"
+	elog "editing the configuration files provided in \"${GAMES_SYSCONFDIR}/pvpgn\". Also you"
+	elog "should read the documentation from /usr/share/docs/${PF}/"
+	elog
+	elog "  If you are upgrading you MUST read /usr/share/docs/${PF}/UPDATE.gz"
+	elog "and update your configuration acordingly."
 	if use mysql ; then
-		echo
-		einfo "  You have enabled MySQL storage support. You will need to edit "
-		einfo "bnetd.conf to use it. Read README.storage from the docs dir."
+		elog
+		elog "  You have enabled MySQL storage support. You will need to edit "
+		elog "bnetd.conf to use it. Read README.storage from the docs dir."
 	fi
 	if use postgres ; then
-		echo
-		einfo "  You have enabled PostgreSQL storage support. You will need to edit "
-		einfo "bnetd.conf to use it. Read README.storage from the docs dir."
+		elog
+		elog "  You have enabled PostgreSQL storage support. You will need to edit "
+		elog "bnetd.conf to use it. Read README.storage from the docs dir."
 	fi
 }

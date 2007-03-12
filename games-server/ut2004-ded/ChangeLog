@@ -1,6 +1,9 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.19 2007/03/07 17:24:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.20 2007/03/12 17:59:25 genone Exp $
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> ut2004-ded-3369.ebuild:
+  Replacing einfo with elog
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> files/ut2004-ded.rc:
   Change all instances of [ to [[.
