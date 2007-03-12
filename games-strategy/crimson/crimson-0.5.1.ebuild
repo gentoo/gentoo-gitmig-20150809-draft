@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.5.1.ebuild,v 1.1 2007/01/24 03:15:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.5.1.ebuild,v 1.2 2007/03/12 18:01:06 genone Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ pkg_postinst() {
 	echo
 	ewarn "Crimson Fields ${PV} is not save-game compatible with previous versions."
 	echo
-	einfo "If you have older save files and you wish to continue those games,"
-	einfo "you'll need to remerge the version with which you started"
-	einfo "those save-games."
+	elog "If you have older save files and you wish to continue those games,"
+	elog "you'll need to remerge the version with which you started"
+	elog "those save-games."
 }

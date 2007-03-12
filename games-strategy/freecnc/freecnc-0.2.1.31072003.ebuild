@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.10 2007/02/10 20:17:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.11 2007/03/12 18:05:57 genone Exp $
 
 inherit flag-o-matic eutils games
 
@@ -71,7 +71,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "If you have the C&C games, then just copy the .mix"
-	einfo "to ${GAMES_DATADIR}/${PN}"
-	einfo "Otherwise, re-emerge freecnc with 'nocd' in your USE."
+	elog "If you have the C&C games, then just copy the .mix"
+	elog "to ${GAMES_DATADIR}/${PN}"
+	elog "Otherwise, re-emerge freecnc with 'nocd' in your USE."
 }

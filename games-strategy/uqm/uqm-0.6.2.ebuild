@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.3 2007/02/08 17:01:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.4 2007/03/12 18:16:25 genone Exp $
 
 inherit eutils multilib games
 
@@ -119,10 +119,10 @@ pkg_postinst() {
 	games_pkg_postinst
 	if use remix ; then
 		echo
-		einfo "To hear all the remixed music made by the The Ur-Quan Masters"
-		einfo "project's Precursors Team instead of the original ones,"
-		einfo "start the game with:"
-		einfo "    --addon uqmremix"
+		elog "To hear all the remixed music made by the The Ur-Quan Masters"
+		elog "project's Precursors Team instead of the original ones,"
+		elog "start the game with:"
+		elog "    --addon uqmremix"
 		echo
 	fi
 }

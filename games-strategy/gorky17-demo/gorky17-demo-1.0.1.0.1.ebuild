@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.2 2006/12/06 20:39:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.3 2007/03/12 18:07:20 genone Exp $
 
 inherit eutils versionator games
 
@@ -75,7 +75,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "The instruction manual is available as:"
-	einfo "   http://demofiles.linuxgamepublishing.com/gorky17/manual.pdf"
+	elog "The instruction manual is available as:"
+	elog "   http://demofiles.linuxgamepublishing.com/gorky17/manual.pdf"
 	echo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.6 2007/02/28 14:37:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.7 2007/03/12 18:02:33 genone Exp $
 
 inherit eutils games
 
@@ -73,12 +73,12 @@ src_install() {
 	doins -r "${S}"/patch/* || die "doins failed"
 
 	if use doc; then
-		einfo ""
-		einfo "Installing extra documentation to '/usr/share/doc/${P}'"
-		einfo ""
-		einfo "You may want to study 'DOM2_Walkthrough.pdf' carefully if"
-		einfo "you are new to Dominions II."
-		einfo ""
+		elog ""
+		elog "Installing extra documentation to '/usr/share/doc/${P}'"
+		elog ""
+		elog "You may want to study 'DOM2_Walkthrough.pdf' carefully if"
+		elog "you are new to Dominions II."
+		elog ""
 		dodoc "${DISTDIR}"/{DOM2_Walkthrough,manual_addenda}.pdf
 	fi
 
@@ -95,7 +95,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the game run:"
-	einfo " dominions2"
+	elog "To play the game run:"
+	elog " dominions2"
 	echo
 }

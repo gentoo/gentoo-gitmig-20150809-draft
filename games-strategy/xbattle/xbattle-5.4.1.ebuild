@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.9 2006/12/06 21:10:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.10 2007/03/12 18:17:53 genone Exp $
 
 inherit games
 
@@ -49,7 +49,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo 'You may be interested by these tutorials:'
-	einfo '    xbattle-tutorial1'
-	einfo '    xbattle-tutorial2'
+	elog 'You may be interested by these tutorials:'
+	elog '    xbattle-tutorial1'
+	elog '    xbattle-tutorial2'
 }

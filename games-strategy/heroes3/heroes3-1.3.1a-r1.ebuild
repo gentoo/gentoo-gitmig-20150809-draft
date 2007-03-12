@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.12 2007/01/26 19:44:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.13 2007/03/12 18:09:44 genone Exp $
 
 # 	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -91,12 +91,12 @@ src_install() {
 		dosym /usr/lib/loki_libnss_files.so.2 ${dir}/libnss_files.so.2 || die "dosym failed"
 	fi
 
-	einfo "Changing 'hiscore.dat' to be writeable for group 'games'."
+	elog "Changing 'hiscore.dat' to be writeable for group 'games'."
 	fperms g+w "${dir}/data/hiscore.dat" || die "fperms failed"
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the game run:"
-	einfo " heroes3"
+	elog "To play the game run:"
+	elog " heroes3"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.3 2006/11/07 03:54:27 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.4 2007/03/12 18:13:00 genone Exp $
 
 inherit toolchain-funcs games
 
@@ -70,12 +70,12 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "If you have a full version of X-COM, you can copy all the files"
-	einfo "from the directory where you have it installed into:"
-	einfo "   ${GAMES_DATADIR}/${PN}/XCOM"
-	echo
-	einfo "Likewise for Terror From The Deep, but to the directory:"
-	einfo "   ${GAMES_DATADIR}/${PN}/TFTD"
-	echo
-	einfo "This will allow you to use more terrain types and units."
+	elog "If you have a full version of X-COM, you can copy all the files"
+	elog "from the directory where you have it installed into:"
+	elog "   ${GAMES_DATADIR}/${PN}/XCOM"
+	elog
+	elog "Likewise for Terror From The Deep, but to the directory:"
+	elog "   ${GAMES_DATADIR}/${PN}/TFTD"
+	elog
+	elog "This will allow you to use more terrain types and units."
 }

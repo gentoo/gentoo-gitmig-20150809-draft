@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.2 2007/02/14 02:18:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.3 2007/03/12 18:04:43 genone Exp $
 
 inherit eutils games
 
@@ -52,11 +52,11 @@ pkg_setup() {
 	games_pkg_setup
 	if ! use dedicated ; then
 		if use gtk ; then
-			einfo "The Freeciv Client will be built with the GTK+-2 toolkit"
+			elog "The Freeciv Client will be built with the GTK+-2 toolkit"
 		elif use Xaw3d ; then
-			einfo "The Freeciv Client will be built with the Xaw3d toolkit"
+			elog "The Freeciv Client will be built with the Xaw3d toolkit"
 		else
-			einfo "The Freeciv Client will be built with the Xaw toolkit"
+			elog "The Freeciv Client will be built with the Xaw toolkit"
 		fi
 		if ! use esd && ! use alsa && ! use sdl ; then
 			ewarn
