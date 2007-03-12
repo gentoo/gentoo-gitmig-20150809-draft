@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2664 2007/03/12 01:40:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2665 2007/03/12 23:38:26 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -144,7 +144,6 @@ app-forensics/samhain:netserver - Compile a server, rather than a standalone ver
 app-forensics/samhain:suidcheck - Compile in the module to check file system for SUID/SGID binaries
 app-forensics/samhain:userfiles - Compile in the module to check for files in user home directories
 app-i18n/anthy:ucs4 - Enable ucs4 support
-app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/atokx2:ext-iiimf - Link with the system IIIMF, rather than the bundled version
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
@@ -1842,7 +1841,6 @@ www-client/mozilla:moznopango - Disable pango during runtime
 www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
-www-client/mozilla-firefox:mozbranding - Enable official branding
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznopango - Disable pango during runtime
 www-client/mozilla-firefox:restrict-javascript - Pull in noscript extension to disable javascript globally, putting user fully in control of the sites he/she visits
