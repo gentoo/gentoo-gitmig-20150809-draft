@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.97 2007/02/25 16:27:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.98 2007/03/12 23:39:38 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   25 Feb 2007; MATSUU Takuto <matsuu@gentoo.org>
   -files/lyx-1.4.1-dvips-R0.patch, -files/lyx-1.4.1-gentoo.patch,
