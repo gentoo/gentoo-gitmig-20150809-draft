@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta5.ebuild,v 1.1 2007/02/01 23:57:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta5.ebuild,v 1.2 2007/03/13 01:29:19 wolf31o2 Exp $
 
 inherit toolchain-funcs games
 
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}/${PN}/build
 
 src_compile() {
 	cmake \
-		-DCMAKE_C_COMPILER=$(which $(tc-getCC)) \
+		-DCMAKE_C_COMPILER=$(type -P $(tc-getCC)) \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-Ddatadir="${GAMES_DATADIR}"/${PN} \
 		-Dbindir="${GAMES_BINDIR}" \

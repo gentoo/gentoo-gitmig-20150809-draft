@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.20 2007/02/01 23:57:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.21 2007/03/13 01:29:19 wolf31o2 Exp $
+
+  13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  doomsday-1.9.0_beta5.ebuild:
+  Change which to type -P for QA.
 
 *doomsday-1.9.0_beta5 (01 Feb 2007)
 

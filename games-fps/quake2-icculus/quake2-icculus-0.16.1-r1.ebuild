@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.4 2007/01/09 23:34:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.5 2007/03/13 01:30:25 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -69,7 +69,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
 
 	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
-	ln -s $(which echo) "${T}"/more
+	ln -s $(type -P echo) "${T}"/more
 	for g in rogue xatrix ; do
 		use ${g} || continue
 		mkdir -p "${S}"/src/${g}
