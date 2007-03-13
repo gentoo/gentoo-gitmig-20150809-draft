@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.18 2007/02/22 00:34:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.19 2007/03/13 16:35:52 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> procps-3.2.7.ebuild:
+  x86 stable
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
