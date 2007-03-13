@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/kawa-1.6.97.ebuild,v 1.2 2007/01/22 11:00:26 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/kawa-1.6.97.ebuild,v 1.3 2007/03/13 02:07:48 vapier Exp $
 
 DESCRIPTION="Scheme compiler for JVM"
 HOMEPAGE="http://www.gnu.org/software/kawa/"
@@ -16,7 +16,6 @@ RDEPEND="virtual/jre"
 
 src_compile() {
 	export PATH=${PATH}:${JDK_HOME}/bin
-	which javac
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
