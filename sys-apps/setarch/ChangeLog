@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/setarch
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/ChangeLog,v 1.5 2006/11/29 01:57:00 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/ChangeLog,v 1.6 2007/03/13 14:08:09 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> setarch-2.0.ebuild:
+  x86 stable
 
   29 Nov 2006; Mike Frysinger <vapier@gentoo.org> files/Makefile:
   Fix manpage symlink error #156530 by James Browning.
