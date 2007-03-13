@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.4 2007/03/12 13:55:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.5 2007/03/13 01:27:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -39,9 +39,9 @@ src_unpack() {
 		configure \
 		|| die "sed failed"
 
-	use x86 && ln -s $(which nasm) "${T}/${CHOST}-nasm"
-	use sdl && ln -s $(which sdl-config) "${T}/${CHOST}-sdl-config"
-	use truetype && ln -s $(which freetype-config) "${T}/${CHOST}-freetype-config"
+	use x86 && ln -s $(type -P nasm) "${T}/${CHOST}-nasm"
+	use sdl && ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
+	use truetype && ln -s $(type -P freetype-config) "${T}/${CHOST}-freetype-config"
 }
 
 src_compile() {

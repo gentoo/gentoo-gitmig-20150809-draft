@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.25 2007/03/12 13:55:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.26 2007/03/13 01:27:42 wolf31o2 Exp $
+
+  13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  advancemenu-2.4.13.ebuild:
+  Change which to type -P for QA.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> advancemenu-2.4.13.ebuild:
   Replacing einfo with elog

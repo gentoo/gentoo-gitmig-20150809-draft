@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.3 2007/03/07 16:28:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.4 2007/03/13 01:26:04 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -37,11 +37,11 @@ src_unpack() {
 		|| die "sed failed"
 
 	use x86 && \
-		ln -s $(which nasm) "${T}/${CHOST}-nasm"
+		ln -s $(type -P nasm) "${T}/${CHOST}-nasm"
 	use sdl && \
-		ln -s $(which sdl-config) "${T}/${CHOST}-sdl-config"
+		ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
 	use truetype && \
-		ln -s $(which freetype-config) "${T}/${CHOST}-freetype-config"
+		ln -s $(type -P freetype-config) "${T}/${CHOST}-freetype-config"
 }
 
 src_compile() {
