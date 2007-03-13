@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.10 2007/02/22 05:50:18 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.11 2007/03/13 14:58:44 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> jwm-1.7.ebuild:
+  x86 stable
 
   22 Feb 2007; David Shakaryan <omp@gentoo.org> jwm-1.5.ebuild,
   jwm-1.7.ebuild:
