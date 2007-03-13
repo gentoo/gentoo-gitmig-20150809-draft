@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/adhearsion
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.1 2007/03/13 12:04:51 pingu Exp $
+
+*adhearsion-0.7.5 (13 Mar 2007)
+
+  13 Mar 2007; Christian Marie <pingu@gentoo.org> +metadata.xml,
+  +adhearsion-0.7.5.ebuild:
+  Initial ebuild thanks to Douglas Mayle, bug #170592.
+
