@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/File-RsyncP-0.64.ebuild,v 1.3 2006/10/15 10:17:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/File-RsyncP-0.64.ebuild,v 1.4 2007/03/13 15:55:29 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,6 @@ SLOT="0"
 DEPEND="net-misc/rsync
 		dev-lang/perl"
 
-mydoc="Changes LICENSE README"
+mydoc="LICENSE README"
 
 

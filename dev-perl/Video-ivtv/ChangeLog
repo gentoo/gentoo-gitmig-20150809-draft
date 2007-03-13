@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-ivtv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.10 2007/02/22 01:46:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.11 2007/03/13 16:00:18 mcummings Exp $
+
+  13 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  Video-ivtv-0.12.ebuild, Video-ivtv-0.13.ebuild:
+  Removing changes from dodoc
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
