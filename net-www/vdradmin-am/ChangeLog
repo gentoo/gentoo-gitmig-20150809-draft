@@ -1,6 +1,10 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.15 2007/02/22 03:14:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.16 2007/03/13 11:46:44 zzam Exp $
+
+  13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdradmin-am-3.5.3.ebuild:
+  Marked stable on x86.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
