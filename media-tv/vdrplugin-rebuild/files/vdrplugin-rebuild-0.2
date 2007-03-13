@@ -20,7 +20,7 @@ fi
 
 R_VERSION="0.2"
 R_MODULES="${ROOT}/usr/share/vdr/vdrplugin-rebuild"
-R_PORTAGEQ="`which portageq 2>/dev/null`"
+R_PORTAGEQ="`type -p portageq 2>/dev/null`"
 if [[ -z ${R_PORTAGEQ} ]]; then
 	echo "** FATAL: Unable to find portageq."
 	exit 1
