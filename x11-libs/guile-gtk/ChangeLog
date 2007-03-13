@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.23 2007/02/21 23:58:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.24 2007/03/13 17:40:27 hkbst Exp $
+
+  13 Mar 2007; Marijn Schouten <hkBst@gentoo.org> +metadata.xml:
+  add metadata
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
@@ -8,13 +11,13 @@
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
   Fix Manifest.
 
-  10 Jan 2007; <marijn@gentoo.org> guile-gtk-0.19-r1.ebuild:
+  10 Jan 2007; Marijn Schouten <hkBst@gentoo.org> guile-gtk-0.19-r1.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
 
-  10 Jan 2007; <marijn@gentoo.org> guile-gtk-1.2.0.41.ebuild:
+  10 Jan 2007; Marijn Schouten <hkBst@gentoo.org> guile-gtk-1.2.0.41.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
 
-  10 Jan 2007; <marijn@gentoo.org> guile-gtk-1.2.0.31.ebuild:
+  10 Jan 2007; Marijn Schouten <hkBst@gentoo.org> guile-gtk-1.2.0.31.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
 
   11 Nov 2005; Homer Parker <hparker@gentoo.org> guile-gtk-1.2.0.41.ebuild:
