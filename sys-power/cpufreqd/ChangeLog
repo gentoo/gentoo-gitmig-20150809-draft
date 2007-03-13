@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/cpufreqd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.47 2006/11/30 17:16:24 peper Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.48 2007/03/13 16:53:43 phreak Exp $
+
+  13 Mar 2007; Christian Heim <phreak@gentoo.org>
+  +files/cpufreqd-conf.d.patch, cpufreqd-2.2.0-r2.ebuild,
+  cpufreqd-2.2.1.ebuild:
+  Fixing the "movie" rule of cpufreqd. Thanks to Matthew Schultz <mattsch at
+  gmail.com> in #169334.
 
   30 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> cpufreqd-2.2.1.ebuild:
   No need to sed the config any more, thanks to Alon Bar-Lev

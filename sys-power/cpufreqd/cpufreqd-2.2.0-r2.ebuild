@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.2.0-r2.ebuild,v 1.1 2006/10/22 08:24:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.2.0-r2.ebuild,v 1.2 2007/03/13 16:53:43 phreak Exp $
 
 inherit eutils autotools
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "s:acpi_event:acpi:" "${S}"/cpufreqd.conf
+	epatch "${FILESDIR}"/${PN}-conf.d.patch
 
 	if use nvidia; then
 		cd "${WORKDIR}"/nvclock${NVCLOCK_VERSION}
