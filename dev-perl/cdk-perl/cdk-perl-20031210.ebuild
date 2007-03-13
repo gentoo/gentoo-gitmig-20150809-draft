@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.12 2007/01/16 22:30:19 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.13 2007/03/13 16:00:50 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=">=dev-libs/cdk-4.9.10.20031210
 	dev-lang/perl"
 
-mydoc="CHANGES MANIFEST"
+mydoc="MANIFEST"
 
 src_unpack() {
 	unpack ${P}.tgz

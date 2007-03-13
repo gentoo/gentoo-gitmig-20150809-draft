@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15-r1.ebuild,v 1.12 2007/03/04 19:19:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15-r1.ebuild,v 1.13 2007/03/13 16:00:02 mcummings Exp $
 
 inherit perl-module
 
@@ -32,7 +32,7 @@ myconf="${myconf} TT_PREFIX=${D}/usr/share/template-toolkit2"
 myconf="${myconf} TT_IMAGES=/usr/share/template-toolkit2/images"
 myconf="${myconf} TT_ACCEPT='y'"
 
-mydoc="README Changes"
+mydoc="README"
 
 #  You have version $Template::VERSION of the Template Toolkit installed.
 #
