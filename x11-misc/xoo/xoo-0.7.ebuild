@@ -1,6 +1,6 @@
-# Copyright 2006-2006 Gentoo Foundation
+# Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/xoo-0.7.ebuild,v 1.1 2006/06/14 17:21:39 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/xoo-0.7.ebuild,v 1.2 2007/03/13 03:33:30 yvasilev Exp $
 
 DESCRIPTION="Xoo is a graphical wrapper around xnest. You can make Xnest look like a particular device's display and set up buttons on that device."
 HOMEPAGE="http://projects.o-hand.com/xoo"
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 
 	# Fix default Xnest binary path.
-	sed -e "s:/usr/X11R6/bin/Xnest:$(which Xnest):" -i src/main.c || die "sed failed."
+	sed -e "s:/usr/X11R6/bin/Xnest:$(type -P Xnest):" -i src/main.c || die "sed failed."
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xoo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/ChangeLog,v 1.1 2006/06/14 17:21:39 yvasilev Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/ChangeLog,v 1.2 2007/03/13 03:33:30 yvasilev Exp $
+
+  13 Mar 2007; <yvasilev@gentoo.org> xoo-0.7.ebuild:
+  Made the s/witch/type -P/ change as suggested by vapier
+  (http://archives.gentoo.org/gentoo-dev/msg_143424.xml).
 
 *xoo-0.7 (14 Jun 2006)
 
