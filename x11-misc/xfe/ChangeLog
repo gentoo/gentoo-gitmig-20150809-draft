@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.35 2007/03/01 00:22:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.36 2007/03/13 20:22:26 drac Exp $
+
+*xfe-0.99 (13 Mar 2007)
+
+  13 Mar 2007; Samuli Suominen <drac@gentoo.org> +xfe-0.99.ebuild:
+  Version bump for bug 169267, thanks to John <greydruid AT gmail.com> for
+  reporting.
 
   01 Mar 2007; Jason Wever <weeve@gentoo.org> xfe-0.88.ebuild:
   Stable on SPARC wrt bug #168148.
