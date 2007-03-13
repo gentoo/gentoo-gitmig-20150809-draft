@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r1.ebuild,v 1.1 2006/10/13 11:01:22 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r1.ebuild,v 1.2 2007/03/13 12:52:33 armin76 Exp $
 
 inherit eutils linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/htbinit/htb.init-v${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64"
+KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
 IUSE="ipv6 esfq"
 
 DEPEND="sys-apps/iproute2"

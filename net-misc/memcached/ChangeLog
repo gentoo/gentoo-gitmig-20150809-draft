@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.35 2007/02/02 19:46:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.36 2007/03/13 13:06:28 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> memcached-1.1.13.ebuild:
+  x86 stable
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   memcached-1.1.13.ebuild:
