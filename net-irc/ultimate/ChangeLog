@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ultimate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.16 2007/02/09 04:29:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.17 2007/03/13 22:34:30 armin76 Exp $
+
+*ultimate-3.0.2 (13 Mar 2007)
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> -ultimate-2.8.8.ebuild,
+  -ultimate-2.8.9.ebuild, ultimate-3.0.1.ebuild, +ultimate-3.0.2.ebuild:
+  Version bump, stable x86, and drop old
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
