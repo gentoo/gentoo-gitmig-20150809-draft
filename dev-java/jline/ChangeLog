@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.13 2007/03/11 19:34:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.14 2007/03/13 15:05:38 caster Exp $
+
+  13 Mar 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/jline-0.9.91-import.patch, jline-0.9.91.ebuild:
+  Patch to fix bug #170663, reported upstream.
 
 *jline-0.9.91 (11 Mar 2007)
 
