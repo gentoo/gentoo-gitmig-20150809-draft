@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.3 2007/02/12 08:26:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.4 2007/03/13 19:10:16 nyhm Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples image truetype"
 
-RDEPEND=">=media-libs/libsdl-1.2
-	image? ( >=media-libs/sdl-image-1.2 )
+DEPEND="media-libs/libsdl
+	image? ( media-libs/sdl-image )
 	truetype? ( >=media-libs/freetype-2 )"
 
 S=${WORKDIR}/${MY_P}
@@ -23,9 +23,10 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${FILESDIR}"/${P}-freetype.patch
-	epatch "${FILESDIR}"/${P}-cmap.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-freetype.patch \
+		"${FILESDIR}"/${P}-cmap.patch
 }
 
 src_compile() {
@@ -40,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc README Todo WhatsNew
 
@@ -48,6 +49,6 @@ src_install() {
 
 	if use examples ; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "examples failed"
+		doins -r examples || die "doins failed"
 	fi
 }
