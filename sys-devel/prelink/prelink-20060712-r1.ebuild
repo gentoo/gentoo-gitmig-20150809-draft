@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20060712-r1.ebuild,v 1.3 2007/02/08 02:27:32 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20060712-r1.ebuild,v 1.4 2007/03/13 06:42:08 vapier Exp $
 
 inherit eutils
 
@@ -76,11 +76,11 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "You may wish to read the Gentoo Linux Prelink Guide, which can be"
-	einfo "found online at:"
-	einfo "    http://www.gentoo.org/doc/en/prelink-howto.xml"
-	einfo "Added cron job at /etc/cron.daily/prelink"
-	einfo "Edit /etc/conf.d/prelink to enable / configure"
+	elog "You may wish to read the Gentoo Linux Prelink Guide, which can be"
+	elog "found online at:"
+	elog "    http://www.gentoo.org/doc/en/prelink-howto.xml"
+	elog "Added cron job at /etc/cron.daily/prelink"
+	elog "Edit /etc/conf.d/prelink to enable / configure"
 	echo
 	touch "${ROOT}/var/lib/misc/prelink.force"
 }
