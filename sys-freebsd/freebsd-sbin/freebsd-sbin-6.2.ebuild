@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2.ebuild,v 1.1 2007/01/15 21:38:54 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2.ebuild,v 1.2 2007/03/13 14:36:29 uberlord Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -64,6 +64,7 @@ src_install() {
 
 	newinitd "${FILESDIR}/devd.initd" devd
 	newinitd "${FILESDIR}/ipfw.initd" ipfw
+	newconfd "${FILESDIR}/ipfw.confd" ipfw
 	newinitd "${FILESDIR}/sysctl.initd" sysctl
 
 	# Gentoo devd.conf

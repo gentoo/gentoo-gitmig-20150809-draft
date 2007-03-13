@@ -1,73 +1,101 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/files/ipfw.initd,v 1.2 2007/02/23 13:56:05 uberlord Exp $
+
+# This is a nice client firewall script which should suit most desktop users.
+# We allow auth and ssh in by default.
+
+PORTS_IN=${PORTS_IN:-auth ssh}
+
+opts="panic showstatus"
 
 depend() {
-	 before net
+	before net
+	provide firewall
 }
 
-start() {
-	ebegin "Starting firewall"
-	
-	retval=0
-	
-	if ! sysctl net.inet.ip.fw.enable &>/dev/null; then
-		if ! kldload ipfwl then
+ipfw() {
+	/sbin/ipfw -f -q "$@"
+}
+
+init() {
+	# Load the kernel module
+	if ! sysctl net.inet.ip.fw.enable=1 >/dev/null 2>/dev/null ; then
+		if ! kldload ipfw ; then
 			eend 1 "Unable to load firewall module"
 			return 1
 		fi
 	fi
 
-	if [ -z "${firewall_script}" ] || [ ! -f "${firewall_script}" ]; then
-		firewall_script=/etc/rc.firewall
+	ipfw flush
+
+	ipfw add allow all from any to any via lo0
+	ipfw add allow all from any to 127.0.0.0/8
+	ipfw add deny ip from 127.0.0.0/8 to any
+
+	ipfw add allow ipv6-icmp from :: to ff02::/16
+	ipfw add allow ipv6-icmp from fe80::/10 to fe80::/10
+	ipfw add allow ipv6-icmp from fe80::/10 to ff02::/16
+}
+
+start() {
+	local x=
+	ebegin "Starting firewall rules"
+	if ! init ; then
+		eend 1 "Failed to flush firewall ruleset"
+		return 1
 	fi
 
-	if [ -r "${firewall_script}" ]; then
-		source "${firewall_script}"
-		einfo "Loaded firewall rules; starting daemons"
+	# Use a statefull firewall
+	ipfw add check-state
 
-		if [ "${natd_enable}" = "yes" ]; then
-			# Find out whether $natd_interface is using dhcp
-			ifconfig_natd_iface=$(
-				eval source /etc/conf.d/net\;
-				echo \$\{ifconfig_${natd_interface}\})
-			if [ "${ifconfig_natd_iface}" = "dhcp" ]; then
-				natd_flags="${natd_flags} -dynamic"
-			fi
-
-			if [ -n "${natd_interface}" ]; then
-				# Yes, this is ugly.
-				if grep -q -E '^[0-9]+(\.[0-9]+){0,3}$' \
-						 <<<${natd_interface}; then
-					natd_flags="${natd_flags} -a ${natd_interface}"
-				else
-					natd_flags="${natd_flags} -n ${natd_interface}"
-				fi
-			fi
-			start-stop-daemon --start --exec \
-				${natd_program:-/sbin/natd} ${natd_flags} ${natd_ifarg} || retval=1
-		fi
-	elif [ "`ipfw l 65535`" = "65535 deny ip from any to any" ]; then
-		ewarn "Kernel has firewall functionality, but firewall rules aren't enabled!"
-		ewarn "All ip services are disabled.
+	# Open our configured ports
+	if [ -n "${PORTS_IN}" ] ; then
+		local pin=
+		for x in ${PORTS_IN} ; do
+		    [ -n "${pin}" ] && pin="${pin},"
+		    pin="${pin}${x}"
+		done
+		ipfw add allow tcp from any to me ${pin} setup keep-state
+		ipfw add allow tcp from any to me6 ${pin} setup keep-state
+		ipfw add allow udp from any to me ${pin} keep-state
+		ipfw add allow udp from any to me6 ${pin} keep-state
 	fi
 
-	# Logging
-	if [ "${firewall_logging}" = "yes" ]; then
-		einfo "Enabling firewall logging"
-		sysctl net.inet.ip.fw.verbose=1 >/dev/null
-	fi
+	# Nice flexable rules that disallow incoming except for stuff we
+	# have asked for, and allow all outgoing.
+	ipfw add allow tcp from me to any setup keep-state
+	ipfw add allow tcp from me6 to any setup keep-state 
+	ipfw add deny tcp from any to any
+	ipfw add allow udp from me to any keep-state
+	ipfw add allow udp from me6 to any keep-state
+	ipfw add deny udp from any to any
 
-	# And enable the firewall.
-	sysctl -w net.inet.ip.fw.enable=1
-	
-	eend $retval "Failed to properly start firewall"
+	# Be a good firewall and allow some ICMP traffic.
+	# Remove 8 if you really want to disallow ping.
+	ipfw add allow icmp from any to any icmptypes 0,3,8,11,12
+	ipfw add allow ip6 from any to any proto ipv6-icmp 
+
+	eend 0
 }
 
 stop() {
-	ebegin "Stopping the firewall"
-	sysctl -w net.inet.ip.fw.enable=0
-	start-stop-daemon --stop --name "$(basename ${natd_program:-/sbin/natd})"
-	eend $? "Failed to properly stop the firewall"
+	ebegin "Stopping firewall rules"
+	# We don't unload the kernel module as that action
+	# can cause memory leaks as of FreeBSD 6.x
+	sysctl net.inet.ip.fw.enable=0 >/dev/null
+	eend $?
+}
+
+panic() {
+	ebegin "Stopping firewall rules - hard"
+	if ! init ; then
+		eend 1 "Failed to flush firewall ruleset"
+		return 1
+	fi
+	eend 0
+}
+
+showstatus() {
+	ipfw show
 }
