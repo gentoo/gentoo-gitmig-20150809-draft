@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.8 2006/08/13 11:22:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.9 2007/03/13 07:33:24 uberlord Exp $
 
 depend() {
 	need localmount 
@@ -11,7 +11,7 @@ image_path() {
 	local x= kver=$(uname -r)
 	for x in "${KNAME:-bzImage}" vmlinuz \
 		bzImage-"${kver}" vmlinuz-"${kver}" ; do
-		if [[ -e ${BOOTPART}/${x} ]] ; then
+		if [ -e "${BOOTPART}/${x}" ] ; then
 			echo "${BOOTPART}/${x}"
 			return 0
 		fi
@@ -21,7 +21,7 @@ image_path() {
 }
 
 load_image() {
-	if [[ ${KNAME} == "-" ]] ; then
+	if [ "${KNAME}" = "-" ] ; then
 		ebegin "Disabling kexec"
 		kexec -u
 		eend $?
@@ -29,34 +29,39 @@ load_image() {
 	fi
 	
 	BOOTPART="${BOOTPART:-/boot}"
-	local img=$(image_path) mounted=false initrdopt=
+	local img="$(image_path)" mounted=false initrdopt=
 
-	if [[ -z ${img} ]] ; then
+	if [ -z "${img}" ] ; then
 		# If we cannot find our image, try mounting ${BOOTPART}
-		if [[ ! $'\n'$(</proc/mounts) =~ $'\n'"[^ ]* ${BOOTPART} " ]] ; then
+		if ! grep -q " ${BOOTPART} " /proc/mounts ; then
 			ebegin "Mounting ${BOOTPART}"
 			mount "${BOOTPART}" && mounted=true
 			eend $? || return $?
-			img=$(image_path)
+			img="$(image_path)"
 		fi
 	fi
 	
-	if [[ -z ${img} ]] ; then
+	if [ -z "${img}" ] ; then
 		eerror "No kernel image found in ${BOOTPART}!"
 		${mounted} && umount "${BOOTPART}"
 		return 1
 	fi
 
 	ebegin "Loading kernel image ${img} for kexec"
-	[[ -z ${ROOTPART} ]] \
-		&& ROOTPART=$(sed -n '/^[^ ]* \/ / s,^\([^ ]*\).*,\1,p' /etc/mtab)
-	[[ -z ${KPARAM} ]] \
-		&& KPARAM=$(sed -r 's:root=[a-zA-Z0-9/]+\s*::g' /proc/cmdline)
+	if [ -z "${ROOTPART}" ] ; then
+		ROOTPART="$(sed -n '/^[^ ]* \/ / s,^\([^ ]*\).*,\1,p' /etc/mtab)"
+	fi
+	if [ -z "${KPARAM}" ] ; then
+		KPARAM="$(sed -r 's:root=[a-zA-Z0-9/]+\s*::g' /proc/cmdline)"
+	fi
 
 	# Use the default initrd if it exists and none other given
-	[[ -z ${INITRD} && -e ${BOOTPART}/initrd ]] \
-		&& INITRD="${BOOTPART}/initrd"
-	[[ -e ${INITRD} ]] && initrdopt="--initrd=${INITRD}"
+	if  [ -z "${INITRD}" -a -e "${BOOTPART}"/initrd ] ; then 
+	    INITRD="${BOOTPART}/initrd"
+	fi
+	if [ -e "${INITRD}" ] ; then
+	    initrdopt="--initrd=${INITRD}"
+	fi
 
 	kexec -l "${img}" --append="root=${ROOTPART} ${KPARAM}" ${initrdopt}
 	local res=$?
@@ -67,7 +72,7 @@ load_image() {
 }
 
 start() {
-	[[ ${LOAD_DURING_SHUTDOWN:-yes} == "yes" ]] && return 0
+	[ "${LOAD_DURING_SHUTDOWN:-yes}" = "yes" ] && return 0
 
 	ebegin "Configuring kexec"
 	load_image
@@ -75,10 +80,10 @@ start() {
 }
 
 stop() {
-	[[ ${LOAD_DURING_SHUTDOWN:-yes} != "yes" ]] && return 0
+	[ "${LOAD_DURING_SHUTDOWN:-yes}" != "yes" ] && return 0
 
 	ebegin "Configuring kexec"
-	if [[ ${SOFTLEVEL} != "reboot" ]] || ! is_runlevel_stop ; then
+	if [ "${RC_SOFTLEVEL:-${SOFTLEVEL}}" != "reboot" ] || ! is_runlevel_stop ; then
 		einfo "Not rebooting, so disabling"
 		kexec -u
 		return 0
