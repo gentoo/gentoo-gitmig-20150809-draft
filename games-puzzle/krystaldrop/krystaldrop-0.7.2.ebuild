@@ -1,10 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.6 2006/12/06 17:25:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.7 2007/03/13 23:20:41 nyhm Exp $
 
 inherit eutils games
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="Free clone of an excellent NeoGeo puzzle game, Magical Drop"
 HOMEPAGE="http://krystaldrop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/krystaldrop/art_${PV}.tgz
@@ -15,13 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl"
 
-RDEPEND="opengl? ( virtual/opengl )
-	>=media-libs/libsdl-1.2.5
+DEPEND="opengl? ( virtual/opengl )
+	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
-	>=dev-libs/libxml2-2.5.7
-	sys-libs/zlib"
+	dev-libs/libxml2"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack src_${PV}.tgz
