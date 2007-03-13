@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.22.1.ebuild,v 1.1 2007/01/16 20:33:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.22.2.ebuild,v 1.1 2007/03/13 19:14:31 mr_bones_ Exp $
 
 inherit eutils games
 
