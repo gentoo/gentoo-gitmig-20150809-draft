@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.6.ebuild,v 1.9 2005/01/01 13:46:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.6.ebuild,v 1.10 2007/03/13 10:51:06 opfer Exp $
 
 inherit elisp
 
 IUSE=""
 
-DESCRIPTION="A library to provide basic features about message representation or encoding -- FLIM"
+DESCRIPTION="A library to provide basic features about message representation or encoding"
 HOMEPAGE="http://cvs.m17n.org/elisp/FLIM/"
 SRC_URI="ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/${P}.tar.gz"
 
