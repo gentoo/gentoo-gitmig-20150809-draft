@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libspiff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/ChangeLog,v 1.2 2007/03/08 14:01:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/ChangeLog,v 1.3 2007/03/13 04:11:55 beandog Exp $
+
+  13 Mar 2007; Steve Dibb <beandog@gentoo.org> libspiff-0.6.0_rc1.ebuild:
+  Change license from xiph to BSD, bug 170323
 
 *libspiff-0.6.0_rc1 (08 Mar 2007)
 
