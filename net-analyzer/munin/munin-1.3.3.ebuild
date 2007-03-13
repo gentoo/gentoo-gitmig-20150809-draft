@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.3.ebuild,v 1.1 2007/02/25 11:00:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.3.ebuild,v 1.2 2007/03/13 18:40:16 gustavoz Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://munin.sourceforge.net"
 SRC_URI="mirror://sourceforge/munin/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="minimal munin-irc munin-dhcp munin-surfboard munin-apache munin-squid ssl"
 
 # Upstream's listing of required modules is NOT correct!

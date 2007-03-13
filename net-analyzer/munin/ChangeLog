@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.6 2007/02/25 11:00:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.7 2007/03/13 18:40:16 gustavoz Exp $
+
+  13 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> munin-1.3.3.ebuild:
+  Keyworded ~sparc wrt #169941
 
 *munin-1.3.3 (25 Feb 2007)
 
