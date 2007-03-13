@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.21 2007/03/11 15:53:31 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.22 2007/03/13 12:02:04 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 # Maintained by: Haskell herd <haskell@gentoo.org>
@@ -16,12 +16,12 @@ PATH="/usr/bin:/opt/ghc/bin:${PATH}"
 # for later configuration using environment variables/
 # returns the name of the ghc executable
 ghc-getghc() {
-	echo "$(which ghc)"
+	type -P ghc
 }
 
 # returns the name of the ghc-pkg executable
 ghc-getghcpkg() {
-	echo "$(which ghc-pkg)"
+	type -P ghc-pkg
 }
 
 # returns the name of the ghc-pkg binary (ghc-pkg
