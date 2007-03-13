@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.15.0.ebuild,v 1.10 2006/12/21 12:58:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.15.0.ebuild,v 1.11 2007/03/13 23:20:13 genone Exp $
 
 inherit gnome2 eutils autotools
 
@@ -49,7 +49,7 @@ pkg_setup() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	einfo "To start the gnome-volume-manager daemon you need to configure"
-	einfo "it through it's preferences capplet. Also the HAL daemon (hald)"
-	einfo "needs to be running or it will shut down."
+	elog "To start the gnome-volume-manager daemon you need to configure"
+	elog "it through it's preferences capplet. Also the HAL daemon (hald)"
+	elog "needs to be running or it will shut down."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.12.0.ebuild,v 1.4 2006/01/23 21:46:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.12.0.ebuild,v 1.5 2007/03/13 23:18:22 genone Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -70,11 +70,11 @@ RDEPEND="!gnome-base/gnome-core
 
 pkg_postinst () {
 
-	einfo "note that to change windowmanager to metacity do: "
-	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
-	einfo "of course this works for all other window managers as well"
-	einfo ""
-	einfo "Use gnome-base/gnome for the full GNOME Desktop"
-	einfo "as released by the GNOME team."
+	elog "Note that to change windowmanager to metacity do: "
+	elog " export WINDOW_MANAGER=\"/usr/bin/metacity\""
+	elog "of course this works for all other window managers as well"
+	elog
+	elog "Use gnome-base/gnome for the full GNOME Desktop"
+	elog "as released by the GNOME team."
 
 }
