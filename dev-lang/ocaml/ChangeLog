@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.95 2007/02/17 19:16:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.96 2007/03/13 17:54:52 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> ocaml-3.09.3.ebuild:
+  x86 stable
 
   17 Feb 2007; Fabian Groffen <grobian@gentoo.org> ocaml-3.08.3.ebuild,
   ocaml-3.08.4.ebuild:
