@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1.ebuild,v 1.1 2007/03/08 18:39:24 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1.ebuild,v 1.2 2007/03/13 16:19:35 phreak Exp $
 
 inherit apache-module
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="=dev-libs/apr-1*"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}.${PV}"
 
