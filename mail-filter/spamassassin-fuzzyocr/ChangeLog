@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.5 2007/03/12 19:01:12 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.6 2007/03/13 11:20:44 tomk Exp $
+
+  13 Mar 2007; Tom Knight <tomk@gentoo.org> files/disableocrad.patch,
+  files/enabletesseract.patch:
+  Fixed conflicting patches
 
 *spamassassin-fuzzyocr-3.5.1 (11 Mar 2007)
 

@@ -19,10 +19,3 @@
  
  # Another example, this basically does the same as the inverted Ocrad Scanset
  # Only listed here to serve as example, ocrad-invert does this already
-@@ -59,4 +59,4 @@
- #    preprocessors = normalize, invert, normalize
- #    command = $gocr
- #    args = -i $input
--#}
-\ No newline at end of file
-+#}

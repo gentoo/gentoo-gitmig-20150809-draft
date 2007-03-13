@@ -49,10 +49,3 @@
  
  # Standard Gocr Scanset
  scanset gocr {
-@@ -59,4 +59,4 @@
- #    preprocessors = normalize, invert, normalize
- #    command = $gocr
- #    args = -i $input
--#}
-\ No newline at end of file
-+#}
