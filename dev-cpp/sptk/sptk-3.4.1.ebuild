@@ -1,6 +1,6 @@
 # Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.4.0.ebuild,v 1.1 2007/03/13 07:18:28 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.4.1.ebuild,v 1.1 2007/03/13 23:01:43 iluxa Exp $
 
 inherit autotools
 
