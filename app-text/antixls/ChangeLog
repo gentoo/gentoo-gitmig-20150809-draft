@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antixls
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.1 2006/09/24 09:42:32 pclouds Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.2 2007/03/13 01:59:48 leonardop Exp $
+
+  13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
+  Removing text-markup herd, leaving pclouds as maintainer.
 
 *antixls-0.2b (24 Sep 2006)
 
