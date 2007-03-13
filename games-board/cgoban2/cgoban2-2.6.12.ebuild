@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/cgoban2-2.6.12.ebuild,v 1.3 2006/08/29 05:12:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/cgoban2-2.6.12.ebuild,v 1.4 2007/03/13 22:49:46 nyhm Exp $
 
 inherit games
 
 DESCRIPTION="A Java client for the Kiseido Go Server, and a SGF editor"
-HOMEPAGE="http://kgs.kiseido.com/"
+HOMEPAGE="http://www.gokgs.com/"
 SRC_URI="http://kgs.kiseido.com/cgoban-unix-${PV}.tar.bz2"
 
 LICENSE="freedist"
