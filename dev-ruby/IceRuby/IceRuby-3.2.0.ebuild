@@ -1,29 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.2.0_beta1.ebuild,v 1.1 2007/03/08 21:12:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.2.0.ebuild,v 1.1 2007/03/13 14:04:44 caleb Exp $
 
 inherit eutils
 
-MY_P=${P/.0_beta1/b}
-
 DESCRIPTION="ICE middleware C++ bindings"
 HOMEPAGE="http://www.zeroc.com/index.html"
-SRC_URI="http://www.zeroc.com/download/Ice/3.2/${MY_P}.tar.gz"
+SRC_URI="http://www.zeroc.com/download/Ice/3.2/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="test debug"
 
-S=${WORKDIR}/${MY_P}
+RDEPEND="=dev-cpp/Ice-3.2*
+	>=dev-lang/ruby-1.8.4"
 
-DEPEND="=dev-cpp/Ice-3.2*
-	>=dev-lang/ruby-1.8.4
+DEPEND="${RDEPEND}
 	test? ( >=dev-lang/python-2.4 )"
 
-ICE_HOME=/usr
-
 src_unpack() {
+#	export ICE_HOME=/usr
 	unpack ${A}
 	cd "${S}"
 
@@ -49,16 +46,16 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	export ICE_HOME=/usr
+#	export ICE_HOME=/usr
 	make || die "Died during make"
 }
 
 src_install() {
-	export ICE_HOME=/usr
+#	export ICE_HOME=/usr
 	make DESTDIR="${D}" install || die "Install Failed!"
 }
 
 src_test() {
-	export ICE_HOME=/usr
+#	export ICE_HOME=/usr
 	make test || die "Test failed"
 }
