@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.206 2007/03/13 10:44:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.207 2007/03/13 11:51:31 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Remove net-p2p/mnet from p.mask as it's has been removed from the tree, bug
+  166887
 
   13 Mar 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   remove invalid USE flags for app-emacs/remember
