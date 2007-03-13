@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.29 2007/02/05 20:13:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.30 2007/03/13 06:56:52 opfer Exp $
+
+  13 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/plotutils-2.4.1-correct_test.patch, plotutils-2.4.1-r4.ebuild:
+  fix test failures and added some quotes; stable x86, bug 115242
 
   05 Feb 2007; Jeroen Roovers <jer@gentoo.org> plotutils-2.4.1-r4.ebuild:
   Stable for HPPA (inkscape).

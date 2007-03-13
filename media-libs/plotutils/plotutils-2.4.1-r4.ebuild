@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r4.ebuild,v 1.2 2007/02/05 20:13:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r4.ebuild,v 1.3 2007/03/13 06:56:52 opfer Exp $
 
 inherit libtool eutils flag-o-matic
 
-#The plotutils package contains extra X fonts.  These fonts are not installed
-#in the current ebuild.  The commented out ebuild lines below are for future
+#The plotutils package contains extra X fonts.	These fonts are not installed
+#in the current ebuild.	 The commented out ebuild lines below are for future
 #reference when this ebuild may be updated to install the fonts.
 #NOTE: The current method does not play nice with X and sandbox.  Most of the
 #font installation procedures should probably be moved to pkg_postinst.
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc x86"
 IUSE="X"
 
 DEPEND="media-libs/libpng
@@ -30,9 +30,11 @@ DEPEND="media-libs/libpng
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/plotutils-2.4.1-gentoo.patch
-	epatch ${FILESDIR}/plotutils-2.4.1-rangecheck.patch
+	cd "${S}"
+	epatch "${FILESDIR}/plotutils-2.4.1-gentoo.patch"
+	epatch "${FILESDIR}/plotutils-2.4.1-rangecheck.patch"
+	epatch "${FILESDIR}/plotutils-2.4.1-correct_test.patch"
+
 }
 
 src_compile() {
@@ -56,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall datadir=${D}/usr/share || die "Installation Failed"
+	einstall datadir="${D}/usr/share" || die "Installation Failed"
 
 	dodoc AUTHORS COMPAT ChangeLog INSTALL* \
 		KNOWN_BUGS NEWS ONEWS PROBLEMS README THANKS TODO
