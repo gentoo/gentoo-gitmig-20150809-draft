@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xd3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.4 2007/02/09 08:27:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.5 2007/03/13 00:49:15 kugelfang Exp $
+
+  13 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> xd3d-8.2.1.ebuild:
+  QA: which -> type -P
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

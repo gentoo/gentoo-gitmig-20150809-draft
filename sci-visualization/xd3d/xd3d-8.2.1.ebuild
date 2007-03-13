@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.2.1.ebuild,v 1.2 2006/03/17 10:31:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.2.1.ebuild,v 1.3 2007/03/13 00:49:15 kugelfang Exp $
 
 DESCRIPTION="scientific visualization tool"
 
@@ -19,7 +19,6 @@ RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
 	icc? ( dev-lang/icc dev-lang/ifc )"
 
 DEPEND="${RDEPEND}
-	sys-apps/which
 	app-shells/tcsh"
 
 src_unpack() {
@@ -32,7 +31,7 @@ src_compile() {
 	if use icc; then
 		sed "s:##D##:${D}:g" < RULES.icc > RULES.gentoo
 	else
-		which g77 2> /dev/null || die "No GNU Fortran compiler found!"
+		type -P g77 2> /dev/null || die "No GNU Fortran compiler found!"
 		sed "s:##CFLAGS##:${CFLAGS}:g" < RULES.gentoo > RULES.linux
 		sed "s:##D##:${D}:g" < RULES.linux > RULES.gentoo
 	fi
