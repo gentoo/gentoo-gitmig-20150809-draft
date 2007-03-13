@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.11 2007/01/23 13:57:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.12 2007/03/13 00:27:07 kugelfang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -61,7 +61,7 @@ pkg_setup() {
 	# We need g77 to compile the LAPACK routines from ATLAS.
 	# `use ifc` only causes the non-ATLAS routines (from the
 	#  reference set) to be built with ifc.
-	if [ -z `which g77` ]; then
+	if [[ -z `type -P g77` ]]; then
 		eerror "g77 not found on the system!"
 		eerror "Please add fortran to your USE flags and reemerge gcc!"
 		die

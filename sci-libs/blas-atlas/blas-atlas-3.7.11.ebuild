@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.17 2007/01/03 02:36:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.18 2007/03/13 00:24:34 kugelfang Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -165,8 +165,8 @@ src_install () {
 	doins "${S}"/include/cblas.h "${S}"/include/atlas_misc.h
 	doins "${S}"/include/atlas_enum.h
 
-	# These headers contain the architecture-specific 
-	# optimizations determined by ATLAS. The atlas-lapack build 
+	# These headers contain the architecture-specific
+	# optimizations determined by ATLAS. The atlas-lapack build
 	# is much shorter if they are available, so save them:
 	doins "${S}/include/${ATLAS_ARCH}"/*.h
 

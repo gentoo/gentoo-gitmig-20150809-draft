@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0.ebuild,v 1.5 2007/01/23 13:46:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0.ebuild,v 1.6 2007/03/13 00:29:07 kugelfang Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ ifc_info() {
 pkg_setup() {
 	# This version of lapack *can* be build completely with ifc
 	use ifc || \
-	if [ -z `which g77` ]; then
+	if [[ -z `type -P g77` ]]; then
 		eerror "g77 not found on the system!"
 		eerror "Please add fortran to your USE flags and reemerge gcc!"
 		die

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.7 2006/01/28 15:32:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.8 2007/03/13 00:24:34 kugelfang Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,7 +25,7 @@ PROVIDE="virtual/blas"
 S=${WORKDIR}/ATLAS
 
 pkg_setup() {
-	if [ -z `which g77` ]; then
+	if [[ -z `type -P g77` ]]; then
 		eerror "No fortran compiler found on the system!"
 		eerror "Please add fortran to your USE flags and reemerge gcc!"
 		die

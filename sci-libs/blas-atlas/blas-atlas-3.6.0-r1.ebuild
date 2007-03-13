@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.11 2006/06/17 00:34:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.12 2007/03/13 00:24:34 kugelfang Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,13 +24,13 @@ PROVIDE="virtual/blas"
 
 S=${WORKDIR}/ATLAS
 
-# Libraries will be installed in ${RPATH}/atlas 
+# Libraries will be installed in ${RPATH}/atlas
 # and ${RPATH}/threaded-atlas:
 RPATH="${DESTTREE}/lib/blas"
 
 
 pkg_setup() {
-	if [ -z `which g77` ]; then
+	if [[ -z `type -P g77` ]]; then
 		eerror "No fortran compiler found on the system!"
 		eerror "Please add fortran to your USE flags and reemerge gcc!"
 		die
