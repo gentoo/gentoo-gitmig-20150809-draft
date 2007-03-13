@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.147 2007/03/09 20:57:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.148 2007/03/13 18:36:08 gustavoz Exp $
+
+*asterisk-1.2.14-r1 (13 Mar 2007)
+
+  13 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/1.2.0/asterisk-1.2.14-chan_sip.patch, +asterisk-1.2.14-r1.ebuild:
+  Revbump wrt security #169616 and sparc stable
 
   09 Mar 2007; <solar@gentoo.org> files/1.2.0/asterisk.rc6:
   - posix compliant init.d script from Natanael Copa. bug 170080
