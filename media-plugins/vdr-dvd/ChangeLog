@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-dvd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.8 2007/01/17 18:49:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.9 2007/03/13 12:43:22 zzam Exp $
+
+  13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-dvd-0.3.7_pre20070117.ebuild:
+  Marked stable on x86.
 
 *vdr-dvd-0.3.7_pre20070117 (17 Jan 2007)
 
