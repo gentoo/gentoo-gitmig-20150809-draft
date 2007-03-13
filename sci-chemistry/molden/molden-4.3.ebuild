@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.3.ebuild,v 1.10 2006/04/08 10:36:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.3.ebuild,v 1.11 2007/03/13 00:19:37 kugelfang Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -27,7 +27,7 @@ src_unpack() {
 	[ -z ${FC} ] && FC="g77"
 
 	# Check for fortran compiler
-	if [ ! "`which ${FC} 2> /dev/null`" ]; then
+	if [ ! "`type -P ${FC} 2> /dev/null`" ]; then
 		eerror "Fortran compiler not found."
 		eerror "Please recompile sys-devel/gcc with fortran in USE flags."
 		die
