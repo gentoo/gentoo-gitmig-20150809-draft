@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.153 2007/03/13 10:11:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.154 2007/03/13 10:51:06 voxus Exp $
+
+  13 Mar 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  bind-9.3.4-r2.ebuild:
+  Stable on amd64 due to ssp-related problems.
 
   13 Mar 2007; Tony Vroon <chainsaw@gentoo.org> bind-9.3.4-r2.ebuild:
   Mark stable on X86, this is the only 9.3.4 so far that does not silently
