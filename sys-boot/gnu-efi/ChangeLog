@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/gnu-efi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.10 2007/02/09 05:51:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.11 2007/03/13 14:18:09 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> gnu-efi-3.0a-r1.ebuild:
+  x86 stable
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
