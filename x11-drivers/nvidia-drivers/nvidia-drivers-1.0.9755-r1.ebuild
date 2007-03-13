@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9755.ebuild,v 1.2 2007/03/12 22:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9755-r1.ebuild,v 1.1 2007/03/13 22:40:40 eradicator Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -33,6 +33,7 @@ RDEPEND="kernel_linux? ( virtual/modutils )
 QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
 	usr/lib/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
 	usr/lib/libXvMCNVIDIA.so.${PV}
@@ -42,6 +43,7 @@ QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
 	usr/lib/opengl/nvidia/lib/libGL.so.1
 	usr/lib/opengl/nvidia/lib/libGLcore.so.1
+	usr/lib/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
 	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.1
 	usr/lib/opengl/nvidia/extensions/libglx.so
 	usr/lib/xorg/modules/drivers/nvidia_drv.so"
@@ -53,6 +55,7 @@ QA_WX_LOAD_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 QA_TEXTRELS_amd64="usr/lib64/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
 	usr/lib64/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib64/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
 	usr/lib64/libXvMCNVIDIA.so.${PV}
@@ -61,6 +64,7 @@ QA_TEXTRELS_amd64="usr/lib64/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib32/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
 	usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib32/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
 	usr/lib32/libXvMCNVIDIA.so.${PV}
@@ -296,6 +300,8 @@ src_install-libs() {
 	# The GLX libraries
 	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGL.so ${sover}
 	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGLcore.so ${sover}
+
+	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libnvidia-cfg.so ${sover}
 
 	dodir ${NO_TLS_ROOT}
 	donvidia ${NO_TLS_ROOT} ${usrpkglibdir}/libnvidia-tls.so ${sover}
