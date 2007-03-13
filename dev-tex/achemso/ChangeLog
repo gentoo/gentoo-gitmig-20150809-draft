@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/achemso
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.7 2007/02/06 16:36:53 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.8 2007/03/13 00:08:44 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   06 Feb 2007; Alexandre Buisse <nattfodd@gentoo.org> achemso-1.0.ebuild:
   Corrected SRC_URI/HOMEPAGE and mirrored tarball with correct version number.

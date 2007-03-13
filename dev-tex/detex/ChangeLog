@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.15 2006/08/18 09:55:23 cryos Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.16 2007/03/13 00:14:26 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   18 Aug 2006; Marcus D. Hanwell <cryos@gentoo.org> detex-2.7.ebuild:
   Marked ~amd64, closes bug 144168.

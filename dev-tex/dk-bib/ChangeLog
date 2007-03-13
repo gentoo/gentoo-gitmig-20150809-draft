@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dk-bib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dk-bib/ChangeLog,v 1.11 2006/09/10 11:56:12 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dk-bib/ChangeLog,v 1.12 2007/03/13 00:14:52 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove brix from metadata.xml.
