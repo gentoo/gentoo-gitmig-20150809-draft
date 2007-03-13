@@ -25,30 +25,30 @@ DIST gnome-volume-manager-1.3.3-reconnect_dbus.patch.bz2 12026 RMD160 4f8050672b
 DIST gnome-volume-manager-1.5.15.tar.bz2 311956 RMD160 b179d3ea4fb6cc8fd1166f5e409d5e2d06c98b7e SHA1 bfc0beeab74cf1091bab99628a6751ee1f1ae196 SHA256 c346d7f47bc3194c96f62376b006e6c111963d3b697f2c92fbd13da34f04f19b
 DIST gnome-volume-manager-1.5.4.tar.bz2 270062 RMD160 734d5cbc0ea7023e7f003b026440da7b4187316f SHA1 a2b21d3d86852d086c8f609c04f8f5ab2ee58dde SHA256 251723cd1e1ab1f7eec5e74d2f7c89acca7e295501909c714b0262bcb7c695ff
 DIST gnome-volume-manager-2.15.0.tar.bz2 318479 RMD160 eca6bb29b3173d8dbee36f4441b68c762732cb26 SHA1 e08386dc08650df25980d48fd1cfd8b314e71618 SHA256 f3d2ce3e2f2a4b757d4688bae7f6b8418d11340618f15d34871a002516ab8e0e
-EBUILD gnome-volume-manager-1.5.15-r2.ebuild 1807 RMD160 bc23eae9d24edf4be899aed96bbf3d91f6813993 SHA1 38c7e2de25583c5bfc3a8ac691d74061e19e3ec2 SHA256 71b2d5fd2f482e72d395c975cf66604d03e3575bc652bfb09f5ed472b4d01b13
-MD5 5a4dd8ca4575183d52b0b99c57e365b4 gnome-volume-manager-1.5.15-r2.ebuild 1807
-RMD160 bc23eae9d24edf4be899aed96bbf3d91f6813993 gnome-volume-manager-1.5.15-r2.ebuild 1807
-SHA256 71b2d5fd2f482e72d395c975cf66604d03e3575bc652bfb09f5ed472b4d01b13 gnome-volume-manager-1.5.15-r2.ebuild 1807
-EBUILD gnome-volume-manager-1.5.15-r3.ebuild 1964 RMD160 fca9f604a2e941c816a846b951d4ef47e8529d1a SHA1 05ad263261d40524f5461d1c4b9372c83de8e4c9 SHA256 8bab70b69cb05bab936f6047c57a6a2ad60e48885085ecffcf941841ebf0c0ca
-MD5 4c9bec2451434ba5e2c9711b211d8823 gnome-volume-manager-1.5.15-r3.ebuild 1964
-RMD160 fca9f604a2e941c816a846b951d4ef47e8529d1a gnome-volume-manager-1.5.15-r3.ebuild 1964
-SHA256 8bab70b69cb05bab936f6047c57a6a2ad60e48885085ecffcf941841ebf0c0ca gnome-volume-manager-1.5.15-r3.ebuild 1964
-EBUILD gnome-volume-manager-1.5.4.ebuild 1433 RMD160 4a594c64ed7146f93ab3f78bb0845e6e218c1259 SHA1 8453cf9405849fec7c973651b69ec98ebd78f81c SHA256 48b731c79a14a5c8ec57a2a3da2f892e59899e252167aff1604427660301667e
-MD5 791741a00a84463add10bb7768b556b8 gnome-volume-manager-1.5.4.ebuild 1433
-RMD160 4a594c64ed7146f93ab3f78bb0845e6e218c1259 gnome-volume-manager-1.5.4.ebuild 1433
-SHA256 48b731c79a14a5c8ec57a2a3da2f892e59899e252167aff1604427660301667e gnome-volume-manager-1.5.4.ebuild 1433
-EBUILD gnome-volume-manager-2.15.0-r1.ebuild 1671 RMD160 c488b8f3fafc020a7f56af0f36daedf5d9445668 SHA1 69afe146b23a57ad67d99110b3de5be30c8841bc SHA256 e8d4fc80c3c3fdb5c51a206e806277f8a6787566cfbeb45c59cc77dc3e72786b
-MD5 d3b45b3d67ca563339ca4cd206706560 gnome-volume-manager-2.15.0-r1.ebuild 1671
-RMD160 c488b8f3fafc020a7f56af0f36daedf5d9445668 gnome-volume-manager-2.15.0-r1.ebuild 1671
-SHA256 e8d4fc80c3c3fdb5c51a206e806277f8a6787566cfbeb45c59cc77dc3e72786b gnome-volume-manager-2.15.0-r1.ebuild 1671
-EBUILD gnome-volume-manager-2.15.0.ebuild 1580 RMD160 052e314d48f9e9f1a39d3f19407b61da91dcd817 SHA1 be217456934eac8ae5840878a9b0ea224f3cb7ff SHA256 21e6094fcf7268ad0a285a2cfee11a1569bed8bec1dcd3d14b5250616bcb71eb
-MD5 6498c1e53b7bef840d764d23f2de4747 gnome-volume-manager-2.15.0.ebuild 1580
-RMD160 052e314d48f9e9f1a39d3f19407b61da91dcd817 gnome-volume-manager-2.15.0.ebuild 1580
-SHA256 21e6094fcf7268ad0a285a2cfee11a1569bed8bec1dcd3d14b5250616bcb71eb gnome-volume-manager-2.15.0.ebuild 1580
-MISC ChangeLog 11861 RMD160 824f4b2dbbd7dd6059c71e898a3b9af18e54fe69 SHA1 5909d1f7561413b9e47b0e1ceeb906c73046d4d3 SHA256 50d1dbb593c3a2dd4a757430184348669f104d2a9c563cfb7daefa5e8c6228ce
-MD5 9968674aa7d17f5cdcb7aad3a873efd4 ChangeLog 11861
-RMD160 824f4b2dbbd7dd6059c71e898a3b9af18e54fe69 ChangeLog 11861
-SHA256 50d1dbb593c3a2dd4a757430184348669f104d2a9c563cfb7daefa5e8c6228ce ChangeLog 11861
+EBUILD gnome-volume-manager-1.5.15-r2.ebuild 1804 RMD160 bdb2059bda50b9a17260c9088dba0e3cbbe6d611 SHA1 4d3dcb3c1a92f53641bdf8e4d08989f1774a26f3 SHA256 8c61f57ac80fd3532f660523bfb1dae03428720a31b9dbde282a5054f19ea945
+MD5 24ffd98e2784003dc275a42ee1fce8d9 gnome-volume-manager-1.5.15-r2.ebuild 1804
+RMD160 bdb2059bda50b9a17260c9088dba0e3cbbe6d611 gnome-volume-manager-1.5.15-r2.ebuild 1804
+SHA256 8c61f57ac80fd3532f660523bfb1dae03428720a31b9dbde282a5054f19ea945 gnome-volume-manager-1.5.15-r2.ebuild 1804
+EBUILD gnome-volume-manager-1.5.15-r3.ebuild 1960 RMD160 df6237beac34b66a64f5757f7d1401051df0db14 SHA1 32090105c9d1716df8c7ec9b45880ee500a9f606 SHA256 32b5147e499c482f91eb60d82d699fa4fd817adbf1f364e6d4e675042e71da92
+MD5 28e796e05983189603f5cf0ebe3af9f5 gnome-volume-manager-1.5.15-r3.ebuild 1960
+RMD160 df6237beac34b66a64f5757f7d1401051df0db14 gnome-volume-manager-1.5.15-r3.ebuild 1960
+SHA256 32b5147e499c482f91eb60d82d699fa4fd817adbf1f364e6d4e675042e71da92 gnome-volume-manager-1.5.15-r3.ebuild 1960
+EBUILD gnome-volume-manager-1.5.4.ebuild 1429 RMD160 7fbeb565972f351b1b70646cf00df3d9527e30ac SHA1 c964eaf2f0b8c22b4e853d1ed43ffa79ab820661 SHA256 7a55e5ad58c05e0d34826b8197a577356eed94387c7c7aeba6df0fbdef23de2f
+MD5 4d8e523952894723d8a1220cbd85f3ac gnome-volume-manager-1.5.4.ebuild 1429
+RMD160 7fbeb565972f351b1b70646cf00df3d9527e30ac gnome-volume-manager-1.5.4.ebuild 1429
+SHA256 7a55e5ad58c05e0d34826b8197a577356eed94387c7c7aeba6df0fbdef23de2f gnome-volume-manager-1.5.4.ebuild 1429
+EBUILD gnome-volume-manager-2.15.0-r1.ebuild 1668 RMD160 0d1d7a26604d42d2b06abbb93d5cdf85f4a30056 SHA1 0e77b3370f24cb1641279b22f8506cd2449fe3fc SHA256 b7ff467e2d445c3ac1ac3d874902a4d57c68344bf8eb48269155f40b6896b2d1
+MD5 44049d327aa586d9939b77960a0a1553 gnome-volume-manager-2.15.0-r1.ebuild 1668
+RMD160 0d1d7a26604d42d2b06abbb93d5cdf85f4a30056 gnome-volume-manager-2.15.0-r1.ebuild 1668
+SHA256 b7ff467e2d445c3ac1ac3d874902a4d57c68344bf8eb48269155f40b6896b2d1 gnome-volume-manager-2.15.0-r1.ebuild 1668
+EBUILD gnome-volume-manager-2.15.0.ebuild 1576 RMD160 bb8eb8d9c88f41aff019f1c5ada00051313c95a9 SHA1 be68dba5058378978dce53e7f7a1170208a1011f SHA256 745d096542bb8b49c0c51a5aa2765c59e211c0556a4309812e627932ac55557f
+MD5 60c24c184ae4dde936a1ad27ced3cca6 gnome-volume-manager-2.15.0.ebuild 1576
+RMD160 bb8eb8d9c88f41aff019f1c5ada00051313c95a9 gnome-volume-manager-2.15.0.ebuild 1576
+SHA256 745d096542bb8b49c0c51a5aa2765c59e211c0556a4309812e627932ac55557f gnome-volume-manager-2.15.0.ebuild 1576
+MISC ChangeLog 12132 RMD160 fbdcd5cfee611a8da30225f2f0b79070c5ff2905 SHA1 ab9d8b2b5bbebc66567c2544ecec30a19fff50c0 SHA256 1f0e3e4a37e87bcc4dea2e732e9c33447c40f4acf7f226c5dd7bb7eacdbfe94c
+MD5 f560f925f82f4401f78eff2020ecfce6 ChangeLog 12132
+RMD160 fbdcd5cfee611a8da30225f2f0b79070c5ff2905 ChangeLog 12132
+SHA256 1f0e3e4a37e87bcc4dea2e732e9c33447c40f4acf7f226c5dd7bb7eacdbfe94c ChangeLog 12132
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -69,9 +69,9 @@ MD5 87f7d0f480a84016aac5d54c4a42718e files/digest-gnome-volume-manager-2.15.0-r1
 RMD160 24a888ece144fc9a9dd4d9cb7ebb9a6762371d05 files/digest-gnome-volume-manager-2.15.0-r1 286
 SHA256 63e0ede732d541c479c89f6114d7498f5c81bc8a6d27bd171604233b4de7e8b3 files/digest-gnome-volume-manager-2.15.0-r1 286
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFFs8phugEuf3OQ0akRAsFhAJ9ewcb1fNiIbKR8BC466IkWh7uJQACgkKGK
-531LDM185SqqhP1t8buPl7E=
-=5stT
+iD8DBQFF9zKw6J2i8a8J4okRAhITAJ4xb2jNbK7VZU4QJHB1K++/aZhxAQCgtpXN
+KLs8eyfRcOgjDJHOwos9QFU=
+=jtJG
 -----END PGP SIGNATURE-----
