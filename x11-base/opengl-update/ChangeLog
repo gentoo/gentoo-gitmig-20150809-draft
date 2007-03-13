@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.123 2007/03/10 20:17:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.124 2007/03/13 22:49:59 eradicator Exp $
+
+  13 Mar 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/opengl-update-2.2.4, -opengl-update-2.2.4.ebuild:
+  Removing old opengl-update script. All that is left is the wrapper. A couple
+  packages in portage still reference x11-base/opengl-update, so we will keep
+  this around until those are all updated.
 
   10 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
   opengl-update-2.2.4.ebuild:
