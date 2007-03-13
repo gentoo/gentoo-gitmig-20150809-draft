@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.12 2007/03/13 21:53:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.13 2007/03/13 21:55:56 betelgeuse Exp $
 
   13 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   aspectwerkz-2.0_rc2-r2.ebuild:
@@ -35,6 +35,8 @@
   27 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   aspectwerkz-2.0_rc2-r1.ebuild:
   Added java-ant-2.
+
+*aspectwerkz-2.0_rc2-r1 (02 Jul 2006)
 
   02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +aspectwerkz-2.0_rc2-r1.ebuild:
