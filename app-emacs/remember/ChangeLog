@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/remember
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.4 2007/02/28 17:00:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.5 2007/03/13 10:43:14 opfer Exp $
+
+  13 Mar 2007; Christian Faulhammer <opfer@gentoo.org> remember-1.9.ebuild:
+  remove those automagic dependencies by just hard dependening on bbdb and
+  planner
 
   28 Feb 2007; Simon Stelling <blubb@gentoo.org> remember-1.9.ebuild:
   ~amd64; bug 163401

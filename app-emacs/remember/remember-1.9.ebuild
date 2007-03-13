@@ -1,36 +1,33 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9.ebuild,v 1.4 2007/02/28 17:00:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9.ebuild,v 1.5 2007/03/13 10:43:14 opfer Exp $
 
 inherit elisp
 
 DESCRIPTION="Simplify writing short notes in emacs"
 HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/RememberMode"
 
-# Upstream releases
-
 SRC_URI="http://download.gna.org/remember-el/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="bbdb planner"
-RDEPEND="virtual/emacs"
-DEPEND="${RDEPEND}
-	sys-apps/texinfo
-	bbdb? ( app-emacs/bbdb )
-	planner? ( app-emacs/planner )"
+IUSE=""
+RDEPEND="app-emacs/bbdb
+	app-emacs/planner"
+DEPEND="${RDEPEND}"
+
 
 SITEFILE=50remember-gentoo.el
 
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	doinfo remember-el.info
 	dodoc ChangeLog
 	elisp-install ${PN} *.{el,elc}
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
 
 pkg_postinst() {
