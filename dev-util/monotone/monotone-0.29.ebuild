@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.10 2007/03/05 09:38:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.11 2007/03/13 20:58:40 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
 DESCRIPTION="Monotone Distributed Version Control System"
-HOMEPAGE="http://www.venge.net/monotone/"
-SRC_URI="http://www.venge.net/${PN}/downloads/${P}.tar.gz"
+HOMEPAGE="http://www.monotone.ca"
+SRC_URI="http://www.monotone.ca/downloads/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"

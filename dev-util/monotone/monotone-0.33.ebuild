@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.32.ebuild,v 1.6 2007/03/13 20:58:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.33.ebuild,v 1.1 2007/03/13 20:58:40 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
 DESCRIPTION="Monotone Distributed Version Control System"
-HOMEPAGE="http://www.monotone.ca"
-SRC_URI="http://www.monotone.ca/downloads/${PV}/${P}.tar.gz"
+HOMEPAGE="http://monotone.ca"
+SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -75,7 +75,7 @@ src_install() {
 	docinto contrib
 	dodoc contrib/*
 	newconfd "${FILESDIR}"/monotone.confd monotone
-	newinitd "${FILESDIR}"/monotone.initd monotone
+	newinitd "${FILESDIR}"/${P}.initd monotone
 
 	insinto /etc/monotone ;
 	newins "${FILESDIR}"/hooks.lua hooks.lua

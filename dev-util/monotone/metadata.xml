@@ -6,6 +6,11 @@
     <name>Daniel Black</name>
   </maintainer>
   <maintainer>
+    <email>johnny@localmomentum.net</email>
+    <name>Jonny</name>
+	<description>Future Maintainer</description>
+  </maintainer>
+  <maintainer>
     <email>leonardop@gentoo.org</email>
     <name>Leonardo Boshell</name>
   </maintainer>

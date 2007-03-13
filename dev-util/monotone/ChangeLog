@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.39 2007/03/05 09:38:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.40 2007/03/13 20:58:40 dragonheart Exp $
+
+*monotone-0.33 (13 Mar 2007)
+
+  13 Mar 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/monotone-0.33.initd, metadata.xml, -monotone-0.16.ebuild,
+  -monotone-0.18.ebuild, -monotone-0.19.ebuild, -monotone-0.24.ebuild,
+  -monotone-0.25.ebuild, monotone-0.29.ebuild, monotone-0.32.ebuild,
+  +monotone-0.33.ebuild:
+  version bump thanks to johnny. big prune of back versions too. Welcome
+  johnny to the maintainence of monotone
 
   05 Mar 2007; Daniel Black <dragonheart@gentoo.org> monotone-0.29.ebuild,
   monotone-0.32.ebuild:
