@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cstetex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.16 2007/02/21 23:22:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.17 2007/03/12 23:46:09 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

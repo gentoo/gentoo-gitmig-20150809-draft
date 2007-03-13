@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdf2html
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.14 2006/08/20 20:17:20 malc Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.15 2007/03/12 23:58:53 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   20 Aug 2006; <malc@gentoo.org> pdf2html-1.4.ebuild:
   Stable on amd64

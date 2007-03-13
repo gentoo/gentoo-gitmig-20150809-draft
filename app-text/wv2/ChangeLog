@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.43 2007/02/12 03:52:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.44 2007/03/13 00:03:43 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   12 Feb 2007; Jeroen Roovers <jer@gentoo.org> wv2-0.2.3.ebuild:
   Stable for HPPA (bug #162460).

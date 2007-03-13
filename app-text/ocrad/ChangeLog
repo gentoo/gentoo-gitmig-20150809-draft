@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ocrad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.20 2007/02/26 17:57:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.21 2007/03/12 23:57:48 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   26 Feb 2007; Michael Cummings <mcummings@gentoo.org> ocrad-0.15.ebuild:
   Bug 168062, keywording ~sparc
