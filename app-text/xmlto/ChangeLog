@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmlto
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.39 2006/09/05 06:12:10 kumba Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.40 2007/03/13 00:49:12 leonardop Exp $
+
+  13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  -files/xmlto-head-fix.patch, metadata.xml, -xmlto-0.0.17.ebuild:
+  Replacing text-markup herd with the new sgml herd. Pruning old ebuild.
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> xmlto-0.0.18.ebuild:
   Marked stable on mips.
