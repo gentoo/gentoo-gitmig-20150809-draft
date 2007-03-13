@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.15 2007/02/14 22:17:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.16 2007/03/13 13:25:16 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> whatmask-1.2.ebuild:
+  x86 stable
 
   14 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> whatmask-1.2.ebuild:
   Marked stable on amd64 for bug #113499
