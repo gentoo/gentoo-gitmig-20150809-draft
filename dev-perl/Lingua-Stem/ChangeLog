@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-Stem
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/ChangeLog,v 1.15 2007/01/16 01:16:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/ChangeLog,v 1.16 2007/03/13 15:31:57 ticho Exp $
+
+  13 Mar 2007; Andrej Kacian <ticho@gentoo.org> Lingua-Stem-0.82.ebuild:
+  Stable on x86, bug #169152.
 
   16 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Lingua-Stem-0.81.ebuild, Lingua-Stem-0.82.ebuild:
