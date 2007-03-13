@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.7 2006/11/23 16:17:55 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.8 2007/03/13 00:34:19 kugelfang Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Applu patches, most of which from Debian
+	# Apply patches, most of which from Debian
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
 	epatch ${FILESDIR}/08_all_Makefile.patch
 	epatch ${FILESDIR}/${P}-gcc-4.1.patch
@@ -54,7 +54,7 @@ src_compile() {
 	econf \
 		--enable-client \
 		--disable-static-client \
-		--with-wx-config=$(which wx-config-2.6) \
+		--with-wx-config=$(type -P wx-config-2.6) \
 		$(use_enable unicode) \
 		$(use_enable server) \
 		$(use_with X x) || die "econf failed"

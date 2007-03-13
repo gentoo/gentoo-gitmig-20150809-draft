@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/boinc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.29 2006/11/23 16:17:55 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.30 2007/03/13 00:34:19 kugelfang Exp $
+
+  13 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
+  boinc-4.72.20050813-r3.ebuild, boinc-5.2.14.ebuild, boinc-5.4.11.ebuild,
+  boinc-5.5.6.ebuild:
+  QA: which -> type -P
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   boinc-4.72.20050813-r3.ebuild, boinc-5.2.14.ebuild, boinc-5.4.11.ebuild,
