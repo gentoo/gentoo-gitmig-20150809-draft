@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.7 2006/11/28 18:41:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.8 2007/03/13 00:45:18 kugelfang Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ pkg_setup() {
 	# If the fortran interface is wanted, the gnu f77 compiler
 	# is needed unless ifc is used (which is taken care of in
 	# the dependencies).
-	use fortran && ! use ifc || if [ -z 'which g77' ]; then
+	use fortran && ! use ifc || if [[ -z $(type -P g77) ]]; then
 		eerror "GNU fortran 77 compiler not found on the system."
 		eerror "Please add fortran to your USE flags and reemerge gcc."
 		die
