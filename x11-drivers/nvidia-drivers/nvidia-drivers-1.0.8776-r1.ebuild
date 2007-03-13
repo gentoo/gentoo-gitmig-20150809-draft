@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631.ebuild,v 1.5 2007/03/12 22:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8776-r1.ebuild,v 1.1 2007/03/13 22:40:40 eradicator Exp $
 
-inherit eutils multilib versionator linux-mod flag-o-matic
+inherit eutils multilib versionator linux-mod
 
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
@@ -11,9 +11,9 @@ X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
 
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-pkg0.run )
-	 amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-pkg2.run )
-	 x86-fbsd? ( http://us.download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
+SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-pkg0.run )
+	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-pkg2.run )
+	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
@@ -38,13 +38,6 @@ QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib/libXvMCNVIDIA.so.${PV}
 	usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/opengl/nvidia/extensions/libglx.so"
-
-QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
-	usr/lib/opengl/nvidia/lib/libGL.so.1
-	usr/lib/opengl/nvidia/lib/libGLcore.so.1
-	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.1
-	usr/lib/opengl/nvidia/extensions/libglx.so
-	usr/lib/xorg/modules/drivers/nvidia_drv.so"
 
 QA_WX_LOAD_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
@@ -155,6 +148,9 @@ src_unpack() {
 	epatch ${FILESDIR}/NVIDIA_glx-glheader.patch
 
 	if ! use x86-fbsd; then
+		# Zander kernel patches
+		# None yet.
+
 		# Quiet down warnings the user do not need to see
 		sed -i \
 			-e 's:-Wpointer-arith::g' \
@@ -166,6 +162,12 @@ src_unpack() {
 
 		# If greater than 2.6.5 use M= instead of SUBDIR=
 		cd ${S}; convert_to_m Makefile.kbuild
+
+		# Patch the Makefile to not warn about nvidia-installer
+#		epatch ${FILESDIR}/NVIDIA_glx-makefile.patch
+
+		# Patch for kernel 2.6.19 from Daniel Drake <dsd@gentoo.org>
+		epatch ${FILESDIR}/NVIDIA_kernel-2.6.19.patch
 	fi
 }
 
@@ -175,8 +177,7 @@ src_compile() {
 	# it by itself, pass this.
 	if use x86-fbsd; then
 		cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}/src"
-		echo LDFLAGS="$(raw-ldflags)"
-		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
+		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)"
 	else
 		linux-mod_src_compile
 	fi
@@ -227,12 +228,13 @@ src_install() {
 		dodoc usr/share/doc/Copyrights usr/share/doc/NVIDIA_Changelog
 		dodoc usr/share/doc/XF86Config.sample
 		dohtml usr/share/doc/html/*
-		# nVidia want bug reports using this script
-		dobin usr/bin/nvidia-bug-report.sh
 	else
-		dodoc doc/{README,XF86Config.sample,Copyrights}
-		dohtml doc/html/*
+		dodoc doc/README doc/README.Linux doc/XF86Config.sample
 	fi
+
+	# nVidia want bug reports using this script
+	exeinto /usr/bin
+	doexe usr/bin/nvidia-bug-report.sh
 }
 
 # Install nvidia library:
@@ -386,12 +388,10 @@ pkg_postinst() {
 	echo
 	elog "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
 	echo
-	einfo "You may also be interested in media-video/nvidia-settings"
+	elog "You may also be interested in media-video/nvidia-settings"
 	echo
 	elog "nVidia has requested that any bug reports submitted have the"
 	elog "output of /usr/bin/nvidia-bug-report.sh included."
-	echo
-	elog "To work with compiz, you must enable the AddARGBGLXVisuals option."
 	echo
 	elog "If you are having resolution problems, try disabling DynamicTwinView."
 	echo
