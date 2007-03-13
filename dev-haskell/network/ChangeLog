@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.1 2007/03/11 16:55:37 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.2 2007/03/13 06:57:24 opfer Exp $
+
+  13 Mar 2007; Christian Faulhammer <opfer@gentoo.org> network-1.0.ebuild:
+  stable x86, bug 170650
 
 *network-1.0 (11 Mar 2007)
 
