@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.37 2007/03/12 00:32:39 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.38 2007/03/13 00:10:39 mjolnir Exp $
+
+  13 Mar 2007; Martin Jackson <mjolnir@gentoo.org> +files/nrpe,
+  -nagios-nrpe-2.7.1.ebuild, +nagios-nrpe-2.7.1-r1.ebuild:
+  Install nrpe init.d script to fix #170547
+
+*nagios-nrpe-2.7.1-r1 (12 Mar 2007)
+
+  12 Mar 2007;  <>  nagios-nrpe-2.7.1-r1.ebuild files/digest-nagios-nrpe-2.7.1-r1
+  # INSERT ENTRY HERE
 
 *nagios-nrpe-2.7.1 (12 Mar 2007)
 
