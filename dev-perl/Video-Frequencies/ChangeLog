@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Frequencies
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.8 2006/08/18 02:06:22 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.9 2007/03/13 15:59:58 mcummings Exp $
+
+  13 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  Video-Frequencies-0.03.ebuild:
+  removing CHANGES from dodoc
 
   18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Video-Frequencies-0.03.ebuild:
