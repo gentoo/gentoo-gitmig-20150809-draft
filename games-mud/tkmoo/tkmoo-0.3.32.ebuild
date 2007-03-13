@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.11 2005/06/15 18:57:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.12 2007/03/13 01:31:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	emake \
-		WISH="$(which wish)" \
+		WISH="$(type -P wish)" \
 		TKMOO_LIB_DIR="${GAMES_LIBDIR}/${MY_PN}" \
 		TKMOO_BIN_DIR="${GAMES_BINDIR}" \
 		|| die "emake failed"
