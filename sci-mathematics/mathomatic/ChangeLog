@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.17 2007/02/22 01:26:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.18 2007/03/13 13:55:27 armin76 Exp $
+
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> mathomatic-12.6.5.ebuild:
+  x86 stable
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
