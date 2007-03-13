@@ -1,33 +1,33 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.98.1.ebuild,v 1.1 2006/10/26 18:53:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.99.ebuild,v 1.1 2007/03/13 20:22:22 armin76 Exp $
 
 inherit eutils
 
 MY_P=ScrollZ-${PV}
 
 DESCRIPTION="Advanced IRC client based on ircII"
-SRC_URI="ftp://ftp.du.se/pub/mirrors/ScrollZ/source/${MY_P}.tar.gz"
+SRC_URI="http://www.scrollz.com/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.scrollz.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc-macos ~x86"
-IUSE="ipv6 socks5 ssl gnutls"
+IUSE="ipv6 socks5 ssl"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )
-	gnutls? ( net-libs/gnutls )"
+DEPEND="ssl? ( net-libs/gnutls )"
 S="${WORKDIR}"/${MY_P}
 
 src_compile() {
+	if use ssl; then
+		myconf="--with-ssl"
+	fi
+
 	econf \
 		--with-default-server=irc.freenode.net \
 		$(use_enable ipv6) \
 		$(use_enable socks5) \
-		$(use_with ssl) \
-		$(use_with gnutls) \
-		|| die "econf failed"
+		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -38,8 +38,9 @@ src_install() {
 		mandir="${D}"/usr/share/man/man1 \
 		install \
 		|| die "einstall failed"
+
 	dodoc ChangeLog* README* || die "dodoc failed"
 
-	# fix erms of manpage
+	# fix perms of manpage
 	fperms 644 /usr/share/man/man1/scrollz.1
 }
