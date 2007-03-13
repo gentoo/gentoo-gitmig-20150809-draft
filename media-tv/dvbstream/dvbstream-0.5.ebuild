@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.2 2006/04/29 10:12:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.3 2007/03/13 12:13:11 zzam Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dvbtools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="dev-lang/perl"
 DEPEND="media-tv/linuxtv-dvb-headers"
