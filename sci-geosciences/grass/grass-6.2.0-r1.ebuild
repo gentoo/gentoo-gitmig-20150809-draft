@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.1 2007/01/29 01:57:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.2 2007/03/13 00:32:26 kugelfang Exp $
 
 inherit eutils autotools
 
@@ -108,7 +108,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="--prefix=/usr --with-cxx --enable-shared \
-		--with-gdal=$(which gdal-config) --with-curses --with-proj \
+		--with-gdal=$(type -P gdal-config) --with-curses --with-proj \
 		--with-proj-includes=/usr/include --with-proj-libs=/usr/lib \
 		--with-proj-share=/usr/share/proj"
 

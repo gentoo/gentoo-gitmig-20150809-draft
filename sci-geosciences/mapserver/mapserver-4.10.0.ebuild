@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.3 2007/02/07 07:43:55 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.4 2007/03/13 00:35:42 kugelfang Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -103,7 +103,7 @@ src_compile() {
 	myconf="--with-httpd=${APACHECTL/'ctl'/} --with-freetype"
 
 	if use geos; then
-		myconf="${myconf} --with-geos=$(which geos-config)"
+		myconf="${myconf} --with-geos=$(type -P geos-config)"
 	fi
 
 	local MYGPUSE="wfs wcs wfsclient"
