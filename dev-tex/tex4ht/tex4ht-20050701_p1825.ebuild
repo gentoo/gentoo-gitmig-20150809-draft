@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.3 2005/10/14 17:27:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.4 2007/03/13 08:00:20 nattfodd Exp $
 
 inherit latex-package toolchain-funcs
 
