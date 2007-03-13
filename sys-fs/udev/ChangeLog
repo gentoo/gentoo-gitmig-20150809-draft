@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.281 2007/03/12 17:38:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.282 2007/03/13 18:59:45 zzam Exp $
+
+*udev-106-r3 (13 Mar 2007)
+
+  13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-106-r3, +files/blacklist, +files/pnp-aliases,
+  +udev-106-r3.ebuild:
+  Symlink some utilities to /sbin where multipath-tools expect them, Bug
+  #168588. Install persistent-device rules for device-mapper devices. Added
+  template for blacklist file. Added modprobe file with aliases for isapnp
+  devices. Let device-mapper rule also react on change events.
 
   12 Mar 2007; Markus Rothe <corsair@gentoo.org> udev-104-r12.ebuild:
   Stable on ppc64; bug #159871
