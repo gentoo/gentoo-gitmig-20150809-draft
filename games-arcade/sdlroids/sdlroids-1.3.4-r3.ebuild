@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r3.ebuild,v 1.9 2006/12/06 17:09:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r3.ebuild,v 1.10 2007/03/13 22:33:58 nyhm Exp $
 
 inherit eutils games
 
@@ -13,22 +13,23 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libsdl-1.1.8
+DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer"
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	sed -i \
 		-e 's/$(SOUNDSDIR)/$(DESTDIR)$(SOUNDSDIR)/' \
 		-e 's/$(GFXDIR)/$(DESTDIR)$(GFXDIR)/' Makefile.in \
-		|| die "sed Makefile.in failed"
-	epatch "${FILESDIR}/${PV}-sound.patch"
+		|| die "sed failed"
+	epatch "${FILESDIR}"/${PV}-sound.patch
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon icons/sdlroids-48x48.xpm ${PN}.xpm
+	make_desktop_entry ${PN} SDLRoids ${PN}.xpm
 	dodoc ChangeLog README.* TODO
 	prepgamesdirs
 }
