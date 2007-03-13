@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.11 2007/03/12 17:36:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.12 2007/03/13 23:25:53 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-image
