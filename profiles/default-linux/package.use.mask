@@ -2,3 +2,4 @@
 # make sure your package forces a new-enough portage.
 
 sys-devel/gcc hardened
+sys-libs/glibc hardened
