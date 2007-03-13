@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.4-r1.ebuild,v 1.2 2007/03/12 16:39:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.4-r1.ebuild,v 1.3 2007/03/13 18:34:34 betelgeuse Exp $
 
 inherit eutils autotools
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/0.4-cross-compile.patch"
 	epatch "${FILESDIR}/0.4-summary.patch"
+	epatch "${FILESDIR}/0.4-parallel-make.patch"
 	eautoconf
 }
 
