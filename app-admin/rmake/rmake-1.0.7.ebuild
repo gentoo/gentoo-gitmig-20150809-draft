@@ -1,6 +1,6 @@
 # Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/rmake-1.0.4.ebuild,v 1.1 2007/01/29 16:38:42 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/rmake-1.0.7.ebuild,v 1.1 2007/03/13 19:08:53 smithj Exp $
 
 inherit eutils
 
