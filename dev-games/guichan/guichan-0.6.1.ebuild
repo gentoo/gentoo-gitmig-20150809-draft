@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.6.0.ebuild,v 1.1 2007/01/16 20:32:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.6.1.ebuild,v 1.1 2007/03/13 20:12:05 mr_bones_ Exp $
 
 DESCRIPTION="a portable C++ GUI library designed for games using Allegro, SDL and/or OpenGL"
 HOMEPAGE="http://guichan.sourceforge.net/"
-SRC_URI="mirror://sourceforge/guichan/${P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/guichan/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,8 +18,6 @@ DEPEND="allegro? ( media-libs/allegro )
 		media-libs/libsdl
 		media-libs/sdl-image
 	)"
-
-S=${WORKDIR}/${P}-src
 
 src_compile() {
 	econf \
