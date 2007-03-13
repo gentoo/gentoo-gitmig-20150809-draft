@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.17 2006/10/15 18:42:43 kosmikus Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.18 2007/03/13 00:05:58 nattfodd Exp $
+
+  12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced text-markup by tex as maintaining herd (text-markup split).
 
   15 Oct 2006; Andres Loeh <kosmikus@gentoo.org> lhs2tex-1.11.ebuild:
   Added a small patch to make 1.11 build with ghc-6.6.
