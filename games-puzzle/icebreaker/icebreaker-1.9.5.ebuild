@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.10 2006/06/29 15:59:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.11 2007/03/13 13:39:14 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Trap and capture penguins on Antarctica"
 HOMEPAGE="http://www.mattdm.org/icebreaker/"
-SRC_URI="http://www.mattdm.org/icebreaker/1.9.x/${P}.tgz"
+SRC_URI="http://www.mattdm.org/${PN}/1.9.x/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +38,8 @@ src_install() {
 		bindir="${D}${GAMES_BINDIR}" \
 		datadir="${D}${GAMES_DATADIR}" \
 		highscoredir="${D}${GAMES_STATEDIR}" || die
-
+	newicon ${PN}_48.bmp ${PN}.bmp
+	make_desktop_entry ${PN} IceBreaker /usr/share/pixmaps/${PN}.bmp
 	dodoc ChangeLog README* TODO
 	prepgamesdirs
 }
