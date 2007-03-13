@@ -2,10 +2,10 @@ AUX Ice-3.1.1-Makefile.patch 2464 RMD160 2777dd9711a88a9427db2397aba9c25fbd3f56d
 MD5 346974d12ba19b0cd915709dbd813684 files/Ice-3.1.1-Makefile.patch 2464
 RMD160 2777dd9711a88a9427db2397aba9c25fbd3f56da files/Ice-3.1.1-Makefile.patch 2464
 SHA256 39c49b2c8afa29ce6085ffc62ba01b166582ed12a1e7737b9745d127ed19a42b files/Ice-3.1.1-Makefile.patch 2464
-AUX Ice-3.2.0-Makefile.patch 2702 RMD160 854d3313007141e95935e692eaa69cae368a2425 SHA1 0d0d03d2d3c9800ba79d3ff12e440c136da9cdd1 SHA256 a23bc8dd3c1e4a97a117451190ff867a8eb4fdb69d60d6fa0ab52e3dfd2ebf6b
-MD5 4be3232c262218719c9f73fc11ff56f2 files/Ice-3.2.0-Makefile.patch 2702
-RMD160 854d3313007141e95935e692eaa69cae368a2425 files/Ice-3.2.0-Makefile.patch 2702
-SHA256 a23bc8dd3c1e4a97a117451190ff867a8eb4fdb69d60d6fa0ab52e3dfd2ebf6b files/Ice-3.2.0-Makefile.patch 2702
+AUX Ice-3.2.0-Makefile.patch 4002 RMD160 687d6073f98d17e3e5284de6c0cfdb48f7145a16 SHA1 eabb95b5cb83225776363b86e03d53be647f7891 SHA256 9dbd6a6fd4cb801fd6ca9b8d364edb96bd2d5002f33a624dc77ab624e026cdc4
+MD5 d45cb4561bb173877263b8b7a5b91092 files/Ice-3.2.0-Makefile.patch 4002
+RMD160 687d6073f98d17e3e5284de6c0cfdb48f7145a16 files/Ice-3.2.0-Makefile.patch 4002
+SHA256 9dbd6a6fd4cb801fd6ca9b8d364edb96bd2d5002f33a624dc77ab624e026cdc4 files/Ice-3.2.0-Makefile.patch 4002
 AUX ice-makefile-speedup.patch 474 RMD160 db480e394adb2721027e5b14b6e194a0b2e72f57 SHA1 c58d91bd19086e365a54886a10d29c467057782d SHA256 b6aeecc1f95ee58656515e5466cb1853cf2be2b12cff9243d57d2d70a61eaa89
 MD5 b0c56cee008c862ef7521bcf865df180 files/ice-makefile-speedup.patch 474
 RMD160 db480e394adb2721027e5b14b6e194a0b2e72f57 files/ice-makefile-speedup.patch 474
