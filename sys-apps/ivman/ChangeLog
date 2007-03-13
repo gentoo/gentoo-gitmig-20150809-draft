@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.51 2007/03/06 15:02:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.52 2007/03/13 14:32:04 mabi Exp $
+
+  13 Mar 2007; Matti Bickel <mabi@gentoo.org> ivman-0.6.13.ebuild:
+  ppc stable (bug #163436)
 
 *ivman-0.6.14 (06 Mar 2007)
 
