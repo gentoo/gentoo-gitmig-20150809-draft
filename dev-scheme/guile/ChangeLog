@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.8 2007/03/03 16:13:25 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.9 2007/03/13 17:58:47 hkbst Exp $
+
+  13 Mar 2007; Marijn Schouten <hkBst@gentoo.org> -guile-1.4-r3.ebuild,
+  -guile-1.4.1.ebuild, -guile-1.6.4-r1.ebuild, -guile-1.6.6.ebuild:
+  clean out old guile versions
 
 *guile-1.8.1-r3 (03 Mar 2007)
 
