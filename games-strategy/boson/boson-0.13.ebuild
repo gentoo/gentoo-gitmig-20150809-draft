@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.13.ebuild,v 1.2 2007/02/16 00:10:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.13.ebuild,v 1.3 2007/03/13 01:32:44 wolf31o2 Exp $
 
 inherit eutils kde-functions toolchain-funcs
 
@@ -40,8 +40,8 @@ src_unpack() {
 
 src_compile() {
 	cmake \
-		-DCMAKE_C_COMPILER=$(which $(tc-getCC)) \
-		-DCMAKE_CXX_COMPILER=$(which $(tc-getCXX)) \
+		-DCMAKE_C_COMPILER=$(type -P $(tc-getCC)) \
+		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX)) \
 		-DCMAKE_BUILD_TYPE=None \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DKDEDIR=$(kde-config --prefix) \
