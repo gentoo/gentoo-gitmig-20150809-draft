@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.4 2006/11/18 22:39:11 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.5 2007/03/13 16:19:37 armin76 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/${P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="Xaw3d alsa arts esd gnome nls png readline sdl"
 
 RDEPEND="media-libs/giflib
