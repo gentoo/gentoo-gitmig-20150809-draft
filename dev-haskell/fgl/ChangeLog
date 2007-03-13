@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.2 2007/03/11 16:22:38 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.3 2007/03/13 06:34:58 opfer Exp $
+
+  13 Mar 2007; Christian Faulhammer <opfer@gentoo.org> fgl-5.2.ebuild:
+  stable x86, bug 170650
 
 *fgl-5.2 (11 Mar 2007)
 

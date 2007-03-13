@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.1 2007/03/11 16:49:07 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.2 2007/03/13 06:49:37 opfer Exp $
+
+  13 Mar 2007; Christian Faulhammer <opfer@gentoo.org> hunit-1.1.ebuild:
+  stable x86, bug 170650
 
 *hunit-1.1 (11 Mar 2007)
 
