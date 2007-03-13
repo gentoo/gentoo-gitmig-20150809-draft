@@ -1,22 +1,25 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.41 2007/03/13 19:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.42 2007/03/13 23:29:04 cardoe Exp $
 
-  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> nvi-1.81.5-r5.ebuild:
+  13 Mar 2007; Doug Goldstein <cardoe@gentoo.org> nvi-1.81.5-r5.ebuild:
+  amd64 stable wrt bug #170745
+
+  13 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> nvi-1.81.5-r5.ebuild:
   x86 stable wrt bug 170745
 
   13 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> nvi-1.81.5-r5.ebuild:
   Stable on sparc wrt #170475
 
-  06 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org> nvi-1.81.5-r3.ebuild:
+  06 Dec 2006; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> nvi-1.81.5-r3.ebuild:
   Stable on MIPS.
 
-  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> nvi-1.81.5-r3.ebuild:
+  19 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org> nvi-1.81.5-r3.ebuild:
   Stable on Alpha.
 
 *nvi-1.81.5-r5 (06 Oct 2006)
 
-  06 Oct 2006; Harald van Dĳk <truedfx@gentoo.org>
+  06 Oct 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/nvi-1.81.5-wide.patch, -nvi-1.81.5-r4.ebuild,
   +nvi-1.81.5-r5.ebuild:
   Better multibyte support (bug #150169)
@@ -27,7 +30,7 @@
   01 Oct 2006; Jeroen Roovers <jer@gentoo.org> nvi-1.81.5-r3.ebuild:
   Stable for HPPA (bug #147844).
 
-  01 Oct 2006; Harald van Dĳk <truedfx@gentoo.org> nvi-1.81.5-r3.ebuild,
+  01 Oct 2006; Harald van DÄ³k <truedfx@gentoo.org> nvi-1.81.5-r3.ebuild,
   nvi-1.81.5-r4.ebuild:
   Installation isn't parallel make safe, use -j1
 
@@ -37,13 +40,13 @@
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> nvi-1.81.5-r3.ebuild:
   Stable on ppc.
 
-  21 Sep 2006; Harald van Dĳk <truedfx@gentoo.org>
+  21 Sep 2006; Harald van DÄ³k <truedfx@gentoo.org>
   files/nvi-1.81.5-build.patch:
   Create nex and nview binary and manpage symlinks
 
 *nvi-1.81.5-r4 (20 Sep 2006)
 
-  20 Sep 2006; Harald van Dĳk <truedfx@gentoo.org> +nvi-1.81.5-r4.ebuild:
+  20 Sep 2006; Harald van DÄ³k <truedfx@gentoo.org> +nvi-1.81.5-r4.ebuild:
   Add support for eselect-vi
 
   19 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> nvi-1.81.5-r3.ebuild:
@@ -52,25 +55,25 @@
   18 Sep 2006; <ticho@gentoo.org> nvi-1.81.5-r3.ebuild:
   Stable on x86, bug #147844.
 
-  17 Sep 2006; Harald van Dĳk <truedfx@gentoo.org>
+  17 Sep 2006; Harald van DÄ³k <truedfx@gentoo.org>
   files/nvi-1.81.5-db4.patch, nvi-1.81.5-r3.ebuild:
   Include <db.h> when checking for db_create
 
 *nvi-1.81.5-r3 (24 Jul 2006)
 
-  24 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
+  24 Jul 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/nvi-1.81.5-build.patch, +files/nvi-1.81.5-db4.patch,
   +files/nvi-1.81.5-gcc4.patch, +nvi-1.81.5-r3.ebuild:
   Fix compilation with GCC4, add support for USE=perl and USE=unicode, and use
   db4 instead of db3
 
-  23 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
+  23 Jul 2006; Harald van DÄ³k <truedfx@gentoo.org>
   files/nvi-1.79-build.patch, nvi-1.79.ebuild:
   Use debian's patches to avoid crashes and other bad news
 
 *nvi-1.79 (23 Jul 2006)
 
-  23 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
+  23 Jul 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/nvi-1.79-build.patch, +metadata.xml, +nvi-1.79.ebuild:
   Add 1.79 as 1.8* don't build with GCC4
   Mark myself as maintainer
