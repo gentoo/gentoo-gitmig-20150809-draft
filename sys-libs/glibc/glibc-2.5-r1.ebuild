@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r1.ebuild,v 1.1 2007/03/13 06:09:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r1.ebuild,v 1.2 2007/03/13 08:23:22 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -39,7 +39,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls build nptl nptlonly hardened multilib selinux glibc-omitfp profile glibc-compat20"
+IUSE="build debug nls nptl nptlonly hardened multilib selinux glibc-omitfp profile glibc-compat20"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -298,7 +298,7 @@ toolchain-glibc_src_test() {
 	cd "${WORKDIR}"/build-${ABI}-${CTARGET}-$1 || die "cd build-${ABI}-${CTARGET}-$1"
 	unset LD_ASSUME_KERNEL
 	make check && return 0
-	einfo "make check failed - re-running with --ignore-errors to get the rest of the results"
+	einfo "make check failed - re-running with --keep-going to get the rest of the results"
 	make -k check
 	ewarn "make check failed for ${ABI}-${CTARGET}-$1"
 	return 1
