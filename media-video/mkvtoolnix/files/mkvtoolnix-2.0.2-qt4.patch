@@ -1,0 +1,14 @@
+Index: mkvtoolnix-2.0.2/configure.in
+===================================================================
+--- mkvtoolnix-2.0.2.orig/configure.in
++++ mkvtoolnix-2.0.2/configure.in
+@@ -1018,8 +1018,7 @@ AC_ARG_ENABLE([qt],
+ 
+ qt_min_ver=4.0.0
+ 
+-if test x"$enable_qt" = "xyes" -a \
+-  '(' x"$enable_gui" = x"yes" -o x"$enable_gui" = "x" ')'; then
++if test x"$enable_qt" = "xyes"; then
+   dnl Find moc.
+   AC_ARG_WITH(moc,
+     AC_HELP_STRING([--with-moc=prog],[use prog instead of looking for moc]),

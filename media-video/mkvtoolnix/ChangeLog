@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.72 2007/02/24 17:54:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.73 2007/03/13 19:55:54 aballier Exp $
+
+  13 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/mkvtoolnix-2.0.2-qt4.patch, mkvtoolnix-2.0.2.ebuild:
+  Build mkvinfo qt4 gui even without wxwindows
 
 *mkvtoolnix-2.0.2 (24 Feb 2007)
 

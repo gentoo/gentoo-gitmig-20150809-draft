@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.0.2.ebuild,v 1.1 2007/02/24 17:54:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.0.2.ebuild,v 1.2 2007/03/13 19:55:54 aballier Exp $
 
-inherit eutils wxwidgets flag-o-matic qt4
+inherit eutils wxwidgets flag-o-matic qt4 autotools
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -30,6 +30,16 @@ pkg_setup() {
 	WX_GTK_VER="2.6"
 	if use wxwindows; then
 		need-wxwidgets gtk2
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	if use qt4; then
+		epatch "${FILESDIR}/${P}-qt4.patch"
+		eautoreconf
 	fi
 }
 
