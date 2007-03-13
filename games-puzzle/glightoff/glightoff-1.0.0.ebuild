@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glightoff/glightoff-1.0.0.ebuild,v 1.2 2006/04/10 23:56:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glightoff/glightoff-1.0.0.ebuild,v 1.3 2007/03/13 23:15:19 nyhm Exp $
 
 inherit gnome2
 
@@ -13,5 +13,5 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.6
+DEPEND=">=x11-libs/gtk+-2.6
 	gnome-base/librsvg"
