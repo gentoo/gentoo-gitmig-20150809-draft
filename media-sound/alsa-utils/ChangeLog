@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.196 2007/02/18 14:00:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.197 2007/03/13 18:26:49 uberlord Exp $
+
+*alsa-utils-1.0.14_rc2-r2 (13 Mar 2007)
+
+  13 Mar 2007; Roy Marples <uberlord@gentoo.org> +files/alsasound.initd,
+  +alsa-utils-1.0.14_rc2-r2.ebuild:
+  New init script works with non bash shells.
 
   18 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   files/alsasound-init-20070218:
