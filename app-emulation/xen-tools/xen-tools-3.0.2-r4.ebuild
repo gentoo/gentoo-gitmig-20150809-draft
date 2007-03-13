@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.2 2006/12/16 04:38:32 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.3 2007/03/13 06:26:34 aross Exp $
 
 inherit mount-boot flag-o-matic distutils eutils multilib
 
@@ -49,7 +49,7 @@ pkg_setup() {
 		ewarn "will be enabled anyway."
 	fi
 
-	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
+	if [[ "$(scanelf -s __guard -q `type -P python`)" ]] ; then
 		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
 		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
 	fi

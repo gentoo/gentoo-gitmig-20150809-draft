@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r3.ebuild,v 1.1 2006/08/14 07:11:47 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r3.ebuild,v 1.2 2007/03/13 06:26:34 aross Exp $
 
 inherit mount-boot flag-o-matic distutils eutils multilib
 
@@ -54,7 +54,7 @@ pkg_setup() {
 		ewarn "will be enabled anyway."
 	fi
 
-	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
+	if [[ "$(scanelf -s __guard -q `type -P python`)" ]] ; then
 		eerror "xend doesn't work when python is built with stack smashing protection (ssp)."
 		eerror "Please append the following to your CFLAGS and remerge python:"
 		eerror "  '-fno-stack-protector -fno-stack-protector-all'"
