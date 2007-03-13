@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.5.ebuild,v 1.3 2007/02/20 19:23:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.5.ebuild,v 1.4 2007/03/13 12:01:18 armin76 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="BSD GLX SGI-B GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 RDEPEND="virtual/opengl
 	virtual/glu"
