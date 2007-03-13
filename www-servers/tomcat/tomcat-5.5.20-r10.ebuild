@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.5 2007/02/27 18:54:16 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.6 2007/03/13 00:06:53 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -37,7 +37,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	~dev-java/tomcat-servlet-api-${PV}
 	admin? ( =dev-java/struts-1.2* )
 	dev-java/sun-javamail
-	java5? ( || ( >=virtual/jre-1.5 =virtual/jre-1.6 ) )
+	java5? ( >=virtual/jre-1.5 )
 	!java5? (
 		=virtual/jre-1.4*
 		dev-java/sun-jaf
@@ -45,10 +45,9 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 		>=dev-java/xerces-2.7.1
 	   	=dev-java/xml-commons-external-1.3*
 	   )"
-DEPEND="java5? ( || ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 ) )
+DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
-	${RDEPEND}
-	>=dev-java/java-config-2.0.31"
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -117,22 +116,22 @@ src_compile(){
 	antflags="${antflags} -Dservletapi.build.notrequired=true"
 	antflags="${antflags} -Djspapi.build.notrequired=true"
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
-	antflags="${antflags} -Dcommons-collections.jar=$(java-config -p commons-collections)"
-	antflags="${antflags} -Dcommons-daemon.jar=$(java-config -p commons-daemon)"
-	antflags="${antflags} -Dcommons-digester.jar=$(java-config -p commons-digester)"
-	antflags="${antflags} -Dcommons-dbcp.jar=$(java-config -p commons-dbcp)"
-	antflags="${antflags} -Dcommons-el.jar=$(java-config -p commons-el)"
-	antflags="${antflags} -Dcommons-fileupload.jar=$(java-config -p commons-fileupload)"
-	antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
-	antflags="${antflags} -Dcommons-launcher.jar=$(java-config -p commons-launcher)"
+	antflags="${antflags} -Dcommons-collections.jar=$(java-pkg_getjars commons-collections)"
+	antflags="${antflags} -Dcommons-daemon.jar=$(java-pkg_getjars commons-daemon)"
+	antflags="${antflags} -Dcommons-digester.jar=$(java-pkg_getjars commons-digester)"
+	antflags="${antflags} -Dcommons-dbcp.jar=$(java-pkg_getjars commons-dbcp)"
+	antflags="${antflags} -Dcommons-el.jar=$(java-pkg_getjars commons-el)"
+	antflags="${antflags} -Dcommons-fileupload.jar=$(java-pkg_getjars commons-fileupload)"
+	antflags="${antflags} -Dcommons-httpclient.jar=$(java-pkg_getjars commons-httpclient)"
+	antflags="${antflags} -Dcommons-launcher.jar=$(java-pkg_getjars commons-launcher)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
-	antflags="${antflags} -Dcommons-pool.jar=$(java-config -p commons-pool)"
-	antflags="${antflags} -Dcommons-modeler.jar=$(java-config -p commons-modeler)"
+	antflags="${antflags} -Dcommons-pool.jar=$(java-pkg_getjars commons-pool)"
+	antflags="${antflags} -Dcommons-modeler.jar=$(java-pkg_getjars commons-modeler)"
 	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.1 ecj.jar)"
 	antflags="${antflags} -Djsp-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.4 jsp-api.jar)"
-	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
-	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
+	antflags="${antflags} -Djunit.jar=$(java-pkg_getjars junit)"
+	antflags="${antflags} -Dlog4j.jar=$(java-pkg_getjars log4j)"
 	antflags="${antflags} -Dmail.jar=$(java-pkg_getjar sun-javamail mail.jar)"
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -Dservlet-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.4 servlet-api.jar)"
@@ -149,7 +148,7 @@ src_compile(){
 	fi
 	antflags="${antflags} -Djasper.home=${S}/jasper"
 	if ! use java5; then
-		antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf)"
+		antflags="${antflags} -Dactivation.jar=$(java-pkg_getjars sun-jaf)"
 		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-core-3.0 mx4j.jar)"
 		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-core-3.0 mx4j-rjmx.jar)"
 		antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
@@ -198,7 +197,7 @@ src_install() {
 	cp ${S}/container/webapps/manager/manager.xml \
 		conf/Catalina/localhost
 
-	# make the jars available via java-config -p and jar-from, etc
+	# make the jars available via java-pkg_getjar and jar-from, etc
 	base=$(pwd)
 	libdirs="common/lib server/lib"
 	for dir in ${libdirs}

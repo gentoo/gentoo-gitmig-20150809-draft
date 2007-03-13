@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10.ebuild,v 1.1 2007/03/01 00:11:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10.ebuild,v 1.2 2007/03/13 00:06:53 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -17,7 +17,7 @@ LICENSE="Apache-2.0"
 
 IUSE="doc examples source test"
 
-RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
+RDEPEND=">=virtual/jre-1.5
 	=dev-java/eclipse-ecj-3.2*
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
@@ -25,7 +25,7 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 	>=dev-java/commons-pool-1.2
 	~dev-java/tomcat-servlet-api-${PV}"
 
-DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
+DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
 	test? ( dev-java/junit )"
 
@@ -48,15 +48,6 @@ src_unpack() {
 }
 
 src_compile(){
-	# Prevent out of memory/heap space errors
-	# Not sure if this is happening for others
-
-	# Old way
-#	java-pkg_force-compiler ecj-3.2
-
-	# New way if others get out of heap space
-#	ANT_OPTS=-XX:MaxPermSize=128m
-
 	local antflags="build-jasper-jdt deploy -Dbase.path=${T}"
 	antflags="${antflags} -Dcompile.debug=false"
 	if ! use doc; then
