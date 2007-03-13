@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.4-r1.ebuild,v 1.1 2007/03/06 06:52:17 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.4-r1.ebuild,v 1.2 2007/03/13 07:31:20 keri Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ MY_P=qp${PV}
 
 DESCRIPTION="Qu-Prolog is an extended Prolog supporting quantifiers, object-variables and substitutions"
 HOMEPAGE="http://www.itee.uq.edu.au/~pjr/HomePages/QuPrologHome.html"
-SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz"
+SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz
+	qt4? ( mirror://gentoo/qu-prolog-7.4-xqp-qt4.tar.gz )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -27,8 +28,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-debug.patch
-
-	use qt4 && epatch "${FILESDIR}"/${P}-qt4.patch
 }
 
 src_compile() {
@@ -39,10 +38,11 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use qt3 || use qt4; then
-		cd "${S}"/src/xqp
 		if use qt4; then
+			cd "${S}"/src/xqp/qt4
 			qmake || die "qmake xqp failed"
 		else
+			cd "${S}"/src/xqp
 			"${QTDIR}"/bin/qmake || die "qmake xqp failed"
 		fi
 		emake || die "emake xqp failed"
