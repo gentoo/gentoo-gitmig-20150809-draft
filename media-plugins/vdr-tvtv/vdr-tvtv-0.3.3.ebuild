@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/vdr-tvtv-0.3.3.ebuild,v 1.1 2007/02/08 14:27:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/vdr-tvtv-0.3.3.ebuild,v 1.2 2007/03/13 12:18:14 zzam Exp $
 
 inherit vdr-plugin
 
@@ -11,7 +11,7 @@ SRC_URI="http://home.arcor.de/grossmar/tvtv/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6

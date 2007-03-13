@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sky/vdr-sky-0.3.5.ebuild,v 1.1 2006/04/17 17:01:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sky/vdr-sky-0.3.5.ebuild,v 1.2 2007/03/13 12:17:35 zzam Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ DESCRIPTION="VDR plugin: use kfir mpeg encoder card as input"
 HOMEPAGE="http://www.cadsoft.de/vdr/"
 SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/vdr-${VDR_V}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
