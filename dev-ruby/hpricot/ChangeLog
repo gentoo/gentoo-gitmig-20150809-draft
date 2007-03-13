@@ -1,10 +1,13 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.1 2007/02/04 07:49:23 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.2 2007/03/13 19:03:20 tgall Exp $
+
+  13 Mar 2007; Tom Gall <tgall@gentoo.org> hpricot-0.5.ebuild:
+  added ~ppc64
 
 *hpricot-0.5 (04 Feb 2007)
 
-  04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  04 Feb 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org> +metadata.xml,
   +hpricot-0.5.ebuild:
   Initial ebuild by Aggelos Orfanakos <agorf@void.gr>, #146373
 
