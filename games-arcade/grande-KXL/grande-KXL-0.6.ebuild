@@ -1,21 +1,19 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.7 2006/11/01 22:31:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.8 2007/03/14 22:36:48 nyhm Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="ZANAC type game"
 HOMEPAGE="http://kxl.orz.hm/"
-SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-games/KXL-1.1.7"
+DEPEND="dev-games/KXL"
 
 src_unpack() {
 	unpack ${A}
@@ -27,6 +25,8 @@ src_unpack() {
 src_install() {
 	dodir "${GAMES_STATEDIR}"
 	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon src/bmp/boss1.bmp ${PN}.bmp
+	make_desktop_entry grande Grande /usr/share/pixmaps/${PN}.bmp
 	dodoc ChangeLog README
 	prepgamesdirs
 }
