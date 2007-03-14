@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2666 2007/03/13 10:44:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2667 2007/03/14 10:30:15 hkbst Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -543,7 +543,7 @@ dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-scheme/guile:debug-freelist - include garbage collector freelist debugging code
 dev-scheme/guile:debug-malloc - include malloc debugging code
 dev-scheme/guile:deprecated - enable deprecated features
-dev-scheme/guile:discouraged - enable merely discouraged features
+dev-scheme/guile:discouraged - (implied by deprecated) enable merely discouraged features
 dev-scheme/guile:elisp - enable Emacs Lisp support
 dev-scheme/guile:networking - include networking interfaces
 dev-scheme/guile:regex - include regular expression interfaces
