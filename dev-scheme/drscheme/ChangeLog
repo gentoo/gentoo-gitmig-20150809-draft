@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.42 2007/03/14 16:40:46 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.43 2007/03/14 22:13:44 opfer Exp $
+
+  14 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  drscheme-360-r1.ebuild:
+  stable x86, bug 170813
 
   14 Mar 2007; Patrick McLean <chutzpah@gentoo.org> drscheme-360-r1.ebuild:
   Remove sgc USE flag since it doesn't compile anymore (comment #1 on bug 
