@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfprint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.90 2007/03/14 15:37:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.91 2007/03/14 15:54:33 drac Exp $
+
+  14 Mar 2007; Samuli Suominen <drac@gentoo.org> xfprint-4.4.0.ebuild:
+  Remove bogus deps; libgpg-error, gnutls, gcrypt.
 
   14 Mar 2007; Samuli Suominen <drac@gentoo.org> xfprint-4.4.0.ebuild:
   Add missing dep for xfce-mcs-manager as pointed out by Betelgeuse, thanks.

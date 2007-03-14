@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.14 2007/03/14 15:37:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.15 2007/03/14 15:54:33 drac Exp $
 
 inherit xfce44
 
@@ -19,10 +19,6 @@ RDEPEND="cups? ( net-print/cups )
 	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
-	dev-libs/libgcrypt
-	dev-libs/libgpg-error
-	media-libs/libpng
-	net-libs/gnutls
 	app-text/a2ps"
 DEPEND="${RDEPEND}
 	dev-util/intltool
