@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.1.ebuild,v 1.2 2007/03/14 12:03:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.1.ebuild,v 1.3 2007/03/14 15:13:28 caleb Exp $
 
 inherit multilib eutils
 
@@ -27,7 +27,7 @@ src_unpack () {
 	echo >> ${qwtconfig} "target.path = /usr/$(get_libdir)"
 	echo >> ${qwtconfig} "headers.path = /usr/include/qwt5"
 	echo >> ${qwtconfig} "doc.path = /usr/share/doc/${PF}"
-	echo >> ${qwtconfig}	
+	echo >> ${qwtconfig}
 	echo >> ${qwtconfig} "CONFIG += qt warn_on thread"
 	echo >> ${qwtconfig} "CONFIG += release"
 	echo >> ${qwtconfig} "CONFIG += QwtDll QwtPlot QwtWidgets QwtDesigner"
@@ -40,15 +40,20 @@ src_unpack () {
 	# They got the version wrong
 	sed -e "s/5.0.0/5.0.1/g" -i "${S}/src/src.pro"
 
+	if ! useq doc; then
+		echo >> "${S}/src/src.pro" "INSTALLS = target headers"
+	fi
+
 }
 
 src_compile () {
+	# -j1 due to parallel build failures ( bug # 170625 )
 	/usr/bin/qmake qwt.pro
-	emake || die
+	emake MAKEOPTS="$MAKEOPTS -j1" || die
 
 	cd designer
 	/usr/bin/qmake qwtplugin.pro
-	emake || die
+	emake MAKEOPTS="$MAKEOPTS -j1" || die
 }
 
 src_install () {
