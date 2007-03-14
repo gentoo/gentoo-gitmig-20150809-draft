@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.11 2006/11/02 22:54:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.12 2007/03/14 22:07:11 nyhm Exp $
 
 inherit eutils games
 
@@ -42,6 +42,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon data/themes/fancy/Bubble_black_DEAD_01.png ${PN}.png
+	make_desktop_entry ${PN} XBubble
 	dodoc AUTHORS ChangeLog NEWS NetworkProtocol README TODO
 	prepgamesdirs
 }
