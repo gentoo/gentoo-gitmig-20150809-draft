@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-xosdplugin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.18 2007/02/21 23:48:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.19 2007/03/14 10:57:01 blubb Exp $
+
+  14 Mar 2007; Simon Stelling <blubb@gentoo.org>
+  lineak-xosdplugin-0.9.0_pre1.ebuild:
+  stable on amd64; bug 170191
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
