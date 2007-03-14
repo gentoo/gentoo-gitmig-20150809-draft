@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.11 2007/01/04 07:31:04 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.12 2007/03/14 18:18:53 battousai Exp $
 
-inherit eutils x11 linux-mod
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.7"
+
+inherit eutils x11 linux-mod autotools
 
 IUSE_VIDEO_CARDS="
 	video_cards_i810
@@ -20,7 +23,7 @@ IUSE="${IUSE_VIDEO_CARDS}"
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 S="${WORKDIR}/drm"
 PATCHVER="0.3"
@@ -36,36 +39,21 @@ SLOT="0"
 LICENSE="X11"
 KEYWORDS="alpha amd64 ia64 ppc x86"
 
-DEPEND=">=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.59
-	>=sys-devel/libtool-1.5.14
-	>=sys-devel/m4-1.4
-	virtual/linux-sources
-	>=sys-apps/portage-2.0.49-r13"
+DEPEND="virtual/linux-sources"
+RDEPEND=""
 
 pkg_setup() {
-	get_version
+	linux-mod_pkg_setup
 
-	if kernel_is 2 6
-	then
-		if linux_chkconfig_builtin "DRM"
-		then
+	if kernel_is 2 6 ; then
+		linux_chkconfig_builtin "DRM" && \
 			die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
-		fi
+		CONFIG_CHECK="AGP"
+		ERROR_AGP="AGP support is not enabled in your kernel config (CONFIG_AGP)"
 
-		if ! linux_chkconfig_present "AGP"
-		then
-			einfo "AGP support is not enabled in your kernel config. This may be needed for DRM to"
-			einfo "work, so you might want to double-check that setting. (CONFIG_AGP)"
-			echo
-		fi
-	elif kernel_is 2 4
-	then
-		if ! linux_chkconfig_present "DRM"
-		then
-			die "Please enable DRM support in your kernel configuration. (CONFIG_DRM = y or m)."
-			echo
-		fi
+	elif kernel_is 2 4 ; then
+		CONFIG_CHECK="DRM"
+		ERROR_DRM="Please enable DRM support in your kernel configuration. (CONFIG_DRM = y or m)."
 	fi
 
 	# Set video cards to build for.
@@ -96,7 +84,7 @@ src_unpack() {
 	cp ${S}/tests/*.c ${SRC_BUILD}
 
 	cd ${S}
-	WANT_AUTOCONF="2.5" WANT_AUTOMAKE="1.7" autoreconf -v --install
+	eautoreconf -v --install
 }
 
 src_compile() {
@@ -139,6 +127,7 @@ src_install() {
 		DESTDIR="${D}" \
 		RUNNING_REL="${KV_FULL}" \
 		MODULE_LIST="${VIDCARDS} ${DRM_KMOD}" \
+		O="${KBUILD_OUTPUT}" \
 		install || die "Install failed."
 
 	dodoc README.drm
