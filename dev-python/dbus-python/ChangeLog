@@ -1,54 +1,10 @@
 # ChangeLog for dev-python/dbus-python
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.13 2007/02/27 07:16:04 cardoe Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.14 2007/03/14 15:28:16 cardoe Exp $
 
-*dbus-python-0.80.1-r1 (27 Feb 2007)
+*dbus-python-0.80.2 (14 Mar 2007)
 
-  27 Feb 2007; Doug Goldstein <cardoe@gentoo.org>
-  -dbus-python-0.80.1.ebuild, +dbus-python-0.80.1-r1.ebuild:
-  Fixing docdir as per bug #164920
-
-  29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
-  dbus-python-0.71.ebuild:
-  Stable on sparc wrt #162880
-
-*dbus-python-0.80.1 (25 Jan 2007)
-
-  25 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
-  +dbus-python-0.80.1.ebuild:
-  Completely re-written Python bindings by Simon McVittie
-  <simon.mcvittie@collabora.co.uk>. They've become the official bindings.
-
-  23 Jan 2007; Jeroen Roovers <jer@gentoo.org> dbus-python-0.71.ebuild:
-  Stable for HPPA (bug #162880).
-
-  22 Jan 2007; Olivier Crête <tester@gentoo.org> dbus-python-0.71.ebuild:
-  Stable on amd64 per bug #162880
-
-  21 Jan 2007; Andrej Kacian <ticho@gentoo.org> dbus-python-0.71.ebuild:
-  Stable on x86, bug #162880.
-
-  21 Jan 2007; Markus Rothe <corsair@gentoo.org> dbus-python-0.71.ebuild:
-  Stable on ppc64; bug #162880
-
-  21 Jan 2007; nixnut <nixnut@gentoo.org> dbus-python-0.71.ebuild:
-  Stable on ppc wrt bug 162880
-
-  05 Nov 2006; Doug Goldstein <cardoe@gentoo.org> dbus-python-0.71.ebuild:
-  Adding dbus-glib to depend list
-
-  30 Oct 2006; Steev Klimaszewski <steev@gentoo.org>
-  dbus-python-0.71.ebuild:
-  Fix the dependency from dbus-core to be dbus
-
-  18 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
-  dbus-python-0.71.ebuild:
-  Add ~x86-fbsd keyword.  This does require using dbus from the
-  portage-alt-overlay.
-
-*dbus-python-0.71 (19 Aug 2006)
-
-  19 Aug 2006; Steev Klimaszewski <steev@gentoo.org> +metadata.xml,
-  +dbus-python-0.71.ebuild:
-  Initial import. Python bindings for D-Bus
+  14 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
+  -dbus-python-0.80.1-r1.ebuild, +dbus-python-0.80.2.ebuild:
+  rev bump. Fixes memory leaks
 
