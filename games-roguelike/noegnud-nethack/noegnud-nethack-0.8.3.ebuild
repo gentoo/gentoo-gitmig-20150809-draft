@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.3.ebuild,v 1.1 2004/11/19 19:08:01 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.3.ebuild,v 1.2 2007/03/14 18:19:32 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 VAR_NAME=nethack
 VAR_SNAME=nh
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/noegnud/noegnud-${PV}_linux_src-minimal.tar.bz2
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
@@ -32,15 +32,17 @@ S="${WORKDIR}/noegnud-${PV}/variants"
 src_unpack() {
 	unpack noegnud-${PV}_linux_src-minimal.tar.bz2
 	ln -s "${DISTDIR}/${VAR_TAR}" noegnud-${PV}/variants/tarballs/${VAR_TAR}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {
-	make ${VAR_SNAME}${VAR_VER} PREFIX="${GAMES_PREFIX}" || die "make failed"
+	emake ${VAR_SNAME}${VAR_VER} PREFIX="${GAMES_PREFIX}" || die "emake failed"
 }
 
 src_install() {
-	make install_${VAR_SNAME}${VAR_VER} PREFIX="${D}/${GAMES_PREFIX}" \
-		|| die "make install failed"
+	emake install_${VAR_SNAME}${VAR_VER} PREFIX="${D}/${GAMES_PREFIX}" \
+		|| die "emake install failed"
 
 	cd "${D}/${GAMES_BINDIR}"
 	# we do this cause sometimes the installed package thinks it's a diff version :)
