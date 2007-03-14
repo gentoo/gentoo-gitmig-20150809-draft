@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-cs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-cs/ChangeLog,v 1.6 2006/07/19 19:44:00 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-cs/ChangeLog,v 1.7 2007/03/14 16:52:04 mr_bones_ Exp $
+
+  14 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-cs-1.6.9.ebuild:
+  unicode support with patch from Pedro Alvarez via bug #149169
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-cs-1.6.9.ebuild:
