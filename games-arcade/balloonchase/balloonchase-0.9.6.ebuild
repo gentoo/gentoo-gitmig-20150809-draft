@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/balloonchase/balloonchase-0.9.6.ebuild,v 1.8 2006/05/03 02:53:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/balloonchase/balloonchase-0.9.6.ebuild,v 1.9 2007/03/14 21:24:25 nyhm Exp $
 
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Fly a hot air balloon and try to blow the other player out of the screen"
 HOMEPAGE="http://koti.mbnet.fi/makegho/c/bchase/"
@@ -18,17 +18,19 @@ DEPEND="media-libs/libsdl"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-gentoo.patch"
-
+	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	sed -i "s:g++:$(tc-getCXX):" Makefile || die "sed failed"
 	sed -i \
 		-e "s:GENTOODIR:${GAMES_DATADIR}/${PN}:" src/main.c \
 		|| die 'sed failed'
 }
 
 src_install() {
-	dogamesbin balloonchase || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r images "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	dogamesbin ${PN} || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r images || die "doins failed"
+	newicon images/kp2b.bmp ${PN}.bmp
+	make_desktop_entry ${PN} "Balloon Chase" /usr/share/pixmaps/${PN}.bmp
 	dodoc README
 	prepgamesdirs
 }
