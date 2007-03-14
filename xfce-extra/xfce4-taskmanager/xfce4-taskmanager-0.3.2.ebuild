@@ -1,10 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/xfce4-taskmanager-0.3.2.ebuild,v 1.9 2007/03/12 18:46:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/xfce4-taskmanager-0.3.2.ebuild,v 1.10 2007/03/14 15:02:32 drac Exp $
 
 inherit xfce44
 
 xfce44
+
+RESTRICT="test"
 
 DESCRIPTION="Xfce4 task manager"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
