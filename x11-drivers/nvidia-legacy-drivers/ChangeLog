@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-legacy-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.15 2007/02/19 22:45:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.16 2007/03/14 00:32:24 wolf31o2 Exp $
+
+  14 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-legacy-drivers-1.0.7184.ebuild:
+  Added a blocker on newer versions of nvidia-settings, which don't work with
+  these older driver versions.
 
   19 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   nvidia-legacy-drivers-1.0.7184.ebuild:

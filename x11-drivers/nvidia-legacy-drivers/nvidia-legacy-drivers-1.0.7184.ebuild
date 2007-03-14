@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.10 2007/03/12 22:53:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.11 2007/03/14 00:32:24 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -27,6 +27,7 @@ RDEPEND="virtual/modutils
 	media-libs/mesa
 	app-admin/eselect-opengl
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
+	!>=media-video/nvidia-settings-1.0.20061102
 	!app-emulation/emul-linux-x86-nvidia
 	!x11-drivers/nvidia-drivers"
 
