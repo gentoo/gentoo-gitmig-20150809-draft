@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20070228.ebuild,v 1.1 2007/03/01 01:22:59 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20070314.ebuild,v 1.1 2007/03/14 23:34:03 troll Exp $
 
 inherit confutils eutils qt4
 
@@ -47,7 +47,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/psi-jingle-gcc4.patch
+	use jingle && epatch ${FILESDIR}/psi-jingle-gcc4.patch
 
 	if use plugins; then
 		epatch ${FILESDIR}/psi-ptr_64bit_fix.patch
