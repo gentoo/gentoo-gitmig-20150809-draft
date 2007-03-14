@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.50 2007/01/04 07:31:03 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.51 2007/03/14 17:08:12 battousai Exp $
+
+*x11-drm-20070314 (14 Mar 2007)
+
+  14 Mar 2007; Bryan Stine <battousai@gentoo.org> +x11-drm-20070314.ebuild:
+  New snapshot of upstream git. Mesa upstream drm has removed support for 2.4
+  kernels, so this ebuild will die if the user attempts to build against such
+  sources. Most likely, this means we'll have to keep 20060608 around. The
+  nouveau module is now installed alongside nv, so users can load the one they
+  want (probably nouveau). The updated snapshot should fix bug #165553.
 
   04 Jan 2007; Bryan Stine <battousai@gentoo.org> x11-drm-20060608.ebuild,
   x11-drm-20060608-r1.ebuild:
