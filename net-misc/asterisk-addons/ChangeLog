@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-addons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.10 2007/01/17 18:55:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.11 2007/03/14 15:25:31 humpback Exp $
+
+*asterisk-addons-1.2.5-r1 (14 Mar 2007)
+
+  14 Mar 2007; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/asterisk-addons-1.2.4-uclibc.diff,
+  +asterisk-addons-1.2.5-r1.ebuild:
+  Added another patch needed to build with uclibc. Credit goes to jaervosz in
+  bug #170235.
 
 *asterisk-addons-1.2.5 (17 Jan 2007)
 
