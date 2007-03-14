@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.32 2007/02/21 19:28:00 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.33 2007/03/14 03:20:48 tgall Exp $
+
+  13 Mar 2007; Tom Gall <tgall@gentoo.org> mysql-ruby-2.7.3.ebuild:
+  added ~ppc64
 
 *mysql-ruby-2.7.3 (21 Feb 2007)
 
@@ -10,13 +13,13 @@
   04 Feb 2007; Guy Martin <gmsoft@gentoo.org> mysql-ruby-2.7.2.ebuild:
   Fixed compilation on hppa.
 
-  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> mysql-ruby-2.7.ebuild,
+  05 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> mysql-ruby-2.7.ebuild,
   mysql-ruby-2.7.2.ebuild:
   Convert to use elog.
 
 *mysql-ruby-2.7.2 (07 Dec 2006)
 
-  07 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  07 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   +mysql-ruby-2.7.2.ebuild:
   Version bump. Ebuild provided by Jimmy.Jazz@gmx.net, #157366
 
@@ -72,7 +75,7 @@
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> mysql-ruby-2.5.ebuild:
   Stable on ppc.
 
-  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> mysql-ruby-2.5.ebuild:
+  14 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> mysql-ruby-2.5.ebuild:
   Stable on alpha.
 
   11 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> mysql-ruby-2.5.ebuild:
