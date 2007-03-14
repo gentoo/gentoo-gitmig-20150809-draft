@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.43 2007/01/23 09:58:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.44 2007/03/14 20:04:27 phreak Exp $
+
+*vzctl-3.0.16 (14 Mar 2007)
+
+  14 Mar 2007; Christian Heim <phreak@gentoo.org>
+  +files/vzctl-3.0.16-prevent-stripping.patch, +vzctl-3.0.16.ebuild:
+  Version bump (including a patch preventing vzctl from prestripping).
 
   23 Jan 2007; Christian Heim <phreak@gentoo.org> files/digest-vzctl-3.0.14,
   Manifest:
