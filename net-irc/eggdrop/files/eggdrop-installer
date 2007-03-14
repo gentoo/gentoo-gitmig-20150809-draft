@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.9 2005/04/03 20:58:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.10 2007/03/14 17:52:24 drac Exp $
 
 source /etc/init.d/functions.sh || {
 	echo "${0}: Could not source /etc/init.d/functions.sh!"
@@ -70,8 +70,8 @@ install_eggdrop() {
 	einfo "to create the user file and then remove the -m command line option"
 	einfo "to start your eggdrop bot."
 	einfo
-	einfo "If you need any help pleaese refer to the man page, or"
-	einfo "eggdrop website at http://www.egghelper.org/"
+	einfo "If you need any help please refer to the man page, or"
+	einfo "eggdrop website at http://www.egghelp.org/"
 }
 
 if [ -z "${1}" ]
