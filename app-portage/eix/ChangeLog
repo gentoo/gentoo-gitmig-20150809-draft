@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.153 2007/03/12 18:21:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.154 2007/03/14 11:00:03 blubb Exp $
+
+  14 Mar 2007; Simon Stelling <blubb@gentoo.org> eix-0.8.8.ebuild:
+  stable on amd64; bug 170310
 
   12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> eix-0.8.8.ebuild:
   Stable on Alpha, bug 170310.
