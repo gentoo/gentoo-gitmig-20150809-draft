@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.35 2007/03/10 14:12:08 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.36 2007/03/14 00:31:55 mr_bones_ Exp $
+
+  14 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> +pyxdg-0.8.ebuild:
+  restore version still used in the tree
 
   10 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org> -pyxdg-0.8.ebuild,
   -pyxdg-0.11.ebuild, -pyxdg-0.12.ebuild, -pyxdg-0.13.ebuild,
