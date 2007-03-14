@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.207 2007/03/13 11:51:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.208 2007/03/14 20:01:02 calchan Exp $
+
+  14 Mar 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Masked sci-electronics/modelsim pending removal on 14 Apr 2007.
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove net-p2p/mnet from p.mask as it's has been removed from the tree, bug
