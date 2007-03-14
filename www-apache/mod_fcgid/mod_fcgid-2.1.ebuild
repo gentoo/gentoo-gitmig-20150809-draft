@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1.ebuild,v 1.2 2007/03/13 16:19:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1.ebuild,v 1.3 2007/03/14 19:17:40 phreak Exp $
 
-inherit apache-module
+inherit apache-module eutils
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
@@ -12,9 +12,6 @@ SRC_URI="mirror://sourceforge/mod-fcgid/${PN}.${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-
-DEPEND="=dev-libs/apr-1*"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}.${PV}"
 
@@ -32,3 +29,10 @@ APXS2_ARGS="-I ${S} -c ${PN}.c fcgid_bridge.c \
 DOCFILES="AUTHOR ChangeLog"
 
 need_apache2
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-apr_shm_remove.patch
+}
