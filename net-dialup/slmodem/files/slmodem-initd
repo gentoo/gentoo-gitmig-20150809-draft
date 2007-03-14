@@ -17,7 +17,7 @@ checkconfig() {
 	fi
 }
 
-loadsalsa {
+loadsalsa() {
 	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
@@ -25,7 +25,7 @@ loadsalsa {
 	return ${?}
 }
 
-loadsmodule {
+loadsmodule() {
 	modprobe ${MODULE}
 
 	if [ "$?" -gt 0 ]; then
