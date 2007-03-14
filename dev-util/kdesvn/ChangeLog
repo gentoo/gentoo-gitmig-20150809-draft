@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.18 2007/02/22 02:15:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.19 2007/03/14 01:07:51 george Exp $
+
+  14 Mar 2007; George Shapovalov <george@gentoo.org> kdesvn-0.11.0.ebuild:
+  which -> type -P fix
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
