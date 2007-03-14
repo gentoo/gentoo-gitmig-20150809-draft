@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.9 2007/03/14 21:40:21 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.5.ebuild,v 1.1 2007/03/14 21:40:21 troll Exp $
 
 inherit eutils qt3
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.trolltech.com/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples ide threads"
 
 DEPEND="$(qt_min_version 3.2)"
@@ -22,16 +22,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	! use ide && epatch ${FILESDIR}/${P}-without-examples-using-ide.diff
+	! use ide && epatch ${FILESDIR}/${PN}-1.1.1-without-examples-using-ide.diff
 
 	if use examples; then
-		epatch ${FILESDIR}/${P}-with-examples.diff
-		epatch ${FILESDIR}/${P}-example-enums.pro.diff
+		epatch ${FILESDIR}/${PN}-1.1.1-with-examples.diff
 	else
-		epatch ${FILESDIR}/${P}-without-examples.diff
+		epatch ${FILESDIR}/${PN}-1.1.1-without-examples.diff
 	fi
 
-	epatch ${FILESDIR}/${P}-sandbox-fix.diff
+	epatch ${FILESDIR}/${PN}-1.1.1-sandbox-fix.diff
 }
 
 src_compile() {
@@ -68,9 +67,9 @@ src_install() {
 	doins src/qsa/qsa.prf
 
 	#libs
-	dolib lib/libqsa.so.1.1.1
+	dolib lib/libqsa.so.${PV}
 	cd ${D}/${QTDIR}/lib
-	ln -s libqsa.so.1.1.1 libqsa.so.1.1
+	ln -s libqsa.so.${PV} libqsa.so.1.1
 	ln -s libqsa.so.1.1 libqsa.so.1
 	ln -s libqsa.so.1 libqsa.so
 	cd -
@@ -92,7 +91,7 @@ src_install() {
 		doins -r examples
 	fi
 
-	dodoc README changes-1.1.1
+	dodoc README changes-${PV}
 }
 
 pkg_postinst(){
