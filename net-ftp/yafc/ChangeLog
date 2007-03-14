@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.25 2007/03/14 17:46:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.26 2007/03/14 17:56:44 armin76 Exp $
+
+  14 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/yafc-1.1.1-gcc4.patch:
+  refix the commit, thanks to robbat2
 
   14 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   files/yafc-1.1.1-gcc4.patch:
