@@ -1,6 +1,15 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.11 2007/03/13 00:36:20 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.12 2007/03/14 07:26:38 leonardop Exp $
+
+*xmlstarlet-1.0.1-r1 (14 Mar 2007)
+
+  14 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +xmlstarlet-1.0.1-r1.ebuild:
+  Provide xmlstarlet as a symlink to be consistent with man page (bug
+  #103306). Don't install NEWS since it's an empty document. Define
+  LIBXML_LIBS and LIBXSLT_LIBS through pkg-config instead of doing it
+  manually, and fixed dependencies accordingly.
 
   13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml,
   -xmlstarlet-1.0.0.ebuild:
