@@ -1,6 +1,11 @@
 # ChangeLog for net-print/fax4cups
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.14 2007/02/22 03:04:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.15 2007/03/14 16:31:15 genstef Exp $
+
+*fax4cups-1.28 (14 Mar 2007)
+
+  14 Mar 2007; <genstef@gentoo.org> +fax4cups-1.28.ebuild:
+  version bump thanks to Vieri <rentorbuy@yahoo.com> in bug 164979
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
