@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.10 2007/03/05 04:12:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.11 2007/03/14 05:50:16 nerdboy Exp $
 
 inherit eutils libtool autotools
 
@@ -15,6 +15,7 @@ IUSE="doc static"
 DEPEND=">=dev-util/subversion-1.3.2-r1
 	>=net-misc/neon-0.26
 	>=x11-libs/wxGTK-2.6.2
+	<=dev-libs/apr-util-0.9.12
 	doc? ( dev-libs/libxslt
 	    app-text/docbook-sgml-utils
 	    app-doc/doxygen
@@ -70,6 +71,7 @@ src_compile() {
 	econf	--with-svn-lib=/usr/$(get_libdir) \
 		--with-svn-include=/usr/include \
 		--with-neon-config=/usr/bin/neon-config \
+		--with-apr-config=/usr/bin/apr-config \
 		${myconf} || die "econf failed"
 	emake  || die "emake failed"
 }
