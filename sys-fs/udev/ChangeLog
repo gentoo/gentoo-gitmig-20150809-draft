@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.284 2007/03/14 15:33:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.285 2007/03/14 15:51:44 zzam Exp $
+
+  14 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  -files/udev.rules-104-r7, -files/udev-start-104-r5.sh,
+  -files/udev.rules-105, -files/udev-start-105.sh, -files/udev.rules-106,
+  -files/udev.rules-106-r1, -files/udev.rules-106-r2, -files/net.sh,
+  -udev-104-r9.ebuild, -udev-104-r10.ebuild, -udev-105.ebuild,
+  -udev-106.ebuild, -udev-106-r1.ebuild, -udev-106-r2.ebuild,
+  -udev-106-r3.ebuild:
+  Cleanup of old ebuilds.
 
 *udev-106-r4 (14 Mar 2007)
 
