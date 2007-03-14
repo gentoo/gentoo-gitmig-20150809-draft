@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.165 2007/03/14 01:27:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.166 2007/03/14 01:30:02 wolf31o2 Exp $
+
+  14 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.4.5-r1.ebuild, -genkernel-3.4.7_pre3.ebuild,
+  -genkernel-3.4.7_pre4.ebuild:
+  Removing older unused versions.
 
 *genkernel-3.4.7_pre5 (14 Mar 2007)
 
