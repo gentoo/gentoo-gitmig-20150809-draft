@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.67 2007/03/01 21:29:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.68 2007/03/14 19:53:00 grobian Exp $
+
+*tcsh-6.14-r31 (14 Mar 2007)
+
+  14 Mar 2007; Fabian Groffen <grobian@gentoo.org> -tcsh-6.14-r30.ebuild,
+  +tcsh-6.14-r31.ebuild:
+  Do the prompt setting in csh.cshrc such that non-login shells, also get a
+  nice prompt
 
 *tcsh-6.14-r30 (01 Mar 2007)
 
