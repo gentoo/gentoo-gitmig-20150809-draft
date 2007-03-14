@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2.ebuild,v 1.2 2007/01/27 18:58:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2-r1.ebuild,v 1.1 2007/03/14 23:39:51 rbu Exp $
+
+inherit eutils
 
 DESCRIPTION="Small library for display text and graphics on a Logitech G15 keyboard"
 HOMEPAGE="http://g15tools.sourceforge.net/"
@@ -16,6 +18,13 @@ DEPEND="dev-libs/libg15
 	truetype? ( media-libs/freetype )"
 
 RDEPEND=${DEPEND}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-pixel-c.patch"
+}
 
 src_compile() {
 	econf \
