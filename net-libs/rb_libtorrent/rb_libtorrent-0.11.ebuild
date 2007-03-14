@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.11.ebuild,v 1.3 2007/02/14 15:31:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.11.ebuild,v 1.4 2007/03/14 17:07:24 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -32,7 +32,13 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf $(use_enable debug) || die "econf failed"
+	BOOST_LIBS="--with-boost-date-time=boost_date_time-mt \
+			--with-boost-filesystem=boost_filesystem-mt \
+			--with-boost-thread=boost_thread-mt \
+			--with-boost-regex=boost_regex-mt \
+			--with-boost-program_options=boost_program_options-mt"
+
+	econf $(use_enable debug) ${BOOST_LIBS} || die "econf failed"
 	emake || die "emake failed"
 }
 
