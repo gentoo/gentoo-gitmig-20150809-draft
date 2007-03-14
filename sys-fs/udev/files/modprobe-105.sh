@@ -5,11 +5,11 @@
 
 if [ -e /dev/.udev_populate ]; then
 	# Enable verbose while called from udev-addon-start
-	source /dev/.udev_populate
+	. /dev/.udev_populate
 
 	if [ -c "${CONSOLE}" ]; then
 		# redirect stdin/out/err
-		exec <${CONSOLE} &>${CONSOLE}
+		exec <${CONSOLE} >${CONSOLE} 2>/${CONSOLE}
 	fi
 fi
 
@@ -37,6 +37,6 @@ fi
 if ! grep -q "^${MODNAME}[[:space:]]" /proc/modules; then
 	# now do real loading
 	einfo "  udev loading module ${MODNAME}"
-	exec "${MODPROBE}" -q "${@}" &>/dev/null
+	exec "${MODPROBE}" -q "${@}"
 fi
 
