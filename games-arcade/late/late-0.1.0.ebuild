@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.10 2005/08/09 21:15:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.11 2007/03/14 23:49:07 nyhm Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.1.8
+DEPEND="media-libs/libsdl
 	media-libs/sdl-image"
 
 src_unpack() {
@@ -25,7 +25,9 @@ src_unpack() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon graphics/latebg2.jpg ${PN}.jpg
+	make_desktop_entry late Late /usr/share/pixmaps/${PN}.jpg
 	dodoc AUTHORS
 	prepgamesdirs
 }
