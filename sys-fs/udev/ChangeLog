@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.283 2007/03/14 13:47:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.284 2007/03/14 15:33:02 zzam Exp $
+
+*udev-106-r4 (14 Mar 2007)
+
+  14 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> +udev-106-r4.ebuild:
+  Now really use new rules file, that should already be in udev-106-r3.
 
   14 Mar 2007; Roy Marples <uberlord@gentoo.org> files/modprobe-105.sh:
   Remove bashisms from modprobe.sh
