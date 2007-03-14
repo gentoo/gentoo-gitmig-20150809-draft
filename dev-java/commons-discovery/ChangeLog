@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-discovery
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.18 2007/01/21 20:14:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.19 2007/03/14 07:25:07 opfer Exp $
+
+  14 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  commons-discovery-0.4.ebuild:
+  stable x86, bug 170791
 
   21 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-discovery-0.4.ebuild:
