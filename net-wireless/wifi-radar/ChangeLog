@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wifi-radar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.11 2007/03/13 07:59:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.12 2007/03/14 15:31:30 s4t4n Exp $
+
+  14 Mar 2007; Michele Noberasco <s4t4n@gentoo.org> wifi-radar-1.9.8.ebuild:
+  Propose some more changes to /etc/sudoers to fix bug #158593.
 
 *wifi-radar-1.9.8 (13 Mar 2007)
 

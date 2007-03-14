@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8.ebuild,v 1.1 2007/03/13 07:59:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8.ebuild,v 1.2 2007/03/14 15:31:30 s4t4n Exp $
 
 inherit eutils
 
@@ -39,7 +39,11 @@ pkg_postinst()
 	echo
 	einfo "To use wifi-radar with a normal user (with sudo) add:"
 	einfo "%users   ALL = /usr/sbin/wifi-radar"
-	einfo ""
-	einfo "in your /etc/sudoers then launch wifi-radar.sh"
+	einfo "in your /etc/sudoers. Also, find the line saying:"
+	einfo "Defaults      env_reset"
+	einfo "and modify it as follows:"
+	einfo "Defaults      env_keep=DISPLAY"
+	echo
+	einfo "Then launch wifi-radar.sh"
 	echo
 }
