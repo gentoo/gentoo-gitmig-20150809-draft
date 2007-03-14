@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.7 2006/06/29 19:22:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.8 2007/03/14 23:25:50 nyhm Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2.7"
+DEPEND="media-libs/libsdl"
 
 S=${WORKDIR}/${MY_P}
 
@@ -35,7 +35,7 @@ src_unpack() {
 		-e "s:^LDFLAGS.*$:LDFLAGS+=$(sdl-config --libs):" \
 		Makefile || die "sed failed"
 
-	epatch "${FILESDIR}/${PV}-warnings.patch"
+	epatch "${FILESDIR}"/${PV}-warnings.patch
 }
 
 src_compile() {
@@ -43,8 +43,10 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin atakks || die "dogamesbin failed"
-	insinto "${GAMES_DATADIR}/${PN}"
+	dogamesbin ${PN} || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins *bmp || die "doins failed"
+	newicon icon.bmp ${PN}.bmp
+	make_desktop_entry ${PN} Atakks /usr/share/pixmaps/${PN}.bmp
 	prepgamesdirs
 }
