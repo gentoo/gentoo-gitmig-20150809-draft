@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.4 2007/01/09 21:13:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.5 2007/03/14 16:40:46 chutzpah Exp $
 
 inherit eutils multilib flag-o-matic libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.plt-scheme.org/bundles/${PV}/plt/plt-${PV}-src-unix.tgz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="3m backtrace cairo jpeg opengl perl png sgc"
+IUSE="3m backtrace cairo jpeg opengl perl png"
 
 RDEPEND="x11-libs/libICE
 	x11-libs/libSM
@@ -57,7 +57,6 @@ src_compile() {
 		$(use_enable opengl gl) \
 		$(use_enable perl) \
 		$(use_enable png libpng) \
-		$(use_enable sgc) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
