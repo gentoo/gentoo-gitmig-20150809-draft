@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.19 2007/03/14 01:07:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.20 2007/03/14 17:35:19 george Exp $
+
+*kdesvn-0.11.1 (14 Mar 2007)
+
+  14 Mar 2007; George Shapovalov <george@gentoo.org> +kdesvn-0.11.1.ebuild:
+  version bump
 
   14 Mar 2007; George Shapovalov <george@gentoo.org> kdesvn-0.11.0.ebuild:
   which -> type -P fix
