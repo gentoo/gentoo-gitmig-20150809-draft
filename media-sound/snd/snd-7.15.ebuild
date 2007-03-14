@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.9 2007/01/10 19:49:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.10 2007/03/14 20:08:04 mr_bones_ Exp $
 
 IUSE="alsa esd fam fftw gsl gtk guile jack ladspa motif nls opengl ruby"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ccrma-ftp.stanford.edu/pub/Lisp/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 RDEPEND="media-libs/audiofile
 	motif? ( x11-libs/openmotif )
