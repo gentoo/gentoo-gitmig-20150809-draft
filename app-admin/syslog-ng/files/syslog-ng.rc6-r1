@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6-r1,v 1.2 2007/01/15 15:39:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6-r1,v 1.3 2007/03/14 09:56:00 uberlord Exp $
 
-opts="depend checkconfig start stop reload"
+opts="checkconfig reload"
 
 depend() {
 	# Make networking dependency conditional on configuration
@@ -26,13 +26,13 @@ checkconfig() {
 	
 	# the start and reload functions have their own eends so 
 	# avoid calling this twice when there are no problems
-	[[ $? -eq 0 ]] || eend $? "Configuration error. Please fix your configfile (/etc/syslog-ng/syslog-ng.conf)"
+	[ $? -eq 0 ] || eend $? "Configuration error. Please fix your configfile (/etc/syslog-ng/syslog-ng.conf)"
 }
 
 start() {
 	checkconfig || return 1
 	ebegin "Starting syslog-ng"
-	[[ -n ${SYSLOG_NG_OPTS} ]] && SYSLOG_NG_OPTS="-- ${SYSLOG_NG_OPTS}"
+	[ -n "${SYSLOG_NG_OPTS}" ] && SYSLOG_NG_OPTS="-- ${SYSLOG_NG_OPTS}"
 	start-stop-daemon --start --quiet --exec /usr/sbin/syslog-ng ${SYSLOG_NG_OPTS}
 	eend $? "Failed to start syslog-ng"
 }
@@ -51,6 +51,7 @@ reload() {
 	fi
 	checkconfig || return 1
 	ebegin "Reloading configuration and re-opening log files"
-	kill -HUP `cat /var/run/syslog-ng.pid` &>/dev/null
+	start-stop-daemon --stop --oknodo --signal HUP \
+	    --pidfile /var/run/syslog-ng.pid
 	eend $?
 }
