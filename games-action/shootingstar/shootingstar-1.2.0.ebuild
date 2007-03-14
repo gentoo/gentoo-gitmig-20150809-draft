@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.4 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.5 2007/03/14 20:53:28 nyhm Exp $
 
 inherit eutils games
 
@@ -15,18 +15,20 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	>=media-libs/libsdl-1.2
+	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/1.2.0-gcc34.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gcc34.patch
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon data/textures/body1.png ${PN}.png
+	make_desktop_entry ${PN} "Shooting Star"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
