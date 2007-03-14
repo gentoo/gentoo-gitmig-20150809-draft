@@ -1,19 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.15 2007/03/11 10:02:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.16 2007/03/14 15:12:08 drac Exp $
 
 inherit versionator
 
-DESCRIPTION="Xfce 4 base ebuild"
+DESCRIPTION="Xfce4 base ebuild"
 HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2 BSD LGPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
-IUSE="svg"
+IUSE=""
 
 MY_PV=$(get_version_component_range 1-3)
 
-DEPEND="svg? ( gnome-base/librsvg )"
+DEPEND=""
 RDEPEND="${DEPEND}
 	~xfce-base/libxfce4util-${PV}
 	~xfce-base/libxfcegui4-${MY_PV}
@@ -39,11 +39,4 @@ src_install() {
 	dodir /etc/X11/Sessions
 	echo startxfce4 > ${D}/etc/X11/Sessions/Xfce-4
 	fperms 755 /etc/X11/Sessions/Xfce-4
-}
-
-pkg_postinst() {
-	einfo
-	einfo "For extra functionality please emerge xfce-base/xfce4-extras."
-	einfo "To start Xfce the default script is startxfce4."
-	einfo
 }
