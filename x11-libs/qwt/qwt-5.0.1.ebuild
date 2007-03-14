@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.1.ebuild,v 1.1 2007/03/12 12:31:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.1.ebuild,v 1.2 2007/03/14 12:03:06 caleb Exp $
 
 inherit multilib eutils
 
@@ -21,14 +21,25 @@ src_unpack () {
 	unpack ${A}
 
 	cd ${S}
-	find . -type f -name "*.pro" | while read file; do
-		sed -e 's/.*no-exceptions.*//g' -i ${file}
-		echo >> ${file} "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"
-		echo >> ${file} "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}"
-	done
-	find examples -type f -name "*.pro" | while read file; do
-		echo >> ${file} "INCLUDEPATH += /usr/include/qwt"
-	done
+
+	qwtconfig=${S}/"qwtconfig.pri"
+	echo > ${qwtconfig} ""
+	echo >> ${qwtconfig} "target.path = /usr/$(get_libdir)"
+	echo >> ${qwtconfig} "headers.path = /usr/include/qwt5"
+	echo >> ${qwtconfig} "doc.path = /usr/share/doc/${PF}"
+	echo >> ${qwtconfig}	
+	echo >> ${qwtconfig} "CONFIG += qt warn_on thread"
+	echo >> ${qwtconfig} "CONFIG += release"
+	echo >> ${qwtconfig} "CONFIG += QwtDll QwtPlot QwtWidgets QwtDesigner"
+
+	# Can also do QwtExamples for example building
+
+	echo >> ${qwtconfig} "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"
+	echo >> ${qwtconfig} "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}"
+
+	# They got the version wrong
+	sed -e "s/5.0.0/5.0.1/g" -i "${S}/src/src.pro"
+
 }
 
 src_compile () {
@@ -41,15 +52,5 @@ src_compile () {
 }
 
 src_install () {
-	ls -l lib
-	dolib lib/libqwt.so.${QWTVER}
-	dosym libqwt.so.${QWTVER} /usr/$(get_libdir)/libqwt.so
-	dosym libqwt.so.${QWTVER} /usr/$(get_libdir)/libqwt.so.${QWTVER/.*/}
-	use doc && (dodir /usr/share/doc/${PF}
-				cp -pPR examples ${D}/usr/share/doc/${PF}/
-				dohtml doc/html/*)
-	mkdir -p ${D}/usr/include/qwt5/
-	install include/* ${D}/usr/include/qwt5/
-	insinto /usr/$(get_libdir)/qt4/plugins/designer
-	doins designer/plugins/designer/libqwt_designer_plugin.so
+	make INSTALL_ROOT=${D} install
 }
