@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xml2doc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.16 2007/03/13 00:29:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.17 2007/03/14 20:17:41 leonardop Exp $
+
+*xml2doc-20030510-r1 (14 Mar 2007)
+
+  14 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/xml2doc-pointer_fix.patch, +xml2doc-20030510-r1.ebuild:
+  Avoid pre-stripping binaries (bug #152266). Added patch to fix a
+  pointer-related bug detected thanks to another QA notice.
 
   13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
