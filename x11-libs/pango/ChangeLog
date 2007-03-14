@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.164 2007/02/21 12:49:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.165 2007/03/14 09:29:21 opfer Exp $
+
+  14 Mar 2007; Christian Faulhammer <opfer@gentoo.org> pango-1.14.10.ebuild:
+  stable x86, bug 163678
 
   21 Feb 2007; Simon Stelling <blubb@gentoo.org> pango-1.14.9.ebuild,
   pango-1.14.10.ebuild:
