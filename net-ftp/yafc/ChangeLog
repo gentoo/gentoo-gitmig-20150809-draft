@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.24 2007/03/14 00:36:51 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.25 2007/03/14 17:46:58 armin76 Exp $
+
+  14 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  files/yafc-1.1.1-gcc4.patch:
+  Fix the patch again, thanks to genone for the command of cvs
 
   14 Mar 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   files/yafc-1.1.1-gcc4.patch:

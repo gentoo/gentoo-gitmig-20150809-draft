@@ -1,5 +1,5 @@
---- lib/gssapi.c.orig	2007-03-14 00:28:48.000000000 +0000
-+++ lib/gssapi.c	2007-03-14 00:30:13.000000000 +0000
+--- lib/gssapi.c.orig	2007-03-14 18:13:14.000000000 +0100
++++ lib/gssapi.c	2007-03-14 18:23:20.000000000 +0100
 @@ -72,11 +72,6 @@
  static gss_OID_desc gss_c_nt_hostbased_service_oid_desc =
  {10, (void *)"\x2a\x86\x48\x86\xf7\x12" "\x01\x02\x01\x04"};
@@ -12,6 +12,7 @@
  /*RCSID("$Id: gssapi.c,v 1.5 2002/12/05 22:12:36 mhe Exp $");*/
  
  struct gss_data {
+
 diff -ur lib/krb4.c /tmp/yafc-1.1.1/lib/krb4.c
 --- lib/krb4.c	2002-12-05 22:12:37.000000000 +0000
 +++ lib/krb4.c	2006-12-16 13:23:46.000000000 +0000
