@@ -1,6 +1,14 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.53 2007/03/12 23:19:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.54 2007/03/14 02:16:28 leonardop Exp $
+
+*sablotron-1.0.3 (14 Mar 2007)
+
+  14 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +sablotron-1.0.3.ebuild:
+  Version bump (bug #158131). Updated HOMEPAGE. Replaced einstall with "make
+  install". Fixed the 'doc' flag implementation so no files are installed
+  under /no when USE=-doc.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
