@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.1 2007/03/13 18:26:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.2 2007/03/14 13:55:13 uberlord Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -10,7 +10,7 @@ opts="save restore"
 
 depend() {
 	need localmount
-	after bootmmisc modules isapnp coldplug hotplug
+	after bootmisc modules isapnp coldplug hotplug
 }
 
 load_modules() {

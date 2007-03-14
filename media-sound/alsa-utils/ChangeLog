@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.197 2007/03/13 18:26:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.198 2007/03/14 13:55:13 uberlord Exp $
+
+  14 Mar 2007; Roy Marples <uberlord@gentoo.org> files/alsasound.initd:
+  Typo, #170586 thanks to Patrice Beaud.
 
 *alsa-utils-1.0.14_rc2-r2 (13 Mar 2007)
 
