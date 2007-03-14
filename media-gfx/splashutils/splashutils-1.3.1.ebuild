@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3.1.ebuild,v 1.2 2007/03/13 18:05:08 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3.1.ebuild,v 1.3 2007/03/14 23:02:25 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -69,6 +69,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-boot_msg.patch
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-boot_message-fix.patch
 
 	# Make sure the static version of splash_util is linked against the nptl
 	# libraries and not the linuxthreads ones.
