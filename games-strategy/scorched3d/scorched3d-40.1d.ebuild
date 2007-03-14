@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.1d.ebuild,v 1.2 2006/11/23 20:20:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.1d.ebuild,v 1.3 2007/03/14 20:25:01 nyhm Exp $
 
 inherit eutils wxwidgets games
 
@@ -51,5 +51,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon data/windows/tank.bmp ${PN}.bmp
+	make_desktop_entry ${PN} "Scorched 3D" /usr/share/pixmaps/${PN}.bmp
 	prepgamesdirs
 }
