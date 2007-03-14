@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.0.2.ebuild,v 1.2 2007/03/12 17:23:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.7.6.ebuild,v 1.3 2007/03/14 03:55:36 eradicator Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils autotools flag-o-matic
+inherit eutils autotools
 
-IUSE="X openexr"
+IUSE="fltk openexr X"
 
 MY_PN="Pixie"
 S="${WORKDIR}/${MY_PN}"
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-src-${PV}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="-amd64 ~ppc sparc x86"
 
 RDEPEND="media-libs/jpeg
 	 sys-libs/zlib
@@ -27,14 +27,16 @@ RDEPEND="media-libs/jpeg
 	 openexr? ( media-libs/openexr )
 	 X? ( x11-libs/libXext )"
 
-src_compile() {
-	strip-flags
-	replace-flags -O? -O2
+src_unpack() {
+	unpack ${A}
 
-	econf || die "econf failed"
-	emake -j1 || die "Make failed"
+	cd "${S}"
+
+	# Don't install a lib with a name like 'libcommon'.	 Renaming it to libpixiecommon
+	epatch ${FILESDIR}/${PN}-1.7.6-libcommon.patch
+
+	eautoreconf
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die
