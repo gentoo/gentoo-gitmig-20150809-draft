@@ -1,10 +1,12 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.31 2007/03/14 17:52:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.32 2007/03/14 23:42:28 eradicator Exp $
 
-  14 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  14 Mar 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/pixie-1.7.6-shader.patch, pixie-1.7.6.ebuild,
   pixie-2.0.2-r1.ebuild:
-  stable x86, bug 160020
+  Pushed 2.0.2-r1 into ~arch after testing. Added -j1 and shader.patch to help
+  compilation on some systems for 1.7.6.
 
 *pixie-2.0.2-r1 (14 Mar 2007)
 

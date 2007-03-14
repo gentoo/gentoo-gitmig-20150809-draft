@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.7.6.ebuild,v 1.3 2007/03/14 03:55:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.7.6.ebuild,v 1.4 2007/03/14 23:42:28 eradicator Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -36,6 +36,14 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.7.6-libcommon.patch
 
 	eautoreconf
+}
+
+src_compile() {
+	strip-flags
+	replace-flags -O? -O2
+
+	econf || die "econf failed"
+	emake -j1 || die "Make failed"
 }
 
 src_install() {
