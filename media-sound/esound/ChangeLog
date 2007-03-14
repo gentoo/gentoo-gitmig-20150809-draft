@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.91 2007/01/22 09:18:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.92 2007/03/14 17:22:43 dang Exp $
+
+*esound-0.2.37 (14 Mar 2007)
+
+  14 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +esound-0.2.37.ebuild:
+  Bump to 0.2.37
+  	* Fix null derefs and leaks reported by Covertiy (kjartan)
+  	* Build fixes (David Schleef, Thomas Zajic, Behdad Esfahbod) 
+  	* Disable autospawning (David Schleef)
+  	* Close filedescriptors and sockets (David Schleef)
+  	* Don't terminate until the last sample is done (David Schleef)
+  	* Add checks for clients disconnecting (Peter Åstrand)
+  	* Updated man pages (Christopher Hanna)
+  	* Use pkg-config to check for audiofile (Frederic Peters)
 
   22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> -esound-0.2.34.ebuild:
   Remove old version.
