@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4_p3.ebuild,v 1.4 2007/02/17 00:24:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4_p3.ebuild,v 1.5 2007/03/14 19:33:20 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -194,7 +194,7 @@ pkg_postinst() {
 	if use setup-plugin; then
 		echo
 		eerror "It is very important to emerge media-plugins/vdr-setup now"
-		eerror "and to have it activated in /etc/conf.d/vdr PLUGINS=\"\""
+		eerror "and to have it activated in /etc/conf.d/vdr.plugins"
 	fi
 
 	local keysfound=0
