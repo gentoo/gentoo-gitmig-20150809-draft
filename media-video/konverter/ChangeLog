@@ -1,6 +1,15 @@
 # ChangeLog for media-video/konverter
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.9 2007/02/09 08:02:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.10 2007/03/14 23:42:43 troll Exp $
+
+*konverter-0.93 (14 Mar 2007)
+
+  14 Mar 2007; Przemysław Maciąg <troll@gentoo.org>
+  +files/konverter-0.93-pro_files.patch, +files/konverter-desktop.patch,
+  +konverter-0.93.ebuild:
+  Version bump (0.93). Build system was changed to qmake style - no autotools
+  scripts are now available in sources. Provided .pro files sucks. Also added
+  patch for desktop file.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
