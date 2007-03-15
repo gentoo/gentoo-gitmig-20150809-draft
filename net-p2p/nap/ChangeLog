@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.17 2007/03/13 18:16:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.18 2007/03/15 20:39:25 mabi Exp $
+
+  15 Mar 2007; Matti Bickel <mabi@gentoo.org> nap-1.5.4.ebuild:
+  ppc stable (bug #170767)
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> nap-1.5.4.ebuild:
   x86 stable wrt bug 170767
