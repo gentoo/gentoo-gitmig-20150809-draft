@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.1 2006/11/15 19:55:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.2 2007/03/15 12:05:40 nyhm Exp $
 
 MOD_DESC="single-player map trilogy"
 MOD_NAME="Make it to Morning"
 MOD_DIR="mitm"
 
-inherit versionator games games-mods
+inherit eutils versionator games games-mods
 
 # End up with MY_PV=03282k6
 DATE=$(get_version_component_range 1-1)
