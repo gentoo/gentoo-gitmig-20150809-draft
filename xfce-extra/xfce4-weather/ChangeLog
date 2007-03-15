@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-weather
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.34 2007/03/15 13:58:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.35 2007/03/15 16:32:51 drac Exp $
+
+  15 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-weather-0.6.0.ebuild:
+  RESTRICT="test" which is not supported by goodies upstream.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce4-weather-0.6.0.ebuild:
   Stable on ppc64; bug #169987

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-xkb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.18 2007/03/15 13:59:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.19 2007/03/15 16:37:38 drac Exp $
+
+  15 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-xkb-0.4.3-r1.ebuild:
+  RESTRICT="test" which is not supported by goodies upstream.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce4-xkb-0.4.3-r1.ebuild:
   Stable on ppc64; bug #169987
