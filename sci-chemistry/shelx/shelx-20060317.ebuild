@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.5 2006/10/12 19:03:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.6 2007/03/15 21:49:56 kugelfang Exp $
 
 inherit autotools eutils fortran
 
@@ -34,7 +34,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-gfortran.patch
 
 	sed -i \
-		-e "s:CIFDIR='/usr/local/bin/':CIFDIR='${ROOT}usr/share/${PN}/':g" \
+		-e "s:CIFDIR='/usr/local/bin/':CIFDIR='/usr/share/${PN}/':g" \
 		"${S}"/ciftab.f
 
 	if use dosformat; then
