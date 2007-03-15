@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/xpuyopuyo-0.9.8.ebuild,v 1.1 2007/03/04 01:33:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/xpuyopuyo-0.9.8.ebuild,v 1.2 2007/03/15 12:03:51 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A Tetris-like game with opponent"
 HOMEPAGE="http://chaos2.org/xpuyopuyo/"
@@ -18,14 +18,16 @@ DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/libmikmod"
 
 src_compile() {
-	egamesconf --with-gnome \
+	egamesconf \
+		--with-gnome \
 		--enable-aibreed \
-		--enable-network || die "econf failed"
+		--enable-network \
+		|| die
 	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	doicon ${PN}.xpm
 	make_desktop_entry ${PN} ${PN} ${PN}.xpm
