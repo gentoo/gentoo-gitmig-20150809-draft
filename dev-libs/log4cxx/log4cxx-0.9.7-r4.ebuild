@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r3.ebuild,v 1.4 2007/03/15 22:48:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r4.ebuild,v 1.1 2007/03/15 22:48:29 dev-zero Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
 
 inherit autotools eutils flag-o-matic
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations"
 HOMEPAGE="http://logging.apache.org/log4cxx/"
@@ -45,7 +45,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
-
+	epatch "${FILESDIR}/${P}-tchar.patch"
 	eautoreconf
 }
 

@@ -1,0 +1,12 @@
+--- log4cxx-0.9.7.orig/include/log4cxx/helpers/tchar.h	2004-05-10 14:54:50.000000000 +0200
++++ log4cxx-0.9.7/include/log4cxx/helpers/tchar.h	2007-01-17 12:46:44.000000000 +0100
+@@ -142,7 +142,9 @@
+ 	#define _T(x) x
+ #endif
+ 
++#ifndef TCHAR
+ 	typedef char TCHAR;
++#endif
+ 	#define totupper toupper
+ 	#define totlower tolower
+ 	#define tcout std::cout

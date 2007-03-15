@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.20 2007/02/22 01:05:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.21 2007/03/15 22:48:29 dev-zero Exp $
+
+*log4cxx-0.9.7-r4 (15 Mar 2007)
+
+  15 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/log4cxx-0.9.5-fix-errno.diff, +files/log4cxx-0.9.7-tchar.patch,
+  -log4cxx-0.9.5.ebuild, -log4cxx-0.9.7-r2.ebuild, +log4cxx-0.9.7-r4.ebuild:
+  Added patch to fix compilation problems for projects depending on log4cxx
+  (bug #162523, thanks to Pedro). Dropped old versions.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
