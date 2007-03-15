@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2-r1.ebuild,v 1.1 2007/03/14 23:39:51 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2-r1.ebuild,v 1.2 2007/03/15 00:14:56 rbu Exp $
 
 inherit eutils
 
@@ -35,6 +35,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	emake DESTDIR="${D}" \
+		docdir=/usr/share/doc/${PF} install || die "make install failed"
+	rm "${D}/usr/share/doc/${PF}/COPYING"
+
+	prepalldocs
 }
