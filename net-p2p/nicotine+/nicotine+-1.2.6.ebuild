@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.6.ebuild,v 1.3 2007/02/18 14:37:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.6.ebuild,v 1.4 2007/03/15 12:46:26 armin76 Exp $
 
 inherit distutils eutils multilib toolchain-funcs
 
@@ -41,6 +41,10 @@ src_install() {
 
 	cd "${S}"/trayicon/
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	# Remove the .desktop file installed by setup.py
+	rm ${D}/usr/share/applications/nicotine.desktop \
+		${D}/usr/share/pixmaps/nicotine-plus-32px.png
 
 	doicon ${FILESDIR}/nicotine-n.png
 	domenu ${FILESDIR}/${PN}.desktop
