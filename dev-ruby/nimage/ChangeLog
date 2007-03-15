@@ -1,13 +1,16 @@
 # ChangeLog for dev-ruby/nimage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nimage/ChangeLog,v 1.2 2006/09/02 22:39:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nimage/ChangeLog,v 1.3 2007/03/15 03:10:40 tgall Exp $
+
+  14 Mar 2007; Tom Gall <tgall@gentoo.org> nimage-0.5.9.ebuild:
+  added ~ppc64
 
   02 Sep 2006; Jason Wever <weeve@gentoo.org> nimage-0.5.9.ebuild:
   Added ~sparc keyword wrt testing narray-0.5.9 for bug #145363.
 
 *nimage-0.5.9 (28 Aug 2006)
 
-  28 Aug 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  28 Aug 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org> +metadata.xml,
   +nimage-0.5.9.ebuild:
   Added nimage, part of narray package
 

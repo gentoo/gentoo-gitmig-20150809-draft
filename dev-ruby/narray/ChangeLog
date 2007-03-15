@@ -1,8 +1,8 @@
 # ChangeLog for dev-ruby/narray
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.27 2006/10/20 11:24:26 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.28 2007/03/15 03:09:02 tgall Exp $
 
-  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  20 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   -narray-0.5.7-r1.ebuild, narray-0.5.7_p2.ebuild, -narray-0.5.8.ebuild:
   Fix sandbox violation, remove old versions. Thanks to Patrick Lauer for
   reporting in bug #152056.
@@ -20,10 +20,10 @@
   narray-0.5.9.ebuild:
   mark ~ppc (Bug #145363)
 
-  29 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> narray-0.5.9.ebuild:
+  29 Aug 2006; Bryan Ãstergaard <kloeri@gentoo.org> narray-0.5.9.ebuild:
   ia64 rekeyword, bug 145363.
 
-  29 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> narray-0.5.9.ebuild:
+  29 Aug 2006; Bryan Ãstergaard <kloeri@gentoo.org> narray-0.5.9.ebuild:
   Rekeyword Alpha, bug 145363.
 
   29 Aug 2006; Luis Medinas <metalgod@gentoo.org> narray-0.5.9.ebuild:
@@ -31,7 +31,7 @@
 
 *narray-0.5.9 (28 Aug 2006)
 
-  28 Aug 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  28 Aug 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   +narray-0.5.9.ebuild:
   Version bump, #144172
 
