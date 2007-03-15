@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/aranym
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.9 2007/01/25 21:55:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.10 2007/03/15 20:34:30 dholm Exp $
+
+*aranym-0.9.4_beta2 (15 Mar 2007)
+
+  15 Mar 2007; <dholm@gentoo.org> +aranym-0.9.4_beta2.ebuild:
+  Version bumped. Closing bug #137294.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> aranym-0.8.6_beta.ebuild,
   aranym-0.9.0_beta2.ebuild, aranym-0.9.0.ebuild:
