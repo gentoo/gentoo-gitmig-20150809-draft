@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.22 2007/03/12 19:04:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.23 2007/03/15 02:03:41 jer Exp $
+
+  15 Mar 2007; Jeroen Roovers <jer@gentoo.org> twisted-mail-0.3.0.ebuild:
+  Stable for HPPA (bug #169888).
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   twisted-mail-0.3.0.ebuild:
