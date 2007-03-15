@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-0.99.4.ebuild,v 1.1 2006/08/18 16:48:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-0.99.4.ebuild,v 1.2 2007/03/15 15:51:57 kugelfang Exp $
 
 inherit multilib python eutils
 
@@ -45,7 +45,7 @@ src_install() {
 	doman man/man1/* || die "Failed to install man page."
 	if use pymol; then
 		python_version
-		sed -e "s:^\(CAVER_BINARY_LOCATION\).*:\1 = \"${ROOT}usr/bin/caver\":g" \
+		sed -e "s:^\(CAVER_BINARY_LOCATION\).*:\1 = \"usr/bin/caver\":g" \
 				-i "${WORKDIR}"/${PLUG_P}/caver.py \
 				|| die "Failed setting caver location"
 		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/pmg_tk/startup

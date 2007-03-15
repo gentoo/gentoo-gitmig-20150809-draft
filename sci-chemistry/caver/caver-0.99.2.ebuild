@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-0.99.2.ebuild,v 1.2 2006/08/20 23:00:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-0.99.2.ebuild,v 1.3 2007/03/15 15:51:57 kugelfang Exp $
 
 inherit multilib python
 
@@ -35,7 +35,7 @@ src_install() {
 	if use pymol; then
 		python_version
 		sed -i \
-			-e "s:^\(CAVER_BINARY_LOCATION\).*:\1 = \"${ROOT}usr/bin/caver\":g" \
+			-e "s:^\(CAVER_BINARY_LOCATION\).*:\1 = \"usr/bin/caver\":g" \
 			${WORKDIR}/${PLUG_P}/caver.py
 		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/pmg_tk/startup
 		doins ${WORKDIR}/${PLUG_P}/caver.py
