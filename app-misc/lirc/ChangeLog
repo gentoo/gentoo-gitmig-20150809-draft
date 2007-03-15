@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.133 2007/02/27 16:08:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.134 2007/03/15 13:10:42 zzam Exp $
+
+  15 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.1.ebuild:
+  Added lirc device usb_uirt_raw, as requested by Robert Parenton
+  <rparenton@lada.org>, Bug #170698.
 
   27 Feb 2007; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.1.ebuild:
   Fixed disabling lirc_parallel on SMP systems, thanks to Helau
