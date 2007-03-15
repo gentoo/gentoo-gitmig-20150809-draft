@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.3 2007/02/27 16:58:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.4 2007/03/15 13:39:36 caster Exp $
 
 JAVA_PKG_IUSE="source"
 inherit eutils java-pkg-2 java-ant-2
@@ -21,9 +21,7 @@ CDEPEND="=dev-java/bsf-2.3*
 	dev-java/velocity
 	dev-java/xjavadoc
 	dev-java/junit"
-# needs javatoolkit with proper xml-rewriting with entities
-DEPEND=">=dev-java/javatoolkit-0.2.0-r1
-	>=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.4
 	dev-java/ant
 	${CDEPEND}"
 RDEPEND=">=virtual/jre-1.4
