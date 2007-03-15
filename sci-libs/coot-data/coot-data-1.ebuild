@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/coot-data-1.ebuild,v 1.2 2006/09/26 07:57:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/coot-data-1.ebuild,v 1.3 2007/03/15 22:06:55 kugelfang Exp $
 
 DESCRIPTION="Data for the Crystallographic Object-Oriented Toolkit"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~emsley/coot/"
@@ -25,7 +25,7 @@ src_install() {
 	# Coot looks in the wrong spot for the monomer library
 	# Listens to ccp4's CCP4_LIB rather than CLIBD_MON
 	cat << EOF >> ${T}/coot
-COOT_REFMAC_LIB_DIR="${ROOT}usr/share/coot/lib"
+COOT_REFMAC_LIB_DIR="/usr/share/coot/lib"
 EOF
 
 	newenvd ${T}/coot 20coot
