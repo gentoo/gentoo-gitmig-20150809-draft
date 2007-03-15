@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX kbibtex-0.1.5-compile-fix.patch 545 RMD160 5b5702af45da6de1b568ba909beae09f4bc224db SHA1 77b376a8f2153137d85f99e7123efe1efce6f33e SHA256 795d98246066291cf934ee116edaff92bd3a0ab097eda8b3a69add41d160225a
 MD5 b0a9d69db841325fb8451bc7acd1a425 files/kbibtex-0.1.5-compile-fix.patch 545
 RMD160 5b5702af45da6de1b568ba909beae09f4bc224db files/kbibtex-0.1.5-compile-fix.patch 545
@@ -22,3 +25,10 @@ SHA256 46b1b928281ac18a06115173b246580b95e0cc9724ec7e9a9dfc757925bfb0b6 metadata
 MD5 d43c6632ddec01532dd535c7502de8e5 files/digest-kbibtex-0.1.5-r1 244
 RMD160 edfde7c0e0b295fb9ed762450ced06986ca78cfb files/digest-kbibtex-0.1.5-r1 244
 SHA256 8abf5b53527bc6f0e26c7025014a20420a7f91e9ef37f5677a4c5044823ee8a3 files/digest-kbibtex-0.1.5-r1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF+QoyntT9W3vfTuoRAl/dAJ46nAinCnaS/2vB97RDnntAmKtoxACfUeDw
+OuWiEBUKGXXlhxVEqNoTRvs=
+=Wel7
+-----END PGP SIGNATURE-----
