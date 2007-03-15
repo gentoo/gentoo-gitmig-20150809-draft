@@ -1,6 +1,21 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.90 2007/03/07 19:12:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.91 2007/03/15 03:40:29 dang Exp $
+
+*liferea-1.2.8 (15 Mar 2007)
+
+  15 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.8.ebuild:
+  Bump to 1.2.8
+  	* Adds a DBUS ping function that is used by the 
+  	  liferea-add-feed script to check if the program is running.
+  	* The liferea-add-feed script now starts Liferea if necessary.
+  	  (solution by intangible/tsukasa)
+  	* Added 1x1 pixel filter to adblocking stylesheet.
+  	* Fixes SF #1668278: error when exporting the feed list
+  	  although the export was successfully completed
+  	  (reported by Allan Engelhardt)
+  	* Fixes SF #1657717: memory leak when stripping DHTML from
+  	  HTML type metadata (reported by Hubert Figuiere)
 
   07 Mar 2007; Markus Rothe <corsair@gentoo.org> liferea-1.2.7.ebuild:
   Added ~ppc64; bug #155053
