@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.63 2007/03/12 21:47:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.64 2007/03/15 19:09:16 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> gossip-0.23.ebuild:
+  Added ~ppc64; bug #170307
 
   12 Mar 2007; Olivier Crête <tester@gentoo.org> gossip-0.22.ebuild,
   gossip-0.23.ebuild:
