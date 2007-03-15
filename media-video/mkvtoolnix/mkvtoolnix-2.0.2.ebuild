@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.0.2.ebuild,v 1.2 2007/03/13 19:55:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.0.2.ebuild,v 1.3 2007/03/15 23:20:08 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic qt4 autotools
 
@@ -37,10 +37,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	if use qt4; then
-		epatch "${FILESDIR}/${P}-qt4.patch"
-		eautoreconf
-	fi
+	epatch "${FILESDIR}/${P}-qt4.patch"
+	eautoreconf
 }
 
 src_compile() {
@@ -48,7 +46,7 @@ src_compile() {
 	econf \
 		$(use_enable lzo) \
 		$(use_enable bzip2 bz2) \
-		$(use_enable wxwindows gui) \
+		$(use_enable wxwindows wxwidgets) \
 		$(use_enable debug) \
 		$(use_with flac) \
 		$(use_enable qt4 qt) \
