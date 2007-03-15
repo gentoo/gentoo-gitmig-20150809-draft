@@ -9,5 +9,5 @@
 #fi
 
 #if [ -n "${SSH_AGENT_PID}" ]; then
-#  eval "$(ssh-agent -k)"
+#  eval "$(ssh-agent -s -k)"
 #fi
