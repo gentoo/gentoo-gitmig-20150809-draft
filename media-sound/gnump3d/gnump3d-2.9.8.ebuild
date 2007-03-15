@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.8.ebuild,v 1.2 2007/01/05 17:33:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.8.ebuild,v 1.3 2007/03/15 17:08:54 marienz Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ IUSE=""
 
 DEPEND="sys-apps/sed"
 RDEPEND=">=dev-lang/perl-5.8.0"
+
+RESTRICT="test"
 
 pkg_setup() {
 	enewuser gnump3d '' '' '' nogroup || die "couldnt add new user"
@@ -73,5 +75,3 @@ Please edit your /etc/gnump3d/gnump3d.conf before running
 
 EOF
 }
-
-src_test() { :; }

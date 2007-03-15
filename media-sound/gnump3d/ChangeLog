@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.51 2007/02/26 21:56:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.52 2007/03/15 17:08:54 marienz Exp $
+
+  15 Mar 2007; Marien Zwart <marienz@gentoo.org> gnump3d-2.9.7-r1.ebuild,
+  gnump3d-2.9.8.ebuild:
+  Use RESTRICT=test instead of an empty src_test to skip tests, thanks to
+  ferringb for reporting.
 
 *gnump3d-2.9.9.9 (26 Feb 2007)
 
