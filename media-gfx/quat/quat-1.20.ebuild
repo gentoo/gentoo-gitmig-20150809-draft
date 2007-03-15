@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/quat-1.20.ebuild,v 1.6 2006/02/13 22:11:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/quat-1.20.ebuild,v 1.7 2007/03/15 11:00:38 spock Exp $
 
 DESCRIPTION="A 3D quaternionic fractal generator"
 HOMEPAGE="http://www.physcip.uni-stuttgart.de/phy11733/quat_e.html"
@@ -23,7 +23,7 @@ DEPEND="X? ( >=x11-libs/fltk-1.1
 RDEPEND=""
 
 src_compile() {
-	export FLUID=`which fluid` # needed because configure tries an invalid option
+	export FLUID="/usr/bin/fluid" # needed because configure tries an invalid option
 	econf \
 		`use_enable X gui` \
 		`use_enable debug` \
