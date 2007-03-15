@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r1.ebuild,v 1.2 2007/03/13 08:23:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r1.ebuild,v 1.3 2007/03/15 16:09:05 kevquinn Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -221,12 +221,12 @@ toolchain-glibc_src_unpack() {
 	if use hardened ; then
 		cd "${S}"
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
-		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-pie.patch
+		gcc-specs-pie && epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-pie.patch
 		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-configure-picdefault.patch
 		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-inittls-nosysenter.patch
 
 		einfo "Installing Hardened Gentoo SSP handler"
-		cp -f "${FILESDIR}"/2.5/glibc-2.4-gentoo-stack_chk_fail.c \
+		cp -f "${FILESDIR}"/2.5/glibc-2.5-gentoo-stack_chk_fail.c \
 			debug/stack_chk_fail.c || die
 
 		if use debug ; then
@@ -724,8 +724,16 @@ setup_flags() {
 	# to the glibc build process. See bug #94325
 	filter-flags -fstack-protector
 
-	# Don't let the compiler automatically build PIEs unless USE=hardened.
-	use hardened || filter-flags -fPIE
+	if use hardened && gcc-specs-pie ; then
+		# Force PIC macro definition for all compilations since they're all
+		# either -fPIC or -fPIE with the default-PIE compiler.
+		append-flags -DPIC
+		export ASFLAGS="${ASFLAGS} -DPIC"
+	else
+		# Don't build -fPIE without the default-PIE compiler and the
+		# hardened-pie patch
+		filter-flags -fPIE
+	fi
 }
 
 check_kheader_version() {
@@ -1081,6 +1089,9 @@ pkg_setup() {
 		eerror "You do not have pax-utils installed."
 		die "install pax-utils"
 	fi
+
+	use hardened && ! gcc-specs-pie && \
+		ewarn "PIE hardening not applied, as your compiler doesn't default to PIE"
 }
 
 src_unpack() {

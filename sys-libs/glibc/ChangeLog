@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.506 2007/03/13 06:09:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.507 2007/03/15 16:09:05 kevquinn Exp $
+
+  15 Mar 2007; Kevin F. Quinn <kevquinn@gentoo.org>
+  files/2.5/glibc-2.5-hardened-pie.patch, glibc-2.5-r1.ebuild:
+  Fix 2.5-hardened-pie.spec (bug #170731), and make 2.5-r1 robust against compiler variant.
 
 *glibc-2.5-r1 (13 Mar 2007)
 

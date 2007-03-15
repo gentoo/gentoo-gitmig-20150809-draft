@@ -11,7 +11,7 @@ Patch by Kevin F. Quinn <kevquinn@gentoo.org>
 -+link = $(CC) -nostdlib -nostartfiles -o $@ \
 ++link = $(CC) -nostdlib -nostartfiles -fPIE -pie -o $@ \
  	      $(sysdep-LDFLAGS) $(config-LDFLAGS) $(LDFLAGS) $(LDFLAGS-$(@F)) \
- 	      $(combreloc-LDFLAGS) $(relro-LDFLAGS) \
+ 	      $(combreloc-LDFLAGS) $(relro-LDFLAGS) $(hashstyle-LDFLAGS) \
 -	      $(addprefix $(csu-objpfx),$(start-installed-name)) \
 +	      $(addprefix $(csu-objpfx),S$(start-installed-name)) \
  	      $(+preinit) $(+prector) \
