@@ -1,6 +1,18 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.17 2007/03/15 08:53:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.18 2007/03/15 13:41:05 cryos Exp $
+
+*kbibtex-0.1.5-r2 (15 Mar 2007)
+
+  15 Mar 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -files/kbibtex-0.1.5-compile-fix.patch,
+  +files/kbibtex-0.1.5-filteredselection.patch,
+  +files/kbibtex-0.1.5-gcc4.2.patch,
+  +files/kbibtex-0.1.5-storesearchurls.patch,
+  +files/kbibtex-0.1.5-webquerypubmedmultiplequeries.patch,
+  +kbibtex-0.1.5-r2.ebuild:
+  Applied various patches from upstream, previous patch was already present
+  upstream and so replaced it with their patch for consistency.
 
   15 Mar 2007; Marcus D. Hanwell <cryos@gentoo.org>
   +files/kbibtex-0.1.5-compile-fix.patch, -kbibtex-0.1.5.ebuild,

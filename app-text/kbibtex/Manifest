@@ -1,23 +1,39 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX kbibtex-0.1.5-compile-fix.patch 545 RMD160 5b5702af45da6de1b568ba909beae09f4bc224db SHA1 77b376a8f2153137d85f99e7123efe1efce6f33e SHA256 795d98246066291cf934ee116edaff92bd3a0ab097eda8b3a69add41d160225a
-MD5 b0a9d69db841325fb8451bc7acd1a425 files/kbibtex-0.1.5-compile-fix.patch 545
-RMD160 5b5702af45da6de1b568ba909beae09f4bc224db files/kbibtex-0.1.5-compile-fix.patch 545
-SHA256 795d98246066291cf934ee116edaff92bd3a0ab097eda8b3a69add41d160225a files/kbibtex-0.1.5-compile-fix.patch 545
+AUX kbibtex-0.1.5-filteredselection.patch 1533 RMD160 6e14a391d76bf79d08d63771ed4349b5b45c5aa8 SHA1 971be8064bed3cc6e5c77c1477854b9342dcd811 SHA256 a9ce7c7a71d1bfaf5f3b4ccc31a4203b6111c33605b095724a7e1693d042a29c
+MD5 bb97a4924c4bea973ea02800e699d701 files/kbibtex-0.1.5-filteredselection.patch 1533
+RMD160 6e14a391d76bf79d08d63771ed4349b5b45c5aa8 files/kbibtex-0.1.5-filteredselection.patch 1533
+SHA256 a9ce7c7a71d1bfaf5f3b4ccc31a4203b6111c33605b095724a7e1693d042a29c files/kbibtex-0.1.5-filteredselection.patch 1533
+AUX kbibtex-0.1.5-gcc4.2.patch 454 RMD160 dfc2b4a00ac2aba668f15ec94eedd7855449a1f5 SHA1 91c32ab2ae04867e6d37674cc28e9b60a19c40ce SHA256 349f8d55150956dc65fd8acf0e7d3fd5f3c94d7a9e1b915d0b830768a329529c
+MD5 2d94fa24173073a02948d66946df60c0 files/kbibtex-0.1.5-gcc4.2.patch 454
+RMD160 dfc2b4a00ac2aba668f15ec94eedd7855449a1f5 files/kbibtex-0.1.5-gcc4.2.patch 454
+SHA256 349f8d55150956dc65fd8acf0e7d3fd5f3c94d7a9e1b915d0b830768a329529c files/kbibtex-0.1.5-gcc4.2.patch 454
+AUX kbibtex-0.1.5-storesearchurls.patch 733 RMD160 8eb5b280b9f4f729dc0b36c2bd6ee0e059c6e40b SHA1 12916b9e77c03d7d35f43cfde0b8418947624a26 SHA256 b9a4769e135a3fdea0b727bcf4529735f57e84742c7876104017cdf8f27e9ecd
+MD5 66f878f3eeec862d5417a68d94fc538e files/kbibtex-0.1.5-storesearchurls.patch 733
+RMD160 8eb5b280b9f4f729dc0b36c2bd6ee0e059c6e40b files/kbibtex-0.1.5-storesearchurls.patch 733
+SHA256 b9a4769e135a3fdea0b727bcf4529735f57e84742c7876104017cdf8f27e9ecd files/kbibtex-0.1.5-storesearchurls.patch 733
 AUX kbibtex-0.1.5-viewdocument.patch 2446 RMD160 21e847435e775e8a22df68e1c099c66a5e61a79a SHA1 ca29fa5428494c9509d924543b0e915c07281075 SHA256 cd3bac08ce1d01bc0c37181ffaca63769e4cb702bb8a3fc57efd3dacaf4e2631
 MD5 afe161f8783346b3606dfd5a337918ac files/kbibtex-0.1.5-viewdocument.patch 2446
 RMD160 21e847435e775e8a22df68e1c099c66a5e61a79a files/kbibtex-0.1.5-viewdocument.patch 2446
 SHA256 cd3bac08ce1d01bc0c37181ffaca63769e4cb702bb8a3fc57efd3dacaf4e2631 files/kbibtex-0.1.5-viewdocument.patch 2446
+AUX kbibtex-0.1.5-webquerypubmedmultiplequeries.patch 453 RMD160 738e5e6ff7efa291a2021857dcce70fe369ce52e SHA1 53f40f37e075595a73fab1286b03c08cc37e09b1 SHA256 0b89bdd5afef25ebb3c2d38c7140cb3ef810dd04643ab748c7ac7793629e67ec
+MD5 c51fc05e590018b1035c60a3f0154e87 files/kbibtex-0.1.5-webquerypubmedmultiplequeries.patch 453
+RMD160 738e5e6ff7efa291a2021857dcce70fe369ce52e files/kbibtex-0.1.5-webquerypubmedmultiplequeries.patch 453
+SHA256 0b89bdd5afef25ebb3c2d38c7140cb3ef810dd04643ab748c7ac7793629e67ec files/kbibtex-0.1.5-webquerypubmedmultiplequeries.patch 453
 DIST kbibtex-0.1.5.tar.bz2 556109 RMD160 7a7c6ce9ff4b392104e0b35eb888eaa7e7a20383 SHA1 a89331c3d9621995d9cd8f91fae470237ea2eca4 SHA256 588cbd5055c0baea950263c8d768c13c69ef72c54543137dea4d88fb7e4f8f13
 EBUILD kbibtex-0.1.5-r1.ebuild 712 RMD160 07c1dab8fec9f6d0a88432f5a30d07f2f79cc0e8 SHA1 4b36562a587ac8e08b48ed632f98e7c977ed3a4f SHA256 d5a136c5dc2b93f5f2c46dd0a12e2b3b2798ca5cf603beaa4a171ae21b342aae
 MD5 b6dd2e4f66411d305ce9a9041fa63187 kbibtex-0.1.5-r1.ebuild 712
 RMD160 07c1dab8fec9f6d0a88432f5a30d07f2f79cc0e8 kbibtex-0.1.5-r1.ebuild 712
 SHA256 d5a136c5dc2b93f5f2c46dd0a12e2b3b2798ca5cf603beaa4a171ae21b342aae kbibtex-0.1.5-r1.ebuild 712
-MISC ChangeLog 2847 RMD160 f244f8cdea225b5d460c63bfa6105d52edd124ca SHA1 29a27be216031d35b4c2bb05c827a876cc1c67d9 SHA256 42be7a3ee4b8b19c137af9402d7af95faf7656d01de2a56b16a40bce3173819f
-MD5 71f4705c044a0e9fb440e273ec31af40 ChangeLog 2847
-RMD160 f244f8cdea225b5d460c63bfa6105d52edd124ca ChangeLog 2847
-SHA256 42be7a3ee4b8b19c137af9402d7af95faf7656d01de2a56b16a40bce3173819f ChangeLog 2847
+EBUILD kbibtex-0.1.5-r2.ebuild 870 RMD160 4a7ec9dc1bd93e7f36a4d137bbc406ad8475d41b SHA1 85c114602b94582ff8cd9b8020e7b5f7caf7797f SHA256 cd6950862834a6081ae700ea7e3316a028422fb2259ac5f59f46e1ffb59f0e70
+MD5 b849645287e9bf1f9db61d4ddbc34c15 kbibtex-0.1.5-r2.ebuild 870
+RMD160 4a7ec9dc1bd93e7f36a4d137bbc406ad8475d41b kbibtex-0.1.5-r2.ebuild 870
+SHA256 cd6950862834a6081ae700ea7e3316a028422fb2259ac5f59f46e1ffb59f0e70 kbibtex-0.1.5-r2.ebuild 870
+MISC ChangeLog 3334 RMD160 e2ca873a36dc279a193e3b3cc2a0d7ebeaf456e7 SHA1 31bee789cfeb8737ab4c5ab88a59897895c08f93 SHA256 eabe05959ee5051b6a18e201415d89ae3baea262c820f2cc33d87cc741e72eec
+MD5 dffd605f2389e2f715263a76e3a0f65d ChangeLog 3334
+RMD160 e2ca873a36dc279a193e3b3cc2a0d7ebeaf456e7 ChangeLog 3334
+SHA256 eabe05959ee5051b6a18e201415d89ae3baea262c820f2cc33d87cc741e72eec ChangeLog 3334
 MISC metadata.xml 408 RMD160 5ef8f5474f5f8f6120ad041015ba55ec8d890ca9 SHA1 7a8f9ffd0bc2878e664289478b887c57c32561e4 SHA256 46b1b928281ac18a06115173b246580b95e0cc9724ec7e9a9dfc757925bfb0b6
 MD5 636e395cdc2eb9b72ab00fa7ea45ad0f metadata.xml 408
 RMD160 5ef8f5474f5f8f6120ad041015ba55ec8d890ca9 metadata.xml 408
@@ -25,10 +41,13 @@ SHA256 46b1b928281ac18a06115173b246580b95e0cc9724ec7e9a9dfc757925bfb0b6 metadata
 MD5 d43c6632ddec01532dd535c7502de8e5 files/digest-kbibtex-0.1.5-r1 244
 RMD160 edfde7c0e0b295fb9ed762450ced06986ca78cfb files/digest-kbibtex-0.1.5-r1 244
 SHA256 8abf5b53527bc6f0e26c7025014a20420a7f91e9ef37f5677a4c5044823ee8a3 files/digest-kbibtex-0.1.5-r1 244
+MD5 d43c6632ddec01532dd535c7502de8e5 files/digest-kbibtex-0.1.5-r2 244
+RMD160 edfde7c0e0b295fb9ed762450ced06986ca78cfb files/digest-kbibtex-0.1.5-r2 244
+SHA256 8abf5b53527bc6f0e26c7025014a20420a7f91e9ef37f5677a4c5044823ee8a3 files/digest-kbibtex-0.1.5-r2 244
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF+QoyntT9W3vfTuoRAl/dAJ46nAinCnaS/2vB97RDnntAmKtoxACfUeDw
-OuWiEBUKGXXlhxVEqNoTRvs=
-=Wel7
+iD8DBQFF+U0AntT9W3vfTuoRAsGYAKCD9pYPD32l/SHKCgUAWuZdoGnkGACfV3dc
+36mjVKXMleCM76/rYZ0amUQ=
+=jy1x
 -----END PGP SIGNATURE-----

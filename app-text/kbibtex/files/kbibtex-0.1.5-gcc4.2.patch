@@ -1,7 +1,7 @@
-# Patch from Andreas Ntaflos <daff@dword.org> to fix compilation issue
-# 15 Mar 2007 Marcus D. Hanwell <cryos@gentoo.org> from bug 171004.
---- src/fileimporter.h	2007-03-15 05:55:41.000000000 +0100
-+++ src/fileimporter.h.new	2007-03-15 05:56:45.000000000 +0100
+Index: src/fileimporter.h
+===================================================================
+--- src/fileimporter.h	(Revision 307)
++++ src/fileimporter.h	(Arbeitskopie)
 @@ -39,7 +39,7 @@
          ~FileImporter();
  
