@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/komi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/ChangeLog,v 1.4 2006/09/20 16:46:20 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/ChangeLog,v 1.5 2007/03/15 23:14:50 nyhm Exp $
+
+  15 Mar 2007; Tristan Heaven <nyhm@gentoo.org> komi-1.04.ebuild:
+  Install menu entry, bug #160229
 
   20 Sep 2006; <blubb@gentoo.org> komi-1.04.ebuild:
   stable on amd64

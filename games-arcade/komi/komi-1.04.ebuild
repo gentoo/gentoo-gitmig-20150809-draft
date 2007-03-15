@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/komi-1.04.ebuild,v 1.4 2006/09/20 16:46:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/komi-1.04.ebuild,v 1.5 2007/03/15 23:14:50 nyhm Exp $
 
 inherit eutils games
 
@@ -19,7 +19,7 @@ DEPEND="media-libs/libsdl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-DESTDIR.patch"
+	epatch "${FILESDIR}"/${PV}-DESTDIR.patch
 	sed -i \
 		-e "/^BINPATH/s:=.*:=${GAMES_BINDIR}/:" \
 		-e "/^DATAPATH/s:=.*:=${GAMES_DATADIR}/${PN}/:" Makefile \
@@ -31,7 +31,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon komidata/sprites_komi.bmp ${PN}.bmp
+	make_desktop_entry komi Komi /usr/share/pixmaps/${PN}.bmp
 	doman komi.6
 	dodoc CHANGELOG.txt README.txt TROUBLESHOOTING.txt
 	prepgamesdirs
