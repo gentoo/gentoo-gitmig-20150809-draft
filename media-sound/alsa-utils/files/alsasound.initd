@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.2 2007/03/14 13:55:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.3 2007/03/15 11:33:25 uberlord Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -15,7 +15,7 @@ depend() {
 
 load_modules() {
 	# List of drivers for each card.
-	local DRIVERS="$(modprobe -c | sed -n -e 's/^alias \(snd-card-[[:digit:]]+\) .*/\1/p')"
+	local DRIVERS="$(modprobe -c | sed -n -e 's/^alias \(snd-card-[[:digit:]]\+\) .*/\1/p')"
 
 	# Fall back on the automated aliases if we don't have ALSA configured properly...
 	if [ -z "${DRIVERS}" ] && \
