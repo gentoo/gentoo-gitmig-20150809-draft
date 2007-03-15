@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/rcsb-data-1.700.ebuild,v 1.3 2006/09/26 07:59:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/rcsb-data-1.700.ebuild,v 1.4 2007/03/15 22:13:09 kugelfang Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/respect-bindir.patch
 	sed -i \
-		-e "s:^\(BINDIR=\).*:\1${ROOT}usr/bin:g" \
+		-e "s:^\(BINDIR=\).*:\1/usr/bin:g" \
 		${S}/etc/binary.sh
 }
 
