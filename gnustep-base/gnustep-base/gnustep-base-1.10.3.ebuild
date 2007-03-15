@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.3.ebuild,v 1.8 2006/03/19 14:37:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.3.ebuild,v 1.9 2007/03/15 17:33:32 grobian Exp $
 
 inherit gnustep
 
@@ -15,10 +15,8 @@ LICENSE="GPL-2 LGPL-2.1"
 IUSE="doc gcc-libffi"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-make-1.10.0
-	|| (
-		gcc-libffi? ( >=sys-devel/gcc-3.3.5 )
-		>=dev-libs/libffi-3.3.5
-	)
+	gcc-libffi? ( >=sys-devel/gcc-3.3.5 )
+	!gcc-libffi? ( >=dev-libs/libffi-3.3.5 )
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/libxslt-1.1
 	>=dev-libs/gmp-4.1
