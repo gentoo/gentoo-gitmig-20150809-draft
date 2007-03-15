@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.4 2007/03/15 02:18:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.5 2007/03/15 17:26:26 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> mtl-1.0.ebuild:
+  Stable on ppc64; bug #170650
 
   15 Mar 2007; Jeroen Roovers <jer@gentoo.org> mtl-1.0.ebuild:
   Stable for HPPA (bug #170650).

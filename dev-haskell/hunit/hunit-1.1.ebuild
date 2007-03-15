@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/hunit-1.1.ebuild,v 1.4 2007/03/15 02:20:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/hunit-1.1.ebuild,v 1.5 2007/03/15 17:29:22 corsair Exp $
 
 inherit ghc-package
 
@@ -10,7 +10,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~amd64 hppa sparc x86"
+KEYWORDS="~amd64 hppa ppc64 sparc x86"
 IUSE=""
 
 DEPEND="=virtual/ghc-6.4*"
