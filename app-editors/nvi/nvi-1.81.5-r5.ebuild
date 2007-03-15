@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r5.ebuild,v 1.5 2007/03/14 12:39:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r5.ebuild,v 1.6 2007/03/15 17:32:29 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kotnet.org/~skimo/nvi/devel/${P}.tar.gz"
 
 LICENSE="Sleepycat"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ~ppc ppc64 sparc x86"
 IUSE="perl unicode"
 
 DEPEND="=sys-libs/db-4*"

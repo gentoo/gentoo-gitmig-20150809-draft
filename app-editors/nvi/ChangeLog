@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.44 2007/03/15 09:59:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.45 2007/03/15 17:32:29 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> nvi-1.81.5-r5.ebuild:
+  Stable on ppc64; bug #170745
 
   14 Mar 2007; Jeroen Roovers <jer@gentoo.org> nvi-1.81.5-r5.ebuild:
   Stable for HPPA (bug #170745).
