@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.38 2007/03/14 21:30:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.39 2007/03/15 16:13:25 opfer Exp $
+
+  15 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  bsh-2.0_beta4-r1.ebuild:
+  stable x86, bug 171026
 
   14 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> -bsh-2.0_beta4.ebuild:
   Cleanup.
