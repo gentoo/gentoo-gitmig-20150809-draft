@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.65.ebuild,v 1.6 2007/03/04 02:18:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.65.ebuild,v 1.7 2007/03/15 12:00:33 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="DOS emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
