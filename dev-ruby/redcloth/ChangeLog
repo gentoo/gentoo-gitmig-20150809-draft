@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.14 2007/02/04 16:41:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.15 2007/03/15 04:07:43 tgall Exp $
+
+  14 Mar 2007; Tom Gall <tgall@gentoo.org> redcloth-3.0.4.ebuild:
+  added ~ppc64
 
   04 Feb 2007; Hans de Graaff <graaff@gentoo.org> redcloth-3.0.4.ebuild:
   Works fine on amd64, all tests pass.
