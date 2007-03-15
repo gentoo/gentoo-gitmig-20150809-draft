@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.3 2007/03/15 11:33:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.4 2007/03/15 12:12:26 uberlord Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -153,6 +153,7 @@ restore() {
 	done
 
 	for ossfile in "${alsastatedir}"/oss/card*_pcm* ; do
+		[ -e "${ossfile}" ] || continue
 		# We use cat because I'm not sure if cp works properly on /proc
 		local procfile=${ossfile##${alsastatedir}/oss}
 		procfile="$(echo "${procfile}" | sed -e 's,_,/,g')"
@@ -175,6 +176,7 @@ save() {
 	fi
 
 	for ossfile in /proc/asound/card*/pcm*/oss; do
+		[ -e "${ossfile}" ] || continue
 		local device=${ossfile##/proc/asound/} ; device=${device%%/oss}
 		device="$(echo "${device}" | sed -e 's,/,_,g')"
 		mkdir -p "${alsastatedir}/oss/"
