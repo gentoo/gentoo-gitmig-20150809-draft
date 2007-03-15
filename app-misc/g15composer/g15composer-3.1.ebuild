@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.1.ebuild,v 1.4 2007/03/15 08:48:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.1.ebuild,v 1.5 2007/03/15 10:44:39 rbu Exp $
 
 inherit eutils
 
@@ -22,10 +22,18 @@ RDEPEND="${DEPEND}
 	amarok? ( dev-perl/DCOP-Amarok-Player )"
 
 pkg_setup() {
+	local failure=false
+	echo
 	if use amarok && ! built_with_use dev-lang/perl ithreads ; then
-		echo
 		eerror "dev-lang/perl must be built with USE=\"ithreads\" for the Amarok display to work."
-		die
+		failure=true
+	fi
+	if use truetype && ! built_with_use dev-libs/libg15render truetype ; then
+		eerror "dev-libs/libg15render must be built with USE=\"truetype\" for truetype to work."
+		failure=true
+	fi
+	if ${failure}; then
+		die "Please rebuild the packages with corrected USE flags."
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-1.1.ebuild,v 1.6 2007/01/07 03:21:17 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-1.1.ebuild,v 1.7 2007/03/15 10:44:39 rbu Exp $
 
 inherit eutils
 
@@ -22,6 +22,13 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	sys-apps/coreutils"
+
+pkg_setup() {
+	if use truetype && ! built_with_use dev-libs/libg15render truetype ; then
+		eerror "dev-libs/libg15render must be built with USE=\"truetype\" for truetype to work."
+		die "Please rebuild the package with corrected USE flags."
+	fi
+}
 
 src_compile() {
 	econf \
