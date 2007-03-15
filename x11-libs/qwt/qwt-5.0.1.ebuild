@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.1.ebuild,v 1.3 2007/03/14 15:13:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.1.ebuild,v 1.4 2007/03/15 12:05:46 caleb Exp $
 
 inherit multilib eutils
 
@@ -49,11 +49,11 @@ src_unpack () {
 src_compile () {
 	# -j1 due to parallel build failures ( bug # 170625 )
 	/usr/bin/qmake qwt.pro
-	emake MAKEOPTS="$MAKEOPTS -j1" || die
+	MAKEOPTS="$MAKEOPTS -j1" emake || die
 
 	cd designer
 	/usr/bin/qmake qwtplugin.pro
-	emake MAKEOPTS="$MAKEOPTS -j1" || die
+	MAKEOPTS="$MAKETOPS -j1" emake || die
 }
 
 src_install () {
