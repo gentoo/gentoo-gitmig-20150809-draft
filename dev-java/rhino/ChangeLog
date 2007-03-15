@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.47 2007/02/18 10:00:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.48 2007/03/15 01:05:31 nichoj Exp $
+
+  15 Mar 2007; Joshua Nichols <nichoj@gentoo.org> rhino-1.5.5-r4.ebuild,
+  rhino-1.6.1-r3.ebuild:
+  Stable on amd64 for bug #16670.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> rhino-1.6.1-r3.ebuild:
   Stable on ppc wrt bug 166700
