@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libg15render
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.7 2007/03/14 23:39:51 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.8 2007/03/15 08:38:47 tove Exp $
+
+  15 Mar 2007; Torsten Veller <tove@gentoo.org> libg15render-1.2-r1.ebuild:
+  Stable on x86 (#170417)
 
 *libg15render-1.2-r1 (14 Mar 2007)
 
