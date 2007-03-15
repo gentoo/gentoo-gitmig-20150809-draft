@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gifsicle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.13 2007/03/12 14:05:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.14 2007/03/15 17:40:15 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> gifsicle-1.44.ebuild:
+  Stable  on ppc64; bug #170840
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> gifsicle-1.44.ebuild:
   Keyworded ~sparc wrt #170430
