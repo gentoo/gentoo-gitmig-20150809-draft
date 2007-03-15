@@ -3,10 +3,6 @@ EBUILD tango-icon-theme-extras-0.1.0-r1.ebuild 1195 RMD160 c1cbd12279d40ed93e9e6
 MD5 22ff2bf6566cc6ed5f00655b5e7cea6f tango-icon-theme-extras-0.1.0-r1.ebuild 1195
 RMD160 c1cbd12279d40ed93e9e69194b26fb77009fa92a tango-icon-theme-extras-0.1.0-r1.ebuild 1195
 SHA256 d24adea57a042dc9095e246f74821d4ef5c8175fca1dfe95f85c2898988e25f4 tango-icon-theme-extras-0.1.0-r1.ebuild 1195
-EBUILD tango-icon-theme-extras-0.1.0.ebuild 931 RMD160 415aaf1ffa2230cb3ceafd162c050d539ffc995e SHA1 1b3e90e53d81daa2be33c55454254d32742b3e2f SHA256 0dffc07fd1f74cfb2a2617f714e121aaff2c49aef74271419f471d2f61dfe3ad
-MD5 2caeb22a864f4bfc428def65b0e19ae4 tango-icon-theme-extras-0.1.0.ebuild 931
-RMD160 415aaf1ffa2230cb3ceafd162c050d539ffc995e tango-icon-theme-extras-0.1.0.ebuild 931
-SHA256 0dffc07fd1f74cfb2a2617f714e121aaff2c49aef74271419f471d2f61dfe3ad tango-icon-theme-extras-0.1.0.ebuild 931
 MISC ChangeLog 2303 RMD160 913873288fc01b166e3b9134467366ac58fcfce9 SHA1 f7203a81d4fea6258cc630ed5f47a0712cf78e88 SHA256 f7e461b77bc44ea8526e0531afdd15a48e1e2bbb0a92b4dd8006942e97046a3f
 MD5 78e927f7237e7697fd44030309fc1b1e ChangeLog 2303
 RMD160 913873288fc01b166e3b9134467366ac58fcfce9 ChangeLog 2303
@@ -15,9 +11,6 @@ MISC metadata.xml 292 RMD160 d7b7e392ab66db5f5de20f64ef160ec568ff9116 SHA1 8fb6e
 MD5 635e35abfc7eb9b1e9ff08c8e3cb58cc metadata.xml 292
 RMD160 d7b7e392ab66db5f5de20f64ef160ec568ff9116 metadata.xml 292
 SHA256 cc7269e67766389989322d16941a59b398b90e46c0a302b18a547e6549563754 metadata.xml 292
-MD5 736932857c86d0ce2d09bee96eda052e files/digest-tango-icon-theme-extras-0.1.0 289
-RMD160 9fa371e33b678125626ccca189c9eead53d13f10 files/digest-tango-icon-theme-extras-0.1.0 289
-SHA256 ce71b05ec497383f15884d3bb51e54ad2c17b7aa10934bef862fd1254ac49f35 files/digest-tango-icon-theme-extras-0.1.0 289
 MD5 736932857c86d0ce2d09bee96eda052e files/digest-tango-icon-theme-extras-0.1.0-r1 289
 RMD160 9fa371e33b678125626ccca189c9eead53d13f10 files/digest-tango-icon-theme-extras-0.1.0-r1 289
 SHA256 ce71b05ec497383f15884d3bb51e54ad2c17b7aa10934bef862fd1254ac49f35 files/digest-tango-icon-theme-extras-0.1.0-r1 289
