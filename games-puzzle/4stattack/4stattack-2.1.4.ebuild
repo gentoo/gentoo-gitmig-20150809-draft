@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/4stattack-2.1.4.ebuild,v 1.8 2005/09/26 18:13:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/4stattack-2.1.4.ebuild,v 1.9 2007/03/15 14:07:57 nyhm Exp $
 
 inherit eutils games
 
@@ -10,33 +10,31 @@ SRC_URI="mirror://sourceforge/forcedattack/4stAttack-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 hppa ~amd64 ppc"
+KEYWORDS="~amd64 hppa ppc x86"
 IUSE=""
 
-DEPEND=">=dev-python/pygame-1.5"
+RDEPEND="dev-python/pygame"
 
-S="${WORKDIR}/4stAttack-${PV}"
+S=${WORKDIR}/4stAttack-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# move the doc files aside so it's easier to install the game files
 	mv README.txt credits.txt changelog.txt ..
-	rm GPL version~
+	rm -f GPL version~
 
-	#This patch makes the game save settings in $HOME instead
-	# of in /usr/share/games
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	# This patch makes the game save settings in $HOME
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_install() {
-	dogamesbin ${FILESDIR}/4stattack
-	dosed "s:GENTOO_DIR:${GAMES_DATADIR}/${PN}:" ${GAMES_BINDIR}/4stattack
-	dodoc ../README.txt ../credits.txt ../changelog.txt
-
-	dodir ${GAMES_DATADIR}/4stattack
-	cp -R * ${D}/${GAMES_DATADIR}/4stattack/
-
+	games_make_wrapper ${PN} "python ${PN}.py" "${GAMES_DATADIR}"/${PN}
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r * || die "doins failed"
+	newicon kde/icons/48x48/forcedattack2.png ${PN}.png
+	make_desktop_entry ${PN} "4st Attack 2"
+	dodoc ../{README.txt,credits.txt,changelog.txt}
 	prepgamesdirs
 }
