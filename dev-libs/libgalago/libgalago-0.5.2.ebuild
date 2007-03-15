@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/libgalago-0.5.2.ebuild,v 1.5 2007/02/03 14:39:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/libgalago-0.5.2.ebuild,v 1.6 2007/03/15 19:06:17 corsair Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.galago-project.org/files/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="test"
 
 RDEPEND=">=dev-libs/glib-2.8
