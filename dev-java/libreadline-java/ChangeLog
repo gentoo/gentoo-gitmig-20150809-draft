@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libreadline-java
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.27 2007/03/15 00:29:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.28 2007/03/15 17:43:33 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  libreadline-java-0.8.0-r2.ebuild:
+  Stable  on ppc64; bug #170932
 
   15 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
   libreadline-java-0.8.0-r2.ebuild:
