@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6971 2007/03/14 20:01:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6972 2007/03/15 07:21:57 hansmi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -347,11 +347,6 @@ net-analyzer/netwatch
 # <hollow@gentoo.org> (15 Feb 2007)
 # Segfaults all over the place; use 1.06.* instead
 =dev-libs/xmlrpc-c-1.09.00
-
-# Michael Hanselmann <hansmi@gentoo.org> (11 Feb 2007)
-# Pending removal March 11th; As upstream, I stopped development on this ages
-# ago.
-app-portage/portage-prefpane
 
 # Mike Frysinger <vapier@gentoo.org> (11 Feb 2007)
 # Use mdadm; this package is dead.
