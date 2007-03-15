@@ -1,22 +1,22 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.7.ebuild,v 1.7 2006/10/05 20:58:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.7.ebuild,v 1.8 2007/03/15 12:17:18 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="Free Warlords clone"
 HOMEPAGE="http://www.freelords.org/"
-SRC_URI="mirror://sourceforge/freelords/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ppc x86"
 IUSE="editor nls"
 
 RDEPEND="dev-libs/expat
 	media-libs/sdl-mixer
-	>=media-libs/libsdl-1.2
-	>=media-libs/sdl-image-1.2
+	media-libs/libsdl
+	media-libs/sdl-image
 	>=media-libs/freetype-2
 	>=media-libs/paragui-1.1.8
 	!=media-libs/paragui-1.0*
@@ -27,8 +27,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if ! built_with_use -o media-libs/sdl-mixer vorbis oggvorbis ; then
-		die "Please emerge sdlmixer with USE=vorbis"
+	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+		die "Please emerge sdl-mixer with USE=vorbis"
 	fi
 	games_pkg_setup
 }
@@ -44,8 +44,9 @@ src_unpack() {
 		-e '/^localedir/ s:$(datadir):/usr/share:' \
 		-e 's:$(prefix)/share/locale:/usr/share/locale:' src/Makefile.in \
 		|| die "sed src/Makefile.in failed"
-	epatch ${FILESDIR}/${P}-gcc41.patch
-	epatch ${FILESDIR}/${P}-freelordsrc.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-freelordsrc.patch
 }
 
 src_compile() {
@@ -61,11 +62,11 @@ src_compile() {
 }
 
 src_install() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		localedir="/usr/share/locale" \
 		fldesktopdir="/usr/share/applications" \
-		install || die "make install failed"
+		install || die "emake install failed"
 	dodoc AUTHORS BUGS ChangeLog DEPENDENCIES HACKER NEWS README TODO \
 		doc/[[:upper:]]*
 	prepgamesdirs
