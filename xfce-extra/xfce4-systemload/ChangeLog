@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.42 2007/03/15 13:56:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.43 2007/03/15 16:27:44 drac Exp $
+
+  15 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-systemload-0.4.2.ebuild:
+  RESTRICT="test" which is not supported by goodies upstream.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-systemload-0.4.2.ebuild:
