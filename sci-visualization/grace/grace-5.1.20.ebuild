@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.20.ebuild,v 1.3 2007/02/22 10:03:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.20.ebuild,v 1.4 2007/03/15 22:18:36 kugelfang Exp $
 
 inherit eutils
 
@@ -51,8 +51,8 @@ src_compile() {
 		gracehelpviewer="netscape"
 	fi
 
-	sed -i -e "s%doc/%${ROOT}usr/share/doc/${PF}/html/%g" src/*
-	sed -i -e "s%examples/%${ROOT}usr/share/doc/${PF}/examples/%g" src/xmgrace.c
+	sed -i -e "s%doc/%/usr/share/doc/${PF}/html/%g" src/*
+	sed -i -e "s%examples/%/usr/share/doc/${PF}/examples/%g" src/xmgrace.c
 
 	econf \
 		--enable-grace-home=/usr/share/grace \
