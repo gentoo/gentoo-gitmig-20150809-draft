@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.32 2007/03/12 19:19:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.33 2007/03/15 23:33:42 jer Exp $
+
+  15 Mar 2007; Jeroen Roovers <jer@gentoo.org>
+  arphicfonts-0.1.20060513.ebuild:
+  Stable for HPPA (bug #171063).
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   arphicfonts-0.1.20060513.ebuild:

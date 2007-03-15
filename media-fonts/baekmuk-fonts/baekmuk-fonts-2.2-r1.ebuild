@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2-r1.ebuild,v 1.7 2006/11/26 22:29:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2-r1.ebuild,v 1.8 2007/03/15 23:34:06 jer Exp $
 
 inherit font font-ebdftopcf
 
@@ -16,7 +16,7 @@ SRC_URI="X? ( http://kldp.net/download.php/1429/${TTF_P}.tar.gz )
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc-macos ~ppc64 s390 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc-macos ~ppc64 s390 sh sparc ~x86 ~x86-fbsd"
 IUSE="unicode X"
 
 S=${WORKDIR}
