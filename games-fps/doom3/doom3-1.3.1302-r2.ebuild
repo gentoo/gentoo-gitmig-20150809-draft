@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.6 2007/03/12 14:27:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.7 2007/03/15 14:44:22 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://3dgamers/${PN}/${PN}-linux-${PV}.x86.run
 LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="alsa cdinstall opengl roe"
+IUSE="alsa dedicated cdinstall opengl roe"
 RESTRICT="strip"
 
 DEPEND="app-arch/bzip2
@@ -48,9 +48,17 @@ src_install() {
 	doexe libgcc_s.so.1 libstdc++.so.5 || die "doexe libs"
 	doexe openurl.sh || die "openurl.sh"
 	if use x86; then
-		doexe bin/Linux/x86/doom{,ded}.x86 || die "doexe x86 exes"
+		if use dedicated; then
+			doexe bin/Linux/x86/doom{,ded}.x86 || die "doexe x86 exes"
+		else
+			doexe bin/Linux/x86/doom.x86 || die "doexe x86 exes"
+		fi
 	elif use amd64; then
-		doexe bin/Linux/amd64/doom{,ded}.x86 || die "doexe amd64 exes"
+		if use dedicated; then
+			doexe bin/Linux/amd64/doom{,ded}.x86 || die "doexe amd64 exes"
+		else
+			doexe bin/Linux/amd64/doom.x86 || die "doexe amd64 exes"
+		fi
 	else
 		die "Cannot copy executables!"
 	fi
@@ -58,7 +66,9 @@ src_install() {
 	doins -r base d3xp pb || die "doins base d3xp pb"
 
 	games_make_wrapper doom3 ./doom.x86 "${dir}" "${dir}"
-	games_make_wrapper doom3-ded ./doomded.x86 "${dir}" "${dir}"
+	if use dedicated; then
+		games_make_wrapper doom3-ded ./doomded.x86 "${dir}" "${dir}"
+	fi
 
 	doicon ${DISTDIR}/doom3.png || die "Copying icon"
 
