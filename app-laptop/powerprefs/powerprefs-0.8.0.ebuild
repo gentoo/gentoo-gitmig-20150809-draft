@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.8.0.ebuild,v 1.1 2007/03/12 01:56:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.8.0.ebuild,v 1.2 2007/03/15 03:44:07 josejx Exp $
 
 DESCRIPTION="program to interface with pbbuttonsd (Powerbook/iBook) keys"
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -15,16 +15,11 @@ DEPEND=">=x11-libs/gtk+-2.4
 	>=app-laptop/pbbuttonsd-0.8.0"
 
 src_compile() {
-	econf --prefix=/usr || die "powerprefs configure failed"
-	emake || die "sorry, powerprefs compile failed"
+	econf || die "Failed to configure powerprefs"
+	emake || die "Failed to compile powerprefs"
 }
 
 src_install() {
-	make \
-		prefix=${D}/usr \
-		datadir=${D}/usr/share \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die "sorry, failed to install powerprefs"
+	make install DESTDIR=${D} || die "Failed to install powerprefs"
 	dodoc README
 }
