@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-diskperf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf/ChangeLog,v 1.22 2007/03/15 13:48:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf/ChangeLog,v 1.23 2007/03/15 16:12:48 drac Exp $
+
+  15 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-diskperf-2.1.0.ebuild:
+  RESTRICT="test" which is not supported by goodies upstream.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-diskperf-2.1.0.ebuild:
