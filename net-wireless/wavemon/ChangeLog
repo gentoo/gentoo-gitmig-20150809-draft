@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.20 2007/02/10 12:06:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.21 2007/03/15 17:16:40 armin76 Exp $
+
+  15 Mar 2007; Raúl Porcel <armin76@gentoo.org> wavemon-0.4.0b-r2.ebuild:
+  x86 stable wrt bug 171052
 
 *wavemon-0.4.0b-r2 (10 Feb 2007)
 
