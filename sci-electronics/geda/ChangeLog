@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.32 2007/03/10 14:14:38 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.33 2007/03/15 21:50:39 calchan Exp $
+
+  15 Mar 2007; Denis Dupeyron <calchan@gentoo.org> geda-20070216.ebuild:
+  Check that media-libs/gd has png support compiled in, see bug #170903,
+  thanks to Sebastian Zanker.
 
 *geda-20070216 (10 Mar 2007)
 
