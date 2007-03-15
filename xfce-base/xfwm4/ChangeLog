@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.93 2007/03/15 13:38:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.94 2007/03/15 15:01:21 drac Exp $
+
+  15 Mar 2007; Samuli Suominen <drac@gentoo.org> -xfwm4-4.2.3.2-r1.ebuild,
+  xfwm4-4.4.0.ebuild:
+  Add missing dep for xfce-mcs-manager, bug 170941.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfwm4-4.4.0.ebuild:
   Stable on ppc64; bug #169987
