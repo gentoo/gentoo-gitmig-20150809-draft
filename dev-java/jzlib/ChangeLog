@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.25 2007/02/18 19:50:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.26 2007/03/15 07:34:19 opfer Exp $
+
+  15 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  jzlib-1.0.7-r1.ebuild:
+  stable x86, bug 170959
 
   18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> jzlib-1.0.7-r1.ebuild:
   Ebuild cleanup.
