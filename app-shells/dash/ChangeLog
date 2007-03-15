@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.35 2007/02/21 23:08:31 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.36 2007/03/15 22:01:18 uberlord Exp $
+
+*dash-0.5.3.7 (15 Mar 2007)
+
+  15 Mar 2007; Roy Marples <uberlord@gentoo.org>
+  +files/dash-0.5.3-sort-locale.patch, metadata.xml, +dash-0.5.3.7.ebuild:
+  ka0ttic and exg are retired. I will take this over.
+  Update to debian patchset 7.
+  Add patch to build correctly when LC_ALL isn't C.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
