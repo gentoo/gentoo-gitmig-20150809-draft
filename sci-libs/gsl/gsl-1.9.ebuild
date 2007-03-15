@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.9.ebuild,v 1.2 2007/02/28 11:11:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.9.ebuild,v 1.3 2007/03/15 14:05:55 markusle Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -26,15 +26,11 @@ src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
 	filter-flags -ffast-math
 
-	econf --disable-libtool-lock || die
+	econf --disable-libtool-lock || die "configure failed"
 	emake || die 'emake failed.'
 }
 
-src_test() {
-	make check || die 'make check failed.'
-}
-
 src_install() {
-	einstall || die 'einstall failed.'
+	make install DESTDIR=${D} || die 'install failed.'
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SUPPORT THANKS TODO
 }
