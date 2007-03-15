@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.40 2007/02/18 09:31:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.41 2007/03/15 05:08:44 nichoj Exp $
+
+  15 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
+  commons-lang-2.1-r1.ebuild:
+  Stable on amd64 for bug #166744.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> commons-lang-2.1-r1.ebuild:
   Stable on ppc wrt bug 166744
