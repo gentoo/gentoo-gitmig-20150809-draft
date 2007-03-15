@@ -1,0 +1,34 @@
+diff -Naur capi20.orig/capiutils.h capi20/capiutils.h
+--- capi20.orig/capiutils.h	2005-03-22 16:16:34.000000000 +0100
++++ capi20/capiutils.h	2007-03-15 01:18:09.000000000 +0100
+@@ -308,6 +308,10 @@
+ #define capi20_cmd2str	capi_cmd2str
+ char *capi_cmd2str(_cbyte cmd, _cbyte subcmd);
+ 
++/*
++ * WARNING: The following two functions use a single static buffer and
++ * are not thread-safe.
++ */
+ #define capi20_cmsg2str	capi_cmsg2str
+ char *capi_cmsg2str(_cmsg * cmsg);
+ 
+diff -Naur capi20.orig/convert.c capi20/convert.c
+--- capi20.orig/convert.c	2005-05-09 10:23:01.000000000 +0200
++++ capi20/convert.c	2007-03-15 01:20:13.000000000 +0100
+@@ -894,10 +894,14 @@
+ static void bufprint(char *fmt,...)
+ {
+ 	va_list f;
++	size_t space = buf + sizeof(buf) - p, len;
+ 	va_start(f, fmt);
+-	vsprintf(p, fmt, f);
++	len = vsnprintf(p, space, fmt, f);
+ 	va_end(f);
+-	p += strlen(p);
++	if (len < space - 1)
++		p += len;
++	else
++		p += space - 1;
+ }
+ 
+ static void printstructlen(_cbyte * m, unsigned len)
