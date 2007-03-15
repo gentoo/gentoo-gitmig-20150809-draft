@@ -1,21 +1,24 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.7 2007/02/22 01:18:57 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.8 2007/03/15 04:31:06 tgall Exp $
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  14 Mar 2007; Tom Gall <tgall@gentoo.org> ruby-xslt-0.9.3.ebuild:
+  added ~ppc64
+
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
-  21 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  21 Jan 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   ruby-xslt-0.9.3.ebuild:
   Added examples use flag to ebuild, #145222
 
 *ruby-xslt-0.9.3 (03 Dec 2006)
 
-  03 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  03 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   -ruby-xslt-0.9.2.ebuild, +ruby-xslt-0.9.3.ebuild:
   Added 0.9.3, removed 0.9.2 #155270
 
-  20 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-xslt-0.9.2.ebuild:
+  20 Jun 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-xslt-0.9.2.ebuild:
   Fix ebuild (bug #137322) and keyword ~amd64.
 
   29 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-xslt-0.8.1.ebuild:

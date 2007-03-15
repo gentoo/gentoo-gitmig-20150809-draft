@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.18 2007/03/06 12:59:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.19 2007/03/15 04:35:47 tgall Exp $
+
+  14 Mar 2007; Tom Gall <tgall@gentoo.org> ruby-fcgi-0.8.7.ebuild:
+  added ~ppc64
 
 *ruby-fcgi-0.8.7 (06 Mar 2007)
 
@@ -10,7 +13,7 @@
   +ruby-fcgi-0.8.7.ebuild:
   Version bump; remove old versions and patches.
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> ruby-fcgi-0.8.6.ebuild:
@@ -19,7 +22,7 @@
   06 Jun 2006; Simon Stelling <blubb@gentoo.org> ruby-fcgi-0.8.6.ebuild:
   stable on amd64
 
-  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-fcgi-0.8.6.ebuild:
+  22 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-fcgi-0.8.6.ebuild:
   Add ~x86-fbsd keyword.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-fcgi-0.8.6.ebuild:
