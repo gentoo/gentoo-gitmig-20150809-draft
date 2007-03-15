@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok-Player/DCOP-Amarok-Player-0.036.ebuild,v 1.3 2007/03/15 08:27:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok-Player/DCOP-Amarok-Player-0.036.ebuild,v 1.4 2007/03/15 08:31:14 tove Exp $
 
 inherit perl-module
 
