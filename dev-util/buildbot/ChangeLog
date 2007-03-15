@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.10 2007/03/15 02:04:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.11 2007/03/15 14:10:42 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Added ~ppc64; bug #169888
 
   15 Mar 2007; Jeroen Roovers <jer@gentoo.org> buildbot-0.7.5.ebuild:
   Stable for HPPA (bug #169888).
