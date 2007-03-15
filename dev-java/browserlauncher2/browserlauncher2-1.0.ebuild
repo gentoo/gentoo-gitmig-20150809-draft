@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/browserlauncher2/browserlauncher2-1.0.ebuild,v 1.2 2007/03/11 22:50:33 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/browserlauncher2/browserlauncher2-1.0.ebuild,v 1.3 2007/03/15 17:24:58 corsair Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/browserlaunch2/${MY_PN}-all-${MY_PV}.jar"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4"
