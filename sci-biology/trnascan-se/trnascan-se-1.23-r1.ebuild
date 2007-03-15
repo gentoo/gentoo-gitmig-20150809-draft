@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/trnascan-se-1.23-r1.ebuild,v 1.3 2006/09/14 00:29:21 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/trnascan-se-1.23-r1.ebuild,v 1.4 2007/03/15 15:11:31 kugelfang Exp $
 
 inherit toolchain-funcs
 
@@ -18,9 +18,9 @@ DEPEND="dev-lang/perl"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -e "s%BINDIR  = \$(HOME)/bin%BINDIR = ${ROOT}/usr/bin%" \
-		-e "s%LIBDIR  = \$(HOME)/lib/tRNAscan-SE%LIBDIR = ${ROOT}/usr/lib/${PN}%" \
-		-e "s%MANDIR  = \$(HOME)/man%MANDIR = ${ROOT}/usr/share/man%" \
+	sed -e "s%BINDIR  = \$(HOME)/bin%BINDIR = /usr/bin%" \
+		-e "s%LIBDIR  = \$(HOME)/lib/tRNAscan-SE%LIBDIR = /usr/lib/${PN}%" \
+		-e "s%MANDIR  = \$(HOME)/man%MANDIR = /usr/share/man%" \
 		-e "s%CC = gcc%CC = $(tc-getCC)%" \
 		-e "s%CFLAGS = -O%CFLAGS = ${CFLAGS}%" \
 		-i Makefile || die

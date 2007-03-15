@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/trnascan-se
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.7 2007/02/22 01:32:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.8 2007/03/15 15:11:31 kugelfang Exp $
+
+  15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
+  trnascan-se-1.23-r1.ebuild:
+  QA: Removed illegal use of ${ROOT}. Bug #168043
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
