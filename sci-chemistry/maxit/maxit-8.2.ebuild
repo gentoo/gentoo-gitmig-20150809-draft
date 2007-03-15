@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/maxit-8.2.ebuild,v 1.3 2006/09/07 00:51:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/maxit-8.2.ebuild,v 1.4 2007/03/15 17:38:54 kugelfang Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -35,8 +35,8 @@ src_unpack() {
 
 	sed -i \
 		-e "s:^\(CCC=\).*:\1$(tc-getCXX):g" \
-		-e "s:^\(GINCLUDE=\).*:\1-I${ROOT}usr/include/rcsb:g" \
-		-e "s:^\(LIBDIR=\).*:\1${ROOT}usr/$(get_libdir):g" \
+		-e "s:^\(GINCLUDE=\).*:\1-I/usr/include/rcsb:g" \
+		-e "s:^\(LIBDIR=\).*:\1/usr/$(get_libdir):g" \
 		${S}/etc/make.*
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/maxit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.6 2006/10/01 17:40:15 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.7 2007/03/15 17:38:54 kugelfang Exp $
+
+  15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> maxit-8.2.ebuild:
+  QA: Removed illegal use of ${ROOT}. Bug #168043
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer so it goes to all of the sci-chemistry team.
