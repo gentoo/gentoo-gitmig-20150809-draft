@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.2 2006/07/09 07:15:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.3 2007/03/15 17:08:43 kugelfang Exp $
 
 inherit eutils fortran toolchain-funcs
 
@@ -79,8 +79,8 @@ src_test() {
 src_install() {
 	# Install to locations resembling FHS
 	sed -i \
-		-e "s:${S}:${ROOT}usr:g" \
-		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT ${ROOT}usr:g" \
+		-e "s:${S}:usr:g" \
+		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT usr:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DATA \$CNS_ROOT/share/data:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DOC \$CNS_ROOT/share/doc/${PF}:g" \
 		-e "s:CNS_MODULE \$CNS_SOLVE/modules:CNS_MODULE \$CNS_DATA/modules:g" \

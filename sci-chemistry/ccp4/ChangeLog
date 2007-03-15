@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ccp4
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.8 2007/01/06 22:24:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.9 2007/03/15 17:04:05 kugelfang Exp $
+
+  15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> ccp4-6.0.1-r1.ebuild,
+  ccp4-6.0.2.ebuild:
+  QA: Removed illegal use of ${ROOT}. Bug #168043
 
   06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -ccp4-6.0.1.ebuild:
   QA: Removed unused versions.

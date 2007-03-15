@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.2 2006/09/26 08:01:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.3 2007/03/15 17:04:05 kugelfang Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -247,11 +247,11 @@ src_install() {
 	# Get rid of S instances
 	# Also the main clipper library is built as libclipper-core, not libclipper
 	sed -i \
-		-e "s:${S}:${ROOT}usr:g" \
+		-e "s:${S}:usr:g" \
 		-e "s:lclipper :lclipper-core :g" \
 		${S}/bin/clipper-config
 #	sed -i \
-#		-e "s:${S}:${ROOT}usr:g" \
+#		-e "s:${S}:usr:g" \
 #		${S}/$(get_libdir)/cctbx/cctbx_build/setpaths*
 
 	# Bins
