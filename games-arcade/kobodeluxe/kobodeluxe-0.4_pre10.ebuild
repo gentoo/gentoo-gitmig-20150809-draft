@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.15 2007/03/12 13:37:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.16 2007/03/15 22:11:23 nyhm Exp $
 
-inherit flag-o-matic eutils games
+inherit eutils games
 
 MY_P="KoboDeluxe-${PV/_/}"
 DESCRIPTION="An SDL port of xkobo, a addictive space shoot-em-up"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.olofson.net/kobodl/"
 SRC_URI="http://www.olofson.net/kobodl/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT=0
+SLOT="0"
 KEYWORDS="alpha amd64 ppc ~ppc64 x86"
 IUSE="opengl"
 
@@ -18,10 +18,9 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	opengl? ( virtual/opengl )"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	filter-flags -fforce-addr
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc41.patch
@@ -41,13 +40,14 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon data/logo3.png ${PN}.png
+	make_desktop_entry kobodl "Kobo Deluxe"
 	dodoc ChangeLog README* TODO
-
-	insinto "${GAMES_STATEDIR}/${PN}"
+	insinto "${GAMES_STATEDIR}"/${PN}
 	doins 501 || die "doins failed"
 	prepgamesdirs
-	fperms 2775 "${GAMES_STATEDIR}/${PN}"
+	fperms 2775 "${GAMES_STATEDIR}"/${PN}
 }
 
 pkg_postinst() {

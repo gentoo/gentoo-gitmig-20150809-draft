@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kobodeluxe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.19 2007/03/12 13:37:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.20 2007/03/15 22:11:23 nyhm Exp $
+
+  15 Mar 2007; Tristan Heaven <nyhm@gentoo.org> kobodeluxe-0.4_pre10.ebuild:
+  Install menu entry, bug #160228
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> kobodeluxe-0.4_pre10.ebuild:
   Replacing einfo with elog
