@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.42 2007/03/14 20:25:01 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.43 2007/03/15 02:10:08 mr_bones_ Exp $
+
+  15 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  scorched3d-40.1d.ebuild:
+  stable for x86
 
   14 Mar 2007; Tristan Heaven <nyhm@gentoo.org> scorched3d-40.1d.ebuild:
   Install menu entry
