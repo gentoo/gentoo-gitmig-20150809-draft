@@ -1,11 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.9 2006/10/21 22:37:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.10 2007/03/15 19:52:40 dev-zero Exp $
 
-inherit eutils multilib
+inherit eutils multilib versionator
 
-MY_PV=${PV//./_}
-MY_P=${PN}-src_${MY_PV}
+MY_PN="xerces-c-src"
+MY_P=${MY_PN}_$(replace_all_version_separators _)
+
 DESCRIPTION="Xerces-C++ is a validating XML parser written in a portable subset of C++."
 HOMEPAGE="http://xml.apache.org/xerces-c/index.html"
 SRC_URI="mirror://apache/xml/xerces-c/source/${MY_P}.tar.gz"
@@ -17,7 +18,7 @@ IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}"/xerces-c-src
+S=${WORKDIR}/${MY_PN}
 
 pkg_setup() {
 	eval unset ${!LC_*} LANG
@@ -29,21 +30,21 @@ src_unpack() {
 	cd "${S}"
 
 	# Fix multilib install
-	epatch "${FILESDIR}"/${P}-multilib.patch
-	epatch "${FILESDIR}"/${P}-libpath.patch
+	epatch "${FILESDIR}/${P}-multilib.patch"
+	epatch "${FILESDIR}/${P}-libpath.patch"
 }
 
 src_compile() {
 	export XERCESCROOT="${S}"
 	cd src/xercesc
 	./runConfigure -plinux -P/usr ${EXTRA_ECONF}
-	emake -j1 || die
+	emake -j1 || die "emake failed"
 }
 
 src_install () {
 	export XERCESCROOT="${S}"
 	cd "${S}"/src/xercesc
-	make DESTDIR="${D}" MLIBDIR=$(get_libdir) install || die
+	emake DESTDIR="${D}" MLIBDIR=$(get_libdir) install || die "emake failed"
 
 	if use doc; then
 		dodir /usr/share/doc/${P}

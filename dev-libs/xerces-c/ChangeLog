@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xerces-c
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.47 2006/10/21 22:37:28 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.48 2007/03/15 19:52:40 dev-zero Exp $
+
+  15 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/xerces-c-2.6.0-multilib.patch, xerces-c-2.7.0-r1.ebuild:
+  Dropped a stale patch. Some minor cleanups.
 
   21 Oct 2006; Mike Frysinger <vapier@gentoo.org> xerces-c-2.7.0-r1.ebuild:
   Respect EXTRA_ECONF #146651 by Triphon Penakov.
