@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-0.3.8.4.ebuild,v 1.2 2007/03/13 20:18:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-0.3.8.4.ebuild,v 1.3 2007/03/15 20:23:03 rbrown Exp $
 
 inherit ruby
 
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_test() {
-	rake test
+	rake test || die "rake test failed"
 }
 
 src_install() {

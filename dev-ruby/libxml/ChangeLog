@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.12 2007/03/15 10:17:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.13 2007/03/15 20:23:03 rbrown Exp $
+
+  15 Mar 2007; Richard Brown <rbrown@gentoo.org> libxml-0.3.8.4.ebuild:
+  Fix src_test, from ferringb@gmail.com
 
   13 Mar 2007; Tom Gall <tgall@gentoo.org> libxml-0.3.8.4.ebuild:
   added ~ppc64
