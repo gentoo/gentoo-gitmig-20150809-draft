@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.166 2007/03/14 11:08:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.167 2007/03/15 03:45:59 jer Exp $
+
+  15 Mar 2007; Jeroen Roovers <jer@gentoo.org> pango-1.14.10.ebuild:
+  Stable for HPPA (bug #163678).
 
   14 Mar 2007; Simon Stelling <blubb@gentoo.org> pango-1.14.10.ebuild:
   stable on amd64; security bug 163768
