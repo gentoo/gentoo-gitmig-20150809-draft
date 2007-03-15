@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.2 2006/07/09 07:03:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.3 2007/03/15 17:32:11 kugelfang Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -24,7 +24,7 @@ src_unpack() {
 	epatch ${FILESDIR}/makefile-fixes.patch
 
 	sed -i \
-		-e "s:^\(FFTW.*=\).*:\1 ${ROOT}usr:g" \
+		-e "s:^\(FFTW.*=\).*:\1 /usr:g" \
 		-e "s:^\(LIB.*=.*\$(FFTW)/\).*:\1$(get_libdir):g" \
 		-e "s:^\(BIN.*=\).*:\1 ${D}usr/bin:g" \
 		-e "s:^\(CFLAGS.*=\).*:\1 ${CFLAGS}:g" \
