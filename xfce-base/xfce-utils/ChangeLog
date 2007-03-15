@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.98 2007/03/11 23:38:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.99 2007/03/15 13:30:17 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce-utils-4.4.0-r3.ebuild:
+  Stable on ppc64; bug #169987
 
   11 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
   xfce-utils-4.4.0-r3.ebuild:

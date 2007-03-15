@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.92 2007/03/12 17:24:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.93 2007/03/15 13:35:14 corsair Exp $
+
+  15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfdesktop-4.4.0-r3.ebuild:
+  Stable on ppc64; bug #169987
 
   12 Mar 2007; Samuli Suominen <drac@gentoo.org> xfdesktop-4.4.0-r3.ebuild:
   Add warning about disabled desktop icons without USE dbus.
