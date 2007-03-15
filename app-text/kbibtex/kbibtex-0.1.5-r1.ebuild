@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.1.5-r1.ebuild,v 1.1 2006/11/14 17:54:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.1.5-r1.ebuild,v 1.2 2007/03/15 08:53:41 cryos Exp $
 
 inherit kde eutils
 
@@ -21,8 +21,5 @@ RDEPEND="${DEPEND}
 
 need-kde 3.3
 
-src_unpack() {
-	unpack ${A}
-	cd ${S} 
-	epatch ${FILESDIR}/kbibtex-0.1.5-viewdocument.patch 
-}
+PATCHES="${FILESDIR}/kbibtex-0.1.5-viewdocument.patch
+	${FILESDIR}/kbibtex-0.1.5-compile-fix.patch"
