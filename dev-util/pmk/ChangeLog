@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pmk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.8 2007/02/22 02:23:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.9 2007/03/15 19:35:50 dholm Exp $
+
+*pmk-0.10.1 (15 Mar 2007)
+
+  15 Mar 2007; <dholm@gentoo.org> +pmk-0.10.1.ebuild:
+  Version bumped and added fix from James Rowe (jnrowe (at) ukfsn (dot) org).
+  Closes bug #170983.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
