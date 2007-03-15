@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-g15-spectrum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.1 2007/03/15 00:07:32 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.2 2007/03/15 11:20:24 rbu Exp $
+
+  15 Mar 2007; Robert Buchholz <rbu@gentoo.org>
+  audacious-g15-spectrum-1.0_pre.ebuild:
+  Added ~x86, thanks to Alex Maclean (monkeh) for testing
 
 *audacious-g15-spectrum-1.0_pre (15 Mar 2007)
 
