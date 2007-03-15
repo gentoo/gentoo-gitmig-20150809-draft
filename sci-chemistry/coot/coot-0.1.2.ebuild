@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.1.2.ebuild,v 1.2 2006/09/26 08:01:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.1.2.ebuild,v 1.3 2007/03/15 17:14:26 kugelfang Exp $
 
 inherit autotools
 
@@ -57,8 +57,8 @@ src_unpack() {
 
 	# Fix where it looks for some binaries
 	sed -i \
-		-e "s:/y/people/emsley/coot/Linux/bin/probe.2.11.050121.linux.RH9:${ROOT}usr/bin/probe:g" \
-		-e "s:/y/people/emsley/coot/Linux/bin/reduce.2.21.030604:${ROOT}usr/bin/reduce:g" \
+		-e "s:/y/people/emsley/coot/Linux/bin/probe.2.11.050121.linux.RH9:/usr/bin/probe:g" \
+		-e "s:/y/people/emsley/coot/Linux/bin/reduce.2.21.030604:/usr/bin/reduce:g" \
 		"${S}"/scheme/group-settings.scm
 
 	cd "${S}"
