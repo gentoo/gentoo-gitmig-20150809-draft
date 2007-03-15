@@ -1,41 +1,45 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-20010907.ebuild,v 1.8 2006/10/03 08:30:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-20010907.ebuild,v 1.9 2007/03/15 22:55:07 nyhm Exp $
 
-inherit games
+inherit eutils toolchain-funcs games
 
 MY_P="${PN}-2001.09.07-0102"
 DESCRIPTION="Educational arcade game where you have to solve math problems"
-SRC_URI="mirror://sourceforge/tuxmath/${MY_P}.tar.gz"
 HOMEPAGE="http://www.newbreedsoftware.com/tuxmath/"
+SRC_URI="mirror://sourceforge/tuxmath/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.1.5
-	>=media-libs/sdl-image-1.2.2
-	>=media-libs/sdl-mixer-1.2.4"
+DEPEND="media-libs/libsdl
+	media-libs/sdl-image
+	media-libs/sdl-mixer"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
-src_compile() {
-	emake \
-		DATA_PREFIX=${GAMES_DATADIR}/${PN} \
-		BIN_PREFIX=${GAMES_BINDIR} \
-		|| die "emake failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	rm -rf $(find -name CVS -o -name .xvpics -type d)
+	rm -f docs/COPYING.txt
+	sed -i \
+		-e '/strip/d' \
+		-e "1i CC=$(tc-getCC)" \
+		-e "s/-O2/${CFLAGS}/" \
+		-e "s:\$(DATA_PREFIX):${GAMES_DATADIR}/${PN}:" \
+		Makefile \
+		|| die "sed failed"
 }
 
 src_install() {
-	find -name CVS -type d -exec rm -rf '{}' \;
-
-	dogamesbin tuxmath || die "dogamesbin failed"
-
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r data/{images,sounds} "${D}/${GAMES_DATADIR}/${PN}/" \
-		|| die "cp failed"
-
+	dogamesbin ${PN} || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r data/{images,sounds} || die "doins failed"
+	newicon data/images/icon.png ${PN}.png
+	make_desktop_entry ${PN} "Tux Math"
 	dodoc docs/*.txt
 	prepgamesdirs
 }
