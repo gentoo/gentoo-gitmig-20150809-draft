@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.9 2007/01/05 09:09:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.10 2007/03/15 22:24:05 kugelfang Exp $
+
+  15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> labplot-1.5.1.3.ebuild,
+  labplot-1.5.1.4.ebuild:
+  QA: Removed illegal use of ${ROOT}. Bug #168043
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> labplot-1.5.1.3.ebuild,
   labplot-1.5.1.4.ebuild:
