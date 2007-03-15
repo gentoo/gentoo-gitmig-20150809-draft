@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/g15message-1.0.0.ebuild,v 1.1 2007/03/15 11:30:50 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/g15message-1.0.0.ebuild,v 1.2 2007/03/15 15:03:33 rbu Exp $
 
-DESCRIPTION="Macro recording plugin to G15daemon"
+DESCRIPTION="A simple message/alert client for G15daemon"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/g15daemon/${P}.tar.bz2"
 

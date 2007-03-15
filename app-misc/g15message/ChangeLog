@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15message
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/ChangeLog,v 1.1 2007/03/15 11:30:50 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/ChangeLog,v 1.2 2007/03/15 15:03:33 rbu Exp $
+
+  15 Mar 2007; Robert Buchholz <rbu@gentoo.org> g15message-1.0.0.ebuild:
+  Fixed $DESCRIPTION
 
 *g15message-1.0.0 (15 Mar 2007)
 
