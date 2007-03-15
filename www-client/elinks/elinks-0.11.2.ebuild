@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.2.ebuild,v 1.12 2007/03/10 15:38:12 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.2.ebuild,v 1.13 2007/03/15 12:03:13 spock Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -85,6 +85,12 @@ src_compile() {
 		myconf="--enable-fastmem"
 	fi
 
+	if use ssl ; then
+		myconf="${myconf} --with-openssl"
+	else
+		myconf="${myconf} --without-openssl --without-gnutls"
+	fi
+
 	econf \
 		--sysconfdir=/etc/elinks \
 		--enable-leds \
@@ -94,7 +100,6 @@ src_compile() {
 		$(use_with gpm) \
 		$(use_with zlib) \
 		$(use_with bzip2 bzlib) \
-		$(use_with ssl openssl) \
 		$(use_with X x) \
 		$(use_with lua) \
 		$(use_with guile) \
