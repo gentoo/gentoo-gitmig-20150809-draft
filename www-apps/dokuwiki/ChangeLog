@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.17 2007/03/01 01:13:06 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.18 2007/03/15 22:33:44 ticho Exp $
+
+*dokuwiki-20061106 (15 Mar 2007)
+
+  15 Mar 2007; Andrej Kacian <ticho@gentoo.org> +dokuwiki-20061106.ebuild:
+  Version bump, security bug #163781.
 
   01 Mar 2007; Renat Lumpau <rl03@gentoo.org> -dokuwiki-20060309-r1.ebuild,
   -dokuwiki-20060309c.ebuild, -dokuwiki-20060309d.ebuild:
