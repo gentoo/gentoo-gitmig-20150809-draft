@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.8 2007/03/15 16:13:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.9 2007/03/15 17:47:56 corsair Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.beanshell.org/${MY_DIST} mirror://gentoo/beanshell-icon.png"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc readline source"
 
 RDEPEND=">=virtual/jdk-1.4
