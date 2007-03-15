@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/ctypes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.15 2007/02/14 22:30:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.16 2007/03/15 16:52:40 marienz Exp $
+
+*ctypes-1.0.1-r1 (15 Mar 2007)
+
+  15 Mar 2007; Marien Zwart <marienz@gentoo.org>
+  +files/ctypes-1.0.1-execstack.patch, +ctypes-1.0.1-r1.ebuild:
+  Revision bump with a patch for executable stacks on x86 lifted from python
+  upstream, closes bug #167254, thanks to David Li <matrixhax0r@gmail.com> for
+  reporting.
 
 *ctypes-1.0.1 (14 Feb 2007)
 
