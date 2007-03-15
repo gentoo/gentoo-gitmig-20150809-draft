@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r5.ebuild,v 1.7 2007/03/15 22:16:19 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r6.ebuild,v 1.1 2007/03/15 22:16:19 truedfx Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.kotnet.org/~skimo/nvi/devel/${P}.tar.gz"
 
 LICENSE="Sleepycat"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ~ppc ppc64 sparc x86"
-IUSE="perl" # unicode
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="perl unicode"
 
 DEPEND="=sys-libs/db-4*"
 RDEPEND="${DEPEND}
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-tcsetattr.patch
 	# Fix bug 150169
 	epatch "${FILESDIR}"/${P}-wide.patch
+	epatch "${FILESDIR}"/${P}-wide-2.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-db4.patch
 	touch "${S}"/dist/{configure,aclocal.m4,Makefile.in,stamp-h.in}
@@ -35,7 +36,7 @@ src_compile() {
 	local myconf
 
 	use perl && myconf="${myconf} --enable-perlinterp"
-	#use unicode && myconf="${myconf} --enable-widechar"
+	use unicode && myconf="${myconf} --enable-widechar"
 
 	cd build.unix
 	ECONF_SOURCE=../dist econf \

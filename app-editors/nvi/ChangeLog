@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.45 2007/03/15 17:32:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.46 2007/03/15 22:16:19 truedfx Exp $
+
+  15 Mar 2007; Harald van Dĳk <truedfx@gentoo.org>
+  +files/nvi-1.81.5-wide-2.patch, nvi-1.81.5-r5.ebuild,
+  +nvi-1.81.5-r6.ebuild:
+  Parse options correctly with USE=unicode, and remove broken unicode option
+  for -r5 (#171069)
+
+*nvi-1.81.5-r6 (15 Mar 2007)
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> nvi-1.81.5-r5.ebuild:
   Stable on ppc64; bug #170745
