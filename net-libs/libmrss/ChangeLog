@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmrss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.3 2007/02/18 17:06:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.4 2007/03/15 11:17:23 rbu Exp $
+
+  15 Mar 2007; Robert Buchholz <rbu@gentoo.org> libmrss-0.17.ebuild:
+  keyworded ~amd64
 
   18 Feb 2007; Matti Bickel <mabi@gentoo.org> libmrss-0.17.ebuild:
   keyworded ~ppc (bug #164125)
