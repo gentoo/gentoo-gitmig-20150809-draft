@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-6.2.ebuild,v 1.4 2006/09/07 00:50:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-6.2.ebuild,v 1.5 2007/03/15 22:01:27 kugelfang Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -34,8 +34,8 @@ src_unpack() {
 
 	sed -i \
 		-e "s:^\(CCC=\).*:\1$(tc-getCXX):g" \
-		-e "s:^\(GINCLUDE=\).*:\1-I${ROOT}usr/include/rcsb:g" \
-		-e "s:^\(LIBDIR=\).*:\1${ROOT}usr/$(get_libdir):g" \
+		-e "s:^\(GINCLUDE=\).*:\1-I/usr/include/rcsb:g" \
+		-e "s:^\(LIBDIR=\).*:\1/usr/$(get_libdir):g" \
 		${S}/etc/make.*
 }
 

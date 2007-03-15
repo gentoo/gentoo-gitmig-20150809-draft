@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/sparky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.7 2007/02/22 14:23:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.8 2007/03/15 21:58:21 kugelfang Exp $
+
+  15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> sparky-3.111.ebuild:
+  QA: Removed illegal use of ${ROOT}. Bug #168043
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> sparky-3.111.ebuild:
   Fix SRC_URI. Transition to Manifest2.
