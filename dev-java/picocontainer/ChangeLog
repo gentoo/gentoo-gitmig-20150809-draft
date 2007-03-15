@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/picocontainer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.23 2007/02/18 09:43:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.24 2007/03/15 01:26:33 nichoj Exp $
+
+  15 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
+  picocontainer-1.1-r1.ebuild:
+  Stable on amd64 for bug #166727.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> picocontainer-1.1-r1.ebuild:
   Stable on ppc wrt bug 166727
