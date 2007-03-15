@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javatoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.29 2007/02/14 22:35:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.30 2007/03/15 01:28:22 nichoj Exp $
+
+  15 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
+  javatoolkit-0.2.0-r1.ebuild:
+  Stable on ia64 for bug #165069.
 
   14 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   -javatoolkit-0.1.9.ebuild, -javatoolkit-0.2.0.ebuild:
