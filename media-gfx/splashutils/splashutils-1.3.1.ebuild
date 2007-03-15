@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3.1.ebuild,v 1.3 2007/03/14 23:02:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3.1.ebuild,v 1.4 2007/03/15 13:27:28 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -65,7 +65,13 @@ src_unpack() {
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
 
 	cd ${SG}
-	epatch ${FILESDIR}/${GENTOOSPLASH}-old-baselayout.patch
+
+	if has_version '>=sys-apps/baselayout-1.13.0_alpha12' ; then
+		epatch ${FILESDIR}/${P}-cachedir.patch
+	else
+		epatch ${FILESDIR}/${GENTOOSPLASH}-old-baselayout.patch
+	fi
+
 	epatch ${FILESDIR}/${P}-boot_msg.patch
 
 	cd ${S}
