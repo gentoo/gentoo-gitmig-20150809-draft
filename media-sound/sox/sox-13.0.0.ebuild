@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-13.0.0.ebuild,v 1.1 2007/03/15 19:02:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-13.0.0.ebuild,v 1.2 2007/03/15 23:26:33 aballier Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa debug flac encode mad ogg libsamplerate sndfile"
+IUSE="alsa debug flac encode mad ogg libsamplerate ogg sndfile"
 
 DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
@@ -20,14 +20,14 @@ DEPEND="virtual/libc
 	mad? ( media-libs/libmad )
 	sndfile? ( media-libs/libsndfile )
 	libsamplerate? ( media-libs/libsamplerate )
-	media-libs/libvorbis
-	media-libs/libogg"
+	ogg? ( media-libs/libvorbis	media-libs/libogg )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-flac113.patch"
+	epatch "${FILESDIR}/${P}-oggautomagic.patch"
 	AT_M4DIR="m4" eautoreconf
 }
 
@@ -41,6 +41,7 @@ src_compile () {
 		$(use_enable debug) \
 		$(use_with sndfile) \
 		$(use_with flac) \
+		$(use_with ogg oggvorbis) \
 		$(use_with libsamplerate samplerate) \
 		--enable-oss-dsp \
 		--enable-fast-ulaw \
