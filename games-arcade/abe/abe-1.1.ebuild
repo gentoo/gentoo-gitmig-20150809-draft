@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.1.ebuild,v 1.3 2006/10/17 17:56:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.1.ebuild,v 1.4 2007/03/15 21:00:29 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2.3
-	>=media-libs/sdl-mixer-1.2.5"
+DEPEND="media-libs/libsdl
+	media-libs/sdl-mixer"
 
 src_unpack() {
 	unpack ${A}
@@ -24,17 +24,20 @@ src_unpack() {
 		-e "/^TR_CXXFLAGS/d" \
 		configure \
 		|| die "sed failed"
+	unpack ./images/images.tar
 }
 
 src_compile() {
-	egamesconf --with-data-dir="${GAMES_DATADIR}/${PN}" || die
+	egamesconf --with-data-dir="${GAMES_DATADIR}"/${PN} || die
 	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
 	dogamesbin src/abe || die "dogamesbin failed"
-	insinto "${GAMES_DATADIR}/${PN}"
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r images sounds maps || die "doins failed"
+	newicon tom1.bmp abe.bmp
+	make_desktop_entry abe "Abe's Amazing Adventure" /usr/share/pixmaps/abe.bmp
 	dodoc AUTHORS ChangeLog README
 	prepgamesdirs
 }
