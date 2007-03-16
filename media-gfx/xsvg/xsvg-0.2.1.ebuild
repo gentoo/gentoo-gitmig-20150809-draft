@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.2.1.ebuild,v 1.7 2007/03/12 22:37:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.2.1.ebuild,v 1.8 2007/03/16 18:48:53 nixnut Exp $
 
 inherit autotools eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://cairographics.org"
 SRC_URI="http://cairographics.org/snapshots/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 RDEPEND=">=x11-libs/libsvg-cairo-0.1.6"
 DEPEND="${RDEPEND}
