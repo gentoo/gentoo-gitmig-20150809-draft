@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.3.1.ebuild,v 1.1 2007/03/16 11:02:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.3.1.ebuild,v 1.2 2007/03/16 11:08:43 dev-zero Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=none
-
-inherit python apache-module multilib autotools
+inherit python apache-module multilib
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
@@ -34,8 +31,6 @@ src_unpack() {
 	sed -i \
 		-e 's:--optimize 2:--no-compile:' \
 		"dist/Makefile.in"
-
-	eautoconf
 }
 
 src_compile() {
