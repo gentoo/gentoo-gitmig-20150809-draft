@@ -1,6 +1,9 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.38 2007/03/04 19:12:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.39 2007/03/16 16:52:40 gustavoz Exp $
+
+  16 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> gnash-0.7.2.ebuild:
+  Keyworded ~sparc wrt #171038
 
   04 Mar 2007; <genstef@gentoo.org> gnash-0.7.2_p20099999.ebuild:
   Add --disable-gnash thanks to g-ranquet <ranquet@imerir.com> in bug 169336
