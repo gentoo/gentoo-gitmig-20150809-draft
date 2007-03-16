@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.22 2007/03/16 09:21:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.23 2007/03/16 10:02:04 pva Exp $
+
+  16 Mar 2007; <pva@gentoo.org> -kchmviewer-1.1.ebuild,
+  -kchmviewer-1.2.ebuild, -kchmviewer-1.3.ebuild, -kchmviewer-2.0.ebuild,
+  -kchmviewer-2.0-r1.ebuild, kchmviewer-3.0.ebuild:
+  Cleaning old versions.
 
 *kchmviewer-3.0 (16 Mar 2007)
 

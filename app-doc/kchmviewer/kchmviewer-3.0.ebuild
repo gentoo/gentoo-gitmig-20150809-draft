@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.0.ebuild,v 1.1 2007/03/16 09:21:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.0.ebuild,v 1.2 2007/03/16 10:02:04 pva Exp $
 
 inherit autotools kde-functions eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 	echo "# We use the external chmlib!" > lib/chmlib/chm_lib.h
 
 	# Apply patch for broken paths only when without kde. See bug #129225.
-	if ! use kde ; then 
+	if ! use kde ; then
 		rm -rf admin && mv ../admin . && \
 		epatch "${FILESDIR}"/${P}-qt-only-path-fix.diff && make -f admin/Makefile.common
 	fi
