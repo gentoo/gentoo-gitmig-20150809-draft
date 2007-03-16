@@ -54,10 +54,10 @@ EBUILD hardened-sources-2.6.17-r1.ebuild 727 RMD160 300c7b5f958ac7f65f39599b9e3c
 MD5 433461dcd2d1a6245fec4596b293e5c3 hardened-sources-2.6.17-r1.ebuild 727
 RMD160 300c7b5f958ac7f65f39599b9e3cffbce308cadc hardened-sources-2.6.17-r1.ebuild 727
 SHA256 f380f7dc4493f14cb2a38b04a39ef80181d3c3962de799b2a35694aada1d3a76 hardened-sources-2.6.17-r1.ebuild 727
-EBUILD hardened-sources-2.6.18-r6.ebuild 760 RMD160 2095e97b72fc4f848fa92b7b0e7ef5b2b42f4c67 SHA1 2f081ce1c6069441552032f47513ef7566b3ca35 SHA256 3cd3e3f9adc3ee2d05e22cce3149c6d4f61b2337268730a30705d59134aa911b
-MD5 0fee88f34ffdd0b751f907427220c089 hardened-sources-2.6.18-r6.ebuild 760
-RMD160 2095e97b72fc4f848fa92b7b0e7ef5b2b42f4c67 hardened-sources-2.6.18-r6.ebuild 760
-SHA256 3cd3e3f9adc3ee2d05e22cce3149c6d4f61b2337268730a30705d59134aa911b hardened-sources-2.6.18-r6.ebuild 760
+EBUILD hardened-sources-2.6.18-r6.ebuild 759 RMD160 88ab94e4a5a26dbe25eca8511f6ffa1658b22763 SHA1 330153c769fa841250e1cc9e55ead44c12ae5b28 SHA256 af5ecb01fe3f9357fcfb08341e9526435d5ede5374bb07bd42b2a69e5ead5306
+MD5 195ff4bf899b2ee018a4418f8d663d77 hardened-sources-2.6.18-r6.ebuild 759
+RMD160 88ab94e4a5a26dbe25eca8511f6ffa1658b22763 hardened-sources-2.6.18-r6.ebuild 759
+SHA256 af5ecb01fe3f9357fcfb08341e9526435d5ede5374bb07bd42b2a69e5ead5306 hardened-sources-2.6.18-r6.ebuild 759
 EBUILD hardened-sources-2.6.18.ebuild 723 RMD160 cd7b35e9f920630d421b6178a5f632f64e040da3 SHA1 18da07061273d763b41cb7c52aa0cda27b7ae4a6 SHA256 1ee905d41f9d1934df609eae573ddfb78d21cbbe05b2c2bf4c9776087a390add
 MD5 1ddefcce182875388fd5236570b3c06b hardened-sources-2.6.18.ebuild 723
 RMD160 cd7b35e9f920630d421b6178a5f632f64e040da3 hardened-sources-2.6.18.ebuild 723
@@ -107,7 +107,7 @@ SHA256 56bb006d2cccc65136611b4aec8a8dd36fed25b03aadeda6d452dd3e02d7b57f files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF+r02p5vW4rUFj5oRAvUlAKCf03y0tGSBLzTDznRjrt6hD8zYvgCcCi+S
-eGbrSc4m0WoiIOG5oNQ1NiU=
-=ngf0
+iD8DBQFF+sxVp5vW4rUFj5oRAkn7AJ4z87GKYkJGtC6TlpiuS5KakuOkMACfXT/v
+mqoyTZLUe5O+dEqNJ588KsA=
+=oddb
 -----END PGP SIGNATURE-----
