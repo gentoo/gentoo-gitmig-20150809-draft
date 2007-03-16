@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.27 2007/03/16 15:20:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.28 2007/03/16 15:29:12 pylon Exp $
+
+  16 Mar 2007; Lars Weiler <pylon@gentoo.org> cdrkit-1.0.ebuild,
+  cdrkit-1.1.2.ebuild:
+  Removed the usage of  in the ebuild; see gentoo-dev-mailing-list.
 
   16 Mar 2007; Lars Weiler <pylon@gentoo.org> -cdrkit-1.0_pre5.ebuild,
   -cdrkit-1.1.0.ebuild, -cdrkit-1.1.1.ebuild:
