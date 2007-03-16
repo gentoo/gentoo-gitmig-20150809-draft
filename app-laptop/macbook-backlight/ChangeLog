@@ -1,0 +1,10 @@
+# ChangeLog for app-laptop/macbook-backlight
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/ChangeLog,v 1.1 2007/03/16 18:09:29 cedk Exp $
+
+*macbook-backlight-0.1 (16 Mar 2007)
+
+  16 Mar 2007; Cedric Krier <cedk@gentoo.org> +metadata.xml,
+  +macbook-backlight-0.1.ebuild:
+  New ebuild
+
