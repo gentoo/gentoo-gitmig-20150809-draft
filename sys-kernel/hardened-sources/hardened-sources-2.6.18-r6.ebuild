@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.18-r5.ebuild,v 1.1 2007/03/06 10:35:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.18-r6.ebuild,v 1.1 2007/03/16 13:49:58 phreak Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
@@ -9,10 +9,9 @@ K_GENPATCHES_VER="10"
 inherit kernel-2
 detect_version
 
-HGPV=${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-5
+HGPV=${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-6
 HGPV_URI="http://dev.gentoo.org/~phreak/distfiles/${PN}/hardened-patches-${HGPV}.extras.tar.bz2"
 UNIPATCH_LIST="${DISTDIR}/hardened-patches-${HGPV}.extras.tar.bz2"
-UNIPATCH_EXCLUDE="4454_grsec-2.1.9-2.6.18.2-io-kmem-sysctl.patch"
 DESCRIPTION="Hardened kernel sources ${OKV}"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 
