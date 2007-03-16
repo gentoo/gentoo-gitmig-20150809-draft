@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/slib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.22 2007/03/16 19:08:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.23 2007/03/16 19:24:27 nixnut Exp $
+
+  16 Mar 2007; nixnut <nixnut@gentoo.org> slib-3.1.1-r1.ebuild:
+  Stable on ppc wrt bug 161781
 
   16 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> slib-3.1.1-r1.ebuild:
   Stable on sparc wrt #161781
