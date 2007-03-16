@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/jisx0213-fonts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.13 2007/03/12 19:30:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.14 2007/03/16 18:13:43 gustavoz Exp $
+
+  16 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  jisx0213-fonts-20040425-r2.ebuild:
+  Stable on sparc wrt #171063
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   jisx0213-fonts-20040425-r2.ebuild:

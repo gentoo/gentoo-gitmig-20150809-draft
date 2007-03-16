@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/artwiz-fonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.20 2007/03/12 19:20:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.21 2007/03/16 18:11:54 gustavoz Exp $
+
+  16 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  artwiz-fonts-2.4-r3.ebuild:
+  Stable on sparc wrt #171063
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> artwiz-fonts-2.4-r3.ebuild:
   x86 stable
