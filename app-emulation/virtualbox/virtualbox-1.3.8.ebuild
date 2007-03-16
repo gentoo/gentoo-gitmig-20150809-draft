@@ -2,18 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-inherit eutils linux-mod qt3 subversion
+inherit eutils qt3
 
+MY_P=VirtualBox-OSE-${PV}
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
-ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
+SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-amd64 ~x86"
 IUSE="additions alsa nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
+	~app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
@@ -28,14 +30,19 @@ DEPEND="${RDEPEND}
 	sys-power/iasl
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )"
 RDEPEND="${RDEPEND}
-	additions? ( app-emulation/virtualbox-additions )"
+	additions? ( ~app-emulation/virtualbox-additions-${PV} )"
 
-BUILD_TARGETS="all"
-MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
+S=${WORKDIR}/vbox-ose-${PV}
 
-pkg_setup() {
-	linux-mod_pkg_setup
-	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Don't build vboxdrv and additions: splitted into separate ebuilds
+	epatch "${FILESDIR}/${P}-remove-splitted-stuff.patch"
+	# Don't build the Alsa audio driver and remove Alsa checks in configure
+	# when Alsa is not selected (bug #167739)
+	use alsa || epatch "${FILESDIR}/${P}-remove-alsa.patch"
 }
 
 src_compile() {
@@ -43,12 +50,9 @@ src_compile() {
 	./configure || die "configure failed"
 	source ./env.sh
 	kmk all || die "kmk failed"
-	linux-mod_src_compile
 }
 
 src_install() {
-	linux-mod_src_install
-
 	cd "${S}"/out/linux.${ARCH}/release/bin
 
 	insinto /opt/VirtualBox
@@ -73,7 +77,7 @@ src_install() {
 		fi
 	fi
 
-	rm -rf sdk src tst* testcase additions VBoxBFE vditool vboxdrv.ko xpidl SUPInstall SUPUninstall
+	rm -rf sdk src tst* testcase VBoxBFE vditool xpidl SUPInstall SUPUninstall
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD} VirtualBox ; do
@@ -93,10 +97,6 @@ src_install() {
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl
 	fi
 
-	# udev rule for vboxdrv
-	dodir /etc/udev/rules.d
-	echo 'KERNEL=="vboxdrv", GROUP="vboxusers" MODE=660' >> "${D}/etc/udev/rules.d/60-virtualbox.rules"
-
 	# desktop entry
 	insinto /usr/share/pixmaps
 	newins "${S}"/src/VBox/Frontends/VirtualBox/images/ico32x01.png ${PN}.png
@@ -104,18 +104,7 @@ src_install() {
 	doins "${FILESDIR}"/${PN}.desktop
 }
 
-pkg_preinst() {
-	enewgroup vboxusers
-}
-
 pkg_postinst() {
-	linux-mod_pkg_postinst
-	if use amd64; then
-		elog ""
-		elog "To avoid the nmi_watchdog bug and load the vboxdrv module"
-		elog "you may need to update your bootloader configuration and pass the option:"
-		elog "nmi_watchdog=0"
-	fi
 	elog ""
 	if use nowrapper; then
 		elog "In order to launch VirtualBox you need to start the"

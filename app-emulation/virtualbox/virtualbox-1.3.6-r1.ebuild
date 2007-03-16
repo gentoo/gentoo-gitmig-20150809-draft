@@ -12,10 +12,10 @@ SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-amd64 ~x86"
-IUSE="additions alsa sdk vboxbfe vditool wrapper"
+IUSE="additions alsa nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
-	=app-emulation/virtualbox-modules-${PV}
+	~app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	sys-power/iasl
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )"
 RDEPEND="${RDEPEND}
-	additions? ( =app-emulation/virtualbox-additions-${PV} )"
+	additions? ( ~app-emulation/virtualbox-additions-${PV} )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -38,7 +38,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Remove Alsa checks in configure and don't build the Alsa audio driver, when Alsa is not selected
+	# Remove Alsa checks in configure and don't build the Alsa audio driver
+	# when Alsa is not selected (bug #167739)
 	use alsa || epatch "${FILESDIR}/${P}-remove-alsa.patch"
 }
 
@@ -67,10 +68,10 @@ src_install() {
 		doins VBoxBFE
 		fperms 0755 /opt/VirtualBox/VBoxBFE
 
-		if use wrapper ; then
-			dosym /opt/VirtualBox/wrapper.sh /usr/bin/VBoxBFE
-		else
+		if use nowrapper ; then
 			make_wrapper vboxbfe "./VBoxBFE" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+		else
+			dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxbfe
 		fi
 	fi
 
@@ -81,17 +82,17 @@ src_install() {
 		fperms 0755 /opt/VirtualBox/${each}
 	done
 
-	if use wrapper ; then
-		exeinto /opt/VirtualBox
-		newexe "${FILESDIR}/${P}-wrapper" "wrapper.sh"
-		dosym /opt/VirtualBox/wrapper.sh /usr/bin/VirtualBox
-		dosym /opt/VirtualBox/wrapper.sh /usr/bin/VBoxManage
-		dosym /opt/VirtualBox/wrapper.sh /usr/bin/VBoxSDL
-	else
+	if use nowrapper ; then
 		make_wrapper vboxsvc "./VBoxSVC" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 		make_wrapper virtualbox "./VirtualBox" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 		make_wrapper vboxmanage "./VBoxManage" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 		make_wrapper vboxsdl "./VBoxSDL" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	else
+		exeinto /opt/VirtualBox
+		newexe "${FILESDIR}/${PN}-wrapper" "wrapper.sh"
+		dosym /opt/VirtualBox/wrapper.sh /usr/bin/virtualbox
+		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxmanage
+		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl
 	fi
 
 	# desktop entry
@@ -103,10 +104,13 @@ src_install() {
 
 pkg_postinst() {
 	elog ""
-	elog "In order to launch VirtualBox you need to start VBoxSVC first, with:"
-	elog "vboxsvc --daemonize && virtualbox"
-	elog ""
-	elog "If you selected the useflag \"wrapper\" just type \"VirtualBox\" instead."
+	if use nowrapper; then
+		elog "In order to launch VirtualBox you need to start the"
+		elog "VirtualBox XPCom Server first, with:"
+		elog "vboxsvc --daemonize && virtualbox"
+	else
+		elog "To launch VirtualBox just type: \"virtualbox\""
+	fi
 	elog ""
 	elog "You must be in the vboxusers group to use VirtualBox."
 	elog ""

@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.12 2007/03/11 19:00:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.13 2007/03/16 22:15:52 jokey Exp $
+
+*virtualbox-1.3.8 (16 Mar 2007)
+*virtualbox-1.3.6-r1 (16 Mar 2007)
+
+  16 Mar 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.3.8-remove-alsa.patch,
+  +files/virtualbox-1.3.8-remove-splitted-stuff.patch,
+  +files/virtualbox-wrapper, -virtualbox-1.3.4-r1.ebuild,
+  -virtualbox-1.3.4-r2.ebuild, -virtualbox-1.3.6.ebuild,
+  +virtualbox-1.3.6-r1.ebuild, +virtualbox-1.3.8.ebuild:
+  Version bump and minor bugfixes
 
   11 Mar 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
   Missing IUSE, thanks jakub
