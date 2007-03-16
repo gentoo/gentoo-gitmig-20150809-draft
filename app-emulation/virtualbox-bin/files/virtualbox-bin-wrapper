@@ -47,8 +47,17 @@ fi
 APP=$( which $0 )
 APP=${APP##/*/}
 case "$APP" in
-	VirtualBox|VBoxManage|VBoxSDL|VBoxVRDP)
-		exec "$INSTALL_DIR/$APP" "$@"
+	virtualbox)
+		exec "$INSTALL_DIR/VirtualBox" "$@"
+		;;
+	vboxmanage)
+		exec "$INSTALL_DIR/VBoxManage" "$@"
+		;;
+	vboxsdl)
+		exec "$INSTALL_DIR/VBoxSDL" "$@"
+		;;
+	vboxvrdp)
+		exec "$INSTALL_DIR/VBoxVRDP" "$@"
 		;;
 	*)
 		echo "Error: Unknown application - $APP"
