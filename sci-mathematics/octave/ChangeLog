@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.45 2007/02/22 01:31:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.46 2007/03/16 22:38:28 kugelfang Exp $
+
+  16 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> octave-2.1.57-r1.ebuild,
+  octave-2.1.69.ebuild:
+  QA: which -> type -P
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
