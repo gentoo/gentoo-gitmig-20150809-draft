@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.6.ebuild,v 1.1 2005/04/25 10:44:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.6.ebuild,v 1.2 2007/03/16 00:02:53 leio Exp $
 
 inherit gnome2
 
@@ -24,6 +24,6 @@ DEPEND="${RDEPEND}
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING README* INSTALL NEWS TODO"
 
-use lirc \
-	&& G2CONF="${G2CONF} --enable-lirc " \
-	|| G2CONF="${G2CONF} --enable-lirc "
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable lirc)"
+}
