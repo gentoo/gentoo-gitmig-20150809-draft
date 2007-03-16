@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r5.ebuild,v 1.4 2007/03/12 09:05:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r5.ebuild,v 1.5 2007/03/16 08:41:18 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
 ECVS_MODULE="emacs"
 ECVS_BRANCH="HEAD"
 
-WANT_AUTOCONF="latest"
+WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
 
 inherit alternatives autotools cvs elisp-common eutils flag-o-matic

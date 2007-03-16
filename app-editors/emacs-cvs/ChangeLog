@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.92 2007/03/12 09:05:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.93 2007/03/16 08:41:18 opfer Exp $
+
+  16 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-cvs-22.0.95-r1.ebuild, emacs-cvs-22.0.9999-r5.ebuild:
+  request AUTOCONF 2.61 instead of latest. Fixes bug 170969, reported by
+  <lkml_ccc@yahoo.it>
 
   12 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-cvs-22.0.95-r1.ebuild, emacs-cvs-22.0.9999-r5.ebuild:
