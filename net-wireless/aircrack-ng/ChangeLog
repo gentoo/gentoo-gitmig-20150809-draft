@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.17 2007/03/16 21:43:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.18 2007/03/16 22:16:16 alonbl Exp $
+
+  16 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org> -aircrack-ng-0.6.2.ebuild,
+  -aircrack-ng-0.7.ebuild:
+  Cleanup
 
   16 Mar 2007; Raúl Porcel <armin76@gentoo.org> aircrack-ng-0.7-r1.ebuild:
   Err, stabilize -r1 this time, bug 171188
