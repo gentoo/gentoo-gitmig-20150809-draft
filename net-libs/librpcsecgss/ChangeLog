@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/librpcsecgss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.8 2007/02/23 22:11:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.9 2007/03/16 20:15:42 nixnut Exp $
+
+  16 Mar 2007; nixnut <nixnut@gentoo.org> librpcsecgss-0.14-r1.ebuild:
+  Stable on ppc wrt bug 167664
 
   23 Feb 2007; Markus Rothe <corsair@gentoo.org>
   librpcsecgss-0.14-r1.ebuild:
