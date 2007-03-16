@@ -1,0 +1,17 @@
+diff -NurdpB workrave-1.8.4/frontend/gtkmm/src/Menus.hh workrave-1.8.4-patched/frontend/gtkmm/src/Menus.hh
+--- workrave-1.8.4/frontend/gtkmm/src/Menus.hh	2007-03-05 12:52:07.000000000 -0500
++++ workrave-1.8.4-patched/frontend/gtkmm/src/Menus.hh	2007-03-15 20:02:11.000000000 -0500
+@@ -186,13 +186,11 @@ Menus::set_main_window(MainWindow *main)
+ }
+ 
+ 
+-#if defined(HAVE_GNOME) || defined(WIN32)
+ inline Menus *
+ Menus::get_instance()
+ {
+   assert(instance != 0);
+   return instance;
+ }
+-#endif
+ 
+ #endif // MENUS_HH

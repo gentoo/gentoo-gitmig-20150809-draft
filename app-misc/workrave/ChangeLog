@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.44 2007/02/16 23:38:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.45 2007/03/16 02:48:57 leonardop Exp $
+
+*workrave-1.8.4 (16 Mar 2007)
+
+  16 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/workrave-1.8.4-nls_macros.patch,
+  +files/workrave-1.8.4-no_gnome.patch,
+  +files/org.workrave.Workrave.service.in, +workrave-1.8.4.ebuild:
+  New release. Re-added 'dbus' USE flag. Dropped virtual/x11 dependency. Added
+  patch to fix compilation with USE=-gnome. Don't install ChangeLog since
+  it's an empty document.
 
   16 Feb 2007; Leonardo Boshell <leonardop@gentoo.org>
   workrave-1.8.3.ebuild:
