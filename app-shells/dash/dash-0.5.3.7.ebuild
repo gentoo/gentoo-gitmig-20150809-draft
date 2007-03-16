@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.3.7.ebuild,v 1.1 2007/03/15 22:01:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.3.7.ebuild,v 1.2 2007/03/16 07:55:04 uberlord Exp $
 
 inherit eutils versionator flag-o-matic toolchain-funcs
 
@@ -26,6 +26,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${DEB_P}".diff
+
+	# Below patch sorts the builtincmd structure correctly when LC_ALL isn't C
 	epatch "${FILESDIR}/${MY_P}"-sort-locale.patch
 }
 
