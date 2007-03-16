@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jexcelapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.6 2007/02/10 00:18:45 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.7 2007/03/16 20:47:35 fordfrog Exp $
+
+*jexcelapi-2.6.3 (16 Mar 2007)
+
+  16 Mar 2007; Miroslav Šulc <fordfrog@gentoo.org> +jexcelapi-2.6.3.ebuild:
+  Version bump.
 
 *jexcelapi-2.6.2 (10 Feb 2007)
 
