@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.0.ebuild,v 1.2 2007/03/16 10:02:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.0.ebuild,v 1.3 2007/03/16 11:07:08 pva Exp $
 
 inherit autotools kde-functions eutils
 
 DESCRIPTION="KchmViewer is a feature rich chm file viewer, based on Qt."
 HOMEPAGE="http://kchmviewer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.gz
-		gentoo://${P}-admin-dir.tar.bz2"
+		mirror://gentoo/${P}-admin-dir.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -35,11 +35,12 @@ src_unpack() {
 	# broken configure script, assure it doesn't fall back to internal libs
 	echo "# We use the external chmlib!" > lib/chmlib/chm_lib.h
 
+	rm -rf admin && mv ../admin .
+	sed -i -e \
+	"s:{datadir}/applnk:{datadir}/applications:" admin/acinclude.m4.in
 	# Apply patch for broken paths only when without kde. See bug #129225.
-	if ! use kde ; then
-		rm -rf admin && mv ../admin . && \
-		epatch "${FILESDIR}"/${P}-qt-only-path-fix.diff && make -f admin/Makefile.common
-	fi
+	epatch "${FILESDIR}"/${P}-qt-only-path-fix.diff
+	make -f admin/Makefile.common
 }
 
 src_compile() {
