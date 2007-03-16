@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-6.0.3.ebuild,v 1.5 2007/03/01 17:27:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-6.0.3.ebuild,v 1.6 2007/03/16 22:45:29 chtekk Exp $
 
 # eutils must be inherited since get_libdir() is only
 # globally available on baselayout-1.11 (still on ~arch)
@@ -35,7 +35,7 @@ src_compile() {
 	# Necessary for multilib on amd64. Please keep this in future releases.
 	# BUG #81197
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/02/14
-	TCLVER="$(echo 'puts [info tclversion]' | $(which tclsh))"
+	TCLVER="$(echo 'puts [info tclversion]' | $(type -P tclsh))"
 	use tcl \
 		&& myconf="--with-tclpkg=/usr/$(get_libdir)/tcl${TCLVER}/" \
 		|| myconf="--with-tcl=no"
@@ -91,7 +91,7 @@ src_install() {
 	dodoc readme.txt doc/*
 	docinto pdflib
 	dodoc doc/pdflib/*
-		
+
 	# seemant: seems like the makefiles for pdflib generate the .jar file
 	# anyway
 	use java && java-pkg_dojar bind/pdflib/java/pdflib.jar
