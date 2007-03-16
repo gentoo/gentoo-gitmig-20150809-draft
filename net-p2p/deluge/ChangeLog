@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.1 2007/03/16 16:38:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.2 2007/03/16 19:44:45 armin76 Exp $
+
+  16 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/0.5.0_rc2-use-system-rblibtorrent.patch, deluge-0.5.0_rc2.ebuild:
+  Some changes, including use the rb_libtorrent library from the system, and
+  some other changes from Fedora
 
 *deluge-0.5.0_rc2 (16 Mar 2007)
 

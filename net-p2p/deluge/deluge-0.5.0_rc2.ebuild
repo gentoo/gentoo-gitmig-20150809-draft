@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0_rc2.ebuild,v 1.1 2007/03/16 16:38:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0_rc2.ebuild,v 1.2 2007/03/16 19:44:45 armin76 Exp $
 
 inherit eutils distutils
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="libnotify"
 
 DEPEND=">=dev-lang/python-2.3
-	dev-libs/boost"
+	dev-libs/boost
+	>=net-libs/rb_libtorrent-0.11"
 RDEPEND="${DEPEND}
 	>=dev-python/pygtk-2
 	dev-python/pyxdg
@@ -36,6 +37,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${PV}-use-system-rblibtorrent.patch
+
 	# use the threaded libs
 	sed -i -e "s:\('boost_[^']*\):\1-mt:g" setup.py \
 		|| die "sed failed"
@@ -43,6 +46,13 @@ src_unpack() {
 	# http://deluge-torrent.org/ticket/173
 	sed -i -e "s~INSTALL_PREFIX = '@datadir@'~INSTALL_PREFIX = '/usr'~g" \
 		src/dcommon.py || die "sed failed"
+}
+
+src_compile() {
+	if use amd64 || use ia64 || use ppc64; then
+		CFLAGS="${CFLAGS} -DAMD64"
+	fi
+	distutils_src_compile
 }
 
 pkg_postinst() {
