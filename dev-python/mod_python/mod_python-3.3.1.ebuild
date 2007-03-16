@@ -1,10 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.12 2007/01/15 19:59:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.3.1.ebuild,v 1.1 2007/03/16 11:02:42 dev-zero Exp $
 
-inherit python eutils apache-module multilib autotools
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=none
 
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+inherit python apache-module multilib autotools
+
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DESCRIPTION="An Apache2 module providing an embedded Python interpreter."
 HOMEPAGE="http://www.modpython.org/"
@@ -19,7 +22,7 @@ RDEPEND="${DEPEND}"
 APACHE2_MOD_CONF="16_${PN}"
 APACHE2_MOD_DEFINE="PYTHON"
 
-DOCFILES="README NEWS CREDITS COPYRIGHT"
+DOCFILES="README NEWS CREDITS"
 
 need_apache2
 
@@ -28,27 +31,32 @@ src_unpack() {
 	cd "${S}"
 
 	# Remove optimisations, we do that outside Portage
-	sed -ie 's:--optimize 2:--no-compile:' "dist/Makefile.in"
+	sed -i \
+		-e 's:--optimize 2:--no-compile:' \
+		"dist/Makefile.in"
 
-	# Fix compilation when using Python 2.3 or newer
-	if has_version ">=dev-lang/python-2.3" ; then
-		sed -ie 's:LONG_LONG:PY_LONG_LONG:g' "${S}/src/requestobject.c"
-	fi
-
-	# Fix configure with Bash 3.1
-	epatch "${FILESDIR}/${P}-configure-bash-3.1.patch"
 	eautoconf
 }
 
 src_compile() {
 	econf --with-apxs=${APXS2} || die "econf failed"
-	emake OPT="`apxs2 -q CFLAGS` -fPIC" || die "emake failed"
+	emake OPT="`apxs2 -q CFLAGS` -fPIC" || die "econf failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dohtml -r doc-html/*
 	apache-module_src_install
+}
+
+src_test() {
+	python_version
+	cd test
+	PYTHONPATH="$(ls -d ${S}/dist/build/lib.*)"
+	sed -i \
+		-e "120ios.environ['PYTHONPATH']=\"${PYTHONPATH}\"" \
+		test.py || die "sed failed"
+	"${python}" test.py || die "tests failed"
 }
 
 pkg_postinst() {
@@ -58,5 +66,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_version
+	python_mod_cleanup "/usr/$(get_libdir)/python${PYVER}/site-packages/mod_python"
 }

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.55 2007/03/10 21:49:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.56 2007/03/16 11:02:42 dev-zero Exp $
+
+*mod_python-3.3.1 (16 Mar 2007)
+
+  16 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/mod_python-3.1.4-configure-bash-3.1.patch,
+  -mod_python-3.1.4-r1.ebuild, +mod_python-3.3.1.ebuild:
+  Version bump (including some cleanup and added tests). Dropped old version
+  with security issue (bug #169286).
 
   10 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
   mod_python-3.2.10.ebuild:
