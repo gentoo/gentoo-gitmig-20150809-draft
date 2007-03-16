@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.208 2007/03/14 20:01:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.209 2007/03/16 05:25:36 beandog Exp $
+
+  16 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  Add postproc, nuv local use flags to media-video/transcode
 
   14 Mar 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Masked sci-electronics/modelsim pending removal on 14 Apr 2007.
