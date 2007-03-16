@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/japitools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.4 2006/11/19 11:03:03 betelgeuse Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.5 2007/03/16 19:10:44 wltjr Exp $
+
+  16 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -japitools-0.9.5-r1.ebuild, japitools-0.9.7.ebuild:
+  Added ~amd64, removed older version
 
 *japitools-0.9.7 (19 Nov 2006)
 
