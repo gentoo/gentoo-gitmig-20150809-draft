@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.21 2007/02/21 20:51:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.22 2007/03/16 09:21:23 pva Exp $
+
+*kchmviewer-3.0 (16 Mar 2007)
+
+  16 Mar 2007; <pva@gentoo.org> +files/kchmviewer-3.0-qt-only-path-fix.diff,
+  +kchmviewer-3.0.ebuild:
+  Version bump. Fixed bug #129225 reported by Mindphaser <mindo83 AT
+  t-online.de> and many others.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
