@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.2.ebuild,v 1.6 2007/02/13 10:31:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.2-r1.ebuild,v 1.1 2007/03/16 05:17:23 beandog Exp $
 
 inherit eutils flag-o-matic perl-module
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-perl/Event-ExecFlow-0.62
 	>=dev-perl/gtk2-ex-formfactory-0.65
 	>=dev-perl/libintl-perl-1.16
 	media-gfx/imagemagick
-	media-video/transcode"
+	=media-video/transcode-1.0*"
 RDEPEND="${DEPEND}
 	fping? ( >=net-analyzer/fping-2.2 )
 	hal? ( >=sys-apps/hal-0.5 )
