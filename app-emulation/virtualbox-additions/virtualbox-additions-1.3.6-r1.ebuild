@@ -4,11 +4,12 @@
 
 inherit eutils
 
-MY_P=VirtualBox_${PV}_Linux_x86
+MY_PN=VBoxGuestAdditions
+MY_P=${MY_PN}_${PV}
 
 DESCRIPTION="Guest additions for VirtualBox"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://virtualbox.org/download/${PV}/${MY_P}.run"
+SRC_URI="http://virtualbox.org/download/${PV}/${MY_P}.iso"
 
 LICENSE="PUEL"
 SLOT="0"
@@ -23,12 +24,7 @@ pkg_setup() {
 	check_license
 }
 
-src_unpack() {
-	unpack_makeself ${A}
-	unpack ./VirtualBox.tar.bz2
-}
-
 src_install() {
 	insinto /opt/VirtualBox/additions
-	doins "${WORKDIR}"/additions/VBoxGuestAdditions.iso
+	newins "${DISTDIR}"/${MY_P}.iso ${MY_PN}.iso
 }

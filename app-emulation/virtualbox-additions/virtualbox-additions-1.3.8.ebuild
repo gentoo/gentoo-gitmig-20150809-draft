@@ -4,7 +4,8 @@
 
 inherit eutils
 
-MY_P=VBoxGuestAdditions_${PV}
+MY_PN=VBoxGuestAdditions
+MY_P=${MY_PN}_${PV}
 
 DESCRIPTION="Guest additions for VirtualBox"
 HOMEPAGE="http://www.virtualbox.org/"
@@ -25,5 +26,5 @@ pkg_setup() {
 
 src_install() {
 	insinto /opt/VirtualBox/additions
-	doins "${DISTDIR}"/${MY_P}.iso
+	newins "${DISTDIR}"/${MY_P}.iso ${MY_PN}.iso
 }
