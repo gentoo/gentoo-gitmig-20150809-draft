@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/javahelp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.5 2007/03/16 23:01:24 betelgeuse Exp $
+
+*javahelp-2.0.02_p46 (16 Mar 2007)
+
+  16 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +javahelp-2.0.02_p46.ebuild:
+  Initial commit for bug #168991. Ebuild written by me.
+
