@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.108 2007/03/04 23:33:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.109 2007/03/16 17:28:56 yoswink Exp $
+
+  16 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> gdb-6.6.ebuild:
+  Stable on alpha wrt bug #164336
 
 *gdb-6.6-r1 (04 Mar 2007)
 
