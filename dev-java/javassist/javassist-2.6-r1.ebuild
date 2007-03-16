@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-2.6-r1.ebuild,v 1.1 2006/08/05 17:14:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-2.6-r1.ebuild,v 1.2 2007/03/16 18:49:09 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -32,6 +32,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar ${PN}.jar
 	java-pkg_dohtml *.html
-	use doc && java-pkg_dohtml -r html/*
+	use doc && java-pkg_dojavadoc html
 	use source && java-pkg_dosrc src/main/javassist
 }
