@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX x-modular-composite-version.patch 575 RMD160 bff756116f314f102d082b5b6d8ee6f4ece63ba1 SHA1 bf23d85662fab0487a3a29b4020cf0e3dcf1d52c SHA256 52178173a91c32d60b71a68141c9238499253c1086c350cb64c14b15b68ccf48
 MD5 de9e7cce72361127a24dc569bc41da0d files/x-modular-composite-version.patch 575
 RMD160 bff756116f314f102d082b5b6d8ee6f4ece63ba1 files/x-modular-composite-version.patch 575
@@ -26,3 +29,10 @@ SHA256 fc6a2ba9921b477b48861d1f89e1271342d7b8ddb89bd00e5777285840162e1b files/di
 MD5 4b1e90a002c28089c23089d9c8e453fa files/digest-xfwm4-4.4.0 241
 RMD160 3d8571ff5016925ce9916bcd44d9f657a05c4d3d files/digest-xfwm4-4.4.0 241
 SHA256 b382955889606ecdc3692c142fa328dcb823248fdf6fe1f5675a3c3bd36d1c9e files/digest-xfwm4-4.4.0 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF/F488bi6rjpTunYRAta8AKCrG+DCBvpaxffAx6p3IOidg4dqOwCgmI/x
+RYvWC10J+J7kOtgkbGvJdLo=
+=vRRJ
+-----END PGP SIGNATURE-----

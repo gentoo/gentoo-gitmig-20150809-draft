@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX Gentoo 644 RMD160 29853c59779a2eb685aa4082bf5c312588fbe633 SHA1 01f2135774ead9534fb374cfbeb7eb123d9aff55 SHA256 1ddff80be5707ff8eb888d8f41d9cd0df5c7e0e1bd84c28ed962b4c71028efc1
 MD5 930471c0f790dbd6ba87c44e21dfd801 files/Gentoo 644
 RMD160 29853c59779a2eb685aa4082bf5c312588fbe633 files/Gentoo 644
@@ -34,3 +37,10 @@ SHA256 8fe6300e1ebc7c0212f2b10e66a8c4c1cdb05f1cfc2c558ba91c002336fe42ac files/di
 MD5 647e6fbc8e329f415a2b8c434d4e3970 files/digest-xfce-utils-4.4.0-r3 253
 RMD160 6bcf776bab98f4c2a6a81425a1ccf5bcda4ae6ae files/digest-xfce-utils-4.4.0-r3 253
 SHA256 ce45e806ecb968c9c13e4ef00b768a7bea71f0a9f46c2b6c246d739fa5bab939 files/digest-xfce-utils-4.4.0-r3 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF/F488bi6rjpTunYRAtUsAJ4l2Y/JgAd7vsWnK2nU7n4IkAXVGACg31C0
+U/C4MB5/IyOJknoWp00DqL0=
+=2GJd
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce-mcs-plugins-4.4.0-no-broken-themes.patch 702 RMD160 b48a0e17582b12a598a3f01d8fd58c78d258a20b SHA1 f499e7fc7f4ee8b945c17ded7cac045eb421c6aa SHA256 ccba45507f99d87fa874036d7ebaaf7cd1254f5c7e40bb6be7e88edef5aab03e
 MD5 088c3a86fb008c06a05c053dd2e44019 files/xfce-mcs-plugins-4.4.0-no-broken-themes.patch 702
 RMD160 b48a0e17582b12a598a3f01d8fd58c78d258a20b files/xfce-mcs-plugins-4.4.0-no-broken-themes.patch 702
@@ -26,3 +29,10 @@ SHA256 08d4bc13661cdfafcb4e69b68b20703eb5b31eb8a11d41c878da929689c32a8a files/di
 MD5 7f8779ced364d6da5e3a7e8a34c938e0 files/digest-xfce-mcs-plugins-4.4.0-r1 271
 RMD160 5da6cce1ce483e62eecfb0a194f3c3a2d799fb73 files/digest-xfce-mcs-plugins-4.4.0-r1 271
 SHA256 9ea0157bd3dc53bc329b1c235231230fa8bb5b705f34f990bd524bbc06ee298b files/digest-xfce-mcs-plugins-4.4.0-r1 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF/F488bi6rjpTunYRArIZAKC5CPlrsNGYWOvOTDxcQsNgPXOiGgCfd263
+z+R/opMbgYV1t/Sg1DZSX3E=
+=f/FK
+-----END PGP SIGNATURE-----
