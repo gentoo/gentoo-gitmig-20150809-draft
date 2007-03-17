@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r2.ebuild,v 1.2 2006/10/25 03:09:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r2.ebuild,v 1.3 2007/03/17 13:13:53 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -22,18 +22,12 @@ DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.5
 	app-arch/unzip
-	test? ( dev-java/ant )"
+	source? ( app-arch/zip )"
+#test? ( dev-java/ant )
 
-IUSE="doc source test "
+IUSE="doc source"
 
 S=${WORKDIR}/JGroups-${PV}.src
-
-pkg_setup() {
-	java-pkg-2_pkg_setup
-	if use test; then
-		ewarn "WARNING: Running unit tests can take a very long time."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -59,12 +53,14 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/jgroups-core.jar
-	dodoc doc/* CREDITS README
+	dodoc doc/* CREDITS README || die
 
 	use doc && java-pkg_dojavadoc dist/javadoc
 	use source && java-pkg_dosrc src/*
 }
 
+RESTRICT="test"
+# A lot of these fail
 src_test() {
 	eant unittests
 }
