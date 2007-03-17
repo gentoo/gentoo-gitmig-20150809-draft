@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.20 2007/03/13 12:59:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.21 2007/03/17 18:54:15 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> iperf-2.0.2.ebuild:
+  amd64 stable
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> iperf-2.0.2.ebuild:
   x86 stable

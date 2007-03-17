@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.7.1-r1.ebuild,v 1.3 2007/03/13 12:44:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.7.1-r1.ebuild,v 1.4 2007/03/17 18:45:43 beandog Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -10,7 +10,7 @@ DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://d4x.krasu.ru/files/${P}.tar.bz2"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="amd64 sparc x86"
 SLOT="0"
 LICENSE="Artistic"
 
@@ -41,23 +41,13 @@ src_unpack() {
 
 src_compile() {
 
-	myconf=""
 	append-flags -D_FILE_OFFSET_BITS=64
 
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
-
-	use esd \
-		&& myconf="${myconf} --enable-esd" \
-		|| myconf="${myconf} --disable-esd"
-
-	use oss \
-		&& myconf="${myconf} --enable-oss" \
-		|| myconf="${myconf} --disable-oss"
-
-	econf --enable-release \
-		${myconf} || die
+	myconf="$(use_enable nls) \
+		$(use_enable esd) \
+		$(use_enable oss) \
+		--enable-release"
+	econf ${myconf} || die
 
 	emake || die
 
