@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.30.ebuild,v 1.2 2007/03/10 19:42:21 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.30.ebuild,v 1.3 2007/03/17 19:59:00 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
-SRC_URI="http://gollem.science.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.tar.gz"
+SRC_URI="http://gollem.science.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.tar.gz
+	mirror://gentoo/${P}-gentoo-patchset.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -39,21 +40,24 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e "s/man boot library/boot library/" src/Makefile.in
-	epatch "${FILESDIR}"/${PN}-portage-r1.patch
-	epatch "${FILESDIR}"/${PN}-CFLAGS-r5.patch
-	epatch "${FILESDIR}"/${PN}-PLBASE-r2.patch
-	epatch "${FILESDIR}"/${PN}-cppproxy-r1.patch
-	epatch "${FILESDIR}"/${PN}-jpl-PLARCH.patch
-	epatch "${FILESDIR}"/${PN}-jpl-LDPATH-r2.patch
-	epatch "${FILESDIR}"/${PN}-jpl-junit.patch
-	epatch "${FILESDIR}"/${PN}-jpl-check_java-r1.patch
-	epatch "${FILESDIR}"/${PN}-ltx2htm.patch
-	epatch "${FILESDIR}"/${PN}-SGML_CATALOG_FILES.patch
-	epatch "${FILESDIR}"/${PN}-thread-sandbox.patch
-	epatch "${FILESDIR}"/${PN}-thread-tests-r1.patch
-	epatch "${FILESDIR}"/${PN}-xpce-parallel-build.patch
-	epatch "${FILESDIR}"/${PN}-xpce-test-r1.patch
+	epatch "${WORKDIR}"/${PV}/1000-cflags.patch
+	epatch "${WORKDIR}"/${PV}/1001-multilib.patch
+	epatch "${WORKDIR}"/${PV}/2100-thread-sandbox.patch
+	epatch "${WORKDIR}"/${PV}/2800-mandir.patch
+	epatch "${WORKDIR}"/${PV}/3000-packages-subshell.patch
+	epatch "${WORKDIR}"/${PV}/3029-clib-test.patch
+	epatch "${WORKDIR}"/${PV}/3059-ssl-test.patch
+	epatch "${WORKDIR}"/${PV}/3069-semweb-test.patch
+	epatch "${WORKDIR}"/${PV}/3150-jpl-env.patch
+	epatch "${WORKDIR}"/${PV}/3151-jpl-ppc-arch.patch
+	epatch "${WORKDIR}"/${PV}/3152-jpl-junit.patch
+	epatch "${WORKDIR}"/${PV}/3159-jpl-test.patch
+	epatch "${WORKDIR}"/${PV}/3160-xpce-parallel-build.patch
+	epatch "${WORKDIR}"/${PV}/3139-sgml-test.patch
+	epatch "${WORKDIR}"/${PV}/3149-sgml-RDF-test.patch
+	epatch "${WORKDIR}"/${PV}/3169-xpce-test.patch
+	epatch "${WORKDIR}"/${PV}/3199-ltx2htm.patch
+	epatch "${WORKDIR}"/${PV}/3229-zlib-test.patch
 }
 
 src_compile() {
