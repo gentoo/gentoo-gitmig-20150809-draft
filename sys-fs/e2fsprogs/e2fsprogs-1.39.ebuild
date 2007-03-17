@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39.ebuild,v 1.4 2006/12/10 00:39:19 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39.ebuild,v 1.5 2007/03/17 02:22:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,18 +19,6 @@ RDEPEND="~sys-libs/com_err-${PV}
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
-
-pkg_setup() {
-	# sanity check for #125146
-	if [[ -L ${ROOT}/usr/$(get_libdir)/libcom_err.a ]] || \
-	   [[ ! -e ${ROOT}/usr/$(get_libdir)/libcom_err.a ]]
-	then
-		rm -f "${ROOT}"/usr/$(get_libdir)/libcom_err.a
-		eerror "Your libcom_err.a is broken, please re-emerge com_err:"
-		eerror "  # emerge com_err"
-		die "Mr. T pities the fool with a broken libcom_err.a"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}

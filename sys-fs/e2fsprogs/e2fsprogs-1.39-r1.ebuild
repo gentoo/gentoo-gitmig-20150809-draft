@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39-r1.ebuild,v 1.2 2007/01/17 03:50:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39-r1.ebuild,v 1.3 2007/03/17 02:22:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -20,18 +20,6 @@ RDEPEND="~sys-libs/com_err-${PV}
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
-
-pkg_setup() {
-	# sanity check for #125146
-	if [[ -L ${ROOT}/usr/$(get_libdir)/libcom_err.a ]] || \
-	   [[ ! -e ${ROOT}/usr/$(get_libdir)/libcom_err.a ]]
-	then
-		rm -f "${ROOT}"/usr/$(get_libdir)/libcom_err.a
-		eerror "Your libcom_err.a is broken, please re-emerge com_err:"
-		eerror "  # emerge com_err"
-		die "Mr. T pities the fool with a broken libcom_err.a"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -104,7 +92,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck
 	dodoc e2fsck/ChangeLog e2fsck/CHANGES
@@ -121,6 +109,7 @@ src_install() {
 		gen_usr_ldscript ${x} || die "gen ldscript ${x}"
 	done
 
+	ln -s libext2fs.info.gz  $D/usr/share/info/booga.info.gz
 	# move 'useless' stuff to /usr/
 	dosbin "${D}"/sbin/mklost+found
 	rm -f "${D}"/sbin/mklost+found
