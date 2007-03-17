@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.56 2007/03/14 17:52:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.57 2007/03/17 18:07:45 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> eggdrop-1.6.18-r1.ebuild:
+  amd64 stable, bug 170668
 
   14 Mar 2007; Samuli Suominen <drac@gentoo.org> files/eggdrop-installer:
   Fix typing errors, pleaese to please and egghelper.org to egghelp.org.
