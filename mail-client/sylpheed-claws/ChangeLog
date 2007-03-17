@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.126 2007/03/10 18:37:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.127 2007/03/17 12:22:48 ticho Exp $
+
+  17 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  -sylpheed-claws-2.5.6.ebuild, -sylpheed-claws-2.6.0.ebuild:
+  Removed unused ebuilds - left only 2.6.1 (which is just pulls in claws-mail)
+  and 2.4.0 (until amd64 manages to keyword 2.6.1).
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> sylpheed-claws-2.6.1.ebuild:
   Stable on ppc wrt bug 163611
