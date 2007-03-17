@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6984 2007/03/17 17:19:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6985 2007/03/17 17:38:22 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -651,6 +651,7 @@ games-action/d2x-rebirth
 # core internal plugins.
 =media-libs/alsa-lib-1.0.14_rc1-r1
 =media-libs/alsa-lib-1.0.14_rc2-r1
+=media-libs/alsa-lib-1.0.14_rc3-r1
 
 # Donnie Berkholz <dberkholz@gentoo.org> (20 Dec 2006)
 # Testing for FreeBSD support
