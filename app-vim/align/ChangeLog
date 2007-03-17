@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.43 2007/02/21 23:51:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.44 2007/03/17 18:18:31 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> align-33.ebuild:
+  amd64 stable
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
