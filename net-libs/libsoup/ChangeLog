@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.116 2007/03/10 21:15:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.117 2007/03/17 08:03:04 leio Exp $
+
+*libsoup-2.2.100 (17 Mar 2007)
+
+  17 Mar 2007; Mart Raudsepp <leio@gentoo.org> +libsoup-2.2.100.ebuild:
+  Bump to 2.2.100 for a WebDAV fix
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org> libsoup-2.2.99.ebuild:
   Added ~x86-fbsd keyword.
