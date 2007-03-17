@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jargon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jargon/ChangeLog,v 1.5 2006/09/20 10:58:01 sebastian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jargon/ChangeLog,v 1.6 2007/03/17 23:02:17 chtekk Exp $
+
+  17 Mar 2007; Luca Longinotti <chtekk@gentoo.org> jargon-1.1.0.ebuild:
+  Cleanup.
 
 *jargon-1.1.0 (20 Sep 2006)
 
