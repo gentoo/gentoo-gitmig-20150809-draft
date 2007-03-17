@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.9.3.ebuild,v 1.3 2007/03/17 18:49:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.9.3.ebuild,v 1.4 2007/03/17 21:37:52 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clevervest.com/htp/archive/c/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh x86"
+KEYWORDS="amd64 arm ~hppa ~mips ~ppc s390 sh x86"
 IUSE=""
 
 DEPEND=""
