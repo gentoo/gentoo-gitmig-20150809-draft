@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.10 2007/03/02 23:27:27 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.11 2007/03/17 20:29:18 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -60,13 +60,8 @@ src_compile() {
 	local myconf=""
 	use custom-cflags && myconf="--disable-cpucheck force_arch=no"
 
-	if use ao; then
-		myconf="${myconf} --enable-libao"
-	else
-		myconf="${myconf} --disable-libao"
-	fi
-
 	egamesconf \
+		$(use_enable ao libao) \
 		$(use_enable png libpng) \
 		$(use_enable opengl) \
 		--disable-debug \
