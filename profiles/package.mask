@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6982 2007/03/17 09:44:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6983 2007/03/17 11:53:18 tupone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -909,14 +909,6 @@ media-gfx/xzgv
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/sid-milter
-
-# Philip Walls <malverian@gentoo.org> (18 Jul 2006)
-# Package is a maintenance nightmare, it has depended
-# on unreleased versions of several other packages
-# for a very long time. This doesn't appear to be
-# changing any time in the near future.
-# Candidate for treecleaners
-games-rpg/planeshift
 
 # Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
 # media-video/kdenlive-0.2.4
