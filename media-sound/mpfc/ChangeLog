@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpfc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.16 2007/03/09 14:37:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.17 2007/03/17 16:14:13 nixnut Exp $
+
+  17 Mar 2007; nixnut <nixnut@gentoo.org> mpfc-1.3.7.ebuild:
+  Stable on ppc wrt bug 168252
 
   09 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> mpfc-1.3.7.ebuild:
   Stable on sparc wrt #168252
