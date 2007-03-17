@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-dbx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.6 2007/02/21 23:56:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.7 2007/03/17 23:50:25 chtekk Exp $
+
+  17 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-dbx-1.1.0.ebuild:
+  Cleanup.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
