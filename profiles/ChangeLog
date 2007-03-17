@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.214 2007/03/17 17:38:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.215 2007/03/17 18:41:17 betelgeuse Exp $
+
+  17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  default-linux/amd64/use.mask,
+  +hardened/amd64/package.use.mask, hardened/amd64/use.mask,
+  +selinux/amd64/package.use.mask, selinux/amd64/use.mask:
+  Unmasked ASIHPI driver for >=media-sound/alsa-driver-1.0.14_rc3.
 
   17 Mar 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Remove net-im/ohphone mask due to its removal. (bug #105670)

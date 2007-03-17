@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.80 2007/03/08 19:09:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.81 2007/03/17 18:41:17 betelgeuse Exp $
+
+  17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  dev/2007.0/package.use.mask, package.use.mask, use.mask:
+  Unmasked ASIHPI driver for >=media-sound/alsa-driver-1.0.14_rc3.
 
   08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -2007.0/desktop/make.defaults, +dev/2007.0/desktop/make.defaults,

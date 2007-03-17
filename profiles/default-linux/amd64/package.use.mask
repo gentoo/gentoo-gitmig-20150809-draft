@@ -1,6 +1,6 @@
 # !!! WARNING !!!
 # MAKE SURE YOU KEEP default-linux/amd64/package.use.mask AND
-# default-linux/amd64/2007.0/package.use.mask IN SYNC
+# default-linux/amd64/(dev)?/2007.0/package.use.mask IN SYNC
 # SEE BUG #168249 FOR DETAILS
 
 # assembler-section
@@ -83,3 +83,9 @@ net-misc/yate gsm
 # Feb 17th 2007; drizzt@gentoo.org
 # amd64 does not have an emul libao package
 games-emulation/zsnes ao
+
+# Mar 17th 2007; Petteri Räty <betelgeuse@gentoo.org>
+# (Proxying for Diego Pettenò <flameeyes@gmail.com>)
+# ASIHPI driver is supported on 64-bit systems for newer versions
+<media-sound/alsa-driver-1.0.14_rc3 alsa_cards_asihpi
+

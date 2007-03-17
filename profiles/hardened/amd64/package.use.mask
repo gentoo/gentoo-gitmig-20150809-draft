@@ -1,0 +1,5 @@
+# 2007/03/17 - Petteri Räty <betelgeuse@gentoo.org>
+# (Proxying for Diego Pettenò <flameeyes@gmail.com>)
+# ASIHPI driver is supported on 64-bit systems for newer versions
+<media-sound/alsa-driver-1.0.14_rc3 alsa_cards_asihpi
+
