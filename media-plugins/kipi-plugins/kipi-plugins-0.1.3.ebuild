@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc2.ebuild,v 1.3 2007/01/01 13:29:31 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.3.ebuild,v 1.1 2007/03/17 19:46:52 cryos Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit kde
 
@@ -16,16 +19,21 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="opengl gphoto2"
 
-DEPEND="media-libs/libkexif
-	media-libs/libkipi
-	gphoto2? ( >=media-libs/libgphoto2-2.1.4 )
+DEPEND=">=media-libs/libkexif-0.1
+	>=media-libs/libkipi-0.1
+	gphoto2? ( >=media-libs/libgphoto2-2.3.1 )
 	>=media-libs/imlib2-1.1.0
-	>=media-gfx/imagemagick-5.5.4
+	>=media-gfx/imagemagick-6.2.4
 	>=media-video/mjpegtools-1.6.0
 	opengl? ( virtual/opengl )
-	media-libs/tiff"
+	>=media-libs/tiff-3.5
+	>=media-libs/libexif-0.1
+	>=dev-libs/libxslt-1.1
+	>=media-gfx/exiv2-0.9.1"
+
 RDEPEND="${DEPEND}
-	media-gfx/dcraw"
+	>=media-gfx/dcraw-5.02"
+
 need-kde 3.1
 
 pkg_setup(){
@@ -42,3 +50,4 @@ src_compile() {
 	myconf="$(use_with opengl) $(use_with gphoto2)"
 	kde_src_compile all
 }
+
