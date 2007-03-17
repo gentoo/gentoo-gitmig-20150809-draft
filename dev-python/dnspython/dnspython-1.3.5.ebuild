@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.5.ebuild,v 1.10 2007/03/12 16:44:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.5.ebuild,v 1.11 2007/03/17 19:10:08 beandog Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.dnspython.org/"
 SRC_URI="http://www.dnspython.org/kits/stable/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86"
 IUSE=""
 DEPEND="virtual/python
 	sys-devel/make"
@@ -34,4 +34,3 @@ src_test() {
 	cd tests
 	make || die "Unit tests failed!"
 }
-
