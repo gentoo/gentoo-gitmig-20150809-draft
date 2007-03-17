@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-0.4.7.ebuild,v 1.2 2007/03/01 17:53:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-0.4.7.ebuild,v 1.3 2007/03/17 11:07:50 beandog Exp $
 
 DESCRIPTION="A collection of several tools related to OpenPGP"
 HOMEPAGE="http://pgp-tools.alioth.debian.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/s/signing-party/signing-party_${PV}.orig.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="iconv recode"
 
 DEPEND=""
@@ -26,7 +26,7 @@ RDEPEND=">=app-crypt/gnupg-1.3.92
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:/usr/share/doc/signing-party/caff/caffrc.sample:/usr/share/doc/${P}/caff/caffrc.sample.gz:g" ${S}/caff/caff
+	dosed -i -e "s:/usr/share/doc/signing-party/caff/caffrc.sample:/usr/share/doc/${P}/caff/caffrc.sample.gz:g" ${S}/caff/caff
 }
 
 src_install() {
