@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/faac
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.47 2007/03/17 13:34:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.48 2007/03/17 20:06:39 beandog Exp $
+
+*faac-1.25 (17 Mar 2007)
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org>
+  +files/faac-1.25-external-libmp4v2.patch, +faac-1.25.ebuild:
+  version bump, bug 152718, thanks to Tim Harder, Christian Shcmidt and
+  stephan for ebuilds and patches
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> faac-1.24-r3.ebuild:
   amd64 stable
