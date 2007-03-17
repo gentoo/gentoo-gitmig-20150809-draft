@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/twisted-docs-1.3.0.ebuild,v 1.7 2007/03/12 17:06:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/twisted-docs-1.3.0.ebuild,v 1.8 2007/03/17 19:23:29 beandog Exp $
 
 #inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://twisted.sourceforge.net/${MY_PN}-${MY_PV}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="!>=dev-python/twisted-2"
