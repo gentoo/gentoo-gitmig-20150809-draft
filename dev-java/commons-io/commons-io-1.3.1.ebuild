@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.1.ebuild,v 1.1 2007/03/16 20:18:00 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.1.ebuild,v 1.2 2007/03/17 19:36:52 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -17,12 +17,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="test"
 
 DEPEND=">=virtual/jdk-1.4
-	source? ( app-arch/zip )
-	test? (
-		=dev-java/junit-3.8*
-		dev-java/ant
-	)
-	!test? ( dev-java/ant-core )"
+	test? ( dev-java/ant-junit )"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${MY_P}"
@@ -31,8 +26,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	rm *.jar
-	epatch ${FILESDIR}/${P}-build.xml.patch
+	rm -v *.jar || die
+	epatch "${FILESDIR}/${P}-build.xml.patch"
 	java-ant_ignore-system-classes
 	java-ant_rewrite-classpath
 }
@@ -40,7 +35,9 @@ src_unpack() {
 src_test() {
 	if hasq userpriv ${FEATURES}; then
 		#By default libdir is ${HOME}/.maven so it can be /root/.maven
-		ANT_OPTS="-Djava.io.tmpdir=${T}" eant test \
+		ANT_OPTS="-Djava.io.tmpdir=${T}" \
+		ANT_TASKS="ant-junit" \
+			eant test \
 			-Dgentoo.classpath="$(java-pkg_getjars junit)" \
 			-Dlibdir="libdir"
 	else
