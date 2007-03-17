@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-places
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.1 2007/03/17 16:27:10 drac Exp $
+
+*xfce4-places-0.0.9 (17 Mar 2007)
+
+  17 Mar 2007; Samuli Suominen <drac@gentoo.org> +metadata.xml,
+  +xfce4-places-0.0.9.ebuild:
+  Initial commit.
+
