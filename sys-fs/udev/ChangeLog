@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.286 2007/03/17 10:42:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.287 2007/03/17 12:20:21 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> udev-104-r12.ebuild:
+  amd64 stable, bug 159871
 
   17 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/modprobe-104-r12.sh:
