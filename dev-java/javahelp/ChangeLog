@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.5 2007/03/16 23:01:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.6 2007/03/17 00:14:45 wltjr Exp $
+
+  17 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  javahelp-2.0.02_p46.ebuild:
+  Added ~amd64
 
 *javahelp-2.0.02_p46 (16 Mar 2007)
 
