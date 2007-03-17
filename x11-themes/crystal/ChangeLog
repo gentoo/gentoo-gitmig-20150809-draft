@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.32 2007/03/12 12:53:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.33 2007/03/17 16:04:46 nixnut Exp $
+
+  17 Mar 2007; nixnut <nixnut@gentoo.org> crystal-1.0.2.ebuild:
+  Stable on ppc wrt bug 168233
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> crystal-1.0.2.ebuild:
   Stable on sparc wrt #168233
