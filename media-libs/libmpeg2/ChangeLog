@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.56 2007/03/13 12:02:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.57 2007/03/17 13:37:45 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> libmpeg2-0.4.1.ebuild:
+  amd64 stable
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> libmpeg2-0.4.1.ebuild:
   x86 stable
