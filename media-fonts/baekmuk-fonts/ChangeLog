@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/baekmuk-fonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.34 2007/03/17 13:12:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.35 2007/03/17 16:25:18 corsair Exp $
+
+  17 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  baekmuk-fonts-2.2-r2.ebuild:
+  Stable on ppc64; bug #171063
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> baekmuk-fonts-2.2-r2.ebuild:
   Stable on ppc wrt bug 171063

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/mikachan-font
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.22 2007/03/17 13:18:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.23 2007/03/17 16:29:20 corsair Exp $
+
+  17 Mar 2007; Markus Rothe <corsair@gentoo.org> mikachan-font-9.1.ebuild:
+  Stable on ppc64; bug #171063
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> mikachan-font-9.1.ebuild:
   Stable on ppc wrt bug 171063
