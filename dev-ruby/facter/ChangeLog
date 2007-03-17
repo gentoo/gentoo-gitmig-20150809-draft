@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/facter
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.1 2007/03/17 17:23:24 nakano Exp $
+
+*facter-1.3.6 (17 Mar 2007)
+
+  17 Mar 2007; Masatomo Nakano <nakano@gentoo.org> +facter-1.3.6.ebuild:
+  Initial import. Ebuild submitted by Jose Gonzalez Gomez <jgonzalez.openinput@gmail.com>.
+  #146712
