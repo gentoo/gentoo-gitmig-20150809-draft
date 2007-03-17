@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.65 2007/03/06 12:14:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.66 2007/03/17 13:26:12 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -586,13 +586,21 @@ java-pkg_dosrc() {
 	debug-print-function ${FUNCNAME} $*
 
 	[ ${#} -lt 1 ] && die "At least one argument needed"
-	if ! hasq source ${IUSE}; then
-		echo "Java QA Notice: ${FUNCNAME} called without source in IUSE"
-	fi
 
 	java-pkg_check-phase install
 
 	[[ ${#} -lt 1 ]] && die "At least one argument needed"
+
+	if ! [[ ${DEPEND} = *app-arch/zip* ]]; then
+		local msg="${FUNCNAME} called without app-arch/zip in DEPEND"
+		if is-java-strict; then
+			eerror "${msg}"
+			die "${msg}"
+		else
+			echo "${msg}"
+			echo "Please report this to http://bugs.gentoo.org."
+		fi
+	fi
 
 	java-pkg_init_paths_
 
