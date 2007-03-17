@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-discovery
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.20 2007/03/14 13:29:55 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.21 2007/03/17 17:15:42 nixnut Exp $
+
+  17 Mar 2007; nixnut <nixnut@gentoo.org> commons-discovery-0.4.ebuild:
+  Stable on ppc wrt bug 170791
 
   14 Mar 2007; Joshua Nichols <nichoj@gentoo.org>
   commons-discovery-0.4.ebuild:
