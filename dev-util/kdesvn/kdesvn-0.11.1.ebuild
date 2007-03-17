@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.1.ebuild,v 1.1 2007/03/14 17:35:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.1.ebuild,v 1.2 2007/03/17 08:47:46 george Exp $
 
 inherit eutils kde-functions toolchain-funcs
 
@@ -31,8 +31,8 @@ src_compile() {
 	cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr					\
 		-DCMAKE_BUILD_TYPE=Release					\
-		-DCMAKE_C_COMPILER=$(which $(tc-getCC))		\
-		-DCMAKE_CXX_COMPILER=$(which $(tc-getCXX))	\
+		-DCMAKE_C_COMPILER=$(type -P $(tc-getCC))		\
+		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX))	\
 		-DCMAKE_CXX_FLAGS="-DQT_THREAD_SUPPORT"		\
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir) 		\
 		|| die
