@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.15 2007/03/15 04:07:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.16 2007/03/17 16:23:20 robbat2 Exp $
+
+  17 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> redcloth-3.0.4.ebuild:
+  Add ~ppc.
 
   14 Mar 2007; Tom Gall <tgall@gentoo.org> redcloth-3.0.4.ebuild:
   added ~ppc64
