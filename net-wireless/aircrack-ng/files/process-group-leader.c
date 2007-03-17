@@ -8,7 +8,7 @@ int main (int argc, char *argv[]) {
 
 	signal (SIGQUIT, SIG_IGN);
 	signal (SIGTERM, SIG_IGN);
-	setpgrp ();
+	setpgid (0, 0);
 
 	pid=fork ();
 	if (pid == 0) {

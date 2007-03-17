@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.18 2007/03/16 22:16:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.19 2007/03/17 10:38:39 alonbl Exp $
+
+  17 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  files/process-group-leader.c, aircrack-ng-0.7-r1.ebuild:
+  x86-fbsd fixups, bug#171217, Thanks to ebfe
 
   16 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org> -aircrack-ng-0.6.2.ebuild,
   -aircrack-ng-0.7.ebuild:
