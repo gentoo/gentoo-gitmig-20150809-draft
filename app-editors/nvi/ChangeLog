@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.47 2007/03/17 17:59:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.48 2007/03/17 23:10:23 truedfx Exp $
+
+  17 Mar 2007; Harald van Dĳk <truedfx@gentoo.org>
+  +files/nvi-1.81.5-header.patch, nvi-1.81.5-r6.ebuild:
+  Fix QA violation
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> nvi-1.81.5-r5.ebuild:
   Stable on ppc wrt bug 170745

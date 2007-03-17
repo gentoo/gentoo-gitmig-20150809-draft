@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r6.ebuild,v 1.1 2007/03/15 22:16:19 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r6.ebuild,v 1.2 2007/03/17 23:10:23 truedfx Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-wide-2.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-db4.patch
+	epatch "${FILESDIR}"/${P}-header.patch
 	touch "${S}"/dist/{configure,aclocal.m4,Makefile.in,stamp-h.in}
 }
 
