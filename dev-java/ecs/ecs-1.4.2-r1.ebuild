@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.2-r1.ebuild,v 1.1 2007/03/17 20:44:22 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.2-r1.ebuild,v 1.2 2007/03/17 20:53:05 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -26,9 +26,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	rm -f lib/*.jar
-	rm -f build/*.jar
-	rm -f ecs*.jar
+	rm -v lib/*.jar || die
+	rm -v build/*.jar || die
+	rm -v ecs*.jar || die
 
 	java-ant_bsfix_one build/build-ecs.xml
 
@@ -37,16 +37,13 @@ src_unpack() {
 	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar regexp.jar
 }
 
-src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} javadocs"
-	eant -f build/build-ecs.xml ${antflags}
-}
+EANT_BUILD_XML="build/build-ecs.xml"
+EANT_DOC_TARGET="javadocs"
 
 src_install() {
-	java-pkg_newjar bin/${P}.jar ${PN}.jar
+	java-pkg_newjar bin/${P}.jar
 
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS ChangeLog README || die
 	use doc && java-pkg_dojavadoc docs/*
 	use source && java-pkg_dosrc src/java/*
 }
