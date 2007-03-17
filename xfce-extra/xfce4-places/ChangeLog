@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-places
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.1 2007/03/17 16:27:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.2 2007/03/17 17:28:52 nixnut Exp $
+
+  17 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-places-0.0.9.ebuild:
+  Added ~ppc
 
 *xfce4-places-0.0.9 (17 Mar 2007)
 
