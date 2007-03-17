@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.224 2007/02/11 23:34:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.225 2007/03/17 20:37:21 betelgeuse Exp $
+
+*alsa-lib-1.0.14_rc3-r1 (17 Mar 2007)
+*alsa-lib-1.0.14_rc3 (17 Mar 2007)
+
+  17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +alsa-lib-1.0.14_rc3.ebuild, +alsa-lib-1.0.14_rc3-r1.ebuild:
+  Version bump. Thanks to Diego Pettenò <flameeyes@gmail.com>.
 
   11 Feb 2007; Simon Stelling <blubb@gentoo.org> alsa-lib-1.0.14_rc1.ebuild:
   stable on amd64; bug 158678
