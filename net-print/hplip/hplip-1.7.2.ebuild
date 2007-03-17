@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.2.ebuild,v 1.2 2007/03/04 23:24:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.2.ebuild,v 1.3 2007/03/17 17:37:45 beandog Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ DEPEND=">=dev-lang/python-2.2.0
 			>=media-gfx/xsane-0.89
 			>=media-gfx/sane-frontends-1.0.9
 			) )
-		!X? ( || ( 
+		!X? ( || (
 			>=media-gfx/sane-frontends-1.0.9
 			>=media-gfx/xsane-0.89
 			) )
