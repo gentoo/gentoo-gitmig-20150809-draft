@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/dvbstreamer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.1 2007/03/17 14:51:55 zzam Exp $
+
+*dvbstreamer-0.6 (17 Mar 2007)
+
+  17 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +dvbstreamer-0.6.ebuild:
+  Initial import of ebuild, suggested by Roman Polach <rpolach@atlas.cz>, Bug
+  #156763.
+
