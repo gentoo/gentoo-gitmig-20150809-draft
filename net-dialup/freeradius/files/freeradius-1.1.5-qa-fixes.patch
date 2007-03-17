@@ -1,0 +1,24 @@
+diff -Nru freeradius-1.1.5.orig/src/modules/rlm_smb/smblib.c freeradius-1.1.5/src/modules/rlm_smb/smblib.c
+--- freeradius-1.1.5.orig/src/modules/rlm_smb/smblib.c	2004-02-26 21:04:35.000000000 +0200
++++ freeradius-1.1.5/src/modules/rlm_smb/smblib.c	2007-03-17 11:13:44.000000000 +0200
+@@ -23,6 +23,8 @@
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+ 
++#include <string.h>
++
+ int SMBlib_errno;
+ int SMBlib_SMB_Error;
+ #define SMBLIB_ERRNO
+diff -Nru freeradius-1.1.5.orig/src/modules/rlm_smb/smblib-util.c freeradius-1.1.5/src/modules/rlm_smb/smblib-util.c
+--- freeradius-1.1.5.orig/src/modules/rlm_smb/smblib-util.c	2004-02-26 21:04:35.000000000 +0200
++++ freeradius-1.1.5/src/modules/rlm_smb/smblib-util.c	2007-03-17 11:13:58.000000000 +0200
+@@ -23,6 +23,8 @@
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+ 
++#include <string.h>
++
+ #include "smblib-priv.h"
+ 
+ #include "rfcnb.h"
