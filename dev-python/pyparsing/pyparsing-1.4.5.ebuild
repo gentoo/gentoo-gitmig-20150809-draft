@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.4.5.ebuild,v 1.2 2006/12/24 16:38:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.4.5.ebuild,v 1.3 2007/03/17 16:48:18 nixnut Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pyparsing.wikispaces.com"
 LICENSE="MIT"
 SLOT="0"
 DEPEND=">=dev-lang/python-2.3.2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
 IUSE=""
 
 src_install() {
