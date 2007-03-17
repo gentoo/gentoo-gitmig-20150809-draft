@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Do not continue for non-modular kernel - Bug #168322
+[ ! -f /proc/modules ] && exit 0
+
 if [[ -e /dev/.udev_populate ]]; then
 	# Enable verbose while called from udev-addon-start
 	source /dev/.udev_populate
