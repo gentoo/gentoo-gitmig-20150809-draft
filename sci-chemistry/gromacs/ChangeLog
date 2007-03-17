@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.21 2007/03/11 18:03:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.22 2007/03/17 12:09:31 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> gromacs-3.3.1-r1.ebuild:
+  amd64 stable, bug 168182
 
   11 Mar 2007; Sven Wegener <swegener@gentoo.org> gromacs-3.3.1-r1.ebuild:
   Properly indent src_compile, thanks to ferringb.
