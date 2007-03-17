@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.4.0.ebuild,v 1.12 2007/03/15 13:32:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.4.0.ebuild,v 1.13 2007/03/17 21:30:49 vapier Exp $
 
 MY_P="gtk-xfce-engine-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -10,7 +10,7 @@ inherit xfce44
 xfce44
 
 DESCRIPTION="GTK+ Xfce4 theme engine"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/glib-2.6
