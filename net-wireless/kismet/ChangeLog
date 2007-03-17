@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.94 2007/03/17 14:40:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.95 2007/03/17 17:52:02 beandog Exp $
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> kismet-2007.01.1b.ebuild:
+  amd64 stable, bug 171053
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> kismet-2007.01.1b.ebuild:
   Stable on ppc wrt bug 171053
