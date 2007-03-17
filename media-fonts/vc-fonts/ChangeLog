@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vc-fonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.14 2007/03/12 19:39:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.15 2007/03/17 13:22:02 nixnut Exp $
+
+  17 Mar 2007; nixnut <nixnut@gentoo.org> vc-fonts-20020207-r1.ebuild:
+  Stable on ppc wrt bug 171063
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   vc-fonts-20020207-r1.ebuild:

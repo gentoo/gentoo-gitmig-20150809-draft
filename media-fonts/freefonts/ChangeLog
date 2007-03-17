@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/freefonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/ChangeLog,v 1.20 2007/03/12 19:27:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/ChangeLog,v 1.21 2007/03/17 13:15:26 nixnut Exp $
+
+  17 Mar 2007; nixnut <nixnut@gentoo.org> freefonts-0.10-r3.ebuild:
+  Stable on ppc wrt bug 171063
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> freefonts-0.10-r3.ebuild:
   x86 stable
