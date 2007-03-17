@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.1.ebuild,v 1.1 2007/03/16 21:30:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.1.ebuild,v 1.2 2007/03/17 07:01:06 mr_bones_ Exp $
 
 inherit autotools eutils toolchain-funcs games
 
@@ -24,6 +24,12 @@ src_unpack() {
 	sed -i \
 		-e '/datadir/d' \
 		doc/Makefile.am \
+		|| die "sed failed"
+	sed -i \
+		-e '/^highdir/d' \
+		-e 's/^high_/localstate_/' \
+		-e 's/highdir/localstatedir/g' \
+		src/Makefile.am \
 		|| die "sed failed"
 	eautoreconf
 }
