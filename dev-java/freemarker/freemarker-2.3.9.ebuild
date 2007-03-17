@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.9.ebuild,v 1.1 2007/03/17 14:24:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.9.ebuild,v 1.2 2007/03/17 16:09:25 betelgeuse Exp $
+
+WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -20,8 +22,6 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/jython
 	=dev-java/servletapi-2.3*
 	=dev-java/jaxen-1.1*"
-
-WANT_ANT_TASKS="ant-nodeps"
 
 src_unpack() {
 
@@ -58,9 +58,9 @@ src_compile() {
 src_install() {
 
 	java-pkg_dojar lib/${PN}.jar
-	dodoc README.txt
+	dodoc README.txt || die
 
-	use doc && java-pkg_dohtml -r build/api
+	use doc && java-pkg_dojavadoc build/api
 	use source && java-pkg_dosrc src/*
 
 }
