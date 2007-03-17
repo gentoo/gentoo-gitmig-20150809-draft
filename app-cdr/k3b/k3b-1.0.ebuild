@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_rc4.ebuild,v 1.1 2007/01/21 14:25:18 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.1 2007/03/17 12:09:35 cryos Exp $
 
 inherit kde eutils
 
@@ -53,15 +53,15 @@ need-kde 3.2
 
 # The following commented lines will have to be uncommented once the final
 # release is done. This pre-release version does not support i18n.
-#I18N="${PN}-i18n-${PV}"
+I18N="${PN}-i18n-${PV}"
 
 # Supported languages and translated documentation
-#LANGS="af bg bn br bs ca cs cy da de el en_GB es et eu fr ga he hi hu is it ja km lt mk ms nb nds nl nn pa pl pt pt_BR ro ru se sl sr sr@Latn sv ta tr uk zh_CN"
+LANGS="af bg bn br bs ca cs cy da de el en_GB es et eu fr ga he hi hu is it ja km lt mk ms nb nds nl nn pa pl pt pt_BR ro ru se sl sr sr@Latn sv ta tr uk zh_CN"
 
-#for X in ${LANGS}; do
-#	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
-#	IUSE="${IUSE} linguas_${X}"
-#done
+for X in ${LANGS}; do
+	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
+	IUSE="${IUSE} linguas_${X}"
+done
 
 pkg_setup() {
 	if use hal && has_version '<sys-apps/dbus-0.91' && ! built_with_use sys-apps/dbus qt3; then
@@ -114,20 +114,20 @@ src_compile() {
 	kde_src_compile
 
 	# Build process of K3b-i18n
-#	if [ -d "${WORKDIR}/${I18N}" ]; then
-#		KDE_S="${WORKDIR}/${I18N}" \
-#		kde_src_compile
-#	fi
+	if [ -d "${WORKDIR}/${I18N}" ]; then
+		KDE_S="${WORKDIR}/${I18N}" \
+		kde_src_compile
+	fi
 }
 
 src_install() {
 	kde_src_install
 	dodoc FAQ KNOWNBUGS PERMISSIONS
 
-#	if [ -d "${WORKDIR}/${I18N}" ]; then
-#		KDE_S="${WORKDIR}/${I18N}" \
-#		kde_src_install
-#	fi
+	if [ -d "${WORKDIR}/${I18N}" ]; then
+		KDE_S="${WORKDIR}/${I18N}" \
+		kde_src_install
+	fi
 
 	# Move menu entry
 	if use kde; then
