@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.81 2007/03/09 17:20:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.82 2007/03/17 20:27:29 cryos Exp $
+
+*digikam-0.9.1 (17 Mar 2007)
+
+  17 Mar 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -files/digikam-0.9.0_beta1-memory-leak-fix.patch,
+  -files/digikam-0.9.0_beta1-rate-pictures-fix.diff,
+  -files/digikam-0.9.0_beta2-asneeded.patch, -digikam-0.9.1_rc1.ebuild,
+  +digikam-0.9.1.ebuild:
+  Version bump, closes bug 171054. Marked ~amd64, bug 169160.
 
   09 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   digikam-0.9.1_rc1.ebuild:
