@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9_rc1.ebuild,v 1.2 2007/03/02 10:46:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.2.ebuild,v 1.1 2007/03/17 15:08:00 nelchael Exp $
 
 inherit python
 
-ARTWORK_PV=0.6.2
+ARTWORK_PV=0.9.2
 
 DESCRIPTION="Movie collection manager"
 HOMEPAGE="http://griffith.vasconunes.net/"
@@ -24,9 +24,6 @@ RDEPEND="dev-python/imaging
 	spell? ( >=dev-python/gnome-python-extras-2.0 )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook2X )"
-
-# No, this is not a joke! they really name the directory "griffith-0.9~rc1"
-S="${WORKDIR}/${P/_/~}"
 
 src_unpack() {
 	unpack ${A}
