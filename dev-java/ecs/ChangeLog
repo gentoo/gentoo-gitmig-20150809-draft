@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ecs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.15 2007/02/21 23:33:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.16 2007/03/17 20:44:22 nelchael Exp $
+
+*ecs-1.4.2-r1 (17 Mar 2007)
+
+  17 Mar 2007; Krzysiek Pawlik <nelchael@gentoo.org> +ecs-1.4.2-r1.ebuild:
+  Migrated to generation 2.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
