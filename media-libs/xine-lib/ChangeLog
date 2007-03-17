@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.454 2007/02/09 04:46:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.455 2007/03/17 21:48:32 tsunam Exp $
+
+*xine-lib-1.1.4-r2 (17 Mar 2007)
+
+  17 Mar 2007; Joshua Jackson <tsunam@gentoo.org> +xine-lib-1.1.4-r2.ebuild:
+  Adding the new revision with Real Codec Changes
 
 *xine-lib-1.1.4-r1 (09 Feb 2007)
 
