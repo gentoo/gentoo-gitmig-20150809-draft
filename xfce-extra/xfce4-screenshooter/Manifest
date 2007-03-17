@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-screenshooter-plugin-1.0.0.tar.bz2 257496 RMD160 f454f968d51e259abc3f0a3d3e55eabc305e7813 SHA1 c23532f8a0a38f168ac08b3bef0e21474944f5eb SHA256 2ee31e2d74a2373da8ad44a1c2af3e323f199fbdb63ea31c070841d9487d41f2
 EBUILD xfce4-screenshooter-1.0.0.ebuild 419 RMD160 98c6883f55f89d10139faa2425cae93c88f84afa SHA1 a95bcfddad9d0a053b410566f8954670cf10fcf2 SHA256 75eaf7dd39bf66778fc96f95ea32a7cb1a37449b7975c7b749620398b383ba3f
 MD5 e969ce4dabd4c15bec8bf07687de3f0d xfce4-screenshooter-1.0.0.ebuild 419
@@ -14,3 +17,10 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 349994d66b17bd829761eca1650029c0 files/digest-xfce4-screenshooter-1.0.0 301
 RMD160 a03d9977beecd8c5af22866de220564b534c894c files/digest-xfce4-screenshooter-1.0.0 301
 SHA256 2a45638f6c39a9660a6fd97ba7295a7e310bfdb2970f3d0e0ee74cc434c0e44e files/digest-xfce4-screenshooter-1.0.0 301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF/F6n8bi6rjpTunYRAsMoAJ9oaPe6HYBaZmgBFtwR0Qiu7zwtkACdENS/
+B2pTAvMIgOkkWg9Q4FZD67M=
+=zRB6
+-----END PGP SIGNATURE-----

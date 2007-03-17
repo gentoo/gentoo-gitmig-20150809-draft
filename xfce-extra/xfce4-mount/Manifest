@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce4-mount-asneeded.patch 622 RMD160 809a07ea97f8e0c817c67e915efae0d0fd39261f SHA1 e9ee81de2a0b73e1e62e012d79f0f68dd1b1c668 SHA256 a26d09a85abdb63d095ee7853623ee628d2845a3566f7344ee285574f2f488cf
 MD5 f2564daf2049d039d12af05b06d03c92 files/xfce4-mount-asneeded.patch 622
 RMD160 809a07ea97f8e0c817c67e915efae0d0fd39261f files/xfce4-mount-asneeded.patch 622
@@ -34,3 +37,10 @@ SHA256 23156fae7fc219f37b20d7add81094aa375bf7f2066815d86c4cf067b4b49bf1 files/di
 MD5 569e5f7f466b2e38e16db5f37096d8b3 files/digest-xfce4-mount-0.5.1 277
 RMD160 395664a5ed26e27be81c66598d249ae9a9691920 files/digest-xfce4-mount-0.5.1 277
 SHA256 899d296fab59546f0c3b00a519708e55a52ce9514a19a07be7fdc0af1a22f940 files/digest-xfce4-mount-0.5.1 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF/F6n8bi6rjpTunYRAjabAJ97jnxaxTfIZEMCXDLHuToqIk5E+ACfZjHb
+IAB/cTHXE3vDZwZ8f29HwII=
+=Wewv
+-----END PGP SIGNATURE-----

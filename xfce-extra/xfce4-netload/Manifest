@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce4-netload-0.4.0-asneeded.patch 549 RMD160 1df5c37d045b17c9986d933ce72e6bc27f88e368 SHA1 203831bf57c2b988b8afc1cbb80533d8a5a8ac0d SHA256 9e8893efa3dda39b099d542367aaa3e99e5e7c3fa3521a0a6f1777b314e6bbe8
 MD5 7973d6a027cb9792cec8e3c70f07f35b files/xfce4-netload-0.4.0-asneeded.patch 549
 RMD160 1df5c37d045b17c9986d933ce72e6bc27f88e368 files/xfce4-netload-0.4.0-asneeded.patch 549
@@ -26,3 +29,10 @@ SHA256 7e22401e79e3e23a00bd5564d8790436f032dc1a96770b2c842a87c983b29258 files/di
 MD5 7def979daef13ae08f320a409ea2735b files/digest-xfce4-netload-0.4.0 283
 RMD160 c4f61fc7e38307253a1f241c03c0303bd4dafdb1 files/digest-xfce4-netload-0.4.0 283
 SHA256 77a012325f90c9aee1c89dceb48eaef84f752f61336c4d01bb38084556573152 files/digest-xfce4-netload-0.4.0 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFF/F6n8bi6rjpTunYRAkevAKDTkwsFOao2F4cGv1DTaEb092qeXQCfZzvv
+q/Wn5KNV73ERU3jhZRUKEtI=
+=2r80
+-----END PGP SIGNATURE-----
