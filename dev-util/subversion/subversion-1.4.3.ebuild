@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.7 2007/03/07 04:52:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.8 2007/03/18 19:18:07 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -80,7 +80,7 @@ src_compile() {
 
 	if use apache2; then
 		myconf="--with-apxs=${APXS2}"
-		apache_minor="(best_version apache | cut -d. -f2)"
+		apache_minor="$(best_version net-www/apache | cut -d. -f2)"
 		if [ ${apache_minor} -gt 0 ]; then
 			apr_suffix="-1"
 		fi
@@ -106,7 +106,7 @@ src_compile() {
 		myconf="${myconf} --with-neon=/usr"
 	fi
 
-	append-flags `/usr/bin/apr-config --cppflags`
+	append-flags `/usr/bin/apr-config${apr_suffix} --cppflags`
 
 	econf ${myconf} \
 		$(use_with berkdb berkeley-db) \
