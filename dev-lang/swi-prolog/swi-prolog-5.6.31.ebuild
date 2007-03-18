@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.31.ebuild,v 1.1 2007/03/17 21:34:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.31.ebuild,v 1.2 2007/03/18 18:35:49 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -44,7 +44,6 @@ src_unpack() {
 	epatch "${WORKDIR}"/${PV}/1001-multilib.patch
 	epatch "${WORKDIR}"/${PV}/2100-thread-sandbox.patch
 	epatch "${WORKDIR}"/${PV}/2800-mandir.patch
-	epatch "${WORKDIR}"/${PV}/3000-packages-subshell.patch
 	epatch "${WORKDIR}"/${PV}/3029-clib-test.patch
 	epatch "${WORKDIR}"/${PV}/3059-ssl-test.patch
 	epatch "${WORKDIR}"/${PV}/3069-semweb-test.patch

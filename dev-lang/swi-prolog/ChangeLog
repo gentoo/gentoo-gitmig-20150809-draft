@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.81 2007/03/18 10:21:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.82 2007/03/18 18:35:49 keri Exp $
+
+  18 Mar 2007; keri <keri@gentoo.org> swi-prolog-5.6.31.ebuild:
+  Remove unused packages-subshell patch. Reported by lordcris in bug #171364.
 
   18 Mar 2007; nixnut <nixnut@gentoo.org> swi-prolog-5.6.25.ebuild:
   Stable on ppc wrt bug 168534
