@@ -1,0 +1,15 @@
+--- branches/koffice/1.6/koffice/kexi/examples/build_kexi_file.sh	2007/01/24 18:50:22	626851
++++ branches/koffice/1.6/koffice/kexi/examples/build_kexi_file.sh	2007/02/15 13:50:16	633840
+@@ -8,8 +8,10 @@
+ # ksqlite is needed on the $PATH.
+ 
+ KEXISQL3PATH=../3rdparty/kexisql3/src/.libs/
+-PATH=$PATH:$KEXISQL3PATH
+-LD_LIBRARY_PATH=$KEXISQL3PATH:$KEXISQL3PATH
++PATH=$KEXISQL3PATH:$PATH
++export PATH
++LD_LIBRARY_PATH=$KEXISQL3PATH:$LD_LIBRARY_PATH
++export LD_LIBRARY_PATH
+ which ksqlite > /dev/null || exit 1
+ 
+ [ $# -lt 1 ] && echo "Missing .sql filename." && exit 1
