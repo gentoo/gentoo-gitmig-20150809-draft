@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1-r1.ebuild,v 1.8 2006/11/23 20:24:09 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1-r1.ebuild,v 1.9 2007/03/18 05:08:41 genone Exp $
 
 inherit eutils
 
@@ -100,7 +100,7 @@ etc_courier() {
 
 etc_courier_chg() {
 	file="${1}" ; key="${2}" ; value="${3}"
-	grep -q "${key}" "${file}" && einfo "Changing ${file}: ${key} to ${value}"
+	grep -q "${key}" "${file}" && elog "Changing ${file}: ${key} to ${value}"
 	sed -i -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
 }
 
@@ -110,7 +110,7 @@ set_maildir() {
 	newmaildir='.maildir'
 	for f in ${files} ; do
 		grep -q "${origmaildir}" "${f}" && \
-			einfo "Changing ${origmaildir} in ${f} to ${newmaildir}"
+			elog "Changing ${origmaildir} in ${f} to ${newmaildir}"
 		sed -i -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f}
 	done
 }

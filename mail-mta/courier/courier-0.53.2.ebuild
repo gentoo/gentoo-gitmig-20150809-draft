@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.13 2007/01/04 15:01:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.14 2007/03/18 05:08:41 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -54,8 +54,8 @@ filter-flags '-fomit-frame-pointer'
 src_unpack() {
 	use fam || (
 		ewarn "File Alteration Monitor (FAM) is disabled"
-		einfo "courier-imap will fall back to 60 second polls."
-		einfo 'add "fam" to your USE flags to build as usual'
+		ewarn "courier-imap will fall back to 60 second polls."
+		ewarn 'add "fam" to your USE flags to build as usual'
 		ebeep 4
 		epause 4 )
 	unpack ${A}
@@ -123,7 +123,7 @@ etc_courier() {
 etc_courier_chg() {
 	file="${1}" ; key="${2}" ; value="${3}" ; section="${4}"
 	[ -z "${section}" ] && section="${2}"
-	grep -q "${key}" "${file}" && einfo "Changing ${file}: ${key} to ${value}"
+	grep -q "${key}" "${file}" && elog "Changing ${file}: ${key} to ${value}"
 	sed -i -e"/\#\#NAME: ${section}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
 }
 
@@ -133,7 +133,7 @@ set_maildir() {
 	newmaildir='.maildir'
 	for f in ${files} ; do
 		grep -q "${origmaildir}" "${f}" && \
-			einfo "Changing ${origmaildir} in ${f} to ${newmaildir}"
+			elog "Changing ${origmaildir} in ${f} to ${newmaildir}"
 		sed -i -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f}
 	done
 }
@@ -278,13 +278,13 @@ src_test() {
 }
 
 pkg_postinst() {
-	use fam && einfo "fam daemon is needed for courier-imapd" \
+	use fam && elog "fam daemon is needed for courier-imapd" \
 		|| ewarn "courier was built without fam support"
 
 	# fix for bug #99334
-	einfo "Courier's sendmail is not suid by default, therefore non-root users can't send"
-	einfo "mail using sendmail. If you need this to work, you should set sendmail suid."
-	einfo "See also: http://www.courier-mta.org/install.html#suid"
+	elog "Courier's sendmail is not suid by default, therefore non-root users can't send"
+	elog "mail using sendmail. If you need this to work, you should set sendmail suid."
+	elog "See also: http://www.courier-mta.org/install.html#suid"
 }
 
 pkg_config() {
