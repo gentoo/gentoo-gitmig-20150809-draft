@@ -1,13 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/vlgothic-20061026.ebuild,v 1.1 2006/11/29 16:19:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/vlgothic-20070317.ebuild,v 1.1 2007/03/18 00:39:20 matsuu Exp $
 
 inherit font
 
 DESCRIPTION="Japanese TrueType font from Vine Linux"
 HOMEPAGE="http://dicey.org/vlgothic/"
-SRC_URI="http://vinelinux.org/~daisuke/tmp/VLGothic-${PV}.tar.bz2
-	http://dicey.org/vlgothic/VLGothic-${PV}.tar.bz2"
+SRC_URI="http://vinelinux.org/~daisuke/vlgothic/VLGothic-${PV}.tar.bz2"
 
 LICENSE="vlgothic mplus-fonts"
 SLOT="0"
