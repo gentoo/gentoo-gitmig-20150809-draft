@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.62.ebuild,v 1.6 2006/11/23 20:25:35 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.62.ebuild,v 1.7 2007/03/18 05:28:12 genone Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_unpack() {
 	epatch ${FILESDIR}/exim-4.43-r2-localscan_dlopen.patch
 
 	if ! use mbox; then
-		einfo "Patching maildir support into exim.conf"
+		elog "Patching maildir support into exim.conf"
 		epatch ${FILESDIR}/exim-4.20-maildir.patch
 	fi
 
@@ -230,7 +230,7 @@ src_install () {
 	dodir /usr/bin /usr/sbin /usr/lib
 	dosym ../sbin/exim /usr/bin/mailq
 	dosym ../sbin/exim /usr/bin/newaliases
-	einfo "The Exim ebuild will no longer touch /usr/bin/mail, so as not to interfere with mailx/nail."
+	elog "The Exim ebuild will no longer touch /usr/bin/mail, so as not to interfere with mailx/nail."
 	dosym exim /usr/sbin/rsmtp
 	dosym exim /usr/sbin/rmail
 	if \[ ! -e /usr/lib/sendmail \];
@@ -289,15 +289,15 @@ src_install () {
 
 
 pkg_postinst() {
-	einfo "/etc/exim/system_filter.exim is a sample system_filter."
-	einfo "/etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
-	einfo "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
+	elog "/etc/exim/system_filter.exim is a sample system_filter."
+	elog "/etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
+	elog "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
 
 	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
 	then
-		einfo
-		einfo "Since you emerged $PN without mailwrapper in USE,"
-		einfo "you probably want to 'emerge -C mailwrapper' now."
-		einfo
+		elog
+		elog "Since you emerged $PN without mailwrapper in USE,"
+		elog "you probably want to 'emerge -C mailwrapper' now."
+		elog
 	fi
 }
