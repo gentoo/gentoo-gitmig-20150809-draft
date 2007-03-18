@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.8 2007/03/07 05:21:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.9 2007/03/18 15:31:37 grobian Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -37,19 +37,20 @@ PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="23.0.0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~sparc-fbsd ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86"
 
 DFILE=emacs-${SLOT}.desktop
 
 src_unpack() {
 	cvs_src_unpack
-	cd ${S};
-	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
-	use ppc-macos && epatch ${FILESDIR}/emacs-cvs-21.3.50-nofink.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/emacs-subdirs-el-gentoo.diff
+	epatch "${FILESDIR}"/emacs-cvs-nofink.patch
+	epatch "${FILESDIR}"/emacs-cvs-darwin-fsf-gcc.patch
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
-	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
+	epatch "${FILESDIR}"/${PN}-freebsd-sparc.patch
 }
 
 src_compile() {
@@ -87,6 +88,7 @@ src_compile() {
 		einfo "Configuring to build with Carbon Emacs"
 		econf --enable-debug \
 			--enable-carbon-app=/Applications/Gentoo \
+			--program-suffix=.emacs-${SLOT} \
 			--without-x \
 			$(use_with jpeg) $(use_with tiff) \
 			$(use_with gif) $(use_with png) \
@@ -166,7 +168,7 @@ update-alternatives() {
 }
 
 pkg_postinst() {
-	use ppc-macos || update-alternatives
+	update-alternatives
 	elisp-site-regen
 	if use X; then
 		while read line; do einfo "${line}"; done<<'EOF'
@@ -183,6 +185,6 @@ EOF
 }
 
 pkg_postrm() {
-	use ppc-macos || update-alternatives
+	update-alternatives
 	elisp-site-regen
 }
