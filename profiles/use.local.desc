@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2670 2007/03/17 19:09:19 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2671 2007/03/18 08:55:13 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1955,3 +1955,4 @@ xfce-extra/xarchiver:arj - Adds support for arj archives.
 xfce-extra/xarchiver:lha - Adds support for lha archives.
 xfce-extra/xarchiver:rar - Adds support for rar archives.
 xfce-extra/xarchiver:zip - Adds support for zip archives.
+xfce-extra/xfce4-sensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
