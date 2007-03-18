@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.2 2007/03/05 02:47:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.3 2007/03/18 00:20:10 marienz Exp $
 
 NEED_PYTHON=2.3
 
@@ -26,6 +26,9 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
 DOCS="LICENSE.txt Doc/*.txt Doc/release_notes/ANNOUNCE-${PV:0:3}"
+
+# test with lapack buggy
+RESTRICT="lapack? ( test )"
 
 pkg_setup() {
 	if use lapack; then
@@ -84,22 +87,14 @@ src_unpack() {
 }
 
 src_test() {
-	# test with lapack buggy
-	if use lapack; then
-		elog "no automatic testing with external lapack"
-		return
-	fi
-	ebegin "Testing numarray functions"
 	cd build/lib*
 	cp "${S}"/Lib/testdata.fits numarray
 	PYTHONPATH=. "${python}" -c \
 		"from numarray.testall import test;import sys;sys.exit(test())" \
 		> test.log
 	grep -q -i failed test.log  && die "failed tests in ${PWD}/test.log"
-	eend $?
 	rm -f numarray/testdata.fits test*.*
 }
-
 
 src_install() {
 	distutils_src_install
