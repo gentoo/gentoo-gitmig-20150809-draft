@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.23 2007/02/22 00:42:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.24 2007/03/18 23:57:49 kloeri Exp $
+
+  18 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove plasmaroo from metadata.xml due to retirement.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
