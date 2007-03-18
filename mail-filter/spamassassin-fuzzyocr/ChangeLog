@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.7 2007/03/15 17:41:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.8 2007/03/18 04:56:12 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org>
+  spamassassin-fuzzyocr-2.3b.ebuild, spamassassin-fuzzyocr-3.5.1.ebuild:
+  Replacing einfo with elog
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   spamassassin-fuzzyocr-3.5.1.ebuild:

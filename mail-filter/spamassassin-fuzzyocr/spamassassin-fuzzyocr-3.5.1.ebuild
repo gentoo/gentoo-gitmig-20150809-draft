@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.5.1.ebuild,v 1.2 2007/03/15 17:41:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.5.1.ebuild,v 1.3 2007/03/18 04:56:12 genone Exp $
 
 inherit perl-module eutils
 
@@ -152,8 +152,8 @@ src_install() {
 
 
 pkg_postinst() {
-		einfo "You need to restart spamassassin (as root) before this plugin will work:"
-		einfo "/etc/init.d/spamd restart"
+		elog "You need to restart spamassassin (as root) before this plugin will work:"
+		elog "/etc/init.d/spamd restart"
 		echo
 		if use dbm || use logrotate ; then
 			local files=""
@@ -171,10 +171,10 @@ pkg_postinst() {
 			fi
 
 			if use amavis ; then
-				einfo "All permissions are set for the user amavis!"
+				elog "All permissions are set for the user amavis!"
 			else
-				einfo "Permissions have been set for the fuzzyocr group, to enable"
-				einfo "logging or hashing add any required users to this group"
+				elog "Permissions have been set for the fuzzyocr group, to enable"
+				elog "logging or hashing add any required users to this group"
 			fi
 
 			echo

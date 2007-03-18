@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/spamassassin-ruledujour
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/ChangeLog,v 1.16 2007/02/24 11:47:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/ChangeLog,v 1.17 2007/03/18 04:58:04 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org>
+  spamassassin-ruledujour-20040701.ebuild,
+  spamassassin-ruledujour-20050106.ebuild,
+  spamassassin-ruledujour-20050822.ebuild,
+  spamassassin-ruledujour-20051123.ebuild,
+  spamassassin-ruledujour-20070224.ebuild:
+  Replacing einfo with elog
 
 *spamassassin-ruledujour-20070224 (24 Feb 2007)
 

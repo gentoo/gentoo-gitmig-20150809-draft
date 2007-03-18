@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-2.3b.ebuild,v 1.4 2007/03/12 19:01:12 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-2.3b.ebuild,v 1.5 2007/03/18 04:56:12 genone Exp $
 
 inherit perl-module
 
@@ -57,8 +57,8 @@ src_install() {
 
 
 pkg_postinst() {
-	einfo "You need to restart spamassassin (as root) before this plugin will work:"
-	einfo "/etc/init.d/spamd restart"
+	elog "You need to restart spamassassin (as root) before this plugin will work:"
+	elog "/etc/init.d/spamd restart"
 	echo
 	ewarn "Certain images can cause giftext and gocr to segfault, patches are available"
 	ewarn "for both packages in bugzilla and should eventually find their way either"
