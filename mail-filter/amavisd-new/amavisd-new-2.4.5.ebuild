@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.5.ebuild,v 1.1 2007/01/31 15:47:27 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.5.ebuild,v 1.2 2007/03/18 02:44:50 genone Exp $
 
 inherit eutils
 
@@ -66,18 +66,18 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	if $(has_version mail-mta/courier) ; then
-		einfo "Patching with courier support."
+		elog "Patching with courier support."
 		epatch "amavisd-new-courier.patch" || die "patch failed"
 	fi
 
 	if $(has_version virtual/qmail) ; then
-		einfo "Patching with qmail qmqp support."
+		elog "Patching with qmail qmqp support."
 		epatch "amavisd-new-qmqpqq.patch" || die "patch failed"
 
-		einfo "Patching with qmail lf bug workaround."
+		elog "Patching with qmail lf bug workaround."
 		epatch "${FILESDIR}/${PN}-2.4.4-qmail-lf-workaround.patch" || die "patch failed"
 	fi
-		einfo "Patching with qmail lf bug workaround."
+		elog "Patching with qmail lf bug workaround."
 		epatch "${FILESDIR}/${PN}-2.4.4-qmail-lf-workaround.patch" || die "patch failed"
 
 	epatch "${FILESDIR}/${PN}-2.4.4-amavisd.conf-gentoo.patch" || die "patch failed"
@@ -123,7 +123,7 @@ src_install() {
 	keepdir ${AMAVIS_ROOT}/tmp
 
 	if $(has_version net-nds/openldap ) ; then
-		einfo "Adding ${P} schema to openldap schema dir."
+		elog "Adding ${P} schema to openldap schema dir."
 		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
 		insopts -o root -g root -m 644
@@ -148,7 +148,7 @@ src_install() {
 
 	if $(has_version mail-filter/razor) ; then
 		if [ ! -d ${AMAVIS_ROOT}/.razor ] ; then
-			einfo "Setting up initial razor config files..."
+			elog "Setting up initial razor config files..."
 
 			razor-admin -create -home=${D}/${AMAVIS_ROOT}/.razor
 			sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
@@ -163,11 +163,11 @@ src_install() {
 pkg_postinst() {
 	if ! $(has_version mail-filter/spamassassin) ; then
 		echo
-		einfo "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
-		einfo "will be performed without it. Since you do not have SpamAssassin installed,"
-		einfo "all spam checks have been disabled. To enable them, install SpamAssassin"
-		einfo "and comment out the line containing: "
-		einfo "@bypass_spam_checks_maps = (1); in /etc/amavisd.conf."
+		elog "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
+		elog "will be performed without it. Since you do not have SpamAssassin installed,"
+		elog "all spam checks have been disabled. To enable them, install SpamAssassin"
+		elog "and comment out the line containing: "
+		elog "@bypass_spam_checks_maps = (1); in /etc/amavisd.conf."
 	fi
 	echo
 	ewarn "As of amavisd-new-2.4.5 p0f-analyzer.pl only binds to the loopback interface"

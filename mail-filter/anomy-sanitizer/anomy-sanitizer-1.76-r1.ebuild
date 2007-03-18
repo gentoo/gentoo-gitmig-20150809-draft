@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.1 2006/02/20 21:19:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.2 2007/03/18 02:46:49 genone Exp $
 
 inherit eutils
 
@@ -83,21 +83,21 @@ pkg_postinst() {
 		chmod u+w ${ROOT}/${DEST}/testcases
 		chmod u+w ${ROOT}/${DEST}/testcases/results.def
 
-		einfo ""
-		einfo "There is a howto for the integration of sanitizer"
-		einfo "into your (postfix) mail system at"
-		einfo "http://advosys.ca/papers/postfix-filtering.html"
-		einfo "Please find example scripts to be used to integrate sanitizer"
-		einfo "into your (postfix) mail system at"
-		einfo "/usr/share/doc/${PF}/examples"
-		einfo "There is also a png and kivio document about a possible"
-		einfo "e-mail architecture"
-		einfo ""
+		elog ""
+		elog "There is a howto for the integration of sanitizer"
+		elog "into your (postfix) mail system at"
+		elog "http://advosys.ca/papers/postfix-filtering.html"
+		elog "Please find example scripts to be used to integrate sanitizer"
+		elog "into your (postfix) mail system at"
+		elog "/usr/share/doc/${PF}/examples"
+		elog "There is also a png and kivio document about a possible"
+		elog "e-mail architecture"
+		elog ""
 
 }
 
 pkg_postrm() {
-	einfo "After unmerging this ebuild, you will have to remove"
-	einfo "created user and group manually. To do so, run:"
-	einfo "userdel -r sanitizer; groupdel sanitizer"
+	elog "After unmerging this ebuild, you will have to remove"
+	elog "created user and group manually. To do so, run:"
+	elog "userdel -r sanitizer; groupdel sanitizer"
 }

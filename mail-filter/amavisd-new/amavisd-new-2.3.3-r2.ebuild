@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.3-r2.ebuild,v 1.14 2006/12/10 20:48:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.3-r2.ebuild,v 1.15 2007/03/18 02:44:50 genone Exp $
 
 inherit eutils
 
@@ -67,15 +67,15 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	if $(has_version mail-mta/courier) ; then
-		einfo "Patching with courier support."
+		elog "Patching with courier support."
 		epatch "amavisd-new-courier.patch" || die "patch failed"
 	fi
 
 	if $(has_version virtual/qmail) ; then
-		einfo "Patching with qmail qmqp support."
+		elog "Patching with qmail qmqp support."
 		epatch "amavisd-new-qmqpqq.patch" || die "patch failed"
 
-		einfo "Patching with qmail lf bug workaround."
+		elog "Patching with qmail lf bug workaround."
 		epatch "${FILESDIR}/${PN}-2.2.1-qmail-lf-workaround.patch" || die "patch failed"
 	fi
 
@@ -121,7 +121,7 @@ src_install() {
 	keepdir ${AMAVIS_ROOT}/tmp
 
 	if $(has_version net-nds/openldap ) ; then
-		einfo "Adding ${P} schema to openldap schema dir."
+		elog "Adding ${P} schema to openldap schema dir."
 		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
 		insopts -o root -g root -m 644
@@ -146,13 +146,13 @@ src_install() {
 
 	if $(has_version mail-filter/razor) ; then
 		if [ ! -f ${AMAVIS_ROOT}/.razor/razor-agent.conf ] ; then
-			einfo "Setting up initial razor config files..."
+			elog "Setting up initial razor config files..."
 
 			razor-admin -create -home=${D}/${AMAVIS_ROOT}/.razor
 			sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
 				${D}/${AMAVIS_ROOT}/.razor/razor-agent.conf
 		else
-			einfo "Copying existing razor config files..."
+			elog "Copying existing razor config files..."
 			insinto ${AMAVIS_ROOT}/.razor
 			doins ${AMAVIS_ROOT}/.razor/*.{conf,lst}
 		fi
@@ -165,11 +165,11 @@ src_install() {
 pkg_postinst() {
 	if ! $(has_version mail-filter/spamassassin) ; then
 		echo
-		einfo "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
-		einfo "will be performed without it. Since you do not have SpamAssassin installed,"
-		einfo "all spam checks have been disabled. To enable them, install SpamAssassin"
-		einfo "and comment out the line containing: "
-		einfo "@bypass_spam_checks_maps = (1); in /etc/amavisd.conf."
+		elog "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
+		elog "will be performed without it. Since you do not have SpamAssassin installed,"
+		elog "all spam checks have been disabled. To enable them, install SpamAssassin"
+		elog "and comment out the line containing: "
+		elog "@bypass_spam_checks_maps = (1); in /etc/amavisd.conf."
 	fi
 	echo
 	ewarn "Adjusting permissions for /etc/amavisd.conf (0 for world, owner root:amavis)"

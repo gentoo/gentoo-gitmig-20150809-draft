@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/clamsmtp-1.8.ebuild,v 1.2 2007/01/05 20:09:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/clamsmtp-1.8.ebuild,v 1.3 2007/03/18 02:52:41 genone Exp $
 
 DESCRIPTION="ClamSMTP is an SMTP filter that allows you to check for viruses using the ClamAV anti-virus software."
 HOMEPAGE="http://memberwebs.com/nielsen/software/clamsmtp/"
@@ -30,8 +30,8 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "For help configuring Postfix to use clamsmtpd, see:"
-	einfo "    http://memberwebs.com/nielsen/software/clamsmtp/postfix.html"
+	elog "For help configuring Postfix to use clamsmtpd, see:"
+	elog "    http://memberwebs.com/nielsen/software/clamsmtp/postfix.html"
 	echo
 	ewarn "You'll need to have ScanMail support turned on in clamav.conf"
 	ewarn "Also, make sure the clamd scanning daemon is running (not just freshclam)"

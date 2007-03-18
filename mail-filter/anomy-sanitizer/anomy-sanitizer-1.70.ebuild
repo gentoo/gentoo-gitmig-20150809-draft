@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.70.ebuild,v 1.3 2006/02/13 14:33:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.70.ebuild,v 1.4 2007/03/18 02:46:49 genone Exp $
 
 DESCRIPTION="Perl based e-mail filtering tool, sensitive to html tags, mime types and attachments"
 HOMEPAGE="http://mailtools.anomy.net/"
@@ -81,14 +81,14 @@ pkg_postinst() {
 
 		echo ""
 		echo ""
-		einfo "There is a howto for the integration of sanitizer"
-		einfo "into your (postfix) mail system at"
-		einfo "\thttp://advosys.ca/papers/postfix-filtering.html"
-		einfo "Please find example scripts to be used to integrate sanitizer"
-		einfo "into your (postfix) mail system at"
-		einfo "\t${ROOT}/${DEST}"
-		einfo "There is also a png and kivio document about a possible"
-		einfo "e-mail architecture"
+		elog "There is a howto for the integration of sanitizer"
+		elog "into your (postfix) mail system at"
+		elog "\thttp://advosys.ca/papers/postfix-filtering.html"
+		elog "Please find example scripts to be used to integrate sanitizer"
+		elog "into your (postfix) mail system at"
+		elog "\t${ROOT}/${DEST}"
+		elog "There is also a png and kivio document about a possible"
+		elog "e-mail architecture"
 		echo ""
 		echo ""
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4.ebuild,v 1.7 2006/11/23 15:51:12 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4.ebuild,v 1.8 2007/03/18 02:49:34 genone Exp $
 
 IUSE="mysql berkdb"
 
@@ -31,9 +31,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Important: Remember to train bmf before you start using it."
-	einfo "Instructions for training and using bmf with procmail: "
-	einfo "less /usr/share/doc/${P}/README.gz"
-	einfo
+	elog
+	elog "Important: Remember to train bmf before you start using it."
+	elog "Instructions for training and using bmf with procmail: "
+	elog "less /usr/share/doc/${P}/README.gz"
+	elog
 }
