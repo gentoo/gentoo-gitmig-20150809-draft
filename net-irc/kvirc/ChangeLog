@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.43 2007/01/13 13:04:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.44 2007/03/18 20:14:29 armin76 Exp $
+
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  files/kvirc-3.2.3-kdedir-fix.patch:
+  Fix patch for kvirc-9999, thanks to Markus Rennings <mren at mrmx dot de>
+  for the patch and for noticing this
 
   13 Jan 2007; nixnut <nixnut@gentoo.org> kvirc-3.2.5.ebuild:
   Stable on ppc wrt bug 155139
