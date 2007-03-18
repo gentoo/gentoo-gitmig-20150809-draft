@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.6.ebuild,v 1.3 2007/03/17 11:20:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.6.ebuild,v 1.4 2007/03/18 10:03:41 nixnut Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/"
 IUSE="lirc"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/gconf-1.2
