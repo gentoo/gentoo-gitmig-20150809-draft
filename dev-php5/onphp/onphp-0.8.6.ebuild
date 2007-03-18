@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/onphp-0.8.6.ebuild,v 1.1 2007/03/11 18:02:41 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/onphp-0.8.6.ebuild,v 1.2 2007/03/18 15:04:46 chtekk Exp $
 
 inherit php-lib-r1
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
+
 DESCRIPTION="onPHP is the GPL'ed multi-purpose object-oriented PHP framework."
 HOMEPAGE="http://onphp.org/"
 SRC_URI="http://onphp.org/download/${P}.tar.bz2
@@ -13,17 +14,16 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
 
-# since need_php51 is missing
-DEPEND=">=dev-lang/php-5.1"
-RDEPEND=">=dev-lang/php-5.1"
-PHP_VERSION="5"
-PHP_SHARED_CAT="php5"
+DEPEND=""
+RDEPEND=""
+
+need_php_by_category
 
 src_install() {
 	has_php
 
 	if use doc ; then
-		for doc in `find doc -maxdepth 1 -type f -print`; do
+		for doc in `find doc -maxdepth 1 -type f -print` ; do
 			dodoc ${doc}
 		done
 
