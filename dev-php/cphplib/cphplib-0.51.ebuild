@@ -1,10 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.51.ebuild,v 1.1 2006/07/23 20:57:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.51.ebuild,v 1.2 2007/03/18 15:29:38 chtekk Exp $
 
 inherit php-lib-r1
 
 KEYWORDS="~amd64 ~x86"
+
 DESCRIPTION="Cute PHP Library (cphplib)."
 HOMEPAGE="http://cphplib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cphplib/${P}.tar.bz2"
