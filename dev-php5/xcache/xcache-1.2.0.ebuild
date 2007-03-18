@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.4 2007/03/04 17:32:23 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.5 2007/03/18 03:24:25 chtekk Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -13,13 +13,11 @@ KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Another PHP opcode cache and encoder."
 HOMEPAGE="http://trac.lighttpd.net/xcache/"
 SRC_URI="http://210.51.190.228/pub/XCache/Releases/${P}.tar.bz2"
-
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="!dev-php5/pecl-apc
-		!dev-php5/eaccelerator"
+DEPEND="!dev-php5/eaccelerator !dev-php5/pecl-apc"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -34,13 +32,13 @@ pkg_setup() {
 src_compile() {
 	has_php
 
-	my_conf="--enable-xcache=shared \
-		--enable-xcache-constant    \
-		--enable-xcache-optimizer   \
-		--enable-xcache-coverager   \
-		--enable-xcache-assembler   \
-		--enable-xcache-encoder     \
-		--enable-xcache-decoder"
+	my_conf="--enable-xcache=shared   \
+			--enable-xcache-constant  \
+			--enable-xcache-optimizer \
+			--enable-xcache-coverager \
+			--enable-xcache-assembler \
+			--enable-xcache-encoder   \
+			--enable-xcache-decoder"
 
 	enable_extension_with_built_with =${PHP_PKG} apache2 apxs2 /usr/sbin/apxs2 "optimisation for apache2"
 	enable_extension_with_built_with =${PHP_PKG} apache apxs /usr/sbin/apxs "optimisation for apache1"
@@ -69,15 +67,12 @@ src_install() {
 	dodir "${PHP_EXT_SHARED_DIR}"
 	insinto "${PHP_EXT_SHARED_DIR}"
 	doins Decompiler.class.php
+	dodir "${PHP_EXT_SHARED_DIR}/admin"
 	insinto "${PHP_EXT_SHARED_DIR}/admin"
 	doins admin/*
 }
 
 pkg_postinst() {
 	elog "Decompiler.class.php and the admin/ directory shipped with this"
-	elog "release were installed into /usr/share/php5/xcache/."
-
-	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
-		elog "You need to restart your Apache webserver to enable xcache."
-	fi
+	elog "release were installed into ${ROOT}usr/share/php5/xcache/."
 }

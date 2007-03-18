@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/znf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.4 2007/02/22 00:07:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.5 2007/03/18 03:21:08 chtekk Exp $
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> znf-0.7.6.ebuild:
+  Cleanup.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
