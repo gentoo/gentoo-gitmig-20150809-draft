@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.2 2007/03/09 21:04:11 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.3 2007/03/18 01:41:15 chtekk Exp $
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  php-gtk-2.0.0_alpha.ebuild:
+  Cleanup, make it concurrentmodphp compatible.
 
 *php-gtk-2.0.0_alpha (20 Feb 2007)
 
