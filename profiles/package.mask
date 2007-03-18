@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6990 2007/03/18 15:14:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6991 2007/03/18 15:35:55 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,8 +21,14 @@
 ##   End example
 ##
 
+# Raúl Porcel <armin76@gentoo.org> (18 Mar 2007)
+# Pending removal 17 May 2007, for treecleaners, bug 122134
+# Doesn't work, doesn't compile, and upstream doesn't support it
+# Use www-servers/apache or www-servers/lighthttpd
+www-servers/ncsa-httpd
+
 # Samuli Suominen <drac@gentoo.org> (18 Mar 2007)
-# Masked for removal. Use orage and thunar.
+# Pending removal 18 Apr 2007. Use orage and thunar.
 # Bug 169987.
 xfce-extra/xfcalendar
 xfce-base/xffm
