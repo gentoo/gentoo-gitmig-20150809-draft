@@ -1,12 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST xfce4-wavelan-plugin-0.4.1.tar.gz 528911 RMD160 5a1a4b849dc71e5ed29163c024a144c5a6e2ddea SHA1 01dc3b0fda236c5a55cd69ddb9ddddea57b04ea9 SHA256 9e9ecb749e550db5cc1eff8a002946e1c5f004cd57ba53b0f7492ea21eb15556
 DIST xfce4-wavelan-plugin-0.5.4.tar.gz 596378 RMD160 30d4893812004cfe0cf115790eb72daf92b4db5f SHA1 d45d8a13a1512fdb74aacf09c5b6ae99c4743fdd SHA256 5b8c5ea37561cc32f10b3aebac67cf14fc9216b748e194f3676f26d42a4f1c05
-EBUILD xfce4-wavelan-0.4.1-r1.ebuild 356 RMD160 6515baf78ed5e50dea07a5f397cc931e49a5fc07 SHA1 109e482baafbf24e2bb9237bd6322b6c09b78d7f SHA256 b7e580e02d7fbb78843764f32890d19df283cee25a89fd4325026b6a3272a205
-MD5 d96d3a86ba3cd8fe1305f552de9fbd4a xfce4-wavelan-0.4.1-r1.ebuild 356
-RMD160 6515baf78ed5e50dea07a5f397cc931e49a5fc07 xfce4-wavelan-0.4.1-r1.ebuild 356
-SHA256 b7e580e02d7fbb78843764f32890d19df283cee25a89fd4325026b6a3272a205 xfce4-wavelan-0.4.1-r1.ebuild 356
 EBUILD xfce4-wavelan-0.5.4.ebuild 434 RMD160 dcd93bf72d9b884d9a483ad80ea9dfd1e6089b44 SHA1 cda72b21810a183b4cf83d05c4e44c210dae0dca SHA256 a03336438615b223ae365f000a24d38aaeef22318f5983e2027706953e1245ae
 MD5 8f23a55252e60d2fc427408281b6c65a xfce4-wavelan-0.5.4.ebuild 434
 RMD160 dcd93bf72d9b884d9a483ad80ea9dfd1e6089b44 xfce4-wavelan-0.5.4.ebuild 434
@@ -19,16 +11,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 106c5f8f343801b318b66f8d4513749c files/digest-xfce4-wavelan-0.4.1-r1 280
-RMD160 ba26358919164921540d6e56258f03f5da2dcf01 files/digest-xfce4-wavelan-0.4.1-r1 280
-SHA256 f3e9e73215340ac31e309f0b44bc58c22e3dde31702fd265f90dd9b60257982e files/digest-xfce4-wavelan-0.4.1-r1 280
 MD5 3a3792ccd7a4ac7cffc7add6158f17ed files/digest-xfce4-wavelan-0.5.4 280
 RMD160 de8f00857810d5b93712c7c5bf5edcdf3886aaa6 files/digest-xfce4-wavelan-0.5.4 280
 SHA256 39eaff1afa1465c72c89e10522bc39c01e0506d8db45a2ce47af58fc6b0e81a0 files/digest-xfce4-wavelan-0.5.4 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
-
-iD8DBQFF/F6n8bi6rjpTunYRAkyTAJ4tuWPb35J3+t7KvC+TFalwI+7pnQCgv+gI
-9lwKdlpoW0sYrIyap01CMZI=
-=M1XT
------END PGP SIGNATURE-----
