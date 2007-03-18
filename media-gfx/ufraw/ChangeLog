@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/ufraw
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.11 2006/11/10 13:50:34 nattfodd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.12 2007/03/18 00:25:47 nattfodd Exp $
+
+*ufraw-0.11 (18 Mar 2007)
+
+  18 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> +ufraw-0.11.ebuild:
+  Bump to 0.11, thanks to David King for his help on this (bug #170489).
 
 *ufraw-0.10 (10 Nov 2006)
 
