@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx-support
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.10 2006/03/14 23:09:58 langthang Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.11 2007/03/18 21:48:00 armin76 Exp $
+
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  mailx-support-20060102-r1.ebuild:
+  x86 stable wrt bug 159912
 
 *mailx-support-20060102-r1 (14 Mar 2006)
 
