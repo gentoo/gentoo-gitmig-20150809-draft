@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/phpdbg-client
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/ChangeLog,v 1.6 2007/02/21 23:42:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/ChangeLog,v 1.7 2007/03/18 01:21:18 chtekk Exp $
+
+*phpdbg-client-2.15.1 (18 Mar 2007)
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  -phpdbg-client-2.11.32.ebuild, -phpdbg-client-2.13.1.ebuild,
+  +phpdbg-client-2.15.1.ebuild:
+  Version bump, cleanup.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
