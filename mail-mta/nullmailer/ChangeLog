@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.24 2007/02/22 01:05:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.25 2007/03/18 05:51:53 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> nullmailer-1.00.ebuild,
+  nullmailer-1.00-r2.ebuild, nullmailer-1.02.ebuild,
+  nullmailer-1.02-r1.ebuild, nullmailer-1.02-r2.ebuild:
+  Replacing einfo with elog
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.02-r1.ebuild,v 1.1 2006/02/11 10:35:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.02-r1.ebuild,v 1.2 2007/03/18 05:51:53 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -112,14 +112,14 @@ pkg_config() {
 }
 
 msg_svscan() {
-	einfo "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
-	einfo "and create the following link :"
-	einfo "ln -fs /var/nullmailer/service /service/nullmailer"
-	einfo "As an alternative, we also provide an init.d script."
-	einfo
-	einfo "If the nullmailer service is already running, please restart it now,"
-	einfo "using 'svc-restart nullmailer' or the init.d script."
-	einfo
+	elog "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
+	elog "and create the following link :"
+	elog "ln -fs /var/nullmailer/service /service/nullmailer"
+	elog "As an alternative, we also provide an init.d script."
+	elog
+	elog "If the nullmailer service is already running, please restart it now,"
+	elog "using 'svc-restart nullmailer' or the init.d script."
+	elog
 }
 
 msg_mailerconf() {
@@ -135,8 +135,8 @@ pkg_postinst() {
 	chmod 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	chmod 660 /var/nullmailer/trigger
 
-	einfo "To create an initial setup, please do:"
-	einfo "emerge --config =${PF}"
+	elog "To create an initial setup, please do:"
+	elog "emerge --config =${PF}"
 	msg_svscan
 	msg_mailerconf
 }

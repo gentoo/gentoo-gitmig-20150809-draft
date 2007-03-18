@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.7 2006/02/11 10:35:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.8 2007/03/18 05:51:53 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -102,9 +102,9 @@ pkg_config() {
 }
 
 msg_svscan() {
-	einfo "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
-	einfo "and create the following link :"
-	einfo "ln -fs /var/nullmailer/service /service/nullmailer"
+	elog "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
+	elog "and create the following link :"
+	elog "ln -fs /var/nullmailer/service /service/nullmailer"
 }
 msg_mailerconf() {
 	use mailwrapper && \
@@ -121,8 +121,8 @@ pkg_postinst() {
 
 	use mailwrapper && dosym /usr/sbin/sendmail /usr/bin/mailq
 
-	einfo "To create an initial setup, please do:"
-	einfo "emerge --config =${PF}"
+	elog "To create an initial setup, please do:"
+	elog "emerge --config =${PF}"
 	msg_svscan
 	msg_mailerconf
 }
