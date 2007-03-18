@@ -1,6 +1,6 @@
---- configure.orig	2007-03-11 02:34:39.972261007 +0100
-+++ configure	2007-03-11 02:38:37.510839805 +0100
-@@ -31245,27 +31245,27 @@
+--- configure.orig	2006-06-03 15:46:47.000000000 +0200
++++ configure	2006-06-03 15:52:42.000000000 +0200
+@@ -30486,23 +30486,23 @@
  
  
  	if test -n "$SS_KDE_SERVICESDIR"; then
@@ -16,30 +16,22 @@
 -		iconapps32datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/32x32/apps"
 -		iconapps48datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/48x48/apps"
 -		iconapps64datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/64x64/apps"
--		iconapps128datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/128x128/apps"
--		iconappsscalabledatadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/scalable/apps"
 -		iconmime16datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/16x16/mimetypes"
 -		iconmime32datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/32x32/mimetypes"
 -		iconmime48datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/48x48/mimetypes"
 -		iconmime64datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/64x64/mimetypes"
--		iconmime128datadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/128x128/mimetypes"
--		iconmimescalabledatadir="$SS_KDE_GENERAL_DIR/share/icons/hicolor/scalable/mimetypes"
 -		applnkdir="$SS_KDE_GENERAL_DIR/share/applnk/Internet"
 -		mimelnkdir="$SS_KDE_GENERAL_DIR/share/mimelnk/text"
-+		iconapps16datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/16x16/apps"
-+		iconapps32datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/32x32/apps"
-+		iconapps48datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/48x48/apps"
-+		iconapps64datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/64x64/apps"
-+		iconapps128datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/128x128/apps"
-+		iconappsscalabledatadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/scalable/apps"
-+		iconmime16datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/16x16/mimetypes"
-+		iconmime32datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/32x32/mimetypes"
-+		iconmime48datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/48x48/mimetypes"
-+		iconmime64datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/64x64/mimetypes"
-+		iconmime128datadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/128x128/mimetypes"
-+		iconmimescalabledatadir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/icons/hicolor/scalable/mimetypes"
-+		applnkdir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/applnk/Internet"
-+		mimelnkdir="		iconapps16datadir="${exec_prefix}/share/icons/hicolor/16x16/apps"/share/mimelnk/text"
++		iconapps16datadir="\${exec_prefix}/share/icons/hicolor/16x16/apps"
++		iconapps32datadir="\${exec_prefix}/share/icons/hicolor/32x32/apps"
++		iconapps48datadir="\${exec_prefix}/share/icons/hicolor/48x48/apps"
++		iconapps64datadir="\${exec_prefix}/share/icons/hicolor/64x64/apps"
++		iconmime16datadir="\${exec_prefix}/share/icons/hicolor/16x16/mimetypes"
++		iconmime32datadir="\${exec_prefix}/share/icons/hicolor/32x32/mimetypes"
++		iconmime48datadir="\${exec_prefix}/share/icons/hicolor/48x48/mimetypes"
++		iconmime64datadir="\${exec_prefix}/share/icons/hicolor/64x64/mimetypes"
++		applnkdir="\${exec_prefix}/share/applnk/Internet"
++		mimelnkdir="\${exec_prefix}/share/mimelnk/text"
  	else
  		iconapps16datadir="\${exec_prefix}/share/kvirc/$SS_DIRTAG/icons/16x16"
  		iconapps32datadir="\${exec_prefix}/share/kvirc/$SS_DIRTAG/icons/32x32"

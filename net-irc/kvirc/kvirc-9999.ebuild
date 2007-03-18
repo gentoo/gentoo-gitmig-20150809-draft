@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.5 2006/12/23 22:13:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.6 2007/03/18 21:10:20 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -29,7 +29,7 @@ ESVN_BOOTSTRAP="./autogen.sh"
 
 src_unpack() {
 	subversion_src_unpack
-	epatch ${FILESDIR}/${PN}-3.2.3-kdedir-fix.patch
+	epatch ${FILESDIR}/${PN}-svn-kdedir-fix.patch
 }
 
 src_compile() {
