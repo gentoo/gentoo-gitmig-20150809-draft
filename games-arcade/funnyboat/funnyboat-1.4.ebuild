@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.4.ebuild,v 1.1 2007/02/08 10:17:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.4.ebuild,v 1.2 2007/03/18 06:47:06 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -8,9 +8,9 @@ DESCRIPTION="A side scrolling shooter game starring a steamboat on the sea"
 HOMEPAGE="http://funnyboat.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2 CCPL-Attribution-2.5 CCPL-Attribution-NonCommercial-NoDerivs-2.0"
+LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygame-1.6.2"
