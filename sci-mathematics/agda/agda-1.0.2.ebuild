@@ -1,25 +1,25 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-20050601.ebuild,v 1.1 2006/07/12 13:21:35 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2.ebuild,v 1.1 2007/03/18 19:00:12 nattfodd Exp $
 
 inherit autotools elisp-common
 
+MY_PN="Agda"
+S="${WORKDIR}/${MY_PN}-${PV}"
+
 DESCRIPTION="Agda is a proof assistant in Haskell."
-HOMEPAGE="http://www.cs.chalmers.se/~catarina/agda"
-SRC_URI="http://www.coverproject.org/Agda/Agda-1.1-cvs${PV}.tar.gz"
-S="${WORKDIR}/Agda-1.1-cvs${PV}"
+HOMEPAGE="http://unit.aist.go.jp/cvs/Agda/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.gz"
 
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
-# make html is currently broken
-#IUSE="doc emacs"
-IUSE="emacs"
+IUSE="doc emacs"
 
 DEPEND="virtual/ghc
-		emacs? ( virtual/emacs )"
-	#doc? ( dev-haskell/haddock) "
+		emacs? ( virtual/emacs )
+		doc? ( dev-haskell/haddock )"
 RDEPEND=""
 
 SITEFILE="50${PN}-gentoo.el"
@@ -27,18 +27,16 @@ SITEFILE="50${PN}-gentoo.el"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${PN}-make_install.patch
-	eaclocal -I macros || die "aclocal failed"
-	eautoconf || die "autoconf failed"
+	epatch "${FILESDIR}/agda-make_install.patch"
 }
 
 src_compile() {
 	cd "${S}"
-	econf || die "./configure failed"
+	econf --enable-newsyntax || die "./configure failed"
 	emake || die "make failed"
-	#if use doc ; then
-	#	emake html
-	#fi
+	if use doc ; then
+		emake html
+	fi
 }
 
 src_install() {
@@ -51,6 +49,7 @@ src_install() {
 	make prefix="${D}/usr" install || die "make install failed"
 	dosym /usr/lib/EmacsAgda/bin/emacsagda /usr/bin/emacsagda
 	dosym /usr/bin/emacsagda /usr/bin/agda
+
 }
 
 pkg_postinst() {

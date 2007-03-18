@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/agda
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.1 2006/07/12 13:21:35 nattfodd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.2 2007/03/18 19:00:12 nattfodd Exp $
+
+*agda-1.0.2 (18 Mar 2007)
+
+  18 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> +agda-1.0.2.ebuild,
+  -agda-20050601.ebuild:
+  Bump to 1.0.2 and updated metainformations. Agda2 will be added when it is
+  stable enough.
 
 *agda-20050601 (12 Jul 2006)
 
