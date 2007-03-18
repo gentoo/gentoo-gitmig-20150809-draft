@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.46 2007/02/10 09:21:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.47 2007/03/18 07:39:17 mrness Exp $
+
+*pptpclient-1.7.1-r1 (18 Mar 2007)
+
+  18 Mar 2007; Alin Năstac <mrness@gentoo.org>
+  +files/pptpclient-1.7.1-process-name.patch, -files/options.pptp,
+  -pptpclient-1.7.0.ebuild, +pptpclient-1.7.1-r1.ebuild:
+  Remove obsolete version. Don't rename pptp process to pptpgw (#171058).
+  Restrict test - vector_test.c is useless and broken.
 
   10 Feb 2007; Alin Năstac <mrness@gentoo.org> pptpclient-1.7.1.ebuild:
   Stable on amd64.
