@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.27 2007/02/17 11:26:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.28 2007/03/18 05:44:30 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> netqmail-1.05-r4.ebuild,
+  netqmail-1.05-r5.ebuild:
+  Replacing einfo with elog
 
   17 Feb 2007; Michael Hanselmann <hansmi@gentoo.org>
   netqmail-1.05-r4.ebuild, netqmail-1.05-r5.ebuild:

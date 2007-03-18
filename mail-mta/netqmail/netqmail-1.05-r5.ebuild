@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.2 2007/02/17 11:26:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.3 2007/03/18 05:44:30 genone Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -294,10 +294,10 @@ rootmailfixup() {
 	# so you can check mail as root easily
 	local TMPCMD="ln -sf /var/qmail/alias/.maildir/ ${ROOT}/root/.maildir"
 	if [[ -d "${ROOT}/root/.maildir" && ! -L "${ROOT}/root/.maildir" ]] ; then
-		einfo "Previously the qmail ebuilds created /root/.maildir/ but not"
-		einfo "every mail was delivered there. If the directory does not"
-		einfo "contain any mail, please delete it and run:"
-		einfo "${TMPCMD}"
+		elog "Previously the qmail ebuilds created /root/.maildir/ but not"
+		elog "every mail was delivered there. If the directory does not"
+		elog "contain any mail, please delete it and run:"
+		elog "${TMPCMD}"
 	else
 		${TMPCMD}
 	fi
@@ -330,31 +330,31 @@ pkg_postinst() {
 	# for good measure
 	env-update
 
-	einfo "To setup qmail to run out-of-the-box on your system, run:"
-	einfo "emerge --config =${CATEGORY}/${PF}"
-	echo
-	einfo "To start qmail at boot you have to add svscan to your startup"
-	einfo "and create the following links:"
-	einfo "ln -s /var/qmail/supervise/qmail-send /service/qmail-send"
-	einfo "ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd"
-	echo
-	einfo "To start the pop3 server as well, create the following link:"
-	einfo "ln -s /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d"
-	echo
-	einfo "Additionally, the QMTP and QMQP protocols are supported, "
-	einfo "and can be started as:"
-	einfo "ln -s /var/qmail/supervise/qmail-qmtpd /service/qmail-qmtpd"
-	einfo "ln -s /var/qmail/supervise/qmail-qmqpd /service/qmail-qmqpd"
-	echo
-	einfo "Additionally, if you wish to run qmail right now, you should "
-	einfo "run this before anything else:"
-	einfo "source /etc/profile"
-	echo
-	einfo "If you are looking for documentation, check those links:"
-	einfo "http://www.gentoo.org/doc/en/qmail-howto.xml"
-	einfo "  -- qmail/vpopmail Virtual Mail Hosting System Guide"
-	einfo "http://www.lifewithqmail.com/"
-	einfo "  -- Life with qmail"
+	elog "To setup qmail to run out-of-the-box on your system, run:"
+	elog "emerge --config =${CATEGORY}/${PF}"
+	elog
+	elog "To start qmail at boot you have to add svscan to your startup"
+	elog "and create the following links:"
+	elog "ln -s /var/qmail/supervise/qmail-send /service/qmail-send"
+	elog "ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd"
+	elog
+	elog "To start the pop3 server as well, create the following link:"
+	elog "ln -s /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d"
+	elog
+	elog "Additionally, the QMTP and QMQP protocols are supported, "
+	elog "and can be started as:"
+	elog "ln -s /var/qmail/supervise/qmail-qmtpd /service/qmail-qmtpd"
+	elog "ln -s /var/qmail/supervise/qmail-qmqpd /service/qmail-qmqpd"
+	elog
+	elog "Additionally, if you wish to run qmail right now, you should "
+	elog "run this before anything else:"
+	elog "source /etc/profile"
+	elog
+	elog "If you are looking for documentation, check those links:"
+	elog "http://www.gentoo.org/doc/en/qmail-howto.xml"
+	elog "  -- qmail/vpopmail Virtual Mail Hosting System Guide"
+	elog "http://www.lifewithqmail.com/"
+	elog "  -- Life with qmail"
 }
 
 pkg_preinst() {
