@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.140 2007/03/10 04:36:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.141 2007/03/18 23:59:17 cardoe Exp $
+
+*mythtv-0.20_p13053 (18 Mar 2007)
+
+  18 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.20_p13053.ebuild:
+  Upstream fixes. Escape key hit at password prompt. Skip ahead sometimes
+  returning to beginning.
 
 *mythtv-0.20_p12963 (10 Mar 2007)
 
