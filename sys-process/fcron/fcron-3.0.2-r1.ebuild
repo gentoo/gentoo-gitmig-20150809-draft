@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r1.ebuild,v 1.1 2007/03/18 22:31:35 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r1.ebuild,v 1.2 2007/03/18 22:52:33 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -143,35 +143,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "Fixing ownership of /var/spool/cron/fcrontabs"
-	ewarn
-
-	chown fcron:fcron /var/spool/cron/fcrontabs
-	chmod 6770 /var/spool/cron/fcrontabs
-	chown root:root /var/spool/cron/fcrontabs/*
-	chmod 0600 /var/spool/cron/fcrontabs/*
-	chown fcron:fcron /var/spool/cron/fcrontabs/*.orig
-	chmod 0640 /var/spool/cron/fcrontabs/*.orig
-
-	ewarn
-	ewarn "WARNING: fcron now uses a dedicated user and group"
-	ewarn "'fcron' for the suid/sgid programs/files instead of"
-	ewarn "the user and group 'cron' that were previously used."
-	ewarn
-
-	ebeep 5
-	epause 10
-
-	ewarn
-	ewarn "Each user who should be able to use fcron should only be"
-	ewarn "added to the file /etc/fcron/fcron.allow and not to the"
-	ewarn "group 'cron'!"
-	ewarn
-
-	ebeep 5
-	epause 10
-
 	einfo
 	einfo "fcron has some important differences compared to vixie-cron:"
 	einfo
@@ -222,9 +193,36 @@ pkg_postinst() {
 	einfo "directories /etc/cron.{hourly|daily|weekly|monthly} by"
 	einfo "just generating a systab once from /etc/crontab:"
 	einfo
-	einfo "    fcrontab -u systab /etc/crontab"
-	einfo
+	einfo "   fcrontab -u systab /etc/crontab"
 	einfo
 	einfo "Happy fcron'ing!"
 	einfo
+
+	ewarn
+	ewarn "Fixing permissions and ownership of /var/spool/cron/fcrontabs"
+	chown fcron:fcron /var/spool/cron/fcrontabs
+	chmod 6770 /var/spool/cron/fcrontabs
+	chown root:root /var/spool/cron/fcrontabs/*
+	chmod 0600 /var/spool/cron/fcrontabs/*
+	chown fcron:fcron /var/spool/cron/fcrontabs/*.orig
+	chmod 0640 /var/spool/cron/fcrontabs/*.orig
+	ewarn "Fixing permissions and ownership of /usr/bin/fcron{tab,dyn,sighup}"
+	chown fcron:fcron /usr/bin/fcron{tab,dyn}
+	chown ${ROOTUSER:-root}:fcron /usr/bin/fcronsighup
+	chmod 6755 /usr/bin/fcron{tab,dyn,sighup}
+	ewarn
+	ewarn "WARNING: fcron now uses a dedicated user and group"
+	ewarn "'fcron' for the suid/sgid programs/files instead of"
+	ewarn "the user and group 'cron' that were previously used."
+	ewarn
+	ewarn "fcron usage can now only be restricted by adding users"
+	ewarn "to the following files instead of to the group 'cron':"
+	ewarn
+	ewarn "   /etc/fcron/fcron.allow"
+	ewarn "   /etc/fcron/fcron.deny"
+	ewarn
+
+	ebeep 5
+	epause 10
+
 }
