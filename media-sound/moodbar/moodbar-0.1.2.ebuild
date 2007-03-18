@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/moodbar-0.1.2.ebuild,v 1.1 2007/02/10 23:35:12 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/moodbar-0.1.2.ebuild,v 1.2 2007/03/18 13:25:25 nixnut Exp $
 
 DESCRIPTION="The moodbar tool and gstreamer plugin for Amarok"
 HOMEPAGE="http://amarok.kde.org/wiki/Moodbar"
 SRC_URI="http://pwsp.net/~qbob/moodbar-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mp3 ogg vorbis flac"
 
 DEPEND=">=media-libs/gst-plugins-base-0.10
