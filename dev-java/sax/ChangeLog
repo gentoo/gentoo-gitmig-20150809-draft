@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.9 2007/01/11 13:43:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.10 2007/03/18 15:01:32 nelchael Exp $
+
+*sax-2.2.1-r2 (18 Mar 2007)
+
+  18 Mar 2007; Krzysiek Pawlik <nelchael@gentoo.org> +sax-2.2.1-r2.ebuild:
+  Revision bump to fix some Java QA issues.
 
   11 Jan 2007; Markus Rothe <corsair@gentoo.org> sax-2.2.1-r1.ebuild:
   Stable on ppc64
