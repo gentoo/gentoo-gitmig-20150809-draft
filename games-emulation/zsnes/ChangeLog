@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.32 2007/03/17 20:29:18 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.33 2007/03/18 20:30:48 beandog Exp $
+
+  18 Mar 2007; Steve Dibb <beandog@gentoo.org> zsnes-1.51.ebuild:
+  amd64 stable, bug 168804, fix documentation install
 
   17 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> zsnes-1.51.ebuild:
   Minor stylist improvment

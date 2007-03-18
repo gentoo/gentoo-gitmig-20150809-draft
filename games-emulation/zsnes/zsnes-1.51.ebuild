@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.11 2007/03/17 20:29:18 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.12 2007/03/18 20:30:48 beandog Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/zsnes/${PN}${PV//./}src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86 ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE="ao custom-cflags opengl png"
 
 RDEPEND="media-libs/libsdl
@@ -74,8 +74,9 @@ src_compile() {
 src_install() {
 	dogamesbin zsnes || die "dogamesbin failed"
 	newman linux/zsnes.1 zsnes.6
-	dodoc ../docs/{*.txt,README.LINUX}
-	dohtml -r ../docs/Linux/*
+	dodoc ../docs/{readme.1st,*.txt,README.LINUX}
+	dodoc ../docs/readme.txt/*
+	dohtml -r ../docs/readme.htm/*
 	make_desktop_entry zsnes ZSNES zsnes.png
 	newicon icons/48x48x32.png ${PN}.png
 	prepgamesdirs
