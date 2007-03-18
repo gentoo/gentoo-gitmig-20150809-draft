@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.1.ebuild,v 1.6 2007/02/14 01:15:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.1.ebuild,v 1.7 2007/03/18 21:52:41 carlo Exp $
 
 inherit kde
 
@@ -39,6 +39,7 @@ src_unpack() {
 	fi
 
 	unpack ${A}
+	epatch ${FILESDIR}/koffice-18n-1.6.1-es-fix.diff || die
 }
 
 src_compile() {
