@@ -3,11 +3,7 @@
 
 <pkgmetadata>
   <herd>no-herd</herd>
-  <maintainer>
-    <email>iggy@gentoo.org</email>
-    <name>Brian Jackson</name>
-    <description>Actively maintained</description>
-  </maintainer>
+  <maintainer>maintainer-needed@gentoo.org</maintainer>
   <longdescription>
     SheerDNS was written to be a simple replacement master DNS server that can
     be used where atomic updates are required. Because it stores each record in
