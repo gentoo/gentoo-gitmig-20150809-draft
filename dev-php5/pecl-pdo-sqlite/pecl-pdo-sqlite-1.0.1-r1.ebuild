@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/pecl-pdo-sqlite-1.0.1-r1.ebuild,v 1.2 2007/03/04 20:59:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/pecl-pdo-sqlite-1.0.1-r1.ebuild,v 1.3 2007/03/18 00:42:31 chtekk Exp $
 
 PHP_EXT_NAME="pdo_sqlite"
 PHP_EXT_PECL_PKG="PDO_SQLITE"
@@ -46,7 +46,6 @@ src_unpack() {
 }
 
 src_compile() {
-	has_php
 	my_conf="--with-pdo-sqlite=/usr"
 	php-ext-source-r1_src_compile
 }

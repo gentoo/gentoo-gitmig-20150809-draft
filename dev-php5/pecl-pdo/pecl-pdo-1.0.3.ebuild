@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-1.0.3.ebuild,v 1.4 2007/03/05 01:40:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-1.0.3.ebuild,v 1.5 2007/03/18 00:29:57 chtekk Exp $
 
 PHP_EXT_NAME="pdo"
 PHP_EXT_PECL_PKG="PDO"
@@ -16,6 +16,8 @@ LICENSE="PHP"
 SLOT="0"
 IUSE="mssql mysql oci8 oci8-instant-client odbc postgres sqlite"
 
+DEPEND=""
+RDEPEND=""
 PDEPEND="mssql? ( dev-php5/pecl-pdo-dblib )
 		mysql? ( dev-php5/pecl-pdo-mysql )
 		oci8? ( dev-php5/pecl-pdo-oci )
