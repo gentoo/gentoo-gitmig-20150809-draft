@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.9 2005/10/24 11:44:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.10 2007/03/18 06:20:39 genone Exp $
 
 inherit eutils
 
@@ -247,14 +247,14 @@ pkg_postinst() {
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
 	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/trigger
 
-	echo -e "\e[32;01m Please do not forget to run, the following syntax :\033[0m"
-	echo -e "\e[32;01m emerge --config =${PF} \033[0m"
-	echo -e "\e[32;01m This will setup qmail to run out-of-the-box on your system. \033[0m"
-	echo -e ""
-	echo -e "\e[32;01m To start qmail at boot you have to enable the /etc/init.d/svscan rc file \033[0m"
-	echo -e "\e[32;01m and create the following links : \033[0m"
-	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-send /service/qmail-send \033[0m"
-	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd \033[0m"
+	elog "Please do not forget to run, the following syntax:"
+	elog "emerge --config =${PF}"
+	elog "This will setup qmail to run out-of-the-box on your system."
+	elog
+	elog "To start qmail at boot you have to enable the /etc/init.d/svscan rc file"
+	elog "and create the following links : \033[0m"
+	elog "ln -s /var/qmail/supervise/qmail-send /service/qmail-send"
+	elog "ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd"
 }
 
 pkg_config() {

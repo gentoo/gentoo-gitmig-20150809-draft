@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.2 2005/12/12 12:02:46 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.3 2007/03/18 06:25:47 genone Exp $
 
 inherit eutils linux-info
 
@@ -145,7 +145,7 @@ pkg_postinst() {
 	#	einfo "You can quickly configure XMail by running ${FILESDIR}/xmailwizard."
 	#fi
 
-	einfo "You can quickly configure XMail by running ${FILESDIR}/xmailwizard."
+	elog "You can quickly configure XMail by running ${FILESDIR}/xmailwizard."
 
 	ewarn
 	ewarn "Make sure you have iptables/netfilter with connection tracking"

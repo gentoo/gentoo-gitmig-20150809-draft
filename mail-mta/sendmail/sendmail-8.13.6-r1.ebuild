@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.6-r1.ebuild,v 1.1 2006/06/15 08:17:26 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.6-r1.ebuild,v 1.2 2007/03/18 06:24:17 genone Exp $
 
 inherit eutils
 
@@ -188,9 +188,9 @@ pkg_setup() {
 pkg_postinst() {
 	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
 	then
-		einfo
-		einfo "Since you emerged sendmail without mailwrapper in USE,"
-		einfo "you probably want to 'emerge -C mailwrapper' now."
-		einfo
+		elog
+		elog "Since you emerged sendmail without mailwrapper in USE,"
+		elog "you probably want to 'emerge -C mailwrapper' now."
+		elog
 	fi
 }
