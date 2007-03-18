@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.60-r1.ebuild,v 1.11 2007/03/18 05:28:12 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.60-r1.ebuild,v 1.12 2007/03/18 05:33:57 genone Exp $
 
 inherit eutils
 
@@ -133,7 +133,7 @@ src_unpack() {
 	if use ipv6; then
 		echo "HAVE_IPV6=YES" >> Makefile
 		#To fix bug 41196
-		echo "IPV6_USE_INET_PTON=yes" >> Makefile	
+		echo "IPV6_USE_INET_PTON=yes" >> Makefile
 	fi
 
 	if [ -n "$myconf" ] ; then
