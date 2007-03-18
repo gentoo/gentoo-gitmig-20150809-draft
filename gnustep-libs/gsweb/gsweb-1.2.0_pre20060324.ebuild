@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.2.0_pre20060324.ebuild,v 1.1 2006/03/26 11:45:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.2.0_pre20060324.ebuild,v 1.2 2007/03/18 01:34:28 genone Exp $
 
 inherit gnustep eutils subversion depend.apache
 
@@ -66,5 +66,5 @@ src_install() {
 
 pkg_postinst() {
 	gnustep_pkg_postinst
-	einfo "Edit /etc/conf.d/apache${APACHE_VERSION#1} and add \"-D GSWeb\" to APACHE${APACHE_VERSION#1}_OPTS"
+	elog "Edit /etc/conf.d/apache${APACHE_VERSION#1} and add \"-D GSWeb\" to APACHE${APACHE_VERSION#1}_OPTS"
 }
