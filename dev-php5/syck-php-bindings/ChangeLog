@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/syck-php-bindings
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/syck-php-bindings/ChangeLog,v 1.4 2006/11/30 02:30:36 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/syck-php-bindings/ChangeLog,v 1.5 2007/03/18 14:42:56 chtekk Exp $
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  Cleanup.
 
   30 Nov 2006; Michael Cummings <mcummings@gentoo.org>
   syck-php-bindings-0.55.ebuild:
