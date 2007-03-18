@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/xfce4-sensors-0.10.0-r1.ebuild,v 1.1 2007/03/18 08:58:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/xfce4-sensors-0.10.0-r1.ebuild,v 1.2 2007/03/18 09:25:25 drac Exp $
 
 inherit xfce44
 
@@ -25,10 +25,8 @@ pkg_postinst() {
 	xfce44_pkg_postinst
 
 	if use hddtemp; then
-		elog
-		elog "You need to run \"chmod u+s /usr/sbin/hddtemp\" to show disk
-		temperatures."
-		elog
+		[[ -u "${ROOT}"/usr/sbin/hddtemp ]] || \
+		elog "You need to run \"chmod u+s /usr/sbin/hddtemp\" to show disk temperatures."
 	fi
 }
 
