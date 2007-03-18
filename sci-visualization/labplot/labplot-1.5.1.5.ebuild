@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.1 2007/03/18 22:38:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.2 2007/03/18 22:41:47 carlo Exp $
 
-inherit eutils gnuconfig kde
+inherit eutils kde
 
 PV_BUGFIX="${PV/?.?.?/}"
 MY_PV="${PV%${PV_BUGFIX}}"
@@ -49,9 +49,9 @@ src_unpack() {
 }
 
 src_compile() {
-	export QTDIR="${ROOT}/usr/qt/3"
-	export QWT3D_PATH="${ROOT}/usr"
-	export KEXIDB_DIR="${ROOT}/usr"
+	export QTDIR="/usr/qt/3"
+	export QWT3D_PATH="/usr"
+	export KEXIDB_DIR="/usr"
 
 	# texvc not in Portage and I'm not keen maintaining it
 	# qsa ebuilds in bad shape atm.
@@ -72,7 +72,6 @@ src_compile() {
 		$(use_enable tiff) \
 		$(use_enable kexi KexiDB) \
 		$(use_enable opengl)"
-	gnuconfig_update
 	kde_src_compile
 }
 
