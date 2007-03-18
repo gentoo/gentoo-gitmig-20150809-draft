@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6-r1.ebuild,v 1.6 2006/07/27 17:36:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6-r1.ebuild,v 1.7 2007/03/18 01:31:33 genone Exp $
 
 inherit gnustep
 
@@ -42,6 +42,6 @@ src_install() {
 	dosed "s:XXX_GNUSTEP_NETWORK_ROOT_XXX:$(egnustep_network_root):g" /etc/env.d/99gnustep
 	dosed "s:XXX_GNUSTEP_SYSTEM_ROOT_XXX:$(egnustep_system_root):g" /etc/env.d/99gnustep
 	dodir /var/run/GNUstep
-	einfo "Check http://dev.gentoo.org/~grobian/fafhrd/ for very handy info in setting up your GNUstep env."
+	elog "Check http://dev.gentoo.org/~grobian/fafhrd/ for very handy info in setting up your GNUstep env."
 }
 

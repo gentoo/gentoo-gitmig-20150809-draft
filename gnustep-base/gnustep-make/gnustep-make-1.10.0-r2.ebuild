@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.9 2006/08/13 15:33:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.10 2007/03/18 01:33:13 genone Exp $
 
 inherit gnustep
 
@@ -105,11 +105,11 @@ pkg_setup() {
 	fi
 
 #	if use layout-from-conf-file || use layout-osx-like; then
-		einfo "GNUstep installation will be laid out thusly:"
-		einfo "\tGNUSTEP_SYSTEM_ROOT=`egnustep_system_root`"
-		einfo "\tGNUSTEP_LOCAL_ROOT=`egnustep_local_root`"
-		einfo "\tGNUSTEP_NETWORK_ROOT=`egnustep_network_root`"
-		einfo "\tGNUSTEP_USER_ROOT=`egnustep_user_root`"
+		elog "GNUstep installation will be laid out thusly:"
+		elog "\tGNUSTEP_SYSTEM_ROOT=`egnustep_system_root`"
+		elog "\tGNUSTEP_LOCAL_ROOT=`egnustep_local_root`"
+		elog "\tGNUSTEP_NETWORK_ROOT=`egnustep_network_root`"
+		elog "\tGNUSTEP_USER_ROOT=`egnustep_user_root`"
 		ebeep
 		epause 10
 #	fi
