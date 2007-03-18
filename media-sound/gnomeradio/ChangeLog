@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnomeradio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.18 2007/03/18 13:03:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.19 2007/03/18 22:56:24 leio Exp $
+
+  18 Mar 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/gnomeradio-1.4-gcc34.patch, -gnomeradio-1.4.ebuild:
+  Remove old
 
   18 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   gnomeradio-1.6.ebuild:
