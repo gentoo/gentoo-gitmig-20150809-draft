@@ -1,19 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-0.8.0.ebuild,v 1.1 2007/02/25 14:19:37 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-0.9.0.ebuild,v 1.1 2007/03/18 14:52:16 chtekk Exp $
+
+PHP_LIB_NAME="Zend"
 
 inherit php-lib-r1
 
+KEYWORDS="~amd64 ~x86"
+
 DESCRIPTION="Zend Framework is a high quality and open source framework for developing Web Applications and Web Services with PHP 5."
 HOMEPAGE="http://framework.zend.com/"
-SRC_URI="http://framework.zend.com/releases/${P}.tar.gz"
-
+SRC_URI="http://framework.zend.com/releases/${P}-Beta.tar.gz"
 LICENSE="ZendFramework-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
 IUSE="doc examples"
 
-PHP_LIB_NAME="Zend"
+DEPEND=""
+RDEPEND=""
+
+S="${WORKDIR}/${P}-Beta"
 
 need_php_by_category
 
