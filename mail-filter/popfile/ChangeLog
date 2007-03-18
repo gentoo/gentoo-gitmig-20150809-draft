@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.13 2006/06/10 23:26:02 stuart Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.14 2007/03/18 04:42:26 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> popfile-0.22.4.ebuild:
+  Replacing einfo with elog
 
   10 Jun 2006; Stuart Herbert <stuart@gentoo.org> -popfile-0.20.1.ebuild,
   -popfile-0.21.1.ebuild:

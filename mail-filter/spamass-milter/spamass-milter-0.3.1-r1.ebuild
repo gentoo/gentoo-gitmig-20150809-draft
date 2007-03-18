@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.1-r1.ebuild,v 1.3 2006/06/12 19:40:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.1-r1.ebuild,v 1.4 2007/03/18 04:50:08 genone Exp $
 
 inherit eutils
 
@@ -40,8 +40,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Documentation is in /usr/share/doc/${P}"
-	einfo "Check README.gentoo.gz there for some basic gentoo installation instructions"
-	einfo ""
+	elog
+	elog "Documentation is in /usr/share/doc/${P}"
+	elog "Check README.gentoo.gz there for some basic gentoo installation instructions"
+	elog
 }

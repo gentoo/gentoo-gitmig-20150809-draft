@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.82.ebuild,v 1.9 2006/10/20 21:19:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.82.ebuild,v 1.10 2007/03/18 04:48:57 genone Exp $
 
 inherit perl-app
 
@@ -24,42 +24,42 @@ RDEPEND="dev-perl/Net-DNS
 S=${WORKDIR}/razor-agents-${PV}
 
 pkg_postinst() {
-	einfo ""
-	einfo "Run 'razor-admin -create' to create a default config file in your"
-	einfo "home directory under /home/user/.razor. (Remember to change user to"
-	einfo "your username from root before running razor-admin)"
-	einfo ""
-	einfo "Razor v2 requires reporters to be registered so their reputations can"
-	einfo "be computed over time and they can participate in the revocation"
-	einfo "mechanism. Registration is done with razor-admin -register. It has to be"
-	einfo "manually invoked in either of the following ways:"
-	einfo ""
-	einfo "To register user foo with 's1kr3t' as password: "
-	einfo ""
-	einfo "razor-admin -register -user=foo -pass=s1kr3t"
-	einfo ""
-	einfo "To register with an email address and have the password assigned:"
-	einfo ""
-	einfo "razor-admin -register -user=foo@bar.com      "
-	einfo ""
-	einfo "To have both (random) username and password assgined: "
-	einfo ""
-	einfo "razor-admin -register "
-	einfo ""
-	einfo "razor-admin -register negotiates a registration with the Nomination Server"
-	einfo "and writes the identity information in"
-	einfo "/home/user/.razor/identity-username, or /etc/razor/identity-username"
-	einfo "when invoked as root."
-	einfo ""
-	einfo "You can edit razor-agent.conf to change the defaults. Config options"
-	einfo "and their values are defined in the razor-agent.conf(5) manpage."
-	einfo ""
-	einfo "The next step is to integrate razor-check, razor-report and"
-	einfo "razor-revoke in your mail system. If you are running Razor v1, the"
-	einfo "change will be transparent, new versions of razor agents will overwrite"
-	einfo "the old ones. You would still need to plugin razor-revoke in your MUA,"
-	einfo "since it's a new addition in Razor v2. If you are not running Razor v1,"
-	einfo "refer to manpages of razor-check(1), razor-report(1), and"
-	einfo "razor-revoke(1) for integration instructions."
-	einfo ""
+	elog
+	elog "Run 'razor-admin -create' to create a default config file in your"
+	elog "home directory under /home/user/.razor. (Remember to change user to"
+	elog "your username from root before running razor-admin)"
+	elog
+	elog "Razor v2 requires reporters to be registered so their reputations can"
+	elog "be computed over time and they can participate in the revocation"
+	elog "mechanism. Registration is done with razor-admin -register. It has to be"
+	elog "manually invoked in either of the following ways:"
+	elog
+	elog "To register user foo with 's1kr3t' as password: "
+	elog
+	elog "razor-admin -register -user=foo -pass=s1kr3t"
+	elog
+	elog "To register with an email address and have the password assigned:"
+	elog
+	elog "razor-admin -register -user=foo@bar.com      "
+	elog
+	elog "To have both (random) username and password assgined: "
+	elog
+	elog "razor-admin -register "
+	elog
+	elog "razor-admin -register negotiates a registration with the Nomination Server"
+	elog "and writes the identity information in"
+	elog "/home/user/.razor/identity-username, or /etc/razor/identity-username"
+	elog "when invoked as root."
+	elog
+	elog "You can edit razor-agent.conf to change the defaults. Config options"
+	elog "and their values are defined in the razor-agent.conf(5) manpage."
+	elog
+	elog "The next step is to integrate razor-check, razor-report and"
+	elog "razor-revoke in your mail system. If you are running Razor v1, the"
+	elog "change will be transparent, new versions of razor agents will overwrite"
+	elog "the old ones. You would still need to plugin razor-revoke in your MUA,"
+	elog "since it's a new addition in Razor v2. If you are not running Razor v1,"
+	elog "refer to manpages of razor-check(1), razor-report(1), and"
+	elog "razor-revoke(1) for integration instructions."
+	elog
 }

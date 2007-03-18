@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.24.ebuild,v 1.4 2006/10/14 09:48:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.24.ebuild,v 1.5 2007/03/18 04:43:52 genone Exp $
 
 inherit eutils
 
@@ -56,17 +56,17 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "To make use of greylisting, please update your postfix config:"
-	einfo
+	elog "To make use of greylisting, please update your postfix config:"
+	elog
 
-	einfo "In order to start using postgrey, edit /etc/conf.d/postgrey, add following lines"
-	einfo "to smtpd_recipient restrictions setting in your /etc/postfix/main.cf:"
-	einfo "\t\"check_policy_service inet:127.0.0.1:10030\", if you're using TCP socket"
-	einfo "\t\"check_policy_service unix:private/postgrey\", if you're using UNIX socket"
-	einfo "Then, start postgrey and restart postfix."
+	elog "In order to start using postgrey, edit /etc/conf.d/postgrey, add following lines"
+	elog "to smtpd_recipient restrictions setting in your /etc/postfix/main.cf:"
+	elog "\t\"check_policy_service inet:127.0.0.1:10030\", if you're using TCP socket"
+	elog "\t\"check_policy_service unix:private/postgrey\", if you're using UNIX socket"
+	elog "Then, start postgrey and restart postfix."
 
-	einfo "Also remember to make the daemon start durig system boot:"
-	einfo "  rc-update add postgrey default"
+	elog "Also remember to make the daemon start durig system boot:"
+	elog "  rc-update add postgrey default"
 	echo
 	ewarn "Read postgrey documentation for more info (perldoc postgrey)."
 	echo

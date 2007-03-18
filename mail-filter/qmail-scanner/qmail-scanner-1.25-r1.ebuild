@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.12 2006/07/21 16:45:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.13 2007/03/18 04:46:19 genone Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -36,7 +36,7 @@ pkg_preinst() {
 	local oldname="/var/qmail/bin/qmail-scanner-queue.pl"
 	if [ -f ${oldname} ]; then
 		newname=${oldname}.`date +%Y%m%d%H%M%S`
-		einfo "Backing up old qmail-scanner as $newname in case of modifications."
+		elog "Backing up old qmail-scanner as $newname in case of modifications."
 		cp ${oldname} ${newname}
 		chmod 600 ${newname}
 	fi
@@ -49,7 +49,7 @@ src_unpack() {
 	ht_fix_file autoupdaters/* configure
 
 	EXTRA_VIRII="bagle,beagle,mydoom,sco,maldal,mimail,novarg,shimg,bugler,cissi,cissy,dloade,netsky,qizy"
-	einfo "Adding items to the SILENT_VIRUSES list (${EXTRA_VIRII})"
+	elog "Adding items to the SILENT_VIRUSES list (${EXTRA_VIRII})"
 	sed -e "/^SILENT_VIRUSES/s/\"$/,${EXTRA_VIRII}\"/g"  -i configure
 }
 
@@ -152,10 +152,10 @@ pkg_postinst () {
 	${ROOT}/var/qmail/bin/qmail-scanner-queue -z
 	${ROOT}/var/qmail/bin/qmail-scanner-queue -g
 
-	einfo "To activate qmail-scanner, please edit your"
-	einfo "/var/qmail/control/conf-common file and set:"
-	einfo "export QMAILQUEUE=/var/qmail/bin/qmail-scanner-queue"
-	einfo "Or place it in your tcprules file."
+	elog "To activate qmail-scanner, please edit your"
+	elog "/var/qmail/control/conf-common file and set:"
+	elog "export QMAILQUEUE=/var/qmail/bin/qmail-scanner-queue"
+	elog "Or place it in your tcprules file."
 	ewarn "Please note that it was a call to qmail-scanner-queue.pl before,"
 	ewarn "but this is now changed to use a wrapper to improve security!"
 	ewarn "Once you have changed to the wrapper, you can remove the setuid "

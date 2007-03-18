@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.22.4.ebuild,v 1.2 2006/06/10 23:20:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.22.4.ebuild,v 1.3 2007/03/18 04:42:26 genone Exp $
 
 IUSE="cjk ipv6 mysql ssl xmlrpc"
 
@@ -66,5 +66,5 @@ src_install() {
 }
 
 pkg_postinst () {
-	einfo "To start popfile, run /usr/sbin/popfile"
+	elog "To start popfile, run /usr/sbin/popfile"
 }

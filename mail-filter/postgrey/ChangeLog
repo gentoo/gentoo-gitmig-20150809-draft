@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.25 2007/01/30 14:41:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.26 2007/03/18 04:43:52 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> postgrey-1.21-r2.ebuild,
+  postgrey-1.24.ebuild, postgrey-1.27.ebuild:
+  Replacing einfo with elog
 
   30 Jan 2007; Patrick McLean <chutzpah@gentoo.org> files/postgrey.rc.new:
   Add "reload" to rc script.

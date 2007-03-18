@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.1.ebuild,v 1.2 2006/02/25 17:03:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.1.ebuild,v 1.3 2007/03/18 04:41:14 genone Exp $
 
 inherit eutils
 
@@ -63,16 +63,16 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "Default infected notification template language is set to english, change the"
-	einfo "symbolic link /etc/${PN}/${PN}.mail if you want it in another language."
-	echo
-	einfo "To start ${PN}, you can use /etc/init.d/${PN} start"
-	echo
-	einfo "You need port-redirecting, a rule like:"
-	echo "  iptables -t nat -A PREROUTING -p tcp -i eth0 --dport pop3 -j REDIRECT --to 8110"
-	einfo "to forward pop3 connections incoming from eth0 interface."
-	echo
-	einfo "You will also need to configure at least following in /etc/${PN}/${PN}.conf:"
-	einfo "scannertype, scanner, virusregexp"
+	elog "Default infected notification template language is set to english, change the"
+	elog "symbolic link /etc/${PN}/${PN}.mail if you want it in another language."
+	elog
+	elog "To start ${PN}, you can use /etc/init.d/${PN} start"
+	elog
+	elog "You need port-redirecting, a rule like:"
+	elog "  iptables -t nat -A PREROUTING -p tcp -i eth0 --dport pop3 -j REDIRECT --to 8110"
+	elog "to forward pop3 connections incoming from eth0 interface."
+	elog
+	elog "You will also need to configure at least following in /etc/${PN}/${PN}.conf:"
+	elog "scannertype, scanner, virusregexp"
 	echo
 }

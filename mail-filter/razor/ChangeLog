@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.79 2007/02/22 01:02:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.80 2007/03/18 04:48:57 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> razor-2.77.ebuild,
+  razor-2.82.ebuild:
+  Replacing einfo with elog
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
