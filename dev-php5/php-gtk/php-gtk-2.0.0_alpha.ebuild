@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.2 2007/03/18 01:41:15 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.3 2007/03/18 16:07:22 chtekk Exp $
 
 PHP_EXT_NAME="php_gtk2"
 PHP_EXT_INI="yes"
@@ -14,7 +14,7 @@ DESCRIPTION="PHP 5 bindings for the Gtk+ 2 library."
 HOMEPAGE="http://gtk.php.net/"
 SRC_URI="http://gtk.php.net/distributions/${PN}-${PV/_alpha/}alpha.tar.gz"
 LICENSE="PHP"
-SLOT="2"
+SLOT="0"
 IUSE="debug mozembed nolibglade sourceview"
 
 RDEPEND=">=dev-lang/php-5.1.2
