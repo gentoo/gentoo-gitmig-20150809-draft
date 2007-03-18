@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.1.ebuild,v 1.1 2007/03/18 07:43:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.1.ebuild,v 1.2 2007/03/18 13:49:54 mr_bones_ Exp $
 
 inherit toolchain-funcs bash-completion
 
@@ -23,7 +23,7 @@ src_compile() {
 
 src_install() {
 	dobin tree || die "dobin failed"
-	doman tree.1
+	doman man/tree.1
 	dodoc CHANGES README*
 	dobashcompletion "${FILESDIR}"/${PN}.bashcomp
 }
