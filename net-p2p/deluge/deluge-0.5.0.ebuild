@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0.ebuild,v 1.1 2007/03/18 17:46:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0.ebuild,v 1.2 2007/03/18 22:23:01 welp Exp $
 
 inherit eutils distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://deluge-torrent.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="libnotify"
 
 DEPEND=">=dev-lang/python-2.3
