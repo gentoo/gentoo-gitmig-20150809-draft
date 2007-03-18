@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0_rc2.ebuild,v 1.2 2007/03/16 19:44:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0.ebuild,v 1.1 2007/03/18 17:46:51 armin76 Exp $
 
 inherit eutils distutils
 
