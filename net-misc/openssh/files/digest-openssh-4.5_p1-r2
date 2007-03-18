@@ -10,6 +10,6 @@ SHA256 098fd91fc62e9685bf05c97c535f35414e742f379b6e21f5fd13353a7549271e openssh-
 MD5 6468c339886f78e8a149b88f695839dd openssh-4.5p1.tar.gz 965925
 RMD160 3f70b6f4228e84c7b9b8b3bee7fd3875f3e3bad3 openssh-4.5p1.tar.gz 965925
 SHA256 7046b9d372f9e31ca654a66492310c188470480ddab300eb715dbf5e2177ae55 openssh-4.5p1.tar.gz 965925
-MD5 663ce0f968c4f7eacc5128dc91645245 openssh-lpk-4.5p1-0.3.8.patch 62340
-RMD160 3f0f9b6f600947e073c7a2863fbbfe58c0c87845 openssh-lpk-4.5p1-0.3.8.patch 62340
-SHA256 c96cb24ea0c21cd93f2a28c31c38902bed8ddf0cb7a2879337bb21a5edd7ce35 openssh-lpk-4.5p1-0.3.8.patch 62340
+MD5 76a143d9e6edea5dd0cc5ee65fed7bc7 openssh-lpk-4.5p1-0.3.8-no-configure.patch 58327
+RMD160 464eb3e29f77d2d1e9785ea7cbae5c6d6bb0aff5 openssh-lpk-4.5p1-0.3.8-no-configure.patch 58327
+SHA256 ffbd706fb543709d1be0d37af50de561ed9a4271508f0df3b951d6a1db5eb1eb openssh-lpk-4.5p1-0.3.8-no-configure.patch 58327
