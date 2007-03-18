@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6986 2007/03/17 21:49:51 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6987 2007/03/18 03:33:52 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -181,12 +181,6 @@ net-misc/xsupplicant
 # This is utterly broken and no longer used, please uninstall immediatelly
 # will be removed asap
 kde-base/unsermake
-
-# Luca Longinotti <chtekk@gentoo.org> (6 Mar 2007)
-# Mask for removal: unmaintained upstream, old,
-# nothing depends on them
-dev-php4/PEAR-XML_CSSML
-dev-php4/PEAR-XML_XPath
 
 # Doug Goldstein <cardoe@gentoo.org> (5 Mar 2007)
 # experimental SVN to quell the masses
