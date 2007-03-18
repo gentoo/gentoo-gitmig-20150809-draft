@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r2.ebuild,v 1.2 2007/03/17 17:54:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r4.ebuild,v 1.1 2007/03/18 20:28:18 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -57,9 +57,9 @@ src_install() {
 
 	java-pkg_dolauncher ${PN} \
 		--main com.ca.directory.jxplorer.JXplorer \
-		--pwd '${HOME}/.jxplorer/' \
+		--pwd '"${HOME}/.jxplorer"' \
 		--pkg_args console \
-		-pre "${FILESDIR}/${PN}-pre"
+		-pre "${FILESDIR}/${PN}-pre-r1"
 
 	use source && java-pkg_dosrc src/com
 	use doc && java-pkg_dojavadocs docs
