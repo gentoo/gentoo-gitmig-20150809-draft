@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/xfce4-smartbookmark-0.4.2.ebuild,v 1.16 2007/03/15 13:56:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/xfce4-smartbookmark-0.4.2.ebuild,v 1.17 2007/03/18 21:28:28 vapier Exp $
 
 inherit xfce44
 
@@ -9,7 +9,8 @@ xfce44_gzipped
 xfce44_goodies_panel_plugin
 
 DESCRIPTION="Xfce panel smart-bookmark plugin"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack ${A}
