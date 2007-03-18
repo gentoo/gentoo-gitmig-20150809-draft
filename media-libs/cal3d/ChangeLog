@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.23 2007/02/06 15:45:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.24 2007/03/18 14:15:58 nixnut Exp $
+
+  18 Mar 2007; nixnut <nixnut@gentoo.org> cal3d-0.11.0-r1.ebuild:
+  Stable on ppc wrt bug 162982
 
   06 Feb 2007; Simon Stelling <blubb@gentoo.org> cal3d-0.11.0-r1.ebuild:
   stable on amd64; bug 162982
