@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.23 2006/02/26 00:05:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.24 2007/03/18 17:15:01 grobian Exp $
 
-inherit eutils
+inherit eutils multilib
 
 # Patches are taken from http://www.suse.de/~nadvornik/slang/
 # They were originally Red Hat and Debian's patches
@@ -14,7 +14,7 @@ SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="cjk unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -24,7 +24,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${WORKDIR}/${P}.patch
-	use ppc-macos || epatch ${WORKDIR}/${P}-fsuid.patch
+	epatch ${WORKDIR}/${P}-fsuid.patch
 	epatch ${WORKDIR}/${P}-autoconf.patch
 	if use unicode ; then
 		epatch ${WORKDIR}/slang-debian-utf8.patch
@@ -47,11 +47,7 @@ src_compile() {
 
 src_install() {
 	make install install-elf DESTDIR=${D} || die "make install failed"
-	if use ppc-macos ; then
-		chmod a+rx "${D}"/usr/$(get_libdir)/libslang*dylib || die "chmod failed"
-	else
-		chmod a+rx "${D}"/usr/$(get_libdir)/libslang*so* || die "chmod failed"
-	fi
+	chmod a+rx "${D}"/usr/$(get_libdir)/libslang*$(get_libname)* || die "chmod failed"
 
 	if use unicode ; then
 		for i in ${D}/usr/$(get_libdir)/libslang-utf8* ; do
