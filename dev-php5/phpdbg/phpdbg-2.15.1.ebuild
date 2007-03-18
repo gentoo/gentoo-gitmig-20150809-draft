@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.15.1.ebuild,v 1.1 2007/03/18 01:12:09 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.15.1.ebuild,v 1.2 2007/03/18 01:26:12 chtekk Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_INI="yes"
@@ -11,8 +11,8 @@ inherit php-ext-source-r1
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DESCRIPTION="A PHP debugger useable with some editors like phpedit."
-SRC_URI="mirror://sourceforge/dbg2/dbg-${PV}.tar.gz"
 HOMEPAGE="http://dd.cron.ru/dbg/"
+SRC_URI="mirror://sourceforge/dbg2/dbg-${PV}.tar.gz"
 LICENSE="dbgphp"
 SLOT="0"
 IUSE=""
