@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.7.ebuild,v 1.3 2006/12/01 20:43:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.7.ebuild,v 1.4 2007/03/18 01:23:43 genone Exp $
 
 inherit gnome2
 
@@ -26,14 +26,14 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	echo
-	einfo "Ensure that the following line is in the InputDevice section in"
-	einfo "your X config file (/etc/X11/xorg.conf):"
-	einfo
-	einfo "Option \"SHMConfig\" \"on\""
-	einfo
+	elog "Ensure that the following line is in the InputDevice section in"
+	elog "your X config file (/etc/X11/xorg.conf):"
+	elog
+	elog "Option \"SHMConfig\" \"on\""
+	elog
 	echo
-	einfo "You need to add gsynaptics-init to your session to restore your"
-	einfo "settings the next time you log into GNOME:"
-	einfo "Desktop -> Preferences -> Sessions -> Start Programs -> Add"
+	elog "You need to add gsynaptics-init to your session to restore your"
+	elog "settings the next time you log into GNOME:"
+	elog "Desktop -> Preferences -> Sessions -> Start Programs -> Add"
 	echo
 }

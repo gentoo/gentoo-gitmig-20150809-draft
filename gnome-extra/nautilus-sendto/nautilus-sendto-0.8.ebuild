@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.8.ebuild,v 1.3 2006/12/07 04:24:49 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.8.ebuild,v 1.4 2007/03/18 01:28:01 genone Exp $
 
 inherit gnome2 eutils autotools
 
@@ -68,7 +68,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	if use gaim ; then
-		einfo "To enable SendTo support in GAIM, you must enable the plugin in GAIM"
-		einfo "Check Tools -> Preferences -> Plugins in the GAIM menu."
+		elog "To enable SendTo support in GAIM, you must enable the plugin in GAIM"
+		elog "Check Tools -> Preferences -> Plugins in the GAIM menu."
 	fi
 }
