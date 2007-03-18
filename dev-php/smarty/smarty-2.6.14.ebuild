@@ -1,26 +1,31 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.9 2007/01/28 06:27:38 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.10 2007/03/18 15:42:03 chtekk Exp $
 
 inherit php-lib-r1
 
-DESCRIPTION="A template engine for PHP."
-HOMEPAGE="http://smarty.php.net/"
-LICENSE="LGPL-2.1"
-SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
-IUSE="doc"
-
-DEPEND="doc? ( dev-php/smarty-docs )"
 
 MY_P="Smarty-${PV}"
+
+DESCRIPTION="A template engine for PHP."
+HOMEPAGE="http://smarty.php.net/"
 SRC_URI="http://smarty.php.net/distributions/${MY_P}.tar.gz"
+LICENSE="LGPL-2.1"
+SLOT="0"
+IUSE="doc"
+
+DEPEND=""
+RDEPEND=""
+PDEPEND="doc? ( dev-php/smarty-docs )"
+
 S="${WORKDIR}/${MY_P}"
 
 need_php_by_category
 
 src_install() {
 	dodoc-php BUGS ChangeLog FAQ NEWS QUICK_START README RELEASE_NOTES TODO
+
 	php-lib-r1_src_install ./libs `find ./libs -type f -print | sed -e "s|./libs||g"`
 }
 
