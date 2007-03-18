@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-mcve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.17 2007/03/04 19:07:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.18 2007/03/18 00:13:10 chtekk Exp $
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-mcve-5.2.0.ebuild,
+  pecl-mcve-5.2.2.ebuild:
+  Cleanup.
 
   04 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-mcve-5.2.0.ebuild,
   pecl-mcve-5.2.2.ebuild:
