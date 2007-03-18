@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.11.ebuild,v 1.4 2007/03/14 17:07:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.11.ebuild,v 1.5 2007/03/18 22:00:01 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,6 @@ DEPEND="dev-libs/boost
 	!net-libs/libtorrent"
 RDEPEND="${DEPEND}"
 
-
 pkg_setup() {
 	# We need boost built with threads
 	if ! built_with_use "dev-libs/boost" threads; then
@@ -38,7 +37,9 @@ src_compile() {
 			--with-boost-regex=boost_regex-mt \
 			--with-boost-program_options=boost_program_options-mt"
 
-	econf $(use_enable debug) ${BOOST_LIBS} || die "econf failed"
+	econf $(use_enable debug) \
+		 ${BOOST_LIBS} \
+		 LDFLAGS="${LDFLAGS} -pthread" || die "econf failed"
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.5 2007/03/14 17:07:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.6 2007/03/18 22:00:01 armin76 Exp $
+
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org> rb_libtorrent-0.11.ebuild:
+  Make it work with g/fbsd, thanks to welp for testing
 
   14 Mar 2007; Raúl Porcel <armin76@gentoo.org> rb_libtorrent-0.11.ebuild:
   Use -mt prefix for the boost libs, thanks to Peter Koeleman
