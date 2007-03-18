@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.9 2007/03/07 04:37:28 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.10 2007/03/18 00:44:26 genone Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -65,8 +65,8 @@ src_install() {
 
 	# Install the Developer's Book
 	use doc && \
-		einfo "Installing the Developer's Book into" && \
-		einfo "/usr/share/doc/${PF}/html" && \
+		elog "Installing the Developer's Book into" && \
+		elog "/usr/share/doc/${PF}/html" && \
 		dohtml -r ${WORKDIR}/gdesklets-develbook/*
 
 	# Install the man page
@@ -83,21 +83,21 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	echo
-	einfo "gDesklets Displays are required before the library"
-	einfo "will be usable. The displays are found in -"
-	einfo "           x11-plugins/desklet-*"
-	einfo "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
-	echo
-	einfo "Next you'll need to start gdesklets using"
-	einfo "           /usr/bin/gdesklets start"
-	einfo "If you're using GNOME this can be done conveniently"
-	einfo "through Applications->Accessories->gDesklets"
-	echo
-	einfo "If you're updating from a version less than 0.35_rc1,"
-	einfo "you can migrate your desklet configurations by"
-	einfo "running"
-	einfo "           /usr/lib/gdesklets/gdesklets-migration-tool"
-	einfo "after the first time you run gdesklets"
+	elog "gDesklets Displays are required before the library"
+	elog "will be usable. The displays are found in -"
+	elog "           x11-plugins/desklet-*"
+	elog "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
+	elog
+	elog "Next you'll need to start gdesklets using"
+	elog "           /usr/bin/gdesklets start"
+	elog "If you're using GNOME this can be done conveniently"
+	elog "through Applications->Accessories->gDesklets"
+	elog
+	elog "If you're updating from a version less than 0.35_rc1,"
+	elog "you can migrate your desklet configurations by"
+	elog "running"
+	elog "           /usr/lib/gdesklets/gdesklets-migration-tool"
+	elog "after the first time you run gdesklets"
 	echo
 
 	# This stuff is important, especially the migration-tool
