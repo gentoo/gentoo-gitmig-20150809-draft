@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.10.ebuild,v 1.3 2007/03/03 15:58:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.10.ebuild,v 1.4 2007/03/18 02:08:35 genone Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -132,12 +132,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "For enigmail, please see instructions at"
-	einfo "  http://enigmail.mozdev.org/"
+	elog "For enigmail, please see instructions at"
+	elog "  http://enigmail.mozdev.org/"
 
 	if use amd64; then
-		echo
-		einfo "NB: You just installed a 32-bit thunderbird"
+		elog
+		elog "NB: You just installed a 32-bit thunderbird"
 	fi
 
 	update_mozilla_launcher_symlinks

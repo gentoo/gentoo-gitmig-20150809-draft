@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060619-r1.ebuild,v 1.4 2007/03/17 17:37:40 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060619-r1.ebuild,v 1.5 2007/03/18 02:14:40 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -146,9 +146,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "NOTE: muttng is not under development any more, and suffers"
-	einfo "      from serious stability problems.  It lacks behind with"
-	einfo "      respect to mutt, which it is based on."
-	einfo "Please consider switching to mail-client/mutt instead."
+	elog "NOTE: muttng is not under development any more, and suffers"
+	elog "      from serious stability problems.  It lacks behind with"
+	elog "      respect to mutt, which it is based on."
+	elog "Please consider switching to mail-client/mutt instead."
 	echo
 }

@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.51 2007/03/04 13:25:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.52 2007/03/18 02:16:36 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> nail-11.25-r3.ebuild:
+  Replacing einfo with elog
 
   04 Mar 2007; Fernando J. Pereda <ferdy@gentoo.org> nail-11.25-r3.ebuild:
   Fix for bug #169279. Thanks to Diego Pettenò <flameeyes@gmail.com>

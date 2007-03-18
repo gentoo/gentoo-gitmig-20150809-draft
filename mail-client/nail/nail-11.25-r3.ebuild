@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r3.ebuild,v 1.10 2007/03/04 13:25:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r3.ebuild,v 1.11 2007/03/18 02:16:36 genone Exp $
 
 inherit eutils
 DESCRIPTION="Nail is an enhanced mailx-compatible mail client"
@@ -16,13 +16,13 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="ssl net"
 
 remove_ssl() {
-	einfo "Disabling SSL support"
+	elog "Disabling SSL support"
 	sed -i -e 's~#define USE_\(OPEN\)\?SSL~#undef USE_\1SSL~' config.h
 	sed -i -e 's~-ssl~~' -e 's~-lcrypto~~' LIBS
 }
 
 remove_sockets() {
-	einfo "Not enabling sockets (thus disabling IMAP, POP and SMTP)"
+	elog "Not enabling sockets (thus disabling IMAP, POP and SMTP)"
 	sed -i -e 's~#define HAVE_SOCKETS~#undef HAVE_SOCKETS~' config.h
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r5.ebuild,v 1.8 2007/03/09 17:40:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r5.ebuild,v 1.9 2007/03/18 02:20:26 genone Exp $
 
 inherit eutils
 
@@ -146,15 +146,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "This build of Pine has Maildir support built in as"
-	einfo "part of the chappa-all patch."
-	einfo
-	einfo "If you have a maildir at ~/Maildir it will be your"
-	einfo "default INBOX. The path may be changed with the"
-	einfo "\"maildir-location\" setting in Pine."
-	einfo
-	einfo "If you don't have any maildirs Pine works as before"
-	einfo "with the INBOX at /var/spool/mail/."
-	einfo
+	elog
+	elog "This build of Pine has Maildir support built in as"
+	elog "part of the chappa-all patch."
+	elog
+	elog "If you have a maildir at ~/Maildir it will be your"
+	elog "default INBOX. The path may be changed with the"
+	elog "\"maildir-location\" setting in Pine."
+	elog
+	elog "If you don't have any maildirs Pine works as before"
+	elog "with the INBOX at /var/spool/mail/."
+	elog
 }

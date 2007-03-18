@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.89 2007/02/22 00:56:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.90 2007/03/18 02:20:26 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> pine-4.61-r5.ebuild,
+  pine-4.63-r3.ebuild, pine-4.64.ebuild, pine-4.64-r1.ebuild,
+  pine-4.64-r3.ebuild, pine-4.64-r4.ebuild, pine-4.64-r5.ebuild:
+  Replacing einfo with elog
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r4.ebuild,v 1.3 2007/03/09 17:40:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r4.ebuild,v 1.4 2007/03/18 02:20:26 genone Exp $
 
 inherit eutils
 
@@ -39,21 +39,21 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${P/-/}"
 
 maildir_warn() {
-	einfo
-	einfo "This build of Pine has Maildir support built in as"
-	einfo "part of the chappa-all patch."
-	einfo
-	einfo "If you have a maildir at ~/Maildir it will be your"
-	einfo "default INBOX. The path may be changed with the"
-	einfo "\"maildir-location\" setting in Pine."
-	einfo
-	einfo "To use /var/spool/mail INBOX again, set"
-	einfo "\"disable-these-drivers=md\" in your .pinerc file."
-	einfo
-	einfo "Alternately, you might want to read following webpage, which explains how to"
-	einfo "use multiple mailboxes simultaneously:"
-	echo
-	echo "http://www.math.washington.edu/~chappa/pine/pine-info/collections/incoming-folders/"
+	elog
+	elog "This build of Pine has Maildir support built in as"
+	elog "part of the chappa-all patch."
+	elog
+	elog "If you have a maildir at ~/Maildir it will be your"
+	elog "default INBOX. The path may be changed with the"
+	elog "\"maildir-location\" setting in Pine."
+	elog
+	elog "To use /var/spool/mail INBOX again, set"
+	elog "\"disable-these-drivers=md\" in your .pinerc file."
+	elog
+	elog "Alternately, you might want to read following webpage, which explains how to"
+	elog "use multiple mailboxes simultaneously:"
+	elog
+	elog "http://www.math.washington.edu/~chappa/pine/pine-info/collections/incoming-folders/"
 	echo
 }
 
