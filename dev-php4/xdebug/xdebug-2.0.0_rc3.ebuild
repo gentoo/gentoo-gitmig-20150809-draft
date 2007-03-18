@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/xdebug-2.0.0_rc3.ebuild,v 1.1 2007/03/06 22:52:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/xdebug-2.0.0_rc3.ebuild,v 1.2 2007/03/18 03:03:43 chtekk Exp $
 
 PHP_EXT_NAME="xdebug"
 PHP_EXT_INI="yes"
@@ -24,7 +24,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 DEPEND="!dev-php4/ZendOptimizer"
 RDEPEND="${DEPEND}
-		dev-php/xdebug-client"
+		~dev-php/xdebug-client-${PV}"
 
 need_php_by_category
 
