@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lm1100/lm1100-1.0.2a.ebuild,v 1.1 2006/12/02 19:03:57 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lm1100/lm1100-1.0.2a.ebuild,v 1.2 2007/03/18 13:11:17 opfer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${MY_P}
