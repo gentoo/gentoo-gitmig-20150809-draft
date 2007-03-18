@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/cppserv
-# Copyright 2006-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.5 2006/11/20 16:52:54 iluxa Exp $
+# Copyright 2006-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.6 2007/03/18 02:40:00 iluxa Exp $
+
+*cppserv-0.1.99 (18 Mar 2007)
+
+  18 Mar 2007; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  +cppserv-0.1.99.ebuild:
+  Added release 0.1.99 to the tree. Fixed few bugs in the way apache-module
+  eclass is used while at it.
 
 *cppserv-0.1.98 (20 Nov 2006)
 
