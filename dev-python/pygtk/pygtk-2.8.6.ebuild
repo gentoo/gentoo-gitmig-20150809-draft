@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.6.ebuild,v 1.13 2006/09/26 20:04:36 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.6.ebuild,v 1.14 2007/03/18 00:41:58 marienz Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -27,6 +27,9 @@ RDEPEND=">=dev-lang/python-2.3.5
 		>=x11-libs/gtkglarea-1.99 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
+
+# Tests fail (missing display)
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
@@ -66,7 +69,7 @@ src_install() {
 
 src_test() {
 	cd tests
-	make check-local
+	make check-local || die "tests failed"
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.3.ebuild,v 1.11 2007/01/20 02:39:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.3.ebuild,v 1.12 2007/03/18 00:41:57 marienz Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -34,6 +34,9 @@ DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt >=app-text/docbook-xsl-stylesheets-1.70.1 )
 	>=dev-util/pkgconfig-0.9"
 
+# Tests fail (missing display)
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${A}
 	if use doc; then
@@ -65,7 +68,7 @@ src_install() {
 
 src_test() {
 	cd tests
-	make check-local
+	make check-local || die "tests failed"
 }
 
 pkg_postinst() {

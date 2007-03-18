@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.4.ebuild,v 1.2 2007/02/16 10:08:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.4.ebuild,v 1.3 2007/03/18 00:41:58 marienz Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -34,6 +34,9 @@ RDEPEND=">=dev-libs/glib-2.8.0
 DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt >=app-text/docbook-xsl-stylesheets-1.70.1 )
 	>=dev-util/pkgconfig-0.9"
+
+# Tests fail (missing display)
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
@@ -70,7 +73,7 @@ src_install() {
 
 src_test() {
 	cd tests
-	make check-local
+	make check-local || die "tests failed"
 }
 
 pkg_postinst() {
