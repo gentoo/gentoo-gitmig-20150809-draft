@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6989 2007/03/18 14:57:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6990 2007/03/18 15:14:31 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -352,11 +352,6 @@ app-portage/emool
 # Michael Cummings <mcummings@gentoo.org> (18 Feb 2007)
 # Pending removal 17 Mar 2007, bug 165467
 dev-perl/Text-ChaSen
-
-# Raúl Porcel <armin76@gentoo.org> (18 Feb 2007)
-# Pending removal 17 Mar 2007, doesn't compile, upstream
-# dropped support a long time ago.
-net-irc/cyclone
 
 # Raúl Porcel <armin76@gentoo.org> (17 Feb 2007)
 # Mask beta versions

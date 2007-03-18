@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.216 2007/03/18 14:57:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.217 2007/03/18 15:14:31 armin76 Exp $
+
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Remove net-irc/cyclone as it has been removed from the tree, bug 152480
 
   18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Fix mask for net-p2p/amule, bug 171341
