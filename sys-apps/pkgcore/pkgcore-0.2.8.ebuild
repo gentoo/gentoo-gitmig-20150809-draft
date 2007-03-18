@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.6.ebuild,v 1.1 2007/03/04 03:23:52 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.8.ebuild,v 1.1 2007/03/18 03:04:37 marienz Exp $
 
 inherit distutils
 
@@ -32,9 +32,6 @@ src_compile() {
 
 	if use doc; then
 		./build_docs.py || die "doc building failed"
-		for f in man/*.man; do
-			mv "${f}" "${f/%man/1}" || die "${f} manpage rename failed"
-		done
 	fi
 }
 
@@ -60,6 +57,11 @@ pkg_postinst() {
 		elog "You still have an /etc/pkgcore/plugins from pkgcore 0.1."
 		elog "It is unused by pkgcore >= 0.2, so you can remove it now."
 	fi
+
+	elog "If the new layman sync support causes problems you can disable it"
+	elog "with FEATURES=-layman-sync. If you cannot sync a layman overlay"
+	elog "using pkgcore, file a bug in pkgcore.org trac instead of complaining"
+	elog "to the layman or overlay maintainer."
 }
 
 src_test() {
