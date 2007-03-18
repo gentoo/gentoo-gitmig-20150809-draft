@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/libsrs2-1.0.18.ebuild,v 1.1 2005/05/09 23:51:23 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/libsrs2-1.0.18.ebuild,v 1.2 2007/03/18 04:21:49 genone Exp $
 
 DESCRIPTION="libsrs2 is the next generation Sender Rewriting Scheme library"
 HOMEPAGE="http://www.libsrs2.org/"
@@ -26,9 +26,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "${P} was successfully installed."
-	einfo "Please read the associated docs for help."
-	einfo "Or visit the website @ ${HOMEPAGE}"
+	elog "${P} was successfully installed."
+	elog "Please read the associated docs for help."
+	elog "Or visit the website @ ${HOMEPAGE}"
 	echo
 	ewarn "This package is still in unstable."
 	ewarn "Please report bugs to http://bugs.gentoo.org/"

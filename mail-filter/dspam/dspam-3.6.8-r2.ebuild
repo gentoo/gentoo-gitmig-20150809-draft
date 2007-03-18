@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.8-r2.ebuild,v 1.2 2007/02/18 07:53:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.8-r2.ebuild,v 1.3 2007/03/18 04:18:20 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -324,7 +324,7 @@ src_install () {
 
 pkg_preinst() {
 	# Preserve *.data files 
-	local installed_datafiles="${ROOT}"/${CONFDIR}/*.data 
+	local installed_datafiles="${ROOT}"/${CONFDIR}/*.data
 	if [[ "${installed_datafiles}" != *"*.data" ]]; then
 		cp "${ROOT}"/${CONFDIR}/*.data "${D}"/${CONFDIR}
 	fi
@@ -335,31 +335,34 @@ pkg_postinst() {
 	create_dspam_usergroup
 
 	if use mysql || use postgres || use oracle; then
-		echo
-		einfo "To setup DSPAM to run out-of-the-box on your system with a MySQL,"
-		einfo "PostgreSQL or Oracle database, run:"
-		einfo "emerge --config =${PF}"
+		elog
+		elog "To setup DSPAM to run out-of-the-box on your system with a MySQL,"
+		elog "PostgreSQL or Oracle database, run:"
+		elog "emerge --config =${PF}"
 	fi
 
 	if use postgres && has_version ">dev-db/postgresql-8.0"; then
-		echo
-		einfo "Before executing the configuration command mentioned above you have"
-		einfo "to execute the following command:"
-		einfo "createlang plpgsql -U postgres dspam"
+		elog
+		elog "Before executing the configuration command mentioned above you have"
+		elog "to execute the following command:"
+		elog "createlang plpgsql -U postgres dspam"
 	fi
 
 	if use daemon; then
-		echo
-		einfo "If you want to run DSPAM in the new daemon mode remember"
-		einfo "to make the DSPAM daemon start during boot:"
-		einfo "  rc-update add dspam default"
+		elog
+		elog "If you want to run DSPAM in the new daemon mode remember"
+		elog "to make the DSPAM daemon start during boot:"
+		elog "  rc-update add dspam default"
 	fi
 	if use daemon ; then
-		einfo "To use the DSPAM daemon mode, the used storage driver must be thread-safe."
+		elog
+		elog "To use the DSPAM daemon mode, the used storage driver must be thread-safe."
 	fi
 
-	einfo "Edit /etc/mail/dspam.conf with your delivery agent"
-	einfo "See http://dspamwiki.expass.de/Installation for more info"
+	elog
+	elog "Edit /etc/mail/dspam.conf with your delivery agent"
+	elog "See http://dspamwiki.expass.de/Installation for more info"
+	elog
 }
 
 pkg_config () {

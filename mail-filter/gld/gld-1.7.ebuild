@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7.ebuild,v 1.2 2006/11/23 15:53:18 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7.ebuild,v 1.3 2007/03/18 04:20:03 genone Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -48,10 +48,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please read /usr/share/doc/${PF}/README.gz for details on how to setup"
-	einfo "gld."
-	einfo
-	einfo "The sql files have been installed to /usr/share/${PN}/sql."
-	einfo
+	elog
+	elog "Please read /usr/share/doc/${PF}/README.gz for details on how to setup"
+	elog "gld."
+	elog
+	elog "The sql files have been installed to /usr/share/${PN}/sql."
+	elog
 }

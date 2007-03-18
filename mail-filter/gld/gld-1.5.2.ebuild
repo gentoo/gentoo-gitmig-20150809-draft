@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.2.ebuild,v 1.5 2006/11/23 15:53:19 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.2.ebuild,v 1.6 2007/03/18 04:20:03 genone Exp $
 
 inherit eutils
 
@@ -57,9 +57,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Please read /usr/share/doc/${PF}/README.gz for details on how to setup"
-	einfo "gld."
-	echo
-	einfo "The tables.*sql files are located at /usr/share/${PN}/sql."
+	elog "Please read /usr/share/doc/${PF}/README.gz for details on how to setup"
+	elog "gld."
+	elog
+	elog "The tables.*sql files are located at /usr/share/${PN}/sql."
 	echo
 }
