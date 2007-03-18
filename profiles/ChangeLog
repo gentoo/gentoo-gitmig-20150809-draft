@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.219 2007/03/18 15:41:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.220 2007/03/18 17:37:46 beandog Exp $
+
+  18 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  Add more mplayer use flags
 
   18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add net-im/aim-transport to p.mask for removal by treecleaners too
