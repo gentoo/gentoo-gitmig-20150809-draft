@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.10 2007/01/11 14:11:44 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.11 2007/03/18 00:47:22 matsuu Exp $
+
+*kanatest-0.4.1 (18 Mar 2007)
+
+  18 Mar 2007; MATSUU Takuto <matsuu@gentoo.org> +kanatest-0.4.1.ebuild:
+  Version bumped, bug #161534.
 
 *kanatest-0.4.0 (11 Jan 2007)
 
