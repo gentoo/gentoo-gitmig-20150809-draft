@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.8 2005/10/24 11:45:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.9 2007/03/18 06:07:51 genone Exp $
 
 IUSE="ssl"
 
@@ -275,10 +275,10 @@ rootmailfixup() {
 	# so you can check mail as root easily
 	local TMPCMD="ln -sf /var/qmail/alias/.maildir/ ${ROOT}/root/.maildir"
 	if [ -d "${ROOT}/root/.maildir" ] && [ ! -L "${ROOT}/root/.maildir" ] ; then
-		einfo "Previously the qmail ebuilds created /root/.maildir/ but not"
-		einfo "mail was every delivered there. If the directory does not"
-		einfo "contain any mail, please delete it and run:"
-		einfo "${TMPCMD}"
+		elog "Previously the qmail ebuilds created /root/.maildir/ but not"
+		elog "mail was every delivered there. If the directory does not"
+		elog "contain any mail, please delete it and run:"
+		elog "${TMPCMD}"
 	else
 		${TMPCMD}
 	fi
@@ -314,22 +314,20 @@ pkg_postinst() {
 	fi
 
 
-	einfo "Please do not forget to run, the following syntax :"
-	einfo "emerge --config =${PF} "
-	einfo "This will setup qmail to run out-of-the-box on your system including SSL. "
-	echo
-	einfo "To start qmail at boot you have to enable the /etc/init.d/svscan rc file "
-	einfo "and create the following links : "
-	einfo "ln -s /var/qmail/supervise/qmail-send /service/qmail-send "
-	einfo "ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd "
-	einfo "ln -s /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d "
-	echo
-	einfo "NOTE: Please check your /var/qmail/control/ldap* files to match your local "
-	einfo "ldap settings and add the qmail.schema along with \"allow bind_v2\" to your "
-	einfo "slapd.conf. For sample ldifs, please check "
-	einfo "/usr/share/doc/${PF}/samples.ldif.gz "
-
-
+	elog "Please do not forget to run, the following syntax :"
+	elog "emerge --config =${PF} "
+	elog "This will setup qmail to run out-of-the-box on your system including SSL. "
+	elog
+	elog "To start qmail at boot you have to enable the /etc/init.d/svscan rc file "
+	elog "and create the following links : "
+	elog "ln -s /var/qmail/supervise/qmail-send /service/qmail-send "
+	elog "ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd "
+	elog "ln -s /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d "
+	elog
+	elog "NOTE: Please check your /var/qmail/control/ldap* files to match your local "
+	elog "ldap settings and add the qmail.schema along with \"allow bind_v2\" to your "
+	elog "slapd.conf. For sample ldifs, please check "
+	elog "/usr/share/doc/${PF}/samples.ldif.gz "
 }
 
 pkg_config() {
