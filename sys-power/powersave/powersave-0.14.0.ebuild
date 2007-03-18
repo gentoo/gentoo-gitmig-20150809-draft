@@ -1,17 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.7 2007/02/03 12:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.8 2007/03/18 20:17:38 beandog Exp $
 
 inherit eutils libtool kde-functions autotools
 
 DESCRIPTION="Powersave Daemon"
 SRC_URI="mirror://sourceforge/powersave/${P}.tar.bz2"
 HOMEPAGE="http://powersave.sf.net/"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="pam_console doc"
-
 
 RDEPEND="|| ( dev-libs/dbus-glib ( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
 	>=sys-apps/hal-0.5.3
