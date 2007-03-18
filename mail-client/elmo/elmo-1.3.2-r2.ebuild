@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r2.ebuild,v 1.5 2005/10/03 12:09:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r2.ebuild,v 1.6 2007/03/18 01:48:32 genone Exp $
 
 inherit eutils
 
@@ -45,6 +45,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you compiled elmo with GCC 3.4 and experience run-time problems, please"
-	einfo "consider recompiling with GCC 3.3."
+	elog "If you compiled elmo with GCC 3.4 and experience run-time problems, please"
+	elog "consider recompiling with GCC 3.3."
 }

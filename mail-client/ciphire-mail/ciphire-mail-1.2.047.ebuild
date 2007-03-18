@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.2.047.ebuild,v 1.2 2006/09/27 03:30:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.2.047.ebuild,v 1.3 2007/03/18 01:44:33 genone Exp $
 
 inherit eutils qt3
 
@@ -46,12 +46,12 @@ pkg_setup() {
 	if ( [[ -d /usr/local/ciphire ]] || type -p ciphire-ctl &>/dev/null ) && \
 	   ! has_version / ciphire-mail ; then
 		echo
-		einfo "If you have previously had Ciphire Mail manually installed,"
-		einfo "please uninstall it first (from dir you installed it):"
-		echo
-		einfo "  # ./ciphire-uninstall system"
-		echo
-		einfo "and then remerge ciphire-mail."
+		eerror "If you have previously had Ciphire Mail manually installed,"
+		eerror "please uninstall it first (from dir you installed it):"
+		eerror
+		eerror "  # ./ciphire-uninstall system"
+		eerror
+		eerror "and then remerge ciphire-mail."
 		echo
 		die "Old version of ciphire-mail installed"
 	fi
@@ -131,16 +131,16 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "To setup Ciphire Mail for a user, please run as that user:"
-	echo
-	einfo "  ${LOC}/ciphire-setup"
-	echo
-	einfo "If you have previously had Ciphire Mail manually installed,"
-	einfo "please uninstall it first (from dir you installed it):"
-	echo
-	einfo "  # ./ciphire-uninstall system"
-	echo
-	einfo "and then remerge ciphire-mail."
+	elog "To setup Ciphire Mail for a user, please run as that user:"
+	elog
+	elog "  ${LOC}/ciphire-setup"
+	elog
+	elog "If you have previously had Ciphire Mail manually installed,"
+	elog "please uninstall it first (from dir you installed it):"
+	elog
+	elog "  # ./ciphire-uninstall system"
+	elog
+	elog "and then remerge ciphire-mail."
 	echo
 	if useq amd64 ; then
 		ewarn "Please note that the AMD64 support (ciphire-redir64.so) is"

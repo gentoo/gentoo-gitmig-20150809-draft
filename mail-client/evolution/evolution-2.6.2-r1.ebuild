@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.10 2006/11/21 01:40:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.11 2007/03/18 01:50:55 genone Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -192,9 +192,9 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	alternatives_auto_makesym "/usr/bin/evolution" "/usr/bin/evolution-[0-9].[0-9]"
-	einfo "To change the default browser if you are not using GNOME, do:"
-	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
-	einfo "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'mozilla %s'"
-	einfo ""
-	einfo "Replace 'mozilla %s' with which ever browser you use."
+	elog "To change the default browser if you are not using GNOME, do:"
+	elog "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
+	elog "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'mozilla %s'"
+	elog ""
+	elog "Replace 'mozilla %s' with which ever browser you use."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.11 2005/04/06 18:57:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.12 2007/03/18 01:47:13 genone Exp $
 
 inherit toolchain-funcs
 
@@ -65,10 +65,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "After configuring your IMAP/POP server for DRAC, and starting the"
-	einfo "dracd server (e.g. by running /etc/init.d/dracd start) you can"
-	einfo "set up your MTA to check for authenticated hosts in:"
-	einfo "   /var/lib/drac/drac"
-	einfo "Please see the MTA documentation for more details."
+	elog "After configuring your IMAP/POP server for DRAC, and starting the"
+	elog "dracd server (e.g. by running /etc/init.d/dracd start) you can"
+	elog "set up your MTA to check for authenticated hosts in:"
+	elog "   /var/lib/drac/drac"
+	elog "Please see the MTA documentation for more details."
 	echo
 }
