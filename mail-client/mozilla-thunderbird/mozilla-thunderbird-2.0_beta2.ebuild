@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.7 2007/03/08 21:50:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.8 2007/03/18 02:00:04 genone Exp $
 
 unset ALLOWED_FLAGS	# stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
@@ -77,7 +77,7 @@ linguas() {
 		fi
 		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
 	done
-	einfo "Selected language packs (first will be default): $linguas"
+	elog "Selected language packs (first will be default): $linguas"
 }
 
 pkg_setup() {
@@ -172,10 +172,10 @@ pkg_preinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	echo ""
-	einfo "Removing old installs though some really ugly code.  It potentially"
-	einfo "eliminates any problems during the install, however suggestions to"
-	einfo "replace this are highly welcome.  Send comments and suggestions to"
-	einfo "mozilla@gentoo.org"
+	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "eliminates any problems during the install, however suggestions to"
+	elog "replace this are highly welcome.  Send comments and suggestions to"
+	elog "mozilla@gentoo.org"
 	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
 	echo ""
 }

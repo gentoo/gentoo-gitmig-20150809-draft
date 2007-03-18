@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.12 2007/02/21 15:17:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.13 2007/03/18 02:00:04 genone Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -179,10 +179,10 @@ pkg_preinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	echo ""
-	einfo "Removing old installs though some really ugly code.  It potentially"
-	einfo "eliminates any problems during the install, however suggestions to"
-	einfo "replace this are highly welcome.  Send comments and suggestions to"
-	einfo "mozilla@gentoo.org"
+	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "eliminates any problems during the install, however suggestions to"
+	elog "replace this are highly welcome.  Send comments and suggestions to"
+	elog "mozilla@gentoo.org"
 	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
 	echo ""
 }
