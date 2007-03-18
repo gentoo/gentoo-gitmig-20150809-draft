@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc3.ebuild,v 1.1 2007/03/17 20:37:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc3.ebuild,v 1.2 2007/03/18 01:19:54 betelgeuse Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -28,7 +28,7 @@ alsa_cards_emu10k1 alsa_cards_emu10k1x alsa_cards_ice1712
 alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr
 ${ECHOAUDIO_CARDS}"
 
-RDEPEND=">=media-libs/alsa-lib-1.0.0
+RDEPEND=">=media-libs/alsa-lib-1.0.14_rc3
 	fltk? ( =x11-libs/fltk-1.1* )
 	gtk? ( =x11-libs/gtk+-2* )"
 DEPEND="${RDEPEND}"

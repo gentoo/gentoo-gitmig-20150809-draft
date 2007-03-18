@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.139 2007/03/17 20:37:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.140 2007/03/18 01:19:54 betelgeuse Exp $
+
+  18 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  alsa-tools-1.0.14_rc3.ebuild:
+  Require >=media-libs/alsa-lib-1.0.14_rc3 because emu10k1 stuff does not
+  build with rc2 and there might be other cases like this.
 
 *alsa-tools-1.0.14_rc3 (17 Mar 2007)
 
