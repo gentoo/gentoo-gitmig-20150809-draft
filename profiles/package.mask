@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6988 2007/03/18 10:23:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6989 2007/03/18 14:57:53 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -34,7 +34,7 @@ xfce-base/xffm
 
 # Raúl Porcel <armin76@gentoo.org>
 # Mask snapshots
->=net-p2p/amule-2.2.0
+=net-p2p/amule-2.2.0_pre*
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (15 Mar 2007)
 # Mask modular libraries for testing.
