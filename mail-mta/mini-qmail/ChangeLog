@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/mini-qmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.7 2007/02/09 03:23:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.8 2007/03/18 05:35:32 genone Exp $
+
+  18 Mar 2007; Marius Mauch <genone@gentoo.org> mini-qmail-1.05.ebuild,
+  mini-qmail-1.05-r1.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.7 2006/01/10 01:56:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.8 2007/03/18 05:35:32 genone Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -86,11 +86,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "In order for mini-qmail to work, you need to setup"
-	einfo "the QMQP server information."
-	einfo
-	einfo "You can setup the values in /var/mini-qmail/control yourself,"
-	einfo "or use the utility /var/mini-qmail/bin/config-mini"
-	einfo "To find out what values to put in what files, see the install"
-	einfo "section of http://cr.yp.to/qmail/mini.html"
+	elog "In order for mini-qmail to work, you need to setup"
+	elog "the QMQP server information."
+	elog
+	elog "You can setup the values in /var/mini-qmail/control yourself,"
+	elog "or use the utility /var/mini-qmail/bin/config-mini"
+	elog "To find out what values to put in what files, see the install"
+	elog "section of http://cr.yp.to/qmail/mini.html"
 }
