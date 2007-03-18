@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.51 2007/03/15 00:35:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.52 2007/03/18 13:17:35 opfer Exp $
+
+  18 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  capi4k-utils-20050718-r3.ebuild:
+  stable x86, security bug 170870
 
 *capi4k-utils-20050718-r3 (15 Mar 2007)
 
