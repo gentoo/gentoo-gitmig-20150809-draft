@@ -1,10 +1,17 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.82 2007/03/18 05:28:12 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.83 2007/03/18 20:35:59 peitolm Exp $
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> exim-4.60-r1.ebuild,
   exim-4.61.ebuild, exim-4.62.ebuild, exim-4.63.ebuild:
   Replacing einfo with elog
+
+*exim-4.66 (17 Mar 2007)
+
+  17 Mar 2007; Colin Morey <peitolm@gentoo.org>
+  +files/exim-4.66-openssl.patch, +exim-4.66.ebuild:
+  Version bump, also adding dovecot-sasl suport and openssl patch from
+  http://bugs.gentoo.org/show_bug.cgi?id=161572
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
