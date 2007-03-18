@@ -2,7 +2,6 @@
 
 3dfx
 acpi
-afs
 avi
 lm_sensors
 rar

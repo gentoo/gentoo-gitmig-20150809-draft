@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.9 2007/02/12 16:16:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.10 2007/03/18 13:20:06 mabi Exp $
+
+  18 Mar 2007; Matti Bickel <mabi@gentoo.org> use.mask:
+  afs usemask removed
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   dev/ppc32/2007.0/make.defaults,
