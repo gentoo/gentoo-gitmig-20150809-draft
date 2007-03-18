@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.16 2007/03/17 19:03:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.17 2007/03/18 08:58:25 drac Exp $
+
+*xfce4-sensors-0.10.0-r1 (18 Mar 2007)
+
+  18 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-sensors-0.10.0.ebuild, +xfce4-sensors-0.10.0-r1.ebuild:
+  Add new USE flags debug and hddtemp.
 
   17 Mar 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-sensors-0.10.0.ebuild:
