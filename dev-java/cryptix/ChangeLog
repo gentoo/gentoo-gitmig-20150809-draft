@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/cryptix
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/ChangeLog,v 1.6 2007/03/17 20:45:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/ChangeLog,v 1.7 2007/03/18 14:34:46 betelgeuse Exp $
 
   17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   cryptix-3.2.0-r1.ebuild:
-  Use java-pkg_javadoc.
+  Use java-pkg_dojavadoc.
 
 *cryptix-3.2.0-r1 (17 Mar 2007)
 
