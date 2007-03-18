@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.5.ebuild,v 1.16 2006/12/11 11:05:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.5.ebuild,v 1.17 2007/03/18 01:41:02 genone Exp $
 
 inherit kde
 
@@ -30,10 +30,10 @@ src_unpack() {
 		ewarn "contains languages not supported by kde-base/kde-i18n."
 		ewarn "Because of that, kde-i18n will not add any kind of language"
 		ewarn "support."
-		echo
-		einfo "If you didn't intend this to happen, the available language"
-		einfo "codes are:"
-		echo "${LANGS}"
+		ewarn
+		ewarn "If you didn't intend this to happen, the available language"
+		ewarn "codes are:"
+		ewarn "${LANGS}"
 		echo
 	fi
 
