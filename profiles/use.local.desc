@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2674 2007/03/18 20:29:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2675 2007/03/18 21:31:03 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1917,6 +1917,7 @@ x11-misc/openclipart:gzip - Compresses clip art using gzip
 x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
+x11-misc/xscreensaver:branding - Enable Gentoo branded Lock Screen window
 x11-misc/xscreensaver:insecure-savers - Installs some screensaver modules as setuid root to enable cooler effects
 x11-misc/xscreensaver:new-login - Enables users to create new logins even if the X screen is locked by someone else
 x11-plugins/gkrellm-plugins:audacious - Install the audacious plugin
