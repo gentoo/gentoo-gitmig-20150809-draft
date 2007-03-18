@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2673 2007/03/18 19:07:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2674 2007/03/18 20:29:17 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1085,7 +1085,7 @@ media-video/mplayer:real - Adds real video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock.  The alternative is software emulation of rtc
 media-video/mplayer:s3virge - Enable s3fb (S3 ViRGE) video output
 media-video/mplayer:sortsub - Subtitle sorting
-media-video/mplayer:ssa_ass - Internal SSA/ASS subtitle support
+media-video/mplayer:srt - Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
 media-video/mplayer:tdfx - Enable tdfx_vid video output
 media-video/mplayer:tga - Enables tga output support
 media-video/mplayer:tivo - Enables TiVo vstream client support
