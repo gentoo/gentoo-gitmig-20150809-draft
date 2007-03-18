@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2-r1.ebuild,v 1.11 2007/01/04 19:17:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2-r1.ebuild,v 1.12 2007/03/18 04:28:25 genone Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -47,7 +47,7 @@ src_unpack() {
 
 	# Prefer gdbm over berkdb
 	if use gdbm ; then
-		use berkdb && einfo "Both gdbm and berkdb selected. Using gdbm."
+		use berkdb && elog "Both gdbm and berkdb selected. Using gdbm."
 	elif use berkdb ; then
 			epatch "${FILESDIR}"/${PN}-1.8.0-db4-r1.patch
 	fi
