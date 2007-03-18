@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.10 2007/03/10 23:09:53 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.11 2007/03/18 03:14:58 chtekk Exp $
+
+*suhosin-0.9.18 (18 Mar 2007)
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> +suhosin-0.9.18.ebuild:
+  Version bump, fix session module integration.
 
   10 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> suhosin-0.9.17.ebuild:
   Stable on alpha wrt security #153911
