@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.4 2007/03/15 12:12:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.5 2007/03/19 21:32:12 uberlord Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -107,14 +107,14 @@ unload_modules_recursive() {
 unload_modules_26() {
 	# First of all, remove the snd module and all the modules depending
 	# on it, this should remove already most of ALSA modules.
-	unload_modules_recursive snd
+	lsmod | grep -q "^snd[[:space:]]" && unload_modules_recursive snd
 
 	# Then find the remaining ones, and handle them too.
 	for module in $(lsmod | sed -n -e 's/^\(snd[^ ]*\) .*/\1/p'); do
 		unload_modules_recursive "${module}"
 	done
 
-	lsmod | grep -vq '^snd'
+	lsmod | grep -vq "^snd"
 }
 
 terminate() {
