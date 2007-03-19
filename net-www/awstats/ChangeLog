@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.43 2007/03/12 00:13:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.44 2007/03/19 02:09:38 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove ka0ttic from metadata.xml due to retirement.
 
   12 Mar 2007; Renat Lumpau <rl03@gentoo.org> files/digest-awstats-6.6,
   Manifest:
