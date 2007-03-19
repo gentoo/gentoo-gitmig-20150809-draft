@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20070227.ebuild,v 1.1 2007/03/19 06:21:26 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20070227.ebuild,v 1.2 2007/03/19 14:14:38 armin76 Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_PV="${PV/1.1./1.1-}"
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="tool to display dialog boxes from a shell"
 HOMEPAGE="http://invisible-island.net/dialog/dialog.html"
-SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}-${MY_PV}.tgz"
+SRC_URI="ftp://invisible-island.net/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
