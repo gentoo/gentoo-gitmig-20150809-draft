@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ognl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.6 2006/09/11 16:39:50 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.7 2007/03/19 02:33:54 wltjr Exp $
+
+*ognl-2.6.9-r1 (19 Mar 2007)
+
+  19 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +ognl-2.6.9-r1.ebuild:
+  Relaxed dep on javassist to reflect it's new slot. Package potentially will
+  be package.masked and removed from tree.
 
 *ognl-2.6.9 (11 Sep 2006)
 
