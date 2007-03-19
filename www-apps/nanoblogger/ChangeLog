@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/nanoblogger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.22 2007/03/17 18:30:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.23 2007/03/19 01:07:31 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove ka0ttic from metadata.xml due to retirement.
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> nanoblogger-3.2.3.ebuild:
   amd64 stable
