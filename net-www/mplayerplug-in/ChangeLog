@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.84 2007/03/13 13:39:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.85 2007/03/19 05:39:39 josejx Exp $
+
+  19 Mar 2007; Joseph Jezak <josejx@gentoo.org>
+  +files/mplayerplug-in-3.31-seamonkey.patch,
+  +files/mplayerplug-in-3.35-seamonkey.patch, mplayerplug-in-3.31-r1.ebuild,
+  mplayerplug-in-3.35.ebuild:
+  Added patch for seamonkey (same as firefox patch), thanks to Dustin Surawicz
+  in bug #171010 for the patch.
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> mplayerplug-in-3.35.ebuild:
   x86 stable

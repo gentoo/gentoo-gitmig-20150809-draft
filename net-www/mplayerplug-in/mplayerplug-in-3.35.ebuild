@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.35.ebuild,v 1.4 2007/03/13 13:39:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.35.ebuild,v 1.5 2007/03/19 05:39:39 josejx Exp $
 
 inherit eutils multilib nsplugins
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-gcc4.patch
 	epatch ${FILESDIR}/${P}-X.patch
 	epatch ${FILESDIR}/${P}-firefox.patch
+	epatch ${FILESDIR}/${P}-seamonkey.patch
 }
 
 src_compile() {
