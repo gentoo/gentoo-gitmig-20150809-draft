@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gartoon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.5 2006/10/31 13:32:04 gothgirl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.6 2007/03/19 03:44:18 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove gothgirl from metadata.xml due to retirement.
 
 *gartoon-0.5-r1 (31 Oct 2006)
 
