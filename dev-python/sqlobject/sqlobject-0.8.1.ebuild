@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.8.1.ebuild,v 1.1 2007/03/19 19:49:59 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.8.1.ebuild,v 1.2 2007/03/19 20:39:11 lucass Exp $
 
 NEED_PYTHON=2.2
 
@@ -28,7 +28,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e '/use_setuptools/d' setup.py
+	sed -i \
+		-e '/use_setuptools/d' \
+		-e '/install_requires=/d' \
+		-e '/extras_require/, /},/d' \
+		setup.py || die "sed failed"
 }
 
 src_install() {
