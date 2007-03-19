@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-1.0.2.ebuild,v 1.1 2007/02/11 18:08:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-1.0.2.ebuild,v 1.2 2007/03/19 19:36:34 nyhm Exp $
 
 inherit python distutils games
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="nls"
 
-DEPEND="dev-python/pygtkglext
+DEPEND="!>=gnome-extra/gnome-games-2.18
+	dev-python/pygtkglext
 	dev-python/imaging"
 
 DOCS="BUGS"
