@@ -6,8 +6,4 @@
   <email>web-apps@gentoo.org</email>
   <name>Gentoo Web Application Packages Maintainers</name>
 </maintainer>
-<maintainer>
-  <email>scox@gentoo.org</email>
-  <name>Andrea Luzzardi></name>
-</maintainer>
 </pkgmetadata>
