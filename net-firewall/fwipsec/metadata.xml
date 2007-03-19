@@ -3,11 +3,6 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>pfeifer@gentoo.org</email>
-  <name>Jay Pfeifer</name>
-  <description>Upstream</description>
-</maintainer>
-<maintainer>
   <email>seemant@gentoo.org</email>
   <name>Seemant Kulleen</name>
   <description>Jay's Assistant</description>
