@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>mysql</herd>
-	<maintainer>
-		<email>vivo@gentoo.org</email>
-	</maintainer>
 	<longdescription>innotop - A text-mode MySQL and InnoDB monitor like mytop,
 but with many more features</longdescription>
 </pkgmetadata>

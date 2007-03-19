@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.24 2007/01/04 14:35:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.25 2007/03/19 03:41:12 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove vivo from metadata.xml due to retirement.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   mysqlnavigator-1.4.2.ebuild:

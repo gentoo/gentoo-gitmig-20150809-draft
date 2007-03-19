@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/innotop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/innotop/ChangeLog,v 1.3 2007/03/04 16:11:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/innotop/ChangeLog,v 1.4 2007/03/19 03:43:12 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove vivo from metadata.xml due to retirement.
 
 *innotop-1.4.0 (04 Mar 2007)
 
