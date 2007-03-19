@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/quodlibet-reset
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-reset/ChangeLog,v 1.5 2006/10/07 18:48:06 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-reset/ChangeLog,v 1.6 2007/03/19 12:15:48 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove tcort from metadata.xml due to retirement.
 
   07 Oct 2006; Thomas Cort <tcort@gentoo.org> -quodlibet-reset-3065.ebuild:
   Fix manifest wrt Bug #150400.

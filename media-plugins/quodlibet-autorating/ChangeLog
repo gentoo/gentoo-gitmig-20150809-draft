@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/quodlibet-autorating
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-autorating/ChangeLog,v 1.1 2006/06/12 02:24:50 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-autorating/ChangeLog,v 1.2 2007/03/19 12:21:19 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove tcort from metadata.xml due to retirement.
 
 *quodlibet-autorating-3316 (12 Jun 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/quodlibet-html
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-html/ChangeLog,v 1.8 2006/10/07 18:46:43 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-html/ChangeLog,v 1.9 2007/03/19 12:20:33 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove tcort from metadata.xml due to retirement.
 
   07 Oct 2006; Thomas Cort <tcort@gentoo.org> -quodlibet-html-3133.ebuild,
   -quodlibet-html-3550.ebuild:
