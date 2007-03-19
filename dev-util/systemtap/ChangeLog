@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.3 2007/01/02 15:19:47 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.4 2007/03/19 00:35:06 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove zx from metadata.xml due to retirement.
 
   02 Jan 2007; Elfyn McBratney <beu@gentoo.org> systemtap-20061111.ebuild:
   This snapshot requires >=elfutils-0.122; adjust DEPEND appropriately.

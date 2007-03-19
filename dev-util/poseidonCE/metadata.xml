@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>java</herd>
-<maintainer>
- <email>zx@gentoo.org</email>
- <name>Chris Aniszczyk</name>
-</maintainer>
 <longdescription>
 The Community Edition is fully usable for modeling UML, and you may use it for any purpose, commercial or not, for any duration and in any number. It contains all UML diagrams and all implemented diagram elements. You can create, save, and load projects, browse existing models, exchange models, generate Java code, export your diagrams to various formats and much more. You may freely distribute it, put it on local or Internet servers, and distribute it on CDs or DVDs. Gentleware does not provide support for the Community Edition.
 
