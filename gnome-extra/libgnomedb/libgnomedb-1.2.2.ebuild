@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.12 2006/08/17 18:26:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.13 2007/03/19 21:32:09 dang Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="doc static"
+IUSE="doc"
 
 RDEPEND=">=gnome-extra/libgda-1.1.99
 	>=x11-libs/gtk+-2.4
@@ -32,8 +32,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS"
 
 # --disable-gnome breaks compilation, hence 'gnome' USE flag is not a good idea
-G2CONF="${G2CONF} $(use_enable static)"
-
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix ${S}/doc/Makefile.in

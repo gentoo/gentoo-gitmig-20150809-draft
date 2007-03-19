@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.52 2007/02/13 22:13:30 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.53 2007/03/19 21:32:09 dang Exp $
+
+  19 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> libgnomedb-1.2.2.ebuild:
+  Remove static use flag; bug #165528
 
 *libgnomedb-2.99.5 (13 Feb 2007)
 
