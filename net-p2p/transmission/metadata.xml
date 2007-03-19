@@ -6,8 +6,4 @@
 	<email>compnerd@gentoo.org</email>
 	<name>Saleem Abdulrasool</name>
 </maintainer>
-<maintainer>
-  <email>squinky86@gentoo.org</email>
-  <name>Jon Hood</name>
-</maintainer>
 </pkgmetadata>
