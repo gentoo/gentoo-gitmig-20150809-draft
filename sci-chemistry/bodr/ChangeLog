@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/bodr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.1 2007/03/19 17:43:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.2 2007/03/19 20:06:46 zmedico Exp $
+
+  19 Mar 2007; Zac Medico <zmedico@gentoo.org> ChangeLog:
+  Fix broken Manifest due to commit without repoman.
 
 *bodr-6 (19 Mar 2007)
 
