@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>benchmarks</herd>
-	<maintainer>
-		<email>ka0ttic@gentoo.org</email>
-		<name>Aaron Walker</name>
-	</maintainer>
 	<longdescription lang="en">Httperf is a tool for measuring web server
 		performance. It provides a flexible facility for generating various HTTP
 		workloads and for measuring server performance. The focus of httperf is
