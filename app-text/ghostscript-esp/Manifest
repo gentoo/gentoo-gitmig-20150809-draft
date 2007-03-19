@@ -2,6 +2,10 @@ AUX ghostscript-7.05.6.man.patch 1231 RMD160 8da05491113dfcca77da4e37c01651ff54c
 MD5 fd34b2b7a029f19eab4ba3f69afe295e files/ghostscript-7.05.6.man.patch 1231
 RMD160 8da05491113dfcca77da4e37c01651ff54cc86e0 files/ghostscript-7.05.6.man.patch 1231
 SHA256 4873defc3d4bee0db4cb6b9e34e481f0de5914aef9a4b7cbf58677b6bfb9d528 files/ghostscript-7.05.6.man.patch 1231
+AUX ghostscript-esp-8.15.1-fPIC.patch 330 RMD160 7b39a1de75c0515a1be6caaa0c0d2dd70ff7ad44 SHA1 f92d40eeb177e8593095168bf29c7ff1a6e97633 SHA256 9672b52472a36c8027bbcb93b3eb9a8acbab32c58365896a9247aa23e198c64a
+MD5 44ec74ee3ae85aff060d1f3d95c5234b files/ghostscript-esp-8.15.1-fPIC.patch 330
+RMD160 7b39a1de75c0515a1be6caaa0c0d2dd70ff7ad44 files/ghostscript-esp-8.15.1-fPIC.patch 330
+SHA256 9672b52472a36c8027bbcb93b3eb9a8acbab32c58365896a9247aa23e198c64a files/ghostscript-esp-8.15.1-fPIC.patch 330
 AUX ghostscript-esp-8.15.2-FAPIcidfmap.cjk 2216 RMD160 4160694a9e42e286c27ef048be4b160c366a675f SHA1 02afd67e83c2ec4ab185fa6ad1d4f4b304e40be1 SHA256 dfffc1088d3ada1d943ee11ac0ba3c3009c3a3d4082daa9a3e180c1b2aebdb12
 MD5 c87a75b63531eb93d95cfbd878179f98 files/ghostscript-esp-8.15.2-FAPIcidfmap.cjk 2216
 RMD160 4160694a9e42e286c27ef048be4b160c366a675f files/ghostscript-esp-8.15.2-FAPIcidfmap.cjk 2216
@@ -10,10 +14,6 @@ AUX ghostscript-esp-8.15.2-cidfmap.cjk 1719 RMD160 5eefdefe4f0d1acad18a212c7d7d5
 MD5 e155c2977c61ccd043582e8d54b364f3 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
 RMD160 5eefdefe4f0d1acad18a212c7d7d5500725cd2f4 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
 SHA256 de206ce949bcd5590abda3973010e4b0d0983b0ecc483180395d83e52e233406 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
-AUX gs-8.15.1destdir.patch 13364 RMD160 abc921b811f268540a33703bb25036753b6cbd48 SHA1 7b6e9ef164b9490ba1646ab37c06e0c93f1fba24 SHA256 cff8a27d340a71cb78c5602f4fa219b35a0456187a2244385cb9e183ba1080a2
-MD5 4232a57145c2eafd1d84eabd674190f9 files/gs-8.15.1destdir.patch 13364
-RMD160 abc921b811f268540a33703bb25036753b6cbd48 files/gs-8.15.1destdir.patch 13364
-SHA256 cff8a27d340a71cb78c5602f4fa219b35a0456187a2244385cb9e183ba1080a2 files/gs-8.15.1destdir.patch 13364
 AUX gs-fix-gc.patch 5627 RMD160 ac6aee1b2e861b1b09f6fa8648f62ad91d016571 SHA1 4419a2dc6cb253d6013f4ea54ada605e44eb39fe SHA256 ea02e3f1d06757b54608c0bc74918f61b4a87831f901735c14f6e53d47edfc06
 MD5 8c6a3d7e8897b4297ef853dbd89e408b files/gs-fix-gc.patch 5627
 RMD160 ac6aee1b2e861b1b09f6fa8648f62ad91d016571 files/gs-fix-gc.patch 5627
