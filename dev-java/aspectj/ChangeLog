@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.20 2007/02/28 09:08:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.21 2007/03/19 11:34:37 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove mkennedy from metadata.xml due to retirement.
 
   28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -aspectj-1.1.1.ebuild,
   -aspectj-1.2-r1.ebuild:
