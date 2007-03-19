@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-2.2.ebuild,v 1.4 2007/03/15 17:57:45 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-2.2.ebuild,v 1.5 2007/03/19 22:05:15 welp Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,7 +14,7 @@ SRC_URI="http://www.rahul.net/dholmes/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 S="${WORKDIR}/${PN}-dnh${PV}"
 
