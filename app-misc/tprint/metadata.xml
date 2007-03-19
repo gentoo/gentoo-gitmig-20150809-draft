@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>pfeifer@gentoo.org</email>
-  <name>Jay Pfeifer</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>The Transparent Print utility program for Linux. Provides an easy way to transparently print to serial terminals that have printers attached.</longdescription>
 </pkgmetadata>
