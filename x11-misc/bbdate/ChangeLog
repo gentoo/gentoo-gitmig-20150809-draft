@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbdate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.15 2007/03/19 01:25:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.16 2007/03/19 01:27:59 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove ka0ttic from metadata.xml due to retirement.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> ChangeLog:
   Remove ka0ttic from metadata.xml due to retirement.
