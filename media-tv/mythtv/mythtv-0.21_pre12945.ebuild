@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre12945.ebuild,v 1.2 2007/03/19 04:24:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre12945.ebuild,v 1.3 2007/03/19 07:30:29 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec autostart backendonly crciprec debug dbox2 dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec autostart debug dbox2 dts dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -85,14 +85,6 @@ pkg_setup() {
 		rip=1
 	fi
 
-	if use autostart && use backendonly; then
-		echo
-		eerror "You can't have USE=autostart while having USE=backendonly."
-		eerror "USE=autostart is for mythfrontend"
-		echo
-		rip=1
-	fi
-
 	[[ $rip == 1 ]] && die "Please fix the above issues, before continuing."
 
 	echo
@@ -110,13 +102,12 @@ src_compile() {
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use dts || myconf="${myconf} --disable-dts"
-	use freebox || myconf="${myconf} --disable-freebox"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
-	use crciprec || myconf="${myconf} --disable-crciprec"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && myconf="${myconf} --enable-xvmc"
 	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
+	use xvmc && ! use video_cards_nvidia && myconf="${myconf} --disable-xvmc-opengl"
 	use perl && myconf="${myconf} --with-bindings=perl"
 	myconf="${myconf}
 		--disable-audio-arts
@@ -126,6 +117,7 @@ src_compile() {
 		--dvb-path=/usr/include
 		$(use_enable opengl opengl-vsync)
 		$(use_enable ieee1394 firewire)
+		$(use_enable iptv)
 		--enable-xrandr
 		--enable-xv
 		--disable-directfb
@@ -166,26 +158,6 @@ src_compile() {
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
-	if use frontendonly; then
-		##Backend Removal
-		ewarn
-		ewarn "You are using the experimental feature for only installing the frontend."
-		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
-		ewarn "If this breaks, you own both pieces."
-		ewarn
-		myconf="${myconf} --disable-backend"
-	fi
-
-	if use backendonly; then
-		##Frontend Removal
-		ewarn
-		ewarn "You are using the experimental feature for only installing the backend."
-		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
-		ewarn "If this breaks, you own both pieces."
-		ewarn
-		myconf="${myconf} --disable-frontend"
-	fi
-
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	CFLAGS=""
 	CXXFLAGS=""
@@ -204,17 +176,14 @@ src_install() {
 		test -e "${doc}" && dodoc ${doc}
 	done
 
-	if ! use frontendonly; then
-		insinto /usr/share/mythtv/database
-		doins database/*
+	insinto /usr/share/mythtv/database
+	doins database/*
 
-		exeinto /usr/share/mythtv
-		doexe "${FILESDIR}/mythfilldatabase.cron"
+	exeinto /usr/share/mythtv
+	doexe "${FILESDIR}/mythfilldatabase.cron"
 
-		newinitd ${FILESDIR}/mythbackend-0.18.2.rc mythbackend
-		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
-	fi
-
+	newinitd ${FILESDIR}/mythbackend-0.18.2.rc mythbackend
+	newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
 
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
@@ -233,17 +202,15 @@ src_install() {
 	insinto /usr/share/mythtv/configfiles
 	doins configfiles/*
 
-	if ! use backendonly; then
-		dobin "${FILESDIR}"/runmythfe
+	dobin "${FILESDIR}"/runmythfe
 
-		if use autostart; then
-			dodir /etc/env.d/
-			echo 'CONFIG_PROTECT="/home/mythtv/"' > ${D}/etc/env.d/95mythtv
+	if use autostart; then
+		dodir /etc/env.d/
+		echo 'CONFIG_PROTECT="/home/mythtv/"' > ${D}/etc/env.d/95mythtv
 
-			insinto /home/mythtv
-			newins "${FILESDIR}"/bash_profile .bash_profile
-			newins "${FILESDIR}"/xinitrc .xinitrc
-		fi
+		insinto /home/mythtv
+		newins "${FILESDIR}"/bash_profile .bash_profile
+		newins "${FILESDIR}"/xinitrc .xinitrc
 	fi
 }
 
@@ -255,21 +222,17 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if ! use backendonly; then
-		echo
-		elog "Want mythfrontend to start automatically?"
-		elog "Set USE=autostart. Details can be found at:"
-		elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
-	fi
+	echo
+	elog "Want mythfrontend to start automatically?"
+	elog "Set USE=autostart. Details can be found at:"
+	elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
 
-	if ! use frontendonly; then
-		echo
-		elog "To always have MythBackend running and available run the following:"
-		elog "rc-update add mythbackend default"
-		echo
-		ewarn "Your recordings folder must be owned by the user 'mythtv' now"
-		ewarn "chown -R mythtv /path/to/store"
-	fi
+	echo
+	elog "To always have MythBackend running and available run the following:"
+	elog "rc-update add mythbackend default"
+	echo
+	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
+	ewarn "chown -R mythtv /path/to/store"
 
 	if use autostart; then
 		echo
