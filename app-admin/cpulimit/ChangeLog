@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cpulimit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/ChangeLog,v 1.4 2007/01/01 22:03:06 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/ChangeLog,v 1.5 2007/03/19 12:25:07 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove tcort from metadata.xml due to retirement.
 
   01 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   cpulimit-1.1.ebuild:
