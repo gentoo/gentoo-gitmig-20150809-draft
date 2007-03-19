@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.89 2007/02/23 10:52:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.90 2007/03/19 03:15:14 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove flameeyes from metadata.xml due to retirement.
 
   23 Feb 2007; Timothy Redaelli <drizzt@gentoo.org>
   -libtorrent-0.10.4.ebuild:
