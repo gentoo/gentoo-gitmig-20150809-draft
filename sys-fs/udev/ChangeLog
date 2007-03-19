@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.287 2007/03/17 12:20:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.288 2007/03/19 18:49:00 zzam Exp $
+
+*udev-106-r5 (19 Mar 2007)
+
+  19 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-106-r5, +files/64-device-mapper.rules,
+  +files/05-udev-early.rules-106-r5,
+  +files/udev-106-remove-dasd-rules.patch, +files/95-udev-late.rules,
+  +udev-106-r5.ebuild:
+  Updated early-rules for scsi-wait, like upstream. Created
+  95-udev-late.rules, which now contains 95-net.rules and the udevmonitor and
+  eventrecorder-rules. Removed dasd_id tool, that is now in s390-tools.
+  Removed old, broken seq_node.sh. Moved all device-mapper stuff to own file,
+  export name of dm-device in ID_DM_NAME. No longer call legacy /etc/dev.d/
+  stuff.
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> udev-104-r12.ebuild:
   amd64 stable, bug 159871
