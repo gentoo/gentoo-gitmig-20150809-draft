@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes/xfce4-eyes-4.4.0.ebuild,v 1.9 2007/03/18 21:28:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes/xfce4-eyes-4.4.0.ebuild,v 1.10 2007/03/19 00:03:41 jer Exp $
 
 inherit xfce44
 
@@ -8,7 +8,7 @@ xfce44
 
 DESCRIPTION="panel plugin that adds eyes which watch your every step"
 
-KEYWORDS="amd64 arm ~ppc ~ppc64 x86"
+KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
 IUSE="debug"
 RESTRICT="test"
 
