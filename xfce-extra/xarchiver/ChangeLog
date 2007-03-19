@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.24 2007/03/10 10:29:13 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.25 2007/03/19 19:21:49 drac Exp $
+
+  19 Mar 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  Add longdescription for bug 171470.
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xarchiver-0.4.6.ebuild:
   Keyworded on amd64 wrt bug 169987
