@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.0.ebuild,v 1.3 2007/02/01 15:14:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.0.ebuild,v 1.4 2007/03/19 14:49:23 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -36,10 +36,10 @@ src_unpack(){
 	kde_src_unpack
 
 	local MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
-	einfo "Enabling translations for: ${MAKE_PO}"
+	elog "Enabling translations for: ${MAKE_PO}"
 
 	local MAKE_DOC_IP=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
-	einfo "Enabling documentation for: ${MAKE_DOC_IP}"
+	elog "Enabling documentation for: ${MAKE_DOC_IP}"
 
 	local MAKE_DOC
 	for i in ${MAKE_DOC_IP} ; do MAKE_DOC="${MAKE_DOC} ${i}_digikamimageplugins" ; done
