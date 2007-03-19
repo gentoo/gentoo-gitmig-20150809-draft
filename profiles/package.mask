@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6996 2007/03/19 12:24:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6997 2007/03/19 18:48:03 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Matthias Schwarzott <zzam@gentoo.org> (19 Mar 2007)
+# Masked until at least 20 Mar 2007
+# To verify if /etc/dev.d/ is still used.
+=sys-fs/udev-106-r5
 
 # Raúl Porcel <armin76@gentoo.org> (19 Mar 2007)
 # Pending removal 18 May 2007, for treecleaners
