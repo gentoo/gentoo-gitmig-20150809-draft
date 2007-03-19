@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.15.0.ebuild,v 1.5 2007/03/19 05:04:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.15.0.ebuild,v 1.6 2007/03/19 15:50:47 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,7 +26,7 @@ LICENSE="NEWLIB LIBGLOSS GPL-2"
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 KEYWORDS="-* ~ppc64 ~ppc"
-IUSE="nls threads unicode multilib"
+IUSE="nls threads unicode"
 RESTRICT="strip"
 
 DEPEND=""
@@ -59,7 +59,6 @@ src_compile() {
 	econf \
 		$(use_enable unicode newlib-mb) \
 		$(use_enable nls) \
-		$(use_enable multilib) \
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
