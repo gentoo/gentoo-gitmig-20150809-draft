@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/IO-Reactor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.5 2007/03/05 19:44:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.6 2007/03/19 03:13:24 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove flameeyes from metadata.xml due to retirement.
 
   04 Mar 2007; Tom Gall <tgall@gentoo.org> IO-Reactor-0.0.6.ebuild:
   added ~ppc64
