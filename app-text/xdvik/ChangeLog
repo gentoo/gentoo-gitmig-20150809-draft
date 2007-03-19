@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.36 2007/03/13 00:18:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.37 2007/03/19 11:56:30 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove exg from metadata.xml due to retirement.
 
   13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Removing text-markup herd, leaving the cjk herd and others as maintainers.
