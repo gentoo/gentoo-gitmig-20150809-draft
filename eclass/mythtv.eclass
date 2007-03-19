@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv.eclass,v 1.4 2007/03/19 02:58:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv.eclass,v 1.5 2007/03/19 03:11:35 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -22,9 +22,13 @@ fi
 
 if [[ ${PN} = mythtv ]]; then
 	MY_PN="mythtv"
+elif [[ ${PN} = mythtv-themes ]]; then
+	MY_PN="myththemes"
 else
 	MY_PN="mythplugins"
 fi
+
+ESVN_REPO_URI="http://svn.mythtv.org/svn/trunk/${MY_PN}"
 
 HOMEPAGE="http://www.mythtv.org"
 LICENSE="GPL-2"
