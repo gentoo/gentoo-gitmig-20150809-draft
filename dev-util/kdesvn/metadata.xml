@@ -6,8 +6,4 @@
 		<email>george@gentoo.org</email>
 		<name>George Shapovalov</name>
 	</maintainer>
-	<maintainer>
-		<email>ka0ttic@gentoo.org</email>
-		<name>Aaron Walker</name>
-	</maintainer>
 </pkgmetadata>
