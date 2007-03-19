@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r1.ebuild,v 1.5 2007/03/19 13:01:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r1.ebuild,v 1.6 2007/03/19 14:52:45 wschlich Exp $
 
 
 inherit cron pam eutils
@@ -16,7 +16,8 @@ IUSE="debug doc pam selinux"
 DEPEND="app-editors/nano
 	doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
 	selinux? ( sys-libs/libselinux )
-	pam? ( virtual/pam )"
+	pam? ( virtual/pam )
+	virtual/mta"
 
 pkg_setup() {
 	enewgroup fcron

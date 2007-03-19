@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.32 2007/03/19 13:01:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.33 2007/03/19 14:52:45 wschlich Exp $
+
+  19 Mar 2007; Wolfram Schlich <wschlich@gentoo.org> fcron-3.0.2-r1.ebuild:
+  fix DEPEND wrt bug #171393
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> fcron-3.0.2-r1.ebuild:
   x86 stable again, bug 171393
