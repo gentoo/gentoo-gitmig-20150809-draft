@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sqlgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.7 2007/02/15 11:30:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.8 2007/03/19 03:42:21 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove vivo from metadata.xml due to retirement.
 
   15 Feb 2007; Daniel Black <dragonheart@gentoo.org> sqlgrey-1.6.7.ebuild,
   sqlgrey-1.7.4.ebuild:
