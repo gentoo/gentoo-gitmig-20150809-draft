@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.4.ebuild,v 1.7 2006/12/31 17:49:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.4.ebuild,v 1.8 2007/03/19 15:05:41 genone Exp $
 
 inherit distutils
 
@@ -64,15 +64,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you want to schedule programs, emerge xmltv now."
-	echo
+	elog "If you want to schedule programs, emerge xmltv now."
+	elog
 
-	einfo "Please check /etc/freevo/freevo.conf and"
-	einfo "/etc/freevo/local_conf.py before starting Freevo."
-	einfo "To rebuild freevo.conf with different parameters,"
-	einfo "please run:"
-	einfo "    freevo setup"
-	echo
+	elog "Please check /etc/freevo/freevo.conf and"
+	elog "/etc/freevo/local_conf.py before starting Freevo."
+	elog "To rebuild freevo.conf with different parameters,"
+	elog "please run:"
+	elog "    freevo setup"
+	elog
 
 	if [ -e "${ROOT}/opt/freevo" ] ; then
 		ewarn "Please remove ${ROOT}/opt/freevo because it is no longer used."

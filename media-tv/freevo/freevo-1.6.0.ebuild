@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.6.0.ebuild,v 1.3 2006/12/31 17:49:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.6.0.ebuild,v 1.4 2007/03/19 15:05:41 genone Exp $
 
 inherit distutils
 
@@ -94,50 +94,50 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you want to schedule programs, emerge xmltv now."
-	echo
+	elog "If you want to schedule programs, emerge xmltv now."
+	elog
 
-	einfo "Please check /etc/freevo/freevo.conf and"
-	einfo "/etc/freevo/local_conf.py before starting Freevo."
-	einfo "To rebuild freevo.conf with different parameters,"
-	einfo "please run:"
-	einfo "    freevo setup"
-	echo
+	elog "Please check /etc/freevo/freevo.conf and"
+	elog "/etc/freevo/local_conf.py before starting Freevo."
+	elog "To rebuild freevo.conf with different parameters,"
+	elog "please run:"
+	elog "    freevo setup"
+	elog
 
 	if [ -e "${ROOT}/etc/init.d/freevo" ] ; then
 		ewarn "Please remove ${ROOT}/etc/init.d/freevo because is no longer used"
 		ewarn "and runnining freevo as root could be a security risk"
 	fi
-	echo
+	ewarn
 	ewarn "Freevo starting method for freevo-only-systems is changed, cause"
 	ewarn "initscript would run it as root and this may cause unsecurity."
 	ewarn "That is now substituted with freevoboot, a wrapper to be runned"
 	ewarn "as user. Configuration is still in /etc/conf.d/freevo"
 	ewarn "and you can always use freevo directly."
-	echo
+	ewarn
 	if use X ; then
 		ewarn "If you're using a Freevo-only system with X, you'll need"
 		ewarn " to setup the autologin (as user) and choose freevo as"
 		ewarn "default session. If you need to run recordserver/webserver"
 		ewarn "at boot, please use /etc/conf.d/freevo as always."
-		echo
+		ewarn
 		ewarn "Should you decide to personalize your freevo.desktop"
 		ewarn "session, keep inside /usr/bin/freevoboot startx (wrapper)."
-		echo
+		ewarn
 	else
 		ewarn "Freevo initscript is changed and should not be run as root"
-		echo
+		ewarn
 		ewarn "If you want Freevo to start automatically,you'll need"
 		ewarn "to follow instructions at :"
 		ewarn "http://freevo.sourceforge.net/cgi-bin/doc/BootFreevo"
-		echo
+		ewarn
 		ewarn "*NOTE: you can use mingetty or provide a login"
 		ewarn "program for getty to autologin as limited privileges user"
 		ewarn "a tutorial for getty is at:"
 		ewarn "http://ubuntuforums.org/showthread.php?t=152274"
-		echo
+		ewarn
 		ewarn "Sorry for the disadvantage, this is done for bug #150568."
-		echo
+		ewarn
 	fi
 
 	if [ -e "${ROOT}/etc/init.d/freevo" ] ; then
@@ -173,7 +173,7 @@ pkg_postinst() {
 	fi
 
 	"/usr/bin/freevo" setup ${myconf} || die "configure problem"
-	echo
+	ewarn
 	ewarn "please note that your local_conf.py should be changed,"
 	ewarn "modify the example in /etc/freevo/local.conf.py with"
 	ewarn "your settings."
