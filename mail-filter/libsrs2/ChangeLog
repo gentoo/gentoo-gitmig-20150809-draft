@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsrs2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.6 2007/03/18 04:21:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.7 2007/03/19 13:15:05 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove pfeifer from metadata.xml due to retirement.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> libsrs2-1.0.16.ebuild,
   libsrs2-1.0.17.ebuild, libsrs2-1.0.18.ebuild:
