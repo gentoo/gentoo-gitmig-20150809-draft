@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.82 2007/03/18 04:18:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.83 2007/03/19 00:20:01 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove st_lim from metadata.xml due to retirement.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> dspam-3.6.8-r2.ebuild:
   Replacing einfo with elog

@@ -6,8 +6,5 @@
   <email>mrness@gentoo.org</email>
   <name>Alin Nastac</name>
 </maintainer>
-<maintainer>
-  <email>st_lim@gentoo.org</email>
-</maintainer>
 <longdescription>A statistical-algorithmic hybrid anti-spam filter</longdescription>
 </pkgmetadata>
