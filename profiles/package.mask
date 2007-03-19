@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6992 2007/03/18 15:41:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6993 2007/03/19 10:18:25 blubb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -351,10 +351,6 @@ dev-tex/komascript
 # Replaced by www-client/seamonkey[-bin]
 www-client/mozilla
 www-client/mozilla-bin
-
-# Simon Stelling <blubb@gentoo.org> (20 Feb 2007)
-# This is crap; will remove March 18th 2007
-app-portage/emool
 
 # Michael Cummings <mcummings@gentoo.org> (18 Feb 2007)
 # Pending removal 17 Mar 2007, bug 165467
