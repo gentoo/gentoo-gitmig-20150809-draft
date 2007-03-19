@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-eyes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes/ChangeLog,v 1.9 2007/03/19 00:03:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes/ChangeLog,v 1.10 2007/03/19 13:46:43 gustavoz Exp $
+
+  19 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-eyes-4.4.0.ebuild:
+  Keyworded ~sparc wrt #169790
 
   19 Mar 2007; Jeroen Roovers <jer@gentoo.org> xfce4-eyes-4.4.0.ebuild:
   Stable for HPPA (bug #169790).

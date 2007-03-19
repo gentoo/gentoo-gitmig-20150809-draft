@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-places
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.5 2007/03/19 00:03:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.6 2007/03/19 13:47:23 gustavoz Exp $
+
+  19 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-places-0.0.9.ebuild:
+  Keyworded ~sparc wrt #169790
 
   19 Mar 2007; Jeroen Roovers <jer@gentoo.org> xfce4-places-0.0.9.ebuild:
   Marked ~hppa (bug #169790).
