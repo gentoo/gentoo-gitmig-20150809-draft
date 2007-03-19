@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/unieject
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.34 2006/11/17 15:42:15 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.35 2007/03/19 03:27:38 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove flameeyes from metadata.xml due to retirement.
 
   17 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> unieject-5.3.2.ebuild:
   Add ~sparc-fbsd keyword.
