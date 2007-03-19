@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.10.2.ebuild,v 1.12 2006/11/16 19:36:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.10.2.ebuild,v 1.13 2007/03/19 21:12:54 dang Exp $
 
 inherit virtualx gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="doc static"
+IUSE="doc"
 
 RDEPEND=">=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.0.3
@@ -23,8 +23,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-G2CONF="${G2CONF} $(use_enable static)"
-
 
 src_test() {
 	Xmake check
