@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword-modules
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.23 2007/03/10 21:22:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.24 2007/03/19 17:36:53 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove squinky86 from metadata.xml due to retirement.
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org>
   sword-modules-20041209.ebuild:

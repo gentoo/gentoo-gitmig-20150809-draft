@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.33 2007/03/10 21:06:57 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.34 2007/03/19 17:29:13 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove squinky86 from metadata.xml due to retirement.
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org> sword-1.5.9.ebuild:
   Added ~x86-fbsd keyword.

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.19 2007/03/10 21:20:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.20 2007/03/19 17:33:16 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove squinky86 from metadata.xml due to retirement.
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org> gnomesword-2.2.2.1.ebuild:
   Added ~x86-fbsd keyword.
