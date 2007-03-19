@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.50 2007/02/10 00:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.51 2007/03/19 02:23:04 robbat2 Exp $
+
+*usbutils-0.72-r2 (19 Mar 2007)
+
+  19 Mar 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +usbutils-0.72-r2.ebuild:
+  Add support for Pete Zaitcev's binary usbmon support for 2.6.20+ kernels
+  (compiles fine on old ones too).
 
   10 Feb 2007; Mike Frysinger <vapier@gentoo.org>
   +files/usbutils-0.72-update-usbids.patch, files/usbutils.cron,
