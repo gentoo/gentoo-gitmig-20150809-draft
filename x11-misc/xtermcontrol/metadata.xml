@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>x11</herd>
-<maintainer>
-    <email>pfeifer@gentoo.org</email>
-    <name>Jay Pfeifer</name>
-</maintainer>
 <longdescription>
 xtermcontrol enables dynamic control of xterm properties.
 It makes it easy to change colors, title, font and geometry of a running xterm,
