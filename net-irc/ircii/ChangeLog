@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircii
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.23 2007/03/19 16:58:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.24 2007/03/19 22:11:50 welp Exp $
+
+  19 Mar 2007; Peter Weller <welp@gentoo.org> ircii-20060725.ebuild:
+  Stable on amd64 wrt bug 171418
 
   19 Mar 2007; Fabian Groffen <grobian@gentoo.org> ircii-20040820.ebuild,
   ircii-20060725.ebuild:
