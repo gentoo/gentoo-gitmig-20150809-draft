@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.51 2007/03/19 01:51:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.52 2007/03/19 10:15:45 armin76 Exp $
+
+*uptimed-0.3.11 (19 Mar 2007)
+
+  19 Mar 2007; Raúl Porcel <armin76@gentoo.org> metadata.xml,
+  -uptimed-0.3.7.ebuild, -uptimed-0.3.10.ebuild, +uptimed-0.3.11.ebuild:
+  Accepting maintainership. Version bump, bug 171314 and remove old
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
