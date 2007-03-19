@@ -1,0 +1,79 @@
+--- configure	2007-03-19 03:03:48.000000000 -0400
++++ /home/cardoe/configure.mythtv	2007-03-19 03:19:37.000000000 -0400
+@@ -1766,50 +1766,50 @@
+ if test $tune != "generic"; then
+     case $tune in
+         601|ppc601|PowerPC601)
+-            ARCHFLAGS="-mcpu=601"
++            ARCHFLAGS="-march=601"
+             if test $altivec = "yes"; then
+                 echo "WARNING: Tuning for PPC601 but AltiVec enabled!";
+             fi
+         ;;
+         603*|ppc603*|PowerPC603*)
+-            ARCHFLAGS="-mcpu=603"
++            ARCHFLAGS="-march=603"
+             if test $altivec = "yes"; then
+                 echo "WARNING: Tuning for PPC603 but AltiVec enabled!";
+             fi
+         ;;
+         604*|ppc604*|PowerPC604*)
+-            ARCHFLAGS="-mcpu=604"
++            ARCHFLAGS="-march=604"
+             if test $altivec = "yes"; then
+                 echo "WARNING: Tuning for PPC604 but AltiVec enabled!";
+             fi
+         ;;
+         G3|g3|75*|ppc75*|PowerPC75*)
+-            ARCHFLAGS="-mcpu=750 -mtune=750 -mpowerpc-gfxopt"
++            ARCHFLAGS="-march=750 -mtune=750 -mpowerpc-gfxopt"
+             if test $altivec = "yes"; then
+                 echo "WARNING: Tuning for PPC75x but AltiVec enabled!";
+             fi
+         ;;
+         G4|g4|745*|ppc745*|PowerPC745*)
+-            ARCHFLAGS="-mcpu=7450 -mtune=7450 -mpowerpc-gfxopt"
++            ARCHFLAGS="-march=7450 -mtune=7450 -mpowerpc-gfxopt"
+             if test $altivec = "no"; then
+                 echo "WARNING: Tuning for PPC745x but AltiVec disabled!";
+             fi
+         ;;
+         74*|ppc74*|PowerPC74*)
+-            ARCHFLAGS="-mcpu=7400 -mtune=7400 -mpowerpc-gfxopt"
++            ARCHFLAGS="-march=7400 -mtune=7400 -mpowerpc-gfxopt"
+             if test $altivec = "no"; then
+                 echo "WARNING: Tuning for PPC74xx but AltiVec disabled!";
+             fi
+         ;;
+         G5|g5|970|ppc970|PowerPC970|power4*|Power4*)
+-            ARCHFLAGS="-mcpu=970 -mtune=970 -mpowerpc-gfxopt -mpowerpc64"
++            ARCHFLAGS="-march=970 -mtune=970 -mpowerpc-gfxopt -mpowerpc64"
+             if test $altivec = "no"; then
+                 echo "WARNING: Tuning for PPC970 but AltiVec disabled!";
+             fi
+             POWERPCMODE="64bits"
+         ;;
+         sparc64)
+-            ARCHFLAGS="-mcpu=v9 -mtune=v9"
++            ARCHFLAGS="-march=v9 -mtune=v9"
+         ;;               
+ 	*)
+             ARCHFLAGS="-mtune=$tune"
+@@ -1818,7 +1818,7 @@
+ fi
+ 
+ if test x"$cpu_overide" = x"yes"; then
+-    ARCHFLAGS="-mcpu=$arch_raw $ARCHFLAGS"
++    ARCHFLAGS="-march=$arch_raw $ARCHFLAGS"
+ fi
+ 
+ # make sure we can execute files in $TMPDIR
+@@ -2045,7 +2045,7 @@
+ if test x"$tune" = x"generic" -a x"$arch" = x"x86_64" -a x"$cpu_overide" != x"yes"; then
+    ARCHFLAGS="-march=k8"
+ elif test x"$tune" = x"generic" -a x"$arch" = x"sparc64" -a x"$cpu_overide" != x"yes"; then
+-   ARCHFLAGS="-mcpu=ultrasparc -mvis"
++   ARCHFLAGS="-march=ultrasparc -mvis"
+ fi
+ 
+ if test x"$proc_error_msg" = x"yes"; then
