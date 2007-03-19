@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.50 2007/03/18 16:20:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.51 2007/03/19 00:05:49 jer Exp $
+
+  19 Mar 2007; Jeroen Roovers <jer@gentoo.org> xfce4-extras-4.4.0-r3.ebuild:
+  Marked ~hppa (bug #169790).
 
   18 Mar 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-extras-4.4.0-r3.ebuild:
