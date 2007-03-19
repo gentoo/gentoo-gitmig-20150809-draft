@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-xfire
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xfire/ChangeLog,v 1.4 2006/10/13 15:12:17 gothgirl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xfire/ChangeLog,v 1.5 2007/03/19 03:48:55 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove gothgirl from metadata.xml due to retirement.
 
 *gaim-xfire-0.6.0 (13 Oct 2006)
 
