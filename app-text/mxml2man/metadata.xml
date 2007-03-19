@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>flameeyes@gentoo.org</email>
-<name>Diego Pettenò</name>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 mxml2man is an enhanced version of Apple's xml2man program that generates a man

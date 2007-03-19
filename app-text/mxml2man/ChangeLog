@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mxml2man
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mxml2man/ChangeLog,v 1.2 2007/02/03 21:39:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mxml2man/ChangeLog,v 1.3 2007/03/19 03:26:34 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove flameeyes from metadata.xml due to retirement.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
