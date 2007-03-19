@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.20.ebuild,v 1.1 2007/03/02 16:49:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.20.ebuild,v 1.2 2007/03/19 03:21:25 vapier Exp $
 
 inherit eutils distutils libtool flag-o-matic
 
@@ -22,6 +22,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-4.15-libtool.patch #99593
 	epatch "${FILESDIR}"/${PN}-4.19-init-file.patch #163948
+	sed -i -e 's:__unused:file_gcc_unused:' src/file.[ch] #171178
 
 	elibtoolize
 	epunt_cxx
