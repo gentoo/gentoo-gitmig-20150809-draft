@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/formencode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.9 2007/03/19 04:53:47 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.10 2007/03/19 22:27:32 lucass Exp $
+
+  19 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/formencode-0.2.2-setup-gentoo.patch,
+  -files/formencode-0.3-setup-gentoo.patch,
+  -files/formencode-0.4-setup-gentoo.patch,
+  -files/formencode-0.6-setup-gentoo.patch, -formencode-0.2.2.ebuild,
+  -formencode-0.3.ebuild, -formencode-0.4.ebuild, -formencode-0.6.ebuild,
+  formencode-0.7.ebuild:
+  Added NEED_PYTHON. Added missing rdep on setuptools. Fixed setup.py to skip
+  use_setuptools and extras_require. Fixed to install docs/*.txt. Dropped old
+  versions.
 
 *formencode-0.7 (19 Mar 2007)
 
