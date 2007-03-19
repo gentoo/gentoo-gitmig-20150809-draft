@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>java</herd>
-<maintainer>
- <email>zx@gentoo.org</email>
- <name>Chris Aniszczyk</name>
-</maintainer>
 <longdescription>
  The Tcl/Java project's goal is to make integrating the Java platform and the Tcl scripting language as easy as possible. The project actually consists of two distinct packages, called Tcl Blend and Jacl. It is important to understand what each package provides and in what situations one might choose to use Jacl or Tcl Blend.
  
