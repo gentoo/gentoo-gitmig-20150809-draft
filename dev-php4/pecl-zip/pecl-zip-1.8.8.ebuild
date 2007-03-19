@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/pecl-zip-1.8.7.ebuild,v 1.1 2007/03/16 16:51:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/pecl-zip-1.8.8.ebuild,v 1.1 2007/03/19 14:52:13 chtekk Exp $
 
 PHP_EXT_NAME="zip"
 PHP_EXT_INI="yes"
