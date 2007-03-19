@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xxl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/ChangeLog,v 1.6 2007/02/09 02:41:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/ChangeLog,v 1.7 2007/03/19 00:56:19 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove ka0ttic from metadata.xml due to retirement.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
