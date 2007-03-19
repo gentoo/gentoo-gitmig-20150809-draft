@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.103 2007/03/18 02:44:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.104 2007/03/19 19:44:21 ticho Exp $
+
+*amavisd-new-2.4.5-r1 (19 Mar 2007)
+
+  19 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  +amavisd-new-2.4.5-r1.ebuild:
+  Some QA fixes - apply qmail and courier patches conditionally upon USE
+  flags. Install ldap schema conditionally also based on a USE flag. Few other
+  minor fixes. Thanks to Marius Mauch <genone at gentoo.org> for suggestions.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> amavisd-new-2.3.3-r2.ebuild,
   amavisd-new-2.4.1.ebuild, amavisd-new-2.4.2.ebuild,
