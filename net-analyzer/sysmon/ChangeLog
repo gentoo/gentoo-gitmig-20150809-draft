@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sysmon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sysmon/ChangeLog,v 1.5 2007/02/20 00:33:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sysmon/ChangeLog,v 1.6 2007/03/19 00:42:52 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove jhuebel from metadata.xml due to retirement.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
