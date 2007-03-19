@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/banner
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.22 2007/03/19 17:15:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.23 2007/03/19 18:01:12 drac Exp $
+
+*banner-1.3.2 (19 Mar 2007)
+
+  19 Mar 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
+  banner-1.2.1.ebuild, banner-1.3.1.ebuild, +banner-1.3.2.ebuild:
+  Version bump. Stop installing INSTALL. Take maintainership.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove mholzer from metadata.xml due to retirement.
