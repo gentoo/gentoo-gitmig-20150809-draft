@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.3 2006/07/17 11:58:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.4 2007/03/19 14:38:44 genone Exp $
 
 BASE_URI="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc"
 
@@ -22,12 +22,12 @@ DEPEND="=app-text/acroread-7*"
 S="${WORKDIR}"
 
 pkg_setup() {
-	einfo
-	einfo "You need to set LINGUAS to desired font pack name."
-	einfo "e.g. set LINGUAS=\"ja zh_TW\" to get Japanese and"
-	einfo "Traditional Chinese font packs. Available LINGUAS"
-	einfo "are: zh_CN, zh_TW, ja and ko."
-	einfo
+	elog
+	elog "You need to set LINGUAS to desired font pack name."
+	elog "e.g. set LINGUAS=\"ja zh_TW\" to get Japanese and"
+	elog "Traditional Chinese font packs. Available LINGUAS"
+	elog "are: zh_CN, zh_TW, ja and ko."
+	elog
 	if ! useq linguas_zh_CN && ! useq linguas_zh_TW && ! useq linguas_ja && ! useq linguas_ko ; then
 		die "You need to set LINGUAS variable to emerge ${PN}."
 	fi

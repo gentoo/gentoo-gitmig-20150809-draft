@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/freefonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/ChangeLog,v 1.23 2007/03/18 12:05:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/ChangeLog,v 1.24 2007/03/19 14:45:55 genone Exp $
+
+  19 Mar 2007; Marius Mauch <genone@gentoo.org> freefonts-0.10-r2.ebuild:
+  Replacing einfo with elog
 
   18 Mar 2007; Simon Stelling <blubb@gentoo.org> freefonts-0.10-r3.ebuild:
   stable on amd64; bug 171063

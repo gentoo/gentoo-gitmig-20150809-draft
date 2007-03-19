@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/cronyx-fonts-2.3.1-r2.ebuild,v 1.9 2007/03/18 12:05:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/cronyx-fonts-2.3.1-r2.ebuild,v 1.10 2007/03/19 14:43:42 genone Exp $
 
 DESCRIPTION="Cronyx Cyrillic bitmap fonts for X"
 HOMEPAGE="http://koi8.pp.ru/frame.html?xwin.html#xwin_fonts"
@@ -41,19 +41,19 @@ rebuild_fontfiles() {
 pkg_postinst() {
 	if use X > /dev/null ; then
 		rebuild_fontfiles
-		einfo "In order to make X see the fonts, you need to add the"
-		einfo "following lines to the files section of your "
-		einfo "/etc/X11/XF86Config (or the XOrg equivalent):"
-		einfo "  FontPath \"${FONT_ROOT}/100dpi/:unscaled\""
-		einfo "  FontPath \"${FONT_ROOT}/misc/:unscaled\""
-		einfo "  FontPath \"${FONT_ROOT}/75dpi/:unscaled\""
-		einfo ""
-		einfo "In order to make them accessible to your current X"
-		einfo "session, run:"
-		einfo "  xset fp+ ${FONT_ROOT}/100dpi/:unscaled,\\"
-		einfo "${FONT_ROOT}/misc/:unscaled,\\"
-		einfo "${FONT_ROOT}/75dpi/:unscaled"
-		einfo "  xset fp rehash"
+		elog "In order to make X see the fonts, you need to add the"
+		elog "following lines to the files section of your "
+		elog "/etc/X11/XF86Config (or the XOrg equivalent):"
+		elog "  FontPath \"${FONT_ROOT}/100dpi/:unscaled\""
+		elog "  FontPath \"${FONT_ROOT}/misc/:unscaled\""
+		elog "  FontPath \"${FONT_ROOT}/75dpi/:unscaled\""
+		elog ""
+		elog "In order to make them accessible to your current X"
+		elog "session, run:"
+		elog "  xset fp+ ${FONT_ROOT}/100dpi/:unscaled,\\"
+		elog "${FONT_ROOT}/misc/:unscaled,\\"
+		elog "${FONT_ROOT}/75dpi/:unscaled"
+		elog "  xset fp rehash"
 	fi
 }
 

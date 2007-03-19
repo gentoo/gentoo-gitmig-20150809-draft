@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.17 2005/09/13 15:59:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.18 2007/03/19 14:45:55 genone Exp $
 
 DESCRIPTION="A Collection of Free Type1 Fonts"
 HOMEPAGE="http://www.gimp.org/"
@@ -33,6 +33,6 @@ pkg_postinst() {
 		HOME="/root" /usr/bin/fc-cache -f
 	fi
 
-	einfo "The freefonts dir has been moved from /usr/X11R6/lib/X11/fonts/freefont to /usr/share/fonts/freefont ."
-	einfo "Setting new fontpaths for X might be necessary in some cases."
+	elog "The freefonts dir has been moved from /usr/X11R6/lib/X11/fonts/freefont to /usr/share/fonts/freefont ."
+	elog "Setting new fontpaths for X might be necessary in some cases."
 }

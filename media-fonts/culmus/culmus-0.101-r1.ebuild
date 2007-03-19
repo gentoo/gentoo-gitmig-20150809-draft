@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101-r1.ebuild,v 1.5 2007/03/12 19:26:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101-r1.ebuild,v 1.6 2007/03/19 14:44:50 genone Exp $
 
 inherit font
 
@@ -35,8 +35,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please add ${FONTPATH} to your FontPath"
-	einfo "in XF86Config to make the fonts available to all X11 apps and"
-	einfo "not just those that use fontconfig (the latter category includes"
-	einfo "kde 3.1 and gnome 2.2)."
+	elog "Please add ${FONTPATH} to your FontPath"
+	elog "in XF86Config to make the fonts available to all X11 apps and"
+	elog "not just those that use fontconfig (the latter category includes"
+	elog "kde 3.1 and gnome 2.2)."
 }
