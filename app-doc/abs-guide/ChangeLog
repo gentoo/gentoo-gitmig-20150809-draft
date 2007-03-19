@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.34 2007/01/13 17:47:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.35 2007/03/19 01:59:48 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove ka0ttic from metadata.xml due to retirement.
 
 *abs-guide-4.2 (13 Jan 2007)
 
