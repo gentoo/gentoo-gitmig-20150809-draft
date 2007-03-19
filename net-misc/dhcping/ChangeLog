@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcping
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcping/ChangeLog,v 1.2 2006/10/02 11:37:45 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcping/ChangeLog,v 1.3 2007/03/19 00:39:56 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove jhuebel from metadata.xml due to retirement.
 
   02 Oct 2006; Markus Rothe <corsair@gentoo.org> dhcping-1.2.ebuild:
   Added ~ppc/~ppc64
