@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk-server
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/ChangeLog,v 1.7 2006/08/17 03:47:29 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/ChangeLog,v 1.8 2007/03/19 11:40:17 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove mkennedy from metadata.xml due to retirement.
 
 *gtk-server-2.0.12 (17 Aug 2006)
 
