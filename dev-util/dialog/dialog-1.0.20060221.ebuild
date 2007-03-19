@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20060221.ebuild,v 1.5 2007/03/18 20:57:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20060221.ebuild,v 1.6 2007/03/19 15:39:15 armin76 Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-mkdirs.patch #171348
+	epatch "${FILESDIR}"/${PN}-mkdirs.patch #171348
 }
 
 src_compile() {

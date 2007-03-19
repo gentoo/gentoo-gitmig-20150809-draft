@@ -1,8 +1,6 @@
-http://bugs.gentoo.org/171348
-
---- mkdirs.sh
-+++ mkdirs.sh
-@@ -21,7 +21,7 @@
+--- mkdirs.sh.orig	2007-03-19 16:28:39.000000000 +0100
++++ mkdirs.sh	2007-03-19 16:28:56.000000000 +0100
+@@ -21,11 +21,11 @@
       esac
  
       if test ! -d "$pathcomp"; then
@@ -11,3 +9,8 @@ http://bugs.gentoo.org/171348
          case "$pathcomp" in
            [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]: )
                  ;;               # DOSISH systems
+-          * )          mkdir "$pathcomp" || errstatus=$? ;;
++          * )          mkdir -p "$pathcomp" || errstatus=$? ;;
+         esac
+      fi
+ 
