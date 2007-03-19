@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.221 2007/03/19 10:28:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.222 2007/03/19 11:06:00 armin76 Exp $
+
+  19 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  P.mask www-servers/plb, for treecleaners bug 150966
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove www-client/mozilla[-bin] from p.mask since it has been removed from
