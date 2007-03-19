@@ -1,20 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.8.1.ebuild,v 1.2 2007/03/19 20:39:11 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.8.1.ebuild,v 1.3 2007/03/19 21:59:03 dev-zero Exp $
 
 NEED_PYTHON=2.2
 
 inherit distutils
 
-MY_PN=${PN/sqlobject/SQLObject}
+MY_PN=SQLObject
+MY_P=${MY_PN}-${PV}
+
 DESCRIPTION="Object-relational mapper for Python"
 HOMEPAGE="http://sqlobject.org/"
-SRC_URI="http://cheeseshop.python.org/packages/source/S/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="http://cheeseshop.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="postgres mysql sqlite firebird doc"
-RDEPEND="postgres? ( <dev-python/psycopg-1.99 )
+
+RDEPEND="postgres? ( dev-python/psycopg )
 		mysql? ( >=dev-python/mysql-python-0.9.2-r1 )
 		sqlite? ( <dev-python/pysqlite-2.0 )
 		firebird? ( >=dev-python/kinterbasdb-3.0.2 )
@@ -22,7 +25,7 @@ RDEPEND="postgres? ( <dev-python/psycopg-1.99 )
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
