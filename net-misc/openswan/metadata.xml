@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>secure-tunneling</herd>
 <maintainer>
-  <email>pfeifer@gentoo.org</email>
-  <name>Jay Pfeifer</name>
-</maintainer>
-<maintainer>
   <email>mrness@gentoo.org</email>
   <name>Alin Năstac</name>
   <description>Backup maintainer</description>
