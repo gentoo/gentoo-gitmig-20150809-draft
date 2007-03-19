@@ -1,3 +1,0 @@
-LDPATH=/usr/lib/mozilla
-MOZILLA_FIVE_HOME=/usr/lib/mozilla
-CONFIG_PROTECT=/usr/lib/mozilla/defaults/pref
