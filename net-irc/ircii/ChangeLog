@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircii
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.21 2007/03/19 10:40:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.22 2007/03/19 13:35:27 gustavoz Exp $
+
+  19 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ircii-20060725.ebuild:
+  Stable on sparc wrt #171418
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> ircii-20060725.ebuild:
   x86 stable wrt bug 171418
