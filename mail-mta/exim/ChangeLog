@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.83 2007/03/18 20:35:59 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.84 2007/03/19 13:18:11 kloeri Exp $
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove pfeifer from metadata.xml due to retirement.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> exim-4.60-r1.ebuild,
   exim-4.61.ebuild, exim-4.62.ebuild, exim-4.63.ebuild:

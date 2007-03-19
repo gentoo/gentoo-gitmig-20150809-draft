@@ -7,11 +7,6 @@
   <name>Colin Morey</name>
   <description>Primary maintainer</description>
 </maintainer>
-<maintainer>
-  <email>pfeifer@gentoo.org</email>
-  <name>Jay Pfeifer</name>
-  <description>Secondary maintainer, please bug peitolm first</description>
-</maintainer>
 <longdescription>
 Exim is a message transfer agent (MTA) developed at the University of Cambridge
 for use on Unix systems connected to the Internet. It is freely available under
