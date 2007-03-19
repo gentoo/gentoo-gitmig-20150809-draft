@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.66 2007/03/19 10:31:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.67 2007/03/19 20:36:10 grobian Exp $
+
+  19 Mar 2007; Fabian Groffen <grobian@gentoo.org> epic4-2.4.ebuild,
+  epic4-2.6.ebuild:
+  Dropped ppc-macos, see you in prefix
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> epic4-2.6.ebuild:
   x86 stable wrt bug 170747
