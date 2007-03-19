@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.81 2007/03/14 19:33:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.82 2007/03/19 18:05:23 zzam Exp $
+
+*vdr-1.4.6 (19 Mar 2007)
+
+  19 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.6.ebuild:
+  Version bumped. New patchset can use bigpatch+subtitles, Bug #168189. Only
+  print msg about setup-plugin if it is not yet installed&activated.
 
   14 Mar 2007; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.4.1-r2.ebuild,
   vdr-1.4.3.ebuild, vdr-1.4.4.ebuild, vdr-1.4.4_p3.ebuild, vdr-1.4.5.ebuild:
