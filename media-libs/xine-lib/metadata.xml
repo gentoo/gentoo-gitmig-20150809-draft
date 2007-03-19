@@ -5,9 +5,5 @@
 <maintainer>
   <email>media-video@gentoo.org</email>
 </maintainer>
-<maintainer>
-<email>flameeyes@gentoo.org</email>
-<name>Diego Pettenò</name>
-</maintainer>
 <longdescription>An open source library for media applications</longdescription>
 </pkgmetadata>
