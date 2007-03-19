@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.30 2007/03/19 07:25:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.31 2007/03/19 10:10:06 wschlich Exp $
+
+  19 Mar 2007; Wolfram Schlich <wschlich@gentoo.org> fcron-3.0.2-r1.ebuild:
+  another permission + ownership fixup wrt bug #171393
 
   19 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   fcron-3.0.2-r1.ebuild:
