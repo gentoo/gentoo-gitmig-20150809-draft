@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
-  <maintainer>
-    <email>tcort@gentoo.org</email>
-    <name>Thomas Cort</name>
-  </maintainer>
   <longdescription>
     Quod Libet is a GTK+-based audio player written in Python. It's 
     designed around the idea that you know better than we do how to 
