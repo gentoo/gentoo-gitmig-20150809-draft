@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.15.0.ebuild,v 1.4 2007/02/14 23:32:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.15.0.ebuild,v 1.5 2007/03/19 05:04:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
-		if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-			export CTARGET=${CATEGORY/cross-}
-		fi
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET=${CATEGORY/cross-}
+	fi
 fi
 
 # Handle the case where we want newlib on glibc ...
