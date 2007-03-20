@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.48 2007/01/29 00:19:11 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.49 2007/03/20 23:46:40 rbu Exp $
+
+*lcdproc-0.5.1-r4 (20 Mar 2007)
+
+  20 Mar 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/0.5.1-g15daemon-1.9.patch,
+  -files/0.5.1-LCDd-conf-driver-path.patch, -lcdproc-0.5.1-r1.ebuild,
+  lcdproc-0.5.1-r3.ebuild, +lcdproc-0.5.1-r4.ebuild:
+  Included an upstream patch for better g15daemon-1.9 compatibility, dropping
+  0.5.1-r1 because it does not support LCD_DEVICES
 
 *lcdproc-0.5.1-r3 (29 Jan 2007)
 

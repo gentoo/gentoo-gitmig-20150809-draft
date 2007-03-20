@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r3.ebuild,v 1.2 2007/03/20 23:46:40 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r4.ebuild,v 1.1 2007/03/20 23:46:40 rbu Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -52,7 +52,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	doc?      ( app-text/xmlto )"
 RDEPEND="${RDEPEND}
-	lcd_devices_g15?      ( <app-misc/g15daemon-1.9.0 )"
+	lcd_devices_g15?      ( app-misc/g15daemon )"
 
 pkg_setup() {
 	if [ -n "${LCDPROC_DRIVERS}" ] ; then
@@ -71,6 +71,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-as-needed.patch"
 	epatch "${FILESDIR}/${PV}-serialvfd-parallel.patch"
 	epatch "${FILESDIR}/${PV}-nested-functions.patch"
+	epatch "${FILESDIR}/${PV}-g15daemon-1.9.patch"
 	eautoreconf
 }
 
