@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.213 2007/03/15 13:25:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.214 2007/03/20 12:04:20 ticho Exp $
+
+  20 Mar 2007; Andrej Kacian <ticho@gentoo.org> -clamav-0.88.5.ebuild,
+  -clamav-0.88.6.ebuild, clamav-0.88.7.ebuild, clamav-0.90.ebuild,
+  clamav-0.90.1.ebuild, clamav-0.90.1-r1.ebuild:
+  Removing obsolete ebuilds.
 
   15 Mar 2007; Andrej Kacian <ticho@gentoo.org> files/clamd.rc:
   Always fix permissions for clamd and freshclam logs. Bug #170739, by Sergey
