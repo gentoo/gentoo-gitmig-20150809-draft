@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.83 2007/03/07 14:30:58 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.84 2007/03/20 19:57:43 ferdy Exp $
 
 # Samuli Suominen <drac@gentoo.org>
 # No batteries on mips.
@@ -300,3 +300,7 @@ pcsc-lite
 #Daniel Black <dragonheart@gentoo.org> (28 Feb 2007)
 # Use mask l7-filter for iptables dependency - bug #150343 until mips tested
 l7filter
+
+# Fernando J. Pereda <ferdy@gentoo.org> (20 Mar 2007)
+# New optional dependency of >=mail-client/mutt-1.5.14
+qdbm
