@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7001 2007/03/20 13:20:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7002 2007/03/20 13:28:24 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1300,10 +1300,6 @@ net-mail/mailer-config
 # Tihs package is conflict with postgresql at the moment
 # and waiting on implementing virtual/postgresql.
 dev-db/pgcluster
-
-#Gustavo Felisberto <humpback@gentoo.org> (04 Feb 2005)
-#Masked for user testing
-net-im/mercury-bin
 
 # Matthew Kennedy <mkennedy@gentoo.org> (02 Feb 2005)
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
