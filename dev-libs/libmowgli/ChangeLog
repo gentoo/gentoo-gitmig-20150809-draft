@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libmowgli
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.1 2007/03/20 15:35:41 chainsaw Exp $
+
+*libmowgli-0.1.0 (20 Mar 2007)
+
+  20 Mar 2007; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +libmowgli-0.1.0.ebuild:
+  Initial commit. Ebuild by me.
+
