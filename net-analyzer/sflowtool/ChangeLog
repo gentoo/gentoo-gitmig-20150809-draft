@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.8 2007/02/20 00:29:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.9 2007/03/20 19:01:54 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org> sflowtool-3.10.ebuild:
+  x86 stable
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
