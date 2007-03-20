@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.19 2007/01/22 08:30:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.20 2007/03/20 13:42:55 uberlord Exp $
 
 inherit flag-o-matic eutils libtool toolchain-funcs
 
@@ -25,15 +25,15 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-ppc-macos.diff
 	cp lib/error.c lib/xstrdup.c src/ || die "file copy failed"
 
-	if use ppc-macos; then
-		append-ldflags -lgettextlib -lintl
-	fi
+	use ppc-macos && append-ldflags -lgettextlib
 	elibtoolize
 }
 
 src_compile() {
 	tc-export CC LD
-	econf $(use_enable nls) || die "econf failed"
+	# --without-included-gettext means we always use system headers
+	# and library
+	econf --without-included-gettext $(use_enable nls) || die "econf failed"
 	emake || die "emake failed"
 }
 
