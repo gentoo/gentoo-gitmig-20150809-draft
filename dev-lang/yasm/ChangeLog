@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.11 2007/02/22 00:15:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.12 2007/03/20 01:10:46 kugelfang Exp $
+
+*yasm-0.6.0 (20 Mar 2007)
+
+  20 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> +yasm-0.6.0.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
