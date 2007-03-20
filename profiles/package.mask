@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7000 2007/03/20 04:14:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7001 2007/03/20 13:20:43 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1253,10 +1253,6 @@ net-misc/zsync
 # However, Vindaloo needs PopplerKit, which doesn't compile.
 gnustep-libs/popplerkit
 gnustep-apps/vindaloo
-
-# <ka0ttic@gentoo.org> (21 Jul 2005)
-# Masked for testing.
-=dev-cpp/gtkglextmm-1.1.0
 
 # Aaron Walker <ka0ttic@gentoo.org> (30 Jun 2005)
 # Masked due to constant security bugs.
