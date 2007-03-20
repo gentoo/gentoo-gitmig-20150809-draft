@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7-r1.ebuild,v 1.2 2006/10/20 08:50:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8.ebuild,v 1.1 2007/03/20 10:46:25 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DOLILO_V="0.4"
-IUSE="devmap static minimal pxeserial"
+IUSE="static minimal pxeserial"
 
 DESCRIPTION="Standard Linux boot loader"
 HOMEPAGE="http://lilo.go.dyndns.org/pub/linux/lilo/"
@@ -19,35 +19,23 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* ~x86 ~amd64"
 
-RDEPEND="devmap? ( >=sys-fs/device-mapper-1.00.08 )"
-DEPEND="${RDEPEND}
-	>=sys-devel/bin86-0.15.5"
+DEPEND=">=sys-devel/bin86-0.15.5"
 
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
-	einfo "If you want to use lilo with device mapper, please enable the"
-	einfo "\"devmap\" USE flag."
-
 	unpack ${MY_P}.tar.gz
-
-	if use devmap; then
-		# devmapper-patch (boot on evms/lvm2)
-		cd ${S}; epatch ${FILESDIR}/${P}-devmapper_gentoo.patch
-	fi
 
 	cd ${S}
 
-	# Fix creating install dirs, bug #39405
-	epatch ${FILESDIR}/${P}-create-install-dirs.patch
 	# Correctly document commandline options -v and -V, bug #43554
 	epatch ${FILESDIR}/${P}-correct-usage-info.patch
 	# Install manpages to correct location, do not rely on incorrect manpath output, bug #117135
-	epatch ${FILESDIR}/${P}-manpath.patch
 	# Do not strip the main binary, it upsets portage, bug #140210
-	epatch ${FILESDIR}/${P}-install-nostrip.patch
+	# Do not install diag1.img, bug #149887
+	epatch ${FILESDIR}/${P}-makefile.patch
 
 	# this patch is needed when booting PXE and the device you're using 
 	# emulates vga console via serial console.
@@ -67,7 +55,7 @@ src_compile() {
 
 	# we explicitly prevent the custom CFLAGS for stability reasons
 	if use static; then
-		emake CC="$(tc-getCC) ${HARDENED_CFLAGS}" lilo-static || die
+		emake CC="$(tc-getCC) ${HARDENED_CFLAGS}" lilo.static || die
 		mv lilo.static lilo || die
 	else
 		emake CC="$(tc-getCC) ${HARDENED_CFLAGS}" lilo || die
