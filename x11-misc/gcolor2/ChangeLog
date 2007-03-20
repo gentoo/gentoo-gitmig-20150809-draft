@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gcolor2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.20 2007/03/19 01:24:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.21 2007/03/20 14:22:00 dang Exp $
+
+  20 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gcolor2-0.4-amd64.patch, metadata.xml, gcolor2-0.4-r2.ebuild:
+  Take maintainership and add amd64 patch (bug #157376)
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
