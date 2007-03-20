@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2680 2007/03/20 16:42:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2681 2007/03/20 16:58:02 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1675,7 +1675,6 @@ sys-boot/arcboot:ip27 - Disables support for SGI Origin (IP27)
 sys-boot/arcboot:ip28 - Disables support for SGI Indigo2 Impact R10000 (IP28)
 sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
 sys-boot/grub:custom-cflags - Enables custom cflags (not supported)
-sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-cluster/charm:cmkopt - Enable CMK optimisation
 sys-cluster/charm:smp - Enable direct SMP support using shared memory
