@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.18 2007/03/20 14:49:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.19 2007/03/20 20:52:05 cedk Exp $
+
+*lft-3.0_beta (20 Mar 2007)
+
+  20 Mar 2007; Cedric Krier <cedk@gentoo.org> +lft-3.0_beta.ebuild,
+  -lft-3.0b.ebuild:
+  Rename 3.0b in 3.0_beta
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> lft-2.5.ebuild:
   x86 stable
