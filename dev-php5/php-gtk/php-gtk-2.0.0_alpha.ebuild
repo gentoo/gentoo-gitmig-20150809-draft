@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.3 2007/03/18 16:07:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.4 2007/03/20 07:42:27 anant Exp $
 
 PHP_EXT_NAME="php_gtk2"
 PHP_EXT_INI="yes"
@@ -77,7 +77,11 @@ src_compile() {
 }
 
 src_install() {
-	php-ext-source-r1_src_install
+	# Can't use php-ext-source-r1_src_install
+	# because it looks for {ext}-default.so,
+	# that too in the wrong location
+	insinto "${EXT_DIR}"
+	newins "${S}/modules/${PHP_EXT_NAME}.so" "${PHP_EXT_NAME}.so"
 
 	dodoc-php AUTHORS ChangeLog INSTALL NEWS README README.KNOWN-ISSUES TODO2
 }
