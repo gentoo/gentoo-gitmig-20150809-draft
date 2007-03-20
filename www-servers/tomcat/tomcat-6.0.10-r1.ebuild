@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10.ebuild,v 1.2 2007/03/13 00:06:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r1.ebuild,v 1.1 2007/03/20 04:35:11 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -62,6 +62,17 @@ src_compile(){
 }
 
 src_install() {
+	cd "${S}/output/build/bin"
+	rm -f *.bat commons-daemon.jar
+	java-pkg_jar-from commons-daemon
+	chmod 755 *.sh
+
+	# register jars per bug #171496
+	cd "${S}/output/build/lib/"
+	for jar in *.jar; do
+		java-pkg_dojar ${jar}
+	done
+
 	local CATALINA_BASE=/var/lib/${TOMCAT_NAME}/
 
 	# init.d, conf.d
@@ -80,10 +91,6 @@ src_install() {
 	diropts -m0755
 
 	cd "${S}"
-	# we don't need dos scripts
-	rm -f bin/*.bat
-	chmod 755 bin/*.sh
-
 	# fix context's since upstream is slackin
 	sed -i -e 's:}/server/:}/:' ${S}/webapps/host-manager/host-manager.xml
 	sed -i -e 's:}/server/:}/:' ${S}/webapps/manager/manager.xml
@@ -100,8 +107,7 @@ src_install() {
 	# copy over the directories
 	chown -R tomcat:tomcat webapps/* conf/*
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME} || die "failed to copy conf"
-	cp -R bin output/build/bin output/build/lib ${D}/usr/share/${TOMCAT_NAME} \
-		|| die "failed to copy"
+	cp -PR output/build/bin ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	cp ${T}/tomcat6-deps/jdt/jasper-jdt.jar ${D}/usr/share/${TOMCAT_NAME}/lib \
 		|| die "failed to copy"
