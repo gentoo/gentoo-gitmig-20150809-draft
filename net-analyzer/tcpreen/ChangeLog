@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpreen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/ChangeLog,v 1.8 2007/02/09 04:09:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/ChangeLog,v 1.9 2007/03/20 19:40:30 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org> tcpreen-1.4.3.ebuild:
+  x86 stable
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
