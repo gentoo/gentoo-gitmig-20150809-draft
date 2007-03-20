@@ -1,0 +1,16 @@
+# ChangeLog for media-sound/mute
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aldrin/ChangeLog,v 1.1 2007/03/20 14:54:06 hanno Exp $
+
+*aldrin-0.11 (20 Mar 2007)
+
+  20 Mar 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +aldrin-0.11.ebuild:
+  Bump and name change.
+
+*mute-0.1.1 (14 Oct 2006)
+
+  14 Oct 2006; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +mute-0.1.1.ebuild:
+  Initial import. Tracker and synthesizer done by Leonard Ritter.
+
