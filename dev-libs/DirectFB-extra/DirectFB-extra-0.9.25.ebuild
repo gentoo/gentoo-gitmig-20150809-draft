@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.25.ebuild,v 1.4 2006/10/30 23:33:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.25.ebuild,v 1.5 2007/03/20 04:14:34 vapier Exp $
 
 inherit eutils
 
@@ -26,13 +26,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-CFLAGS.patch
 	sed -i \
 		-e 's:libmpeg3\.h:libmpeg3/libmpeg3.h:g' \
 		configure interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_libmpeg3.c
 }
 
 src_compile() {
-#		$(use_enable avi avifile) \
+	#	$(use_enable avi avifile) 
 	econf \
 		$(use_enable mmx) \
 		$(use_enable imlib imlib2) \
@@ -46,6 +47,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
