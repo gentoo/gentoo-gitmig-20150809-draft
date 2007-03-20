@@ -1,0 +1,43 @@
+diff -Nura asterisk-1.2.14/channels/chan_sip.c asterisk-1.2.14-r2/channels/chan_sip.c
+--- asterisk-1.2.14/channels/chan_sip.c	2006-12-06 12:42:41.000000000 -0300
++++ asterisk-1.2.14-r2/channels/chan_sip.c	2007-03-20 12:20:33.596548316 -0300
+@@ -3652,6 +3652,7 @@
+ 			hp = ast_gethostbyname(host, &ahp);
+ 			if (!hp) {
+ 				ast_log(LOG_WARNING, "Unable to lookup host in secondary c= line, '%s'\n", c);
++				return -1;
+ 			}
+ 		}
+ 	}
+@@ -3678,6 +3679,7 @@
+ 			hp = ast_gethostbyname(host, &ahp);
+ 			if (!hp) {
+ 				ast_log(LOG_WARNING, "Unable to lookup host in secondary c= line, '%s'\n", c);
++				return -1;
+ 			}
+ 		}
+ 	}
+@@ -11251,6 +11253,10 @@
+ 		if (sscanf(e, "%d %n", &respid, &len) != 1) {
+ 			ast_log(LOG_WARNING, "Invalid response: '%s'\n", e);
+ 		} else {
++			if (respid <= 0) {
++				ast_log(LOG_WARNING, "Invalid SIP response code: '%d'\n", respid);
++				return 0;
++			}
+ 			/* More SIP ridiculousness, we have to ignore bogus contacts in 100 etc responses */
+ 			if ((respid == 200) || ((respid >= 300) && (respid <= 399)))
+ 				extract_uri(p, req);
+@@ -11312,6 +11318,12 @@
+ 		}
+ 	}
+ 
++	if (!e && (p->method == SIP_INVITE || p->method == SIP_SUBSCRIBE || p->method == SIP_REGISTER)) {
++		transmit_response(p, "400 Bad request", req);
++		ast_set_flag(p, SIP_NEEDDESTROY);
++		return -1;
++	}
++
+ 	/* Handle various incoming SIP methods in requests */
+ 	switch (p->method) {
+ 	case SIP_OPTIONS:
