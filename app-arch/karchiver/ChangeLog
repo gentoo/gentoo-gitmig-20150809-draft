@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/karchiver
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.28 2006/06/05 22:55:34 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.29 2007/03/20 23:22:57 genstef Exp $
+
+*karchiver-3.4.2-r4 (20 Mar 2007)
+
+  20 Mar 2007; <stefan@gentoo.org> +karchiver-3.4.2-r4.ebuild:
+  Version bump thanks to bug 147576
 
   05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/karchiver-3.1.1-gcc41.patch, karchiver-3.1.1-r1.ebuild:
