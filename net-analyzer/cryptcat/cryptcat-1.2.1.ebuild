@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-1.2.1.ebuild,v 1.1 2006/08/19 15:21:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-1.2.1.ebuild,v 1.2 2007/03/20 13:33:02 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cryptcat/${PN}-unix-${PV}.tar"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
