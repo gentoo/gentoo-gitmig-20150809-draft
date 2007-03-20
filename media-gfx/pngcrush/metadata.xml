@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<!-- THIS PACKAGE NEEDS A MAINTAINER or HERD! -->
+<maintainer>
+<email>drac@gentoo.org</email>
+<name>Samuli Suominen</name>
+</maintainer>
+<longdescription lang="en">
+</longdescription>
 </pkgmetadata>
-
