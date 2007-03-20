@@ -1,6 +1,11 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.38 2007/03/19 17:32:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.39 2007/03/20 23:19:06 genstef Exp $
+
+*bibletime-1.6.3 (20 Mar 2007)
+
+  20 Mar 2007; <stefan@gentoo.org> +bibletime-1.6.3.ebuild:
+  Version bump thanks to Jaak Ristioja <j-spam@starline.ee> in bug 164506
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove squinky86 from metadata.xml due to retirement.
