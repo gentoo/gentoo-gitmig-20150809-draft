@@ -22,6 +22,10 @@ AUX madwifi-ng-0.9.2.1-linux-2.6.20.patch 6240 RMD160 dafc042865d7cc5e487d5ecf5c
 MD5 d87e52249fc7224d08dc51adc10f6f75 files/madwifi-ng-0.9.2.1-linux-2.6.20.patch 6240
 RMD160 dafc042865d7cc5e487d5ecf5c6bd1428fd2f866 files/madwifi-ng-0.9.2.1-linux-2.6.20.patch 6240
 SHA256 d5eea77279187314011c536d644a948f91047bbd0ea0ef3849bbd64122e57a32 files/madwifi-ng-0.9.2.1-linux-2.6.20.patch 6240
+AUX madwifi-ng-0.9.3-uudecode-gcda-fix.patch 340 RMD160 2a18fc4f9e66aa131e901e7e46930e08e2ece7ea SHA1 3c84bf4e203ab3c810c734816dd1291ba19b0005 SHA256 be6e7a66acad56044c25ab56d9cbd7d5326c4ba21f5d9ed25caef56a9577bdc8
+MD5 c2c1ef3c395377312cfa0e012ded2777 files/madwifi-ng-0.9.3-uudecode-gcda-fix.patch 340
+RMD160 2a18fc4f9e66aa131e901e7e46930e08e2ece7ea files/madwifi-ng-0.9.3-uudecode-gcda-fix.patch 340
+SHA256 be6e7a66acad56044c25ab56d9cbd7d5326c4ba21f5d9ed25caef56a9577bdc8 files/madwifi-ng-0.9.3-uudecode-gcda-fix.patch 340
 AUX madwifi-ng-r1886.patch 965 RMD160 86389659efbd846c12153c7e11043f0fb3c7fd8b SHA1 cda44aff6e99ade85b736cc2f31b13cfee6c3721 SHA256 e068fbfaf9c2f27ac9670b6fc43939ceade0e6c40df88d5e23006be640ca0fbe
 MD5 e72b6534fc8941fd6c890f2ecbf470e6 files/madwifi-ng-r1886.patch 965
 RMD160 86389659efbd846c12153c7e11043f0fb3c7fd8b files/madwifi-ng-r1886.patch 965
@@ -31,14 +35,19 @@ MD5 a0e4e3918e720015a4416efc14431c47 files/madwifi-ng-uudecode-gcda-fix.patch 32
 RMD160 c68566dc426c1ca15b3f858e2696735db8c3fb9e files/madwifi-ng-uudecode-gcda-fix.patch 328
 SHA256 f1a4293ba3235b312d9048cff1f79695c16dd19210e68d0fe07fa1819de21f9d files/madwifi-ng-uudecode-gcda-fix.patch 328
 DIST madwifi-0.9.2.1.tar.bz2 3476892 RMD160 ccbe1d7ae262286a147b37bda960d74284e4af3e SHA1 6606291b6facc299203158bfaa1bde09219459db SHA256 38f1c9980b473a52f11b63981d68326e3706c41f0ca4ba5da90d38bbd6870843
+DIST madwifi-0.9.3.tar.bz2 3488332 RMD160 52eb553669ab83a9c594afd4eb1e297bea07089c SHA1 3f8a78264491dcb4bc98d40f971af546e86f8710 SHA256 847596646417abbdce9cfd0e1dca2cced29c6a8b814d1bd28d0c7301e9e4e9d8
 EBUILD madwifi-ng-0.9.2.1.ebuild 4292 RMD160 9c2f2d8661ba28d72d7b1d251380ace7a70ca45a SHA1 a4daa4ca2341cf758ef2ec107e2f07f28ba66a91 SHA256 c4c97df7bcea36d108baba660a13b83f0ee36779371675d9aa0fdafaf0ec8d6c
 MD5 9ee2bb28973ce555eefce8adae20923a madwifi-ng-0.9.2.1.ebuild 4292
 RMD160 9c2f2d8661ba28d72d7b1d251380ace7a70ca45a madwifi-ng-0.9.2.1.ebuild 4292
 SHA256 c4c97df7bcea36d108baba660a13b83f0ee36779371675d9aa0fdafaf0ec8d6c madwifi-ng-0.9.2.1.ebuild 4292
-MISC ChangeLog 14197 RMD160 0e61fa17fb77293dce57daabf804171ca4226339 SHA1 c77170b19a8ad1add1cc5438331a9e5341770913 SHA256 b8e61834fd4a52a3bb9e5c62a0da9d5db332c8b6b1ce3b27fc8d5dcb3d94e2fb
-MD5 ebb4d0281b98a53de2c9d63e324f3639 ChangeLog 14197
-RMD160 0e61fa17fb77293dce57daabf804171ca4226339 ChangeLog 14197
-SHA256 b8e61834fd4a52a3bb9e5c62a0da9d5db332c8b6b1ce3b27fc8d5dcb3d94e2fb ChangeLog 14197
+EBUILD madwifi-ng-0.9.3.ebuild 3700 RMD160 c8ba7e31406e91a6af11c13e2dedde8ca6c8778c SHA1 314f436668cd98fd1562fce9389a85f93d172fd8 SHA256 ae073b9bcb9426899cdf553cd824163308040a3a288c76aef1c7ceec753b9ae5
+MD5 4ac4fa2ead62f6fb0c11bb583228f1b9 madwifi-ng-0.9.3.ebuild 3700
+RMD160 c8ba7e31406e91a6af11c13e2dedde8ca6c8778c madwifi-ng-0.9.3.ebuild 3700
+SHA256 ae073b9bcb9426899cdf553cd824163308040a3a288c76aef1c7ceec753b9ae5 madwifi-ng-0.9.3.ebuild 3700
+MISC ChangeLog 14467 RMD160 18ec181c12a71a50f5be7b8bd85b019e89a4204f SHA1 94d7872067bf30f661f8d5b7299b4585895d21b3 SHA256 68b11bbd4d2e671557d222552a3216b2b379194d86de2604fd2e37e90b23c0ef
+MD5 f016b59bbc600cf765ddde80ae368a1c ChangeLog 14467
+RMD160 18ec181c12a71a50f5be7b8bd85b019e89a4204f ChangeLog 14467
+SHA256 68b11bbd4d2e671557d222552a3216b2b379194d86de2604fd2e37e90b23c0ef ChangeLog 14467
 MISC metadata.xml 256 RMD160 af310503f82b971c1d6e8e1a5282d455f3427a3e SHA1 c7c8144660775d9edc93ea9cfb820944f7eb3109 SHA256 0bece0d60e3a88523cbaab4bfaafc904a11efd49099bc37388954a243a096f59
 MD5 1e76dba4899dcc307c5a880a729e20ee metadata.xml 256
 RMD160 af310503f82b971c1d6e8e1a5282d455f3427a3e metadata.xml 256
@@ -46,3 +55,6 @@ SHA256 0bece0d60e3a88523cbaab4bfaafc904a11efd49099bc37388954a243a096f59 metadata
 MD5 4759e10919b6002661f86f34d4d1bc7b files/digest-madwifi-ng-0.9.2.1 253
 RMD160 2e13cbbae0eb8588a73d66fd4760e0c2dcd3f077 files/digest-madwifi-ng-0.9.2.1 253
 SHA256 fad1921d8e6f2fbd11167b5ddc0af6eb24ac70b17b7e8e5fa6eec1400fe0bae0 files/digest-madwifi-ng-0.9.2.1 253
+MD5 08d87d4cb379b29c4e24063b03dc75a3 files/digest-madwifi-ng-0.9.3 247
+RMD160 a3b16a034a59b6f8208c0e1e29653d0756de0b8a files/digest-madwifi-ng-0.9.3 247
+SHA256 c35fa1fbdf62a5dc311f54e25a329e6fe220b00e6858f8e5335149056ab97bf0 files/digest-madwifi-ng-0.9.3 247
