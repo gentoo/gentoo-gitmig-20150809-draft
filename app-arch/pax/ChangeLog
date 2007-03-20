@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.10 2006/07/30 20:57:07 killerfox Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.11 2007/03/20 20:59:49 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org> pax-3.3.4.ebuild:
+  x86 stable
 
   30 Jul 2006; Rene Nussbaumer <killerfox@gentoo.org> pax-3.3.4.ebuild:
   Stable on ppc.
