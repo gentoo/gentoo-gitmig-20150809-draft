@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.90 2007/03/18 02:20:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.91 2007/03/20 09:32:55 ticho Exp $
+
+*pine-4.64-r6 (20 Mar 2007)
+
+  20 Mar 2007; Andrej Kacian <ticho@gentoo.org> pine-4.61-r5.ebuild,
+  pine-4.63-r3.ebuild, pine-4.64.ebuild, pine-4.64-r1.ebuild,
+  pine-4.64-r3.ebuild, pine-4.64-r4.ebuild, pine-4.64-r5.ebuild,
+  +pine-4.64-r6.ebuild:
+  Updating HOMEPAGE. Adding 4.64-r6 with updated chappa-all patch.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> pine-4.61-r5.ebuild,
   pine-4.63-r3.ebuild, pine-4.64.ebuild, pine-4.64-r1.ebuild,

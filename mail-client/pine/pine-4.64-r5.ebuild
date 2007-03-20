@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r5.ebuild,v 1.4 2007/03/18 02:20:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r5.ebuild,v 1.5 2007/03/20 09:32:55 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ CHAPPA_PF="${PF}"
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
 HOMEPAGE="http://www.washington.edu/pine/
-	http://www.math.washington.edu/~chappa/pine/patches/"
+	http://staff.washington.edu/chappa/pine/"
 SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 	mirror://gentoo/${CHAPPA_PF}-chappa-all.patch.gz"
 #	ipv6? (
