@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icon-slicer/icon-slicer-0.3.ebuild,v 1.13 2007/01/02 15:58:57 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icon-slicer/icon-slicer-0.3.ebuild,v 1.14 2007/03/20 17:36:29 drac Exp $
 
 DESCRIPTION="utility for generating icon themes and libXcursor cursor themes"
 HOMEPAGE="http://www.freedesktop.org/software/icon-slicer/"
@@ -11,14 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-RDEPEND="|| ( x11-apps/xcursorgen
-			virtual/x11 )
-	>=x11-libs/gtk+-2.0
+RDEPEND="x11-apps/xcursorgen
+	>=x11-libs/gtk+-2
 	dev-libs/popt"
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	einstall || die
-	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog README TODO
 }
