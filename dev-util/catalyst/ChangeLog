@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.164 2007/03/06 19:25:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.165 2007/03/20 17:19:57 wolf31o2 Exp $
+
+*catalyst-2.0.3 (20 Mar 2007)
+
+  20 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -catalyst-2.0.3_pre1.ebuild, -catalyst-2.0.3_pre2.ebuild,
+  -catalyst-2.0.3_pre3.ebuild, +catalyst-2.0.3.ebuild:
+  Version bump to 2.0.3 to resolve bug #166294, bug #166420, bug #166426, bug
+  #166695, bug #169363, and bug #171157.
 
 *catalyst-2.0.3_pre3 (06 Mar 2007)
 
