@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.38 2007/03/20 04:56:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.39 2007/03/20 07:15:12 opfer Exp $
+
+  20 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  zziplib-0.13.49.ebuild:
+  stable x86, security bug 171441
 
   20 Mar 2007; Jeroen Roovers <jer@gentoo.org> zziplib-0.13.49.ebuild:
   Stable for HPPA (bug #171441).
