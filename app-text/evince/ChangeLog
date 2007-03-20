@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.87 2007/03/20 19:09:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.88 2007/03/20 19:35:38 dertobi123 Exp $
+
+  20 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  evince-0.6.1-r2.ebuild:
+  Stable on ppc wrt bug #171545.
 
   20 Mar 2007; Ferris McCormick <fmccor@gentoo.org> evince-0.6.1-r2.ebuild:
   sparc stable --- Bug #171545 --- Has seemed fine for over a month.
