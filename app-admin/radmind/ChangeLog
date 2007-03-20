@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/radmind
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.6 2007/02/10 18:30:53 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.7 2007/03/20 22:40:56 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org> radmind-1.7.1-r1.ebuild:
+  x86 stable
 
 *radmind-1.7.1-r1 (10 Feb 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.57 2007/02/18 13:25:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.58 2007/03/20 22:44:50 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  sysklogd-1.4.2_pre20061230.ebuild:
+  x86 stable
 
   18 Feb 2007; Mike Frysinger <vapier@gentoo.org>
   files/sysklogd-1.4.1-querymod.patch:
