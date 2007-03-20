@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.44 2007/02/06 13:06:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.45 2007/03/20 23:25:34 genstef Exp $
+
+*knoda-0.8.3 (20 Mar 2007)
+
+  20 Mar 2007; <stefan@gentoo.org> +knoda-0.8.3.ebuild:
+  Version bump thanks to Peter Ruskin <aoyu93@dsl.pipex.com> in bug 153003
 
   06 Feb 2007; Simon Stelling <blubb@gentoo.org> knoda-0.8.1.ebuild:
   stable on amd64; bug 152247
