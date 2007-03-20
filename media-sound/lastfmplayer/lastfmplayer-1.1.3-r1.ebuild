@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3.ebuild,v 1.2 2007/02/12 13:55:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r1.ebuild,v 1.1 2007/03/20 21:50:17 genstef Exp $
 
 inherit eutils versionator
 
@@ -18,6 +18,11 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=x11-libs/qt-4.2
 	media-libs/alsa-lib"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/13_alsa-r1.diff
+}
 
 src_compile() {
 	./configure
