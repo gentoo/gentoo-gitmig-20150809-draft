@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.77 2007/02/21 22:43:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.78 2007/03/20 04:10:31 mr_bones_ Exp $
+
+  20 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.80.2/wlist.patch,
+  -files/0.80.2/windowmaker-0.80.2-r1-gentoo.patch,
+  -files/0.80.2/gtk2flickerfix.patch, -files/0.80.2/wmfpo.patch,
+  -files/0.80.2/trance.patch.WM-0.80.2.diff,
+  -files/0.80.2/xinerama.patch.bz2, -windowmaker-0.80.2-r4.ebuild:
+  remove old crufty version
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
