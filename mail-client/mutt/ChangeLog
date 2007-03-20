@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.101 2007/03/18 02:12:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.102 2007/03/20 20:01:00 ferdy Exp $
+
+*mutt-1.5.14 (20 Mar 2007)
+
+  20 Mar 2007; Fernando J. Pereda <ferdy@gentoo.org> +mutt-1.5.14.ebuild:
+  New upstream version.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> mutt-1.5.11-r2.ebuild,
   mutt-1.5.12.ebuild, mutt-1.5.13.ebuild, mutt-1.5.13-r1.ebuild,
