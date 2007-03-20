@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.3 2007/03/01 23:10:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.4 2007/03/20 13:11:47 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -57,7 +57,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-4.0-makefile.patch
-	epatch "${FILESDIR}"/${PN}-4.0-java-pic.patch
+	epatch "${FILESDIR}"/${P}-java-pic.patch
 	epatch "${FILESDIR}"/${P}-header-fix.patch
 	epatch "${FILESDIR}"/${P}-examples.patch
 

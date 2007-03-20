@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.34 2007/03/01 23:10:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.35 2007/03/20 13:11:47 markusle Exp $
+
+  20 Mar 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/scilab-4.1-java-pic.patch, scilab-4.1.ebuild:
+  Added patch to fix linking problems on amd64. 
+  This fixes bug #166521.
 
   01 Mar 2007; Markus Dittrich <markusle@gentoo.org>
   -files/gzvt2-add-gtk2-flags.patch, -scilab-3.1.1-r3.ebuild,
