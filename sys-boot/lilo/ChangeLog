@@ -1,6 +1,23 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.46 2007/03/20 10:46:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.47 2007/03/20 10:49:13 chainsaw Exp $
+
+  20 Mar 2007; Tony Vroon <chainsaw@gentoo.org>
+  -files/lilo-22.7.1-correct-usage-info.patch,
+  -files/lilo-22.7.1-create-install-dirs.patch,
+  -files/lilo-22.7.1-devmapper_gentoo.patch,
+  -files/lilo-22.7.1-manpath.patch, -files/lilo-22.7.1-novga.patch,
+  -files/lilo-22.7.2-correct-usage-info.patch,
+  -files/lilo-22.7.2-create-install-dirs.patch,
+  -files/lilo-22.7.2-devmapper_gentoo.patch,
+  -files/lilo-22.7.2-install-nostrip.patch,
+  -files/lilo-22.7.2-makefile.patch, -files/lilo-22.7.2-manpath.patch,
+  -files/lilo-22.7.2-novga.patch, -files/lilo-22.7-correct-usage-info.patch,
+  -files/lilo-22.7-create-install-dirs.patch,
+  -files/lilo-22.7-devmapper_gentoo.patch,
+  -files/lilo-22.7-install-nostrip.patch, -files/lilo-22.7-manpath.patch,
+  -files/lilo-22.7-novga.patch:
+  Delete orphaned patches as well.
 
 *lilo-22.8 (20 Mar 2007)
 
