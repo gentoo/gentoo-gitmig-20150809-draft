@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.10.ebuild,v 1.1 2006/04/21 01:00:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.10.ebuild,v 1.2 2007/03/20 13:25:35 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.csse.uwa.edu.au/cnet"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tk-8.3.4
