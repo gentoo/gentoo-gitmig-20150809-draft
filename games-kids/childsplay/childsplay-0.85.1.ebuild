@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.85.1.ebuild,v 1.2 2007/03/07 17:02:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.85.1.ebuild,v 1.3 2007/03/20 05:56:41 mr_bones_ Exp $
 
 inherit games python
 
@@ -113,8 +113,14 @@ EOF
 	dodoc doc/README* doc/Changelog doc/copyright
 
 	# Make a launcher.
-	dogamesbin "${FILESDIR}"/childsplay
-	dosed "s:GENTOO_DIR:${_CPDIR}:" "${GAMES_BINDIR}"/childsplay
+	dogamesbin "${FILESDIR}"/childsplay || die
+	sed -i \
+		-e "s:GENTOO_DIR:${_CPDIR}:" \
+		"${D}${GAMES_BINDIR}"/childsplay \
+		|| die "sed failed"
+
+	newicon assetml/childsplay/childsplay-images/chpl-icon-48.png ${PN}.png
+	make_desktop_entry childsplay Childsplay
 
 	prepgamesdirs
 	fperms g+w "${_SCOREFILE}"
