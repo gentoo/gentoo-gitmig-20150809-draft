@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6997 2007/03/19 18:48:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6998 2007/03/20 02:47:03 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1075,11 +1075,6 @@ net-libs/enet
 # - fix crappy state of runnable only in source tree.
 # - provide log output to /var/log somewhere intelligently
 app-benchmarks/ltp
-
-# Michael Sterrett <mr_bones_@gentoo.org> (06 Mar 2006)
-# masked due to security issues: bug #125289
-# unmask locally at your own risk.
-games-fps/cube
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
