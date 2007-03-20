@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.64 2007/02/17 00:01:18 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.65 2007/03/20 06:49:29 opfer Exp $
+
+  20 Mar 2007; Christian Faulhammer <opfer@gentoo.org> gthumb-2.8.1.ebuild:
+  stable x86, bug 171090
 
   16 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
   Removed allanonjl from metadata.xml
