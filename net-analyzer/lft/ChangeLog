@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.17 2007/02/20 00:05:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.18 2007/03/20 14:49:28 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org> lft-2.5.ebuild:
+  x86 stable
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
