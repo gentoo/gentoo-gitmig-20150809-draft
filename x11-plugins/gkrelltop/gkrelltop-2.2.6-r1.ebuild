@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.6-r1.ebuild,v 1.2 2007/03/12 17:40:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.6-r1.ebuild,v 1.3 2007/03/20 20:15:41 lack Exp $
 
 inherit gkrellm-plugin
 
@@ -20,8 +20,13 @@ PLUGIN_SO=gkrelltop2.so
 src_compile() {
 	# Unfortunately, the supplied Makefile won't work properly on
 	# non-x86, so we have to do this the hard way.
-	CONFIG="-DLINUX -DGKRELLM2 -fPIC `pkg-config gtk+-2.0 --cflags`"
-	LIBS="`pkg-config gtk+-2.0 --libs` -shared"
+	if built_with_use app-admin/gkrellm X; then
+		PKGCFG_ITEM="gtk+-2.0"
+	else
+		PKGCFG_ITEM="glib-2.0"
+	fi
+	CONFIG="-DLINUX -DGKRELLM2 -fPIC `pkg-config ${PKGCFG_ITEM} --cflags`"
+	LIBS="`pkg-config ${PKGCFG_ITEM} --libs` -shared"
 	OBJS="top_three2.o"
 	XOBJS="${OBJS} gkrelltop2.o"
 	DOBJS="${OBJS} gkrelltopd.o"
