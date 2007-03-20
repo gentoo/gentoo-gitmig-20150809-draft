@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.15 2007/02/20 00:02:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.16 2007/03/20 14:10:07 armin76 Exp $
+
+  20 Mar 2007; Raúl Porcel <armin76@gentoo.org> fwlogwatch-1.1.ebuild:
+  x86 stable
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

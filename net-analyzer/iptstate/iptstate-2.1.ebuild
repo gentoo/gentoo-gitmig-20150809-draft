@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.1.ebuild,v 1.1 2006/10/08 01:46:34 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.1.ebuild,v 1.2 2007/03/20 14:27:46 armin76 Exp $
 
 DESCRIPTION="IP Tables State displays states being kept by iptables in a top-like format"
 SRC_URI="http://www.phildev.net/iptstate/${P}.tar.bz2"
@@ -10,7 +10,7 @@ DEPEND="sys-libs/ncurses"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
 IUSE=""
 
 src_compile() {
