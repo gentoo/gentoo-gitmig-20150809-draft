@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.19 2007/02/22 01:37:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.20 2007/03/20 20:36:00 drac Exp $
+
+*pngcrush-1.6.4 (20 Mar 2007)
+
+  20 Mar 2007; Samuli Suominen <drac@gentoo.org> -pngcrush-1.6.3.ebuild,
+  +pngcrush-1.6.4.ebuild:
+  Version bump. Fix CC by using toolchain-funcs.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
