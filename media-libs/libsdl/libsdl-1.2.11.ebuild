@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.21 2007/01/19 17:06:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.22 2007/03/20 02:50:26 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -75,6 +75,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sdl-config.patch
 	epatch "${FILESDIR}"/${P}-xinerama-head-0.patch #145917
 	epatch "${FILESDIR}"/${P}-no-inline-BlitRGBtoRGBPixelAlphaMMX3DNOW.patch #148186
+	epatch "${FILESDIR}"/${P}-yasm-checks.patch #163053
 
 	# add yasm-compatible defines to nasm code (hopefully we
 	# can get this killed soonish)

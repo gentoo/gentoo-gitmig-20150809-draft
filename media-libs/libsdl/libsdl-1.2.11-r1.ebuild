@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r1.ebuild,v 1.5 2007/03/05 16:47:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r1.ebuild,v 1.6 2007/03/20 02:50:26 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -77,6 +77,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-no-inline-BlitRGBtoRGBPixelAlphaMMX3DNOW.patch #148186
 	epatch "${FILESDIR}"/${P}-audioConv.patch #151991
 	epatch "${FILESDIR}"/${P}-fbcon-page-header.patch #159923 #169388
+	epatch "${FILESDIR}"/${P}-yasm-checks.patch #163053
 
 	# add yasm-compatible defines to nasm code (hopefully we
 	# can get this killed soonish)
@@ -105,7 +106,7 @@ src_compile() {
 	if [[ $(tc-arch) != "x86" ]] ; then
 		myconf="${myconf} --disable-nasm"
 	else
-		myconf="${myconf} $(use_enable x86 nasm)"
+		myconf="${myconf} --enable-nasm"
 	fi
 	use noflagstrip || strip-flags
 	use noaudio && myconf="${myconf} --disable-audio"
