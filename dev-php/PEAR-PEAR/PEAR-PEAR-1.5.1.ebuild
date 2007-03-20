@@ -1,22 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.15 2007/03/20 19:22:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.5.1.ebuild,v 1.1 2007/03/20 19:22:59 chtekk Exp $
 
 inherit depend.php
 
-ARCHIVE_TAR="1.3.1"
-CONSOLE_GETOPT="1.2"
-XML_RPC="1.5.0"
-PEAR="1.4.11"
+ARCHIVE_TAR="1.3.2"
+CONSOLE_GETOPT="1.2.2"
+STRUCTURES_GRAPH="1.0.2"
+XML_RPC="1.5.1"
+PEAR="1.5.1"
 
 [[ -z "${PEAR_CACHEDIR}" ]] && PEAR_CACHEDIR="/var/cache/pear"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
-DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, XML_RPC)."
+DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, Structures_Graph, XML_RPC)."
 HOMEPAGE="http://pear.php.net/"
 SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 		http://pear.php.net/get/Console_Getopt-${CONSOLE_GETOPT}.tgz
+		http://pear.php.net/get/Structures_Graph-${STRUCTURES_GRAPH}.tgz
 		http://pear.php.net/get/XML_RPC-${XML_RPC}.tgz
 		http://pear.php.net/get/PEAR-${PEAR}.tgz"
 LICENSE="PHP"
@@ -75,7 +77,7 @@ src_install() {
 	sed -i "s:@php_bin@:${PHPCLI}:g" "${WORKDIR}/PEAR/pear" || die "sed failed"
 	sed -i "s:@bin_dir@:/usr/bin:g" "${WORKDIR}/PEAR/pear" || die "sed failed"
 	sed -i "s:@php_dir@:/usr/share/php:g" "${WORKDIR}/PEAR/pear" || die "sed failed"
-	sed -i "s:-d output_buffering=1:-d output_buffering=1 -d memory_limit=16M:g" "${WORKDIR}/PEAR/pear" || die "sed failed"
+	sed -i "s:-d output_buffering=1:-d output_buffering=1 -d memory_limit=32M:g" "${WORKDIR}/PEAR/pear" || die "sed failed"
 
 	# Prepare /usr/bin/peardev script.
 	cp "${WORKDIR}/PEAR-${PEAR}/scripts/peardev.sh" "${WORKDIR}/PEAR/peardev"
@@ -85,6 +87,7 @@ src_install() {
 
 	# Prepare /usr/bin/pecl script.
 	cp "${WORKDIR}/PEAR-${PEAR}/scripts/peclcmd.php" "${WORKDIR}/PEAR/peclcmd.php"
+	sed -i "s:@pear_version@:${PEAR}:g" "${WORKDIR}/PEAR/peclcmd.php" || die "sed failed"
 	cp "${WORKDIR}/PEAR-${PEAR}/scripts/pecl.sh" "${WORKDIR}/PEAR/pecl"
 	sed -i "s:@php_bin@:${PHPCLI}:g" "${WORKDIR}/PEAR/pecl" || die "sed failed"
 	sed -i "s:@bin_dir@:/usr/bin:g" "${WORKDIR}/PEAR/pecl" || die "sed failed"
@@ -94,10 +97,13 @@ src_install() {
 	sed -i "s:@PEAR-VER@:${PEAR}:g" "${WORKDIR}/PEAR/PEAR/Dependency2.php" || die "sed failed"
 
 	# Install Archive_Tar Package.
-	cp -r "${WORKDIR}/Archive_Tar-${ARCHIVE_TAR}/Archive" "${WORKDIR}/PEAR/Archive"
+	cp -r "${WORKDIR}/Archive_Tar-${ARCHIVE_TAR}/Archive" "${WORKDIR}/PEAR/"
 
 	# Install Console_Getopt Package.
 	cp -r "${WORKDIR}/Console_Getopt-${CONSOLE_GETOPT}/Console" "${WORKDIR}/PEAR/"
+
+	# Install Structures_Graph Package.
+	cp -r "${WORKDIR}/Structures_Graph-${STRUCTURES_GRAPH}/Structures" "${WORKDIR}/PEAR/"
 
 	# Install XML_RPC Package.
 	cp "${WORKDIR}/XML_RPC-${XML_RPC}/RPC.php" "${WORKDIR}/PEAR/XML/RPC.php"
@@ -106,7 +112,7 @@ src_install() {
 	# Finalize installation.
 	cd "${WORKDIR}/PEAR"
 	insinto /usr/share/php
-	doins -r Archive Console OS PEAR XML *.php
+	doins -r Archive Console OS PEAR Structures XML *.php
 	dobin pear peardev pecl
 
 	insinto /etc
