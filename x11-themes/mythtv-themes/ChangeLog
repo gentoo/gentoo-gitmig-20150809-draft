@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.25 2007/03/19 03:23:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.26 2007/03/20 18:03:17 cardoe Exp $
+
+  20 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-themes-0.21_pre12945.ebuild:
+  Fix depend for _pre based ebuilds
 
 *mythtv-themes-0.21_pre12945 (19 Mar 2007)
 
