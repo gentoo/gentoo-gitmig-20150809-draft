@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-2.0.ebuild,v 1.1 2006/07/20 11:41:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-2.0.ebuild,v 1.2 2007/03/20 15:39:12 armin76 Exp $
 
 DESCRIPTION="NETI@Home research project from GATech"
 HOMEPAGE="http://www.neti.gatech.edu"
 SRC_URI="mirror://sourceforge/neti/${P}.tar.gz"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="zlib java"
