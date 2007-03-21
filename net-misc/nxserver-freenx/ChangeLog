@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.20 2007/03/21 10:15:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.21 2007/03/21 12:18:15 voyageur Exp $
+
+*nxserver-freenx-0.5.0-r2 (21 Mar 2007)
+
+  21 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/freenx-0.5.0-backingstore.patch, -nxserver-freenx-0.5.0-r1.ebuild,
+  +nxserver-freenx-0.5.0-r2.ebuild:
+  Added support for 2.x NX clients, closes bug #155063
 
 *nxserver-freenx-0.6.0 (21 Mar 2007)
 
