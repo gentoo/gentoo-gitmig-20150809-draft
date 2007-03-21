@@ -6,4 +6,8 @@
   <email>eradicator@gentoo.org</email>
   <name>Jeremy Huddleston</name>
 </maintainer>
+<maintainer>
+  <email>drac@gentoo.org</email>
+  <name>Samuli Suominen</name>
+</maintainer>
 </pkgmetadata>
