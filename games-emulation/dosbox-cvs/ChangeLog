@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox-cvs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.14 2007/03/12 13:56:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.15 2007/03/21 23:15:23 mr_bones_ Exp $
+
+  21 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  dosbox-cvs-20030809.ebuild:
+  sync with dosbox ebuild
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> dosbox-cvs-20030809.ebuild:
   Replacing einfo with elog
