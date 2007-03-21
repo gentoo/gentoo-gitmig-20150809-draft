@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX eselect-reference 173 RMD160 dfe30a5ed9f77317b96aa5a248be6f38eb4d221a SHA1 3b891318df87726074d6d284f2a43b34045db71a SHA256 b6c53c6bf7850ce834b7adc6a244a193ea4c900f5f0cd4484e3bbdb2db295eda
 MD5 539b46a7afa03866fecea8e5a57119ea files/eselect-reference 173
 RMD160 dfe30a5ed9f77317b96aa5a248be6f38eb4d221a files/eselect-reference 173
@@ -13,10 +10,10 @@ AUX lapack-reference-3.0-autotool.patch 21729 RMD160 9929682d01a0ed8f90b37c797f8
 MD5 beb5fc304163a0e8ee0b5ce6f34019ea files/lapack-reference-3.0-autotool.patch 21729
 RMD160 9929682d01a0ed8f90b37c797f882aa5c9547147 files/lapack-reference-3.0-autotool.patch 21729
 SHA256 d5d74fe14c61ef836e03edff65fd685b5c230ce9ed0f7d842936cf48752271a0 files/lapack-reference-3.0-autotool.patch 21729
-AUX lapack-reference-3.1.0-autotool.patch 18857 RMD160 fd14e174aba5e2086270e69bbd77c7a481481361 SHA1 41e6e5aedccc8abecab65940a34406d11746c13f SHA256 99cfbeb499217782f6e89c48e3487d827aa634f2e3d8b06fb0f83da0d2baf55f
-MD5 22e99b41c6abc01cc817757976254d0b files/lapack-reference-3.1.0-autotool.patch 18857
-RMD160 fd14e174aba5e2086270e69bbd77c7a481481361 files/lapack-reference-3.1.0-autotool.patch 18857
-SHA256 99cfbeb499217782f6e89c48e3487d827aa634f2e3d8b06fb0f83da0d2baf55f files/lapack-reference-3.1.0-autotool.patch 18857
+AUX lapack-reference-3.1.0-autotool.patch 18886 RMD160 9606273bd23e63e344762fbe0a59098a9e4898b8 SHA1 ab37ae6449720787331818294e8218e62db23570 SHA256 753b39d28afe18f9d836188c010059f55dd90f17b2dfea5b1fb2a1192c6b9f3a
+MD5 926caa22c59f5d66bac02cf696993d2a files/lapack-reference-3.1.0-autotool.patch 18886
+RMD160 9606273bd23e63e344762fbe0a59098a9e4898b8 files/lapack-reference-3.1.0-autotool.patch 18886
+SHA256 753b39d28afe18f9d836188c010059f55dd90f17b2dfea5b1fb2a1192c6b9f3a files/lapack-reference-3.1.0-autotool.patch 18886
 AUX lapack-reference-3.1.1-autotool.patch 18988 RMD160 0da330f4f8584bf7d3226363b79a03777dec6b04 SHA1 4e05458a5f6b54090ce249f6b94c29d59d0d0a3a SHA256 770361ec42aa3ec90fb2269180e8c816961d1fa906e06f58c12bea9ebe6bc0b7
 MD5 8e9970116104c99a5e56725268cf40cb files/lapack-reference-3.1.1-autotool.patch 18988
 RMD160 0da330f4f8584bf7d3226363b79a03777dec6b04 files/lapack-reference-3.1.1-autotool.patch 18988
@@ -42,10 +39,10 @@ EBUILD lapack-reference-3.1.1.ebuild 1879 RMD160 63c7afdeba259d8fc376558747033ed
 MD5 51dfd987ba3966d77c6141c9ce457846 lapack-reference-3.1.1.ebuild 1879
 RMD160 63c7afdeba259d8fc376558747033edcd3fcb79a lapack-reference-3.1.1.ebuild 1879
 SHA256 c7982252883241ba96d4b4cb3155c45765a76d3a572f1631c25284752b61dba0 lapack-reference-3.1.1.ebuild 1879
-MISC ChangeLog 4097 RMD160 660bc7a02440b6c20c68c1127ce4e1b71ffb9ac1 SHA1 b68c5933d74b173eb0d4fb52075e05868801cc9a SHA256 68754b8219e043cd05e27701f91fdb0bac131d1696d18775ec3cf232f55f56a8
-MD5 844da60fe4d4d12dfaf7e3dcfddeaeee ChangeLog 4097
-RMD160 660bc7a02440b6c20c68c1127ce4e1b71ffb9ac1 ChangeLog 4097
-SHA256 68754b8219e043cd05e27701f91fdb0bac131d1696d18775ec3cf232f55f56a8 ChangeLog 4097
+MISC ChangeLog 4238 RMD160 3b574a1b45e72be6378a754008000c5bfb437a0d SHA1 bdc04f0887d16fe5403b16f0ca64647dbaf92d38 SHA256 5ff1b23dcd44ef61b51cbb9f5bc034f8ddbc84bbbd640a5a273e13dfa13c4871
+MD5 70d3095e5d2337961a706ec01c891ee3 ChangeLog 4238
+RMD160 3b574a1b45e72be6378a754008000c5bfb437a0d ChangeLog 4238
+SHA256 5ff1b23dcd44ef61b51cbb9f5bc034f8ddbc84bbbd640a5a273e13dfa13c4871 ChangeLog 4238
 MISC metadata.xml 156 RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 SHA1 da2b240a255820145b7c83a5c48e45b96b7e9ee6 SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 metadata.xml 156
@@ -62,10 +59,3 @@ SHA256 1f6a13187b9dc33319f676dbb5211bde978d0c9efafe5c23b5d96e8311e19f2d files/di
 MD5 e47577ce12b87f148b170b2226a7cc32 files/digest-lapack-reference-3.1.1 247
 RMD160 f06434c9558a0df45cddbf187e624850b6a4d073 files/digest-lapack-reference-3.1.1 247
 SHA256 34e0e977049b900a8d9c1a0f8a1a9065a6147dc38b4c0850d13f0b75a9be101a files/digest-lapack-reference-3.1.1 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFF9fBy5mJXAu5GbtIRAur/AJ9At+Cl4HHVSxrUx0W+SAH9+sYCgACaAj+z
-fFYZITvBAoFCD59rHAYAsqM=
-=ftoy
------END PGP SIGNATURE-----

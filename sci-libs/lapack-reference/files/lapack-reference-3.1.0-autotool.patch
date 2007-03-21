@@ -1,79 +1,6 @@
-diff -Nru lapack-3.1.0.orig/configure.ac lapack-3.1.0/configure.ac
---- lapack-3.1.0.orig/configure.ac	1970-01-01 01:00:00.000000000 +0100
-+++ lapack-3.1.0/configure.ac	2006-12-07 10:36:48.000000000 +0100
-@@ -0,0 +1,69 @@
-+#                                               -*- Autoconf -*-
-+# Process this file with autoconf to produce a configure script.
-+
-+AC_PREREQ(2.59)
-+AC_INIT(lapack, 3.0+, lapack@cs.utk.edu)
-+AM_INIT_AUTOMAKE([foreign])
-+
-+# Checks for programs.
-+AC_PROG_INSTALL
-+AC_PROG_F77
-+AC_PROG_LIBTOOL
-+
-+AC_ARG_ENABLE(single-real,        AS_HELP_STRING([--disable-single-real],
-+             [Enable single real precision (default: enabled)]),
-+             [S=$enableval], [S=yes SINGLE=yes])
-+
-+AC_ARG_ENABLE(double-real,        AS_HELP_STRING([--disable-double-real],
-+             [Enable double real precision (default: enabled)]),
-+             [D=$enableval], [D=yes DOUBLE=yes])
-+
-+AC_ARG_ENABLE(single-complex,        AS_HELP_STRING([--disable-single-complex],
-+             [Enable single complex precision (default: enabled)]),
-+             [C=$enableval], [C=yes SINGLE=yes])
-+
-+AC_ARG_ENABLE(double-complex,        AS_HELP_STRING([--disable-double-complex],
-+             [Enable double complex precision (default: enabled)]),
-+             [Z=$enableval], [Z=yes DOUBLE=yes])
-+
-+AC_ARG_ENABLE(tests,        AS_HELP_STRING([--enable-tests],
-+             [Build test programs (default: disabled)]),
-+             [DO_TEST=$enableval], [DO_TEST=no])
-+
-+AC_ARG_VAR(NOOPT_FFLAGS, Fortran 77 compiler flags to use for unoptimized files)
-+
-+if test "x$S" = "xno" \
-+	&& test "x$D" = "xno" \
-+	&& test "x$C" = "xno" \
-+	&& test "x$Z" = "xno"; then
-+	AC_MSG_ERROR([You must enable at least one precision!])
-+fi
-+
-+if test "x$DO_TEST" = "xyes"; then
-+	TESTING=testing
-+fi
-+
-+AM_CONDITIONAL([SINGLE], [test "x$SINGLE" = "xyes"])
-+AM_CONDITIONAL([DOUBLE], [test "x$DOUBLE" = "xyes"])
-+AM_CONDITIONAL([S], [test "x$S" = "xyes"])
-+AM_CONDITIONAL([D], [test "x$D" = "xyes"])
-+AM_CONDITIONAL([C], [test "x$C" = "xyes"])
-+AM_CONDITIONAL([Z], [test "x$Z" = "xyes"])
-+AM_CONDITIONAL([DO_TEST], [test "x$DO_TEST" = "xyes"])
-+AC_SUBST(TESTING)
-+
-+AC_CONFIG_FILES([
-+                 INSTALL/Makefile
-+                 Makefile
-+                 SRC/Makefile])
-+#                 BLAS/SRC/Makefile
-+#                 TESTING/EIG/Makefile
-+#                 TESTING/LIN/Makefile
-+#                 TESTING/MATGEN/Makefile
-+#                 TESTING/Makefile
-+#                 TIMING/EIG/EIGSRC/Makefile
-+#                 TIMING/EIG/Makefile
-+#                 TIMING/LIN/LINSRC/Makefile
-+#                 TIMING/LIN/Makefile
-+#                 TIMING/Makefile])
-+AC_OUTPUT
-diff -Nru lapack-3.1.0.orig/INSTALL/Makefile.am lapack-3.1.0/INSTALL/Makefile.am
---- lapack-3.1.0.orig/INSTALL/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ lapack-3.1.0/INSTALL/Makefile.am	2006-12-07 10:36:48.000000000 +0100
+diff -Naur lapack-3.1.0/INSTALL/Makefile.am lapack-3.1.0-new/INSTALL/Makefile.am
+--- lapack-3.1.0/INSTALL/Makefile.am	1969-12-31 19:00:00.000000000 -0500
++++ lapack-3.1.0-new/INSTALL/Makefile.am	2007-03-21 09:04:29.000000000 -0400
 @@ -0,0 +1,23 @@
 +if DO_TEST
 +noinst_PROGRAMS = \
@@ -98,17 +25,17 @@ diff -Nru lapack-3.1.0.orig/INSTALL/Makefile.am lapack-3.1.0/INSTALL/Makefile.am
 +	lawn81.tex \
 +	org2.ps \
 +	psfig.tex
-diff -Nru lapack-3.1.0.orig/Makefile.am lapack-3.1.0/Makefile.am
---- lapack-3.1.0.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ lapack-3.1.0/Makefile.am	2006-12-07 10:36:48.000000000 +0100
+diff -Naur lapack-3.1.0/Makefile.am lapack-3.1.0-new/Makefile.am
+--- lapack-3.1.0/Makefile.am	1969-12-31 19:00:00.000000000 -0500
++++ lapack-3.1.0-new/Makefile.am	2007-03-21 09:04:29.000000000 -0400
 @@ -0,0 +1,3 @@
 +SUBDIRS = INSTALL SRC
 +
 +EXTRA_DIST = README
-diff -Nru lapack-3.1.0.orig/SRC/Makefile.am lapack-3.1.0/SRC/Makefile.am
---- lapack-3.1.0.orig/SRC/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ lapack-3.1.0/SRC/Makefile.am	2006-12-07 10:42:57.000000000 +0100
-@@ -0,0 +1,304 @@
+diff -Naur lapack-3.1.0/SRC/Makefile.am lapack-3.1.0-new/SRC/Makefile.am
+--- lapack-3.1.0/SRC/Makefile.am	1969-12-31 19:00:00.000000000 -0500
++++ lapack-3.1.0-new/SRC/Makefile.am	2007-03-21 09:05:44.000000000 -0400
+@@ -0,0 +1,306 @@
 +lib_LTLIBRARIES = \
 +	liblapack.la
 +
@@ -392,6 +319,8 @@ diff -Nru lapack-3.1.0.orig/SRC/Makefile.am lapack-3.1.0/SRC/Makefile.am
 +
 +liblapack_la_LIBADD = liblapack-noopt.la
 +
++liblapack_la_LDFLAGS = -lblas
++
 +liblapack_la_SOURCES = \
 +	$(ALLAUX_SOURCES) \
 +	$(SINGLE_SOURCES) \
@@ -413,3 +342,76 @@ diff -Nru lapack-3.1.0.orig/SRC/Makefile.am lapack-3.1.0/SRC/Makefile.am
 +	$(LIBTOOL) --tag=F77 --mode=compile $(F77) $(liblapack_noopt_la_FFLAGS) -c -o liblapack_noopt_la-slamch.lo `test -f '../INSTALL/slamch.f' || echo '$(srcdir)/'`../INSTALL/slamch.f
 +liblapack_noopt_la-dlamch.lo: ../INSTALL/dlamch.f
 +	$(LIBTOOL) --tag=F77 --mode=compile $(F77) $(liblapack_noopt_la_FFLAGS) -c -o liblapack_noopt_la-dlamch.lo `test -f '../INSTALL/dlamch.f' || echo '$(srcdir)/'`../INSTALL/dlamch.f
+diff -Naur lapack-3.1.0/configure.ac lapack-3.1.0-new/configure.ac
+--- lapack-3.1.0/configure.ac	1969-12-31 19:00:00.000000000 -0500
++++ lapack-3.1.0-new/configure.ac	2007-03-21 09:04:29.000000000 -0400
+@@ -0,0 +1,69 @@
++#                                               -*- Autoconf -*-
++# Process this file with autoconf to produce a configure script.
++
++AC_PREREQ(2.59)
++AC_INIT(lapack, 3.0+, lapack@cs.utk.edu)
++AM_INIT_AUTOMAKE([foreign])
++
++# Checks for programs.
++AC_PROG_INSTALL
++AC_PROG_F77
++AC_PROG_LIBTOOL
++
++AC_ARG_ENABLE(single-real,        AS_HELP_STRING([--disable-single-real],
++             [Enable single real precision (default: enabled)]),
++             [S=$enableval], [S=yes SINGLE=yes])
++
++AC_ARG_ENABLE(double-real,        AS_HELP_STRING([--disable-double-real],
++             [Enable double real precision (default: enabled)]),
++             [D=$enableval], [D=yes DOUBLE=yes])
++
++AC_ARG_ENABLE(single-complex,        AS_HELP_STRING([--disable-single-complex],
++             [Enable single complex precision (default: enabled)]),
++             [C=$enableval], [C=yes SINGLE=yes])
++
++AC_ARG_ENABLE(double-complex,        AS_HELP_STRING([--disable-double-complex],
++             [Enable double complex precision (default: enabled)]),
++             [Z=$enableval], [Z=yes DOUBLE=yes])
++
++AC_ARG_ENABLE(tests,        AS_HELP_STRING([--enable-tests],
++             [Build test programs (default: disabled)]),
++             [DO_TEST=$enableval], [DO_TEST=no])
++
++AC_ARG_VAR(NOOPT_FFLAGS, Fortran 77 compiler flags to use for unoptimized files)
++
++if test "x$S" = "xno" \
++	&& test "x$D" = "xno" \
++	&& test "x$C" = "xno" \
++	&& test "x$Z" = "xno"; then
++	AC_MSG_ERROR([You must enable at least one precision!])
++fi
++
++if test "x$DO_TEST" = "xyes"; then
++	TESTING=testing
++fi
++
++AM_CONDITIONAL([SINGLE], [test "x$SINGLE" = "xyes"])
++AM_CONDITIONAL([DOUBLE], [test "x$DOUBLE" = "xyes"])
++AM_CONDITIONAL([S], [test "x$S" = "xyes"])
++AM_CONDITIONAL([D], [test "x$D" = "xyes"])
++AM_CONDITIONAL([C], [test "x$C" = "xyes"])
++AM_CONDITIONAL([Z], [test "x$Z" = "xyes"])
++AM_CONDITIONAL([DO_TEST], [test "x$DO_TEST" = "xyes"])
++AC_SUBST(TESTING)
++
++AC_CONFIG_FILES([
++                 INSTALL/Makefile
++                 Makefile
++                 SRC/Makefile])
++#                 BLAS/SRC/Makefile
++#                 TESTING/EIG/Makefile
++#                 TESTING/LIN/Makefile
++#                 TESTING/MATGEN/Makefile
++#                 TESTING/Makefile
++#                 TIMING/EIG/EIGSRC/Makefile
++#                 TIMING/EIG/Makefile
++#                 TIMING/LIN/LINSRC/Makefile
++#                 TIMING/LIN/Makefile
++#                 TIMING/Makefile])
++AC_OUTPUT
