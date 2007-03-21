@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.161 2007/03/13 01:07:08 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.162 2007/03/21 03:40:22 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -675,31 +675,31 @@ vim_pkg_postinst() {
 	if [[ $(get_major_version ) -lt 7 ]] ; then
 		if [[ "${MY_PN}" == "gvim" ]] ; then
 			echo
-			einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
-			einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
-			einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
-			einfo
-			einfo "note: to find out which fonts you can use, please read the UTF-8 help:"
-			einfo ":h utf-8"
-			einfo
-			einfo "Then, set read encoding to UTF-8:"
-			einfo ":set encoding=utf-8"
+			elog "To enable UTF-8 viewing, set guifont and guifontwide: "
+			elog ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
+			elog ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
+			elog
+			elog "note: to find out which fonts you can use, please read the UTF-8 help:"
+			elog ":h utf-8"
+			elog
+			elog "Then, set read encoding to UTF-8:"
+			elog ":set encoding=utf-8"
 		elif [[ "${MY_PN}" == "vim" ]] ; then
 			echo
-			einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
+			elog "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 		fi
 	else
 		if [[ "${MY_PN}" == "vim" ]] ; then
 			echo
-			einfo "To install a GUI version of vim, use the app-editors/gvim"
-			einfo "package."
+			elog "To install a GUI version of vim, use the app-editors/gvim"
+			elog "package."
 		fi
 		echo
-		einfo "Vim 7 includes an integrated spell checker. You need to install"
-		einfo "word list files before you can use it. There are ebuilds for"
-		einfo "some of these named app-vim/vim-spell-*. If your language of"
-		einfo "choice is not included, please consult vim-spell.eclass for"
-		einfo "instructions on how to make a package."
+		elog "Vim 7 includes an integrated spell checker. You need to install"
+		elog "word list files before you can use it. There are ebuilds for"
+		elog "some of these named app-vim/vim-spell-*. If your language of"
+		elog "choice is not included, please consult vim-spell.eclass for"
+		elog "instructions on how to make a package."
 		ewarn
 		ewarn "Note that the English word lists are no longer installed by"
 		ewarn "default."
@@ -707,7 +707,7 @@ vim_pkg_postinst() {
 
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		echo
-		einfo "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
+		elog "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
 	fi
 
 	# Warn about VIMRUNTIME
