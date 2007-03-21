@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.6.3.ebuild,v 1.1 2007/03/16 04:56:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.6.3.ebuild,v 1.2 2007/03/21 03:00:47 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -19,24 +19,29 @@ DEPEND=">=sys-libs/ncurses-5.3-r1
 RDEPEND="${DEPEND}
 	>=sys-devel/gdb-5.3"
 
-WANT_AUTOCONF="1.9"
-WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-fbsd.patch"
+	epatch "${FILESDIR}/${P}-makefile-race.patch"
 
 	AT_M4DIR="${S}/config" eautomake
 }
 
 src_compile() {
 	econf || die "econf failed"
+
+	# not very parallel-friendly makefiles have been patched
+	# (see bug 171502)
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die "make install failed"
+	emake DESTDIR=${D} install || die "make install failed"
+
 	dodoc AUTHORS ChangeLog NEWS README
 }

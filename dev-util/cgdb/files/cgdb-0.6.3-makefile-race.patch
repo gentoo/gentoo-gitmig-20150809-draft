@@ -1,0 +1,68 @@
+Index: tgdb/tgdb-base/src/Makefile.am
+===================================================================
+--- tgdb/tgdb-base/src/Makefile.am	(revision 841)
++++ tgdb/tgdb-base/src/Makefile.am	(working copy)
+@@ -34,4 +34,4 @@
+ $(top_builddir)/various/rline/src \
+ $(top_builddir)/tgdb/annotate-two/src \
+ $(top_builddir)/tgdb/gdbmi/src \
+-$(top_builddir)/tgdb/tgdb-base/src
++libtgdb.a
+Index: various/adt/src/Makefile.am
+===================================================================
+--- various/adt/src/Makefile.am	(revision 841)
++++ various/adt/src/Makefile.am	(working copy)
+@@ -19,7 +19,7 @@
+ ibuf_driver_LDFLAGS = -L. -L$(top_builddir)/various/util/src
+ ibuf_driver_LDADD = -ladt -lutil
+ ibuf_driver_SOURCES = ibuf_driver.c
+-ibuf_driver_DEPENDENCIES = $(top_builddir)/various/adt/src \
++ibuf_driver_DEPENDENCIES = libadt.a \
+                            $(top_builddir)/various/util/src
+ ibuf_driver_CFLAGS = $(AM_CFLAGS)
+ 
+@@ -27,7 +27,7 @@
+ std_hash_driver_LDFLAGS = -L. -L$(top_builddir)/various/util/src
+ std_hash_driver_LDADD = -ladt -lutil
+ std_hash_driver_SOURCES = std_hash_driver.c
+-std_hash_driver_DEPENDENCIES = $(top_builddir)/various/adt/src \
++std_hash_driver_DEPENDENCIES = libadt.a \
+                                $(top_builddir)/various/util/src
+ std_hash_driver_CFLAGS = $(AM_CFLAGS)
+ 
+@@ -35,7 +35,7 @@
+ std_list_driver_LDFLAGS = -L. -L$(top_builddir)/various/util/src
+ std_list_driver_LDADD = -ladt -lutil
+ std_list_driver_SOURCES = std_list_driver.c
+-std_list_driver_DEPENDENCIES = $(top_builddir)/various/adt/src \
++std_list_driver_DEPENDENCIES = libadt.a \
+                                $(top_builddir)/various/util/src
+ std_list_driver_CFLAGS = $(AM_CFLAGS)
+ 
+@@ -43,7 +43,7 @@
+ std_btree_driver_LDFLAGS = -L. -L$(top_builddir)/various/util/src
+ std_btree_driver_LDADD = -ladt -lutil
+ std_btree_driver_SOURCES = std_btree_driver.c
+-std_btree_driver_DEPENDENCIES = $(top_builddir)/various/adt/src \
++std_btree_driver_DEPENDENCIES = libadt.a \
+                                $(top_builddir)/various/util/src
+ std_btree_driver_CFLAGS = $(AM_CFLAGS)
+ 
+@@ -51,6 +51,6 @@
+ std_bbtree_driver_LDFLAGS = -L. -L$(top_builddir)/various/util/src
+ std_bbtree_driver_LDADD = -ladt -lutil
+ std_bbtree_driver_SOURCES = std_bbtree_driver.c
+-std_bbtree_driver_DEPENDENCIES = $(top_builddir)/various/adt/src \
++std_bbtree_driver_DEPENDENCIES = libadt.a \
+                                $(top_builddir)/various/util/src
+ std_bbtree_driver_CFLAGS = $(AM_CFLAGS)
+Index: lib/gdbmi/src/Makefile.am
+===================================================================
+--- lib/gdbmi/src/Makefile.am	(revision 841)
++++ lib/gdbmi/src/Makefile.am	(working copy)
+@@ -18,4 +18,4 @@
+ gdbmi_driver_LDFLAGS = -L.
+ gdbmi_driver_LDADD = -lgdbmi
+ gdbmi_driver_SOURCES = gdbmi_driver.c
+-gdbmi_driver_DEPENDENCIES = $(top_builddir)/src
++gdbmi_driver_DEPENDENCIES = libgdbmi.a
