@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.25 2007/03/14 13:37:59 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.26 2007/03/21 16:35:05 armin76 Exp $
+
+  21 Mar 2007; Raúl Porcel <armin76@gentoo.org> tenshi-0.6.ebuild:
+  x86 stable wrt bug 171685
 
 *tenshi-0.7 (14 Mar 2007)
 
