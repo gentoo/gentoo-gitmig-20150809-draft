@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7006 2007/03/21 22:36:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7007 2007/03/21 22:41:28 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -923,11 +923,6 @@ media-gfx/xzgv
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/sid-milter
-
-# Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
-# media-video/kdenlive-0.2.4
-# Masking broken version, pending removal
-=media-video/kdenlive-0.2.4
 
 # Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
 # masking snapshot version, official release is out
