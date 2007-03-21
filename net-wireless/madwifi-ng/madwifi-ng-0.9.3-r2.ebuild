@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3-r1.ebuild,v 1.1 2007/03/21 00:22:15 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3-r2.ebuild,v 1.1 2007/03/21 15:29:28 steev Exp $
 
 inherit linux-mod
 
@@ -43,13 +43,15 @@ pkg_setup() {
 				ath_rate_onoe(net:${S}/ath_rate/onoe)
 				ath_rate_sample(net:${S}/ath_rate/sample)
 				ath_pci(net:${S}/ath)"
+
+	BUILD_PARAMS="KERNELPATH=${KV_OUT_DIR}"
 }
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PV}-uudecode-gcda-fix.patch
+	epatch ${FILESDIR}/${P}-uudecode-gcda-fix.patch
 	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/onoe ath_rate/sample; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
