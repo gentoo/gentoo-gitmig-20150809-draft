@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.81 2007/03/17 18:41:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.82 2007/03/21 00:02:04 voyageur Exp $
+
+  20 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  2006.0/no-multilib/package.mask, dev/2007.0/no-multilib/package.mask,
+  2006.1/no-multilib/package.mask:
+  Masked net-misc/nx and net-misc/nxserver-freenx on no-multilib profiles
 
   17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   dev/2007.0/package.use.mask, package.use.mask, use.mask:
