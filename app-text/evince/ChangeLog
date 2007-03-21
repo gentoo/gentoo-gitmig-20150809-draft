@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.89 2007/03/21 00:16:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.90 2007/03/21 07:20:55 opfer Exp $
+
+  21 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  evince-0.6.1-r2.ebuild:
+  stable x86, bug 171545
 
   21 Mar 2007; Jeroen Roovers <jer@gentoo.org> evince-0.6.1-r2.ebuild:
   Stable for HPPA (bug #171545).
