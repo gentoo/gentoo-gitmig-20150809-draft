@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.86 2007/03/16 20:16:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.87 2007/03/21 15:51:37 wolf31o2 Exp $
+
+  21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  nfs-utils-1.0.10.ebuild:
+  Stable on amd64 wrt bug #167664.
 
   16 Mar 2007; nixnut <nixnut@gentoo.org> nfs-utils-1.0.10.ebuild:
   Stable on ppc wrt bug 167664
