@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/beryl-0.2.1.ebuild,v 1.2 2007/03/21 06:41:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/beryl-0.2.1.ebuild,v 1.3 2007/03/21 06:46:07 tsunam Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="kde gnome emerald"
 
 RDEPEND="~x11-wm/beryl-core-${PV}
 	~x11-plugins/beryl-plugins-${PV}
-	emerald? ( ~x11-wm/emerald-${PV} )
+	!emerald? ( ~x11-wm/emerald-${PV} )
 	kde? ( ~x11-wm/aquamarine-${PV} )
 	gnome? ( ~x11-wm/heliodor-${PV} )
 	~x11-misc/beryl-settings-${PV}
@@ -32,8 +32,8 @@ pkg_setup() {
 		elog "unless you enable emerald, kde, or gnome (unless provided"
 		elog "externally via another package)."
 		echo
-		elog "To enable the default window decorator, please disable the"
-		elog "noemerald use flag. Alternatively, set use kde or gnome for"
+		elog "To enable the default window decorator, please enable the"
+		elog "emerald use flag. Alternatively, set use kde or gnome for"
 		elog "aquamarine and/or heliodor, respectively."
 		echo
 	fi
