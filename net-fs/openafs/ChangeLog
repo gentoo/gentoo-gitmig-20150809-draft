@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.98 2007/03/08 21:51:58 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.99 2007/03/21 10:14:09 stefaan Exp $
+
+*openafs-1.4.4 (21 Mar 2007)
+
+  21 Mar 2007; Stefaan De Roeck <stefaan@gentoo.org> +openafs-1.4.4.ebuild:
+  Version bump directly to 1.4.4, addresses privilege escalation security
+  advisory at
+  https://lists.openafs.org/pipermail/openafs-announce/2007/000187.html
 
 *openafs-1.4.3_rc3 (08 Mar 2007)
 
