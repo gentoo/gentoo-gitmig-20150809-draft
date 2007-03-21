@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.288 2007/03/19 18:49:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.289 2007/03/21 13:51:45 wolf31o2 Exp $
+
+  21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> udev-104-r12.ebuild:
+  Stable on alpha wrt bug #159871.
 
 *udev-106-r5 (19 Mar 2007)
 
