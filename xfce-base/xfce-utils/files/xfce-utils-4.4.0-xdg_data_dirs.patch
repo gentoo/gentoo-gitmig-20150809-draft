@@ -1,7 +1,7 @@
 diff -ur xfce-utils-4.4.0.orig/scripts/startxfce4.in xfce-utils-4.4.0/scripts/startxfce4.in
 --- xfce-utils-4.4.0.orig/scripts/startxfce4.in	2007-01-20 19:02:51.000000000 +0200
-+++ xfce-utils-4.4.0/scripts/startxfce4.in	2007-03-03 17:32:41.000000000 +0200
-@@ -19,14 +19,14 @@
++++ xfce-utils-4.4.0/scripts/startxfce4.in	2007-03-21 16:28:55.000000000 +0200
+@@ -19,22 +19,22 @@
  #  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  #
  
@@ -18,9 +18,11 @@ diff -ur xfce-utils-4.4.0.orig/scripts/startxfce4.in xfce-utils-4.4.0/scripts/st
 -if test x"$XDG_DATA_DIRS" = x""
 +if test "x$XDG_DATA_DIRS" = "x"
  then
-   XDG_DATA_DIRS="/usr/share:/usr/local/share:@datadir@"
+-  XDG_DATA_DIRS="/usr/share:/usr/local/share:@datadir@"
++  XDG_DATA_DIRS="/usr/local/share:/usr/share:@datadir@"
  else
-@@ -34,7 +34,7 @@
+-  XDG_DATA_DIRS="$XDG_DATA_DIRS:@datadir@"
++  XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/local/share:/usr/share:@datadir@"
  fi
  export XDG_DATA_DIRS
  

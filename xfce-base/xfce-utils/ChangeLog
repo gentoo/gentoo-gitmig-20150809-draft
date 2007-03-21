@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.99 2007/03/15 13:30:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.100 2007/03/21 14:38:38 drac Exp $
+
+  21 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  files/xfce-utils-4.4.0-xdg_data_dirs.patch:
+  Make XDG_DATA_DIRS allways include /usr/local as per f.d.o basedir spec.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce-utils-4.4.0-r3.ebuild:
   Stable on ppc64; bug #169987
