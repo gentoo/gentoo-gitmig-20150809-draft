@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.3 2007/03/21 10:06:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.4 2007/03/21 14:55:10 jer Exp $
+
+  21 Mar 2007; Jeroen Roovers <jer@gentoo.org> libmowgli-0.1.2.ebuild:
+  Marked ~hppa (bug #171580).
 
 *libmowgli-0.1.2 (21 Mar 2007)
 
