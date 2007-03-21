@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.6.3.ebuild,v 1.1 2006/07/09 20:37:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.6.3.ebuild,v 1.2 2007/03/21 17:30:21 armin76 Exp $
 
 inherit python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dag.wieers.com/home-made/dstat/"
 SRC_URI="http://dag.wieers.com/home-made/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/python"
