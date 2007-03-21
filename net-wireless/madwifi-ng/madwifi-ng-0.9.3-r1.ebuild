@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.ebuild,v 1.1 2007/03/20 01:40:22 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3-r1.ebuild,v 1.1 2007/03/21 00:22:15 steev Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,6 @@ LICENSE="atheros-hal
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="amrr injection onoe"
 DEPEND="app-arch/sharutils"
 RDEPEND="!net-wireless/madwifi-old
 		~net-wireless/madwifi-ng-tools-${PV:0:5}"
@@ -39,37 +38,19 @@ pkg_setup() {
 				wlan_wep(net:${S}/net80211)
 				wlan_xauth(net:${S}/net80211)
 				wlan_scan_sta(net:${S}/net80211)
-				wlan_scan_ap(net:${S}/net80211)"
-
-	BUILD_PARAMS="KERNELPATH=${KV_OUT_DIR}"
-
-	if use amrr && use onoe; then
-		eerror
-		eerror "USE=\"amrr onoe\" is invalid, you can only specify one at a time."
-		eerror
-		die "USE=\"amrr onoe\" is invalid"
-	fi
-
-	if use amrr; then
-		MODULE_NAMES="${MODULE_NAMES} ath_rate_amrr(net:${S}/ath_rate/amrr)"
-		BUILD_PARAMS="${BUILD_PARAMS} ATH_RATE=ath_rate/amrr"
-	elif use onoe; then
-		MODULE_NAMES="${MODULE_NAMES} ath_rate_onoe(net:${S}/ath_rate/onoe)"
-		BUILD_PARAMS="${BUILD_PARAMS} ATH_RATE=ath_rate/onoe"
-	else
-		MODULE_NAMES="${MODULE_NAMES} ath_rate_sample(net:${S}/ath_rate/sample)"
-		BUILD_PARAMS="${BUILD_PARAMS} ATH_RATE=ath_rate/sample"
-	fi
-
-	MODULE_NAMES="${MODULE_NAMES} ath_pci(net:${S}/ath)"
+				wlan_scan_ap(net:${S}/net80211)
+				ath_rate_amrr(net:${S}/ath_rate/amrr)
+				ath_rate_onoe(net:${S}/ath_rate/onoe)
+				ath_rate_sample(net:${S}/ath_rate/sample)
+				ath_pci(net:${S}/ath)"
 }
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.9.3-uudecode-gcda-fix.patch
-	for dir in ath net80211 ath_rate/amrr ath_rate/onoe ath_rate/sample; do
+	epatch ${FILESDIR}/${PN}-${PV}-uudecode-gcda-fix.patch
+	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/onoe ath_rate/sample; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
 }
@@ -90,18 +71,6 @@ src_install() {
 pkg_postinst() {
 	local moddir="${ROOT}/lib/modules/${KV_FULL}/net/"
 
-	einfo "Removing old ath_rate modules"
-	if use amrr; then
-		[[ -f "${moddir}/ath_rate_onoe.${KV_OBJ}" ]] && rm "${moddir}/ath_rate_onoe.${KV_OBJ}"
-		[[ -f "${moddir}/ath_rate_sample.${KV_OBJ}" ]] && rm "${moddir}/ath_rate_sample.${KV_OBJ}"
-	elif use onoe; then
-		[[ -f "${moddir}/ath_rate_amrr.${KV_OBJ}" ]] && rm "${moddir}/ath_rate_amrr.${KV_OBJ}"
-		[[ -f "${moddir}/ath_rate_sample.${KV_OBJ}" ]] && rm "${moddir}/ath_rate_sample.${KV_OBJ}"
-	else
-		[[ -f "${moddir}/ath_rate_amrr.${KV_OBJ}" ]] && rm "${moddir}/ath_rate_amrr.${KV_OBJ}"
-		[[ -f "${moddir}/ath_rate_onoe.${KV_OBJ}" ]] && rm "${moddir}/ath_rate_onoe.${KV_OBJ}"
-	fi
-
 	linux-mod_pkg_postinst
 
 	einfo
@@ -110,6 +79,10 @@ pkg_postinst() {
 	einfo
 	einfo "The type of the created interface can be controlled through the 'autocreate'"
 	einfo "module parameter."
+	einfo
+	einfo "As of net-wireless/madwifi-ng-0.9.3 rate control module selection is done at"
+	einfo "module load time via the 'ratectl' module parameter. USE flags amrr and onoe"
+	einfo "no longer serve any purpose."
 	einfo
 	einfo "If you use net-wireless/wpa_supplicant or net-wireless/hostapd with madwifi"
 	einfo "you should remerge them now."

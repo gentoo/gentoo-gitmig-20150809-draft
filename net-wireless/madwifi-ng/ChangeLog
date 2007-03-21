@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.27 2007/03/20 01:40:22 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.28 2007/03/21 00:22:15 steev Exp $
+
+*madwifi-ng-0.9.3-r1 (21 Mar 2007)
+
+  21 Mar 2007; Steev Klimaszewski <steev@gentoo.org>
+  -madwifi-ng-0.9.3.ebuild, +madwifi-ng-0.9.3-r1.ebuild:
+  Fix up the ebuild a bit (and revbump because of building all the rate control
+  modules now) - thanks to the unknown person in bug #171529.
 
 *madwifi-ng-0.9.3 (20 Mar 2007)
 
