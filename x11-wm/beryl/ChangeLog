@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/beryl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/ChangeLog,v 1.11 2007/03/21 03:14:09 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/ChangeLog,v 1.12 2007/03/21 06:41:49 tsunam Exp $
+
+  21 Mar 2007; Joshua Jackson <tsunam@gentoo.org> beryl-0.2.1.ebuild:
+  unknown flag and bad use of no *bonks self*
 
 *beryl-0.2.1 (21 Mar 2007)
 
