@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.11 2005/01/01 12:38:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.12 2007/03/21 21:51:45 armin76 Exp $
+
+inherit eutils
 
 DESCRIPTION="Rotix allows you to generate rotational obfuscations."
 HOMEPAGE="http://elektron.its.tudelft.nl/~hemmin98/rotix.html"
@@ -13,6 +15,12 @@ IUSE="nls"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-respect-CFLAGS-and-dont-strip.patch
+}
+
 src_compile() {
 	local myconf
 	use nls && myconf="--i18n=1"
@@ -21,5 +29,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 }
