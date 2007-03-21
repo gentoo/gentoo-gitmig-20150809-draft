@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.3.ebuild,v 1.1 2007/03/20 17:19:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.3.ebuild,v 1.2 2007/03/21 19:33:43 wolf31o2 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ccache cdr"
+IUSE="ccache"
 
 DEPEND=""
 RDEPEND="dev-lang/python
@@ -22,7 +22,7 @@ RDEPEND="dev-lang/python
 	amd64? ( sys-apps/setarch )
 	ia64? ( sys-fs/dosfstools )
 	ppc64? ( sys-apps/setarch )
-	!x86-fbsd? ( app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )"
+	kernel_linux? ( app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )"
 
 pkg_setup() {
 	if use ccache ; then
