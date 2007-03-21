@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/httplib2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.1 2006/10/23 20:10:36 peper Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.2 2007/03/21 16:24:32 peper Exp $
+
+*httplib2-0.3.0 (21 Mar 2007)
+
+  21 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> +httplib2-0.3.0.ebuild:
+  Version bump.
 
 *httplib2-0.2.0 (23 Oct 2006)
 
