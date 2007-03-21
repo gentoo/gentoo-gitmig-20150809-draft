@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/beryl-0.2.1.ebuild,v 1.3 2007/03/21 06:46:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/beryl-0.2.1.ebuild,v 1.4 2007/03/21 15:38:05 drac Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="kde gnome emerald"
 
 RDEPEND="~x11-wm/beryl-core-${PV}
 	~x11-plugins/beryl-plugins-${PV}
-	!emerald? ( ~x11-wm/emerald-${PV} )
+	emerald? ( ~x11-wm/emerald-${PV} )
 	kde? ( ~x11-wm/aquamarine-${PV} )
 	gnome? ( ~x11-wm/heliodor-${PV} )
 	~x11-misc/beryl-settings-${PV}
