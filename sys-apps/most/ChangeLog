@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.26 2007/02/04 02:54:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.27 2007/03/21 17:49:53 armin76 Exp $
+
+  21 Mar 2007; Raúl Porcel <armin76@gentoo.org> most-4.10.2-r1.ebuild:
+  x86 stable
 
   04 Feb 2007; Ryan Hill <dirtyepic@gentoo.org> -most-4.9.2.ebuild,
   -most-4.9.4.ebuild, most-4.9.5.ebuild, most-4.10.2-r1.ebuild:
