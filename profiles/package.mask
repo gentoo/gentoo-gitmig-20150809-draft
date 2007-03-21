@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7005 2007/03/21 20:30:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7006 2007/03/21 22:36:37 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1072,10 +1072,6 @@ games-roguelike/noegnud-nethack
 # Jeremy Huddleston <eradicator@gentoo.org> (21 Mar 2006)
 # Development version of squirrelmail
 >=mail-client/squirrelmail-1.5
-
-# Michael Sterrett <mr_bones_@gentoo.org> (12 Mar 2006)
-# masked due to security issues: bug #125990
-net-libs/enet
 
 # Petteri Räty <betelgeuse@gentoo.org> (12 Mar 2006)
 # Because of changes in ebay our current versions do not work
