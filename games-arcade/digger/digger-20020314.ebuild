@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20020314.ebuild,v 1.9 2006/05/21 18:35:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20020314.ebuild,v 1.10 2007/03/21 17:02:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -17,8 +17,8 @@ DEPEND="media-libs/libsdl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gcc3.patch
 }
 
 src_compile() {
@@ -26,7 +26,8 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin digger
+	dogamesbin digger || die "dogamesbin failed"
 	dodoc digger.txt
+	make_desktop_entry digger Digger
 	prepgamesdirs
 }
