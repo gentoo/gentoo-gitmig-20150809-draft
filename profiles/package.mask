@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7003 2007/03/20 15:14:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7004 2007/03/21 18:21:30 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -251,8 +251,8 @@ www-servers/yaws
 # issues for KDE users, please test
 =app-shells/tcsh-6.14-r32
 
-# Samuli Suominen (1 Mar 2007)
-# Broken. Masked for testing. See bug #146443
+# Samuli Suominen <drac@gentoo.org> (1 Mar 2007)
+# Multiple QA notices. Masked for testing. See bug 146443.
 media-video/dxr3player
 
 # Denis Dupeyron <calchan@gentoo.org> (28 Feb 2007)
