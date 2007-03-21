@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif-gtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.21 2007/03/21 13:12:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.22 2007/03/21 15:59:27 armin76 Exp $
+
+  21 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  libexif-gtk-0.3.5-r1.ebuild:
+  x86 stable wrt bug 167729
 
   21 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libexif-gtk-0.3.5-r1.ebuild:
