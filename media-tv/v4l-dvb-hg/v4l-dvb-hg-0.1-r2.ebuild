@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.7 2007/01/05 17:14:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.8 2007/03/21 20:28:49 zzam Exp $
 
 
 : ${EHG_REPO_URI:=${V4l_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
@@ -78,8 +78,7 @@ src_unpack() {
 	sed -i ${S}/../linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
 
 	cd ${S}
-	sed -e 's#/lib/modules/$(KERNELRELEASE)/kernel/drivers/media#$(DESTDIR)/$(DEST)#' \
-		-e '/-install::/s:rminstall::' \
+	sed	-e '/-install::/s:rminstall::' \
 		-i Makefile
 
 	elog "Removing depmod-calls"
@@ -91,8 +90,11 @@ src_unpack() {
 
 src_install() {
 	# install the modules
-	make install DESTDIR="${D}" \
-		DEST="/lib/modules/${KV_FULL}/v4l-dvb" \
+	local DEST="${D}/lib/modules/${KV_FULL}/v4l-dvb"
+	make install \
+		DEST="${DEST}" \
+		KDIR26="${DEST}" \
+		KDIRA="${DEST}" \
 	|| die "make install failed"
 
 	cd ${S}/..
