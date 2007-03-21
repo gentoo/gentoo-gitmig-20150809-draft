@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dfm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dfm/ChangeLog,v 1.8 2007/02/21 22:23:00 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dfm/ChangeLog,v 1.9 2007/03/21 20:48:31 armin76 Exp $
+
+  21 Mar 2007; Raúl Porcel <armin76@gentoo.org> dfm-0.99.9.ebuild:
+  Add x11-libs/libXpm dep, bug 151620
 
   21 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
   avenj has retired - removing from metadata
