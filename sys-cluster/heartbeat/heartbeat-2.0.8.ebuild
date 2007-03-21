@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.2 2007/03/01 00:48:11 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.3 2007/03/21 13:25:47 xmerlin Exp $
 
 inherit flag-o-matic eutils
 
@@ -48,6 +48,7 @@ src_unpack() {
 	cd ${S}
 	#epatch ${FILESDIR}/${P}-update-resources-failcount.patch || die
 	epatch ${FILESDIR}/${P}-crm-leaks.patch || die
+	epatch ${FILESDIR}/${P}-delay.patch || die
 }
 
 src_compile() {
