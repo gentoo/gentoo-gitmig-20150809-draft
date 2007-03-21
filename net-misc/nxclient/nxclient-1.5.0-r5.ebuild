@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r5.ebuild,v 1.1 2006/11/08 20:38:22 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r5.ebuild,v 1.2 2007/03/21 19:39:39 armin76 Exp $
 
 inherit rpm
 
@@ -15,7 +15,7 @@ SRC_URI="http://web04.nomachine.com/download/1.5.0/client/${P}-141.i386.rpm"
 
 # This is only supported upstream on 32-bit x86.
 # Do _not_ mark it for any other arches.
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="
 	net-analyzer/gnu-netcat
