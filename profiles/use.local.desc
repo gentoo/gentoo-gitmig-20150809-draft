@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2682 2007/03/20 21:13:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2683 2007/03/21 06:45:02 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -176,12 +176,9 @@ app-misc/graphlcd-base:g15 - Add support for g15daemon driver ( e.g Logitech G15
 app-misc/lcd-stuff:mpd - Add support for display of mpd controlled music
 app-misc/lcd-stuff:rss - Add support for display of RSS feeds
 app-misc/lcd4linux:mpd - Add support for display of mpd controlled music
-app-misc/lcdproc:g15 - Enable support for Logitech G15 Keyboard LCDs
-app-misc/lcdproc:graphlcd - Enable support for the GraphLCD library
 app-misc/lcdproc:irman - Enable support for IRMan
 app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
-app-misc/lcdproc:ula200 - Enable support for ULA200 USB devices
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:transmitter - add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/mc:7zip - add support for 7zip archives
