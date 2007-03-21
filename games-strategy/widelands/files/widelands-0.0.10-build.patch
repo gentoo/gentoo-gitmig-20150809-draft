@@ -1,0 +1,51 @@
+--- Makefile
++++ Makefile
+@@ -26,7 +26,7 @@
+ 
+ #most current glibc systems implicitly contain libintl.so
+ ifndef IMPLICIT_LIBINTL
+-IMPLICIT_LIBINTL:=NO
++IMPLICIT_LIBINTL:=YES
+ endif
+ 
+ # Is this a cross compile?
+@@ -106,11 +106,9 @@
+ BUILD:=$(strip $(BUILD))
+ 
+ ifeq ($(BUILD),release)
+-OPTIMIZE:=yes
+ # heavy optimization
+ #ADD_CFLAGS:=$(ADD_CFLAGS) -fomit-frame-pointer -finline-functions -ffast-math -funroll-loops -funroll-all-loops -fexpensive-optimizations
+ # !!!! -fomit-frame-pointer breaks execeptions !!!!
+-ADD_CFLAGS:=$(ADD_CFLAGS) -finline-functions -ffast-math -funroll-loops -funroll-all-loops -fexpensive-optimizations
+ else
+ ifeq ($(BUILD),profile)
+ OPTIMIZE:=yes
+@@ -160,9 +158,8 @@
+ # Object files and directories, final compilation flags
+ 
+ OBJECT_DIR:=src/$(TARGET)-$(BUILD)
+-CFLAGS:=-Wall $(shell $(SDL_CONFIG) --cflags) $(ADD_CFLAGS)
+-CXXFLAGS:=$(CFLAGS)
+-LDFLAGS:=$(shell $(SDL_CONFIG) --libs) $(ADD_LDFLAGS) -lz -lpng -lSDL_image -lSDL_mixer -lSDL_ttf -lSDL_net
++CXXFLAGS+=-Wall $(shell $(SDL_CONFIG) --cflags) $(ADD_CFLAGS)
++LDFLAGS+=$(shell $(SDL_CONFIG) --libs) $(ADD_LDFLAGS) -lz -lpng -lSDL_image -lSDL_mixer -lSDL_ttf -lSDL_net
+ 
+ ##############################################################################
+ # Building
+@@ -217,13 +214,13 @@
+ 
+ $(OBJECT_DIR)/widelands: $(OBJ)
+ 	@echo "===> LD $@"
+-	$(Q)$(CXX) $(OBJ) -o $@ $(LDFLAGS) $(CFLAGS)
++	$(CXX) $(OBJ) -o $@ $(LDFLAGS) $(CXXFLAGS)
+ 
+ -include $(DEP)
+ 
+ $(OBJECT_DIR)/%.o: src/%.cc src/build_id.h src/config.h
+ 	@echo "===> CXX $<"
+-	$(Q)$(CXX) -pipe $(CXXFLAGS) -MMD -MP -MF $@.d -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -MMD -MP -MF $@.d -c -o $@ $<
+ 	$(Q)sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' $@.d > $(OBJECT_DIR)/$*.d
+ 	$(Q)rm $@.d
+ 
