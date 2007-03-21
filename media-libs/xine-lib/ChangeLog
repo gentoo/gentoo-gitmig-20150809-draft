@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.456 2007/03/19 03:29:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.457 2007/03/21 09:17:08 opfer Exp $
+
+  21 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  xine-lib-1.1.4-r2.ebuild:
+  stable x86, security bug 170208
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
