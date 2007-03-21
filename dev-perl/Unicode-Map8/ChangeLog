@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-Map8
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.26 2007/01/19 17:09:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.27 2007/03/21 14:12:36 mcummings Exp $
+
+  21 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  Unicode-Map8-0.12.ebuild:
+  Keywording ~mips, tested on swarm, bug 123679 related
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -Unicode-Map8-0.11.ebuild, -Unicode-Map8-0.11-r1.ebuild,

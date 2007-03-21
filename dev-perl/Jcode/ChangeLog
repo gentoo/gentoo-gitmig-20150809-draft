@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.41 2007/03/05 12:08:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.42 2007/03/21 14:14:01 mcummings Exp $
+
+  21 Mar 2007; Michael Cummings <mcummings@gentoo.org> Jcode-2.06.ebuild:
+  Keywording ~mips, tested on swarm, bug 123679 related
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Jcode-2.06.ebuild:
   Stable on x86, bug #169152.
