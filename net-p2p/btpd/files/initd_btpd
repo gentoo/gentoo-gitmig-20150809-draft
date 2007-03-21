@@ -51,7 +51,7 @@ stop() {
 	local retries=0
 
 	ebegin "Stopping BitTorrent Protocol Daemon"
-	while [[ -n "`pgrep -u ${BTPDUSER} btpd`" && ${retries} -lt 4 ]]; do
+	while [ -n "`pgrep -u ${BTPDUSER} btpd`" ] && [ ${retries} -lt 4 ]; do
 		if test ${retries} -eq 0; then
 			su ${BTPDUSER} -c "btcli kill"
 		else
@@ -59,7 +59,7 @@ stop() {
 		fi
 
 		sleep 1
-		let retries=$retries+1
+		retries=$(( $retries + 1 ))
 	done
 
 	if [ ${retries} -lt 4 ]; then
