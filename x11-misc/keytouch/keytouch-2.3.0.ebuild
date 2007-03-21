@@ -1,24 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.2.3.ebuild,v 1.3 2007/01/30 19:52:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.0.ebuild,v 1.1 2007/03/21 00:07:50 nyhm Exp $
 
-inherit eutils versionator
+inherit eutils versionator linux-info
 
-DOC_V=$(get_version_component_range -2)
 DESCRIPTION="Easily configure extra keyboard function keys"
 HOMEPAGE="http://keytouch.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	doc? ( mirror://sourceforge/${PN}/${PN}-${DOC_V}_tech_manual.pdf
-		mirror://sourceforge/${PN}/${PN}-${DOC_V}-user_manual.pdf )"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc kde"
+IUSE="acpi kde"
 
 RDEPEND=">=x11-libs/gtk+-2
 	gnome-base/gnome-menus
 	x11-misc/xbindkeys
+	media-libs/alsa-lib
+	acpi? ( sys-power/acpid )
 	kde? ( || (
 		kde-base/kdesu
 		kde-base/kdebase ) )
@@ -48,13 +47,16 @@ src_compile() {
 }
 
 src_install() {
-	doinitd "${FILESDIR}"/${PN} || die "doinitd failed"
+	if use acpi ; then
+		newinitd "${FILESDIR}"/${PN}-acpid ${PN} || die "newinitd failed"
+	else
+		doinitd "${FILESDIR}"/${PN} || die "doinitd failed"
+	fi
 
 	newicon keytouch-keyboard/pixmaps/icon.png ${PN}.png
 	make_desktop_entry ${PN} keyTouch ${PN}.png System
 
 	dodoc AUTHORS ChangeLog
-	use doc && dodoc "${DISTDIR}"/*.pdf
 
 	local d
 	for d in . keytouch-config keytouch-keyboard ; do
@@ -71,9 +73,18 @@ pkg_postinst() {
 	elog
 	elog "If support for your keyboard is not included in"
 	elog "this release, check for new keyboard files at"
-	elog "http://keytouch.sourceforge.net/dl-keyboards.html"
+	elog "${HOMEPAGE}dl-keyboards.html"
 	elog
 	elog "x11-misc/keytouch-editor can be used to create"
 	elog "your own keyboard files"
 	echo
+	if use acpi && ! linux_chkconfig_present INPUT_EVDEV ; then
+		ewarn "To add support for ACPI hotkeys, CONFIG_INPUT_EVDEV"
+		ewarn "must be enabled in your kernel config."
+		ewarn
+		ewarn "  Device Drivers"
+		ewarn "    Input device support"
+		ewarn "      <*>/<M> Event interface"
+		echo
+	fi
 }
