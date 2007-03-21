@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.19 2006/11/08 21:50:51 stuart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.20 2007/03/21 10:15:49 voyageur Exp $
+
+*nxserver-freenx-0.6.0 (21 Mar 2007)
+
+  21 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-freenx-0.6.0-nxloadconfig.patch,
+  +files/nxserver-freenx-0.6.0-rdesktop.patch,
+  +files/nxserver-freenx-0.6.0-rootless-mode.patch,
+  +nxserver-freenx-0.6.0.ebuild:
+  Revision bump, including:
+  * NX 2.x support
+  * amd64 support
+  * rootless mode compression patch
+  * rdesktop/VNC proxying fix
 
   08 Nov 2006; Stuart Herbert <stuart@gentoo.org>
   -files/freenx-0.4.4-adduser-fix.patch,

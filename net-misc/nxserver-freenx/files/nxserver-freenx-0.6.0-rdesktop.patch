@@ -1,0 +1,12 @@
+--- nxnode.orig	2007-02-02 19:54:15.000000000 +0100
++++ nxnode	2007-02-02 19:50:28.000000000 +0100
+@@ -253,6 +253,9 @@
+ 
+ 	NODE_APPLICATION=$(node_find_application "$type")
+ 
++	# For rdesktop/VNC, there is no application to start
++	[ -n "$NODE_APPLICATION" ] || return
++
+ 	#
+ 	# Check if we want to use a mediahelper
+ 	#

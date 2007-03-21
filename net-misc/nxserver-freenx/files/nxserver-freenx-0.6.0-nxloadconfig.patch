@@ -1,0 +1,53 @@
+--- nxloadconfig.orig	2007-01-23 04:22:50.000000000 +0100
++++ nxloadconfig	2007-01-29 17:29:38.000000000 +0100
+@@ -58,7 +58,8 @@
+ # Where can different nx components be found
+ NX_DIR=/usr
+ PATH_BIN=$NX_DIR/bin # if you change that, be sure to also change the public keys
+-PATH_LIB=$NX_DIR/lib
++REAL_PATH_BIN=$NX_DIR/lib/NX/bin
++PATH_LIB=$NX_DIR/lib/NX/lib
+ NX_ETC_DIR=/etc/nxserver
+ NX_SESS_DIR=/var/lib/nxserver/db
+ NX_HOME_DIR=/var/lib/nxserver/home
+@@ -154,7 +155,7 @@
+ DEFAULT_X_WM=""
+ KILL_DEFAULT_X_WM="1"
+ USER_X_STARTUP_SCRIPT=.Xclients
+-DEFAULT_X_SESSION=/etc/X11/xdm/Xsession
++DEFAULT_X_SESSION=/etc/X11/Sessions/Xsession
+ COMMAND_START_KDE=startkde
+ COMMAND_START_GNOME=gnome-session
+ COMMAND_START_CDE=cdwm
+@@ -263,11 +264,11 @@
+ [ -z "$AGENT_LIBRARY_PATH" ] && AGENT_LIBRARY_PATH=$PATH_LIB
+ [ -z "$PROXY_LIBRARY_PATH" ] && PROXY_LIBRARY_PATH=$PATH_LIB
+ [ -z "$APPLICATION_LIBRARY_PATH" ] && APPLICATION_LIBRARY_PATH=$PATH_LIB
+-[ -z "$APPLICATION_LIBRARY_PRELOAD" ] && APPLICATION_LIBRARY_PRELOAD="$APPLICATION_LIBRARY_PATH/libX11.so.6.2:$APPLICATION_LIBRARY_PATH/libXext.so.6.4:$APPLICATION_LIBRARY_PATH/libXcomp.so:$APPLICATION_LIBRARY_PATH/libXcompext.so.1:$APPLICATION_LIBRARY_PATH/libXrender.so.1.2"
++[ -z "$APPLICATION_LIBRARY_PRELOAD" ] && APPLICATION_LIBRARY_PRELOAD="$APPLICATION_LIBRARY_PATH/libX11.so:$APPLICATION_LIBRARY_PATH/libXext.so:$APPLICATION_LIBRARY_PATH/libXcomp.so:$APPLICATION_LIBRARY_PATH/libXcompext.so:$APPLICATION_LIBRARY_PATH/libXrender.so"
+ if [ -z "$ENABLE_2_0_0_BACKEND" ]
+ then
+ 	ENABLE_2_0_0_BACKEND="1"
+-	[ -z "$(strings $PATH_BIN/nxagent | egrep 'NXAGENT - Version 2.[01].0')" ] && ENABLE_2_0_0_BACKEND="0"
++	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 2.[01].0')" ] && ENABLE_2_0_0_BACKEND="0"
+ fi 
+ 
+ [ -z "$KDE_PRINTRC" -a -n "$KDEHOME" ] && KDE_PRINTRC="$KDEHOME/share/config/kdeprintrc"
+@@ -288,7 +289,7 @@
+ 		ERROR="yes" && echo "Error: Invalid value \"PATH_BIN=$PATH_BIN\""
+ 	# Check for NX agents ...
+ 	
+-	[ ! -f "$PATH_BIN/nxagent" ] && \
++	[ ! -f "$REAL_PATH_BIN/nxagent" ] && \
+ 		ERROR="yes" && echo "Error: Could not find nxagent in $PATH_BIN. Please install some OSS components."
+ 		
+ 	[ ! -f "$PATH_BIN/nxdesktop" ] && \
+@@ -509,7 +510,7 @@
+ 	[ -z $(echo "$ENABLE_ROOTLESS_MODE" | egrep "^[0|1]$") ] && \
+ 		ERROR="yes" && echo "Error: Invalid value \"ENABLE_ROOTLESS_MODE=$ENABLE_ROOTLESS_MODE\""
+ 
+-	[ -z "$(strings $PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0')" ] && \
++	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0')" ] && \
+ 		ERROR="yes" && echo "Error: Could not find 1.5.0 or 2.[01].0 version string in nxagent. NX 1.5.0 or 2.[01].0 backend is needed for this version of FreeNX."
+ 		
+ 	[ -z $(echo "$ENABLE_USESSION" | egrep "^[0|1]$") ] && \
