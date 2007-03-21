@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2683 2007/03/21 06:45:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2684 2007/03/21 06:48:56 tsunam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1932,6 +1932,7 @@ x11-themes/redhat-artwork:icons - Install Bluecurve icons
 x11-themes/redhat-artwork:kdm - Install Bluecurve KDM theme
 x11-themes/redhat-artwork:nautilus - Install Bluecurve Nautilus icons
 x11-themes/skinenigmang-logos:dxr3 - install logos for lower osd color deep on dxr3 cards
+x11-wm/beryl:emerald - Add support for one of the three decorators for Beryl
 x11-wm/dwm:savedconfig - Add support to user defined configs
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:disableslit - Disable the silt. Works around bug 122380.
