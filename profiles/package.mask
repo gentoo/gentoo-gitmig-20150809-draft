@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7004 2007/03/21 18:21:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7005 2007/03/21 20:30:08 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (21 Mar 2007)
+# masked for removal in April.
+# Old and nasty.  Not supported by upstream.
+games-strategy/mylink
 
 # Michael Sterrett <mr_bones_@gentoo.org> (19 Mar 2007)
 # masked for removal in April.
