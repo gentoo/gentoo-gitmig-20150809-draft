@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.15 2007/02/21 00:41:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.16 2007/03/22 16:50:51 armin76 Exp $
+
+  22 Mar 2007; Raúl Porcel <armin76@gentoo.org> wakeonlan-0.41-r1.ebuild:
+  x86 stable wrt bug 171817
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> wakeonlan-0.41-r1.ebuild:
   Fix multiple inheritance
