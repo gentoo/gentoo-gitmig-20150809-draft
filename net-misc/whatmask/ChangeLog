@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.16 2007/03/13 13:25:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.17 2007/03/22 14:57:01 armin76 Exp $
+
+  22 Mar 2007; Raúl Porcel <armin76@gentoo.org> -whatmask-1.1.ebuild:
+  drop old
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> whatmask-1.2.ebuild:
   x86 stable
