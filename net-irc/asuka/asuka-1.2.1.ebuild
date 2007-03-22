@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.2.1.ebuild,v 1.5 2007/02/24 13:41:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.2.1.ebuild,v 1.6 2007/03/22 18:24:50 armin76 Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="The QuakeNet IRC Server"
 HOMEPAGE="http://dev-com.quakenet.org/"
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 
 IUSE="debug"
-DEPEND="virtual/libc"
 
 src_compile() {
+	# configure fails with this flag, bug 171780
+	filter-flags -ggdb
+
 	econf \
 		--with-symlink=asuka-ircd \
 		--with-dpath=/etc/asuka \

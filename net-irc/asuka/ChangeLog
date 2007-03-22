@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/asuka
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.15 2007/02/24 13:41:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.16 2007/03/22 18:24:50 armin76 Exp $
+
+  22 Mar 2007; Raúl Porcel <armin76@gentoo.org> asuka-1.2.1.ebuild:
+  Filter -ggdb CFLAG, bug 171780
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> asuka-1.2.1.ebuild:
   Dropped ~ppc wrt bug 152922, 167886
