@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/knetdockapp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetdockapp/ChangeLog,v 1.2 2006/06/29 23:16:23 uberlord Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetdockapp/ChangeLog,v 1.3 2007/03/22 20:29:51 jokey Exp $
+
+  22 Mar 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  stable on x86
 
 *knetdockapp-0.67.5.3 (29 Jun 2006)
 
