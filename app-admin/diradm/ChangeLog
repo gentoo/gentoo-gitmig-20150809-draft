@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.21 2007/01/24 14:04:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.22 2007/03/22 16:37:25 robbat2 Exp $
+
+  22 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> diradm-2.5.ebuild,
+  +diradm-2.8.2.ebuild:
+  Add ~amd64 and bump diradm to 2.8.2, after a long series of private-use
+  releases. 2.8 and later releases bring in an automated test suite. Also read
+  KNOWN-BUGS for places where LDAP is just plain incompatible with POSIX, and
+  workarounds for this.
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> diradm-1.1.ebuild,
   diradm-1.1-r1.ebuild, diradm-1.2.ebuild, diradm-2.1.ebuild,
