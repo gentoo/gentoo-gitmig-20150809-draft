@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/taginfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/ChangeLog,v 1.5 2007/03/22 15:28:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/ChangeLog,v 1.6 2007/03/22 16:46:27 welp Exp $
+
+  22 Mar 2007; Peter Weller <welp@gentoo.org> taginfo-1.2-r1.ebuild:
+  Stable on amd64
 
   22 Mar 2007; Raúl Porcel <armin76@gentoo.org> taginfo-1.2-r1.ebuild:
   x86 stable
