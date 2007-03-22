@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.15 2007/01/31 04:30:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.16 2007/03/22 23:36:11 jer Exp $
+
+  22 Mar 2007; Jeroen Roovers <jer@gentoo.org> -units-1.85.ebuild:
+  Remove intermediate version.
 
   31 Jan 2007; Joseph Jezak <josejx@gentoo.org> units-1.86.ebuild:
   Marked ppc stable for bug #164094.
