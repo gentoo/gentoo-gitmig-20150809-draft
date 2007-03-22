@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-3.6.2.ebuild,v 1.1 2007/02/25 01:52:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-3.6.3.ebuild,v 1.1 2007/03/22 14:30:12 vanquirius Exp $
 
 inherit toolchain-funcs gnome2
 

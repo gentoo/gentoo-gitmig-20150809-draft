@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.28 2007/02/25 01:52:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.29 2007/03/22 14:30:12 vanquirius Exp $
+
+*comix-3.6.3 (22 Mar 2007)
+
+  22 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -comix-3.6.2.ebuild,
+  +comix-3.6.3.ebuild:
+  3.6.3 version bump. Adds Hungarian translation, flips pages with arrow keys
+  in some new cases and couple of bug fixes.
 
 *comix-3.6.2 (25 Feb 2007)
 
