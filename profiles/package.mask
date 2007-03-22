@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7010 2007/03/22 14:34:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7011 2007/03/22 16:55:33 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -373,10 +373,6 @@ dev-perl/Text-ChaSen
 #   media-fonts/mikachan-font-ttc (TrueType Collection)
 #   media-fonts/mikachan-font-ttf (TrueType Fonts)
 media-font/mikachan-font
-
-# Markus Ullmann <jokey@gentoo.org> (15 Feb 2007)
-# mask for removal bug #167125
-net-analyzer/netwatch
 
 # <dev-zero@gentoo.org> (15 Feb 2007)
 # Giving the kde team time to work out a solution for kexi
