@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.8 2007/02/20 21:23:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.9 2007/03/22 04:07:12 beandog Exp $
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
+  Add mplayer local use flags
 
   20 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> virtuals:
   Added virtuals/cdrtools to be app-cdr/cdrtools since cdrkit isn't stable.
