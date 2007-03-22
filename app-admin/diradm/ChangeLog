@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.22 2007/03/22 16:37:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.23 2007/03/22 21:42:24 robbat2 Exp $
+
+*diradm-2.9 (22 Mar 2007)
+
+  22 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> +diradm-2.9.ebuild:
+  Add 2.9 version to the tree, read the release notes and changelog!.
 
   22 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> diradm-2.5.ebuild,
   +diradm-2.8.2.ebuild:
