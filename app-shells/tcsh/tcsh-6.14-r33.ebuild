@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r32.ebuild,v 1.1 2007/03/15 18:57:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r33.ebuild,v 1.1 2007/03/22 10:39:29 grobian Exp $
 
 inherit eutils
 
-PATCHVER="1.3"
+PATCHVER="1.4"
 
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
