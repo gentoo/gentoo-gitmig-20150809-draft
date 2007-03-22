@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2688 2007/03/22 03:23:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2689 2007/03/22 06:50:51 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1091,6 +1091,7 @@ media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:s3virge - Enable s3fb (S3 ViRGE) video output
 media-video/mplayer:srt - Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
+media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/oxine:polling - Enables support to automatically check the drive for a new disc
 media-video/mplayer:tdfx - Enable tdfx_vid video output
 media-video/mplayer:tivo - Enables TiVo vstream client support
