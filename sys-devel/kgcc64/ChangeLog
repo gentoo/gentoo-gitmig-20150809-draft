@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.7 2007/01/18 12:45:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.8 2007/03/22 15:06:33 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> kgcc64-4.1.1.ebuild:
+  Stable on sparc
 
   18 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> kgcc64-3.4.6.ebuild:
   Stable on sparc
