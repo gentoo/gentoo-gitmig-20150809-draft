@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.28 2007/03/20 16:06:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.29 2007/03/22 14:58:45 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> netwib-5.33.0.ebuild:
+  Stable on sparc
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> netwib-5.33.0.ebuild:
   x86 stable
