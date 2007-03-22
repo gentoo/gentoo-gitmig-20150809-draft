@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.6 2007/03/21 09:06:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.7 2007/03/22 17:57:23 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> xcb-proto-1.0.ebuild:
+  Stable on sparc
 
   21 Mar 2007; Christian Faulhammer <opfer@gentoo.org> xcb-proto-1.0.ebuild:
   stable x86, security bug 170208
