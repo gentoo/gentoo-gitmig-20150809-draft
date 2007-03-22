@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.6-r1.ebuild,v 1.7 2007/01/25 04:53:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.6-r1.ebuild,v 1.8 2007/03/22 15:16:07 matsuu Exp $
 
 inherit gnome2 eutils
 
@@ -31,6 +31,7 @@ RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 	>=x11-libs/gtk+-2"
 
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.22
 	dev-util/pkgconfig"
 
 src_unpack() {

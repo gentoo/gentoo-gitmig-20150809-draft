@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.8.ebuild,v 1.2 2007/01/25 04:53:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.8.ebuild,v 1.3 2007/03/22 15:16:07 matsuu Exp $
 
 inherit gnome2 eutils
 
@@ -23,14 +23,15 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnome-2.2.0
 		>=gnome-base/libgnomeui-2.2.0
-		>=gnome-base/gconf-1.2
+		>=gnome-base/gconf-2
 		>=gnome-base/orbit-2.6
 		app-text/scrollkeeper )
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.7
-	>=x11-libs/gtk+-2"
+	>=x11-libs/gtk+-2.6"
 
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.22
 	dev-util/pkgconfig"
 
 src_unpack() {
@@ -39,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export PKG_CONFIG=`which pkg-config`
+	export PKG_CONFIG=$(type -P pkg-config)
 	G2CONF="$(use_enable gnome gnome-support)"
 	gnome2_src_compile
 }
