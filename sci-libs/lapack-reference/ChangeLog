@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.19 2007/03/21 13:53:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.20 2007/03/22 15:59:09 fmccor Exp $
+
+  22 Mar 2007; Ferris McCormick <fmccor@gentoo.org>
+  lapack-reference-3.1.0.ebuild:
+  Sparc stable --- Bug #171784 --- builds, runs all tests successfully, and
+  installs as expected.
 
   21 Mar 2007; Markus Dittrich <markusle@gentoo.org>
   files/lapack-reference-3.1.0-autotool.patch:
