@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.4 2007/02/15 22:12:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.5 2007/03/22 21:54:44 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
-HOMEPAGE="http://www.gnome.org/~jamiemcc/tracker/"
+HOMEPAGE="http://www.tracker-project.org/"
 SRC_URI="http://www.gnome.org/~jamiemcc/tracker/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
