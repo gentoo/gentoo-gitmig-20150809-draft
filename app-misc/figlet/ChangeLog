@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.22 2007/03/15 17:29:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.23 2007/03/22 22:04:00 jer Exp $
+
+  22 Mar 2007; Jeroen Roovers <jer@gentoo.org> figlet-222.ebuild:
+  Stable for HPPA (bug #171676).
 
   15 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> figlet-222.ebuild:
   Stable on sprac
