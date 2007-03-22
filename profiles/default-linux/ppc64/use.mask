@@ -1,12 +1,6 @@
 # this is a list of USE flags
 # that should not be used on PPC64
 
-# 21 Mar 2007 Steve Dibb <beandog@gentoo.org>
-# mplayer local use flags
-ivtv
-s3virge
-tdfx
-
 # Tom Gall <tgall@gentoo.org> manages this list
 acpi
 3dfx
@@ -94,6 +88,10 @@ video_cards_voodoo
 
 #until netbeans is keyworded
 netbeans
+
+# 21 Mar 2007 Steve Dibb <beandog@gentoo.org>
+# mplayer local use flags
+ivtv
 
 #2006/10/11 - corsair - bug #150925
 graphlcd
