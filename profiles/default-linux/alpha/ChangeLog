@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.34 2007/03/02 23:05:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.35 2007/03/22 04:03:00 beandog Exp $
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
+  add ivtv to use.mask
 
   02 Mar 2007; Samuli Suominen <drac@gentoo.org>
   use.mask battery for http://bugs.gentoo.org/show_bug.cgi?id=157881#c6

@@ -1,11 +1,15 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.58 2007/03/02 23:05:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.59 2007/03/22 04:03:00 beandog Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
 # profile (such as the selinux profiles) have a USE flag associated with
 # them.
+
+# 21 Mar 2007 Steve Dibb <beandog@gentoo.org>
+# media-tv/ivtv not keyworded
+ivtv
 
 # 02 Mar 2007 Samuli Suominen <drac@gentoo.org
 # See http://bugs.gentoo.org/show_bug.cgi?id=157881#c6
