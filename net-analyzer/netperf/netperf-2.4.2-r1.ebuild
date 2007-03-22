@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.2-r1.ebuild,v 1.2 2007/03/20 15:43:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.2-r1.ebuild,v 1.3 2007/03/22 14:09:14 gustavoz Exp $
 
 WANT_AUTOCONF="latest"
 inherit eutils flag-o-matic autotools
@@ -10,7 +10,7 @@ MY_P=${P/_rc/-rc}
 DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets, ATM and more."
 #SRC_URI="ftp://ftp.netperf.org/netperf/experimental/${MY_P}.tar.gz"
 SRC_URI="ftp://ftp.netperf.org/netperf/${MY_P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 sparc x86"
 
 HOMEPAGE="http://www.netperf.org/"
 LICENSE="netperf"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8.ebuild,v 1.3 2007/03/20 18:42:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8.ebuild,v 1.4 2007/03/22 14:09:53 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://lcamtuf.coredump.cx/p0f/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos sparc x86"
 IUSE="static"
 
 DEPEND="net-libs/libpcap"

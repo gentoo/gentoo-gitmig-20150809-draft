@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r3.ebuild,v 1.3 2007/03/20 14:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r3.ebuild,v 1.4 2007/03/22 14:10:44 gustavoz Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://iptraf.seul.org/pub/iptraf/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 sparc x86"
 IUSE="ipv6 suid unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r1"
