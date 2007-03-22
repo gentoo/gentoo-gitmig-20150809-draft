@@ -1,0 +1,173 @@
+--- configure.in.orig	2007-03-22 14:50:03.000000000 -0500
++++ configure.in	2007-03-22 15:15:03.000000000 -0500
+@@ -58,60 +58,57 @@
+ AC_SUBST(NAUTILUS_EXT_SENDTO_CFLAGS)
+ AC_SUBST(NAUTILUS_EXT_SENDTO_LIBS)
+ 
+-dnl Libebook support
++dnl Evolution (libebook) support
+ dnl ---------------------------------
+ 
+-PKG_CHECK_MODULES(NST_EBOOK, libebook-1.2 >= $EBOOK_REQUIRED,
+-	[
+-	AC_SUBST(NST_EBOOK_CFLAGS)
+-	AC_SUBST(NST_EBOOK_LIBS)
+-	echo "Using libebook-1.2 !"
+-	enable_evolution=yes
+-	],
+-	[
+-        echo "Building without evolution"
+-	enable_evolution=no
+-	]
+-)
++AC_ARG_ENABLE([evolution],
++              AC_HELP_STRING([--enable-evolution], [enable support for evolution]),,
++              [enable_evolution=no])
++
++if test x$enable_evolution = xyes ; then
++   PKG_CHECK_MODULES(NST_EBOOK, [libebook-1.2 >= $EBOOK_REQUIRED])
++
++   AC_SUBST(NST_EBOOK_CFLAGS)
++   AC_SUBST(NST_EBOOK_LIBS)
++fi
+ 
+ AM_CONDITIONAL(HAVE_EVOLUTION, test "x$enable_evolution" = "xyes")
+ 
+-dnl Gaim support if it's installed
++dnl Gaim support
+ dnl ---------------------------------
+ 
++AC_ARG_ENABLE([gaim],
++              AC_HELP_STRING([--enable-gaim], [enable support for gaim]),,
++              [enable_gaim=no])
+ 
+-PKG_CHECK_MODULES(GAIM, gaim >= $GAIM_REQUIRED,
+-	[
+-	AC_SUBST(GAIM_CFLAGS)
+-	AC_SUBST(GAIM_LIBS)
+-	GAIM_LIBDIR=`pkg-config --variable=libdir gaim`
+-	GAIM_DATADIR=`pkg-config --variable=datadir gaim`
+-	AC_SUBST(GAIM_LIBDIR)
+-	AC_SUBST(GAIM_DATADIR)
+-	enable_gaim=yes
+-	],
+-	[
+-	echo "Building without gaim"
+-	enable_gaim=no
+-	]
+-)
++if test x$enable_gaim = xyes ; then
++   PKG_CHECK_MODULES(GAIM, [gaim >= $GAIM_REQUIRED])
++
++   AC_SUBST(GAIM_CFLAGS)
++   AC_SUBST(GAIM_LIBS)
++
++   GAIM_LIBDIR=`pkg-config --variable=libdir gaim`
++   GAIM_DATADIR=`pkg-config --variable=datadir gaim`
++
++   AC_SUBST(GAIM_LIBDIR)
++   AC_SUBST(GAIM_DATADIR)
++fi
+ 
+ AM_CONDITIONAL(HAVE_GAIM, test "x$enable_gaim" = "xyes")
+ 
+-dnl Bluetooth support if it's installed
++dnl Bluetooth support
+ dnl -----------------------------------
+ 
+-PKG_CHECK_MODULES(BLUETOOTH, dbus-glib-1 >= $DBUS_REQUIRED,
+-	[
+-	AC_SUBST(BLUETOOTH_CFLAGS)
+-	AC_SUBST(BLUETOOTH_LIBS)
+-	enable_bluetooth=yes
+-	],
+-	[
+-	echo "Building without Bluetooth"
+-	enable_bluetooth=no
+-	]
+-)
++AC_ARG_ENABLE([bluetooth],
++              AC_HELP_STRING([--enable-bluetooth],[enable support for bluetooth]),,
++              [enable_bluetooth=no])
++
++if test x$enable_bluetooth = xyes ; then
++   PKG_CHECK_MODULES(BLUETOOTH, [gnome-bluetooth >= $BLUETOOTH_REQUIRED dbus-glib-1 >= $DBUS_REQUIRED])
++
++   AC_SUBST(BLUETOOTH_CFLAGS)
++   AC_SUBST(BLUETOOTH_LIBS)
++fi
+ 
+ AM_CONDITIONAL(HAVE_BLUETOOTH, test "x$enable_bluetooth" = "xyes")
+ 
+@@ -123,7 +120,9 @@
+ dnl Balsa support
+ dnl -------------------------------------------------
+ 
+-enable_balsa=no
++AC_ARG_ENABLE([balsa],
++              AC_HELP_STRING([--enable-balsa],[enable support for balsa]),,
++              [enable_balsa=no])
+ AM_CONDITIONAL(HAVE_BALSA, test "x$enable_balsa" = "xyes")
+ dnl -------------------------------------------------
+ 
+@@ -131,7 +130,9 @@
+ dnl Sylpheed support
+ dnl -------------------------------------------------
+ 
+-enable_sylpheed=yes
++AC_ARG_ENABLE([sylpheed],
++              AC_HELP_STRING([--enable-sylpheed],[enable support for sylpheed]),,
++              [enable_sylpheed=no])
+ AM_CONDITIONAL(HAVE_SYLPHEED, test "x$enable_sylpheed" = "xyes")
+ dnl -------------------------------------------------
+ 
+@@ -139,7 +140,9 @@
+ dnl Thunderbird support
+ dnl -------------------------------------------------
+ 
+-enable_thunderbird=no
++AC_ARG_ENABLE([thunderbird],
++              AC_HELP_STRING([--enable-thunderbird],[enable support for thunderbird]),,
++              [enable_thunderbird=no])
+ AM_CONDITIONAL(HAVE_THUNDERBIRD, test "x$enable_thunderbird" = "xyes")
+ dnl -------------------------------------------------
+ 
+@@ -152,24 +155,20 @@
+ 
+ GAJIM_SHARE_DIR="$GAJIM_PATH"/share/gajim
+ 
+-PKG_CHECK_MODULES(DBUS, dbus-1 >= $DBUS_REQUIRED dbus-glib-1 >= $DBUS_REQUIRED,
+-        [
+-        AC_SUBST(DBUS_CFLAGS)
+-        AC_SUBST(DBUS_LIBS)
+-	if test -f "$GAJIM_SHARE_DIR"/data/pixmaps/gajim.png ;
+-	then
+-		enable_gajim=yes
+-		AC_DEFINE_UNQUOTED(GAJIM_SHARE_DIR, "$GAJIM_SHARE_DIR", [path to gajim share dir])
+-	else
+-		echo "Building without Gajim support"
+-		enable_gajim=no
+-	fi
+-        ],
+-        [
+-        echo "Building without Gajim support"
+-        enable_gajim=no
+-        ]
+-)
++AC_ARG_ENABLE([gajim],
++              AC_HELP_STRING([--enable-gajim],[enable support for gajim]),,
++              [enable_gajim=no])
++
++if test x$enable_gajim = xyes ; then
++   if test -f "$GAJIM_SHARE_DIR"/data/pixmaps/gajim.png ; then
++      enable_gajim=yes
++      AC_DEFINE_UNQUOTED(GAJIM_SHARE_DIR, "$GAJIM_SHARE_DIR", [path to gajim share dir])
++
++      PKG_CHECK_MODULES(DBUS, [dbus-1 >= $DBUS_REQUIRED dbus-glib-1 >= $DBUS_REQUIRED])
++   else
++      enable_gajim=no
++   fi
++fi
+ 
+ AM_CONDITIONAL(HAVE_GAJIM, test "x$enable_gajim" = "xyes")
+ 
