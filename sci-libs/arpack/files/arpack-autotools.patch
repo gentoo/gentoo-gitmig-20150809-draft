@@ -1,0 +1,246 @@
+diff -Nur ../ARPACK.orig/Makefile.am ./Makefile.am
+--- ../ARPACK.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./Makefile.am	2007-03-22 15:18:07.579698500 +0000
+@@ -0,0 +1,7 @@
++SUBDIRS = UTIL SRC @MPIDIR@
++SUBLIBS = SRC/libarpacksrc.la UTIL/libarpackutil.la
++lib_LTLIBRARIES = libarpack.la
++libarpack_la_SOURCES =
++libarpack_la_LDFLAGS = -version-info 0:0
++libarpack_la_LIBADD = $(SUBLIBS)
++EXTRA_DIST = README
+diff -Nur ../ARPACK.orig/PARPACK/Makefile.am ./PARPACK/Makefile.am
+--- ../ARPACK.orig/PARPACK/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/Makefile.am	2007-03-22 15:17:54.390874250 +0000
+@@ -0,0 +1,6 @@
++SUBDIRS = UTIL SRC
++SUBLIBS = SRC/MPI/libparpacksrcmpi.la UTIL/MPI/libparpackutilmpi.la
++lib_LTLIBRARIES = libparpack.la
++libparpack_la_SOURCES = 
++libarpack_la_LDFLAGS = -version-info 0:0
++libparpack_la_LIBADD = $(SUBLIBS) @MPILIBS@
+diff -Nur ../ARPACK.orig/PARPACK/SRC/MPI/Makefile.am ./PARPACK/SRC/MPI/Makefile.am
+--- ../ARPACK.orig/PARPACK/SRC/MPI/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/SRC/MPI/Makefile.am	2007-03-21 21:20:19.771953500 +0000
+@@ -0,0 +1,14 @@
++noinst_LTLIBRARIES = libparpacksrcmpi.la
++libparpacksrcmpi_la_SOURCES = \
++	psgetv0.f  \
++	psnaitr.f psnapps.f psnaup2.f psnaupd.f psneigh.f psngets.f \
++	pssaitr.f pssapps.f pssaup2.f pssaupd.f psseigt.f pssgets.f \
++	psneupd.f psseupd.f pslarnv.f pslamch.f psnorm2.f \
++	pdgetv0.f \
++	pdnaitr.f pdnapps.f pdnaup2.f pdnaupd.f pdneigh.f pdngets.f \
++	pdsaitr.f pdsapps.f pdsaup2.f pdsaupd.f pdseigt.f pdsgets.f \
++	pdneupd.f pdseupd.f pdlarnv.f pdlamch.f pdnorm2.f \
++	pcnaitr.f pcnapps.f pcnaup2.f pcnaupd.f pcneigh.f \
++	pcneupd.f pcngets.f pcgetv0.f pscnorm2.f pclarnv.f \
++	pznaitr.f pznapps.f pznaup2.f pznaupd.f pzneigh.f \
++	pzneupd.f pzngets.f pzgetv0.f pdznorm2.f pzlarnv.f
+diff -Nur ../ARPACK.orig/PARPACK/SRC/Makefile.am ./PARPACK/SRC/Makefile.am
+--- ../ARPACK.orig/PARPACK/SRC/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/SRC/Makefile.am	2007-03-21 21:20:19.771953500 +0000
+@@ -0,0 +1 @@
++SUBDIRS = MPI
+diff -Nur ../ARPACK.orig/PARPACK/UTIL/MPI/Makefile.am ./PARPACK/UTIL/MPI/Makefile.am
+--- ../ARPACK.orig/PARPACK/UTIL/MPI/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/UTIL/MPI/Makefile.am	2007-03-21 21:20:19.771953500 +0000
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libparpackutilmpi.la
++libparpackutilmpi_la_SOURCES = \
++	pivout.f psvout.f  psmout.f pdvout.f \
++	pdmout.f  pcvout.f  pcmout.f pzvout.f  pzmout.f
++
+diff -Nur ../ARPACK.orig/PARPACK/UTIL/Makefile.am ./PARPACK/UTIL/Makefile.am
+--- ../ARPACK.orig/PARPACK/UTIL/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/UTIL/Makefile.am	2007-03-21 21:20:19.771953500 +0000
+@@ -0,0 +1 @@
++SUBDIRS = MPI
+\ No newline at end of file
+diff -Nur ../ARPACK.orig/SRC/Makefile.am ./SRC/Makefile.am
+--- ../ARPACK.orig/SRC/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./SRC/Makefile.am	2007-03-21 21:20:19.771953500 +0000
+@@ -0,0 +1,14 @@
++noinst_LTLIBRARIES = libarpacksrc.la
++libarpacksrc_la_SOURCES = \
++	sgetv0.f slaqrb.f sstqrb.f ssortc.f ssortr.f sstatn.f sstats.f \
++	snaitr.f snapps.f snaup2.f snaupd.f snconv.f sneigh.f sngets.f \
++	ssaitr.f ssapps.f ssaup2.f ssaupd.f ssconv.f sseigt.f ssgets.f \
++	sneupd.f sseupd.f ssesrt.f \
++	dgetv0.f dlaqrb.f dstqrb.f dsortc.f dsortr.f dstatn.f dstats.f \
++	dnaitr.f dnapps.f dnaup2.f dnaupd.f dnconv.f dneigh.f dngets.f \
++	dsaitr.f dsapps.f dsaup2.f dsaupd.f dsconv.f dseigt.f dsgets.f \
++	dneupd.f dseupd.f dsesrt.f \
++	cnaitr.f cnapps.f cnaup2.f cnaupd.f cneigh.f cneupd.f cngets.f \
++        cgetv0.f csortc.f cstatn.f \
++	znaitr.f znapps.f znaup2.f znaupd.f zneigh.f zneupd.f zngets.f \
++        zgetv0.f zsortc.f zstatn.f
+diff -Nur ../ARPACK.orig/UTIL/Makefile.am ./UTIL/Makefile.am
+--- ../ARPACK.orig/UTIL/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./UTIL/Makefile.am	2007-03-21 21:20:19.775953750 +0000
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libarpackutil.la
++libarpackutil_la_SOURCES = \
++	icnteq.f icopy.f iset.f iswap.f ivout.f second.f \
++	svout.f  smout.f dvout.f  dmout.f cvout.f  cmout.f \
++	zvout.f  zmout.f
+diff -Nur ../ARPACK.orig/acx_mpi.m4 ./acx_mpi.m4
+--- ../ARPACK.orig/acx_mpi.m4	1970-01-01 01:00:00.000000000 +0100
++++ ./acx_mpi.m4	2007-03-21 21:20:19.775953750 +0000
+@@ -0,0 +1,107 @@
++dnl @synopsis ACX_MPI([ACTION-IF-FOUND[, ACTION-IF-NOT-FOUND]])
++dnl
++dnl @summary figure out how to compile/link code with MPI
++dnl
++dnl This macro tries to find out how to compile programs that use MPI
++dnl (Message Passing Interface), a standard API for parallel process
++dnl communication (see http://www-unix.mcs.anl.gov/mpi/)
++dnl
++dnl On success, it sets the MPICC, MPICXX, or MPIF77 output variable to
++dnl the name of the MPI compiler, depending upon the current language.
++dnl (This may just be $CC/$CXX/$F77, but is more often something like
++dnl mpicc/mpiCC/mpif77.) It also sets MPILIBS to any libraries that are
++dnl needed for linking MPI (e.g. -lmpi, if a special
++dnl MPICC/MPICXX/MPIF77 was not found).
++dnl
++dnl If you want to compile everything with MPI, you should set:
++dnl
++dnl     CC="$MPICC" #OR# CXX="$MPICXX" #OR# F77="$MPIF77"
++dnl     LIBS="$MPILIBS $LIBS"
++dnl
++dnl NOTE: The above assumes that you will use $CC (or whatever) for
++dnl linking as well as for compiling. (This is the default for automake
++dnl and most Makefiles.)
++dnl
++dnl The user can force a particular library/compiler by setting the
++dnl MPICC/MPICXX/MPIF77 and/or MPILIBS environment variables.
++dnl
++dnl ACTION-IF-FOUND is a list of shell commands to run if an MPI
++dnl library is found, and ACTION-IF-NOT-FOUND is a list of commands to
++dnl run it if it is not found. If ACTION-IF-FOUND is not specified, the
++dnl default action will define HAVE_MPI.
++dnl
++dnl @category InstalledPackages
++dnl @author Steven G. Johnson <stevenj@alum.mit.edu>
++dnl @version 2005-09-02
++dnl @license GPLWithACException
++
++AC_DEFUN([ACX_MPI], [
++AC_PREREQ(2.50) dnl for AC_LANG_CASE
++
++AC_LANG_CASE([C], [
++	AC_REQUIRE([AC_PROG_CC])
++	AC_ARG_VAR(MPICC,[MPI C compiler command])
++	AC_CHECK_PROGS(MPICC, mpicc hcc mpcc mpcc_r mpxlc cmpicc, $CC)
++	acx_mpi_save_CC="$CC"
++	CC="$MPICC"
++	AC_SUBST(MPICC)
++],
++[C++], [
++	AC_REQUIRE([AC_PROG_CXX])
++	AC_ARG_VAR(MPICXX,[MPI C++ compiler command])
++	AC_CHECK_PROGS(MPICXX, mpic++ mpiCC mpicxx mpCC hcp mpxlC mpxlC_r cmpic++, $CXX)
++	acx_mpi_save_CXX="$CXX"
++	CXX="$MPICXX"
++	AC_SUBST(MPICXX)
++],
++[Fortran 77], [
++	AC_REQUIRE([AC_PROG_F77])
++	AC_ARG_VAR(MPIF77,[MPI Fortran compiler command])
++	AC_CHECK_PROGS(MPIF77, mpif77 hf77 mpxlf mpf77 mpif90 mpf90 mpxlf90 mpxlf95 mpxlf_r cmpifc cmpif90c, $F77)
++	acx_mpi_save_F77="$F77"
++	F77="$MPIF77"
++	AC_SUBST(MPIF77)
++])
++
++if test x = x"$MPILIBS"; then
++	AC_LANG_CASE([C], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
++		[C++], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
++		[Fortran 77], [AC_MSG_CHECKING([for MPI_Init])
++			AC_TRY_LINK([],[      call MPI_Init], [MPILIBS=" "
++				AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])])
++fi
++if test x = x"$MPILIBS"; then
++	AC_CHECK_LIB(mpi, MPI_Init, [MPILIBS="-lmpi"])
++fi
++if test x = x"$MPILIBS"; then
++	AC_CHECK_LIB(mpich, MPI_Init, [MPILIBS="-lmpich"])
++fi
++
++dnl We have to use AC_TRY_COMPILE and not AC_CHECK_HEADER because the
++dnl latter uses $CPP, not $CC (which may be mpicc).
++AC_LANG_CASE([C], [if test x != x"$MPILIBS"; then
++	AC_MSG_CHECKING([for mpi.h])
++	AC_TRY_COMPILE([#include <mpi.h>],[],[AC_MSG_RESULT(yes)], [MPILIBS=""
++		AC_MSG_RESULT(no)])
++fi],
++[C++], [if test x != x"$MPILIBS"; then
++	AC_MSG_CHECKING([for mpi.h])
++	AC_TRY_COMPILE([#include <mpi.h>],[],[AC_MSG_RESULT(yes)], [MPILIBS=""
++		AC_MSG_RESULT(no)])
++fi])
++
++AC_LANG_CASE([C], [CC="$acx_mpi_save_CC"],
++	[C++], [CXX="$acx_mpi_save_CXX"],
++	[Fortran 77], [F77="$acx_mpi_save_F77"])
++
++AC_SUBST(MPILIBS)
++
++# Finally, execute ACTION-IF-FOUND/ACTION-IF-NOT-FOUND:
++if test x = x"$MPILIBS"; then
++        $2
++        :
++else
++        ifelse([$1],,[AC_DEFINE(HAVE_MPI,1,[Define if you have the MPI library.])],[$1])
++        :
++fi
++])dnl ACX_MPI
+diff -Nur ../ARPACK.orig/configure.ac ./configure.ac
+--- ../ARPACK.orig/configure.ac	1970-01-01 01:00:00.000000000 +0100
++++ ./configure.ac	2007-03-22 11:17:43.207027250 +0000
+@@ -0,0 +1,45 @@
++# -*- Autoconf -*-
++# Process this file with autoconf to produce a configure script.
++
++AC_PREREQ(2.59)
++AC_INIT(arpack, 96, http://www.caam.rice.edu/software/ARPACK/)
++AM_INIT_AUTOMAKE([foreign])
++
++# Checks for standard programs.
++AC_PROG_F77
++AC_PROG_LIBTOOL
++
++# parpack stuff
++# Provide special option for the MPI version
++AC_MSG_CHECKING([for MPI mode])
++AC_ARG_ENABLE(mpi,
++	[AC_HELP_STRING([--enable-mpi],
++	[Enable MPI parallel processing (off by default)])],
++		use_mpi="yes"
++		AC_MSG_RESULT([yes]),
++      		use_mpi="no"
++		AC_MSG_RESULT([no]),
++	use_mpi="no"
++	AC_MSG_RESULT([no]))
++
++sinclude(acx_mpi.m4)
++if test "$use_mpi" = "yes"; then
++ACX_MPI([AC_DEFINE(HAVE_MPI,1,[use MPI library.])]
++   	[FC="$MPIF77" && CC="$MPICC" ],
++      	use_mpi="no")
++MPIDIR="PARPACK"
++fi
++
++AC_SUBST(MPIDIR)
++
++AC_CONFIG_FILES([
++	UTIL/Makefile
++	SRC/Makefile
++	PARPACK/SRC/MPI/Makefile
++	PARPACK/SRC/Makefile
++	PARPACK/UTIL/MPI/Makefile
++	PARPACK/UTIL/Makefile
++	PARPACK/Makefile
++	Makefile
++        ])
++AC_OUTPUT

@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/arpack
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.1 2007/03/22 16:24:55 bicatali Exp $
+
+*arpack-96 (22 Mar 2007)
+
+  22 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/arpack-autotools.patch, +metadata.xml, +arpack-96.ebuild:
+  Initial import, closing bug #69241. Thanks David Grant
+  <david.grant@telus.net> for the initial ebuild.
+
