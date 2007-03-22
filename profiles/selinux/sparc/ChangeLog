@@ -1,0 +1,7 @@
+# ChangeLog for profile directory
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/ChangeLog,v 1.1 2007/03/22 05:01:28 beandog Exp $
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
+  Add ivtv local use flag, add changelog
+
