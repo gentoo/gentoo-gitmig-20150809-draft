@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20-r1.ebuild,v 1.1 2007/03/10 08:44:37 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20-r1.ebuild,v 1.2 2007/03/22 20:49:32 truedfx Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-lclintf.patch
+	epatch "${FILESDIR}"/${P}-lcl-handle.patch
 	epatch "${T}"/fpcsrc.patch
 }
 

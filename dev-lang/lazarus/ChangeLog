@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.12 2007/03/10 08:44:37 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.13 2007/03/22 20:49:32 truedfx Exp $
+
+  22 Mar 2007; Harald van Dĳk <truedfx@gentoo.org>
+  +files/lazarus-0.9.20-lcl-handle.patch, lazarus-0.9.20-r1.ebuild:
+  Avoid storing pointers in 32-bit variables on amd64
 
 *lazarus-0.9.20-r1 (10 Mar 2007)
 
