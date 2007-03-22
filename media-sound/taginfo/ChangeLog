@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/taginfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/ChangeLog,v 1.3 2007/03/19 00:45:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/ChangeLog,v 1.4 2007/03/22 14:59:41 drac Exp $
+
+  22 Mar 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  Take maintainership. Stop installing binaries to /usr/local/bin and other
+  minor fixes..
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove jhuebel from metadata.xml due to retirement.
