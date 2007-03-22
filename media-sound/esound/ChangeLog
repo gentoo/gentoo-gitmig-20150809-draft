@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.93 2007/03/19 18:53:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.94 2007/03/22 20:22:19 dang Exp $
+
+  22 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/esound-0.2.37-cpu-drain.patch:
+  Fix 100% cpu usage; bug #171300
 
   19 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/esound-0.2.37-debug.patch, esound-0.2.37.ebuild:
