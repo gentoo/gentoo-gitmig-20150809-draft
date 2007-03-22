@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-106-r5.ebuild,v 1.2 2007/03/22 10:51:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-107.ebuild,v 1.1 2007/03/22 10:51:13 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -28,8 +28,7 @@ src_unpack() {
 	# patches go here...
 	#epatch ${FILESDIR}/${P}-udev_volume_id.patch
 	epatch ${FILESDIR}/${PN}-104-peristent-net-disable-xen.patch
-	epatch ${FILESDIR}/${P}-floppy-devices-no-umask.diff
-	epatch ${FILESDIR}/${P}-remove-dasd-rules.patch
+	epatch ${FILESDIR}/udev-107-usbcd-by-id.patch
 
 	# No need to clutter the logs ...
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
@@ -40,7 +39,7 @@ src_unpack() {
 	# (more for my own needs than anything else ...)
 	MD5=`md5sum < "${S}/etc/udev/gentoo/udev.rules"`
 	MD5=${MD5/  -/}
-	if [ "${MD5}" != "295a9b7bdc8bdb239f8860d14af761b0" ]
+	if [ "${MD5}" != "34b1f1695b339d0d9e7b9db27f87e938" ]
 	then
 		echo
 		eerror "gentoo/udev.rules has been updated, please validate!"
@@ -57,7 +56,6 @@ src_compile() {
 				  extras/firmware \
 				  extras/floppy \
 				  extras/path_id \
-				  extras/run_directory \
 				  extras/scsi_id \
 				  extras/usb_id \
 				  extras/volume_id \
@@ -93,8 +91,6 @@ src_install() {
 
 	# Helpers
 	exeinto /lib/udev
-	doexe extras/run_directory/udev_run_devd	|| die "Required helper not installed properly"
-	doexe extras/run_directory/udev_run_hotplugd	|| die "Required helper not installed properly"
 	doexe extras/ata_id/ata_id		|| die "Required helper not installed properly"
 	doexe extras/volume_id/vol_id	|| die "Required helper not installed properly"
 	doexe extras/scsi_id/scsi_id	|| die "Required helper not installed properly"
@@ -151,7 +147,7 @@ src_install() {
 	doins etc/udev/rules.d/60-*.rules
 	doins extras/rule_generator/75-*.rules || die "rules not installed properly"
 	# Special rules for device-mapper
-	doins ${FILESDIR}/64-device-mapper.rules
+	newins ${FILESDIR}/64-device-mapper.rules-107 64-device-mapper.rules
 
 	# scsi_id configuration
 	insinto /etc
@@ -173,7 +169,7 @@ src_install() {
 
 	# our udev hooks into the rc system
 	insinto /lib/rcscripts/addons
-	newins "${FILESDIR}"/udev-start-106-r2.sh udev-start.sh
+	newins "${FILESDIR}"/udev-start-107.sh udev-start.sh
 	newins "${FILESDIR}"/udev-stop-105.sh udev-stop.sh
 
 	# needed to compile latest Hal

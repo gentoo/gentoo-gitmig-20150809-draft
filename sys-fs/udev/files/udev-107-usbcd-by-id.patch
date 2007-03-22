@@ -1,0 +1,21 @@
+diff --git a/extras/rule_generator/write_cd_rules b/extras/rule_generator/write_cd_rules
+index 1dbe6b7..bd951c5 100644
+--- a/extras/rule_generator/write_cd_rules
++++ b/extras/rule_generator/write_cd_rules
+@@ -53,7 +53,15 @@ fi
+ if [ "$1" ]; then
+ 	METHOD="$1"
+ else
+-	METHOD='by-path'
++	case "$ID_BUS" in
++		usb|ieee1394)
++		METHOD='by-id'
++		;;
++
++		*)
++		METHOD='by-path'
++		;;
++	esac
+ fi
+ 
+ case "$METHOD" in

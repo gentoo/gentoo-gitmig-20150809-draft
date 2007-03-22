@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.289 2007/03/21 13:51:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.290 2007/03/22 10:51:13 zzam Exp $
+
+*udev-107 (22 Mar 2007)
+
+  22 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/64-device-mapper.rules-107, +files/udev-107-usbcd-by-id.patch,
+  +files/udev-start-107.sh, udev-106-r5.ebuild, +udev-107.ebuild:
+  Do not install run_directory, it is marked as strongly deprecated. No need
+  for /dev/console redirect fix, Bug #151414. Do not call dmsetup from
+  udev-start, as rules already do this. Use by-id method for usb and firewire
+  cdrom persistence. Use higher priority for device-mapper persistent symlinks
+  to overwrite symlinks of multipath base devices.
 
   21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> udev-104-r12.ebuild:
   Stable on alpha wrt bug #159871.
