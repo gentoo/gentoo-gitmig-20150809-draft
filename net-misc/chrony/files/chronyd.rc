@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.7 2006/03/25 09:50:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.8 2007/03/22 14:32:09 tove Exp $
 
 depend() {
 	need net
@@ -13,7 +13,7 @@ checkconfig() {
 	# is because the user may have specified another key
 	# file, and we don't want to force the user to use that
 	# exact name for the key file.
-	if [[ ! -f ${CFGFILE} ]] ; then
+	if [ ! -f "${CFGFILE}" ] ; then
 		eerror "Please create ${CFGFILE} and the"
 		eerror "chrony key file (usually /etc/chrony/chrony.keys)"
 		eerror "by using the"
@@ -36,7 +36,7 @@ checkconfig() {
 start() {
 	checkconfig || return $?
 
-	[[ -n "${PIDFILE}" ]] || PIDFILE=/var/run/chronyd.pid
+	[ -n "${PIDFILE}" ] || PIDFILE=/var/run/chronyd.pid
 
 	ebegin "Starting chronyd"
 	start-stop-daemon --start --quiet \
@@ -49,7 +49,7 @@ start() {
 stop() {
 	checkconfig || return $?
 
-	[[ -n "${PIDFILE}" ]] || PIDFILE=/var/run/chronyd.pid
+	[ -n "${PIDFILE}" ] || PIDFILE=/var/run/chronyd.pid
 
 	ebegin "Stopping chronyd"
 	start-stop-daemon --stop --quiet \
