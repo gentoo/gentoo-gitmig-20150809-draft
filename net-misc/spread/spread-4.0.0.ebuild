@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-3.17.3-r1.ebuild,v 1.1 2006/10/06 12:48:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.1 2007/03/22 12:14:43 armin76 Exp $
 
 inherit eutils
 
@@ -26,15 +26,16 @@ pkg_setup()
 	enewgroup spread
 }
 
-src_compile()
-{
-	econf || die
-	emake || die
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
+	# don't strip binaries
+	sed -i -e 's/0755 -s/0755/g' daemon/Makefile.in examples/Makefile.in
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 	newinitd ${FILESDIR}/spread.init.d spread
 	dodir /var/run/spread
 }
