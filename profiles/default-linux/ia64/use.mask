@@ -1,5 +1,9 @@
 # This is a list of USE flags that should not be used on ia64.
 
+# Steve Dibb <beandog@gentoo.org>
+# media-tv/ivtv not keyworded
+ivtv
+
 # Samuli Suominen <drac@gentoo.org
 # http://bugs.gentoo.org/show_bug.cgi?id=157881#c6
 battery

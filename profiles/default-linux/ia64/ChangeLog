@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.20 2007/03/02 23:02:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.21 2007/03/22 04:08:58 beandog Exp $
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
+  Add ivtv to use.mask
 
   02 Mar 2007; Samuli Suominen <drac@gentoo.org> use.mask:
   battery		
