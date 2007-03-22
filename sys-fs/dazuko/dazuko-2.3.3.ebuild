@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.3_pre2.ebuild,v 1.1 2007/02/28 18:23:51 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.3.ebuild,v 1.1 2007/03/22 12:11:46 alonbl Exp $
 
 inherit linux-mod toolchain-funcs flag-o-matic
 
