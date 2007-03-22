@@ -6,7 +6,10 @@
 		<email>peper@gentoo.org</email>
 		<name>Piotr Jaroszyński</name>
 	</maintainer>
-	<longdescription lang="en">
-	</longdescription>
+	<maintainer>
+		<email>tester@gentoo.org</email>
+		<name>Olivier Crête</name>
+		<description>is part of upstream</description>
+	</maintainer>
 </pkgmetadata>
 
