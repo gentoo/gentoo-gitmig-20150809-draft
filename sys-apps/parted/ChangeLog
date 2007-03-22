@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.107 2007/02/17 00:04:34 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.108 2007/03/22 18:08:28 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> parted-1.8.2.ebuild:
+  Stable on sparc
 
   17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
   Removed allanonjl from metadata.xml
