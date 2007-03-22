@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.124 2007/03/10 20:21:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.125 2007/03/22 15:36:59 uberlord Exp $
+
+  22 Mar 2007; Roy Marples <uberlord@gentoo.org> files/dhcrelay.init:
+  Remove bashisms from dhcrelay script, #171766 thanks to Natanael Copa.
 
 *dhcp-3.0.5-r1 (10 Mar 2007)
 
