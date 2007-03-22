@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r1.ebuild,v 1.3 2007/03/18 01:50:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r1.ebuild,v 1.4 2007/03/22 20:24:25 zmedico Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -42,7 +42,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 		>=app-pda/gnome-pilot-2
 		>=app-pda/gnome-pilot-conduits-2 )
 	spell? ( >=app-text/gnome-spell-1.0.5 )
-	crypt? ( || ( =app-crypt/gnupg-1.4* >=app-crypt/gnupg-2.0.1-r2  ) )
+	crypt? ( || ( >=app-crypt/gnupg-2.0.1-r2 =app-crypt/gnupg-1.4* ) )
 	ssl? (
 		>=dev-libs/nspr-4.6.1
 		>=dev-libs/nss-3.11 )
