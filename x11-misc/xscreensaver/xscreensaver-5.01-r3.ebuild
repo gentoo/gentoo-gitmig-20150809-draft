@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r3.ebuild,v 1.1 2007/03/18 21:27:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r3.ebuild,v 1.2 2007/03/22 17:12:20 drac Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic pam fixheadtails autotools
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz
-	branding? ( http://dev.gentoo.org/~drac/distfiles/${P}-branding.patch.bz2 )"
+	branding? ( http://dev.gentoo.org/~drac/distfiles/${P}-branding-1.1.patch.bz2 )"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
@@ -48,7 +48,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Use Gentoo branding in Lock Screen
-	use branding && epatch "${WORKDIR}"/${P}-branding.patch
+	use branding && epatch "${WORKDIR}"/${P}-branding-1.1.patch
 
 	# Bug fixes:
 	epatch "${FILESDIR}/${P}-gentoo.patch"
