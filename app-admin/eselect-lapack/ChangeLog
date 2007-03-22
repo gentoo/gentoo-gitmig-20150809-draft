@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-lapack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.10 2007/01/27 11:32:40 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.11 2007/03/22 15:58:13 fmccor Exp $
+
+  22 Mar 2007; Ferris McCormick <fmccor@gentoo.org>
+  eselect-lapack-0.1.ebuild:
+  Stable on sparc --- runs fine and is required for Bug #171784
 
   27 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   eselect-lapack-0.1.ebuild:
