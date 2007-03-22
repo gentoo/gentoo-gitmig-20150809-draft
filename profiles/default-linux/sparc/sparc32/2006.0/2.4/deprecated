@@ -1,0 +1,8 @@
+default-linux/sparc/sparc32/2006.1/2.4
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/sparc/sparc32/2006.1/2.4 make.profile
+
+# This profile is deprecated and will be removed on or after May 1, 2007

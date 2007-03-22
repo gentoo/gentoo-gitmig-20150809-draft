@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.47 2007/03/22 14:15:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.48 2007/03/22 14:23:54 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +sparc32/2006.0/2.4/deprecated, +sparc32/2006.0/deprecated,
+  +sparc64/2006.0/2.4/deprecated, +sparc64/2006.0/deprecated:
+  Deprecating 2006.0 profiles
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc64/2006.0/package.mask, sparc64/2006.1/package.mask:
