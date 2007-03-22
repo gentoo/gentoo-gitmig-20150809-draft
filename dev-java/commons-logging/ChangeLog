@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.47 2007/02/13 20:03:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.48 2007/03/22 07:14:08 opfer Exp $
+
+  22 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  commons-logging-1.1-r2.ebuild:
+  stable x86, bug 171643
 
   13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-logging-1.1-r2.ebuild:
