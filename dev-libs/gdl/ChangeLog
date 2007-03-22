@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.4 2007/01/30 17:20:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.5 2007/03/22 21:31:36 dang Exp $
+
+  22 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Move maintainer to compnerd; nothing maintained by gnome uses it
 
   30 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
   Bump to 0.7.1

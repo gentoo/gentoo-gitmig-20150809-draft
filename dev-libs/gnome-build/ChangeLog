@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.2 2007/01/30 16:47:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.3 2007/03/22 21:30:21 dang Exp $
+
+  22 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Move maintainer to compnerd; nothing maintained by gnome uses it
 
 *gnome-build-0.1.4 (30 Jan 2007)
 
