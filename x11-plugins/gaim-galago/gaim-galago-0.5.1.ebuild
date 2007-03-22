@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-galago/gaim-galago-0.5.1.ebuild,v 1.1 2006/10/16 08:12:18 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-galago/gaim-galago-0.5.1.ebuild,v 1.2 2007/03/22 17:44:35 compnerd Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.galago-project.org/files/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-im/gaim

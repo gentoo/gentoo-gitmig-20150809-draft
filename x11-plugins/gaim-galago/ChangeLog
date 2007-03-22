@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-galago
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-galago/ChangeLog,v 1.1 2006/10/16 08:12:18 compnerd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-galago/ChangeLog,v 1.2 2007/03/22 17:44:35 compnerd Exp $
+
+  22 Mar 2007; <compnerd@gentoo.org> gaim-galago-0.5.1.ebuild:
+  keyword ~amd64
 
 *gaim-galago-0.5.1 (16 Oct 2006)
 
