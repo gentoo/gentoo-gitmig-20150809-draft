@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.ebuild,v 1.2 2007/01/05 08:47:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.3.ebuild,v 1.1 2007/03/22 12:52:32 armin76 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dnrd.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dnrd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 DEPEND=""
 
