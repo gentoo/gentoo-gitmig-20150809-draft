@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r1.ebuild,v 1.9 2007/03/20 20:27:27 dertobi123 Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r1.ebuild,v 1.10 2007/03/22 02:08:18 beandog Exp $
 
 inherit cron pam eutils
 
