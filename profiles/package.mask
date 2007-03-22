@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7011 2007/03/22 16:55:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7012 2007/03/22 17:57:13 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -836,10 +836,6 @@ dev-libs/wxactivex
 # Roy Marples <uberlord@gentoo.org> (07 Sep 2006)
 # Mask dhcp alpha version
 =net-misc/dhcp-3.1.0_alpha*
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
-# New Galago Release
->=x11-plugins/gaim-galago-0.5.0
 
 # Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
 # Masked until it gets some testing
