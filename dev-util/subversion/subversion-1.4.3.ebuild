@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.8 2007/03/18 19:18:07 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.9 2007/03/22 16:13:53 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -41,7 +41,7 @@ S=${WORKDIR}/${P/_rc/-rc}
 pkg_setup() {
 	if use berkdb && has_version '<dev-util/subversion-0.34.0' && [[ -z ${SVN_DUMPED} ]]; then
 		echo
-		ewarn "Presently you have $(best_version subversion)"
+		ewarn "Presently you have $(best_version dev-util/subversion)"
 		ewarn "Subversion has changed the repository filesystem schema from 0.34.0."
 		ewarn "So you MUST dump your repositories before upgrading."
 		ewarn
