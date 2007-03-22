@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.40 2007/03/14 10:57:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.41 2007/03/22 18:45:05 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  lineakd-0.9.0_pre1.ebuild:
+  Stable on sparc
 
   14 Mar 2007; Simon Stelling <blubb@gentoo.org> lineakd-0.9.0_pre1.ebuild:
   stable on amd64; bug 170191
