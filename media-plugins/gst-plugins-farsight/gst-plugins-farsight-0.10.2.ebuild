@@ -1,12 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.10.2.ebuild,v 1.1 2006/10/19 20:32:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.10.2.ebuild,v 1.2 2007/03/22 23:28:07 tester Exp $
 
 inherit gst-plugins10
 
 DESCRIPTION="GStreamer plugin for Farsight"
-HOMEPAGE="http://projects.collabora.co.uk/darcs/farsight/gst-plugins-farsight"
-SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
+#HOMEPAGE="http://projects.collabora.co.uk/darcs/farsight/gst-plugins-farsight"
+HOMEPAGE="http://farsight.freedesktop.org/"
+SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 # Create a major/minor combo for SLOT - stolen from gst-plugins-ffmpeg
 PVP=(${PV//[-\._]/ })
