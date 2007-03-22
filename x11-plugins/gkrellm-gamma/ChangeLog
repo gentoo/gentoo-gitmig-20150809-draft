@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-gamma
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.11 2007/03/12 17:49:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.12 2007/03/22 21:20:21 lack Exp $
+
+  22 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-gamma-2.03-r1.ebuild:
+  Fixed X11 library location (bug 166556)
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gkrellm-gamma-2.03.ebuild:
