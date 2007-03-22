@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.83 2007/03/19 00:20:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.84 2007/03/22 14:48:49 mrness Exp $
+
+*dspam-3.6.8-r3 (22 Mar 2007)
+
+  22 Mar 2007; Alin Năstac <mrness@gentoo.org> +dspam-3.6.8-r3.ebuild:
+  Select administrative mysql account used to initialize the database
+  (#171711). When daemon flag is enabled: install dspamc executable with sgid
+  and group dspam (#171725); set the default ClientHost to the default value
+  of ServerDomainSocketPath (#171726).
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove st_lim from metadata.xml due to retirement.
