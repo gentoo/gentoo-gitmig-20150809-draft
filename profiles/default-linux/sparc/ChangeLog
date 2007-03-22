@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.46 2007/03/22 04:46:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.47 2007/03/22 14:15:23 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc64/2006.0/package.mask, sparc64/2006.1/package.mask:
+  Mask kgcc64-4 on old profiles
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
   Add media-video/mplayer ivtv use flag to use.mask
