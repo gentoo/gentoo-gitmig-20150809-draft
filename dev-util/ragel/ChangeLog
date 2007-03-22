@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.3 2007/02/27 14:00:34 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.4 2007/03/22 22:24:24 twp Exp $
+
+*ragel-5.19 (22 Mar 2007)
+
+  22 Mar 2007; <twp@gentoo.org> +ragel-5.19.ebuild:
+  Version bump.
 
   27 Feb 2007; <twp@gentoo.org> ragel-5.17-r1.ebuild:
   Fix ebuild with USE=-doc. Bug #168569.
