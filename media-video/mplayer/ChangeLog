@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.463 2007/03/22 14:34:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.464 2007/03/22 15:08:56 beandog Exp $
+
+*mplayer-1.0_rc2_pre20070321-r2 (22 Mar 2007)
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> +files/mplayer-xshape.patch,
+  +mplayer-1.0_rc2_pre20070321-r2.ebuild:
+  Add XShape detection patch, thanks to anarchy
 
 *mplayer-1.0_rc2_pre20070321-r1 (22 Mar 2007)
 
