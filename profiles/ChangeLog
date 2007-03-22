@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.223 2007/03/21 22:41:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.224 2007/03/22 03:09:04 beandog Exp $
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  Add mplayer local use flags
 
   21 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove media-video/kdenlive mask because that version has been removed
