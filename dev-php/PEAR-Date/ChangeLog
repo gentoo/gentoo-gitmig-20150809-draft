@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.41 2007/02/21 23:13:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.42 2007/03/22 18:52:33 chtekk Exp $
+
+*PEAR-Date-1.4.7 (22 Mar 2007)
+
+  22 Mar 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  PEAR-Date-1.4.6.ebuild, +PEAR-Date-1.4.7.ebuild:
+  Version bump.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
