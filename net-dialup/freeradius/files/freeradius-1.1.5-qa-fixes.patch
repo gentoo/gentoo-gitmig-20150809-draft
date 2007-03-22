@@ -1,3 +1,37 @@
+diff -Nru freeradius-1.1.5.orig/src/main/mainconfig.c freeradius-1.1.5/src/main/mainconfig.c
+--- freeradius-1.1.5.orig/src/main/mainconfig.c	2007-03-22 11:09:57.000000000 +0200
++++ freeradius-1.1.5/src/main/mainconfig.c	2007-03-22 11:13:26.000000000 +0200
+@@ -23,6 +23,7 @@
+ 
+ #include "autoconf.h"
+ #include "libradius.h"
++#include "ltdl.h"
+ 
+ #include <stdlib.h>
+ #include <string.h>
+@@ -1487,6 +1488,10 @@
+ /*
+  *	Free the configuration.
+  */
++extern void rl_free(void);
++extern void paircompare_builtin_free(void);
++extern void xlat_free(void);
++
+ int free_mainconfig(void)
+ {
+ 	/*
+diff -Nru freeradius-1.1.5.orig/src/modules/rlm_ldap/rlm_ldap.c freeradius-1.1.5/src/modules/rlm_ldap/rlm_ldap.c
+--- freeradius-1.1.5.orig/src/modules/rlm_ldap/rlm_ldap.c	2006-05-09 02:45:02.000000000 +0300
++++ freeradius-1.1.5/src/modules/rlm_ldap/rlm_ldap.c	2007-03-22 10:57:22.000000000 +0200
+@@ -175,6 +175,8 @@
+ #include	<string.h>
+ 
+ #include	<lber.h>
++#define LDAP_DEPRECATED 1
++#undef HAVE_LDAP_INT_TLS_CONFIG
+ #include        <ldap.h>
+ 
+ #include	<errno.h>
 diff -Nru freeradius-1.1.5.orig/src/modules/rlm_smb/smblib.c freeradius-1.1.5/src/modules/rlm_smb/smblib.c
 --- freeradius-1.1.5.orig/src/modules/rlm_smb/smblib.c	2004-02-26 21:04:35.000000000 +0200
 +++ freeradius-1.1.5/src/modules/rlm_smb/smblib.c	2007-03-17 11:13:44.000000000 +0200

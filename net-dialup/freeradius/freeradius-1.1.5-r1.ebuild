@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.5.ebuild,v 1.1 2007/03/17 09:27:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.5-r1.ebuild,v 1.1 2007/03/22 09:37:06 mrness Exp $
 
-inherit eutils flag-o-matic multilib
+WANT_AUTOMAKE="none"
+
+inherit eutils multilib autotools
 
 DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
@@ -47,26 +49,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-nostrip.patch"
 	epatch "${FILESDIR}/${P}-ssl.patch"
 	epatch "${FILESDIR}/${P}-qa-fixes.patch"
-}
 
-src_compile() {
-	autoconf || die "autoconf failed"
-
-	local myconf=" \
-		`use_enable debug developer` \
-		`use_with snmp` \
-		`use_with frascend ascend-binary` \
-		`use_with frxp experimental-modules` \
-		`use_with udpfromto` \
-		`use_with edirectory edir` "
-
-	if useq frnothreads; then
-		myconf="${myconf} --without-threads"
-	fi
-	#fix bug #77613
-	if has_version app-crypt/heimdal; then
-		myconf="${myconf} --enable-heimdal-krb5"
-	fi
+	cd "${S}"
 
 	# kill modules we don't use
 	if ! use ssl; then
@@ -88,14 +72,38 @@ src_compile() {
 	if ! use mysql; then
 		einfo "removing rlm_sql_mysql (no use mysql)"
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_mysql
+		sed -i -e '/rlm_sql_mysql/d' src/modules/rlm_sql/stable
 	fi
 	if ! use postgres; then
 		einfo "removing rlm_sql_postgresql (no use postgres)"
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_postgresql
+		sed -i -e '/rlm_sql_postgresql/d' src/modules/rlm_sql/stable
 	fi
 	if ! use firebird; then
 		einfo "removing rlm_sql_firebird (no use firebird)"
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_firebird
+		sed -i -e '/rlm_sql_firebird/d' src/modules/rlm_sql/stable
+	fi
+
+	eautoconf || die "eautoconf failed"
+}
+
+src_compile() {
+	local myconf=" \
+		$(use_enable debug developer) \
+		$(use_with snmp) \
+		$(use_with frascend ascend-binary) \
+		$(use_with frxp experimental-modules) \
+		$(use_with udpfromto) \
+		$(use_with edirectory edir) "
+
+	if useq frnothreads; then
+		myconf="${myconf} --without-threads"
+	fi
+
+	#fix bug #77613
+	if has_version app-crypt/heimdal; then
+		myconf="${myconf} --enable-heimdal-krb5"
 	fi
 
 	econf --with-large-files --disable-ltdl-install --with-pic \

@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.63 2007/03/17 09:27:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.64 2007/03/22 09:37:06 mrness Exp $
+
+*freeradius-1.1.5-r1 (22 Mar 2007)
+
+  22 Mar 2007; Alin Năstac <mrness@gentoo.org>
+  files/freeradius-1.1.5-qa-fixes.patch, -freeradius-1.1.5.ebuild,
+  +freeradius-1.1.5-r1.ebuild:
+  Remove disabled database drivers from the stable rlm_sql drivers (#171723).
+  Autotools cleanup. More QA fixes.
 
 *freeradius-1.1.5 (17 Mar 2007)
 
