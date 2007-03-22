@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.85 2007/03/22 13:05:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.86 2007/03/22 23:35:36 jer Exp $
+
+  22 Mar 2007; Jeroen Roovers <jer@gentoo.org> tar-1.16.1.ebuild:
+  Stable for HPPA (bug #171669).
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> tar-1.16.1.ebuild:
   Stable on sparc wrt #171669
