@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.52 2007/03/15 17:25:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.53 2007/03/22 02:33:45 beandog Exp $
+
+  22 Mar 2007; Steve Dibb <beandog@gentoo.org> hddtemp-0.3_beta15-r1.ebuild:
+  amd64 stable, bug 171661
 
   15 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   hddtemp-0.3_beta15-r1.ebuild:

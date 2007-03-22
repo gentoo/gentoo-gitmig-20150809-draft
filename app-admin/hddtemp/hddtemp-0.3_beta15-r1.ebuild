@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r1.ebuild,v 1.3 2007/03/15 17:25:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r1.ebuild,v 1.4 2007/03/22 02:33:45 beandog Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.guzu.net/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 IUSE="nls"
 
 DEPEND=""
