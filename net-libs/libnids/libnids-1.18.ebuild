@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.12 2006/02/20 20:27:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.13 2007/03/22 14:08:28 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.packetfactory.net/Projects/libnids/dist/${P/_}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.1"
-KEYWORDS="alpha ~amd64 ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
