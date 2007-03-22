@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.5.8.ebuild,v 1.1 2007/02/19 06:47:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.6.1.ebuild,v 1.1 2007/03/22 18:08:46 compnerd Exp $
 
 inherit gnome2 mono eutils
 
