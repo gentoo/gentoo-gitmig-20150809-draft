@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.66 2007/03/17 13:26:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.67 2007/03/22 03:11:19 nichoj Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -57,6 +57,7 @@ export WANT_JAVA_CONFIG="2"
 # -----------------------------------------------------------------------------
 #WANT_ANT_TASKS
 
+# -----------------------------------------------------------------------------
 # @variable-internal JAVA_PKG_PORTAGE_DEP
 #
 # The version of portage we need to function properly. At this moment it's
