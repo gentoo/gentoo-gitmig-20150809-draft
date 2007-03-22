@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXinerama
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.26 2006/10/01 17:01:18 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.27 2007/03/22 02:18:21 joshuabaergen Exp $
+
+  22 Mar 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  +libXinerama-1.0.2.ebuild:
+  Version bump.  Includes new documentation and some small code tweaks.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   libXinerama-1.0.1.ebuild:
