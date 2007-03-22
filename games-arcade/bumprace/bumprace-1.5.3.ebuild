@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bumprace/bumprace-1.5.3.ebuild,v 1.1 2007/03/22 00:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bumprace/bumprace-1.5.3.ebuild,v 1.2 2007/03/22 00:52:26 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="simple arcade racing game"
 HOMEPAGE="http://www.linux-games.com/bumprace/"
@@ -21,5 +21,6 @@ DEPEND="media-libs/libsdl
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog FAQ README
+	make_desktop_entry bumprace BumpRace
 	prepgamesdirs
 }
