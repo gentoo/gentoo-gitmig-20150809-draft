@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXdamage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.29 2007/01/14 16:59:11 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.30 2007/03/22 02:14:27 joshuabaergen Exp $
+
+  22 Mar 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  ,libXdamage-1.1.ebuild, +libXdamage-1.1.1.ebuild:
+  Version bump.  Fixes .so version.
 
 *libXdamage-1.1 (14 Jan 2007)
 
