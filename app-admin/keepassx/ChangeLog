@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.8 2007/01/01 22:18:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.9 2007/03/22 08:08:24 opfer Exp $
+
+  22 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  keepassx-0.2.2.ebuild:
+  moved USE flag check from src_install to pkg_setup
 
   01 Jan 2007; Sven Wegener <swegener@gentoo.org> keepassx-0.2.2.ebuild:
   Quote has_version argument because of > operator. Use full atoms for
