@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7008 2007/03/22 10:27:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7009 2007/03/22 10:44:32 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -254,7 +254,6 @@ www-servers/yaws
 # Fabian Groffen <grobian@gentoo.org> (1 Mar 2007)
 # Masked because of major changes that may break systems.  Should solve
 # issues for KDE users, please test
-=app-shells/tcsh-6.14-r32
 =app-shells/tcsh-6.14-r33
 
 # Samuli Suominen <drac@gentoo.org> (1 Mar 2007)
