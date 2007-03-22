@@ -1,6 +1,14 @@
 # ChangeLog for app-office/passepartout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.5 2007/03/12 21:32:53 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.6 2007/03/22 00:48:06 leonardop Exp $
+
+*passepartout-0.6_p1 (22 Mar 2007)
+
+  22 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/passepartout-0.6-extra_qual.patch, +passepartout-0.6_p1.ebuild:
+  New version including the latest patch released upstream for version 0.6.
+  Updated dependencies. Removed unnecessary or non-existant documents from
+  DOCS. Added extra patch to fix compilations with GCC 4.1.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
