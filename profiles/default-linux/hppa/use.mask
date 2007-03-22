@@ -1,8 +1,6 @@
 # 2007/03/21 Steve Dibb <beandog@gentoo.org>
 # mplayer local keywords
 ivtv
-s3virge
-tdfx
 
 # 2007/03/02 Samuli Suominen <drac@gentoo.org>
 # See http://bugs.gentoo.org/show_bug.cgi?id=157881#c3
