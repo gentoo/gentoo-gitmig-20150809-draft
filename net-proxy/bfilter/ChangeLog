@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/bfilter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.8 2007/01/17 19:06:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.9 2007/03/22 20:09:09 gustavoz Exp $
+
+  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> bfilter-1.0.7.ebuild:
+  Keyworded ~sparc
 
 *bfilter-1.0.7 (17 Jan 2007)
 
