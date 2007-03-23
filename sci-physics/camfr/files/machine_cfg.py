@@ -14,7 +14,7 @@ w.close()
 
 cc  = "gcc"
 cxx = "g++"
-f77 = "g77"
+f77 = "gfortran -fPIC"
 
 link = cxx
 link_flags = ""
@@ -45,7 +45,7 @@ library_dirs = [""]
 
 # Library names.
 
-libs = ["boost_python", "blitz", "lapack", "blas", "g2c"]
+libs = ["boost_python", "blitz", "lapack", "blas", "gfortran"]
 
 # Command to strip library of excess symbols:
 

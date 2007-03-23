@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-1.2.ebuild,v 1.2 2007/01/02 15:14:45 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-1.2.ebuild,v 1.3 2007/03/23 14:22:46 pbienst Exp $
 
 inherit eutils distutils fortran
 
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${P}.tgz
 	cp ${FILESDIR}/machine_cfg.py ${S}/machine_cfg.py
 	cp ${FILESDIR}/SConstruct ${S}
-	cp ${FILESDIR}/camfr_wrap.cpp ${S}/camfr
+	epatch ${FILESDIR}/throw_patch.diff
 	echo '1;' >> ${S}/docs/texi2html.init
 }
 

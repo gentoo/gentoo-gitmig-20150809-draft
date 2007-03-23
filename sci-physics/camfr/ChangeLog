@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.4 2007/01/02 15:14:45 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.5 2007/03/23 14:22:46 pbienst Exp $
+
+  23 Mar 2007; <pbienst@gentoo.org> ChangeLog:
+  Fix boost patch.
 
   02 Jan 2007; <pbienst@gentoo.org> camfr-1.2.ebuild:
   Remove unused use flag.
