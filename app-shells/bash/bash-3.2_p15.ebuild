@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p15.ebuild,v 1.1 2007/03/22 06:41:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p15.ebuild,v 1.2 2007/03/23 15:57:24 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -141,9 +141,13 @@ pkg_preinst() {
 		rm -f "${D}"/etc/bash/bash_logout
 	fi
 
+	# If /bin/sh does not exist or is bash, then provide it
+	# Otherwise leave it alone
 	if [[ ! -e ${ROOT}/bin/sh ]] ; then
 		ln -s bash "${ROOT}"/bin/sh
-	else
-		cp -a "${ROOT}"/bin/sh "${D}"/bin/
+	elif [[ -L ${ROOT}/bin/sh ]] ; then
+		case "$(readlink "${ROOT}"/bin/sh)" in
+			bash|/bin/bash) cp -pPR "${ROOT}"/bin/sh "${D}"/bin/ ;;
+		esac
 	fi
 }

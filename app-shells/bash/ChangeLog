@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.137 2007/03/23 06:22:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.138 2007/03/23 15:57:24 uberlord Exp $
+
+  23 Mar 2007; Roy Marples <uberlord@gentoo.org> bash-3.2_p15.ebuild:
+  Only preserve the /bin/sh symlink if it's bash.
 
 *bash-3.2_p10-r1 (23 Mar 2007)
 
