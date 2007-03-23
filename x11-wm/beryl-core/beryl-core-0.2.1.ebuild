@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/beryl-core-0.2.1.ebuild,v 1.2 2007/03/23 03:18:23 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/beryl-core-0.2.1.ebuild,v 1.3 2007/03/23 03:19:40 tsunam Exp $
 
 DESCRIPTION="Beryl window manager for AIGLX and XGL"
 HOMEPAGE="http://beryl-project.org"
@@ -20,7 +20,7 @@ RDEPEND=">=x11-base/xorg-server-1.1.1-r1
 	x11-libs/libXcomposite
 	x11-libs/libXinerama
 	x11-libs/startup-notification
-	x11-proto/damageproto"
+	>=x11-proto/damageproto-1.1.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
