@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/dvbstreamer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.1 2007/03/17 14:51:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.2 2007/03/23 15:20:49 zzam Exp $
+
+  23 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> dvbstreamer-0.6.ebuild:
+  Strike out not needed linking against libtermcap, thanks to Mike Auty
+  <ikelos@gentoo.org>, Bug #171332.
 
 *dvbstreamer-0.6 (17 Mar 2007)
 
