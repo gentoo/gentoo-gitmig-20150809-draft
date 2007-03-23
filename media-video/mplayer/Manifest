@@ -33,10 +33,6 @@ EBUILD mplayer-1.0_pre8-r1.ebuild 15254 RMD160 9d3f17e0418eb180842e545b765c17cfe
 MD5 429b86376a1bdb9ae07793a78306ab47 mplayer-1.0_pre8-r1.ebuild 15254
 RMD160 9d3f17e0418eb180842e545b765c17cfe4c9c5f5 mplayer-1.0_pre8-r1.ebuild 15254
 SHA256 15ebdbbdca29ef6ae211d08837f25c84774f5b242a30efa27e0e3e872ac3fc20 mplayer-1.0_pre8-r1.ebuild 15254
-EBUILD mplayer-1.0_pre8.ebuild 15497 RMD160 d343eaf934f9191ab5d1b4027a1e08b69bdbd3a5 SHA1 19df734618df495e0a17aafffcc4bc1be0a17522 SHA256 04250054cfc7932d6b016fa4f474c3e2bbed1837c1b8b154ddb9f79b8f09285e
-MD5 eb557ebfff47ddb8e4661c9cb580385f mplayer-1.0_pre8.ebuild 15497
-RMD160 d343eaf934f9191ab5d1b4027a1e08b69bdbd3a5 mplayer-1.0_pre8.ebuild 15497
-SHA256 04250054cfc7932d6b016fa4f474c3e2bbed1837c1b8b154ddb9f79b8f09285e mplayer-1.0_pre8.ebuild 15497
 EBUILD mplayer-1.0_rc1-r1.ebuild 16371 RMD160 56b3bded2bd3befc12217e10f7206579164d8530 SHA1 335c35c8026d4eff1cfeced8dfa882d11673f4a9 SHA256 ee82ada04b8833d922c7b2f5d9dec44e079405f2f3cc1c8f27451a12c82e384b
 MD5 382390159d7046d162b6efb9e7ee86dc mplayer-1.0_rc1-r1.ebuild 16371
 RMD160 56b3bded2bd3befc12217e10f7206579164d8530 mplayer-1.0_rc1-r1.ebuild 16371
@@ -65,9 +61,6 @@ MISC metadata.xml 223 RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 SHA1 ea8c3
 MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
 RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 metadata.xml 223
 SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 metadata.xml 223
-MD5 4c3ce9f6ced0ec6f46d94af644b26ba3 files/digest-mplayer-1.0_pre8 1560
-RMD160 17bd38c2a567629cf82872c5459c7a1cae287e56 files/digest-mplayer-1.0_pre8 1560
-SHA256 4cb7e07037e8fb90c07d27408a2fb61e3eb4d709770e0c42aeace9a06a095d3b files/digest-mplayer-1.0_pre8 1560
 MD5 78c3b2b2c87d00dc7a74dab0c090ebec files/digest-mplayer-1.0_pre8-r1 2000
 RMD160 9f6fbb2c027afa121aa898f209aaa3f7912f52d8 files/digest-mplayer-1.0_pre8-r1 2000
 SHA256 d5a1602723a4a7650baaf019ca6f1f37a716640a6a1b818807dfc25e4dccce6c files/digest-mplayer-1.0_pre8-r1 2000
