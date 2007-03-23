@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.7.ebuild,v 1.3 2007/03/23 16:48:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.7.ebuild,v 1.4 2007/03/23 20:09:25 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Port from an old amiga game"
-HOMEPAGE="http://methane.sourceforge.net"
+HOMEPAGE="http://methane.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
@@ -14,7 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE="mikmod"
 
 DEPEND="=dev-games/clanlib-0.7*
-	mikmod? ( >=media-libs/libmikmod-3.1.11 )"
+	mikmod? ( media-libs/libmikmod )"
 
 src_unpack() {
 	unpack ${A}
@@ -38,9 +38,11 @@ src_compile() {
 src_install() {
 	dogamesbin source/linux/methane || die "dogamesbin failed"
 	dodir "${GAMES_STATEDIR}"
-	touch "${D}/${GAMES_STATEDIR}/methanescores"
-	dodoc authors history install todo
+	touch "${D}/${GAMES_STATEDIR}"/methanescores
+	fperms g+w "${GAMES_STATEDIR}"/methanescores
+	newicon docs/puff.gif ${PN}.gif
+	make_desktop_entry ${PN} "Super Methane Brothers" /usr/share/pixmaps/${PN}.gif
+	dodoc authors history readme todo
 	dohtml "${S}"/docs/*
 	prepgamesdirs
-	fperms g+w "${GAMES_STATEDIR}/methanescores"
 }
