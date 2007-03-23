@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.17 2007/03/12 16:56:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.18 2007/03/23 13:59:23 fmccor Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # This needs GNOME 2.16+
@@ -165,3 +165,7 @@ x11-drivers/xf86-input-evdev
 >=gnome-extra/gnome2-user-docs-2.16.0
 >=gnome-base/gconf-2.16.0
 >=gnome-base/gnome-light-2.16.0
+
+#	Ferris McCormick <fmccor@gentoo.org>
+#	seahorse-1.0 is a problem with this profile
+>=app-crypt/seahorse-1.0
