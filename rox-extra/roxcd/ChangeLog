@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/roxcd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.9 2007/02/10 19:35:47 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.10 2007/03/23 18:01:45 armin76 Exp $
+
+  23 Mar 2007; armin <armin@gentoo.org> roxcd-0.5.4-r2.ebuild:
+  Stable on x86 wrt bug #171828.
 
 *roxcd-0.5.4-r2 (10 Feb 2007)
 

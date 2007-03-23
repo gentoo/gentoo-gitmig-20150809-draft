@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/rox-xplanet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-xplanet/ChangeLog,v 1.3 2007/01/15 19:51:19 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-xplanet/ChangeLog,v 1.4 2007/03/23 18:06:32 armin76 Exp $
+
+  23 Mar 2007; armin <armin@gentoo.org> rox-xplanet-0.0.2.ebuild:
+  Stable on x86 wrt bug #171828.
 
 *rox-xplanet-0.0.2 (15 Jan 2007)
 
