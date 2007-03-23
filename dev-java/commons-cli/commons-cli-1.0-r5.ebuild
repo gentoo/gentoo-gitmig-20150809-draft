@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.7 2007/02/06 19:47:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.8 2007/03/23 22:55:35 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2 eutils
@@ -19,7 +19,7 @@ CDEPEND="dev-java/commons-logging
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	test? ( dev-java/ant-junit )
+	test? ( || ( dev-java/ant-junit dev-java/ant-tasks ) )
 	dev-java/ant-core
 	${CDEPEND}"
 
