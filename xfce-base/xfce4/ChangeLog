@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.95 2007/03/23 20:55:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.96 2007/03/23 21:05:15 drac Exp $
+
+  23 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
+  Delete xfce4-toys dep.
 
   23 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
   Delete some obsolete deps.

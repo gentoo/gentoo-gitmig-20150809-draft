@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.17 2007/03/23 20:55:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.18 2007/03/23 21:05:15 drac Exp $
 
 inherit versionator
 
@@ -26,7 +26,6 @@ RDEPEND="${DEPEND}
 	~xfce-base/xfdesktop-${MY_PV}
 	~xfce-base/xfce4-session-${MY_PV}
 	~xfce-base/xfprint-${MY_PV}
-	~xfce-extra/xfce4-toys-${MY_PV}
 	~xfce-extra/xfwm4-themes-${MY_PV}
 	~xfce-extra/xfce4-appfinder-${MY_PV}
 	~xfce-extra/xfce4-icon-theme-${MY_PV}
