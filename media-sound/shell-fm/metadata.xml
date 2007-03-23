@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>pioto@gentoo.org</email>
+		<name>Mike Kelly</name>
+	</maintainer>
+	<longdescription lang="en">
+		Shell.FM is a lightweight console based player for Last.FM radio
+		streams. It's written mainly for Linux, but should be able to run on any
+		UNIX based system (even Mac OS X) with some minor tweaks.
+	</longdescription>
+</pkgmetadata>
