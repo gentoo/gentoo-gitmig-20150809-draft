@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.3.4.ebuild,v 1.2 2006/11/23 20:28:34 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.3.8.ebuild,v 1.1 2007/03/23 22:55:14 ticho Exp $
 
 # NOTE: this ebuild is regular ebuild without mailer-config support
 # comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -19,7 +19,7 @@ IUSE="ipv6 pam ldap mysql postgres ssl sasl dovecot-sasl mailwrapper mbox nis se
 MY_PV=${PV/_rc/-RC}
 MY_SRC=${PN}-${MY_PV}
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_VER=2.3.1
+VDA_VER=2.3.3
 VDA_P="${PN}-${VDA_VER}-vda"
 RC_VER="2.2.9"
 
@@ -73,7 +73,7 @@ group_user_check() {
 	einfo "checking for postdrop group...	create if missing."
 	enewgroup postdrop 208
 	einfo "checking for postfix user...		create if missing."
-	enewuser postfix 207 -1 /var/spool/postfix postfix
+	enewuser postfix 207 -1 /var/spool/postfix postfix,mail
 }
 
 pkg_setup() {
