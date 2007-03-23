@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.22 2007/01/14 15:01:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.23 2007/03/23 09:38:00 mrness Exp $
+
+*python-gammu-0.19 (23 Mar 2007)
+
+  23 Mar 2007; Alin Năstac <mrness@gentoo.org> +python-gammu-0.19.ebuild:
+  Version bump.
 
 *python-gammu-0.17 (14 Jan 2007)
 
