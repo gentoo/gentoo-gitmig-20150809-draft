@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.6.ebuild,v 1.4 2007/03/23 17:31:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.6.ebuild,v 1.5 2007/03/23 20:39:07 killerfox Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ekiga.org/admin/downloads/latest/sources/sources/${P}.tar.gz
 IUSE="novideo noaudio debug"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 RDEPEND=">=dev-libs/pwlib-1.10.5
 	>=media-video/ffmpeg-0.4.7"
