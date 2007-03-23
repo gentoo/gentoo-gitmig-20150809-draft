@@ -1,6 +1,27 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.464 2007/03/22 15:08:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.465 2007/03/23 14:52:01 beandog Exp $
+
+*mplayer-1.0_rc2_pre20070321-r3 (23 Mar 2007)
+
+  23 Mar 2007; Steve Dibb <beandog@gentoo.org>
+  +mplayer-1.0_rc2_pre20070321-r3.ebuild:
+  - Add vidix use flag
+  - Fix lzo use flag dependency
+  - Fix speex use flag dependency
+  - Fix srt+truetype+iconv cascading dependencies
+  - Re-add fontconfig and subfont options to mplayer.conf for truetype
+  - Force win32codecs dep on real use flag for x86
+  - Fix HPPA compilation, disable cpudetection on certain arches ( bug 171879 )
+  - Force OSS audio dep on radio use flag ( bug 171850 )
+  - Fix mp2 dependency ( toolame -> twolame )
+  - Cleanup RDEPEND tree
+  - Drop libdvdread dependency
+  - Add libdvdnav dependency
+  - Optional mp3 dependency on lame
+  - Dont disable vidix on -svga
+  - Cleanup DVB/V4L/Radio checks
+  - dodoc Changelog
 
 *mplayer-1.0_rc2_pre20070321-r2 (22 Mar 2007)
 
