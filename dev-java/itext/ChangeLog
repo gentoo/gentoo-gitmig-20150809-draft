@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.36 2007/03/11 16:46:36 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.37 2007/03/23 13:12:26 betelgeuse Exp $
+
+  23 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> itext-2.0.0.ebuild:
+  itext-2.0.0 went straight to stable so moving back to ~arch because it's
+  downloading dependencies from the internet.
 
 *itext-2.0.0 (08 Mar 2007)
 
