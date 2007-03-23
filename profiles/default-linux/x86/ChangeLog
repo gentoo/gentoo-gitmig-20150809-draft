@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.64 2007/02/22 14:41:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.65 2007/03/23 00:29:04 compnerd Exp $
+
+  23 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org> no-nptl/package.mask:
+  Mask seahorse on no-nptl
 
   21 Feb 2007; Samuli Suominen <drac@gentoo.org>
   Unmasked tango-icon-theme* and icon-naming-utils which was accidentally

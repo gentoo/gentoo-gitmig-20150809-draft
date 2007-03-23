@@ -1,3 +1,5 @@
+>=app-crypt/seahorse-1.0
+
 # Masking this since it requires nptl
 ~sys-libs/glibc-2.4
 >=sys-libs/glibc-2.6
