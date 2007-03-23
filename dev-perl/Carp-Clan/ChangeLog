@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.18 2007/03/05 11:20:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.19 2007/03/23 22:57:21 killerfox Exp $
+
+  23 Mar 2007; René Nussbaumer <killerfox@gentoo.org> Carp-Clan-5.8.ebuild:
+  Added to ~hppa.
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Carp-Clan-5.8.ebuild:
   Stable on x86, bug #169152.

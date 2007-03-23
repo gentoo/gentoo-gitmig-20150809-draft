@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.19 2007/01/19 17:02:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.20 2007/03/23 22:59:55 killerfox Exp $
+
+  23 Mar 2007; René Nussbaumer <killerfox@gentoo.org>
+  Tie-IxHash-1.21-r1.ebuild:
+  Added to ~hppa.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Tie-IxHash-1.21-r1.ebuild:
