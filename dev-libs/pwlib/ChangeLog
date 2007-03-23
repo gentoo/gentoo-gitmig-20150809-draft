@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.130 2007/03/23 11:26:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.131 2007/03/23 17:31:09 wolf31o2 Exp $
+
+  23 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> pwlib-1.10.5.ebuild:
+  Stable on alpha/amd64/ia64/ppc wrt bug #167643.
 
   23 Mar 2007; Markus Rothe <corsair@gentoo.org> pwlib-1.10.5.ebuild:
   Stable on ppc64; bug #167643
