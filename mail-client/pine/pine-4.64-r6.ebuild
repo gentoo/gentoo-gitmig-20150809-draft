@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r6.ebuild,v 1.2 2007/03/23 21:22:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r6.ebuild,v 1.3 2007/03/23 21:24:28 ticho Exp $
 
 inherit eutils
 
@@ -174,4 +174,11 @@ src_install() {
 
 pkg_postinst() {
 	maildir_warn
+
+	if use passfile ; then
+		elog
+		elog "Pine will cache passwords between connections."
+		elog "File ~/.pinepw will be used for this."
+		elog
+	fi
 }
