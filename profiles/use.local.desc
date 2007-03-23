@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2693 2007/03/23 14:50:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2694 2007/03/23 18:34:05 armin76 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1847,14 +1847,6 @@ www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
-www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
-www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
-www-client/mozilla:moznocompose - Disable building of mozilla's HTML editor component
-www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
-www-client/mozilla:moznomail - Disable building mozilla's mail client
-www-client/mozilla:moznopango - Disable pango during runtime
-www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznopango - Disable pango during runtime

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.227 2007/03/23 14:50:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.228 2007/03/23 18:34:05 armin76 Exp $
+
+  23 Mar 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  Remove www-client/mozilla USE-flags, as it has been removed from the tree
 
   23 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add vidix use flag for mplayer
