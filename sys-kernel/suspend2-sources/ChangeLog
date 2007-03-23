@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.85 2007/03/15 20:15:46 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.86 2007/03/23 14:10:15 alonbl Exp $
+
+*suspend2-sources-2.6.20-r3 (23 Mar 2007)
+
+  23 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/suspend2-2.2.9.7-kunmapping.patch, -suspend2-sources-2.6.20.ebuild,
+  -suspend2-sources-2.6.20-r1.ebuild, -suspend2-sources-2.6.20-r2.ebuild,
+  +suspend2-sources-2.6.20-r3.ebuild:
+  Version bump
 
 *suspend2-sources-2.6.20-r2 (15 Mar 2007)
 
