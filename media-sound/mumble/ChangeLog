@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.4 2007/02/28 09:25:23 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.5 2007/03/23 14:51:45 drizzt Exp $
+
+  23 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> mumble-0.9.4.ebuild:
+  Oops, I forgot -o to built_with_use (thanks to jabub for reporting)
 
   28 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> mumble-0.9.4.ebuild:
   Add use pch (as suggested by X on comment 2 of bug #167428).

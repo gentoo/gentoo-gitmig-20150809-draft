@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.4 2007/02/28 09:25:23 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.5 2007/03/23 14:51:45 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,7 +22,7 @@ DEPEND="dev-libs/boost
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ! built_with_use =x11-libs/qt-4* sqlite sqlite3; then
+	if ! built_with_use -o =x11-libs/qt-4* sqlite sqlite3; then
 		echo
 		ewarn "You need to build Qt4 with the sqlite and/or sqlite3 use flag"
 		echo
