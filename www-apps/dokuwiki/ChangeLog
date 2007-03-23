@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.20 2007/03/16 06:54:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.21 2007/03/23 20:44:22 ticho Exp $
+
+  23 Mar 2007; Andrej Kacian <ticho@gentoo.org> dokuwiki-20061106.ebuild:
+  Check if PHP has been built with XML support. Fixes bug #171610, reported by
+  Philippe Chaintreuil <pchaintreuil at syrres.com>.
 
   16 Mar 2007; Andrej Kacian <ticho@gentoo.org> -dokuwiki-20060309e.ebuild:
   Removed vulnerable version from the tree.

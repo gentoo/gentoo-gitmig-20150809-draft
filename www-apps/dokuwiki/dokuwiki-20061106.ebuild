@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20061106.ebuild,v 1.2 2007/03/16 06:50:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20061106.ebuild,v 1.3 2007/03/23 20:44:22 ticho Exp $
 
-inherit webapp
+inherit depend.php webapp
 
 # Upstream uses dashes in the datestamp
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
@@ -18,6 +18,18 @@ IUSE=""
 
 DEPEND="virtual/php"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	# let the eclass pick right php version...
+	require_php_cli
+
+	# ...and we check if correct USE flag for XML support is enabled
+	if [[ ${PHP_VERSION} == "4" ]] ; then
+		require_php_with_use expat
+	else
+		require_php_with_use xml
+	fi
+}
 
 src_unpack() {
 	cd ${WORKDIR}
