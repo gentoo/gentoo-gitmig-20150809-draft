@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.6 2007/01/23 15:53:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.7 2007/03/23 17:04:22 armin76 Exp $
+
+*gnunet-gtk-0.7.1b (23 Mar 2007)
+
+  23 Mar 2007; Raúl Porcel <armin76@gentoo.org> +gnunet-gtk-0.7.1b.ebuild:
+  Version bump wrt bug 167680
 
   23 Jan 2007; Raúl Porcel <armin76@gentoo.org> -gnunet-gtk-0.7.0d.ebuild:
   Drop old
