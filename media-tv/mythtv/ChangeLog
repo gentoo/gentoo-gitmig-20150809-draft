@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.145 2007/03/19 15:49:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.146 2007/03/23 04:49:48 cardoe Exp $
+
+*mythtv-0.20_p13110 (23 Mar 2007)
+
+  23 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.20_p13110.ebuild:
+  upstream fixes for crash in mythcommflag. Incorrect maxepisode count
+  expiring of episodes. Fixes for CDROM tray and no disc present.
 
   19 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.21_pre12945.ebuild:
