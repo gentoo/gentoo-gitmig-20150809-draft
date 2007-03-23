@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.53 2007/03/22 02:02:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.54 2007/03/23 15:31:30 wolf31o2 Exp $
+
+  23 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  capi4k-utils-20050718-r3.ebuild:
+  Stable on ppc wrt bug #170870.
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:
