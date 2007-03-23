@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-encryption
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.90 2007/01/05 04:34:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.91 2007/03/23 21:10:43 drizzt Exp $
+
+  23 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
+  gaim-encryption-3.0_beta7.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to our AT Nathan Smith for reporting wrt bug #171519
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   gaim-encryption-2.38.ebuild, gaim-encryption-3.0_beta7.ebuild:
