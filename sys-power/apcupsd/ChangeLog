@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.25 2007/02/22 00:35:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.26 2007/03/23 19:56:58 je_fro Exp $
+
+  23 Mar 2007; Jeff Gardner <je_fro@gentoo.org>
+  +files/3.12.4/apcupsd-snmp.patch, apcupsd-3.12.4.ebuild:
+  Fix compile problem wrt bug #159354. Many thanks to Martin Balaz.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
