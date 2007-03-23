@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20061106.ebuild,v 1.3 2007/03/23 20:44:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20061106.ebuild,v 1.4 2007/03/23 22:21:51 ticho Exp $
 
-inherit depend.php webapp
+inherit webapp depend.php
 
 # Upstream uses dashes in the datestamp
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
@@ -29,6 +29,8 @@ pkg_setup() {
 	else
 		require_php_with_use xml
 	fi
+
+	webapp_pkg_setup
 }
 
 src_unpack() {
