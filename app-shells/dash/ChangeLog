@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.37 2007/03/16 10:17:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.38 2007/03/23 12:18:18 uberlord Exp $
+
+  23 Mar 2007; Roy Marples <uberlord@gentoo.org> dash-0.5.3.7.ebuild:
+  Update homepage and description.
 
   16 Mar 2007; Roy Marples <uberlord@gentoo.org> dash-0.5.3.7.ebuild:
   Drop the depend on yacc as we work fine with bison.

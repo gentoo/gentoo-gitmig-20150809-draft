@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.3.7.ebuild,v 1.3 2007/03/16 10:17:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.3.7.ebuild,v 1.4 2007/03/23 12:18:18 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,9 +9,10 @@ DEB_PATCH=${PV##*.}
 DEB_PF="${PN}_${DEB_PV}-${DEB_PATCH}"
 MY_P="${PN}-${DEB_PV}"
 
-DESCRIPTION="Debian-version of NetBSD's lightweight bourne shell"
-HOMEPAGE="http://ftp.debian.org/debian/pool/main/d/dash/"
-SRC_URI="mirror://debian/pool/main/d/dash/${PN}_${DEB_PV}.orig.tar.gz \
+DESCRIPTION="DASH is a direct descendant of the NetBSD version of ash (the
+Almquist SHell) and is POSIX compliant"
+HOMEPAGE="http://gondor.apana.org.au/~herbert/dash/"
+SRC_URI="http://gondor.apana.org.au/~herbert/dash/files/${PN}-${DEB_PV}.tar.gz \
 	mirror://debian/pool/main/d/dash/${DEB_PF}.diff.gz"
 
 LICENSE="BSD"
