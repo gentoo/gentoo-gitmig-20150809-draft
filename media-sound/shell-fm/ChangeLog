@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shell-fm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.1 2007/03/23 20:31:03 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.2 2007/03/23 20:37:32 pioto Exp $
+
+  23 Mar 2007; Mike Kelly <pioto@gentoo.org> shell-fm-0.2_p191.ebuild:
+  Fix $SS.
 
   23 Mar 2007; Mike Kelly <pioto@gentoo.org> +metadata.xml:
   Initial ebuild.

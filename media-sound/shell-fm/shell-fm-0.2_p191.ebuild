@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.2_p191.ebuild,v 1.1 2007/03/23 20:31:03 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.2_p191.ebuild,v 1.2 2007/03/23 20:37:32 pioto Exp $
 
 DESCRIPTION="A lightweight console based player for Last.FM radio streams."
 HOMEPAGE="http://nex.scrapping.cc/shell-fm/"
@@ -13,8 +13,6 @@ IUSE="ao"
 
 DEPEND="media-libs/libmad
 	ao? ( media-libs/libao )"
-
-S="${WORKDIR}/${PN}"
 
 src_compile() {
 	econf $(use_enable ao) || die 'econf failed'
