@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-3.12.ebuild,v 1.1 2006/11/13 09:37:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-3.17.ebuild,v 1.1 2007/03/23 08:36:46 mrness Exp $
 
 DESCRIPTION="GUI builder tool for wxWidgets"
 HOMEPAGE="http://www.anthemion.co.uk/dialogblocks/"
-SRC_URI="http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-i386-gtk2-unicode-suse92.tar.gz"
+SRC_URI="http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-i386-gtk2-unicode.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
