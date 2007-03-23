@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.7.ebuild,v 1.2 2005/05/31 20:47:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.7.ebuild,v 1.3 2007/03/23 16:48:34 nyhm Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="mikmod"
 
-DEPEND=">=dev-games/clanlib-0.7
+DEPEND="=dev-games/clanlib-0.7*
 	mikmod? ( >=media-libs/libmikmod-3.1.11 )"
 
 src_unpack() {
