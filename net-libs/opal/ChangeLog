@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.27 2007/03/23 08:40:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.28 2007/03/23 11:36:35 corsair Exp $
+
+  23 Mar 2007; Markus Rothe <corsair@gentoo.org> opal-2.2.6.ebuild:
+  Stable on ppc64; bug #167643
 
   23 Mar 2007; Christian Faulhammer <opfer@gentoo.org> opal-2.2.6.ebuild:
   stable x86, security bug 167643
