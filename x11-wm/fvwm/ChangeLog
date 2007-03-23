@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.139 2007/02/22 05:48:36 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.140 2007/03/23 19:29:55 taviso Exp $
+
+*fvwm-2.5.21 (23 Mar 2007)
+
+  23 Mar 2007; Tavis Ormandy <taviso@gentoo.org> +fvwm-2.5.21.ebuild:
+  version bump
 
   22 Feb 2007; David Shakaryan <omp@gentoo.org> fvwm-2.5.18-r1.ebuild,
   fvwm-2.5.19.ebuild:
