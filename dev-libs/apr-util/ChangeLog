@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.77 2007/03/23 11:51:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.78 2007/03/23 18:51:27 tove Exp $
 
   23 Mar 2007; Christian Heim <phreak@gentoo.org> apr-util-1.2.8.ebuild:
   Updating the postgres? DEPEND, only dev-db/libpq is need, not a full-blown
@@ -69,7 +69,7 @@
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> apr-util-0.9.12.ebuild:
   Marked stable on mips.
 
-  29 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org> apr-util-0.9.12.ebuild:
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> apr-util-0.9.12.ebuild:
   Stable on alpha.
 
   28 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
@@ -121,11 +121,11 @@
   16 Apr 2006; Michael Stewart <vericgar@gentoo.org> +apr-util-1.2.7.ebuild:
   Version bump in preperation for the next version of apache 2.2.x
 
-  30 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> apr-util-0.9.7.ebuild,
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> apr-util-0.9.7.ebuild,
   apr-util-1.2.2.ebuild:
   Add ~x86-fbsd keyword to the unmasked ebuild.
 
-  30 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> apr-util-1.2.2.ebuild:
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> apr-util-1.2.2.ebuild:
   Add ~x86-fbsd keyword.
 
 *apr-util-1.2.2 (15 Feb 2006)
@@ -146,7 +146,7 @@
   10 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> apr-util-0.9.7.ebuild:
   Stable on sparc wrt #117835
 
-  09 Jan 2006; Bryan Ãstergaard <kloeri@gentoo.org apr-util-0.9.7.ebuild:
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org apr-util-0.9.7.ebuild:
   Stable on x86, alpha and ia64, bug 117835.
 
   06 Jan 2006; Michael Stewart <vericgar@gentoo.org> apr-util-0.9.7.ebuild:
@@ -210,7 +210,7 @@
   apr-util-0.9.6-r2.ebuild, apr-util-1.1.2.ebuild:
   added to ~mips
 
-  11 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  11 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   apr-util-0.9.6-r2.ebuild, apr-util-1.1.2.ebuild:
   Fix g/bsd compatibility, bug 95468.
 
@@ -262,7 +262,7 @@
   09 Feb 2005; Benedikt Boehm <hollow@gentoo.org> apr-util-0.9.5.ebuild:
   fixed expat
 
-  05 Feb 2005; Bryan Ãstergaard <kloeri@gentoo.org> apr-util-0.9.5.ebuild:
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> apr-util-0.9.5.ebuild:
   ~alpha keyword, bug 77455.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> apr-util-0.9.5.ebuild:
