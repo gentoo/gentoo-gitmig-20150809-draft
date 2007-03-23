@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r4.ebuild,v 1.6 2007/03/18 20:32:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r4.ebuild,v 1.7 2007/03/23 10:28:05 corsair Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc-macos ~ppc64 ~s390 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc-macos ppc64 ~s390 sparc x86"
 IUSE="X"
 
 DEPEND="media-libs/libpng
