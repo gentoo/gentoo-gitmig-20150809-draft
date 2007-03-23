@@ -1,8 +1,8 @@
 # ChangeLog for rox-extra/roxget
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/ChangeLog,v 1.9 2007/03/23 18:03:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/ChangeLog,v 1.10 2007/03/23 18:13:45 armin76 Exp $
 
-  23 Mar 2007; armin <armin@gentoo.org> roxget-0.0.5c.ebuild:
+  23 Mar 2007; Raúl Porcel <armin76@gentoo.org> roxget-0.0.5c.ebuild:
   Stable on x86 wrt bug #171828.
 
   21 Feb 2007; Jim Ramsay <lack@gentoo.org> files/digest-roxget-0.0.4,
