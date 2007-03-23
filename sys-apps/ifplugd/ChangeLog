@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ifplugd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.43 2006/10/03 21:48:52 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.44 2007/03/23 14:15:09 uberlord Exp $
+
+*ifplugd-0.28-r8 (23 Mar 2007)
+
+  23 Mar 2007; Roy Marples <uberlord@gentoo.org>
+  +files/ifplugd-0.28-strictalias.patch, +ifplugd-0.28-r8.ebuild:
+  Fix aliasing QA, #171415.
 
   03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ifplugd-0.28-r7.ebuild:
