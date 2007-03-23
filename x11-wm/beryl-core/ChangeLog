@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/beryl-core
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/ChangeLog,v 1.9 2007/03/21 02:47:38 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/ChangeLog,v 1.10 2007/03/23 03:18:23 tsunam Exp $
+
+  23 Mar 2007; Joshua Jackson <tsunam@gentoo.org> beryl-core-0.2.1.ebuild:
+  Fixing a depend problem
 
 *beryl-core-0.2.1 (21 Mar 2007)
 
