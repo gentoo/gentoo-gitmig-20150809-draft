@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gartoon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.7 2007/03/22 13:48:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.8 2007/03/23 18:42:55 drac Exp $
+
+  23 Mar 2007; Samuli Suominen <drac@gentoo.org> +gartoon-0.5-r2.ebuild:
+  Add two symlinks for bug 158113. Thanks to Brad Walker.
 
   22 Mar 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
   gartoon-0.5-r1.ebuild:
