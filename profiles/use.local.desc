@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2692 2007/03/23 00:30:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2693 2007/03/23 14:50:44 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1089,6 +1089,7 @@ media-video/mplayer:rtc - Enables usage of the linux real time clock.  The alter
 media-video/mplayer:srt - Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
 media-video/mplayer:tga - Enables Targa video output
 media-video/mplayer:v4l2 - Enables video4linux2 support
+media-video/mplayer:vidix - Support for vidix video output
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/ogmrip:srt - Support for SRT subtitle format

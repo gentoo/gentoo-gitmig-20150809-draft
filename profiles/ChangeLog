@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.226 2007/03/22 13:13:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.227 2007/03/23 14:50:44 beandog Exp $
+
+  23 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  Add vidix use flag for mplayer
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Remove unnecessary local use flags from media-video/mplayer
