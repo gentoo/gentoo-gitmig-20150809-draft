@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7016 2007/03/23 21:06:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7017 2007/03/23 21:22:37 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -36,7 +36,6 @@ xfce-extra/xfce4-toys
 # The Great GNOME 2.18.0 mask
 >=app-admin/sabayon-2.18.0
 >=gnome-base/gconf-2.16.0
->=gnome-base/orbit-2.14.7
 >=gnome-extra/at-spi-1.18.0
 >=dev-libs/atk-1.18.0
 >=gnome-base/gail-1.18.0
@@ -111,6 +110,7 @@ xfce-extra/xfce4-toys
 >=dev-cpp/libgnomemm-2.18.0
 >=dev-cpp/libgnomeuimm-2.18.0
 >=dev-python/gnome-python-2.18.0
+>=gnome-base/gnome-mount-0.5
 # End of GNOME 2.18.0 mask
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Mar 2007)
