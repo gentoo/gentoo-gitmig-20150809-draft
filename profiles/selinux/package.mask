@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.20 2006/12/01 05:24:19 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.21 2007/03/23 03:47:25 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (11 Oct 2006)
 # Requires old GDM, which will not work with SELinux.  All
@@ -12,3 +12,7 @@
 # Chris PeBenito <pebenito@gentoo.org> (12 Jan 2006)
 # SELinux code won't compile
 =sys-fs/udev-079*
+
+# Chris PeBenito <pebenito@gentoo.org> (22 Mar 2007)
+# SELinux code won't compile
+=sys-apps/busybox-1.4.1*
