@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.61 2007/02/24 11:36:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.62 2007/03/23 21:07:24 drizzt Exp $
+
+  23 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
+  bittornado-0.3.18.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to our AT Nathan Smith for reporting wrt bug #171606
 
   24 Feb 2007; Raúl Porcel <armin76@gentoo.org> bittornado-0.3.15.ebuild,
   bittornado-0.3.18.ebuild:
