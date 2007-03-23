@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7013 2007/03/23 17:19:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7014 2007/03/23 20:44:51 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (23 Mar 2007)
+# Pending removal 23 Apr 2007. Bug 169987.
+xfce-extra/xfce4-windowlist
+xfce-extra/xfce4-showdesktop
+xfce-extra/xfce4-taskbar
+xfce-extra/xfce4-minicmd
 
 # Daniel Gryniewicz <dang@gentoo.org> (23 Mar 2007)
 # The Great GNOME 2.18.0 mask
