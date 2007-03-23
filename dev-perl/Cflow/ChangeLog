@@ -1,9 +1,14 @@
 # ChangeLog for dev-perl/Cflow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.8 2007/03/13 15:51:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.9 2007/03/23 11:43:13 strerror Exp $
 
   13 Mar 2007; Michael Cummings <mcummings@gentoo.org> Cflow-1.051.ebuild:
   Removing changes from dodoc call
+
+*Cflow-1.051-r1 (23 Mar 2007)
+
+  23 Mar 2007; Benjamin Smee <strerror@gentoo.org> +Cflow-1.051-r1.ebuild:
+  Fixes bug #168810 and #170696
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
