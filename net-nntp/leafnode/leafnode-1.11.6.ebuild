@@ -1,22 +1,18 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-1.11.3.ebuild,v 1.4 2006/05/06 23:40:36 weeve Exp $
-
-MY_P=${P}.rel
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-1.11.6.ebuild,v 1.1 2007/03/23 11:37:05 swegener Exp $
 
 DESCRIPTION="A USENET software package designed for small sites"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://leafnode.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="ipv6"
 
 DEPEND=">=dev-libs/libpcre-3.9"
 RDEPEND="${DEPEND}
 	virtual/inetd"
-
-S="${WORKDIR}"/${MY_P}
 
 src_compile() {
 	econf \
@@ -37,7 +33,7 @@ src_install() {
 		/var/spool/news/{failed.postings,interesting.groups,leaf.node,out.going,temp.files} \
 		/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
 
-	chown -R news:news "${D}"/var/{lib,spool}/news
+	fowners -R news:news /var/{lib,spool}/news
 
 	insinto /etc/xinetd.d
 	newins "${FILESDIR}"/leafnode.xinetd leafnode-nntp
