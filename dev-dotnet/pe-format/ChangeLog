@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.7 2007/02/14 19:39:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.8 2007/03/23 17:01:09 compnerd Exp $
+
+  23 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  files/pe-format.init:
+  Update the scripts to fix reference to the wrong file and use of exit (bug
+  #170846)
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> pe-format-0.ebuild:
   Keyworded ~sparc
