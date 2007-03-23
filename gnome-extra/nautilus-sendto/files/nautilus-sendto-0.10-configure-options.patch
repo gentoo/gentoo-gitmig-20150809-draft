@@ -91,7 +91,7 @@
 +              [enable_bluetooth=no])
 +
 +if test x$enable_bluetooth = xyes ; then
-+   PKG_CHECK_MODULES(BLUETOOTH, [gnome-bluetooth >= $BLUETOOTH_REQUIRED dbus-glib-1 >= $DBUS_REQUIRED])
++   PKG_CHECK_MODULES(BLUETOOTH, [dbus-glib-1 >= $DBUS_REQUIRED])
 +
 +   AC_SUBST(BLUETOOTH_CFLAGS)
 +   AC_SUBST(BLUETOOTH_LIBS)

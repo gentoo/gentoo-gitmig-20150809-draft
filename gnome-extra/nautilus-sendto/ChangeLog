@@ -1,18 +1,24 @@
 # ChangeLog for gnome-extra/nautilus-sendto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.12 2007/03/22 20:34:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.13 2007/03/23 16:55:52 compnerd Exp $
 
-  22 Mar 2007; <compnerd@gentoo.org> -nautilus-sendto-0.8.ebuild:
+  23 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  files/nautilus-sendto-0.10-configure-options.patch:
+  Fix patch for bluetooth (bug #171868)
+
+  22 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -nautilus-sendto-0.8.ebuild:
   prune old version
 
 *nautilus-sendto-0.10 (22 Mar 2007)
 
-  22 Mar 2007; <compnerd@gentoo.org>
+  22 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/nautilus-sendto-0.10-configure-options.patch,
   +nautilus-sendto-0.10.ebuild:
   Version bump from upstream
 
-  22 Mar 2007; <compnerd@gentoo.org> nautilus-sendto-0.8-r1.ebuild:
+  22 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  nautilus-sendto-0.8-r1.ebuild:
   Keyword ~amd64
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> nautilus-sendto-0.8.ebuild,
