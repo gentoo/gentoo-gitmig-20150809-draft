@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7012 2007/03/22 17:57:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7013 2007/03/23 17:19:21 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,87 @@
 ##
 ##   End example
 ##
+
+# Daniel Gryniewicz <dang@gentoo.org> (23 Mar 2007)
+# The Great GNOME 2.18.0 mask
+>=app-admin/sabayon-2.18.0
+>=gnome-base/gconf-2.16.0
+>=gnome-base/orbit-2.14.7
+>=gnome-extra/at-spi-1.18.0
+>=dev-libs/atk-1.18.0
+>=gnome-base/gail-1.18.0
+>=gnome-base/gnome-vfs-2.18.0.1
+>=gnome-base/libbonobo-2.18.0
+>=gnome-base/libbonoboui-2.18.0
+>=gnome-base/libgnome-2.18.0
+>=gnome-base/libgnomeui-2.18.1
+>=x11-libs/pango-1.16.1
+>=x11-misc/alacarte-0.11.3
+>=gnome-extra/bug-buddy-2.18.0
+>=gnome-base/control-center-2.18.0
+>=app-accessibility/dasher-4.4.0
+>=gnome-extra/deskbar-applet-2.18.0
+>=gnome-base/eel-2.18.0.1
+>=media-gfx/eog-2.18.0.1
+>=www-client/epiphany-2.18.0
+>=www-client/epiphany-extensions-2.18.0
+>=app-text/evince-0.8.0
+>=mail-client/evolution-2.10.0
+>=gnome-extra/evolution-data-server-1.10.0
+>=gnome-extra/evolution-exchange-2.10.0
+>=gnome-extra/evolution-webcal-2.9.92
+>=gnome-extra/fast-user-switch-applet-2.17.4
+>=app-arch/file-roller-2.18.0
+>=gnome-extra/gcalctool-5.9.14
+>=gnome-extra/gconf-editor-2.18.0
+>=gnome-base/gdm-2.18.0
+>=app-editors/gedit-2.18.0
+>=gnome-base/gnome-applets-2.18.0
+>=gnome-base/gnome-desktop-2.18.0
+>=app-text/gnome-doc-utils-0.10.1
+>=gnome-extra/gnome-games-2.18.0
+>=x11-themes/gnome-icon-theme-2.18.0
+>=gnome-base/gnome-keyring-0.8
+>=gnome-extra/gnome-keyring-manager-2.18.0
+>=gnome-extra/gnome-media-2.18.0
+>=gnome-base/gnome-menus-2.18.0
+>=net-analyzer/gnome-nettool-2.18.0
+>=gnome-base/gnome-panel-2.18.0
+>=gnome-extra/gnome-power-manager-2.18.0
+>=dev-python/gnome-python-desktop-2.18.0
+>=gnome-extra/gnome-screensaver-2.18.0
+>=gnome-base/gnome-session-2.18.0
+>=gnome-extra/gnome-system-monitor-2.18.0
+>=app-admin/gnome-system-tools-2.18.0
+>=x11-terms/gnome-terminal-2.18.0
+>=x11-themes/gnome-themes-2.18.0
+>=gnome-extra/gnome-utils-2.18.0
+>=gnome-base/gnome-volume-manager-2.17.0
+>=x11-themes/gtk-engines-2.10.0
+>=gnome-extra/gtkhtml-3.14.0
+>=gnome-extra/gucharmap-1.10.0
+>=gnome-extra/libgail-gnome-1.18.0
+>=gnome-base/libgnomekbd-2.18.0
+>=gnome-base/libgnomeprint-2.18.0
+>=gnome-base/libgnomeprintui-2.18.0
+>=dev-libs/liboobs-2.18.0
+>=x11-libs/libwnck-2.18.0
+>=x11-wm/metacity-2.18.0
+>=gnome-base/nautilus-2.18.0.1
+>=gnome-extra/nautilus-cd-burner-2.18.0
+>=app-accessibility/orca-2.18.0
+>=app-text/scrollkeeper-0.3.14-r2
+>=media-video/totem-2.18.0
+>=net-misc/vino-2.18.0
+>=x11-libs/vte-0.16.0
+>=gnome-extra/yelp-2.18.0
+>=gnome-extra/zenity-2.18.0
+>=dev-cpp/gconfmm-2.18.0
+>=dev-cpp/gnome-vfsmm-2.18.0
+>=dev-cpp/libgnomemm-2.18.0
+>=dev-cpp/libgnomeuimm-2.18.0
+>=dev-python/gnome-python-2.18.0
+# End of GNOME 2.18.0 mask
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Mar 2007)
 # masked for removal in April.
