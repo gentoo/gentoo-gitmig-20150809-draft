@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekiga
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.34 2007/03/21 17:34:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.35 2007/03/23 08:43:39 opfer Exp $
+
+  23 Mar 2007; Christian Faulhammer <opfer@gentoo.org> ekiga-2.0.7.ebuild:
+  stable x86, security bug 167643
 
 *ekiga-2.0.7 (21 Mar 2007)
 
