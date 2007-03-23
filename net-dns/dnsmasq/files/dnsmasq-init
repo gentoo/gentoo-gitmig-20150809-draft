@@ -1,14 +1,15 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.10 2007/03/23 10:44:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.11 2007/03/23 15:14:18 uberlord Exp $
 
 opts="reload"
 
 depend() {
 	provide dns
 	need net
-	use dbus
+	# Comment out dbus until dbus doesn't dep on dns
+	#use dbus
 }
 
 start() {
