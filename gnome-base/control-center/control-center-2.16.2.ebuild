@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.2.ebuild,v 1.12 2007/02/16 17:46:14 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.2.ebuild,v 1.13 2007/03/23 15:49:55 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -15,6 +15,7 @@ IUSE="alsa eds hal"
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 		>=media-libs/fontconfig-1
 		>=virtual/xft-2.1.2
+		x11-apps/xmodmap
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXdmcp
