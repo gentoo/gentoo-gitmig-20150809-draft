@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekiga
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.36 2007/03/23 11:40:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.37 2007/03/23 17:32:31 wolf31o2 Exp $
+
+  23 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> ekiga-2.0.7.ebuild:
+  Stable on alpha/amd64/ia64/ppc wrt bug #167643.
 
   23 Mar 2007; Markus Rothe <corsair@gentoo.org> ekiga-2.0.7.ebuild:
   Stable on ppc64; bug #167643
