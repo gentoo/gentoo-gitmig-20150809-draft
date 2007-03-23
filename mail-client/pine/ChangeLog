@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.93 2007/03/20 14:06:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.94 2007/03/23 21:22:07 ticho Exp $
+
+  23 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  +files/pine-4.64-rename-symlink.patch, -files/rename-symlink.patch,
+  -pine-4.61-r5.ebuild, -pine-4.63-r3.ebuild, pine-4.64.ebuild,
+  pine-4.64-r1.ebuild, pine-4.64-r3.ebuild, -pine-4.64-r4.ebuild,
+  pine-4.64-r5.ebuild, pine-4.64-r6.ebuild:
+  Add a note about passfile feature and used file name in pkg_postinst().
+  Suggested by Rob Scott <rscott13 at comcast.net> in bug #171831. Unneeded
+  ebuilds cleanup.
 
   20 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> pine-4.64-r5.ebuild:
   Stable on sparc wrt #170301

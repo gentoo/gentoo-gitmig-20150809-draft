@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.8 2007/03/20 09:32:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.9 2007/03/23 21:22:07 ticho Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ maildir_warn() {
 	elog "use multiple mailboxes simultaneously:"
 	elog
 	elog "http://www.math.washington.edu/~chappa/pine/pine-info/collections/incoming-folders/"
-	echo
+	elog
 }
 
 pkg_setup() {
@@ -172,4 +172,11 @@ src_install() {
 
 pkg_postinst() {
 	maildir_warn
+
+	if use passfile ; then
+		elog
+		elog "Pine will cache passwords between connections."
+		elog "File ~/.pinepw will be used for this."
+		elog
+	fi
 }

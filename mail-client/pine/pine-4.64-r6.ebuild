@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r6.ebuild,v 1.1 2007/03/20 09:32:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r6.ebuild,v 1.2 2007/03/23 21:22:07 ticho Exp $
 
 inherit eutils
 
@@ -99,11 +99,10 @@ src_unpack() {
 	epatch "${FILESDIR}/imap-2000-time.patch"
 	# Bug #23336 - makes pine transparent in terms that support it.
 	epatch "${FILESDIR}/transparency.patch"
-
 	# Bug #72861 - relaxes subject length for base64-encoded subjects
 	epatch "${FILESDIR}/pine-4.61-subjectlength.patch"
-
-	epatch "${FILESDIR}/rename-symlink.patch"
+	# Bug #58664 - preserve symlink if a file gets rewritten
+	epatch "${FILESDIR}/${P}-rename-symlink.patch"
 
 	if use debug ; then
 		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
