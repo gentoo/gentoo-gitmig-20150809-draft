@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.142 2007/03/12 10:51:50 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.143 2007/03/24 23:13:53 dirtyepic Exp $
+
+  24 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
+  -files/wxWidgets-2.6.2-gcc41.patch, -wxGTK-2.6.2-r1.ebuild:
+  Remove obsolete version.
 
   12 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> wxGTK-2.6.3.3.ebuild:
   Stable on alpha wrt bug #136924
