@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/afternoonstalker
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.1 2007/03/24 10:06:11 tupone Exp $
+
+*afternoonstalker-1.1.1 (24 Mar 2007)
+
+  24 Mar 2007; <atupone@gentoo.org> +metadata.xml,
+  +afternoonstalker-1.1.1.ebuild:
+  New package. Requested with bug #115201 by charly
+
