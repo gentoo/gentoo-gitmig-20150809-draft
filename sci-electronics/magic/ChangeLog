@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/magic
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.32 2007/03/14 20:46:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.33 2007/03/24 14:47:17 calchan Exp $
+
+  24 Mar 2007; Denis Dupeyron <calchan@gentoo.org> ChangeLog:
+  Fixed ChangeLog, see bug #171962.
 
   14 Mar 2007; Denis Dupeyron <calchan@gentoo.org> -magic-7.4.29.ebuild,
   -magic-7.4.33.ebuild, -magic-7.5.71.ebuild:
@@ -175,10 +178,10 @@
   Closes #8581. Thanks to D Kindlund <gentoo@kindlund.net> for reporting this and
   to Michael Nygard <michael.nygard@halleysfifth.com> for providing the fix.
 
-* magic-7.1 (30 April 2002)
-
   25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> magic-7.1.ebuild :
   Added KEYWORDS.
+
+*magic-7.1 (30 April 2002)
 
   30 April 2002; Michael Nygard <michael.nygard@halleysfifth.com> ChangeLog :
   
