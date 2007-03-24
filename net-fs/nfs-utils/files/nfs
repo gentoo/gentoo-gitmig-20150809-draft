@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs,v 1.13 2007/01/10 00:49:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs,v 1.14 2007/03/24 10:14:43 vapier Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -151,10 +151,10 @@ start() {
 	fi
 
 	# This is the new "kernel 2.6 way" to handle the exports file
-	if grep -q nfsd /proc/filesystems &>/dev/null; then
-		if ! grep -q "nfsd /proc/fs/nfs" /proc/mounts &>/dev/null; then
+	if grep -qs nfsd /proc/filesystems ; then
+		if ! grep -qs "^nfsd[[:space:]]/proc/fs/nfsd[[:space:]]" /proc/mounts ; then
 			ebegin "Mounting nfsd filesystem in /proc"
-			mount -t nfsd nfsd /proc/fs/nfs
+			mount -t nfsd nfsd /proc/fs/nfsd
 			eend $? "Error mounting nfsd filesystem in /proc"
 		fi
 	fi
