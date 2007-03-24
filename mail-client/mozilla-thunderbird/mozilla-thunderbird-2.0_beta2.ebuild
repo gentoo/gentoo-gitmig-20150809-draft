@@ -1,13 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.8 2007/03/18 02:00:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.9 2007/03/24 12:32:34 armin76 Exp $
 
-unset ALLOWED_FLAGS	# stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
+WANT_AUTOCONF="2.1"
+
+inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib mozextension autotools
 
 LANGS="ca cs de el en-GB es-AR es-ES eu fi fr gu-IN he hu it ja ko nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
 SHORTLANGS="es-ES nb-NO sv-SE"
-PATCH="${P}-patches-0.4"
+PATCH="${P}-patches-0.5"
 MY_PV=${PV/_beta2/b2}
 
 DESCRIPTION="Thunderbird Mail Client"
@@ -42,8 +43,7 @@ done
 
 RDEPEND=">=www-client/mozilla-launcher-1.39
 	>=dev-libs/nss-3.10
-	>=dev-libs/nspr-4.6.1
-	~sys-devel/autoconf-2.13"
+	>=dev-libs/nspr-4.6.1"
 
 PDEPEND="crypt? ( x11-plugins/enigmail )
 		replytolist? ( x11-plugins/replytolist )"
