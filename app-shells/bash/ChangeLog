@@ -1,15 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.138 2007/03/23 15:57:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.139 2007/03/24 08:11:30 vapier Exp $
 
   23 Mar 2007; Roy Marples <uberlord@gentoo.org> bash-3.2_p15.ebuild:
   Only preserve the /bin/sh symlink if it's bash.
-
-*bash-3.2_p10-r1 (23 Mar 2007)
-
-  23 Mar 2007; <pva@gentoo.org> +files/bash-3.2_p10-redisplay-cursor.patch,
-  +bash-3.2_p10-r1.ebuild:
-  Issues with coloured prompt reported in bugs #154062, #155369 fixed.
 
 *bash-3.2_p15 (22 Mar 2007)
 
