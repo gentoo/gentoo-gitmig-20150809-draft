@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.91 2007/03/22 02:40:06 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.92 2007/03/24 10:14:19 corsair Exp $
+
+  24 Mar 2007; Markus Rothe <corsair@gentoo.org> evince-0.6.1-r2.ebuild:
+  Stable on ppc64; bug #171545
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> evince-0.6.1-r2.ebuild:
   amd64 stable, bug 171545
