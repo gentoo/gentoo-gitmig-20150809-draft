@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 opts="-dpk"
@@ -7,5 +7,5 @@ opts="-dpk"
 /sbin/reboot "${opts}" 2>/dev/null
 
 # hmm, if the above failed, that's kind of odd ...
-# unless it's busybox
+# so let's force a reboot
 /sbin/reboot -f
