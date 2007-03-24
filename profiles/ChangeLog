@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.228 2007/03/23 18:34:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.229 2007/03/24 08:41:41 genstef Exp $
+
+  24 Mar 2007; <genstef@gentoo.org> package.mask:
+  Remove removal p.mask of removed modular X broken pkges
 
   23 Mar 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Remove www-client/mozilla USE-flags, as it has been removed from the tree

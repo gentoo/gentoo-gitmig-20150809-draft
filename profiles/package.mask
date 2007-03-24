@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7018 2007/03/24 03:29:21 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7019 2007/03/24 08:41:41 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -369,15 +369,6 @@ dev-java/avalon-logkit-bin
 # Upstream has requested to remove the 0.5 version
 # Bug 72996
 net-p2p/freenet
-
-# Stefan Schweizer <genstef@gentoo.org> (27 Feb 2007)
-# Masked for removal, modular X incompatible
-# bug 153202, upstream dead
-media-libs/libhydrogen
-# bug 139792, upstream dead
-app-i18n/skkinput
-# bug 116233, upstream dead
-media-video/xiron
 
 # Steve Dibb <beandog@gentoo.org> (26 Feb 2007)
 # Security bug 159727
