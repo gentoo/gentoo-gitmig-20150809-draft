@@ -408,6 +408,7 @@ if [[ -d ${depfile%/*} ]] ; then
 				scfg=${scfg%% *}
 				[[ -f ${scfg} ]] && cfg=${scfg} && break 2
 			done
+			cfg=""
 		done
 		[[ -n ${cfg} ]] && cfg="-F ${cfg}"
 		depmod -a ${cfg} ${KV}
