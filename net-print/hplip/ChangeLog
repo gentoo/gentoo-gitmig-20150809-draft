@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.53 2007/03/17 17:37:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.54 2007/03/24 03:27:54 vanquirius Exp $
+
+*hplip-1.7.3 (24 Mar 2007)
+
+  24 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -hplip-1.7.2.ebuild,
+  +hplip-1.7.3.ebuild:
+  1.7.3 version bump. Fixes scanning problem in bug 161926. Thanks to direx
+  <jean-jaques at women-at-work dot org>, jim stead <jstead1 at twcny dot rr
+  dot com> and others.
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> hplip-1.6.10.ebuild:
   amd64 stable, bug 158911
