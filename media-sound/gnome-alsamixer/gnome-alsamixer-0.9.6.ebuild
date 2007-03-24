@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.14 2007/03/24 16:27:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.15 2007/03/24 16:29:57 drac Exp $
 
 inherit eutils fdo-mime
 
 DESCRIPTION="Gnome based ALSA Mixer"
 HOMEPAGE="http://www.paw.za.org/projects/gnome-alsamixer"
-SRC_URI="ftp://ftp.paw.co.za/pub/PAW/sources/${P}.tar.gz"
+SRC_URI="ftp://ftp.paw.za.org/pub/PAW/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
