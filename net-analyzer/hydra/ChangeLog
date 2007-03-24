@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.22 2007/03/20 14:14:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.23 2007/03/24 03:06:46 vanquirius Exp $
+
+*hydra-5.4 (24 Mar 2007)
+
+  24 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -hydra-5.0.ebuild,
+  -hydra-5.1.ebuild, +hydra-5.4.ebuild:
+  5.4 version bump for bug 171977, thanks to Matthew Lange <mmlange at gmail
+  dot com>.
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> hydra-5.3.ebuild:
   x86 stable

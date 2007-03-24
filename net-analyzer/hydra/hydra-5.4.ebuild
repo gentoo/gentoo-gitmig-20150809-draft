@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.1.ebuild,v 1.1 2006/01/09 20:02:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.4.ebuild,v 1.1 2007/03/24 03:06:46 vanquirius Exp $
 
 DESCRIPTION="Advanced parallized login hacker"
 HOMEPAGE="http://www.thc.org/thc-hydra/"
