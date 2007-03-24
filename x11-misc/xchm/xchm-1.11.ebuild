@@ -1,56 +1,48 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.6 2006/12/31 23:06:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.11.ebuild,v 1.1 2007/03/24 01:34:04 dirtyepic Exp $
 
-inherit eutils wxwidgets
+inherit wxwidgets flag-o-matic
 
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://xchm.sf.net"
-SRC_URI="mirror://sourceforge/xchm/${P}.tar.gz
-	doc? ( mirror://sourceforge/xchm/${P}-doc.tar.gz )"
+SRC_URI="mirror://sourceforge/xchm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="doc unicode"
+IUSE="nls unicode"
 DEPEND=">=app-doc/chmlib-0.31
-	=x11-libs/wxGTK-2.6*"
-
-src_unpack() {
-
-	unpack ${A}
-
-	# Fixes bug #117798:
-	epatch "${FILESDIR}/${PN}-gcc41.patch"
-
-}
+	>=x11-libs/wxGTK-2.6.0"
 
 src_compile() {
 	local myconf
 	export WX_GTK_VER="2.6"
+
 	if use unicode; then
 		need-wxwidgets unicode
 	else
 		need-wxwidgets gtk2
 	fi
+
+	append-flags -fno-strict-aliasing
+
 	myconf="${myconf} --with-wx-config=${WX_CONFIG}"
-	econf ${myconf} || die "econf failed"
+
+	econf ${myconf} \
+		$(use_enable nls) \
+		|| die "econf failed"
+
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die
-	dodoc AUTHORS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS README ChangeLog
 
-	if use doc; then
-		cd ${S}"-doc"
-		dohtml html/*
-	fi
-
-	# fixes dekstop and icon problems
-	rm ${D}/usr/share/pixmaps/xchm-*.xpm
-	${D}/usr/share/pixmaps/xchmdoc-*.xpm
+	# fixes desktop and icon problems
+	rm ${D}/usr/share/pixmaps/xchm-*.xpm ${D}/usr/share/pixmaps/xchmdoc-*.xpm
 
 	dodir /usr/share/icons/hicolor/16x16/apps/
 	install -m 644 ${S}/art/xchm-16.xpm \
