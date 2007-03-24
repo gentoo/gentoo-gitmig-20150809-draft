@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.13 2007/02/01 17:57:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.14 2007/03/24 03:46:19 seemant Exp $
+
+  24 Mar 2007; Seemant Kulleen <seemant@gentoo.org> +django-0.96.ebuild:
+  version bump to newest release -- how about a zero-day this time
 
   01 Feb 2007; Seemant Kulleen <seemant@gentoo.org>
   -files/django-0.95-auth_fix.patch,
