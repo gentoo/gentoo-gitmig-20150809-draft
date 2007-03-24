@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.233 2007/03/24 14:58:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.234 2007/03/24 16:48:53 steev Exp $
+
+  24 Mar 2007; Steev Klimaszewski <steev@gentoo.org> package.mask:
+  Add consolekit which is needed by Gnome's 2.18 release of GDM
 
   24 Mar 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Unmask media-libs/nas

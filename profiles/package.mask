@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7023 2007/03/24 14:58:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7024 2007/03/24 16:48:53 steev Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Steev Klimaszewski <steev@gentoo.org> (24 Mar 2007)
+# Needed for Gnome
+>=sys-auth/consolekit-0.2.0
 
 # Petteri Räty <betelgeuse@gentoo.org> (24 Mar 2007)
 # Creates bad changelog entries for version/revision bumps
