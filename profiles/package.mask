@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7024 2007/03/24 16:48:53 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7025 2007/03/24 17:01:06 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,10 +25,9 @@
 # Needed for Gnome
 >=sys-auth/consolekit-0.2.0
 
-# Petteri Räty <betelgeuse@gentoo.org> (24 Mar 2007)
-# Creates bad changelog entries for version/revision bumps
-# bug #172017
-=app-portage/gentoolkit-dev-0.2.6.3
+# Paul Varner <fuzzyray@gentoo.org> (24 Mar 2007)
+# Testing changes to echangelog
+>=app-portage/gentoolkit-dev-0.2.6.3
 
 # Stefan Schweizer <genstef@gentoo.org> (24 Mar 2007)
 # as-needed broken, unmaintained, for removal, bug 147550
