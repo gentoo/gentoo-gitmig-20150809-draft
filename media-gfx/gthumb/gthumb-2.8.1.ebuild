@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.8.1.ebuild,v 1.6 2007/03/23 12:13:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.8.1.ebuild,v 1.7 2007/03/24 18:39:31 nixnut Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 IUSE="exif gphoto2 jpeg tiff"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
 
 RDEPEND=">=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.8
