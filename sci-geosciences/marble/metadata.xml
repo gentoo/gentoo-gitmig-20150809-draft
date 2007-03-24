@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>kde</herd>
+  <herd>sci</herd>
+  <maintainer>
+    <email>cryos@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    Marble is a generic geographical map widget that is meant to be used by KDE4
+	applications. It shows the earth as a sphere but doesn't make use of any
+	hardware acceleration (no OpenGL). So although it might look similar to
+	professional applications like Google Earth or Nasa World Wind it's rather
+	meant to be a small light weight multi purpose widget.
+  </longdescription>
+</pkgmetadata>
