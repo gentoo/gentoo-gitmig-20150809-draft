@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.17 2007/03/13 13:26:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.18 2007/03/24 10:43:37 corsair Exp $
+
+  24 Mar 2007; Markus Rothe <corsair@gentoo.org> zebedee-2.5.3.ebuild:
+  Stable on ppc64; bug #171807
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> zebedee-2.5.3.ebuild:
   x86 stable
