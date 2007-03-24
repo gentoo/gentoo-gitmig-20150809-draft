@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.87 2007/03/24 10:20:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.88 2007/03/24 13:07:11 josejx Exp $
+
+  24 Mar 2007; Joseph Jezak <josejx@gentoo.org> tar-1.16.1.ebuild:
+  Marked ppc stable for bug #171669.
 
   24 Mar 2007; Markus Rothe <corsair@gentoo.org> tar-1.16.1.ebuild:
   Stable on ppc64; bug #171669
