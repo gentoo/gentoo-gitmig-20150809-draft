@@ -1,6 +1,11 @@
 # ChangeLog for media-video/oxine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.25 2007/02/04 17:13:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.26 2007/03/24 17:36:24 beandog Exp $
+
+*oxine-0.6.6 (24 Mar 2007)
+
+  24 Mar 2007; Steve Dibb <beandog@gentoo.org> +oxine-0.6.6.ebuild:
+  Version bump
 
   04 Feb 2007; nixnut <nixnut@gentoo.org> oxine-0.6.3-r1.ebuild:
   Stable on wrt bug 164851
