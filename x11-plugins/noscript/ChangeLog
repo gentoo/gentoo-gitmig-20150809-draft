@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/noscript
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/ChangeLog,v 1.22 2007/03/09 19:25:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/ChangeLog,v 1.23 2007/03/24 19:20:33 armin76 Exp $
+
+*noscript-1.1.4.6.070317 (24 Mar 2007)
+
+  24 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  +noscript-1.1.4.6.070317.ebuild:
+  Version bump, thanks to Kalidarn <dcecchin at gmail dot com>, bug 172072
 
 *noscript-1.1.4.6.070304 (09 Mar 2007)
 
