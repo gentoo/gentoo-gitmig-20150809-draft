@@ -1,0 +1,8 @@
+# ChangeLog for sys-devel/remake
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.1 2007/03/24 08:08:29 vapier Exp $
+
+*remake-0.62 (24 Mar 2006)
+
+  24 Mar 2006; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Fairles #142471.
