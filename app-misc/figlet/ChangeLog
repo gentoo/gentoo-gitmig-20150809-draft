@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.25 2007/03/24 17:17:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.26 2007/03/24 20:57:37 kloeri Exp $
+
+  24 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> figlet-222.ebuild:
+  Stable on Alpha, bug 171676.
 
   24 Mar 2007; Joseph Jezak <josejx@gentoo.org> figlet-222.ebuild:
   Marked ppc stable for bug #171676.
