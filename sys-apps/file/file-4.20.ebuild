@@ -1,18 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.20.ebuild,v 1.9 2007/03/23 18:44:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.20.ebuild,v 1.10 2007/03/24 21:36:24 vapier Exp $
 
 inherit eutils distutils libtool flag-o-matic
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
-SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
-	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
+SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
+	ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="python"
+RESTRICT="mirror" #171924
 
 DEPEND=""
 
