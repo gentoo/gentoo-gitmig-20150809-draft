@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3_rc2_p20070310.ebuild,v 1.1 2007/03/13 04:00:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3_rc2_p20070310-r1.ebuild,v 1.1 2007/03/24 14:32:00 beandog Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -23,7 +23,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dvdread? ( >=media-libs/libdvdread-0.9.0 )
 	xvid? ( >=media-libs/xvid-1.0.2 )
 	mjpeg? ( >=media-video/mjpegtools-1.6.2-r3 )
-	lzo? ( >=dev-libs/lzo-2 )
+	lzo? ( =dev-libs/lzo-1* )
 	fame? ( >=media-libs/libfame-0.9.1 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6.0 )
 	mpeg? ( media-libs/libmpeg3 )
@@ -73,10 +73,9 @@ src_compile() {
 
 	append-flags -DDCT_YUV_PRECISION=1
 
-	use xvid \
-		&& myconf="${myconf} --with-default-xvid=xvid4"
-	use lzo \
-		&& myconf="${myconf} --with-lzo-includes=/usr/include/lzo" \
+	use xvid && myconf="${myconf} --with-default-xvid=xvid4"
+	# Follow upstreams suggestion about a52, libac3 is deprecated
+	use a52 && myconf="${myconf} --enable-a52 --enable-a52-default-decoder"
 	myconf="${myconf} \
 		$(use_enable mmx) \
 		$(use_enable sse) \
@@ -94,7 +93,6 @@ src_compile() {
 		$(use_enable dv libdv) \
 		$(use_enable quicktime libquicktime) \
 		$(use_enable lzo) \
-		$(use_enable a52) \
 		$(use_enable iconv) \
 		$(use_enable mpeg libmpeg3) \
 		$(use_enable xml libxml2) \
