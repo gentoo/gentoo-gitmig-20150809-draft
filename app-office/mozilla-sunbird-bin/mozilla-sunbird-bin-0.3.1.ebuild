@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.3.1.ebuild,v 1.3 2007/03/14 18:41:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.3.1.ebuild,v 1.4 2007/03/24 15:01:27 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
-LANGS="ca cs da de es-ES eu fr hu it mn nl pl ru sk sl"
+LANGS="ca cs da de es-ES eu fr ga-IE hu it mn nl pl ru sk sl"
 
 MY_PN="${PN/mozilla-}"
 MY_P="${MY_PN}-${PV}"
@@ -30,13 +30,10 @@ for X in ${LANGS} ; do
 	# english is handled internally
 done
 
-DEPEND=""
-RDEPEND="x11-libs/libXcursor
-	x11-libs/libXrandr
-	x11-libs/libXi
-	x11-libs/libXinerama
+DEPEND="app-arch/unzip"
+RDEPEND="x11-libs/libXrender
 	x11-libs/libXt
-	virtual/xft
+	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
 		=virtual/libstdc++-3.3
@@ -44,8 +41,9 @@ RDEPEND="x11-libs/libXcursor
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
+		app-emulation/emul-linux-x86-compat
 	)
-	>=www-client/mozilla-launcher-1.44"
+	>=www-client/mozilla-launcher-1.41"
 
 S=${WORKDIR}/sunbird
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.19 2007/03/14 18:41:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.20 2007/03/24 15:01:27 armin76 Exp $
+
+  24 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-sunbird-bin-0.3.1.ebuild:
+  Some minor ebuild changes, modify the deps a bit and add the ga-IE langpack
 
   14 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   -mozilla-sunbird-bin-0.3.ebuild, mozilla-sunbird-bin-0.3.1.ebuild:
