@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/linux-fusion
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.6 2007/02/10 22:27:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.7 2007/03/24 10:00:44 vapier Exp $
+
+*linux-fusion-3.2.3 (24 Mar 2007)
+
+  24 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +linux-fusion-3.2.3.ebuild:
+  Version bump #171579 by Benjamin Schleinzer.
 
   10 Feb 2007; <genstef@gentoo.org> linux-fusion-3.2-r1.ebuild:
   remove udev useflag
