@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r1.ebuild,v 1.7 2007/03/17 18:07:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r1.ebuild,v 1.8 2007/03/24 18:33:09 nixnut Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/${MY_P}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCHSET_V}.tar.bz2
 	http://dev.gentoo.org/~swegener/distfiles/${P}-patches-${PATCHSET_V}.tar.bz2"
-KEYWORDS="~alpha amd64 ~ia64 mips ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 mips ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug static mysql postgres ssl vanilla"
