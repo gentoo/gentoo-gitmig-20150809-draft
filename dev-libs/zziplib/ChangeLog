@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.43 2007/03/24 14:40:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.44 2007/03/24 15:13:40 wolf31o2 Exp $
+
+  24 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  zziplib-0.13.49.ebuild:
+  Stable on amd64/ia64 wrt bug #171441.
 
   24 Mar 2007; Markus Rothe <corsair@gentoo.org> zziplib-0.13.49.ebuild:
   Stable on ppc64; bug #171441
