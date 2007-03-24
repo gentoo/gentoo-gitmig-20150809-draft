@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.22 2007/03/24 14:21:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.23 2007/03/24 18:50:06 nixnut Exp $
+
+  24 Mar 2007; nixnut <nixnut@gentoo.org> lapack-reference-3.1.0.ebuild:
+  Stable on ppc wrt bug 171784
 
   24 Mar 2007; Markus Rothe <corsair@gentoo.org>
   lapack-reference-3.1.0.ebuild:

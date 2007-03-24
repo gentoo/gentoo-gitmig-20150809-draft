@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.0.ebuild,v 1.5 2007/03/24 14:21:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.0.ebuild,v 1.6 2007/03/24 18:50:06 nixnut Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.netlib.org/lapack/${MyPN}-lite-${PV}.tgz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 
 RDEPEND="virtual/blas
 	app-admin/eselect-lapack"
