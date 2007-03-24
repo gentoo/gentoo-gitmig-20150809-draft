@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.229 2007/03/24 08:41:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.230 2007/03/24 09:03:59 genstef Exp $
+
+  24 Mar 2007; <genstef@gentoo.org> package.mask:
+  Package removals: libzvt+deps: gnomesu, xsu2, root-portal
 
   24 Mar 2007; <genstef@gentoo.org> package.mask:
   Remove removal p.mask of removed modular X broken pkges
