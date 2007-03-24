@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.4.ebuild,v 1.1 2007/01/24 11:26:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.6.ebuild,v 1.1 2007/03/24 07:59:14 lucass Exp $
+
+NEED_PYTHON=2.4
 
 inherit distutils
 
@@ -12,12 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="firebird mssql mysql postgres sqlite test"
+IUSE="doc examples firebird mssql mysql postgres sqlite test"
 KEYWORDS="~amd64 ~x86"
 
 # note: if you use psycopg-1, then you need egenix-mx-base
-RDEPEND=">=dev-lang/python-2.4
-	firebird? ( dev-python/kinterbasdb )
+RDEPEND="firebird? ( dev-python/kinterbasdb )
 	mssql? ( dev-python/pymssql )
 	mysql? ( dev-python/mysql-python )
 	postgres? (
@@ -31,24 +32,30 @@ RDEPEND=">=dev-lang/python-2.4
 DEPEND="dev-python/setuptools
 	test? ( || ( dev-python/pysqlite >=dev-lang/python-2.5 ) )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd "${S}/test"
-	sed -e 's/\\\.p/.p/g' \
-		-i sql/testtypes.py || die "sed failed"
+	# skip testorderby and testorderby_desc
+	# which require sqlite-3.3.13 to pass
+	sed -i \
+		-e '1091,1119d' \
+		test/orm/mapper.py || die "sed failed"
 }
 
 src_install() {
 	distutils_src_install
-	dohtml doc/*
 
-	insinto /usr/share/doc/${PF}
-	doins -r examples
+	use doc && dohtml doc/*
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
 
 src_test() {
-	PYTHONPATH="./test/" python test/alltests.py
+	PYTHONPATH="./test/" "${python}" test/alltests.py || die "tests failed"
 }
