@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.230 2007/03/24 09:03:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.231 2007/03/24 09:25:55 betelgeuse Exp $
+
+  24 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.mask =app-portage/gentoolkit-dev-0.2.6.3 because it generates bad
+  entries for bumps (bug #172017)
 
   24 Mar 2007; <genstef@gentoo.org> package.mask:
   Package removals: libzvt+deps: gnomesu, xsu2, root-portal
