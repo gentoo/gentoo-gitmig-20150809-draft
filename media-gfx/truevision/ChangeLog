@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/truevision
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.15 2007/02/22 01:42:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.16 2007/03/24 03:13:37 vanquirius Exp $
+
+  24 Mar 2007; Marcelo Goes <vanquirius@gentoo.org>
+  truevision-0.5.5.2.ebuild:
+  Add patch by Rene Kraneis <rene.kraneis at web dot de>. Fixes bug 148763,
+  allowing truevision to compile with gcc-4. Thanks also to rubik's cube
+  <daniel.hornung at gmx dot de> and Joel <world.root at gmail dot com>.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.7 2006/03/26 19:05:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.8 2007/03/24 03:13:37 vanquirius Exp $
 
 inherit eutils gnome2 versionator
 
@@ -9,7 +9,8 @@ EM_V="0.5.4"
 DESCRIPTION="Gnome frontend to Povray"
 HOMEPAGE="http://truevision.sourceforge.net"
 SRC_URI="mirror://sourceforge/truevision/${MY_P}.tar.bz2
-	mirror://sourceforge/truevision/${PN}-extramat-${EM_V}.tar.bz2"
+	mirror://sourceforge/truevision/${PN}-extramat-${EM_V}.tar.bz2
+	mirror://gentoo/${P}-gcc4.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,6 +37,8 @@ src_unpack() {
 	# bug 84530
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-makefile-mime-magic.patch
+	# bug 148763 - won't compile with gcc4
+	epatch "${DISTDIR}"/${P}-gcc4.diff.bz2
 }
 
 src_install() {
