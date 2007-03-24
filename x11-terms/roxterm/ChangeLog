@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.9 2007/03/24 04:58:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.10 2007/03/24 05:04:39 compnerd Exp $
+
+  24 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -roxterm-1.2.3.ebuild, -roxterm-1.3.1.ebuild,
+  -files/roxterm-1.2.3-dbus_close.patch,
+  -files/roxterm-1.2.3-new-button.patch,
+  -files/roxterm-1.3.1-bgimage-entry.patch:
+  prune older files
 
   24 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org> +roxterm-1.5.1.ebuild:
   Version bump from upstream
