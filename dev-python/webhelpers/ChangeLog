@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/webhelpers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.1 2007/02/28 00:02:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.2 2007/03/24 11:35:45 dev-zero Exp $
+
+*webhelpers-0.3 (24 Mar 2007)
+
+  24 Mar 2007; Tiziano Müller <dev-zero@gentoo.org> +webhelpers-0.3.ebuild:
+  Version bump, keeping old version since there are some API changes.
 
   05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   webhelpers-0.2.2.ebuild:
