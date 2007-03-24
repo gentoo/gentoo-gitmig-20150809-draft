@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r3.ebuild,v 1.4 2007/03/01 21:03:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r3.ebuild,v 1.5 2007/03/24 18:34:55 zzam Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -38,7 +38,8 @@ for camera in ${IUSE_CAMERAS}; do
 	IUSE="${IUSE} cameras_${camera}"
 done
 
-RDEPEND="exif? ( >=media-libs/libexif-0.5.9 )
+RDEPEND=">=dev-libs/libusb-0.1.8
+	exif? ( >=media-libs/libexif-0.5.9 )
 	hal? ( >=sys-apps/hal-0.5 )
 	sys-devel/libtool"
 DEPEND="${RDEPEND}
