@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dekorator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.8 2007/02/06 01:25:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.9 2007/03/24 19:27:41 vanquirius Exp $
+
+  24 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -dekorator-0.2.ebuild:
+  Remove old version.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
