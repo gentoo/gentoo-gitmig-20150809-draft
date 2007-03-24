@@ -1,0 +1,22 @@
+http://bugs.gentoo.org/172014
+
+From: Steinar H. Gunderson <sgunderson@bigfoot.com>
+Date: Fri, 16 Mar 2007 00:26:35 +0000 (+1100)
+Subject: Fix memory leak in mountd.
+X-Git-Url: http://linux-nfs.org/cgi-bin/gitweb.cgi?p=nfs-utils;a=commitdiff;h=08964495c2a65f6228426e4565a50dae5b75834d
+
+Fix memory leak in mountd.
+
+Signed-off-by: Neil Brown <neilb@suse.de>
+---
+
+--- a/support/export/client.c
++++ b/support/export/client.c
+@@ -329,6 +329,7 @@ add_name(char *old, char *add)
+ 		strcat(new, ",");
+ 		strcat(new, cp);
+ 	}
++	free(old);
+ 	return new;
+ }
+ 
