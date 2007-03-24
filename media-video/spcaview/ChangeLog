@@ -1,6 +1,9 @@
 # ChangeLog for media-video/spcaview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.8 2007/03/10 19:18:51 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.9 2007/03/24 22:21:23 kingtaco Exp $
+
+  24 Mar 2007; Mike Doty <kingtaco@gentoo.org> Manifest:
+  clean out old versions
 
 *spcaview-20061208 (10 Mar 2007)
 
