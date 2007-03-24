@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.8 2007/02/13 23:18:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.9 2007/03/24 04:58:54 compnerd Exp $
+
+  24 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org> +roxterm-1.5.1.ebuild:
+  Version bump from upstream
 
 *roxterm-1.4.1 (13 Feb 2007)
 
