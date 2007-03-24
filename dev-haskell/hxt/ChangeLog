@@ -1,6 +1,6 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.6 2007/02/21 23:21:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.7 2007/03/24 00:30:07 dcoutts Exp $
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -15,6 +15,7 @@
   Fixing SHA256 digest, pass four
 
 *hxt-4.02-r1 (26 Apr 2005)
+*hxt-5.00 (26 Apr 2005)
 
   26 Apr 2005; Andres Loeh <kosmikus@gentoo.org> +hxt-4.02-r1.ebuild,
   +hxt-5.00.ebuild:

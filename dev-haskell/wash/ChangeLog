@@ -1,6 +1,6 @@
 # ChangeLog for dev-haskell/wash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.10 2007/02/21 23:22:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.11 2007/03/24 00:27:50 dcoutts Exp $
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -35,7 +35,7 @@
   +wash-2.3.1.ebuild:
   Added new WASH release
 
-*wash-2.0.5-r1 (10 Mar 2005)
+*wash-2.0.6 (10 Mar 2005)
 
   10 Mar 2005; Luis F. Araujo <araujo@gentoo.org> metadata.xml,
   -wash-2.0.5-r1.ebuild, -wash-2.0.5.ebuild, +wash-2.0.6.ebuild:
