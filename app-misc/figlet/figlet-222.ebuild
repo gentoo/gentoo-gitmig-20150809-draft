@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-222.ebuild,v 1.5 2007/03/24 10:36:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-222.ebuild,v 1.6 2007/03/24 17:17:18 josejx Exp $
 
 inherit eutils bash-completion
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz
 
 LICENSE="AFL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~mips ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
