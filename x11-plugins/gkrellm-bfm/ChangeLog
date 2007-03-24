@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-bfm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/ChangeLog,v 1.10 2007/03/12 17:53:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/ChangeLog,v 1.11 2007/03/24 14:39:34 armin76 Exp $
+
+  24 Mar 2007; Raúl Porcel <armin76@gentoo.org> gkrellm-bfm-0.6.4.ebuild:
+  x86 stablw rt bug 151446
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gkrellm-bfm-0.6.4.ebuild:
