@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnome-alsamixer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.16 2007/01/07 14:28:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.17 2007/03/24 16:27:58 drac Exp $
+
+  24 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  gnome-alsamixer-0.9.6.ebuild:
+  Change HOMEPAGE for bug 172054.
 
   07 Jan 2007; Alexis Ballier <aballier@gentoo.org>
   -files/gnome-alsamixer.desktop, gnome-alsamixer-0.9.6.ebuild:
