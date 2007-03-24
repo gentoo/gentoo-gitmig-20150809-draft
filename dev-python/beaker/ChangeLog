@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.1 2007/02/27 23:55:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.2 2007/03/24 09:53:13 dev-zero Exp $
+
+*beaker-0.6.3 (24 Mar 2007)
+
+  24 Mar 2007; Tiziano Müller <dev-zero@gentoo.org> -beaker-0.6.2.ebuild,
+  +beaker-0.6.3.ebuild:
+  Version bump (thanks to Brad Walker). Removed brainless tests. Dropped old
+  version.
 
   05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +beaker-0.6.2.ebuild,
   +metadata.xml:

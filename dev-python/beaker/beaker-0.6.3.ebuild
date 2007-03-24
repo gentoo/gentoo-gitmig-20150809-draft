@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.6.2.ebuild,v 1.1 2007/02/27 23:55:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.6.3.ebuild,v 1.1 2007/03/24 09:53:13 dev-zero Exp $
 
 NEED_PYTHON=2.4
 
@@ -20,7 +20,6 @@ IUSE="test"
 
 RDEPEND="dev-python/myghtyutils"
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose )
 	dev-python/setuptools"
 
 S=${WORKDIR}/${MY_P}
@@ -32,8 +31,4 @@ src_unpack() {
 		-e '/install_requires = \[.*\],/d' \
 		-e '/install_requires/, /],/d' \
 		setup.py || die "sed failed"
-}
-
-src_test() {
-	PYTHONPATH=. "${python}" setup.py nosetests || die "test failed"
 }
