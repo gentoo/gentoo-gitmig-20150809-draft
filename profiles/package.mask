@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7027 2007/03/24 18:03:32 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7028 2007/03/24 18:41:18 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -121,7 +121,6 @@ xfce-extra/xfce4-toys
 >=gnome-base/nautilus-2.18.0.1
 >=gnome-extra/nautilus-cd-burner-2.18.0
 >=app-accessibility/orca-2.18.0
->=app-text/scrollkeeper-0.3.14-r2
 >=media-video/totem-2.18.0
 >=net-misc/vino-2.18.0
 >=x11-libs/vte-0.16.0
