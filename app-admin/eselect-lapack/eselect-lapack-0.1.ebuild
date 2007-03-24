@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/eselect-lapack-0.1.ebuild,v 1.12 2007/03/24 10:46:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/eselect-lapack-0.1.ebuild,v 1.13 2007/03/24 18:48:44 nixnut Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ppc ppc64 sparc x86"
 
 IUSE=""
 # Need skel.bash lib
