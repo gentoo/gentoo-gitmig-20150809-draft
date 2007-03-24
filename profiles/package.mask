@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7017 2007/03/23 21:22:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7018 2007/03/24 03:29:21 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -382,11 +382,6 @@ media-video/xiron
 # Steve Dibb <beandog@gentoo.org> (26 Feb 2007)
 # Security bug 159727
 <media-video/mplayer-1.0_rc1-r2
-
-# Marcelo Goes <vanquirius@gentoo.org> (24 Feb 2007)
-# Masked because scanning (SANE) is broken
-# Should be unmasked once we have a release that works
->=net-print/hplip-1.6.12
 
 # Mart Raudsepp <leio@gentoo.org> (24 Feb 2007)
 # Masked for removal on March 27th. Package doesn't run with
