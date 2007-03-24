@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/megapov
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/ChangeLog,v 1.4 2007/02/22 01:35:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/ChangeLog,v 1.5 2007/03/24 19:58:47 vanquirius Exp $
+
+*megapov-1.2.1 (24 Mar 2007)
+
+  24 Mar 2007; Marcelo Goes <vanquirius@gentoo.org>
+  +files/megapov-1.2.1-povrayconf.patch,
+  +files/megapov-1.2.1-povrayini.patch, metadata.xml, +megapov-1.2.1.ebuild:
+  1.2.1 version bump, thanks to Neil Alldrin <nalldrin at ucsd dot edu> and
+  Dennis Schridde <lindevel at gmx dot net> in bug 161849. Added to graphics
+  herd.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
