@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2694 2007/03/23 18:34:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2695 2007/03/24 10:09:19 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1640,6 +1640,7 @@ sec-policy/selinux-desktop:avahi - Add avahi SELinux policy.
 sys-apps/acl:nfs - add support for NFS acls
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
+sys-apps/coreutils:xattr - if you want extended attributes enabled
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
