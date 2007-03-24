@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2695 2007/03/24 10:09:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2696 2007/03/24 21:30:13 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1342,6 +1342,7 @@ net-irc/ircd-hybrid:contrib - Build contrib modules (eg. cloaking)
 net-irc/ngircd:ident - Enables support for libident
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/unrealircd:hub - Enable hub support
+net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
