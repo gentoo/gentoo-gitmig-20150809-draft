@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.231 2007/03/24 09:25:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.232 2007/03/24 14:57:41 beandog Exp $
+
+  24 Mar 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  Unmask transcode-1.0.3
 
   24 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask =app-portage/gentoolkit-dev-0.2.6.3 because it generates bad
