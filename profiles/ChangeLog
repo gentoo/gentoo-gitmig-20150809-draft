@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.235 2007/03/24 17:01:06 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.236 2007/03/24 18:03:32 kingtaco Exp $
+
+  24 Mar 2007; Mike Doty <kingtaco@gentoo.org> package.mask:
+  mask media-video/{spca5xx,gspca} in favor of media-video/gspcav1
+  unmask media-video/gspcav1
+  bug 159176
 
   24 Mar 2007; Paul Varner <fuzzyray@gentoo.org> package.mask:
   Update package.mask for app-portage/gentoolkit-dev to indicate testing 

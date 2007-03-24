@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7026 2007/03/24 17:47:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7027 2007/03/24 18:03:32 kingtaco Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Mike Doty <kingtaco@gentoo.org> (24 Mar 2007)
+# Sorting out media-video/{spca5xx,gspca{,v1}} bug 159176
+media-video/spca5xx
+media-video/gspca
 
 # Steev Klimaszewski <steev@gentoo.org> (24 Mar 2007)
 # Needed for Gnome
@@ -847,10 +852,6 @@ dev-db/monetdb
 # Piotr Jaroszyński <peper@gentoo.org> (22 Oct 2006)
 # telepathy-gabble has masked dep(net-libs/loudmouth)
 net-voip/telepathy-gabble
-
-# Mike Doty <kingtaco@gentoo.org> (22 Oct 2006)
-# gspca is beta
-media-video/gspcav1
 
 # Stefan Schweizer <genstef@gentoo.org> (21 Aug 2006)
 # beta psi, with jingle support
