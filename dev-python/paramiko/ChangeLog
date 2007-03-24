@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.22 2007/03/12 13:36:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.23 2007/03/24 16:37:48 lucass Exp $
+
+*paramiko-1.7 (24 Mar 2007)
+
+  24 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/paramiko-1.5.4-no-setuptools.patch, -paramiko-1.5.4-r1.ebuild,
+  -paramiko-1.6.2.ebuild, +paramiko-1.7.ebuild:
+  Version bump: added doc/examples useflags, added NEED_PYTHON.
+  Dropped 1.5.4-r1 and 1.6.2.
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> paramiko-1.6.3.ebuild:
   Stable on sparc
