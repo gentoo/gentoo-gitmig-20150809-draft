@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6.ebuild,v 1.3 2007/03/19 13:37:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6.ebuild,v 1.4 2007/03/24 21:31:57 swegener Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -16,7 +16,7 @@ SRC_URI="http://unreal.brueggisite.de/${MY_P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
-IUSE="hub ipv6 ssl zlib curl"
+IUSE="hub ipv6 ssl zlib curl prefixaq"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
@@ -52,11 +52,12 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	use curl && myconf="${myconf} --enable-libcurl=/usr"
-	use ipv6 && myconf="${myconf} --enable-inet6"
-	use zlib && myconf="${myconf} --enable-ziplinks"
-	use hub  && myconf="${myconf} --enable-hub"
-	use ssl  && myconf="${myconf} --enable-ssl"
+	use curl     && myconf="${myconf} --enable-libcurl=/usr"
+	use ipv6     && myconf="${myconf} --enable-inet6"
+	use zlib     && myconf="${myconf} --enable-ziplinks"
+	use hub      && myconf="${myconf} --enable-hub"
+	use ssl      && myconf="${myconf} --enable-ssl"
+	use prefixaq && myconf="${myconf} --enable-prefixaq"
 
 	econf \
 		--with-listen=5 \
@@ -69,7 +70,6 @@ src_compile() {
 		--with-permissions=0600 \
 		--with-fd-setsize=1024 \
 		--enable-dynamic-linking \
-		--enable-prefixaq \
 		${myconf} \
 		|| die "econf failed"
 
