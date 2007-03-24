@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.67 2007/03/23 13:59:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.68 2007/03/24 12:06:45 corsair Exp $
+
+  24 Mar 2007; Markus Rothe <corsair@gentoo.org> seahorse-1.0.ebuild:
+  Added ~ppc64; bug #171871
 
   23 Mar 2007; Ferris McCormick <fmccor@gentoo.org> seahorse-1.0.ebuild:
   Add back ~sparc keyword --- Bug #171871 --- builds as expected and can sign
