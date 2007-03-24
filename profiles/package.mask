@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7029 2007/03/24 19:52:38 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7030 2007/03/24 22:30:16 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -997,11 +997,6 @@ mail-client/mahogany
 # Initial import. Masked for testing
 #mail-filter/libmilter
 #mail-filter/dk-milter
-
-# Marcelo Goes <vanquirius@gentoo.org> (15 Jul 2006)
-# Masked for testing
-# See bug 140207
->=dev-libs/libnl-1.0_pre5
 
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
