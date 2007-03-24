@@ -1,3 +1,3 @@
 mkl/mkl_cblas.h /usr/include/cblas.h
-blas/mkl/libmkl_cblas.so /usr/@LIBDIR@/libcblas.so
-blas/mkl/libmkl_cblas.so /usr/@LIBDIR@/libcblas.so.0
+blas/mkl/libcblas.so.0 /usr/@LIBDIR@/libcblas.so
+blas/mkl/libcblas.so /usr/@LIBDIR@/libcblas.so.0

@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.11 2007/02/22 14:03:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.12 2007/03/24 23:11:42 bicatali Exp $
+
+*mkl-9.0.018 (24 Mar 2007)
+
+  24 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org> files/eselect.blas,
+  files/eselect.cblas, files/eselect.lapack, metadata.xml,
+  -mkl-8.0.2.004.ebuild, mkl-8.1.014.ebuild, +mkl-9.0.018.ebuild:
+  Version bump. Removed an older version, added longdescription in 
+  metadata.xml, fixed bug #156517. The new ebuild has a lot of changes, 
+  since Intel has changed once more the installation process.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

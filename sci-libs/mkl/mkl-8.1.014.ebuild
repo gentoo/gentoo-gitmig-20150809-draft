@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.1.014.ebuild,v 1.1 2006/08/30 06:37:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.1.014.ebuild,v 1.2 2007/03/24 23:11:42 bicatali Exp $
 
 inherit fortran rpm flag-o-matic
 
@@ -90,7 +90,7 @@ RPM_INSTALLATION=
 		--silent answers.txt &> /dev/null
 
 	[ -z $(find ${WORKDIR} -name "*.rpm") ] \
-		&& 	die "error while extracting the rpm"
+		&&	die "error while extracting the rpm"
 
 	rm -rf ${WORKDIR}/bin ${S}/*
 
@@ -126,7 +126,7 @@ src_compile() {
 
 	cd ${S}/${INSTDIR}/tools/builder
 	for x in blas cblas lapack; do
-		make ${IKERN} export=${FILESDIR}/${x}.list name=libmkl_${x} \
+		make ${IKERN} export=${FILESDIR}/${x}.list name=lib${x} \
 			|| die "make ${IKERN} failed"
 	done
 
@@ -178,17 +178,22 @@ src_install () {
 	doins ${ILIBDIR}/*.a
 	dodir /usr/$(get_libdir)/{blas,lapack}/mkl
 	dosym /${ILIBDIR}/libmkl_${IKERN}.a \
-		/usr/$(get_libdir)/blas/mkl/libmkl_blas.a
+		/usr/$(get_libdir)/blas/mkl/libblas.a
 	dosym /${ILIBDIR}/libmkl_lapack.a \
-		/usr/$(get_libdir)/lapack/mkl/libmkl_lapack.a
+		/usr/$(get_libdir)/lapack/mkl/liblapack.a
 
 	# install shared libraries
 	insopts -m0755
 	doins ${ILIBDIR}/*.so
 	insinto /usr/$(get_libdir)/blas/mkl
-	doins ${INSTDIR}/tools/builder/libmkl_{,c}blas.so
+	newins ${INSTDIR}/tools/builder/libblas.so libblas.so.0
+	newins ${INSTDIR}/tools/builder/libcblas.so libcblas.so.0
 	insinto /usr/$(get_libdir)/lapack/mkl
-	doins ${INSTDIR}/tools/builder/libmkl_lapack.so
+	newins ${INSTDIR}/tools/builder/liblapack.so liblapack.so.0
+	dosym libblas.so.0  /usr/$(get_libdir)/blas/mkl/libblas.so
+	dosym libcblas.so.0 /usr/$(get_libdir)/blas/mkl/libcblas.so
+	dosym liblapack.so.0 /usr/$(get_libdir)/lapack/mkl/liblapack.so
+
 
 	# install tools
 	insopts -m0644
