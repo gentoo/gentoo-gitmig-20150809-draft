@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.51 2007/03/25 05:09:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.52 2007/03/25 05:30:30 vapier Exp $
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org> files/prelink.cron:
+  Make sure we change KDE_IS_PRELINKED in /etc/env.d/ accordingly as suggested
+  by alwin #165904.
 
 *prelink-20061201 (25 Mar 2007)
 
