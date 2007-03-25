@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.49 2007/03/04 20:26:19 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.50 2007/03/25 09:34:08 corsair Exp $
+
+  25 Mar 2007; Markus Rothe <corsair@gentoo.org> jython-2.1-r11.ebuild:
+  Stable on ppc64; bug #172025
 
   04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> jython-2.1-r10.ebuild,
   jython-2.1-r11.ebuild:
