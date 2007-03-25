@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.1 2007/03/17 12:09:35 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.2 2007/03/25 18:25:25 cryos Exp $
 
 inherit kde eutils
 
@@ -49,7 +49,9 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-need-kde 3.2
+need-kde 3.5
+
+PATCHES="${FILESDIR}/${P}-alsa-fix.patch"
 
 # The following commented lines will have to be uncommented once the final
 # release is done. This pre-release version does not support i18n.

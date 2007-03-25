@@ -1,0 +1,19 @@
+diff -ur k3b-1.0.orig/plugins/audiooutput/alsa/configure.in.in k3b-1.0/plugins/audiooutput/alsa/configure.in.in
+--- k3b-1.0.orig/plugins/audiooutput/alsa/configure.in.in	2007-03-25 19:13:45.000000000 +0100
++++ k3b-1.0/plugins/audiooutput/alsa/configure.in.in	2007-03-25 19:14:09.000000000 +0100
+@@ -5,8 +5,6 @@
+   PKG_CHECK_MODULES([ALSA], [alsa >= 0.9], [have_alsa=yes], [have_alsa=no])
+   AC_SUBST([ALSA_CFLAGS])
+   AC_SUBST([ALSA_LIBS])
+-
+-  AM_CONDITIONAL(include_ALSA, [test "x$have_alsa" = "xyes"])
+ ])
+ 
+ AC_ARG_WITH(alsa,
+@@ -23,4 +21,6 @@
+   fi
+ fi
+ 
++AM_CONDITIONAL(include_ALSA, [test "x$have_alsa" = "xyes"])
++
+ dnl --------- ALSA CHECK END ---------------
