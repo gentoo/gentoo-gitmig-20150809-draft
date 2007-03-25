@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.6.6.ebuild,v 1.1 2007/03/24 17:36:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.6.6.ebuild,v 1.2 2007/03/25 13:28:28 beandog Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -13,7 +13,7 @@ HOMEPAGE="http://oxine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/oxine/${MY_P}.tar.gz
 	mirror://sourceforge/oxine/${PN}-0_6_0-to-0_6_6.patch"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="X curl debug dvb jpeg nls png polling lirc v4l joystick"
 
