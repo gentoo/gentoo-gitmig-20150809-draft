@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.99 2007/03/21 10:14:09 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.100 2007/03/25 09:45:18 dertobi123 Exp $
+
+  25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  openafs-1.4.4.ebuild:
+  Stable on ppc wrt bug #171662.
 
 *openafs-1.4.4 (21 Mar 2007)
 
