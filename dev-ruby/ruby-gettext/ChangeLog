@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.29 2007/02/11 14:50:22 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.30 2007/03/25 21:16:50 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org> ruby-gettext-1.8.0.ebuild:
+  ia64 stable wrt bug 148322
 
   11 Feb 2007; Lars Weiler <pylon@gentoo.org> ruby-gettext-1.8.0.ebuild:
   Stable on ppc; bug #148322.
