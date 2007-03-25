@@ -1,20 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/astromenace-bin/astromenace-bin-1.0.ebuild,v 1.2 2007/02/27 15:43:49 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/astromenace-bin/astromenace-bin-1.0.ebuild,v 1.3 2007/03/25 07:09:52 mr_bones_ Exp $
 
 inherit eutils versionator games
 
 MY_PN=${PN%-bin}
 MY_PV=$(delete_all_version_separators)
+DL="http://www.viewizard.com/download"
 
 DESCRIPTION="Modern 3D space shooter with spaceship upgrade possibilities"
 HOMEPAGE="http://www.viewizard.com/astromenace/index_linux.php"
-SRC_URI="http://www.viewizard.com/download/amenace${MY_PV}.tar.bz2"
+SRC_URI="linguas_de? ( ${DL}/amenace${MY_PV}_de.tar.bz2 )
+	!linguas_de? ( linguas_ru? ( ${DL}/amenace${MY_PV}_ru.tar.bz2 ) )
+	!linguas_de? ( !linguas_ru? ( ${DL}/amenace${MY_PV}.tar.bz2 ) )"
 
 LICENSE="astromenace"
-KEYWORDS="~amd64 x86"
-IUSE=""
 SLOT="0"
+KEYWORDS="~amd64 x86"
+IUSE="linguas_de linguas_ru"
 RESTRICT="strip"
 
 RDEPEND="
@@ -36,6 +39,19 @@ RDEPEND="
 	>=media-libs/libvorbis-1.1"
 
 S=${WORKDIR}/${MY_PN}
+
+src_unpack() {
+	unpack ${A}
+
+	# Standardize directory name
+	if [[ ! -d ${MY_PN} ]] ; then
+		if [[ -d ${MY_PN}_de ]] ; then
+			mv ${MY_PN}_de ${MY_PN} || die
+		else
+			mv ${MY_PN}_ru ${MY_PN} || die
+		fi
+	fi
+}
 
 src_install() {
 	exeinto "${GAMES_PREFIX_OPT}/${MY_PN}"
