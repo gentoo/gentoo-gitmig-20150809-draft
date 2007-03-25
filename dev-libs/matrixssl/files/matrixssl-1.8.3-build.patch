@@ -1,0 +1,65 @@
+--- src/Makefile
++++ src/Makefile
+@@ -6,7 +6,7 @@
+ #
+ 
+ CC      = gcc
+-STRIP   = strip
++STRIP   = true
+ AR      = ar
+ RANLIB  = ranlib
+ O       = .o
+@@ -15,7 +15,7 @@
+ E       =
+ 
+ LIBRARY	= libmatrixssl$(SO)
+-STATIC	= libmatrixsslstatic$(A)
++STATIC	= libmatrixssl$(A)
+ 
+ OBJECTS	= \
+ 		cipherSuite$(O) \
+@@ -50,7 +50,6 @@
+ STRIP	= test
+ else
+ #DFLAGS	= -Os
+-DFLAGS	= -O3 
+ endif
+ 
+ ifdef MATRIXSSL_PROFILE
+@@ -62,14 +61,14 @@
+ #	Override variables for compilation on x86-64 (AMD64, Nacona, etc)
+ #
+ ifeq ($(shell uname -m),x86_64)
+-DFLAGS  += -march=k8 -fPIC -DFP_64BIT -DTFM_X86_64 -DRDTSC
++DFLAGS  += -DFP_64BIT -DTFM_X86_64 -DRDTSC
+ endif
+ 
+ #
+ #	Compile options
+ #
+-SHARED	= -shared
++SHARED	= -shared -Wl,-soname,$@
+-CFLAGS  = $(DFLAGS) -fPIC -DLINUX -I./
++CFLAGS  += $(DFLAGS) -fPIC -DLINUX -I./
+ LDFLAGS += -lc -lpthread
+ 
+ #
+--- src/os/linux/linux.c
++++ src/os/linux/linux.c
+@@ -31,6 +31,8 @@
+  */
+ /******************************************************************************/
+ #ifdef LINUX
++#define _XOPEN_SOURCE 600
++#include <strings.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <errno.h>
+@@ -40,7 +42,6 @@
+ #include "../osLayer.h"
+ 
+ #if defined(USE_RDTSCLL_TIME) || defined(RDTSC)
+-#include <asm/timex.h>
+ /*
+ 	As defined in asm/timex.h for x386:
+ */
