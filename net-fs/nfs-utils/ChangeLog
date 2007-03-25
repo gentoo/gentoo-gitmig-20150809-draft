@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.90 2007/03/24 10:15:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.91 2007/03/25 09:47:33 corsair Exp $
+
+  25 Mar 2007; Markus Rothe <corsair@gentoo.org> nfs-utils-1.0.12.ebuild:
+  Stable on ppc64; bug #172133
 
   24 Mar 2007; Mike Frysinger <vapier@gentoo.org> files/nfs:
   Mount nfsd filesystem at /proc/fs/nfsd rather than /proc/fs/nfs #172019.
