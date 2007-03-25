@@ -1,6 +1,14 @@
 # ChangeLog for media-video/x264-svn-encoder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/ChangeLog,v 1.6 2007/01/06 15:03:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/ChangeLog,v 1.7 2007/03/25 19:40:48 aballier Exp $
+
+*x264-svn-encoder-20070325 (25 Mar 2007)
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/x264-svn-encoder-20070325-nolib.patch,
+  +files/x264-svn-encoder-20070325-nostrip.patch,
+  +x264-svn-encoder-20070325.ebuild:
+  New snapshot
 
   06 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   x264-svn-encoder-20061014.ebuild:
