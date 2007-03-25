@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.107 2007/03/09 23:46:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.108 2007/03/25 15:10:04 dirtyepic Exp $
+
+*freetype-2.3.2-r1 (25 Mar 2007)
+
+  25 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/freetype-2.3.2-truetype-regression.patch,
+  +freetype-2.3.2-r1.ebuild:
+  Revision bump to fix bug #170512 and bug #170532.
 
 *freetype-2.3.2 (09 Mar 2007)
 
