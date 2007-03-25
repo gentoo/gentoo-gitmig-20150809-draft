@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/Mail-SRS-0.31.ebuild,v 1.4 2007/01/19 14:03:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/Mail-SRS-0.31.ebuild,v 1.5 2007/03/25 19:59:57 ticho Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="Interface to Sender Rewriting Scheme"
 SRC_URI="mirror://cpan/authors/id/S/SH/SHEVEK/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~shevek/"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 LICENSE="Artistic GPL-2"
 IUSE="test"
 SRC_TEST="do"
