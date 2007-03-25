@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.62 2007/03/04 19:43:51 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.63 2007/03/25 09:34:32 calchan Exp $
+
+  25 Mar 2007; Denis Dupeyron <calchan@gentoo.org> kino-0.9.5.ebuild:
+  Fixed bug #169590, thanks to Benoît-Pierre Demaine and Alexis Ballier.
 
   04 Mar 2007; <calchan@gentoo.org> -files/kino-0.7.5-ppc.diff,
   -files/kino-0.8.1-alsa.patch, -files/kino-0.8.1-as-needed.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.5.ebuild,v 1.8 2007/02/18 15:58:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.5.ebuild,v 1.9 2007/03/25 09:34:32 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -43,6 +43,12 @@ src_unpack() {
 	if ! use alsa ; then
 		sed -i -e "s:HAVE_ALSA 1:HAVE_ALSA 0:" configure || die "sed failed!"
 	fi
+	# Fix bug #169590
+	sed -i \
+		-e '/\$(LIBQUICKTIME_LIBS) \\/d' \
+		-e '/^[[:space:]]*\$(SRC_LIBS)/ a\
+	\$(LIBQUICKTIME_LIBS) \\' \
+		src/Makefile.in
 }
 
 src_compile() {
