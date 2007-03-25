@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.19 2007/02/16 03:30:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.20 2007/03/25 15:14:30 vapier Exp $
+
+*uclibc-0.9.28.3 (25 Mar 2007)
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org> +uclibc-0.9.28.3.ebuild:
+  Version bump #168747 by Josh G.
 
   16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   uclibc-0.9.27-r1.ebuild, uclibc-0.9.28.ebuild, uclibc-0.9.28-r1.ebuild,
