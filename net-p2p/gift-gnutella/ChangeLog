@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.33 2007/03/19 14:46:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.34 2007/03/25 19:07:22 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  gift-gnutella-0.0.11.ebuild:
+  Add ~ia64 wrt bug 132197
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   gift-gnutella-0.0.11.ebuild:

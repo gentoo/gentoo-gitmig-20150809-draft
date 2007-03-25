@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.37 2007/01/10 13:00:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.38 2007/03/25 19:15:35 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org> giftcurs-0.6.2.ebuild:
+  Add ~ia64 wrt bug 132197
 
   10 Jan 2007; Raúl Porcel <armin76@gentoo.org> giftcurs-0.6.2.ebuild:
   fix pkgconfig dep, bug 152463
