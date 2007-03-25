@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/clientform
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.15 2007/02/22 00:22:26 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.16 2007/03/25 19:37:05 lucass Exp $
+
+*clientform-0.2.6 (25 Mar 2007)
+
+  25 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -clientform-0.1.17.ebuild, -clientform-0.2.2.ebuild,
+  +clientform-0.2.6.ebuild:
+  Version bump: added examples useflag, keyworded ~amd64, added src_test.
+  Dropped old versions.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.2.ebuild,v 1.2 2006/04/01 14:48:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.6.ebuild,v 1.1 2007/03/25 19:37:05 lucass Exp $
 
 inherit distutils
 
@@ -10,18 +10,24 @@ HOMEPAGE="http://wwwsearch.sourceforge.net/ClientForm/"
 SRC_URI="http://wwwsearch.sourceforge.net/ClientForm/src/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc ~x86"
-IUSE=""
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+IUSE="examples"
 
 S="${WORKDIR}/${MY_P}"
 DOCS="*.txt"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# use distutils instead of setuptools
-	sed -e 's/not hasattr(sys, "version_info")/1/' -i setup.py
+	sed -i \
+		-e 's/not hasattr(sys, "version_info")/1/' \
+		setup.py || die "sed failed"
+}
+
+src_test() {
+	${python} test.py || die "test.py failed"
 }
 
 src_install() {
@@ -31,5 +37,8 @@ src_install() {
 
 	distutils_src_install
 
-	cp -r examples ${D}/usr/share/doc/${PF}
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
