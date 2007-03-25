@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2697 2007/03/25 17:15:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2698 2007/03/25 18:03:07 kaiowas Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -459,6 +459,7 @@ dev-libs/libtomcrypt:libtommath - Use the portable math library
 dev-libs/libtomcrypt:tomsfastmath - Use the optimized math library
 dev-libs/libwbxml:nokia6600 - Add support for Nokia 6600 mobile phone
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
+dev-libs/opencryptoki:tpmtok - offer support for TPM token
 dev-libs/openobex:irda - enable IrDA support
 dev-libs/openobex:syslog - enable syslog support
 dev-libs/opensc:openct - build using dev-libs/openct compatibility
