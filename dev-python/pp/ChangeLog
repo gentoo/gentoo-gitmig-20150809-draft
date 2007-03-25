@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.1 2007/03/24 12:09:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.2 2007/03/25 11:05:59 dev-zero Exp $
+
+  25 Mar 2007; Tiziano Müller <dev-zero@gentoo.org> pp-1.3.2.ebuild:
+  Re-added examples.
 
 *pp-1.3.2 (24 Mar 2007)
 
