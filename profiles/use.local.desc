@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2698 2007/03/25 18:03:07 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2699 2007/03/25 18:36:08 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -976,6 +976,7 @@ media-sound/ncmpc:search-screen - Enable search screen (EXPERIMENTAL)
 media-sound/noteedit:kmid - Use KDE's kmid to play sound
 media-sound/noteedit:tse3 - Use tse3 library to play/export sound
 media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
+media-sound/prokyon3:taglib - Enable tagging support with taglib
 media-sound/quodlibet:mmkeys - Enable support for special keys on multimedia keyboards
 media-sound/quodlibet:trayicon - Enable support for tray icon plugins
 media-sound/radiomixer:hwmixer - Use hardware mixer instead of internal mixer routines
