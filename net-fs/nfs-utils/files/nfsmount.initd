@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount.initd,v 1.1 2007/03/25 12:30:52 vapier Exp $
+
+depend() {
+	local myneed="" myuse=""
+	local nfs_mounts=$(awk '!/^[[:space:]]*#/ && $3=="nfs4" { print $0 }' /etc/fstab)
+	if [ -n "${nfs_mounts}" ] ; then
+		myneed="rpc.idmapd rpc.gssd"
+	else
+		myuse="rpc.idmapd rpc.gssd"
+	fi
+	need net portmap rpc.statd ${myneed}
+	use ypbind ${myuse}
+}
+
+start() {
+	ebegin "Mounting NFS filesystems"
+	mount -a -t nfs,nfs4
+	eend $?
+}
+
+stop() {
+	ebegin "Unmounting NFS filesystems"
+	umount -a -t nfs,nfs4
+	eend $?
+}

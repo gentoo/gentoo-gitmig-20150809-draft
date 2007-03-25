@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.93 2007/03/25 11:34:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.94 2007/03/25 12:30:52 vapier Exp $
+
+*nfs-utils-1.0.12-r2 (25 Mar 2007)
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org> files/nfs.confd,
+  +files/nfs.initd, +files/nfsmount.initd, +files/rpc.gssd.initd,
+  +files/rpc.idmapd.initd, +files/rpc.statd.initd,
+  +nfs-utils-1.0.12-r2.ebuild:
+  Split init.d scripts up so client/server configurations are handled properly
+  #101624 by Tim Hobbs. Special thanks to Daniel Burr and Thomas Bettler.
 
   25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   nfs-utils-1.0.12.ebuild:

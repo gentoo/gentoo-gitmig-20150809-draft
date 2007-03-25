@@ -4,24 +4,27 @@
 # please see /etc/sysctl.conf
 
 # Number of servers to be started up by default
-RPCNFSDCOUNT=8
+OPTS_RPC_NFSD="8"
 
 # Options to pass to rpc.mountd
-# ex. RPCMOUNTDOPTS="-p 32767
-RPCMOUNTDOPTS=""
+# ex. OPTS_RPC_MOUNTD="-p 32767"
+OPTS_RPC_MOUNTD=""
 
 # Options to pass to rpc.statd
-# ex. RPCSTATDOPTS="-p 32765 -o 32766"
-RPCSTATDOPTS=""
+# ex. OPTS_RPC_STATD="-p 32765 -o 32766"
+OPTS_RPC_STATD=""
 
 # Options to pass to rpc.idmapd
-RPCIDMAPDOPTS=""
+OPTS_RPC_IDMAPD=""
 
 # Options to pass to rpc.gssd
-RPCGSSDOPTS=""
+OPTS_RPC_GSSD=""
 
 # Options to pass to rpc.svcgssd
-RPCSVCGSSDOPTS=""
+OPTS_RPC_SVCGSSD=""
+
+# Options to pass to rpc.rquotad (requires sys-fs/quota)
+OPTS_RPC_RQUOTAD=""
 
 # Timeout (in seconds) for exportfs
-EXPORTFSTIMEOUT=30
+EXPORTFS_TIMEOUT=30

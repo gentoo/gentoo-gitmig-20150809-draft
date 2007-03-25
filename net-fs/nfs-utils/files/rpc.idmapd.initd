@@ -1,0 +1,65 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.idmapd.initd,v 1.1 2007/03/25 12:30:52 vapier Exp $
+
+[ -e /etc/conf.d/nfs ] && source /etc/conf.d/nfs
+
+rpc_bin=/usr/sbin/rpc.idmapd
+
+# since baselayout doesn't export this sort of information, we need
+# to hack around it ... this is to keep from needlessly unmounting/mounting
+# rpc_pipefs during a restart ...
+restarting="no"
+
+depend() {
+	use ypbind net
+	need portmap
+	after quota
+}
+
+mount_pipefs() {
+	if grep -qs rpc_pipefs /proc/filesystems ; then
+		if ! grep -qs "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
+			ebegin "Mounting RPC pipefs"
+			mount -t rpc_pipefs rpc_pipefs /var/lib/nfs/rpc_pipefs
+			eend $?
+		fi
+	fi
+}
+
+umount_pipefs() {
+	[ "${restarting}" = "yes" ] && return 0
+	if grep -qs "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
+		ebegin "Unmounting RPC pipefs"
+		umount /var/lib/nfs/rpc_pipefs
+		eend $?
+	fi
+}
+
+start() {
+	mount_pipefs
+
+	ebegin "Starting idmapd"
+	${rpc_bin} ${OPTS_RPC_IDMAPD}
+	eend $?
+}
+
+stop() {
+	local ret
+
+	ebegin "Stopping idmapd"
+	start-stop-daemon --stop --quiet --exec ${rpc_bin}
+	ret=$?
+	eend ${ret}
+
+	umount_pipefs
+
+	return ${ret}
+}
+
+restart() {
+	restarting="yes"
+	svc_stop
+	svc_start
+}

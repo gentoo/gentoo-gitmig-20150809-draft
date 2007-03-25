@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.statd.initd,v 1.1 2007/03/25 12:30:52 vapier Exp $
+
+[ -e /etc/conf.d/nfs ] && source /etc/conf.d/nfs
+
+rpc_bin=/sbin/rpc.statd
+rpc_pid=/var/run/rpc.statd.pid
+
+depend() {
+	use ypbind net
+	need portmap
+	after quota
+}
+
+is_running() {
+	# Don't start rpc.statd if already started by someone else ...
+	# Don't try and kill it if it's already dead ...
+	killall -0 rpc.statd 2>/dev/null
+}
+
+start() {
+	is_running && return 0
+	ebegin "Starting NFS statd"
+	start-stop-daemon --start --quiet --exec ${rpc_bin} -- ${OPTS_RPC_STATD}
+	eend $?
+}
+
+stop() {
+	is_running || return 1
+	ebegin "Stopping NFS statd"
+	start-stop-daemon --stop --quiet --exec ${rpc_bin} --pidfile /var/run/rpc.statd.pid
+	eend $?
+}

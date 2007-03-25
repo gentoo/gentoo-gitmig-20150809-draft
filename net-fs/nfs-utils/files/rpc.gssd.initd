@@ -1,0 +1,42 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.gssd.initd,v 1.1 2007/03/25 12:30:52 vapier Exp $
+
+[ -e /etc/conf.d/nfs ] && source /etc/conf.d/nfs
+
+   gssd=/usr/sbin/rpc.gssd
+svcgssd=/usr/sbin/rpc.svcgssd
+
+depend() {
+	use ypbind net
+	need portmap
+	after quota
+}
+
+start_it() {
+	ebegin "Starting $1"
+	shift
+	"$@"
+	eend $?
+	((ret+=$?))
+}
+start() {
+	local ret=0
+	start_it gssd ${gssd} ${OPTS_RPC_GSSD}
+	start_it svcgssd ${svcgssd} ${OPTS_RPC_SVCGSSD}
+	return ${ret}
+}
+
+stop_it() {
+	ebegin "Stopping $1"
+	start-stop-daemon --stop --quiet --exec $2
+	eend $?
+	((ret+=$?))
+}
+stop() {
+	local ret=0
+	stop_it gssd ${gssd}
+	stop_it svcgssd ${svcgssd}
+	return ${ret}
+}
