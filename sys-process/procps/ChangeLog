@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.20 2007/03/15 17:27:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.21 2007/03/25 12:47:46 vapier Exp $
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org> procps-3.2.7.ebuild:
+  Add libproc.so symlink for broken applications #170077 by Klas Meder Boqvist.
 
   15 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> procps-3.2.7.ebuild:
   Stable on sprac

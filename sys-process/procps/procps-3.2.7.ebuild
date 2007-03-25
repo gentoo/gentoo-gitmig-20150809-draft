@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.7.ebuild,v 1.4 2007/03/17 21:21:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.7.ebuild,v 1.5 2007/03/25 12:47:46 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -58,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	make \
+	emake \
 		ln_f="ln -sf" \
 		ldconfig="true" \
 		DESTDIR="${D}" \
@@ -69,6 +69,9 @@ src_install() {
 	doins proc/*.h || die "doins include"
 
 	dodoc sysctl.conf BUGS NEWS TODO ps/HACKING
+
+	# compat symlink so people who shouldnt be using libproc can #170077
+	dosym libproc-${PV}.so /$(get_libdir)/libproc.so
 }
 
 pkg_postinst() {
