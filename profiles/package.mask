@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7034 2007/03/25 16:35:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7035 2007/03/25 16:50:24 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Luca Barbato <lu_zero@gentoo.org> (25 Mar 2007)
 # snapshot not finalized
-=media-video/ffmpeg-0.4.9-p20070325
+=media-video/ffmpeg-0.4.9_p20070325
 
 # Samuli Suominen <drac@gentoo.org> (25 Mar 2007)
 # Snapshots introducing compatibility with freedesktop.org
