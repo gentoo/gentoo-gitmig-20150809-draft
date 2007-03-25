@@ -1,6 +1,13 @@
 # ChangeLog for perl-core/libnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.6 2007/02/05 17:15:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.7 2007/03/25 12:06:26 mcummings Exp $
+
+*libnet-1.20-r1 (25 Mar 2007)
+
+  25 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  +files/Net-CMD-UTF8.patch, -libnet-1.20.ebuild, +libnet-1.20-r1.ebuild:
+  RT 24835, bug 165784; new libnet forces utf8 on folks where it shouldnt.
+  Thanks for bringing it to our attention barthek.
 
 *libnet-1.20 (05 Feb 2007)
 

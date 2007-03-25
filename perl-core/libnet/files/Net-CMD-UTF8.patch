@@ -1,0 +1,20 @@
+diff -Naurp libnet-1.20.old/Net/Cmd.pm libnet-1.20/Net/Cmd.pm
+--- libnet-1.20.old/Net/Cmd.pm	2006-10-27 07:08:07.000000000 -0400
++++ libnet-1.20/Net/Cmd.pm	2007-03-25 08:02:38.000000000 -0400
+@@ -21,7 +21,6 @@ BEGIN {
+   }
+ }
+ 
+-my $doUTF8 = eval { require utf8 };
+ 
+ $VERSION = "2.27";
+ @ISA     = qw(Exporter);
+@@ -395,8 +394,6 @@ sub datasend
+  my $arr = @_ == 1 && ref($_[0]) ? $_[0] : \@_;
+  my $line = join("" ,@$arr);
+ 
+- utf8::encode($line) if $doUTF8;
+-
+  return 0 unless defined(fileno($cmd));
+ 
+  my $last_ch = ${*$cmd}{'net_cmd_last_ch'};
