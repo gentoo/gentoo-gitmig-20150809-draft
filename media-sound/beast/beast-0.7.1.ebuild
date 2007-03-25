@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1.ebuild,v 1.1 2007/02/27 22:56:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1.ebuild,v 1.2 2007/03/25 12:19:37 aballier Exp $
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -8,7 +8,8 @@ IUSE="debug mad static"
 
 DESCRIPTION="BEAST - the Bedevilled Sound Engine"
 HOMEPAGE="http://beast.gtk.org"
-SRC_URI="ftp://beast.gtk.org/pub/beast/v${PV%.[0-9]}/${P}.tar.bz2"
+SRC_URI="ftp://beast.gtk.org/pub/beast/v${PV%.[0-9]}/${P}.tar.bz2
+	mirror://gentoo/${P}-guile-1.8.diff.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -17,7 +18,7 @@ SLOT="0"
 RDEPEND=">=dev-libs/glib-2.0
 	>=x11-libs/gtk+-2.4.11
 	>=sys-libs/zlib-1.1.3
-	=dev-scheme/guile-1.6*
+	dev-scheme/guile
 	>=media-libs/libart_lgpl-2.3.8
 	>=gnome-base/libgnomecanvas-2.0
 	>=media-libs/libogg-1.0
@@ -28,6 +29,21 @@ DEPEND="dev-util/pkgconfig
 	media-libs/ladspa-cmt
 	media-libs/ladspa-sdk
 	${RDEPEND}"
+
+pkg_setup() {
+	if has_version =dev-scheme/guile-1.8*; then
+		local flags="deprecated"
+		built_with_use dev-scheme/guile ${flags} \
+		|| die "guile must be built with \"${flags}\" use flags"
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${WORKDIR}/${P}-guile-1.8.diff"
+}
 
 src_compile() {
 	# avoid suid related security issues.
