@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/fung-calc/fung-calc-1.3.2b.ebuild,v 1.8 2006/06/04 10:11:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/fung-calc/fung-calc-1.3.2b.ebuild,v 1.9 2007/03/25 03:11:05 kugelfang Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -16,7 +16,6 @@ KEYWORDS="amd64 ~ppc x86"
 DEPEND=">=sys-libs/zlib-1
 	>=media-libs/libpng-1.2
 	>=media-libs/jpeg-6
-	virtual/libc
 	opengl? ( virtual/opengl
 		virtual/glut )
 	kde-base/kdelibs"
