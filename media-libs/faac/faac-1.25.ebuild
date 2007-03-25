@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.25.ebuild,v 1.1 2007/03/17 20:06:39 beandog Exp $
-
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.25.ebuild,v 1.2 2007/03/25 13:18:41 drac Exp $
 
 inherit libtool eutils autotools
 
@@ -17,17 +14,17 @@ IUSE=""
 RDEPEND=">=media-libs/libsndfile-1.0.0
 	media-libs/libmp4v2"
 DEPEND="${RDEPEND}
-	!<media-libs/faad2-2.0-r3
-	app-text/recode"
+	!<media-libs/faad2-2.0-r3"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-external-libmp4v2.patch
-	recode ibmpc..latin1 configure.in
+	epatch "${FILESDIR}"/${P}-external-libmp4v2.patch
+
+	sed -i -e "s/.$//" configure.in
 
 	eautoreconf
 	elibtoolize
@@ -35,7 +32,7 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO docs/libfaac.pdf
 	dohtml docs/*
 }
