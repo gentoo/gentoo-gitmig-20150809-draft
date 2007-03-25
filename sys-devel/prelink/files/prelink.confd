@@ -1,3 +1,6 @@
+# For an in depth prelinking guide, please see:
+# http://www.gentoo.org/doc/en/prelink-howto.xml
+
 # Set this to no to disable prelinking altogether
 # (if you change this from yes to no prelink -ua
 # will be run next night to undo prelinking)
