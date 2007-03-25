@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-sgml-doctools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.11 2007/03/03 22:00:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.12 2007/03/25 22:28:08 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  xorg-sgml-doctools-1.1.1.ebuild, xorg-sgml-doctools-1.2.ebuild:
+  Add ~ia64 wrt bug 154626
 
 *xorg-sgml-doctools-1.2 (03 Mar 2007)
 
