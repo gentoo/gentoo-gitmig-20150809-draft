@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>math-proof</herd>
-	<maintainer>
-		<email>nattfodd@gentoo.org</email>
-		<name>Alexandre Buisse</name>
-	</maintainer>
+	<herd>haskell</herd>
 </pkgmetadata>

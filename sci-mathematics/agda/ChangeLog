@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.2 2007/03/18 19:00:12 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.3 2007/03/25 09:46:21 nattfodd Exp $
+
+  23 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Removed myself from metadata and added haskell herd
 
 *agda-1.0.2 (18 Mar 2007)
 
