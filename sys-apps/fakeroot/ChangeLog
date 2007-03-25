@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.24 2007/02/22 01:08:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.25 2007/03/25 12:40:04 vapier Exp $
+
+*fakeroot-1.6.5 (25 Mar 2007)
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org> +fakeroot-1.6.5.ebuild:
+  Version bump.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
