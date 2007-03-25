@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/demerge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.12 2007/03/11 18:19:07 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.13 2007/03/25 19:22:45 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org> demerge-0.029-r1.ebuild:
+  Add ~ia64
 
 *demerge-0.029-r1 (11 Mar 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.029-r1.ebuild,v 1.1 2007/03/11 18:19:07 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.029-r1.ebuild,v 1.2 2007/03/25 19:22:45 armin76 Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/demerge/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.iansview.com/gentoo/tools/demerge/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
