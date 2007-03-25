@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.46 2007/03/25 09:25:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.47 2007/03/25 10:01:36 dertobi123 Exp $
+
+  25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> libwpd-0.8.9.ebuild:
+  Stable on ppc wrt bug #169675.
 
   25 Mar 2007; Markus Rothe <corsair@gentoo.org> libwpd-0.8.9.ebuild:
   Stable on ppc64; bug #169675
