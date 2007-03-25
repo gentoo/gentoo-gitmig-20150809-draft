@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden-bin/staden-bin-1.7.0.ebuild,v 1.2 2006/10/22 16:49:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden-bin/staden-bin-1.7.0.ebuild,v 1.3 2007/03/25 03:14:39 kugelfang Exp $
 
 inherit multilib
 
@@ -57,10 +57,6 @@ src_unpack() {
 	sed -e 's:/usr/local/badger/gap4_test:/opt/staden:' \
 			-i linux-bin/finish_cDNA -i linux-bin/finish_cDNA_ends_only || \
 			die "Could not patch finish_cDNA"
-}
-
-src_compile() {
-	echo; einfo "Nothing to compile"; echo
 }
 
 src_install() {
