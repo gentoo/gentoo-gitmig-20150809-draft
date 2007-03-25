@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.64 2007/03/25 10:50:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.65 2007/03/25 11:14:12 calchan Exp $
+
+  25 Mar 2007; Denis Dupeyron <calchan@gentoo.org> -kino-0.7.6.ebuild:
+  Removed kino-0.7.6, at last.
 
   25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> kino-0.9.5.ebuild:
   Stable on ppc wrt bug #165836.
