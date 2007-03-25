@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.1 2007/03/23 17:02:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.2 2007/03/25 11:02:24 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -107,7 +107,7 @@ pkg_postinst() {
 	use ipv6 && ewarn "ipv6 support is -very- experimental and prone to bugs"
 	einfo
 	einfo "To configure"
-	einfo "	 1) Add user(s) to the gnunet group"
+	einfo "	 1) Add user(s) to the gnunetd group"
 	einfo "	 2) Run 'gnunet-setup' to generate your client config file"
 	einfo "	 3) Run gnunet-setup -d to generate a server config file"
 	einfo "	 4) Optionally copy the .gnunet/gnunetd.conf into /etc and"
