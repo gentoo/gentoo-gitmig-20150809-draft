@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7032 2007/03/25 13:55:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7033 2007/03/25 15:10:40 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,10 +35,6 @@ media-video/gspca
 # Steev Klimaszewski <steev@gentoo.org> (24 Mar 2007)
 # Needed for Gnome
 >=sys-auth/consolekit-0.2.0
-
-# Paul Varner <fuzzyray@gentoo.org> (24 Mar 2007)
-# Testing changes to echangelog
->=app-portage/gentoolkit-dev-0.2.6.3
 
 # Stefan Schweizer <genstef@gentoo.org> (24 Mar 2007)
 # as-needed broken, unmaintained, for removal, bug 147550
