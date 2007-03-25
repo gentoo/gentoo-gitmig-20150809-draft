@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.7 2007/01/15 01:50:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.8 2007/03/25 12:36:50 vapier Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
 PATCHVER="1.4"
@@ -37,6 +35,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fPIE #168834
+
 	use amd64 && multilib_toolchain_setup x86
 
 	unset BLOCK_SIZE #73499
