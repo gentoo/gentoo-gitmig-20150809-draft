@@ -1,13 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.20.ebuild,v 1.10 2007/03/24 21:36:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.20.ebuild,v 1.11 2007/03/25 18:04:11 vapier Exp $
 
 inherit eutils distutils libtool flag-o-matic
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
-	ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz"
+	ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
+	ftp://ftp.gw.com/mirrors/pub/unix/file/patch-4.20-REG_STARTEND"
 
 LICENSE="as-is"
 SLOT="0"
@@ -19,6 +20,8 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	cd "${S}"/src
+	epatch "${DISTDIR}"/patch-4.20-REG_STARTEND
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-4.15-libtool.patch #99593
