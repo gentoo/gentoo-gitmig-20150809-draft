@@ -1,0 +1,10 @@
+# ChangeLog for xfce-base/libxfce4menu
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4menu/ChangeLog,v 1.1 2007/03/25 14:17:28 drac Exp $
+
+*libxfce4menu-4.5_pre20070325 (25 Mar 2007)
+
+  25 Mar 2007; Samuli Suominen <drac@gentoo.org> +metadata.xml,
+  +libxfce4menu-4.5_pre20070325.ebuild:
+  Initial commit.
+
