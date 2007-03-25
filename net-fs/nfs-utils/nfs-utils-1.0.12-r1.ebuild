@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.12-r1.ebuild,v 1.1 2007/03/24 09:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.12-r1.ebuild,v 1.2 2007/03/25 12:28:59 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -74,7 +74,7 @@ src_install() {
 	use !nonfsv4 && doins utils/idmapd/idmapd.conf
 
 	doinitd "${FILESDIR}"/nfs "${FILESDIR}"/nfsmount
-	newconfd "${FILESDIR}"/nfs.confd nfs
+	newconfd "${FILESDIR}"/nfs.confd.old nfs
 
 	# uClibc doesn't provide rpcgen like glibc, so lets steal it from nfs-utils
 	if ! use elibc_glibc ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.15 2007/01/05 07:09:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.16 2007/03/25 12:28:59 vapier Exp $
 
 inherit eutils
 
@@ -74,7 +74,7 @@ src_install() {
 	insinto /etc ; doins ${FILESDIR}/exports
 
 	doinitd ${FILESDIR}/nfs ${FILESDIR}/nfsmount
-	newconfd ${FILESDIR}/nfs.confd nfs
+	newconfd ${FILESDIR}/nfs.confd.old nfs
 }
 
 pkg_postinst() {
