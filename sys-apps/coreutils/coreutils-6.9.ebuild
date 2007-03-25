@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.9.ebuild,v 1.2 2007/03/24 10:08:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.9.ebuild,v 1.3 2007/03/25 08:47:11 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -26,7 +26,7 @@ RDEPEND="selinux? ( sys-libs/libselinux )
 	>=sys-libs/ncurses-5.3-r5"
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.9*
-	>=sys-devel/autoconf-2.59d
+	>=sys-devel/autoconf-2.61
 	>=sys-devel/m4-1.4-r1
 	sys-apps/help2man"
 

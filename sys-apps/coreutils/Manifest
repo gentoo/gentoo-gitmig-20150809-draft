@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 130_all_coreutils-gnulibs-regex-symbol-hiding.patch 1024 RMD160 cedf30f1dedfe4893f6f01cd45e288a59211ff1a SHA1 49e8da9f939b2758a7e3f54661ea2ecfe08f46d2 SHA256 7ad379725aec72a27173c2e9297019d94525af654f3eae41ddf1654f28cc6cbc
 MD5 55735adb690972eec2c296929d3c7856 files/130_all_coreutils-gnulibs-regex-symbol-hiding.patch 1024
 RMD160 cedf30f1dedfe4893f6f01cd45e288a59211ff1a files/130_all_coreutils-gnulibs-regex-symbol-hiding.patch 1024
@@ -31,10 +34,10 @@ EBUILD coreutils-6.7.ebuild 4539 RMD160 d59f56e55d0045ab32484b18ca7134f912936f8b
 MD5 7a22938b9193303b2c6a4676a1e376db coreutils-6.7.ebuild 4539
 RMD160 d59f56e55d0045ab32484b18ca7134f912936f8b coreutils-6.7.ebuild 4539
 SHA256 b79614040ac8ceee6ecfe1b0b5cf94b7a555f949c5147f617d19968a82ee0989 coreutils-6.7.ebuild 4539
-EBUILD coreutils-6.9.ebuild 4849 RMD160 44b7d1581f15f1de3f4e58caac07271bdf351b64 SHA1 ba40679d8d8717309321a510761a8916c80b1a15 SHA256 9ddf9dfc980670d3428b851314db6e65a8f08d2dbecb617fbf2d23558e343680
-MD5 79d274a7777f513a398ac7968b99798b coreutils-6.9.ebuild 4849
-RMD160 44b7d1581f15f1de3f4e58caac07271bdf351b64 coreutils-6.9.ebuild 4849
-SHA256 9ddf9dfc980670d3428b851314db6e65a8f08d2dbecb617fbf2d23558e343680 coreutils-6.9.ebuild 4849
+EBUILD coreutils-6.9.ebuild 4848 RMD160 7e74f385f5fd3f320fc057451677516d9cdbd2f5 SHA1 ec7660c2e9864822fbe17aa191210c46a32ccc7b SHA256 7c1b1c1e1cd5366d8c568fa2d6f0f584260ba4e13c37844adf3bab38d04fa709
+MD5 1c650a2fdb3542e5ed3ebb16f2e631d5 coreutils-6.9.ebuild 4848
+RMD160 7e74f385f5fd3f320fc057451677516d9cdbd2f5 coreutils-6.9.ebuild 4848
+SHA256 7c1b1c1e1cd5366d8c568fa2d6f0f584260ba4e13c37844adf3bab38d04fa709 coreutils-6.9.ebuild 4848
 MISC ChangeLog 30210 RMD160 2c0b46f972eda9b1245b5d8a65a0b2086d2c3d5b SHA1 f8bf38c9cf8ddef37112a18acf93e55cf51077c2 SHA256 d1bc5df27ded71571afedfeefcc7cd5b76c9d5897f07851f94c1e1009aab615e
 MD5 a1dff3bc57d37e5f317f37a91dbb95aa ChangeLog 30210
 RMD160 2c0b46f972eda9b1245b5d8a65a0b2086d2c3d5b ChangeLog 30210
@@ -58,3 +61,10 @@ SHA256 b890d07e0a0cafd850275f11addaeff906b6b0370a2dbdcd7d9d741fa5bfbaae files/di
 MD5 b4a2fa5e304fc0f5066259ea294c907f files/digest-coreutils-6.9 524
 RMD160 ea05a1c48917a644f9d34909c59360945dc1d9dc files/digest-coreutils-6.9 524
 SHA256 3c78dc90c4918200e40c9bdd468474ad0a987029280881f8daf34ee4afe3b9d7 files/digest-coreutils-6.9 524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFGBjcy8bi6rjpTunYRAoqdAKDhVWw2jb+QfGW+CKB9VVnQdk/MSgCfelZr
+CzEiyqm6hJ0UofJzbH1vkzM=
+=OB/b
+-----END PGP SIGNATURE-----
