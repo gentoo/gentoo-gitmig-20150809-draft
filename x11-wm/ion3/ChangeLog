@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.45 2007/03/11 09:40:37 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.46 2007/03/25 18:17:41 mabi Exp $
+
+*ion3-20070318 (25 Mar 2007)
+
+  25 Mar 2007; Matti Bickel <mabi@gentoo.org>
+  +files/20070318/201_all_fix-paths.patch,
+  +files/20070318/205_all_ion-lock.patch, +files/xft-ion3-20070318.patch,
+  +files/20070318/202_all_fix-menus.patch,
+  +files/20070318/207_all_bindings-manpage.patch, +ion3-20070318.ebuild:
+  Version bump; readded iontruetype USE for problems with non latin fonts,
+  added docs
 
 *ion3-20070203 (11 Mar 2007)
 

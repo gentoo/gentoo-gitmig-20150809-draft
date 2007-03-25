@@ -1,0 +1,13 @@
+diff -Naur ../work/ion-3ds-20061223/etc/cfg_ioncore.lua ion-3ds-20061223/etc/cfg_ioncore.lua
+--- ../work/ion-3ds-20061223/etc/cfg_ioncore.lua	2006-12-23 17:59:43.000000000 +0300
++++ ion-3ds-20061223/etc/cfg_ioncore.lua	2006-12-31 15:35:59.000000000 +0300
+@@ -331,7 +331,8 @@
+ defmenu("mainmenu", {
+     menuentry("Run...",         "mod_query.query_exec(_)"),
+     menuentry("Terminal",       "ioncore.exec_on(_, XTERM or 'xterm')"),
+-    menuentry("Lock screen",    "ioncore.exec_on(_, 'xlock')"),
++    menuentry("Lock screen",                                                                                                                                  
++              "ioncore.exec_on(_, ioncore.lookup_script('ion-lock'))"),                                                                                       
+     menuentry("Help",           "mod_query.query_man(_)"),
+     menuentry("About Ion",      "mod_query.show_about_ion(_)"),
+     submenu("Styles",           "stylemenu"),

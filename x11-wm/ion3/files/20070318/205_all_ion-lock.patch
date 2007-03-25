@@ -1,0 +1,22 @@
+diff -Nur ion3-20050322.orig/utils/Makefile ion3-20050322/utils/Makefile
+--- ion3-20050322.orig/utils/Makefile	2005-03-22 14:31:06.000000000 +0000
++++ ion3-20050322/utils/Makefile	2005-03-22 16:29:37.197355881 +0000
+@@ -11,7 +11,7 @@
+ SUBDIRS=ion-completefile
+ INSTALL_SUBDIRS=$(SUBDIRS)
+ 
+-SHELLSCRIPTS = ion-runinxterm ion-completeman
++SHELLSCRIPTS = ion-runinxterm ion-completeman ion-lock
+ 
+ TARGETS = ion-completeman
+ 
+diff -Nur ion3-20050322.orig/utils/ion-lock ion3-20050322/utils/ion-lock
+--- ion3-20050322.orig/utils/ion-lock	1970-01-01 00:00:00.000000000 +0000
++++ ion3-20050322/utils/ion-lock	2005-03-22 16:29:19.550092305 +0000
+@@ -0,0 +1,6 @@
++#!/bin/sh
++if xscreensaver-command -version >/dev/null 2>&1; then
++	exec xscreensaver-command -lock
++else
++	exec xlock
++fi
