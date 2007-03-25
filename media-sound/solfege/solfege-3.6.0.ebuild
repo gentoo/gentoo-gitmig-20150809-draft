@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.6.0.ebuild,v 1.3 2007/03/25 10:17:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.6.0.ebuild,v 1.4 2007/03/25 12:21:47 drac Exp $
 
 inherit python eutils
 
@@ -38,5 +38,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS changelog FAQ README TODO
+	dodoc AUTHORS changelog FAQ README
 }

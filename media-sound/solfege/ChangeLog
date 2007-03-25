@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.18 2007/03/25 10:17:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.19 2007/03/25 12:21:47 drac Exp $
+
+  25 Mar 2007; Samuli Suominen <drac@gentoo.org> solfege-3.6.0.ebuild:
+  Remove TODO from dodoc.
 
   25 Mar 2007; Samuli Suominen <drac@gentoo.org> solfege-3.6.0.ebuild:
   Remove redudant || die from end of econf, some emptylines.
