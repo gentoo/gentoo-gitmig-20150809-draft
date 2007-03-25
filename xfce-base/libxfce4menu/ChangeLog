@@ -1,6 +1,14 @@
 # ChangeLog for xfce-base/libxfce4menu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4menu/ChangeLog,v 1.2 2007/03/25 15:15:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4menu/ChangeLog,v 1.3 2007/03/25 16:17:51 drac Exp $
+
+*libxfce4menu-4.5_pre20070325-r1 (25 Mar 2007)
+
+  25 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libxfce4menu-4.5_pre20070325-monitor.patch,
+  -libxfce4menu-4.5_pre20070325.ebuild,
+  +libxfce4menu-4.5_pre20070325-r1.ebuild:
+  Patch from upstream to silent warnings.
 
   25 Mar 2007; Samuli Suominen <drac@gentoo.org>
   libxfce4menu-4.5_pre20070325.ebuild:

@@ -1,0 +1,25 @@
+diff -ur libxfce4menu-4.5_pre20070325.orig/libxfce4menu/xfce-menu-monitor.c libxfce4menu-4.5_pre20070325/libxfce4menu/xfce-menu-monitor.c
+--- libxfce4menu-4.5_pre20070325.orig/libxfce4menu/xfce-menu-monitor.c	2007-03-25 17:00:13.000000000 +0300
++++ libxfce4menu-4.5_pre20070325/libxfce4menu/xfce-menu-monitor.c	2007-03-25 17:35:04.000000000 +0300
+@@ -104,7 +104,9 @@
+ 
+   g_return_val_if_fail (XFCE_IS_MENU (menu), NULL);
+   g_return_val_if_fail (XFCE_IS_MENU_ITEM (item), NULL);
+-  g_return_val_if_fail (xfce_menu_monitor_vtable.monitor_file != NULL, NULL);
++  
++  if (G_UNLIKELY (xfce_menu_monitor_vtable.monitor_file == NULL))
++    return NULL;
+ 
+   /* Request monitor handle from the library client */
+   monitor_handle = xfce_menu_monitor_vtable.monitor_file (menu, xfce_menu_item_get_filename (item), xfce_menu_monitor_user_data);
+@@ -127,7 +129,9 @@
+   gpointer monitor_handle;
+ 
+   g_return_if_fail (XFCE_IS_MENU_ITEM (item));
+-  g_return_if_fail (xfce_menu_monitor_vtable.remove_monitor != NULL);
++  
++  if (G_UNLIKELY (xfce_menu_monitor_vtable.remove_monitor == NULL))
++    return;
+ 
+   /* Lookup the monitor handle for this item */
+   monitor_handle = g_hash_table_lookup (xfce_menu_monitor_handles, item);
