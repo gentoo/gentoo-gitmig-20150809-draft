@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7030 2007/03/24 22:30:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7031 2007/03/25 12:21:58 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -380,10 +380,6 @@ net-irc/nikibot
 # Deprecated in favor of dev-java/avalon-logkit that
 # is built from source
 dev-java/avalon-logkit-bin
-
-# Alexis Ballier <aballier@gentoo.org> (27 Feb 2007)
-# Not compiling with dev-scheme/guile-1.8
-=media-sound/beast-0.7.1
 
 # Raúl Porcel <armin76@gentoo.org> (27 Feb 2007)
 # Masked for removal in 30 days.

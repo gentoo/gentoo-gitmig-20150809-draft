@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.237 2007/03/25 10:22:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.238 2007/03/25 12:21:58 aballier Exp $
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Unmask beast 0.7.1, its now fine with guile 1.8
 
   24 Mar 2007; Mike Doty <kingtaco@gentoo.org> package.mask:
   mask media-video/{spca5xx,gspca} in favor of media-video/gspcav1
