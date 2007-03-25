@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/traverso
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.4 2006/11/27 20:25:09 aballier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.5 2007/03/25 12:48:54 aballier Exp $
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org> traverso-0.30.1.ebuild:
+  Update homepage and src_uri
 
   27 Nov 2006; Alexis Ballier <aballier@gentoo.org>
   +files/traverso-0.30.1-execstack.patch, traverso-0.30.1.ebuild:

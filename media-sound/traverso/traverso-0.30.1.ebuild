@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.4 2006/11/27 20:25:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.5 2007/03/25 12:48:54 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
 DESCRIPTION="Professional Audio Tools for GNU/Linux"
-HOMEPAGE="http://vt.shuis.tudelft.nl/~remon/traverso"
-SRC_URI="http://vt.shuis.tudelft.nl/~remon/traverso/${P}.tar.gz"
+HOMEPAGE="http://traverso-daw.org/"
+SRC_URI="http://traverso-daw.org/download/releases/${P}.tar.gz"
 
 IUSE="alsa jack sse"
 SLOT="0"
