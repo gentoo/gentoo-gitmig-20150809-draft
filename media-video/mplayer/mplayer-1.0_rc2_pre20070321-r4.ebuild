@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r2.ebuild,v 1.1 2007/03/22 15:08:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.1 2007/03/25 15:06:01 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -8,15 +8,12 @@ RESTRICT="nostrip"
 IUSE="3dnow 3dnowext a52 aac aalib alsa altivec amr arts bidi bl bindist cddb
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dvdnav
 dv dvdread enca encode esd fbcon ftp gif ggi gtk iconv ipv6 ivtv jack joystick
-jpeg libcaca lirc live livecd lzo mad md5sum mmx mmxext mp2 mp3 musepack nas unicode vorbis opengl openal oss png pnm quicktime radio rar real rtc samba sdl speex srt sse sse2 svga theora tivo truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid xvmc zoran"
-
-LANGS="bg cs da de el es fr hu it ja ko mk nb no pl ro ru sk sv tr uk pt_BR zh_CN zh_TW"
+jpeg libcaca lirc live livecd lzo mad md5sum mmx mmxext mp2 mp3 musepack nas
+unicode vorbis opengl openal oss png pnm quicktime radio rar real rtc samba sdl
+speex srt sse sse2 svga theora tivo truetype v4l v4l2 vidix win32codecs X x264
+xanim xinerama xv xvid xvmc zoran"
 
 VIDEO_CARDS="s3virge mga tdfx tga vesa"
-
-for X in ${LANGS}; do
-	IUSE="${IUSE} linguas_${X}"
-done
 
 for X in ${VIDEO_CARDS}; do
 	IUSE="${IUSE} video_cards_${X}"
@@ -34,8 +31,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	!iconv? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 			  mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 			  mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
-	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
+	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	amr? ( ${AMR_URI}/26_series/26.104/26104-510.zip
 		   ${AMR_URI}/26_series/26.204/26204-510.zip )"
 
@@ -43,13 +40,18 @@ DESCRIPTION="Media Player for Linux "
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 RDEPEND="sys-libs/ncurses
-	win32codecs? (
-		!livecd? (
-			!bindist? ( media-libs/win32codecs ) ) )
-	x86? ( real? ( !bindist? ( media-video/realplayer ) ) )
-	amd64? ( real? ( !bindist? ( media-libs/amd64codecs ) ) )
-	x86? ( mp2? ( media-sound/toolame ) )
-	amd64? ( mp2? ( media-sound/toolame ) )
+	!livecd? (
+		!bindist? (
+			x86? (
+				win32codecs? ( media-libs/win32codecs )
+				real? ( media-libs/win32codecs
+					media-video/realplayer )
+				)
+			amd64? ( real? ( media-libs/amd64codecs ) )
+		)
+	)
+	x86? ( mp2? ( media-sound/twolame ) )
+	amd64? ( mp2? ( media-sound/twolame ) )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -59,12 +61,12 @@ RDEPEND="sys-libs/ncurses
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdts )
 	dvb? ( media-tv/linuxtv-dvb-headers )
-	dvd? ( dvdread? ( media-libs/libdvdread ) )
+	dvd? ( dvdnav? ( media-libs/libdvdnav ) )
 	encode? (
-		media-sound/lame
-		dv? ( media-libs/libdv )
-		x264? ( media-libs/x264-svn )
 		aac? ( media-libs/faac )
+		dv? ( media-libs/libdv )
+		mp3? ( media-sound/lame )
+		x264? ( media-libs/x264-svn )
 		)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
@@ -78,7 +80,7 @@ RDEPEND="sys-libs/ncurses
 	jpeg? ( media-libs/jpeg )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
-	lzo? ( =dev-libs/lzo-1* )
+	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
 	musepack? ( >=media-libs/libmpcdec-1.2.2 )
 	nas? ( media-libs/nas )
@@ -87,13 +89,13 @@ RDEPEND="sys-libs/ncurses
 	pnm? ( media-libs/netpbm )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl )
-	speex? ( media-libs/speex )
+	speex? ( >=media-libs/speex-1.1.7 )
 	srt? ( >=media-libs/freetype-2.1
 		media-libs/fontconfig )
 	svga? ( media-libs/svgalib )
-	!hppa? ( !ppc64? ( tdfx? ( x11-libs/libXxf86vm
+	video_cards_tdfx? ( x11-libs/libXxf86vm
 		x11-libs/libXext
-		x11-drivers/xf86-video-tdfx ) ) )
+		x11-drivers/xf86-video-tdfx )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2007.02.20 )
 	truetype? ( >=media-libs/freetype-2.1
@@ -110,6 +112,8 @@ RDEPEND="sys-libs/ncurses
 	video_cards_vesa? ( x11-libs/libXxf86vm
 		x11-libs/libXext
 		x11-drivers/xf86-video-vesa )
+	vidix? ( x11-libs/libXxf86vm
+		x11-libs/libXext )
 	xinerama? ( x11-libs/libXinerama
 		x11-libs/libXxf86vm
 		x11-libs/libXext )
@@ -151,6 +155,19 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
+pkg_setup() {
+
+	if [[ -n ${LINGUAS} ]]; then
+		elog "For MPlayer's language support, the configuration will"
+		elog "use your LINGUAS variable from /etc/make.conf.  If you have more"
+		elog "than one language enabled, then the first one in the list will"
+		elog "be used to output the messages, if a translation is available."
+		elog "man pages will be created for all languages where translations"
+		elog "are also available."
+	fi
+
+}
+
 src_unpack() {
 
 	unpack ${P}.tar.bz2
@@ -161,9 +178,9 @@ src_unpack() {
 			font-arial-cp1250.tar.bz2
 	fi
 
-	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
-
 	use gtk && unpack Blue-${BLUV}.tar.bz2
+
+	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
 	use amr && unpack 26104-510.zip && unpack 26204-510.zip
 
@@ -184,10 +201,9 @@ src_unpack() {
 	cd ${S}
 
 	# Fix hppa compilation
-	# [ "${ARCH}" = "hppa" ] && sed -i -e "s/-O4/-O1/" "${S}/configure"
+	use hppa && sed -i -e "s/-O4/-O1/" "${S}/configure"
 
-	if use svga
-	then
+	if use svga; then
 		echo
 		einfo "Enabling vidix non-root mode."
 		einfo "(You need a proper svgalib_helper.o module for your kernel"
@@ -212,42 +228,25 @@ src_unpack() {
 src_compile() {
 
 	local myconf=" --disable-tv-bsdbt848 \
-		--disable-vidix-external \
 		--disable-faad-external \
 		--disable-libcdio"
 
-	# have fun with LINGUAS variable
+	# MPlayer reads in the LINGUAS variable from make.conf, and sets
+	# the languages accordingly.  Some will have to be altered to match
+	# upstream's naming scheme.
 	[[ -n $LINGUAS ]] && LINGUAS=${LINGUAS/da/dk}
-	local myconf_linguas="--language=en"
-	for x in ${LANGS}; do
-		if use linguas_${x}; then
-			myconf_linguas="${myconf_linguas} --language=${x}"
-		fi
-	done
-	myconf="${myconf} ${myconf_linguas}"
 
 	################
 	#Optional features#
 	###############
-	if use cpudetection || use livecd || use bindist
-	then
-		myconf="${myconf} --enable-runtime-cpudetection"
-	fi
-
 	use bidi || myconf="${myconf} --disable-fribidi"
 	use bl && myconf="${myconf} --enable-bl"
 	use cddb || myconf="${myconf} --disable-cddb"
 	use cdparanoia || myconf="${myconf} --disable-cdparanoia"
 	use enca || myconf="${myconf} --disable-enca"
 	use ftp || myconf="${myconf} --disable-ftp"
-	use srt || myconf="${myconf} --disable-ass"
 	use tivo || myconf="${myconf} --disable-vstream"
 
-	if use iconv && use unicode; then
-		myconf="${myconf} --charset=UTF-8"
-	else
-		myconf="${myconf} --disable-iconv --charset=noconv"
-	fi
 
 	# DVD support
 	# dvdread and libdvdcss are internal libs
@@ -256,27 +255,36 @@ src_compile() {
 	# upstream's suggestion.  We don't.
 	# dvdnav support is known to be buggy, but it is the only option
 	# for accessing some DVDs.
-	if use dvd
-	then
+	if use dvd; then
 		use dvdread || myconf="${myconf} --disable-dvdread"
 		use dvdnav || myconf="${myconf} --disable-dvdnav"
 	else
 		myconf="${myconf} --disable-dvdnav --disable-dvdread"
 	fi
 
-	if use encode
-	then
+	if use encode; then
+		use aac || myconf="${myconf} --disable-faac"
 		use dv || myconf="${myconf} --disable-libdv"
 		use x264 || myconf="${myconf} --disable-x264"
-		use aac || myconf="${myconf} --disable-faac"
 	else
-		myconf="${myconf} --disable-mencoder --disable-libdv --disable-x264
-		--disable-faac"
+		myconf="${myconf} --disable-mencoder --disable-libdv --disable-x264 \
+			--disable-faac"
 	fi
 
+	# SRT (subtitles) requires freetype support
+	# freetype support requires iconv
+	# iconv optionally can use unicode
 	if ! use srt; then
-		use truetype || myconf="${myconf} --disable-freetype"
+		myconf="${myconf} --disable-ass"
+		if ! use truetype; then
+			myconf="${myconf} --disable-freetype"
+			if ! use iconv; then
+				myconf="${myconf} --disable-iconv --charset=noconv"
+			fi
+		fi
 	fi
+	use iconv && use unicode && myconf="${myconf} --charset=UTF-8"
+
 	use lirc || myconf="${myconf} --disable-lirc --disable-lircc"
 	myconf="${myconf} $(use_enable joystick)"
 	use ipv6 || myconf="${myconf} --disable-inet6"
@@ -284,18 +292,20 @@ src_compile() {
 	use rtc || myconf="${myconf} --disable-rtc"
 	use samba || myconf="${myconf} --disable-smb"
 
-	# Video4Linux / Radio support
-	if ( use v4l || use v4l2 || use radio ); then
+	# DVB / Video4Linux / Radio support
+	if ( use dvb || use v4l || use v4l2 || use radio ); then
+		use dvb || myconf="${myconf} --disable-dvb --disable-dvbhead"
 		use v4l	|| myconf="${myconf} --disable-tv-v4l1"
 		use v4l2 || myconf="${myconf} --disable-tv-v4l2"
-		if use radio; then
+		if ( use dvb || use v4l || use v4l2 ) && use radio; then
 			myconf="${myconf} --enable-radio $(use_enable encode radio-capture)"
 		else
 			myconf="${myconf} --disable-radio-v4l2 --disable-radio-bsdbt848"
 		fi
 	else
 		myconf="${myconf} --disable-tv --disable-tv-v4l1 --disable-tv-v4l2 \
-			--disable-radio --disable-radio-v4l2 --disable-radio-bsdbt848"
+			--disable-radio --disable-radio-v4l2 --disable-radio-bsdbt848 \
+			--disable-dvb --disable-dvbhead"
 	fi
 
 	# disable PVR support
@@ -329,29 +339,29 @@ src_compile() {
 		else
 			myconf="${myconf} --disable-real"
 		fi
-		! use livecd && ! use bindist && \
+		if ! use livecd && ! use bindist && ! use real; then
 			myconf="${myconf} $(use_enable win32codecs win32dll)"
+		fi
 	fi
 
 	#############
 	# Video Output #
 	#############
 
-	#use aalib && myconf="${myconf} --enable-aa"
 	for x in directfb ivtv ggi md5sum sdl xinerama; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
 	use aalib || myconf="${myconf} --disable-aa"
-	use dvb || myconf="${myconf} --disable-dvb --disable-dvbhead"
 	use fbcon || myconf="${myconf} --disable-fbdev"
 	use fbcon && use video_cards_s3virge && myconf="${myconf} --enable-s3fb"
 	use libcaca || myconf="${myconf} --disable-caca"
 	use opengl || myconf="${myconf} --disable-gl"
-	use svga ||	myconf="${myconf} --disable-vidix-internal"
 	use video_cards_mga || myconf="${myconf} --disable-mga"
 	( use X && use video_cards_mga ) || myconf="${myconf} --disable-xmga"
 	use video_cards_tga || myconf="${myconf} --disable-tga"
 	use video_cards_vesa || myconf="${myconf} --disable-vesa"
+	use vidix || myconf="${myconf} --disable-vidix-internal \
+		--disable-vidix-external"
 	use zoran || myconf="${myconf} --disable-zr"
 
 	# GTK gmplayer gui
@@ -380,15 +390,27 @@ src_compile() {
 	for x in alsa arts esd jack nas openal; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
-	use oss || myconf="${myconf} --disable-ossaudio"
+	if ! use radio; then
+		use oss || myconf="${myconf} --disable-ossaudio"
+	fi
 
 	#################
 	# Advanced Options #
 	#################
 	# Platform specific flags, hardcoded on amd64 (see below)
-	for x in 3dnow 3dnowext mmx mmxext sse sse2; do
-		use ${x} || myconf="${myconf} --disable-${x}"
-	done
+	if use x86 || use amd64 || use ppc; then
+		if use cpudetection || use livecd || use bindist; then
+			myconf="${myconf} --enable-runtime-cpudetection"
+		fi
+	fi
+	if use mmx; then
+		for x in 3dnow 3dnowext mmxext sse sse2; do
+			use ${x} || myconf="${myconf} --disable-${x}"
+		done
+	else
+		myconf="${myconf} --disable-mmx --disable-mmxext --disable-sse \
+		--disable-sse2 --disable-3dnow --disable-3dnowext"
+	fi
 	use debug && myconf="${myconf} --enable-debug=3"
 
 	if use ppc64 && use altivec; then
@@ -437,7 +459,8 @@ src_compile() {
 
 	# we run into problems if -jN > -j1
 	# see #86245
-	MAKEOPTS="${MAKEOPTS} -j1"
+	# This should have long ago been fixed, commenting out
+	#MAKEOPTS="${MAKEOPTS} -j1"
 
 	einfo "Make"
 	emake || die "Failed to build MPlayer!"
@@ -457,7 +480,7 @@ src_install() {
 		 install || die "Failed to install MPlayer!"
 	einfo "Make install completed"
 
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS Changelog README
 	# Install the documentation; DOCS is all mixed up not just html
 	if use doc ; then
 		find "${S}/DOCS" -type d | xargs -- chmod 0755
@@ -486,7 +509,7 @@ src_install() {
 		doins ${FILESDIR}/mplayer.desktop
 	fi
 
-	if ! use truetype; then
+	if ! use srt && ! use truetype; then
 		dodir /usr/share/mplayer/fonts
 		local x=
 		# Do this generic, as the mplayer people like to change the structure
@@ -502,6 +525,14 @@ src_install() {
 
 	insinto /etc
 	newins ${S}/etc/example.conf mplayer.conf
+
+	if use srt || use truetype;	then
+		cat >> ${D}/etc/mplayer.conf << EOT
+fontconfig=1
+subfont-osd-scale=4
+subfont-text-scale=3
+EOT
+	fi
 
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
 
