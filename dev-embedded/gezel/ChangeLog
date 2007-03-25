@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gezel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gezel/ChangeLog,v 1.4 2007/02/09 07:19:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gezel/ChangeLog,v 1.5 2007/03/25 16:53:13 calchan Exp $
+
+  25 Mar 2007; Denis Dupeyron <calchan@gentoo.org> gezel-1.6b.ebuild,
+  gezel-1.7.ebuild:
+  Fixed bug #151566 thanks to Aurélien Francillon, and cleaned up
+  dependencies a bit.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
