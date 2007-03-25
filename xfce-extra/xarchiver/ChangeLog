@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.25 2007/03/19 19:21:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.26 2007/03/25 18:15:47 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org> xarchiver-0.4.6.ebuild:
+  Add ~ia64 keyword wrt bug 157879
 
   19 Mar 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
   Add longdescription for bug 171470.
