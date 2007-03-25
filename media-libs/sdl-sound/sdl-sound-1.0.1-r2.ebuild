@@ -1,9 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.11 2006/12/12 22:46:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.12 2007/03/25 21:34:27 vapier Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit flag-o-matic autotools eutils
 
 MY_P="${P/sdl-/SDL_}"
@@ -31,6 +29,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# Scrub local libtool.m4 crap and then some #167736
+	sed -i -e '/libtool.m4/,/^FOO_MARKER$/d' acinclude.m4
 	epatch "${FILESDIR}"/gcc331.patch
 	epatch "${FILESDIR}"/flac-1.1.3.patch
 	eautoreconf
