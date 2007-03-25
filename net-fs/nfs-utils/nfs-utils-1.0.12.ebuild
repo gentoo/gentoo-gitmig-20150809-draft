@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.12.ebuild,v 1.4 2007/03/25 10:51:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.12.ebuild,v 1.5 2007/03/25 11:34:15 dertobi123 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh ~sparc x86"
 IUSE="nonfsv4 tcpd kerberos"
 
 # kth-krb doesn't provide the right include
