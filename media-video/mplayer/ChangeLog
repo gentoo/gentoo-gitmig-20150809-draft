@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.466 2007/03/25 15:06:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.467 2007/03/25 18:33:49 beandog Exp $
+
+  25 Mar 2007; Steve Dibb <beandog@gentoo.org>
+  mplayer-1.0_rc2_pre20070321-r3.ebuild:
+  Fix tdfx use flag (bug 172170)
 
 *mplayer-1.0_rc2_pre20070321-r4 (25 Mar 2007)
 

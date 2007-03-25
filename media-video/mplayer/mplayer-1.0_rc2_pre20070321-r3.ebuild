@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r3.ebuild,v 1.1 2007/03/23 14:52:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r3.ebuild,v 1.2 2007/03/25 18:33:49 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -100,9 +100,9 @@ RDEPEND="sys-libs/ncurses
 	srt? ( >=media-libs/freetype-2.1
 		media-libs/fontconfig )
 	svga? ( media-libs/svgalib )
-	!hppa? ( !ppc64? ( tdfx? ( x11-libs/libXxf86vm
+	video_cards_tdfx? ( x11-libs/libXxf86vm
 		x11-libs/libXext
-		x11-drivers/xf86-video-tdfx ) ) )
+		x11-drivers/xf86-video-tdfx )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2007.02.20 )
 	truetype? ( >=media-libs/freetype-2.1
