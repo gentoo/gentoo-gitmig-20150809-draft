@@ -1,0 +1,63 @@
+http://www.vdr-portal.de/board/thread.php?postid=565407#post565407
+diff -urN mp3-0.9.15/mp3.c mp3-unstable/mp3.c
+--- mp3-0.9.15/mp3.c	2006-08-30 17:39:24.000000000 +0200
++++ mp3-unstable/mp3.c	2007-01-15 18:33:56.000000000 +0100
+@@ -342,7 +342,12 @@
+ #else
+     Interface->Close();
+ #endif
+-    needsFastResponse=visible=bigwin=false;
++    visible=bigwin=false;
++#if APIVERSNUM >= 10500
++    SetNeedsFastResponse(false);
++#else
++    needsFastResponse=false;
++#endif
+     }
+ }
+ 
+@@ -502,7 +507,12 @@
+ #endif
+       ShowStatus(true);
+       bigwin=bigWin;
+-      needsFastResponse=visible=true;
++      visible=true;
++#if APIVERSNUM >= 10500
++      SetNeedsFastResponse(true);
++#else
++      needsFastResponse=true;
++#endif
+       fliptime=listtime=0; flipint=0; flip=-1; top=lastTop=-1; lastIndex=lastTotal=-1;
+       delete lastMode; lastMode=0;
+       }
+diff -urN mp3-0.9.15/mplayer.c mp3-unstable/mplayer.c
+--- mp3-0.9.15/mplayer.c	2006-09-19 20:18:13.000000000 +0200
++++ mp3-unstable/mplayer.c	2007-01-15 18:33:56.000000000 +0100
+@@ -232,7 +233,12 @@
+ #else
+     Interface->Close();
+ #endif
+-    needsFastResponse=visible=modeOnly=false;
++    visible=modeOnly=false;
++#if APIVERSNUM >= 10500
++    SetNeedsFastResponse(false);
++#else
++    needsFastResponse=false;
++#endif
+     }
+ }
+ 
+@@ -303,7 +309,12 @@
+       Interface->Clear();
+       if(MPlayerSetup.OsdPos>0) Interface->Fill(0,3,Interface->Width(),MPlayerSetup.OsdPos,clrTransparent);
+ #endif
+-      needsFastResponse=visible=true; modeOnly=false;
++      visible=true; modeOnly=false;
++#if APIVERSNUM >= 10500
++      SetNeedsFastResponse(true);
++#else
++      needsFastResponse=true;
++#endif
+       lastCurrent=lastTotal=-1;
+       flush=true;
+       }

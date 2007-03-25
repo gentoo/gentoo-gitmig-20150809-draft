@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.9.15.ebuild,v 1.6 2007/01/05 16:38:29 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.9.15.ebuild,v 1.7 2007/03/25 17:41:40 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -22,7 +22,8 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/mp3-${PV}
 
 PATCHES="${FILESDIR}/${P}-gentoo.diff
-		${FILESDIR}/${P}-slave-mode-default.diff"
+		${FILESDIR}/${P}-slave-mode-default.diff
+		${FILESDIR}/${P}-vdr-1.5.1.patch"
 
 src_install() {
 
