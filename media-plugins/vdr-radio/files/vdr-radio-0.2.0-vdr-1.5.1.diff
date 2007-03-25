@@ -1,0 +1,18 @@
+Support for VDR-1.5.x
+
+Joerg Bornkessel (hd_brummy@gentoo.org) 25 Mar 2007
+diff -Naur radio-0.2.0.orig/radioaudio.c radio-0.2.0/radioaudio.c
+--- radio-0.2.0.orig/radioaudio.c	2007-03-25 20:07:23.000000000 +0200
++++ radio-0.2.0/radioaudio.c	2007-03-25 20:09:23.000000000 +0200
+@@ -141,7 +141,11 @@
+ // --- cRDSReceiver ------------------------------------------------------------
+ 
+ cRDSReceiver::cRDSReceiver(int Pid)
++#if APIVERSNUM > 10500
++:cReceiver(chan->GetChannelID(), -1, Pid, NULL, NULL, NULL)
++#else
+ :cReceiver(0, -1, Pid)
++#endif
+ {
+     if (S_Verbose >= 1)
+         printf("vdr-radio: additional RDS-Receiver starts on Pid=%d\n", Pid);
