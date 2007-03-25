@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.14 2007/02/22 00:53:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.15 2007/03/25 12:09:39 vapier Exp $
+
+*quota-3.14 (25 Mar 2007)
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/quota-3.14-headers.patch, +files/rpc.rquotad.initd,
+  +quota-3.14.ebuild:
+  Version bump.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
