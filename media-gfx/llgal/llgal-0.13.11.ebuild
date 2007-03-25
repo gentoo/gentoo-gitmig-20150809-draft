@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.10.ebuild,v 1.2 2007/02/28 22:35:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.11.ebuild,v 1.1 2007/03/25 18:26:56 nattfodd Exp $
 
 inherit perl-module
 
