@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmikmod
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.45 2006/12/30 15:52:35 chainsaw Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.46 2007/03/25 12:51:44 drac Exp $
+
+*libmikmod-3.1.11-r4 (25 Mar 2007)
+
+  25 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libmikmod-3.1.11-alsa.patch, +libmikmod-3.1.11-r4.ebuild:
+  Fix ALSA support with patch from Matsuu Takuto in bug 97507. Other various
+  fixes, including emake usage.
 
   30 Dec 2006; Tony Vroon <chainsaw@gentoo.org> libmikmod-3.1.11-r3.ebuild:
   Stable on PPC64, only this version works properly on 64UL. Ack'ed by
