@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20041220.ebuild,v 1.3 2005/04/24 13:17:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20041220.ebuild,v 1.4 2007/03/25 02:58:30 kugelfang Exp $
+
+inherit toolchain-funcs multilib
 
 DESCRIPTION="A graphical multiple sequence alignment editor"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/seaview.html"
@@ -14,13 +16,26 @@ IUSE=""
 DEPEND="x11-libs/fltk
 	sci-biology/clustalw"
 
-src_compile() {
-	# Corrects location of libfltk.
-	CFLAGS="${CFLAGS} -c -I/usr/include/fltk-1.1"
-	sed -i -e "s%\"seaview.help\", %\"/usr/share/${PN}/seaview.help\", %" seaview.cxx || die
-	sed -i -e 's:-L$(FLTK)/lib:-L/usr/lib/fltk-1.1:' Makefile || die
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
-	emake -e || die
+	sed -i \
+		-e "s%\"seaview.help\", %\"/usr/share/${PN}/seaview.help\", %" seaview.cxx || die
+
+	# Respect CXXFLAGS. Package uses CFLAGS as CXXFLAGS.
+	# Fix invocation of C++ compiler.
+	# Fix include and library paths.
+	sed -i \
+		-e '/^FLTK/d' \
+		-e '/^X11/d' \
+		-e "s:^CXX.*:CXX = $(tc-getCXX):" \
+		-e 's:-I$(FLTK):-I/usr/include/fltk-1.1:' \
+		-e 's:-I$(X11)/include:-I/usr/include/X11R6:' \
+		-e "s:\(^CFLAGS .*\):\1 ${CXXFLAGS}:" \
+		-e "s:-L\$(FLTK)/lib:-L/usr/$(get_libdir)/fltk-1.1:" \
+		-e "s:-L\$(X11)/lib:-L/usr/$(get_libdir)/X11:" \
+		Makefile || die
 }
 
 src_install() {

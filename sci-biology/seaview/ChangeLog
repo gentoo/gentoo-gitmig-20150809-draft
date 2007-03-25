@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.9 2007/02/22 01:30:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.10 2007/03/25 02:58:30 kugelfang Exp $
+
+  25 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> seaview-20041220.ebuild,
+  seaview-20060213.ebuild:
+  QA: Fixed assignment of CFLAGS. Makefile respects CXXFLAGS now. Fixed
+  include and library paths.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
