@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/prokyon3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.21 2007/01/05 17:45:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.22 2007/03/25 18:44:58 aballier Exp $
+
+*prokyon3-0.9.6 (25 Mar 2007)
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/prokyon3-0.9.6-asneeded.patch, +files/prokyon3-0.9.6-cflags.patch,
+  +files/prokyon3-0.9.6-flac113.patch, +files/prokyon3-0.9.6-qdir.patch,
+  +prokyon3-0.9.6.ebuild:
+  Version bump
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> prokyon3-0.9.4.ebuild,
   prokyon3-0.9.4-r1.ebuild:

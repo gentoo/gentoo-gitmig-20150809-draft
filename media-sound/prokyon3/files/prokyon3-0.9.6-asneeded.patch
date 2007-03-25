@@ -1,0 +1,106 @@
+Index: prokyon3-0.9.6/configure.in
+===================================================================
+--- prokyon3-0.9.6.orig/configure.in
++++ prokyon3-0.9.6/configure.in
+@@ -29,6 +29,8 @@ AC_LANG(C++)
+ # User supplied includes and lib path.
+ ########################################
+ 
++LIBSADDED=""
++
+ AC_ARG_WITH(other-includes,[  --with-other-includes=PATH  additional path where includes are installed (optional)],
+  	  other_includes="$withval",other_includes="")
+ 
+@@ -36,7 +38,7 @@ AC_ARG_WITH(other-libs,[  --with-other-l
+ 	  other_libs="$withval",other_libs="")
+ 
+ if test x$other_libs != x ; then
+-    LDFLAGS="$LDFLAGS -L$other_libs"
++    LIBSADDED="$LIBSADDED -L$other_libs"
+ fi
+ if test x$other_includes != x ; then
+     CPPFLAGS="$CPPFLAGS -I$other_includes"
+@@ -127,7 +129,7 @@ if test x"$ac_use_taglib" = xyes; then
+ 	AC_CHECK_PROG([taglib_config],[taglib-config],[yes],[no])
+ 	if test x"$taglib_config" = xyes; then 
+ 		AC_DEFINE([HAVE_TAG],1,[Taglib libs presence])
+-		LDFLAGS="$LDFLAGS `taglib-config --libs`" 
++		LIBSADDED="$LIBSADDED `taglib-config --libs`" 
+ 		CPPFLAGS="$CPPFLAGS `taglib-config --cflags`" 
+ 		taglib_sup=yes
+ #let's not assume libtag is present....
+@@ -229,7 +231,7 @@ AC_ARG_WITH([musicbrainz],
+ mbrainz_sup=no
+ if test x"$ac_use_mbrainz" = xyes; then
+ 	AC_MSG_NOTICE([======Checking libmusicbrainz  ========])
+-	AC_CHECK_LIB(musicbrainz,main,[LDFLAGS="$LDFLAGS -lmusicbrainz"],
++	AC_CHECK_LIB(musicbrainz,main,[LIBSADDED="$LIBSADDED -lmusicbrainz"],
+ 	[AC_MSG_FAILURE([******* libmusicbrainz library  required.  ********])])
+ 	AC_DEFINE([HAVE_LIBMUSICBRAINZ],1,[Musicbrainz libs OK])
+ 	mbrainz_sup=yes
+@@ -256,7 +258,7 @@ if test x$with_ogg = "x"yes && test x"$m
+ 	AC_MSG_NOTICE([======Checking if Ogg libraries are OK ========])
+ 	AC_CHECK_LIB(ogg, ogg_sync_init,[have_ogg=yes],
+ 	    [AC_MSG_FAILURE([******* libogg library  required.  ********])])
+-	LDFLAGS="$LDFLAGS -logg"
++	LIBSADDED="$LIBSADDED -logg"
+ fi   
+ 
+ if test x$with_ogg = "x"yes && test x"$mbrainz_sup" = xyes; then
+@@ -265,7 +267,7 @@ if test x$with_ogg = "x"yes && test x"$m
+ 
+ 	AC_CHECK_LIB(vorbis, vorbis_info_init,[have_vorbis=yes],
+ 	    [AC_MSG_FAILURE([******* libvorbis library  required.  ********])])
+-	LDFLAGS="$LDFLAGS -lvorbis -lvorbisfile"
++	LIBSADDED="$LIBSADDED -lvorbis -lvorbisfile"
+ fi
+ 
+ if test x"$have_ogg" = xyes; then 
+@@ -292,7 +294,7 @@ if test x$with_mad = "x"yes && test x"$m
+ 	AC_CHECK_LIB(mad,main,[mad_sup=yes],
+ 	[AC_MSG_FAILURE([******* libmad library  required.  ********])])
+ 	AC_DEFINE([HAVE_LIBMAD],1,[Mad lib OK])
+-	LDFLAGS="$LDFLAGS -lmad"
++	LIBSADDED="$LIBSADDED -lmad"
+ fi   
+ 
+ ########################################
+@@ -329,7 +331,7 @@ int main ()
+ 
+ 	],[flac_sup=yes],[AC_MSG_FAILURE([******* libFLAC++ library  required.  ********])])
+ 	AC_MSG_RESULT([$flac_sup])
+-	LDFLAGS="$LDFLAGS -lFLAC++ -lFLAC"
++	LIBSADDED="$LIBSADDED -lFLAC++ -lFLAC"
+ 	AC_DEFINE([HAVE_FLAC],1,[Flac libs OK])
+ fi   
+ 
+@@ -441,7 +443,7 @@ if test x$ac_use_embedded = "xyes" ; the
+ 	
+ 	case "$MYSQL_libdir" in
+ 	  /usr/lib) ;;
+-	  *) LDFLAGS="$LDFLAGS -L${MYSQL_libdir}" ;;
++	  *) LIBSADDED="$LIBSADDED -L${MYSQL_libdir}" ;;
+ 	esac
+ 	
+ 	AC_MSG_CHECKING([for MySQL include directory])
+@@ -505,6 +507,7 @@ rm -f temp$$
+ ########################################
+ ## Generate makefiles
+ ########################################
++AC_SUBST(LIBSADDED)
+ AC_CONFIG_FILES([Makefile src/Makefile intl/Makefile po/Makefile.in sql++/Makefile])
+ AC_OUTPUT
+ 
+Index: prokyon3-0.9.6/src/Makefile.am
+===================================================================
+--- prokyon3-0.9.6.orig/src/Makefile.am
++++ prokyon3-0.9.6/src/Makefile.am
+@@ -96,7 +96,7 @@ BUILT_SOURCES = $(prokyon3_MOC)
+ 
+ prokyon3_CXXFLAGS = $(QT_CXXFLAGS) -DQT_THREAD_SUPPORT  -DQT_NO_ASCII_CAST -DPREFIX=\"$(prefix)\" 
+ 
+-prokyon3_LDFLAGS = $(QT_GUILINK) $(QT_LDADD) $(ID3_LIBS)  @INTLLIBS@
++prokyon3_LDADD = $(QT_GUILINK) $(QT_LDADD) $(ID3_LIBS)  @INTLLIBS@ @LIBSADDED@
+ 
+ %.moc.cpp: %.h
+ 	$(MOC) -o $@ $<

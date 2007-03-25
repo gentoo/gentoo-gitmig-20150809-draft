@@ -1,0 +1,14 @@
+Index: prokyon3-0.9.6/configure.in
+===================================================================
+--- prokyon3-0.9.6.orig/configure.in
++++ prokyon3-0.9.6/configure.in
+@@ -23,9 +23,7 @@ AC_DEFINE_UNQUOTED([HAVE_LANGUAGE],["$AL
+ AC_PROG_CXX
+ AC_PROG_CC
+ AC_LANG(C++)
+-CXXFLAGS="-O0 -g3 $CXXFLAGS"
+ #CXXFLAGS="-O3"
+-CFLAGS=$CXXFLAGS
+ 
+ ########################################
+ # User supplied includes and lib path.
