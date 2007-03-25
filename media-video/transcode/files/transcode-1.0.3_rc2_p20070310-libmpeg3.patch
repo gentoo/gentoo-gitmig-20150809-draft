@@ -1,0 +1,60 @@
+Index: transcode/import/import_mpeg3.c
+===================================================================
+--- transcode.orig/import/import_mpeg3.c
++++ transcode/import/import_mpeg3.c
+@@ -69,6 +69,9 @@ MOD_open
+ {
+ 
+   int i;
++#if MPEG3_MINOR  > 6
++  int mpeg3_return_value = 0;
++#endif
+ 
+   param->fd = NULL;
+ 
+@@ -79,14 +82,22 @@ MOD_open
+   if (param->flag == TC_VIDEO) {
+       if (!file) {
+ 	  if (!file_a) {
++#if MPEG3_MINOR  < 7
+ 	      if((file = mpeg3_open(vob->video_in_file))==NULL) {
++#else
++	      if(((file = mpeg3_open(vob->video_in_file, &mpeg3_return_value))==NULL) || (mpeg3_return_value != 0)) {
++#endif
+ 		  fprintf(stderr, "open file failed\n");
+ 		  return(TC_IMPORT_ERROR);
+ 	      }
+ 	      if (verbose & TC_DEBUG)
+                   printf("[%s] Opened video NO copy\n", MOD_NAME);
+ 	  } else if (file_a) {
++#if MPEG3_MINOR  < 7
+ 	      if((file = mpeg3_open_copy(vob->video_in_file, file_a))==NULL) {
++#else
++	      if(((file = mpeg3_open_copy(vob->video_in_file, file_a, &mpeg3_return_value))==NULL) || (mpeg3_return_value != 0)) {
++#endif
+ 		  fprintf(stderr, "open file failed\n");
+ 		  return(TC_IMPORT_ERROR);
+ 	      }
+@@ -98,14 +109,22 @@ MOD_open
+   if (param->flag == TC_AUDIO) {
+       if (!file_a) {
+ 	  if (!file) {
++#if MPEG3_MINOR  < 7
+ 	      if((file_a = mpeg3_open(vob->audio_in_file))==NULL) {
++#else
++	      if(((file_a = mpeg3_open(vob->audio_in_file, &mpeg3_return_value))==NULL) || (mpeg3_return_value != 0)) {
++#endif
+ 		  fprintf(stderr, "open audio file failed\n");
+ 		  return(TC_IMPORT_ERROR);
+ 	      }
+ 	      if (verbose & TC_DEBUG)
+                   printf("[%s] Opened audio NO copy\n", MOD_NAME);
+ 	  } else if (file) {
++#if MPEG3_MINOR  < 7
+ 	      if((file_a = mpeg3_open_copy(vob->audio_in_file, file))==NULL) {
++#else
++	      if(((file_a = mpeg3_open_copy(vob->audio_in_file, file, &mpeg3_return_value))==NULL) || (mpeg3_return_value != 0)) {
++#endif
+ 		  fprintf(stderr, "open_copy audio file failed\n");
+ 		  return(TC_IMPORT_ERROR);
+ 	      }

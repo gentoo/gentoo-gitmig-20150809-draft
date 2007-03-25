@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.168 2007/03/24 14:55:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.169 2007/03/25 11:27:44 aballier Exp $
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/transcode-1.0.3_rc2_p20070310-libmpeg3.patch,
+  transcode-1.0.3_rc2_p20070310-r1.ebuild:
+  Fix to build and work with libmpeg3 1.7
 
 *transcode-1.1.0_pre20070315-r1 (24 Mar 2007)
 
