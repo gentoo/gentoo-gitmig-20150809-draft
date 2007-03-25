@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.1.4.ebuild,v 1.2 2007/03/25 11:32:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.1.4.ebuild,v 1.3 2007/03/25 11:37:34 armin76 Exp $
 
 inherit linux-mod eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="a Linux file system driver that allows you to mount a WebDAV server
 SRC_URI="mirror://sourceforge/dav/${P}.tar.gz"
 HOMEPAGE="http://dav.sourceforge.net"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="ssl debug socks5"
 RESTRICT="test"
 
