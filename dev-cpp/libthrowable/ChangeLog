@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libthrowable
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.5 2007/02/25 11:47:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.6 2007/03/25 16:53:51 armin76 Exp $
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org> libthrowable-1.0.0.ebuild:
+  Add ~ia64, bug 163396
 
 *libthrowable-1.0.0 (25 Feb 2007)
 
