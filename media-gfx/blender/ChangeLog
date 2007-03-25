@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.107 2007/02/07 15:59:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.108 2007/03/25 19:53:52 aballier Exp $
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org> blender-2.42a-r1.ebuild:
+  Adjust x264-svn deps to fit with the new snapshot
 
   07 Feb 2007; Simon Stelling <blubb@gentoo.org> blender-2.42a-r1.ebuild:
   stable on amd64; bug 157814
