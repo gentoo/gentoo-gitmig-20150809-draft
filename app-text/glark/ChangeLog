@@ -1,6 +1,12 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.42 2007/03/25 21:59:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.43 2007/03/25 22:13:52 dirtyepic Exp $
+
+*glark-1.8.0 (25 Mar 2007)
+
+  25 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/1.8.0/glark-completion, +glark-1.8.0.ebuild:
+  Version bump.
 
   25 Mar 2007; Andrej Kacian <ticho@gentoo.org> glark-1.7.8.ebuild:
   Stable on x86, bug #156802.
