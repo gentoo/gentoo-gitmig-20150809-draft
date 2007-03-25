@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.3 2007/01/31 13:49:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.4 2007/03/25 16:40:52 dertobi123 Exp $
 
 inherit eutils
 
@@ -54,6 +54,16 @@ src_unpack() {
 }
 
 src_install() {
+	# Patch the SDK makefile
+	epatch ${FILESDIR}/${P}-makefile.patch
+
+	# SDK makefile
+	dodir /usr/lib/oracle/${PV}/client/rdbms/demo
+	cd ${S}/instantclient_10_2/sdk/demo
+	mv demo.mk demo_xe.mk
+	insinto /usr/lib/oracle/${PV}/client/rdbms/demo
+	doins demo_xe.mk
+
 	# library
 	dodir /usr/lib/oracle/${PV}/client/lib
 	cd ${S}/instantclient_10_2
