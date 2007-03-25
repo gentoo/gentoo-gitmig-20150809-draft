@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7031 2007/03/25 12:21:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7032 2007/03/25 13:55:04 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (25 Mar 2007)
+# Snapshots introducing compatibility with freedesktop.org
+# Desktop Menu Specification. Masked for testing.
+xfce-base/libxfce4menu
+=xfce-base/xfdesktop-4.5*
 
 # Mike Doty <kingtaco@gentoo.org> (24 Mar 2007)
 # Sorting out media-video/{spca5xx,gspca{,v1}} bug 159176
