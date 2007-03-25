@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.3.1.ebuild,v 1.1 2007/03/04 15:10:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.3.1.ebuild,v 1.2 2007/03/25 13:55:21 aballier Exp $
+
+inherit eutils
 
 DESCRIPTION="A desktop session recorder producing Ogg video/audio files"
 HOMEPAGE="http://recordmydesktop.sourceforge.net/"
@@ -21,6 +23,14 @@ DEPEND="x11-libs/libXext
 	media-libs/libtheora
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )"
+
+pkg_setup() {
+	if ! built_with_use media-libs/libtheora encode; then
+		eerror "media-libs/libtheora needs to be built with encode use flag"
+		eerror "in order to use ${PN}"
+		die "Please rebuild  media-libs/libtheora with encode use flag"
+	fi
+}
 
 src_compile() {
 	local myconf
