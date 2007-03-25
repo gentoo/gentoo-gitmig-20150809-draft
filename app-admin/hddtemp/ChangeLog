@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.55 2007/03/24 18:43:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.56 2007/03/25 19:35:47 spock Exp $
+
+  25 Mar 2007; Michał Januszewski <spock@gentoo.org> files/hddtemp-init:
+  Use --exec instead of --name in the initscript to make it compatible with
+  baselayout-2.
 
   24 Mar 2007; nixnut <nixnut@gentoo.org> hddtemp-0.3_beta15-r1.ebuild:
   Stable on ppc wrt bug 171661
