@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.31 2007/03/15 19:15:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.32 2007/03/25 12:29:11 dertobi123 Exp $
+
+  25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  celestia-1.4.1-r2.ebuild:
+  Stable on ppc wrt bug #168792.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> celestia-1.4.1-r2.ebuild:
   Stable on ppc64; bug #168792
