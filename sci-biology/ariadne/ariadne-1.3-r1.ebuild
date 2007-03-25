@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.5 2006/09/12 21:27:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.6 2007/03/25 01:44:48 kugelfang Exp $
 
 inherit toolchain-funcs eutils
 
@@ -25,10 +25,6 @@ src_unpack(){
 		-e "s/OPTIMISE = -O2/OPTIMISE = ${CFLAGS}/" \
 		-i Makefile || die
 	sed -e "s/blosum62/BLOSUM62/" -i prospero.c || die
-}
-
-src_compile() {
-	emake || die
 }
 
 src_install() {
