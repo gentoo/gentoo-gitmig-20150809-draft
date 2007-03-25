@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.71 2007/03/17 11:58:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.72 2007/03/25 12:08:42 dertobi123 Exp $
+
+  25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> lua-5.1.1-r2.ebuild:
+  Stable on ppc wrt bug #168792.
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> lua-5.1.1-r2.ebuild:
   amd64 stable, bug 168792
