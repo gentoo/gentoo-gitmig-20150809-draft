@@ -1,6 +1,10 @@
 # ChangeLog for games-board/jrisk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.14 2007/02/14 19:06:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.15 2007/03/25 09:29:05 betelgeuse Exp $
+
+  25 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jrisk-1.0.8.9-r1.ebuild:
+  Fix the ebuild so that it can be installed without it already installed.
 
 *jrisk-1.0.8.9-r1 (14 Feb 2007)
 

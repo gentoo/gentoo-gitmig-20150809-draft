@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.8.9-r1.ebuild,v 1.1 2007/02/14 19:06:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.8.9-r1.ebuild,v 1.2 2007/03/25 09:29:05 betelgeuse Exp $
 
 inherit eutils games java-pkg-2 java-ant-2
 
@@ -35,7 +35,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r build/game/* || die "doins failed"
 	rm -f "${D}${GAMES_DATADIR}"/${PN}/*.cmd || die
-	java-pkg_regjar "${GAMES_DATADIR}/${PN}"/*.jar
+	java-pkg_regjar "${D}/${GAMES_DATADIR}/${PN}"/*.jar
 
 	newicon build/game/resources/risk.png ${PN}.png
 	make_desktop_entry ${PN} "Risk"
