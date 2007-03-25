@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.2.ebuild,v 1.1 2007/03/25 14:51:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.2.ebuild,v 1.2 2007/03/25 16:29:47 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -104,6 +104,7 @@ src_unpack() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/1.4.0/bb.patch
+	epatch "${FILESDIR}"/1.4.0/selinux-link.patch
 
 	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc

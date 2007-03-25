@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.134 2007/03/25 15:00:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.135 2007/03/25 16:29:47 vapier Exp $
+
+  25 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/1.4.0/selinux-link.patch, busybox-1.4.1-r2.ebuild,
+  busybox-1.4.2.ebuild:
+  Fix linking with selinux libs #160879.
 
 *busybox-1.5.0 (25 Mar 2007)
 
