@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.57 2007/03/25 01:35:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.58 2007/03/25 10:14:30 tove Exp $
 
   25 Mar 2007; Ryan Hill <dirtyepic@gentoo.org> -alsaplayer-0.99.77.ebuild,
   alsaplayer-0.99.77-r1.ebuild:
@@ -27,7 +27,7 @@
   alsaplayer-0.99.77.ebuild:
   Keyworded ~sparc wrt #166464
 
-  13 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
   alsaplayer-0.99.77.ebuild:
   Add ~amd64 wrt bug #166464.
 
@@ -45,11 +45,11 @@
   -alsaplayer-0.99.76-r2.ebuild, alsaplayer-0.99.76-r3.ebuild:
   Mark 0.99.76-r3 stable on ia64.  Remove 0.99.76-r2. #125479
 
-  09 Jul 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsaplayer-0.99.76-cxxflags.patch, alsaplayer-0.99.76-r3.ebuild:
   Force a decent behaviour with respect to C(XX)FLAGS.
 
-  09 Jul 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -alsaplayer-0.99.76.ebuild, -alsaplayer-0.99.76-r1.ebuild:
   Drop old versions.
 
@@ -66,7 +66,7 @@
 
 *alsaplayer-0.99.76-r3 (20 Apr 2006)
 
-  20 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsaplayer-0.99.76-join-null-thread.patch,
   +alsaplayer-0.99.76-r3.ebuild:
   Add patch to void crashing on cleanup, thanks to Matthias Langer for the
@@ -79,13 +79,13 @@
   10 Mar 2006; <nixnut@gentoo.org> alsaplayer-0.99.76-r2.ebuild:
   Stable on ppc. Bug #125479
 
-  08 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   alsaplayer-0.99.76.ebuild:
   Don't depend on doxygen in runtime.
 
 *alsaplayer-0.99.76-r2 (18 Dec 2005)
 
-  18 Dec 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +alsaplayer-0.99.76-r2.ebuild:
   Drop gtk useflag for new revision, as it does not handle Unicode correctly,
   leading to crashes. See bug #103751.
@@ -112,7 +112,7 @@
   added missing libsndfile dependency, fixes #89597. also changed deprecated
   oggvorbis to vorbis.
 
-  19 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> metadata.xml:
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
 
   13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
@@ -123,7 +123,7 @@
 
   12 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +alsaplayer-0.99.76-r1.ebuild:
-  applied a cleanup patch which was suggested by Diego PettenÃ²
+  applied a cleanup patch which was suggested by Diego Pettenò
   <dgp85@users.sourceforge.net>. Fixes #82744
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org>
