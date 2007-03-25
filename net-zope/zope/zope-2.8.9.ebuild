@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.9.6.ebuild,v 1.2 2007/03/25 15:29:14 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.9.ebuild,v 1.1 2007/03/25 15:29:14 radek Exp $
 
 inherit eutils multilib
 
@@ -13,7 +13,8 @@ SLOT="${PV}"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="=dev-lang/python-2.4*"
+RDEPEND="=dev-lang/python-2.3*"
+python='python2.3'
 
 DEPEND="${RDEPEND}
 virtual/libc
@@ -43,22 +44,24 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure  --prefix="${D}${ZSERVDIR}" --with-python=/usr/bin/python2.4 || die "Failed to execute ./configure ..."
+	./configure --ignore-largefile --prefix=. --with-python=/usr/bin/python2.3 || die "Failed to configure."
 	emake || die "Failed to compile."
 }
 
 src_install() {
 	dodoc README.txt
-	dodoc Zope/doc/*.txt
-	docinto PLATFORMS ; dodoc Zope/doc/PLATFORMS/*
-	docinto ZEO ; dodoc Zope/doc/ZEO/*
+	dodoc doc/*.txt
+	docinto PLATFORMS ; dodoc doc/PLATFORMS/*
+	docinto ZEO ; dodoc doc/ZEO/*
 
-	make install prefix=${D}${ZSERVDIR} || die "Failed to install into ${D}${ZSERVDIR}"
+	make install PREFIX=${D}${ZSERVDIR}
 	rm -rf ${D}${ZSERVDIR}/doc
 	dosym ../../share/doc/${PF} ${ZSERVDIR}/doc
-
 	# copy the init script skeleton to skel directory of our installation
-	cp ${FILESDIR}/zope.initd ${D}/${ZSERVDIR}/skel/zope.initd
+	skel=${D}${ZSERVDIR}/skel
+	# <radek@gentoo.org> from 2.7.4 release i think that we can use the same
+	# file for every one, and not separate it by PV
+	cp ${FILESDIR}/zope.initd ${skel}/zope.initd
 }
 
 pkg_postinst() {
@@ -75,5 +78,6 @@ pkg_prerm() {
 
 	#need to remove this symlink because portage keeps links to
 	#existing targets
+
 	rm ${ZSERVDIR}/bin/python
 }
