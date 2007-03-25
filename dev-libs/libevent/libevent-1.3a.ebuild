@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.3a.ebuild,v 1.9 2007/03/17 21:15:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.3a.ebuild,v 1.10 2007/03/25 06:53:01 vapier Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://monkey.org/~provos/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
