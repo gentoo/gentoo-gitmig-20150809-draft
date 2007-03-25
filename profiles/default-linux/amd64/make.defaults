@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.24 2007/02/23 20:41:34 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.25 2007/03/25 15:26:49 kugelfang Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
 
-#CHOST="x86_64-pc-linux-gnu"
+CHOST="x86_64-pc-linux-gnu"
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 

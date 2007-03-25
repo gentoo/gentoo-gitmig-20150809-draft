@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.82 2007/03/21 00:02:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.83 2007/03/25 15:26:49 kugelfang Exp $
+
+  25 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> make.defaults:
+  Uncomment CHOST setting in make.defaults.
 
   20 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
   2006.0/no-multilib/package.mask, dev/2007.0/no-multilib/package.mask,
