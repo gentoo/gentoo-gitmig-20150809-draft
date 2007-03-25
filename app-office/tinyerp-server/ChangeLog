@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tinyerp-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.8 2007/03/17 12:23:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.9 2007/03/25 12:56:40 cedk Exp $
+
+  25 Mar 2007; Cedric Krier <cedk@gentoo.org> tinyerp-server-4.0.3.ebuild:
+  add --no-adduser option to postgresSQL user
 
 *tinyerp-server-4.0.3 (17 Mar 2007)
 
