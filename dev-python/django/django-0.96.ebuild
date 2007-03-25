@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.96.ebuild,v 1.1 2007/03/24 03:46:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.96.ebuild,v 1.2 2007/03/25 21:54:41 seemant Exp $
 
 inherit bash-completion distutils eutils versionator
 
@@ -40,6 +40,15 @@ src_unpack() {
 		setup.py || die "sed failed"
 }
 
+src_test() {
+	cat >> tests/settings.py << __EOF__
+DATABASE_ENGINE='sqlite3'
+ROOT_URLCONF='tests/urls.py'
+SITE_ID=1
+__EOF__
+	PYTHONPATH="." ${python} tests/runtests.py --settings=settings -v1 || die "tests failed"
+}
+
 src_install() {
 	distutils_python_version
 
@@ -55,11 +64,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-}
-
-src_test() {
-	cat >> tests/settings.py << __EOF__
-DATABASE_ENGINE='sqlite3'
-__EOF__
-	PYTHONPATH="." ${python} tests/runtests.py --settings=settings -v1 || die "tests failed"
 }
