@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.67 2007/03/22 03:11:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.68 2007/03/25 10:02:09 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -349,6 +349,11 @@ java-pkg_regjar() {
 			# record paths with ${D} in package.env
 			java-pkg_append_ JAVA_PKG_CLASSPATH	"${jar#${D}}"
 		else
+			if [[ ${jar} = *\** ]]; then
+				eerror "The argument ${jar} to ${FUNCNAME}"
+				eerror "has * in it. If you want it to glob in"
+				eerror '${D} add ${D} to the argument.'
+			fi
 			die "${jar} does not exist"
 		fi
 	done
