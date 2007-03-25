@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/x264-svn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.46 2007/02/02 09:51:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.47 2007/03/25 19:38:52 aballier Exp $
+
+*x264-svn-20070325 (25 Mar 2007)
+
+  25 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/x264-svn-20070325-nostrip.patch,
+  +files/x264-svn-20070325-onlylib.patch, +x264-svn-20070325.ebuild:
+  New snapshot
 
   02 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   +files/x264-svn-20060302-nostrip.patch:
