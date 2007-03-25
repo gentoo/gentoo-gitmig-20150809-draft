@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-xosd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.7 2007/03/12 17:18:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.8 2007/03/25 01:38:52 joker Exp $
+
+  25 Mar 2007; Christian Birchinger <joker@gentoo.org>
+  -audacious-xosd-0.3.ebuild, -audacious-xosd-0.4.ebuild:
+  Removed old versions
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   audacious-xosd-0.5.ebuild:
