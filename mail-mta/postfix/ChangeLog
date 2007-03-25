@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.121 2007/03/23 22:55:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.122 2007/03/25 12:03:43 dertobi123 Exp $
+
+  25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  postfix-2.3.6.ebuild:
+  Stable on ppc wrt bug #165326.
 
 *postfix-2.3.8 (23 Mar 2007)
 
