@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.5_pre20070325.ebuild,v 1.1 2007/03/25 15:18:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.5_pre20070325.ebuild,v 1.2 2007/03/25 16:23:30 drac Exp $
 
 inherit xfce44
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/projects/xfdesktop"
 SRC_URI="http://dev.gentoo.org/~drac/distfiles/${P}.tar.bz2"
 
 KEYWORDS="~x86"
-IUSE="dbus doc minimal"
+IUSE="dbus debug doc minimal"
 
 LANG="ca cs da de el es et eu fi fr he hu ja ko nl pl pt_BR ro ru sk sv uk vi zh_CN zh_TW"
 
@@ -38,7 +38,7 @@ for X in ${LANG}; do
 done
 
 XFCE_CONFIG="${XFCE_CONFIG} $(use_enable doc xsltproc) \
-	--enable-maintainer-mode --enable-debug"
+	--enable-maintainer-mode"
 DOCS="AUTHORS ChangeLog HACKING NEWS TODO README"
 XFCE_LOCALIZED_CONFIGS="/etc/xdg/xfce4/desktop/xfce-registered-categories.xml
 	/etc/xdg/xfce4/desktop/menu.xml"
