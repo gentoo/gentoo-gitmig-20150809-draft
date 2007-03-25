@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/galculator
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.14 2007/03/15 16:23:04 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.15 2007/03/25 03:13:51 kugelfang Exp $
+
+  25 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> galculator-1.2.5.ebuild:
+  QA: Removed redundant src_compile().
 
   15 Mar 2007; Peter Weller <welp@gentoo.org> galculator-1.2.5.2.ebuild:
   Keyworded ~x86-fbsd

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-1.2.5.ebuild,v 1.3 2005/09/16 07:22:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-1.2.5.ebuild,v 1.4 2007/03/25 03:13:51 kugelfang Exp $
 
 DESCRIPTION="A GTK2 based algebraic and RPN calculator"
 HOMEPAGE="http://galculator.sourceforge.net/"
@@ -16,11 +16,6 @@ RDEPEND=">=x11-libs/gtk+-1.3.13
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install() {
 	einstall || die
