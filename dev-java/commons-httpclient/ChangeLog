@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.37 2007/02/09 22:08:30 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.38 2007/03/26 20:06:15 welp Exp $
+
+  26 Mar 2007; Peter Weller <welp@gentoo.org>
+  commons-httpclient-2.0.2-r1.ebuild:
+  Keyworded ~x86-fbsd
 
   09 Feb 2007; Miroslav Šulc <fordfrog@gentoo.org>
   files/commons-httpclient-3.0.1-gentoo.patch,
