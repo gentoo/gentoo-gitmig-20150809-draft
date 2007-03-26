@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.108 2007/03/25 15:10:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.109 2007/03/26 21:34:05 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> freetype-1.3.1-r5.ebuild:
+  ia64 stable wrt bug 166265
 
 *freetype-2.3.2-r1 (25 Mar 2007)
 
