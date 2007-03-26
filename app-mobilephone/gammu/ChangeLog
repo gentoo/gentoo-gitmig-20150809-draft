@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.33 2007/03/23 09:32:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.34 2007/03/26 21:29:40 mrness Exp $
+
+  26 Mar 2007; Alin Năstac <mrness@gentoo.org> gammu-1.10.0.ebuild:
+  Add postgres USE flag (#172315).
 
 *gammu-1.10.0 (23 Mar 2007)
 
