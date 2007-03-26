@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rinetd/rinetd-0.62.ebuild,v 1.4 2004/12/06 04:39:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rinetd/rinetd-0.62.ebuild,v 1.5 2007/03/26 08:05:28 antarus Exp $
 
 DESCRIPTION="redirects TCP connections from one IP address and port to another"
 HOMEPAGE="http://www.boutell.com/rinetd/"
@@ -12,8 +12,7 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="sys-devel/gcc
-	>=sys-apps/portage-2.0.51"
+DEPEND="sys-devel/gcc"
 
 S=${WORKDIR}/${PN}
 

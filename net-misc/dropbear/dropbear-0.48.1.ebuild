@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.48.1.ebuild,v 1.2 2007/01/04 06:06:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.48.1.ebuild,v 1.3 2007/03/26 08:05:13 antarus Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ IUSE="minimal multicall pam static zlib"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	pam? ( sys-libs/pam )"
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51"
+DEPEND="${RDEPEND}"
 PROVIDE="virtual/ssh"
 
 set_options() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.5 2007/02/14 15:37:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.6 2007/03/26 08:06:35 antarus Exp $
 
 inherit eutils
 
@@ -24,8 +24,7 @@ RDEPEND="dev-libs/gmp
 #	kerberos? ( virtual/krb5 )
 # need guile because the source changes
 DEPEND="${RDEPEND}
-	dev-scheme/guile
-	>=sys-apps/portage-2.0.51"
+	dev-scheme/guile"
 
 src_unpack() {
 	unpack ${A}

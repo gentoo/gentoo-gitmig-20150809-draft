@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.15 2007/03/17 19:01:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.16 2007/03/26 08:07:49 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> netkit-rwho-0.17-r1.ebuild,
+  netkit-rwho-0.17-r2.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> netkit-rwho-0.17-r2.ebuild:
   amd64 stable, bug 168158

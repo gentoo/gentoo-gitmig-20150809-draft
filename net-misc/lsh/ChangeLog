@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lsh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.15 2007/02/14 15:37:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.16 2007/03/26 08:06:35 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> lsh-2.0.1-r2.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> lsh-2.0.1-r2.ebuild:
   Stable on sparc

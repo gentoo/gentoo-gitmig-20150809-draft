@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5.ebuild,v 1.8 2007/03/13 13:00:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5.ebuild,v 1.9 2007/03/26 08:06:37 antarus Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="net-libs/libpcap
-	>=sys-apps/portage-2.0.51"
+DEPEND="net-libs/libpcap"
 RDEPEND="net-firewall/iptables
 	${DEPEND}"
 

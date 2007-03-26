@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.14 2006/12/31 14:36:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.15 2007/03/26 08:08:01 antarus Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ IUSE="ssl selinux"
 RDEPEND="ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )
 	!<=net-misc/ntp-4.2.0-r2"
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

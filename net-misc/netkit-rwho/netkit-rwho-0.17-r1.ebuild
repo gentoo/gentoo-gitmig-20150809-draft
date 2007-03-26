@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r1.ebuild,v 1.2 2006/02/21 21:28:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r1.ebuild,v 1.3 2007/03/26 08:07:49 antarus Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51
 	>=sys-apps/sed-4"
 
 src_unpack() {
