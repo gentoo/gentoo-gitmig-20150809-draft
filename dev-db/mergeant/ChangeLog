@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mergeant
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.12 2007/02/13 22:27:55 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.13 2007/03/26 02:56:04 leonardop Exp $
+
+*mergeant-0.66 (26 Mar 2007)
+
+  26 Mar 2007; Leonardo Boshell <leonardop@gentoo.org>
+  -files/mergeant-0.65-api_updates.patch, -mergeant-0.65-r1.ebuild,
+  +mergeant-0.66.ebuild:
+  New release.
 
 *mergeant-0.65-r1 (13 Feb 2007)
 

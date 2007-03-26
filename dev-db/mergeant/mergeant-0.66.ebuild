@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.65-r1.ebuild,v 1.1 2007/02/13 22:27:55 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.66.ebuild,v 1.1 2007/03/26 02:56:04 leonardop Exp $
 
-WANT_AUTOCONF="2.5"
-WANT_AUTOMAKE="1.9"
+#WANT_AUTOCONF="2.5"
+#WANT_AUTOMAKE="1.9"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Front-end for database administrators and developers"
 HOMEPAGE="http://www.gnome-db.org/"
@@ -15,8 +15,8 @@ KEYWORDS="~x86"
 
 IUSE="debug doc"
 
-RDEPEND=">=gnome-extra/libgnomedb-2.99.5
-	>=gnome-extra/libgda-2.99.5
+RDEPEND=">=gnome-extra/libgnomedb-2.99.6
+	>=gnome-extra/libgda-2.99.6
 	>=gnome-base/gconf-2
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2
@@ -36,11 +36,11 @@ pkg_setup() {
 	G2CONF="$(use_enable debug debug-signal)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+#src_unpack() {
+#	gnome2_src_unpack
 
 	# Updates to fix compilation problems due to recent API changes
-	epatch "${FILESDIR}/${P}-api_updates.patch"
+#	epatch "${FILESDIR}/${P}-api_updates.patch"
 
-	eautoreconf
-}
+#	eautoreconf
+#}
