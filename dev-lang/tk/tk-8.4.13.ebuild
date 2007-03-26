@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.13.ebuild,v 1.2 2006/12/26 04:55:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.13.ebuild,v 1.3 2007/03/26 07:57:18 antarus Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE="debug threads"
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	~dev-lang/tcl-${PV}"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.47-r10
 	|| (
 		( x11-libs/libXt x11-proto/xproto )
 		virtual/x11

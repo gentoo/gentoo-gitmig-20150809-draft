@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.72 2007/01/06 05:39:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.73 2007/03/26 07:57:18 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> tk-8.4.9.ebuild,
+  tk-8.4.11-r1.ebuild, tk-8.4.12.ebuild, tk-8.4.13.ebuild, tk-8.4.14.ebuild:
+  Remove dependency on portage: ref bug 162516
 
 *tk-8.4.14 (06 Jan 2007)
 
