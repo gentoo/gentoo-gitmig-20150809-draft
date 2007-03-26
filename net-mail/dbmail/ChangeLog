@@ -1,0 +1,13 @@
+# ChangeLog for net-mail/dbmail
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.1 2007/03/26 23:51:52 ticho Exp $
+
+*dbmail-2.2.4 (26 Mar 2007)
+
+  26 Mar 2007; Andrej Kacian <ticho@gentoo.org> +files/dbmail-imapd.initd,
+  +files/dbmail-lmtpd.initd, +files/dbmail-pop3d.initd,
+  +files/dbmail-timsieved.initd, +metadata.xml, +dbmail-2.2.4.ebuild:
+  Initial import. Ebuild by several people collaborating in bug #22331 (yes,
+  _that_ old!), based on ebuild written by Chris Johnson <cmjohn at
+  mail.utexas.edu>.
+
