@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.44 2007/02/22 01:01:28 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.45 2007/03/26 18:29:07 truedfx Exp $
+
+*librep-0.17_p20070101 (26 Mar 2007)
+
+  26 Mar 2007; <harald@gentoo.org>
+  +files/librep-0.17_p20070101-libtool.patch, +librep-0.17_p20070101.ebuild:
+  Add a more recent snapshot for bug #172299
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
