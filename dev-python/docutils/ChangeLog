@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.57 2007/03/17 19:16:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.58 2007/03/26 09:18:29 antarus Exp $
+
+*docutils-0.4-r1 (26 Mar 2007)
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> +docutils-0.4-r1.ebuild:
+  bump docutils with fixed glep tarball for bug 152313
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> docutils-0.4.ebuild:
   amd64 stable
