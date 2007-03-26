@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.7.2.ebuild,v 1.1 2007/01/05 18:57:01 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.8.ebuild,v 1.1 2007/03/26 09:12:55 lucass Exp $
+
+NEED_PYTHON=2.2
 
 inherit distutils eutils
 
@@ -13,16 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 IUSE="examples"
-DEPEND="virtual/python"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.9.6-nosetuptools.diff"
+	epatch "${FILESDIR}/${P}-nosetuptools.diff"
 }
 
 src_test() {
-	${python} test_urwid.py || die "unit tests failed"
+	"${python}" test_urwid.py || die "unit tests failed"
 }
 
 src_install() {

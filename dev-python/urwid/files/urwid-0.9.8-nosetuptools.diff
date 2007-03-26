@@ -1,0 +1,14 @@
+--- setup.py.orig	2007-03-26 11:06:56.000000000 +0200
++++ setup.py	2007-03-26 11:07:23.000000000 +0200
+@@ -19,10 +19,7 @@
+ #
+ # Urwid web site: http://excess.org/urwid/
+ 
+-try:
+-	from setuptools import setup, Extension
+-except ImportError:
+-	from distutils.core import setup, Extension
++from distutils.core import setup, Extension
+ 
+ import os
+ 
