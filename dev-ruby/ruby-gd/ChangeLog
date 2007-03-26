@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.11 2007/02/12 17:13:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.12 2007/03/26 13:54:07 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> ruby-gd-0.7.4.ebuild:
+  Marking -ia64 wrt bug 166527
 
   12 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ruby-gd-0.7.4.ebuild:
   Fix quoting, fix local declaration of myconf, add a pkg_setup error if

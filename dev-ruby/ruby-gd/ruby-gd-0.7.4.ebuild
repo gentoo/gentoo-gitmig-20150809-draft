@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.12 2007/02/12 17:13:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.13 2007/03/26 13:54:07 armin76 Exp $
 
 inherit ruby
 USE_RUBY="ruby16 ruby18 ruby19"
@@ -14,7 +14,7 @@ SRC_URI="http://tam.0xfa.com/ruby-gd/${MY_P}-1.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="ia64 ~ppc ppc64 ~x86"
+KEYWORDS="-ia64 ~ppc ppc64 ~x86"
 IUSE="jpeg truetype X"
 
 DEPEND="virtual/ruby
