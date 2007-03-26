@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.52 2007/03/26 15:16:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.53 2007/03/26 16:12:35 fuzzyray Exp $
+
+  26 Mar 2007; Paul Varner <fuzzyray@gentoo.org>
+  files/digest-gentoolkit-dev-0.2.6.4, Manifest:
+  Fix digest and Manifest again
 
   26 Mar 2007; Jeroen Roovers <jer@gentoo.org>
   files/digest-gentoolkit-dev-0.2.6.4, Manifest:
