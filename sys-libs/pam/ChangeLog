@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.149 2007/02/14 03:35:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.150 2007/03/26 15:37:01 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> pam-0.78-r5.ebuild:
+  ia64 stable wrt bug 150859
 
   14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> pam-0.78-r5.ebuild:
   Stable on alpha wrt bug #150859.
