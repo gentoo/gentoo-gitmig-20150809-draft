@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.46 2007/03/25 18:17:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.47 2007/03/26 16:11:50 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> ion3-20061223.ebuild,
+  ion3-20070203.ebuild, ion3-20070318.ebuild:
+  Readd ~ia64 wrt bug 162985
 
 *ion3-20070318 (25 Mar 2007)
 
