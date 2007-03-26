@@ -1,0 +1,22 @@
+diff --exclude='*~' -Naur ripperX-2.7.0.orig/src/Makefile.in ripperX-2.7.0/src/Makefile.in
+--- ripperX-2.7.0.orig/src/Makefile.in	2007-03-25 21:20:21.000000000 -0300
++++ ripperX-2.7.0/src/Makefile.in	2007-03-25 21:21:14.000000000 -0300
+@@ -11,7 +11,8 @@
+ 
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+-LDFLAGS = @LDFLAGS@ @LIBS@ -lutil -lid3
++LDFLAGS = @LDFLAGS@
++LIBS = @LIBS@ -lutil -lid3
+ INSTALL = @INSTALL@
+ 
+ CFILES = main.c\
+@@ -36,7 +37,7 @@
+ all: ripperX
+ 
+ ripperX: $(OFILES)
+-	$(CC) $(LDFLAGS) $(OFILES) -o ripperX
++	$(CC) $(LDFLAGS) $(OFILES) $(LIBS) -o ripperX
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
