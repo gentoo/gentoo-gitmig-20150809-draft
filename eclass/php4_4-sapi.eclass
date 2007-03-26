@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.33 2007/03/06 12:46:48 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.34 2007/03/26 20:19:22 genstef Exp $
 
 # ========================================================================
 #
@@ -94,7 +94,7 @@ DEPEND="adabas? ( >=dev-db/unixODBC-1.8.13 )
 		truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
 		xml? ( dev-libs/libxml2 sys-libs/zlib xsl? ( dev-libs/libxslt ) )
 		xmlrpc? ( dev-libs/expat virtual/libiconv )
-		xpm? ( || ( x11-libs/libXpm virtual/x11 ) >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
+		xpm? ( x11-libs/libXpm >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
 		xsl? ( app-text/sablotron dev-libs/expat virtual/libiconv )
 		zlib? ( sys-libs/zlib )
 		virtual/mta"
