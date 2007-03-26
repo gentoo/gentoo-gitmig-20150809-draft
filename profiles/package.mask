@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7040 2007/03/26 16:01:59 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7041 2007/03/26 16:28:54 cryos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -953,12 +953,6 @@ net-dns/bind-dns-keygen
 # 138296, 139016, 139629, 143684
 >=sys-devel/gcc-config-2.0.0_rc1
 app-admin/eselect-compiler
-
-# Ioannis Aslanidis <deathwing00@gentoo.org> (11 Aug 2006)
-# k3b pre-release versions. Apart from being pre-release,
-# i18n support and encoders/decoders are missing.
-=app-cdr/k3b-1.0_beta*
-=app-cdr/k3b-1.0_rc*
 
 # Jonathan Smith <smithj@gentoo.org> (07 Aug 2006)
 # pending removal
