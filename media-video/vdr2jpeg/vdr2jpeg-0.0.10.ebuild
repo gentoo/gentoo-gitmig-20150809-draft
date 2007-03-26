@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.10.ebuild,v 1.1 2007/01/26 19:03:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.10.ebuild,v 1.2 2007/03/26 20:38:22 zzam Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://vdrfiles/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/ffmpeg-0.4.9_p20061016"
