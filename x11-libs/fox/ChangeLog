@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.82 2007/02/23 16:01:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.83 2007/03/26 12:20:43 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> fox-1.4.34-r1.ebuild,
+  fox-1.6.19.ebuild:
+  ia64 stable and ~ia64 wrt bug 168328
 
   23 Feb 2007; Matti Bickel <mabi@gentoo.org> -fox-1.2.18.ebuild,
   -fox-1.4.34.ebuild, -fox-1.6.16.ebuild:
