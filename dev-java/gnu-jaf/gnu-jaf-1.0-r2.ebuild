@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r2.ebuild,v 1.4 2007/03/26 15:20:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r2.ebuild,v 1.5 2007/03/26 15:23:09 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar activation.jar
-	dodoc AUTHORS ChangeLog
-	use doc && java-pkg_dohtml -r docs/*
+	dodoc AUTHORS ChangeLog || die
+	use doc && java-pkg_dojavadoc docs
 	use source && java-pkg_dosrc source/*
 }
