@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.3.ebuild,v 1.1 2007/03/26 22:31:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.3.ebuild,v 1.2 2007/03/26 22:49:12 ticho Exp $
 
 inherit eutils
 
@@ -44,4 +44,10 @@ pkg_postinst() {
 	elog
 	elog "Also remember to start policyd-weight at boot:"
 	elog "  rc-update add policyd-weight default"
+	echo
+	ewarn "Please note:"
+	ewarn "If you are getting legitimate e-mails from verizon.net, it is advised to"
+	ewarn "whitelist the domain in postfix. Because of the way they send their"
+	ewarn "emails, they are often listed in RBLs."
+	echo
 }
