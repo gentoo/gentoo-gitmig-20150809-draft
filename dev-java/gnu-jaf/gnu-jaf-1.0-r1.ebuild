@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r1.ebuild,v 1.5 2006/10/05 15:43:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r1.ebuild,v 1.6 2007/03/26 15:20:48 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU JAF: JavaBeans Activation Framework"
 HOMEPAGE="http://www.gnu.org/software/classpathx/jaf/jaf.html"
 SRC_URI="mirror://gnu/classpathx/activation-${PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc source"
