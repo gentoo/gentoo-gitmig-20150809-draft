@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0-r3.ebuild,v 1.5 2007/03/19 13:48:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0-r3.ebuild,v 1.6 2007/03/26 11:13:31 armin76 Exp $
 
 DESCRIPTION="Meta ebuild for panel plugins and other extra applications"
 HOMEPAGE="http://www.xfce.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="battery gnome lm_sensors wifi"
 
 RDEPEND=">=xfce-extra/xfce4-clipman-0.8

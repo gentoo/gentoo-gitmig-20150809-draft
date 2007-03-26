@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.52 2007/03/19 13:48:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.53 2007/03/26 11:13:31 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  xfce4-extras-4.4.0-r3.ebuild:
+  Add ~ia64 wrt bug 169790
 
   19 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-extras-4.4.0-r3.ebuild:
