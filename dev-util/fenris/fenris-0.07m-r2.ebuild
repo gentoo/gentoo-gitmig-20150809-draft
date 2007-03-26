@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.8 2007/03/05 03:46:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.9 2007/03/26 08:09:34 antarus Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=sys-apps/portage-2.0.47-r10
-	sys-libs/libtermcap-compat
+DEPEND="sys-libs/libtermcap-compat
 	app-misc/screen
 	sys-libs/ncurses
 	dev-libs/openssl
