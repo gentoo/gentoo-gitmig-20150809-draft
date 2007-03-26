@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-1.5.0.ebuild,v 1.5 2007/03/26 19:21:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-1.5.0.ebuild,v 1.6 2007/03/26 19:42:49 armin76 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs2svn.tigris.org/files/documents/1462/34574/cvs2svn-1.5.0.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/python
