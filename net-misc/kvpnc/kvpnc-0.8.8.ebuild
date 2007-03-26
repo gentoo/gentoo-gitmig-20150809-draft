@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.8.8.ebuild,v 1.1 2007/02/22 11:26:59 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.8.8.ebuild,v 1.2 2007/03/26 07:51:29 voxus Exp $
 
 inherit kde
 
@@ -12,6 +12,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="dev-libs/crypto++"
+DEPEND="dev-libs/libgcrypt"
 RDEPEND=">=net-misc/vpnc-0.2"
 need-kde 3.2
