@@ -1,0 +1,3 @@
+# Raúl Porcel <armin76@gentoo.org> (25 Mar 2007)
+# Masking as it gives segfault, bug 166527
+dev-ruby/ruby-gd
