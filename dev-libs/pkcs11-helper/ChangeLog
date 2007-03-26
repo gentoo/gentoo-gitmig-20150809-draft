@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.5 2007/02/05 00:20:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.6 2007/03/26 16:40:43 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> pkcs11-helper-1.02.ebuild:
+  Add ~ia64 wrt bug 160285
 
   05 Feb 2007; Steve Dibb <beandog@gentoo.org> pkcs11-helper-1.02.ebuild:
   add ~amd64, bug 160285
