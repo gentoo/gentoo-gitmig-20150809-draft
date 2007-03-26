@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ibpp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.14 2007/02/22 00:50:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.15 2007/03/26 08:10:40 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> ibpp-1.0.5.2-r1.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
