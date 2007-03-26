@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.32.ebuild,v 1.12 2007/01/31 20:42:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.32.ebuild,v 1.13 2007/03/26 08:00:17 antarus Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
-DEPEND=">=sys-apps/portage-2.0.47-r10
-	nls? ( sys-devel/gettext )
+DEPEND="nls? ( sys-devel/gettext )
 	sys-devel/autoconf"
 RDEPEND=""
 
