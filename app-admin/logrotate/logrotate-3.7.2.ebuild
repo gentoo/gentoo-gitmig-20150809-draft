@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.12 2007/02/18 18:12:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.13 2007/03/26 07:28:20 antarus Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,6 @@ RDEPEND="
 	selinux? ( sys-libs/libselinux )"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4
 	selinux? ( sec-policy/selinux-logrotate )"
 

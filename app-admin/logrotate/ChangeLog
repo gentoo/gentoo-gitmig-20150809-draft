@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.68 2007/02/18 18:12:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.69 2007/03/26 07:28:20 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> logrotate-3.7.1-r2.ebuild,
+  logrotate-3.7.2.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   18 Feb 2007; Markus Rothe <corsair@gentoo.org> logrotate-3.7.2.ebuild:
   Stable on ppc64
