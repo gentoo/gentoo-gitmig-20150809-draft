@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.15.ebuild,v 1.1 2007/03/19 14:29:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.16.ebuild,v 1.1 2007/03/26 15:20:20 voxus Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug fastcgi imap pcre perl threads ssl status webdav zlib"
+IUSE="debug fastcgi imap pcre perl ssl status webdav zlib"
 
 DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
@@ -29,13 +29,15 @@ pkg_setup() {
 src_compile() {
 	local myconf
 
-	if use threads; then
-		einfo
-		ewarn "threads support is experimental at the moment"
-		ewarn "do not use it on production systems - you've been warned"
-		einfo
-		myconf="${myconf} --with-threads"
-	fi
+	# threads support is broken atm.
+	# 
+	# if use threads; then
+	# 	einfo
+	# 	ewarn "threads support is experimental at the moment"
+	# 	ewarn "do not use it on production systems - you've been warned"
+	# 	einfo
+	# 	myconf="${myconf} --with-threads"
+	# fi
 
 	use fastcgi	|| myconf="${myconf} --without-http_fastcgi_module"
 	use fastcgi	&& myconf="${myconf} --with-http_realip_module"
