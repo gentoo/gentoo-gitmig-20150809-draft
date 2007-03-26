@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.7 2007/03/17 11:47:47 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.8 2007/03/26 12:43:25 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> fgl-5.2.ebuild:
+  Add ~ia64 wrt bug 170650
 
 *fgl-5.3 (17 Mar 2007)
 
