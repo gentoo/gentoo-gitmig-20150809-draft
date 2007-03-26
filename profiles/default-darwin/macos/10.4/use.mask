@@ -57,3 +57,6 @@ xattr
 
 # portage uses it, we don't keyword it
 epydoc
+
+# fluxbox's nls pulls in gettext
+nls

@@ -28,3 +28,4 @@ fbcon
 # These are specific of Mac OS X
 -aqua
 -coreaudio
+nls

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7039 2007/03/26 05:03:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7040 2007/03/26 16:01:59 lack Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -432,15 +432,6 @@ app-misc/pyge
 # Gustavo Felisberto <humpback@gentoo.org> (23 Feb 2007)
 # Masked for remove from tree. Contact me if you need this
 net-misc/ssh
-
-# Jim Ramsay <lack@gentoo.org> (22 Feb 2007)
-# Pending removal 24 Mar 2007, bug 151446 
-# These gkrellm-1 plugins have no gkrellm-2 equivalent
-x11-plugins/gkrellm-console
-x11-plugins/gkrellm-logwatch
-x11-plugins/gkrellmouse
-x11-plugins/gkrellm-sensors
-x11-plugins/gkrellmwho
 
 # Luis Medinas <metalgod@gentoo.org> (21 Feb 2007)
 # banshee-official-plugins for removal because
