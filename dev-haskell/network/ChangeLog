@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.6 2007/03/17 11:55:03 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.7 2007/03/26 13:37:26 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> network-1.0.ebuild:
+  Add ~ia64 wrt bug 170650
 
 *network-2.0 (17 Mar 2007)
 

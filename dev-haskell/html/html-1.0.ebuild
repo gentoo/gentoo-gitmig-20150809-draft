@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0.ebuild,v 1.5 2007/03/15 17:28:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0.ebuild,v 1.6 2007/03/26 13:34:40 armin76 Exp $
 
 inherit ghc-package
 
@@ -10,7 +10,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~amd64 hppa ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ~ia64 ppc64 sparc x86"
 IUSE=""
 
 DEPEND="=virtual/ghc-6.4*"
