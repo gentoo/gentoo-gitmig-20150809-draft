@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.38 2007/02/15 22:25:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.39 2007/03/26 14:12:59 armin76 Exp $
+
+  26 Mar 2007; Raúl Porcel <armin76@gentoo.org> ode-0.8.ebuild:
+  ia64 stable wrt bug 146080
 
   15 Feb 2007; Tristan Heaven <nyhm@gentoo.org> ode-0.8.ebuild:
   Remove broken src_test, bug #143247
