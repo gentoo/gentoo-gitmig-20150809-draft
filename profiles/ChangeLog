@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.241 2007/03/25 20:13:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.242 2007/03/26 00:26:42 voyageur Exp $
+
+  26 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Package.masked NX components split ebuilds, pending removal on 26 Apr 2007
 
   25 Mar 2007; <genstef@gentoo.org> package.mask:
   Mask virtual/x11, bug 168328
