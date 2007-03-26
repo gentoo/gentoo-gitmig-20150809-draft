@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.0.ebuild,v 1.3 2007/03/16 11:07:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.0.ebuild,v 1.4 2007/03/26 08:53:31 pva Exp $
 
 inherit autotools kde-functions eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 	"s:{datadir}/applnk:{datadir}/applications:" admin/acinclude.m4.in
 	# Apply patch for broken paths only when without kde. See bug #129225.
 	epatch "${FILESDIR}"/${P}-qt-only-path-fix.diff
+	epatch "${FILESDIR}"/${P}-fix-as-needed.diff
 	make -f admin/Makefile.common
 }
 

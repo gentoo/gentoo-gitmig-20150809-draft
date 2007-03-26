@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.24 2007/03/16 11:07:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.25 2007/03/26 08:53:31 pva Exp $
+
+  26 Mar 2007; <pva@gentoo.org> +files/kchmviewer-3.0-fix-as-needed.diff,
+  kchmviewer-3.0.ebuild:
+  Fixed compilation with --as-needed. bug 172147.
 
   16 Mar 2007; <pva@gentoo.org> kchmviewer-3.0.ebuild:
   Fixed .desktop file location. Fixed gentoo->mirror.
