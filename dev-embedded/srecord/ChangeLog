@@ -1,0 +1,9 @@
+# ChangeLog for dev-embedded/srecord
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.1 2007/03/26 19:42:59 calchan Exp $
+
+*srecord-1.29 (26 Mar 2007)
+
+  26 Mar 2007; Denis Dupeyron <calchan@gentoo.org> +srecord-1.29.ebuild:
+  Initial commit, bug #126372.
+
