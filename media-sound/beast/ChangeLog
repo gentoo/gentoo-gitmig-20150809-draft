@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.25 2007/03/25 12:19:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.26 2007/03/26 21:40:53 aballier Exp $
+
+  26 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/beast-0.7.1-noinstalltest.patch, beast-0.7.1.ebuild:
+  Dont test if files are installed as they are not at the time we run src_test
 
   25 Mar 2007; Alexis Ballier <aballier@gentoo.org> beast-0.7.1.ebuild:
   Upstream fix to build with guile 1.8

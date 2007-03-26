@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1.ebuild,v 1.2 2007/03/25 12:19:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1.ebuild,v 1.3 2007/03/26 21:40:53 aballier Exp $
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -43,6 +43,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${WORKDIR}/${P}-guile-1.8.diff"
+	epatch "${FILESDIR}/${P}-noinstalltest.patch"
 }
 
 src_compile() {
@@ -59,7 +60,11 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	# dont install new mime files !
-	rm -f "${D}/usr/share/mime/"*
+	for i in subclasses XMLnamespaces aliases globs magic mime.cache\
+		audio/x-bsewave.xml audio/x-bse.xml; do
+		rm -f "${D}/usr/share/mime/${i}"
+	done
+
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
