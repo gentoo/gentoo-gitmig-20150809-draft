@@ -1,6 +1,13 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.93 2007/03/24 18:04:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.94 2007/03/26 19:57:06 dang Exp $
+
+*evince-0.6.1-r3 (26 Mar 2007)
+
+  26 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/evince-0.6.1-gv-limit.patch, +evince-0.6.1-r3.ebuild:
+  Bump to 0.6.1-r3
+  	Add patch for bug #156573
 
   24 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   evince-0.6.1-r2.ebuild:
