@@ -1,9 +1,0 @@
-Fix underquoting warnings
-
---- gtkDPS.m4
-+++ gtkDPS.m4
-@@ -2,3 +2,3 @@
- dnl   This macro is derived from guile.m4.
--AC_DEFUN(AM_PATH_GTK_DPS,[dnl
-+AC_DEFUN([AM_PATH_GTK_DPS],[dnl
-   AC_MSG_CHECKING(for GtkDPS)
