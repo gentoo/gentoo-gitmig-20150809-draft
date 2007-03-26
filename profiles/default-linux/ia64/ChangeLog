@@ -1,9 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.22 2007/03/26 16:33:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.23 2007/03/26 16:34:55 armin76 Exp $
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> +package.mask:
-  Add ChangeLog and package.mask files, mask dev-ruby/ruby-gd wrt bug 166527
+  Add package.mask file and mask dev-ruby/ruby-gd wrt bug 166527
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
   Add ivtv to use.mask
