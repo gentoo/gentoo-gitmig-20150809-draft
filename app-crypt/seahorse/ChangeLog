@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.68 2007/03/24 12:06:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.69 2007/03/26 01:09:39 mr_bones_ Exp $
+
+  26 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> seahorse-1.0.ebuild:
+  clean up app-crypt/gnupg dep
 
   24 Mar 2007; Markus Rothe <corsair@gentoo.org> seahorse-1.0.ebuild:
   Added ~ppc64; bug #171871

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.ebuild,v 1.3 2007/03/24 12:06:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.ebuild,v 1.4 2007/03/26 01:09:39 mr_bones_ Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -23,10 +23,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 		 >=x11-libs/gtk+-2.10
 		 >=net-libs/libsoup-2.2
 		 >=dev-libs/libxml2-2.6.0
-		 || (
-				=app-crypt/gnupg-1.2*
-				=app-crypt/gnupg-1.4*
-			)
+		=app-crypt/gnupg-1.4*
 		 >=app-crypt/gpgme-1.1.0
 		   net-misc/openssh
 		   x11-misc/shared-mime-info
