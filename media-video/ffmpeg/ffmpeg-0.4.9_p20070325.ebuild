@@ -1,11 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070325.ebuild,v 1.2 2007/03/25 20:41:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070325.ebuild,v 1.3 2007/03/26 01:03:11 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
-DESCRIPTION="Complete solution to record, convert and stream audio and video.
-Includes libavcodec. SVN revision 8519"
+DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec. SVN revision 8519"
 HOMEPAGE="http://ffmpeg.org/"
 MY_P=${P/_/-}
 S=${WORKDIR}/ffmpeg
@@ -136,6 +135,8 @@ src_compile() {
 
 	myconf="${myconf} --enable-gpl --enable-pp --disable-strip \
 					  --enable-swscaler"
+
+	tc-is-cross-compiler && myconf="${myconf} --cross-compile --arch=$(tc-arch-kernel)"
 
 	# Specific workarounds for too-few-registers arch...
 	if [[ $(tc-arch) == "x86" ]]; then
