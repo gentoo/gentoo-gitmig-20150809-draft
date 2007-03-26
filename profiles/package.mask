@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7041 2007/03/26 16:28:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7042 2007/03/26 19:17:29 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -32,8 +32,7 @@ net-misc/nx-x11-bin
 
 # Stefan Schweizer <genstef@gentoo.org> (25 Mar 2007)
 # Please use modular Xorg now
-# a few more are left. - mr_bones_@gentoo.org
-# virtual/x11
+virtual/x11
 
 # Luca Barbato <lu_zero@gentoo.org> (25 Mar 2007)
 # snapshot not finalized
