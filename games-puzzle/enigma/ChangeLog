@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.30 2007/02/07 14:06:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.31 2007/03/26 19:25:09 nyhm Exp $
+
+*enigma-1.00-r2 (26 Mar 2007)
+
+  26 Mar 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/enigma-1.00-autotools.patch, +enigma-1.00-r2.ebuild:
+  Use external enet
 
   07 Feb 2007; Tristan Heaven <nyhm@gentoo.org> enigma-1.00-r1.ebuild:
   Use mirror://berlios
