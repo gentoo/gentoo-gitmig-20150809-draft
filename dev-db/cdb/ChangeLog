@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.33 2007/03/12 16:05:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.34 2007/03/26 07:48:10 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> cdb-0.75.ebuild,
+  cdb-0.75-r1.ebuild, cdb-0.75-r2.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> cdb-0.75-r1.ebuild:
   x86 stable
