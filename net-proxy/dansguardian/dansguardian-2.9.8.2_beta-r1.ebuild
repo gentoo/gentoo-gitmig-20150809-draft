@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.8.1_beta.ebuild,v 1.1 2006/12/19 18:22:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.8.2_beta-r1.ebuild,v 1.1 2007/03/26 21:51:41 mrness Exp $
 
 inherit eutils autotools
 
@@ -58,7 +58,7 @@ src_compile() {
 		--enable-fancydm
 		--enable-email"
 	if use clamav; then
-		myconf="${myconf} --enable-clamd=yes
+		myconf="${myconf} --enable-clamd --enable-clamav
 			--with-proxyuser=clamav
 			--with-proxygroup=clamav"
 	fi
@@ -102,7 +102,7 @@ pkg_postinst() {
 	if use clamav ; then
 		runas="clamav:clamav"
 	fi
-	ewarn "The dansguardian daemon will run by default as user & group ${runas}"
+	einfo "The dansguardian daemon will run by default as ${runas}"
 
 	if [ -d "${ROOT}/var/log/dansguardian" ] ; then
 		chown -R ${runas} "${ROOT}/var/log/dansguardian"
