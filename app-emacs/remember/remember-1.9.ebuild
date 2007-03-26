@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9.ebuild,v 1.5 2007/03/13 10:43:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9.ebuild,v 1.6 2007/03/26 07:14:43 opfer Exp $
 
 inherit elisp
 
@@ -12,8 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
-RDEPEND="app-emacs/bbdb
-	app-emacs/planner"
+RDEPEND="app-emacs/bbdb"
 DEPEND="${RDEPEND}"
 
 

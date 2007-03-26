@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/remember
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.5 2007/03/13 10:43:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.6 2007/03/26 07:14:43 opfer Exp $
+
+  26 Mar 2007; Christian Faulhammer <opfer@gentoo.org> remember-1.9.ebuild:
+  correct circular dependency with app-emacs/planner, fixes bug 172137,
+  reported by Wolfgang Schnerring <wosc+gentoo@wosc.de>
 
   13 Mar 2007; Christian Faulhammer <opfer@gentoo.org> remember-1.9.ebuild:
   remove those automagic dependencies by just hard dependening on bbdb and
