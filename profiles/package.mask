@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7044 2007/03/26 20:20:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7045 2007/03/26 23:12:26 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -422,11 +422,6 @@ net-p2p/kenosis
 # (doesn't fetch the index file) since the method to fetch 
 # the index is deprecated.
 app-misc/pyge
-
-# Robin H. Johnson <robbat2@gentoo.org> (24 Feb 2007)
-# Masked pending removal, see email to -dev.
-# To be removed March 24th.
-=net-nds/openldap-2.1*
 
 # Gustavo Felisberto <humpback@gentoo.org> (23 Feb 2007)
 # Masked for remove from tree. Contact me if you need this

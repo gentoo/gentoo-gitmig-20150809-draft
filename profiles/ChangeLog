@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.243 2007/03/26 20:12:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.244 2007/03/26 23:12:26 jokey Exp $
+
+  26 Mar 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
+  Drop openldap 2.1 mask
 
   26 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Package.masked NX components split ebuilds, pending removal on 26 Apr 2007
