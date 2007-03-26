@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.7 2007/01/09 12:12:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.8 2007/03/26 08:03:22 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> at-3.1.8-r11.ebuild,
+  at-3.1.8-r12.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   09 Jan 2007; Peter Volkov <pva@gentoo.org> at-3.1.8-r12.ebuild:
   Changed HOME for at user as suggested in bug #126457 by cilly.

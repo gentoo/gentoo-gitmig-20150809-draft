@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.4 2006/01/30 05:11:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.5 2007/03/26 08:03:22 antarus Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,8 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=sys-devel/flex-2.5.4a
-	>=sys-apps/portage-2.0.51"
+	>=sys-devel/flex-2.5.4a"
 RDEPEND="virtual/libc
 	virtual/mta"
 

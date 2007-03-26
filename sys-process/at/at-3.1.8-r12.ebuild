@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r12.ebuild,v 1.3 2007/01/09 12:12:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r12.ebuild,v 1.4 2007/03/26 08:03:22 antarus Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=sys-devel/flex-2.5.4a
-	>=sys-apps/portage-2.0.51"
+DEPEND=">=sys-devel/flex-2.5.4a"
 RDEPEND="virtual/mta"
 
 pkg_setup() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/dcron
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.10 2007/03/21 14:17:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.11 2007/03/26 08:01:58 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> dcron-2.9-r4.ebuild,
+  dcron-3.2.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> dcron-3.2.ebuild:
   Stable on alpha/amd64 wrt bug #167566.
