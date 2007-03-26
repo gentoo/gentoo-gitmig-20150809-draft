@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.44 2007/03/26 14:07:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.45 2007/03/26 14:50:56 jer Exp $
+
+  26 Mar 2007; Jeroen Roovers <jer@gentoo.org> glark-1.7.8.ebuild:
+  Stable for HPPA (bug #156802).
 
   26 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> glark-1.7.8.ebuild:
   Stable on sparc wrt #156802
