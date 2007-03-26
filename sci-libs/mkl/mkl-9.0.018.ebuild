@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.0.018.ebuild,v 1.1 2007/03/24 23:11:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.0.018.ebuild,v 1.2 2007/03/26 10:47:24 bicatali Exp $
 
 inherit toolchain-funcs fortran
 
@@ -73,7 +73,7 @@ src_unpack() {
 	echo $"
 [MKL]
 EULA_ACCEPT_REJECT=ACCEPT
-FLEXLM_LICENSE_LOCATION=
+FLEXLM_LICENSE_LOCATION=${INTEL_LICENSE}
 INSTALLMODE=NONRPM
 INSTALL_DESTINATION=${S}
 " > answers.txt
