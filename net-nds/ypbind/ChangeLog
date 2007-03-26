@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypbind
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.37 2006/08/15 11:17:41 uberlord Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.38 2007/03/26 07:58:34 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> ypbind-1.19.1.ebuild,
+  ypbind-1.19.1-r1.ebuild:
+  Remove dependency on portage: ref bug 162516
 
 *ypbind-1.19.1-r1 (15 Aug 2006)
 

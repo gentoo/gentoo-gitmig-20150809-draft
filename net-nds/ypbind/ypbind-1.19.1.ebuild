@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1.ebuild,v 1.6 2006/04/04 15:08:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1.ebuild,v 1.7 2007/03/26 07:58:34 antarus Exp $
 
 MY_P=${PN}-mt-${PV}
 S="${WORKDIR}/${MY_P}"
@@ -18,8 +18,7 @@ RDEPEND="slp? ( net-libs/openslp )
 	net-nds/yp-tools
 	net-nds/portmap"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-	>=sys-apps/portage-2.0.51"
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	econf $(use_enable nls) $(use_enable slp)

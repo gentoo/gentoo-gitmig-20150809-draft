@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.37 2007/03/13 13:28:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.38 2007/03/26 08:00:03 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> ypserv-2.18.ebuild,
+  ypserv-2.19.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> ypserv-2.19.ebuild:
   x86 stable

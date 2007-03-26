@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.19.ebuild,v 1.6 2007/03/13 13:28:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.19.ebuild,v 1.7 2007/03/26 08:00:03 antarus Exp $
 
 DESCRIPTION="Network Information Service server"
 HOMEPAGE="http://www.linux-nis.org/nis/"
@@ -13,8 +13,7 @@ IUSE="slp"
 
 RDEPEND=">=sys-libs/gdbm-1.8.0
 	 slp? ( net-libs/openslp )"
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51"
+DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}
 	 net-nds/portmap"
 
