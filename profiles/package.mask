@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7045 2007/03/26 23:12:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7046 2007/03/26 23:15:46 falco Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <falco@gentoo.org> (26 Mar 2007)
+# Masked for security issues #153495
+# Use sys-cluster/torque as a replacement
+sys-cluster/openpbs
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Mar 2007)
 # Superseded by net-misc/nx
