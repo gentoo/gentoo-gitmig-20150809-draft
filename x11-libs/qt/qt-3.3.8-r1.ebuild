@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r1.ebuild,v 1.1 2007/03/26 18:34:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r1.ebuild,v 1.2 2007/03/26 19:43:32 masterdriverz Exp $
+
+# *** Please remember to update qt3.eclass when revbumping this ***
 
 inherit eutils flag-o-matic toolchain-funcs
 
