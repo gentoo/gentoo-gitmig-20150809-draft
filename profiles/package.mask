@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7038 2007/03/26 00:26:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7039 2007/03/26 05:03:57 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -526,10 +526,6 @@ sys-fs/captive
 # Renat Lumpau <rl03@gentoo.org> (06 Feb 2007)
 # masking a bleeding edge version
 >=www-apps/bugzilla-2.23.0
-
-# Doug Goldstein <cardoe@gentoo.org> (06 Feb 2007)
-# masked pending removal, not converted to modular X and out of date
-media-tv/rivatv
 
 # gustavo Felisberto <humpback@gentoo.org> (06 Feb 2007)
 # Beta release. Here to test new ssl system
