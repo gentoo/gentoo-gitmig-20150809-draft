@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.8.ebuild,v 1.1 2007/02/28 18:17:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.8.ebuild,v 1.2 2007/03/26 19:28:57 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -30,8 +30,7 @@ DEPEND="${RDEPEND}
 	~sys-devel/autoconf-2.13
 	java? ( >=dev-java/java-config-0.2.0 )
 	dev-lang/perl
-	postgres? ( >=dev-db/postgresql-7.2.0 )
-	!www-client/mozilla"
+	postgres? ( >=dev-db/postgresql-7.2.0 )"
 
 S=${WORKDIR}/mozilla
 
