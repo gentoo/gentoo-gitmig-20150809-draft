@@ -1,9 +1,15 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.95 2007/03/26 03:45:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.96 2007/03/26 08:18:13 antarus Exp $
 
   26 Mar 2007; Jeroen Roovers <jer@gentoo.org> nfs-utils-1.0.12.ebuild:
   Stable for HPPA (bug #172133).
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> nfs-utils-1.0.6-r6.ebuild,
+  nfs-utils-1.0.7-r2.ebuild, nfs-utils-1.0.9.ebuild,
+  nfs-utils-1.0.10.ebuild, nfs-utils-1.0.12.ebuild,
+  nfs-utils-1.0.12-r1.ebuild, nfs-utils-1.0.12-r2.ebuild:
+  Remove dependency on portage: ref bug 162516
 
 *nfs-utils-1.0.12-r2 (25 Mar 2007)
 

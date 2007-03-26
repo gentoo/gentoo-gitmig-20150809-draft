@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.103 2007/03/25 18:50:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.104 2007/03/26 08:15:01 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> openafs-1.2.10-r1.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   25 Mar 2007; Markus Rothe <corsair@gentoo.org> openafs-1.4.4.ebuild:
   Stable on ppc64; bug #171662

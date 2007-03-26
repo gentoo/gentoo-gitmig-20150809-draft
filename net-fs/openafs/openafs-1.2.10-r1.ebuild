@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.14 2005/09/30 13:47:51 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.15 2007/03/26 08:15:01 antarus Exp $
 
 inherit check-kernel fixheadtails eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="-* x86"
 IUSE=""
 
 DEPEND="virtual/linux-sources
-	>=sys-apps/portage-2.0.47-r10
 	>=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75
 	>=sys-apps/gawk-3.1.1"

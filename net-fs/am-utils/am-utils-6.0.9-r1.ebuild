@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.12 2005/06/06 23:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.13 2007/03/26 08:18:17 antarus Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="ldap"
 
 RDEPEND="ldap? ( >=net-nds/openldap-1.2 )"
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
