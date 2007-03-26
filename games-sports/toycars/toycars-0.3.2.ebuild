@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.2.ebuild,v 1.2 2007/03/26 20:54:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.2.ebuild,v 1.3 2007/03/26 21:29:32 drac Exp $
 
-inherit games
+WANT_AUTOMAKE="1.6"
+
+inherit autotools eutils games
 
 DESCRIPTION="a physics based 2-D racer inspired by Micromachines"
 HOMEPAGE="http://sourceforge.net/projects/toycars"
@@ -18,6 +20,13 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	virtual/glu
 	virtual/opengl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautomake
+}
 
 src_install() {
 	dogamesbin src/${PN} || die "Failed installing ${PN} executable"
