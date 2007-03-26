@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.66 2007/03/12 19:50:14 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.67 2007/03/26 08:11:13 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> xmltv-0.5.44.ebuild,
+  xmltv-0.5.45.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   12 Mar 2007; Matteo Azzali <mattepiu@gentoo.org>
   +files/xmltv-na_dd-xmltwig.patch, xmltv-0.5.44.ebuild,

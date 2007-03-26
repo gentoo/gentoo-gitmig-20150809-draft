@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.11 2007/03/12 19:50:14 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.12 2007/03/26 08:11:13 antarus Exp $
 
 inherit eutils perl-module
 
@@ -44,7 +44,6 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 	>=dev-lang/perl-5.6.1"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.50-r1
 	na_dd? ( na_icons? ( dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02 ) )
 	de_tvtoday? ( >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree )
 	dk? ( dev-perl/HTML-Tree )
