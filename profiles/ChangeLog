@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.242 2007/03/26 00:26:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.243 2007/03/26 20:12:59 tove Exp $
 
   26 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Package.masked NX components split ebuilds, pending removal on 26 Apr 2007
@@ -36,7 +36,7 @@
   24 Mar 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Unmask transcode-1.0.3
 
-  24 Mar 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  24 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask =app-portage/gentoolkit-dev-0.2.6.3 because it generates bad
   entries for bumps (bug #172017)
 
@@ -46,7 +46,7 @@
   24 Mar 2007; <genstef@gentoo.org> package.mask:
   Remove removal p.mask of removed modular X broken pkges
 
-  23 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  23 Mar 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Remove www-client/mozilla USE-flags, as it has been removed from the tree
 
   23 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
@@ -61,33 +61,33 @@
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add mplayer local use flags
 
-  21 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  21 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove media-video/kdenlive mask because that version has been removed
 
-  19 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  19 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   P.mask www-servers/plb, for treecleaners bug 150966
 
-  19 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  19 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove www-client/mozilla[-bin] from p.mask since it has been removed from
   the tree, bug 135257
 
   18 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add more mplayer use flags
 
-  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add net-im/aim-transport to p.mask for removal by treecleaners too
 
-  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add www-servers/ncsa-httpd for removal in 60 days, treecleaners, and add
   date to drac's mask
 
-  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove net-irc/cyclone as it has been removed from the tree, bug 152480
 
-  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Fix mask for net-p2p/amule, bug 171341
 
-  17 Mar 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org>
+  17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   default-linux/amd64/use.mask,
   +hardened/amd64/package.use.mask, hardened/amd64/use.mask,
   +selinux/amd64/package.use.mask, selinux/amd64/use.mask:
@@ -96,7 +96,7 @@
   17 Mar 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Remove net-im/ohphone mask due to its removal. (bug #105670)
 
-  17 Mar 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   package.mask alsa-lib-1.0.14_rc3-r1 as it has the experimental midi use flag
 
   16 Mar 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
@@ -105,7 +105,7 @@
   16 Mar 2007; <kolmodin@gentoo.org> package.mask:
   p.mask ghc-bin-6.6 for testing.
 
-  16 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  16 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask CVS snapshots of amule
 
   16 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
@@ -114,7 +114,7 @@
   14 Mar 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Masked sci-electronics/modelsim pending removal on 14 Apr 2007.
 
-  13 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove net-p2p/mnet from p.mask as it's has been removed from the tree, bug
   166887
 
@@ -133,10 +133,10 @@
   unmask macbook and pbbuttonsd USE flags, remove USE flag ibm as it is masked
   in base profile
 
-  11 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add net-misc/aria2 to p.mask pending removal for treecleaners, bug 153355
 
-  11 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Update mask for thunderbird/enigmail
 
   11 Mar 2007; Tom Knight <tomk@gentoo.org> use.local.desc:
@@ -151,13 +151,13 @@
   10 Mar 2007; Christian Marie <pingu@gentoo.org> package.mask:
   Removing net-www/bk_edit's mask as it is removed from the tree.
 
-  09 Mar 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Removed dev-java/jess-bin from the tree so removing the mask.
 
   09 Mar 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add cdaudio, wav to media-sound/mpfc
 
-  08 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  08 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask wrt bug, 108022, bug 110298, bug 115407, bug 117665, bug 137329 and
   bug 164144, for removal in 60 days
 
@@ -181,7 +181,7 @@
   06 Mar 2007; Christian Faulhammer <opfer@gentoo.org> use.desc:
   removed global emacs-w3 USE flag
 
-  05 Mar 2007; Piotr JaroszyÅski <peper@gentoo.org> use.local.desc:
+  05 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> use.local.desc:
   Remove out-of-date entries.
 
   05 Mar 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
@@ -190,16 +190,16 @@
   05 Mar 2007; Tony Vroon <chainsaw@gentoo.org> ChangeLog:
   Add cube & iris USE-flags for media-plugins/audacious-plugins-ugly.
 
-  05 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  05 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Removed net-libs/gecko-sdk mask as it's removed
 
-  05 Mar 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> use.local.desc:
+  05 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Added the local xulrunner use flag introduced in dev-java/swt-3.2.2.
 
   04 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
   Unmasked bsdtar2
 
-  04 Mar 2007; Piotr JaroszyÅski <peper@gentoo.org> selinux/packages:
+  04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> selinux/packages:
   Fix incomplete sys-apps/fcron -> sys-process/fcron move.
 
   04 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
@@ -212,7 +212,7 @@
   masked >=sys-apps/iproute2-2.6.19.20061214 on hardened profiles with kernel
   2.4 and packages depending on at least that version
 
-  03 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  03 Mar 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Remove mozbranding from sunbird and thunderbird, bug 168409, for firefox
   we'll have to wait until bug 165555 gets done.
 
@@ -222,7 +222,7 @@
   03 Mar 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   Drop net-analyzer/prelude-nids per bug #164294
 
-  03 Mar 2007; Piotr JaroszyÅski <peper@gentoo.org> use.local.desc:
+  03 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> use.local.desc:
   Sort use.local.desc file.
 
   02 Mar 2007; Samuli Suominen <drac@gentoo.org>
@@ -247,10 +247,10 @@
   28 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> use.local.desc:
   Add local use pch to media-sound/{mumble,murmur}
 
-  28 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> use.local.desc:
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add ffi local use flag for dev-java/jamvm
 
-  28 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> use.local.desc:
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Added gconf local use flag for dev-java/gnu-classpath
 
   28 Feb 2007; Daniel Black <dragonheart@gentoo.org>
@@ -265,17 +265,17 @@
   28 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> use.local.desc:
   Add local use pch to media-sound/{mumble,murmur}
 
-  28 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Remove package.mask for net-p2p/azureus-bin because that package was removed
   from the tree with a move to net-p2p/azureus.
 
-  28 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   package.mask dev-java/avalon-logkit-bin in favor of dev-java/avalon-logkit
 
   27 Feb 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   beast 0.7.1 mask, bug #163146
 
-  27 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  27 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add net-p2p/freenet pending for removal, bug 72996
 
   27 Feb 2007; <genstef@gentoo.org> package.mask:
@@ -320,10 +320,10 @@
   23 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   xdtv schedule useflag added
 
-  23 Feb 2007; SÃ©bastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   added root, numarray and fits local use flags for sci-visualization/hippodraw
 
-  22 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  22 Feb 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add mozbranding use flag for app-office/mozilla-sunbird to use.local.desc
 
   22 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
@@ -339,13 +339,13 @@
   nobody had GRP_STAGE23_USE anymore, since catalyst hasn't used it for well
   over a year.
 
-  20 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  20 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask www-client/mozilla[-bin] again for removal, bug 135257
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org> package.mask:
   p.mask app-portage/emool; it's the wrong approach to the wrong problem
 
-  20 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  20 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove masks for net-p2p/{g2gui,bittorrent-stats} and net-firewall/firestorm
   as they're removed from the tree
 
@@ -355,7 +355,7 @@
   19 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.local.desc:
   Removed the dlloader USE flag wrt bug #166759.
 
-  19 Feb 2007; SÃ©bastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  19 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   added umfpack local USE flag
 
   19 Feb 2007; Robert Buchholz <rbu@gentoo.org> selinux/sparc/use.mask:
@@ -367,19 +367,19 @@
   18 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask:
   Removed dev-util/codeblocks from package.mask
 
-  18 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  18 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add net-irc/cyclone for removal, bug 152480
 
-  17 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  17 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask beta version of net-irc/dircproxy
 
-  17 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  17 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove net-irc/ctrlproxy mask, seems to work fine
 
-  17 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  17 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   update mask for enigmail && mozilla-thunderbird
 
-  16 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  16 Feb 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add moznopango USE-flag to app-office/mozilla-sunbird
 
   15 Feb 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
@@ -398,7 +398,7 @@
   14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   add mp4 USE flag for media-sound/cmus
 
-  14 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  14 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask net-p2p/mnet bug 166887
 
   14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> updates/1Q-2007:
@@ -413,17 +413,17 @@
   12 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   Add media-sound/shntool wavpack useflag
 
-  12 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  12 Feb 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add net-p2p/museek+ to use.local.desc
 
-  12 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> use.local.desc:
+  12 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> use.local.desc:
   Add irda useflag for app-pda/libopensync-plugin-irmc and http,obex for
   app-pda/libopensync-plugin-syncml.
 
   12 Feb 2007; Sandro Bonazzola <sanchan@gentoo.org> package.mask:
   Masking app-arch/rpm-4.4.7-r3, unmasking app-arch/rpm-4.4.7-r2
 
-  11 Feb 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for alsa-tools.
 
   11 Feb 2007; Samuli Suominen <drac@gentoo.org> package.mask:
@@ -435,7 +435,7 @@
   10 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   vlc sdl-image use flag
 
-  10 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> updates/1Q-2007:
+  10 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> updates/1Q-2007:
   Add a move from net-p2p/azureus-bin to net-p2p/azureus.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
@@ -446,13 +446,13 @@
   09 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Added >=sys-kernel/suspend2-sources-2.6.20
 
-  09 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  09 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask dev-java/jess-bin.
 
-  09 Feb 2007; SÃ©bastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  09 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added an smp use flag for sci-libs/acml.
 
-  09 Feb 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add xcb useflags for xine-lib and kaffeine.
 
   09 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
@@ -519,7 +519,7 @@
   02 Feb 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   mask net-analyzer/prelude-nagios for removal
 
-  02 Feb 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org> use.local.desc:
+  02 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> use.local.desc:
   Add rubygems:server
 
   02 Feb 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
@@ -531,7 +531,7 @@
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
   Add mask for bug #164924
 
-  01 Feb 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
+  01 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add daap useflag for amarok.
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
@@ -556,18 +556,18 @@
   31 Jan 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Package masked libmtp-0.1.3 for testing
 
-  30 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  30 Jan 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Move branding USE-flag to mozbranding in mail-client/mozilla-thunderbird,
   bug 157335
 
-  30 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
+  30 Jan 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add xforms USE-flag for www-client/seamonkey, bug 164591
 
   30 Jan 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   package.mask'd dev-embedded/gpsim-led pending removal on 1 March 2007 at the
   latest. See bug #96578.
 
-  30 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
+  30 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-driver.
 
   29 Jan 2007; Leonardo Boshell <leonardop@gentoo.org> package.mask:
@@ -600,10 +600,10 @@
   26 Jan 2007; Patrick McLean <chutzpah@gentoo.org> use.local.desc:
   Add "isc" USE flag for net-dns/dnsmasq
 
-  25 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
+  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   package.masked =dev-java/asm-3* because it uses splitted ant
 
-  25 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> use.local.desc:
+  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Rename servlet-2.3 and servlet-2.4 use flags to servlet-2_3 and servlet-2_4
   because you can't use dots in use flag names.
 
@@ -660,7 +660,7 @@
   17 Jan 2007; Robert Buchholz <rbu@gentoo.org> +desc/lcd_devices.desc:
   Add desc for new LCD_DEVICES USEs
 
-  16 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
+  16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-utils.
 
   16 Jan 2007; Sandro Bonazzola <sanchan@gentoo.org> package.mask:
@@ -694,7 +694,7 @@
   13 Jan 2007; Marijn Schouten <hkBst@gentoo.org> package.mask:
   masked ancient guile-gtk
 
-  12 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
+  12 Jan 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask net-p2p/teknap for removal, bug 153268
 
   12 Jan 2007; Luca Longinotti <chtekk@gentoo.org> package.mask:
