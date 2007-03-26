@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.31.ebuild,v 1.9 2006/10/01 20:56:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.31.ebuild,v 1.10 2007/03/26 07:51:13 antarus Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,8 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
