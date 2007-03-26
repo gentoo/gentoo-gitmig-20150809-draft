@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.08.ebuild,v 1.1 2006/12/02 14:18:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.13.ebuild,v 1.1 2007/03/26 09:07:15 mrness Exp $
 
 inherit distutils multilib
 
@@ -137,11 +137,11 @@ src_install() {
 
 	# Creating scripts
 	echo '#!/bin/sh' > "${T}/bitpim"
-	echo "exec python ${RLOC}/bp.py bitpim \"\$@\"" >> "${T}/bitpim"
+	echo "exec python ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
 	dobin "${T}/bitpim"
 	if use crypt; then
 		echo '#!/bin/sh' > "${T}/bitfling"
-		echo "exec python ${RLOC}/bp.py bitfling \"\$@\"" >> "${T}/bitfling"
+		echo "exec python ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
 		dobin "${T}/bitfling"
 	fi
 

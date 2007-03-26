@@ -1,0 +1,90 @@
+diff -Nru bitpim-0.9.13.orig/src/common.py bitpim-0.9.13/src/common.py
+--- bitpim-0.9.13.orig/src/common.py	2007-03-08 05:20:16.000000000 +0200
++++ bitpim-0.9.13/src/common.py	2007-03-26 11:52:31.000000000 +0300
+@@ -859,7 +859,7 @@
+         # windows running from exe, return as is
+         return os.path.abspath(os.path.dirname(sys.executable))
+     # running from src, up one
+-    return os.path.split(os.path.abspath(os.path.dirname(sys.argv[0])))[0]
++    return os.path.abspath(os.path.dirname(sys.argv[0]))
+ 
+ if sys.platform=='win32':
+     # From Tim Golden's Win32 How Do I ...?
+diff -Nru bitpim-0.9.13.orig/src/conversions.py bitpim-0.9.13/src/conversions.py
+--- bitpim-0.9.13.orig/src/conversions.py	2006-05-28 06:10:52.000000000 +0300
++++ bitpim-0.9.13/src/conversions.py	2007-03-26 11:52:31.000000000 +0300
+@@ -20,11 +20,11 @@
+ 
+ class ConversionFailed(Exception): pass
+ 
+-helperdir=os.path.join(common.get_main_dir(), "helpers")
++helperdir="/usr/bin"
+ 
+ osext={'win32': '.exe',
+        'darwin': '.mbin',
+-       'linux2': '.lbin'} \
++       'linux2': ''} \
+        [sys.platform]
+ 
+ # This shortname crap is needed because Windows programs (including ffmpeg)
+@@ -125,14 +125,14 @@
+     p=sys.path[0]
+     if os.path.isfile(p):
+         p=os.path.dirname(p)
+-    helpersdirectory=os.path.abspath(os.path.join(p, 'helpers'))
++    helpersdirectory="/usr/bin"
+     print "Helper Directory: "+helpersdirectory
+     if sys.platform=='win32':
+         osext=".exe"
+     if sys.platform=='darwin':
+         osext=".mbin"
+     if sys.platform=='linux2':
+-        osext=".lbin"
++        osext=""
+         
+     pngtopnmbin=gethelperbinary('pngtopnm')
+     ppmquantbin=gethelperbinary('ppmquant')
+diff -Nru bitpim-0.9.13.orig/src/importexport.py bitpim-0.9.13/src/importexport.py
+--- bitpim-0.9.13.orig/src/importexport.py	2007-01-10 00:28:37.000000000 +0200
++++ bitpim-0.9.13/src/importexport.py	2007-03-26 11:52:41.000000000 +0300
+@@ -21,7 +21,7 @@
+ import wx.html
+ 
+ # Others
+-from thirdparty import DSV
++import DSV
+ 
+ # My modules
+ import common
+diff -Nru bitpim-0.9.13.orig/src/native/av/bmp2avi/Makefile bitpim-0.9.13/src/native/av/bmp2avi/Makefile
+--- bitpim-0.9.13.orig/src/native/av/bmp2avi/Makefile	2006-05-05 10:10:08.000000000 +0300
++++ bitpim-0.9.13/src/native/av/bmp2avi/Makefile	2007-03-26 11:52:31.000000000 +0300
+@@ -13,6 +13,6 @@
+ 
+ SRC=avi_file.cxx bmp_file.cxx b2a.cxx
+ 
+-bmp2avi.lbin bmp2avi.mbin bmp2avi.exe: $(SRC)
++bmp2avi bmp2avi.mbin bmp2avi.exe: $(SRC)
+ 	$(CXX) $(EXTRADEFINES) -O2 -o $@ $(SRC)
+ 
+diff -Nru bitpim-0.9.13.orig/src/native/usb/build.sh bitpim-0.9.13/src/native/usb/build.sh
+--- bitpim-0.9.13.orig/src/native/usb/build.sh	2006-03-04 06:57:24.000000000 +0200
++++ bitpim-0.9.13/src/native/usb/build.sh	2007-03-26 11:52:31.000000000 +0300
+@@ -4,4 +4,4 @@
+ swig -python -I/usr/include libusb.i
+ 
+ gcc -fPIC -Wall -fno-strict-aliasing -O2 -g  -shared  -I $INCLUDEDIR -o _libusb.so libusb_wrap.c -lusb 
+-strip _libusb.so
++#strip _libusb.so
+diff -Nru bitpim-0.9.13.orig/src/phones/com_samsung.py bitpim-0.9.13/src/phones/com_samsung.py
+--- bitpim-0.9.13.orig/src/phones/com_samsung.py	2007-01-10 00:28:37.000000000 +0200
++++ bitpim-0.9.13/src/phones/com_samsung.py	2007-03-26 11:52:47.000000000 +0300
+@@ -16,7 +16,7 @@
+ import time
+ 
+ # site-packages
+-from thirdparty import DSV
++import DSV
+ 
+ # BitPim modules
+ import bpcalendar
