@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.0.ebuild,v 1.1 2006/09/24 06:27:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.0.ebuild,v 1.2 2007/03/26 08:09:21 antarus Exp $
 
 inherit eutils
 
@@ -15,9 +15,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RESTRICT="test"
 
-DEPEND=">=sys-apps/portage-2.0.47-r10
-		>=sys-apps/sed-4
-		dev-lang/tk"
+DEPEND=">=sys-apps/sed-4
+	dev-lang/tk"
 
 src_unpack() {
 	unpack ${A}

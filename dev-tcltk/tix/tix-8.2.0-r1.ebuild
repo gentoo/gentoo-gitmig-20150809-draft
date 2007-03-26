@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0-r1.ebuild,v 1.8 2005/03/09 17:58:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0-r1.ebuild,v 1.9 2007/03/26 08:09:21 antarus Exp $
 
 inherit eutils
 
@@ -14,9 +14,8 @@ LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc"
 
-DEPEND=">=sys-apps/portage-2.0.47-r10
-		>=sys-apps/sed-4
-		dev-lang/tk"
+DEPEND=">=sys-apps/sed-4
+	dev-lang/tk"
 
 src_unpack() {
 	unpack ${A}
