@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.42 2007/03/19 01:17:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.43 2007/03/26 07:54:43 antarus Exp $
+
+  26 Mar 2007; Alec Warner <antarus@gentoo.org> vixie-cron-4.1-r9.ebuild:
+  Remove dependency on portage: ref bug 162516
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
