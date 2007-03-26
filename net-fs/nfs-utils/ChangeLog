@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.94 2007/03/25 12:30:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.95 2007/03/26 03:45:09 jer Exp $
+
+  26 Mar 2007; Jeroen Roovers <jer@gentoo.org> nfs-utils-1.0.12.ebuild:
+  Stable for HPPA (bug #172133).
 
 *nfs-utils-1.0.12-r2 (25 Mar 2007)
 
