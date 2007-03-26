@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.4 2007/03/20 07:42:27 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.5 2007/03/26 19:22:19 armin76 Exp $
 
 PHP_EXT_NAME="php_gtk2"
 PHP_EXT_INI="yes"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/php-5.1.2
 		>=x11-libs/pango-1.8.0
 		>=dev-libs/atk-1.6.0
 		!nolibglade? ( >=gnome-base/libglade-2.5.0 )
-		mozembed? ( || ( >=www-client/mozilla-1.7.0 >=www-client/mozilla-firefox-1.5.0 ) )
+		mozembed? ( >=www-client/mozilla-firefox-1.5.0 )
 		sourceview? ( >=x11-libs/gtksourceview-1.6.0 )"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9"
