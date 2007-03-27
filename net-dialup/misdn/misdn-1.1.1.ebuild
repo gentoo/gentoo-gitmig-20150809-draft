@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.5 2007/03/10 14:50:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.1.ebuild,v 1.1 2007/03/27 10:28:04 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -117,9 +117,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}"/${P}-kernel-2.6.19.patch
 
 	cd "${S}"
 	if use ecaggressive; then
