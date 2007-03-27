@@ -1,0 +1,66 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN evolution-data-server-1.9.91.orig/Makefile.am evolution-data-server-1.9.91/Makefile.am
+--- evolution-data-server-1.9.91.orig/Makefile.am	2007-01-03 09:57:27.000000000 -0500
++++ evolution-data-server-1.9.91/Makefile.am	2007-02-14 13:33:26.000000000 -0500
+@@ -5,8 +5,8 @@ if ! WITH_LIBDB
+ LIBDB = libdb
+ endif
+ 
+-SUBDIRS = $(LIBDB) win32 libedataserver servers camel addressbook calendar libedataserverui src docs art po
+-DIST_SUBDIRS= win32 libedataserver servers camel addressbook calendar libedataserverui src docs art po
++SUBDIRS = $(LIBDB) win32 libedataserver camel addressbook calendar libedataserverui servers server.deps src docs art po
++DIST_SUBDIRS= win32 libedataserver camel addressbook calendar libedataserverui servers server.deps src docs art po
+ 
+ changelogs =			\
+ 	ChangeLog
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN evolution-data-server-1.9.91.orig/configure.in evolution-data-server-1.9.91/configure.in
+--- evolution-data-server-1.9.91.orig/configure.in	2007-02-12 09:26:16.000000000 -0500
++++ evolution-data-server-1.9.91/configure.in	2007-02-14 13:31:56.000000000 -0500
+@@ -968,7 +968,7 @@ if test "x${with_krb5}" != "xno"; then
+ 	AC_CACHE_CHECK([for Kerberos 5], ac_cv_lib_kerberos5,
+ 	[
+ 		LDFLAGS="$LDFLAGS -L$with_krb5_libs $mitlibs"
+-		AC_TRY_LINK_FUNC(krb5_init_context, ac_cv_lib_kerberos5="$mitlibs",
++		AC_TRY_LINK([#include <krb5.h>],krb5_init_context, ac_cv_lib_kerberos5="$mitlibs",
+ 		[
+ 			LDFLAGS="$LDFLAGS_save -L$with_krb5_libs $heimlibs"
+ 			AC_TRY_LINK_FUNC(krb5_init_context, ac_cv_lib_kerberos5="$heimlibs", ac_cv_lib_kerberos5="no")
+@@ -995,11 +995,16 @@ if test "x${with_krb5}" != "xno"; then
+ 			msg_krb5="yes (Heimdal)"
+ 		fi
+ 		KRB5_LDFLAGS="-L$with_krb5_libs $ac_cv_lib_kerberos5"
++		AC_MSG_RESULT(msg_krb5)
++	else
++		dnl AC_MSG_CHECKING([for Kerberos 5])
++		AC_MSG_RESULT([no])
++		AC_MSG_ERROR([You specified with krb5, but it was not found.])
+ 	fi
+ else
+-	AC_MSG_CHECKING(for Kerberos 5)
+-	AC_MSG_RESULT($with_krb5)
++	AC_MSG_WARN([krb5 support disabled])
+ fi
++
+ AM_CONDITIONAL(ENABLE_KRB5, test x$with_krb5 != xno)
+ 
+ AC_CHECK_HEADER([et/com_err.h],[AC_DEFINE([HAVE_ET_COM_ERR_H], 1, [Have et/comm_err.h])])
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN evolution-data-server-1.9.91.orig/servers/exchange/storage/Makefile.am evolution-data-server-1.9.91/servers/exchange/storage/Makefile.am
+--- evolution-data-server-1.9.91.orig/servers/exchange/storage/Makefile.am	2007-01-03 09:56:23.000000000 -0500
++++ evolution-data-server-1.9.91/servers/exchange/storage/Makefile.am	2007-02-14 13:29:55.000000000 -0500
+@@ -80,14 +80,15 @@ libexchange_storage_1_2_la_LIBADD =				\
+ 	$(top_builddir)/servers/exchange/lib/libexchange.la	\
+ 	$(top_builddir)/servers/exchange/xntlm/libxntlm.la	\
+ 	$(top_builddir)/libedataserver/libedataserver-1.2.la	\
++	$(top_builddir)/libedataserverui/libedataserverui-1.2.la\
+ 	$(E_DATA_SERVER_LIBS)					\
+ 	$(E_DATA_SERVER_UI_LIBS)				\
+ 	$(LDAP_LIBS)						\
+ 	$(SOUP_LIBS)						\
+-	$(SOCKET_LIBS)
++	$(SOCKET_LIBS)						\
++	$(KRB5_LDFLAGS)
+ 
+ libexchange_storage_1_2_la_LDFLAGS =				\
+-	$(KRB5_LDFLAGS)						\
+ 	$(NO_UNDEFINED)						\
+ 	-version-info $(LIBEXCHANGE_STORAGE_CURRENT):$(LIBEXCHANGE_STORAGE_REVISION):$(LIBEXCHANGE_STORAGE_AGE)
+ 
