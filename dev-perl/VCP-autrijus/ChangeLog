@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/VCP-autrijus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/ChangeLog,v 1.11 2007/01/19 17:12:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/ChangeLog,v 1.12 2007/03/27 11:38:16 ticho Exp $
+
+  27 Mar 2007; Andrej Kacian <ticho@gentoo.org>
+  VCP-autrijus-0.9_p20050110-r1.ebuild:
+  Stable on x86, bug #169152.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   VCP-autrijus-0.9_p20050110.ebuild, VCP-autrijus-0.9_p20050110-r1.ebuild:
