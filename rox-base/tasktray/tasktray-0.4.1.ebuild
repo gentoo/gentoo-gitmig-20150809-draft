@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/tasktray-0.4.ebuild,v 1.1 2007/03/22 17:51:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/tasktray-0.4.1.ebuild,v 1.1 2007/03/27 21:39:36 lack Exp $
 
 ROX_LIB_VER=1.9.6
 inherit rox
