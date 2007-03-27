@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.85 2007/03/19 05:39:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.86 2007/03/27 14:49:01 armin76 Exp $
+
+  27 Mar 2007; Raúl Porcel <armin76@gentoo.org> mplayerplug-in-3.35.ebuild:
+  ia64 stable wrt bug 150110
 
   19 Mar 2007; Joseph Jezak <josejx@gentoo.org>
   +files/mplayerplug-in-3.31-seamonkey.patch,
