@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.134 2007/03/15 13:10:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.135 2007/03/27 05:45:08 opfer Exp $
+
+  27 Mar 2007; Christian Faulhammer <opfer@gentoo.org> lirc-0.8.1.ebuild:
+  stable x86, bug 166557
 
   15 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.1.ebuild:
   Added lirc device usb_uirt_raw, as requested by Robert Parenton
