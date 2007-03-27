@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.147 2007/01/31 20:41:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.148 2007/03/27 20:12:21 jokey Exp $
+
+  27 Mar 2007; Markus Ullmann <jokey@gentoo.org> net-snmp-5.2.1.2-r1.ebuild,
+  net-snmp-5.2.2-r3.ebuild, net-snmp-5.3.0.1.ebuild, net-snmp-5.3.1.ebuild,
+  net-snmp-5.3.1-r1.ebuild, net-snmp-5.4.ebuild:
+  Fix ROOT usage
 
   31 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> net-snmp-5.4.ebuild:
   Stable on ppc wrt bug #163094.

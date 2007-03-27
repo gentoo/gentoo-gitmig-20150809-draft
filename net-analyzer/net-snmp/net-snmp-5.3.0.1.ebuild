@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3.0.1.ebuild,v 1.5 2006/09/21 15:12:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3.0.1.ebuild,v 1.6 2007/03/27 20:12:21 jokey Exp $
 
 inherit fixheadtails flag-o-matic perl-module
 
@@ -89,8 +89,8 @@ src_compile() {
 		--with-sys-contact="root@Unknown" \
 		--with-default-snmp-version="3" \
 		--with-mib-modules="${mibs}" \
-		--with-logfile="${ROOT}/var/log/net-snmpd.log" \
-		--with-persistent-directory="${ROOT}/var/lib/net-snmp" \
+		--with-logfile="/var/log/net-snmpd.log" \
+		--with-persistent-directory="/var/lib/net-snmp" \
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--with-zlib \
