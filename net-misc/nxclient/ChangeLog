@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.36 2007/03/27 20:15:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.37 2007/03/27 22:12:47 zmedico Exp $
+
+  27 Mar 2007; Zac Medico <zmedico@gentoo.org> ChangeLog:
+  Fix broken Manifest due to commit without repoman.
 
   27 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -nxclient-2.1.0.ebuild:
