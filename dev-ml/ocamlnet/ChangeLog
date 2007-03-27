@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.15 2007/02/09 02:48:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.16 2007/03/27 18:15:39 aballier Exp $
+
+*ocamlnet-2.2.4 (27 Mar 2007)
+
+  27 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/ocamlnet-2.2.4-configure-fix.patch, +ocamlnet-2.2.4.ebuild:
+  Version bump, thanks to Pierre Clairambault, bug #114277
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

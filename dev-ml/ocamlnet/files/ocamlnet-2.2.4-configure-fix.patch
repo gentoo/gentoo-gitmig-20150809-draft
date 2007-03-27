@@ -1,0 +1,222 @@
+--- ocamlnet-2.2.4.orig/configure	2007-01-12 14:58:03.000000000 +0100
++++ ocamlnet-2.2.4/configure	2007-01-12 15:03:56.000000000 +0100
+@@ -114,9 +114,9 @@
+ 		eval "$e"
+ 		uopt=`echo $opt | sed -e 's/_/-/g'`
+ 		if [ $o -gt 0 ]; then
+-			echo "    -enable-$uopt"
++			echo "    --enable-$uopt"
+ 		else
+-			echo "    -disable-$uopt"
++			echo "    --disable-$uopt"
+ 		fi
+ 	done
+ 	for opt in $woptions; do
+@@ -124,30 +124,30 @@
+ 		eval "$e"
+ 		uopt=`echo $opt | sed -e 's/_/-/g'`
+ 		if [ $o -gt 0 ]; then
+-			echo "    -with-$uopt"
++			echo "    --with-$uopt"
+ 		else
+-			echo "    -without-$uopt"
++			echo "    --without-$uopt"
+ 		fi
+ 	done
+-	echo "    -bindir $bindir"
+-	echo "    -datadir $net_db_dir"
++	echo "    --bindir $bindir"
++	echo "    --datadir $net_db_dir"
+ 	if [ $enable_tcl -gt 0 ]; then
+-            echo "    -equeue-tcl-defs \"$tcl_defs\""
+-            echo "    -equeue-tcl-libs \"$tcl_libs\""
++            echo "    --equeue-tcl-defs \"$tcl_defs\""
++            echo "    --equeue-tcl-libs \"$tcl_libs\""
+ 	fi
+ 	if [ $with_rpc_auth_dh -gt 0 ]; then
+ 	    if [ -n "$adh_style" ]; then
+-		echo "    -auth-dh-style $adh_style"
++		echo "    --auth-dh-style $adh_style"
+ 	    fi
+ 	fi
+ 	if [ -n "$apxs" ]; then
+-	    echo "    -apxs $apxs"
++	    echo "    --apxs $apxs"
+ 	fi
+ 	if [ -n "$apache" ]; then
+-	    echo "    -apache $apache"
++	    echo "    --apache $apache"
+ 	fi
+ 	if [ $prefer_netcgi2 -gt 0 ]; then
+-	    echo "    -prefer-netcgi2"
++	    echo "    --prefer-netcgi2"
+ 	fi
+ }
+ 
+@@ -162,41 +162,41 @@
+ 		e="help=\$ehelp_$opt"
+ 		eval "$e"
+ 		uopt=`echo $opt | sed -e 's/_/-/g'`
+-		echo "-enable-$uopt:" >&2
+-		echo "-disable-$uopt:" >&2
++		echo "--enable-$uopt:" >&2
++		echo "--disable-$uopt:" >&2
+ 		echo "        $help" >&2
+ 	done
+ 	for opt in $woptions; do
+ 		e="help=\$whelp_$opt"
+ 		eval "$e"
+ 		uopt=`echo $opt | sed -e 's/_/-/g'`
+-		echo "-with-$uopt:" >&2
+-		echo "-without-$uopt:" >&2
++		echo "--with-$uopt:" >&2
++		echo "--without-$uopt:" >&2
+ 		echo "        $help" >&2
+ 	done
+ 	cat <<_EOF_ >&2
+--bindir dir
++--bindir dir
+         Install binaries into this directory
+ 
+--datadir dir
++--datadir dir
+         Install the run-time data file into this directory
+ 
+--equeue-tcl-defs <opts>
+-        Set C compiler options to find tcl.h (for -enable-tcl)
++--equeue-tcl-defs <opts>
++        Set C compiler options to find tcl.h (for --enable-tcl)
+ 
+--equeue-tcl-libs <opts>
+-        Set C compiler options to link against libtcl (for -enable-tcl)
++--equeue-tcl-libs <opts>
++        Set C compiler options to link against libtcl (for --enable-tcl)
+ 
+--auth-dh-style (keyenvoy|unixdomain|tirpc)
++--auth-dh-style (keyenvoy|unixdomain|tirpc)
+         Set style of keyserv connector (see README.authdh)
+ 
+--apxs /path/to/apxs
+-        Set which apxs to use for -enable-modcaml
++--apxs /path/to/apxs
++        Set which apxs to use for --enable-modcaml
+ 
+--apache /path/to/apache
+-        Set which apache executable to use for -enable-modcaml
++--apache /path/to/apache
++        Set which apache executable to use for --enable-modcaml
+ 
+--prefer-netcgi2
++--prefer-netcgi2
+         Use netcgi2 as default CGI implementation instead of netcgi1.
+         This affects nethttpd.
+ 
+@@ -234,74 +234,74 @@
+ 
+ while [ "$#" -gt 0 ]; do
+ 	case "$1" in
+-		-enable-*)
+-			opt=`echo "$1" | sed -e 's/-enable-//' -e 's/-/_/g'`
++		--enable-*)
++			opt=`echo "$1" | sed -e 's/--enable-//' -e 's/-/_/g'`
+ 			check_eopt "$opt"
+ 			eval "enable_$opt=2"
+ 			shift
+ 			;;
+-	        -disable-core)
++	        --disable-core)
+ 		        # Intentionally undocumented.
+ 		        disable_core=1
+ 			shift
+ 			;;
+-		-disable-*)
+-			opt=`echo "$1" | sed -e 's/-disable-//' -e 's/-/_/g'`
++		--disable-*)
++			opt=`echo "$1" | sed -e 's/--disable-//' -e 's/-/_/g'`
+ 			check_eopt "$opt"
+ 			eval "enable_$opt=-1"
+ 			shift
+ 			;;
+-		-with-*)
+-			opt=`echo "$1" | sed -e 's/-with-//' -e 's/-/_/g'`
++		--with-*)
++			opt=`echo "$1" | sed -e 's/--with-//' -e 's/-/_/g'`
+ 			check_wopt "$opt"
+ 			eval "with_$opt=2"
+ 			shift
+ 			;;
+-		-without-*)
+-			opt=`echo "$1" | sed -e 's/-without-//' -e 's/-/_/g'`
++		--without-*)
++			opt=`echo "$1" | sed -e 's/--without-//' -e 's/-/_/g'`
+ 			check_wopt "$opt"
+ 			eval "with_$opt=-1"
+ 			shift
+ 			;;
+-                -bindir)
++                --bindir)
+                         bindir="$2"
+                         shift
+                         shift
+                         ;;
+-	        -datadir)
++	        --datadir)
+ 		        net_db_dir="$2"
+ 			net_db_dir_set=1
+ 			shift; shift
+ 			;;
+-                -equeue-tcl-defs)
++                --equeue-tcl-defs)
+                         tcl_defs="$tcl_defs $2"
+                         shift
+                         shift
+                         ;;
+-                -equeue-tcl-libs)
++                --equeue-tcl-libs)
+                         tcl_libs="$tcl_libs $2"
+                         shift
+                         shift
+                         ;;
+-                -auth-dh-style)
++                --auth-dh-style)
+                         adh_style="$2"
+                         shift
+                         shift
+                         ;;
+-                -apxs)
++                --apxs)
+                         apxs="$2"
+                         shift
+                         shift
+                         ;;
+-                -apache)
++                --apache)
+                         apache="$2"
+                         shift
+                         shift
+                         ;;
+-	        -prefer-netcgi2)
++	        --prefer-netcgi2)
+ 		        prefer_netcgi2=1
+ 			shift ;;
+-		-version)
++		--version)
+ 			echo "$version"
+ 			exit 0
+ 			;;
+@@ -482,13 +482,13 @@
+         else
+             echo "not ok (check ldd output of tmp/t)"
+             echo
+-            echo "Please check -equeue-tcl-libs!"
++            echo "Please check --equeue-tcl-libs!"
+             exit 1
+         fi
+     else
+         echo "not ok"
+         echo
+-        echo "Please check -equeue-tcl-libs!"
++        echo "Please check --equeue-tcl-libs!"
+         exit 1
+     fi
+ 
