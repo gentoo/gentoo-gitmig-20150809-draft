@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.2-r1.ebuild,v 1.7 2007/02/21 02:40:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.2-r1.ebuild,v 1.8 2007/03/27 19:25:56 armin76 Exp $
 
 WANT_AUTOMAKE=1.7
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mega-nerd.com/SRC/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="sndfile fftw"
 
 RDEPEND="fftw? ( >=sci-libs/fftw-3.0.1 )
