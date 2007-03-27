@@ -1,6 +1,9 @@
 # ChangeLog for virtual/init
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.10 2007/02/14 03:27:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.11 2007/03/27 23:14:23 spb Exp $
+
+  27 Mar 2007; Stephen Bennett <spb@gentoo.org> init-0.ebuild:
+  mips stable
 
   14 Feb 2007; Jeroen Roovers <jer@gentoo.org> init-0.ebuild:
   Stable for HPPA (bug #158637).
