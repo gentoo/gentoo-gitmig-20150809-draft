@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.4 2007/03/27 14:42:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.5 2007/03/27 18:39:42 wolf31o2 Exp $
 
 inherit eutils gnome2 autotools
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 IUSE="dbus djvu doc dvi gnome t1lib tiff"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86"
 
 RDEPEND="
 	dvi? (
