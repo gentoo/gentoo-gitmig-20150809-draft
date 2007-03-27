@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.41 2007/03/27 01:26:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.42 2007/03/27 12:55:25 markusle Exp $
+
+  27 Mar 2007; Markus Dittrich <markusle@gentoo.org>
+  lapack-atlas-3.7.30.ebuild:
+  Fixed improper doc file name which borked the install (bug #172393).
 
 *lapack-atlas-3.7.30 (26 Mar 2007)
 

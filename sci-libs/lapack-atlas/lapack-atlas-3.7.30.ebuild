@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.30.ebuild,v 1.1 2007/03/27 01:26:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.30.ebuild,v 1.2 2007/03/27 12:55:25 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -160,7 +160,7 @@ src_install () {
 	dodoc README doc/AtlasCredits.txt doc/ChangeLog || \
 		die "Failed to install docs"
 	if use doc; then
-		dodoc doc/lapackqref.ps || die "Failed to install docs"
+		dodoc doc/lapackqref.pdf || die "Failed to install docs"
 	fi
 }
 
