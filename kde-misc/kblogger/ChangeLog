@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kblogger
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.9 2006/11/21 12:33:38 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.10 2007/03/27 10:09:04 genstef Exp $
+
+*kblogger-0.6.5 (27 Mar 2007)
+
+  27 Mar 2007; <genstef@gentoo.org> -kblogger-0.6.2.ebuild,
+  +kblogger-0.6.5.ebuild:
+  Version bump thanks to Jason Oliveira <mushroomblue@elazulspad.net> in bug
+  172269
 
   21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Give this back to kde herd.
