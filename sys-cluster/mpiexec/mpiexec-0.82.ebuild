@@ -1,5 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.82.ebuild,v 1.2 2007/03/27 18:53:57 opfer Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +16,7 @@ RDEPEND="net-misc/openssh"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 
 src_compile() {
 	# sharedmem should NOT be used on SMP boxes

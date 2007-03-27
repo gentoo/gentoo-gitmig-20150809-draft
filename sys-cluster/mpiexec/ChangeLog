@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpiexec
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.15 2007/02/22 00:53:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.16 2007/03/27 18:53:57 opfer Exp $
+
+  27 Mar 2007; Christian Faulhammer <opfer@gentoo.org> mpiexec-0.82.ebuild:
+  stable x86, security bug 153495
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
