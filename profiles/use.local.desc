@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2705 2007/03/27 15:08:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2706 2007/03/27 17:45:29 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -750,6 +750,7 @@ mail-client/claws-mail:dillo - Enables support for inline http email viewing wit
 mail-client/claws-mail:spamassassin - Build spamassassin plugin
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
 mail-client/evolution:widescreen - Enable widescreen support
+mail-client/evolution:networkmanager - Enable networkmanager support
 mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
@@ -1851,6 +1852,7 @@ www-apps/xrms:intl - Enable different languages
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
+www-client/epiphany:xulrunner - Enable support for xulrunner instead of firefox
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
