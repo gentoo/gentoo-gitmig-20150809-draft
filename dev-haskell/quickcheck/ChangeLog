@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.7 2007/03/26 13:38:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.8 2007/03/27 13:32:07 josejx Exp $
+
+  27 Mar 2007; Joseph Jezak <josejx@gentoo.org> quickcheck-1.0.ebuild:
+  Marked ppc stable for bug #170650.
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> quickcheck-1.0.ebuild:
   Add ~ia64 wrt bug 170650
