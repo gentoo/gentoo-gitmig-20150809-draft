@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.76 2007/02/14 19:58:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.77 2007/03/27 21:50:28 dang Exp $
+
+*gucharmap-1.10.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +gucharmap-1.10.0.ebuild:
+  gnome 2.18.0
 
   14 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/gucharmap-1.8.0-gnome-doc-utils.patch, gucharmap-1.8.0.ebuild:
