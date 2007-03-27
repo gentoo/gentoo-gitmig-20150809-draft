@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.151 2007/03/14 09:56:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.152 2007/03/27 07:38:41 mr_bones_ Exp $
+
+*syslog-ng-2.0.3 (27 Mar 2007)
+
+  27 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/syslog-ng.conf.gentoo.fbsd, -syslog-ng-2.0.2.ebuild,
+  +syslog-ng-2.0.3.ebuild:
+  masked version bump; clean out older masked version; add fbsd support for bug
+  #156519; add spoof-source support for bug #172320
 
 *syslog-ng-1.6.12-r1 (14 Mar 2007)
 
