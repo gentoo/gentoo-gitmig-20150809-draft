@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.50 2007/01/20 12:38:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.51 2007/03/27 18:53:58 dang Exp $
+
+*epiphany-extensions-2.18.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +epiphany-extensions-2.18.0.ebuild:
+  gnome 2.18.0
 
   20 Jan 2007; Jeroen Roovers <jer@gentoo.org>
   epiphany-extensions-2.16.1-r1.ebuild:
