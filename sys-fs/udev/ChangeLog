@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.290 2007/03/22 10:51:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.291 2007/03/27 20:44:50 zzam Exp $
+
+  27 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> udev-079-r2.ebuild,
+  udev-087.ebuild, udev-087-r1.ebuild, udev-090-r1.ebuild, udev-094.ebuild,
+  udev-096.ebuild, udev-096-r1.ebuild, udev-098.ebuild, udev-099.ebuild,
+  udev-100.ebuild, udev-100-r2.ebuild, udev-103.ebuild, udev-104-r11.ebuild,
+  udev-104-r12.ebuild, udev-106-r4.ebuild, udev-106-r5.ebuild,
+  udev-107.ebuild:
+  Install rcaddon into get_libdir/rcscripts, Bug #172391.
 
 *udev-107 (22 Mar 2007)
 

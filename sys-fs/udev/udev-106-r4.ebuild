@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-106-r4.ebuild,v 1.1 2007/03/14 15:33:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-106-r4.ebuild,v 1.2 2007/03/27 20:44:50 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -177,7 +177,7 @@ src_install() {
 	dosym udevd.8 /usr/share/man/man8/udevcontrol.8
 
 	# our udev hooks into the rc system
-	insinto /lib/rcscripts/addons
+	insinto /$(get_libdir)/rcscripts/addons
 	newins "${FILESDIR}"/udev-start-106-r2.sh udev-start.sh
 	newins "${FILESDIR}"/udev-stop-105.sh udev-stop.sh
 

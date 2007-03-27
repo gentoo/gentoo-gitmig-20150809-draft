@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r12.ebuild,v 1.10 2007/03/21 13:51:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r12.ebuild,v 1.11 2007/03/27 20:44:50 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -170,14 +170,14 @@ src_install() {
 	dosym udevd.8 /usr/share/man/man8/udevcontrol.8
 
 	# our udev hooks into the rc system
-	insinto /lib/rcscripts/addons
+	insinto /$(get_libdir)/rcscripts/addons
 	newins "${FILESDIR}"/udev-start-104-r12.sh udev-start.sh
 	newins "${FILESDIR}"/udev-stop-104-r8.sh udev-stop.sh
 
 	# Insert udev-version number into udev-rcscript addon
 	sed -e "s/@@UDEV_VERSION@@/${PV}/" \
-		-i "${D}"/lib/rcscripts/addons/udev-start.sh \
-		-i "${D}"/lib/rcscripts/addons/udev-stop.sh
+		-i "${D}"/$(get_libdir)/rcscripts/addons/udev-start.sh \
+		-i "${D}"/$(get_libdir)/rcscripts/addons/udev-stop.sh
 
 	# needed to compile latest Hal
 	insinto /usr/include

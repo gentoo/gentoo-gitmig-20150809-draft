@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-087.ebuild,v 1.10 2006/07/02 22:41:52 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-087.ebuild,v 1.11 2007/03/27 20:44:50 zzam Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -127,7 +127,7 @@ src_install() {
 	doman extras/cdrom_id/cdrom_id.8
 
 	# our udev hooks into the rc system
-	insinto /lib/rcscripts/addons
+	insinto /$(get_libdir)/rcscripts/addons
 	newins "${FILESDIR}"/udev-start-079.sh udev-start.sh
 	doins "${FILESDIR}"/udev-stop.sh
 
