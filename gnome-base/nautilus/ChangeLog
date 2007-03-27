@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.217 2007/03/01 16:27:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.218 2007/03/27 03:54:58 dang Exp $
+
+*nautilus-2.18.0.1 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +nautilus-2.18.0.1.ebuild:
+  gnome 2.18.0
 
   01 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> nautilus-2.16.3.ebuild:
   Add back in missing gnome2_pkg_postinst; bug #165583
