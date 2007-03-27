@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2707 2007/03/27 18:13:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2708 2007/03/27 22:03:14 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1102,6 +1102,7 @@ media-video/oxine:polling - Enables support to automatically check the drive for
 media-video/mplayer:tivo - Enables TiVo vstream client support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
 media-video/totem:nvtv - Support for nvtv to use tv in on nvidia cards
+media-video/totem:xulrunner - Enable support for xulrunner instead of firefox
 media-video/transcode:extrafilters - Install some filters only if we ask for them
 media-video/transcode:fame - Enables libfame support
 media-video/transcode:lzo - Enables LZO compression support
@@ -1854,6 +1855,7 @@ www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/epiphany:xulrunner - Enable support for xulrunner instead of firefox
+www-client/epiphany-extensions:xulrunner - Enable support for xulrunner instead of firefox
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
