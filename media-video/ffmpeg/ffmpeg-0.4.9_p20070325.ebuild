@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070325.ebuild,v 1.4 2007/03/26 02:47:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070325.ebuild,v 1.5 2007/03/27 09:29:46 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -121,7 +121,7 @@ src_compile() {
 		use vorbis && myconf="${myconf} --enable-libvorbis --enable-libogg"
 		use theora && myconf="${myconf} --enable-libtheora --enable-libogg"
 	fi
-	use a52 && myconf="${myconf} --enable-a52"
+	use a52 && myconf="${myconf} --enable-liba52"
 	use ieee1394 && myconf="${myconf} --enable-dc1394"
 	use threads && myconf="${myconf} --enable-pthreads"
 	use xvid && myconf="${myconf} --enable-xvid"
