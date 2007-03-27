@@ -1,0 +1,29 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN dasher-4.4.0.orig/Data/Help/Makefile.am dasher-4.4.0/Data/Help/Makefile.am
+--- dasher-4.4.0.orig/Data/Help/Makefile.am	2007-03-12 10:13:18.000000000 -0400
++++ dasher-4.4.0/Data/Help/Makefile.am	2007-03-15 15:43:50.000000000 -0400
+@@ -1 +1,5 @@
+-SUBDIRS = Gnome
++SUBDIRS =
++
++if GNOME_HELP
++SUBDIRS += Gnome
++endif
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN dasher-4.4.0.orig/configure.in dasher-4.4.0/configure.in
+--- dasher-4.4.0.orig/configure.in	2007-03-12 13:27:10.000000000 -0400
++++ dasher-4.4.0/configure.in	2007-03-15 15:44:36.000000000 -0400
+@@ -348,6 +348,7 @@ AM_CONDITIONAL(DOGTK2, test x$BUILDGTK2 
+ AM_CONDITIONAL(DOQTE, test x$WITHQTE = xtrue)
+ AM_CONDITIONAL(GNOME_SPEECH, test x$WITHSPEECH = xtrue)
+ AM_CONDITIONAL(GNOME_A11Y, test x$WITHA11Y = xtrue)
++AM_CONDITIONAL(GNOME_HELP, test x$WITHGNOME = xtrue)
+ AM_CONDITIONAL(WITH_GPE, test x$WITHGPE = xtrue)
+ AM_CONDITIONAL(WITH_MAEMO, test x$WITHMAEMO = xtrue)
+ AM_CONDITIONAL(WITH_MAEMOFULLSCREEN, test x$WITHMAEMOFULLSCREEN = xtrue)
+@@ -401,6 +402,7 @@ if [[ x"$WITHGNOME" = xtrue ]]; then
+ GNOME_DOC_INIT
+ else
+ AM_CONDITIONAL(ENABLE_SK, false)
++AM_CONDITIONAL(HAVE_GNOME_DOC_UTILS, false)
+ fi
+ 
+ AC_CONFIG_FILES([Makefile

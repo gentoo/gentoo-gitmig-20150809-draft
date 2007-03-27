@@ -1,0 +1,26 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN dasher-4.3.4.orig/Src/Makefile.am dasher-4.3.4/Src/Makefile.am
+--- dasher-4.3.4.orig/Src/Makefile.am	2007-02-12 13:09:31.000000000 -0500
++++ dasher-4.3.4/Src/Makefile.am	2007-02-16 20:36:34.000000000 -0500
+@@ -24,17 +24,17 @@ AM_CXXFLAGS = \
+ 	-DPACKAGE_LOCALE_DIR=\"$(datadir)/locale\"
+ 
+ dasher_LDADD = \
+-	$(GTK2BUILD_LIBS) \
+-	-lexpat \
+-	$(POPT_LIBS) \
+-	$(GPELIB) \
+ 	Common/libdashermisc.a \
+ 	Gtk2/libdashergtk.a \
+ 	Gtk2/libdashercontrol.a \
+ 	DasherCore/libdashercore.a \
+ 	DasherCore/LanguageModelling/libdasherlm.a \
+ 	DasherCore/Alphabet/libdasheralphabet.a \
+-	Common/libdashermisc.a
++	Common/libdashermisc.a \
++	$(GTK2BUILD_LIBS) \
++	-lexpat \
++	$(POPT_LIBS) \
++	$(GPELIB)
+ endif
+ 
+ if DOQTE
