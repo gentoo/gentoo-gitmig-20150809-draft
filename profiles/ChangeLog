@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.244 2007/03/26 23:12:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.245 2007/03/27 20:50:06 betelgeuse Exp $
+
+  27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.mask dev-util/jcvs and dev-java/j2ssh for removal to the java
+  junkyard in 30 days.
 
   26 Mar 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   Drop openldap 2.1 mask
