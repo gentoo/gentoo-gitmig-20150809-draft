@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/orca
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.1 2006/11/03 04:35:32 leonardop Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.2 2007/03/27 21:58:22 dang Exp $
+
+*orca-2.18.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +orca-2.18.0.ebuild:
+  gnome 2.18.0
 
 *orca-1.0.0 (03 Nov 2006)
 
