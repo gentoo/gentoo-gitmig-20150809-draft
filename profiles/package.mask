@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7049 2007/03/27 20:50:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7050 2007/03/27 22:53:04 leio Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -431,12 +431,6 @@ net-p2p/freenet
 # Steve Dibb <beandog@gentoo.org> (26 Feb 2007)
 # Security bug 159727
 <media-video/mplayer-1.0_rc1-r2
-
-# Mart Raudsepp <leio@gentoo.org> (24 Feb 2007)
-# Masked for removal on March 27th. Package doesn't run with
-# wxpython >=2.6, upstream seems dead and it is reported to
-# not work with python2.4. Bug #168259
-net-p2p/kenosis
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 Feb 2007)
 # Masked for removal. Package doesn't run with wxpython >=2.6
