@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2702 2007/03/27 03:53:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2703 2007/03/27 07:35:48 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -22,6 +22,7 @@ app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
+app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/webalizer:search - Include the search patch
