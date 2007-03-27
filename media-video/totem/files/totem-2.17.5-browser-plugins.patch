@@ -1,0 +1,76 @@
+--- configure.in.orig	2007-01-28 14:48:08.000000000 -0600
++++ configure.in	2007-01-28 14:48:38.000000000 -0600
+@@ -580,6 +580,10 @@
+ 	[],[enable_mully_plugin=yes])
+ AC_MSG_RESULT([$enable_mully_plugin])
+ 
++PKG_CHECK_MODULES([SN], [ libstartup-notification-1.0 >= 0.8 ])
++AC_SUBST([SN_CFLAGS])
++AC_SUBST([SN_LIBS])
++
+ fi
+ 
+ AM_CONDITIONAL([ENABLE_BASIC_PLUGIN],[test "$enable_basic_plugin" = "yes"])
+--- browser-plugin/Makefile.am.orig	2007-01-09 08:26:48.000000000 -0600
++++ browser-plugin/Makefile.am	2007-01-28 14:53:09.000000000 -0600
+@@ -80,6 +80,7 @@
+ 	$(WARN_CFLAGS)		\
+ 	$(DBUS_CFLAGS)		\
+ 	$(NVTV_CFLAGS)		\
++	$(SN_CFLAGS)		\
+ 	$(AM_CFLAGS)
+ 
+ totem_plugin_viewer_LDADD =						\
+@@ -93,6 +94,7 @@
+ 	$(DBUS_LIBS)		\
+ 	$(NVTV_LIBS) 		\
+ 	$(XTEST_LIBS)		\
++	$(SN_LIBS)		\
+ 	$(X_LIBS)
+ 
+ BUILT_SOURCES += \
+@@ -152,7 +154,7 @@
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	$(top_builddir)/browser-plugin/libtotempluginviewer_marshal.la	\
+ 	$(DBUS_LIBS)	\
+- 	$(MOZILLA_LIBS)	\
++ 	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_basic_plugin_la_LDFLAGS = \
+@@ -211,7 +213,7 @@
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	$(top_builddir)/browser-plugin/libtotempluginviewer_marshal.la	\
+ 	$(DBUS_LIBS)	\
+- 	$(MOZILLA_LIBS)	\
++ 	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_gmp_plugin_la_LDFLAGS = \
+@@ -270,7 +272,7 @@
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	$(top_builddir)/browser-plugin/libtotempluginviewer_marshal.la	\
+ 	$(DBUS_LIBS)	\
+- 	$(MOZILLA_LIBS)	\
++ 	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_complex_plugin_la_LDFLAGS = \
+@@ -329,7 +331,7 @@
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	$(top_builddir)/browser-plugin/libtotempluginviewer_marshal.la	\
+ 	$(DBUS_LIBS)	\
+- 	$(MOZILLA_LIBS)	\
++ 	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_narrowspace_plugin_la_LDFLAGS = \
+@@ -388,7 +390,7 @@
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	$(top_builddir)/browser-plugin/libtotempluginviewer_marshal.la	\
+ 	$(DBUS_LIBS)	\
+- 	$(MOZILLA_LIBS)	\
++ 	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_mully_plugin_la_LDFLAGS = \

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.154 2007/02/26 00:35:01 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.155 2007/03/27 22:07:07 dang Exp $
+
+*totem-2.18.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/totem-2.17.5-browser-plugins.patch, +totem-2.18.0.ebuild:
+  gnome 2.18.0
 
 *totem-2.16.5 (26 Feb 2007)
 
