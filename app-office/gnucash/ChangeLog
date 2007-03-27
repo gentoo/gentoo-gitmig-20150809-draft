@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.125 2007/02/26 22:03:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.126 2007/03/27 12:25:35 seemant Exp $
+
+  27 Mar 2007; Seemant Kulleen <seemant@gentoo.org> -gnucash-2.0.2.ebuild,
+  -gnucash-2.0.4.ebuild:
+  remove cruft
 
   26 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> gnucash-2.0.5.ebuild:
   Pesky whitespace... Check wasn't working
