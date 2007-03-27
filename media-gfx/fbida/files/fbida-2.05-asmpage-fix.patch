@@ -1,0 +1,12 @@
+diff -Naurp fbida-2.05-orig/fbtools.c fbida-2.05/fbtools.c
+--- fbida-2.05-orig/fbtools.c	2007-03-27 15:02:08.000000000 +0200
++++ fbida-2.05/fbtools.c	2007-03-27 15:02:56.000000000 +0200
+@@ -21,8 +21,6 @@
+ #include <linux/vt.h>
+ #include <linux/fb.h>
+ 
+-#include <asm/page.h>
+-
+ #include "fbtools.h"
+ 
+ /* -------------------------------------------------------------------- */

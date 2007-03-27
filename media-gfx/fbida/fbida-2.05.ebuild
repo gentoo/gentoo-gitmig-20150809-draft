@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.3 2007/03/04 16:06:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.4 2007/03/27 13:08:50 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,6 +42,8 @@ src_unpack() {
 	if [[ `gcc-major-version` -lt 4 ]]; then
 		sed	-e 's/-Wno-pointer-sign//' -i ${S}/GNUmakefile
 	fi
+
+	epatch ${FILESDIR}/fbida-2.05-asmpage-fix.patch
 }
 
 src_compile() {
