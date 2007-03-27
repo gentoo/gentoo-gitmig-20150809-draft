@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7046 2007/03/26 23:15:46 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7047 2007/03/27 05:28:38 tsunam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -807,7 +807,7 @@ x11-plugins/replytolist
 ~net-im/wengophone-2.0_rc2
 
 # Marcus D. Hanwell <cryos@gentoo.org> (03 Nov 2006)
-# Masking beta versions of boinc - may not work with all projects.
+# 5.8 should work with all projects but needs testing. Report on bug #166920 
 >=sci-misc/boinc-5.5.6
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (02 Nov 2006)
