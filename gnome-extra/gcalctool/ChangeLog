@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.122 2007/02/11 02:08:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.123 2007/03/27 19:59:18 dang Exp $
+
+*gcalctool-5.9.14 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +gcalctool-5.9.14.ebuild:
+  gnome 2.18.0
 
 *gcalctool-5.8.25-r1 (11 Feb 2007)
 
