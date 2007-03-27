@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.227 2007/03/26 14:32:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.228 2007/03/27 00:28:25 wolf31o2 Exp $
+
+  27 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> cups-1.2.9.ebuild:
+  Stable on amd64/ia64 wrt bug #170881.
 
   26 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> cups-1.2.9.ebuild:
   Stable on sparc wrt security #170881
