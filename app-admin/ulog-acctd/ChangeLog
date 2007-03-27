@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulog-acctd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.7 2007/01/24 15:06:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.8 2007/03/27 06:38:55 opfer Exp $
+
+  27 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  ulog-acctd-0.4.3.ebuild:
+  stable x86, bug 172324
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> ulog-acctd-0.4.2.ebuild,
   ulog-acctd-0.4.3.ebuild:
