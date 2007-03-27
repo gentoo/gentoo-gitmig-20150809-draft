@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4.ebuild,v 1.4 2007/03/23 03:43:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r1.ebuild,v 1.1 2007/03/27 20:06:57 jokey Exp $
 
 inherit multilib
 
@@ -20,7 +20,8 @@ DEPEND="${RDEPEND}
 CONFIGVARS="PREFIX=\"${ROOT}usr\"
 		SA_LIB_DIR=\"${ROOT}usr/$(get_libdir)/sa\"
 		SA_DIR=\"${ROOT}var/log/sa\"
-		DOC_DIR=\"${ROOT}usr/share/doc/${PF}\""
+		DOC_DIR=\"${ROOT}usr/share/doc/${PF}\"
+		MAN_DIR=\"${ROOT}usr/share/man/\""
 
 src_unpack() {
 	unpack ${A}
