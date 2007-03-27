@@ -1,9 +1,0 @@
-# Config file for /etc/init.d/arpwatch
-# see arpwatch.8 for more information
-# execute `emerge --config arpwatch` to configure arpwatch runas unprivileged user.
-
-#IFACES="eth0 eth1"
-IFACES="eth0"
-
-# Additional options to pass to arpwatch.
-OPTIONS="-N -p"

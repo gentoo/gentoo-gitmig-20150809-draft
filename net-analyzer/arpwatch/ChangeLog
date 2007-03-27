@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.39 2007/02/01 21:09:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.40 2007/03/27 19:33:47 pva Exp $
+
+*arpwatch-2.1.15-r4 (27 Mar 2007)
+
+  27 Mar 2007; <pva@gentoo.org> -files/arpwatch.confd-2,
+  files/arpwatch.init-2, +arpwatch-2.1.15-r4.ebuild:
+  Fixed permition problem reported in bug #171989. Added pid patch to fix
+  start/stop problem.
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> files/arpwatch.confd,
   files/arpwatch.init, -arpwatch-2.1.11-r1.ebuild,
