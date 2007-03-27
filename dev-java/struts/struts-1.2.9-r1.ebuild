@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r1.ebuild,v 1.4 2006/12/09 09:25:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r1.ebuild,v 1.5 2007/03/27 15:40:45 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPS}"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPS}
-	>=dev-java/ant-1.6.0
+	>=dev-java/ant-tasks-1.6.0
 	source? ( app-arch/zip )"
 IUSE="doc examples source"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
@@ -35,8 +35,8 @@ src_unpack() {
 	unpack ${A}
 
 	# the build.xml expects this directory to exist
-	mkdir ${S}/lib
-	cd ${S}/lib
+	mkdir "${S}/lib"
+	cd "${S}/lib"
 
 	# No property exists for this
 	java-pkg_jar-from commons-collections
@@ -44,7 +44,6 @@ src_unpack() {
 
 src_compile() {
 	local antflags="compile.library"
-	use doc && antflags="${antflags} compile.javadoc"
 
 	# In the order the build process asks for these
 	# They are copied in the build.xml to ${S}/target/library/
@@ -62,7 +61,7 @@ src_compile() {
 	# only needed for contrib stuff which we don't currently build
 #	antflags="${antflags} -Dstruts-legacy.jar=$(java-pkg_getjars struts-legacy)"
 
-	eant ${antflags}
+	eant ${antflags} $(use_doc compile.javadoc)
 }
 
 src_install() {
@@ -72,11 +71,11 @@ src_install() {
 	insinto /usr/share/${PN}-${SLOT}/lib
 	doins target/library/*.tld
 
-	dodoc README STATUS.txt
+	dodoc README STATUS.txt || die
 	use doc && java-pkg_dohtml -r target/documentation/
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r src/example*/* ${D}/usr/share/doc/${PF}/examples
+		cp -r src/example*/* "${D}/usr/share/doc/${PF}/examples"
 	fi
 	use source && java-pkg_dosrc src/share/*
 }
