@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.3 2007/01/05 19:01:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.4 2007/03/27 17:06:30 nyhm Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="Fly a plane around bomb/shoot the enemy. Port of Planegame from Amiga."
@@ -51,6 +49,7 @@ src_install() {
 	doins *.wav *.psf *.shapes || die "doins failed"
 	insinto "${GAMES_SYSCONFDIR}"/${PN}
 	doins apricots.cfg || die "doins apricots.cfg failed"
+	make_desktop_entry ${PN} Apricots
 	prepgamesdirs
 }
 
