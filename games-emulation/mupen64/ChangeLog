@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mupen64
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.23 2007/02/22 09:59:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.24 2007/03/27 15:17:01 joker Exp $
+
+*mupen64-0.5-r3 (27 Mar 2007)
+
+  27 Mar 2007; Christian Birchinger <joker@gentoo.org>
+  +files/mupen64-0.5-anisotropic.patch, +files/mupen64-0.5-gentoo3.patch,
+  +mupen64-0.5-r3.ebuild:
+  New revision with better support for multilib installs.
 
   22 Feb 2007; Simon Stelling <blubb@gentoo.org> mupen64-0.5-r2.ebuild:
   depend on >=emul-sdl-10.0; bug 167202

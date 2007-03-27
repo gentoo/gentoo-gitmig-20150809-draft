@@ -1,0 +1,108 @@
+diff -u glN64/Config_linux.cpp /home/braddabug/mupen64/glN64/Config_linux.cpp
+--- glN64/Config_linux.cpp	2005-08-26 14:52:17.000000000 -0500
++++ /home/braddabug/mupen64/glN64/Config_linux.cpp	2006-12-24 21:56:05.000000000 -0600
+@@ -17,7 +17,7 @@
+ static GtkWidget *configWindow = NULL;
+ //static GtkWidget *bitdepthCombo[2], *resolutionCombo[2];
+ static GtkWidget *resolutionCombo;
+-static GtkWidget *enable2xSAICheck, *forceBilinearCheck, *enableFogCheck;
++static GtkWidget *enable2xSAICheck, *enableAnisotropicFilteringCheck, *forceBilinearCheck, *enableFogCheck;
+ static GtkWidget *enableHardwareFBCheck, *enablePolygonStippleCheck;
+ static GtkWidget *textureDepthCombo;
+ static GtkWidget *textureCacheEntry;
+@@ -109,6 +109,7 @@
+ 
+ 	OGL.forceBilinear = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON(forceBilinearCheck) );
+ 	OGL.enable2xSaI = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON(enable2xSAICheck) );
++	OGL.enableAnisotropicFiltering = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON(enableAnisotropicFilteringCheck));
+ 	OGL.fog = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON(enableFogCheck) );
+ 	OGL.frameBufferTextures = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON(enableHardwareFBCheck) );
+ 	OGL.usePolygonStipple = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON(enablePolygonStippleCheck) );
+@@ -143,6 +144,7 @@
+ /*	fprintf( f, "width=%d\n",                 OGL.width );
+ 	fprintf( f, "height=%d\n",                OGL.height );*/
+ 	fprintf( f, "force bilinear=%d\n",        OGL.forceBilinear );
++	fprintf( f, "enable anisotropic=%d\n", OGL.enableAnisotropicFiltering );
+ 	fprintf( f, "enable 2xSAI=%d\n",          OGL.enable2xSaI );
+ 	fprintf( f, "enable fog=%d\n",            OGL.fog );
+ 	fprintf( f, "enable HardwareFB=%d\n",     OGL.frameBufferTextures );
+@@ -182,6 +184,7 @@
+ 	gtk_entry_set_text( GTK_ENTRY(GTK_COMBO(resolutionCombo)->entry), text );
+ 
+ 	gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(enable2xSAICheck),          (OGL.enable2xSaI) );
++	gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(enableAnisotropicFilteringCheck),          (OGL.enableAnisotropicFiltering) );
+ 	gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(forceBilinearCheck),        (OGL.forceBilinear) );
+ 	gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(enableFogCheck),            (OGL.fog) );
+ 	gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(enablePolygonStippleCheck), (OGL.usePolygonStipple) );
+@@ -235,7 +238,7 @@
+ 	gtk_container_set_border_width( GTK_CONTAINER(displayFrame), 7 );
+ 	gtk_container_add( GTK_CONTAINER(GTK_DIALOG(configWindow)->vbox), displayFrame );
+ 
+-	displayTable = gtk_table_new( 5, 3, FALSE );
++	displayTable = gtk_table_new( 6, 3, FALSE );
+ 	gtk_container_set_border_width( GTK_CONTAINER(displayTable), 7 );
+ 	gtk_table_set_col_spacings( GTK_TABLE(displayTable), 3 );
+ 	gtk_table_set_row_spacings( GTK_TABLE(displayTable), 3 );
+@@ -301,7 +304,8 @@
+ 	resolutionCombo = gtk_combo_new();
+ 	gtk_combo_set_value_in_list( GTK_COMBO(resolutionCombo), TRUE, FALSE );
+ 	gtk_combo_set_popdown_strings( GTK_COMBO(resolutionCombo), resolutionList );
+-
++	
++	enableAnisotropicFilteringCheck = gtk_check_button_new_with_label( "Enable anisotropic filtering" );
+ 	enable2xSAICheck = gtk_check_button_new_with_label( "Enable 2xSAI texture scaling" );
+ 	forceBilinearCheck = gtk_check_button_new_with_label( "Force bilinear filtering" );
+ 	enableFogCheck = gtk_check_button_new_with_label( "Enable fog" );
+@@ -335,6 +339,9 @@
+ 	// row 4
+ 	gtk_table_attach_defaults( GTK_TABLE(displayTable), enable2xSAICheck, 0, 1, 4, 5 );
+ 	gtk_table_attach_defaults( GTK_TABLE(displayTable), enablePolygonStippleCheck, 1, 2, 4, 5 );
++	
++	// row 5
++	gtk_table_attach_defaults( GTK_TABLE(displayTable), enableAnisotropicFilteringCheck, 0, 1, 5, 6);
+ 
+ 	// textures frame
+ 	texturesFrame = gtk_frame_new( "Textures" );
+@@ -404,6 +411,7 @@
+ //	OGL.windowedBits = 0;
+ 	OGL.forceBilinear = 0;
+ 	OGL.enable2xSaI = 0;
++	OGL.enableAnisotropicFiltering = 0;
+ 	OGL.fog = 1;
+ 	OGL.textureBitDepth = 1; // normal (16 & 32 bits)
+ 	OGL.frameBufferTextures = 0;
+@@ -472,6 +480,10 @@
+ 		{
+ 			OGL.enable2xSaI = atoi( val );
+ 		}
++		else if (!strcasecmp( line, "enable anisotropic"))
++		{
++			OGL.enableAnisotropicFiltering = atoi( val );
++		}
+ 		else if (!strcasecmp( line, "enable fog" ))
+ 		{
+ 			OGL.fog = atoi( val );
+diff -u glN64/OpenGL.h /home/braddabug/mupen64/glN64/OpenGL.h
+--- glN64/OpenGL.h	2005-08-26 14:52:17.000000000 -0500
++++ /home/braddabug/mupen64/glN64/OpenGL.h	2006-12-24 21:43:46.000000000 -0600
+@@ -72,6 +72,7 @@
+ 	int		maxGeneralCombiners;
+ 
+ 	BOOL	enable2xSaI;
++	BOOL	enableAnisotropicFiltering;
+ 	BOOL	frameBufferTextures;
+ 	int		textureBitDepth;
+ 	float	originAdjust;
+diff -u glN64/Textures.cpp /home/braddabug/mupen64/glN64/Textures.cpp
+--- glN64/Textures.cpp	2005-08-26 14:52:17.000000000 -0500
++++ /home/braddabug/mupen64/glN64/Textures.cpp	2006-12-24 21:57:42.000000000 -0600
+@@ -748,6 +748,10 @@
+ 	// Set clamping modes
+ 	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, texture->clampS ? GL_CLAMP_TO_EDGE : GL_REPEAT );
+ 	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, texture->clampT ? GL_CLAMP_TO_EDGE : GL_REPEAT );
++	
++	// Anisotropic filtering
++	if (OGL.enableAnisotropicFiltering)
++		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, 4.0f);
+ 
+ 	texture->lastDList = RSP.DList;

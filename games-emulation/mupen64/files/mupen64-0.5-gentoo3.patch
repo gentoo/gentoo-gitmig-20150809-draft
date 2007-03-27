@@ -1,0 +1,279 @@
+diff -ruN mupen64_src-0.5.orig/Makefile mupen64_src-0.5/Makefile
+--- mupen64_src-0.5.orig/Makefile	2005-08-26 21:52:13.000000000 +0200
++++ mupen64_src-0.5/Makefile	2007-03-21 19:24:30.000000000 +0100
+@@ -1,16 +1,19 @@
+ #Makefile MUPEN64 for Linux
+ 
+-CC		=gcc
+-CXX		=g++
++CC		?=gcc
++CXX		?=g++
+ 
+ #CFLAGS		=-DX86 -O3 -mpentium -Wall -DEMU64_DEBUG
+-CFLAGS		=-DX86 -O3 -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -ffast-math -fno-strict-aliasing -mcpu=athlon -Wall -pipe
++CFLAGS		?=-DX86 -O3 -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -ffast-math -fno-strict-aliasing -mcpu=athlon -Wall -pipe
+ #CFLAGS		=-DX86 -O3 -mcpu=pentium -Wall -g -pg
+ #CFLAGS		=-DX86 -Wall -pipe -g3 -DEMU64_DEBUG
+ #CFLAGS		=-DX86 -Wall -pipe -g -DEMU64_DEBUG -DCOMPARE_CORE
+ #CFLAGS		=-DX86 -Wall -pipe -g
+ 
+-CXXFLAGS	=$(CFLAGS)
++CFLAGS		+= -fPIC
++CXXFLAGS	+= -fPIC
++
++CXXFLAGS	?=$(CFLAGS)
+ 
+ GL_PATH		=-I/usr/X11R6/include
+ 
+@@ -80,7 +83,6 @@
+ OBJ_INPUT	=mupen64_input/main.o
+ 
+ OBJ_BLIGHT	=blight_input/plugin.o \
+-		blight_input/SDL_ttf.o \
+ 		blight_input/arial.ttf.o \
+ 		blight_input/configdialog_sdl.o \
+ 		blight_input/pad.o
+@@ -166,7 +168,12 @@
+ endif
+ 
+ PREFIX		=$(shell grep WITH_HOME config.h | cut -d '"' -f 2)
+-SHARE		="$(PREFIX)share/mupen64/"
++SHARE		=$(shell grep "define SHARE" config.h | cut -d '"' -f 2)
++
++ifeq ("$(SHARE)","")
++SHARE		="$(PREFIX)/share/mupen64/"
++CFLAGS		+= -DSHARE=\"$(SHARE)\"
++endif
+ 
+ PLUGINS		=plugins/mupen64_input.so plugins/blight_input.so plugins/mupen64_hle_rsp_azimer.so plugins/dummyaudio.so plugins/mupen64_audio.so plugins/jttl_audio.so plugins/mupen64_soft_gfx.so plugins/glN64.so
+ 
+@@ -223,9 +230,6 @@
+ blight_input/plugin.o:		blight_input/plugin.c
+ 				$(CC) $(CFLAGS) "-DPACKAGE=\"$(shell grep PACKAGE blight_input/package | cut -d "=" -f 2)\"" "-DVERSION=\"$(shell grep VERSION blight_input/package | cut -d "=" -f 2)\"" `sdl-config --cflags` -DGUI_SDL -c -o $@ $<
+ 
+-blight_input/SDL_ttf.o:		blight_input/SDL_ttf.c
+-				$(CC) $(CFLAGS) `freetype-config --cflags` `sdl-config --cflags` -c -o $@ $<
+-
+ blight_input/arial.ttf.o:	blight_input/arial.ttf.c
+ 
+ blight_input/arial.ttf.c:	blight_input/ttftoh
+@@ -234,7 +238,6 @@
+ 
+ blight_input/ttftoh:		blight_input/ttftoh.o
+ 				$(CC) $^ -o $@
+-				strip --strip-all $@
+ 
+ blight_input/configdialog_sdl.o: blight_input/configdialog_sdl.c
+ 				$(CC) $(CFLAGS) "-DPACKAGE=\"$(shell grep PACKAGE blight_input/package | cut -d "=" -f 2)\"" "-DVERSION=\"$(shell grep VERSION blight_input/package | cut -d "=" -f 2)\"" -DGUI_SDL `sdl-config --cflags` -c -o $@ $<
+@@ -343,56 +346,44 @@
+ 
+ mupen64_nogui:	$(OBJ) $(OBJ_X86) main/main.o main/gui_gtk/config.o
+ 		$(CC) $^ $(LIB) -Wl,-export-dynamic -L/usr/X11R6/lib `sdl-config --libs` -lGL -lpthread -ldl -o $@
+-		strip --strip-all $@
+ 
+ ifneq ("$(shell grep VCR config.h)","\#define VCR_SUPPORT 1")
+ 
+ mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI)
+ 		$(CC) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic $(GTK_LIBS) -L/usr/X11R6/lib `sdl-config --libs` -lGL -lpthread -ldl -o $@
+-		strip --strip-all $@
+ 
+ else
+ 
+ mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI) $(OBJ_VCR)
+ 		$(CXX) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic $(GTK_LIBS) `avifile-config --libs` `sdl-config --libs` -L/usr/X11R6/lib -lGL -lpthread -ldl -o $@
+-		strip --strip-all $@
+ endif
+ 
+ mupen64_oldgui:	$(OBJ) $(OBJ_X86) main/main_gtk.o
+ 		$(CC) $^ $(LIB) -Wl,-export-dynamic $(GTK_LIBS) `sdl-config --libs` -L/usr/X11R6/lib -lGL -lpthread -ldl -o $@
+-		strip --strip-all $@
+ 
+ plugins/mupen64_input.so: $(OBJ_INPUT)
+ 			  $(CC) $^ -Wl,-Bsymbolic -shared $(GTK_LIBS) -o $@
+-			  strip --strip-all $@
+ 
+ plugins/blight_input.so: $(OBJ_BLIGHT)
+-			 $(CC) $^ -Wl,-Bsymbolic -shared `sdl-config --libs` `freetype-config --libs` -o $@
+-			 strip --strip-all $@
++			 $(CC) $^ -Wl,-Bsymbolic -shared `sdl-config --libs` -lSDL_ttf -o $@
+ 
+ plugins/mupen64_hle_rsp_azimer.so: $(OBJ_RSPHLE)
+ 				   $(CXX) $^ -Wl,-Bsymbolic -shared $(GTK_LIBS) -o $@
+-				   strip --strip-all $@
+ 
+ plugins/dummyaudio.so:	$(OBJ_DUMMY)
+ 			$(CC) $^ -Wl,-Bsymbolic -shared -o $@
+-			strip --strip-all $@
+ 
+ plugins/mupen64_audio.so:	$(OBJ_AUDIO)
+ 				$(CC) $(GTK_LIBS) -lpthread $^ -Wl,-Bsymbolic -shared -o $@
+-				strip --strip-all $@
+ 
+ plugins/jttl_audio.so:	$(OBJ_JTTL)
+ 			$(CC) $^ -Wl,-Bsymbolic -shared `sdl-config --libs` $(GTK_LIBS) -o $@
+-			strip --strip-all $@
+ 
+ plugins/mupen64_soft_gfx.so:	$(OBJ_SOFT_GFX)
+ 				$(CXX) `sdl-config --libs` $^ -Wl,-Bsymbolic -shared -o $@
+-				strip --strip-all $@
+ 
+ plugins/glN64.so:	$(OBJ_GLN64)
+ 			$(CXX) $^ -Wl,-Bsymbolic -shared $(GTK_LIBS) $(GTHREAD_LIBS) `sdl-config --libs` -lGL -o $@
+-			strip --strip-all $@
+ 
+ install:
+ 	cp mupen64 "$(PREFIX)bin"
+@@ -405,7 +396,7 @@
+ 	
+ clean:
+ 	find . -name '*.o' -print0 | xargs -0r rm -f
+-	rm mupen64 mupen64_nogui mupen64_dbg plugins/mupen64_input.so blight_input/arial.ttf.c blight_input/ttftoh plugins/blight_input.so plugins/mupen64_hle_rsp_azimer.so plugins/dummyaudio.so plugins/mupen64_audio.so plugins/jttl_audio.so plugins/mupen64_soft_gfx.so plugins/glN64.so
++	rm -f mupen64 mupen64_nogui mupen64_dbg plugins/mupen64_input.so blight_input/arial.ttf.c blight_input/ttftoh plugins/blight_input.so plugins/mupen64_hle_rsp_azimer.so plugins/dummyaudio.so plugins/mupen64_audio.so plugins/jttl_audio.so plugins/mupen64_soft_gfx.so plugins/glN64.so
+ 
+ clean_o:
+ 	find . -name '*.o' -print0 | xargs -0r rm -f
+File mupen64_src-0.5.orig/compare_pipe is a fifo while file mupen64_src-0.5/compare_pipe is a fifo
+diff -ruN mupen64_src-0.5.orig/config.h mupen64_src-0.5/config.h
+--- mupen64_src-0.5.orig/config.h	2005-08-26 21:52:14.000000000 +0200
++++ mupen64_src-0.5/config.h	2007-03-21 19:22:58.000000000 +0100
+@@ -2,6 +2,7 @@
+ #define CONFIG_H
+ 
+ #undef WITH_HOME
++#undef SHARE
+ #undef VCR_SUPPORT
+ #define GTK2_SUPPORT 1
+ 
+diff -ruN mupen64_src-0.5.orig/main/gui_gtk/main_gtk.c mupen64_src-0.5/main/gui_gtk/main_gtk.c
+--- mupen64_src-0.5.orig/main/gui_gtk/main_gtk.c	2005-08-26 22:08:13.000000000 +0200
++++ mupen64_src-0.5/main/gui_gtk/main_gtk.c	2007-03-21 19:22:58.000000000 +0100
+@@ -1880,8 +1880,8 @@
+ 	  {
+ 	     unsigned char byte;
+ 	     dest = fopen(temp, "wb");
+-	     strcpy(orig, WITH_HOME);
+-	     strcat(orig, "share/mupen64/mupen64.ini");
++	     strcpy(orig, SHARE);
++	     strcat(orig, "mupen64.ini");
+ 	     src = fopen(orig, "rb");
+ 	     while(fread(&byte, 1, 1, src))
+ 	       fwrite(&byte, 1, 1, dest);
+@@ -1892,28 +1892,28 @@
+ 	
+ 	strcpy(temp, g_WorkingDir);
+ 	strcat(temp, "lang");
+-	strcpy(orig, WITH_HOME);
+-	strcat(orig, "share/mupen64/lang");
++	strcpy(orig, SHARE);
++	strcat(orig, "lang");
+ 	symlink(orig, temp);
+ 	
+ 	/*strcpy(temp, g_WorkingDir);
+ 	strcat(temp, "plugins");
+-	strcpy(orig, WITH_HOME);
+-	strcat(orig, "share/mupen64/plugins");
++	strcpy(orig, SHARE);
++	strcat(orig, "plugins");
+ 	symlink(orig, temp);*/
+ 	
+ 	strcpy(temp, g_WorkingDir);
+ 	strcat(temp, "plugins");
+ 	mkdir(temp, 0700);
+-	strcpy(orig, WITH_HOME);
+-	strcat(orig, "share/mupen64/plugins");
++	strcpy(orig, SHARE);
++	strcat(orig, "plugins");
+ 	dir = opendir(orig);
+ 	while((entry = readdir(dir)) != NULL)
+ 	  {
+ 	     if(strcmp(entry->d_name + strlen(entry->d_name) - 3, ".so"))
+ 	       {
+-		  strcpy(orig, WITH_HOME);
+-		  strcat(orig, "share/mupen64/plugins/");
++		  strcpy(orig, SHARE);
++		  strcat(orig, "plugins/");
+ 		  strcat(orig, entry->d_name);
+ 		  src = fopen(orig, "rb");
+ 		  if(src == NULL) continue;
+@@ -1938,8 +1938,8 @@
+ 		  strcpy(temp, g_WorkingDir);
+ 		  strcat(temp, "plugins/");
+ 		  strcat(temp, entry->d_name);
+-		  strcpy(orig, WITH_HOME);
+-		  strcat(orig, "share/mupen64/plugins/");
++		  strcpy(orig, SHARE);
++		  strcat(orig, "plugins/");
+ 		  strcat(orig, entry->d_name);
+ 		  symlink(orig, temp);
+ 	       }
+diff -ruN mupen64_src-0.5.orig/main/main.c mupen64_src-0.5/main/main.c
+--- mupen64_src-0.5.orig/main/main.c	2005-08-26 21:52:11.000000000 +0200
++++ mupen64_src-0.5/main/main.c	2007-03-21 19:22:58.000000000 +0100
+@@ -37,6 +37,8 @@
+ 
+ #include <stdlib.h>
+ #include <unistd.h>
++#include <dirent.h>
++#include <sys/stat.h>
+ 
+ #include "main.h"
+ #include "guifuncs.h"
+@@ -262,8 +264,8 @@
+ 	  {
+ 	     unsigned char byte;
+ 	     dest = fopen(temp, "wb");
+-	     strcpy(orig, WITH_HOME);
+-	     strcat(orig, "share/mupen64/mupen64.ini");
++	     strcpy(orig, SHARE);
++	     strcat(orig, "mupen64.ini");
+ 	     src = fopen(orig, "rb");
+ 	     while(fread(&byte, 1, 1, src))
+ 	       fwrite(&byte, 1, 1, dest);
+@@ -274,28 +276,28 @@
+ 	
+ 	strcpy(temp, g_WorkingDir);
+ 	strcat(temp, "lang");
+-	strcpy(orig, WITH_HOME);
+-	strcat(orig, "share/mupen64/lang");
++	strcpy(orig, SHARE);
++	strcat(orig, "lang");
+ 	symlink(orig, temp);
+ 	
+ 	/*strcpy(temp, g_WorkingDir);
+ 	strcat(temp, "plugins");
+-	strcpy(orig, WITH_HOME);
+-	strcat(orig, "share/mupen64/plugins");
++	strcpy(orig, SHARE);
++	strcat(orig, "plugins");
+ 	symlink(orig, temp);*/
+ 	
+ 	strcpy(temp, g_WorkingDir);
+ 	strcat(temp, "plugins");
+ 	mkdir(temp, 0700);
+-	strcpy(orig, WITH_HOME);
+-	strcat(orig, "share/mupen64/plugins");
++	strcpy(orig, SHARE);
++	strcat(orig, "plugins");
+ 	dir = opendir(orig);
+ 	while((entry = readdir(dir)) != NULL)
+ 	  {
+ 	     if(strcmp(entry->d_name + strlen(entry->d_name) - 3, ".so"))
+ 	       {
+-		  strcpy(orig, WITH_HOME);
+-		  strcat(orig, "share/mupen64/plugins/");
++		  strcpy(orig, SHARE);
++		  strcat(orig, "plugins/");
+ 		  strcat(orig, entry->d_name);
+ 		  src = fopen(orig, "rb");
+ 		  if(src == NULL) continue;
+@@ -320,8 +322,8 @@
+ 		  strcpy(temp, g_WorkingDir);
+ 		  strcat(temp, "plugins/");
+ 		  strcat(temp, entry->d_name);
+-		  strcpy(orig, WITH_HOME);
+-		  strcat(orig, "share/mupen64/plugins/");
++		  strcpy(orig, SHARE);
++		  strcat(orig, "plugins/");
+ 		  strcat(orig, entry->d_name);
+ 		  symlink(orig, temp);
+ 	       }
