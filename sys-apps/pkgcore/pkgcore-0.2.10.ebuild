@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.8.ebuild,v 1.1 2007/03/18 03:04:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.10.ebuild,v 1.1 2007/03/27 12:22:40 marienz Exp $
 
 inherit distutils
 
