@@ -1,6 +1,9 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.73 2007/03/11 09:44:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.74 2007/03/27 19:16:17 pva Exp $
+
+  27 Mar 2007; <pva@gentoo.org> sim-0.9.4.3.ebuild:
+  Fetch restriction due to uncertainty in icons and sounds licensing.
 
 *sim-0.9.4.3 (11 Mar 2007)
 

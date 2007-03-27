@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3.ebuild,v 1.1 2007/03/11 09:44:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3.ebuild,v 1.2 2007/03/27 19:16:17 pva Exp $
 
 inherit kde-functions eutils flag-o-matic
 
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug kde spell ssl"
+
+RESTRICT="fetch"
 
 # kdebase-data provides the icon "licq.png"
 RDEPEND="kde? ( kde-base/kdelibs
@@ -27,8 +29,18 @@ RDEPEND="kde? ( kde-base/kdelibs
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	app-arch/zip
-	|| ( x11-proto/scrnsaverproto virtual/x11 )
-	>=sys-devel/libtool-1.5.22"
+	|| ( x11-proto/scrnsaverproto virtual/x11 )"
+
+pkg_nofetch() {
+	einfo "${CATEGORY}/${P} contains icons and sounds with unclear licensing and thus"
+	einfo "you have to download and it put into ${DISTDIR} by yourself."
+	einfo "Download location:"
+	echo
+	einfo "${SRC_URI}"
+	echo
+	einfo "See http://archives.gentoo.org/gentoo-dev/msg_144003.xml for further"
+	einfo "information."
+}
 
 pkg_setup() {
 	if use kde ; then
