@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.2.ebuild,v 1.8 2007/02/04 09:14:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.2.ebuild,v 1.9 2007/03/27 10:51:12 armin76 Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -10,7 +10,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 IUSE="accessibility cdr cups dvdr hal ldap"
 
