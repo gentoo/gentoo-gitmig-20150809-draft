@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/srecord
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.1 2007/03/26 19:42:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.2 2007/03/27 05:59:08 calchan Exp $
+
+  27 Mar 2007; Denis Dupeyron <calchan@gentoo.org> srecord-1.29.ebuild:
+  Successfully tested on amd64.
 
 *srecord-1.29 (26 Mar 2007)
 
