@@ -1,9 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.1 2007/03/27 13:46:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.2 2007/03/27 19:20:51 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 autotools flag-o-matic
 
@@ -17,18 +18,16 @@ KEYWORDS="~x86 ~amd64"
 
 # missing dependencies commons-compress, TVAnytimeAPI, jRegistryKey , gdata-calendar, gdata-client and jcom
 
-RDEPEND="|| ( ( x11-libs/libXt
-			x11-libs/libSM
-			x11-libs/libICE
-			x11-libs/libXext
-			x11-libs/libXtst
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-		)
-		virtual/x11
-	)
+RDEPEND="
 	>=virtual/jre-1.5
+	x11-libs/libXt
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libXext
+	x11-libs/libXtst
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
 	dev-java/junit
 	dev-java/commons-net
 	>=dev-java/jgoodies-forms-1.0.7
@@ -41,32 +40,30 @@ RDEPEND="|| ( ( x11-libs/libXt
 
 DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
-	>=dev-java/ant-core-1.5.4
-	app-arch/unzip
-	source? ( app-arch/zip )"
+	app-arch/unzip"
 
 LICENSE="GPL-2"
 
-IUSE="doc themes source"
+IUSE="themes"
 
 src_unpack() {
 	unpack ${P}-src.zip
 
-	cd ${S}
-	epatch ${FILESDIR}/tvbrowser-2.5-makefiles.patch
-	epatch ${FILESDIR}/${P}_noWin32.patch
-	epatch ${FILESDIR}/${P}_buildxml.patch
+	cd "${S}"
+	epatch "${FILESDIR}/tvbrowser-2.5-makefiles.patch"
+	epatch "${FILESDIR}/${P}_noWin32.patch"
+	epatch "${FILESDIR}/${P}_buildxml.patch"
 
 	#fix bug #170363
-	epatch ${FILESDIR}/tvbrowser-2.5_Localizer.patch
+	epatch "${FILESDIR}/tvbrowser-2.5_Localizer.patch"
 
 	# missing commons-compress, gdata-calendar, gdata-client
-	rm -r ${S}/src/calendarexportplugin
-	rm -r ${S}/src/bbcbackstagedataservice
+	rm -r "${S}/src/calendarexportplugin"
+	rm -r "${S}/src/bbcbackstagedataservice"
 
 	#we don't need this stuff
-	rm -r ${S}/deployment/win
-	rm -r ${S}/deployment/macosx
+	rm -r "${S}/deployment/win"
+	rm -r "${S}/deployment/macosx"
 
 	local J_ARCH
 	case "${ARCH}" in
@@ -75,17 +72,17 @@ src_unpack() {
 		*) die "not supported arch for this ebuild" ;;
 	esac
 
-	sed -i ${S}/deployment/x11/src/Makefile.am \
+	sed -i "${S}/deployment/x11/src/Makefile.am" \
 		-e "s-/lib/i386/-/lib/${J_ARCH}/-"
 
-	cd ${S}/tvdatakit/workspace/lib
-	rm *.jar
+	cd "${S}/tvdatakit/workspace/lib"
+	rm -v *.jar || die
 
 	java-pkg_jar-from poi
 	java-pkg_jar-from xerces-2
 
-	cd ${S}/lib
-	rm *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 
 	java-pkg_jar-from junit
 	java-pkg_jar-from commons-net
@@ -95,10 +92,13 @@ src_unpack() {
 	java-pkg_jar-from skinlf
 	java-pkg_jar-from l2fprod-common l2fprod-common-tasks.jar
 
+	# Fails to create javadocs without this
+	mkdir "${S}/public"
+
 	#fix bug #170364
-	cd ${S}/deployment/x11
+	cd "${S}/deployment/x11"
 	chmod u+x configure
-	rm src/libDesktopIndicator.so
+	rm src/libDesktopIndicator.so || die
 
 	# converting to unix line-endings
 	edos2unix missing depcomp
@@ -107,14 +107,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="runtime-linux"
-	use doc && antflags="${antflags} public-doc"
-	cd ${S}
-	mkdir public
-	eant ${antflags}
+	eant runtime-linux $(use_doc public-doc)
 
 	# second part: DesktopIndicator
-	cd ${S}/deployment/x11
+	cd "${S}/deployment/x11"
 	append-flags -fPIC
 	econf || die "econf failed"
 	emake || die "emake failed"
@@ -122,30 +118,27 @@ src_compile() {
 
 src_install() {
 	use source && java-pkg_dosrc src/*
-	use doc && java-pkg_dohtml -r doc/*
-	cd runtime/${PN}_linux
+	use doc && java-pkg_dojavadoc doc
+	cd runtime/${PN}_linux || die
 
 	java-pkg_dojar ${PN}.jar
 
-	local todir="/usr/share/${PN}"
-	if [ ${SLOT}q != "0q" ] ; then
-		todir="${todir}-${SLOT}"
-	fi
+	local todir="${JAVA_PKG_SHAREPATH}"
 
-	cp -a imgs ${D}/${todir}
-	cp -a icons ${D}/${todir}
-	cp -a plugins ${D}/${todir}
-	cp linux.properties ${D}/${todir}
+	cp -a imgs "${D}/${todir}" || die
+	cp -a icons "${D}/${todir}" || die
+	cp -a plugins "${D}/${todir}" || die
+	cp linux.properties "${D}/${todir}" || die
 
-	insinto "/usr/share/${PN}/themepacks"
-	doins themepacks/themepack.zip
+	insinto "${todir}/themepacks"
+	doins themepacks/themepack.zip || die
 
 	if use themes; then
-		cd "${D}/usr/share/${PN}/themepacks"
+		cd "${D}/${todir}/themepacks"
 		unpack allthemepacks.zip
 	fi
 
-	java-pkg_doso ${S}/deployment/x11/src/libDesktopIndicator.so
+	java-pkg_doso "${S}/deployment/x11/src/libDesktopIndicator.so"
 
 	java-pkg_dolauncher "tvbrowser" \
 		--jar ${todir}/lib/tvbrowser.jar \
@@ -153,8 +146,3 @@ src_install() {
 		--java_args " -Dpropertiesfile=${todir}/linux.properties"
 }
 
-pkg_postinst() {
-	elog
-	elog "If you want Systray you have to use a jre >= 1.5 !"
-	elog
-}

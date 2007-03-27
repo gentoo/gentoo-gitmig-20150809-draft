@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.12 2007/03/27 13:46:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.13 2007/03/27 19:20:51 betelgeuse Exp $
+
+  27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> tvbrowser-2.5.2.ebuild:
+  Ebuild cleanup.
 
 *tvbrowser-2.5.2 (27 Mar 2007)
 
