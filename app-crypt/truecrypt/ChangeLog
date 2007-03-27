@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.16 2007/03/24 19:38:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.17 2007/03/27 12:21:48 alonbl Exp $
+
+  27 Mar 2007; Alon Bar-Lev <alonbl@gentoo.org> truecrypt-4.2a-r3.ebuild,
+  truecrypt-4.3.ebuild:
+  Fixed rcscripts location
 
 *truecrypt-4.3 (24 Mar 2007)
 

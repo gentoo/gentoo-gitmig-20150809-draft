@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3.ebuild,v 1.1 2007/03/24 19:38:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3.ebuild,v 1.2 2007/03/27 12:21:48 alonbl Exp $
 
 #
 # NOTES:
@@ -67,7 +67,7 @@ src_install() {
 	dobin Linux/Cli/truecrypt
 	doman Linux/Cli/Man/truecrypt.1
 	dodoc Readme.txt 'Release/Setup Files/TrueCrypt User Guide.pdf'
-	insinto /lib/rcscripts/addons
+	insinto "/$(get_libdir)/rcscripts/addons"
 	newins "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh"
 }
 
