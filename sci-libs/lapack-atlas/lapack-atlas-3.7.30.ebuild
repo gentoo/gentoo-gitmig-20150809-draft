@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.24-r1.ebuild,v 1.1 2007/02/06 21:31:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.30.ebuild,v 1.1 2007/03/27 01:26:56 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
 MY_PN="${PN/lapack-/}"
 L_PN="lapack"
-L_PV="3.1.0"
+L_PV="3.1.1"
 
 DESCRIPTION="Full LAPACK implementation using available ATLAS routines"
 LICENSE="BSD"
@@ -25,14 +25,14 @@ RDEPEND="virtual/blas
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
-	~sci-libs/blas-atlas-3.7.24"
+	~sci-libs/blas-atlas-3.7.30"
 
 PROVIDE="virtual/lapack"
 
 FORTRAN="g77 gfortran"
 
 S="${WORKDIR}/ATLAS"
-S_LAPACK="${WORKDIR}/${L_PN}-${L_PV}"
+S_LAPACK="${WORKDIR}/${L_PN}-lite-${L_PV}"
 BLD_DIR="${S}/gentoo-build"
 RPATH="${DESTTREE}/$(get_libdir)/${L_PN}/${MY_PN}"
 
@@ -62,7 +62,8 @@ src_unpack() {
 		|| die "failed to install war"
 
 	# make sure the compile picks up the proper includes
-	sed -e 's|INCLUDES =|INCLUDES = -I/usr/include/atlas/|'  \
+	sed -e "s|INCLUDES =|INCLUDES = -I/usr/include/atlas/|"  \
+		-e "s:= gcc:= $(tc-getCC) ${CFLAGS}:"  \
 		-i CONFIG/src/SpewMakeInc.c || \
 		die "failed to append proper includes"
 
@@ -85,6 +86,7 @@ src_unpack() {
 	compdefs="${compdefs} -C sm '$(tc-getCC)' -F sm '${CFLAGS}'"
 	compdefs="${compdefs} -C dm '$(tc-getCC)' -F dm '${CFLAGS}'"
 	compdefs="${compdefs} -C if '${FORTRANC}' -F if '${FFLAGS}'"
+	compdefs="${compdefs} -Ss pmake '\$(MAKE) ${MAKEOPTS}'"
 	compdefs="${compdefs} -Si cputhrchk 0 ${archselect}"
 
 
