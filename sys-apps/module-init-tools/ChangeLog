@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.124 2007/02/14 03:36:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.125 2007/03/27 23:22:19 spb Exp $
+
+  27 Mar 2007; Stephen Bennett <spb@gentoo.org>
+  module-init-tools-3.2.2-r2.ebuild:
+  mips stable
 
   14 Feb 2007; Jeroen Roovers <jer@gentoo.org>
   module-init-tools-3.2.2-r2.ebuild:
