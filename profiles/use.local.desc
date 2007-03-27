@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2709 2007/03/27 22:15:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2710 2007/03/27 22:19:41 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -684,6 +684,7 @@ gnome-extra/nautilus-sendto:thunderbird - Enable support for thunderbird
 gnome-extra/sensors-applet:hddtemp - Enable support the hddtemp daemon
 gnome-extra/sensors-applet:nvidia - Enable support for nvidia sensors
 gnome-extra/yelp:beagle - Enable beagle support
+gnome-extra/yelp:xulrunner - Enable support for xulrunner instead of firefox
 gnustep-apps/cynthiune:arts - Enable support for aRts
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-apps/gworkspace:pdfkit - Enable PDFkit bindings
