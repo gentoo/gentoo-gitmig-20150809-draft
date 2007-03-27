@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7047 2007/03/27 05:28:38 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7048 2007/03/27 15:51:36 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# William L. Thomson Jr. <wltjr@gentoo.org> (27 Mar 2007)
+# Stale/dead upstream, breaks with newer versions of itext.
+# After 30 days will be moved to junkyard overlay. If you
+# have interest or use this package please email java@gentoo.org
+dev-java/datavision
 
 # <falco@gentoo.org> (26 Mar 2007)
 # Masked for security issues #153495
