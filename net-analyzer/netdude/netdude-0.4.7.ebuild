@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/netdude-0.4.7.ebuild,v 1.2 2006/11/28 00:24:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/netdude-0.4.7.ebuild,v 1.3 2007/03/27 22:21:05 jokey Exp $
 
 DESCRIPTION="Netdude is a front-end to the libnetdude packet manipulation library"
 HOMEPAGE="http://netdude.sourceforge.net/index.html"
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	econf $(use_enable doc gtk-doc) || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
