@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.5-r1.ebuild,v 1.1 2007/03/19 19:44:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.5-r1.ebuild,v 1.2 2007/03/27 17:43:22 ticho Exp $
 
 inherit eutils
 
@@ -111,6 +111,7 @@ src_install() {
 	if use milter ; then
 		cd "${S}/helper-progs"
 		einstall
+		cd "${S}"
 	fi
 
 	for i in whitelist blacklist spam_lovers; do
