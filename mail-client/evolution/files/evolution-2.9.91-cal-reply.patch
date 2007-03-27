@@ -1,0 +1,36 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN evolution-2.9.91.orig/calendar/gui/itip-utils.c evolution-2.9.91/calendar/gui/itip-utils.c
+--- evolution-2.9.91.orig/calendar/gui/itip-utils.c	2007-01-08 09:50:33.000000000 -0500
++++ evolution-2.9.91/calendar/gui/itip-utils.c	2007-02-15 17:37:12.000000000 -0500
+@@ -1476,28 +1476,28 @@ reply_to_calendar_comp (ECalComponentIti
+ 		body = "<br><br><hr><br><b>______ Original Appointment ______ </b><br><br><table>";
+ 
+ 		if (orig_from && *orig_from){
+-			char *part1 = (char *) malloc (sizeof (char) * 200);
++			char *part1 = (char *) malloc (50 + strlen (orig_from));
+ 			sprintf (part1, "<tr><td><b>From</b></td><td>:</td><td>%s</td></tr>", orig_from);
+ 			body = g_strconcat (body, (gchar *)part1, NULL);
+ 			g_free (part1);
+ 		}
+ 
+ 		if (subject){
+-			char *part2 = (char *) malloc (sizeof (char) * 100);
++			char *part2 = (char *) malloc (53 + strlen (subject));
+ 			sprintf (part2, "<tr><td><b>Subject</b></td><td>:</td><td>%s</td></tr>", subject);
+ 			body = g_strconcat (body, (gchar *)part2, NULL);
+ 			g_free (part2);
+ 		}
+ 			
+ 		{
+-			char *part3 = (char *) malloc (sizeof (char) * 100);
++			char *part3 = (char *) malloc (54 + strlen (location));
+ 			sprintf (part3, "<tr><td><b>Location</b></td><td>:</td><td>%s</td></tr>", location);
+ 			body = g_strconcat (body, (gchar *)part3, NULL);
+ 			g_free (part3);
+ 		}
+ 
+ 		if (time){
+-			char *part4 = (char *) malloc (sizeof (char) * 100);
++			char *part4 = (char *) malloc (64 + strlen (time));
+ 			sprintf (part4, "<tr><td><b>Time</b></td><td>:</td><td>%s</td></tr></table><br>", time);
+ 			body = g_strconcat (body, (gchar *)part4, NULL);
+ 			g_free (part4);
