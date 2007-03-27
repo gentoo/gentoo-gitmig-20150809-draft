@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.1.ebuild,v 1.1 2007/03/25 19:27:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.1.ebuild,v 1.2 2007/03/27 15:13:05 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -26,7 +26,7 @@ src_unpack() {
 	mkdir "${WORKDIR}/src" && cd "${WORKDIR}/src"
 	unpack ${A}
 
-	epatch ${FILESDIR}/compile_xml.patch
+	epatch ${FILESDIR}/${PV}-compile_xml.patch
 
 	mkdir -p "${WORKDIR}/build/bin" || die
 	cd "${WORKDIR}/build/bin" || die

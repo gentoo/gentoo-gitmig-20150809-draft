@@ -1,5 +1,5 @@
---- compile.xml	2007-03-25 14:25:16.000000000 -0400
-+++ datavision-1.0.0/src/ant/compile.xml	2007-03-25 14:27:28.000000000 -0400
+--- compile.xml	2007-03-27 09:11:06.000000000 -0400
++++ src/ant/compile.xml	2007-03-27 09:11:46.000000000 -0400
 @@ -34,8 +34,10 @@
  
      <target name="compile" description="--> compiles the iText code">
