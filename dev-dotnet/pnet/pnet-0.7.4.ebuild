@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.7.4.ebuild,v 1.8 2007/01/19 07:18:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.7.4.ebuild,v 1.9 2007/03/27 14:06:31 armin76 Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ia64 ppc ~ppc-macos ppc64 x86"
+KEYWORDS="amd64 arm hppa ia64 ppc ~ppc-macos ppc64 x86"
 IUSE=""
 
 DEPEND=">=dev-util/treecc-0.3.0"

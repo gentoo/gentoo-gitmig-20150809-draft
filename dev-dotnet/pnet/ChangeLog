@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.39 2007/01/28 06:20:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.40 2007/03/27 14:06:31 armin76 Exp $
+
+  27 Mar 2007; Raúl Porcel <armin76@gentoo.org> pnet-0.7.4.ebuild:
+  ia64 stable wrt bug 153036
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> pnet-0.6.10.ebuild,
   pnet-0.6.12.ebuild, pnet-0.7.0.ebuild, pnet-0.7.2.ebuild:
