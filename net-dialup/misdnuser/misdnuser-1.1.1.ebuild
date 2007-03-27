@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/misdnuser-1.0.3.ebuild,v 1.1 2006/11/18 20:59:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/misdnuser-1.1.1.ebuild,v 1.1 2007/03/27 10:35:25 genstef Exp $
 
 MY_P=mISDNuser-${PV//./_}
 DESCRIPTION="mISDN (modular ISDN) kernel link library and includes"
