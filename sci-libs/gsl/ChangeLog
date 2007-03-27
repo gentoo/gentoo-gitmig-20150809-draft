@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.27 2007/03/15 14:05:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.28 2007/03/27 19:29:25 mcummings Exp $
+
+  27 Mar 2007; Michael Cummings <mcummings@gentoo.org> gsl-1.9.ebuild:
+  Tested on swarm for USE-flag changes in dev-perl/PDL
 
   15 Mar 2007; Markus Dittrich <markusle@gentoo.org> gsl-1.9.ebuild:
   Some general clean-ups thanks to Santiago M. Mola Velasco 
