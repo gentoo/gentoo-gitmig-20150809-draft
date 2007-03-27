@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.77 2007/03/27 09:34:12 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.78 2007/03/27 11:12:20 uberlord Exp $
+
+  27 Mar 2007; Roy Marples <uberlord@gentoo.org> lcms-1.16.ebuild:
+  Refresh install-sh from libtool so we correctly install on FreeBSD.
+  Re-keyworded ~x86-fbsd.
 
   27 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org> lcms-1.14-r1.ebuild,
   lcms-1.15.ebuild, lcms-1.16.ebuild:
