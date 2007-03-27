@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.14 2007/02/06 20:25:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.15 2007/03/27 15:23:08 armin76 Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
