@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.232 2007/03/05 22:16:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.233 2007/03/27 19:16:57 armin76 Exp $
+
+  27 Mar 2007; Raúl Porcel <armin76@gentoo.org> xchat-2.8.0.ebuild:
+  ia64 stable wrt bug 167328
 
   05 Mar 2007; Sven Wegener <swegener@gentoo.org>
   -files/xc268-fix-teprivmsg.diff, -files/xchat-2.6.4-fix-cursor.patch,
