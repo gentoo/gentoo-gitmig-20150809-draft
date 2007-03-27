@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.58 2007/03/27 01:10:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.59 2007/03/27 01:34:31 vapier Exp $
 #
 # Maintainer: amd64@gentoo.org / toolchain@gentoo.org
 #
@@ -9,7 +9,7 @@
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-inherit toolchain-funcs
+#inherit toolchain-funcs # cant do this because it includes us
 
 # has_multilib_profile:
 # Return true if the current profile is a multilib profile and lists more than
