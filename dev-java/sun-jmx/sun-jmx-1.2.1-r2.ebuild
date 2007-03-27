@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/sun-jmx-1.2.1-r2.ebuild,v 1.3 2006/12/09 09:25:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/sun-jmx-1.2.1-r2.ebuild,v 1.4 2007/03/27 20:02:41 betelgeuse Exp $
 
-inherit java-pkg-2 eutils
+inherit java-pkg-2 eutils java-ant-2
 
 MY_PN=${PN//sun-/}
 MY_P=${MY_PN}-${PV//./_}
@@ -26,7 +26,7 @@ DOWNLOADSITE="http://wwws.sun.com/software/communitysource/jmx/download.html"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i.orig -r -e 's/="src"/="src\/jmxri"/g' build.xml || die "sed failed"
 }
 
@@ -42,13 +42,11 @@ pkg_nofetch() {
 	einfo
 }
 
-src_compile() {
-	eant jar $(use_doc examples)
-}
+EANT_DOC_TARGET="examples"
 
 src_install() {
 	java-pkg_dojar lib/*.jar
-	use doc && java-pkg_dohtml -r docs/*
+	use doc && java-pkg_dohtml -r doc/*
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
 		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
