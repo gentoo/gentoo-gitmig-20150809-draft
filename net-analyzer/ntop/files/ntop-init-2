@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+        need net
+}
+
+checkconfig() {
+        if [ ! -e /var/lib/ntop/ntop_pw.db ]; then
+		eerror "You need to set a password first by running"
+		eerror "ntop --set-admin-password"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting ntop"
+	start-stop-daemon --start --quiet --exec /usr/bin/ntop -- -d -L ${NTOP_OPTS} >/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ntop"
+	start-stop-daemon --stop --quiet --retry 5 --pidfile /var/lib/ntop/ntop.pid
+	eend $?
+}
