@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.8 2007/03/27 13:30:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.9 2007/03/27 20:32:27 welp Exp $
+
+  27 Mar 2007; Peter Weller <welp@gentoo.org> hunit-1.1.ebuild:
+  Stable on amd64 wrt bug 170650
 
   27 Mar 2007; Joseph Jezak <josejx@gentoo.org> hunit-1.1.ebuild:
   Marked ppc stable for bug #170650.

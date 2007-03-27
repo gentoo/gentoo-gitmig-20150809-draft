@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.8 2007/03/27 13:31:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.9 2007/03/27 20:33:57 welp Exp $
+
+  27 Mar 2007; Peter Weller <welp@gentoo.org> network-1.0.ebuild:
+  Stable on amd64 wrt bug 170650
 
   27 Mar 2007; Joseph Jezak <josejx@gentoo.org> network-1.0.ebuild:
   Marked ppc stable for bug #170650.
