@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sqlite3-ruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.14 2007/03/04 00:15:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.15 2007/03/27 19:09:09 armin76 Exp $
+
+  27 Mar 2007; Raúl Porcel <armin76@gentoo.org> sqlite3-ruby-1.2.1.ebuild:
+  Add ~ia64 wrt bug 168110
 
   04 Mar 2007; Marius Mauch <genone@gentoo.org> sqlite3-ruby-1.2.1.ebuild:
   Replacing einfo with elog
