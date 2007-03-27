@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.8 2007/03/25 12:01:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.9 2007/03/27 09:24:53 genstef Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="foomaticdb snmp X qt3 ppds scanner"
+IUSE="cups foomaticdb snmp X qt3 ppds scanner"
 
 DEPEND=">=dev-lang/python-2.2.0
 	snmp? ( >=net-analyzer/net-snmp-5.0.9 )

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.56 2007/03/25 19:19:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.57 2007/03/27 09:24:53 genstef Exp $
+
+  27 Mar 2007; <genstef@gentoo.org> hplip-1.6.10.ebuild, hplip-1.7.3.ebuild:
+  Add missing cups to IUSE thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> in bug 172038
 
   25 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7-r3.ebuild:
   Remove old ebuild.
