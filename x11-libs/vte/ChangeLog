@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.144 2007/03/27 03:02:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.145 2007/03/27 14:36:15 dang Exp $
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> vte-0.16.0-r1.ebuild:
+  Remove pcre option; it's broken
 
 *vte-0.16.0-r1 (27 Mar 2007)
 
