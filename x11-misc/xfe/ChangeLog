@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.36 2007/03/13 20:22:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.37 2007/03/27 19:09:24 welp Exp $
+
+  27 Mar 2007; Peter Weller <welp@gentoo.org> ChangeLog:
+  Stable on amd64 wrt bug 168148
 
 *xfe-0.99 (13 Mar 2007)
 
