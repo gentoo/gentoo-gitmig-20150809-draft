@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-de
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.5 2006/10/27 22:24:38 pylon Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.6 2007/03/27 18:23:11 welp Exp $
+
+  27 Mar 2007; Peter Weller <welp@gentoo.org> vim-spell-de-20051008.ebuild:
+  Stable on amd64 wrt bug 169999
 
   27 Oct 2006; Lars Weiler <pylon@gentoo.org> vim-spell-de-20051008.ebuild:
   vimspell dictionaries also work on PowerPC.  Added ~pcc.
