@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/flup-0.5_p2307.ebuild,v 1.1 2007/01/13 22:45:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/flup-0.5_p2307.ebuild,v 1.2 2007/03/27 16:27:44 armin76 Exp $
 
 inherit distutils versionator
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 
 MY_PV=$(get_version_component_range 3-)
 MY_P=${PN}-r${MY_PV/p}
