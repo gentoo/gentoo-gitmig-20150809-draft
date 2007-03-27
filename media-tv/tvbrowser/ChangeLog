@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.11 2007/03/11 16:15:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.12 2007/03/27 13:46:50 zzam Exp $
+
+*tvbrowser-2.5.2 (27 Mar 2007)
+
+  27 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/tvbrowser-2.5.2_buildxml.patch,
+  +files/tvbrowser-2.5.2_noWin32.patch, +tvbrowser-2.5.2.ebuild:
+  Proxy commit for Mirko Günther: Version bumped. Cleanup of bundled jars.
+  Register lib instead of manually tweaking the libpath. Bug #170947.
 
 *tvbrowser-2.5-r1 (11 Mar 2007)
 

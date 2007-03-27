@@ -1,0 +1,116 @@
+diff -uwNr tvbrowser-2.5.2_orig/src/tvbrowser/TVBrowser.java tvbrowser-2.5.2_src/src/tvbrowser/TVBrowser.java
+--- tvbrowser-2.5.2_orig/src/tvbrowser/TVBrowser.java	2007-03-22 23:21:48.000000000 +0100
++++ tvbrowser-2.5.2_src/src/tvbrowser/TVBrowser.java	2007-03-25 15:52:34.000000000 +0200
+@@ -85,10 +85,6 @@
+ import util.ui.UiUtilities;
+ import util.ui.textcomponentpopup.TextComponentPopupEventQueue;
+ 
+-import ca.beq.util.win32.registry.RegistryKey;
+-import ca.beq.util.win32.registry.RegistryValue;
+-import ca.beq.util.win32.registry.RootKey;
+-
+ import com.jgoodies.looks.LookUtils;
+ import com.jgoodies.looks.Options;
+ import com.l2fprod.gui.plaf.skin.SkinLookAndFeel;
+@@ -383,52 +379,6 @@
+             }.start();
+             ChannelList.completeChannelLoading();
+             
+-            if(Launch.isOsWindowsNtBranch()) {
+-              try {
+-                RegistryKey desktopSettings = new RegistryKey(RootKey.HKEY_CURRENT_USER, "Control Panel\\Desktop");
+-                RegistryValue autoEnd = desktopSettings.getValue("AutoEndTasks");
+-              
+-                if(autoEnd.getData().equals("1")) {
+-                  RegistryValue killWait = desktopSettings.getValue("WaitToKillAppTimeout");
+-              
+-                  int i = Integer.parseInt(killWait.getData().toString());
+-              
+-                  if(i < 5000) {
+-                    JOptionPane pane = new JOptionPane();
+-                    
+-                    String cancel = mLocalizer.msg("registryCancel","Close TV-Browser");
+-                    
+-                    pane.setOptions(new String[] {Localizer.getLocalization(Localizer.I18N_OK),cancel});
+-                    pane.setOptionType(JOptionPane.YES_NO_OPTION);
+-                    pane.setMessageType(JOptionPane.WARNING_MESSAGE);
+-                    pane.setMessage(mLocalizer.msg("registryWarning","The fast shutdown of Windows is activated.\nThe timeout to wait for before Windows is closing an application is too shot,\nto let TV-Browser enough time to save all settings.\n\nThe setting hasn't the default value. It was changed by a tool or by you.\nTV-Browser will now try to change the timeout."));
+-                    
+-                    pane.setInitialValue(mLocalizer.msg("registryCancel","Close TV-Browser"));
+-                    
+-                    JDialog d = pane.createDialog(UiUtilities.getLastModalChildOf(mainFrame), UIManager.getString("OptionPane.messageDialogTitle"));
+-                    d.setModal(true);
+-                    UiUtilities.centerAndShow(d);
+-                    
+-                    if(pane.getValue() == null || pane.getValue().equals(cancel)) {
+-                      mainFrame.quit();
+-                    }
+-                    else {
+-                      try {
+-                        killWait.setData("5000");
+-                        desktopSettings.setValue(killWait);
+-                        JOptionPane.showMessageDialog(UiUtilities.getLastModalChildOf(mainFrame),
+-                            mLocalizer.msg("registryChanged","The timeout was changed successfully.\nPlease reboot Windows!"));
+-                      }catch(Exception registySetting) {
+-                        JOptionPane.showMessageDialog(UiUtilities.getLastModalChildOf(mainFrame),
+-                            mLocalizer.msg("registryNotChanged","<html>The Registry value couldn't be changed. Maybe you haven't the right to do it.<br>If it is so contact you Administrator and let him do it for you.<br><br><b><Attention:/b> The following description is for experts. If you change or delete the wrong value in the Registry you could destroy your Windows installation.<br><br>To get no warning on TV-Browser start the Registry value <b>WaitToKillAppTimeout</b> in the Registry path<br><b>HKEY_CURRENT_USER\\Control Panel\\Desktop</b> have to be at least <b>5000</b> or the value for <b>AutoEndTasks</b> in the same path have to be <b>0</b>.</html>"),
+-                            Localizer.getLocalization(Localizer.I18N_ERROR),JOptionPane.ERROR_MESSAGE);
+-                      }
+-                    }
+-                  }
+-                }
+-              }catch(Throwable registry) {}
+-            }
+-            
+             // check if user should select picture settings
+             if(currentVersion != null && currentVersion.compareTo(new Version(2,22))<0) {
+               TvBrowserPictureSettingsUpdateDialog.createAndShow(mainFrame);
+diff -uwNr tvbrowser-2.5.2_orig/src/tvbrowser/ui/settings/StartupSettingsTab.java tvbrowser-2.5.2_src/src/tvbrowser/ui/settings/StartupSettingsTab.java
+--- tvbrowser-2.5.2_orig/src/tvbrowser/ui/settings/StartupSettingsTab.java	2007-03-21 17:24:16.000000000 +0100
++++ tvbrowser-2.5.2_src/src/tvbrowser/ui/settings/StartupSettingsTab.java	2007-03-25 15:41:01.000000000 +0200
+@@ -39,9 +39,6 @@
+ import util.ui.Localizer;
+ import util.ui.UiUtilities;
+ 
+-import ca.beq.util.win32.registry.RegistryKey;
+-import ca.beq.util.win32.registry.RootKey;
+-
+ import com.jgoodies.forms.factories.Borders;
+ import com.jgoodies.forms.factories.DefaultComponentFactory;
+ import com.jgoodies.forms.layout.CellConstraints;
+@@ -92,35 +89,6 @@
+         .getBoolean());
+     mSettingsPn.add(mShowSplashChB, cc.xy(2, 5));
+ 
+-    if (System.getProperty("os.name").toLowerCase().startsWith("windows") && !TVBrowser.isTransportable()) {
+-      layout.appendRow(new RowSpec("3dlu"));
+-      layout.appendRow(new RowSpec("pref"));
+-      
+-      try {
+-        RegistryKey shellFolders = new RegistryKey(RootKey.HKEY_CURRENT_USER, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders");
+-        String path = shellFolders.getValue("Startup").getData().toString();
+-        
+-        if(path == null || path.length() < 1 || !(new File(path)).isDirectory())
+-          throw new Exception();
+-        
+-        mLinkFile = new File(path,"TV-Browser.url");        
+-        mLinkUrl = new UrlFile(mLinkFile);
+-          
+-        if(mLinkFile.exists())
+-          try {
+-            if (!mLinkUrl.getUrl().equals((new File("tvbrowser.exe")).getAbsoluteFile().toURL()))
+-              createLink(mLinkUrl);
+-          }catch(Exception linkException) {
+-            mLinkFile.delete();
+-          }
+-
+-        mAutostartWithWindows = new JCheckBox(mLocalizer.msg("autostart","Start TV-Browser with Windows"),
+-            mLinkFile.isFile());
+-        
+-        mSettingsPn.add(mAutostartWithWindows, cc.xy(2, 7));
+-      } catch (Throwable e) {}
+-    }
+-
+     return mSettingsPn;
+   }
+ 

@@ -1,0 +1,123 @@
+diff -uwNr tvbrowser-2.5.2_orig/build.xml tvbrowser-2.5.2_src/build.xml
+--- tvbrowser-2.5.2_orig/build.xml	2007-03-21 23:02:14.000000000 +0100
++++ tvbrowser-2.5.2_src/build.xml	2007-03-27 12:12:08.000000000 +0200
+@@ -99,15 +99,6 @@
+ |
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+ 
+-  <!-- Creates an .app file for Mac OS X  -->
+-  <taskdef name="jarbundler"
+-           classpath="deployment/macosx/jarbundler-1.4.jar"
+-           classname="com.loomcom.ant.tasks.jarbundler.JarBundler"/>
+-  
+-  <!-- Creates a Windows Executable using launch4j (http://launch4j.sf.net) -->
+-	<taskdef name="launch4j"
+-	    classname="net.sf.launch4j.ant.Launch4jTask"
+-	    classpath="${deployment.dir}/win/launch4j/launch4j.jar:${deployment.dir}/win/launch4j/lib/xstream.jar" />
+   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ |
+ |  Display all targets
+@@ -292,39 +283,18 @@
+     <mkdir dir="${tvbrowser-default.runtime.dir}"/>
+ 	<mkdir dir="${tvbrowser-default.runtime.dir}/plugins"/>
+ 
+-    <!-- Extract the libraries for the tvbrowser.jar into the temp.dir -->
+-    <mkdir dir="${unpacked.dir}/skinlf.jar"/>
+-    <unjar src="${lib.dir}/skinlf.jar" dest="${unpacked.dir}/skinlf.jar"/>
+-    <unjar src="${lib.dir}/bsh-2.0b1.jar" dest="${unpacked.dir}/bsh-2.0b1.jar"/>
+-    <unjar src="${lib.dir}/forms-1.0.7.jar" dest="${unpacked.dir}/forms-1.0.7.jar"/>
+-    <unjar src="${lib.dir}/looks-2.0.4.jar" dest="${unpacked.dir}/looks-2.0.4.jar"/>
+-    <unjar src="${lib.dir}/l2fprod-common-tasks.jar" dest="${unpacked.dir}/l2fprod-common-tasks.jar"/>
+-    <unjar src="${lib.dir}/jRegistryKey.jar" dest="${unpacked.dir}/jRegistryKey.jar" /> 	 
+-    <unjar src="${lib.dir}/TVAnytimeAPI.jar" dest="${unpacked.dir}/TVAnytimeAPI.jar" /> 	 
+-    <unjar src="${lib.dir}/commons-compress-20050911.jar" dest="${unpacked.dir}/commons-compress-20050911.jar" />
+-    <unjar src="${lib.dir}/gdata-calendar-1.0.jar" dest="${unpacked.dir}/gdata-calendar-1.0.jar" /> 	 
+-    <unjar src="${lib.dir}/gdata-client-1.0.jar" dest="${unpacked.dir}/gdata-client-1.0.jar" /> 	   	
+-    <unjar src="${lib.dir}/jcom.jar" dest="${unpacked.dir}/jcom.jar" />
+-
+     <!-- Pack the tvbrowser.jar -->
+     <jar jarfile="${tvbrowser-default.runtime.dir}/tvbrowser.jar"
+-         compress="false"
+-         index="true">
++         compress="false">
+       <manifest>
+         <attribute name="Main-Class" value="tvbrowser.TVBrowser"/>
++        <attribute name="Class-Path" value="file:///usr/share/jgoodies-looks-2.0/lib/looks.jar file:///usr/share/skinlf/lib/skinlf.jar file:///usr/share/bsh/lib/bsh.jar file:///usr/share/jgoodies-forms/lib/forms.jar file:///usr/share/l2fprod-common/lib/l2fprod-common-tasks.jar file:///usr/share/commons-net/lib/commons-net.jar"/>
+       </manifest>
+       <fileset dir="${classes.dir}" includes="tvbrowser/**"/>
+       <fileset dir="${classes.dir}" includes="devplugin/**"/>
+       <fileset dir="${classes.dir}" includes="tvdataservice/**"/>
+       <fileset dir="${classes.dir}" includes="util/**"/>
+       <fileset dir="${classes.dir}" includes="com/**"/>
+-      <fileset dir="${unpacked.dir}/skinlf.jar" includes="com/**"/>
+-   	  <fileset dir="${unpacked.dir}/skinlf.jar" includes="org/**"/>
+-      <fileset dir="${unpacked.dir}/bsh-2.0b1.jar" includes="bsh/**"/>
+-      <fileset dir="${unpacked.dir}/forms-1.0.7.jar" includes="com/**"/>
+-      <fileset dir="${unpacked.dir}/looks-2.0.4.jar" includes="com/**"/>
+-      <fileset dir="${unpacked.dir}/l2fprod-common-tasks.jar" includes="com/**"/>
+-      <fileset dir="${unpacked.dir}/jRegistryKey.jar" includes="ca/**" />
+     </jar>
+ 
+     <!-- Pack the plugin jars -->
+@@ -350,13 +320,6 @@
+          compress="false">
+       <fileset dir="${classes.dir}" includes="newsplugin/**"/>
+     </jar>
+-    <jar jarfile="${tvbrowser-default.runtime.dir}/plugins/CalendarExportPlugin.jar"
+-         compress="false">
+-        <fileset dir="${classes.dir}" includes="calendarexportplugin/**"/>
+-        <fileset dir="${unpacked.dir}/gdata-calendar-1.0.jar" includes="**" /> 	 
+-        <fileset dir="${unpacked.dir}/gdata-client-1.0.jar" includes="**" /> 	 
+-        <fileset dir="${unpacked.dir}/jcom.jar" includes="**" />
+-    </jar>
+     <jar jarfile="${tvbrowser-default.runtime.dir}/plugins/ClipboardPlugin.jar"
+          compress="false">
+       <fileset dir="${classes.dir}" includes="clipboardplugin/**"/>
+@@ -454,10 +417,6 @@
+ 	    <fileset dir="images/themes" includes="**/*"/>
+     </copy>
+ 
+-    <!-- Extract the libraries for the tvbrowser.jar into the temp.dir -->
+-    <mkdir dir="${unpacked.dir}/commons-net.jar"/>
+-    <unjar src="${lib.dir}/commons-net.jar" dest="${unpacked.dir}/commons-net.jar"/>
+-
+   </target>
+ 
+ 
+@@ -555,11 +514,6 @@
+     <mkdir dir="${tvdatatools.runtime.dir}"/>
+     <mkdir dir="${tvdatatools.runtime.dir}/prepared"/>
+ 
+-    <!-- Extract the libraries for the jars into the temp.dir -->
+-    <mkdir dir="${unpacked.dir}/commons-net.jar"/>
+-    <unjar src="${lib.dir}/commons-net.jar" dest="${unpacked.dir}/commons-net.jar"/>
+-    <unjar src="${lib.dir}/looks-2.0.4.jar" dest="${unpacked.dir}/looks-2.0.4.jar"/>
+-
+     <!-- Pack the MirrorUpdater.jar -->
+     <jar jarfile="${tvdatatools.runtime.dir}/MirrorUpdater.jar"
+          compress="false"
+@@ -578,8 +532,6 @@
+       <fileset dir="${classes.dir}" includes="tvbrowser/core/Settings*"/>
+       <fileset dir="${classes.dir}" includes="tvbrowser/core/plugin/DefaultSettings*"/>-->
+       <fileset dir="${classes.dir}" includes="tvbrowser/**"/>
+-      <fileset dir="${unpacked.dir}/commons-net.jar" includes="org/**"/>
+-      <fileset dir="${unpacked.dir}/looks-2.0.4.jar" includes="com/**"/>
+     </jar>
+ 
+     <!-- Pack the PrimaryDataManager.jar -->
+@@ -597,7 +549,6 @@
+       <fileset dir="${classes.dir}" includes="devplugin/**"/>
+       <fileset dir="${classes.dir}" includes="util/**"/>
+       <fileset dir="${classes.dir}" includes="tvbrowser/**"/>
+-      <fileset dir="${unpacked.dir}/looks-2.0.4.jar" includes="com/**"/>
+     </jar>
+ 
+     <!-- Pack the PDSRunner.jar -->
+@@ -615,7 +566,6 @@
+       <fileset dir="${classes.dir}" includes="devplugin/**"/>
+       <fileset dir="${classes.dir}" includes="util/**"/>
+       <fileset dir="${classes.dir}" includes="tvbrowser/**"/>
+-      <fileset dir="${unpacked.dir}/looks-2.0.4.jar" includes="com/**"/>
+     </jar>
+ 
+     <!-- Copy the file(s) -->
