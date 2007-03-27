@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.79 2007/01/30 21:13:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.80 2007/03/27 22:16:01 dang Exp $
+
+*vino-2.18.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +vino-2.18.0.ebuild:
+  gnome 2.18.0
 
 *vino-2.16.0-r1 (30 Jan 2007)
 
