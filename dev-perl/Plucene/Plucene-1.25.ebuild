@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.25.ebuild,v 1.5 2007/01/22 14:11:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.25.ebuild,v 1.6 2007/03/27 11:50:33 ticho Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/T/TM/TMTM/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
