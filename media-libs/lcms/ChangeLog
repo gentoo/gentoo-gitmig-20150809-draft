@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.76 2007/03/14 16:34:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.77 2007/03/27 09:34:12 lucass Exp $
+
+  27 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org> lcms-1.14-r1.ebuild,
+  lcms-1.15.ebuild, lcms-1.16.ebuild:
+  Call swig_lcms in src_unpack (bug #148728). Dropped ppc-macos.
 
 *lcms-1.16 (14 Mar 2007)
 
