@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.90 2007/03/10 14:14:14 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.91 2007/03/27 06:22:07 pva Exp $
+
+*cacti-0.8.6j-r4 (27 Mar 2007)
+
+  27 Mar 2007; <pva@gentoo.org> -cacti-0.8.6j-r2.ebuild,
+  -cacti-0.8.6j-r3.ebuild, +cacti-0.8.6j-r4.ebuild:
+  Patch from upstream (Graph Debug Apache Lockup Issue).
 
   10 Mar 2007; Matti Bickel <mabi@gentoo.org> cacti-0.8.6i-r1.ebuild:
   ppc stable (bug #155147)
