@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.190 2007/03/19 20:49:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.191 2007/03/27 20:32:06 dang Exp $
+
+*gnome-games-2.18.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gnome-games-2.17.92-guile-switch.patch, +gnome-games-2.18.0.ebuild:
+  gnome 2.18.0
 
   19 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
   gnome-games-2.16.2.ebuild, gnome-games-2.16.3.ebuild:

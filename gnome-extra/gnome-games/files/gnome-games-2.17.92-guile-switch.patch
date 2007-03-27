@@ -1,0 +1,52 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN gnome-games-2.17.92.orig/configure.in gnome-games-2.17.92/configure.in
+--- gnome-games-2.17.92.orig/configure.in	2007-02-27 00:12:12.000000000 -0500
++++ gnome-games-2.17.92/configure.in	2007-02-28 17:12:32.000000000 -0500
+@@ -35,23 +35,31 @@ dnl Checking for the header file is basi
+ dnl out if the _development_ files are present. guile-config returns
+ dnl a value regardless of what is actually installed. The problem
+ dnl with this is if the header ever gets moved to a non-default location.
+-AC_CHECK_HEADER([libguile.h], [GUILE_PRESENT=yes], [GUILE_PRESENT=no])
+-if test "$GUILE_PRESENT" = "yes" ; then
+-  GUILE_CFLAGS=`guile-config compile`
+-  GUILE_LDFLAGS=`guile-config link`
+-  AC_SUBST(GUILE_CFLAGS)
+-  AC_SUBST(GUILE_LDFLAGS)
+-  dnl On 64-bit machines guile < 1.6.5 causes a crash in aisleriot.
+-  dnl But since 1.6.5 is only a few months old as I write this we 
+-  dnl will be more lenient with 32-bit machines.
+-  if uname -m | grep 64 ; then
+-     GUILE_TARGET="1.6.5"
+-  else 
+-     GUILE_TARGET="1.6.0"
+-  fi
+-  if test `guile -c '(if (string<? (version) (cadr (command-line))) (display "no") (display "yes")) (newline)' $GUILE_TARGET` != yes ; then 
+-    GUILE_PRESENT="no"
+-    AC_MSG_WARN([Your version of guile is too old, please install a recent guile package (>= $GUILE_TARGET)])
++AC_MSG_CHECKING([whether guile support is requested])
++AC_ARG_ENABLE([guile],
++  AS_HELP_STRING([--enable-guile],[Enable guile use for Aisleriot (default=yes)]),
++  [enable_guile=$enableval],
++  [enable_guile=yes])
++AC_MSG_RESULT([$enable_guile])
++if test x$enable_guile = xyes; then
++  AC_CHECK_HEADER([libguile.h], [GUILE_PRESENT=yes], [GUILE_PRESENT=no])
++  if test "$GUILE_PRESENT" = "yes" ; then
++    GUILE_CFLAGS=`guile-config compile`
++    GUILE_LDFLAGS=`guile-config link`
++    AC_SUBST(GUILE_CFLAGS)
++    AC_SUBST(GUILE_LDFLAGS)
++    dnl On 64-bit machines guile < 1.6.5 causes a crash in aisleriot.
++    dnl But since 1.6.5 is only a few months old as I write this we 
++    dnl will be more lenient with 32-bit machines.
++    if uname -m | grep 64 ; then
++       GUILE_TARGET="1.6.5"
++    else 
++       GUILE_TARGET="1.6.0"
++    fi
++    if test `guile -c '(if (string<? (version) (cadr (command-line))) (display "no") (display "yes")) (newline)' $GUILE_TARGET` != yes ; then 
++      GUILE_PRESENT="no"
++      AC_MSG_WARN([Your version of guile is too old, please install a recent guile package (>= $GUILE_TARGET)])
++    fi
+   fi
+ fi
+ AM_CONDITIONAL([HAVE_GUILE], [test "x$GUILE_PRESENT" = xyes])
