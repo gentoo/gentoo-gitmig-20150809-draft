@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.3 2007/01/24 14:34:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.4 2007/03/27 16:11:44 betelgeuse Exp $
 
 inherit eutils linux-info
 
@@ -9,8 +9,9 @@ HOMEPAGE="http://freshmeat.net/projects/longrun/"
 
 DEBIAN_PATCH_VERSION="19"
 DEBIAN_PATCH="${PN}_${PV}-${DEBIAN_PATCH_VERSION}.diff.gz"
-SRC_URI="mirror://kernel/linux/utils/cpu/crusoe/${P}.tar.bz2
-		 mirror://debian/pool/main/l/${PN}/${DEBIAN_PATCH}"
+SRC_URI="
+	mirror://kernel/linux/utils/cpu/crusoe/${P}.tar.bz2
+	mirror://debian/pool/main/l/${PN}/${DEBIAN_PATCH}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,10 +41,6 @@ src_unpack() {
 	cd ${S}
 	epatch "${DISTDIR}/${DEBIAN_PATCH}"
 	epatch "${FILESDIR}/${PV}-makefile_cflags.patch"
-}
-
-src_compile() {
-	emake || die "emake failed"
 }
 
 src_install() {
