@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.28 2007/01/18 23:53:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.29 2007/03/27 17:05:50 dang Exp $
+
+*gnome-python-desktop-2.18.0 (27 Mar 2007)
+
+  27 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-python-desktop-2.18.0.ebuild:
+  gnome 2.18.0
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org>
   gnome-python-desktop-2.16.0.ebuild:
