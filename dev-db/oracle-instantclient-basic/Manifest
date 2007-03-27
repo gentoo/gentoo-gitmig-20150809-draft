@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX oracle-instantclient-basic-10.2.0.3-makefile.patch 356 RMD160 5bf8584f2f12f74c5481f9211bbfad65929a0091 SHA1 a02921ad2ff3bf7bfcb1f9b0d58cb3dce8b141e8 SHA256 c28e41b5ac8842cfa6248df8936f0681f00eaa8d99206c640dbdd0fcaedcadf0
 MD5 01c82033019e9a4c189ac7ce203cabb3 files/oracle-instantclient-basic-10.2.0.3-makefile.patch 356
 RMD160 5bf8584f2f12f74c5481f9211bbfad65929a0091 files/oracle-instantclient-basic-10.2.0.3-makefile.patch 356
@@ -12,14 +15,14 @@ EBUILD oracle-instantclient-basic-10.1.0.5.ebuild 2695 RMD160 3babb33278d6646da4
 MD5 c87c74399363a64a637d96a26bcc9c8f oracle-instantclient-basic-10.1.0.5.ebuild 2695
 RMD160 3babb33278d6646da41f0157017c23cf2fd84126 oracle-instantclient-basic-10.1.0.5.ebuild 2695
 SHA256 c796dbd8de471c73b4754f2f868c0419f7f7e9d75a46aaf1f1200beffdeb9b4e oracle-instantclient-basic-10.1.0.5.ebuild 2695
-EBUILD oracle-instantclient-basic-10.2.0.3.ebuild 3367 RMD160 d41604b343faea12616a615f2c4333d5a066c774 SHA1 43598bc2a00377c6e694fe5345285988a6b9682c SHA256 207c0d6bb4883975e3eb4a6c8e48b67335626233e8d6adcbdeacb851fdcbe937
-MD5 573a9cf52737667d6111e87df1515fb1 oracle-instantclient-basic-10.2.0.3.ebuild 3367
-RMD160 d41604b343faea12616a615f2c4333d5a066c774 oracle-instantclient-basic-10.2.0.3.ebuild 3367
-SHA256 207c0d6bb4883975e3eb4a6c8e48b67335626233e8d6adcbdeacb851fdcbe937 oracle-instantclient-basic-10.2.0.3.ebuild 3367
-MISC ChangeLog 5319 RMD160 3ab9ff08a91741535e1cc803de936f73ef542f77 SHA1 76cc703fc81ef5f502845f7b51a62bdcc96f0369 SHA256 49925e299567db9560487bd31b194855d892614c781d672a6a772c79fd6690b1
-MD5 647493a3524383a9ffe612a226546828 ChangeLog 5319
-RMD160 3ab9ff08a91741535e1cc803de936f73ef542f77 ChangeLog 5319
-SHA256 49925e299567db9560487bd31b194855d892614c781d672a6a772c79fd6690b1 ChangeLog 5319
+EBUILD oracle-instantclient-basic-10.2.0.3.ebuild 3361 RMD160 6a4463d7126bc3ba340216612162f8d31785b03a SHA1 51da4723c1b98ed75e6f463ec5348ffec0cae3e8 SHA256 edb7a664edca80d396c354ac0fb9d57b7f3ef5d29fdd11fee5c34f9ca6a225b1
+MD5 932f8ecbba31168efd2a6abb027a199a oracle-instantclient-basic-10.2.0.3.ebuild 3361
+RMD160 6a4463d7126bc3ba340216612162f8d31785b03a oracle-instantclient-basic-10.2.0.3.ebuild 3361
+SHA256 edb7a664edca80d396c354ac0fb9d57b7f3ef5d29fdd11fee5c34f9ca6a225b1 oracle-instantclient-basic-10.2.0.3.ebuild 3361
+MISC ChangeLog 5441 RMD160 5c17830a4b9c07deb21bb9aaeceec0b68881928b SHA1 bf7e2954ec01c01d54c4b585ccacea6fa787e4a6 SHA256 4a82beef2bb006d27db8e18d0a66d0b939ab5837660285de83e156a16f0d82a5
+MD5 8f8a84f5078fff6ac46968cfb83d9b44 ChangeLog 5441
+RMD160 5c17830a4b9c07deb21bb9aaeceec0b68881928b ChangeLog 5441
+SHA256 4a82beef2bb006d27db8e18d0a66d0b939ab5837660285de83e156a16f0d82a5 ChangeLog 5441
 MISC metadata.xml 388 RMD160 f12fead3733f8a2760b2f190bcadd9a810e4bbc1 SHA1 f1cf715b4a7a2d39696097b2510967d640948075 SHA256 fa323e9829505e837ae433af3b0ce5e7b97e1aef0ec614baa6c6ba4602def893
 MD5 9f5d6b0af6c2271c1e2bbf0518bcc925 metadata.xml 388
 RMD160 f12fead3733f8a2760b2f190bcadd9a810e4bbc1 metadata.xml 388
@@ -30,3 +33,10 @@ SHA256 78d349acd8c97f6b49438bb2a6b3765601fab60c5fcf38160864218babe4a755 files/di
 MD5 d4cb547b1d3863645eeae1bd086a13b8 files/digest-oracle-instantclient-basic-10.2.0.3 1342
 RMD160 feaa2bd527b41dbce2538cdda4052d086d835371 files/digest-oracle-instantclient-basic-10.2.0.3 1342
 SHA256 c7a8deb25aecec294903dec367b3e00b16a49bd4efc5f407e794e8b2b9115906 files/digest-oracle-instantclient-basic-10.2.0.3 1342
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFGCLdlNQqtfCuFneMRAvT7AJ4oFcO+aqTzcgDxmV+lONox2UGp4QCglnEG
+xPTylkkIJn5sEAWQ0PVFtQU=
+=vOWz
+-----END PGP SIGNATURE-----
