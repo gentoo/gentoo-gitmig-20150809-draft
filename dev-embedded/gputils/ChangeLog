@@ -1,6 +1,14 @@
 # ChangeLog for dev-embedded/gputils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.32 2007/02/13 11:49:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.33 2007/03/27 22:25:26 calchan Exp $
+
+*gputils-0.13.4-r1 (27 Mar 2007)
+
+  27 Mar 2007; Denis Dupeyron <calchan@gentoo.org>
+  +files/gputils-0.13.4-duplicate-label.patch,
+  +files/gputils-0.13.4-mapping.patch, +gputils-0.13.4-r1.ebuild:
+  Fixed bug #155665, thanks to Robert Pearce. Added patch from upstream CVS
+  fixing duplicate label issue.
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> gputils-0.13.3-r1.ebuild:
   Stable on ppc64; bug #146422

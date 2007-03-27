@@ -1,0 +1,23 @@
+diff -ur gputils-0.13.4.orig/gplink/lst.c gputils-0.13.4/gplink/lst.c
+--- gputils-0.13.4.orig/gplink/lst.c	2005-01-03 23:21:20.000000000 +0100
++++ gputils-0.13.4/gplink/lst.c	2007-03-28 00:07:16.000000000 +0200
+@@ -101,9 +101,9 @@
+       if ((line->symbol == symbol) && 
+           (line->line_number == line_number)) {
+         if (section != line_section) {
+-          /* switching sections, so update was_org with the new section
++          /* switching sections, so update was_org with the new 
+              address */
+-          state.lst.was_org = section->address >> state.byte_addr;
++          state.lst.was_org = line->address >> state.byte_addr;
+           line_section = section;
+         }  
+         return line;    
+@@ -179,6 +179,7 @@
+                  data & 0xffff, 
+                  dasmbuf,
+                  linebuf);
++        state.lst.was_org = org;
+         cod_lst_line(COD_NORMAL_LST_LINE);
+         org++;
+         if (num_words != 1) {
