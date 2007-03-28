@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/calculator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.7 2007/01/15 17:14:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.8 2007/03/28 22:55:39 mabi Exp $
+
+*calculator-1.6.25 (28 Mar 2007)
+
+  28 Mar 2007; Matti Bickel <mabi@gentoo.org> +calculator-1.6.25.ebuild:
+  Version bump
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   calculator-1.6.19.ebuild:
