@@ -1,6 +1,8 @@
 media-video/mplayer dvdnav mp2
 app-misc/mc pam
 dev-util/catalyst cdr
+# See http://bugzilla.gnome.org/show_bug.cgi?id=370847 for why we disable pam
+gnome-extra/gnome-screensaver pam
 kde-base/kcontrol ieee1394
 kde-base/kdenetwork-meta wifi
 media-video/ffmpeg ieee1394
