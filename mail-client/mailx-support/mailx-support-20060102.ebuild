@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/mailx-support-20060102.ebuild,v 1.1 2006/03/01 16:16:34 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/mailx-support-20060102.ebuild,v 1.2 2007/03/28 22:31:02 ticho Exp $
 
 inherit eutils
 
-DESCRIPTION="Provides mail.local and lockspool"
+DESCRIPTION="Provides lockspool utility"
 HOMEPAGE="http://www.openbsd.org/"
 LICENSE="BSD"
 SLOT="0"
