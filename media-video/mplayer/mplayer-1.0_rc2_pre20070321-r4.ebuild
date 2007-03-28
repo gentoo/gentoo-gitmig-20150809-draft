@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.1 2007/03/25 15:06:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.2 2007/03/28 13:44:18 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,10 +10,10 @@ cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dvdnav
 dv dvdread enca encode esd fbcon ftp gif ggi gtk iconv ipv6 ivtv jack joystick
 jpeg libcaca lirc live livecd lzo mad md5sum mmx mmxext mp2 mp3 musepack nas
 unicode vorbis opengl openal oss png pnm quicktime radio rar real rtc samba sdl
-speex srt sse sse2 svga theora tivo truetype v4l v4l2 vidix win32codecs X x264
-xanim xinerama xv xvid xvmc zoran"
+speex srt sse sse2 svga tga theora tivo truetype v4l v4l2 vidix win32codecs X
+x264 xanim xinerama xv xvid xvmc zoran"
 
-VIDEO_CARDS="s3virge mga tdfx tga vesa"
+VIDEO_CARDS="s3virge mga tdfx vesa"
 
 for X in ${VIDEO_CARDS}; do
 	IUSE="${IUSE} video_cards_${X}"
@@ -50,8 +50,6 @@ RDEPEND="sys-libs/ncurses
 			amd64? ( real? ( media-libs/amd64codecs ) )
 		)
 	)
-	x86? ( mp2? ( media-sound/twolame ) )
-	amd64? ( mp2? ( media-sound/twolame ) )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -60,13 +58,13 @@ RDEPEND="sys-libs/ncurses
 	cdparanoia? ( media-sound/cdparanoia )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdts )
+	dv? ( media-libs/libdv )
 	dvb? ( media-tv/linuxtv-dvb-headers )
 	dvd? ( dvdnav? ( media-libs/libdvdnav ) )
 	encode? (
 		aac? ( media-libs/faac )
-		dv? ( media-libs/libdv )
+		mp2? ( media-sound/twolame )
 		mp3? ( media-sound/lame )
-		x264? ( media-libs/x264-svn )
 		)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
@@ -93,9 +91,6 @@ RDEPEND="sys-libs/ncurses
 	srt? ( >=media-libs/freetype-2.1
 		media-libs/fontconfig )
 	svga? ( media-libs/svgalib )
-	video_cards_tdfx? ( x11-libs/libXxf86vm
-		x11-libs/libXext
-		x11-drivers/xf86-video-tdfx )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2007.02.20 )
 	truetype? ( >=media-libs/freetype-2.1
@@ -106,18 +101,19 @@ RDEPEND="sys-libs/ncurses
 	video_cards_s3virge? ( x11-libs/libXxf86vm
 		x11-libs/libXext
 		x11-drivers/xf86-video-s3virge )
-	video_cards_tga? ( x11-libs/libXxf86vm
+	video_cards_tdfx? ( x11-libs/libXxf86vm
 		x11-libs/libXext
-		x11-drivers/xf86-video-tga )
+		x11-drivers/xf86-video-tdfx )
 	video_cards_vesa? ( x11-libs/libXxf86vm
 		x11-libs/libXext
 		x11-drivers/xf86-video-vesa )
 	vidix? ( x11-libs/libXxf86vm
 		x11-libs/libXext )
+	x264? ( media-libs/x264-svn )
+	xanim? ( media-video/xanim )
 	xinerama? ( x11-libs/libXinerama
 		x11-libs/libXxf86vm
 		x11-libs/libXext )
-	xanim? ( media-video/xanim )
 	xv? ( x11-libs/libXv
 		x11-libs/libXxf86vm
 		x11-libs/libXext
@@ -147,6 +143,7 @@ DEPEND="${RDEPEND}
 # Make sure the assembler USE flags are unmasked on amd64
 # Remove this once default-linux/amd64/2006.1 is deprecated
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )
+	mp2? ( >=sys-apps/portage-2.1.2 )
 	ivtv? ( !x86-fbsd? ( <sys-kernel/linux-headers-2.6.20
 		media-tv/ivtv
 		>=sys-apps/portage-2.1.2 ) )"
@@ -317,7 +314,7 @@ src_compile() {
 	#########
 	# Codecs #
 	########
-	for x in gif jpeg live mad musepack pnm speex theora xanim xvid; do
+	for x in gif jpeg live mad musepack pnm speex tga theora xanim xvid; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
 	use aac || myconf="${myconf} --disable-faad-internal"
@@ -325,7 +322,8 @@ src_compile() {
 	use dts || myconf="${myconf} --disable-libdts"
 	! use png && ! use gtk && myconf="${myconf} --disable-png"
 	use lzo || myconf="${myconf} --disable-liblzo"
-	use mp2 || myconf="${myconf} --disable-twolame --disable-toolame"
+	use encode && use mp2 || myconf="${myconf} --disable-twolame \
+		--disable-toolame"
 	use mp3 || myconf="${myconf} --disable-mp3lib"
 	use quicktime || myconf="${myconf} --disable-qtx"
 	use vorbis || myconf="${myconf} --disable-libvorbis"
@@ -358,7 +356,6 @@ src_compile() {
 	use opengl || myconf="${myconf} --disable-gl"
 	use video_cards_mga || myconf="${myconf} --disable-mga"
 	( use X && use video_cards_mga ) || myconf="${myconf} --disable-xmga"
-	use video_cards_tga || myconf="${myconf} --disable-tga"
 	use video_cards_vesa || myconf="${myconf} --disable-vesa"
 	use vidix || myconf="${myconf} --disable-vidix-internal \
 		--disable-vidix-external"
