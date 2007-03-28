@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.5 2007/01/15 11:46:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.6 2007/03/28 09:44:07 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> rubyzip-0.5.12.ebuild:
+  ia64 stable wrt bug 155513
 
   15 Jan 2007; Steve Dibb <beandog@gentoo.org> rubyzip-0.5.12.ebuild:
   amd64 stable, bug 155513
