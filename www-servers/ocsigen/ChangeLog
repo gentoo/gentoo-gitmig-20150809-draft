@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/ocsigen
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.1 2007/03/28 17:20:45 aballier Exp $
+
+*ocsigen-0.6.0 (28 Mar 2007)
+
+  28 Mar 2007; Alexis Ballier <aballier@gentoo.org> +files/ocsigen.confd,
+  +files/ocsigen.initd, +metadata.xml, +ocsigen-0.6.0.ebuild:
+  Initial import, thanks to Pierre Clairambault <pclairam@gmail.com>, bug #171135
+
