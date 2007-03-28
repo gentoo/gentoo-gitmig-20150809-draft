@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.292 2007/03/28 16:28:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.293 2007/03/28 16:36:52 zzam Exp $
+
+  28 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/udev.rules-107-r1:
+  Removed the commented legacy rules calling hotplug/dev.d, as the needed
+  helpers are no longer present udev.
 
 *udev-107-r1 (28 Mar 2007)
 
