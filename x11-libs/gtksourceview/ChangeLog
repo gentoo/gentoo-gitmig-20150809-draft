@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.90 2007/03/10 15:17:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.91 2007/03/28 02:12:18 dang Exp $
+
+*gtksourceview-1.8.5 (28 Mar 2007)
+
+  28 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gtksourceview-1.8.5.ebuild:
+  gnome 2.18.0
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org> gtksourceview-1.8.4.ebuild:
   Added ~x86-fbsd keyword.
