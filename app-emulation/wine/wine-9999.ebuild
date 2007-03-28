@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.19 2007/03/07 01:28:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.20 2007/03/28 07:54:51 vapier Exp $
 
 EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
 
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-S=${WORKDIR}/${ECVS_MODULE}
+S=${WORKDIR}/${EGIT_PROJECT}
 
 src_unpack() {
 	git_src_unpack
