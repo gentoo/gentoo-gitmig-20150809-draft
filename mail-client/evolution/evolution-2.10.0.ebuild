@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.0.ebuild,v 1.1 2007/03/27 16:02:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.0.ebuild,v 1.2 2007/03/28 19:05:35 dang Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -68,6 +68,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	app-text/scrollkeeper
 	>=gnome-base/gnome-common-2.12.0
+	app-text/gnome-doc-utils
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"

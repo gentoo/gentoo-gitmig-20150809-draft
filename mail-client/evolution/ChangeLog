@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.167 2007/03/27 16:02:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.168 2007/03/28 19:05:35 dang Exp $
+
+  28 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> evolution-2.10.0.ebuild:
+  Add gnome-doc-utils dep for automake.  Bug #172582
 
 *evolution-2.10.0 (27 Mar 2007)
 
