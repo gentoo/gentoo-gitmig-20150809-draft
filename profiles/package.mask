@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7051 2007/03/28 00:05:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7052 2007/03/28 03:46:57 tsunam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -822,8 +822,8 @@ x11-plugins/replytolist
 ~net-im/wengophone-2.0_rc2
 
 # Marcus D. Hanwell <cryos@gentoo.org> (03 Nov 2006)
-# 5.8 should work with all projects but needs testing. Report on bug #166920 
->=sci-misc/boinc-5.5.6
+# 5.5.6 does not work with all projects, please use 5.4 or >=5.8
+=sci-misc/boinc-5.5.6
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (02 Nov 2006)
 # X input hotplug and related packages
