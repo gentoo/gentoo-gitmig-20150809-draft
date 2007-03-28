@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.24 2007/02/06 21:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.25 2007/03/28 10:29:30 aballier Exp $
+
+*akode-2.0.1-r1 (28 Mar 2007)
+
+  28 Mar 2007; Alexis Ballier <aballier@gentoo.org> +akode-2.0.1-r1.ebuild:
+  rev bump in ~arch for flac 1.1.3 compatibility,  bug #157588
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   +files/akode-2.0.1-alsa-tests.patch, akode-2.0.1.ebuild:
