@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Audit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.37 2007/03/12 18:06:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.38 2007/03/28 20:24:05 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> Mail-Audit-2.218.ebuild:
+  Readd ~ia64 keyword wrt bug 170491
 
   12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org>
   Mail-Audit-2.218.ebuild:
