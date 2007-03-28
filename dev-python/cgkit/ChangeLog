@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.16 2007/02/15 14:02:08 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.17 2007/03/28 20:18:37 opfer Exp $
+
+  28 Mar 2007; Christian Faulhammer <opfer@gentoo.org> cgkit-1.2.0.ebuild:
+  force a file to be regenerated, so compilation with GCC 4 succeeds. Fixes
+  bug 152210, reported by Andy <andyreif@studcs.uni-sb.de>
 
 *cgkit-2.0.0_alpha7 (15 Feb 2007)
 
