@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.2.ebuild,v 1.2 2007/03/25 16:29:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.2.ebuild,v 1.3 2007/03/28 06:00:19 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -181,7 +181,7 @@ src_compile() {
 	emake busybox || die "build failed"
 	if ! use static ; then
 		mv busybox_unstripped{,.bak}
-		LDFLAGS="${LDFLAGS} -static" emake busybox || die "static build failed"
+		emake CONFIG_STATIC=y busybox || die "static build failed"
 		mv busybox_unstripped bb
 		mv busybox_unstripped{.bak,}
 	fi
