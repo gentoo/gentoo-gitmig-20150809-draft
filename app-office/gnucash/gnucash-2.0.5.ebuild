@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.5 2007/03/27 13:14:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.6 2007/03/28 11:05:57 hkbst Exp $
 
 inherit eutils gnome2
 
@@ -19,7 +19,7 @@ IUSE="ofx hbci chipcard doc debug quotes nls"
 
 RDEPEND=">=dev-libs/glib-2.4.0
 	dev-scheme/guile
-	=dev-scheme/slib-3.1.1*
+	~dev-scheme/slib-3.1.1-r1
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
 	>=x11-libs/gtk+-2.4
@@ -54,8 +54,13 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	built_with_use gnome-extra/libgsf gnome || die "gnome-extra/libgsf must be built with gnome"
 	built_with_use x11-libs/goffice gnome || die "x11-libs/goffice must be built with gnome"
-	if ! built_with_use =dev-scheme/guile-1.8* regex deprecated discouraged; then
-		die "dev-scheme/guile must be built with USE=\"regex deprecated discouraged\""
+
+	if has_version =guile-1.8*; then
+		local flags="deprecated regex"
+		if ! built_with_use dev-scheme/guile ${flags}; then
+			einfo "guile must be built with \"${flags}\" use flags"
+			die "guile must be built with \"${flags}\" use flags"
+		fi
 	fi
 }
 
@@ -90,7 +95,7 @@ src_compile() {
 src_test() {
 	einfo "Skipping tests because one of the upstream tests is broken"
 	einfo "Please reference: https://bugs.gentoo.org/show_bug.cgi?id=146769#c1"
-	einfo "We have a filed a bug upstream.  When that is resolved,"
+	einfo "We have a filed a bug upstream.	When that is resolved,"
 	einfo "We will re-enable the tests."
 }
 
