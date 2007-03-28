@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.89 2007/03/20 00:46:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.90 2007/03/28 06:06:28 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -190,7 +190,7 @@ parse_target() {
 	# Tweak packages based upon CTARGET
 	case ${CTARGET} in
 		# Normal Linux host, just diff libc
-		*-dietlibc) LPKG="dietlibc";;
+		*-dietlibc) LPKG="dietlibc"; LCAT="dev-libs";;
 		*-gnu*)     LPKG="glibc";;
 		*-klibc)    LPKG="klibc";;
 		*-uclibc*)  LPKG="uclibc";;
