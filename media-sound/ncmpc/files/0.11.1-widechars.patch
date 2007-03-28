@@ -1,0 +1,209 @@
+--- configure.ac.orig	2005-01-23 18:37:43.000000000 +0100
++++ configure.ac	2006-09-16 22:17:31.000000000 +0200
+@@ -54,7 +54,7 @@
+ dnl ncurses
+ AC_CHECK_LIB([ncurses], 
+ 	     [initscr],
+-             [LIBS="$LIBS -lncurses"], 
++             [LIBS="$LIBS -lncursesw"], 
+              [AC_MSG_ERROR(ncurses library is required)])
+ 
+ 
+@@ -216,6 +216,7 @@
+ AC_DEFINE_UNQUOTED([DEFAULT_PORT],     [$DEFAULT_PORT],   [Default MPD port])
+ AC_DEFINE_UNQUOTED([DEFAULT_PORT_STR], ["$DEFAULT_PORT"], [Default MPD port])
+ 
++AC_DEFINE([xstrlen(x)], [mbstowcs(NULL,x,0)], [utf-8 hack])
+ 
+ AC_CONFIG_FILES([Makefile src/Makefile doc/Makefile po/Makefile.in])
+ AC_OUTPUT
+--- src/list_window.c.orig	2005-01-23 18:37:42.000000000 +0100
++++ src/list_window.c	2006-09-16 22:08:07.000000000 +0200
+@@ -196,7 +196,7 @@
+       if( label )
+ 	{
+ 	  int selected = lw->start+i == lw->selected;
+-	  size_t len = strlen(label);
++	  size_t len = xstrlen(label);
+ 
+ 	  if( highlight )
+ 	    colors_use(lw->w, COLOR_LIST_BOLD);
+--- src/screen.c.orig	2005-01-23 18:37:42.000000000 +0100
++++ src/screen.c	2006-09-16 22:08:07.000000000 +0200
+@@ -141,9 +141,9 @@
+   static int prev_header_len = -1;
+   WINDOW *w = screen->top_window.w;
+ 
+-  if(prev_header_len!=strlen(header))
++  if(prev_header_len!=xstrlen(header))
+     {
+-      prev_header_len = strlen(header);
++      prev_header_len = xstrlen(header);
+       clear = 1;
+     }
+ 
+@@ -192,7 +192,7 @@
+ 	  g_snprintf(buf, 32, _(" Volume %d%%"), c->status->volume); 
+ 	}
+       colors_use(w, COLOR_TITLE);
+-      mvwaddstr(w, 0, screen->top_window.cols-strlen(buf), buf);
++      mvwaddstr(w, 0, screen->top_window.cols-xstrlen(buf), buf);
+ 
+       flags[0] = 0;
+       if( c->status->repeat )
+@@ -207,7 +207,7 @@
+       mvwhline(w, 1, 0, ACS_HLINE, screen->top_window.cols);
+       if( flags[0] )
+ 	{
+-	  wmove(w,1,screen->top_window.cols-strlen(flags)-3);
++	  wmove(w,1,screen->top_window.cols-xstrlen(flags)-3);
+ 	  waddch(w, '[');
+ 	  colors_use(w, COLOR_LINE_BOLD);
+ 	  waddstr(w, flags);
+@@ -281,7 +281,7 @@
+   if( str )
+     {
+       waddstr(w, str);
+-      x += strlen(str)+1;
++      x += xstrlen(str)+1;
+     }
+ 
+   /* create time string */
+@@ -315,7 +315,7 @@
+   if( (IS_PLAYING(status->state) || IS_PAUSED(status->state)) )
+     {
+       char songname[MAX_SONGNAME_LENGTH];
+-      int width = COLS-x-strlen(screen->buf);
++      int width = COLS-x-xstrlen(screen->buf);
+ 
+       if( song )
+ 	strfsong(songname, MAX_SONGNAME_LENGTH, STATUS_FORMAT, song);
+@@ -324,7 +324,7 @@
+ 
+       colors_use(w, COLOR_STATUS);
+       /* scroll if the song name is to long */
+-      if( strlen(songname) > width )
++      if( xstrlen(songname) > width )
+ 	{
+ 	  static  scroll_state_t st = { 0, 0 };
+ 	  char *tmp = strscroll(songname, " *** ", width, &st);
+@@ -338,7 +338,7 @@
+   /* display time string */
+   if( screen->buf[0] )
+     {
+-      x = screen->status_window.cols - strlen(screen->buf);
++      x = screen->status_window.cols - xstrlen(screen->buf);
+       colors_use(w, COLOR_STATUS_TIME);
+       mvwaddstr(w, 0, x, screen->buf);
+     }
+--- src/screen_clock.c.orig	2005-01-23 18:37:42.000000000 +0100
++++ src/screen_clock.c	2006-09-16 22:08:07.000000000 +0200
+@@ -169,7 +169,7 @@
+   if( win.rows<=YDEPTH+1 || win.cols<=XLENGTH+1 )
+     {
+       strftime(buf, BUFSIZE, "%X ",tm);
+-      mvwaddstr(win.w, win.rows ? win.rows/2:0, (win.cols-strlen(buf))/2, buf);
++      mvwaddstr(win.w, win.rows ? win.rows/2:0, (win.cols-xstrlen(buf))/2, buf);
+       wrefresh(win.w);
+       return;
+     }
+@@ -221,7 +221,7 @@
+   strcpy(buf, ctime(&now));
+   strcpy(buf + 10, buf + 19);
+ #endif
+-  mvwaddstr(win.w, YBASE+YDEPTH+1, (win.cols-strlen(buf))/2, buf);
++  mvwaddstr(win.w, YBASE+YDEPTH+1, (win.cols-xstrlen(buf))/2, buf);
+   
+   wmove(win.w, 6, 0);
+   drawbox();
+--- src/screen_play.c.orig	2005-01-23 18:37:41.000000000 +0100
++++ src/screen_play.c	2006-09-16 22:08:07.000000000 +0200
+@@ -233,7 +233,7 @@
+ 	  list = gcmp_list_from_path(c, "", NULL, GCMP_TYPE_RFILE);
+ 	  g_completion_add_items(gcmp, list);
+ 	}
+-      else if( line && line[0] && line[strlen(line)-1]=='/' &&
++      else if( line && line[0] && line[xstrlen(line)-1]=='/' &&
+ 	       string_list_find(dir_list, line) == NULL )
+ 	{	  
+ 	  /* add directory content to list */
+@@ -251,7 +251,7 @@
+ 	  lw->repaint = 1;
+ 	}
+ 
+-      if( line && line[0] && line[strlen(line)-1]=='/' &&
++      if( line && line[0] && line[xstrlen(line)-1]=='/' &&
+ 	  string_list_find(dir_list, line) == NULL )
+ 	{	  
+ 	  /* add directory content to list */
+--- src/screen_utils.c.orig	2005-01-23 18:37:41.000000000 +0100
++++ src/screen_utils.c	2006-09-16 22:08:07.000000000 +0200
+@@ -51,7 +51,7 @@
+ screen_getch(WINDOW *w, char *prompt)
+ {
+   int key = -1;
+-  int prompt_len = strlen(prompt);
++  int prompt_len = xstrlen(prompt);
+ 
+   colors_use(w, COLOR_STATUS_ALERT);
+   wclear(w);  
+--- src/wreadln.c.orig	2005-01-23 18:37:42.000000000 +0100
++++ src/wreadln.c	2006-09-16 22:10:30.000000000 +0200
+@@ -61,7 +61,7 @@
+ 
+   /* move the cursor one step to the right */
+   void cursor_move_right(void) {
+-    if( cursor < strlen(line) && cursor<wrln_max_line_size-1 )
++    if( cursor < xstrlen(line) && cursor<wrln_max_line_size-1 )
+       {
+ 	cursor++;
+ 	if( cursor+x0 >= x1 && start<cursor-width+1)
+@@ -79,7 +79,7 @@
+   }
+  /* move the cursor to the end of the line */
+   void cursor_move_to_eol(void) {
+-    cursor = strlen(line);
++    cursor = xstrlen(line);
+     if( cursor+x0 >= x1 )
+       start = cursor-width+1;
+   }
+@@ -247,7 +247,7 @@
+ 	  break;
+ 	case KEY_DC:		/* handle delete key. As above */
+ 	case KEY_CTRL_D:
+-	  if( cursor <= strlen(line) - 1 ) 
++	  if( cursor <= xstrlen(line) - 1 ) 
+ 	    {
+ 	      for (i = cursor; line[i] != 0; i++)
+ 		line[i] = line[i + 1];
+@@ -290,7 +290,7 @@
+ 	default:	 
+ 	  if (key >= 32)
+ 	    {
+-	      if (strlen (line + cursor))	/* if the cursor is */
++	      if (xstrlen (line + cursor))	/* if the cursor is */
+ 		{		                /* not at the last pos */
+ 		  gchar *tmp = 0;
+ 		  gsize size = strlen(line + cursor) + 1;
+@@ -318,7 +318,7 @@
+   /* update history */
+   if( history )
+     {
+-      if( strlen(line) )
++      if( xstrlen(line) )
+ 	{
+ 	  /* update the current history entry */
+ 	  size_t size = strlen(line)+1;
+
+--- po/ru.po.orig       2005-01-23 20:37:43.000000000 +0300
++++ po/ru.po       2006-12-28 07:52:02.000000000 +0300
+@@ -12,7 +12,7 @@
+ "Last-Translator: Nikolay Pavlov <quetzal@roks.biz>\n"
+ "Language-Team: ru <ru@li.org>\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=ISO-8859-1\n"
++"Content-Type: text/plain; charset=koi8-r\n"
+ "Content-Transfer-Encoding: 8bit\n"
+
+ #: src/ncmpc.h:36
+
