@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.4.ebuild,v 1.2 2006/12/17 20:12:02 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.4.ebuild,v 1.3 2007/03/28 08:16:40 kaiowas Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -49,7 +49,7 @@ src_install() {
 	dosbin src/svcinit || die
 
 	# usage() script
-	exeinto /lib/rcscripts/sh
+	exeinto /$(get_libdir)/rcscripts/sh
 	doexe lib/rcscripts/sh/* || die
 
 	if use withsamplescripts ; then
