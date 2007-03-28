@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ocamlduce
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.1 2007/03/28 16:07:03 aballier Exp $
+
+*ocamlduce-3.09.3_p1 (28 Mar 2007)
+
+  28 Mar 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +ocamlduce-3.09.3_p1.ebuild:
+  Initial import, thanks to Pierre Clairambault <pclairam@gmail.com>
+
