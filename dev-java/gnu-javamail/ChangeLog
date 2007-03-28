@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-javamail
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.20 2006/11/28 03:59:13 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.21 2007/03/28 18:15:23 betelgeuse Exp $
+
+  28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  gnu-javamail-1.0-r1.ebuild:
+  Switch license to GPL-2-with-linking-exception as that is what the actual
+  *.java files indicate.
 
   28 Nov 2006; Joshua Nichols <nichoj@gentoo.org> -gnu-javamail-1.0.ebuild:
   Dropped earlier revision with equivalent keywords.

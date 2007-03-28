@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0-r1.ebuild,v 1.4 2006/11/28 03:55:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0-r1.ebuild,v 1.5 2007/03/28 18:15:23 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="GNU implementation of the Javamail API"
 HOMEPAGE="http://www.gnu.org/software/classpathx/javamail/"
 SRC_URI="mirror://gnu/classpathx/${MY_P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-2-with-linking-exception"
 SLOT="1"
 KEYWORDS="amd64 x86"
 IUSE="doc"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-jaf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.14 2007/03/27 06:14:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.15 2007/03/28 18:11:43 betelgeuse Exp $
+
+  28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> gnu-jaf-1.0-r1.ebuild,
+  gnu-jaf-1.0-r2.ebuild:
+  Switch license to GPL-2-with-linking-exception as that is what the actual
+  *.java files indicate.
 
   27 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   gnu-jaf-1.0-r2.ebuild:
