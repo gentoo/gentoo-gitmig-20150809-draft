@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.20 2007/03/09 16:50:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.21 2007/03/28 13:23:18 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> Cairo-1.02.3.ebuild:
+  Add ~ia64 wrt bug 146676
 
 *Cairo-1.02.3 (09 Mar 2007)
 
