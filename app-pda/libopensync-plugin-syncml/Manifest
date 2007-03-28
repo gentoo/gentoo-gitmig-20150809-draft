@@ -1,34 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST libopensync-plugin-syncml-0.20.tar.gz 321561 RMD160 081e2a043fbac8392dc65c6abe13f1cb70b8ab47 SHA1 97c2dbf6221727f8a0734418fedfef0a22904add SHA256 0db8486f682045e9021eade1c40b27e643e973042babc4dc7f0fd99653e54fc8
 DIST libopensync-plugin-syncml-0.21.tar.bz2 234746 RMD160 ffb2f8eac043125b9567ee15a6806ce49f85b77c SHA1 b0cd60a6a2361f73fa3cc68d19a7087e63b48ff2 SHA256 f6f34ec976a6ee2eacdb198406a12f970eb3a0f8e551bf3590a7fd20da360dfe
-EBUILD libopensync-plugin-syncml-0.20.ebuild 646 RMD160 483d29922a0204d8c01783ac4d87fd4c911e88bc SHA1 c3a54df1f4d12b7711e2993dab9e15866cf39e89 SHA256 05d6276986c30746116d596857129298f03f2ed06156e6168722532304aa9e84
-MD5 f222ee2a7fe3def14d0e001809da99f1 libopensync-plugin-syncml-0.20.ebuild 646
-RMD160 483d29922a0204d8c01783ac4d87fd4c911e88bc libopensync-plugin-syncml-0.20.ebuild 646
-SHA256 05d6276986c30746116d596857129298f03f2ed06156e6168722532304aa9e84 libopensync-plugin-syncml-0.20.ebuild 646
+DIST libopensync-plugin-syncml-0.22.tar.bz2 220011 RMD160 a47a7670389910061d41727aebc161f625d77712 SHA1 983fd2ad84c17f486fe182d94e3e055a081706be SHA256 b3f9ec536eabe81831bdb067bee4a052c2852fc84f8e3052416fecbefe3253de
 EBUILD libopensync-plugin-syncml-0.21.ebuild 1783 RMD160 c61059d24cf9f0431e0bca7e30c5e36a2eed80d2 SHA1 bac66fc6ecb6b37ab03f3b72831efdcf4f503efd SHA256 97e38f2bfc9401a8094fb18912c84393402c9485770545a4082730bf85fd800b
 MD5 3aa0e051ee416c5a655122ee737d20d6 libopensync-plugin-syncml-0.21.ebuild 1783
 RMD160 c61059d24cf9f0431e0bca7e30c5e36a2eed80d2 libopensync-plugin-syncml-0.21.ebuild 1783
 SHA256 97e38f2bfc9401a8094fb18912c84393402c9485770545a4082730bf85fd800b libopensync-plugin-syncml-0.21.ebuild 1783
-MISC ChangeLog 826 RMD160 b1e613b081c429d5c240740c0123ffd2753a66f2 SHA1 4334c837c21b8d317756cb9c37cb420c973ec5c9 SHA256 ff7bcfc4d1853eaab41a5cd68029c211756f85bbe6984d5c1f2c36b245c08a52
-MD5 4c7190c67e19c1e5c7a1a82a3377249e ChangeLog 826
-RMD160 b1e613b081c429d5c240740c0123ffd2753a66f2 ChangeLog 826
-SHA256 ff7bcfc4d1853eaab41a5cd68029c211756f85bbe6984d5c1f2c36b245c08a52 ChangeLog 826
+EBUILD libopensync-plugin-syncml-0.22.ebuild 1782 RMD160 647a7d156bb1e651f97be5c997db58589d06d5bd SHA1 8321df577da6d094d1d3e2c99917e1488274dbc6 SHA256 2d5b1c7bf926fb8ffe777bcafd337af563484694cd9180a98b89a4613cf2b27c
+MD5 27a7eb3db9736db2ce4191be1508b7c1 libopensync-plugin-syncml-0.22.ebuild 1782
+RMD160 647a7d156bb1e651f97be5c997db58589d06d5bd libopensync-plugin-syncml-0.22.ebuild 1782
+SHA256 2d5b1c7bf926fb8ffe777bcafd337af563484694cd9180a98b89a4613cf2b27c libopensync-plugin-syncml-0.22.ebuild 1782
+MISC ChangeLog 1026 RMD160 cafcc4d9b54908e35790ece86cb044ba30d125a6 SHA1 c6f69e38da619fb78ed579d4f25569e76b37163c SHA256 596020be2f4709e8d430048c2a95d73f52dea5450d21036d3d2ffaa7588cfb78
+MD5 ee7b59cfa747a6bdc6c45fc9f162eeec ChangeLog 1026
+RMD160 cafcc4d9b54908e35790ece86cb044ba30d125a6 ChangeLog 1026
+SHA256 596020be2f4709e8d430048c2a95d73f52dea5450d21036d3d2ffaa7588cfb78 ChangeLog 1026
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a metadata.xml 304
-MD5 78f12d377fd74b38bf1328af2bf94ffa files/digest-libopensync-plugin-syncml-0.20 292
-RMD160 c3279bc5bc8608209cee60ac630ecdae66d50cb9 files/digest-libopensync-plugin-syncml-0.20 292
-SHA256 b6e4d31607fbe7557657e1eeac34feb0c8872945402d1bd404bb393a1edb5ffe files/digest-libopensync-plugin-syncml-0.20 292
 MD5 192ae261d4ab39fe6ddfa7f732a3056a files/digest-libopensync-plugin-syncml-0.21 295
 RMD160 be7697f389d3866220c3e5c82178c8912d8d3592 files/digest-libopensync-plugin-syncml-0.21 295
 SHA256 796365da3cabdfc3d4f88f35adcab71117c6cd07fc8d917594522efb118d66cf files/digest-libopensync-plugin-syncml-0.21 295
+MD5 0708512dafe9ba69ffe530f0fd31c2bf files/digest-libopensync-plugin-syncml-0.22 295
+RMD160 865825b556e44a8166d7ce2a532cd65bb4dbb359 files/digest-libopensync-plugin-syncml-0.22 295
+SHA256 bb804c47dfa2901f1efb11d731fc5294506c372c3fe8e0e0d9581686fc06417a files/digest-libopensync-plugin-syncml-0.22 295
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF6nUX6J2i8a8J4okRAsgDAJ93++qyufJ+Jsoy3Jps46uJSuHrrgCeIOP9
-UUY/QLyDQ+0f4t8CKRZicps=
-=22wE
+iD8DBQFGCs8DppoStNGKGywRAswdAJ9/Z6weyP22rWQqWcR1lnlDrgb3YQCggFV6
+bEeeu6tqhrLvTCY5+YIvHDI=
+=6NCa
 -----END PGP SIGNATURE-----
