@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7050 2007/03/27 22:53:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7051 2007/03/28 00:05:27 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Joshua Baergen <joshuabaergen@gentoo.org> (27 Mar 2007)
+# Release candidate ATI driver
+>=x11-drivers/xf86-video-ati-6.6.191
 
 # Petteri Räty <betelgeuse@gentoo.org> (27 Mar 2007)
 # Last upstream releases a couple of years ago. Not migrated to
