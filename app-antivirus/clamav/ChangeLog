@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.217 2007/03/27 10:02:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.218 2007/03/28 18:17:38 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> clamav-0.90.ebuild:
+  ia64 stable wrt bug 167201
 
   27 Mar 2007; Andrej Kacian <ticho@gentoo.org> files/clamav.logrotate:
   Also reload clamd/freshclam from logrotate script.
