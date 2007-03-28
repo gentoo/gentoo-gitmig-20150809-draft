@@ -10,4 +10,9 @@
 		<email>pclairam@gmail.com</email>
 		<name>Pierre Clairambault</name>
 	</maintainer>
+	<longdescription lang="en">
+		OCamlDuce is a merger between OCaml and CDuce. It comes as a modified version
+		of OCaml which integrates CDuce features: XML expressions, regular expression
+		types and patterns, iterators.
+		</longdescription>
 </pkgmetadata>
