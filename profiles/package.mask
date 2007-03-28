@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7054 2007/03/28 14:15:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7055 2007/03/28 20:18:31 dev-zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -430,13 +430,6 @@ dev-java/avalon-logkit-bin
 # Steve Dibb <beandog@gentoo.org> (26 Feb 2007)
 # Security bug 159727
 <media-video/mplayer-1.0_rc1-r2
-
-# Tiziano Müller <dev-zero@gentoo.org> (24 Feb 2007)
-# Masked for removal. Package doesn't run with wxpython >=2.6
-# (bug #159326), is unmaintained since Aug 2003 and broken
-# (doesn't fetch the index file) since the method to fetch 
-# the index is deprecated.
-app-misc/pyge
 
 # Gustavo Felisberto <humpback@gentoo.org> (23 Feb 2007)
 # Masked for remove from tree. Contact me if you need this
