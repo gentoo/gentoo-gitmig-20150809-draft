@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.245 2007/03/27 20:50:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.246 2007/03/28 09:37:19 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Delete net-p2p/freenet from p.mask, since it has been removed from the tree,
+  bug 72996
 
   27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask dev-util/jcvs and dev-java/j2ssh for removal to the java
