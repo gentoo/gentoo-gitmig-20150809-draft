@@ -1,12 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r1.ebuild,v 1.2 2007/01/23 15:45:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r1.ebuild,v 1.3 2007/03/28 06:10:41 vapier Exp $
 
-inherit eutils java-pkg-opt-2 java-ant-2
+inherit multilib eutils java-pkg-opt-2 java-ant-2
 
 DESCRIPTION="Performance analysis and visualization of the system boot process"
-HOMEPAGE="http://www.bootchart.org"
+HOMEPAGE="http://www.bootchart.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="acct debug doc java source"
 
 DEPEND="
 	java? (
@@ -16,7 +21,6 @@ DEPEND="
 		source? ( app-arch/zip )
 	)
 "
-
 RDEPEND="
 	java? (
 		>=virtual/jdk-1.4
@@ -25,16 +29,11 @@ RDEPEND="
 	acct? ( sys-process/acct )
 "
 
-LICENSE="GPL-2"
-SLOT="0"
-IUSE="acct debug doc java source"
-KEYWORDS="~amd64 ~x86"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PN}-0.9-gentoo.patch"
+	epatch "${FILESDIR}"/${PN}-0.9-gentoo.patch
 
 	# delete the included commons-cli and use gentoo's instead
 	# The rest of lib is also bundled but a bit problematic to
@@ -65,8 +64,8 @@ src_compile() {
 src_install() {
 	dodoc README README.logger ChangeLog COPYING TODO
 
-	insinto /lib/rcscripts/addons
-	doins "${FILESDIR}/profiling-functions.sh"
+	insinto /$(get_libdir)/rcscripts/addons
+	doins "${FILESDIR}"/profiling-functions.sh
 
 	into /
 	newsbin script/bootchartd bootchartd

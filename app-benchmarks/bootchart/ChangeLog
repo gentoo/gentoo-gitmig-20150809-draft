@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bootchart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.3 2007/01/23 15:45:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.4 2007/03/28 06:10:41 vapier Exp $
+
+  28 Mar 2007; Mike Frysinger <vapier@gentoo.org> bootchart-0.9-r1.ebuild:
+  Fix install path for rcscript addon #172391 by Georgi Georgiev.
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org> bootchart-0.9.ebuild,
   bootchart-0.9-r1.ebuild:
