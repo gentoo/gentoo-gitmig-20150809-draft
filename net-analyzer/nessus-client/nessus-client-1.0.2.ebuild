@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.2 2007/03/27 22:32:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.3 2007/03/28 05:45:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_install() {
 
 pkg_postinst() {
 	if ! use doc ; then
-	    elog "To have docs available and the Client not complaining about not finding them you need"
-	    elog "to set the doc useflag. Though it will add htmldoc as dependency then, a not that small package"
+		elog "To have docs available and the Client not complaining about not finding them you need"
+		elog "to set the doc useflag. Though it will add htmldoc as dependency then, a not that small package"
 	fi
 }
