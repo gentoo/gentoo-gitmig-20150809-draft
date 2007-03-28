@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.3 2007/03/06 17:26:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.4 2007/03/28 15:17:01 armin76 Exp $
 
 inherit rpm versionator
 
@@ -15,7 +15,7 @@ RDEPEND=">=sys-libs/glibc-2.2.5
 	virtual/libstdc++"
 SLOT="${MAJOR}.${MINOR}"
 MMV="${MAJOR}.${MINOR}"
-KEYWORDS="~amd64 ~ia64 x86"
+KEYWORDS="~amd64 ia64 x86"
 IUSE=""
 RESTRICT="nostrip fetch"
 S="${WORKDIR}/l_cc_c_${PV}"

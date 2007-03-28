@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.23 2007/03/06 17:00:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.24 2007/03/28 15:18:51 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> ifc-9.1.040.ebuild:
+  ia64 stable wrt bug 169468
 
   06 Mar 2007; Christian Faulhammer <opfer@gentoo.org> ifc-9.1.040.ebuild:
   stable x86; bug 169467
