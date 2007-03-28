@@ -1,6 +1,31 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.92 2007/03/24 16:46:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.93 2007/03/28 03:12:25 dang Exp $
+
+*liferea-1.2.10 (28 Mar 2007)
+
+  28 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.10.ebuild:
+  Bump to 1.2.10
+  	* Added rendering of "creator" metadata attribute.
+  	  (patch from Khaled Hosny)
+  	* Fixes crash when removing folder with unread items.
+  	  (SF #1685868, reported by Tigro)
+  	* Fixes links opening up in the configured external browser
+  	  for feeds with enabled "auto load link" setting when the
+  	  "load links in internal browser" preference is not set.
+  	* Fixes another negative unread count problem.
+  	  (reported by pochu)
+  	* Fixes negative unread count problems introduced with
+  	  the last release.
+  	* Lowered memory usage by correctly unloading feeds from 
+  	  memory after unselecting recursively displayed folders.
+  	* Improved performance by avoiding unnecessary folder load 
+  	  recursions.
+  	* New preference option that allows enabling the display
+  	  of the number of new items in the tray icon.
+  	* New preference option that allows to disable minimizing
+  	  to tray when closing the main window.
+  	* Adding DBUS introspection (patch by moonz)
 
   24 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2.4.ebuild,
   -liferea-1.2.5.ebuild, -liferea-1.2.6b.ebuild:
