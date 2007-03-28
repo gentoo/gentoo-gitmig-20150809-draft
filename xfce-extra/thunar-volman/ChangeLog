@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.5 2007/03/10 10:22:33 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.6 2007/03/28 17:48:38 gustavoz Exp $
+
+  28 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  thunar-volman-0.1.2.ebuild:
+  Keyworded ~sparc
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> thunar-volman-0.1.2.ebuild:
   Stable on amd64 wrt bug 169987
