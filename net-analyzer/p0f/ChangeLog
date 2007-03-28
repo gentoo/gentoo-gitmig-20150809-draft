@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.32 2007/03/22 14:09:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.33 2007/03/28 20:41:44 cedk Exp $
+
+*p0f-2.0.8-r1 (28 Mar 2007)
+
+  28 Mar 2007; Cedric Krier <cedk@gentoo.org> +files/p0f.initd3,
+  +p0f-2.0.8-r1.ebuild:
+  Update initd script for bug #172300
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> p0f-2.0.8.ebuild:
   Stable on sparc
