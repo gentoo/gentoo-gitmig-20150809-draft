@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2711 2007/03/28 14:15:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2712 2007/03/28 17:17:40 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1887,6 +1887,7 @@ www-servers/lighttpd:webdav - Enables webdev properties
 www-servers/lighttpd:xattr - if you want extended attributes enabled
 www-servers/nginx:status - Enables stub_status module
 www-servers/nginx:webdav - Enables webdav support
+www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - enable dynamic rescaling of back-end priorities
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
