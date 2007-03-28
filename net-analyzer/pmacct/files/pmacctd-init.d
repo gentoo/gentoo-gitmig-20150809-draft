@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/files/pmacctd-init.d,v 1.2 2004/07/14 23:08:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/files/pmacctd-init.d,v 1.3 2007/03/28 21:17:57 cedk Exp $
 
 depend() {
 	need net
@@ -18,13 +18,8 @@ start() {
 	chekconfig || return 1
 	ebegin "Starting pmacctd"
 	start-stop-daemon --start --exec /usr/sbin/pmacctd \
-		-- -D -f /etc/pmacctd.conf -i ${INTERFACE} ${OPTS}
-
-	# pmacctd apparently always returns a value > 0 when launched,
-	# and start-stop-daemon sees that an error an therfore always
-	# return 1. So we have to assume everything whent as expected.
-	
-	eend
+		-- -D -f /etc/pmacctd.conf ${OPTS}
+	eend $?
 }
 
 stop() {
