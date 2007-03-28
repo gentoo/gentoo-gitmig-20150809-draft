@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.6.191.ebuild,v 1.1 2007/03/28 00:06:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.6.191.ebuild,v 1.2 2007/03/28 00:07:51 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -13,7 +13,7 @@ DESCRIPTION="ATI video driver"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="dri"
 
-RDEPEND=">=x11-base/xorg-server-1.0.99"
+RDEPEND=">=x11-base/xorg-server-1.2"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
 	x11-proto/randrproto
