@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.45 2007/02/21 16:18:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.46 2007/03/28 01:04:18 dang Exp $
+
+*libgnomeuimm-2.18.0 (28 Mar 2007)
+
+  28 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +libgnomeuimm-2.18.0.ebuild:
+  gnome 2.18.0
 
   21 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
   files/digest-libgnomeuimm-2.10.0, Manifest:
