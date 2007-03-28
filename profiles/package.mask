@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7055 2007/03/28 20:18:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7056 2007/03/28 20:36:21 peper Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Piotr Jaroszyński <peper@gentoo.org> (28 Mar 2006)
+# Unusable for now.
+=app-pda/libopensync-plugin-synce-20
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (27 Mar 2007)
 # Release candidate ATI driver
