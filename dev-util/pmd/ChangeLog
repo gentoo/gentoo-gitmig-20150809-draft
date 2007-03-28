@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.22 2007/03/17 18:43:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.23 2007/03/28 19:12:47 betelgeuse Exp $
+
+  28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> -pmd-1.5.ebuild,
+  -pmd-1.5-r1.ebuild, -pmd-3.7.ebuild:
+  Cleanup.
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> pmd-3.8-r1.ebuild:
   Stable on ppc wrt bug 170599
