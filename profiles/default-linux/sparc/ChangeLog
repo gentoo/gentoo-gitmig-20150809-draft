@@ -1,6 +1,13 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.51 2007/03/23 13:59:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.52 2007/03/28 17:47:44 gustavoz Exp $
+
+  28 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc32/2006.0/2.4/package.mask, sparc32/2006.1/2.4/package.mask,
+  sparc64/2006.0/2.4/package.mask, sparc64/2006.1/2.4/package.mask,
+  use.mask:
+  Mask thunar-volman for 2.4 profiles, use.mask D language overall since it
+  doesn't build
 
   23 Mar 2007; Ferris McCormick <fmccor@gentoo.org>
   sparc64/2006.1/2.4/package.mask:

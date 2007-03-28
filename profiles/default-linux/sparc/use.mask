@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.110 2007/03/22 19:20:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.111 2007/03/28 17:47:44 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -239,3 +239,7 @@ lcd_devices_ula200
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Mask krb4, it's generally broken and really not secure see #116471
 krb4
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# It doesn't even build
+d

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/package.mask,v 1.20 2007/03/23 13:54:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/package.mask,v 1.21 2007/03/28 17:47:44 gustavoz Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # This needs GNOME 2.16+
@@ -170,6 +170,7 @@ x11-drivers/xf86-input-evdev
 >=gnome-extra/gnome2-user-docs-2.16.0
 >=gnome-base/gconf-2.16.0
 >=gnome-base/gnome-light-2.16.0
+xfce-extra/thunar-volman
 
 #	Ferris McCormick <fmccor@gentoo.org>
 #	seahorse-1.0 is a problem with 2.4 kernels.
