@@ -1,1 +1,7 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/package.use.mask,v 1.4 2007/03/28 04:40:04 beandog Exp $
+
+# Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
+# media-sound/twolame not tested
+media-video/mplayer mp2
+
 media-gfx/graphviz pango

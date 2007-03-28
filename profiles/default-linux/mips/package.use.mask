@@ -1,3 +1,9 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.3 2007/03/28 04:38:32 beandog Exp $
+
+# Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
+# media-sound/twolame not tested
+media-video/mplayer mp2
+
 # NPTL only works on >=glibc-2.4 ...
 <sys-lib/glibc-2.4 nptl
 

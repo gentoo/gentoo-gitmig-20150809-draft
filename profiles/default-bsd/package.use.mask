@@ -1,4 +1,4 @@
-media-video/mplayer dvdnav
+media-video/mplayer dvdnav mp2
 app-misc/mc pam
 dev-util/catalyst cdr
 kde-base/kcontrol ieee1394

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/ChangeLog,v 1.1 2007/03/22 04:58:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/ChangeLog,v 1.2 2007/03/28 04:45:21 beandog Exp $
+
+  28 Mar 2007; Steve Dibb <beandog@gentoo.org> +package.use.mask:
+  Add package.use.mask, mask mp2 on mplayer
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
   Add ivtv local use flag, add changelog
