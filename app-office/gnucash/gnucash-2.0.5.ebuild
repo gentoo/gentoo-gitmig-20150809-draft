@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.7 2007/03/28 15:05:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.8 2007/03/28 21:45:45 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="~amd64 sparc x86"
 
 IUSE="ofx hbci chipcard doc debug quotes nls"
 
