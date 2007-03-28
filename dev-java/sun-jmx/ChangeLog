@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jmx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.5 2007/03/27 20:02:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.6 2007/03/28 06:29:44 opfer Exp $
+
+  28 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  sun-jmx-1.2.1-r2.ebuild:
+  stable x86, bug 172456
 
   27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   sun-jmx-1.2.1-r2.ebuild:
