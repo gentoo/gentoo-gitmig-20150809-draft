@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.51 2007/02/22 00:04:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.52 2007/03/28 04:03:22 williamh Exp $
+
+*brltty-3.7.2-r1 (28 Mar 2007)
+
+  28 Mar 2007; William Hubbs <williamh@gentoo.org> +files/brltty.rc,
+  +brltty-3.7.2-r1.ebuild:
+  Add a startup script (closes #171591).
 
   22 Feb 2007; Doug Goldstein <cardoe@gentoo.org> ChangeLog, Manifest:
   Manifest2 fix
