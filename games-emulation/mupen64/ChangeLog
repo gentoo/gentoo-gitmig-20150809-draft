@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/mupen64
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.24 2007/03/27 15:17:01 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.25 2007/03/28 00:58:24 joker Exp $
+
+*mupen64-0.5-r4 (28 Mar 2007)
+
+  28 Mar 2007; Christian Birchinger <joker@gentoo.org>
+  +files/mupen64-glN64-noasmfix.patch, +files/mupen64-glN64-ucode.patch,
+  +mupen64-0.5-r4.ebuild:
+  New revision with some patches from the standalone glN64 ebuild. Infos taken
+  from Bug #170763 and thanks to Sal Gonzalez <ghostx@optonline.net>.
 
 *mupen64-0.5-r3 (27 Mar 2007)
 

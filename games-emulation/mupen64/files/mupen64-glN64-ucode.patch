@@ -1,0 +1,121 @@
+diff -g glN64-old/GBI.cpp glN64/GBI.cpp
+*** glN64-old/GBI.cpp	2003-10-15 16:01:07.000000000 -0700
+--- glN64/GBI.cpp	2005-02-02 23:42:30.000000000 -0800
+***************
+*** 37,43 ****
+  	{ F3DDKR,	FALSE,	0x8d91244f, "Diddy Kong Racing" },
+  	{ F3DDKR,	FALSE,	0x6e6fc893, "Diddy Kong Racing" },
+  	{ F3DDKR,	FALSE,	0xbde9d1fb, "Jet Force Gemini" },
+! 	{ F3DPD,	FALSE,	0x1c4f7869, "Perfect Dark" }
+  };
+  
+  u32 G_RDPHALF_1, G_RDPHALF_2, G_RDPHALF_CONT;
+--- 37,44 ----
+  	{ F3DDKR,	FALSE,	0x8d91244f, "Diddy Kong Racing" },
+  	{ F3DDKR,	FALSE,	0x6e6fc893, "Diddy Kong Racing" },
+  	{ F3DDKR,	FALSE,	0xbde9d1fb, "Jet Force Gemini" },
+! 	{ F3DPD,	FALSE,	0x1c4f7869, "Perfect Dark" },
+! 	{ F3DEX,	FALSE,	0x0ace4c3f, "Mario Kart" }
+  };
+  
+  u32 G_RDPHALF_1, G_RDPHALF_2, G_RDPHALF_CONT;
+***************
+*** 264,274 ****
+  
+  	while (selectedMicrocode == -1)
+  	{
+! //		if( gtk_main_iteration() )
+! //			break;
+  		usleep( 10000 );
+  	}
+  	gdk_threads_leave();
+  	return selectedMicrocode;
+  }
+  #endif // __LINUX__
+--- 265,276 ----
+  
+  	while (selectedMicrocode == -1)
+  	{
+! 		if( gtk_main_iteration() )
+! 			break;
+  		usleep( 10000 );
+  	}
+  	gdk_threads_leave();
++ 
+  	return selectedMicrocode;
+  }
+  #endif // __LINUX__
+***************
+*** 435,441 ****
+  	current->type = DialogBox( hInstance, MAKEINTRESOURCE( IDD_MICROCODEDLG ), hWnd, MicrocodeDlgProc );
+  #else // !__LINUX__
+  	printf( "glN64: Warning - unknown ucode!!!\n" );
+! 	current->type = MicrocodeDialog();
+  #endif // __LINUX__
+  	return current;
+  }
+--- 437,447 ----
+  	current->type = DialogBox( hInstance, MAKEINTRESOURCE( IDD_MICROCODEDLG ), hWnd, MicrocodeDlgProc );
+  #else // !__LINUX__
+  	printf( "glN64: Warning - unknown ucode!!!\n" );
+! 	if(last_good_ucode != -1) {
+! 		current->type=last_good_ucode;
+! 	} else {
+! 		current->type = MicrocodeDialog();
+! 	}
+  #endif // __LINUX__
+  	return current;
+  }
+diff -g glN64-old/GBI.h glN64/GBI.h
+*** glN64-old/GBI.h	2003-10-15 16:01:07.000000000 -0700
+--- glN64/GBI.h	2005-02-02 23:37:36.000000000 -0800
+***************
+*** 736,741 ****
+--- 736,742 ----
+  
+  void GBI_MakeCurrent( MicrocodeInfo *current );
+  MicrocodeInfo *GBI_DetectMicrocode( u32 uc_start, u32 uc_dstart, u16 uc_dsize );
++ extern u32 last_good_ucode;
+  void GBI_Init();
+  void GBI_Destroy();
+  
+diff -g glN64-old/glN64.cpp glN64/glN64.cpp
+*** glN64-old/glN64.cpp	2003-10-15 16:09:00.000000000 -0700
+--- glN64/glN64.cpp	2005-02-02 23:36:47.000000000 -0800
+***************
+*** 29,35 ****
+  
+  char		pluginName[] = "glN64 v0.4.1-rc2";
+  char		*screenDirectory;
+! 
+  void (*CheckInterrupts)( void );
+  
+  #ifndef __LINUX__
+--- 29,35 ----
+  
+  char		pluginName[] = "glN64 v0.4.1-rc2";
+  char		*screenDirectory;
+! u32 last_good_ucode = -1;
+  void (*CheckInterrupts)( void );
+  
+  #ifndef __LINUX__
+diff -g glN64-old/gSP.cpp glN64/gSP.cpp
+*** glN64-old/gSP.cpp	2003-10-15 16:01:07.000000000 -0700
+--- glN64/gSP.cpp	2005-02-02 23:41:58.000000000 -0800
+***************
+*** 60,66 ****
+  	}
+  
+  	MicrocodeInfo *ucode = GBI_DetectMicrocode( uc_start, uc_dstart, uc_dsize );
+! 
+  	if (ucode->type != NONE)
+  		GBI_MakeCurrent( ucode );
+  	else
+--- 60,66 ----
+  	}
+  
+  	MicrocodeInfo *ucode = GBI_DetectMicrocode( uc_start, uc_dstart, uc_dsize );
+! 	if (ucode->type != -1) last_good_ucode = ucode->type;
+  	if (ucode->type != NONE)
+  		GBI_MakeCurrent( ucode );
+  	else

@@ -1,0 +1,11 @@
+--- glN64/convert.h.old	2005-04-23 16:32:44.000000000 -0700
++++ glN64/convert.h	2005-04-23 16:40:43.000000000 -0700
+@@ -442,7 +442,7 @@
+ 	while (numDWords--)
+ 	{
+ 		u32 dword = *(u32 *)src;
+-		__asm__ volatile( "bswapl %0\n\t" : "=q"(dword) : "0"(dword) );
++		dword = ((dword<<24)|((dword<<8)&0x00FF0000)|((dword>>8)&0x0000FF00)|(dword>>24));
+ 		*(u32 *)dest = dword;
+ 		dest = (void *)((int)dest+4);
+ 		src  = (void *)((int)src +4);
