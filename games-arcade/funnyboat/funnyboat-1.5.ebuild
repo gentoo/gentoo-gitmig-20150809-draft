@@ -1,28 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.3.ebuild,v 1.3 2007/02/08 10:17:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.5.ebuild,v 1.1 2007/03/28 00:44:22 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="A side scrolling shooter game starring a steamboat on the sea"
 HOMEPAGE="http://funnyboat.sourceforge.net/"
-SRC_URI="mirror://sourceforge/funnyboat/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
-LICENSE="GPL-2 CCPL-Attribution-2.5 CCPL-Attribution-NonCommercial-NoDerivs-2.0"
+LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygame-1.6.2"
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${PN}
 
 src_install() {
-	insinto "${GAMES_DATADIR}/${PN}"
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r data *.py || die "doins failed"
 	dodoc *.txt
-	newicon data/kuvake.png "${PN}.png"
 	games_make_wrapper ${PN} "python main.py" "${GAMES_DATADIR}"/${PN}
-	make_desktop_entry "${PN}" "Trip on the Funny Boat"
+	newicon data/kuvake.png ${PN}.png
+	make_desktop_entry ${PN} "Trip on the Funny Boat"
 	prepgamesdirs
 }

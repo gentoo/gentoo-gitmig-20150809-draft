@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/funnyboat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.7 2007/03/18 06:47:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.8 2007/03/28 00:44:22 nyhm Exp $
+
+*funnyboat-1.5 (28 Mar 2007)
+
+  28 Mar 2007; Tristan Heaven <nyhm@gentoo.org> +funnyboat-1.5.ebuild:
+  Version bump
 
   18 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> funnyboat-1.4.ebuild:
   media is under MIT license; stable for x86
