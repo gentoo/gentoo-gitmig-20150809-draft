@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.23 2007/03/24 16:37:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.24 2007/03/28 19:39:37 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> paramiko-1.6.3.ebuild:
+  ia64 stable wrt bug 168238
 
 *paramiko-1.7 (24 Mar 2007)
 
