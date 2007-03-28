@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-starterbar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.25 2007/02/21 23:21:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.26 2007/03/28 20:20:16 leio Exp $
+
+  28 Mar 2007; Mart Raudsepp <leio@gentoo.org>
+  -desklet-starterbar-0.21.ebuild, -desklet-starterbar-0.30.ebuild,
+  -desklet-starterbar-0.31.2.ebuild:
+  Remove redundant versions
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
