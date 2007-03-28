@@ -1,0 +1,7 @@
+# ChangeLog for Gentoo/x86 profile directory
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.4 2007/03/28 04:28:45 beandog Exp $
+
+  28 Mar 2007; Steve Dibb <beandog@gentoo.org> +package.use.mask:
+  Add package.use.mask, ChangeLog, mask mp2 on mplayer
+
