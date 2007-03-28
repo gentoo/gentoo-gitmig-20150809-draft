@@ -5,7 +5,7 @@
 renice +19 -p $$ >/dev/null 2>&1
 
 if [ "$PRELINKING" != yes ]; then
-  sed -ri '/^[[:space:]]*#?[[:space:]]*KDE_IS_PRELINKED=/s:.*:#KDE_IS_PRELINKED=1:' /etc/env.d/*kde*
+  sed -ri '/^[[:space:]]*#?[[:space:]]*KDE_IS_PRELINKED=/s:.*:#KDE_IS_PRELINKED=1:' /etc/env.d/*kde* 2>/dev/null
   if [ -f /etc/prelink.cache ]; then
     echo /usr/sbin/prelink -uav > /var/log/prelink.log
     /usr/sbin/prelink -uav >> /var/log/prelink.log 2>&1 \
@@ -17,7 +17,7 @@ if [ "$PRELINKING" != yes ]; then
   exit 0
 fi
 
-sed -ri '/^[[:space:]]*#?[[:space:]]*KDE_IS_PRELINKED=/s:.*:KDE_IS_PRELINKED=1:' /etc/env.d/*kde*
+sed -ri '/^[[:space:]]*#?[[:space:]]*KDE_IS_PRELINKED=/s:.*:KDE_IS_PRELINKED=1:' /etc/env.d/*kde* 2>/dev/null
 
 if [ ! -f /etc/prelink.cache -o -f /var/lib/misc/prelink.force ] \
    || grep -q '^prelink-ELF0.[0-2]' /etc/prelink.cache; then
