@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.9_pre20041216-r4.ebuild,v 1.1 2007/02/23 12:00:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.9_pre20041216-r4.ebuild,v 1.2 2007/03/28 06:13:08 vapier Exp $
 
-inherit eutils toolchain-funcs
+inherit multilib eutils toolchain-funcs
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	make STRIP=true install DESTDIR="${D}" USRSBINDIR="${D}/sbin" || die
+	emake STRIP=true install DESTDIR="${D}" USRSBINDIR="${D}/sbin" || die
 	newinitd "${FILESDIR}"/udhcp.rc udhcp
 	insinto /etc
 	doins samples/udhcpd.conf
@@ -52,6 +52,6 @@ src_install() {
 	# udhcpc setup script - the supplied ones don't work
 	# This does it supports resolvconf, metrics and whether to setup
 	# dns, ntp and routers. Requires the --env patch above.
-	exeinto /lib/rcscripts/sh
+	exeinto /$(get_libdir)/rcscripts/sh
 	newexe "${FILESDIR}"/udhcpc.sh udhcpc.sh
 }

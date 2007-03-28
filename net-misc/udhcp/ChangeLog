@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.32 2007/02/23 12:00:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.33 2007/03/28 06:13:08 vapier Exp $
+
+  28 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  udhcp-0.9.9_pre20041216-r4.ebuild:
+  Fix install path for rcscript addon #172391 by Georgi Georgiev.
 
 *udhcp-0.9.9_pre20041216-r4 (23 Feb 2007)
 
