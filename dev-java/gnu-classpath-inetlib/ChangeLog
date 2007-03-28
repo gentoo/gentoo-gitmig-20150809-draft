@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.21 2006/11/28 03:54:25 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.22 2007/03/28 18:14:46 betelgeuse Exp $
+
+  28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  gnu-classpath-inetlib-1.0-r2.ebuild, gnu-classpath-inetlib-1.1-r2.ebuild:
+  Switch license to GPL-2-with-linking-exception as that is what the actual
+  *.java files indicate (bug #172161).
 
   28 Nov 2006; Joshua Nichols <nichoj@gentoo.org>
   gnu-classpath-inetlib-1.0-r2.ebuild:
