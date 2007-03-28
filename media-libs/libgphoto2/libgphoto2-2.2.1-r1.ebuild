@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.19 2007/03/01 21:03:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.20 2007/03/28 11:44:39 armin76 Exp $
 
 inherit libtool eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="nls doc exif usb hal"
 RESTRICT="test confcache"
 
