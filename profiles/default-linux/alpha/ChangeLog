@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.35 2007/03/22 04:03:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.36 2007/03/28 04:25:18 beandog Exp $
+
+  28 Mar 2007; Steve Dibb <beandog@gentoo.org> +package.use.mask:
+  Add package.use.mask, mask mp2 on mplayer
 
   22 Mar 2007; Steve Dibb <beandog@gentoo.org> use.mask:
   add ivtv to use.mask
