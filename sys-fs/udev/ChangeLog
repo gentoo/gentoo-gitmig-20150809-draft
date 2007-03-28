@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.291 2007/03/27 20:44:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.292 2007/03/28 16:28:27 zzam Exp $
+
+*udev-107-r1 (28 Mar 2007)
+
+  28 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/64-device-mapper.rules-107-r1, +files/udev.rules-107-r1,
+  +udev-107-r1.ebuild:
+  Ignore luks crypt devices while not fully up. Small rule cleanup.
 
   27 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> udev-079-r2.ebuild,
   udev-087.ebuild, udev-087-r1.ebuild, udev-090-r1.ebuild, udev-094.ebuild,
