@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.79 2007/02/13 21:11:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.80 2007/03/28 20:45:45 armin76 Exp $
+
+  28 Mar 2007; Raúl Porcel <armin76@gentoo.org> openal-0.0.8-r1.ebuild:
+  ia64 stable wrt bug 154377
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/0.0.8/004_all_ggc42.patch:
