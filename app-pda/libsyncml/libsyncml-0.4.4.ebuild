@@ -1,18 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.4.3.ebuild,v 1.2 2007/03/28 20:13:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.4.4.ebuild,v 1.1 2007/03/28 20:13:43 peper Exp $
 
 inherit eutils
 
 DESCRIPTION="Implementation of the SyncML protocol"
 HOMEPAGE="http://libsyncml.opensync.org/"
-SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.gz"
+SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="bluetooth debug doc http obex"
-#test
 
 RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/libwbxml-0.9.2
@@ -23,7 +22,6 @@ RDEPEND=">=dev-libs/glib-2.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
-	#test? ( dev-libs/check )
 
 # Some of the tests are broken
 RESTRICT="test"

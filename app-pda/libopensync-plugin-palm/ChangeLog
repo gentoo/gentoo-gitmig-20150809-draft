@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libopensync-plugin-palm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-palm/ChangeLog,v 1.3 2007/02/12 21:04:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-palm/ChangeLog,v 1.4 2007/03/28 20:21:26 peper Exp $
+
+*libopensync-plugin-palm-0.22 (28 Mar 2007)
+
+  28 Mar 2007; Piotr Jaroszyński <peper@gentoo.org>
+  -libopensync-plugin-palm-0.20.ebuild,
+  +libopensync-plugin-palm-0.22.ebuild:
+  Version bump.
 
 *libopensync-plugin-palm-0.21 (12 Feb 2007)
 

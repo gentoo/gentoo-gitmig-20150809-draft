@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libopensync-plugin-file
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-file/ChangeLog,v 1.3 2007/02/12 20:56:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-file/ChangeLog,v 1.4 2007/03/28 20:16:32 peper Exp $
+
+*libopensync-plugin-file-0.22 (28 Mar 2007)
+
+  28 Mar 2007; Piotr Jaroszyński <peper@gentoo.org>
+  -libopensync-plugin-file-0.20.ebuild,
+  +libopensync-plugin-file-0.22.ebuild:
+  Version bump.
 
 *libopensync-plugin-file-0.21 (12 Feb 2007)
 

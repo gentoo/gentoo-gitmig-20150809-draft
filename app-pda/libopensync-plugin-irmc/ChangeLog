@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libopensync-plugin-irmc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.4 2007/03/04 07:23:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.5 2007/03/28 20:19:36 peper Exp $
+
+*libopensync-plugin-irmc-0.22 (28 Mar 2007)
+
+  28 Mar 2007; Piotr Jaroszyński <peper@gentoo.org>
+  -libopensync-plugin-irmc-0.20.ebuild,
+  +libopensync-plugin-irmc-0.22.ebuild:
+  Version bump.
 
   04 Mar 2007; Marius Mauch <genone@gentoo.org>
   libopensync-plugin-irmc-0.21.ebuild:
