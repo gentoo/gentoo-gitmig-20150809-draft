@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2710 2007/03/27 22:19:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2711 2007/03/28 14:15:26 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -518,6 +518,7 @@ dev-php5/znf:smarty - Include support for Smarty
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
+dev-python/gnome-python-extras:xulrunner - Enable support for xulrunner instead of firefox
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)

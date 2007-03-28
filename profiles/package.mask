@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7053 2007/03/28 09:37:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7054 2007/03/28 14:15:26 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -177,6 +177,7 @@ xfce-extra/xfce4-toys
 >=dev-cpp/libgnomeuimm-2.18.0
 >=dev-python/gnome-python-2.18.0
 >=gnome-base/gnome-mount-0.5
+=dev-python/gnome-python-extras-2.14.2-r1
 # End of GNOME 2.18.0 mask
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Mar 2007)
