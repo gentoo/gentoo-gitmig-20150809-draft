@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/package.use.mask,v 1.1 2007/03/28 04:36:39 beandog Exp $
+
+# Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
+# media-sound/twolame not tested
+media-video/mplayer mp2
