@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lcdsplash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/ChangeLog,v 1.4 2007/02/09 05:35:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/ChangeLog,v 1.5 2007/03/28 06:12:55 vapier Exp $
+
+  28 Mar 2007; Mike Frysinger <vapier@gentoo.org> lcdsplash-0.3.ebuild:
+  Fix install path for rcscript addon #172391 by Georgi Georgiev.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
