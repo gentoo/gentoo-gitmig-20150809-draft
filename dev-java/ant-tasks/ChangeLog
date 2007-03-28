@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.58 2007/03/11 00:37:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.59 2007/03/28 09:36:43 caster Exp $
+
+*ant-tasks-1.7.0-r2 (28 Mar 2007)
+
+  28 Mar 2007; Vlastimil Babka <caster@gentoo.org>
+  +ant-tasks-1.7.0-r2.ebuild:
+  Revbump to register also ant-nodeps into package.env which was forgotten.
+  Fixes bug #166864.
 
 *ant-tasks-1.7.0-r1 (11 Mar 2007)
 
