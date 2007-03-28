@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.45 2007/01/21 19:17:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.46 2007/03/28 01:31:58 dang Exp $
+
+*pyorbit-2.14.2 (28 Mar 2007)
+
+  28 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +pyorbit-2.14.2.ebuild:
+  Bump to 2.14.2
+          - Fix build problem on gentoo
+          - Fix a couple of bugs uncovered by Coverity
 
   21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> pyorbit-2.14.1.ebuild:
   Stable on IA64, bug 156662.
