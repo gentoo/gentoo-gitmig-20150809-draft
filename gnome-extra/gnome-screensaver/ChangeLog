@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.36 2007/03/27 21:25:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.37 2007/03/28 12:34:41 uberlord Exp $
+
+  28 Mar 2007; Roy Marples <uberlord@gentoo.org>
+  gnome-screensaver-2.16.2.ebuild, gnome-screensaver-2.18.0.ebuild:
+  -pam really doesn't use PAM
+  Keyworded ~x86-fbsd.
 
 *gnome-screensaver-2.18.0 (27 Mar 2007)
 

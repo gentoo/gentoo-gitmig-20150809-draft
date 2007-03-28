@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2.ebuild,v 1.12 2007/03/18 01:25:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2.ebuild,v 1.13 2007/03/28 12:34:41 uberlord Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug doc xinerama opengl pam"
 
 RDEPEND=">=gnome-base/gconf-2.6.1
@@ -27,8 +27,8 @@ RDEPEND=">=gnome-base/gconf-2.6.1
 	xinerama? (
 		x11-libs/libXinerama
 		x11-proto/xineramaproto	)
-	pam? ( sys-libs/pam )
-	!pam? ( sys-apps/shadow )
+	pam? ( virtual/pam )
+	!pam? ( kernel_linux? ( sys-apps/shadow ) )
 
 	x11-libs/libX11
 	x11-libs/libXext
@@ -51,17 +51,11 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
-
 pkg_setup() {
-	if use pam ; then
-		G2CONF="--enable-pam"
-	else
-		G2CONF="--with-shadow"
-	fi
-
 	G2CONF="${G2CONF} \
 		$(use_enable doc docbook-docs) \
 		$(use_enable debug) \
+		$(use_enable pam) \
 		$(use_enable xinerama) \
 		$(use_with opengl gl) \
 		--enable-locking \
@@ -90,7 +84,10 @@ src_install() {
 
 	dodoc ${S}/xss-conversion.txt
 
-	# If you are using shadow, you need to set the setuid bit on the dialog
+	# Non PAM users will need this suid to read the password hashes.
+	# OpenPAM users will probably need this too when
+	# http://bugzilla.gnome.org/show_bug.cgi?id=370847
+	# is fixed.
 	if ! use pam ; then
 		fperms +s /usr/libexec/gnome-screensaver-dialog
 	fi
