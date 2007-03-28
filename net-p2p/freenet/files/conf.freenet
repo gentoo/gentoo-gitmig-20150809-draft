@@ -1,9 +1,0 @@
-#Freenet config file
-
-# This is for any options you want to pass to the java virtual machine
-# the default is to allocate up to 256M of memory for freenet.
-JAVA_OPTIONS="-Xmx256M"
-
-# This is the nice level to run freenet at, runs at 1 by default to keep
-# out of the way of your more interactive tasks
-FREENET_NICENESS="1"
