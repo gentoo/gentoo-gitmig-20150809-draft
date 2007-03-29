@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.10 2007/03/18 13:20:06 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.11 2007/03/29 14:02:16 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  2005.1/ppc64/32bit-userland/packages,
+  dev/ppc64/2007.0/32bit-userland/packages,
+  ppc64/2006.0/32bit-userland/packages,
+  ppc64/2006.1/32bit-userland/packages,
+  ppc64/2007.0/32bit-userland/packages:
+  Moved 32bit profiles from gcc-powerpc64 to kgcc64; bug #147126
 
   18 Mar 2007; Matti Bickel <mabi@gentoo.org> use.mask:
   afs usemask removed
