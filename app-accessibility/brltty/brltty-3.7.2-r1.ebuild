@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2-r1.ebuild,v 1.1 2007/03/28 04:03:22 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2-r1.ebuild,v 1.2 2007/03/29 02:24:07 williamh Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -46,7 +46,7 @@ src_install() {
 	rm *.made
 	dodoc ChangeLog README* Manual.* TODO brltty.conf
 	dohtml -r Manual-HTML
-	newinit ${FILESDIR}/brltty.rc brltty
+	newinitd ${FILESDIR}/brltty.rc brltty
 	if use doc; then
 		dodoc BrlAPI.* BrlAPIref.doxy
 		dohtml -r BrlAPI-HTML BrlAPIref-HTML
