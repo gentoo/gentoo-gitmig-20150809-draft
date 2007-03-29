@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.43 2007/03/15 17:18:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.44 2007/03/29 18:04:31 wltjr Exp $
+
+*azureus-2.5.0.4-r1 (29 Mar 2007)
+
+  29 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/fedora-2.5.0.4/azureus-bcprov-1.35.patch,
+  +azureus-2.5.0.4-r1.ebuild:
+  Added patch for changes in bcprov due to revision bump per bug #172657
 
   15 Mar 2007; Simon Stelling <blubb@gentoo.org> azureus-2.5.0.4.ebuild:
   stable on amd64; bug 170955
