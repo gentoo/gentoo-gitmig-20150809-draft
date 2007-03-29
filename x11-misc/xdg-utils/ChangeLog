@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.20 2007/03/02 20:39:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.21 2007/03/29 14:30:09 wolf31o2 Exp $
+
+  29 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> xdg-utils-1.0.ebuild:
+  Stable on alpha wrt bug #170881.
 
   02 Mar 2007; Samuli Suominen <drac@gentoo.org> xdg-utils-1.0.ebuild:
   Kill virtual/x11.
