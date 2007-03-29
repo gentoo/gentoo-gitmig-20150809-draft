@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.122 2007/03/25 12:03:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.123 2007/03/29 15:30:20 drizzt Exp $
+
+  29 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> postfix-2.3.8.ebuild:
+  Add ~x86-fbsd keyword
 
   25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   postfix-2.3.6.ebuild:
