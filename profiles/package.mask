@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7056 2007/03/28 20:36:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7057 2007/03/29 03:03:49 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -193,6 +193,8 @@ games-strategy/mylink
 # masked for removal in April.
 # Old and nasty.  Not supported by upstream.
 # use the newer versions of clanlib instead.
+# If you find a bug in one of these packages, don't even think
+# of filing a bug report unless you have a patch fixing the bug.
 =dev-games/clanlib-0.6*
 media-libs/hermes
 games-sports/trophy
