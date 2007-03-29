@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/quodlibet-clock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-clock/ChangeLog,v 1.7 2007/03/19 12:13:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-clock/ChangeLog,v 1.8 2007/03/29 08:21:13 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  quodlibet-clock-3317.ebuild:
+  Added ~ppc64; bug #172367
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
