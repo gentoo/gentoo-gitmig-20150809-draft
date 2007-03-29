@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.219 2007/03/17 00:05:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.220 2007/03/29 18:00:25 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  linux-headers-2.6.8.1-r4.ebuild, linux-headers-2.6.11-r2.ebuild,
+  linux-headers-2.6.11-r3.ebuild, linux-headers-2.6.11-r4.ebuild,
+  linux-headers-2.6.11-r5.ebuild, linux-headers-2.6.11-r6.ebuild,
+  linux-headers-2.6.16.ebuild, linux-headers-2.6.17.ebuild,
+  linux-headers-2.6.17-r1.ebuild, linux-headers-2.6.17-r2.ebuild:
+  Move from gcc-powerpc64 to kgcc64
 
 *linux-headers-2.6.20-r2 (17 Mar 2007)
 

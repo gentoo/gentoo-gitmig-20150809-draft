@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r4.ebuild,v 1.17 2007/01/18 12:56:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r4.ebuild,v 1.18 2007/03/29 18:00:25 corsair Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm bfin cris hppa ia64 m68k nios2 ppc ppc64 s390 sh sparc x86"
@@ -16,7 +16,7 @@ SRC_URI="${KERNEL_URI} mirror://gentoo/linux-2.6.11-m68k-headers.patch.bz2
 KEYWORDS="-* alpha ia64 ppc ppc64 sparc" # Do *not* add other archs, this is a revbump-forcer for only #114767 and #115708.
 IUSE="gcc64"
 
-DEPEND="ppc? ( gcc64? ( sys-devel/gcc-powerpc64 ) )
+DEPEND="ppc? ( gcc64? ( sys-devel/kgcc64 ) )
 	sparc? ( gcc64? ( sys-devel/kgcc64 ) )"
 
 UNIPATCH_LIST="${DISTDIR}/gentoo-headers-${PV}-${PATCHES_V}.tar.bz2
