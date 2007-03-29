@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.23 2007/02/22 00:27:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.24 2007/03/29 08:13:43 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> gst-python-0.10.6.ebuild:
+  Added ~ppc64; bug #172367
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-4.1.ebuild,v 1.9 2006/10/15 17:50:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-4.1.ebuild,v 1.10 2007/03/29 08:16:21 corsair Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.feedparser.org/"
 SRC_URI="mirror://sourceforge/feedparser/${P}.zip"
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 ~sparc x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 

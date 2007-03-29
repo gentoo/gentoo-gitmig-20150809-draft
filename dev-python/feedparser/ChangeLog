@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/feedparser
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.12 2006/10/15 17:50:43 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.13 2007/03/29 08:16:21 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> feedparser-4.1.ebuild:
+  Added ~ppc64; bug #172367
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> feedparser-4.1.ebuild:
   Stable on ia64.
