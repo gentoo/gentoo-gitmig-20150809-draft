@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.43 2007/03/19 11:58:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.44 2007/03/29 08:11:54 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> mutagen-1.8.ebuild,
+  mutagen-1.9.ebuild, mutagen-1.10.1.ebuild:
+  Added ~ppc64; bug #172367
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
