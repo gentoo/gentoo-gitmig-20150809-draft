@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7060 2007/03/29 17:52:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7061 2007/03/29 19:22:17 falco Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -57,9 +57,11 @@ dev-java/j2ssh
 dev-java/datavision
 
 # <falco@gentoo.org> (26 Mar 2007)
-# Masked for security issues #153495
+# Masked for security issues #153495 together with
+# <=mpiexec-0.75 which depends on it.
 # Use sys-cluster/torque as a replacement
-#sys-cluster/openpbs
+sys-cluster/openpbs
+<=sys-cluster/mpiexec-0.75
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Mar 2007)
 # Superseded by net-misc/nx
