@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.48 2007/03/19 12:28:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.49 2007/03/29 08:20:25 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> quodlibet-0.24-r1.ebuild:
+  Added ~ppc64; bug #172367
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
