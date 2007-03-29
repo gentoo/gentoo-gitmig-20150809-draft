@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.4 2007/03/26 14:50:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.5 2007/03/29 19:01:11 cardoe Exp $
+
+*consolekit-0.2.0-r1 (29 Mar 2007)
+
+  29 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/consolekit-0.2.0-gdk-to-x11.patch,
+  +files/consolekit-0.2.0-pam-lib-fix.patch, +consolekit-0.2.0-r1.ebuild:
+  Change GTK+ depend to X11. Fix /lib/ issues.
 
   26 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   consolekit-0.2.0.ebuild:

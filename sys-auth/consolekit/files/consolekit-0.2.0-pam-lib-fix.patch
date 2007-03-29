@@ -1,0 +1,33 @@
+diff -Nur ConsoleKit-0.2.0/configure.ac ConsoleKit-0.2.0-fixed/configure.ac
+--- ConsoleKit-0.2.0/configure.ac	2007-03-14 19:21:25.000000000 -0400
++++ ConsoleKit-0.2.0-fixed/configure.ac	2007-03-29 10:26:36.000000000 -0400
+@@ -12,6 +12,8 @@
+ 
+ AM_MAINTAINER_MODE
+ 
++AC_DISABLE_STATIC
++
+ AC_ISC_POSIX
+ AC_PROG_CC
+ AC_STDC_HEADERS
+@@ -199,7 +201,7 @@
+ if ! test -z "$with_slibdir"; then
+    SLIBDIR="$with_slibdir"
+ else
+-   SLIBDIR="$libdir"
++   SLIBDIR="/lib"
+ fi
+ AC_SUBST(SLIBDIR)
+ 
+diff -Nur ConsoleKit-0.2.0/pam-ck-connector/Makefile.am ConsoleKit-0.2.0-fixed/pam-ck-connector/Makefile.am
+--- ConsoleKit-0.2.0/pam-ck-connector/Makefile.am	2007-03-13 02:58:10.000000000 -0400
++++ ConsoleKit-0.2.0-fixed/pam-ck-connector/Makefile.am	2007-03-28 17:57:05.000000000 -0400
+@@ -7,7 +7,7 @@
+ 	-I$(top_builddir)/libck-connector	\
+ 	$(NULL)
+ 
+-pamlibdir = /lib/security
++pamlibdir = $(SLIBDIR)/security
+ 
+ pamlib_LTLIBRARIES = 				\
+ 	pam_ck_connector.la			\
