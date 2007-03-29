@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/openbubbles
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openbubbles/ChangeLog,v 1.2 2007/03/26 18:04:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openbubbles/ChangeLog,v 1.3 2007/03/29 03:01:41 mr_bones_ Exp $
+
+  29 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  openbubbles-1.2.ebuild:
+  stable for x86; tidy
 
   26 Mar 2007; <tupone@gentoo.org> openbubbles-1.2.ebuild:
   Added ~x86 keyword. Bug 172263 by Will Briggs
