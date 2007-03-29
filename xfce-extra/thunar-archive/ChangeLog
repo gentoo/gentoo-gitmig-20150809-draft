@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.9 2007/03/28 17:42:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.10 2007/03/29 18:48:57 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  thunar-archive-0.2.4.ebuild:
+  Added ~ppc64
 
   28 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   thunar-archive-0.2.4.ebuild:
