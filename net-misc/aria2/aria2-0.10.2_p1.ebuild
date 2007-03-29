@@ -1,18 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.10.1.ebuild,v 1.1 2007/02/07 11:44:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.10.2_p1.ebuild,v 1.1 2007/03/29 21:27:10 dev-zero Exp $
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
+MY_P=${P/_p/+}
+
 DESCRIPTION="A download utility with resuming and segmented downloading with HTTP/HTTPS/FTP/BitTorrent support."
 HOMEPAGE="http://aria2.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ares bittorrent gnutls metalink nls ssl"
-
-# Tests are still broken and useless
-RESTRICT="test"
 
 CDEPEND="ssl? (
 		gnutls? ( net-libs/gnutls )
@@ -21,11 +20,15 @@ CDEPEND="ssl? (
 	bittorrent? ( gnutls? ( dev-libs/libgcrypt ) )
 	metalink? ( >=dev-libs/libxml2-2.6.26 )"
 DEPEND="${CDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	test? ( dev-util/cppunit  )"
 RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 
+S=${WORKDIR}/${MY_P}
+
 src_compile() {
+	cd ${S}
 	use ssl && \
 		myconf="${myconf} $(use_with gnutls) $(use_with !gnutls openssl)"
 
