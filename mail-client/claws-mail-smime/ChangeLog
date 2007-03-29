@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-smime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.7 2007/03/27 08:18:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.8 2007/03/29 21:21:10 welp Exp $
+
+  29 Mar 2007; Peter Weller <welp@gentoo.org> claws-mail-smime-0.7.ebuild:
+  Keyworded ~amd64 wrt bug 168782
 
   27 Mar 2007; Markus Rothe <corsair@gentoo.org>
   claws-mail-smime-0.5.7.ebuild, claws-mail-smime-0.5.8.ebuild,
