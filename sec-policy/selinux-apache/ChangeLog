@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-apache
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.12 2007/02/22 01:03:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.13 2007/03/29 23:37:50 pebenito Exp $
+
+*selinux-apache-20070329 (29 Mar 2007)
+
+  29 Mar 2007; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-apache-20070329.ebuild:
+  New SVN snapshot.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
