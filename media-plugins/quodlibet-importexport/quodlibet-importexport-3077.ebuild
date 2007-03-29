@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-importexport/quodlibet-importexport-3077.ebuild,v 1.1 2006/04/30 04:47:49 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-importexport/quodlibet-importexport-3077.ebuild,v 1.2 2007/03/29 08:30:27 corsair Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.py.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/quodlibet-0.19.1"

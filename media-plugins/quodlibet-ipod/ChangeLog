@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/quodlibet-ipod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/ChangeLog,v 1.4 2007/03/19 12:22:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/ChangeLog,v 1.5 2007/03/29 08:34:37 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> quodlibet-ipod-0.4.ebuild:
+  Added ~ppc64
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.

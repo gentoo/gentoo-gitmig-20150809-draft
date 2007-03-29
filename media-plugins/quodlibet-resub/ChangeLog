@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/quodlibet-resub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-resub/ChangeLog,v 1.3 2007/03/19 12:11:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-resub/ChangeLog,v 1.4 2007/03/29 08:29:20 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  quodlibet-resub-2980.ebuild:
+  Added ~ppc64
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.

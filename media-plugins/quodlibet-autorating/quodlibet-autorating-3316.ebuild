@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-autorating/quodlibet-autorating-3316.ebuild,v 1.1 2006/06/12 02:24:50 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-autorating/quodlibet-autorating-3316.ebuild,v 1.2 2007/03/29 08:23:14 corsair Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.py.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/quodlibet-0.21"

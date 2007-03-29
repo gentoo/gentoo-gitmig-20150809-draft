@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/quodlibet-ipod-0.4.ebuild,v 1.3 2006/10/08 15:57:13 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/quodlibet-ipod-0.4.ebuild,v 1.4 2007/03/29 08:34:37 corsair Exp $
 
 inherit python eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/quodlibet-ipod-0.4.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/quodlibet-titlecase
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-titlecase/ChangeLog,v 1.6 2007/03/19 12:10:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-titlecase/ChangeLog,v 1.7 2007/03/29 08:25:52 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org>
+  quodlibet-titlecase-2980.ebuild:
+  Added ~ppc64
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
