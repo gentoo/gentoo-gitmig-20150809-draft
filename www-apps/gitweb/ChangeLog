@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gitweb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.20 2007/02/15 18:39:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.21 2007/03/29 21:04:43 ferdy Exp $
+
+*gitweb-1.5.0.6 (29 Mar 2007)
+
+  29 Mar 2007; Fernando J. Pereda <ferdy@gentoo.org> +gitweb-1.5.0.6.ebuild:
+  Version bump
 
 *gitweb-1.5.0 (15 Feb 2007)
 
