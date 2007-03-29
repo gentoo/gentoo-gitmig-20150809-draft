@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2006.12.04.ebuild,v 1.3 2007/02/08 00:30:39 nyhm Exp $
-
-use amd64 && ABI=x86
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2006.12.04.ebuild,v 1.4 2007/03/29 22:24:11 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -39,18 +37,20 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}"/${PN}
+	use amd64 && multilib_toolchain_setup x86
+
+	exeinto "$(games_get_libdir)"/${PN}
 	doexe bin_unix/linux_{client,server} || die
 
-	insinto "${GAMES_DATADIR}"
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r data packages || die
 
 	local x
 	for x in client server ; do
 		newgamesbin "${FILESDIR}"/wrapper ${PN}_${x}-bin || die
 		sed -i \
-			-e "s:@GENTOO_GAMESDIR@:${GAMES_DATADIR}:g" \
-			-e "s:@GENTOO_EXEC@:${GAMES_LIBDIR}/${PN}/linux_${x}:g" \
+			-e "s:@GENTOO_GAMESDIR@:${GAMES_DATADIR}/${PN}:g" \
+			-e "s:@GENTOO_EXEC@:$(games_get_libdir)/${PN}/linux_${x}:g" \
 			"${D}/${GAMES_BINDIR}"/${PN}_${x}-bin
 	done
 
