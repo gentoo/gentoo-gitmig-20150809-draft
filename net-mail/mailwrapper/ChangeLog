@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.34 2007/02/22 01:46:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.35 2007/03/29 14:59:59 drizzt Exp $
+
+  29 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
+  mailwrapper-0.2.1.ebuild:
+  Add ~x86-fbsd keyword
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
