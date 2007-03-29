@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.34 2007/03/16 16:49:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.35 2007/03/29 01:31:25 eradicator Exp $
+
+*pixie-2.1.1 (29 Mar 2007)
+
+  29 Mar 2007; Jeremy Huddleston <eradicator@gentoo.org> pixie-1.7.6.ebuild,
+  pixie-2.0.2-r1.ebuild, +pixie-2.1.1.ebuild:
+  Added ewarn about memory usage during compilation and added the new release.
 
   16 Mar 2007; Jeremy Huddleston <eradicator@gentoo.org>
   pixie-2.0.2-r1.ebuild:
