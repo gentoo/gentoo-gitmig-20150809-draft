@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.0-r1.ebuild,v 1.1 2007/03/29 19:01:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.0-r1.ebuild,v 1.2 2007/03/29 19:18:42 cardoe Exp $
 
 inherit eutils autotools multilib
 
@@ -55,6 +55,7 @@ src_install() {
 
 	#Portage barfs on .la files
 	rm -f "${D}/$(get_libdir)/libck-connector.la"
+	rm -f "${D}/$(get_libdir)/security/pam_ck_connector.la"
 
 	# Gentoo style init script
 	newinitd "${FILESDIR}"/${PN}-0.1.rc consolekit
