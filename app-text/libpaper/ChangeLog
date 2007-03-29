@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.19 2007/01/28 05:55:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.20 2007/03/29 14:28:48 wolf31o2 Exp $
+
+  29 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  libpaper-1.1.20.ebuild:
+  Stable on alpha wrt bug #170881.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> libpaper-1.1.20.ebuild,
   libpaper-1.1.21.ebuild:
