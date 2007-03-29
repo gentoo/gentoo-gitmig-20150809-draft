@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.117 2007/03/10 13:47:00 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.118 2007/03/29 15:00:00 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> ghc-6.4.2.ebuild,
+  ghc-6.6.ebuild:
+  Build unregisterised on ppc64; bug #145466
 
   10 Mar 2007; <kolmodin@gentoo.org> +files/ghc-6.5-norelax.patch:
   Add missing ghc-6.6 patch.
