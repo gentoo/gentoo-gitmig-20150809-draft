@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.21 2007/03/28 21:30:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.22 2007/03/29 00:03:01 ticho Exp $
+
+  29 Mar 2007; Andrej Kacian <ticho@gentoo.org> cppunit-1.11.6.ebuild:
+  Stable on x86, bug #172604.
 
 *cppunit-1.12.0 (28 Mar 2007)
 
