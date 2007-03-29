@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.20.1.ebuild,v 1.1 2007/03/02 11:44:37 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.20.1.ebuild,v 1.2 2007/03/29 22:44:19 kugelfang Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -18,12 +18,8 @@ COMMON_DEPEND="
 	qa? ( dev-libs/pcre++ >=dev-libs/libxml2-2.6 app-crypt/gnupg )
 	inquisitio? ( dev-libs/pcre++ )
 	glsa? ( >=dev-libs/libxml2-2.6 )
-	ruby? ( >=dev-lang/ruby-1.8 )"
-
-# Nasty hack for tr1 that will be changed whenever a proper solution is
-# available. See discussion on gentoo-dev list.
-COMMON_DEPEND="${COMMON_DEPEND}
-	|| ( >=sys-devel/gcc-4.1.1 >=dev-libs/boost-1.33.1 )"
+	ruby? ( >=dev-lang/ruby-1.8 )
+	virtual/c++-tr1-memory"
 
 DEPEND="${COMMON_DEPEND}
 	dev-cpp/libebt

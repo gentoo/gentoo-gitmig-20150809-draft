@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.52 2007/03/26 07:37:04 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.53 2007/03/29 22:44:19 kugelfang Exp $
+
+  29 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> paludis-0.20.0.ebuild,
+  paludis-0.20.1.ebuild, paludis-0.20.2.ebuild, paludis-0.22.1.ebuild:
+  Updated deps to use new tr1 virtuals.
 
 *paludis-0.22.1 (26 Mar 2007)
 
