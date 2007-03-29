@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.201 2007/03/25 20:58:24 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.202 2007/03/29 17:46:03 dertobi123 Exp $
+
+  29 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> db-4.3.29-r2.ebuild:
+  Stable on ppc wrt bug #170828.
 
   25 Mar 2007; Paul de Vrieze <pauldv@gentoo.org> db-4.5.20_p2.ebuild:
   Have a different fix for not stripping as the old fix no longer works for this
