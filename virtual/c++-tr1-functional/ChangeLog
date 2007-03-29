@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/c++-tr1-functional/ChangeLog,v 1.1 2007/03/29 20:13:46 kugelfang Exp $
+
+*c++-tr1-functional-0 (29 Mar 2007)
+
+  29 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> +metadata.xml,
+  +c++-tr1-functional-0.ebuild:
+  Added virtual for C++ tr1 <functional>.
+
