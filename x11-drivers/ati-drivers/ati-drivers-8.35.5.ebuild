@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6-r2.ebuild,v 1.2 2007/02/10 00:51:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.35.5.ebuild,v 1.1 2007/03/29 23:01:33 marienz Exp $
 
-IUSE="acpi doc opengl qt3"
+IUSE="acpi qt3"
 
 inherit eutils multilib linux-mod toolchain-funcs
 
-DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
+DESCRIPTION="Ati precompiled drivers for recent chipsets"
 HOMEPAGE="http://www.ati.com"
 ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV}-x86.x86_64.run"
 
-LICENSE="ATI"
+LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="~amd64 ~x86"
 
 # The portage dep is for COLON_SEPARATED support in env-update.
@@ -26,8 +26,9 @@ RDEPEND="x11-base/xorg-server
 	qt3? ( =x11-libs/qt-3* )
 	>=sys-apps/portage-2.1.1-r1"
 
-DEPEND=">=virtual/linux-sources-2.6
-	${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xf86miscproto
+	x11-proto/xf86vidmodeproto"
 
 # Ignore QA warnings about multilib-pkg-force not existing:
 # multilib.eclass uses it (without it we do not install the 32 bit
@@ -35,22 +36,21 @@ DEPEND=">=virtual/linux-sources-2.6
 RESTRICT="multilib-pkg-force"
 
 QA_EXECSTACK_x86="usr/lib/dri/fglrx_dri.so
-	usr/lib/opengl/ati/lib/libGL.so.1.2"
+	usr/lib/opengl/ati/lib/libGL.so.1.2
+	opt/bin/amdcccle"
 QA_EXECSTACK_amd64="usr/lib64/dri/fglrx_dri.so
 	usr/lib32/dri/fglrx_dri.so
 	usr/lib64/opengl/ati/lib/libGL.so.1.2
-	usr/lib32/opengl/ati/lib/libGL.so.1.2"
+	usr/lib32/opengl/ati/lib/libGL.so.1.2
+	opt/bin/amdcccle"
 QA_TEXTRELS_x86="usr/lib/dri/fglrx_dri.so
-	usr/lib/dri/atiogl_a_dri.so
 	usr/lib/xorg/modules/drivers/fglrx_drv.so
 	usr/lib/opengl/ati/lib/libGL.so.1.2"
 QA_TEXTRELS_amd64="
 	usr/lib64/opengl/ati/lib/libGL.so.1.2
 	usr/lib32/opengl/ati/lib/libGL.so.1.2
 	usr/lib64/dri/fglrx_dri.so
-	usr/lib32/dri/fglrx_dri.so
-	usr/lib64/dri/atiogl_a_dri.so
-	usr/lib32/dri/atiogl_a_dri.so"
+	usr/lib32/dri/fglrx_dri.so"
 
 S="${WORKDIR}"
 
@@ -60,6 +60,11 @@ pkg_setup() {
 	BUILD_TARGETS="kmod_build"
 	linux-mod_pkg_setup
 	BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
+
+	if ! kernel_is 2 6; then
+		eerror "Need a 2.6 kernel to compile against!"
+		die "Need a 2.6 kernel to compile against!"
+	fi
 
 	if ! linux_chkconfig_present MTRR; then
 		ewarn "You don't have MTRR support enabled, the direct rendering will not work."
@@ -108,7 +113,11 @@ src_unpack() {
 		"${ARCH_DIR}"/usr/X11R6/${PKG_LIBDIR}/libfglrx_gamma* \
 		|| die "bin rm failed"
 
-	epatch "${FILESDIR}"/${PN}-2.6.20.patch
+	# This patch is conditional because it contains an api change.
+	if kernel_is ge 2 6 20; then
+		epatch "${FILESDIR}"/ati-drivers-2.6.20.patch
+		epatch "${FILESDIR}"/ati-drivers-${PV}-2.6.20.patch
+	fi
 
 	if use acpi; then
 		sed -i \
@@ -144,6 +153,9 @@ src_unpack() {
 		cd panel
 		unpack ./../common/usr/src/ati/fglrx_panel_sources.tgz
 		cd ..
+	else
+		# Get rid of the precompiled control panel.
+		rm "${ARCH_DIR}"/usr/X11R6/bin/amdcccle || die "rm failed"
 	fi
 	cd extra
 	unpack ./../common/usr/src/ati/fglrx_sample_source.tgz
@@ -166,20 +178,22 @@ src_compile() {
 	# The -DUSE_GLU is needed to compile using nvidia headers
 	# according to a comment in ati-drivers-extra-8.33.6.ebuild.
 	"$(tc-getCC)" -o fgl_fglxgears ${CFLAGS} ${LDFLAGS} -DUSE_GLU \
-		-lGL -lGLU -lX11 -lm fgl_glxgears.c || die "fgl_glxgears build failed"
+		-I"${S}"/common/usr/include fgl_glxgears.c \
+		-lGL -lGLU -lX11 -lm || die "fgl_glxgears build failed"
 
 	einfo "Building fglrx_gamma lib"
 	cd "${S}"/extra/lib/fglrx_gamma
 	"$(tc-getCC)" -shared -fpic -o libfglrx_gamma.so.1.0 ${CFLAGS} ${LDFLAGS} \
-		fglrx_gamma.c -DXF86MISC -Wl,-soname,libfglrx_gamma.so.1.0 \
-		|| die "fglrx_gamma lib build failed"
+		-DXF86MISC -Wl,-soname,libfglrx_gamma.so.1.0 fglrx_gamma.c \
+		-lXext || die "fglrx_gamma lib build failed"
 	ln -s libfglrx_gamma.so.1.0 libfglrx_gamma.so || die "ln failed"
 	ln -s libfglrx_gamma.so.1.0 libfglrx_gamma.so.1 || die "ln failed"
 
 	einfo "Building fglrx_gamma util"
 	cd "${S}"/extra/programs/fglrx_gamma
-	"$(tc-getCC)" -o fglrx_xgamma ${CFLAGS} ${LDFLAGS} fglrx_xgamma.c \
-		-lm -lfglrx_gamma -lX11 -lXext -L../../lib/fglrx_gamma \
+	"$(tc-getCC)" -o fglrx_xgamma ${CFLAGS} ${LDFLAGS} \
+		-I../../../common/usr/X11R6/include -L../../lib/fglrx_gamma \
+		fglrx_xgamma.c -lm -lfglrx_gamma -lX11 \
 		|| die "fglrx_gamma util build failed"
 
 	if use qt3; then
@@ -285,10 +299,19 @@ src_install() {
 	into /usr
 	dosbin common/usr/sbin/*
 
-	# doc.
-	if use doc; then
-		dohtml -r common/usr/share/doc/fglrx
+	# data files for the control panel.
+	if use qt3; then
+		insinto /usr/share
+		doins -r common/usr/share/ati
+		insinto /usr/share/pixmaps
+		doins common/usr/share/icons/ccc_{large,small}.xpm
+		make_desktop_entry amdcccle 'ATI Catalyst Control Center' \
+			ccc_large.xpm System
 	fi
+
+	# doc.
+	dohtml -r common/usr/share/doc/fglrx
+
 	if use acpi; then
 		doman common/usr/share/man/man8/atieventsd.8
 
@@ -323,9 +346,9 @@ src_install() {
 	# Gentoo-specific stuff:
 
 	if use acpi; then
-		newinitd "${FILESDIR}"/atieventsd.rc6 atieventsd
-		echo 'ATIEVENTSDOPTS=""' > "${T}"/atieventsd.confd
-		newconfd "${T}"/atieventsd.confd atieventsd
+		newinitd "${FILESDIR}"/atieventsd.init atieventsd
+		echo 'ATIEVENTSDOPTS=""' > "${T}"/atieventsd.conf
+		newconfd "${T}"/atieventsd.conf atieventsd
 	fi
 }
 
@@ -350,20 +373,17 @@ src_install-libs() {
 	# back to xorg-x11 if we omit this symlink, meaning no glx).
 	dosym ../xorg-x11/extensions ${ATI_ROOT}/extensions
 
-	#Workaround
-	if use opengl; then
-		# Is this necessary? Is this sane? --marienz
-		sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
-			/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la \
-			> "${D}"/${ATI_ROOT}/lib/libGL.la
-		# Commented out, just like the extensions one --marienz
-		# dosym ../xorg-x11/include ${ATI_ROOT}/include
-	fi
+	# Is this necessary? Is this sane? --marienz
+	sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
+		/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la \
+		> "${D}"/${ATI_ROOT}/lib/libGL.la
+
+	# Commented out until determined it is necessary --marienz
+	# dosym ../xorg-x11/include ${ATI_ROOT}/include
 
 	# DRI modules, installed into the path used by recent versions of mesa.
 	exeinto /usr/$(get_libdir)/dri
 	doexe "${ARCH_DIR}"/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so
-	doexe "${ARCH_DIR}"/usr/X11R6/${pkglibdir}/modules/dri/atiogl_a_dri.so
 
 	local envname="${T}"/04ati-dri-path
 	if [[ -n ${ABI} ]]; then
@@ -378,12 +398,7 @@ pkg_postinst() {
 
 	elog "To switch to ATI OpenGL, run \"eselect opengl set ati\""
 	elog "To change your xorg.conf you can use the bundled \"aticonfig\""
-	if use !opengl ; then
-		ewarn "You don't have the opengl useflag enabled, you won't be able to build"
-		ewarn "opengl applications nor use opengl driver features, if that isn't"
-		ewarn "the intended behaviour please add opengl to your useflag and issue"
-		ewarn "# emerge -Nu ati-drivers"
-	fi
+	elog
 	elog "If you experience unexplained segmentation faults and kernel crashes"
 	elog "with this driver and multi-threaded applications such as wine,"
 	elog "set UseFastTLS in xorg.conf to either 0 or 1, but not 2."

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.34.8.ebuild,v 1.3 2007/02/24 23:00:23 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.34.8.ebuild,v 1.4 2007/03/29 23:01:33 marienz Exp $
 
 IUSE="acpi qt3"
 
@@ -26,7 +26,9 @@ RDEPEND="x11-base/xorg-server
 	qt3? ( =x11-libs/qt-3* )
 	>=sys-apps/portage-2.1.1-r1"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xf86miscproto
+	x11-proto/xf86vidmodeproto"
 
 # Ignore QA warnings about multilib-pkg-force not existing:
 # multilib.eclass uses it (without it we do not install the 32 bit

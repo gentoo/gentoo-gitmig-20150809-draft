@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.69 2007/03/10 21:40:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.70 2007/03/29 23:01:33 marienz Exp $
+
+*ati-drivers-8.35.5 (29 Mar 2007)
+
+  29 Mar 2007; Marien Zwart <marienz@gentoo.org>
+  +files/ati-drivers-8.35.5-2.6.20.patch, -ati-drivers-8.33.6-r2.ebuild,
+  ati-drivers-8.34.8.ebuild, +ati-drivers-8.35.5.ebuild:
+  Version bump. Add missing dependencies noticed by Paul Thomas
+  <thomaspu@gmail.com>, closes bug #172683.
 
   10 Mar 2007; Marien Zwart <marienz@gentoo.org>
   ati-drivers-8.27.10-r1.ebuild, ati-drivers-8.28.8.ebuild,
