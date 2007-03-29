@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.127 2007/03/20 04:35:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.128 2007/03/29 15:27:58 wltjr Exp $
+
+  29 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/5.0.28/build.xml-01.patch, -files/5.0.28/gentoo.diff,
+  -files/5.0.28/setclasspath.patch, -files/5.0.28/build.xml-02.patch,
+  -files/5.0.28/jikes.diff, -files/5.0.28/tomcat.conf,
+  -files/5.0.28/log4j.properties, -files/5.0.28/tomcat.conf-r1,
+  -files/5.0.28/scripts.patch, -files/5.0.28/tomcat.env,
+  -files/5.0.28/tomcat.init, -tomcat-5.0.28-r14.ebuild,
+  -tomcat-5.5.20-r10.ebuild:
+  House cleaning, removed 5.0.28 and 5.5.20-r10 since 5.5.23/6.0.10 will be
+  stabilized next.
 
 *tomcat-6.0.10-r1 (20 Mar 2007)
 
