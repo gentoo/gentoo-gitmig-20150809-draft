@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.33 2007/03/27 18:47:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.34 2007/03/29 06:21:43 opfer Exp $
+
+  29 Mar 2007; Christian Faulhammer <opfer@gentoo.org> lwp-2.2.ebuild:
+  stable x86, bug 167919
 
   27 Mar 2007; Raúl Porcel <armin76@gentoo.org> lwp-2.2.ebuild:
   ia64 stable wrt bug 167919

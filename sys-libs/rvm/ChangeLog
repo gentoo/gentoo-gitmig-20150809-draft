@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/rvm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.22 2007/02/22 00:41:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.23 2007/03/29 06:19:48 opfer Exp $
+
+  29 Mar 2007; Christian Faulhammer <opfer@gentoo.org> rvm-1.12.ebuild:
+  stable x86, bug 167919
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
