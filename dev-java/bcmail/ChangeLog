@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.1 2007/03/25 17:26:43 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.2 2007/03/29 14:34:00 wltjr Exp $
+
+  29 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org> bcmail-1.36.ebuild:
+  Added sun-jaf to classpath per bug #172653
 
   25 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
   Initial ebuild, should be pretty identical to bcprov ebuild. Ideal to keep
