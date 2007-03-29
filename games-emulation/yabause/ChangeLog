@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/yabause
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.15 2006/12/25 09:01:06 kingtaco Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.16 2007/03/29 18:01:27 mr_bones_ Exp $
+
+  29 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -yabause-0.7.2.ebuild, yabause-0.8.0.ebuild:
+  sync up keywords that were dropped accidentally; stable for x86; clean out old
+  version for bug #172602
 
   25 Dec 2006; Mike Doty <kingtaco@gentoo.org> yabause-0.7.2.ebuild:
   ~amd64 added
