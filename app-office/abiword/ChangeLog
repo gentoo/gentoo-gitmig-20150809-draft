@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.176 2007/02/16 19:22:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.177 2007/03/29 20:27:49 armin76 Exp $
+
+  29 Mar 2007; Raúl Porcel <armin76@gentoo.org> abiword-2.4.5-r1.ebuild:
+  ia64 stable wrt bug 165052
 
   16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   abiword-2.4.5-r1.ebuild, abiword-2.4.6.ebuild:
