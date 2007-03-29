@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.43 2007/03/24 14:30:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.44 2007/03/29 08:06:09 corsair Exp $
+
+  29 Mar 2007; Markus Rothe <corsair@gentoo.org> ntfsprogs-1.13.1.ebuild:
+  Stable on ppc64
 
   24 Mar 2007; Markus Rothe <corsair@gentoo.org> ntfsprogs-1.13.1.ebuild:
   Added ~ppc64
