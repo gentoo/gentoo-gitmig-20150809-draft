@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.52 2007/03/18 02:16:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.53 2007/03/29 16:47:52 ticho Exp $
+
+  29 Mar 2007; Andrej Kacian <ticho@gentoo.org> -nail-11.25-r1.ebuild,
+  nail-11.25-r3.ebuild:
+  Patch makefile to not strip the binary on its own. Suggested by Diego
+  Pettenò <flameeyes at gmail.com>.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> nail-11.25-r3.ebuild:
   Replacing einfo with elog
