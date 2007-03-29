@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.29 2007/03/22 14:30:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.30 2007/03/29 20:13:30 welp Exp $
+
+  29 Mar 2007; Peter Weller <welp@gentoo.org> comix-3.6.3.ebuild:
+  Keyworded ~x86-fbsd
 
 *comix-3.6.3 (22 Mar 2007)
 
