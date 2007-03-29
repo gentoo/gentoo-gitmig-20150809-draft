@@ -1,10 +1,18 @@
 --- src/knemod/backends/sysbackend.cpp.orig	2006-10-24 22:40:51.000000000 +0200
 +++ src/knemod/backends/sysbackend.cpp	2007-03-28 16:09:27.000000000 +0200
-@@ -289,6 +289,7 @@
+@@ -262,6 +262,7 @@
+             in.s_addr = regExp.cap( 1 ).toULong( &ok, 16 );
+             data.defaultGateway = inet_ntoa( in );
+         }
++        routeFile.close();
+     }
+ 
+     // use ioctls for the rest
+@@ -289,6 +290,7 @@
          {
              data.subnetMask = inet_ntoa(((struct sockaddr_in*)&ifr.ifr_netmask)->sin_addr);
          }
-+	close(fd);
++        close( fd );
      }
  }
- 
+

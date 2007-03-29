@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.29 2007/03/28 14:23:49 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.30 2007/03/29 06:31:05 mattepiu Exp $
+
+  29 Mar 2007; Matteo Azzali <mattepiu@gentoo.org>
+  files/knemo-0.4.6-sysbackend.patch:
+  fixed sysbackend patch.
 
 *knemo-0.4.6-r1 (28 Mar 2007)
 
