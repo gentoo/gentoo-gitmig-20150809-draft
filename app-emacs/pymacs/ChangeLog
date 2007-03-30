@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.15 2007/03/27 18:11:08 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.16 2007/03/30 15:25:02 opfer Exp $
+
+  30 Mar 2007; Christian Faulhammer <opfer@gentoo.org> -pymacs-0.22.ebuild:
+  clean up
 
   27 Mar 2007; Peter Weller <welp@gentoo.org> pymacs-0.22-r1.ebuild:
   Stable on amd64 wrt bug 167807
