@@ -1,0 +1,25 @@
+The test autoopts/test/immediate.test fails if CFLAGS contains any of the debug
+flags (apart from -g).  This is because it tries to filter those flags out by
+using this:
+
+  CFLAGS="-g `echo ${CFLAGS} | \
+    sed 's,-O2,,;s/-g//'`"
+
+which clearly replaces -ggdb2 (for example) with -gdb2 - which isn't a valid
+CFLAG and the test compilation fails.  A simple fix is to make the sed script a
+little more consistent.
+
+Kevin F. Quinn <kevquinn@gentoo.org>
+http://bugs.gentoo.org/172533
+
+--- autoopts/test/immediate.test
++++ autoopts/test/immediate.test
+@@ -51,7 +51,7 @@ _EOF_
+ 
+ INC=`echo ${INC} | sed 's/-lguile//;s/-lqthreads//'`
+ CFLAGS="-g `echo ${CFLAGS} | \
+-  sed 's,-O2,,;s/-g//'`"
++  sed 's,-O2,,;s/-g[^[:space:]]*//'`"
+ 
+ echo ${AG_L} ${testname}.def
+ ${AG_L} ${testname}.def || \

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.23 2007/03/13 14:33:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.24 2007/03/30 06:02:15 vapier Exp $
+
+  30 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/autogen-5.8.8-scrub-debug.patch, autogen-5.8.8.ebuild:
+  Make sure -ggdb3 in CFLAGS doesnt cause a test failure #172533 by Kevin F.
+  Quinn.
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> autogen-5.8.8.ebuild:
   x86 stable

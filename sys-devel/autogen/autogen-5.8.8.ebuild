@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.8.ebuild,v 1.7 2007/03/17 21:36:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.8.ebuild,v 1.8 2007/03/30 06:02:15 vapier Exp $
 
 inherit eutils
 
@@ -23,6 +23,12 @@ pkg_setup() {
 		eerror "You need to build dev-scheme/guile with USE='deprecated discouraged threads'"
 		die "re-emerge dev-scheme/guile with USE='deprecated discouraged threads'"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-scrub-debug.patch #172533
 }
 
 src_compile() {
