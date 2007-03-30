@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.32 2007/03/08 16:16:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.33 2007/03/30 14:35:19 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -468,6 +468,7 @@ src_remove_extra_files()
 	${prVA}/auto/POSIX/load_imports.al
 	${prVA}/auto/POSIX/POSIX.bs
 	${prVA}/auto/POSIX/POSIX$(get_libname)
+	${prVA}/auto/POSIX/assert.al
 	${prVA}/auto/POSIX/stat.al
 	${prVA}/auto/POSIX/tmpfile.al
 	${prVA}/auto/re/re$(get_libname)

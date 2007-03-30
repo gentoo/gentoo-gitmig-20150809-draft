@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.242 2007/03/08 16:16:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.243 2007/03/30 14:35:19 mcummings Exp $
+
+  30 Mar 2007; Michael Cummings <mcummings@gentoo.org> perl-5.8.8-r2.ebuild:
+  Bug 147184, thanks to jweckhart for the patch :)
 
   08 Mar 2007; Michael Cummings <mcummings@gentoo.org> perl-5.8.8-r2.ebuild:
   Change to the call for the lib64 patch to enable it for ppc64 - helps with
