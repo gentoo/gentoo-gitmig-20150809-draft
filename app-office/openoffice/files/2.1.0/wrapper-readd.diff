@@ -324,7 +324,7 @@
  Categories=Office;WordProcessor
 -StartupNotify=false
 +StartupNotify=@STARTUPNOTIFY@
- MimeType=application/vnd.oasis.opendocument.text;application/vnd.oasis.opendocument.text-template;application/vnd.oasis.opendocument.text-master;application/vnd.sun.xml.writer;application/vnd.sun.xml.writer.template;application/vnd.sun.xml.writer.global;application/vnd.stardivision.writer;application/msword;application/vnd.ms-word;application/x-doc;text/rtf;application/rtf@ADD_OPENXML_WORD_MIME@
+ MimeType=application/vnd.oasis.opendocument.text;application/vnd.oasis.opendocument.text-template;application/vnd.oasis.opendocument.text-master;application/vnd.sun.xml.writer;application/vnd.sun.xml.writer.template;application/vnd.sun.xml.writer.global;application/vnd.stardivision.writer;application/msword;application/vnd.ms-word;application/x-doc;text/rtf;application/rtf;application/vnd.wordperfect@ADD_OPENXML_WORD_MIME@
  InitialPreference=5
  _Name=OpenOffice.org Writer
 
