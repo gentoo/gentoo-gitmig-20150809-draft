@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.30.ebuild,v 1.1 2007/02/25 16:07:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.30.ebuild,v 1.2 2007/03/30 03:46:11 beandog Exp $
 
 inherit eutils
 
 DESCRIPTION="Video conversion and DVD authoring tools"
 HOMEPAGE="http://tovid.wikia.com/"
 SRC_URI="mirror://sourceforge/tovid/${P}.tar.gz"
-IUSE=""
+IUSE="tk"
 DEPEND="media-video/mplayer
 	app-text/txt2tags"
 RDEPEND="media-video/mjpegtools
@@ -30,6 +30,13 @@ LICENSE="GPL-2"
 SLOT="0"
 
 pkg_setup() {
+	if use tk && ( ! built_with_use dev-lang/python tk ); then
+		eerror "Please emerge python with useflag 'tk' enabled."
+		die "Fix USE flags and re-emerge"
+	elif ! use tk; then
+		ewarn "If you want to use 'todiscgui', then emerge"
+		ewarn "dev-lang/python and this package with the 'tk' use flag"
+	fi
 	if ! built_with_use media-video/mplayer encode; then
 		eerror "Please emerge media-video/mplayer with useflag 'encode'."
 		die "Fix USE flags and re-emerge"
