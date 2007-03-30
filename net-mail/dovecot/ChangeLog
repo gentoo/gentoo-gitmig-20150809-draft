@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.96 2007/03/30 15:14:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.97 2007/03/30 20:00:53 ticho Exp $
+
+  30 Mar 2007; Andrej Kacian <ticho@gentoo.org> dovecot-1.0_rc29.ebuild:
+  Stable on x86, security bug #172795.
 
 *dovecot-1.0_rc29 (30 Mar 2007)
 
