@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.39 2007/03/05 12:47:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.40 2007/03/30 15:02:56 mcummings Exp $
+
+  30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  gnome2-wnck-0.13.ebuild, gnome2-wnck-0.14.ebuild:
+  Updating deps, bug 152205
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> gnome2-wnck-0.14.ebuild:
   Stable on x86, bug #169152.
