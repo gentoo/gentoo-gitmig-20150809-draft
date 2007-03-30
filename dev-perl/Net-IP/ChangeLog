@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-IP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.24 2007/03/05 12:16:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.25 2007/03/30 20:55:52 mcummings Exp $
+
+*Net-IP-1.25-r1 (30 Mar 2007)
+
+  30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  +files/initip-0.patch, +Net-IP-1.25-r1.ebuild:
+  bug 169288 bug 153171, rt# 20265 - Net-IP patched to handle 0.0.0.0 addresses
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Net-IP-1.25.ebuild:
   Stable on x86, bug #169152.
