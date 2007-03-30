@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1.ebuild,v 1.4 2007/03/27 06:03:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1.ebuild,v 1.5 2007/03/30 20:45:46 aballier Exp $
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 	epatch "${WORKDIR}/${P}-guile-1.8.diff"
 	epatch "${FILESDIR}/${P}-noinstalltest.patch"
+	epatch "${FILESDIR}/${P}-signalheader.patch"
 }
 
 src_compile() {

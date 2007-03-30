@@ -1,0 +1,24 @@
+Index: beast-0.7.1/birnet/birnettests.h
+===================================================================
+--- beast-0.7.1.orig/birnet/birnettests.h
++++ beast-0.7.1/birnet/birnettests.h
+@@ -27,6 +27,7 @@
+ 
+ #include <glib.h>
+ #include <string.h>
++#include <signal.h>
+ 
+ BIRNET_EXTERN_C_BEGIN();
+ 
+Index: beast-0.7.1/tools/bseloopfuncs.c
+===================================================================
+--- beast-0.7.1.orig/tools/bseloopfuncs.c
++++ beast-0.7.1/tools/bseloopfuncs.c
+@@ -21,6 +21,7 @@
+ #include <string.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <signal.h>
+ 
+ typedef struct {
+   gdouble score;
