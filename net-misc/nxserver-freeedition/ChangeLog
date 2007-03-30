@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/nxserver-freeedition
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.1 2007/03/30 16:14:32 voyageur Exp $
+
+*nxserver-freeedition-2.1.0 (30 Mar 2007)
+
+  30 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-2.1.0-init, +files/nxserver-2.1.0-setup.patch,
+  +metadata.xml, +nxserver-freeedition-2.1.0.ebuild:
+  Initial commit, bug #153866
+

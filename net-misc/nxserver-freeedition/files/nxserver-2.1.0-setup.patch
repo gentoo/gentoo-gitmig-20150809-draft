@@ -1,0 +1,70 @@
+--- scripts/setup/nxserver.orig	2006-11-05 16:43:33.000000000 +0000
++++ scripts/setup/nxserver	2006-11-05 17:29:42.000000000 +0000
+@@ -509,6 +509,10 @@
+ 
+ removeNXinit () {
+ 
++  if [ "$system" = "gentoo" ]; then
++    return
++  fi
++
+   runCommand "$RMCOMMAND -f /etc/init.d/nxserver" "Unable to remove '/etc/init.d/nxserver'" "warn"
+ 
+   if [ "$system" = "solaris" ];
+@@ -655,6 +659,10 @@
+ 
+ addNXinit () {
+ 
++ if [ "$system" = "gentoo" ]; then
++   return
++ fi
++
+  runCommand "cat /usr/NX/scripts/init/nxserver > /etc/init.d/nxserver" "Unable to create: '/etc/init.d/nxserver'" "warn"
+  runCommand "chmod +x /etc/init.d/nxserver" "Cannot set permissions of '/etc/init.d/nxserver' file" "warn"
+ 
+@@ -770,6 +778,11 @@
+ 
+ addNXUserLinux () {
+ 
++  # does the NX user already exist?
++  if id nx > /dev/null 2>&1 ; then
++    return
++  fi
++
+   if [ "x$system" = "xmandrake" -o "x$system" = "xfedora" ];
+   then
+     runCommand "useradd -p '*' -d '$NODE_ROOT/home/nx' -M nx" "Cannot add user: nx to the system" "error"
+@@ -1914,6 +1927,10 @@
+   system=fedora
+ fi
+ 
++if [ -d /usr/portage ]; then
++  system=gentoo
++fi
++
+ if [ "x$system" = "x" -a -f /etc/release ];
+ then
+   system=solaris
+@@ -1948,6 +1965,7 @@
+     "mandrake"           ) ;;
+     "fedora"             ) ;;
+     "debian"             ) ;;
++    "gentoo"             ) ;;
+     "solaris"             ) ;;
+     ""                 ) ARGS=-1 && errMsg="$PREFIX $ERROR ERROR: Unable to autodetect the operating system type, please specify it" ;;
+     *                  ) ARGS=-1 && errMsg="$PREFIX $ERROR ERROR: Unsupported operating system '$system'" ;;
+@@ -2104,14 +2122,6 @@
+     return 0
+   fi
+   
+-  result=`id nx 2>&1`
+-  if [ $? = 0 ];
+-  then
+-    printMsg "Cannot add user: nx. User: nx already exists" "error"
+-    printMsg "Please try to fix the problem by reinstalling the server" "error"
+-    exit 1
+-  fi
+-
+   LOGFILE="$INSTALLOG"
+   createLogdirectory
+   startLog
