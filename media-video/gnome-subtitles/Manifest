@@ -1,14 +1,9 @@
 DIST gnome-subtitles-0.1.tar.gz 321084 RMD160 5b215edf0bb0ad87c2367d50e5f721b45a3f73b8 SHA1 bc1eae2e5e524718430d32bd8ec2954f3c5ce30e SHA256 1962ffafcdb1028a7bb113c870ebfafc5a53e8cfa9b7668f03b3d505198e590e
 DIST gnome-subtitles-0.2.1.tar.gz 342255 RMD160 7217122da4f79965489c083f23420a4dbeef3346 SHA1 d819884a45765a2f39902d03435e5e1071311dc2 SHA256 63bd01d9e52df12cb37fe70ffef9bf47af020a99f478151b4fe8e48ede99d9cd
-DIST gnome-subtitles-0.2.tar.gz 341714 RMD160 4ee6437949795cf1df389d1da76cd620239a31c4 SHA1 f4ac2f9b9643d63770e9eeef91340fc2b2d30b7d SHA256 0fa1f6531125bef79ea5bb28c9f8dd4d89a679669741aa8a5c8e46349fbd8ab8
 EBUILD gnome-subtitles-0.1.ebuild 709 RMD160 5a2d7eaf3db083493d5ee38f249f0871e149a543 SHA1 d34737d2f96006fc6aae37fcde21253ca7751902 SHA256 a468adf47f0d59d79de69c5c9c9eaf37f0ed768d806f3cf87c24a09cec0a8621
 MD5 08d1cb149a49bc52665892f562fb35d8 gnome-subtitles-0.1.ebuild 709
 RMD160 5a2d7eaf3db083493d5ee38f249f0871e149a543 gnome-subtitles-0.1.ebuild 709
 SHA256 a468adf47f0d59d79de69c5c9c9eaf37f0ed768d806f3cf87c24a09cec0a8621 gnome-subtitles-0.1.ebuild 709
-EBUILD gnome-subtitles-0.2-r1.ebuild 770 RMD160 dbc8f6ec6cdc6d0661e0918491f7e95e7773c505 SHA1 70812c6206dc7ba90e8eef3248eed15c766177a0 SHA256 6fe0291922c54ebb8feea98993d38c5f37cb9e5ed95b7cd2c2cf83f8499d1422
-MD5 c966934979c320d5fe67f6fa02b3d028 gnome-subtitles-0.2-r1.ebuild 770
-RMD160 dbc8f6ec6cdc6d0661e0918491f7e95e7773c505 gnome-subtitles-0.2-r1.ebuild 770
-SHA256 6fe0291922c54ebb8feea98993d38c5f37cb9e5ed95b7cd2c2cf83f8499d1422 gnome-subtitles-0.2-r1.ebuild 770
 EBUILD gnome-subtitles-0.2.1.ebuild 769 RMD160 8359f02959c3bdcfe285d7ebe9596abd7ea61aa6 SHA1 0013d748b80d3c76c8021192981157eb95646da8 SHA256 a7758feca065353feb50c73cfab9faf9f92963059474b39664b3c65ff084fd56
 MD5 cf5ebf7b8901d5a32fdf2c9c636af763 gnome-subtitles-0.2.1.ebuild 769
 RMD160 8359f02959c3bdcfe285d7ebe9596abd7ea61aa6 gnome-subtitles-0.2.1.ebuild 769
@@ -24,9 +19,6 @@ SHA256 c0c75dfa63fa3ace3a2a316b8f0db0958eee2e108c73b173b5d02ac9d5c4b9bb metadata
 MD5 ce84e788643659aa4bb8d639f42c7b89 files/digest-gnome-subtitles-0.1 259
 RMD160 c6862e2b02a3b71c6aa025e40dd5228c8641957d files/digest-gnome-subtitles-0.1 259
 SHA256 a48c9706be25c5e5f0da8e85f94bee82a7379ac826ba3ee6d2948db28a806291 files/digest-gnome-subtitles-0.1 259
-MD5 112a58206c6ecd7d309e41db7d9a1739 files/digest-gnome-subtitles-0.2-r1 259
-RMD160 d14de7c9c0b6ec5177292ee26c396fd068a9f614 files/digest-gnome-subtitles-0.2-r1 259
-SHA256 9f1ed1f3d1ac921e54076688a82468252a6e726a877acca7e438271e0ba53a43 files/digest-gnome-subtitles-0.2-r1 259
 MD5 dfc21d3218e8af564d84ce8304f377e5 files/digest-gnome-subtitles-0.2.1 265
 RMD160 7bbbc82f5c938a3f0fa7c51237555694ec2c2d96 files/digest-gnome-subtitles-0.2.1 265
 SHA256 7f2c3b456f57e3927d8412f6b047e2d30ac35f398e5054f37a55ffaced695c6b files/digest-gnome-subtitles-0.2.1 265
