@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/makeself-2.1.4.ebuild,v 1.2 2005/11/29 02:58:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/makeself-2.1.4.ebuild,v 1.3 2007/03/30 14:02:34 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.megastep.org/makeself/${P}.run"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc s390 x86"
+KEYWORDS="amd64 ~hppa ppc s390 x86"
 IUSE=""
 
 DEPEND=""
