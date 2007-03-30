@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20070329.ebuild,v 1.1 2007/03/29 23:37:50 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20070329.ebuild,v 1.2 2007/03/30 13:29:49 pebenito Exp $
 
 IUSE=""
 
@@ -26,6 +26,9 @@ src_unpack() {
 	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
 	unpack ${A}
+
+	cd ${S}/refpolicy
+	epatch ${FILESDIR}/${PN}-${PV}.diff
 
 	for i in ${POLICY_TYPES}; do
 		mkdir -p ${S}/${i}/policy
