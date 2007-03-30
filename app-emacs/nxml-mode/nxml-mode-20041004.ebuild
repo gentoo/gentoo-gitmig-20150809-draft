@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20041004.ebuild,v 1.8 2007/01/02 21:46:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20041004.ebuild,v 1.9 2007/03/30 19:11:34 grobian Exp $
 
 inherit elisp eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://thaiopensource.com/download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc-macos ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 SITEFILE=80nxml-mode-gentoo.el
