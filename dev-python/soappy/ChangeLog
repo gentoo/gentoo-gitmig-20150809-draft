@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.17 2007/01/07 15:26:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.18 2007/03/30 22:16:30 jer Exp $
+
+  30 Mar 2007; Jeroen Roovers <jer@gentoo.org> soappy-0.12.0.ebuild:
+  Marked ~hppa (bug #172818).
 
   07 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   +files/soappy-0.12.0-python-2.5-compat.patch, soappy-0.12.0.ebuild:
