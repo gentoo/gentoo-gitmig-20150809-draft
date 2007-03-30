@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r1.ebuild,v 1.16 2004/07/15 03:36:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r1.ebuild,v 1.17 2007/03/30 19:52:10 taviso Exp $
 
 DESCRIPTION="A full featured small web-spider"
 SRC_URI="http://www.xach.com/snarf/${P}.tar.gz"
