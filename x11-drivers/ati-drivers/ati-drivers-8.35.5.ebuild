@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.35.5.ebuild,v 1.1 2007/03/29 23:01:33 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.35.5.ebuild,v 1.2 2007/03/30 15:46:11 marienz Exp $
 
 IUSE="acpi qt3"
 
@@ -113,7 +113,10 @@ src_unpack() {
 		"${ARCH_DIR}"/usr/X11R6/${PKG_LIBDIR}/libfglrx_gamma* \
 		|| die "bin rm failed"
 
-	# This patch is conditional because it contains an api change.
+	# These patches are conditional because they contain api changes.
+	if kernel_is ge 2 6 19; then
+		epatch "${FILESDIR}"/ati-drivers-${PV}-2.6.19.patch
+	fi
 	if kernel_is ge 2 6 20; then
 		epatch "${FILESDIR}"/ati-drivers-2.6.20.patch
 		epatch "${FILESDIR}"/ati-drivers-${PV}-2.6.20.patch
