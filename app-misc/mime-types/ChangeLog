@@ -1,9 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.57 2007/03/30 09:37:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.58 2007/03/30 09:39:49 ticho Exp $
 
   30 Mar 2007; Andrej Kacian <ticho@gentoo.org> ChangeLog:
-  Manifest fix.
+  Manifest fix
 
   29 Mar 2007; Andrej Kacian <ticho@gentoo.org> -mime-types-2.ebuild,
   -mime-types-4.ebuild, -mime-types-6.ebuild, mime-types-7.ebuild:
