@@ -1,0 +1,107 @@
+diff --git a/hald/linux/device.c b/hald/linux/device.c
+index d109e9b..1211535 100644
+--- a/hald/linux/device.c
++++ b/hald/linux/device.c
+@@ -533,27 +533,52 @@ missing_scsi_host (const gchar *sysfs_pa
+ 	gchar path[HAL_PATH_MAX];
+ 	HalDevice *d;
+ 	HotplugEvent *host_event;
++	const gchar *last_elem;
++	gint host_num, bus_num, target_num, lun_num;
++	int max;
++	gint num = -1;
+ 	int rc = FALSE;
+ 
+-	g_strlcpy(path, sysfs_path, sizeof(path));
+-	/* skip device */
+-	if (!hal_util_path_ascend (path))
++	/* catch only scsi-devices */
++	last_elem = hal_util_get_last_element (sysfs_path);
++	if (sscanf (last_elem, "%d:%d:%d:%d", &host_num, &bus_num, &target_num, &lun_num) != 4)
+ 		goto out;
+-	/* skip target */
+-	if (!hal_util_path_ascend (path))
++
++	/* avoid loops */
++	if (device_event->reposted)
+ 		goto out;
+-	if (strstr (path, "/host") == NULL)
++
++	/* search devpath for missing host */
++	g_strlcpy(path, sysfs_path, sizeof(path));
++	max = 100;
++	while (max--) {
++		if (!hal_util_path_ascend (path))
++			goto out;
++
++		last_elem = hal_util_get_last_element (path);
++		if (sscanf (last_elem, "host%d", &num) == 1)
++			break;
++	}
++
++	/* the device must belong to this host */
++	if (host_num != num)
+ 		goto out;
+ 
++	/* look if host is present */
+ 	d = hal_device_store_match_key_value_string (hald_get_gdl (),
+ 						     "linux.sysfs_path",
+ 						     path);
++
++	/* skip "add" if host is already created */
+ 	if (action == HOTPLUG_ACTION_ADD && d != NULL)
+ 		goto out;
++
++	/* skip "remove" if host does not exist */
+ 	if (action == HOTPLUG_ACTION_REMOVE && d == NULL)
+ 		goto out;
+-	rc = TRUE;
+ 
++	/* fake host event */
++	rc = TRUE;
+ 	host_event = g_new0 (HotplugEvent, 1);
+ 	host_event->action = action;
+ 	host_event->type = HOTPLUG_EVENT_SYSFS_DEVICE;
+@@ -561,15 +586,17 @@ missing_scsi_host (const gchar *sysfs_pa
+ 	g_strlcpy (host_event->sysfs.sysfs_path, path, sizeof (host_event->sysfs.sysfs_path));
+ 	host_event->sysfs.net_ifindex = -1;
+ 
++	/* insert host before our event, so we can see it as parent */
+ 	if (action == HOTPLUG_ACTION_ADD) {
+ 		hotplug_event_enqueue_at_front (device_event);
+ 		hotplug_event_enqueue_at_front (host_event);
+ 		hotplug_event_reposted (device_event);
+ 		goto out;
+ 	}
++
++	/* remove host */
+ 	if (action == HOTPLUG_ACTION_REMOVE)
+ 		hotplug_event_enqueue (host_event);
+-
+ out:
+ 	return rc;
+ }
+diff --git a/hald/linux/hotplug.c b/hald/linux/hotplug.c
+index 986b96c..96c8540 100644
+--- a/hald/linux/hotplug.c
++++ b/hald/linux/hotplug.c
+@@ -74,6 +74,7 @@ hotplug_event_reposted (void *end_token)
+ {
+ 	HotplugEvent *hotplug_event = (HotplugEvent *) end_token;
+ 
++	hotplug_event->reposted = TRUE;
+ 	hotplug_events_in_progress = g_slist_remove (hotplug_events_in_progress, hotplug_event);
+ }
+ 
+diff --git a/hald/linux/hotplug.h b/hald/linux/hotplug.h
+index 2daf982..b9c3501 100644
+--- a/hald/linux/hotplug.h
++++ b/hald/linux/hotplug.h
+@@ -54,6 +54,7 @@ typedef struct
+ {
+ 	HotplugActionType action;				/* Whether the event is add or remove */
+ 	HotplugEventType type;					/* Type of event */
++	gboolean reposted;					/* Avoid loops */
+ 
+ 	void (*free_function) (gpointer data);
+ 

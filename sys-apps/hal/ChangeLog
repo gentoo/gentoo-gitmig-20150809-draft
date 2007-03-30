@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.136 2007/03/30 14:37:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.137 2007/03/30 23:25:44 steev Exp $
+
+  30 Mar 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/fix-scsi-fake-host-event.patch, hal-0.5.9_rc2.ebuild:
+  Patch for scsi devices that don't have parents... this will fix the "hald
+  won't start" errors.
 
   30 Mar 2007; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
   -hal-0.5.7-r3.ebuild, -hal-0.5.7.1-r4.ebuild:
