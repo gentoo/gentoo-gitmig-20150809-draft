@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unshield
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.15 2007/03/20 21:05:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.16 2007/03/30 02:56:31 beandog Exp $
+
+  30 Mar 2007; Steve Dibb <beandog@gentoo.org> unshield-0.5-r1.ebuild:
+  amd64 stable
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> unshield-0.5-r1.ebuild:
   x86 stable
