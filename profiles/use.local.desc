@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2715 2007/03/30 04:40:28 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2716 2007/03/30 05:42:51 steev Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1655,7 +1655,9 @@ sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/coreutils:xattr - if you want extended attributes enabled
 sys-apps/hal:dell - Adds support for Dell laptop smbios via libsmbios
+sys-apps/hal:disk-partition - Add support for partition editing via libparted
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
+sys-apps/hal:mactel - Add support for Mac Book Pro utils
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/lm_sensors:sensord - Enable sensord
