@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.106 2007/03/25 06:04:24 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.107 2007/03/30 03:58:55 fuzzyray Exp $
+
+*gentoolkit-0.2.3-r1 (30 Mar 2007)
+
+  30 Mar 2007; Paul Varner <fuzzyray@gentoo.org>
+  +files/gentoolkit-0.2.3-r1-equery.patch, +gentoolkit-0.2.3-r1.ebuild:
+  Rev bump to remove debug print statement in equery (Bug #172741)
 
 *gentoolkit-0.2.4_pre3 (25 Mar 2007)
 
