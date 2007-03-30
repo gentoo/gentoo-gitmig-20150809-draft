@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.1.5.ebuild,v 1.2 2006/11/22 23:05:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.1.5.ebuild,v 1.3 2007/03/30 17:12:24 opfer Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pyenchant.sourceforge.net"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 LICENSE="LGPL-2.1"
 
 DEPEND=">=dev-lang/python-2.3
