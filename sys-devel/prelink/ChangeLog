@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.52 2007/03/25 05:30:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.53 2007/03/30 05:57:32 vapier Exp $
+
+  30 Mar 2007; Mike Frysinger <vapier@gentoo.org> files/prelink.confd,
+  files/prelink.cron:
+  Make cronjob prelinking control tristate (yes, no, user-controlled) as
+  suggested by Antti Mäkelä #172543.
 
   25 Mar 2007; Mike Frysinger <vapier@gentoo.org> files/prelink.cron:
   Make sure we change KDE_IS_PRELINKED in /etc/env.d/ accordingly as suggested

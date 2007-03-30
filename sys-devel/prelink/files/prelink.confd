@@ -1,10 +1,13 @@
 # For an in depth prelinking guide, please see:
 # http://www.gentoo.org/doc/en/prelink-howto.xml
 
-# Set this to no to disable prelinking altogether
+# Control prelinking behavior in the cronjob.
+#  yes - automatically prelink the system
+#  no  - automatically un-prelink the system
+#  ""  - do nothing at all (user manages)
 # (if you change this from yes to no prelink -ua
 # will be run next night to undo prelinking)
-PRELINKING=no
+PRELINKING=""
 
 # Options to pass to prelink
 # -m	Try to conserve virtual memory by allowing overlapping

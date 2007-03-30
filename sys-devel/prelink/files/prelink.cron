@@ -2,6 +2,11 @@
 
 . /etc/conf.d/prelink
 
+case $PRELINKING in
+  yes|no);;
+  *) exit 0;;
+esac
+
 renice +19 -p $$ >/dev/null 2>&1
 
 if [ "$PRELINKING" != yes ]; then
