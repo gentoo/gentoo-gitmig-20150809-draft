@@ -1,19 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.11 2007/03/23 15:14:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.12 2007/03/30 14:57:01 uberlord Exp $
 
 opts="reload"
 
 depend() {
 	provide dns
 	need net
-	# Comment out dbus until dbus doesn't dep on dns
-	#use dbus
 }
 
 start() {
-	ebegin "Starting dnsmasq"
+	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --start --exec /usr/sbin/dnsmasq \
 	    --pidfile /var/run/dnsmasq.pid \
 	    -- -x /var/run/dnsmasq.pid ${DNSMASQ_OPTS}
@@ -21,14 +19,18 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping dnsmasq"
+	ebegin "Stopping ${SVCNAME}"
 	start-stop-daemon --stop --exec /usr/sbin/dnsmasq \
 	    --pidfile /var/run/dnsmasq.pid
 	eend $?
 }
 
 reload() {
-	ebegin "Reloading dnsmasq"
+	ebegin "Reloading ${SVCNAME}"
+	if ! service_started "${SVCNAME}" ; then
+	    eend 1 "${SVCNAME} is not started"
+	    return 1
+	fi
 	start-stop-daemon --stop --oknodo --signal HUP \
 	    --exec /usr/sbin/dnsmasq --pidfile /var/run/dnsmasq.pid
 	eend $?

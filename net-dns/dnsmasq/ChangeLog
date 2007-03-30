@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.118 2007/03/26 07:51:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.119 2007/03/30 14:57:01 uberlord Exp $
+
+  30 Mar 2007; Roy Marples <uberlord@gentoo.org> files/dnsmasq-init:
+  The reload function of the init script now checks to see if the service has
+  been started or not, erroring appropriately.
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> dnsmasq-2.31.ebuild,
   dnsmasq-2.34.ebuild, dnsmasq-2.38.ebuild, dnsmasq-2.38-r1.ebuild:
