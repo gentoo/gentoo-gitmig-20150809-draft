@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.40 2007/02/23 21:56:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.41 2007/03/30 20:59:21 aballier Exp $
+
+*portaudio-19_pre061121 (30 Mar 2007)
+
+  30 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +portaudio-19_pre061121.ebuild:
+  Add v19, bug #94354, p.masked and will need rekeywording as this has major
+  changes
 
   23 Feb 2007; Guy Martin <gmsoft@gentoo.org>
   files/portaudio-18.1-r5-Makefile.linux, files/portaudio-18.1-r6-Makefile,
