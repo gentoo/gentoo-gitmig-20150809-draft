@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.62 2007/02/03 20:45:02 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.63 2007/03/30 16:52:03 drizzt Exp $
+
+  30 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
+  courier-authlib-0.59.1.ebuild:
+  Add ~x86-fbsd keyword
 
 *courier-authlib-0.59.1 (03 Feb 2007)
 

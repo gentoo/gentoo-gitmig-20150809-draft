@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.59.1.ebuild,v 1.1 2007/02/03 20:45:02 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.59.1.ebuild,v 1.2 2007/03/30 16:52:03 drizzt Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb crypt debug gdbm ldap mysql pam postgres vpopmail"
 
 RESTRICT="userpriv"
@@ -23,7 +23,7 @@ RDEPEND="gdbm? ( sys-libs/gdbm )
 
 DEPEND="${RDEPEND}
 		>=dev-libs/openssl-0.9.6
-		pam? ( >=sys-libs/pam-0.75 )
+		pam? ( virtual/pam )
 		mysql? ( virtual/mysql )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		postgres? ( >=dev-db/postgresql-7.2 )"
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P%%_pre}"
 
 pkg_setup() {
+	enewuser mail -1 -1 /var/spool/mail
 	if ! has_version 'dev-tcltk/expect' ; then
 		ewarn 'The dev-tcltk/expect package is not installed.'
 		einfo 'Without it, you will not be able to change system login passwords.'
