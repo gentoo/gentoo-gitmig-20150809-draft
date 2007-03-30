@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/muse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.13 2007/02/11 07:37:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.14 2007/03/30 18:51:34 opfer Exp $
+
+  30 Mar 2007; Christian Faulhammer <opfer@gentoo.org> -muse-3.02.6b.ebuild,
+  -muse-3.02.8.ebuild:
+  clean up
 
   11 Feb 2007; Joseph Jezak <josejx@gentoo.org> muse-3.02.93.ebuild:
   Marked ~ppc for bug #163401.
