@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.37 2007/03/14 21:43:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.38 2007/03/30 22:17:25 opfer Exp $
+
+  30 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  jdepend-2.9-r3.ebuild:
+  stable x86, bug 172825
 
 *jdepend-2.9-r3 (14 Mar 2007)
 
