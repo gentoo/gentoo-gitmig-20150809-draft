@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.41 2007/03/30 21:11:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.42 2007/03/30 21:14:23 aballier Exp $
+
+  30 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  rezound-0.12.2_beta-r2.ebuild, rezound-0.12.3_beta.ebuild:
+  Stick deps to portaudio v18 as it's not compatible with v19
 
   30 Mar 2007; Alexis Ballier <aballier@gentoo.org>
   -rezound-0.12.2_beta-r3.ebuild:
