@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jing
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.20 2007/03/30 13:32:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.21 2007/03/30 13:36:12 betelgeuse Exp $
+
+  30 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jing-20030619-r1.ebuild:
+  Remove -r1 so that we can get saxon-bin package masked.
 
   30 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   jing-20030619-r3.ebuild:
