@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.2 2007/03/25 11:02:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.3 2007/03/30 20:16:34 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -23,6 +23,7 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 	>=media-libs/libextractor-0.5.13
 	>=dev-libs/gmp-4.0.0
 	sys-libs/zlib
+	net-misc/curl
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
 	sys-apps/sed
 	>=dev-scheme/guile-1.8.0

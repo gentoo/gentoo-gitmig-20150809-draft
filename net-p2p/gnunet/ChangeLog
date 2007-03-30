@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.55 2007/03/25 11:02:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.56 2007/03/30 20:16:34 armin76 Exp $
+
+  30 Mar 2007; Raúl Porcel <armin76@gentoo.org> gnunet-0.7.1b.ebuild:
+  Add net-misc/curl, thanks to Tobias Kral <tobias at kral-online dot de>, bug
+  172715
 
   25 Mar 2007; Raúl Porcel <armin76@gentoo.org> gnunet-0.7.1b.ebuild:
   Fix postinst message, bug 172143
