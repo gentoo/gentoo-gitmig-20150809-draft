@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7064 2007/03/30 19:05:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7065 2007/03/30 19:35:49 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,8 @@
 
 # Samuli Suominen <drac@gentoo.org> (30 Mar 2007)
 # Migrating new GGI in to tree.
-=media-libs/libgii-1*
+>=media-libs/libgii-1.0.2
+>=media-libs/libggi-2.2.2
 
 # Petteri Räty <betelgeuse@gentoo.org> (30 Mar 2007)
 # Use the from source version dev-java/saxon instead
