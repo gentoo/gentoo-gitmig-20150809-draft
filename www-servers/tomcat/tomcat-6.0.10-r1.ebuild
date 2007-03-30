@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r1.ebuild,v 1.1 2007/03/20 04:35:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r1.ebuild,v 1.2 2007/03/30 23:17:05 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -150,8 +150,11 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog " This ebuild implements a FHS compliant layout for tomcat"
-	elog " Please read http://www.gentoo.org/proj/en/java/tomcat-guide.xml"
+	elog " Please read http://www.gentoo.org/proj/en/java/tomcat6-guide.xml"
 	elog " for more information."
+	elog
+	ewarn "tomcat-dbcp.jar is not built at this time. Please fetch jar"
+	ewarn "from upstream binary if you need it. Gentoo Bug # 144276"
 	elog
 	elog " Please report any bugs to http://bugs.gentoo.org/"
 	elog

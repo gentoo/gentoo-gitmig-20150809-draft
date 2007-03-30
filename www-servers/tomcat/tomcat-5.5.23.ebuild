@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23.ebuild,v 1.2 2007/03/13 00:06:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23.ebuild,v 1.3 2007/03/30 23:17:05 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -29,7 +29,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.2*
 	>=dev-java/commons-el-1.0
 	>=dev-java/commons-launcher-0.9
 	>=dev-java/commons-logging-1.0.4
-	>=dev-java/commons-modeler-1.1
+	>=dev-java/commons-modeler-2.0
 	>=dev-java/commons-pool-1.2
 	>=dev-java/junit-3.8.1
 	>=dev-java/log4j-1.2.9
@@ -270,18 +270,17 @@ pkg_postinst() {
 	chown root:root /etc/init.d/${TOMCAT_NAME}
 	chown root:root /etc/conf.d/${TOMCAT_NAME}
 
-	ewarn
-	ewarn " This ebuild implements a new filesystem layout for tomcat"
-	ewarn " please read http://www.gentoo.org/proj/en/java/tomcat-guide.xml"
-	ewarn " for more information!."
+	elog
+	elog " This ebuild implements a new filesystem layout for tomcat"
+	elog " please read http://www.gentoo.org/proj/en/java/tomcat-guide.xml"
+	elog " for more information!."
+	elog
+	ewarn "naming-factory-dbcp.jar is not built at this time. Please fetch"
+	ewarn "jar from upstream binary if you need it. Gentoo Bug # 144276"
 	elog
 	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	elog " may not get seen.  Thank you."
 	elog
-
-#	elog "Run emerge --config =${PF}"
-#	elog "to configure Tomcat if you need to for example"
-#	elog "change the home directory of the Tomcat user."
 }
 
 #helpers
