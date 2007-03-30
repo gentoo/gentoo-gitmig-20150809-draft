@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.420 2007/03/27 13:53:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.421 2007/03/30 12:43:35 caleb Exp $
+
+*qt-4.2.3-r1 (30 Mar 2007)
+*qt-3.3.8-r2 (30 Mar 2007)
+
+  30 Mar 2007; Caleb Tennis <caleb@gentoo.org> +files/utf8-bug-qt3.diff,
+  +files/utf8-bug-qt4-2.diff, +qt-3.3.8-r2.ebuild, +qt-4.2.3-r1.ebuild:
+  Add a patch that fixes a a XSS error in the UTF8 decoder (from kde-packager)
 
   27 Mar 2007; Raúl Porcel <armin76@gentoo.org> qt-4.2.2.ebuild:
   ia64 stable wrt bug 164699
