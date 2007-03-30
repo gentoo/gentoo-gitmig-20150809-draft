@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.108 2007/03/30 09:54:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.109 2007/03/30 12:23:04 opfer Exp $
+
+  30 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  gentoolkit-0.2.3-r1.ebuild:
+  stable x86, bug 172741
 
   30 Mar 2007; Jeroen Roovers <jer@gentoo.org> gentoolkit-0.2.3-r1.ebuild:
   Stable for HPPA (bug #172741).
