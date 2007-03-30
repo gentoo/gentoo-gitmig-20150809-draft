@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.11 2007/02/14 05:31:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.12 2007/03/30 11:56:21 armin76 Exp $
+
+  30 Mar 2007; Raúl Porcel <armin76@gentoo.org> twolame-0.3.9.ebuild:
+  Add ~ia64 keyword wrt bug 165395
 
   14 Feb 2007; Jeroen Roovers <jer@gentoo.org> twolame-0.3.8.ebuild:
   Stable for HPPA (bug #133776).
