@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.35 2007/03/05 12:47:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.36 2007/03/30 15:07:51 mcummings Exp $
+
+  30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  gnome2-vfs-perl-1.041.ebuild, gnome2-vfs-perl-1.060.ebuild,
+  gnome2-vfs-perl-1.061.ebuild:
+  Bug 152206, deps updated
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org>
   gnome2-vfs-perl-1.061.ebuild:

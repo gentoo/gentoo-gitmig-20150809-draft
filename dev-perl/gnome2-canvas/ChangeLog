@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-canvas
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.27 2007/01/15 22:31:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.28 2007/03/30 15:10:25 mcummings Exp $
+
+  30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  gnome2-canvas-1.002.ebuild:
+  Bug 152206, deps updated
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -gnome2-canvas-1.00.ebuild, gnome2-canvas-1.002.ebuild:

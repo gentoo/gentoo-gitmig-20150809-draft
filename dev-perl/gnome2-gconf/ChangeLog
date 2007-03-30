@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gnome2-gconf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.24 2007/03/05 12:46:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.25 2007/03/30 15:12:42 mcummings Exp $
+
+  30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
+  gnome2-gconf-1.000.ebuild, gnome2-gconf-1.031.ebuild,
+  gnome2-gconf-1.032.ebuild, gnome2-gconf-1.040.ebuild,
+  gnome2-gconf-1.043.ebuild:
+  Bug 152206, deps updated
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> gnome2-gconf-1.043.ebuild:
   Stable on x86, bug #169152.
