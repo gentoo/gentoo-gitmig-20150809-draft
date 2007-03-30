@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tk-TableMatrix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.39 2007/03/30 21:00:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.40 2007/03/30 21:38:49 ticho Exp $
+
+  30 Mar 2007; Andrej Kacian <ticho@gentoo.org> Tk-TableMatrix-1.2.2.ebuild:
+  Stable on x86, bug #169152.
 
   30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   Tk-TableMatrix-1.2.2.ebuild, Tk-TableMatrix-1.2.3.ebuild:
