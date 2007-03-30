@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.249 2007/03/29 16:32:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.250 2007/03/30 04:40:28 steev Exp $
+  29 Mar 2007; Steev Klimaszewski <steev@gentoo.org> use.local.desc:
+  Add dell useflag for sys-apps/hal for Dell support via libsmbios
+
+  29 Mar 2007; Steev Klimaszewski <steev@gentoo.org> package.mask:
+  Package mask hal-0.5.9_rc2 and app-misc/hal-info-20070326
 
   29 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package mask dev-java/javatar for removal to the java junkyard.
