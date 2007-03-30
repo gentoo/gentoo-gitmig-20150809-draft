@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r4.ebuild,v 1.1 2007/03/18 20:28:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r5.ebuild,v 1.1 2007/03/30 13:41:36 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	rm -v jars/*.jar jars/dsml/*.jar || die
 	mkdir lib/ && cd lib/
-	java-pkg_jar-from javahelp-bin
+	java-pkg_jar-from javahelp
 	java-pkg_jar-from log4j
 	java-pkg_jar-from junit
 }

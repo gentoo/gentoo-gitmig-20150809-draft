@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.15 2007/03/19 07:13:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.16 2007/03/30 13:41:36 betelgeuse Exp $
+
+*jxplorer-3.1-r5 (30 Mar 2007)
+
+  30 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jxplorer-3.1-r4.ebuild, +jxplorer-3.1-r5.ebuild:
+  The ebuild was still calling java-pkg_jar-from for javahelp-bin but
+  depending on from source javahelp. Revision bump to get the package.env
+  right. Fixes bug #172783.
 
   19 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   jxplorer-3.1-r3.ebuild:
