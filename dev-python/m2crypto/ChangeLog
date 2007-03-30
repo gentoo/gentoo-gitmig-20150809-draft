@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.25 2007/01/12 12:59:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.26 2007/03/30 22:15:26 jer Exp $
+
+  30 Mar 2007; Jeroen Roovers <jer@gentoo.org> m2crypto-0.17-r1.ebuild:
+  Marked ~hppa (bug #172817).
 
   12 Jan 2007; Marien Zwart <marienz@gentoo.org>
   -files/m2crypto-0.13-gentoo.patch, -m2crypto-0.12-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.19 2007/02/13 20:33:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.20 2007/03/30 22:12:35 jer Exp $
+
+  30 Mar 2007; Jeroen Roovers <jer@gentoo.org> setuptools-0.6_rc5.ebuild:
+  Marked ~hppa (bug #172817).
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> setuptools-0.6_rc5.ebuild:
   Added ~ppc64; bug #166675
