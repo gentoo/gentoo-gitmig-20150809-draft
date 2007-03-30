@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.12.ebuild,v 1.14 2007/01/22 12:31:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.12.ebuild,v 1.15 2007/03/30 04:45:38 dirtyepic Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="C++ interface for GTK+2"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
@@ -20,3 +20,10 @@ DEPEND="${RDEPEND}
 	!=sys-devel/gcc-3.3.0*"
 
 DOCS="AUTHORS CHANGES ChangeLog HACKING PORTING NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
