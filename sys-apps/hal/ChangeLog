@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.135 2007/03/30 05:46:53 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.136 2007/03/30 14:37:01 cardoe Exp $
+
+  30 Mar 2007; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  -hal-0.5.7-r3.ebuild, -hal-0.5.7.1-r4.ebuild:
+  remove old version. metadata fixes.
 
 *hal-0.5.9_rc2 (30 Mar 2007)
 
