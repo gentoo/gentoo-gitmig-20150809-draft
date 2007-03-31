@@ -1,0 +1,33 @@
+strict aliasing rules say this sort of casting is illegal
+
+http://bugs.gentoo.org/172421
+
+--- lib3ds/io.c
++++ lib3ds/io.c
+@@ -249,6 +249,7 @@
+ {
+   Lib3dsByte b[4];
+   Lib3dsDword d;
++  Lib3dsFloat ret;
+ 
+   ASSERT(io);
+   lib3ds_io_read(io, b, 4);
+@@ -256,7 +257,8 @@
+     ((Lib3dsDword)b[2] << 16) |
+     ((Lib3dsDword)b[1] << 8) |
+     ((Lib3dsDword)b[0]);
+-  return(*((Lib3dsFloat*)&d));
++  memcpy(&ret, &d, sizeof(ret));
++  return ret;
+ }
+ 
+ 
+@@ -462,7 +464,7 @@
+   Lib3dsDword d;
+ 
+   ASSERT(io);
+-  d=*((Lib3dsDword*)&l);
++  memcpy(&d, &l, sizeof(d));
+   b[3]=(Lib3dsByte)(((Lib3dsDword)d & 0xFF000000) >> 24);
+   b[2]=(Lib3dsByte)(((Lib3dsDword)d & 0x00FF0000) >> 16);
+   b[1]=(Lib3dsByte)(((Lib3dsDword)d & 0x0000FF00) >> 8);

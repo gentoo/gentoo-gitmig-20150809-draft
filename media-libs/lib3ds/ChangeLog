@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/lib3ds
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.8 2006/07/13 13:57:13 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.9 2007/03/31 03:20:54 vapier Exp $
+
+*lib3ds-1.2.0-r1 (31 Mar 2007)
+
+  31 Mar 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/lib3ds-1.2.0-fix-aliasing.patch,
+  +files/lib3ds-1.2.0-m4-underquoted.patch, +lib3ds-1.2.0-r1.ebuild:
+  Fix strict aliasing violation #172421 by Anssi Grohn.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> lib3ds-1.2.0.ebuild:
   Mark 1.2.0 stable on ia64
