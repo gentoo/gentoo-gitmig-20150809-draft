@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-2.0.6-r1.ebuild,v 1.1 2007/02/15 21:42:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-2.0.6-r1.ebuild,v 1.2 2007/03/31 15:58:35 vanquirius Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 
 RDEPEND="virtual/libc
 	net-libs/libpcap
-	>=net-analyzer/argus-2.0.6"
+	>=net-analyzer/argus-2.0.6
+	net-analyzer/rrdtool"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.28

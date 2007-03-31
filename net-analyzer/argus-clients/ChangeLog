@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.5 2007/02/15 21:42:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.6 2007/03/31 15:58:35 vanquirius Exp $
+
+  31 Mar 2007; Marcelo Goes <vanquirius@gentoo.org>
+  -argus-clients-2.0.6.ebuild, argus-clients-2.0.6-r1.ebuild:
+  Remove old ebuild, add net-analyzer/rrdtool as a runtime dependency, as it
+  is needed by ragraph.
 
 *argus-clients-2.0.6-r1 (15 Feb 2007)
 
