@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.35 2007/02/10 18:12:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.36 2007/03/31 09:55:25 betelgeuse Exp $
+
+  31 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -java-gnome-2.12.3.ebuild:
+  Remove old version.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 160002
@@ -71,19 +75,19 @@
   java-gnome-2.8.2-r2.ebuild, java-gnome-2.8.2-r3.ebuild:
   added missing unzip dependency. see #69831
 
-* java-gnome-2.8.2-r3 (27 Dec 2004)
+*java-gnome-2.8.2-r3 (27 Dec 2004)
 
   27 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +java-gnome-2.8.2-r3.ebuild:
   Bump to pick up upstream maint releases to libgtk-java and libglade-java
 
-* java-gnome-2.8.2-r2 (24 Dec 2004)
+*java-gnome-2.8.2-r2 (24 Dec 2004)
 
   24 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +java-gnome-2.8.2-r2.ebuild java-gnome-2.8.2-r1.ebuild:
   Bump to pick up the libglade bugfix
 
-* java-gnome-2.8.2-r1 (17 Nov 2004)
+*java-gnome-2.8.2-r1 (17 Nov 2004)
 
-  17 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> java-gnome-2.8.2-r1.ebuild:
+  17 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> +java-gnome-2.8.2-r1.ebuild:
   Upped dependencies on lib*java for their small ebuild improvements.
 
   10 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> java-gnome-2.8.2.ebuild:
