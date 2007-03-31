@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/vstrip-0.8f.ebuild,v 1.3 2005/09/16 02:36:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/vstrip-0.8f.ebuild,v 1.4 2007/03/31 19:26:38 drac Exp $
 
 inherit eutils
 
@@ -13,28 +13,27 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND="app-text/dos2unix
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 RDEPEND=""
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/vstrip-0.8f-gentoo.patch
-	dos2unix -q -o *.c *.h
-
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	edos2unix *.c *.h
+	
 	for file in *.c *.h ; do
 		echo >>$file
 	done
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake || die "emake failed."
 }
 
 src_install() {
-	dobin vstrip || die "dobin failed"
+	dobin vstrip
 }

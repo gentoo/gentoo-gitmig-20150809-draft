@@ -30,7 +30,7 @@
 +#include <stdlib.h>
  #include <stdio.h>
 -#include <io.h>
-+#include <asm/io.h>
++#include <sys/io.h>
  #include <fcntl.h>
  #include "s_types.h"
  #include "vstrip.h"
