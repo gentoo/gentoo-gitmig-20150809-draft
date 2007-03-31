@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-openid
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.1 2007/03/31 08:04:30 robbat2 Exp $
+
+*ruby-openid-1.1.4 (31 Mar 2007)
+
+  31 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +ruby-openid-1.1.4.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
