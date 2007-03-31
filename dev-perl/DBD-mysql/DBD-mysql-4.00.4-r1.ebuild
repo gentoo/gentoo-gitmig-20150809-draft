@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-4.00.4.ebuild,v 1.1 2007/03/30 14:18:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-4.00.4-r1.ebuild,v 1.1 2007/03/31 12:39:36 mcummings Exp $
 
 inherit eutils perl-module versionator
 
@@ -17,6 +17,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
+PATCHES="${FILESDIR}/sqlstate-purge.patch"
 
 DEPEND="dev-lang/perl
 	dev-perl/DBI

@@ -1,0 +1,100 @@
+diff -Naurp DBD-mysql-4.004.old/dbdimp.c DBD-mysql-4.004/dbdimp.c
+--- DBD-mysql-4.004.old/dbdimp.c	2007-03-20 09:37:12.000000000 -0400
++++ DBD-mysql-4.004/dbdimp.c	2007-03-31 07:26:48.000000000 -0400
+@@ -3423,11 +3423,7 @@ dbd_st_fetch(SV *sth, imp_sth_t* imp_sth
+   if (!imp_sth->result)
+   {
+     do_error(sth, JW_ERR_SEQUENCE, "fetch() without execute()"
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+              ,NULL);
+-#else
+-            );
+-#endif
+     return Nullav;
+   }
+ 
+@@ -3587,12 +3583,7 @@ dbd_st_fetch(SV *sth, imp_sth_t* imp_sth
+       if (mysql_errno(&imp_dbh->mysql))
+         do_error(sth, mysql_errno(&imp_dbh->mysql),
+                  mysql_error(&imp_dbh->mysql)
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+                  , mysql_sqlstate(&imp_dbh->mysql));
+-#else
+-                );
+-#endif
+-
+ 
+ #if MYSQL_VERSION_ID >= MULTIPLE_RESULT_SET_VERSION
+       if (!mysql_more_results(svsock))
+@@ -3925,11 +3916,7 @@ dbd_st_FETCH_internal(
+   /* Are we asking for a legal value? */
+   if (what < 0 ||  what >= AV_ATTRIB_LAST)
+     do_error(sth, JW_ERR_NOT_IMPLEMENTED, "Not implemented"
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+              , NULL);
+-#else
+-              );
+-#endif
+ 
+   /* Return cached value, if possible */
+   else if (cacheit  &&  imp_sth->av_attr[what])
+@@ -3939,11 +3926,7 @@ dbd_st_FETCH_internal(
+   else if (!res)
+     do_error(sth, JW_ERR_NOT_ACTIVE,
+ 	     "statement contains no result"
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+              ,NULL);
+-#else
+-            );
+-#endif
+   /* Do the real work. */
+   else
+   {
+@@ -4258,11 +4241,7 @@ int dbd_bind_ph (SV *sth, imp_sth_t *imp
+   {
+     do_error(sth, JW_ERR_ILLEGAL_PARAM_NUM,
+              "Illegal parameter number"
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+              , NULL);
+-#else
+-            );
+-#endif
+     return FALSE;
+   }
+ 
+@@ -4285,11 +4264,7 @@ int dbd_bind_ph (SV *sth, imp_sth_t *imp
+               "Binding non-numeric field %d, value %s as a numeric!",
+               param_num, neatsvpv(value,0));
+       do_error(sth, JW_ERR_ILLEGAL_PARAM_NUM, err_msg
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+                ,NULL);
+-#else
+-                );
+-#endif
+     }
+   }
+ 
+@@ -4297,11 +4272,7 @@ int dbd_bind_ph (SV *sth, imp_sth_t *imp
+   {
+     do_error(sth, JW_ERR_NOT_IMPLEMENTED,
+              "Output parameters not implemented"
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+              ,NULL);
+-#else
+-                );
+-#endif
+     return FALSE;
+   }
+ 
+@@ -4459,11 +4430,7 @@ int mysql_db_reconnect(SV* h)
+   if (!my_login(h, imp_dbh))
+   {
+     do_error(h, mysql_errno(&imp_dbh->mysql), mysql_error(&imp_dbh->mysql)
+-#if MYSQL_VERSION_ID >= SQL_STATE_VERSION
+              , mysql_sqlstate(&imp_dbh->mysql));
+-#else
+-              );
+-#endif
+     memcpy (&imp_dbh->mysql, &save_socket, sizeof(save_socket));
+     ++imp_dbh->stats.auto_reconnects_failed;
+     return FALSE;
