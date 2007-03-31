@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.12 2007/03/10 11:21:35 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.13 2007/03/31 11:26:05 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> tea-16.0.3.ebuild:
+  x86 stable
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> tea-16.0.5.ebuild:
   Keyworded ~x86-fbsd
