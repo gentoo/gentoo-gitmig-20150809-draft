@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/keytouch
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.5 2007/03/21 00:07:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.6 2007/03/31 10:20:23 opfer Exp $
+
+  31 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  keytouch-2.2.4.ebuild:
+  stable x86, bug 172850
 
 *keytouch-2.3.0 (21 Mar 2007)
 
