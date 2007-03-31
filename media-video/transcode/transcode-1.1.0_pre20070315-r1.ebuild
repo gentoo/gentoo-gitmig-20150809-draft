@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_pre20070315-r1.ebuild,v 1.1 2007/03/24 14:55:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_pre20070315-r1.ebuild,v 1.2 2007/03/31 13:39:59 beandog Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -37,11 +37,9 @@ RDEPEND="a52? ( media-libs/a52dec )
 	media-libs/libmpeg2
 	x264? ( media-libs/x264-svn )
 	xml? ( dev-libs/libxml2 )
-	X? ( || ( (
-			x11-libs/libXpm
-			x11-libs/libXaw
-			x11-libs/libXv )
-		<virtual/x11-7 ) )"
+	X? ( x11-libs/libXpm
+		x11-libs/libXaw
+		x11-libs/libXv )"
 
 DEPEND="${RDEPEND}
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
