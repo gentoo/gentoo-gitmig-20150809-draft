@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.39 2007/03/22 18:32:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.40 2007/03/31 19:03:18 robbat2 Exp $
+
+*memcached-1.2.1-r1 (31 Mar 2007)
+*memcached-1.1.13-r1 (31 Mar 2007)
+
+  31 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> +files/1.1.13/conf,
+  +files/1.1.13/init, +memcached-1.1.13-r1.ebuild,
+  +memcached-1.2.1-r1.ebuild:
+  Fix start-stop-daemon looking at the binary instead of the pidfile when
+  using multiple instances of memcached.
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   memcached-1.2.1.ebuild:
