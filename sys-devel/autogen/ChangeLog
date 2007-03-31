@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.24 2007/03/30 06:02:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.25 2007/03/31 02:52:29 vapier Exp $
+
+*autogen-5.9 (31 Mar 2007)
+
+  31 Mar 2007; Mike Frysinger <vapier@gentoo.org> +autogen-5.9.ebuild:
+  Version bump.
 
   30 Mar 2007; Mike Frysinger <vapier@gentoo.org>
   +files/autogen-5.8.8-scrub-debug.patch, autogen-5.8.8.ebuild:
