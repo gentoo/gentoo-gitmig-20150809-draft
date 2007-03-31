@@ -1,0 +1,11 @@
+# ChangeLog for net-dialup/umtsmon
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.1 2007/03/31 09:05:35 mrness Exp $
+
+*umtsmon-0.5 (31 Mar 2007)
+
+  31 Mar 2007; Alin Năstac <mrness@gentoo.org> +metadata.xml,
+  +umtsmon-0.5.ebuild:
+  Initial import from bug #171785, thanks to Momsen Reincke <mreincke at gmx
+  dot net> and Klaas van Gend <klaas at opentux dot nl>.
+

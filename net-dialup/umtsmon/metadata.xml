@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>net-dialup</herd>
+	<longdescription>UMTSmon is a tool to control and monitor a wireless mobile network card (GPRS, EDGE, WCDMA, UMTS, HSDPA) in a laptop running the Linux operating system. It handles PIN codes, operator choice (roaming), signal strength and network statistics, sending/receiving SMS.</longdescription>
+</pkgmetadata>
