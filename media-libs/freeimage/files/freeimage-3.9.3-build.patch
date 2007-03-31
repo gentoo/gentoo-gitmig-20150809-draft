@@ -1,0 +1,136 @@
+--- genfipsrclist.sh
++++ genfipsrclist.sh
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-DIRLIST=". Source Source/Metadata Source/FreeImageToolkit Source/LibJPEG Source/LibMNG Source/LibPNG Source/LibTIFF Source/ZLib Wrapper/FreeImagePlus"
++DIRLIST=". Source Source/Metadata Source/FreeImageToolkit Wrapper/FreeImagePlus"
+ 
+ echo "VER_MAJOR = 3" > fipMakefile.srcs
+ echo "VER_MINOR = 9.3" >> fipMakefile.srcs
+@@ -12,7 +12,7 @@
+ 		egrep 'RelativePath=.*\.(c|cpp)' $DIR/*.vcproj | cut -d'"' -f2 | tr '\\' '/' | awk '{print "'$DIR'/"$0}' | tr '\r\n' '  ' | tr -s ' ' >> fipMakefile.srcs
+ 	fi
+ done
+-echo >> fipMakefile.srcs
++echo Source/LibJPEG/transupp.c >> fipMakefile.srcs
+ 
+ echo -n "INCLUDE =" >> fipMakefile.srcs
+ for DIR in $DIRLIST; do
+--- gensrclist.sh
++++ gensrclist.sh
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-DIRLIST=". Source Source/Metadata Source/FreeImageToolkit Source/LibJPEG Source/LibMNG Source/LibPNG Source/LibTIFF Source/ZLib"
++DIRLIST=". Source Source/Metadata Source/FreeImageToolkit"
+ 
+ echo "VER_MAJOR = 3" > Makefile.srcs
+ echo "VER_MINOR = 9.3" >> Makefile.srcs
+@@ -12,7 +12,7 @@
+ 		egrep 'RelativePath=.*\.(c|cpp)' $DIR/*.vcproj | cut -d'"' -f2 | tr '\\' '/' | awk '{print "'$DIR'/"$0}' | tr '\r\n' '  ' | tr -s ' ' >> Makefile.srcs
+ 	fi
+ done
+-echo >> Makefile.srcs
++echo Source/LibJPEG/transupp.c >> Makefile.srcs
+ 
+ echo -n "INCLS = " >> Makefile.srcs
+ find . -name "*.h" -print | xargs echo >> Makefile.srcs
+--- Makefile
++++ Makefile
+@@ -14,8 +14,11 @@
+     MAKEFILE = solaris
+ endif
+ 
++FLAGS = -Wall -fPIC
++LIBS = -lstdc++ -lpng -lmng -ltiff -ljpeg
+ default:
+-	$(MAKE) -f Makefile.$(MAKEFILE) 
++	$(MAKE) CC="$(CC)" CXX="$(CXX)" AR="$(AR)" COMPILERFLAGS="$(FLAGS)" LIBRARIES="$(LIBS)" -f Makefile.gnu
++	$(MAKE) CC="$(CC)" CXX="$(CXX)" AR="$(AR)" COMPILERFLAGS="$(FLAGS)" LIBRARIES="$(LIBS)" -f Makefile.fip
+ 
+ all:
+ 	$(MAKE) -f Makefile.$(MAKEFILE) all 
+@@ -24,7 +27,8 @@
+ 	$(MAKE) -f Makefile.$(MAKEFILE) dist 
+ 
+ install:
+-	$(MAKE) -f Makefile.$(MAKEFILE) install 
++	$(MAKE) -f Makefile.gnu install
++	$(MAKE) -f Makefile.fip install
+ 
+ clean:
+ 	$(MAKE) -f Makefile.$(MAKEFILE) clean 
+--- Makefile.fip
++++ Makefile.fip
+@@ -19,8 +19,8 @@
+ 
+ MODULES = $(SRCS:.c=.o)
+ MODULES := $(MODULES:.cpp=.o)
+-CFLAGS = $(COMPILERFLAGS) $(INCLUDE)
+-CXXFLAGS = $(COMPILERFLAGS) -Wno-ctor-dtor-privacy $(INCLUDE)
++CFLAGS += $(COMPILERFLAGS) $(INCLUDE)
++CXXFLAGS += $(COMPILERFLAGS) -Wno-ctor-dtor-privacy $(INCLUDE)
+ 
+ TARGET  = freeimageplus
+ STATICLIB = lib$(TARGET).a
+@@ -56,16 +56,15 @@
+ 	$(AR) r $@ $(MODULES)
+ 
+ $(SHAREDLIB): $(MODULES)
+-	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) -o $@ $(MODULES) $(LIBRARIES)
++	$(CC) $(LDFLAGS) -shared -Wl,-soname,$(VERLIBNAME) -o $@ $(MODULES) $(LIBRARIES)
+ 
+ install:
+-	install -m 644 -o root -g root $(HEADER) $(INCDIR)
+-	install -m 644 -o root -g root $(HEADERFIP) $(INCDIR)
+-	install -m 644 -o root -g root $(STATICLIB) $(INSTALLDIR)
+-	install -m 755 -o root -g root $(SHAREDLIB) $(INSTALLDIR)
+-	ln -sf $(SHAREDLIB) $(INSTALLDIR)/$(VERLIBNAME)
+-	ln -sf $(VERLIBNAME) $(INSTALLDIR)/$(LIBNAME)
+-	ldconfig
++	install -m 644 $(HEADER) $(DESTDIR)/$(INCDIR)
++	install -m 644 $(HEADERFIP) $(DESTDIR)/$(INCDIR)
++	install -m 644 $(STATICLIB) $(DESTDIR)/$(LIBDIR)
++	install -m 755 $(SHAREDLIB) $(DESTDIR)/$(LIBDIR)
++	ln -sf $(SHAREDLIB) $(DESTDIR)/$(LIBDIR)/$(VERLIBNAME)
++	ln -sf $(VERLIBNAME) $(DESTDIR)/$(LIBDIR)/$(LIBNAME)
+ 
+ clean:
+ 	rm -f core Dist/*.* u2dtmp* $(MODULES) $(STATICLIB) $(SHAREDLIB) $(LIBNAME)
+--- Makefile.gnu
++++ Makefile.gnu
+@@ -19,8 +19,8 @@
+ 
+ MODULES = $(SRCS:.c=.o)
+ MODULES := $(MODULES:.cpp=.o)
+-CFLAGS = $(COMPILERFLAGS) $(INCLUDE)
+-CXXFLAGS = $(COMPILERFLAGS)  -Wno-ctor-dtor-privacy $(INCLUDE)
++CFLAGS += $(COMPILERFLAGS) $(INCLUDE)
++CXXFLAGS += $(COMPILERFLAGS) -Wno-ctor-dtor-privacy $(INCLUDE)
+ 
+ TARGET  = freeimage
+ STATICLIB = lib$(TARGET).a
+@@ -55,15 +55,15 @@
+ 	$(AR) r $@ $(MODULES)
+ 
+ $(SHAREDLIB): $(MODULES)
+-	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) -o $@ $(MODULES) $(LIBRARIES)
++	$(CC) $(LDFLAGS) -shared -Wl,-soname,$(VERLIBNAME) -o $@ $(MODULES) $(LIBRARIES)
+ 
+ install:
+-	install -m 644 -o root -g root $(HEADER) $(INCDIR)
+-	install -m 644 -o root -g root $(STATICLIB) $(INSTALLDIR)
+-	install -m 755 -o root -g root $(SHAREDLIB) $(INSTALLDIR)
+-	ln -sf $(SHAREDLIB) $(INSTALLDIR)/$(VERLIBNAME)
+-	ln -sf $(VERLIBNAME) $(INSTALLDIR)/$(LIBNAME)	
+-	ldconfig
++	install -d $(DESTDIR)/$(INCDIR) $(DESTDIR)/$(LIBDIR)
++	install -m 644 $(HEADER) $(DESTDIR)/$(INCDIR)
++	install -m 644 $(STATICLIB) $(DESTDIR)/$(LIBDIR)
++	install -m 755 $(SHAREDLIB) $(DESTDIR)/$(LIBDIR)
++	ln -sf $(SHAREDLIB) $(DESTDIR)/$(LIBDIR)/$(VERLIBNAME)
++	ln -sf $(VERLIBNAME) $(DESTDIR)/$(LIBDIR)/$(LIBNAME)
+ 
+ clean:
+ 	rm -f core Dist/*.* u2dtmp* $(MODULES) $(STATICLIB) $(SHAREDLIB) $(LIBNAME)
