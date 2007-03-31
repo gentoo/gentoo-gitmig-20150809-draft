@@ -1,0 +1,11 @@
+# ChangeLog for net-news/hellanzb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/hellanzb/ChangeLog,v 1.1 2007/03/31 10:14:42 aballier Exp $
+
+*hellanzb-0.13 (31 Mar 2007)
+
+  31 Mar 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/hellanzb-0.13-datafiles.patch, +files/hellanzb.conf,
+  +files/hellanzb.init, +metadata.xml, +hellanzb-0.13.ebuild:
+  Initial import, thanks to everybody in bug #119915
+
