@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.0-r2.ebuild,v 1.1 2007/02/26 14:22:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.0-r2.ebuild,v 1.2 2007/03/31 17:50:14 drac Exp $
 
 inherit eutils elisp-common
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/header-order.patch
 	epatch "${FILESDIR}"/pdflib-6-compat.patch
 	epatch "${FILESDIR}"/${P}-filled-arrow.patch
+	epatch "${FILESDIR}"/${P}-libggi.patch
 }
 
 src_compile() {
