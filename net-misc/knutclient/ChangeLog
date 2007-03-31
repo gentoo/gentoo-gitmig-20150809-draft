@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.27 2007/03/31 14:10:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.28 2007/03/31 14:12:34 carlo Exp $
+
+  31 Mar 2007; Carsten Lohrke <carlo@gentoo.org> knutclient-0.9.3.ebuild:
+  Restore ~x86-fbsd keyword.
 
 *knutclient-0.9.3 (31 Mar 2007)
 
