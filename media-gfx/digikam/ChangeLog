@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.82 2007/03/17 20:27:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.83 2007/03/31 15:51:04 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> digikam-0.8.2-r1.ebuild,
+  digikam-0.9.1.ebuild:
+  ia64 stable for 0.8.1-r2 and ~ia64 for 0.9.1 wrt bug 169164
 
 *digikam-0.9.1 (17 Mar 2007)
 
