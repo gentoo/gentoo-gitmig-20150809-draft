@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.52 2007/03/26 08:05:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.53 2007/03/31 18:30:12 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> dropbear-0.49.ebuild:
+  ia64 stable wrt security bug 168847
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> dropbear-0.47-r1.ebuild,
   dropbear-0.48.1.ebuild, dropbear-0.48.1-r1.ebuild, dropbear-0.49.ebuild:
