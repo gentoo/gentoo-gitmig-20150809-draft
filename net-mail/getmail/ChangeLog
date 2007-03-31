@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.144 2007/03/30 13:07:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.145 2007/03/31 21:28:46 ticho Exp $
+
+  31 Mar 2007; Andrej Kacian <ticho@gentoo.org> -getmail-4.6.7.ebuild,
+  -getmail-4.7.0.ebuild, -getmail-4.7.1.ebuild, getmail-4.7.2.ebuild,
+  getmail-4.7.3.ebuild:
+  Remove line that removes COPYING file - upstream stopped installing it by
+  default. Remove obsolete ebuilds.
 
   30 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> getmail-4.7.2.ebuild:
   Stable on sparc wrt #172722

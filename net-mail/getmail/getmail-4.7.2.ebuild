@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.7.2.ebuild,v 1.3 2007/03/30 13:07:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.7.2.ebuild,v 1.4 2007/03/31 21:28:46 ticho Exp $
 
 inherit distutils
 
@@ -33,7 +33,6 @@ src_install() {
 		mv ${D}/usr/share/doc/${P} ${D}/usr/share/doc/${PF}
 	fi
 
-	rm ${D}/usr/share/doc/COPYING
 	dodir /usr/share/doc/${PF}/html
 	mv ${D}/usr/share/doc/${PF}/*.html ${D}/usr/share/doc/${PF}/*.css ${D}/usr/share/doc/${PF}/html
 }
