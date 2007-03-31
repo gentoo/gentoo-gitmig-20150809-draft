@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.148 2007/03/31 19:36:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.149 2007/03/31 20:59:38 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  java-config-2.0.31-r6.ebuild:
+  ia64 stable
 
 *java-config-2.0.31-r6 (31 Mar 2007)
 
