@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.5 2007/01/25 14:27:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.6 2007/03/31 08:36:53 opfer Exp $
+
+  31 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  revelation-0.4.11.ebuild:
+  stable x86, bug 172851
 
   25 Jan 2007; Steve Dibb <beandog@gentoo.org> revelation-0.4.7.ebuild,
   revelation-0.4.11.ebuild:
