@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.87 2007/03/18 21:52:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.88 2007/03/31 00:32:25 carlo Exp $
+
+  31 Mar 2007; Carsten Lohrke <carlo@gentoo.org>
+  files/koffice-18n-1.6.1-es-fix.diff, koffice-i18n-1.6.1.ebuild:
+  Err, fix this...
 
   18 Mar 2007; Carsten Lohrke <carlo@gentoo.org>
   +files/koffice-18n-1.6.1-es-fix.diff, koffice-i18n-1.6.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.1.ebuild,v 1.7 2007/03/18 21:52:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.1.ebuild,v 1.8 2007/03/31 00:32:25 carlo Exp $
 
 inherit kde
 
@@ -25,6 +25,7 @@ for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
+
 src_unpack() {
 	if [ -z "${A}" ]; then
 		echo
@@ -39,13 +40,16 @@ src_unpack() {
 	fi
 
 	unpack ${A}
-	epatch ${FILESDIR}/koffice-18n-1.6.1-es-fix.diff || die
 }
 
 src_compile() {
 	local _S=${S}
 	for dir in `ls ${WORKDIR}`; do
 		S=${WORKDIR}/${dir}
+		if [[ "${dir}" == "koffice-l10n-es-1.6.1" ]] ; then
+			cd ${S}
+			epatch ${FILESDIR}/koffice-18n-1.6.1-es-fix.diff || die
+		fi
 		kde_src_compile
 	done
 	S=${_S}

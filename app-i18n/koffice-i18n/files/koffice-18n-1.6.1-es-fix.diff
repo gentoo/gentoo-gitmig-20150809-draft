@@ -1,5 +1,5 @@
---- /var/tmp/portage/app-i18n/koffice-i18n-1.6.1/work/koffice-l10n-es-1.6.1/docs/koffice/krita/developers.docbook	2006-11-06 12:10:08.000000000 -0700
-+++ developers.docbook	2007-02-13 21:15:53.000000000 -0700
+--- koffice-l10n-es-1.6.1/docs/koffice/krita/developers.docbook	2006-11-06 12:10:08.000000000 -0700
++++ koffice-l10n-es-1.6.1/docs/koffice/krita/developers.docbook	2007-02-13 21:15:53.000000000 -0700
 @@ -4,5 +4,4 @@
  
  <para
@@ -7,8 +7,8 @@
 -&developers-scripting; &developers-plugins; </chapter>
 -
 +</chapter>
---- /var/tmp/portage/app-i18n/koffice-i18n-1.6.1/work/koffice-l10n-es-1.6.1/docs/koffice/krita/using-filters.docbook	2006-11-06 12:10:08.000000000 -0700
-+++ using-filters.docbook	2007-02-13 21:16:19.000000000 -0700
+--- koffice-l10n-es-1.6.1/docs/koffice/krita/using-filters.docbook	2006-11-06 12:10:08.000000000 -0700
++++ koffice-l10n-es-1.6.1/docs/koffice/krita/using-filters.docbook	2007-02-13 21:16:19.000000000 -0700
 @@ -1073,7 +1073,7 @@
  > <guisubmenu
  >Otro</guisubmenu
