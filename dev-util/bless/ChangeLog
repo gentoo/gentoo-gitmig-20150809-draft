@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.6 2007/03/31 06:21:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.7 2007/03/31 06:32:03 compnerd Exp $
+
+  31 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/bless-0.4.0-namespace.patch, -files/bless-0.4.0-strictness.patch,
+  -files/bless-0.5.0-beta1-install.patch, -bless-0.4.0.ebuild,
+  -bless-0.5.0_beta1.ebuild:
+  prune unneeded versions
 
 *bless-0.5.0 (31 Mar 2007)
 
