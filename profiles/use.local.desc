@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2717 2007/03/30 18:15:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2718 2007/03/31 12:01:23 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -957,6 +957,7 @@ media-sound/exaile:cdaudio - Enable cd audio playback support
 media-sound/exaile:libsexy - Enable libsexy support
 media-sound/exaile:serpentine - Add cd-burning support using serpentine 
 media-sound/exaile:streamripper - Add streamripper support for stream recording
+media-sound/ezstream:taglib - Enable tagging support with taglib
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:cpudetection - Enables runtime cpu detection
 media-sound/gnusound:lame - Enable lame support
