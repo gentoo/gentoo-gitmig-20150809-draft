@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.31 2007/01/05 20:26:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.32 2007/03/31 15:49:52 aballier Exp $
+
+*yammi-1.2.3 (31 Mar 2007)
+
+  31 Mar 2007; Alexis Ballier <aballier@gentoo.org> +yammi-1.2.3.ebuild:
+  Version bump,  bug #106390
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> yammi-1.2.ebuild:
   Convert to use elog.
