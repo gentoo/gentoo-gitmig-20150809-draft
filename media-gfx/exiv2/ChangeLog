@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.18 2007/03/12 19:56:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.19 2007/03/31 15:36:41 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> exiv2-0.13.ebuild:
+  Add ~ia64 wrt bug 169164
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> exiv2-0.12.ebuild:
   x86 stable
