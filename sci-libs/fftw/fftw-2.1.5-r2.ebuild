@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r2.ebuild,v 1.2 2007/01/04 18:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r2.ebuild,v 1.3 2007/03/31 09:54:38 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ DEPEND="mpi? ( >=sys-cluster/lam-mpi-6.5.6 )"
 SLOT="2.1"
 LICENSE="GPL-2"
 
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 
 pkg_setup() {
 	#this one is reported to cause trouble on pentium4 m series
