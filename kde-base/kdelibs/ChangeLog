@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.439 2007/03/30 12:56:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.440 2007/03/31 14:05:08 carlo Exp $
+
+*kdelibs-3.5.5-r10 (31 Mar 2007)
+
+  31 Mar 2007; Carsten Lohrke <carlo@gentoo.org>
+  +files/CVE-2007-1564-kdelibs-3.5.6.diff, +kdelibs-3.5.5-r10.ebuild:
+  Fix for bug #172527.
 
 *kdelibs-3.5.6-r4 (30 Mar 2007)
 
