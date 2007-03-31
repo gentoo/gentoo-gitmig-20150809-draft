@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.8 2007/03/12 01:42:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.9 2007/03/31 19:28:49 antarus Exp $
+
+  30 Mar 2007; Alec Warner <antarus@gentoo.org> make.defaults:
+  Remove autoconfig from FEATURES, it died a long time ago
 
   12 Mar 2007; Joseph Jezak <josejx@gentoo.org> use.mask:
   Add macbook USE flag to use.mask.
