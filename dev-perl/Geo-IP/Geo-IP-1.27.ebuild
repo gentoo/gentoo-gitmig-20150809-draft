@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.27.ebuild,v 1.12 2007/02/03 18:41:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.27.ebuild,v 1.13 2007/03/31 15:43:34 vanquirius Exp $
 
 inherit perl-module multilib
 
@@ -15,6 +15,5 @@ IUSE=""
 
 DEPEND="dev-libs/geoip
 	dev-lang/perl"
-RDEPEND=${DEPEND}
 
 myconf="${myconf} LIBS='-L/usr/$(get_libdir)'"

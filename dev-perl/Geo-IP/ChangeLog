@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.32 2007/02/01 20:51:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.33 2007/03/31 15:43:34 vanquirius Exp $
+
+  31 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -Geo-IP-1.25.ebuild,
+  Geo-IP-1.27.ebuild:
+  Remove old ebuild, do not set RDEPEND=DEPEND.
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> Geo-IP-1.27.ebuild:
   stable on x86
