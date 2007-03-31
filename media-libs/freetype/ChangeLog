@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.109 2007/03/26 21:34:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.110 2007/03/31 17:31:37 dirtyepic Exp $
+
+*freetype-2.3.2-r2 (31 Mar 2007)
+
+  31 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/freetype-2.3.2-enable-valid.patch, -freetype-2.3.2.ebuild,
+  -freetype-2.3.2-r1.ebuild, +freetype-2.3.2-r2.ebuild:
+  Revision bump:
+    - we now install the ft2demos suite of font-related utilities (ftview,
+      ftvalid, ftgrid, etc.)
+    - added debug support
+    - build the gxvalid and oxvalid modules for use with ftvalid
+  
+  Removed old versions.
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> freetype-1.3.1-r5.ebuild:
   ia64 stable wrt bug 166265
