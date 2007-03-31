@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.20 2007/02/15 16:58:30 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.21 2007/03/31 19:26:45 carlo Exp $
+
+*k9copy-1.1.1_p2 (31 Mar 2007)
+
+  31 Mar 2007; Carsten Lohrke <carlo@gentoo.org>
+  +files/k9copy-1.1.2_p2-desktop-entry.diff, +k9copy-1.1.1_p2.ebuild:
+  Version bump.
 
   15 Feb 2007; Matteo Azzali <mattepiu@gentoo.org>
   -k9copy-1.1.0_beta1.ebuild, -k9copy-1.1.0_beta2.ebuild:

@@ -1,0 +1,18 @@
+--- src/k9copy.desktop.orig	2007-03-31 20:40:20.000000000 +0200
++++ src/k9copy.desktop	2007-03-31 20:54:31.000000000 +0200
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Encoding=UTF-U
++Encoding=UTF-8
+ Type=Application
+ Name=k9copy
+ Exec=k9copy -caption "%c" %i %m  %u
+@@ -11,5 +11,5 @@
+ Terminal=false
+ Icon=k9copy.png
+ DocPath=k9copy/index.html
+-Categories=KDE;Application;AudioVideo;DiscBurning;
+-X-KDE-StartupNotify=true
+\ No newline at end of file
++Categories=Qt;KDE;AudioVideo;DiscBurning;
++X-KDE-StartupNotify=true
