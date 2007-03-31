@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkexiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.4 2007/03/17 16:00:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.5 2007/03/31 15:38:51 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> libkexiv2-0.1.1.ebuild:
+  Add ~ia64 wrt bug 169164
 
   17 Mar 2007; Marcus D. Hanwell <cryos@gentoo.org> libkexiv2-0.1.1.ebuild:
   Marked ~amd64, bug 169160.
