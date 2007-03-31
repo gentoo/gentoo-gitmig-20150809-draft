@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ezstream
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ChangeLog,v 1.3 2007/02/03 18:54:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ChangeLog,v 1.4 2007/03/31 12:03:02 aballier Exp $
+
+*ezstream-0.4.0 (31 Mar 2007)
+
+  31 Mar 2007; Alexis Ballier <aballier@gentoo.org> +ezstream-0.4.0.ebuild:
+  Version bump, bug #169791
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
