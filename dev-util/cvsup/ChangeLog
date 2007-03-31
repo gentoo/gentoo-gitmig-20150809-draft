@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsup
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.16 2007/02/09 13:19:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.17 2007/03/31 21:13:35 robbat2 Exp $
+
+  17 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> cvsup-16.1h.ebuild:
+  Works with bison too.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.14 2004/07/14 23:10:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.15 2007/03/31 21:13:35 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="-* x86 ppc"
 IUSE="X doc static"
 
 DEPEND="virtual/libc
-	dev-util/yacc
+	|| ( dev-util/yacc sys-devel/bison )
 	>=sys-apps/sed-4
 	virtual/m3"
 RDEPEND="virtual/libc"
