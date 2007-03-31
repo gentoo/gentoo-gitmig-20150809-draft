@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.0.1.ebuild,v 1.2 2007/01/25 20:50:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.0.1.ebuild,v 1.3 2007/03/31 10:16:49 opfer Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hyperrealm.com/libconfig/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc"
+KEYWORDS="ppc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/libtool"
