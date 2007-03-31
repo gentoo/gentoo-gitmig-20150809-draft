@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.49 2007/03/17 19:32:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.50 2007/03/31 09:48:07 betelgeuse Exp $
+
+  31 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> -rhino-1.5.5-r2.ebuild,
+  -rhino-1.6.1-r2.ebuild:
+  Remove generation 1 ebuilds.
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> rhino-1.6.1-r3.ebuild:
   Stable on ppc wrt bug 166700
@@ -92,6 +96,7 @@
   added a patch to fix compilation with jdk1.5, fixes bug #80257
 
 *rhino-1.6.1-r1 (29 Jan 2005)
+*rhino-1.5.5-r1 (29 Jan 2005)
 
   29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +rhino-1.5.5-r1.ebuild,
   +rhino-1.6.1-r1.ebuild:

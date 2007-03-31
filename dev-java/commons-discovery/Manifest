@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 0.4-jar-target.patch 1642 RMD160 448239da2c67cc85aba292adbf720072bdcc9b87 SHA1 2e1952e4cb54c6d0b19fb1e89db5bd77146d7d32 SHA256 76de845d48b94218441bb6decc53311953473fcdcb310d6be1580f23fed96e81
 MD5 991cd171cbb4bba8364ca864004f9135 files/0.4-jar-target.patch 1642
 RMD160 448239da2c67cc85aba292adbf720072bdcc9b87 files/0.4-jar-target.patch 1642
@@ -6,34 +9,26 @@ AUX commons-discovery-0.2-gentoo.diff 2296 RMD160 db91f803ffbb596edb0eb3a3f7bd30
 MD5 18c8ff24139983c581fa7dbb1d6983fa files/commons-discovery-0.2-gentoo.diff 2296
 RMD160 db91f803ffbb596edb0eb3a3f7bd303298af2316 files/commons-discovery-0.2-gentoo.diff 2296
 SHA256 63785107586dc354890cd97470911bb9324477715dcdce551e0acc2aa7028e58 files/commons-discovery-0.2-gentoo.diff 2296
-DIST commons-discovery-0.2-src.tar.gz 72783 RMD160 521a0439dd8f92d44dcf434abc0e3b6681c38048 SHA1 6fad15f3bc9f55175bb1319edf90533684250d14 SHA256 4c3d87c991ae2079a71b428077b1276de4fc68d7b5dd2bc2f6e084b3f286f22a
 DIST commons-discovery-0.4-src.tar.gz 78453 RMD160 2486848a6d754d522e7e87d5053a5c620b710346 SHA1 92ab3148ff2b94135c86b727f585297d770604bf SHA256 596242302be4f0502073f5a934c608289bba6221591e7dbea53ce629f67498a3
-EBUILD commons-discovery-0.2-r2.ebuild 1485 RMD160 52136aacf828ebd3d2ea550b42a79851ac685bdf SHA1 8d1ca8304c6ca75cb50b1bdd5f386495ec48fb27 SHA256 6c8cfbbdd8371b04ba40b6edaddc6904b97b143a53fbe9a87810c51d6fcb9bab
-MD5 7cd73399e22918ebe8a9d1705e3a989b commons-discovery-0.2-r2.ebuild 1485
-RMD160 52136aacf828ebd3d2ea550b42a79851ac685bdf commons-discovery-0.2-r2.ebuild 1485
-SHA256 6c8cfbbdd8371b04ba40b6edaddc6904b97b143a53fbe9a87810c51d6fcb9bab commons-discovery-0.2-r2.ebuild 1485
-EBUILD commons-discovery-0.2-r3.ebuild 1402 RMD160 3bdfa91140ac1b6a3a6b0a2311e2ab505a26f553 SHA1 b4879e2dfac87bb6855b1262cc786ee8e740cea4 SHA256 e53b2999dffcffb0b31f5347ac8ab7b355864e2304619b4e6425058446cd54e4
-MD5 a33f1d1e8669856f01829016cad6d9fe commons-discovery-0.2-r3.ebuild 1402
-RMD160 3bdfa91140ac1b6a3a6b0a2311e2ab505a26f553 commons-discovery-0.2-r3.ebuild 1402
-SHA256 e53b2999dffcffb0b31f5347ac8ab7b355864e2304619b4e6425058446cd54e4 commons-discovery-0.2-r3.ebuild 1402
 EBUILD commons-discovery-0.4.ebuild 1359 RMD160 a03355508670ac2e458b618799a92dadf029d88f SHA1 53523ed3a03684e8cc60f2755ddfeaaf18be9530 SHA256 a1c36a2a68fece1fe37aab026b2133dc4d7105be00c668ce1292410af8e4c3bc
 MD5 cc4ef4fa037297994b8a7ca0c865b667 commons-discovery-0.4.ebuild 1359
 RMD160 a03355508670ac2e458b618799a92dadf029d88f commons-discovery-0.4.ebuild 1359
 SHA256 a1c36a2a68fece1fe37aab026b2133dc4d7105be00c668ce1292410af8e4c3bc commons-discovery-0.4.ebuild 1359
-MISC ChangeLog 3234 RMD160 b3f52ab313378d14a81ed519cd7cc6c3cf3e92dc SHA1 0fae221161caaf4833a89dadcbfcd8a43ef2ee53 SHA256 04c3caaad9b40a3bbe1701fc57c1ea219fd0f9b7951d9cd48eafa49ddd14631a
-MD5 d6c3f90ae03f3f24f915ba12764a613b ChangeLog 3234
-RMD160 b3f52ab313378d14a81ed519cd7cc6c3cf3e92dc ChangeLog 3234
-SHA256 04c3caaad9b40a3bbe1701fc57c1ea219fd0f9b7951d9cd48eafa49ddd14631a ChangeLog 3234
+MISC ChangeLog 3385 RMD160 7347198bc501920442c50751c4a54a70942a4c4d SHA1 582342e03a4fc13bfc06fa188a56949709337f87 SHA256 5bad9777da5a5eb7679315587cf38f94a4e5feed59c4079fb15a9c5a9092d865
+MD5 0a6d840c346cb55547f69c669a67845e ChangeLog 3385
+RMD160 7347198bc501920442c50751c4a54a70942a4c4d ChangeLog 3385
+SHA256 5bad9777da5a5eb7679315587cf38f94a4e5feed59c4079fb15a9c5a9092d865 ChangeLog 3385
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 21791a839076b34fa6b2109d5b796cfd files/digest-commons-discovery-0.2-r2 274
-RMD160 26da92a2e8db5a0fe0068e3c4d2085aacf1c456a files/digest-commons-discovery-0.2-r2 274
-SHA256 7384263519a45bae509e8ffb52da92a27603b82a5c074032d5471dd7b064ad43 files/digest-commons-discovery-0.2-r2 274
-MD5 21791a839076b34fa6b2109d5b796cfd files/digest-commons-discovery-0.2-r3 274
-RMD160 26da92a2e8db5a0fe0068e3c4d2085aacf1c456a files/digest-commons-discovery-0.2-r3 274
-SHA256 7384263519a45bae509e8ffb52da92a27603b82a5c074032d5471dd7b064ad43 files/digest-commons-discovery-0.2-r3 274
 MD5 896a421db2ecd08ccdffafa875fc0094 files/digest-commons-discovery-0.4 274
 RMD160 e293ae8fbcdd75ccf07a24e2ab98ba13664e4987 files/digest-commons-discovery-0.4 274
 SHA256 22aedba3a064a3fb3185429018f43b8d650d418616390840bb7a5d99e957d7c2 files/digest-commons-discovery-0.4 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFGDi7bcxLzpIGCsLQRAp5KAJ4scwGnu38gYxoYwNk7Vqt3IaNklgCff/w5
+439bAkDoIg0SjKneDk/DvNQ=
+=0/D0
+-----END PGP SIGNATURE-----
