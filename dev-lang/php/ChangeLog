@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.158 2007/03/10 23:43:49 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.159 2007/03/31 20:20:05 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> php-4.4.6.ebuild,
+  php-5.1.6-r11.ebuild, php-5.2.1-r3.ebuild:
+  ia64 stable wrt bug 153911
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> php-4.4.6.ebuild,
+  php-5.1.6-r11.ebuild, php-5.2.1-r3.ebuild:
+  ia64 stable wrt security bug 153911
 
   10 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> php-4.4.6.ebuild,
   php-5.1.6-r11.ebuild, php-5.2.1-r3.ebuild:
