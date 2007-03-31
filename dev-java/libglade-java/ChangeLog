@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libglade-java
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.26 2007/02/17 11:33:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.27 2007/03/31 10:01:21 betelgeuse Exp $
+
+  31 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -libglade-java-2.12.2-r1.ebuild:
+  Remove old version.
 
   17 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   libglade-java-2.12.6-r1.ebuild:
@@ -114,13 +118,13 @@
   ebuilds and patched contributed by Andrew Cowie
   <andrew@operationaldynamics.com>.
 
-* libglade-java-2.8.2.2 (27 Dec 2004)
+*libglade-java-2.8.2.2 (27 Dec 2004)
 
   27 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +libglade-java-2.8.2.2.ebuild:
   New upstream with the fix below. Note that 2.8.2.1 had an internal version 
   number glitch
 
-* libglade-java-2.8.2-r1 (24 Dec 2004)
+*libglade-java-2.8.2-r1 (24 Dec 2004)
 
   24 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +libglade-java-2.8.2-r1.ebuild, -libglade-java-2.8.2.ebuild:
   Nasty little bug with respect to signal connection. Luckily, simple fix.
@@ -131,20 +135,10 @@
   18 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> libglade-java-2.8.2.ebuild:
   Marked stable on x86
 
-* libglade-java-2.8.2 (08 Nov 2004)
+*libglade-java-2.8.2 (08 Nov 2004)
 
-  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com>:
+  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> +libglade-java-2.8.2.ebuild:
   New ebuild. What used to be java-gnome is now multiplexed into various modular
   subcomponents. Upstream CVS was all re-arranged, and now there is a release
   tarball for each piece. This is the Java binding for LibGlade.
 
-* libglade-java-2.8.2 (04 Dec 2004)
-
-  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> :
-  Initial import. Fixes #70561.
-
-  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> 
-  libglade-java-2.8.8.ebuild:
-  New ebuild. What used to be java-gnome is now multiplexed into various modular
-  subcomponents. Upstream CVS was all re-arranged, and now there is a release
-  tarball for each piece. This is the Java binding for LibGlade.
