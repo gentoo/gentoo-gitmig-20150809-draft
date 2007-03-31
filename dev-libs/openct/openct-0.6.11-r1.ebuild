@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11-r1.ebuild,v 1.4 2007/03/03 23:10:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11-r1.ebuild,v 1.5 2007/03/31 18:43:43 kaiowas Exp $
 
-inherit eutils multilib
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"
@@ -20,7 +20,18 @@ pkg_setup() {
 	enewgroup openct
 }
 
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.6.11-ifdhandlerv2.patch"
+	rm "src/pcsc/ifdhandler.h"
+}
+
 src_compile() {
+	# eautoreconf did not went so great...
+	# adding additions here.
+	append-flags "-DIFDHANDLERv2"
+
 	econf --localstatedir=/var || die
 	emake || die
 }
