@@ -1,0 +1,8 @@
+--- krename/krename.desktop.orig	2007-03-31 19:12:50.000000000 +0200
++++ krename/krename.desktop	2007-03-31 19:13:51.000000000 +0200
+@@ -1,4 +1,5 @@
+ [Desktop Entry]
++Encoding=UTF-8
+ Type=Application
+ Exec=krename -caption "%c" %i %m %U
+ Icon=krename.png

@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.17 2007/03/01 01:28:08 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.18 2007/03/31 17:58:02 carlo Exp $
+
+*kooldock-0.4.6 (31 Mar 2007)
+
+  31 Mar 2007; Carsten Lohrke <carlo@gentoo.org> +kooldock-0.4.6.ebuild:
+  Version bump.
 
 *kooldock-0.4.5 (01 Mar 2007)
 
