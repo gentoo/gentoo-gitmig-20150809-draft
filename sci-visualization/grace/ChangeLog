@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.14 2007/03/15 22:18:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.15 2007/03/31 09:56:00 armin76 Exp $
+
+  30 Mar 2007; Raúl Porcel <armin76@gentoo.org> grace-5.1.20.ebuild:
+  Add ~ia64
 
   15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> grace-5.1.20.ebuild:
   QA: Removed illegal use of ${ROOT}. Bug #168043
