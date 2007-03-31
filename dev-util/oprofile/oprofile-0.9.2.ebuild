@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.2.ebuild,v 1.3 2007/03/05 04:04:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.2.ebuild,v 1.4 2007/03/31 17:29:52 spock Exp $
 
 inherit eutils qt3 linux-info
 
@@ -17,6 +17,12 @@ DEPEND=">=dev-libs/popt-1.7-r1
 	>=sys-devel/binutils-2.14.90.0.6-r3
 	>=sys-libs/glibc-2.3.2-r1
 	qt3? ( $(qt_min_version 3.3) )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/oprofile-0.9.2-amd64.patch
+}
 
 src_compile() {
 	local myconf=""
