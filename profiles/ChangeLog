@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.253 2007/03/31 11:17:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.254 2007/03/31 15:16:28 carlo Exp $
+
+  31 Mar 2007; Carsten Lohrke <carlo@gentoo.org> package.mask:
+  Mask kde-misc/krusader beta releases
 
   31 Mar 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Removed mask on picptk as the package was punted as promised in bug #166598.

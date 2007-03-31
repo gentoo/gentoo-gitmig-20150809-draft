@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7068 2007/03/31 11:17:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7069 2007/03/31 15:16:28 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org> (31 Mar 2007)
+# no point to bug around with beta releases
+>=kde-misc/krusader-1.80.0_beta1.ebuild
 
 # Alexis Ballier <aballier@gentoo.org> (30 Mar 2007)
 # Portaudio v19 : api changes
