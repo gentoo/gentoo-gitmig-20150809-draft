@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/input-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.2 2007/02/09 05:32:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.3 2007/03/31 08:17:29 robbat2 Exp $
+
+*input-utils-0.0.1_pre20051128 (31 Mar 2007)
+
+  31 Mar 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +input-utils-0.0.1_pre20051128.ebuild:
+  Version bump, and partial cleanup of ebuild. Uses the debian patches to fix
+  various issues. Added ~ppc and ~amd64.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
