@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.46 2007/03/28 21:43:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.47 2007/03/31 10:46:46 dertobi123 Exp $
+
+  31 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  g-wrap-1.9.6-r3.ebuild, g-wrap-1.9.7-r3.ebuild:
+  Added ~ppc, bug #162010
 
   28 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   g-wrap-1.9.6-r3.ebuild:
