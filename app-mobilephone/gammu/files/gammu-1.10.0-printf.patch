@@ -1,0 +1,71 @@
+diff -Nru gammu-1.10.0.orig/common/phone/obex/obexgen.c gammu-1.10.0/common/phone/obex/obexgen.c
+--- gammu-1.10.0.orig/common/phone/obex/obexgen.c	2007-02-23 22:50:03.000000000 +0200
++++ gammu-1.10.0/common/phone/obex/obexgen.c	2007-03-31 10:40:37.000000000 +0300
+@@ -354,7 +354,7 @@
+ 	do {
+ 		OBEXGEN_FindNextDir(File, &Pos, req);
+ 		if (DirOnly && Pos == UnicodeLength(File)) break;
+-		smprintf(s,"Changing path down to %s (%d, %d)\n", DecodeUnicodeString(req), Pos, UnicodeLength(File));
++		smprintf(s,"Changing path down to %s (%u, %zu)\n", DecodeUnicodeString(req), Pos, UnicodeLength(File));
+ 		error=OBEXGEN_ChangePath(s, req, 2);
+ 		if (error != ERR_NONE) return error;
+ 		if (Pos == UnicodeLength(File)) break;
+diff -Nru gammu-1.10.0.orig/common/service/backup/backtext.c gammu-1.10.0/common/service/backup/backtext.c
+--- gammu-1.10.0.orig/common/service/backup/backtext.c	2007-02-23 22:50:03.000000000 +0200
++++ gammu-1.10.0/common/service/backup/backtext.c	2007-03-31 10:38:31.000000000 +0300
+@@ -193,7 +193,7 @@
+ 		strcat(paramname,"Unicode");
+ 		readvalue = ReadCFGText(file_info, section, paramname, UseUnicode);
+ 		if (readvalue!=NULL) {
+-			dbgprintf("%s %i\n",readvalue,strlen(readvalue));
++			dbgprintf("%s %zu\n",readvalue,strlen(readvalue));
+ 			DecodeHexBin (myvalue, readvalue, strlen(readvalue));
+ 			myvalue[strlen(readvalue)/2]=0;
+ 			myvalue[strlen(readvalue)/2+1]=0;
+diff -Nru gammu-1.10.0.orig/common/service/sms/gsmems.c gammu-1.10.0/common/service/sms/gsmems.c
+--- gammu-1.10.0.orig/common/service/sms/gsmems.c	2007-02-23 22:50:04.000000000 +0200
++++ gammu-1.10.0/common/service/sms/gsmems.c	2007-03-31 10:39:47.000000000 +0300
+@@ -93,7 +93,7 @@
+ 				}
+ 				Len += CopiedText;
+ 				if (Len == UnicodeLength(Entry->Buffer)) break;
+-				dbgprintf("%i %i\n",Len,UnicodeLength(Entry->Buffer));
++				dbgprintf("%u %zu\n",Len,UnicodeLength(Entry->Buffer));
+ 			}
+ 			break;
+ 		case SMS_EMSPredefinedSound:
+@@ -530,7 +530,7 @@
+ 	for (i=0;i<SMS->Number;i++) {
+ 		dbgprintf("UDH length %i\n",SMS->SMS[i].UDH.Length);
+ 		DumpMessage(&di, SMS->SMS[i].UDH.Text, SMS->SMS[i].UDH.Length);
+-		dbgprintf("SMS length %i\n",UnicodeLength(SMS->SMS[i].Text)*2);
++		dbgprintf("SMS length %zu\n",UnicodeLength(SMS->SMS[i].Text)*2);
+ 		DumpMessage(&di, SMS->SMS[i].Text, UnicodeLength(SMS->SMS[i].Text)*2);
+ 	}
+ #endif
+diff -Nru gammu-1.10.0.orig/gammu/gammu.c gammu-1.10.0/gammu/gammu.c
+--- gammu-1.10.0.orig/gammu/gammu.c	2007-02-23 22:50:05.000000000 +0200
++++ gammu-1.10.0/gammu/gammu.c	2007-03-31 10:37:39.000000000 +0300
+@@ -7769,14 +7769,14 @@
+ 		}
+ 	}
+ 
+-	printf("GSM_SMSMessage  - %i\n",sizeof(GSM_SMSMessage));
+-	printf("GSM_SMSC        - %i\n",sizeof(GSM_SMSC));
+-	printf("GSM_SMS_State   - %i\n",sizeof(GSM_SMS_State));
+-	printf("GSM_UDHHeader   - %i\n",sizeof(GSM_UDHHeader));
+-	printf("bool            - %i\n",sizeof(bool));
+-	printf("GSM_DateTime    - %i\n",sizeof(GSM_DateTime));
+-	printf("int             - %i\n",sizeof(int));
+-	printf("GSM_NetworkInfo - %i\n",sizeof(GSM_NetworkInfo));
++	printf("GSM_SMSMessage  - %zu\n",sizeof(GSM_SMSMessage));
++	printf("GSM_SMSC        - %zu\n",sizeof(GSM_SMSC));
++	printf("GSM_SMS_State   - %zu\n",sizeof(GSM_SMS_State));
++	printf("GSM_UDHHeader   - %zu\n",sizeof(GSM_UDHHeader));
++	printf("bool            - %zu\n",sizeof(bool));
++	printf("GSM_DateTime    - %zu\n",sizeof(GSM_DateTime));
++	printf("int             - %zu\n",sizeof(int));
++	printf("GSM_NetworkInfo - %zu\n",sizeof(GSM_NetworkInfo));
+ 	dt.Year = 2005;
+ 	dt.Month = 2;
+ 	dt.Day=29;

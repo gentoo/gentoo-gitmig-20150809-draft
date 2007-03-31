@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.34 2007/03/26 21:29:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.35 2007/03/31 08:10:26 mrness Exp $
+
+*gammu-1.10.0-r1 (31 Mar 2007)
+
+  31 Mar 2007; Alin Năstac <mrness@gentoo.org>
+  +files/gammu-1.10.0-configure.patch, +files/gammu-1.10.0-printf.patch,
+  -gammu-1.10.0.ebuild, +gammu-1.10.0-r1.ebuild:
+  Fix link error when mysql is enabled an postgres is disabled. Correct some
+  printf formats.
 
   26 Mar 2007; Alin Năstac <mrness@gentoo.org> gammu-1.10.0.ebuild:
   Add postgres USE flag (#172315).
