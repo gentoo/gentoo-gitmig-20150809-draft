@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.44 2007/02/10 13:04:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.45 2007/03/31 09:51:03 armin76 Exp $
+
+  31 Mar 2007; Raúl Porcel <armin76@gentoo.org> torque-2.1.6.ebuild:
+  Add ~ia64
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> torque-2.1.6.ebuild:
   amd64 stable, bug 157799
