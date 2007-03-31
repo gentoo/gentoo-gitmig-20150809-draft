@@ -1,0 +1,8 @@
+Index: config/jdk-defaults-ia64.conf
+===================================================================
+--- config/jdk-defaults-ia64.conf	(revision 3624)
++++ config/jdk-defaults-ia64.conf	(revision 4152)
+@@ -1,2 +1,2 @@
+ # This files contain the default support jdk's
+-*= jrockit-bin-jdk
++*= jrockit-jdk-bin
