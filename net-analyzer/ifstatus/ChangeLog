@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ifstatus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.2 2007/02/18 14:12:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.3 2007/03/31 16:29:23 vanquirius Exp $
+
+  31 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> ifstatus-1.1.0.ebuild:
+  Mark 1.1.0 x86 stable. Do not set RDEPEND=DEPEND, add note about configuring
+  ifstatus in pkg_postinst.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> ifstatus-1.1.0.ebuild:
   Added ~ppc wrt bug 166565

@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.2 2007/02/18 14:12:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.3 2007/03/31 16:29:23 vanquirius Exp $
 
 inherit toolchain-funcs
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DESCRIPTION="A simple CLI program for displaying network statistics in real time."
 HOMEPAGE="http://ifstatus.sourceforge.net/"
@@ -14,9 +14,8 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-4.2"
-RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
@@ -37,4 +36,11 @@ src_compile() {
 src_install() {
 	dobin ifstatus
 	dodoc AUTHORS README
+}
+
+pkg_postinst() {
+	elog	"You may want to configure ~/.ifstatus/ifstatus.cfg"
+	elog 	"before running ifstatus. For example, you may add"
+	elog	"Interfaces = eth0 there. Read the README file for"
+	elog	"more information."
 }
