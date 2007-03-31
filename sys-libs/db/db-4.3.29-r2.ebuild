@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29-r2.ebuild,v 1.8 2007/03/29 17:46:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29-r2.ebuild,v 1.9 2007/03/31 05:46:00 opfer Exp $
 
 inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
@@ -27,7 +27,7 @@ done
 
 LICENSE="DB"
 SLOT="4.3"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="tcl java doc nocxx bootstrap"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )

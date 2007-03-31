@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.202 2007/03/29 17:46:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.203 2007/03/31 05:46:00 opfer Exp $
+
+  31 Mar 2007; Christian Faulhammer <opfer@gentoo.org> db-4.3.29-r2.ebuild:
+  stable x86, security bug #170828
 
   29 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> db-4.3.29-r2.ebuild:
   Stable on ppc wrt bug #170828.
