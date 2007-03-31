@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.72 2007/01/16 03:36:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.73 2007/03/31 19:51:47 drac Exp $
+
+*libdv-1.0.0-r2 (31 Mar 2007)
+
+  31 Mar 2007; Samuli Suominen <drac@gentoo.org> +libdv-1.0.0-r2.ebuild:
+  Stop installing playdv gtk-1.2 frontend. Bug 168121.
 
   16 Jan 2007; Jeroen Roovers <jer@gentoo.org> libdv-1.0.0-r1.ebuild:
   Stable for HPPA (bug #158907).
