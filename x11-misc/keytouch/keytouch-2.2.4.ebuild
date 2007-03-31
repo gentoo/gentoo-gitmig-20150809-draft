@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.2.4.ebuild,v 1.1 2007/01/30 19:52:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.2.4.ebuild,v 1.2 2007/03/31 06:34:24 nyhm Exp $
 
 inherit eutils versionator
 
@@ -17,14 +17,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc kde"
 
 RDEPEND=">=x11-libs/gtk+-2
-	gnome-base/gnome-menus
-	x11-misc/xbindkeys
+	gnome-base/gnome-menus"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${RDEPEND}
 	kde? ( || (
 		kde-base/kdesu
 		kde-base/kdebase ) )
 	!kde? ( x11-libs/gksu )"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

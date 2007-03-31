@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/keytouch-editor-3.1.1.ebuild,v 1.1 2007/01/01 16:45:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/keytouch-editor-3.1.1.ebuild,v 1.2 2007/03/31 06:36:55 nyhm Exp $
 
 inherit eutils linux-info
 
@@ -15,13 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc kde"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=x11-libs/gtk+-2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${RDEPEND}
 	kde? ( || (
 		kde-base/kdesu
 		kde-base/kdebase ) )
 	!kde? ( x11-libs/gksu )"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
