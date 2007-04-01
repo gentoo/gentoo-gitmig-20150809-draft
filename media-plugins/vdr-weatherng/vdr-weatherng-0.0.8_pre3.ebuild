@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.2 2007/01/05 17:05:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.3 2007/04/01 12:45:12 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -23,6 +23,17 @@ S="${WORKDIR}/weatherng-${MY_PV}"
 
 VDR_CONFD_FILE="${FILESDIR}/confd-0.0.8"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.0.8.sh"
+
+pkg_setup() {
+
+	if ! built_with_use media-libs/imlib2 jpeg gif ; then
+		echo
+		eerror "Please recompile media-libs/imlib2 with"
+		eerror "USE=\"jpeg gif\""
+		die "media-libs/imlib2 need jpeg and gif support"
+	fi
+}
+
 
 src_unpack() {
 	vdr-plugin_src_unpack
