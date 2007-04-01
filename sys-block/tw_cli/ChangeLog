@@ -1,13 +1,14 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.16 2007/04/01 19:56:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.17 2007/04/01 20:04:41 robbat2 Exp $
 
 *tw_cli-9.4.1 (01 Apr 2007)
 
   01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.4.0.1.ebuild,
   +tw_cli-9.4.1.ebuild:
   More cleanup of ebuild style for 9.4.0.1. Version bump to 9.4.1 to support
-  new variants of 9650SE.
+  new variants of 9650SE. If you have any 9xxx card, esp. the 9650SE units, you
+  should check your firmware to see if updates are needed!
 
 *tw_cli-9.4.0.1 (01 Apr 2007)
 
