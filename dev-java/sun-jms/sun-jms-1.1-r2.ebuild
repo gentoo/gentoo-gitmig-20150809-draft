@@ -1,9 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.7 2007/01/26 06:01:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.8 2007/04/01 11:03:40 caster Exp $
 
 inherit java-pkg-2
 
+DOWNLOAD_PAGE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7542-jms-1.1-fr-doc-oth-JSpec&SiteId=JSC&TransactionId=noreg"
 At="jms-${PV/./_}-fr-apidocs.zip"
 DESCRIPTION="The Java Message Service (JMS) API."
 HOMEPAGE="http://java.sun.com/products/jms/"
@@ -24,10 +25,10 @@ pkg_nofetch() {
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
 	einfo
-	einfo " 1. Visit ${HOMEPAGE} and select 'Downloads'"
-	einfo " 2. Select 'Download the version 1.1 API Documentation, Jar and Source'"
+	einfo " 1. Visit ${DOWNLOAD_PAGE}"
+	einfo " 2. Accept the License Agreement"
 	einfo " 3. Download ${At}"
-	einfo " 4. Move file to ${DISTDIR}"
+	einfo " 4. Move the file to ${DISTDIR}"
 	einfo
 }
 
