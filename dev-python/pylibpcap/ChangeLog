@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibpcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.15 2007/03/17 19:11:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.16 2007/04/01 10:02:43 armin76 Exp $
+
+  01 Apr 2007; Raúl Porcel <armin76@gentoo.org> pylibpcap-0.5.1.ebuild:
+  ia64 stable wrt bug 168330
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> pylibpcap-0.5.1.ebuild:
   amd64 stable, bug 168330
