@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/files/mailgraph.initd-new,v 1.1 2007/04/01 19:30:00 ticho Exp $
+
+start() {
+	ebegin "Starting mailgraph"
+
+	# read mail log messages somewhere other than /var/log/syslog?
+	[[ -n "${MG_LOGFILE}" ]] && MG_DAEMON_OPTS="${MG_DAEMON_OPTS} -l ${MG_LOGFILE}"
+
+	UMASK=$(umask)
+	umask ${MG_DAEMON_UMASK:-0077}
+	start-stop-daemon --start \
+		-c "${MG_DAEMON_UID}:${MG_DAEMON_GID}" \
+		--exec /usr/bin/mailgraph -- -v --daemon \
+		--daemon-log="${MG_DAEMON_LOG}" \
+		--daemon-pid="${MG_DAEMON_PID}" \
+		--daemon-rrd=/var/lib/mailgraph ${MG_DAEMON_OPTS}
+	eend $?
+	umask "${UMASK}"
+}
+
+stop() {
+	ebegin "Shutting down mailgraph"
+	start-stop-daemon --stop --quiet --pidfile "${MG_DAEMON_PID}"
+	eend $?
+}
