@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20060221.ebuild,v 1.6 2007/03/19 15:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20060221.ebuild,v 1.7 2007/04/01 10:21:26 hansmi Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${MY_PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="examples unicode"
 
 DEPEND=">=app-shells/bash-2.04-r3
