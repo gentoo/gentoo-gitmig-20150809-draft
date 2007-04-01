@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MethodMaker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.33 2007/01/19 21:50:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.34 2007/04/01 15:06:21 mcummings Exp $
+
+  01 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Class-MethodMaker-2.08.ebuild:
+  Keywording ~mips, test on swarm
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Class-MethodMaker-1.11.ebuild, Class-MethodMaker-2.07-r2.ebuild,
