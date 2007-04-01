@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.29 2007/01/24 20:07:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.30 2007/04/01 13:30:51 betelgeuse Exp $
+
+  01 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -hibernate-2.1.8.ebuild:
+  Remove slot 2 because it's still generation 1 and nothing is depending on it.
 
   24 Jan 2007; Vlastimil Babka <caster@gentoo.org> hibernate-2.1.8.ebuild:
   Correct cglib-2 dep to pull correct slot.
@@ -62,6 +66,7 @@
   16 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> :
   Fixed hibernate-2.1.8
 
+*hibernate-3.0_rc1 (11 Mar 2005)
 *hibernate-2.1.8 (11 Mar 2005)
 
   11 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> +hibernate-2.1.8.ebuild,
