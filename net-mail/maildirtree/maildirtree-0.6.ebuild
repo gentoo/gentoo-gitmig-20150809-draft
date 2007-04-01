@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/maildirtree-0.6.ebuild,v 1.3 2005/04/28 20:51:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/maildirtree-0.6.ebuild,v 1.4 2007/04/01 18:25:05 ticho Exp $
 
 DESCRIPTION="A utility that prints trees of Courier-style Maildirs."
 HOMEPAGE="http://triplehelix.org/~joshk/maildirtree"
@@ -12,5 +12,5 @@ IUSE=""
 
 src_install() {
 	make DESTDIR=${D} install
-	dodoc COPYING ChangeLog INSTALL README TODO
+	dodoc ChangeLog INSTALL README TODO
 }
