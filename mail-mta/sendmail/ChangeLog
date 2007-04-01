@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.71 2007/03/18 11:24:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.72 2007/04/01 10:11:06 armin76 Exp $
+
+  01 Apr 2007; Raúl Porcel <armin76@gentoo.org> sendmail-8.13.8.ebuild:
+  ia64 stable wrt bug 167206
 
   18 Mar 2007; Simon Stelling <blubb@gentoo.org> sendmail-8.13.8.ebuild,
   sendmail-8.14.0.ebuild:
