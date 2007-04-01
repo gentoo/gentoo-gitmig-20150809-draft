@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.54 2007/03/12 16:08:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.55 2007/04/01 19:17:18 dev-zero Exp $
+
+*STLport-5.1.2 (01 Apr 2007)
+
+  01 Apr 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/STLport-5.1.2-wrong_russian_currency_name.patch,
+  +STLport-5.1.2.ebuild:
+  Version bump. Fixes bug #172860, thanks to Robin Johnson.
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> STLport-5.1.0.ebuild:
   x86 stable
