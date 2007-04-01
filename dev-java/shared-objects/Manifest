@@ -6,14 +6,6 @@ MD5 d12a689346bad3e9fa4ad1fbae5cdf98 files/build.xml 513
 RMD160 3590e5d6fa6718bcbeb14b2bc4bd93732e3c527b files/build.xml 513
 SHA256 9c2b8c05440a53ac21c51ec6f09610fa25b046e317bc5b362da3b91b19ee7011 files/build.xml 513
 DIST shared-objects-1.4.tar.gz 45304 RMD160 84b7a6e3b7de8cf2f7939e80c4300f681c92fd1e SHA1 21f5de50a57223bde6be7ed50e76a697d436af03 SHA256 dc4cbfb58b9ffd097a2fe663a333b32c76c87814eb6b3e8277b76ba6c8d1c4f1
-EBUILD shared-objects-1.4-r1.ebuild 985 RMD160 7f30c2d500ce8eefb88aaa02b3e2cea8656f862c SHA1 5a7454b63daaf7b5606f5b947f1479fd7c86a850 SHA256 f3ada2e89f8b293e895624cd4fc1edbb292e96e79f1762de983f13ad50a90c73
-MD5 6c4dd3337de1352944415f11cb765724 shared-objects-1.4-r1.ebuild 985
-RMD160 7f30c2d500ce8eefb88aaa02b3e2cea8656f862c shared-objects-1.4-r1.ebuild 985
-SHA256 f3ada2e89f8b293e895624cd4fc1edbb292e96e79f1762de983f13ad50a90c73 shared-objects-1.4-r1.ebuild 985
-EBUILD shared-objects-1.4-r2.ebuild 865 RMD160 ced1b1e56d5c0b6942911956035c53f9ea62816a SHA1 b2cb46ad495a97d86d69928e3584dfcc817db286 SHA256 b787f6df722eaa05ca9dab6748a56e7918def166e1e0e4f257654b61421e72d7
-MD5 6b67fa2dc702816928cfe8de1cbba18a shared-objects-1.4-r2.ebuild 865
-RMD160 ced1b1e56d5c0b6942911956035c53f9ea62816a shared-objects-1.4-r2.ebuild 865
-SHA256 b787f6df722eaa05ca9dab6748a56e7918def166e1e0e4f257654b61421e72d7 shared-objects-1.4-r2.ebuild 865
 EBUILD shared-objects-1.4-r3.ebuild 1000 RMD160 40586bdb7cd469f57fc807f510c43fb30f64ab59 SHA1 448acfe6353e7b3fbb22f81f00c6748e90237701 SHA256 6a7096cd745e58499b9a0ec4d263ca8b20850fef6bd714a22c923aee744c6364
 MD5 1fa8ad0b8aee0a1f53bb9c0f3da2f722 shared-objects-1.4-r3.ebuild 1000
 RMD160 40586bdb7cd469f57fc807f510c43fb30f64ab59 shared-objects-1.4-r3.ebuild 1000
@@ -22,10 +14,10 @@ EBUILD shared-objects-1.4.ebuild 924 RMD160 82685edc58ce7b1e18046798d867b166fbb6
 MD5 fa74edb97e497e4f7f2bc05b8e9794f1 shared-objects-1.4.ebuild 924
 RMD160 82685edc58ce7b1e18046798d867b166fbb67365 shared-objects-1.4.ebuild 924
 SHA256 bccc1769e40c482c3403073b1e0325a1216565d18dfbfc9c1af9e917d1f18edf shared-objects-1.4.ebuild 924
-MISC ChangeLog 1535 RMD160 ae495a2df61d060663ff904cd137f2aafa56e141 SHA1 0823d01343daf7ce26148c0b481ff6d37b266e9a SHA256 6599ab96c0240bbf1fd6018b42c40b39bb933ac5a280fbd286e0a61c8852eeea
-MD5 b86ceeaf4c1a59a221d7585fa68eecb7 ChangeLog 1535
-RMD160 ae495a2df61d060663ff904cd137f2aafa56e141 ChangeLog 1535
-SHA256 6599ab96c0240bbf1fd6018b42c40b39bb933ac5a280fbd286e0a61c8852eeea ChangeLog 1535
+MISC ChangeLog 1665 RMD160 3d56bbdc35de8064b14e5fc20451361efefed0e3 SHA1 2b56ce0510c1e5ade1e066e67deda927246fe9e7 SHA256 79683504b32b606c8534633420902ede46b9c71b999dc8ab76db7376eade3fc6
+MD5 71099d8ada1b0a4552319e0f4d82a488 ChangeLog 1665
+RMD160 3d56bbdc35de8064b14e5fc20451361efefed0e3 ChangeLog 1665
+SHA256 79683504b32b606c8534633420902ede46b9c71b999dc8ab76db7376eade3fc6 ChangeLog 1665
 MISC metadata.xml 279 RMD160 8f5449fbe71f8763fd389ae7ff34e6fee1a4bf68 SHA1 c1c9574d9c461bb7187f5b7df7ae48888425de3b SHA256 1f8b6a9e750e928a48a9fe93820f7fafae89274620e63163f778c797436e07e2
 MD5 feac4bd1d57fb7370b3fd3ea37df28e8 metadata.xml 279
 RMD160 8f5449fbe71f8763fd389ae7ff34e6fee1a4bf68 metadata.xml 279
@@ -33,19 +25,13 @@ SHA256 1f8b6a9e750e928a48a9fe93820f7fafae89274620e63163f778c797436e07e2 metadata
 MD5 dd8f19ddd0f93bf579b1667a6439c724 files/digest-shared-objects-1.4 253
 RMD160 f13880c46a1304c531adf54b2f9eb4eec4788d57 files/digest-shared-objects-1.4 253
 SHA256 9af2dcd995f3fcfb318d842de81d3fc545ec5c6e371407135a3d9f6efb37cb3a files/digest-shared-objects-1.4 253
-MD5 dd8f19ddd0f93bf579b1667a6439c724 files/digest-shared-objects-1.4-r1 253
-RMD160 f13880c46a1304c531adf54b2f9eb4eec4788d57 files/digest-shared-objects-1.4-r1 253
-SHA256 9af2dcd995f3fcfb318d842de81d3fc545ec5c6e371407135a3d9f6efb37cb3a files/digest-shared-objects-1.4-r1 253
-MD5 dd8f19ddd0f93bf579b1667a6439c724 files/digest-shared-objects-1.4-r2 253
-RMD160 f13880c46a1304c531adf54b2f9eb4eec4788d57 files/digest-shared-objects-1.4-r2 253
-SHA256 9af2dcd995f3fcfb318d842de81d3fc545ec5c6e371407135a3d9f6efb37cb3a files/digest-shared-objects-1.4-r2 253
 MD5 dd8f19ddd0f93bf579b1667a6439c724 files/digest-shared-objects-1.4-r3 253
 RMD160 f13880c46a1304c531adf54b2f9eb4eec4788d57 files/digest-shared-objects-1.4-r3 253
 SHA256 9af2dcd995f3fcfb318d842de81d3fc545ec5c6e371407135a3d9f6efb37cb3a files/digest-shared-objects-1.4-r3 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF42S5cxLzpIGCsLQRAmthAJ0VK4gf57117RdBbXlIKER8HB3S9QCfemJg
-LRsZJ8IN6PBM/rjD2FRt7MU=
-=Hbb6
+iD8DBQFGD6s7cxLzpIGCsLQRAhrhAJ0XOMmSS/nNHsBxUEgoZEaLkJbLkwCfQYze
+Wcja+XsvkB7zmUsJvoYqfmU=
+=+Zwd
 -----END PGP SIGNATURE-----
