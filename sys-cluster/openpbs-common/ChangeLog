@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openpbs-common
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs-common/ChangeLog,v 1.9 2007/02/10 13:02:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs-common/ChangeLog,v 1.10 2007/04/01 09:52:46 armin76 Exp $
+
+  01 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  openpbs-common-1.1.1.ebuild:
+  Add ~ia64
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> openpbs-common-1.1.1.ebuild:
   amd64 stable, bug 157799

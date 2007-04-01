@@ -22,24 +22,24 @@ EBUILD openpbs-common-1.1.0.ebuild 597 RMD160 790296dbd92ba9718e6b0fe8c9dd70d98c
 MD5 c8a5bef8889cc4d7efa81eab8f32a9d8 openpbs-common-1.1.0.ebuild 597
 RMD160 790296dbd92ba9718e6b0fe8c9dd70d98c534404 openpbs-common-1.1.0.ebuild 597
 SHA256 6a5b9081e9f33518cc2f92da7f128f7ce920238763c0471a0bf5012510fc4636 openpbs-common-1.1.0.ebuild 597
-EBUILD openpbs-common-1.1.1.ebuild 602 RMD160 94ebe6dc504cfdd6e7b542ecd725d4659dae91cc SHA1 e79f671ef46cf4a83085ca70729e546c12b0e9e2 SHA256 c03ca199ecea01126738c1e8f57e7c40306f0667a0fed71f15e38eaf46603a05
-MD5 7adc2e4bbb4017141876f80d22e6a1d1 openpbs-common-1.1.1.ebuild 602
-RMD160 94ebe6dc504cfdd6e7b542ecd725d4659dae91cc openpbs-common-1.1.1.ebuild 602
-SHA256 c03ca199ecea01126738c1e8f57e7c40306f0667a0fed71f15e38eaf46603a05 openpbs-common-1.1.1.ebuild 602
-MISC ChangeLog 1508 RMD160 72872ebb52dcc7e9134e348ba4c9fc2f63a8aab9 SHA1 e9b5817a1078a8b3ffa2ffc9a56f9ae87e9947a1 SHA256 29b4cfeed43e9c6ef5b9f8a5b5af2903031c557c51de4030df7f8bb04054dbd0
-MD5 6cd19b7118889276c3e9b730cc0040f2 ChangeLog 1508
-RMD160 72872ebb52dcc7e9134e348ba4c9fc2f63a8aab9 ChangeLog 1508
-SHA256 29b4cfeed43e9c6ef5b9f8a5b5af2903031c557c51de4030df7f8bb04054dbd0 ChangeLog 1508
+EBUILD openpbs-common-1.1.1.ebuild 608 RMD160 e342c11dca71523e9f38d8a6f369f8a7f2724611 SHA1 694e7281e7efb08b046c4b53e783b84c9501d248 SHA256 617d7b22429646242427b660201505cf494be0614598d088b8dab088187b762f
+MD5 8f8fce50b790c24c9c8acbe80ec70ec8 openpbs-common-1.1.1.ebuild 608
+RMD160 e342c11dca71523e9f38d8a6f369f8a7f2724611 openpbs-common-1.1.1.ebuild 608
+SHA256 617d7b22429646242427b660201505cf494be0614598d088b8dab088187b762f openpbs-common-1.1.1.ebuild 608
+MISC ChangeLog 1602 RMD160 eb84e7c8d7ad8fa8fb4e9da72f86f22e8cc37a2c SHA1 79cd542c77456f56ed032e6c6e2ec43c75e41a38 SHA256 7c7d8f4a0690c2824d15352db981b2186ab9e56e971761ddb63307434a765d54
+MD5 aab1f58a7469da7574d3d01a92f403c4 ChangeLog 1602
+RMD160 eb84e7c8d7ad8fa8fb4e9da72f86f22e8cc37a2c ChangeLog 1602
+SHA256 7c7d8f4a0690c2824d15352db981b2186ab9e56e971761ddb63307434a765d54 ChangeLog 1602
 MISC metadata.xml 160 RMD160 1233ca29861ca7c47f0b09d1d7a29def80f7df02 SHA1 1bfdc9d282a84c95e2bdcda19ace5b94e2e67349 SHA256 56717bdb03ad5d833acecfbc612a67f569256b328bf610fbc6cc33714186dae9
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 RMD160 1233ca29861ca7c47f0b09d1d7a29def80f7df02 metadata.xml 160
 SHA256 56717bdb03ad5d833acecfbc612a67f569256b328bf610fbc6cc33714186dae9 metadata.xml 160
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-openpbs-common-1.0.0 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-openpbs-common-1.0.0 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-openpbs-common-1.0.0 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-openpbs-common-1.1.0 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-openpbs-common-1.1.0 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-openpbs-common-1.1.0 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-openpbs-common-1.1.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-openpbs-common-1.1.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-openpbs-common-1.1.1 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openpbs-common-1.0.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-openpbs-common-1.0.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-openpbs-common-1.0.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openpbs-common-1.1.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-openpbs-common-1.1.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-openpbs-common-1.1.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openpbs-common-1.1.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-openpbs-common-1.1.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-openpbs-common-1.1.1 0
