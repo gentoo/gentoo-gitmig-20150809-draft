@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.4.ebuild,v 1.10 2007/03/17 18:14:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.4.ebuild,v 1.11 2007/04/01 11:58:52 vapier Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -20,6 +20,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.0.4-makefile-CFLAGS.patch
 	epatch "${FILESDIR}"/${PN}-1.0.4-saneso.patch
+	epatch "${FILESDIR}"/${PN}-1.0.4-man-links.patch #172986
 	epatch "${FILESDIR}"/${PN}-1.0.3-shared-largefile-support.patch
 	epatch "${FILESDIR}"/${PN}-1.0.2-progress.patch
 	epatch "${FILESDIR}"/${PN}-1.0.3-no-test.patch
