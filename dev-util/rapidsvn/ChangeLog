@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.41 2007/03/14 05:50:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.42 2007/04/01 00:59:40 nerdboy Exp $
+
+  01 Apr 2007; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.3.ebuild,
+  rapidsvn-0.9.4.ebuild:
+  Minor correction to apr dep, should resolve bug 169414.
 
   14 Mar 2007; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.3.ebuild,
   rapidsvn-0.9.4.ebuild:
