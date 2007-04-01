@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4.ebuild,v 1.4 2006/06/16 12:12:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r1.ebuild,v 1.1 2007/04/01 16:23:33 carlo Exp $
 
 inherit kde
 
@@ -10,14 +10,14 @@ SRC_URI="mirror://sourceforge/passwordmanager/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="smartcard"
 
-DEPEND="smartcard? ( sys-libs/libchipcard )
+DEPEND="smartcard? ( >=sys-libs/libchipcard-1.9 )
 	sys-libs/zlib
 	app-arch/bzip2"
 
-need-kde 3.3
+need-kde 3.5
 
 LANGS_PKG=${PN}-i18n-${PV}
 LANGS="ca da de el es et fr hu it lt nl pl ro sv"
@@ -31,30 +31,17 @@ src_compile() {
 	local myconf="--enable-kwallet"
 
 	if use smartcard; then
-		myconf="${myconf} --enable-pwmanager-smartcard"
-
-		if has_version "=sys-libs/libchipcard-0.9*"; then
-			myconf="${myconf} --enable-pwmanager-libchipcard1"
-		else
-			myconf="${myconf} --disable-pwmanager-libchipcard1"
-		fi
-
-		if has_version ">=sys-libs/libchipcard-1.9"; then
-			myconf="${myconf} --enable-pwmanager-libchipcard2"
-		else
-			myconf="${myconf} --disable-pwmanager-libchipcard2"
-		fi
+		myconf="${myconf} --enable-pwmanager-smartcard	\
+			 --disable-pwmanager-libchipcard1	\
+			 --enable-pwmanager-libchipcard2"
 	else
 		myconf="${myconf} --disable-pwmanager-smartcard"
 	fi
 
 	kde_src_compile
 
-	local _S="${S}"
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
-		S="${WORKDIR}/${LANGS_PKG}"
-		cd "${S}"
-
+		KDE_S="${WORKDIR}/${LANGS_PKG}"
 		for X in ${LANGS}; do
 			use linguas_${X} || DO_NOT_COMPILE="${DO_NOT_COMPILE} ${X}"
 		done
@@ -62,17 +49,20 @@ src_compile() {
 
 		kde_src_compile
 	fi
-	S="${_S}"
 }
 
 src_install() {
+	KDE_S=""
 	kde_src_install
 
-	local _S="${S}"
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
-		S="${WORKDIR}/${LANGS_PKG}"
-		cd "${S}"
+		KDE_S="${WORKDIR}/${LANGS_PKG}"
 		kde_src_install
 	fi
-	S="${_S}"
+}
+
+pkg_preinst() {
+	kde_pkg_preinst
+	dodir /usr/share/applications/kde/
+	mv ${D}/usr/share/applnk/Applications/pwmanager.desktop ${D}/usr/share/applications/kde/
 }

@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/pwmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.9 2007/02/22 00:52:23 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.10 2007/04/01 16:23:33 carlo Exp $
+
+*pwmanager-1.2.4-r1 (01 Apr 2007)
+
+  01 Apr 2007; Carsten Lohrke <carlo@gentoo.org> -pwmanager-1.2.3.ebuild,
+  -pwmanager-1.2.4.ebuild, +pwmanager-1.2.4-r1.ebuild:
+  Fix bug #142458, bug #157209, desktop entry location.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
