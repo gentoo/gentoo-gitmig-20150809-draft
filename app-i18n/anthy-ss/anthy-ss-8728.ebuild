@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-8711.ebuild,v 1.1 2007/03/11 15:55:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-8728.ebuild,v 1.1 2007/04/01 12:45:10 hattya Exp $
 
 inherit elisp-common eutils
 
@@ -10,7 +10,7 @@ MY_P=${P/-ss/}
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/24414/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/24669/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
@@ -24,6 +24,8 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-calctrans-dep.diff
 
 	local cannadicdir=/var/lib/canna/dic/canna
 
