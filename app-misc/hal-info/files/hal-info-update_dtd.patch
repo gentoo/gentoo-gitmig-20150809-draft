@@ -1,0 +1,21 @@
+From: David Zeuthen <davidz@redhat.com>
+Date: Sun, 1 Apr 2007 19:09:36 +0000 (-0400)
+Subject: add contains_not to fdi.dtd
+X-Git-Url: http://gitweb.freedesktop.org/?p=hal-info.git;a=commitdiff;h=f3a06388f3c0a0ebbd609fd2700d1a583ac5a216
+
+add contains_not to fdi.dtd
+
+In the future, hal-info should be using a hal-fdi-file-validate tool
+provided by HAL.
+---
+
+--- a/fdi/fdi.dtd
++++ b/fdi/fdi.dtd
+@@ -20,6 +20,7 @@
+     is_absolute_path (false|true) #IMPLIED
+     contains         CDATA #IMPLIED
+     contains_ncase   CDATA #IMPLIED
++    contains_not     CDATA #IMPLIED
+     prefix           CDATA #IMPLIED
+     prefix_ncase     CDATA #IMPLIED
+     suffix           CDATA #IMPLIED

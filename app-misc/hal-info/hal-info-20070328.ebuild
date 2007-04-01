@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20070328.ebuild,v 1.1 2007/04/01 09:30:16 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20070328.ebuild,v 1.2 2007/04/01 20:13:59 steev Exp $
+
+inherit eutils
 
 DESCRIPTION="The fdi scripts that HAL uses."
 HOMEPAGE="http://hal.freedesktop.org"
@@ -12,6 +14,12 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=sys-apps/hal-0.5.9_rc2"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-update_dtd.patch
+}
 
 src_compile() {
 	econf --enable-recall --enable-video || die "econf failed."

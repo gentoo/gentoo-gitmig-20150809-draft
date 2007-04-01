@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.2 2007/04/01 09:30:16 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.3 2007/04/01 20:13:59 steev Exp $
+
+  01 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/hal-info-update_dtd.patch, hal-info-20070328.ebuild:
+  Update the dtd file.
 
 *hal-info-20070328 (01 Apr 2007)
 
