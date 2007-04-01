@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.0.ebuild,v 1.5 2007/01/04 19:09:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.0.ebuild,v 1.6 2007/04/01 10:05:15 hansmi Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc sparc ~x86"
+KEYWORDS="~amd64 hppa ppc sparc ~x86"
 IUSE="emacs"
 
 DEPEND="|| ( ( x11-libs/libXinerama x11-libs/libXtst ) virtual/x11 )
