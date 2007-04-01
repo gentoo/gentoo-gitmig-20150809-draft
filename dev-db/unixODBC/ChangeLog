@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.62 2007/01/04 14:36:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.63 2007/04/01 03:15:15 robbat2 Exp $
+
+*unixODBC-2.2.12 (01 Apr 2007)
+
+  01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +unixODBC-2.2.12.ebuild:
+  Version bump of unixODBC - Bug #111910, thanks to Attila Fazekas
+  <turul16@freemail.hu> for all of the patches. Also fixes bug #143149 for
+  static libraries and bug #169566 for libtool handling.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   unixODBC-2.2.11-r1.ebuild:
