@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.18 2007/03/01 06:33:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.19 2007/04/01 22:10:54 robbat2 Exp $
+
+*audit-1.5.1 (01 Apr 2007)
+
+  01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> +audit-1.5.1.ebuild:
+  Bug #171282, version bump to fix glibc selinux compile issues.
 
   01 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> audit-1.2.9-r2.ebuild:
   Fix another libdir snafu.
