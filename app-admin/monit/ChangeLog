@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.27 2007/03/20 22:38:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.28 2007/04/01 10:26:33 hansmi Exp $
+
+  01 Apr 2007; Michael Hanselmann <hansmi@gentoo.org> monit-4.8.2.ebuild:
+  Stable on ppc.
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> monit-4.8.2.ebuild:
   x86 stable

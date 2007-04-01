@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230.ebuild,v 1.7 2007/04/01 07:34:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230.ebuild,v 1.8 2007/04/01 10:25:23 hansmi Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 RESTRICT="test"
 
