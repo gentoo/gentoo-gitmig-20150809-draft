@@ -1,6 +1,6 @@
---- configure.ok	2007-01-26 16:58:37.000000000 +0100
-+++ configure	2007-01-26 16:59:22.000000000 +0100
-@@ -4563,12 +4563,6 @@
+--- configure.ok	2007-04-01 19:56:31.000000000 +0200
++++ configure	2007-04-01 19:57:06.000000000 +0200
+@@ -4551,12 +4551,6 @@
     fi
  fi
  
@@ -10,10 +10,10 @@
 -   chmod 700 $HOME/.dbhub;
 -fi
 -
- # Check whether --enable-perl or --disable-perl was given.
- if test "${enable_perl+set}" = set; then
-   enableval="$enable_perl"
-@@ -4626,14 +4620,6 @@
+ # Check whether --enable-lang was given.
+ if test "${enable_lang+set}" = set; then
+   enableval=$enable_lang; if test "$enableval" = "no"; then
+@@ -4636,14 +4630,6 @@
  
         perl_libs=`perl -MExtUtils::Embed -e ldopts`
  
@@ -27,4 +27,4 @@
 -       fi
     fi
  else
-     echo "Perl script support is disabled."
+     echo "Perl script support is disabled, if you want to enable it do ./configure --enable-perl"

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/dbhub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.15 2007/03/28 16:58:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.16 2007/04/01 18:00:55 armin76 Exp $
+
+*dbhub-0.432 (01 Apr 2007)
+
+  01 Apr 2007; Raúl Porcel <armin76@gentoo.org> files/dbhub-gentoo.patch,
+  -dbhub-0.430.ebuild, +dbhub-0.432.ebuild:
+  Fix patch, bug 173017 and version bump
 
 *dbhub-0.430 (28 Mar 2007)
 
