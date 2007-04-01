@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.7.0.ebuild,v 1.2 2007/02/11 10:23:47 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.7.0.ebuild,v 1.3 2007/04/01 07:59:57 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="fbsplash static"
+IUSE="fbsplash"
 DEPEND="virtual/libc
 		fbsplash? (	sys-libs/zlib
 					media-libs/freetype
@@ -28,9 +28,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# allow for static linking for use in initramfs/initrd
-	use static && LDFLAGS="${LDFLAGS} -static"
-
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		suspend2ui_text || die "emake suspend2ui_text failed"
 

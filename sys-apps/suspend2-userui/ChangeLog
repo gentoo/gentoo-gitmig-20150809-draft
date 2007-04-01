@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/suspend2-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.23 2007/02/11 10:25:03 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.24 2007/04/01 07:59:57 alonbl Exp $
+
+  01 Apr 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  suspend2-userui-0.7.0.ebuild:
+  Removed static USE flag, bug#172946, thanks to Arfrever Frehtes Taifersar
+  Arahesis
 
   11 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
   +files/suspend2-userui-0.7.0-syscall.patch, suspend2-userui-0.7.0.ebuild:
