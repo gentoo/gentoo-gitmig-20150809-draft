@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/iv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.15 2007/02/10 13:51:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.16 2007/04/01 23:01:34 vanquirius Exp $
+
+*iv-2.1.4 (01 Apr 2007)
+
+  01 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -iv-1.3.2.ebuild,
+  iv-2.1.2.ebuild, +iv-2.1.4.ebuild:
+  Remove old version, mark 2.1.2 x86 stable, 2.1.4 version bump.
 
   10 Feb 2007; Lars Weiler <pylon@gentoo.org> iv-1.4.2.ebuild:
   Stable on ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-1.3.2.ebuild,v 1.3 2006/01/15 11:12:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.1 2007/04/01 23:01:34 vanquirius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE="gif imlib jpeg png xpm"
 
 DEPEND="=x11-libs/gtk+-1.2*
@@ -38,8 +38,8 @@ src_compile() {
 
 src_install() {
 	make install \
-		PREFIX=${D}/usr \
-		MAN_DIR=${D}/usr/share/man/man1 \
+		PREFIX="${D}"/usr \
+		MAN_DIR="${D}"/usr/share/man/man1 \
 		|| die "make install failed"
 
 	dodoc README
