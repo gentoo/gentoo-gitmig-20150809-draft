@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20-r1.ebuild,v 1.2 2007/03/22 20:49:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20-r1.ebuild,v 1.3 2007/04/01 11:39:48 truedfx Exp $
 
 inherit eutils
 
@@ -29,6 +29,16 @@ pkg_setup() {
 }
 
 src_unpack() {
+	# check for broken fpc.cfg
+	# don't check in pkg_setup since it won't harm binpkgs
+	if grep -q '^[ 	]*-Fu.*/lcl$' /etc/fpc.cfg
+	then
+		eerror "Your /etc/fpc.cfg automatically adds a LCL directory"
+		eerror "to the list of unit directories. This will break the"
+		eerror "build of lazarus."
+		die "don't set the LCL path in /etc/fpc.cfg"
+	fi
+
 	unpack ${A}
 	sed -e "s/@FPCVER@/${FPCVER}/" "${FILESDIR}"/${P}-fpcsrc.patch \
 		> "${T}"/fpcsrc.patch || die "could not sed fpcsrc patch"
