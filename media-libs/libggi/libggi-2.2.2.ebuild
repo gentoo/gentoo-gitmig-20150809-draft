@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.2.2.ebuild,v 1.1 2007/03/30 19:52:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.2.2.ebuild,v 1.2 2007/04/01 06:45:42 drac Exp $
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org"
@@ -59,4 +59,11 @@ src_install () {
 	dodoc ChangeLog* FAQ NEWS README
 	docinto txt
 	dodoc doc/*.txt
+}
+
+pkg_postinst() {
+	elog
+	elog "Be noted that API has been changed, and you need to run"
+	elog "revdep-rebuild from gentoolkit to correct deps."
+	elog
 }

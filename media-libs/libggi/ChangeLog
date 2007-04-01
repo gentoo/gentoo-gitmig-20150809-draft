@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.45 2007/03/30 19:52:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.46 2007/04/01 06:45:42 drac Exp $
+
+  01 Apr 2007; Samuli Suominen <drac@gentoo.org> libggi-2.2.2.ebuild:
+  Warn users about API change with elog.
 
 *libggi-2.2.2 (30 Mar 2007)
 
