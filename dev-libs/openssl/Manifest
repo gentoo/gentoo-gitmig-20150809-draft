@@ -5,10 +5,10 @@ AUX gentoo.config-0.9.7g 3356 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 SH
 MD5 5479124566140e079c2493abe59a1c90 files/gentoo.config-0.9.7g 3356
 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 files/gentoo.config-0.9.7g 3356
 SHA256 1935ea31cf0d4c4a7f5ed0fa4434e9960c7ccef5cb43abcee26cff09472991eb files/gentoo.config-0.9.7g 3356
-AUX gentoo.config-0.9.8 3122 RMD160 ca114a7b7c112089984d29a509c02e0d3a6a1fd3 SHA1 9a6243e8d61e7de6d35d3f9bac52fb7d4f6ead4c SHA256 0374e670882a675c0e1deeb582a343afbac139200f8c438a0abc8e51e35c05b6
-MD5 60b0304f4f4d51f61c5db1dea0e9de32 files/gentoo.config-0.9.8 3122
-RMD160 ca114a7b7c112089984d29a509c02e0d3a6a1fd3 files/gentoo.config-0.9.8 3122
-SHA256 0374e670882a675c0e1deeb582a343afbac139200f8c438a0abc8e51e35c05b6 files/gentoo.config-0.9.8 3122
+AUX gentoo.config-0.9.8 3139 RMD160 f33c06438d47e2c26c928b1f2415b77e95bc35f4 SHA1 f14f1a932f64436aa57b9db61ab014b6fcf7d11d SHA256 fffa1bdd52bb96ded4c9a4d75556deae0ce958512cefa9b6cf20dd78d8e3a81a
+MD5 f2a5914553229bbc937dfe3e7c52f6c0 files/gentoo.config-0.9.8 3139
+RMD160 f33c06438d47e2c26c928b1f2415b77e95bc35f4 files/gentoo.config-0.9.8 3139
+SHA256 fffa1bdd52bb96ded4c9a4d75556deae0ce958512cefa9b6cf20dd78d8e3a81a files/gentoo.config-0.9.8 3139
 AUX openssl-0.9.7-alpha-default-gcc.patch 533 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd SHA1 f5ee85db45ab80b66225a222c7655b74760b94fe SHA256 814ae7c09359414e7dcd96008c82d868fba0565de2d1b3e6a4275f8cdbeefb5c
 MD5 f8ff492f66404c732e4661cc4443a2e8 files/openssl-0.9.7-alpha-default-gcc.patch 533
 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd files/openssl-0.9.7-alpha-default-gcc.patch 533
@@ -118,9 +118,9 @@ MD5 b7beba1f496f9ed591d246ccb3986805 files/digest-openssl-0.9.8e 247
 RMD160 70d9be870635c3015dcea57e013ad2017c44f878 files/digest-openssl-0.9.8e 247
 SHA256 2805d899eece0f11f31ca624c548ed874c31daaddf922044a6586a3ad2aad00a files/digest-openssl-0.9.8e 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF5Dd38bi6rjpTunYRAgxUAJ9WrbxmwG62mwNyQ4GnAy3OjrgxZgCfeTBx
-o2o5TtatpTuzeOHpbzU0nRk=
-=/PuK
+iD8DBQFGD3gY8bi6rjpTunYRAkbiAKDfHr35sha1F4PF3IBH8SYVbuKEsgCeJ1xN
+aIg3qe7/q/vfy73XjvZjQg0=
+=IM62
 -----END PGP SIGNATURE-----
