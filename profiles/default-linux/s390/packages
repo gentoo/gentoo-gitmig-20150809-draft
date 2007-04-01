@@ -1,8 +1,1 @@
-# Copyright 2001-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/packages,v 1.2 2004/09/22 16:06:50 vapier Exp $
-
->=sys-devel/binutils-2.13.90.0.16
->=sys-devel/gcc-3.2.3-r2
->=sys-libs/glibc-2.3.2-r10
->=sys-kernel/linux-headers-2.4.21-r1
+*sys-apps/s390-tools
