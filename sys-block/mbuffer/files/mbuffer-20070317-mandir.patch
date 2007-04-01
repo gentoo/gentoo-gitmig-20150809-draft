@@ -1,0 +1,8 @@
+--- Makefile.in
++++ Makefile.in
+@@ -31,4 +31,5 @@
+ install:
+ 	-$(INSTALL) -d $(DESTDIR)$(bindir)
+ 	$(INSTALL) $(TARGET) $(DESTDIR)$(bindir)
++	$(INSTALL) -d $(DESTDIR)$(mandir)
+ 	$(INSTALL) mbuffer.1 $(DESTDIR)$(mandir)
