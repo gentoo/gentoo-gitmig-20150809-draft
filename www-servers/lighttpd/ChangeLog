@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.104 2007/03/26 09:30:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.105 2007/04/01 22:55:08 robbat2 Exp $
+
+*lighttpd-1.4.13-r2 (01 Apr 2007)
+
+  01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lighttpd.initd-1.4.13-r2, +lighttpd-1.4.13-r2.ebuild:
+  Bug #168865, improved init.d script for s-s-d handling and other bits.
 
   26 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   lighttpd-1.4.13-r1.ebuild:
