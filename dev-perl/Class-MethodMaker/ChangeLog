@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MethodMaker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.35 2007/04/01 20:38:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.36 2007/04/01 22:16:33 tgall Exp $
+
+  01 Apr 2007; Tom Gall <tgall@gentoo.org>
+  Class-MethodMaker-2.08.ebuild:
+  added ~ppc64
 
 *Class-MethodMaker-2.09 (01 Apr 2007)
 
