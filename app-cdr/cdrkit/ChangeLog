@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.29 2007/03/17 12:15:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.30 2007/04/01 21:47:47 pylon Exp $
+
+*cdrkit-1.1.4 (01 Apr 2007)
+
+  01 Apr 2007; Lars Weiler <pylon@gentoo.org> +cdrkit-1.1.4.ebuild:
+  Version bump.  Fixed cmake-call for building cross-targets; bug #172225.
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> cdrkit-1.1.2.ebuild:
   amd64 stable, bug 170482
