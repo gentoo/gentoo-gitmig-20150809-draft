@@ -1,21 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.11.ebuild,v 1.5 2007/04/01 18:27:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.13.ebuild,v 1.1 2007/04/01 18:36:39 ticho Exp $
 
 inherit eutils webapp
 
 DESCRIPTION="A mail statistics RRDtool frontend for Postfix"
-HOMEPAGE="http://people.ee.ethz.ch/~dws/software/mailgraph/"
-SRC_URI="http://people.ee.ethz.ch/~dws/software/${PN}/pub/${P}.tar.gz"
+HOMEPAGE="http://mailgraph.schweikert.ch"
+SRC_URI="http://mailgraph.schweikert.ch/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/File-Tail
 	>=net-analyzer/rrdtool-1.2.2"
-DEPEND=">=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4
+	>=net-analyzer/rrdtool-1.2.2"
 
 pkg_setup() {
 	webapp_pkg_setup
