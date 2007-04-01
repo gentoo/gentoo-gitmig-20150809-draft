@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-javamail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.9 2007/01/29 22:09:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.10 2007/04/01 17:47:36 armin76 Exp $
+
+  01 Apr 2007; Raúl Porcel <armin76@gentoo.org> sun-javamail-1.4.ebuild:
+  Add ~ia64 keyword wrt bug 158687
 
   29 Jan 2007; Vlastimil Babka <caster@gentoo.org> sun-javamail-1.4.ebuild:
   Add java-ant-2 to inherit.
