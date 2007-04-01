@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r5.ebuild,v 1.1 2007/03/31 20:39:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r5.ebuild,v 1.2 2007/04/01 12:08:33 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -14,7 +14,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="acl alsa arts branding cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
+IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
 zeroconf avahi kernel_linux fam lua linguas_he kdehiddenvisibility"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -93,10 +93,10 @@ src_unpack() {
 		epatch "${WORKDIR}/patches/kdelibs_3.5.4-kssl-3des.patch"
 	fi
 
-	if use branding ; then
+#	if use branding ; then
 		# add "(Gentoo)" to khtml user agent
-		epatch "${WORKDIR}/patches/kdelibs_3.5-cattlebrand.diff"
-	fi
+#		epatch "${WORKDIR}/patches/kdelibs_3.5-cattlebrand.diff"
+#	fi
 
 	# xinerama patch from Lubos Lunak
 	# http://ktown.kde.org/~seli/xinerama/
