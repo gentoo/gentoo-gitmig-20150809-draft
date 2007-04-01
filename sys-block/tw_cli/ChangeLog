@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.14 2007/03/21 16:17:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.15 2007/04/01 19:38:36 robbat2 Exp $
+
+*tw_cli-9.4.0.1 (01 Apr 2007)
+
+  01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> +tw_cli-9.4.0.1.ebuild:
+  Bug #170492, bump to new upstream version, apparently fixes some bugs with
+  the very modern 9650SE controllers. Also clean up display of pkg_nofetch
+  URLs
 
   21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> tw_cli-9.4.0.ebuild:
   Stable on amd64 wrt bug #168069.
