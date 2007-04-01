@@ -19,7 +19,6 @@ mono
 beagle
 rar
 nvtv
-pcmcia
 
 # should be ok
 jikes
