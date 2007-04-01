@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.3 2007/02/22 00:37:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.4 2007/04/01 22:13:13 robbat2 Exp $
+
+*pmtools-20061130 (01 Apr 2007)
+
+  01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/pmtools-20061130-acpixtract-pmtools.patch,
+  +files/pmtools-20061130-madt.patch, +pmtools-20061130.ebuild:
+  Bug #164438 - version bump.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
