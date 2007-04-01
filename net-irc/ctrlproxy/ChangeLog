@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ctrlproxy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.17 2007/03/19 10:36:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.18 2007/04/01 10:59:47 armin76 Exp $
+
+  01 Apr 2007; Raúl Porcel <armin76@gentoo.org> ctrlproxy-3.0.1.ebuild:
+  ia64 stable wrt bug 171417, restrict tests, as they fail, and fix parallel
+  install isues
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> ctrlproxy-3.0.1.ebuild:
   x86 stable wrt bug 171417
