@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.39 2007/01/19 10:39:51 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.40 2007/04/01 12:21:09 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -121,6 +121,7 @@ ESVN_UPDATE_CMD="svn update"
 ## -- subversion_fetch() ----------------------------------------------------- #
 #
 # @param $1 - a repository URI. default is the ESVN_REPO_URI.
+# @param $2 - a check out path in S.
 #
 function subversion_fetch() {
 
