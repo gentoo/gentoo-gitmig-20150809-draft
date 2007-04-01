@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7074 2007/04/01 12:38:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7075 2007/04/01 20:03:13 anant Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -972,11 +972,6 @@ net-dns/bind-dns-keygen
 # Luca Longinotti <chtekk@gentoo.org> (29 Aug 2006)
 # Masking media-libs/ming-0.3.0, breaks PHP compilation
 =media-libs/ming-0.3.0
-
-# Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
-# Development versions of FWbuilder.
->=net-libs/libfwbuilder-2.1.5
->=net-firewall/fwbuilder-2.1.5
 
 # Ned Ludd <solar/gentoo.org> (Aug 14 2006)
 # This pkg breaks working systems and eradicator
