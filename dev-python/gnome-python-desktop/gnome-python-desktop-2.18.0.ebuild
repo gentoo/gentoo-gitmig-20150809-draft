@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.18.0.ebuild,v 1.1 2007/03/27 17:05:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.18.0.ebuild,v 1.2 2007/04/01 12:27:25 foser Exp $
 
 inherit gnome2 python virtualx
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 RDEPEND="virtual/python
-	>=dev-python/pygtk-2.4.0
+	>=dev-python/pygtk-2.10.3
 	>=dev-libs/glib-2.6.0
 	>=x11-libs/gtk+-2.4.0
 	>=dev-python/gnome-python-2.10.0
