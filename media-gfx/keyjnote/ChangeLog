@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/keyjnote
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/ChangeLog,v 1.4 2007/03/22 01:50:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/ChangeLog,v 1.5 2007/04/01 22:56:00 vanquirius Exp $
+
+  01 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -keyjnote-0.8.0.ebuild,
+  -keyjnote-0.9.1.ebuild:
+  Remove old ebuilds.
 
 *keyjnote-0.9.4 (22 Mar 2007)
 
