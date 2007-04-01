@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/netdude-0.4.7.ebuild,v 1.3 2007/03/27 22:21:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/netdude-0.4.7.ebuild,v 1.4 2007/04/01 22:01:37 vanquirius Exp $
 
 DESCRIPTION="Netdude is a front-end to the libnetdude packet manipulation library"
 HOMEPAGE="http://netdude.sourceforge.net/index.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/netdude/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc"
 
 DEPEND="net-libs/libnetdude
