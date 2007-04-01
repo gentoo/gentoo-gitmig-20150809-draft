@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/fwbuilder
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.60 2006/08/20 23:22:04 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.61 2007/04/01 20:15:36 anant Exp $
+
+*fwbuilder-2.1.10 (01 Apr 2007)
+
+  01 Apr 2007; Anant Narayanan <anant@gentoo.org> -fwbuilder-2.1.5.ebuild,
+  +fwbuilder-2.1.10.ebuild:
+  vBump to 2.1.10, remove 2.1.5. Closes bug #157542
 
   20 Aug 2006; <sjl@gentoo.org> fwbuilder-2.1.5.ebuild:
   fix executable name in desktop file (Bug #144461)
