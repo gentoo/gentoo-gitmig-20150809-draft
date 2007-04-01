@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.15 2007/03/25 14:44:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.16 2007/04/01 17:51:53 ticho Exp $
+
+*imapsync-1.217 (01 Apr 2007)
+
+  01 Apr 2007; Andrej Kacian <ticho@gentoo.org>
+  -files/imapsync-1.171-gentoo.patch, -files/imapsync-gentoo.patch,
+  -files/imapsync-ssl.patch, -imapsync-1.121.ebuild, imapsync-1.182.ebuild,
+  +imapsync-1.217.ebuild:
+  1.182 stable on x86. Version bump to 1.217. Removed 1.121, as well as
+  obsolete patches from FILESDIR.
 
   25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   imapsync-1.182.ebuild:
