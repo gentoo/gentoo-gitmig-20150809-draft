@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.13-r2.ebuild,v 1.1 2007/04/01 22:55:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.13-r2.ebuild,v 1.2 2007/04/01 23:22:00 robbat2 Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -157,7 +157,14 @@ src_install() {
 
 	# configs
 	insinto /etc/lighttpd
-	doins ${FILESDIR}/conf/*.conf
+	doins ${FILESDIR}/conf/lighttpd.conf
+	doins ${FILESDIR}/conf/mime-types.conf
+	doins ${FILESDIR}/conf/mod_cgi.conf
+	newins ${FILESDIR}/conf/mod_fastcgi.conf-1.4.13-r2 mod_fastcgi.conf
+	# Secure directory for fastcgi sockets
+	keepdir /var/run/lighttpd/
+	fperms 0750 /var/run/lighttpd/
+	fowners lighttpd:lighttpd /var/run/lighttpd/
 
 	# update lighttpd.conf directives based on conditionals
 	update_config
