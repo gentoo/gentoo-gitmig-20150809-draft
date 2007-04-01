@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1-r2.ebuild,v 1.2 2007/03/18 18:15:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1-r2.ebuild,v 1.3 2007/04/01 23:04:57 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -149,7 +149,7 @@ src_install() {
 	doman contrib/ssh-copy-id.1
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 
-	diropts -m 0600
+	diropts -m 0700
 	dodir /etc/skel/.ssh
 }
 

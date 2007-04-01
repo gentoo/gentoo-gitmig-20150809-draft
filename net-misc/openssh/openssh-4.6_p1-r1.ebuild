@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.6_p1-r1.ebuild,v 1.1 2007/03/13 02:31:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.6_p1-r1.ebuild,v 1.2 2007/04/01 23:04:57 vapier Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -150,7 +150,7 @@ src_install() {
 	doman contrib/ssh-copy-id.1
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 
-	diropts -m 0600
+	diropts -m 0700
 	dodir /etc/skel/.ssh
 }
 
