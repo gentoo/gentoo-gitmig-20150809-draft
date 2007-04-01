@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.24 2007/01/18 13:29:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.25 2007/04/01 13:42:04 betelgeuse Exp $
+
+  01 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -fastutil-4.4.2.ebuild:
+  Cleanup.
 
   18 Jan 2007; Vlastimil Babka <caster@gentoo.org> fastutil-5.0.5.ebuild:
   Raise memory limit for ant to 512m, so other compilers than javac work.
