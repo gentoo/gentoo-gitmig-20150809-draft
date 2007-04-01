@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.12.ebuild,v 1.6 2006/12/27 19:16:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.12.ebuild,v 1.7 2007/04/01 18:27:52 ticho Exp $
 
 inherit eutils webapp
 
@@ -51,7 +51,7 @@ src_install() {
 	newconfd ${FILESDIR}/mailgraph.confd mailgraph
 
 	# docs
-	dodoc README CHANGES COPYING
+	dodoc README CHANGES
 
 	webapp_src_install
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.16 2007/02/22 01:45:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.17 2007/04/01 18:27:52 ticho Exp $
+
+  01 Apr 2007; Andrej Kacian <ticho@gentoo.org> mailgraph-1.11.ebuild,
+  mailgraph-1.11-r1.ebuild, mailgraph-1.12.ebuild:
+  Do not install boilerplate COPYING file - it's generic GPL-2.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
