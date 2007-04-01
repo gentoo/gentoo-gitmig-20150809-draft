@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/shared-objects
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.9 2007/02/26 22:51:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.10 2007/04/01 12:53:11 betelgeuse Exp $
+
+  01 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -shared-objects-1.4-r1.ebuild, -shared-objects-1.4-r2.ebuild:
+  Cleanup.
 
 *shared-objects-1.4-r3 (26 Feb 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libvte-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libvte-java/ChangeLog,v 1.4 2007/02/10 17:56:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libvte-java/ChangeLog,v 1.5 2007/04/01 12:57:16 betelgeuse Exp $
+
+  01 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -libvte-java-0.12.1.ebuild:
+  Cleanup.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> libvte-java-0.12.1-r1.ebuild:
   Stable on ppc wrt bug 160002
