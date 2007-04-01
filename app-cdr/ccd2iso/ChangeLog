@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/ccd2iso
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.12 2007/01/05 09:49:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.13 2007/04/01 07:28:53 vapier Exp $
+
+*ccd2iso-0.3 (01 Apr 2007)
+
+  01 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/ccd2iso-0.3-headers.patch, +ccd2iso-0.3.ebuild:
+  Version bump #172908 by Alexandru Toma.
 
 *ccd2iso-0.2-r2 (05 Jan 2007)
 
