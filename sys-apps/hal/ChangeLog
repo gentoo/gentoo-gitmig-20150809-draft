@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.137 2007/03/30 23:25:44 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.138 2007/04/01 09:50:56 steev Exp $
+
+*hal-0.5.9_rc3 (01 Apr 2007)
+
+  01 Apr 2007; Steev Klimaszewski <steev@gentoo.org> +hal-0.5.9_rc3.ebuild:
+  New upstream release, again, please test this one, 0.5.9 is around the corner.
 
   30 Mar 2007; Steev Klimaszewski <steev@gentoo.org>
   +files/fix-scsi-fake-host-event.patch, hal-0.5.9_rc2.ebuild:
