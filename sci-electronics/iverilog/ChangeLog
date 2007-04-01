@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.18 2007/04/01 09:19:40 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.19 2007/04/01 11:48:03 calchan Exp $
+
+*iverilog-0.8.4 (01 Apr 2007)
+
+  01 Apr 2007; Denis Dupeyron <calchan@gentoo.org> +iverilog-0.8.4.ebuild:
+  Version bump, includes cleanups and fixed tests.
 
   01 Apr 2007; Denis Dupeyron <calchan@gentoo.org> iverilog-0.8.3.ebuild:
   Fixed missing <asm/page.h>, bug #172919.
