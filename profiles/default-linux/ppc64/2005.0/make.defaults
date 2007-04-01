@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/2005.0/make.defaults,v 1.7 2005/06/27 03:14:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/2005.0/make.defaults,v 1.8 2007/04/01 05:14:30 tgall Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
@@ -9,8 +9,6 @@ CHOST="powerpc64-unknown-linux-gnu"
 
 CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
-
-ACCEPT_KEYWORDS="ppc64"
 
 STAGE1_USE="unicode"
 GRP_STAGE23_USE="unicode ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"

@@ -8,8 +8,6 @@ PROFILE_ARCH="ppc64"
 CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
-ACCEPT_KEYWORDS="${ARCH}"
-
 STAGE1_USE="gcc64 unicode"
 USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk ibm imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls nptl nptlonly ogg opengl oss pam perl png python qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml xv zlib"
 

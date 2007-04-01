@@ -7,8 +7,6 @@ PROFILE_ARCH="ppc64"
 CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
-ACCEPT_KEYWORDS="${ARCH}"
-
 STAGE1_USE="gcc64 unicode"
 USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses ibm berkdb bitmap-fonts gif jpeg ncurses png truetype truetype-fonts type1-fonts zlib"
 
