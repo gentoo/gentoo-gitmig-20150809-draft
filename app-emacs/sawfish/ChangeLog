@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/sawfish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.7 2007/02/08 18:23:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.8 2007/04/01 10:05:35 hansmi Exp $
+
+  01 Apr 2007; Michael Hanselmann <hansmi@gentoo.org> sawfish-1.32.ebuild:
+  Stable on ppc.
 
   08 Feb 2007; Christian Faulhammer <opfer@gentoo.org> -sawfish-1.31.ebuild:
   clean up
