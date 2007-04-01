@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.32 2007/04/01 14:43:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.33 2007/04/01 22:19:45 tgall Exp $
+
+  01 Apr 2007; Tom Gall <tgall@gentoo.org>
+  g-cpan-0.15_rc6.ebuild:
+  added ~ppc64
 
 *g-cpan-0.15_rc6 (01 Apr 2007)
 
