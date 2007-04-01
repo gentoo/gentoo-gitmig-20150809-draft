@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/s390-tools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.10 2006/05/07 23:39:05 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.11 2007/04/01 12:26:42 vapier Exp $
+
+*s390-tools-1.6.0 (01 Apr 2007)
+
+  01 Apr 2007; Mike Frysinger <vapier@gentoo.org> +s390-tools-1.6.0.ebuild:
+  Version bump.
 
 *s390-tools-1.5.3 (07 May 2006)
 
