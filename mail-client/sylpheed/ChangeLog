@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.217 2007/04/01 12:56:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.218 2007/04/01 12:59:06 hattya Exp $
+
+  01 Apr 2007; Akinori Hattori <hattya@gentoo.org> sylpheed-2.2.7.ebuild,
+  sylpheed-2.3.0.ebuild, sylpheed-2.3.1.ebuild:
+  remove virtual/sylpheed.
 
   01 Apr 2007; Akinori Hattori <hattya@gentoo.org> -sylpheed-2.2.5.ebuild,
   -sylpheed-2.2.6.ebuild, -sylpheed-2.2.9.ebuild, -sylpheed-2.2.10.ebuild:
