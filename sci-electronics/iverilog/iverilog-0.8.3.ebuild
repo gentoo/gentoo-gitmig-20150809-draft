@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.3.ebuild,v 1.1 2006/10/11 21:41:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.3.ebuild,v 1.2 2007/04/01 09:19:40 calchan Exp $
 
 inherit multilib
 
@@ -17,6 +17,18 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+
+	# Fix for bug #172919
+	sed -i \
+		-e '/#  include <asm\/page.h>/d' \
+		-e '/unsigned siz, rss, shd;/a\
+	    long PAGE_SIZE = sysconf(_SC_PAGESIZE);\
+	    if (PAGE_SIZE==-1) PAGE_SIZE=0;
+'		${S}/vvp/main.cc
+}
 
 src_compile() {
 	econf || die "Configuration failed"
