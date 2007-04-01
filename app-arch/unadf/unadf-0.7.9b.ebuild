@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/unadf-0.7.9b.ebuild,v 1.4 2005/11/29 03:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/unadf-0.7.9b.ebuild,v 1.5 2007/04/01 19:16:52 robbat2 Exp $
 
 inherit eutils
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~hppa ~ppc ~ppc-macos ~x86"
 IUSE=""
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+		x11-misc/makedepend"
 RDEPEND=""
 
 src_unpack() {
