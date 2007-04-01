@@ -9,7 +9,7 @@ diff -Naur mp3ng-0.9.13-MKIV-pre3.orig/mp3ng.c mp3ng-0.9.13-MKIV-pre3/mp3ng.c
    if(visible) {
      delete osd; osd=0;
 +#if APIVERSNUM > 10500
-+       visible = bigwin = false;                                                                                         ¦
++       visible=bigwin=false;
 +       SetNeedsFastResponse(visible);
 +#else
      needsFastResponse=visible=bigwin=false;

@@ -19,7 +19,7 @@ diff -Naur setup-0.3.1.orig/setupmenu.cpp setup-0.3.1/setupmenu.cpp
                          if (Interface->Confirm(cRecordControls::Active() ? tr("Recording - restart anyway?") : tr("Really restart?")))
                          {
 +#if APIVERSNUM > 10500
-+						  ShutdownHandler.RequestEmergencyExit()
++						  ShutdownHandler.RequestEmergencyExit();
 +#else
                            cThread::EmergencyExit(true);
 +#endif

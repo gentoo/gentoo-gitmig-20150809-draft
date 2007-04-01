@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-mp3ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/ChangeLog,v 1.10 2007/03/25 21:35:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/ChangeLog,v 1.11 2007/04/01 12:32:09 hd_brummy Exp $
+
+  01 Apr 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/vdr-mp3ng-0.0.1_pre4-vdr-1.5.1.diff:
+  txpo in 1.5.1 diff fixed
 
   25 Mar 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-mp3ng-0.0.1_pre4-vdr-1.5.1.diff, vdr-mp3ng-0.0.1_pre4.ebuild:

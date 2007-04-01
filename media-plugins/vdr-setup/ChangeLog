@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-setup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.13 2007/03/25 20:57:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.14 2007/04/01 12:31:05 hd_brummy Exp $
+
+  01 Apr 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/vdr-setup-0.3.1-vdr-1.5.0.diff:
+  txpo in 1.5.1 diff fixed
 
   25 Mar 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-setup-0.3.1-vdr-1.5.0.diff:
