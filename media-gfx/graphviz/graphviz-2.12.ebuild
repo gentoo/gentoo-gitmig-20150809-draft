@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.15 2007/03/17 11:30:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.16 2007/04/01 14:56:59 dev-zero Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/gd-2.0.28
 	>=media-libs/libpng-1.2.5
 	>=media-libs/jpeg-6b
 	>=dev-libs/expat-1.95.5
-	dev-libs/glib
+	=dev-libs/glib-2*
 	virtual/libiconv
 	media-libs/fontconfig
 	pango? ( x11-libs/pango )
