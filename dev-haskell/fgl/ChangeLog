@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.10 2007/03/27 20:24:59 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.11 2007/04/01 20:28:33 welp Exp $
+
+  01 Apr 2007; Peter Weller <welp@gentoo.org> fgl-5.2.ebuild:
+  Keyworded ~x86-fbsd
 
   27 Mar 2007; Peter Weller <welp@gentoo.org> fgl-5.2.ebuild:
   Stable on amd64 wrt bug 170650

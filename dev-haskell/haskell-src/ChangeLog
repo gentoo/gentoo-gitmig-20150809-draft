@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haskell-src
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.9 2007/03/27 20:29:30 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.10 2007/04/01 20:31:03 welp Exp $
+
+  01 Apr 2007; Peter Weller <welp@gentoo.org> haskell-src-1.0.ebuild:
+  Keyworded ~x86-fbsd
 
   27 Mar 2007; Peter Weller <welp@gentoo.org> haskell-src-1.0.ebuild:
   Stable on amd64 wrt bug 170650

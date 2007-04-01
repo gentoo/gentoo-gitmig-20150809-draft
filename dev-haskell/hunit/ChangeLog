@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.9 2007/03/27 20:32:27 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.10 2007/04/01 20:35:04 welp Exp $
+
+  01 Apr 2007; Peter Weller <welp@gentoo.org> hunit-1.1.ebuild:
+  Keyworded ~x86-fbsd
 
   27 Mar 2007; Peter Weller <welp@gentoo.org> hunit-1.1.ebuild:
   Stable on amd64 wrt bug 170650
