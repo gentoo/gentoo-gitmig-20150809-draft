@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9_rc3.ebuild,v 1.1 2007/04/01 09:50:56 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9_rc3.ebuild,v 1.2 2007/04/01 19:43:49 steev Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -89,6 +89,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.5.7-plugdev-allow-send.patch
+	# Some keyboards don't work without this patch.
+	epatch ${FILESDIR}/${PN}-0.5.9-button_capabilites.patch
 }
 
 src_compile() {

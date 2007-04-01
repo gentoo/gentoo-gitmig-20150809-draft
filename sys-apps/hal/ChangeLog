@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.138 2007/04/01 09:50:56 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.139 2007/04/01 19:43:49 steev Exp $
+
+  01 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/hal-0.5.9-button_capabilities.patch, hal-0.5.9_rc3.ebuild:
+  Add patch to 0.5.9_rc3 for keyboard button capabilities.
 
 *hal-0.5.9_rc3 (01 Apr 2007)
 
