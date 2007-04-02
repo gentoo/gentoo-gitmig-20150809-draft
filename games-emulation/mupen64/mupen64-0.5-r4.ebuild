@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r4.ebuild,v 1.1 2007/03/28 00:58:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r4.ebuild,v 1.2 2007/04/02 15:23:58 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -11,7 +11,7 @@ SRC_URI="http://mupen64.emulation64.com/files/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
@@ -23,10 +23,7 @@ RDEPEND="virtual/opengl
 		>=app-emulation/emul-linux-x86-sdl-10.0
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	!games-emulation/mupen64-blight-input
-	!games-emulation/mupen64-glN64
-	!games-emulation/mupen64-jttl_sound"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
