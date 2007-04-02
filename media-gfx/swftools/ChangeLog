@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.21 2007/02/14 15:49:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.22 2007/04/02 04:30:51 vanquirius Exp $
+
+*swftools-0.8.1 (02 Apr 2007)
+
+  02 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -swftools-0.6.2.ebuild,
+  swftools-0.8.0.ebuild, +swftools-0.8.1.ebuild:
+  0.8.1 version bump, mark 0.8.0 x86 stable, remove old ebuild.
 
   14 Feb 2007; Simon Stelling <blubb@gentoo.org> swftools-0.8.0.ebuild:
   always disable the python interface; bug 118242
