@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4-r1.ebuild,v 1.4 2007/02/20 22:57:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4-r1.ebuild,v 1.5 2007/04/02 16:20:40 betelgeuse Exp $
 
 inherit eutils java-pkg-2 versionator linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/${PN}/releases/${RTM_NAM
 
 LICENSE="MPL-1.1"
 SLOT="3.4"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4

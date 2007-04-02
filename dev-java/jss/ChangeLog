@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.13 2007/02/20 22:57:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.14 2007/04/02 16:20:39 betelgeuse Exp $
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -jss-3.4.ebuild,
+  jss-3.4-r1.ebuild:
+  Mark stable on amd64 wrt bug #167273 and remove old gen 1 ebuild.
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org> jss-3.4-r1.ebuild:
   stable x86; bug 167273
