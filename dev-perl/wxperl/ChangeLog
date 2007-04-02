@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/wxperl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.14 2007/03/19 14:57:11 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.15 2007/04/02 14:32:03 armin76 Exp $
+
+  02 Apr 2007; Raúl Porcel <armin76@gentoo.org> wxperl-0.69.ebuild:
+  Add ~ia64 wrt bug 144122
 
 *wxperl-0.69 (19 Mar 2007)
 
