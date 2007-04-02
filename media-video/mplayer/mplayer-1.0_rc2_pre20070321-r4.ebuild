@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.2 2007/03/28 13:44:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.3 2007/04/02 22:50:21 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -95,20 +95,8 @@ RDEPEND="sys-libs/ncurses
 	live? ( >=media-plugins/live-2007.02.20 )
 	truetype? ( >=media-libs/freetype-2.1
 		media-libs/fontconfig )
-	video_cards_mga? ( x11-libs/libXxf86vm
-		x11-libs/libXext
-		x11-drivers/xf86-video-mga )
-	video_cards_s3virge? ( x11-libs/libXxf86vm
-		x11-libs/libXext
-		x11-drivers/xf86-video-s3virge )
-	video_cards_tdfx? ( x11-libs/libXxf86vm
-		x11-libs/libXext
-		x11-drivers/xf86-video-tdfx )
-	video_cards_vesa? ( x11-libs/libXxf86vm
-		x11-libs/libXext
-		x11-drivers/xf86-video-vesa )
 	vidix? ( x11-libs/libXxf86vm
-		x11-libs/libXext )
+			 x11-libs/libXext )
 	x264? ( media-libs/x264-svn )
 	xanim? ( media-video/xanim )
 	xinerama? ( x11-libs/libXinerama
@@ -123,6 +111,7 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXext
 		joystick? ( x11-drivers/xf86-input-joystick )
 	)"
+#	video_cards_vesa? ( sys-apps/vbetool ) restrict on x86 first
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
