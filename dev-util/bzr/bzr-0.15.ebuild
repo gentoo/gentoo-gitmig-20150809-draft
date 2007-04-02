@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.13.ebuild,v 1.3 2007/03/05 03:22:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.15.ebuild,v 1.1 2007/04/02 23:07:14 marienz Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -21,7 +21,10 @@ python_rdep="dev-python/celementtree
 	curl? ( dev-python/pycurl )"
 DEPEND=">=dev-lang/python-2.4
 	emacs? ( virtual/emacs )
-	test? ( $python_rdep )"
+	test? (
+		$python_rdep
+		dev-python/medusa
+	)"
 RDEPEND=">=dev-lang/python-2.4
 	$python_rdep"
 

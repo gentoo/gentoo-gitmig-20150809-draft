@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.29 2007/03/05 03:22:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.30 2007/04/02 23:07:14 marienz Exp $
+
+*bzr-0.15 (02 Apr 2007)
+
+  02 Apr 2007; Marien Zwart <marienz@gentoo.org> +bzr-0.15.ebuild:
+  Version bump.
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> bzr-0.13.ebuild,
   bzr-0.14.ebuild:
