@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cpu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/ChangeLog,v 1.16 2007/02/21 19:35:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/ChangeLog,v 1.17 2007/04/02 01:33:35 dirtyepic Exp $
+
+  02 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Reassign to maintainer-wanted.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
