@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.0.ebuild,v 1.3 2007/01/05 07:00:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.0.ebuild,v 1.4 2007/04/02 16:57:02 betelgeuse Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="CUnit - C Unit Test Framework"
 SRC_URI="mirror://sourceforge/cunit/${P}-1.tar.gz"
@@ -15,7 +15,7 @@ IUSE=""
 S=${WORKDIR}/CUnit-${PV}-1
 
 src_compile() {
-	aclocal
+	eautoreconf
 	econf || die "configure failed"
 	emake || die "make failed"
 }
