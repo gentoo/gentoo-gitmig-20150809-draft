@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.14 2007/03/18 05:08:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.15 2007/04/02 17:08:14 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -24,7 +24,7 @@ PROVIDE="virtual/mta
 	 virtual/mda
 	 virtual/imapd"
 
-DEPEND="virtual/libc
+DEPEND="
 	>=net-libs/courier-authlib-0.55
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
