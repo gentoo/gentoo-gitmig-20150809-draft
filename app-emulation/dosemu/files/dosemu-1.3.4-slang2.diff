@@ -1,0 +1,27 @@
+--- dosemu-1.1.5-old/configure.ac
++++ dosemu-1.1.5/configure.ac
+@@ -262,8 +262,8 @@
+   else
+     if test -d $prefix/include/slang; then
+       SLANGINC="-I${prefix}/include/slang"
+-    elif test -d /usr/include/slang; then
+-      SLANGINC="-I/usr/include/slang"
++    elif test -d /usr/include/slang-2; then
++      SLANGINC="-I/usr/include/slang-2"
+     fi
+   fi
+ else
+@@ -286,11 +286,11 @@
+ AC_MSG_RESULT($SLANGINC $SLANGLIB)
+ have_slang="no"
+ AC_CHECK_HEADER(slang.h,
+-  AC_CHECK_LIB(slang, SLtt_get_terminfo,
++  AC_CHECK_LIB(slang-2, SLtt_get_terminfo,
+     AC_MSG_NOTICE(Compiling with S-Lang support...)
+     have_slang="yes"
+     AC_DEFINE(USE_SLANG)
+-    SLANGLIB="$SLANGLIB -lslang -lm",
++    SLANGLIB="$SLANGLIB -lslang-2 -lm",
+     [AC_MSG_WARN([No S-Lang library found.])]
+     $srcdir/mkpluginhooks enable term no
+   ),

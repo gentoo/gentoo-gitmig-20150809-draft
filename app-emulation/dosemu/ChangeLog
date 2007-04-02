@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.39 2007/02/25 15:27:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.40 2007/04/02 21:36:22 hanno Exp $
+
+*dosemu-1.3.4 (02 Apr 2007)
+
+  02 Apr 2007; Hanno Boeck <hanno@gentoo.org> +files/dosemu-1.3.4-shm.diff,
+  +files/dosemu-1.3.4-slang2.diff, +files/dosemu-compile-asm.diff,
+  +dosemu-1.3.4.ebuild:
+  Version bump and a bunch of fixes.
 
   25 Feb 2007; Samuli Suominen <drac@gentoo.org> dosemu-1.3.3.ebuild:
   Remove virtual/x11 usage wrt bug 166370.
