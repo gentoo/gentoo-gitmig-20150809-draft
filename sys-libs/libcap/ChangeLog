@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.48 2007/02/13 23:48:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.49 2007/04/02 00:15:04 pebenito Exp $
+
+*libcap-1.10-r10 (02 Apr 2007)
+
+  02 Apr 2007; Chris PeBenito <pebenito@gentoo.org>
+  +files/libcap-1.10-auditcaps.diff, +libcap-1.10-r10.ebuild:
+  Update capability.h with #defines for audit capabilities.
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> libcap-1.10-r9.ebuild:
   Stable on ppc wrt bug #165742.

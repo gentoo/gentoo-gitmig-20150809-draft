@@ -1,0 +1,14 @@
+diff -urN libcap-1.10.orig/libcap/include/sys/capability.h libcap-1.10/libcap/include/sys/capability.h
+--- libcap-1.10.orig/libcap/include/sys/capability.h	2007-04-01 19:54:19.660718912 -0400
++++ libcap-1.10/libcap/include/sys/capability.h	2007-04-01 19:56:04.272759689 -0400
+@@ -311,6 +311,10 @@
+ 
+ #define CAP_LEASE            28
+ 
++#define CAP_AUDIT_WRITE      29
++
++#define CAP_AUDIT_CONTROL    30
++
+ #endif /* !_LINUX_CAPABILITY_H */
+ 
+ 
