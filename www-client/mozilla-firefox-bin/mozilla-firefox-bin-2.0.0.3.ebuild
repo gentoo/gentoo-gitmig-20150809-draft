@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.3.ebuild,v 1.1 2007/04/02 09:02:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.3.ebuild,v 1.2 2007/04/02 21:56:12 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i68
 HOMEPAGE="http://www.mozilla.org/projects/firefox"
 RESTRICT="nostrip"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE=""
