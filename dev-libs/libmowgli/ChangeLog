@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.8 2007/04/02 11:04:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.9 2007/04/02 11:33:58 chainsaw Exp $
+
+  02 Apr 2007; Tony Vroon <chainsaw@gentoo.org> libmowgli-0.1.3.ebuild:
+  Do not attempt to install README & TODO as documentation, these files do not
+  exist. As pointed out by Raúl Porcel <armin76@gentoo.org> in bug #171580.
 
   02 Apr 2007; Raúl Porcel <armin76@gentoo.org> libmowgli-0.1.3.ebuild:
   Add ~ia64 keyword wrt bug 171580
