@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spice-jndikit/spice-jndikit-1.2.ebuild,v 1.1 2007/01/12 21:35:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spice-jndikit/spice-jndikit-1.2.ebuild,v 1.2 2007/04/02 21:57:23 betelgeuse Exp $
+
+JAVA_PKG_IUSE=="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,16 +13,11 @@ LICENSE="Spice-1.1"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE="doc source test"
-
 RDEPEND=">=virtual/jre-1.4"
 DEPEND="
-		>=dev-java/java-config-2.0.31
 		!doc? ( >=virtual/jdk-1.4 )
 		doc? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* ) )
-		dev-java/ant-core
-		source? ( app-arch/zip )
-		test? ( dev-java/junit dev-java/ant-tasks )"
+		test? ( || ( dev-java/ant-junit dev-java/ant-tasks ) )"
 
 src_unpack() {
 	unpack ${A}
@@ -38,7 +35,7 @@ src_compile() {
 
 src_test() {
 	einfo "Tests need a network connection so they will fail without it"
-	eant test -DJunit.present=true \
+	ANT_TASKS="ant-junit" eant test -DJunit.present=true \
 		-Dgentoo.classpath="$(java-pkg_getjars --build-only junit)"
 }
 
