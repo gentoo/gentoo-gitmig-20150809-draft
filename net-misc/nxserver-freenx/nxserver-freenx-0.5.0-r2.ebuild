@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.5.0-r2.ebuild,v 1.1 2007/03/21 12:18:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.5.0-r2.ebuild,v 1.2 2007/04/02 09:47:31 voyageur Exp $
 
 inherit multilib eutils rpm
 
@@ -25,9 +25,7 @@ DEPEND="virtual/ssh
 	arts? ( kde-base/arts )
 	cups? ( net-print/cups )
 	esd? ( media-sound/esound )
-	!net-misc/nxserver-personal
-	!net-misc/nxserver-business
-	!net-misc/nxserver-enterprise"
+	!net-misc/nxserver-freeedition"
 
 RDEPEND="${DEPEND}"
 
