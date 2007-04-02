@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/kahakai
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.31 2007/01/19 12:34:38 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.32 2007/04/02 01:37:31 nixphoeni Exp $
+
+  02 Apr 2007; Joe Sapp <nixphoeni@gentoo.org>
+  kahakai-0.6.2_p20040306-r1.ebuild:
+  Added a warning for missing tk support in python. AFAIK, it's only needed
+  for /usr/share/kahakai/scripts/pylaunch.py .
 
   19 Jan 2007; Joe Sapp <nixphoeni@gentoo.org>
   -kahakai-0.6.2_p20040306.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306-r1.ebuild,v 1.5 2007/01/17 17:19:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306-r1.ebuild,v 1.6 2007/04/02 01:37:31 nixphoeni Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -37,6 +37,11 @@ S="${WORKDIR}/${PN}"
 pkg_setup() {
 	if use ruby && ! built_with_use dev-lang/swig ruby; then
 		die "dev-lang/swig must be built with ruby support"
+	fi
+
+	if ! built_with_use dev-lang/python tk; then
+		ewarn "In order to use some of the included scripts,"
+		ewarn "dev-lang/python must be built with tk support"
 	fi
 }
 
