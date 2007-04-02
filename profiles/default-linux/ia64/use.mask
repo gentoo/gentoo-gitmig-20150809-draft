@@ -89,10 +89,6 @@ video_cards_nsc
 video_cards_newport
 video_cards_sis
 
-# 01 july 2006 - Gustavo Zacarias <gustavoz@gentoo.org>
-# Seamonkey isn't keyworded for ia64, see bug #137198
-seamonkey
-
 # depends on ibm-jdk-bin which isn't available for ia64
 mpe-sdk
 
