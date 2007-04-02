@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7076 2007/04/02 00:12:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7077 2007/04/02 09:12:13 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (2 Apr 2007)
+# Mozilla is dropping support for 1.5 series
+# starting 24 Apr 2007, pending removal in 14 days
+=www-client/mozilla-firefox-1.5*
+=www-client/mozilla-firefox-bin-1.5*
 
 # Marcelo Goes <vanquirius@gentoo.org> (1 Apr 2007)
 # Masked for testing
