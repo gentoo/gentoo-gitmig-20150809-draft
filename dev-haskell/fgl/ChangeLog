@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.11 2007/04/01 20:28:33 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.12 2007/04/02 20:26:23 kloeri Exp $
+
+  02 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> fgl-5.2.ebuild:
+  Add ~alpha keyword, bug 170650.
 
   01 Apr 2007; Peter Weller <welp@gentoo.org> fgl-5.2.ebuild:
   Keyworded ~x86-fbsd

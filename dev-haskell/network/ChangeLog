@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.10 2007/04/01 20:38:35 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.11 2007/04/02 20:34:11 kloeri Exp $
+
+  02 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> network-1.0.ebuild:
+  Add ~alpha keyword, bug 170650.
 
   01 Apr 2007; Peter Weller <welp@gentoo.org> network-1.0.ebuild:
   Keyworded ~x86-fbsd
