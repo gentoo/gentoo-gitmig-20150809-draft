@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.30.ebuild,v 1.3 2007/04/02 18:07:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.30.ebuild,v 1.4 2007/04/02 18:26:33 dertobi123 Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://perl.apache.org"
 
 SLOT="0"
 LICENSE="Apache-1.1 as-is"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 ~sparc x86"
 
 DEPEND="dev-lang/perl dev-perl/libwww-perl"
 RDEPEND="${DEPEND}"
