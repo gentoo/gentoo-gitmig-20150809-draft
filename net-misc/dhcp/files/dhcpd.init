@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init,v 1.4 2007/03/10 20:21:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init,v 1.5 2007/04/02 12:34:01 uberlord Exp $
 
-DHCPD_CONF="/etc/dhcp/dhcpd.conf"
+DHCPD_CONF=${DHCPD_CONF:-/etc/dhcp/dhcpd.conf}
 
 depend() {
 	need net
