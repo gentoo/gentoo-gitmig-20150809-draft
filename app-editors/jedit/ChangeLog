@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.73 2007/02/22 01:34:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.74 2007/04/02 20:58:50 betelgeuse Exp $
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -jedit-4.3_pre7.ebuild,
+  -jedit-4.3_pre7-r1.ebuild:
+  Remove old versions.
 
 *jedit-4.3_pre9 (22 Feb 2007)
 
