@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.10.ebuild,v 1.2 2007/03/12 23:59:57 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.10.ebuild,v 1.3 2007/04/02 16:24:27 betelgeuse Exp $
+
+JAVA_PKG_IUSE="source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -13,10 +15,8 @@ SRC_URI="mirror://apache/jakarta/tomcat-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="2.5"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="source"
 
-DEPEND=">=virtual/jdk-1.5
-	source? ( app-arch/zip )"
+DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/${MY_P}/"
@@ -29,18 +29,8 @@ src_unpack() {
 	rm */*/build.xml
 }
 
-src_compile() {
-#	local antflags="jar $(use_doc javadoc examples)"
-	local antflags="jar"
-	eant ${antflags}
-}
-
 src_install() {
-	cd "${S}/output/build/lib"
-	java-pkg_dojar *.jar
+	java-pkg_dojar "${S}"/output/build/lib/*.jar
 #	use doc && java-pkg_dohtml -r docs/*
-	if use source; then
-		cd "${S}"
-		java-pkg_dosrc java/javax/servlet/
-	fi
+	use source && java-pkg_dosrc java/javax/servlet/
 }

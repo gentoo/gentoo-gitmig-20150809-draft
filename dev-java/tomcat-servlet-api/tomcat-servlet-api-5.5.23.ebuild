@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-5.5.23.ebuild,v 1.2 2007/03/12 23:59:57 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-5.5.23.ebuild,v 1.3 2007/04/02 16:24:27 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -21,13 +21,6 @@ RDEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )"
 
 S="${WORKDIR}/${MY_P}/servletapi"
-
-pkg_setup() {
-	if use java5; then
-		JAVA_PKG_WANT_SOURCE="1.5"
-		JAVA_PKG_WANT_TARGET="1.5"
-	fi
-}
 
 src_compile() {
 	local antflags="jar $(use_doc javadoc examples)"

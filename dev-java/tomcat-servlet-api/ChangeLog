@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.17 2007/03/12 23:59:57 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.18 2007/04/02 16:24:27 betelgeuse Exp $
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  tomcat-servlet-api-5.5.23.ebuild, tomcat-servlet-api-6.0.10.ebuild:
+  Stylistic cleanup.
 
   12 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-servlet-api-5.5.20.ebuild, tomcat-servlet-api-5.5.23.ebuild,
