@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.0-r1.ebuild,v 1.2 2007/03/29 19:18:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.0-r1.ebuild,v 1.3 2007/04/02 00:11:25 jer Exp $
 
 inherit eutils autotools multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://if.only.it.had.one"
 SRC_URI="http://people.freedesktop.org/~mccann/dist/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug pam"
 
 # Not parallel make safe
