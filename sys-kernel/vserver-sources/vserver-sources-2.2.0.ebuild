@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.2.0_rc20.ebuild,v 1.1 2007/03/26 07:39:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.2.0.ebuild,v 1.1 2007/04/02 08:30:55 hollow Exp $
 
 ETYPE="sources"
 CKV="2.6.20"
