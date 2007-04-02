@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.27 2007/02/09 21:35:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.28 2007/04/02 15:11:15 betelgeuse Exp $
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-dbcp-1.2.1-r1.ebuild:
+  Correct LICENSE to Apache-2.0 and cleanup ebuild.
 
   09 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   commons-dbcp-1.2.1.ebuild, commons-dbcp-1.2.1-r1.ebuild:
