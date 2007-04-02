@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.3 2006/10/14 20:59:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.4 2007/04/02 11:32:33 uberlord Exp $
 
-VSFTPD_CONF="/etc/vsftpd/vsftpd.conf"
-VSFTPD_NAME="${SVCNAME##*.}"
-if [[ -n ${VSFTPD_NAME} && ${SVCNAME} != "vsftpd" ]]; then
+VSFTPD_CONF=${VSFTPD_CONF:-/etc/vsftpd/vsftpd.conf}
+VSFTPD_NAME=${SVCNAME##*.}
+if [ -n "${VSFTPD_NAME}" -a "${SVCNAME}" != "vsftpd" ]; then
     VSFTPD_PID="/var/run/vsftpd.${VSFTPD_NAME}.pid"
 else
     VSFTPD_PID="/var/run/vsftpd.pid"
@@ -17,7 +17,7 @@ depend() {
 }
 
 checkconfig() {
-	if [[ ! -e ${VSFTPD_CONF} ]] ; then
+	if [ ! -e ${VSFTPD_CONF} ] ; then
 		eerror "Please setup ${VSFTPD_CONF} before starting vsftpd"
 		eerror "There are sample configurations in /usr/share/doc/vsftpd"
 		return 1
@@ -54,7 +54,7 @@ start() {
 
 stop() {
 	ebegin "Stopping vsftpd"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/vsftpd \
+	start-stop-daemon --stop --exec /usr/sbin/vsftpd \
 		--pidfile "${VSFTPD_PID}"
 	eend $?
 }
