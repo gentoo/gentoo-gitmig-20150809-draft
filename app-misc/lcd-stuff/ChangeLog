@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd-stuff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.2 2007/01/16 00:36:36 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.3 2007/04/02 13:05:35 rbu Exp $
+
+  02 Apr 2007; Robert Buchholz <rbu@gentoo.org> lcd-stuff-0.1.2.ebuild:
+  added ~amd64 and a missing dep
 
   16 Jan 2007; Robert Buchholz <rbu@gentoo.org> lcd-stuff-0.1.2.ebuild:
   URI fix
