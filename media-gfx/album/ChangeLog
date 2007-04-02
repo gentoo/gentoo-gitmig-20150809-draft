@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/album
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.27 2007/03/09 19:48:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.28 2007/04/02 04:38:25 vanquirius Exp $
+
+  02 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -album-3.12.ebuild,
+  album-4.02.ebuild:
+  Mark 4.02 x86 stable, remove old ebuild.
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> album-3.13.ebuild:
   Stable on ppc wrt bug 169249
