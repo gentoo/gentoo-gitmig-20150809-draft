@@ -1,18 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.7.ebuild,v 1.8 2007/01/13 11:59:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.4.ebuild,v 1.1 2007/04/02 09:42:13 armin76 Exp $
 
 inherit flag-o-matic
 
-IUSE="gtk guionly batch gd doc"
+IUSE="batch doc fasttrack gd gnutella gtk guionly magic"
 
-DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
-HOMEPAGE="http://mldonkey.sourceforge.net"
+DESCRIPTION="MLDonkey is a multi-network P2P application written in Ocaml, coming with its own Gtk GUI, web and telnet interface."
+HOMEPAGE="http://mldonkey.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 RESTRICT="nomirror"
 
 RDEPEND="dev-lang/perl
@@ -20,7 +20,8 @@ RDEPEND="dev-lang/perl
 			>=dev-ml/lablgtk-2.6 )
 	gtk? ( >=gnome-base/librsvg-2.4.0
 			>=dev-ml/lablgtk-2.6 )
-	gd? ( >=media-libs/gd-2.0.28 )"
+	gd? ( >=media-libs/gd-2.0.28 )
+	magic? ( sys-apps/file )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
@@ -32,12 +33,12 @@ MLUSER="p2p"
 pkg_setup() {
 	if use gtk; then
 		echo ""
-		einfo "If the compile with gui fails, and you have updated ocaml"
+		einfo "If the compile with gui fails, and you have updated Ocaml"
 		einfo "recently, you may have forgotten that you need to run"
 		einfo "/usr/portage/dev-lang/ocaml/files/ocaml-rebuild.sh"
 		einfo "to learn which ebuilds you need to recompile"
-		einfo "each time you update ocaml to a different version"
-		einfo "see the ocaml ebuild for details"
+		einfo "each time you update Ocaml to a different version"
+		einfo "see the Ocaml ebuild for details"
 		echo ""
 	fi
 
@@ -48,19 +49,18 @@ pkg_setup() {
 
 	if use gd && !(built_with_use media-libs/gd truetype); then
 		eerror "media-libs/gd must be built with 'truetype' to compile"
-		eerror "mldonkey with gd support"
+		eerror "MLDonkey with gd support"
 		die "Recompile media-libs/gd with enabled truetype USE flag"
 	fi
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} && cd "${S}"
 
 	export WANT_AUTOCONF=2.5
-	cd ${S}/config
+	cd "${S}"/config
 	autoconf
-	cd ${S}
+	cd "${S}"
 }
 
 src_compile() {
@@ -87,15 +87,19 @@ src_compile() {
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
 		--enable-checks \
-		`use_enable batch` \
-		`use_enable gd` \
-		${myconf} || die "Configure Failed!"
+		$(use_enable fasttrack) \
+		$(use_enable gnutella) \
+		$(use_enable gnutella gnutella2) \
+		$(use_enable batch) \
+		$(use_enable gd) \
+		$(use_enable magic) \
+		${myconf} || die "econf failed"
 
 	export OCAMLRUNPARAM="l=256M"
-	emake || die "Make Failed"
+	emake || die "emake failed"
 
 	if ! use guionly; then
-		emake utils || die "make utils failed"
+		emake utils || die "emake utils failed"
 	fi;
 }
 
@@ -104,12 +108,13 @@ src_install() {
 		dobin mlnet mld_hash get_range copysources make_torrent subconv
 		dobin ${FILESDIR}/mldonkey
 
-		insinto /etc/conf.d; newins ${FILESDIR}/mldonkey.confd mldonkey
-		exeinto /etc/init.d; newexe ${FILESDIR}/mldonkey.initd mldonkey
+		insinto /etc/conf.d; newins "${FILESDIR}/mldonkey.confd-2.8" mldonkey
+		fperms 600 /etc/conf.d/mldonkey
+		exeinto /etc/init.d; newexe "${FILESDIR}/mldonkey.initd-2.8-r1" mldonkey
 	fi
 
 	if use gtk; then
-		dobin mlgui mlguistarter mlchat mlim
+		dobin mlgui mlguistarter
 		domenu ${FILESDIR}/${PN}-gui.desktop
 		doicon ${FILESDIR}/${PN}.png
 	fi
@@ -145,9 +150,9 @@ pkg_postinst() {
 	if ! use guionly; then
 		echo
 		einfo "Running \`mldonkey' will start the server inside ~/.mldonkey/"
-		einfo "If you want to start mldonkey in a particular working directory,"
+		einfo "If you want to start MLDonkey in a particular working directory,"
 		einfo "use the \`mlnet' command."
-		einfo "If you want to start mldonkey as a system service, use"
+		einfo "If you want to start MLDonkey as a system service, use"
 		einfo "the /etc/init.d/mldonkey script. To control bandwidth, use"
 		einfo "the 'slow' and 'fast' arguments. Be sure to have a look at"
 		einfo "/etc/conf.d/mldonkey also."
@@ -160,7 +165,7 @@ pkg_postinst() {
 		echo
 	else
 		echo
-		einfo "Simply run mlgui to start the chosen modonkey gui."
+		einfo "Simply run mlgui to start the chosen MLDonkey gui."
 		einfo "It puts its config files into ~/.mldonkey"
 	fi
 }

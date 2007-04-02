@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.144 2007/03/20 04:27:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.145 2007/04/02 09:42:13 armin76 Exp $
+
+*mldonkey-2.8.4 (02 Apr 2007)
+
+  02 Apr 2007; Raúl Porcel <armin76@gentoo.org> -files/dp500.patch,
+  -files/mldonkey.confd, -files/mldonkey.initd, -mldonkey-2.7.7.ebuild,
+  mldonkey-2.8.3.ebuild, +mldonkey-2.8.4.ebuild:
+  Version bump, ia64 stable wrt bug 165591 and cleanup old
 
   20 Mar 2007; Jeroen Roovers <jer@gentoo.org> mldonkey-2.8.3.ebuild:
   Stable for HPPA (bug #165591).
