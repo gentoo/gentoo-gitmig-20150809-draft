@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.30 2007/04/02 23:07:14 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.31 2007/04/02 23:09:41 marienz Exp $
+
+  02 Apr 2007; Marien Zwart <marienz@gentoo.org>
+  -files/bzr-0.8.2-paramiko-1.6-compat.patch,
+  -files/bzr-0.8.2-push-repository.patch,
+  -files/bzr-0.8-fix-manpage-location.patch,
+  -files/bzr-0.9-binary-diff.patch, -files/bzr-0.10-python-2.5-compat.patch:
+  Clean up files dir.
 
 *bzr-0.15 (02 Apr 2007)
 
