@@ -1,0 +1,5 @@
+# 2006/05/25 Guy Martin <gmsoft@gentoo.org>
+# ntpl is the only supported option with >glibc-2.5
+
+-nptl
+-nptlonly
