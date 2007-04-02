@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.18 2007/01/17 06:45:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.19 2007/04/02 17:12:50 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic autotools
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 HOMEPAGE="http://sourceforge.net/projects/strace/"
@@ -39,7 +39,9 @@ src_unpack() {
 	# (08 Feb 2005 agriffis)
 	epatch "${FILESDIR}"/strace-4.5.8-ia64.patch
 
-	aclocal && autoheader && autoconf && automake || die "autotools failed"
+	epatch "${FILESDIR}"/${PN}-4.5.14-CTL_PROC.patch #150907
+
+	eautoreconf
 }
 
 src_compile() {
