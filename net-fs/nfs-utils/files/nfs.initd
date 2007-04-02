@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.1 2007/03/25 12:30:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.2 2007/04/02 12:28:30 uberlord Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -44,7 +44,7 @@ mkdir_nfsdirs() {
 
 waitfor_exportfs() {
 	local pid=$1
-	( sleep ${EXPORTFS_TIMEOUT:-30}; kill -9 $pid &>/dev/null ) &
+	( sleep ${EXPORTFS_TIMEOUT:-30}; kill -9 $pid 2>/dev/null ) &
 	wait $1
 }
 
@@ -53,7 +53,7 @@ start_it() {
 	shift
 	"$@"
 	eend $?
-	((ret+=$?))
+	ret=$((${ret} + $?))
 }
 start() {
 	# Make sure nfs support is loaded in the kernel #64709
@@ -97,13 +97,13 @@ stop() {
 	ebegin "Stopping NFS mountd"
 	start-stop-daemon --stop --quiet --oknodo --exec ${mountd}
 	eend $?
-	((ret+=$?))
+	ret=$((${ret} + $?))
 
 	# nfsd sets its process name to [nfsd] so don't look for $nfsd
 	ebegin "Stopping NFS daemon"
 	start-stop-daemon --stop --quiet --oknodo --name nfsd --user root --signal 2
 	eend $?
-	((ret+=$?))
+	ret=$((${ret} + $?))
 
 	# When restarting the NFS server, running "exportfs -ua" probably
 	# isn't what the user wants.  Running it causes all entries listed
@@ -118,7 +118,7 @@ stop() {
 	# then "exportfs -r" will reread the xtab, and all the current
 	# clients will be able to resume NFS activity, *without* needing
 	# to umount/(re)mount the filesystem.
-	if [ "${restarting}" = no ] ; then
+	if [ "${restarting}" = no -o "${RC_CMD}" = "restart" ] ; then
 		ebegin "Unexporting NFS directories"
 		# Exportfs likes to hang if networking isn't working.
 		# If that's the case, then try to kill it so the

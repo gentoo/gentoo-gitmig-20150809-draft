@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.gssd.initd,v 1.1 2007/03/25 12:30:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.gssd.initd,v 1.2 2007/04/02 12:28:30 uberlord Exp $
 
-[ -e /etc/conf.d/nfs ] && source /etc/conf.d/nfs
+[ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
    gssd=/usr/sbin/rpc.gssd
 svcgssd=/usr/sbin/rpc.svcgssd
@@ -19,7 +19,7 @@ start_it() {
 	shift
 	"$@"
 	eend $?
-	((ret+=$?))
+	ret=$((${ret} + $?))
 }
 start() {
 	local ret=0
@@ -32,7 +32,7 @@ stop_it() {
 	ebegin "Stopping $1"
 	start-stop-daemon --stop --quiet --exec $2
 	eend $?
-	((ret+=$?))
+	ret=$((${ret} + $?))
 }
 stop() {
 	local ret=0

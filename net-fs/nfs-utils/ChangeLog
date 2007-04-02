@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.98 2007/03/27 18:42:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.99 2007/04/02 12:28:30 uberlord Exp $
+
+*nfs-utils-1.0.12-r3 (02 Apr 2007)
+
+  02 Apr 2007; Roy Marples <uberlord@gentoo.org> files/nfs.initd,
+  files/rpc.gssd.initd, files/rpc.idmapd.initd, files/rpc.statd.initd,
+  +nfs-utils-1.0.12-r3.ebuild:
+  Remove some bashisms and support baselayout-2 restart option.
 
   27 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   nfs-utils-1.0.12.ebuild:
