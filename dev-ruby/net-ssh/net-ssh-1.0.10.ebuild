@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-1.0.10.ebuild,v 1.2 2007/03/05 03:38:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-1.0.10.ebuild,v 1.3 2007/04/02 17:00:42 armin76 Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 USE_RUBY="ruby18"
