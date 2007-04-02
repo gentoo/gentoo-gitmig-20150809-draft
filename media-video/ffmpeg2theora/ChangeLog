@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.14 2007/01/05 20:36:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.15 2007/04/02 17:52:33 drac Exp $
+
+*ffmpeg2theora-0.18 (02 Apr 2007)
+
+  02 Apr 2007; Samuli Suominen <drac@gentoo.org> +ffmpeg2theora-0.18.ebuild:
+  Version bump for bug 164469, thanks to Armando Di Cianno for reporting.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   ffmpeg2theora-0.16.ebuild:
