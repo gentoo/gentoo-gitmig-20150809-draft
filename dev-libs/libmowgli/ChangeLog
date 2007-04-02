@@ -1,39 +1,7 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.7 2007/03/22 13:22:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.8 2007/04/02 11:04:57 armin76 Exp $
 
-  22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
-  libmowgli-0.1.3.ebuild:
-  Keyworded ~sparc wrt #171580
-
-  21 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> libmowgli-0.1.3.ebuild:
-  Marked ~amd64.
-
-*libmowgli-0.1.3 (21 Mar 2007)
-
-  21 Mar 2007; Tony Vroon <chainsaw@gentoo.org> -libmowgli-0.1.2.ebuild,
-  +libmowgli-0.1.3.ebuild:
-  Version bump, with an important bug fix for little-endian 64-bit machines
-  (AMD64 comes to mind).
-
-  21 Mar 2007; Jeroen Roovers <jer@gentoo.org> libmowgli-0.1.2.ebuild:
-  Marked ~hppa (bug #171580).
-
-*libmowgli-0.1.2 (21 Mar 2007)
-
-  21 Mar 2007; Tony Vroon <chainsaw@gentoo.org> -libmowgli-0.1.1.ebuild,
-  +libmowgli-0.1.2.ebuild:
-  New upstream release.
-
-*libmowgli-0.1.1 (21 Mar 2007)
-
-  21 Mar 2007; Tony Vroon <chainsaw@gentoo.org> -libmowgli-0.1.0.ebuild,
-  +libmowgli-0.1.1.ebuild:
-  New upstream release. Keyword PPC & PPC64 for bug #171580.
-
-*libmowgli-0.1.0 (20 Mar 2007)
-
-  20 Mar 2007; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
-  +libmowgli-0.1.0.ebuild:
-  Initial commit. Ebuild by me.
+  02 Apr 2007; Raúl Porcel <armin76@gentoo.org> libmowgli-0.1.3.ebuild:
+  Add ~ia64 keyword wrt bug 171580
 
