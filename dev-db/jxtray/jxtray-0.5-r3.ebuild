@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r3.ebuild,v 1.1 2007/01/30 10:52:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r3.ebuild,v 1.2 2007/04/02 21:05:22 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc firebird mssql mysql postgres"
 
-RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
+COMMON_DEP="
 	>=dev-java/jdom-1.0
 	>=dev-java/kunststoff-2.0.2
 	dev-java/poi
@@ -24,9 +24,10 @@ RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
 	mysql? ( dev-java/jdbc-mysql )
 	postgres? ( dev-java/jdbc-postgresql )
 	!firebird? ( !mssql? ( !postgres? ( dev-java/jdbc-mysql ) ) )"
-DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
-	${RDEPEND}
-	dev-java/ant-core"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
+DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${PN}-src-${PV}"
 

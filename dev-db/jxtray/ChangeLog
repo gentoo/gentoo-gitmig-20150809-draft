@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/jxtray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.20 2007/03/03 07:06:38 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.21 2007/04/02 21:05:22 betelgeuse Exp $
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jxtray-0.5-r3.ebuild:
+  Prefer virtual/jdk-1.5 over virtual/jdk-1.4
 
   03 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org> -jxtray-0.5.ebuild:
   Removing older version that deps on soon to be removed jdbc-firebirdsql
