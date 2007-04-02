@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-javamail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.10 2007/04/01 17:47:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.11 2007/04/02 18:32:51 caster Exp $
+
+  02 Apr 2007; Vlastimil Babka <caster@gentoo.org> sun-javamail-1.4.ebuild:
+  Don't call eant with JAVA_PKG_STRICT=true but pass
+  -Dbuild.sysclasspath=ignore explicitly. Small cleanup.
 
   01 Apr 2007; Raúl Porcel <armin76@gentoo.org> sun-javamail-1.4.ebuild:
   Add ~ia64 keyword wrt bug 158687

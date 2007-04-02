@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.ebuild,v 1.10 2007/04/01 17:47:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.ebuild,v 1.11 2007/04/02 18:32:51 caster Exp $
 
+JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A Java-based framework to build multiplatform mail and messaging applications."
@@ -14,13 +15,11 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="CDDL"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.5
-	dev-java/ant-core
-	dev-java/sun-jaf
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4"
+	dev-java/sun-jaf"
+RDEPEND=">=virtual/jre-1.4
+	dev-java/sun-jaf"
 S="${WORKDIR}/mail"
 
 JAVA_PKG_WANT_SOURCE="1.4"
@@ -34,8 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# ensure strict to workaround bug #143246
-	JAVA_PKG_STRICT=true eant -Djavaee.jar=activation.jar jar $(use_doc docs)
+	# sysclasspath=ignore is for bug #143246
+	eant -Dbuild.sysclasspath=ignore -Djavaee.jar=activation.jar jar $(use_doc docs)
 }
 
 src_install() {
