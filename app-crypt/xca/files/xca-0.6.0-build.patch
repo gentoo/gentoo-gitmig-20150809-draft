@@ -1,0 +1,25 @@
+--- xca-0.6.0/configure	2007-03-16 21:34:51.000000000 +0200
++++ xca-0.6.0.new/configure	2007-04-02 13:48:17.000000000 +0300
+@@ -103,17 +103,19 @@ search_includes() {
+ # check for libs
+ search_lib() {
+   for dir in ${DIRS};  do
++for subdir in "" ${subdirs}; do
+     for dbn in $@; do
+       for suffix in so dylib obj a; do
+         for lib in lib out; do
+-          if test -r "${dir}/${lib}/lib${dbn}.${suffix}"; then
+-            add_lib "${dir}/${lib}" "${dbn}" "${suffix}"
+-	    echo "Found: lib${dbn}.${suffix} at ${dir}/${lib}"
++          if test -r "${dir}/${lib}/${subdir}/lib${dbn}.${suffix}"; then
++            add_lib "${dir}/${lib}/${subdir}" "${dbn}" "${suffix}"
++	    echo "Found: lib${dbn}.${suffix} at ${dir}/${lib}/${subdir}"
+             return 0
+ 	  fi
+ 	done
+       done
+     done
++done
+   done
+   return 1
+ }
