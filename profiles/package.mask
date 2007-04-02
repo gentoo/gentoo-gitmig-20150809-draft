@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7078 2007/04/02 12:38:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7079 2007/04/02 17:55:56 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (2 Apr 2007)
+# Masked for bug 164478.
+>=media-video/ffmpeg2theora-0.18
 
 # Roy Marples <uberlord@gentoo.org> (2 Apr 2007)
 # Masked, pending removal. Remove in 30 days
