@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.52 2007/04/02 14:22:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.53 2007/04/02 18:04:51 corsair Exp $
+
+  02 Apr 2007; Markus Rothe <corsair@gentoo.org> nas-1.8b.ebuild:
+  Stable on ppc64; bug #171428
 
 *nas-1.8b (02 Apr 2007)
 
