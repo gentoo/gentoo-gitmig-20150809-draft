@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.140 2007/04/01 20:00:59 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.141 2007/04/02 16:56:08 steev Exp $
+
+  02 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/hal-0.5.9-update_dtd.patch, hal-0.5.9_rc3.ebuild:
+  Update dtd for hal as well.
 
   01 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
   -files/hal-0.5.9-button_capabilities.patch, hal-0.5.9_rc3.ebuild:

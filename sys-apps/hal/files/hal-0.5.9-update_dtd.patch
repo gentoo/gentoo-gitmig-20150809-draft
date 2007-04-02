@@ -1,0 +1,21 @@
+From: David Zeuthen <davidz@redhat.com>
+Date: Sun, 1 Apr 2007 19:08:52 +0000 (-0400)
+Subject: teach fdi.dtd about contains_not, rip out RNG scheme
+X-Git-Url: http://gitweb.freedesktop.org/?p=hal.git;a=commitdiff;h=d3aaf33d66443c0f18743a78511caf16df36cb69
+
+teach fdi.dtd about contains_not, rip out RNG scheme
+
+Also add a note to the TODO list that we should have a
+hal-fdi-file-validate tool much like desktop-file-validate
+---
+
+--- a/fdi/fdi.dtd
++++ b/fdi/fdi.dtd
+@@ -20,6 +20,7 @@
+     is_absolute_path (false|true) #IMPLIED
+     contains         CDATA #IMPLIED
+     contains_ncase   CDATA #IMPLIED
++    contains_not     CDATA #IMPLIED
+     prefix           CDATA #IMPLIED
+     prefix_ncase     CDATA #IMPLIED
+     suffix           CDATA #IMPLIED
