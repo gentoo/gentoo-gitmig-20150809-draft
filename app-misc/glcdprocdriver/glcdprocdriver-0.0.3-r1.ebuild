@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.3.ebuild,v 1.1 2006/10/08 11:37:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.3-r1.ebuild,v 1.1 2007/04/02 13:34:42 rbu Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Glue library for the glcdlib LCDproc driver based on GraphLCD"
 HOMEPAGE="http://www.muresan.de/graphlcd/lcdproc"
@@ -37,6 +37,6 @@ src_compile()
 
 src_install()
 {
-	emake DESTDIR=${D}/usr install || die "make install failed"
+	emake DESTDIR=${D}/usr LIBDIR=${D}/usr/$(get_libdir) install || die "make install failed"
 	dodoc AUTHORS README INSTALL TODO ChangeLog
 }
