@@ -1,12 +1,15 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.54 2007/04/02 18:08:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.55 2007/04/02 18:12:18 drac Exp $
 
   02 Apr 2007; Raúl Porcel <armin76@gentoo.org> nas-1.8b.ebuild:
   x86 + ia64 stable wrt security bug 171428
 
   02 Apr 2007; Markus Rothe <corsair@gentoo.org> nas-1.8b.ebuild:
   Stable on ppc64; bug #171428
+
+  02 Apr 2007; Samuli Suominen <drac@gentoo.org> files/nas.init.d:
+  Remove old X11R6 legacy path from init script.
 
 *nas-1.8b (02 Apr 2007)
 
