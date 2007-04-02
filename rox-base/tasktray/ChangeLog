@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/tasktray
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.10 2007/03/27 21:39:36 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.11 2007/04/02 22:05:42 lack Exp $
+
+*tasktray-0.4.2.1 (02 Apr 2007)
+
+  02 Apr 2007; Jim Ramsay <lack@gentoo.org> +tasktray-0.4.2.1.ebuild:
+  Version bump - 0.4.2.1 is released
 
 *tasktray-0.4.1 (27 Mar 2007)
 
