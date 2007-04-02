@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.11 2007/01/13 13:12:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.12 2007/04/02 19:08:23 dertobi123 Exp $
+
+  02 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  jal-20031117-r3.ebuild:
+  ppc stable, bug #173010
 
 *jal-20031117-r3 (13 Jan 2007)
 
