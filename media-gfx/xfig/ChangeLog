@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.39 2007/04/01 18:58:26 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.40 2007/04/02 15:23:03 pva Exp $
+
+*xfig-3.2.5-r1 (02 Apr 2007)
+
+  02 Apr 2007; <pva@gentoo.org> metadata.xml, -xfig-3.2.5.ebuild,
+  +xfig-3.2.5-r1.ebuild:
+  Fixed commit strait into stable. Some other modifications mentioned in bug
+  #173009.
 
   01 Apr 2007; Anant Narayanan <anant@gentoo.org> xfig-3.2.5.ebuild:
   Fix SRC_URI, closes bug #173009
