@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.1-r2.ebuild,v 1.9 2007/03/28 06:00:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.1-r2.ebuild,v 1.10 2007/04/02 12:17:12 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -72,16 +72,6 @@ S=${WORKDIR}/${MY_P}
 
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
-
-pkg_setup() {
-	# Catch most people for now #159497 ... delete this check
-	# once we move to stable for releases
-	if [[ $(LC_ALL="C" date +%Z) == "Local time zone must be set--see zic manual page" ]] ; then
-		eerror "You forgot to set up your /etc/localtime."
-		eerror "You should do so now."
-		die "forgetful admin detected"
-	fi
-}
 
 busybox_config_option() {
 	case $1 in
