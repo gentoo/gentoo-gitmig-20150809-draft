@@ -38,3 +38,6 @@ media-libs/mesa xcb
 
 # net-wireless/aircrack-ng - wireless capture tools not needed.
 net-wireless/aircrack-ng wifi
+
+# sane-backends not yet keyworded
+dev-python/imaging scanner
