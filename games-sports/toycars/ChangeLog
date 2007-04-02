@@ -1,0 +1,21 @@
+# ChangeLog for games-sports/toycars
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.5 2007/04/02 19:48:47 tupone Exp $
+
+  02 Apr 2007; <atupone@gentoo.org> +files/toycars-0.3.2-asneeded.patch,
+  +metadata.xml, +toycars-0.3.2.ebuild:
+  Resurrecting, as there is a verbal permission to use the music on this game
+  See bug #116905
+
+  26 Mar 2007; Samuli Suominen <drac@gentoo.org>
+  +files/toycars-0.3.2-asneeded.patch, toycars-0.3.2.ebuild:
+  Fix linking with -Wl,--as-needed.
+
+  26 Mar 2007; <tupone@gentoo.org> toycars-0.3.2.ebuild:
+  Added keyword ~x86. Bug #172262 by Will Briggs
+
+*toycars-0.3.2 (25 Mar 2007)
+
+  25 Mar 2007; <atupone@gentoo.org> +metadata.xml, +toycars-0.3.2.ebuild:
+  New package, requested by roma1390 with bug #116905
+
