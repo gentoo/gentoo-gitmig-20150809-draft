@@ -1,10 +1,14 @@
 # ChangeLog for games-arcade/snake3d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/ChangeLog,v 1.1 2007/03/31 09:36:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/ChangeLog,v 1.2 2007/04/02 14:57:48 nyhm Exp $
+
+  02 Apr 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/snake3d-0.9-build.patch, snake3d-0.9.ebuild:
+  keyword ~x86, bug #173092
 
 *snake3d-0.9 (31 Mar 2007)
 
-  31 Mar 2007; <atupone@gentoo.org> +files/snake3d-0.9-amd64.patch,
+  31 Mar 2007; <tupone@gentoo.org> +files/snake3d-0.9-amd64.patch,
   +metadata.xml, +snake3d-0.9.ebuild:
   New package. Bug #117079 by roma1390
 

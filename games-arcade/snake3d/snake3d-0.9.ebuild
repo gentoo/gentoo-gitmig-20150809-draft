@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.1 2007/03/31 09:36:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.2 2007/04/02 14:57:48 nyhm Exp $
 
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="variant of the snake game"
 HOMEPAGE="http://sourceforge.net/projects/worms3d/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/worms3d/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/sdl-net
@@ -24,11 +24,17 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-amd64.patch
+	epatch \
+		"${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}"/${P}-build.patch
+}
+
+src_compile() {
+	emake CXX=$(tc-getCXX) -C src snake3d.linux || die "emake failed"
 }
 
 src_install() {
-	dodoc ChangeLog README TODO || die "failed installing doc"
-	dogamesbin ${PN} || die "failed installing executable"
+	dogamesbin ${PN} || die "dogamesbin failed"
+	dodoc ChangeLog README TODO
 	prepgamesdirs
 }
