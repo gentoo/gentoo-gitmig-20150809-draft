@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.09.ebuild,v 1.1 2007/04/01 20:38:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.09.ebuild,v 1.2 2007/04/02 21:40:34 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="Perl module for Class::MethodMaker"
-HOMEPAGE="http://search.cpan.org/~fluffy"
-SRC_URI="mirror://cpan/authors/id/F/FL/FLUFFY/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~schwigon"
+SRC_URI="mirror://cpan/authors/id/S/SC/SCHWIGON/class-methodmaker/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
