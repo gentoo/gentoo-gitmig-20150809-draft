@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/w32api
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/ChangeLog,v 1.4 2007/03/19 13:35:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/ChangeLog,v 1.5 2007/04/02 23:18:09 vapier Exp $
+
+*w32api-3.9 (02 Apr 2007)
+
+  02 Apr 2007; Mike Frysinger <vapier@gentoo.org> +w32api-3.9.ebuild:
+  Version bump #173118 by Dennis Schridde.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove cretin from metadata.xml due to retirement.
