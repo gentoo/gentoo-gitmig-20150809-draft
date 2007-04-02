@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9_rc3.ebuild,v 1.4 2007/04/02 16:56:08 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9_rc3.ebuild,v 1.5 2007/04/02 17:06:31 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -12,14 +12,14 @@ SRC_URI="http://people.freedesktop.org/~david/dist/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="acpi crypt debug dell disk-partition doc mactel pcmcia selinux"
 
 RDEPEND=">=dev-libs/glib-2.6
 		>=dev-libs/dbus-glib-0.61
 		>=sys-fs/udev-104
 		>=sys-apps/util-linux-2.12r-r1
-		|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
+		>=sys-kernel/linux-headers-2.6.17
 		>=dev-libs/expat-1.95.8
 		>=sys-apps/pciutils-2.2.3
 		>=dev-libs/libusb-0.1.10a
