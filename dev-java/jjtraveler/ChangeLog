@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jjtraveler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.8 2007/02/09 02:08:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.9 2007/04/02 08:42:40 betelgeuse Exp $
+
+*jjtraveler-0.4.3-r1 (02 Apr 2007)
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/0.4.3-makefile.am.patch, +jjtraveler-0.4.3-r1.ebuild:
+  Migrate to generation 2 and make this compile again. Thanks to Mike Smith
+  <mas3f@alumni.virginia.edu>.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
