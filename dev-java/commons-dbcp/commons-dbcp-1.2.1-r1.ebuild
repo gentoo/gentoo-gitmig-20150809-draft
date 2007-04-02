@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.6 2007/04/02 15:11:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.7 2007/04/02 18:51:10 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -16,8 +16,8 @@ RDEPEND=">=virtual/jre-1.4
 		${COMMON_DEP}"
 # FIXME doesn't like API changes with Java 1.6
 DEPEND="|| (
-			=virtual/jdk-1.4*
 			=virtual/jdk-1.5*
+			=virtual/jdk-1.4*
 		)
 		${COMMON_DEP}"
 LICENSE="Apache-2.0"
