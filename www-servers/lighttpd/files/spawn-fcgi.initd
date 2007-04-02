@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/spawn-fcgi.initd,v 1.1 2005/02/14 11:39:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/spawn-fcgi.initd,v 1.2 2007/04/02 12:46:08 uberlord Exp $
 
 SPAWNFCGI_PID="/var/run/spawn-fcgi.pid"
 
@@ -40,10 +40,12 @@ start() {
 
 stop() {
         ebegin "Stopping spawn-fcgi"
-        kill `cat ${SPAWNFCGI_PID}`
-		[[ $? -ne 0 ]] && eend $?
+        if ! kill `cat ${SPAWNFCGI_PID}` ; then
+	    eend $?
+	    return 1
+	fi
         if [ -w ${SPAWNFCGI_PID} ]; then
-                rm ${SPAWNFCGI_PID};
+                rm ${SPAWNFCGI_PID}
         fi
         eend 0
 }

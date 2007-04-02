@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.106 2007/04/01 23:22:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.107 2007/04/02 12:46:08 uberlord Exp $
+
+  02 Apr 2007; Roy Marples <uberlord@gentoo.org> files/spawn-fcgi.initd:
+  Remove bashisms from spawn-fcgi
 
   01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
   +files/conf/mod_fastcgi.conf-1.4.13-r2, lighttpd-1.4.13-r2.ebuild:
