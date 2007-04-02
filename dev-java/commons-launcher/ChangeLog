@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-launcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.16 2007/04/02 15:33:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.17 2007/04/02 16:07:27 betelgeuse Exp $
+
+*commons-launcher-1.1 (02 Apr 2007)
+
+  02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +commons-launcher-1.1.ebuild:
+  Version bump.
 
   02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-launcher-0.9-r1.ebuild:
