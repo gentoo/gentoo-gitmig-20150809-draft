@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7082 2007/04/03 04:43:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7083 2007/04/03 14:29:08 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,16 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (3 Apr 2007)
+# Nessus 2.3.x was discontinued
+# 2.3.x users, please migrate to 2.2.9
+# See bug 169466 for more information
+>=net-analyzer/nessus-libraries-2.3.1
+>=net-analyzer/libnasl-2.3.1
+>=net-analyzer/nessus-core-2.3.1
+>=net-analyzer/nessus-plugins-2.3.1
+>=net-analyzer/nessus-2.3.1
 
 # Roy Marples <uberlord@gentoo.org> (2 Apr 2007)
 # Masked, pending removal. Remove in 30 days
