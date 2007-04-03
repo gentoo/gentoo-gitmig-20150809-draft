@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.200 2007/03/19 21:32:12 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.201 2007/04/03 21:19:25 gustavoz Exp $
+
+  03 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  alsa-utils-1.0.14_rc2-r3.ebuild:
+  Stable on sparc
 
   19 Mar 2007; Roy Marples <uberlord@gentoo.org> files/alsasound.initd:
   Only unload snd when it's loaded, #168367 thanks to Stephan Wezel.
