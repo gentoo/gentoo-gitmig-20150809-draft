@@ -1,0 +1,10 @@
+# ChangeLog for perl-core/Math-BigRat
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.1 2007/04/03 21:37:46 mcummings Exp $
+
+*Math-BigRat-0.17 (03 Apr 2007)
+
+  03 Apr 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Math-BigRat-0.17.ebuild:
+  New PDEP for perl-core/Math-BigInt
+
