@@ -8,14 +8,3 @@
  EOT
      chmod 755 $1
  }
---- bin/unpack 
-+++ bin/unpack 
-@@ -351,7 +351,7 @@
- 
- if test -d $OOBUILDDIR/ooo_custom_images/tango/res ; then
-     echo "Installing Tango icon for the GNOME quickstarter applet..."
--    cp $SRCDIR/tango_mainapp_16.png $OOBUILDDIR/ooo_custom_images/tango/res/mainapp_16.png || exit 1;
-+    cp $TOOLSDIR/src/tango_mainapp_16.png $OOBUILDDIR/ooo_custom_images/tango/res/mainapp_16.png || exit 1;
- fi
- 
- if test "x$OOO_EXTRA_ARTWORK" != "x"; then
