@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.57 2007/04/03 02:03:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.58 2007/04/03 07:42:12 killerfox Exp $
+
+  03 Apr 2007; René Nussbaumer <killerfox@gentoo.org> nas-1.8b.ebuild:
+  Stable on hppa. See bug #171428.
 
   03 Apr 2007; Jeroen Roovers <jer@gentoo.org> files/nas.conf.d:
   Fix path to nasd in nas.conf.d.
