@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.261 2007/04/03 16:46:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.262 2007/04/03 17:06:00 armin76 Exp $
+
+  03 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Bleh, unmask firefox-1.5* again
 
   03 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask rc versions of net-p2p/rb_libtorrent

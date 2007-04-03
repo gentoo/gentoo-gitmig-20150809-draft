@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7085 2007/04/03 16:46:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7086 2007/04/03 17:06:00 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -45,7 +45,7 @@
 # starting 24 Apr 2007, -bin pending removal in 14 days
 # not -bin pending removal as soon as gnome-2.14 gets punted
 # bug 173250
-=www-client/mozilla-firefox-1.5*
+#=www-client/mozilla-firefox-1.5*
 =www-client/mozilla-firefox-bin-1.5*
 
 # Marcelo Goes <vanquirius@gentoo.org> (1 Apr 2007)
