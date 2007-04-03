@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.65 2007/03/23 00:29:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.66 2007/04/03 15:47:06 armin76 Exp $
+
+  03 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  unmask www-client/mozilla-firefox-1.5* wrt bug 173250 in 2.4 profile
 
   23 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org> no-nptl/package.mask:
   Mask seahorse on no-nptl
