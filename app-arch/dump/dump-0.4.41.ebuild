@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.41.ebuild,v 1.3 2007/03/22 18:23:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.41.ebuild,v 1.4 2007/04/03 18:09:33 armin76 Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/dump/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE="readline static ermt"
 
 RDEPEND=">=sys-fs/e2fsprogs-1.27
