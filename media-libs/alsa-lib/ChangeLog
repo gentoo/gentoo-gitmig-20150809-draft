@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.225 2007/03/17 20:37:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.226 2007/04/03 21:11:49 gustavoz Exp $
+
+  03 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  alsa-lib-1.0.14_rc3.ebuild:
+  Stable on sparc
 
 *alsa-lib-1.0.14_rc3-r1 (17 Mar 2007)
 *alsa-lib-1.0.14_rc3 (17 Mar 2007)
