@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libmrss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.4 2007/03/15 11:17:23 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.5 2007/04/03 04:00:37 rbu Exp $
+
+*libmrss-0.17.1 (03 Apr 2007)
+
+  03 Apr 2007; Robert Buchholz <rbu@gentoo.org> -libmrss-0.16.ebuild,
+  +libmrss-0.17.1.ebuild:
+  version bump fixing memory leaks and datetime formats
 
   15 Mar 2007; Robert Buchholz <rbu@gentoo.org> libmrss-0.17.ebuild:
   keyworded ~amd64
