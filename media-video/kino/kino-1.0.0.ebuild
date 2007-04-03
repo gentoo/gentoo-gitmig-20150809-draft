@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.1 2007/03/28 17:02:48 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.2 2007/04/03 20:03:11 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -48,6 +48,10 @@ src_unpack() {
 		-e '/\$(LIBQUICKTIME_LIBS) \\/d' \
 		-e '/^[[:space:]]*\$(SRC_LIBS)/ a\
 	\$(LIBQUICKTIME_LIBS) \\' \
+		src/Makefile.in
+	# Fix bug #172687
+	sed -i \
+		-e 's/^install-exec-local:/install-exec-local: install-binPROGRAMS/' \
 		src/Makefile.in
 }
 
