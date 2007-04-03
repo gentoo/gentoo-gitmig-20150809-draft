@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.1 2007/04/03 13:30:41 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.2 2007/04/03 21:29:42 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -84,6 +84,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Gentoo Patch Set
+	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch ${FILESDIR}/${PV}
+
 	epatch ${FILESDIR}/${PN}-0.5.7-plugdev-allow-send.patch
 }
 

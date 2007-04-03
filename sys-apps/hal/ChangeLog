@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.143 2007/04/03 13:30:41 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.144 2007/04/03 21:29:42 cardoe Exp $
+
+  03 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/01_luks_mount_fix.patch, hal-0.5.9.ebuild:
+  add support for Gentoo Patchset applying via versioned directories (to use
+  quilt). Fix from upstream for LUKS mounting
 
 *hal-0.5.9 (03 Apr 2007)
 
