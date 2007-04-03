@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.137 2007/04/03 13:35:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.138 2007/04/03 13:56:06 armin76 Exp $
+
+  03 Apr 2007; Raúl Porcel <armin76@gentoo.org> dhcpcd-3.0.16.ebuild:
+  ia64 + x86 stable wrt bug 166921
 
   03 Apr 2007; Jeroen Roovers <jer@gentoo.org> dhcpcd-3.0.16.ebuild:
   Stable for HPPA (bug #166921).
