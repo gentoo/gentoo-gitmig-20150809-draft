@@ -1,0 +1,56 @@
+diff -urN krb5-1.5.2.orig/src/appl/telnet/telnetd/state.c krb5-1.5.2/src/appl/telnet/telnetd/state.c
+--- krb5-1.5.2.orig/src/appl/telnet/telnetd/state.c	2006-06-15 18:42:53.000000000 -0400
++++ krb5-1.5.2/src/appl/telnet/telnetd/state.c	2007-03-28 18:05:19.000000000 -0400
+@@ -1665,7 +1665,8 @@
+ 	    strcmp(varp, "RESOLV_HOST_CONF") && /* linux */
+ 	    strcmp(varp, "NLSPATH") && /* locale stuff */
+ 	    strncmp(varp, "LC_", strlen("LC_")) && /* locale stuff */
+-	    strcmp(varp, "IFS")) {
++	    strcmp(varp, "IFS") &&
++		!strchr(varp, '-')) {
+ 		return 1;
+ 	} else {
+ 		syslog(LOG_INFO, "Rejected the attempt to modify the environment variable \"%s\"", varp);
+diff -urN krb5-1.5.2.orig/src/appl/telnet/telnetd/sys_term.c krb5-1.5.2/src/appl/telnet/telnetd/sys_term.c
+--- krb5-1.5.2.orig/src/appl/telnet/telnetd/sys_term.c	2002-11-15 15:21:51.000000000 -0500
++++ krb5-1.5.2/src/appl/telnet/telnetd/sys_term.c	2007-03-28 18:10:59.000000000 -0400
+@@ -1287,6 +1287,16 @@
+ #endif
+ #if	defined (AUTHENTICATION)
+ 	if (auth_level >= 0 && autologin == AUTH_VALID) {
++		if (name[0] == '-') {
++			/* Authenticated and authorized to log in to an account
++			 * starting with '-'?  Even if that unlikely case comes
++			 * to pass, the current program will not patse the
++			 * resulting command line properly.
++			 */
++			syslog(LOG_ERR, "user name can not start with '-'");
++			fatal(net, "user name can not start with '-'");
++			exit(1);
++		}
+ # if	!defined(NO_LOGIN_F)
+ #if	defined(LOGIN_CAP_F)
+ 		argv = addarg(argv, "-F");
+@@ -1377,12 +1387,20 @@
+ 	} else
+ #endif
+ 	if (getenv("USER")) {
+-		argv = addarg(argv, getenv("USER"));
++		char *user = getenv("USER");
++		if (user[0] == '-') {
++			/* "telnet -l-x ..." */
++			syslog(LOG_ERR, "user name cannot start with '-'");
++			fatal(net, "user name cannot start with '-'");
++			exit(1);
++		}
++		argv = addarg(argv, user);
+ #if	defined(LOGIN_ARGS) && defined(NO_LOGIN_P)
+ 		{
+ 			register char **cpp;
+ 			for (cpp = environ; *cpp; cpp++)
+-				argv = addarg(argv, *cpp);
++				if ((*cpp[0] != '-')
++					argv = addarg(argv, *cpp);
+ 		}
+ #endif
+ 		/*
