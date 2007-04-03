@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.147 2007/04/03 20:19:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.148 2007/04/03 20:51:40 seemant Exp $
+
+*mit-krb5-1.5.2-r2 (03 Apr 2007)
+
+  03 Apr 2007; Seemant Kulleen <seemant@gentoo.org> -files/krb5.confd,
+  -files/kdc.conf, -files/krb5.conf, -files/krb5.initd,
+  -files/mit-krb5-notermcap.patch, mit-krb5-1.4.3-r3.ebuild,
+  +mit-krb5-1.5.2-r2.ebuild:
+  Added a warning about the db switch, closing bug #143605 by Olivier Calle,
+  and a suggestion from Doug Paul
 
 *mit-krb5-1.5.2-r1 (03 Apr 2007)
 

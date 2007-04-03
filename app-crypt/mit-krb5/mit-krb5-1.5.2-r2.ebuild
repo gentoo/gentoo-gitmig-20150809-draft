@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r3.ebuild,v 1.12 2007/04/03 20:51:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.2-r2.ebuild,v 1.1 2007/04/03 20:51:40 seemant Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -13,8 +13,8 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="krb4 tcl ipv6 doc berkdb"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="krb4 tcl ipv6 doc"
 
 RDEPEND="!virtual/krb5
 	sys-libs/com_err
@@ -24,28 +24,17 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )"
 PROVIDE="virtual/krb5"
 
-pkg_setup() {
-	if use berkdb ; then
-		eerror "Please export your current kerberos db because"
-		eerror "we are now using the built-in db with its new locations"
-		eerror "Once you have exported your db, please set the -berkdb"
-		eerror "USE flag for this package"
-	fi
-}
-
 src_unpack() {
 	unpack ${MY_P}-signed.tar
 	unpack ./${MY_P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-lazyldflags.patch
-	epatch "${FILESDIR}"/${PN}-robustgnu.patch
-	epatch "${FILESDIR}"/${PN}-pthreads.patch
-	epatch "${FILESDIR}"/${PN}-setupterm.patch
-	epatch "${FILESDIR}"/${P}-setuid.patch
+	epatch "${FILESDIR}"/${PN}-SA-2007-001-telnetd.patch
+	epatch "${FILESDIR}"/${PN}-SA-2007-002-syslog.patch
+	epatch "${FILESDIR}"/${PN}-SA-2007-003.patch
 	ebegin "Reconfiguring configure scripts (be patient)"
 	cd "${S}"/appl/telnet
 	eautoconf --force -I "${S}"
-	sed -i 's/^# \(@lib\(obj\)\?_frag@\)/\1/' libtelnet/Makefile.in
 	eend $?
 }
 
@@ -54,10 +43,10 @@ src_compile() {
 		$(use_with krb4) \
 		$(use_with tcl) \
 		$(use_enable ipv6) \
-		--enable-static \
 		--enable-shared \
 		--with-system-et --with-system-ss \
-		--enable-dns-for-realm || die
+		--enable-dns-for-realm \
+		--enable-kdc-replay-cache || die
 
 	emake -j1 || die
 
@@ -74,10 +63,12 @@ src_test() {
 }
 
 src_install() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		EXAMPLEDIR=/usr/share/doc/${PF}/examples \
 		install || die
+
+	keepdir /var/lib/krb5kdc
 
 	cd ..
 	dodoc README
@@ -88,24 +79,23 @@ src_install() {
 	use doc && dodoc doc/{api,implement}/*.ps
 
 	for i in {telnetd,ftpd} ; do
-		mv ${D}/usr/share/man/man8/${i}.8 ${D}/usr/share/man/man8/k${i}.8
-		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
+		mv "${D}"/usr/share/man/man8/${i}.8 "${D}"/usr/share/man/man8/k${i}.8
+		mv "${D}"/usr/sbin/${i} "${D}"/usr/sbin/k${i}
 	done
 
 	for i in {rcp,rlogin,rsh,telnet,ftp} ; do
-		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
-		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
+		mv "${D}"/usr/share/man/man1/${i}.1 "${D}"/usr/share/man/man1/k${i}.1
+		mv "${D}"/usr/bin/${i} "${D}"/usr/bin/k${i}
 	done
 
 	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind
 	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc
 
 	insinto /etc
-	newins /usr/share/doc/${PF}/examples/krb5.conf krb5.conf.example
-	newins /usr/share/doc/${PF}/examples/kdc.conf kdc.conf.example
+	newins ${D}/usr/share/doc/${PF}/examples/krb5.conf krb5.conf.example
+	newins ${D}/usr/share/doc/${PF}/examples/kdc.conf kdc.conf.example
 }
 
 pkg_postinst() {
-
 	elog "See /usr/share/doc/${PF}/html/krb5-admin/index.html for documentation."
 }

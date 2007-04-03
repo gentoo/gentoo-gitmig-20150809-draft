@@ -1,9 +1,0 @@
-# Config file for /etc/init.d/conf
-
-# Uncomment the KRB5_KDC_MASTER line if this machine will serve as the
-# master KDC.  
-#KRB5_KDC_MASTER=yes
-
-# Uncomment the KRB5_KDC line if this machine will serve as a backup KDC
-#KRB5_KDC=yes
-
