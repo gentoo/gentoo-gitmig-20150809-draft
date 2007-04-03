@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.119 2007/02/05 10:59:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.120 2007/04/03 13:42:48 nichoj Exp $
+
+  03 Apr 2007; Joshua Nichols <nichoj@gentoo.org> metadata.xml:
+  Added java to metadata.
 
   05 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   eclipse-sdk-3.2.ebuild:
