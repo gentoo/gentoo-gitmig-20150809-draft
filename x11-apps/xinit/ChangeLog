@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.77 2007/03/11 02:01:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.78 2007/04/03 16:41:03 cardoe Exp $
+
+*xinit-1.0.3-r2 (03 Apr 2007)
+
+  03 Apr 2007; Doug Goldstein <cardoe@gentoo.org> files/xdm.initd,
+  -xinit-1.0.3-r1.ebuild, +xinit-1.0.3-r2.ebuild:
+  rev bump for bug #168531. adding consolekit to use section.
 
   11 Mar 2007; Roy Marples <uberlord@gentoo.org> files/startDM.sh:
   Work better with non bash shells.
