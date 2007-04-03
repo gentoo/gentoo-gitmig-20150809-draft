@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.7 2007/02/21 10:05:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.8 2007/04/03 13:53:00 armin76 Exp $
+
+*linuxdcpp-20070403 (03 Apr 2007)
+
+  03 Apr 2007; Raúl Porcel <armin76@gentoo.org> -linuxdcpp-20070210.ebuild,
+  +linuxdcpp-20070403.ebuild:
+  Version bump wrt bug 173239, thanks to Peter Hjalmarsson <xake at rymdraket
+  dot net> for reporting
 
   21 Feb 2007; Raúl Porcel <armin76@gentoo.org> linuxdcpp-9999.ebuild,
   linuxdcpp-20070210.ebuild:
