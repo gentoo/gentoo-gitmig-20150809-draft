@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.4 2007/04/02 16:34:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.5 2007/04/03 13:56:49 steev Exp $
+
+*hal-info-20070402 (03 Apr 2007)
+
+  03 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
+  -files/hal-info-update_dtd.patch, -hal-info-20070328.ebuild,
+  +hal-info-20070402.ebuild:
+  New upstream release to coincide with hal 0.5.9 release.
 
   02 Apr 2007; Raúl Porcel <armin76@gentoo.org> hal-info-20070328.ebuild:
   Add ~ia64 wrt bug 172789
