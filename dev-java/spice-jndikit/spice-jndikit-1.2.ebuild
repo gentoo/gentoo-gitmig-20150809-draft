@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spice-jndikit/spice-jndikit-1.2.ebuild,v 1.2 2007/04/02 21:57:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spice-jndikit/spice-jndikit-1.2.ebuild,v 1.3 2007/04/03 02:03:51 mr_bones_ Exp $
 
-JAVA_PKG_IUSE=="doc source test"
+JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
