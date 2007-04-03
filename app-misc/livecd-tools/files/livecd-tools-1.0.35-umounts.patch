@@ -1,0 +1,20 @@
+Index: livecd-functions.sh
+===================================================================
+--- livecd-functions.sh	(revision 126)
++++ livecd-functions.sh	(working copy)
+@@ -497,11 +497,13 @@
+ 		case "${x}" in
+ 			cdroot)
+ 				CDBOOT="yes"
+-				export CDBOOT
++				RC_NO_UMOUNTS="^(/|/dev|/dev/pts|/lib/rcscripts/init.d|/proc|/proc/.*|/sys|/mnt/livecd|/newroot)$"
++				export CDBOOT RC_NO_UMOUNTS
+ 			;;
+ 			cdroot\=*)
+ 				CDBOOT="yes"
+-				export CDBOOT
++				RC_NO_UMOUNTS="^(/|/dev|/dev/pts|/lib/rcscripts/init.d|/proc|/proc/.*|/sys|/mnt/livecd|/newroot)$"
++				export CDBOOT RC_NO_UMOUNTS
+ 			;;
+ 			console\=*)
+ 				local live_console
