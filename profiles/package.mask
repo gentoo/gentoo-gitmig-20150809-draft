@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7084 2007/04/03 16:02:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7085 2007/04/03 16:46:06 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (3 Apr 2007)
+# Mask rc versions
+=net-libs/rb_libtorrent-0.12_rc*
 
 # Marcelo Goes <vanquirius@gentoo.org> (3 Apr 2007)
 # Nessus 2.3.x was discontinued
