@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-modeler
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.23 2007/02/18 19:40:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.24 2007/04/03 07:36:17 opfer Exp $
+
+  03 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  commons-modeler-2.0.ebuild:
+  x86 stable, bug 173150
 
   18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -commons-modeler-1.1-r2.ebuild, -commons-modeler-1.1-r3.ebuild:
