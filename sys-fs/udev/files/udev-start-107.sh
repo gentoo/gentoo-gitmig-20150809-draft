@@ -15,7 +15,7 @@ populate_udev() {
 	if [ $(get_KV) -gt $(KV_to_int '2.6.14') ] ; then
 		ebegin "Populating /dev with existing devices through uevents"
 		local opts=
-		[ ${RC_COLDPLUG} != "yes" ] && opts="--attr-match=dev"
+		[ "${RC_COLDPLUG}" != "yes" ] && opts="--attr-match=dev"
 		/sbin/udevtrigger ${opts}
 		eend $?
 	else
