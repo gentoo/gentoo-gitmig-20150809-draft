@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.39 2007/03/27 15:13:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.40 2007/04/03 10:26:39 caster Exp $
+
+  03 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/2.0.1-site_xml.patch, itext-2.0.1.ebuild:
+  Remove external links from javadoc call so it doesn't work online, closes
+  bug #171900. Add missing bcprov dep. Don't call dojar on deps' jars.
 
   27 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   +files/2.0.1-compile_xml.patch, -files/compile_xml.patch,
