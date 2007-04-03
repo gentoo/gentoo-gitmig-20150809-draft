@@ -1,3 +1,7 @@
+# Raúl Porcel <armin76@gentoo.org> (03 Apr 2007)
+# Unmasking firefox-1.5 for <epiphany-2.16
+-=www-client/mozilla-firefox-1.5*
+
 # Mart Raudsepp <leio@gentoo.org> (12 Oct 2006)
 # Masked GNOME-2.16 for alpha until necessary packages are keyworded, bug #147751
 >=gnome-base/gnome-2.16.0
