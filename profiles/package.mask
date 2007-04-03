@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7086 2007/04/03 17:06:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7087 2007/04/03 17:49:04 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,8 +22,10 @@
 ##
 
 # Raúl Porcel <armin76@gentoo.org> (3 Apr 2007)
-# Mask rc versions
-=net-libs/rb_libtorrent-0.12_rc*
+# Mask rc versions of rb_libtorrent, and mask
+# qbittorrent-0.9.0, as it depends on it.
+>=net-libs/rb_libtorrent-0.12_rc2
+>=net-p2p/qbittorrent-0.9.0
 
 # Marcelo Goes <vanquirius@gentoo.org> (3 Apr 2007)
 # Nessus 2.3.x was discontinued
