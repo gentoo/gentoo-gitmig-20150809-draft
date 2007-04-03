@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.311 2007/04/03 07:53:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.312 2007/04/03 14:10:20 suka Exp $
+
+  03 Apr 2007; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.4/disable-regcomp-java.diff,
+  -files/2.0.4/disable-regcomp-python.diff, -files/2.0.4/regcompapply.diff,
+  -files/2.0.4/gentoo-2.0.4.diff, -openoffice-2.0.4.ebuild:
+  Remove 2.0.4 for security bug #170828. This actually leaves us with no
+  keyworded version for sparc, but this in accordance with the sparc-devs
 
   03 Apr 2007; Andreas Proschofsky <suka@gentoo.org>
   files/2.1.0/gentoo-2.1.0.diff, openoffice-2.1.0-r1.ebuild:
