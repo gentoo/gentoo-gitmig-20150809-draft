@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.1 2007/03/25 07:44:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.2 2007/04/03 14:24:59 matsuu Exp $
 
-inherit eutils qt3 multilib elisp-common
+inherit eutils qt3 multilib elisp-common flag-o-matic
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
