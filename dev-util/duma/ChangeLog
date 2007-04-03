@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/duma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.1 2007/04/03 05:57:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.2 2007/04/03 06:09:16 nerdboy Exp $
 
 *duma-2.4.27 (03 Apr 2007)
 
@@ -8,5 +8,6 @@
   +files/duma-2.4.27-make.patch, +files/duma-2.4.27-types.patch,
   +metadata.xml, +duma-2.4.27.ebuild:
   Updated fork of electric fence (fixes bug 160695) as the latter is no longer
-  maintained.
+  maintained.  I jelled again and forgot the most important part; original
+  ebuild courtesy of Josef Reidinger <queen.killer _at_ seznam.cz>.
 
