@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.3 2007/02/28 18:51:54 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.4 2007/04/03 15:53:45 armin76 Exp $
+
+  03 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  unmask www-client/mozilla-firefox-1.5* wrt bug 173250
 
   28 Feb 2007; Joshua Jackson <tsunam@gentoo.org> package.mask:
   removing duplicate entry for lksctp-tools
