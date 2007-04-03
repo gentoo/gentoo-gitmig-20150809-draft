@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.2 2007/04/03 23:38:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.3 2007/04/03 23:42:43 mcummings Exp $
+
+  03 Apr 2007; Michael Cummings <mcummings@gentoo.org> bignum-0.19.ebuild:
+  Keywording ~sparc
 
   03 Apr 2007; Michael Cummings <mcummings@gentoo.org> bignum-0.19.ebuild:
   Keywording ~x86
