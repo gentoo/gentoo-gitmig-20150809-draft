@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.29 2007/03/30 07:48:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.30 2007/04/03 18:09:21 gustavoz Exp $
+
+  03 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dspam-web-3.6.8-r1.ebuild:
+  Stable on sparc wrt #172756
 
   30 Mar 2007; Alin Năstac <mrness@gentoo.org> dspam-web-3.6.8-r1.ebuild:
   Stable on x86 (#172756).
