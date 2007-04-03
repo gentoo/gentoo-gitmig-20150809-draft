@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.1 2007/04/03 21:37:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.2 2007/04/03 23:37:22 mcummings Exp $
+
+  03 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Math-BigRat-0.17.ebuild:
+  Keywording ~x86
 
 *Math-BigRat-0.17 (03 Apr 2007)
 
