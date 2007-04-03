@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p11.ebuild,v 1.1 2007/04/03 19:41:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p11.ebuild,v 1.2 2007/04/03 21:31:17 swegener Exp $
 
 GCONF_DEBUG="no"
 
-inherit gnome2 eutils flag-o-matic java-utils-2
+inherit gnome2 eutils flag-o-matic
 
 MY_P="${P/_p/r}"
 
