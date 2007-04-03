@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2007.0/make.defaults,v 1.1 2007/04/02 17:02:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2007.0/make.defaults,v 1.2 2007/04/03 14:44:17 jer Exp $
 
 
 # 2006/05/25 Guy Martin <gmsoft@gentoo.org>
 # USE nptl only with >glibc-2.5
 
-USE="ntpl ntplonly"
+USE="nptl nptlonly"
