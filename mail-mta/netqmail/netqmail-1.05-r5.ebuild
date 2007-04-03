@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.3 2007/03/18 05:44:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.4 2007/04/03 23:38:08 vapier Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -76,8 +76,7 @@ src_unpack() {
 	cd "${MY_S}"
 
 	if ! use vanilla; then
-		use ssl && \
-			epatch ${DISTDIR}/netqmail-1.05-tls-smtpauth-20060105.patch
+		use ssl && epatch ${DISTDIR}/netqmail-${PV}-tls-smtpauth-${TLS_AUTH_PATCH}.patch
 
 		if use highvolume; then
 			epatch ${DISTDIR}/big-todo.103.patch
