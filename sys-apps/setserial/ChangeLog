@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/setserial
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.11 2007/02/09 08:32:15 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.12 2007/04/03 05:15:20 vapier Exp $
+
+  03 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/setserial-2.17-build.patch, +files/setserial-2.17-headers.patch,
+  setserial-2.17-r3.ebuild:
+  Include proper headers and respect LDFLAGS.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

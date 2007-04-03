@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r3.ebuild,v 1.1 2005/02/21 15:53:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r3.ebuild,v 1.2 2007/04/03 05:15:20 vapier Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-spelling.patch
 	epatch "${FILESDIR}"/${P}-manpage-updates.patch
+	epatch "${FILESDIR}"/${P}-headers.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {
