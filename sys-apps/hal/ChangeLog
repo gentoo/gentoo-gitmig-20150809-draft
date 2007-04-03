@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.142 2007/04/02 17:06:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.143 2007/04/03 13:30:41 steev Exp $
+
+*hal-0.5.9 (03 Apr 2007)
+
+  03 Apr 2007; Steev Klimaszewski <steev@gentoo.org> -hal-0.5.9_rc2.ebuild,
+  -hal-0.5.9_rc3.ebuild, +hal-0.5.9.ebuild:
+  Hal 0.5.9 release. remove the release candidates.
 
   02 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9_rc3.ebuild:
   Change linux-headers depend to 2.6.17 or higher. Remove mips-headers since

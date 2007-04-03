@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9_rc3.ebuild,v 1.5 2007/04/02 17:06:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.1 2007/04/03 13:30:41 steev Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
-MY_PV=${PV/_/.}
-
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
-SRC_URI="http://people.freedesktop.org/~david/dist/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://people.freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
@@ -38,8 +36,6 @@ DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen app-text/docbook-sgml-utils )"
 
 PDEPEND="app-misc/hal-info"
-
-S="${WORKDIR}"/${PN}-${PV%%_*}
 
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
@@ -89,7 +85,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.5.7-plugdev-allow-send.patch
-	epatch ${FILESDIR}/${PN}-0.5.9-update_dtd.patch
 }
 
 src_compile() {
