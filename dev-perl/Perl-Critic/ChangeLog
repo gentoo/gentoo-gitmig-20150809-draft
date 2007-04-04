@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.20 2007/02/17 15:01:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.21 2007/04/04 14:59:38 yuval Exp $
+
+*Perl-Critic-1.05 (04 Apr 2007)
+
+  04 Apr 2007; Yuval Yaari <yuval@gentoo.org> +Perl-Critic-1.05.ebuild:
+  Version bump
 
 *Perl-Critic-1.03 (17 Feb 2007)
 
