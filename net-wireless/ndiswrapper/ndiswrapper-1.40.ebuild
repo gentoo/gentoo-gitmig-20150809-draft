@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.40.ebuild,v 1.1 2007/03/29 18:21:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.40.ebuild,v 1.2 2007/04/04 22:36:16 peper Exp $
 
 inherit linux-mod
 
@@ -90,7 +90,7 @@ pkg_postinst() {
 	einfo "information."
 	echo
 	einfo "ndiswrapper devs need support(_hardware_, cash)."
-	einfo "Don't hesistate if you can help, see http://ndiswrapper.sf.net for details."
+	einfo "Don't hesitate if you can help, see http://ndiswrapper.sf.net for details."
 	echo
 
 	einfo "Attempting to automatically reinstall any Windows drivers"
