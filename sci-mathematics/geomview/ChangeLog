@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.3 2007/02/22 01:21:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.4 2007/04/04 06:08:02 nerdboy Exp $
+
+*geomview-1.8.2_rc9 (04 Apr 2007)
+
+  04 Apr 2007; Steve Arnold <nerdboy@gentoo.org> +geomview-1.8.2_rc9.ebuild:
+  Added latest official release (closes bug #165003).  Tested and keyworded
+  for ~amd64.  Based on ebuild by Marcus Bannerman <m.bannerman _at_ gmail.com>
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
