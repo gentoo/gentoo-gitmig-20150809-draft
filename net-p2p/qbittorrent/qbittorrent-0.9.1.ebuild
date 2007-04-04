@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-0.9.0.ebuild,v 1.1 2007/04/03 17:46:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-0.9.1.ebuild,v 1.1 2007/04/04 09:32:58 armin76 Exp $
 
 inherit eutils qt4
 
@@ -24,14 +24,6 @@ pkg_setup() {
 		eerror "dev-libs/boost has to be built with threads or threadsonly USE-flag."
 		die "Missing threads/threadsonly USE-flag for dev-libs/boost"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# seems the includes doesn't work very well, upstream will fix this
-	epatch "${FILESDIR}"/${PV}-libtorrent-includepatch.patch
 }
 
 src_compile() {
