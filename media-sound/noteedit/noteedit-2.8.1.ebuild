@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.1.ebuild,v 1.2 2007/02/08 18:44:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.1.ebuild,v 1.3 2007/04/04 14:00:31 gustavoz Exp $
 
 IUSE="kmid tse3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/noteedit/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 
 DEPEND="kmid? ( || ( kde-base/kmid kde-base/kdemultimedia )  )
 	tse3? ( >=media-libs/tse3-0.3.1 )"

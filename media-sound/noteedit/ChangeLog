@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.22 2007/02/08 18:44:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.23 2007/04/04 14:00:31 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> noteedit-2.8.1.ebuild:
+  Stable on sparc
 
   08 Feb 2007; Alexis Ballier <aballier@gentoo.org> noteedit-2.8.1.ebuild:
   Call kde_pkg_setup in pkg_setup
