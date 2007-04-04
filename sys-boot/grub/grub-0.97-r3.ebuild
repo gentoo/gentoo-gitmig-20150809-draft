@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.8 2007/03/25 12:36:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.9 2007/04/04 18:43:15 jokey Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="static netboot custom-cflags"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5"
