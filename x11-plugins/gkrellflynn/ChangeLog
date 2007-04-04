@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellflynn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/ChangeLog,v 1.17 2007/03/12 18:06:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/ChangeLog,v 1.18 2007/04/04 17:09:03 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellflynn-0.7.ebuild:
+  Stable on sparc
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> gkrellflynn-0.7.ebuild:
   x86 stable
