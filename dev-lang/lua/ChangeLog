@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.76 2007/03/29 12:53:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.77 2007/04/04 22:41:18 ferdy Exp $
+
+  04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> lua-5.1.1-r2.ebuild:
+  Re-add ~alpha keyword as per bug #155518
 
   29 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> lua-5.1.1-r2.ebuild:
   Stable on sparc
