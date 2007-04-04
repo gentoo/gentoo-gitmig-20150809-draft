@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7087 2007/04/03 17:49:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7088 2007/04/04 09:07:26 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -358,10 +358,6 @@ dev-java/oscore
 # Still gen 1 package and will be moved to 
 # junkyard overlay
 dev-java/oscore-bin
-
-# Alin Nastac <mrness@gentoo.org> (12 Mar 2007)
-# Work in progress (see bug #167939)
-=net-libs/wvstreams-4.3*
 
 # MATSUU Takuto <matsuu@gentoo.org> (12 Mar 2007)
 # Masked due to security issues bug #159542
