@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/konqburn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.14 2007/02/21 20:16:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.15 2007/04/04 23:31:46 carlo Exp $
+
+  04 Apr 2007; Carsten Lohrke <carlo@gentoo.org> -konqburn-0.8.ebuild,
+  -konqburn-0.9.ebuild, konqburn-1.0.ebuild:
+  Clean up. Adjust K3B dependency according to bug
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
