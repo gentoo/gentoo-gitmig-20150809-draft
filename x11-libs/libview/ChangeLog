@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.2 2007/02/22 00:01:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.3 2007/04/04 19:17:39 compnerd Exp $
+
+*libview-0.5.6-r1 (04 Apr 2007)
+
+  04 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/libview-0.5.6-pcfix.patch, +libview-0.5.6-r1.ebuild:
+  Fix for pkgconfig file (bug #170681)
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
