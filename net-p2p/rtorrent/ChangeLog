@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.88 2007/03/29 08:02:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.89 2007/04/04 20:02:36 drizzt Exp $
+
+*rtorrent-0.7.4 (04 Apr 2007)
+
+  04 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> +rtorrent-0.7.4.ebuild:
+  Version bump (thx to Flameeyes for reporting on irc)
 
   29 Mar 2007; Markus Rothe <corsair@gentoo.org> rtorrent-0.7.2.ebuild:
   Stable on ppc64; bug #172469
