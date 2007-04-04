@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.2-r3.ebuild,v 1.1 2007/04/04 13:51:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.2-r3.ebuild,v 1.2 2007/04/04 14:23:26 foser Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -66,7 +66,7 @@ src_unpack() {
 	# 2.3.2 only - bug #170532
 	epatch "${FILESDIR}"/${P}-truetype-regression.patch
 
-	# sec vuln
+	# fix CVE-2007-1351 (#172577)
 	epatch "${FILESDIR}"/${P}-bdflib.patch
 
 	sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" ../ft2demos-${PV}/Makefile

@@ -1,11 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.113 2007/04/04 13:51:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.114 2007/04/04 14:23:26 foser Exp $
 
 *freetype-2.3.2-r3 (04 Apr 2007)
 
   04 Apr 2007; Marinus Schraal <foser@gentoo.org> freetype-2.3.2-r3.ebuild,
-  files/freetype-2.3.2-bdflib.patch :
+  freetype-2.1.10-r3.ebuild, files/freetype-2.3.2-bdflib.patch :
   Fix for CVE-2007-1351 (#172577)
 
   01 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> freetype-2.1.9-r1.ebuild:
