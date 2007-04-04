@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.22 2007/03/25 20:11:17 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.23 2007/04/04 23:42:06 pebenito Exp $
+
+*libsepol-1.16.2 (04 Apr 2007)
+
+  04 Apr 2007; Chris PeBenito <pebenito@gentoo.org> +libsepol-1.16.2.ebuild:
+  Add bugfix release to fix boolean mapping problem.
 
   25 Mar 2007; Chris PeBenito <pebenito@gentoo.org> libsepol-1.16.0.ebuild:
   Mark stable.
