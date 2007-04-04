@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.12 2007/02/20 21:12:24 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.13 2007/04/04 17:57:37 phreak Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs pax-utils
 
 MY_PBASE=${P/theripper/}
 MY_PNBASE=${PN/theripper/}
@@ -110,6 +110,8 @@ src_install() {
 	# executables
 	dosbin run/john
 	newsbin run/mailer john-mailer
+
+	pax-mark -m "${D}"/usr/sbin/john
 
 	dosym john /usr/sbin/unafs
 	dosym john /usr/sbin/unique
