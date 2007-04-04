@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.187 2007/04/04 15:35:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.188 2007/04/04 20:14:07 corsair Exp $
+
+  04 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  ffmpeg-0.4.9_p20070330.ebuild:
+  Stable on ppc64
 
   04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   ffmpeg-0.4.9_p20070330.ebuild:
