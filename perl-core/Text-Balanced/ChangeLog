@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Text-Balanced
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.16 2007/03/06 06:44:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.17 2007/04/04 22:59:50 ferdy Exp $
+
+  04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  Text-Balanced-2.0.0.ebuild:
+  Re-add ~alpha as per bug #161486
 
   03 Mar 2007; Andrej Kacian <ticho@gentoo.org> Text-Balanced-1.98.ebuild:
   Stable on x86, bug #169153.
