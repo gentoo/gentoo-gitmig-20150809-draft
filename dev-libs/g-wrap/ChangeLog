@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.48 2007/04/04 17:56:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.49 2007/04/04 19:30:55 wolf31o2 Exp $
+
+  04 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  g-wrap-1.9.6-r3.ebuild:
+  Stable on alpha/amd64 wrt bug #167706.
 
   04 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   g-wrap-1.9.6-r3.ebuild:
