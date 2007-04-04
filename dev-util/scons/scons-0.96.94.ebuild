@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.96.94.ebuild,v 1.4 2007/03/11 14:02:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.96.94.ebuild,v 1.5 2007/04/04 03:12:48 jer Exp $
 
 NEED_PYTHON="1.5.2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.scons.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DOCS="RELEASE.txt CHANGES.txt LICENSE.txt"
