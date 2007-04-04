@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.31 2007/03/13 11:55:19 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.32 2007/04/04 20:21:00 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> pstoedit-3.42.ebuild:
+  Stable on sparc
 
   13 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Added printing as maintainer herd.
