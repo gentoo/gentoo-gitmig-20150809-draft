@@ -1,15 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r3.ebuild,v 1.12 2007/04/03 20:51:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r3.ebuild,v 1.13 2007/04/04 02:46:56 seemant Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
+PATCHV="0.1"
 MY_P=${P/mit-}
 P_DIR=$(get_version_component_range 1-2)
 S=${WORKDIR}/${MY_P}/src
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
-SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
+SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar
+	mirror://gentoo/${P}-patches-${PATCHV}.tar.bz2"
+
+PATCHDIR="${WORKDIR}/patch"
 
 LICENSE="as-is"
 SLOT="0"
@@ -34,14 +38,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${MY_P}-signed.tar
+	unpack ${A}
 	unpack ./${MY_P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-lazyldflags.patch
-	epatch "${FILESDIR}"/${PN}-robustgnu.patch
-	epatch "${FILESDIR}"/${PN}-pthreads.patch
-	epatch "${FILESDIR}"/${PN}-setupterm.patch
-	epatch "${FILESDIR}"/${P}-setuid.patch
+	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"
 	ebegin "Reconfiguring configure scripts (be patient)"
 	cd "${S}"/appl/telnet
 	eautoconf --force -I "${S}"
