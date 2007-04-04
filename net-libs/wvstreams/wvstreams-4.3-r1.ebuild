@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.3.ebuild,v 1.1 2007/03/12 15:54:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.3-r1.ebuild,v 1.1 2007/04/04 09:06:12 mrness Exp $
 
 WANT_AUTOCONF=2.59
 WANT_AUTOMAKE=none
@@ -40,6 +40,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	epatch "${FILESDIR}/${P}-sane-cflags.patch"
 	epatch "${FILESDIR}/${P}-64bit.patch"
+	epatch "${FILESDIR}/${P}-type-punned.patch"
 
 	epatch "${FILESDIR}/${P}-external-xplc.patch"
 	local XPLC_VER=`best_version dev-libs/xplc`

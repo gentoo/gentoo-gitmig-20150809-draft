@@ -1,0 +1,197 @@
+diff -Nru wvstreams-4.3.orig/urlget/wvhttppool.cc wvstreams-4.3/urlget/wvhttppool.cc
+--- wvstreams-4.3.orig/urlget/wvhttppool.cc	2007-02-07 21:05:29.000000000 +0200
++++ wvstreams-4.3/urlget/wvhttppool.cc	2007-04-04 11:42:06.000000000 +0300
+@@ -43,7 +43,12 @@
+     {
+         WvBufUrlStream *x = new WvBufUrlStream;
+         outstream = x;
+-        x->death_notify = (WvStream **)&outstream;
++        union {
++            WvBufUrlStream** ppbufurlstream;
++            WvStream**       ppstream;
++        } s;
++        s.ppbufurlstream = &outstream;
++        x->death_notify = s.ppstream;
+         x->url = url;
+ 
+         putstream = content_source;
+diff -Nru wvstreams-4.3.orig/utils/wvbdbhash.cc wvstreams-4.3/utils/wvbdbhash.cc
+--- wvstreams-4.3.orig/utils/wvbdbhash.cc	2007-02-07 21:06:12.000000000 +0200
++++ wvstreams-4.3/utils/wvbdbhash.cc	2007-04-04 11:37:44.000000000 +0300
+@@ -24,6 +24,11 @@
+ 
+ #include "wvlog.h"
+ 
++typedef union {
++	WvBdbHash::datum d;
++	DBT D;
++} DBTdatum;
++
+ int comparefunc(const DBT *a, const DBT *b)
+ {
+     if (a == NULL && b == NULL) return 0;
+@@ -102,14 +107,14 @@
+ void WvBdbHash::remove(const datum &key)
+ {
+     if (!isok()) return;
++
++    DBTdatum newkey, data;
++    newkey.d = key;
+     
+-    datum newkey, data;
+-    newkey = key;
+-    
+-    int ret = dbf->seq(dbf, (DBT *)&newkey, (DBT *)&data, R_CURSOR);
++    int ret = dbf->seq(dbf, &newkey.D, &data.D, R_CURSOR);
+     if (!ret)
+     {
+-	ret = dbf->del(dbf, (DBT *)&newkey, R_CURSOR);
++	ret = dbf->del(dbf, &newkey.D, R_CURSOR);
+     }
+     
+     if (ret == 1) seterr("Strange: seq found a key that del didn't recognize");
+@@ -119,30 +124,35 @@
+ 
+ WvBdbHash::datum WvBdbHash::find(const datum &key)
+ {
+-    datum ret = {0, 0};
+-    if (!isok()) return ret;
++    DBTdatum newkey, ret;
++    newkey.d = key;
++	 ret.d.dptr = 0;
++	 ret.d.dsize = 0;
++    if (!isok()) return ret.d;
+ 
+-    int r = dbf->get(dbf, (DBT *)&key, (DBT *)&ret, 0);
++    int r = dbf->get(dbf, &newkey.D, &ret.D, 0);
+     if (r == 1)
+     {
+         // not found - make sure we return an empty datum
+-        ret.dptr = NULL;
++        ret.d.dptr = NULL;
+     }
+     else if (r != 0)
+     {
+-        ret.dptr = NULL;
++        ret.d.dptr = NULL;
+         seterr(errno);
+     }
+-    return ret;
++    return ret.d;
+ }
+ 
+ 
+ bool WvBdbHash::exists(const datum &key)
+ {
++    DBTdatum newkey;
++    newkey.d = key;
++	 DBT val;
+     if (!isok()) return false;
+ 
+-    datum ret = {0, 0};
+-    int r = dbf->get(dbf, (DBT *)&key, (DBT *)&ret, 0);
++    int r = dbf->get(dbf, &newkey.D, &val, 0);
+ 
+     // return true on success
+     if (r == 0) return true;
+@@ -165,11 +175,11 @@
+         }
+ 
+         // super-slow version
+-        datum key, value;
++        DBT key, value;
+         int r;
+-        while ((r = dbf->seq(dbf, (DBT *)&key, (DBT *)&value, R_FIRST)) == 0)
++        while ((r = dbf->seq(dbf, &key, &value, R_FIRST)) == 0)
+         {
+-            int r2 = dbf->del(dbf, (DBT *)&key, R_CURSOR);
++            int r2 = dbf->del(dbf, &key, R_CURSOR);
+             if (r2 == 1) seterr("Strange: seq found a key that del didn't recognize");
+             else if (r2 != 0) seterr(errno);
+         }
+@@ -193,54 +203,60 @@
+ {
+     if (!parent.isok()) return;
+ 
++    DBTdatum unionkey, uniondata;
++	 unionkey.d = curkey;
++	 uniondata.d = curdata;
++	 
+     // check if this is the first next() after a rewind()
+-    bool first = !curkey.dptr;
+-    datum wanted = { 0, 0 };
++    bool first = !unionkey.d.dptr;
++    DBTdatum wanted;
++	 wanted.d.dptr = 0;
++	 wanted.d.dsize = 0;
+     if (first)
+     {
+         if (rewindto.dptr)
+ 	{
+-            curkey = rewindto;
++            unionkey.d = rewindto;
+             first = false;
+         }
+     }
+     else
+     {
+-        wanted.dsize = curkey.dsize;
+-        wanted.dptr = malloc(wanted.dsize);
+-        memcpy(wanted.dptr, curkey.dptr, wanted.dsize);
++        wanted.d.dsize = unionkey.d.dsize;
++        wanted.d.dptr = malloc(wanted.d.dsize);
++        memcpy(wanted.d.dptr, unionkey.d.dptr, wanted.d.dsize);
+     }
+ 
+     // always seek for the saved cursor we were just passed, to work around
+     // bugs in libdb1's seq with btrees.  (As a bonus, this gives us multiple
+     // iterators for free!)
+-    int r = parent.dbf->seq(parent.dbf, (DBT *)&curkey, (DBT *)&curdata,
++    int r = parent.dbf->seq(parent.dbf, &unionkey.D, &uniondata.D,
+                 first ? R_FIRST : R_CURSOR);
+     
+     if (r == 1)
+     {
+         // current key gone, and none higher left: done
+-	curkey.dptr = curdata.dptr = NULL;
++	unionkey.d.dptr = uniondata.d.dptr = NULL;
+     }
+     else if (r != 0)
+         parent.seterr(errno);
+ 
+     else if (!first)
+     {
+-	while (comparefunc((DBT *)&wanted, (DBT *)&curkey) >= 0)
++	while (comparefunc(&wanted.D, &unionkey.D) >= 0)
+ 	{
+ 	    // found the exact key or earlier than requested: move forward one
+ 	    // (yes, libbdb1 can return a key less than requested, despite
+ 	    // the documentation's claims!)
+ 	    // This algorithm definitely makes it so inserting the same key
+ 	    // more than once doesn't work at all.
+-	    r = parent.dbf->seq(parent.dbf, (DBT *)&curkey, (DBT *)&curdata,
++	    r = parent.dbf->seq(parent.dbf, &unionkey.D, &uniondata.D,
+ 				 R_NEXT);
+ 
+             if (r == 1)
+ 	    {
+ 		// nothing left?  Fine, we're done
+-		curkey.dptr = curdata.dptr = NULL;
++		unionkey.d.dptr = uniondata.d.dptr = NULL;
+ 		break;
+ 	    }
+             else if (r != 0)
+@@ -252,8 +268,11 @@
+     // the very first key), as expected.  (Also, if rewindto is set it should
+     // be either filled in with the matching btree data or cleared.)  Unless,
+     // of course, the whole db is borked.
+-    assert(!parent.isok() || !rewindto.dptr || curkey.dptr != rewindto.dptr);
+-    free(wanted.dptr);
++    assert(!parent.isok() || !rewindto.dptr || unionkey.d.dptr != rewindto.dptr);
++    free(wanted.d.dptr);
++	 
++	 curkey = unionkey.d;
++	 curdata = uniondata.d;
+ }
+ 
+ #endif /* WITH_BDB */
