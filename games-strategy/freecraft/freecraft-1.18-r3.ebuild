@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.14 2007/02/17 09:26:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.15 2007/04/04 19:55:13 nyhm Exp $
 
 inherit eutils games
 
@@ -32,7 +32,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
-		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
+		-e "s:GENTOO_LIBDIR:$(games_get_libdir)/${PN}:" \
 		"${FILESDIR}"/${PN} > "${T}"/${PN} \
 		|| die "sed failed"
 	epatch \
@@ -48,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}"/${PN}
+	exeinto "$(games_get_libdir)"/${PN}
 	doexe freecraft || die "doexe failed"
 	dogamesbin "${T}"/${PN} || die "dogamesbin failed"
 
