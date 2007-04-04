@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/version
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.32 2007/03/05 12:57:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.33 2007/04/04 22:55:35 ferdy Exp $
+
+  04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> version-0.70.ebuild:
+  ~alpha keyword as per bug #161486
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> version-0.68.ebuild:
   Stable on x86, bug #169152.
