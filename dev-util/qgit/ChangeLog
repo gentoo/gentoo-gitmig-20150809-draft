@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.18 2007/02/26 18:07:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.19 2007/04/04 13:34:24 armin76 Exp $
+
+  04 Apr 2007; Raúl Porcel <armin76@gentoo.org> qgit-1.5.5.ebuild:
+  x86 stable wrt bug 173331
 
 *qgit-1.5.5 (26 Feb 2007)
 
