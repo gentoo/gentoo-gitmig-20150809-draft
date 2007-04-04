@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.48 2007/04/04 20:11:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.49 2007/04/04 21:48:23 chainsaw Exp $
+
+  04 Apr 2007; Tony Vroon <chainsaw@gentoo.org> gajim-0.11.1.ebuild:
+  Marked stable on PPC. Tested on PowerBook 5,9 connected to ejabberd. As
+  requested by Peter Weller in bug #173376.
 
   04 Apr 2007; Markus Rothe <corsair@gentoo.org> gajim-0.11.1.ebuild:
   Stable on ppc64; bug #173376
