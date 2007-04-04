@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2726 2007/04/03 23:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2727 2007/04/04 00:14:40 nyhm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -306,16 +306,17 @@ dev-games/cegui:xerces-c - use external Xerces-C++ XML parser instead of tiny em
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:cal3d - include support for skeleton anymation
 dev-games/crystalspace:cegui - include support for Crazy Eddie GUI
-dev-games/crystalspace:cg - nvidia toolkit plugin
+dev-games/crystalspace:cg - NVIDIA toolkit plugin
 dev-games/crystalspace:ode - include support for Open Dynamics Engine
 dev-games/guichan:allegro - Build the Allegro frontend
 dev-games/ode:double-precision - more precise calculations at the expense of speed
 dev-games/ode:nogyroscopic - disable gyroscopic term maybe improving stability
 dev-games/ode:noopcode - disable OPCODE (trimesh support)
-dev-games/ogre:cegui - build the cegui samples
-dev-games/ogre:cg - nvidia toolkit plugin
+dev-games/ogre:cegui - build the CEGUI samples
+dev-games/ogre:cg - NVIDIA toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
 dev-games/ogre:double-precision - more precise calculations at the expense of speed
+dev-games/ogre:freeimage - image loading support with FreeImage
 dev-haskell/gtk2hs:glade - Enable libglade bindings compilation
 dev-java/ant-tasks:jai - Enable JAI (Java Imaging) Ant task
 dev-java/ant-tasks:javamail - Enable JavaMail Ant task
