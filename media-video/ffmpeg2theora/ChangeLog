@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.15 2007/04/02 17:52:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.16 2007/04/04 12:58:34 drac Exp $
+
+  04 Apr 2007; Samuli Suominen <drac@gentoo.org> ffmpeg2theora-0.18.ebuild:
+  Raise ffmpeg dep to 0.4.9_p20070129 for bug 173329.
 
 *ffmpeg2theora-0.18 (02 Apr 2007)
 
