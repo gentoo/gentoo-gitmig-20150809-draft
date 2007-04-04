@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r7.ebuild,v 1.1 2007/04/04 06:43:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r7.ebuild,v 1.2 2007/04/04 13:26:16 grobian Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -42,7 +42,7 @@ PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="22.0.97"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 S="${WORKDIR}/emacs"
 
 src_unpack() {
@@ -59,7 +59,6 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
-	use ppc-macos && epatch "${FILESDIR}/emacs-cvs-21.3.50-nofink.diff"
 
 	eautoreconf
 }
@@ -194,7 +193,7 @@ pkg_postinst() {
 	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
 		cp ${ROOT}/usr/share/emacs{/${SLOT},}/site-lisp/subdirs.el
 
-	use ppc-macos || update-alternatives
+	update-alternatives
 	elisp-site-regen
 
 	# ecompress from Portage 2.2.* does auto-compression
@@ -212,6 +211,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use ppc-macos || update-alternatives
+	update-alternatives
 	elisp-site-regen
 }
