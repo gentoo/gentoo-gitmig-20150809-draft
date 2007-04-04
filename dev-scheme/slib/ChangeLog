@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/slib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.27 2007/04/02 15:17:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.28 2007/04/04 19:32:03 wolf31o2 Exp $
+
+  04 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org> slib-3.1.1-r1.ebuild:
+  Stable on alpha wrt bug #167706.
 
   02 Apr 2007; Raúl Porcel <armin76@gentoo.org> slib-3.1.1-r1.ebuild:
   ia64 stable wrt bug 161781
