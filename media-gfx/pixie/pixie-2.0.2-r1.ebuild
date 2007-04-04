@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.0.2-r1.ebuild,v 1.6 2007/03/29 01:31:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.0.2-r1.ebuild,v 1.7 2007/04/04 08:11:39 eradicator Exp $
+
+inherit multilib
 
 IUSE="fltk openexr X"
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.35 2007/03/29 01:31:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.36 2007/04/04 08:11:39 eradicator Exp $
+
+  04 Apr 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  pixie-2.0.2-r1.ebuild, pixie-2.1.1.ebuild:
+  Added missing inherit multilib for get_libdir.
 
 *pixie-2.1.1 (29 Mar 2007)
 
