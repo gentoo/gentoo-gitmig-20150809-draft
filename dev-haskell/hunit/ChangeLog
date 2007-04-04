@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.11 2007/04/02 20:31:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.12 2007/04/04 20:01:57 cparrott Exp $
+
+  04 Apr 2007; Chris Parrott <cparrott@gentoo.org> hunit-1.1-r1.ebuild:
+  added ~alpha keyword
 
   02 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> hunit-1.1.ebuild:
   Add ~alpha keyword, bug 170650.
