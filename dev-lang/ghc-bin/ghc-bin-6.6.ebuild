@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.6.ebuild,v 1.1 2007/03/16 21:41:28 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.6.ebuild,v 1.2 2007/04/04 06:46:12 cparrott Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -20,10 +20,11 @@ DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
 # list all arches for proper digest building:
 SRC_URI="amd64?		( mirror://gentoo/${P}-amd64.tbz2 )
-		 x86?		( mirror://gentoo/${P}-x86.tbz2 )"
+		 x86?		( mirror://gentoo/${P}-x86.tbz2 )
+		 alpha?		( mirror://gentoo/${P}-alpha.tbz2 )"
 
 LICENSE="as-is"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~alpha ~amd64 ~x86"
 SLOT="0"
 IUSE="" # use the non-binary version if you want to have more choice
 
