@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/igrep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/igrep/ChangeLog,v 1.8 2007/03/07 09:57:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/igrep/ChangeLog,v 1.9 2007/04/04 06:19:50 opfer Exp $
+
+*igrep-2.113 (04 Apr 2007)
+
+  04 Apr 2007; Christian Faulhammer <opfer@gentoo.org> +igrep-2.113.ebuild:
+  version bump, fixes bug 173225 reported by back_slash@h9.dion.ne.jp
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50igrep-gentoo.el:
