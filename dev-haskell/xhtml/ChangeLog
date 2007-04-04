@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.1 2007/03/17 14:11:19 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.2 2007/04/04 20:28:03 cparrott Exp $
+
+  04 Apr 2007; Chris Parrott <cparrott@gentoo.org> xhtml-2006.9.13.ebuild:
+  added ~alpha keyword
 
 *xhtml-2006.9.13 (17 Mar 2007)
 
