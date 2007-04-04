@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.4 2007/04/04 17:21:18 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.5 2007/04/04 21:11:48 jurek Exp $
+
+*codeblocks-1.0_pre20070404 (04 Apr 2007)
+
+  04 Apr 2007; Jurek Bartuszek <jurek@gentoo.org> +codeblocks-1.0_pre20070404.ebuild:
+  Version bump (fixing bug #172932)
 
   04 Apr 2007; Peter Weller <welp@gentoo.org>
   codeblocks-1.0_pre20070124.ebuild:
