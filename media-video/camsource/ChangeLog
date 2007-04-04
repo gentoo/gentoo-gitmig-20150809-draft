@@ -1,6 +1,14 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.16 2007/02/22 01:44:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.17 2007/04/04 17:01:52 drac Exp $
+
+*camsource-0.7.1 (04 Apr 2007)
+
+  04 Apr 2007; Samuli Suominen <drac@gentoo.org>
+  +files/camsource-0.7.1-example.patch, +files/camsource.initd,
+  +camsource-0.7.1.ebuild:
+  Version bump to unofficial release since upstream CVS has been quiet for
+  three years. Thanks to Conrad Kostecki in bug 170349.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
