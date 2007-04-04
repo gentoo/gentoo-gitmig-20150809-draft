@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hlsdk/hlsdk-2.3.ebuild,v 1.6 2005/01/01 18:00:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hlsdk/hlsdk-2.3.ebuild,v 1.7 2007/04/04 19:21:40 nyhm Exp $
 
 inherit games
 
@@ -18,8 +18,8 @@ src_compile() {
 }
 
 src_install() {
-	dodir ${GAMES_LIBDIR}/${PN}
-	mv multiplayer singleplayer ${D}/${GAMES_LIBDIR}/${PN}/
+	insinto "$(games_get_libdir)"/${PN}
+	doins -r multiplayer singleplayer || die "doins failed"
 	dodoc metamod.hlsdk-2.3.txt metamod.hlsdk-2.3.patch
 	prepgamesdirs
 }
