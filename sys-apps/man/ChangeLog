@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.112 2007/04/04 14:08:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.113 2007/04/04 19:19:54 ferdy Exp $
+
+  04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> man-1.6e-r1.ebuild:
+  Stable on alpha as per bug #172761
 
   04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> man-1.6e-r1.ebuild:
   Stable on sparc wrt #172761
