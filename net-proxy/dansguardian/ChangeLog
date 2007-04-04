@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.26 2007/03/26 21:51:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.27 2007/04/04 13:01:36 mrness Exp $
+
+*dansguardian-2.9.8.5_beta (04 Apr 2007)
+
+  04 Apr 2007; Alin Năstac <mrness@gentoo.org>
+  +files/dansguardian-2.9.8.5-gentoo.patch,
+  +files/dansguardian-2.9.8.5-uclibc++.patch,
+  +dansguardian-2.9.8.5_beta.ebuild:
+  Version bump (#173102).
 
 *dansguardian-2.9.8.2_beta-r1 (26 Mar 2007)
 
