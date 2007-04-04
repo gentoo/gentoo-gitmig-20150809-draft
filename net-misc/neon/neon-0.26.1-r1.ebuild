@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1-r1.ebuild,v 1.6 2007/03/03 05:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1-r1.ebuild,v 1.7 2007/04/04 13:53:01 grobian Exp $
 
 inherit eutils libtool versionator
 
@@ -18,13 +18,11 @@ DEPEND="expat? ( dev-libs/expat )
 	!expat? ( dev-libs/libxml2 )
 	socks5? ( net-proxy/dante )
 	zlib? ( sys-libs/zlib )
-	ssl? ( >=dev-libs/openssl-0.9.6f )"
+	ssl? ( >=dev-libs/openssl-0.9.6f )
+	nls? ( virtual/libintl )"
 
 src_unpack() {
 	unpack ${A}
-	if use userland_Darwin ; then
-		sed -i -e "s:GXX:GCC:g" ${S}/configure || die "sed failed"
-	fi
 
 	elibtoolize
 }
