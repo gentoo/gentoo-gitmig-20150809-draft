@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.29 2007/02/18 21:05:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.30 2007/04/04 19:25:52 swegener Exp $
+
+*xchat-gnome-0.17 (04 Apr 2007)
+
+  04 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  +files/0.17-libnotify-configure.patch, +files/0.17-segfault-fix.patch,
+  +xchat-gnome-0.17.ebuild:
+  Version bump, bug #173140.
 
 *xchat-gnome-0.16 (18 Feb 2007)
 

@@ -1,0 +1,13 @@
+Index: xchat-gnome/src/fe-gnome/setup-dialog.c
+===================================================================
+--- xchat-gnome/src/fe-gnome/setup-dialog.c	(revision 2504)
++++ xchat-gnome/src/fe-gnome/setup-dialog.c	(working copy)
+@@ -46,7 +46,7 @@
+ 	gchar *path = locate_data_file ("setup-dialog.glade");
+ 	g_assert (path != NULL);
+ 
+-	GladeXML *xml = glade_xml_new (path, NULL, NULL);
++	xml = glade_xml_new (path, NULL, NULL);
+ 	g_assert (xml != NULL);
+ 
+ 	g_free (path);

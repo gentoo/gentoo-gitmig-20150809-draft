@@ -1,0 +1,23 @@
+diff -Nur xchat-gnome-0.17.orig/configure.ac xchat-gnome-0.17/configure.ac
+--- xchat-gnome-0.17.orig/configure.ac	2007-04-01 23:27:46.000000000 +0000
++++ xchat-gnome-0.17/configure.ac	2007-04-02 19:38:11.563221660 +0000
+@@ -111,12 +111,14 @@
+ AM_CONDITIONAL([ENABLE_DBUS],[test "x$dbus" = "xyes"])
+ 
+ # libnotify soft dependency
+-PKG_CHECK_MODULES([LIBNOTIFY], [libnotify >= $LIBNOTIFY_REQUIRED], libnotify=yes, libnotify=no)
+-AC_SUBST([LIBNOTIFY_CFLAGS])
+-AC_SUBST([LIBNOTIFY_LIBS])
++if test "x$enable_libnotify" = "xyes"; then
++	PKG_CHECK_MODULES([LIBNOTIFY], [libnotify >= $LIBNOTIFY_REQUIRED], libnotify=yes, libnotify=no)
++	AC_SUBST([LIBNOTIFY_CFLAGS])
++	AC_SUBST([LIBNOTIFY_LIBS])
++fi
+ AM_CONDITIONAL([ENABLE_LIBNOTIFY],[test "x$libnotify" = "xyes"])
+-if test "x$libnotify" != "xyes"; then
+-	AC_MSG_WARN([Library requirements (libnotify >= $LIBNOTIFY_REQUIRED) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.])
++if test "x$enable_libnotify" = "xyes" && test "x$libnotify" != "xyes"; then
++	AC_MSG_ERROR([libnotify not found])
+ fi
+ 
+ # GConf
