@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.5_rc1.ebuild,v 1.1 2007/02/24 16:54:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.5_rc2.ebuild,v 1.1 2007/04/04 13:23:06 drac Exp $
 
 MY_PV="${PV/_/}"
 
@@ -31,6 +31,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e 's:2x-man:2man:g' configure*
+}
 
 src_compile() {
 	econf --with-forced-embedded-ffmpeg

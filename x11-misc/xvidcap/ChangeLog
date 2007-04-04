@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.31 2007/02/24 16:54:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.32 2007/04/04 13:23:06 drac Exp $
+
+*xvidcap-1.1.5_rc2 (04 Apr 2007)
+
+  04 Apr 2007; Samuli Suominen <drac@gentoo.org>
+  -files/xvidcap-1.1.4-xtoxwd.c.patch, -xvidcap-1.1.4.ebuild,
+  -xvidcap-1.1.5_rc1.ebuild, +xvidcap-1.1.5_rc2.ebuild:
+  Fix configure to find docbook2man in version bumped version for bug 173310.
+  Thanks to Branko Majic for reporting. Clean old versions.
 
 *xvidcap-1.1.5_rc1 (24 Feb 2007)
 
