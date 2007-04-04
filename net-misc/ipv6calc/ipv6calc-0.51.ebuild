@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.51.ebuild,v 1.3 2007/03/09 15:33:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.51.ebuild,v 1.4 2007/04/04 20:44:34 gustavoz Exp $
 
 inherit fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc ~sparc x86"
+KEYWORDS="hppa ppc sparc x86"
 
 IUSE=""
 

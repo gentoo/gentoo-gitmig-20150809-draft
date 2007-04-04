@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.16 2007/03/09 15:33:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.17 2007/04/04 20:44:34 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> ipv6calc-0.51.ebuild:
+  Stable on sparc
 
   09 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ipv6calc-0.51.ebuild:
   Keyworded ~sparc
