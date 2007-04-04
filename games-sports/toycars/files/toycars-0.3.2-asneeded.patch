@@ -1,0 +1,13 @@
+diff -ur toycars-0.3.2.orig/src/Makefile.am toycars-0.3.2/src/Makefile.am
+--- toycars-0.3.2.orig/src/Makefile.am	2006-08-17 09:49:48.000000000 +0300
++++ toycars-0.3.2/src/Makefile.am	2007-03-27 00:17:47.000000000 +0300
+@@ -13,6 +13,6 @@
+         ./glf/libglf.a            \
+         ./MyFisix/libmyfisix.a    \
+         ./Scoobie/libscoobie.a    \
+-        ./tinyxml/libtinyxml.a
+-
+-toycars_LDFLAGS = @SDL_LIBS@ @GLU_LIBS@
++        ./tinyxml/libtinyxml.a    \
++	@SDL_LIBS@                \
++	@GLU_LIBS@

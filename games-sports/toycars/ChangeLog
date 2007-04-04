@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/toycars
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.5 2007/04/02 19:48:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.6 2007/04/04 14:51:21 drac Exp $
+
+  04 Apr 2007; Samuli Suominen <drac@gentoo.org>
+  files/toycars-0.3.2-asneeded.patch:
+  Fix asneeded patch, after resurrecting this package it had size 0 bytes.
 
   02 Apr 2007; <atupone@gentoo.org> +files/toycars-0.3.2-asneeded.patch,
   +metadata.xml, +toycars-0.3.2.ebuild:
