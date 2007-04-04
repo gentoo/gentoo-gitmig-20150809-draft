@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtorrentviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.8 2007/03/18 22:21:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.9 2007/04/04 17:33:31 welp Exp $
+
+  04 Apr 2007; Peter Weller <welp@gentoo.org> gtorrentviewer-0.2b.ebuild:
+  Keyworded ~x86-fbsd
 
   18 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   -gtorrentviewer-0.2a.ebuild:
