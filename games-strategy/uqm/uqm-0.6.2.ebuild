@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.4 2007/03/12 18:16:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.5 2007/04/04 19:36:29 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -22,12 +22,11 @@ IUSE="music opengl remix voice"
 RDEPEND="media-libs/libvorbis
 	media-libs/jpeg
 	media-libs/libpng
-	>=media-libs/libsdl-1.2.8
-	>=media-libs/sdl-image-1.2.4
+	media-libs/libsdl
+	media-libs/sdl-image
 	media-libs/libogg
 	media-libs/libvorbis
-	media-libs/libmikmod
-	sys-libs/zlib"
+	media-libs/libmikmod"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -69,6 +68,10 @@ src_unpack() {
 	sed -i \
 		-e "s/-O3/${CFLAGS}/" build/unix/build.config \
 		|| die "sed build.config failed"
+
+	sed -i \
+		-e "s:/usr/games/lib/:$(games_get_libdir)/:g" uqm-wrapper \
+		|| die "sed uqm-wrapper failed"
 }
 
 src_compile() {
@@ -79,21 +82,16 @@ src_install() {
 	# Using the included install scripts seems quite painful.
 	# This manual install is totally fragile but maybe they'll
 	# use a sane build system for the next release.
-	sed -i \
-		-e "s@/usr/games/lib/@${GAMES_LIBDIR}/@g" uqm-wrapper \
-		|| die "sed uqm-wrapper failed"
 	newgamesbin uqm-wrapper uqm || die "newgamesbin failed"
-	exeinto "${GAMES_LIBDIR}/${PN}"
-	echo "${GAMES_LIBDIR}/${PN}"
-	ls "${GAMES_LIBDIR}/${PN}"
+	exeinto "$(games_get_libdir)"/${PN}
 	doexe uqm || die "doexe failed"
 
-	insinto "${GAMES_DATADIR}/${PN}/content/packages"
+	insinto "${GAMES_DATADIR}"/${PN}/content/packages
 	doins "${DISTDIR}"/${PN}-0.6.0-content.uqm || die "doins failed"
 	echo ${P} > "${D}${GAMES_DATADIR}"/${PN}/content/version \
 		|| die "creating version file failed"
 
-	insinto "${GAMES_DATADIR}/${PN}/content/packages"
+	insinto "${GAMES_DATADIR}"/${PN}/content/packages
 	if use music; then
 		doins "${DISTDIR}"/${PN}-0.6.0-3domusic.uqm || die "doins failed"
 	fi
