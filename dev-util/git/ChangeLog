@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.179 2007/04/04 13:04:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.180 2007/04/04 13:54:25 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> git-1.5.0.7.ebuild:
+  Stable on sparc wrt #173327
 
   04 Apr 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.0.7.ebuild:
   ia64 + x86 stable wrt bug 173327
