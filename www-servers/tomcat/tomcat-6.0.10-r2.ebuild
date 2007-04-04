@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r1.ebuild,v 1.2 2007/03/30 23:17:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r2.ebuild,v 1.1 2007/04/04 22:22:55 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -23,7 +23,8 @@ RDEPEND=">=virtual/jre-1.5
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-logging-1.1
 	>=dev-java/commons-pool-1.2
-	~dev-java/tomcat-servlet-api-${PV}"
+	~dev-java/tomcat-servlet-api-${PV}
+	examples? ( dev-java/jakarta-jstl )"
 
 DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
@@ -81,9 +82,12 @@ src_install() {
 
 	# create dir structure
 	diropts -m755 -o tomcat -g tomcat
-	dodir   /etc/${TOMCAT_NAME}
+	dodir   /etc/${TOMCAT_NAME}/Catalina/localhost
 	fperms  750 /etc/${TOMCAT_NAME}
 	dodir /usr/share/${TOMCAT_NAME}
+	keepdir ${WEBAPPS_DIR}
+	chown tomcat:tomcat ${D}/${WEBAPPS_DIR} || die "Failed to change owner off ${1}."
+	chmod 750           ${D}/${WEBAPPS_DIR} || die "Failed to change permissions off ${1}."
 	keepdir /var/log/${TOMCAT_NAME}/
 	keepdir /var/tmp/${TOMCAT_NAME}/
 	keepdir /var/run/${TOMCAT_NAME}/
@@ -93,12 +97,8 @@ src_install() {
 	cd "${S}"
 	# fix context's since upstream is slackin
 	sed -i -e 's:}/server/:}/:' ${S}/webapps/host-manager/host-manager.xml
+	sed -i -e 's:}/server/:}/:' ${S}/webapps/host-manager/manager.xml
 	sed -i -e 's:}/server/:}/:' ${S}/webapps/manager/manager.xml
-
-	# copy the manager's context to the right position
-	mkdir -p conf/Catalina/localhost
-	cp ${S}/webapps/host-manager/host-manager.xml conf/Catalina/localhost
-	cp ${S}/webapps/manager/manager.xml conf/Catalina/localhost
 
 	# replace the default pw with a random one, see #92281
 	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)
@@ -107,14 +107,10 @@ src_install() {
 	# copy over the directories
 	chown -R tomcat:tomcat webapps/* conf/*
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME} || die "failed to copy conf"
-	cp -PR output/build/bin ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
+	cp -pPR output/build/bin ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	cp ${T}/tomcat6-deps/jdt/jasper-jdt.jar ${D}/usr/share/${TOMCAT_NAME}/lib \
 		|| die "failed to copy"
-
-	keepdir               ${WEBAPPS_DIR}
-	chown  tomcat:tomcat ${D}/${WEBAPPS_DIR} || die "Failed to change owner off ${1}."
-	chmod  750           ${D}/${WEBAPPS_DIR} || die "Failed to change permissions off ${1}."
 
 	cd "${D}/usr/share/${TOMCAT_NAME}/lib"
 	java-pkg_jar-from tomcat-servlet-api-2.5
@@ -134,7 +130,12 @@ src_install() {
 		cp -pr output/build/webapps/docs ${D}${CATALINA_BASE}/webapps
 	fi
 	if use examples; then
-		cp -pr output/build/webapps/examples ${D}${CATALINA_BASE}/webapps
+		cd output/build/webapps/examples/WEB-INF/lib
+		rm -f *.jar
+		java-pkg_jar-from jakarta-jstl jstl.jar
+		java-pkg_jar-from jakarta-jstl standard.jar
+		cd "${S}"
+		cp -pPr output/build/webapps/examples ${D}${CATALINA_BASE}/webapps
 	fi
 
 	# symlink the directories to make CATALINA_BASE possible
@@ -142,6 +143,10 @@ src_install() {
 	dosym /var/log/${TOMCAT_NAME} ${CATALINA_BASE}/logs
 	dosym /var/tmp/${TOMCAT_NAME} ${CATALINA_BASE}/temp
 	dosym /var/run/${TOMCAT_NAME} ${CATALINA_BASE}/work
+
+	# link the manager's context to the right position
+	dosym ${TOMCAT_HOME}/webapps/host-manager/host-manager.xml /etc/${TOMCAT_NAME}/Catalina/localhost/host-manager.xml
+	dosym ${TOMCAT_HOME}/webapps/manager/manager.xml /etc/${TOMCAT_NAME}/Catalina/localhost/manager.xml
 
 	dodoc  ${S}/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/tomcat-users.xml
