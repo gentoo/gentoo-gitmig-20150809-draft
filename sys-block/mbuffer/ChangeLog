@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mbuffer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.10 2007/04/01 12:10:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.11 2007/04/04 15:34:05 armin76 Exp $
+
+  04 Apr 2007; Raúl Porcel <armin76@gentoo.org> mbuffer-20050730.ebuild:
+  x86 stable wrt bug 172996
 
 *mbuffer-20070317 (01 Apr 2007)
 
