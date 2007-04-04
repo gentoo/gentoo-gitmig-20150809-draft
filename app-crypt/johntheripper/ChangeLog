@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.53 2007/04/04 17:57:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.54 2007/04/04 17:59:50 phreak Exp $
+
+  04 Apr 2007; Christian Heim <phreak@gentoo.org>
+  johntheripper-1.6.40.ebuild, johntheripper-1.7.0.2.ebuild:
+  Fixing ebuild.badheader.
 
   04 Apr 2007; Christian Heim <phreak@gentoo.org>
   johntheripper-1.7.2.ebuild:
