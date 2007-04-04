@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti-cactid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.30 2007/03/29 07:58:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.31 2007/04/04 16:57:07 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  cacti-cactid-0.8.6i-r1.ebuild:
+  Stable on sparc wrt #172378
 
   29 Mar 2007; Markus Rothe <corsair@gentoo.org>
   cacti-cactid-0.8.6i-r1.ebuild:
