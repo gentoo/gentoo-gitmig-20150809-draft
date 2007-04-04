@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r5.ebuild,v 1.2 2007/04/01 12:08:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r5.ebuild,v 1.3 2007/04/04 16:05:50 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -141,6 +141,8 @@ src_compile() {
 
 	# work around bug #120858, gcc 3.4.x -Os miscompilation
 	use x86 && replace-flags "-Os" "-O2" # see bug #120858
+
+	use amd64 && replace-flags "-O3" "-O2" # see bug #148180
 
 	export BINDNOW_FLAGS="$(bindnow-flags)"
 
