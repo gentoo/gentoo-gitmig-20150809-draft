@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.4 2007/04/03 23:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r6.ebuild,v 1.1 2007/04/04 19:46:21 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
-TLS_AUTH_PATCH=20060105
+TLS_AUTH_PATCH=20070321
 QMAIL_SPP_PATCH=0.42
 
 DESCRIPTION="qmail -- a secure, reliable, efficient, simple message transfer agent"
