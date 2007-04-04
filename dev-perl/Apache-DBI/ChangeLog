@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.46 2007/04/04 13:39:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.47 2007/04/04 14:03:15 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  Apache-DBI-1.06.ebuild:
+  Stable on sparc wrt security #172293
 
   04 Apr 2007; Raúl Porcel <armin76@gentoo.org> Apache-DBI-1.06.ebuild:
   x86 stable wrt security bug 172293
