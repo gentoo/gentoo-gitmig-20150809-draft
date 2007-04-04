@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.199 2007/03/29 03:00:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.200 2007/04/04 14:06:49 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  coreutils-6.7-r1.ebuild:
+  Stable on sparc wrt #172003
 
   29 Mar 2007; Chris PeBenito <pebenito@gentoo.org> coreutils-6.9.ebuild:
   Re-add SELinux support.
