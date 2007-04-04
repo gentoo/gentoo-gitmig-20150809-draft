@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/tagsoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.14 2007/04/04 13:29:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.15 2007/04/04 13:56:20 betelgeuse Exp $
+
+*tagsoup-1.1 (04 Apr 2007)
+
+  04 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> +tagsoup-1.1.ebuild:
+  Version bump. Now installs a script to run tagsoup with.
 
   04 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   tagsoup-0.10.2-r1.ebuild:
