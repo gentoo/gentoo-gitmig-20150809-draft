@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.129 2007/03/10 23:04:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.130 2007/04/04 12:55:29 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> iptables-1.3.7.ebuild:
+  Stable on sparc
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org> files/iptables-1.3.2.init:
   Remove bashisms from init script, #170085 thanks to Natanael Copa.
