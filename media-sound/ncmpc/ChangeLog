@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.23 2007/03/28 21:51:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.24 2007/04/04 07:45:49 ticho Exp $
+
+  04 Apr 2007; Andrej Kacian <ticho@gentoo.org> ncmpc-0.11.1-r2.ebuild:
+  Only apply patch to use libncursesw for wide chars if ncurses has been built
+  with unicode support. Bug #155177, suggested by Mathias Gumz <akira at
+  fluxbox.org>.
 
 *ncmpc-0.11.1-r2 (28 Mar 2007)
 
