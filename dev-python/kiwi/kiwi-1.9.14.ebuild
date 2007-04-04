@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.13.ebuild,v 1.1 2007/02/16 09:09:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.14.ebuild,v 1.1 2007/04/04 19:38:34 lucass Exp $
 
 NEED_PYTHON=2.3
 
