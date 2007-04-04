@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.47 2007/04/04 19:48:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.48 2007/04/04 20:11:02 corsair Exp $
+
+  04 Apr 2007; Markus Rothe <corsair@gentoo.org> gajim-0.11.1.ebuild:
+  Stable on ppc64; bug #173376
 
   04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> gajim-0.11.1.ebuild:
   Stable on sparc wrt #173376
