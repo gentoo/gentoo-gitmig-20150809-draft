@@ -1,0 +1,12 @@
+*** mpz/set_d.c	14 Mar 2006 15:57:54 -0000	1.1
+--- mpz/set_d.c	31 May 2006 14:50:05 -0000	1.2
+*************** mpz_set_d (mpz_ptr r, double d)
+*** 57,60 ****
+--- 58,64 ----
+      _mpz_realloc (r, rn);
+  
++   if (rn <= 0)
++     rn = 0;
++ 
+    rp = PTR (r);
+  
