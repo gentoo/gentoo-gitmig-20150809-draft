@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1.ebuild,v 1.2 2007/02/06 23:21:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1.ebuild,v 1.3 2007/04/04 13:58:25 gustavoz Exp $
 
 inherit eutils libtool autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tse3/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE="alsa oss arts"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

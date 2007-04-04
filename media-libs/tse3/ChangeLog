@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tse3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.17 2007/02/06 23:21:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.18 2007/04/04 13:58:25 gustavoz Exp $
+
+  04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> tse3-0.3.1.ebuild:
+  Stable on sparc wrt #173272
 
   06 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   +files/tse3-0.3.1-parallelmake.patch, tse3-0.3.1.ebuild:
