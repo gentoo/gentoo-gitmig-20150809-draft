@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20070216.ebuild,v 1.2 2007/03/15 21:50:39 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20070216.ebuild,v 1.3 2007/04/05 07:00:21 calchan Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.geda.seul.org/devel/${PV}/geda-gattrib-${PV}.tar.gz
 	doc? ( http://www.geda.seul.org/devel/${PV}/geda-docs-${PV}.tar.gz )
 	examples? ( http://www.geda.seul.org/devel/${PV}/geda-examples-${PV}.tar.gz )"
 
-IUSE="doc examples"
+IUSE="doc examples gd"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
@@ -31,7 +31,7 @@ pkg_setup() {
 		built_with_use "dev-scheme/guile" deprecated \
 			|| die "You need either <dev-scheme/guile-1.8, or >=dev-scheme/guile-1.8 with USE=deprecated"
 	fi
-	built_with_use media-libs/gd png || die "media-libs/gd must be compiled with USE=png"
+	use gd && built_with_use sci-libs/libgeda gd || die "sci-libs/libgeda must be compiled with USE=gd"
 }
 
 src_compile() {
