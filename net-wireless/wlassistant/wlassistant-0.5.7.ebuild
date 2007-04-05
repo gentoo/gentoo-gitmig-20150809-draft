@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wlassistant/wlassistant-0.5.5.ebuild,v 1.1 2006/06/05 09:32:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wlassistant/wlassistant-0.5.7.ebuild,v 1.1 2007/04/05 20:51:53 genstef Exp $
 
 inherit kde
 
