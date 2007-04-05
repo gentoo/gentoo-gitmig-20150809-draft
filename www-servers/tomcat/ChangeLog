@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.132 2007/04/04 22:22:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.133 2007/04/05 21:24:15 wltjr Exp $
+
+  05 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog,
+  Manifest:
+  Fixed changelog borkage
 
 *tomcat-6.0.10-r2 (04 Apr 2007)
 
@@ -777,6 +781,7 @@
   tomcat-5.0.27-r4.ebuild:
   keepdir work,temp so they are not removed when upgrading, bug 62468
 
+*tomcat-4.1.30-r5 (26 Aug 2004)
 *tomcat-5.0.27-r4 (26 Aug 2004)
 
   26 Aug 2004; Thomas Matthijs <axxo@gentoo.org> files/4.1.30/tomcat.init,
@@ -784,6 +789,7 @@
   +tomcat-5.0.27-r4.ebuild:
   escape params in init script, bug 61822
 
+*tomcat-3.3.2-r2 (08 Aug 2004)
 *tomcat-4.1.30-r4 (08 Aug 2004)
 
   08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
@@ -814,6 +820,8 @@
   fix premissions (again sorry), should fix 59232 && 58616
 
 *tomcat-3.3.2-r1 (03 Aug 2004)
+*tomcat-4.1.30-r3 (03 Aug 2004)
+*tomcat-5.0.27-r2 (03 Aug 2004)
 
   03 Aug 2004; Thomas Matthijs <axxo@gentoo.org> +tomcat-3.3.2-r1.ebuild,
   +tomcat-4.1.30-r3.ebuild, +tomcat-5.0.27-r2.ebuild:
@@ -829,6 +837,7 @@
   +tomcat-4.1.30-r2.ebuild:
   fix patch to source the correct file, 58835
 
+*tomcat-4.1.30-r1 (29 Jul 2004)
 *tomcat-5.0.27-r1 (29 Jul 2004)
 
   29 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +tomcat-4.1.30-r1.ebuild,
@@ -854,6 +863,8 @@
   changed init scripts, changed default shell/homedir for tomcat user, added
   warning about the new init scripts
 
+*tomcat-3.3.2 (27 Jul 2004)
+*tomcat-4.1.30 (27 Jul 2004)
 *tomcat-5.0.27 (27 Jul 2004)
 
   27 Jul 2004; Thomas Matthijs <axxo@gentoo.org> metadata.xml,
