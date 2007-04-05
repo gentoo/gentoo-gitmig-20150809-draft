@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.115 2007/03/11 23:16:56 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.116 2007/04/05 12:36:57 chainsaw Exp $
+
+*audacious-1.3.2 (05 Apr 2007)
+
+  05 Apr 2007; Tony Vroon <chainsaw@gentoo.org> +audacious-1.3.2.ebuild:
+  New upstream release. Mostly bugfixes.
 
   11 Mar 2007; Peter Weller <welp@gentoo.org> audacious-1.3.1.ebuild:
   Keyworded ~x86-fbsd
