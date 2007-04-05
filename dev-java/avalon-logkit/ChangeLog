@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.39 2007/04/01 17:49:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.40 2007/04/05 20:55:00 betelgeuse Exp $
 
   01 Apr 2007; Raúl Porcel <armin76@gentoo.org> avalon-logkit-2.1.ebuild:
   Add ~ia64 keyword wrt bug 158687
@@ -75,6 +75,9 @@
   avalon-logkit-1.2-r1.ebuild, avalon-logkit-2.0-r1.ebuild:
   ant_src_unpack -> src_unpack
 
+*avalon-logkit-1.2-r1 (02 Jul 2006)
+*avalon-logkit-2.0-r1 (02 Jul 2006)
+
   02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +avalon-logkit-1.2-r1.ebuild, +avalon-logkit-2.0-r1.ebuild:
   Revision bumps to support new Java system.
@@ -135,6 +138,7 @@
   Fixed invalid atoms in *DEPEND.
 
 *avalon-logkit-1.2 (22 Feb 2005)
+*avalon-logkit-2.0 (22 Feb 2005)
 
   22 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/2.0-build.xml, +avalon-logkit-1.2.ebuild, +avalon-logkit-2.0.ebuild:
