@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.4 2007/04/05 17:29:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.5 2007/04/05 22:00:22 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -122,7 +122,7 @@ src_compile() {
 		  --enable-man-pages \
 		  --with-backend=${backend} \
 		  $(use_enable debug verbose-mode) \
-		  $(use_with dell dell-backlight) \ 
+		  $(use_with dell dell-backlight) \
 		  $(use_enable disk-partition parted) \
 		  $(use_enable pcmcia pcmcia-support) \
 		  $(use_enable doc docbook-docs) \
