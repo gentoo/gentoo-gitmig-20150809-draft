@@ -1,6 +1,22 @@
 # ChangeLog for dev-util/gquilt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.12 2007/03/19 02:36:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.13 2007/04/05 06:14:20 nerdboy Exp $
+
+*gquilt-0.19 (05 Apr 2007)
+*gquilt-0.18 (05 Apr 2007)
+
+  05 Apr 2007; Steve Arnold <nerdboy@gentoo.org> -gquilt-0.14.ebuild,
+  -gquilt-0.15.ebuild, +gquilt-0.18.ebuild, +gquilt-0.19.ebuild,
+  +gquilt-0.20.ebuild:
+  correction: removed older broken versions completely; they didn't work
+  at all, so only the latest from sourceforge that actually work...
+
+*gquilt-0.20 (05 Apr 2007)
+
+  05 Apr 2007; Steve Arnold <nerdboy@gentoo.org> gquilt-0.14.ebuild,
+  gquilt-0.15.ebuild, +gquilt-0.20.ebuild:
+  Update for bugs 128244 and 111428 (added latest upstream release and
+  fixed symlink issue in existing versions).  Should stablize on 0.20.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
