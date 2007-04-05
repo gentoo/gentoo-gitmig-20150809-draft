@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.13 2007/04/01 12:45:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.14 2007/04/05 20:02:46 hd_brummy Exp $
+
+  05 Apr 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-weatherng-0.0.8_pre3.ebuild:
+  Bug #173267 fixed; Thx to P.Bossy for reporting this
 
   01 Apr 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-weatherng-0.0.8_pre3.ebuild:
