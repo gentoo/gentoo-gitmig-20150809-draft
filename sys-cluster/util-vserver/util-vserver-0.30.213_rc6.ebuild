@@ -1,26 +1,33 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212-r1.ebuild,v 1.2 2007/01/21 14:09:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213_rc6.ebuild,v 1.1 2007/04/05 17:37:57 hollow Exp $
 
-inherit eutils bash-completion
+WANT_AUTOMAKE="1.9"
+
+inherit autotools eutils bash-completion
 
 DESCRIPTION="Linux-VServer admin utilities"
 HOMEPAGE="http://www.nongnu.org/util-vserver/"
-SRC_URI="http://ftp.linux-vserver.org/pub/utils/${PN}/${P}.tar.bz2"
+SRC_URI="http://people.linux-vserver.org/~dhozac/t/uv-testing/${P/_rc/-rc}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE=""
 
-RDEPEND="dev-libs/beecrypt
+DEPEND=">=dev-libs/dietlibc-0.30-r2
+	dev-libs/beecrypt
 	net-firewall/iptables
 	net-misc/vconfig
 	sys-apps/iproute2"
 
-DEPEND="${RDEPEND}
-	>=dev-libs/dietlibc-0.30-r2"
+RDEPEND="sys-apps/iproute2
+	net-misc/vconfig
+	net-firewall/iptables
+	dev-libs/beecrypt"
+
+S="${WORKDIR}/${P/_rc/-rc}"
 
 pkg_setup() {
 	if [[ -z "${VDIRBASE}" ]]; then
@@ -36,29 +43,16 @@ pkg_setup() {
 	einfo
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-wrapper.patch
-	epatch "${FILESDIR}"/${P}-initpost.patch
-}
-
 src_compile() {
 	econf --with-vrootdir=${VDIRBASE} \
-		--localstatedir=/var \
-		--with-initrddir=/etc/init.d || die "econf failed!"
+		--with-initscripts=gentoo \
+		--localstatedir=/var || die "econf failed!"
 	emake || die "emake failed!"
 }
 
 src_install() {
 	make DESTDIR="${D}" install install-distribution \
 		|| die "make install failed!"
-
-	# create the /sbin/vshelper symlink so we don't have to mess around with
-	# (a) echoing stuff to /etc/sysctl.conf
-	# (b) changing the default vshelper in the kernel sources.
-	dosym /usr/lib/util-vserver/vshelper /sbin/vshelper
 
 	# keep dirs
 	keepdir /var/run/vservers
@@ -70,13 +64,6 @@ src_install() {
 
 	# remove legacy config file
 	rm -f "${D}"/etc/vservers.conf
-
-	# remove the non-gentoo init-scripts:
-	rm -f "${D}"/etc/init.d/*
-
-	# and install gentoo'ized ones:
-	doinitd "${FILESDIR}"/init.d/vservers.default
-	doinitd "${FILESDIR}"/init.d/vprocunhide
 
 	# bash-completion
 	dobashcompletion "${FILESDIR}"/bash_completion util-vserver
