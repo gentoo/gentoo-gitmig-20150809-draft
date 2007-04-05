@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.5 2007/04/04 19:36:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.6 2007/04/05 18:16:52 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -70,8 +70,8 @@ src_unpack() {
 		|| die "sed build.config failed"
 
 	sed -i \
-		-e "s:/usr/games/lib/:$(games_get_libdir)/:g" uqm-wrapper \
-		|| die "sed uqm-wrapper failed"
+		-e "s:@INSTALL_LIBDIR@:$(games_get_libdir)/:g" build/unix/uqm-wrapper.in \
+		|| die "sed uqm-wrapper.in failed"
 }
 
 src_compile() {
