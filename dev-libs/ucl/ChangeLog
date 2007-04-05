@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.21 2007/03/12 16:40:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.22 2007/04/05 15:38:59 drizzt Exp $
+
+  05 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> metadata.xml:
+  Take maintainership (needed for upx-ucl)
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> ucl-1.02.ebuild:
   x86 stable
