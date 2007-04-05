@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.3 2007/04/05 02:18:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.4 2007/04/05 17:29:55 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -11,13 +11,13 @@ SRC_URI="http://people.freedesktop.org/~david/dist/${P}.tar.gz"
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="acpi crypt debug dell disk-partition doc mactel pcmcia selinux"
+IUSE="acpi crypt debug dell disk-partition doc pam pcmcia selinux"
 
 RDEPEND=">=dev-libs/glib-2.6
 		>=dev-libs/dbus-glib-0.61
 		>=sys-fs/udev-104
 		>=sys-apps/util-linux-2.12r-r1
-		>=sys-kernel/linux-headers-2.6.17
+		kernel_linux? ( >=sys-kernel/linux-headers-2.6.17 )
 		>=dev-libs/expat-1.95.8
 		>=sys-apps/pciutils-2.2.3
 		>=dev-libs/libusb-0.1.10a
@@ -28,7 +28,8 @@ RDEPEND=">=dev-libs/glib-2.6
 		dell? ( >=sys-libs/libsmbios-0.13.4 )
 		disk-partition? ( >=sys-apps/parted-1.7.1 )
 		crypt? ( >=sys-fs/cryptsetup-luks-1.0.1 )
-		selinux? ( sys-libs/libselinux )"
+		selinux? ( sys-libs/libselinux )
+		pam? ( sys-auth/consolekit )"
 
 DEPEND="${RDEPEND}
 		  dev-util/pkgconfig
@@ -92,8 +93,25 @@ src_unpack() {
 }
 
 src_compile() {
+	local backend=""
+	local acpi=""
+
 	# TODO :: policykit should have a pam useflag
 	append-flags -rdynamic
+
+	if use kernel_linux ; then
+		backend="linux"
+	elif use kernel_FreeBSD ; then
+		backend="freebsd"
+	else
+		eerror "Invalid backend"
+	fi
+
+	if use acpi ; then
+		acpi="--enable-acpi-toshiba --enable-acpi-ibm"
+	else
+		acpi="--disable-acpi-proc --disable-acpi-acpid"
+	fi
 
 	econf --disable-policy-kit \
 		  --with-doc-dir=/usr/share/doc/${PF} \
@@ -101,14 +119,17 @@ src_compile() {
 		  --with-pid-file=/var/run/hald.pid \
 		  --with-hwdata=/usr/share/misc \
 		  --enable-hotplug-map \
+		  --enable-man-pages \
+		  --with-backend=${backend} \
 		  $(use_enable debug verbose-mode) \
+		  $(use_with dell dell-backlight) \ 
 		  $(use_enable disk-partition parted) \
 		  $(use_enable pcmcia pcmcia-support) \
-		  $(use_enable acpi acpi-proc) \
 		  $(use_enable doc docbook-docs) \
 		  $(use_enable doc doxygen-docs) \
-		  $(use_with mactel macbookpro) \
 		  $(use_enable selinux) \
+		  $(use_enable pam console-kit) \
+		  ${acpi} \
 	|| die "configure failed"
 
 	emake || die "make failed"

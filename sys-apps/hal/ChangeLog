@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.145 2007/04/05 02:18:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.146 2007/04/05 17:29:55 cardoe Exp $
+
+  05 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/02_acpi_repeated_property_change.patch,
+  +files/0.5.9/03_crasher_fix_fail_to_return_value.patch,
+  files/0.5.9/series, hal-0.5.9.ebuild:
+  Re-work acpi USE flag usage. Add pam USE flag for sys-auth/consolekit.
+  Remove mactel USE flag since it will auto build and that's how it should.
+  Added linux-sources depend on having a Linux kernel. Check for Linux or
+  FreeBSD kernel to support both Gentoo/Linux and Gentoo/FreeBSD. Add building
+  of dell utilies based on dell USE flag so we don't have an automagical
+  depend. 2 upstream fixes. One for duplicate acpi messages. One for a
+  possible crasher.
 
   05 Apr 2007; Doug Goldstein <cardoe@gentoo.org> +files/0.5.9-hald.rc,
   +files/0.5.9/series, -files/hald, hal-0.5.9.ebuild:

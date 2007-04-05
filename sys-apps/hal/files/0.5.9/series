@@ -1,1 +1,3 @@
 01_luks_mount_fix.patch
+02_acpi_repeated_property_change.patch
+03_crasher_fix_fail_to_return_value.patch
