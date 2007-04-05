@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r8.ebuild,v 1.1 2007/03/13 21:19:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r8.ebuild,v 1.2 2007/04/05 14:16:55 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -39,13 +39,13 @@ src_unpack() {
 	cd "${WORKDIR}"
 	cp "${FILESDIR}"/inittab . || die "cp inittab"
 	local insert=""
-	if use ibm ; then
-		insert="#hvc0:2345:respawn:/sbin/agetty -L 9600 hvc0"$'\n'
-		insert="${insert}#hvsi:2345:respawn:/sbin/agetty -L 19200 hvsi0"
-	fi
-	use ppc && insert="#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux"
+	use ppc && insert="#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux\n"
 	use arm && insert='#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100'
 	use hppa && insert='b0:12345:respawn:/sbin/agetty 9600 ttyB0 vt100'
+	if use ibm ; then
+		insert="${insert}#hvc0:2345:respawn:/sbin/agetty -L 9600 hvc0"$'\n'
+		insert="${insert}#hvsi:2345:respawn:/sbin/agetty -L 19200 hvsi0"
+	fi
 	(use arm || use mips || use sh || use sparc) && sed -i '/ttyS0/s:#::' inittab
 	[[ -n ${insert} ]] && echo "# Architecture specific features"$'\n'"${insert}" >> inittab
 }
