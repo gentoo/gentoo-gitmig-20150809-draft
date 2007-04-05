@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.95 2007/04/04 19:59:17 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.96 2007/04/05 15:42:20 drizzt Exp $
+
+  05 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
+  libtorrent-0.11.2.ebuild:
+  Stable on ppc wrt bug #172469
+  Thanks to Nathan Smith for testing.
 
 *libtorrent-0.11.4 (04 Apr 2007)
 
