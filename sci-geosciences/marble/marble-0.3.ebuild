@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.3.ebuild,v 1.1 2007/03/24 20:47:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.3.ebuild,v 1.2 2007/04/05 00:44:01 cryos Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Free 3D desk globe and world atlas"
-HOMEPAGE="http://www.kde-apps.org/content/show.php/Marble+-+Desktop+Globe?content=55105"
+HOMEPAGE="http://edu.kde.org/marble/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"

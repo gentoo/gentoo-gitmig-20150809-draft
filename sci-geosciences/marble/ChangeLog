@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/marble
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/ChangeLog,v 1.1 2007/03/24 20:47:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/ChangeLog,v 1.2 2007/04/05 00:44:01 cryos Exp $
+
+  05 Apr 2007; Marcus D. Hanwell <cryos@gentoo.org> marble-0.3.ebuild:
+  Update to new homepage.
 
 *marble-0.3 (24 Mar 2007)
 
