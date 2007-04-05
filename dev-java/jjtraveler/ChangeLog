@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jjtraveler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.10 2007/04/03 07:45:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.11 2007/04/05 15:38:16 betelgeuse Exp $
+
+*jjtraveler-0.4.3-r2 (05 Apr 2007)
+
+  05 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jjtraveler-0.4.3-r1.ebuild, +jjtraveler-0.4.3-r2.ebuild:
+  Fix the installed jjtraveler-config script.
 
   03 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   jjtraveler-0.4.3-r1.ebuild:

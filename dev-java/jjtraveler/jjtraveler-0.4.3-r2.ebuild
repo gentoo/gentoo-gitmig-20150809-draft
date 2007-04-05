@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3-r1.ebuild,v 1.3 2007/04/05 15:38:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3-r2.ebuild,v 1.1 2007/04/05 15:38:16 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source doc"
 WANT_AUTOMAKE="1.7"
