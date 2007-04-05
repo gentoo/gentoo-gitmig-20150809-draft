@@ -1,0 +1,11 @@
+--- qmail-smtpd.c.orig	2007-04-06 00:05:37.000000000 +0200
++++ qmail-smtpd.c	2007-04-06 00:05:42.000000000 +0200
+@@ -965,7 +965,7 @@
+ 
+   ciphers = env_get("TLSCIPHERS");
+   if (!ciphers) {
+-    if (control_readfile(&saciphers, "control/tlsserverciphers") == -1)
++    if (control_readfile(&saciphers, "control/tlsserverciphers", 0) == -1)
+       { SSL_free(myssl); die_control(); }
+     if (saciphers.len) { /* convert all '\0's except the last one to ':' */
+       int i;

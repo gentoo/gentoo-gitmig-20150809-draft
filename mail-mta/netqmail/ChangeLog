@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.29 2007/04/04 19:46:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.30 2007/04/05 22:14:18 hansmi Exp $
+
+*netqmail-1.05-r7 (06 Apr 2007)
+
+  05 Apr 2007; Michael Hanselmann <hansmi@gentoo.org>
+  +files/1.05-r7-sslfix.diff, -netqmail-1.05-r6.ebuild,
+  +netqmail-1.05-r7.ebuild:
+  Try to fix bug 169591 by adding a patch.
 
 *netqmail-1.05-r6 (04 Apr 2007)
 
