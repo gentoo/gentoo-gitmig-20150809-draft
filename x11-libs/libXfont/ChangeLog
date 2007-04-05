@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.59 2007/04/05 06:58:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.60 2007/04/05 07:34:40 dberkholz Exp $
+
+*libXfont-1.2.8 (05 Apr 2007)
+
+  05 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +libXfont-1.2.8.ebuild:
+  Bump. Includes the security patch as well as a fix to use loadable font
+  modules and other irrelevant stuff.
 
   05 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   libXfont-1.2.2-r1.ebuild:
