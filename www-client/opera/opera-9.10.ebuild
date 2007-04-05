@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.10.ebuild,v 1.7 2007/01/09 12:22:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.10.ebuild,v 1.8 2007/04/05 04:52:51 jer Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.opera.com"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 
 IUSE="qt-static spell gnome"
 RESTRICT="strip mirror"
@@ -26,7 +26,9 @@ SRC_URI="
 	amd64? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERALNG}.tar.bz2 ) )
 	amd64? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.6-shared-qt.i386-${OPERALNG}.tar.bz2 ) )
 	sparc? ( ${OPERA_URI}sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-${OPERALNG}.tar.bz2 )
-	ppc? ( ${OPERA_URI}ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-${OPERALNG}.tar.bz2 )"
+	ppc? ( ${OPERA_URI}ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-${OPERALNG}.tar.bz2 )
+	x86-fbsd? ( !qt-static? ( mirror://opera/unix/freebsd/${OPERAFTPDIR}/shared/opera-${OPERAVER}.4-shared-qt.i386.freebsd-${OPERALNG}.tar.bz2 ) )
+	x86-fbsd? ( qt-static? ( mirror://opera/unix/freebsd/${OPERAFTPDIR}/static/opera-${OPERAVER}.1-static-qt.i386.freebsd-${OPERALNG}.tar.bz2 ) )"
 
 DEPEND=">=sys-apps/sed-4
 	amd64? ( sys-apps/setarch )"
@@ -125,6 +127,20 @@ src_install() {
 
 	dodir /etc/revdep-rebuild
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
+
+	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
+	if [ ${ARCH} = "x86-fbsd" ]; then
+		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
+		while read i; do
+			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];
+			then
+				export SANITY_CHECK_LIBZ_FAILED=1
+				break
+			fi
+		    sed -i -e 's/libz\.so\.3/libz.so.1/g' "$i"
+		done
+		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
+	fi
 }
 
 pkg_postinst() {

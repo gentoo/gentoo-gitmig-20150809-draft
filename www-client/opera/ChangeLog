@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.80 2007/02/06 05:02:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.81 2007/04/05 04:52:51 jer Exp $
+
+  05 Apr 2007; Jeroen Roovers <jer@gentoo.org> opera-9.10.ebuild:
+  Patch from Toffanin for x86-fbsd (bug #171841).
 
   06 Feb 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Set myself up as (co)maintainer while axxo is away. You know, just to catch
