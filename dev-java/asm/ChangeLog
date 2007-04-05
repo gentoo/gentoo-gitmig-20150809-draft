@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.38 2007/02/10 19:10:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.39 2007/04/05 11:06:22 betelgeuse Exp $
 
 *asm-1.5.3 (10 Feb 2007)
 
@@ -59,6 +59,11 @@
   22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> asm-1.4.1-r1.ebuild,
   asm-1.4.3-r3.ebuild, asm-1.5.2-r2.ebuild, asm-2.0-r1.ebuild:
   ant_src_unpack -> src_unpack
+
+*asm-2.0-r1 (02 Jul 2006)
+*asm-1.5.2-r2 (02 Jul 2006)
+*asm-1.4.3-r3 (02 Jul 2006)
+*asm-1.4.1-r1 (02 Jul 2006)
 
   02 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +asm-1.4.1-r1.ebuild,
   +asm-1.4.3-r3.ebuild, +asm-1.5.2-r2.ebuild, +asm-2.0-r1.ebuild:
@@ -123,7 +128,7 @@
 
 *asm-1.4.3-r1 01 Aug 2004
 
-  01 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  01 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   SLOTed properly, fixes #55870.
 
 *asm-1.4.3 (27 Jun 2004)
