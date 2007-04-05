@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.144 2007/04/03 21:29:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.145 2007/04/05 02:18:28 cardoe Exp $
+
+  05 Apr 2007; Doug Goldstein <cardoe@gentoo.org> +files/0.5.9-hald.rc,
+  +files/0.5.9/series, -files/hald, hal-0.5.9.ebuild:
+  Adding 0.5.9 init script which uses consolekit. Removing 0.4.x series init
+  script. Remove uneeded dodir calls. Add keepdir /var/lib/cache/hald since
+  HAL bombs without that directory. Adding quilt series file so we can use
+  quilt to maintain patches.
 
   03 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/0.5.9/01_luks_mount_fix.patch, hal-0.5.9.ebuild:

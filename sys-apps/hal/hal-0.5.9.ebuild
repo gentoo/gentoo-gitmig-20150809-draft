@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.2 2007/04/03 21:29:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.3 2007/04/05 02:18:28 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -126,16 +126,18 @@ src_install() {
 	newexe "${FILESDIR}"/hal-unmount.dev hal_unmount
 
 	# initscript
-	newinitd "${FILESDIR}"/0.5-hald.rc hald
+	newinitd "${FILESDIR}"/0.5.9-hald.rc hald
 
 	# We now create and keep /media here as both gnome-mount and pmount
 	# use these directories, to avoid collision.
-	dodir /media
 	keepdir /media
+
 	# We also need to create and keep /etc/fdi/{information,policy,preprobe}
 	# or else hal bombs.
-	dodir /etc/hal/fdi/{information,policy,preprobe}
 	keepdir /etc/hal/fdi/{information,policy,preprobe}
+
+	# HAL stores it's fdi cache in /var/lib/cache/hald
+	keepdir /var/lib/cache/hald
 }
 
 pkg_postinst() {
