@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jimi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.8 2007/02/13 08:44:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.9 2007/04/05 10:49:37 betelgeuse Exp $
+
+  05 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> sun-jimi-1.0-r2.ebuild:
+  Mark the generation 2 migration stable on amd64, ppc and x86 because the
+  only change is to switch to ejavac.
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> sun-jimi-1.0-r2.ebuild:
   Added ~ppc64; bug #153229
