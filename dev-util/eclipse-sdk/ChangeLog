@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.120 2007/04/03 13:42:48 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.121 2007/04/05 15:31:42 betelgeuse Exp $
+
+  05 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> files/eclipse-3.2:
+  Fix sourcing of ${HOME}/.eclipserc.
 
   03 Apr 2007; Joshua Nichols <nichoj@gentoo.org> metadata.xml:
   Added java to metadata.
