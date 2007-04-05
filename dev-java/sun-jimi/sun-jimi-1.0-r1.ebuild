@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/sun-jimi-1.0-r1.ebuild,v 1.3 2006/10/05 17:07:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/sun-jimi-1.0-r1.ebuild,v 1.4 2007/04/05 10:44:33 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.3
 		app-arch/unzip"
 RDEPEND=">=virtual/jre-1.3"
 
-# The license seems to permit distributing the binaries so we would be able to 
+# The license seems to permit distributing the binaries so we would be able to
 # remove this by providing sun-jimi-bin
 RESTRICT="fetch"
 
