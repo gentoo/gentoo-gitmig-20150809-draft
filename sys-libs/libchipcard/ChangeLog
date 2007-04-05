@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.50 2007/01/27 11:16:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.51 2007/04/05 16:43:17 hanno Exp $
+
+  05 Apr 2007; Hanno Boeck <hanno@gentoo.org> libchipcard-3.0.2.ebuild:
+  Re-slot to 2, can't be installed parallel.
 
   27 Jan 2007; Hanno Boeck <hanno@gentoo.org> files/chipcardd3:
   Fix typo.
