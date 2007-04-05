@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.110 2007/03/31 21:46:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.111 2007/04/05 06:30:06 corsair Exp $
+
+  05 Apr 2007; Markus Rothe <corsair@gentoo.org> gdb-6.6-r2.ebuild:
+  Stable on ppc64; bug #144833
 
 *gdb-6.6-r2 (31 Mar 2007)
 
