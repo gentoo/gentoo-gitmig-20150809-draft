@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.58 2007/04/05 06:51:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.59 2007/04/05 06:58:43 dberkholz Exp $
+
+  05 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  libXfont-1.2.2-r1.ebuild:
+  Fix keywords.
 
 *libXfont-1.2.7-r1 (05 Apr 2007)
 *libXfont-1.2.2-r1 (05 Apr 2007)
