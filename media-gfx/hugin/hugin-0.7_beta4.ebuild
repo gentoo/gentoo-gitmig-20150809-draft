@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7_beta4.ebuild,v 1.1 2007/04/02 00:16:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7_beta4.ebuild,v 1.2 2007/04/05 15:28:23 vanquirius Exp $
 
 inherit wxwidgets eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=media-libs/libpano12-2.8.4
 		media-libs/libpng
 		media-libs/jpeg
 		media-libs/tiff
-		enblend? ( media-gfx/enblend )
+		enblend? ( >=media-gfx/enblend-2.4 )
 		sift? ( media-gfx/autopano-sift )"
 
 pkg_setup() {
