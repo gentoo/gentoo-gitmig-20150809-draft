@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.33 2007/03/10 14:11:44 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.34 2007/04/05 06:56:04 calchan Exp $
+
+  05 Apr 2007; Denis Dupeyron <calchan@gentoo.org> libgeda-20070216.ebuild:
+  Fixed bug #173398, thanks to Stefan Salewski.
 
 *libgeda-20070216 (10 Mar 2007)
 
