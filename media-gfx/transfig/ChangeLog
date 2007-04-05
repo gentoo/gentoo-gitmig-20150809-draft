@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.33 2007/04/02 15:08:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.34 2007/04/05 16:36:53 pva Exp $
+
+  05 Apr 2007; <pva@gentoo.org> metadata.xml:
+  Added myself to metadata - do not want to miss bugs.
 
 *transfig-3.2.5 (02 Apr 2007)
 
