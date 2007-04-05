@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.78 2007/04/05 09:32:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.79 2007/04/05 10:17:20 mabi Exp $
+
+*lua-5.1.2 (05 Apr 2007)
+
+  05 Apr 2007; Matti Bickel <mabi@gentoo.org> -files/lua-5.1.1-make.patch,
+  -files/lua-5.1.1-make_static.patch, -files/lua-5.1.1-module_paths.patch,
+  -files/lua-5.1.1-readline.patch, +files/lua-5.1-make.patch,
+  +files/lua-5.1-make_static.patch, +files/lua-5.1-module_paths.patch,
+  +files/lua-5.1-readline.patch, -lua-5.1.1.ebuild, lua-5.1.1-r2.ebuild,
+  +lua-5.1.2.ebuild:
+  Version bump. Changed patching to use same patches across minor versions.
+  Cleanup.
 
   05 Apr 2007; Markus Rothe <corsair@gentoo.org> lua-5.1.1-r2.ebuild:
   Stable on ppc64
