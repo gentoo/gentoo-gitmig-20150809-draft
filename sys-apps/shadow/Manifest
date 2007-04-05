@@ -49,10 +49,10 @@ AUX pam.d-include/system-auth-1.1 365 RMD160 28d216f6542554bf175a43a876382783100
 MD5 33d9efd092b6999143ea42c99a59bfb1 files/pam.d-include/system-auth-1.1 365
 RMD160 28d216f6542554bf175a43a8763827831009224d files/pam.d-include/system-auth-1.1 365
 SHA256 e073f573c88515cf38fb22faa26ccf87d55d34e6d460d28ad25682958de4c13e files/pam.d-include/system-auth-1.1 365
-AUX securetty 253 RMD160 20e9b398e7bd3c6d50db92d403ade8e3f5b13cb1 SHA1 ca723296318773733d1e53486088579ff43e210b SHA256 158ba98d557a8e3241d8635e5f8e2d6712847ec0b92741f8bdd65daecd834843
-MD5 a744152ec905f4c06f3b92142b7fec8a files/securetty 253
-RMD160 20e9b398e7bd3c6d50db92d403ade8e3f5b13cb1 files/securetty 253
-SHA256 158ba98d557a8e3241d8635e5f8e2d6712847ec0b92741f8bdd65daecd834843 files/securetty 253
+AUX securetty 262 RMD160 47898e8cef18c582cce9a5ea04bfcdeb8de786bc SHA1 51014069c1884948ad6684d79931a0a89f445471 SHA256 9bc3c187d5535ebe83cf22129b7189a9d8e4c05520af187bff6cff4d8f083c67
+MD5 d138439baebd62b852aa1314ca579088 files/securetty 262
+RMD160 47898e8cef18c582cce9a5ea04bfcdeb8de786bc files/securetty 262
+SHA256 9bc3c187d5535ebe83cf22129b7189a9d8e4c05520af187bff6cff4d8f083c67 files/securetty 262
 AUX shadow-4.0.11.1-perms.patch 1659 RMD160 ee52a5ceee5edba881bfd16618e3c8f91fff86e3 SHA1 4338d459cda46b030769f40cb1a87c550aee6065 SHA256 71fec5c9214f6bbd2c2bb27426887d4a77e0d29a3dad024e1be56473c0cce4fa
 MD5 ae5d078bc6b651b5f081dcfc64b5df69 files/shadow-4.0.11.1-perms.patch 1659
 RMD160 ee52a5ceee5edba881bfd16618e3c8f91fff86e3 files/shadow-4.0.11.1-perms.patch 1659
@@ -106,9 +106,9 @@ MD5 6be0a013e7aee78ebb6228308ca16fee files/digest-shadow-4.0.18.1 253
 RMD160 31ec617739d2935bd1b4dfc1d676399d5c5f50bc files/digest-shadow-4.0.18.1 253
 SHA256 6683d8ca173c809dedf056bf6e658284264bb277cab8c43e03b811ed4308d109 files/digest-shadow-4.0.18.1 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF6Q9q8bi6rjpTunYRAkS1AKCNdNnD4ylbZmSOWvibvpuEHfKcHACferHa
-+xNuvHa7lzTk0PsY9Ar0e2Q=
-=OJGl
+iD8DBQFGFW/M8bi6rjpTunYRAk+PAJ9AhrbTSvgokhXG+RonAolPgSAlFACdHbg3
+X//CRNcL/dsKfF5fCTHBH5U=
+=D6XZ
 -----END PGP SIGNATURE-----
