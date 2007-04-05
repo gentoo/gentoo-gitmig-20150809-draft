@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.30.ebuild,v 1.1 2007/02/07 08:17:12 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.30.ebuild,v 1.2 2007/04/05 23:48:57 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://filesingularity.timedoctor.org/${MY_P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
