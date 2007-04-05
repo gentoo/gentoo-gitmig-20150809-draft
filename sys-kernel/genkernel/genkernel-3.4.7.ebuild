@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.7_pre5.ebuild,v 1.1 2007/03/14 01:27:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.7.ebuild,v 1.1 2007/04/05 15:01:33 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
@@ -14,8 +14,10 @@ VERSION_UNIONFS='1.5pre-cvs200701042308'
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="http://dev.gentoo.org/~wolf31o2/${P}.tar.bz2
-	http://dev.gentoo.org/~wolf31o2/sources/genkernel/genkernel-pkg-${VERSION_PKG}.tar.bz2
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${PN}-pkg-${VERSION_PKG}.tar.bz2
+	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2
+	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${PN}-pkg-${VERSION_PKG}.tar.bz2
 	http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
 	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
 	ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
