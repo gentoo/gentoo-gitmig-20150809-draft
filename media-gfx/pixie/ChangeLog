@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.36 2007/04/04 08:11:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.37 2007/04/05 03:44:42 eradicator Exp $
+
+*pixie-2.1.1-r1 (05 Apr 2007)
+
+  05 Apr 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/pixie-1.7.6-libcommon.patch, -files/pixie-1.7.6-shader.patch,
+  +files/pixie-2.1.1-configure_paths.patch,
+  +files/pixie-2.1.1-gettimeofday.patch, +files/pixie-2.1.1-mutex.patch,
+  -pixie-1.7.6.ebuild, -pixie-2.1.1.ebuild, +pixie-2.1.1-r1.ebuild:
+  Removed old version.  Revbumped 2.1.1 with some fixes I've sent upstream.
 
   04 Apr 2007; Jeremy Huddleston <eradicator@gentoo.org>
   pixie-2.0.2-r1.ebuild, pixie-2.1.1.ebuild:

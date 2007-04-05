@@ -1,0 +1,51 @@
+Changes for pixie-2.1.1 required for compilation on NetBSD and probably
+other systems:
+
+1. Variable escaping wasn't done correctly in configure.in
+
+2. NetBSD includes dlopen() in libc rather than through libdl, so I added a
+   check for it in libc if configure doesn't find libdl.
+
+--- configure.in.orig	2007-03-30 22:03:04.000000000 -0700
++++ configure.in	2007-03-31 04:43:06.000000000 -0700
+@@ -23,7 +23,7 @@ AC_PROG_MAKE_SET
+ dnl ---------------------------------------------------
+ dnl Check standard libraries
+ dnl
+-AC_CHECK_LIB(dl, dlopen,,[AC_MSG_ERROR([dl library is not found])],)
++AC_CHECK_LIB(dl, dlopen,,[AC_CHECK_LIB(c, dlopen,,[AC_MSG_ERROR([dlopen routine is not found])],)],)
+ AC_CHECK_LIB(m, sin,,[AC_MSG_ERROR([math library is not found])],)
+ AC_CHECK_LIB(pthread, pthread_create,,[AC_MSG_ERROR([pthread library is not found])],)
+ 
+@@ -200,13 +200,13 @@
+ AC_ARG_ENABLE(selfcontained,
+ AS_HELP_STRING([--enable-selfcontained],[Build for a selfcontained setup (overrides custom directory settings)]),
+ [case "${enableval}" in
+-	yes)	docdir="${prefix}/doc"
+-		shaderdir="${prefix}/shaders"
+-		modeldir="${prefix}/models"
+-		texturedir="${prefix}/textures"
+-		displaysdir="${prefix}/displays"
+-		proceduraldir="${prefix}/procedurals"
+-		modulesdir="${prefix}/modules"
++	yes)	docdir="\${prefix}/doc"
++		shaderdir="\${prefix}/shaders"
++		modeldir="\${prefix}/models"
++		texturedir="\${prefix}/textures"
++		displaysdir="\${prefix}/displays"
++		proceduraldir="\${prefix}/procedurals"
++		modulesdir="\${prefix}/modules"
+ 		;;
+ 	no) ;;
+ 	*) AC_MSG_ERROR(bad value ${enableval} for --enable-selfcontained) ;;
+@@ -221,7 +221,8 @@
+   exec_prefix_NONE=
+   test "x$prefix" = xNONE && prefix_NONE=yes && prefix=$ac_default_prefix
+   test "x$exec_prefix" = xNONE && exec_prefix_NONE=yes && exec_prefix=$prefix
+-  eval ac_define_dir="\"[$]$2\""
++  eval ac_define_dir="[$]$2"
++  eval ac_define_dir="\"[$]ac_define_dir\""
+   AC_SUBST($1, "$ac_define_dir")
+   AC_SUBST($2, "$ac_define_dir")
+   AC_DEFINE_UNQUOTED($1, "$ac_define_dir", [$3])
+

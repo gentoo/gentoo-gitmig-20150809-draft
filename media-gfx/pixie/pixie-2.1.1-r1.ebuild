@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.1.1.ebuild,v 1.2 2007/04/04 08:11:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.1.1-r1.ebuild,v 1.1 2007/04/05 03:44:42 eradicator Exp $
 
-inherit multilib
+inherit eutils multilib autotools
 
 IUSE="fltk openexr X"
 
@@ -25,6 +25,17 @@ RDEPEND="media-libs/jpeg
 	 fltk? ( x11-libs/fltk )
 	 X? ( x11-libs/libXext )"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+        epatch ${FILESDIR}/${PN}-2.1.1-configure_paths.patch
+	epatch ${FILESDIR}/${PN}-2.1.1-gettimeofday.patch
+	epatch ${FILESDIR}/${PN}-2.1.1-mutex.patch
+
+        eautoreconf
+}
+
 src_compile() {
 	ewarn "Compilation of pixie is memory intensive.  If you experience problems, try"
 	ewarn "removing -pipe from your CFLAGS.  Additionally, disabling optimizations (-O0)"
@@ -33,7 +44,6 @@ src_compile() {
 	econf || die "econf failed"
 	emake -j1 || die "Make failed"
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die

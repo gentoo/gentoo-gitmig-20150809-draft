@@ -1,0 +1,73 @@
+ftime() has been deprecated for years and on NetBSD it is no longer part
+of libc (it is provided in libcompat).  I have updated src/common/os.cpp
+to use gettimeofday() instead and configure.in to no longer check for
+ftime().  gettimeofday() is defined by BSD4.3, SVr4, and POSIX whereas
+ftime() is defineed in BSD4.2 and deprecated in BSD4.3.
+
+Index: configure.in
+===================================================================
+--- configure.in	(revision 678)
++++ configure.in	(working copy)
+@@ -139,7 +139,7 @@
+ 
+ AC_FUNC_ALLOCA
+ AC_FUNC_VPRINTF
+-AC_CHECK_FUNCS(ftime gethostname gettimeofday mkdir rmdir socket strdup strstr strtod strtol)
++AC_CHECK_FUNCS(gethostname gettimeofday mkdir rmdir socket strdup strstr strtod strtol)
+ 
+ dnl ---------------------------------------------------
+ dnl Do variable substitution
+Index: src/common/os.cpp
+===================================================================
+--- src/common/os.cpp	(revision 678)
++++ src/common/os.cpp	(working copy)
+@@ -36,7 +36,7 @@
+ #include <string.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+-#include <sys/timeb.h>
++#include <sys/time.h>
+ 
+ // Needed for OSX 10.2.x fix
+ #if defined(__APPLE__) || defined(__APPLE_CC__)	// guard against __APPLE__ being undef from ftlk
+@@ -110,12 +110,13 @@
+ // Return Value			:	-
+ // Comments				:
+ void	osInit() {
+-	timeb	ti;
++	struct timeval	ti;
++	struct timezone	tz;
+ 
+-	ftime(&ti);
++	gettimeofday(&ti, &tz);
+ 
+-	osStartTimeSec	=	ti.time;
+-	osStartTimeMsec	=	ti.millitm;
++	osStartTimeSec	=	ti.tv_sec;
++	osStartTimeMsec	=	ti.tv_usec;
+ }
+ 
+ ///////////////////////////////////////////////////////////////////////
+@@ -369,11 +370,12 @@
+ // Return Value			:
+ // Comments				:
+ float	osTime() {
+-	timeb	ti;
++	struct timeval	ti;
++	struct timezone	tz;
+ 
+-	ftime(&ti);
++	gettimeofday(&ti, &tz);
+ 
+-	return (float) (ti.time - osStartTimeSec) + (ti.millitm - osStartTimeMsec) / 1000.0f;
++	return (float) (ti.tv_sec - osStartTimeSec) + (ti.tv_usec - osStartTimeMsec) / 1000000.0f;
+ }
+ 
+ ///////////////////////////////////////////////////////////////////////
+@@ -519,4 +521,4 @@
+ 		}
+ 	}
+ 	str[i]	=	'\0';
+-}
+\ No newline at end of file
++}

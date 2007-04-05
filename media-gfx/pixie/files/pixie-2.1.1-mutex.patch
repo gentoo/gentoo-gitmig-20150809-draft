@@ -1,0 +1,34 @@
+NetBSD triggers a SIGABRT if you try yo destroy a mutex while it is locked.
+
+--- src/ri/reyes.cpp.orig	2007-03-31 14:00:41.000000000 -0700
++++ src/ri/reyes.cpp	2007-03-31 14:03:14.000000000 -0700
+@@ -245,7 +245,8 @@ CReyes::~CReyes() {
+ 	delete [] buckets;
+ 
+ 	// Get rid of the bucket mutex
+-	osDeleteMutex(bucketMutex);	// destroy the _locked_ mutex
++	osUnlock(bucketMutex);		// unlock the mutex
++	osDeleteMutex(bucketMutex);	// destroy the _unlocked_ mutex
+ 
+ 	// Update the global stats
+ 	stats.numRasterObjects			+=	numObjects;
+@@ -1377,7 +1378,8 @@ void				CReyes::deleteObject(CRasterObje
+ 		}
+ #else
+ 		// Delete the grid data
+-		osDeleteMutex(dObject->mutex);	// destroy the _locked_ mutex
++		osUnlock(dObject->mutex);	// unlock the mutex
++		osDeleteMutex(dObject->mutex);	// destroy the _unlocked_ mutex
+ 		delete [] dObject->next;
+ 		delete [] grid->vertices;
+ 		delete [] grid->bounds;
+@@ -1401,7 +1403,8 @@ void				CReyes::deleteObject(CRasterObje
+ 		}
+ #else
+ 		// Delete the object data
+-		osDeleteMutex(dObject->mutex);	// destroy the _locked_ mutex
++		osUnlock(dObject->mutex);	// unlock the mutex
++		osDeleteMutex(dObject->mutex);	// destroy the _unlocked_ mutex
+ 		delete [] dObject->next;
+ 		delete dObject;
+ #endif
