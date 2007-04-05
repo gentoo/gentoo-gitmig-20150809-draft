@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070330.ebuild,v 1.3 2007/04/04 20:14:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070330.ebuild,v 1.4 2007/04/05 19:28:18 aballier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -89,6 +89,8 @@ src_unpack() {
 	sed -i -e "s:-e debug=off::" tests/server-regression.sh
 
 	epatch "${FILESDIR}/${PN}-shared-gcc4.1.patch"
+	# disable non pic safe asm, bug #172877, bug #172845 and dupes
+	epatch "${FILESDIR}/${P}-asmpic.patch"
 }
 
 src_compile() {

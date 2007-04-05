@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.188 2007/04/04 20:14:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.189 2007/04/05 19:28:18 aballier Exp $
+
+  05 Apr 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/ffmpeg-0.4.9_p20070330-asmpic.patch, ffmpeg-0.4.9_p20070330.ebuild:
+  Disable non pic safe asm on x86 and amd64, bug #172845, bug #172877 and dupes
 
   04 Apr 2007; Markus Rothe <corsair@gentoo.org>
   ffmpeg-0.4.9_p20070330.ebuild:
