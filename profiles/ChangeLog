@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.263 2007/04/03 17:49:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.264 2007/04/05 19:30:40 aballier Exp $
+
+  05 Apr 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask media-video/ffmpeg-0.4.9_p20070330, non pic safe asm has been
+  disabled for x86 and amd64, it has stopped bleeding
 
   03 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask net-p2p/qbittorrent-0.9.0, as it depends in rc version of rb_libtorrent

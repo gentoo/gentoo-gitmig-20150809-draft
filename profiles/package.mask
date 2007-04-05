@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7090 2007/04/05 17:12:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7091 2007/04/05 19:30:40 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -64,10 +64,6 @@ kde-misc/metabar
 # Masked for testing
 # See bug 141617 for more information
 >=media-gfx/hugin-0.7_beta4
-
-# Alexis Ballier <aballier@gentoo.org> (1 Apr 2007)
-# Broken with PIC on x86{,64}
-=media-video/ffmpeg-0.4.9_p20070330
 
 # Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> (1 Apr 2007)
 # Masked for testing, #162463
