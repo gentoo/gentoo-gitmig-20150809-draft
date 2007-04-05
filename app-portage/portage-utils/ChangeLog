@@ -1,6 +1,19 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.74 2007/02/11 22:49:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.75 2007/04/05 18:40:59 solar Exp $
+
+*portage-utils-0.1.25 (05 Apr 2007)
+
+  05 Apr 2007; <solar@gentoo.org> +portage-utils-0.1.25.ebuild:
+  Bug #168334 ; q -r dies with a segfault after emerge --sync
+  Bug #168442 ; does not  properly parse the profile location
+  Bug #170795 ; add a -E/--eclass option to qgrep
+  Bug #170797 ; add a -s/--skip-comments option to qgrep
+  Bug #171024 ; opening '/usr/portage/.metadata.x' failed
+  Bug #171374 ; Misc enhancements for qgrep
+  Bug #172240 ; -A/-B options for qgrep (context lines) 
+  Bug #172338 ; qgrepping through installed ebuilds (in the VDB) 
+  Bug #173005 ; Colorized output for qgrep.
 
 *portage-utils-0.1.24 (11 Feb 2007)
 
