@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r8.ebuild,v 1.2 2007/04/05 14:16:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r8.ebuild,v 1.3 2007/04/05 21:55:38 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -42,6 +42,7 @@ src_unpack() {
 	use ppc && insert="#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux\n"
 	use arm && insert='#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100'
 	use hppa && insert='b0:12345:respawn:/sbin/agetty 9600 ttyB0 vt100'
+	use s390 && insert='s0:12345:respawn:/sbin/agetty 38400 console'
 	if use ibm ; then
 		insert="${insert}#hvc0:2345:respawn:/sbin/agetty -L 9600 hvc0"$'\n'
 		insert="${insert}#hvsi:2345:respawn:/sbin/agetty -L 19200 hvsi0"
