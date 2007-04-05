@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.1 2007/04/02 19:30:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.2 2007/04/05 01:20:53 nyhm Exp $
 
 inherit eutils python games
 
 PNX=pysol-cardsets
 PVX=4.40
-
 DESCRIPTION="An exciting collection of more than 200 solitaire card games"
 HOMEPAGE="http://www.pysol.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -39,19 +38,19 @@ src_unpack() {
 		mv ../${PNX}-${PVX}/README{,.extra}
 		mv ../${PNX}-${PVX}/NEWS{,.extra}
 		# Removing cardsets already shipped with pysol tar
+		local cardset
 		for cardset in cardset-2000 cardset-colossus cardset-hard-a-port \
 			cardset-hexadeck cardset-kintengu cardset-oxymoron \
 			cardset-tuxedo cardset-vienna-2k ; do
-			rm -rf ../${PNX}-${PVX}/data/$cardset
+			rm -rf ../${PNX}-${PVX}/data/${cardset}
 		done
 	fi
 }
 
 src_install() {
-	insinto "${GAMES_LIBDIR}"/${PN}
+	insinto "$(games_get_libdir)"/${PN}
 	doins -r src/* || die "src failed"
-	fperms 750 "${GAMES_LIBDIR}"/${PN}/pysol.py
-	games_make_wrapper ${PN} "${GAMES_LIBDIR}"/${PN}/pysol.py
+	games_make_wrapper ${PN} "python ./pysol.py" "$(games_get_libdir)"/${PN}
 
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r data/* || die "data failed"
@@ -64,8 +63,7 @@ src_install() {
 
 	if use extra-cardsets; then
 		doins -r ../${PNX}-${PVX}/data/* || die "Installing extra cardsets failed"
-		dodoc ../${PNX}-${PVX}/{NEWS,README}.extra \
-			|| die "Extra cardsets doc installation failed"
+		dodoc ../${PNX}-${PVX}/{NEWS,README}.extra
 	fi
 
 	prepgamesdirs
@@ -73,9 +71,9 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	python_mod_optimize "${GAMES_LIBDIR}"/${PN}
+	python_mod_optimize "${ROOT}$(games_get_libdir)"/${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${GAMES_LIBDIR}"/${PN}
+	python_mod_cleanup "${ROOT}$(games_get_libdir)"/${PN}
 }
