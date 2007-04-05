@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.17 2007/04/04 23:22:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.18 2007/04/05 00:19:26 robbat2 Exp $
+
+  05 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  pkgcore-checks-0.3.4.ebuild:
+  Add ~ppc to keywords.
 
 *pkgcore-checks-0.3.4 (04 Apr 2007)
 
