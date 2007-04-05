@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.13-r1.ebuild,v 1.1 2007/04/01 15:44:50 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.13-r1.ebuild,v 1.2 2007/04/05 00:19:07 robbat2 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.4"
