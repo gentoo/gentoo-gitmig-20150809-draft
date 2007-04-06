@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.146 2007/04/05 17:29:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.147 2007/04/06 01:24:09 cardoe Exp $
+
+  06 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
+  Adding kernel_linux and kernel_FreeBSD to IUSE
 
   05 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/0.5.9/02_acpi_repeated_property_change.patch,
