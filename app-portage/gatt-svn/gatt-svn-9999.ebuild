@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.8 2007/03/27 10:40:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.9 2007/04/06 18:58:25 opfer Exp $
 
 inherit subversion
 
 ESVN_REPO_URI="svn://80.108.115.144/gatt/trunk"
-ESVN_PROJECT="Gentoo Arch Tester Tool"
+ESVN_PROJECT="GATT"
 
 DESCRIPTION="Gentoo Arch Tester Tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/x86/at.xml
