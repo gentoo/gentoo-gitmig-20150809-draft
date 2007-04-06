@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/htmlfontify-0.20.ebuild,v 1.1 2007/02/09 09:39:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/htmlfontify-0.20.ebuild,v 1.2 2007/04/06 20:27:05 opfer Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ SRC_URI="http://rtfm.etla.org/emacs/htmlfontify/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND=""
 
