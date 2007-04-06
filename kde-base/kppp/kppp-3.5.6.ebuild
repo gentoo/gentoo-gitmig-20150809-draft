@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/kppp-3.5.6.ebuild,v 1.1 2007/01/16 21:10:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/kppp-3.5.6.ebuild,v 1.2 2007/04/06 09:17:20 carlo Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -13,6 +13,8 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE: A dialer and front-end to pppd."
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
+
+RDEPEND="net-dialup/ppp"
 
 src_compile() {
 	export BINDNOW_FLAGS="$(bindnow-flags)"
