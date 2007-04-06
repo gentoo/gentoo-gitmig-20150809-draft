@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.9 2007/03/16 23:25:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.10 2007/04/06 21:05:57 dertobi123 Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/buildbot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="doc irc mail test web"
 
 commondepend=">=dev-lang/python-2.3
