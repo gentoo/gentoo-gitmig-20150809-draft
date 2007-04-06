@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.22.ebuild,v 1.1 2007/04/06 00:14:25 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.22-r1.ebuild,v 1.1 2007/04/06 19:03:58 truedfx Exp $
 
 inherit eutils
 
@@ -17,6 +17,8 @@ SRC_URI="mirror://sourceforge/lazarus/${P}-0.tar.gz"
 DEPEND="~dev-lang/fpc-${FPCVER}
 	net-misc/rsync
 	>=x11-libs/gtk+-2.0"
+RDEPEND="${RDEPEND}
+	!=gnome-base/librsvg-2.16.1"
 
 S=${WORKDIR}/${PN}
 
@@ -45,7 +47,6 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${T}"/fpcsrc.patch
-	epatch "${FILESDIR}"/${PN}-iconcrash.patch
 }
 
 src_compile() {
