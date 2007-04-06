@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.15 2007/01/26 08:30:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.16 2007/04/06 00:47:31 nyhm Exp $
 
 inherit eutils games
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
 IUSE=""
 
-DEPEND=">=dev-python/pygame-1.5.6
-	>=dev-lang/python-2.3
-	media-libs/libsdl"
+RDEPEND=">=dev-python/pygame-1.5.6"
 
 pkg_setup() {
 	if ! built_with_use media-libs/sdl-mixer mikmod ; then
@@ -28,16 +26,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	find . -name .xvpics -print0 | xargs -0 rm -fr
-	gunzip dist/solarwolf.6.gz || die
 }
 
 src_install() {
+	insinto "$(games_get_libdir)"/${PN}
+	doins -r code data *py || die "doins lib failed"
+	games_make_wrapper ${PN} "python ./solarwolf.py" "$(games_get_libdir)"/${PN}
+	doicon dist/${PN}.png
+	make_desktop_entry ${PN} SolarWolf
 	dodoc readme.txt
-	doman dist/solarwolf.6
-	dodir "${GAMES_LIBDIR}/${PN}"
-	cp -r code/ data/ *py "${D}/${GAMES_LIBDIR}/${PN}/" || die "cp failed"
-	games_make_wrapper solarwolf "python ./solarwolf.py" "${GAMES_LIBDIR}/${PN}"
-	doicon dist/solarwolf.png
-	make_desktop_entry solarwolf
+	doman dist/${PN}.6.gz
 	prepgamesdirs
 }
