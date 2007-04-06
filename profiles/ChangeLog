@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.264 2007/04/05 19:30:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.265 2007/04/06 18:46:05 betelgeuse Exp $
+
+  06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Mask dev-java/aterm-java because it does not build and upstream is dead.
 
   05 Apr 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask media-video/ffmpeg-0.4.9_p20070330, non pic safe asm has been
