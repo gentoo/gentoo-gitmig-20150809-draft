@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.11 2007/03/12 13:22:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.12 2007/04/06 00:08:25 nyhm Exp $
 
 inherit games
 
@@ -16,38 +16,37 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.2"
 RDEPEND=">=dev-python/pygame-1.5.5"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	# Compile the "statesaver" extension module to enable the Clock bonus
-	cd ${S}/bubbob
+	cd "${S}"/bubbob
 	python setup.py build_ext -i || die
 
 	# Compile the extension module required for the X Window client
-	cd ${S}/display
+	cd "${S}"/display
 	python setup.py build_ext -i || die
 }
 
 src_install() {
-	local dir=${GAMES_LIBDIR}/${PN}
+	local dir=$(games_get_libdir)/${PN}
 
-	exeinto ${dir}
-	doexe *.py
+	exeinto "${dir}"
+	doexe *.py || die "doexe failed"
 
-	insinto ${dir}
-	cp -r bubbob common display java ${D}/${dir}/
+	insinto "${dir}"
+	doins -r bubbob common display java || die "doins failed"
 
-	dodir ${GAMES_BINDIR}
-	dosym ${dir}/pclient-pygame.py ${GAMES_BINDIR}/bubnbros
-	dosym ${dir}/pclient-xshm.py ${GAMES_BINDIR}/bubnbros-x
-	dosym ${dir}/pclient-slow-X.py ${GAMES_BINDIR}/bubnbros-slowx
+	dodir "${GAMES_BINDIR}"
+	dosym "${dir}"/pclient-pygame.py "${GAMES_BINDIR}"/bubnbros
+	dosym "${dir}"/pclient-xshm.py "${GAMES_BINDIR}"/bubnbros-x
+	dosym "${dir}"/pclient-slow-X.py "${GAMES_BINDIR}"/bubnbros-slowx
 
-	dogamesbin ${FILESDIR}/bubnbros-server
-	dosed "s:GENTOO_DIR:${dir}/bubbob/:" ${GAMES_BINDIR}/bubnbros-server
+	games_make_wrapper bubnbros-server "python ./bb.py" "${dir}"/bubbob
 
 	dohtml *.html
 
-	find ${D}/${dir} -name CVS -type d -exec rm -rf '{}' \; 2> /dev/null
+	find "${D}/${dir}" -name CVS -type d -exec rm -rf '{}' \; 2> /dev/null
 
 	prepgamesdirs
 }
