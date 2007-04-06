@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvsgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.19 2007/04/04 20:21:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.20 2007/04/06 09:37:25 dertobi123 Exp $
+
+  06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  cvsgraph-1.6.1.ebuild:
+  ppc stable
 
   04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> cvsgraph-1.6.1.ebuild:
   Stable on sparc
