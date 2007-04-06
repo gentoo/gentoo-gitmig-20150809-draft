@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.22 2007/04/02 17:00:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.23 2007/04/06 11:26:59 opfer Exp $
+
+  06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  net-ssh-1.0.10.ebuild:
+  stable x86, bug 173040
 
   02 Apr 2007; Raúl Porcel <armin76@gentoo.org> net-ssh-1.0.10.ebuild:
   ia64 stable wrt bug 173040
