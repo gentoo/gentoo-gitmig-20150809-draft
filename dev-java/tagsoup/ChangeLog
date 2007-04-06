@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagsoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.18 2007/04/06 18:40:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.19 2007/04/06 18:42:11 betelgeuse Exp $
+
+  06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -tagsoup-0.10.2.ebuild:
+  Remove generation 1 ebuild.
 
   06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   tagsoup-0.10.2-r1.ebuild:
