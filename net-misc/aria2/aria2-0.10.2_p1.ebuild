@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.10.2_p1.ebuild,v 1.1 2007/03/29 21:27:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.10.2_p1.ebuild,v 1.2 2007/04/06 07:36:45 dev-zero Exp $
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ares bittorrent gnutls metalink nls ssl"
+IUSE="ares bittorrent gnutls metalink nls ssl test"
 
 CDEPEND="ssl? (
 		gnutls? ( net-libs/gnutls )
