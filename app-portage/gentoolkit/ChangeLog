@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.113 2007/04/04 19:12:13 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.114 2007/04/06 21:53:56 opfer Exp $
+
+  06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  gentoolkit-0.2.3-r1.ebuild:
+  stable amd64, bug 172741
 
   04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org>
   gentoolkit-0.2.3-r1.ebuild:
