@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r2.ebuild,v 1.6 2007/03/26 08:07:49 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r2.ebuild,v 1.7 2007/04/06 20:49:08 dertobi123 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ~ppc ~s390 sparc x86"
+KEYWORDS="~alpha amd64 ~mips ppc ~s390 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
