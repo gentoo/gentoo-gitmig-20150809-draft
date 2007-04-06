@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/nfs.initd,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/nfs.initd,v 1.2 2007/04/06 14:47:17 uberlord Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -34,11 +34,11 @@ depend() {
 }
 
 start_idmapd() {
-	[[ ! -x ${idmapd} ]] && return 0
+	[ ! -x "${idmapd}" ] && return 0
 
 	if grep -q rpc_pipefs /proc/filesystems ; then
 		if ! grep -q "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
-			[[ ! -d /var/lib/nfs/rpc_pipefs ]] && mkdir -p /var/lib/nfs/rpc_pipefs
+			[ ! -d /var/lib/nfs/rpc_pipefs ] && mkdir -p /var/lib/nfs/rpc_pipefs
 			ebegin "Mounting RPC pipefs"
 			mount -t rpc_pipefs rpc_pipefs /var/lib/nfs/rpc_pipefs
 			eend $?
@@ -51,14 +51,14 @@ start_idmapd() {
 }
 
 stop_idmapd() {
-	[[ ! -x ${idmapd} ]] && return 0
+	[ ! -x ${idmapd} ] && return 0
 
 	ebegin "Stopping idmapd"
 	start-stop-daemon --stop --quiet --exec ${idmapd}
 	ret=$?
 	eend ${ret}
 
-	if [[ $restarting == "no" ]] ; then
+	if [ $restarting = "no" -a "${RC_CMD}" != "restart" ] ; then
 		if grep -q "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
 			ebegin "Unmounting RPC pipefs"
 			umount /var/lib/nfs/rpc_pipefs
@@ -71,7 +71,7 @@ stop_idmapd() {
 
 start_statd() {
 	# Don't start rpc.statd if already started by init.d/nfsmount
-	killall -0 rpc.statd &>/dev/null && return 0
+	killall -0 rpc.statd 2>/dev/null && return 0
 	ebegin "Starting NFS statd"
 	start-stop-daemon --start --quiet --exec \
 		$statd -- $RPCSTATDOPTS 1>&2
@@ -82,7 +82,7 @@ stop_statd() {
 	# Don't stop rpc.statd if it's in use by init.d/nfsmount.
 	mount -t nfs | grep -q . && return 0
 	# Make sure it's actually running
-	killall -0 rpc.statd &>/dev/null || return 0
+	killall -0 rpc.statd 2>/dev/null || return 0
 	# Okay, all tests passed, stop rpc.statd
 	ebegin "Stopping NFS statd"
 	start-stop-daemon --stop --quiet --exec $statd 1>&2
@@ -91,7 +91,7 @@ stop_statd() {
 
 waitfor_exportfs() {
 	local pid=$1
-	( sleep ${EXPORTFSTIMEOUT:-30}; kill -9 $pid &>/dev/null ) &
+	( sleep ${EXPORTFSTIMEOUT:-30}; kill -9 $pid 2>/dev/null ) &
 	wait $1
 }
 
@@ -102,8 +102,8 @@ start() {
 	fi
 
 	# This is the new "kernel 2.6 way" to handle the exports file
-	if grep -q nfsd /proc/filesystems &>/dev/null; then
-		if ! grep -q "nfsd /proc/fs/nfs" /proc/mounts &>/dev/null; then
+	if grep -q nfsd /proc/filesystems 2>/dev/null; then
+		if ! grep -q "nfsd /proc/fs/nfs" /proc/mounts 2>/dev/null; then
 			ebegin "Mounting nfsd filesystem in /proc"
 			mount -t nfsd nfsd /proc/fs/nfs
 			eend $? "Error mounting nfsd filesystem in /proc"
@@ -117,14 +117,14 @@ start() {
 	# Exportfs likes to hang if networking isn't working.
 	# If that's the case, then try to kill it so the
 	# bootup process can continue.
-	if grep -q '^/' /etc/exports &>/dev/null; then
+	if grep -q '^/' /etc/exports 2>/dev/null; then
 		ebegin "Exporting NFS directories"
 		$exportfs -r 1>&2 &
 		waitfor_exportfs $!
 		eend $? "Error exporting NFS directories"
 	fi
 
-	if [ -x $rquotad ]; then
+	if [ -x "${rquotad}" ]; then
 		ebegin "Starting NFS rquotad"
 		start-stop-daemon --start --quiet --exec \
 			$rquotad -- $RPCRQUOTADOPTS 1>&2
@@ -177,7 +177,7 @@ stop() {
 	# then "exportfs -r" will reread the xtab, and all the current
 	# clients will be able to resume NFS activity, *without* needing
 	# to umount/(re)mount the filesystem.
-	if [ "$restarting" = no ]; then
+	if [ "$restarting" = no -a "${RC_CMD}" != "restart" ]; then
 		ebegin "Unexporting NFS directories"
 		# Exportfs likes to hang if networking isn't working.
 		# If that's the case, then try to kill it so the
