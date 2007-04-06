@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.32 2007/04/06 22:07:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.33 2007/04/06 22:08:23 betelgeuse Exp $
+
+  06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-cli-1.0-r4.ebuild:
+  Remove generation 1 ebuild.
 
   06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-cli-1.0-r5.ebuild:
