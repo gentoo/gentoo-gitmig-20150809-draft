@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.188 2007/04/04 13:35:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.189 2007/04/06 19:29:43 cardoe Exp $
+
+  06 Apr 2007; Doug Goldstein <cardoe@gentoo.org> dbus-1.0.2-r2.ebuild:
+  Fix up SELinux support
 
   04 Apr 2007; Doug Goldstein <cardoe@gentoo.org> files/dbus.init-1.0:
   Remove init script hack for parallel starting since HAL is now fixed.

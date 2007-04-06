@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.2 2007/04/04 13:34:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.3 2007/04/06 19:29:43 cardoe Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~
 IUSE="debug doc selinux X"
 
 RDEPEND="X? ( x11-libs/libXt x11-libs/libX11 )
-	selinux? ( sys-libs/libselinux )
+	selinux? ( sys-libs/libselinux
+				sec-policy/selinux-dbus )
 	>=dev-libs/expat-1.95.8
 	!<sys-apps/dbus-0.91"
 DEPEND="${RDEPEND}
