@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3-r1.ebuild,v 1.3 2007/04/05 15:38:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3-r1.ebuild,v 1.4 2007/04/06 18:37:17 opfer Exp $
 
 JAVA_PKG_IUSE="source doc"
 WANT_AUTOMAKE="1.7"
@@ -14,7 +14,7 @@ SRC_URI="http://www.cwi.nl/projects/MetaEnv/jjtraveler/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 S=${WORKDIR}/${MY_P}
 
 DEPEND="
