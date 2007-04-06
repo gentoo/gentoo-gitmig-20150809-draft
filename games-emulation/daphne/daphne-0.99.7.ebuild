@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.7.ebuild,v 1.1 2006/12/28 00:13:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.7.ebuild,v 1.2 2007/04/06 01:33:28 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.daphne-emu.com/download/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="media-libs/libogg
@@ -35,7 +35,7 @@ src_unpack() {
 	sed -i "s:sound/:${GAMES_DATADIR}/${PN}/&:" \
 		sound/sound.cpp \
 		|| die "sed sound.cpp failed"
-	sed -i "s:./lib:${GAMES_LIBDIR}/${PN}/lib:" \
+	sed -i "s:./lib:$(games_get_libdir)/${PN}/lib:" \
 		io/dll.h \
 		|| die "sed dll.h failed"
 	cp Makefile.vars{.linux_x86,}
@@ -58,7 +58,7 @@ src_compile() {
 src_install() {
 	cd ..
 	dogamesbin daphne || die "dogamesbin failed"
-	exeinto "${GAMES_LIBDIR}"/${PN}
+	exeinto "$(games_get_libdir)"/${PN}
 	doexe libvldp2.so || die "doexe failed"
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r pics roms sound || die "doins failed"
