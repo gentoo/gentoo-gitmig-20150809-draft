@@ -1,24 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.21-r1.ebuild,v 1.1 2007/02/02 00:26:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.21-r1.ebuild,v 1.2 2007/04/06 05:34:06 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
-MY_PV=${PV/_/}
-F=${PN}_${MY_PV}_linux.tar.gz
-SDK=${PN}_${MY_PV}_sdk.zip
 DESCRIPTION="Multiplayer FPS based on the QFusion engine (evolved from Quake 2)"
 HOMEPAGE="http://www.warsow.net/"
-SRC_URI="ftp://ftp.club-internet.fr/pub/games/nofrag/${PN}/${F}
-	ftp://ftp.club-internet.fr/pub/games/nofrag/${PN}/${SDK}
-	http://www.bef-warsow.de/files/${F}
-	http://www.bef-warsow.de/files/${SDK}
-	http://wsw.surreal-xenotronic.com/${F}
-	http://wsw.surreal-xenotronic.com/${SDK}
-	http://ik.spinther.com/${PN}/${F}
-	http://warsow.routed-gaming.co.uk/downloads/${F}
-	http://warsownews.game-server.cc/${F}
-	http://warsownews.game-server.cc/${SDK}"
+SRC_URI="ftp://ftp.club-internet.fr/pub/games/nofrag/${PN}/${PN}_${PV/_/}_linux.tar.gz
+	ftp://ftp.club-internet.fr/pub/games/nofrag/${PN}/${PN}_${PV/_/}_sdk.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -47,9 +36,6 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S=${WORKDIR}/source
-SDATA=${WORKDIR}/${PN}
-dir=${GAMES_DATADIR}/${PN}
-libdir=${GAMES_LIBDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -60,19 +46,17 @@ src_unpack() {
 	# Add libdir as game directory.
 	sed -i qcommon/files.c \
 		-e 's:"fs_usehomedir", "0":"fs_usehomedir", "1":' \
-		-e "s:\"fs_basepath\", \"\.\":\"fs_basepath\", \"${dir}\":" \
+		-e "s:\"fs_basepath\", \"\.\":\"fs_basepath\", \"${GAMES_DATADIR}/${PN}\":" \
 		|| die "sed files.c failed"
 
 	# Remove pre-compiled binaries, because they are compiled in src_compile()
 	# Also remove the startup scripts.
-	rm "${SDATA}"/{${PN}*,wsw_server*}
-	rm -r "${SDATA}"/libs/*.so
-
-	# Remove copy of licence.
-	rm "${SDATA}"/docs/gnu.txt
+	rm -f "${WORKDIR}"/${PN}/{${PN}*,wsw_server*}
+	rm -rf "${WORKDIR}"/${PN}/libs/*.so
 
 	# Move docs to a convenient directory, away from the files to be installed.
-	mv "${SDATA}"/docs "${S}"
+	rm -f "${WORKDIR}"/${PN}/docs/gnu.txt
+	mv "${WORKDIR}"/${PN}/docs "${S}"
 
 	sed -i Makefile \
 		-e '/^CFLAGS_RELEASE/s/=.* \(-fno.* \).* .* /=\1/' \
@@ -106,46 +90,40 @@ src_compile() {
 		|| die "emake failed"
 
 	mv -f release/basewsw/*.so "${WORKDIR}" || die "mv *.so failed"
-	cp -rf release/basewsw "${SDATA}" || die "cp basewsw failed"
+	cp -rf release/basewsw "${WORKDIR}"/${PN} || die "cp basewsw failed"
 }
 
 src_install() {
-	cd "${SDATA}"
+	cd "${WORKDIR}"/${PN}
 
 	if use sdl || use openal || ! use dedicated ; then
-		# Install client-only components.
-		dogamesbin "${S}/release/${PN}" \
-			|| die "dogamesbin ${PN} failed"
+		dogamesbin "${S}"/release/${PN} || die "dogamesbin ${PN} failed"
 		make_desktop_entry ${PN} "Warsow"
 	fi
 
 	if use dedicated ; then
-		# Install server-only components.
-		dogamesbin "${S}/release/${PN}-ded" \
-			|| die "dogamesbin ${PN}-ded failed"
+		dogamesbin "${S}"/release/${PN}-ded || die "dogamesbin ${PN}-ded failed"
 	fi
 
-	# Install common components.
-	insinto "${dir}"
-	doins -r * || die "doins -r failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r * || die "doins failed"
 
-	# Game libraries.
-	exeinto "${libdir}"/basewsw
+	exeinto "$(games_get_libdir)"/${PN}/basewsw
 	local lib
 	for lib in $(cd "${WORKDIR}" && ls -A *.so) ; do
-		doexe "${WORKDIR}/${lib}" || die "doexe ${lib} failed"
-		dosym "${libdir}/basewsw/${lib}" "${dir}"/basewsw/
+		doexe "${WORKDIR}"/${lib} || die "doexe ${lib} failed"
+		dosym "$(games_get_libdir)"/${PN}/basewsw/${lib} \
+			"${GAMES_DATADIR}"/${PN}/basewsw/ || die "dosym basewsw failed"
 	done
 
-	# "Shared" Libraries.
-	exeinto "${libdir}"
+	exeinto "$(games_get_libdir)"/${PN}
 	local lib2
-	for lib2 in $(cd "${S}"/release/libs/ && ls -A *.so) ; do
-		doexe "${S}"/release/libs/"${lib2}" || die "doexe ${lib2} failed"
-		dosym "${libdir}/${lib2}" "${dir}"/libs/
+	for lib2 in $(cd "${S}"/release/libs && ls -A *.so) ; do
+		doexe "${S}"/release/libs/${lib2} || die "doexe ${lib2} failed"
+		dosym "$(games_get_libdir)"/${PN}/${lib2} \
+			"${GAMES_DATADIR}"/${PN}/libs/ || die "dosym libs failed"
 	done
 
 	dodoc "${S}"/docs/*
-
 	prepgamesdirs
 }
