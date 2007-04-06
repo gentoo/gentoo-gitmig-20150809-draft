@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.51.ebuild,v 1.2 2007/02/10 13:57:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.51.ebuild,v 1.3 2007/04/06 09:36:36 opfer Exp $
 
 inherit java-pkg-2
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 IUSE="gtk"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 # Fails to detect >sun-jdk-1.5 as a valid jdk
 RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
