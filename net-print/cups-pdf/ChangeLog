@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.31 2007/03/02 10:29:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.32 2007/04/06 00:07:42 genstef Exp $
+
+*cups-pdf-2.4.5 (05 Apr 2007)
+
+  05 Apr 2007; <stefan@gentoo.org> +cups-pdf-2.4.5.ebuild:
+  Version bump thanks to Per Pomsel <phantom4@gmx.net> in bug 173465
 
   02 Mar 2007; <genstef@gentoo.org> cups-pdf-2.4.2.ebuild:
   QA: remove * in >= statement
