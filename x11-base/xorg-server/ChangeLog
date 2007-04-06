@@ -1,13 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.225 2007/04/06 18:43:00 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.226 2007/04/06 18:45:34 joshuabaergen Exp $
 
 *xorg-server-1.2.99.905 (06 Apr 2007)
 
   06 Apr 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   +xorg-server-1.2.99.905.ebuild:
   Add 1.3RC5.  This includes the security patch from RC3-r1, as well as a server
-  respawn fix.
+  respawn fix. Also, fix bug #172713 (steveb).
 
 *xorg-server-1.2.99.903-r1 (05 Apr 2007)
 *xorg-server-1.2.0-r3 (05 Apr 2007)
