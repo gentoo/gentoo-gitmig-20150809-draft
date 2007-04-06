@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7093 2007/04/06 18:46:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7094 2007/04/06 18:51:46 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Faulhammer <opfer@gentoo.org> (01 Feb 2007)
+# live ebuild for the 22 branch
+~dev-lang/erlang-11.2.4
 
 # Petteri Räty <betelgeuse@gentoo.org> (6 Apr 2007)
 # Upstream considers this Trash:
