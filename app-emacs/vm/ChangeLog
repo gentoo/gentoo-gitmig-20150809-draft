@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.19 2007/02/26 12:01:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.20 2007/04/06 10:48:14 opfer Exp $
+
+*vm-7.19-r3 (06 Apr 2007)
+
+  06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/vm-info-dir-fix-gentoo.patch, +vm-7.19-r3.ebuild:
+  added fix for incorrect category of info file. Patch provided by Ulrich
+  Mueller <ulm@kph.uni-mainz.de> in bug 173409
 
   26 Feb 2007; Christian Faulhammer <opfer@gentoo.org> vm-7.19-r2.ebuild:
   make proper use of the SITEFILE variable
