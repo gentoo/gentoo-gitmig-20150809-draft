@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/graphlcd-base
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.10 2007/03/02 17:41:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.11 2007/04/06 18:49:34 hd_brummy Exp $
+
+  06 Apr 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/graphlcd-base-0.1.4-nostrip.patch,
+  +files/graphlcd-base-0.1.5-nostrip.patch, metadata.xml,
+  graphlcd-base-0.1.4.ebuild, graphlcd-base-0.1.5.ebuild:
+  0.1.4 0.1.5 stabel on x86; add Robert Buchholz as second Maintainer
 
 *graphlcd-base-0.1.5 (02 Mar 2007)
 
