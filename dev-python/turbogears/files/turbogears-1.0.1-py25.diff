@@ -1,0 +1,11 @@
+--- turbogears/widgets/meta.py.OLD	2007-02-06 21:39:39.500000000 +0100
++++ turbogears/widgets/meta.py	2007-02-06 21:34:29.421875000 +0100
+@@ -70,7 +70,7 @@
+             dct["__init__"] = _decorate_widget_init(dct["__init__"])
+             cls.__init__ = dct["__init__"]
+         super(MetaWidget, cls).__init__(name, bases, dct)
+-        modname = "%s.%s.Template" % (cls.__module__, name)
++        modname = "%s.%s" % (cls.__module__, name)
+         if cls.template:
+             (cls.template_c,
+              cls.template) = load_kid_template(cls.template, modname)

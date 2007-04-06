@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.1.ebuild,v 1.1 2007/02/28 00:32:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.1.ebuild,v 1.2 2007/04/06 06:46:33 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -42,7 +42,8 @@ DOCS="CHANGELOG.txt CONTRIBUTORS.txt"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	#Make Turbogears work with Python 2.5
+	epatch ${FILESDIR}/${P}-py25.diff
 	sed -i \
 		-e '/install_requires = \[.*\],/d' \
 		-e '/install_requires/, /],/d' \
