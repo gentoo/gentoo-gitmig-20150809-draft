@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.5 2007/02/14 21:09:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.6 2007/04/06 15:27:33 hkbst Exp $
 
 inherit elisp-common
 
@@ -22,10 +22,11 @@ INTERPRETERS="dev-lisp/ecls
 	dev-scheme/gauche"
 
 DEPEND="|| ( ${COMPILERS} ${INTERPRETERS} )
-	emacs? ( virtual/emacs app-emacs/slime )"
+		emacs? ( virtual/emacs app-emacs/slime )
+		test? ( app-shells/tcsh )"
 RDEPEND="${DEPEND}"
 
-IUSE="doc emacs"
+IUSE="doc emacs test"
 
 S="${WORKDIR}/${PN}"
 
@@ -107,7 +108,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	# make compiled lisp code newer than source files to prevent recompilation 
+	# make compiled lisp code newer than source files to prevent recompilation
 	sleep 1 && find ${ROOT}/usr/share/${PN}/bin/ -iname *fasl -exec touch '{}' \;
 	use emacs && elisp-site-regen
 }
