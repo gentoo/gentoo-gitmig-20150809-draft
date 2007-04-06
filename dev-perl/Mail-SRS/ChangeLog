@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-SRS
 # Copyright 2000-2007 DataCore GmbH; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.6 2007/03/25 19:59:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.7 2007/04/06 18:00:15 wltjr Exp $
+
+  06 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  Mail-SRS-0.31.ebuild:
+  Stable on amd64, bug #172214
 
   25 Mar 2007; Andrej Kacian <ticho@gentoo.org> Mail-SRS-0.31.ebuild:
   Stable on x86, bug #172214.
