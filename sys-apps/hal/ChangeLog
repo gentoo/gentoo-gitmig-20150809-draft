@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.148 2007/04/06 16:44:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.149 2007/04/06 19:13:01 cardoe Exp $
+
+  06 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
+  Fix up SELinux support
 
   06 Apr 2007; Doug Goldstein <cardoe@gentoo.org> files/0.5.9-hald.rc,
   hal-0.5.9.ebuild:
