@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tagsoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.15 2007/04/04 13:56:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.16 2007/04/06 09:59:54 opfer Exp $
+
+  06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  tagsoup-0.10.2-r1.ebuild:
+  stable x86, bug 173348
 
 *tagsoup-1.1 (04 Apr 2007)
 
