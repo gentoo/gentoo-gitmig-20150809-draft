@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6.ebuild,v 1.4 2007/03/24 21:31:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6.ebuild,v 1.5 2007/04/06 22:00:41 dertobi123 Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -15,7 +15,7 @@ SRC_URI="http://unreal.brueggisite.de/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="hub ipv6 ssl zlib curl prefixaq"
 
 RDEPEND="ssl? ( dev-libs/openssl )
