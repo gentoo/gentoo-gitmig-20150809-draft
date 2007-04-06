@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.260 2007/03/26 23:10:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.261 2007/04/06 11:03:52 jokey Exp $
+
+*openldap-2.3.34-r1 (06 Apr 2007)
+
+  06 Apr 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/openldap-2.3.34-slapd-conf, +openldap-2.3.34-r1.ebuild:
+  Add built backends module population to config file and fix bug #163652 ,
+  bug #172998 and bug #170648
 
   26 Mar 2007; Markus Ullmann <jokey@gentoo.org>
   -openldap-2.1.30-r10.ebuild:
