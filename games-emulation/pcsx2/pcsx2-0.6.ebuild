@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.6.ebuild,v 1.7 2006/02/11 19:55:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.6.ebuild,v 1.8 2007/04/06 18:53:44 nyhm Exp $
 
 inherit eutils games
 
@@ -45,11 +45,11 @@ src_install() {
 	dogamesbin "${FILESDIR}/pcsx2" || die "dogamesbin failed"
 	sed -i \
 		-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
-		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
+		-e "s:GAMES_LIBDIR:$(games_get_libdir):" \
 		"${D}/${GAMES_BINDIR}/pcsx2" \
 		|| die "sed failed"
-	dodir "${GAMES_LIBDIR}/ps2emu/Langs"
-	cp -r Intl/Langs/* "${D}/${GAMES_LIBDIR}/ps2emu/Langs/" || die "cp failed"
+	dodir "$(games_get_libdir)/ps2emu/Langs"
+	cp -r Intl/Langs/* "${D}/$(games_get_libdir)/ps2emu/Langs/" || die "cp failed"
 	dodoc Docs/*.txt
 	prepgamesdirs
 }

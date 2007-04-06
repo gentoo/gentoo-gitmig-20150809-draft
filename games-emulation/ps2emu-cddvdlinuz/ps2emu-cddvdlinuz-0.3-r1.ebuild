@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cddvdlinuz/ps2emu-cddvdlinuz-0.3-r1.ebuild,v 1.6 2004/11/03 00:16:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cddvdlinuz/ps2emu-cddvdlinuz-0.3-r1.ebuild,v 1.7 2007/04/06 18:56:48 nyhm Exp $
 
 inherit games
 
@@ -17,12 +17,13 @@ RDEPEND="=x11-libs/gtk+-1*"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/CDVDlinuz"
+S=${WORKDIR}/CDVDlinuz
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	sed -i \
-		-e 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' ${S}/Src/Makefile \
+		-e 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' Src/Makefile \
 		|| die "sed failed"
 }
 
@@ -33,7 +34,7 @@ src_compile() {
 
 src_install() {
 	dodoc ReadMe.txt
-	exeinto ${GAMES_LIBDIR}/ps2emu/plugins
-	newexe Src/libCDVDlinuz.so libCDVDlinuz-${PV}.so
+	exeinto "$(games_get_libdir)"/ps2emu/plugins
+	newexe Src/libCDVDlinuz.so libCDVDlinuz-${PV}.so || die "newexe failed"
 	prepgamesdirs
 }

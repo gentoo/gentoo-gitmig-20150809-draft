@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.7 2006/05/02 21:53:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.8 2007/04/06 18:53:44 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -53,7 +53,7 @@ src_install() {
 	dogamesbin "${FILESDIR}/pcsx2" || die "dogamesbin failed"
 	sed -i \
 		-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
-		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
+		-e "s:GAMES_LIBDIR:$(games_get_libdir):" \
 		"${D}/${GAMES_BINDIR}/pcsx2" \
 		|| die "sed failed"
 	dodoc Docs/*.txt
