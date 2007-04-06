@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.18 2007/03/23 21:05:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.19 2007/04/06 17:36:24 drac Exp $
 
 inherit versionator
 
 DESCRIPTION="Xfce4 base ebuild"
 HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2 BSD LGPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="mips"
 SLOT="0"
 IUSE=""
 
@@ -33,6 +33,6 @@ RDEPEND="${DEPEND}
 
 src_install() {
 	dodir /etc/X11/Sessions
-	echo startxfce4 > ${D}/etc/X11/Sessions/Xfce-4
-	fperms 755 /etc/X11/Sessions/Xfce-4
+	echo startxfce4 > "${D}"/etc/X11/Sessions/Xfce4
+	fperms 755 /etc/X11/Sessions/Xfce4
 }
