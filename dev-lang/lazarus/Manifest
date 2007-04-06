@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX lazarus-0.9.20-fpcsrc.patch 333 RMD160 2afa08d4a5e11c38dd3e6b6907c117b00c5b523f SHA1 3e5c47eac41249dd2c78321be6ae9604b8d55931 SHA256 2ebf6b5a9a5ff2746339c2b6bfe4149c663803fa4dfe98408240b33cdf1f544c
 MD5 728fbd094be35bcec4b8e9b83eea9b6a files/lazarus-0.9.20-fpcsrc.patch 333
 RMD160 2afa08d4a5e11c38dd3e6b6907c117b00c5b523f files/lazarus-0.9.20-fpcsrc.patch 333
@@ -22,3 +25,10 @@ SHA256 d0d50fc65f6bc2ce65700e4ea995148f15c4e7a0eca5d0f86e3f4b9a73a4aae6 metadata
 MD5 b8ec9a58f96778e8efa6b3900fe5aa16 files/digest-lazarus-0.9.22 253
 RMD160 e99948ba25430b60b23ea1df82dabe79596dd7ee files/digest-lazarus-0.9.22 253
 SHA256 90ab4e5bb33aabb6dbbba7cdeb12203576b4ba4227ad37b7dbb138137f975cb1 files/digest-lazarus-0.9.22 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFGFZEhwnQyISwouHwRAmqkAJ40oja+wxAFKqZ7O9DeR56pqFHhcQCglXQu
+By9JHLulrcR8CTpN0nwNtu8=
+=KRaA
+-----END PGP SIGNATURE-----
