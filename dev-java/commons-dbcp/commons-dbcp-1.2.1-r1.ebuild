@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.7 2007/04/02 18:51:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.8 2007/04/06 09:05:38 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -22,7 +22,7 @@ DEPEND="|| (
 		${COMMON_DEP}"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack "${A}"
