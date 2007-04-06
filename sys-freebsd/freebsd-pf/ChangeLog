@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.23 2007/02/23 13:51:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.24 2007/04/06 14:55:27 uberlord Exp $
+
+*freebsd-pf-6.2-r1 (06 Apr 2007)
+
+  06 Apr 2007; Roy Marples <uberlord@gentoo.org> +freebsd-pf-6.2-r1.ebuild:
+  Bump for a non bash init script.
 
   23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/pf.initd:
   Don't force bashisms.
