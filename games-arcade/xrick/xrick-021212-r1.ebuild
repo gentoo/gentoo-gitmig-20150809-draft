@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.11 2007/03/15 21:52:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.12 2007/04/06 01:01:07 nyhm Exp $
 
 inherit eutils games
 
@@ -23,11 +23,11 @@ src_unpack() {
 
 	sed -i \
 		-e "/^run from/d" \
-		-e "/data.zip/ s:the directory where xrick is:${GAMES_LIBDIR}/${PN}.:" \
+		-e "/data.zip/ s:the directory where xrick is:$(games_get_libdir)/${PN}.:" \
 		xrick.6 || die "sed xrick.6 failed"
 
 	sed -i \
-		-e "s:data.zip:${GAMES_LIBDIR}/${PN}/data.zip:" \
+		-e "s:data.zip:$(games_get_libdir)/${PN}/data.zip:" \
 		src/xrick.c || die "sed xrick.c failed"
 
 	sed -i \
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_install() {
 	dogamesbin xrick || die "dogamesbin failed"
-	insinto "${GAMES_LIBDIR}"/${PN}
+	insinto "$(games_get_libdir)"/${PN}
 	doins data.zip || die "doins failed"
 	newicon src/xrickST.ico ${PN}.ico
 	make_desktop_entry ${PN} ${PN} /usr/share/pixmaps/${PN}.ico
