@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.49 2007/04/04 19:05:33 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.50 2007/04/06 19:39:39 welp Exp $
+
+  06 Apr 2007; Peter Weller <welp@gentoo.org> Apache-DBI-1.06.ebuild:
+  Stable on amd64 wrt bug 172293
 
   04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> Apache-DBI-1.06.ebuild:
   Stable on Alpha as per security bug #172293
