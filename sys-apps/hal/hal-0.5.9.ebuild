@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.6 2007/04/06 01:24:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.7 2007/04/06 16:44:41 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="acpi crypt debug dell disk-partition doc pam pcmcia selinux ${KERNEL_IUSE}
 RDEPEND=">=dev-libs/glib-2.6
 		>=dev-libs/dbus-glib-0.61
 		>=sys-fs/udev-104
-		>=sys-apps/util-linux-2.12r-r1
+		kernel_linux? ( >=sys-apps/util-linux-2.12r-r1 )
 		kernel_linux? ( >=sys-kernel/linux-headers-2.6.17 )
 		>=dev-libs/expat-1.95.8
 		>=sys-apps/pciutils-2.2.3

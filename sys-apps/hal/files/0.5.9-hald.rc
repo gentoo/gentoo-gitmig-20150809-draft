@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/files/0.5.9-hald.rc,v 1.1 2007/04/05 02:18:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/files/0.5.9-hald.rc,v 1.2 2007/04/06 16:44:41 cardoe Exp $
 
 depend() {
 	need dbus
-	use logger consolekit
+	use logger consolekit acpid
 	after coldplug dns nscd
 }
 
