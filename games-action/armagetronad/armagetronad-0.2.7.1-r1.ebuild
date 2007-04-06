@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.5 2006/10/31 04:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.6 2007/04/05 23:58:47 nyhm Exp $
 
 inherit eutils games
 
@@ -38,7 +38,7 @@ src_unpack() {
 	cp "${FILESDIR}"/${PN}-ded "${FILESDIR}"/${PN} . || die
 	sed -i \
 		-e "s:@GAMES_SYSCONFDIR@:${GAMES_SYSCONFDIR}:" \
-		-e "s:@GAMES_LIBDIR@:${GAMES_LIBDIR}:" \
+		-e "s:@GAMES_LIBDIR@:$(games_get_libdir):" \
 		-e "s:@GAMES_DATADIR@:${GAMES_DATADIR}:" \
 		${PN}-ded ${PN}
 }
@@ -56,7 +56,7 @@ src_install() {
 	docinto html/net
 	dohtml doc/net/*.html
 	newicon tron.ico ${PN}.ico
-	exeinto "${GAMES_LIBDIR}/${PN}"
+	exeinto "$(games_get_libdir)/${PN}"
 	if use dedicated ; then
 		doexe src/tron/${PN}-dedicated || die "copying files"
 	else

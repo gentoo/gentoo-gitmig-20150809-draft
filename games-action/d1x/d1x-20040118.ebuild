@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.9 2007/03/12 13:15:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.10 2007/04/06 00:01:01 nyhm Exp $
 
 inherit eutils games
 
@@ -77,7 +77,7 @@ src_unpack() {
 	fi
 
 	cd "\${HOME}/.d1x/"
-	exec "${GAMES_LIBDIR}"/${PN}/${binname} -missiondir "${GAMES_DATADIR}/d1x" "\$@"
+	exec "$(games_get_libdir)"/${PN}/${binname} -missiondir "${GAMES_DATADIR}/d1x" "\$@"
 	EOS
 }
 
@@ -109,7 +109,7 @@ src_install() {
 	doins d1x.ini || die
 
 	# Install the binary executable
-	insinto "${GAMES_LIBDIR}/${PN}"
+	insinto "$(games_get_libdir)/${PN}"
 	insopts -m0750
 	doins "${binname}"
 
