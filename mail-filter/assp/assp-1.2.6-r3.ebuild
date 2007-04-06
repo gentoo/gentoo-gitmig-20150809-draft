@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6-r3.ebuild,v 1.2 2007/03/25 20:03:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6-r3.ebuild,v 1.3 2007/04/06 18:02:57 wltjr Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}_${PV}-Install.zip"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 IUSE="ldap spf srs"
 
