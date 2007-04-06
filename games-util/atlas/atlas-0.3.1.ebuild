@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1.ebuild,v 1.2 2007/03/12 18:20:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1.ebuild,v 1.3 2007/04/06 04:31:18 nyhm Exp $
 
 inherit eutils games
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://sourceforge/atlas/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND=">=games-simulation/flightgear-0.9.4
-	>=media-libs/libpng-1.2.5
+DEPEND="games-simulation/flightgear
+	media-libs/libpng
 	media-libs/jpeg
 	x11-libs/libXi
 	x11-libs/libXmu"
@@ -23,23 +23,21 @@ DEPEND=">=games-simulation/flightgear-0.9.4
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	egamesconf --with-fgbase="${GAMES_DATADIR}/FlightGear" \
-		|| die "egamesconf failed"
+	egamesconf --with-fgbase="${GAMES_DATADIR}"/FlightGear || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	insinto ${GAMES_DATADIR}/FlightGear
-	doins "${S}/src/AtlasPalette" || die "doins failed"
-	keepdir "${GAMES_DATADIR}/FlightGear/Atlas/lowres"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	insinto "${GAMES_DATADIR}"/FlightGear
+	doins src/AtlasPalette || die "doins failed"
+	keepdir "${GAMES_DATADIR}"/FlightGear/Atlas/lowres
 	dodoc AUTHORS NEWS README
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-
 	elog "You now can make the maps with the following commands:"
 	elog "${GAMES_BINDIR}/Map --atlas=${GAMES_DATADIR}/FlightGear/Atlas"
 	elog "${GAMES_BINDIR}/Map --atlas=${GAMES_DATADIR}/FlightGear/Atlas/lowres --size=64"
