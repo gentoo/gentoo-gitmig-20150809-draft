@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.57 2007/02/24 16:43:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.58 2007/04/06 21:34:19 welp Exp $
+
+  06 Apr 2007; Peter Weller <welp@gentoo.org> rss-glx-0.8.1-r4.ebuild:
+  Stable on amd64 wrt bug 167688
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> rss-glx-0.8.1-r4.ebuild:
   Stable on ppc wrt bug 167688
