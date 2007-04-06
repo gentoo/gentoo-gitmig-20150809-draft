@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-graphlcd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/ChangeLog,v 1.14 2007/03/02 17:48:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/ChangeLog,v 1.15 2007/04/06 19:06:55 hd_brummy Exp $
+
+  06 Apr 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-graphlcd-0.1.3-r1.ebuild, vdr-graphlcd-0.1.4.ebuild,
+  vdr-graphlcd-0.1.5.ebuild:
+  stabel on x86
 
 *vdr-graphlcd-0.1.5 (02 Mar 2007)
 
