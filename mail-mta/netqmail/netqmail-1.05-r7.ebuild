@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r7.ebuild,v 1.1 2007/04/05 22:14:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r7.ebuild,v 1.2 2007/04/06 17:33:40 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -78,6 +78,9 @@ src_unpack() {
 	if ! use vanilla; then
 		use ssl && epatch ${DISTDIR}/netqmail-${PV}-tls-smtpauth-${TLS_AUTH_PATCH}.patch
 
+		# Temporary patch until upstream fixes it
+		use ssl && epatch "${FILESDIR}/${PVR}-sslfix.diff"
+
 		if use highvolume; then
 			epatch ${DISTDIR}/big-todo.103.patch
 		fi
@@ -90,9 +93,6 @@ src_unpack() {
 			fi
 		fi
 	fi
-
-	# Temporary patch until upstream fixes it
-	epatch "${FILESDIR}/${PVR}-sslfix.diff"
 
 	if [[ -n "${QMAIL_PATCH_DIR}" && -d "${QMAIL_PATCH_DIR}" ]]
 	then
