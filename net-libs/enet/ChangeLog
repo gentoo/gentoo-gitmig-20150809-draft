@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/enet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.8 2007/04/06 11:18:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.9 2007/04/06 12:41:28 dertobi123 Exp $
+
+  06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org> enet-1.0.ebuild:
+  ppc stable, bug #159356
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org> enet-1.0.ebuild:
   stable x86, security bug 159356
