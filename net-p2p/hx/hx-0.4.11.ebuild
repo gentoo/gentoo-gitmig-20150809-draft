@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.11.ebuild,v 1.4 2007/04/06 22:15:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.11.ebuild,v 1.5 2007/04/06 22:20:17 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -11,13 +11,13 @@ LICENSE="GPL-2"
 KEYWORDS="ppc ~sparc x86"
 MY_P=mhxd-${PV}
 
-DESCRIPTION="This is a Hotline 1.5+ compatible *nix Hotline Client in CLI. It supports IRC compatibility. See http://www.hotspringsinc.com/"
+DESCRIPTION="This is a Hotline 1.5+ compatible *nix Hotline Client in CLI. It supports IRC compatibility."
 SRC_URI="http://projects.acidbeats.de/${MY_P}.tar.bz2"
 HOMEPAGE="http://hotlinex.sf.net/"
 
 IUSE="ssl"
 
-DEPEND="virtual/libc
+DEPEND="
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	>=sys-libs/zlib-1.1.4"
 
