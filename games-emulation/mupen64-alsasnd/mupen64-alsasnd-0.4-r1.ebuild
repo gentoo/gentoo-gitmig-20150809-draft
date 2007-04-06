@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4-r1.ebuild,v 1.1 2007/02/15 09:58:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4-r1.ebuild,v 1.2 2007/04/06 04:39:38 nyhm Exp $
 
 inherit eutils qt3 games
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}"/mupen64/plugins
+	exeinto "$(games_get_libdir)"/mupen64/plugins
 	doexe mupen64_alsasnd-${PV}.so || die "doexe failed"
 	dodoc README
 	prepgamesdirs
