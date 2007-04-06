@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r4.ebuild,v 1.1 2007/01/16 19:17:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r4.ebuild,v 1.2 2007/04/06 09:15:58 opfer Exp $
 
 inherit java-pkg-2 eutils
 
@@ -14,7 +14,7 @@ RDEPEND=">=virtual/jre-1.3.1"
 LICENSE="sun-bcla-j2ee"
 RESTRICT="fetch"
 SLOT="0"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="-ppc x86"
 IUSE="doc"
 
 S=${WORKDIR}/${MY_PN}${PV}
