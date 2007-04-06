@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0.ebuild,v 1.1 2007/03/24 19:02:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0.ebuild,v 1.2 2007/04/06 19:05:48 compnerd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -34,7 +34,6 @@ RDEPEND=">=x11-libs/gtk+-2.6
 		>=dev-libs/libxml2-2.5.0
 		>=virtual/python-2.4
 		apm? ( sys-apps/apmd )
-		acpi? ( sys-power/acpid )
 		x11-apps/xrdb x11-libs/libX11
 		gnome?	(
 					gnome-base/libgnomekbd
@@ -100,4 +99,14 @@ src_install() {
 			[ -s ${applet}/${d} ] && dodoc ${applet}/${d}
 		done
 	done
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+
+	if use acpi && !use hal ; then
+		elog "It is highly recommended that you install acpid if you use the"
+		elog "battstat applet to prevent any issues with other applications "
+		elog "trying to read acpi information."
+	fi
 }
