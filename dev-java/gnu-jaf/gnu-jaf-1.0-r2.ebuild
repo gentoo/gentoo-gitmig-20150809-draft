@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r2.ebuild,v 1.8 2007/03/29 07:56:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r2.ebuild,v 1.9 2007/04/06 22:38:59 dertobi123 Exp $
 
 inherit java-pkg-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/classpathx/activation-${PV}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc source"
 
 # doesn't like 1.6+ because of bundled javax.activation which it can't override
