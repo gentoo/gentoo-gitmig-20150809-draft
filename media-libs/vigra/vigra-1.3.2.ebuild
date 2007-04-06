@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.3.2.ebuild,v 1.2 2006/09/10 00:29:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.3.2.ebuild,v 1.3 2007/04/06 22:05:56 dertobi123 Exp $
 
 DESCRIPTION="Vision with Generic Algorithms"
 HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra"
@@ -8,7 +8,7 @@ SRC_URI="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/${P/-}.tar.gz"
 
 LICENSE="VIGRA"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc
