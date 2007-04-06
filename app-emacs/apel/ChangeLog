@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.18 2007/03/30 19:56:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.19 2007/04/06 12:11:57 opfer Exp $
+
+  06 Apr 2007; Christian Faulhammer <opfer@gentoo.org> apel-10.7.ebuild:
+  stable x86
 
   30 Mar 2007; Fabian Groffen <grobian@gentoo.org> apel-10.6.ebuild,
   apel-10.7.ebuild:
