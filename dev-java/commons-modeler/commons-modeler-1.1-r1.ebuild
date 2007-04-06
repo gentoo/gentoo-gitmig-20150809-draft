@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r1.ebuild,v 1.2 2006/10/05 15:30:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r1.ebuild,v 1.3 2007/04/06 23:50:05 wltjr Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,13 +21,12 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )"
 
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="doc source"
 
-S=${WORKDIR}/${P}-src
+S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Setup the build environment
 	echo "commons-digester.jar=$(java-pkg_getjar commons-digester commons-digester.jar)" >> build.properties
@@ -37,15 +38,11 @@ src_unpack() {
 	mkdir dist
 }
 
-src_compile() {
-	local antflags="prepare jar"
-	use doc && antflags="${antflags} javadoc"
-	eant ${antflags} || die "compile problem"
-}
+EANT_BUILD_TARGET="prepare jar"
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	dodoc RELEASE-NOTES-1.1.txt RELEASE-NOTES.txt
-	use doc && java-pkg_dohtml -r docs/*
+	dodoc RELEASE-NOTES-1.1.txt RELEASE-NOTES.txt || die
+	use doc && java-pkg_dojavadoc docs/*
 	use source && java-pkg_dosrc src/java/*
 }
