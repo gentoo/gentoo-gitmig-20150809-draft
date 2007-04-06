@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.10 2006/06/01 18:51:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.11 2007/04/06 05:46:11 nyhm Exp $
 
-inherit toolchain-funcs eutils libtool flag-o-matic games
+inherit toolchain-funcs eutils flag-o-matic games
 
 DESCRIPTION="an graphics plugin for mupen64"
 SRC_URI="http://mupen64.emulation64.com/files/0.4/riceplugin.tar.bz2"
@@ -18,17 +18,16 @@ RDEPEND="sys-libs/zlib
 	media-libs/libsdl
 	virtual/glu
 	virtual/opengl"
-
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
-S="${WORKDIR}/riceplugin"
+S=${WORKDIR}/riceplugin
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-makefile.patch \
+	epatch \
+		"${FILESDIR}"/${PN}-makefile.patch \
 		"${FILESDIR}"/${PN}-gtk2.patch \
 		"${FILESDIR}"/${PN}-compile.patch \
 		"${FILESDIR}"/${PN}-gcc4.patch
@@ -40,9 +39,9 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}"/mupen64/plugins
-	doexe *.so
-	insinto "${GAMES_LIBDIR}"/mupen64/plugins
-	doins *.ini
+	exeinto "$(games_get_libdir)"/mupen64/plugins
+	doexe *.so || die "doexe failed"
+	insinto "$(games_get_libdir)"/mupen64/plugins
+	doins *.ini || die "doins failed"
 	prepgamesdirs
 }

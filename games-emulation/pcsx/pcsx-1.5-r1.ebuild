@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.10 2007/02/24 00:53:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.11 2007/04/06 05:47:54 nyhm Exp $
 
 inherit eutils games
 
@@ -36,14 +36,14 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-gentoo.patch \
 		"${FILESDIR}"/${P}-gcc41.patch
 	sed -i \
-		-e "s:Plugin/:${GAMES_LIBDIR}/psemu/plugins/:" \
-		-e "s:Bios/:${GAMES_LIBDIR}/psemu/bios/:" \
+		-e "s:Plugin/:$(games_get_libdir)/psemu/plugins/:" \
+		-e "s:Bios/:$(games_get_libdir)/psemu/bios/:" \
 		-e 's:Pcsx.cfg:~/.pcsx/config:' \
 		Linux/LnxMain.c \
 		|| die "sed LnxMain.c failed"
 	sed \
 		-e "s:GAMES_DATADIR:${GAMES_DATADIR}:" \
-		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
+		-e "s:GAMES_LIBDIR:$(games_get_libdir):" \
 		-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
 		"${FILESDIR}"/pcsx > "${T}"/pcsx \
 		|| die "sed failed"
