@@ -1,0 +1,24 @@
+--- lazarus/lcl/interfaces/gtk2/gtk2object.inc
++++ lazarus/lcl/interfaces/gtk2/gtk2object.inc
+@@ -491,6 +491,7 @@
+   StockName : PChar;
+   IconSet : PGtkIconSet;
+   Pixbuf : PGDKPixbuf;
++  Style : TLazGtkStyle;
+ begin
+   Case StockID Of
+     idButtonOk : StockName := GTK_STOCK_OK;
+@@ -522,9 +523,11 @@
+   end;
+ 
+   if (StockID >= idButtonBase) and (StockID <= idDialogBase) then
+-    pixbuf := gtk_icon_set_render_icon(IconSet, GetStyle(lgsbutton), GTK_TEXT_DIR_NONE, GTK_STATE_NORMAL, GTK_ICON_SIZE_BUTTON, GetStyleWidget(lgsbutton), nil)
++    Style := lgsbutton
+   else
+-    pixbuf := gtk_icon_set_render_icon(IconSet, GetStyle(lgswindow), GTK_TEXT_DIR_NONE, GTK_STATE_NORMAL, GTK_ICON_SIZE_DIALOG, GetStyleWidget(lgswindow), nil);
++    Style := lgswindow;
++
++  pixbuf := gtk_icon_set_render_icon(IconSet, GetStyle(Style), GTK_TEXT_DIR_NONE, GTK_STATE_NORMAL, GTK_ICON_SIZE_BUTTON, GetStyleWidget(Style), nil);
+ 
+   Pixmap := NewGDIObject(gdiBitmap);
+   With Pixmap^ do begin

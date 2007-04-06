@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20-r1.ebuild,v 1.3 2007/04/01 11:39:48 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.22.ebuild,v 1.1 2007/04/06 00:14:25 truedfx Exp $
 
 inherit eutils
 
@@ -40,13 +40,12 @@ src_unpack() {
 	fi
 
 	unpack ${A}
-	sed -e "s/@FPCVER@/${FPCVER}/" "${FILESDIR}"/${P}-fpcsrc.patch \
+	sed -e "s/@FPCVER@/${FPCVER}/" "${FILESDIR}"/${PN}-0.9.20-fpcsrc.patch \
 		> "${T}"/fpcsrc.patch || die "could not sed fpcsrc patch"
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-lclintf.patch
-	epatch "${FILESDIR}"/${P}-lcl-handle.patch
 	epatch "${T}"/fpcsrc.patch
+	epatch "${FILESDIR}"/${PN}-iconcrash.patch
 }
 
 src_compile() {
