@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224-r1.ebuild,v 1.2 2007/03/07 01:26:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224-r1.ebuild,v 1.3 2007/04/06 05:52:09 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -46,7 +46,7 @@ src_unpack() {
 		"${FILESDIR}"/${P}-gamedir.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
-		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
+		-e "s:GENTOO_LIBDIR:$(games_get_libdir)/${PN}:" \
 		source/linux/sys_linux.c \
 		|| die "sed failed"
 }
@@ -64,7 +64,7 @@ src_compile() {
 
 src_install() {
 	cd debug
-	exeinto "${GAMES_LIBDIR}"/${PN}
+	exeinto "$(games_get_libdir)"/${PN}
 	doexe game.so || die "doexe failed"
 
 	if (use opengl || use sdl) || use opengl || use sdl || ! use dedicated ; then
