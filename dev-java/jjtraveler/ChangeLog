@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jjtraveler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.12 2007/04/06 18:37:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.13 2007/04/06 18:56:20 betelgeuse Exp $
+
+  06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jjtraveler-0.4.3-r2.ebuild:
+  Mark 0.4.3-r2 stable on amd64 and x86 as it is identical to -r1 and makes
+  sure jjtraveler-config is in order (bug #168466).
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   jjtraveler-0.4.3-r1.ebuild:
