@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.2 2007/03/29 15:00:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.3 2007/04/06 16:26:05 cparrott Exp $
 
 # Brief explanation of the bootstrap logic:
 #
 # ghc requires ghc-bin to bootstrap.
-# Therefore,
+# Therefore, 
 # (1) both ghc-bin and ghc provide virtual/ghc
 # (2) virtual/ghc *must* default to ghc-bin
 # (3) ghc depends on virtual/ghc
@@ -167,6 +167,9 @@ src_unpack() {
 	cd "${S}"
 	# Fix sparc split-objs linking problem
 	epatch "${FILESDIR}/ghc-6.5-norelax.patch"
+
+	# Disable threaded runtime build to work around RTS bugs on sparc
+	epatch "${FILESDIR}/ghc-6.6-nothreadedrts.patch"
 }
 
 src_compile() {
@@ -207,9 +210,16 @@ src_compile() {
 	# Some arches do support some ghc features even though they're off by default
 	use ia64 && echo "GhcWithInterpreter=YES" >> mk/build.mk
 
-	# And some arches used to work ok, but bork with recent gcc versions
-	# See bug #145466 for ppc64.
-	use ppc64 && echo "GhcUnregisterised=YES" >> mk/build.mk
+	# Workaround for threaded RTS bugs on sparc in ghc-6.6
+	# This is rather draconian, hopefully upstream fixes this soon.
+	if use sparc; then
+		echo "GhcUnregisterised=YES" >> mk/build.mk
+		echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
+		echo "GhcWithInterpreter=NO" >> mk/build.mk
+		echo "SplitObjs=NO" >> mk/build.mk
+		echo "GhcRTSWays := debug" >> mk/build.mk
+		echo "GhcNotThreaded=YES" >> mk/build.mk
+	fi
 
 	# The SplitObjs feature makes 'ar'/'ranlib' take loads of RAM:
 	CHECKREQS_MEMORY="200"
