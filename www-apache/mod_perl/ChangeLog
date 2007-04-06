@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.47 2007/04/06 10:41:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.48 2007/04/06 21:50:10 mcummings Exp $
+
+  06 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  mod_perl-2.0.3-r1.ebuild:
+  Marking amd64 stable, bug 172676
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   mod_perl-2.0.3-r1.ebuild:
