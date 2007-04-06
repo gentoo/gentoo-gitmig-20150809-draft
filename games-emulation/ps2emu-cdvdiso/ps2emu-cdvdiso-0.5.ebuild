@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.5.ebuild,v 1.4 2006/09/26 18:50:15 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.5.ebuild,v 1.5 2007/04/06 19:53:05 nyhm Exp $
 
 inherit eutils games
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/CDVDiso${PV//.}
 
 src_unpack() {
-	unrar x -idq "${DISTDIR}"/${A} || die
+	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' \
@@ -37,9 +37,9 @@ src_compile() {
 src_install() {
 	dodoc ReadMe.txt
 	cd src/Linux
-	exeinto "${GAMES_LIBDIR}"/ps2emu/plugins
+	exeinto "$(games_get_libdir)"/ps2emu/plugins
 	newexe libCDVDiso.so libCDVDiso-${PV}.so || die
-	exeinto "${GAMES_LIBDIR}"/ps2emu/cfg
+	exeinto "$(games_get_libdir)"/ps2emu/cfg
 	doexe cfgCDVDiso || die
 	prepgamesdirs
 }
