@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-jaf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.17 2007/04/06 22:38:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.18 2007/04/06 23:00:03 betelgeuse Exp $
+
+  06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -gnu-jaf-1.0-r1.ebuild:
+  Mark stable on amd64 wrt bug #172304 and remove generation 1 ebuild.
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gnu-jaf-1.0-r2.ebuild:
