@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.3 2006/12/09 14:27:50 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.4 2007/04/07 10:26:01 jokey Exp $
 
-inherit eutils multilib
+inherit autotools eutils multilib
 
 DESCRIPTION="the Tcl Thread extension"
 HOMEPAGE="http://www.tcl.tk/"
@@ -14,23 +14,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="gdbm"
 
 DEPEND="gdbm? ( sys-libs/gdbm )
-	>=dev-lang/tcl-8.4"
+	dev-lang/tcl"
 
 S=${WORKDIR}/${PN}${PV}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Search for libs in libdir not just exec_prefix/lib
-	sed -i -e 's:${exec_prefix}/lib:${libdir}:' \
-		aclocal.m4 || die "sed failed"
-
-	sed -i -e "s/relid'/relid/" tclconfig/tcl.m4 || die
-
-	aclocal || die "aclocal failed"
-	autoconf || die "autoconf failed"
-}
 
 pkg_setup() {
 	if ! built_with_use dev-lang/tcl threads ; then
@@ -40,20 +26,30 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Search for libs in libdir not just exec_prefix/lib
+	sed -i -e 's:${exec_prefix}/lib:${libdir}:' \
+		aclocal.m4 || die "sed failed"
+
+	sed -i -e "s/relid'/relid/" tclconfig/tcl.m4
+
+	eaclocal
+	eautoconf
+}
+
 src_compile() {
-	local myconf="--with-threads --with-tclinclude=/usr/include \
-			--with-tcl=/usr/$(get_libdir)"
-
-	if use gdbm ; then
-		myconf="${myconf} --with-gdbm"
-	fi
-
-	econf ${myconf} || die "econf failed"
+	econf \
+		--with-threads \
+		--with-tclinclude=/usr/include \
+		--with-tcl="/usr/$(get_libdir)" \
+		$(use_with gdbm) || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README
 }
