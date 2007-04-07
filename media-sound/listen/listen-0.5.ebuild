@@ -1,16 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5_beta1-r1.ebuild,v 1.1 2006/10/15 02:35:36 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5.ebuild,v 1.1 2007/04/07 19:18:22 bass Exp $
 
 inherit eutils virtualx
 
 DESCRIPTION="A Music player and management for GNOME"
-HOMEPAGE="http://listengnome.free.fr"
-SRC_URI="mirror://sourceforge/listengnome/${PN}-0.5b1.tar.gz"
-S="${WORKDIR}/${PN}-0.5b1"
+HOMEPAGE="http://www.listen-project.org"
+SRC_URI="http://download.listen-project.org/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 IUSE="aac cdr flac ipod mad vorbis"
-#IUSE="aac cdr flac ipod mad vorbis musicbrainz libsexy"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
@@ -33,13 +31,13 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.0
 			dev-python/ctypes )
 	ipod? ( >=media-libs/libgpod-0.3.2-r1 )
 	cdr? ( app-cdr/serpentine )"
-#	musicbrainz? ( dev-python/python-musicbrainz
-#			media-libs/tunepimp )
+#	musicbrainz? ( dev-python/python-musicbrainz2
+#			media-libs/tunepimp )"
 
 DEPEND="${RDEPEND}
 	>=x11-libs/gtk+-2.8
 	>=media-libs/gstreamer-0.10.0
-	>=sys-apps/dbus-0.50
+	dev-python/dbus-python
 	>=dev-lang/python-2.4
 	>=dev-python/pygtk-2.6
 	>=dev-python/gst-python-0.10
@@ -47,8 +45,8 @@ DEPEND="${RDEPEND}
 	>=dev-python/pysqlite-2.3.0
 	>=media-libs/mutagen-1.6
 	dev-python/gnome-python
-	dev-python/gnome-python-extras"
-#	libsexy? ( dev-python/sexy-python )
+	dev-python/gnome-python-extras
+	libsexy? ( dev-python/sexy-python )"
 
 pkg_setup() {
 	if use ipod && ! built_with_use media-libs/libgpod python ; then
@@ -57,14 +55,6 @@ pkg_setup() {
 		eerror "with 'python' in your USE flags. Please add that flag,"
 		eerror "re-emerge libgpod, and then emerge listen."
 		die "media-libs/libgpod is missing the python binding."
-	fi
-
-	if ! built_with_use sys-apps/dbus python ; then
-		echo
-		eerror "In order to install Listen, you need to have sys-apps/dbus"
-		eerror "with 'python' in your USE flags. Please add that flag,"
-		eerror "re-emerge dbus, and then emerge listen."
-		die "sys-apps/dbus is missing the python binding."
 	fi
 
 	if ! built_with_use gnome-base/gnome-vfs hal ; then
@@ -83,8 +73,6 @@ src_compile() {
 	addpredict /root/.gconfd
 	addpredict /root/.gconf
 	addpredict /var/lib/cache/gstreamer-0.10
-	epatch "${FILESDIR}/check.patch"
-	epatch "${FILESDIR}/Makefile.patch"
 	sed -i "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):g" Makefile
 	Xemake -j1 || die "make failed"
 }
@@ -96,7 +84,5 @@ src_install() {
 pkg_postinst() {
 	echo "#!/bin/sh" > /usr/bin/listen
 	GTKMOZEMBED_PATH=$( pkg-config --libs-only-L mozilla-gtkmozembed 2>/dev/null || pkg-config --libs-only-L firefox-gtkmozembed 2>/dev/null | sed -e "s/-L//g" -e "s/[ ]/\,/" -e "s/[  ]//g" )
-	echo "LD_LIBRARY_PATH=\"${GTKMOZEMBED_PATH}\"" "/usr/lib/listen/listen.py \"\$@\"" >> /usr/bin/listen
-
+	echo "LD_LIBRARY_PATH=\"${GTKMOZEMBED_PATH}\"" "python /usr/lib/listen/listen.py \"\$@\"" >> /usr/bin/listen
 }
-
