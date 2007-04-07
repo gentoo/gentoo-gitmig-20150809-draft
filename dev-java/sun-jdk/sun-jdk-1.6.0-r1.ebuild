@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.7 2007/02/11 20:41:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.8 2007/04/07 19:23:55 betelgeuse Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -10,11 +10,7 @@ S="${WORKDIR}/jdk${PV}"
 
 X86_AT="jdk-${MY_PVA}-dlj-linux-i586.bin"
 AMD64_AT="jdk-${MY_PVA}-dlj-linux-amd64.bin"
-if use x86; then
-	At=${X86_AT}
-elif use amd64; then
-	At=${AMD64_AT}
-fi
+
 DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
 HOMEPAGE="http://java.sun.com/javase/6/"
 SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
@@ -53,11 +49,11 @@ JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/lib/javaws.jar jre/lib/deploy.jar"
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${At} ]; then
-		die "cannot read ${At}. Please check the permission and try again."
+	if [ ! -r ${DISTDIR}/${A} ]; then
+		die "cannot read ${A}. Please check the permission and try again."
 	fi
 
-	sh ${DISTDIR}/${At} --accept-license --unpack || die "Failed to unpack"
+	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"
 }
 
 src_install() {
