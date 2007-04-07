@@ -1,13 +1,5 @@
 --- configure.in.orig	2004-11-16 16:02:11.045791896 -0800
 +++ configure.in	2004-11-16 16:03:06.743324584 -0800
-@@ -11,7 +11,6 @@
- AC_PROG_INSTALL
- AC_PROG_LN_S
- AC_PROG_MAKE_SET
--AC_PROG_SYSCONFTOOL
- AC_LIBTOOL_DLOPEN
- AM_PROG_LIBTOOL
- 
 @@ -150,16 +149,22 @@
  
  if test "$db" != "gdbm"

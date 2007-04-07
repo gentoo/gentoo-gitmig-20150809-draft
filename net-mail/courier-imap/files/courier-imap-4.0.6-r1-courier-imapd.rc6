@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.6-r1-courier-imapd.rc6,v 1.1 2007/02/03 01:20:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.6-r1-courier-imapd.rc6,v 1.2 2007/04/07 01:08:00 chtekk Exp $
 
 depend() {
 	need net courier-authlib
@@ -11,13 +11,13 @@ depend() {
 source /etc/courier-imap/imapd
 
 checkconfig() {
-	if [ ! -e /etc/courier-imap/imapd ] ; then
+	if [[ ! -e /etc/courier-imap/imapd ]] ; then
 		eerror "You need an /etc/courier-imap/imapd file to run courier-imapd"
 		return 1
 	fi
 	source /etc/courier-imap/imapd || {
 		eerror "There are syntax errors in /etc/courier-imap/imapd"
-		eerror "Please correct them before trying to start imapd"
+		eerror "Please correct them before trying to start courier-imapd"
 		return 2
 	}
 }
@@ -25,13 +25,12 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting courier-imapd"
-	/usr/bin/env - /usr/GENTOO_LIBDIR/courier-imap/gentoo-imapd.rc \
-		--pid=$PIDFILE
+	/usr/bin/env - /usr/GENTOO_LIBDIR/courier-imap/gentoo-imapd.rc --pid=${PIDFILE}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping courier-imapd"
-	start-stop-daemon --quiet --stop --pid=$PIDFILE
+	start-stop-daemon --quiet --stop --pid=${PIDFILE}
 	eend $?
 }

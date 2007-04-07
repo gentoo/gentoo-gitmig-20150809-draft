@@ -1,5 +1,5 @@
---- courier-imap-3.0.7-orig/bdbobj/configure.in	2001-09-18 18:26:28.000000000 -0700
-+++ courier-imap-3.0.7/bdbobj/configure.in	2004-08-14 16:15:08.469316646 -0700
+--- bdbobj/configure.in.orig	2001-09-18 18:26:28.000000000 -0700
++++ bdbobj/configure.in	2004-08-14 16:15:08.469316646 -0700
 @@ -21,15 +21,23 @@
  dnl Checks for libraries.
  

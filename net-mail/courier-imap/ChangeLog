@@ -1,6 +1,35 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.146 2007/03/30 16:52:17 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.147 2007/04/07 01:08:00 chtekk Exp $
+
+*courier-imap-4.1.2-r1 (07 Apr 2007)
+*courier-imap-4.0.6-r2 (07 Apr 2007)
+
+  07 Apr 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/courier-imap-3.0.7-db4-bdbobj_configure.in.patch,
+  -files/courier-imap-3.0.7-db4-configure.in.patch,
+  -files/courier-imap-3.0.7-disable-fam-configure.in.patch,
+  +files/courier-imap-4.0.6-aclocal-fix.patch,
+  files/courier-imap-4.0.6-db4-bdbobj_configure.in.patch,
+  files/courier-imap-4.0.6-db4-configure.in.patch,
+  files/courier-imap-4.0.6-r1-courier-imapd.indirect,
+  files/courier-imap-4.0.6-r1-courier-imapd.rc6,
+  files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6,
+  files/courier-imap-4.0.6-r1-courier-pop3d.indirect,
+  files/courier-imap-4.0.6-r1-courier-pop3d.rc6,
+  files/courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6,
+  files/courier-imap-4.0.6-r1-gentoo-imapd.rc,
+  files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc,
+  files/courier-imap-4.0.6-r1-gentoo-pop3d.rc,
+  files/courier-imap-4.0.6-r1-gentoo-pop3d-ssl.rc,
+  -files/courier-imap-4.1.2-aclocal-fix.patch,
+  -files/courier-imap-4.1.2-db4-configure.in.patch, metadata.xml,
+  -courier-imap-3.0.7.ebuild, -courier-imap-4.0.6.ebuild,
+  -courier-imap-4.0.6-r1.ebuild, +courier-imap-4.0.6-r2.ebuild,
+  -courier-imap-4.1.2.ebuild, +courier-imap-4.1.2-r1.ebuild:
+  Remove old/unused versions with redundant/unstable keywords. General ebuild
+  cleanup for 4.0.6-r2 and 4.1.2-r1. Cleanup of init-scripts and patches. Fix
+  security bug #168196 and autotools handling bug #160037.
 
   30 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
   courier-imap-4.1.2.ebuild:
