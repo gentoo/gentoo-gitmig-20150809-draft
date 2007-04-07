@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.40 2007/04/05 20:55:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.41 2007/04/07 18:47:08 nixnut Exp $
+
+  07 Apr 2007; nixnut <nixnut@gentoo.org> avalon-logkit-2.1.ebuild:
+  Stable on ppc wrt bug 172895
 
   01 Apr 2007; Raúl Porcel <armin76@gentoo.org> avalon-logkit-2.1.ebuild:
   Add ~ia64 keyword wrt bug 158687
