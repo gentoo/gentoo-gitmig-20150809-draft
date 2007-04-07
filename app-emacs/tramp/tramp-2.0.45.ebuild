@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.45.ebuild,v 1.4 2005/04/21 18:43:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.45.ebuild,v 1.5 2007/04/07 16:45:07 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ DESCRIPTION="TRAMP is a package for editing remote files similar to ange-ftp but
 HOMEPAGE="http://savannah.nongnu.org/projects/tramp/"
 SRC_URI="http://savannah.nongnu.org/download/tramp/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="x86 alpha amd64 ppc"
 

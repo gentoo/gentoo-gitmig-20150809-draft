@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.55.ebuild,v 1.9 2006/12/06 15:37:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.55.ebuild,v 1.10 2007/04/07 16:38:33 opfer Exp $
 
 inherit elisp eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="AUCTeX is an extensible package that supports writing and formattin
 HOMEPAGE="http://www.gnu.org/software/auctex/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""

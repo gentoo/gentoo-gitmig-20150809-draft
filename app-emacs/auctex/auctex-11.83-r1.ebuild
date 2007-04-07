@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.83-r1.ebuild,v 1.2 2006/11/27 16:55:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.83-r1.ebuild,v 1.3 2007/04/07 16:38:33 opfer Exp $
 
 inherit elisp eutils latex-package autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="AUCTeX is an extensible package that supports writing and formattin
 HOMEPAGE="http://www.gnu.org/software/auctex/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="preview-latex"
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	# Don't install in the main tree, as this causes file collisions
 	# with app-text/tetex, see bug #155944
-	# Does no harm when used with USE=-preview-latex 
+	# Does no harm when used with USE=-preview-latex
 	local PREVIEW_TEXMFDIR="${D}`kpsewhich -var-value=TEXMFSITE`"
 	mkdir -p "${PREVIEW_TEXMFDIR}"
 

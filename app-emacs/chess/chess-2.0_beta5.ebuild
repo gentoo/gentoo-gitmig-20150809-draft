@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5.ebuild,v 1.2 2007/02/09 00:26:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5.ebuild,v 1.3 2007/04/07 16:41:45 opfer Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/emacs-chess/${P/_beta/b}.tar.bz2
 	mirror://gentoo/emacs-chess-sounds-2.0.tar.bz2
 	mirror://gentoo/emacs-chess-pieces-2.0.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE=""
