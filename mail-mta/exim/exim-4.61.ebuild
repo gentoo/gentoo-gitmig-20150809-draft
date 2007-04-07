@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.61.ebuild,v 1.3 2007/03/18 05:28:12 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.61.ebuild,v 1.4 2007/04/07 16:10:31 opfer Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ DEPEND=">=sys-apps/sed-4.0.5
 	pam? ( >=sys-libs/pam-0.75 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( net-libs/gnutls
+			  dev-libs/libtasn1 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7 )
@@ -119,7 +120,7 @@ src_unpack() {
 		myconf="${myconf} -lpam"
 	fi
 	if use sasl; then
-		sed -i "s:# CYRUS_SASLAUTHD_SOCKET=/var/state/saslauthd/mux:CYRUS_SASLAUTHD_SOCKET=/var/lib/sasl2/mux:"  Makefile
+		sed -i "s:# CYRUS_SASLAUTHD_SOCKET=/var/state/saslauthd/mux:CYRUS_SASLAUTHD_SOCKET=/var/lib/sasl2/mux:"	 Makefile
 		sed -i "s:# AUTH_CYRUS_SASL=yes:AUTH_CYRUS_SASL=yes:" Makefile
 		myconf="${myconf} -lsasl2"
 	fi

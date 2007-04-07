@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.84 2007/03/19 13:18:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.85 2007/04/07 16:10:31 opfer Exp $
+
+  07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> exim-4.60-r1.ebuild,
+  exim-4.61.ebuild, exim-4.62.ebuild, exim-4.63.ebuild:
+  add libtasn1 as dependency for USE=gnutls, as reported in bug 143519 by zmedico
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove pfeifer from metadata.xml due to retirement.
