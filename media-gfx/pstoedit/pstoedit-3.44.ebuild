@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.44.ebuild,v 1.2 2007/04/07 01:15:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.44.ebuild,v 1.3 2007/04/07 01:28:20 betelgeuse Exp $
 
 inherit autotools base eutils
 
@@ -19,7 +19,7 @@ IUSE="emf imagemagick plotutils"
 DEPEND="media-libs/libpng
 		virtual/ghostscript
 		media-libs/gd
-		!amd64? ( emf? ( >=media-libs/libemf-1.0.3 ) )
+		emf? ( >=media-libs/libemf-1.0.3 )
 		imagemagick? ( media-gfx/imagemagick )
 		plotutils? ( media-libs/plotutils )"
 #flash? ( >=media-libs/ming-0.3 )
