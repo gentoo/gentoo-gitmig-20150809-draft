@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.2.ebuild,v 1.3 2005/07/10 15:56:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.2.ebuild,v 1.4 2007/04/07 16:01:57 genstef Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~ppc ~x86"
 DEPEND=""
 RDEPEND="virtual/ghostscript
 	dev-libs/libxml2
-	dev-libs/glib
+	=dev-libs/glib-1*
 	cups? ( >=net-print/cups-1.1.14 )
 	X? ( >=dev-cpp/gtkmm-1.2.5 )
 	>=dev-libs/libsigc++-1.01
