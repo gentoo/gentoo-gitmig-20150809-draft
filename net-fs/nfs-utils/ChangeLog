@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.99 2007/04/02 12:28:30 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.100 2007/04/07 10:58:43 vapier Exp $
+
+  07 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  nfs-utils-1.0.12-r2.ebuild, nfs-utils-1.0.12-r3.ebuild:
+  Bind rpc.gssd/rpc.idmapd install to USE=kerberos rather than USE=!nonfsv4
+  #172431 by emerald.
 
 *nfs-utils-1.0.12-r3 (02 Apr 2007)
 
