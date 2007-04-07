@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.84 2007/03/30 16:03:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.85 2007/04/07 01:25:23 betelgeuse Exp $
+
+  07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> use.mask:
+  Use use.mask for emf instead of !amd64 atom in media-gfx/pstoedit.
 
   30 Mar 2007; Bernard Cafarelli <voyageur@gentoo.org>
   2006.0/no-multilib/package.mask, dev/2007.0/no-multilib/package.mask,

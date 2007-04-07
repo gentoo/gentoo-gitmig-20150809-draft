@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.53 2007/03/17 18:41:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.54 2007/04/07 01:25:23 betelgeuse Exp $
 
 # SECTION: Unmask
 
@@ -41,6 +41,10 @@
 -db2
 
 # SECTION: Unavailable/Broken
+
+# 2007/04/07 - Petteri Räty <betelgeuse@gentoo.org>
+# libemf does not build on amd64
+emf
 
 # 2007/01/18 - Jeffrey Gardner <je_fro@gentoo.org>
 # Mask gamess support temporarily.
