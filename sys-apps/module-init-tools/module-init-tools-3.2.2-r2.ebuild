@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r2.ebuild,v 1.11 2007/03/27 23:22:19 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r2.ebuild,v 1.12 2007/04/07 09:56:25 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -149,10 +149,18 @@ src_install() {
 	# Install the modules.conf2modprobe.conf tool, so we can update
 	# modprobe.conf.
 	into /
-	dosbin "${S}"/generate-modprobe.conf "${FILESDIR}"/modules-update || die
-	dosym modules-update /sbin/update-modules
+	dosbin "${S}"/generate-modprobe.conf "${FILESDIR}"/update-modules || die
+	dosym update-modules /sbin/modules-update
+	doman "${FILESDIR}"/update-modules.8
 
 	doman *.[1-8]
 	docinto /
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
+}
+
+pkg_postinst() {
+	# cheat to keep users happy
+	if [[ -e ${ROOT}/etc/init.d/modules ]] ; then
+		sed -i 's:modules-update:update-modules:' /etc/init.d/modules
+	fi
 }

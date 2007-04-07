@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.125 2007/03/27 23:22:19 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.126 2007/04/07 09:56:25 vapier Exp $
+
+  07 Apr 2007; Mike Frysinger <vapier@gentoo.org> -files/modules-update,
+  +files/update-modules, +files/update-modules.8,
+  module-init-tools-3.2.2-r2.ebuild:
+  Rename to update-modules and move/update the manpage from baselayout.
 
   27 Mar 2007; Stephen Bennett <spb@gentoo.org>
   module-init-tools-3.2.2-r2.ebuild:
