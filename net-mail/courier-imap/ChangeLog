@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.148 2007/04/07 08:06:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.149 2007/04/07 09:55:21 opfer Exp $
+
+  07 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  courier-imap-4.0.6-r2.ebuild:
+  stable x86, security bug 168196
 
   07 Apr 2007; Peter Weller <welp@gentoo.org> courier-imap-4.0.6-r2.ebuild:
   Stable on amd64 wrt bug 168196
