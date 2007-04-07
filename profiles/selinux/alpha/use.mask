@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.8 2007/03/22 04:58:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.9 2007/04/07 13:37:10 pebenito Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -146,3 +146,6 @@ sms
 mpd
 # app-admin/hddtemp
 hddtemp
+
+# libemf not ported
+emf
