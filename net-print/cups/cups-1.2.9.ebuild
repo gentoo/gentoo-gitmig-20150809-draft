@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.9.ebuild,v 1.8 2007/03/29 14:31:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.9.ebuild,v 1.9 2007/04/07 12:41:24 genstef Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -134,6 +134,11 @@ src_install() {
 	# install pdftops filter
 	exeinto /usr/libexec/cups/filter/
 	newexe ${FILESDIR}/pdftops.pl pdftops
+
+	# only for gs-esp this is correct, see bug 163897
+	if has_version app-text/ghostscript-gpl || has_version app-text/ghostscript-gnu; then
+		sed -i -e "s:#application/vnd.cups-postscript:application/vnd.cups-postscript:" ${D}/etc/cups/mime.convs
+	fi
 
 	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
 		/var/run/cups/certs /var/cache/cups /var/spool/cups/tmp /etc/cups/ssl
