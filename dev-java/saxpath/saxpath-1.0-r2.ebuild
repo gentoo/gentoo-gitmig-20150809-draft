@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0-r2.ebuild,v 1.4 2007/04/07 12:12:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0-r2.ebuild,v 1.5 2007/04/07 12:23:10 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -48,8 +48,10 @@ src_install() {
 	java-pkg_dojar build/saxpath.jar
 
 	if use doc; then
-		mv build/doc/javadoc build/doc/apidocs
+		# installs things other than javadoc too
+		mv build/doc/javadoc build/doc/apidocs || die
 		java-pkg_dohtml -r build/doc/*
+		dosym /usr/share/doc/${PF}/html/{apidocs,api} || die
 	fi
 	use source && java-pkg_dosrc src/java/main/*
 }
