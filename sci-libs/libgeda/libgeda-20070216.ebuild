@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20070216.ebuild,v 1.2 2007/04/05 06:56:04 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20070216.ebuild,v 1.3 2007/04/07 20:16:35 calchan Exp $
 
 inherit eutils
 
@@ -23,7 +23,9 @@ pkg_setup() {
 		built_with_use "dev-scheme/guile" deprecated \
 			|| die "You need either <dev-scheme/guile-1.8, or >=dev-scheme/guile-1.8 with USE=deprecated"
 	fi
-	use gd && built_with_use media-libs/gd png || die "media-libs/gd must be compiled with USE=png"
+	if use gd ; then
+		built_with_use media-libs/gd png || die "media-libs/gd must be compiled with USE=png"
+	fi
 }
 
 src_unpack() {
