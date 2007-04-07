@@ -7,9 +7,6 @@ SHA256 fef30a771530096c4f190c60d9d7c396844fc67a3ec2bbaae9b0ff497f925129 sbcl-0.8
 MD5 029b85186984d0bfc8b49c4de1e8e45e sbcl-0.8.15-sparc-linux-binary.tar.bz2 6903090
 RMD160 41015dcfb41caf93b54a02a0f55eec994309accf sbcl-0.8.15-sparc-linux-binary.tar.bz2 6903090
 SHA256 f0bc5fc11e9c0f1651ebe773b5c7e972da589cc4af2811d25438a099f490cc7d sbcl-0.8.15-sparc-linux-binary.tar.bz2 6903090
-MD5 46d67859cac0d3b748310a93311b308a sbcl-0.9.11a-powerpc-darwin-binary.tar.bz2 6766401
-RMD160 c60dba2a0278acf787d53a93ebac4de03c1d5ed8 sbcl-0.9.11a-powerpc-darwin-binary.tar.bz2 6766401
-SHA256 5cb563b19d1dd828e55bde9763404f5b908c9f5a043ba8c443415291b969b3d9 sbcl-0.9.11a-powerpc-darwin-binary.tar.bz2 6766401
 MD5 033b04259a929e71393281981fdf1f7a sbcl-0.9.14-x86-64-linux-binary.tar.bz2 7225013
 RMD160 7a544bedebd4389eb75fe67bb48c0d25f677bc0d sbcl-0.9.14-x86-64-linux-binary.tar.bz2 7225013
 SHA256 3db39ce36b1efc42cf99fc1be355aa8c0107e60ffb56f50bb001cc9b5cab70eb sbcl-0.9.14-x86-64-linux-binary.tar.bz2 7225013

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.4.ebuild,v 1.2 2007/04/07 16:01:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.4.ebuild,v 1.3 2007/04/07 17:02:13 grobian Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -18,8 +18,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )
-	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )
-	ppc-macos? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC_MACOS}-powerpc-darwin-binary.tar.bz2 )"
+	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )"
 
 LICENSE="MIT"
 SLOT="0"
@@ -59,7 +58,7 @@ refer to Bug #119016 for more information.
 EOF
 		die
 	fi
-	if (use ppc-macos || use ppc) && use ldb; then
+	if use ppc && use ldb; then
 		sbcl_elog ewarn <<'EOF'
 Building SBCL on PPC with LDB support is not a supported configuration
 in Gentoo.	Please refer to Bug #121830 for more information.
@@ -70,11 +69,7 @@ EOF
 
 src_unpack() {
 	local a
-	# `use ppc` returns true for both ppc linux and ppc-macos systems
-	# specify
-	if use ppc-macos ; then
-		a="${PN}-${BV_PPC_MACOS}-powerpc-darwin-binary.tar.bz2"
-	elif use ppc; then
+	if use ppc; then
 		a="${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2"
 	else
 		for a in ${A}; do [[ $a == *binary* ]] && break; done
@@ -100,9 +95,9 @@ EOF
 		use threads && echo '(enable :sb-thread)' \
 			>>${S}/customize-target-features.lisp
 	fi
-	if (use ppc-macos || use ppc) && use ldb; then
+	if use ppc && use ldb; then
 		sbcl_elog ewarn <<'EOF'
-Excluding LDB support for ppc-macos or ppc.
+Excluding LDB support for ppc.
 EOF
 	else
 		use ldb \
