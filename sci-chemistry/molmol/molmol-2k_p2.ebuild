@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.9 2007/04/07 04:57:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.10 2007/04/07 04:59:52 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -66,7 +66,7 @@ src_compile() {
 src_install() {
 	dobin molmol || die
 
-	exeinto ${MMDIR} 
+	exeinto ${MMDIR}
 	newexe src/main/molmol molmol.lnx || die
 	insinto ${MMDIR}
 	doins -r auxil help macros man setup tips || die
