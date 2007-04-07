@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.0.ebuild,v 1.1 2007/04/01 12:26:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.0.ebuild,v 1.2 2007/04/07 14:58:48 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="s390"
+KEYWORDS="-* s390"
 IUSE=""
 
 RDEPEND="sys-fs/sysfsutils"
@@ -38,4 +38,6 @@ src_unpack() {
 src_install() {
 	emake install INSTROOT="${D}" USRBINDIR="${D}/sbin" || die
 	dodoc README
+	insinto /etc/udev/rules.d
+	doins etc/udev/rules.d/*.rules || die
 }
