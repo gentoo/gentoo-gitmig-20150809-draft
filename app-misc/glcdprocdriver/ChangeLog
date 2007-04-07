@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/glcdprocdriver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.3 2007/04/02 13:34:42 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.4 2007/04/07 14:16:22 jokey Exp $
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org>
+  glcdprocdriver-0.0.3-r1.ebuild:
+  Stable on x86 wrt bug #173271
 
 *glcdprocdriver-0.0.3-r1 (02 Apr 2007)
 
