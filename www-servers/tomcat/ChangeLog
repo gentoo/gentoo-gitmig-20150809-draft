@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.133 2007/04/05 21:24:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.134 2007/04/07 00:35:32 wltjr Exp $
+
+  07 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/5.5.20/catalinabuild-xml.patch,
+  -files/5.5.20/jsr152_examples_build-xml.patch,
+  -files/5.5.20/mainbuild-xml.patch, -files/5.5.20/jasperbuild-xml.patch,
+  -files/5.5.20/jsr152build-xml-examples.patch,
+  -files/5.5.20/jsr154_examples_build-xml.patch,
+  -files/5.5.20/jsr154build-xml-examples.patch, -files/5.5.20/tomcat.conf,
+  -files/5.5.20/tomcat.init, -files/5.5.20/tomcat_build-xml.patch,
+  -files/5.5.20/tomcatbuild-xml.patch, -tomcat-5.5.20-r8.ebuild,
+  tomcat-5.5.23-r1.ebuild:
+  Stable on amd64, security bug #173122. Removed older vulnerable version.
 
   05 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog,
   Manifest:
