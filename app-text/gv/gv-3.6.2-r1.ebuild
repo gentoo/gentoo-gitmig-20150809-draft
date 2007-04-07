@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.2-r1.ebuild,v 1.10 2007/04/07 16:24:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.2-r1.ebuild,v 1.11 2007/04/07 17:14:33 genstef Exp $
 
 inherit eutils
 
@@ -14,16 +14,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="|| ( (
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXmu
-			x11-libs/libXpm
-			x11-libs/libXt
-		) virtual/x11
-	)
+RDEPEND="x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXt
 	x11-libs/Xaw3d
 	virtual/ghostscript"
 
@@ -53,5 +50,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+	doicon src/gv_icon.xbm
+	make_desktop_entry gv "GhostView" /usr/share/pixmaps/gv_icon.xbm "Application;Graphics;Viewer;"
 	dodoc AUTHORS ChangeLog INSTALL README TODO
 }

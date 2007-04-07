@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.64 2007/04/07 16:24:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.65 2007/04/07 17:14:33 genstef Exp $
+
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> gv-3.6.2-r1.ebuild:
+  Add menu entry thanks to Pacho Ramos <pacho@condmat1.ciencias.uniovi.es> in
+  bug 160218
 
   07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> gv-3.6.2-r1.ebuild:
   SRC_URI reverted to mirror://, fixes bug 163183
