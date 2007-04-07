@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.127 2007/03/17 12:22:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.128 2007/04/07 15:14:21 welp Exp $
+
+  07 Apr 2007; Peter Weller <welp@gentoo.org> sylpheed-claws-2.6.1.ebuild:
+  Stable on amd64 wrt bug 163611
 
   17 Mar 2007; Andrej Kacian <ticho@gentoo.org>
   -sylpheed-claws-2.5.6.ebuild, -sylpheed-claws-2.6.0.ebuild:
