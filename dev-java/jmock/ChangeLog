@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.7 2007/02/20 23:42:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.8 2007/04/07 19:15:36 fordfrog Exp $
+
+*jmock-1.1.0-r2 (07 Apr 2007)
+
+  07 Apr 2007; Miroslav Šulc <fordfrog@gentoo.org> +jmock-1.1.0-r2.ebuild:
+  Corrected running of tests with dev-java/ant-1.7.0
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   jmock-1.1.0-r1.ebuild:
