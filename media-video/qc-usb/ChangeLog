@@ -1,11 +1,11 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.22 2007/01/03 01:10:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.23 2007/04/07 13:41:49 genstef Exp $
 
   03 Jan 2007; Andrej Kacian <ticho@gentoo.org> qc-usb-0.6.6.ebuild:
   Stable on x86, bug #154555.
 
-  25 Dec 2006; <stefan@gentoo.org> qc-usb-0.6.6.ebuild:
+  25 Dec 2006; Stefan Schweizer <genstef@gentoo.org> qc-usb-0.6.6.ebuild:
   Fix CONFIG_CHECK for buf 154555 by drac
 
 *qc-usb-0.6.6 (13 Dec 2006)
@@ -33,7 +33,7 @@
 
 *qc-usb-0.6.4 (29 May 2006)
 
-  29 May 2006; <stefan@gentoo.org> +qc-usb-0.6.4.ebuild:
+  29 May 2006; Stefan Schweizer <genstef@gentoo.org> +qc-usb-0.6.4.ebuild:
   Version bump thanks to Samuli Suominen <sasuomin@uusikaupunki.fi> and Erik
   Andrén <erik.andren@gmail.com> in bug 133408
 
