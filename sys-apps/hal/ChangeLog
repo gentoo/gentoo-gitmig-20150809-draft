@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.149 2007/04/06 19:13:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.150 2007/04/07 00:43:57 cardoe Exp $
+
+  07 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/95_gentoo_man_page.patch,
+  +files/0.5.9/96_plugdev_allow_send.patch, files/0.5.9/series,
+  hal-0.5.9.ebuild:
+  man page changes for Gentoo. migrate plugdev policy patch to new patchset.
 
   06 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
   Fix up SELinux support

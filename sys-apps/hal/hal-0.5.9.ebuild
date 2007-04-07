@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.8 2007/04/06 19:13:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.9 2007/04/07 00:43:57 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		dell? ( >=sys-libs/libsmbios-0.13.4 )
 		disk-partition? ( >=sys-apps/parted-1.7.1 )
 		crypt? ( >=sys-fs/cryptsetup-luks-1.0.1 )
-		selinux? ( sys-libs/libselinux 
+		selinux? ( sys-libs/libselinux
 					sec-policy/selinux-hal )
 		pam? ( sys-auth/consolekit )"
 
@@ -91,8 +91,6 @@ src_unpack() {
 
 	# Gentoo Patch Set
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch ${FILESDIR}/${PV}
-
-	epatch ${FILESDIR}/${PN}-0.5.7-plugdev-allow-send.patch
 }
 
 src_compile() {
