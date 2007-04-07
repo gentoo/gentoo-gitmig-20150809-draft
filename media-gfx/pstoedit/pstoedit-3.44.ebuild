@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.44.ebuild,v 1.1 2007/04/07 01:12:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.44.ebuild,v 1.2 2007/04/07 01:15:27 betelgeuse Exp $
 
-inherit autotools base eutils 
+inherit autotools base eutils
 
 DESCRIPTION="translates PostScript and PDF graphics into other vector formats"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
