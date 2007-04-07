@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.3.ebuild,v 1.2 2007/03/27 09:24:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.3.ebuild,v 1.3 2007/04/07 13:00:58 genstef Exp $
 
 inherit eutils
 
@@ -117,4 +117,8 @@ pkg_preinst() {
 		grep -q hpaio dll.conf || echo hpaio >> dll.conf
 		doins dll.conf
 	fi
+}
+
+pkg_postinst() {
+	einfo "You need the qt3 useflag enabled to use the guy configurator hp-setup"
 }
