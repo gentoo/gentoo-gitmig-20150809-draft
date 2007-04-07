@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.3.3.ebuild,v 1.10 2007/04/04 06:00:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.3.3.ebuild,v 1.11 2007/04/07 02:43:07 dirtyepic Exp $
 
 inherit python wxwidgets eutils multilib
 
@@ -30,6 +30,17 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}/wxPython/
+
+pkg_setup() {
+	if use opengl; then
+		if ! built_with_use wxGTK opengl; then
+			echo
+			eerror "To build wxpython with opengl support, wxGTK must also be"
+			eerror "built with USE=\"opengl\"."
+			die "Rebuild wxGTK with USE=\"opengl\""
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
