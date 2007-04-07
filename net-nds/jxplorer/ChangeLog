@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.16 2007/03/30 13:41:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.17 2007/04/07 16:41:49 josejx Exp $
+
+  07 Apr 2007; Joseph Jezak <josejx@gentoo.org> jxplorer-3.1-r5.ebuild:
+  Marked ~ppc for bug #165104, thanks to ndansmith for testing.
 
 *jxplorer-3.1-r5 (30 Mar 2007)
 
