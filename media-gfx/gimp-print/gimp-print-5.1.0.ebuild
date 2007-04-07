@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.0.ebuild,v 1.1 2007/03/14 16:20:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.0.ebuild,v 1.2 2007/04/07 15:52:41 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -40,6 +40,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch ${FILESDIR}/gimp-print-5.1.0-nonls.patch
 
 	elibtoolize
 }
