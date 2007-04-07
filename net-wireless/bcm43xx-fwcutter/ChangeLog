@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bcm43xx-fwcutter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/ChangeLog,v 1.8 2007/01/22 04:55:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/ChangeLog,v 1.9 2007/04/07 15:54:32 josejx Exp $
+
+  07 Apr 2007; Joseph Jezak <josejx@gentoo.org> bcm43xx-fwcutter-006.ebuild:
+  Marked ppc stable.
 
 *bcm43xx-fwcutter-006 (22 Jan 2007)
 
