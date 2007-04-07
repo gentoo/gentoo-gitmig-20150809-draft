@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.267 2007/04/07 13:55:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.268 2007/04/07 18:08:07 genstef Exp $
+
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  mask for removal app-misc/gfontview
 
   07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add postscript and dia local use flags of media-gfx/inkscape.
