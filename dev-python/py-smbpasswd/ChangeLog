@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/py-smbpasswd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-smbpasswd/ChangeLog,v 1.8 2006/07/12 15:49:59 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-smbpasswd/ChangeLog,v 1.9 2007/04/07 10:47:47 dev-zero Exp $
+
+*py-smbpasswd-1.0.1 (07 Apr 2007)
+
+  07 Apr 2007; Tiziano Müller <dev-zero@gentoo.org>
+  py-smbpasswd-1.0.ebuild, +py-smbpasswd-1.0.1.ebuild:
+  Version bump. Fixed SRC_URI and DEPEND.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> py-smbpasswd-1.0.ebuild:
   Mark 1.0 stable on ia64
