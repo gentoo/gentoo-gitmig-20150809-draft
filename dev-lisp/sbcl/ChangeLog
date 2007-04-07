@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.103 2007/04/07 14:01:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.104 2007/04/07 16:01:37 opfer Exp $
+
+  07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> sbcl-1.0.4.ebuild:
+  keyworded ~amd64/~x86, bug 173669
 
   07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> sbcl-1.0.1.ebuild:
   stable amd64, bug 173641
