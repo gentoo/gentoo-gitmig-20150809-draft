@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.10.ebuild,v 1.1 2007/04/05 11:07:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.10.ebuild,v 1.2 2007/04/07 09:59:01 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -324,6 +324,7 @@ src_install() {
 	cd "${S}"/sbin
 	into /
 	dosbin rc rc-update
+	dosym update-rc /sbin/rc-update
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
 	dosbin runscript.sh functions.sh
