@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-0.7.27.ebuild,v 1.3 2006/09/07 03:58:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-0.7.27.ebuild,v 1.4 2007/04/07 13:14:12 genstef Exp $
 
 inherit python rpm
 
@@ -22,7 +22,8 @@ RDEPEND="net-print/cups
 	dev-python/pycups
 	sys-apps/usermode
 	dev-python/rhpl
-	net-print/foomatic
+	net-print/foomatic-filters
+	net-print/foomatic-db
 	dev-python/pyxml"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
