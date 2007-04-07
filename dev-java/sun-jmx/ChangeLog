@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jmx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.8 2007/04/07 04:46:14 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.9 2007/04/07 12:05:54 betelgeuse Exp $
+
+  07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  sun-jmx-1.2.1-r2.ebuild:
+  Mark stable on ppc wrt bug #172456.
 
   07 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   sun-jmx-1.2.1-r2.ebuild:
