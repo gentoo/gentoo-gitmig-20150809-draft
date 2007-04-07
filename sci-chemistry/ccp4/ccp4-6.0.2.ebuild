@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.2 2007/03/15 17:04:05 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.3 2007/04/07 04:30:08 vapier Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -355,17 +355,20 @@ src_install() {
 	rm -rf "${D}"/usr/html
 
 	for i in data rnase toxd; do
-		DOCDESTTREE="examples/${i}" dodoc ${S}/examples/${i}/*
+		docinto examples/${i}
+		dodoc ${S}/examples/${i}/*
 	done
 
-	DOCDESTTREE="examples/tutorial" dohtml -r ${S}/examples/tutorial/html
-	DOCDESTTREE="examples/tutorial" dohtml examples/tutorial/tut.css
+	docinto examples/tutorial
+	dohtml -r ${S}/examples/tutorial/html examples/tutorial/tut.css
 	for i in data results; do
-		DOCDESTTREE="examples/tutorial/${i}" dodoc ${S}/examples/tutorial/${i}/*
+		docinto examples/tutorial/${i}
+		dodoc ${S}/examples/tutorial/${i}/*
 	done
 
 	for i in non-runnable runnable; do
-		DOCDESTTREE="examples/unix/${i}" dodoc ${S}/examples/unix/${i}
+		docinto examples/unix/${i}
+		dodoc ${S}/examples/unix/${i}
 	done
 
 	# Needed for ccp4i docs to work
