@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/browserlauncher2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/browserlauncher2/ChangeLog,v 1.3 2007/03/15 17:24:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/browserlauncher2/ChangeLog,v 1.4 2007/04/07 16:47:50 josejx Exp $
+
+  07 Apr 2007; Joseph Jezak <josejx@gentoo.org> browserlauncher2-1.0.ebuild:
+  Marked ~ppc for bug #170506, thanks to ndansmith for testing.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   browserlauncher2-1.0.ebuild:
