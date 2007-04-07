@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.5 2007/03/13 18:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.6 2007/04/07 07:44:42 opfer Exp $
+
+inherit multilib
 
 DESCRIPTION="A clean, lightweight, object oriented scripting language"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -12,7 +14,7 @@ DEPEND="virtual/libc
 
 SLOT="1"
 LICENSE="as-is"
-KEYWORDS="~alpha ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
 IUSE=""
 
 src_unpack() {
@@ -30,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf --libdir=/usr/$(get_libdir)|| die
 	emake || die
 }
 
@@ -40,5 +42,5 @@ src_install() {
 	sed -i -e '/^prefix/s:prefix:${T}' -e ${T}/feritedoc
 	sed -i -e '/^$prefix/s:$prefix/bin/ferite:{D}/usr/bin/ferite:' -e ${T}/feritedoc
 	sed -i -e 's:build_c_api_docs.sh $(prefix)/bin/:build_c_api_docs.sh ${T}/:' docs/Makefile.in
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} LIBDIR=/usr/$(get_libdir) install || die
 }
