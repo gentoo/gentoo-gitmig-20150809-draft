@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.46 2007/04/07 13:55:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.47 2007/04/07 16:24:55 jer Exp $
+
+  07 Apr 2007; Jeroen Roovers <jer@gentoo.org> imlib-1.9.15-r1.ebuild:
+  Stable for HPPA (bug #173638).
 
   07 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   imlib-1.9.15-r1.ebuild:
