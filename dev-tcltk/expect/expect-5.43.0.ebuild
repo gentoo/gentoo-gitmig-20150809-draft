@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.6 2007/01/18 04:00:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.7 2007/04/07 14:45:30 jokey Exp $
 
-inherit eutils
+WANT_AUTOCONF="2.1"
+inherit autotools eutils
 
 DESCRIPTION="tool for automating interactive applications"
 HOMEPAGE="http://expect.nist.gov/"
@@ -15,10 +16,9 @@ IUSE="X doc"
 
 # We need dejagnu for src_test, but dejagnu needs expect
 # to compile/run, so we cant add dejagnu to DEPEND :/
-RDEPEND=">=dev-lang/tcl-8.2
+DEPEND=">=dev-lang/tcl-8.2
 	X? ( >=dev-lang/tk-8.2 )"
-DEPEND="${RDEPEND}
-	=sys-devel/autoconf-2.1*"
+RDEPEND="${DEPEND}"
 
 NON_MICRO_V=${P%.[0-9]}
 S=${WORKDIR}/${NON_MICRO_V}
@@ -38,7 +38,7 @@ src_unpack() {
 		-e '/^install:/s/install-libraries //' \
 		-e 's/^SCRIPTS_MANPAGES = /_&/' \
 		Makefile.in
-	WANT_AUTOCONF=2.1 autoconf
+	eautoconf
 }
 
 src_compile() {
@@ -73,7 +73,7 @@ src_test() {
 	# we need dejagnu to do tests ... but dejagnu needs
 	# expect ... so don't do tests unless we have dejagnu
 	type -p runtest || return 0
-	WANT_AUTOCONF=2.1 make check || die "make check failed"
+	make check || die "make check failed"
 }
 
 src_install() {
