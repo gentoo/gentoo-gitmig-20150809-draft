@@ -1,13 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.2-r1.ebuild,v 1.11 2007/04/07 17:14:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.2-r1.ebuild,v 1.12 2007/04/07 17:30:26 genstef Exp $
 
 inherit eutils
 
+DPF="gv_3.6.2-3"
 DESCRIPTION="gv is used to view PostScript and PDF documents using Ghostscript"
 HOMEPAGE="http://www.gnu.org/software/gv/"
 SRC_URI="mirror://gnu/gv/${P}.tar.gz
-	mirror://debian/pool/main/g/gv/gv_3.6.2-2.diff.gz"
+	mirror://debian/pool/main/g/gv/${DPF}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,7 +37,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/gv-3.6.1-a0.patch
 	epatch "${FILESDIR}"/gv-3.6.1-fixedmedia.patch
 	epatch "${FILESDIR}"/gv-update.patch
-	epatch "${WORKDIR}"/gv_3.6.2-2.diff
+	epatch "${FILESDIR}"/gv-30_config.patch
+	# apply debian patches
+	epatch "${WORKDIR}"/${DPF}.diff
 	epatch ${P}/debian/patches/{*-*,*_*}
 	# Make font render nicely even with gs-8, bug 135354
 	sed -i -e "s:-dGraphicsAlphaBits=2:\0 -dAlignToPixels=0:" \
