@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3.ebuild,v 1.1 2007/03/25 15:14:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3.ebuild,v 1.2 2007/04/07 11:13:33 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -385,9 +385,9 @@ src_compile() {
 	fi
 
 	emake || die "make failed"
-	[[ ${CTARGET} != ${CHOST} ]] && return 0
-
-	if [[ ${CHOST} == *-uclibc ]] ; then
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		emake -C utils hostutils || die "make hostutils failed"
+	elif [[ ${CHOST} == *-uclibc ]] ; then
 		emake utils || die "make utils failed"
 	fi
 }
@@ -407,7 +407,7 @@ src_install() {
 
 	local target="install"
 	just_headers && target="install_dev"
-	make DESTDIR="${sysroot}" ${target} || die "install failed"
+	emake DESTDIR="${sysroot}" ${target} || die "install failed"
 
 	# remove files coming from kernel-headers
 	rm -rf "${sysroot}"/usr/include/{linux,asm*}
@@ -417,6 +417,8 @@ src_install() {
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
+		newbin utils/ldconfig.host ${CTARGET}-ldconfig || die
+		newbin utils/ldd.host ${CTARGET}-ldd || die
 		return 0
 	fi
 
