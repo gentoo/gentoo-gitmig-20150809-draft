@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20070216.ebuild,v 1.3 2007/04/05 07:00:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20070216.ebuild,v 1.4 2007/04/07 20:24:41 calchan Exp $
 
 inherit eutils
 
@@ -31,7 +31,11 @@ pkg_setup() {
 		built_with_use "dev-scheme/guile" deprecated \
 			|| die "You need either <dev-scheme/guile-1.8, or >=dev-scheme/guile-1.8 with USE=deprecated"
 	fi
-	use gd && built_with_use sci-libs/libgeda gd || die "sci-libs/libgeda must be compiled with USE=gd"
+	if use gd ; then
+		built_with_use sci-libs/libgeda gd || die "sci-libs/libgeda must be compiled with USE=gd"
+	else
+		! built_with_use sci-libs/libgeda gd || die "sci-libs/libgeda must be compiled with USE=-gd"
+	fi
 }
 
 src_compile() {
