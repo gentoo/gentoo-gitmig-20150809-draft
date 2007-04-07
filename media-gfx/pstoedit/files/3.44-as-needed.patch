@@ -1,0 +1,16 @@
+--- pstoedit-3.42/src/Makefile.am.orig	2006-04-30 21:31:27.000000000 +0200
++++ pstoedit-3.42/src/Makefile.am	2006-04-30 21:31:22.000000000 +0200
+@@ -101,11 +101,11 @@
+ 	psfront.h				\
+ 	version.h
+ 
+-libpstoedit_la_LIBADD = ${CXX_STD_LIB} ${CXX_RUNTIME_LIB}
++libpstoedit_la_LIBADD = ${CXX_STD_LIB} ${CXX_RUNTIME_LIB} ${LIBLD_LDFLAGS}
+ libpstoedit_la_LDFLAGS = -no-undefined
+ 
+ pstoedit_SOURCES = cmdmain.cpp
+-pstoedit_LDFLAGS = -no-undefined -L. libpstoedit.la ${LIBLD_LDFLAGS}
++pstoedit_LDFLAGS = -no-undefined -L. libpstoedit.la
+ 
+ pkginclude_HEADERS =				\
+ 	pstoedit.h				\
