@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0.ebuild,v 1.2 2007/04/06 19:05:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0.ebuild,v 1.3 2007/04/07 22:46:32 compnerd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -104,7 +104,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if use acpi && !use hal ; then
+	if use acpi && ! use hal ; then
 		elog "It is highly recommended that you install acpid if you use the"
 		elog "battstat applet to prevent any issues with other applications "
 		elog "trying to read acpi information."
