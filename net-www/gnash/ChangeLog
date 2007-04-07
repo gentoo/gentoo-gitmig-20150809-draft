@@ -1,6 +1,6 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.39 2007/03/16 16:52:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.40 2007/04/07 13:46:43 genstef Exp $
 
   16 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> gnash-0.7.2.ebuild:
   Keyworded ~sparc wrt #171038
@@ -143,10 +143,10 @@
   <baard.sorngard@gmail.com> and Avuton Olrich <avuton@gmail.com> in bug
   135010
 
-  29 May 2006; <stefan@gentoo.org> gnash-0.7.1_p20060528.ebuild:
+  29 May 2006; Stefan Schweizer <genstef@gentoo.org> gnash-0.7.1_p20060528.ebuild:
   gtkglext dep fix
 
-  29 May 2006; <stefan@gentoo.org>
+  29 May 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/gnash-0.7.1_p20060528-confcache-gtkglext.patch,
   gnash-0.7.1_p20060528.ebuild:
   Add confcache fix
