@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fonttools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.7 2006/07/12 15:20:07 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.8 2007/04/07 04:22:25 vapier Exp $
+
+  07 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  fonttools-2.0_beta1.ebuild:
+  Replace DOCDESTTREE hack with proper "dohtml".
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   fonttools-2.0_beta1.ebuild:
