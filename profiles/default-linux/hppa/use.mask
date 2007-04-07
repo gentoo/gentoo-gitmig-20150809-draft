@@ -1,3 +1,11 @@
+# 2007/04/07 Jeroen Roovers <jer@gentoo.org>
+# gnustep-make needs gcc with USE=gcj
+gnustep
+
+# 2007/04/07 Jeroen Roovers <jer@gentoo.org>
+# libffi has not been ported to hppa, therefore gcc fails to build with USE=gcj
+gcj
+
 # 2007/03/21 Steve Dibb <beandog@gentoo.org>
 # mplayer local keywords
 ivtv
