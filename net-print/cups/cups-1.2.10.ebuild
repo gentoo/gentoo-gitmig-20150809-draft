@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.8.ebuild,v 1.1 2007/02/19 20:59:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.10.ebuild,v 1.1 2007/04/07 12:22:55 genstef Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -10,12 +10,12 @@ MY_P=${P/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/cups/${PV}/${MY_P}-source.tar.bz2"
+SRC_URI="http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 #ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ldap ssl slp pam php samba nls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
