@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.27 2007/04/07 10:54:11 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.28 2007/04/07 16:50:38 nixnut Exp $
+
+  07 Apr 2007; nixnut <nixnut@gentoo.org> yafc-1.1.1-r1.ebuild:
+  Stable on ppc wrt bug 173646
 
 *yafc-1.1.1-r1 (07 Apr 2007)
 
