@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.4.ebuild,v 1.1 2007/04/06 17:05:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.4.ebuild,v 1.2 2007/04/07 00:47:12 falco Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -62,6 +62,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-2.6.1.2-libdir.patch"
 	epatch "${FILESDIR}/${PN}-2.6.1.1-libnet.patch"
+	epatch "${FILESDIR}/${P}-libdnet-ip6.patch"
 	use react && epatch "${FILESDIR}/${PN}-2.6.1.2-react.patch"
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
 		etc/snort.conf

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.126 2007/04/06 17:05:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.127 2007/04/07 00:47:12 falco Exp $
+
+  07 Apr 2007; Raphael Marichez <falco@gentoo.org>
+  +files/snort-2.6.1.4-libdnet-ip6.patch, snort-2.6.1.4.ebuild:
+  Fix #173594, ip6 header redeclaration if libdnet.
 
 *snort-2.6.1.4 (06 Apr 2007)
 
