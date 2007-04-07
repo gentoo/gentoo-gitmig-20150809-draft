@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.66 2007/03/19 01:54:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.67 2007/04/07 15:21:40 jokey Exp $
+
+*devtodo-0.1.19-r2 (07 Apr 2007)
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/devtodo-0.1.19-r2-gentoo.diff, metadata.xml,
+  +devtodo-0.1.19-r2.ebuild:
+  Fix bug #138412 and bug #160154 , wipe old ebuilds and set me up as
+  maintainer since ka0ttic is gone. Also bumping -r2 to stable as it's more or
+  less a bash-completion modification which is safe
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
