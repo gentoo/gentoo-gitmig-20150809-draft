@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.52 2007/03/15 13:37:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.53 2007/04/07 13:19:33 genstef Exp $
+
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> lprng-3.8.28.ebuild:
+  replace net-print/foomatic by component depends in order to deprecate it
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> lprng-3.8.28.ebuild:
   Stable on ppc64; bug #169987
