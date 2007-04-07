@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.3.ebuild,v 1.1 2007/02/11 07:53:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.3.ebuild,v 1.2 2007/04/07 22:50:55 compnerd Exp $
 
 inherit mono multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/mono-1.2.2.1"
+RDEPEND=">=dev-lang/mono-1.2.3"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

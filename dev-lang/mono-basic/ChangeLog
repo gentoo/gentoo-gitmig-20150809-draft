@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono-basic
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.1 2007/02/11 07:53:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.2 2007/04/07 22:50:55 compnerd Exp $
+
+  07 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  mono-basic-1.2.3.ebuild:
+  Bump dependency on mono to 1.2.3 as per bug #173656
 
 *mono-basic-1.2.3 (11 Feb 2007)
 
