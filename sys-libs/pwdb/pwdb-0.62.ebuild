@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.29 2006/12/31 14:58:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.30 2007/04/07 16:14:14 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -46,8 +46,6 @@ src_install() {
 	insinto /etc
 	doins conf/pwdb.conf
 
-	dodoc CHANGES CREDITS README
+	dodoc CHANGES CREDITS README doc/*.txt
 	dohtml -r doc/html/*
-	docinto txt
-	dodoc doc/*.txt
 }
