@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20061201.ebuild,v 1.2 2007/03/25 06:40:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20061201.ebuild,v 1.3 2007/04/07 09:02:31 vapier Exp $
 
 # the tar.bz2 was ripped from prelink-0.3.10-1.src.rpm on Fedora mirrors
 
@@ -29,9 +29,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-prelink-conf.patch
 	sed -i \
-		-e 's:\<deps[12]\.sh\>::g' \
-		-e 's:\<undosyslibs.sh\>::' \
-		testsuite/Makefile.in #100147
+		-e '/^CC=/s: : -Wl,--disable-new-dtags :' \
+		testsuite/functions.sh #100147
 }
 
 src_install() {
