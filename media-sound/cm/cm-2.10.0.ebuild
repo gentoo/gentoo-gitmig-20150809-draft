@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.11 2007/04/07 16:36:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.12 2007/04/07 20:41:30 opfer Exp $
 
 inherit elisp-common
 
@@ -22,7 +22,7 @@ INTERPRETERS="dev-lisp/ecls
 	dev-scheme/gauche"
 
 DEPEND="|| ( ${COMPILERS} ${INTERPRETERS} )
-		emacs? ( virtual/emacs app-emacs/slime )
+		emacs? ( virtual/emacs >=app-emacs/slime-2.0 )
 		test? ( app-shells/tcsh )"
 RDEPEND="${DEPEND}"
 
