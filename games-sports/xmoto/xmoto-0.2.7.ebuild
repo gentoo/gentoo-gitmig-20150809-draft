@@ -1,16 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.7.ebuild,v 1.1 2007/03/20 21:24:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.7.ebuild,v 1.2 2007/04/07 13:37:55 genstef Exp $
 
 inherit eutils games
 
 LVL_N="svg2lvl"
 LVL_V="0.3.0"
+LVL="${LVL_N}-${LVL_V}"
 
 DESCRIPTION="A challenging 2D motocross platform game"
 HOMEPAGE="http://xmoto.tuxfamily.org"
 SRC_URI="http://download.tuxfamily.org/${PN}/${PN}/${PV}/${P}-src.tar.gz
-	editor? ( mirror://sourceforge/${PN}/${LVL_N}-${LVL_V}.tar.gz )"
+	editor? ( mirror://sourceforge/${PN}/${LVL}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -53,12 +54,23 @@ src_install() {
 	dodoc README TODO ChangeLog
 
 	doicon extra/xmoto.xpm
-	domenu extra/xmoto{,-edit}.desktop
+	domenu extra/xmoto.desktop
 
 	prepgamesdirs
 
 	if use editor; then
 	  insinto /usr/share/inkscape/extensions
-	  doins ${WORKDIR}/${LVL_N}-${LVL_V}/*
+	  doins ${WORKDIR}/${LVL}/*.inx
+	  doins ${WORKDIR}/${LVL}/*.py
+	  doins ${WORKDIR}/${LVL}/*.xml
+	fi
+}
+
+pkg_postinst() {
+	if use editor; then
+	  einfo "If you want to know how to create xmoto-levels"
+	  einfo "have a look at this Tutorial:"
+	  einfo "http://wiki.xmoto.free.fr/index.php?title=Inkscape-0.3.0#Tutorial"
+	  einfo "You can share your levels on the xmoto-homepage."
 	fi
 }
