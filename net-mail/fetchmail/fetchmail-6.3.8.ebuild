@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.7.ebuild,v 1.1 2007/02/18 18:39:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.8.ebuild,v 1.1 2007/04/07 07:23:41 tove Exp $
 
 inherit eutils
-
-FCONF_P="fetchmailconf-1.43.2"
 
 DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://fetchmail.berlios.de"
@@ -15,18 +13,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
-DEPEND="hesiod? ( net-dns/hesiod )
+RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( app-crypt/mit-krb5 )
-	nls? ( sys-devel/gettext )
+	nls? ( virtual/libintl )
 	elibc_FreeBSD? ( sys-libs/com_err )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	# this patch fixes bug #34788 (ticho@gentoo.org 2004-09-03)
-	epatch "${FILESDIR}"/${PN}-6.2.5-broken-headers.patch || die
+	epatch "${FILESDIR}"/${PN}-6.2.5-broken-headers.patch
 }
 
 src_compile() {
@@ -53,8 +53,8 @@ src_install() {
 
 	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README README.NTLM README.SSL TODO
 
-	newinitd ${FILESDIR}/fetchmail fetchmail
-	newconfd ${FILESDIR}/conf.d-fetchmail fetchmail
+	newinitd "${FILESDIR}"/fetchmail fetchmail
+	newconfd "${FILESDIR}"/conf.d-fetchmail fetchmail
 
 	docinto contrib
 	local f
