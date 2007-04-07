@@ -1,16 +1,16 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.15 2007/04/06 19:03:58 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.16 2007/04/07 08:34:01 truedfx Exp $
 
 *lazarus-0.9.22-r1 (06 Apr 2007)
 
-  06 Apr 2007; <harald@gentoo.org> -files/lazarus-iconcrash.patch,
+  06 Apr 2007; <truedfx@gentoo.org> -files/lazarus-iconcrash.patch,
   -lazarus-0.9.22.ebuild, +lazarus-0.9.22-r1.ebuild:
   Remove the workaround for bug #168168, and depend on a fixed librsvg
 
 *lazarus-0.9.22 (06 Apr 2007)
 
-  06 Apr 2007; <harald@gentoo.org> -files/lazarus-0.9.20-lcl-handle.patch,
+  06 Apr 2007; <truedfx@gentoo.org> -files/lazarus-0.9.20-lcl-handle.patch,
   -files/lazarus-0.9.20-lclintf.patch, +files/lazarus-iconcrash.patch,
   -lazarus-0.9.20-r1.ebuild, +lazarus-0.9.22.ebuild:
   Version bump with a workaround for bug #168168
