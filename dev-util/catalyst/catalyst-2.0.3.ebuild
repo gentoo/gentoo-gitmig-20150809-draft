@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.3.ebuild,v 1.2 2007/03/21 19:33:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.3.ebuild,v 1.3 2007/04/07 04:20:04 vapier Exp $
 
 inherit eutils
 
@@ -58,7 +58,8 @@ src_install() {
 	dosym /usr/lib/${PN}/catalyst /usr/bin/catalyst
 	insinto /etc/catalyst
 	doins files/catalyst.conf files/catalystrc || die "copying configuration"
-	DOCDESTTREE="." dohtml -A spec,msg,example -r examples files
+	insinto /usr/share/doc/${PF}/examples
+	doins examples/* || die
 	dodoc README ChangeLog ChangeLog.old AUTHORS
 	doman files/catalyst.1
 	# Here is where we actually enable ccache

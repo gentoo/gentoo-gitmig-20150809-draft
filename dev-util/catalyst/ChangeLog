@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/catalyst
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.166 2007/03/21 19:33:43 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.167 2007/04/07 04:20:04 vapier Exp $
+
+  07 Apr 2007; Mike Frysinger <vapier@gentoo.org> catalyst-1.1.10.10.ebuild,
+  catalyst-2.0.2.ebuild, catalyst-2.0.3.ebuild:
+  Rewrite hack abuse of dohtml to use insinto/doins.
 
   21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> catalyst-2.0.3.ebuild:
   Remove cdr from IUSE since we no longer use it and change the x86-fbsd check

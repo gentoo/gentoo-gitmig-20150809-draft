@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.6 2007/03/05 03:25:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.7 2007/04/07 04:20:04 vapier Exp $
 
 inherit eutils
 
@@ -59,11 +59,12 @@ src_install() {
 	dosym /usr/lib/${PN}/catalyst /usr/bin/catalyst
 	insinto /etc/catalyst
 	doins files/catalyst.conf
-	if use doc;	then
-		DOCDESTTREE="." dohtml -A spec,msg,example -r examples files
-	fi
 	dodoc README ChangeLog ChangeLog.old AUTHORS
 	doman files/catalyst.1
+	if use doc ; then
+		insinto /usr/share/doc/${PF}/examples
+		doins examples/* || die
+	fi
 }
 
 pkg_postinst() {
