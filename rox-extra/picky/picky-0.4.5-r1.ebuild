@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/picky/picky-0.4.5-r1.ebuild,v 1.1 2007/01/31 00:12:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/picky/picky-0.4.5-r1.ebuild,v 1.2 2007/04/07 13:07:09 dertobi123 Exp $
 
 ROX_LIB_VER=1.9.12
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="http://www.rdsarts.com/code/picky/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 APPNAME=${MY_PN}
