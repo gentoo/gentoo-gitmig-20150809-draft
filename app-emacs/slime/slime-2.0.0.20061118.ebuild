@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.3 2007/04/07 13:23:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.4 2007/04/07 14:02:50 opfer Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://common-lisp.net/project/slime/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/emacs
