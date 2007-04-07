@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.59 2007/02/06 04:51:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.60 2007/04/07 13:58:03 betelgeuse Exp $
+
+*inkscape-0.45.1 (07 Apr 2007)
+
+  07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  +inkscape-0.45.1.ebuild:
+  Version bump for security bug #171799. Also fixes bugs #106123 (importing
+  postscript), bug #147822, bug #162237, bug #169308 (useless dep on boost).
+  In this version the plugin use flag was splitted to wmf, postcript and dia
+  use flags and the ebuild in general cleaned.
 
   06 Feb 2007; Jeroen Roovers <jer@gentoo.org> inkscape-0.45.ebuild:
   Increase minimal x11-libs/gtk+ version in accordance with Release Notes.
