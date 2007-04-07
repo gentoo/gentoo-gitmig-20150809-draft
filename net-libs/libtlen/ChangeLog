@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtlen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.11 2007/02/22 01:34:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.12 2007/04/07 15:12:48 betelgeuse Exp $
+
+  07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -libtlen-20040912.ebuild:
+  Remove ebuild calling libtoolize directly wrt bug #160036.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
