@@ -1,13 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.4.ebuild,v 1.9 2007/01/18 22:43:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.4.ebuild,v 1.10 2007/04/07 21:05:45 genstef Exp $
 
 inherit autotools eutils multilib
 
 MY_P=${P/-bindings/}
 DESCRIPTION="rendering bindings for GUI toolkits for poppler"
 HOMEPAGE="http://poppler.freedesktop.org/"
-SRC_URI="http://poppler.freedesktop.org/${MY_P}.tar.gz"
+SRC_URI="http://poppler.freedesktop.org/${MY_P}.tar.gz
+	http://mural.uv.es/abraham/poppler-test-0.5.3.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
