@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpi
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi/ChangeLog,v 1.4 2006/10/26 16:33:29 peper Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi/ChangeLog,v 1.5 2007/04/07 16:42:08 opfer Exp $
+
+  07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> acpi-0.06-r5.ebuild:
+  SRC_URI changed to mirror://, fixes bug 163312
 
   26 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> acpi-0.06-r5.ebuild:
   Fix deps and a few other things.
