@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.261 2007/03/13 10:41:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.262 2007/04/07 16:23:57 pclouds Exp $
+
+  07 Apr 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  ruby-1.8.4-r3.ebuild, ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild,
+  ruby-1.8.5_p35.ebuild, ruby-1.8.6_pre1.ebuild, ruby-1.8.6_pre3.ebuild,
+  ruby-1.8.6.ebuild:
+  Added warning, bug #159922
 
 *ruby-1.8.6 (13 Mar 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p35.ebuild,v 1.1 2007/03/13 10:37:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p35.ebuild,v 1.2 2007/04/07 16:23:57 pclouds Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -126,6 +126,10 @@ pkg_postinst() {
 	ewarn "In that case, you will need to remerge vim."
 	ewarn
 
+	ewarn "If you upgrade to >=sys-apps/coreutils-6.7-r1,"
+	ewarn "you should re-emerge ruby again."
+	ewarn "See bug #159922 for details"
+	ewarn
 	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
