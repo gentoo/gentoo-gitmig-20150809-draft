@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-wifi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.13 2007/02/21 23:26:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.14 2007/04/07 21:35:46 genstef Exp $
+
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  gkrellm-wifi-0.9.12.ebuild:
+  Fix compile thanks to gentoofan23 and bugday, bug 166553
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

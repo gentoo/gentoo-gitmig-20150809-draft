@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/gkrellm-wifi-0.9.12.ebuild,v 1.10 2006/05/08 21:07:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/gkrellm-wifi-0.9.12.ebuild,v 1.11 2007/04/07 21:35:46 genstef Exp $
 
 inherit multilib
 
@@ -13,11 +13,12 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND=">=app-admin/gkrellm-2.1.12"
+DEPEND=">=app-admin/gkrellm-2.1.12
+		>=net-wireless/wireless-tools-22"
 
 src_compile() {
-	CFLAGS="$CFLAGS -I/usr/src/linux/include"
-	make || die
+	CFLAGS="$CFLAGS -I/usr/include/"
+	emake || die
 }
 
 src_install() {
