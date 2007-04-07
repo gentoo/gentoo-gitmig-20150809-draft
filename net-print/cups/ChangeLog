@@ -1,14 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.232 2007/04/07 12:41:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.233 2007/04/07 13:43:35 genstef Exp $
 
-  07 Apr 2007; <stefan@gentoo.org> cups-1.2.9.ebuild, cups-1.2.10.ebuild:
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> cups-1.2.9.ebuild, cups-1.2.10.ebuild:
   Use pstoraster for gs-gpl and -gnu to make them work with gimp-print for
   example, thanks to nicola.rauseo@gmail.com in bug 163897
 
 *cups-1.2.10 (07 Apr 2007)
 
-  07 Apr 2007; <stefan@gentoo.org> +cups-1.2.10.ebuild:
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> +cups-1.2.10.ebuild:
   version bump
 
   29 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> cups-1.2.9.ebuild:
@@ -34,7 +34,7 @@
 
 *cups-1.2.9 (20 Mar 2007)
 
-  20 Mar 2007; <stefan@gentoo.org> +cups-1.2.9.ebuild:
+  20 Mar 2007; Stefan Schweizer <genstef@gentoo.org> +cups-1.2.9.ebuild:
   version bump
 
 *cups-1.2.8 (19 Feb 2007)
