@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2729 2007/04/07 13:55:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2730 2007/04/07 14:53:39 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -112,6 +112,7 @@ app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-qtlibs:immqt-bc - Enable binary compatible version of immodule for Qt
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
+app-emulation/hercules:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default package CFLAGS (not supported)
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
 app-emulation/mol:sheep - Support for the sheep net driver
