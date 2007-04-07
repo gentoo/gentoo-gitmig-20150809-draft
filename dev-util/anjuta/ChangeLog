@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.67 2007/03/09 21:21:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.68 2007/04/07 13:27:57 betelgeuse Exp $
+
+  07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -anjuta-1.2.4.ebuild:
+  Remove old ebuild with broken autotools handling wrt bug #160008.
 
   09 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   anjuta-2.1.0_beta1.ebuild, anjuta-2.1.1_beta1.ebuild:
