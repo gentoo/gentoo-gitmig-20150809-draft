@@ -1,20 +1,20 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.24 2006/08/27 22:45:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.25 2007/04/07 16:27:52 opfer Exp $
 
 IUSE="X"
 
 inherit libtool eutils
 
-#The plotutils package contains extra X fonts.  These fonts are not installed
-#in the current ebuild.  The commented out ebuild lines below are for future
+#The plotutils package contains extra X fonts.	These fonts are not installed
+#in the current ebuild.	 The commented out ebuild lines below are for future
 #reference when this ebuild may be updated to install the fonts.
 #NOTE: The current method does not play nice with X and sandbox.  Most of the
 #font installation procedures should probably be moved to pkg_postinst.
 #See Bug# 30 at http://bugs.gentoo.org/show_bug.cgi?id=30
 
 DESCRIPTION="a powerful C/C++ function library for exporting 2-D vector graphics"
-SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
+SRC_URI="mirror://gnu/plotutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/plotutils/"
 
 SLOT="0"

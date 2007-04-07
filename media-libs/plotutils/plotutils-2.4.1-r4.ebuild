@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r4.ebuild,v 1.8 2007/04/02 13:24:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r4.ebuild,v 1.9 2007/04/07 16:27:52 opfer Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -13,7 +13,7 @@ inherit libtool eutils flag-o-matic
 
 DESCRIPTION="a powerful C/C++ function library for exporting 2-D vector graphics"
 HOMEPAGE="http://www.gnu.org/software/plotutils/"
-SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
+SRC_URI="mirror://gnu/plotutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
