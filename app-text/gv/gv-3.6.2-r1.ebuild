@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.2-r1.ebuild,v 1.9 2007/02/11 10:07:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.2-r1.ebuild,v 1.10 2007/04/07 16:24:10 opfer Exp $
 
 inherit eutils
 
 DESCRIPTION="gv is used to view PostScript and PDF documents using Ghostscript"
 HOMEPAGE="http://www.gnu.org/software/gv/"
-SRC_URI="ftp://ftp.gnu.org/gnu/gv/${P}.tar.gz
+SRC_URI="mirror://gnu/gv/${P}.tar.gz
 	mirror://debian/pool/main/g/gv/gv_3.6.2-2.diff.gz"
 
 LICENSE="GPL-2"
