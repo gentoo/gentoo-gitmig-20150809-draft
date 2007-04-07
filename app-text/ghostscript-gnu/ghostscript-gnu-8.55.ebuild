@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.2 2006/11/17 20:44:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.3 2007/04/07 16:22:09 opfer Exp $
 
 WANT_AUTOMAKE=1.6
 inherit autotools elisp-common eutils versionator flag-o-matic
@@ -14,7 +14,7 @@ PVM=$(get_version_component_range 1-2)
 SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz )
 	cups? ( mirror://gentoo/cups-${CUPS_PV}-source.tar.bz2 )
-	ftp://ftp.gnu.org/gnu/ghostscript/${MY_P}.tar.bz2"
+	mirror://gnu/ghostscript/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

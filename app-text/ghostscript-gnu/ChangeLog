@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gnu
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.27 2006/11/17 20:44:53 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.28 2007/04/07 16:22:09 opfer Exp $
+
+  07 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  ghostscript-gnu-8.55.ebuild:
+  SRC_URI reverted to mirror://, fixes bug 163182
 
   17 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
   ghostscript-gnu-8.55.ebuild:
