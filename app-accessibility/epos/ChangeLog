@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.20 2007/02/22 00:05:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.21 2007/04/07 13:19:44 betelgeuse Exp $
+
+  07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -epos-2.5.35-r1.ebuild:
+  Removed ebuild with broken autotools handling wrt bug #159982.
 
   22 Feb 2007; Doug Goldstein <cardoe@gentoo.org> ChangeLog:
   Manifest2 fix
