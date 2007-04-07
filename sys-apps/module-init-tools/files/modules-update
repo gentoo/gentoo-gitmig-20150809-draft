@@ -400,7 +400,7 @@ if [[ -d ${depfile%/*} ]] ; then
 		arch=$(uname -m)
 		ebegin "Updating modules.dep"
 		for cfg in /lib/modules/${KV}/build /usr/src/linux-${KV} \
-		           /boot /usr/src/linux ""
+		           /lib/modules/${KV} /boot /usr/src/linux ""
 		do
 			cfg="${cfg}/System.map"
 			for suffix in -genkernel-{${arch},'*'}-${KV} -${KV} "" ; do
