@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/neti
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.13 2007/03/20 15:39:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.14 2007/04/07 14:29:09 jokey Exp $
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org> neti-2.0.ebuild:
+  Add missing dep wrt bug 172681
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> neti-2.0.ebuild:
   x86 stable
