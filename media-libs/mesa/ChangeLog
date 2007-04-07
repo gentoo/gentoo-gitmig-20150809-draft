@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.140 2007/02/19 22:21:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.141 2007/04/07 04:56:07 vapier Exp $
+
+  07 Apr 2007; Mike Frysinger <vapier@gentoo.org> mesa-6.5-r3.ebuild:
+  Remove fluff reference to EXEDESTTREE.
 
 *mesa-6.5.2-r1 (19 Feb 2007)
 
