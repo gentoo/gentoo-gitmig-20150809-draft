@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.10 2007/02/02 14:12:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.11 2007/04/07 20:23:57 dirtyepic Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,7 @@ MY_P=${P}.${extra_ver}
 DESCRIPTION="A relational database offering many ANSI SQL-99 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	 mirror://gentoo/${PN}-1.5-gcc4.patch.bz2
+	mirror://gentoo/${PN}-1.5-gcc4.patch.bz2
 		doc? (	http://firebird.sourceforge.net/pdfmanual/Firebird-1.5-QuickStart.pdf
 				ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
@@ -23,7 +23,6 @@ RDEPEND="xinetd? ( virtual/inetd )"
 DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )"
 
-
 S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
@@ -33,11 +32,11 @@ pkg_setup() {
 
 src_unpack() {
 	if use doc; then
-	    # Unpack docs
-	    mkdir ${WORKDIR}/manuals
-	    cd ${WORKDIR}/manuals
-	    unpack ib_b60_doc.zip
-	    cd ${WORKDIR}
+		# Unpack docs
+		mkdir ${WORKDIR}/manuals
+		cd ${WORKDIR}/manuals
+		unpack ib_b60_doc.zip
+		cd ${WORKDIR}
 	fi
 
 	unpack ${MY_P}.tar.bz2
@@ -46,6 +45,8 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-1.5-build.patch
 	epatch ${WORKDIR}/${PN}-1.5-gcc4.patch
+	# Bug #167051
+	epatch ${FILESDIR}/${P}-gcc412.patch
 
 	# This file must be regenerated during build
 	rm ${S}/src/dsql/parse.cpp
@@ -132,8 +133,8 @@ src_install() {
 
 	# Install docs
 	if use doc; then
-	    dodoc ${DISTDIR}/Firebird-1.5-QuickStart.pdf
-	    dodoc ${WORKDIR}/manuals/*
+		dodoc ${DISTDIR}/Firebird-1.5-QuickStart.pdf
+		dodoc ${WORKDIR}/manuals/*
 	fi
 }
 
