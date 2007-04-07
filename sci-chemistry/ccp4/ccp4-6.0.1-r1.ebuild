@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.4 2007/04/07 04:30:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.5 2007/04/07 08:31:50 vapier Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -255,16 +255,17 @@ src_install() {
 #		${S}/$(get_libdir)/cctbx/cctbx_build/setpaths*
 
 	# Bins
-	EXEDESTTREE="/usr/bin" doexe ${S}/bin/*
+	dobin ${S}/bin/* || die
 
 	# Libs
 	for file in ${S}/lib/*; do
 		if [[ -d ${file} ]]; then
 			continue
 		elif [[ -x ${file} ]]; then
-			dolib.so ${file}
+			dolib.so ${file} || die
 		else
-			INSDESTTREE="/usr/$(get_libdir)" doins ${file}
+			insinto /usr/$(get_libdir)
+			doins ${file} || die
 		fi
 	done
 
@@ -350,18 +351,23 @@ src_install() {
 #	dosym libxdl_view.so.2.0.0 /usr/$(get_libdir)/libxdl_view.so.2.0
 
 	# Environment files, setup scripts, etc.
-	INSDESTTREE="/usr/share/ccp4/include" doins ${S}/include/*
+	insinto /usr/share/ccp4/include
+	doins ${S}/include/*
 
 	# CCP4Interface - GUI
-	INSDESTTREE="/usr/$(get_libdir)/ccp4" doins -r ${S}/ccp4i
-	EXEDESTTREE="/usr/$(get_libdir)/ccp4/ccp4i/bin" doexe ${S}/ccp4i/bin/*
+	insinto /usr/$(get_libdir)/ccp4
+	doins -r ${S}/ccp4i || die
+	exeinto /usr/$(get_libdir)/ccp4/ccp4i/bin
+	doexe ${S}/ccp4i/bin/* || die
 
 	# Data
-	INSDESTTREE="/usr/share/ccp4" doins -r ${S}/lib/data
+	insinto /usr/share/ccp4
+	doins -r ${S}/lib/data || die
 
 	# Include files
+	insinto /usr/include
 	for i in ccp4 clipper mmdb ssm; do
-		INSDESTTREE="/usr/include" doins -r ${S}/include/${i}
+		doins -r ${S}/include/${i} || die
 	done
 
 	# Install docs and examples
