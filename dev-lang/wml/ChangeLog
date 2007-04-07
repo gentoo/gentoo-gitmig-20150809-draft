@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.30 2007/03/06 17:59:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.31 2007/04/07 10:16:38 graaff Exp $
+
+*wml-2.0.11-r1 (07 Apr 2007)
+
+  07 Apr 2007; Hans de Graaff <graaff@gentoo.org> +wml-2.0.11-r1.ebuild:
+  Add custom src_test as per discussion in #173623.
 
 *wml-2.0.11 (06 Mar 2007)
 
