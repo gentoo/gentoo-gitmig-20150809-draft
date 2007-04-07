@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mac-fdisk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.18 2007/02/13 21:15:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.19 2007/04/07 16:27:25 josejx Exp $
+
+  07 Apr 2007; Joseph Jezak <josejx@gentoo.org>
+  +files/mac-fdisk-amd64.patch, mac-fdisk-0.1-r6.ebuild:
+  Added patch for amd64.
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   mac-fdisk-0.1-r6.ebuild:
