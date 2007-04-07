@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/sun-jmx-1.2.1-r2.ebuild,v 1.6 2007/03/29 07:59:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/sun-jmx-1.2.1-r2.ebuild,v 1.7 2007/04/07 04:46:14 wltjr Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://java.sun.com/products/JavaManagement/index.jsp"
 SRC_URI="${MY_P}-scsl.zip"
 LICENSE="sun-csl"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc examples source"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
