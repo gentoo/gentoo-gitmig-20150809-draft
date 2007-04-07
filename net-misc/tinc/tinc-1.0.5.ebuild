@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.5.ebuild,v 1.1 2006/12/16 21:44:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.5.ebuild,v 1.2 2007/04/07 13:38:28 opfer Exp $
 
 DESCRIPTION="tinc is an easy to configure VPN implementation"
 HOMEPAGE="http://www.tinc-vpn.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tinc-vpn.org/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~sparc ~x86 ~ppc"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND=">=dev-libs/openssl-0.9.7c
