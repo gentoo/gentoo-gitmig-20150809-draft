@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/banner
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.24 2007/04/06 23:59:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.25 2007/04/07 02:48:28 josejx Exp $
+
+  07 Apr 2007; Joseph Jezak <josejx@gentoo.org> banner-1.3.2.ebuild:
+  Marked ppc stable for bug #173609.
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org> banner-1.3.2.ebuild:
   stable x86/amd64, bug 173609
