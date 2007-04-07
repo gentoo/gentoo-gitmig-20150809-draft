@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Diego Pettenò <flameeyes@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.10 2005/11/03 21:27:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.11 2007/04/07 08:52:46 vapier Exp $
 #
 # This eclass contains functions to install pamd configuration files and
 # pam modules.
@@ -18,9 +18,11 @@ dopamd() {
 		return 0;
 	fi
 
-	INSDESTTREE=/etc/pam.d \
-	INSOPTIONS="-m 0644" \
-	doins "$@" || die "failed to install $@"
+	( # dont want to pollute calling env
+		insinto /etc/pam.d
+		insopts -m 0644
+		doins "$@"
+	) || die "failed to install $@"
 	cleanpamd "$@"
 }
 
@@ -34,9 +36,11 @@ newpamd() {
 		return 0;
 	fi
 
-	INSDESTTREE=/etc/pam.d \
-	INSOPTIONS="-m 0644" \
-	newins "$1" "$2" || die "failed to install $1 as $2"
+	( # dont want to pollute calling env
+		insinto /etc/pam.d
+		insopts -m 0644
+		newins "$1" "$2"
+	) || die "failed to install $1 as $2"
 	cleanpamd $2
 }
 
@@ -47,12 +51,14 @@ dopamsecurity() {
 	[[ $# -lt 2 ]] && die "dopamsecurity requires at least two arguments"
 
 	if hasq pam ${IUSE} && ! use pam; then
-		return 0;
+		return 0
 	fi
 
-	INSDESTTREE=/etc/security/$1 \
-	INSOPTIONS="-m 0644" \
-	doins "${@:2}" || die "failed to install ${@:2}"
+	( # dont want to pollute calling env
+		insinto /etc/security/$1
+		insopts -m 0644
+		doins "${@:2}"
+	) || die "failed to install ${@:2}"
 }
 
 # newpamsecurity <section> <old name> <new name>
@@ -65,9 +71,11 @@ newpamsecurity() {
 		return 0;
 	fi
 
-	INSDESTTREE=/etc/security/$1 \
-	INSOPTIONS="-m 0644" \
-	newins "$2" "$3" || die "failed to install $2 as $3"
+	( # dont want to pollute calling env
+		insinto /etc/security/$1
+		insopts -m 0644
+		newins "$2" "$3"
+	) || die "failed to install $2 as $3"
 }
 
 # getpam_mod_dir
