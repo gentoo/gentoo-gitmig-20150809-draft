@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/djbfft
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.8 2007/02/04 18:26:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.9 2007/04/07 15:49:52 genstef Exp $
+
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> djbfft-0.76.ebuild:
+  Fix location for amd64 and remove USE=static, bug 173624 thanks to Georgi
+  Chulkov <g.chulkov@iu-bremen.de>, Thomas A. (gentoofan23)
+  <gentoofan23@gmail.com>, philantrop and jakub
 
   04 Feb 2007; Simon Stelling <blubb@gentoo.org> djbfft-0.76.ebuild:
   fix multilib-strict; bug 158373
