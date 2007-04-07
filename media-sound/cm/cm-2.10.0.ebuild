@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.6 2007/04/06 15:27:33 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.7 2007/04/07 09:50:20 hkbst Exp $
 
 inherit elisp-common
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 COMPILERS="dev-lisp/openmcl
-	dev-lisp/sbcl
+	>=dev-lisp/sbcl-1.0.1
 	dev-lisp/cmucl
 	dev-lisp/clisp"
 
