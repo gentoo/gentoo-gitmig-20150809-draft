@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213_rc6.ebuild,v 1.1 2007/04/05 17:37:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213_rc6.ebuild,v 1.2 2007/04/07 23:18:54 hollow Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -61,6 +61,7 @@ src_install() {
 	keepdir /var/lock/vservers
 	keepdir /var/cache/vservers
 	keepdir "${VDIRBASE}"
+	keepdir "${VDIRBASE}"/.pkg
 
 	# remove legacy config file
 	rm -f "${D}"/etc/vservers.conf
