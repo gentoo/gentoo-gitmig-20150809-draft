@@ -1,10 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.44 2007/04/06 00:58:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.45 2007/04/07 13:42:55 genstef Exp $
 
 *loudmouth-1.2.1 (06 Apr 2007)
 
-  06 Apr 2007; <stefan@gentoo.org> +loudmouth-1.2.1.ebuild:
+  06 Apr 2007; Stefan Schweizer <genstef@gentoo.org> +loudmouth-1.2.1.ebuild:
   Version bump thanks to desowin <desowin@gmail.com> in bug 172893
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
