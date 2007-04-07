@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.13 2007/03/20 13:25:35 armin76 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.14 2007/04/07 04:21:08 vapier Exp $
+
+  07 Apr 2007; Mike Frysinger <vapier@gentoo.org> cnet-2.0.9.ebuild,
+  cnet-2.0.10.ebuild:
+  Remove DOCDESTTREE hack and use proper "docinto".
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> cnet-2.0.10.ebuild:
   x86 stable
