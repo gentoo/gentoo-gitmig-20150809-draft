@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.15 2007/02/19 21:37:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.16 2007/04/07 12:18:20 genstef Exp $
 
 inherit eutils versionator autotools
 
@@ -16,13 +16,14 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="cups"
 
 RDEPEND="cups? ( >=net-print/cups-1.1.19 )
-	dev-lang/perl
-	|| (
-		app-text/enscript
-		net-print/cups
-		app-text/a2ps
-		app-text/mpage
+	!cups? (
+		|| (
+			app-text/enscript
+			app-text/a2ps
+			app-text/mpage
+		)
 	)
+	dev-lang/perl
 	virtual/ghostscript"
 DEPEND="${RDEPEND}"
 
