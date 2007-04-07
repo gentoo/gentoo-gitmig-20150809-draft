@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.7 2007/04/07 09:50:20 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.8 2007/04/07 10:17:26 hkbst Exp $
 
 inherit elisp-common
 
@@ -34,7 +34,7 @@ SITEFILE="71cm-gentoo.el"
 
 # for easy testing of any implementation
 #FORCEIMPL="guile"
-FORCEIMPL=""
+#FORCEIMPL="sbcl"
 
 CM="${S}/bin/cm.sh -R . -l \"\${FORCEIMPL}\""
 #echo "${CM}"
