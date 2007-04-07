@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/mips-sources
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.102 2006/09/05 17:16:09 kumba Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.103 2007/04/07 07:21:01 kumba Exp $
+
+*mips-sources-2.6.20.6 (10 Apr 2007)
+
+  10 Apr 2007; Joshua Kinard <kumba@gentoo.org>
+  +mips-sources-2.6.20.6.ebuild:
+  So after several versions of silence, mips-sources returns to life with the
+  introduction of an ebuild for 2.6.20.6. This release contains an enhancement
+  for IP22's scsi driver which may help boost speed. It also alters IP32's
+  build methology again -- CONFIG_BUILD_ELF64 is now dead and removed from
+  Kconfig, however the vmlinux.32 target will still be used, and a new
+  revision of the squashfs patch has been added. The only downside is IP28
+  support has been disabled until new patches for it are available. Forward
+  porting the existing patches is improbable due to changes from using
+  CPHYSADDR to a new __pa() macro. IP27 support is untested, but assumed to
+  work until determined otherwise (due to a lack of hardware).
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org>
   -mips-sources-2.6.15.7-r2.ebuild, mips-sources-2.6.16.27.ebuild,
