@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.67 2007/04/07 15:21:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.68 2007/04/07 15:53:26 jokey Exp $
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/devtodo-0.1.18-gentoo.diff, -files/devtodo-0.1.19-gentoo.diff,
+  -devtodo-0.1.18-r2.ebuild, -devtodo-0.1.19.ebuild,
+  -devtodo-0.1.19-r1.ebuild:
+  cvs delete comes in handy sometimes
 
 *devtodo-0.1.19-r2 (07 Apr 2007)
 
