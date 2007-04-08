@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.270 2007/04/08 13:42:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.271 2007/04/08 13:45:04 betelgeuse Exp $
+
+  08 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Mask dev-db/c-jdbc for removal to the junkyard.
 
   07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
   Unmask gfontview again, as bug 154671 is invalid
@@ -111,7 +114,7 @@
   bug 159176
 
   24 Mar 2007; Paul Varner <fuzzyray@gentoo.org> package.mask:
-  Update package.mask for app-portage/gentoolkit-dev to indicate testing 
+  Update package.mask for app-portage/gentoolkit-dev to indicate testing
   status.
 
   24 Mar 2007; Steev Klimaszewski <steev@gentoo.org> package.mask:
