@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-client
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.6 2007/03/27 22:32:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.7 2007/04/08 18:30:59 vanquirius Exp $
+
+  08 Apr 2007; Marcelo Goes <vanquirius@gentoo.org>
+  -nessus-client-1.0.1.ebuild, nessus-client-1.0.2.ebuild:
+  Remove old ebuild, reword documentation warning, mark 1.0.2 x86 stable.
 
   27 Mar 2007; Markus Ullmann <jokey@gentoo.org> nessus-client-1.0.2.ebuild:
   add doc dep wrt bug #168980

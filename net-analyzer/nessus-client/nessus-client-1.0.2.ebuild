@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.3 2007/03/28 05:45:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.4 2007/04/08 18:30:59 vanquirius Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc"
 
 DEPEND="!net-analyzer/nessus-core
@@ -39,7 +39,9 @@ src_install() {
 
 pkg_postinst() {
 	if ! use doc ; then
-		elog "To have docs available and the Client not complaining about not finding them you need"
-		elog "to set the doc useflag. Though it will add htmldoc as dependency then, a not that small package"
+		elog "If you do not have documentation installed, nessus-client"
+		elog "will complain. To install documentation, please emerge with"
+		elog "the doc useflag set. Beware that it will emerge app-text/htmldoc,"
+		elog "a big package."
 	fi
 }
