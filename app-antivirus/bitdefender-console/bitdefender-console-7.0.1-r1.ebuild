@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.7 2007/01/23 15:15:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.8 2007/04/08 22:55:16 ticho Exp $
 
 MY_P=BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i586.run
 S=${WORKDIR}/i386
 
 DESCRIPTION="BitDefender console antivirus"
 HOMEPAGE="http://www.bitdefender.com/"
-SRC_URI="ftp://ftp.bitdefender.com/pub/linux/free/bitdefender-console/en/${MY_P}"
+SRC_URI="http://download.bitdefender.com/unices/old/linux/free/bitdefender-console/en/${MY_P}"
 
 DEPEND="app-arch/tar
 	app-arch/gzip"

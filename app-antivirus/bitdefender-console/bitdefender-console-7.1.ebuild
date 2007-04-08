@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.1.ebuild,v 1.2 2007/01/23 15:15:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.1.ebuild,v 1.3 2007/04/08 22:55:16 ticho Exp $
 
 MY_P="BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i386.run"
 S="${WORKDIR}/i386"
@@ -65,20 +65,21 @@ src_install() {
 	insopts -m 644
 	doins bdc.ini *.so
 
-	dodir /opt/bdc/Plugins
-	insinto /opt/bdc/Plugins
-	doins Plugins/*
+	# Conditionally installing malware definitions to workaround file
+	# collision issue described in bug #158219, comment #5.
+	if [[ ! -f /opt/bdc/Plugins/update.txt ]] ; then
+		dodir /opt/bdc/Plugins
+		insinto /opt/bdc/Plugins
+		doins Plugins/*
+	fi
 
 	doman man/man?/*
 	dodoc doc/*
 }
 
-pkg_preinst() {
-	[[ -f /opt/bdc/Plugins/update.txt ]] && rm -f /opt/bdc/Plugins/*
-}
-
 pkg_postinst() {
 	elog You should update virus database by running bdc --update
+
 	[ -x /sbin/chpax ] && {
 		echo
 		ewarn "Disabling some PaX restrictions (\`/sbin/chpax -spm /opt/bdc/bdc\`, see bug #83695)"
