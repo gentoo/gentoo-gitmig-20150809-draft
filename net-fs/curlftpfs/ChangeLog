@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/curlftpfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.6 2007/02/11 08:20:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.7 2007/04/08 07:45:38 genstef Exp $
+
+*curlftpfs-0.9.1 (08 Apr 2007)
+
+  08 Apr 2007; Stefan Schweizer <genstef@gentoo.org> -curlftpfs-0.9.ebuild,
+  +curlftpfs-0.9.1.ebuild:
+  Version bump thanks to Krzysztof Kozlowski
+  <krzysztof.kozlowski@kozik.net.pl> in bug 173732
 
   11 Feb 2007; <genstef@gentoo.org> curlftpfs-0.9.ebuild:
   Fix to depend on a curl version that works more reliable thanks to Krzysztof
