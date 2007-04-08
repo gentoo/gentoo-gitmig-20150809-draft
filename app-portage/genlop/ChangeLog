@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.47 2007/03/07 19:56:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.48 2007/04/08 14:57:39 mcummings Exp $
+
+*genlop-0.30.6 (08 Apr 2007)
+
+  08 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  +genlop-0.30.6.ebuild:
+  Version bump of genlop, closes bug 119518, bug 120405, bug 137725, bug
+  93853, bug 136242, bug 157103, bug 162306
 
   07 Mar 2007; Michael Cummings <mcummings@gentoo.org> metadata.xml:
   Updating metadata
