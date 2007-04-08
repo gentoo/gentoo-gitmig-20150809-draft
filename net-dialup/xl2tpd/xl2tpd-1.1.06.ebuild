@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.1.06.ebuild,v 1.1 2006/12/08 21:12:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.1.06.ebuild,v 1.2 2007/04/08 18:07:46 vapier Exp $
 
 inherit eutils
 
@@ -49,11 +49,11 @@ pkg_postinst() {
 		ewarn "The daemon and service have been renamed from l2tpd to xl2tpd."
 		ewarn "Please remove the old init script and configure your system to use"
 		ewarn "the new init script:"
-		ewarn "   ${HILITE}/etc/init.d/l2tpd stop${NORMAL}"
-		ewarn "   ${HILITE}rc-update del l2tpd${NORMAL}"
-		ewarn "   ${HILITE}rm /etc/init.d/l2tpd${NORMAL}"
-		ewarn "   ${HILITE}rc-update add xl2tpd${NORMAL}"
-		ewarn "   ${HILITE}/etc/init.d/xl2tpd start${NORMAL}"
+		ewarn "   /etc/init.d/l2tpd stop"
+		ewarn "   rc-update del l2tpd"
+		ewarn "   rm /etc/init.d/l2tpd"
+		ewarn "   rc-update add xl2tpd"
+		ewarn "   /etc/init.d/xl2tpd start"
 		ebeep
 	fi
 }
