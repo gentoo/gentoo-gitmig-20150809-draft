@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.63 2007/04/08 12:57:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.64 2007/04/08 21:11:00 welp Exp $
+
+  08 Apr 2007; Peter Weller <welp@gentoo.org> metalog-0.8_rc4.ebuild:
+  Stable on amd64 wrt bug 173601
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> metalog-0.8_rc4.ebuild:
   Stable on ppc64; bug #173601
