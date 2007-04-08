@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7099 2007/04/08 15:52:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7100 2007/04/08 16:12:13 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -188,10 +188,6 @@ xfce-base/libxfce4menu
 # Sorting out media-video/{spca5xx,gspca{,v1}} bug 159176
 media-video/spca5xx
 media-video/gspca
-
-# Steev Klimaszewski <steev@gentoo.org> (24 Mar 2007)
-# Needed for Gnome
->=sys-auth/consolekit-0.2.0
 
 # Stefan Schweizer <genstef@gentoo.org> (24 Mar 2007)
 # as-needed broken, unmaintained, for removal, bug 147550
