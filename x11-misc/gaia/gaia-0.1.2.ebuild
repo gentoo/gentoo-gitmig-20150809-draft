@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.3 2007/01/29 02:50:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.4 2007/04/08 05:07:04 josejx Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 IUSE="gps doc"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
