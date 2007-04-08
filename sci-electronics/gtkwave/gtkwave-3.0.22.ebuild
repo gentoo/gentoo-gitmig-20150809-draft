@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.0.22.ebuild,v 1.1 2007/02/27 11:48:51 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.0.22.ebuild,v 1.2 2007/04/08 21:27:43 calchan Exp $
 
 DESCRIPTION="A wave viewer for LXT, LXT2, VZT, GHW and standard Verilog VCD/EVCD files"
 HOMEPAGE="http://home.nc.rr.com/gtkwave/"
@@ -99,7 +99,7 @@ src_install() {
 		doins "${WORKDIR}/${PN}.pdf" || die "Failed to install documentation."
 	fi
 	if use examples ; then
-		insinto /usr/share/${PF}
+		insinto /usr/share/doc/${PF}
 		doins -r examples || die "Failed to install examples."
 	fi
 }
