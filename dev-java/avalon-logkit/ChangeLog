@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.42 2007/04/08 12:16:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.43 2007/04/08 20:13:40 wltjr Exp $
+
+  08 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/2.0-build.xml, -avalon-logkit-2.0-r2.ebuild,
+  avalon-logkit-2.1.ebuild:
+  Stable on amd64, bug #172895. Removed older version in same slot.
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> avalon-logkit-2.1.ebuild:
   Stable on ppc64; bug #172895
