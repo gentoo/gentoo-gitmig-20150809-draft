@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.1 2007/02/08 20:50:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.2 2007/04/08 00:09:13 josejx Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://n.ethz.ch/student/loehrerl/amph/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
