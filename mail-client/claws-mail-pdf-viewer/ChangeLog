@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.4 2007/03/29 21:16:10 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.5 2007/04/08 01:02:20 josejx Exp $
+
+  08 Apr 2007; Joseph Jezak <josejx@gentoo.org>
+  claws-mail-pdf-viewer-0.2.ebuild:
+  Marked ~ppc for bug #172296.
 
   29 Mar 2007; Peter Weller <welp@gentoo.org>
   claws-mail-pdf-viewer-0.2.ebuild:
