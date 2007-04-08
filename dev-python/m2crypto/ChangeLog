@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.26 2007/03/30 22:15:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.27 2007/04/08 11:01:52 corsair Exp $
+
+  08 Apr 2007; Markus Rothe <corsair@gentoo.org> m2crypto-0.17-r1.ebuild:
+  Added ~ppc64; bug #172817
 
   30 Mar 2007; Jeroen Roovers <jer@gentoo.org> m2crypto-0.17-r1.ebuild:
   Marked ~hppa (bug #172817).
