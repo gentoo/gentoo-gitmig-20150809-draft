@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.8 2007/04/07 17:46:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.9 2007/04/08 08:34:00 opfer Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ia64 ppc ~ppc64 x86"
 IUSE="debug doc X hardware-carrier transmitter"
 
 S=${WORKDIR}/${P/_pre/pre}
