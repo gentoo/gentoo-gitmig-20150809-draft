@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/xclip-0.08-r1.ebuild,v 1.5 2007/03/02 20:55:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/xclip-0.08-r1.ebuild,v 1.6 2007/04/08 12:41:38 corsair Exp $
 
 DESCRIPTION="Command-line utility to read data from standard in and place it in an X selection for pasting into X applications."
 SRC_URI="http://people.debian.org/~kims/xclip/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://people.debian.org/~kims/xclip/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/${PN}"
