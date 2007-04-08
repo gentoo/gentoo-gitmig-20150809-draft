@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/yersinia-0.7.ebuild,v 1.2 2006/07/23 20:54:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/yersinia-0.7.ebuild,v 1.3 2007/04/08 13:13:28 jokey Exp $
 
 DESCRIPTION="A layer 2 attack framework"
 HOMEPAGE="http://www.yersinia.net/"
@@ -8,8 +8,8 @@ SRC_URI="http://www.yersinia.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="ncurses gtk"
+KEYWORDS="x86"
+IUSE="gtk ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.5 )
 	gtk? ( =x11-libs/gtk+-2* )
@@ -17,19 +17,15 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5.5 )
 	>=net-libs/libpcap-0.9.4"
 
 src_compile() {
-	local myconf
-
-	myconf="${myconf} $(use_with ncurses)"
-	myconf="${myconf} $(use_enable gtk)"
-	myconf="${myconf} --enable-admin"
-
-	econf ${myconf} || die "econf failed"
+	econf \
+		--enable-admin \
+		$(use_with ncurses) \
+		$(use_enable gtk) || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-
+	emake DESTDIR="${D}" install || die "emake install failed"
 	doman yersinia.8
 	dodoc AUTHORS ChangeLog FAQ NEWS README THANKS TODO
 }
