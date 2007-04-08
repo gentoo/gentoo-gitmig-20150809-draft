@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/conf-update
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.17 2006/11/13 18:42:28 ticho Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.18 2007/04/08 11:11:58 blubb Exp $
+
+  08 Apr 2007; Simon Stelling <blubb@gentoo.org> metadata.xml:
+  reassign to maintainer-needed
 
   13 Nov 2006; Andrej Kacian <ticho@gentoo.org> conf-update-1.0.ebuild:
   Stable on x86, bug #154802.
