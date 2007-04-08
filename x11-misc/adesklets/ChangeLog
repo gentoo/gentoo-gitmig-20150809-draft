@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.36 2007/03/24 19:36:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.37 2007/04/08 21:32:07 welp Exp $
+
+  08 Apr 2007; Peter Weller <welp@gentoo.org> adesklets-0.6.1-r1.ebuild:
+  Stable on amd64 wrt bug 167418
 
   24 Mar 2007; nixnut <nixnut@gentoo.org> adesklets-0.6.1-r1.ebuild:
   Stable on ppc wrt bug 167418
