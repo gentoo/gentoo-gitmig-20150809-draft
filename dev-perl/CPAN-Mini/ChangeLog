@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.15 2007/03/05 13:20:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.16 2007/04/08 21:46:30 mcummings Exp $
+
+  08 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  CPAN-Mini-0.552.ebuild:
+  Marking amd64 stable
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> CPAN-Mini-0.551.ebuild:
   Stable on x86, bug #169152.

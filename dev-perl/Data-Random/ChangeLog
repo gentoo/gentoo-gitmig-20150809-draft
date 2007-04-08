@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Random
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.2 2007/01/15 20:11:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.3 2007/04/08 21:49:19 mcummings Exp $
+
+  08 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Data-Random-0.05.ebuild:
+  Marking amd64 stable
 
 *Data-Random-0.05 (15 Jan 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-Tiny
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.55 2007/03/05 11:28:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.56 2007/04/08 21:44:20 mcummings Exp $
+
+  08 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Config-Tiny-2.10.ebuild:
+  Marking amd64 stable
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Config-Tiny-2.08.ebuild:
   Stable on x86, bug #169152.
