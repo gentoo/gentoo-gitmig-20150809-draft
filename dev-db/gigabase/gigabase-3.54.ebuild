@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.54.ebuild,v 1.2 2007/02/27 15:22:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.54.ebuild,v 1.3 2007/04/08 09:01:52 opfer Exp $
 
 inherit eutils multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
 SRC_URI="mirror://sourceforge/gigabase/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~s390 x86"
+KEYWORDS="amd64 ~s390 x86"
 IUSE="doc"
 DEPEND=""
 
