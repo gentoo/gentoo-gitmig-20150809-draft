@@ -17,5 +17,6 @@
 +	$(CXX) -c -fPIC $(CXXFLAGS) $< -o $@
 +
  $(LIBNAME): $(OBJS)
- 	$(CXX) $(CXXFLAGS) -shared $(OBJS) $(LIBS) -Wl,-soname="$(SONAME)" -o $@
+-	$(CXX) $(CXXFLAGS) -shared $(OBJS) $(LIBS) -Wl,-soname="$(SONAME)" -o $@
++	$(CXX) $(LDFLAGS) -shared $(OBJS) $(LIBS) -Wl,-soname="$(SONAME)" -o $@
  

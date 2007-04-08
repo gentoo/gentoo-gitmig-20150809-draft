@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/glcdprocdriver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.5 2007/04/07 19:48:27 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.6 2007/04/08 12:50:26 tove Exp $
+
+  08 Apr 2007; Torsten Veller <tove@gentoo.org>
+  files/glcdprocdriver-0.0.3-makefile.patch,
+  -glcdprocdriver-0.0.3-r1.ebuild, glcdprocdriver-0.0.3-r2.ebuild:
+  Stable on x86. Removed old version.
 
 *glcdprocdriver-0.0.3-r2 (07 Apr 2007)
 
