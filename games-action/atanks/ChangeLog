@@ -1,6 +1,12 @@
 # ChangeLog for games-action/atanks
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.22 2007/03/10 08:46:10 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.23 2007/04/08 04:22:09 mr_bones_ Exp $
+
+*atanks-2.3 (08 Apr 2007)
+
+  08 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org> -atanks-2.2.ebuild,
+  +atanks-2.3.ebuild:
+  version bump; clean out older ebuild
 
 *atanks-2.2 (10 Mar 2007)
 
