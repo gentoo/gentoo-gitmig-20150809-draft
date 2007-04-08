@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.4 2007/04/01 00:59:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.5 2007/04/08 03:56:40 dirtyepic Exp $
 
-inherit eutils libtool autotools
+inherit eutils libtool autotools wxwidgets
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
@@ -14,7 +14,7 @@ IUSE="doc static"
 
 DEPEND=">=dev-util/subversion-1.3.2-r1
 	>=net-misc/neon-0.26
-	>=x11-libs/wxGTK-2.6.2
+	=x11-libs/wxGTK-2.6*
 	<dev-libs/apr-0.9.13
 	doc? ( dev-libs/libxslt
 	    app-text/docbook-sgml-utils
@@ -61,12 +61,10 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-static --enable-shared"
 	fi
-	# look for wx-config-2.6
-	if (test -x /usr/bin/wx-config-2.6 && `/usr/bin/wx-config-2.6 --toolkit=gtk2 2>/dev/null` ); then
-		myconf="${myconf} --with-wx-config=/usr/bin/wx-config-2.6"
-	else
-		ewarn "wx-config-2.6 not found. Compiling with default wxGTK."
-	fi
+
+	export WX_GTK_VER="2.6"
+	need-wxwidgets gtk2
+	myconf="${myconf} --with-wx-config=${WX_CONFIG}"
 
 	econf	--with-svn-lib=/usr/$(get_libdir) \
 		--with-svn-include=/usr/include \
