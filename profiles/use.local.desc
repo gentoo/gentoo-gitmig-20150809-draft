@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2732 2007/04/08 20:48:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2733 2007/04/08 20:49:11 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1661,7 +1661,6 @@ sys-apps/coreutils:xattr - if you want extended attributes enabled
 sys-apps/hal:dell - Adds support for Dell laptop smbios via libsmbios
 sys-apps/hal:disk-partition - Add support for partition editing via libparted
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
-sys-apps/hal:mactel - Add support for Mac Book Pro utils
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/lm_sensors:sensord - Enable sensord
