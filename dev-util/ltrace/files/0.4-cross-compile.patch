@@ -18,9 +18,10 @@ diff -Naur ltrace-0.4.old/configure.ac ltrace-0.4/configure.ac
 diff -Naur ltrace-0.4.old/sysdeps/linux-gnu/Makefile.in ltrace-0.4/sysdeps/linux-gnu/Makefile.in
 --- ltrace-0.4.old/sysdeps/linux-gnu/Makefile.in	1970-01-01 02:00:00.000000000 +0200
 +++ ltrace-0.4/sysdeps/linux-gnu/Makefile.in	2007-03-08 01:26:25.000000000 +0200
-@@ -0,0 +1,46 @@
+@@ -0,0 +1,47 @@
 +ARCH		:=	$(shell echo @host_cpu@ | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
-+			-e s/arm.*/arm/ -e s/sa110/arm/ -e s/ppc64/ppc/ -e s/s390x/s390/)
++			-e s/arm.*/arm/ -e s/sa110/arm/ -e s/ppc64/ppc/ -e s/s390x/s390/ \
++			-e s/powerpc/ppc/ )
 +
 +CPPFLAGS	+=	-I$(TOPDIR)/sysdeps/linux-gnu/$(ARCH)
 +

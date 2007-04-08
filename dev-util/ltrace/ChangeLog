@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.35 2007/03/13 18:36:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.36 2007/04/08 01:14:58 josejx Exp $
+
+  08 Apr 2007; Joseph Jezak <josejx@gentoo.org>
+  files/0.4-cross-compile.patch:
+  Fix cross-compile patch to allow powerpc as a host_cpu fixes bug #170496.
 
   13 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> ltrace-0.3.36.ebuild,
   ltrace-0.4.ebuild, ltrace-0.4-r1.ebuild:
