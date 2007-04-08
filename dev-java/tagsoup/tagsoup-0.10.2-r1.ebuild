@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2-r1.ebuild,v 1.9 2007/04/06 18:40:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2-r1.ebuild,v 1.10 2007/04/08 12:32:49 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://mercury.ccil.org/~cowan/XML/tagsoup/"
 SRC_URI="http://mercury.ccil.org/~cowan/XML/tagsoup/${P}-src.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc source"
 
 # Needs the xslt task so full ant here
