@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i855crt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.6 2006/09/20 14:56:14 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.7 2007/04/08 11:43:31 blubb Exp $
+
+  08 Apr 2007; Simon Stelling <blubb@gentoo.org> metadata.xml:
+  reassign to maintainer-needed
 
 *i855crt-0.4-r1 (20 Sep 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/denu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.8 2007/02/09 06:18:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.9 2007/04/08 11:41:48 blubb Exp $
+
+  08 Apr 2007; Simon Stelling <blubb@gentoo.org> metadata.xml:
+  reassign to maintainer-needed
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
