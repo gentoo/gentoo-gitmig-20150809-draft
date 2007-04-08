@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.289 2007/04/08 13:08:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.290 2007/04/08 15:16:26 josejx Exp $
+
+  08 Apr 2007; Joseph Jezak <josejx@gentoo.org>
+  -vanilla-sources-2.6.17.6.ebuild, -vanilla-sources-2.6.17.7.ebuild,
+  -vanilla-sources-2.6.17.8.ebuild, -vanilla-sources-2.6.17.9.ebuild,
+  -vanilla-sources-2.6.17.10.ebuild, -vanilla-sources-2.6.17.11.ebuild,
+  -vanilla-sources-2.6.17.12.ebuild, -vanilla-sources-2.6.17.13.ebuild:
+  Removed old 2.6.17 kernels.
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org>
   vanilla-sources-2.6.20.6.ebuild:
