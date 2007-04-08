@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.6 2005/07/10 20:34:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.7 2007/04/08 18:11:28 vapier Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -153,13 +153,8 @@ src_compile() {
 	einfo "i will use it instead of the default."
 	ewarn
 
-	einfon "continuing in..."
-	for ((i=10;i>0;i--))
-	do
-		echo -en "${BAD}${i} " # removed \a, might annoy some users.
-		epause 1
-	done
-	echo ${NORMAL}
+	einfon "continuing in 10 seconds ..."
+	epause 10
 
 	# get kernel configured
 	cp ${custom_milo_kernel_config:-${S}/Documentation/config/linux-2.2.19-SuSE.config} \
