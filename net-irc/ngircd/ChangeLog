@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.23 2007/03/19 10:44:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.24 2007/04/08 11:52:28 armin76 Exp $
+
+  08 Apr 2007; Raúl Porcel <armin76@gentoo.org> ngircd-0.10.1.ebuild:
+  Restrict tests, as they don't work
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> ngircd-0.10.1.ebuild:
   x86 stable wrt bug 171419
