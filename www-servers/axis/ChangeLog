@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/axis
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.8 2006/11/30 16:07:34 caster Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.9 2007/04/08 13:27:04 betelgeuse Exp $
+
+*axis-1.2_rc2-r1 (08 Apr 2007)
+
+  08 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +axis-1.2_rc2-r1.ebuild:
+  Migrate to generation 2 and use from source versions of sun-jaf and
+  sun-javamail.
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org> axis-1.2_rc2.ebuild:
   Update xerces dep for upcoming 2.6 slotmove.
