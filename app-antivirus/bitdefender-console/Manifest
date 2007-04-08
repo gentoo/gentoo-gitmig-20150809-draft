@@ -7,25 +7,18 @@ EBUILD bitdefender-console-7.0.1-r1.ebuild 1967 RMD160 13b02e163c7dc21473776ce4c
 MD5 7c82a8e69f3a94bee12c1aad9d0d6d1f bitdefender-console-7.0.1-r1.ebuild 1967
 RMD160 13b02e163c7dc21473776ce4c32d516567c198ed bitdefender-console-7.0.1-r1.ebuild 1967
 SHA256 5a32c1f9eeef5fde64c6ae3adec6a2bedcb55b3f4cc4abd7d676ee80002861c6 bitdefender-console-7.0.1-r1.ebuild 1967
-EBUILD bitdefender-console-7.0.1.ebuild 1689 RMD160 7f1f308ffdc04dcba669f3830a08967eee099704 SHA1 0de44f36a22381b60c8f04b21d9c86fbbfe6c80d SHA256 abfb22b2c2571ed777679432e110ff165ec457bf8b4cbcddd5e6d5baf08da5a5
-MD5 3103a6b7e814bbc149a6f8453bab4e28 bitdefender-console-7.0.1.ebuild 1689
-RMD160 7f1f308ffdc04dcba669f3830a08967eee099704 bitdefender-console-7.0.1.ebuild 1689
-SHA256 abfb22b2c2571ed777679432e110ff165ec457bf8b4cbcddd5e6d5baf08da5a5 bitdefender-console-7.0.1.ebuild 1689
 EBUILD bitdefender-console-7.1.ebuild 2278 RMD160 a94168cd3f047a00adf2b28d35e2d0e94e3c4ed0 SHA1 002f0c90858e74db37983ce7be3ef33217af00c0 SHA256 9254ba58e4051bace0392a838e275c013032facf81e8878b40864b5c2f261862
 MD5 7a05d9d34822b9026e210ad5035c32a9 bitdefender-console-7.1.ebuild 2278
 RMD160 a94168cd3f047a00adf2b28d35e2d0e94e3c4ed0 bitdefender-console-7.1.ebuild 2278
 SHA256 9254ba58e4051bace0392a838e275c013032facf81e8878b40864b5c2f261862 bitdefender-console-7.1.ebuild 2278
-MISC ChangeLog 2661 RMD160 58479849db778d56b9c015ea9d57ac7a7c7c8634 SHA1 ed4e581f06d250575ffe45d743ef85822135e725 SHA256 80821f3a7365f5abf4e9ea5b38301f52b31e8d7c0f6daa5cbf3b03ff85efe4eb
-MD5 e4842a890cada4b87c203d76fcec2d51 ChangeLog 2661
-RMD160 58479849db778d56b9c015ea9d57ac7a7c7c8634 ChangeLog 2661
-SHA256 80821f3a7365f5abf4e9ea5b38301f52b31e8d7c0f6daa5cbf3b03ff85efe4eb ChangeLog 2661
+MISC ChangeLog 2770 RMD160 102942f7b1f20d023e39174e204b8643904fb924 SHA1 11bf321a812d98fbec77af3fae517e51606451f3 SHA256 924a27b1c7b11a30afb389471406a48c8008fe97d725a1dab30a7f554d298fe2
+MD5 33c744d5f7fb81be2b2ce450f11cdb19 ChangeLog 2770
+RMD160 102942f7b1f20d023e39174e204b8643904fb924 ChangeLog 2770
+SHA256 924a27b1c7b11a30afb389471406a48c8008fe97d725a1dab30a7f554d298fe2 ChangeLog 2770
 MISC metadata.xml 376 RMD160 063d66096bd572de8d1806641024caf616842aca SHA1 a15457eabd47bcf1d9577cb0ab0e9160dbfa0e0c SHA256 087d5501fd34e6c27ce3830ce3efa420cdfd46cdc53b7f5970ec8daa7d6153b7
 MD5 b799e6d40bbe29a415e5c3f80faca25a metadata.xml 376
 RMD160 063d66096bd572de8d1806641024caf616842aca metadata.xml 376
 SHA256 087d5501fd34e6c27ce3830ce3efa420cdfd46cdc53b7f5970ec8daa7d6153b7 metadata.xml 376
-MD5 02fd8d1356b4ffedd2d5a1e1bc38f2d1 files/digest-bitdefender-console-7.0.1 358
-RMD160 141d74f41192f278698aebc99fd98ab62ef4b711 files/digest-bitdefender-console-7.0.1 358
-SHA256 b5ff2505bda598c476edbcbd91b431913bfb3de3785032a3d7395dfe6ba37656 files/digest-bitdefender-console-7.0.1 358
 MD5 02fd8d1356b4ffedd2d5a1e1bc38f2d1 files/digest-bitdefender-console-7.0.1-r1 358
 RMD160 141d74f41192f278698aebc99fd98ab62ef4b711 files/digest-bitdefender-console-7.0.1-r1 358
 SHA256 b5ff2505bda598c476edbcbd91b431913bfb3de3785032a3d7395dfe6ba37656 files/digest-bitdefender-console-7.0.1-r1 358
@@ -33,9 +26,9 @@ MD5 438a1bd403359219494ecdc69227e6e5 files/digest-bitdefender-console-7.1 352
 RMD160 38a9049bf9c10ae8a554fa1e8d9bf97cb2b4d93a files/digest-bitdefender-console-7.1 352
 SHA256 753cbcde0a4132b40022662d95475c82ff1431395cad0f2706a37eb4508df6dd files/digest-bitdefender-console-7.1 352
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFFtikm6J2i8a8J4okRAqKBAKDX0Hn/FBzZjCGGKUfeBQt4eVQhqgCferx8
-joomq9xs77i7VIJIYZfIYOs=
-=d0av
+iD8DBQFGGVdjQlM6RnzZP+IRAm76AKCJbODAHRr+LQYFNRXs/8dZtqm+mACfbUO1
+YQ1cZdJU4poIoJiZ3j1iVwY=
+=xDf3
 -----END PGP SIGNATURE-----
