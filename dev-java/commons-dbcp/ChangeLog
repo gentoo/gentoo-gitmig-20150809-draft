@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.32 2007/04/06 22:13:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.33 2007/04/08 12:23:36 corsair Exp $
+
+  08 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  commons-dbcp-1.2.1-r1.ebuild:
+  Stable on ppc64; bug #173145
 
   06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-dbcp-1.2.1-r1.ebuild:
