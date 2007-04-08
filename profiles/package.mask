@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7100 2007/04/08 16:12:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7101 2007/04/08 16:59:15 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -929,10 +929,10 @@ dev-java/bluej-bin
 
 # Piotr Jaroszyński <peper@gentoo.org> (23 Oct 2006)
 # Masking alpha version of mozilla-thunderbird-2.0 and enigmail for it.
-# Raúl Porcel <armin76@gentoo.org> (11 Mar 2007)
+# Raúl Porcel <armin76@gentoo.org> (8 Apr 2007)
 # Update mask
-=x11-plugins/enigmail-0.94.3-r1
->=mail-client/mozilla-thunderbird-2.0_beta2
+=x11-plugins/enigmail-0.94.3-r2
+>=mail-client/mozilla-thunderbird-2.0.0.0_rc1
 
 # Fabian Groffen <grobian@gentoo.org> (23 Oct 2006)
 # MonetDB doesn't compile any more.  Waiting for next release (soon) 
