@@ -1,20 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/genlop-0.30.6.ebuild,v 1.1 2007/04/08 14:57:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/genlop-0.30.6.ebuild,v 1.2 2007/04/08 15:00:49 mcummings Exp $
 
 inherit bash-completion
 
 DESCRIPTION="A nice emerge.log parser"
-HOMEPAGE="http://pollycoke.org/genlop.html"
-SRC_URI="http://gelo.dolcetta.net/software/${P}.tar.gz"
+HOMEPAGE="http://www.gentoo.org/proj/en/perl"
+SRC_URI="mirror://gentoo//${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0-r12
-	 >=dev-perl/DateManip-5.40"
+	 >=dev-perl/DateManip-5.40
+	 dev-perl/libwww-perl"
 RDEPEND="${DEPEND}"
 
 src_install() {

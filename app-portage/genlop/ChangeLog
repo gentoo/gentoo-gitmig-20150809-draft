@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.48 2007/04/08 14:57:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.49 2007/04/08 15:00:49 mcummings Exp $
+
+  08 Apr 2007; Michael Cummings <mcummings@gentoo.org> genlop-0.30.6.ebuild:
+  Cleaned up ebuild for 0.30.6, ooops :)
 
 *genlop-0.30.6 (08 Apr 2007)
 
