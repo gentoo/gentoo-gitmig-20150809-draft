@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.45 2007/03/29 18:30:29 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.46 2007/04/08 00:50:38 josejx Exp $
+
+  08 Apr 2007; Joseph Jezak <josejx@gentoo.org> azureus-2.5.0.4.ebuild,
+  azureus-2.5.0.4-r1.ebuild:
+  Marked ~ppc for bug #170955.
 
   29 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   +files/azureus-bcprov-1.35.patch,

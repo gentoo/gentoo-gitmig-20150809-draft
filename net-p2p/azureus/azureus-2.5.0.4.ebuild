@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4.ebuild,v 1.3 2007/03/15 17:18:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4.ebuild,v 1.4 2007/04/08 00:50:38 josejx Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://azureus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/azureus/azureus_${PV}_source.zip"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 IUSE="source"
 

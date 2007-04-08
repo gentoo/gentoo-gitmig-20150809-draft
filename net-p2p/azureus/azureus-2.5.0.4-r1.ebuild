@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.2 2007/03/29 18:30:29 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.3 2007/04/08 00:50:38 josejx Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://azureus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/azureus/azureus_${PV}_source.zip"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 IUSE="source"
 
@@ -41,7 +41,7 @@ src_unpack() {
 	# patches from 2.5.0.0 still work here
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
 		epatch ${FILESDIR}/fedora-${PV}/
-	
+
 	epatch ${FILESDIR}/azureus-bcprov-1.35.patch
 
 	#removing osx files and entries
