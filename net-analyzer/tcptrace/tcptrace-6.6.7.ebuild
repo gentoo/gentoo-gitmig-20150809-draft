@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7.ebuild,v 1.5 2007/03/20 20:03:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7.ebuild,v 1.6 2007/04/08 17:53:30 vanquirius Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ src_install() {
 	dobin tcptrace xpl2gpl
 
 	newman tcptrace.man tcptrace.1
-	dodoc CHANGES COPYING COPYRIGHT FAQ INSTALL README* THANKS WWW
+	dodoc CHANGES COPYRIGHT FAQ README* THANKS WWW
 }
 
 pkg_postinst() {
