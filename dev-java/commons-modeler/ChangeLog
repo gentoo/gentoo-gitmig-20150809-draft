@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-modeler
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.26 2007/04/08 12:28:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.27 2007/04/08 19:57:55 wltjr Exp $
+
+  08 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org> -files/gentoo.diff,
+  -commons-modeler-1.1.ebuild:
+  Removed gen 1 version, and orphaned patch/diff.
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org>
   commons-modeler-1.1-r1.ebuild, commons-modeler-2.0.ebuild:
