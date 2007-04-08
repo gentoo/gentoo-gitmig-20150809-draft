@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.44.ebuild,v 1.4 2007/04/07 16:55:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.44.ebuild,v 1.5 2007/04/08 10:36:26 corsair Exp $
 
 inherit autotools base eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pstoedit.net/pstoedit"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
 
 # Add flash when media-libs/ming-0.3 gets out of package.mask
 IUSE="emf imagemagick plotutils"
