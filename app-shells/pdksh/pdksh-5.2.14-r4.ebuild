@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.25 2005/12/04 19:32:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.26 2007/04/08 13:27:59 jokey Exp $
 
 inherit eutils
 
@@ -11,28 +11,27 @@ SRC_URI="ftp://ftp.cs.mun.ca/pub/pdksh/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
 	sys-apps/coreutils
 	!app-shells/ksh"
 
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
-	epatch ${DISTDIR}/${P}-patches.1
-	epatch ${FILESDIR}/${P}-coreutils-posix-fix.patch
+	cd "${S}"
+	epatch "${DISTDIR}"/${P}-patches.1
+	epatch "${FILESDIR}"/${P}-coreutils-posix-fix.patch
 }
 
 src_compile() {
 	echo 'ksh_cv_dev_fd=${ksh_cv_dev_fd=yes}' > config.cache
 
-	./configure \
-		--prefix=/usr \
-		|| die
-
-	emake || die
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
