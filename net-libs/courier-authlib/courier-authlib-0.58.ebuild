@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.13 2007/01/17 11:15:22 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.14 2007/04/08 14:10:55 chtekk Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -157,8 +157,7 @@ src_install() {
 		dodir /etc/openldap/schema
 		cp authldap.schema "${D}/etc/openldap/schema/"
 	fi
-	# Note: different init.d file to -r1
-	doinitd "${FILESDIR}/courier-authlib" || die "init.d failed"
+	doinitd "${FILESDIR}/${PN}" || die "doinitd failed"
 }
 
 pkg_postinst() {

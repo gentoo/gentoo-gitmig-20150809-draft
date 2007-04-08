@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.63 2007/03/30 16:52:03 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.64 2007/04/08 14:10:55 chtekk Exp $
+
+*courier-authlib-0.59.2 (08 Apr 2007)
+
+  08 Apr 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/0.59.1-configure-db4.patch,
+  -files/0.59.1-remove-obsolete-macro.patch,
+  +files/0.59.2-configure-db4.patch,
+  +files/0.59.2-remove-obsolete-macro.patch, files/courier-authlib,
+  -files/initd/courier-authlib, metadata.xml, courier-authlib-0.58.ebuild,
+  -courier-authlib-0.58-r1.ebuild, -courier-authlib-0.59.1.ebuild,
+  +courier-authlib-0.59.2.ebuild:
+  Ebuild cleanup, version bump to 0.59.2.
 
   30 Mar 2007; Timothy Redaelli <drizzt@gentoo.org>
   courier-authlib-0.59.1.ebuild:
