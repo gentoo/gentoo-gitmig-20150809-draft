@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.1.0.ebuild,v 1.1 2006/10/18 19:57:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.1.0.ebuild,v 1.2 2007/04/08 10:59:57 genstef Exp $
 
 IUSE="doc gsm gtk h323 ilbc postgres zaptel"
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_with gtk libgtk2 /usr) \
+		$(use_with gtk libgtk2) \
 		$(use_with h323 openh323 /usr) \
 		$(use_with h323 pwlib /usr) \
 		$(use_with zaptel libpri) \
