@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.3-r1.ebuild,v 1.3 2007/03/12 10:48:34 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.3-r2.ebuild,v 1.1 2007/04/08 16:57:35 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -10,9 +10,9 @@ LANGS="de el es-AR es-ES nb-NO pt-BR sv-SE zh-CN"
 SHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP ko-KR nb-NO nl-NL pl-PL pt-PT ru-RU sk-SK sl-SI sv-SE"
 
 EMVER=${PV}
-TBVER="2.0b2"
+TBVER="2.0.0.0rc1"
 MY_TBVER="2.0_beta2"
-TBPVER="0.4"
+TBPVER="0.5"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://enigmail.mozdev.org"
@@ -38,7 +38,7 @@ for X in ${SHORTLANGS} ; do
 done
 #( mirror://gentoo/${PN}-${X}-0.9x.xpi )"
 
-DEPEND=">=mail-client/mozilla-thunderbird-${MY_TBVER}"
+DEPEND="=mail-client/mozilla-thunderbird-2*"
 RDEPEND="${DEPEND}
 	>=app-crypt/gnupg-1.4.5
 	>=www-client/mozilla-launcher-1.37"
@@ -180,8 +180,8 @@ src_install() {
 	cd ${D}${MOZILLA_FIVE_HOME}/extensions/${emid}
 	unzip ${S}/dist/bin/*.xpi
 
-	# Fix module to work with 2.0_beta2
-	sed -i -e "s/2\.0a1/2.0b2/" ${D}${MOZILLA_FIVE_HOME}/extensions/${emid}/install.rdf
+	# Fix module to work with 2.0.0.*
+	sed -i -e "s/2\.0a1/2.0.0.*/" ${D}${MOZILLA_FIVE_HOME}/extensions/${emid}/install.rdf
 
 	# these files will be picked up by mozilla-launcher -register
 	dodir ${MOZILLA_FIVE_HOME}/{chrome,extensions}.d
