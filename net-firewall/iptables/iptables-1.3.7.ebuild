@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.7.ebuild,v 1.6 2007/04/04 12:55:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.7.ebuild,v 1.7 2007/04/08 17:51:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -57,6 +57,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-more-exact-check-grep.patch #159162
 	epatch "${FILESDIR}"/${P}-sparc64.patch #166201
+	epatch "${FILESDIR}"/${P}-kernel-dir.patch #172209
 
 	EPATCH_OPTS="-p0" \
 	epatch "${FILESDIR}"/1.3.1-files/install_ipv6_apps.patch
@@ -110,7 +111,7 @@ src_defs() {
 	use static && myconf="${myconf} NO_SHARED_LIBS=0"
 	export myconf
 	if ! use l7filter && ! use imq && ! use extensions ; then
-		export KERNEL_DIR="/usr"
+		export KERNEL_DIR=""
 		diemsg="failure"
 	else
 		diemsg="failure - with l7filter or imq patch added"

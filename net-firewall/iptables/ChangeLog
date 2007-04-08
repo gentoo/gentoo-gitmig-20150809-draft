@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.130 2007/04/04 12:55:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.131 2007/04/08 17:51:44 vapier Exp $
+
+  08 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/iptables-1.3.7-kernel-dir.patch, iptables-1.3.7.ebuild:
+  By default, let the toolchain worry about kernel header location #172209 by
+  Karl Hiramoto.
 
   04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> iptables-1.3.7.ebuild:
   Stable on sparc
