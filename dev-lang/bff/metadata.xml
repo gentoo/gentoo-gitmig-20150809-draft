@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>blubb@gentoo.org</email>
-<name>Simon Stelling</name>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 bff is a slightly optimized interpreter for brainfuck, a turing-complete
