@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-0.99-r1.ebuild,v 1.1 2007/03/11 23:40:36 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-0.99-r1.ebuild,v 1.2 2007/04/08 21:58:50 chainsaw Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xmms-projectm/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="media-libs/ftgl
 	media-libs/freetype
