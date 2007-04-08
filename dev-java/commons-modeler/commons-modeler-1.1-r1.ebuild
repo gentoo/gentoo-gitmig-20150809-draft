@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r1.ebuild,v 1.3 2007/04/06 23:50:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r1.ebuild,v 1.4 2007/04/08 12:28:47 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	source? ( app-arch/zip )"
 
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc64 ~x86"
 
 S="${WORKDIR}/${P}-src"
 
