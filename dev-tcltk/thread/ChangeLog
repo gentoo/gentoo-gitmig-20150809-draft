@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/thread
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.10 2007/04/07 19:32:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.11 2007/04/08 13:03:08 corsair Exp $
+
+  08 Apr 2007; Markus Rothe <corsair@gentoo.org> thread-2.6.2.ebuild:
+  Stable on ppc64; bug #173645
 
   07 Apr 2007; nixnut <nixnut@gentoo.org> thread-2.6.2.ebuild:
   Stable on ppc wrt bug 173645
