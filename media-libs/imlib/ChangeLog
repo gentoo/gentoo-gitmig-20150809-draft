@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.49 2007/04/08 13:00:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.50 2007/04/08 21:03:08 welp Exp $
+
+  08 Apr 2007; Peter Weller <welp@gentoo.org> imlib-1.9.15-r1.ebuild:
+  Stable on amd64 wrt bug 173638
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> imlib-1.9.15-r1.ebuild:
   Stable on ppc64; bug #173638
