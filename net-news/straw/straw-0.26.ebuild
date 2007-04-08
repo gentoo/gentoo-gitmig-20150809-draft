@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.26.ebuild,v 1.1 2007/02/26 16:40:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.26.ebuild,v 1.2 2007/04/08 15:10:44 dev-zero Exp $
 
 inherit gnome2 python distutils virtualx
 
@@ -38,6 +38,13 @@ pkg_setup() {
 		eerror "And then try emerging straw again."
 		die "missing gtkhtml2 python module"
 	fi
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	sed -i \
+		-e 's/bsddb.db/bsddb3.db/' \
+		"${S}/setup.py" || die "sed failed"
 }
 
 # This about of virtualmake in src_compile and src_install are 

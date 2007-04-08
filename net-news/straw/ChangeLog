@@ -1,6 +1,10 @@
 # ChangeLog for net-news/straw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.8 2007/03/05 16:22:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.9 2007/04/08 15:10:44 dev-zero Exp $
+
+  08 Apr 2007; Tiziano Müller <dev-zero@gentoo.org> straw-0.26.ebuild:
+  Fixed bug #173761 (thanks to Anton Kuzmin) by adding a sed-line to replace
+  bsddb with bsddb3 in setup.py
 
   05 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/straw-0.25.1-setup-fix.patch, straw-0.25.1-r1.ebuild:
