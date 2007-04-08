@@ -97,3 +97,8 @@ alsa_cards_sb16_csp
 alsa_cards_sgalaxy
 alsa_cards_sscape
 alsa_cards_wavefront
+
+
+# George Shapovalov <george@gentoo.org> (8 Apr 2007)
+# supported on ppc
+-ada

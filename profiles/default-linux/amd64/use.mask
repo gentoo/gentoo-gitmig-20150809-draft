@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.54 2007/04/07 01:25:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.55 2007/04/08 08:37:00 george Exp $
 
 # SECTION: Unmask
 
@@ -39,6 +39,10 @@
 -oracle7
 -firebird
 -db2
+
+# George Shapovalov <george@gentoo.org> (8 Apr 2007)
+# supported on amd64
+-ada
 
 # SECTION: Unavailable/Broken
 
