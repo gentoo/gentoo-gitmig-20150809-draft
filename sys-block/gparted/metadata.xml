@@ -3,8 +3,7 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<maintainer>
-		<email>blubb@gentoo.org</email>
-		<name>Simon Stelling</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		GParted is the Gnome Partition Editor. It can create, grow, shrink, move and

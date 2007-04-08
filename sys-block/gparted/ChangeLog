@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.38 2007/04/06 20:56:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.39 2007/04/08 11:13:58 blubb Exp $
+
+  08 Apr 2007; Simon Stelling <blubb@gentoo.org> metadata.xml:
+  reassign to maintainer-needed
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gparted-0.3.3.ebuild:
