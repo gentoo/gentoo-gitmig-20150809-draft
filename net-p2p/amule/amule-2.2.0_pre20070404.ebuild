@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20070404.ebuild,v 1.2 2007/04/04 20:14:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20070404.ebuild,v 1.3 2007/04/08 11:35:13 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.hirnriss.net/files/cvs/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="amuled debug gtk nls remote stats"
+IUSE="amuled debug gtk nls remote stats unicode"
 
 DEPEND=">=x11-libs/wxGTK-2.6.0
 		>=sys-libs/zlib-1.2.1
