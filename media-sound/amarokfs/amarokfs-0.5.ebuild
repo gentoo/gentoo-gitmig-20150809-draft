@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.5.ebuild,v 1.1 2007/03/20 23:08:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.5.ebuild,v 1.2 2007/04/08 00:44:18 josejx Exp $
 
 inherit qt3 kde-functions toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/52641-${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 IUSE=""
 
