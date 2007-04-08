@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.0.5.ebuild,v 1.1 2007/01/30 03:14:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.0.5.ebuild,v 1.2 2007/04/08 18:32:34 vanquirius Exp $
 
 inherit rpm
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror fetch nostrip"
 
 LICENSE="Nessus-EULA"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X"
 
 DEPEND="=sys-libs/db-4.3*
