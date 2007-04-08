@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/systemc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.7 2007/03/02 20:13:41 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.8 2007/04/08 08:56:15 opfer Exp $
+
+  08 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  systemc-2.2_beta20060605.ebuild:
+  stable x86, bug 173696
 
 *systemc-2.2_beta20060605 (02 Mar 2007)
 
