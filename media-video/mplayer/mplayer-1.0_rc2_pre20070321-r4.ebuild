@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.3 2007/04/02 22:50:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.4 2007/04/09 16:22:47 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -509,11 +509,11 @@ src_install() {
 		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
 	fi
 
-	insinto /etc
+	insinto /etc/mplayer
 	newins ${S}/etc/example.conf mplayer.conf
 
 	if use srt || use truetype;	then
-		cat >> ${D}/etc/mplayer.conf << EOT
+		cat >> ${D}/etc/mplayer/mplayer.conf << EOT
 fontconfig=1
 subfont-osd-scale=4
 subfont-text-scale=3
