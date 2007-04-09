@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unrtf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.24 2007/04/09 13:32:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.25 2007/04/09 14:40:59 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> unrtf-0.20.1.ebuild:
+  Stable on amd64 wrt bug 173847
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> unrtf-0.20.1.ebuild:
   x86 stable wrt bug 173847
