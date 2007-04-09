@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/pscan-20000721-r1.ebuild,v 1.3 2007/04/09 14:54:16 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/pscan-20000721-r1.ebuild,v 1.4 2007/04/09 16:38:54 nixnut Exp $
 
 inherit toolchain-funcs
 
@@ -11,8 +11,9 @@ SRC_URI="http://www.striker.ottawa.on.ca/~aland/pscan/pscan.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
+RESTRICT="test"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
