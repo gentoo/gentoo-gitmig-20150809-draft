@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-usbnull/ps2emu-usbnull-0.4.ebuild,v 1.3 2006/09/26 18:43:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-usbnull/ps2emu-usbnull-0.4.ebuild,v 1.4 2007/04/09 15:54:33 nyhm Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/USBnull${PV//.}
 
 src_unpack() {
-	unrar x -idq "${DISTDIR}"/${A} || die
+	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e 's:-O3 -fomit-frame-pointer:$(OPTFLAGS):' \
@@ -35,9 +35,9 @@ src_compile() {
 
 src_install() {
 	dodoc ReadMe.txt
-	exeinto "${GAMES_LIBDIR}"/ps2emu/plugins
+	exeinto "$(games_get_libdir)"/ps2emu/plugins
 	newexe Linux/libUSBnull.so libUSBnull-${PV//.}.so || die
-	exeinto "${GAMES_LIBDIR}"/ps2emu/cfg
+	exeinto "$(games_get_libdir)"/ps2emu/cfg
 	doexe Linux/cfgUSBnull || die
 	prepgamesdirs
 }

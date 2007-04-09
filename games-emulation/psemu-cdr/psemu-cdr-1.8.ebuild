@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.8 2006/09/26 18:32:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.9 2007/04/09 15:56:39 nyhm Exp $
 
 inherit eutils games
 
@@ -30,11 +30,11 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}"/psemu/plugins
+	exeinto "$(games_get_libdir)"/psemu/plugins
 	doexe src/libcdr-* || die "doexe failed (1)"
-	exeinto "${GAMES_LIBDIR}"/psemu/cfg
+	exeinto "$(games_get_libdir)"/psemu/cfg
 	doexe src/cfg-gtk*/cfgCdr || die "doexe failed(2)"
-	insinto "${GAMES_LIBDIR}"/psemu/cfg
+	insinto "$(games_get_libdir)"/psemu/cfg
 	doins cdr.cfg || die "doins failed"
 	dodoc ReadMe.txt
 	prepgamesdirs
