@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgis
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.26 2007/01/06 19:41:27 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.27 2007/04/09 15:30:01 chtekk Exp $
+
+  09 Apr 2007; Luca Longinotti <chtekk@gentoo.org> -postgis-0.7.5-r2.ebuild,
+  -postgis-1.1.2.ebuild, -postgis-1.1.6.ebuild, postgis-1.2.0.ebuild:
+  Cleanup old unneeded versions, fixes bug #17808.
 
 *postgis-1.2.0 (06 Jan 2007)
 *postgis-1.1.6 (06 Jan 2007)
