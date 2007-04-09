@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.68 2007/04/09 14:04:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.69 2007/04/09 22:18:14 betelgeuse Exp $
+
+  09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Package.mask >=sys-auth/pam_usb-0.4.0 because it needs sys-apps/hal.
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   P.mask sys-fs/fuse and sys-fs/ntfs3g in 2.4 profiles since it 

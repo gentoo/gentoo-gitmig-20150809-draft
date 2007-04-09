@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.69 2007/04/09 14:04:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.70 2007/04/09 22:18:14 betelgeuse Exp $
+
+# Petteri Räty <betelgeuse@gentoo.org> (10 Apr 2007)
+# Needs sys-apps/hal
+>=sys-auth/pam_usb-0.4.0
 
 # Raúl Porcel <armin76@gentoo.org> (09 Apr 2007)
 # Needs gentoo-sources, which are 2.6 version
