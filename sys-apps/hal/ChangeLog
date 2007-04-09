@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.150 2007/04/07 00:43:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.151 2007/04/09 01:08:54 cardoe Exp $
+
+  09 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
+  add Inotify support warning
 
   07 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/0.5.9/95_gentoo_man_page.patch,
