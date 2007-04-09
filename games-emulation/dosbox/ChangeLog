@@ -1,6 +1,15 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.30 2007/03/20 04:39:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.31 2007/04/09 19:06:07 mr_bones_ Exp $
+
+  09 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/dosbox-0.70-alsa.patch, dosbox-0.70.ebuild:
+  brute force approach to bug #171942
+
+  26 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/dosbox-0.70-alsa.patch, dosbox-0.70.ebuild:
+  patch to turn alsa off with --disable-alsa from ebfe via bug #171942; took out
+  some of the use flags in deps that weren't also checked by configure
 
   20 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.70.ebuild:
   add USE=debug support with patch from ebfe (bug #121372)
