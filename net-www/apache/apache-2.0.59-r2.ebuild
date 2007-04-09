@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.59-r2.ebuild,v 1.3 2007/01/28 20:00:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.59-r2.ebuild,v 1.4 2007/04/09 11:03:44 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -37,7 +37,7 @@ S="${WORKDIR}/httpd-${PV}"
 
 big_fat_warnings() {
 
-	if use ldap && ! built_with_use 'dev-libs/apr-util' ldap; then
+	if use ldap && ! built_with_use '=dev-libs/apr-util-0*' ldap; then
 		eerror "dev-libs/apr-util is missing LDAP support. For apache to have"
 		eerror "ldap support, apr-util must be built with the ldap USE-flag"
 		eerror "enabled."
