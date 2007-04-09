@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.11 2007/03/12 14:44:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.12 2007/04/09 17:54:20 nyhm Exp $
 
 inherit eutils games
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	make \
-		GENTOO_LIBDIR="${GAMES_LIBDIR}/${PN}" \
+		GENTOO_LIBDIR="$(games_get_libdir)/${PN}" \
 		GENTOO_DATADIR="${GAMES_DATADIR}/quake1" \
 		OPTFLAGS="${CFLAGS}" \
 		release \
@@ -38,9 +38,9 @@ src_install() {
 	dodoc README CHANGELOG
 	newgamesbin NPRQuakeSrc/release*/bin/* nprquake-sdl \
 		|| die "newgamesbin failed"
-	dodir "${GAMES_LIBDIR}/${PN}"
-	cp -r build/* "${D}/${GAMES_LIBDIR}/${PN}/" || die "cp failed"
-	cd "${D}/${GAMES_LIBDIR}/${PN}"
+	dodir "$(games_get_libdir)/${PN}"
+	cp -r build/* "${D}/$(games_get_libdir)/${PN}/" || die "cp failed"
+	cd "${D}/$(games_get_libdir)/${PN}"
 	mv dr_default.so default.so
 	ln -s sketch.so dr_default.so
 	prepgamesdirs

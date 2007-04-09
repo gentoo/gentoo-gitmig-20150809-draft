@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta5.ebuild,v 1.2 2007/03/13 01:29:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta5.ebuild,v 1.3 2007/04/09 17:52:06 nyhm Exp $
 
 inherit toolchain-funcs games
 
@@ -33,7 +33,7 @@ src_compile() {
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-Ddatadir="${GAMES_DATADIR}"/${PN} \
 		-Dbindir="${GAMES_BINDIR}" \
-		-Dlibdir="${GAMES_LIBDIR}" \
+		-Dlibdir="$(games_get_libdir)" \
 		$(use openal && echo -DBUILDOPENAL=1) \
 		../ || die "cmake failed"
 	emake || die "emake failed"

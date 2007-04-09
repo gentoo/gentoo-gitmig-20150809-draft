@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.9 2006/05/05 20:09:32 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.10 2007/04/09 17:50:11 nyhm Exp $
 
 inherit eutils games
 
@@ -22,14 +22,18 @@ S=${WORKDIR}/quake2-3.21/linux
 
 src_unpack() {
 	unpack ${A}
-	cd "${WORKDIR}/quake2-3.21"
-	epatch "${FILESDIR}"/${PV}-gentoo.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+	cd "${WORKDIR}"/quake2-3.21
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 	cd linux
 	sed -i \
-		-e "s:GENTOO_DIR:${GAMES_LIBDIR}/${PN}:" sys_linux.c
+		-e "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" sys_linux.c \
+		|| die "sed failed"
 	sed -i \
-		-e "s:/etc/quake2.conf:${GAMES_SYSCONFDIR}/${PN}.conf:" sys_linux.c vid_so.c
+		-e "s:/etc/quake2.conf:${GAMES_SYSCONFDIR}/${PN}.conf:" \
+		sys_linux.c vid_so.c \
+		|| die "sed failed"
 }
 
 src_compile() {
@@ -43,20 +47,18 @@ src_compile() {
 src_install() {
 	cd release*
 
-	exeinto ${GAMES_LIBDIR}/${PN}
-	doexe gamei386.so ref_softaa.so || die
-	dosym ref_softaa.so ${GAMES_LIBDIR}/${PN}/ref_softx.so
-	dosym ref_softaa.so ${GAMES_LIBDIR}/${PN}/ref_soft.so
-	exeinto ${GAMES_LIBDIR}/${PN}/ctf
-	doexe ctf/gamei386.so || die
+	exeinto "$(games_get_libdir)"/${PN}
+	doexe gamei386.so ref_softaa.so || die "doexe failed"
+	dosym ref_softaa.so "$(games_get_libdir)"/${PN}/ref_softx.so
+	dosym ref_softaa.so "$(games_get_libdir)"/${PN}/ref_soft.so
+	exeinto "$(games_get_libdir)"/${PN}/ctf
+	doexe ctf/gamei386.so || die "doexe failed"
 
-	newgamesbin quake2 aaquake2 || die
+	newgamesbin quake2 aaquake2 || die "newgamesbin failed"
 
-	dodir ${GAMES_DATADIR}/quake2
-
-	insinto ${GAMES_SYSCONFDIR}
-	echo ${GAMES_LIBDIR}/${PN} > ${PN}.conf
-	doins ${PN}.conf
+	insinto "${GAMES_SYSCONFDIR}"
+	echo "$(games_get_libdir)"/${PN} > ${PN}.conf
+	doins ${PN}.conf || die "doins failed"
 
 	prepgamesdirs
 }

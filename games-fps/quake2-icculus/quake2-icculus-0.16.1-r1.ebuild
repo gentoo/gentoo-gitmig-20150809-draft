@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.5 2007/03/13 01:30:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.6 2007/04/09 17:57:36 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -133,7 +133,7 @@ src_compile() {
 			BUILD_ALSA=$(yesno alsa) \
 			SDLDIR=/usr/lib \
 			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2" \
-			DEFAULT_LIBDIR="${GAMES_LIBDIR}/${PN}${libsuffix}" \
+			DEFAULT_LIBDIR="$(games_get_libdir)/${PN}${libsuffix}" \
 			OPT_CFLAGS="${CFLAGS}" \
 			CC="$(tc-getCC)" \
 			|| die "make failed"
@@ -149,8 +149,8 @@ src_compile() {
 }
 
 src_install() {
-	local q2dir=${GAMES_LIBDIR}/${PN}
-	local q2maxdir=${GAMES_LIBDIR}/${PN}-qmax
+	local q2dir=$(games_get_libdir)/${PN}
+	local q2maxdir=$(games_get_libdir)/${PN}-qmax
 
 	dodoc readme.txt README TODO "${FILESDIR}"/README-postinstall
 
