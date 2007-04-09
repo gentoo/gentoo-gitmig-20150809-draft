@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/myster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/ChangeLog,v 1.6 2007/02/21 15:40:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/ChangeLog,v 1.7 2007/04/09 12:02:52 betelgeuse Exp $
+
+  09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> myster-8.0.ebuild:
+  Use doenvd for bug #173884.
 
   21 Feb 2007; Raúl Porcel <armin76@gentoo.org> files/digest-myster-8.0,
   Manifest:

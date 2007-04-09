@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.6 2006/03/20 00:14:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.7 2007/04/09 12:02:52 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -37,6 +37,5 @@ src_install () {
 	cp -R * ${D}/opt/myster || die "cp failed"
 	exeinto /opt/myster/bin
 	doexe ${T}/myster || die "doexe failed"
-	insinto /etc/env.d
-	doins ${T}/50myster || die "doins failed"
+	doenvd ${T}/50myster || die
 }
