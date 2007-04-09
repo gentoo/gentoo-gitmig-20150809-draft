@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.83 2007/03/29 08:03:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.84 2007/04/09 11:49:05 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> fuse-2.6.3.ebuild:
+  amd64 stable on behalf of welp
 
   29 Mar 2007; Markus Rothe <corsair@gentoo.org> fuse-2.6.3.ebuild:
   Stable on ppc64; bug #172537
