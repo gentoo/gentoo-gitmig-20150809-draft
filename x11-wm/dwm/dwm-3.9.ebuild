@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-3.7.ebuild,v 1.1 2007/02/24 19:56:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-3.9.ebuild,v 1.1 2007/04/09 15:36:33 cedk Exp $
 
 inherit toolchain-funcs savedconfig
 
