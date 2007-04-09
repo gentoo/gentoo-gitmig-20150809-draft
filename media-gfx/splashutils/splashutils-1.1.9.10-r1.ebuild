@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.8 2007/02/10 14:23:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.9 2007/04/09 11:11:48 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -84,14 +84,15 @@ src_unpack() {
 	# Ensure that we call depscan with --svcdir
 	cd "${WORKDIR}/${GENTOOSPLASH}"
 	epatch "${FILESDIR}/splashutils-depscan.patch"
+	epatch ${FILESDIR}/splashutils-gentoo-0.1.14-stat.patch
 
 	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} ${S}/libs
 	# We need to delete the Makefile and let it be rebuilt when splashutils
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
-	cd ${S}
 
+	cd ${S}
 	epatch ${FILESDIR}/${P}-ppc-2.6.14.patch
 	epatch ${FILESDIR}/${P}-makefile.patch
 	epatch ${FILESDIR}/${P}-2.6.18-vt-fix.patch
