@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_Canvas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Canvas/ChangeLog,v 1.8 2007/02/21 23:24:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Canvas/ChangeLog,v 1.9 2007/04/09 09:12:20 corsair Exp $
+
+  09 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  PEAR-Image_Canvas-0.3.0.ebuild:
+  Stable on ppc64; bug #173776
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
