@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.18 2007/03/04 12:47:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.19 2007/04/09 21:54:58 mcummings Exp $
+
+  09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  perl-Time-Local-1.17.ebuild:
+  Marking amd64 stable
 
   04 Mar 2007; Andrej Kacian <ticho@gentoo.org> perl-Time-Local-1.13.ebuild:
   Stable on x86, bug #169153.
