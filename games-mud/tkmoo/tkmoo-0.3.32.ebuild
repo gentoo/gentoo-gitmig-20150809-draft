@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.12 2007/03/13 01:31:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.13 2007/04/09 18:43:53 nyhm Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -30,17 +30,17 @@ src_unpack() {
 src_compile() {
 	emake \
 		WISH="$(type -P wish)" \
-		TKMOO_LIB_DIR="${GAMES_LIBDIR}/${MY_PN}" \
+		TKMOO_LIB_DIR="$(games_get_libdir)/${MY_PN}" \
 		TKMOO_BIN_DIR="${GAMES_BINDIR}" \
 		|| die "emake failed"
 }
 
 src_install() {
-	make \
-		TKMOO_LIB_DIR="${D}/${GAMES_LIBDIR}/${MY_PN}" \
+	emake \
+		TKMOO_LIB_DIR="${D}/$(games_get_libdir)/${MY_PN}" \
 		TKMOO_BIN_DIR="${D}/${GAMES_BINDIR}" \
 		install \
-		|| die "make install failed"
+		|| die "emake install failed"
 	dodoc README dot.tkmoolightrc bugsmail.txt
 	dosym tkMOO-lite "${GAMES_BINDIR}/tkmoo"
 	prepgamesdirs

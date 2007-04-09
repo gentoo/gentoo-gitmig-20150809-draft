@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/mmucl-1.5.2-r1.ebuild,v 1.4 2007/03/12 17:03:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/mmucl-1.5.2-r1.ebuild,v 1.5 2007/04/09 18:41:29 nyhm Exp $
 
 inherit games
 
@@ -20,34 +20,32 @@ DEPEND=">=dev-lang/tk-8.4
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
 	sed -i \
 		-e "/^BASE_DIR/ s:=.*:=/usr:" \
 		-e "/^BIN_DIR/ s:=.*:=${GAMES_BINDIR}:" \
-		-e "/^LIB_DIR/ s:=.*:=${GAMES_LIBDIR}/${PN}:" \
-		-e "" "${S}/Makefile" \
+		-e "/^LIB_DIR/ s:=.*:=$(games_get_libdir)/${PN}:" \
+		Makefile \
 		|| die "sed Makefile failed"
 }
 
 src_install () {
-	local LIBDIR="${GAMES_LIBDIR}/${PN}"
-
-	dogamesbin mmucl2                 || die "dogamesbin failed"
-	insinto ${LIBDIR}/lib
-	doins lib/*.tcl                   || die "doins failed (lib)"
-	insinto ${LIBDIR}/images
-	doins images/*.gif                || die "doins failed (images)"
-	insinto ${LIBDIR}/interface
-	doins interface/*.tcl             || die "doins failed (interface)"
-	insinto ${LIBDIR}/script
-	doins script/*.{tcl,rc}           || die "doins failed (script)"
-	insinto ${LIBDIR}/script/contrib
-	doins script/contrib/*            || die "doins failed (contrib)"
-	insinto ${LIBDIR}/test
-	doins test/*.test                 || die "doins failed (test)"
-	doinfo mmucl.info                 || die "doinfo failed"
-	dodoc CHANGES TODO README || die "dodoc failed"
-	dohtml mmucl.html                 || die "dohtml failed"
+	dogamesbin mmucl2 || die "dogamesbin failed"
+	insinto "$(games_get_libdir)"/${PN}/lib
+	doins lib/*.tcl || die "doins failed (lib)"
+	insinto "$(games_get_libdir)"/${PN}/images
+	doins images/*.gif || die "doins failed (images)"
+	insinto "$(games_get_libdir)"/${PN}/interface
+	doins interface/*.tcl || die "doins failed (interface)"
+	insinto "$(games_get_libdir)"/${PN}/script
+	doins script/*.{tcl,rc} || die "doins failed (script)"
+	insinto "$(games_get_libdir)"/${PN}/script/contrib
+	doins script/contrib/* || die "doins failed (contrib)"
+	insinto "$(games_get_libdir)"/${PN}/test
+	doins test/*.test || die "doins failed (test)"
+	doinfo mmucl.info
+	dodoc CHANGES TODO README
+	dohtml mmucl.html
 	prepgamesdirs
 }
 
