@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.10 2007/04/09 01:08:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.11 2007/04/09 21:32:22 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -66,9 +66,9 @@ function notify_procfs() {
 
 function notify_inotify() {
 	ewarn
-	ewarn "You must enable the Inotify filesystem in your kernel."
-	ewarn "For this you need to enable 'Inotify file change notification support'"
-	ewarn "in 'File systems'. It is marked CONFIG_INOTIFY in the config file."
+	ewarn "You must enable the Inotify system in your kernel."
+	ewarn "For this you need to enable 'Inotify support for userspace'"
+	ewarn "in 'File systems'. It is marked CONFIG_INOTIFY_USER in the config file."
 	ewarn
 	ebeep 5
 }
@@ -81,7 +81,7 @@ pkg_setup() {
 		notify_uevent
 	fi
 
-	linux_chkconfig_present INOTIFY || notify_inotify
+	linux_chkconfig_present INOTIFY_USER || notify_inotify
 
 	if use acpi ; then
 		linux_chkconfig_present PROC_FS || notify_procfs
