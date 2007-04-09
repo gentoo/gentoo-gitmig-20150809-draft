@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.2.ebuild,v 1.10 2007/03/14 18:19:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.2.ebuild,v 1.11 2007/04/09 19:55:56 nyhm Exp $
 
 inherit eutils games
 
@@ -49,14 +49,14 @@ src_install() {
 	local tver="`ls noegnud-*-${VAR_NAME}-${VAR_DVER} | cut -d- -f2`"
 	rm noegnud-${VAR_NAME}-${VAR_DVER}
 	mv noegnud-${tver}-${VAR_NAME}-${VAR_DVER} noegnud-${VAR_NAME}
-	dosed "/^HACKDIR/s:=.*:=${GAMES_LIBDIR}/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}:" "${GAMES_BINDIR}/noegnud-${VAR_NAME}"
+	dosed "/^HACKDIR/s:=.*:=$(games_get_libdir)/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}:" "${GAMES_BINDIR}/noegnud-${VAR_NAME}"
 
 	dodir "${GAMES_DATADIR}/noegnud_data"
 	cp -r "${S}/../data/"* "${D}/${GAMES_DATADIR}/noegnud_data/"
-	dosym "${GAMES_DATADIR}/noegnud_data" "${GAMES_LIBDIR}/noegnud-${tver}/data"
+	dosym "${GAMES_DATADIR}/noegnud_data" "$(games_get_libdir)/noegnud-${tver}/data"
 
-	keepdir "${GAMES_LIBDIR}/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}/save"
+	keepdir "$(games_get_libdir)/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}/save"
 
 	prepgamesdirs
-	chmod -R g+w "${D}/${GAMES_LIBDIR}/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}"
+	chmod -R g+w "${D}/$(games_get_libdir)/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}"
 }

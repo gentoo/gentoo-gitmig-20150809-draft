@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.3.ebuild,v 1.2 2007/03/14 18:19:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.3.ebuild,v 1.3 2007/04/09 19:55:56 nyhm Exp $
 
 inherit eutils games
 
@@ -27,13 +27,13 @@ RDEPEND="media-libs/libsdl
 	virtual/opengl
 	games-roguelike/noegnud-data"
 
-S="${WORKDIR}/noegnud-${PV}/variants"
+S=${WORKDIR}/noegnud-${PV}/variants
 
 src_unpack() {
 	unpack noegnud-${PV}_linux_src-minimal.tar.bz2
-	ln -s "${DISTDIR}/${VAR_TAR}" noegnud-${PV}/variants/tarballs/${VAR_TAR}
+	ln -s "${DISTDIR}"/${VAR_TAR} noegnud-${PV}/variants/tarballs/${VAR_TAR}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
@@ -49,14 +49,17 @@ src_install() {
 	local tver="`ls noegnud-*-${VAR_NAME}-${VAR_DVER} | cut -d- -f2`"
 	rm noegnud-${VAR_NAME}-${VAR_DVER}
 	mv noegnud-${tver}-${VAR_NAME}-${VAR_DVER} noegnud-${VAR_NAME}
-	dosed "/^HACKDIR/s:=.*:=${GAMES_LIBDIR}/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}:" "${GAMES_BINDIR}/noegnud-${VAR_NAME}"
+	sed -i \
+		-e "/^HACKDIR/s:=.*:=$(games_get_libdir)/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}:" \
+		noegnud-${VAR_NAME} \
+		|| die "sed failed"
 
-	dodir "${GAMES_DATADIR}/noegnud_data"
-	cp -r "${S}/../data/"* "${D}/${GAMES_DATADIR}/noegnud_data/"
-	dosym "${GAMES_DATADIR}/noegnud_data" "${GAMES_LIBDIR}/noegnud-${tver}/data"
+	insinto "${GAMES_DATADIR}"/noegnud_data
+	doins -r "${S}"/../data/* || die "doins failed"
+	dosym "${GAMES_DATADIR}"/noegnud_data "$(games_get_libdir)"/noegnud-${tver}/data
 
-	keepdir "${GAMES_LIBDIR}/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}/save"
+	keepdir "$(games_get_libdir)"/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}/save
 
 	prepgamesdirs
-	chmod -R g+w "${D}/${GAMES_LIBDIR}/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}"
+	fperms -R g+w "$(games_get_libdir)"/noegnud-${tver}/${VAR_NAME}-${VAR_DVER}
 }
