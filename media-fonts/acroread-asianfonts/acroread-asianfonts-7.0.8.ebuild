@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.8.ebuild,v 1.1 2007/04/08 00:40:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.8.ebuild,v 1.2 2007/04/09 14:09:03 matsuu Exp $
 
 inherit eutils
 
@@ -78,8 +78,13 @@ src_install() {
 	tar xf ${INST_LANG/* /}KIT/LANGCOM.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 	tar xf ${INST_LANG/* /}KIT/BINCOM.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 
+	# bug 152288
+	if [ -f "${D}/${INSTALLDIR}/CMap/Identity-V" ] ; then
+		rm "${D}/${INSTALLDIR}/CMap/Identity-V"
+	fi
+
 	insinto ${INSTALLDIR}
 	doins ${INST_LANG/* /}KIT/LICREAD.TXT || die
 
-	chown -R -L --dereference 0:0 "${D}/${INSTALLDIR}"
+	fowners -R -L --dereference 0:0 ${INSTALLDIR}
 }
