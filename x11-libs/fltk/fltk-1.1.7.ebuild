@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.12 2007/01/08 21:29:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.13 2007/04/09 23:29:28 omp Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -88,8 +88,7 @@ src_install() {
 	echo "LDPATH=${LIBDIR}" > 99fltk-${SLOT}
 	echo "FLTK_DOCDIR=/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
 
-	insinto /etc/env.d
-	doins 99fltk-${SLOT}
+	doenvd 99fltk-${SLOT}
 
 	dodir /usr/share/doc/${P}/html
 	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${PF}/html
