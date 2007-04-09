@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.10.ebuild,v 1.3 2007/02/27 12:44:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.10.ebuild,v 1.4 2007/04/09 12:45:21 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -118,8 +118,7 @@ src_install() {
 	doins ${FILESDIR}/10firefox-bin
 
 	# install ldpath env.d
-	insinto /etc/env.d
-	doins ${FILESDIR}/71firefox-bin
+	doenvd ${FILESDIR}/71firefox-bin
 }
 
 pkg_preinst() {
