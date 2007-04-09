@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.3.ebuild,v 1.1 2006/10/13 16:16:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.3.ebuild,v 1.2 2007/04/09 18:31:31 nyhm Exp $
 
 inherit distutils eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="dev-python/pygame
+RDEPEND="dev-python/pygame
 	>=dev-python/pygtk-2.4"
 
 src_compile() {
@@ -25,9 +25,9 @@ src_install() {
 	doins -r doc extra_themes icons libglade music sound_test themes \
 		*.py ttraffic.levels || die "doins failed"
 
-	exeinto "${GAMES_LIBDIR}"/${PN}
+	exeinto "$(games_get_libdir)"/${PN}
 	doexe build/*/_hint.so || die "doexe failed"
-	dosym {"${GAMES_LIBDIR}","${GAMES_DATADIR}"}/${PN}/_hint.so \
+	dosym {"$(games_get_libdir)","${GAMES_DATADIR}"}/${PN}/_hint.so \
 		|| die "dosym failed"
 
 	games_make_wrapper ${PN} "python Main.py" "${GAMES_DATADIR}"/${PN}
