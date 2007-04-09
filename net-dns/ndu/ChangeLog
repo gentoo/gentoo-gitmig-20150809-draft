@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.11 2007/02/22 02:04:15 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.12 2007/04/09 14:16:14 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> ndu-0.4-r4.ebuild:
+  x86 stable wrt bug 173858
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
