@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/flow-tools
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.28 2006/11/23 19:47:32 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.29 2007/04/09 16:17:07 pva Exp $
+
+*flow-tools-0.68-r4 (09 Apr 2007)
+
+  09 Apr 2007; <pva@gentoo.org> files/flowcapture.initd,
+  +flow-tools-0.68-r4.ebuild:
+  Fixed bug #155456, thank Andrey Kolbasenko <edge AT smtn.stavropol.ru> for
+  report and analysis.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> flow-tools-0.68-r3.ebuild:
   dev-db/mysql => virtual/mysql
