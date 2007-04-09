@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.8 2007/03/21 20:28:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.9 2007/04/09 09:02:29 zzam Exp $
 
 
 : ${EHG_REPO_URI:=${V4l_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
@@ -49,9 +49,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-fix-makefile-recursion.diff
 
-	export ARCH=$(tc-arch-kernel)
-	make allmodconfig ${BUILD_PARAMS}
-	export ARCH=$(tc-arch)
 
 	# apply local patches
 	if test -n "${DVB_LOCAL_PATCHES}";
@@ -72,6 +69,11 @@ src_unpack() {
 	else
 		einfo "No additional local patches to use"
 	fi
+
+	export ARCH=$(tc-arch-kernel)
+	make allmodconfig ${BUILD_PARAMS}
+	export ARCH=$(tc-arch)
+
 	echo
 
 	elog "Removing autoload-entry from stradis-driver."
