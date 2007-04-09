@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unadf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/ChangeLog,v 1.6 2007/04/09 13:23:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/ChangeLog,v 1.7 2007/04/09 15:27:57 nixnut Exp $
+
+  09 Apr 2007; nixnut <nixnut@gentoo.org> unadf-0.7.9b.ebuild:
+  Stable on ppc wrt bug 173841
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> unadf-0.7.9b.ebuild:
   x86 stable wrt bug 173841
