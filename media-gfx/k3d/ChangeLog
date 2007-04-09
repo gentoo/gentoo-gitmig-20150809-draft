@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.31 2007/01/04 23:07:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.32 2007/04/09 00:43:12 betelgeuse Exp $
+
+  09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -k3d-0.4.5.0.ebuild:
+  Removed old ebuild with broken autotools handling for bug #160014.
 
   04 Jan 2007; Steve Dibb <beandog@gentoo.org> k3d-0.4.5.0.ebuild,
   k3d-0.5.0.37-r1.ebuild, k3d-0.6.2.0.ebuild:
