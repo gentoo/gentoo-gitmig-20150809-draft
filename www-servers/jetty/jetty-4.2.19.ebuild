@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.7 2007/01/09 15:45:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.8 2007/04/09 11:54:34 betelgeuse Exp $
 
 inherit eutils
 
@@ -36,21 +36,15 @@ src_install() {
 	keepdir /var/log/${PN}
 
 	# INIT SCRIPTS AND ENV
-	insinto /etc/init.d
-	insopts -m0750
-	newins ${FILESDIR}/${PV}/jetty.init jetty
+	newinitd ${FILESDIR}/${PV}/jetty.init jetty
 
-	insinto /etc/env.d
-	insopts -m0750
-	doins ${FILESDIR}/${PV}/21jetty
+	doenvd ${FILESDIR}/${PV}/21jetty
 
 	insinto /etc/
 	insopts -m0644
 	doins ${FILESDIR}/${PV}/jetty.conf
 
-	insinto /etc/conf.d
-	insopts -m0644
-	doins ${FILESDIR}/${PV}/jetty
+	doconfd ${FILESDIR}/${PV}/jetty
 
 	dodoc *.TXT
 	dohtml *.html
