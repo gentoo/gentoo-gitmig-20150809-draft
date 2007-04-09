@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.02.ebuild,v 1.9 2006/01/22 15:49:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.02.ebuild,v 1.10 2007/04/09 12:09:51 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,8 +48,7 @@ src_install() {
 		SRCDIR=${D}usr/share/xfractint \
 		install || die
 
-	insinto /etc/env.d
-	newins ${FILESDIR}/xfractint.envd 60xfractint
+	newenvd ${FILESDIR}/xfractint.envd 60xfractint
 }
 
 pkg_postinst() {
