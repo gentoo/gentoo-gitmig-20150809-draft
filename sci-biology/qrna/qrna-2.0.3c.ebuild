@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.7 2006/03/15 02:49:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.8 2007/04/09 22:49:29 je_fro Exp $
 
 inherit toolchain-funcs
 
@@ -49,6 +49,5 @@ src_install () {
 	doins Demos/* || die
 
 	# Sets the path to the QRNA data files.
-	insinto /etc/env.d
-	doins "${FILESDIR}"/26qrna || die
+doenvd "${FILESDIR}"/26qrna || die
 }
