@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.9 2007/03/12 17:18:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.10 2007/04/09 20:50:51 nyhm Exp $
 
 inherit eutils flag-o-matic games
 
@@ -78,10 +78,10 @@ src_unpack() {
 		-e "s:^\(CFLAGS =\).*:\1 ${CFLAGS}:" \
 		src/Makefile || die "src/makefile sed"
 	sed -i \
-		-e "s:^\(FILE_AREA_UNSHARE =\).*:\1 ${GAMES_LIBDIR}/${PN}:" \
+		-e "s:^\(FILE_AREA_UNSHARE =\).*:\1 $(games_get_libdir)/${PN}:" \
 		Makefile || die "makefile sed"
 	sed -i \
-		-e "s:^\(\#define FILE_AREA_UNSHARE	\).*:\1\"${GAMES_LIBDIR}/${PN}/\":" \
+		-e "s:^\(\#define FILE_AREA_UNSHARE	\).*:\1\"$(games_get_libdir)/${PN}/\":" \
 		include/unixconf.h || die "unixconf.h sed"
 }
 
@@ -97,7 +97,7 @@ src_install() {
 		FILE_AREA_VAR=${D}/${HACKDIR} \
 		FILE_AREA_SAVE=${D}/${HACKDIR}/save \
 		FILE_AREA_SHARE=${D}/${GAMES_DATADIR}/${PN} \
-		FILE_AREA_UNSHARE=${D}/${GAMES_LIBDIR}/${PN} \
+		FILE_AREA_UNSHARE=${D}/$(games_get_libdir)/${PN} \
 		FILE_AREA_DOC=${D}/usr/share/doc/${PF} \
 		install || die "make install failed"
 	dodoc doc/*.txt
@@ -107,7 +107,7 @@ src_install() {
 	# The final /usr/bin/slashem is a sh script.  This fixes the hard-coded
 	# HACKDIR directory so it doesn't point to ${D}/usr/share/slashemdir
 	dosed "s:^\(HACKDIR=\).*:\1${HACKDIR}:" ${GAMES_BINDIR}/${PN}
-	dosed "s:^\(HACK=\).*:\1${GAMES_LIBDIR}/${PN}/${PN}:" ${GAMES_BINDIR}/${PN}
+	dosed "s:^\(HACK=\).*:\1$(games_get_libdir)/${PN}/${PN}:" ${GAMES_BINDIR}/${PN}
 
 	newgamesbin util/recover recover-slashem || die "recover install"
 
