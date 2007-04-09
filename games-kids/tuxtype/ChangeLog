@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxtype
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.7 2004/07/01 11:19:25 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.8 2007/04/09 21:29:38 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> tuxtype-1.0.3-r1.ebuild:
+  Keyworded ~x86-fbsd wrt bug 173391
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tuxtype-1.0.3-r1.ebuild, tuxtype-1.0.3.ebuild:
