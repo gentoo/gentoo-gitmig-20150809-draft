@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_sha512/pam_sha512-0.1.2.ebuild,v 1.1 2007/04/07 17:26:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_sha512/pam_sha512-0.1.2.ebuild,v 1.2 2007/04/09 01:01:29 mr_bones_ Exp $
 
 inherit flag-o-matic pam toolchain-funcs
 
