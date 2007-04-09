@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.14.ebuild,v 1.1 2007/03/31 17:56:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.14.ebuild,v 1.2 2007/04/09 16:19:54 carlo Exp $
 
 inherit kde
 
@@ -43,4 +43,13 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins ${DISTDIR}/${DOC}
 	fi
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	elog "Please note that KRename can use KDE's file information plugins as they're"
+	elog "available, so you might want to install one or more of the following ebuilds:"
+	elog "kdeaddons-kfile-plugins, kdeadmin-kfile-plugins, kdegraphics-kfile-plugins,"
+	elog "kdemultimedia-kfile-plugins, kdenetwork-kfile-plugins, kdesdk-kfile-plugins."
 }
