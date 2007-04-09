@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.4 2007/04/09 16:22:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.5 2007/04/09 16:33:57 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -432,7 +432,7 @@ src_compile() {
 	myconf="--cc=$(tc-getCC) \
 		--host-cc=$(tc-getBUILD_CC) \
 		--prefix=/usr \
-		--confdir=/usr/share/mplayer \
+		--confdir=/etc/mplayer \
 		--datadir=/usr/share/mplayer \
 		--libdir=/usr/$(get_libdir) \
 		--enable-largefiles \
@@ -460,7 +460,7 @@ src_install() {
 	make prefix=${D}/usr \
 		 BINDIR=${D}/usr/bin \
 		 LIBDIR=${D}/usr/$(get_libdir) \
-		 CONFDIR=${D}/usr/share/mplayer \
+		 CONFDIR=${D}/etc/mplayer \
 		 DATADIR=${D}/usr/share/mplayer \
 		 MANDIR=${D}/usr/share/man \
 		 install || die "Failed to install MPlayer!"
