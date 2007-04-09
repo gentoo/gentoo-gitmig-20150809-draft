@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.6.ebuild,v 1.6 2007/03/28 21:58:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.6.ebuild,v 1.7 2007/04/09 05:22:07 welp Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~ppc sparc x86"
 IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
