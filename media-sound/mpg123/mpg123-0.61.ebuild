@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.4 2007/03/02 12:47:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.5 2007/04/09 10:43:43 armin76 Exp $
 
 inherit eutils
 
@@ -58,11 +58,11 @@ src_compile() {
 	einfo "alsa oss sdl esd nas jack portaudio"
 	einfo "and recompile ${PN}."
 	epause 5
-	
+
 	econf \
-	      --with-optimization=0 \
-	      --with-audio=$audiodev \
-	      ${myconf} || die "econf failed"
+		--with-optimization=0 \
+		--with-audio=$audiodev \
+		${myconf} || die "econf failed"
 
 	emake || die "emake failed"
 }

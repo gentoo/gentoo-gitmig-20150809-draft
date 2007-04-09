@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.110 2007/04/09 06:26:32 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.111 2007/04/09 10:43:43 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> mpg123-0.61.ebuild,
+  mpg123-0.65.ebuild:
+  x86 stable wrt bug 113414 and fix trailing whitespace
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> mpg123-0.65.ebuild:
   Stable on amd64 wrt bug 113414
