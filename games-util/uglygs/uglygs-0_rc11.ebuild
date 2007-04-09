@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.9 2007/03/12 18:24:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.10 2007/04/09 20:59:39 nyhm Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uglypunk.com/uglygs/current/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="alpha hppa ppc sparc x86"
 IUSE=""
 
 RDEPEND="net-analyzer/rrdtool
@@ -19,34 +19,34 @@ RDEPEND="net-analyzer/rrdtool
 
 S=${WORKDIR}/${MY_P}
 
-UGLY_BASEDIR=${GAMES_LIBDIR}/${PN}
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-uglygs.conf.patch
-	sed -i "s:GENTOO_DIR:${UGLY_BASEDIR}:" uglygs.conf
-	epatch ${FILESDIR}/${PV}-uglygs.pl.patch
-	sed -i "s:GENTOO_DIR:${GAMES_SYSCONFDIR}:" uglygs.pl
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-uglygs.conf.patch
+	sed -i "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" uglygs.conf \
+		|| die "sed uglygs.conf failed"
+	epatch "${FILESDIR}"/${PV}-uglygs.pl.patch
+	sed -i "s:GENTOO_DIR:${GAMES_SYSCONFDIR}:" uglygs.pl \
+		|| die "sed uglygs.pl failed"
 }
 
 src_compile() {
 	cd qstat
-	make CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	insinto ${GAMES_SYSCONFDIR}
-	doins uglygs.conf qstat/qstat.cfg
+	insinto "${GAMES_SYSCONFDIR}"
+	doins uglygs.conf qstat/qstat.cfg || die "doins failed"
 
-	dogamesbin uglygs.pl || die
+	dogamesbin uglygs.pl || die "dogamesbin failed"
 
-	dodir ${UGLY_BASEDIR}
-	cp -rf data images templates tmp ${D}/${UGLY_BASEDIR}
-	keepdir ${UGLY_BASEDIR}/tmp
+	insinto "$(games_get_libdir)"/${PN}
+	doins -r data images templates tmp || die "doins failed"
+	keepdir "$(games_get_libdir)"/${PN}/tmp
 
-	exeinto ${UGLY_BASEDIR}
-	doexe qstat/qstat
+	exeinto "$(games_get_libdir)"/${PN}
+	doexe qstat/qstat || die "doexe failed"
 
 	dodoc CHANGES README
 
