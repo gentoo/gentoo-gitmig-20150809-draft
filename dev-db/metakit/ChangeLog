@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.38 2007/04/06 22:09:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.39 2007/04/09 20:39:52 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> metakit-2.4.9.6.ebuild:
+  ia64 stable wrt bug 169509
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   metakit-2.4.9.6.ebuild:
