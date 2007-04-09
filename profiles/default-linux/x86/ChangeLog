@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.66 2007/04/03 15:47:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.67 2007/04/09 10:04:09 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  P.mask sys-fs/fuse in 2.4 profiles since it needs kernel-2.6
 
   03 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   unmask www-client/mozilla-firefox-1.5* wrt bug 173250 in 2.4 profile
