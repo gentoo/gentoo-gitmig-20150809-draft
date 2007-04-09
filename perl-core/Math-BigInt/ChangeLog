@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigInt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.28 2007/04/07 19:56:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.29 2007/04/09 21:37:47 mcummings Exp $
+
+  09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Math-BigInt-1.79.ebuild:
+  Marking stable amd64
 
   07 Apr 2007; nixnut <nixnut@gentoo.org> Math-BigInt-1.81-r1.ebuild:
   Added ~ppc wrt bug 173295
