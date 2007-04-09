@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.22 2007/02/22 00:58:28 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.23 2007/04/09 11:41:08 ticho Exp $
+
+  09 Apr 2007; Andrej Kacian <ticho@gentoo.org> clamassassin-1.2.3.ebuild:
+  Inform sandbox that configure process will try to touch clamd's database
+  lock, so it doesn't error out. Bug #168716, reported by Yoann Pannier
+  <gentoo-bugs at umsar.org>.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

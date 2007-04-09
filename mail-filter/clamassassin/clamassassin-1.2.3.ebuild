@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.3.ebuild,v 1.2 2006/03/13 14:22:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.3.ebuild,v 1.3 2007/04/09 11:41:08 ticho Exp $
 
 DESCRIPTION="clamassassin is a simple script for virus scanning (through clamav) an e-mail message as a
 filter (like spamassassin)"
@@ -16,6 +16,16 @@ DEPEND=">=app-antivirus/clamav-0.75.1
 		mail-filter/procmail"
 
 src_compile() {
+	# Try to get location of clamd's DatabaseDirectory
+	local clamav_dbdir=`awk '$1 == "DatabaseDirectory" { print $2 }' \
+		/etc/clamd.conf`
+	# If not defined in clamd.conf, go with default
+	if [ -z "$clamav_dbdir" ] ; then
+		clamav_dbdir="/var/lib/clamav"
+	fi
+	# Add an entry to sandbox write prediction list, so sandbox doesn't complain
+	addpredict ${clamav_dbdir}/.dbLock
+
 	econf \
 		$(use_enable subject-rewrite) \
 		$(use_enable clamd clamdscan) \
