@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50-r1.ebuild,v 1.3 2006/07/16 17:28:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50-r1.ebuild,v 1.4 2007/04/09 23:32:21 omp Exp $
 
 inherit rpm
 
@@ -42,8 +42,7 @@ src_install() {
 	LIBFORMAT_VER=`ls lib/libformat.so.* | cut -f 3,4 -d .`
 	dosym ${BASE_DIR}/lib/libformat.so.${LIBFORMAT_VER} ${BASE_DIR}/lib/libformat.so
 
-	insinto /etc/env.d
-	doins ${FILESDIR}/99XnView
+	doenvd ${FILESDIR}/99XnView
 
 	insinto /usr/lib/X11/app-defaults/XnView
 	doins X11R6/lib/X11/app-defaults/XnView
