@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.34 2007/03/19 10:56:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.35 2007/04/09 15:19:28 pva Exp $
+
+*e-uae-0.8.29_rc4 (09 Apr 2007)
+
+  09 Apr 2007; <pva@gentoo.org>
+  -files/e-uae-0.8.29-20070223-filesys_fix.diff,
+  -e-uae-0.8.29_pre20070223-r1.ebuild, -e-uae-0.8.29_pre20070317.ebuild,
+  +e-uae-0.8.29_rc4.ebuild:
+  Version bump. This is 0.8.29-WIP4! Enjoy :)
 
 *e-uae-0.8.29_pre20070317 (19 Mar 2007)
 

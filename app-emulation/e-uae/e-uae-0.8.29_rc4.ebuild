@@ -1,15 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070317.ebuild,v 1.1 2007/03/19 10:56:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4.ebuild,v 1.1 2007/04/09 15:19:28 pva Exp $
 
 inherit eutils flag-o-matic
 
-my_ver=${PV%%_pre*}
-snap_ver=${PV##*_pre}
-
 DESCRIPTION="The Ubiquitous Amiga Emulator with an emulation core largely based on WinUAE"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
-SRC_URI="http://www.rcdrummond.net/uae/test/${snap_ver}/${PN}-${my_ver}-${snap_ver}.tar.bz2"
+# We support _rcX for WIPX versions and _preYYYYMMDD for CVS snapshots.
+if [[ "${PV%%_rc*}" = "${PV}" ]] ; then
+	# _pre is used, cvs version
+	my_ver=${PV%%_pre*}
+	snap_ver=${PV##*_pre}
+	S="${WORKDIR}"/${PN}-${my_ver}-${snap_ver}
+	SRC_URI="http://www.rcdrummond.net/uae/test/${snap_ver}/${PN}-${my_ver}-${snap_ver}.tar.bz2"
+else
+	my_ver=${PV%%_rc*}
+	WIP_ver=${PV##*_rc}
+	S="${WORKDIR}"/${PN}-${my_ver}-WIP${WIP_ver}
+	SRC_URI="http://www.rcdrummond.net/uae/${PN}-${my_ver}-WIP${WIP_ver}/${PN}-${my_ver}-WIP${WIP_ver}.tar.bz2"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,8 +48,6 @@ RDEPEND="X? ( || ( ( x11-libs/libXt
 DEPEND="$RDEPEND
 		X? ( dga? ( x11-proto/xf86vidmodeproto
 					x11-proto/xf86dgaproto ) )"
-
-S="${WORKDIR}"/${PN}-${my_ver}-${snap_ver}
 
 pkg_setup() {
 	# Sound setup.
