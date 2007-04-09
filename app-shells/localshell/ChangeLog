@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/localshell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.5 2007/01/24 03:54:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.6 2007/04/09 14:42:42 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> localshell-1.2.ebuild:
+  Stable on amd64 wrt bug 173845
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> localshell-1.1.ebuild,
   localshell-1.2.ebuild:
