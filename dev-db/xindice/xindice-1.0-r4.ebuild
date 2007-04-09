@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.2 2006/07/22 22:05:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.3 2007/04/09 11:24:50 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -50,13 +50,8 @@ src_install() {
 	cd ..
 	dodoc docs/LICENSE docs/README docs/FAQ docs/TODO docs/VERSIONS docs/AUTHORS
 	dohtml docs/AdministratorsGuide.html docs/DevelopersGuide.html docs/UsersGuide.html docs/ToolsReference.html docs/feather.gif docs/index.html docs/xindice.jpg
-	dodir /etc/env.d
-	insinto /etc/env.d
-	doins ${FILESDIR}/21${PN}
-	dodir /etc/init.d
-	insinto /etc/init.d
-	insopts -m0755
-	newins ${FILESDIR}/${PN}-r2 ${PN}
+	doenvd ${FILESDIR}/21${PN}
+	newinitd ${FILESDIR}/${PN}-r2 ${PN}
 	insinto ${TARGET}
 	doins start
 	keepdir /opt/${PN}/db
