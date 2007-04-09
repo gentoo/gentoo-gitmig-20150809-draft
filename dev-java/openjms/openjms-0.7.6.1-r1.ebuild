@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.5 2006/10/05 18:08:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.6 2007/04/09 11:45:22 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -82,10 +82,7 @@ src_install() {
 	use doc && cp -rP {docs,src} ${D}/opt/${PN}/
 
 	fperms 755 /opt/${PN}/bin/*
-	insinto /etc/env.d/
-	newins ${FILESDIR}/${PV}/10${P} 10${PN}
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/${PV}/rc2 openjms
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PV}/conf openjms
+	newenvd ${FILESDIR}/${PV}/10${P} 10${PN}
+	newinitd ${FILESDIR}/${PV}/rc2 openjms
+	newconfd ${FILESDIR}/${PV}/conf openjms
 }

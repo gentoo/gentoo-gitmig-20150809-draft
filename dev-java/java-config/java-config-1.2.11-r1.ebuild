@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11-r1.ebuild,v 1.14 2006/10/05 18:18:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11-r1.ebuild,v 1.15 2007/04/09 11:47:43 betelgeuse Exp $
 
 inherit distutils
 
@@ -28,6 +28,5 @@ src_install() {
 	dobin ${S}/java-config
 	doman ${S}/java-config.1
 
-	insinto /etc/env.d
-	doins ${S}/30java-finalclasspath
+	doenvd ${S}/30java-finalclasspath
 }
