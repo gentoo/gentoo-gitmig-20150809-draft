@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.4 2007/03/27 17:06:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.5 2007/04/09 21:45:20 welp Exp $
 
 inherit autotools eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fishies.org.uk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl

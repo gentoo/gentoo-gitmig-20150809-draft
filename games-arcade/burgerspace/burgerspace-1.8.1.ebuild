@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.8.1.ebuild,v 1.8 2007/02/03 09:13:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.8.1.ebuild,v 1.9 2007/04/09 21:52:31 welp Exp $
 
 inherit autotools eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www3.sympatico.ca/sarrazip/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl

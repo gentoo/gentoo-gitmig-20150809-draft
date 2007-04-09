@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.5.ebuild,v 1.1 2007/03/13 21:18:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.5.ebuild,v 1.2 2007/04/09 21:53:38 welp Exp $
 
 inherit toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.x86.no/${PN}/${P/cavezof}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${P/cavezof/}

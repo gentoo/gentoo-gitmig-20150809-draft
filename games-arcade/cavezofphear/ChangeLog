@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/cavezofphear
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.8 2007/03/13 21:18:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.9 2007/04/09 21:53:38 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> cavezofphear-0.5.ebuild:
+  Keyworded ~x86-fbsd wrt bug 173405
 
 *cavezofphear-0.5 (13 Mar 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/afternoonstalker-1.1.1.ebuild,v 1.4 2007/04/08 00:07:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/afternoonstalker-1.1.1.ebuild,v 1.5 2007/04/09 22:00:50 welp Exp $
 
 inherit autotools eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www3.sympatico.ca/sarrazip/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl
