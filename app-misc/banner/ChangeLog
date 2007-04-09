@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/banner
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.26 2007/04/08 12:58:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.27 2007/04/09 12:16:06 gustavoz Exp $
+
+  09 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> banner-1.3.2.ebuild:
+  Stable on sparc wrt #173609
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> banner-1.3.2.ebuild:
   Stable on ppc64; bug #173609
