@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.21 2007/04/03 16:00:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.22 2007/04/09 19:04:18 mr_bones_ Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (03 Apr 2007)
 # Unmasking firefox-1.5 for <epiphany-2.16
@@ -41,6 +41,7 @@ dev-java/sun-j2sdk
 games-arcade/emergence-bin
 games-emulation/mupen64-alsasnd
 games-roguelike/crossfire-client
+games-emulation/dosbox
 media-libs/alsa-lib
 media-libs/alsa-oss
 media-libs/ladcca
