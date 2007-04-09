@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.81 2007/04/09 11:11:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.82 2007/04/09 11:17:49 spock Exp $
+
+  09 Apr 2007; Michał Januszewski <spock@gentoo.org>
+  -files/splashutils-1.3-initrd-chvt.patch,
+  -files/splashutils-1.3-r2-fbsplash.patch, -files/splashutils-1.3-r2.patch,
+  -splashutils-1.1.9.8-r1.ebuild, -splashutils-1.3-r2.ebuild,
+  -splashutils-1.3-r3.ebuild:
+  Remove old ebuilds.
 
   09 Apr 2007; Michał Januszewski <spock@gentoo.org>
   +files/splashutils-gentoo-0.1.14-stat.patch,
