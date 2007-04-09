@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.13 2007/04/07 18:40:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.14 2007/04/09 20:02:02 cryos Exp $
+
+  09 Apr 2007; Marcus D. Hanwell <cryos@gentoo.org> kphotoalbum-3.0.ebuild:
+  Stable on amd64, bug 173588.
 
   07 Apr 2007; nixnut <nixnut@gentoo.org> kphotoalbum-3.0.ebuild:
   Stable on ppc wrt bug 173588
@@ -59,7 +62,7 @@
   kimdaba-2.1.ebuild:
   Adding dependency on kdegraphics, fixes Bug 94991
 
-  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> kimdaba-2.0.ebuild:
+  31 May 2005; Marcus D. Hanwell <cryos@gentoo.org> kimdaba-2.0.ebuild:
   Stable on amd64.
 
   15 May 2005; Dominik Stadler <centic@gentoo.org> kimdaba-2.1.ebuild:
