@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.7 2007/03/12 14:07:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.8 2007/04/09 17:39:11 nyhm Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -194,7 +194,7 @@ src_install() {
 	if [[ ${disp} -eq 0 ]] || use opengl || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
-	exeinto "${GAMES_LIBDIR}/${PN}"
+	exeinto "$(games_get_libdir)/${PN}"
 	for f in $utils
 	do
 		if [[ -f "${D}${GAMES_BINDIR}"/$f ]] ; then
@@ -232,5 +232,5 @@ pkg_postinst() {
 	#useq ggi    && elog " ${TARGET}.ggi"
 	useq svga   && elog " ${TARGET}.svgalib"
 
-	elog "Helper utilities are located in ${GAMES_LIBDIR}/${PN}."
+	elog "Helper utilities are located in $(games_get_libdir)/${PN}."
 }

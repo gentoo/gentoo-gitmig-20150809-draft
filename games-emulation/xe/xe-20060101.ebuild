@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.4 2006/12/01 21:47:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.5 2007/04/09 17:32:22 nyhm Exp $
 
 inherit games
 
@@ -36,13 +36,13 @@ src_unpack() {
 
 src_install() {
 	newgamesbin xe xe.bin || die "newgamesbin failed"
-	newgamesbin "${FILESDIR}/xe-${PV}" xe || die "newgamesbin failed"
+	newgamesbin "${FILESDIR}"/xe-${PV} xe || die "newgamesbin failed"
 	sed -i \
-		-e "s:GENTOODIR:${GAMES_LIBDIR}/${PN}:" "${D}/${GAMES_BINDIR}/xe" \
+		-e "s:GENTOODIR:$(games_get_libdir)/${PN}:" "${D}/${GAMES_BINDIR}/xe" \
 		|| die "sed failed"
-	insinto "${GAMES_LIBDIR}/${PN}"
+	insinto "$(games_get_libdir)"/${PN}
 	doins -r modules/ rc/ manual/ || die "doins failed"
-	keepdir "${GAMES_LIBDIR}/${PN}/bios"
+	keepdir "$(games_get_libdir)"/${PN}/bios
 	dodoc README.txt
 	prepgamesdirs
 }
