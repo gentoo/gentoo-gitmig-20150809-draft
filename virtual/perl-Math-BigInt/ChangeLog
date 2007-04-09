@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.9 2007/03/19 17:37:01 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.10 2007/04/09 21:53:03 mcummings Exp $
+
+  09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  perl-Math-BigInt-1.79.ebuild:
+  Marking stable amd64
 
 *perl-Math-BigInt-1.81 (19 Mar 2007)
 
