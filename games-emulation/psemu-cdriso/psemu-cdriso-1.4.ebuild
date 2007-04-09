@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.9 2006/09/26 18:37:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.10 2007/04/09 16:31:59 nyhm Exp $
 
 inherit eutils games
 
@@ -13,16 +13,14 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="sys-libs/zlib
-	app-arch/bzip2
-	=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/cdriso
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${PV}-makefile-cflags.patch"
+	epatch "${FILESDIR}"/${PV}-makefile-cflags.patch
 	cd "${S}"
 	sed -i '/strip/d' src/Linux/Makefile || die "sed failed"
 }
@@ -35,9 +33,9 @@ src_compile() {
 src_install() {
 	dodoc ReadMe.txt
 	cd src/Linux
-	exeinto "${GAMES_LIBDIR}"/psemu/plugins
+	exeinto "$(games_get_libdir)"/psemu/plugins
 	doexe libcdriso-* || die "doexe failed"
-	exeinto "${GAMES_LIBDIR}"/psemu/cfg
+	exeinto "$(games_get_libdir)"/psemu/cfg
 	doexe cfgCdrIso || die "doexe failed"
 	prepgamesdirs
 }
