@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r2.ebuild,v 1.5 2007/04/08 10:32:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r2.ebuild,v 1.6 2007/04/09 21:05:52 armin76 Exp $
 
 inherit autotools eutils multilib
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~s390 ~sparc x86"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs."
 HOMEPAGE="http://www.courier-mta.org/"
