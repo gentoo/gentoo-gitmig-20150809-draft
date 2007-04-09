@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.22 2007/04/08 12:54:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.23 2007/04/09 21:40:47 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> apel-10.7.ebuild:
+  ia64 stable wrt bug 173556
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> apel-10.7.ebuild:
   Stable on ppc64; bug #173556
