@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.13 2007/03/07 19:49:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.14 2007/04/09 14:15:58 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> vblade-14.ebuild:
+  Stable on amd64 wrt bug 173874
 
 *vblade-14 (07 Mar 2007)
 

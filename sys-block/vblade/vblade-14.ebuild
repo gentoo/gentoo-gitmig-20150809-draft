@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/vblade-14.ebuild,v 1.1 2007/03/07 19:49:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/vblade-14.ebuild,v 1.2 2007/04/09 14:15:58 welp Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sf.net/projects/aoetools/"
 SRC_URI="mirror://sourceforge/aoetools/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
