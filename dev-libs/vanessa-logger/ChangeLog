@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vanessa-logger
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.24 2007/02/22 01:14:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.25 2007/04/09 15:20:47 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> vanessa-logger-0.0.7.ebuild:
+  Stable on amd64
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
