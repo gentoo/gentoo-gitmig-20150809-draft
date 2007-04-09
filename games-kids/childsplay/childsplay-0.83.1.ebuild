@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.83.1.ebuild,v 1.2 2007/03/07 17:02:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.83.1.ebuild,v 1.3 2007/04/09 18:26:28 nyhm Exp $
 
 inherit games python
 
@@ -48,7 +48,7 @@ src_install() {
 	_ASSETMLDIR=/usr/share/assetml
 	_SCOREDIR=${GAMES_STATEDIR}
 	_SCOREFILE=${_SCOREDIR}/childsplay.score
-	_CPDIR=${GAMES_LIBDIR}/childsplay
+	_CPDIR=$(games_get_libdir)/childsplay
 	_SHAREDIR=${GAMES_DATADIR}/childsplay
 	_LIBDIR=${_CPDIR}/lib
 	_MODULESDIR=${_LIBDIR}
