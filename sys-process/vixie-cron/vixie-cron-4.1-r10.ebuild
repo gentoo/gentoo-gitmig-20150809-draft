@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.1 2007/04/08 21:50:44 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.2 2007/04/09 09:54:57 falco Exp $
 
 inherit cron toolchain-funcs pam
 
@@ -115,7 +115,7 @@ pkg_postinst() {
 		chgrp -R crontab "${ROOT}/var/spool/cron/crontabs" || die "chgrp failed"
 		cd "${ROOT}/var/spool/cron/crontabs/"
 		for cronfile in * ; do
-			[[ $cronfile == ".keep" ]] || chown "$cronfile:crontab" "$cronfile" \
+			[[ ! -f $cronfile ]] || chown "$cronfile:crontab" "$cronfile" \
 		    || ewarn "chown failed on $cronfile, you probably have an orphan file."
 		done
 	fi
