@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.18 2007/04/08 00:40:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.19 2007/04/09 16:27:25 zmedico Exp $
+
+  09 Apr 2007; Zac Medico <zmedico@gentoo.org> ChangeLog:
+  Fix broken Manifest due to commit without repoman.
 
 *acroread-asianfonts-7.0.8 (08 Apr 2007)
 
