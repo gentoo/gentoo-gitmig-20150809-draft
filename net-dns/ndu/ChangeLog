@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.12 2007/04/09 14:16:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.13 2007/04/09 14:36:37 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> ndu-0.4-r4.ebuild:
+  Stable on amd64 wrt bug 173858
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> ndu-0.4-r4.ebuild:
   x86 stable wrt bug 173858
