@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.27 2007/03/11 21:19:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.28 2007/04/09 16:33:31 mcummings Exp $
+
+  09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Test-Manifest-1.17.ebuild, Manifest:
+  Marking stable amd64
 
   11 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   +Test-Manifest-1.17.ebuild, +files/digest-Test-Manifest-1.17, Manifest:
