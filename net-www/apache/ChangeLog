@@ -1,6 +1,6 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.513 2007/04/09 11:03:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.514 2007/04/09 16:31:38 tove Exp $
 
   09 Apr 2007; Christian Heim <phreak@gentoo.org> apache-2.0.59-r2.ebuild:
   Fixing the built_with_use for apache-2.0.59, since apache-2.0 only supports
@@ -38,7 +38,7 @@
   Adding EXTRA_ECONF to the ./configure usage (fixes #125798 - thanks to samLT
   <samuelethiec at hotmail.com>).
 
-  09 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  09 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   -apache-1.3.34-r10.ebuild, -apache-1.3.34-r11.ebuild,
   -apache-2.0.54-r31.ebuild, -apache-2.0.58.ebuild, -apache-2.0.59.ebuild,
   -apache-2.2.2-r1.ebuild:
@@ -86,7 +86,7 @@
   apache-2.2.3.ebuild:
   Add ~x86-fbsd keyword.
 
-  08 Sep 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  08 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.34-r14.ebuild, apache-2.0.58-r2.ebuild:
   Stable on ia64.
 
@@ -118,13 +118,13 @@
   30 Jul 2006; Michael Stewart <vericgar@gentoo.org> +apache-2.0.59.ebuild:
   Version Bump
 
-  29 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.34-r14.ebuild, apache-2.0.58-r2.ebuild:
   Stable on alpha.
 
 *apache-1.3.37 (29 Jul 2006)
 
-  29 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org> +apache-1.3.37.ebuild:
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> +apache-1.3.37.ebuild:
   Bump version, bug 141986.
 
 *apache-2.2.2-r1 (26 Jul 2006)
@@ -181,7 +181,7 @@
 
 *apache-1.3.34-r13 (05 Jun 2006)
 
-  05 Jun 2006; Benedikt BÃ¶hm <hollow@gentoo.org> +apache-1.3.34-r13.ebuild:
+  05 Jun 2006; Benedikt Böhm <hollow@gentoo.org> +apache-1.3.34-r13.ebuild:
   fix #112919 and #106455
 
   05 Jun 2006; Michael Stewart <vericgar@gentoo.org>
@@ -227,7 +227,7 @@
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
 
-  22 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   apache-2.0.55-r2.ebuild:
   Add ~x86-fbsd keyword.
 
@@ -284,7 +284,7 @@
   apache-1.3.34-r11.ebuild:
   stable on amd64 wrt bug 118875
 
-  01 Feb 2006; Bryan Ãstergaard <kloeri@gentoo.org apache-1.3.34-r2.ebuild,
+  01 Feb 2006; Bryan Østergaard <kloeri@gentoo.org apache-1.3.34-r2.ebuild,
   apache-1.3.34-r11.ebuild:
   Stable on x86, bug 118875.
 
@@ -315,7 +315,7 @@
   +apache-1.3.34-r2.ebuild, +apache-1.3.34-r11.ebuild:
   Security bump to address CVE-2005-3352. Fixes bug 118875
 
-  19 Jan 2006; Bryan Ãstergaard <kloeri@gentoo.org
+  19 Jan 2006; Bryan Østergaard <kloeri@gentoo.org
   apache-2.0.54-r16.ebuild, apache-2.0.55-r1.ebuild:
   Stable on alpha and ia64.
 
@@ -363,7 +363,7 @@
   10 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> apache-2.0.55.ebuild:
   Stable on sparc wrt #117835
 
-  09 Jan 2006; Bryan Ãstergaard <kloeri@gentoo.org apache-2.0.55.ebuild:
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org apache-2.0.55.ebuild:
   Stable on x86, alpha and ia64, bug 117835.
 
   23 Dec 2005; Markus Rothe <corsair@gentoo.org> apache-1.3.34-r10.ebuild:
@@ -384,7 +384,7 @@
   apache-1.3.34-r1.ebuild, apache-1.3.34-r10.ebuild:
   Stable on hppa, ppc. See bug #109895.
 
-  15 Dec 2005; Bryan Ãstergaard <kloeri@gentoo.org apache-1.3.34-r1.ebuild,
+  15 Dec 2005; Bryan Østergaard <kloeri@gentoo.org apache-1.3.34-r1.ebuild,
   apache-1.3.34-r10.ebuild:
   Stable on alpha, ia64 and x86, bug 109895.
 
@@ -440,15 +440,15 @@
   02 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> apache-2.0.54-r31.ebuild:
   Stable on sh.
 
-  02 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.33-r12.ebuild, apache-2.0.54-r31.ebuild:
   ia64 stable.
 
-  24 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  24 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.54-r31.ebuild:
   Fix link to apache-upgrading doc.
 
-  24 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  24 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.33-r12.ebuild, apache-2.0.54-r31.ebuild:
   Stable on alpha.
 
@@ -487,7 +487,7 @@
   +apache-1.3.33-r12.ebuild, +apache-2.0.54-r31.ebuild:
   Apache is now multilib aware
 
-  18 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  18 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.33-r6.ebuild:
   Stable on ia64, bug 104807.
 
@@ -501,7 +501,7 @@
   apache-2.0.54-r15.ebuild:
   stable on amd64 wrt bug 104807
 
-  15 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  15 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.33-r6.ebuild, apache-2.0.54-r15.ebuild:
   Stable on alpha, bug 104807.
 
@@ -598,7 +598,7 @@
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> apache-1.3.33-r1.ebuild:
   Marked ppc stable for bug #86052.
 
-  13 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  13 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.54-r8.ebuild:
   Stable on alpha + ia64, bug 98358.
 
@@ -672,7 +672,7 @@
 
 *apache-2.0.54-r11 (08 Jun 2005)
 
-  08 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  08 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   +apache-2.0.54-r11.ebuild:
   Fix </IfDefine INFO> issue reported by Seemant Kulleen.
 
@@ -720,11 +720,11 @@
   13 May 2005; Lars Weiler <pylon@gentoo.org> apache-2.0.54-r4.ebuild:
   Stable on ppc; bug #91737 (again).
 
-  12 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.54-r4.ebuild:
   Stable on ia64, bug 91737.
 
-  12 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.54-r4.ebuild:
   Stable on alpha, bug 91737.
 
@@ -737,7 +737,7 @@
 *apache-2.0.54-r5 (12 May 2005)
 *apache-2.0.54-r4 (12 May 2005)
 
-  12 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   +apache-2.0.54-r4.ebuild, +apache-2.0.54-r5.ebuild:
   Fixed ebuilds, bug 92348 and bug 91737.
 
@@ -755,7 +755,7 @@
   Revision bumps to satisfy security bug #91737. 2.0.54-r2 is the (old-style)
   ebuild going stable, 2.0.54-r3 is the new-style ebuild. -r2 stable on x86.
 
-  11 May 2005; Bryan Ãstergaard <kloeri@gentoo.org> metadata.xml:
+  11 May 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   apache is a group effort so remove Hollow as maintainer.
 
   10 May 2005; Elfyn McBratney <beu@gentoo.org> :
@@ -775,10 +775,10 @@
   09 May 2005; Aron Griffis <agriffis@gentoo.org> apache-1.3.33-r1.ebuild:
   stable on ia64 #86052
 
-  06 May 2005; Bryan Ãstergaard <kloeri@gentoo.org> apache-2.0.54.ebuild:
+  06 May 2005; Bryan Østergaard <kloeri@gentoo.org> apache-2.0.54.ebuild:
   Fix broken SRC_URI.
 
-  05 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  05 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.29-r2.ebuild, apache-1.3.33-r2.ebuild, apache-1.3.33-r4.ebuild,
   apache-2.0.50.ebuild, apache-2.0.52.ebuild, apache-2.0.52-r1.ebuild,
   apache-2.0.52-r3.ebuild, apache-2.0.53.ebuild, apache-2.0.54.ebuild:
@@ -953,13 +953,13 @@
   23 Dec 2004; Stuart Herbert <stuart@gentoo.org> apache-2.0.52-r2.ebuild:
   Improvements for first-time installation of Apache
 
-  15 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> :
+  15 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> :
   Fix broken digest, bug 74531.
 
-  14 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-1.3.33.ebuild:
+  14 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.33.ebuild:
   Also fix src_uri in apache-1.x.
 
-  14 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  14 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.52-r1.ebuild:
   Use mirror://apache/.. in SRC_URI.
 
@@ -990,7 +990,7 @@
   05 Nov 2004; Olivier Crete <tester@gentoo.org> apache-2.0.52-r1.ebuild:
   Stable on x86 wrt security bug 70138
 
-  06 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  06 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.52-r1.ebuild:
   Stable on alpha, bug 70138.
 
@@ -1035,7 +1035,7 @@
   -files/patches/2.0.50-r1/00_ssl_engine.patch:
   Removed old patches repoman was complaining about.
 
-  30 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-1.3.33.ebuild:
+  30 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.33.ebuild:
   Stable on alpha, bug 68564.
 
   29 Oct 2004; Michael Hanselmann <hansmi@gentoo.org> apache-1.3.33.ebuild:
@@ -1057,7 +1057,7 @@
   29 Oct 2004; Stuart Herbert <stuart@gentoo.org> +apache-1.3.33.ebuild:
   Added masked ebuild, pending release of upstream's mod_ssl
 
-  26 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  26 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   apache-1.3.32-r1.ebuild:
   Stable on alpha, bug 68564.
 
@@ -1096,7 +1096,7 @@
   09 Oct 2004; <SeJo@gentoo.org> apache-2.0.52.ebuild:
   stable ppc gsla: 66807
 
-  09 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-2.0.52.ebuild:
+  09 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> apache-2.0.52.ebuild:
   Stable on alpha, bug 66807.
 
 *apache-2.0.52 (08 Oct 2004)
@@ -1107,7 +1107,7 @@
   23 Sep 2004; Olivier Crete <tester@gentoo.org> apache-2.0.51-r1.ebuild:
   Stable on x86 wrt security bug #64804
 
-  22 Sep 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  22 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.51-r1.ebuild:
   Stable on alpha, bug 64804.
 
@@ -1131,7 +1131,7 @@
   Added security patch from UPSTREAM for security issue CAN-2004-0811; thanks to
   chipig for the heads up
 
-  17 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> apache-2.0.51.ebuild:
+  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> apache-2.0.51.ebuild:
   Stable on alpha.
 
   16 Sep 2004; Stephen P. Becker <geoman@gentoo.org> apache-2.0.51.ebuild:
@@ -1213,7 +1213,7 @@
   08 Sep 2004; Joshua Kinard <kumba@gentoo.org> apache-2.0.50-r1.ebuild:
   Marked stable on mips.
 
-  09 Sep 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-2.0.50-r1.ebuild:
+  09 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> apache-2.0.50-r1.ebuild:
   Stable on alpha, bug 62626.
 
   08 Sep 2004; Olivier Crete <tester@gentoo.org> apache-2.0.50-r1.ebuild:
@@ -1307,7 +1307,7 @@
   04 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> apache-2.0.49-r4.ebuild:
   Stable on ppc.
 
-  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-2.0.49-r4.ebuild:
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> apache-2.0.49-r4.ebuild:
   Stable on alpha, bug #55441.
 
   02 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> apache-2.0.49-r4.ebuild:
@@ -1396,7 +1396,7 @@
   12 Jun 2004; Jason Wever <weeve@gentoo.org> apache-1.3.31-r2.ebuild:
   Stable on sparc wrt bug #53544.
 
-  12 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-1.3.31-r2.ebuild:
+  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.31-r2.ebuild:
   Stable on alpha, bug #53544.
 
 *apache-1.3.31-r2 (11 Jun 2004)
@@ -1484,7 +1484,7 @@
   apache-2.0.49-r3.ebuild:
   Marked stable on sparc and mips.
 
-  02 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-1.3.31-r1.ebuild,
+  02 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.31-r1.ebuild,
   apache-2.0.49-r3.ebuild:
   Stable on alpha, bug 51368.
 
@@ -1535,7 +1535,7 @@
   25 May 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r2.ebuild:
   Added static support for adding mod_ldap.
 
-  24 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> apache-1.3.31.ebuild:
+  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.31.ebuild:
   Stable on alpha.
 
   23 May 2004; Christian Birchinger <joker@gentoo.org> apache-1.3.31.ebuild:
