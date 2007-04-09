@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bridge-utils
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.37 2006/11/07 23:25:23 kanaka Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.38 2007/04/09 14:21:10 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> bridge-utils-1.2.ebuild:
+  x86 stable wrt bug 173864
 
   07 Nov 2006; Joel Martin <kanaka@gentoo.org> bridge-utils-1.0.6-r3.ebuild,
   bridge-utils-1.2.ebuild:
