@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.2.ebuild,v 1.3 2007/02/27 14:20:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.2.ebuild,v 1.4 2007/04/09 16:14:59 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -57,8 +57,7 @@ src_install() {
 	insinto /opt/bioapi/include
 	doins include/bioapi_util.h include/installdefs.h \
 		imports/cdsa/v2_0/inc/cssmtype.h
-	insinto /etc/env.d
-	doins ${FILESDIR}/20bioapi
+	doenvd ${FILESDIR}/20bioapi
 	insinto /etc/udev/rules.d
 	doins ${FILESDIR}/51-bioapi.rules
 }
