@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/uriparser
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.1 2007/04/09 14:22:52 rbu Exp $
+
+*uriparser-0.3.3 (09 Apr 2007)
+
+  09 Apr 2007; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
+  +uriparser-0.3.3.ebuild:
+  Initial ebuild, needed for >media-libs/libspiff-0.6.1
+
