@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.6.1-r1.ebuild,v 1.2 2004/12/14 22:26:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.6.1-r1.ebuild,v 1.3 2007/04/09 20:51:48 nyhm Exp $
 
 inherit eutils games
 
@@ -34,7 +34,7 @@ src_unpack() {
 	rm -f start.py start_server.py start_server_gui.py
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
-		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
+		-e "s:GENTOO_LIBDIR:$(games_get_libdir)/${PN}:" \
 		"${WORKDIR}/bins/openrpg" \
 		"${WORKDIR}/bins/openrpg-server" \
 		"${WORKDIR}/bins/openrpg-server-gui" \
@@ -46,9 +46,9 @@ src_install() {
 	dogamesbin "${WORKDIR}/bins/"*
 	dodoc "${WORKDIR}/docs/"*
 
-	insinto "${GAMES_LIBDIR}/${PN}"
+	insinto "$(games_get_libdir)/${PN}"
 	doins *.py || die "doins failed"
-	cp -r orpg "${D}/${GAMES_LIBDIR}/${PN}/" || die "cp failed"
+	cp -r orpg "${D}/$(games_get_libdir)/${PN}/" || die "cp failed"
 
 	dodir "${GAMES_DATADIR}/${PN}/orpg"
 	cp -r templates/ "${D}/${GAMES_DATADIR}/${PN}/orpg/" || die "cp failed"

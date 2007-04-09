@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.5 2006/12/21 23:29:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.6 2007/04/09 20:54:11 nyhm Exp $
 
 inherit eutils games
 
@@ -17,12 +17,11 @@ IUSE=""
 
 RDEPEND="dev-libs/libxml2
 	media-libs/sdl-mixer
-	media-libs/libsdl
-	sys-libs/zlib"
+	media-libs/libsdl"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/u4"
+S=${WORKDIR}/u4
 
 pkg_setup() {
 	if ! built_with_use media-libs/sdl-mixer timidity ; then
@@ -36,9 +35,9 @@ src_unpack() {
 	# xu4 will read the data files right out of the zip files
 	# but we want the docs from the original.
 	unpack ${P}.tar.gz
-	cp ${DISTDIR}/{ultima4-1.01.zip,u4upgrad.zip} . \
+	cp "${DISTDIR}"/{ultima4-1.01.zip,u4upgrad.zip} . \
 		|| die "cp failed"
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	mv ultima4-1.01.zip ultima4.zip
 	mkdir u4-dos
 	cd u4-dos
@@ -46,7 +45,7 @@ src_unpack() {
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-savegame.patch"
 	sed -i \
-		-e "s:/usr/local/lib/u4:${GAMES_LIBDIR}/u4:" src/u4file.c \
+		-e "s:/usr/local/lib/u4:$(games_get_libdir)/u4:" src/u4file.c \
 		|| die "sed u4file failed"
 	sed -i \
 		-e 's:-Wall:$(E_CFLAGS):' src/Makefile \
@@ -59,20 +58,20 @@ src_compile() {
 		E_CFLAGS="${CFLAGS}" \
 		bindir="${GAMES_BINDIR}" \
 		datadir="/usr/share" \
-		libdir="${GAMES_LIBDIR}" \
+		libdir="$(games_get_libdir)" \
 		|| die "emake failed"
 }
 
 src_install() {
-	make -C src \
+	emake -C src \
 		DEBUGCFLAGS= \
 		E_CFLAGS="${CFLAGS}" \
 		bindir="${D}${GAMES_BINDIR}" \
 		datadir="${D}/usr/share" \
-		libdir="${D}${GAMES_LIBDIR}" \
+		libdir="${D}$(games_get_libdir)" \
 		install || die "make install failed"
 	dodoc AUTHORS README doc/*txt "${WORKDIR}/u4-dos/ULTIMA4/"*TXT
-	insinto "${GAMES_LIBDIR}/u4"
+	insinto "$(games_get_libdir)/u4"
 	doins "${WORKDIR}/"*zip || die "doins failed"
 	prepgamesdirs
 }
