@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.99.2.ebuild,v 1.1 2006/07/28 12:17:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.99.2.ebuild,v 1.2 2007/04/09 14:12:15 lucass Exp $
 
 inherit distutils
 
@@ -26,8 +26,7 @@ src_install() {
 	distutils_src_install
 
 	# add R libs to ld.so.conf
-	insinto /etc/env.d
-	doins ${FILESDIR}/90rpy
+	doenvd "${FILESDIR}/90rpy"
 }
 
 pkg_postinst() {
