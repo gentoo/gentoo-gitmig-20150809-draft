@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.5 2007/03/12 15:07:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.6 2007/04/09 18:15:05 nyhm Exp $
 
 inherit eutils subversion toolchain-funcs games
 
@@ -40,7 +40,6 @@ DEPEND="${UIDEPEND}"
 
 S=${WORKDIR}
 dir=${GAMES_DATADIR}/${MY_PN}
-libdir=${GAMES_LIBDIR}/${PN}
 
 default_client() {
 	if use opengl || use sdl || ! use dedicated ; then
@@ -105,7 +104,7 @@ src_unpack() {
 	# Change default sound driver and its location
 	sed -i src/client/snd_dma.c \
 		-e "s:\"oss\":\"${snd_drv}\":" \
-		-e "s:\"\./snd:\"${libdir}/snd:" \
+		-e "s:\"\./snd:\"$(games_get_libdir)/${PN}/snd:" \
 		|| die "sed snd_dma.c failed"
 }
 
@@ -132,7 +131,7 @@ src_compile() {
 		TYPE="${type}" \
 		DATADIR="${dir}" \
 		LOCALBASE=/usr \
-		LIBDIR="${GAMES_LIBDIR}/${PN}" \
+		LIBDIR="$(games_get_libdir)"/${PN} \
 		WITH_QMAX=$(yesno qmax) \
 		BUILD_3ZB2=$(yesno mods) \
 		BUILD_CTF=$(yesno mods) \
@@ -165,11 +164,11 @@ src_install() {
 			|| die "newgamesbin QuDos-ded failed"
 	fi
 
-	insinto "${libdir}"
+	insinto "$(games_get_libdir)"/${PN}
 	doins -r ${MY_PN}/* || die "doins libs failed"
-	rm "${D}/${libdir}"/QuDos
+	rm "${D}/$(games_get_libdir)"/${PN}/QuDos
 
-	insinto "${libdir}"/baseq2
+	insinto "$(games_get_libdir)"/${PN}/baseq2
 	doins data/qudos.pk3 || die "doins qudos.pk3 failed"
 
 	dodoc $(find docs -name \*.txt) docs/q2_orig/README*

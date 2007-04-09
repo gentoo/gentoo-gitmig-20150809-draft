@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r1.ebuild,v 1.2 2007/03/12 15:05:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r1.ebuild,v 1.3 2007/04/09 18:10:52 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -78,7 +78,7 @@ src_compile() {
 		&& svgaconf="--with-svga=/usr" \
 		|| svgaconf="--without-svga"
 
-	addpredict ${GAMES_LIBDIR}
+	addpredict "$(games_get_libdir)"
 	egamesconf \
 		$(use_enable ncurses curses) \
 		$(use_enable vorbis) \
@@ -96,8 +96,8 @@ src_compile() {
 		--enable-sound \
 		--disable-optimize \
 		${debugopts} \
-		--with-global-cfg=${GAMES_SYSCONFDIR}/quakeforge.conf \
-		--with-sharepath=${GAMES_DATADIR}/quake1 \
+		--with-global-cfg="${GAMES_SYSCONFDIR}"/quakeforge.conf \
+		--with-sharepath="${GAMES_DATADIR}"/quake1 \
 		--with-clients=${clients} \
 		--with-servers=${servers} \
 		--with-tools=${tools} \
@@ -106,8 +106,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
-	mv ${D}/${GAMES_PREFIX}/include ${D}/usr/
+	emake DESTDIR="${D}" install || die "install failed"
+	mv "${D}/${GAMES_PREFIX}"/include "${D}"/usr/
 	dodoc ChangeLog NEWS TODO doc/*
 	prepgamesdirs
 }

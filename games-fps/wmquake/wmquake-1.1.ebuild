@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.7 2007/03/12 15:47:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.8 2007/04/09 18:23:25 nyhm Exp $
 
 inherit games
 
@@ -25,9 +25,9 @@ src_unpack() {
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}/wmquake"
+	exeinto "$(games_get_libdir)/wmquake"
 	doexe wmquake || die "doexe failed"
-	games_make_wrapper wmquake "${GAMES_LIBDIR}/wmquake/wmquake" "${GAMES_DATADIR}/quake1/"
+	games_make_wrapper wmquake "$(games_get_libdir)/wmquake/wmquake" "${GAMES_DATADIR}/quake1/"
 	dodoc README*
 	prepgamesdirs
 }

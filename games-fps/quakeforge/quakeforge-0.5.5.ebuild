@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.17 2007/03/12 15:05:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.18 2007/04/09 18:10:52 nyhm Exp $
 
 inherit eutils games
 
@@ -77,7 +77,7 @@ src_compile() {
 		&& svgaconf="--with-svga=/usr" \
 		|| svgaconf="--without-svga"
 
-	addpredict ${GAMES_LIBDIR}
+	addpredict $(games_get_libdir)
 	egamesconf \
 		$(use_enable ncurses curses) \
 		$(use_enable vorbis) \

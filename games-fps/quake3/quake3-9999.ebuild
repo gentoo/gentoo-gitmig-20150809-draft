@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.11 2007/01/31 08:04:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.12 2007/04/09 18:07:58 nyhm Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -71,7 +71,7 @@ src_compile() {
 		ARCH=$(tc-arch-kernel) \
 		OPTIMIZE="${CFLAGS}" \
 		DEFAULT_BASEDIR="${GAMES_DATADIR}/quake3" \
-		DEFAULT_LIBDIR="${GAMES_LIBDIR}/quake3" \
+		DEFAULT_LIBDIR="$(games_get_libdir)/quake3" \
 		|| die
 }
 
@@ -92,9 +92,9 @@ src_install() {
 		newgamesbin ${old_x} ${x} || die "newgamesbin ${x}"
 		dosym ${x} "${GAMES_BINDIR}"/${x/io}
 	done
-	exeinto "${GAMES_LIBDIR}"/${PN}/baseq3
+	exeinto "$(games_get_libdir)"/${PN}/baseq3
 	doexe baseq3/*.so || die "baseq3 .so"
-	exeinto "${GAMES_LIBDIR}"/${PN}/missionpack
+	exeinto "$(games_get_libdir)"/${PN}/missionpack
 	doexe missionpack/*.so || die "missionpack .so"
 
 	prepgamesdirs
