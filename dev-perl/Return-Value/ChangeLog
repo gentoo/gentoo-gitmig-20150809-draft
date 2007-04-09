@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Return-Value
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.4 2007/03/27 22:03:50 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.5 2007/04/09 15:07:01 mcummings Exp $
+
+  09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Return-Value-1.302.ebuild:
+  Marking stable amd64
 
   27 Mar 2007; Matti Bickel <mabi@gentoo.org> Return-Value-1.302.ebuild:
   ~ppc added (bug #165190)

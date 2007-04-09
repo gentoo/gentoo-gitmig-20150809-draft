@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Amazon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.11 2007/04/06 20:19:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.12 2007/04/09 15:36:50 mcummings Exp $
+
+  09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Net-Amazon-0.39.ebuild:
+  Marking stable amd64
 
 *Net-Amazon-0.40 (06 Apr 2007)
 
