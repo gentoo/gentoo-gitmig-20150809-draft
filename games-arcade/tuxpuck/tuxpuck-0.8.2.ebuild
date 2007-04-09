@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2.ebuild,v 1.7 2007/01/26 08:31:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2.ebuild,v 1.8 2007/04/09 21:26:23 welp Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.efd.lth.se/~d00jkr/tuxpuck/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.5
