@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.2.ebuild,v 1.4 2007/01/05 16:36:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.2.ebuild,v 1.5 2007/04/09 12:33:06 pclouds Exp $
 
 inherit eutils
 
@@ -40,8 +40,7 @@ src_install() {
 		make DESTDIR=${D} install -C src/unikey-gtk
 	fi
 	dobin src/xim/ukxim src/gui/unikey
-	insinto /etc/env.d
-	doins ${FILESDIR}/01x-unikey
+	doenvd ${FILESDIR}/01x-unikey
 	dodoc doc/*
 }
 
