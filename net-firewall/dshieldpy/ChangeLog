@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/dshieldpy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.4 2007/02/22 02:06:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.5 2007/04/09 14:02:21 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> dshieldpy-3.2.ebuild:
+  Stable on amd64 wrt bug 173905
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
