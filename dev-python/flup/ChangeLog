@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.2 2007/03/27 16:27:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.3 2007/04/09 22:59:16 mabi Exp $
+
+  09 Apr 2007; Matti Bickel <mabi@gentoo.org> flup-0.5_p2307.ebuild:
+  ~ppc added (bug #100784)
 
   27 Mar 2007; Raúl Porcel <armin76@gentoo.org> flup-0.5_p2307.ebuild:
   Add ~ia64 wrt bug 100784
