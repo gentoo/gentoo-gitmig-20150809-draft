@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.60 2007/03/05 14:19:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.61 2007/04/09 07:15:26 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> swt-3.2.2.ebuild:
+  Keyworded ~amd64 wrt bug 169456
 
 *swt-3.2.2 (05 Mar 2007)
 
