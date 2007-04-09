@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.43 2007/02/28 09:32:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.44 2007/04/09 13:56:18 nichoj Exp $
+
+  09 Apr 2007; Joshua Nichols <nichoj@gentoo.org> bcel-5.2.ebuild:
+  Added app-arch/zip depend for dosrc.
 
 *bcel-5.2 (28 Feb 2007)
 

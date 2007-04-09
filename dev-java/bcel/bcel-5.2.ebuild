@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.2.ebuild,v 1.1 2007/02/28 09:32:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.2.ebuild,v 1.2 2007/04/09 13:56:18 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -15,6 +15,7 @@ IUSE="doc source"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
+	source? ( app-arch/zip )
 	${COMMON_DEP}"
 
 src_install() {
