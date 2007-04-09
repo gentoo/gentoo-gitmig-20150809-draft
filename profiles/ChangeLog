@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.272 2007/04/08 16:59:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.273 2007/04/09 10:37:10 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  net-misc/e100 has been removed from the tree
 
   08 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Update mask for mozilla-thunderbird, enigmail
