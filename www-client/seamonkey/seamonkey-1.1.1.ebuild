@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.12 2007/03/26 19:28:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.13 2007/04/09 12:51:31 armin76 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
@@ -9,7 +9,7 @@ EMVER="0.94.1"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.source.tar.bz2
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz ) )"
 
@@ -232,8 +232,7 @@ src_install() {
 
 	# Install env.d snippet, which isn't necessary for running mozilla, but
 	# might be necessary for programs linked against firefox
-	insinto /etc/env.d
-	doins ${FILESDIR}/10${PN}
+	doenvd ${FILESDIR}/10${PN}
 	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10${PN}
 
 	# Install rebuild script since mozilla-bin doesn't support registration yet

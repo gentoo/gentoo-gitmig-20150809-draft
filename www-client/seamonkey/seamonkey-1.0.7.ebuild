@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.7.ebuild,v 1.11 2007/03/26 19:28:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.7.ebuild,v 1.12 2007/04/09 12:51:31 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -225,8 +225,7 @@ src_install() {
 
 	# Install env.d snippet, which isn't necessary for running mozilla, but
 	# might be necessary for programs linked against firefox
-	insinto /etc/env.d
-	doins ${FILESDIR}/10${PN}
+	doenvd ${FILESDIR}/10${PN}
 	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10${PN}
 
 	# Install rebuild script since mozilla-bin doesn't support registration yet

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.60 2007/03/26 19:28:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.61 2007/04/09 12:51:31 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.0.7.ebuild,
+  seamonkey-1.0.8.ebuild, seamonkey-1.1.1.ebuild:
+  Use doenvd, bug 173884
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.0.7.ebuild,
   seamonkey-1.0.8.ebuild, seamonkey-1.1.1.ebuild:
