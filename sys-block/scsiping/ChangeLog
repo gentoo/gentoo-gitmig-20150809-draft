@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/scsiping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiping/ChangeLog,v 1.4 2007/02/22 11:14:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiping/ChangeLog,v 1.5 2007/04/09 17:37:02 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> scsiping-0.0.1.ebuild:
+  Stable on amd64 wrt bug 173872
 
   22 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Fix Manifest
