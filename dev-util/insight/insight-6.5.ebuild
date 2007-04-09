@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.5.ebuild,v 1.7 2006/11/28 03:08:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.5.ebuild,v 1.8 2007/04/09 12:15:32 betelgeuse Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	myconf="$(use_enable nls)"
 
 	strip-linguas -i bfd/po opcodes/po
-	
+
 	./configure --prefix="${INSIGHTDIR}" \
 		--mandir="${D}${INSIGHTDIR}/share/man"	\
 		--infodir="${D}${INSIGHTDIR}/share/info"	\
@@ -46,6 +46,5 @@ src_install () {
 		mandir="${D}${INSIGHTDIR}/share/man" \
 		infodir="${D}${INSIGHTDIR}/share/info" \
 		install || die
-	insinto /etc/env.d
-	doins "${FILESDIR}/99insight"
+	doenvd "${FILESDIR}/99insight"
 }
