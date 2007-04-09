@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.3 2007/04/09 11:24:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.4 2007/04/09 11:35:09 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -11,11 +11,11 @@ SRC_URI="http://xml.apache.org/${PN}/dist/xml-${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="doc"
+IUSE=""
 
 # breaks with XML apis of Java 1.5
 DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.3* )
-	dev-java/ant"
+	dev-java/ant-core"
 RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.3* )"
 
 S=${WORKDIR}/xml-${P}
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	export XINDICE_HOME=${S}
-	eant $(use doc docs)
+	eant
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/xindice
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.13 2007/04/09 11:24:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.14 2007/04/09 11:35:09 betelgeuse Exp $
+
+  09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> xindice-1.0-r4.ebuild:
+  The ebuild currently always installs docs so remove doc from IUSE and depend
+  on just ant-core instead of the full ant.
 
   09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> xindice-1.0-r4.ebuild:
   Use doevnd and newinitd.
