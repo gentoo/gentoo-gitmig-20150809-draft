@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.9 2007/04/04 22:07:20 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.10 2007/04/09 13:26:08 ian Exp $
+
+  09 Apr 2007; Christian Hartmann <ian@gentoo.org> -perl-info-0.12.ebuild,
+  -perl-info-0.13.ebuild:
+  Cleanup
 
   04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> perl-info-0.14.ebuild:
   Marked alpha as per bug #154918
