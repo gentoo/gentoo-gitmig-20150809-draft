@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padjoy/psemu-padjoy-0.82.ebuild,v 1.6 2006/11/23 22:17:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padjoy/psemu-padjoy-0.82.ebuild,v 1.7 2007/04/09 17:00:56 nyhm Exp $
 
 inherit games
 
@@ -22,14 +22,14 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e "s:-O2 -fomit-frame-pointer:${CFLAGS}:" Makefile \
-			|| die "sed Makefile failed"
+		|| die "sed failed"
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}/psemu/plugins"
-	doexe libpadJoy-*   || die "doexe failed"
-	exeinto "${GAMES_LIBDIR}/psemu/cfg"
-	doexe cfgPadJoy     || die "doexe failed (2)"
-	dodoc ../readme.txt || die "dodoc failed"
+	exeinto "$(games_get_libdir)"/psemu/plugins
+	doexe libpadJoy-* || die "doexe failed"
+	exeinto "$(games_get_libdir)"/psemu/cfg
+	doexe cfgPadJoy || die "doexe cfgPadJoy failed"
+	dodoc ../readme.txt
 	prepgamesdirs
 }

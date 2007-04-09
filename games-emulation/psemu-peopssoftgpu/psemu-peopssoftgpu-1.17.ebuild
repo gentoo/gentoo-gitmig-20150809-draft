@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.5 2006/10/09 10:36:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.6 2007/04/09 17:05:01 nyhm Exp $
 
 inherit eutils games
 
@@ -18,7 +18,6 @@ RDEPEND="=x11-libs/gtk+-1*
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x86? ( dev-lang/nasm )
-	amd64? ( dev-lang/nasm )
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto"
 
@@ -57,18 +56,18 @@ src_compile() {
 		sed -i \
 			-e 's:mk.x11:mk.fpse:g' Makefile \
 			|| die "sed failed"
-		make clean || die "make clean failed"
+		emake clean || die "emake clean failed"
 		emake OPTFLAGS="${CFLAGS}" || die "sdl build failed"
 	fi
 }
 
 src_install() {
 	dodoc *.txt
-	insinto "${GAMES_LIBDIR}/psemu/cfg"
-	doins gpuPeopsSoftX.cfg
-	exeinto "${GAMES_LIBDIR}/psemu/plugins"
+	insinto "$(games_get_libdir)"/psemu/cfg
+	doins gpuPeopsSoftX.cfg || die "doins failed"
+	exeinto "$(games_get_libdir)"/psemu/plugins
 	doexe src/libgpuPeops* || die "doexe failed"
-	exeinto "${GAMES_LIBDIR}/psemu/cfg"
+	exeinto "$(games_get_libdir)"/psemu/cfg
 	doexe src/cfgPeopsSoft || die "doexe failed"
 	prepgamesdirs
 }

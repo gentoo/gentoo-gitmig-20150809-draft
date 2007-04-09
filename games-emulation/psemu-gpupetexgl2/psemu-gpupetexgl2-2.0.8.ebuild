@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetexgl2/psemu-gpupetexgl2-2.0.8.ebuild,v 1.1 2006/09/29 19:41:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetexgl2/psemu-gpupetexgl2-2.0.8.ebuild,v 1.2 2007/04/09 16:57:33 nyhm Exp $
 
 inherit games
 
@@ -12,9 +12,9 @@ SRC_URI="http://www.pbernert.com/gpupetexgl${PV//.}.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
-RESTRICT="strip"
+KEYWORDS="x86"
 IUSE=""
+RESTRICT="strip"
 
 RDEPEND="virtual/opengl"
 DEPEND="${RDEPEND}
@@ -23,14 +23,14 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}/psemu/plugins"
+	exeinto "$(games_get_libdir)"/psemu/plugins
 	doexe lib* || die "doexe failed"
-	exeinto "${GAMES_LIBDIR}/psemu/cfg"
+	exeinto "$(games_get_libdir)"/psemu/cfg
 	doexe cfgPeteXGL2 || die "doexe failed"
-	insinto "${GAMES_LIBDIR}/psemu/cfg"
+	insinto "$(games_get_libdir)"/psemu/cfg
 	doins gpuPeteXGL2.cfg || die "doins failed"
 	# now do our shader files!
-	insinto "${GAMES_LIBDIR}/psemu/shaders"
+	insinto "$(games_get_libdir)"/psemu/shaders
 	doins *.fp *.vp *.slf *.slv || die "doins failed"
 	dodoc *.txt
 	prepgamesdirs
