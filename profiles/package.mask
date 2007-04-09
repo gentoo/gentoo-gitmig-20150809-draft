@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7106 2007/04/09 19:06:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7107 2007/04/09 20:03:29 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,21 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (09 Apr 2007)
+# Pending removal 09 Jun 2007, for treecleaners
+# app-admin/cpu -> bug 173064
+# app-admin/quickswitch -> bug 134335
+# app-misc/jive -> bug 142838
+# app-text/mgv -> bug 154645
+# net-misc/dhcp-agent -> bug 168565
+# x11-plugins/wmmail -> bug 73987
+app-admin/cpu
+app-admin/quickswitch
+app-misc/jive
+app-text/mgv
+net-misc/dhcp-agent
+x11-plugins/wmmail
 
 # Rémi Cardona <remi@gentoo.org> (08 Apr 2007)
 # Meta packages for Gnome 2.18.0

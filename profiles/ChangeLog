@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.273 2007/04/09 10:37:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.274 2007/04/09 20:03:29 armin76 Exp $
+
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Mask various packages for treecleaners, app-admin/cpu -> bug 173064,
+  app-admin/quickswitch -> bug 134335, app-misc/jive -> bug 142838,
+  app-text/mgv -> bug 154645, net-misc/dhcp-agent -> bug 168565,
+  x11-plugins/wmmail -> bug 73987
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   net-misc/e100 has been removed from the tree
