@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wiggle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.14 2007/04/09 14:10:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.15 2007/04/09 14:39:04 welp Exp $
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> ChangeLog:
+  Stable on amd64 wrt bug 173855
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> wiggle-0.6-r3.ebuild:
   x86 stable wrt bug 173855
