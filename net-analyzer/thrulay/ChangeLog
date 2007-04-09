@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thrulay
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.6 2007/03/20 20:15:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.7 2007/04/09 17:12:39 nixnut Exp $
+
+  09 Apr 2007; nixnut <nixnut@gentoo.org> thrulay-0.8.ebuild:
+  Stable on ppc wrt bug 173857
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> thrulay-0.8.ebuild:
   x86 stable
