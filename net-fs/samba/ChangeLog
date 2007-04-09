@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.275 2007/03/01 11:53:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.276 2007/04/09 08:17:46 dev-zero Exp $
+
+*samba-3.0.24-r1 (09 Apr 2007)
+
+  09 Apr 2007; Tiziano Müller <dev-zero@gentoo.org> +files/samba-conf,
+  +files/samba-init, +samba-3.0.24-r1.ebuild:
+  Removed obsolete patches. Moved conf.d/init.d files out of the tarball.
+  Fixed bug #170072 (thanks to Roy Marples)
 
   01 Mar 2007; Daniel Black <dragonheart@gentoo.org> Manifest:
   digest fix - bug #168842
