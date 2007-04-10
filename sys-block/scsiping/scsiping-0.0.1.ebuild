@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiping/scsiping-0.0.1.ebuild,v 1.4 2007/04/09 17:37:02 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiping/scsiping-0.0.1.ebuild,v 1.5 2007/04/10 19:46:33 robbat2 Exp $
 
 DESCRIPTION="SCSIPing pings a host on the SCSI-chain"
 HOMEPAGE="http://www.vanheusden.com/Linux/"
@@ -12,8 +12,13 @@ IUSE=""
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	sed -i -e '/strip scsiping/d' ${S}/Makefile
+}
+
 src_compile() {
-	emake DEBUG=''
+	emake DEBUG='' CFLAGS="${CFLAGS}"
 }
 
 src_install() {
