@@ -1,0 +1,6 @@
+# ChangeLog for MIPS profile directory
+# Copyright 2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.1 2007/04/10 18:52:22 iluxa Exp $
+
+  10 Apr 2007; Ilya A. Volynets-Evenbakh  <iluxa@gentoo.org> use.mask:
+  use-mask dbus
