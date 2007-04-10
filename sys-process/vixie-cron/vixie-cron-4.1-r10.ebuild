@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.6 2007/04/10 18:16:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.7 2007/04/10 23:15:17 corsair Exp $
 
 inherit cron toolchain-funcs pam
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${GENTOO_PATCH_REV}.patch.bz2"
 
 LICENSE="as-is"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="selinux pam debug"
 
 DEPEND="selinux? ( sys-libs/libselinux )
