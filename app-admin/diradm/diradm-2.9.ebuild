@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.ebuild,v 1.2 2007/03/22 22:13:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.ebuild,v 1.3 2007/04/10 09:17:12 robbat2 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc64 ~ppc ~x86 ~amd64"
-IUSE="samba irixpasswd automount"
+IUSE="samba irixpasswd automount test"
 DEPEND="net-nds/openldap
 	sys-apps/gawk
 	sys-apps/coreutils
