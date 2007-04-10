@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.105 2007/04/07 17:02:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.106 2007/04/10 22:15:38 gustavoz Exp $
+
+  10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> sbcl-1.0.1.ebuild,
+  sbcl-1.0.4.ebuild:
+  Keyword ~sparc for 1.0.4 wrt #173669 and -sparc for 1.0.1 wrt #173641
 
   07 Apr 2007; Fabian Groffen <grobian@gentoo.org> sbcl-0.9.17.ebuild,
   sbcl-0.9.18.ebuild, sbcl-1.0.ebuild, sbcl-1.0.1.ebuild, sbcl-1.0.4.ebuild:
