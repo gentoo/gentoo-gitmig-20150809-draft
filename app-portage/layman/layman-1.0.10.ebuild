@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.10.ebuild,v 1.3 2007/04/10 06:24:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.10.ebuild,v 1.4 2007/04/10 17:19:12 gustavoz Exp $
 
 inherit eutils distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://build.pardus.de/downloads/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 S=${WORKDIR}/${PF}
 
