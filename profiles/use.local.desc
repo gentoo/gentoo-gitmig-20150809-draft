@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2734 2007/04/08 20:50:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2735 2007/04/10 14:40:00 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -9,6 +9,7 @@
 
 app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 app-accessibility/festival:mbrola - Adds support for mbrola voices
+app-accessibility/freetts:jsapi - build Java Speech API (JSAPI) support
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/gnome-speech:freetts - Adds support for the freetts speech driver
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty

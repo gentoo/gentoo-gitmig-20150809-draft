@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.274 2007/04/09 20:03:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.275 2007/04/10 14:40:00 betelgeuse Exp $
+
+  10 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Add jsapi local use flag for app-accessibility/freetts.
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask various packages for treecleaners, app-admin/cpu -> bug 173064,
