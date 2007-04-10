@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.0-r1.ebuild,v 1.4 2007/04/02 17:50:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.0-r1.ebuild,v 1.5 2007/04/10 00:47:45 cardoe Exp $
 
 inherit eutils autotools multilib
 
@@ -20,7 +20,7 @@ MAKEOPTS="$MAKEOPTS -j1"
 RDEPEND=">=dev-libs/glib-2.7
 		>=dev-libs/dbus-glib-0.61
 		>=x11-libs/libX11-1.0.0
-		pam? ( >=sys-libs/pam-0.99.7.1 )"
+		pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
