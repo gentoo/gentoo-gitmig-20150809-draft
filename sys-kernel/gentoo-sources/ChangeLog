@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.380 2007/04/08 13:06:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.381 2007/04/10 04:03:37 josejx Exp $
+
+  10 Apr 2007; Joseph Jezak <josejx@gentoo.org>
+  gentoo-sources-2.6.20-r5.ebuild:
+  Marked ppc stable for bug #173702.
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org>
   gentoo-sources-2.6.20-r5.ebuild:
