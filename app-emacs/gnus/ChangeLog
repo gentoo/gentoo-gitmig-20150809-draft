@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.23 2006/09/22 16:07:39 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.24 2007/04/10 19:56:34 opfer Exp $
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> gnus-5.10.8.ebuild:
+  added FDL license, restructured, added a die comment and added some quotes
 
   22 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org> -gnus-5.10.3.ebuild,
   -gnus-5.10.6.ebuild:

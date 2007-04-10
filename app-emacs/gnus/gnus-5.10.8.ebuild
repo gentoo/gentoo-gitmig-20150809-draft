@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.7 2006/09/21 15:04:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.8 2007/04/10 19:56:34 opfer Exp $
 
 inherit elisp
 
@@ -9,11 +9,12 @@ IUSE=""
 DESCRIPTION="The Gnus newsreader and mail-reader"
 HOMEPAGE="http://www.gnus.org/"
 SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 
-DEPEND="virtual/emacs"
+DEPEND=""
+SITEFILE=70gnus-gentoo.el
 
 src_compile() {
 	local myconf
@@ -27,15 +28,15 @@ src_compile() {
 }
 
 src_install() {
-	einstall \
-		lispdir=${D}/usr/share/emacs/site-lisp/gnus \
-		etcdir=${D}/usr/share/emacs/etc \
-		|| die
+	emake \
+		lispdir="${D}/usr/share/emacs/site-lisp/gnus" \
+		etcdir="${D}/usr/share/emacs/etc" install \
+		|| die "emake install failed"
 
-	elisp-site-file-install ${FILESDIR}/70${PN}-gentoo.el
+	elisp-site-file-install "{FILESDIR}/${SITEFILE}"
 
 	dodoc ChangeLog GNUS-NEWS README todo
 
 	# fix info documentation
-	find ${D}/usr/share/info -type f -exec mv {} {}.info \;
+	find "${D}/usr/share/info" -type f -exec mv {} {}.info \;
 }
