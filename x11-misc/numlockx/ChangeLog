@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.18 2007/02/06 01:31:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.19 2007/04/10 09:07:02 nelchael Exp $
+
+*numlockx-1.1 (10 Apr 2007)
+
+  10 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> +numlockx-1.1.ebuild:
+  Version bump, see bug #172891.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
