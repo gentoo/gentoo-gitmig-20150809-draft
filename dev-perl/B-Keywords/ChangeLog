@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/B-Keywords
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.3 2007/04/08 21:34:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.4 2007/04/10 13:43:13 mcummings Exp $
+
+  10 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  B-Keywords-1.06.ebuild:
+  Marking sparc stable
 
   08 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   B-Keywords-1.06.ebuild:
