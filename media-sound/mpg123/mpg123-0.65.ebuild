@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.65.ebuild,v 1.5 2007/04/10 03:51:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.65.ebuild,v 1.6 2007/04/10 04:17:04 jer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86"
 IUSE="mmx 3dnow alsa oss sdl esd nas jack portaudio"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
@@ -61,7 +61,7 @@ src_compile() {
 
 	econf \
 	      --with-optimization=0 \
-	      --with-audio=$audiodev \
+	      --with-audio=${audiodev} \
 	      ${myconf} || die "econf failed"
 
 	emake || die "emake failed"
