@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Array-Compare
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Compare/ChangeLog,v 1.14 2007/01/19 18:11:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Compare/ChangeLog,v 1.15 2007/04/10 15:22:41 yuval Exp $
+
+*Array-Compare-1.14 (10 Apr 2007)
+
+  10 Apr 2007; Yuval Yaari <yuval@gentoo.org> +Array-Compare-1.14.ebuild:
+  Version bump
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Array-Compare-1.13.ebuild:
