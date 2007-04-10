@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.114 2007/03/09 10:15:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.115 2007/04/10 08:07:20 phosphan Exp $
+
+  10 Apr 2007; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.17.ebuild:
+  Using doenvd instead of insinto /etc/env.d, bug #173884
 
   09 Mar 2007; Patrick Kursawe <phosphan@gentoo.org>
   -files/canoscan-focus.patch, -files/libusbscanner-device.patch,
