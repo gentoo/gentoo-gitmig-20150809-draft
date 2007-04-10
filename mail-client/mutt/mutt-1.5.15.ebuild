@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15.ebuild,v 1.1 2007/04/09 21:27:22 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15.ebuild,v 1.2 2007/04/10 17:28:36 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -136,7 +136,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
