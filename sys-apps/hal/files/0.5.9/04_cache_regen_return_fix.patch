@@ -1,0 +1,13 @@
+Index: b/hald/mmap_cache.c
+===================================================================
+--- a/hald/mmap_cache.c	2007-03-07 16:55:02.000000000 -0500
++++ b/hald/mmap_cache.c	2007-04-10 10:56:10.000000000 -0400
+@@ -137,7 +137,7 @@
+ 	HAL_INFO (("In regen_cache_cb exit_type=%d, return_code=%d", exit_type, return_code));
+ 
+ 	/* see create_cache.c - rc==0 means success - rc==2 means "success, but some fdi files skipped" */
+-	if (exit_type != HALD_RUN_SUCCESS || return_code != 0 || return_code != 2) {
++	if (exit_type != HALD_RUN_SUCCESS || ( return_code != 0 && return_code != 2)) {
+ 		regen_cache_success = FALSE;
+ 	} else {
+ 		regen_cache_success = TRUE;
