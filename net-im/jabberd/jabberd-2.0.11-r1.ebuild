@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.7 2006/11/23 20:34:02 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.8 2007/04/10 08:44:43 nelchael Exp $
 
 inherit autotools eutils versionator
 
@@ -79,6 +79,12 @@ src_install() {
 
 	newinitd "${FILESDIR}/jabberd-${PV}.init" jabberd || die "newinitd failed"
 
+	dodoc AUTHORS PROTOCOL README
+	docinto tools
+	for i in db-setup.{mysql,pgsql} migrate.pl pipe-auth.pl; do
+		dodoc tools/${i}
+	done
+
 	cd "${D}/etc/jabber/"
 	sed -i \
 		-e 's,/var/jabberd/pid/,/var/run/jabber/,g' \
@@ -88,11 +94,5 @@ src_install() {
 	sed -i \
 		-e 's,<module>mysql</module>,<module>db</module>,' \
 		c2s.xml*
-
-	dodoc AUTHORS PROTOCOL README
-	docinto tools
-	for i in db-setup.{mysql,pgsql} migrate.pl pipe-auth.pl; do
-		dodoc tools/${i}
-	done
 
 }
