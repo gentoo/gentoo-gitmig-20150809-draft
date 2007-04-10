@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.16 2007/02/21 04:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.17 2007/04/10 12:03:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -83,12 +83,11 @@ src_unpack() {
 
 src_compile() {
 	# Clean out patent-or-otherwise-encumbered code.
-	# MDC-2: 4,908,861 13/03/2007
 	# IDEA:  5,214,703 25/05/2010
 	# RC5:   5,724,428 03/03/2015
 	# EC:    ????????? ??/??/2015
 	local confopts=""
-	use bindist && confopts="no-idea no-rc5 no-mdc2 -no-ec"
+	use bindist && confopts="no-idea no-rc5 no-ec"
 
 	use zlib && confopts="${confopts} zlib-dynamic"
 
