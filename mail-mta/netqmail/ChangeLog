@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.32 2007/04/10 18:01:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.33 2007/04/10 18:11:02 hansmi Exp $
+
+  10 Apr 2007; Michael Hanselmann <hansmi@gentoo.org>
+  netqmail-1.05-r7.ebuild:
+  Don't set -DTLS.
 
   10 Apr 2007; Michael Hanselmann <hansmi@gentoo.org>
   netqmail-1.05-r4.ebuild, netqmail-1.05-r7.ebuild:

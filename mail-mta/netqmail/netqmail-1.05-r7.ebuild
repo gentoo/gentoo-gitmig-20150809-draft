@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r7.ebuild,v 1.3 2007/04/10 18:01:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r7.ebuild,v 1.4 2007/04/10 18:11:02 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -119,7 +119,8 @@ src_unpack() {
 	ht_fix_file Makefile*
 	append-ldflags $(bindnow-flags)
 
-	use ssl && append-flags -DTLS
+	# -DTLS is now set by the SSL/TLS patch
+	#use ssl && append-flags -DTLS
 
 	# The following commands patch the conf-{cc,ld} files to use the user's
 	# specified CFLAGS and LDFLAGS. These rather complex commands are needed
