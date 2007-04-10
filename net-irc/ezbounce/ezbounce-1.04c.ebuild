@@ -1,27 +1,20 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.04a.ebuild,v 1.8 2005/12/28 21:01:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.04c.ebuild,v 1.1 2007/04/10 14:11:40 armin76 Exp $
 
 inherit eutils
 
 DESCRIPTION="ezbounce is a small IRC bouncer"
 HOMEPAGE="http://druglord.freelsd.org/ezbounce/"
-SRC_URI="http://druglord.freelsd.org/${PN}/${P}.tar.gz"
+SRC_URI="http://druglord.freelsd.org/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl"
 
-DEPEND=">=net-misc/mdidentd-1.04a
+DEPEND=">=net-misc/mdidentd-1.04c
 	ssl? ( dev-libs/openssl )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-crash-fix.patch
-	epatch "${FILESDIR}"/${P}-c++.patch
-}
 
 src_compile() {
 	econf $(use_with ssl) || die
