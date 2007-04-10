@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha11.ebuild,v 1.5 2007/03/01 17:20:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha25.ebuild,v 1.1 2007/04/10 11:36:47 pylon Exp $
 
-inherit eutils gnuconfig toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="A set of tools for CD/DVD reading and recording, including cdrecord"
 HOMEPAGE="http://cdrecord.berlios.de/"
@@ -27,12 +27,11 @@ src_unpack() {
 
 	# CAN-2004-0806 - Bug 63187
 	epatch "${FILESDIR}"/${PN}-2.01-scsi-remote.patch
-	epatch "${FILESDIR}"/${PN}-2.01a27-writemode.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01a03-warnings.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01a01-scanbus.patch
-	epatch "${FILESDIR}"/${PN}-2.01.01a03-rezero.patch
+	epatch "${FILESDIR}"/${PN}-2.01.01a18-rezero.patch
 
-	use unicode && epatch "${FILESDIR}"/mkisofs-iconv-11.patch
+	#use unicode && epatch "${FILESDIR}"/mkisofs-iconv-18.patch
 
 	# ppc-macos support
 	cd "${S}"/DEFAULTS
@@ -53,8 +52,6 @@ src_unpack() {
 }
 
 src_compile() {
-	gnuconfig_update
-
 	if use unicode; then
 		local flags="$(test-flags -finput-charset=ISO-8859-1 -fexec-charset=UTF-8)"
 		if [[ -n ${flags} ]]; then
@@ -90,7 +87,7 @@ src_install() {
 
 	cd "${S}"
 	insinto /usr/include/scsilib
-	doins include/*.h
+	doins include/schily/*.h
 	insinto /usr/include/scsilib/scg
 	doins include/scg/*.h
 
