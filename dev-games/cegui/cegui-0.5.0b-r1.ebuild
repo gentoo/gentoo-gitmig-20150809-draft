@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.5.0.ebuild,v 1.2 2006/11/28 21:46:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.5.0b-r1.ebuild,v 1.1 2007/04/10 16:43:07 nyhm Exp $
 
 inherit eutils
 
@@ -11,13 +11,14 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="devil doc examples expat lua opengl xerces-c xml"
+KEYWORDS="~x86"
+IUSE="devil doc examples expat freeimage lua opengl xerces-c xml"
 
 RDEPEND="dev-libs/libpcre
 	=media-libs/freetype-2*
 	devil? ( media-libs/devil )
 	expat? ( dev-libs/expat )
+	freeimage? ( media-libs/freeimage )
 	lua? ( dev-lang/lua )
 	opengl? ( virtual/opengl
 		virtual/glu
@@ -28,7 +29,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P/b/}
 
 src_unpack() {
 	unpack ${A}
@@ -45,6 +46,7 @@ src_compile() {
 		$(use_enable devil) \
 		$(use_enable examples samples) \
 		$(use_enable expat) \
+		$(use_enable freeimage) \
 		$(use_enable lua lua-module) \
 		$(use_enable lua toluacegui) \
 		$(use_enable opengl opengl-renderer) \
@@ -55,7 +57,6 @@ src_compile() {
 		--enable-tinyxml \
 		--disable-corona \
 		--disable-dependency-tracking \
-		--disable-freeimage \
 		--disable-irrlicht-renderer \
 		--disable-samples \
 		--disable-silly \
