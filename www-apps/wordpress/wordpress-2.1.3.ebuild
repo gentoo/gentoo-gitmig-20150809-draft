@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.9.ebuild,v 1.7 2007/02/28 15:32:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.1.3.ebuild,v 1.1 2007/04/10 13:16:54 beandog Exp $
 
 inherit webapp eutils depend.php
 
@@ -8,7 +8,7 @@ DESCRIPTION="Wordpress php and mysql based CMS system."
 HOMEPAGE="http://wordpress.org/"
 SRC_URI="http://www.wordpress.org/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}"
