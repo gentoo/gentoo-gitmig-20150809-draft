@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_Graph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Graph/ChangeLog,v 1.9 2007/04/09 09:14:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Graph/ChangeLog,v 1.10 2007/04/10 14:39:52 armin76 Exp $
+
+  10 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Image_Graph-0.7.2.ebuild:
+  ia64 stable wrt bug 173781
 
   09 Apr 2007; Markus Rothe <corsair@gentoo.org>
   PEAR-Image_Graph-0.7.2.ebuild:
