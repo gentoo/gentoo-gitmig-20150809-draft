@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.121 2007/04/07 08:52:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.122 2007/04/10 01:33:03 nyhm Exp $
 
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -23,7 +23,6 @@ export GAMES_DATADIR_BASE=${GAMES_DATADIR_BASE:-/usr/share} # some packages auto
 export GAMES_SYSCONFDIR=${GAMES_SYSCONFDIR:-/etc/games}
 export GAMES_STATEDIR=${GAMES_STATEDIR:-/var/games}
 export GAMES_LOGDIR=${GAMES_LOGDIR:-/var/log/games}
-export GAMES_LIBDIR=${GAMES_LIBDIR:-${GAMES_PREFIX}/$(get_libdir)}
 export GAMES_BINDIR=${GAMES_BINDIR:-${GAMES_PREFIX}/bin}
 export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
@@ -33,8 +32,6 @@ export GAMES_USER_DED=${GAMES_USER_DED:-games}
 export GAMES_GROUP=${GAMES_GROUP:-games}
 
 games_get_libdir() {
-	# once everything is converted over from legacy GAMES_LIBDIR, delete next line
-	unset GAMES_LIBDIR
 	echo ${GAMES_LIBDIR:-${GAMES_PREFIX}/$(get_libdir)}
 }
 
