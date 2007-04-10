@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.26 2007/04/10 19:53:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.27 2007/04/10 20:57:42 opfer Exp $
+
+*erc-5.2 (10 Apr 2007)
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> +erc-5.2.ebuild:
+  version bump
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> erc-5.0.4.ebuild,
   erc-5.1.ebuild, erc-5.1.1.ebuild, erc-5.1.4.ebuild:
