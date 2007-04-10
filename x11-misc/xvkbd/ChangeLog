@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xvkbd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.16 2007/03/09 07:46:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.17 2007/04/10 09:29:32 nelchael Exp $
+
+*xvkbd-2.8 (10 Apr 2007)
+
+  10 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> +xvkbd-2.8.ebuild:
+  Version bump, see bug #173786.
 
   09 Mar 2007; Samuli Suominen <drac@gentoo.org> xvkbd-2.6.ebuild:
   Stop using virtual/x11 and remove redudant checks for it.
