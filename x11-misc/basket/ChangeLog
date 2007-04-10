@@ -1,10 +1,10 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.31 2007/04/10 19:29:26 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.32 2007/04/10 19:31:55 troll Exp $
 
   10 Apr 2007; Przemysław Maciąg <troll@gentoo.org> basket-0.6.0.ebuild,
   basket-1.0.ebuild, basket-1.0.1.ebuild:
-  Added crypt use flag for gpgme dependency.
+  Added crypt use flag for gpgme dependency; thx to P Purkayastha (#173820).
 
 *basket-1.0.1 (21 Mar 2007)
 
