@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rnaview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/ChangeLog,v 1.9 2007/02/22 01:29:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/ChangeLog,v 1.10 2007/04/10 12:16:39 je_fro Exp $
+
+  10 Apr 2007; Jeff Gardner <je_fro@gentoo.org> rnaview-20040713.ebuild:
+  Added ~amd64.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
