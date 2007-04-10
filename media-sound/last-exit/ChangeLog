@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.10 2007/01/25 17:27:03 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.11 2007/04/10 20:09:52 steev Exp $
+
+  10 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/last-exit-4.0-decimal_parse.patch, last-exit-4.0.ebuild:
+  Add patch from Gnome bugzilla to fix parsing.  Closes bug #174076, thanks to
+  Jakub for reporting.
 
   25 Jan 2007; Steev Klimaszewski <steev@gentoo.org> last-exit-4.0.ebuild:
   Need to run eautoreconf when patching Makefile.am.  I fail.  Fixed now, thanks

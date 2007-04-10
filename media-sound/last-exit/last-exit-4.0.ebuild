@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.4 2007/01/25 17:27:03 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.5 2007/04/10 20:09:52 steev Exp $
 
 inherit mono gnome2 eutils autotools
 
@@ -38,6 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}"/${PN}-dbus-sharp-parallel-build-fix.patch
+	epatch "${FILESDIR}"/${PN}-4.0-decimal_parse.patch
 	eautoreconf
 }
 
