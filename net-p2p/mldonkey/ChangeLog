@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.149 2007/04/08 13:14:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.150 2007/04/10 15:25:24 armin76 Exp $
+
+  10 Apr 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
+  mldonkey-2.8.4.ebuild:
+  Remove idiot batch USE-flag, bug 174021
 
   08 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   -files/mldonkey-2.8.2-avoid_dupl_sending.patch, -mldonkey-2.8.2-r1.ebuild:

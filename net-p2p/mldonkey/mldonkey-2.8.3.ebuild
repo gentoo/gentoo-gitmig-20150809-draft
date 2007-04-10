@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.3.ebuild,v 1.7 2007/04/07 15:47:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.3.ebuild,v 1.8 2007/04/10 15:25:24 armin76 Exp $
 
 inherit flag-o-matic
 
-IUSE="batch doc fasttrack gd gnutella gtk guionly magic"
+IUSE="doc fasttrack gd gnutella gtk guionly magic"
 
 DESCRIPTION="MLDonkey is a multi-network P2P application written in Ocaml, coming with its own Gtk GUI, web and telnet interface."
 HOMEPAGE="http://mldonkey.sourceforge.net/"
@@ -25,8 +25,7 @@ RDEPEND="dev-lang/perl
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
-	!batch? ( >=dev-lang/ocaml-3.08.3 )
-	batch? ( net-misc/wget )"
+	>=dev-lang/ocaml-3.08.3"
 
 MLUSER="p2p"
 
@@ -68,7 +67,6 @@ src_compile() {
 
 	# the dirs are not (yet) used, but it doesn't hurt to specify them anyway
 
-	# batch 	Automatically download and build OCAML-3.08.3 for compiling itself
 	# onlygui	Disable all nets support, build only chosen GUI
 
 	if use gtk || use guionly; then
@@ -87,10 +85,10 @@ src_compile() {
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
 		--enable-checks \
+		--disable-batch \
 		$(use_enable fasttrack) \
 		$(use_enable gnutella) \
 		$(use_enable gnutella gnutella2) \
-		$(use_enable batch) \
 		$(use_enable gd) \
 		$(use_enable magic) \
 		${myconf} || die "econf failed"
