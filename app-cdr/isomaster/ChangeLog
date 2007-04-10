@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/isomaster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.4 2007/02/12 23:19:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.5 2007/04/10 13:56:15 pylon Exp $
+
+*isomaster-0.8.1 (10 Apr 2007)
+
+  10 Apr 2007; Lars Weiler <pylon@gentoo.org> +isomaster-0.8.1.ebuild:
+  Version bump; bug #171520.
 
   12 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
   isomaster-0.7-r1.ebuild:
