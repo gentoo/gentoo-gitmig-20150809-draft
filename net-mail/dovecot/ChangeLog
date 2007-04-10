@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.102 2007/04/07 06:17:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.103 2007/04/10 07:43:55 uberlord Exp $
+
+*dovecot-1.0_rc31 (10 Apr 2007)
+
+  10 Apr 2007; Roy Marples <uberlord@gentoo.org> +dovecot-1.0_rc31.ebuild:
+  Boing.
 
   07 Apr 2007; Peter Weller <welp@gentoo.org> dovecot-1.0_rc29.ebuild:
   Stable on amd64 wrt bug 172795
