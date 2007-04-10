@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.108 2007/04/04 22:45:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.109 2007/04/10 10:34:20 robbat2 Exp $
+
+*lighttpd-1.4.13-r3 (10 Apr 2007)
+
+  10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lighttpd.initd-1.4.13-r3,
+  +files/1.4.13/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  lighttpd-1.4.13-r1.ebuild, lighttpd-1.4.13-r2.ebuild,
+  +lighttpd-1.4.13-r3.ebuild:
+  Bug #174015 - clean up pidfile usage in init script. (No Bug #) - fix LDAP
+  usage, patch from {dev-zero,cardoe}@gentoo.org.
 
   04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org>
   lighttpd-1.4.13-r2.ebuild:
