@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7108 2007/04/10 06:38:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7109 2007/04/10 06:52:22 je_fro Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Jeffrey Gardner <je_fro@gentoo.org> (10 Apr 2007)
+# Initial import of experimental folding@home client.
+# Currently it's only for brave amd64 users.
+=sci-biology/foldingathome-5.91_beta
 
 # Raúl Porcel <armin76@gentoo.org> (09 Apr 2007)
 # Pending removal 09 Jun 2007, for treecleaners
