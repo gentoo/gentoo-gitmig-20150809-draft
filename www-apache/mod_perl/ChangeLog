@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.50 2007/04/10 11:13:35 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.51 2007/04/10 11:47:57 ian Exp $
+
+  10 Apr 2007; Christian Hartmann <ian@gentoo.org> mod_perl-1.27-r4.ebuild,
+  -mod_perl-1.29.ebuild, -mod_perl-2.0.2.ebuild, -mod_perl-2.0.3.ebuild:
+  Removed vulnerable versions; 1.27-r4 stays for mips only
 
   10 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> mod_perl-1.30.ebuild:
   Stable on alpha wrt security bug #172676
