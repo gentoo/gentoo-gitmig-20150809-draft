@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2735 2007/04/10 14:40:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2736 2007/04/10 16:31:02 nyhm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -304,6 +304,7 @@ dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, 
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
 dev-db/tora:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-games/cegui:devil - image loading support with DevIL
+dev-games/cegui:freeimage - image loading support with FreeImage
 dev-games/cegui:xerces-c - use external Xerces-C++ XML parser instead of tiny embedded XML parser
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:cal3d - include support for skeleton anymation
