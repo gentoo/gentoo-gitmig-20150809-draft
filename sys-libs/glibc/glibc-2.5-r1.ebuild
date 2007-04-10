@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r1.ebuild,v 1.4 2007/04/08 08:13:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r1.ebuild,v 1.5 2007/04/10 21:22:48 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-* ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="-* ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sh ~sparc ~x86"
 
 BRANCH_UPDATE=""
 
@@ -613,7 +613,13 @@ alt_headers() {
 alt_build_headers() {
 	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
 		ALT_BUILD_HEADERS=$(alt_headers)
-		tc-is-cross-compiler && ALT_BUILD_HEADERS=${ROOT}$(alt_headers)
+		if tc-is-cross-compiler ; then
+			ALT_BUILD_HEADERS=${ROOT}$(alt_headers)
+			if [[ ! -e ${ALT_BUILD_HEADERS}/linux/version.h ]] ; then
+				local header_path=$(echo '#include <linux/version.h>' | $(tc-getCPP ${CTARGET}) ${CFLAGS} 2>&1 | grep -o '[^"]*linux/version.h')
+				ALT_BUILD_HEADERS=${header_path%/linux/version.h}
+			fi
+		fi
 	fi
 	echo "${ALT_BUILD_HEADERS}"
 }
