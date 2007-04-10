@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.3.ebuild,v 1.1 2007/03/05 05:51:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.4.ebuild,v 1.1 2007/04/10 01:44:31 nyhm Exp $
 
 inherit games
 
