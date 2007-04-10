@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.9.3.ebuild,v 1.1 2007/03/31 05:55:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.9.3.ebuild,v 1.2 2007/04/10 21:11:48 welp Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
 
 LICENSE="GPL-2 FIPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="media-libs/jpeg
