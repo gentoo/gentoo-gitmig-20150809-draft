@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.4.ebuild,v 1.1 2007/04/01 21:47:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.4.ebuild,v 1.2 2007/04/10 14:10:02 pylon Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,13 @@ DEPEND=">=dev-util/cmake-2.4
 RDEPEND="unicode? ( virtual/libiconv )"
 
 PROVIDE="virtual/cdrtools"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/cdrkit-readom-clone.patch
+}
 
 src_compile() {
 	cmake \
