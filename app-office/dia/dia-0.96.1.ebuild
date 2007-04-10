@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.96_pre3.ebuild,v 1.1 2007/02/02 10:22:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.96.1.ebuild,v 1.1 2007/04/10 09:07:08 robbat2 Exp $
 
 inherit eutils gnome2 libtool autotools versionator
 
@@ -9,13 +9,11 @@ HOMEPAGE="http://www.gnome.org/projects/dia/"
 LICENSE="GPL-2"
 
 # dia used -1 instead of .1 for the new version.
-MY_PV=$(replace_version_separator 2 '-' )
 MY_PV_MM=$(get_version_component_range 1-2 )
-MY_P="${PN}-${MY_PV}"
-SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome png python zlib cairo gnome-print"
 
 RDEPEND=">=x11-libs/gtk+-2.6.0
@@ -45,8 +43,6 @@ G2CONF="${G2CONF} $(use_enable gnome) $(use_with gnome-print gnomeprint)"
 G2CONF="${G2CONF} $(use_with python) $(use_with cairo)"
 
 DOCS="AUTHORS ChangeLog COPYING KNOWN_BUGS MAINTAINERS NEWS README RELEASE-PROCESS THANKS TODO"
-
-S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	gnome2_src_unpack

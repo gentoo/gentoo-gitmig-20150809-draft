@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.96 2007/03/10 12:16:06 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.97 2007/04/10 09:07:08 robbat2 Exp $
+
+*dia-0.96.1 (10 Apr 2007)
+
+  10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> -dia-0.96_pre3.ebuild,
+  +dia-0.96.1.ebuild:
+  Replace pre3 with the final of 0.96 now that it is available. ~mips dropped
+  due to new libgnomeprint dependancy.
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> dia-0.95.1.ebuild:
   Keyworded ~x86-fbsd
