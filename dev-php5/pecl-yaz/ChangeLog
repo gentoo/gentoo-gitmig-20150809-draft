@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-yaz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.16 2007/04/09 16:30:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.17 2007/04/10 09:31:31 opfer Exp $
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  pecl-yaz-1.0.8.ebuild:
+  stable x86, bug 173849
 
   09 Apr 2007; nixnut <nixnut@gentoo.org> pecl-yaz-1.0.8.ebuild:
   Stable on ppc wrt bug 173849
