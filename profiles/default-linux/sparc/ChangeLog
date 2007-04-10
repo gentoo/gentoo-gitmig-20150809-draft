@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.54 2007/04/10 20:52:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.55 2007/04/10 21:17:52 gustavoz Exp $
+
+  10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
+  USE.masking networkmanager - no nifty wireless support here
 
   10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
   Masking dell USE, no smbios
