@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-Audit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.40 2007/04/09 15:31:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.41 2007/04/10 13:02:10 mcummings Exp $
+
+  10 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Mail-Audit-2.214.ebuild:
+  sparc stable
 
   09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   Mail-Audit-2.214.ebuild:

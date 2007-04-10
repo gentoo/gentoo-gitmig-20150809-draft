@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.36 2007/04/09 15:18:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.37 2007/04/10 12:54:25 mcummings Exp $
+
+  10 Apr 2007; Michael Cummings <mcummings@gentoo.org> Graph-0.81.ebuild:
+  sparc stable
 
   09 Apr 2007; Michael Cummings <mcummings@gentoo.org> Graph-0.81.ebuild:
   Marking stable amd64
