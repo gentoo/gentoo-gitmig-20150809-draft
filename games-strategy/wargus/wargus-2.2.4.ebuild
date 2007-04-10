@@ -1,23 +1,21 @@
-# Copyright 2004-2007 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.3.ebuild,v 1.1 2007/03/05 07:19:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.4.ebuild,v 1.1 2007/04/10 14:14:57 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="Warcraft II for the Stratagus game engine (Needs WC2 DOS CD)"
-HOMEPAGE="http://wargus.sf.net/"
+HOMEPAGE="http://wargus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz
-	mirror://gentoo/wargus.png
-	http://dev.gentoo.org/~genstef/files/wargus.png"
+	mirror://gentoo/wargus.png"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/libpng
-	sys-libs/zlib"
-RDEPEND="=games-engines/stratagus-2.2.3*"
+DEPEND="media-libs/libpng"
+RDEPEND="=games-engines/stratagus-${PV}*"
 
 src_unpack() {
 	cdrom_get_cds data/rezdat.war
@@ -25,7 +23,7 @@ src_unpack() {
 }
 
 src_install() {
-	local dir="${GAMES_DATADIR}/stratagus/${PN}"
+	local dir=${GAMES_DATADIR}/stratagus/${PN}
 
 	dodir "${dir}"
 	./build.sh -p "${CDROM_ROOT}" -o "${D}/${dir}" -v \
