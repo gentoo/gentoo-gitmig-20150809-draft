@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.20.1.ebuild,v 1.4 2007/04/09 15:44:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.20.1.ebuild,v 1.5 2007/04/10 17:40:12 gustavoz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.gnu.org/software/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~s390 ~sparc x86"
+KEYWORDS="amd64 ppc ~s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
