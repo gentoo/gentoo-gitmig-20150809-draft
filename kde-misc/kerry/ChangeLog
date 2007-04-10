@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kerry
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.10 2007/01/24 17:39:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.11 2007/04/10 21:53:39 philantrop Exp $
+
+  10 Apr 2007; <philantrop@gentoo.org> kerry-0.1-r2.ebuild,
+  kerry-0.1.90.ebuild, kerry-0.2.1.ebuild:
+  Added a DEPEND on kde-base/libkonq as per bug #173982.
 
 *kerry-0.2.1 (24 Jan 2007)
 

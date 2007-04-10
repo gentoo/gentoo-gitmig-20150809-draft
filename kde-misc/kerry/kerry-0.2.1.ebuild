@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.1 2007/01/24 17:39:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.2 2007/04/10 21:53:39 philantrop Exp $
 
 inherit kde
 
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=app-misc/beagle-0.2.5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	|| ( kde-base/libkonq kde-base/kdebase )"
 
 need-kde 3.4
