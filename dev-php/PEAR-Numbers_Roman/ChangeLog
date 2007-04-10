@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Numbers_Roman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Roman/ChangeLog,v 1.8 2007/04/10 14:33:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Roman/ChangeLog,v 1.9 2007/04/10 14:53:41 gustavoz Exp $
+
+  10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  PEAR-Numbers_Roman-1.0.1.ebuild:
+  Stable on sparc wrt #173777
 
   10 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   PEAR-Numbers_Roman-1.0.1.ebuild:
