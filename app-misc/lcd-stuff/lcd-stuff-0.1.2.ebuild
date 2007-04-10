@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2.ebuild,v 1.3 2007/04/02 13:05:35 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2.ebuild,v 1.4 2007/04/10 23:43:38 rbu Exp $
 
 DESCRIPTION="lcd-stuff is a client for lcdproc that displays RSS, Weather, MPD and new mail."
 HOMEPAGE="http://lcd-stuff.berlios.de/"
@@ -14,7 +14,7 @@ DEPEND="app-misc/lcdproc
 	net-misc/curl
 	dev-libs/glib
 	imap? ( net-libs/libetpan )
-	mpd? ( media-libs/libmpd )
+	mpd? ( >=media-libs/libmpd-0.12.0 )
 	mp3? ( media-libs/taglib )
 	xml? ( net-libs/libnxml )
 	rss? ( net-libs/libmrss net-libs/libnxml )"
