@@ -1,15 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.70 2007/04/09 22:18:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.71 2007/04/10 10:03:52 armin76 Exp $
 
 # Petteri Räty <betelgeuse@gentoo.org> (10 Apr 2007)
 # Needs sys-apps/hal
 >=sys-auth/pam_usb-0.4.0
-
-# Raúl Porcel <armin76@gentoo.org> (09 Apr 2007)
-# Needs gentoo-sources, which are 2.6 version
-sys-fs/fuse
-sys-fs/ntfs3g
 
 # Raúl Porcel <armin76@gentoo.org> (03 Apr 2007)
 # Unmasking firefox-1.5 for <epiphany-2.16

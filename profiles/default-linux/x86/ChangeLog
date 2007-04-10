@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.69 2007/04/09 22:18:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.70 2007/04/10 10:03:52 armin76 Exp $
+
+  10 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  Unmask sys-fs/{fuse,ntfs3g} on 2.4 profile since they have a lot of deps and
+  it can work with older versions of fuse
 
   09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
