@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.13 2007/04/10 00:38:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.14 2007/04/10 05:32:51 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -161,12 +161,13 @@ src_install() {
 
 	# initscript
 	newinitd "${FILESDIR}"/0.5.9-hald.rc hald
-	newconfd "${FILESDIR}"/0.5.9-hald.conf hald
+	cp "${FILESDIR}"/0.5.9-hald.conf "${WORKDIR}"/
 	if use pam; then
-		sed -e 's:RC_NEED:RC_NEED="consolekit":' -i /etc/conf.d/hald
+		sed -e 's:RC_NEED:RC_NEED="consolekit":' -i "${WORKDIR}"/0.5.9-hald.conf
 	else
-		sed -e 's:RC_NEED:RC_NEED="":' -i /etc/conf.d/hald
+		sed -e 's:RC_NEED:RC_NEED="":' -i "${WORKDIR}"/0.5.9-hald.conf
 	fi
+	newconfd "${WORKDIR}"/0.5.9-hald.conf hald
 
 	# We now create and keep /media here as both gnome-mount and pmount
 	# use these directories, to avoid collision.
