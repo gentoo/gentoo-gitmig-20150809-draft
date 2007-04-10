@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdate
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.35 2006/11/13 10:38:19 robbat2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.36 2007/04/10 09:57:25 robbat2 Exp $
+
+*rdate-1.4-r3 (10 Apr 2007)
+
+  10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/rdate-initd-1.4-r3, +rdate-1.4-r3.ebuild:
+  Bug #173218, clean up init.d script timeout, patch thanks to Yang Zhao
+  <yangman@gmail.com>.
 
 *rdate-1.4-r2 (13 Nov 2006)
 
