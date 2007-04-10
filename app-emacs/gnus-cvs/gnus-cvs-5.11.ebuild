@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.10 2006/08/21 17:52:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.11 2007/04/10 19:59:02 opfer Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -16,13 +16,14 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Current alpha branch of the Gnus news- and mail-reader"
 HOMEPAGE="http://www.gnus.org/"
 SRC_URI=""
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
 RESTRICT="$RESTRICT nostrip"
+SITEFILE=70gnus-gentoo.el
 
-DEPEND="virtual/emacs"
+DEPEND=""
 
 src_compile() {
 	local myconf
@@ -37,15 +38,15 @@ src_compile() {
 }
 
 src_install() {
-	einstall \
-		lispdir=${D}/usr/share/emacs/site-lisp/gnus-cvs \
-		etcdir=${D}/usr/share/emacs/etc \
-		|| die
+	emake \
+		lispdir="${D}/usr/share/emacs/site-lisp/gnus-cvs" \
+		etcdir="${D}/usr/share/emacs/etc" install \
+		|| die "emake install failed"
 
-	elisp-site-file-install ${FILESDIR}/70${PN}-gentoo.el
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}A"
 
 	dodoc ChangeLog GNUS-NEWS README todo
 
 	# fix info documentation
-	find ${D}/usr/share/info -type f -exec mv {} {}.info \;
+	find "${D}/usr/share/info" -type f -exec mv {} {}.info \;
 }
