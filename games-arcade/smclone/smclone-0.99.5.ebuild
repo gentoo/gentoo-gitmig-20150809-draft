@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.99.5.ebuild,v 1.2 2007/03/01 03:03:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.99.5.ebuild,v 1.3 2007/04/10 17:42:39 nyhm Exp $
 
 inherit eutils games
 
@@ -33,8 +33,11 @@ pkg_setup() {
 	if ! built_with_use media-libs/sdl-image png ; then
 		die "Please emerge sdl-image with USE=png"
 	fi
-	if ! built_with_use dev-games/cegui devil opengl ; then
-		die "Please emerge cegui with USE=\"devil opengl\""
+	if ! built_with_use dev-games/cegui opengl ; then
+		die "Please emerge cegui with USE=opengl"
+	fi
+	if ! built_with_use -o dev-games/cegui devil freeimage ; then
+		die "Please emerge cegui with USE=devil or USE=freeimage"
 	fi
 }
 
