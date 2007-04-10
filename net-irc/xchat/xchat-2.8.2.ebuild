@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.2.ebuild,v 1.2 2007/04/02 15:39:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.2.ebuild,v 1.3 2007/04/10 17:43:04 armin76 Exp $
 
 inherit eutils versionator gnome2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="perl dbus tcl python ssl mmx ipv6 nls spell xchattext xchatnogtk xchatdccserver"
 
 RDEPEND=">=dev-libs/glib-2.6.0
@@ -41,6 +41,8 @@ src_unpack() {
 		sed -i -e 's:${prefix}/lib/xchat:${libdir}/xchat:' \
 			"${S}"/configure{,.in} || die
 	fi
+
+#	epatch "${FILESDIR}"/${PV}-fe-text-vartype.patch
 }
 
 src_compile() {
