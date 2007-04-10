@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r4.ebuild,v 1.8 2007/04/10 23:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r4.ebuild,v 1.9 2007/04/10 23:37:03 robbat2 Exp $
 
 inherit eutils pam
 
@@ -28,6 +28,7 @@ src_unpack() {
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${P}-cvsbug-tmpfix.patch
 	epatch ${FILESDIR}/${P}-openat.patch
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${P}-block-requests.patch
+	elog "If you want any CVS server functionality, you MUST emerge with USE=server!"
 }
 
 src_compile() {

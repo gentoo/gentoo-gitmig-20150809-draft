@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.118 2007/04/10 23:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.119 2007/04/10 23:37:03 robbat2 Exp $
+
+  10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> cvs-1.12.12-r4.ebuild:
+  Add a note to -r4 that you must have USE=server if you want a CVS server!.
 
   10 Apr 2007; Jeroen Roovers <jer@gentoo.org> cvs-1.12.12-r4.ebuild:
   Stable for HPPA (bug #173880).
