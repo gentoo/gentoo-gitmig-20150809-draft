@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.49 2007/04/09 16:17:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.50 2007/04/10 11:13:35 yoswink Exp $
+
+  10 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> mod_perl-1.30.ebuild:
+  Stable on alpha wrt security bug #172676
 
   09 Apr 2007; Michael Cummings <mcummings@gentoo.org> mod_perl-1.30.ebuild:
   security bug #172676 - also fixed the fperm line at the end for the conf file
