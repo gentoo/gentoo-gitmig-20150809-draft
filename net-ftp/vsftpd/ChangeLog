@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.83 2007/04/02 11:32:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.84 2007/04/10 13:00:55 uberlord Exp $
+
+*vsftpd-2.0.5-r2 (10 Apr 2007)
+
+  10 Apr 2007; Roy Marples <uberlord@gentoo.org> files/vsftpd.init,
+  +vsftpd-2.0.5-r2.ebuild:
+  Fix the init script to muliplex better, #173923 thanks to Grégoire Baron
 
 *vsftpd-2.0.5-r1 (02 Apr 2007)
 

@@ -1,15 +1,17 @@
 #!/sbin/runscript
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.4 2007/04/02 11:32:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.5 2007/04/10 13:00:55 uberlord Exp $
 
-VSFTPD_CONF=${VSFTPD_CONF:-/etc/vsftpd/vsftpd.conf}
 VSFTPD_NAME=${SVCNAME##*.}
 if [ -n "${VSFTPD_NAME}" -a "${SVCNAME}" != "vsftpd" ]; then
     VSFTPD_PID="/var/run/vsftpd.${VSFTPD_NAME}.pid"
+    VSFTPD_CONF_DEFAULT="/etc/vsftpd/${VSFTPD_NAME}.conf"
 else
     VSFTPD_PID="/var/run/vsftpd.pid"
+    VSFTPD_CONF_DEFAULT="/etc/vsftpd/vsftpd.conf"
 fi
+VSFTPD_CONF=${VSFTPD_CONF:-${VSFTPD_CONF_DEFAULT}}
 
 depend() {
 	need net
@@ -45,7 +47,7 @@ checkconfig() {
 
 start() {
 	checkconfig || return 1
-	ebegin "Starting vsftpd"
+	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --start --exec /usr/sbin/vsftpd \
 		--background --make-pidfile --pidfile "${VSFTPD_PID}" \
 		-- "${VSFTPD_CONF}"
@@ -53,7 +55,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping vsftpd"
+	ebegin "Stopping ${SVCNAME}"
 	start-stop-daemon --stop --exec /usr/sbin/vsftpd \
 		--pidfile "${VSFTPD_PID}"
 	eend $?
