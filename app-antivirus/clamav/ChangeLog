@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.219 2007/04/02 11:40:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.220 2007/04/10 20:13:39 ticho Exp $
+
+  10 Apr 2007; Andrej Kacian <ticho@gentoo.org> files/clamd.rc:
+  Make sure clamav-milter starts correctly when --external option is used.
+  Patch submitted by Dean C Bullock <dean at bullock.net> in bug #169561.
 
   02 Apr 2007; Roy Marples <uberlord@gentoo.org> files/clamd.rc:
   De bashify init script.
