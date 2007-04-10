@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.21.ebuild,v 1.1 2007/03/03 08:12:05 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.21.ebuild,v 1.2 2007/04/10 10:29:30 cryos Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/asymptote/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="boehm-gc doc fftw emacs gsl vim-syntax"
 
