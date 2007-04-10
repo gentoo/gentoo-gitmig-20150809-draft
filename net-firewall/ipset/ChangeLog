@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ipset
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.8 2006/05/25 06:00:32 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.9 2007/04/10 10:12:08 robbat2 Exp $
+
+*ipset-2.2.9.20070401 (10 Apr 2007)
+
+  10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +ipset-2.2.9.20070401.ebuild:
+  New version from upstream, bug #173218. Please note that while this version
+  will compile without a patched kernel, you still need a patched kernel to
+  use it!.
 
 *ipset-2.2.9.20060508 (25 May 2006)
 
