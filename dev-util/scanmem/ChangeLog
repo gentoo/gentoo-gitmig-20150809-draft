@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scanmem
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.2 2007/04/08 22:43:14 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.3 2007/04/10 06:29:07 opfer Exp $
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> scanmem-0.06.ebuild:
+  keyworded ~amd64, bug 173850
 
 *scanmem-0.06 (08 Apr 2007)
 
