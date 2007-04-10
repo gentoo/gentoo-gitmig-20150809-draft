@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.0.ebuild,v 1.1 2007/04/09 22:30:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.0.ebuild,v 1.2 2007/04/10 09:49:07 betelgeuse Exp $
 
 inherit eutils pam
 
@@ -12,13 +12,20 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-DEPEND=">=sys-libs/pam-0.78-r3
+RDEPEND="
+	dev-libs/libxml2
+	>=sys-libs/pam-0.78-r3
 	>=sys-apps/dbus-0.62-r2
 	>=sys-apps/hal-0.5.7.1-r3
 	>=sys-apps/pmount-0.9.13
 	>=dev-python/celementtree-1.0.2
 	>=dev-python/dbus-python-0.71
 	>=dev-python/pygobject-2.12.3"
+
+DEPEND="
+	${RDEPEND}
+	dev-util/pkgconfig"
+
 
 src_install() {
 	dodir $(getpam_mod_dir) /usr/bin
