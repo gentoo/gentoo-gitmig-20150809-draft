@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.116 2007/04/10 11:34:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.117 2007/04/10 14:21:09 yoswink Exp $
+
+  10 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> gdb-6.6-r2.ebuild:
+  alpha stable wrt security bug #144833
 
   10 Apr 2007; Michael Cummings <mcummings@gentoo.org> gdb-6.6-r2.ebuild:
   sparc stable wrt security bug 144833
