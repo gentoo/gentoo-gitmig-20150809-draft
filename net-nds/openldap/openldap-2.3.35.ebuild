@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.34.ebuild,v 1.1 2007/03/26 22:58:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.35.ebuild,v 1.1 2007/04/10 16:38:53 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -246,17 +246,17 @@ src_compile() {
 		myconf="${myconf} --enable-meta=mod --enable-monitor=mod"
 		myconf="${myconf} --enable-null=mod --enable-shell=mod"
 		myconf="${myconf} --enable-relay=mod"
-		myconf="${myconf} `use_enable perl perl mod`"
-		myconf="${myconf} `use_enable odbc sql mod`"
+		myconf="${myconf} $(use_enable perl perl mod)"
+		myconf="${myconf} $(use_enable odbc sql mod)"
 		# slapd options
-		myconf="${myconf} `use_enable crypt` `use_enable slp`"
+		myconf="${myconf} $(use_enable crypt) $(use_enable slp)"
 		myconf="${myconf} --enable-rewrite --enable-rlookups"
 		myconf="${myconf} --enable-aci --enable-modules"
 		myconf="${myconf} --enable-cleartext --enable-slapi"
-		myconf="${myconf} `use_with samba lmpasswd`"
+		myconf="${myconf} $(use_with samba lmpasswd)"
 		# slapd overlay options
 		myconf="${myconf} --enable-dyngroup --enable-proxycache"
-		myconf="${myconf} `use_enable overlays`"
+		use overlays && myconf="${myconf} --enable-overlays=mod"
 	else
 		myconf="${myconf} --disable-slapd --disable-slurpd"
 		myconf="${myconf} --disable-bdb --disable-ldbm"
@@ -269,9 +269,9 @@ src_compile() {
 	myconf="${myconf} --enable-syslog --enable-dynamic"
 	myconf="${myconf} --enable-local --enable-proctitle"
 
-	myconf="${myconf} `use_enable ipv6` `use_enable readline`"
-	myconf="${myconf} `use_with sasl cyrus-sasl` `use_enable sasl spasswd`"
-	myconf="${myconf} `use_enable tcpd wrappers` `use_with ssl tls`"
+	myconf="${myconf} $(use_enable ipv6) $(use_enable readline)"
+	myconf="${myconf} $(use_with sasl cyrus-sasl) $(use_enable sasl spasswd)"
+	myconf="${myconf} $(use_enable tcpd wrappers) $(use_with ssl tls)"
 
 	if [ $(get_libdir) != "lib" ] ; then
 		append-ldflags -L/usr/$(get_libdir)
@@ -367,9 +367,9 @@ src_install() {
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
-	for x in "${D}"/usr/$(get_libdir)/lib*.la; do
-		sed -i -e "s:-L${S}[/]*libraries::" ${x}
-	done
+	#for x in "${D}"/usr/$(get_libdir)/lib*.la; do
+	#	sed -i -e "s:-L${S}[/]*libraries::" ${x}
+	#done
 
 	# change slapd.pid location in configuration file
 	keepdir /var/run/openldap
@@ -377,13 +377,23 @@ src_install() {
 	fperms 0755 /var/run/openldap
 
 	if ! use minimal; then
-		# config modifications
-		for f in /etc/openldap/slapd.conf /etc/openldap/slapd.conf.default; do
-			sed -e "s:/var/lib/run/slapd.:/var/run/openldap/slapd.:" -i "${D}"/${f}
-			sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i "${D}"/${f}
-			fowners root:ldap ${f}
-			fperms 0640 ${f}
+		# use our config
+		rm "${D}"etc/openldap/slapd.con*
+		insinto /etc/openldap
+		newins "${FILESDIR}"/${P}-slapd-conf slapd.conf
+		configfile="${D}"etc/openldap/slapd.conf
+
+		# populate with built backends
+		ebegin "populate config with built backends"
+		for x in "${D}"usr/$(get_libdir)/openldap/openldap/back_*.so; do
+			elog "Adding $(basename ${x})"
+			sed -e "/###INSERTDYNAMICMODULESHERE###$/a# moduleload\t$(basename ${x})" -i "${configfile}"
 		done
+		sed -e "s:###INSERTDYNAMICMODULESHERE###$:# modulepath\t/usr/$(get_libdir)/openldap/openldap:" -i "${configfile}"
+		fowners root:ldap /etc/openldap/slapd.conf
+		fperms 0640 /etc/openldap/slapd.conf
+		cp "${configfile}" "${configfile}".default
+		eend
 
 		# install our own init scripts
 		newinitd "${FILESDIR}"/slapd-initd slapd
@@ -391,7 +401,7 @@ src_install() {
 		newconfd "${FILESDIR}"/slapd-confd slapd
 
 		if [ $(get_libdir) != lib ]; then
-			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i "${D}"/etc/init.d/{slapd,slurpd}
+			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i "${D}"etc/init.d/{slapd,slurpd}
 		fi
 
 		# install contributed modules
@@ -420,7 +430,7 @@ src_install() {
 		fi
 		if [ -e "${S}"/contrib/slapd-modules/smbk5pwd/.libs/smbk5pwd.so ]; then
 			cd "${S}"/contrib/slapd-modules/smbk5pwd
-			newdoc README.contrib.smbk5pwd
+			newdoc README README.contrib.smbk5pwd
 			libexecdir="/usr/$(get_libdir)/openldap" \
 			emake DESTDIR="${D}" install-mod || \
 			die "failed to install smbk5pwd overlay module"
@@ -440,6 +450,14 @@ src_install() {
 			die "failed to install addrdnvalues plugin"
 		fi
 
+		#do ssl cert magic
+		if use ssl; then
+			insinto /etc/openldap/ssl
+			docert ldap
+			fowners ldap:ldap /etc/openldap/ssl/ldap.*
+			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
+			ewarn "add 'TLS_REQCERT never' if you want to use them."
+		fi
 	fi
 }
 
@@ -454,19 +472,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if ! use minimal ; then
-		if use ssl; then
-			insinto /etc/openldap/ssl
-			docert ldap
-			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
-			ewarn "add 'TLS_REQCERT never' if you want to use them."
-		fi
-		chown ldap:ldap "${ROOT}"var/run/openldap
-		chmod 0755 "${ROOT}"var/run/openldap
-		chown root:ldap "${ROOT}"etc/openldap/slapd.conf{,.default}
-		chmod 0640 "${ROOT}"etc/openldap/slapd.conf{,.default}
-		chown ldap:ldap "${ROOT}"var/lib/openldap-{data,ldbm,slurp}
-	fi
 
 	# Reference inclusion bug #77330
 	echo
