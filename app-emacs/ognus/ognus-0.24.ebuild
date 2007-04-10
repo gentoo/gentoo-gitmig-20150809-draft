@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ognus/ognus-0.24.ebuild,v 1.10 2005/10/24 14:50:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ognus/ognus-0.24.ebuild,v 1.11 2007/04/10 19:40:37 opfer Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ IUSE=""
 DESCRIPTION="Current alpha branch of the Gnus news- and mail-reader"
 HOMEPAGE="http://www.gnus.org/"
 SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 

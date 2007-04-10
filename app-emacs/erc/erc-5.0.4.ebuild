@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-5.0.4.ebuild,v 1.2 2007/01/26 08:23:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-5.0.4.ebuild,v 1.3 2007/04/10 19:53:20 opfer Exp $
 
 inherit elisp
 
@@ -8,7 +8,7 @@ DESCRIPTION="The Emacs IRC Client"
 HOMEPAGE="http://emacswiki.org/cgi-bin/wiki.pl?EmacsIRCClient"
 SRC_URI="mirror://sourceforge/erc/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="ppc sparc x86 ~amd64"
 IUSE=""

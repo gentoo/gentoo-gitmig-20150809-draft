@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.20 2007/03/30 15:20:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.21 2007/04/10 19:34:59 opfer Exp $
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  cedet-1.0_pre3-r2.ebuild:
+  added FDL license
 
   30 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   -cedet-1.0_beta3.ebuild, -cedet-1.0_pre3.ebuild,

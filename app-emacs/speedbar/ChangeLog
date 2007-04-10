@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/speedbar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.9 2007/03/08 09:42:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.10 2007/04/10 19:47:03 opfer Exp $
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  speedbar-0.14_beta4.ebuild:
+  added FDL license
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50speedbar-gentoo.el:

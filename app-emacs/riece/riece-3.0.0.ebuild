@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-3.0.0.ebuild,v 1.1 2006/06/17 13:34:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-3.0.0.ebuild,v 1.2 2007/04/10 19:45:55 opfer Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ DESCRIPTION="Riece is a redesign of Liece IRC client"
 HOMEPAGE="http://www.nongnu.org/riece/"
 SRC_URI="http://savannah.nongnu.org/download/riece/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~ppc64 ~amd64 ~ppc-macos"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.6 2007/03/27 18:49:09 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.7 2007/04/10 19:34:59 opfer Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ IUSE=""
 DESCRIPTION="CEDET: Collection of Emacs Development Tools"
 HOMEPAGE="http://cedet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cedet/${PN}-${MY_PV}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos x86"
 DEPEND="virtual/emacs

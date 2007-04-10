@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/circe-cvs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/ChangeLog,v 1.3 2006/08/16 03:19:58 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/ChangeLog,v 1.4 2007/04/10 19:51:28 opfer Exp $
+
+  10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  circe-cvs-20060810.ebuild:
+  added FDL license
 
   16 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
   files/50circe-cvs-gentoo.el:

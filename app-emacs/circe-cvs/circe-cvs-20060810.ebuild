@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/circe-cvs-20060810.ebuild,v 1.2 2006/08/12 17:45:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/circe-cvs-20060810.ebuild,v 1.3 2007/04/10 19:51:28 opfer Exp $
 
 ECVS_SERVER="cvs.savannah.nongnu.org:/sources/circe"
 ECVS_MODULE="circe"
@@ -14,7 +14,7 @@ DESCRIPTION="Circe - A great IRC client for Emacs - CVS"
 HOMEPAGE="http://www.nongnu.org/circe/"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE=""
