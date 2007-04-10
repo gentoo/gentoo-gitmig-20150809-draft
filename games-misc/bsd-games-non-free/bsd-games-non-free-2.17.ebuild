@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.2 2006/02/26 06:57:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.3 2007/04/10 01:04:35 nyhm Exp $
 
 inherit games
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 
 	cp "${FILESDIR}"/config.params-gentoo config.params || die "cp failed"
+	echo bsd_games_cfg_usrlibdir=\"$(games_get_libdir)\" >> ./config.params
 	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params
 }
 

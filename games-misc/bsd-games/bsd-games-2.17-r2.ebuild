@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r2.ebuild,v 1.6 2007/03/07 17:02:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r2.ebuild,v 1.7 2007/04/10 01:04:05 nyhm Exp $
 
 inherit eutils games
 
@@ -45,6 +45,7 @@ src_unpack() {
 		|| die "sed wargames failed"
 
 	cp "${FILESDIR}"/config.params-gentoo config.params
+	echo bsd_games_cfg_usrlibdir=\"$(games_get_libdir)\" >> ./config.params
 	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params
 }
 

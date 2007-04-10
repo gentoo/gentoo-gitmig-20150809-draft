@@ -16,7 +16,6 @@ bsd_games_cfg_no_build_dirs="dm banner fortune factor"
 # Gentoo's games eclass want everything in these places
 bsd_games_cfg_gamesdir=${GAMES_BINDIR}
 bsd_games_cfg_sbindir=${GAMES_BINDIR}
-bsd_games_cfg_usrlibdir=${GAMES_LIBDIR}
 bsd_games_cfg_sharedir=${GAMES_DATADIR}
 bsd_games_cfg_varlibdir=${GAMES_STATEDIR}
 
