@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.33 2007/04/10 14:45:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.34 2007/04/10 15:41:29 armin76 Exp $
+
+  10 Apr 2007; Raúl Porcel <armin76@gentoo.org> yaz-2.1.42.ebuild:
+  ia64 stable wrt bug 173849
 
   10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> yaz-2.1.42.ebuild:
   Stable on sparc wrt #173849
