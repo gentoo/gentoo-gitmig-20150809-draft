@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/AnyEvent-2.5.2.ebuild,v 1.1 2007/03/09 21:37:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/AnyEvent-2.5.2.ebuild,v 1.2 2007/04/10 07:26:06 mcummings Exp $
 
 inherit perl-module versionator
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://search.cpan.org/~mlehmann/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
