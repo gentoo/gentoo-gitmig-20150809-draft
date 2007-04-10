@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.857.ebuild,v 1.3 2007/02/14 10:50:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.857.ebuild,v 1.4 2007/04/10 12:16:11 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 sparc ~x86"
 
 DEPEND="virtual/perl-Test-Simple
 	>=dev-perl/Email-MIME-Encodings-1.310
