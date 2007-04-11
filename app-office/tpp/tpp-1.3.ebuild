@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/tpp-1.3.ebuild,v 1.4 2005/11/19 16:55:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/tpp-1.3.ebuild,v 1.5 2007/04/11 18:38:07 welp Exp $
 
 inherit eutils ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://synflood.at/tpp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="figlet"
 
 USE_RUBY="ruby18"
