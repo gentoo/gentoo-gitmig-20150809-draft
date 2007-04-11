@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.141 2007/04/08 10:51:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.142 2007/04/11 19:43:38 uberlord Exp $
+
+*dhcpcd-3.0.16-r1 (11 Apr 2007)
+
+  11 Apr 2007; Roy Marples <uberlord@gentoo.org>
+  +files/dhcpcd-3.0.16-min-message.patch, +dhcpcd-3.0.16-r1.ebuild:
+  Add patch to enfore a minimum dhcp message size of 300 bytes for crappy
+  servers, #173399. Thanks to Kim for finding the issue.
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> dhcpcd-3.0.16.ebuild:
   Stable on ppc64; bug #166921
