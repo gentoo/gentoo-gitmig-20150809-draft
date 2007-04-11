@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.2 2007/04/11 13:53:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.3 2007/04/11 14:28:06 cardoe Exp $
 
 inherit eutils autotools multilib
 
@@ -25,16 +25,6 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
-
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-0.2.0-pam-lib-fix.patch
-	epatch "${FILESDIR}"/${PN}-0.2.0-gdk-to-x11.patch
-
-	eautoreconf
-}
 
 src_compile() {
 	econf $(use_enable debug) \
