@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.276 2007/04/11 14:36:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.277 2007/04/11 21:44:02 falco Exp $
+
+  11 Apr 2007; Raphael Marichez <falco@gentoo.org> use.local.desc:
+  Add dbtool local USE-flag for app-forensics/sleuthkit-2.08
 
   11 Apr 2007; Tony Vroon <chainsaw@gentoo.org> use.local.desc:
   Add sname local USE-flag for net-im/ejabberd-1.1.3-r1.
