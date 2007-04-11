@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.5 2007/04/11 20:06:55 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.6 2007/04/11 20:18:41 corsair Exp $
+
+  11 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  libpthread-stubs-0.1.ebuild:
+  Stable on ppc64; bug #172752
 
   11 Apr 2007; Peter Weller <welp@gentoo.org> libpthread-stubs-0.1.ebuild:
   Stable on amd64
