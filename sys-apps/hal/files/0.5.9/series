@@ -2,5 +2,6 @@
 02_acpi_repeated_property_change.patch
 03_crasher_fix_fail_to_return_value.patch
 04_cache_regen_return_fix.patch
+05_freebsd_partutil_make_fix.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch

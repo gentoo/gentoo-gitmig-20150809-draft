@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.15 2007/04/11 15:19:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.16 2007/04/11 16:12:42 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -75,17 +75,19 @@ function notify_inotify() {
 }
 
 pkg_setup() {
-	kernel_is ge 2 6 17 || ewarn "HAL requires a kernel version 2.6.17 or newer"
+	if use kernel_linux; then
+		kernel_is ge 2 6 17 || ewarn "HAL requires a kernel version 2.6.17 or newer"
 
-	if ! ( linux_chkconfig_present HOTPLUG && linux_chkconfig_present NET )
-	then
-		notify_uevent
-	fi
+		if ! ( linux_chkconfig_present HOTPLUG && linux_chkconfig_present NET )
+		then
+			notify_uevent
+		fi
 
-	linux_chkconfig_present INOTIFY_USER || notify_inotify
+		linux_chkconfig_present INOTIFY_USER || notify_inotify
 
-	if use acpi ; then
-		linux_chkconfig_present PROC_FS || notify_procfs
+		if use acpi ; then
+			linux_chkconfig_present PROC_FS || notify_procfs
+		fi
 	fi
 
 	if [[ -d ${ROOT}/etc/hal/device.d ]]; then
