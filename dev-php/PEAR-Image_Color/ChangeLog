@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Image_Color
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Color/ChangeLog,v 1.11 2007/04/11 03:09:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Color/ChangeLog,v 1.12 2007/04/11 17:53:41 welp Exp $
+
+  11 Apr 2007; Peter Weller <welp@gentoo.org> PEAR-Image_Color-1.0.2.ebuild:
+  Stable on amd64 wrt bug 173774
 
   11 Apr 2007; Jeroen Roovers <jer@gentoo.org>
   PEAR-Image_Color-1.0.2.ebuild:
