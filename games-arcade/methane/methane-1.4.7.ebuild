@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.7.ebuild,v 1.4 2007/03/23 20:09:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.7.ebuild,v 1.5 2007/04/11 17:19:27 nyhm Exp $
 
 inherit eutils games
 
@@ -26,7 +26,7 @@ src_unpack() {
 			|| die "sed failed"
 	fi
 	sed -i \
-		-e "s:/var/games:${GAMES_STATDIR}:" \
+		-e "s:/var/games:${GAMES_STATEDIR}:" \
 		source/linux/doc.cpp history \
 		|| die "sed failed"
 }
