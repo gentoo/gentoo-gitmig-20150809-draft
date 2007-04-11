@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.155 2007/04/10 15:05:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.156 2007/04/11 15:19:58 cardoe Exp $
+
+  11 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
+  cryptsetup-luks marked as Linux only
 
   10 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/0.5.9/04_cache_regen_return_fix.patch, files/0.5.9/series:
