@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.1 2007/04/11 03:52:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.2 2007/04/11 13:53:31 cardoe Exp $
 
 inherit eutils autotools multilib
 
@@ -39,7 +39,7 @@ src_unpack() {
 src_compile() {
 	econf $(use_enable debug) \
 	$(use_enable pam pam-module) \
-	--with-slibdir=/$(get_libdir) \
+	--with-pam-module-dir=/$(get_libdir)/security \
 	--with-pid-file=/var/run/consolekit.pid \
 	--with-dbus-services=/usr/share/dbus-1/services/ \
 	|| die "econf failed"
