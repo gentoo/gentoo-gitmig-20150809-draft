@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.12.ebuild,v 1.1 2007/02/08 09:40:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.12-r1.ebuild,v 1.1 2007/04/11 12:56:08 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pps.jussieu.fr/~jch/software/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-apps/texinfo"
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-printf-ptr.patch"
 }
 
 src_compile() {
@@ -41,7 +42,7 @@ src_install() {
 	exeinto /etc/cron.daily ; newexe "${FILESDIR}/polipo.crond" polipo.sh
 
 	diropts -m0750 -o polipo -g polipo
-	dodir /var/cache/polipo
+	keepdir /var/cache/polipo
 }
 
 pkg_preinst() {

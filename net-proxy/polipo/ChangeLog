@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.13 2007/02/12 11:13:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.14 2007/04/11 12:56:08 mrness Exp $
+
+*polipo-0.9.12-r1 (11 Apr 2007)
+
+  11 Apr 2007; Alin Năstac <mrness@gentoo.org>
+  +files/polipo-0.9.12-printf-ptr.patch, -polipo-0.9.12.ebuild,
+  +polipo-0.9.12-r1.ebuild:
+  Use correct printf format for pointers. Keep /var/cache/polipo directory.
+  Stable on amd64.
 
   12 Feb 2007; Alin Nastac <mrness@gentoo.org> files/polipo.initd:
   Check configuration at service startup.
