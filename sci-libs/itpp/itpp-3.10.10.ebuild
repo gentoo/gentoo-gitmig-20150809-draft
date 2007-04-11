@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.10.8.ebuild,v 1.4 2007/02/03 22:02:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.10.10.ebuild,v 1.1 2007/04/11 13:36:27 markusle Exp $
 
 inherit fortran
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://itpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 IUSE="blas cblas debug doc fftw lapack"
 
 DEPEND="fftw? ( >=sci-libs/fftw-3.0.0 )
@@ -53,6 +53,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO || \
+	dodoc AUTHORS ChangeLog* INSTALL NEWS* README || \
 		die "failed to install docs"
 }
