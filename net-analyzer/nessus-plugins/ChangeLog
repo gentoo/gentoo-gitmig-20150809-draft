@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.76 2007/04/03 14:34:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.77 2007/04/11 13:45:06 welp Exp $
+
+  11 Apr 2007; Peter Weller <welp@gentoo.org> nessus-plugins-2.2.9.ebuild:
+  Keyworded ~x86-fbsd wrt bug 172890
 
 *nessus-plugins-2.2.9 (03 Apr 2007)
 
