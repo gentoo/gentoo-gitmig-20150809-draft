@@ -1,11 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/elisp-manual-21.2.8.ebuild,v 1.12 2007/04/11 06:22:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/elisp-manual-21.2.8.ebuild,v 1.13 2007/04/11 08:25:52 opfer Exp $
 
-MY_PV=21-2.8
+inherit versionator
+
+MY_PV=$(replace_version_separator 1 '-' )
 DESCRIPTION="The GNU Emacs Lisp Reference Manual"
-HOMEPAGE="http://www.gnu.org/software/emacs/elisp-manual/"
-SRC_URI="http://www.gnu.org/manual/elisp-manual-${MY_PV}/info/elisp-info.tar.gz"
+HOMEPAGE="http://ftp.gnu.org/gnu/Manuals/elisp-manual-${MY_PV}/elisp.html"
+SRC_URI="http://ftp.gnu.org/gnu/Manuals/elisp-manual-${MY_PV}/info/elisp-info.tar.gz"
 
 LICENSE="FDL-1.2"
 SLOT="0"
