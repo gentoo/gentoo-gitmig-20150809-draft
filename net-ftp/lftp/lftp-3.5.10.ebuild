@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.10.ebuild,v 1.2 2007/04/11 12:27:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.10.ebuild,v 1.3 2007/04/11 13:10:09 welp Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://lftp.yar.ru/lftp/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc x86 ~x86-fbsd"
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND=">=sys-libs/ncurses-5.1

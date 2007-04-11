@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.125 2007/04/11 12:27:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.126 2007/04/11 13:10:09 welp Exp $
+
+  11 Apr 2007; Peter Weller <welp@gentoo.org> lftp-3.5.10.ebuild:
+  Stable on amd64 wrt bug 173524
 
   11 Apr 2007; Raúl Porcel <armin76@gentoo.org> lftp-3.5.10.ebuild:
   ia64 + x86 stable wrt security bug 173524
