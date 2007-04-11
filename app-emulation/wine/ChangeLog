@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.174 2007/03/31 02:29:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.175 2007/04/11 09:05:39 vapier Exp $
+
+  11 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-stub-RtlSetTimeZoneInformation.patch, wine-0.9.34.ebuild:
+  Remove pointless call to settimeofday() #162438.
 
 *wine-0.9.34 (31 Mar 2007)
 
