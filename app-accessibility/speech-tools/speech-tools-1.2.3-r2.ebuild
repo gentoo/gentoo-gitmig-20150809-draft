@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r2.ebuild,v 1.12 2006/07/20 03:21:45 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r2.ebuild,v 1.13 2007/04/11 19:37:15 betelgeuse Exp $
 
 IUSE="doc"
 
@@ -101,8 +101,7 @@ src_install() {
 
 	find ${D}/usr/share/speech-tools/config -type f | xargs sed -i 's/-ltermcap/-lncurses/g'
 
-	insinto /etc/env.d
-	doins ${FILESDIR}/58speech-tools
+	doenvd "${FILESDIR}/58speech-tools"
 
 	cd ${S}
 	dodoc README INSTALL
