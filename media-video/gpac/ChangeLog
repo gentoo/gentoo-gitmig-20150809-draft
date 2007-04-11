@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.38 2007/02/14 19:09:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.39 2007/04/11 20:53:40 aballier Exp $
+
+  11 Apr 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/gpac-0.4.2-ffmpeg-errno.patch, gpac-0.4.2-r1.ebuild:
+  fix build with recent ffmpeg snapshots, bug #173772
 
   14 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   -files/gpac-0.4.0-downloader.patch,
