@@ -1,10 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX blackshades 50 RMD160 17c711ea130e63ec391af9752fa427068690dc75 SHA1 db0ea17931f7673d908d6fe8a49cd76024a73558 SHA256 2a49cea61fa6a069bff283454d447d9c4a02244cccd6ee08ef71001e90c85e9b
-MD5 4e6f2bc85b9d4a2831f3e58435018339 files/blackshades 50
-RMD160 17c711ea130e63ec391af9752fa427068690dc75 files/blackshades 50
-SHA256 2a49cea61fa6a069bff283454d447d9c4a02244cccd6ee08ef71001e90c85e9b files/blackshades 50
 AUX blackshades-cvs-freealut.patch 370 RMD160 a68103f4bc6a3fb5362f22ef52141ab7086e49fd SHA1 42a52ca9394e5736a2890d7cb3bd703bbda3ffa8 SHA256 0d85cc82982ac57b79678e964598dfc65e3718005ba0cf7fff8461aed569ec32
 MD5 c3f12dbd9674dbbe7b04d78fde1e8e72 files/blackshades-cvs-freealut.patch 370
 RMD160 a68103f4bc6a3fb5362f22ef52141ab7086e49fd files/blackshades-cvs-freealut.patch 370
@@ -27,9 +23,9 @@ MD5 84e3538657e4d4b4f2acfd47144e4494 files/digest-blackshades-cvs-20031110-r1 49
 RMD160 550d63181e9e39868b53e6fa9c102ca9d5411a1a files/digest-blackshades-cvs-20031110-r1 494
 SHA256 99550789989b8b04e3115cf7378ce18cd0c4653ff5a670700581993b320e482e files/digest-blackshades-cvs-20031110-r1 494
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF7u2YkT4lNIS36YERAiU3AJsFs6ELyakINHFtzQ/MHqbCUabbwACgozuQ
-yZonzfCqueDJTVub3MU/gvI=
-=oSAq
+iD8DBQFGHTYddz7hIScOURERApk6AJ4rdNOtvx1Utt8D0YyuTOk45h2k7ACfXzBQ
+tv7L9z8IP8nVRugAbVXimoM=
+=0uxS
 -----END PGP SIGNATURE-----
