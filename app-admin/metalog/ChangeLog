@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.65 2007/04/10 17:33:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.66 2007/04/11 02:45:36 jer Exp $
+
+  11 Apr 2007; Jeroen Roovers <jer@gentoo.org> metalog-0.8_rc4.ebuild:
+  Stable for HPPA (bug #173601).
 
   10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   metalog-0.8_rc4.ebuild:
