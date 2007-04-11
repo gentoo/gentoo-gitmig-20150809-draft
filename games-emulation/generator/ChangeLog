@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.17 2007/03/07 16:48:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.18 2007/04/11 20:51:37 mr_bones_ Exp $
+
+  11 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/generator-0.35-configure.patch,
+  files/generator-0.35-execstacks.patch, generator-0.35-r3.ebuild:
+  stable for x86; fix QA warnings with patch to configure.ac
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> generator-0.35.ebuild:
   Change all instances of [ to [[.

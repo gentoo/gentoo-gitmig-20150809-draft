@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35-r3.ebuild,v 1.2 2007/02/03 08:01:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35-r3.ebuild,v 1.3 2007/04/11 20:51:37 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs games
+inherit autotools eutils toolchain-funcs games
 
 DESCRIPTION="Sega Genesis / Mega Drive emulator"
 HOMEPAGE="http://www.ghostwhitecrab.com/generator/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.ghostwhitecrab.com/generator/${P}-cbiere-r2.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="gtk sdlaudio svga"
 
 S=${WORKDIR}/${P}-cbiere-r2
@@ -27,11 +27,10 @@ src_unpack() {
 	cd "${S}"
 	mkdir my-bins
 
-	epatch "${FILESDIR}"/${P}-execstacks.patch
-
-	sed -i \
-		-e '/CFLAGS.*-O3/d' \
-		configure || die "sed configure failed"
+	epatch \
+		"${FILESDIR}"/${P}-execstacks.patch \
+		"${FILESDIR}"/${P}-configure.patch
+	eautoreconf
 }
 
 # builds SDL by default since otherwise -svga -gtk builds nothing
@@ -51,6 +50,7 @@ src_compile() {
 		egamesconf \
 			${myconf} \
 			--with-${mygui} \
+			--without-tcltk \
 			--with-gcc=$(gcc-major-version) \
 			$(use_with sdlaudio sdl-audio) \
 			--disable-dependency-tracking || die
