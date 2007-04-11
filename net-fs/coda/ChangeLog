@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.26 2007/02/22 02:11:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.27 2007/04/11 17:30:14 griffon26 Exp $
+
+  11 Apr 2007; Maurice van der Pot <griffon26@gentoo.org>
+  coda-6.0.14.ebuild, coda-6.0.15.ebuild:
+  Removed kth-krb dependency for bug #173354. Use kerberos 5 instead.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

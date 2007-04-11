@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.14.ebuild,v 1.1 2006/05/03 18:21:26 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.14.ebuild,v 1.2 2007/04/11 17:30:14 griffon26 Exp $
 
 inherit autotools eutils
 
-IUSE="kerberos krb4 ssl"
+IUSE="kerberos ssl"
 
 DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Univ."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
@@ -29,7 +29,6 @@ RDEPEND=">=sys-libs/lwp-2.1
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
 	>=dev-lang/perl-5.8
-	krb4? ( app-crypt/kth-krb )
 	kerberos? ( virtual/krb5 )
 	ssl? ( dev-libs/openssl )"
 
@@ -43,8 +42,6 @@ src_unpack() {
 src_compile() {
 	local myflags=""
 
-	use krb4 && myflags="${myflags} --with-krb4
-	                                --with-krb4-includes=/usr/athena/include"
 	use kerberos && myflags="${myflags} --with-krb5"
 	use ssl && myflags="${myflags} --with-openssl"
 
