@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.ebuild,v 1.2 2007/04/06 09:02:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.ebuild,v 1.3 2007/04/11 11:50:14 spock Exp $
 
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib flag-o-matic toolchain-funcs
 
 MISCSPLASH="miscsplashutils-0.1.5"
 GENTOOSPLASH="splashutils-gentoo-1.0.0"
@@ -116,6 +116,7 @@ src_compile() {
 
 	cd ${S}
 	./configure \
+		--with-fifo=$(get_libdir)/splash/cache/.splash \
 		$(use_with png) \
 		$(use_with mng) \
 		$(use_with gpm) \
@@ -129,6 +130,7 @@ src_compile() {
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
 		cd ${SG}
+		append-flags "-DLIBDIR=\\\"$(get_libdir)\\\""
 		emake || die "failed to build the splash plugin"
 	fi
 }
