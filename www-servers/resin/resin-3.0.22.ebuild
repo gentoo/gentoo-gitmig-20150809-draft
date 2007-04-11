@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.22.ebuild,v 1.6 2007/02/03 13:17:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.22.ebuild,v 1.7 2007/04/11 10:07:26 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -20,7 +20,8 @@ DEPEND="${RDEPEND}
 	>=dev-java/sun-javamail-1.4
 	>=dev-java/sun-jaf-1.1
 	dev-java/ant-core
-	dev-libs/openssl"
+	dev-libs/openssl
+	source? ( app-arch/zip )"
 
 RESIN_HOME="/usr/lib/resin"
 

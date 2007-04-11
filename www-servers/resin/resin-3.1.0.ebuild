@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.0.ebuild,v 1.2 2007/01/09 12:15:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.0.ebuild,v 1.3 2007/04/11 10:07:26 nelchael Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -9,7 +11,7 @@ HOMEPAGE="http://www.caucho.com"
 SRC_URI="http://www.caucho.com/download/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="admin doc source"
+IUSE="admin"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
