@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/tinyq-3.0.6.ebuild,v 1.7 2004/07/14 15:11:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/tinyq-3.0.6.ebuild,v 1.8 2007/04/11 18:41:43 phreak Exp $
 
 DESCRIPTION="Stripped down version of qt ${PV} for console development"
 SRC_URI="http://freesoftware.fsf.org/download/tinyq/${P}.tar.bz2"
@@ -26,6 +26,5 @@ src_compile() {
 
 src_install() {
 	make INSTALL_ROOT=${D} install || die
-	insinto /etc/env.d
-	doins ${FILESDIR}/47tinyq
+	doenvd "${FILESDIR}"/47tinyq
 }
