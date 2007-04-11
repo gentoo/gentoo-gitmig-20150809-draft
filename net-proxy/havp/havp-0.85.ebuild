@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.85.ebuild,v 1.1 2007/03/10 10:23:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.85.ebuild,v 1.2 2007/04/11 08:35:04 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.server-side.de/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="clamav ssl"
 
 DEPEND="clamav? ( >=app-antivirus/clamav-0.90 )"
@@ -63,5 +63,12 @@ pkg_postinst() {
 		ewarn "      HTTPS pages will not be scanned for viruses!"
 		ewarn "      It is impossible to decrypt data sent through SSL connections without knowing"
 		ewarn "      the private key of the used certificate."
+	fi
+
+	if use clamav; then
+		echo
+		ewarn "If you plan to use clamav daemon, you should make sure clamav user can read"
+		ewarn "/var/tmp/havp content. This can be accomplished by enabling AllowSupplementaryGroups"
+		ewarn "in /etc/clamd.conf and adding clamav user to the havp group."
 	fi
 }
