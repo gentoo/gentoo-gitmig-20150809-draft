@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.9 2007/03/18 15:31:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.10 2007/04/11 20:46:15 tester Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -46,7 +46,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/emacs-subdirs-el-gentoo.diff
 	epatch "${FILESDIR}"/emacs-cvs-nofink.patch
-	epatch "${FILESDIR}"/emacs-cvs-darwin-fsf-gcc.patch
+	#epatch "${FILESDIR}"/emacs-cvs-darwin-fsf-gcc.patch
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
