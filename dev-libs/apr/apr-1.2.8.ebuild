@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.8.ebuild,v 1.4 2007/02/28 22:04:30 genstef Exp $
-
-WANT_AUTOCONF="2.5"
-WANT_AUTOMAKE="1.1"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.8.ebuild,v 1.5 2007/04/11 20:21:47 phreak Exp $
 
 inherit autotools
 
