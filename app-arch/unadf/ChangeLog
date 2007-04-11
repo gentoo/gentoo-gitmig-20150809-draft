@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unadf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/ChangeLog,v 1.8 2007/04/09 16:21:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/ChangeLog,v 1.9 2007/04/11 00:15:21 jer Exp $
+
+  11 Apr 2007; Jeroen Roovers <jer@gentoo.org> unadf-0.7.9b.ebuild:
+  Stable for HPPA (bug #173841).
 
   09 Apr 2007; Fabian Groffen <grobian@gentoo.org> unadf-0.7.9b.ebuild:
   Dropped ppc-macos keyword, see you in prefix
