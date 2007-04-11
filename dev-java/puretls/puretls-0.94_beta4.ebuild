@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.9 2005/10/30 19:52:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.10 2007/04/11 13:02:35 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes source"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/cryptix-asn1-bin-20011119
-	=dev-java/cryptix-3.2.0"
+	~dev-java/cryptix-3.2.0"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	jikes? ( dev-java/jikes )
