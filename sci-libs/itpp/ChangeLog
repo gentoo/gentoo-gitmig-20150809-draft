@@ -1,9 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.33 2007/04/11 19:03:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.34 2007/04/11 19:06:56 markusle Exp $
 
   11 Apr 2007; Markus Dittrich <markusle@gentoo.org> itpp-3.10.10.ebuild:
-  Accidentally masked new version stable. Fixed now. Sorry!
+  Accidentally marked new version stable. Fixed now. Sorry!
 
 *itpp-3.10.10 (11 Apr 2007)
 
