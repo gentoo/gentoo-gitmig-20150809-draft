@@ -37,10 +37,10 @@ AUX 0.5.9/06_freebsd_backend_fix.patch 1855 RMD160 b72d65291d04cc5ebadc24ef697f2
 MD5 65a0a52b23807f81ee2d61d2602256b2 files/0.5.9/06_freebsd_backend_fix.patch 1855
 RMD160 b72d65291d04cc5ebadc24ef697f2e1ae2ab28a8 files/0.5.9/06_freebsd_backend_fix.patch 1855
 SHA256 c8f5149e581cbcd328b70f04532b45f488940ce3b9d779a355600e96f885bed2 files/0.5.9/06_freebsd_backend_fix.patch 1855
-AUX 0.5.9/07_malloc_h_for_stdlib_h.patch 824 RMD160 029aff18287553c4fee38689cf007060e485fc2c SHA1 4e8b28eb363015e6ffd997daa338e3b853b59f52 SHA256 86e2db1894e9d3719b09f832f1766e4266870221d3558cd91a9ed59b5531d2d8
-MD5 219ba051522bf47a623427734daaa627 files/0.5.9/07_malloc_h_for_stdlib_h.patch 824
-RMD160 029aff18287553c4fee38689cf007060e485fc2c files/0.5.9/07_malloc_h_for_stdlib_h.patch 824
-SHA256 86e2db1894e9d3719b09f832f1766e4266870221d3558cd91a9ed59b5531d2d8 files/0.5.9/07_malloc_h_for_stdlib_h.patch 824
+AUX 0.5.9/07_malloc_h_for_stdlib_h.patch 1222 RMD160 73f739410f6e493dee2122c20323f041c73cf73f SHA1 76fd9fc0aa4a68023408647f88772f44155e5659 SHA256 aa4f13cea5ec021ef0581eddee6981ba950e94657db947592b23074a69023ec6
+MD5 3eba439d9fb147f8c2642a6f114741dc files/0.5.9/07_malloc_h_for_stdlib_h.patch 1222
+RMD160 73f739410f6e493dee2122c20323f041c73cf73f files/0.5.9/07_malloc_h_for_stdlib_h.patch 1222
+SHA256 aa4f13cea5ec021ef0581eddee6981ba950e94657db947592b23074a69023ec6 files/0.5.9/07_malloc_h_for_stdlib_h.patch 1222
 AUX 0.5.9/95_gentoo_man_page.patch 18159 RMD160 cd4bf6c16e84464b11de755323ef2d0f5c1a54f9 SHA1 f9de30d705eada8e2f631e51b715b9923f732fb4 SHA256 59d81dcb273f3cdc9c7fc9f195331529642fef2c2150b3eeb3fd98ea555b1893
 MD5 f6d115e0eb501aba476f4df965bfeb6c files/0.5.9/95_gentoo_man_page.patch 18159
 RMD160 cd4bf6c16e84464b11de755323ef2d0f5c1a54f9 files/0.5.9/95_gentoo_man_page.patch 18159
@@ -191,7 +191,7 @@ SHA256 d862b002c9a5547954874b2a0cbadd614381d085e850539e6aef2dd9e9d52dfe files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGHSYjoeSe8B0zEfwRAtdLAJ93UhLgLAxTmbJOBjwwSFMcfXRdqACfd98t
-NpMbgwTJfbFEdkJQubkLCsk=
-=6QDm
+iD8DBQFGHTxjoeSe8B0zEfwRAlPwAJ4zo5ijQ4vyxKgbTpH3hCdmY3xj+gCfaFGu
+sE9PSErJWA2m7cewKqOxrms=
+=38CY
 -----END PGP SIGNATURE-----
