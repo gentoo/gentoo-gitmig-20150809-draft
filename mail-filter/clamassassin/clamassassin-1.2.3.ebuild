@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.3.ebuild,v 1.3 2007/04/09 11:41:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.3.ebuild,v 1.4 2007/04/11 12:47:45 ticho Exp $
 
 DESCRIPTION="clamassassin is a simple script for virus scanning (through clamav) an e-mail message as a
 filter (like spamassassin)"
@@ -24,7 +24,7 @@ src_compile() {
 		clamav_dbdir="/var/lib/clamav"
 	fi
 	# Add an entry to sandbox write prediction list, so sandbox doesn't complain
-	addpredict ${clamav_dbdir}/.dbLock
+	addpredict ${clamav_dbdir}/
 
 	econf \
 		$(use_enable subject-rewrite) \
