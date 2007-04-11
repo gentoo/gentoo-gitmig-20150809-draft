@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.421 2007/03/30 12:43:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.422 2007/04/11 10:54:36 cryos Exp $
+
+  11 Apr 2007; Marcus D. Hanwell <cryos@gentoo.org> qt-3.3.8-r2.ebuild,
+  qt-4.2.3-r1.ebuild:
+  Stable on amd64, bug 172746.
 
 *qt-4.2.3-r1 (30 Mar 2007)
 *qt-3.3.8-r2 (30 Mar 2007)
