@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.0.ebuild,v 1.2 2006/12/25 08:58:28 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.0.ebuild,v 1.3 2007/04/11 13:38:04 mrness Exp $
 
 inherit eutils
 
@@ -39,14 +39,8 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To enable squidclam, add the following lines to /etc/squid/squid.conf:"
-	einfo " - for squid ver 2.5"
-	einfo "    ${HILITE}redirect_program /usr/sbin/squidclamav${NORMAL}"
-	einfo "    ${HILITE}redirect_children 15${NORMAL}"
-	einfo "    ${HILITE}redirector_access deny localhost${NORMAL} # prevent loops"
-	einfo "    ${HILITE}redirector_access deny SSL_ports${NORMAL} # SSL URLs cannot be scanned"
-	einfo " - for squid ver 2.6"
-	einfo "    ${HILITE}url_rewrite_program /usr/sbin/squidclamav${NORMAL}"
-	einfo "    ${HILITE}url_rewrite_children 15${NORMAL}"
-	einfo "    ${HILITE}url_rewrite_access deny localhost${NORMAL} # prevent loops"
-	einfo "    ${HILITE}url_rewrite_access deny SSL_ports${NORMAL} # SSL URLs cannot be scanned"
+	einfo "    url_rewrite_program /usr/sbin/squidclamav"
+	einfo "    url_rewrite_children 15"
+	einfo "    url_rewrite_access deny localhost # prevent loops"
+	einfo "    url_rewrite_access deny SSL_ports # SSL URLs cannot be scanned"
 }
