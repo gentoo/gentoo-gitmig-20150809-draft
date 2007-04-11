@@ -3,5 +3,7 @@
 03_crasher_fix_fail_to_return_value.patch
 04_cache_regen_return_fix.patch
 05_freebsd_partutil_make_fix.patch
+06_freebsd_backend_fix.patch
+07_malloc_h_for_stdlib_h.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch

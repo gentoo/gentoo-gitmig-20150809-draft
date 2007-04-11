@@ -1,20 +1,23 @@
 Index: b/partutil/Makefile.am
 ===================================================================
---- a/partutil/Makefile.am	2007-03-07 16:52:19.000000000 -0500
-+++ b/partutil/Makefile.am	2007-04-11 12:03:45.000000000 -0400
-@@ -1,8 +1,6 @@
+--- a/partutil/Makefile.am	2007-04-11 12:15:39.000000000 -0400
++++ b/partutil/Makefile.am	2007-04-11 12:23:05.000000000 -0400
+@@ -1,12 +1,8 @@
 -if HALD_COMPILE_SOLARIS 
 -# do nothing
 -else if HALD_COMPILE_FREEBSD
 -# do nothing
 -else 
-+if HALD_COMPILE_LINUX
-+noinst_LTLIBRARIES = libpartutil.la
-+endif
- 
+-
  INCLUDES = @GLIB_CFLAGS@
  
-@@ -14,4 +12,3 @@
++if HALD_COMPILE_LINUX
+ noinst_LTLIBRARIES = libpartutil.la
++endif
+ 
+ libpartutil_la_SOURCES = partutil.h partutil.c ../hald/logger.c
+ 
+@@ -14,4 +10,3 @@
  
  clean-local :
  	rm -f *~
