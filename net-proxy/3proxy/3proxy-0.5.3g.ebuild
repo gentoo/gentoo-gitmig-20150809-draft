@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/3proxy-0.5.3g.ebuild,v 1.1 2007/01/17 18:43:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/3proxy-0.5.3g.ebuild,v 1.2 2007/04/11 07:05:50 mrness Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.security.nnov.ru/soft/3proxy/${PV}/${P}.tgz"
 
 LICENSE="3proxy"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
