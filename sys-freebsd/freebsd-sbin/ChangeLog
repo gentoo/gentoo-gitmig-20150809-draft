@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.35 2007/04/06 14:51:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.36 2007/04/11 10:42:37 uberlord Exp $
+
+  11 Apr 2007; Roy Marples <uberlord@gentoo.org> files/devd_queue:
+  Quick fix for baselayout-2
 
 *freebsd-sbin-6.2-r1 (06 Apr 2007)
 
