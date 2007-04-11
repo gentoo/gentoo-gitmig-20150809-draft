@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.50 2007/04/07 14:18:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.51 2007/04/11 14:27:17 welp Exp $
+
+  11 Apr 2007; Peter Weller <welp@gentoo.org> lcdproc-0.5.1-r4.ebuild:
+  Stable on amd64 wrt bug 173271
 
   07 Apr 2007; Markus Ullmann <jokey@gentoo.org> lcdproc-0.5.1-r4.ebuild:
   Stable on x86 wrt bug #173271
