@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r7.ebuild,v 1.4 2007/02/13 08:48:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r7.ebuild,v 1.5 2007/04/11 16:32:19 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -26,18 +26,19 @@ RDEPEND="=virtual/jre-1.4*
 	${COMMON_DEP}"
 DEPEND="=virtual/jdk-1.4*
 	${COMMON_DEP}
-	>=dev-java/ant-1.5.4"
+	|| ( dev-java/ant-trax dev-java/ant-tasks )
+	>=dev-java/ant-core-1.5.4"
 
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	epatch ${FILESDIR}/${PV}-no-autodetection.patch
 
-	cd ${S}/lib
-	rm -f *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from avalon-framework-4.1
 	java-pkg_jar-from batik-1.5 batik-all.jar batik.jar
@@ -55,7 +56,7 @@ src_compile() {
 	use jai && jaip="-Djai.present=true"
 	use jimi && jimip="-Djimi.present=true"
 
-	eant ${jaip} ${jimip} package $(use_doc javadocs)
+	ANT_TASKS="ant-trax" eant ${jaip} ${jimip} package $(use_doc javadocs)
 }
 
 src_install() {
@@ -65,8 +66,8 @@ src_install() {
 	echo 'FOP_HOME=/usr/share/fop/' > ${D}/etc/env.d/java/22fop
 	java-pkg_dolauncher ${PN} --main org.apache.fop.apps.Fop
 
+	dodoc CHANGES STATUS README || die
 	if use doc; then
-		dodoc CHANGES STATUS README
 		java-pkg_dohtml -r ReleaseNotes.html build/javadocs/*
 	fi
 
