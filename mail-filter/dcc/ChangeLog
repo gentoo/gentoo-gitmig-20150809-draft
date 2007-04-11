@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.41 2007/04/11 14:09:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.42 2007/04/11 15:33:12 gustavoz Exp $
+
+  11 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> dcc-1.3.55.ebuild:
+  Stable on sparc wrt security #167644
 
   11 Apr 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
   Stable on ppc64; bug #167644
