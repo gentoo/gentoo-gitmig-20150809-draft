@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.1 2007/02/10 01:50:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.2 2007/04/11 12:37:04 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 # FIXME doesn't like compiling with Java 1.6 for some reason
 DEPEND="|| (
-		=virtual/jdk-1.4*
 		=virtual/jdk-1.5*
+		=virtual/jdk-1.4*
 	)
 	dev-java/ant-core
 	app-arch/unzip"
