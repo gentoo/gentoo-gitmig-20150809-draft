@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.4.ebuild,v 1.8 2006/11/28 22:19:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.4.ebuild,v 1.9 2007/04/11 19:14:28 phreak Exp $
 
 inherit eutils multilib
 
@@ -30,8 +30,9 @@ DEPEND=">=sys-devel/libtool-1.5
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-pkgconfig-fix.diff || \
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-pkgconfig-fix.diff || \
 		die "epatch failed"
 }
 
@@ -47,7 +48,9 @@ src_compile() {
 		$(use_with gd rigmatrix) \
 		$(use_with X x) \
 		|| die "configure failed"
+
 	emake || die "emake failed"
+
 	if use doc ; then
 		cd doc && make doc || die "make doc failed"
 	fi
@@ -55,17 +58,20 @@ src_compile() {
 
 src_install() {
 	einstall \
-		libdir=${D}/usr/$(get_libdir)/hamlib || \
+		libdir="${D}"/usr/$(get_libdir)/hamlib || \
 		die "einstall failed"
+
 	dodoc AUTHORS PLAN README README.betatester
 	dodoc README.developer LICENSE NEWS TODO
+
 	if use doc; then
 		dohtml doc/html/*
 		doman doc/man/man3/*
 	fi
+
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins hamlib.pc
-	echo "LDPATH=/usr/$(get_libdir)/hamlib" > 73hamlib
-	insinto /etc/env.d
-	doins 73hamlib
+
+	echo "LDPATH=/usr/$(get_libdir)/hamlib" > "${T}"/73hamlib
+	doenvd "${T}"/73hamlib
 }

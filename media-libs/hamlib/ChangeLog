@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/hamlib
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.20 2006/11/28 22:19:33 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.21 2007/04/11 19:14:28 phreak Exp $
+
+  11 Apr 2007; Christian Heim <phreak@gentoo.org> hamlib-1.2.4.ebuild,
+  hamlib-1.2.5.ebuild:
+  Use proper helper functions (#173884). Quoting fixes.
 
   28 Nov 2006; Michael Sterrett <mr_bones_@gentoo.org> hamlib-1.2.4.ebuild,
   hamlib-1.2.5.ebuild:
