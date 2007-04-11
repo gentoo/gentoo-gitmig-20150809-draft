@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.7.ebuild,v 1.6 2007/04/08 12:44:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.7.ebuild,v 1.7 2007/04/11 14:21:52 welp Exp $
 
 DESCRIPTION="Userspace access to FTDI USB interface chips"
 HOMEPAGE="http://www.intra2net.com/opensource/ftdi/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.intra2net.com/opensource/ftdi/TGZ/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND="sys-devel/libtool
