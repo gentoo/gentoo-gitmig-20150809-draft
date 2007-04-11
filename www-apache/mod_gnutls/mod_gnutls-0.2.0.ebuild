@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.2.0.ebuild,v 1.4 2007/01/15 16:33:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.2.0.ebuild,v 1.5 2007/04/11 14:50:01 chtekk Exp $
 
 inherit apache-module ssl-cert
 
@@ -36,7 +36,7 @@ src_install() {
 	doins data/rsafile data/dhfile
 
 	keepdir "${APACHE2_CONFDIR}/ssl"
-	keepdir "${ROOT}"/var/cache/${PN}
+	keepdir /var/cache/${PN}
 
 	apache-module_src_install
 }
