@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/thinkfinger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.4 2007/02/27 14:58:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.5 2007/04/11 16:59:35 chainsaw Exp $
+
+*thinkfinger-0.3 (11 Apr 2007)
+
+  11 Apr 2007; Tony Vroon <chainsaw@gentoo.org> +thinkfinger-0.3.ebuild:
+  Version bump, closes bug #172837. This release requires UINPUT support in
+  the kernel and features USB-level debugging. It should also keep the
+  fingerprint reader from heating up as much as it did on 0.2.2
 
   27 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
   thinkfinger-0.2.2-r1.ebuild:
