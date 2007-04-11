@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.1.1.ebuild,v 1.16 2007/01/06 01:29:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.1.1.ebuild,v 1.17 2007/04/11 11:49:34 vapier Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
 DOC_VER=${PV}
 
 DESCRIPTION="GIT - the stupid content tracker"
-HOMEPAGE="http://kernel.org/pub/software/scm/git/"
+HOMEPAGE="http://git.or.cz/"
 SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 		mirror://kernel/software/scm/git/${PN}-manpages-${DOC_VER}.tar.bz2
 		doc? ( mirror://kernel/software/scm/git/${PN}-htmldocs-${DOC_VER}.tar.bz2 )"
