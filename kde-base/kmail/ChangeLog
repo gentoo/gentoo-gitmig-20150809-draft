@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.99 2007/02/05 11:54:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.100 2007/04/11 20:51:25 carlo Exp $
+
+*kmail-3.5.6-r2 (11 Apr 2007)
+
+  11 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kmail-3.5.6-r2.ebuild:
+  Grab several bugfixes from the 3.5 branch, for reference see the KDE bugs
+  #66740, #71549, #79685, #96498, #102001, #113329, #113580, #113885, #115713,
+  #117785, #117935, #118060, #121863, #126715, #132487, #137302, #138514,
+  #140195 and #140660.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/kmail-3.5.2-imap-fixes-2.diff, -files/kmail-3.5.2-misc-fixes.diff,
