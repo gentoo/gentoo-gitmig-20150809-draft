@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.2.6_p2.ebuild,v 1.2 2007/01/17 01:47:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.2.6_p2.ebuild,v 1.3 2007/04/11 19:41:39 phreak Exp $
 
 inherit eutils
 
