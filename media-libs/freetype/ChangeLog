@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.116 2007/04/11 11:44:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.117 2007/04/11 13:26:25 welp Exp $
+
+  11 Apr 2007; Peter Weller <welp@gentoo.org> freetype-2.1.10-r3.ebuild:
+  Stable on amd64 wrt bug 172577
 
   11 Apr 2007; Raúl Porcel <armin76@gentoo.org> freetype-2.1.10-r3.ebuild:
   ia64 + x86 stable wrt security bug 172577
