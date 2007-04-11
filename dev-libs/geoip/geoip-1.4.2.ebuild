@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.2.ebuild,v 1.1 2007/03/31 00:40:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.2.ebuild,v 1.2 2007/04/11 13:41:10 uberlord Exp $
 
 inherit autotools eutils libtool
 
@@ -18,6 +18,14 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# FreeBSD requires this
+	elibtoolize
+}
 
 src_compile() {
 	econf --enable-shared || die "econf failed"

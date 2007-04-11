@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.69 2007/03/31 00:40:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.70 2007/04/11 13:41:10 uberlord Exp $
+
+  11 Apr 2007; Roy Marples <uberlord@gentoo.org> geoip-1.4.2.ebuild:
+  elibtoolize for FreeBSD users.
 
 *geoip-1.4.2 (31 Mar 2007)
 
