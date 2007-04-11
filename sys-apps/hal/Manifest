@@ -29,10 +29,10 @@ AUX 0.5.9/04_cache_regen_return_fix.patch 740 RMD160 119c4d4714765917b8d8bc62266
 MD5 bbb1872eb4a7d94e028cb3ba9c440bfe files/0.5.9/04_cache_regen_return_fix.patch 740
 RMD160 119c4d4714765917b8d8bc622663ee19e7a3ffd2 files/0.5.9/04_cache_regen_return_fix.patch 740
 SHA256 7deab9fcc6e1063062460e88b7d931e641b8d878b644f9e4ed53d50cdfcdfbd7 files/0.5.9/04_cache_regen_return_fix.patch 740
-AUX 0.5.9/05_freebsd_partutil_make_fix.patch 551 RMD160 951f25aed54eb4efc5d4d7a24eda48d2377eeb04 SHA1 111a5432ade0ad024b81060f97661a57a0adc663 SHA256 63f571618b159876934596d9b67f37eb6602c219d98d3e419fd951b82abbcd1d
-MD5 8a7b4ca984c9d2656ffa01e83258f916 files/0.5.9/05_freebsd_partutil_make_fix.patch 551
-RMD160 951f25aed54eb4efc5d4d7a24eda48d2377eeb04 files/0.5.9/05_freebsd_partutil_make_fix.patch 551
-SHA256 63f571618b159876934596d9b67f37eb6602c219d98d3e419fd951b82abbcd1d files/0.5.9/05_freebsd_partutil_make_fix.patch 551
+AUX 0.5.9/05_freebsd_partutil_make_fix.patch 579 RMD160 96035d38334a9ac18e16014d11820c56823425e9 SHA1 c78f0416908b547962ed6a4b67851bf18c2706d7 SHA256 4f8d912bc84084d85a626003f93835fb6d92e0bf1aa9d09d282b47182c57966e
+MD5 74d899e87a335a963a6aa5240ebc771a files/0.5.9/05_freebsd_partutil_make_fix.patch 579
+RMD160 96035d38334a9ac18e16014d11820c56823425e9 files/0.5.9/05_freebsd_partutil_make_fix.patch 579
+SHA256 4f8d912bc84084d85a626003f93835fb6d92e0bf1aa9d09d282b47182c57966e files/0.5.9/05_freebsd_partutil_make_fix.patch 579
 AUX 0.5.9/06_freebsd_backend_fix.patch 1855 RMD160 b72d65291d04cc5ebadc24ef697f2e1ae2ab28a8 SHA1 db5ab4030732fa5641641c01fb80c3b46aaec99c SHA256 c8f5149e581cbcd328b70f04532b45f488940ce3b9d779a355600e96f885bed2
 MD5 65a0a52b23807f81ee2d61d2602256b2 files/0.5.9/06_freebsd_backend_fix.patch 1855
 RMD160 b72d65291d04cc5ebadc24ef697f2e1ae2ab28a8 files/0.5.9/06_freebsd_backend_fix.patch 1855
@@ -191,7 +191,7 @@ SHA256 d862b002c9a5547954874b2a0cbadd614381d085e850539e6aef2dd9e9d52dfe files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGHTxjoeSe8B0zEfwRAlPwAJ4zo5ijQ4vyxKgbTpH3hCdmY3xj+gCfaFGu
-sE9PSErJWA2m7cewKqOxrms=
-=38CY
+iD8DBQFGHT10oeSe8B0zEfwRAqLyAJ4v1qocwi+SzSF4P4QWfJF5Bft3RACfcLE+
+Pf2jxjLAXJ3o3bX+tQYkdew=
+=+8XB
 -----END PGP SIGNATURE-----
