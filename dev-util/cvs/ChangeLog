@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.119 2007/04/10 23:37:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.120 2007/04/11 19:14:10 corsair Exp $
+
+  11 Apr 2007; Markus Rothe <corsair@gentoo.org> cvs-1.12.12-r4.ebuild:
+  Stable on ppc64; bug #173880
 
   10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> cvs-1.12.12-r4.ebuild:
   Add a note to -r4 that you must have USE=server if you want a CVS server!.
