@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.91_beta.ebuild,v 1.1 2007/04/10 10:37:24 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.91_beta.ebuild,v 1.2 2007/04/11 01:48:31 je_fro Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -31,10 +31,8 @@ src_install() {
 	exeinto ${I}
 	newexe ${FILESDIR}/5.91_beta/initfolding initfolding
 	doexe fah5 mpiexec
-	insinto /etc/conf.d
-	newins ${FILESDIR}/5.91_beta/folding-conf.d foldingathome
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/5.91_beta/fah-init foldingathome
+	newconfd ${FILESDIR}/5.91_beta/folding-conf.d foldingathome
+	newinitd ${FILESDIR}/5.91_beta/fah-init foldingathome
 }
 
 pkg_preinst() {
