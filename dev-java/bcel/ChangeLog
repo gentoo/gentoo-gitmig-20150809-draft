@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.45 2007/04/10 07:58:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.46 2007/04/11 19:15:41 corsair Exp $
+
+  11 Apr 2007; Markus Rothe <corsair@gentoo.org> bcel-5.2.ebuild:
+  Stable on ppc64; bug #173914
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> bcel-5.2.ebuild:
   stable x86, bug 173914
