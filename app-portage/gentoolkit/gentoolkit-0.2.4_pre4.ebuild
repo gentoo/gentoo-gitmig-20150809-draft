@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4_pre2.ebuild,v 1.1 2007/03/19 17:44:57 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4_pre4.ebuild,v 1.1 2007/04/11 05:03:10 fuzzyray Exp $
 
 inherit eutils python
 
