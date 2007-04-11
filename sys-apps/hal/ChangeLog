@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.159 2007/04/11 21:30:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.160 2007/04/11 21:40:25 cardoe Exp $
+
+  11 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/0.5.9/07_malloc_h_for_stdlib_h.patch,
+  -files/0.5.9/08_hald-mallopt-include-malloc.patch:
+  Merge compnerd's patch into previous
 
   11 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/0.5.9/08_hald-mallopt-include-malloc.patch:
