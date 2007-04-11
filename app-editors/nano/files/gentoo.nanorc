@@ -26,6 +26,8 @@ color blue "\<make\>" "\<(cat|cd|chmod|chown|cp|echo|env|export|grep|let|ln|mkdi
 color yellow "#.*$"
 ## Highlight strings (doesnt work that well)
 color brightyellow ""(\\.|[^\"])*"" "'(\\.|[^'])*'"
+## Trailing space is bad!
+color ,green "[[:space:]]+$"
 
 ## Here is an example for Portage control files
 ##
