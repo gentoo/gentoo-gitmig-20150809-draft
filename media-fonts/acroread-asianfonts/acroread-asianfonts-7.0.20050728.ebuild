@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.4 2007/03/19 14:38:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.5 2007/04/11 06:29:39 opfer Exp $
 
 BASE_URI="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc"
 
@@ -13,7 +13,7 @@ SRC_URI="linguas_zh_CN? ( ${BASE_URI}/chsfont.tar.gz )
 
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="~amd64 x86"
+KEYWORDS=""
 IUSE="linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 RESTRICT="nomirror"
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.19 2007/04/09 16:27:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.20 2007/04/11 06:29:39 opfer Exp $
+
+  11 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  acroread-asianfonts-7.0.8.ebuild, acroread-asianfonts-7.0.20050728.ebuild:
+  removed keywords on older version which is regarded as newer by Portage and
+  stabled 7.0.8 for x86 because of file-collisions, see bug 152288
 
   09 Apr 2007; Zac Medico <zmedico@gentoo.org> ChangeLog:
   Fix broken Manifest due to commit without repoman.

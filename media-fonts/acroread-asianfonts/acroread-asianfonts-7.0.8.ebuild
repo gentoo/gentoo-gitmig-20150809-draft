@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.8.ebuild,v 1.3 2007/04/10 11:07:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.8.ebuild,v 1.4 2007/04/11 06:29:39 opfer Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="linguas_zh_CN? ( ${BASE_URI}chs_i386-linux.tar.gz )
 # linguas_hatv? ( ${BASE_URI}hatv_i386-linux.tar.gz )
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 RESTRICT="nomirror"
 
