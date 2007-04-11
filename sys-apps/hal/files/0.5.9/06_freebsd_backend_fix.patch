@@ -1,7 +1,7 @@
 Index: b/hald/freebsd/hf-usb.c
 ===================================================================
---- a/hald/freebsd/hf-usb.c	2007-03-24 18:32:57.000000000 -0400
-+++ b/hald/freebsd/hf-usb.c	2007-04-11 12:56:02.000000000 -0400
+--- a/hald/freebsd/hf-usb.c	2007-04-11 15:50:44.000000000 -0400
++++ b/hald/freebsd/hf-usb.c	2007-04-11 19:19:07.000000000 -0400
 @@ -372,11 +372,11 @@
        can_wake_up = (config_desc.bmAttributes & UC_REMOTE_WAKEUP) != 0;
        num_interfaces = config_desc.bNumInterface;
@@ -25,24 +25,7 @@ Index: b/hald/freebsd/hf-usb.c
  			     const usb_interface_descriptor_t *desc)
  {
    HalDevice *device;
-@@ -447,6 +449,7 @@
-   hal_device_property_set_int(device, "usb.interface.protocol", desc->bInterfaceProtocol);
-   hal_device_property_set_int(device, "usb.interface.number", desc->bInterfaceNumber);
- 
-+  /** FIX ME.. controller and di are not variables in this scope..
-   if (desc->iInterface != 0)
-     {
-       char *interface;
-@@ -458,7 +461,7 @@
- 	  g_free(interface);
- 	}
-     }
--
-+*/
- 
-   hf_usb_device_compute_udi(device);
- 
-@@ -576,7 +579,7 @@
+@@ -576,7 +578,7 @@
  	      break;
  	    }
  
@@ -51,3 +34,33 @@ Index: b/hald/freebsd/hf-usb.c
  	  hf_device_preprobe_and_add(if_device);
  
  	  p += USB_INTERFACE_DESCRIPTOR_SIZE + if_desc->bNumEndpoints * USB_ENDPOINT_DESCRIPTOR_SIZE;
+Index: b/hald/freebsd/hf-pci.c
+===================================================================
+--- a/hald/freebsd/hf-pci.c	2007-04-11 14:55:43.000000000 -0400
++++ b/hald/freebsd/hf-pci.c	2007-04-11 19:32:33.000000000 -0400
+@@ -207,12 +207,22 @@
+       for (p = conf; p < &conf[pc.num_matches]; p++)
+         {
+           DeviceInfo *info;
++	  HalProperty *pcibus, *pcidevice, *pcifunc;
++
++	  pcibus = hal_property_new(HAL_PROPERTY_TYPE_INT32);
++	  hal_property_set_int(pcibus, p->pc_sel.pc_bus);
++
++	  pcidevice = hal_property_new(HAL_PROPERTY_TYPE_INT32);
++	  hal_property_set_int(pcidevice, p->pc_sel.pc_dev);
++
++	  pcifunc = hal_property_new(HAL_PROPERTY_TYPE_INT32);
++	  hal_property_set_int(pcifunc, p->pc_sel.pc_func);
+ 
+ 	  info = g_new(DeviceInfo, 1);
+ 	  info->device = hf_device_store_match(hald_get_gdl(),
+-			                       hal_property_new_int("pci.freebsd.bus", p->pc_sel.pc_bus),
+-					       hal_property_new_int("pci.freebsd.device", p->pc_sel.pc_dev),
+-					       hal_property_new_int("pci.freebsd.function", p->pc_sel.pc_func),
++			  		       pcibus,
++					       pcidevice,
++					       pcifunc,
+ 					       NULL);
+ 	  info->p = *p;
+ 	  info->secondary_bus = hf_pci_get_register(p, PCIR_SECBUS_1);

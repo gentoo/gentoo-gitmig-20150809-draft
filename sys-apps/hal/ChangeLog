@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.160 2007/04/11 21:40:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.161 2007/04/11 23:39:56 cardoe Exp $
+
+  11 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/0.5.9/06_freebsd_backend_fix.patch:
+  Fix FreeBSD backend some more
 
   11 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   files/0.5.9/07_malloc_h_for_stdlib_h.patch,
