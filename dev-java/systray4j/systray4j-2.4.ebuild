@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.14 2006/10/05 17:06:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.15 2007/04/11 13:20:57 betelgeuse Exp $
 
 inherit kde java-pkg eutils
 
@@ -14,13 +14,9 @@ KEYWORDS="x86 amd64 ppc ppc64"
 # disable jikes support until bug #89711
 IUSE=""
 
-RDEPEND=">=virtual/jre-1.3
-	=kde-base/kdelibs-3*"
-
+RDEPEND=">=virtual/jre-1.3"
 DEPEND=">=virtual/jdk-1.3
-	${RDEPEND}
-	=kde-base/kdelibs-3*
-	sys-apps/sed"
+	${RDEPEND}"
 
 need-kde 3
 
