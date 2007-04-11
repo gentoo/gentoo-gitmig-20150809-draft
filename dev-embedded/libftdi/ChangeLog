@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.13 2007/04/11 19:55:40 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.14 2007/04/11 21:18:31 calchan Exp $
+
+*libftdi-0.9 (11 Apr 2007)
+
+  11 Apr 2007; Denis Dupeyron <calchan@gentoo.org> +libftdi-0.9.ebuild:
+  Version bump.
 
   11 Apr 2007; Denis Dupeyron <calchan@gentoo.org> -libftdi-0.5.ebuild,
   -libftdi-0.6.ebuild:
