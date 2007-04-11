@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.10 2007/04/11 20:35:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.11 2007/04/11 21:02:13 jer Exp $
+
+  11 Apr 2007; Jeroen Roovers <jer@gentoo.org> xcb-proto-1.0.ebuild:
+  Stable for HPPA (bug #172752).
 
   11 Apr 2007; Raúl Porcel <armin76@gentoo.org> xcb-proto-1.0.ebuild:
   ia64 stable wrt security bug 172752
