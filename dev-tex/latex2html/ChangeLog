@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.37 2007/03/13 00:27:25 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.38 2007/04/11 03:30:00 jer Exp $
+
+  11 Apr 2007; Jeroen Roovers <jer@gentoo.org>
+  latex2html-2002.2.1_pre20041025-r1.ebuild:
+  Stable for HPPA too.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
