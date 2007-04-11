@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.250 2007/02/05 12:20:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.251 2007/04/11 21:01:40 carlo Exp $
+
+*kdepim-3.5.6-r2 (11 Apr 2007)
+
+  11 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kdepim-3.5.5-r3.ebuild,
+  +kdepim-3.5.6-r2.ebuild:
+  Several bugfixes form the KDE 3.5 branch. For more information see the
+  corresponding split ebuild updates.
+
+*kdepim-3.5.5-r3 (11 Apr 2007)
+
+  11 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kdepim-3.5.5-r3.ebuild:
+  Fix infinite loop in IMAP kioslave, causing local DoS. Timezone update.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/libkdepim-3.5.2-call_qt3_designer.diff,
