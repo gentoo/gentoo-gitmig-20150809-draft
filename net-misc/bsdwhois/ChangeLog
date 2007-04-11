@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bsdwhois
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.8 2006/11/02 16:38:03 drizzt Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.9 2007/04/11 16:20:59 drizzt Exp $
+
+  11 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
+  bsdwhois-1.43.2.1.ebuild:
+  Use use "userland_BSD" instead of "${USERLAND}"
 
   02 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
   bsdwhois-1.43.2.1.ebuild:
