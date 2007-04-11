@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.36 2007/04/10 09:38:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.37 2007/04/11 15:38:25 zzam Exp $
+
+*vdr-softdevice-0.4.0 (11 Apr 2007)
+
+  11 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-softdevice-0.4.0-xinerama-configure-opts.patch,
+  vdr-softdevice-0.3.1.20070410.ebuild, +vdr-softdevice-0.4.0.ebuild:
+  Version bumped. Make ebuild detect if it is a snapshot or normal version.
 
 *vdr-softdevice-0.3.1.20070410 (10 Apr 2007)
 
