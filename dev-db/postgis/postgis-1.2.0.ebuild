@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.2.0.ebuild,v 1.3 2007/04/09 15:30:01 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.2.0.ebuild,v 1.4 2007/04/11 14:41:31 chtekk Exp $
 
 WANT_AUTOCONF="lastest"
 inherit autotools eutils versionator
@@ -49,7 +49,7 @@ src_compile(){
 	fi
 
 	if use doc;then
-		myconf="${myconf} --with-xsl=$(ls "${ROOT}"usr/share/sgml/docbook/* | \
+		myconf="${myconf} --with-xsl=$(ls /usr/share/sgml/docbook/* | \
 			grep xsl\- | cut -d':' -f1)"
 	fi
 
