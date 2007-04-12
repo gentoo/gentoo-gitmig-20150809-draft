@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.154 2007/04/11 18:43:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.155 2007/04/12 10:23:59 ferdy Exp $
+
+  12 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  courier-imap-4.0.6-r2.ebuild:
+  Stable on alpha as per bug #168196
 
   11 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   courier-imap-4.0.6-r2.ebuild:
