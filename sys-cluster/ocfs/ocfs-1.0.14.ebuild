@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ocfs/ocfs-1.0.14.ebuild,v 1.1 2005/03/10 14:39:40 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ocfs/ocfs-1.0.14.ebuild,v 1.2 2007/04/12 18:43:16 genstef Exp $
 
 inherit linux-mod
 
@@ -22,14 +22,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	check_KV
-	set_arch_to_kernel
-
 	local myconf
 	use aio && myconf="--enable-aio=yes" || myconf="--enable-aio=no"
 
 	econf \
-		--with-kernel=${KERNEL_DIR} \
+		--with-kernel=${KV_DIR} \
 		${myconf} \
 		|| die
 
