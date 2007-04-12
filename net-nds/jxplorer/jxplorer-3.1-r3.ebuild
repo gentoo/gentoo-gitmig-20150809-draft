@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r3.ebuild,v 1.2 2007/03/19 07:13:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r3.ebuild,v 1.3 2007/04/12 21:09:55 welp Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/JXv${PV}src.tar.bz2
 	mirror://sourceforge/${PN}/JXv${PV}deploy.tar.bz2"
 LICENSE="CAOSL"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="doc source"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/javahelp-bin-2.0.01
