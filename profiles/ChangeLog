@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.279 2007/04/12 22:38:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.280 2007/04/12 23:48:13 rbu Exp $
+
+  12 Apr 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
+  Added local uses for media-sound/herrie
 
   12 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Unmask app-admin/quickswitch, since users request it
