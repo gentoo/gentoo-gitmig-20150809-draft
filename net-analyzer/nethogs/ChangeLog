@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.7 2007/02/19 12:49:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.8 2007/04/12 17:51:23 jokey Exp $
+
+  12 Apr 2007; Markus Ullmann <jokey@gentoo.org> nethogs-0.6.0.ebuild:
+  Ebuild QA and drop ppc per bug #154778 - thanks dertobi123 for verifying
 
   19 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

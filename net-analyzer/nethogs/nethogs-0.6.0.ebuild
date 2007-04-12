@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.6.0.ebuild,v 1.6 2006/02/15 23:26:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.6.0.ebuild,v 1.7 2007/04/12 17:51:23 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,19 +10,22 @@ DESCRIPTION="A small 'net top' tool, grouping bandwidth by process"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
+
 DEPEND="net-libs/libpcap"
 
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack ${A}; cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc34.diff"
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc34.diff
 	# fix hardcoded CFLAGS and CC
-	sed -i -e "s:-O2:${CFLAGS}:g" Makefile || die
-	sed -i -e "s:g++:$(tc-getCXX):g" Makefile || die
-	sed -i -e "s:gcc:$(tc-getCC):g" Makefile || die
+	sed -i -e "s:-O2:${CFLAGS}:g" Makefile
+	sed -i -e "s:g++:$(tc-getCXX):g" Makefile
+	sed -i -e "s:gcc:$(tc-getCC):g" Makefile
 }
 
 src_compile() {
