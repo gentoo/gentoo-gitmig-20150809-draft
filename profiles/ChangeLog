@@ -1,9 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.278 2007/04/12 21:21:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.279 2007/04/12 22:38:34 betelgeuse Exp $
 
   12 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Unmask app-admin/quickswitch, since users request it
+
+  12 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.mask dev-java/jdbc3-postgresql for removal in 30 days. Use
+  dev-java/jdbc-postgresql instead.
 
   11 Apr 2007; Raphael Marichez <falco@gentoo.org> use.local.desc:
   Add dbtool local USE-flag for app-forensics/sleuthkit-2.08
