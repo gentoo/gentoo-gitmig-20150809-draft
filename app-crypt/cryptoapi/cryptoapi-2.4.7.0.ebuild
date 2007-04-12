@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.25 2007/01/24 16:52:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.26 2007/04/12 18:45:44 genstef Exp $
 
 inherit linux-info
 
@@ -23,7 +23,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	check_KV
 	# rphillips - Fixes #19006
 	# econf --enable-iv-mode-sector
 	econf || die "econf failed"
