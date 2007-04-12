@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.37 2007/04/12 14:33:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.38 2007/04/12 19:57:55 opfer Exp $
+
+  12 Apr 2007; Christian Faulhammer <opfer@gentoo.org> fop-0.20.5-r7.ebuild:
+  stable x86, bug 174178
 
   12 Apr 2007; <welp@gentoo.org> fop-0.20.5-r7.ebuild:
   Stable on amd64 wrt bug 174178
