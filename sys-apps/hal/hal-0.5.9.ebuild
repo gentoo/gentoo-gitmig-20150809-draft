@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.17 2007/04/12 16:13:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.18 2007/04/12 16:43:50 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -43,7 +43,8 @@ DEPEND="${RDEPEND}
 PDEPEND="app-misc/hal-info"
 
 ## HAL Daemon drops privledges so we need group access to read disks
-HALDAEMON_GROUPS="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
+HALDAEMON_GROUPS_LINUX="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
+HALDAEMON_GROUPS_FREEBSD="haldaemon,plugdev,operator"
 
 function notify_uevent() {
 	ewarn
@@ -195,11 +196,21 @@ pkg_postinst() {
 
 	# HAL drops priviledges by default now ...
 	# ... so we must make sure it can read disk/cdrom info (ie. be in ${HALDAEMON_GROUPS} groups)
-	enewuser haldaemon -1 "-1" /dev/null ${HALDAEMON_GROUPS} || die "Problem adding haldaemon user"
+	if use kernel_linux; then
+		enewuser haldaemon -1 "-1" /dev/null ${HALDAEMON_GROUPS_LINUX} \
+			|| die "Problem adding haldaemon user"
+	elif use kernel_FreeBSD; then
+		enewuser haldaemon -1 "-1" /dev/null ${HALDAEMON_GROUPS_FREEBSD} \
+			|| die "Problem addding haldaemon user"
+	fi
 
 	# Make sure that the haldaemon user is in the ${HALDAEMON_GROUPS}
 	# If users have a problem with this, let them file a bug
-	usermod -G ${HALDAEMON_GROUPS} haldaemon
+	if use kernel_linux; then
+		usermod -G ${HALDAEMON_GROUPS_LINUX} haldaemon
+	elif use kernel_FreeBSD; then
+		usermod -G ${HALDAEMON_GROUPS_FREEBSD} haldaemon
+	fi
 
 	elog "The HAL daemon needs to be running for certain applications to"
 	elog "work. Suggested is to add the init script to your start-up"
