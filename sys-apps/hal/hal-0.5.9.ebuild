@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.16 2007/04/11 16:12:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.17 2007/04/12 16:13:00 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -105,6 +105,8 @@ src_unpack() {
 
 	# Gentoo Patch Set
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch ${FILESDIR}/${PV}
+
+	eautoreconf
 }
 
 src_compile() {

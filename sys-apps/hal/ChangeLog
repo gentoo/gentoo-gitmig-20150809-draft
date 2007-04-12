@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.161 2007/04/11 23:39:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.162 2007/04/12 16:13:00 cardoe Exp $
+
+  12 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/0.5.9/05_freebsd_partutil_make_fix.patch,
+  files/0.5.9/06_freebsd_backend_fix.patch, hal-0.5.9.ebuild:
+  HAL compiles on Gentoo/FreeBSD
 
   11 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   files/0.5.9/06_freebsd_backend_fix.patch:
