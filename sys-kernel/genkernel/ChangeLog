@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.167 2007/04/05 15:01:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.168 2007/04/12 19:36:54 wolf31o2 Exp $
+
+*genkernel-3.4.8 (12 Apr 2007)
+
+  12 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +genkernel-3.4.8.ebuild:
+  Added a new genkernel version to the tree for the 2007.0 release. This
+  closes bug #173622, bug #174130, and bug #174188.
 
 *genkernel-3.4.7 (05 Apr 2007)
 
