@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.4.1.ebuild,v 1.1 2007/04/12 14:42:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.4.1.ebuild,v 1.2 2007/04/12 14:52:52 drac Exp $
 
-inherit eutils xfce44
+inherit xfce44
 
 XFCE_VERSION=4.4.1
 xfce44

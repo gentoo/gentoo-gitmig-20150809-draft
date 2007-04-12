@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.101 2007/04/12 14:42:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.102 2007/04/12 14:48:37 drac Exp $
+
+  12 Apr 2007; Samuli Suominen <drac@gentoo.org> xfce-utils-4.4.1.ebuild:
+  Remove eutils from inherit, not used.
 
 *xfce-utils-4.4.1 (11 Apr 2007)
 
