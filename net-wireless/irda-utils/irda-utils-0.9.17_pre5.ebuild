@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.8 2007/02/11 11:07:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.9 2007/04/12 21:23:09 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -80,6 +80,6 @@ src_install () {
 
 	dodoc etc/modules.conf.irda
 
-	newconfd ${FILESDIR}/irda.conf irda
-	newinitd ${FILESDIR}/irda.rc irda
+	newconfd "${FILESDIR}/irda.conf" irda
+	newinitd "${FILESDIR}/irda.rc" irda
 }
