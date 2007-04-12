@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.23 2007/02/21 18:14:20 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.24 2007/04/12 12:18:39 robbat2 Exp $
+
+*sdparm-1.01 (12 Apr 2007)
+
+  12 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> +sdparm-1.01.ebuild:
+  Version bump.
 
   21 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> sdparm-1.00.ebuild:
   Stable on MIPS; bug #158516
