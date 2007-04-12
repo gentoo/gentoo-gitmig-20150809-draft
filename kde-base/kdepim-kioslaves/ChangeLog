@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.76 2007/04/12 19:28:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.77 2007/04/12 23:14:28 opfer Exp $
+
+  12 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  kdepim-kioslaves-3.5.5-r1.ebuild:
+  stable amd64, bug 174216
 
   12 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   kdepim-kioslaves-3.5.5-r1.ebuild:
