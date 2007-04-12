@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.128 2007/04/07 15:14:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.129 2007/04/12 09:37:03 ticho Exp $
+
+  12 Apr 2007; Andrej Kacian <ticho@gentoo.org>
+  -files/ldif-buffer-overflow-fix.diff, files/plugins-rebuild.sh,
+  -files/procmime.patch, -sylpheed-claws-2.4.0.ebuild,
+  sylpheed-claws-2.6.1.ebuild:
+  Remove all files but placeholder 2.6.1 ebuild and plugins_rebuild.sh script.
 
   07 Apr 2007; Peter Weller <welp@gentoo.org> sylpheed-claws-2.6.1.ebuild:
   Stable on amd64 wrt bug 163611
