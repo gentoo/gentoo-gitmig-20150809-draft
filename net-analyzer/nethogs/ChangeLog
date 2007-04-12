@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.8 2007/04/12 17:51:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.9 2007/04/12 17:59:22 welp Exp $
+
+  12 Apr 2007; <welp@gentoo.org> nethogs-0.6.0.ebuild:
+  Stable on amd64
 
   12 Apr 2007; Markus Ullmann <jokey@gentoo.org> nethogs-0.6.0.ebuild:
   Ebuild QA and drop ppc per bug #154778 - thanks dertobi123 for verifying
