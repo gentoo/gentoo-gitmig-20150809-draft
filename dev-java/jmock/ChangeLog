@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.8 2007/04/07 19:15:36 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.9 2007/04/12 14:08:06 welp Exp $
+
+  12 Apr 2007; <welp@gentoo.org> jmock-1.1.0-r1.ebuild:
+  Stable on amd64 wrt bug 167517
 
 *jmock-1.1.0-r2 (07 Apr 2007)
 
