@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/systemc-2.2_beta20060605.ebuild,v 1.2 2007/04/08 08:56:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/systemc-2.2_beta20060605.ebuild,v 1.3 2007/04/12 07:09:17 opfer Exp $
 
 inherit versionator multilib
 
@@ -14,7 +14,7 @@ SRC_URI="${PN}-${MY_PV}.tgz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 RESTRICT="fetch test"
 
 DEPEND=""
