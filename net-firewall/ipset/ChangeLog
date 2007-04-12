@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.9 2007/04/10 10:12:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.10 2007/04/12 18:37:15 genstef Exp $
+
+  12 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  -ipset-2.1.0.20050119.ebuild:
+  Remove old version that uses check_KV, bug 150058
 
 *ipset-2.2.9.20070401 (10 Apr 2007)
 
