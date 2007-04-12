@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r3.ebuild,v 1.2 2005/05/03 20:15:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r3.ebuild,v 1.3 2007/04/12 18:12:33 genstef Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,10 +20,6 @@ DEPEND="${RDEPEND}
 	virtual/linux-sources" # Use lvm2 for 2.6; lvm-user is for 2.4; see #90897.
 
 S=${WORKDIR}/LVM/${PV}
-
-pkg_setup() {
-	check_KV
-}
 
 src_unpack() {
 	unpack ${A}
