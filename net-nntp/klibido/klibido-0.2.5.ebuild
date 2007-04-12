@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.5.ebuild,v 1.4 2007/01/17 16:58:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.5.ebuild,v 1.5 2007/04/12 21:56:33 philantrop Exp $
 
 inherit kde db-use
 
@@ -22,7 +22,7 @@ need-kde 3
 src_unpack() {
 	kde_src_unpack
 
-	dbincldir="$(db_includedir 4.4 4.3 4.2 4.1)" || die "unable to find db"
+	dbincldir="$(db_includedir 4.5 4.4 4.3 4.2 4.1)" || die "unable to find db"
 	einfo "db include dir = ${dbincldir}"
 
 	if [ ! -d ${dbincldir} ]; then
