@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.5 2006/06/13 10:29:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.6 2007/04/12 10:36:35 phosphan Exp $
 
 
 inherit linux-info toolchain-funcs eutils
@@ -19,6 +19,14 @@ DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 
 S=${WORKDIR}/pwc-${MY_PV}
+
+pkg_setup() {
+	if kernel_is 2 6; then
+		if [ "${KV_PATCH}" -ge 18 ] ; then
+			die "In kernel ${KV_FULL} this module is deprecated by the builtin driver."
+		fi
+	fi
+}
 
 src_compile() {
 	export ARCH="$(tc-arch-kernel)"

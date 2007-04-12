@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.5 2007/01/30 05:08:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.6 2007/04/12 10:36:35 phosphan Exp $
 
 inherit linux-mod eutils
 
@@ -27,6 +27,14 @@ ERROR_USB_PWC="${P} requires the in-kernel version of the PWC driver to be disab
 ERROR_VIDEO_V4L1_COMPAT="{$P} requires support for the Video For Linux API 1 compatibility layer (CONFIG_VIDEO_V4L1_COMPAT)."
 
 S=${WORKDIR}/pwc-v4l2-${MY_PV}
+
+pkg_setup() {
+	if kernel_is 2 6; then
+		if [ "${KV_PATCH}" -ge 18 ] ; then
+			die "In kernel ${KV_FULL} this module is deprecated by the builtin driver."
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
