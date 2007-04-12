@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.7 2006/12/04 18:42:32 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.8 2007/04/12 11:44:55 genstef Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -213,7 +213,7 @@ src_unpack() {
 		isdnlog/tools/cdb isdnlog/tools/dest isdnlog/tools/zone; do
 		einfo "  Updating ${i}"
 		pushd "${i}" >/dev/null
-		autoconf 2>/dev/null || die "autoconf failed in dir ${i}"
+		WANT_AUTOCONF="2.1" autoconf 2>/dev/null || die "autoconf failed in dir ${i}"
 		popd >/dev/null
 	done
 }
