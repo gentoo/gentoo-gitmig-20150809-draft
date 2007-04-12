@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/misdnuser-1.1.1.ebuild,v 1.1 2007/03/27 10:35:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/misdnuser-1.1.2.ebuild,v 1.1 2007/04/12 12:13:49 genstef Exp $
+
+inherit eutils
 
 MY_P=mISDNuser-${PV//./_}
 DESCRIPTION="mISDN (modular ISDN) kernel link library and includes"
@@ -16,6 +18,12 @@ RDEPEND=">=net-dialup/misdn-1.0.4
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}"
 MAKEOPTS="${MAKEPOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/misdnuser-as-needed.patch
+}
 
 src_install() {
 	emake INSTALL_PREFIX="${D}" install || die "emake install failed"
