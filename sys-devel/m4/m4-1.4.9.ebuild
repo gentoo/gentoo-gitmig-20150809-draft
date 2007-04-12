@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.9.ebuild,v 1.2 2007/03/24 07:03:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.9.ebuild,v 1.3 2007/04/12 17:05:38 uberlord Exp $
 
 DESCRIPTION="GNU macro processor"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
@@ -30,4 +30,7 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
+
+	# charset.alias should be owned either by libc or libiconv
+	[ -e "${D}"/usr/lib/charset.alias ] && rm "${D}"/usr/lib/charset.alias
 }
