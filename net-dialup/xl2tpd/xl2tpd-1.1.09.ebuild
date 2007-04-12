@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.1.08.ebuild,v 1.2 2007/04/08 18:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.1.09.ebuild,v 1.1 2007/04/12 21:17:37 mrness Exp $
 
 inherit eutils
 
