@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.3-r1.ebuild,v 1.5 2007/04/11 22:35:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.3-r1.ebuild,v 1.6 2007/04/12 00:39:09 jer Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="~alpha amd64 ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
@@ -106,10 +106,10 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-#	epatch ${FILESDIR}/qt4-parisc-linux.diff
 	epatch ${FILESDIR}/qt-4.1.4-sparc.patch
 	epatch ${FILESDIR}/qt4-sqlite-configure.patch
 	epatch ${FILESDIR}/utf8-bug-qt4-2.diff
+	epatch ${FILESDIR}/${P}-hppa-ldcw-fix.patch
 
 	cd ${S}/mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
