@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.49 2007/04/11 15:27:55 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.50 2007/04/12 10:36:05 ikelos Exp $
+
+*cryptsetup-luks-1.0.4-r3 (12 Apr 2007)
+
+  12 Apr 2007; Mike Auty <ikelos@gentoo.org> files/1.0.4-dm-crypt-start.sh,
+  files/dm-crypt-start.sh, -cryptsetup-luks-1.0.4-r2.ebuild,
+  +cryptsetup-luks-1.0.4-r3.ebuild:
+  Version bump to fix bug 174256 (thanks to UberLord and zzam) and removing
+  old version.
 
 *cryptsetup-luks-1.0.4-r2 (11 Apr 2007)
 

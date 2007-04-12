@@ -197,6 +197,9 @@ local gpg_options key loop_file target targetline options pre_mount post_mount s
 if [[ -f /etc/conf.d/cryptfs ]] && [[ -x /bin/cryptsetup ]] ; then
 	ebegin "Setting up dm-crypt mappings"
 
+	# Fix for baselayout-1.12.10 (bug 174256)
+	[ -z ${SVCNAME} ] && SVCNAME="${myservice}"
+
 	while read targetline ; do
 		# skip comments and blank lines
 		[[ ${targetline}\# == \#* ]] && continue
