@@ -6,4 +6,5 @@
   <email>mrness@gentoo.org</email>
   <name>Alin Nastac</name>
 </maintainer>
+<longdescription>Highly configurable free RADIUS server.</longdescription>
 </pkgmetadata>
