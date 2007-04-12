@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.36 2007/04/11 16:32:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.37 2007/04/12 14:33:46 welp Exp $
+
+  12 Apr 2007; <welp@gentoo.org> fop-0.20.5-r7.ebuild:
+  Stable on amd64 wrt bug 174178
 
   11 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.20.5-r7.ebuild:
   Migrate to splitted ant.
