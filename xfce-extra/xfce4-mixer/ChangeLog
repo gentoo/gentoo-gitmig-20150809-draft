@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.86 2007/04/12 14:45:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.87 2007/04/12 19:54:19 drac Exp $
+
+  12 Apr 2007; Samuli Suominen <drac@gentoo.org> xfce4-mixer-4.4.1.ebuild:
+  Bugs 166167 and 174296. Parallel make is dead.
 
 *xfce4-mixer-4.4.1 (11 Apr 2007)
 

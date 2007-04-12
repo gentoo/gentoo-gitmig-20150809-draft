@@ -1,11 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.1.ebuild,v 1.1 2007/04/12 14:45:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.1.ebuild,v 1.2 2007/04/12 19:54:19 drac Exp $
 
 inherit eutils xfce44
 
 XFCE_VERSION=4.4.1
 xfce44
+
+# Bugs 166167 and 174296. Parallel make is dead in xfce4-mixer.
+xfce44_single_make
 
 DESCRIPTION="Volume control application (ALSA or OSS)"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-mixer"
@@ -30,10 +33,6 @@ fi
 DOCS="AUTHORS ChangeLog NEWS NOTES README TODO"
 
 src_install() {
-	# .desktop file has allready been created by upstrean
-	# and make install tries to create it again. Bug 166167
-	# update: seems to be parallel make issue. needs a fix.
-	rm panel-plugin/xfce4-mixer.desktop
 	xfce44_src_install
 	make_desktop_entry ${PN} "Volume control" ${PN} AudioVideo
 }
