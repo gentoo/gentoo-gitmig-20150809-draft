@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.45 2007/04/12 08:36:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.46 2007/04/12 10:24:31 opfer Exp $
+
+  12 Apr 2007; Christian Faulhammer <opfer@gentoo.org> dcc-1.3.55.ebuild:
+  stable x86, security bug 167644
 
   12 Apr 2007; Jeroen Roovers <jer@gentoo.org> dcc-1.3.55.ebuild:
   Stable for HPPA (bug #167644).
