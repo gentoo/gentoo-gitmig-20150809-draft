@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.85 2007/03/15 13:51:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.86 2007/04/12 14:45:46 nichoj Exp $
+
+*xfce4-mixer-4.4.1 (11 Apr 2007)
+
+  11 Apr 2007; Joshua Nichols <nichoj@gentoo.org> +xfce4-mixer-4.4.1.ebuild:
+  Version bump for 4.4.1.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-mixer-4.4.0-r1.ebuild:
