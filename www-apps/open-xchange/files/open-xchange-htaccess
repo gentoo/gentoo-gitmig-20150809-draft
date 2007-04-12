@@ -1,7 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-
-  RewriteRule ^$ /cgi-bin/login.pl
-  RewriteRule ^/$ /cgi-bin/login.pl
-  RewriteRule ^/open-xchange/(.*)$ $1 [L,QSA]
-</IfModule>
