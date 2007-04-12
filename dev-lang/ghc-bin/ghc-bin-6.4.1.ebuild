@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.14 2006/05/21 17:18:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.15 2007/04/12 18:07:11 kolmodin Exp $
 
 inherit base multilib ghc-package
 
@@ -90,8 +90,7 @@ src_install () {
 	into /opt/ghc
 	dosbin ${FILESDIR}/ghc-updater
 
-	insinto /etc/env.d
-	doins "${FILESDIR}/10ghc"
+	doenvd "${FILESDIR}/10ghc"
 }
 
 pkg_postinst () {

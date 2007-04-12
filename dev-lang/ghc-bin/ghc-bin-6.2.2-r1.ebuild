@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2-r1.ebuild,v 1.6 2006/02/09 21:36:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2-r1.ebuild,v 1.7 2007/04/12 18:07:11 kolmodin Exp $
 
 IUSE="" # use the non-binary version if you want to have more choice
 
@@ -37,6 +37,6 @@ src_compile() {
 
 src_install () {
 	mv * ${D}
-	insinto /etc/env.d
-	doins ${FILESDIR}/10ghc
+
+	doenvd "${FILESDIR}/10ghc"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1-r1.ebuild,v 1.3 2006/05/19 16:17:50 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1-r1.ebuild,v 1.4 2007/04/12 18:07:11 kolmodin Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -139,8 +139,7 @@ src_install () {
 	mkdir "${D}/opt"
 	mv "${S}/usr" "${D}/opt/ghc"
 
-	insinto /etc/env.d
-	doins "${FILESDIR}/10ghc"
+	doenvd "${FILESDIR}/10ghc"
 }
 
 pkg_postinst () {

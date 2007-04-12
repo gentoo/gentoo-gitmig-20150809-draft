@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.13 2006/08/28 16:46:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.14 2007/04/12 18:07:11 kolmodin Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -20,7 +20,7 @@ DESCRIPTION="Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
 # list all arches for proper digest building:
 SRC_URI="alpha?		( mirror://gentoo/${P}-alpha.tbz2 )
-	     amd64?		( mirror://gentoo/${P}-amd64.tbz2 )
+		 amd64?		( mirror://gentoo/${P}-amd64.tbz2 )
 		 hppa?		( mirror://gentoo/${P}-hppa.tbz2 )
 		 ppc?		( mirror://gentoo/${P}-ppc.tbz2 )
 		 ppc64?		( mirror://gentoo/${P}-ppc64.tbz2 )
@@ -136,8 +136,7 @@ src_install () {
 	mkdir "${D}/opt"
 	mv "${S}/usr" "${D}/opt/ghc"
 
-	insinto /etc/env.d
-	doins "${FILESDIR}/10ghc"
+	doenvd "${FILESDIR}/10ghc"
 }
 
 pkg_postinst () {
