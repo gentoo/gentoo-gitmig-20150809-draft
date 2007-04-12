@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7110 2007/04/11 14:15:29 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7111 2007/04/12 03:49:52 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Mike Frysinger <vapier@gentoo.org> (11 Apr 2007)
+# Use resize2fs from e2fsprogs #174202
+sys-fs/ext2resize
 
 # Jeffrey Gardner <je_fro@gentoo.org> (10 Apr 2007)
 # Initial import of experimental folding@home client.
