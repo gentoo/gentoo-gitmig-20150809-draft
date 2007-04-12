@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/saxon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.24 2007/02/20 23:16:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.25 2007/04/12 13:55:24 welp Exp $
+
+  12 Apr 2007; <welp@gentoo.org> saxon-6.5.2-r1.ebuild,
+  saxon-8.4b-r2.ebuild:
+  Keyworded ~amd64 wrt bug 167315
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   saxon-6.5.2-r1.ebuild, saxon-8.4b-r2.ebuild:
