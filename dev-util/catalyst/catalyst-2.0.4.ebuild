@@ -1,29 +1,28 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.2.ebuild,v 1.4 2007/04/07 04:20:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.4.ebuild,v 1.1 2007/04/12 19:43:30 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Gentoo Linux official release metatool"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
-SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~wolf31o2/sources/catalyst/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ccache cdr"
+IUSE="ccache"
 
 DEPEND=""
 RDEPEND="dev-lang/python
 	app-crypt/shash
-	amd64? ( sys-apps/setarch )
-	ppc64? ( sys-apps/setarch )
+	virtual/cdrtools
 	ccache? ( dev-util/ccache )
-	cdr? (
-		virtual/cdrtools
-		ia64? ( sys-fs/dosfstools )
-		app-misc/zisofs-tools
-		>=sys-fs/squashfs-tools-2.1 )"
+	amd64? ( sys-apps/setarch )
+	ia64? ( sys-fs/dosfstools )
+	ppc64? ( sys-apps/setarch )
+	kernel_linux? ( app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )"
 
 pkg_setup() {
 	if use ccache ; then
@@ -34,10 +33,10 @@ pkg_setup() {
 		ewarn "then you should add ccache to your USE."
 	fi
 	echo
-	elog "The template spec files are now installed by default.  You can find"
-	elog "them under /usr/share/doc/${PF}/examples"
-	elog "and they are considered to be the authorative source of information"
-	elog "on catalyst."
+	einfo "The template spec files are now installed by default.  You can find"
+	einfo "them under /usr/share/doc/${PF}/examples"
+	einfo "and they are considered to be the authorative source of information"
+	einfo "on catalyst."
 }
 
 src_install() {
@@ -70,8 +69,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You can find more information about catalyst by checking out the"
-	elog "catalyst project page at:"
-	elog "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
+	einfo "You can find more information about catalyst by checking out the"
+	einfo "catalyst project page at:"
+	einfo "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
 	echo
 }
