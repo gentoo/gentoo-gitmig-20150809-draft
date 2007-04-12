@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/oops
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.13 2007/01/03 13:07:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.14 2007/04/12 08:53:26 mrness Exp $
+
+*oops-1.5.24_pre20050503-r2 (12 Apr 2007)
+
+  12 Apr 2007; Alin Năstac <mrness@gentoo.org> +files/implicit-decl.patch,
+  +oops-1.5.24_pre20050503-r2.ebuild:
+  Fix multilib and QA notices.
 
   03 Jan 2007; Alin Nastac <mrness@gentoo.org>
   oops-1.5.24_pre20050503-r1.ebuild:
