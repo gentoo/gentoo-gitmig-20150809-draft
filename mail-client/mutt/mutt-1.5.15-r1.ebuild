@@ -1,17 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15.ebuild,v 1.2 2007/04/10 17:28:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15-r1.ebuild,v 1.1 2007/04/12 13:43:45 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
+
+PATCHSET_REV="-r1"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	!vanilla? (
-		mirror://gentoo/${P}-gentoo-patches.tar.bz2
+		mirror://gentoo/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2
 	)"
 IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp
-pop qdbm sasl smime ssl vanilla"
+pop qdbm sasl smime smtp ssl vanilla"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -31,19 +33,32 @@ RDEPEND=">=sys-libs/ncurses-5.2
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
+	smtp?     (
+		gnutls?  ( >=net-libs/gnutls-1.0.17 )
+		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+		sasl?    ( >=dev-libs/cyrus-sasl-2 )
+	)
 	idn?     ( net-dns/libidn )
 	gpgme?   ( >=app-crypt/gpgme-0.9.0 )
 	smime?   ( >=dev-libs/openssl-0.9.6 )
 	app-misc/mime-types"
 DEPEND="${RDEPEND}
-	net-mail/mailbase"
+	net-mail/mailbase
+	!vanilla? (
+		dev-libs/libxml2
+		dev-libs/libxslt
+		app-text/docbook-xsl-stylesheets
+		|| ( www-client/lynx www-client/w3m )
+	)"
 
-PATCHDIR="${WORKDIR}"/${P}-gentoo-patches
+PATCHDIR="${WORKDIR}"/${P}-gentoo-patches${PATCHSET_REV}
 
 src_unpack() {
 	unpack ${A} && cd "${S}" || die "unpack failed"
 
 	if ! use vanilla ; then
+		epatch "${FILESDIR}"/${P}-parallel-make.patch
+
 		if ! use nntp ; then
 			rm "${PATCHDIR}"/07-nntp.patch
 		fi
@@ -53,8 +68,6 @@ src_unpack() {
 		done
 
 		AT_M4DIR="m4" eautoreconf
-	else
-		eautoconf
 	fi
 }
 
@@ -64,6 +77,7 @@ src_compile() {
 		$(use_enable gpgme) \
 		$(use_enable imap) \
 		$(use_enable pop) \
+		$(use_enable smtp) \
 		$(use_enable crypt pgp) \
 		$(use_enable smime) \
 		$(use_enable cjk default-japanese) \
@@ -99,7 +113,7 @@ src_compile() {
 	# there's no need for gnutls, ssl or sasl without either pop or imap.
 	# in fact mutt's configure will bail if you do:
 	#   --without-pop --without-imap --with-ssl
-	if use pop || use imap; then
+	if use pop || use imap || use smtp ; then
 		if use gnutls; then
 			myconf="${myconf} --with-gnutls"
 		elif use ssl; then
@@ -136,22 +150,22 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-	emake -j1 || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
-		newins ${FILESDIR}/Muttrc.mbox Muttrc
+		newins "${FILESDIR}"/Muttrc.mbox Muttrc
 	else
 		insinto /etc/mutt
-		doins ${FILESDIR}/Muttrc
+		doins "${FILESDIR}"/Muttrc
 	fi
 
 	# A newer file is provided by app-misc/mime-types. So we link it.
-	rm ${D}/etc/${PN}/mime.types
+	rm "${D}"/etc/${PN}/mime.types
 	dosym /etc/mime.types /etc/${PN}/mime.types
 
 	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
