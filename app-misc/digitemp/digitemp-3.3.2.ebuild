@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.2.ebuild,v 1.6 2007/01/28 05:08:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.2.ebuild,v 1.7 2007/04/12 20:42:47 opfer Exp $
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com http://www.ibutton.com"
@@ -9,7 +9,7 @@ SRC_URI="http://www.digitemp.com/software/linux/${P}.tar.gz"
 IUSE="ds9097 ds9097u ds2490"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="ds2490? ( >=dev-libs/libusb-0.1.10a )"
 
