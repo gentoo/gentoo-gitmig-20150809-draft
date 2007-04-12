@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.31 2007/02/17 10:42:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.32 2007/04/12 22:55:51 opfer Exp $
+
+  12 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  pikdev-0.9.2.1.ebuild:
+  stable amd64, bug 165424
 
   17 Feb 2007; Raúl Porcel <armin76@gentoo.org> pikdev-0.9.2.1.ebuild:
   x86 stable wrt bug 165424
