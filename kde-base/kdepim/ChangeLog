@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.252 2007/04/12 17:41:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.253 2007/04/12 19:57:52 carlo Exp $
+
+  12 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdepim-3.5.6-r2.ebuild:
+  Disable KitchenSync tests, see bug #164097.
 
   12 Apr 2007; Raúl Porcel <armin76@gentoo.org> kdepim-3.5.5-r3.ebuild:
   ia64 + x86 stable wrt bug 174216
