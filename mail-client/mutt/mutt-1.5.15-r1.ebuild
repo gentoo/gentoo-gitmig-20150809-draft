@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15-r1.ebuild,v 1.1 2007/04/12 13:43:45 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15-r1.ebuild,v 1.2 2007/04/12 21:41:16 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -12,8 +12,8 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	!vanilla? (
 		mirror://gentoo/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2
 	)"
-IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp
-pop qdbm sasl smime smtp ssl vanilla"
+IUSE="berkdb crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl
+smime smtp ssl vanilla"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -80,7 +80,6 @@ src_compile() {
 		$(use_enable smtp) \
 		$(use_enable crypt pgp) \
 		$(use_enable smime) \
-		$(use_enable cjk default-japanese) \
 		$(use_enable debug) \
 		$(use_with idn) \
 		--with-curses \
@@ -129,11 +128,6 @@ src_compile() {
 	case ${ARCH} in
 		alpha|ppc) replace-flags "-O[3-9]" "-O2" ;;
 	esac
-
-	if use buffysize; then
-		ewarn "USE=buffy-size is just a workaround. Disable it if you don't need it."
-		myconf="${myconf} --enable-buffy-size"
-	fi
 
 	if use mbox; then
 		myconf="${myconf} --with-mailpath=/var/spool/mail"
