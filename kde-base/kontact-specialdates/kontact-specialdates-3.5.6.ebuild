@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.5.6.ebuild,v 1.2 2007/02/16 13:43:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.5.6.ebuild,v 1.3 2007/04/12 14:01:21 carlo Exp $
 
 KMNAME=kdepim
 KMNOMODULE=true
@@ -12,14 +12,13 @@ DESCRIPTION="Special Dates plugin for Kontact: displays a summary of important h
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="
-$(deprange $PV $MAXKDEVER kde-base/libkdepim)
-$(deprange $PV $MAXKDEVER kde-base/kontact)
-$(deprange $PV $MAXKDEVER kde-base/kaddressbook)
-$(deprange $PV $MAXKDEVER kde-base/korganizer)
-$(deprange $PV $MAXKDEVER kde-base/libkholidays)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+	$(deprange $PV $MAXKDEVER kde-base/kontact)
+	$(deprange $PV $MAXKDEVER kde-base/kaddressbook)
+	$(deprange $PV $MAXKDEVER kde-base/korganizer)
+	$(deprange $PV $MAXKDEVER kde-base/libkholidays)"
 RDEPEND="${DEPEND}
-$(deprange $PV $MAXKDEVER kde-base/kmail)" # only to enable send mail functionality
+	>=kde-base/libkdepim-3.5.6-r1" # Force this version temporarily, #136810.
 
 KMCOPYLIB="libkdepim libkdepim/
 	libkpinterfaces kontact/interfaces
