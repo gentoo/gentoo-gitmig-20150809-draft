@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2739 2007/04/11 21:44:02 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2740 2007/04/12 11:25:10 ferdy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -770,6 +770,7 @@ mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:gpgme - Enable support for gpgme
 mail-client/mutt:pop - Enable support for pop
 mail-client/mutt:smime - Enable support for smime
+mail-client/mutt:smtp - Enable support for smtp
 mail-client/muttng:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/muttng:gpgme - Enable support for gpgme
 mail-client/muttng:pop - Enable support for pop
