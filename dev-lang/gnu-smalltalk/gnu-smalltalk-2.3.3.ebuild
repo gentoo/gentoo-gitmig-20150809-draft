@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.3.ebuild,v 1.2 2007/02/22 11:08:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.3.ebuild,v 1.3 2007/04/12 20:44:48 welp Exp $
 
 inherit multilib elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/smalltalk/smalltalk.html"
 SRC_URI="http://ftp.gnu.org/gnu/smalltalk/smalltalk-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="tk readline emacs gtk gmp"
 
 DEPEND="sys-libs/gdbm
@@ -50,8 +50,8 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info \
-		lispdir=${D}/usr/share/emacs/site-lisp/gnu-smalltalk install \
-		|| die
+		lispdir=${D}/usr/share/emacs/site-lisp/gnu-smalltalk \
+		libdir=${D}/usr/$(get_libdir) install || die
 	rm -rf ${D}/usr/include/sigsegv.h \
 		${D}/usr/include/snprintfv \
 		${D}/usr/share/aclocal/snprintfv.m4
