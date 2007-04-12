@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/quickswitch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.22 2007/02/21 19:44:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.23 2007/04/12 21:23:59 armin76 Exp $
+
+  12 Apr 2007; Raúl Porcel <armin76@gentoo.org> quickswitch-1.05.ebuild:
+  Fix sample, bug 134335
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
