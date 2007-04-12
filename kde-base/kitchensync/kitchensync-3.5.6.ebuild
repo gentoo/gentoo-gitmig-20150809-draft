@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.6.ebuild,v 1.1 2007/01/16 20:41:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.6.ebuild,v 1.2 2007/04/12 19:49:07 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -28,3 +28,12 @@ KMEXTRACTONLY="
 # Disabled by default in kontact/plugins/Makefile.am, so check before enabling - 3.4.0_beta1 -- danarmak
 # KMEXTRA="kontact/plugins/kitchensync"
 KMEXTRA="kontact/plugins/multisynk"
+
+src_unpack() {
+	kde-meta_src_unpack
+	# disabling tests, see bug #164097
+	sed -e "s:SUBDIRS = . plugins test:SUBDIRS = . plugins:" \
+		-i kitchensync/libkonnector2/Makefile.am || die "sed failed"
+	sed -e "s:SUBDIRS = . tests test:SUBDIRS = .:" \
+		-i kitchensync/libksync/Makefile.am || die "sed failed"
+}

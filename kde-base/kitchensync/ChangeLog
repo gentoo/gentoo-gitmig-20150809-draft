@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kitchensync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.68 2007/02/04 02:30:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.69 2007/04/12 19:49:07 carlo Exp $
+
+  12 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kitchensync-3.5.6.ebuild:
+  Disabling tests, see bug #164097.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kitchensync-3.5.2.ebuild:
