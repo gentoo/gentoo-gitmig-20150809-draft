@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd-stuff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.4 2007/04/10 23:43:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.5 2007/04/12 21:30:48 rbu Exp $
+
+  12 Apr 2007; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Added upstream as maintainer for bug cc's
 
   10 Apr 2007; Robert Buchholz <rbu@gentoo.org> lcd-stuff-0.1.2.ebuild:
   lcd-stuff needs >=media-libs/libmpd-0.12.0, 0.01 does not work (bug #173975)
