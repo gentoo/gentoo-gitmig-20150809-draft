@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ssmping
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssmping/ChangeLog,v 1.2 2006/10/15 12:26:25 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssmping/ChangeLog,v 1.3 2007/04/12 08:25:44 jokey Exp $
+
+*ssmping-0.9-r1 (12 Apr 2007)
+
+  12 Apr 2007; Markus Ullmann <jokey@gentoo.org> +ssmping-0.9-r1.ebuild:
+  Actually install mcfirst per bug #174239
 
   15 Oct 2006; Thomas Cort <tcort@gentoo.org> ssmping-0.9.ebuild:
   Added ~amd64 keyword wrt Bug #151438.
