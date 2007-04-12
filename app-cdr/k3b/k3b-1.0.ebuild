@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.2 2007/03/25 18:25:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.3 2007/04/12 16:29:42 carlo Exp $
 
 inherit kde eutils
 
@@ -78,6 +78,8 @@ pkg_setup() {
 		eerror "the dvdread USE flag will cause k3b to use libdvdread as well."
 		die "Please, rebuild media-video/transcode with the \"dvdread\" USE flag."
 	fi
+
+	use kde || elog "You haven't set the kde use flag. k3bsetup won't be installed."
 
 	kde_pkg_setup
 }
