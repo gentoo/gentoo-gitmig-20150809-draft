@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.9.6.ebuild,v 1.10 2006/09/03 20:12:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.9.6.ebuild,v 1.11 2007/04/13 17:50:47 wolf31o2 Exp $
+
+inherit multilib
 
 DESCRIPTION="A parallel version of BZIP2"
 HOMEPAGE="http://compression.ca/pbzip2/"
