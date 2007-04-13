@@ -1,0 +1,21 @@
+diff -ru umbrello-3.5.6.orig/umbrello/umbrello/umldoc.cpp umbrello-3.5.6/umbrello/umbrello/umldoc.cpp
+--- umbrello-3.5.6.orig/umbrello/umbrello/umldoc.cpp	2007-01-15 03:24:47.000000000 -0800
++++ umbrello-3.5.6/umbrello/umbrello/umldoc.cpp	2007-03-18 03:21:32.000000000 -0700
+@@ -147,15 +147,10 @@
+     if ( pApp->getListView() )
+         connect(this, SIGNAL(sigObjectRemoved(UMLObject *)), view, SLOT(slotObjectRemoved(UMLObject *)));
+ 
+-    UMLView * previousView = pApp->getCurrentView();
+     pApp->setCurrentView(view);
+     if ( ! m_bLoading ) {
+-        if (previousView == NULL) {
+-            view -> show();
+-            emit sigDiagramChanged(view ->getType());
+-        } else {
+-            view -> hide();
+-        }
++    	view->show();
++	emit sigDiagramChanged(view ->getType());
+     }
+ 
+     Settings::OptionState optionState = Settings::getOptionState();
