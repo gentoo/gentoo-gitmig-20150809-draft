@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.106 2007/03/27 17:59:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.107 2007/04/13 08:59:53 ticho Exp $
+
+  13 Apr 2007; Andrej Kacian <ticho@gentoo.org> files/amavisd.rc6:
+  Add --name to start-stop-daemon when starting amavisd-new, so baselayout2
+  knows what the daemon should be called. Bug #174343, reported by <candrews
+  at integralblue.com>.
 
   27 Mar 2007; Andrej Kacian <ticho@gentoo.org> -amavisd-new-2.4.5.ebuild:
   Removing 2.4.5 ebuild.
