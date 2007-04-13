@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/mp3fs-0.07.ebuild,v 1.1 2007/04/13 12:56:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/mp3fs-0.07.ebuild,v 1.2 2007/04/13 21:44:30 dragonheart Exp $
 
 DESCRIPTION="MP3FS is a read-only FUSE filesystem which transcodes FLAC audio
 files to MP3 on the fly when opened and read."
@@ -18,4 +18,5 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc README
 }
