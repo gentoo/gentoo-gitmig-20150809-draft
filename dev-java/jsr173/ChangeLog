@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.13 2007/04/13 09:14:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.14 2007/04/13 19:39:17 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> jsr173-1.0-r1.ebuild:
+  Stable on amd64 wrt bug 174396
 
   13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jsr173-1.0-r1.ebuild:
   Ebuild cleanup.
