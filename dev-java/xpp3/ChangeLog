@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.9 2007/04/13 09:01:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.10 2007/04/13 19:50:53 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> xpp3-1.1.4c.ebuild:
+  Stable on amd64 wrt bug 174394
 
   13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> xpp3-1.1.4c.ebuild:
   Migrate to splitted ant and make the src_test actually run the tests instead

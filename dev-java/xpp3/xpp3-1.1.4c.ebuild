@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c.ebuild,v 1.2 2007/04/13 09:01:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c.ebuild,v 1.3 2007/04/13 19:50:53 welp Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.extreme.indiana.edu/dist/java-repository/${PN}/distributions
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="test"
 
 DEPEND=">=virtual/jdk-1.4
