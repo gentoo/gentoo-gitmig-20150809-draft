@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r2.ebuild,v 1.1 2007/04/13 11:29:25 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r2.ebuild,v 1.2 2007/04/13 11:42:40 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -82,7 +82,7 @@ src_compile() {
 src_install() {
 	# cron eclass stuff
 	docron fcron -m0755 -o ${ROOTUSER:-root} -g ${ROOTGROUP:-root}
-	docrondir /var/spool/fcron/fcrontabs -m6770 -o fcron -g fcron
+	docrondir /var/spool/fcron -m6770 -o fcron -g fcron
 	docrontab fcrontab -m6755 -o fcron -g fcron
 
 	# install fcron tools
@@ -100,8 +100,6 @@ src_install() {
 	insinto /etc/fcron
 	insopts -m0640 -o ${ROOTUSER:-root} -g fcron
 	doins files/fcron.{allow,deny,conf}
-	dosed 's:^\(fcrontabs.*=.*\)$:\1/fcrontabs:' /etc/fcron/fcron.conf \
-		|| die "dosed fcron.conf failed"
 
 	# install PAM files
 	newpamd files/fcron.pam fcron
@@ -116,9 +114,6 @@ src_install() {
 	newinitd ${FILESDIR}/fcron.init fcron || die "newinitd failed"
 
 	# install the very handy check_system_crontabs script
-	mv script/check_system_crontabs script/check_system_crontabs.orig
-	sed -e 's:^FCRONTABS_DIR=.*$:FCRONTABS_DIR=/var/spool/cron/fcrontabs:' \
-		script/check_system_crontabs.orig > script/check_system_crontabs
 	dosbin script/check_system_crontabs
 
 	# doc stuff
@@ -146,13 +141,13 @@ pkg_postinst() {
 	einfo
 	einfo "fcron has some important differences compared to vixie-cron:"
 	einfo
-	einfo "1. fcron stores the crontabs in /var/spool/fcron/fcrontabs"
+	einfo "1. fcron stores the crontabs in /var/spool/fcron"
 	einfo "   instead of /var/spool/cron/crontabs"
 	einfo
 	einfo "2. fcron uses a special binary file format for storing the"
-	einfo "   crontabs in /var/spool/fcron/fcrontabs/USERNAME,"
+	einfo "   crontabs in /var/spool/fcron/USERNAME,"
 	einfo "   but the original plain text version is saved as"
-	einfo "   /var/spool/fcron/fcrontabs/USERNAME.orig for your"
+	einfo "   /var/spool/fcron/USERNAME.orig for your"
 	einfo "   reference (and for being edited with fcrontab)."
 	einfo
 	einfo "3. fcron does not feature a system crontab in exactly the"
@@ -164,7 +159,7 @@ pkg_postinst() {
 	einfo
 	einfo "   will write /etc/crontab to the fcron crontabs directory as"
 	einfo
-	einfo "      /var/spool/fcron/fcrontabs/systab"
+	einfo "      /var/spool/fcron/systab"
 	einfo
 	einfo "   Please note that changes to /etc/crontab will not become"
 	einfo "   active automatically! fcron also does not use the directory"
@@ -230,15 +225,15 @@ pkg_postinst() {
 		ewarn "used /var/spool/cron for several reasons."
 		ewarn
 		ewarn "Copying over existing crontabs from /var/spool/cron/fcrontabs"
-		cp /var/spool/cron/fcrontabs/* /var/spool/fcron/fcrontabs/ >&/dev/null \
+		cp /var/spool/cron/fcrontabs/* /var/spool/fcron/ >&/dev/null \
 			|| die "failed to migrate existing crontabs"
 		ewarn "You should now remove /var/spool/cron/fcrontabs!"
 		ewarn
-		ewarn "Fixing permissions and ownership of /var/spool/fcron/fcrontabs"
-		chown root:root /var/spool/fcron/fcrontabs/* >&/dev/null
-		chmod 0600 /var/spool/fcron/fcrontabs/* >&/dev/null
-		chown fcron:fcron /var/spool/fcron/fcrontabs/*.orig >&/dev/null
-		chmod 0640 /var/spool/fcron/fcrontabs/*.orig >&/dev/null
+		ewarn "Fixing permissions and ownership of /var/spool/fcron"
+		chown root:root /var/spool/fcron/* >&/dev/null
+		chmod 0600 /var/spool/fcron/* >&/dev/null
+		chown fcron:fcron /var/spool/fcron/*.orig >&/dev/null
+		chmod 0640 /var/spool/fcron/.orig >&/dev/null
 		ewarn
 		ewarn "*** YOU SHOULD IMMEDIATELY UPDATE THE"
 		ewarn "*** fcrontabs ENTRY IN /etc/fcron/fcron.conf"
