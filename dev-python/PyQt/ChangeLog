@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.83 2007/02/20 18:30:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.84 2007/04/13 19:18:37 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> PyQt-3.17.ebuild:
+  Stable on amd64 wrt bug 174413. Allows for closing of bug 155170
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org> PyQt-3.14.1-r2.ebuild:
   mark 3.14.1-r2 -amd64 until bug 155170 is properly resolved
