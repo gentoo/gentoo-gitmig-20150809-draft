@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.42 2007/02/02 17:30:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.43 2007/04/13 17:59:46 spock Exp $
+
+*linux-logo-4.16 (13 Apr 2007)
+
+  13 Apr 2007; Michał Januszewski <spock@gentoo.org>
+  +linux-logo-4.16.ebuild:
+  Version bump (bug #174450).
 
   02 Feb 2007; Michał Januszewski <spock@gentoo.org>
   -linux-logo-4.13.ebuild, -linux-logo-4.14.ebuild:
