@@ -1,6 +1,21 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.70 2007/04/10 10:03:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.71 2007/04/13 22:02:31 wolf31o2 Exp $
+
+  13 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +2007.0/desktop/make.defaults, -dev/2007.0/desktop/make.defaults,
+  +2007.0/desktop/parent, -dev/2007.0/desktop/parent,
+  +2007.0/desktop/virtuals, -dev/2007.0/desktop/virtuals,
+  +2007.0/make.defaults, -dev/2007.0/packages, +2007.0/packages,
+  -dev/2007.0/parent, +2007.0/parent, -dev/2007.0/server/make.defaults,
+  +2007.0/server/make.defaults, -dev/2007.0/server/parent,
+  +2007.0/server/parent, -dev/2007.0/server/profile.bashrc,
+  +2007.0/server/profile.bashrc, -dev/2007.0/make.defaults:
+  Adding the 2007.0 profile from the release snapshot. This will allow us to
+  do final testing/QA on the release media before it hits the mirrors. This
+  profile is designed to work with the release media, so beware if you're
+  using it yourself without knowing the implications of what it will affect
+  for you.
 
   10 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Unmask sys-fs/{fuse,ntfs3g} on 2.4 profile since they have a lot of deps and
