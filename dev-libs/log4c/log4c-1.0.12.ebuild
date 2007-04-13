@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.6 2006/08/04 02:57:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.7 2007/04/13 23:36:11 dragonheart Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 src_compile() {
 
 	econf --enable-test $(use_enable doc) || die
-	use doc && addwrite "${ROOT}/var/cache/fonts"
+	use doc && addwrite /var/cache/fonts
 	emake || die
 }
 
