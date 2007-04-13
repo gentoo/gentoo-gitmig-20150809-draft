@@ -1,8 +1,8 @@
 # ChangeLog for x11-plugins/wmauda
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.5 2007/04/13 14:24:53 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.6 2007/04/13 14:27:59 s4t4n Exp $
 
-  03 Feb 2007; Michele Noberasco <s4t4n@gentoo.org> wmauda-0.3.ebuild:
+  13 Apr 2007; Michele Noberasco <s4t4n@gentoo.org> wmauda-0.3.ebuild:
   Stable for x86.
   wmauda-0.3.ebuild, wmauda-0.2.ebuild:
   Fixed IUSE.
