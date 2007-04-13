@@ -30,7 +30,7 @@ do_hdparm() {
 	[ -z "${args}${all_args}${e}" ] && return 0
 	
 	if [ -n "${args:=${all_args} ${e}}" ] ; then
-		local orgdevice="$(readlink -f "${device}")"
+		local orgdevice=$(readlink -f "${device}")
 		if [ -b "${orgdevice}" ] ; then
 			ebegin "Running hdparm on ${device}"
 			hdparm ${args} "${device}" > /dev/null
@@ -115,9 +115,9 @@ scan_nondevfs() {
 		# check that the block device really exists by
 		# opening it for reading
 		local errmsg= status= nomed=1
-		errmsg="$(export LC_ALL=C ; : 2>&1 <"${device}")"
+		errmsg=$(export LC_ALL=C ; : 2>&1 <"${device}")
 		status=$?
-		case "${errmsg}" in
+		case ${errmsg} in
 		    *": No medium found") nomed=0;;
 		esac
 		if [ -b "${device}" ] && [ "${status}" = "0" -o "${nomed}" = "0" ] ; then
