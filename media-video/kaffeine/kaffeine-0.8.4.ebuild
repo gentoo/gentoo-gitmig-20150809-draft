@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.3-r1.ebuild,v 1.1 2007/02/09 04:47:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.4.ebuild,v 1.1 2007/04/13 23:49:54 genstef Exp $
 
-inherit eutils kde flag-o-matic
+inherit eutils kde flag-o-matic autotools
 
 DESCRIPTION="Media player for KDE using xine and gstreamer backends."
 HOMEPAGE="http://kaffeine.sourceforge.net/"
@@ -15,10 +15,9 @@ IUSE="dvb gstreamer xinerama vorbis encode kdehiddenvisibility xcb"
 
 RDEPEND=">=media-libs/xine-lib-1
 	xcb? ( >=x11-libs/libxcb-1.0
-		>=media-libs/xine-lib-1.1.4-r1 )
-	gstreamer? ( =media-libs/gstreamer-0.8*
-		=media-libs/gst-plugins-0.8*
-		=media-plugins/gst-plugins-xvideo-0.8* )
+		>=media-libs/xine-lib-1.1.5 )
+	gstreamer? ( =media-libs/gstreamer-0.10*
+		=media-plugins/gst-plugins-xvideo-0.10* )
 	media-sound/cdparanoia
 	encode? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
@@ -26,8 +25,6 @@ RDEPEND=">=media-libs/xine-lib-1
 
 DEPEND="${RDEPEND}
 	dvb? ( media-tv/linuxtv-dvb-headers )"
-
-PATCHES="${FILESDIR}/${P}-build.patch"
 
 need-kde 3.5.4
 
@@ -43,8 +40,10 @@ pkg_setup() {
 
 src_unpack() {
 	kde_src_unpack
-
-	use xcb && epatch "${FILESDIR}/${P}-xcb.patch"
+	cd ${S}
+	# allow $(with_xcb)
+	epatch ${FILESDIR}/kaffeine-with-xcb.patch
+	eautoconf
 }
 
 src_compile() {
@@ -56,6 +55,7 @@ src_compile() {
 		$(use_with dvb)
 		$(use_with gstreamer)
 		$(use_with vorbis oggvorbis)
+		$(use_with xcb)
 		$(use_with encode lame)"
 
 	kde_src_compile

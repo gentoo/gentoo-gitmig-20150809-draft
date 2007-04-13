@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.72 2007/02/18 16:03:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.73 2007/04/13 23:49:54 genstef Exp $
+
+*kaffeine-0.8.4 (13 Apr 2007)
+
+  13 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/kaffeine-0.8.3-xcb.patch, +files/kaffeine-with-xcb.patch,
+  -kaffeine-0.8.3-r1.ebuild, +kaffeine-0.8.4.ebuild:
+  version bump
 
   18 Feb 2007; Simon Stelling <blubb@gentoo.org> kaffeine-0.8.3.ebuild:
   stable on amd64; bug 165694
