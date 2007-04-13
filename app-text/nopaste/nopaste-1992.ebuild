@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/nopaste-1992.ebuild,v 1.5 2007/04/08 12:42:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/nopaste-1992.ebuild,v 1.6 2007/04/13 14:15:51 tove Exp $
 
 DESCRIPTION="command-line interface to rafb.net/paste"
-HOMEPAGE="http://gentoo.org/~agriffis/nopaste/"
+HOMEPAGE="http://n01se.net/agriffis/nopaste/"
 SRC_URI="${HOMEPAGE}/${P}"
 
 LICENSE="GPL-2"
@@ -19,5 +19,5 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}
 
 src_install() {
-	newbin ${DISTDIR}/${P} ${PN}
+	newbin "${DISTDIR}"/${P} ${PN}
 }
