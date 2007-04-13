@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.52 2007/04/01 00:22:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.53 2007/04/13 09:41:24 vapier Exp $
+
+*usbutils-0.72-r4 (13 Apr 2007)
+
+  13 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  files/usbutils-0.72-update-usbids.patch, +usbutils-0.72-r4.ebuild:
+  Squelch more possible warnings in updates-usbids and disable network cron by
+  default.
 
 *usbutils-0.72-r3 (01 Apr 2007)
 
@@ -27,7 +34,7 @@
   10 Feb 2007; Mike Frysinger <vapier@gentoo.org>
   +files/usbutils-0.72-update-usbids.patch, files/usbutils.cron,
   +usbutils-0.72-r1.ebuild:
-  Add a -q (quiet) flag to update-usbids and have th cronjob use it #164800 by
+  Add a -q (quiet) flag to update-usbids and have the cronjob use it #164800 by
   Horst Prote.
 
 *usbutils-0.72 (19 Jan 2007)

@@ -1,6 +1,6 @@
 --- update-usbids.sh
 +++ update-usbids.sh
-@@ -2,12 +2,22 @@
+@@ -2,13 +2,23 @@
  
  # see also update-pciids.sh (fancier)
  
@@ -17,12 +17,15 @@
 +	exit 0
 +fi
 +
- if which wget >/dev/null ; then
+-if which wget >/dev/null ; then
++if which wget >/dev/null 2>&1 ; then
  	DL="wget -O $DEST.new $SRC"
+-elif which lynx >/dev/null ; then
 +	${quiet} && DL="$DL -q"
- elif which lynx >/dev/null ; then
++elif which lynx >/dev/null 2>&1 ; then
  	DL="eval lynx -source $SRC >$DEST.new"
  else
+ 	echo >&2 "update-usbids: cannot find wget nor lynx"
 @@ -33,4 +43,4 @@
  fi
  mv $DEST.new $DEST
