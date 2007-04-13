@@ -1,18 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX 1.3.0_rc2-freebsd-portability.patch 1833 RMD160 dcee94df3a8b069056a6b0e98c0b3f6b201de6e3 SHA1 a9f2fcd7fbe6d3bc8399a814a64a8f4f19669e56 SHA256 5be60aca440dbe53d7ca25c517a80ee1e648179e174d7f3977c9f22ac01f755e
-MD5 2e3ac6898331f492fec0fbc663cb727e files/1.3.0_rc2-freebsd-portability.patch 1833
-RMD160 dcee94df3a8b069056a6b0e98c0b3f6b201de6e3 files/1.3.0_rc2-freebsd-portability.patch 1833
-SHA256 5be60aca440dbe53d7ca25c517a80ee1e648179e174d7f3977c9f22ac01f755e files/1.3.0_rc2-freebsd-portability.patch 1833
-AUX 1.3.1-stricter-mp3-probe.patch 6082 RMD160 f5f1c1dc874ed2b07f1947a768df5b094c32509a SHA1 e4067db1cce73064b0cd06b557632a89ecefd95f SHA256 219d2d846b3719880fd3c8063fb753a5edc22661f886ce8eb86e05a13496afbc
-MD5 a0ad51c0dfa0cf188cf0e4fed89710db files/1.3.1-stricter-mp3-probe.patch 6082
-RMD160 f5f1c1dc874ed2b07f1947a768df5b094c32509a files/1.3.1-stricter-mp3-probe.patch 6082
-SHA256 219d2d846b3719880fd3c8063fb753a5edc22661f886ce8eb86e05a13496afbc files/1.3.1-stricter-mp3-probe.patch 6082
 DIST audacious-plugins-1.2.2.tgz 2178529 RMD160 b986bb1e12fd0b3c5f0e1dde994781fb556a1d3c SHA1 300888007539fe8bcdb7fd474a7466b7f09371a2 SHA256 0422cdb510c9f7c90ceb206b4f7317e3b7ea8a66809f78976a1231d2fc073049
 DIST audacious-plugins-1.2.5.tgz 2339867 RMD160 ce102649e5cf15239bcab5a204d368869dbe851d SHA1 daa5df222e982f1a56115c455c1289b21f48f264 SHA256 29d812db9a17ef50dc38db9ac354ab2ba31047829a0c1316a549177328ffb6c3
-DIST audacious-plugins-1.3.1.tgz 2905465 RMD160 5d5169fc4caf5ee10374f42d925652cef73eca49 SHA1 35c1a952abdd35bf843711182f8bc9cc34c5a9b2 SHA256 d882603786b5b5e41bdc6e481e8bdabb9cb86a29f411a4bc39078ea98c9a57a5
-DIST audacious-plugins-1.3.2.tgz 2962380 RMD160 43fcb033d2de7c07f4e85b301f6b28f04067923d SHA1 51c6099d61b7db6153f8df6f4d5c40c9a6f374c0 SHA256 590ba683268e3f282abe9fb47b89a86de5e57a54cb2600a8f9aa5f8d42d79ec5
+DIST audacious-plugins-1.3.3.tgz 2963141 RMD160 53b6f3156b76454f20c5084fbd35334f2a9397c3 SHA1 a6359f79463f7fbb78f41cd436df050513bcf17e SHA256 67a968d77524f6d902a2180c31742e124fe27584dc7be2d4646dfe0fb0509580
 EBUILD audacious-plugins-1.2.2-r1.ebuild 2566 RMD160 70c60bd7a9c04093707b80a4af44219528fba8bb SHA1 0a85917857e9ffe7c4aa8501385372b8ef78aed7 SHA256 5dfbcfa26a071a449144c24f5f099e1308ece4cc451bf3225fff2fd500b93173
 MD5 a0623f087a52773392db32bd295d0b3a audacious-plugins-1.2.2-r1.ebuild 2566
 RMD160 70c60bd7a9c04093707b80a4af44219528fba8bb audacious-plugins-1.2.2-r1.ebuild 2566
@@ -21,22 +12,14 @@ EBUILD audacious-plugins-1.2.5.ebuild 2594 RMD160 16f61b88b52284e79bf915d55be4d6
 MD5 bf0c904379e0b0881ba8c10f40539f75 audacious-plugins-1.2.5.ebuild 2594
 RMD160 16f61b88b52284e79bf915d55be4d6397c4a188f audacious-plugins-1.2.5.ebuild 2594
 SHA256 00812831314e5a8b6945ff889dcea8077417dda0a4d4efc7008e37d50a537dad audacious-plugins-1.2.5.ebuild 2594
-EBUILD audacious-plugins-1.3.1-r1.ebuild 3316 RMD160 729fd2d9cd602914de44b8aad0e956b0e1b747d9 SHA1 7f9229c1641023c0a226e4ac476cd62efaf27716 SHA256 56d97bf2d9c50da1e05ce109b281ecfd9130ce4f171e78a91bd4bd3950e3bfeb
-MD5 262f8faa869018ed511c27102c793edd audacious-plugins-1.3.1-r1.ebuild 3316
-RMD160 729fd2d9cd602914de44b8aad0e956b0e1b747d9 audacious-plugins-1.3.1-r1.ebuild 3316
-SHA256 56d97bf2d9c50da1e05ce109b281ecfd9130ce4f171e78a91bd4bd3950e3bfeb audacious-plugins-1.3.1-r1.ebuild 3316
-EBUILD audacious-plugins-1.3.1.ebuild 3214 RMD160 1a4fd574cc7301d1cbceb0e8fdc619c451baf21c SHA1 1176ee61ff39463e4008ec69cbcd82ca1d3ad74c SHA256 1aa28c1fd6e11e4c46d3d751ccc4ac0912d24a8ea2e76298157494ea6c15c070
-MD5 003acf673ab3740714e22bef21f3e35e audacious-plugins-1.3.1.ebuild 3214
-RMD160 1a4fd574cc7301d1cbceb0e8fdc619c451baf21c audacious-plugins-1.3.1.ebuild 3214
-SHA256 1aa28c1fd6e11e4c46d3d751ccc4ac0912d24a8ea2e76298157494ea6c15c070 audacious-plugins-1.3.1.ebuild 3214
-EBUILD audacious-plugins-1.3.2.ebuild 3181 RMD160 365e0473e4dc95dbc28302b8088ac32f9b3b1693 SHA1 dfd1af02c7e5dd3925240a7dd0272267040cbac3 SHA256 93e9fd1c07da1be207dd7731a5729da71a9fe6660bd3df9878b78e072b63d420
-MD5 87b47381309e31c5f0d576f9ae83c62d audacious-plugins-1.3.2.ebuild 3181
-RMD160 365e0473e4dc95dbc28302b8088ac32f9b3b1693 audacious-plugins-1.3.2.ebuild 3181
-SHA256 93e9fd1c07da1be207dd7731a5729da71a9fe6660bd3df9878b78e072b63d420 audacious-plugins-1.3.2.ebuild 3181
-MISC ChangeLog 10812 RMD160 346fe3ea85abbc1df05fc87916d2fe58d79e5427 SHA1 3a73d134034bd8f6ad5f16a0502a3c6f936dca60 SHA256 0d0884339c895e674d2967cee0649d6b2525fead8179a9ee93af7b29736826b3
-MD5 3c85dfafb1c57fbc1114ef3142683d71 ChangeLog 10812
-RMD160 346fe3ea85abbc1df05fc87916d2fe58d79e5427 ChangeLog 10812
-SHA256 0d0884339c895e674d2967cee0649d6b2525fead8179a9ee93af7b29736826b3 ChangeLog 10812
+EBUILD audacious-plugins-1.3.3.ebuild 3181 RMD160 26f84b60338aaf5d8e9936b480adc6f3a5762ec5 SHA1 f0784b96bca01cc9f97dc705f175ab0d1b4093d1 SHA256 b00488f02b0526a44e8d09b7cfd2976a37fd7bbed496367a4efa448b12bf605c
+MD5 6e06455b1aa5a5b6fbe35ab56f99be2c audacious-plugins-1.3.3.ebuild 3181
+RMD160 26f84b60338aaf5d8e9936b480adc6f3a5762ec5 audacious-plugins-1.3.3.ebuild 3181
+SHA256 b00488f02b0526a44e8d09b7cfd2976a37fd7bbed496367a4efa448b12bf605c audacious-plugins-1.3.3.ebuild 3181
+MISC ChangeLog 11209 RMD160 36dee3a00de0149742be0ea3b99ab29fd0e68a15 SHA1 fcf3bd9753cdff782bbcdc0b1e34115d8a078bf8 SHA256 304e2dd4fc5fb6ebf44ba5d9546fb5afb7e6729aaa725105a44aa29ba20b9c24
+MD5 ed8a97030fa7dda03505bce51f9ffd7c ChangeLog 11209
+RMD160 36dee3a00de0149742be0ea3b99ab29fd0e68a15 ChangeLog 11209
+SHA256 304e2dd4fc5fb6ebf44ba5d9546fb5afb7e6729aaa725105a44aa29ba20b9c24 ChangeLog 11209
 MISC metadata.xml 248 RMD160 f9de13e16a150195633b055ebe61bb4cea95160d SHA1 4ea80510c4e90c385ac851b4f82c36b4f91d9402 SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
@@ -47,19 +30,13 @@ SHA256 844961a549d7d8bbb1935f9cc023885a14e4038342e30d527b0a9a701190195c files/di
 MD5 05bf85634d63ac06167acb779b7f83c9 files/digest-audacious-plugins-1.2.5 265
 RMD160 38e68bb0dc992408a3da6eb3fbb1c6c7ae81682e files/digest-audacious-plugins-1.2.5 265
 SHA256 9587f8a2b5e6993a28518c5c58744d0bd58cff6dbd7931dc3ea9dd0cfefdc8e9 files/digest-audacious-plugins-1.2.5 265
-MD5 cf158b3e0486dc9a374074edd24494d0 files/digest-audacious-plugins-1.3.1 265
-RMD160 ffbb594b06c16fb8754c05d02a9f624e19ee66a7 files/digest-audacious-plugins-1.3.1 265
-SHA256 4073589e4d3fd78b5c8802197f61f8a40a4bc04bf37b4a470e072b851bb66bfe files/digest-audacious-plugins-1.3.1 265
-MD5 cf158b3e0486dc9a374074edd24494d0 files/digest-audacious-plugins-1.3.1-r1 265
-RMD160 ffbb594b06c16fb8754c05d02a9f624e19ee66a7 files/digest-audacious-plugins-1.3.1-r1 265
-SHA256 4073589e4d3fd78b5c8802197f61f8a40a4bc04bf37b4a470e072b851bb66bfe files/digest-audacious-plugins-1.3.1-r1 265
-MD5 f48eb2e329214ee13d4f5a627ef8fe44 files/digest-audacious-plugins-1.3.2 265
-RMD160 b6f36be3e16a9fb5cfac1c07715bce429eb43363 files/digest-audacious-plugins-1.3.2 265
-SHA256 52da499ca7f523c8554689040c30b39f0cbaae2881ab96bfedaabce2d8715f17 files/digest-audacious-plugins-1.3.2 265
+MD5 de52a1526b9bbd8494b8ef2e65386db8 files/digest-audacious-plugins-1.3.3 265
+RMD160 252aaf9d2ac27cf5b57d59c06760b2f7ac8d2449 files/digest-audacious-plugins-1.3.3 265
+SHA256 3267c4b51f468701e5d426f022d49e5f0053d3ab8b4abde826ffa6517abe67c5 files/digest-audacious-plugins-1.3.3 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGG96SKRy60XGEcJIRArC9AJ9NRSCI1M/toSDFVuyeJ72Kzjz4CACfQG34
-m+F8UA6l9agUIOvsNgWJM8o=
-=CUO2
+iD8DBQFGH+cVp5vW4rUFj5oRAo5vAKCjsFITJRNA6BKNghPLxU7tn/Z11wCeLdhJ
+5qjOL4t4gIzTqz5LSbj/v20=
+=rNkb
 -----END PGP SIGNATURE-----

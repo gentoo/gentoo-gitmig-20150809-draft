@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.50 2007/04/10 18:59:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.51 2007/04/13 20:26:24 chainsaw Exp $
+
+*audacious-plugins-1.3.3 (13 Apr 2007)
+
+  13 Apr 2007; Tony Vroon <chainsaw@gentoo.org>
+  -files/1.3.0_rc2-freebsd-portability.patch,
+  -files/1.3.1-stricter-mp3-probe.patch, -audacious-plugins-1.3.1.ebuild,
+  -audacious-plugins-1.3.1-r1.ebuild, -audacious-plugins-1.3.2.ebuild,
+  +audacious-plugins-1.3.3.ebuild:
+  Carrying over stable keywords because of a security concern in the curl plugin.
 
   10 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   audacious-plugins-1.3.2.ebuild:

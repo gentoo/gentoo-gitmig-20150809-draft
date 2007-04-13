@@ -1,26 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.1.ebuild,v 1.2 2007/03/11 01:14:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.3.ebuild,v 1.1 2007/04/13 20:26:24 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
-MY_P=${P/_/-}
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
-SRC_URI="http://static.audacious-media-player.org/release/${MY_P}.tgz"
+SRC_URI="http://static.audacious-media-player.org/release/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls opengl oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
 	media-libs/libsamplerate
 	net-misc/curl
-	>=media-sound/audacious-1.3.0-r1
+	>=media-sound/audacious-1.3.1
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	>=media-libs/libsdl-1.2.5
