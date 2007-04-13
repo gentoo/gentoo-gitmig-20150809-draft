@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.55 2007/03/03 07:50:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.56 2007/04/13 22:01:07 betelgeuse Exp $
+
+  13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -glade-sharp-1.0.8-r1.ebuild, -glade-sharp-2.4.0.ebuild,
+  -glade-sharp-2.4.2.ebuild, -glade-sharp-2.8.0.ebuild:
+  Remove old versions.
 
   03 Mar 2007; Luis Medinas <metalgod@gentoo.org> glade-sharp-2.10.0.ebuild:
   Stable on amd64.

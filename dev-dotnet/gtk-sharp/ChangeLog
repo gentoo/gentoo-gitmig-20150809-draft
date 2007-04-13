@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.77 2007/03/03 07:44:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.78 2007/04/13 22:11:31 betelgeuse Exp $
+
+  13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -gtk-sharp-1.0.8-r1.ebuild, -gtk-sharp-2.4.0.ebuild,
+  -gtk-sharp-2.4.2.ebuild, -gtk-sharp-2.8.0.ebuild:
+  Remove old versions.
 
   03 Mar 2007; Luis Medinas <metalgod@gentoo.org> gtk-sharp-2.10.0.ebuild:
   Stable on amd64.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.43 2007/02/21 23:13:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.44 2007/04/13 22:02:20 betelgeuse Exp $
+
+  13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -vte-sharp-1.0.8-r1.ebuild, -vte-sharp-2.4.0.ebuild,
+  -vte-sharp-2.4.2.ebuild, -vte-sharp-2.8.0.ebuild:
+  Remove old versions.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
