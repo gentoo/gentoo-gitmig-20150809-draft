@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627-r1.ebuild,v 1.4 2006/12/09 09:22:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627-r1.ebuild,v 1.5 2007/04/13 09:07:43 betelgeuse Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -27,17 +27,17 @@ DEPEND=">=virtual/jdk-1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	rm *.jar
+	cd "${S}"
+	rm -v *.jar || die
 
 	mkdir lib && cd lib
 	local pkg
 	for pkg in iso-relax relaxng-datatype xerces-2 xml-commons-resolver xsdlib; do
 		java-pkg_jarfrom ${pkg}
 	done
-	cd ${S}
+	cd "${S}"
 
-	cp ${FILESDIR}/build-${PV}.xml build.xml
+	cp "${FILESDIR}/build-${PV}.xml" build.xml -i || die
 }
 
 src_compile() {
@@ -47,8 +47,8 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
-	dodoc README.txt Changelog.txt
+	dodoc README.txt ChangeLog.txt || die
 
-	use doc && java-pkg_dohtml -r dist/doc/api
+	use doc && java-pkg_dojavadoc dist/doc/api
 	use source && java-pkg_dosrc src/*
 }
