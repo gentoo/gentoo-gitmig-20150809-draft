@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.232 2007/03/25 12:28:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.233 2007/04/13 16:08:36 aballier Exp $
+
+*vlc-0.8.6b_beta1 (13 Apr 2007)
+
+  13 Apr 2007; Alexis Ballier <aballier@gentoo.org>
+  +vlc-0.8.6b_beta1.ebuild:
+  Bump to test release of 0.8.6b (bugfix), dropping some patches
 
   25 Mar 2007; Alexis Ballier <aballier@gentoo.org> ChangeLog, Manifest:
   Fix typos in Changelog, thanks to Mihai Moldovan <ionic@root24.de>, bug #172057
