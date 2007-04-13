@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.181 2007/03/03 21:22:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.182 2007/04/13 10:59:26 vapier Exp $
+
+*util-linux-9999 (13 Apr 2007)
+
+  13 Apr 2007; Mike Frysinger <vapier@gentoo.org> +util-linux-9999.ebuild:
+  Testing ebuild for current git version.
 
   03 Mar 2007; Mike Frysinger <vapier@gentoo.org>
   files/util-linux-2.12r-HAVE_asm_page_h.patch,
