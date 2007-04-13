@@ -1,6 +1,9 @@
 # ChangeLog for media-video/emovix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.12 2007/02/22 01:46:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.13 2007/04/13 22:12:14 dragonheart Exp $
+
+  13 Apr 2007; <dan@gentoo.org> emovix-0.9.0_pre1.ebuild:
+  worked on my ppc G3
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
