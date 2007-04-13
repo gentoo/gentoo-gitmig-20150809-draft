@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c.ebuild,v 1.1 2007/02/09 20:00:34 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c.ebuild,v 1.2 2007/04/13 09:01:32 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -21,26 +21,23 @@ IUSE="test"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	test? (
-		dev-java/ant
 		=dev-java/junit-3.8*
-	)
-	!test? ( dev-java/ant-core )"
+		|| ( dev-java/ant-junit dev-java/ant-tasks )
+	)"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${MY_P}
 
-EANT_BUILD_TARGET="jar"
-EANT_DOC_TARGET="javadoc"
-
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	rm -f *.jar
+	rm -v *.jar || die
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 }
 
 src_test() {
-	eant -Dgentoo.classpath=$(java-pkg_getjars junit) tests_main
+	ANT_TASKS="ant-junit" \
+		eant -Dgentoo.classpath=$(java-pkg_getjars junit) junit_main
 }
 
 src_install() {
