@@ -1,19 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/libspiff-0.6.0_rc1.ebuild,v 1.2 2007/03/13 04:11:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/libspiff-0.6.3.ebuild,v 1.1 2007/04/13 01:25:14 beandog Exp $
 
 DESCRIPTION="Library for XSPF playlist reading and writing"
 HOMEPAGE="http://libspiff.sourceforge.net/"
-MY_P="${P/_rc1/rc1}"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 RDEPEND=">=dev-libs/expat-1.95.8"
 DEPEND="${RDEPEND}
+	>=dev-libs/uriparser-0.3.3-r1
 	doc? ( app-doc/doxygen )"
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf || die "configure failed"
