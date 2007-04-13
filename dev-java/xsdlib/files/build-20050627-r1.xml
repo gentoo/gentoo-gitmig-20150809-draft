@@ -51,9 +51,7 @@
    </target>
 
    <target name="javadoc" depends="compile">
-      <javadoc destdir="${dist}/doc/api" classpathref="lib.classpath">
-      	<fileset dir="${src}"/>
-      </javadoc>
+	   <javadoc destdir="${dist}/doc/api" classpathref="lib.classpath" sourcepath="${src}" />
    </target>
 
    <target name="clean">

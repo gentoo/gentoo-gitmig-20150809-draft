@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627-r1.ebuild,v 1.4 2006/12/09 09:27:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627-r1.ebuild,v 1.5 2007/04/13 09:32:59 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,22 +14,20 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 LICENSE="as-is Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xerces-2.7
 	dev-java/relaxng-datatype"
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip
-	dev-java/ant-core
 	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	cp ${FILESDIR}/build-${PVR}.xml build.xml
+	cd "${S}"
+	cp "${FILESDIR}/build-${PVR}.xml" build.xml -i || die
 
-	rm *.jar
+	rm -v *.jar || die
 	mkdir lib && cd lib
 	java-pkg_jarfrom relaxng-datatype
 	java-pkg_jarfrom xerces-2
@@ -35,17 +35,15 @@ src_unpack() {
 
 src_compile() {
 	local antflags="-Dproject.name=${PN} jar"
-	use doc && antflags="${antflags} javadoc"
-
-	eant ${antflags} || die "Compilation failed"
+	eant ${antflags} $(use_doc)
 }
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
-	dodoc README.txt
-	dohtml HowToUse.html
+	dodoc README.txt || die
+	dohtml HowToUse.html || die
 
-	use doc && java-pkg_dohtml -r dist/doc/api
+	use doc && java-pkg_dojavadoc dist/doc/api
 	use source && java-pkg_dosrc src/* src-apache/*
 }
