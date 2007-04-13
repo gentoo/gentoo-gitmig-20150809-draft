@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.163 2007/04/12 16:43:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.164 2007/04/13 01:26:05 cardoe Exp $
+
+  13 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/08_contains_not_fdi_directive.patch,
+  +files/0.5.9/09_hald_addon_keyboard_start_one.patch, files/0.5.9/series:
+  upstream fixes for hal addon keyboard
 
   12 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
   haldaemon groups tweak for FreeBSD
