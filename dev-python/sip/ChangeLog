@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.88 2007/03/05 03:08:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.89 2007/04/13 19:16:59 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> sip-4.5.2-r1.ebuild:
+  Stable on amd64 wrt bug 174413
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> sip-3.10.2.ebuild,
   sip-3.11.1.ebuild, sip-4.0.1.ebuild, sip-4.1.1.ebuild, sip-4.2.1.ebuild,
