@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/ponyprog
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.8 2007/01/28 06:17:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.9 2007/04/13 09:49:23 calchan Exp $
+
+  13 Apr 2007; Denis Dupeyron <calchan@gentoo.org> ponyprog-2.06c.ebuild:
+  Fixed bug #173884.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> ponyprog-2.06c.ebuild:
   Replacing einfo with elog

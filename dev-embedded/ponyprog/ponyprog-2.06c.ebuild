@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.9 2007/01/28 06:17:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.10 2007/04/13 09:49:23 calchan Exp $
 
 S=${WORKDIR}
 DESCRIPTION="EEprom e Pic Programmer"
@@ -27,8 +27,7 @@ RDEPEND="|| ( (
 src_install () {
 	dodir /etc/env.d
 	echo "LDPATH='/opt/ponyprog/lib'" > ${D}/etc/env.d/40ponyprog || die
-	insinto /etc/env.d
-	doins etc/env.d/40ponyprog
+	doenvd etc/env.d/40ponyprog
 
 	einfo "Installing binaries"
 
