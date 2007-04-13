@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.3.ebuild,v 1.2 2007/04/05 00:44:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.3.ebuild,v 1.3 2007/04/13 11:24:49 tove Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/qt-4.2.3"
