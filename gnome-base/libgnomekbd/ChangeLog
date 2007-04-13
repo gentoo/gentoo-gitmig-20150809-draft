@@ -1,18 +1,7 @@
 # ChangeLog for gnome-base/libgnomekbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.4 2007/04/13 13:38:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.5 2007/04/13 14:20:47 armin76 Exp $
 
-  13 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
-  libgnomekbd-2.18.0.ebuild:
-  Keyworded ~sparc wrt #173279
-
-  09 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
-  libgnomekbd-2.18.0.ebuild:
-  Add ~ppc keyword to libgnomekbd as it works on my Efika
-
-  08 Apr 2007; Markus Rothe <corsair@gentoo.org> libgnomekbd-2.18.0.ebuild:
-  Added ~ppc64; bug #173279
-
-  24 Mar 2007; Daniel Gryniewicz <dang@gentoo.org> +metadata.xml:
-  Initial commit
+  13 Apr 2007; Raúl Porcel <armin76@gentoo.org> libgnomekbd-2.18.0.ebuild:
+  Add ~ia64 wrt bug 173279
 
