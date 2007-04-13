@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.64 2007/04/12 08:53:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.65 2007/04/13 18:18:07 phreak Exp $
+
+*openvz-sources-023.043-r1 (13 Apr 2007)
+
+  13 Apr 2007; Christian Heim <phreak@gentoo.org>
+  openvz-sources-023.037.ebuild, openvz-sources-023.040.ebuild,
+  -openvz-sources-023.043.ebuild, +openvz-sources-023.043-r1.ebuild,
+  openvz-sources-028.023.ebuild, openvz-sources-028.027.ebuild:
+  Fix the stupid mirror problem, remove the "wrong" release (023.043) and add
+  the right (023.043-2).
 
 *openvz-sources-028.027 (12 Apr 2007)
 *openvz-sources-023.043 (12 Apr 2007)
