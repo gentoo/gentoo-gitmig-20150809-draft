@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.3-r1.ebuild,v 1.8 2007/04/12 22:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.3-r1.ebuild,v 1.9 2007/04/13 12:25:03 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -229,6 +229,10 @@ src_install() {
 	# Move .pc files into the pkgconfig directory
 	dodir ${QTPCDIR}
 	mv ${D}/${QTLIBDIR}/*.pc ${D}/${QTPCDIR}
+
+	# Install .desktop files, from bug #174033
+	insinto /usr/share/applications
+	doins ${FILESDIR}/qt4/*.desktop
 
 	# List all the multilib libdirs
 	local libdirs

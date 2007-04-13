@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.429 2007/04/12 22:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.430 2007/04/13 12:25:03 caleb Exp $
+
+  13 Apr 2007; Caleb Tennis <caleb@gentoo.org> +files/qt4/Assistant.desktop,
+  +files/qt4/Designer.desktop, +files/qt4/Linguist.desktop,
+  qt-4.2.3-r1.ebuild:
+  This change just installs .desktop files for the Qt desktop applications so
+  that they can be used from the menus of the desktops. From bug #174033
 
   12 Apr 2007; Jeroen Roovers <jer@gentoo.org> qt-4.2.3-r1.ebuild:
   W00t! Back to stable (bug #172746, comment #23).
