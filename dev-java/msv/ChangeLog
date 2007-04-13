@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/msv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.12 2007/04/13 09:07:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.13 2007/04/13 19:41:02 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> msv-20050627-r1.ebuild:
+  Stable on amd64 wrt bug 174395
 
   13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> msv-20050627-r1.ebuild:
   Ebuild cleanup. Use java-pkg_dojavadoc and fix typo that prevented
