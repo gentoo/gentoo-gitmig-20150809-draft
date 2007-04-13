@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.12_rc2_p1071.ebuild,v 1.1 2007/04/13 13:55:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.12_rc3.ebuild,v 1.1 2007/04/13 21:12:48 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -10,7 +10,7 @@ MY_P="${P/rb_/}"
 
 DESCRIPTION="BitTorrent library written in C++ for *nix."
 HOMEPAGE="http://www.rasterbar.com/products/libtorrent/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://www.libtorrent.org/${MY_P/_/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +21,7 @@ DEPEND="dev-libs/boost
 	!net-libs/libtorrent"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/libtorrent-0.12rc2+svn.r1071.20070410"
+S="${WORKDIR}/${MY_P/_rc*/}"
 
 pkg_setup() {
 	# We need boost built with threads
