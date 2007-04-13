@@ -13,7 +13,7 @@
  
 +# if pci.ids is read-only (because the filesystem is read-only),
 +# then just skip this whole process.
-+if ! touch ${DEST} >&2 >/dev/null ; then
++if ! touch ${DEST} >/dev/null 2>&1 ; then
 +	${quiet} || echo "${DEST} is read-only, exiting."
 +	exit 0
 +fi
@@ -23,11 +23,11 @@
  	SRC="$SRC.gz"
  	GREP=zgrep
 -elif which bzip2 >/dev/null ; then
-+elif which bzip2 >&2 >/dev/null ; then
++elif which bzip2 >/dev/null 2>&1 ; then
  	DECOMP="bzip2 -d"
  	SRC="$SRC.bz2"
 -elif which gzip >/dev/null ; then
-+elif which gzip >&2 >/dev/null ; then
++elif which gzip >/dev/null 2>&1 ; then
  	DECOMP="gzip -d"
  	SRC="$SRC.gz"
  else
@@ -35,15 +35,15 @@
  fi
  
 -if which curl >/dev/null ; then
-+if which curl >&2 >/dev/null ; then
++if which curl >/dev/null 2>&1 ; then
  	DL="curl -o $DEST.new $SRC"
 -elif which wget >/dev/null ; then
 +    ${quiet} && DL="$DL -s -S"
-+elif which wget >&2 >/dev/null ; then
++elif which wget >/dev/null 2>&1 ; then
  	DL="wget -O $DEST.new $SRC"
 -elif which lynx >/dev/null ; then
 +	${quiet} && DL="$DL -q"
-+elif which lynx >&2 >/dev/null ; then
++elif which lynx >/dev/null 2>&1 ; then
  	DL="eval lynx -source $SRC >$DEST.new"
  else
  	echo >&2 "update-pciids: cannot find curl, wget or lynx"

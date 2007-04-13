@@ -14,10 +14,10 @@ AUX pciutils-2.2.4-link.patch 302 RMD160 6598b88179822c617ffecc5ebbebcef9e317a5f
 MD5 7fa89d4d935f43d422ee93056c09f5fc files/pciutils-2.2.4-link.patch 302
 RMD160 6598b88179822c617ffecc5ebbebcef9e317a5fe files/pciutils-2.2.4-link.patch 302
 SHA256 bbb645104dc4d0c8f5b586e929927320ce352e0118a38373e1627a43239e6721 files/pciutils-2.2.4-link.patch 302
-AUX pciutils-2.2.4-update-pciids.patch 1484 RMD160 d76ebecb8bdbeef34f3acabb282c77347fd73014 SHA1 783d472b49ac8e215eef92dbd3c1378806297c2e SHA256 ffed29675abdc08edccc2a7ca31ebd2009a7d0ca1c4d44db655b2466a8f763c8
-MD5 bb7a47f04e2578b6cdfe2c23e18728fe files/pciutils-2.2.4-update-pciids.patch 1484
-RMD160 d76ebecb8bdbeef34f3acabb282c77347fd73014 files/pciutils-2.2.4-update-pciids.patch 1484
-SHA256 ffed29675abdc08edccc2a7ca31ebd2009a7d0ca1c4d44db655b2466a8f763c8 files/pciutils-2.2.4-update-pciids.patch 1484
+AUX pciutils-2.2.4-update-pciids.patch 1490 RMD160 a067c73abf5ed7d166c257db13031cab889c1ba1 SHA1 4d55c9e133493d449bc8f4b53a0883fa5756b995 SHA256 fd459489edd1aa9edd5c34451d97fb39e0f2da86a078305e6ff1afe66415404d
+MD5 71ccc90ba85f24195c48355028ef9ac1 files/pciutils-2.2.4-update-pciids.patch 1490
+RMD160 a067c73abf5ed7d166c257db13031cab889c1ba1 files/pciutils-2.2.4-update-pciids.patch 1490
+SHA256 fd459489edd1aa9edd5c34451d97fb39e0f2da86a078305e6ff1afe66415404d files/pciutils-2.2.4-update-pciids.patch 1490
 AUX pciutils.cron 42 RMD160 ed2388ec7eb6d08d75b4178b3a3d33071d705eee SHA1 1e0385c0477dffe5ac5c2a4bcd2a3e248dd8a166 SHA256 f97b127efda8095683b0a20ca071694f90e18c131743a9d36c8baf633b112836
 MD5 1d5918bb3ca1f28c8af745b60726565a files/pciutils.cron 42
 RMD160 ed2388ec7eb6d08d75b4178b3a3d33071d705eee files/pciutils.cron 42
@@ -32,6 +32,10 @@ EBUILD pciutils-2.2.4-r2.ebuild 1309 RMD160 34a4131d88d17996d9569a917cefcf20b8e4
 MD5 e2eecdc261652956322af7a846b94356 pciutils-2.2.4-r2.ebuild 1309
 RMD160 34a4131d88d17996d9569a917cefcf20b8e4205a pciutils-2.2.4-r2.ebuild 1309
 SHA256 4f3d3ddd809ee4a16de0b4d21d388c40bf697e15cd87fb1c7ec9bf154cd20c56 pciutils-2.2.4-r2.ebuild 1309
+EBUILD pciutils-2.2.4-r3.ebuild 1352 RMD160 95725f6e0dcc6a483bf22bde439a3af6fc6f320a SHA1 f1be60a95d915431e0b945d7499f4afce2c5781e SHA256 35de5d5d8aaaf10f7541148368757eb0888bdcf2b2d8048dd85cc6d85e227a5d
+MD5 e635f9bec17c303c2da7097545aa151c pciutils-2.2.4-r3.ebuild 1352
+RMD160 95725f6e0dcc6a483bf22bde439a3af6fc6f320a pciutils-2.2.4-r3.ebuild 1352
+SHA256 35de5d5d8aaaf10f7541148368757eb0888bdcf2b2d8048dd85cc6d85e227a5d pciutils-2.2.4-r3.ebuild 1352
 EBUILD pciutils-2.2.4.ebuild 1216 RMD160 d6a674f1c216bc98e666dbca49bf4d4c0cf63cf0 SHA1 cf4d0c46e75ab3de5238e02dd2229d576ed6c692 SHA256 510cdb4bf7aebcabcbb5cdba13f99697d357fc83c4ef8ab4ff62a4e05ddaca0d
 MD5 98495ca258c2734d0d4a6c78d8d60e4d pciutils-2.2.4.ebuild 1216
 RMD160 d6a674f1c216bc98e666dbca49bf4d4c0cf63cf0 pciutils-2.2.4.ebuild 1216
@@ -53,3 +57,6 @@ SHA256 ae83c0072554b83b7519828f5470144cfa69ca5605ed319117d5400896258701 files/di
 MD5 8047d659733954340720ecb0b723fad1 files/digest-pciutils-2.2.4-r2 244
 RMD160 8349223dbbf327febd748b605899805650b1bb85 files/digest-pciutils-2.2.4-r2 244
 SHA256 ae83c0072554b83b7519828f5470144cfa69ca5605ed319117d5400896258701 files/digest-pciutils-2.2.4-r2 244
+MD5 8047d659733954340720ecb0b723fad1 files/digest-pciutils-2.2.4-r3 244
+RMD160 8349223dbbf327febd748b605899805650b1bb85 files/digest-pciutils-2.2.4-r3 244
+SHA256 ae83c0072554b83b7519828f5470144cfa69ca5605ed319117d5400896258701 files/digest-pciutils-2.2.4-r3 244

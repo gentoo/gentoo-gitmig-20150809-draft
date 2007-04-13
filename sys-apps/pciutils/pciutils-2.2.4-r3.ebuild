@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4.ebuild,v 1.4 2007/02/14 07:14:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4-r3.ebuild,v 1.1 2007/04/13 09:33:06 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,8 +10,8 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
-IUSE="zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="network-cron zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )"
 
@@ -21,6 +21,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.2.3-build.patch
 	epatch "${FILESDIR}"/pcimodules-${PN}-2.2.4.patch
 	epatch "${FILESDIR}"/${P}-link.patch #160421
+	cp update-pciids.sh update-pciids.sh.orig
+	epatch "${FILESDIR}"/${P}-update-pciids.patch
 }
 
 src_compile() {
@@ -36,6 +38,7 @@ src_install() {
 	insinto /usr/include/pci
 	doins lib/{config,header,pci,types}.h || die "headers failed"
 
+	use network-cron || return 0
 	exeinto /etc/cron.monthly
 	newexe "${FILESDIR}"/pciutils.cron update-pciids || die
 }
