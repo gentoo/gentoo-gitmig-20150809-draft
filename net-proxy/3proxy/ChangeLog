@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/3proxy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.13 2007/04/13 13:26:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.14 2007/04/13 16:30:29 dertobi123 Exp $
+
+  13 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  3proxy-0.5.3h.ebuild:
+  ppc stable, bug #174429
 
 *3proxy-0.5.3h (13 Apr 2007)
 
