@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-2.1.ebuild,v 1.1 2006/11/02 19:40:08 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-2.1.ebuild,v 1.2 2007/04/13 15:50:20 pythonhead Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Pexpect is a pure Python module for spawning child applications; co
 HOMEPAGE="http://pexpect.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pexpect/${P}.tar.gz"
 
-LICENSE="PYTHON"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~s390 ~sparc ~x86"
 IUSE=""
