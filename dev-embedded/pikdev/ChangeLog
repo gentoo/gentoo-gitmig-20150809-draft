@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.32 2007/04/12 22:55:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.33 2007/04/13 06:25:40 calchan Exp $
+
+  13 Apr 2007; Denis Dupeyron <calchan@gentoo.org>
+  -files/pikdev-0.7.1-configure-arts.patch, -files/pikdev-0.7.1-fix.diff,
+  -pikdev-0.7.1-r1.ebuild, -pikdev-0.7.1-r2.ebuild:
+  Post-stabilization cleanup.
 
   12 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   pikdev-0.9.2.1.ebuild:
