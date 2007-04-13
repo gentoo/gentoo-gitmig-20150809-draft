@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.14 2007/04/13 08:52:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.15 2007/04/13 19:43:09 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> xpp2-2.1.10-r1.ebuild:
+  Stable on amd64 wrt bug 174392
 
   13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> xpp2-2.1.10-r1.ebuild:
   Use java-pkg_dojavadoc.
