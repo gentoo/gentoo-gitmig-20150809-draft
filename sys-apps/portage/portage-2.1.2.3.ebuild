@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.3.ebuild,v 1.1 2007/03/29 22:28:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.3.ebuild,v 1.2 2007/04/13 12:40:02 vapier Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -179,6 +179,8 @@ src_install() {
 	for x in ${my_syms}; do
 		dosym ../${libdir}/portage/bin/${x} /usr/sbin/${x}
 	done
+	dosym env-update /usr/sbin/update-env
+	dosym etc-update /usr/sbin/update-etc
 
 	dodir /etc/portage
 	keepdir /etc/portage

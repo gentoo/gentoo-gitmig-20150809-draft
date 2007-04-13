@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.374 2007/03/29 22:28:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.375 2007/04/13 12:40:02 vapier Exp $
+
+  13 Apr 2007; Mike Frysinger <vapier@gentoo.org> portage-2.1.2.3.ebuild:
+  Add update-etc/update-env symlinks to etc-update/env-update.
 
 *portage-2.1.2.3 (29 Mar 2007)
 
