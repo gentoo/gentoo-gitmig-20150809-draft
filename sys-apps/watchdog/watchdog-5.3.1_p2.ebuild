@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.3.1_p2.ebuild,v 1.1 2007/04/11 19:40:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.3.1_p2.ebuild,v 1.2 2007/04/13 09:26:07 vapier Exp $
 
 inherit eutils
 
@@ -24,14 +24,14 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-${PV/_p*/}-sundries.patch
-	epatch "${FILESDIR}"/${PN}-${PV/_p*/}-headers.patch
-	epatch "${FILESDIR}"/${PN}-${PV/_p*/}-uclibc.patch
+	epatch "${FILESDIR}"/${PN}-5.2.6-sundries.patch
+	epatch "${FILESDIR}"/${PN}-5.2.6-headers.patch
+	epatch "${FILESDIR}"/${PN}-5.2.6-uclibc.patch
 	epatch "${WORKDIR}"/${MY_P}-${PATCH_LEVEL}.diff
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
 	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
@@ -40,3 +40,4 @@ src_install() {
 	docinto examples
 	dodoc examples/*
 }
+

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/watchdog
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.16 2007/04/11 19:41:39 phreak Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.17 2007/04/13 09:26:07 vapier Exp $
+
+  13 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  -files/watchdog-5.3.1-headers.patch, -files/watchdog-5.3.1-sundries.patch,
+  -files/watchdog-5.3.1-uclibc.patch, watchdog-5.3.1_p2.ebuild:
+  No point in duplicating patches.
 
   11 Apr 2007; Christian Heim <phreak@gentoo.org> watchdog-5.2.6_p2.ebuild:
   Fixing ebuild.badheader.
