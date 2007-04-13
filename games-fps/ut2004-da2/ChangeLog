@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/ut2004-da2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ChangeLog,v 1.1 2007/04/13 21:27:55 wolf31o2 Exp $
+
+*ut2004-da2-1.6_beta (13 Apr 2007)
+
+  13 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-da2-1.6_beta.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #118763.
+
