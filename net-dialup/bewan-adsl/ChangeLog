@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/bewan-adsl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.19 2007/02/25 09:12:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.20 2007/04/13 10:29:06 mrness Exp $
+
+  13 Apr 2007; Alin Năstac <mrness@gentoo.org> bewan-adsl-0.9.3-r2.ebuild:
+  Die in pkg_setup if kernel version is 2.6.20 or above (#174013).
 
   25 Feb 2007; <genstef@gentoo.org> ChangeLog:
   use KV_DIR only after linux-mod_pkg_setup, bug 168051

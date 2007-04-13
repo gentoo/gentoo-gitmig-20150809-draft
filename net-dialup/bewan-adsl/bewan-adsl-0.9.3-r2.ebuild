@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.6 2007/02/25 09:12:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.7 2007/04/13 10:29:06 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -26,6 +26,14 @@ CONFIG_CHECK="ATM"
 ATM_ERROR="This driver requires you to build your kernel with support for Asynchronous Transfer Mode (ATM)"
 
 pkg_setup() {
+	if kernel_is ge 2 6 20 ; then
+		eerror "This driver is not compatible with kernel versions >= 2.6.20 and it cannot be fixed"
+		eerror "by anyone else than Bewan (see Gentoo bug #174013)."
+		eerror "As a Bewan customer, you should ask them to fix the problem."
+
+		die "Incompatible kernel version."
+	fi
+
 	MODULE_NAMES="unicorn_pci_atm(extra:${PCI_S}) unicorn_pci_eth(extra:${PCI_S})"
 	use usb && MODULE_NAMES="${MODULE_NAMES} unicorn_usb_atm(extra:${USB_S}) unicorn_usb_eth(extra:${USB_S})"
 
