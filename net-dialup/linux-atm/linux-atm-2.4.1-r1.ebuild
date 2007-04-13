@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.15 2007/01/03 16:58:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.16 2007/04/13 22:31:53 mrness Exp $
 
 inherit eutils libtool
 
@@ -28,6 +28,8 @@ src_unpack() {
 
 	# Fedora patch: include stdlib.h for strtol prototype in sigd/cfg_y.y
 	epatch "${FILESDIR}"/${PV}-stdlib.patch
+
+	epatch "${FILESDIR}"/${PV}-linux-if.patch
 
 	sed -i '/#define _LINUX_NETDEVICE_H/d' src/arpd/*.c || die
 	sed -i 's:cp hosts.atm /etc:cp hosts.atm ${DESTDIR}/etc:' src/config/Makefile.in || die "sed operation on Makefile failed"
