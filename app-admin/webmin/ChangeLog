@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.137 2007/01/27 18:46:29 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.138 2007/04/13 11:08:35 armin76 Exp $
+
+*webmin-1.340 (13 Apr 2007)
+
+  13 Apr 2007; Raúl Porcel <armin76@gentoo.org> +webmin-1.340.ebuild:
+  Version bump, bug 157198, thanks to Conrad Kostecki <ConiKost at gmx dot de>
+  for reporting, and security bug 168878
 
 *webmin-1.320 (27 Jan 2007)
 
