@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.21 2007/03/12 18:41:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.22 2007/04/13 23:42:52 dragonheart Exp $
+
+  13 Apr 2007; <dan@gentoo.org> tclgpgme-1.0-r1.ebuild,
+  tclgpgme-1.0-r2.ebuild:
+  remove $ROOT abuse - bug #167271 thanks Ciaran. added better escaping too
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> tclgpgme-1.0-r2.ebuild:
   x86 stable

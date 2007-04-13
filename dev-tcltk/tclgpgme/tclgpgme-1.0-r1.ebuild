@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0-r1.ebuild,v 1.8 2005/04/07 13:53:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0-r1.ebuild,v 1.9 2007/04/13 23:42:52 dragonheart Exp $
 
 inherit eutils
 
@@ -18,17 +18,17 @@ DEPEND=">=dev-lang/tcl-8.3.3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-Makefile.in.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-Makefile.in.diff
 }
 
 src_compile() {
-	export GPGME_CONFIG=${ROOT}/usr/bin/gpgme3-config
+	export GPGME_CONFIG=/usr/bin/gpgme3-config
 	econf --with-tcl=/usr/lib --with-tk=/usr/lib || die
 	emake || die
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS INSTALL README
 }
