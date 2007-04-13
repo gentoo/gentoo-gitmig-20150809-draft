@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4-r1.ebuild,v 1.3 2006/10/05 15:34:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4-r1.ebuild,v 1.4 2007/04/13 08:48:23 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,14 +13,9 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 RDEPEND=">=virtual/jre-1.2"
-DEPEND=">=virtual/jdk-1.2
-	>=dev-java/ant-core-1.5
-	source? ( app-arch/zip )"
-IUSE="doc source"
+DEPEND=">=virtual/jdk-1.2"
 
-src_compile() {
-	eant $(use_doc doc) jar
-}
+EANT_DOC_TARGET="doc"
 
 src_install() {
 	java-pkg_dojar build/lib/concurrent.jar
@@ -26,7 +23,7 @@ src_install() {
 
 	if use doc ; then
 		cd build
-		java-pkg_dohtml -r javadoc
+		java-pkg_dojavadoc javadoc
 		insinto /usr/share/doc/${PF}/demo
 		doins demo/*
 	fi

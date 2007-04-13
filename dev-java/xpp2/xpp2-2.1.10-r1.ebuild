@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.5 2006/12/09 09:26:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.6 2007/04/13 08:52:46 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,7 +15,7 @@ SRC_URI="http://www.extreme.indiana.edu/xgws/xsoap/xpp/download/${MY_PN}2/${MY_P
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 CDEPEND=">=dev-java/xerces-2.7"
@@ -52,7 +54,7 @@ src_install() {
 	java-pkg_newjar build/lib/${MY_PN}-x2-${PV}.jar ${MY_PN}-x2.jar
 
 	dohtml README.html
-	use doc && java-pkg_dohtml -r doc/api
+	use doc && java-pkg_dojavadoc doc/api
 	use source && java-pkg_dosrc src/java/*
 }
 
