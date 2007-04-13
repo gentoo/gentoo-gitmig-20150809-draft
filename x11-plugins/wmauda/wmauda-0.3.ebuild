@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.3.ebuild,v 1.3 2007/04/13 14:20:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.3.ebuild,v 1.4 2007/04/13 14:24:53 s4t4n Exp $
+
+IUSE=""
 
 DESCRIPTION="Dockable applet for WindowMaker that controls Audacious."
 SRC_URI="http://downloads.alteredeclipse.org/${P}.tar.bz2"
