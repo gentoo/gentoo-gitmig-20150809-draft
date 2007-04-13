@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4-r3.ebuild,v 1.1 2007/04/13 09:33:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4-r3.ebuild,v 1.2 2007/04/13 09:37:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -21,7 +21,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.2.3-build.patch
 	epatch "${FILESDIR}"/pcimodules-${PN}-2.2.4.patch
 	epatch "${FILESDIR}"/${P}-link.patch #160421
-	cp update-pciids.sh update-pciids.sh.orig
 	epatch "${FILESDIR}"/${P}-update-pciids.patch
 }
 
