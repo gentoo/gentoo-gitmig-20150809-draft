@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.5.1.ebuild,v 1.1 2007/04/13 00:06:19 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.5.1.ebuild,v 1.2 2007/04/13 09:18:45 rbu Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Herrie is a command line music player."
 HOMEPAGE="http://herrie.info/"
 SRC_URI="http://g-rave.nl/projects/herrie/distfiles/${P}.tar.gz"
 
-LICENSE="BSD GPL-2"
+LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ao http modplug mp3 scrobbler sdl sndfile vorbis linguas_nl linguas_tr"
