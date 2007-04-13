@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.79 2007/04/05 15:30:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.80 2007/04/13 08:23:08 uberlord Exp $
+
+*xinit-1.0.3-r3 (13 Apr 2007)
+
+  13 Apr 2007; Roy Marples <uberlord@gentoo.org> files/xdm.initd,
+  +xinit-1.0.3-r3.ebuild:
+  I've been a bad bug and caused bugs #174071 and #174271. But I'm a good boy
+  now as I've fixed them :)
 
   05 Apr 2007; Roy Marples <uberlord@gentoo.org> files/startDM.sh,
   files/xdm.initd:

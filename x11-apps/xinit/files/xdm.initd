@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd,v 1.3 2007/04/05 15:30:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd,v 1.4 2007/04/13 08:23:08 uberlord Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -66,7 +66,7 @@ setup_dm() {
 			PIDFILE=/var/run/kdm.pid
 			;;
 		entrance*)
-			EXE=/usr/sbin/enranced
+			EXE=/usr/sbin/entranced
 			PIDFILE=/var/lib/entranced.pid
 			;;
 		gdm|gnome)
@@ -97,6 +97,8 @@ cmdline_opt() {
 	for opt in $(cat /proc/cmdline) ; do
 		[ "${opt}" = "${1}" ] && return 0
 	done
+
+	return 1
 }
 
 start() {
@@ -145,7 +147,9 @@ stop() {
 	local myname="$(get_options "name")"
 	local mypidfile="$(get_options "pidfile")"
 	local myservice=${myexe##*/}
-	
+
+	[ -z "${myexe}" ] && return 0
+
 	ebegin "Stopping ${myservice}"
 
 	if start-stop-daemon --quiet --test --stop --exec "${myexe}" ; then
@@ -155,7 +159,7 @@ stop() {
 		retval=$?
 	fi
 
-	#switch back to original vt
+	# switch back to original vt
 	if [ -n "${curvt}" ] ; then
 		if type chvt >/dev/null 2>/dev/null ; then
 			chvt "${curvt}"
