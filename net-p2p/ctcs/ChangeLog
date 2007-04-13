@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ctcs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.1 2007/01/16 19:20:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.2 2007/04/13 20:30:11 drac Exp $
+
+*ctcs-1.3 (13 Apr 2007)
+
+  13 Apr 2007; Samuli Suominen <drac@gentoo.org> +ctcs-1.3.ebuild:
+  Version bump.
 
 *ctcs-1.2 (16 Jan 2007)
 
