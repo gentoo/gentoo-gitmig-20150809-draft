@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.7.ebuild,v 1.3 2007/04/13 01:17:56 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.7.1.ebuild,v 1.1 2007/04/13 01:17:56 pythonhead Exp $
 
 # TODO: Add pudge support via "doc" flag
 #       currently broken with 0.6 and 0.7 releases
