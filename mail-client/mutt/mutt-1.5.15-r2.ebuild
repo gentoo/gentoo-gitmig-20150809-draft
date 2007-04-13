@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15-r1.ebuild,v 1.2 2007/04/12 21:41:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.15-r2.ebuild,v 1.1 2007/04/13 11:32:29 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r1"
+PATCHSET_REV="-r2"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
@@ -109,9 +109,7 @@ src_compile() {
 			--without-qdbm --without-gdbm --without-bdb"
 	fi
 
-	# there's no need for gnutls, ssl or sasl without either pop or imap.
-	# in fact mutt's configure will bail if you do:
-	#   --without-pop --without-imap --with-ssl
+	# there's no need for gnutls, ssl or sasl without socket support
 	if use pop || use imap || use smtp ; then
 		if use gnutls; then
 			myconf="${myconf} --with-gnutls"
@@ -149,7 +147,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
-	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
+	find "${D}"/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
 		newins "${FILESDIR}"/Muttrc.mbox Muttrc
