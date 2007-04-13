@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tse3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.20 2007/04/06 20:18:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.21 2007/04/13 21:24:47 welp Exp $
+
+  13 Apr 2007; <welp@gentoo.org> tse3-0.3.1.ebuild:
+  Stable on amd64 wrt bug 173272
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org> tse3-0.3.1.ebuild:
   ppc stable, bug #173272
