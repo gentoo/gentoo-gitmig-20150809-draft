@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.431 2007/04/13 12:32:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.432 2007/04/13 13:11:10 gustavoz Exp $
+
+  13 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> qt-3.3.8-r2.ebuild:
+  Stable on sparc wrt security #172746
 
   13 Apr 2007; Caleb Tennis <caleb@gentoo.org> -qt-3.3.8.ebuild,
   -qt-3.3.8-r1.ebuild, -qt-4.2.3.ebuild:
