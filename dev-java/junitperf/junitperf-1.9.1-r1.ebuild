@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.4 2006/09/10 21:57:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.5 2007/04/13 09:26:08 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc test source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +12,8 @@ HOMEPAGE="http://www.clarkware.com/software/JUnitPerf.html"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc test source"
+
+IUSE=""
 
 RDEPEND=">=virtual/jre-1.3
 	dev-java/junit"
@@ -18,9 +21,7 @@ RDEPEND=">=virtual/jre-1.3
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	app-arch/unzip
-	dev-java/ant-core
-	test? ( dev-java/ant-tasks )
-	source? ( app-arch/zip )"
+	test? ( || ( dev-java/ant-junit dev-java/ant-tasks ) )"
 
 
 src_unpack () {
@@ -35,12 +36,12 @@ src_compile() {
 }
 
 src_test() {
-	eant test
+	ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {
 	java-pkg_dojar lib/${PN}.jar
-	dodoc README
-	use doc && java-pkg_dohtml -r docs/api/*
+	dodoc README || die
+	use doc && java-pkg_dojavadoc docs/api
 	use source && java-pkg_dosrc src/app/*
 }
