@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave-forge
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.21 2007/02/22 01:32:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.22 2007/04/13 13:51:01 markusle Exp $
+
+*octave-forge-2006.03.17-r1 (13 Apr 2007)
+
+  13 Apr 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/octave-forge-config-fix.patch, +octave-forge-2006.03.17-r1.ebuild:
+  Fixed mis-detection of configure in certain locales 
+  (fixes bug#173274). 
+  Thanks much to MaratIK <marat.buharov@gmail.com> for his patches.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
