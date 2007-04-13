@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.43 2007/03/16 20:03:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.44 2007/04/13 18:27:07 spock Exp $
+
+*uade-2.06 (13 Apr 2007)
+
+  13 Apr 2007; Michał Januszewski <spock@gentoo.org> +uade-2.06.ebuild:
+  Version bump.
 
   16 Mar 2007; Michał Januszewski <spock@gentoo.org>
   +files/uade-2.05-audacious-1.3api.patch, uade-2.05.ebuild:
