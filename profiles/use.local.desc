@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2741 2007/04/12 23:48:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2742 2007/04/13 09:28:02 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1682,6 +1682,7 @@ sys-apps/paludis:portage - Enable experimental support for Portage configuration
 sys-apps/paludis:qa - Enable QA tools.
 sys-apps/paludis:zsh-completion - Enable zsh completion support
 sys-apps/parted:device-mapper - Enable device-mapper support in parted
+sys-apps/pciutils:network-cron - Monthly cronjob the update-pciids script
 sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
 sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-space tools)
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
@@ -1698,6 +1699,7 @@ sys-apps/suspend2-userui:fbsplash - Add support for framebuffer splash
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
+sys-apps/usbutils:network-cron - Monthly cronjob the update-usbids script
 sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support.
 sys-auth/pam_pkcs11:pcsc-lite - build with pcsc-lite instead of openct
 sys-block/gparted:fat - Include FAT16/FAT32 support
