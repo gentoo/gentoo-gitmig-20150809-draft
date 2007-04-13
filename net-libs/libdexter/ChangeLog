@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/libdexter
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/ChangeLog,v 1.1 2007/04/13 23:59:11 dragonheart Exp $
+
+*libdexter-0.1.4 (13 Apr 2007)
+
+  13 Apr 2007; <dan@gentoo.org> +metadata.xml, +libdexter-0.1.4.ebuild:
+  initial import thanks to Philip Kovacs as per bug #159668
+
