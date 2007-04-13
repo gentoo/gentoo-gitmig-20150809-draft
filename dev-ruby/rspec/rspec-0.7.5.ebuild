@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-0.7.5.ebuild,v 1.2 2007/02/10 03:28:43 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-0.7.5.ebuild,v 1.3 2007/04/13 21:06:04 robbat2 Exp $
 
 inherit ruby gems
 
@@ -12,7 +12,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.4"
