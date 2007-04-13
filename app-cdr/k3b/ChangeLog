@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.187 2007/04/12 16:29:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.188 2007/04/13 22:14:43 dragonheart Exp $
+
+  13 Apr 2007; <dragonheart@gentoo.org> k3b-1.0.ebuild:
+  worked on my ppc G3
 
   12 Apr 2007; Carsten Lohrke <carlo@gentoo.org> k3b-1.0.ebuild:
   Add a message regarding installation of k3bsetup, see bug #174248.

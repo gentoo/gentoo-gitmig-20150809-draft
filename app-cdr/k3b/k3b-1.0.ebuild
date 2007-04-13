@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.3 2007/04/12 16:29:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.4 2007/04/13 22:14:43 dragonheart Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa css dvdr dvdread encode ffmpeg flac hal kde mp3 musepack musicbrainz
 	sndfile vcd vorbis emovix"
 
