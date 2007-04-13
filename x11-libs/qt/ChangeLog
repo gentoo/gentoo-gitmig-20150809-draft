@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.430 2007/04/13 12:25:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.431 2007/04/13 12:32:52 caleb Exp $
+
+  13 Apr 2007; Caleb Tennis <caleb@gentoo.org> -qt-3.3.8.ebuild,
+  -qt-3.3.8-r1.ebuild, -qt-4.2.3.ebuild:
+  Removing old versions
 
   13 Apr 2007; Caleb Tennis <caleb@gentoo.org> +files/qt4/Assistant.desktop,
   +files/qt4/Designer.desktop, +files/qt4/Linguist.desktop,
