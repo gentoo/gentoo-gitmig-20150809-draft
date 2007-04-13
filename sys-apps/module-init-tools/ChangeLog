@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.126 2007/04/07 09:56:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.127 2007/04/13 18:28:43 vapier Exp $
+
+*module-init-tools-3.2.2-r3 (13 Apr 2007)
+
+  13 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  +module-init-tools-3.2.2-r3.ebuild:
+  Push out incremental updates to update-modules files.
 
   07 Apr 2007; Mike Frysinger <vapier@gentoo.org> -files/modules-update,
   +files/update-modules, +files/update-modules.8,
