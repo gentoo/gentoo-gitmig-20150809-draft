@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.15 2007/03/12 15:21:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.16 2007/04/13 21:47:28 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,7 +12,10 @@ SRC_URI="http://www.libsdl.org/projects/${PN}/release/${P}-cdrom-x86.run
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="x86"
+# This package is broken and doesn't patch right on AMD64.  I've not taken the
+# time to try to figure it out but this definitely needs to stay -amd64 until
+# someone does fix the patching.
+KEYWORDS="-amd64 x86"
 RESTRICT="mirror strip"
 
 DEPEND="virtual/libc
