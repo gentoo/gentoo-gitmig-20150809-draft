@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.280 2007/04/12 23:48:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.281 2007/04/13 22:14:11 genstef Exp $
+
+  13 Apr 2007; Stefan Schweizer <genstef@gentoo.org> use.local.desc:
+  Add real useflag for xine-lib
 
   12 Apr 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
   Added local uses for media-sound/herrie
