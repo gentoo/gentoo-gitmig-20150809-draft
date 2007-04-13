@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/saxon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.25 2007/04/12 13:55:24 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.26 2007/04/13 11:05:54 betelgeuse Exp $
+
+*saxon-8.4b-r3 (13 Apr 2007)
+
+  13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> files/build-8.4b.xml,
+  +saxon-8.4b-r3.ebuild:
+  Add launcher script named saxon8 and add Main-Class attribute to saxon8.jar.
+  Fixes bug #174419.
 
   12 Apr 2007; <welp@gentoo.org> saxon-6.5.2-r1.ebuild,
   saxon-8.4b-r2.ebuild:

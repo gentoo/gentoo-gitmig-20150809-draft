@@ -61,7 +61,10 @@
 			 <exclude name="**/xom/**"/>
 			 <exclude name="**/xpath/**"/>
 		 </fileset>
-      </jar>
+		 <manifest>
+			 <attribute name="Main-Class" value="net.sf.saxon.Transform" />
+		 </manifest>
+	  </jar>
    </target>
 
    <target name="jar-saxon8-dom" depends="compile,manifest">
