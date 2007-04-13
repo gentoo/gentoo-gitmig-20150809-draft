@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.237 2007/04/10 18:59:14 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.238 2007/04/13 11:02:06 armin76 Exp $
+
+  13 Apr 2007; Raúl Porcel <armin76@gentoo.org> xchat-2.8.2.ebuild:
+  Apply the patch in 2.8.2, thanks to Charles Clément <caratorn at gmail dot
+  com> for reporting in bug 173306
 
   10 Apr 2007; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   xchat-2.6.6.ebuild, xchat-2.8.0.ebuild, xchat-2.8.2.ebuild:
