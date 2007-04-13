@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8e.ebuild,v 1.2 2007/04/10 12:03:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8e.ebuild,v 1.3 2007/04/13 01:56:06 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -139,8 +139,9 @@ src_install() {
 	# Namespace openssl programs to prevent conflicts with other man pages
 	cd "${D}"/usr/share/man
 	local m d s
-	for m in $(find . -type f -printf '%P ' | xargs grep -L '#include') ; do
-		d=${m%/*} ; m=${m##*/}
+	for m in $(find . -type f | xargs grep -L '#include') ; do
+		d=${m%/*} ; d=${d#./} ; m=${m##*/}
+		[[ ${m} == openssl.1* ]] && continue
 		mv ${d}/{,ssl-}${m}
 		ln -s ssl-${m} ${d}/openssl-${m}
 		# locate any symlinks that point to this man page
