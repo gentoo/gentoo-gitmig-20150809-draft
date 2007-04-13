@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/relaxng-datatype-1.0-r1.ebuild,v 1.3 2006/12/09 09:23:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/relaxng-datatype-1.0-r1.ebuild,v 1.4 2007/04/13 09:20:16 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -16,31 +18,22 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip
-	source? ( app-arch/zip )
-	dev-java/ant-core"
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	rm -f *.jar
-	epatch ${FILESDIR}/${P}-build_xml.patch
-}
-
-src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} javadoc"
-
-	eant ${antflags} || die "Compilation failed"
+	cd "${S}"
+	rm -v *.jar || die
+	epatch "${FILESDIR}/${P}-build_xml.patch"
 }
 
 src_install() {
 	java-pkg_dojar ${MY_PN}.jar
-	dodoc README.txt
+	dodoc README.txt || die
 
-	use doc && java-pkg_dohtml -r doc/api
+	use doc && java-pkg_dojavadoc doc/api
 	use source && java-pkg_dosrc src/*
 }
