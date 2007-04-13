@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.105 2007/04/13 15:00:34 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.106 2007/04/13 15:28:14 armin76 Exp $
+
+  13 Apr 2007; Raúl Porcel <armin76@gentoo.org> usermin-1.270.ebuild:
+  Replace http for https in postinst, thanks to Christoph Mende <ch.mende at
+  gmail dot com> for noticing
 
   13 Apr 2007; Peter Weller <welp@gentoo.org> usermin-1.270.ebuild:
   Stable on amd64 wrt bug 168878
