@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/createtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.3 2007/03/10 12:39:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.4 2007/04/13 19:16:06 drac Exp $
+
+*createtorrent-1.1.3-r1 (13 Apr 2007)
+
+  13 Apr 2007; Samuli Suominen <drac@gentoo.org>
+  +files/createtorrent-1.1.3-asneeded.patch, -createtorrent-1.1.3.ebuild,
+  +createtorrent-1.1.3-r1.ebuild:
+  Fix compilation with --as-needed for bug 172827 and install documentation.
+  Thanks to Maarten Maathuis for reporting.
 
   10 Mar 2007; Raúl Porcel <armin76@gentoo.org> createtorrent-1.1.3.ebuild:
   Fix HOMEPAGE, thanks to corsair for noticing this, bug 170236
