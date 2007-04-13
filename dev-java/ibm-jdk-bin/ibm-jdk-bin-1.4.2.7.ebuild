@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.7.ebuild,v 1.6 2007/04/10 07:28:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.7.ebuild,v 1.7 2007/04/13 16:56:28 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -96,7 +96,7 @@ pkg_nofetch() {
 	if use javacomm ; then
 		einfo "${JAVACOMM_DIST}"
 	fi
-	einfo "Direct link:"
+	einfo "You can also use direct link to your arch download page:"
 	einfo "${DIRECT_DOWNLOAD}"
 	einfo "Place the file(s) in: ${DISTDIR}"
 	einfo "Then restart emerge: 'emerge --resume'"
@@ -104,7 +104,7 @@ pkg_nofetch() {
 	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
-	einfo "direct link. If it doesn't work, file a bug."
+	einfo "direct link to arch download page. If it doesn't work, file a bug."
 }
 
 src_unpack() {

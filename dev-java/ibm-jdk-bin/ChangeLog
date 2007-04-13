@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.109 2007/04/10 07:28:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.110 2007/04/13 16:56:28 caster Exp $
+
+  13 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.4.2.6-r4.ebuild, ibm-jdk-bin-1.4.2.7.ebuild:
+  Remove old version. Sync 1.4 pkg_nofetch() with 1.5.
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   ibm-jdk-bin-1.4.2.7.ebuild:
