@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.21 2007/04/13 22:31:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.22 2007/04/14 16:16:55 mrness Exp $
+
+*linux-atm-2.4.1-r2 (14 Apr 2007)
+
+  14 Apr 2007; Alin Năstac <mrness@gentoo.org>
+  +files/linux-atm-2.4.1-declarations.patch,
+  +files/linux-atm-2.4.1-gcc4.patch, +linux-atm-2.4.1-r2.ebuild:
+  Fix QA warnings.
 
   13 Apr 2007; Alin Năstac <mrness@gentoo.org> +files/2.4.1-linux-if.patch,
   linux-atm-2.4.1-r1.ebuild:
