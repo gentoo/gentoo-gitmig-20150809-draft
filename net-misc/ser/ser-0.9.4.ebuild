@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.5 2006/11/23 20:38:59 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.6 2007/04/14 10:35:54 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -94,6 +94,11 @@ src_unpack() {
 			epatch ${FILESDIR}/${MY_A}.diff
 		fi
 	done
+
+	if use mysql || use postgres; then
+		sed -i -e "s:^#DEFS+=-DSQL_ACC$:DEFS+=-DSQL_ACC:" \
+			${S}/modules/acc/Makefile
+	fi
 
 	# remove sasl if openldap hasn't been built with it
 	if use ldap && ! built_with_use net-nds/openldap sasl; then
