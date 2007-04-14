@@ -1,30 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.5.0.ebuild,v 1.7 2007/03/02 19:18:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.5.0.ebuild,v 1.8 2007/04/14 20:59:01 betelgeuse Exp $
 
-# java-ant-2 not needed - build.xml sets source/target properly
-inherit java-pkg-2 eutils
+JAVA_PKG_IUSE="doc source test"
+
+inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="A toolkit for list transformations"
-HOMEPAGE="http://publicobject.com/${PN}/"
+HOMEPAGE="http://publicobject.com/glazedlists/"
 # there's also 1.5 source available, potential java5 useflag
 SRC_URI="https://${PN}.dev.java.net/files/documents/1073/26115/${P}-source_java14.zip"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="doc source test"
+IUSE=""
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
-	test? (
-		dev-java/junit
-		dev-java/ant
-	)
-	!test? ( dev-java/ant-core )
+	test? ( || ( dev-java/ant-junit dev-java/ant-tasks ) )
 	app-arch/unzip"
 S="${WORKDIR}"
 
 # tests need X otherwise fail
 RESTRICT="test"
+
+#Patch takes care of this
+JAVA_PKG_BSFIX="off"
 
 src_unpack() {
 	unpack ${A}
@@ -42,19 +42,17 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-	eant jar $(use_doc docs)
-}
+EANT_DOC_TARGET="docs"
 
 src_test() {
-	eant test
+	ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {
 	java-pkg_newjar "${PN}_java14.jar"
 	if use doc; then
-		dohtml readme.html
-		java-pkg_dohtml -r docs/api
+		dohtml readme.html || die
+		java-pkg_dojavadoc docs/api
 	fi
 	use source && java-pkg_dosrc "source/ca"
 }
