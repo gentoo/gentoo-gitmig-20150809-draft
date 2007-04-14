@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2744 2007/04/14 09:39:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2745 2007/04/14 11:10:48 tupone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -606,6 +606,7 @@ games-action/d2x-rebirth:mpu401 - Enable MPU401 music support
 games-action/xshipwars:yiff - Add support for the YIFF sound server
 games-arcade/bomns:editor - enables building the level editor
 games-arcade/stepmania:force-oss - force using OSS
+games-arcade/triplexinvaders:psyco - psyco python accelerator
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-board/freedoko:altenburgcards - Use the Altenburg card set
 games-board/freedoko:kdecards - Use the KDE card set
