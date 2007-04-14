@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1.ebuild,v 1.9 2006/03/19 22:03:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1.ebuild,v 1.10 2007/04/14 15:49:16 armin76 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 
-RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
+RDEPEND="x11-libs/libXpm
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
@@ -35,6 +35,7 @@ src_compile() {
 		--enable-graphics \
 		--enable-mousewheel \
 		--with-x \
+		--with-xpm=/usr \
 		$(use_enable cjk kanji) \
 		$(use_enable debug) \
 		$(use_enable jpeg) \
