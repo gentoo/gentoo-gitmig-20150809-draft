@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.104 2007/04/07 18:15:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.105 2007/04/14 21:20:32 kumba Exp $
+
+*mips-sources-2.6.20.7 (14 Apr 2007)
+
+  14 Apr 2007; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.20.6.ebuild, +mips-sources-2.6.20.7.ebuild:
+  Update 2.6.20.6 to 2.6.20.7
 
 *mips-sources-2.6.20.6 (7 Apr 2007)
 
