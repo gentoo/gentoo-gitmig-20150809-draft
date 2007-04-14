@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.340.ebuild,v 1.4 2007/04/13 16:38:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.340.ebuild,v 1.5 2007/04/14 14:26:41 vapier Exp $
 
 inherit eutils pam
 
@@ -15,7 +15,7 @@ SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 LICENSE="BSD"
 SLOT="0"
 # ~mips removed because of broken deps. Bug #86085
-KEYWORDS="~alpha amd64 ~arm hppa ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
 DEPEND="dev-lang/perl"
@@ -131,5 +131,6 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
+	# XXX: this is wrong ... prerm is called during upgrades as well
 	"${ROOT}"/etc/init.d/webmin stop >& /dev/null
 }
