@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.06.ebuild,v 1.1 2007/04/10 22:22:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.06.ebuild,v 1.2 2007/04/14 16:35:21 mr_bones_ Exp $
 
 inherit games
 
@@ -28,6 +28,7 @@ src_unpack() {
 	# don't build the pak file in the install stage.
 	sed -i \
 		-e "70d" \
+		-e "/GAMEPLAYMANUAL/s:index:html/index:" \
 		makefile \
 		|| die "sed failed"
 }
