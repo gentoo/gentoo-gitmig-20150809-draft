@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r1.ebuild,v 1.5 2007/04/08 00:37:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r2.ebuild,v 1.1 2007/04/14 11:14:06 gurligebis Exp $
 
 inherit eutils
 DESCRIPTION="Deamon that emulates Microsoft's Internet Connection Sharing (ICS)
