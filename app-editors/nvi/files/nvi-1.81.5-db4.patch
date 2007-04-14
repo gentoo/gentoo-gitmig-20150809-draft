@@ -132,6 +132,29 @@
  # Check whether --enable-re or --disable-re was given.
  if test "${enable_re+set}" = set; then
    enableval="$enable_re"
+--- nvi-1.81.5/common/db.c
++++ nvi-1.81.5/common/db.c
+@@ -175,7 +175,7 @@
+ 	data.ulen = ep->c_blen;
+ 	data.flags = DB_DBT_USERMEM;
+ 	switch (ep->db->get(ep->db, NULL, &key, &data, 0)) {
+-	case ENOMEM:
++	case DB_BUFFER_SMALL:
+ 		nlen = data.size;
+ 		goto retry;
+         default:
+--- nvi-1.81.5/common/db.h
++++ nvi-1.81.5/common/db.h
+@@ -1,5 +1,9 @@
+ #include <db.h>
+ 
++#ifndef DB_BUFFER_SMALL
++#define DB_BUFFER_SMALL ENOMEM
++#endif
++
+ #ifdef USE_DYNAMIC_LOADING
+ #define db_create   	nvi_db_create
+ #define db_env_create   nvi_db_env_create
 --- nvi-1.81.5/common/exf.c
 +++ nvi-1.81.5/common/exf.c
 @@ -282,7 +282,7 @@
