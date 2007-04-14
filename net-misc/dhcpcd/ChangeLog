@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.142 2007/04/11 19:43:38 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.143 2007/04/14 07:58:35 uberlord Exp $
+
+*dhcpcd-3.0.17 (14 Apr 2007)
+
+  14 Apr 2007; Roy Marples <uberlord@gentoo.org> +dhcpcd-3.0.17.ebuild:
+  New version, including moer MTU fixes for #173350 and #173791.
 
 *dhcpcd-3.0.16-r1 (11 Apr 2007)
 
