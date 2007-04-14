@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.3.ebuild,v 1.4 2007/03/24 11:43:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.3.ebuild,v 1.5 2007/04/14 01:55:44 jer Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tmtm.org/downloads/mysql/ruby/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ppc64 sparc ~x86"
 IUSE=""
 
 USE_RUBY="ruby18 ruby19"
@@ -22,6 +22,8 @@ src_unpack() {
 	if use hppa; then
 		sed -e 's/LONG_LONG/long long/' -i "${S}"/mysql.c.in
 	fi
+
+	epatch ${FILESDIR}/${P}-test.patch
 }
 
 src_compile() {
