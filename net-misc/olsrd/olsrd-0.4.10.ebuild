@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.4.10.ebuild,v 1.3 2007/02/05 15:27:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.4.10.ebuild,v 1.4 2007/04/14 19:29:13 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.olsr.org/"
 SRC_URI="http://www.olsr.org/releases/${PV%.*}/${P}.tar.bz2"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="BSD"
 KEYWORDS="x86"
 IUSE="gtk"
 
@@ -45,7 +45,7 @@ src_install() {
 	doinitd "${FILESDIR}/olsrd"
 
 	cd "${S}"
-	dodoc CHANGELOG features.txt license.txt README README-Olsr-Switch.html \
+	dodoc CHANGELOG features.txt README README-Olsr-Switch.html \
 		README-FreeBSD-libnet README-Link-Quality-Fish-Eye.txt \
 		README-Link-Quality.html files/olsrd.conf.default.rfc \
 		files/olsrd.conf.default.lq lib/dyn_gw/README_DYN_GW \
