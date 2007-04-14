@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2.ebuild,v 1.5 2007/01/01 16:19:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2.ebuild,v 1.6 2007/04/14 20:01:22 tove Exp $
 
 inherit eutils toolchain-funcs
 
@@ -193,8 +193,7 @@ src_install() {
 	dodir /var/empty
 	keepdir /var/empty
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}"/popa3d-initrc popa3d
+	newinitd "${FILESDIR}"/popa3d-initrc popa3d
 
 	if use pam ; then
 		dodir /etc/pam.d/
