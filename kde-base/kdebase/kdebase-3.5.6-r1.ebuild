@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.3 2007/03/08 20:21:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.4 2007/04/14 16:20:33 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -44,6 +44,7 @@ DEPEND=">=media-libs/freetype-2
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
+	sys-devel/gdb
 	java? ( >=virtual/jre-1.4 )
 	kernel_linux? ( || ( >=sys-apps/eject-2.1.5 sys-block/unieject ) )
 	|| ( (
