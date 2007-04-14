@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.4.ebuild,v 1.2 2007/01/10 19:50:41 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.4.ebuild,v 1.3 2007/04/14 10:57:58 mrness Exp $
 
 inherit libtool eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}/${P}-implicit-decl.patch"
 }
 
 src_compile() {
