@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.3-r1.ebuild,v 1.2 2007/03/12 07:59:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.3-r1.ebuild,v 1.3 2007/04/14 22:08:59 aballier Exp $
 
 inherit qt3 eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="$(qt_min_version 3)
 	media-libs/libao
-	media-video/ffmpeg"
+	>=media-video/ffmpeg-0.4.9_p20070330"
 
 DEPEND="${RDEPEND}
 	dev-util/scons"
@@ -37,6 +37,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-ac3-buffer.patch"
 	epatch "${FILESDIR}/${P}-sconstruct.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg-compat.patch"
 }
 
 src_compile() {
