@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7123 2007/04/14 18:40:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7124 2007/04/14 23:55:31 pioto Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Mike Kelly <pioto@gentoo.org> (14 Apr 2007)
+# A modified version of app-vim/doxygen-syntax-1.15 is already included in 
+# vim7, no point in keeping this around. See Bug #174637. Scheduled for
+# removal in 30 days.
+app-vim/doxygen-syntax
 
 # Hans de Graaff <graaff@gentoo.org> (13 Apr 2007)
 # ruby development is no longer taking place in CVS, leaving ruby-cvs broken
