@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.132 2007/03/23 20:37:40 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.133 2007/04/14 08:16:57 genstef Exp $
+
+  14 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/pwlib-1.6.3-dyn-esd.patch, -files/pwlib-1.6.6-alsa_dmix.diff,
+  -files/pwlib-1.6.6-ieee1394dc-fix.diff, -files/pwlib-1.8.4-gcc4.diff,
+  -files/pwlib-1.8.7-gcc-4.1-v4l2.patch, -files/pwlib-1.8.7-gcc41.patch,
+  -pwlib-1.6.3-r3.ebuild, -pwlib-1.6.6-r2.ebuild, -pwlib-1.8.3-r1.ebuild,
+  -pwlib-1.8.4.ebuild, -pwlib-1.8.7.ebuild, -pwlib-1.10.0.ebuild,
+  -pwlib-1.10.1.ebuild, -pwlib-1.10.2.ebuild, -pwlib-1.10.2-r1.ebuild,
+  -pwlib-1.10.4.ebuild:
+  remove old
 
   23 Mar 2007; René Nussbaumer <killerfox@gentoo.org> pwlib-1.10.5.ebuild:
   Stable on hppa. See bug #167643.
