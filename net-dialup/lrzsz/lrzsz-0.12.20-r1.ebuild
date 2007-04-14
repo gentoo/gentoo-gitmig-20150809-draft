@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.8 2006/09/16 21:09:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.9 2007/04/14 11:46:01 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,6 +16,7 @@ IUSE="nls"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-makefile-smp.patch
+	epatch "${FILESDIR}"/${PN}-implicit-decl.patch
 }
 
 src_compile() {
