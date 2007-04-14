@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1-r1.ebuild,v 1.4 2007/02/18 10:07:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1-r1.ebuild,v 1.5 2007/04/14 19:43:33 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -18,9 +18,8 @@ COMMON_DEPEND="dev-java/commons-collections"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
-# full ant needed for JJTree and JavaCC tasks, part of ant-nodeps.jar
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
+	|| ( dev-java/ant-nodeps dev-java/ant-tasks )
 	dev-java/javacc
 	${COMMON_DEPEND}
 	source? ( app-arch/zip )"
@@ -28,18 +27,18 @@ DEPEND=">=virtual/jdk-1.4
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# remove the junit tests, would need xdoclet, causing circular dep
 	epatch ${FILESDIR}/${P}-nojunit.patch
 
-	cd ${S}/lib
-	rm -f *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from --build-only javacc
 }
 
 src_compile() {
-	eant jar
+	ANT_TASKS="ant-nodeps" eant jar
 }
 
 src_install() {
