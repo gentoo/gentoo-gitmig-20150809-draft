@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3_rc2_p20070310-r1.ebuild,v 1.3 2007/03/31 13:39:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3_rc2_p20070310-r1.ebuild,v 1.4 2007/04/14 13:36:49 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -29,7 +29,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	mpeg? ( media-libs/libmpeg3 )
 	mp3? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
-	quicktime? ( >=media-libs/libquicktime-0.9.3 )
+	quicktime? ( >=media-libs/libquicktime-0.9.8 )
 	vorbis? ( media-libs/libvorbis )
 	ogg? ( media-libs/libogg )
 	theora? ( media-libs/libtheora )
