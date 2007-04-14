@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/slmon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.9 2007/03/19 01:47:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.10 2007/04/14 16:04:32 armin76 Exp $
+
+  14 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/slmon-0.5.13-invalid-free.patch, slmon-0.5.13.ebuild:
+  Add glib-2 to DEPEND, and add a patch to remove a invalid pointer, thanks to
+  Ali Polatel <polatel at gmail dot com> for the patch, bug 151293
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.

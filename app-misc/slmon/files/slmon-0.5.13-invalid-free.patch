@@ -1,0 +1,16 @@
+--- rc.c.orig	2004-06-20 18:56:48.000000000 +0300
++++ rc.c	2007-04-09 19:14:05.000000000 +0300
+@@ -177,9 +177,10 @@
+     char *home, dotrc[1024] = { 0 };
+ 
+     home = getenv("HOME");
+-    strcpy(dotrc, home);
+-    strcat(dotrc, "/.slmonrc");
+-    free(home);
++    if ( home != NULL ) {
++    	strcpy(dotrc, home);
++	strcat(dotrc, "/.slmonrc");
++    }
+ 
+     if ((f = fopen("/etc/slmonrc", "r")) != NULL) {
+ 	slmon_conf_parse(f);
