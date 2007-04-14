@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.23 2007/02/22 00:56:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.24 2007/04/14 05:59:18 graaff Exp $
+
+  14 Apr 2007; Hans de Graaff <graaff@gentoo.org> amrita-1.8.2-r1.ebuild:
+  Make USE_RUBY consistent with DEPENDS, remove ruby-cvs from DEPENDS.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
