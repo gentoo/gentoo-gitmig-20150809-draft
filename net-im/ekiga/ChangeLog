@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekiga
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.38 2007/03/23 20:39:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.39 2007/04/14 08:13:08 genstef Exp $
+
+  14 Apr 2007; Stefan Schweizer <genstef@gentoo.org> -ekiga-2.0.3.ebuild,
+  -ekiga-2.0.5.ebuild:
+  remove old
 
   23 Mar 2007; René Nussbaumer <killerfox@gentoo.org> ekiga-2.0.7.ebuild:
   Stable on hppa. See bug #167643.
