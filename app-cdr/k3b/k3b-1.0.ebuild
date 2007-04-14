@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.4 2007/04/13 22:14:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.5 2007/04/14 16:21:33 carlo Exp $
 
 inherit kde eutils
 
@@ -58,8 +58,7 @@ PATCHES="${FILESDIR}/${P}-alsa-fix.patch"
 I18N="${PN}-i18n-${PV}"
 
 # Supported languages and translated documentation
-LANGS="af bg bn br bs ca cs cy da de el en_GB es et eu fr ga he hi hu is it ja km lt mk ms nb nds nl nn pa pl pt pt_BR ro ru se sl sr sr@Latn sv ta tr uk zh_CN"
-
+LANGS="af ar bg br bs ca cs cy da de el en_GB es et eu fa fi fr ga gl he hi hu is it ja ka lt mk ms nb nds nl nn pa pl pt pt_BR ru rw se sk sr sr@Latn sv ta tr uk uz zh_CN zh_TW"
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
 	IUSE="${IUSE} linguas_${X}"
