@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.4.ebuild,v 1.1 2007/04/14 17:23:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.4.ebuild,v 1.2 2007/04/14 17:49:54 genstef Exp $
 
 inherit eutils kde
 
@@ -40,8 +40,9 @@ need-kde 3
 
 S="${WORKDIR}/${P/.0/}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sh bootstrap
+pkg_setup() {
+	if ! built_with_use media-libs/mlt sdl; then
+		eerror "You need to build media-libs/mlt with USE=sdl enabled."
+		die "mlt w/o sdl detected"
+	fi
 }

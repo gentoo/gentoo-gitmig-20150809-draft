@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.16 2007/04/14 17:23:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.17 2007/04/14 17:49:54 genstef Exp $
+
+  14 Apr 2007; Stefan Schweizer <genstef@gentoo.org> kdenlive-0.4.ebuild:
+  Add built_with_use check thanks to Johannes Hirte <johannes-hirte@web.de> in
+  bug 159812
 
 *kdenlive-0.4 (14 Apr 2007)
 
