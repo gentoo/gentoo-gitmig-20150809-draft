@@ -1,0 +1,19 @@
+--- openh323/Makefile.in	2004-08-22 06:21:45.000000000 +0200
++++ openh323/Makefile.in.orig	2004-11-27 21:22:44.431975832 +0100
+@@ -328,12 +328,12 @@
+ 
+ install:
+ 	mkdir -p $(DESTDIR)$(LIBDIR)
+-	rm -f $(DESTDIR)$(LIBDIR)/libh323_*_r.so*
+-	$(INSTALL) -m 444 lib/*_r.so $(DESTDIR)$(LIBDIR)
+-	(for fn in lib/*_r.so.* ; do \
++	rm -f $(DESTDIR)$(LIBDIR)/libh323_*_$(OH323_SUFFIX).so*
++	$(INSTALL) -m 444 lib/*_$(OH323_SUFFIX).so $(DESTDIR)$(LIBDIR)
++	(for fn in lib/*_$(OH323_SUFFIX).so.* ; do \
+ 		cd $(DESTDIR)$(LIBDIR) ; \
+ 		rm -f `basename $$fn` ; \
+-		ln -s libh323_*_r.so `basename $$fn` ; \
++		ln -s libh323_*_$(OH323_SUFFIX).so `basename $$fn` ; \
+ 	done)
+ 	$(INSTALL) -m 444 lib/$(OH323_FILE) $(DESTDIR)$(LIBDIR)
+ 	( cd $(DESTDIR)$(LIBDIR); rm libopenh323.so ; ln -s $(OH323_FILE) libopenh323.so)
