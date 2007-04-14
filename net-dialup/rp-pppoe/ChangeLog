@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.86 2007/03/10 14:22:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.87 2007/04/14 07:45:33 mrness Exp $
+
+*rp-pppoe-3.8-r1 (14 Apr 2007)
+
+  14 Apr 2007; Alin Năstac <mrness@gentoo.org> -rp-pppoe-3.8.ebuild,
+  +rp-pppoe-3.8-r1.ebuild:
+  Revision bump (bug 159747 comment 25).
 
   10 Mar 2007; Alin Năstac <mrness@gentoo.org> rp-pppoe-3.8.ebuild:
   Remove references to $ROOT from src_install (#168039).
