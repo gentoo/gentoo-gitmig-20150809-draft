@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r2.ebuild,v 1.2 2007/04/13 11:42:40 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2-r2.ebuild,v 1.3 2007/04/14 18:23:13 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -233,7 +233,7 @@ pkg_postinst() {
 		chown root:root /var/spool/fcron/* >&/dev/null
 		chmod 0600 /var/spool/fcron/* >&/dev/null
 		chown fcron:fcron /var/spool/fcron/*.orig >&/dev/null
-		chmod 0640 /var/spool/fcron/.orig >&/dev/null
+		chmod 0640 /var/spool/fcron/*.orig >&/dev/null
 		ewarn
 		ewarn "*** YOU SHOULD IMMEDIATELY UPDATE THE"
 		ewarn "*** fcrontabs ENTRY IN /etc/fcron/fcron.conf"
