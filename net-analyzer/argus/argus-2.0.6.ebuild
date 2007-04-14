@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.6.ebuild,v 1.2 2006/02/15 21:41:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.6.ebuild,v 1.3 2007/04/14 21:06:36 vanquirius Exp $
 
 inherit eutils
 
@@ -45,10 +45,10 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please note that argus-clients has been split up from this"
-	einfo "package by upstream as of 2.0.6. If you want it, please emerge"
-	einfo "net-analyzer/argus-clients."
+	elog "Please note that argus-clients has been split up from this"
+	elog "package by upstream as of 2.0.6. If you want it, please emerge"
+	elog "net-analyzer/argus-clients."
 
-	einfo "Also, you might want to edit /etc/argus/argus.conf before"
-	einfo "running argus."
+	elog "Also, you might want to edit /etc/argus/argus.conf before"
+	elog "running argus."
 }

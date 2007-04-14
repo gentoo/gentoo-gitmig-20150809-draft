@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/FlowScan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.9 2007/02/01 20:57:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.10 2007/04/14 21:02:27 vanquirius Exp $
+
+  14 Apr 2007; Marcelo Goes <vanquirius@gentoo.org>
+  FlowScan-1.006-r2.ebuild:
+  Use elog instead of einfo.
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> +files/flowscan.init:
   fix exec bit

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.4 2006/03/05 20:12:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.5 2007/04/14 21:02:27 vanquirius Exp $
 
 inherit eutils
 
@@ -31,13 +31,13 @@ pkg_setup() {
 }
 
 src_compile() {
-	./configure --prefix=${D}/var/lib/flows --bindir=/var/lib/flows/bin || die "configure failed"
+	./configure --prefix="${D}"/var/lib/flows --bindir=/var/lib/flows/bin || die "configure failed"
 }
 
 src_install() {
 	make install || die "install failed"
 
-	newinitd ${FILESDIR}/flowscan.init flowscan
+	newinitd "${FILESDIR}"/flowscan.init flowscan
 
 	dodoc Changes *README* TODO
 	newdoc INSTALL README.update
@@ -50,7 +50,7 @@ src_install() {
 		|| die "sed failed"
 
 	exeinto /var/lib/flows/bin
-	newexe ${FILESDIR}/FlowScan.pm FlowScan.pm
+	newexe "${FILESDIR}"/FlowScan.pm FlowScan.pm
 	insinto /var/lib/flows/bin
 	doins cf/flowscan.cf cf/CampusIO.cf
 }
@@ -59,10 +59,8 @@ pkg_postinst() {
 	chown flows:flows /var/lib/flows/{ft,rrds,scoreboard}
 	chown flows:flows /var/lib/flows/bin/flowscan.cf
 	chown flows:flows /var/lib/flows/bin/FlowScan.pm
-	einfo
-	einfo "Please note that while you can use the reporting modules that come"
-	einfo "with FlowScan, it is recommended that you install either JKFlow or"
-	einfo "for more simple implementations CUFlow. Both are available in"
-	einfo "Portage."
-	einfo
+	elog "Please note that while you can use the reporting modules that come"
+	elog "with FlowScan, it is recommended that you install either JKFlow or"
+	elog "for more simple implementations CUFlow. Both are available in"
+	elog "Portage."
 }
