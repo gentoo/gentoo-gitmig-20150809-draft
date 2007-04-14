@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.24 2007/04/04 18:29:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.25 2007/04/14 06:33:57 welp Exp $
+
+  14 Apr 2007; Peter Weller <welp@gentoo.org> noteedit-2.8.1.ebuild:
+  Stable on amd64 wrt bug 148951
 
   04 Apr 2007; Raúl Porcel <armin76@gentoo.org> noteedit-2.8.1.ebuild:
   x86 stable wrt bug 148951
