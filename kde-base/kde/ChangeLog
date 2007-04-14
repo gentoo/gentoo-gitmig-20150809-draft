@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.173 2007/02/04 18:21:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.174 2007/04/14 16:22:54 carlo Exp $
+
+  14 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kde-3.5.6.ebuild:
+  Fix bug #174540.
 
   04 Feb 2007; Jeroen Roovers <jer@gentoo.org> kde-3.5.6.ebuild:
   Marked ~hppa.

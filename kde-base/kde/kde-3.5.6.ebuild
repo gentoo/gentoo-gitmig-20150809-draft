@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.5.6.ebuild,v 1.4 2007/02/04 18:21:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.5.6.ebuild,v 1.5 2007/04/14 16:22:54 carlo Exp $
 
 DESCRIPTION="KDE - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
@@ -25,4 +25,5 @@ RDEPEND="~kde-base/kdelibs-${PV}
 	~kde-base/kdetoys-${PV}
 	~kde-base/kdeutils-${PV}
 	~kde-base/kdewebdev-${PV}
-	accessibility? ( ~kde-base/kdeaccessibility-${PV} )"
+	accessibility? ( ~kde-base/kdeaccessibility-${PV} )
+	!kde-base/kde-meta"
