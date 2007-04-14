@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.1.42.ebuild,v 1.7 2007/04/11 19:07:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.1.42.ebuild,v 1.8 2007/04/14 14:31:51 vapier Exp $
 
 inherit eutils
 
@@ -10,22 +10,23 @@ SRC_URI="http://ftp.indexdata.dk/pub/${PN}/${P}.tar.gz"
 
 LICENSE="YAZ"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="tcpd"
 
 RDEPEND="dev-libs/libxml2
 	dev-libs/openssl
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}
-		app-text/docbook-xml-dtd
-		app-text/docbook-dsssl-stylesheets
-		app-text/docbook-xsl-stylesheets
-		dev-util/pkgconfig
-		sys-devel/autoconf"
+	app-text/docbook-xml-dtd
+	app-text/docbook-dsssl-stylesheets
+	app-text/docbook-xsl-stylesheets
+	dev-util/pkgconfig
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# XXX: this should really be converted to 'inherit autotools'
 	autoconf || die "autoconf failed"
 }
 
