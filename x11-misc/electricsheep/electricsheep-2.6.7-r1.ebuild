@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.7-r1.ebuild,v 1.2 2006/09/04 08:48:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.7-r1.ebuild,v 1.3 2007/04/14 00:02:42 dragonheart Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -36,8 +36,6 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=sys-apps/sed-4
 	media-libs/libmpeg2
-	sys-apps/gawk
-	sys-apps/grep
 	sys-devel/libtool"
 
 src_unpack() {
@@ -67,7 +65,7 @@ src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 
 	dodir /usr/share/electricsheep
-	if [ ! -f "${ROOT}/usr/share/electricsheep/electricsheep-uniqueid" ]
+	if [ ! -f /usr/share/electricsheep/electricsheep-uniqueid ]
 	then
 		"${D}/usr/bin/uniqueid" > \
 			"${D}/usr/share/electricsheep/electricsheep-uniqueid"
