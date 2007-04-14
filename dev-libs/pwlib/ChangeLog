@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.133 2007/04/14 08:16:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.134 2007/04/14 08:57:51 genstef Exp $
+
+*pwlib-1.10.7 (14 Apr 2007)
+
+  14 Apr 2007; Stefan Schweizer <genstef@gentoo.org> pwlib-1.10.5.ebuild,
+  +pwlib-1.10.7.ebuild:
+  Version bump, fix ldap depend
 
   14 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
   -files/pwlib-1.6.3-dyn-esd.patch, -files/pwlib-1.6.6-alsa_dmix.diff,

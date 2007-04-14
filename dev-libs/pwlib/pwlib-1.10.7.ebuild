@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.5.ebuild,v 1.6 2007/04/14 08:57:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.7.ebuild,v 1.1 2007/04/14 08:57:51 genstef Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -12,14 +12,14 @@ SRC_URI="http://www.ekiga.org/admin/downloads/latest/sources/sources/${P}.tar.gz
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	ieee1394? ( media-libs/libdv
 		sys-libs/libavc1394
 		sys-libs/libraw1394
 		<media-libs/libdc1394-1.9.99 )
-	ldap? ( >=net-nds/openldap-2.3.30 )
+	ldap? ( >=net-nds/openldap-2.3.35 )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( media-libs/libsdl )
 	ssl? ( dev-libs/openssl )
