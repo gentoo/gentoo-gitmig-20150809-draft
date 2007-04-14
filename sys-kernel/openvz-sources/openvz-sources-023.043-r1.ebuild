@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-023.043-r1.ebuild,v 1.1 2007/04/13 18:18:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-023.043-r1.ebuild,v 1.2 2007/04/14 17:06:59 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.9"
@@ -10,10 +10,6 @@ K_NOSETEXTRAVERSION=1
 
 inherit kernel-2
 detect_version
-
-# Just temporary, might get removed in +4 days from today; or if someone from
-# infra deleted the openvz patches from our distfile mirrors
-RESTRICT="primaryuri"
 
 OVZ_KERNEL="${PV%%.*}stab${PV##*.}"
 OVZ_REV="2"
