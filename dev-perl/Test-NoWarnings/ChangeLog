@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-NoWarnings
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.11 2007/03/05 11:10:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.12 2007/04/14 15:04:01 mcummings Exp $
+
+  14 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Test-NoWarnings-0.083.ebuild:
+  Marking sparc stable
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org>
   Test-NoWarnings-0.082.ebuild:
