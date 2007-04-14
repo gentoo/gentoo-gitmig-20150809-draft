@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.12 2006/05/28 23:30:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.13 2007/04/14 06:11:35 graaff Exp $
 
 DESCRIPTION="Ruby Browser for modules/classes hierarchy and their constants and methods"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/hiki.cgi?rbbr"
@@ -11,10 +11,7 @@ SLOT="0"
 LICENSE="Ruby"
 IUSE="nls cjk"
 
-DEPEND="|| (
-		>=dev-lang/ruby-1.8.0
-		dev-lang/ruby-cvs
-	)
+DEPEND=">=dev-lang/ruby-1.8.0
 	 >=dev-ruby/ruby-gtk2-0.9.1
 	 nls? ( >=dev-ruby/ruby-gettext-0.5.5 )
 	 cjk? ( >=dev-ruby/refe-0.8.0 )"

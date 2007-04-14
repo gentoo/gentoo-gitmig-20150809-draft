@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14-r1.ebuild,v 1.17 2007/02/09 20:19:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14-r1.ebuild,v 1.18 2007/04/14 06:13:10 graaff Exp $
 
 IUSE="emacs"
 
@@ -15,8 +15,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 USE_RUBY="any"
 
-DEPEND="|| ( >=dev-lang/ruby-1.8.0
-	dev-lang/ruby-cvs )
+DEPEND=">=dev-lang/ruby-1.8.0
 	dev-ruby/amstd
 	emacs? ( virtual/emacs )"
 
