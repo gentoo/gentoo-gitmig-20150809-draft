@@ -1,1 +1,2 @@
 move net-misc/gnugk net-voip/gnugk
+move net-misc/linphone net-voip/linphone
