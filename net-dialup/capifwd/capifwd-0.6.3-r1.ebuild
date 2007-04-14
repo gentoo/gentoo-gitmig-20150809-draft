@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/capifwd-0.6.3-r1.patch,v 1.1 2007/02/03 00:41:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/capifwd-0.6.3-r1.ebuild,v 1.1 2007/04/14 09:08:23 mrness Exp $
 
 inherit eutils
 
