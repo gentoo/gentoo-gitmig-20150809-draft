@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-lzo
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/ChangeLog,v 1.1 2007/04/14 01:27:56 dragonheart Exp $
+
+*python-lzo-1.08 (14 Apr 2007)
+
+  14 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/lzo2compat.patch, +metadata.xml, +python-lzo-1.08.ebuild:
+  inital ebuild thanks to request from Michael R. Lawrence in bug #158474
+
