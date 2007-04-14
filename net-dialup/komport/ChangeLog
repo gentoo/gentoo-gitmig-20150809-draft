@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/komport
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.8 2007/02/05 11:01:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.9 2007/04/14 11:30:20 mrness Exp $
+
+  14 Apr 2007; Alin Năstac <mrness@gentoo.org> komport-0.5.9.ebuild:
+  Stable on amd64.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/komport-0.5.9-configure-arts.diff, komport-0.5.9.ebuild:
