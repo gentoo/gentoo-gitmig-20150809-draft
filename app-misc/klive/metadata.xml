@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kernel</herd>
+<maintainer>
+  <email>masterdriverz@gentoo.org</email>
+  <name>Charlie Shepherd</name>
+</maintainer>
 </pkgmetadata>

@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/klive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.15 2007/01/28 05:15:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.16 2007/04/14 23:11:29 masterdriverz Exp $
+
+*klive-0.28 (14 Apr 2007)
+
+  14 Apr 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  files/klive.init.d, metadata.xml, -klive-0.16.ebuild, -klive-0.23.ebuild,
+  +klive-0.28.ebuild:
+  Clean out old ebuilds, bump to 0.28 and clean out old non-working ebuilds.
+  Also fix the init script for later baselayouts. Thanks to Haplo and Jakub,
+  bugs 162402 and 161320. Add myself explicitly to metadata since I use this
+  package.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> klive-0.16.ebuild,
   klive-0.23.ebuild:

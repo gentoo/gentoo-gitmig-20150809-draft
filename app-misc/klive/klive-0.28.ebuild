@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.23.ebuild,v 1.3 2007/01/28 05:15:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.1 2007/04/14 23:11:29 masterdriverz Exp $
 
 inherit eutils
 
