@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.40 2007/04/10 07:27:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.41 2007/04/14 15:43:14 mcummings Exp $
+
+  14 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  Apache-Session-1.81.ebuild:
+  amd64 stable
 
   10 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   Apache-Session-1.81.ebuild:
