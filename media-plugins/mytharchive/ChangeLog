@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.8 2007/02/22 16:16:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.9 2007/04/14 01:29:41 cardoe Exp $
+
+  14 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mytharchive-0.20_p11222.ebuild, -mytharchive-0.20_p11671.ebuild,
+  mytharchive-0.20_p12824.ebuild:
+  require media-video/mjpegtools to be built with png support. mark latest
+  version as stable since previous versions are for sure broken. remove old
+  versions
 
 *mytharchive-0.20_p12824 (22 Feb 2007)
 
