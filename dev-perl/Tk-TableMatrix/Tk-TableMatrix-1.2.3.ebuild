@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.3.ebuild,v 1.4 2007/04/09 16:47:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.3.ebuild,v 1.5 2007/04/14 15:06:48 mcummings Exp $
 
 inherit versionator perl-module eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://cpan/authors/id/C/CE/CERNEY/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND="dev-perl/perl-tk
