@@ -1,2 +1,3 @@
 move net-misc/gnugk net-voip/gnugk
 move net-misc/linphone net-voip/linphone
+move net-im/wengophone net-voip/wengophone-bin
