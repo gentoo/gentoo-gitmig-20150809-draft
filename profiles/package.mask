@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7122 2007/04/14 15:39:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7123 2007/04/14 18:40:04 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -237,17 +237,6 @@ xfce-base/libxfce4menu
 media-video/spca5xx
 media-video/gspca
 
-# Samuli Suominen <drac@gentoo.org> (23 Mar 2007)
-# Pending removal 23 Apr 2007. Bug 169987.
-xfce-extra/xfce4-windowlist
-xfce-extra/xfce4-showdesktop
-xfce-extra/xfce4-taskbar
-xfce-extra/xfce4-minicmd
-xfce-extra/xfce4-iconbox
-xfce-extra/xfce4-trigger-launcher
-xfce-extra/xfce4-systray
-xfce-extra/xfce4-toys
-
 # Daniel Gryniewicz <dang@gentoo.org> (23 Mar 2007)
 # The Great GNOME 2.18.0 mask
 >=app-admin/sabayon-2.18.0
@@ -363,12 +352,6 @@ www-servers/plb
 # net-im/aim-transport -> bug 145858
 www-servers/ncsa-httpd
 net-im/aim-transport
-
-# Samuli Suominen <drac@gentoo.org> (18 Mar 2007)
-# Pending removal 18 Apr 2007. Use orage and thunar.
-# Bug 169987.
-xfce-extra/xfcalendar
-xfce-base/xffm
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (16 Mar 2007)
 # Mask ghc-bin for testing.
