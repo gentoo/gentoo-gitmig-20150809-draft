@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/extra-syntax
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.20 2006/08/20 23:46:11 malc Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.21 2007/04/14 23:43:28 pioto Exp $
+
+  14 Apr 2007; Mike Kelly <pioto@gentoo.org> extra-syntax-2.ebuild,
+  extra-syntax-3.ebuild, extra-syntax-4.ebuild:
+  Drop doxygen-syntax; it's part of vim7.
 
   20 Aug 2006; <malc@gentoo.org> extra-syntax-2.ebuild:
   Stable on amd64
