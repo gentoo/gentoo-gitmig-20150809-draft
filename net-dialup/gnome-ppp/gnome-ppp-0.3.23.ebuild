@@ -1,14 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23.ebuild,v 1.6 2006/09/22 17:45:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23.ebuild,v 1.7 2007/04/14 10:33:44 mrness Exp $
 
 inherit gnome2 eutils
 
 MAJOR_V=${PV%.[0-9]*}
 
 DESCRIPTION="A GNOME 2 WvDial frontend"
-HOMEPAGE="http://www.icmreza.co.yu/blogs/vladecks/en/?page_id=4"
-SRC_URI="http://www.icmreza.co.yu/blogs/vladecks/wp-content/projects/gnome-ppp/download/${MAJOR_V}/${P}.tar.bz2"
+HOMEPAGE="None available"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,6 +25,12 @@ DEPEND="sys-devel/gettext
 
 USE_DESTDIR="1"
 DOCS="ChangeLog"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-implicit-decl.patch
+}
 
 src_install() {
 	gnome2_src_install top_builddir="${S}"
