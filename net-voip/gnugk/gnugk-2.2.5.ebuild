@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.5.ebuild,v 1.1 2007/04/14 07:56:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.5.ebuild,v 1.2 2007/04/14 10:14:08 genstef Exp $
 
 IUSE="mysql postgres radius"
 
@@ -20,7 +20,8 @@ DEPEND="
 
 src_compile() {
 	econf \
-	        `use_enable mysql` \
+		--with-large-fdset=4096 \
+		`use_enable mysql` \
 		`use_enable postgres sql` \
 		`use_enable radius` || die
 
