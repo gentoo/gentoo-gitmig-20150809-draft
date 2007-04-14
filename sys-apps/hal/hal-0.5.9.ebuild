@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.19 2007/04/13 14:12:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.20 2007/04/14 13:48:52 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -77,7 +77,8 @@ function notify_inotify() {
 
 pkg_setup() {
 	if built_with_use --missing false sys-apps/pciutils zlib ; then
-		die "You MUST build pciutils without the zlib USE flag"
+		eerror "You MUST build sys-apps/pciutils without the zlib USE flag"
+		die "You MUST build sys-apps/pciutils without the zlib USE flag"
 	fi
 
 	if use kernel_linux; then
