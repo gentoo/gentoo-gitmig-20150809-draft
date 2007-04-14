@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/kahakai
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.32 2007/04/02 01:37:31 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.33 2007/04/14 06:22:08 graaff Exp $
+
+  14 Apr 2007; Hans de Graaff <graaff@gentoo.org>
+  kahakai-0.6.2_p20040306-r1.ebuild:
+  Remove ruby-cvs dependencies.
 
   02 Apr 2007; Joe Sapp <nixphoeni@gentoo.org>
   kahakai-0.6.2_p20040306-r1.ebuild:

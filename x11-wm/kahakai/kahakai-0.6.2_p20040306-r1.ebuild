@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306-r1.ebuild,v 1.6 2007/04/02 01:37:31 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306-r1.ebuild,v 1.7 2007/04/14 06:22:08 graaff Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -25,7 +25,7 @@ RDEPEND="( x11-libs/libX11
 		xinerama? ( x11-libs/libXinerama )
 		)
 	|| ( x11-libs/libXft virtual/xft x11-base/xorg-x11 )
-	ruby? ( || ( >=dev-lang/ruby-1.8 dev-lang/ruby-cvs ) )
+	ruby? ( >=dev-lang/ruby-1.8 )
 	dev-lang/swig
 	>=media-libs/imlib2-1.1.0
 	dev-util/pkgconfig
