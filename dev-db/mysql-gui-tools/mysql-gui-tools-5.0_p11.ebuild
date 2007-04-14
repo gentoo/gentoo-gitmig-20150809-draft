@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p11.ebuild,v 1.2 2007/04/03 21:31:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p11.ebuild,v 1.3 2007/04/14 23:34:21 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -57,6 +57,10 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/mysql-gui-tools-5.0_p8-i18n-fix.patch
 	epatch "${FILESDIR}"/mysql-gui-tools-5.0_p8-lua-modules.patch
+
+	sed -i \
+		-e "s/\\(^\\|[[:space:]]\\)-ltermcap\\($\\|[[:space:]]\\)//g" \
+		mysql-gui-common/tools/grtsh/Makefile.{am,in}
 }
 
 src_compile() {
@@ -64,7 +68,6 @@ src_compile() {
 	append-flags -fexceptions
 
 	cd "${S}"/mysql-gui-common
-	sed -i -e "s/\\b-ltermcap\\b//g" tools/{grtsh,grtsh3}/Makefile.{am,in}
 	use nls || sed -i -e "/^SUBDIRS = / s/\\bpo\\b//" Makefile.{am,in}
 	gnome2_src_compile \
 		--disable-java-modules \
