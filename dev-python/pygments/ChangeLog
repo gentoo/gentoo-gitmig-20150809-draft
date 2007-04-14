@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/pygments
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.1 2007/04/14 17:54:00 pythonhead Exp $
+
+*pygments-0.7.1 (14 Apr 2007)
+
+  14 Apr 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/pygments-0.7.1-_mapping.py-ebuild.patch,
+  +files/pygments-0.7.1-html_formatter.patch,
+  +files/pygments-0.7.1-other.py-ebuild.patch, +metadata.xml,
+  +pygments-0.7.1.ebuild:
+  Initial commit. Thanks Georg Brandl <g.brandl@gmx.net> bug #167115
+
