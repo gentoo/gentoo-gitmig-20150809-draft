@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/cgikit-1.2.0.ebuild,v 1.7 2007/01/21 08:01:48 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/cgikit-1.2.0.ebuild,v 1.8 2007/04/14 06:02:56 graaff Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -14,8 +14,7 @@ KEYWORDS="alpha ia64 ppc x86"
 IUSE="examples"
 USE_RUBY="ruby18 ruby19"
 
-DEPEND="|| ( >=dev-lang/ruby-1.8.0
-		dev-lang/ruby-cvs )"
+DEPEND=">=dev-lang/ruby-1.8.0"
 
 src_compile() {
 	ruby install.rb config || die
