@@ -21,7 +21,7 @@ diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
  	$(INSTALL) -m 0755 bin/dctrl $(DESTDIR)$(bindir)/dctrl
  	$(INSTALL) -d $(DESTDIR)$(sbindir)
 -	$(INSTALL) -s -o root -g bin diald $(DESTDIR)$(sbindir)/diald
-+	$(INSTALL) -s -o $(ROOTUID) -g $(BINGRP) diald $(DESTDIR)$(sbindir)/diald
++	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) diald $(DESTDIR)$(sbindir)/diald
  	$(INSTALL) -d $(DESTDIR)$(mandir)/man1 $(DESTDIR)$(mandir)/man5 \
  		$(DESTDIR)$(mandir)/man8
 -	$(INSTALL) -o root -g bin -m 0644 doc/diald.man $(DESTDIR)$(mandir)/man8/diald.8
