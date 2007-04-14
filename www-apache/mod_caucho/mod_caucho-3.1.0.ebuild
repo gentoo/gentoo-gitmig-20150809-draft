@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.1.0.ebuild,v 1.5 2007/04/14 19:49:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.1.0.ebuild,v 1.6 2007/04/14 21:05:31 nelchael Exp $
 
 inherit eutils apache-module autotools
 
@@ -30,12 +30,13 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-ssl.patch"
+	epatch "${FILESDIR}/${P}-java.patch"
 	eautoreconf
 	chmod 755 ./configure
 }
 
 src_compile() {
-	econf --disable-jni --with-apxs=${APXS2} || die "econf failed"
+	econf --with-apxs=${APXS2} || die "econf failed"
 
 	emake -j1 -C "${S}/modules/c/src/apache2/" || die "emake failed"
 }
