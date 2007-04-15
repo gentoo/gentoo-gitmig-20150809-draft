@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.390 2007/03/06 16:11:48 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.391 2007/04/15 12:52:25 robbat2 Exp $
+
+*mysql-5.0.38 (15 Apr 2007)
+
+  15 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.38.ebuild:
+  Version bump, for two security bugs: #171934 and #170126.
 
   06 Mar 2007; Luca Longinotti <chtekk@gentoo.org> mysql-5.0.34.ebuild:
   Port libtool fix properly to mysql.eclass.
