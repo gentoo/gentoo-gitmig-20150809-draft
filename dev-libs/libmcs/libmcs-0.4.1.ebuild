@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.4.1.ebuild,v 1.5 2007/04/13 21:32:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.4.1.ebuild,v 1.6 2007/04/15 20:51:56 welp Exp $
 
 inherit flag-o-matic kde-functions multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://sacredspiral.co.uk/~nenolod/mcs/${MY_P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gnome kde"
 
 RDEPEND="gnome? ( >=gnome-base/gconf-2.6.0 )
