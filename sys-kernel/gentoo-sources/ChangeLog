@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.381 2007/04/10 04:03:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.382 2007/04/15 17:13:40 dsd Exp $
+
+*gentoo-sources-2.6.20-r6 (15 Apr 2007)
+
+  15 Apr 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.20-r6.ebuild:
+  Update to 2.6.20.7. Fix i2c-i801 resume hang.
 
   10 Apr 2007; Joseph Jezak <josejx@gentoo.org>
   gentoo-sources-2.6.20-r5.ebuild:
