@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.39 2007/03/17 19:44:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.40 2007/04/15 20:03:45 corsair Exp $
+
+  15 Apr 2007; Markus Rothe <corsair@gentoo.org> bsf-2.3.0-r5.ebuild:
+  Stable on ppc64
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> bsf-2.3.0-r5.ebuild:
   Stable on ppc wrt bug 170253
