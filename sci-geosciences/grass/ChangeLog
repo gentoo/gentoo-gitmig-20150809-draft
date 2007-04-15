@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.33 2007/03/13 00:32:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.34 2007/04/15 22:43:39 opfer Exp $
+
+  15 Apr 2007; Christian Faulhammer <opfer@gentoo.org> grass-5.4.0.ebuild:
+  moved from USE flag tcltk to tk, see bug 17808
 
   13 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> grass-6.2.0-r1.ebuild:
   QA: which -> type -P

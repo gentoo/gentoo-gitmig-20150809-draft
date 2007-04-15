@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.9 2007/01/29 01:57:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.10 2007/04/15 22:43:39 opfer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,28 +35,27 @@ RDEPEND=">=sys-devel/make-3.80
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	nls? ( x11-terms/mlterm )
-	tcltk? ( >=dev-lang/tcl-8.3.4
-		>=dev-lang/tk-8.3.4 )
+	tk? ( >=dev-lang/tk-8.3.4 )
 	truetype? ( >=media-libs/freetype-2.0.0 )
 	motif? ( x11-libs/openmotif )
 	X? ( || (
-	    ( x11-libs/libXmu
-	    x11-libs/libXext
-	    x11-libs/libXp
-	    x11-libs/libX11
-	    x11-libs/libXt
-	    x11-libs/libSM
-	    x11-libs/libICE
-	    x11-libs/libXpm
-	    x11-libs/libXaw )
+		( x11-libs/libXmu
+		x11-libs/libXext
+		x11-libs/libXp
+		x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libSM
+		x11-libs/libICE
+		x11-libs/libXpm
+		x11-libs/libXaw )
 	virtual/x11 )
 	)"
 
 DEPEND="${RDEPEND}
 	X? ( || (
-	    ( x11-proto/xproto x11-proto/xextproto )
-	        virtual/x11
-	    )
+		( x11-proto/xproto x11-proto/xextproto )
+			virtual/x11
+		)
 	)"
 
 src_unpack() {
@@ -93,7 +92,7 @@ src_compile() {
 	../configure ${MYCONF} \
 		`use_with X` \
 		`use_with readline` \
-		`use_with tcltk` \
+		`use_with tk tcltk` \
 		`use_with postgres` \
 		`use_with motif` \
 		`use_with blas` \
