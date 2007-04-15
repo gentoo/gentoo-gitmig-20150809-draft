@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9_pre2.ebuild,v 1.2 2007/01/14 00:35:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9_pre2.ebuild,v 1.3 2007/04/15 11:21:22 aballier Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -33,8 +33,16 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+}
+
 src_compile() {
 	Xeconf --disable-suid-build \
+		--disable-optimize \
 		$(use_enable lash) \
 		$(use_enable debug) || die "configure failed"
 
@@ -42,9 +50,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README SECURITY README.*
-	mv ${D}/usr/bin/muse ${D}/usr/bin/museseq
+	mv "${D}/usr/bin/muse" "${D}/usr/bin/museseq"
 }
 
 pkg_postinst() {

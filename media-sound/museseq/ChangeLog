@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/museseq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.47 2007/02/22 01:18:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.48 2007/04/15 11:21:22 aballier Exp $
+
+  15 Apr 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/museseq-0.9_pre2-asneeded.patch, museseq-0.9_pre2.ebuild:
+  Fix build with asneeded, thanks to Daniel Lin <dtlin@andrew.cmu.edu>, bug
+  #174358
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
