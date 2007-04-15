@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/klibido
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.22 2007/04/12 21:56:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.23 2007/04/15 00:04:17 swegener Exp $
+
+  15 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  -files/0.2.3-availablegroups.patch, -klibido-0.2.3-r1.ebuild,
+  -klibido-0.2.4.1.ebuild, klibido-0.2.5.ebuild:
+  Cleanup.
 
   12 Apr 2007; philantrop@gentoo.org klibido-0.2.5.ebuild:
   Added support for sys-libs/db-4.5*.

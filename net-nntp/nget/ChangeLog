@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/nget
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/ChangeLog,v 1.9 2006/07/15 11:08:30 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/ChangeLog,v 1.10 2007/04/15 00:08:45 swegener Exp $
+
+  15 Apr 2007; Sven Wegener <swegener@gentoo.org> -nget-0.26.ebuild,
+  -nget-0.27.ebuild:
+  Cleanup.
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove rphillips from metadata.xml as he's retired.
