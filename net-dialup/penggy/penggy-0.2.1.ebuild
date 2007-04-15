@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.12 2007/01/10 19:51:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.13 2007/04/15 09:29:20 mrness Exp $
 
 inherit eutils autotools
 
@@ -20,6 +20,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-nostrip.patch"
 	eautoconf
 }
 
