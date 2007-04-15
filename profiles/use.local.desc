@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2746 2007/04/15 02:08:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2747 2007/04/15 08:22:52 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1527,6 +1527,7 @@ net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-proxy/tsocks:tordns - Apply tordns patch which allows transparent TORification of the DNS queries
 net-voip/linphone:ilbc - Build ILBC codec plugin
 net-voip/linphone:novideo - Disable video support
+net-voip/linphone:console - Build console interface
 net-voip/yate:gsm - Build gsm codec plugin
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
