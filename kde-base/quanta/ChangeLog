@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.67 2007/02/04 03:18:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.68 2007/04/15 18:34:03 philantrop Exp $
+
+  15 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org> quanta-3.5.6.ebuild:
+  Removed some bogus RDEPENDS and added a post-install, fixes bugs 101882 
+  and 142348.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -quanta-3.5.2.ebuild:
   Remove old versions.
