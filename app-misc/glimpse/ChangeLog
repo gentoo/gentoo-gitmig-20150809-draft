@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/glimpse
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.27 2007/02/06 12:10:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.28 2007/04/15 16:40:21 drac Exp $
+
+  15 Apr 2007; Samuli Suominen <drac@gentoo.org> -files/4.18.0-gcc3.patch,
+  glimpse-4.17.4.ebuild, -glimpse-4.18.0.ebuild:
+  Remove old version and leave mips with broken one.
 
   06 Feb 2007; Simon Stelling <blubb@gentoo.org> glimpse-4.18.5.ebuild:
   stable on amd64
