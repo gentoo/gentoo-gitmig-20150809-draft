@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/libmba-0.9.1.ebuild,v 1.1 2006/10/08 15:42:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/libmba-0.9.1.ebuild,v 1.2 2007/04/15 20:27:54 ticho Exp $
 
 DESCRIPTION="A library of generic C modules."
 HOMEPAGE="http://www.ioplex.com/~miallen/libmba/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ioplex.com/~miallen/libmba/dl/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
