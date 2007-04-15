@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>beu@gentoo.org</email>
-    <name>Elfyn McBratney</name>
-  </maintainer>
+	<maintainer>
+		<email>voyageur@gentoo.org</email>
+		<name>Bernard Cafarelli</name>
+	</maintainer>
+	<longdescription>
+		Client to configure an IPv6 tunnel to freenet6
+	</longdescription>
 </pkgmetadata>
