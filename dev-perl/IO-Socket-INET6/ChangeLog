@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.14 2007/01/15 23:13:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.15 2007/04/15 10:56:37 mcummings Exp $
+
+  15 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  IO-Socket-INET6-2.51.ebuild:
+  Bug 115004, disabling tests
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   IO-Socket-INET6-2.51.ebuild:
