@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2745 2007/04/14 11:10:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2746 2007/04/15 02:08:03 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -753,6 +753,8 @@ kde-base/kopete:winpopup - Builds WinPopUp protocol handler
 kde-base/kopete:xscreensaver - Enables support for XScreenSaver extension
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
+kde-misc/ksensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
+kde-misc/ksensors:ibmacpi - Enable monitoring of ACPI sensor data on IBM Thinkpad notebooks.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/claws-mail:bogofilter - Build bogofilter plugin
 mail-client/claws-mail:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
