@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.5.ebuild,v 1.6 2007/04/15 19:00:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.5.ebuild,v 1.7 2007/04/15 19:37:08 corsair Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wireshark/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 portaudio snmp ssl kerberos threads selinux"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
