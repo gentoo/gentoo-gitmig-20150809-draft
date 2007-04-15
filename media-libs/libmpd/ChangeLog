@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.16 2007/04/11 07:32:43 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.17 2007/04/15 11:21:37 nixnut Exp $
+
+  15 Apr 2007; nixnut <nixnut@gentoo.org> libmpd-0.13.0.ebuild:
+  Stable on ppc wrt bug 174098
 
   11 Apr 2007; Peter Weller <welp@gentoo.org> libmpd-0.13.0.ebuild:
   Stable on amd64 wrt bug 174098
