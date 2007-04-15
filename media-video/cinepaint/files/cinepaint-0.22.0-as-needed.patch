@@ -1,0 +1,12 @@
+Index: cinepaint-0.22-0/lib/Makefile.in
+===================================================================
+--- cinepaint-0.22-0.orig/lib/Makefile.in
++++ cinepaint-0.22-0/lib/Makefile.in
+@@ -299,6 +299,7 @@ EXTRA_DIST = version.h.in
+ lib_LTLIBRARIES = libcinepaint.la 
+ libcinepaint_la_LIBADD = \
+ 	./wire/libwire.la \
++	$(GTK_LIBS) \
+ 	$(top_builddir)/libhalf/libcinepaintHalf.la
+ 
+ libcinepaint_la_SOURCES = \
