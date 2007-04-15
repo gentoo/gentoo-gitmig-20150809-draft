@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.5 2007/04/15 22:48:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.6 2007/04/15 23:56:20 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -64,7 +64,8 @@ DEPEND="${DEPEND}
 	xscreensaver? ( x11-proto/scrnsaverproto )
 	xinerama? ( x11-proto/xineramaproto )
 	x11-apps/bdftopcf
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	x11-apps/xhost"
 
 need-kde 3.5.6
 
