@@ -1,0 +1,23 @@
+diff -Nru xc-4.3.2.orig/crc.c xc-4.3.2/crc.c
+--- xc-4.3.2.orig/crc.c	1996-09-27 05:47:17.000000000 +0300
++++ xc-4.3.2/crc.c	2007-04-15 14:34:09.000000000 +0300
+@@ -5,6 +5,7 @@
+  *  Crc - 32 BIT ANSI X3.66 CRC checksum files
+  */
+ #include <stdio.h>
++#include <stdlib.h>
+ #define OK 0
+ #define ERROR (-1)
+ #define LINT_ARGS
+diff -Nru xc-4.3.2.orig/xcterm.c xc-4.3.2/xcterm.c
+--- xc-4.3.2.orig/xcterm.c	1996-09-25 06:58:31.000000000 +0300
++++ xc-4.3.2/xcterm.c	2007-04-15 14:33:46.000000000 +0300
+@@ -4,6 +4,8 @@
+ #define XCTERM_C 1
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
