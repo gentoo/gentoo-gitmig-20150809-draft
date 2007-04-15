@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.73 2007/04/14 10:06:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.74 2007/04/15 11:43:56 masterdriverz Exp $
+
+*git-sources-2.6.21_rc6-r7 (15 Apr 2007)
+
+  15 Apr 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +git-sources-2.6.21_rc6-r7.ebuild:
+  Version bump
 
 *git-sources-2.6.21_rc6-r6 (14 Apr 2007)
 
