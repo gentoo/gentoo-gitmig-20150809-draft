@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/squeeze
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.2 2007/04/15 16:15:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.3 2007/04/15 20:12:02 chainsaw Exp $
+
+  15 Apr 2007; Tony Vroon <chainsaw@gentoo.org> squeeze-0.2.0.ebuild:
+  Keyword ~ppc64. Tested on 64UL with GCC 4.1.2
 
   15 Apr 2007; Samuli Suominen <drac@gentoo.org> squeeze-0.2.0.ebuild:
   RESTRICT="test" and add missing gtk-doc dep.

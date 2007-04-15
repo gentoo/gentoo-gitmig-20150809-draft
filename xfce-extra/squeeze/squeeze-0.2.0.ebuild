@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/squeeze-0.2.0.ebuild,v 1.2 2007/04/15 16:15:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/squeeze-0.2.0.ebuild,v 1.3 2007/04/15 20:12:02 chainsaw Exp $
 
 inherit xfce44
 
@@ -10,7 +10,7 @@ DESCRIPTION="Archive manager"
 HOMEPAGE="http://squeeze.xfce.org"
 SRC_URI="http://${PN}.xfce.org/downloads/${P}${COMPRESS}"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc64"
 IUSE="debug doc"
 
 RESTRICT="test"
