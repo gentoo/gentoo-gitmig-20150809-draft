@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sound</herd>
+<maintainer>
+		<email>ticho@gentoo.org</email>
+		<name>Andrej Kacian</name>
+</maintainer>
+<longdescription>
+This plugin shows more detailed information about mpd's database.
+It can show what artist has the most playing time, or what genre.
+This plugin can be slow for larger databases.
+</longdescription>
+</pkgmetadata>
