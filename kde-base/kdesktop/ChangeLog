@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.87 2007/02/09 15:31:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.88 2007/04/15 22:46:08 carlo Exp $
+
+*kdesktop-3.5.6-r1 (15 Apr 2007)
+
+  15 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kdesktop-3.5.6-r1.ebuild:
+  Fix bug #143375.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   kdesktop-3.5.5-r1.ebuild:
