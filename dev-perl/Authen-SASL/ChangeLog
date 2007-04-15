@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.35 2007/03/05 11:12:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.36 2007/04/15 20:27:28 corsair Exp $
+
+  15 Apr 2007; Markus Rothe <corsair@gentoo.org> Authen-SASL-2.10.ebuild:
+  Stable on ppc64
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Authen-SASL-2.10.ebuild:
   Stable on x86, bug #169152.

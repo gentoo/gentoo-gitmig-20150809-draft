@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.35 2007/03/05 11:26:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.36 2007/04/15 20:34:36 corsair Exp $
+
+  15 Apr 2007; Markus Rothe <corsair@gentoo.org> Clone-0.22.ebuild:
+  Stable on ppc64
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Clone-0.22.ebuild:
   Stable on x86, bug #169152.

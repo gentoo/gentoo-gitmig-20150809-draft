@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.55 2007/03/13 15:54:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.56 2007/04/15 20:38:38 corsair Exp $
+
+  15 Apr 2007; Markus Rothe <corsair@gentoo.org> DBD-Pg-1.49.ebuild:
+  Stable on ppc64
 
   13 Mar 2007; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.42.ebuild,
   DBD-Pg-1.43.ebuild, DBD-Pg-1.48.ebuild, DBD-Pg-1.49.ebuild:
