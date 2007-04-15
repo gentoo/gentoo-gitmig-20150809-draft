@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.4 2006/12/22 22:27:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.5 2007/04/15 18:43:43 betelgeuse Exp $
 
-inherit java-pkg-2
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A text-processing Java classes that serialize objects to XML and back again."
 HOMEPAGE="http://xstream.codehaus.org/index.html"
@@ -27,14 +27,13 @@ COMMON_DEPS="
 "
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
-	>=dev-java/java-config-2.0.31
-	dev-java/ant-core
 	app-arch/unzip
 	source? ( app-arch/zip )
 	${COMMON_DEPS}"
 RDEPEND=">=virtual/jre-1.4
-	dev-java/jsr173
 	${COMMON_DEPS}"
+
+JAVA_PKG_BSFIX="off"
 
 src_unpack() {
 	unpack ${A}
