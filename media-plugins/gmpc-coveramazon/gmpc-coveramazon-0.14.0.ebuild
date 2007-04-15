@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/gmpc-coveramazon-0.14.0.ebuild,v 1.1 2007/04/15 14:08:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/gmpc-coveramazon-0.14.0.ebuild,v 1.2 2007/04/15 14:17:15 ticho Exp $
 
 GMPCV="0.14.0"
 DESCRIPTION="This plugin fetches cover art, and album information from amazon."
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=media-sound/gmpc-${GMPCV}"
+DEPEND=">=media-sound/gmpc-${GMPCV}
+		dev-libs/libxml2"
 
 src_compile ()
 {
