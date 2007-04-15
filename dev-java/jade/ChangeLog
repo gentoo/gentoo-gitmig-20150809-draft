@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jade
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.17 2007/02/21 23:34:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.18 2007/04/15 05:20:07 ali_bush Exp $
+
+*jade-3.3-r1 (15 Apr 2007)
+
+  15 Apr 2007; Alistair John Bush <ali_bush@gentoo.org> +jade-3.3-r1.ebuild:
+  Revision bump to generation 2 eclasses.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
