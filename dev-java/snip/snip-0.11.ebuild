@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snip/snip-0.11.ebuild,v 1.1 2007/01/26 16:09:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snip/snip-0.11.ebuild,v 1.2 2007/04/15 11:05:05 fordfrog Exp $
 
+JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="an Apache ANT optional task that extracts snippets of code from text files"
@@ -11,7 +12,7 @@ SRC_URI="http://www.martiansoftware.com/lab/${PN}/${P}-src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc source"
+IUSE=""
 
 COMMON_DEP=">=dev-java/ant-core-1.5.4"
 RDEPEND=">=virtual/jre-1.4
@@ -32,7 +33,7 @@ src_unpack() {
 EANT_GENTOO_CLASSPATH="ant-core"
 
 src_install() {
-	java-pkg_newjar dist/${P}.jar ${PN}.jar
+	java-pkg_newjar dist/${P}.jar
 	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/java/com
 }
