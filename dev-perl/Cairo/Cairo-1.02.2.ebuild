@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.02.2.ebuild,v 1.5 2007/03/09 13:36:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.02.2.ebuild,v 1.6 2007/04/15 13:53:51 mcummings Exp $
 
 inherit perl-module versionator
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86"
 
-SRC_TEST="do"
+#SRC_TEST="do"
 
 DEPEND="x11-libs/cairo
 	>=dev-perl/extutils-depends-0.205
