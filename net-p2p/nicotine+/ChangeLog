@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.13 2007/04/10 16:37:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.14 2007/04/15 11:25:31 nixnut Exp $
+
+  15 Apr 2007; nixnut <nixnut@gentoo.org> nicotine+-1.2.7.1.ebuild:
+  Stable on ppc wrt bug 174052
 
   10 Apr 2007; Raúl Porcel <armin76@gentoo.org> nicotine+-1.2.7.1.ebuild:
   x86 stable wt bug 174052
