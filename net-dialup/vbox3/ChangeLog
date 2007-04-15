@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/vbox3
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.4 2006/03/16 22:15:48 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.5 2007/04/15 11:29:58 mrness Exp $
+
+  15 Apr 2007; Alin Năstac <mrness@gentoo.org>
+  +files/vbox3-0.1.9-implicit-decl.patch, vbox3-0.1.9.ebuild:
+  Fix implicit declaration warning.
 
   16 Mar 2006; Alin Nastac <mrness@gentoo.org> vbox3-0.1.9.ebuild:
   Remove virtual/libc dependency.

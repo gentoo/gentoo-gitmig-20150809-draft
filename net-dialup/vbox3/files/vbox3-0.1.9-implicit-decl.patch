@@ -1,0 +1,11 @@
+diff -Nru vbox3-0.1.9.orig/vboxgetty/lock.c vbox3-0.1.9/vboxgetty/lock.c
+--- vbox3-0.1.9.orig/vboxgetty/lock.c	2001-01-14 15:50:20.000000000 +0200
++++ vbox3-0.1.9/vboxgetty/lock.c	2007-04-15 14:27:35.000000000 +0300
+@@ -10,6 +10,7 @@
+ 
+ #include <stdio.h>
+ #include <unistd.h>
++#include <string.h>
+ #include <sys/types.h>
+ #include <signal.h>
+ #include <errno.h>
