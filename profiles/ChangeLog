@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.286 2007/04/15 09:43:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.287 2007/04/15 13:40:56 armin76 Exp $
+
+  15 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Unmask xulrunner again
 
   15 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   P.mask net-libs/xulrunner until i fix it
