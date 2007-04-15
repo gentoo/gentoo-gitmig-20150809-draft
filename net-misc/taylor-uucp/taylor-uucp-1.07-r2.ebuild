@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r1.ebuild,v 1.7 2007/01/31 00:34:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r2.ebuild,v 1.1 2007/04/15 15:24:18 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,6 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -D_GNU_SOURCE -fno-strict-aliasing
 	econf --with-newconfigdir=/etc/uucp || die "configure failed"
 	make || die "make failed"
 }

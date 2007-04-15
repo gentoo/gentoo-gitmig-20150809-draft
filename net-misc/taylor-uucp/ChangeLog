@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/taylor-uucp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.30 2007/03/23 08:46:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.31 2007/04/15 15:24:18 mrness Exp $
+
+*taylor-uucp-1.07-r2 (15 Apr 2007)
+
+  15 Apr 2007; Alin Năstac <mrness@gentoo.org> -taylor-uucp-1.07-r1.ebuild,
+  +taylor-uucp-1.07-r2.ebuild:
+  Fix QA warnings.
 
   23 Mar 2007; Alin Năstac <mrness@gentoo.org>
   -files/gentoo-uucp-1.07.patch, -taylor-uucp-1.07.ebuild:
