@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junitperf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.12 2007/04/13 19:35:17 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.13 2007/04/15 12:38:37 nixnut Exp $
+
+  15 Apr 2007; nixnut <nixnut@gentoo.org> junitperf-1.9.1-r1.ebuild:
+  Stable on ppc wrt bug 174400
 
   13 Apr 2007; <welp@gentoo.org> junitperf-1.9.1-r1.ebuild:
   Stable on amd64 wrt bug 174400
