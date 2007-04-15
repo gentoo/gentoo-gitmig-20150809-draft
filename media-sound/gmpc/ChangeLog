@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.26 2007/04/11 07:34:07 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.27 2007/04/15 11:23:16 nixnut Exp $
+
+  15 Apr 2007; nixnut <nixnut@gentoo.org> gmpc-0.14.0.ebuild:
+  Stable on ppc wrt bug 174098
 
   11 Apr 2007; Peter Weller <welp@gentoo.org> gmpc-0.14.0.ebuild:
   Stable on amd64 wrt bug 174098
