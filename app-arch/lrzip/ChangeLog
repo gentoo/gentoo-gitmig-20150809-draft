@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/lrzip
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.1 2007/04/15 09:49:46 lu_zero Exp $
+
+*lrzip-0.18 (15 Apr 2007)
+
+  15 Apr 2007; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +lrzip-0.18.ebuild:
+  first commit
+
