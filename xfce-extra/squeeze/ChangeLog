@@ -1,0 +1,9 @@
+# ChangeLog for xfce-extra/squeeze
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.1 2007/04/15 16:04:46 drac Exp $
+
+*squeeze-0.2.0 (15 Apr 2007)
+
+  15 Apr 2007; Samuli Suominen <drac@gentoo.org> +squeeze-0.2.0.ebuild:
+  Initial commit thanks to psyBSD.
+
