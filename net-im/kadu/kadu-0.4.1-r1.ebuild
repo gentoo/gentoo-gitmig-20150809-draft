@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.1-r1.ebuild,v 1.4 2007/02/11 18:16:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.1-r1.ebuild,v 1.5 2007/04/15 22:38:20 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,7 +37,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="X debug alsa arts esd voice speech nas oss spell ssl tcltk xosd amarok extraicons extramodules mail"
+IUSE="X debug alsa arts esd voice speech nas oss spell ssl tk xosd amarok extraicons extramodules mail"
 
 DEPEND="=x11-libs/qt-3*
 	media-libs/libsndfile
@@ -49,12 +49,12 @@ DEPEND="=x11-libs/qt-3*
 	spell? ( app-dicts/aspell-pl )
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
-	tcltk? ( >=dev-lang/tcl-8.4.0 >=dev-lang/tk-8.4.0 )
+	tk? ( >=dev-lang/tcl-8.4.0 >=dev-lang/tk-8.4.0 )
 	xosd? ( x11-libs/xosd )"
 
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/stable/0.4.0/amarok-${AMAROK}.tar.gz )
-	tcltk? ( http://scripts.one.pl/tcl4kadu/files/stable/${PV}/tcl_scripting-${TCL}.tar.gz )
+	tk? ( http://scripts.one.pl/tcl4kadu/files/stable/${PV}/tcl_scripting-${TCL}.tar.gz )
 	extraicons? (
 		http://biprowod.wroclaw.pl/kadu/kadu-theme-alt_cryst.tar.bz2
 		http://www.kadu.net/download/additions/kadu-theme-crystal-16.tar.bz2
@@ -123,7 +123,7 @@ src_unpack() {
 	enable_module spell spellchecker
 	enable_module xosd xosd_notify
 	enable_module mail mail
-	enable_module tcltk "tcl_scripting"
+	enable_module tk "tcl_scripting"
 
 	enable_module extramodules weather
 	enable_module extramodules ext_info
@@ -159,7 +159,7 @@ src_compile() {
 	module_config desktop_docking m
 
 	if use extramodules; then
-		if use !tcltk; then
+		if use ! tk; then
 			ewarn "script_chess depends on module_tcl_scripting;"
 			ewarn "It won't be installed."
 		fi
@@ -167,7 +167,7 @@ src_compile() {
 
 	# Firewall
 	if use extramodules; then
-		if use !tcltk; then
+		if use ! tk; then
 			ewarn "script_firewall depends on module_tcl_scripting;"
 			ewarn "It won't be installed."
 		fi
@@ -222,7 +222,7 @@ src_install() {
 	# Installing additional scripts and plugins
 	# Chess and Firewall
 	if use extramodules; then
-		if use tcltk; then
+		if use tk; then
 		einfo "Installing Chess script"
 		insinto /usr/share/kadu/modules/data/tcl_scripting/scripts
 		doins ${WORKDIR}/KaduChess/{data,pics,KaduChess.tcl}
