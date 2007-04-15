@@ -1,0 +1,11 @@
+diff -Nru radiusclient-ng-0.5.2.orig/src/radiusclient.c radiusclient-ng-0.5.2/src/radiusclient.c
+--- radiusclient-ng-0.5.2.orig/src/radiusclient.c	2005-03-03 13:25:57.000000000 +0200
++++ radiusclient-ng-0.5.2/src/radiusclient.c	2007-04-15 13:11:32.000000000 +0300
+@@ -30,6 +30,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
++#include <string.h>
+ 
+ #include <radiusclient-ng.h>
+ 
