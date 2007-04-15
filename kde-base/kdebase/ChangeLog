@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.351 2007/04/14 16:20:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.352 2007/04/15 22:48:47 carlo Exp $
+
+  15 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdebase-3.5.6-r1.ebuild:
+  Care for some tests.
 
   14 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdebase-3.5.6-r1.ebuild:
   Fix bug #156758.

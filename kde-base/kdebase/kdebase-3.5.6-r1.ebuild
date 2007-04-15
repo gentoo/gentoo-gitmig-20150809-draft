@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.4 2007/04/14 16:20:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r1.ebuild,v 1.5 2007/04/15 22:48:47 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -92,6 +92,14 @@ src_unpack() {
 	sed -i -e "s:TESTS =.*:TESTS =:" ${S}/kioslave/smtp/Makefile.am || die "sed failed"
 	sed -i -e "s:TESTS =.*:TESTS =:" ${S}/kioslave/trash/Makefile.am || die "sed failed"
 	sed -i -e "s:SUBDIRS = viewer test:SUBDIRS = viewer:" ${S}/nsplugins/Makefile.am || die "sed failed"
+
+	if ! [[ $(xhost >> /dev/null 2>/dev/null) ]] ; then
+		einfo "User ${USER} has no X access, disabling some tests."
+		for ioslave in media remote home system ; do
+			sed -e "s:check\: test${ioslave}::" -e "s:./test${ioslave}::" \
+				-i kioslave/${ioslave}/Makefile.am || die "sed failed"
+		done
+	fi
 }
 
 src_compile() {
