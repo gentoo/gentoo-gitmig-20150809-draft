@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.285 2007/04/15 08:22:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.286 2007/04/15 09:43:14 armin76 Exp $
+
+  15 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  P.mask net-libs/xulrunner until i fix it
 
   15 Apr 2007; Stefan Schweizer <genstef@gentoo.org> use.local.desc:
   Add console use for linphone
