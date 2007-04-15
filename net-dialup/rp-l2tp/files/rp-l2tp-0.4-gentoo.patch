@@ -1,54 +1,6 @@
-diff -Nru rp-l2tp-0.4.orig/Makefile.in rp-l2tp-0.4/Makefile.in
---- rp-l2tp-0.4.orig/Makefile.in	2004-07-01 18:17:11.000000000 +0300
-+++ rp-l2tp-0.4/Makefile.in	2004-11-24 23:36:23.181183832 +0200
-@@ -81,13 +81,13 @@
- 
- install: all
- 	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
--	$(install) -m 755 -s l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
--	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp
--	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp/l2tp.conf.example
-+	$(install) -m 755 l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)/rp-l2tpd
-+	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/rp-l2tp
-+	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/rp-l2tp/rp-l2tpd.conf.example
- 	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
- 	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5
--	$(install) -m 644 man/l2tpd.8 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
--	$(install) -m 644 man/l2tp.conf.5 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5
-+	$(install) -m 644 man/l2tpd.8 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8/rp-l2tpd.8
-+	$(install) -m 644 man/l2tp.conf.5 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5/rp-l2tpd.conf.5
- 
- 	$(MAKE) -C handlers install
- 
-diff -Nru rp-l2tp-0.4.orig/handlers/Makefile.in rp-l2tp-0.4/handlers/Makefile.in
---- rp-l2tp-0.4.orig/handlers/Makefile.in	2002-09-30 22:45:00.000000000 +0300
-+++ rp-l2tp-0.4/handlers/Makefile.in	2004-11-24 23:36:23.181183832 +0200
-@@ -39,7 +39,7 @@
- 
- install: all
- 	-mkdir -p $(RPM_INSTALL_ROOT)$(sbindir)
--	-mkdir -p $(RPM_INSTALL_ROOT)$(prefix)/lib/l2tp/plugins
--	$(install) -m 755 -s l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)
--	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(prefix)/lib/l2tp/plugins
-+	-mkdir -p $(RPM_INSTALL_ROOT)$(prefix)/lib/rp-l2tpd/plugins
-+	$(install) -m 755 l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)/rp-l2tpd-control
-+	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(prefix)/lib/rp-l2tpd/plugins
- distclean: clean
-diff -Nru rp-l2tp-0.4.orig/handlers/cmd-control.c rp-l2tp-0.4/handlers/cmd-control.c
---- rp-l2tp-0.4.orig/handlers/cmd-control.c	2002-09-30 22:45:00.000000000 +0300
-+++ rp-l2tp-0.4/handlers/cmd-control.c	2004-11-24 23:36:23.182183680 +0200
-@@ -52,7 +52,7 @@
- 
-     memset(&addr, 0, sizeof(addr));
-     addr.sun_family = AF_LOCAL;
--    strncpy(addr.sun_path, "/var/run/l2tpctrl", sizeof(addr.sun_path) - 1);
-+    strncpy(addr.sun_path, "/var/run/rp-l2tpdctrl", sizeof(addr.sun_path) - 1);
- 
-     fd = socket(AF_LOCAL, SOCK_STREAM, 0);
-     if (fd < 0) {
 diff -Nru rp-l2tp-0.4.orig/handlers/cmd.c rp-l2tp-0.4/handlers/cmd.c
---- rp-l2tp-0.4.orig/handlers/cmd.c	2004-07-01 17:58:56.000000000 +0300
-+++ rp-l2tp-0.4/handlers/cmd.c	2004-11-24 23:36:23.182183680 +0200
+--- rp-l2tp-0.4.orig/handlers/cmd.c	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/handlers/cmd.c	2007-04-15 13:29:18.000000000 +0300
 @@ -162,7 +162,7 @@
  
      /* We have hit the end of our options.  Open command socket */
@@ -58,9 +10,43 @@ diff -Nru rp-l2tp-0.4.orig/handlers/cmd.c rp-l2tp-0.4/handlers/cmd.c
      }
  
      (void) remove(sockname);
+diff -Nru rp-l2tp-0.4.orig/handlers/cmd-control.c rp-l2tp-0.4/handlers/cmd-control.c
+--- rp-l2tp-0.4.orig/handlers/cmd-control.c	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/handlers/cmd-control.c	2007-04-15 13:29:18.000000000 +0300
+@@ -52,7 +52,7 @@
+ 
+     memset(&addr, 0, sizeof(addr));
+     addr.sun_family = AF_LOCAL;
+-    strncpy(addr.sun_path, "/var/run/l2tpctrl", sizeof(addr.sun_path) - 1);
++    strncpy(addr.sun_path, "/var/run/rp-l2tpdctrl", sizeof(addr.sun_path) - 1);
+ 
+     fd = socket(AF_LOCAL, SOCK_STREAM, 0);
+     if (fd < 0) {
+diff -Nru rp-l2tp-0.4.orig/handlers/Makefile.in rp-l2tp-0.4/handlers/Makefile.in
+--- rp-l2tp-0.4.orig/handlers/Makefile.in	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/handlers/Makefile.in	2007-04-15 13:33:41.000000000 +0300
+@@ -9,6 +9,7 @@
+ install=@INSTALL@
+ install_dir=@INSTALL@ -d
+ sbindir=@sbindir@
++libdir=@libdir@
+ 
+ HANDLERS=sync-pppd.so cmd.so
+ 
+@@ -39,7 +40,7 @@
+ 
+ install: all
+ 	-mkdir -p $(RPM_INSTALL_ROOT)$(sbindir)
+-	-mkdir -p $(RPM_INSTALL_ROOT)$(prefix)/lib/l2tp/plugins
+-	$(install) -m 755 -s l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)
+-	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(prefix)/lib/l2tp/plugins
++	-mkdir -p $(RPM_INSTALL_ROOT)$(libdir)/rp-l2tpd/plugins
++	$(install) -m 755 l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)/rp-l2tpd-control
++	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(libdir)/rp-l2tpd/plugins
+ distclean: clean
 diff -Nru rp-l2tp-0.4.orig/main.c rp-l2tp-0.4/main.c
---- rp-l2tp-0.4.orig/main.c	2002-09-30 22:45:00.000000000 +0300
-+++ rp-l2tp-0.4/main.c	2004-11-24 23:36:23.183183528 +0200
+--- rp-l2tp-0.4.orig/main.c	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/main.c	2007-04-15 13:29:18.000000000 +0300
 @@ -27,7 +27,7 @@
  static void
  usage(int argc, char *argv[], int exitcode)
@@ -79,11 +65,48 @@ diff -Nru rp-l2tp-0.4.orig/main.c rp-l2tp-0.4/main.c
  	l2tp_die();
      }
  
+diff -Nru rp-l2tp-0.4.orig/Makefile.in rp-l2tp-0.4/Makefile.in
+--- rp-l2tp-0.4.orig/Makefile.in	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/Makefile.in	2007-04-15 13:39:09.000000000 +0300
+@@ -25,12 +25,13 @@
+ install=@INSTALL@
+ install_dir=@INSTALL@ -d
+ sbindir=@sbindir@
++libdir=@libdir@
+ 
+ OBJS=auth.o debug.o dgram.o main.o md5.o network.o options.o peer.o session.o tunnel.o utils.o
+ EXTRA_LIBS=@LIBEVENT@/*.o -ldl
+ 
+ SRCS=$(OBJS:.o=.c)
+-CFLAGS=-g -I.. -I@LIBEVENT@ -Wall -Wstrict-prototypes -ansi -pedantic -D_GNU_SOURCE -DVERSION=\"$(VERSION)\" -DPREFIX=\"$(prefix)\"
++CFLAGS=-g -I.. -I@LIBEVENT@ -Wall -Wstrict-prototypes -ansi -pedantic -D_GNU_SOURCE -DVERSION=\"$(VERSION)\" -DPREFIX=\"$(prefix)\" -DLIBDIR=\"$(libdir)\"
+ 
+ TARGETS=l2tpd libl2tp.a handlers
+ 
+@@ -81,13 +82,13 @@
+ 
+ install: all
+ 	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
+-	$(install) -m 755 -s l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
+-	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp
+-	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp/l2tp.conf.example
++	$(install) -m 755 l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)/rp-l2tpd
++	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/rp-l2tp
++	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/rp-l2tp/rp-l2tpd.conf.example
+ 	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
+ 	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5
+-	$(install) -m 644 man/l2tpd.8 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
+-	$(install) -m 644 man/l2tp.conf.5 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5
++	$(install) -m 644 man/l2tpd.8 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8/rp-l2tpd.8
++	$(install) -m 644 man/l2tp.conf.5 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5/rp-l2tpd.conf.5
+ 
+ 	$(MAKE) -C handlers install
+ 
 diff -Nru rp-l2tp-0.4.orig/man/l2tp.conf.5 rp-l2tp-0.4/man/l2tp.conf.5
---- rp-l2tp-0.4.orig/man/l2tp.conf.5	2004-07-01 17:58:56.000000000 +0300
-+++ rp-l2tp-0.4/man/l2tp.conf.5	2004-11-24 23:47:07.911169976 +0200
+--- rp-l2tp-0.4.orig/man/l2tp.conf.5	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/man/l2tp.conf.5	2007-04-15 13:29:18.000000000 +0300
 @@ -1,13 +1,13 @@
- .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.3 2006/09/23 15:04:50 mrness Exp $ 
+ .\" $Id: rp-l2tp-0.4-gentoo.patch,v 1.1 2007/04/15 10:42:17 mrness Exp $ 
  .\" LIC: GPL
 -.TH L2TP.CONF 5 "11 March 2002"
 +.TH RP-L2TPD.CONF 5 "11 March 2002"
@@ -113,10 +136,10 @@ diff -Nru rp-l2tp-0.4.orig/man/l2tp.conf.5 rp-l2tp-0.4/man/l2tp.conf.5
 -\fBl2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
 +\fBrp-l2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
 diff -Nru rp-l2tp-0.4.orig/man/l2tpd.8 rp-l2tp-0.4/man/l2tpd.8
---- rp-l2tp-0.4.orig/man/l2tpd.8	2002-09-30 22:45:00.000000000 +0300
-+++ rp-l2tp-0.4/man/l2tpd.8	2004-11-24 23:44:47.989441312 +0200
+--- rp-l2tp-0.4.orig/man/l2tpd.8	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/man/l2tpd.8	2007-04-15 13:29:18.000000000 +0300
 @@ -1,14 +1,14 @@
- .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.3 2006/09/23 15:04:50 mrness Exp $ 
+ .\" $Id: rp-l2tp-0.4-gentoo.patch,v 1.1 2007/04/15 10:42:17 mrness Exp $ 
  .\" LIC: GPL
 -.TH L2TPD 8 "11 March 2002"
 +.TH RP-L2TPD 8 "11 March 2002"
@@ -197,14 +220,14 @@ diff -Nru rp-l2tp-0.4.orig/man/l2tpd.8 rp-l2tp-0.4/man/l2tpd.8
 +\fBrp-l2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
  
 diff -Nru rp-l2tp-0.4.orig/utils.c rp-l2tp-0.4/utils.c
---- rp-l2tp-0.4.orig/utils.c	2002-09-30 22:45:00.000000000 +0300
-+++ rp-l2tp-0.4/utils.c	2004-11-24 23:36:23.183183528 +0200
+--- rp-l2tp-0.4.orig/utils.c	2007-04-15 13:30:55.000000000 +0300
++++ rp-l2tp-0.4/utils.c	2007-04-15 13:34:20.000000000 +0300
 @@ -196,7 +196,7 @@
      if (*fname == '/') {
  	handle = dlopen(fname, RTLD_NOW);
      } else {
 -	snprintf(buf, sizeof(buf), "%s/lib/l2tp/plugins/%s", PREFIX, fname);
-+	snprintf(buf, sizeof(buf), "%s/lib/rp-l2tpd/plugins/%s", PREFIX, fname);
++	snprintf(buf, sizeof(buf), "%s/rp-l2tpd/plugins/%s", LIBDIR, fname);
  	buf[sizeof(buf)-1] = 0;
  	handle = dlopen(buf, RTLD_NOW);
      }
