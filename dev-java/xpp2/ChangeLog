@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.16 2007/04/15 11:43:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.17 2007/04/15 19:24:05 corsair Exp $
+
+  15 Apr 2007; Markus Rothe <corsair@gentoo.org> xpp2-2.1.10-r1.ebuild:
+  Stable on ppc64; bug #174392
 
   15 Apr 2007; nixnut <nixnut@gentoo.org> xpp2-2.1.10-r1.ebuild:
   Stable on ppc wrt bug 174392
