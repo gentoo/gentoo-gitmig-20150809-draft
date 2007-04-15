@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.5 2005/03/03 22:24:59 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.6 2007/04/15 12:12:06 peitolm Exp $
 
 depend() {
-	need logger net
-	use antivirus
+	need logger
+	use antivirus net
 	provide mta
 }
 
