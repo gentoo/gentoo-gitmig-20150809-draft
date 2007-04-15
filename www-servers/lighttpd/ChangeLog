@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.111 2007/04/14 22:16:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.112 2007/04/15 11:16:16 bangert Exp $
+
+  15 Apr 2007; Thilo Bangert <bangert@gentoo.org> lighttpd-1.4.15.ebuild:
+  use .13-r2 init script to fix backgrouding issues
 
   14 Apr 2007; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.15.ebuild:
   Stable for HPPA (bug #174043).

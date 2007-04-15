@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.15.ebuild,v 1.2 2007/04/14 22:16:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.15.ebuild,v 1.3 2007/04/15 11:16:16 bangert Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -145,7 +145,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	# init script stuff
-	newinitd ${FILESDIR}/lighttpd.initd-1.4.13-r3 lighttpd || die
+	newinitd ${FILESDIR}/lighttpd.initd-1.4.13-r2 lighttpd || die
 	newconfd ${FILESDIR}/lighttpd.confd lighttpd || die
 	use fam && has_version app-admin/fam && \
 		sed -i 's/after famd/need famd/g' "${D}"/etc/init.d/lighttpd
