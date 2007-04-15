@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.38.ebuild,v 1.1 2007/04/15 12:52:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.38.ebuild,v 1.2 2007/04/15 13:00:08 robbat2 Exp $
 
 MY_EXTRAS_VER="20070415"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -52,7 +52,7 @@ src_test() {
 		# Both of these seem to work as of 5.0.38
 		##use "extraengine" && mysql_disable_test "federated" "fails with extraengine USE"
 		##use "ssl" && mysql_disable_test "ssl_des" "fails requiring PEM passphrase"
-	
+
 		# Revisit after 5.0.38
 		[ "${PV}" == "5.0.38" ] && use "extraengine" && mysql_disable_test "archive_gis" "fails with extraengine USE"
 
