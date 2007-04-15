@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7128 2007/04/15 13:40:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7129 2007/04/15 16:43:49 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -501,11 +501,6 @@ app-text/mgv
 # Masking net-misc/xsupplicant due to security bug 154995
 net-misc/xsupplicant
 
-# Stefan Schweizer <genstef@gentoo.org> (6 Mar 2007)
-# This is utterly broken and no longer used, please uninstall immediatelly
-# will be removed asap
-kde-base/unsermake
-
 # Doug Goldstein <cardoe@gentoo.org> (5 Mar 2007)
 # experimental SVN to quell the masses
 # complain upstream if something is broken
@@ -624,10 +619,6 @@ sys-fs/raidtools
 # This is a development version
 >=sys-kernel/suspend2-sources-2.6.20
 >=sys-apps/suspend2-userui-0.7.0
-
-# Stefan Schweizer <genstef@gentoo.org> (07 Nov 2006)
-# Please use ntfs3g now - it is better. Will be removed someday
-sys-fs/captive
 
 # Renat Lumpau <rl03@gentoo.org> (06 Feb 2007)
 # masking a bleeding edge version
@@ -1084,10 +1075,6 @@ mail-client/mahogany
 # Fairly limited comments about it in /etc/sandbox.conf and
 # /etc/sandbox.d/00default.
 >=sys-apps/sandbox-1.2.20_alpha1
-
-# Stefan Schweizer <genstef@gentoo.org> (29 Jun 2006)
-# 1.0.* is the stable version, we do not want to break any users
->=net-libs/loudmouth-1.1.0
 
 # Colin Kingsley <tercel@gentoo.org> (24 Jun 2006)
 # Masked for testing

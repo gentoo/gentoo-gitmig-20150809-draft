@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.287 2007/04/15 13:40:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.288 2007/04/15 16:43:49 genstef Exp $
+
+  15 Apr 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  Remove obsolete unsermake and captive masks, remove loudmouth mask because
+  latest version is stable and works with apps
 
   15 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Unmask xulrunner again
