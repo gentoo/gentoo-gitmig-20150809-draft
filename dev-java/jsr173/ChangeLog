@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.16 2007/04/15 19:27:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.17 2007/04/15 23:02:47 ticho Exp $
+
+  15 Apr 2007; Andrej Kacian <ticho@gentoo.org> jsr173-1.0-r1.ebuild:
+  Stable on x86, bug #174396.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> jsr173-1.0-r1.ebuild:
   Stable on ppc64; bug #174396
