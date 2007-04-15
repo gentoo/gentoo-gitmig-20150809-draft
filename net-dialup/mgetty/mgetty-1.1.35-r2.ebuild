@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r2.ebuild,v 1.1 2006/11/20 20:40:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r2.ebuild,v 1.2 2007/04/15 09:12:02 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}/Lucent.c.patch" # Lucent modem CallerID patch - bug #80366
 	epatch "${FILESDIR}/${P}-faxrunq.patch"
 	epatch "${FILESDIR}/${P}-netpbm-collision.patch" #g3topbm is installed by netpbm
+	epatch "${FILESDIR}/${P}-implicit-decl.patch"
 
 	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices 
 	append-ldflags $(bindnow-flags)
