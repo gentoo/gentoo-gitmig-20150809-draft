@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/concurrent-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/ChangeLog,v 1.15 2007/04/13 19:44:24 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/ChangeLog,v 1.16 2007/04/15 11:28:33 nixnut Exp $
+
+  15 Apr 2007; nixnut <nixnut@gentoo.org> concurrent-util-1.3.4-r1.ebuild:
+  Stable on ppc wrt bug 174390
 
   13 Apr 2007; <welp@gentoo.org> concurrent-util-1.3.4-r1.ebuild:
   Stable on amd64 wrt bug 174390
