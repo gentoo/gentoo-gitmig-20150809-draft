@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7130 2007/04/15 17:13:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7131 2007/04/15 20:24:55 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -835,6 +835,7 @@ app-antivirus/vlnx
 >=net-misc/curl-7.16.0
 # masked because of the above mask
 net-fs/curlftpfs
+>=dev-python/pycurl-7.16.2
 
 # Patrick Kursawe <phosphan@gentoo.org> (06 Dec 2006)
 # Only partially working, see bug #153667
