@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.9 2007/03/29 20:27:50 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.10 2007/04/15 19:52:27 ikelos Exp $
+
+*ophcrack-2.3.4 (15 Apr 2007)
+
+  15 Apr 2007; Mike Auty <ikelos@gentoo.org>
+  -files/ophcrack-2.2-linuxtools-install-path.patch,
+  -files/ophcrack-2.3.1-linuxtools-install-path.patch, -ophcrack-2.2.ebuild,
+  -ophcrack-2.3.1.ebuild, +ophcrack-2.3.4.ebuild:
+  Version bump, fixes bug 174356 (thanks to Ed Wiget). Also cleaned out some
+  old versions.
 
   29 Mar 2007; Peter Weller <welp@gentoo.org> ophcrack-2.3.3.ebuild:
   Keyworded on amd64 wrt bug 171015
