@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7124 2007/04/14 23:55:31 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7125 2007/04/15 01:47:44 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (15 Apr 2007)
+# Using deprecated gdk functions from imlib.
+# Masked for removal in 30 days. See bug #166009.
+# Use gqview or mirage instead.
+media-gfx/qiv
 
 # Mike Kelly <pioto@gentoo.org> (14 Apr 2007)
 # A modified version of app-vim/doxygen-syntax-1.15 is already included in 
