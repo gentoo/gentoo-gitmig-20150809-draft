@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/autodia
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/ChangeLog,v 1.1 2007/04/15 10:52:11 mcummings Exp $
+
+*autodia-2.03 (15 Apr 2007)
+
+  15 Apr 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +autodia-2.03.ebuild:
+  Bug 122738, initial import
+
