@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ufo/ufo-0.8.4.ebuild,v 1.2 2007/04/12 20:07:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ufo/ufo-0.8.4.ebuild,v 1.3 2007/04/15 22:59:22 vanquirius Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE=""
 DEPEND="virtual/opengl
 	media-libs/libsdl
 	x11-libs/libICE"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
