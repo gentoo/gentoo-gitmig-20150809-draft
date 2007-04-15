@@ -1,7 +1,10 @@
-AUX mysql-ruby-2.7.3-test.patch 1897 RMD160 01aad9fb0012eb9fc7b9b2c765f91718bfaf9f6d SHA1 37a3d07a750122f5883c02725c7050057bba1d41 SHA256 fabdb3c99875f8bcd67a47cf1177454191a10d435736fe54f2c588e4340decb6
-MD5 bd383343282d47e66f4ec8d4d0f7fa89 files/mysql-ruby-2.7.3-test.patch 1897
-RMD160 01aad9fb0012eb9fc7b9b2c765f91718bfaf9f6d files/mysql-ruby-2.7.3-test.patch 1897
-SHA256 fabdb3c99875f8bcd67a47cf1177454191a10d435736fe54f2c588e4340decb6 files/mysql-ruby-2.7.3-test.patch 1897
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX mysql-ruby-2.7.3-test.patch 1880 RMD160 e9f1150a0b7e7ac9e54d906ef511a9c4cbb236fa SHA1 1364fa1e7b1d3c3193799a8448ceeb7d05e6bf87 SHA256 30332e1703dcb86069bfa3eb2f178bbfa324a0a2df2f2278b8dc49b4e363d0f3
+MD5 d93828189f3ef7d4b755d2a582fe4bfe files/mysql-ruby-2.7.3-test.patch 1880
+RMD160 e9f1150a0b7e7ac9e54d906ef511a9c4cbb236fa files/mysql-ruby-2.7.3-test.patch 1880
+SHA256 30332e1703dcb86069bfa3eb2f178bbfa324a0a2df2f2278b8dc49b4e363d0f3 files/mysql-ruby-2.7.3-test.patch 1880
 DIST mysql-ruby-2.4.5.tar.gz 16420 RMD160 7c86103027341fad43655b3e72ff715de22febda SHA1 30a4c4cd33531998cccfb26e336b15efdd7d87eb SHA256 d087ff50238f91da1df9e448e81f79b67702f5de72a7e6abfab051ed8aa53e89
 DIST mysql-ruby-2.7.2.tar.gz 30298 RMD160 f985a150880df4a9bfb8450ca7bc299221ff5094 SHA1 5a642b504b799dec8edf7ca80ea3875e524b92a8 SHA256 2afde7f7ad2adcc287ae6184c2665e9bcff5504bfa10ca37a87dc4c9d9e895d6
 DIST mysql-ruby-2.7.3.tar.gz 30383 RMD160 8b676f44a1cb14b643dcad6d57660ddbd236d9ea SHA1 ca083c5a1749899af45e9ca5fc4d71281ba6f9f7 SHA256 abf16d48a6ece40bd5f7a08eb72538e2dcc90ccabbba43a4b4e3ffc178886851
@@ -42,3 +45,10 @@ SHA256 a32fcd235450bddf17b26f9368810a7ba1d5515ca28467069137d8e4f8ee3bf5 files/di
 MD5 0be8e2c7cd90d5520701ea24f1feb790 files/digest-mysql-ruby-2.7.3 247
 RMD160 5d88e8c2dd439e64deb333e8cbdc0330dbb55d69 files/digest-mysql-ruby-2.7.3 247
 SHA256 709e36ed73c757ba9fd1522cafc5df042d808cce4622a173ffa96ff146b10ee4 files/digest-mysql-ruby-2.7.3 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFGIqLe/ejvha5XGaMRAt1WAJ9XRgx1jeKj99lZfia/WX31cMY9EgCggdzW
+wosnhzt+kvM9ByssOBDWmVo=
+=zpar
+-----END PGP SIGNATURE-----
