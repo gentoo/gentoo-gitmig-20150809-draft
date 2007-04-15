@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.10 2007/02/20 18:46:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.11 2007/04/15 19:56:03 ticho Exp $
+
+  15 Apr 2007; Andrej Kacian <ticho@gentoo.org> -sonata-0.9.ebuild,
+  sonata-1.0.1.ebuild:
+  Add tag and lyrics USE flags. Patch by Stephen Boyd <bebarino at gmail.com>
+  in bug #171247. Removed 0.9 ebuild.
 
   20 Feb 2007; Markus Rothe <corsair@gentoo.org> sonata-1.0.1.ebuild:
   Added ~ppc64
