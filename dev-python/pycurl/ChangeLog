@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.36 2006/12/09 03:02:29 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.37 2007/04/15 20:27:48 dragonheart Exp $
+
+*pycurl-7.16.2 (15 Apr 2007)
+
+  15 Apr 2007; Daniel Black <dragonheart@gentoo.org> +pycurl-7.16.2.ebuild:
+  version bump as per bug #157759
 
 *pycurl-7.15.5.1 (09 Dec 2006)
 *pycurl-7.15.4.2-r1 (09 Dec 2006)
