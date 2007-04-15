@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.60 2007/04/13 12:25:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.61 2007/04/15 20:17:56 corsair Exp $
+
+  15 Apr 2007; Markus Rothe <corsair@gentoo.org> STLport-5.1.2.ebuild:
+  Stable on ppc64
 
   13 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org> STLport-5.1.2.ebuild:
   Stable on amd64 wrt bug #173175.
