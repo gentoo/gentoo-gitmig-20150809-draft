@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.2 2007/02/07 20:54:07 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.3 2007/04/15 10:19:24 dragonheart Exp $
+
+  15 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  libnfnetlink-0.0.25.ebuild:
+  added ~amd64.
 
 *libnfnetlink-0.0.25 (07 Feb 2007)
 
