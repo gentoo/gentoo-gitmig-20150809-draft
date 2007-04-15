@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swing-layout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.6 2007/01/10 16:56:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.7 2007/04/15 22:30:48 betelgeuse Exp $
+
+  15 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  swing-layout-1.0.1-r1.ebuild:
+  app-arch/zip was missing from DEPEND with the source use flag
 
   10 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   -swing-layout-1.0.1.ebuild, swing-layout-1.0.1-r1.ebuild:
