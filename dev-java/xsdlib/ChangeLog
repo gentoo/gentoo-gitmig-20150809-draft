@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.15 2007/04/13 19:32:03 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.16 2007/04/15 12:51:02 nixnut Exp $
+
+  15 Apr 2007; nixnut <nixnut@gentoo.org> xsdlib-20050627-r1.ebuild:
+  Stable on ppc wrt bug 174404
 
   13 Apr 2007; <welp@gentoo.org> xsdlib-20050627-r1.ebuild:
   Stable on amd64 wrt bug 174404
