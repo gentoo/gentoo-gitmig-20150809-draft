@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/sable
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/ChangeLog,v 1.1 2007/04/15 10:33:33 tupone Exp $
+
+*sable-1.0 (15 Apr 2007)
+
+  15 Apr 2007; <atupone@gentoo.org> +files/sable.png, +metadata.xml,
+  +sable-1.0.ebuild:
+  New package. Request bug #126503 by Cristiano Chiucchiolo
+
