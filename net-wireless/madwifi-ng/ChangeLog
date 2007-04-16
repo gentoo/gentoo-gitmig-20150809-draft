@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.33 2007/04/09 19:53:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.34 2007/04/16 19:37:23 steev Exp $
+
+*madwifi-ng-0.9.3-r3 (16 Apr 2007)
+
+  16 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
+  +madwifi-ng-0.9.3-r3.ebuild:
+  Add wireless-tools to RDEPEND and add back the injection useflag/patch.
+  Closes bug #159006 and bug #174198.
 
   09 Apr 2007; Marcus D. Hanwell <cryos@gentoo.org>
   madwifi-ng-0.9.3-r2.ebuild:
