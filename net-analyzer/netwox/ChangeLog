@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.26 2007/04/15 23:04:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.27 2007/04/16 08:31:09 welp Exp $
+
+  16 Apr 2007; <welp@gentoo.org> netwox-5.33.0.ebuild:
+  Keyworded ~amd64
 
   15 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -netwox-5.28.0.ebuild,
   -netwox-5.31.0.ebuild, -netwox-5.32.0.ebuild:

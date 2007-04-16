@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.33.0.ebuild,v 1.3 2007/03/22 14:59:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.33.0.ebuild,v 1.4 2007/04/16 08:31:09 welp Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.laurentconstantin.com/common/netw/netwox/download/v${PV/.*}/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="doc"
 
 RDEPEND=">=net-libs/libnet-1.1.1"
