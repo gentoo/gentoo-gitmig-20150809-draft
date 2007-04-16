@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.5.ebuild,v 1.1 2007/02/26 00:35:01 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.5.ebuild,v 1.2 2007/04/16 17:23:11 dang Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -152,6 +152,8 @@ src_compile() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	elog "Note that the default totem backend has switched to gstreamer."
-	elog "DVD menus will only work with the xine backend."
+	if ! use xine ; then
+		elog "Note that the default totem backend has switched to gstreamer."
+		elog "DVD menus will only work with the xine backend."
+	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.155 2007/03/27 22:07:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.156 2007/04/16 17:23:11 dang Exp $
+
+  16 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> totem-2.16.4.ebuild,
+  totem-2.16.5.ebuild:
+  Only warn about DVD menus if gstreamer backend is used; bug #173951
 
 *totem-2.18.0 (27 Mar 2007)
 
