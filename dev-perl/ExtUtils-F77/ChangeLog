@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/ExtUtils-F77
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.28 2007/01/15 17:44:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.29 2007/04/16 16:39:43 mcummings Exp $
+
+*ExtUtils-F77-1.15-r1 (16 Apr 2007)
+
+  16 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  +files/perl-ExtUtils-F77-1.15-alt-g77.patch, +ExtUtils-F77-1.15-r1.ebuild:
+  Bump and patch for gcc-4.1 and greater so that gfortran is seen
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -ExtUtils-F77-1.14-r1.ebuild, ExtUtils-F77-1.15.ebuild:
