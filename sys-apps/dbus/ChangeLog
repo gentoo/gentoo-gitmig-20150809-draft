@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.192 2007/04/16 16:13:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.193 2007/04/16 17:25:26 armin76 Exp $
+
+  16 Apr 2007; Raúl Porcel <armin76@gentoo.org> dbus-1.0.2-r2.ebuild:
+  ia64 stable wrt bug 174807
 
   16 Apr 2007; Doug Goldstein <cardoe@gentoo.org> dbus-1.0.2-r2.ebuild:
   Change elog as per bug #168262
