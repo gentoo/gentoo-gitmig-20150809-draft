@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.7 2007/03/29 14:45:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.8 2007/04/16 15:00:38 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -13,6 +13,7 @@ IUSE="dbus djvu doc dvi gnome t1lib tiff"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
+# dang: libxml2 is not in configure, but it's required by libegg; bug #172732
 RDEPEND="
 	dvi? (
 		virtual/tetex
@@ -33,7 +34,8 @@ RDEPEND="
 	>=x11-libs/gtk+-2.8.15
 	gnome-base/gnome-keyring
 	djvu? ( >=app-text/djvu-3.5.17 )
-	virtual/ghostscript"
+	virtual/ghostscript
+	dev-libs/libxml2"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
