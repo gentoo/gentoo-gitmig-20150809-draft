@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.42 2007/04/14 15:02:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.43 2007/04/16 13:55:36 jer Exp $
+
+  16 Apr 2007; Jeroen Roovers <jer@gentoo.org> Test-Exception-0.25.ebuild:
+  Marked ~hppa (bug #174785).
 
   14 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   Test-Exception-0.25.ebuild:
