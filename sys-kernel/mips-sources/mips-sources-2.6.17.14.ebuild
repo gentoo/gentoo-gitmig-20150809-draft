@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.7.ebuild,v 1.1 2007/04/14 21:20:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.17.14.ebuild,v 1.1 2007/04/16 06:36:45 kumba Exp $
 
 
 # INCLUDED:
 # 1) linux sources from kernel.org
 # 2) linux-mips.org GIT snapshot diff from 14 Sep 2005
 # 3) Generic Fixes
-# 4) Security fixes
-# 5) Patch for IP30 Support			(http://www.linux-mips.org/~skylark/)
+# 4) Patch for IP30 Support			(http://www.linux-mips.org/~skylark/)
 # 5) Patch for IP28 Support			(http://home.alphastar.de/fuerst/download.html)
-# 6) Patch for Remaining Cobalt Bits		(http://www.colonel-panic.org/cobalt-mips/)
-# 7) Experimental patches (IP27 hacks, et al)
+# 6) Patches (hacks) for IP27 support		(ftp://ftp.linux-mips.org/pub/linux/mips/people/ralf/ip27/)
+# 7) Patch for Remaining Cobalt Bits		(http://www.colonel-panic.org/cobalt-mips/)
+# 8) Experimental patches (IP27 hacks, et al)
 
 
 #//------------------------------------------------------------------------------
@@ -20,8 +20,8 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20070317"			# Date of diff between kernel.org and lmo GIT
-GENPATCHVER="1.26"			# Tarball version for generic patches
+GITDATE="20070415"			# Date of diff between kernel.org and lmo GIT
+GENPATCHVER="1.27"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -31,7 +31,6 @@ PATCHVER=""
 # Directories
 S="${WORKDIR}/linux-${OKV}-${GITDATE}"
 MIPS_PATCHES="${WORKDIR}/mips-patches"
-MIPS_SECURITY="${WORKDIR}/security"
 
 # Inherit Eclasses
 ETYPE="sources"
@@ -41,7 +40,7 @@ inherit kernel eutils versionator
 HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
 DEPEND=">=sys-devel/gcc-4.1.1"
 
@@ -53,7 +52,7 @@ USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y
 # Machine Support Control Variables
 DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
 DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
-DO_IP28="no"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
+DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
 DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
 DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
 DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
@@ -61,7 +60,7 @@ DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 # Machine Stable Version Variables 
 SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
 SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
-SV_IP28="2.6.17.10"			# 	    DO_IP28 == "no", 			   IP28
+SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
 SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
@@ -366,22 +365,30 @@ do_generic_patches() {
 	ebegin ">>> Generic Patches"
 
 		# IP22 Patches
+		epatch ${MIPS_PATCHES}/misc-2.6.15-ip22-hal2-kconfig-tweaks.patch	# in git - kill in 2.6.18
 		epatch ${MIPS_PATCHES}/misc-2.6.16-ip22-vino-64bit-ioctl-fixes.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.20-ip22-pf-enhance-scsi.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-ip22-rtc-brown-paper-bag.patch	# in git - kill in 2.6.18
 
 		# IP32 Patches
 		epatch ${MIPS_PATCHES}/misc-2.6.11-ip32-mace-is-always-eth0.patch
 
 		# Cobalt Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.20-cobalt-bits.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-cobalt-bits.patch
 
 		# Generic
 		epatch ${MIPS_PATCHES}/misc-2.6.17-ths-mips-tweaks.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-mips-iomap-functions.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-seccomp-no-default.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.20-frank-kill-build_elf64.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.20-squashfs-3.2-r2.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.15-add-4k_cache_defines.patch		# in git - kill in 2.6.18
+		epatch ${MIPS_PATCHES}/misc-2.6.17-rev-i18n.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.15-fix-4k-cache-macros.patch		# in git - kill in 2.6.18
+		epatch ${MIPS_PATCHES}/misc-2.6.15-vgacon-accesses-unmapped-space.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-n32-sigset-endian-swap.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-fix-rdhwr_op-definition.patch	# in git - kill in 2.6.18
+		epatch ${MIPS_PATCHES}/misc-2.6.17-do-not-use-drop_mmu_context.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-magic-mojo.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-squashfs-3.0.patch
 	eend
 }
 
@@ -416,17 +423,17 @@ do_sekrit_patches() {
 do_ip27_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Origin 200/2000 (IP27) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.18-ioc3-metadriver-r26.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ioc3-metadriver-r26.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-horrible-hacks_may-eat-kittens.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-rev-pci-tweak.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.18-ip27-hack-attack.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-hack-attack.patch
 }
 
 # SGI Indigo2 Impact R10000 (IP28)
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.18-ip28-i2_impact-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-i2_impact-support.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-impact-mmapfix.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-wd93cac-tweak.patch
 }
@@ -436,8 +443,9 @@ do_ip28_support() {
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.19-ioc3-metadriver-r27.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.20-ip30-octane-support-r28.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ioc3-metadriver-r26.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip30-octane-support-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip30-impact-vpro-mmapfix.patch
 }
 
 
