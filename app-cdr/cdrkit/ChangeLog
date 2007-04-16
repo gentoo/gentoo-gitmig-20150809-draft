@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.33 2007/04/11 01:40:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.34 2007/04/16 15:15:09 armin76 Exp $
+
+  16 Apr 2007; Raúl Porcel <armin76@gentoo.org> cdrkit-1.1.2.ebuild:
+  ia64 stable wrt bug 170482
 
   11 Apr 2007; Jeroen Roovers <jer@gentoo.org> cdrkit-1.1.4.ebuild:
   Marked ~hppa (bug #146631).
