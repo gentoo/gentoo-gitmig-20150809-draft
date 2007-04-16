@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7.ebuild,v 1.7 2007/04/16 08:08:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7.ebuild,v 1.8 2007/04/16 18:19:47 opfer Exp $
 
 DESCRIPTION="KDE based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://sourceforge.net/projects/elogviewer"
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=sys-apps/portage-2.1
 	dev-python/PyQt
-	dev-python/pykde"
+	>=dev-python/pykde-3.16.0"
 
 src_install() {
 	dobin "${WORKDIR}"/kelogviewer
