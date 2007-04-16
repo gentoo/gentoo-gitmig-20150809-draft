@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.4 2007/04/16 08:00:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.5 2007/04/16 15:46:12 cardoe Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -87,6 +87,7 @@ src_install() {
 
 	keepdir /usr/lib/dbus-1.0/services
 	keepdir /usr/share/dbus-1/services
+	keepdir /etc/dbus-1/system.d/
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README doc/TODO
 	if use doc; then
