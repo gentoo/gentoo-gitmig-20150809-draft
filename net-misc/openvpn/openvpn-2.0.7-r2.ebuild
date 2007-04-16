@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7-r2.ebuild,v 1.1 2007/02/23 11:44:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7-r2.ebuild,v 1.2 2007/04/16 11:43:26 uberlord Exp $
 
 inherit eutils multilib
 
@@ -57,7 +57,7 @@ src_compile() {
 		$(use_enable threads pthread) \
 		|| die "configure failed"
 
-	use static && sed -e -i '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
+	use static && sed -i -e '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
 
 	emake || die "make failed"
 

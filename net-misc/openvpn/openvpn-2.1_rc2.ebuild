@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc2.ebuild,v 1.1 2007/03/04 16:28:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc2.ebuild,v 1.2 2007/04/16 11:43:26 uberlord Exp $
 
-inherit eutils multilib
+inherit autotools eutils multilib
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
 SRC_URI="http://openvpn.net/release/openvpn-${PV}.tar.gz"
@@ -36,6 +36,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}"-2.0.4-darwin.patch
+	epatch "${FILESDIR}/${P}"-freebsd.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -55,7 +57,7 @@ src_compile() {
 		$(use_enable threads pthread) \
 		|| die "configure failed"
 
-	use static && sed -e -i '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
+	use static && sed -i -e '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
 
 	emake || die "make failed"
 
