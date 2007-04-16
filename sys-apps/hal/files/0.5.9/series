@@ -7,5 +7,6 @@
 07_malloc_h_for_stdlib_h.patch
 08_contains_not_fdi_directive.patch
 09_hald_addon_keyboard_start_one.patch
+10_freebsd_storage_reprobe_fix.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch
