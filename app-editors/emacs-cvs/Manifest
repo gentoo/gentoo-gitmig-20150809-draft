@@ -1,26 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX 50emacs-23.0.0.envd 38 RMD160 78ada93c0a6e3019d225eaecac89a5554d5344b9 SHA1 8451fb9088e819c0c996df5abd692fd91366bd68 SHA256 6179b1cbc85458d3cb49605ec095aa9ddfedcbd3b68dcbad01679717d5b86b1a
-MD5 0b379e4c82898cbd3b9929d752b7bfab files/50emacs-23.0.0.envd 38
-RMD160 78ada93c0a6e3019d225eaecac89a5554d5344b9 files/50emacs-23.0.0.envd 38
-SHA256 6179b1cbc85458d3cb49605ec095aa9ddfedcbd3b68dcbad01679717d5b86b1a files/50emacs-23.0.0.envd 38
-AUX emacs-22.0.50.desktop 242 RMD160 dce325fa6cb9f5f97d1cfc644b0db7cc8172cabc SHA1 ef6dc49ab21d52f8054b3d8b35181f5e9d74e1c1 SHA256 13b1ed362039617b45a15feb3eda9ff6aef49c21be71ed3423e47e81f7497ce9
-MD5 3a0ce8880fff1be2f5e8281633532546 files/emacs-22.0.50.desktop 242
-RMD160 dce325fa6cb9f5f97d1cfc644b0db7cc8172cabc files/emacs-22.0.50.desktop 242
-SHA256 13b1ed362039617b45a15feb3eda9ff6aef49c21be71ed3423e47e81f7497ce9 files/emacs-22.0.50.desktop 242
-AUX emacs-23.0.0.desktop 240 RMD160 ca1edb1c6dbb916658ee9b86130f400498f2e27e SHA1 b32fb6de391e1fc8398ed57d5452f1454a279b38 SHA256 3931cd9401f587dae3bc898f39bffebe349b3597bbf7bd3199b7ec1ab01167d1
-MD5 5585d3da10b713e4f268c2ab75b4b2da files/emacs-23.0.0.desktop 240
-RMD160 ca1edb1c6dbb916658ee9b86130f400498f2e27e files/emacs-23.0.0.desktop 240
-SHA256 3931cd9401f587dae3bc898f39bffebe349b3597bbf7bd3199b7ec1ab01167d1 files/emacs-23.0.0.desktop 240
-AUX emacs-cvs-blessmail-build.patch 651 RMD160 77bda6cf13b94186eec0e078ebed8ee58baba21c SHA1 cece1d588f7b49261750c641c80e0fb7ec70fd2d SHA256 eb9a52dd38b05eda6f3155469147c860a95d0ccdc09c881f010cf9d16db39d62
-MD5 4ff9b93cb0b51bcdfbab1652f05f0625 files/emacs-cvs-blessmail-build.patch 651
-RMD160 77bda6cf13b94186eec0e078ebed8ee58baba21c files/emacs-cvs-blessmail-build.patch 651
-SHA256 eb9a52dd38b05eda6f3155469147c860a95d0ccdc09c881f010cf9d16db39d62 files/emacs-cvs-blessmail-build.patch 651
-AUX emacs-cvs-darwin-fsf-gcc.patch 676 RMD160 9fb330b5c4217da4c4ecdce591eaa6b994eb6bc8 SHA1 feaf0087e3863fe2b4d9d7fe9839e32a1499b11e SHA256 eeb156504c365704ffc5a2834331e1fc444d918b7db911e936c8b1b23783ec9a
-MD5 1830e4946883da61575664230b40add0 files/emacs-cvs-darwin-fsf-gcc.patch 676
-RMD160 9fb330b5c4217da4c4ecdce591eaa6b994eb6bc8 files/emacs-cvs-darwin-fsf-gcc.patch 676
-SHA256 eeb156504c365704ffc5a2834331e1fc444d918b7db911e936c8b1b23783ec9a files/emacs-cvs-darwin-fsf-gcc.patch 676
 AUX emacs-cvs-disable_alsa_detection.patch 1606 RMD160 9efec483c24d7a5e9e9514e4eb3df3ee1d0742e1 SHA1 420a2bf2414fb19e0ca98982f2be0aaf511350af SHA256 72192c7d87fa312c676baf99f9564b60c3961fd08b4124ae342a5616d4c52a4a
 MD5 c74e12e93c45c2276b6cf685f49f66aa files/emacs-cvs-disable_alsa_detection.patch 1606
 RMD160 9efec483c24d7a5e9e9514e4eb3df3ee1d0742e1 files/emacs-cvs-disable_alsa_detection.patch 1606
@@ -71,10 +51,10 @@ EBUILD emacs-cvs-23.0.0-r6.ebuild 7921 RMD160 bd76b87a60c0db6bf4fab495139e8db5a9
 MD5 bccd4b6760ccc165854cdf5a9b359893 emacs-cvs-23.0.0-r6.ebuild 7921
 RMD160 bd76b87a60c0db6bf4fab495139e8db5a9f7a3d2 emacs-cvs-23.0.0-r6.ebuild 7921
 SHA256 8f4f518b4f61b4371fe052174d4d63214ba7763ecceb02d89a964a3cc327d7f7 emacs-cvs-23.0.0-r6.ebuild 7921
-MISC ChangeLog 19606 RMD160 69aa3e076ff996efcaf7f058f6c1934dd5c1fb65 SHA1 d927fa404d184283176d0a1a2771ed7f4f60a30e SHA256 ca98028c96e2a42c1a66f98ae2ce7701853a1a1901f305da7202d3a13577ab9a
-MD5 62e8400d6bbdd52dea3b65f4a2630f94 ChangeLog 19606
-RMD160 69aa3e076ff996efcaf7f058f6c1934dd5c1fb65 ChangeLog 19606
-SHA256 ca98028c96e2a42c1a66f98ae2ce7701853a1a1901f305da7202d3a13577ab9a ChangeLog 19606
+MISC ChangeLog 19838 RMD160 86cfd427b9fa922e7994c760f15837a47e3824d7 SHA1 b233f5cc91b95482efda6401b01da5b813ccb9e6 SHA256 8e6f4c78d4835aec44bd720a28bbab6133ae05988504dade3b9ade04df72dd70
+MD5 cffc17a3a1540abec2a25ac16deb451e ChangeLog 19838
+RMD160 86cfd427b9fa922e7994c760f15837a47e3824d7 ChangeLog 19838
+SHA256 8e6f4c78d4835aec44bd720a28bbab6133ae05988504dade3b9ade04df72dd70 ChangeLog 19838
 MISC metadata.xml 158 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 SHA1 61f6eff9729cd87a725c2a70c81aca4270a17fc4 SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
@@ -103,7 +83,7 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFGI9rqOeoy/oIi7uwRArO8AJwOJi8u4iGiSWtcdtRMbd9Rozv4zACggmwr
-KtSwUHifpNy4LBl/VTtYkck=
-=oFVJ
+iD8DBQFGI+MtOeoy/oIi7uwRAriLAKCVd2Nd35HZ11m5rYDSK0XVdljcWgCfVKLJ
+EiKgGFjJmZVQYoJsNfj2Q7c=
+=Lqwy
 -----END PGP SIGNATURE-----
