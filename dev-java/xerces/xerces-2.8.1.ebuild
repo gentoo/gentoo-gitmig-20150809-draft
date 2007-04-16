@@ -1,7 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.8.1.ebuild,v 1.9 2007/04/16 08:01:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.8.1.ebuild,v 1.10 2007/04/16 08:14:58 caster Exp $
 
+# needed for the ANT_TASKS="xjavac-1" later so we don't need to use deprecated eant -lib
+# (because xjavac won't install jar in /usr/share/ant-core/lib anymore)
+WANT_SPLIT_ANT=true
 JAVA_PKG_IUSE="doc examples source"
 
 inherit eutils versionator java-pkg-2 java-ant-2
