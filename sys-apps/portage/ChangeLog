@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.375 2007/04/13 12:40:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.376 2007/04/16 04:19:19 zmedico Exp $
+
+*portage-2.1.2.4 (15 Apr 2007)
+
+  15 Apr 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.4.ebuild:
+  2.1.2.4 maintenance release. This fixes bugs #173184, #173808, and #174260.
 
   13 Apr 2007; Mike Frysinger <vapier@gentoo.org> portage-2.1.2.3.ebuild:
   Add update-etc/update-env symlinks to etc-update/env-update.
@@ -55,32 +60,6 @@
   2.1.2.1-r1 revbump.  This fixes bugs #169620 and #167795. Bug #167107
   tracks fixes since 2.1.2-r9.
 
-*portage-2.1.2.1 (04 Mar 2007)
-
-  04 Mar 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.1.ebuild:
-  2.1.2.1 release.  This fixes bug #169187.  Bug #167107 tracks fixes
-  since 2.1.2-r9.
-
-*portage-2.1.2-r14 (03 Mar 2007)
-
-  03 Mar 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r14.ebuild:
-  2.1.2-r14 revbump.  This fixes bugs #138840, #168678, and #169046.
-  Bug #167107 tracks fixes since 2.1.2-r9.
-
-*portage-2.1.2-r13 (02 Mar 2007)
-
-  02 Mar 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r13.ebuild:
-  2.1.2-r13 revbump.  This fixes bugs #168646 and #168823.  Bug #167107
-  tracks fixes since 2.1.2-r9.  For compatibility with rsync mirrors running
-  <rsync-2.6.4, --prune-empty-dirs has been removed from the default rsync
-  options.  See bug #168646 for details.
-
-*portage-2.1.2-r12 (26 Feb 2007)
-
-  26 Feb 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r12.ebuild:
-  2.1.2-r12 revbump.  This fixes bugs #167668, #168267, and #168432.
-  Bug #167107 tracks fixes since 2.1.2-r9.
-
   26 Feb 2007; Fabian Groffen <grobian@gentoo.org>
   portage-2.0.51.22-r3.ebuild, portage-2.1.1-r2.ebuild,
   portage-2.1.2-r9.ebuild, portage-2.1.2-r11.ebuild:
@@ -91,21 +70,6 @@
   portage-2.1.2-r9.ebuild, portage-2.1.2-r11.ebuild:
   RDEPEND on >=sys-apps/findutils-4.2.29 to prevent invalid predicate `-L'
   errors from the find command in ecompressdir (bug #168432).
-
-*portage-2.1.2-r11 (23 Feb 2007)
-
-  23 Feb 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r11.ebuild:
-  2.1.2-r11 revbump. This fixes bugs #165342, #167667, #167668, #167795,
-  and #168169. Bug #167107 tracks fixes since 2.1.2-r9.  The default
-  PORTAGE_RSYNC_OPTS now excludes Manifest1 digest files.  See bugs
-  #167667 and #167668 for more information about this change.
-
-*portage-2.1.2-r10 (19 Feb 2007)
-
-  19 Feb 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r10.ebuild:
-  2.1.2-r10 revbump.  This fixes bugs #158100, #163990, #166255, #166564,
-  #166785, #166837, #166880, #166939, #167217, and #167450. Bug #167107
-  tracks fixes since 2.1.2-r9.
 
   12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   portage-2.1.2-r9.ebuild:
