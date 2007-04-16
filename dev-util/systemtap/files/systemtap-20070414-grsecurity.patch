@@ -1,0 +1,25 @@
+diff -Nur src.old/translate.cxx src/translate.cxx
+--- src.old/translate.cxx	2007-04-04 18:41:27.000000000 +0000
++++ src/translate.cxx	2007-04-16 18:18:25.302079239 +0000
+@@ -1131,11 +1131,17 @@
+                << ", probes: " << session->probes.size()
+                << "\\n\""
+     // printk arguments
+-               << ", THIS_MODULE->name"
+-               << ", THIS_MODULE->module_core"
++               << ", THIS_MODULE->name";
++  o->newline() << "#ifdef HAVE_GRSECURITY";
++  o->newline() << ", THIS_MODULE->module_core_rx"
++               << ", (unsigned long) THIS_MODULE->core_size_rw"
++               << ", (unsigned long) THIS_MODULE->core_size_rx";
++  o->newline() << "#else";
++  o->newline() << ", THIS_MODULE->module_core"
+                << ", (unsigned long) (THIS_MODULE->core_size - THIS_MODULE->core_text_size)"
+-               << ", (unsigned long) THIS_MODULE->core_text_size"
+-	       << ", (unsigned long) (num_online_cpus() * sizeof(struct context))"
++               << ", (unsigned long) THIS_MODULE->core_text_size";
++  o->newline() << "#endif";
++  o->newline() << ", (unsigned long) (num_online_cpus() * sizeof(struct context))"
+ 	       << ", (unsigned long) _stp_allocated_net_memory"
+ 	       << ", (unsigned long) _stp_allocated_memory"
+                << ");";

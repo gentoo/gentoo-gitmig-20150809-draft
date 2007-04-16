@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.4 2007/03/19 00:35:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.5 2007/04/16 22:07:29 swegener Exp $
+
+*systemtap-20070414 (16 Apr 2007)
+
+  16 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  +files/systemtap-20070414-grsecurity.patch, metadata.xml,
+  +systemtap-20070414.ebuild:
+  Version bump. Add ~amd64 keyword. Taking maintainership.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove zx from metadata.xml due to retirement.
