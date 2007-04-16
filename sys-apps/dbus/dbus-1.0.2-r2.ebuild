@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.5 2007/04/16 15:46:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.6 2007/04/16 16:13:14 cardoe Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -105,13 +105,8 @@ pkg_postinst() {
 	elog "you should add it to the default runlevel :"
 	elog "\`rc-update add dbus default\`"
 	elog
-	elog "If dbus is already installed and running,"
-	elog "run etc-update and then run the following:"
-	elog "\`/etc/init.d/dbus reload\`"
-	elog "This will cause it to reload it's configs but"
-	elog "*not* run the newest version you just installed."
-	elog "You must tell it to restart for that to happen,"
-	elog "however not all apps can handle a D-Bus restart."
+	elog "Somme applications require a session bus in addition to the system"
+	elog "bus. Please see \`man dbus-launch\` for more information."
 	elog
 	ewarn
 	ewarn "You MUST run 'revdep-rebuild' after emerging this package"
