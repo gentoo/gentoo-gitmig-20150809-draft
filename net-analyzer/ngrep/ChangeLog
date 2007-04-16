@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.36 2007/04/07 17:53:10 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.37 2007/04/16 07:45:36 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> ngrep-1.45.ebuild:
+  Stable on ppc64
 
   07 Apr 2007; Javier Villavicencio <the_paya@gentoo.org> ngrep-1.45.ebuild:
   Add ~x86-fbsd keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.3.ebuild,v 1.5 2007/03/22 14:11:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.3.ebuild,v 1.6 2007/04/16 07:49:16 corsair Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
 SRC_URI="ftp://ftp.nsk.su/pub/RinetSoftware/${P}.tgz"
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE="slang"
 
 DEPEND="net-libs/libpcap
