@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.4 2007/03/10 14:14:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.5 2007/04/16 11:52:50 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -106,12 +106,15 @@ pkg_preinst() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
+	if [ "$ROOT" = "/" ]; then
+		[ -x /sbin/update-modules ] && /sbin/update-modules || /sbin/modules-update
+	fi
+
 	# Make some devices if we aren't using devfs
 	if [ -e "${ROOT}/dev/.devfsd" ]; then
 		ebegin "Restarting devfsd to reread devfs rules"
 			killall -HUP devfsd
 		eend $?
-		einfo "modules-update to complete configuration."
 
 		einfo "Use /dev/tts/LT0 or /dev/ttyLT0 to access modem"
 	elif [ -e "${ROOT}/dev/.udev" ]; then
