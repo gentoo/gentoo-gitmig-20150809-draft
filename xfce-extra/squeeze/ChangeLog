@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/squeeze
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.4 2007/04/16 16:36:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.5 2007/04/16 16:42:36 armin76 Exp $
+
+  16 Apr 2007; Raúl Porcel <armin76@gentoo.org> squeeze-0.2.0.ebuild:
+  Add ~ia64
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> squeeze-0.2.0.ebuild:
   keyworded ~amd64, as requested by drac on IRC
