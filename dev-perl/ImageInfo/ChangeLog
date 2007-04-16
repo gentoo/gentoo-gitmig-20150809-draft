@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.48 2007/04/08 12:49:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.49 2007/04/16 06:07:31 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> ImageInfo-1.23.ebuild:
+  Stable on ppc64
 
   08 Apr 2007; Andrej Kacian <ticho@gentoo.org> ImageInfo-1.23.ebuild:
   Stable on x86, bug #169152.

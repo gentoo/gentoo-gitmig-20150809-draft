@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Simple
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.28 2007/03/11 21:16:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.29 2007/04/16 06:20:40 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> Pod-Simple-3.04.ebuild:
+  Stable on ppc64
 
 *Pod-Simple-3.05 (11 Mar 2007)
 

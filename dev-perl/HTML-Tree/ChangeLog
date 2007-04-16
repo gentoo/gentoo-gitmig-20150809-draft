@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.47 2007/03/13 15:47:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.48 2007/04/16 06:05:04 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> HTML-Tree-3.23.ebuild:
+  Stable on ppc64
 
   13 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   HTML-Tree-3.19.01.ebuild, HTML-Tree-3.21.ebuild, HTML-Tree-3.23.ebuild:

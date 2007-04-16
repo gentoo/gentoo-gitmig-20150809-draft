@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Info
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.46 2007/04/14 13:58:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.47 2007/04/16 06:12:36 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> MP3-Info-1.20.ebuild:
+  Stable on ppc64
 
   14 Apr 2007; Michael Cummings <mcummings@gentoo.org> MP3-Info-1.21.ebuild:
   Marking sparc stable

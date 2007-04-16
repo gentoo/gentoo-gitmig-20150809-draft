@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-GD
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.12 2007/03/04 19:19:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.13 2007/04/16 06:25:42 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> Template-GD-2.66.ebuild:
+  Stable on ppc64
 
   04 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   Template-GD-2.66.ebuild:

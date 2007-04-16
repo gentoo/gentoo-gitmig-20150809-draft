@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.25 2007/03/30 20:55:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.26 2007/04/16 06:18:23 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> Net-IP-1.25-r1.ebuild:
+  Stable on ppc64
 
 *Net-IP-1.25-r1 (30 Mar 2007)
 
