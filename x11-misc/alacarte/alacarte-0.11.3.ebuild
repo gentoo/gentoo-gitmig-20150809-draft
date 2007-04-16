@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3.ebuild,v 1.1 2007/03/27 17:25:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3.ebuild,v 1.2 2007/04/16 17:13:50 dang Exp $
 
-inherit gnome2 python
+inherit gnome2 python eutils
 
 DESCRIPTION="Simple GNOME menu editor"
 HOMEPAGE="http://www.realistanew.com/projects/alacarte"
@@ -21,3 +21,10 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+pkg_setup() {
+	if ! built_with_use gnome-base/gnome-menus python ; then
+		eerror "You must emerge gnome-base/gnome-menus with the python USE flag"
+		die "alacarte needs python support in gnome-base/gnome-menus"
+	fi
+}
