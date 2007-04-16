@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.6.1.ebuild,v 1.11 2007/03/05 22:52:20 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.6.1.ebuild,v 1.12 2007/04/16 11:33:59 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -139,26 +139,26 @@ pkg_postinst() {
 	done
 	if [ -n "${RENAME_PLUGINS}" ]; then
 		ewarn
-		ewarn "The following sylpheed-claws plugins were found on your system:"
+		elog "The following sylpheed-claws plugins were found on your system:"
 		ewarn
 		for x in ${RENAME_PLUGINS}; do
-			ewarn "    mail-client/sylpheed-claws-$x"
+			elog "    mail-client/sylpheed-claws-$x"
 		done
 		ewarn
-		ewarn "If you want to continue using those you need to merge their "
-		ewarn "renamed counterparts:"
+		elog "If you want to continue using those you need to merge their "
+		elog "renamed counterparts:"
 		ewarn
 		for x in ${RENAME_PLUGINS}; do
-			ewarn "    mail-client/${PN}-$x"
+			elog "    mail-client/${PN}-$x"
 		done
 		ewarn
 	fi
 	if [ -n "${UPDATE_PLUGINS}" ]; then
 		ewarn
-		ewarn "You have to re-emerge or update the following plugins:"
+		elog "You have to re-emerge or update the following plugins:"
 		ewarn
 		for x in ${UPDATE_PLUGINS}; do
-			ewarn "    mail-client/${PN}-$x"
+			elog "    mail-client/${PN}-$x"
 		done
 		ewarn
 	fi

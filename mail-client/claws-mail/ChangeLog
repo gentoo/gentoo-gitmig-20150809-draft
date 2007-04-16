@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.20 2007/04/16 11:00:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.21 2007/04/16 11:33:59 ticho Exp $
+
+  16 Apr 2007; Andrej Kacian <ticho@gentoo.org> claws-mail-2.6.1.ebuild,
+  claws-mail-2.7.0.ebuild, claws-mail-2.7.1.ebuild, claws-mail-2.7.2.ebuild,
+  claws-mail-2.8.0.ebuild, claws-mail-2.8.1.ebuild, claws-mail-2.9.0.ebuild:
+  Change all ewarn calls to elog, since they inform user about plugins
+  rebuild/update, and we want that logged.
 
 *claws-mail-2.9.0 (16 Apr 2007)
 
