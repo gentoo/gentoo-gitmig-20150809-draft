@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.189 2007/04/06 19:29:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.190 2007/04/16 08:00:12 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> dbus-1.0.2-r2.ebuild:
+  Stable on ppc64
 
   06 Apr 2007; Doug Goldstein <cardoe@gentoo.org> dbus-1.0.2-r2.ebuild:
   Fix up SELinux support
