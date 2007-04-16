@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsidplay
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.32 2007/02/22 02:00:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.33 2007/04/16 07:39:17 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Stable on ppc64
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
