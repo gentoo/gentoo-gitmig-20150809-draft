@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.25 2007/03/08 07:12:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.26 2007/04/16 08:51:11 opfer Exp $
+
+*maxima-5.11.0-r1 (16 Apr 2007)
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> maxima-5.9.3.ebuild,
+  +maxima-5.11.0-r1.ebuild:
+  moved from USE flag tcltk to tk, see bug 17808; added check for TEXMFSITE
+  and install there to avoid possible collisions, see bug 169178, reported by
+  Sebastian Schubert <sebastian-schubert@gmx.de>
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50maxima-gentoo.el:

@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.3.ebuild,v 1.3 2007/04/16 08:51:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r1.ebuild,v 1.1 2007/04/16 08:51:11 opfer Exp $
 
 inherit eutils elisp-common autotools
 
-DESCRIPTION="Free computer algebra environment, based on Macsyma"
+DESCRIPTION="Free computer algebra environment based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
@@ -13,22 +13,60 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="cmucl clisp sbcl gcl tetex emacs auctex tk nls unicode"
 
-DEPEND=">=sys-apps/texinfo-4.3
+# rlwrap is recommended for cmucl and sbcl
+RDEPEND=">=sci-visualization/gnuplot-4.0
+	app-text/gv
 	tetex? ( virtual/tetex )
 	emacs? ( virtual/emacs )
 	auctex? ( app-emacs/auctex )
-	!clisp? ( !sbcl? ( !cmucl? ( >=dev-lisp/gcl-2.6.7 ) ) )
-	cmucl? ( >=dev-lisp/cmucl-19a )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	gcl?   ( >=dev-lisp/gcl-2.6.7 )
-	sbcl?  ( >=dev-lisp/sbcl-0.9.4 )"
-
-# rlwrap is recommended for clisp and sbcl
-RDEPEND=">=sci-visualization/gnuplot-4.0
-	app-text/gv
-	sbcl?  ( app-misc/rlwrap )
-	cmucl? ( app-misc/rlwrap )
+	sbcl?  ( >=dev-lisp/sbcl-0.9.4 app-misc/rlwrap )
+	cmucl? ( >=dev-lisp/cmucl-19a app-misc/rlwrap )
+	!clisp? ( !sbcl? ( !cmucl? ( >=dev-lisp/gcl-2.6.7 ) ) )
 	tk? ( >=dev-lang/tk-8.3.3 )"
+
+DEPEND="${RDEPEND} >=sys-apps/texinfo-4.3"
+
+for lang in es pt; do
+	IUSE="${IUSE} linguas_${lang}"
+done
+
+pkg_setup() {
+# Don't install in the main tree, as this may cause file collisions
+	if use tetex; then
+		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
+		local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
+
+		if [ -z "${TEXMFPATH}" ]; then
+			eerror "You haven't defined the TEXMFSITE variable in your TeX config."
+			eerror "Please do so in the file ${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf}"
+			die "Define TEXMFSITE in TeX configuration!"
+		else
+			# go through the colon separated list of directories (maybe only one) provided in the variable
+			# TEXMFPATH (generated from TEXMFSITE from TeX's config) and choose only the first entry.
+			# All entries are separated by colons, even when defined with semi-colons, kpsewhich changes
+			# the output to a generic format, so IFS has to be redefined.
+			local IFS="${IFS}:"
+
+			for strippedpath in ${TEXMFPATH}
+			do
+				if [ -d ${strippedpath} ]; then
+					MAXIMA_TEXMFDIR="${strippedpath}"
+					break
+				fi
+			done
+
+			# verify if an existing path was chosen to prevent from installing into the wrong directory
+			if [ -z ${MAXIMA_TEXMFDIR} ]; then
+				eerror "TEXMFSITE does not contain any existing directory."
+				eerror "Please define an existing directory in your TeX config file"
+				eerror "${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf} or create at least one of the there specified directories"
+				die "TEXMFSITE variable did not contain an existing directory"
+			fi
+		fi
+	fi
+}
 
 # chosen apps are hardcoded in maxima source:
 # - ghostview for postscript (changed to gv)
@@ -37,14 +75,14 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 
 src_unpack() {
 	unpack ${A}
-	# small patch for emaxima (from fedora)
-	epatch ${FILESDIR}/${PF}-emaxima.patch
-	# patch to select firefox as def. browswer and add opera as choices
-	epatch ${FILESDIR}/${PF}-default-browser.patch
+	# replace obsolete netscape with firefox, add opera as choices
+	epatch "${FILESDIR}"/${P}-default-browser.patch
 	# replace ugly ghostview with gv
-	for psfile in $(grep -rl ghostview ${PF}/*); do
-		sed -i -e 's/ghostview/gv/g' ${psfile}
-	done
+	epatch "${FILESDIR}"/${P}-default-psviewer.patch
+	# no debug during compile
+	epatch "${FILESDIR}"/${P}-sbcl-disable-debugger.patch
+	# diff_form autoloading
+	epatch "${FILESDIR}/${P}-diff_form.patch"
 }
 
 src_compile() {
@@ -106,11 +144,10 @@ src_install() {
 	fi
 
 	if use tetex; then
-		insinto /usr/share/texmf/tex/latex/emaxima
+		insinto "${MAXIMA_TEXMFDIR}/tex/latex/emaxima"
 		doins interfaces/emacs/emaxima/emaxima.sty
 	fi
 
-	# install documentation
 	insinto /usr/share/${PN}/${PV}/doc
 	doins AUTHORS ChangeLog COPYING NEWS README*
 	dodir /usr/share/doc
@@ -118,7 +155,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	# do not gunzip the info files in certain cases of lisp
+	# some lisp do not gunzip info files on the fly
 	if use cmucl || use clisp || use sbcl; then
 		for infofile in $(ls ${D}/usr/share/info/*.gz); do
 			gunzip ${infofile}
