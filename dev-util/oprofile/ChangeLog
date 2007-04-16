@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.38 2007/03/31 17:29:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.39 2007/04/16 13:40:02 fmccor Exp $
+
+  16 Apr 2007; Ferris McCormick <fmccor@gentoo.org> oprofile-0.9.2.ebuild:
+  Add ~sparc keyword at user's request (Arkadi Shishlov) --- Bug #174789 ---
+  builds and generates reports.
 
   31 Mar 2007; Michał Januszewski <spock@gentoo.org>
   +files/oprofile-0.9.2-amd64.patch, oprofile-0.9.2.ebuild:
