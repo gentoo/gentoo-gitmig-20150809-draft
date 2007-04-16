@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/boxquote
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.11 2007/03/07 05:54:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.12 2007/04/16 18:25:42 ulm Exp $
+
+*boxquote-1.18-r1 (16 Apr 2007)
+
+  16 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +files/51boxquote-gentoo.el,
+  +boxquote-1.18-r1.ebuild:
+  Generate autoload file for package initialisation, using new function
+  elisp-make-autoload-file of elisp-common.eclass.
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50boxquote-gentoo.el:
