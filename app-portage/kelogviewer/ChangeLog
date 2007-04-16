@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/kelogviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/ChangeLog,v 1.6 2007/02/18 13:28:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/ChangeLog,v 1.7 2007/04/16 08:08:48 opfer Exp $
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  kelogviewer-0.4.0.7.ebuild:
+  changed dependency from kde-base/pykde to dev-python/pykde as the KDE
+  bindings have some problems, see bug 166328
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> kelogviewer-0.4.0.7.ebuild:
   Added ~ppc wrt bug 166595
