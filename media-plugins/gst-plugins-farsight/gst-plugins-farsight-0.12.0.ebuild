@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.10.2.ebuild,v 1.3 2007/04/16 22:01:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.0.ebuild,v 1.1 2007/04/16 22:01:46 tester Exp $
 
 inherit gst-plugins10
 
@@ -36,9 +36,7 @@ src_compile() {
 		$(use_enable gsm) \
 		$(use_enable jingle jingle-p2p) \
 		$(use_enable msn mimic) \
-		$(use_with yahoo libj2k) \
-		--disable-debug \
-		--with-plugins=rtpdemux,rtpjitterbuffer || die "econf failed"
+		$(use_with yahoo libj2k) || die "econf failed"
 	emake || die "emake failed"
 }
 
