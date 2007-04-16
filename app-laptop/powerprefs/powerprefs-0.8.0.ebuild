@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.8.0.ebuild,v 1.3 2007/03/15 07:12:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.8.0.ebuild,v 1.4 2007/04/16 13:02:33 josejx Exp $
 
 DESCRIPTION="program to interface with pbbuttonsd (Powerbook/iBook) keys"
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.4
