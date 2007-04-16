@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.76 2007/04/15 18:31:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.77 2007/04/16 17:10:57 gustavoz Exp $
+
+  16 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  live-2007.02.20.ebuild:
+  Stable on sparc wrt #154853
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> live-2007.02.20.ebuild:
   Stable on ppc64; bug #154853
