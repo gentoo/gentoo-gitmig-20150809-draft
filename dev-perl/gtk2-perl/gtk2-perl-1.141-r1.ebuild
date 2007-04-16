@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.141-r1.ebuild,v 1.2 2007/03/05 12:48:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.141-r1.ebuild,v 1.3 2007/04/16 07:14:43 corsair Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ppc64 sparc x86"
 IUSE=""
 PATCHES="${FILESDIR}/${PN}-iter.patch"
 
