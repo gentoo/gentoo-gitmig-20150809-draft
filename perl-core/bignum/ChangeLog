@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.6 2007/04/11 03:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.7 2007/04/16 10:56:41 mcummings Exp $
+
+*bignum-0.20 (16 Apr 2007)
+
+  16 Apr 2007; Michael Cummings <mcummings@gentoo.org> +bignum-0.20.ebuild:
+  Version bump
 
   11 Apr 2007; Jeroen Roovers <jer@gentoo.org> bignum-0.19.ebuild:
   Marked ~hppa (bug #173295).
