@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gaia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.15 2007/04/08 05:07:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.16 2007/04/16 08:16:06 opfer Exp $
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> gaia-0.1.2.ebuild:
+  keyworded ~amd64, bug 156097
 
   08 Apr 2007; Joseph Jezak <josejx@gentoo.org> gaia-0.1.2.ebuild:
   Marked ~ppc for bug #156097.
