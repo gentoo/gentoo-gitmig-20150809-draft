@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.7.ebuild,v 1.1 2007/04/14 08:57:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.7.ebuild,v 1.2 2007/04/16 14:37:31 drizzt Exp $
 
-inherit eutils flag-o-matic multilib autotools
+inherit eutils flag-o-matic multilib autotools toolchain-funcs
 
 IUSE="alsa debug ieee1394 ipv6 ldap oss sasl sdl ssl v4l v4l2 xml"
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# filter out -O3, -Os and -mcpu embedded compiler flags
 	sed -i \
@@ -41,18 +41,19 @@ src_unpack() {
 		make/unix.mak
 
 	# don't break make install if there are no plugins to install
-	epatch ${FILESDIR}/pwlib-1.8.7-instplugins.diff
+	epatch "${FILESDIR}"/pwlib-1.8.7-instplugins.diff
 
 	# use sdl-config to query required libraries
-	epatch ${FILESDIR}/pwlib-1.9.3-sdl-configure.patch
+	epatch "${FILESDIR}"/pwlib-1.9.3-sdl-configure.patch
 
 	# this patch fixes bugs: #145424 and #140358
-	epatch ${FILESDIR}/${PN}-1.10.2-asm.patch
+	epatch "${FILESDIR}"/${PN}-1.10.2-asm.patch
 
 	eautoconf || die "autoconf failed"
 }
 
 src_compile() {
+	tc-export CC CXX
 	local myconf=""
 	# may cause ICE (bug #70638)
 	filter-flags -fstack-protector
@@ -98,7 +99,7 @@ src_install() {
 	libdir=$(get_libdir)
 
 	# makefile doesn't create ${D}/usr/bin
-	make PREFIX=/usr DESTDIR=${D} install || die "install failed"
+	make PREFIX=/usr DESTDIR="${D}" install || die "install failed"
 
 	## vv will try to fix the mess below, requires a lot of patching though...
 
@@ -122,8 +123,8 @@ src_install() {
 	## ^^ bad stuff
 
 	# fix symlink
-	libname=$(basename `ls ${D}/usr/${libdir}/libpt_*_*_r.so.${PV}`)
-	rm ${D}/usr/${libdir}/libpt.so
+	libname=$(basename "`ls "${D}"/usr/${libdir}/libpt_*_*_r.so.${PV}`")
+	rm "${D}"/usr/${libdir}/libpt.so
 	dosym ${libname} /usr/${libdir}/libpt.so
 
 	# fix makefiles to use headers from /usr/include and libs from /usr/lib
@@ -133,14 +134,14 @@ src_install() {
 	sed -i  -e "s:-I\$(PWLIBDIR)\(/include[a-zA-Z0-9_/-]\+\):-I/usr/include\1:g" \
 		-e "s:-I\$(PWLIBDIR)/include::g" \
 		-e "s:^\(PW_LIBDIR[ \t]\+=\).*:\1 /usr/${libdir}:" \
-		${D}/usr/share/pwlib/make/*.mak
+		"${D}"/usr/share/pwlib/make/*.mak
 
 	# dodgy configure/makefiles forget to expand this
 	# Note: change to /usr/share/pwlib/${PV} (or whatever PWLIBDIR should point to)
 	#       once pwlib ebuilds get slotted
 	sed -i -e "s:\${exec_prefix}:/usr:" \
-		${D}/usr/bin/ptlib-config \
-		${D}/usr/share/pwlib/make/ptlib-config
+		"${D}"/usr/bin/ptlib-config \
+		"${D}"/usr/share/pwlib/make/ptlib-config
 
 	# copy version.h
 	insinto /usr/share/pwlib
