@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.14.8.ebuild,v 1.2 2007/03/04 15:33:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.14.8.ebuild,v 1.3 2007/04/16 16:37:13 dang Exp $
 
-WANT_AUTOMAKE="1.9"
-inherit gnome2 eutils autotools
+inherit gnome2 eutils
 
 DESCRIPTION="A library that provides top functionality to applications"
 HOMEPAGE="http://www.gnome.org/"
@@ -17,7 +16,8 @@ RDEPEND=">=dev-libs/glib-2.6
 	gdbm? ( sys-libs/gdbm )
 	dev-libs/popt"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
