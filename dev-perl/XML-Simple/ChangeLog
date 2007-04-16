@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.56 2007/03/05 12:42:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.57 2007/04/16 06:45:02 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> XML-Simple-2.16.ebuild:
+  Stable on ppc64
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> XML-Simple-2.16.ebuild:
   Stable on x86, bug #169152.

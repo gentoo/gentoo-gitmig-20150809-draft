@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-idea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.29 2007/03/05 12:44:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.30 2007/04/16 06:48:01 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> crypt-idea-1.08.ebuild:
+  Stable on ppc64
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> crypt-idea-1.08.ebuild:
   Stable on x86, bug #169152.

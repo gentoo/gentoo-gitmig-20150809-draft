@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Mail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/ChangeLog,v 1.11 2007/03/05 13:13:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/ChangeLog,v 1.12 2007/04/16 06:42:46 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  DateTime-Format-Mail-0.30.ebuild:
+  Stable on ppc64
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org>
   DateTime-Format-Mail-0.30.ebuild:

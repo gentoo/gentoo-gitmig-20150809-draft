@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.52 2007/04/14 15:19:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.53 2007/04/16 06:45:47 corsair Exp $
+
+  16 Apr 2007; Markus Rothe <corsair@gentoo.org> XML-Twig-3.28.ebuild:
+  Stable on ppc64
 
   14 Apr 2007; Michael Cummings <mcummings@gentoo.org> XML-Twig-3.29.ebuild:
   sparc stable
