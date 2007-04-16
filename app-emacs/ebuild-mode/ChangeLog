@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.13 2007/02/23 11:49:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.14 2007/04/16 18:50:42 opfer Exp $
+
+*ebuild-mode-1.5-r1 (16 Apr 2007)
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  +ebuild-mode-1.5-r1.ebuild:
+  revision bump, some minor improvements
 
   23 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   -ebuild-mode-1.1.ebuild:
