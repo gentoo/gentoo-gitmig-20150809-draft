@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.4 2006/10/01 21:42:45 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.5 2007/04/16 22:36:32 swegener Exp $
 
 DESCRIPTION="NetBSD FTP client with several advanced features"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/${PN}/${P}.tar.gz
@@ -13,6 +13,7 @@ KEYWORDS="alpha ~amd64 ppc ~ppc-macos sparc x86 ~x86-fbsd"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.1"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
@@ -25,14 +26,5 @@ src_compile() {
 src_install() {
 	newbin src/ftp tnftp || die "newbin failed"
 	newman src/ftp.1 tnftp.1 || die "newman failed"
-
-	for x in ftp lukemftp
-	do
-		if [ ! -e "${ROOT}"/usr/bin/${x} ]
-		then
-			dosym tnftp /usr/bin/${x} || die "dosym failed"
-		fi
-	done
-
 	dodoc COPYING ChangeLog README THANKS || die "dodoc failed"
 }
