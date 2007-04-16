@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0.ebuild,v 1.1 2006/10/22 15:40:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0.ebuild,v 1.2 2007/04/16 08:05:01 opfer Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc examples"
 
 RDEPEND=">=dev-python/sip-4.4.5
