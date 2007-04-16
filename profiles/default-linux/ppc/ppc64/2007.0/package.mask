@@ -1,0 +1,3 @@
+# Joseph Jezak <josejx@gentoo.org> (06 Aug 2006)
+# Masked because we mask < gcc-4.1.1 in this profile
+<=dev-lang/gnat-3.45

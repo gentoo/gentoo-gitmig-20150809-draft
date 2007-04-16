@@ -1,3 +1,12 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/make.defaults,v 1.2 2007/04/16 21:14:44 wolf31o2 Exp $
+
+# All extra USE/etc should be specified in sub-profiles.
+# DO NOT POLLUTE USE ON THIS PROFILE.
+
+USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
+
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
 VIDEO_CARDS="ati dummy fbdev mga nv sisusb v4l"
