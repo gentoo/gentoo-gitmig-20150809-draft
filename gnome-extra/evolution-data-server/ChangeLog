@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.111 2007/03/27 15:04:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.112 2007/04/16 16:33:50 dang Exp $
+
+*evolution-data-server-1.8.3-r2 (16 Apr 2007)
+
+  16 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/evolution-data-server-1.8.3-dst.patch.gz,
+  +evolution-data-server-1.8.3-r2.ebuild:
+  Bump to 1.8.3-r2
+  	Fix DST changes; bug #172835
 
 *evolution-data-server-1.10.0 (27 Mar 2007)
 
