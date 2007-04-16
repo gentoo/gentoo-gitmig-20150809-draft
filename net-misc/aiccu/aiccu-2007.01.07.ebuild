@@ -1,3 +1,7 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.07.ebuild,v 1.3 2007/04/16 19:12:47 jokey Exp $
+
 inherit eutils
 
 DESCRIPTION="AICCU Client to configure an IPv6 tunnel to SixXS"
