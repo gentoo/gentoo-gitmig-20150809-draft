@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-1.0.6c.ebuild,v 1.1 2006/09/18 22:17:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-1.0.6c.ebuild,v 1.2 2007/04/16 00:17:43 philantrop Exp $
 
 inherit kde
 
@@ -19,11 +19,6 @@ need-kde 3.5
 
 #LANGS="bg br cs da de el es fr ga gl it ka nl pl pt_BR pt ru sv tr"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	tar xjvf miniwaf.tar.bz2 1> /dev/null
-}
 src_compile() {
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	addpredict "$QTDIR/etc/settings"

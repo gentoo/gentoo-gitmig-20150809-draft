@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kdissert
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.32 2007/04/07 13:38:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.33 2007/04/16 00:17:43 philantrop Exp $
+
+  16 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdissert-1.0.6c.ebuild, kdissert-1.0.7.ebuild:
+  Removed src_unpack because miniwaf.tar.bz2 is not needed and not supplied by
+  upstream anymore. Fixes bug 149860.
 
 *kdissert-1.0.7 (20 Mar 2007)
 
