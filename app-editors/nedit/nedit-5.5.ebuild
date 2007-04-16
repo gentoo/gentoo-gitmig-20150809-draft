@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5.ebuild,v 1.9 2006/07/08 22:45:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5.ebuild,v 1.10 2007/04/16 18:51:49 grobian Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ RDEPEND="spell? ( virtual/aspell-dict )
 	x11-libs/openmotif
 	|| ( x11-libs/libXp virtual/x11 )"
 DEPEND="${RDEPEND}
-	dev-util/yacc
+	|| ( dev-util/yacc sys-devel/bison )
 	x11-libs/openmotif"
 
 src_compile() {
