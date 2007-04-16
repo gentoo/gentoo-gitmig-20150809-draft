@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.396 2007/04/16 02:36:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.397 2007/04/16 02:41:12 robbat2 Exp $
+
+  16 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.38.ebuild:
+  Mark x86 as stable as requested of me by Ticho.
 
   16 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.38.ebuild:
   The cluster tests fail when run as root, so block them when FEATURES=-userpriv.
