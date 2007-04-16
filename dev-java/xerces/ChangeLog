@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.80 2007/04/16 07:53:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.81 2007/04/16 08:01:44 betelgeuse Exp $
+
+  16 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> xerces-2.8.1.ebuild:
+  Move back to ~x86 so that mixing ~arch and arch is easier wrt split and go
+  soon stable at the same time as split ant.
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> xerces-2.8.1.ebuild:
   stable x86, bug 174726
