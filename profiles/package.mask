@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7136 2007/04/16 13:24:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7137 2007/04/16 15:30:29 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (16 Apr 2007)
+# Masked for removal on 16 May 2007, per bug #174763
+games-arcade/ddrmat
 
 # Raúl Porcel <armin76@gentoo.org> (16 Apr 2007)
 # Mask until i fix it, again
