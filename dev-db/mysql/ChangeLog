@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.397 2007/04/16 02:41:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.398 2007/04/16 03:07:40 jer Exp $
+
+  16 Apr 2007; Jeroen Roovers <jer@gentoo.org> mysql-5.0.38.ebuild:
+  Stable for HPPA (bug #171934).
 
   16 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.38.ebuild:
   Mark x86 as stable as requested of me by Ticho.
