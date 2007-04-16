@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.39.ebuild,v 1.3 2007/04/16 17:44:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.42.ebuild,v 1.1 2007/04/16 17:44:45 peper Exp $
 
 inherit linux-mod
 

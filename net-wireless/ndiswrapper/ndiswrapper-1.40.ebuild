@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.40.ebuild,v 1.2 2007/04/04 22:36:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.40.ebuild,v 1.3 2007/04/16 17:44:45 peper Exp $
 
 inherit linux-mod
 
@@ -74,20 +74,20 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 	echo
-	einfo "ndiswrapper requires .inf and .sys files from a Windows(tm) driver"
-	einfo "to function. Download these to /root for example, then"
-	einfo "run 'ndiswrapper -i /root/foo.inf'. After that you can delete them."
-	einfo "They will be copied to the proper location."
-	einfo "Once done, please run 'modules-update'."
+	elog "ndiswrapper requires .inf and .sys files from a Windows(tm) driver"
+	elog "to function. Download these to /root for example, then"
+	elog "run 'ndiswrapper -i /root/foo.inf'. After that you can delete them."
+	elog "They will be copied to the proper location."
+	elog "Once done, please run 'update-modules'."
 	echo
-	einfo "check http://ndiswrapper.sf.net/mediawiki/index.php/List for drivers"
+	elog "check http://ndiswrapper.sf.net/mediawiki/index.php/List for drivers"
 	I=$(lspci -n | egrep 'Class (0280|0200):' |  cut -d' ' -f4)
-	einfo "Look for the following on that page for your driver:"
-	einfo "Possible Hardware: ${I}"
+	elog "Look for the following on that page for your driver:"
+	elog "Possible Hardware: ${I}"
 	echo
-	einfo "Please have a look at http://ndiswrapper.sourceforge.net/wiki/"
-	einfo "for the FAQ, HowTos, Tips, Configuration, and installation"
-	einfo "information."
+	elog "Please have a look at http://ndiswrapper.sourceforge.net/wiki/"
+	elog "for the FAQ, HowTos, Tips, Configuration, and installation"
+	elog "information."
 	echo
 	einfo "ndiswrapper devs need support(_hardware_, cash)."
 	einfo "Don't hesitate if you can help, see http://ndiswrapper.sf.net for details."
