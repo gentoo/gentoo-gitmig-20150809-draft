@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.21 2007/04/16 17:34:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.22 2007/04/16 19:10:43 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -189,6 +189,9 @@ src_install() {
 
 	# HAL stores it's fdi cache in /var/lib/cache/hald
 	keepdir /var/lib/cache/hald
+
+	# HAL keeps its unix socket here
+	keepdir /var/run/hald
 }
 
 pkg_postinst() {
