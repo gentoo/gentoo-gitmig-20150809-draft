@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/audacious-dumb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.14 2007/04/16 19:19:31 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.15 2007/04/16 21:10:28 armin76 Exp $
+
+  16 Apr 2007; Raúl Porcel <armin76@gentoo.org> audacious-dumb-0.42.ebuild:
+  x86 stable wrt bug 174805
 
   16 Apr 2007; <welp@gentoo.org> audacious-dumb-0.42.ebuild:
   Stable on amd64 wrt bug 174805
