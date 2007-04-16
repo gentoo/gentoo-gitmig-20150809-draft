@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.3.ebuild,v 1.4 2007/04/16 20:54:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.3.ebuild,v 1.5 2007/04/16 21:03:42 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -145,3 +145,11 @@ src_install() {
 			s|instpath|${MOZILLA_FIVE_HOME}|" \
 		${D}/etc/gre.d/${PV}.conf
 }
+
+pkg_postinst() {
+	elog "Please remember to rebuild any packages that you have built"
+	elog "against xulrunner. Some packages might be broken by the upgrade; if this"
+	elog "is the case, please search at http://bugs.gentoo.org and open a new bug"
+	elog "if one does not exist."
+}
+
