@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.44 2007/03/22 20:08:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.45 2007/04/16 11:24:44 opfer Exp $
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> ace-5.5-r1.ebuild:
+  stable amd64, bug 148898
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> ace-5.5-r1.ebuild:
   Stable on sparc
