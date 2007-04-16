@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.6.ebuild,v 1.2 2007/04/12 19:49:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.6.ebuild,v 1.3 2007/04/16 17:10:20 mr_bones_ Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
