@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.040.ebuild,v 1.1 2007/04/12 19:53:27 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.041.ebuild,v 1.1 2007/04/16 17:18:19 ian Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/demerge/"
@@ -33,5 +33,5 @@ pkg_postinst() {
 		elog "If ever you find this to be an inconvenience simply chmod -x /etc/portage/postsync.d/demerge-record"
 	fi
 
-	elog "demerge-0.040 comes with a new storage format. Make sure you read the changelog before executing it after upgrading."
+	elog "demerge >=0.040 comes with a new storage format. Make sure you read the changelog before executing it after upgrading."
 }

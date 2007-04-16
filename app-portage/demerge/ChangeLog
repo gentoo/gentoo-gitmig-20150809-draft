@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/demerge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.21 2007/04/12 19:53:27 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.22 2007/04/16 17:18:19 ian Exp $
+
+*demerge-0.041 (16 Apr 2007)
+
+  16 Apr 2007; Christian Hartmann <ian@gentoo.org> -demerge-0.035.ebuild,
+  -demerge-0.040.ebuild, +demerge-0.041.ebuild:
+  Version bump; cleanup
 
 *demerge-0.040 (12 Apr 2007)
 
