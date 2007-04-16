@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.91 2007/04/16 07:28:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.92 2007/04/16 21:30:30 dang Exp $
+
+*gtkhtml-3.14.1 (16 Apr 2007)
+
+  16 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +gtkhtml-3.14.1.ebuild:
+  Bump to 3.14.1
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
   Stable on ppc64
