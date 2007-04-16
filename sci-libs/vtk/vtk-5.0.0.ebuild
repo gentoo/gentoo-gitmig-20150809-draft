@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.10 2006/10/14 00:00:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.11 2007/04/16 08:20:44 opfer Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -17,12 +17,11 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE="doc examples java mpi patented python tcltk threads qt3 qt4"
+IUSE="doc examples java mpi patented python tk threads qt3 qt4"
 RDEPEND="java? ( =virtual/jdk-1.4* )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
-	tcltk? ( >=dev-lang/tcl-8.2.3
-			>=dev-lang/tk-8.2.3 )
+	tk? ( >=dev-lang/tk-8.2.3 )
 	dev-libs/expat
 	media-libs/jpeg
 	media-libs/libpng
@@ -56,7 +55,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# gcc versions 3.2.x seem to have sse-related bugs that are 
+	# gcc versions 3.2.x seem to have sse-related bugs that are
 	# triggered by VTK when compiling for pentium3/4
 	if [ "$(gcc-major-version)" -eq 3 -a "$(gcc-minor-version)" -eq 2 -a \
 		"$(get-flag -march)" == "-march=pentium4" ]; then
@@ -134,7 +133,7 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_QMAKE_EXECUTABLE:PATH=/usr/bin/qmake"
 	fi
 
-	if use tcltk; then
+	if use tk; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_TK:BOOL=ON"
 	else
@@ -162,7 +161,7 @@ src_compile() {
 }
 
 src_install() {
-	# remove portage paths from dynamically created Type 
+	# remove portage paths from dynamically created Type
 	# headers
 	sed -e "s:${S}/Common/::" \
 		-e "s:${S}/Rendering/::" \
