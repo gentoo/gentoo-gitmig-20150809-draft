@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.187 2007/04/07 13:03:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.188 2007/04/16 16:25:44 opfer Exp $
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  cyrus-sasl-2.1.22-r2.ebuild:
+  stable amd64, bug 169512
 
   07 Apr 2007; Luca Longinotti <chtekk@gentoo.org>
   files/saslauthd-2.1.21.conf, files/saslauthd2.rc6, files/pwcheck.rc6,
