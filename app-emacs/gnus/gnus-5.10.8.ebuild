@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.8 2007/04/10 19:56:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.9 2007/04/16 08:14:32 opfer Exp $
 
 inherit elisp
 
@@ -28,12 +28,12 @@ src_compile() {
 }
 
 src_install() {
-	emake \
+	einstall \
 		lispdir="${D}/usr/share/emacs/site-lisp/gnus" \
-		etcdir="${D}/usr/share/emacs/etc" install \
+		etcdir="${D}/usr/share/emacs/etc" \
 		|| die "emake install failed"
 
-	elisp-site-file-install "{FILESDIR}/${SITEFILE}"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
 	dodoc ChangeLog GNUS-NEWS README todo
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.25 2007/04/15 20:11:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.26 2007/04/16 08:14:32 opfer Exp $
+
+  16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> gnus-5.10.8.ebuild:
+  reverted some changes, because they cause a hell of a problem
 
 *gnus-5.10.8-r1 (15 Apr 2007)
 
