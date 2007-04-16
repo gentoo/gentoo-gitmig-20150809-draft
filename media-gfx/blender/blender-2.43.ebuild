@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43.ebuild,v 1.5 2007/04/15 18:37:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43.ebuild,v 1.6 2007/04/16 14:53:07 gustavoz Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.blender.org/source/${P}.tar.gz
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
-KEYWORDS="~amd64 ~ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 
 RDEPEND=">=dev-libs/openssl-0.9.6
 	ffmpeg? ( >=media-video/ffmpeg-${FFMPEG_SNAP/-/_}
