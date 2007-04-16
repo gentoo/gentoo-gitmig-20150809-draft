@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.8.ebuild,v 1.1 2007/04/14 08:57:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.8.ebuild,v 1.2 2007/04/16 14:21:52 drizzt Exp $
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="OPAL library, used by Ekiga"
 HOMEPAGE="http://www.ekiga.org"
@@ -19,12 +19,13 @@ RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-1]
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# Makefile is currently broken with NOTRACE=1, fix that
-	epatch ${FILESDIR}/${PN}-2.1.1-notrace.diff
+	epatch "${FILESDIR}"/${PN}-2.1.1-notrace.diff
 }
 
 src_compile() {
+	tc-export CC CXX
 	local makeopts
 	local myconf
 
@@ -49,7 +50,7 @@ src_compile() {
 
 	econf \
 		PWLIBDIR=/usr/share/pwlib \
-		OPALDIR=${S} \
+		OPALDIR="${S}" \
 		${myconf} || die "configure failed"
 
 	emake ${makeopts} opt || die "make failed"
@@ -81,7 +82,7 @@ src_install() {
 	###
 	# Install stuff
 	#
-	make PREFIX=/usr DESTDIR=${D} \
+	make PREFIX=/usr DESTDIR="${D}" \
 		${makeopts} install || die "install failed"
 
 	libdir=$(get_libdir)
