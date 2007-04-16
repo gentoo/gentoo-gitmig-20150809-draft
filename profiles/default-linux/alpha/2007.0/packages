@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/dev/2007.0/packages,v 1.1 2007/01/26 13:36:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2007.0/packages,v 1.1 2007/04/16 20:30:42 wolf31o2 Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
