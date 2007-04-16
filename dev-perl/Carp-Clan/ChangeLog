@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.21 2007/04/16 11:06:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.22 2007/04/16 13:58:42 jer Exp $
+
+  16 Apr 2007; Jeroen Roovers <jer@gentoo.org> Carp-Clan-5.9.ebuild:
+  Marked ~hpppa (bug #174785).
 
 *Carp-Clan-5.9 (16 Apr 2007)
 
