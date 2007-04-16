@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail-attachwarner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.5 2007/02/27 20:05:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.6 2007/04/16 13:13:03 ticho Exp $
+
+*claws-mail-attachwarner-0.2.6 (16 Apr 2007)
+
+  16 Apr 2007; Andrej Kacian <ticho@gentoo.org>
+  +claws-mail-attachwarner-0.2.6.ebuild:
+  Version bump.
 
 *claws-mail-attachwarner-0.2.5 (27 Feb 2007)
 

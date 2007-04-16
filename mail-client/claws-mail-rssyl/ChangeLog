@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail-rssyl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.6 2007/02/27 20:12:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.7 2007/04/16 13:20:22 ticho Exp $
+
+*claws-mail-rssyl-0.12 (16 Apr 2007)
+
+  16 Apr 2007; Andrej Kacian <ticho@gentoo.org>
+  +claws-mail-rssyl-0.12.ebuild:
+  Version bump.
 
 *claws-mail-rssyl-0.11 (27 Feb 2007)
 
