@@ -1,0 +1,21 @@
+#!/sbin/runscript
+
+FREENET6_CLIENT="/usr/sbin/gw6c"
+
+depend() {
+	need net
+	use dns logger
+}
+
+start() {
+	ebegin "Starting Freenet6 IPv6 Client"
+	start-stop-daemon --start --quiet \
+		--exec $FREENET6_CLIENT -- -f /etc/freenet6/gw6c.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Freenet6 IPv6 Client"
+	start-stop-daemon --stop --quiet --exec $FREENET6_CLIENT
+	eend $?
+}

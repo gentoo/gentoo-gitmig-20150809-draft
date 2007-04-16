@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.15 2007/04/15 22:22:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.16 2007/04/16 18:45:09 voyageur Exp $
+
+*freenet6-4.2.2 (16 Apr 2007)
+
+  16 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org> +files/gw6c.conf,
+  +files/freenet6-4.2.2-noretry.patch, +files/gw6c.rc,
+  +freenet6-4.2.2.ebuild:
+  Version bump, fixes bugs #32779, #63710, #102947 and #166210
 
   15 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -files/freenet6-0.9.2.diff, metadata.xml, -freenet6-0.9.7.ebuild:
