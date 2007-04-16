@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.166 2007/04/16 15:36:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.167 2007/04/16 17:34:06 uberlord Exp $
+
+  16 Apr 2007; Roy Marples <uberlord@gentoo.org> hal-0.5.9.ebuild:
+  Blessed with the ~x86-fbsd keyword.
 
   16 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/0.5.9/10_freebsd_storage_reprobe_fix.patch, files/0.5.9/series:

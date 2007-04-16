@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.20 2007/04/14 13:48:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.21 2007/04/16 17:34:06 uberlord Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 KERNEL_IUSE="kernel_linux kernel_FreeBSD"
 IUSE="acpi crypt debug dell disk-partition doc pam pcmcia selinux ${KERNEL_IUSE}"
@@ -124,15 +124,14 @@ src_compile() {
 
 	if use kernel_linux ; then
 		backend="linux"
+		use acpi && acpi="--enable-acpi-toshiba --enable-acpi-ibm"
 	elif use kernel_FreeBSD ; then
 		backend="freebsd"
 	else
 		eerror "Invalid backend"
 	fi
 
-	if use acpi ; then
-		acpi="--enable-acpi-toshiba --enable-acpi-ibm"
-	else
+	if ! use acpi ; then
 		acpi="--disable-acpi-proc --disable-acpi-acpid"
 	fi
 
@@ -140,6 +139,7 @@ src_compile() {
 		  --with-doc-dir=/usr/share/doc/${PF} \
 		  --with-os-type=gentoo \
 		  --with-pid-file=/var/run/hald.pid \
+		  --with-socket-dir=/var/run/hald \
 		  --with-hwdata=/usr/share/misc \
 		  --enable-hotplug-map \
 		  --enable-man-pages \
@@ -211,10 +211,12 @@ pkg_postinst() {
 
 	# Make sure that the haldaemon user is in the ${HALDAEMON_GROUPS}
 	# If users have a problem with this, let them file a bug
-	if use kernel_linux; then
-		usermod -G ${HALDAEMON_GROUPS_LINUX} haldaemon
-	elif use kernel_FreeBSD; then
-		usermod -G ${HALDAEMON_GROUPS_FREEBSD} haldaemon
+	if [[ ${ROOT} == / ]] ; then
+		if use kernel_linux; then
+			usermod -G ${HALDAEMON_GROUPS_LINUX} haldaemon
+		elif use kernel_FreeBSD; then
+			pw usermod haldaemon -G ${HALDAEMON_GROUPS_FREEBSD}
+		fi
 	fi
 
 	elog "The HAL daemon needs to be running for certain applications to"
