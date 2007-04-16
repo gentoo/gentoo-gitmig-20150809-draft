@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.20 2007/04/06 10:48:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.21 2007/04/16 10:27:57 ulm Exp $
+
+*vm-7.19.282 (16 Apr 2007)
+
+  16 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +vm-7.19.282.ebuild:
+  Version bump (copied from Emacs overlay). Include patches and addons from
+  the new upstream maintainer Robert Widhopf-Fenk. Added some die comments;
+  use emake instead of make; introduced bbdb USE flag and dependency.
 
 *vm-7.19-r3 (06 Apr 2007)
 
