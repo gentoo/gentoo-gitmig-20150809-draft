@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.14 2007/01/08 00:07:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.15 2007/04/16 12:47:57 markusle Exp $
+
+*vmd-1.8.6 (15 Apr 2007)
+
+  15 Apr 2007; Markus Dittrich <markusle@gentoo.org>
+  -files/vmd-1.8.4-config-gentoo.patch, -files/vmd-1.8.4-paratool.patch,
+  -files/vmd-1.8.4-plugin-autopsf.patch,
+  +files/vmd-1.8.6-config-gentoo.patch, +vmd-1.8.6.ebuild:
+  Version bump (fixes bug #174595). Thanks much to Jeffrey Gardner
+  <je_fro@gentoo.org> for his patch and ebuild.
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -vmd-1.8.4.ebuild,
   -vmd-1.8.4-r1.ebuild:

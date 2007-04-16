@@ -1,5 +1,5 @@
---- vmd-1.8.4/configure	2006-04-17 03:12:36.000000000 -0500
-+++ vmd-1.8.4-new/configure	2006-04-17 16:22:09.000000000 -0500
+--- ../vmd-1.8.6-orig/configure	2007-04-14 17:08:43.000000000 -0500
++++ vmd-1.8.6/configure	2007-04-14 17:30:28.000000000 -0500
 @@ -13,10 +13,10 @@
  $install_name = "vmd";
  
@@ -13,7 +13,7 @@
  
  
  # optionally override hard-coded defaults above with environment variables
-@@ -121,29 +121,6 @@
+@@ -123,29 +123,6 @@
  # Configure script code begins here
  ############################################################################
  
@@ -43,18 +43,18 @@
  #################### Parse command line options   ###########
  # list of allowed architectures
  @archlist=('IRIX6', 'IRIX6_64', 'FREEBSD', 'HPUX11', 'AIX4', 'AIX5', 'AIX5_64', 'LINUX', 'LINUXALPHA', 'LINUXAMD64', 'LINUXIA64', 'LINUXPPC', 'MACOSX', 'MACOSXX86', 'TRU64', 'SOLARIS2', 'SOLARIS2_64', 'SOLARISX86', 'SOLARISX86_64', 'WIN32', 'WIN64');
-@@ -406,8 +383,8 @@
+@@ -423,8 +400,8 @@
  
  ################ Plugin options
  #
 -$plugin_dir	= "../plugins";
 -$molfile_dir = "$plugin_dir/$config_arch/molfile";
-+$plugin_dir	= "gentoo-plugindir";
++$plugin_dir    = "gentoo-plugindir";
 +$molfile_dir = "$plugin_dir/compile/lib_LINUX/molfile";
  $plugin_include = "-I$plugin_dir/include -I$molfile_dir";
  $plugin_library = "-L$molfile_dir";
  $plugin_libs    = "-lmolfile_plugin";
-@@ -507,8 +484,8 @@
+@@ -529,8 +506,8 @@
  ################ FLTK GUI
  $fltk_defines     = "-DVMDGUI -DVMDFLTK";
  $fltk_dir         = "$vmd_library_dir/fltk";
@@ -64,8 +64,19 @@
 +$fltk_library     = "-Lgentoo-fltk-libs";
  $fltk_libs        = "-lfltk -lX11";
  #@fltk_cc          = ('forms_ui.c');
- @fltk_ccpp        = ( 'ColorFltkMenu.C',
-@@ -856,9 +833,9 @@
+ @fltk_cu          = ();
+@@ -886,8 +863,8 @@
+ #######################
+ $netcdf_defines     = "";
+ $netcdf_dir         = "$vmd_library_dir/netcdf";
+-$netcdf_include     = "-I$netcdf_dir/include";
+-$netcdf_library     = "-L$netcdf_dir/lib_$config_arch";
++$netcdf_include     = "-Igentoo-netcdf-include";
++$netcdf_library     = "-Lgentoo-netcdf-libs";
+ $netcdf_libs        = "-lnetcdf";
+ @netcdf_cc          = ();
+ @netcdf_cu          = ();
+@@ -954,9 +931,9 @@
  ###################
  $python_defines     = "-DVMDPYTHON";
  $python_dir         = "$vmd_library_dir/python";
@@ -78,7 +89,7 @@
  @python_h           = ('PythonTextInterp.h',
                         'VMDTkinterMenu.h',
  		       'py_commands.h',
-@@ -1428,8 +1405,8 @@
+@@ -1555,8 +1532,8 @@
      $opengl_libs        = "-lGL -lGLU"; 
      # $opengl_libs      = "-L/usr/X11R6/lib -lGL -lGLU -lXext -lX11";
  
@@ -89,7 +100,7 @@
      # test hack to statically link libstd++
      # $arch_ccpp        = "gcc";
      $arch_depend_flag = "-MM";
-@@ -1438,8 +1415,8 @@
+@@ -1565,8 +1542,8 @@
      $arch_shcppopts   = "-fPIC";
      $arch_shldopts    = "";
  
@@ -97,6 +108,6 @@
 -    $arch_copts       = "-m32 -Wall -O3";
 +    $arch_opt_flag    = "gentoo-cflags";
 +    $arch_copts       = "gentoo-cflags";
- 
-     if ($config_static) {
-       $arch_lopts       = "-static";
+     if ($config_swig) {
+       $swig_cflags     .= " -fno-strict-aliasing";
+     }
