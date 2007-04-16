@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.48 2007/04/15 20:13:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.49 2007/04/16 04:21:40 jer Exp $
+
+  16 Apr 2007; Jeroen Roovers <jer@gentoo.org> id3lib-3.8.3-r5.ebuild:
+  Stable for HPPA (bug #130922).
 
   15 Apr 2007; Andrej Kacian <ticho@gentoo.org> id3lib-3.8.3-r5.ebuild:
   Stable on x86, bug #130922.
