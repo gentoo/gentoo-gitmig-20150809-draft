@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.38.ebuild,v 1.5 2007/04/15 20:53:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.38.ebuild,v 1.6 2007/04/16 02:36:33 robbat2 Exp $
 
 MY_EXTRAS_VER="20070415"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -32,22 +32,22 @@ src_test() {
 			mysql_disable_test	"im_options_set"		"fails as root"
 			mysql_disable_test	"im_options_unset"		"fails as root"
 			mysql_disable_test	"im_utils"				"fails as root"
+			
+			# As of 5.0.38, these work with the sandbox
+			# but they break if you are root
+			for t in \
+			loaddata_autocom_ndb \
+			ndb_{alter_table{,2},autodiscover{,2,3},basic,bitfield,blob} \
+			ndb_{cache{,2},cache_multi{,2},charset,condition_pushdown,config} \
+			ndb_{database,gis,index,index_ordered,index_unique,insert,limit} \
+			ndb_{loaddatalocal,lock,minmax,multi,read_multi_range,rename,replace} \
+			ndb_{restore,subquery,transaction,trigger,truncate,types,update} \
+			ps_7ndb rpl_ndb_innodb_trans strict_autoinc_5ndb \
+			mysql_upgrade
+			do
+				mysql_disable_test	"${t}"	"fails as root"
+			done
 		fi
-
-		# As of 5.0.38, these work with the sandbox
-		# Tested by robbat2, on ppc64-32ul and amd64.
-		##for t in \
-		##loaddata_autocom_ndb \
-		##ndb_{alter_table{,2},autodiscover{,2,3},basic,bitfield,blob} \
-		##ndb_{cache{,2},cache_multi{,2},charset,condition_pushdown,config} \
-		##ndb_{database,gis,index,index_ordered,index_unique,insert,limit} \
-		##ndb_{loaddatalocal,lock,minmax,multi,read_multi_range,rename,replace} \
-		##ndb_{restore,subquery,transaction,trigger,truncate,types,update} \
-		##ps_7ndb rpl_ndb_innodb_trans strict_autoinc_5ndb \
-		##mysql_upgrade
-		##do
-		##	mysql_disable_test	"${t}"	"fails with sandbox enabled"
-		##done
 
 		# Both of these seem to work as of 5.0.38
 		##use "extraengine" && mysql_disable_test "federated" "fails with extraengine USE"
