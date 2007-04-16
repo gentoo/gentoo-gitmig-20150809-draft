@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Event-ExecFlow
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/ChangeLog,v 1.17 2006/10/09 14:25:34 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/ChangeLog,v 1.18 2007/04/16 11:31:08 mcummings Exp $
+
+*Event-ExecFlow-0.63 (16 Apr 2007)
+
+  16 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  +Event-ExecFlow-0.63.ebuild:
+  Version bump
 
   09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -Event-ExecFlow-0.61.ebuild, Event-ExecFlow-0.62.ebuild:
