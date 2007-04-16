@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r5.ebuild,v 1.1 2007/02/12 00:53:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r5.ebuild,v 1.2 2007/04/16 08:06:15 betelgeuse Exp $
+
+# Does not install a symlink any more so ANT_TASKS is the only way to use this
+WANT_SPLIT_ANT="true"
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,15 +13,14 @@ HOMEPAGE="http://cvs.apache.org/viewcvs.cgi/xml-xerces/java/tools/src/XJavac.jav
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4"
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jdk-1.4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	cp ${FILESDIR}/${P}-build.xml ./build.xml || die" failed to cp build.xml"
+	cp "${FILESDIR}/${P}-build.xml" ./build.xml || die" failed to cp build.xml"
 	epatch "${FILESDIR}/${PN}-ibm-1_5.patch"
 	epatch "${FILESDIR}/${PN}-more-vendors.patch"
 }

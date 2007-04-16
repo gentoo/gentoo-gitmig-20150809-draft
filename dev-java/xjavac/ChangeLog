@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.20 2007/02/12 00:53:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.21 2007/04/16 08:06:15 betelgeuse Exp $
+
+  16 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  xjavac-20041208-r5.ebuild:
+  Recuire split ant because does not install a symlink any more.
 
 *xjavac-20041208-r5 (12 Feb 2007)
 
