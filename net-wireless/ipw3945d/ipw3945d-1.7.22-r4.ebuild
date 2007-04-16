@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.7 2007/02/13 16:42:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.8 2007/04/16 14:47:05 phreak Exp $
 
 inherit eutils
 
@@ -47,9 +47,9 @@ src_install() {
 
 pkg_postinst() {
 	# Update the modules.d cache
-	if [ -f "${ROOT}/etc/modules.d/${PN}" ] ; then
-		ebegin "Executing /sbin/modules-update"
-		"${ROOT}"sbin/modules-update --force
+	if [ "${ROOT}" = "/" ] && [ -f "${ROOT}/etc/modules.d/${PN}" ] ; then
+		ebegin "Updating modules.conf"
+		[ -x /sbin/update-modules ] && /sbin/update-modules --force || /sbin/modules-update --force
 		eend $?
 	fi
 

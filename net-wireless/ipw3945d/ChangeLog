@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw3945d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.15 2007/02/13 16:42:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.16 2007/04/16 14:47:05 phreak Exp $
+
+  16 Apr 2007; Christian Heim <phreak@gentoo.org> ipw3945d-1.7.22-r4.ebuild:
+  Calling modules-update has been deprecated w/
+  sys-apps/module-init-tools-3.2.2-r3, thanks to Jakub for the fix (fixes
+  #174754).
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ipw3945d-1.7.22-r4.ebuild:
