@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.20 2007/04/15 20:30:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.21 2007/04/16 11:06:54 mcummings Exp $
+
+*Carp-Clan-5.9 (16 Apr 2007)
+
+  16 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  +Carp-Clan-5.9.ebuild:
+  Version bump
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> Carp-Clan-5.8.ebuild:
   Stable on ppc64
