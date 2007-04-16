@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/metacafe-dl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.1 2007/04/16 22:04:52 agorf Exp $
+
+*metacafe-dl-2007.03.27 (16 Apr 2007)
+
+  16 Apr 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  +metacafe-dl-2007.03.27.ebuild:
+  Initial ebuild, bug #144499.
+
