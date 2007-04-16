@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.15 2006/02/28 02:56:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.16 2007/04/16 15:33:58 opfer Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -19,7 +19,7 @@ SRC_URI="http://cvs.gentoo.org/~mkennedy/app-emacs/${P}.el.bz2"
 if [ "${SIMPLE_ELISP}" = 't' ]; then
 	S="${WORKDIR}/"
 #else
-#   Use default value
+#	Use default value
 #	S="${WORKDIR}/${P}"
 fi
 
