@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.1.ebuild,v 1.1 2007/04/12 04:22:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.1.ebuild,v 1.2 2007/04/17 11:06:45 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -63,6 +63,9 @@ src_unpack() {
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
+
+	cd ${WORKDIR}
+	epatch ${FILESDIR}/${P}-multilib.patch
 
 	cd ${S}
 	ln -sf ${S} ${WORKDIR}/core
@@ -135,12 +138,14 @@ src_compile() {
 }
 
 src_install() {
+	local LIB=$(get_libdir)
+
 	cd ${SM}
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} LIB=${LIB} install || die
 
 	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
 	cd ${S}
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} LIB=${LIB} install || die
 
 	echo 'CONFIG_PROTECT_MASK="/etc/splash"' > 99splash
 	doenvd 99splash
@@ -161,12 +166,11 @@ src_install() {
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
 		cd ${SG}
-		make DESTDIR=${D} install || die "failed to install the splash plugin"
+		make DESTDIR=${D} LIB=${LIB} install || die "failed to install the splash plugin"
 	else
 		cp ${SG}/splash-functions-bl1.sh ${D}/sbin/splash-functions.sh
 	fi
 
-	LIB=$(get_libdir)
 	sed -i -e "s#/lib/splash#/${LIB}/splash#" ${D}/sbin/splash-functions.sh
 	keepdir /${LIB}/splash/{tmp,cache,bin}
 	dosym /${LIB}/splash/bin/fbres /sbin/fbres
