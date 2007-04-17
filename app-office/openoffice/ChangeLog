@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.315 2007/04/16 10:27:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.316 2007/04/17 04:49:26 suka Exp $
+
+  17 Apr 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.2.0.ebuild:
+  Call eautoreconf for bug #174794 and add missing Mono dependency, bug #174851
 
 *openoffice-2.2.0 (16 Apr 2007)
 
