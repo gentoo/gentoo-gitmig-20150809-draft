@@ -1,0 +1,69 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN totem-2.18.1.orig/browser-plugin/Makefile.am totem-2.18.1/browser-plugin/Makefile.am
+--- totem-2.18.1.orig/browser-plugin/Makefile.am	2007-03-25 20:50:03.000000000 -0400
++++ totem-2.18.1/browser-plugin/Makefile.am	2007-04-16 10:01:41.000000000 -0400
+@@ -80,6 +80,7 @@ totem_plugin_viewer_CFLAGS = \
+ 	$(WARN_CFLAGS)		\
+ 	$(DBUS_CFLAGS)		\
+ 	$(NVTV_CFLAGS)		\
++	$(SN_CFLAGS)		\
+ 	$(AM_CFLAGS)
+ 
+ totem_plugin_viewer_LDADD =						\
+@@ -93,6 +94,7 @@ totem_plugin_viewer_LDADD =						\
+ 	$(DBUS_LIBS)		\
+ 	$(NVTV_LIBS) 		\
+ 	$(XTEST_LIBS)		\
++	$(SN_LIBS)		\
+ 	$(X_LIBS)
+ 
+ BUILT_SOURCES += \
+@@ -155,7 +157,7 @@ libtotem_basic_plugin_la_LIBADD =					\
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	libtotempluginviewer_marshal.la					\
+ 	$(DBUS_LIBS)	\
+-	$(MOZILLA_LIBS)	\
++	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_basic_plugin_la_LDFLAGS = \
+@@ -223,7 +225,7 @@ libtotem_gmp_plugin_la_LIBADD =						\
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	libtotempluginviewer_marshal.la	\
+ 	$(DBUS_LIBS)	\
+-	$(MOZILLA_LIBS)	\
++	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_gmp_plugin_la_LDFLAGS = \
+@@ -285,7 +287,7 @@ libtotem_complex_plugin_la_LIBADD =					
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	libtotempluginviewer_marshal.la					\
+ 	$(DBUS_LIBS)	\
+-	$(MOZILLA_LIBS)	\
++	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_complex_plugin_la_LDFLAGS = \
+@@ -347,7 +349,7 @@ libtotem_narrowspace_plugin_la_LIBADD =	
+ 	$(top_builddir)/src/plparse/libtotem-plparser-mini.la		\
+ 	libtotempluginviewer_marshal.la					\
+ 	$(DBUS_LIBS)	\
+-	$(MOZILLA_LIBS)	\
++	$(BROWSER_PLUGIN_LIBS)	\
+ 	$(LIBXPCOMGLUE_S)
+ 
+ libtotem_narrowspace_plugin_la_LDFLAGS = \
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN totem-2.18.1.orig/configure.in totem-2.18.1/configure.in
+--- totem-2.18.1.orig/configure.in	2007-04-04 10:40:41.000000000 -0400
++++ totem-2.18.1/configure.in	2007-04-16 09:58:58.000000000 -0400
+@@ -575,6 +575,10 @@ AC_ARG_ENABLE([mully-plugin],
+ 	[],[enable_mully_plugin=yes])
+ AC_MSG_RESULT([$enable_mully_plugin])
+ 
++PKG_CHECK_MODULES([SN], [ libstartup-notification-1.0 >= 0.8 ])
++AC_SUBST([SN_CFLAGS])
++AC_SUBST([SN_LIBS])
++
+ fi
+ 
+ AM_CONDITIONAL([ENABLE_BASIC_PLUGIN],[test "$enable_basic_plugin" = "yes"])
