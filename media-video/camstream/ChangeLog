@@ -1,6 +1,15 @@
 # ChangeLog for media-video/camstream
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.16 2007/02/09 08:01:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.17 2007/04/17 10:30:30 phosphan Exp $
+
+*camstream-20070315 (17 Apr 2007)
+
+  17 Apr 2007; Patrick Kursawe <phosphan@gentoo.org>
+  -files/camstream-0.26.2-gcc33-multiline-string-fix.patch,
+  +files/20070315.patch, -files/uicmocpath.patch,
+  +camstream-20070315.ebuild:
+  Cleanup of old version and a version bump to a snapshot because 
+  of bug #168317 and #159273.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
