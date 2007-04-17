@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/kirbybase
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.7 2007/03/13 19:32:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.8 2007/04/17 12:37:53 agorf Exp $
+
+*kirbybase-2.6 (17 Apr 2007)
+
+  17 Apr 2007; Aggelos Orfanakos <agorf@gentoo.org> +kirbybase-2.6.ebuild:
+  Version bump to 2.6.
 
   13 Mar 2007; Tom Gall <tgall@gentoo.org> kirbybase-2.5.2.ebuild:
   added ~ppc64
