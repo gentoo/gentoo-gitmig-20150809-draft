@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/libupnp-1.4.3.ebuild,v 1.1 2007/03/31 18:33:38 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/libupnp-1.4.4.ebuild,v 1.1 2007/04/17 06:19:52 gurligebis Exp $
 
 inherit eutils toolchain-funcs
 
