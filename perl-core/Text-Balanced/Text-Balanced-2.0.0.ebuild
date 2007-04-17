@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/Text-Balanced-2.0.0.ebuild,v 1.9 2007/04/14 16:30:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/Text-Balanced-2.0.0.ebuild,v 1.10 2007/04/17 19:00:24 gustavoz Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/D/DC/DCONWAY/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
