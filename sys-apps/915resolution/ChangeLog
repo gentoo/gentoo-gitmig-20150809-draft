@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/915resolution
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.8 2007/04/17 16:36:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.9 2007/04/17 16:52:24 genstef Exp $
+
+  17 Apr 2007; Stefan Schweizer <genstef@gentoo.org> files/confd,
+  metadata.xml:
+  Add mobile to metadata.xml and recommend baselayout-2 style configuration
 
 *915resolution-0.5.3 (17 Apr 2007)
 
