@@ -8,5 +8,7 @@
 08_contains_not_fdi_directive.patch
 09_hald_addon_keyboard_start_one.patch
 10_freebsd_storage_reprobe_fix.patch
+11_hal_fix_segfault_probe_volume.patch
+12_hal_fix-vol_label_probe_volume.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch

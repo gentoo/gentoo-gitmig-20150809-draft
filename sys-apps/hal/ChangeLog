@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.168 2007/04/16 19:10:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.169 2007/04/17 16:26:30 cardoe Exp $
+
+  17 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  -files/hal-0.5.1-old_storage_policy.patch, -files/hal-0.5.5.1-RBC.patch,
+  -files/hal-0.5.9-update_dtd.patch, files/0.5.9-hald.conf,
+  files/0.5.9-hald.rc, +files/0.5.9/11_hal_fix_segfault_probe_volume.patch,
+  +files/0.5.9/12_hal_fix-vol_label_probe_volume.patch, files/0.5.9/series,
+  -files/fix-scsi-fake-host-event.patch, hal-0.5.9.ebuild:
+  Clean up init script. Add HALD_VERBOSE to conf.d script. Add some proposed
+  patches to fix volume label segfault as experienced on sparc. Removed old
+  patches.
 
   16 Apr 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.ebuild:
   keepdir /var/run/hald for the unix socket

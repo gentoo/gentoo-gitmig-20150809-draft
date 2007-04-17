@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.22 2007/04/16 19:10:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.23 2007/04/17 16:26:30 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -173,9 +173,11 @@ src_install() {
 	newinitd "${FILESDIR}"/0.5.9-hald.rc hald
 	cp "${FILESDIR}"/0.5.9-hald.conf "${WORKDIR}"/
 	if use pam; then
-		sed -e 's:RC_NEED:RC_NEED="consolekit":' -i "${WORKDIR}"/0.5.9-hald.conf
-	else
-		sed -e 's:RC_NEED:RC_NEED="":' -i "${WORKDIR}"/0.5.9-hald.conf
+		sed -e 's:RC_NEED="":RC_NEED="consolekit":' -i "${WORKDIR}"/0.5.9-hald.conf
+	fi
+	if use debug; then
+		sed -e 's:HALD_VERBOSE="no":HALD_VERBOSE="yes":' \
+		-i "${WORKDIR}"/0.5.9-hald.conf
 	fi
 	newconfd "${WORKDIR}"/0.5.9-hald.conf hald
 
