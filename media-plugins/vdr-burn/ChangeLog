@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.17 2007/02/17 01:17:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.18 2007/04/17 12:40:40 zzam Exp $
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/rc-addon-0.0.9.sh:
+  Removed bash specific stuff.
 
   17 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-burn-0.0.9-r2.ebuild, vdr-burn-0.0.9-r3.ebuild:

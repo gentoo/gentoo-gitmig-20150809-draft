@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-skinenigmang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.2 2007/04/02 19:45:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.3 2007/04/17 12:41:34 zzam Exp $
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
 
 *vdr-skinenigmang-0.0.4 (02 Apr 2007)
 

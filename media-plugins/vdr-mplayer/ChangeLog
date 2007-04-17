@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-mplayer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.15 2007/03/25 17:41:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.16 2007/04/17 12:50:07 zzam Exp $
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
 
   25 Mar 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-mplayer-0.9.15-vdr-1.5.1.patch, vdr-mplayer-0.9.15.ebuild:

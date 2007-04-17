@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/files/rc-addon.sh,v 1.1 2007/01/07 01:29:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/files/rc-addon.sh,v 1.2 2007/04/17 12:42:26 zzam Exp $
 #
 # rc-addon-script for plugin dvdconvert
 #
@@ -11,8 +11,3 @@ plugin_pre_vdr_start() {
 add_plugin_param "-c ${DVDCONVERT_CONF}"
 
 }
-
-# for compatibility
-if [[ ${SCRIPT_API:-1} -lt 2 ]]; then
-plugin_pre_vdr_start
-fi

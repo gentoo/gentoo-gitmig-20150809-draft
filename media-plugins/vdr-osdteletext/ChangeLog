@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-osdteletext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.8 2007/04/02 10:48:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.9 2007/04/17 12:46:12 zzam Exp $
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
 
 *vdr-osdteletext-0.5.1-r1 (02 Apr 2007)
 
