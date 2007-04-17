@@ -9,9 +9,3 @@ plugin_pre_vdr_start() {
 	add_plugin_param "-r ${DVDSWITCH_READ_DVD}"
 	add_plugin_param "-w ${DVDSWITCH_WRITE_DVD}"
 }
-
-# for compatibility
-if [[ ${SCRIPT_API:-1} -lt 2 ]]; then
-	plugin_pre_vdr_start
-fi
-        

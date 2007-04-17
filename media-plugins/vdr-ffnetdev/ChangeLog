@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-ffnetdev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.7 2007/02/17 01:18:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.8 2007/04/17 09:46:20 zzam Exp $
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
 
   17 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-ffnetdev-0.1.0.ebuild:

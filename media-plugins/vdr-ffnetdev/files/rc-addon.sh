@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/files/rc-addon.sh,v 1.1 2006/04/02 15:50:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/files/rc-addon.sh,v 1.2 2007/04/17 09:46:20 zzam Exp $
 #
 # rc-addon-script for plugin ffnetdev
 #
@@ -9,14 +9,9 @@
 
 plugin_pre_vdr_start() {
 
-  [[ ${USE_VNC} == "yes" ]] && add_plugin_param "-o ${VNC_PORT}"
+  [ "${USE_VNC}" = "yes" ] && add_plugin_param "-o ${VNC_PORT}"
 
-  [[ ${USE_TS} == "yes" ]] && add_plugin_param "-t  ${TS_PORT}"
+  [ "${USE_TS}" = "yes" ] && add_plugin_param "-t  ${TS_PORT}"
 
-  [[ ${REMOTE} == "yes" ]] && add_plugin_param "-e"
+  [ "${REMOTE}" = "yes" ] && add_plugin_param "-e"
 }
-
-# for compatibility
-if [[ ${SCRIPT_API:-1} -lt 2 ]]; then
-  plugin_pre_vdr_start
-fi 

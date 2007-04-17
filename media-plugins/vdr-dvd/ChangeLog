@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-dvd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.9 2007/03/13 12:43:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.10 2007/04/17 09:45:04 zzam Exp $
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
 
   13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-dvd-0.3.7_pre20070117.ebuild:
