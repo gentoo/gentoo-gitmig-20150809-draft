@@ -1,0 +1,11 @@
+# ChangeLog for dev-php5/magickwand
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.1 2007/04/17 21:42:40 anant Exp $
+
+*magickwand-1.0.4 (17 Apr 2007)
+
+  17 Apr 2007; Anant Narayanan <anant@gentoo.org> +metadata.xml,
+  +magickwand-1.0.4.ebuild:
+  New ebuild for the MagickWand PHP extension; thanks to Matthew Schultz, bug
+  #125593
+
