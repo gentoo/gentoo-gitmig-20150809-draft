@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.102 2007/04/16 20:55:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.103 2007/04/17 04:58:27 ulm Exp $
+
+*emacs-cvs-22.0.98 (17 Apr 2007)
+
+  17 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +emacs-cvs-22.0.98.ebuild:
+  Taken from Emacs overlay: Prepare for new eselect module; new sound and
+  hesiod USE flags; dropped gnome USE flag; removed font dependencies for X;
+  suffix of emacs executable changed from .emacs- to -emacs- for better
+  compatibility with XEmacs; SLOT changed to 22. Request AUTOCONF 2.61 instead
+  of latest, fixes bug #170969. Remove colliding files between slots, fixes
+  bug #169033.
 
   16 Apr 2007; Ulrich Mueller <ulm@gentoo.org> -files/emacs-22.0.50.desktop,
   -files/emacs-23.0.0.desktop, -files/50emacs-23.0.0.envd,
