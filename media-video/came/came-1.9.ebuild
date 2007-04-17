@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.9.ebuild,v 1.1 2005/07/17 11:07:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.9.ebuild,v 1.2 2007/04/17 12:43:43 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=net-misc/curl-7.9.1
+DEPEND="<net-misc/curl-7.16.0
 	>=media-libs/giblib-1.2.3"
 
 S=${WORKDIR}/camE-${PV}

@@ -1,6 +1,14 @@
 # ChangeLog for media-video/came
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/came/ChangeLog,v 1.10 2007/02/03 20:57:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/came/ChangeLog,v 1.11 2007/04/17 12:43:43 dragonheart Exp $
+
+*came-1.9-r1 (17 Apr 2007)
+
+  17 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/came-1.9-curl-friendly.patch, -came-1.7.ebuild, came-1.9.ebuild,
+  +came-1.9-r1.ebuild:
+  old version wipe. added curl-7.16 compitable version and limited the
+  previous version. bug #157711
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

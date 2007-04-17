@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.7.ebuild,v 1.5 2005/05/10 13:06:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.9-r1.ebuild,v 1.1 2007/04/17 12:43:43 dragonheart Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://linuxbrit.co.uk/downloads/camE-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=net-misc/curl-7.9.1
@@ -20,9 +20,7 @@ S=${WORKDIR}/camE-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i -e "s:/usr/local:/usr:" Makefile
-	epatch ${FILESDIR}/${PV}-true-false.patch
+	epatch "${FILESDIR}"/${P}-curl-friendly.patch
 }
 
 src_compile() {
