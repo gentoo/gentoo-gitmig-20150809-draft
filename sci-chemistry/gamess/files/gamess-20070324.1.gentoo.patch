@@ -1,18 +1,18 @@
 diff -Naur gamess/comp gamess-new/comp
---- gamess/comp	2006-07-10 15:26:04.000000000 -0400
-+++ gamess-new/comp	2006-09-25 23:11:49.000000000 -0400
-@@ -11,8 +11,8 @@
- #      linux-ia64,linux-pc,mac32,macG5,necsx,sgi32,sgi64,sun32,sun64
+--- gamess/comp	2007-03-24 18:21:35.000000000 -0400
++++ gamess-new/comp	2007-04-17 15:02:02.000000000 -0400
+@@ -12,8 +12,8 @@
+ #        sgi32,sgi64,sun32,sun64
  #  2. Choose your GAMESS directory tree.
  #
 -set TARGET=ibm64
 -chdir /u1/mike/gamess
-+set TARGET=linux-pc
++set TARGET=linux32
 +#chdir /u1/mike/gamess
  #
  #    ---- and now the script begins...
  #
-@@ -1128,7 +1128,7 @@
+@@ -1112,7 +1112,7 @@
  #   The only thing you need to change is the next line.
  #   Note: you must make the analogous choice in compddi and lked, as well.
  #
@@ -21,25 +21,25 @@ diff -Naur gamess/comp gamess-new/comp
  #
      switch ($FORTRAN)
  #
-@@ -1147,7 +1147,7 @@
+@@ -1131,7 +1131,7 @@
  #   Pentium II fractionally).  None of these optimizations are used below.
  #
     case g77:
 -   set OPT = '-O2'
 +   set gentoo-OPT = '-O2'
     if ($MODULE == ormas1) set OPT='-O2 -fno-move-all-movables' # RH9, g77 3.3
-    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling, for exam19
+    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
  #
-@@ -1183,7 +1183,7 @@
+@@ -1167,7 +1167,7 @@
  #      -std=legacy  suppresses warnings about use of f77 constructs.
  #
     case gfortran:
 -   set OPT='-O2'
 +   set gentoo-OPT = '-O2'
-    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling, for exam19
+    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
     if (($MODULE == qeigen) || ($MODULE == int2c)) then
        mv $MODULE.f $MODULE.junk
-@@ -1221,7 +1221,7 @@
+@@ -1194,7 +1194,7 @@
  #    but that may cause certain ifort versions to fail on some files.
  #
     case ifort:
@@ -49,34 +49,43 @@ diff -Naur gamess/comp gamess-new/comp
     if ($MODULE == zheev)  set OPT='-O0'
     set echo
 diff -Naur gamess/compall gamess-new/compall
---- gamess/compall	2006-07-10 10:06:09.000000000 -0400
-+++ gamess-new/compall	2006-09-25 23:06:14.000000000 -0400
-@@ -12,8 +12,8 @@
- #      linux-ia64,linux-pc,mac32,macG5,necsx,sgi32,sgi64,sun32,sun64
+--- gamess/compall	2007-03-24 12:44:31.000000000 -0400
++++ gamess-new/compall	2007-04-17 15:02:09.000000000 -0400
+@@ -13,8 +13,8 @@
+ #      sgi32,sgi64,sun32,sun64
  #  2. Choose your GAMESS directory tree.
  #
 -set TARGET=ibm64
 -chdir /u1/mike/gamess
-+set TARGET=linux-pc
++set TARGET=linux32
 +#chdir /u1/mike/gamess
  #
  #  ----- and now the script begins...
  #
-diff -Naur gamess/ddi/compddi gamess-new/ddi/compddi
---- gamess/ddi/compddi	2006-07-10 10:06:21.000000000 -0400
-+++ gamess-new/ddi/compddi	2006-09-25 22:22:55.000000000 -0400
-@@ -14,7 +14,7 @@
- #      fuji-pp32,fuji-pp64,hpux32,hpux64,ibm32,ibm64,ibm64-sp,ibm-bg,
- #      linux-ia64,linux-pc,mac32,macG5,necsx,sgi32,sgi64,sun32,sun64
+@@ -412,7 +412,7 @@
  #
--       set TARGET = ibm64
-+       set TARGET = linux-pc
+ #      optional Nuclear-Electronic Orbital method, using NEO code
+ #
+-set NEO=false
++set NEO=true
+ if ($NEO == true) then
+    ./comp neo
+    ./comp neobas
+diff -Naur gamess/ddi/compddi gamess-new/ddi/compddi
+--- gamess/ddi/compddi	2007-03-19 13:51:55.000000000 -0400
++++ gamess-new/ddi/compddi	2007-04-17 15:02:48.000000000 -0400
+@@ -15,7 +15,7 @@
+ #      linux32,linux64,linux-ia64,mac32,macG5,necsx,
+ #      sgi32,sgi64,sun32,sun64
+ #
+-         set TARGET = ibm64
++         set TARGET = linux32
  
  #  2. Choose DDI communication layer, the only legal values are
- #                   sockets,mpi,pure-mpi,shmem,lapi
-@@ -470,9 +470,9 @@
+ #                   sockets,mixed,mpi,shmem,lapi,armci
+@@ -535,9 +535,9 @@
  #
-   if($TARGET == linux-pc) then
+   if($TARGET == linux32) then
  
 -     set FORTRAN=g77       # choose from g77, gfortran, ifort, pgf77, f2c
 +     set FORTRAN=gentoo-g77       # choose from g77, gfortran, ifort, pgf77, f2c
@@ -87,9 +96,9 @@ diff -Naur gamess/ddi/compddi gamess-new/ddi/compddi
  
       switch ($FORTRAN)
 diff -Naur gamess/ddi/tools/ddikick/ddikick.c gamess-new/ddi/tools/ddikick/ddikick.c
---- gamess/ddi/tools/ddikick/ddikick.c	2004-05-03 12:23:13.000000000 -0400
-+++ gamess-new/ddi/tools/ddikick/ddikick.c	2006-09-25 22:24:23.000000000 -0400
-@@ -102,7 +102,7 @@
+--- gamess/ddi/tools/ddikick/ddikick.c	2006-06-05 03:15:09.000000000 -0400
++++ gamess-new/ddi/tools/ddikick/ddikick.c	2007-04-17 15:03:01.000000000 -0400
+@@ -105,7 +105,7 @@
            remoteshell = argv[++i];
         } else {
            if((remoteshell = getenv("DDI_RSH")) == NULL) {
@@ -99,22 +108,22 @@ diff -Naur gamess/ddi/tools/ddikick/ddikick.c gamess-new/ddi/tools/ddikick/ddiki
         }
  
 diff -Naur gamess/lked gamess-new/lked
---- gamess/lked	2006-07-10 10:06:14.000000000 -0400
-+++ gamess-new/lked	2006-09-25 22:23:55.000000000 -0400
-@@ -14,8 +14,8 @@
- #       linux-ia64,linux-pc,mac32,macG5,necsx,sgi32,sgi64,sun32,sun64
+--- gamess/lked	2007-03-24 12:44:22.000000000 -0400
++++ gamess-new/lked	2007-04-17 15:04:16.000000000 -0400
+@@ -15,8 +15,8 @@
+ #       sgi32,sgi64,sun32,sun64
  #  2. Choose your GAMESS directory tree.
  #
 -set TARGET=ibm64
 -chdir /u1/mike/gamess
-+set TARGET=linux-pc
++set TARGET=linux32
 +#chdir /u1/mike/gamess
  #
  #    ---- and now the script begins...
  #
-@@ -329,22 +329,22 @@
+@@ -285,22 +285,22 @@
  #
- if ($TARGET == linux-pc) then
+ if ($TARGET == linux32) then
  #
 -   set FORTRAN=g77       # choose from g77, gfortran, ifort, pgf77, f2c
 +   set FORTRAN=gentoo-g77       # choose from g77, gfortran, ifort, pgf77, f2c
@@ -140,8 +149,8 @@ diff -Naur gamess/lked gamess-new/lked
          breaksw
       case pgf77:
 diff -Naur gamess/runall gamess-new/runall
---- gamess/runall	2006-03-09 17:36:21.000000000 -0500
-+++ gamess-new/runall	2006-09-25 22:25:11.000000000 -0400
+--- gamess/runall	2007-03-05 16:59:51.000000000 -0500
++++ gamess-new/runall	2007-04-17 15:04:31.000000000 -0400
 @@ -10,7 +10,7 @@
  #  Edit this file to set the base path to GAMESS, and execute it to be
  #  sure all the jobs TERMINATED NORMALLY, and got correct numbers too.
@@ -152,8 +161,8 @@ diff -Naur gamess/runall gamess-new/runall
  #
  foreach NUM ( 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 \
 diff -Naur gamess/rungms gamess-new/rungms
---- gamess/rungms	2006-07-10 15:20:56.000000000 -0400
-+++ gamess-new/rungms	2006-09-25 22:27:00.000000000 -0400
+--- gamess/rungms	2007-03-14 18:23:34.000000000 -0400
++++ gamess-new/rungms	2007-04-17 15:06:23.000000000 -0400
 @@ -54,7 +54,7 @@
  #       of using LoadLeveler via a "llgms" front end in ~/gamess/misc.
  #
@@ -163,7 +172,7 @@ diff -Naur gamess/rungms gamess-new/rungms
  #
  set JOB=$1      # name of the input file xxx.inp, give only the xxx part
  set VERNO=$2    # revision number of the executable created by 'lked' step
-@@ -114,14 +114,14 @@
+@@ -119,14 +119,14 @@
  #
  set echo
  #                        ASCII input files (see explanation above)
@@ -182,7 +191,7 @@ diff -Naur gamess/rungms gamess-new/rungms
  setenv  AOINTS $SCR/$JOB.F08
  setenv  MOINTS $SCR/$JOB.F09
  setenv DICTNRY $SCR/$JOB.F10
-@@ -151,8 +151,8 @@
+@@ -156,8 +156,8 @@
  setenv  SOINTY $SCR/$JOB.F32
  setenv  SOINTZ $SCR/$JOB.F33
  setenv  SORESC $SCR/$JOB.F34
@@ -193,12 +202,21 @@ diff -Naur gamess/rungms gamess-new/rungms
  setenv GCILIST $SCR/$JOB.F37
  setenv HESSIAN $SCR/$JOB.F38
  setenv SOCCDAT $SCR/$JOB.F40
-@@ -326,7 +326,7 @@
+@@ -242,7 +242,7 @@
+     if (null$4 == null) set ELGNAME=ELGFILE
+     set echo
+     setenv AOINTS   $SCR/$ELGNAME.F08
+-    setenv ELGDOS   ~$USER/scr/$JOB.ldos
++    setenv ELGDOS   $SCR/$JOB.ldos
+     setenv ELGDAT   $SCR/$ELGNAME.F71
+     setenv ELGPAR   $SCR/$ELGNAME.F72
+     setenv ELGCUT   $SCR/$ELGNAME.F74
+@@ -343,7 +343,7 @@
+    if ($os == AIX)     set GMSPATH=/u1/mike/gamess
+    if ($os == Darwin)  set GMSPATH=/Users/mike/desktop/gamess
     if ($os == HP-UX)   set GMSPATH=/zr/mike/gamess
-    if ($os == IRIX)    set GMSPATH=/home/hbar4/people/schmidt/gamess
-    if ($os == IRIX64)  set GMSPATH=/home/hbar4/people/schmidt/gamess
 -   if ($os == Linux)   set GMSPATH=/cu/mike/gamess
 +   if ($os == Linux)   set GMSPATH=/usr/bin
-    if ($os == OSF1)    set GMSPATH=/au/mike/gamess
+    if ($os == OSF1)    set GMSPATH=/in/mike/gamess
     if ($os == SunOS)   set GMSPATH=/hf/mike/gamess
- #       special compilation for my old Sun (uname also replies SunOS)
+ #       special compilation for Sun E450 uSPARC       (uname also= SunOS)

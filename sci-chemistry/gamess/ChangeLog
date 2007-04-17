@@ -1,6 +1,16 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.19 2007/01/07 02:18:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.20 2007/04/17 21:14:36 markusle Exp $
+
+*gamess-20070324.1 (17 Apr 2007)
+
+  17 Apr 2007; Markus Dittrich <markusle@gentoo.org>
+  -files/gamess-glibc-2.4-gentoo.patch, -files/comp-lked-20060222.2.patch,
+  -files/rungms-runall-20060222.2.patch,
+  -files/gamess-20060222.5.gentoo.patch,
+  +files/gamess-20070324.1.gentoo.patch, -files/ddi-use-ssh-gentoo.patch,
+  +gamess-20070324.1.ebuild:
+  Version bump and cleaned up unused patches.
 
   07 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -gamess-20060222.2.ebuild, -gamess-20060222.5.ebuild:
