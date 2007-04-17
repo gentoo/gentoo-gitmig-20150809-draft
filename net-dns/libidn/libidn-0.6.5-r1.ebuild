@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.5-r1.ebuild,v 1.6 2007/04/12 19:44:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.5-r1.ebuild,v 1.7 2007/04/17 12:43:04 betelgeuse Exp $
 
 inherit java-pkg-opt-2 mono libtool
 
@@ -14,8 +14,9 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86
 IUSE="java doc emacs mono nls"
 
 DEPEND="java? ( >=virtual/jdk-1.4
-		mono? ( >=dev-lang/mono-0.95 )
-				dev-java/gjdoc )"
+				dev-java/gjdoc
+				mono? ( >=dev-lang/mono-0.95 )
+		)"
 RDEPEND="java? ( >=virtual/jre-1.4 )
 		mono? ( >=dev-lang/mono-0.95 )"
 

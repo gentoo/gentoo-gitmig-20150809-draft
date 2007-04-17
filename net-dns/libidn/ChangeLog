@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.51 2007/04/12 19:44:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.52 2007/04/17 12:43:04 betelgeuse Exp $
+
+  17 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> libidn-0.6.5-r1.ebuild:
+  Make DEPEND more easy for humans to read.
 
   12 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   libidn-0.6.5-r1.ebuild:
