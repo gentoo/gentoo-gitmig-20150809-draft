@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/authforce
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.7 2007/02/09 03:59:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.8 2007/04/17 11:19:59 dragonheart Exp $
+
+*authforce-0.9.8 (17 Apr 2007)
+
+  17 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/authforce-0.9.8-autoconfupdate.patch,
+  +files/authforce-0.9.8-gettext.patch, +files/authforce-0.9.8-malloc.patch,
+  authforce-0.9.6.ebuild, +authforce-0.9.8.ebuild:
+  version bump as per bug #157715. Thanks upstream for the fixes and me for
+  far too much time hacking it.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
