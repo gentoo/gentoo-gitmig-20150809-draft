@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.10.ebuild,v 1.4 2007/03/18 02:08:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.10.ebuild,v 1.5 2007/04/17 14:07:06 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -33,12 +33,13 @@ RDEPEND="x11-libs/libXrender
 	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
+		=virtual/libstdc++-3.3
 	)
 	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-2.1.1
-		>=app-emulation/emul-linux-x86-gtklibs-2.1
+		>=app-emulation/emul-linux-x86-baselibs-1.0
+		>=app-emulation/emul-linux-x86-gtklibs-1.0
+		app-emulation/emul-linux-x86-compat
 	)
-	virtual/libstdc++
 	>=www-client/mozilla-launcher-1.41"
 
 S=${WORKDIR}/thunderbird
