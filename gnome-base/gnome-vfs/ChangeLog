@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.245 2007/03/24 02:09:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.246 2007/04/17 03:32:28 compnerd Exp $
+
+*gnome-vfs-2.18.1 (17 Apr 2007)
+
+  17 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +gnome-vfs-2.18.1.ebuild:
+  Version bump for 2.18.1
 
   24 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
   +gnome-vfs-2.18.0.1.ebuild:
