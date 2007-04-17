@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/randrproto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.30 2007/02/19 22:53:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.31 2007/04/17 19:36:55 fmccor Exp $
+
+  17 Apr 2007; Ferris McCormick <fmccor@gentoo.org> randrproto-1.2.0.ebuild:
+  Stable on sparc --- required by Bug #174959
 
 *randrproto-1.2.1 (19 Feb 2007)
 
