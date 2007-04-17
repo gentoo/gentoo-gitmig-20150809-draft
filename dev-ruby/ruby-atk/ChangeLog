@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.33 2007/03/28 15:53:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.34 2007/04/17 10:44:15 opfer Exp $
+
+  17 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  ruby-atk-0.16.0.ebuild:
+  stable amd64, bug 169094
 
   28 Mar 2007; Raúl Porcel <armin76@gentoo.org> ruby-atk-0.16.0.ebuild:
   ia64 stable wrt bug 169094
