@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.16 2007/03/15 17:13:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.17 2007/04/17 19:20:04 dang Exp $
+
+  17 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild:
+  Update gtk icon cache after merge/unmerge
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   tango-icon-theme-extras-0.1.0-r1.ebuild:

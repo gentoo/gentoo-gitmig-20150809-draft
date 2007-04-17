@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.0.ebuild,v 1.10 2007/03/10 19:44:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.0.ebuild,v 1.11 2007/04/17 19:16:04 dang Exp $
 
-inherit eutils
+inherit eutils gnome2-utils
 
 DESCRIPTION="SVG icon theme from the Tango project"
 HOMEPAGE="http://tango-project.org/"
@@ -41,4 +41,12 @@ src_install() {
 
 	emake DESTDIR=${D} install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

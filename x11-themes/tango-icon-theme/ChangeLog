@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.33 2007/03/10 19:44:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.34 2007/04/17 19:16:04 dang Exp $
+
+  17 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  tango-icon-theme-0.8.0.ebuild:
+  Update gtk icon cache after merge/unmerge
 
   10 Mar 2007; Samuli Suominen <drac@gentoo.org>
   tango-icon-theme-0.8.0.ebuild:
