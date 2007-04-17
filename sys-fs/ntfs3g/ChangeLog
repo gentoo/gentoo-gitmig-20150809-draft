@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.29 2007/04/09 14:08:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.30 2007/04/17 12:19:29 chutzpah Exp $
+
+*ntfs3g-1.417 (17 Apr 2007)
+
+  17 Apr 2007; Patrick McLean <chutz@gentoo.org> +ntfs3g-1.417.ebuild:
+  Version bump.
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> ntfs3g-1.0.ebuild:
   amd64 stable on behalf of welp, wrt bug 173913
