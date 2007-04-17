@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.5.ebuild,v 1.9 2007/04/16 15:27:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.5.ebuild,v 1.10 2007/04/17 01:01:54 kloeri Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wireshark/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 portaudio snmp ssl kerberos threads selinux"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
@@ -29,7 +29,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
 	selinux? ( sec-policy/selinux-wireshark )"
-# lua fails with version 5.0 and 5.1 is not in portage yet - 2006-04-25	
+# lua fails with version 5.0 and 5.1 is not in portage yet - 2006-04-25
 #	lua? ( >=dev-lang/lua-5.1 )"
 
 DEPEND="${RDEPEND}
