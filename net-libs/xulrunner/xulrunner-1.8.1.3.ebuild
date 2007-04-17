@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.3.ebuild,v 1.5 2007/04/16 21:03:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.3.ebuild,v 1.6 2007/04/17 18:22:09 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -61,7 +61,7 @@ src_compile() {
 	mozconfig_init
 	mozconfig_config
 
-	mozconfig_annotate '' --enable-extensions="default,cookie,permissions,spellcheck,python/xpcom"
+	mozconfig_annotate '' --enable-extensions="default,cookie,permissions,spellcheck"
 	mozconfig_annotate '' --enable-native-uconv
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
