@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.21 2007/03/05 10:30:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.22 2007/04/17 22:03:48 mrness Exp $
+
+  17 Apr 2007; Alin Năstac <mrness@gentoo.org> obexftp-0.21.ebuild:
+  Remove ruby USE flag (#174507).
 
   05 Mar 2007; Alin Nastac <mrness@gentoo.org> obexftp-0.21.ebuild:
   Use eautoreconf instead eautoconf (#169232).
