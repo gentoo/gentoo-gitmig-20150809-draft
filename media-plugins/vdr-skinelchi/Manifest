@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX rc-addon-0.1.1_pre2-r1.sh 728 RMD160 b3e58630ea9b92f7c893476676281252b45a9568 SHA1 5ad3bcc2e6acd8983b657da3ad3f7446e0b45484 SHA256 feb277d22f22c5cbc6cc3ace6a7a1f8afe7b565be9aacb43b3a6282a5ea4b912
-MD5 35cd4d5bfce362510b708f781db78a00 files/rc-addon-0.1.1_pre2-r1.sh 728
-RMD160 b3e58630ea9b92f7c893476676281252b45a9568 files/rc-addon-0.1.1_pre2-r1.sh 728
-SHA256 feb277d22f22c5cbc6cc3ace6a7a1f8afe7b565be9aacb43b3a6282a5ea4b912 files/rc-addon-0.1.1_pre2-r1.sh 728
+AUX rc-addon-0.1.1_pre2-r1.sh 647 RMD160 4748df1afb928c7a0384a80aad80ca543b9e6ddb SHA1 8a08cb011826f21c0b2bff8f8915ee8cd2889e74 SHA256 e08f0f84bf4863a360f37f5a46503c47ed4aead3b2ee842b08fee80196e71865
+MD5 6e1e5cbcfac947c724a13a5f39a19ff6 files/rc-addon-0.1.1_pre2-r1.sh 647
+RMD160 4748df1afb928c7a0384a80aad80ca543b9e6ddb files/rc-addon-0.1.1_pre2-r1.sh 647
+SHA256 e08f0f84bf4863a360f37f5a46503c47ed4aead3b2ee842b08fee80196e71865 files/rc-addon-0.1.1_pre2-r1.sh 647
 AUX vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002 RMD160 a5dac8ec644c392e991afd09fcfba2c96c40ae90 SHA1 9436ce12d0782099683054fb81e784651d01d4ef SHA256 a8c779824e774c61e9838a4be40ad6e770668ceefbdefe507686d3bcc93919ec
 MD5 3f743e1447e1938939f8885bd5d344b4 files/vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002
 RMD160 a5dac8ec644c392e991afd09fcfba2c96c40ae90 files/vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002
@@ -18,10 +18,10 @@ EBUILD vdr-skinelchi-0.1.1_pre2-r2.ebuild 945 RMD160 4c3a901021f0b607f1399eb598e
 MD5 f119c23b19c72163299f43eecb70bd9d vdr-skinelchi-0.1.1_pre2-r2.ebuild 945
 RMD160 4c3a901021f0b607f1399eb598eed9c7504781b0 vdr-skinelchi-0.1.1_pre2-r2.ebuild 945
 SHA256 bf0575e2518969cbde1c9fe84a34d79314bc002f654bc527a06e139eb7bae5db vdr-skinelchi-0.1.1_pre2-r2.ebuild 945
-MISC ChangeLog 2681 RMD160 de2ca45e22dbdc0d50d774c03319df9c0629001e SHA1 14e9c0c160259dd2ad6fd74b591e92ed6692c0a3 SHA256 2ccb5b2bd254f57a7814d3f2b855458f7be38f54e181a8153a90b25b039f2e30
-MD5 868c8df4176bea62a17d9974acd106ca ChangeLog 2681
-RMD160 de2ca45e22dbdc0d50d774c03319df9c0629001e ChangeLog 2681
-SHA256 2ccb5b2bd254f57a7814d3f2b855458f7be38f54e181a8153a90b25b039f2e30 ChangeLog 2681
+MISC ChangeLog 2796 RMD160 6bce48fd475b7f651c1f8215fe5049f26289fbaa SHA1 c373d91098d717006d1d6e1d18fc2449a8d74f65 SHA256 d294390ade1d7e5e11b9ba0d7a2c367a606e45f6090b6576a926114220aea436
+MD5 4ca6a7dc58d5aa7f18452f7f7eba5ee1 ChangeLog 2796
+RMD160 6bce48fd475b7f651c1f8215fe5049f26289fbaa ChangeLog 2796
+SHA256 d294390ade1d7e5e11b9ba0d7a2c367a606e45f6090b6576a926114220aea436 ChangeLog 2796
 MISC metadata.xml 335 RMD160 eb5fcf03c21510453d995cce8ee8f8a6324e6545 SHA1 e8105cf5fdbf0be508311933b8e34db224e9bc51 SHA256 f8790d655b9660f52dfddc7d5785248a334bae37ef607c6b87f50ed597e76573
 MD5 343b9bd95a96c7fa0ca6a4a71f530168 metadata.xml 335
 RMD160 eb5fcf03c21510453d995cce8ee8f8a6324e6545 metadata.xml 335
@@ -33,10 +33,9 @@ MD5 26855a8b69da9a867d2d10a2f155f16d files/digest-vdr-skinelchi-0.1.1_pre2-r2 25
 RMD160 a93f6a2c6666934c564c444ccbd5fb6c1f742a19 files/digest-vdr-skinelchi-0.1.1_pre2-r2 259
 SHA256 74cce77aa57c86fab3e9335c8c40fa0c10c9154f9d7a9928d5050d68a955b906 files/digest-vdr-skinelchi-0.1.1_pre2-r2 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: GnuPG-Pack Basics: http://home.arcor.de/rose-indorf
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFFnoH+dn07HTTCgIoRAiaIAJoDCu2bgY1spy4Go/n0PCH2kYLRVwCgq+ti
-YLjZxk5Lqkhs2EXHjiS0WQ8=
-=b3dy
+iD8DBQFGJMBwt2vP6XvVdOcRAgAwAJ0awRiH0mxziQRU0dKSDye+ci650ACfV7yo
+Ey5pRAM26dkrcYSjlHqVnRk=
+=DoVK
 -----END PGP SIGNATURE-----
