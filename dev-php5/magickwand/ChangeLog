@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/magickwand
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.1 2007/04/17 21:42:40 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.2 2007/04/17 21:59:01 anant Exp $
+
+  17 Apr 2007; Anant Narayanan <anant@gentoo.org> magickwand-1.0.4.ebuild:
+  Fix typo in PHP_EXT_INI and add explicit RDEPEND.
 
 *magickwand-1.0.4 (17 Apr 2007)
 
