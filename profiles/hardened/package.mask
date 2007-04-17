@@ -1,8 +1,13 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.20 2007/03/26 05:05:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.21 2007/04/17 20:06:44 phreak Exp $
 
 # This file is additional masking for the hardened profile
+
+# Christian Heim <phreak@gentoo.org> (17 April 2007)
+# dev-lang/ocaml is broken on hardened; either creates a TEXTREL 
+# object or tries to make a segment writeable (bug #110541).
+dev-lang/ocaml
 
 # Christian Heim <phreak@gentoo.org> (28 January 2007)
 # Mask sys-devel/autoconf-2.61 due to bug #161566

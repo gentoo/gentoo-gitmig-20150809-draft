@@ -2,4 +2,4 @@
 # make sure your package forces a new-enough portage.
 
 sys-devel/gcc -hardened
-
+www-apps/mediawiki math
