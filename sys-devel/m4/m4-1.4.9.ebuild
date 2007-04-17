@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.9.ebuild,v 1.4 2007/04/12 18:49:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.9.ebuild,v 1.5 2007/04/17 00:35:11 vapier Exp $
 
 DESCRIPTION="GNU macro processor"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="nls"
+IUSE="examples nls"
 
 # remember: cannot dep on autoconf since it needs us
 DEPEND="nls? ( sys-devel/gettext )"
@@ -30,5 +30,10 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
+	if use examples ; then
+		docinto examples
+		dodoc examples/*
+		rm -f "${D}"/usr/share/doc/${PF}/examples/Makefile*
+	fi
 	rm -f "${D}"/usr/lib/charset.alias #172864
 }
