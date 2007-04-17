@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.21 2007/03/13 15:43:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.22 2007/04/17 22:38:37 gustavoz Exp $
+
+  17 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> sux-1.0-r3.ebuild:
+  Stable on sparc
 
   13 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> sux-1.0-r3.ebuild:
   Keyworded ~sparc
