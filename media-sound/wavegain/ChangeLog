@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/wavegain
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/ChangeLog,v 1.1 2007/03/09 14:53:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/ChangeLog,v 1.2 2007/04/17 19:13:31 chainsaw Exp $
+
+*wavegain-1.2.6-r1 (17 Apr 2007)
+
+  17 Apr 2007; Tony Vroon <chainsaw@gentoo.org>
+  +files/1.2.6-faulty-includes.patch, metadata.xml,
+  +wavegain-1.2.6-r1.ebuild:
+  Taking maintainership, discussed with beandog on IRC. Patch out duff
+  includes that do not exist on PowerPC. Properly die if the compilation
+  fails. Add ~ppc64 keyword, tested on 64UL, GCC 4.1.2
 
 *wavegain-1.2.6 (09 Mar 2007)
 

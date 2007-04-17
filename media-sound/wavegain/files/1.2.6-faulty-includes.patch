@@ -1,0 +1,36 @@
+diff -uNr WaveGain-1.2.6.ORIG/audio.c WaveGain-1.2.6/audio.c
+--- WaveGain-1.2.6.ORIG/audio.c	2007-04-17 19:31:34.000000000 +0100
++++ WaveGain-1.2.6/audio.c	2007-04-17 19:33:01.000000000 +0100
+@@ -31,14 +31,6 @@
+ #include <string.h>
+ #include <sys/types.h>
+ 
+-#ifdef _WIN32
+-#include <io.h>
+-#else
+-# ifndef __MACOSX__
+-#  include <sys/io.h>
+-# endif
+-#endif
+-
+ #include <fcntl.h>
+ 
+ #ifndef __MACOSX__
+diff -uNr WaveGain-1.2.6.ORIG/wavegain.c WaveGain-1.2.6/wavegain.c
+--- WaveGain-1.2.6.ORIG/wavegain.c	2007-04-17 19:31:34.000000000 +0100
++++ WaveGain-1.2.6/wavegain.c	2007-04-17 19:33:15.000000000 +0100
+@@ -19,14 +19,6 @@
+ #include <string.h>
+ #include <ctype.h>
+ 
+-#ifdef _WIN32
+-#include <io.h>
+-#else
+-# ifndef __MACOSX__
+-#  include <sys/io.h>
+-# endif
+-#endif
+-
+ #include <fcntl.h>
+ 
+ #ifndef __MACOSX__
