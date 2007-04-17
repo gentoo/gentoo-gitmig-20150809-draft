@@ -5,10 +5,6 @@
 	<maintainer>
 		<email>tove@gentoo.org</email>
 		<name>Torsten Veller</name>
-		<description>
-			just added the metadata.xml file -- 
-			feel free to take maintainership
-		</description>
 	</maintainer>
 </pkgmetadata>
 
