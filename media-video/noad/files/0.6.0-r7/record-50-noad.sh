@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r7/record-50-noad.sh,v 1.2 2006/12/28 21:00:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r7/record-50-noad.sh,v 1.3 2007/04/17 13:02:41 zzam Exp $
 #
 # Joerg Bornkessel <hd_brummy@gentoo.org>
 # Mathias Schwarzott <zzam@gentoo.org>
@@ -13,27 +13,27 @@ CMD="/usr/bin/noad"
 
 FORCE_OFFLINE_SCAN=no
 
-if [[ ${VDR_RECORD_STATE} == reccmd ]]; then
+if [ "${VDR_RECORD_STATE}" = "reccmd" ]; then
 	# script started from reccmd
 	FORCE_OFFLINE_SCAN=yes
 	VDR_RECORD_STATE=after
 fi
 
 
-if [[ ${FORCE_OFFLINE_SCAN} != yes ]]; then
+if [ "${FORCE_OFFLINE_SCAN}" != "yes" ]; then
 	# allow it to abort on certain conditions
 
 	# automatic noad scan disabled
-	[[ ${VDR_USE_NOAD} == "yes" ]] || return
+	[ "${VDR_USE_NOAD}" = "yes" ] || return
 
 	# ptsmarks existing
-	if [[ ${NOAD_ONLY_SCAN_IF_NO_PTSMARKS} == yes ]]; then
-		[[ -f ${VDR_RECORD_NAME}/ptsmarks.vdr ]] && return
+	if [ "${NOAD_ONLY_SCAN_IF_NO_PTSMARKS}" = "yes" ]; then
+		[ -f "${VDR_RECORD_NAME}/ptsmarks.vdr" ] && return
 	fi
 
 	# marks existing
-	if [[ ${NOAD_ONLY_SCAN_IF_NO_MARKS} == yes ]]; then
-		[[ -f ${VDR_RECORD_NAME}/marks.vdr ]] && return
+	if [ "${NOAD_ONLY_SCAN_IF_NO_MARKS}" = "yes" ]; then
+		[ -f "${VDR_RECORD_NAME}/marks.vdr" ] && return
 	fi
 
 	# Add Online-scanning parameter
@@ -46,18 +46,18 @@ if [[ ${FORCE_OFFLINE_SCAN} != yes ]]; then
 			;;
 		no)
 			# abort stage "before" here
-			[[ ${VDR_RECORD_STATE} == "before" ]] && return
+			[ "${VDR_RECORD_STATE}" = "before" ] && return
 			;;
 	esac
 fi
 
-[[ "${NOAD_AC3}" == "yes" ]] && CMD="${CMD} -a"
-[[ "${NOAD_JUMP}" == "yes" ]] && CMD="${CMD} -j"
-[[ "${NOAD_OVERLAP}" == "yes" ]] && CMD="${CMD} -o"
-[[ "${NOAD_MESSAGES}" == "yes" ]] && CMD="${CMD} -O"
+[ "${NOAD_AC3}" = "yes" ] && CMD="${CMD} -a"
+[ "${NOAD_JUMP}" = "yes" ] && CMD="${CMD} -j"
+[ "${NOAD_OVERLAP}" = "yes" ] && CMD="${CMD} -o"
+[ "${NOAD_MESSAGES}" = "yes" ] && CMD="${CMD} -O"
 
 : ${NOAD_NICE_LEVEL:=18}
-if [[ ${NOAD_NICE_LEVEL} != no ]]; then
+if [ "${NOAD_NICE_LEVEL}" != "no" ]; then
 	NOAD_NICE_LEVEL=$((NOAD_NICE_LEVEL+0))
 	CMD="nice -n ${NOAD_NICE_LEVEL} ${CMD}"
 fi
