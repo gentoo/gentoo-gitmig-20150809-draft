@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.3.ebuild,v 1.1 2007/03/14 02:16:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.3.ebuild,v 1.2 2007/04/17 10:16:09 betelgeuse Exp $
 
-inherit libtool flag-o-matic
+inherit base autotools flag-o-matic
 
 MY_PN="Sablot"
 MY_P="${MY_PN}-${PV}"
@@ -22,15 +22,16 @@ RDEPEND=">=dev-libs/expat-1.95.6-r1"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-perl/XML-Parser-2.3 )"
 
+PATCHES="${FILESDIR}/1.0.3-libsablot-expat.patch"
 
 src_compile() {
 	# Don't use --without-html-dir, since that ends up installing files under
 	# the /no directory
 	local myconf="--with-html-dir=/usr/share/doc/${PF}/html"
 
-	# Please do not remove, else we get references to PORTAGE_TMPDIR
-	# in /usr/lib/libsablot.la ...
-	elibtoolize
+	# Please make sure at least elibtoolize is run, else we get references
+	# to PORTAGE_TMPDIR in /usr/lib/libsablot.la ...
+	eautoreconf
 
 	use perl && myconf="${myconf} --enable-perlconnect"
 
