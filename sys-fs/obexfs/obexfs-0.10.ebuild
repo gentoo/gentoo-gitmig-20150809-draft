@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/obexfs-0.10.ebuild,v 1.1 2006/09/13 07:41:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/obexfs-0.10.ebuild,v 1.2 2007/04/17 14:45:20 opfer Exp $
 
 inherit eutils linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://triq.net/obexftp/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=net-wireless/bluez-libs-2.19
