@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.56 2007/04/17 15:03:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.57 2007/04/17 15:12:11 compnerd Exp $
+
+  17 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  gtkhtml-sharp-2.16.0.ebuild:
+  3.14 is the actual released version
 
   17 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   gtkhtml-sharp-2.16.0.ebuild:

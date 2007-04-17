@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/gtkhtml-sharp-2.16.0.ebuild,v 1.6 2007/04/17 15:03:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/gtkhtml-sharp-2.16.0.ebuild,v 1.7 2007/04/17 15:12:11 compnerd Exp $
 
 GTK_SHARP_TARBALL_PREFIX="gnome-sharp"
 GTK_SHARP_REQUIRED_VERSION="2.10"
@@ -15,7 +15,7 @@ DEPEND="${DEPEND}
 		=dev-dotnet/gnome-sharp-${PV}*
 		=dev-dotnet/art-sharp-${PV}*
 		|| (
-			=gnome-extra/gtkhtml-3.13*
+			=gnome-extra/gtkhtml-3.14*
 			=gnome-extra/gtkhtml-3.12*
 			=gnome-extra/gtkhtml-3.10*
 			=gnome-extra/gtkhtml-3.8*
