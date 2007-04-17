@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.3.ebuild,v 1.5 2007/04/06 22:39:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.3.ebuild,v 1.6 2007/04/17 14:07:33 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://savannah.nongnu.org/projects/ulog-acctd/ http://alioth.debian.o
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="net-firewall/iptables"
