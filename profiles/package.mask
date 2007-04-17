@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7140 2007/04/17 14:58:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7141 2007/04/17 18:03:27 kloeri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Bryan Østergaard <kloeri@gentoo.org> (17 Apr 2007)
+# Pending removal on 17 May due to:
+# - Outstanding security issues (all the recent imagemagick 
+#   bugs apply to graphicsmagick as well)
+# - No upstream releases since Oct '05
+media-gfx/graphicsmagick
 
 # Alin Năstac <mrness@gentoo.org> (17 Apr 2007)
 # Pending for removal on 17 May 2007
