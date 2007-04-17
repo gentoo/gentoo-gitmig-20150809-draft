@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.1-r1.ebuild,v 1.6 2007/03/09 04:11:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.1-r1.ebuild,v 1.7 2007/04/17 14:11:40 aballier Exp $
 
 inherit eutils
 
@@ -18,6 +18,12 @@ DEPEND="dev-libs/libxslt
 	media-libs/libvorbis
 	theora? ( media-libs/libtheora )
 	yp? ( >=net-misc/curl-7.10.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-nocurlpassword.patch"
+}
 
 src_compile() {
 	econf \
