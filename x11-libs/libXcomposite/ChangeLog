@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcomposite
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.30 2006/10/22 18:00:04 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.31 2007/04/17 19:57:53 fmccor Exp $
+
+  17 Apr 2007; Ferris McCormick <fmccor@gentoo.org>
+  libXcomposite-0.3.1.ebuild:
+  Stable on sparc --- Bug #174959
 
 *libXcomposite-0.3.1 (21 Oct 2006)
 
