@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.3 2007/03/03 15:09:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.4 2007/04/17 23:02:29 philantrop Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -38,6 +38,10 @@ src_unpack() {
 	sed -i \
 		-e "s:@prefix@/lib:/etc/news/cert:" \
 		samples/sasl.conf.in
+
+	# Fixes compatibility problems with sys-libs/db-4.4 and 4.5,
+	# bug 174680.
+	epatch ${FILESDIR}/${P}-berkdb45.patch
 }
 
 src_compile() {
