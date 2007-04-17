@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.39 2007/04/17 14:34:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.40 2007/04/17 23:39:50 rbrown Exp $
+
+  17 Apr 2007; Richard Brown <rbrown@gentoo.org>
+  files/mysql-ruby-2.7.3-test.patch, mysql-ruby-2.7.3.ebuild:
+  Install test.rb
 
   17 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   mysql-ruby-2.7.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.3.ebuild,v 1.7 2007/04/17 14:34:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.3.ebuild,v 1.8 2007/04/17 23:39:50 rbrown Exp $
 
 inherit ruby
 
@@ -16,6 +16,8 @@ IUSE=""
 USE_RUBY="ruby18 ruby19"
 DEPEND="virtual/ruby
 	virtual/mysql"
+
+TEST_DIR="/usr/share/${PN}/test/"
 
 src_unpack() {
 	unpack ${A}
@@ -35,14 +37,17 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dohtml *
+
+	insinto $TEST_DIR
+	doins test.rb
 }
 
 src_test() {
 	elog
 	elog "To test the programme you need to start mysql first."
-	elog "Then extract the tarball and run"
+	elog "Then run:"
 	elog
-	elog "	% ruby test.rb hostname user password"
+	elog "	% ruby ${TEST_DIR}test.rb hostname user password"
 	elog
 	elog "See /usr/share/doc/${PF}/html/README.html for detail."
 	elog
