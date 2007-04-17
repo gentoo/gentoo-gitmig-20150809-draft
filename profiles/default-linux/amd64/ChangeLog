@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.86 2007/04/13 22:11:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.87 2007/04/17 15:58:10 wolf31o2 Exp $
+
+  17 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
+  2007.0/no-multilib/package.mask:
+  Added a mask on games-fps/postal2 and sync 2006.0, 2006.1, and 2007.0
+  package.mask files for no-multilib.
 
   13 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +2007.0/desktop/make.defaults, -dev/2007.0/desktop/make.defaults,

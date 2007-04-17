@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.45 2007/03/30 16:03:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.46 2007/04/17 15:58:10 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -14,6 +14,7 @@ app-emulation/cedaga
 app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
 app-emulation/point2play
+app-emulation/virtualbox-bin
 app-emulation/vmware-dsp
 app-emulation/vmware-player
 app-emulation/vmware-server
@@ -95,7 +96,9 @@ games-fps/enemy-territory-truecombat
 games-fps/enemy-territory
 games-fps/glxquake-bin
 games-fps/legends
+games-fps/postal2
 games-fps/postal2mp-demo
+games-fps/postal2
 games-fps/quake3-alliance
 games-fps/quake3-alternatefire
 games-fps/quake3-bfp
@@ -178,6 +181,7 @@ net-misc/nxserver-freenx
 net-p2p/sancho-bin
 net-www/netscape-flash
 net-www/nspluginwrapper
+net-voip/wengophone-bin
 sci-biology/foldingathome
 sys-apps/memtest86
 sys-apps/memtest86+

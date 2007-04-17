@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.28 2007/04/17 15:50:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.29 2007/04/17 15:58:10 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -96,6 +96,7 @@ games-fps/enemy-territory-truecombat
 games-fps/enemy-territory
 games-fps/glxquake-bin
 games-fps/legends
+games-fps/postal2
 games-fps/postal2mp-demo
 games-fps/postal2
 games-fps/quake3-alliance
