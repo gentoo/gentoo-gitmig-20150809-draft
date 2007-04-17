@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.68 2007/04/07 13:27:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.69 2007/04/17 17:05:43 compnerd Exp $
+
+  17 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  anjuta-1.2.4-r1.ebuild:
+  Force makeopts -j1 as it breaks currently (bug #161823)
 
   07 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -anjuta-1.2.4.ebuild:
   Remove old ebuild with broken autotools handling wrt bug #160008.
