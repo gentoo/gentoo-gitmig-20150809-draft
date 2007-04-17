@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.59 2007/04/12 13:01:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.60 2007/04/17 16:48:38 opfer Exp $
+
+  17 Apr 2007; Christian Faulhammer <opfer@gentoo.org> erlang-11.2.4.ebuild:
+  add -j1 for emake in src_install to prevent installation failures, fixes
+  bugs 174073 and 174492
 
   12 Apr 2007; Markus Rothe <corsair@gentoo.org> erlang-11.2.4.ebuild:
   Added ~ppc64
