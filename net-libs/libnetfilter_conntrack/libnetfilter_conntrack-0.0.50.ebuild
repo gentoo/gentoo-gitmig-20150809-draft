@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.50.ebuild,v 1.3 2007/04/15 10:20:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.50.ebuild,v 1.4 2007/04/17 18:07:09 cedk Exp $
 
 inherit linux-info
 
@@ -20,12 +20,14 @@ CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
 
 pkg_setup() {
 	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
-	if kernel_is le 2 6 19; then
-		CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
-	else
-		CONFIG_CHECK="NF_CT_NETLINK"
+
+	einfo "Checking for suitable kernel configuration options..."
+	if ! linux_chkconfig_present "IP_NF_CONNTRACK_NETLINK" -a ! linux_chkconfig_present "NF_CT_NETLINK" ; then
+		eerror "Could not find IP_NF_CONNTRACK_NETLINK "
+		eerror "nor NF_CT_NETLINK in the kernel configuration"
+		eerror "Please check to make sure at least one of the options are set correctly."
+		die "Incorrect kernel configuration options"
 	fi
-	linux-info_pkg_setup
 }
 
 src_install() {
