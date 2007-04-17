@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powersave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.17 2007/04/08 12:36:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.18 2007/04/17 22:12:06 genstef Exp $
+
+  17 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/powersave-as-needed.patch, powersave-0.15.11.ebuild:
+  Fix as-needed thanks to Peter Avramucz <muczy@easymail.hu> in bug 174557
 
 *powersave-0.15.11 (08 Apr 2007)
 

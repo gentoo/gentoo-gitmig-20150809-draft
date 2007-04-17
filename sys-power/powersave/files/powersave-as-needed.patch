@@ -1,0 +1,24 @@
+diff -u powersave-0.15.11/libpower/Makefile.am.orig powersave-0.15.11/libpower/Makefile.am
+--- powersave-0.15.11/libpower/Makefile.am.orig	2007-04-17 23:59:53.000000000 +0200
++++ powersave-0.15.11/libpower/Makefile.am	2007-04-17 23:59:36.000000000 +0200
+@@ -17,7 +17,7 @@
+ 			  powerlib_local.h  \
+ 			  debug.c
+ libpowersave_la_LDFLAGS = -version-info 11:0:0
+-libpowersave_la_LIBADD =  -lm
++libpowersave_la_LIBADD =  -lm $(LIBLAZY_LIBS)
+ 
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+diff -u powersave-0.15.11/libpower/Makefile.in.orig powersave-0.15.11/libpower/Makefile.in
+--- powersave-0.15.11/libpower/Makefile.in.orig	2007-04-18 00:00:04.000000000 +0200
++++ powersave-0.15.11/libpower/Makefile.in	2007-04-18 00:01:42.000000000 +0200
+@@ -216,7 +216,7 @@
+ 			  debug.c
+ 
+ libpowersave_la_LDFLAGS = -version-info 11:0:0
+-libpowersave_la_LIBADD = -lm
++libpowersave_la_LIBADD = -lm $(LIBLAZY_LIBS)
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = powersave.pc
+ all: all-am

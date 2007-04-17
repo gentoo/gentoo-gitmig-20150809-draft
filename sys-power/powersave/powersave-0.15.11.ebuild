@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.15.11.ebuild,v 1.2 2007/04/08 12:37:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.15.11.ebuild,v 1.3 2007/04/17 22:12:06 genstef Exp $
 
 inherit eutils libtool kde-functions autotools
 
@@ -35,6 +35,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/powersave-as-needed.patch
 	# Use pam_console or group plugdev to control access to powersave
 	use pam_console || epatch ${FILESDIR}/plugdev_access.patch
 }
