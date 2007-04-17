@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.0-r1.ebuild,v 1.1 2007/04/17 18:29:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.0-r1.ebuild,v 1.2 2007/04/17 19:02:47 dang Exp $
 
 inherit gnome2
 
@@ -28,7 +28,6 @@ RDEPEND=">=gnome-base/gconf-2
 	>=dev-python/pygobject-2.11.5
 	>=dev-python/gnome-python-desktop-2.15.90"
 # FIXME: Doesn't build without python
-# FIXME : spell autodetect only
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
