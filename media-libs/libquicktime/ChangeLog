@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.84 2007/03/27 15:02:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.85 2007/04/17 23:48:11 aballier Exp $
+
+*libquicktime-1.0.0 (17 Apr 2007)
+
+  17 Apr 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/libquicktime-1.0.0-cflags.patch, +libquicktime-1.0.0.ebuild:
+  Version bump
 
   27 Mar 2007; Raúl Porcel <armin76@gentoo.org> libquicktime-0.9.10.ebuild:
   ia64 stable wrt bug 157814
