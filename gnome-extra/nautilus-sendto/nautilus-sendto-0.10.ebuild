@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.10.ebuild,v 1.1 2007/03/22 20:29:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.10.ebuild,v 1.2 2007/04/17 16:24:38 compnerd Exp $
 
 inherit gnome2 eutils autotools
 
@@ -38,6 +38,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 		 thunderbird? ( mail-client/mozilla-thunderbird )"
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
+		>=gnome-base/gnome-common-0.12
 		>=dev-util/pkgconfig-0.19
 		>=dev-util/intltool-0.35"
 
