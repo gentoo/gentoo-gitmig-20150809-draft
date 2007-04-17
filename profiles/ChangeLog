@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.292 2007/04/17 06:09:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.293 2007/04/17 15:50:49 opfer Exp $
+
+  17 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  default-linux/amd64/2006.1/no-multilib/package.mask:
+  mask games-fps/postal2 for no-multilib profiles
 
   17 Apr 2007; Alin Năstac <mrness@gentoo.org> package.mask:
   P.mask net-dialup/slirp.
