@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.5.0.ebuild,v 1.5 2007/04/06 00:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.5.0.ebuild,v 1.6 2007/04/17 00:14:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -182,6 +182,9 @@ src_install() {
 		&& dosym busybox /bin/bb \
 		|| dobin bb
 	dosym bb /bin/busybox.static
+
+	insinto /$(get_libdir)/rcscripts/addons
+	doins "${FILESDIR}"/mdev-start.sh || die
 
 	# bundle up the symlink files for use later
 	emake install || die
