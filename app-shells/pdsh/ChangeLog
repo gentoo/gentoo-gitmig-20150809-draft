@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/pdsh
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.2 2006/11/22 19:19:35 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.3 2007/04/17 22:05:06 swegener Exp $
+
+*pdsh-2.12 (17 Apr 2007)
+
+  17 Apr 2007; Sven Wegener <swegener@gentoo.org> +pdsh-2.12.ebuild:
+  Version bump. Add ~amd64 keyword.
 
 *pdsh-2.11 (22 Nov 2006)
 
