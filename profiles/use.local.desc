@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2750 2007/04/16 18:30:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2751 2007/04/17 20:09:06 rbu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -977,6 +977,7 @@ media-sound/gnusound:lame - Enable lame support
 media-sound/herrie:http - Enable http streaming
 media-sound/herrie:modplug - Build with modplug support
 media-sound/herrie:scrobbler - Enable support for AudioScrobbler
+media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path

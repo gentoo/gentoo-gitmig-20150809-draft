@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.293 2007/04/17 15:50:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.294 2007/04/17 20:09:06 rbu Exp $
+
+  17 Apr 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
+  added xspf USE flag for media-sound/herrie
 
   17 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   default-linux/amd64/2006.1/no-multilib/package.mask:
