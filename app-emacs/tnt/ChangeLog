@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/tnt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/ChangeLog,v 1.8 2007/04/06 20:41:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/ChangeLog,v 1.9 2007/04/17 06:51:52 ulm Exp $
+
+*tnt-2.6-r1 (17 Apr 2007)
+
+  17 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +tnt-2.6-r1.ebuild:
+  Use elisp-comp instead of (implicit) elisp-compile. Fixes bug #174868.
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org> -tnt-2.4.ebuild,
   tnt-2.6.ebuild:
