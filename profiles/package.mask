@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7138 2007/04/16 17:48:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7139 2007/04/17 06:09:28 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Alin Năstac <mrness@gentoo.org> (17 Apr 2007)
+# Pending for removal on 17 May 2007
+# Reasons: 
+#    - all keywords are -arch (except for x86)
+#    - source has numerous QA violations
+#    - unmaintained for years
+net-dialup/slirp
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (16 Apr 2007)
 # Masked for removal on 16 May 2007, per bug #174763
