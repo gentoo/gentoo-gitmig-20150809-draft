@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.69 2007/04/07 08:52:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.70 2007/04/17 09:16:22 ali_bush Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -863,6 +863,8 @@ java-pkg_jar-from() {
 	classpath="$(java-config ${deep} --classpath=${target_pkg})"
 	[[ $? != 0 ]] && die ${error_msg}
 
+	java-pkg_ensure-dep "${build_only}" "${target_pkg}"
+
 	pushd ${destdir} > /dev/null \
 		|| die "failed to change directory to ${destdir}"
 
@@ -960,10 +962,15 @@ java-pkg_getjars() {
 
 	[[ ${#} -ne 1 ]] && die "${FUNCNAME} takes only one argument besides --*"
 
+
 	local classpath pkgs="${1}"
 	jars="$(java-config ${deep} --classpath=${pkgs})"
-	[[ -z "${jars}" ]] && die "java-config --classpath=${pkgs} failed"
+	[[ $? != 0 || -z "${jars}" ]] && die "java-config --classpath=${pkgs} failed"
 	debug-print "${pkgs}:${jars}"
+
+	for pkg in "${pkgs//,/ }"; do
+		java-pkg_ensure-dep "${build_only}" "${pkg}"
+	done
 
 	if [[ -z "${classpath}" ]]; then
 		classpath="${jars}"
@@ -1029,6 +1036,8 @@ java-pkg_getjar() {
 	local classpath
 	classpath=$(java-config --classpath=${pkg})
 	[[ $? != 0 ]] && die ${error_msg}
+
+	java-pkg_ensure-dep "${build_only}" "${pkg}"
 
 	for jar in ${classpath//:/ }; do
 		if [[ ! -f "${jar}" ]] ; then
@@ -2331,6 +2340,50 @@ java-pkg_verify-classes() {
 		[[ -n "${1}" ]] && eerror "in file: ${1}"
 		eerror "See ${log} for more details."
 		die "Incorrect bytecode found"
+	fi
+}
+
+# ----------------------------------------------------------------------------
+# @internal-function java-pkg_ensure-dep
+# Check that a package being used in jarfrom, getjars and getjar is contained
+# within DEPEND or RDEPEND.
+# @param $1 - Is the package a runtime dependency
+# @param $2 - Package name and slot.
+
+java-pkg_ensure-dep() {
+	debug-print-function ${FUNCNAME} $*
+
+	local build_only="${1}"	
+	local target_pkg="${2}"
+	local dev_error=""
+
+	local stripped_pkg=$(echo "${target_pkg}" | sed \
+		's/-[0-9]*\(\.[0-9]\)*$//')
+
+	if [[ ! ( "${DEPEND}" =~ "$stripped_pkg" ) ]]; then
+		dev_error="The ebuild is attempting to use ${target_pkg} that is not"
+		dev_error="${dev_error} declared in DEPEND."
+		if is-java-strict; then
+			die "${dev_error}"
+		else
+			eerror "${dev_error}"
+			einfo "Because you have this package installed the package will"
+			einfo "build without problems, but please report this to"
+			einfo "http://bugs.gentoo.org"
+		fi
+	fi
+
+	if [[ -z ${build_only} && ! ( ${RDEPEND} =~ "${stripped_pkg}" ) ]]; then
+		dev_error="The ebuild is attempting to use ${target_pkg},"
+		dev_error="${dev_error} without specifying --build-only, that is not declared in RDEPEND."
+		if is-java-strict; then
+			die "${error}"
+		else
+			eerror "${dev_error}"
+			einfo "Because you have this package installed the package will"
+			einfo "build without problems, but please report this to"
+			einfo "http://bugs.gentoo.org"
+		fi
 	fi
 }
 
