@@ -3,7 +3,14 @@
 <pkgmetadata>
 	<herd>lcd</herd>
 	<maintainer>
-		<email>rob@thetruth.de</email>
+		<email>rbu@gentoo.org</email>
 		<name>Robert Buchholz</name>
 	</maintainer>
+	<longdescription lang="en">
+		GLCDprocDriver is the glue between the app-misc/graphlcd-base
+		library, which is written in C++, and app-misc/lcdproc's
+		meta-driver glcdlib, which extends supported displays in LCDproc
+		by those supported through graphlcd-base (just in text mode, of
+		course).
+	</longdescription>
 </pkgmetadata>
