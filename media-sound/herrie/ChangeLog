@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/herrie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.4 2007/04/17 20:21:44 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.5 2007/04/17 21:21:02 rbu Exp $
+
+  17 Apr 2007; Robert Buchholz <rbu@gentoo.org> herrie-1.6.ebuild:
+  ao and sdl at the same time doesn't work. Added a clarification
 
 *herrie-1.6 (17 Apr 2007)
 

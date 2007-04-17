@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.ebuild,v 1.1 2007/04/17 20:18:43 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.ebuild,v 1.2 2007/04/17 21:21:02 rbu Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,8 +31,11 @@ DEPEND="sys-devel/gettext
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if use sdl ; then
+	if use sdl && ! use ao ; then
 		ewarn "Please be aware that SDL support in Herrie is highly experimental. Use it at your own risk."
+	fi
+	if use sdl && use ao ; then
+		ewarn "You cannot use SDL and ao at the same time, using ao."
 	fi
 }
 
@@ -50,7 +53,7 @@ src_compile() {
 	use mp3 || EXTRA_CONF="${EXTRA_CONF} no_mp3"
 	use modplug || EXTRA_CONF="${EXTRA_CONF} no_modplug"
 	use scrobbler || EXTRA_CONF="${EXTRA_CONF} no_scrobbler"
-	use sdl && EXTRA_CONF="${EXTRA_CONF} sdl"
+	use sdl && ! use ao && EXTRA_CONF="${EXTRA_CONF} sdl"
 	use sndfile || EXTRA_CONF="${EXTRA_CONF} no_sndfile"
 	use vorbis || EXTRA_CONF="${EXTRA_CONF} no_vorbis"
 	use xspf || EXTRA_CONF="${EXTRA_CONF} no_xspf"
