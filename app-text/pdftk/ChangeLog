@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdftk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.22 2007/04/17 23:12:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.23 2007/04/17 23:16:01 betelgeuse Exp $
+
+  17 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> pdftk-1.12.ebuild:
+  Use type -P instead of which. Fixes bug #174176.
 
   17 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   pdftk-1.12.ebuild:

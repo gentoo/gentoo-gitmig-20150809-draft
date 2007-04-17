@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.12 2007/04/17 23:12:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.13 2007/04/17 23:16:01 betelgeuse Exp $
 
 inherit eutils
 
@@ -16,8 +16,8 @@ DEPEND=">=sys-devel/gcc-3.3"
 S=${WORKDIR}/${P}/${PN}
 
 pkg_setup() {
-	if [ -z "$(which gcj 2>/dev/null)" ]; then
-		eerror "It seems that your system doesn't provides a Java compiler."
+	if [ -z "$(type -P gcj 2>/dev/null)" ]; then
+		eerror 'It seems that gcj is not in ${PATH}.'
 		eerror "Re-emerge sys-devel/gcc with \"gcj\" enabled."
 		die "gcj not found."
 	fi
