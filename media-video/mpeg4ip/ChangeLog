@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.49 2007/03/10 12:11:24 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.50 2007/04/17 21:28:36 tester Exp $
+
+*mpeg4ip-1.5.0.1-r2 (17 Apr 2007)
+
+  17 Apr 2007; <tester@gentoo.org> +files/mpeg4ip-1.5.0.1-as-needed.patch,
+  +mpeg4ip-1.5.0.1-r2.ebuild:
+  Add --as-need patch from Gergan Penkov, fixes bug #129472
 
   10 Mar 2007; Matti Bickel <mabi@gentoo.org> mpeg4ip-1.5.0.1-r1.ebuild:
   ppc stable (bug #166539)

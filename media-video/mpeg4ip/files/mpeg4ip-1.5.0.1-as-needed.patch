@@ -1,0 +1,132 @@
+--- lib/mpeg2ps/Makefile.am.orig	2005-09-28 22:38:27.000000000 +0200
++++ lib/mpeg2ps/Makefile.am	2006-06-10 21:08:09.000000000 +0200
+@@ -11,11 +11,10 @@
+ AM_CXXFLAGS = -D_REENTRANT @BILLS_CPPWARNINGS@
+ 
+ bin_PROGRAMS = mpeg_ps_info mpeg_ps_extract
+-prog_libadd = \
+-	$(top_builddir)/lib/gnu/libmpeg4ip_gnu.la \
++prog_libadd = libmpeg2_program.la \
+ 	$(top_builddir)/lib/mp4av/libmp4av.la \
+ 	$(top_builddir)/lib/mp4v2/libmp4v2.la \
+-	libmpeg2_program.la 
++	$(top_builddir)/lib/gnu/libmpeg4ip_gnu.la
+ 
+ mpeg_ps_info_SOURCES = ps_info.cpp
+ mpeg_ps_info_LDADD = $(prog_libadd)
+@@ -25,10 +24,9 @@
+ 
+ mpeg2ps_test_SOURCES = test.cpp
+ mpeg2ps_test_LDADD = libmpeg2_program.la \
+-	$(top_builddir)/lib/gnu/libmpeg4ip_gnu.la \
+ 	$(top_builddir)/lib/mp4av/libmp4av.la \
+ 	$(top_builddir)/lib/mp4v2/libmp4v2.la \
+-	libmpeg2_program.la 
++	$(top_builddir)/lib/gnu/libmpeg4ip_gnu.la
+ 
+ EXTRA_DIST=libmpeg2ps.dsp
+ 
+--- lib/mp4av/Makefile.am.orig	2006-05-11 20:17:56.000000000 +0200
++++ lib/mp4av/Makefile.am	2006-06-10 23:00:01.000000000 +0200
+@@ -49,5 +49,8 @@
+ 	rfch264.cpp
+ 
+ 
++libmp4av_la_LIBADD = \
++	$(top_builddir)/lib/mp4v2/libmp4v2.la
++
+ EXTRA_DIST = libmp4av.dsp
+ 
+--- lib/Makefile.am.orig	2006-03-21 00:08:20.000000000 +0100
++++ lib/Makefile.am	2006-06-10 23:44:39.000000000 +0200
+@@ -8,4 +8,4 @@
+ endif
+ endif
+ 
+-SUBDIRS = utils audio avi fposrec gnu ismacryp mp4av mp4 mp4v2 msg_queue rtp sdp mpeg2t mpeg2ps srtp $(extradir) 
++SUBDIRS = utils audio avi fposrec gnu ismacryp mp4 mp4v2 mp4av mp4v2/util msg_queue rtp sdp mpeg2t mpeg2ps srtp $(extradir) 
+--- lib/mp4v2/Makefile.am	2006-06-11 00:02:16.000000000 +0200
++++ lib/mp4v2/Makefile.am.orig	2006-05-11 20:17:56.000000000 +0200
+@@ -1,4 +1,4 @@
+-SUBDIRS = . test util
++SUBDIRS = . test
+ 
+ INCLUDES = -I$(top_srcdir)/include
+ 
+--- configure.in.orig	2006-05-11 20:18:04.000000000 +0200
++++ configure.in	2006-06-11 02:15:47.000000000 +0200
+@@ -351,6 +351,21 @@
+ [player=true])
+ AM_CONDITIONAL(PLAYER, [test x$player = xtrue])
+ 
++dnl We need -lX11 as they are using XMoveWindow from it
++if test $player=true ; then
++    dnl Xorg or XFree86
++    AC_PATH_XTRA
++    
++    if test "$no_x" = "yes" ; then
++        AC_MSG_WARN([--enable-player was passed to configure, but we will not build it because the X11 headers/libraries were not found])
++	player=false
++    else
++        XLIB_LIBS='$(X_LIBS) $(X_PRE_LIBS) -lX11 $(X_EXTRA_LIBS)'
++    fi
++    
++    AC_SUBST([XLIB_LIBS])
++fi
++
+ #autoconf is slightly confusing here: 
+ #enableval will be 'no' if --disable-* is present and '' if it isn't
+ AC_ARG_ENABLE(srtp,[AC_HELP_STRING([--disable-srtp],[disable use of installed SRTP library])],
+--- server/mp4live/Makefile.am.orig	2006-03-21 00:08:29.000000000 +0100
++++ server/mp4live/Makefile.am	2006-06-11 02:51:43.000000000 +0200
+@@ -151,12 +151,8 @@
+ 	-D_REENTRANT -DNOCONTROLS -fexceptions @BILLS_CPPWARNINGS@ 
+ 
+ mp4live_LDADD = \
+-	@GTK_LIBS@ @GLIB_LIBS@ \
+-	@FAAC_LIB@ \
+-	@LAME_LIB@ \
+-	./h261/libmp4live_h261.la \
+ 	$(GUIADD) \
+ 	libmp4live.la \
+ 	$(top_builddir)/lib/mpeg2ps/libmpeg2_program.la \
+ 	$(top_builddir)/lib/msg_queue/libmsg_queue.la \
+ 	$(top_builddir)/lib/mp4v2/libmp4v2.la \
+@@ -166,9 +160,14 @@
+ 	$(top_builddir)/lib/gnu/libmpeg4ip_gnu.la \
+ 	$(top_builddir)/lib/utils/libutils.la \
+ 	$(top_builddir)/lib/srtp/libsrtpif.la \
+-	@SRTPLIB@ \
+-	-lpthread \
++	./h261/libmp4live_h261.la \
+ 	@SDL_LIBS@ $(GUILIBS) @FFMPEG_LIB@ @LIBVORBIS_LIB@ $(XVID_LIB) \
+-	@X264_LIB@ 
++	@GTK_LIBS@ @GLIB_LIBS@ \
++	@FAAC_LIB@ \
++	@LAME_LIB@ \
++	@SRTPLIB@ \
++	@X264_LIB@ \
++	-lpthread
++
+ 
+ EXTRA_DIST = $(ed2) video_v4l_source.cpp 
+--- player/src/Makefile.am.orig	2007-04-17 16:58:13.000000000 -0400
++++ player/src/Makefile.am	2007-04-17 17:03:27.000000000 -0400
+@@ -196,7 +196,6 @@
+ 
+ mp4player_LDFLAGS = $(SDL_AUDIO_FLAGS)
+ mp4player_LDADD = \
+-	-lm $(SDL_AUDIO_LIB) \
+ 	libmp4player.la \
+ 	libmp4syncbase.la \
+ 	libmp4syncsdl.la \
+@@ -206,7 +205,8 @@
+ 	$(top_builddir)/lib/audio/libaudio.la \
+ 	$(top_builddir)/lib/ismacryp/libismacryp.la \
+ 	$(top_builddir)/lib/srtp/libsrtpif.la \
+-	@SDL_LIBS@ -lX11 @SRTPLIB@
++	$(SDL_AUDIO_LIB) -lm \
++	@SDL_LIBS@ @XLIB_LIBS@ @SRTPLIB@
+ 
+ gmp4player_LDFLAGS= $(SDL_AUDIO_FLAGS)
+ gmp4player_LDADD = $(mp4player_LDADD) \
