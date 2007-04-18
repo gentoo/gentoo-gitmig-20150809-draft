@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.5.0-r1.ebuild,v 1.1 2007/03/05 10:48:41 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.5.0-r1.ebuild,v 1.2 2007/04/18 06:30:43 opfer Exp $
+
+inherit multilib
 
 DESCRIPTION="C++ computer vision library with emphasize on customizable algorithms and data structures"
 HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/"
@@ -36,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix="${D}/usr" install || die "emake install failed"
+	emake libdir="${D}/usr/$(get_libdir)" prefix="${D}/usr" install || die "emake install failed"
 	use doc || rm -Rf "${D}/${MY_DOCDIR}"
 	dodoc README.txt
 }

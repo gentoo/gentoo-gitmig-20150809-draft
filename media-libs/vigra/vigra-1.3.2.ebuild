@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.3.2.ebuild,v 1.3 2007/04/06 22:05:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.3.2.ebuild,v 1.4 2007/04/18 06:30:43 opfer Exp $
+
+inherit multilib
 
 DESCRIPTION="Vision with Generic Algorithms"
 HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra"
@@ -28,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} prefix=${D}/usr install || die
+	make DESTDIR=${D} libdir="${D}/usr/$(get_libdir) " prefix=${D}/usr install || die
 }
 
