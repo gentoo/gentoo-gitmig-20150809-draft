@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0.ebuild,v 1.1 2007/04/17 08:11:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r1.ebuild,v 1.1 2007/04/18 11:03:03 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils autotools flag-o-matic
+inherit eutils autotools flag-o-matic multilib
 
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20070416.tar.gz
+	mirror://gentoo/${P}-patches-20070418.tar.gz
 	http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 
 LICENSE="GPL-2"
@@ -109,13 +109,13 @@ src_compile() {
 		if [ "$STORAGE" ] ; then STORAGE="${STORAGE}," ; fi
 		STORAGE="${STORAGE}mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
-		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
+		myconf="${myconf} --with-mysql-libraries=/usr/$(get_libdir)/mysql"
 	fi
 	if use postgres ; then
 		if [ "$STORAGE" ] ; then STORAGE="${STORAGE}," ; fi
 		STORAGE="${STORAGE}pgsql_drv"
 		myconf="${myconf} --with-pgsql-includes=/usr/include/postgresql"
-		myconf="${myconf} --with-pgsql-libraries=/usr/lib/postgresql"
+		myconf="${myconf} --with-pgsql-libraries=/usr/$(get_libdir)/postgresql"
 	fi
 	if [[ -z "${STORAGE}" ]]; then
 		STORAGE="${STORAGE}hash_drv"
@@ -145,11 +145,6 @@ src_install () {
 
 	# make install
 	make DESTDIR="${D}" install || die "make install failed"
-
-	dodir /usr/lib/dspam
-	if [[ "${D}"/usr/lib/*drv* != *"*" ]]; then
-		mv "${D}"/usr/lib/*drv* "${D}"/usr/lib/dspam/
-	fi
 
 	diropts -m0755 -o dspam -g dspam
 	keepdir /var/run/dspam
