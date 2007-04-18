@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/spice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.9 2007/04/18 07:02:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.10 2007/04/18 07:36:35 opfer Exp $
+
+  18 Apr 2007; Christian Faulhammer <opfer@gentoo.org> spice-3.5.5.ebuild:
+  stable amd64, bug 174791
 
   18 Apr 2007; Christian Faulhammer <opfer@gentoo.org> spice-3.5.5.ebuild:
   fix multilib handling, see bug 171330

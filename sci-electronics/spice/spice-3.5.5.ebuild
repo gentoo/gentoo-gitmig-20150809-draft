@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5.ebuild,v 1.6 2007/04/18 07:02:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5.ebuild,v 1.7 2007/04/18 07:36:35 opfer Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/apps/circuits/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND="sys-libs/ncurses
 	x11-libs/libXaw"
