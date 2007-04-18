@@ -1,6 +1,12 @@
 # ChangeLog for media-video/sswf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.5 2007/04/15 14:32:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.6 2007/04/18 20:16:31 drac Exp $
+
+*sswf-1.8.0-r1 (18 Apr 2007)
+
+  18 Apr 2007; Samuli Suominen <drac@gentoo.org> -sswf-1.8.0.ebuild,
+  +sswf-1.8.0-r1.ebuild:
+  Install manpages and documentation for 175127.
 
   15 Apr 2007; Samuli Suominen <drac@gentoo.org> sswf-1.8.0.ebuild:
   Change tarball from .tar.bz2 to .tar.gz to get a 64bit patch because
