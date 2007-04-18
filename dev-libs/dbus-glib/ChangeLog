@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.24 2007/04/18 06:44:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.25 2007/04/18 13:23:43 eroyf Exp $
+
+  18 Apr 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  dbus-glib-0.73.ebuild:
+  Marked ~mips.
 
   18 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   dbus-glib-0.73.ebuild:
