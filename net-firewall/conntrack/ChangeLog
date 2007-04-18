@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/conntrack
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack/ChangeLog,v 1.1 2006/11/25 15:56:24 cedk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack/ChangeLog,v 1.2 2007/04/18 17:32:52 jokey Exp $
+
+  18 Apr 2007; Markus Ullmann <jokey@gentoo.org>
+  conntrack-1.00_beta2.ebuild:
+  Fix check for more recent kernels per bug #174706 thanks to Olivier Huber
+  and stable on x86
 
 *conntrack-1.00_beta2 (25 Nov 2006)
 
