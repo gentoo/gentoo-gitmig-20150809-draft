@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXrandr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.34 2007/04/17 19:37:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.35 2007/04/18 02:59:31 jer Exp $
+
+  18 Apr 2007; Jeroen Roovers <jer@gentoo.org> libXrandr-1.2.1.ebuild:
+  Stable for HPPA (bug #174959).
 
   17 Apr 2007; Ferris McCormick <fmccor@gentoo.org> libXrandr-1.2.1.ebuild:
   Stable on sparc --- Bug #174959 --- I've been running this for over a month.
