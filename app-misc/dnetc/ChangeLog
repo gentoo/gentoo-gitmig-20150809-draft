@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.40 2007/04/18 17:58:15 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.41 2007/04/18 20:58:32 wolf31o2 Exp $
+
+  18 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  dnetc-2.9011.496-r1.ebuild:
+  Stable on x86 wrt bug #175086.
 
   18 Apr 2007; <welp@gentoo.org> dnetc-2.9011.496-r1.ebuild:
   Stable on amd64 wrt bug 175086
