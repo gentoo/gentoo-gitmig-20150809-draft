@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.37 2007/03/19 17:41:21 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.38 2007/04/18 16:45:55 ian Exp $
+
+  18 Apr 2007; Christian Hartmann <ian@gentoo.org>
+  Devel-StackTrace-1.14.ebuild:
+  Whitespaces
 
 *Devel-StackTrace-1.14 (19 Mar 2007)
 
