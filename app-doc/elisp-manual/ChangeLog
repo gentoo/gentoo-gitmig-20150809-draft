@@ -1,0 +1,51 @@
+# ChangeLog for app-doc/elisp-manual
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.1 2007/04/18 17:20:18 ulm Exp $
+
+  18 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +elisp-manual-21.2.8.ebuild, +elisp-manual-21.2.8-r1.ebuild:
+  Package moved from app-editors/elisp-manual to app-doc/elisp-manual.
+
+*elisp-manual-21.2.8-r1 (18 Apr 2007)
+
+  18 Apr 2007; Ulrich Mueller <ulm@gentoo.org>
+  +elisp-manual-21.2.8-r1.ebuild:
+  Info dir section changed to Emacs (as it is for elisp manual v.22).
+
+  12 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  elisp-manual-21.2.8.ebuild:
+  corrected license
+
+  11 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  elisp-manual-21.2.8.ebuild:
+  changed SRC_URI to mirror syntax
+
+  11 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  elisp-manual-21.2.8.ebuild:
+  MY_PV variable is now constructed with versionator.eclass, corrected SRC_URI
+  and HOMEPAGE
+
+  11 Apr 2007; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
+  elisp-manual-21.2.8.ebuild:
+  added emacs team as maintainer, changed HOMEPAGE
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  elisp-manual-21.2.8.ebuild:
+  QA - IUSE fix
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org>
+  elisp-manual-21.2.8.ebuild:
+  adding s390 keywords
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*elisp-manual-21.2.8 (23 Aug 2002)
+
+  23 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  elisp-manual-21.2.8.ebuild, files/digest-elisp-manual-21.2.8 :
+
+  New ebuild. Based on ebuild submitted by Ben Cornett
+  <acornet@emory.edu>. Bug #3232
