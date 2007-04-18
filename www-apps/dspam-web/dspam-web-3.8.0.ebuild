@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.1 2007/04/17 08:13:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.2 2007/04/18 11:08:46 mrness Exp $
 
 inherit webapp eutils autotools
 
 DESCRIPTION="Web based administration and user controls for dspam"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/dspam-${PV}.tar.gz
-	mirror://gentoo/dspam-${PV}-patches-20070416.tar.gz"
+	mirror://gentoo/dspam-${PV}-patches-20070418.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
