@@ -1,18 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.5.ebuild,v 1.6 2007/02/16 22:03:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.5.ebuild,v 1.7 2007/04/18 20:43:31 philantrop Exp $
 
 inherit kde
 
 DESCRIPTION="kio slave to search files with locate"
-HOMEPAGE="http://arminstraub.de/browse.php?page=programs_kiolocate"
-SRC_URI="http://www.arminstraub.de/downloads/kio-locate/${PN}_${PV}.tar.gz"
+HOMEPAGE="http://arminstraub.com/browse.php?page=programs_kiolocate"
+SRC_URI="http://arminstraub.com/downloads/kio-locate/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
-
 
 DEPEND=">=dev-util/scons-0.96.1"
 RDEPEND="|| ( sys-apps/slocate sys-apps/rlocate )"

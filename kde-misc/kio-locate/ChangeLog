@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kio-locate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.29 2007/02/16 22:03:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.30 2007/04/18 20:43:31 philantrop Exp $
+
+  18 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/kde.py-bksys-1.5.1.diff, metadata.xml, -kio-locate-0.3.4.ebuild,
+  -kio-locate-0.4.4-r1.ebuild, kio-locate-0.4.5.ebuild:
+  Corrected HOMEPAGE and SRC_URI, fixes bug 175076. Removed version 0.3.4 with
+  unsatisfiable dependencies and an old patch that is no longer used. Removed
+  version 0.4.4-r1. Won't compile against KDE 3.5.5 or 3.5.6 anymore. 0.4.5 is
+  stable. Removed trailing whitespace in metadata.xml.
 
   16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   kio-locate-0.4.4-r1.ebuild, kio-locate-0.4.5.ebuild:
