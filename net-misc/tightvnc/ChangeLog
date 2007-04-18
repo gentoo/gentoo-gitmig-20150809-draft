@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.98 2007/04/16 23:17:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.99 2007/04/18 20:02:32 armin76 Exp $
+
+  18 Apr 2007; Raúl Porcel <armin76@gentoo.org> -tightvnc-1.2.9-r3.ebuild:
+  old
 
   16 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   tightvnc-1.2.9-r4.ebuild:
