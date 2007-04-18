@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.23 2007/04/17 16:26:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.24 2007/04/18 14:31:07 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 KERNEL_IUSE="kernel_linux kernel_FreeBSD"
-IUSE="acpi crypt debug dell disk-partition doc pam pcmcia selinux ${KERNEL_IUSE}"
+IUSE="acpi crypt debug dell disk-partition doc pcmcia selinux ${KERNEL_IUSE}"
 
 RDEPEND=">=dev-libs/glib-2.6
 		>=dev-libs/dbus-glib-0.61
@@ -32,8 +32,8 @@ RDEPEND=">=dev-libs/glib-2.6
 		disk-partition? ( >=sys-apps/parted-1.7.1 )
 		kernel_linux? ( crypt? ( >=sys-fs/cryptsetup-luks-1.0.1 ) )
 		selinux? ( sys-libs/libselinux
-					sec-policy/selinux-hal )
-		pam? ( sys-auth/consolekit )"
+					sec-policy/selinux-hal )"
+#		pam? ( sys-auth/consolekit )"
 
 DEPEND="${RDEPEND}
 		  dev-util/pkgconfig
@@ -151,9 +151,10 @@ src_compile() {
 		  $(use_enable doc docbook-docs) \
 		  $(use_enable doc doxygen-docs) \
 		  $(use_enable selinux) \
-		  $(use_enable pam console-kit) \
+		  --disable-console-kit \
 		  ${acpi} \
 	|| die "configure failed"
+#$(use_enable pam console-kit)
 
 	emake || die "make failed"
 }
@@ -172,9 +173,9 @@ src_install() {
 	# initscript
 	newinitd "${FILESDIR}"/0.5.9-hald.rc hald
 	cp "${FILESDIR}"/0.5.9-hald.conf "${WORKDIR}"/
-	if use pam; then
-		sed -e 's:RC_NEED="":RC_NEED="consolekit":' -i "${WORKDIR}"/0.5.9-hald.conf
-	fi
+#	if use pam; then
+#		sed -e 's:RC_NEED="":RC_NEED="consolekit":' -i "${WORKDIR}"/0.5.9-hald.conf
+#	fi
 	if use debug; then
 		sed -e 's:HALD_VERBOSE="no":HALD_VERBOSE="yes":' \
 		-i "${WORKDIR}"/0.5.9-hald.conf

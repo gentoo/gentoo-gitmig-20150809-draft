@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.169 2007/04/17 16:26:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.170 2007/04/18 14:31:07 cardoe Exp $
+
+  18 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/13_detect_newer_macbooks.patch,
+  +files/0.5.9/14_ntfs_allows_utf8.patch,
+  +files/0.5.9/97_ignore_fixed_drives.patch, files/0.5.9/series,
+  hal-0.5.9.ebuild:
+  Since KDE doesn't support ConsoleKit yet and the technicals have not been
+  worked out 100%, leaving ConsoleKit out of this release. Re-added the utf8
+  for ntfs patch. Re-added the detect newer MacBookPro's patch. Re-added
+  ignore fixed volumes patch. These were dropped by accident in 0.5.9.
 
   17 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   -files/hal-0.5.1-old_storage_policy.patch, -files/hal-0.5.5.1-RBC.patch,
