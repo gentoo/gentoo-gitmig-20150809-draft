@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.2 2007/04/18 12:39:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.3 2007/04/18 13:04:41 jokey Exp $
 
 inherit flag-o-matic kde
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-need-kde 3.3
-
 DEPEND=">=dev-util/cmake-2.4"
+
+need-kde 3.3
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +28,7 @@ src_unpack() {
 src_compile() {
 	elog "Filter as-needed"
 	filter-ldflags "--as-needed" "-Wl,--as-needed"
-	
+
 	cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
