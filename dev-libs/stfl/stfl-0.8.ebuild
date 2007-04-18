@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.8.ebuild,v 1.1 2007/04/18 05:45:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.8.ebuild,v 1.2 2007/04/18 21:04:21 ticho Exp $
 
-inherit perl-module
+inherit perl-module toolchain-funcs
 
 DESCRIPTION="A library which implements a curses-based widget set for text terminals"
 HOMEPAGE="http://www.clifford.at/stfl/"
@@ -26,16 +26,23 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	sed -i \
-		-e 's!-O0 -ggdb!!' \
-		-e 's!^all:.*!all: libstfl.a!' \
+		-e "s!-O0 -ggdb!!" \
+		-e "s!^all:.*!all: libstfl.a!" \
 		Makefile
 
 	sed -i -e "s:/usr/lib/python2.4:${D}/usr/lib/python2.4:" \
 		python/Makefile.snippet
+
+	if ! use perl; then
+		echo "FOUND_PERL5=0" >>Makefile.cfg
+	fi
+	if ! use ruby; then
+		echo "FOUND_RUBY=0" >>Makefile.cfg
+	fi
 }
 
 src_compile() {
-	emake || die "make failed"
+	emake -j1 CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {
