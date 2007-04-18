@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.3 2007/04/15 10:19:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.4 2007/04/18 17:20:38 jokey Exp $
+
+  18 Apr 2007; Markus Ullmann <jokey@gentoo.org> libnfnetlink-0.0.25.ebuild:
+  Add check for more recent kernels, clean overshadowed and stable on x86
 
   15 Apr 2007; Daniel Black <dragonheart@gentoo.org>
   libnfnetlink-0.0.25.ebuild:
