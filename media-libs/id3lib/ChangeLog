@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.53 2007/04/17 14:10:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.54 2007/04/18 17:17:08 nixnut Exp $
+
+  18 Apr 2007; nixnut <nixnut@gentoo.org> id3lib-3.8.3-r5.ebuild:
+  Stable on ppc wrt bug 130922
 
   17 Apr 2007; Samuli Suominen <drac@gentoo.org> id3lib-3.8.3-r5.ebuild:
   RESTRICT="test" as per bug 130922.
