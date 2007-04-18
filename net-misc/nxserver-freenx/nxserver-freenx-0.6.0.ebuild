@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.6.0.ebuild,v 1.1 2007/03/21 10:15:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.6.0.ebuild,v 1.2 2007/04/18 16:03:50 voyageur Exp $
 
 inherit multilib eutils
 
@@ -27,7 +27,9 @@ DEPEND="virtual/ssh
 	esd? ( media-sound/esound )
 	!net-misc/nxserver-freeedition"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	media-fonts/font-alias
+	x11-apps/xauth"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
