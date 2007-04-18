@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.14 2007/04/06 18:21:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.15 2007/04/18 19:53:23 beandog Exp $
+
+*twolame-0.3.10 (18 Apr 2007)
+
+  18 Apr 2007; Steve Dibb <beandog@gentoo.org> +twolame-0.3.10.ebuild:
+  Version bump
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   twolame-0.3.9.ebuild:
