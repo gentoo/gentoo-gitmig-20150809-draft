@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19.282.ebuild,v 1.2 2007/04/16 11:32:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19.282.ebuild,v 1.3 2007/04/18 18:05:43 gustavoz Exp $
 
 inherit elisp eutils versionator
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.uni-mainz.de/pub/software/gnu/vm/${VM_P}.tar.gz
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="bbdb"
 
 DEPEND="bbdb? ( app-emacs/bbdb )"

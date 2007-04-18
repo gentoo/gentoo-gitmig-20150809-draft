@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.22 2007/04/16 11:32:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.23 2007/04/18 18:05:43 gustavoz Exp $
+
+  18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> vm-7.19.282.ebuild:
+  Keyworded ~sparc wrt #174782
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> vm-7.19.282.ebuild:
   keyworded ~amd64, bug 174782
