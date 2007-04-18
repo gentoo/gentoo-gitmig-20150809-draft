@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-keyring-manager
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.38 2007/03/27 20:37:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.39 2007/04/18 10:46:34 drac Exp $
+
+  18 Apr 2007; Samuli Suominen <drac@gentoo.org>
+  gnome-keyring-manager-2.16.0-r1.ebuild:
+  Add missing eutils to inherit line as per buildlogs in bug 161264.
 
 *gnome-keyring-manager-2.18.0 (27 Mar 2007)
 

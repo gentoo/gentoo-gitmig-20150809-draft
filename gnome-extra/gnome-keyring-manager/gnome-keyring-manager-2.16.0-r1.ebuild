@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.16.0-r1.ebuild,v 1.9 2007/01/21 20:21:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.16.0-r1.ebuild,v 1.10 2007/04/18 10:46:34 drac Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A keyring management program for the GNOME Desktop"
 HOMEPAGE="http://www.gnome.org/"
