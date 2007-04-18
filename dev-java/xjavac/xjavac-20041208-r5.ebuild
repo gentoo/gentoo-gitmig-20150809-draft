@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r5.ebuild,v 1.2 2007/04/16 08:06:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r5.ebuild,v 1.3 2007/04/18 06:02:36 caster Exp $
 
 # Does not install a symlink any more so ANT_TASKS is the only way to use this
 WANT_SPLIT_ANT="true"
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant jar -Dclasspath=$(java-pkg_getjars ant-core)
+	eant jar -Dclasspath=$(java-pkg_getjars --build-only ant-core)
 }
 
 src_install() {
