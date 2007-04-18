@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71.ebuild,v 1.10 2007/03/10 22:29:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71.ebuild,v 1.11 2007/04/18 18:40:53 mabi Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A free source code editing component for the FOX-Toolkit"
 HOMEPAGE="http://www.nongnu.org/fxscintilla/"
@@ -38,7 +38,7 @@ src_compile () {
 	../configure \
 		--prefix=/usr \
 		--includedir=/usr/include \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		${EXTRA_ECONF} \
 		--enable-nolexer \
 		--with-fox-1-2 \
@@ -53,7 +53,7 @@ src_compile () {
 	../configure \
 		--prefix=/usr \
 		--includedir=/usr/include \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		${EXTRA_ECONF} \
 		--enable-nolexer \
 		--with-fox-1-4 \
@@ -68,7 +68,7 @@ src_compile () {
 	../configure \
 		--prefix=/usr \
 		--includedir=/usr/include \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		${EXTRA_ECONF} \
 		--enable-nolexer \
 		--with-fox-1-6 \
@@ -79,13 +79,13 @@ src_compile () {
 
 src_install () {
 	cd ${S}/build_1_2
-	make DESTDIR="${D}" install || die "make install error"
+	emake DESTDIR="${D}" install || die "make install error"
 
 	cd ${S}/build_1_4
-	make DESTDIR="${D}" install || die "make install error"
+	emake DESTDIR="${D}" install || die "make install error"
 
 	cd ${S}/build_1_6
-	make DESTDIR="${D}" install || die "make install error"
+	emake DESTDIR="${D}" install || die "make install error"
 
 	cd ${S}
 	dodoc README
@@ -96,15 +96,13 @@ src_install () {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "New as of 1.71:"
-	ewarn "FXScintilla is now built separately against FOX-1.2,-1.4 and -1.6."
-	ewarn "Support for FOX-1.0 has been dropped upstream."
-	ewarn "The Librarys are named for the FOX-release they correspond to, for"
-	ewarn "example: For FOX-1.2, the library is called libfxscintilla-1.2."
-	ewarn "Anything linked against previous releases of FOX and fxscintilla"
-	ewarn "may need to be rebuilt."
-	ewarn
-	einfo "The nolexer libraries are now included in this release as well."
-	epause 5
+	elog "New as of 1.71:"
+	elog "FXScintilla is now built separately against FOX-1.2,-1.4 and -1.6."
+	elog "Support for FOX-1.0 has been dropped upstream."
+	elog "The Librarys are named for the FOX-release they correspond to, for"
+	elog "example: For FOX-1.2, the library is called libfxscintilla-1.2."
+	elog "Anything linked against previous releases of FOX and fxscintilla"
+	elog "may need to be rebuilt."
+	elog
+	elog "The nolexer libraries are now included in this release as well."
 }

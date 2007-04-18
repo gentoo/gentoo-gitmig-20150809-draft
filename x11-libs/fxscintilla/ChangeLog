@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.25 2007/03/10 22:29:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.26 2007/04/18 18:40:53 mabi Exp $
+
+  18 Apr 2007; Matti Bickel <mabi@gentoo.org> fxscintilla-1.62-r2.ebuild,
+  fxscintilla-1.71.ebuild:
+  multilib-strict and elog fixes
 
   10 Mar 2007; Tom Gall <tgall@gentoo.org> fxscintilla-1.71.ebuild:
   added ~ppc64

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.62-r2.ebuild,v 1.2 2007/02/23 16:24:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.62-r2.ebuild,v 1.3 2007/04/18 18:40:53 mabi Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile () {
 	../configure \
 		--prefix=/usr \
 		--includedir=/usr/include \
-		--libdir=/usr/lib \
+		--libdir="/usr/$(get_libdir)" \
 		${EXTRA_ECONF} \
 		--enable-nolexer \
 		--with-foxinclude=/usr/include \
@@ -58,13 +58,11 @@ src_install () {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "New as of 1.62-r2:"
-	ewarn "FXScintilla is now built only against FOX-1.2."
-	ewarn "For FOX-1.2, the library is called libfxscintilla-1.2."
-	ewarn "Anything linked against previous releases of FOX-1.2 and fxscintilla"
-	ewarn "may need to be rebuilt."
-	ewarn
-	einfo "The nolexer libraries are now included in this release as well."
-	epause 5
+	elog "New as of 1.62-r2:"
+	elog "FXScintilla is now built only against FOX-1.2."
+	elog "For FOX-1.2, the library is called libfxscintilla-1.2."
+	elog "Anything linked against previous releases of FOX-1.2 and fxscintilla"
+	elog "may need to be rebuilt."
+	elog
+	elog "The nolexer libraries are now included in this release as well."
 }
