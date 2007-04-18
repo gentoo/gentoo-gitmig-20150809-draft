@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/bar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.17 2007/02/22 01:02:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.18 2007/04/18 20:06:47 welp Exp $
+
+  18 Apr 2007; <welp@gentoo.org> bar-1.10.3.ebuild:
+  Stable on amd64 wrt bug 175087
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
