@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.5 2007/04/18 01:38:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.6 2007/04/18 13:54:30 gustavoz Exp $
+
+  18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  emacs-desktop-0.2.ebuild:
+  Keyworded ~sparc wrt #174880
 
   18 Apr 2007; Jeroen Roovers <jer@gentoo.org> emacs-desktop-0.2.ebuild:
   Marked ~hppa (bug #174880).
