@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.141 2007/04/18 14:07:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.142 2007/04/18 20:05:12 armin76 Exp $
+
+  18 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  xine-ui-0.99.5_pre20070303.ebuild:
+  x86 stable
 
   18 Apr 2007; Steve Dibb <beandog@gentoo.org>
   xine-ui-0.99.5_pre20070303.ebuild:
