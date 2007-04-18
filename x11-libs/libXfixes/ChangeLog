@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.38 2007/04/18 03:06:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.39 2007/04/18 07:20:09 corsair Exp $
+
+  18 Apr 2007; Markus Rothe <corsair@gentoo.org> libXfixes-4.0.3.ebuild:
+  Stable on ppc64; bug #174959
 
   18 Apr 2007; Jeroen Roovers <jer@gentoo.org> libXfixes-4.0.3.ebuild:
   Stable for HPPA (bug #174959).
