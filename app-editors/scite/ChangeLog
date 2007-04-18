@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.61 2007/04/17 09:13:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.62 2007/04/18 06:39:35 opfer Exp $
+
+  18 Apr 2007; Christian Faulhammer <opfer@gentoo.org> scite-1.72.ebuild:
+  stable x86/amd64, bug 174886
 
 *scite-1.73 (17 Apr 2007)
 
