@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.40 2007/04/17 14:30:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.41 2007/04/18 17:48:01 nixnut Exp $
+
+  18 Apr 2007; nixnut <nixnut@gentoo.org> dash-0.5.3.7.ebuild:
+  Stable on ppc wrt bug 174833
 
   17 Apr 2007; Christian Faulhammer <opfer@gentoo.org> dash-0.5.3.7.ebuild:
   stable amd64, bug 174833
