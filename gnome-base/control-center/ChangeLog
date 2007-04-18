@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.225 2007/04/17 02:49:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.226 2007/04/18 14:43:12 dang Exp $
+
+  18 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  control-center-2.18.1.ebuild:
+  New gnome-doc-utils dep; bug #175015
 
 *control-center-2.18.1 (17 Apr 2007)
 
