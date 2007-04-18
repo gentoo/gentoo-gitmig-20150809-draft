@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.33 2007/04/18 07:39:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.34 2007/04/18 10:41:38 yoswink Exp $
+
+  18 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  libXcomposite-0.3.1.ebuild:
+  Stable on alpha wrt bug #174959
 
   18 Apr 2007; Markus Rothe <corsair@gentoo.org> libXcomposite-0.3.1.ebuild:
   Stable on ppc64; bug #174959
