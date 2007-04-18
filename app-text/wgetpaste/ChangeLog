@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.17 2007/04/09 23:49:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.18 2007/04/18 18:12:43 armin76 Exp $
+
+  18 Apr 2007; Raúl Porcel <armin76@gentoo.org> wgetpaste-2.ebuild:
+  ia64 + x86 stable
 
   09 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> wgetpaste-2.2.ebuild:
   Add ~alpha keyword, bug 173401.
