@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.18 2007/04/18 17:55:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.19 2007/04/18 19:34:03 opfer Exp $
+
+  18 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  chemtool-1.6.9-r1.ebuild:
+  stable x86, bug 174973
 
   18 Apr 2007; nixnut <nixnut@gentoo.org> chemtool-1.6.9-r1.ebuild:
   Stable on ppc wrt bug 174973
