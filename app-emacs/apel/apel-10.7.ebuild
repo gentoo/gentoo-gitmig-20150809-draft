@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.7.ebuild,v 1.8 2007/04/11 03:41:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.7.ebuild,v 1.9 2007/04/18 18:00:08 gustavoz Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.jpl.org/pub/elisp/apel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 DEPEND="virtual/emacs"
 
