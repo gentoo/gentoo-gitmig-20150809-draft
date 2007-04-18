@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/randrproto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.32 2007/04/18 02:56:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.33 2007/04/18 07:16:41 corsair Exp $
+
+  18 Apr 2007; Markus Rothe <corsair@gentoo.org> randrproto-1.2.0.ebuild:
+  Stable on ppc64; bug #174959
 
   18 Apr 2007; Jeroen Roovers <jer@gentoo.org> randrproto-1.2.0.ebuild:
   Stable for HPPA (bug #174959).
