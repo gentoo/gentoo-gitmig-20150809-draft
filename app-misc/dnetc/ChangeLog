@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.41 2007/04/18 20:58:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.42 2007/04/18 21:15:20 wolf31o2 Exp $
+
+  18 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Adding myself as the maintainer. I guess that means now I'll have to clean
+  up this mess. Don't touch this package unless your stats are better than
+  mine
+  (http://stats.distributed.net/participant/psummary.php?project_id=8&id=41492
+  9)... ;]
 
   18 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   dnetc-2.9011.496-r1.ebuild:
