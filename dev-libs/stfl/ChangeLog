@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/stfl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.1 2007/04/18 05:45:35 ticho Exp $
+
+*stfl-0.8 (17 Apr 2007)
+
+  17 Apr 2007; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +stfl-0.8.ebuild:
+  Initial import. Ebuild submitted by Tim Weber <gentoo.bugs at scytale.de> in
+  bug #174975, modified by me.
+
