@@ -21,3 +21,4 @@ slotmove =app-editors/emacs-cvs-22.0.9999-r6 22.0.96 22
 slotmove =app-editors/emacs-cvs-22.0.9999-r7 22.0.97 22
 slotmove ~app-editors/emacs-cvs-23.0.0 23.0.0 23
 slotmove ~app-editors/emacs-cvs-22.0.0 22.0.0 23
+move app-editors/elisp-manual app-doc/elisp-manual
