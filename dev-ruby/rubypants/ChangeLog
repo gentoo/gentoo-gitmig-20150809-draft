@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/rubypants
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.1 2007/04/18 11:46:14 agorf Exp $
+
+*rubypants-0.2.0 (18 Apr 2007)
+
+  18 Apr 2007; Aggelos Orfanakos <agorf@gentoo.org> +rubypants-0.2.0.ebuild:
+  Initial ebuild, bug #143439.
+
