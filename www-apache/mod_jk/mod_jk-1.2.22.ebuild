@@ -1,17 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.22_pre.ebuild,v 1.1 2007/04/02 15:22:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.22.ebuild,v 1.1 2007/04/18 17:43:08 wltjr Exp $
 
 inherit apache-module autotools
 
-MY_P="tomcat-connectors-${PV/2.22_pre/1.22-dev-524775}-src"
+MY_P="tomcat-connectors-${PV}-src"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="JK module for connecting Tomcat and Apache using the ajp13 protocol."
 HOMEPAGE="http://tomcat.apache.org/connectors-doc/"
-#SRC_URI="mirror://apache/tomcat/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.tar.gz"
-SRC_URI="http://people.apache.org/~mturk/jk-1.2.22-dev/${MY_P}.tar.gz"
+SRC_URI="mirror://apache/tomcat/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
@@ -27,7 +26,7 @@ APACHE2_MOD_FILE="${S}/apache-2.0/${PN}.so"
 APACHE2_MOD_CONF="88_${PN}"
 APACHE2_MOD_DEFINE="JK"
 
-DOCFILES="CHANGES.txt README"
+DOCFILES="CHANGES README"
 
 need_apache
 
