@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.70 2007/04/17 09:16:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.71 2007/04/18 08:52:00 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -2353,7 +2353,7 @@ java-pkg_verify-classes() {
 java-pkg_ensure-dep() {
 	debug-print-function ${FUNCNAME} $*
 
-	local build_only="${1}"	
+	local build_only="${1}"
 	local target_pkg="${2}"
 	local dev_error=""
 
@@ -2365,7 +2365,7 @@ java-pkg_ensure-dep() {
 		dev_error="${dev_error} declared in DEPEND."
 		if is-java-strict; then
 			die "${dev_error}"
-		else
+		elif [[ ${BASH_SUBSHELL} = 0 ]]; then
 			eerror "${dev_error}"
 			einfo "Because you have this package installed the package will"
 			einfo "build without problems, but please report this to"
@@ -2377,8 +2377,8 @@ java-pkg_ensure-dep() {
 		dev_error="The ebuild is attempting to use ${target_pkg},"
 		dev_error="${dev_error} without specifying --build-only, that is not declared in RDEPEND."
 		if is-java-strict; then
-			die "${error}"
-		else
+			die "${dev_error}"
+		elif [[ ${BASH_SUBSHELL} = 0 ]]; then
 			eerror "${dev_error}"
 			einfo "Because you have this package installed the package will"
 			einfo "build without problems, but please report this to"
