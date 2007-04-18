@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.61 2007/02/18 15:43:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.62 2007/04/18 13:00:58 beandog Exp $
+
+  18 Apr 2007; Steve Dibb <beandog@gentoo.org> realplayer-10.0.8.ebuild,
+  realplayer-10.0.8-r1.ebuild, realplayer-10.0.8-r2.ebuild:
+  Fix download url, bug 172068
 
 *realplayer-10.0.8-r2 (18 Feb 2007)
 
