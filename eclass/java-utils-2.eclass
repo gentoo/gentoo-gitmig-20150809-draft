@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.71 2007/04/18 08:52:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.72 2007/04/18 08:55:21 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -2367,9 +2367,9 @@ java-pkg_ensure-dep() {
 			die "${dev_error}"
 		elif [[ ${BASH_SUBSHELL} = 0 ]]; then
 			eerror "${dev_error}"
-			einfo "Because you have this package installed the package will"
-			einfo "build without problems, but please report this to"
-			einfo "http://bugs.gentoo.org"
+			elog "Because you have this package installed the package will"
+			elog "build without problems, but please report this to"
+			elog "http://bugs.gentoo.org"
 		fi
 	fi
 
@@ -2380,9 +2380,9 @@ java-pkg_ensure-dep() {
 			die "${dev_error}"
 		elif [[ ${BASH_SUBSHELL} = 0 ]]; then
 			eerror "${dev_error}"
-			einfo "Because you have this package installed the package will"
-			einfo "build without problems, but please report this to"
-			einfo "http://bugs.gentoo.org"
+			elog "Because you have this package installed the package will"
+			elog "build without problems, but please report this to"
+			elog "http://bugs.gentoo.org"
 		fi
 	fi
 }
