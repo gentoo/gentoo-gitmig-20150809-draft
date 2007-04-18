@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.49 2007/04/16 08:07:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.50 2007/04/18 13:21:19 vapier Exp $
+
+*psmisc-22.4 (18 Apr 2007)
+
+  18 Apr 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/psmisc-22.4-no-peekfd.patch, +psmisc-22.4.ebuild:
+  Version bump.
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> psmisc-22.3.ebuild:
   Stable on ppc64
