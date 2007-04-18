@@ -1,0 +1,7 @@
+# ChangeLog for mail-filter/libdomainkeys
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.1 2007/04/18 23:02:20 peitolm Exp $
+
+  18 Apr 2007; Colin Morey <peitolm@gentoo.org> ChangeLog:
+  Initial commit. to satisfy 71501 as a pre-requisite for 111729
+
