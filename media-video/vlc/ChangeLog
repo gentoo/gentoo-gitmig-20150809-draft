@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.233 2007/04/13 16:08:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.234 2007/04/18 22:01:12 aballier Exp $
+
+  18 Apr 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6b_beta1.ebuild:
+  Patch to be compatible with libdca
 
 *vlc-0.8.6b_beta1 (13 Apr 2007)
 
