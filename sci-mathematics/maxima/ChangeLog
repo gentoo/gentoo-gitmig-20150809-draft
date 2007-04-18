@@ -1,6 +1,20 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.26 2007/04/16 08:51:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.27 2007/04/18 10:53:32 bicatali Exp $
+
+*maxima-5.11.0-r2 (18 Apr 2007)
+
+  18 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/maxima-5.10.0.patch, +files/maxima-5.11.0-xdg-utils.patch,
+  files/50maxima-gentoo.el, -maxima-5.9.3.ebuild, -maxima-5.10.0.ebuild,
+  +maxima-5.11.0-r2.ebuild:
+  auctex flag replaced by emacs+tetex. Cleaned ebuild, removed 
+  obsolete versions. Added a warning using gnuplot.
+  maxima-5.11.0-r2 now depends on x11-misc/xdg-utils,
+  default-browser.patch and default-psviewer.patch replaced 
+  by xdg-utils.patch; sbcl-disable-debugger.patch dropped, 
+  see http://bugzilla.redhat.com/214568. Thanks to Andrey Grozin for his 
+  work on the gentooscience overlay.
 
 *maxima-5.11.0-r1 (16 Apr 2007)
 
