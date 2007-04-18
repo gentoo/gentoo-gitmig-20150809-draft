@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/linphone
+# ChangeLog for net-voip/linphone
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.1 2007/04/14 09:42:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.2 2007/04/18 20:45:06 swegener Exp $
 
 *linphone-1.7.0 (14 Apr 2007)
 
