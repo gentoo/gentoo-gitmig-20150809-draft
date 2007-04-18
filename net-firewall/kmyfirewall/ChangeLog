@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.30 2007/02/22 01:41:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.31 2007/04/18 10:30:02 jokey Exp $
+
+*kmyfirewall-1.0.1-r1 (18 Apr 2007)
+
+  18 Apr 2007; Markus Ullmann <jokey@gentoo.org> -kmyfirewall-1.0.1.ebuild,
+  +kmyfirewall-1.0.1-r1.ebuild:
+  Add new version with a new symlink, not touching keywords here is fine,
+  resolves bug #167247
 
   22 Feb 2007; Jason Wever <weeve@gentoo.org> kmyfirewall-1.0.1.ebuild:
   Stable on SPARC wrt bug #165429.

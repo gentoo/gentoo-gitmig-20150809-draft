@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0.1.ebuild,v 1.4 2007/02/22 01:41:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0.1-r1.ebuild,v 1.1 2007/04/18 10:30:02 jokey Exp $
 
 inherit kde eutils
 
@@ -22,6 +22,13 @@ need-kde 3
 src_unpack() {
 	kde_src_unpack
 	echo -e "[PATHS]\nDistribution=gentoo\nIPTPath=${ROOT}sbin/iptables\nModprobePath=${ROOT}sbin/modprobe\nrcDefaultPath=${ROOT}etc/runlevels/default/" >> ${S}/kmyfirewall/kmyfirewallrc}
+}
+
+src_install() {
+	kde_src_install
+
+	# search path is broken in the app, help it temporarily
+	dosym kpartplugins/kmfinstallerpluginui.rc /usr/share/apps/kmyfirewall/kmfinstallerpluginui.rc
 }
 
 pkg_postinst() {
