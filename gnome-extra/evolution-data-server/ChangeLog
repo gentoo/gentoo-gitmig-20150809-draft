@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.113 2007/04/16 21:43:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.114 2007/04/18 08:56:09 uberlord Exp $
+
+  18 Apr 2007; Roy Marples <uberlord@gentoo.org>
+  evolution-data-server-1.8.3.ebuild, evolution-data-server-1.8.3-r1.ebuild,
+  evolution-data-server-1.8.3-r2.ebuild,
+  evolution-data-server-1.10.1.ebuild:
+  Blessed with the ~x86-fbsd keyword.
 
 *evolution-data-server-1.10.1 (16 Apr 2007)
 

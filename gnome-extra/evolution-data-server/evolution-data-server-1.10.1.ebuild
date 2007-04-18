@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.1.ebuild,v 1.1 2007/04/16 21:43:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.1.ebuild,v 1.2 2007/04/18 08:56:09 uberlord Exp $
 
-inherit eutils gnome2 autotools
+inherit db-use eutils flag-o-matic gnome2 autotools
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc ipv6 kerberos keyring krb4 ldap ssl"
 
 RDEPEND=">=dev-libs/glib-2.10
@@ -111,6 +111,9 @@ src_unpack() {
 	# fix file includes 
 	sed -i -e 's:<backends/groupwise/e-book-backend-groupwise.h>:"server.deps/addressbook/e-book-backend-groupwise.h":' addressbook/libedata-book/e-data-book-factory.c
 
+	# Fix db version for FreeBSD users where -ldb is always db-1
+	sed -i -e "s:-ldb:-l$(db_libname):" configure.in
+
 #---------------Upstream GNOME stop here---------------
 	eautoreconf
 }
@@ -125,6 +128,10 @@ src_compile() {
 		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \
 		--without-nss-libs --without-nss-includes"
 	fi
+
+	# /usr/include/db.h is always db-1 on FreeBSD
+	# so include the right dir in CPPFLAGS
+	#append-cppflags "-I$(db_includedir)"
 
 	cd "${S}"
 	gnome2_src_compile
