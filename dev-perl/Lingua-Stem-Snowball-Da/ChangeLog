@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Lingua-Stem-Snowball-Da
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/ChangeLog,v 1.11 2007/03/12 16:57:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/ChangeLog,v 1.12 2007/04/18 16:40:29 ian Exp $
+
+  18 Apr 2007; Christian Hartmann <ian@gentoo.org>
+  -Lingua-Stem-Snowball-Da-1.01.ebuild,
+  Lingua-Stem-Snowball-Da-1.01-r1.ebuild:
+  Whitespaces; cleanup
 
 *Lingua-Stem-Snowball-Da-1.01-r1 (12 Mar 2007)
 
