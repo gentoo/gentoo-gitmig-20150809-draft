@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.1-r1.ebuild,v 1.8 2005/02/26 21:56:58 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.1-r1.ebuild,v 1.9 2007/04/18 10:59:49 dragonheart Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	dev-libs/libxslt
 	>=media-libs/libvorbis-1.0
 	>=media-libs/libogg-1.0
-	curl? ( net-misc/curl )"
+	curl? ( <net-misc/curl-7.16.0 )"
 
 src_compile() {
 	local myconf=""

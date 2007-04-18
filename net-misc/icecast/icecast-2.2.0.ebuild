@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.2.0.ebuild,v 1.10 2007/02/01 18:28:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.2.0.ebuild,v 1.11 2007/04/18 10:59:49 dragonheart Exp $
 
 IUSE="yp"
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha amd64 ~ppc ppc64 sparc x86"
 DEPEND="dev-libs/libxslt
 	media-libs/libogg
 	media-libs/libvorbis
-	yp? ( net-misc/curl )"
+	yp? ( <net-misc/curl-7.16.0 )"
 
 src_unpack() {
 	unpack ${A}

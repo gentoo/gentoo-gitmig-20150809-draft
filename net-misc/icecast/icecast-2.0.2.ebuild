@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.2.ebuild,v 1.6 2005/02/26 21:56:58 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.2.ebuild,v 1.7 2007/04/18 10:59:49 dragonheart Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64"
 DEPEND="dev-libs/libxslt
 	media-libs/libogg
 	media-libs/libvorbis
-	curl? ( net-misc/curl )"
+	curl? ( <net-misc/curl-7.16.0 )"
 
 src_compile() {
 	local myconf=""

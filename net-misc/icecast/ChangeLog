@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.64 2007/04/17 14:11:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.65 2007/04/18 10:59:49 dragonheart Exp $
+
+  18 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  icecast-2.0.1-r1.ebuild, icecast-2.0.2.ebuild, icecast-2.1.0.ebuild,
+  icecast-2.2.0.ebuild, icecast-2.3.1.ebuild, icecast-2.3.1-r1.ebuild:
+  <icecast-2.3.1-r1 depend on <curl-7.16.0 in preparation for >curl-7.16.0
+  unmask. Permission thanks to Alexis Ballier <aballier@gentoo.org>
 
   17 Apr 2007; Alexis Ballier <aballier@gentoo.org>
   +files/icecast-2.3.1-nocurlpassword.patch, icecast-2.3.1-r1.ebuild:
