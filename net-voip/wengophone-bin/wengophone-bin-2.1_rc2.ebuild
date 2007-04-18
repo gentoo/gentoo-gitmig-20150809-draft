@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/wengophone-bin/wengophone-bin-2.1_rc2.ebuild,v 1.1 2007/04/14 12:48:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/wengophone-bin/wengophone-bin-2.1_rc2.ebuild,v 1.2 2007/04/18 19:24:54 genstef Exp $
 
 inherit	eutils
 
@@ -30,6 +30,7 @@ RDEPEND="${DEPEND}
 		sys-libs/zlib
 		=dev-libs/glib-2*
 		media-libs/alsa-lib
+		media-libs/libsndfile
 		sys-fs/e2fsprogs
 		dev-libs/libxml2
 		x11-libs/libSM
