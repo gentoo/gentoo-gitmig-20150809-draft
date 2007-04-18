@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.23 2007/04/18 00:58:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.24 2007/04/18 06:44:39 opfer Exp $
+
+  18 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  dbus-glib-0.73.ebuild:
+  stable x86, bug 174808
 
   18 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> dbus-glib-0.73.ebuild:
   Marked stable on amd64 for bug #174808
