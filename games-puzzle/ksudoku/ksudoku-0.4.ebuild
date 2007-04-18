@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.1 2007/04/18 12:32:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.2 2007/04/18 12:39:52 jokey Exp $
 
-inherit kde
+inherit flag-o-matic kde
 
 DESCRIPTION="Sudoku Puzzle Generator and Solver for KDE"
 HOMEPAGE="http://ksudoku.sourceforge.net/"
@@ -26,18 +26,21 @@ src_unpack() {
 }
 
 src_compile() {
+	elog "Filter as-needed"
+	filter-ldflags "--as-needed" "-Wl,--as-needed"
+	
 	cmake \
-		-DCMAKE_INSTALL_PREFIX=/usr					\
-		-DCMAKE_BUILD_TYPE=Release					\
-		-DCMAKE_C_COMPILER=$(type -P $(tc-getCC))		\
-		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX))	\
-		-DCMAKE_CXX_FLAGS="-DQT_THREAD_SUPPORT"		\
-		-DLIB_INSTALL_DIR=/usr/$(get_libdir) 		\
-		|| die
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_C_COMPILER=$(type -P $(tc-getCC)) \
+		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX)) \
+		-DCMAKE_CXX_FLAGS="-DQT_THREAD_SUPPORT" \
+		-DLIB_INSTALL_DIR=/usr/$(get_libdir) \
+		|| die "cmake failed"
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 }

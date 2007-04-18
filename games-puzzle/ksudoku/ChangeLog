@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ksudoku
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.5 2007/04/18 12:32:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.6 2007/04/18 12:39:52 jokey Exp $
+
+  18 Apr 2007; Markus Ullmann <jokey@gentoo.org> -ksudoku-0.3.ebuild,
+  ksudoku-0.4.ebuild:
+  Filter as-needed as it breaks nicely
 
 *ksudoku-0.4 (18 Apr 2007)
 
