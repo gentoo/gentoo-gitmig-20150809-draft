@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.13 2007/04/17 19:24:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.14 2007/04/18 10:45:59 yoswink Exp $
+
+  18 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> xcb-proto-1.0.ebuild:
+  Stable on alpha wrt security bug #172752
 
   17 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xcb-proto-0.9.93.ebuild, xcb-proto-1.0.ebuild:
