@@ -1,36 +1,33 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.5.ebuild,v 1.11 2007/04/17 22:17:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.5.ebuild,v 1.12 2007/04/18 11:58:31 jokey Exp $
 
-inherit libtool flag-o-matic eutils
+inherit libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-#SRC_URI="http://www.wireshark.org/download/src/${MY_P}.tar.bz2"
 SRC_URI="mirror://sourceforge/wireshark/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 portaudio snmp ssl kerberos threads selinux"
 
-RDEPEND=">=sys-libs/zlib-1.1.4
-	snmp? ( >=net-analyzer/net-snmp-5.1.1 )
+RDEPEND="sys-libs/zlib
+	snmp? ( net-analyzer/net-snmp )
 	gtk? ( >=dev-libs/glib-2.0.4
 		=x11-libs/gtk+-2*
 		x11-libs/pango
 		dev-libs/atk )
 	!gtk? ( =dev-libs/glib-1.2* )
-	ssl? ( >=dev-libs/openssl-0.9.6e )
+	ssl? ( dev-libs/openssl )
 	!ssl? (	net-libs/gnutls )
 	net-libs/libpcap
-	>=dev-libs/libpcre-4.2
+	dev-libs/libpcre
 	adns? ( net-libs/adns )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
 	selinux? ( sec-policy/selinux-wireshark )"
-# lua fails with version 5.0 and 5.1 is not in portage yet - 2006-04-25
-#	lua? ( >=dev-lang/lua-5.1 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15.0
@@ -63,8 +60,17 @@ src_unpack() {
 }
 
 src_compile() {
-	replace-flags -O? -O
-	filter-flags -fstack-protector # see bug #133092
+	# optimization bug, see bug #165340
+	if [[ "$(gcc-version)" == "3.4" ]] ; then
+		elog "Found gcc 3.4, forcing -O3 into CFLAGS"
+		replace-flags -O? -O3
+	else
+		elog "Forcing -O into CFLAGS"
+		replace-flags -O? -O
+	fi
+
+	# see bug #133092
+	filter-flags -fstack-protector
 
 	local myconf
 
@@ -135,4 +141,3 @@ pkg_postinst() {
 	ewarn "take a capture with tcpdump and analyze running wireshark as a least privileged user;"
 	ewarn "and subscribe to wireshark's announce list to be notified of newly discovered vulnerabilities."
 }
-

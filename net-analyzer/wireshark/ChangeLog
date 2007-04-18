@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.54 2007/04/17 22:17:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.55 2007/04/18 11:58:31 jokey Exp $
+
+  18 Apr 2007; Markus Ullmann <jokey@gentoo.org> -wireshark-0.99.4.ebuild,
+  -wireshark-0.99.4-r1.ebuild, wireshark-0.99.5.ebuild:
+  Fix gcc 3.4 bug #165340 thanks to Guenther Brunthaler for the solution, do
+  some cleanup as well
 
   17 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   wireshark-0.99.5.ebuild:
