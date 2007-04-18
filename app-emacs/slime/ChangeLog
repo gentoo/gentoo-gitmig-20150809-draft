@@ -1,6 +1,24 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.36 2007/04/18 19:15:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.37 2007/04/18 19:26:08 opfer Exp $
+
+  18 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/1.2.1.20050804/70slime-gentoo.el,
+  -files/1.2.1.20050804/README.Gentoo, -files/1.2.1.20050804/swank.asd,
+  -files/1.2.1.20050804/swank-loader.lisp,
+  -files/1.2.1.20051211/70slime-gentoo.el,
+  -files/1.2.1.20051211/README.Gentoo, -files/1.2.1.20051211/swank.asd,
+  -files/1.2.1.20051211/swank-loader.lisp,
+  -files/1.2.1.20060205/70slime-gentoo.el,
+  -files/1.2.1.20060205/README.Gentoo, -files/1.2.1.20060205/swank.asd,
+  -files/1.2.1.20060205/swank-loader.lisp,
+  -files/2.0.0.20060617/70slime-gentoo.el,
+  -files/2.0.0.20060617/README.Gentoo, -files/2.0.0.20060617/swank.asd,
+  -files/2.0.0.20060617/swank-loader.lisp,
+  -files/2.0.0.20060805/70slime-gentoo.el,
+  -files/2.0.0.20060805/README.Gentoo, -files/2.0.0.20060805/swank.asd,
+  -files/2.0.0.20060805/swank-loader.lisp:
+  more clean up
 
   18 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   -slime-1.2.1.20050804.ebuild, -slime-1.2.1.20051211.ebuild,
