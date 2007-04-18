@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/damageproto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.28 2007/04/18 10:36:01 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.29 2007/04/18 11:54:38 fmccor Exp $
+
+  18 Apr 2007; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
+  Try to fix digest.
 
   18 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org>
   damageproto-1.1.0.ebuild:
