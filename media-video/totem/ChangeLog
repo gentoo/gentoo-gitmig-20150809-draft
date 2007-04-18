@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.157 2007/04/17 03:51:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.158 2007/04/18 18:49:01 compnerd Exp $
+
+  18 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org> totem-2.18.1.ebuild:
+  Add inputproto to DEPEND (bug #175128)
 
 *totem-2.18.1 (17 Apr 2007)
 
