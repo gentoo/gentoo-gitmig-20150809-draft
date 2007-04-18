@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.5.ebuild,v 1.4 2007/04/14 17:54:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.6.ebuild,v 1.1 2007/04/18 10:16:36 genstef Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -85,12 +85,6 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/xine-lib-cdda-fix.patch
-}
-
 src_compile() {
 	#prevent quicktime crashing
 	append-flags -frename-registers -ffunction-sections
@@ -102,10 +96,6 @@ src_compile() {
 		filter-flags -fno-omit-frame-pointer #breaks per bug #149704
 		is-flag -O? || append-flags -O2
 	fi
-
-	# debug useflag used to emulate debug make targets. See bug #112980 and the
-	# xine maintainers guide.
-	use debug && append-flags -UNDEBUG -DDEBUG
 
 	local myconf
 
@@ -172,6 +162,8 @@ src_compile() {
 		\
 		$(use_enable mmap) \
 		$(use_with truetype freetype) $(use_with truetype fontconfig) \
+		\
+		$(use_enable debug) \
 		--enable-asf \
 		--with-external-ffmpeg \
 		--disable-optimizations \
