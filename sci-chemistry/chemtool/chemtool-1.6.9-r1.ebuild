@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.9-r1.ebuild,v 1.1 2006/04/17 13:52:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.9-r1.ebuild,v 1.2 2007/04/18 17:55:55 nixnut Exp $
 
 inherit eutils kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="gnome kde nls"
 
 DEPEND=">=media-gfx/transfig-3.2.3d
