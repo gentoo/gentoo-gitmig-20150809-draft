@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.6 2007/03/26 19:22:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.7 2007/04/18 22:59:14 anant Exp $
+
+  18 Apr 2007; Anant Narayanan <anant@gentoo.org>
+  php-gtk-2.0.0_alpha.ebuild:
+  Fixed sandbox violation in case sharedmem is enabled in PHP.
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> php-gtk-2.0.0_alpha.ebuild:
   Remove www-client/mozilla from DEPEND, as it was p.masked and removed

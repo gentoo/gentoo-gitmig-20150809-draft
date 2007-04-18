@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.5 2007/03/26 19:22:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_alpha.ebuild,v 1.6 2007/04/18 22:59:14 anant Exp $
 
 PHP_EXT_NAME="php_gtk2"
 PHP_EXT_INI="yes"
@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~x86"
 DESCRIPTION="PHP 5 bindings for the Gtk+ 2 library."
 HOMEPAGE="http://gtk.php.net/"
 SRC_URI="http://gtk.php.net/distributions/${PN}-${PV/_alpha/}alpha.tar.gz"
+
 LICENSE="PHP"
 SLOT="0"
 IUSE="debug mozembed nolibglade sourceview"
@@ -65,6 +66,8 @@ src_compile() {
 	else
 		GLCONF=""
 	fi
+
+	addpredict /session_mm_cli0.sem
 
 	econf \
 		$(use_enable debug) \
