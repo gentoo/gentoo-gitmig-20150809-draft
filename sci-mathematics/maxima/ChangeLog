@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.27 2007/04/18 10:53:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.28 2007/04/18 17:53:41 bicatali Exp $
+
+  18 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  maxima-5.11.0-r2.ebuild:
+  fixed nostrip->strip
 
 *maxima-5.11.0-r2 (18 Apr 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r2.ebuild,v 1.1 2007/04/18 10:53:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r2.ebuild,v 1.2 2007/04/18 17:53:41 bicatali Exp $
 
 inherit eutils elisp-common autotools
 
@@ -28,7 +28,7 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 
 DEPEND="${RDEPEND} >=sys-apps/texinfo-4.3"
 # the make install already strips maxima exec.
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 for lang in es pt; do
 	IUSE="${IUSE} linguas_${lang}"
