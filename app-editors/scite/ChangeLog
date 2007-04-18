@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.63 2007/04/18 17:01:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.64 2007/04/18 17:08:50 nelchael Exp $
+
+  18 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/scite-1.71-install.patch, -scite-1.71.ebuild:
+  Remove old version.
 
   18 Apr 2007; nixnut <nixnut@gentoo.org> scite-1.72.ebuild:
   Stable on ppc wrt bug 174886
