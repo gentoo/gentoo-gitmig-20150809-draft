@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.3 2007/02/28 09:24:31 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.4 2007/04/18 10:30:31 drizzt Exp $
+
+*murmur-0.9.4-r1 (18 Apr 2007)
+
+  18 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> +murmur-0.9.4-r1.ebuild:
+  Revision bump:
+  Add user and group murmur.
+  Thanks to Jörg Habenicht for reporting wrt bug #171925.
 
   28 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> murmur-0.9.4.ebuild:
   Add use pch (as suggested by X on comment 2 of bug #167428).
