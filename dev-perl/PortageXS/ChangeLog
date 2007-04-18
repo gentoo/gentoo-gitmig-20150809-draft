@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.14 2007/04/18 13:07:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.15 2007/04/18 13:21:18 gustavoz Exp $
+
+  18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  PortageXS-0.02.05.ebuild:
+  Stable on sparc wrt #175040
 
   18 Apr 2007; Jeroen Roovers <jer@gentoo.org> PortageXS-0.02.05.ebuild:
   Stable for HPPA (bug #175040).
