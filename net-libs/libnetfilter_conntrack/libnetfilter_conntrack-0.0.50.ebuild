@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.50.ebuild,v 1.4 2007/04/17 18:07:09 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.50.ebuild,v 1.5 2007/04/18 17:29:17 jokey Exp $
 
 inherit linux-info
 
@@ -10,24 +10,27 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=net-libs/libnfnetlink-0.0.25"
 RDEPEND=${DEPEND}
 
-CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
-
 pkg_setup() {
-	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
+	linux-info_pkg_setup
 
-	einfo "Checking for suitable kernel configuration options..."
-	if ! linux_chkconfig_present "IP_NF_CONNTRACK_NETLINK" -a ! linux_chkconfig_present "NF_CT_NETLINK" ; then
-		eerror "Could not find IP_NF_CONNTRACK_NETLINK "
-		eerror "nor NF_CT_NETLINK in the kernel configuration"
-		eerror "Please check to make sure at least one of the options are set correctly."
-		die "Incorrect kernel configuration options"
+	if kernel_is lt 2 6 14 ; then
+		die "${PN} requires at least 2.6.14 kernel version"
 	fi
+
+	#netfilter core team has changed some option names with kernel 2.6.20
+	if kernel_is lt 2 6 20 ; then
+		CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
+	else
+		CONFIG_CHECK="NF_CT_NETLINK"
+	fi
+
+	check_extra_config
 }
 
 src_install() {
