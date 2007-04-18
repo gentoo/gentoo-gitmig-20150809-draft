@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.294 2007/04/17 20:09:06 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.295 2007/04/18 21:51:24 armin76 Exp $
+
+  18 Apr 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Unmasking mail-client/mozilla-thunderbird-2.0.0.0, finally released, yay
 
   17 Apr 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
   added xspf USE flag for media-sound/herrie

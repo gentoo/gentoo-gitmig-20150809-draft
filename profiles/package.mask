@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7141 2007/04/17 18:03:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7142 2007/04/18 21:51:24 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -898,10 +898,6 @@ sci-mathematics/gturing
 # Upstream is going to help and fix bugs in 0.8.25... Until use e-uae.
 app-emulation/uae
 
-# Bryan Østergaard <kloeri@gentoo.org> (08 Nov 2006)
-# Masked waiting for thunderbird-2.0 to get unmasked.
-x11-plugins/replytolist
-
 # Marcus D. Hanwell <cryos@gentoo.org> (03 Nov 2006)
 # 5.5.6 does not work with all projects, please use 5.4 or >=5.8
 =sci-misc/boinc-5.5.6
@@ -926,13 +922,6 @@ sci-biology/generic-genome-browser
 # Masked for removal (treecleaner), see bug #65923
 # remove on 2006-11-26
 dev-java/bluej-bin
-
-# Piotr Jaroszyński <peper@gentoo.org> (23 Oct 2006)
-# Masking alpha version of mozilla-thunderbird-2.0 and enigmail for it.
-# Raúl Porcel <armin76@gentoo.org> (8 Apr 2007)
-# Update mask
-=x11-plugins/enigmail-0.94.3-r2
->=mail-client/mozilla-thunderbird-2.0.0.0_rc1
 
 # Fabian Groffen <grobian@gentoo.org> (23 Oct 2006)
 # MonetDB doesn't compile any more.  Waiting for next release (soon) 
