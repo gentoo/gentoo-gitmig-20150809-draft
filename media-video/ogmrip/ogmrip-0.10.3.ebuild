@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.3.ebuild,v 1.1 2007/03/13 03:39:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.3.ebuild,v 1.2 2007/04/18 19:42:37 beandog Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ogmrip.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="aac debug doc dts gtk hal matroska spell srt theora"
+IUSE="aac debug doc gtk hal matroska spell srt theora"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 DEPEND=">=dev-libs/glib-2.6
@@ -27,7 +27,6 @@ DEPEND=">=dev-libs/glib-2.6
 	spell? ( >=app-text/enchant-1.1 )
 	srt? ( >=app-text/gocr-0.39 )
 	theora? ( >=media-libs/libtheora-1.0_alpha6 )
-	dts? ( media-libs/libdts )
 	>=media-video/mplayer-1.0_pre4
 	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.12.0"

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.23 2007/03/13 03:39:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.24 2007/04/18 19:42:37 beandog Exp $
+
+  18 Apr 2007; Steve Dibb <beandog@gentoo.org> ogmrip-0.10.3.ebuild:
+  Remove dts use flag, dep
 
 *ogmrip-0.10.3 (13 Mar 2007)
 
