@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.117 2007/04/18 13:24:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.118 2007/04/18 16:09:36 welp Exp $
+
+  18 Apr 2007; <welp@gentoo.org> openbox-3.3.1.ebuild:
+  Stable on amd64 wrt bug 175052
 
   18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> openbox-3.3.1.ebuild:
   Stable on sparc wrt #175052
