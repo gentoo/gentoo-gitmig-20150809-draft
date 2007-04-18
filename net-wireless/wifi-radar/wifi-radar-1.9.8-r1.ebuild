@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8.ebuild,v 1.4 2007/04/15 21:48:25 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8-r1.ebuild,v 1.1 2007/04/18 21:27:55 s4t4n Exp $
 
 inherit eutils
 
@@ -13,7 +13,17 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="svg"
 
 RDEPEND=">=dev-python/pygtk-2.6.1
-	>=net-wireless/wireless-tools-27-r1"
+	>=net-wireless/wireless-tools-27-r1
+	virtual/dhcpc"
+
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+	epatch \
+		debian/patches/01atheros.dpatch \
+		debian/patches/02wpa_supp_args.dpatch
+}
 
 src_install ()
 {
