@@ -6,6 +6,11 @@
 	<herd>java</herd>
 
 	<maintainer>
+		<email>fordfrog@gentoo.org</email>
+		<name>Miroslav Šulc</name>
+	</maintainer>
+
+	<maintainer>
 		<email>wltjr@gentoo.org</email>
 		<name>William L. Thomson Jr.</name>
 	</maintainer>
