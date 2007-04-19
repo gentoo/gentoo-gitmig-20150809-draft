@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.206 2007/04/19 14:09:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.207 2007/04/19 15:34:14 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  fluxbox-1.0_rc3.ebuild:
+  Stable on sparc wrt #167117
 
   19 Apr 2007; Raúl Porcel <armin76@gentoo.org> fluxbox-1.0_rc3.ebuild:
   ia64 + x86 stable wrt bug 167117
