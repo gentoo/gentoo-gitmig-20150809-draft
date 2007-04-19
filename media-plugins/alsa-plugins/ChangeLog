@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.48 2007/03/17 20:37:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.49 2007/04/19 14:11:40 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  alsa-plugins-1.0.14_rc3.ebuild:
+  Stable on sparc wrt #175141
 
 *alsa-plugins-1.0.14_rc3 (17 Mar 2007)
 
