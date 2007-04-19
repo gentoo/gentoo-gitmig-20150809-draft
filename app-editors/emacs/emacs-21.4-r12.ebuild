@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.5 2007/04/18 13:57:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.6 2007/04/19 05:40:28 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -39,9 +39,7 @@ RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-0.7-r1"
 
 DEPEND="${RDEPEND}
-	X? ( x11-misc/xbitmaps
-		!arm? (	Xaw3d? ( x11-libs/libXaw ) )
-	)"
+	X? ( x11-misc/xbitmaps )"
 
 PROVIDE="virtual/emacs virtual/editor"
 
@@ -61,6 +59,7 @@ src_unpack() {
 	epatch "${FILESDIR}/emacs-21.4-autosave-tmp.patch"
 	epatch "${FILESDIR}/emacs-21.4-blessmail-build.patch"
 	epatch "${FILESDIR}/emacs-21.4-qa.patch"
+	epatch "${FILESDIR}/emacs-21.4-Xaw3d-headers.patch"
 
 	# install emacsclient.1 man page (#165466)
 	sed -i -e "s/for page in emacs/& emacsclient/" Makefile.in || die
