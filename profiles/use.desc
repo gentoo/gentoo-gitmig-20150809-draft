@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.345 2007/04/09 15:54:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.346 2007/04/19 13:25:12 opfer Exp $
 
 # Keep them sorted
 
@@ -127,7 +127,7 @@ gps - Adds support for Global Positioning System
 graphviz - Adds support for the Graphviz library
 gstreamer - Adds support for media-libs/gstreamer (Streaming media)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
-gtk2 - Use gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both.
+gtk2 - Use gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both (deprecated)
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for the guile Scheme interpreter
 hal - Enable Hardware Abstraction Layer (HAL) support

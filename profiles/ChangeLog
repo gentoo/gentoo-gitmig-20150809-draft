@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.296 2007/04/18 21:55:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.297 2007/04/19 13:25:12 opfer Exp $
+
+  19 Apr 2007; Christian Faulhammer <opfer@gentoo.org> use.desc:
+  mark gtk2 as deprecated
 
   18 Apr 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   Mask media-libs/libdca before adding it
