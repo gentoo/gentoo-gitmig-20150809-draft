@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.3.ebuild,v 1.8 2007/04/18 16:02:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.3.ebuild,v 1.9 2007/04/19 14:45:37 kloeri Exp $
 
 #WANT_AUTOCONF=2.59
 #WANT_AUTOMAKE=1.8
@@ -41,7 +41,7 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	perl? ( >=dev-lang/perl-5.8.6-r6 !=dev-lang/perl-5.8.7 )
 	!dev-perl/perlmagick
 	!sys-apps/compare
-	graphviz? ( media-gfx/graphviz )
+	graphviz? ( >=media-gfx/graphviz-2.6 )
 	fpx? ( media-libs/libfpx )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
