@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.28 2007/04/19 11:53:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.29 2007/04/19 12:28:05 fmccor Exp $
+
+  19 Apr 2007; Ferris McCormick <fmccor@gentoo.org>
+  fxscintilla-1.62-r2.ebuild, fxscintilla-1.71.ebuild:
+  That was wrong.  1.71 fails on sparc, 1.62-r2 is good for fox12.
 
   19 Apr 2007; Ferris McCormick <fmccor@gentoo.org>
   fxscintilla-1.71.ebuild:
