@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.0.ebuild,v 1.2 2007/04/17 04:49:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.0.ebuild,v 1.3 2007/04/19 06:15:46 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -56,12 +56,12 @@ COMMON_DEPEND="!app-office/openoffice-bin
 				>=dev-libs/dbus-glib-0.71
 				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 )
 			) )
-	gnome? ( >=x11-libs/gtk+-2.4
+	gnome? ( >=x11-libs/gtk+-2.10
 		>=gnome-base/gnome-vfs-2.6
 		>=gnome-base/gconf-2.0 )
-	gtk? ( >=x11-libs/gtk+-2.4 )
+	gtk? ( >=x11-libs/gtk+-2.10 )
 	cairo? ( >=x11-libs/cairo-1.0.2
-		>=x11-libs/gtk+-2.8 )
+		>=x11-libs/gtk+-2.10 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	gstreamer? ( >=media-libs/gstreamer-0.10
 			>=media-libs/gst-plugins-base-0.10 )
