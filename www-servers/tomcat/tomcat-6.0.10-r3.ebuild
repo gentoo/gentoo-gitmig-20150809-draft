@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r2.ebuild,v 1.1 2007/04/04 22:22:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r3.ebuild,v 1.1 2007/04/19 16:35:22 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -17,17 +17,20 @@ LICENSE="Apache-2.0"
 
 IUSE="doc examples source test"
 
-RDEPEND=">=virtual/jre-1.5
-	=dev-java/eclipse-ecj-3.2*
+COMMON_DEPEND="=dev-java/eclipse-ecj-3.2*
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-logging-1.1
 	>=dev-java/commons-pool-1.2
-	~dev-java/tomcat-servlet-api-${PV}
+	~dev-java/tomcat-servlet-api-${PV}"
+
+RDEPEND=">=virtual/jre-1.5
+	dev-java/ant-core
+	${COMMON_DEPEND}
 	examples? ( dev-java/jakarta-jstl )"
 
 DEPEND=">=virtual/jdk-1.5
-	${RDEPEND}
+	${COMMON_DEPEND}
 	test? ( dev-java/junit )"
 
 S=${WORKDIR}/${MY_P}
@@ -83,6 +86,7 @@ src_install() {
 	# create dir structure
 	diropts -m755 -o tomcat -g tomcat
 	dodir   /etc/${TOMCAT_NAME}/Catalina/localhost
+	chown -R tomcat:tomcat ${D}/etc/${TOMCAT_NAME}
 	fperms  750 /etc/${TOMCAT_NAME}
 	dodir /usr/share/${TOMCAT_NAME}
 	keepdir ${WEBAPPS_DIR}
