@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.3 2007/04/19 12:51:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.4 2007/04/19 14:23:24 armin76 Exp $
+
+  19 Apr 2007; Raúl Porcel <armin76@gentoo.org> libdca-0.0.5.ebuild:
+  Add ~ia64 wrt bug 175164
 
   19 Apr 2007; Jeroen Roovers <jer@gentoo.org> libdca-0.0.5.ebuild:
   Marked ~hppa (bug #175164).
