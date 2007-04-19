@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/bozohttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.6 2007/04/01 13:07:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.7 2007/04/19 09:33:11 s4t4n Exp $
+
+*bozohttpd-20060517 (19 Apr 2007)
+
+  19 Apr 2007; Michele Noberasco <s4t4n@gentoo.org> bozohttpd-20060517.ebuild:
+  Version bump, see bug #171035.
+  bozohttpd-20050410.ebuild, bozohttpd-20040823.ebuild:
+  Update Makefile and installation handling so that there is no dependancy on hardcoded
+  /bin/install
 
   01 Apr 2007; Thilo Bangert <bangert@gentoo.org>
   files/bozohttpd-20050410.Makefile:
