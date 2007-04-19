@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.6 2007/04/18 13:54:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.7 2007/04/19 13:43:20 kloeri Exp $
+
+  19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  emacs-desktop-0.2.ebuild:
+  Add ~alpha keyword, bug 174880.
 
   18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   emacs-desktop-0.2.ebuild:
