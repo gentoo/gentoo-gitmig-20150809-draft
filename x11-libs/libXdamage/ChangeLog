@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXdamage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.35 2007/04/18 12:57:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.36 2007/04/19 17:18:07 dberkholz Exp $
+
+  19 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  libXdamage-1.1.1.ebuild:
+  (#174959) Tell people they may need to recompile xorg-server for compositing
+  managers (compiz, beryl, etc) to work again.
 
   18 Apr 2007; Raúl Porcel <armin76@gentoo.org> libXdamage-1.1.1.ebuild:
   ia64 + x86 stable wrt bug 174959
