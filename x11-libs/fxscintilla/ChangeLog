@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.29 2007/04/19 12:28:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.30 2007/04/19 13:02:00 fmccor Exp $
+
+  19 Apr 2007; Ferris McCormick <fmccor@gentoo.org>
+  fxscintilla-1.62-r2.ebuild:
+  Put everything back the way it was.  fxruby12 can't use 1.62-r2 library name
+  is libfxscintilla-1.2.so, which fxruby12 cannot find.
 
   19 Apr 2007; Ferris McCormick <fmccor@gentoo.org>
   fxscintilla-1.62-r2.ebuild, fxscintilla-1.71.ebuild:
