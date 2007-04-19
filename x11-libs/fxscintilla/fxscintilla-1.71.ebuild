@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71.ebuild,v 1.11 2007/04/18 18:40:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71.ebuild,v 1.12 2007/04/19 06:26:42 opfer Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/fxscintilla/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 DEPEND="=x11-libs/fox-1.2*

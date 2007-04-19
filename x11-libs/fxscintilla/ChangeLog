@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.26 2007/04/18 18:40:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.27 2007/04/19 06:26:42 opfer Exp $
+
+  19 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  fxscintilla-1.71.ebuild:
+  stable amd64, bug 108628
 
   18 Apr 2007; Matti Bickel <mabi@gentoo.org> fxscintilla-1.62-r2.ebuild,
   fxscintilla-1.71.ebuild:
