@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.93 2007/04/16 07:07:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.94 2007/04/19 18:28:53 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  cacti-0.8.6j-r4.ebuild:
+  Stable on sparc wrt #174551
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   cacti-0.8.6j-r4.ebuild:
