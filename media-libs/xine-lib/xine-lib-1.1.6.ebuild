@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.6.ebuild,v 1.1 2007/04/18 10:16:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.6.ebuild,v 1.2 2007/04/19 14:14:27 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -55,7 +55,7 @@ RDEPEND="
 	a52? ( >=media-libs/a52dec-0.7.4-r5 )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
-	dts? ( media-libs/libdts )
+	dts? ( || ( media-libs/libdts media-libs/libdca ) )
 	>=media-video/ffmpeg-0.4.9_p20070129
 	modplug? ( media-libs/libmodplug )
 	nls? ( virtual/libintl )
@@ -84,6 +84,16 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Include system headers for dts in order to be
+	# compatible with libdca and libdts
+	# Workaround from Flameeyes until using external
+	# libdts is done properly (in xine-lib-1.1.7)
+	echo '#include_next <dts.h>' > src/libdts/dts.h
+}
 
 src_compile() {
 	#prevent quicktime crashing
