@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20060731.ebuild,v 1.2 2006/10/10 04:20:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20060731.ebuild,v 1.3 2007/04/19 22:32:10 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="sdl"
 
 DEPEND="sdl? ( media-libs/libsdl )"
@@ -20,8 +20,9 @@ S=${WORKDIR}/utils
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/joystick-MCS-defines.patch
-	epatch "${FILESDIR}"/joystick-jstest-segv.patch
+	epatch \
+		"${FILESDIR}"/joystick-MCS-defines.patch \
+		"${FILESDIR}"/joystick-jstest-segv.patch
 }
 
 src_compile() {
