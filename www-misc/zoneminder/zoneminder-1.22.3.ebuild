@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.3.ebuild,v 1.1 2006/12/11 02:00:57 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.3.ebuild,v 1.2 2007/04/19 18:09:52 opfer Exp $
 
 inherit eutils webapp autotools depend.php depend.apache
 
@@ -13,7 +13,7 @@ DESCRIPTION="ZoneMinder allows you to capture, analyse, record and monitor any c
 HOMEPAGE="http://www.zoneminder.com/"
 SRC_URI="http://www.zoneminder.com/downloads/${MY_PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mpeg"
 
 DEPEND="
