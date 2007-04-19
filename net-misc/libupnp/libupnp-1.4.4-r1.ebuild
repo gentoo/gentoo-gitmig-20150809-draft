@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/libupnp-1.4.4-r1.ebuild,v 1.1 2007/04/19 13:10:16 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/libupnp-1.4.4-r1.ebuild,v 1.2 2007/04/19 14:32:28 drizzt Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pupnp/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND="!net-misc/upnp"
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use x86-fbsd &&	replace-flags -O? -O1
+	use x86-fbsd &&	append-flags -O1
 	# w/o docdir to avoid sandbox violations	
 	econf \
 		$(use_enable debug) \
