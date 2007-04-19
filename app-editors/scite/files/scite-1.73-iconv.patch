@@ -1,0 +1,25 @@
+--- scite/gtk/makefile.old	2007-04-19 21:19:30.000000000 +0200
++++ scite/gtk/makefile	2007-04-19 21:20:10.000000000 +0200
+@@ -26,11 +26,13 @@
+ CONFIGFLAGS=pkg-config --cflags gtk+-2.0
+ CONFIGLIB=pkg-config --libs gtk+-2.0 gthread-2.0
+ CONFIGTHREADS=
++CONFIGICONV=-liconv
+ gnomeprefix:=$(shell pkg-config --variable=prefix gtk+-2.0 2>/dev/null)
+ else
+ CONFIGFLAGS=gtk-config --cflags
+ CONFIGLIB=gtk-config --libs
+ CONFIGTHREADS=glib-config --libs gthread
++CONFIGICONV=
+ gnomeprefix:=$(shell gnome-config --prefix 2>/dev/null)
+ endif
+ ifndef prefix
+@@ -103,7 +105,7 @@
+ $(PROG): SciTEGTK.o FilePath.o SciTEBase.o SciTEBuffers.o SciTEIO.o Exporters.o \
+ MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o \
+ 	$(COMPLIB) $(LUA_OBJS)
+-	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ `$(CONFIGLIB)`
++	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ `$(CONFIGLIB)` $(CONFIGICONV)
+ 
+ # Automatically generate header dependencies with "make deps"
+ include deps.mak

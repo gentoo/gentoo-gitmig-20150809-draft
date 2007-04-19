@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.64 2007/04/18 17:08:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.65 2007/04/19 22:09:11 nelchael Exp $
+
+  19 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/scite-1.73-iconv.patch, scite-1.73.ebuild:
+  Fix linking with iconv, see bug #175259, patch by Moonz
+  <simon.lipp@insa-lyon.fr>.
 
   18 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/scite-1.71-install.patch, -scite-1.71.ebuild:
