@@ -1,0 +1,11 @@
+# ChangeLog for sci-astronomy/xfitsview
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/ChangeLog,v 1.1 2007/04/19 16:27:39 bicatali Exp $
+
+*xfitsview-2.1 (19 Apr 2007)
+
+  19 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +xfitsview-2.1.ebuild:
+  Initial import. Closing bug #92850. Thanks Adam Roben <adam.roben@gmail.com>
+  for work.
+
