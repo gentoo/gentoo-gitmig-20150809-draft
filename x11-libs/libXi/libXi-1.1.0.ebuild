@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.1.0.ebuild,v 1.6 2007/04/18 13:00:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.1.0.ebuild,v 1.7 2007/04/19 17:14:43 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -16,3 +16,10 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	>=x11-proto/inputproto-1.4"
+
+pkg_postinst() {
+	x-modular_pkg_postinst
+
+	ewarn "Some special keys and keyboard layouts may stop working."
+	ewarn "To fix them, recompile xorg-server."
+}
