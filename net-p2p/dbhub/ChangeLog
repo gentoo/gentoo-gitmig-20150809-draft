@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/dbhub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.18 2007/04/16 21:14:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.19 2007/04/19 20:32:37 armin76 Exp $
+
+*dbhub-0.434 (19 Apr 2007)
+
+  19 Apr 2007; Raúl Porcel <armin76@gentoo.org> -dbhub-0.433.ebuild,
+  +dbhub-0.434.ebuild:
+  Version bump and add nls USE-flag, bug 174991
 
 *dbhub-0.433 (16 Apr 2007)
 
