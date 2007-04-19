@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.33 2007/04/11 19:12:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.34 2007/04/19 00:15:05 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> nut-2.0.5-r1.ebuild:
+  Stable on sparc wrt #173878
 
   11 Apr 2007; Markus Rothe <corsair@gentoo.org> nut-2.0.5-r1.ebuild:
   Stable on ppc64; bug #173878
