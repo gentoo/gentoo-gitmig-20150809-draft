@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.9.1.ebuild,v 1.1 2006/12/05 22:56:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.9.1.ebuild,v 1.2 2007/04/19 20:47:39 mabi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fifthplanet.net/files/goggles-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc"
 
 DEPEND="=x11-libs/fox-1.6*
@@ -40,8 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export WANT_FOX=1.6
-	./gb || die "build failed"
+	WANT_FOX="1.6" ./gb || die "build failed"
 
 	# we do it now manually, to avoid calling 'gb install'
 	sed "s|@location@|${DESTTREE}/bin|" scripts/goggles.in > scripts/goggles
