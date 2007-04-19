@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/cdf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.4 2007/02/09 08:26:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.5 2007/04/19 12:05:07 bicatali Exp $
+
+*cdf-3.1 (19 Apr 2007)
+
+  19 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> +files/50cdf,
+  +files/cdf-Makefile.patch, +files/cdf-soname.patch, metadata.xml,
+  +cdf-3.1.ebuild:
+  Version bump and major ebuild cleaning. Added doc and examples flags, a
+  couple of patches to handle flags and shared libraries properly. Added longdescription in 
+  metadata.xml. Closing bug #125409, thanks carlo@gentoo.org for his initial ebuild.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
