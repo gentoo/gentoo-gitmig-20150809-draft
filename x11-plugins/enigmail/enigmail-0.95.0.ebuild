@@ -1,22 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.3-r2.ebuild,v 1.2 2007/04/19 20:25:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.0.ebuild,v 1.1 2007/04/19 20:25:42 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf mozextension makeedit multilib autotools
 
-LANGS="de el es-AR es-ES nb-NO pt-BR sv-SE zh-CN"
-SHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP ko-KR nb-NO nl-NL pl-PL pt-PT ru-RU sk-SK sl-SI sv-SE"
+LANGS="de el nb-NO zh-CN"
+SHORTLANGS="ca-AD fi-FI fr-FR hu-HU it-IT ja-JP nb-NO pl-PL ru-RU"
 
 EMVER=${PV}
-TBVER="2.0.0.0rc1"
+TBVER="2.0.0.0"
 MY_TBVER="2.0_beta2"
 TBPVER="0.5"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://enigmail.mozdev.org"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/source/thunderbird-${TBVER}-source.tar.bz2
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/source/thunderbird-${TBVER}-source.tar.bz2
 	http://dev.gentooexperimental.org/~anarchy/dist/mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2
 	mirror://gentoo/mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
@@ -27,21 +27,21 @@ LICENSE="MPL-1.1 GPL-2"
 IUSE=""
 
 for X in ${LANGS} ; do
-	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( http://www.mozilla-enigmail.org/downloads/lang/0.9x/${PN}-${X}-0.9x.xpi )"
+	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${PN}-${X}-${PV}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
 done
 # ( mirror://gentoo/${PN}-${X}-0.9x.xpi )"
 
 for X in ${SHORTLANGS} ; do
-	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( http://www.mozilla-enigmail.org/downloads/lang/0.9x/${PN}-${X}-0.9x.xpi )"
+	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${PN}-${X}-${PV}.xpi )"
 	IUSE="${IUSE} linguas_${X%%-*}"
 done
 #( mirror://gentoo/${PN}-${X}-0.9x.xpi )"
 
 DEPEND="=mail-client/mozilla-thunderbird-2*"
 RDEPEND="${DEPEND}
-	>=app-crypt/gnupg-1.4.5
-	>=www-client/mozilla-launcher-1.37"
+	>=app-crypt/gnupg-1.4.7
+	>=www-client/mozilla-launcher-1.56"
 
 S=${WORKDIR}/mozilla
 
@@ -83,7 +83,7 @@ src_unpack() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_unpack ${PN}-${X}-0.9x.xpi
+		[[ ${X} != en ]] && xpi_unpack ${PN}-${X}-${PV}.xpi
 	done
 
 	cd ${S} || die "cd failed"
@@ -104,9 +104,6 @@ src_unpack() {
 
 	# Use the right theme for thunderbird #45609
 	sed -i -ne '/^enigmail-skin.jar:$/ { :x; n; /^\t/bx; }; p' mailnews/extensions/enigmail/ui/jar.mn
-
-	# Don't allow upgrades via the browser
-	epatch ${FILESDIR}/50_enigmail_no_upgrade-1.patch
 
 	# Fix installation of enigmail.js
 	epatch ${FILESDIR}/70_enigmail-fix.patch
@@ -191,6 +188,6 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${PN}-${X}-0.9x
+		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${PN}-${X}-${PV}
 	done
 }
