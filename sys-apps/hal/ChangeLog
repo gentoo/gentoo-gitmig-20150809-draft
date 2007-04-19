@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.172 2007/04/19 16:34:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.173 2007/04/19 19:49:52 cardoe Exp $
+
+  19 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/15_spec_fdi_matching.patch,
+  files/0.5.9/97_ignore_fixed_drives.patch, files/0.5.9/series:
+  Add missing fdi matching rules to spec file. Implemented missing double
+  match. Cleaned up ignored volumes patch.
 
   19 Apr 2007; Doug Goldstein <cardoe@gentoo.org> files/0.5.9-hald.rc:
   init script tweak to require /dev/root
