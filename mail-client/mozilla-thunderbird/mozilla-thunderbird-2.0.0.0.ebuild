@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.2 2007/04/19 19:27:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.3 2007/04/19 21:25:33 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -85,7 +85,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-#	unpack ${A}
+	unpack ${A}
 
 	linguas
 	for X in ${linguas}; do
