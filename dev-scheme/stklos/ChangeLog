@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/stklos
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.1 2007/04/19 15:21:19 hkbst Exp $
+
+*stklos-0.82 (19 Apr 2007)
+
+  19 Apr 2007; Marijn Schouten <hkBst@gentoo.org> +metadata.xml,
+  +stklos-0.82.ebuild:
+  initial ebuild
+
