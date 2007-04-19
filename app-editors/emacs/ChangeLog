@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.137 2007/04/19 05:40:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.138 2007/04/19 13:47:38 kloeri Exp $
+
+  19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> emacs-21.4-r12.ebuild:
+  Add ~alpha keyword, bug 174882.
 
   19 Apr 2007; Ulrich Mueller <ulm@gentoo.org>
   +files/emacs-21.4-Xaw3d-headers.patch, emacs-21.4-r12.ebuild:
