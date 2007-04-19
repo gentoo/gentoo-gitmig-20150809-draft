@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.28 2007/02/22 01:06:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.29 2007/04/19 10:45:22 carlo Exp $
+
+*kamix-0.6.6 (19 Apr 2007)
+
+  19 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kamix-0.6.6.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
