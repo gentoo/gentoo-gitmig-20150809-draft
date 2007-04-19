@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/emacs-desktop-0.2.ebuild,v 1.6 2007/04/19 13:43:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/emacs-desktop-0.2.ebuild,v 1.7 2007/04/19 14:05:17 opfer Exp $
 
 inherit eutils fdo-mime
 
 DESCRIPTION="Desktop entry and icon for Emacs"
-HOMEPAGE="http://bugs.gentoo.org/"
+HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/index.xml"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"

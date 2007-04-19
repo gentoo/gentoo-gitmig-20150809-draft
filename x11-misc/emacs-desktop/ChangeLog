@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.7 2007/04/19 13:43:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.8 2007/04/19 14:05:17 opfer Exp $
+
+  19 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-desktop-0.2.ebuild:
+  Change HOMEPAGE to the new project page
 
   19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   emacs-desktop-0.2.ebuild:
