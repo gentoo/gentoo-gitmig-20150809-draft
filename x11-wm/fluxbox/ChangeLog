@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.209 2007/04/19 18:08:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.210 2007/04/19 18:48:03 grobian Exp $
+
+  19 Apr 2007; Fabian Groffen <grobian@gentoo.org> fluxbox-0.9.14-r1.ebuild,
+  fluxbox-0.9.14-r2.ebuild, fluxbox-0.9.15.ebuild, fluxbox-0.9.15.1.ebuild,
+  fluxbox-0.9.15.1-r1.ebuild, fluxbox-0.9.15.1-r2.ebuild,
+  fluxbox-1.0_rc1.ebuild, fluxbox-1.0_rc2-r1.ebuild,
+  fluxbox-1.0_rc2-r2.ebuild, fluxbox-1.0_rc3.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   19 Apr 2007; Markus Rothe <corsair@gentoo.org> fluxbox-1.0_rc3.ebuild:
   Stable on ppc64; bug #167117
