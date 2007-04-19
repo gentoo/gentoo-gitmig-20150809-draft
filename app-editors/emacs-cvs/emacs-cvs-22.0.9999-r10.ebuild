@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.5 2007/04/18 16:13:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.6 2007/04/19 05:56:14 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -41,7 +41,6 @@ RDEPEND="sys-libs/ncurses
 		!motif? ( lesstif? ( x11-libs/lesstif ) ) )"
 
 DEPEND="${RDEPEND}
-	X? ( !gtk? ( Xaw3d? ( x11-libs/libXaw ) ) )
 	gzip-el? ( app-arch/gzip )"
 
 PROVIDE="virtual/emacs virtual/editor"
@@ -73,9 +72,10 @@ src_unpack() {
 		sed -i -e "s/ gzip/ PrEvEnTcOmPrEsSiOn/" configure.in || die "unable to sed configure.in"
 	fi
 
+	epatch "${FILESDIR}/${PN}-Xaw3d-headers.patch"
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
-	# ALSA is detected and used even if not requested by the USE=alsa flag.	So remove the
-	# automagic check
+	# ALSA is detected and used even if not requested by the USE=alsa flag.
+	# So remove the automagic check
 	use alsa || epatch "${FILESDIR}/${PN}-disable_alsa_detection.patch"
 
 	eautoreconf
