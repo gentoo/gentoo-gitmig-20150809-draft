@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.6 2007/01/03 23:03:21 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.7 2007/04/19 19:08:08 cedk Exp $
 
 depend() {
     need net
@@ -41,7 +41,7 @@ start() {
 		MRTG_OPTS="${MRTG_OPTS} --group ${MRTG_GROUP}"
 
 	ebegin "Starting mrtg"
-	start-stop-daemon --start --quiet --pidfile ${MRTG_PID} \
+	start-stop-daemon --start --quiet --pidfile ${MRTG_PID} --name mrtg\
 		--exec /usr/bin/mrtg -- --daemon --pid-file=${MRTG_PID} \
 		${MRTG_OPTS} ${MRTG_CONF} >/dev/null
 	eend $? "Failed to start mrtg"
