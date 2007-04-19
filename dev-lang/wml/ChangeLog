@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.34 2007/04/09 20:45:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.35 2007/04/19 00:12:22 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> wml-2.0.11-r1.ebuild:
+  Stable on sparc wrt #173623
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> wml-2.0.11-r1.ebuild:
   ia64 stable wrt bug 173623
