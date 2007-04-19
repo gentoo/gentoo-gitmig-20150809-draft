@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.1.ebuild,v 1.2 2007/04/18 08:56:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.1.ebuild,v 1.3 2007/04/19 12:07:58 uberlord Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -131,7 +131,7 @@ src_compile() {
 
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS
-	#append-cppflags "-I$(db_includedir)"
+	append-cppflags "-I$(db_includedir)"
 
 	cd "${S}"
 	gnome2_src_compile
