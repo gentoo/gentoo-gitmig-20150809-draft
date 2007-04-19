@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.63 2007/03/20 03:55:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.64 2007/04/19 06:27:10 corsair Exp $
+
+  19 Apr 2007; Markus Rothe <corsair@gentoo.org> DirectFB-1.0.0.ebuild:
+  Added ~ppc64; bug #175166
 
 *DirectFB-1.0.0 (20 Mar 2007)
 
