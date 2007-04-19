@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.1 2007/04/18 21:57:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.2 2007/04/19 12:47:17 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> libdca-0.0.5.ebuild:
+  Keyworded ~sparc wrt #175164
 
 *libdca-0.0.5 (18 Apr 2007)
 
