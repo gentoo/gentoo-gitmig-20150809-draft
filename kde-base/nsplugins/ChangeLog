@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.78 2007/03/26 20:47:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.79 2007/04/19 16:20:26 carlo Exp $
+
+*nsplugins-3.5.6-r1 (19 Apr 2007)
+*nsplugins-3.5.5-r2 (19 Apr 2007)
+
+  19 Apr 2007; Carsten Lohrke <carlo@gentoo.org>
+  +files/nsplugins-3.5.6-keyboard-handler.diff, +nsplugins-3.5.5-r2.ebuild,
+  +nsplugins-3.5.6-r1.ebuild:
+  Work around browser plugin flaw.
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> nsplugins-3.5.5-r1.ebuild:
   ia64 stable wrt bug 164080
