@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/libupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/ChangeLog,v 1.10 2007/04/17 18:43:03 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/ChangeLog,v 1.11 2007/04/19 13:10:16 gurligebis Exp $
+
+  19 Apr 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> +libupnp-1.4.4-r1.ebuild:
+  Bumping to revision 1.4.4-r1 to fix compiling on Gentoo/FreeBSD.
+
+*libupnp-1.4.4-r1 (19 Apr 2007)
 
   17 Apr 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> -libupnp-1.4.2.ebuild:
   Removing old version, and moving keywords to 1.4.4

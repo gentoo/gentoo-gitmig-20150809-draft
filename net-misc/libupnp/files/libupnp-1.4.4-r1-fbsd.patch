@@ -1,0 +1,60 @@
+--- threadutil/inc/ithread.h.orig	2007-03-13 03:19:24 +0000
++++ threadutil/inc/ithread.h	2007-04-18 19:54:22 +0000
+@@ -47,6 +47,10 @@
+  #include <unistd.h>
+ #endif
+ 
++#ifdef __FreeBSD__
++#define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
++#endif
++
+ #ifdef PTHREAD_MUTEX_RECURSIVE
+ /* This system has SuS2-compliant mutex attributes.
+  * E.g. on Cygwin, where we don't have the old nonportable (NP) symbols
+--- upnp/src/genlib/net/uri/uri.c.orig	2007-04-18 20:46:43 +0000
++++ upnp/src/genlib/net/uri/uri.c	2007-04-18 20:49:08 +0000
+@@ -34,8 +34,11 @@
+ ************************************************************************/
+ 
+ #ifdef __FreeBSD__
++#include <osreldate.h>
++#if __FreeBSD_version < 601103
+ #include <lwres/netdb.h>
+ #endif
++#endif
+ #include "config.h"
+ #include "uri.h"
+ 
+@@ -620,7 +623,7 @@
+                                    &h,
+                                    temp_hostbyname_buff,
+                                    BUFFER_SIZE, &errcode );
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) && __FreeBSD_version < 601103
+         h = lwres_gethostbyname_r( temp_host_name,
+                                    &h_buf,
+                                    temp_hostbyname_buff,
+--- configure.ac	(revision 157)
++++ configure.ac	(working copy)
+@@ -163,13 +163,6 @@
+ #
+ # Default compilation flags
+ #
+-if test x"$enable_debug" = xyes; then
+-	# AC_PROG_CC already sets CFLAGS to "-g -O2" by default
+-	:
+-else
+-	# add optimise for size
+-	AX_CFLAGS_GCC_OPTION([-Os])
+-fi
+ AX_CFLAGS_WARN_ALL
+ 
+ #
+@@ -203,6 +196,7 @@
+ AC_FUNC_VPRINTF
+ AC_FUNC_FSEEKO
+ 
++AC_CHECK_FUNCS(ftime,, [AC_CHECK_LIB(compat, ftime)])
+ 
+ #
+ # Checks for POSIX Threads
