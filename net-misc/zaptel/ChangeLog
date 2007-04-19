@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.91 2007/03/13 19:57:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.92 2007/04/19 18:02:46 gustavoz Exp $
+
+*zaptel-1.2.16 (19 Apr 2007)
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/zaptel-1.2.16-gentoo.diff, +zaptel-1.2.16.ebuild:
+  New version, fixes #166679 #170233
 
   13 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   zaptel-1.2.12-r1.ebuild:
