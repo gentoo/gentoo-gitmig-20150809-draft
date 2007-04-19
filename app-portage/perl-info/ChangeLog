@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.12 2007/04/18 16:51:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.13 2007/04/19 06:16:07 opfer Exp $
+
+  19 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  perl-info-0.14.ebuild:
+  stable x86/amd64, bug 175042
 
   18 Apr 2007; nixnut <nixnut@gentoo.org> perl-info-0.14.ebuild:
   Stable on ppc wrt bug 175042
