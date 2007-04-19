@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.2-r1.ebuild,v 1.1 2007/03/18 22:33:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.2-r1.ebuild,v 1.2 2007/04/19 10:38:00 carlo Exp $
 
 inherit kde
 
@@ -75,6 +75,12 @@ src_unpack() {
 	sed -i -e "s:TESTSDIR =.*:TESTSDIR=:" ${S}/krita/core/Makefile.am \
 		`ls ${S}/krita/colorspaces/*/Makefile.am`
 	sed -i -e "s:toolbar tests:toolbar:" ${S}/kplato/Makefile.am
+
+	if ! [[ $(xhost >> /dev/null 2>/dev/null) ]] ; then
+		einfo "User ${USER} has no X access, disabling some tests."
+		sed -e "s:SUBDIRS = . tests:SUBDIRS = .:" -i lib/store/Makefile.am || die "sed failed"
+		sed -e "s:SUBDIRS = kohyphen . tests:SUBDIRS = kohyphen .:" -i lib/kotext/Makefile.am || die "sed failed"
+	fi
 
 	# Labplot needs the header file
 	sed -i -e "s:utils.h:utils.h parser/parser.h:" ${S}/kexi/kexidb/Makefile.am || die "sed failed"
