@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.155 2007/04/05 10:32:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.156 2007/04/19 19:46:16 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  files/1.2.0/asterisk.rc6:
+  Fix for nice absolute path #174539
 
   05 Apr 2007; Roy Marples <uberlord@gentoo.org> files/1.2.0/asterisk.rc6:
   use nscd and dns so that asterisk can resolve server names on boot.
