@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.13.ebuild,v 1.1 2007/03/17 03:57:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.13.ebuild,v 1.2 2007/04/19 21:43:48 markusle Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -9,7 +9,7 @@ DESCRIPTION="CLN, a class library (C++) for numbers"
 HOMEPAGE="http://www.ginac.de/CLN/"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
