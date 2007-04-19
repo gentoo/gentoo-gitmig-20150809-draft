@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.15 2007/04/12 06:44:57 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.16 2007/04/19 20:00:01 gustavoz Exp $
+
+  19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kphotoalbum-3.0.ebuild:
+  Stable on sparc wrt #173588
 
 *kphotoalbum-3.0.1 (12 Apr 2007)
 
