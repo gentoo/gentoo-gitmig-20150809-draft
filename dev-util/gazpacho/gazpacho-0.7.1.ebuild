@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.1.ebuild,v 1.1 2007/03/18 01:01:45 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.1.ebuild,v 1.2 2007/04/19 14:00:19 opfer Exp $
 
 inherit distutils gnome.org eutils
 
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 # Masked amd64 and ppc whilst there's no kiwi available for that package
-KEYWORDS="-amd64 -ppc ~x86"
+KEYWORDS="~amd64 -ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
