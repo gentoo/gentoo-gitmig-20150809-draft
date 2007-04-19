@@ -1,6 +1,10 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.1 2007/04/18 20:44:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.2 2007/04/19 00:36:44 ticho Exp $
+
+  19 Apr 2007; Andrej Kacian <ticho@gentoo.org> newsbeuter-0.3.ebuild:
+  Add prefix variable also to emake in src_compile(). Suggested in bug #175031
+  by upstream.
 
 *newsbeuter-0.3 (18 Apr 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.3.ebuild,v 1.1 2007/04/18 20:44:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.3.ebuild,v 1.2 2007/04/19 00:36:44 ticho Exp $
 
 inherit toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake prefix="${D}/usr" || die
 }
 
 src_install() {
