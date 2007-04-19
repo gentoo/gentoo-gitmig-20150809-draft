@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0_beta2.ebuild,v 1.1 2007/01/27 10:32:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.3.ebuild,v 1.1 2007/04/19 20:43:38 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -24,13 +24,6 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/ht-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-optionallzo.patch
-	epatch "${FILESDIR}"/${P}-regexneedstdlib.patch
-	cd "${S}"
-	eautoreconf
-}
 src_compile() {
 	econf --disable-release --enable-maintainer-mode $(use_enable X x11-textmode) || die
 	emake || die
