@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.16 2007/04/18 16:48:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.17 2007/04/19 06:04:59 opfer Exp $
+
+  19 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  PortageXS-0.02.05.ebuild:
+  stable amd64, bug 175040
 
   18 Apr 2007; nixnut <nixnut@gentoo.org> PortageXS-0.02.05.ebuild:
   Stable on ppc wrt bug 175040
