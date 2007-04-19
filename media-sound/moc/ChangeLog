@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.32 2007/04/19 17:29:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.33 2007/04/19 19:46:24 dang Exp $
+
+  19 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> moc-2.4.1.ebuild:
+  Marked stable on amd64 for bug #175145
 
   19 Apr 2007; Christian Faulhammer <opfer@gentoo.org> moc-2.4.1.ebuild:
   stable x86, bug 175145
