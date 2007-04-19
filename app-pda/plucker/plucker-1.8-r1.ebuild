@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.9 2006/12/09 20:19:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.10 2007/04/19 20:03:53 gustavoz Exp $
 
 IUSE="gtk"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.plkr.org/"
 SRC_URI="http://downloads.plkr.org/${PV}/${PN}_src-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 DEPEND=">=dev-lang/python-1.5.2
 	gtk? ( >=x11-libs/gtk+-2.2
 		=x11-libs/wxGTK-2.4* )
