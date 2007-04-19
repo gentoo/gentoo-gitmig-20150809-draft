@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.110 2007/04/13 16:56:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.111 2007/04/19 22:43:26 caster Exp $
+
+*ibm-jdk-bin-1.4.2.8 (19 Apr 2007)
+
+  19 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  +ibm-jdk-bin-1.4.2.8.ebuild:
+  Version bump, bug #174481. Adds examples USE flag that controls installing
+  of demos. The src.jar file moved to expected location per bug #2241,
+  previously used location contains symlink that will be removed in next
+  version bump.
 
   13 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   -ibm-jdk-bin-1.4.2.6-r4.ebuild, ibm-jdk-bin-1.4.2.7.ebuild:
