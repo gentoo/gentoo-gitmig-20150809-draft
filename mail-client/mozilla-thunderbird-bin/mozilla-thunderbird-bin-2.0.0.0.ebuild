@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.0.ebuild,v 1.1 2007/04/18 22:01:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.0.ebuild,v 1.2 2007/04/19 19:54:42 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
 LANGS="be bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE hu it ja lt mk nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
-SHORTLANGS="es-ES nb-NO pt-BR sv-SE zh-TW"
+NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
 DESCRIPTION="The Mozilla Thunderbird Mail & News Reader"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/linux-i686/en-US/thunderbird-${PV}.tar.gz"
@@ -23,7 +23,7 @@ for X in ${LANGS} ; do
 done
 
 for X in ${SHORTLANGS} ; do
-	SRC_URI="${SRC_URI} linguas_${X%%-*}? (	http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi//${P/-bin}-${X}.xpi )"
+	SRC_URI="${SRC_URI} linguas_${X%%-*}? (	http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi//${P/-bin/}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X%%-*}"
 done
 
@@ -44,37 +44,46 @@ RDEPEND="x11-libs/libXrender
 
 S=${WORKDIR}/thunderbird
 
-linguas() {
-	linguas=
-	local LANG
-	for LANG in ${LINGUAS}; do
-		if hasq ${LANG} en en_US; then
-			hasq en ${linguas} || \
-				linguas="${linguas:+"${linguas} "}en"
-			continue
-		elif hasq ${LANG} ${LANGS//-/_}; then
-			hasq ${LANG//_/-} ${linguas} || \
-				linguas="${linguas:+"${linguas} "}${LANG//_/-}"
-			continue
-		else
-			local SLANG
-			for SLANG in ${SHORTLANGS}; do
-				if [[ ${LANG} == ${SLANG%%-*} ]]; then
-					hasq ${SLANG} ${linguas} || \
-						linguas="${linguas:+"${linguas} "}${SLANG}"
-					continue 2
-				fi
-			done
-		fi
-		ewarn "Sorry, but mozilla-thunderbird does not support the ${LANG} LINGUA"
-	done
-}
+for X in ${LANGS} ; do
+	SRC_URI="${SRC_URI}
+		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P/-bin/}-${X}.xpi )"
+	IUSE="${IUSE} linguas_${X/-/_}"
+	# english is handled internally
+	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
+		SRC_URI="${SRC_URI}
+			linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P/-bin}-${X}.xpi )"
+		IUSE="${IUSE} linguas_${X%%-*}"
+	fi
+done
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
 	# Please keep this in future versions
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
 	has_multilib_profile && ABI="x86"
+}
+
+linguas() {
+	local LANG SLANG
+	for LANG in ${LINGUAS}; do
+		if has ${LANG} en en_US; then
+			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+			continue
+		elif has ${LANG} ${LANGS//-/_}; then
+			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+			continue
+		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
+			for X in ${LANGS}; do
+				if [[ "${X}" == "${LANG}-"* ]] && \
+					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
+					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+					continue 2
+				fi
+			done
+		fi
+		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
+	done
+	einfo "Selected language packs (first will be default): $linguas"
 }
 
 src_unpack() {
