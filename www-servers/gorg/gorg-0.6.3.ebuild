@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3.ebuild,v 1.1 2007/03/08 10:19:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3.ebuild,v 1.2 2007/04/19 13:47:17 rbrown Exp $
 
 inherit ruby
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/libxml2-2.6.16
 RDEPEND="apache? ( net-www/apache )
 		 fastcgi? ( >=www-apache/mod_fcgid-1.05
 					>=dev-ruby/ruby-fcgi-0.8.5-r1 )
-		 mysql?	  (	>=dev-db/mysql-4
+		 mysql?	  (	>=virtual/mysql-4
 					>=dev-ruby/ruby-dbi-0.0.21
 					>=dev-ruby/mysql-ruby-2.5 )"
 
