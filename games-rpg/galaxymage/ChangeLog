@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/galaxymage
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/galaxymage/ChangeLog,v 1.1 2007/04/19 06:15:55 tupone Exp $
+
+*galaxymage-0.3.0 (19 Apr 2007)
+
+  19 Apr 2007; <atupone@gentoo.org> +files/galaxymage-0.3.0-gentoo.patch,
+  +metadata.xml, +galaxymage-0.3.0.ebuild:
+  New package. Request bug #128405 by Cristiano Chiucchiolo
+
