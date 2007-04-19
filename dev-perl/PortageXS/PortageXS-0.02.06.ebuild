@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.04.ebuild,v 1.3 2007/04/04 22:06:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.06.ebuild,v 1.1 2007/04/19 09:46:43 ian Exp $
 
 inherit perl-module
 DESCRIPTION="Portage abstraction layer for perl"
@@ -23,8 +23,8 @@ src_unpack() {
 	if use minimal ; then
 		rm -r ${S}/usr
 		rm -r ${S}/etc/init.d
-		rm -r ${S}/etc/portagexs/certs
-		rm ${S}/etc/portagexs/portagexsd.conf
+		rm -r ${S}/etc/pxs/certs
+		rm ${S}/etc/pxs/portagexsd.conf
 		rm -r ${S}/lib/PortageXS/examples
 	fi
 }
@@ -34,4 +34,11 @@ pkg_preinst() {
 		cp -r ${S}/usr ${D}
 	fi
 	cp -r ${S}/etc ${D}
+}
+
+pkg_postinst() {
+	if [ -d /etc/portagexs ]; then
+		elog "/etc/portagexs has been moved to /etc/pxs for convenience. It is safe"
+		elog "to delete old /etc/portagexs directories."
+	fi
 }
