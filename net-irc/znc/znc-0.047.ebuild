@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.047.ebuild,v 1.1 2007/04/20 10:09:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.047.ebuild,v 1.2 2007/04/20 11:27:41 armin76 Exp $
+
+inherit autotools
 
 DESCRIPTION="An advanced IRC Bouncer"
 HOMEPAGE="http://znc.sourceforge.net"
@@ -15,6 +17,18 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )
 	perl? ( dev-lang/perl )"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Respect CFLAGS and don't strip
+	sed -i -e "s/-Wall -s -O2 -fomit-frame-pointer/-Wall/g" \
+		-e "s/CXXFLAGS=\"-D_GNU_SOURCE\"/CXXFLAGS=\"${CXXFLAGS} -D_GNU_SOURCE\"/g" \
+		configure.in || die "sed failed"
+
+	eautoreconf
+}
+
 src_compile() {
 	econf \
 		$(use_enable debug) \
@@ -24,8 +38,6 @@ src_compile() {
 		$(use_enable ssl openssl) \
 		|| die "econf failed"
 
-	# Remove -s from CXXFLAGS as emerge handles stripping
-	sed -e 's/ -s / /' -i Makefile modules/Makefile || die "sed failed"
 	emake || die "emake failed"
 }
 
