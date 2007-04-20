@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7147 2007/04/20 11:00:55 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7148 2007/04/20 15:54:37 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Apr 2007)
+# masked for removal in May
+# No reply from maintainer on bug #169198
+# Uses old Manifest format.
+app-emulation/vmware-gsx-console
+
+# Andrej Kacian <mr_bones_@gentoo.org> (20 Apr 2007)
+# Support dropped by upstream, buggy, likely to cause data loss.
+# Should be gone in 30 days.
+mail-client/claws-mail-maildir
 
 # Andrej Kacian <ticho@gentoo.org> (20 Apr 2007)
 # Support dropped by upstream, buggy, likely to cause data loss.
