@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.74 2007/04/20 15:23:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.75 2007/04/20 16:13:46 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1717,12 +1717,13 @@ eant() {
 	if [[ ${EBUILD_PHASE} = "test" ]]; then
 		antflags="${antflags} -DJunit.present=true"
 		[[ ${gcp} && ${ANT_TASKS} = *ant-junit* ]] && gcp="${gcp} junit"
+		local getjarsarg="--with-dependencies"
 	fi
 
 	local cp
 
 	for atom in ${gcp}; do
-		cp="${cp}:$(java-pkg_getjars ${atom})"
+		cp="${cp}:$(java-pkg_getjars ${getjarsarg} ${atom})"
 	done
 
 	if [[ ${cp} ]]; then
@@ -1731,9 +1732,8 @@ eant() {
 	fi
 
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ant ${antflags} "${@}"
-	debug-print "Calling ant: ${antflags} ${@}"
+	debug-print "Calling ant (GENTOO_VM: ${GENTOO_VM}): ${antflags} ${@}"
 	ant ${antflags} "${@}" || die "eant failed"
-
 }
 
 # ------------------------------------------------------------------------------
