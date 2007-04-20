@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.298 2007/04/20 11:00:55 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.299 2007/04/20 11:11:21 armin76 Exp $
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  Add nomodules USE-flag for net-irc/znc
 
   20 Apr 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Removed mask on sci-electronics/modelsim since it was punted, see bug #169191.
