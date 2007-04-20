@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/systemc-2.2_beta20060605.ebuild,v 1.3 2007/04/12 07:09:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/systemc-2.2_beta20060605.ebuild,v 1.4 2007/04/20 09:28:22 calchan Exp $
 
 inherit versionator multilib
 
@@ -52,6 +52,7 @@ pkg_postinst() {
 	elog "If you want to run the examples, you need to :"
 	elog "    tar xvfz ${PORTAGE_ACTUAL_DISTDIR}/${A}"
 	elog "    cd ${PN}-${MY_PV}_beta"
+	elog "    find examples -name 'Makefile.*' -exec sed -i -e 's/-lm/-lm -lpthread/' '{}' \;"
 	elog "    ./configure"
 	elog "    cd examples"
 	elog "    make check"
