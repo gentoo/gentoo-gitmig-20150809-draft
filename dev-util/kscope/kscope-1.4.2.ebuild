@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.4.2.ebuild,v 1.1 2006/10/20 16:38:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.4.2.ebuild,v 1.2 2007/04/20 22:34:13 carlo Exp $
 
 inherit kde
 
@@ -23,14 +23,10 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
 
-need-kde 3.2
+need-kde 3.5
 
 src_install() {
 	kde_src_install
-
-	dodir /usr/share/applications/kde
-	mv ${D}/usr/share/applnk/Development/kscope.desktop \
-		${D}/usr/share/applications/kde
 
 	insinto /usr/share/config
 	doins "${FILESDIR}/${PN}rc"
