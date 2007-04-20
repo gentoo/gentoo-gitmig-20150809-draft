@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/htmlentities
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.1 2007/04/20 09:53:45 agorf Exp $
+
+*htmlentities-4.0.0 (20 Apr 2007)
+
+  20 Apr 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  +htmlentities-4.0.0.ebuild:
+  Initial ebuild by Lars Strojny <lars@strojny.net>, bug #147048.
+
