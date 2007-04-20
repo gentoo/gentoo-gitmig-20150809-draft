@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.36 2007/04/19 14:16:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.37 2007/04/20 04:36:31 ulm Exp $
+
+  20 Apr 2007; Ulrich Mueller <ulm@gentoo.org> -tramp-2.1.2.ebuild:
+  Removed old version.
 
   19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> tramp-2.1.8.ebuild:
   Stable on Alpha, bug 169351.
