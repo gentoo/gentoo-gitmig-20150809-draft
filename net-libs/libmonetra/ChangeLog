@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmonetra
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.25 2007/03/12 04:44:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.26 2007/04/20 14:00:20 yoswink Exp $
+
+  20 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> libmonetra-5.2.ebuild:
+  Stable on alpha wrt #135828
 
   12 Mar 2007; Jeroen Roovers <jer@gentoo.org> libmonetra-5.2.ebuild:
   Stable for HPPA (bug #135828).
