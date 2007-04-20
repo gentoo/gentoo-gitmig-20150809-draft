@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.20_p11671.ebuild,v 1.3 2007/03/19 14:57:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.20_p13239.ebuild,v 1.1 2007/04/20 01:41:23 cardoe Exp $
 
 inherit mythtv-plugins
 
 DESCRIPTION="Video player module for MythTV."
 IUSE="mplayer xine"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="dev-perl/libwww-perl
 	dev-perl/HTML-Parser
