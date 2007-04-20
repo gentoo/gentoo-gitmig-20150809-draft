@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.33 2007/04/18 17:11:18 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.34 2007/04/20 16:45:52 caleb Exp $
+
+  20 Apr 2007; Caleb Tennis <caleb@gentoo.org> -qt-unixODBC-3.3.6.ebuild:
+  remove 3.3.6 as it's qt 3.3.6 isn't in portage anymore
 
   18 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org>
   qt-unixODBC-3.3.8.ebuild:
