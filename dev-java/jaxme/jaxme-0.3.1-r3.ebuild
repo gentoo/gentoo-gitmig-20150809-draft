@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.4 2007/04/20 15:39:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.5 2007/04/20 15:43:03 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -13,7 +15,7 @@ SRC_URI="http://mirrors.combose.com/apache/ws/jaxme/source/${MY_P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 
 COMMON_DEP="
 	dev-db/hsqldb
@@ -40,7 +42,7 @@ JAVA_PKG_BSFIX="off"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# Fix the build.xml so we can build jars and javadoc easily
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	# Use gnu-crypto instead of com.sun.* stuff
@@ -75,8 +77,11 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/*.jar
 
-	dodoc NOTICE
+	dodoc NOTICE || die
 
-	use doc && java-pkg_dohtml -r dist/doc/api src/documentation/manual
+	if use doc; then
+		java-pkg_dojavadoc dist/doc/api
+		java-pkg_dohtml src/documentation/manual
+	fi
 	use source && java-pkg_dosrc src/*/*
 }

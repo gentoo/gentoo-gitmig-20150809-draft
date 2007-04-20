@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.18 2007/04/20 15:39:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.19 2007/04/20 15:43:03 betelgeuse Exp $
+
+  20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jaxme-0.3.1-r3.ebuild:
+  Switch to java-pkg_dojavadoc.
 
   20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jaxme-0.3.1-r3.ebuild:
   Add dev-java/ant-core to RDEPEND.
