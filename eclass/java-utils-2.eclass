@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.72 2007/04/18 08:55:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.73 2007/04/20 14:38:49 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -968,7 +968,7 @@ java-pkg_getjars() {
 	[[ $? != 0 || -z "${jars}" ]] && die "java-config --classpath=${pkgs} failed"
 	debug-print "${pkgs}:${jars}"
 
-	for pkg in "${pkgs//,/ }"; do
+	for pkg in ${pkgs//,/ }; do
 		java-pkg_ensure-dep "${build_only}" "${pkg}"
 	done
 
