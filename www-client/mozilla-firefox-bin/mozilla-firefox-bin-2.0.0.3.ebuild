@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.3.ebuild,v 1.4 2007/04/09 12:45:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.3.ebuild,v 1.5 2007/04/20 18:22:49 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -73,7 +73,7 @@ linguas() {
 		fi
 		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
 	done
-	einfo "Selected language packs (first will be default): $linguas"
+	elog "Selected language packs (first will be default): $linguas"
 }
 
 src_unpack() {
@@ -100,7 +100,7 @@ src_install() {
 
 	local LANG=${linguas%% *}
 	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
-		einfo "Setting default locale to ${LANG}"
+		elog "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
 			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox.js \
 			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox-l10n.js || \
@@ -135,7 +135,7 @@ pkg_preinst() {
 pkg_postinst() {
 	if use amd64; then
 		echo
-		einfo "NB: You just installed a 32-bit firefox"
+		elog "NB: You just installed a 32-bit firefox"
 	fi
 
 	update_mozilla_launcher_symlinks

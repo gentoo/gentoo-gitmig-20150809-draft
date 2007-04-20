@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.3.ebuild,v 1.12 2007/04/06 16:43:03 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.3.ebuild,v 1.13 2007/04/20 18:18:23 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -79,7 +79,7 @@ linguas() {
 		fi
 		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
 	done
-	einfo "Selected language packs (first will be default): $linguas"
+	elog "Selected language packs (first will be default): $linguas"
 }
 
 pkg_setup(){
@@ -90,9 +90,9 @@ pkg_setup(){
 	fi
 
 	if ! use bindist; then
-		einfo "You are enabling official branding. You may not redistribute this build"
-		einfo "to any users on your network or the internet. Doing so puts yourself into"
-		einfo "a legal problem with mozilla foundation"
+		elog "You are enabling official branding. You may not redistribute this build"
+		elog "to any users on your network or the internet. Doing so puts yourself into"
+		elog "a legal problem with mozilla foundation"
 	fi
 
 	use moznopango && warn_mozilla_launcher_stub
@@ -193,10 +193,10 @@ src_compile() {
 pkg_preinst() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
-	einfo "Removing old installs though some really ugly code.  It potentially"
-	einfo "eliminates any problems during the install, however suggestions to"
-	einfo "replace this are highly welcome.  Send comments and suggestions to"
-	einfo "mozilla@gentoo.org."
+	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "eliminates any problems during the install, however suggestions to"
+	elog "replace this are highly welcome.  Send comments and suggestions to"
+	elog "mozilla@gentoo.org."
 	rm -rf "${ROOT}"/"${MOZILLA_FIVE_HOME}"
 }
 
@@ -214,7 +214,7 @@ src_install() {
 
 	local LANG=${linguas%% *}
 	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
-		einfo "Setting default locale to ${LANG}"
+		elog "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
 			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox.js \
 			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox-l10n.js || \
@@ -241,7 +241,7 @@ src_install() {
 	doins "${S}"/dist/branding/mozicon50.xpm
 
 	# Install files necessary for applications to build against firefox
-	einfo "Installing includes and idl files..."
+	elog "Installing includes and idl files..."
 	cp -LfR "${S}"/dist/include "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
 	cp -LfR "${S}"/dist/idl "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
 

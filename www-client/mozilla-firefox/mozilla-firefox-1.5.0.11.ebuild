@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.11.ebuild,v 1.1 2007/03/21 14:45:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.11.ebuild,v 1.2 2007/04/20 18:18:24 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -192,10 +192,10 @@ pkg_preinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	echo ""
-	einfo "Removing old installs though some really ugly code.  It potentially"
-	einfo "eliminates any problems during the install, however suggestions to"
-	einfo "replace this are highly welcome.  Send comments and suggestions to"
-	einfo "mozilla@gentoo.org"
+	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "eliminates any problems during the install, however suggestions to"
+	elog "replace this are highly welcome.  Send comments and suggestions to"
+	elog "mozilla@gentoo.org"
 	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
 	echo ""
 }
@@ -290,8 +290,8 @@ pkg_postinst() {
 	ewarn "Thank you! mozilla@gentoo.org."
 
 	echo     ""
-	einfo "Any regchrome errors can be ignored right now, this is due to"
-	einfo "mozilla-firefox-1.0.x. being unregistered with mozilla-launcher."
+	elog "Any regchrome errors can be ignored right now, this is due to"
+	elog "mozilla-firefox-1.0.x. being unregistered with mozilla-launcher."
 
 	epause 15
 }
