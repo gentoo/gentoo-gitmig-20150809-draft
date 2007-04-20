@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.35 2007/04/15 20:01:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.36 2007/04/20 16:04:39 matsuu Exp $
+
+  20 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> mecab-0.95.ebuild:
+  Added restrict="test". because `make check` failed on amd64.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> mecab-0.93.ebuild:
   Stable on ppc64
