@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.73 2007/04/20 14:38:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.74 2007/04/20 15:23:28 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -558,12 +558,22 @@ java-pkg_dohtml() {
 #
 # ------------------------------------------------------------------------------
 java-pkg_dojavadoc() {
+	debug-print-function ${FUNCNAME} $*
 	local dir="$1"
+
+	# QA checks
 
 	java-pkg_check-phase install
 
 	[[ -z "${dir}" ]] && die "Must specify a directory!"
 	[[ ! -d "${dir}" ]] && die "${dir} does not exist, or isn't a directory!"
+	if [[ ! -e "${dir}/index.html" ]]; then
+		local msg="No index.html in javadoc directory"
+		ewarn "${msg}"
+		is-java-strict && die "${msg}"
+	fi
+
+	# Renaming to match our directory layout
 
 	local dir_to_install="${dir}"
 	if [[ "$(basename "${dir}")" != "api" ]]; then
@@ -571,6 +581,8 @@ java-pkg_dojavadoc() {
 		# TODO use doins
 		cp -r "${dir}" "${dir_to_install}" || die "cp failed"
 	fi
+
+	# Actual installation
 
 	java-pkg_dohtml -r ${dir_to_install}
 }
