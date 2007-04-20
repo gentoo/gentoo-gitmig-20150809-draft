@@ -1,0 +1,11 @@
+--- libchipcard3-3.0.2/data/drivers/ccid_ifd/ccid_ifd.xml.orig	2007-04-20 18:58:48.000000000 +0200
++++ libchipcard3-3.0.2/data/drivers/ccid_ifd/ccid_ifd.xml	2007-04-20 18:59:57.000000000 +0200
+@@ -32,6 +32,8 @@
+       <loc>/usr/local/lib64</loc>
+       <loc>/usr/lib64/pcsc/drivers/ifd-ccid.bundle/Contents/Linux</loc>
+       <loc>/usr/local/lib64/pcsc/drivers/ifd-ccid.bundle/Contents/Linux</loc>
++      <loc>/usr/lib/readers/usb/ifd-ccid.bundle/Contents/Linux/</loc>
++      <loc>/usr/lib64/readers/usb/ifd-ccid.bundle/Contents/Linux/</loc>
+     </locations>
+     
+     <downloads>
