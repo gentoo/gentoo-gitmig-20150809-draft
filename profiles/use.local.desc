@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2754 2007/04/20 11:11:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2755 2007/04/20 13:16:02 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -969,6 +969,7 @@ media-sound/cmus:modplug - Build with modplug support
 media-sound/cmus:mp4 - enable mp4 decoding
 media-sound/darkice:twolame - Build with twolame support
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
+media-sound/easytag:wavpack - Add support for wavpack
 media-sound/exaile:libsexy - Enable libsexy support
 media-sound/exaile:serpentine - Add cd-burning support using serpentine 
 media-sound/exaile:streamripper - Add streamripper support for stream recording
