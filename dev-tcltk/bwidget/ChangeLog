@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.13 2007/02/22 01:28:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.14 2007/04/20 06:13:09 nerdboy Exp $
+
+*bwidget-1.8.0 (20 Apr 2007)
+
+  20 Apr 2007; Steve Arnold <nerdboy@gentoo.org> bwidget-1.7.0.ebuild,
+  +bwidget-1.8.0.ebuild:
+  Updated to current version required by setools (the latter won't build
+  the apol gui against earlier versions).  Also fixed lib path in 1.7.0
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
