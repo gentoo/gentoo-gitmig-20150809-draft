@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ketchup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.14 2007/04/18 07:06:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.15 2007/04/20 21:05:13 josejx Exp $
+
+  20 Apr 2007; Joseph Jezak <josejx@gentoo.org> ketchup-0.9.8.ebuild:
+  Marked ppc stable for bug #174903.
 
   18 Apr 2007; Christian Faulhammer <opfer@gentoo.org> ketchup-0.9.8.ebuild:
   stable x86/amd64, bug 174903
