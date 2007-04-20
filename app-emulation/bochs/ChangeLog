@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.61 2007/04/19 13:47:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.62 2007/04/20 22:16:48 josejx Exp $
+
+  20 Apr 2007; Joseph Jezak <josejx@gentoo.org> bochs-2.2.6.ebuild:
+  Marked ppc stable for bug #146954.
 
   19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> bochs-2.1.1.ebuild:
   Rolling back to ~sparc see #146954
