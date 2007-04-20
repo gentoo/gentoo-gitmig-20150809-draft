@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.40 2007/04/10 07:31:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.41 2007/04/20 18:10:45 gustavoz Exp $
+
+  20 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  metakit-2.4.9.6.ebuild:
+  Stable on sparc wrt #169509
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   metakit-2.4.9.6.ebuild:
