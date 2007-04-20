@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.10 2007/03/15 00:54:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.11 2007/04/20 15:25:31 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -14,29 +16,30 @@ SRC_URI="mirror://sourceforge/xmldb-org/${MY_P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 
 # TODO please make compiling the junit tests optional
-DEPEND=">=virtual/jdk-1.4
-	source? ( app-arch/zip )
+COMMON_DEP="
 	>=dev-java/xerces-2.7
 	>=dev-java/xalan-2.7
-	dev-java/ant-core
 	=dev-java/junit-3.8*"
-RDEPEND=">=virtual/jre-1.4"
+DEPEND=">=virtual/jdk-1.4
+	${COMMON_DEP}"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	rm *.jar
+	cd "${S}"
+	rm -v *.jar || die
 	mkdir lib
 
-	epatch ${FILESDIR}/${P}-unreachable.patch
+	epatch "${FILESDIR}/${P}-unreachable.patch"
 
 	mkdir src && mv org src
-	cp ${FILESDIR}/build-${PV}.xml build.xml
+	cp "${FILESDIR}/build-${PV}.xml" build.xml
 }
 
 src_compile() {

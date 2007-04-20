@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmldb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.22 2007/03/15 00:54:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.23 2007/04/20 15:25:31 betelgeuse Exp $
+
+  20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  xmldb-20011111-r1.ebuild:
+  Add missing dependencies to RDEPEND.
 
   15 Mar 2007; Joshua Nichols <nichoj@gentoo.org> xmldb-20011111-r1.ebuild:
   amd64 stable for bug #166560.
