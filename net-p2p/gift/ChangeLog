@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.66 2006/09/11 20:51:40 tcort Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.67 2007/04/20 14:20:04 armin76 Exp $
+
+*gift-0.11.8.1-r1 (20 Apr 2007)
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> +gift-0.11.8.1-r1.ebuild:
+  Revision bump to add the 4 plugins as USE-flags, bug 174858
 
   11 Sep 2006; Thomas Cort <tcort@gentoo.org> gift-0.11.8.1.ebuild:
   Stable on alpha.
