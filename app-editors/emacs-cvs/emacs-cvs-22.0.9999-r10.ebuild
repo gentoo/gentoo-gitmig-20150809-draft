@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.6 2007/04/19 05:56:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.7 2007/04/20 19:45:36 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -93,7 +93,8 @@ src_compile() {
 
 	if use alsa && ! use sound; then
 		echo
-		einfo "Although sound USE flag is disabled you chose to have alsa, so sound is switched on anyway."
+		einfo "Although sound USE flag is disabled you chose to have alsa,"
+		einfo "so sound is switched on anyway."
 		echo
 		myconf="${myconf} --with-sound"
 	else
@@ -211,7 +212,13 @@ pkg_postinst() {
 
 	elisp-site-regen
 	emacs-infodir-rebuild
-	eselect emacs update --if-unset
+
+	if [[ "$(readlink ${ROOT}/usr/bin/emacs)" == emacs.emacs-${SLOT}* ]]; then
+		# transition from pre-eselect revision
+		eselect emacs set emacs-${SLOT}
+	else
+		eselect emacs update --if-unset
+	fi
 
 	if use X; then
 		elog "You need to install some fonts for Emacs. Under monolithic"
@@ -222,9 +229,10 @@ pkg_postinst() {
 	fi
 
 	echo
-	elog "You can set the version to be started by /usr/bin/emacs through the Emacs eselect module"
-	elog "Man and info pages are automatically redirected, so you are to test emacs-cvs along with the"
-	elog "stable release"
+	elog "You can set the version to be started by /usr/bin/emacs through"
+	elog "the Emacs eselect module. Man and info pages are automatically"
+	elog "redirected, so you are to test emacs-cvs along with the stable"
+	elog "release. \"man emacs.eselect\" for details."
 }
 
 pkg_postrm() {

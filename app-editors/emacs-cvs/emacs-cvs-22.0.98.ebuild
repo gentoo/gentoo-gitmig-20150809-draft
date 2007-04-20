@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.98.ebuild,v 1.6 2007/04/19 05:56:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.98.ebuild,v 1.7 2007/04/20 19:45:36 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -12,7 +12,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 IUSE="alsa gif gtk gzip-el hesiod jpeg lesstif motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 
-RESTRICT="$RESTRICT nostrip"
+RESTRICT="${RESTRICT} nostrip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
 
@@ -81,7 +81,8 @@ src_compile() {
 
 	if use alsa && ! use sound; then
 		echo
-		einfo "Although sound USE flag is disabled you chose to have alsa, so sound is switched on anyway."
+		einfo "Although sound USE flag is disabled you chose to have alsa,"
+		einfo "so sound is switched on anyway."
 		echo
 		myconf="${myconf} --with-sound"
 	else
@@ -216,9 +217,10 @@ pkg_postinst() {
 	fi
 
 	echo
-	elog "You can set the version to be started by /usr/bin/emacs through the Emacs eselect module"
-	elog "Man and info pages are automatically redirected, so you are to test emacs-cvs along with the"
-	elog "stable release"
+	elog "You can set the version to be started by /usr/bin/emacs through"
+	elog "the Emacs eselect module. Man and info pages are automatically"
+	elog "redirected, so you are to test emacs-cvs along with the stable"
+	elog "release. \"man emacs.eselect\" for details."
 }
 
 pkg_postrm() {

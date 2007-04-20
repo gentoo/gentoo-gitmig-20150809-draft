@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.109 2007/04/19 05:56:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.110 2007/04/20 19:45:36 ulm Exp $
+
+  20 Apr 2007; Ulrich Mueller <ulm@gentoo.org> emacs-cvs-22.0.98.ebuild,
+  -emacs-cvs-22.0.9999-r7.ebuild, emacs-cvs-22.0.9999-r10.ebuild,
+  emacs-cvs-23.0.0-r6.ebuild:
+  Test for previous symlink and eselect the same SLOT, also for live CVS
+  ebuild. Added braces to variable name; split some long lines. Removed old
+  broken revision.
 
   19 Apr 2007; Ulrich Mueller <ulm@gentoo.org>
   +files/emacs-cvs-Xaw3d-headers.patch, emacs-cvs-22.0.98.ebuild,
