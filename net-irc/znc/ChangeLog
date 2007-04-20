@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/znc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.1 2007/04/20 10:09:31 armin76 Exp $
+
+*znc-0.047 (20 Apr 2007)
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +znc-0.047.ebuild:
+  Initial import, initial ebuild by Uli Schlachter <tobespammed at web dot de>
+  bug 175212
+
