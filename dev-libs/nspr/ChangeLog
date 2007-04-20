@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.78 2007/04/20 12:09:39 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.79 2007/04/20 13:22:26 armin76 Exp $
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/nspr-4.3-amd64.patch, -files/nspr-4.4.1-hppa.patch,
+  -files/nspr-4.4.1-ppc64.patch, -files/nspr-4.6.3-fbsd62.patch,
+  -nspr-4.6.3.ebuild, -nspr-4.6.3-r1.ebuild, -nspr-4.6.4.ebuild,
+  -nspr-4.6.4-r3.ebuild:
+  Cleanup
 
   20 Apr 2007; Stuart Longland <redhatter@gentoo.org> nspr-4.6.5-r1.ebuild:
   Tested and marked stable on mips as per bug #169751
