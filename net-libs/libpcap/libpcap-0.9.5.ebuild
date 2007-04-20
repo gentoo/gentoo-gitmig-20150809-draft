@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.5.ebuild,v 1.8 2007/04/19 20:45:33 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.5.ebuild,v 1.9 2007/04/20 18:25:14 cedk Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	MY_OPTS=""
-	if is_crosscompile; then
+	if [[ ${CTAGERT} = ${CHOST} ]]; then
 		if [[ "{LIBPCAP_PCAP}" == "linux" ]]; then
 			MY_OPTS="--with-pcap=linux"
 		elif [[ "${LIBPCAP_PCAP}" == "bpf" ]]; then
