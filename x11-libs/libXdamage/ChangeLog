@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXdamage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.36 2007/04/19 17:18:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.37 2007/04/20 14:08:12 opfer Exp $
+
+  20 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  libXdamage-1.1.1.ebuild:
+  stable amd64, bug 174959
 
   19 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   libXdamage-1.1.1.ebuild:
