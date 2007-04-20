@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.61 2007/04/19 17:03:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.62 2007/04/20 09:19:51 opfer Exp $
+
+  20 Apr 2007; Christian Faulhammer <opfer@gentoo.org> erlang-11.2.4.ebuild:
+  remove unneeded symlinks
 
   19 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> erlang-11.2.4.ebuild:
   Remove useless cd

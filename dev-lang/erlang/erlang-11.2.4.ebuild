@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.4.ebuild,v 1.4 2007/04/19 17:03:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.4.ebuild,v 1.5 2007/04/20 09:19:51 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -94,8 +94,6 @@ src_install() {
 
 	dosym ${ERL_LIBDIR}/bin/erl /usr/bin/erl
 	dosym ${ERL_LIBDIR}/bin/erlc /usr/bin/erlc
-	dosym ${ERL_LIBDIR}/bin/ecc /usr/bin/ecc
-	dosym ${ERL_LIBDIR}/bin/elink /usr/bin/elink
 	dosym ${ERL_LIBDIR}/bin/ear /usr/bin/ear
 	dosym ${ERL_LIBDIR}/bin/escript /usr/bin/escript
 	dosym \
