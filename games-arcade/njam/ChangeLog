@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/njam
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.9 2007/03/12 15:23:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.10 2007/04/20 05:54:12 opfer Exp $
+
+  20 Apr 2007; Christian Faulhammer <opfer@gentoo.org> njam-1.25.ebuild:
+  stable amd64, bug 174569
 
   12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> njam-1.25.ebuild:
   Install menu entry, bug #160237
