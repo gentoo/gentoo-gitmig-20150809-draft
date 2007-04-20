@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.18 2007/04/19 21:43:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.19 2007/04/20 06:34:05 opfer Exp $
+
+  20 Apr 2007; Christian Faulhammer <opfer@gentoo.org> cln-1.1.13.ebuild:
+  stable x86/amd64, bug 175209
 
   19 Apr 2007; Markus Dittrich <markusle@gentoo.org> cln-1.1.13.ebuild:
   Changed SLOT back to 1 to avoid package collisions.

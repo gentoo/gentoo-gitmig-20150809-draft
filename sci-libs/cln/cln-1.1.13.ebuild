@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.13.ebuild,v 1.2 2007/04/19 21:43:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.13.ebuild,v 1.3 2007/04/20 06:34:05 opfer Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ginac.de/CLN/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2
