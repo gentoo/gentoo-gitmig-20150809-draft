@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libbt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.11 2007/02/09 04:31:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.12 2007/04/20 15:49:28 armin76 Exp $
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> +files/1.05-btlist.patch,
+  -libbt-1.03.ebuild, -libbt-1.04.ebuild, libbt-1.05.ebuild:
+  Add patch to fix compile failure, bug 152489 and stable x86, drop old
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

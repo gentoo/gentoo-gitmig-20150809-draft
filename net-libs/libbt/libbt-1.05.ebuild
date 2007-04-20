@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.1 2006/01/13 13:32:57 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.2 2007/04/20 15:49:28 armin76 Exp $
 
 inherit eutils
 
@@ -10,13 +10,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
 DEPEND="dev-libs/openssl
 	net-misc/curl
 	sys-fs/e2fsprogs"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PV}-btlist.patch # 152489
+}
 
 src_compile () {
 	econf || die
