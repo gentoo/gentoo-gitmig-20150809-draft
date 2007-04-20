@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.10 2007/04/13 21:12:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.11 2007/04/20 14:56:37 armin76 Exp $
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> rb_libtorrent-0.11.ebuild,
+  rb_libtorrent-0.12_rc3.ebuild:
+  Fix threads USE-flag check if boost >1.33, bug 174714
 
 *rb_libtorrent-0.12_rc3 (13 Apr 2007)
 
