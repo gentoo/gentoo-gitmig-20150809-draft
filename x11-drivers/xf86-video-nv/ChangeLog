@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.43 2007/03/27 23:57:09 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.44 2007/04/20 23:22:57 joshuabaergen Exp $
+
+*xf86-video-nv-2.0.2 (20 Apr 2007)
+
+  20 Apr 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-nv-2.0.2.ebuild:
+  Version bump.  Includes small bugfixes and 8500/8600 PCI IDs.
 
 *xf86-video-nv-2.0.1 (27 Mar 2007)
 
