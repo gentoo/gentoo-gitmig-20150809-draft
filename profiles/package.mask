@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7146 2007/04/20 06:08:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7147 2007/04/20 11:00:55 calchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -443,12 +443,6 @@ net-im/aim-transport
 # mail-mta/qmail has been superseeded by mail-mta/netqmail.
 # Pending removal mid April.
 mail-mta/qmail
-
-# Denis Dupeyron <calchan@gentoo.org> (14 Mar 2007)
-# Masked pending removal on 14 Apr 2007 at the latest
-# No viable solution found for the maintenance of this
-# commercial software.
-sci-electronics/modelsim
 
 # Marijn Schouten <hkBst@gentoo.org> (13 Mar 2007)
 # masked for removal
