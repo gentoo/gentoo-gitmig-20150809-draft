@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.8.ebuild,v 1.1 2007/04/19 22:43:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.8.ebuild,v 1.2 2007/04/20 10:49:24 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator
@@ -196,11 +196,11 @@ pkg_postinst() {
 		ewarn
 	fi
 	elog ""
-	elog "Starting with 1.4.2.8 the demos are installed only with USE=examples enabled"
+	elog "Starting with 1.4.2.8 demos are installed only with USE=examples"
 	elog ""
 	elog "Starting with 1.4.2.8 the src.jar is installed to the standard"
 	elog "location. It is still symlinked to the old location (/opt/${P}/share)"
 	elog "but it will be removed if there will ever be a version bump."
-	elog "See https://bugs.gentoo.org/show_bug.cgi?id=2241 and"
+	elog "See https://bugs.gentoo.org/show_bug.cgi?id=2241"
 	elog "for more details."
 }
