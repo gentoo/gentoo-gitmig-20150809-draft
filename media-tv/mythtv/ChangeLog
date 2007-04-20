@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.148 2007/04/20 01:52:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.149 2007/04/20 15:05:08 beandog Exp $
+
+  20 Apr 2007; Steve Dibb <beandog@gentoo.org> ChangeLog:
+  Stable on amd64, ppc, x86
 
 *mythtv-0.20_p13288 (20 Apr 2007)
 
