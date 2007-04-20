@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxme
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.17 2007/01/04 05:44:48 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.18 2007/04/20 15:39:43 betelgeuse Exp $
+
+  20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jaxme-0.3.1-r3.ebuild:
+  Add dev-java/ant-core to RDEPEND.
 
   03 Jan 2007; Tom Gall <tgall@gentoo.org> jaxme-0.3.1.ebuild:
   stable on ppc64

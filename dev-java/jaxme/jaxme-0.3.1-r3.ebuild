@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.3 2006/12/09 09:19:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.4 2007/04/20 15:39:43 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -21,6 +21,7 @@ COMMON_DEP="
 	dev-java/junit
 	dev-java/gnu-crypto
 	>=dev-java/log4j-1.2.8
+	dev-java/ant-core
 	dev-java/xmldb"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
@@ -29,7 +30,6 @@ DEPEND="|| (
 		=virtual/jdk-1.4*
 		=virtual/jdk-1.5*
 	)
-	dev-java/ant-core
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}"
