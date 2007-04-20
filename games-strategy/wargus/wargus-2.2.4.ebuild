@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.4.ebuild,v 1.1 2007/04/10 14:14:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.4.ebuild,v 1.2 2007/04/20 16:21:03 nyhm Exp $
 
 inherit eutils games
 
@@ -19,7 +19,9 @@ RDEPEND="=games-engines/stratagus-${PV}*"
 
 src_unpack() {
 	cdrom_get_cds data/rezdat.war
-	unpack ${A/wargus.png}
+	unpack ${A}
+	cd "${S}"
+	edos2unix build.sh
 }
 
 src_install() {

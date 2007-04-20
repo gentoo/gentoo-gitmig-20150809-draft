@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.8 2007/04/10 14:14:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.9 2007/04/20 16:21:03 nyhm Exp $
+
+  20 Apr 2007; Tristan Heaven <nyhm@gentoo.org> wargus-2.2.4.ebuild:
+  Fix install script, bug #174937
 
 *wargus-2.2.4 (10 Apr 2007)
 
