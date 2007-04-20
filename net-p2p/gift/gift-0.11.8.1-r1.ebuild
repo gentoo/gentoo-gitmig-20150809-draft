@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1-r1.ebuild,v 1.2 2007/04/20 18:01:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1-r1.ebuild,v 1.3 2007/04/20 18:10:53 armin76 Exp $
 
 inherit eutils libtool
 
@@ -48,20 +48,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Configure gift in /usr/share/giFT/ or run gift-setup"
-	einfo "as normal user and make:"
-	einfo 'cp -R $HOME/.giFT/* /usr/share/giFT/'
-	einfo "chown -R p2p:root /usr/share/giFT/*"
-	einfo "(be carefull while specyfing directories in gift-setup;"
-	einfo "keep in mind that giFT will run as process of user "
-	einfo 'specified in /etc/conf.d/gift with his $HOME directory)'
+	elog "Configure gift in /usr/share/giFT/ or run gift-setup"
+	elog "as normal user and make:"
+	elog 'cp -R $HOME/.giFT/* /usr/share/giFT/'
+	elog "chown -R p2p:root /usr/share/giFT/*"
+	elog "(be carefull while specyfing directories in gift-setup;"
+	elog "keep in mind that giFT will run as process of user "
+	elog 'specified in /etc/conf.d/gift with his $HOME directory)'
 	echo
-	einfo "Also, if you will be using the giFT init script, you"
-	einfo "will need to create /usr/share/giFT/giftd.conf"
-	einfo "This method is only recommended for users with a"
-	einfo "central giFT server."
+	elog "Also, if you will be using the giFT init script, you"
+	elog "will need to create /usr/share/giFT/giftd.conf"
+	elog "This method is only recommended for users with a"
+	elog "central giFT server."
 	echo
-	einfo "This package no longer contains any protocol plugins,"
-	einfo "please try gift-fasttrack, gift-openft, gift-gnutella"
-	einfo "for protocol support."
 }
