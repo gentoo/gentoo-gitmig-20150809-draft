@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.28 2007/03/12 18:32:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.29 2007/04/20 20:02:41 armin76 Exp $
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  freewnn-1.1.1_alpha21.ebuild:
+  ia64 + x86 stable
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   freewnn-1.1.1_alpha21.ebuild:
