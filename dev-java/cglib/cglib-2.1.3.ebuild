@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.4 2006/09/08 03:47:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.5 2007/04/20 15:52:39 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
+WANT_SPLIT_ANT="true"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -12,12 +15,11 @@ LICENSE="Apache-1.1"
 SLOT="2.1"
 KEYWORDS="~x86 ~amd64"
 COMMON_DEP="=dev-java/asm-1.5*
-	=dev-java/aspectwerkz-2*"
+	=dev-java/aspectwerkz-2*
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	source? ( app-arch/zip )
-	>=dev-java/ant-core-1.5
 	dev-java/jarjar
 	${COMMON_DEP}"
 IUSE="doc source"
@@ -27,22 +29,21 @@ S=${WORKDIR}
 src_unpack() {
 	jar xf ${DISTDIR}/${A} || die "failed to unpack"
 
-	cd ${S}/lib
-	rm -f *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 	java-pkg_jar-from asm-1.5
 	java-pkg_jar-from aspectwerkz-2
-	java-pkg_jar-from jarjar-1
 	java-pkg_jar-from ant-core ant.jar
 }
 
 src_compile() {
-	eant jar $(use_doc)
+	ANT_TASKS="jarjar-1" eant jar $(use_doc)
 }
 
 src_install() {
 	java-pkg_newjar dist/${PN}-${MY_PV}.jar ${PN}.jar
 	java-pkg_newjar dist/${PN}-nodep-${MY_PV}.jar ${PN}-nodep.jar
 
-	dodoc NOTICE README
+	dodoc NOTICE README || die
 	use doc && java-pkg_dohtml -r docs/*
 }
