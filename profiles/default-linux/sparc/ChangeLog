@@ -1,6 +1,13 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.57 2007/04/18 13:00:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.58 2007/04/20 20:42:28 gustavoz Exp $
+
+  20 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc32/2006.0/2.4/package.mask, sparc32/2006.0/package.mask,
+  sparc32/2006.1/2.4/package.mask, sparc32/2006.1/package.mask,
+  sparc64/2006.0/2.4/package.mask, sparc64/2006.0/package.mask,
+  sparc64/2006.1/2.4/package.mask, sparc64/2006.1/package.mask:
+  Unmask glibc-2.5 on the general 2.6 population (and kgcc64-4 too)
 
   18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc32/2006.0/package.mask, sparc32/2006.1/package.mask,
