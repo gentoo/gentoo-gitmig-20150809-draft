@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.24 2007/04/19 14:01:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.25 2007/04/20 04:49:57 ulm Exp $
+
+  20 Apr 2007; Ulrich Mueller <ulm@gentoo.org> -vm-7.19-r1.ebuild,
+  -vm-7.19-r2.ebuild:
+  Removed old revisions.
 
   19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> vm-7.19.282.ebuild:
   Add ~alpha keyword, bug 174782.
