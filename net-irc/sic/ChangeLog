@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/sic
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.1 2007/04/20 11:46:50 armin76 Exp $
+
+*sic-0.9 (20 Apr 2007)
+
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +sic-0.9.ebuild:
+  Initial import, ebuild by Cédric Krier <cedk at gentoo dot org>, bug 141332
+
