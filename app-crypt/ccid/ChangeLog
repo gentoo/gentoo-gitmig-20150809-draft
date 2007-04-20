@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.14 2007/01/27 17:08:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.15 2007/04/20 19:06:59 hanno Exp $
+
+  20 Apr 2007; Hanno Boeck <hanno@gentoo.org> ccid-1.2.1.ebuild:
+  Remove libchipcard-specific paths.
 
 *ccid-1.2.1 (27 Jan 2007)
 
