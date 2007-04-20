@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7148 2007/04/20 15:54:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7149 2007/04/20 16:05:00 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -385,13 +385,8 @@ media-video/gspca
 =dev-python/gnome-python-extras-2.14.2-r1
 # End of GNOME 2.18.0 mask
 
-# Michael Sterrett <mr_bones_@gentoo.org> (21 Mar 2007)
-# masked for removal in April.
-# Old and nasty.  Not supported by upstream.
-games-strategy/mylink
-
 # Michael Sterrett <mr_bones_@gentoo.org> (19 Mar 2007)
-# masked for removal in April.
+# masked for removal when there's a good excuse.
 # Old and nasty.  Not supported by upstream.
 # use the newer versions of clanlib instead.
 # If you find a bug in one of these packages, don't even think
