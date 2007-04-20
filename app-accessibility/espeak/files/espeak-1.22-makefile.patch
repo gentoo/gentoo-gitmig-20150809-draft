@@ -1,0 +1,12 @@
+diff -NrudpB espeak-1.22-source/src/Makefile espeak-1.22-source-patched/src/Makefile
+--- espeak-1.22-source/src/Makefile	2007-04-04 07:39:47.000000000 -0500
++++ espeak-1.22-source-patched/src/Makefile	2007-04-19 21:57:19.000000000 -0500
+@@ -75,7 +75,7 @@ distclean: clean
+ 
+ install: all
+ 	# Create directories
+-	rm -r $(DESTDIR)$(DATADIR)
++	rm -rf $(DESTDIR)$(DATADIR)
+ 	$(MKDIR) $(DESTDIR)$(BINDIR)
+ 	$(MKDIR) $(DESTDIR)$(LIBDIR)
+ 	$(MKDIR) $(DESTDIR)$(INCDIR)

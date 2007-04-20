@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.10 2007/02/25 05:40:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.11 2007/04/20 03:54:52 leonardop Exp $
+
+*espeak-1.22 (20 Apr 2007)
+
+  20 Apr 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/espeak-1.22-makefile.patch, +espeak-1.22.ebuild:
+  New release. Integrated new logic to fix the byte order and compile the
+  necessary binary files in big-endian machines, as described in bug #163285.
 
 *espeak-1.20-r1 (25 Feb 2007)
 
