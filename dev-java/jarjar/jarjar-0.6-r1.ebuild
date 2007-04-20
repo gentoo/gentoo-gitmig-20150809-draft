@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.6 2007/03/01 12:38:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.7 2007/04/20 14:20:58 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,16 +12,15 @@ HOMEPAGE="http://jarjar.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="amd64 x86"
-IUSE="doc source"
+IUSE=""
 COMMON_DEP="
 	=dev-java/asm-2.0*
-	=dev-java/gnu-regexp-1*"
+	=dev-java/gnu-regexp-1*
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	>=dev-java/ant-core-1.4
-	source? ( app-arch/zip )
 	${COMMON_DEP}"
 
 # FIXME looks like it bundles stuff from dev-java/java-getopt, ie
