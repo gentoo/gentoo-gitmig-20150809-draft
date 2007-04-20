@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.147 2007/04/19 14:08:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.148 2007/04/20 01:52:00 cardoe Exp $
+
+*mythtv-0.20_p13288 (20 Apr 2007)
+
+  20 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.20_p13288.ebuild, -mythtv-0.19_p10505.ebuild:
+  upstream bump. remove old version
 
 *mythtv-0.21_pre13285 (19 Apr 2007)
 *mythtv-0.20_p13271 (19 Apr 2007)

@@ -1,48 +1,40 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.11 2007/01/05 03:44:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p13288.ebuild,v 1.1 2007/04/20 01:52:00 cardoe Exp $
 
-inherit flag-o-matic multilib eutils qt3
-
-PATCHREV="${PV#*_p}"
-MY_PV="${PV%_*}"
+inherit mythtv flag-o-matic multilib eutils qt3
 
 DESCRIPTION="Homebrew PVR project"
-HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://ftp.osuosl.org/pub/mythtv/${PN}-${MY_PV}.tar.bz2
-	http://dev.gentoo.org/~cardoe/files/${PN}-${MY_PV}-rev${PATCHREV}.patch.bz2"
-
-LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx vorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec autostart backendonly crciprec debug dbox2 dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
-	|| ( (	x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXinerama
-		x11-libs/libXv
-		x11-libs/libXrandr
-		x11-libs/libXxf86vm
-		)
-	virtual/x11 )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXinerama
+	x11-libs/libXv
+	x11-libs/libXrandr
+	x11-libs/libXxf86vm
 	xvmc? (
-		|| ( x11-libs/libXvMC virtual/x11 )
+		x11-libs/libXvMC
 		video_cards_nvidia? ( || ( x11-drivers/nvidia-drivers
 								 x11-drivers/nvidia-legacy-drivers ) )
-		video_cards_via? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
-		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) )
+		video_cards_via? ( x11-drivers/xf86-video-via )
+		video_cards_i810? ( x11-drivers/xf86-video-i810 )
 	)
 	$(qt_min_version 3.3)
 	virtual/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
+	dts? ( media-libs/libdts )
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
@@ -52,10 +44,14 @@ RDEPEND=">=media-libs/freetype-2.0
 			>=sys-libs/libavc1394-0.5.0
 			>=media-libs/libiec61883-1.0.0 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
-	!<x11-base/xorg-x11-6.8"
+	autostart? ( net-dialup/mingetty
+				x11-wm/evilwm
+				x11-apps/xset )"
 
 DEPEND="${RDEPEND}
-	|| ( x11-apps/xinit virtual/x11 )"
+	x11-proto/xineramaproto
+	x11-proto/xf86vidmodeproto
+	x11-apps/xinit"
 
 PDEPEND="=x11-themes/mythtv-themes-${MY_PV}*"
 
@@ -74,12 +70,6 @@ pkg_setup() {
 		rip=1
 	fi
 
-	if ! has_version x11-libs/libXv && ! built_with_use x11-base/xorg-x11 xv; then
-		eerror "MythTv requires xorg-x11 to be built with XV support. Please add"
-		eerror "'xv' to your USE flags, and re-emerge x11-base/xorg-x11."
-		rip=1
-	fi
-
 	if use xvmc && use video_cards_nvidia; then
 		echo
 		ewarn "You enabled the 'xvmc' USE flag, you must have a GeForce 4 or"
@@ -87,18 +77,18 @@ pkg_setup() {
 		echo
 	fi
 
-	if has x11-libs/libX11 virtual/x11; then
+	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
 		echo
-		eerror "Your installation of Modular X is broken. Don't have a virtual/x11"
-		eerror "installed while using Modular X."
+		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
+		eerror "an nVidia, Intel i810, or VIA video card."
 		echo
 		rip=1
 	fi
 
-	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
+	if use autostart && use backendonly; then
 		echo
-		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
-		eerror "a Nvidia, i810, or VIA video card."
+		eerror "You can't have USE=autostart while having USE=backendonly."
+		eerror "USE=autostart is for mythfrontend"
 		echo
 		rip=1
 	fi
@@ -115,13 +105,14 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	#Fixes of the bugs found in the 0.19 release
-	epatch "${WORKDIR}"/${PN}-${MY_PV}-rev${PATCHREV}.patch
+	#Fixes of the bugs found in the release
+	mythtv-fixes_patch
 
-	# Support installing in libdir != lib
-	epatch "${FILESDIR}/mythtv-0.19-libdir.patch"
+	# As needed fix since they don't know how to write qmake let alone a real
+	# make system
+	epatch "${FILESDIR}"/${PN}-${MY_PV}-as-needed.patch
 }
 
 src_compile() {
@@ -130,17 +121,21 @@ src_compile() {
 		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use jack || myconf="${myconf} --disable-audio-jack"
+	use dts || myconf="${myconf} --disable-dts"
+	use freebox || myconf="${myconf} --disable-freebox"
+	use dbox2 || myconf="${myconf} --disable-dbox2"
+	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
+	use crciprec || myconf="${myconf} --disable-crciprec"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && myconf="${myconf} --enable-xvmc"
+	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
+	use perl && myconf="${myconf} --with-bindings=perl"
 	myconf="${myconf}
 		--disable-audio-arts
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
-		$(use_enable dbox2)
 		$(use_enable dvb)
-		$(use_enable dvb dvb-eit)
 		--dvb-path=/usr/include
-		$(use_enable dvd)
 		$(use_enable opengl opengl-vsync)
 		$(use_enable ieee1394 firewire)
 		--enable-xrandr
@@ -217,7 +212,7 @@ src_compile() {
 src_install() {
 
 	einstall INSTALL_ROOT="${D}" || die "install failed"
-	for doc in AUTHORS COPYING FAQ UPGRADING ChangeLog README; do
+	for doc in AUTHORS FAQ UPGRADING ChangeLog README; do
 		test -e "${doc}" && dodoc ${doc}
 	done
 
@@ -232,15 +227,7 @@ src_install() {
 		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
 	fi
 
-	if ! use backendonly; then
-		dobin ${FILESDIR}/runmythfe
 
-		ewarn "Want MythFrontend to always? Add the following to your"
-		ewarn "myth user. i.e. My user is mythtv"
-		ewarn "crontab -e -u mythtv"
-		ewarn "* * * * * /usr/bin/runmythfe &"
-		ewarn "And you're all set."
-	fi
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
 
@@ -249,26 +236,59 @@ src_install() {
 	keepdir /var/log/mythtv
 	chown -R mythtv "${D}"/var/log/mythtv
 
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/mythtv.logrotate.d mythtv
+
 	insinto /usr/share/mythtv/contrib
 	doins contrib/*
+
+	insinto /usr/share/mythtv/configfiles
+	doins configfiles/*
+
+	if ! use backendonly; then
+		dobin "${FILESDIR}"/runmythfe
+
+		if use autostart; then
+			dodir /etc/env.d/
+			echo 'CONFIG_PROTECT="/home/mythtv/"' > ${D}/etc/env.d/95mythtv
+
+			insinto /home/mythtv
+			newins "${FILESDIR}"/bash_profile .bash_profile
+			newins "${FILESDIR}"/xinitrc .xinitrc
+		fi
+	fi
 }
 
 pkg_preinst() {
-	enewuser mythtv -1 "-1" -1 ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
-	usermod -G ${MYTHTV_GROUPS} mythtv
+	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
+	usermod -a -G ${MYTHTV_GROUPS} mythtv
+
+	export CONFIG_PROTECT="${CONFIG_PROTECT} ${ROOT}/home/mythtv/"
 }
 
 pkg_postinst() {
-	einfo "Want MythFrontend to alway run? Run the following:"
-	einfo " #crontab -e -u mythtv"
-	einfo "And add the following:"
-	einfo "* * * * * /usr/bin/runmythfe &"
-	echo
-	echo
-	einfo "To always have MythBackend running and available run the following:"
-	einfo "rc-update add mythbackend default"
-	echo
-	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
-	ewarn "chown -R mythtv /path/to/store"
+	if ! use backendonly; then
+		echo
+		elog "Want mythfrontend to start automatically?"
+		elog "Set USE=autostart. Details can be found at:"
+		elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
+	fi
+
+	if ! use frontendonly; then
+		echo
+		elog "To always have MythBackend running and available run the following:"
+		elog "rc-update add mythbackend default"
+		echo
+		ewarn "Your recordings folder must be owned by the user 'mythtv' now"
+		ewarn "chown -R mythtv /path/to/store"
+	fi
+
+	if use autostart; then
+		echo
+		elog "Please add the following to your /etc/inittab file at the end of"
+		elog "the TERMINALS section"
+		elog "c8:2345:respawn:/sbin/mingetty --autologin mythtv tty8"
+	fi
+
 }
 
