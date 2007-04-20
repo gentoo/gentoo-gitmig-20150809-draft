@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libwrapiter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwrapiter/ChangeLog,v 1.16 2007/02/03 23:43:39 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwrapiter/ChangeLog,v 1.17 2007/04/20 17:07:44 corsair Exp $
+
+  20 Apr 2007; Markus Rothe <corsair@gentoo.org> libwrapiter-1.0.0.ebuild:
+  Added ~ppc64
 
   03 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
   libwrapiter-1.0.0.ebuild:
