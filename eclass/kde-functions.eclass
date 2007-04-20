@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.148 2007/04/19 10:24:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.149 2007/04/20 18:53:35 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -911,16 +911,20 @@ postprocess_desktop_entries() {
 	[[ $EBUILD_PHASE != preinst ]] && [[ $EBUILD_PHASE != install ]] && \
 		die "postprocess_desktop_entries() has to be called in src_install() or pkg_preinst()."
 
-	local desktop_entries="$(find "${D}${PREFIX}/share/applnk" -name '*.desktop' \
-		-not -path '*.hidden*' 2>/dev/null)"
-	if [[ -n ${desktop_entries} ]]; then
-		for entry in ${desktop_entries} ; do
-			dodir ${PREFIX}/share/applications/kde
-			mv ${entry} ${D}${PREFIX}/share/applications/kde
-		done
+	# Only third party apps, KDE 3.x isn't so basedir spec compliant...
+	if [[ -z ${KDEBASE} ]] ; then
+		local desktop_entries="$(find "${D}${PREFIX}/share/applnk" -name '*.desktop' \
+			-not -path '*.hidden*' 2>/dev/null)"
+	
+		if [[ -n ${desktop_entries} ]]; then
+			for entry in ${desktop_entries} ; do
+				dodir ${PREFIX}/share/applications/kde
+				mv ${entry} ${D}${PREFIX}/share/applications/kde
+			done
+		fi
 	fi
 
-	validate_desktop_entries ${PREFIX}/share/applications
+	validate_desktop_entries ${PREFIX}/share/appl{nk,ications}
 }
 
 # is this a kde-base ebuid?
