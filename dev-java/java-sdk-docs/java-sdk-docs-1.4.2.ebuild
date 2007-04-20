@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.4.2.ebuild,v 1.18 2006/10/05 17:21:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.4.2.ebuild,v 1.19 2007/04/20 10:48:04 caster Exp $
 
 At="j2sdk-1_4_2-doc.zip"
 S="${WORKDIR}/docs"
@@ -9,7 +9,7 @@ DESCRIPTION="Javadoc for Java SDK version 1.4.2"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/download.html"
 LICENSE="sun-j2sl"
 SLOT="1.4.2"
-KEYWORDS="-alpha amd64 -hppa -mips ppc ppc64 s390 x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 s390 x86"
 IUSE=""
 DEPEND=">=app-arch/unzip-5.50-r1"
 RESTRICT="fetch"

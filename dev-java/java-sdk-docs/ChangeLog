@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.45 2007/02/04 23:40:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.46 2007/04/20 10:48:04 caster Exp $
+
+  20 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  -java-sdk-docs-1.4.1.ebuild, java-sdk-docs-1.4.2.ebuild,
+  java-sdk-docs-1.5.0-r1.ebuild, -java-sdk-docs-1.6.0.ebuild,
+  java-sdk-docs-1.6.0-r1.ebuild:
+  Remove obsolete 1.4.1 version and unused 1.6.0 revision; Remove all -arch
+  keywords and add ~ppc ~ppc64 and ~ia64 to 1.4.2 and 1.5.0-r1 where
+  applicable. Because this package just unpacks bunch of html files and thus
+  makes no sense to restrict on any arch.
 
 *java-sdk-docs-1.6.0-r1 (04 Feb 2007)
 
