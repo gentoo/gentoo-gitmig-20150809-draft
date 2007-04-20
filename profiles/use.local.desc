@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2756 2007/04/20 14:26:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2757 2007/04/20 15:52:07 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -510,11 +510,9 @@ dev-php/PEAR-MDB2:oci8-instant-client - Use dev-db/oracle-instantclient-basic as
 dev-php4/eaccelerator:contentcache - Enable content caching
 dev-php4/eaccelerator:disassembler - Enable the eA disassembler
 dev-php4/eaccelerator:inode - Use inode-based caching
-dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/eaccelerator:contentcache - Enable content caching
 dev-php5/eaccelerator:disassembler - Enable the eA disassembler
 dev-php5/eaccelerator:inode - Use inode-based caching
-dev-php5/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/pecl-pdo-oci:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-php5/pecl-pdo:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-php5/php-gtk:mozembed - Enable GtkMozembed support using either Mozilla or Firefox as backend
@@ -788,8 +786,6 @@ mail-client/pine:largeterminal - Add support for large terminals by doubling the
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 mail-client/squirrelmail:filter - Enable amavisd-new filtering
 mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning of email attachments
-mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
-mail-client/sylpheed-claws:spamassassin - Build spamassassin plugin
 mail-filter/amavisd-new:courier - Add support for usage with courierfilter
 mail-filter/amavisd-new:qmail - Add support for qmail
 mail-filter/ask:procmail - Adds support for procmail
@@ -861,7 +857,6 @@ media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:gs - enable ghostscript support
 media-gfx/inkscape:boost - use external boost
 media-gfx/inkscape:dia - Pull in app-office/dia for dia import extension
-media-gfx/inkscape:effects - enables additional scripts (effects)
 media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/inkscape:postscript - Pull in dependencies needed for the postscript import extension
