@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.21 2007/02/11 00:16:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.22 2007/04/20 10:41:42 betelgeuse Exp $
+
+  20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  ant-owanttask-1.1-r12.ebuild:
+  Add dev-java/xalan to DEPEND.
 
   11 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   -ant-owanttask-1.1-r1.ebuild:
@@ -36,6 +40,8 @@
   06 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
   +files/ant-owanttask-1.1-classpath.patch, ant-owanttask-1.1-r11.ebuild:
   Added missing dependencies, both in DEPEND and jars, to satisfy java-strict
+
+*ant-owanttask-1.1-r11 (01 Jul 2006)
 
   01 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +ant-owanttask-1.1-r11.ebuild:
