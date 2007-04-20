@@ -69,10 +69,10 @@ AUX 0.5.9/14_ntfs_allows_utf8.patch 791 RMD160 51dd2eab4d77bdc10f63500d05621650e
 MD5 6f0b723829536ff43e7d9f42dcd89317 files/0.5.9/14_ntfs_allows_utf8.patch 791
 RMD160 51dd2eab4d77bdc10f63500d05621650ebb58738 files/0.5.9/14_ntfs_allows_utf8.patch 791
 SHA256 eac2b172054dc8c658428f65e2d88454cecf7a5766b359ff7b3a6744878ee65f files/0.5.9/14_ntfs_allows_utf8.patch 791
-AUX 0.5.9/15_spec_fdi_matching.patch 7872 RMD160 c11ebdaa69ed60ccd052bf45e0a04e2d2c3b2e63 SHA1 1f9722ed3a2e32dc0ffafd4948fde2dee9a830d0 SHA256 b80324f79b9da7ad61a650f51090041f632f1491d23378fb1e0db2d566e1a5a4
-MD5 b42a0bd27c128e2e172ccd7bec33c879 files/0.5.9/15_spec_fdi_matching.patch 7872
-RMD160 c11ebdaa69ed60ccd052bf45e0a04e2d2c3b2e63 files/0.5.9/15_spec_fdi_matching.patch 7872
-SHA256 b80324f79b9da7ad61a650f51090041f632f1491d23378fb1e0db2d566e1a5a4 files/0.5.9/15_spec_fdi_matching.patch 7872
+AUX 0.5.9/15_spec_fdi_matching.patch 7971 RMD160 c47e82e91b4b5ee3b59147356e0f06d65cadd00c SHA1 8d7acfae24ae8b6d1585a570c5533b8a4d14900a SHA256 0f5bf01f761260a5af5955ccd6395865316841842edae2451bf8a3acdf4cdb78
+MD5 06c14fb64f9c88f18222eb87593c49fe files/0.5.9/15_spec_fdi_matching.patch 7971
+RMD160 c47e82e91b4b5ee3b59147356e0f06d65cadd00c files/0.5.9/15_spec_fdi_matching.patch 7971
+SHA256 0f5bf01f761260a5af5955ccd6395865316841842edae2451bf8a3acdf4cdb78 files/0.5.9/15_spec_fdi_matching.patch 7971
 AUX 0.5.9/95_gentoo_man_page.patch 18159 RMD160 cd4bf6c16e84464b11de755323ef2d0f5c1a54f9 SHA1 f9de30d705eada8e2f631e51b715b9923f732fb4 SHA256 59d81dcb273f3cdc9c7fc9f195331529642fef2c2150b3eeb3fd98ea555b1893
 MD5 f6d115e0eb501aba476f4df965bfeb6c files/0.5.9/95_gentoo_man_page.patch 18159
 RMD160 cd4bf6c16e84464b11de755323ef2d0f5c1a54f9 files/0.5.9/95_gentoo_man_page.patch 18159
@@ -211,7 +211,7 @@ SHA256 d862b002c9a5547954874b2a0cbadd614381d085e850539e6aef2dd9e9d52dfe files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGJ8eToeSe8B0zEfwRAjVeAJ9AEy0KKdV3zwqRBZKblBJpUFwmTgCeOlyx
-GCPvzjzKJl8FQ2feud7d52A=
-=nGLO
+iD8DBQFGKQNXoeSe8B0zEfwRAvd9AJ9Khpu6SOGHzGSWeV/fDXJIRpvv7gCfcVmH
+YVPP516+0lGBMGAL44kAawE=
+=8gA2
 -----END PGP SIGNATURE-----

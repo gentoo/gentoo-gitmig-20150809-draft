@@ -187,12 +187,14 @@ Index: b/hald/device_info.c
 Index: b/hald/rule.h
 ===================================================================
 --- a/hald/rule.h	2007-03-07 16:52:19.000000000 -0500
-+++ b/hald/rule.h	2007-04-19 14:56:41.000000000 -0400
-@@ -63,6 +63,7 @@
- 	MATCH_INT,
- 	MATCH_UINT64,
- 	MATCH_BOOL,
-+	MATCH_DOUBLE,
- 	MATCH_EXISTS,
- 	MATCH_EMPTY,
- 	MATCH_ISASCII,
++++ b/hald/rule.h	2007-04-20 14:10:31.000000000 -0400
+@@ -79,7 +79,8 @@
+ 	MATCH_COMPARE_GE,
+ 	MATCH_SIBLING_CONTAINS,
+ 	MATCH_COMPARE_NE,
+-	MATCH_CONTAINS_NOT
++	MATCH_CONTAINS_NOT,
++	MATCH_DOUBLE
+ } match_type;
+ 
+ /* a "rule" structure that is a generic node of the fdi file */
