@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ical4j
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ChangeLog,v 1.1 2007/04/11 16:15:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ChangeLog,v 1.2 2007/04/20 12:26:24 ali_bush Exp $
+
+  20 Apr 2007; Alistair John Bush <ali_bush@gentoo.org>
+  ical4j-1.0_beta2.ebuild:
+  Adding ~amd64
 
 *ical4j-1.0_beta2 (11 Apr 2007)
 

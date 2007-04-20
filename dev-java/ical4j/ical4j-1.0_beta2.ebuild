@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.1 2007/04/11 16:15:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.2 2007/04/20 12:26:24 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEP="
 	dev-java/commons-logging
