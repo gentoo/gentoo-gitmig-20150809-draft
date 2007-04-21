@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/selfhtml
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.16 2007/03/02 00:10:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.17 2007/04/21 23:11:19 pylon Exp $
+
+  21 Apr 2007; Lars Weiler <pylon@gentoo.org> -selfhtml-8.1.1.ebuild,
+  selfhtml-8.1.2.ebuild:
+  Stable on all arches as this is a copy-only ebuild and does not need any
+  architecture-specific tests.
 
 *selfhtml-8.1.2 (02 Mar 2007)
 
