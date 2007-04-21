@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/lisa-3.5.6.ebuild,v 1.1 2007/01/16 21:56:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/lisa-3.5.6.ebuild,v 1.2 2007/04/21 22:06:56 philantrop Exp $
 
 KMNAME=kdenetwork
 KMMODULE=lanbrowsing
@@ -32,9 +32,8 @@ src_install() {
 	sed -e "s:_KDEDIR_:${KDEDIR}:g" ${WORKDIR}/patches/reslisa > ${D}/etc/init.d/reslisa
 	chmod +x ${D}/etc/init.d/*
 
-	insinto /etc/conf.d
-	newins ${WORKDIR}/patches/lisa.conf lisa
-	newins ${WORKDIR}/patches/reslisa.conf reslisa
+	newconfd ${WORKDIR}/patches/lisa.conf lisa
+	newconfd ${WORKDIR}/patches/reslisa.conf reslisa
 
 	for x in /etc/lisarc /etc/reslisarc; do
 		echo '# Default lisa/reslisa configfile' > $D/$x
