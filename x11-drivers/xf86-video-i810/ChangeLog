@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.53 2007/04/21 05:58:03 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.54 2007/04/21 16:16:59 joshuabaergen Exp $
+
+  21 Apr 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xf86-video-i810-1.6.0.ebuild, -xf86-video-i810-1.7.0-r1.ebuild,
+  -xf86-video-i810-1.7.2.ebuild, -xf86-video-i810-1.7.2-r1.ebuild,
+  -xf86-video-i810-1.7.3.ebuild:
+  Drop unused versions.
 
   21 Apr 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   -xf86-video-i810-1.9.91.ebuild, -xf86-video-i810-1.9.92.ebuild,
