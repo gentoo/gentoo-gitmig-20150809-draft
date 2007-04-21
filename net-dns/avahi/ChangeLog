@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.96 2007/04/21 16:47:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.97 2007/04/21 17:59:22 swegener Exp $
+
+  21 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.18-inotify-ifdef-fix.patch, avahi-0.6.18.ebuild:
+  Fix for systems where inotify is not available.
 
   21 Apr 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.18.ebuild:
   Workaround for ServiceTypeDatabase.py bug.

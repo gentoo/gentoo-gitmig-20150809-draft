@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.18.ebuild,v 1.3 2007/04/21 16:47:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.18.ebuild,v 1.4 2007/04/21 17:59:22 swegener Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -93,6 +93,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
+	epatch "${FILESDIR}"/${P}-inotify-ifdef-fix.patch
 
 	rm -f avahi-python/avahi/ServiceTypeDatabase.py
 }
