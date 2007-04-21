@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.9 2006/08/09 14:40:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.10 2007/04/21 23:10:58 tester Exp $
 
 
 
@@ -28,11 +28,8 @@ src_install() {
 	docinto examples/
 	dodoc examples/*
 
-	insinto /etc/init.d
-	newins ${FILESDIR}/i8k.init i8k
-	fperms 755 /etc/init.d/i8k
-	insinto /etc/conf.d
-	newins ${FILESDIR}/i8k.conf i8k
+	newinitd ${FILESDIR}/i8k.init i8k
+	newconfd ${FILESDIR}/i8k.conf i8k
 
 	if use tk
 	then
