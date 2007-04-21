@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.25 2007/04/11 08:00:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.26 2007/04/21 09:40:12 dev-zero Exp $
+
+  21 Apr 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/cppunit-1.10.2-m4.patch, -cppunit-1.8.0.ebuild,
+  -cppunit-1.10.2.ebuild:
+  Dropped old version.
 
   11 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   cppunit-1.11.6.ebuild:
@@ -15,6 +20,9 @@
 
   29 Mar 2007; Andrej Kacian <ticho@gentoo.org> cppunit-1.11.6.ebuild:
   Stable on x86, bug #172604.
+
+  28 Mar 2007; Tiziano Müller <dev-zero@gentoo.org> -cppunit-1.8.0.ebuild:
+  Dropped old version.
 
 *cppunit-1.12.0 (28 Mar 2007)
 
