@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.18.ebuild,v 1.1 2007/04/20 21:27:21 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.18-r1.ebuild,v 1.1 2007/04/21 14:54:04 voxus Exp $
 
-inherit eutils
+inherit eutils ssl-cert
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 
@@ -74,7 +74,17 @@ src_install() {
 	cp ${FILESDIR}/nginx-r1 ${T}/nginx
 	doinitd ${T}/nginx
 
-	cp ${FILESDIR}/nginx.conf-r3 conf/nginx.conf
+	cp ${FILESDIR}/nginx.conf-r4 conf/nginx.conf
+
+	use ssl && {
+		if [ ! -f /etc/ssl/${PN}/${PN}.key ]; then
+			dodir /etc/ssl/${PN}
+			insinto /etc/ssl/${PN}
+			docert ${PN}
+		fi
+
+		sed -e 's:# ::' -i conf/nginx.conf
+	}
 
 	dodir /etc/${PN}
 	insinto /etc/${PN}

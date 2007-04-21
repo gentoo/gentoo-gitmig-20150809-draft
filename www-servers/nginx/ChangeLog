@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.140 2007/04/20 21:27:21 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.141 2007/04/21 14:54:04 voxus Exp $
+
+*nginx-0.5.18-r1 (21 Apr 2007)
+
+  21 Apr 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +files/nginx.conf-r4, -nginx-0.5.18.ebuild, +nginx-0.5.18-r1.ebuild:
+  Closing bug #173209.
 
 *nginx-0.5.18 (20 Apr 2007)
 
