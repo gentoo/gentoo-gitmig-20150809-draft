@@ -1,0 +1,15 @@
+diff -ur xfce-utils-4.4.1.orig/scripts/startxfce4.in xfce-utils-4.4.1/scripts/startxfce4.in
+--- xfce-utils-4.4.1.orig/scripts/startxfce4.in	2007-04-02 08:34:54.000000000 +0300
++++ xfce-utils-4.4.1/scripts/startxfce4.in	2007-04-21 15:38:21.000000000 +0300
+@@ -28,9 +28,9 @@
+ 
+ if test "x$XDG_DATA_DIRS" = "x"
+ then
+-  XDG_DATA_DIRS="usr/local/share:/usr/share:/@datadir@"
++  XDG_DATA_DIRS="/usr/local/share:/usr/share"
+ else
+-  XDG_DATA_DIRS="$XDG_DATA_DIRS:@datadir@"
++  XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/local/share:/usr/share"
+ fi
+ export XDG_DATA_DIRS
+ 
