@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>video</herd>
+	<maintainer>
+		<email>zzam@gentoo.org</email>
+		<name>Matthias Schwarzott</name>
+		<description>Proxy maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>daniel.pielmeier@googlemail.com</email>
+		<name>Daniel Pielmeier</name>
+		<description>The proxied maintainer</description>
+	</maintainer>
+</pkgmetadata>
