@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/erobot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erobot/ChangeLog,v 1.8 2007/03/07 09:42:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erobot/ChangeLog,v 1.9 2007/04/21 08:36:19 ulm Exp $
+
+*erobot-2.1.0-r1 (21 Apr 2007)
+
+  21 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +files/51erobot-gentoo.el,
+  erobot-2.1.0.ebuild, +erobot-2.1.0-r1.ebuild:
+  HOMEPAGE updated. Use autoload instead of require.
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50erobot-gentoo.el:
