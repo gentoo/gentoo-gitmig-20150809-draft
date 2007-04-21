@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.45 2007/04/20 19:01:56 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.46 2007/04/21 07:16:28 corsair Exp $
+
+  21 Apr 2007; Markus Rothe <corsair@gentoo.org> liboil-0.3.11.ebuild:
+  Back to ~ppc64
 
 *liboil-0.3.11 (19 Apr 2007)
 
