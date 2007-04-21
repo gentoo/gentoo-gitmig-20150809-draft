@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.158 2007/04/18 14:01:33 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.159 2007/04/21 23:54:27 genstef Exp $
+
+*eix-0.9.3 (21 Apr 2007)
+
+  21 Apr 2007; Stefan Schweizer <genstef@gentoo.org> -eix-0.7.9.ebuild,
+  +eix-0.9.3.ebuild:
+  version bump
 
   18 Apr 2007; Alexander H. Færøy <eroyf@gentoo.org> eix-0.8.8.ebuild:
   Stable on MIPS; bug #170310
