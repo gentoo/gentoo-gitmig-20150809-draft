@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.5 2006/05/05 10:42:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.6 2007/04/21 20:52:27 chainsaw Exp $
 
 inherit eutils
 
@@ -77,8 +77,7 @@ src_install() {
 		doexe ${FILESDIR}/self-cert.sh
 	fi
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/ejabberd-0.7.5.confd ejabberd
+	newconfd ${FILESDIR}/ejabberd-0.7.5.confd ejabberd
 
 	# This file is required to make ejabberd use SRV records for
 	# server-to-server connections, according to
