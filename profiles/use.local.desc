@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2757 2007/04/20 15:52:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2758 2007/04/21 11:56:29 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1273,6 +1273,8 @@ net-dns/pdnsd:isdn - Enable ISDN features
 net-dns/pdnsd:underscores - Enable support for domain names containing underscores
 net-firewall/ipsec-tools:idea - Enable support for the patented IDEA algorithm
 net-firewall/ipsec-tools:rc5 - Enable support for the patented RC5 algorithm
+net-firewall/ipsec-tools:nat - Enable NAT-Traversal
+net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth support
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-firewall/iptables:imq - Enable support for intermediate queueing devices (http://www.linuximq.net)
 net-firewall/iptables:l7filter - Enable support for layer 7 filtering (http://l7-filter.sourceforge.net)
