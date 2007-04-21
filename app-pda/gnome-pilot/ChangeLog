@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.30 2007/02/22 01:23:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.31 2007/04/21 10:06:45 armin76 Exp $
+
+  21 Apr 2007; Raúl Porcel <armin76@gentoo.org> gnome-pilot-2.0.13.ebuild:
+  ia64 stable
 
 *gnome-pilot-2.0.15 (22 Feb 2007)
 
