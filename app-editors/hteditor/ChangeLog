@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.29 2007/04/21 19:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.30 2007/04/21 22:24:03 dragonheart Exp $
+
+*hteditor-2.0.4 (21 Apr 2007)
+
+  21 Apr 2007; Daniel Black <dragonheart@gentoo.org> hteditor-2.0.ebuild,
+  hteditor-2.0.3.ebuild, +hteditor-2.0.4.ebuild:
+  version bump. Thanks to author Sebastian. Remove unused inherit lines from
+  previous versions
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> hteditor-2.0.ebuild:
   x86 stable wrt bug 175272
