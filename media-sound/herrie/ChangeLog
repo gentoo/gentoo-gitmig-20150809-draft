@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/herrie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.5 2007/04/17 21:21:02 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.6 2007/04/21 17:17:18 rbu Exp $
+
+*herrie-1.6.1 (21 Apr 2007)
+
+  21 Apr 2007; Robert Buchholz <rbu@gentoo.org>
+  -files/herrie-1.5.1-gnu-source-define.patch, -herrie-1.5.1.ebuild,
+  -herrie-1.6.ebuild, +herrie-1.6.1.ebuild:
+  Version bump featuring polish LINGUAS and unicode support, drop old
 
   17 Apr 2007; Robert Buchholz <rbu@gentoo.org> herrie-1.6.ebuild:
   ao and sdl at the same time doesn't work. Added a clarification

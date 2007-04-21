@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.ebuild,v 1.2 2007/04/17 21:21:02 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.1.ebuild,v 1.1 2007/04/21 17:17:18 rbu Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://herrie.info/distfiles/${P}.tar.bz2"
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao http modplug mp3 scrobbler sdl sndfile vorbis xspf linguas_nl linguas_tr linguas_de"
+IUSE="ao http modplug mp3 scrobbler sdl sndfile vorbis xspf unicode linguas_nl linguas_tr linguas_de linguas_pl"
 
 DEPEND="sys-libs/ncurses
 	>=dev-libs/glib-2.0
@@ -37,6 +37,11 @@ pkg_setup() {
 	if use sdl && use ao ; then
 		ewarn "You cannot use SDL and ao at the same time, using ao."
 	fi
+	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
+		echo
+		eerror "Rebuild sys-libs/ncurses with USE=unicode if you need unicode in herrie."
+		die "Rebuild sys-libs/ncurses with USE=unicode if you need unicode in herrie."
+	fi
 }
 
 src_unpack() {
@@ -44,6 +49,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.5.1-chost.patch"
+	sed -i "47s:CFG_STRIP=-s:unset CFG_STRIP:" configure
 }
 
 src_compile() {
@@ -55,6 +61,7 @@ src_compile() {
 	use scrobbler || EXTRA_CONF="${EXTRA_CONF} no_scrobbler"
 	use sdl && ! use ao && EXTRA_CONF="${EXTRA_CONF} sdl"
 	use sndfile || EXTRA_CONF="${EXTRA_CONF} no_sndfile"
+	use unicode || EXTRA_CONF="${EXTRA_CONF} ncurses"
 	use vorbis || EXTRA_CONF="${EXTRA_CONF} no_vorbis"
 	use xspf || EXTRA_CONF="${EXTRA_CONF} no_xspf"
 
@@ -63,15 +70,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin herrie
-	doman herrie.1
-
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README ChangeLog
-
-	insinto /etc
-	newins herrie.conf.sample herrie.conf
-
-	use linguas_nl && domo nl.mo
-	use linguas_tr && domo tr.mo
-	use linguas_de && domo de.mo
+	mv  ${D}/etc/herrie.conf{.sample,}
 }
