@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.6.ebuild,v 1.7 2007/04/21 22:35:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.6.ebuild,v 1.8 2007/04/21 23:03:46 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -81,8 +81,7 @@ src_install() {
 	# lisa, reslisa initscripts
 	sed -e "s:_KDEDIR_:${KDEDIR}:g" "${WORKDIR}/patches/lisa" > "${T}/lisa"
 	sed -e "s:_KDEDIR_:${KDEDIR}:g" "${WORKDIR}/patches/reslisa" > "${T}/reslisa"
-	exeinto /etc/init.d
-	doexe "${T}/lisa" "${T}/reslisa"
+	doinitd "${T}/lisa" "${T}/reslisa"
 
 	newconfd "${WORKDIR}/patches/lisa.conf" lisa
 	newconfd "${WORKDIR}/patches/reslisa.conf" reslisa
