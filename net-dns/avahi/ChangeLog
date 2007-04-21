@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.95 2007/04/20 13:47:48 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.96 2007/04/21 16:47:52 swegener Exp $
+
+  21 Apr 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.18.ebuild:
+  Workaround for ServiceTypeDatabase.py bug.
 
   20 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> avahi-0.6.18.ebuild:
   net-dns/avahi-0.6.18 does not build under ~x86-fbsd (bug #175333)
