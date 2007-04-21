@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.7.18.ebuild,v 1.2 2007/03/06 21:51:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.7.18.ebuild,v 1.3 2007/04/21 22:03:18 gurligebis Exp $
 
 inherit eutils
 
@@ -76,10 +76,8 @@ src_install() {
 ####	insinto ${INSTALL_DIR}/data
 ####	newins data/example.conf services.conf
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/anope.initd anope
-	insinto /etc/conf.d
-	newins ${FILESDIR}/anope.confd anope
+	newinitd ${FILESDIR}/anope.initd anope
+	newconfd ${FILESDIR}/anope.confd anope
 
 	insinto ${INSTALL_DIR}/modules
 	doins src/modules/*.so
