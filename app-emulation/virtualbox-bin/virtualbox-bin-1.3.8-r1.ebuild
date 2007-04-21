@@ -13,7 +13,7 @@ SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="-amd64 x86"
 IUSE="additions nowrapper sdk vditool"
 
 DEPEND=">=sys-libs/glibc-2.3.5"

@@ -11,7 +11,7 @@ SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="!<app-emulation/virtualbox-bin-1.3.6

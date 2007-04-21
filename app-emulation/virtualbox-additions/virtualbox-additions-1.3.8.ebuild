@@ -13,7 +13,7 @@ SRC_URI="http://virtualbox.org/download/${PV}/${MY_P}.iso"
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="!app-emulation/virtualbox-bin"
