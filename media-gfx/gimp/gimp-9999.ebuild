@@ -1,27 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.7 2007/01/28 11:50:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.8 2007/04/21 04:34:25 hanno Exp $
 
-inherit alternatives cvs eutils fdo-mime flag-o-matic
+inherit subversion fdo-mime flag-o-matic
 
-ECVS_SERVER="anoncvs.gimp.org:/cvs/gnome"
-ECVS_MODULE="gimp"
-ECVS_AUTH="pserver"
-ECVS_USER="anonymous"
+ESVN_REPO_URI="http://svn.gnome.org/svn/gimp/trunk/"
 
-S=${WORKDIR}/${ECVS_MODULE}
-
-DESCRIPTION="GNU Image Manipulation Program from CVS HEAD"
+DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="-*"
+KEYWORDS=""
 
-IUSE="alsa aalib altivec debug doc gtkhtml gnome jpeg lcms mmx mng pdf png print python smp sse svg tiff wmf"
+IUSE="alsa aalib altivec debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
 
-RDEPEND=">=dev-libs/glib-2.10.2
+RDEPEND=">=dev-libs/glib-2.12.3
+		>=x11-libs/gtk+-2.8.20-r1
 		>=x11-libs/pango-1.12.2
 		>=media-libs/freetype-2.1.7
 		>=media-libs/fontconfig-2.2.0
@@ -34,19 +30,17 @@ RDEPEND=">=dev-libs/glib-2.10.2
 		alsa? ( >=media-libs/alsa-lib-1.0.0 )
 		doc? ( app-doc/gimp-help )
 		gnome? ( >=gnome-base/gnome-vfs-2.10.0
-				>=gnome-base/libgnomeui-2.10.0
-				>=gnome-base/gnome-keyring-0.4.5 )
+			>=gnome-base/libgnomeui-2.10.0
+			>=gnome-base/gnome-keyring-0.4.5 )
 		gtkhtml? ( =gnome-extra/gtkhtml-2* )
 		jpeg? ( >=media-libs/jpeg-6b-r2
-				>=media-libs/libexif-0.6.0 )
+			>=media-libs/libexif-0.6.0 )
 		lcms? ( media-libs/lcms )
 		mng? ( media-libs/libmng )
 		pdf? ( >=app-text/poppler-bindings-0.3.1 )
 		png? ( >=media-libs/libpng-1.2.2 )
-		print? ( >=x11-libs/gtk+-2.9.3 )
-		!print? ( >=x11-libs/gtk+-2.8.17 )
 		python?	( >=dev-lang/python-2.2.1
-				>=dev-python/pygtk-2 )
+			>=dev-python/pygtk-2.8 )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		svg? ( >=gnome-base/librsvg-2.8.0 )
 		wmf? ( >=media-libs/libwmf-0.2.8 )"
@@ -65,13 +59,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	cvs_src_unpack
-
-	cd "${S}"
-	epatch ${FILESDIR}/${P}-autogen-gentoo.patch
-}
-
 src_compile() {
 	# workaround portage variable leakage
 	local AA=
@@ -80,10 +67,10 @@ src_compile() {
 	# gimp uses floating point math, needs accuracy (#98685)
 	filter-flags "-fno-inline" "-ffast-math"
 
-	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die "autogen.sh failed"
+	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
+	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die
 
-	econf \
-		--disable-default-binary \
+	econf --enable-default-binary \
 		--with-x \
 		$(use_with aalib aa) \
 		$(use_with alsa) \
@@ -96,9 +83,8 @@ src_compile() {
 		$(use_with lcms) \
 		$(use_enable mmx) \
 		$(use_with mng libmng) \
-		$(use_with png libpng) \
 		$(use_with pdf poppler) \
-		$(use_with print) \
+		$(use_with png libpng) \
 		$(use_enable python) \
 		$(use_enable smp mp) \
 		$(use_enable sse) \
@@ -116,13 +102,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local binary
-
-	# install symlinks for everything but gimptool (#136012)
-	for binary in gimp gimp-console gimp-remote; do
-		alternatives_auto_makesym "/usr/bin/${binary}" "/usr/bin/${binary}-[0-9].[0-9]"
-	done
-
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 
