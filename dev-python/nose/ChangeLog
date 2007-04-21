@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.1 2007/02/27 23:11:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.2 2007/04/21 23:58:57 pythonhead Exp $
+
+*nose-0.9.3 (21 Apr 2007)
+
+  21 Apr 2007; Rob Cakebread <pythonhead@gentoo.org> +nose-0.9.3.ebuild:
+  Version bump.
 
   03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml:
   Initial ebuild for bug #141662 (thanks to Brad Walker)
