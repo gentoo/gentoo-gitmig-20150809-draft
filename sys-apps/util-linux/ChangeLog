@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.182 2007/04/13 10:59:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.183 2007/04/21 21:07:12 armin76 Exp $
+
+  21 Apr 2007; Raúl Porcel <armin76@gentoo.org> util-linux-2.12r-r6.ebuild:
+  ia64 + x86 stable
 
 *util-linux-9999 (13 Apr 2007)
 
