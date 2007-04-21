@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7156 2007/04/21 21:22:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7157 2007/04/21 21:41:43 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Christian Heim <phreak@gentoo.org> (21 Apr 2007)
-# sys-apps/chpax has been obsoleted by sys-apps/paxctl.
-# Going away sometime soon
-sys-apps/chpax
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Apr 2007)
 # masked for removal in May
