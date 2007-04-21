@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8.ebuild,v 1.1 2007/03/20 10:46:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8.ebuild,v 1.2 2007/04/21 20:54:56 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -76,8 +76,7 @@ src_install() {
 		insinto /etc
 		newins ${FILESDIR}/lilo.conf lilo.conf.example
 
-		insinto /etc/conf.d
-		newins ${S}/dolilo/dolilo.conf.d dolilo.example
+		newconfd ${S}/dolilo/dolilo.conf.d dolilo.example
 
 		doman manPages/*.[5-8]
 		dodoc CHANGES COPYING INCOMPAT README*
