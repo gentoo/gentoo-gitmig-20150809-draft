@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.5-r2.ebuild,v 1.10 2007/04/21 20:46:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.5-r2.ebuild,v 1.11 2007/04/21 22:35:06 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -61,9 +61,9 @@ src_compile() {
 	export BINDNOW_FLAGS="$(bindnow-flags)"
 
 	local myconf="--with-libidn
-				  $(use_enable sametime sametime-plugin)
-				  $(use_enable slp) $(use_with wifi) $(use_enable jingle)
-				  --without-xmms --without-external-libgadu"
+					$(use_enable sametime sametime-plugin)
+					$(use_enable slp) $(use_with wifi) $(use_enable jingle)
+					--without-xmms --without-external-libgadu"
 
 	kde_src_compile
 }
@@ -83,7 +83,6 @@ src_install() {
 	exeinto /etc/init.d
 	doexe "${T}/lisa" "${T}/reslisa"
 
-	insinto /etc/conf.d
-	newins "${WORKDIR}/patches/lisa.conf" lisa
-	newins "${WORKDIR}/patches/reslisa.conf" reslisa
+	newconfd "${WORKDIR}/patches/lisa.conf" lisa
+	newconfd "${WORKDIR}/patches/reslisa.conf" reslisa
 }
