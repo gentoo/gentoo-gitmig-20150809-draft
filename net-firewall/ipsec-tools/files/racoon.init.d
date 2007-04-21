@@ -41,13 +41,13 @@ start() {
 		eerror "Error while loading ipsec policies"
 	fi
 	ebegin "Starting racoon"
-	/usr/sbin/racoon -f ${RACOON_CONF} ${RACOON_OPTS}
+	start-stop-daemon -S -x /usr/sbin/racoon -- -f ${RACOON_CONF} ${RACOON_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping racoon"
-	kill `cat /var/run/racoon.pid`
+	start-stop-daemon -K -p /var/run/racoon.pid
 	eend $?
 	if [ -n "${RACOON_RESET_TABLES}" ]; then
 		ebegin "Flushing policy entries"

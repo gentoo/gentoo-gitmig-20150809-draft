@@ -1,6 +1,21 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.49 2007/03/12 21:03:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.50 2007/04/21 12:24:23 dragonheart Exp $
+
+*ipsec-tools-0.6.7 (21 Apr 2007)
+
+  21 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  -files/ipsec-tools-0.4-dos-fix.diff, -files/ipsec-tools-0.4-gcc34.diff,
+  -files/ipsec-tools-0.5-ipv6.diff,
+  -files/ipsec-tools-0.5-isakmp-underrun.diff,
+  -files/ipsec-tools-0.6.2-dos-fix.diff, -files/ipsec.conf.sample,
+  files/racoon.init.d, -ipsec-tools-0.4-r2.ebuild,
+  -ipsec-tools-0.6.2-r1.ebuild, -ipsec-tools-0.6.3.ebuild,
+  +ipsec-tools-0.6.7.ebuild:
+  security version bump as per bug #173219. Init script enhancement as per bug
+  #151375 thanks Hopeless. Big thanks to Kalin KOZHUHAROV bug #152971 comment
+  23 and Cyrius for the major enhancements to this ebuild. Cleaned out old 
+  ebuilds too
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> ipsec-tools-0.6.5.ebuild:
   x86 stable
