@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.112 2007/04/20 10:49:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.113 2007/04/21 06:23:19 corsair Exp $
+
+  21 Apr 2007; Markus Rothe <corsair@gentoo.org> ibm-jdk-bin-1.5.0.4.ebuild:
+  Stable on ppc64; bug #175284
 
 *ibm-jdk-bin-1.5.0.4-r1 (20 Apr 2007)
 
