@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.138 2007/04/08 08:34:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.139 2007/04/21 07:39:46 zzam Exp $
+
+  21 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0-r5.ebuild,
+  lirc-0.8.0-r8.ebuild, lirc-0.8.1.ebuild:
+  Corrected --without-X to the correct lower case version --without-x, now it
+  has an effect, solving Bug #173174.
 
   08 Apr 2007; Christian Faulhammer <opfer@gentoo.org> lirc-0.8.1.ebuild:
   stable amd64, bug 166557

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.9 2007/04/08 08:34:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.10 2007/04/21 07:39:46 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -208,7 +208,7 @@ pkg_setup() {
 	    		    --with-kerneldir=${KV_DIR}
 			        --with-moduledir=/lib/modules/${KV_FULL}/misc
 	    		    $(use_enable debug)
-					$(use_with X)
+					$(use_with X x)
 					${MY_OPTS}"
 
 	einfo
