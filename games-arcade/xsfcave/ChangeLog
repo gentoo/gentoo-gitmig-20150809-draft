@@ -1,0 +1,9 @@
+# ChangeLog for games-arcade/xsfcave
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.1 2007/04/21 09:53:03 tupone Exp $
+
+*xsfcave-0.5 (21 Apr 2007)
+
+  21 Apr 2007; <atupone@gentoo.org> +metadata.xml, +xsfcave-0.5.ebuild:
+  New package. Request bug #128731 by Cristiano Chiucchiolo
+
