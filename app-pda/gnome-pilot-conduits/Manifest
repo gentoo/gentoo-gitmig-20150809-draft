@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gnome-pilot-conduits-2.0.10-invalid-linguas.patch 573 RMD160 b0369961f6d97c875b8b3a84aa2a2ed81f56cca7 SHA1 73aca019c9f0a41c8db528a734ae80ce2294a3d9 SHA256 7927112aa408a4186c0e55d98e7cbff2e08c58a11d00cea98a4b846c573eea37
 MD5 8d63754907c3aaa466046463fb767087 files/gnome-pilot-conduits-2.0.10-invalid-linguas.patch 573
 RMD160 b0369961f6d97c875b8b3a84aa2a2ed81f56cca7 files/gnome-pilot-conduits-2.0.10-invalid-linguas.patch 573
@@ -25,18 +22,18 @@ EBUILD gnome-pilot-conduits-2.0.12.ebuild 641 RMD160 4b160955224af8b64c6ed33175d
 MD5 fee7cf100ee14dce38297d8c33a61a65 gnome-pilot-conduits-2.0.12.ebuild 641
 RMD160 4b160955224af8b64c6ed33175dbd642bdc5e132 gnome-pilot-conduits-2.0.12.ebuild 641
 SHA256 6244b03133f31bd3707c2207bf5c28f451975223958782aac9299338ff3ff3b3 gnome-pilot-conduits-2.0.12.ebuild 641
-EBUILD gnome-pilot-conduits-2.0.13.ebuild 637 RMD160 b4edbf14c8a124bfa1adb38969a039e6894b8106 SHA1 2982e4e9ab982b3e8b0ca150b8675d9faad77c35 SHA256 a0371e746ce04b64e2b221f7d6b1b7175f98c0bbe8b7d3232e6fc445c0301991
-MD5 49efbb6a0edd8b4629bfdde9be12802e gnome-pilot-conduits-2.0.13.ebuild 637
-RMD160 b4edbf14c8a124bfa1adb38969a039e6894b8106 gnome-pilot-conduits-2.0.13.ebuild 637
-SHA256 a0371e746ce04b64e2b221f7d6b1b7175f98c0bbe8b7d3232e6fc445c0301991 gnome-pilot-conduits-2.0.13.ebuild 637
+EBUILD gnome-pilot-conduits-2.0.13.ebuild 637 RMD160 ac4a6bb9df5f6dc0311ebce0983aa18983d18dc1 SHA1 8376e78c1af36fe7a8ca428f21fbce07ff201e19 SHA256 1b729257da1cd7b577d2564bb1fce7248a84b35f18c183c11a9c8334853d5b7c
+MD5 5915606d7c6b0308f593d2c563f2fb40 gnome-pilot-conduits-2.0.13.ebuild 637
+RMD160 ac4a6bb9df5f6dc0311ebce0983aa18983d18dc1 gnome-pilot-conduits-2.0.13.ebuild 637
+SHA256 1b729257da1cd7b577d2564bb1fce7248a84b35f18c183c11a9c8334853d5b7c gnome-pilot-conduits-2.0.13.ebuild 637
 EBUILD gnome-pilot-conduits-2.0.15.ebuild 638 RMD160 33273bd11b327f9b10b0812ade0cf538d1a5ef6e SHA1 369d2bcd6841ebf58abd0306f49cdc7a8467630e SHA256 4b7a51875f00462f2028aefd1fcc95a500585b732395be8f5a81da0322f59d1c
 MD5 b40652c87f0e7b5184f319fce5bb9d1a gnome-pilot-conduits-2.0.15.ebuild 638
 RMD160 33273bd11b327f9b10b0812ade0cf538d1a5ef6e gnome-pilot-conduits-2.0.15.ebuild 638
 SHA256 4b7a51875f00462f2028aefd1fcc95a500585b732395be8f5a81da0322f59d1c gnome-pilot-conduits-2.0.15.ebuild 638
-MISC ChangeLog 5702 RMD160 9abf1c9ace4e3147b83aaaa82ac17e91f26a87cf SHA1 c839cd7d9930f339b0be7c5635e42263011e6ed4 SHA256 d30f34201972c2260b5303878adf3f15ffbba8032e0a57318a43692f92f8234c
-MD5 00b7d54efb01725d904a038ff63d6fdc ChangeLog 5702
-RMD160 9abf1c9ace4e3147b83aaaa82ac17e91f26a87cf ChangeLog 5702
-SHA256 d30f34201972c2260b5303878adf3f15ffbba8032e0a57318a43692f92f8234c ChangeLog 5702
+MISC ChangeLog 5807 RMD160 40ae1012d0f3c82f8e3f859fedd88eacf8ba2bb3 SHA1 4a7b8b152bb229bd2f9c264b58709f66a454d7e6 SHA256 e2034d1b06b25e89566fff82899b526adfacb0b813efabb04381c98ddfcf1673
+MD5 835e237fc0be27ab668e2d635d4d688d ChangeLog 5807
+RMD160 40ae1012d0f3c82f8e3f859fedd88eacf8ba2bb3 ChangeLog 5807
+SHA256 e2034d1b06b25e89566fff82899b526adfacb0b813efabb04381c98ddfcf1673 ChangeLog 5807
 MISC metadata.xml 175 RMD160 5a758a9c6be5886bcabe17412a27ddb9c4c1a091 SHA1 5f39f2aee5dc458e1f1184425ff00a600cfbeb93 SHA256 ad69c13297c0e440519a25f99fdcefd579e75f58d652bb174055ae0c827b8543
 MD5 1e1031eae2f36a13b2cd73550a31d03d metadata.xml 175
 RMD160 5a758a9c6be5886bcabe17412a27ddb9c4c1a091 metadata.xml 175
@@ -56,10 +53,3 @@ SHA256 3383bf296f96d149a16b2b11f15cef9104fd68233e35769cd2405476d9bd3175 files/di
 MD5 5dfefe3d06624ced301898773d941c2c files/digest-gnome-pilot-conduits-2.0.15 286
 RMD160 68d43405684091ce56b679ba156578d47f141cfa files/digest-gnome-pilot-conduits-2.0.15 286
 SHA256 5d327c4be4d5674e2ac9df9998606c83956e552dfb450febb07028e967a049ef files/digest-gnome-pilot-conduits-2.0.15 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
-
-iD8DBQFF3PGVomPajV0RnrERAj3lAJ9pIojRzMUzIv/uJClFv5OPzr86wgCdE1Yk
-vXXSsmKv3RzQmBYzmxvdywc=
-=AIBE
------END PGP SIGNATURE-----
