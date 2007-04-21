@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre3.ebuild,v 1.1 2007/02/19 04:45:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre3.ebuild,v 1.2 2007/04/21 22:26:50 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -49,9 +49,7 @@ src_install() {
 
 	### Only install the init scripts if livecd is enabled
 	if use livecd; then
-		exeinto /etc/init.d
-		newexe "${S}"/xac.init xac
-		insinto /etc/conf.d
-		newins "${S}"/xac.conf xac
+		newinitd "${S}"/xac.init xac
+		newconfd "${S}"/xac.conf xac
 	fi
 }

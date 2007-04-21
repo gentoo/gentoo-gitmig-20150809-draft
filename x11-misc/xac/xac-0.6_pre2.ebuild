@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre2.ebuild,v 1.1 2007/02/18 06:54:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre2.ebuild,v 1.2 2007/04/21 22:26:50 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -47,8 +47,6 @@ src_install() {
 	insinto ${xac_base}
 	doins "${S}"/py/*
 
-	exeinto /etc/init.d
-	newexe "${S}"/xac.init xac
-	insinto /etc/conf.d
-	newins "${S}"/xac.conf xac
+	newinitd "${S}"/xac.init xac
+	newconfd "${S}"/xac.conf xac
 }
