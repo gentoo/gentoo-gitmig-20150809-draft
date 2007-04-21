@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXres
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.32 2007/02/04 18:26:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.33 2007/04/21 15:54:22 joshuabaergen Exp $
+
+  21 Apr 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libXres-1.0.2.ebuild:
+  Drop unused version.
 
   04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   libXres-1.0.1.ebuild, libXres-1.0.2.ebuild, libXres-1.0.3.ebuild:
