@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-2.1.17.ebuild,v 1.5 2007/01/09 12:15:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-2.1.17.ebuild,v 1.6 2007/04/21 20:49:17 nelchael Exp $
 
 inherit java-pkg eutils
 
@@ -41,21 +41,9 @@ src_install() {
 	keepdir /var/log/${PN}/
 
 	# INIT SCRIPTS AND ENV
-
-	cp -a ${FILESDIR}/${PV}/resin.init ${S}/resin
-	insinto /etc/init.d
-	insopts -m0750
-	doins ${S}/resin
-
-	cp -a ${FILESDIR}/${PV}/resin.conf ${S}/resin
-	insinto /etc/conf.d
-	insopts -m0755
-	doins ${S}/resin
-
-	cp -a ${FILESDIR}/${PV}/21resin ${S}/21resin
-	insinto /etc/env.d
-	insopts -m0755
-	doins ${S}/21resin
+	newinitd "${FILESDIR}/${PV}/resin.init" "${PN}"
+	newconfd "${FILESDIR}/${PV}/resin.conf" "${PN}"
+	doenvd "${FILESDIR}/${PV}/21resin"
 
 	dodir /opt/resin || die
 	dodoc LICENSE readme.txt
