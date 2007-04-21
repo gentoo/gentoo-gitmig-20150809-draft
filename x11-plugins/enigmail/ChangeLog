@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.59 2007/04/19 20:52:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.60 2007/04/21 19:59:12 armin76 Exp $
+
+  21 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/0.95.0-replytolist.patch, enigmail-0.95.0.ebuild:
+  Add patch to make replytolist work if >enigmail-0.95.0, thanks to Caster for
+  testing this
 
   19 Apr 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.3-r2.ebuild,
   enigmail-0.95.0.ebuild:

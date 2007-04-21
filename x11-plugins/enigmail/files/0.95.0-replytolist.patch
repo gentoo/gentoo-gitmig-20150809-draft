@@ -1,0 +1,11 @@
+--- mailnews/extensions/enigmail/ui/content/enigmailMessengerOverlay.js.orig	2007-04-21 13:39:57.000000000 +0000
++++ mailnews/extensions/enigmail/ui/content/enigmailMessengerOverlay.js	2007-04-21 13:40:37.000000000 +0000
+@@ -139,7 +139,8 @@
+ // the following headers are added for compatibility with DispMUA extension:
+     "x-mimeole",
+     "x-bugzilla-reason",
+-    "x-php-bug" ];
++    "x-php-bug",
++    "list-post" ];
+ 
+   var addHdr = [];
