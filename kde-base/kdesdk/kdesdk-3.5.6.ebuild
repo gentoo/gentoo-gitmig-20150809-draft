@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.6.ebuild,v 1.4 2007/02/16 21:56:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.6.ebuild,v 1.5 2007/04/21 14:21:56 philantrop Exp $
 
 inherit db-use kde-dist
 
@@ -19,6 +19,13 @@ RDEPEND="${DEPEND}
 
 DEPEND="${RDEPEND}
 	sys-devel/flex"
+
+src_unpack() {
+	kde_src_unpack
+
+	# Patch to fix bug 171328
+	epatch ${FILESDIR}/umbrello-diagram-fix.diff
+}
 
 src_compile() {
 	local myconf="$(use_with subversion)"
