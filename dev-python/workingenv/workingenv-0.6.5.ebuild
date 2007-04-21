@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/workingenv/workingenv-0.6.5.ebuild,v 1.1 2007/04/21 23:34:24 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/workingenv/workingenv-0.6.5.ebuild,v 1.2 2007/04/21 23:39:19 pythonhead Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ MY_PN="${PN}.py"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Tool to create an isolated Python environment."
-HOMEPAGE="http://svn.colorstudy.com/home/ianb/workingenv/"
+HOMEPAGE="http://cheeseshop.python.org/pypi/workingenv.py"
 SRC_URI="http://cheeseshop.python.org/packages/source/w/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"

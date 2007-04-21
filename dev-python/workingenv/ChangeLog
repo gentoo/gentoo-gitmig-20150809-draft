@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/workingenv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/workingenv/ChangeLog,v 1.1 2007/04/21 23:34:24 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/workingenv/ChangeLog,v 1.2 2007/04/21 23:39:19 pythonhead Exp $
+
+  21 Apr 2007; Rob Cakebread <pythonhead@gentoo.org>
+  workingenv-0.6.5.ebuild:
+  New HOMEPAGE
 
 *workingenv-0.6.5 (21 Apr 2007)
 
