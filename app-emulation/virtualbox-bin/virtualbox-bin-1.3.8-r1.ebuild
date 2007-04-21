@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-inherit eutils qt3
+inherit eutils qt3 pax-utils
 
 MY_P=VirtualBox_${PV}_Linux_x86.run
 
@@ -74,11 +74,13 @@ src_install() {
 	if use sdk; then
 		doins -r sdk
 		fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
+		pax-mark -m "${D}"/opt/VirtualBox/sdk/bin/xpidl
 		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 	fi
 	if use vditool; then
 		doins "${DISTDIR}"/vditool
 		fperms 0755 /opt/VirtualBox/vditool
+		pax-mark -m "${D}"/opt/VirtualBox/vditool
 		make_wrapper vditool "./vditool" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 	fi
 
@@ -89,6 +91,7 @@ src_install() {
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,VRDP} VirtualBox ; do
 		fperms 0755 /opt/VirtualBox/${each}
+		pax-mark -m "${D}"/opt/VirtualBox/${each}
 	done
 
 	if use nowrapper ; then

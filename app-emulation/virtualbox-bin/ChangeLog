@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.6 2007/03/16 22:25:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.7 2007/04/21 07:59:19 jokey Exp $
+
+*virtualbox-bin-1.3.8-r1 (21 Apr 2007)
+
+  21 Apr 2007; Markus Ullmann <jokey@gentoo.org>
+  -virtualbox-bin-1.3.6.ebuild, -virtualbox-bin-1.3.8.ebuild,
+  +virtualbox-bin-1.3.8-r1.ebuild:
+  PaXify bins to make hardened people happy
 
 *virtualbox-bin-1.3.8 (16 Mar 2007)
 
