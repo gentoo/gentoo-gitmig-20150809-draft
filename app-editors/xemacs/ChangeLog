@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.85 2007/04/19 22:35:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.86 2007/04/21 17:41:26 corsair Exp $
+
+  21 Apr 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Added ~ppc64; bug #174882
 
   19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   xemacs-21.4.20-r3.ebuild:
