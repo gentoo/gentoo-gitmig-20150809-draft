@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=BitTornado BitTorrent Client
+Comment=TheShad0w's experimental BitTorrent client
+Exec=/usr/bin/btdownloadgui.py
+Icon=bittornado.ico
+Terminal=false
+Type=Application
+Categories=Application;Network
+MimeType=application/x-bittorrent;

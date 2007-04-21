@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.15.ebuild,v 1.8 2007/02/24 11:36:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.15.ebuild,v 1.9 2007/04/21 19:01:34 armin76 Exp $
 
 inherit distutils eutils
 
@@ -40,35 +40,19 @@ src_unpack() {
 src_install() {
 	distutils_src_install
 
-	dodir /etc
-	cp -pPR /etc/mailcap ${D}/etc/
-	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
-
 	if use gtk; then
 		dodir ${PIXMAPLOC}
 		insinto ${PIXMAPLOC}
 		doins icons/*.ico icons/*.gif
-		if [ -n "`grep 'application/x-bittorrent' ${D}/etc/mailcap`" ]; then
-			# replace bittorrent entry if it already exists
-			einfo "updating bittorrent mime info"
-			sed -i "s,application/x-bittorrent;.*,${MAILCAP_STRING}," ${D}/etc/mailcap
-		else
-			# add bittorrent entry if it doesn't exist
-			einfo "adding bittorrent mime info"
-			echo "${MAILCAP_STRING}" >> ${D}/etc/mailcap
-		fi
 	else
 		# get rid of any reference to the not-installed gui version
-		sed -i '/btdownloadgui/d' ${D}/etc/mailcap
 		rm ${D}/usr/bin/*gui.py
 	fi
-	insinto /usr/share/bittorrent
-	doins ${FILESDIR}/favicon.ico
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/bttrack.conf bttrack
+	newicon ${FILESDIR}/favicon.ico ${PN}.ico
+	domenu ${FILESDIR}/bittornado.desktop
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/bttrack.rc bttrack
+	newconfd ${FILESDIR}/bttrack.conf bttrack
+	newinitd ${FILESDIR}/bttrack.rc bttrack
 }
 
