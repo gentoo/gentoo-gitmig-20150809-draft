@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/cpulimit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/ChangeLog,v 1.5 2007/03/19 12:25:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/ChangeLog,v 1.6 2007/04/21 04:52:29 aross Exp $
+
+  21 Apr 2007; Andrew Ross <aross@gentoo.org> cpulimit-1.1.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks to Thomas Pani <thomas.pani@gmail.com> in
+  bug #174648
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
