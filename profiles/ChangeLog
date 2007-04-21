@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.300 2007/04/20 14:26:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.301 2007/04/21 15:27:17 grobian Exp $
+
+  21 Apr 2007; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Unleash new style tcsh
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add USE-flags for net-p2p/gift
