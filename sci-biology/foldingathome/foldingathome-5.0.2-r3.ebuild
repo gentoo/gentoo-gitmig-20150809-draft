@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.0.2-r3.ebuild,v 1.4 2007/04/21 22:54:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.0.2-r3.ebuild,v 1.5 2007/04/21 23:00:25 je_fro Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -50,8 +50,7 @@ src_install() {
 	doexe foldingathome
 	exeinto ${I}/client8
 	doexe foldingathome
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init-${PVR} foldingathome
+	newinitd ${FILESDIR}/init-${PVR} foldingathome
 	newconfd ${FILESDIR}/folding-conf.d-r1 foldingathome
 }
 
