@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.65 2007/04/19 22:09:11 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.66 2007/04/21 12:47:58 nelchael Exp $
+
+  21 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/scite-1.73-iconv.patch, scite-1.73.ebuild:
+  Remove iconv patch for now, as it breaks builds.
 
   19 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/scite-1.73-iconv.patch, scite-1.73.ebuild:

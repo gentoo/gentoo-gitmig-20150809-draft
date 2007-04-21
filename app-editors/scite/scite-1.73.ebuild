@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.73.ebuild,v 1.2 2007/04/19 22:09:11 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.73.ebuild,v 1.3 2007/04/21 12:47:58 nelchael Exp $
 
 inherit toolchain-funcs eutils
 
@@ -42,7 +42,6 @@ src_unpack() {
 		-e 's#-g root#-g 0#' \
 		|| die "error patching makefile"
 	epatch ${FILESDIR}/${P}-install.patch
-	epatch ${FILESDIR}/${P}-iconv.patch
 }
 
 src_compile() {
