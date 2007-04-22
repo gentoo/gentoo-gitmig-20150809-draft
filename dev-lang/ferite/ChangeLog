@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.21 2007/04/07 07:44:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.22 2007/04/22 09:55:33 mabi Exp $
+
+  22 Apr 2007; Matti Bickel <mabi@gentoo.org> ferite-1.0.2.ebuild:
+  ppc stable (bug #169458)
 
   07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> ferite-1.0.2.ebuild:
   keyworded ~amd64, fixed multilib issues, bug 169458

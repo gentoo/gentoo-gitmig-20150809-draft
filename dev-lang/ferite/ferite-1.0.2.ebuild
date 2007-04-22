@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.6 2007/04/07 07:44:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.7 2007/04/22 09:55:33 mabi Exp $
 
 inherit multilib
 
@@ -14,7 +14,7 @@ DEPEND="virtual/libc
 
 SLOT="1"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ppc sparc x86"
 IUSE=""
 
 src_unpack() {
