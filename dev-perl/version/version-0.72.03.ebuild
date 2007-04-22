@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/version-0.72.01.ebuild,v 1.1 2007/04/16 11:44:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/version-0.72.03.ebuild,v 1.1 2007/04/22 11:34:55 mcummings Exp $
 
 inherit versionator perl-module
 
