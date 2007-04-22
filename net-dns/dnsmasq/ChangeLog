@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.121 2007/04/10 15:11:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.122 2007/04/22 18:52:28 armin76 Exp $
+
+  22 Apr 2007; Raúl Porcel <armin76@gentoo.org> dnsmasq-2.38-r1.ebuild:
+  ia64 stable
 
   10 Apr 2007; Roy Marples <uberlord@gentoo.org> files/resolvconf.dnsmasq:
   The resolvconf script now works with the busybox, BSD and dash shells.
