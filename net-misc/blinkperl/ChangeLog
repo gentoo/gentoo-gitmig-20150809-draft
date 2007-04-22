@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blinkperl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.5 2007/02/22 02:09:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.6 2007/04/22 16:25:21 phreak Exp $
+
+  22 Apr 2007; Christian Heim <phreak@gentoo.org> blinkperl-20030301.ebuild:
+  Use newconfd/newinitd for #174266; Properly quote variables.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

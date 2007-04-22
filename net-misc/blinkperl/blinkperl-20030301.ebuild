@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/blinkperl-20030301.ebuild,v 1.6 2004/06/24 23:36:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/blinkperl-20030301.ebuild,v 1.7 2007/04/22 16:25:21 phreak Exp $
 
 MY_P="${PN}-2003-02-08"
 S=${WORKDIR}/${PN}
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 IUSE=""
-DEPEND=">=sys-apps/sed-4"
+DEPEND=""
 RDEPEND="dev-lang/perl dev-perl/Term-ANSIScreen"
 
 src_unpack() {
@@ -22,12 +22,12 @@ src_unpack() {
 	# please don't hardcode paths like this into programs, folks.
 	# that's why makefiles exist.
 
-	sed -i -e 's/local\/share/share/' ${S}/blinkserver.pl || die "path fix failed"
+	sed -i -e 's/local\/share/share/' "${S}"/blinkserver.pl || die "path fix failed"
 }
 
 src_install() {
-	make PREFIX=/usr DESTDIR=${D} install || die
+	make PREFIX=/usr DESTDIR="${D}" install || die
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/blinkperl.rc blinkperl
-	insinto /etc/conf.d; newins ${FILESDIR}/blinkperl.confd blinkperl
+	newinitd "${FILESDIR}"/blinkperl.rc blinkperl
+	newconfd "${FILESDIR}"/blinkperl.confd blinkperl
 }
