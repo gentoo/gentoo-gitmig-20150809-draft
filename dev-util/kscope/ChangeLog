@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.31 2007/04/20 22:34:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.32 2007/04/22 15:42:21 armin76 Exp $
+
+  22 Apr 2007; Raúl Porcel <armin76@gentoo.org> kscope-1.4.2.ebuild:
+  x86 stable wrt #175386
 
   20 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kscope-1.4.2.ebuild:
   kde.eclass takes care of the desktop entry now.
