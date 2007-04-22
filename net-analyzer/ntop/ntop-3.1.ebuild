@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.10 2007/01/05 08:39:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.11 2007/04/22 08:44:14 pva Exp $
 
 inherit eutils
 
@@ -35,9 +35,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	mv ${WORKDIR}/ntop ${WORKDIR}/ntop-3.1
-	cd ${S}
-	epatch ${FILESDIR}/globals-core.c.diff
+	mv "${WORKDIR}"/ntop "${WORKDIR}"/ntop-3.1
+	cd "${S}"
+	epatch "${FILESDIR}"/globals-core.c.diff
 }
 
 src_compile() {
@@ -63,7 +63,7 @@ src_compile() {
 
 src_install() {
 	sed -i Makefile -e 's;mkdir -p $(CFG_DBFILE_DIR);mkdir -p $(DESTDIR)$(CFG_DBFILE_DIR);'
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 
 	# fixme: bad handling of plugins (in /usr/lib with unsuggestive names)
 	# (don't know if there is a clean way to handle it)
@@ -73,8 +73,8 @@ src_install() {
 	dodoc AUTHORS CONTENTS ChangeLog MANIFESTO NEWS
 	dodoc PORTING README SUPPORT_NTOP.txt THANKS docs/*
 
-	chown -R root:0 ${D}/etc/ntop ${D}/usr/share/${PN}/html \
-		${D}/usr/lib/ntop
+	chown -R root:0 "${D}"/etc/ntop "${D}"/usr/share/${PN}/html \
+		"${D}"/usr/lib/ntop
 
 	dohtml ntop.html
 
@@ -82,9 +82,9 @@ src_install() {
 	fowner ntop:ntop /var/lib/ntop
 	fperms 750 /var/lib/ntop
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/ntop-init ntop
-	insinto /etc/conf.d ; newins ${FILESDIR}/ntop-confd ntop
+	newinitd "${FILESDIR}"/ntop-init ntop
+	newconfd "${FILESDIR}"/ntop-confd ntop
 
-	echo 'NTOP_OPTS="-u ntop -P /var/lib/ntop"' >> ${D}/etc/conf.d/ntop
+	echo 'NTOP_OPTS="-u ntop -P /var/lib/ntop"' >> "${D}"/etc/conf.d/ntop
 }
 

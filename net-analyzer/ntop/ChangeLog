@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.50 2007/03/27 20:55:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.51 2007/04/22 08:44:14 pva Exp $
+
+  22 Apr 2007; <pva@gentoo.org> ntop-3.0.ebuild, ntop-3.1.ebuild:
+  Use do{conf,init}d, bug #174266.
 
 *ntop-3.2-r3 (27 Mar 2007)
 

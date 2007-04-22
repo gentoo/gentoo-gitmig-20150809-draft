@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.20 2007/01/05 08:39:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.21 2007/04/22 08:44:14 pva Exp $
 
 
 DESCRIPTION="tool that shows network usage like top"
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 
 	# fixme: bad handling of plugins (in /usr/lib with unsuggestive names)
 	# (don't know if there is a clean way to handle it)
@@ -45,10 +45,10 @@ src_install() {
 	dohtml ntop.html
 
 	keepdir /var/lib/ntop
-	chown -R nobody:nobody ${D}/var/lib/ntop
+	chown -R nobody:nobody "${D}"/var/lib/ntop
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/ntop-init ntop
-	insinto /etc/conf.d ; newins ${FILESDIR}/ntop-confd ntop
+	newinitd "${FILESDIR}"/ntop-init ntop
+	newconfd "${FILESDIR}"/ntop-confd ntop
 }
 
 pkg_postinst() {
