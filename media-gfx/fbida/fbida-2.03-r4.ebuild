@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03-r4.ebuild,v 1.3 2007/04/11 18:50:49 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03-r4.ebuild,v 1.4 2007/04/22 14:38:30 spock Exp $
 
 inherit eutils
 
@@ -40,6 +40,9 @@ src_unpack() {
 	sed -e 's/DGifOpenFileName,ungif/DGifOpenFileName,gif/' \
 	    -e 's/-lungif/-lgif/' -i ${S}/GNUmakefile
 	sed -e 's/SAVER/SAFER/g' -i ${S}/fbgs
+
+	# We don't want the binaries to be stripped automatically.
+	sed -i -e 's/$(INSTALL) -s/$(INSTALL)/' ${S}/mk/Variables.mk
 }
 
 src_compile() {
