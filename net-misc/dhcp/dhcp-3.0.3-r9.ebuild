@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.12 2006/08/11 16:21:03 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.13 2007/04/22 17:27:37 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -158,9 +158,8 @@ src_install() {
 		newins server/dhcpd.conf dhcpd.conf.sample
 		newinitd "${FILESDIR}"/dhcpd.init dhcpd
 		newinitd "${FILESDIR}"/dhcrelay.init dhcrelay
-		insinto /etc/conf.d
-		newins "${FILESDIR}"/dhcpd.conf dhcpd
-		newins "${FILESDIR}"/dhcrelay.conf dhcrelay
+		newconfd "${FILESDIR}"/dhcpd.conf dhcpd
+		newconfd "${FILESDIR}"/dhcrelay.conf dhcrelay
 	fi
 }
 
