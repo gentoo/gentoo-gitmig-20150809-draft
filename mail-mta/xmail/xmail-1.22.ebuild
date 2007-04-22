@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.3 2007/03/18 06:25:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.4 2007/04/22 09:08:35 ticho Exp $
 
 inherit eutils linux-info
 
@@ -54,11 +54,6 @@ src_compile() {
 }
 
 src_install() {
-	# create some image directories with default diropts
-	dodir /etc/conf.d
-	dodir /etc/init.d
-	dodir /etc/env.d
-
 	einfo "Setting up directory hierarchy"
 	diropts -m 700 -o xmail -g xmail
 	dodir /etc/xmail
@@ -69,8 +64,6 @@ src_install() {
 	dodir /etc/xmail/spool/local
 	dodir /etc/xmail/spool/temp
 	dodir /etc/xmail/logs
-	dodir /etc/init.d
-	dodir /etc/conf.d
 
 	for i in cmdaliases custdomains domains filters pop3linklocks\
 		pop3links pop3locks userauth
@@ -109,12 +102,9 @@ src_install() {
 
 
 	einfo "Installing the XMail software"
-	insinto /etc/env.d
-	doins ${FILESDIR}/15xmail
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/xmail.initd xmail
-	insinto /etc/conf.d
-	newins ${FILESDIR}/xmail.confd xmail
+	doenvd ${FILESDIR}/15xmail
+	newinitd ${FILESDIR}/xmail.initd xmail
+	newconfd ${FILESDIR}/xmail.confd xmail
 	cd ${S}/bin
 	exeopts -o xmail -g xmail -m 4700
 	exeinto /usr/sbin
