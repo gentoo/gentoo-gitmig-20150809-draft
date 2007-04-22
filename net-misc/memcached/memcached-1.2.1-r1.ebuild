@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.1-r1.ebuild,v 1.1 2007/03/31 19:03:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.1-r1.ebuild,v 1.2 2007/04/22 21:52:03 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.danga.com/memcached/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="static perl doc"
 
 DEPEND=">=dev-libs/libevent-0.6
@@ -43,7 +43,7 @@ src_install() {
 
 pkg_postinst() {
 	enewuser memcached -1 -1 /dev/null daemon
-	einfo "With this version of Memcached Gentoo now supporst multiple instances."
+	einfo "With this version of Memcached Gentoo now supports multiple instances."
 	einfo "To enable this you must create a symlink in /etc/init.d/ for each instance"
 	einfo "to /etc/init.d/memcached and create the matching conf files in /etc/conf.d/"
 	einfo "Please see Gentoo bug #122246 for more info"
