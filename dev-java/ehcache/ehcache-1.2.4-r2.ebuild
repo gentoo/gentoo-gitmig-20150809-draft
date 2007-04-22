@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4-r2.ebuild,v 1.2 2007/04/19 19:10:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4-r2.ebuild,v 1.3 2007/04/22 01:35:12 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -23,6 +23,7 @@ RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEPEND}
+	app-arch/unzip
 	source? ( app-arch/zip )
 	>=dev-java/ant-core-1.5"
 
@@ -34,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use doc && unpack ${P}-javadoc.zip
+	use doc && unzip -qq ${P}-javadoc.zip
 
 	mkdir src && cd src
 	unzip -qq ../${P}-sources.jar
@@ -54,6 +55,10 @@ src_unpack() {
 	java-pkg_jarfrom commons-collections
 	java-pkg_jarfrom servletapi-2.4
 
+}
+
+src_compile() {
+	eant jar
 }
 
 src_install() {

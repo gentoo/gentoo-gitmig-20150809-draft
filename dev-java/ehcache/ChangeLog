@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.8 2007/04/19 19:10:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.9 2007/04/22 01:35:12 ali_bush Exp $
+
+  22 Apr 2007; Alistair John Bush <ali_bush@gentoo.org>
+  ehcache-1.2.4-r2.ebuild:
+  Fixed build error when using doc use flag
 
   19 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/build.xml-1.2.4-r2, ehcache-1.2.4-r2.ebuild:
