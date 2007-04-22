@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.11 2006/09/07 22:29:35 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.12 2007/04/22 11:48:32 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -101,12 +101,12 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	if use amuled; then
-	        insinto /etc/conf.d; newins ${FILESDIR}/amuled.confd amuled
-	        exeinto /etc/init.d; newexe ${FILESDIR}/amuled.initd amuled
+	        newconfd ${FILESDIR}/amuled.confd amuled
+	        newinitd ${FILESDIR}/amuled.initd amuled
 	fi
 
 	if use remote; then
-	        insinto /etc/conf.d; newins ${FILESDIR}/amuleweb.confd amuleweb
-	        exeinto /etc/init.d; newexe ${FILESDIR}/amuleweb.initd amuleweb
+	        newconfd ${FILESDIR}/amuleweb.confd amuleweb
+	        newinitd ${FILESDIR}/amuleweb.initd amuleweb
 	fi
 }
