@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.9 2007/01/10 10:35:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.10 2007/04/22 11:31:32 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -40,9 +40,7 @@ src_install() {
 	dodoc Documentation/*
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
-	dodir /etc/{conf,init}.d /etc/dchub
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/dchub.init.d dchub
-	insinto /etc/conf.d
-	newins ${FILESDIR}/dchub.conf.d dchub
+	dodir /etc/dchub
+	newinitd {FILESDIR}/dchub.init.d dchub
+	newconfd ${FILESDIR}/dchub.conf.d dchub
 }
