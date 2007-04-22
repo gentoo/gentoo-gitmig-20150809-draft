@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14.ebuild,v 1.5 2006/09/23 21:45:49 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14.ebuild,v 1.6 2007/04/22 14:19:58 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -29,8 +29,8 @@ src_install () {
 
 	dodoc license.txt readme.txt stress.txt whatsnew.txt undoc.txt
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/gimps-init.d gimps
-	insinto /etc/conf.d ; newins ${FILESDIR}/gimps-conf.d gimps
+	newinitd ${FILESDIR}/gimps-init.d gimps
+	newconfd ${FILESDIR}/gimps-conf.d gimps
 }
 
 pkg_postinst () {
