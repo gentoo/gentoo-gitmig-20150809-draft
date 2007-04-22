@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.12 2007/04/11 01:11:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.13 2007/04/22 08:48:42 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> aggregate-1.6.ebuild:
+  Stable on Mips, bug 173860.
 
   11 Apr 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml,
   aggregate-1.6.ebuild:
