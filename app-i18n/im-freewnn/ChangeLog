@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-freewnn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.7 2007/02/21 22:03:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.8 2007/04/22 10:37:44 corsair Exp $
+
+  22 Apr 2007; Markus Rothe <corsair@gentoo.org> im-freewnn-0.0.2.ebuild:
+  Added ~ppc64
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
