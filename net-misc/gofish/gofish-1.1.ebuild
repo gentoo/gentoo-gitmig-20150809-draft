@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-1.1.ebuild,v 1.2 2006/10/15 13:19:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-1.1.ebuild,v 1.3 2007/04/22 16:35:53 phreak Exp $
 
 inherit eutils
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${PN}"
@@ -24,19 +23,23 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-		--disable-http || die "econf failed"
-	emake || die
+	econf \
+		--localstatedir=/var \
+		--disable-http || die "econf failed!"
+
+	emake || die "emake failed!"
 }
 
 src_install () {
-	sed -i s/';uid = -1'/'uid = 30'/ ${S}/gofish.conf
-	sed -i s/';gid = -1'/'uid = 30'/ ${S}/gofish.conf
-	make DESTDIR="${D}" install || die
-	exeinto /etc/init.d ; newexe ${FILESDIR}/gofish.rc gofish
-	insinto /etc/conf.d ; newins ${FILESDIR}/gofish.confd gofish
+	sed -i s/';uid = -1'/'uid = 30'/ "${S}"/gofish.conf
+	sed -i s/';gid = -1'/'uid = 30'/ "${S}"/gofish.conf
+	make DESTDIR="${D}" install || die "make install failed!"
+	newinitd "${FILESDIR}"/gofish.rc gofish
+	newconfd "${FILESDIR}"/gofish.confd gofish
 }
 
 pkg_postinst() {
-	einfo "Please edit /etc/${PN}.conf before using."
+	echo
+	elog "Please configure /etc/${PN}.conf before attempt to use it!"
+	echo
 }
