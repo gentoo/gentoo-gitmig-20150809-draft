@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2760 2007/04/21 14:10:44 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2761 2007/04/22 04:31:45 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1386,8 +1386,6 @@ net-libs/aqbanking:geldkarte - Enable geldkarte backend
 net-libs/aqbanking:hbci - Enable support for HBCI
 net-libs/aqbanking:yellownet - Enable support for Yellownet
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
-net-libs/libjingle:ilbc - Build ILBC codec plugin
-net-libs/libjingle:ortp - Build oRTP Channel plugin
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
