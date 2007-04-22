@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/rwbs-0.27.ebuild,v 1.7 2004/07/15 03:29:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/rwbs-0.27.ebuild,v 1.8 2007/04/22 15:56:23 phreak Exp $
 
 DESCRIPTION="Roger Wilco base station"
 HOMEPAGE="http://rogerwilco.gamespy.com/"
@@ -18,20 +18,14 @@ S=${WORKDIR}
 
 src_install() {
 	dodoc README.TXT CHANGES.TXT
-	rm -f {README,CHANGES,LICENSE}.TXT
-
 	dobin rwbs run_rwbs
-	rm -f rwbs run_rwbs
 
 	# Put distribution into /usr/share/rwbs
-	dodir /usr/share/rwbs/
-	mv * ${D}/usr/share/rwbs/
+	insinto /usr/share/rwbs/
+	doins "${S}"/anotherpersonjoined "${S}"/helloandwelcome \
+		"${S}"/ifucanhearthis "${S}"/invitetestxmit "${S}"/join?.rwc \
+		"${S}"/plsstartagame "${S}"/thisisatestmsg
 
-	# Do conf script
-	insinto /etc/conf.d
-	newins ${FILESDIR}/rwbs.conf rwbs
-
-	# do init script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rwbs.rc rwbs
+	newconfd "${FILESDIR}"/rwbs.conf rwbs
+	newinitd "${FILESDIR}"/rwbs.rc rwbs
 }
