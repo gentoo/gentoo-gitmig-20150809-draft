@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aes-crypt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/ChangeLog,v 1.1 2007/04/20 23:59:18 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/ChangeLog,v 1.2 2007/04/22 10:19:17 corsair Exp $
+
+  22 Apr 2007; Markus Rothe <corsair@gentoo.org> aesutil-1.0.7.ebuild:
+  Added ~ppc64
 
 *aesutil-1.0.7 (20 Apr 2007)
 
