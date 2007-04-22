@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.60 2007/03/05 03:57:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.61 2007/04/22 13:38:51 dertobi123 Exp $
+
+  22 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  monodoc-1.2.1.ebuild:
+  ppc stable, bug #166463
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> monodoc-1.1.13.ebuild:
   Replacing einfo with elog
