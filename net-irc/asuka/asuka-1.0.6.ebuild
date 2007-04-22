@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.12 2006/10/31 23:18:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.13 2007/04/22 11:38:52 armin76 Exp $
 
 inherit eutils
 
@@ -34,11 +34,9 @@ src_install() {
 	insinto /etc/asuka
 	doins doc/ircd.conf.sample
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/asuka.init.d asuka
+	newinitd ${FILESDIR}/asuka.init.d asuka
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/asuka.conf.d asuka
+	newconfd ${FILESDIR}/asuka.conf.d asuka
 
 	keepdir /var/log/asuka
 
