@@ -1,2 +1,6 @@
 # Unmask the "ibm" USE flag on ppc64
 -ibm
+
+# Mask ppcsha1 USE flag as it's 32bit only. It's getting unmasked in 32bit
+# profiles again
+ppcsha1
