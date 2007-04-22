@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.68 2007/04/22 10:22:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.69 2007/04/22 11:34:18 calchan Exp $
+
+  22 Apr 2007; Denis Dupeyron <calchan@gentoo.org> kino-1.0.0.ebuild:
+  Fixed bug #174572, thanks to Francisco Javier.
 
   22 Apr 2007; Denis Dupeyron <calchan@gentoo.org> kino-0.9.5.ebuild:
   Adjusted ffmpeg dependency, bug #175437.

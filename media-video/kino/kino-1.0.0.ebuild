@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.2 2007/04/03 20:03:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.3 2007/04/22 11:34:18 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -20,7 +20,6 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 	>=sys-libs/libavc1394-0.4.1
 	>=media-libs/libdv-0.103
 	media-libs/libsamplerate
-	=dev-libs/lzo-1*
 	!sparc? ( media-libs/libiec61883 )
 	alsa? ( >=media-libs/alsa-lib-1.0.9 )
 	>=media-video/ffmpeg-0.4.9_p20061016
