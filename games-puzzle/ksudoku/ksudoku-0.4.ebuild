@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.3 2007/04/18 13:04:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.4 2007/04/22 22:05:56 jokey Exp $
 
 inherit flag-o-matic kde
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/cmake-2.4"
+DEPEND=">=dev-util/cmake-2.4.6"
 
 need-kde 3.3
 
