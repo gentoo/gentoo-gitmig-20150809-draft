@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.8 2006/07/12 20:47:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.9 2007/04/22 00:16:13 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -57,9 +57,8 @@ src_install() {
 	rm -rf ${D}/usr/bin
 	rm -rf ${D}/usr/share/man/man1
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/speedtouch.rc7 speedtouch
-
-	insinto /etc/conf.d ; newins ${FILESDIR}/speedtouch.confd speedtouch
+	newinitd ${FILESDIR}/speedtouch.rc7 speedtouch
+	newconfd ${FILESDIR}/speedtouch.confd speedtouch
 
 	insopts -m 600 ; insinto /etc/ppp/peers ; doins ${FILESDIR}/adsl.sample
 

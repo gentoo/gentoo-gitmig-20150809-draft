@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.3.ebuild,v 1.2 2006/11/18 13:27:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.3.ebuild,v 1.3 2007/04/22 00:13:15 mrness Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -48,11 +48,8 @@ src_install () {
 	insinto /etc/ppp
 	doins samples/options.pptpd
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/pptpd-init" pptpd
-
-	insinto /etc/conf.d
-	newins "${FILESDIR}/pptpd-confd" pptpd
+	newinitd "${FILESDIR}/pptpd-init" pptpd
+	newconfd "${FILESDIR}/pptpd-confd" pptpd
 
 	dodoc AUTHORS ChangeLog NEWS README* TODO
 	docinto samples
