@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-xlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.18 2007/04/21 21:19:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.19 2007/04/22 01:08:39 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  python-xlib-0.12-r3.ebuild, python-xlib-0.13.ebuild:
+  Stable on Alpha, bug 175473.
 
   21 Apr 2007; Rob Cakebread <pythonhead@gentoo.org>
   python-xlib-0.13.ebuild:

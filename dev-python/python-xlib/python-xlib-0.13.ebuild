@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.13.ebuild,v 1.2 2007/04/21 20:12:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.13.ebuild,v 1.3 2007/04/22 01:08:39 kloeri Exp $
 
 inherit distutils
 
@@ -28,7 +28,7 @@ src_install () {
 	distutils_src_install
 	if use doc; then
 		dohtml -r doc/html/
-	    dodoc doc/ps/python-xlib.ps
+		dodoc doc/ps/python-xlib.ps
 	fi
 }
 
