@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.26 2006/10/04 04:31:44 pva Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.27 2007/04/22 06:47:34 pva Exp $
+
+  22 Apr 2007; <pva@gentoo.org> -ipcad-3.6.6.ebuild:
+  Cleaning old ebuild. This fixes bug #174266.
 
   04 Oct 2006; Peter Volkov <pva@gentoo.org> ipcad-3.7.ebuild:
   dodir -> keepdir for /var/ipcad/run/ to avoid directory removal on reemerge.
