@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/xfce4-places-0.1.0.ebuild,v 1.1 2007/04/06 17:28:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/xfce4-places-0.2.0.ebuild,v 1.1 2007/04/22 16:56:09 drac Exp $
 
 inherit xfce44
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 RESTRICT="test"
 
-RDEPEND=""
+RDEPEND=">=xfce-base/thunar-${THUNAR_MASTER_VERSION}"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
