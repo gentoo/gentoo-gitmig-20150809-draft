@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19.ebuild,v 1.10 2006/09/21 22:08:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19.ebuild,v 1.11 2007/04/22 00:21:40 mrness Exp $
 
 inherit fixheadtails eutils
 
@@ -64,10 +64,8 @@ src_install() {
 	cd "${S}"
 
 	# our init script
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/dante-sockd-init" dante-sockd
-	insinto /etc/conf.d
-	newins "${FILESDIR}/dante-sockd-conf" dante-sockd
+	newinitd "${FILESDIR}/dante-sockd-init" dante-sockd
+	newconfd "${FILESDIR}/dante-sockd-conf" dante-sockd
 
 	# install documentation
 	dodoc BUGS CREDITS NEWS README SUPPORT TODO

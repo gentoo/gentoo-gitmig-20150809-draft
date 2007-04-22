@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.15 2006/11/04 17:18:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.16 2007/04/22 00:24:03 mrness Exp $
 
 DESCRIPTION="Proxy cache for Gentoo packages"
 HOMEPAGE="http://gertjan.freezope.org/replicator/"
@@ -28,16 +28,12 @@ src_install(){
 		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.21" repcacheman.py
 	fi
 
-	# Config file into /etc/conf.d
-	insinto /etc/conf.d
-	newins "${FILESDIR}/http-replicator-3.0.conf" http-replicator
+	# init.d scripts
+	newinitd "${FILESDIR}/http-replicator-3.0.init" http-replicator
+	newconfd "${FILESDIR}/http-replicator-3.0.conf" http-replicator
 
 	# Docs
 	dodoc README debian/changelog
-
-	# init.d scripts
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/http-replicator-3.0.init" http-replicator
 
 	# Man Page - Not Gentooified yet
 	doman http-replicator.1
