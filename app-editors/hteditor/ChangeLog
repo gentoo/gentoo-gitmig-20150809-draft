@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.30 2007/04/21 22:24:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.31 2007/04/22 11:53:20 corsair Exp $
+
+*hteditor-2.0.5 (22 Apr 2007)
+
+  22 Apr 2007; Markus Rothe <corsair@gentoo.org> +hteditor-2.0.5.ebuild:
+  version bump to 2.0.5 which fixes PowerPC64 handling; added ~ppc64; bug #175272
 
 *hteditor-2.0.4 (21 Apr 2007)
 
