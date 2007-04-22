@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1-r1.ebuild,v 1.3 2007/04/20 18:10:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1-r1.ebuild,v 1.4 2007/04/22 01:41:54 kloeri Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ IUSE="ares fasttrack gnutella imagemagick openft vorbis"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ~sparc x86 ~x86-fbsd"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	sys-apps/file

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-ares
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.12 2007/04/20 18:00:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.13 2007/04/22 01:40:56 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  gift-ares-0.3.0-r1.ebuild:
+  Stable on Alpha, bug 174858.
 
   20 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gift-ares-0.3.0-r1.ebuild:

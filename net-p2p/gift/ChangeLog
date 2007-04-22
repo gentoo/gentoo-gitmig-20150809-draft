@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.69 2007/04/20 18:10:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.70 2007/04/22 01:41:54 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  gift-0.11.8.1-r1.ebuild:
+  Stable on Alpha, bug 174858.
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> gift-0.11.8.1-r1.ebuild:
   Move einfo to elog and remove warning wrt the plugins, thanks to gustavoz
