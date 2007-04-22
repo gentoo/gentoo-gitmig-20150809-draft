@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.56 2007/04/20 17:11:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.57 2007/04/22 08:53:24 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> paludis-0.22.2.ebuild:
+  Add ~mips keyword.
 
   20 Apr 2007; Markus Rothe <corsair@gentoo.org> paludis-0.22.2.ebuild:
   Added ~ppc64
