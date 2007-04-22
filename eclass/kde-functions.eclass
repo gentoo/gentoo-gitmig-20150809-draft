@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.149 2007/04/20 18:53:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.150 2007/04/22 15:59:26 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -924,7 +924,7 @@ postprocess_desktop_entries() {
 		fi
 	fi
 
-	validate_desktop_entries ${PREFIX}/share/appl{nk,ications}
+	validate_desktop_entries ${PREFIX}/share/applications
 }
 
 # is this a kde-base ebuid?
