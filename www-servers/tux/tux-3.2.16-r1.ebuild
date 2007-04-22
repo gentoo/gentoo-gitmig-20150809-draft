@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16-r1.ebuild,v 1.3 2005/03/20 18:47:35 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16-r1.ebuild,v 1.4 2007/04/22 12:09:38 bangert Exp $
 
 inherit eutils
 
@@ -35,8 +35,8 @@ src_compile() {
 src_install() {
 	make install TOPDIR=${D} || die
 	rm -rf ${D}/etc/{rc.d,sysconfig} ${D}/var/tux
-	exeinto /etc/init.d ; newexe ${FILESDIR}/tux.init.d tux
-	insinto /etc/conf.d ; newins ${FILESDIR}/tux.conf.d tux
+	newinitd ${FILESDIR}/tux.init.d tux
+	newconfd ${FILESDIR}/tux.conf.d tux
 
 	dodoc NEWS SUCCESS tux.README docs/*.txt
 	docinto samples

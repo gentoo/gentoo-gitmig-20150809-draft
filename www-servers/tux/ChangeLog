@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tux
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.8 2007/02/09 08:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.9 2007/04/22 12:09:38 bangert Exp $
+
+  22 Apr 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
+  tux-3.2.16-r1.ebuild:
+  transition to newconfd and newinitd (bug #174266) - add metadata.xml
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
