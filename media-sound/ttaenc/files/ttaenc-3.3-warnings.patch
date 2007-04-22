@@ -1,0 +1,49 @@
+--- ttaenc.c.orig	2007-04-21 21:26:53.000000000 +0100
++++ ttaenc.c	2007-04-21 21:28:38.000000000 +0100
+@@ -641,7 +641,7 @@
+ 
+ 	// grab some space for an encoder buffers
+ 	data = (long *) tta_malloc(num_chan * framelen, sizeof(long));
+-	st = seek_table = (long *) tta_malloc(st_size, sizeof(long));
++	st = seek_table = (unsigned long *) tta_malloc(st_size, sizeof(long));
+ 	enc = tta = tta_malloc(num_chan, sizeof(encoder));
+ 
+ 	// write TTA header
+@@ -770,7 +770,7 @@
+ 	unsigned long byte_size, data_size, checksum, errors;
+ 	unsigned long framelen, lastlen, fframes;
+ 	unsigned long framesize, st_size, *st;
+-	char *data;
++	unsigned char *data;
+ 
+ 	// print process banner
+ 	fwprintf(stderr, L"Test:    processing ..\r");
+@@ -833,8 +833,8 @@
+ 	st_size = (fframes + 1);
+ 
+ 	// grab some space for a buffer
+-	data = (char *) tta_malloc(framesize, 1);
+-	seek_table = (long *) tta_malloc(st_size, sizeof(long));
++	data = (unsigned char *) tta_malloc(framesize, 1);
++	seek_table = (unsigned long *) tta_malloc(st_size, sizeof(long));
+ 
+ 	// read seek table
+ 	if (fread(seek_table, st_size, sizeof(long), fdin) == 0)
+@@ -890,7 +890,7 @@
+ 	long *p, *data, value;
+ 	unsigned long num_chan, byte_size, data_size, checksum;
+ 	unsigned long k, depth, framelen, lastlen, fframes;
+-	unsigned long unary, binary, st_size, st_state, *st;
++	unsigned long unary, binary = 0, st_size, st_state, *st;
+ 	unsigned long is_float, def_subchunk_size = 16;
+ 	encoder *tta, *enc;
+ 	time_t stime = time(NULL);
+@@ -982,7 +982,7 @@
+ 	// grab some space for a buffer
+ 	data = (long *) tta_malloc(num_chan * framelen, sizeof(long));
+ 	enc = tta = tta_malloc(num_chan, sizeof(encoder));
+-	seek_table = (long *) tta_malloc(st_size, sizeof(long));
++	seek_table = (unsigned long *) tta_malloc(st_size, sizeof(long));
+ 
+ 	// read seek table
+ 	if (fread(seek_table, st_size, sizeof(long), fdin) == 0)

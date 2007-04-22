@@ -1,0 +1,11 @@
+--- Makefile.orig	2007-04-21 21:07:25.000000000 +0100
++++ Makefile	2007-04-21 21:07:40.000000000 +0100
+@@ -2,7 +2,7 @@
+ # $Id: ttaenc-3.3-cflags.patch,v 1.1 2007/04/22 11:02:07 drac Exp $
+ #
+ 
+-CFLAGS	= -Wall -O2 -funroll-loops -fomit-frame-pointer
++CFLAGS	+= -Wall -O2
+ LIBS	= -lm
+ TTAENC	= ttaenc
+ INSDIR	= /usr/local/bin
