@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.6 2007/02/04 19:16:12 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.7 2007/04/22 15:13:57 phreak Exp $
 
-inherit eutils
+inherit eutils versionator
 
-MY_PV=${PV:0:5}
-DEB_PV=${PV:6:2}
+MY_PV="$(get_version_component_range 1-3)"
+DEB_PV="$(get_version_component_range 4)"
 
 # This is a port of the Debian port of CFS which includes several
 # useful patches.  Many thanks to the Debian developers.
@@ -29,7 +29,7 @@ do-debian-credits() {
 	docinto debian
 	for i in copyright README.Debian changelog; do
 		# be silent, since all files are not always present
-		dodoc ${S}/debian/${i} &>/dev/null || true
+		dodoc "${S}"/debian/${i} &>/dev/null || true
 	done
 	docinto .
 }
@@ -43,7 +43,7 @@ pkg_setup() {
 		eerror "It seems that the null directory or CFS root is currently in use."
 		eerror "You must shutdown CFS before merging this port or at least unmount"
 		eerror "the CFS root before using this port."
-		die
+		die "cfs is still running!"
 	fi
 }
 
@@ -53,25 +53,24 @@ src_unpack() {
 }
 
 src_compile() {
-	make cfs COPT="${CFLAGS} -DPROTOTYPES -g" || die
+	make cfs COPT="${CFLAGS} -DPROTOTYPES -g" || die "make failed!"
 }
 
 src_install() {
-	make install_cfs BINDIR=${D}/usr/bin ETCDIR=${D}/usr/sbin || die
-	insinto /etc/conf.d
-	newins ${FILESDIR}/cfsd.conf cfsd
+	make install_cfs BINDIR="${D}"/usr/bin ETCDIR="${D}"/usr/sbin || \
+		die "make install failed!"
+	newconfd "${FILESDIR}"/cfsd.conf cfsd
 #	exeinto /var/lib/cfs
 #	doexe debian/cfs_*mount.sh
 	keepdir /var/run/cfs
 	keepdir /var/cfs
 	keepdir /var/lib/cfs/.cfsfs
-	chmod 0 ${D}/var/lib/cfs/.cfsfs
+	chmod 0 "${D}"/var/lib/cfs/.cfsfs
 	doman *.[18]
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/cfsd.init cfsd
+	newinitd "${FILESDIR}"/cfsd.init cfsd
 	do-debian-credits
 	dodoc LEVELS README* VERSION
-	dodoc ${FILESDIR}/README.Gentoo
+	dodoc "${FILESDIR}"/README.Gentoo
 }
 
 pkg_postinst() {
