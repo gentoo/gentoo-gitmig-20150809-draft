@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.9.3.ebuild,v 1.2 2007/04/10 21:11:48 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.9.3-r1.ebuild,v 1.1 2007/04/22 22:19:21 nyhm Exp $
 
-inherit eutils toolchain-funcs multilib
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 MY_PN=FreeImage
 MY_P=${MY_PN}${PV//.}
@@ -28,7 +28,9 @@ S=${WORKDIR}/${MY_PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-sys-headers.patch
 	edos2unix gensrclist.sh genfipsrclist.sh
 	sh ./gensrclist.sh || die "gensrclist failed"
 	sh ./genfipsrclist.sh || die "genfipsrclist failed"
@@ -36,6 +38,7 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC CXX AR
+	append-flags -fno-strict-aliasing
 	emake || die "emake failed"
 }
 

@@ -1,0 +1,95 @@
+--- Source/FreeImage/PluginJPEG.cpp
++++ Source/FreeImage/PluginJPEG.cpp
+@@ -35,8 +35,8 @@
+ #include <setjmp.h>
+ 
+ #include "../LibJPEG/jinclude.h"
+-#include "../LibJPEG/jpeglib.h"
+-#include "../LibJPEG/jerror.h"
++#include <jpeglib.h>
++#include <jerror.h>
+ }
+ 
+ #include "FreeImage.h"
+--- Source/FreeImage/PluginMNG.cpp
++++ Source/FreeImage/PluginMNG.cpp
+@@ -22,7 +22,7 @@
+ #include "FreeImage.h"
+ #include "Utilities.h"
+ 
+-#include "../LibMNG/libmng.h"
++#include <libmng.h>
+ 
+ // ----------------------------------------------------------
+ //   Constants + headers
+--- Source/FreeImage/PluginPNG.cpp
++++ Source/FreeImage/PluginPNG.cpp
+@@ -37,7 +37,10 @@
+ 
+ // ----------------------------------------------------------
+ 
+-#include "../LibPNG/png.h"
++#define PNG_iTXt_SUPPORTED
++#define PNG_READ_iTXt_SUPPORTED
++#define PNG_WRITE_iTXt_SUPPORTED
++#include <png.h>
+ 
+ // ----------------------------------------------------------
+ 
+--- Source/FreeImage/ZLibInterface.cpp
++++ Source/FreeImage/ZLibInterface.cpp
+@@ -19,7 +19,7 @@
+ // Use at your own risk!
+ // ==========================================================
+ 
+-#include "../ZLib/zlib.h"
++#include <zlib.h>
+ #include "../ZLib/zutil.h"
+ #include "FreeImage.h"
+ #include "Utilities.h"
+--- Source/FreeImageToolkit/JPEGTransform.cpp
++++ Source/FreeImageToolkit/JPEGTransform.cpp
+@@ -26,8 +26,8 @@
+ #include <setjmp.h>
+ 
+ #include "../LibJPEG/jinclude.h"
+-#include "../LibJPEG/jpeglib.h"
+-#include "../LibJPEG/jerror.h"
++#include <jpeglib.h>
++#include <jerror.h>
+ #include "../LibJPEG/transupp.h"
+ }
+ 
+--- Source/LibJPEG/jinclude.h
++++ Source/LibJPEG/jinclude.h
+@@ -17,7 +17,7 @@
+ 
+ /* Include auto-config file to find out which system include files we need. */
+ 
+-#include "jconfig.h"		/* auto configuration options */
++#include <jconfig.h>
+ #define JCONFIG_INCLUDED	/* so that jpeglib.h doesn't do it again */
+ 
+ /*
+--- Source/LibJPEG/transupp.c
++++ Source/LibJPEG/transupp.c
+@@ -18,7 +18,7 @@
+ #define JPEG_INTERNALS
+ 
+ #include "jinclude.h"
+-#include "jpeglib.h"
++#include <jpeglib.h>
+ #include "transupp.h"		/* My own external interface */
+ #include <ctype.h>		/* to declare isdigit() */
+ 
+--- Source/ZLib/zutil.h
++++ Source/ZLib/zutil.h
+@@ -14,7 +14,7 @@
+ #define ZUTIL_H
+ 
+ #define ZLIB_INTERNAL
+-#include "zlib.h"
++#include <zlib.h>
+ 
+ #ifdef STDC
+ #  ifndef _WIN32_WCE
