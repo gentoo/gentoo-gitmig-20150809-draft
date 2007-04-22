@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2761 2007/04/22 04:31:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2762 2007/04/22 04:33:17 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -842,7 +842,6 @@ media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
 media-gfx/dcraw:gimp - Builds rawphoto plugin for the GIMP
 media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
-media-gfx/gimp:print - Enable print plug-in
 media-gfx/gimp:smp - Enable support for multiprocessors
 media-gfx/graphicsmagick:depth16 - use 16-bit color depth as default
 media-gfx/graphicsmagick:depth32 - use 32-bit color depth as default
