@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7157 2007/04/21 21:41:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7158 2007/04/22 00:21:23 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -545,7 +545,7 @@ net-misc/xsupplicant
 >media-plugins/mythphone-0.20_p99999
 >media-plugins/mythvideo-0.20_p99999
 >media-plugins/mythweather-0.20_p99999
->media-plugins/mythweb-0.20_p99999
+>www-apps/mythweb-0.20_p99999
 >media-plugins/mythzoneminder-0.20_p99999
 
 # Duncan Coutts <dcoutts@gentoo.org> (5 Mar 2007)
