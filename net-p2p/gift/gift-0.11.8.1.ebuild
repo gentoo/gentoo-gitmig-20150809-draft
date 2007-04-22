@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1.ebuild,v 1.9 2006/09/11 20:51:40 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1.ebuild,v 1.10 2007/04/22 11:25:38 armin76 Exp $
 
 inherit eutils libtool
 
@@ -36,8 +36,8 @@ src_install() {
 	make DESTDIR=${D} install || die "Install failed"
 
 	# init scripts for users who want a central server
-	insinto /etc/conf.d; newins ${FILESDIR}/gift.confd gift
-	exeinto /etc/init.d; newexe ${FILESDIR}/gift.initd gift
+	newconfd ${FILESDIR}/gift.confd gift
+	newinitd ${FILESDIR}/gift.initd gift
 
 	touch ${D}/usr/share/giFT/giftd.log
 	chown ${GIFTUSER}:root ${D}/usr/share/giFT/giftd.log
