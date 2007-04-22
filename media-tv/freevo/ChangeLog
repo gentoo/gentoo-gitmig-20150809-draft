@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.44 2007/03/19 15:05:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.45 2007/04/22 17:39:35 phreak Exp $
+
+  22 Apr 2007; Christian Heim <phreak@gentoo.org> freevo-1.5.4.ebuild,
+  freevo-1.5.4-r2.ebuild, freevo-1.6.0.ebuild, freevo-1.6.1.ebuild:
+  Use newconfd/newinitd for #174266; Properly quote variables.
 
   19 Mar 2007; Marius Mauch <genone@gentoo.org> freevo-1.5.4.ebuild,
   freevo-1.5.4-r2.ebuild, freevo-1.6.0.ebuild, freevo-1.6.1.ebuild:

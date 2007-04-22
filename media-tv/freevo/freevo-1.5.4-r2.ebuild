@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.4-r2.ebuild,v 1.3 2007/03/19 15:05:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.4-r2.ebuild,v 1.4 2007/04/22 17:39:35 phreak Exp $
 
 inherit distutils
 
@@ -23,11 +23,11 @@ DEPEND=">=dev-python/pygame-1.5.6
 	>=media-video/mplayer-0.92
 	>=media-libs/freetype-2.1.4
 	>=media-libs/libsdl-1.2.5
-	>=sys-apps/sed-4
 	dvd? ( >=media-video/xine-ui-0.9.22 >=media-video/lsdvd-0.10 )
 	encode? ( >=media-sound/cdparanoia-3.9.8 >=media-sound/lame-3.93.1 )
 	matrox? ( >=media-video/matroxset-0.3 )
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if ! built_with_use media-libs/sdl-image png; then
@@ -56,7 +56,7 @@ src_install() {
 
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
 		sed -i -e "s/# MPLAYER_AO_DEV.*/MPLAYER_AO_DEV='alsa1x'/" ${D}/etc/freevo/local_conf.py
-		newins ${FILESDIR}/xbox-lircrc lircrc
+		newins "${FILESDIR}"/xbox-lircrc lircrc
 	fi
 
 	if use X; then
@@ -70,18 +70,17 @@ src_install() {
 			FREEVOSESSION=`grep ^SessionsDirs= ${KDFREEVO}/share/config/kdm/kdmrc | cut -d= -f 2 | cut -d: -f1`
 			if [ "x${FREEVOSESSION}" != "x" ]; then
 				insinto ${FREEVOSESSION}
-				doins ${FILESDIR}/freevo.desktop freevo.desktop
+				doins "${FILESDIR}"/freevo.desktop freevo.desktop
 			fi
 		fi
 
 		insinto /etc/X11/dm/Sessions
-		doins ${FILESDIR}/freevo.desktop freevo.desktop
+		doins "${FILESDIR}"/freevo.desktop freevo.desktop
 	fi
 
 	exeinto /usr/bin
 	newexe "${FILESDIR}/freevo.boot" freevoboot
-	insinto /etc/conf.d
-	newins "${FILESDIR}/freevo.conf" freevo
+	newconfd "${FILESDIR}/freevo.conf" freevo
 
 	rm -rf "${D}/usr/share/doc"
 	newdoc Docs/README README.docs
@@ -89,7 +88,7 @@ src_install() {
 		Docs/{CREDITS,NOTES,plugins/*.txt}
 	cp -r Docs/{installation,plugin_writing} "${D}/usr/share/doc/${PF}"
 
-	use nls || rm -rf ${D}/usr/share/locale
+	use nls || rm -rf "${D}"/usr/share/locale
 }
 
 pkg_postinst() {
