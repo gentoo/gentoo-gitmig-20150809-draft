@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.169 2007/04/16 22:14:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.170 2007/04/22 09:48:28 pva Exp $
+
+*evolution-2.8.3-r2 (22 Apr 2007)
+
+  22 Apr 2007; <pva@gentoo.org>
+  +files/evolution-2.8.3-show-plain-if-rendered-message-exceed-limit.patch.g
+  z, +files/evolution-2.8.3-write_html.diff, +evolution-2.8.3-r2.ebuild:
+  Fix DoS on certain email content (CVE-2006-0040) bug #124826 and format
+  string error (CVE-2007-1002) bug #170879.
 
 *evolution-2.10.1 (16 Apr 2007)
 
