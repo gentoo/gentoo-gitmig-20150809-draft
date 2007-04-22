@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.5.10.ebuild,v 1.1 2007/04/20 16:35:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.5.10.ebuild,v 1.2 2007/04/22 10:32:57 peper Exp $
 
 DESCRIPTION="A Jabber/XMPP connection manager, this handles single and multi user chats and voice calls."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -16,7 +16,8 @@ RDEPEND=">=dev-libs/glib-2.4
 		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 ) )
 	>=net-libs/telepathy-glib-0.5.10
 	>=dev-lang/python-2.3
-	>=net-libs/loudmouth-1.1.1"
+	>=net-libs/loudmouth-1.1.1
+	!<net-voip/telepathy-gabble-0.5.10"
 
 DEPEND="${RDEPEND}
 	dev-libs/libxslt"
