@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.1 2007/04/20 16:32:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.2 2007/04/22 10:30:11 peper Exp $
+
+  22 Apr 2007; Piotr Jaroszyński <peper@gentoo.org>
+  telepathy-glib-0.5.10.ebuild:
+  Fix block dep.
 
 *telepathy-glib-0.5.10 (20 Apr 2007)
 
