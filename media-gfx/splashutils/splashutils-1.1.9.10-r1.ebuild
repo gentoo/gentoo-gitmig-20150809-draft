@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.9 2007/04/09 11:11:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.10 2007/04/22 14:28:22 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -161,17 +161,14 @@ src_install() {
 	exeinto /sbin
 	doexe ${SG}/splash
 
-	exeinto /etc/init.d
-	newexe ${SG}/init-splash splash
+	newinitd ${SG}/init-splash splash
+	newconfd ${SG}/splash.conf splash
 
 	insinto /usr/share/${PN}
 	doins ${SG}/initrd.splash
 
 	insinto /sbin
 	doins ${SG}/splash-functions.sh
-
-	insinto /etc/conf.d
-	newins ${SG}/splash.conf splash
 
 	insinto /etc/splash
 	doins ${SM}/fbtruetype/luxisri.ttf
