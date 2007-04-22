@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.8 2004/07/15 02:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.9 2007/04/22 17:03:01 phreak Exp $
 
 inherit eutils
 
@@ -14,17 +14,18 @@ KEYWORDS="~x86 ~sparc"
 IUSE=""
 
 DEPEND="sys-devel/bison"
+RDEPEND=""
 
 S=${WORKDIR}/MOO-${PV}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-enable-outbound.patch
+	epatch "${FILESDIR}"/${PV}-enable-outbound.patch
 }
 
 src_compile() {
-	econf || die
-	emake CFLAGS="${CFLAGS} -DHAVE_MKFIFO=1" || die
+	econf || die "econf failed!"
+	emake CFLAGS="${CFLAGS} -DHAVE_MKFIFO=1" || die "emake failed!"
 }
 
 src_install() {
@@ -33,6 +34,6 @@ src_install() {
 	doins Minimal.db
 	dodoc *.txt README*
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/lambdamoo.rc lambdamoo
-	insinto /etc/conf.d ; newins ${FILESDIR}/lambdamoo.conf lambdamoo
+	newinitd "${FILESDIR}"/lambdamoo.rc ${PN}
+	newconfd "${FILESDIR}"/lambdamoo.conf ${PN}
 }

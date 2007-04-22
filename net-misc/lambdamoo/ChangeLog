@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lambdamoo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.6 2007/02/22 02:30:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.7 2007/04/22 17:03:01 phreak Exp $
+
+  22 Apr 2007; Christian Heim <phreak@gentoo.org> lambdamoo-1.8.1-r1.ebuild:
+  Use die properly; Use newconfd/newinitd for #174266; Properly quote variables.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
