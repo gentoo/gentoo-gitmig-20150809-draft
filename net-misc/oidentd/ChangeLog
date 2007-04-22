@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.28 2007/02/21 22:36:35 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.29 2007/04/22 16:49:15 phreak Exp $
+
+  22 Apr 2007; Christian Heim <phreak@gentoo.org> metadata.xml,
+  oidentd-2.0.7-r1.ebuild, oidentd-2.0.8.ebuild:
+  Use newconfd/newinitd for #174266; Properly quote variables; Fix postinst note.
 
   21 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
   avenj has retired - removing from metadata

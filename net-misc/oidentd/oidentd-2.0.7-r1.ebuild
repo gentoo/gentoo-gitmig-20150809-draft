@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.7-r1.ebuild,v 1.12 2005/06/07 04:22:45 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.7-r1.ebuild,v 1.13 2007/04/22 16:49:15 phreak Exp $
 
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -11,25 +11,26 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha arm amd64 ia64 hppa ppc ~mips"
 IUSE="ipv6"
 
-DEPEND="virtual/libc"
+DEPEND=""
+RDEPEND=""
 
 src_compile() {
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		`use_enable ipv6` \
-		|| die
-	emake || die
+	econf $( use_enable ipv6 ) || die "econf failed!"
+	emake || die "emake failed!"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed!"
+
 	dodoc AUTHORS ChangeLog README TODO NEWS \
-		${FILESDIR}/oidentd_masq.conf ${FILESDIR}/oidentd.conf
-	exeinto /etc/init.d ; newexe ${FILESDIR}/oidentd-${PV}-init oidentd
-	insinto /etc/conf.d ; newins ${FILESDIR}/oidentd-${PV}-confd oidentd
+		"${FILESDIR}"/${PN}_masq.conf "${FILESDIR}"/${PN}.conf
+
+	newinitd "${FILESDIR}"/oidentd-${PV}-init ${PN}
+	newconfd "${FILESDIR}"/oidentd-${PV}-confd ${PN}
 }
 
 pkg_postinst() {
-	einfo Example configuration files are in /usr/share/doc/${PF}
+	echo
+	elog "Example configuration files are in /usr/share/doc/${PF}"
+	echo
 }
