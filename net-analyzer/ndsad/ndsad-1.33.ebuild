@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.5 2006/10/29 17:02:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.6 2007/04/22 06:27:30 pva Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -19,7 +19,7 @@ DEPEND=">=net-libs/libpcap-0.8"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Put ndsad binary in sbin.
 	sed -i "s/bin_PROGRAMS = ndsad/sbin_PROGRAMS = ndsad/" Makefile.am || \
@@ -50,11 +50,8 @@ src_install() {
 	insinto /etc
 	newins ndsad.conf ndsad.conf
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ndsad.init ndsad
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/ndsad.conf.d ndsad
+	newinitd "${FILESDIR}"/ndsad.init ndsad
+	newconfd "${FILESDIR}"/ndsad.conf.d ndsad
 
 	dodoc ChangeLog AUTHORS README
 }
