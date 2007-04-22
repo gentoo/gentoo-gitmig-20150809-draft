@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.24 2007/04/11 12:47:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.25 2007/04/22 09:27:16 ticho Exp $
+
+*clamassassin-1.2.4 (22 Apr 2007)
+
+  22 Apr 2007; Andrej Kacian <ticho@gentoo.org> clamassassin-1.2.1.ebuild,
+  clamassassin-1.2.2.ebuild, clamassassin-1.2.3.ebuild,
+  +clamassassin-1.2.4.ebuild:
+  Version bump, as reported by Yoann Pannier <gentoo-bugs at umsar.org> in bug
+  #170432. Updated HOMEPAGE and SRC_URI.
 
   11 Apr 2007; Andrej Kacian <ticho@gentoo.org> clamassassin-1.2.3.ebuild:
   addpredict whole DatabaseDirectory, as clamav tries multiple locations of
