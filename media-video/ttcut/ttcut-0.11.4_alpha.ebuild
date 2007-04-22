@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.11.4_alpha.ebuild,v 1.1 2007/04/21 12:26:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.11.4_alpha.ebuild,v 1.2 2007/04/22 10:49:57 genstef Exp $
 
 inherit eutils qt4
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	if has_version ">=x11-libs/qt-4.2" && ! built_with_use x11-libs/qt qt3support ; then
-		eerror "In order to compile ttmpeg2 you need to recompile qt4 with"
+		eerror "In order to compile ttcut and ttmpeg2 you need to recompile qt4 with"
 		eerror "qt3support USE flag enabled."
 		die "Recompile qt4 with qt3support USE flag enabled"
 	fi
