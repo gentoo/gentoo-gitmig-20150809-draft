@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.8 2007/04/16 13:07:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.9 2007/04/22 14:12:25 mcummings Exp $
+
+*bignum-0.21 (22 Apr 2007)
+
+  22 Apr 2007; Michael Cummings <mcummings@gentoo.org> +bignum-0.21.ebuild:
+  Version bump
 
   16 Apr 2007; Michael Cummings <mcummings@gentoo.org> bignum-0.20.ebuild:
   Updated IUSE for bignum-0.20
