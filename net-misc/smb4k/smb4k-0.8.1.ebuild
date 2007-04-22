@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.8.1.ebuild,v 1.1 2007/04/08 13:18:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.8.1.ebuild,v 1.2 2007/04/22 15:02:52 armin76 Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="|| ( kde-base/konqueror kde-base/kdebase )"
