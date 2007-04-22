@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.6 2006/12/06 03:54:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.7 2007/04/22 10:05:34 drac Exp $
 
 inherit eutils
 
@@ -12,15 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="cups doc X"
 
-DEPEND="X? (
-		|| (
-			( x11-libs/libX11
-			x11-libs/libXpm
-			x11-libs/libXt )
-			virtual/x11
-		)
-		virtual/motif
-	)
+DEPEND="X? ( x11-libs/libX11
+		x11-libs/libXpm
+		x11-libs/libXt
+		virtual/motif )
 	cups? ( net-print/cups )
 	dev-libs/libusb"
 
@@ -42,12 +37,11 @@ src_install() {
 	else
 		doexe ttink detect/askPrinter
 	fi
-	exeinto /usr/sbin
-	doexe mtinkd
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mtinkd.rc mtinkd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/mtinkd.confd mtinkd
+
+	dosbin mtinkd
+
+	newinitd "${FILESDIR}"/mtinkd.rc mtinkd
+	newconfd "${FILESDIR}"/mtinkd.confd mtinkd
 
 	use cups && \
 		exeinto /usr/lib/cups/backend; \
@@ -63,10 +57,10 @@ pkg_postinst() {
 	# see #70310
 	chmod 700 /var/mtink /var/run/mtink 2>/dev/null
 
-	einfo
-	einfo "mtink needs correct permissions to access printer device."
-	einfo "To do this you either need to run the following chmod command:"
-	einfo "chmod 666 /dev/<device>"
-	einfo "or set the suid bit on mtink, mtinkc and ttink in /usr/bin"
-	einfo
+	elog
+	elog "mtink needs correct permissions to access printer device."
+	elog "To do this you either need to run the following chmod command:"
+	elog "chmod 666 /dev/<device>"
+	elog "or set the suid bit on mtink, mtinkc and ttink in /usr/bin"
+	elog
 }

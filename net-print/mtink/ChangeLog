@@ -1,6 +1,10 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.28 2007/02/22 03:04:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.29 2007/04/22 10:05:34 drac Exp $
+
+  22 Apr 2007; Samuli Suominen <drac@gentoo.org> -mtink-1.0.9.ebuild,
+  mtink-1.0.11.ebuild:
+  Stop using virtual/x11. Start using newinitd and newinitd as per bug 174266.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
