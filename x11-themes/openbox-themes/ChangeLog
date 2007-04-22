@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/openbox-themes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.20 2007/02/21 22:53:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.21 2007/04/22 09:42:26 corsair Exp $
+
+  22 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  openbox-themes-0.6-r1.ebuild:
+  Added ~ppc64
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
