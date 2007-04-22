@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.41 2007/03/12 19:56:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.42 2007/04/22 13:02:10 swegener Exp $
+
+*pdns-2.9.21 (22 Apr 2007)
+
+  22 Apr 2007; Sven Wegener <swegener@gentoo.org> +pdns-2.9.21.ebuild:
+  Version bump.
 
   12 Mar 2007; Sven Wegener <swegener@gentoo.org> files/pdns:
   Remove bashisms from init script, bug #169636.
