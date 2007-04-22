@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.9.1.ebuild,v 1.6 2006/04/30 10:15:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.9.1.ebuild,v 1.7 2007/04/22 10:09:54 pva Exp $
 
 inherit flag-o-matic
 
@@ -34,12 +34,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	insinto /etc/init.d
-	insopts -m 755
-	newins "${FILESDIR}"/gentoo.init prelude-lml
-	insinto /etc/conf.d
-	insopts -m 644
-	newins "${FILESDIR}"/gentoo.conf prelude-lml
+	newinitd "${FILESDIR}"/gentoo.init prelude-lml
+	newconfd "${FILESDIR}"/gentoo.conf prelude-lml
 	into /usr/share/prelude/ruleset
 	mv "${D}"/etc/prelude-lml/ruleset "${D}"/usr/share/prelude/ruleset/lml
 	dosym /usr/share/prelude/ruleset/lml /etc/prelude-lml/ruleset

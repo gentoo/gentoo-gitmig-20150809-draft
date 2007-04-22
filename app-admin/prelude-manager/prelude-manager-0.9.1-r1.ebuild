@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.1-r1.ebuild,v 1.5 2006/04/30 10:15:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.1-r1.ebuild,v 1.6 2007/04/22 10:12:04 pva Exp $
 
 inherit flag-o-matic
 
@@ -40,12 +40,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	insinto /etc/init.d
-	insopts -m 755
-	newins "${FILESDIR}"/gentoo.init prelude-manager
-	insinto /etc/conf.d
-	insopts -m 644
-	newins "${FILESDIR}"/gentoo.conf prelude-manager
+
+	newinitd "${FILESDIR}"/gentoo.init prelude-manager
+	newconfd "${FILESDIR}"/gentoo.conf prelude-manager
 
 	dodir /var/run/prelude-manager
 
