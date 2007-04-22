@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.20 2007/04/15 21:18:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.21 2007/04/22 01:22:34 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> Sys-Syslog-0.18.ebuild:
+  Stable on Alpha, bug 175040.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> Sys-Syslog-0.18.ebuild:
   Stable on ppc64
