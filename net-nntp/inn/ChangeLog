@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.10 2007/04/17 23:02:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.11 2007/04/22 15:49:53 jokey Exp $
+
+  22 Apr 2007; Markus Ullmann <jokey@gentoo.org> inn-2.4.3.ebuild:
+  Stable on x86 wrt bug #173655
 
   17 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/inn-2.4.3-berkdb45.patch, inn-2.4.3.ebuild:
