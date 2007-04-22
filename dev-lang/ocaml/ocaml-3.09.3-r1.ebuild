@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.1 2007/04/22 13:55:57 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.2 2007/04/22 20:00:56 phreak Exp $
 
-inherit flag-o-matic eutils multilib pax-utils versionator
+inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
 DESCRIPTION="fast modern type-inferring functional programming language descended from the ML (Meta Language) family"
 HOMEPAGE="http://www.ocaml.org/"
@@ -16,10 +16,20 @@ IUSE="tk latex"
 DEPEND="virtual/libc
 	tk? ( >=dev-lang/tk-3.3.3 )"
 
+# ocaml deletes the *.opt files when running bootstrap
+RESTRICT="test"
+
 QA_EXECSTACK="/usr/lib/ocaml/compiler-*"
 
-# This is a crappy way to deal with the textrels, but it keeps stuff simple
-QA_TEXTRELS="usr/bin/ocaml*.opt usr/bin/camlp4*.opt"
+pkg_setup() {
+	# dev-lang/ocaml fails with -fPIC errors due to a "relocation R_X86_64_32S" on AMD64/hardened
+	if use amd64 && gcc-specs-pie ; then
+		echo
+		eerror "${CATEGORY}/${PF} is currently broken on this platform with specfiles injecting -PIE."
+		eerror "Please switch to your \"${CHOST}-$(gcc-fullversion)-hardenednopie\" specfile via gcc-config!"
+		die "Current specfile (${CHOST}-$(gcc-fullversion)) not supported by ${PF}!"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -72,9 +82,9 @@ src_compile() {
 	fi
 }
 
-src_test() {
-	make bootstrap
-}
+#src_test() {
+#	make bootstrap
+#}
 
 src_install() {
 	make BINDIR="${D}"/usr/bin \
@@ -99,7 +109,7 @@ src_install() {
 	# Turn MPROTECT off for some of the ocaml binaries, since they are trying to
 	# rewrite the segment (which will obviously fail on systems having
 	# PAX_MPROTECT enabled).
-	pax-mark -m "${D}"//usr/bin/ocamldoc.opt "${D}"/usr/bin/ocamldep.opt \
+	pax-mark -m "${D}"/usr/bin/ocamldoc.opt "${D}"/usr/bin/ocamldep.opt \
 		"${D}"/usr/bin/ocamllex.opt "${D}"/usr/bin/camlp4r.opt \
 		"${D}"/usr/bin/camlp4o.opt
 
@@ -112,6 +122,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	if use amd64 && gcc-specs-ssp ; then
+		ewarn
+		ewarn "Make sure, you switch back to the default specfile ${CHOST}-$(gcc-fullversion) via gcc-config!"
+		ewarn
+	fi
+
 	echo
 	elog "OCaml is not binary compatible from version to version, so you (may)"
 	elog "need to rebuild all packages depending on it, that are actually"

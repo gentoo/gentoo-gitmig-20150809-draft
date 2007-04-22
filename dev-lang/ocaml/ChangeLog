@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.98 2007/04/22 13:55:57 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.99 2007/04/22 20:00:56 phreak Exp $
+
+  22 Apr 2007; Christian Heim <phreak@gentoo.org> ocaml-3.09.3-r1.ebuild:
+  Restricting FEATURES=test for now, make bootstrap deletes the *.opt files
+  (thanks Matti); Removing the QA_TEXTREL definition, which is only intended
+  for binary packages; Provide a way to compile ocaml on AMD64/hardened.
 
 *ocaml-3.09.3-r1 (22 Apr 2007)
 
