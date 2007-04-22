@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r1.ebuild,v 1.2 2007/03/20 20:24:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r1.ebuild,v 1.3 2007/04/22 10:24:42 pva Exp $
 
 inherit eutils
 
@@ -50,10 +50,8 @@ src_install() {
 		doman ${mybin}.8
 	done
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}"/traffic-vis.init.d traffic-vis
-	insinto /etc/conf.d
-	newins "${FILESDIR}"/traffic-vis.conf.d traffic-vis
+	newinitd "${FILESDIR}"/traffic-vis.init.d traffic-vis
+	newconfd "${FILESDIR}"/traffic-vis.conf.d traffic-vis
 
 	dodoc TODO README BUGS CHANGELOG
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.12 2006/02/17 16:29:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.13 2007/04/22 10:24:42 pva Exp $
 
 inherit eutils
 
@@ -23,8 +23,8 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-libpcap-header-fix.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-libpcap-header-fix.patch
 }
 
 src_compile() {
@@ -47,10 +47,8 @@ src_install() {
 		doman ${mybin}.8
 	done
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/traffic-vis.init.d traffic-vis
-	insinto /etc/conf.d
-	newins ${FILESDIR}/traffic-vis.conf.d traffic-vis
+	newinitd "${FILESDIR}"/traffic-vis.init.d traffic-vis
+	newconfd "${FILESDIR}"/traffic-vis.conf.d traffic-vis
 
 	dodoc TODO README COPYING BUGS CHANGELOG
 }

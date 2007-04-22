@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.1-r1.ebuild,v 1.1 2007/02/03 07:04:42 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.1-r1.ebuild,v 1.2 2007/04/22 10:19:51 pva Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -165,11 +165,8 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib
 	doins -r contrib/database contrib/eventhandlers
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/nagios
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/conf.d nagios
+	doinitd ${FILESDIR}/nagios
+	newconfd ${FILESDIR}/conf.d nagios
 
 	chmod 644 ${S}/contrib/*.cgi
 	into /usr/nagios
