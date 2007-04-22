@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.4.ebuild,v 1.2 2007/04/07 00:47:12 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.4.ebuild,v 1.3 2007/04/22 06:21:15 dragonheart Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -130,8 +130,8 @@ src_install() {
 	doins etc/reference.config etc/classification.config \
 		etc/*.map etc/threshold.conf
 	use dynamicplugin || sed -i -e 's:^dynamic:# dynamic:g' etc/snort.conf
-	sed -i -e 's:/usr/local/:/usr/:g' etc/snort.conf
-	newins etc/snort.conf snort.conf
+	sed -e "s:/usr/local/lib:/usr/$(get_libdir):g" -e 's:/usr/local/:/usr/:g' \
+		etc/snort.conf > "${D}"/etc/snort/snort.conf.distrib
 
 	newinitd "${FILESDIR}/snort.rc8" snort
 	newconfd "${FILESDIR}/snort.confd" snort
