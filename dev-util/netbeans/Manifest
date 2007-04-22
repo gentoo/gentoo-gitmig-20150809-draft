@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 5.5-r2/jdbcstorage-build.xml-comments.patch 1967 RMD160 263b55e7d35ea2623e61453fd46f2e846401703c SHA1 2a49ea838d17bded357cbea9587cb4e83025f4c6 SHA256 82d2b0616f4b0d0624e1bb8438ff47b82b7c9375329a3eb2397d915674abf9c4
 MD5 0734227595e25a5df0ecb46f96f6cd50 files/5.5-r2/jdbcstorage-build.xml-comments.patch 1967
 RMD160 263b55e7d35ea2623e61453fd46f2e846401703c files/5.5-r2/jdbcstorage-build.xml-comments.patch 1967
@@ -36,13 +39,20 @@ MISC ChangeLog 11076 RMD160 bee4fbefb55ea38f15bc843649d722fa98b5cde6 SHA1 9d816e
 MD5 c81ad3bb3ad26411981525b9ee2db401 ChangeLog 11076
 RMD160 bee4fbefb55ea38f15bc843649d722fa98b5cde6 ChangeLog 11076
 SHA256 0cd13818cc0feac8127873ba47b8d244af604da7f200def765e47a1555837a7c ChangeLog 11076
-MISC metadata.xml 1231 RMD160 7bb940d05effa2a91a56ba3e82d9387018890b4f SHA1 4cc032a1928fcb75eb60dc7e1b5b0411704678d9 SHA256 4ff5362b7d9bf8eeed01ee71b738ae3ce845cfe8c645533ea83ae91bcbbc3e2e
-MD5 fb3f98637f1c435df7f2203cc4d7c04d metadata.xml 1231
-RMD160 7bb940d05effa2a91a56ba3e82d9387018890b4f metadata.xml 1231
-SHA256 4ff5362b7d9bf8eeed01ee71b738ae3ce845cfe8c645533ea83ae91bcbbc3e2e metadata.xml 1231
+MISC metadata.xml 1328 RMD160 4eecca7673969a73ff2ca027a39392d9b1a2f4c9 SHA1 dbea16e30375f2831e91c850baf699411fe9d1c6 SHA256 a573ece663e4ce95e27ceaf072610b6e9912dbfd580b8f3b7fc1480345ae2788
+MD5 6f58315d4c3eb8d8a3c27be4f8054542 metadata.xml 1328
+RMD160 4eecca7673969a73ff2ca027a39392d9b1a2f4c9 metadata.xml 1328
+SHA256 a573ece663e4ce95e27ceaf072610b6e9912dbfd580b8f3b7fc1480345ae2788 metadata.xml 1328
 MD5 4bff75c3ad42f1ea6045bb39cebeb853 files/digest-netbeans-3.6-r1 247
 RMD160 f84f34da26bf479b04f759d9b2ad7f9fcd4841a1 files/digest-netbeans-3.6-r1 247
 SHA256 d3c304856aab911f497e7031545584f0f325b920a00c28260f97f9bcf0fb406d files/digest-netbeans-3.6-r1 247
 MD5 f237047066edfa79b73944b48b864660 files/digest-netbeans-5.5-r4 286
 RMD160 f9ccd6b0d51aa578effc86871f374b8d419ef42a files/digest-netbeans-5.5-r4 286
 SHA256 6ccefbf351ddcc6eb05dc70fb8ba2453bbec18957ccf012e31f920e52c73e664 files/digest-netbeans-5.5-r4 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.3 (GNU/Linux)
+
+iD8DBQFGKq5TI1lqEGTUzyQRAsrfAJsFSPNhoj21Wa9/183EgYtPiHEdWQCgukHr
+2Bqm0ISrHpbGv6uUEH/3aMk=
+=i3QQ
+-----END PGP SIGNATURE-----
