@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/systemc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.11 2007/04/20 09:28:22 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.12 2007/04/22 15:38:02 calchan Exp $
+
+*systemc-2.2.0 (22 Apr 2007)
+
+  22 Apr 2007; Denis Dupeyron <calchan@gentoo.org> +systemc-2.2.0.ebuild:
+  Version bump.
 
   20 Apr 2007; Denis Dupeyron <calchan@gentoo.org>
   systemc-2.2_beta20060605.ebuild:
