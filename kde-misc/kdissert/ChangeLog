@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdissert
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.34 2007/04/22 15:10:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.35 2007/04/22 16:35:25 dertobi123 Exp $
+
+  22 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  kdissert-1.0.7.ebuild:
+  ppc stable, bug #175389
 
   22 Apr 2007; Raúl Porcel <armin76@gentoo.org> kdissert-1.0.7.ebuild:
   x86 stable wrt #175389
