@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/saru-0.0.1.ebuild,v 1.6 2004/09/20 20:59:49 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/saru-0.0.1.ebuild,v 1.7 2007/04/22 17:11:19 phreak Exp $
 
 inherit eutils
 
@@ -26,8 +26,8 @@ src_compile() {
 	econf \
 	--with-iptables-lib=/lib/iptables \
 	--with-heartbeat-lib=/usr/lib/heartbeat \
-	--with-heartbeat-fifo=/var/lib/heartbeat/api || die "econf failed"
-	emake || die "emake failed"
+	--with-heartbeat-fifo=/var/lib/heartbeat/api || die "econf failed!"
+	emake || die "emake failed!"
 }
 
 src_install() {
@@ -49,23 +49,22 @@ src_install() {
 	insinto /lib/modules/${KV}/kernel/net/ipv4/netfilter
 	doins iptables/kernel/ipt_saru.o || die "doins failed"
 
-	dodir /etc/init.d /etc/conf.d /etc/saru
-	insinto /etc/conf.d
-	newins  ${FILESDIR}/saru.conf saru || die "newins failed"
+	dodir /etc/saru
+	newconfd "${FILESDIR}"/saru.conf saru
 
 	insinto /etc/saru
 	doins etc/saru/saru.conf || die "doins failed"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/saru.init saru || die "newexe failed"
+	newinitd "${FILESDIR}"/saru.init saru
 
 	doman saru/saru.8 || die "doman failed"
 
 	dodir /var/lib/heartbeat/api
-	mknod -m 200 ${D}/var/lib/heartbeat/api/saru_1.req p || die "mknod failed"
-	fowners 65:65 /var/lib/heartbeat/api/saru_1.req || die "fowners failed"
-	mknod -m 600 ${D}/var/lib/heartbeat/api/saru_1.rsp p || die "mknod failed"
-	fowners 65:65 /var/lib/heartbeat/api/saru_1.rsp || die "fowners failed"
+	mknod -m 200 "${D}"/var/lib/heartbeat/api/saru_1.req p || die "mknod -m 200 failed!"
+	mknod -m 600 "${D}"/var/lib/heartbeat/api/saru_1.rsp p || die "mknod -m 600 failed!"
+
+	fowners 65:65 /var/lib/heartbeat/api/saru_1.req \
+		/var/lib/heartbeat/api/saru_1.rsp || die "fowners failed!"
 
 	dodoc ChangeLog README INSTALL TODO NEWS AUTHORS \
 		patches/linux-2.4.20-outgoing_mac.hidden.patch \
@@ -74,11 +73,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "upgrading module dependencies ... "
-	/sbin/depmod -a -F ${ROOT}/lib/modules/${KV}/build/System.map
-	einfo "... done"
-	einfo
+	echo
+	ebegin "Updating module dependencies ... "
+	/sbin/depmod -a -F ${ROOT}/lib/modules/${KV}/build/System.map > /dev/null 2>&1
+	eend $?
+	echo
 	einfo "Please remember to re-emerge saru when you upgrade your kernel!"
-	einfo
+	echo
 }
