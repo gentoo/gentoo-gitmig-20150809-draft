@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3.ebuild,v 1.2 2007/01/05 16:14:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3.ebuild,v 1.3 2007/04/22 09:58:25 matsuu Exp $
 
 inherit cannadic eutils multilib
 
@@ -93,8 +93,8 @@ src_install() {
 		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
 	fi
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/canna.initd canna || die
-	insinto /etc/conf.d ; newins ${FILESDIR}/canna.confd canna || die
+	newinitd ${FILESDIR}/canna.initd canna || die
+	newconfd ${FILESDIR}/canna.confd canna || die
 	insinto /etc/		; newins ${FILESDIR}/canna.hosts hosts.canna || die
 	keepdir /var/log/canna/ || die
 
