@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.25 2007/02/14 22:26:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.26 2007/04/22 16:15:57 betelgeuse Exp $
+
+*gjdoc-0.7.8 (22 Apr 2007)
+
+  22 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> +gjdoc-0.7.8.ebuild:
+  Version bump. Features support for 1.5 features in GNU Classpath.
 
   14 Feb 2007; Vlastimil Babka <caster@gentoo.org> -gjdoc-0.7.7.ebuild:
   Cleanup.
