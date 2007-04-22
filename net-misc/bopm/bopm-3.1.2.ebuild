@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.2.ebuild,v 1.5 2005/05/10 11:31:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.2.ebuild,v 1.6 2007/04/22 11:42:30 armin76 Exp $
 
 inherit eutils
 
@@ -42,10 +42,8 @@ src_install () {
 	# If anybody wants libopm, please install net-libs/libopm
 	rm -r ${D}/usr/lib ${D}/usr/include
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/bopm.init.d bopm
-	insinto /etc/conf.d
-	newins ${FILESDIR}/bopm.conf.d bopm
+	newinitd ${FILESDIR}/bopm.init.d bopm
+	newconfd ${FILESDIR}/bopm.conf.d bopm
 
 	dodoc CREDITS ChangeLog INSTALL LICENSE README TODO
 }
