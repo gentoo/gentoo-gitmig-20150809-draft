@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-taskmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.16 2007/03/15 13:57:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.17 2007/04/22 15:28:13 drac Exp $
+
+*xfce4-taskmanager-0.3.2-r1 (22 Apr 2007)
+
+  22 Apr 2007; Samuli Suominen <drac@gentoo.org>
+  +xfce4-taskmanager-0.3.2-r1.ebuild:
+  Install desktop menu entry.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-taskmanager-0.3.2.ebuild:
