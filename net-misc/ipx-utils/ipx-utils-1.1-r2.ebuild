@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1-r2.ebuild,v 1.2 2006/07/27 19:24:54 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1-r2.ebuild,v 1.3 2007/04/22 16:11:20 phreak Exp $
 
 inherit eutils
 
@@ -20,18 +20,16 @@ S=${WORKDIR}/${P/-utils}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	sed -i "s:-O2 -Wall:${CFLAGS}:" Makefile
-	epatch ${FILESDIR}/${P}-makefile.patch
-	epatch ${FILESDIR}/${P}-proc.patch #67642
+	sed -i "s:-O2 -Wall:${CFLAGS}:" "${S}"/Makefile
+	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-proc.patch #67642
 }
 
 src_install() {
 	dodir /sbin /usr/share/man/man8
-	make DESTDIR=${D} install || die
+	dodoc "${S}"/README
+	make DESTDIR="${D}" install || die "make install failed!"
 
-	insinto /etc/conf.d ; newins ${FILESDIR}/ipx.confd ipx
-	exeinto /etc/init.d ; newexe ${FILESDIR}/ipx.init ipx
-
-	dodoc README
+	newconfd "${FILESDIR}"/ipx.confd ipx
+	newinitd "${FILESDIR}"/ipx.init ipx
 }
