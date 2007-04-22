@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.21 2007/02/01 13:00:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.22 2007/04/22 11:48:33 caleb Exp $
+
+  22 Apr 2007; Caleb Tennis <caleb@gentoo.org> -qt-embedded-3.3.4.ebuild,
+  -qt-embedded-3.3.4-r1.ebuild, -qt-embedded-3.3.7.ebuild,
+  +qt-embedded-3.3.8.ebuild:
+  had to remove old versions, because they depend on qt versions that have
+  security issues
+
+*qt-embedded-3.3.8 (22 Apr 2007)
+
+  22 Apr 2007; Caleb Tennis <caleb@gentoo.org> +qt-embedded-3.3.8.ebuild:
+  bump
 
 *qt-embedded-3.3.7 (31 Jan 2007)
 
