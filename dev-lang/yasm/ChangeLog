@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.12 2007/03/20 01:10:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.13 2007/04/22 01:08:13 kugelfang Exp $
+
+  22 Apr 2007; Danny van Dyk <kugelfang@gentoo.org> yasm-0.6.0.ebuild:
+  Remove macho object format tests in dev-lang/yasm-0.6.0 until fixed
+  upstream. See bug #174020.
 
 *yasm-0.6.0 (20 Mar 2007)
 
