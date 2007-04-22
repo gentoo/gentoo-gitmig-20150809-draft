@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.127 2007/04/07 00:47:12 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.128 2007/04/22 05:55:08 dragonheart Exp $
+
+*snort-2.6.1.4-r1 (22 Apr 2007)
+
+  22 Apr 2007; Daniel Black <dragonheart@gentoo.org> +snort-2.6.1.4-r1.ebuild,
+  files/snort.rc9:
+  now includes priv drop thanks to <drear> on irc. Default config file now
+  x86_64 friendly with library paths too.
 
   07 Apr 2007; Raphael Marichez <falco@gentoo.org>
   +files/snort-2.6.1.4-libdnet-ip6.patch, snort-2.6.1.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.2.ebuild,v 1.7 2007/02/21 12:23:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.4-r1.ebuild,v 1.1 2007/04/22 05:55:08 dragonheart Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 -sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
 IUSE="postgres mysql flexresp selinux snortsam odbc prelude inline dynamicplugin
 timestats perfprofiling linux-smp-stats flexresp2 react sguil gre"
 
@@ -60,10 +60,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-libdir.patch"
+	epatch "${FILESDIR}/${PN}-2.6.1.2-libdir.patch"
 	epatch "${FILESDIR}/${PN}-2.6.1.1-libnet.patch"
-	use gre && epatch "${FILESDIR}/${PN}-2.6.1.1-gre.patch"
-	use react && epatch "${FILESDIR}/${P}-react.patch"
+	epatch "${FILESDIR}/${P}-libdnet-ip6.patch"
+	use react && epatch "${FILESDIR}/${PN}-2.6.1.2-react.patch"
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
 		etc/snort.conf
 
@@ -129,9 +129,11 @@ src_install() {
 	insinto /etc/snort
 	doins etc/reference.config etc/classification.config \
 		etc/*.map etc/threshold.conf
-	newins etc/snort.conf snort.conf
+	use dynamicplugin || sed -i -e 's:^dynamic:# dynamic:g' etc/snort.conf
+	sed -e "s:/usr/local/lib:/usr/$(get_libdir):g" -e 's:/usr/local/:/usr/:g' \
+		etc/snort.conf > ${D}/etc/snort.conf
 
-	newinitd "${FILESDIR}/snort.rc8" snort
+	newinitd "${FILESDIR}/snort.rc9" snort
 	newconfd "${FILESDIR}/snort.confd" snort
 
 	fowners snort:snort /var/log/snort
@@ -163,7 +165,7 @@ pkg_postinst() {
 	ewarn "lower cost to memory. For more information on the new features"
 	ewarn "in snort 2.6, please take a look at the release notes located in..."
 	ewarn
-	ewarn "  /usr/share/doc/${PF}/RELEASE.NOTES.gz"
+	ewarn "  /usr/share/doc/${PF}/RELEASE.NOTES.bz2"
 	ewarn
 	einfo "To use a database as a backend for snort you will have to"
 	einfo "import the correct tables to the database."
