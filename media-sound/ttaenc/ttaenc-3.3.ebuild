@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ttaenc-3.3.ebuild,v 1.2 2007/04/22 11:04:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ttaenc-3.3.ebuild,v 1.3 2007/04/22 11:06:59 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 
 S="${WORKDIR}"
 
