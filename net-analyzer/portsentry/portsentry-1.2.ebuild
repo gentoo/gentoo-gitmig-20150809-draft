@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.9 2004/10/04 22:56:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.10 2007/04/22 08:53:44 pva Exp $
 
 inherit eutils
 
@@ -15,10 +15,10 @@ KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
-S=${WORKDIR}/${PN}_beta
+S="${WORKDIR}"/${PN}_beta
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A} ; cd "${S}"
 
 	# Setting the portsentry.conf file location
 	sed -i \
@@ -54,6 +54,6 @@ src_install() {
 	newins portsentry.ignore portsentry.ignore.sample
 	newins portsentry.conf portsentry.conf.sample
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/portsentry.rc6 portsentry
-	insinto /etc/conf.d ; newins ${FILESDIR}/portsentry.confd portsentry
+	newinitd "${FILESDIR}"/portsentry.rc6 portsentry
+	newconfd "${FILESDIR}"/portsentry.confd portsentry
 }

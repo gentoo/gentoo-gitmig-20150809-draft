@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/portsentry
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.20 2007/02/09 04:05:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.21 2007/04/22 08:53:44 pva Exp $
+
+  22 Apr 2007; <pva@gentoo.org> portsentry-1.1-r7.ebuild,
+  portsentry-1.2.ebuild:
+  Use do{conf,init}d, bug #174266.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
