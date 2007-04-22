@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r4.ebuild,v 1.3 2007/04/09 14:36:37 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r4.ebuild,v 1.4 2007/04/22 13:56:11 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="http://uranus.it.swin.edu.au/~jn/linux/${P}.tar.gz"
 HOMEPAGE="http://uranus.it.swin.edu.au/~jn/linux/dns.htm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 DEPEND="sys-apps/sed
 		virtual/libc"
