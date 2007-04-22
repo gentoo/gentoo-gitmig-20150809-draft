@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.27 2007/02/18 17:41:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.28 2007/04/22 08:56:08 caster Exp $
+
+*lucene-2.1.0 (22 Apr 2007)
+
+  22 Apr 2007; Vlastimil Babka <caster@gentoo.org> +lucene-2.1.0.ebuild:
+  Version bump, new slot, bug #139690. Now installs both lucene-core.jar and
+  lucene-demos.jar, because pdfbox needs them. Uses javacc during compile, so
+  had to drop ~ia64 and ~x86-fbsd.
 
   18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -lucene-1.4.1.ebuild,
   -lucene-1.4.3.ebuild:
