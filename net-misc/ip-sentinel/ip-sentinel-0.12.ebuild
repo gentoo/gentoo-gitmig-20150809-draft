@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.3 2006/09/15 04:52:35 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.4 2007/04/22 06:33:47 pva Exp $
 
 inherit eutils
 
@@ -20,12 +20,11 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ip-sentinel.init ip-sentinel
-	insinto /etc/conf.d
-	newins "${FILESDIR}/ip-sentinel.conf.d" ip-sentinel
+	newinitd "${FILESDIR}"/ip-sentinel.init ip-sentinel
+	newconfd "${FILESDIR}"/ip-sentinel.conf.d ip-sentinel
+
 	insinto /etc
-	newins "${FILESDIR}/ip-sentinel.cfg" ip-sentinel.cfg
+	newins "${FILESDIR}"/ip-sentinel.cfg ip-sentinel.cfg
 }
 
 pkg_preinst() {
