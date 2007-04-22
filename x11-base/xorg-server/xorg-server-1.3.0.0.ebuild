@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.1 2007/04/21 05:57:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.2 2007/04/22 04:20:31 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -146,7 +146,7 @@ RDEPEND=">=x11-libs/libXfont-1.2.5
 	# Xxf86misc and Xxf86vm are xorgcfg-dependent
 	# liblbxutil is lbx- dependent
 DEPEND="${RDEPEND}
-	>=x11-proto/randrproto-1.2
+	>=x11-proto/randrproto-1.2.1
 	x11-proto/renderproto
 	>=x11-proto/fixesproto-4
 	>=x11-proto/damageproto-1.1
