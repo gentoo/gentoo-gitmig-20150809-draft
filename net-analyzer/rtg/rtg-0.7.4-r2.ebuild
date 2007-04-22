@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/rtg-0.7.4-r2.ebuild,v 1.2 2006/11/23 19:53:19 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/rtg-0.7.4-r2.ebuild,v 1.3 2007/04/22 10:06:46 pva Exp $
 
 inherit eutils
 
@@ -35,10 +35,8 @@ src_install() {
 
 	dodoc FAQ README
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/rtgpoll.confd rtgpoll
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rtgpoll.initd rtgpoll
+	newconfd "${FILESDIR}"/rtgpoll.confd rtgpoll
+	newinitd "${FILESDIR}"/rtgpoll.initd rtgpoll
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rtg
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.9 2006/11/23 19:53:19 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.10 2007/04/22 10:06:46 pva Exp $
+
+  22 Apr 2007; <pva@gentoo.org> rtg-0.7.4-r2.ebuild:
+  Use do{conf,init}d, bug #174266.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> rtg-0.7.4-r2.ebuild:
   dev-db/mysql => virtual/mysql
