@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.2 2006/11/23 17:13:40 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.3 2007/04/22 00:08:44 mrness Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -85,10 +85,8 @@ src_install() {
 	diropts -g kannel -m0770
 	keepdir /var/log/kannel
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/kannel-initd" kannel
-	insinto /etc/conf.d
-	newins "${FILESDIR}/kannel-confd" kannel
+	newinitd "${FILESDIR}/kannel-initd" kannel
+	newconfd "${FILESDIR}/kannel-confd" kannel
 }
 
 pkg_preinst() {
