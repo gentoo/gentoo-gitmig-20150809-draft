@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.468 2007/04/19 14:14:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.469 2007/04/22 01:38:26 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  xine-lib-1.1.4-r2.ebuild, xine-lib-1.1.6.ebuild:
+  Stable on Alpha, bug 174909.
 
   19 Apr 2007; Alexis Ballier <aballier@gentoo.org> xine-lib-1.1.6.ebuild:
   Use libdts or libdca for dts decoding
