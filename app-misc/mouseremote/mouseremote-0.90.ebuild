@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.16 2007/01/28 05:20:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.17 2007/04/22 15:16:40 phreak Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="virtual/perl-Time-HiRes"
 
 src_compile() {
-	epatch ${FILESDIR}/${PN}-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-gentoo.diff
 	cd MultiMouse && emake \
 		PREFIX=/usr \
 		LOCKDIR=/var/lock \
@@ -34,15 +34,13 @@ src_install() {
 	newdoc client/MouseRemote.pl MouseRemote.pl.dist
 	newdoc client/MouseRemoteKeys.pl MouseRemoteKeys.pl.dist
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mouseremote.start mouseremote
-	insinto /etc/conf.d
-	newins ${FILESDIR}/mouseremote.conf mouseremote
+	newinitd "${FILESDIR}"/mouseremote.start mouseremote
+	newconfd "${FILESDIR}"/mouseremote.conf mouseremote
 }
 
 pkg_postinst() {
-	[ -e /dev/mumse ] || mkfifo ${ROOT}/dev/mumse
-	[ -e /dev/x10fifo ] || mkfifo ${ROOT}/dev/x10fifo
+	[ -e /dev/mumse ] || mkfifo "${ROOT}"/dev/mumse
+	[ -e /dev/x10fifo ] || mkfifo "${ROOT}"/dev/x10fifo
 
 	elog "To use the mouse function in X, add the following to your XF86Config"
 	elog "Section \"InputDevice\""
