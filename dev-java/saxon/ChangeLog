@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/saxon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.29 2007/04/22 12:29:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.30 2007/04/22 13:51:26 caster Exp $
+
+*saxon-6.5.5 (22 Apr 2007)
+
+  22 Apr 2007; Vlastimil Babka <caster@gentoo.org> +files/build-6.5.5.xml,
+  +saxon-6.5.5.ebuild:
+  Version bump, bug #175544 by Jiri Tyr <jiri.tyr@e-learning.vslib.cz>.
+  Dropped all deps except jdom and allowed to build with >1.4 JDK because it
+  doesn't seem to be problem anymore.
 
   22 Apr 2007; Vlastimil Babka <caster@gentoo.org> -saxon-6.5.2.ebuild,
   -saxon-8.4b.ebuild, -saxon-8.4b-r1.ebuild:

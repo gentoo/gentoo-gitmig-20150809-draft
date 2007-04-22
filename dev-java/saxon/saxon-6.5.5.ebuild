@@ -1,0 +1,59 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.5.ebuild,v 1.1 2007/04/22 13:51:26 caster Exp $
+
+JAVA_PKG_IUSE="doc source"
+inherit java-pkg-2 java-ant-2 eutils versionator
+
+MY_P="${PN}$(replace_all_version_separators -)"
+DESCRIPTION="A collection of tools for processing XML documents: XSLT processor, XSL library, parser."
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
+HOMEPAGE="http://saxon.sourceforge.net/"
+
+LICENSE="MPL-1.1"
+SLOT="6.5"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
+
+COMMON_DEP="~dev-java/jdom-1.0"
+
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
+
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
+	${COMMON_DEP}"
+
+S="${WORKDIR}"
+
+src_unpack() {
+	unpack ${A}
+
+	unzip -qq source.zip -d src || die "failed to unpack"
+
+	# TODO update patch for 6.5.2
+	#epatch ${FILESDIR}/${P}-jikes.patch
+
+	cp ${FILESDIR}/build-${PV}.xml build.xml
+
+	rm -v *.jar
+	rm -rf doc/api
+	mkdir lib && cd lib
+	java-pkg_jarfrom jdom-1.0
+}
+
+src_compile() {
+	java-pkg_filter-compiler jikes
+
+	eant -Dproject.name=${PN} jar $(use_doc)
+}
+
+src_install() {
+	java-pkg_dojar dist/${PN}.jar
+
+	if use doc; then
+		java-pkg_dojavadoc dist/doc/api
+		dohtml -r doc/*
+	fi
+	use source && java-pkg_dosrc src/*
+}
