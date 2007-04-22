@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.0.5.ebuild,v 1.2 2007/04/20 22:29:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.0.5.ebuild,v 1.3 2007/04/22 16:29:44 armin76 Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kdbg/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-devel/gdb-5.0"

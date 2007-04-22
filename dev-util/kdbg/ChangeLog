@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.48 2007/04/20 22:29:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.49 2007/04/22 16:29:44 armin76 Exp $
+
+  22 Apr 2007; Raúl Porcel <armin76@gentoo.org> kdbg-2.0.5.ebuild:
+  x86 stable wrt #175384
 
   20 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdbg-2.0.5.ebuild:
   Homepage update.
