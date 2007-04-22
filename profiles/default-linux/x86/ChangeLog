@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.71 2007/04/13 22:02:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.72 2007/04/22 14:12:38 kugelfang Exp $
+
+  22 Apr 2007; Danny van Dyk <kugelfang@gentoo.org> vserver/no-nptl/parent,
+  vserver/parent:
+  Removed comments in parent file with regard to bug #174877.
 
   13 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +2007.0/desktop/make.defaults, -dev/2007.0/desktop/make.defaults,
