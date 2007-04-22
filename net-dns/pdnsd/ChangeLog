@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.68 2007/03/10 14:03:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.69 2007/04/22 08:33:45 kloeri Exp $
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> pdnsd-1.2.5.ebuild:
+  Stable on Alpha, bug 174559.
 
   10 Mar 2007; Alin Năstac <mrness@gentoo.org> pdnsd-1.2.4-r1.ebuild,
   pdnsd-1.2.4-r3.ebuild, pdnsd-1.2.5.ebuild:
