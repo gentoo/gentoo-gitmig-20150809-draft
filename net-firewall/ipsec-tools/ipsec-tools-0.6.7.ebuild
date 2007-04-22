@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.1 2007/04/21 12:24:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.2 2007/04/22 11:45:25 dragonheart Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -209,8 +209,8 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	keepdir /var/lib/racoon
-	insinto /etc/conf.d && newins "${FILESDIR}"/racoon.conf.d racoon
-	exeinto /etc/init.d && newexe "${FILESDIR}"/racoon.init.d racoon
+	newconfd "${FILESDIR}"/racoon.conf.d racoon
+	newinitd "${FILESDIR}"/racoon.init.d racoon
 
 	dodoc ChangeLog README NEWS
 	dodoc src/racoon/samples/*
