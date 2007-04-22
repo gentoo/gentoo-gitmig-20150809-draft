@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/bbrb-0.4.1.ebuild,v 1.14 2004/06/24 22:13:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/bbrb-0.4.1.ebuild,v 1.15 2007/04/22 10:06:13 corsair Exp $
 
 IUSE=""
 DESCRIPTION="Background manager for blackbox/fluxbox/openbox"
@@ -16,7 +16,7 @@ RDEPEND="media-gfx/xv
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="ppc ~ppc64 sparc x86"
 
 src_install () {
 	einstall || die
