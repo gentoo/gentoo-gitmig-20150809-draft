@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.4.ebuild,v 1.3 2007/04/10 15:25:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.4.ebuild,v 1.4 2007/04/22 11:44:42 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -106,9 +106,9 @@ src_install() {
 		dobin mlnet mld_hash get_range copysources make_torrent subconv \
 			${FILESDIR}/mldonkey || die "dobin failed"
 
-		insinto /etc/conf.d; newins "${FILESDIR}/mldonkey.confd-2.8" mldonkey
+		newconfd "${FILESDIR}/mldonkey.confd-2.8" mldonkey
 		fperms 600 /etc/conf.d/mldonkey
-		exeinto /etc/init.d; newexe "${FILESDIR}/mldonkey.initd-2.8-r1" mldonkey
+		newinitd "${FILESDIR}/mldonkey.initd-2.8-r1" mldonkey
 	fi
 
 	if use gtk; then
