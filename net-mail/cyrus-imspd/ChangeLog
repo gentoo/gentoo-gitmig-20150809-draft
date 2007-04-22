@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imspd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.11 2007/02/22 01:41:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.12 2007/04/22 09:11:11 ticho Exp $
+
+  22 Apr 2007; Andrej Kacian <ticho@gentoo.org> cyrus-imspd-1.7b.ebuild,
+  cyrus-imspd-1.7b-r1.ebuild:
+  Use newinitd and newconfd. Bug #174266.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

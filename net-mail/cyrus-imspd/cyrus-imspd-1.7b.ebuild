@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.10 2007/01/05 07:11:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.11 2007/04/22 09:11:11 ticho Exp $
 
 inherit eutils ssl-cert
 
@@ -66,10 +66,8 @@ src_compile() {
 src_install() {
 	newsbin imsp/cyrus-imspd imspd
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/imspd.rc6" imspd
-	insinto /etc/conf.d
-	newins "${FILESDIR}/imspd.conf" imspd
+	newinitd "${FILESDIR}/imspd.rc6" imspd
+	newconfd "${FILESDIR}/imspd.conf" imspd
 
 	keepdir /var/imsp{,/user}
 
