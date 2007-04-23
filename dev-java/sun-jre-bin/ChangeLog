@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.80 2007/02/12 01:45:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.81 2007/04/23 08:35:49 opfer Exp $
+
+  23 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  sun-jre-bin-1.5.0.11.ebuild:
+  stable x86, bug 175280
 
   12 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   sun-jre-bin-1.4.2.13.ebuild:
