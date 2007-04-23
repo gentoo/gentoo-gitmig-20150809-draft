@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/x86info
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.14 2006/09/30 03:46:28 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.15 2007/04/23 17:43:40 armin76 Exp $
+
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> x86info-1.20.ebuild:
+  x86 stable
 
 *x86info-1.20 (30 Sep 2006)
 
