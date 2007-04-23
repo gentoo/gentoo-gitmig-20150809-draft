@@ -50,7 +50,6 @@ slotmove <net-www/tomcat-4.1.30 0 4
 slotmove <net-www/tomcat-5.0.27 0 5
 move dev-java/blackdown-java3d dev-java/blackdown-java3d-bin
 move dev-java/bluej dev-java/bluej-bin
-move dev-java/datavision dev-java/datavision-bin
 move dev-java/dbconnectionbroker dev-java/dbconnectionbroker-bin
 move dev-java/infobus dev-java/infobus-bin
 move dev-java/jad dev-java/jad-bin
