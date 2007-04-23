@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.149 2007/04/20 15:05:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.150 2007/04/23 18:26:51 cardoe Exp $
+
+  23 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20_p12288.ebuild, -mythtv-0.20_p12288-r1.ebuild,
+  -mythtv-0.20_p12376.ebuild, -mythtv-0.20_p12599.ebuild,
+  -mythtv-0.20_p12783.ebuild, -mythtv-0.20_p12801.ebuild,
+  -mythtv-0.20_p12825.ebuild:
+  Remove old builds
 
   20 Apr 2007; Steve Dibb <beandog@gentoo.org> ChangeLog:
   Stable on amd64, ppc, x86
