@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/Template-XML-2.17-r1.ebuild,v 1.1 2007/04/15 11:18:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/Template-XML-2.17-r1.ebuild,v 1.2 2007/04/23 12:39:59 armin76 Exp $
 
 inherit perl-module eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/modules/by-module/Template/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~abw/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 PATCHES="${FILESDIR}/bug-144689-branch-2.17.patch"
 
