@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.11 2007/03/14 23:49:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.12 2007/04/23 11:48:38 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A game, similar to Barrack by Ambrosia Software"
 HOMEPAGE="http://late.sourceforge.net/"
