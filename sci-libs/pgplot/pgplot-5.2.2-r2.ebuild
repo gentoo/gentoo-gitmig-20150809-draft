@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.1 2007/03/09 02:54:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.2 2007/04/23 16:04:07 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -62,6 +62,8 @@ src_unpack() {
 		-e "s:FFLAGOPT=.*:FFLAGOPT=\"${FFLAGS:- -O2}\":g" \
 		-e "s:CCOMPL=.*:CCOMPL=\"$(tc-getCC)\":g" \
 		-e "s:CFLAGOPT=.*:CFLAGOPT=\"${CFLAGS}\":g" \
+		-e 's:SHARED_LIB=.*:SHARED_LIB="libpgplot.so.5":g' \
+		-e "s:SHARED_LD=.*:SHARED_LD=\"$(tc-getCC) -Wl,-soname,libpgplot.so.5 -shared -o \$SHARED_LIB\":g" \
 		local.conf || die "sed flags failed"
 
 	sed -i \
@@ -116,15 +118,15 @@ src_install() {
 	doins grfont.dat grexec.f *.inc rgb.txt
 
 	# FORTRAN libs
-	dolib.a libpgplot.a
-	dolib.so libpgplot.so
-	dosym libpgplot.so.5 /usr/$(get_libdir)/libpgplot.so
-	dobin pgxwin_server pgdisp
+	dolib.a libpgplot.a || die "dolib.a failed"
+	dolib.so libpgplot.so.5 || die "dolib.so failed"
+	dosym libpgplot.so.5 /usr/$(get_libdir)/libpgplot.so || "dosym failed"
+	dobin pgxwin_server pgdisp || die "dobin failed"
 
 	# C binding
 	insinto /usr/include
-	doins cpgplot.h
-	dolib.a libcpgplot.a
+	doins cpgplot.h || die "doins failed"
+	dolib.a libcpgplot.a || die "dolib.a failed"
 	# shared lib: todo eventually in a patch
 	# dolib.so libcpgplot.so
 	# dosym libcpgplot.so.5 /usr/$(get_libdir)/libcpgplot.so
