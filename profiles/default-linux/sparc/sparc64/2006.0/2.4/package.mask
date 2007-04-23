@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/package.mask,v 1.23 2007/04/20 20:42:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/package.mask,v 1.24 2007/04/23 14:08:51 gustavoz Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (03 Apr 2007)
 # Unmasking firefox-1.5 for <epiphany-2.16
@@ -184,3 +184,6 @@ xfce-extra/thunar-volman
 # Mask >=glibc-2.4 it's not overly tested with 2.4
 >=sys-libs/glibc-2.4
 
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# It's broke for 2.4 kernels/headers
+>=sys-apps/iproute2-2.6.19.20061214
