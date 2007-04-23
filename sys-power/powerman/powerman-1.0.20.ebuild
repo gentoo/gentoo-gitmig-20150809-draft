@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-1.0.20.ebuild,v 1.1 2006/10/01 21:42:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-1.0.20.ebuild,v 1.2 2007/04/23 19:45:06 swegener Exp $
 
 inherit eutils
 
@@ -29,12 +29,15 @@ src_unpack() {
 }
 
 src_compile() {
-	emake 
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake -j1 install DESTDIR="${D}" mandir="/usr/share/man"
-	rm ${D}/etc/rc.d/init.d/powerman
+	emake -j1 install \
+		DESTDIR="${D}" \
+		mandir="/usr/share/man" \
+		|| die "emake install failed"
+	rm "${D}"/etc/rc.d/init.d/powerman
 	newdoc scripts/powerman.init powerman_redhat_initd
 	dodoc ChangeLog DISCLAIMER NEWS TODO
 }
