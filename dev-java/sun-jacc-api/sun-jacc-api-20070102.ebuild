@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jacc-api/sun-jacc-api-20070102.ebuild,v 1.1 2007/01/10 23:57:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jacc-api/sun-jacc-api-20070102.ebuild,v 1.2 2007/04/23 17:37:00 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -17,17 +17,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+COMMON_DEP="=dev-java/servletapi-2.4*"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	=dev-java/servletapi-2.4*"
-RDEPEND=">=virtual/jre-1.4"
+	${COMMON_DEP}"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# we need to patch the build file since we don't want to update an
 	# existing jar-archive but build a new one (called jcc-api.jar)
-	epatch ${FILESDIR}/20070102-jcc-api.patch
+	epatch "${FILESDIR}/20070102-jcc-api.patch"
 	java-pkg_jar-from servletapi-2.4 servlet-api.jar
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jacc-api
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jacc-api/ChangeLog,v 1.1 2007/01/10 23:57:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jacc-api/ChangeLog,v 1.2 2007/04/23 17:37:00 betelgeuse Exp $
+
+  23 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  sun-jacc-api-20070102.ebuild:
+  Add missing dev-java/servletapi to RDEPEND.
 
 *sun-jacc-api-20070102 (10 Jan 2007)
 
