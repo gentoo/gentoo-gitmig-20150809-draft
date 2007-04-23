@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.8 2007/04/03 13:53:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.9 2007/04/23 20:40:51 welp Exp $
+
+  23 Apr 2007; Peter Weller <welp@gentoo.org> linuxdcpp-20070403.ebuild:
+  Keyworded ~x86-fbsd
 
 *linuxdcpp-20070403 (03 Apr 2007)
 
