@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.21 2007/04/22 18:13:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.22 2007/04/23 08:41:22 opfer Exp $
+
+  23 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  jaxme-0.3.1-r3.ebuild:
+  stable x86, bug 175360 and filter jikes
 
   22 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   jaxme-0.3.1-r3.ebuild:
