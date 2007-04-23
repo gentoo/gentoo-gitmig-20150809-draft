@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12-r2.ebuild,v 1.1 2006/02/08 20:58:35 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12-r2.ebuild,v 1.2 2007/04/23 15:23:32 gustavoz Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/python-xlib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
 IUSE=""
 
 src_unpack() {
