@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pcre++
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.11 2007/04/22 08:50:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.12 2007/04/23 20:51:56 armin76 Exp $
+
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> pcre++-0.9.5-r1.ebuild:
+  Add ~ia64
 
   22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> pcre++-0.9.5-r1.ebuild:
   Add ~mips keyword.
