@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.23 2007/02/03 23:01:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.24 2007/04/23 17:27:20 betelgeuse Exp $
+
+*checkstyle-4.3 (23 Apr 2007)
+
+  23 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> +checkstyle-4.3.ebuild:
+  Version bump. Test suite works only with virtual/jdk-1.6.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> checkstyle-4.2.ebuild:
   add ~amd64, bug 161618
@@ -53,6 +58,7 @@
   cleanup, removed old revision with a dependency to regexp.
 
 *checkstyle-3.4-r3 (27 Mar 2005)
+*checkstyle-3.3-r1 (27 Mar 2005)
 
   27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +checkstyle-3.3-r1.ebuild,
   -checkstyle-3.4-r2.ebuild, +checkstyle-3.4-r3.ebuild:
