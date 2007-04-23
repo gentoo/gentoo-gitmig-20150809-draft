@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xsfcave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.1 2007/04/21 09:53:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.2 2007/04/23 02:03:57 mr_bones_ Exp $
+
+  23 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org> xsfcave-0.5.ebuild:
+  touchups; keyword for x86
 
 *xsfcave-0.5 (21 Apr 2007)
 
