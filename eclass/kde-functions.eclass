@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.150 2007/04/22 15:59:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.151 2007/04/23 19:35:05 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -915,7 +915,7 @@ postprocess_desktop_entries() {
 	if [[ -z ${KDEBASE} ]] ; then
 		local desktop_entries="$(find "${D}${PREFIX}/share/applnk" -name '*.desktop' \
 			-not -path '*.hidden*' 2>/dev/null)"
-	
+
 		if [[ -n ${desktop_entries} ]]; then
 			for entry in ${desktop_entries} ; do
 				dodir ${PREFIX}/share/applications/kde
