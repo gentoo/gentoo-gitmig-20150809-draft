@@ -1,0 +1,10 @@
+# ChangeLog for app-text/wklej
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.1 2007/04/23 23:57:13 jurek Exp $
+
+*wklej-0.0.5 (23 Apr 2007)
+
+  23 Apr 2007; Jurek Bartuszek <jurek@gentoo.org> +metadata.xml,
+  +wklej-0.0.5.ebuild:
+  Initial version (fixes bug #173282)
+
