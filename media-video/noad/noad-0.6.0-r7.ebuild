@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r7.ebuild,v 1.3 2007/02/07 10:55:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r7.ebuild,v 1.4 2007/04/23 07:19:17 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -60,8 +60,7 @@ src_install() {
 	dodoc allnewnoad allnoad allnoadnice clearlogos noadifnew stat2html
 
 	CONF_SOURCE=${FILESDIR}/0.6.0-r7
-	insinto /etc/conf.d
-	newins ${CONF_SOURCE}/confd_vdraddon.noad vdraddon.noad
+	newconfd ${CONF_SOURCE}/confd_vdraddon.noad vdraddon.noad
 
 	insinto /usr/share/vdr/record
 	doins ${CONF_SOURCE}/record-50-noad.sh

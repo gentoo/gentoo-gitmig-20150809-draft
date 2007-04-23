@@ -1,6 +1,9 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.20 2007/04/22 09:54:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.21 2007/04/23 07:19:17 zzam Exp $
+
+  23 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> noad-0.6.0-r7.ebuild:
+  Now really using newconfd, fixing Bug #174266.
 
   22 Apr 2007; Samuli Suominen <drac@gentoo.org> ChangeLog:
   Use newinitd as per bug 174266.
