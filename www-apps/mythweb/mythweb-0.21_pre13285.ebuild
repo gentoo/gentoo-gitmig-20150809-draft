@@ -1,18 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre13285.ebuild,v 1.1 2007/04/20 18:46:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre13285.ebuild,v 1.2 2007/04/23 03:26:49 cardoe Exp $
 
-inherit mythtv webapp depend.php
+inherit mythtv webapp depend.php subversion
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 IUSE=""
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/httpd-php
 		dev-perl/DBI
 		dev-perl/DBD-mysql"
 
-S="${WORKDIR}/mythplugins-${MY_PV}/${PN}"
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -23,10 +23,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}/.."
-	mythtv-fixes_patch
-	cd "${S}"
+	subversion_src_unpack
+}
+
+src_compile() {
+	echo ""
 }
 
 src_install() {
@@ -36,7 +37,7 @@ src_install() {
 
 	dodir ${MY_HTDOCSDIR}/data
 
-	cp -R [[:lower:]]* .htaccess ${D}${MY_HTDOCSDIR}
+	cp -R ${S}/${PN}/[[:lower:]]* .htaccess ${D}${MY_HTDOCSDIR}
 
 	webapp_serverowned ${MY_HTDOCSDIR}/data
 

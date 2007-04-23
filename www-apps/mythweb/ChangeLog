@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.32 2007/04/20 18:46:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.33 2007/04/23 03:26:49 cardoe Exp $
+
+  23 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.21_pre13285.ebuild:
+  Some more tweaks but still not 100%
 
 *mythweb-0.21_pre13285 (20 Apr 2007)
 
