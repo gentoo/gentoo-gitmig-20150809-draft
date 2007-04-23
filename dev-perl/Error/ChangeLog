@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.46 2007/04/15 21:31:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.47 2007/04/23 22:37:37 kloeri Exp $
+
+  23 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> Error-0.17.008.ebuild:
+  Stable on Mips, bug 173327.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> Error-0.17.008.ebuild:
   Stable on ppc64
