@@ -1,13 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.7.ebuild,v 1.2 2007/04/07 13:37:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.7.ebuild,v 1.3 2007/04/23 12:23:40 nyhm Exp $
 
 inherit eutils games
 
-LVL_N="svg2lvl"
-LVL_V="0.3.0"
-LVL="${LVL_N}-${LVL_V}"
-
+LVL="svg2lvl-0.3.0"
 DESCRIPTION="A challenging 2D motocross platform game"
 HOMEPAGE="http://xmoto.tuxfamily.org"
 SRC_URI="http://download.tuxfamily.org/${PN}/${PN}/${PV}/${P}-src.tar.gz
@@ -37,6 +34,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i 's:$(localedir):/usr/share/locale:' po/Makefile.in.in \
 		|| die "sed Makefile.in.in failed"
+	use editor && rm -f "${WORKDIR}"/${LVL}/{bezmisc,inkex}.py
 }
 
 src_compile() {
@@ -60,17 +58,16 @@ src_install() {
 
 	if use editor; then
 	  insinto /usr/share/inkscape/extensions
-	  doins ${WORKDIR}/${LVL}/*.inx
-	  doins ${WORKDIR}/${LVL}/*.py
-	  doins ${WORKDIR}/${LVL}/*.xml
+	  doins "${WORKDIR}"/${LVL}/*.{inx,py,xml} || die "doins failed"
 	fi
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	if use editor; then
-	  einfo "If you want to know how to create xmoto-levels"
-	  einfo "have a look at this Tutorial:"
-	  einfo "http://wiki.xmoto.free.fr/index.php?title=Inkscape-0.3.0#Tutorial"
-	  einfo "You can share your levels on the xmoto-homepage."
+	  elog "If you want to know how to create Xmoto levels"
+	  elog "have a look at this Tutorial:"
+	  elog "http://wiki.xmoto.free.fr/index.php?title=Inkscape-0.3.0#Tutorial"
+	  elog "You can share your levels on the Xmoto homepage."
 	fi
 }
