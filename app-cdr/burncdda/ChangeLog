@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/burncdda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.17 2007/02/21 20:13:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.18 2007/04/23 18:30:42 armin76 Exp $
+
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> burncdda-1.5.0a.ebuild:
+  x86 stable
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
