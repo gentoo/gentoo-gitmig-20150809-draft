@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pcre++
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.12 2007/04/23 20:51:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.13 2007/04/23 21:24:31 armin76 Exp $
+
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> pcre++-0.9.5-r1.ebuild:
+  x86 stable
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> pcre++-0.9.5-r1.ebuild:
   Add ~ia64
