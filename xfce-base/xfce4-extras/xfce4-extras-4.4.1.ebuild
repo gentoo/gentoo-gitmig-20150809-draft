@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0-r4.ebuild,v 1.1 2007/04/23 18:58:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.1.ebuild,v 1.1 2007/04/23 19:33:02 drac Exp $
 
 DESCRIPTION="Meta ebuild for panel plugins and other extra applications"
 HOMEPAGE="http://www.xfce.org/"
