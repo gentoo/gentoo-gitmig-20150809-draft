@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.155 2007/04/20 14:28:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.156 2007/04/23 15:41:38 wolf31o2 Exp $
+
+  23 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/vmware-workstation.rc:
+  Added use hald to the VMware Workstation init script thanks to bug #155450.
 
   20 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-5.5.3.34685.ebuild:
