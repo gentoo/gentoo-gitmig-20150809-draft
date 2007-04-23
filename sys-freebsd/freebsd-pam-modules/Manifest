@@ -17,10 +17,10 @@ AUX 5.4/pam.d/system 758 RMD160 f867690230cc86f8943b2978a9a57bc22178d368 SHA1 23
 MD5 718f12e91ea234f2223a9a8771ffeb1e files/5.4/pam.d/system 758
 RMD160 f867690230cc86f8943b2978a9a57bc22178d368 files/5.4/pam.d/system 758
 SHA256 10e2ca7cdc3c86bb6dda4332c40e8998f30b9918507792c85e5744453a7e57bf files/5.4/pam.d/system 758
-AUX 5.4/pam.d/system-auth 216 RMD160 0d399ec43609989cd6494d9c501c6bdfb9a02b6c SHA1 f6a9cbabe2677028c8fb60bf6183262b489956f9 SHA256 28a2e7fe7e3f735555548ca9ec0cf5be252b450c22b872b52217f08c730a0372
-MD5 cebc1e9de646e1d837b843d6b1403613 files/5.4/pam.d/system-auth 216
-RMD160 0d399ec43609989cd6494d9c501c6bdfb9a02b6c files/5.4/pam.d/system-auth 216
-SHA256 28a2e7fe7e3f735555548ca9ec0cf5be252b450c22b872b52217f08c730a0372 files/5.4/pam.d/system-auth 216
+AUX 5.4/pam.d/system-auth 337 RMD160 de7c9c1a77164e4a25584a29e698473235658f46 SHA1 ca985916c137d07dea64095bc6165eb752126e59 SHA256 c01d07f23f10fd60c4c0a5ee9867e617fce2f8c4617b8a540bd24b63f0f7d992
+MD5 4385620a57b503e62d764412e1d69df1 files/5.4/pam.d/system-auth 337
+RMD160 de7c9c1a77164e4a25584a29e698473235658f46 files/5.4/pam.d/system-auth 337
+SHA256 c01d07f23f10fd60c4c0a5ee9867e617fce2f8c4617b8a540bd24b63f0f7d992 files/5.4/pam.d/system-auth 337
 AUX freebsd-pam-modules-6.0-gentoo.patch 701 RMD160 f907769f6f0ded416fac03a1fb6b5531ff682070 SHA1 678bd875b4d50acfac7ab59321b275b2c7664d4b SHA256 8346d95aa5b4f283fedf4387ebb85a61f5f10fac38dc45bdea8c2c345fdc633d
 MD5 252ec73a62c30ee7a502aab5f4ed4c3b files/freebsd-pam-modules-6.0-gentoo.patch 701
 RMD160 f907769f6f0ded416fac03a1fb6b5531ff682070 files/freebsd-pam-modules-6.0-gentoo.patch 701
@@ -42,9 +42,9 @@ MD5 830dbda47d6444ba9af3359da2bb0071 files/digest-freebsd-pam-modules-6.2 253
 RMD160 b3843813a57724cd86fd40de6e5326bc5b765f29 files/digest-freebsd-pam-modules-6.2 253
 SHA256 e7a374dcaa91c1d1576444e7606bcc947ae166b56d83cd4b63ec87052d541c46 files/digest-freebsd-pam-modules-6.2 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFFq/QOGDyatLGpTbYRAja8AJ9DgSHZZFz3vDzuxwDX7MaK1afpLACfe4Wx
-zT+47/qZZ0qXW+CcVlxmPw4=
-=Eq7A
+iD8DBQFGLQvbI1lqEGTUzyQRAnJwAKCYldV57KtEeqMFT6uqTQy/TZb5rACdEDUa
+GTOORIQr7FHejehcf5NL+28=
+=gDZ+
 -----END PGP SIGNATURE-----
