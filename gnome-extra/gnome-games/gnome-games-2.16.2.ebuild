@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.14 2007/03/19 20:49:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.15 2007/04/23 19:48:38 swegener Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -45,7 +45,7 @@ pkg_setup() {
 #		$(use_enable avahi)"
 
 	if use guile; then
-		if has_version =guile-1.8*; then
+		if has_version =dev-scheme/guile-1.8*; then
 			local flags="deprecated regex"
 			built_with_use dev-scheme/guile ${flags} || die "guile must be built with \"${flags}\" use flags"
 		fi
