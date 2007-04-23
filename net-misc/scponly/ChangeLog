@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/scponly
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.27 2006/09/14 16:51:27 matsuu Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.28 2007/04/23 13:20:41 matsuu Exp $
+
+*scponly-4.6-r2 (23 Apr 2007)
+
+  23 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> +scponly-4.6-r2.ebuild:
+  Fixed chroot setup problem, bug #172822.
 
   14 Sep 2006; MATSUU Takuto <matsuu@gentoo.org> -scponly-4.6.ebuild,
   scponly-4.6-r1.ebuild:
