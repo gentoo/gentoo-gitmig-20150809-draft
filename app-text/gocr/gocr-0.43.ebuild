@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.43.ebuild,v 1.1 2007/01/20 09:30:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.43.ebuild,v 1.2 2007/04/23 20:06:52 swegener Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jocr.sourceforge.net"
 SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
 LICENSE="GPL-2"
 
-IUSE="gtk doc"
+IUSE="gtk doc tk"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
