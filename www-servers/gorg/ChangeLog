@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.13 2007/04/23 17:15:36 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.14 2007/04/23 18:46:18 rbrown Exp $
+
+  23 Apr 2007; <rb@gentoo.org> gorg-0.6.3-r1.ebuild:
+  EAPI shouldn't have been set
 
 *gorg-0.6.3-r1 (23 Apr 2007)
 

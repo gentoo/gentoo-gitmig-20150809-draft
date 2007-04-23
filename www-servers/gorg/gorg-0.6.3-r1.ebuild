@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3-r1.ebuild,v 1.1 2007/04/23 17:15:36 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3-r1.ebuild,v 1.2 2007/04/23 18:46:18 rbrown Exp $
 
 inherit ruby eutils
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://gentoo.neysx.org/mystuff/gorg/gorg.xml"
 SRC_URI="http://gentoo.neysx.org/mystuff/gorg/${P}.tgz"
 IUSE="apache fastcgi mysql"
 
-EAPI="0"
 SLOT="0"
 USE_RUBY="ruby18"
 LICENSE="GPL-2"
