@@ -1,6 +1,16 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.94 2007/04/15 19:56:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.95 2007/04/23 16:11:47 dang Exp $
+
+*liferea-1.2.12 (23 Apr 2007)
+
+  23 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.12.ebuild:
+  Bump to 1.2.12
+  	* Workaround for Gentoo bug #116797 (reported by Maxim Britov)
+  	* Fixes possible crash when removing folders with unread items.
+  	* Updated Spanish translation (Luis Rodrigo Gallardo Cruz)
+  	* Added Catalan translation (Gil Forcada)
+  Add networkmanager USE flag
 
 *liferea-1.2.10c (15 Apr 2007)
 
