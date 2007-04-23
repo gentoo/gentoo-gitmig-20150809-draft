@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2764 2007/04/23 19:41:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2765 2007/04/23 19:51:35 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2008,9 +2008,4 @@ xfce-base/xfce4-extras:battery - Meta pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce4-cpu-freq dependency.
 xfce-extra/thunar-thumbnailers:dcraw - Enable .raw thumbnailers, dcraw support.
 xfce-extra/thunar-thumbnailers:grace - Enable .agr thumbnailers, grace support.
-xfce-extra/xarchiver:7zip - Adds support for 7zip archives.
-xfce-extra/xarchiver:arj - Adds support for arj archives.
-xfce-extra/xarchiver:lha - Adds support for lha archives.
-xfce-extra/xarchiver:rar - Adds support for rar archives.
-xfce-extra/xarchiver:zip - Adds support for zip archives.
 xfce-extra/xfce4-sensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
