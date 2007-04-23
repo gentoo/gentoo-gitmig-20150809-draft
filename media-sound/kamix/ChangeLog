@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.29 2007/04/19 10:45:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.30 2007/04/23 07:42:26 opfer Exp $
+
+  23 Apr 2007; Christian Faulhammer <opfer@gentoo.org> kamix-0.6.6.ebuild:
+  stable x86, bug 161724
 
 *kamix-0.6.6 (19 Apr 2007)
 
