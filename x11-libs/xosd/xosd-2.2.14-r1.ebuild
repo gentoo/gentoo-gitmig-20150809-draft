@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.6 2007/04/23 12:59:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.7 2007/04/23 16:56:27 robbat2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="latest"
 inherit eutils autotools
 
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows X-On-Screen-Display plus binary for sending text from command line"
-HOMEPAGE="http://www.ignavus.net/"
+HOMEPAGE="https://sourceforge.net/projects/libxosd/"
 SRC_URI="mirror://debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/x/xosd/${PN}_${PV}-1.diff.gz
 	http://digilander.libero.it/dgp85/gentoo/${PN}-gentoo-m4-1.tar.bz2"
