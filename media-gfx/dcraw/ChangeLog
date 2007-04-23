@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.34 2007/03/31 15:44:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.35 2007/04/23 20:36:37 gustavoz Exp $
+
+  23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> dcraw-8.45.ebuild:
+  Stable on sparc
 
   31 Mar 2007; Raúl Porcel <armin76@gentoo.org> dcraw-8.45.ebuild:
   ia64 stable wrt bug 169164
