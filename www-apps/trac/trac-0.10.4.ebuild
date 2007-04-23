@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.ebuild,v 1.6 2007/02/25 11:50:05 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.4.ebuild,v 1.1 2007/04/23 12:51:26 dju Exp $
 
 inherit distutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://trac.edgewall.com/"
 SRC_URI="http://ftp.edgewall.com/pub/trac/${P}.tar.gz"
 
 LICENSE="trac"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cgi fastcgi mysql postgres sqlite enscript silvercity"
 
 # doing so because utils (such as trac-admin), manpages... overlap
@@ -43,17 +43,17 @@ DEPEND="${DEPEND}
 # Generate an standard error message for missing USE flags
 # in existing packages, and die.
 #
-# Usage: built_with_use_error <category/package> <functionality> [<USE flag>]
-#    ex: built_with_use_error dev-util/subversion python
-#    or: built_with_use_error net-www/apache LDAP ldap
+# Usage: built_with_use_die <category/package> <functionality> [<USE flag>]
+#    ex: built_with_use_die dev-util/subversion python
+#    or: built_with_use_die net-www/apache LDAP ldap
 #
 # Typical usage:
 #	if ! built_with_use dev-util/subversion python ; then
-#        built_with_use_error dev-util/subversion python
+#        built_with_use_die dev-util/subversion python
 #   fi
 #
 # Note: when <USE flag> is not specified, <functionality> is used for the USE flag name.
-built_with_use_error() {
+built_with_use_die() {
 	local package=$1
 	local func=$2
 	local use_flag=$3
@@ -76,11 +76,11 @@ pkg_setup () {
 	fi
 
 	if ! built_with_use dev-util/subversion python ; then
-		built_with_use_error dev-util/subversion python
+		built_with_use_die dev-util/subversion python
 	fi
 
 	if ! built_with_use dev-libs/clearsilver python ; then
-		built_with_use_error dev-libs/clearsilver python
+		built_with_use_die dev-libs/clearsilver python
 	fi
 
 	ebegin "Creating tracd group and user"
@@ -99,8 +99,8 @@ src_install () {
 	distutils_src_install
 
 	dodoc AUTHORS INSTALL RELEASE THANKS UPGRADE
-	rm ${D}/usr/share/doc/${P}/MANIFEST.in.gz
-	rm ${D}/usr/share/doc/${P}/PKG-INFO.gz
+	rm ${D}/usr/share/doc/${P}/MANIFEST.in*
+	rm ${D}/usr/share/doc/${P}/PKG-INFO*
 
 	docinto contrib
 	dodoc contrib/*
