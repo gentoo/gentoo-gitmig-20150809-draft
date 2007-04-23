@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/yolk
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.1 2007/04/23 05:56:36 pythonhead Exp $
+
+*yolk-0.0.7 (23 Apr 2007)
+
+  23 Apr 2007; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +yolk-0.0.7.ebuild:
+  Initial commit.
+
