@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/zphoto-1.2-r2.ebuild,v 1.3 2006/11/16 17:23:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/zphoto-1.2-r2.ebuild,v 1.4 2007/04/23 02:03:49 dirtyepic Exp $
+
+inherit wxwidgets
 
 IUSE="wxwindows"
 
@@ -16,26 +18,21 @@ DEPEND=">=media-libs/ming-0.2a
 	|| ( >=media-libs/imlib2-1.1.0 >=media-gfx/imagemagick-5.5.7 )
 	app-arch/zip
 	>=dev-libs/popt-1.6.3
-	wxwindows? ( >=x11-libs/wxGTK-2.4.2-r2 )"
+	wxwindows? ( =x11-libs/wxGTK-2.6* )"
 
 src_compile() {
 
 	local myconf="--disable-avifile"
 
 	if use wxwindows ; then
-		if has_version '>=x11-libs/wxGTK-2.6' ; then
-			wx_config="/usr/bin/wx-config-2.6"
-			sed -i -e 's@\($WXCONFIG --cflags\)@\1 --unicode=no@' \
-				-e 's@\($WXCONFIG --libs\)@\1 --unicode=no@' \
-				configure || die
-			sed -i -e 's@FALSE@false@g' wxzphoto.cpp || die
-		else
-			wx_config="/usr/bin/wxgtk2-2.4-config"
-		fi
-		myconf="--with-wx-config=$wx_config"
+		WX_GTK_VER="2.6"
+		need-wxwidgets gtk2
+		myconf="--with-wx-config=${WX_CONFIG}"
+		sed -i -e 's@FALSE@false@g' wxzphoto.cpp || die
 	else
 		myconf="--disable-wx"
 	fi
+
 	econf ${myconf} || die
 	emake || die
 }
