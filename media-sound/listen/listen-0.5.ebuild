@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5.ebuild,v 1.1 2007/04/07 19:18:22 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5.ebuild,v 1.2 2007/04/23 20:11:01 swegener Exp $
 
 inherit eutils virtualx
 
@@ -8,7 +8,7 @@ DESCRIPTION="A Music player and management for GNOME"
 HOMEPAGE="http://www.listen-project.org"
 SRC_URI="http://download.listen-project.org/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
-IUSE="aac cdr flac ipod mad vorbis"
+IUSE="aac cdr flac ipod mad vorbis libsexy"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 

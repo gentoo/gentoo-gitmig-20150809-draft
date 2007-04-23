@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/listen
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.15 2007/04/07 19:18:22 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.16 2007/04/23 20:11:01 swegener Exp $
+
+  23 Apr 2007; Sven Wegener <swegener@gentoo.org> listen-0.5.ebuild:
+  Sync IUSE (+libsexy)
 
 *listen-0.5 (07 Apr 2007)
 
