@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/penguin-command
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.14 2006/04/24 14:03:20 tupone Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.15 2007/04/23 23:05:31 nyhm Exp $
+
+*penguin-command-1.6.11 (23 Apr 2007)
+
+  23 Apr 2007; Tristan Heaven <nyhm@gentoo.org>
+  +penguin-command-1.6.11.ebuild:
+  Version bump
 
 *penguin-command-1.6.10 (24 Apr 2006)
 
