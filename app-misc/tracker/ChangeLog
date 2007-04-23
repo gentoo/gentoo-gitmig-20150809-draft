@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.13 2007/03/22 21:54:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.14 2007/04/23 15:56:42 gustavoz Exp $
+
+  23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  tracker-0.5.4-r1.ebuild:
+  Keyworded ~sparc and IUSE QA fix
 
   22 Mar 2007; <compnerd@gentoo.org> tracker-0.5.4-r1.ebuild:
   Update homepage (bug #170619)

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.5 2007/03/22 21:54:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.6 2007/04/23 15:56:42 gustavoz Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.gnome.org/~jamiemcc/tracker/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="applet debug fam gnome gsf gstreamer jpeg pdf test xine"
+KEYWORDS="~amd64 ~sparc ~x86"
+IUSE="applet debug fam gnome gsf gstreamer jpeg pdf test thumbnailing xine"
 
 RDEPEND=">=dev-libs/glib-2.12.0
 		 >=x11-libs/pango-1.0.0
