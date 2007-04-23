@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r3.ebuild,v 1.1 2007/04/19 16:35:22 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r4.ebuild,v 1.1 2007/04/23 20:40:14 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -22,12 +22,12 @@ COMMON_DEPEND="=dev-java/eclipse-ecj-3.2*
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-logging-1.1
 	>=dev-java/commons-pool-1.2
-	~dev-java/tomcat-servlet-api-${PV}"
+	~dev-java/tomcat-servlet-api-${PV}
+	examples? ( dev-java/jakarta-jstl )"
 
 RDEPEND=">=virtual/jre-1.5
 	dev-java/ant-core
-	${COMMON_DEPEND}
-	examples? ( dev-java/jakarta-jstl )"
+	${COMMON_DEPEND}"
 
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEPEND}
@@ -49,6 +49,11 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${SLOT}/build-xml.patch"
+
+	if use examples; then
+		cd webapps/examples/WEB-INF/lib/
+		rm -v *.jar
+	fi
 }
 
 src_compile(){
@@ -135,7 +140,6 @@ src_install() {
 	fi
 	if use examples; then
 		cd output/build/webapps/examples/WEB-INF/lib
-		rm -f *.jar
 		java-pkg_jar-from jakarta-jstl jstl.jar
 		java-pkg_jar-from jakarta-jstl standard.jar
 		cd "${S}"
