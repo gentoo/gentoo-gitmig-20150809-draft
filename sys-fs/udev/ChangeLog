@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.294 2007/03/29 07:36:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.295 2007/04/23 20:18:22 zzam Exp $
+
+*udev-108-r1 (23 Apr 2007)
+
+  23 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-108-cleanup-early-rules.diff,
+  +files/udev-108-persistent-joystick.diff, +files/udev-start-108-r1.sh,
+  +files/udev-stop-108-r1.sh, +files/udev.conf.post_108,
+  +udev-108-r1.ebuild:
+  Removing variable that was unconditionally added to env of all events,
+  saving lot of space, Bug #173476. Restricting /dev-tmpfs in size, 10M by
+  default. Added persistent links for joysticks. Finally removed /etc/dev.d.
+  Make moving persistent-rules from tmp-storage to /etc more generic.
 
 *udev-108 (29 Mar 2007)
 
