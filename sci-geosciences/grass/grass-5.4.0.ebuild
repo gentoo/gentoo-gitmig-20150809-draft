@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.10 2007/04/15 22:43:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.11 2007/04/23 20:13:33 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://grass.itc.it/grass54/source/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 sparc x86"
-IUSE="tcltk png jpeg tiff postgres odbc motif gdal mysql blas lapack X fftw truetype nls opengl"
+IUSE="tk png jpeg tiff postgres odbc motif gdal mysql blas lapack X fftw truetype nls opengl"
 
 RDEPEND=">=sys-devel/make-3.80
 	>=sys-libs/zlib-1.1.4
