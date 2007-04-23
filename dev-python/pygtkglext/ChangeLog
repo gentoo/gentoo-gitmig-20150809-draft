@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.21 2007/03/12 16:46:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.22 2007/04/23 14:50:18 gustavoz Exp $
+
+  23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  pygtkglext-1.1.0.ebuild:
+  Keyworded ~sparc
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> pygtkglext-1.0.1-r1.ebuild:
   x86 stable
