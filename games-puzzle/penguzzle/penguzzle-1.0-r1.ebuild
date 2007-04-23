@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/penguzzle-1.0-r1.ebuild,v 1.1 2007/04/04 19:09:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/penguzzle-1.0-r1.ebuild,v 1.2 2007/04/23 11:46:53 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Tcl/Tk variant of the well-known 15-puzzle game"
 HOMEPAGE="http://www.naskita.com/linux/penguzzle/penguzzle.shtml"
