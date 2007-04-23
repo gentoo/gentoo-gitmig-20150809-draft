@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.23 2007/04/21 18:29:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.24 2007/04/23 16:51:41 gustavoz Exp $
+
+  23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xdelta-1.1.3-r2.ebuild:
+  Stable on sparc
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> xdelta-1.1.3-r2.ebuild:
   ia64 + x86 stable
