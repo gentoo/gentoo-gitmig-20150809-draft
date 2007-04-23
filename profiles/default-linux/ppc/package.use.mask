@@ -2,3 +2,4 @@
 
 =dev-java/ibm-jdk-bin-1.5* -nsplugin 
 =dev-java/ibm-jre-bin-1.5* -nsplugin
+~dev-util/checkstyle-4.3 test
