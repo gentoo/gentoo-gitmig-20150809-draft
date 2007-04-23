@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.3 2007/03/28 04:38:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.4 2007/04/23 13:11:00 kloeri Exp $
 
 # Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
 # media-sound/twolame not tested
@@ -6,6 +6,3 @@ media-video/mplayer mp2
 
 # NPTL only works on >=glibc-2.4 ...
 <sys-lib/glibc-2.4 nptl
-
-# these require dev-libs/pcre++, which doesn't work right now
-sys-apps/paludis qa inquisitio

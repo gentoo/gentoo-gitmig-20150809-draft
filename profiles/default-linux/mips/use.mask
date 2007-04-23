@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.85 2007/04/10 18:52:22 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.86 2007/04/23 13:11:00 kloeri Exp $
 
 # Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
 # no tested dbus on mips. Masking for now.
@@ -289,9 +289,6 @@ sh
 sparc
 x86
 x86-fbsd
-
-# Paludis-0.6.0's QA tools need libpcre++, which hasn't been shown to work yet
-qa
 
 # disable until tested
 # bug 148402
