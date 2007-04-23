@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3.ebuild,v 1.3 2007/01/24 17:48:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3.ebuild,v 1.4 2007/04/23 17:52:24 betelgeuse Exp $
+
+WANT_ANT_TASKS="ant-antlr ant-swing ant-junit"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -30,7 +32,8 @@ COMMON_DEPEND="
 	dev-java/jta
 	dev-java/sun-jacc-api
 	dev-java/jgroups
-	>=dev-java/xerces-2.7"
+	>=dev-java/xerces-2.7
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 # FIXME doesn't like  Java 1.6's JDBC API
@@ -38,7 +41,6 @@ DEPEND="|| (
 		=virtual/jdk-1.4*
 		=virtual/jdk-1.5*
 	)
-	dev-java/ant
 	${COMMON_DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -67,7 +69,6 @@ src_unpack() {
 	java-pkg_jar-from jta
 	java-pkg_jar-from sun-jacc-api
 
-	java-pkg_jar-from ant-tasks ant-antlr.jar
 	java-pkg_jar-from antlr
 	java-pkg_jar-from ant-core ant.jar
 
