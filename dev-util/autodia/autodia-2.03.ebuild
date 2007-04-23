@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/autodia-2.03.ebuild,v 1.1 2007/04/15 10:52:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/autodia-2.03.ebuild,v 1.2 2007/04/23 20:09:06 swegener Exp $
 
 inherit perl-app multilib
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.aarontrevena.co.uk/opensource/autodia/download/${MY_P}.tar.g
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="graphviz java"
 
 RDEPEND="dev-lang/perl
 	dev-perl/Template-Toolkit

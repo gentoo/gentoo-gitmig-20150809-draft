@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/autodia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/ChangeLog,v 1.1 2007/04/15 10:52:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/ChangeLog,v 1.2 2007/04/23 20:09:06 swegener Exp $
+
+  23 Apr 2007; Sven Wegener <swegener@gentoo.org> autodia-2.03.ebuild:
+  Sync IUSE (+graphviz +java)
 
 *autodia-2.03 (15 Apr 2007)
 
