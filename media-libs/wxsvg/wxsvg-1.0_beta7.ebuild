@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0_beta7.ebuild,v 1.1 2007/01/28 20:02:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0_beta7.ebuild,v 1.2 2007/04/23 03:27:28 dirtyepic Exp $
 
 inherit eutils wxwidgets
 
@@ -25,6 +25,13 @@ DEPEND="=x11-libs/wxGTK-2.6*
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}-${MY_PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-freetype.patch
+}
 
 src_compile() {
 	export WX_GTK_VER="2.6"
