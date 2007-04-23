@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/devilspie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.29 2007/03/13 14:57:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.30 2007/04/23 17:18:02 gustavoz Exp $
+
+  23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  devilspie-0.20.2.ebuild:
+  Stable on sparc
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> devilspie-0.20.2.ebuild:
   x86 stable
