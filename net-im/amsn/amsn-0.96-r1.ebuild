@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.96.ebuild,v 1.3 2006/12/21 20:16:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.96-r1.ebuild,v 1.1 2007/04/23 18:13:40 tester Exp $
 
 inherit eutils fdo-mime gnome2-utils
 
@@ -26,6 +26,13 @@ DEPEND=">=dev-lang/tcl-8.4
 	media-libs/libpng"
 
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-dos.patch
+}
 
 src_install() {
 	make rpm-install INSTALL_PREFIX=${D}
