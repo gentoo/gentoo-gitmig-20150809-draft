@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.11 2007/01/05 16:21:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.12 2007/04/23 14:10:31 matsuu Exp $
 
 inherit eutils fixheadtails
 
@@ -60,11 +60,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/multiskkserv.conf multiskkserv
+	newconfd ${FILESDIR}/multiskkserv.conf multiskkserv
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/multiskkserv.initd multiskkserv
+	newinitd ${FILESDIR}/multiskkserv.initd multiskkserv
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README*
 }
