@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.57 2007/04/22 08:53:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.58 2007/04/23 20:59:11 armin76 Exp $
+
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> paludis-0.22.2.ebuild:
+  Add ~ia64
 
   22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> paludis-0.22.2.ebuild:
   Add ~mips keyword.
