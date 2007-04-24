@@ -1,8 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.2 2006/09/29 00:48:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.3 2007/04/24 14:20:17 nyhm Exp $
 
-WANT_AUTOMAKE="latest"
 inherit autotools eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
@@ -27,6 +26,8 @@ DEPEND=">=x11-libs/gtk+-2.10
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-asneeded.patch"
-	eautomake
+	epatch \
+		"${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-gnome-doc.patch
+	eautoreconf
 }
