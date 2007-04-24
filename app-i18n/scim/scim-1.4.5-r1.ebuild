@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5-r1.ebuild,v 1.8 2007/02/04 21:18:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5-r1.ebuild,v 1.9 2007/04/24 14:05:34 jer Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc gtk kde qt3"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.33"
 
-PDEPEND="!alpha? ( !hppa? ( kde? ( app-i18n/skim ) ) )
+PDEPEND="!alpha? ( kde? ( app-i18n/skim ) )
 	!alpha? ( !hppa? ( !sparc? ( qt3? ( || ( app-i18n/scim-qtimm app-i18n/scim-bridge ) ) ) ) )"
 
 get_gtk_confdir() {
