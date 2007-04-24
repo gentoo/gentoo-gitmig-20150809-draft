@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.4 2006/11/05 01:12:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.5 2007/04/24 14:35:00 nyhm Exp $
 
 inherit perl-module toolchain-funcs
 
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="tk"
 
 DEPEND="dev-lang/perl
+	dev-perl/Compress-Zlib
 	dev-perl/Archive-Zip
 	dev-perl/Tie-IxHash
 	tk? ( dev-perl/perl-tk )"
