@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.6 2007/03/12 13:43:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.7 2007/04/24 15:13:43 drizzt Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://rohanpm.net/files/old/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.6"

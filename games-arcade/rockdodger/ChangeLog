@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/rockdodger
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.9 2007/03/12 16:23:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.10 2007/04/24 15:07:42 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
+  rockdodger-0.6.0a-r1.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> rockdodger-0.6.0a-r1.ebuild:
   Install menu entry, bug #160245

@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/watermelons
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/ChangeLog,v 1.2 2006/09/11 17:19:07 dang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/ChangeLog,v 1.3 2007/04/24 15:20:33 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
+  watermelons-1.1.1.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   11 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> watermelons-1.1.1.ebuild:
   Marked stable on amd64 for bug #146933

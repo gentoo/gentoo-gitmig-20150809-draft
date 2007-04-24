@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.12 2007/04/06 01:01:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.13 2007/04/24 15:25:06 drizzt Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.bigorno.net/xrick/"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="mirror" # bug #149097
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/supertransball2-1.5.ebuild,v 1.1 2007/02/11 09:26:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/supertransball2-1.5.ebuild,v 1.2 2007/04/24 15:14:45 drizzt Exp $
 
 inherit eutils versionator games
 
@@ -15,7 +15,7 @@ SRC_URI="http://braingames.bugreport.nl/stransball2/${FILE}.zip
 	mirror://debian/pool/main/s/${PN}/${DEBIAN_PATCH}.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/libsdl

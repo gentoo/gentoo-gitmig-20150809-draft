@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/yarsrevenge
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/ChangeLog,v 1.6 2004/06/24 22:15:11 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/ChangeLog,v 1.7 2007/04/24 15:29:04 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> yarsrevenge-0.99.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   04 Jun 2004; David Holm <dholm@gentoo.org> yarsrevenge-0.99.ebuild:
   Added to ~ppc.

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pycadia
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/ChangeLog,v 1.8 2007/03/12 13:40:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/ChangeLog,v 1.9 2007/04/24 15:06:38 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> pycadia-0.5.1.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> pycadia-0.5.1.ebuild:
   Replacing einfo with eerror
