@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.57 2007/04/24 16:37:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.58 2007/04/24 17:25:12 betelgeuse Exp $
+
+*libidn-0.6.9-r1 (24 Apr 2007)
+
+  24 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/0.6.9-javacflags.patch, +libidn-0.6.9-r1.ebuild:
+  Works with virtual/jdk-1.4 again, doesn't install a versioned jar and
+  installs javadocs using java-pkg_dojavadoc.
 
   24 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -libidn-0.5.4.ebuild,
   -libidn-0.5.20.ebuild, -libidn-0.6.1.ebuild, -libidn-0.6.5.ebuild:
