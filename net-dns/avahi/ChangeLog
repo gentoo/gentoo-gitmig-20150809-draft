@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.98 2007/04/22 13:52:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.99 2007/04/24 20:13:47 swegener Exp $
+
+  24 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  -files/0.6.15-dbus-fixes.patch, -avahi-0.6.15.ebuild:
+  Cleanup.
 
   21 Apr 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.18.ebuild:
   Readd ~x86-fbsd keyword.
