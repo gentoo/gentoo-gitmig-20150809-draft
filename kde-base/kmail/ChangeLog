@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.100 2007/04/11 20:51:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.101 2007/04/24 16:57:31 caleb Exp $
+
+*kmail-3.5.6-r3 (24 Apr 2007)
+
+  24 Apr 2007; Caleb Tennis <caleb@gentoo.org> +files/kmail-utf8.diff,
+  +kmail-3.5.6-r3.ebuild:
+  add a patch that fixes the utf8 decoding bug from #174678
 
 *kmail-3.5.6-r2 (11 Apr 2007)
 
