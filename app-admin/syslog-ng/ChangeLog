@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.152 2007/03/27 07:38:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.153 2007/04/24 04:06:33 mr_bones_ Exp $
+
+  24 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.rc6-r1:
+  add patch from Mike Mattie to support starting syslog-ng with a nice value
+  (bug #175639)
 
 *syslog-ng-2.0.3 (27 Mar 2007)
 
