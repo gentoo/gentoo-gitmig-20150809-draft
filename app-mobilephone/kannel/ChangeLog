@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kannel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.11 2007/04/22 00:08:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.12 2007/04/24 06:50:57 opfer Exp $
+
+  24 Apr 2007; Christian Faulhammer <opfer@gentoo.org> kannel-1.4.1.ebuild:
+  stable x86, bug 175512
 
   22 Apr 2007; Alin Năstac <mrness@gentoo.org> kannel-1.4.0-r2.ebuild,
   kannel-1.4.1.ebuild:

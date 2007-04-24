@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.3 2007/04/22 00:08:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.4 2007/04/24 06:50:57 opfer Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -9,7 +9,7 @@ SRC_URI="http://www.kannel.org/download/${PV}/gateway-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="ssl mysql sqlite sqlite3 postgres pcre doc debug pam"
 
 RDEPEND=">=dev-libs/libxml2-2.6.26
