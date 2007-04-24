@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7-r1.ebuild,v 1.3 2007/04/09 23:02:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7-r1.ebuild,v 1.4 2007/04/24 18:40:58 dertobi123 Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DEPEND="sys-libs/ncurses
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~ppc x86"
+KEYWORDS="alpha ppc x86"
 
 # untars to 'hap/'
 S="${WORKDIR}/${PN}"
