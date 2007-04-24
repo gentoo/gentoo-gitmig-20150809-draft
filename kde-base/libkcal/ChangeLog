@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.76 2007/04/15 19:16:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.77 2007/04/24 10:59:32 kloeri Exp $
+
+  24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  libkcal-3.5.5-r1.ebuild:
+  Stable on Alpha, bug 174216.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> libkcal-3.5.5-r1.ebuild:
   Stable on ppc64; bug #174216
