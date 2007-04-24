@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.27 2007/04/22 06:47:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.28 2007/04/24 19:46:40 welp Exp $
+
+  24 Apr 2007; Peter Weller <welp@gentoo.org> ipcad-3.7.ebuild:
+  Keyworded ~amd64 wrt bug 175728
 
   22 Apr 2007; <pva@gentoo.org> -ipcad-3.6.6.ebuild:
   Cleaning old ebuild. This fixes bug #174266.

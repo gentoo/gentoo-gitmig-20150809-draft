@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.7 2006/10/04 04:31:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.8 2007/04/24 19:46:40 welp Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ipcad.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ipcad/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
