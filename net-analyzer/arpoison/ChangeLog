@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpoison
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.6 2006/10/29 18:05:33 pva Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.7 2007/04/24 19:54:40 welp Exp $
+
+  24 Apr 2007; Peter Weller <welp@gentoo.org> arpoison-0.6.ebuild:
+  Keyworded ~amd64 wrt bug 175703
 
   29 Oct 2006; Peter Volkov <pva@gentoo.org> arpoison-0.6.ebuild:
   Fix RDEPEND bug #153242. Thank Evil Compile Person for report.
