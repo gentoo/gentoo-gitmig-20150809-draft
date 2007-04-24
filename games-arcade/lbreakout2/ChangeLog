@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/lbreakout2
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.17 2006/07/10 13:29:28 mr_bones_ Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.18 2007/04/24 15:52:16 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> lbreakout2-2.5.2.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   10 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
   lbreakout2-2.5.2.ebuild:
