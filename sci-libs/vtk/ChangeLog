@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.28 2007/04/16 08:20:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.29 2007/04/24 14:12:10 markusle Exp $
+
+*vtk-5.0.3 (23 Apr 2007)
+
+  23 Apr 2007; Markus Dittrich <markusle@gentoo.org>
+  -files/vtk-qt-gentoo.patch, -vtk-5.0.0.ebuild, -vtk-5.0.1.ebuild,
+  +vtk-5.0.3.ebuild:
+  Version bump and removed old versions. Thanks much to Sebastien 
+  Fabbro <bicatali@gentoo.org> for his ebuild.
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> vtk-5.0.0.ebuild:
   moved from USE tcltk to tk, see bug 17808

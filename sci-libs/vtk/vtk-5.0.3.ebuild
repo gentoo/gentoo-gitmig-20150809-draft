@@ -1,8 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.1.ebuild,v 1.5 2006/11/18 15:49:25 markusle Exp $
-
-# TODO: need to fix Examples/CMakeLists.txt to build other examples
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.1 2007/04/24 14:12:10 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -15,15 +13,16 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 		examples? ( http://www.${PN}.org/files/release/${SPV}/${PN}data-${PV}.tar.gz )"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc examples mpi patented python tcl tk threads qt3 qt4"
-RDEPEND="java? ( =virtual/jdk-1.4* )
-	mpi? ( sys-cluster/mpich )
+RDEPEND="java? ( =virtual/jdk-1.5* )
+	mpi? ( virtual/mpi )
 	python? ( >=dev-lang/python-2.0 )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	dev-libs/expat
+	media-libs/freetype
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/tiff
@@ -48,14 +47,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-qt-gentoo.patch
-	epatch "${FILESDIR}"/${P}-python2.5-gentoo.patch
-}
-
 src_compile() {
 	# gcc versions 3.2.x seem to have sse-related bugs that are 
 	# triggered by VTK when compiling for pentium3/4
@@ -77,6 +68,7 @@ src_compile() {
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DIR:PATH=${S}"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_INSTALL_PREFIX:PATH=/usr"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_SHARED_LIBS:BOOL=ON"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FREETYPE:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_JPEG:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_PNG:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_TIFF:BOOL=ON"
@@ -84,6 +76,8 @@ src_compile() {
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_EXPAT:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_TESTING:BOOL=OFF"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_HYBRID:BOOL=ON"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_GL2PS:BOOL=ON"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_RENDERING:BOOL=ON"
 
 	use examples && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DATA_ROOT:PATH=/usr/share/${PN}/data -DBUILD_EXAMPLES:BOOL=ON"
 	if use java; then
@@ -155,13 +149,6 @@ src_compile() {
 	# configuration with cmake 2.2.x
 	cmake ${CMAKE_VARIABLES} . && cmake ${CMAKE_VARIABLES} . \
 		|| die "cmake configuration failed"
-
-	# fix java.lang.OutOfMemoryError on amd64 (see bug #123178)
-	if use java && [ "${ARCH}" == "amd64" ]; then
-		sed -e "s/javac/javac -J-Xmx256m/" \
-		-i "${S}"/Wrapping/Java/CMakeFiles/VTKBuildAll.dir/build.make \
-		|| die "Failed to patch javac"
-	fi
 
 	emake -j1 || die "emake failed"
 }
