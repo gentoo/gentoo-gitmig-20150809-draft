@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.8 2007/04/22 14:14:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.9 2007/04/24 08:41:34 kloeri Exp $
+
+  24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Math-BigRat-0.19.ebuild:
+  Add ~mips keyword, bug 173295.
 
 *Math-BigRat-0.19 (22 Apr 2007)
 
