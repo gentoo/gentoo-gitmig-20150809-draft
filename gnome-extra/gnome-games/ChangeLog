@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.192 2007/04/23 19:48:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.193 2007/04/24 22:10:37 dang Exp $
+
+*gnome-games-2.18.1 (24 Apr 2007)
+
+  24 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-games-2.18.1.ebuild:
+  Bump to 2.18.1 This is a stable maintenance release of gnome-games. Several
+  critical bugs have been fixed in GNOME Sudoku and translations have been
+  updated. Upgrading is highly recommended.
 
   23 Apr 2007; Sven Wegener <swegener@gentoo.org> gnome-games-2.16.2.ebuild,
   gnome-games-2.16.3.ebuild, gnome-games-2.18.0.ebuild:
