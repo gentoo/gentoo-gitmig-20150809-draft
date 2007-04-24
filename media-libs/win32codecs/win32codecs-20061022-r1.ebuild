@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20061022-r1.ebuild,v 1.1 2007/01/12 05:48:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20061022-r1.ebuild,v 1.2 2007/04/24 11:51:44 armin76 Exp $
 
 inherit multilib
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://mplayer/releases/codecs/all-${PV}.tar.bz2"
 HOMEPAGE="http://www.mplayerhq.hu/"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 x86 ~x86-fbsd"
 IUSE="quicktime real"
 
 RDEPEND="real? ( =virtual/libstdc++-3.3*
