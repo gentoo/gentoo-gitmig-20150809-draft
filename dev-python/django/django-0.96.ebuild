@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.96.ebuild,v 1.2 2007/03/25 21:54:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.96.ebuild,v 1.3 2007/04/24 16:04:52 seemant Exp $
 
 inherit bash-completion distutils eutils versionator
 
@@ -24,7 +24,7 @@ RDEPEND="dev-python/imaging
 		( >=dev-python/pysqlite-2.0.3 <dev-lang/python-2.5 )
 		>=dev-lang/python-2.5 ) )
 	postgres? ( dev-python/psycopg )
-	mysql? ( dev-python/mysql-python )"
+	mysql? ( >=dev-python/mysql-python-1.2.1_p2 )"
 DEPEND="${RDEPEND}
 	>=dev-python/setuptools-0.6_rc3"
 
