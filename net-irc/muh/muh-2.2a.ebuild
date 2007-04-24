@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2a.ebuild,v 1.3 2007/04/22 08:29:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2a.ebuild,v 1.4 2007/04/24 18:04:14 dertobi123 Exp $
 
 DESCRIPTION="Persistent IRC bouncer"
 HOMEPAGE="http://mind.riot.org/muh/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~hppa ~mips ~ppc ~sparc x86"
+KEYWORDS="alpha ~hppa ~mips ppc ~sparc x86"
 IUSE="ipv6"
 
 DEPEND=""
