@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.56 2007/04/24 15:58:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.57 2007/04/24 16:37:55 betelgeuse Exp $
+
+  24 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -libidn-0.5.4.ebuild,
+  -libidn-0.5.20.ebuild, -libidn-0.6.1.ebuild, -libidn-0.6.5.ebuild:
+  Remove old versions.
 
   24 Apr 2007; Raúl Porcel <armin76@gentoo.org> libidn-0.6.9.ebuild:
   Require >=java-1.5, bug 175859
