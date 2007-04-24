@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327.ebuild,v 1.1 2007/04/06 01:19:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327.ebuild,v 1.2 2007/04/24 19:44:37 jokey Exp $
 
 ARTS_REQUIRED="never"
 
@@ -11,7 +11,7 @@ DESCRIPTION="GTK+2 Qt Theme Engine"
 HOMEPAGE="http://gtk-qt.ecs.soton.ac.uk"
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2.2
