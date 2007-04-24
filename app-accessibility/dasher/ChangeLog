@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.91 2007/04/20 19:43:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.92 2007/04/24 17:25:17 dang Exp $
+
+*dasher-4.4.1 (24 Apr 2007)
+
+  24 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +dasher-4.4.1.ebuild:
+  Bump to 4.4.1
+    * Improved non-cairo rendering
+    * Fixed segfault in output
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> dasher-4.2.2.ebuild:
   ia64 stable
