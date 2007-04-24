@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.8 2007/03/12 14:22:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.9 2007/04/24 14:26:45 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  tesseract-1.03-r1.ebuild:
+  Stable on sparc
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   tesseract-1.03-r1.ebuild:

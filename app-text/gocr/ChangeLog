@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.38 2007/04/23 20:06:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.39 2007/04/24 14:25:39 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> gocr-0.43.ebuild:
+  Stable on sparc
 
   23 Apr 2007; Sven Wegener <swegener@gentoo.org> gocr-0.43.ebuild:
   Sync IUSE (+tk)
