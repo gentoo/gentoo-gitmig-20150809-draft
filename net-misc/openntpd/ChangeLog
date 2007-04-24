@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.29 2007/03/26 08:08:01 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.30 2007/04/24 13:09:30 bangert Exp $
+
+  24 Apr 2007; Thilo Bangert <bangert@gentoo.org> files/openntpd.rc:
+  fix rc script for baselayout2 (bug #175726)
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> openntpd-3.6.1_p1-r1.ebuild,
   openntpd-3.7_p1.ebuild, openntpd-3.9_p1.ebuild, openntpd-3.9_p1-r1.ebuild:
