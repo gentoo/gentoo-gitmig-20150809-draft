@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.26 2007/02/14 21:18:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.27 2007/04/24 10:40:39 armin76 Exp $
+
+  24 Apr 2007; Raúl Porcel <armin76@gentoo.org> crypto++-5.4-r1.ebuild:
+  x86 stable
 
   14 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> crypto++-5.4-r1.ebuild:
   Removed sse2 disabling, closes bug#166842, thanks to Gustavo Zacarias
