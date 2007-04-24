@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.56 2007/03/27 01:16:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.57 2007/04/24 01:42:02 markusle Exp $
+
+  24 Apr 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/gnuc_default_fix.patch, blas-atlas-3.7.30.ebuild:
+  Patch to fix macro errors on ppc (fixes bug 172583 and 173675).
 
 *blas-atlas-3.7.30 (25 Mar 2007)
 

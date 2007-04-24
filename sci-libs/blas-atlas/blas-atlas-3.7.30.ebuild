@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.30.ebuild,v 1.1 2007/03/27 01:16:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.30.ebuild,v 1.2 2007/04/24 01:42:02 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -53,6 +53,7 @@ src_unpack() {
 
 	epatch "${DISTDIR}"/${MY_PN}-3.7.23-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
+	epatch "${FILESDIR}"/gnuc_default_fix.patch
 
 	# make sure shared libs link against proper libraries
 	if [[ ${FORTRANC} == "gfortran" ]]; then
