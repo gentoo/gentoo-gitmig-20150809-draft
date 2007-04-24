@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20070424.ebuild,v 1.1 2007/04/24 22:13:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20070424.ebuild,v 1.2 2007/04/24 22:14:25 genstef Exp $
 
 inherit eutils
 
@@ -76,8 +76,10 @@ src_compile() {
 	sed -i -e "s/.*wget .*//" \
 		-e 's/.*rm $.*//' \
 		-e "s/error \"Couldn't dow.*//" getweb
-	
+
+	# apparently the same files ..
 	ln -s km2430.tar.gz km2530.tar.gz
+
 	# unpack files
 	use foo2zjs_devices_hp2600n && ./getweb 2600n
 	use foo2zjs_devices_hp1600 && ./getweb 1600
