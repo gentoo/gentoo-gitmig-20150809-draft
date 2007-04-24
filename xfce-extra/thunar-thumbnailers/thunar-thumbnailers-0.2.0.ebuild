@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-0.2.0.ebuild,v 1.2 2007/04/03 17:13:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-0.2.0.ebuild,v 1.3 2007/04/24 20:36:54 gustavoz Exp $
 
 inherit xfce44
 
@@ -17,7 +17,7 @@ RDEPEND=">=xfce-base/thunar-${THUNAR_MASTER_VERSION}
 	media-gfx/imagemagick
 	dcraw? ( media-gfx/dcraw )
 	grace? ( sci-visualization/grace )
-	tetex? ( app-text/tetex )
+	tetex? ( virtual/tetex )
 	ffmpeg? ( media-video/ffmpegthumbnailer )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
