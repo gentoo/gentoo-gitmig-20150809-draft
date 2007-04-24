@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.54 2007/04/23 11:16:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.55 2007/04/24 14:12:25 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> uptimed-0.3.11.ebuild:
+  Stable on sparc
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> -uptimed-0.3.3.ebuild,
   uptimed-0.3.11.ebuild:
