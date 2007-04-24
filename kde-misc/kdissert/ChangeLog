@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdissert
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.36 2007/04/23 12:41:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.37 2007/04/24 08:13:09 opfer Exp $
+
+  24 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  kdissert-1.0.7.ebuild:
+  stable amd64, bug 175389
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> kdissert-1.0.7.ebuild:
   Stable on sparc wrt #175389
