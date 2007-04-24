@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.78 2007/04/23 14:02:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.79 2007/04/24 18:11:44 zzam Exp $
+
+*gentoo-vdr-scripts-0.3.9-r1 (24 Apr 2007)
+
+  24 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/gentoo-vdr-scripts-0.3.9-fix-shutdown.diff,
+  -gentoo-vdr-scripts-0.3.9.ebuild, +gentoo-vdr-scripts-0.3.9-r1.ebuild:
+  Fixed shutdown problems of version 0.3.9.
 
 *gentoo-vdr-scripts-0.3.9 (23 Apr 2007)
 

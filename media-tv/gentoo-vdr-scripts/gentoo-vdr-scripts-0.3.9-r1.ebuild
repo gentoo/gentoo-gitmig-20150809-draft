@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.9.ebuild,v 1.1 2007/04/23 14:02:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.9-r1.ebuild,v 1.1 2007/04/24 18:11:44 zzam Exp $
 
 inherit eutils
 
@@ -28,6 +28,11 @@ pkg_setup() {
 	#   audio - playing sound when using software-devices
 	#   cdrom - playing dvds/audio-cds ...
 	enewuser vdr -1 /bin/bash "${VDR_HOME}" vdr,video,audio,cdrom
+}
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-fix-shutdown.diff"
 }
 
 src_install() {

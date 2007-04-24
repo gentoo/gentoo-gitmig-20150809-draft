@@ -5,6 +5,10 @@ AUX gentoo-vdr-scripts-0.3.8-kill-dvbsplash.diff 340 RMD160 29cdb4aa6cc5b9c22a92
 MD5 1fc45da83050d50a549e03e629598246 files/gentoo-vdr-scripts-0.3.8-kill-dvbsplash.diff 340
 RMD160 29cdb4aa6cc5b9c22a921a7ac764d101c951424a files/gentoo-vdr-scripts-0.3.8-kill-dvbsplash.diff 340
 SHA256 ae366edb256f21a81c2fe4d168be2dfeaf1ffa2ad5f8258ffb5d3774884f002d files/gentoo-vdr-scripts-0.3.8-kill-dvbsplash.diff 340
+AUX gentoo-vdr-scripts-0.3.9-fix-shutdown.diff 2200 RMD160 f992ca1ce1120ea274bb89b83c321ebc26837216 SHA1 a904073f2fc3fad2d265e179bfe455322857a0e8 SHA256 fe774d08ae41e3831bd1ad16520526308a761c77913fd0f59400e5ea3e88d9d4
+MD5 eebc9a7fa907aa004dec1dbbc494851b files/gentoo-vdr-scripts-0.3.9-fix-shutdown.diff 2200
+RMD160 f992ca1ce1120ea274bb89b83c321ebc26837216 files/gentoo-vdr-scripts-0.3.9-fix-shutdown.diff 2200
+SHA256 fe774d08ae41e3831bd1ad16520526308a761c77913fd0f59400e5ea3e88d9d4 files/gentoo-vdr-scripts-0.3.9-fix-shutdown.diff 2200
 DIST gentoo-vdr-scripts-0.3.8.tar.bz2 26450 RMD160 681c08fc2502269229d677b2ffc05cb3705f4fde SHA1 31532746f4f72be7c712177902ac7ba5c0d886e8 SHA256 6a7cd90d83dca22be79a55665c422dcd92755a019594f86b741a04a6742cc2ce
 DIST gentoo-vdr-scripts-0.3.9.tar.bz2 26395 RMD160 b7577c30b240f55862318bdb220995196f03c4c2 SHA1 a72fb3f7f09640e7e9230d7cb271c12c392a3209 SHA256 3d8c2aa3c579b5869c5afc7398275fe9dc2439d49ef105bb4fcbcd4702d8ed03
 EBUILD gentoo-vdr-scripts-0.3.8-r1.ebuild 3789 RMD160 dd16db7f55c5f52bfd2b13b299e429b7f988b31d SHA1 49815039e07a80c616f010522e9794af0e56d2f7 SHA256 bc7f110488310c3a9af33a0c0d5634ead5acb2e497380821bf36fe01df349f22
@@ -15,14 +19,14 @@ EBUILD gentoo-vdr-scripts-0.3.8.ebuild 3643 RMD160 2fbedddcb229f6326337dc805196a
 MD5 08e97389ec1cb40ab0c225fe54393590 gentoo-vdr-scripts-0.3.8.ebuild 3643
 RMD160 2fbedddcb229f6326337dc805196af2c2a26a129 gentoo-vdr-scripts-0.3.8.ebuild 3643
 SHA256 fd56bd6323a7cdf3792cdd8c854fe2457e29760dc6708f36dcfc907f1de0e828 gentoo-vdr-scripts-0.3.8.ebuild 3643
-EBUILD gentoo-vdr-scripts-0.3.9.ebuild 3690 RMD160 b0c89c806cc5864272da303e6fd81064adc534dc SHA1 47cb4399c14c3b0e5c70832200b6f011f088ceda SHA256 9435b8a168982d2f9c298da54f2d85a4ac1a99989492a06070aa583d0ef6a8ee
-MD5 9b323624e766aa2cf68b0a1cec4f1fff gentoo-vdr-scripts-0.3.9.ebuild 3690
-RMD160 b0c89c806cc5864272da303e6fd81064adc534dc gentoo-vdr-scripts-0.3.9.ebuild 3690
-SHA256 9435b8a168982d2f9c298da54f2d85a4ac1a99989492a06070aa583d0ef6a8ee gentoo-vdr-scripts-0.3.9.ebuild 3690
-MISC ChangeLog 15866 RMD160 7913a7b748be7b29d518c9ea8811c93be44592ea SHA1 6752baf3797356bca095866812f16c5ffc714b14 SHA256 902c5387e4b3d8ea4c4c8a50d021024d535d4c837f9ec7af49eb8bdaa1842ebe
-MD5 5b2beb5dd2b2614895c179679bf85530 ChangeLog 15866
-RMD160 7913a7b748be7b29d518c9ea8811c93be44592ea ChangeLog 15866
-SHA256 902c5387e4b3d8ea4c4c8a50d021024d535d4c837f9ec7af49eb8bdaa1842ebe ChangeLog 15866
+EBUILD gentoo-vdr-scripts-0.3.9-r1.ebuild 3779 RMD160 18e4d5355bfd4360172e35168983a66f27e76ba8 SHA1 5e167aaf4600264b3878b31672b5d8162c7f4365 SHA256 6d64ecb0876b41cd890e969d4dbd52b6a240696e09ec2d210237535bb9d9cd7b
+MD5 ec42c94135ce8cdcfb401749dc8b8c4b gentoo-vdr-scripts-0.3.9-r1.ebuild 3779
+RMD160 18e4d5355bfd4360172e35168983a66f27e76ba8 gentoo-vdr-scripts-0.3.9-r1.ebuild 3779
+SHA256 6d64ecb0876b41cd890e969d4dbd52b6a240696e09ec2d210237535bb9d9cd7b gentoo-vdr-scripts-0.3.9-r1.ebuild 3779
+MISC ChangeLog 16134 RMD160 0fca06860d12e23027110ed506381146d82f273b SHA1 451f4a9edcd76213f84f9e220a37857276032105 SHA256 656fc69dd93b88cb5343fedb415a196328f41510e056cb9ef2f50428111c04bd
+MD5 2b7cfc194683b3417a3f5a01255627b4 ChangeLog 16134
+RMD160 0fca06860d12e23027110ed506381146d82f273b ChangeLog 16134
+SHA256 656fc69dd93b88cb5343fedb415a196328f41510e056cb9ef2f50428111c04bd ChangeLog 16134
 MISC metadata.xml 257 RMD160 8bee49b98c59996aaaa019fb2c764c08d8004507 SHA1 d2419394e7d5c7463d7dea33e9190ebd57484531 SHA256 0dd45fbbaf1c6173535e371e3ff8a3faa41f3f89123ac9dffe338998599ebe26
 MD5 116de98355049ce943c3b6fedc00b4a3 metadata.xml 257
 RMD160 8bee49b98c59996aaaa019fb2c764c08d8004507 metadata.xml 257
@@ -33,13 +37,13 @@ SHA256 3aca0cd650e4513d72878d443ae584cff62a624d848e82e0fccfcd8a05fda7ec files/di
 MD5 5aca44920c9216a8e7d435e80259247c files/digest-gentoo-vdr-scripts-0.3.8-r1 274
 RMD160 fae0bec13596f0b2cd936730e246cfbcaa2bbb6f files/digest-gentoo-vdr-scripts-0.3.8-r1 274
 SHA256 3aca0cd650e4513d72878d443ae584cff62a624d848e82e0fccfcd8a05fda7ec files/digest-gentoo-vdr-scripts-0.3.8-r1 274
-MD5 4050c7bd5aab37f2b6eb64b455845075 files/digest-gentoo-vdr-scripts-0.3.9 274
-RMD160 90efac36cd6a1bb27f502107f0b54a95dcd93dbf files/digest-gentoo-vdr-scripts-0.3.9 274
-SHA256 6cad498b45bcd1c7302e8df2e746be1e11b256fe2cd9bd3cab4e7ee295f63b30 files/digest-gentoo-vdr-scripts-0.3.9 274
+MD5 4050c7bd5aab37f2b6eb64b455845075 files/digest-gentoo-vdr-scripts-0.3.9-r1 274
+RMD160 90efac36cd6a1bb27f502107f0b54a95dcd93dbf files/digest-gentoo-vdr-scripts-0.3.9-r1 274
+SHA256 6cad498b45bcd1c7302e8df2e746be1e11b256fe2cd9bd3cab4e7ee295f63b30 files/digest-gentoo-vdr-scripts-0.3.9-r1 274
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGLLyOt2vP6XvVdOcRAoYZAJ0YwMbsI2KeG1XkCuUf43lT79gyOACbBH9k
-Uq3II8hP7L+pQamCxCflLL8=
-=JvyD
+iD8DBQFGLkhmt2vP6XvVdOcRAuF4AJ9IRCn3cz++u7HNQ7xpOozcApXmRwCgpW/x
+GaEjYpVM6CcULirVJm5FFo0=
+=XxIu
 -----END PGP SIGNATURE-----
