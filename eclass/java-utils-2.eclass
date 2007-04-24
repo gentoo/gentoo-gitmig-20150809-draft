@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.77 2007/04/24 10:26:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.78 2007/04/24 21:11:41 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -847,7 +847,7 @@ java-pkg_jar-from() {
 	local destdir="."
 	local deep=""
 
-	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
+	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="build"
 
 	while [[ "${1}" == --* ]]; do
 		if [[ "${1}" = "--build-only" ]]; then
@@ -884,7 +884,7 @@ java-pkg_jar-from() {
 	# packages. This affects recording of dependencencies because that syntax uses :
 	# if we don't change them to : gjl and java-config -d -p break
 	if [[ ${target_pkg} = *,* ]]; then
-		build_only="true"
+		build_only="build"
 		java-pkg_record-jar_ ${target_pkg//,/:}
 	fi
 
@@ -959,7 +959,7 @@ java-pkg_getjars() {
 	local build_only=""
 	local deep=""
 
-	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
+	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="build"
 
 	while [[ "${1}" == --* ]]; do
 		if [[ "${1}" = "--build-only" ]]; then
@@ -1027,7 +1027,7 @@ java-pkg_getjar() {
 
 	local build_only=""
 
-	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
+	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="build"
 
 	while [[ "${1}" == --* ]]; do
 		if [[ "${1}" = "--build-only" ]]; then
