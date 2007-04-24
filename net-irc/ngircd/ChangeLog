@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.25 2007/04/24 18:41:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.26 2007/04/24 18:52:22 armin76 Exp $
+
+  24 Apr 2007; Raúl Porcel <armin76@gentoo.org> -ngircd-0.8.3.ebuild:
+  old
 
   24 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ngircd-0.10.1.ebuild:
