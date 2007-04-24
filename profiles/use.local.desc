@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2766 2007/04/23 19:55:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2767 2007/04/24 20:31:20 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1150,6 +1150,7 @@ media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg.
 media-video/vlc:cdda - Enables libcdda cd audio playback support.
 media-video/vlc:corba - Enables corba interface support.
 media-video/vlc:daap - Enables DAAP shares services discovery support.
+media-video/vlc:dc1394 - Enables IIDC cameras support.
 media-video/vlc:httpd - Enables a web based interface for vlc.
 media-video/vlc:live - Enables LIVE.com support.
 media-video/vlc:mod - Enables Mod demux support.
