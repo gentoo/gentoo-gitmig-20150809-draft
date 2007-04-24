@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.17 2007/03/27 17:21:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.18 2007/04/24 15:08:10 dang Exp $
+
+*sabayon-2.18.1 (24 Apr 2007)
+
+  24 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +sabayon-2.18.1.ebuild:
+  Bump to 2.18.1
+  	* Fixed a broken Arabic translation (Djihed Afifi).
 
 *sabayon-2.18.0 (27 Mar 2007)
 
