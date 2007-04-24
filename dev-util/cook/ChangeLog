@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cook
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/ChangeLog,v 1.16 2007/04/12 21:42:44 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/ChangeLog,v 1.17 2007/04/24 19:43:28 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> cook-2.26.ebuild:
+  Stable on sparc
 
   12 Apr 2007; <welp@gentoo.org> cook-2.26.ebuild:
   Stable on amd64 wrt bug 170641

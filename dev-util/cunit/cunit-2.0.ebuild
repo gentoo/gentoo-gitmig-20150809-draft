@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.0.ebuild,v 1.4 2007/04/02 16:57:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.0.ebuild,v 1.5 2007/04/24 19:48:11 gustavoz Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cunit.sourceforge.net"
 DEPEND="virtual/libc"
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE=""
 S=${WORKDIR}/CUnit-${PV}-1
 
