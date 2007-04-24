@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.16 2007/04/24 19:44:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.17 2007/04/24 19:49:52 genstef Exp $
+
+*gtk-engines-qt-0.7_p20070327-r1 (24 Apr 2007)
+
+  24 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/gtk-engines-qt-0.7-implicit.patch,
+  -files/kcmgtk-write-good-bashrc.diff, -gtk-engines-qt-0.7-r1.ebuild,
+  -gtk-engines-qt-0.7_p20070327.ebuild,
+  +gtk-engines-qt-0.7_p20070327-r1.ebuild:
+  Fix bogus install locations thanks to Yaroslav Isakov <yar_tour@mail333.com>
+  in bug 175611, remove old broken ebuilds
 
   24 Apr 2007; Markus Ullmann <jokey@gentoo.org>
   gtk-engines-qt-0.7_p20070327.ebuild:
@@ -8,7 +18,7 @@
 
 *gtk-engines-qt-0.7_p20070327 (06 Apr 2007)
 
-  06 Apr 2007; <stefan@gentoo.org> +gtk-engines-qt-0.7_p20070327.ebuild:
+  06 Apr 2007; Stefan Schweizer <genstef@gentoo.org> +gtk-engines-qt-0.7_p20070327.ebuild:
   SVN Snapshot many thanks to Cedric Anderson <jintxo@hotmail.com> in bug 171372
 
   22 Mar 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327.ebuild,v 1.2 2007/04/24 19:44:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327-r1.ebuild,v 1.1 2007/04/24 19:49:52 genstef Exp $
 
 ARTS_REQUIRED="never"
 
@@ -22,3 +22,8 @@ need-kde 3
 SLOT="2"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_install() {
+	kde_src_install
+	mv ${D}/usr/local/share/{locale,application} ${D}/usr/share/
+}
