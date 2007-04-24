@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.140 2007/04/24 09:41:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.141 2007/04/24 13:56:04 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> busybox-1.4.2.ebuild:
+  Stable on sparc
 
   24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   busybox-1.4.1-r2.ebuild:
