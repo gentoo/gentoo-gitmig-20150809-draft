@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/normalize
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.23 2007/04/24 12:18:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.24 2007/04/24 13:24:50 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> normalize-0.7.7.ebuild:
+  Add ~x86-fbsd keyword and a fix for tests under BSD userland.
 
   24 Apr 2007; Raúl Porcel <armin76@gentoo.org> normalize-0.7.7.ebuild:
   x86 stable
