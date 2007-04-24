@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.42 2007/04/16 15:50:28 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.43 2007/04/24 11:02:03 eroyf Exp $
+
+  24 Apr 2007; Alexander Færøy <eroyf@gentoo.org> fcron-3.0.2-r1.ebuild:
+  Stable on MIPS.
 
 *fcron-3.0.3_rc1 (16 Apr 2007)
 
