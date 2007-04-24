@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Simple
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.29 2007/04/16 06:20:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.30 2007/04/24 08:53:23 kloeri Exp $
+
+  24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> Pod-Simple-3.05.ebuild:
+  Add ~mips keyword, bug 173295.
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> Pod-Simple-3.04.ebuild:
   Stable on ppc64
