@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.2-r1.ebuild,v 1.4 2007/04/24 16:38:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.0.ebuild,v 1.1 2007/04/24 16:38:00 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ldap mysql postgres milter"
+IUSE="courier ldap milter mysql postgres qmail"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5.8.2"
@@ -27,26 +27,25 @@ RDEPEND="${DEPEND}
 	app-arch/unarj
 	app-arch/unrar
 	app-arch/zoo
-	dev-perl/Archive-Tar
 	>=dev-perl/Archive-Zip-1.14
 	>=dev-perl/Compress-Zlib-1.35
 	dev-perl/Convert-TNEF
-	>=dev-perl/Convert-UUlib-1.051
+	>=dev-perl/Convert-UUlib-1.08
 	virtual/perl-MIME-Base64
 	>=dev-perl/MIME-tools-5.415
 	>=dev-perl/MailTools-1.58
 	>=dev-perl/net-server-0.91
-	>=virtual/perl-libnet-1.16
+	virtual/perl-Digest-MD5
 	dev-perl/IO-stringy
 	>=virtual/perl-Time-HiRes-1.49
 	dev-perl/Unix-Syslog
-	>=sys-libs/db-3.1
+	>=sys-libs/db-3.2
 	dev-perl/BerkeleyDB
 	virtual/mta
 	ldap? ( >=dev-perl/perl-ldap-0.33 )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	milter? ( >=mail-mta/sendmail-8.12 )"
+	milter? ( || ( >=mail-mta/sendmail-8.12 mail-filter/libmilter ) )"
 
 AMAVIS_ROOT="/var/amavis"
 
@@ -56,29 +55,20 @@ pkg_preinst() {
 }
 
 src_unpack() {
-	if $(has_version "<mail-filter/spamassassin-3") ; then
-		echo
-		ewarn "WARNING: Amavisd-new will not work with SpamAssassin older than 3.0.0."
-		ewarn "         Consider upgrading your SpamAssassin installation."
-		ebeep 3
-		epause
-	fi
 	unpack ${A}
-	cd ${S}
-	if $(has_version mail-mta/courier) ; then
+	cd "${S}"
+
+	if use courier ; then
 		elog "Patching with courier support."
-		epatch "amavisd-new-courier.patch" || die "patch failed"
+		epatch amavisd-new-courier.patch
 	fi
 
-	if $(has_version virtual/qmail) ; then
+	if use qmail ; then
 		elog "Patching with qmail qmqp support."
-		epatch "amavisd-new-qmqpqq.patch" || die "patch failed"
-
-		elog "Patching with qmail lf bug workaround."
-		epatch "${FILESDIR}/${P%.*}-qmail-lf-workaround.patch" || die "patch failed"
+		epatch amavisd-new-qmqpqq.patch
 	fi
 
-	epatch "${FILESDIR}/${P}-amavisd.conf-gentoo.patch" || die "patch failed"
+	epatch "${FILESDIR}/${PN}-2.4.4-amavisd.conf-gentoo.patch"
 }
 
 src_compile() {
@@ -96,21 +86,14 @@ src_compile() {
 
 src_install() {
 	dosbin amavisd amavisd-agent amavisd-nanny amavisd-release
-
 	dobin p0f-analyzer.pl
 
 	insinto /etc
 	insopts -m0640
 	newins amavisd.conf-sample amavisd.conf
+
 	dosed "s:^#\\?\\\$MYHOME[^;]*;:\$MYHOME = '$AMAVIS_ROOT';:" \
 		/etc/amavisd.conf
-	if [ "$(dnsdomainname)" = "(none)" ] ; then
-		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(hostname)';:" \
-			/etc/amavisd.conf
-	else
-		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(dnsdomainname)';:" \
-			/etc/amavisd.conf
-	fi
 
 	newinitd "${FILESDIR}/amavisd.rc6" amavisd
 	dosed "s:/var/run/amavis/:$AMAVIS_ROOT/:g" /etc/init.d/amavisd
@@ -120,7 +103,33 @@ src_install() {
 	keepdir ${AMAVIS_ROOT}/quarantine
 	keepdir ${AMAVIS_ROOT}/tmp
 
-	if $(has_version net-nds/openldap ) ; then
+	newdoc test-messages/README README.samples
+	dodoc AAAREADME.first INSTALL MANIFEST RELEASE_NOTES README_FILES/README.* \
+		test-messages/sample* amavisd.conf-default amavisd-agent \
+		amavisd-custom.conf
+
+	dodir /usr/share/doc/${PF}/html
+	insinto /usr/share/doc/${PF}/html
+	doins README_FILES/*.{html,css}
+	dodir /usr/share/doc/${PF}/html/images
+	insinto /usr/share/doc/${PF}/html/images
+	doins README_FILES/images/*
+
+	if use milter ; then
+		cd "${S}/helper-progs"
+		einstall
+		cd "${S}"
+	fi
+
+	for i in whitelist blacklist spam_lovers; do
+		if [ -f ${AMAVIS_ROOT}/${i} ]; then
+			cp "${AMAVIS_ROOT}/${i}" "${D}/${AMAVIS_ROOT}"
+		else
+			touch ${D}/${AMAVIS_ROOT}/${i}
+		fi
+	done
+
+	if use ldap ; then
 		elog "Adding ${P} schema to openldap schema dir."
 		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
@@ -129,41 +138,32 @@ src_install() {
 		newins LDAP.schema ${PN}.schema.default || die
 	fi
 
-	newdoc test-messages/README README.samples
-	dodoc AAAREADME.first INSTALL MANIFEST RELEASE_NOTES \
-		README_FILES/* test-messages/sample* amavisd.conf-default amavisd-agent
+	find ${D}/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
+	find ${D}/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
+}
 
-	if use milter ; then
-		cd "${S}/helper-progs"
-		einstall
+pkg_preinst() {
+	if [ -z "$(dnsdomainname)" ] ; then
+		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(hostname)';:" \
+			/etc/amavisd.conf
+	else
+		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(dnsdomainname)';:" \
+			/etc/amavisd.conf
 	fi
 
-	for i in whitelist blacklist spam_lovers; do
-		if [ ! -f ${D}/${AMAVIS_ROOT}/${i} ]; then
-			touch ${D}/${AMAVIS_ROOT}/${i}
-		fi
-	done
-
-	if $(has_version mail-filter/razor) ; then
-		if [ ! -f ${AMAVIS_ROOT}/.razor/razor-agent.conf ] ; then
+	if has_version mail-filter/razor ; then
+		if [ ! -d ${AMAVIS_ROOT}/.razor ] ; then
 			elog "Setting up initial razor config files..."
 
 			razor-admin -create -home=${D}/${AMAVIS_ROOT}/.razor
 			sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
 				${D}/${AMAVIS_ROOT}/.razor/razor-agent.conf
-		else
-			elog "Copying existing razor config files..."
-			insinto ${AMAVIS_ROOT}/.razor
-			doins ${AMAVIS_ROOT}/.razor/*.{conf,lst}
 		fi
 	fi
-
-	find ${D}/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
-	find ${D}/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
 }
 
 pkg_postinst() {
-	if ! $(has_version mail-filter/spamassassin) ; then
+	if ! has_version mail-filter/spamassassin ; then
 		echo
 		elog "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
 		elog "will be performed without it. Since you do not have SpamAssassin installed,"
@@ -171,6 +171,11 @@ pkg_postinst() {
 		elog "and comment out the line containing: "
 		elog "@bypass_spam_checks_maps = (1); in /etc/amavisd.conf."
 	fi
+	echo
+	ewarn "As of amavisd-new-2.4.5 p0f-analyzer.pl only binds to the loopback interface"
+	ewarn "by default instead of to all interfaces. You will need to change $bind_addr"
+	ewarn "in p0f-analyzer.pl to '0.0.0.0' if p0f-analyzer.pl is running on a different"
+	ewarn "host from amavisd or from other querying clients."
 	echo
 	ewarn "Adjusting permissions for /etc/amavisd.conf (0 for world, owner root:amavis)"
 	echo

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.2.ebuild,v 1.3 2007/03/18 02:44:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.2.ebuild,v 1.4 2007/04/24 16:38:00 ticho Exp $
 
 inherit eutils
 
@@ -128,7 +128,7 @@ src_install() {
 	fi
 
 	newdoc test-messages/README README.samples
-	dodoc AAAREADME.first INSTALL LICENSE MANIFEST RELEASE_NOTES \
+	dodoc AAAREADME.first INSTALL MANIFEST RELEASE_NOTES \
 		README_FILES/* test-messages/sample* amavisd.conf-default amavisd-agent
 
 	if use milter ; then
