@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.15 2007/04/23 16:23:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.16 2007/04/24 20:42:57 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -12,6 +12,7 @@ apm
 cle266
 cmucl
 commercial
+cpufreq
 directfb
 djbfft
 dvb
