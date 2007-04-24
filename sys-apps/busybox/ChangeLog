@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.138 2007/04/23 17:33:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.139 2007/04/24 09:19:22 armin76 Exp $
+
+  24 Apr 2007; Raúl Porcel <armin76@gentoo.org> busybox-1.4.2.ebuild,
+  busybox-1.5.0.ebuild:
+  1.5.0 is not stable by upstream, so stabilize 1.4.2
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> busybox-1.5.0.ebuild:
   ia64 + x86 stable
