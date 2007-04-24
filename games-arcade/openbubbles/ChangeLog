@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/openbubbles
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openbubbles/ChangeLog,v 1.3 2007/03/29 03:01:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openbubbles/ChangeLog,v 1.4 2007/04/24 14:54:58 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> openbubbles-1.2.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   29 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
   openbubbles-1.2.ebuild:

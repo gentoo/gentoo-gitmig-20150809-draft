@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/netris
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.10 2007/03/10 11:35:01 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.11 2007/04/24 14:49:27 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> netris-0.52.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   10 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> netris-0.52.ebuild:
   Stable on MIPS.

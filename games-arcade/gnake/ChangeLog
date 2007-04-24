@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gnake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.3 2007/04/08 00:19:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.4 2007/04/24 14:41:47 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> gnake-0.94b.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   08 Apr 2007; Joseph Jezak <josejx@gentoo.org> gnake-0.94b.ebuild:
   Marked ~ppc for bug #173426.

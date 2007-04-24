@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/gnake-0.94b.ebuild,v 1.2 2007/04/08 00:19:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/gnake-0.94b.ebuild,v 1.3 2007/04/24 14:41:47 drizzt Exp $
 
 inherit toolchain-funcs games
 
@@ -13,7 +13,7 @@ SRC_URI="http://lightless.org/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
