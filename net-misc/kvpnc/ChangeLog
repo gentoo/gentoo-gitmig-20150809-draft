@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kvpnc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.27 2007/04/21 14:12:57 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.28 2007/04/24 19:56:32 voxus Exp $
+
+  24 Apr 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  kvpnc-0.8.8-r1.ebuild:
+  Dependency on net-misc/vpnc corrected.
 
 *kvpnc-0.8.8-r1 (21 Apr 2007)
 

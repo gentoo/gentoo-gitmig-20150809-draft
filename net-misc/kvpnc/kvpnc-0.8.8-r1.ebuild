@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.8.8-r1.ebuild,v 1.1 2007/04/21 14:12:57 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.8.8-r1.ebuild,v 1.2 2007/04/24 19:56:32 voxus Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ IUSE="cisco smartcard"
 SLOT="0"
 
 DEPEND="dev-libs/libgcrypt"
-RDEPEND="cisco? ( >=net-misc/vpnc-0.3.4_pre20061029 <=net-misc/vpnc-0.4 )
+RDEPEND="cisco? ( >=net-misc/vpnc-0.4.0 <=net-misc/vpnc-0.4 )
 	smartcard? ( >=dev-libs/openct-0.6.11-r1 )"
 
 need-kde 3.2
