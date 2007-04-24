@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.104 2007/03/27 18:25:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.105 2007/04/24 19:24:43 dang Exp $
+
+*epiphany-2.18.1 (24 Apr 2007)
+
+  24 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +epiphany-2.18.1.ebuild:
+  Bump to 2.18.1
 
 *epiphany-2.18.0 (27 Mar 2007)
 
