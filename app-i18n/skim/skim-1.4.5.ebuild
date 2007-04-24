@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.14 2007/02/04 21:16:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.15 2007/04/24 13:59:14 jer Exp $
 
 inherit kde-functions multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="|| ( >=app-i18n/scim-1.4.4 >=app-i18n/scim-cvs-1.4.4 )"

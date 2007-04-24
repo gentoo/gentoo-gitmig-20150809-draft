@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.55 2007/02/04 21:16:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.56 2007/04/24 13:59:14 jer Exp $
+
+  24 Apr 2007; Jeroen Roovers <jer@gentoo.org> skim-1.4.5.ebuild:
+  Stable for HPPA (bug #175813).
 
   04 Feb 2007; Simon Stelling <blubb@gentoo.org> skim-1.4.5.ebuild:
   stable on amd64
