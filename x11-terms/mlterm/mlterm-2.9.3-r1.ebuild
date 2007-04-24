@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.7 2007/04/24 18:53:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.8 2007/04/24 19:43:34 welp Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://mlterm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mlterm/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 hppa ppc ~ppc64 sparc ~x86"
 LICENSE="BSD"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
