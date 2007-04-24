@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/meme
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.1 2007/04/24 20:44:01 ribosome Exp $
+
+*meme-3.5.4 (24 Apr 2007)
+
+  24 Apr 2007; Olivier Fisette <ribosome@gentoo.org>
+  +files/meme-3.5.4-Makefile.am.patch, +metadata.xml, +meme-3.5.4.ebuild:
+  Initial import.
+
