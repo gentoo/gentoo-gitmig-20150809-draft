@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigInt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.33 2007/04/22 14:13:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.34 2007/04/24 09:03:52 kloeri Exp $
+
+  24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Math-BigInt-1.83.ebuild:
+  Add ~mips keyword, bug 173295.
 
 *Math-BigInt-1.83 (22 Apr 2007)
 
