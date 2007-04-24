@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.5.ebuild,v 1.2 2007/04/08 00:15:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.5.ebuild,v 1.3 2007/04/24 14:29:44 drizzt Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-python/pygame-1.6.2"

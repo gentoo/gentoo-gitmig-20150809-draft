@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/funnyboat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.9 2007/04/08 00:15:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.10 2007/04/24 14:29:44 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> funnyboat-1.5.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   08 Apr 2007; Joseph Jezak <josejx@gentoo.org> funnyboat-1.5.ebuild:
   Marked ~ppc for bug #173426.
