@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.ebuild,v 1.2 2007/01/31 18:50:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.ebuild,v 1.3 2007/04/24 18:40:49 calchan Exp $
 
 inherit kde
 
 DESCRIPTION="KTechlab is a development and simulation environment for microcontrollers and electronic circuits"
-HOMEPAGE="http://ktechlab.org/"
+HOMEPAGE="http://sourceforge.net/projects/ktechlab/"
 SRC_URI="http://ktechlab.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"

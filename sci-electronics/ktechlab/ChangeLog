@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/ktechlab
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.9 2007/01/31 18:50:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.10 2007/04/24 18:40:49 calchan Exp $
+
+  24 Apr 2007; Denis Dupeyron <calchan@gentoo.org> ktechlab-0.3.ebuild:
+  Fixed homepage, thanks to Peter Fischer (bug #175843).
 
   31 Jan 2007; Denis Dupeyron <calchan@gentoo.org> ktechlab-0.3.ebuild:
   Fixed gpsim dependency, see bug #143987.
