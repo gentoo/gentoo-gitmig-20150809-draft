@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.26 2007/03/25 21:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.27 2007/04/24 15:31:10 drizzt Exp $
+
+  24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
+  sdl-sound-1.0.1-r2.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Nathan Smith for reporting wrt bug #175779
 
   25 Mar 2007; Mike Frysinger <vapier@gentoo.org> sdl-sound-1.0.1-r2.ebuild:
   Delete local libtool.m4 cache so we can properly regenerate autotools #167736.
