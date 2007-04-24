@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7166 2007/04/24 21:59:38 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7167 2007/04/24 22:30:18 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -530,10 +530,6 @@ app-text/biblestudy
 # See bug 151012.
 >=dev-lang/ghc-6.6
 >=dev-haskell/cabal-1.1.6.1
-
-# Michael Cummings <mcummings@gentoo.org> (7 Mar 2007)
-# Unmaintained, doesn't build, isn't dep'd. Removal planned for March 31st.
-dev-perl/Newt
 
 # Daniel Drake <dsd@gentoo.org> (7 Mar 2007)
 # Unmaintained, replaced by vanilla-sources. Removal due on March 31st.
