@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.139 2007/04/24 09:19:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.140 2007/04/24 09:41:15 kloeri Exp $
+
+  24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  busybox-1.4.1-r2.ebuild:
+  Stable on Mips, bug 169830.
 
   24 Apr 2007; Raúl Porcel <armin76@gentoo.org> busybox-1.4.2.ebuild,
   busybox-1.5.0.ebuild:
