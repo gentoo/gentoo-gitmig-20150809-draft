@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/boa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.9 2007/03/13 14:44:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.10 2007/04/24 13:29:49 bangert Exp $
+
+  24 Apr 2007; Thilo Bangert <bangert@gentoo.org> boa-0.94.13.ebuild,
+  boa-0.94.14_alpha20.ebuild:
+  newconfd and newinitd (bug #174266)
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> boa-0.94.13-r1.ebuild:
   x86 stable
