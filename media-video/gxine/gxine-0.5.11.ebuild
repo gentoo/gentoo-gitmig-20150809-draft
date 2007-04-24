@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.11.ebuild,v 1.1 2007/02/01 10:38:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.11.ebuild,v 1.2 2007/04/24 12:23:05 armin76 Exp $
 
 inherit eutils nsplugins fdo-mime libtool
 
@@ -36,7 +36,7 @@ IUSE="nls lirc nsplugin xinerama"
 
 SLOT="0"
 # Those needs spidermonkey: ~sparc
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 
 SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
 
