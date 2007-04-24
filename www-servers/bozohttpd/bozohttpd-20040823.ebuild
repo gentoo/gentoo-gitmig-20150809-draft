@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040823.ebuild,v 1.3 2007/04/19 09:33:11 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040823.ebuild,v 1.4 2007/04/24 13:44:05 bangert Exp $
 
 inherit eutils
 
@@ -31,8 +31,8 @@ src_install ()
 	dobin bozohttpd
 	doman bozohttpd.8
 
-	insinto /etc/conf.d; newins ${FILESDIR}/${PN}.conffile   bozohttpd
-	exeinto /etc/init.d; newexe ${FILESDIR}/${PN}.initscript bozohttpd
+	newconfd ${FILESDIR}/${PN}.conffile   bozohttpd
+	newinitd ${FILESDIR}/${PN}.initscript bozohttpd
 }
 
 pkg_postinst()
