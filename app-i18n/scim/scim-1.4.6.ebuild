@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.6.ebuild,v 1.1 2007/04/22 09:28:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.6.ebuild,v 1.2 2007/04/24 01:55:35 matsuu Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc gtk kde qt3"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
