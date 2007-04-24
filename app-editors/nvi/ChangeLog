@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.51 2007/04/14 09:19:56 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.52 2007/04/24 16:57:48 kloeri Exp $
+
+  24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> nvi-1.81.5-r6.ebuild:
+  Stable on Mips, bug 170745.
 
   14 Apr 2007; Harald van Dĳk <truedfx@gentoo.org> -nvi-1.81.5-r5.ebuild,
   +nvi-1.81.5-r6.ebuild:
