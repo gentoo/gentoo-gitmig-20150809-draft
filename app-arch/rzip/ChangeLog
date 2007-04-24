@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rzip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.18 2007/04/15 19:46:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.19 2007/04/24 17:49:24 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> rzip-2.1.ebuild:
+  Stable on sparc
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> rzip-2.1.ebuild:
   Stable on ppc64
