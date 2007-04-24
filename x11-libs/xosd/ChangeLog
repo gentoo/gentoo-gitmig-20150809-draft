@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.64 2007/04/24 17:49:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.65 2007/04/24 20:19:42 welp Exp $
+
+  24 Apr 2007; Peter Weller <welp@gentoo.org> xosd-2.2.14-r1.ebuild:
+  Stable on amd64 wrt bug 175696
 
   24 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   xosd-2.2.14-r1.ebuild:
