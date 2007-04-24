@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.74 2007/02/24 01:21:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.75 2007/04/24 09:26:33 yoswink Exp $
+
+  24 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> hylafax-4.2.5.ebuild,
+  hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild:
+  Removed alpha keyword. The Alpha arch team haven't got the resources nor
+  interest to keep keywording this package, although it could be working just
+  fine.
 
   23 Feb 2007; Steve Arnold <nerdboy@gentoo.org> hylafax-4.2.5.ebuild,
   hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild:
