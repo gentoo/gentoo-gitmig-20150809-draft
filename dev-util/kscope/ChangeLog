@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.34 2007/04/23 12:39:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.35 2007/04/24 08:10:35 opfer Exp $
+
+  24 Apr 2007; Christian Faulhammer <opfer@gentoo.org> kscope-1.4.2.ebuild:
+  stable amd64, bug 175386
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> kscope-1.4.2.ebuild:
   Stable on sparc wrt #175386
