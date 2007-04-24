@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.1.ebuild,v 1.1 2007/04/19 12:05:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.1.ebuild,v 1.2 2007/04/24 15:28:47 bicatali Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -101,7 +101,7 @@ src_install() {
 	fi
 
 	if use examples; then
-		insinsto /usr/share/doc/${PF}/examples
+		insinto /usr/share/doc/${PF}/examples
 		doins samples/*
 	fi
 
@@ -112,7 +112,7 @@ src_install() {
 		insinto /usr/share/cdf
 		doins */*.jar
 		if use examples; then
-			insinsto /usr/share/doc/${PF}/examples/java
+			insinto /usr/share/doc/${PF}/examples/java
 			doins examples/*
 		fi
 	fi
