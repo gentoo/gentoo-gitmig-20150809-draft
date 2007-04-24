@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.59 2007/04/23 14:08:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.60 2007/04/24 19:46:28 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc32/2006.0/2.4/package.mask, sparc32/2006.1/2.4/package.mask,
+  sparc64/2006.0/2.4/package.mask, sparc64/2006.1/2.4/package.mask:
+  Mask vpnc and kvpnc along with newer iproute2
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc32/2006.0/2.4/package.mask, sparc32/2006.1/2.4/package.mask,
