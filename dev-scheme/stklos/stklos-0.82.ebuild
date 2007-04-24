@@ -1,6 +1,8 @@
-# Copyright 2007 Gentoo Technologies, Inc.
+# Copyright 1999-2007 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-0.82.ebuild,v 1.2 2007/04/23 11:32:19 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-0.82.ebuild,v 1.3 2007/04/24 14:45:20 hkbst Exp $
+
+inherit eutils
 
 DESCRIPTION="fast and light Scheme implementation"
 HOMEPAGE="http://www.stklos.org"
@@ -17,6 +19,11 @@ DEPEND="dev-libs/gmp dev-libs/libpcre dev-libs/boehm-gc
 #silex and ``The Dominique Boucher LALR Package'' may also be deps, not in tree though
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	if use threads; then
+		built_with_use dev-libs/boehm-gc threads || die "boehm-gc must be built with threads use flag"
+	fi
+}
 
 src_compile() {
 # Inverses of options are treated like the options themselves.

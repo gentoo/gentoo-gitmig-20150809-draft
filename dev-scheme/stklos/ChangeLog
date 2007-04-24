@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/stklos
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.2 2007/04/23 11:32:19 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.3 2007/04/24 14:45:20 hkbst Exp $
+
+  24 Apr 2007; Marijn Schouten <hkBst@gentoo.org> stklos-0.82.ebuild:
+  add boehm-gc threads use flag checking, bug 175371
 
   23 Apr 2007; Marijn Schouten <hkBst@gentoo.org> stklos-0.82.ebuild:
   add deps and use flags
