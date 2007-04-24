@@ -1,12 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX matchbox-window-manager-1.0-use-nopng.patch 810 RMD160 f6173013aa3a6548baf0e254ee81a84a0a4c6fc7 SHA1 fc4f5f398b0948241e56f08bee872434dde70383 SHA256 3e4480a588227dd05da7b042bf649199781df83a86ea7f6bbe7255a275a2d390
 MD5 1c048626780502663deb36c7e27e386d files/matchbox-window-manager-1.0-use-nopng.patch 810
 RMD160 f6173013aa3a6548baf0e254ee81a84a0a4c6fc7 files/matchbox-window-manager-1.0-use-nopng.patch 810
 SHA256 3e4480a588227dd05da7b042bf649199781df83a86ea7f6bbe7255a275a2d390 files/matchbox-window-manager-1.0-use-nopng.patch 810
 DIST matchbox-window-manager-1.0.tar.bz2 200627 RMD160 5b792894f14c9ef776880f77b2907ea36b470266 SHA1 7362232889421f4f0374c3f8fb4c61128509e05e SHA256 34e7957d3afde9ce52682de510b39d3fc749cc96e10950b111d297278e9ed5fa
 DIST matchbox-window-manager-1.1.tar.bz2 203129 RMD160 37d31c260df4f85e9682c1242048936145a5db3f SHA1 5fc30af55f4953e208e15a04030461b00d6e2001 SHA256 08a7ca5123b1110b56531e7f25b5ced1a994152d1f1878182759226e5e8aeb25
+DIST matchbox-window-manager-1.2.tar.bz2 208813 RMD160 5130a110f78897b0a2d73f59a05020a08bb599d4 SHA1 4e8ce03b54f363a85dbc8f1925d4b803036bcd46 SHA256 81a23a4af797cf350759fd5ac738797015a66dd5dba2f3d9f3c6908506c1ceff
 EBUILD matchbox-window-manager-1.0.ebuild 1665 RMD160 6dda795472311f5acfa927b03d6d37863778c5a6 SHA1 066b8b0394877994c2874c494c549a5ad2b6f893 SHA256 3c38c052faa391eb817c29d0660f46c4d6d0bb1611a9b8ae7ffafc4f5bdac431
 MD5 40f42d49681adece310c89b5f9b9a835 matchbox-window-manager-1.0.ebuild 1665
 RMD160 6dda795472311f5acfa927b03d6d37863778c5a6 matchbox-window-manager-1.0.ebuild 1665
@@ -15,10 +13,14 @@ EBUILD matchbox-window-manager-1.1.ebuild 1670 RMD160 bb08ab3cf3759b69a1619e980d
 MD5 da53425a3845357778133aed8e62fcb7 matchbox-window-manager-1.1.ebuild 1670
 RMD160 bb08ab3cf3759b69a1619e980d0d217333b7ac23 matchbox-window-manager-1.1.ebuild 1670
 SHA256 4544af552568006c90f81d24bf7c8ae8362c2c79db7a436207883ae543da378e matchbox-window-manager-1.1.ebuild 1670
-MISC ChangeLog 1385 RMD160 26d44991e5a263b7347985084548f9d3cfce3e3c SHA1 275ea8a594b8e56fb959540c844a240259e8d0e0 SHA256 7c4c11a14d6c37e1ad9d8b236e7199d69b12804fdfe50a6eaadf3765e7d15cab
-MD5 f09370d2d425cee4e5ddc35a9c44e294 ChangeLog 1385
-RMD160 26d44991e5a263b7347985084548f9d3cfce3e3c ChangeLog 1385
-SHA256 7c4c11a14d6c37e1ad9d8b236e7199d69b12804fdfe50a6eaadf3765e7d15cab ChangeLog 1385
+EBUILD matchbox-window-manager-1.2.ebuild 1670 RMD160 e8cb13e4cf5ebc340801d5a0cb84026b21ac6235 SHA1 cc9b0a328574159d18b9a7c79de67e962d9bc2fe SHA256 e56f99cd53782f970aab80eab95e4c153266698842ed987b083e9492c9cb4b3b
+MD5 5442d9d48c027fc636ecfb1b86240749 matchbox-window-manager-1.2.ebuild 1670
+RMD160 e8cb13e4cf5ebc340801d5a0cb84026b21ac6235 matchbox-window-manager-1.2.ebuild 1670
+SHA256 e56f99cd53782f970aab80eab95e4c153266698842ed987b083e9492c9cb4b3b matchbox-window-manager-1.2.ebuild 1670
+MISC ChangeLog 1520 RMD160 e2b5fd65e82711d59fbb6864fd7fe9fffda1c672 SHA1 8fb76e62e0eb7b7b9c6b2f8b4ccd587d1becebfc SHA256 82a0b90c8aa154ac1d9193d906b41dbca75d29d9a0b629ba3a1e1b3829b75f70
+MD5 acfd6c3ea19a85dda2aa6d276e5a9863 ChangeLog 1520
+RMD160 e2b5fd65e82711d59fbb6864fd7fe9fffda1c672 ChangeLog 1520
+SHA256 82a0b90c8aa154ac1d9193d906b41dbca75d29d9a0b629ba3a1e1b3829b75f70 ChangeLog 1520
 MISC metadata.xml 247 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 SHA1 af1f5473be400926e7bf9a98a354866150c8b7a7 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55
 MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
@@ -29,10 +31,6 @@ SHA256 a786ccf39804a6b27037b334c340e5ac7ce95daf7a72dcd4ddeed3241e2f7f9b files/di
 MD5 8bff4da890d986356de60581da63093d files/digest-matchbox-window-manager-1.1 286
 RMD160 f8a6a755b90b1eb297a2bc04d4e3bd491c587ae1 files/digest-matchbox-window-manager-1.1 286
 SHA256 b85cf4400b66141dd249d53e29247fe6678895820a923f2e71ff442ce6e290b1 files/digest-matchbox-window-manager-1.1 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFE5JEjyZl4piiTjjYRAt7KAKDIgzGE/xB+dTo5/R4IBhA+a1pNTACggwCV
-oNqehn8c+/sJmIkYuhqh5a4=
-=+GB2
------END PGP SIGNATURE-----
+MD5 e9ac7d8bf3ae599b2208e9fccb9d1e64 files/digest-matchbox-window-manager-1.2 286
+RMD160 28ca57f9a43e69d15c5b266547be8ff35fd13eb6 files/digest-matchbox-window-manager-1.2 286
+SHA256 027574bb9ad06f51829dba83ead11f6b3589c28d28dd01a4f1f5b399d94d37b8 files/digest-matchbox-window-manager-1.2 286

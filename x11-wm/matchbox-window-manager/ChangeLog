@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/matchbox-window-manager
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.7 2006/08/17 15:54:21 yvasilev Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.8 2007/04/24 20:01:20 yvasilev Exp $
+
+*matchbox-window-manager-1.2 (24 Apr 2007)
+
+  24 Apr 2007; <yvasilev@gentoo.org> +matchbox-window-manager-1.2.ebuild:
+  Version dump.
 
 *matchbox-window-manager-1.1 (17 Aug 2006)
 
