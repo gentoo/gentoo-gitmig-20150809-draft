@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.13.ebuild,v 1.4 2007/04/22 18:15:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.13.ebuild,v 1.5 2007/04/24 21:44:23 markusle Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -19,6 +19,9 @@ SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2
 DEPEND="dev-libs/gmp"
 
 src_compile () {
+	# -Os causes segmentation faults (see bug #174576)
+	replace-flags -Os -O2
+
 	econf  --libdir=/usr/$(get_libdir) \
 		--datadir=/usr/share/doc/${P} || die "econf failed."
 	emake || die "make failed."
