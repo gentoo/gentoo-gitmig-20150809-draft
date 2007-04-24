@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Technologies, Inc.
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-0.82.ebuild,v 1.3 2007/04/24 14:45:20 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-0.82.ebuild,v 1.4 2007/04/24 14:52:06 hkbst Exp $
 
 inherit eutils
 
