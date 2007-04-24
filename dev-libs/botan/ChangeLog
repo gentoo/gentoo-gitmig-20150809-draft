@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.22 2007/03/03 22:32:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.23 2007/04/24 09:47:16 armin76 Exp $
+
+  24 Apr 2007; Raúl Porcel <armin76@gentoo.org> botan-1.6.1.ebuild:
+  x86 stable
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> botan-1.4.4.ebuild,
   botan-1.4.9.ebuild, botan-1.4.11.ebuild, botan-1.4.12.ebuild,
