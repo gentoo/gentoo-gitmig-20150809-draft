@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7163 2007/04/24 07:07:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7164 2007/04/24 07:22:26 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matthias Schwarzott <zzam@gentoo.org> (24 Apr 2007)
+# Possibly broken in shutdown handling
+=media-tv/gentoo-vdr-scripts-0.3.9
 
 # Christian Faulhammer <opfer@gentoo.org> (24 Apr 2007)
 # removal on 24 May 2007
