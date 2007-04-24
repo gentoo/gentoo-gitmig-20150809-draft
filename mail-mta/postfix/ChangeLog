@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.124 2007/04/08 01:44:13 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.125 2007/04/24 19:26:43 chtekk Exp $
+
+*postfix-2.4.0-r1 (24 Apr 2007)
+
+  24 Apr 2007; Luca Longinotti <chtekk@gentoo.org> +postfix-2.4.0-r1.ebuild:
+  General ebuild cleanup, now correctly supports lib/lib64 dirs. Large file
+  support (fixes bug #174099). Fix CDB/TinyCDB library linking (fixes bug
+  #174948). Use new VDA-NG patch, partial rewrite of the VDA-e patch, with
+  bugfixes and new features.
 
 *postfix-2.4.0 (08 Apr 2007)
 
