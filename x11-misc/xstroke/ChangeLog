@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xstroke
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.26 2006/10/21 22:32:34 omp Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.27 2007/04/24 08:19:23 opfer Exp $
+
+  24 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  xstroke-0.6-r1.ebuild:
+  keyworded ~amd64, bug 175401
 
   21 Oct 2006; David Shakaryan <omp@gentoo.org> xstroke-0.6-r1.ebuild:
   Remove monolithic X from dependencies.
