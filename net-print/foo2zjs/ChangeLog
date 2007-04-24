@@ -1,6 +1,15 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.22 2007/02/19 22:34:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.23 2007/04/24 22:13:06 genstef Exp $
+
+*foo2zjs-20070424 (24 Apr 2007)
+
+  24 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/foo2zjs-Makefile-20070424.diff,
+  +files/foo2zjs-udevfwld-20070424.diff, +foo2zjs-20070424.ebuild:
+  New version with much improved udev rules thanks to zzam. Fixes bug 154235
+  thanks to Sergey Zolotorev <sergey.zolotorev@gmail.com> and hopefully also
+  fixes #166537
 
   19 Feb 2007; <genstef@gentoo.org> files/foo2zjs-Makefile-20070204.diff:
   Avoid sandbox violations thanks to Jason Bucata <jbucata@tulsaconnect.com>
