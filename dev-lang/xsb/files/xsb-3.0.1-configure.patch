@@ -94,6 +94,15 @@
  
  AC_PROG_CC
  AC_PROG_CPP
+@@ -986,7 +986,7 @@
+ ODBCSRC=""
+ ODBCOBJ=""
+ 
+-if test "${with_odbc+set}" = "set"; then
++if test "${with_odbc}" = "yes"; then
+     if test -n "$with_os" ; then
+     echo -n ""
+ #	AC_DEFINE(XSB_ODBC)
 @@ -1024,11 +1024,11 @@
  #	    with_odbc=no
  #	else
@@ -111,6 +120,18 @@
  #	fi
  #	dnl restore CPPFLAGS
  #	CPPFLAGS="${saved_cpp_flags}"
+@@ -1039,9 +1039,9 @@
+     fi
+ fi
+ 
+-if test "${with_odbc+set}" = "set"; then
++if test "${with_odbc}" = "yes"; then
+     AC_DEFINE(XSB_ODBC)
+-    with_odbc=yes
++#    with_odbc=yes
+ fi
+ 
+ INTERPROLOGSRC=""
 @@ -1132,8 +1132,8 @@
  AC_SUBST(perl_ccflags)
  AC_SUBST(perl_libs)
