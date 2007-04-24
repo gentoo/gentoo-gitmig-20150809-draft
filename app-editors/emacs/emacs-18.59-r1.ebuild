@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r1.ebuild,v 1.3 2007/03/02 20:50:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r1.ebuild,v 1.4 2007/04/24 21:49:30 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic alternatives
 
@@ -17,7 +17,7 @@ IUSE="X"
 
 DEPEND="sys-libs/ncurses
 	X? ( x11-libs/libX11 )"
-PROVIDE="virtual/emacs virtual/editor"
+PROVIDE="virtual/editor"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
 MY_LOCKDIR="/var/lib/emacs/lock"
