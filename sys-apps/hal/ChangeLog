@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.174 2007/04/20 23:22:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.175 2007/04/24 15:42:01 cardoe Exp $
+
+  24 Apr 2007; Doug Goldstein <cardoe@gentoo.org> files/0.5.9-hald.rc,
+  +files/0.5.9/16_dev_root_is_mounted.patch, files/0.5.9/series:
+  Patch from Kay Sievers for assuming / is mounted and looking it up via
+  stat(). Remove /dev/root check from init script.
 
   20 Apr 2007; Doug Goldstein <cardoe@gentoo.org> files/0.5.9-hald.rc,
   hal-0.5.9.ebuild:

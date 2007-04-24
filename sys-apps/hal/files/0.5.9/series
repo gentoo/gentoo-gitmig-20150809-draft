@@ -13,6 +13,7 @@
 13_detect_newer_macbooks.patch
 14_ntfs_allows_utf8.patch
 15_spec_fdi_matching.patch
+16_dev_root_is_mounted.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch
 97_ignore_fixed_drives.patch
