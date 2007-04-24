@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.8 2007/01/07 02:54:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.9 2007/04/24 08:30:13 je_fro Exp $
+
+  24 Apr 2007; Jeff Gardner <je_fro@gentoo.org>
+  files/digest-platon-20060717, Manifest:
+  Re-Digest wrt bug #155351
 
   07 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -platon-20060621.ebuild:
   QA: Removed unused versions.
