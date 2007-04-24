@@ -1,0 +1,10 @@
+--- build.xml.orig	2007-04-25 00:06:04.000000000 +1200
++++ build.xml	2007-04-25 00:07:01.000000000 +1200
+@@ -29,6 +29,7 @@
+    <classpath>
+     <pathelement location="lib/AppleJavaExtensions.jar"/>
+     <pathelement location="lib/metadata-extractor-2.1.jar"/>
++    <pathelement location="lib/ant.jar"/>
+    </classpath>
+   </javac>
+ 
