@@ -1,9 +1,0 @@
-UFDB_OPTS=""
-UFDB_GT="alwaysallow alwaysdeny"
-
-UFDB_CONFDIR="/etc/ufdbguard"
-UFDB_CONF="${UFDB_CONFDIR}/ufdbGuard.conf"
-UFDB_PIDFILE="/var/run/ufdbguardd.pid"
-UFDB_BINARY="/usr/bin/ufdbguardd"
-
-UFDB_LOGDIR=$( grep logdir ${UFDB_CONF} 2>/dev/null | awk '{print $2}' )                                   UFDB_USER="squid"
