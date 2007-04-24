@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.304 2007/04/24 20:31:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.305 2007/04/24 22:04:19 swegener Exp $
+
+  24 Apr 2007; Sven Wegener <swegener@gentoo.org> use.local.desc:
+  Add libsexy for media-sound/listen
 
   24 Apr 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   vlc dc1394 local useflag
