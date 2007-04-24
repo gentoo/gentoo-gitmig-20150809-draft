@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.66 2007/04/24 06:29:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.67 2007/04/24 12:53:09 jer Exp $
+
+  24 Apr 2007; Jeroen Roovers <jer@gentoo.org> amsn-0.96-r1.ebuild:
+  Stable for HPPA (bug #175563).
 
   24 Apr 2007; Christian Faulhammer <opfer@gentoo.org> amsn-0.96-r1.ebuild:
   stable x86, security bug 175563
