@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/javolution
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.6 2007/02/09 01:58:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.7 2007/04/24 10:19:10 caster Exp $
+
+*javolution-4.0.2 (24 Apr 2007)
+
+  24 Apr 2007; Vlastimil Babka <caster@gentoo.org> +javolution-4.0.2.ebuild:
+  Version bump, new slot.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
