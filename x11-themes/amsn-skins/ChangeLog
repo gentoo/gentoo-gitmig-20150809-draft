@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/amsn-skins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.16 2007/01/20 19:43:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.17 2007/04/24 15:06:36 gustavoz Exp $
+
+  24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  amsn-skins-20040223.ebuild, amsn-skins-20061125.ebuild:
+  Unkeywording sparc see #175563
 
   20 Jan 2007; nixnut <nixnut@gentoo.org> amsn-skins-20061125.ebuild:
   Stable on ppc wrt bug 158758
