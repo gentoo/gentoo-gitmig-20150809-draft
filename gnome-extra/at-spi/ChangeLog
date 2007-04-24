@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.141 2007/03/27 14:47:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.142 2007/04/24 15:33:25 dang Exp $
+
+*at-spi-1.18.1 (24 Apr 2007)
+
+  24 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +at-spi-1.18.1.ebuild:
+  Bump to 1.18.1
 
 *at-spi-1.18.0 (27 Mar 2007)
 
