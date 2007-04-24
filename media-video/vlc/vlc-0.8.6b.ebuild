@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6b.ebuild,v 1.3 2007/04/19 00:09:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6b.ebuild,v 1.4 2007/04/24 20:37:52 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -36,7 +36,7 @@ dvb dvd vcd dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
 mp3 xv bidi sdl sdl-image png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
-optimisememory libnotify jack musepack x264"
+optimisememory libnotify jack musepack x264 dc1394"
 
 RDEPEND="
 		>=media-video/ffmpeg-0.4.9_p20050226-r1
@@ -116,7 +116,9 @@ RDEPEND="
 		libnotify? ( x11-libs/libnotify )
 		musepack? ( media-libs/libmpcdec )
 		x264? ( >=media-libs/x264-svn-20061014 )
-		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )"
+		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
+		dc1394? ( sys-libs/libraw1394
+			<media-libs/libdc1394-1.9.99 )"
 
 DEPEND="${RDEPEND}
 	X? ( xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) ) )
@@ -263,6 +265,7 @@ src_compile () {
 		$(use_enable jack) \
 		$(use_enable musepack mpc) \
 		$(use_enable x264) \
+		$(use_enable dc1394) \
 		--enable-ffmpeg \
 		--disable-faad \
 		--disable-dv \
