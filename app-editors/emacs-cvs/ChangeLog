@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.111 2007/04/24 03:24:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.112 2007/04/24 07:57:22 opfer Exp $
+
+  24 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-cvs-22.0.9999-r10.ebuild:
+  new branch has been opened, this is now reflected in the ebuild
 
 *emacs-cvs-22.0.99 (24 Apr 2007)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.7 2007/04/20 19:45:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.8 2007/04/24 07:57:22 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
 ECVS_MODULE="emacs"
-ECVS_BRANCH="HEAD"
+ECVS_BRANCH="EMACS_22_BASE"
 ECVS_LOCALNAME="emacs-22"
 
 WANT_AUTOCONF="2.61"
@@ -182,7 +182,7 @@ src_install () {
 		doins src/*.[ch]
 		sed 's/^X//' >00emacs-cvs-${SLOT}-gentoo.el <<EOF
 (if (string-match "\\\\\`${FULL_VERSION//./\\\\.}\\\\>" emacs-version)
-X    (setq find-function-C-source-directory
+X	 (setq find-function-C-source-directory
 X	  "/usr/share/emacs/${FULL_VERSION}/src"))
 EOF
 		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
