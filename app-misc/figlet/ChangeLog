@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.28 2007/04/18 14:07:49 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.29 2007/04/24 04:08:20 mr_bones_ Exp $
+
+  24 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -figlet-221-r1.ebuild:
+  clean out older ebuild
 
   18 Apr 2007; Alexander Færøy <eroyf@gentoo.org> figlet-222.ebuild:
   Stable on MIPS; bug #171676
