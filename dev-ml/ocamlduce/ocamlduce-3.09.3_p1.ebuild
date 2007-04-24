@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.09.3_p1.ebuild,v 1.1 2007/03/28 16:07:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.09.3_p1.ebuild,v 1.2 2007/04/24 05:52:35 aballier Exp $
 
 inherit eutils findlib
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=dev-lang/ocaml-3.09.3
+DEPEND=">=dev-lang/ocaml-3.09.3
 	>=dev-ml/findlib-1.1.2"
 
 RDEPEND="${DEPEND}"
