@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/freecdb
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.13 2006/11/22 18:59:54 masterdriverz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.14 2007/04/24 17:39:43 chtekk Exp $
+
+  24 Apr 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  freecdb-0.62.ebuild:
+  Cleanup ebuild, take over maintainership.
 
   22 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
   Add blocker with dev-db/cdb, thanks to Tuan Van for reporting, bug 115594
