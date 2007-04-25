@@ -16,6 +16,7 @@
 16_dev_root_is_mounted.patch
 17_autoconf_cflag_cleanup.patch
 18_hal_fix_info.category_for_laptop_panel_v2.patch
+19_hald_runner_catch_dbus_disconnect.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch
 97_ignore_fixed_drives.patch

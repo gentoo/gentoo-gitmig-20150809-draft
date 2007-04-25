@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.177 2007/04/25 14:17:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.178 2007/04/25 14:35:11 cardoe Exp $
+
+  25 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch,
+  +files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch,
+  files/0.5.9/series:
+  refresh previous patch. Add fix to catch D-Bus disconnect from hald_runner
+  (possible sparc fix)
 
   25 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/0.5.9/17_autoconf_cflag_cleanup.patch,
