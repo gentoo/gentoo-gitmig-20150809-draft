@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-0.9.1.ebuild,v 1.6 2007/02/18 10:24:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-0.9.1.ebuild,v 1.7 2007/04/25 17:42:17 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -18,7 +18,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/ant-1.6.2
 	=dev-java/crimson-1.1*
-	=dev-java/jcifs-1.1*
+	=dev-java/jcifs-1*
 	>=dev-java/jta-1.0.1
 	>=dev-java/junit-3.8"
 

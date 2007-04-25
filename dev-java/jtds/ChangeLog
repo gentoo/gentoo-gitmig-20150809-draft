@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jtds
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.9 2007/02/18 10:24:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.10 2007/04/25 17:42:17 betelgeuse Exp $
+
+*jtds-1.2-r1 (25 Apr 2007)
+
+  25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jtds-0.9.1.ebuild,
+  jtds-1.0.3.ebuild, jtds-1.2.ebuild, +jtds-1.2-r1.ebuild:
+  Migrate 1.2 to generation 2 and relax dev-java/jcifs dependency for 1.2.13
+  version bump.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> jtds-0.9.1.ebuild:
   Stable on ppc wrt bug 160569
