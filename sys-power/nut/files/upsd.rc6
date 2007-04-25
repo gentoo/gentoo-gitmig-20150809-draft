@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/upsd.rc6,v 1.1 2006/05/15 23:43:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/upsd.rc6,v 1.2 2007/04/25 05:38:46 dragonheart Exp $
+
+opts="reload"
 
 depend() {
 	need net upsdrv
@@ -22,5 +24,11 @@ start() {
 stop() {
 	ebegin "Stopping upsd"
 	start-stop-daemon --stop --quiet --pidfile /var/lib/nut/upsd.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading upsd"
+	start-stop-daemon --stop --signal HUP --oknodo --quiet --pidfile /var/lib/nut/upsd.pid
 	eend $?
 }
