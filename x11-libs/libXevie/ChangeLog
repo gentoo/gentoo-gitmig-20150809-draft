@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXevie
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.28 2006/10/22 18:00:50 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.29 2007/04/25 11:16:27 corsair Exp $
+
+  25 Apr 2007; Markus Rothe <corsair@gentoo.org> libXevie-1.0.2.ebuild:
+  Stable on ppc64; bug #175465
 
 *libXevie-1.0.2 (21 Oct 2006)
 
