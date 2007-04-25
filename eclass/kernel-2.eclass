@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.203 2007/04/25 18:22:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.204 2007/04/25 18:24:37 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -154,18 +154,11 @@ detect_version() {
 
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 
-	debug-print "0.0 CKV: ${CKV}"
-	debug-print "0.0 OKV: ${OKV}"
 	RELEASE=${CKV/${OKV}}
-	debug-print "0 RELEASE: ${RELEASE}"
 	RELEASE=${RELEASE/_beta}
-	debug-print "1 RELEASE: ${RELEASE}"
 	RELEASE=${RELEASE/_rc/-rc}
-	debug-print "2 RELEASE: ${RELEASE}"
 	RELEASE=${RELEASE/_pre/-pre}
-	debug-print "3 RELEASE: ${RELEASE}"
 	kernel_is ge 2 6 && RELEASE=${RELEASE/-pre/-git}
-	debug-print "4 RELEASE: ${RELEASE}"
 	RELEASETYPE=${RELEASE//[0-9]}
 
 	# Now we know that RELEASE is the -rc/-git
@@ -832,14 +825,13 @@ unipatch() {
 			ebegin "Applying ${i/*\//} (-p${PATCH_DEPTH}+)"
 			while [ ${PATCH_DEPTH} -lt 5 ]; do
 				echo "Attempting Dry-run:" >> ${STDERR_T}
-				cmdopts="-d${S} --no-backup-if-mismatch -p${PATCH_DEPTH} -f < ${i}"
-				echo "cmd: patch --dry-run ${cmdopts}" >> ${STDERR_T}
+				echo "cmd: patch -p${PATCH_DEPTH} --no-backup-if-mismatch --dry-run -f < ${i}" >> ${STDERR_T}
 				echo "=======================================================" >> ${STDERR_T}
-				if [ $(eval patch --dry-run ${cmdopts} >> ${STDERR_T}) $? -eq 0 ]; then
+				if [ $(patch -p${PATCH_DEPTH} --no-backup-if-mismatch --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]; then
 					echo "Attempting patch:" > ${STDERR_T}
-					echo "cmd: patch ${cmdopts}" >> ${STDERR_T}
+					echo "cmd: patch -p${PATCH_DEPTH} --no-backup-if-mismatch -f < ${i}" >> ${STDERR_T}
 					echo "=======================================================" >> ${STDERR_T}
-					if [ $(eval patch ${cmdopts} >> ${STDERR_T}) "$?" -eq 0 ]; then
+					if [ $(patch -p${PATCH_DEPTH} --no-backup-if-mismatch -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]; then
 						eend 0
 						rm ${STDERR_T}
 						break
@@ -1061,7 +1053,6 @@ kernel-2_pkg_postinst() {
 }
 
 kernel-2_pkg_setup() {
-	debug-print-kernel2-variables
 	if kernel_is 2 4; then
 		if [ "$( gcc-major-version )" -eq "4" ] ; then
 			echo

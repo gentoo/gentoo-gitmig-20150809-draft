@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.51 2007/04/25 18:22:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.52 2007/04/25 18:24:37 robbat2 Exp $
 
 inherit multilib
 
@@ -182,14 +182,6 @@ java-pkg_do_write_()
 	if [ -f ${pkglistpath} ] ; then
 		pkgs=$(cat ${pkglistpath} | tr '\n' ':')
 		echo "DEPEND=${pkgs}" >> "${package_env}"
-	fi
-
-	if [ -n "${JAVADOC_PATH}" ] ; then
-		echo "JAVADOC_PATH=${JAVADOC_PATH}" >> "${package_env}"
-	fi
-	
-	if [ -n "${JAVA_SOURCES}" ] ; then
-		echo "JAVA_SOURCES=${JAVA_SOURCES}" >> "${package_env}"
 	fi
 
 	# Strip unnecessary leading and trailing colons
@@ -461,10 +453,6 @@ java-pkg_getjars()
 java-pkg_dohtml()
 {
 	dohtml -f package-list $@
-	# this probably shouldn't be here but it provides
-	# a reasonable way to catch # docs for all of the
-	# old ebuilds.
-	java-pkg_recordjavadoc 
 }
 
 java-pkg_jarinto()
@@ -500,26 +488,6 @@ java-pkg_dosrc() {
 	dodir ${target}
 	install ${INSOPTIONS} "${T}/${PN}-src.zip" "${D}${target}" \
 		|| die "failed to install sources"
-	# Record the existence of the sources in the package.env
-	JAVA_SOURCES="${target}${PN}-src.zip"
-	java-pkg_do_write_
-}
-
-# Scan for JavaDocs, and record their existence in the package.env file
-java-pkg_recordjavadoc()
-{
-	java-pkg_do_init_
-	# the find statement is important
-	# as some packages include multiple trees of javadoc
-	JAVADOC_PATH="$(find ${D}/usr/share/doc/ -name allclasses-frame.html -printf '%h:')"
-	# remove $D - TODO: check this is ok with all cases of the above
-	JAVADOC_PATH="${JAVADOC_PATH//${D}}"
-	if [ -n "${JAVADOC_PATH}" ] ; then
-		debug-print "JavaDocs found in ${JAVADOC_PATH%:}"
-		java-pkg_do_write_
-	else
-		debug-print "No JavaDocs found"
-	fi
 }
 
 
