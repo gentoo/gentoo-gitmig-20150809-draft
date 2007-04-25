@@ -1,10 +1,10 @@
 # ChangeLog for games-board/pysol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.14 2007/04/02 19:30:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.15 2007/04/25 22:15:53 tupone Exp $
 
 *pysol-4.82-r2 (02 Apr 2007)
 
-  02 Apr 2007; <atupone@gentoo.org> +pysol-4.82-r2.ebuild:
+  02 Apr 2007; <tupone@gentoo.org> +pysol-4.82-r2.ebuild:
   Merging pysol-cardsets
 
   05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> pysol-4.82-r1.ebuild:
