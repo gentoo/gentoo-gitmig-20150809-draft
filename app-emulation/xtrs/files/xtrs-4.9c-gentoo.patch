@@ -1,0 +1,85 @@
+diff -Nur xtrs-4.9c-orig/ChangeLog xtrs-4.9c/ChangeLog
+--- xtrs-4.9c-orig/ChangeLog	2006-05-15 02:55:28.000000000 +0200
++++ xtrs-4.9c/ChangeLog	2007-04-25 22:12:20.000000000 +0200
+@@ -1,3 +1,11 @@
++4.9c-Gentoo -- Sat Apr 21 14:37:00 MDT 2007  Joe Peterson <joe@skyrush.com>
++
++* Patched for Gentoo ebuild
++  - Change "int i" in the z80 delay loop to "volatile int"
++    (allows near-actual speed emulation with optimization)
++  - Fixed keyboard wait issue that caused CPU spinning (i.e. max
++    CPU usage) after using F10 (reset), F7, F8, or F9.
++
+ 4.9c -- Sun May 14 17:54:25 PDT 2006 -- Tim Mann
+ 
+ * Fixed the new -e flag on import/cmd and export/cmd to actually
+diff -Nur xtrs-4.9c-orig/main.c xtrs-4.9c/main.c
+--- xtrs-4.9c-orig/main.c	2002-04-14 09:03:43.000000000 +0200
++++ xtrs-4.9c/main.c	2007-04-25 22:12:20.000000000 +0200
+@@ -26,7 +26,7 @@
+ #include "trs_disk.h"
+ #include "load_cmd.h"
+ 
+-int trs_model = 1;
++int trs_model = 5;
+ int trs_paused = 1;
+ int trs_autodelay = 0;
+ char *program_name;
+diff -Nur xtrs-4.9c-orig/trs.h xtrs-4.9c/trs.h
+--- xtrs-4.9c-orig/trs.h	2006-05-13 23:05:59.000000000 +0200
++++ xtrs-4.9c/trs.h	2007-04-25 22:12:20.000000000 +0200
+@@ -67,6 +67,7 @@
+ extern void queue_key(int key);
+ extern int dequeue_key(void);
+ extern void clear_key_queue(void);
++extern void trs_start_kbwait(void);
+ extern void trs_end_kbwait(void);
+ extern int stretch_amount;
+ 
+diff -Nur xtrs-4.9c-orig/trs_keyboard.c xtrs-4.9c/trs_keyboard.c
+--- xtrs-4.9c-orig/trs_keyboard.c	2006-05-13 22:50:17.000000000 +0200
++++ xtrs-4.9c/trs_keyboard.c	2007-04-25 22:12:20.000000000 +0200
+@@ -983,6 +983,12 @@
+ }
+ 
+ void
++trs_start_kbwait()
++{
++  key_immediate = 0;
++}
++
++void
+ trs_end_kbwait()
+ {
+   key_immediate = 1;
+@@ -1003,7 +1009,6 @@
+       }
+       trs_paused = 1;
+       pause();			/* Wait for SIGALRM or SIGIO */
+-      key_immediate = 0;
+       trs_get_event(0);
+     }
+     return rval;
+diff -Nur xtrs-4.9c-orig/trs_xinterface.c xtrs-4.9c/trs_xinterface.c
+--- xtrs-4.9c-orig/trs_xinterface.c	2006-05-13 23:33:51.000000000 +0200
++++ xtrs-4.9c/trs_xinterface.c	2007-04-25 22:12:20.000000000 +0200
+@@ -920,6 +920,7 @@
+     (void)trs_uart_check_avail();
+   }
+ 
++  trs_start_kbwait();
+   do {
+     if (wait) {
+       XNextEvent(display, &event);
+diff -Nur xtrs-4.9c-orig/z80.c xtrs-4.9c/z80.c
+--- xtrs-4.9c-orig/z80.c	2005-05-22 08:57:01.000000000 +0200
++++ xtrs-4.9c/z80.c	2007-04-25 22:12:20.000000000 +0200
+@@ -2999,7 +2999,7 @@
+     Uchar instruction;
+     Ushort address; /* generic temps */
+     int ret = 0;
+-    int i;
++    volatile int i;
+     trs_continuous = continuous;
+ 
+     /* loop to do a z80 instruction */
