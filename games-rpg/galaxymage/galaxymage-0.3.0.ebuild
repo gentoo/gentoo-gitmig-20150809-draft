@@ -1,19 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/galaxymage/galaxymage-0.3.0.ebuild,v 1.1 2007/04/19 06:15:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/galaxymage/galaxymage-0.3.0.ebuild,v 1.2 2007/04/25 16:22:46 nyhm Exp $
 
 inherit eutils games
 
-DESCRIPTION="Tactical/strategic RPG"
-HOMEPAGE="http://www.galaxymage.org"
+DESCRIPTION="Tactical/strategic RPG with online multiplayer support"
+HOMEPAGE="http://www.galaxymage.org/"
 SRC_URI="http://download.gna.org/tactics/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="psyco"
 
-DEPEND="dev-python/twisted
+RDEPEND="dev-python/twisted
 	>=dev-python/pyopengl-2.0.1
 	dev-python/numeric
 	dev-python/pygame
@@ -31,17 +31,18 @@ src_unpack() {
 }
 
 src_install() {
-	dogamesbin GalaxyMage.py
+	newgamesbin GalaxyMage.py ${PN} || die "newgamesbin failed"
 
-	insinto $(games_get_libdir)/${PN}
-	doins -r src/* || die "Install source failed"
+	insinto "$(games_get_libdir)"/${PN}
+	doins -r src/* || die "doins src failed"
 
-	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r locale data/* || die "Install data failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r locale data/* || die "doins data failed"
 
-	dodoc CREDITS.txt README.txt || die "Install doc failed"
-	dohtml -r doc || die "Install of html doc failed"
+	dodoc CREDITS.txt README.txt
+	dohtml -r doc
 
-	make_desktop_entry "${GAMES_BINDIR}/GalaxyMage.py" GalaxyMage
+	newicon data/core/images/icon-32.png ${PN}.png
+	make_desktop_entry ${PN} GalaxyMage
 	prepgamesdirs
 }
