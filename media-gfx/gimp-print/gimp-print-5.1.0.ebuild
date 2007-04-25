@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.0.ebuild,v 1.2 2007/04/07 15:52:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.0.ebuild,v 1.3 2007/04/25 11:54:53 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -63,6 +63,7 @@ src_compile() {
 		--with-user-guide \
 		--with-samples \
 		--with-escputil \
+		--with-gimp2-as-gutenprint \
 		--disable-translated-cups-ppds \
 		$(use_enable nls) \
 		$(use_with readline) \
@@ -82,9 +83,7 @@ src_install () {
 	exeinto /usr/share/gutenprint
 	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,escp2-weavetest,run-testdither,run-weavetest,testdither}
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README \
-		doc/users_guide/users-guide.ps doc/users_guide/users-guide.pdf \
-		${D}/usr/share/gutenprint/doc/gutenprint.pdf
+	dodoc AUTHORS COPYING ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt}
 	dohtml doc/FAQ.html
 	dohtml -r doc/users_guide/html doc/developer/developer-html
 	rm -fR ${D}/usr/share/gutenprint/doc
