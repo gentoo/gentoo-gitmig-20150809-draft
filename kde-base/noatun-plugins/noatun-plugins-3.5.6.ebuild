@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.6.ebuild,v 1.2 2007/01/18 16:11:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.6.ebuild,v 1.3 2007/04/25 15:37:03 carlo Exp $
 KMNAME=kdeaddons
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -16,6 +16,14 @@ DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/noatun)
 	berkdb? ( =sys-libs/db-4* )"
 
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	kde_pkg_setup
+	if use sdl && ! built_with_use media-libs/libsdl X ; then
+		eerror "media-libs/libsdl is not build with X support."
+		die "Please reemerge media-libs/libsdl with USE=\"X\"."
+	fi
+}
 
 src_compile() {
 	local myconf="$(use_with sdl)"

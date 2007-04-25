@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/noatun-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.65 2007/02/05 12:13:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.66 2007/04/25 15:37:03 carlo Exp $
+
+  25 Apr 2007; Carsten Lohrke <carlo@gentoo.org>
+  noatun-plugins-3.5.6.ebuild:
+  Ensure libsdl is built with X support.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/noatun-oblique-db-location-3.4.0_rc1.diff,

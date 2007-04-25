@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6-r1.ebuild,v 1.3 2007/02/16 21:55:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6-r1.ebuild,v 1.4 2007/04/25 15:38:45 carlo Exp $
 
 inherit db-use kde-dist
 
@@ -19,6 +19,14 @@ DEPEND="~kde-base/kdepim-${PV}
 RDEPEND="${DEPEND}"
 
 PATCHES="${FILESDIR}/konq-plugins-3.5-archiver.patch"
+
+pkg_setup() {
+	kde_pkg_setup
+	if use sdl && ! built_with_use media-libs/libsdl X ; then
+		eerror "media-libs/libsdl is not build with X support."
+		die "Please reemerge media-libs/libsdl with USE=\"X\"."
+	fi
+}
 
 src_unpack() {
 	einfo "NOTICE: If the compilation dies complaining with"
