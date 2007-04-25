@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.6.ebuild,v 1.1 2007/01/12 14:04:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.6-r2.ebuild,v 1.1 2007/04/25 22:24:06 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
-inherit eutils multilib autotools
+inherit eutils multilib autotools linux-info
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20070112.tar.gz"
+	mirror://gentoo/${P}-patches-20070426.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,10 +28,21 @@ src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
 
 	cd "${S}" || die "source dir not found"
+	# Fix security quagga bug 354
+	epatch "${WORKDIR}/patch/bgpd-bug-354.diff"
 	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
 
-	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/doku.php/english:network:rfc2385
-	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050321-0.99.6-bgp-md5_adapted.patch"
+	if use tcpmd5 ; then
+		if kernel_is lt 2 6 20 ; then
+			# TCP MD5 for BGP patch for Linux (RFC 2385)
+			# original found at http://hasso.linux.ee/doku.php/english:network:rfc2385
+			epatch "${WORKDIR}/patch/ht-20050321-0.99.6-bgp-md5_adapted.patch"
+		else
+			# TCP MD5 in-kernel support for kernels >=2.6.20 (by Leigh Brown)
+			# original found at http://www.solinno.co.uk/md5sig/quagga_linux-2.6.20_md5sig.diff
+			epatch "${WORKDIR}/patch/quagga_linux-2.6.20_md5sig_adapted.diff"
+		fi
+	fi
 
 	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp_adapted.patch"
@@ -114,7 +125,14 @@ pkg_postinst() {
 
 	if use tcpmd5; then
 		echo
-		ewarn "TCP MD5 for BGP needs a patched kernel!"
-		ewarn "See http://hasso.linux.ee/doku.php/english:network:rfc2385 for more info."
+		if kernel_is lt 2 6 20; then
+			ewarn "TCP MD5 for BGP needs a patched kernel!"
+			ewarn "See http://hasso.linux.ee/doku.php/english:network:rfc2385 for more info."
+		else
+			CONFIG_CHECK="~TCP_MD5SIG"
+			local ERROR_TCP_MD5SIG="CONFIG_TCP_MD5SIG:\t missing TCP MD5 signature support (RFC2385)"
+
+			check_extra_config
+		fi
 	fi
 }

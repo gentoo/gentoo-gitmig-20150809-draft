@@ -2,7 +2,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.54 2007/04/13 16:32:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.55 2007/04/25 22:24:06 mrness Exp $
+
+*quagga-0.99.6-r2 (25 Apr 2007)
+
+  25 Apr 2007; Alin Năstac <mrness@gentoo.org> -quagga-0.99.6.ebuild,
+  +quagga-0.99.6-r2.ebuild:
+  Add new TCP MD5 patch for kernels >= 2.6.20, thanks to Duncan Lockwood <dunc
+  at lemonia dot org> (#175470).
 
   13 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   quagga-0.98.6-r2.ebuild:
