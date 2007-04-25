@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.0.ebuild,v 1.1 2007/04/15 14:13:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.0.ebuild,v 1.2 2007/04/25 20:47:25 aballier Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -12,11 +12,12 @@ HOMEPAGE="http://cinepaint.sourceforge.net/"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
-IUSE="png zlib"
+IUSE="gimpprint png zlib"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	png? ( >=media-libs/libpng-1.2 )
 	zlib? ( sys-libs/zlib )
+	gimpprint? ( >=media-gfx/gimp-print-5.0.0 )
 	media-libs/openexr
 	>=media-libs/lcms-1.16
 	media-libs/tiff
@@ -30,8 +31,7 @@ src_unpack() {
 }
 
 src_compile(){
-	# gutenprint is not in portage
-	econf --disable-print --enable-gtk2 || die "econf failed"
+	econf $(use_enable gimpprint print) --enable-gtk2 || die "econf failed"
 	emake || die "emake failed"
 }
 
