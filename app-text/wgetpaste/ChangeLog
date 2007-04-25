@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.20 2007/04/23 22:23:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.21 2007/04/25 16:28:10 jer Exp $
+
+  25 Apr 2007; Jeroen Roovers <jer@gentoo.org> wgetpaste-2.2.ebuild:
+  Stable for HPPA too.
 
   23 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> wgetpaste-2.2.ebuild:
   Add ~mips keyword, bug 173401.
