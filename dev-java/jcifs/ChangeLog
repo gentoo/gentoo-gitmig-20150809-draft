@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jcifs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.5 2007/02/18 10:22:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.6 2007/04/25 17:44:46 betelgeuse Exp $
+
+*jcifs-1.2.13 (25 Apr 2007)
+
+  25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> +jcifs-1.2.13.ebuild:
+  Version bump using generation 2.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> jcifs-1.1.5.ebuild:
   Stable on ppc wrt bug 160569
