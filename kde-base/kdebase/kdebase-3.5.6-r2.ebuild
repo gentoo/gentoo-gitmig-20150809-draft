@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r2.ebuild,v 1.1 2007/04/19 16:18:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r2.ebuild,v 1.2 2007/04/25 08:33:11 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -167,6 +167,15 @@ EOF
 		"${D}/${KDEDIR}/share/config/kdm/kdmrc" || die
 
 	rmdir "${D}/${KDEDIR}/share/templates/.source/emptydir"
+}
+
+pkg_preinst() {
+	kde_pkg_preinst
+
+	# We need to symlink here, as kfmclient freaks out completely,
+	# if it does not find konqueror.desktop in the legacy path.
+	dodir ${PREFIX}/share/applications/kde
+	dosym ../../applnk/konqueror.desktop ${PREFIX}/share/applications/kde/konqueror.desktop
 }
 
 pkg_postinst() {
