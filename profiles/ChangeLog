@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.305 2007/04/24 22:04:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.306 2007/04/25 01:08:02 ranger Exp $
+
+  25 Apr 2007; Brent Baude <ranger@gentoo.org> profiles.desc:
+  Changing profiles.desc for the 2007 32bit profile from ppc64 to ppc to make
+  repoman happy
 
   24 Apr 2007; Sven Wegener <swegener@gentoo.org> use.local.desc:
   Add libsexy for media-sound/listen

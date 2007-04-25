@@ -82,7 +82,7 @@ ppc		default-linux/ppc/ppc32/2007.0/desktop		dev
 #ppc64		default-linux/ppc/ppc64/2006.0/64bit-userland	stable
 ppc64		default-linux/ppc/ppc64/2006.1/64bit-userland	stable
 #ppc64		default-linux/ppc/ppc64/2006.0/multilib		dev
-ppc64		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
+ppc		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
 ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
 
 # PPC Mac OS X Profiles
