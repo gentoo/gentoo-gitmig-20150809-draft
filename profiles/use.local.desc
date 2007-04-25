@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2768 2007/04/24 22:04:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2769 2007/04/25 07:08:00 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -157,8 +157,6 @@ app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/kimera:anthy - Support for Anthy input method
 app-i18n/scim-cvs:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim-cvs:immqt-bc - Enable immodule for Qt support (binary compatible)
-app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
-app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/uim-svn:anthy - Enable anthy support
 app-i18n/uim-svn:dict - Build uim-dict (a dictionary utility for uim)
 app-i18n/uim-svn:eb - Enable EB support
