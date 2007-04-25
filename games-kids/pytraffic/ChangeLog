@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/pytraffic
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.7 2006/10/13 16:16:47 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.8 2007/04/25 21:03:41 nyhm Exp $
+
+*pytraffic-2.5.4 (25 Apr 2007)
+
+  25 Apr 2007; Tristan Heaven <nyhm@gentoo.org> +pytraffic-2.5.4.ebuild:
+  Version bump
 
 *pytraffic-2.5.3 (13 Oct 2006)
 
