@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.32 2007/01/24 07:16:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.33 2007/04/25 12:08:53 corsair Exp $
+
+  25 Apr 2007; Markus Rothe <corsair@gentoo.org> mesa-progs-6.5.2.ebuild:
+  Stable on ppc64; bug #175465
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -mesa-progs-6.4.2.ebuild:
