@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.11.ebuild,v 1.1 2007/03/14 14:26:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.11.ebuild,v 1.2 2007/04/25 01:01:40 dang Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -45,7 +45,6 @@ src_unpack() {
 
 src_compile() {
 	epunt_cxx
-	elibtoolize
 
 	local myconf
 
