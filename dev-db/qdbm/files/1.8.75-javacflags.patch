@@ -1,0 +1,11 @@
+--- a/qdbm-1.8.75/java/Makefile.in
++++ b/qdbm-1.8.75/java/Makefile.in
+@@ -44,7 +44,7 @@ DESTDIR =
+ MYJAVAHOME = @MYJAVAHOME@
+ JVMPLATFORM = @JVMPLATFORM@
+ JAVAC = @JAVAC@
+-JAVACFLAGS = -d .
++JAVACFLAGS := $(JAVACFLAGS) -d .
+ JAR = @JAR@
+ JAVAH = @JAVAH@
+ JAVADOC = @JAVADOC@
