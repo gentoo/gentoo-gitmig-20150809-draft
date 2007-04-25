@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327-r1.ebuild,v 1.1 2007/04/24 19:49:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327-r2.ebuild,v 1.1 2007/04/25 08:31:20 genstef Exp $
 
 ARTS_REQUIRED="never"
 
@@ -25,5 +25,5 @@ S=${WORKDIR}/${MY_PN}-${PV}
 
 src_install() {
 	kde_src_install
-	mv ${D}/usr/local/share/{locale,application} ${D}/usr/share/
+	mv ${D}/usr/local/share/{locale,applications} ${D}/usr/share/
 }
