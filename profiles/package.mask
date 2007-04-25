@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7170 2007/04/25 16:57:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7171 2007/04/25 18:36:46 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# Tristan Heaven <nyhm@gentoo.org> (25 Apr 2007)
+# Masked until it's updated to use >=wxpython-2.6
+# https://bugs.gentoo.org/show_bug.cgi?id=115079
+games-rpg/openrpg
+
 # Paul Varner <fuzzyray@gentoo.org> (25 Apr 2007)
 # Masked for echangelog testing
 =app-portage/gentoolkit-dev-0.2.6.5
@@ -34,7 +39,7 @@ dev-java/makeme
 # Christian Faulhammer <opfer@gentoo.org> (24 Apr 2007)
 # removal on 24 May 2007
 # broken, upstream dead
-app-emacs/cdi	   
+app-emacs/cdi
 # they do regular releases, so no live ebuild needed
 app-emacs/erc-cvs
 
