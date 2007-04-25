@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.38 2007/04/16 20:30:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.39 2007/04/25 16:57:58 armin76 Exp $
+
+  25 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  Remove useless mask of mozilla-firefox-1.5
 
   16 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +2007.0/desktop/make.defaults, -dev/2007.0/desktop/make.defaults,

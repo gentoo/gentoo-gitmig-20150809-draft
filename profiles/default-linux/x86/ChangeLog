@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.73 2007/04/23 17:20:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.74 2007/04/25 16:57:59 armin76 Exp $
+
+  25 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  Remove useless mask of mozilla-firefox-1.5
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/use.mask:
   Use.mask networkmanager in 2.4 profiles, since it needs >=gnome-2.16, bug
