@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swarmcache/swarmcache-1.0_pre20050106-r1.ebuild,v 1.1 2007/01/11 13:19:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swarmcache/swarmcache-1.0_pre20050106-r1.ebuild,v 1.2 2007/04/25 19:17:53 nelchael Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,14 +12,18 @@ HOMEPAGE="http://swarmcache.sourceforge.net"
 LICENSE="LGPL-2"
 SLOT="1.0"
 KEYWORDS="~x86 ~amd64"
-RDEPEND=">=virtual/jre-1.4
-	>=dev-java/commons-collections-3
+IUSE=""
+
+COMMON_DEP=">=dev-java/commons-collections-3
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/jgroups-2.2.7"
+
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
+
 DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
+	${COMMON_DEP}
 	>=dev-java/ant-core-1.5"
-IUSE="doc source"
 
 src_unpack() {
 	unpack ${A}
