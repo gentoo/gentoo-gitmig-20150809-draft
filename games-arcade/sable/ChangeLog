@@ -1,8 +1,8 @@
 # ChangeLog for games-arcade/sable
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/ChangeLog,v 1.3 2007/04/16 21:12:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/ChangeLog,v 1.4 2007/04/25 22:11:06 tupone Exp $
 
-  16 Apr 2007; <atupone@gentoo.org> -files/sable.png, sable-1.0.ebuild:
+  16 Apr 2007; <tupone@gentoo.org> -files/sable.png, sable-1.0.ebuild:
   icon sable.png moved to mirrors
 
   16 Apr 2007; Andrej Kacian <ticho@gentoo.org> sable-1.0.ebuild:
@@ -10,7 +10,7 @@
 
 *sable-1.0 (15 Apr 2007)
 
-  15 Apr 2007; <atupone@gentoo.org> +files/sable.png, +metadata.xml,
+  15 Apr 2007; <tupone@gentoo.org> +files/sable.png, +metadata.xml,
   +sable-1.0.ebuild:
   New package. Request bug #126503 by Cristiano Chiucchiolo
 

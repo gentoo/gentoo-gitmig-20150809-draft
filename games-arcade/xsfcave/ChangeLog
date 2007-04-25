@@ -1,6 +1,6 @@
 # ChangeLog for games-arcade/xsfcave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.3 2007/04/24 16:00:21 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.4 2007/04/25 22:12:30 tupone Exp $
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> xsfcave-0.5.ebuild:
   Add ~x86-fbsd keyword.
@@ -11,6 +11,6 @@
 
 *xsfcave-0.5 (21 Apr 2007)
 
-  21 Apr 2007; <atupone@gentoo.org> +metadata.xml, +xsfcave-0.5.ebuild:
+  21 Apr 2007; <tupone@gentoo.org> +metadata.xml, +xsfcave-0.5.ebuild:
   New package. Request bug #128731 by Cristiano Chiucchiolo
 
