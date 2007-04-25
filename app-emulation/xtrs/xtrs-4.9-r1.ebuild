@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9-r1.ebuild,v 1.3 2006/07/24 00:12:05 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9-r1.ebuild,v 1.4 2007/04/25 20:42:56 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.tim-mann.org/trs80.html"
 SRC_URI="http://home.gwi.net/~plemon/sources/${P}.tar.gz
 	 http://home.gwi.net/~plemon/support/disks/xtrs/ld4-631.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
