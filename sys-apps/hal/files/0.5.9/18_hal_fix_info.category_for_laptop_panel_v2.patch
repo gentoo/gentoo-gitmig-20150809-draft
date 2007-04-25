@@ -1,7 +1,7 @@
 Index: b/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
 ===================================================================
 --- a/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi	2007-03-07 16:52:19.000000000 -0500
-+++ b/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi	2007-04-25 10:31:29.000000000 -0400
++++ b/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi	2007-04-25 16:17:48.000000000 -0400
 @@ -4,17 +4,20 @@
  
    <device>
@@ -19,16 +19,16 @@ Index: b/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
 +        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist">i</append>
 +        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist">brightness_value</append>
 +      	<append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-set-brightness</append>
-+
-+        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">GetBrightness</append>
-+        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist"></append>
-+        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist"></append>
-+	<append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-get-brightness</append>
  
 -      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">GetBrightness</append>
 -      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist"></append>
 -      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist"></append>
 -      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-get-brightness</append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">GetBrightness</append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist"></append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist"></append>
++	<append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-get-brightness</append>
++     </match>
      </match>
    </device>
  
