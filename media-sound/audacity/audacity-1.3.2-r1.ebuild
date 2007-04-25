@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2-r1.ebuild,v 1.5 2007/03/10 01:14:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2-r1.ebuild,v 1.6 2007/04/25 20:04:35 aballier Exp $
 
-inherit eutils autotools
+inherit eutils autotools wxwidgets
 
 IUSE="flac ladspa libsamplerate mp3 sse unicode vorbis"
 
@@ -51,6 +51,13 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	WX_GTK_VER="2.6"
+
+	if use unicode; then
+		need-wxwidgets unicode
+	else
+		need-wxwidgets gtk2
+	fi
 
 	myconf="${myconf} --with-libsndfile=system"
 	myconf="${myconf} --with-libexpat=system"
