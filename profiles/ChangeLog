@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.311 2007/04/25 20:01:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.312 2007/04/25 20:39:34 aballier Exp $
+
+  25 Apr 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
+  gimpprint useflag for media-video/cinepaint
 
   25 Apr 2007; Stefan Schweizer <genstef@gentoo.org> use.local.desc:
   gimp for gimp-print
