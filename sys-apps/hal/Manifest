@@ -85,10 +85,10 @@ AUX 0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch 4979 RMD160 d215dbb
 MD5 f310e85485c5a8cff31e06956b39b96e files/0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch 4979
 RMD160 d215dbb22538287adbaed59e7035f357048ad62f files/0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch 4979
 SHA256 8867de054071e97d1d131a07337c0c70c4d984772c2c6190fbc6dd02f3159337 files/0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch 4979
-AUX 0.5.9/19_hald_runner_catch_dbus_disconnect.patch 527 RMD160 4b906f8f570dd5a2f427e4bf964e36827f6c2761 SHA1 43693b024e6a9c54749eed0a109f83a4c92737d3 SHA256 1cf5f237e15be74614b452f66517726744c0e3e91eefc77c179a3fb8c887d02c
-MD5 e2f5b264f79a8382ddc0c6ac802ea766 files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch 527
-RMD160 4b906f8f570dd5a2f427e4bf964e36827f6c2761 files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch 527
-SHA256 1cf5f237e15be74614b452f66517726744c0e3e91eefc77c179a3fb8c887d02c files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch 527
+AUX 0.5.9/19_hald_runner_catch_dbus_disconnect.patch 863 RMD160 b94c71c312874c09d006ccea782c1f9a569367f6 SHA1 b36040f22d69a8dacf2f01b4ddc8c46d1aa60aa3 SHA256 38c925f0eee76dfcbe43afad2e9bf01f2f6c416e6a4efb1c373bc8f07f9e9bef
+MD5 1bd88a34c2b8285a28e60100069a27c9 files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch 863
+RMD160 b94c71c312874c09d006ccea782c1f9a569367f6 files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch 863
+SHA256 38c925f0eee76dfcbe43afad2e9bf01f2f6c416e6a4efb1c373bc8f07f9e9bef files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch 863
 AUX 0.5.9/95_gentoo_man_page.patch 18159 RMD160 cd4bf6c16e84464b11de755323ef2d0f5c1a54f9 SHA1 f9de30d705eada8e2f631e51b715b9923f732fb4 SHA256 59d81dcb273f3cdc9c7fc9f195331529642fef2c2150b3eeb3fd98ea555b1893
 MD5 f6d115e0eb501aba476f4df965bfeb6c files/0.5.9/95_gentoo_man_page.patch 18159
 RMD160 cd4bf6c16e84464b11de755323ef2d0f5c1a54f9 files/0.5.9/95_gentoo_man_page.patch 18159
@@ -227,7 +227,7 @@ SHA256 d862b002c9a5547954874b2a0cbadd614381d085e850539e6aef2dd9e9d52dfe files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGL7feoeSe8B0zEfwRAqwYAJ4uPg4kJ3Y/Lji5I427jXVW19QbiACfRpao
-uKsFlKsiReZcEIEyXgEAFhM=
-=tsY/
+iD4DBQFGL8cfoeSe8B0zEfwRArJ2AJUWQXsKx4Qsikr+q+dXLa3XhqFoAJ9A9w+e
+zvw1TJipw7tThJr1jujw5w==
+=NpBl
 -----END PGP SIGNATURE-----
