@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r1.ebuild,v 1.5 2006/11/30 15:22:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r1.ebuild,v 1.6 2007/04/25 16:19:56 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,11 +16,10 @@ IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/bcel-5.1
-	>=dev-java/xerces-2.7"
+	>=dev-java/xerces-2.7
+	dev-java/ant-core"
 DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
-	>=dev-java/ant-core-1.6.2
-	source? ( app-arch/zip )"
+	${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
