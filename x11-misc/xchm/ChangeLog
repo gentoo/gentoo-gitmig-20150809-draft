@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.48 2007/03/24 01:34:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.49 2007/04/25 03:50:04 leio Exp $
+
+*xchm-1.13 (25 Apr 2007)
+
+  25 Apr 2007; <leio@gentoo.org> +files/xchm-1.13.desktop,
+  +xchm-1.13.ebuild:
+  Version bump. Also fixes many MIME related issues - make launching of chm
+  files (with xCHM) work automatically from file managers; make the chm MIME
+  icon provided by this package work properly; update icon and desktop mime
+  database as necessary
 
 *xchm-1.11 (24 Mar 2007)
 
