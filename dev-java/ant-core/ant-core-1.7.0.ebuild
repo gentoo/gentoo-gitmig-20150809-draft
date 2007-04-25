@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0.ebuild,v 1.8 2007/02/24 00:32:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0.ebuild,v 1.9 2007/04/25 21:01:24 caster Exp $
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -22,7 +22,7 @@ IUSE="doc source"
 
 # 1.7.0 instead of $PV in blocks is intentional, >1.7.0 upgrades should
 # be block free (but these fixed blocks should stay there for users upgrading
-# from <1.7.0 to >1.7.0 of course)
+# from <1.7.0 of course)
 RDEPEND=">=virtual/jdk-1.4
 	!<dev-java/ant-tasks-1.7.0
 	!<dev-java/ant-1.7.0
@@ -88,6 +88,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The way of packaging ant in Gentoo has changed since version 1.7.0."
-	elog "For more info, please see http://overlays.gentoo.org/proj/java/wiki/Split_Ant"
+	elog "The way of packaging ant in Gentoo has changed significantly since"
+	elog "the 1.7.0 version, For more information, please see:"
+	elog "http://www.gentoo.org/proj/en/java/ant-guide.xml"
 }
