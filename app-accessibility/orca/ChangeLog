@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.3 2007/04/23 15:14:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.4 2007/04/25 01:48:32 dang Exp $
+
+*orca-2.18.1 (25 Apr 2007)
+
+  25 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +orca-2.18.1.ebuild:
+  Bump to 2.18.1
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> orca-2.18.0.ebuild:
   Keyworded ~sparc
