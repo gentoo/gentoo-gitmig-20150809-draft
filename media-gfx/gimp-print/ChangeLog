@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.81 2007/04/25 11:54:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.82 2007/04/25 20:05:53 genstef Exp $
+
+  25 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  gimp-print-5.1.0.ebuild:
+  Fix gimp-print for gimp-2.2 collision by renaming and add a gimp use flag to
+  control the gimp printing plug-in creation
 
   25 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
   -gimp-print-5.0.0.ebuild, gimp-print-5.1.0.ebuild:

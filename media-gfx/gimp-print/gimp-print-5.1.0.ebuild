@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.0.ebuild,v 1.3 2007/04/25 11:54:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.0.ebuild,v 1.4 2007/04/25 20:05:53 genstef Exp $
 
-inherit flag-o-matic eutils libtool
+inherit flag-o-matic eutils libtool multilib
 
-IUSE="cups foomaticdb gtk nls readline ppds"
+IUSE="cups foomaticdb gimp gtk nls readline ppds"
 
 MY_P=gutenprint-${PV/_/-}
 
@@ -16,7 +16,8 @@ SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2"
 RDEPEND="cups? ( >=net-print/cups-1.1.14 )
 	virtual/ghostscript
 	sys-libs/readline
-	gtk? ( x11-libs/gtk+ )
+	gtk? ( >=x11-libs/gtk+-2.0 )
+	gimp? ( >=media-gfx/gimp-2.2 >=x11-libs/gtk+-2.0 )
 	dev-lang/perl
 	foomaticdb? ( net-print/foomatic-db-engine )"
 DEPEND="${RDEPEND}
@@ -28,14 +29,6 @@ SLOT="0"
 S=${WORKDIR}/${MY_P}
 
 append-flags -fno-inline-functions
-
-pkg_setup() {
-	if has_version "<media-gfx/gimp-2.3.10" && built_with_use media-gfx/gimp gimpprint; then
-		ewarn "gimpprint is not yet available due to the API Change in version 5.0"
-		ewarn "Please remerge gimp with USE=-gimpprint to avoid collissions"
-		die "gimp with gimpprint USE-flag detected"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -52,6 +45,12 @@ src_compile() {
 		myconf="${myconf} --disable-cups-ppds"
 	fi
 
+	if use gtk || use gimp; then
+		myconf="${myconf} --enable-libgutenprintui2"
+	else
+		myconf="${myconf} --disable-libgutenprintui2"
+	fi
+
 	use foomaticdb \
 		&& myconf="${myconf} --with-foomatic3" \
 		|| myconf="${myconf} --without-foomatic"
@@ -63,11 +62,11 @@ src_compile() {
 		--with-user-guide \
 		--with-samples \
 		--with-escputil \
-		--with-gimp2-as-gutenprint \
 		--disable-translated-cups-ppds \
 		$(use_enable nls) \
 		$(use_with readline) \
-		$(use_enable gtk lexmarkutil) \
+		$(use_with gimp gimp2) \
+		$(use_with gimp gimp2-as-gutenprint) \
 		$(use_with cups) \
 		$myconf || die "econf failed"
 
@@ -78,13 +77,17 @@ src_compile() {
 }
 
 src_install () {
-	make install DESTDIR=${D} || die "make install failed"
+	emake install DESTDIR="${D}" || die "make install failed"
 
 	exeinto /usr/share/gutenprint
 	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,escp2-weavetest,run-testdither,run-weavetest,testdither}
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt}
+	dodoc AUTHORS ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt}
 	dohtml doc/FAQ.html
 	dohtml -r doc/users_guide/html doc/developer/developer-html
-	rm -fR ${D}/usr/share/gutenprint/doc
+	rm -fR "${D}"/usr/share/gutenprint/doc
+	if ! use gtk && ! use gimp; then
+		rm -f "${D}"/usr/$(get_libdir)/pkgconfig/gutenprintui2.pc
+		rm -rf "${D}"/usr/include/gutenprintui2
+	fi
 }
