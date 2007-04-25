@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.1.ebuild,v 1.7 2006/03/05 22:02:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.1.ebuild,v 1.8 2007/04/25 18:47:07 pappy Exp $
 
 DESCRIPTION="Gentoo Developer chroots installation/configuration launcher"
-HOMEPAGE="http://www.gentoo.org/"
+HOMEPAGE="http://www.gentoo.org/proj/en/hardened/docs/devel-chroots-intro.xml"
 
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
