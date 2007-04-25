@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-1.7.0.ebuild,v 1.1 2007/04/14 09:42:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-1.7.1.ebuild,v 1.1 2007/04/25 09:02:48 genstef Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
