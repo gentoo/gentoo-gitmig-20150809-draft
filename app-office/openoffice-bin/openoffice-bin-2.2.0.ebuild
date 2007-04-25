@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.2.0.ebuild,v 1.4 2007/04/06 19:27:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.2.0.ebuild,v 1.5 2007/04/25 17:40:08 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -95,7 +95,6 @@ src_install () {
 
 	#Menu entries, icons and mime-types
 	cd ${D}${INSTDIR}/share/xdg/
-	sed -i -e s/'Exec=openoffice.org-2.2-printeradmin'/'Exec=oopadmin2'/g printeradmin.desktop || die
 
 	for desk in base calc draw impress math printeradmin writer; do
 		mv ${desk}.desktop openoffice.org-2.2-${desk}.desktop
@@ -119,7 +118,7 @@ src_install () {
 		dosym ooffice /usr/bin/oo${app}
 	done
 
-	dosym ${INSTDIR}/program/spadmin.bin /usr/bin/oopadmin
+	dosym ${INSTDIR}/program/spadmin.bin /usr/bin/ooffice-printeradmin
 
 	# Change user install dir
 	sed -i -e s/.openoffice.org2/.ooo-2.0/g ${D}${INSTDIR}/program/bootstraprc || die
