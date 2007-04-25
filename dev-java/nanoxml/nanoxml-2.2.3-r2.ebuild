@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/nanoxml-2.2.3-r2.ebuild,v 1.1 2007/01/14 16:38:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/nanoxml-2.2.3-r2.ebuild,v 1.2 2007/04/25 18:13:12 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,12 +13,13 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source"
+COMMON_DEP="dev-java/sax"
 DEPEND="
 	!doc? ( >=virtual/jdk-1.4 )
 	doc? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* ) )
-	${RDEPEND}"
+	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
-		dev-java/sax"
+	${COMMON_DEP}"
 
 S=${WORKDIR}/${MY_P}
 
