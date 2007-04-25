@@ -1,7 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.310 2007/04/25 19:44:49 betelgeuse Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.311 2007/04/25 20:01:15 genstef Exp $
+
+  25 Apr 2007; Stefan Schweizer <genstef@gentoo.org> use.local.desc:
+  gimp for gimp-print
+
   25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   No ebuilds using no-seamonkey in the tree so removing the description.
 
