@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.1-r13.ebuild,v 1.9 2006/12/09 09:36:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.1-r13.ebuild,v 1.10 2007/04/25 18:19:35 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -15,11 +15,11 @@ SLOT="3.1"
 
 IUSE="doc"
 
-RDEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.4
+	dev-java/ant-core"
 
 DEPEND="${RDEPEND}
-	>=virtual/jdk-1.4
-	dev-java/ant-core"
+	>=virtual/jdk-1.4"
 
 src_compile() {
 	java-ant_rewrite-classpath "${S}/build.xml"
@@ -30,7 +30,7 @@ src_install() {
 	java-pkg_dojar build/${MY_PN}.jar || die "ecj.jar not installable"
 
 	dodoc README
-	use doc && java-pkg_dohtml -r build/doc/api
+	use doc && java-pkg_dojavadoc build/doc/api
 
 	exeinto /usr/bin
 	doexe ${MY_PN}-${SLOT}
