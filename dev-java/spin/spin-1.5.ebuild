@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.5.ebuild,v 1.1 2007/04/20 16:23:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.5.ebuild,v 1.2 2007/04/25 22:46:56 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,9 +12,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-all.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64"
 
-COMMON_DEP="dev-java/cglib"
+COMMON_DEP="=dev-java/cglib-2.1*"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	${COMMON_DEP}"

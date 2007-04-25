@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/spin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/ChangeLog,v 1.10 2007/04/20 16:23:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/ChangeLog,v 1.11 2007/04/25 22:46:56 caster Exp $
+
+  25 Apr 2007; Vlastimil Babka <caster@gentoo.org> spin-1.5.ebuild:
+  Fix cglib dependency to 2.1 slot, bug #176033 by Colin Macdonald
+  <cbm@sfu.ca>. Need to drop ~ppc because of it.
 
 *spin-1.5 (20 Apr 2007)
 
