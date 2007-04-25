@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-samba/system-config-samba-1.2.35.ebuild,v 1.3 2006/09/22 04:51:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-samba/system-config-samba-1.2.35.ebuild,v 1.4 2007/04/25 02:16:32 dberkholz Exp $
 
 inherit python eutils rpm
 
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="=dev-python/pygtk-2*
 	dev-lang/python
 	sys-apps/usermode
+	dev-python/rhpl
 	net-fs/samba
 	www-client/htmlview
 	x11-themes/hicolor-icon-theme"
