@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7168 2007/04/25 15:36:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7169 2007/04/25 16:36:51 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Paul Varner <fuzzyray@gentoo.org> (25 Apr 2007)
+# Masked for echangelog testing
+=app-portage/gentoolkit-dev-0.2.6.5
 
 # Alistair Bush <ali_bush@gentoo.org> (25 Apr 2007)
 # Masked for removal to junkyard in 30 Days.
