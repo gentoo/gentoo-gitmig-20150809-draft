@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.29 2007/02/14 17:38:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.30 2007/04/25 19:58:35 caster Exp $
+
+  25 Apr 2007; Vlastimil Babka <caster@gentoo.org> castor-0.9.9.1-r1.ebuild:
+  Fix dependencies, add examples USE flag.
 
   14 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -castor-0.9.5.3-r1.ebuild, -castor-1.0.3.ebuild:

@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r1.ebuild,v 1.3 2006/08/06 04:17:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r1.ebuild,v 1.4 2007/04/25 19:58:35 caster Exp $
 
+JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Data binding framework for Java"
@@ -10,7 +11,7 @@ HOMEPAGE="http://www.castor.org"
 LICENSE="Exolab"
 KEYWORDS="~amd64 ~x86"
 SLOT="0.9"
-IUSE="doc postgres source"
+IUSE="doc examples source"
 
 COMMON_DEP="
 	>=dev-java/adaptx-0.9.5.3
@@ -18,19 +19,18 @@ COMMON_DEP="
 	=dev-java/jakarta-oro-2.0*
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/ldapsdk-4.1.7
-	>=dev-java/junit-3.8
 	=dev-java/servletapi-2.3*
 	=dev-java/xerces-1.3*
 	=dev-java/cglib-2.0*
 	postgres? ( =dev-java/jdbc2-postgresql-7.3* )"
 RDEPEND=">=virtual/jre-1.4
+	dev-java/ant-core
 	${COMMON_DEP}"
 # Does not like Java 1.6's JDBC API
 DEPEND="|| (
-		=virtual/jdk-1.4*
 		=virtual/jdk-1.5*
+		=virtual/jdk-1.4*
 	)
-	>=dev-java/ant-core-1.5
 	${COMMON_DEP}"
 
 src_unpack() {
@@ -48,7 +48,6 @@ src_unpack() {
 	java-pkg_jar-from cglib-2
 	java-pkg_jar-from jakarta-oro-2.0 jakarta-oro.jar oro.jar
 	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar regexp.jar
-	java-pkg_jar-from junit
 	java-pkg_jar-from servletapi-2.3
 	java-pkg_jar-from xerces-1.3
 	java-pkg_jar-from ldapsdk-4.1 ldapjdk.jar
@@ -61,9 +60,10 @@ src_compile() {
 }
 
 src_install() {
+	java-pkg_newjar dist/${P}.jar
 	java-pkg_newjar dist/${P}-xml.jar ${PN}-xml.jar
-	java-pkg_newjar dist/${P}.jar ${PN}.jar
 
-	use doc && java-pkg_dohtml -r build/doc/javadoc/*
-	use source && java-pkg_dosrc src/main/*
+	use doc && java-pkg_dojavadoc build/doc/javadoc
+	use examples && java-pkg_doexamples src/examples
+	use source && java-pkg_dosrc src/main/org
 }
