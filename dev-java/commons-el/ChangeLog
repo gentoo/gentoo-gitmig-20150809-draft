@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.20 2007/04/25 19:21:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.21 2007/04/25 19:24:48 betelgeuse Exp $
+
+  25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-el-1.0-r1.ebuild:
+  Remove java-pkg_getjars junit because junit is not needed.
 
   25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -commons-el-1.0.ebuild:
   Remove generation 1 ebuild.
