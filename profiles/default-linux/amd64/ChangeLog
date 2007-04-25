@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.89 2007/04/22 14:02:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.90 2007/04/25 21:36:38 aballier Exp $
+
+  25 Apr 2007; Alexis Ballier <aballier@gentoo.org> 2007.0/package.use.mask,
+  package.use.mask:
+  mask mmx for media-libs/mlt, bug #175975
 
   22 Apr 2007; Danny van Dyk <kugelfang@gentoo.org> vserver/parent:
   Removed comments in parent file with regard to bug #174877.

@@ -89,3 +89,8 @@ games-emulation/zsnes ao
 # ASIHPI driver is supported on 64-bit systems for newer versions
 <media-sound/alsa-driver-1.0.14_rc3 alsa_cards_asihpi
 
+
+# Apr 25th 2007: Alexis Ballier <aballier@gentoo.org>
+# Mask mmx for media-libs/mlt
+# assembler is not 64bits compliant (yet)
+media-libs/mlt mmx
