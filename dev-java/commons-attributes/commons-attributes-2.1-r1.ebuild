@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/commons-attributes-2.1-r1.ebuild,v 1.3 2006/09/09 17:39:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/commons-attributes-2.1-r1.ebuild,v 1.4 2007/04/25 21:31:21 caster Exp $
 
+JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Commons Attributes enables Java programmers to use C#/.Net-style attributes in their code."
@@ -11,15 +12,14 @@ SRC_URI="mirror://apache/jakarta/commons/attributes/source/${P}-src.tgz"
 LICENSE="Apache-2.0"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc source"
+IUSE=""
 
-COMMON_DEP="dev-java/xjavadoc"
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	source? ( app-arch/zip )
+COMMON_DEP="dev-java/xjavadoc
 	dev-java/gjdoc
+	dev-java/ant-core"
+DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
-RDEPEND=">=virtual/jre-1.2
+RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
 src_unpack() {
@@ -41,10 +41,6 @@ src_unpack() {
 	java-pkg_jar-from gjdoc
 }
 
-src_compile() {
-	eant jar -Dnoget=true $(use_doc)
-}
-
 src_install() {
 	java-pkg_newjar target/${PN}-api-${PV}.jar ${PN}-api.jar
 	java-pkg_newjar target/${PN}-compiler-${PV}.jar ${PN}-compiler.jar
@@ -52,6 +48,6 @@ src_install() {
 	dodoc NOTICE.txt RELEASE.txt
 	dohtml README.html
 
-	use doc && java-pkg_dohtml -r dist/docs/api
-	use source && java-pkg_dosrc */src/java/*
+	use doc && java-pkg_dojavadoc dist/docs/api
+	use source && java-pkg_dosrc api/src/java/org compiler/src/java/org
 }
