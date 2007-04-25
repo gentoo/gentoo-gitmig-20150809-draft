@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xsetpointer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetpointer/ChangeLog,v 1.20 2007/02/22 00:25:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetpointer/ChangeLog,v 1.21 2007/04/25 13:07:08 corsair Exp $
+
+  25 Apr 2007; Markus Rothe <corsair@gentoo.org> xsetpointer-1.0.1.ebuild:
+  Stable on ppc64; bug #175465
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
