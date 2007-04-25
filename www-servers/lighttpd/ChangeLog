@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.120 2007/04/18 15:17:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.121 2007/04/25 16:31:18 eroyf Exp $
+
+  25 Apr 2007; Alexander Færøy <eroyf@gentoo.org> lighttpd-1.4.15.ebuild:
+  Marked ~mips.
 
   18 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   lighttpd-1.4.15.ebuild:
