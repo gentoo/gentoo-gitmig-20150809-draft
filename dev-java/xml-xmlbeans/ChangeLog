@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.22 2007/04/15 20:15:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.23 2007/04/25 18:26:35 betelgeuse Exp $
+
+  25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -xml-xmlbeans-20041217.ebuild:
+  Remove generation 1 ebuild.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org>
   xml-xmlbeans-20041217-r1.ebuild:
