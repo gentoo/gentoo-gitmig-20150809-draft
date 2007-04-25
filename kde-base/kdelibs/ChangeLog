@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.450 2007/04/09 19:35:43 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.451 2007/04/25 08:48:16 carlo Exp $
+
+*kdelibs-3.5.6-r6 (25 Apr 2007)
+
+  25 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kdelibs-3.5.6-r6.ebuild:
+  KJS and Kate fixes from branch, KDE bug #130896, fix bug #135818 (again),
+  bug #153533 and bug #155751.
 
   09 Apr 2007; Marcus D. Hanwell <cryos@gentoo.org>
   kdelibs-3.5.5-r10.ebuild:
