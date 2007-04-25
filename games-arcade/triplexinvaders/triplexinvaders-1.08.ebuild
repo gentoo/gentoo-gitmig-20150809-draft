@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.4 2007/04/15 06:36:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.5 2007/04/25 15:15:14 nyhm Exp $
 
 inherit eutils games
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="psyco"
 
-DEPEND="app-arch/unzip
-	dev-python/pygame
+DEPEND="app-arch/unzip"
+RDEPEND="dev-python/pygame
 	dev-python/pyopengl
 	psyco? ( dev-python/psyco )"
 
@@ -26,7 +26,7 @@ src_unpack() {
 		sound.py \
 		util.py \
 		hiscore.py \
-		options.py || die "sed failed while changing refer to data directory"
+		options.py || die "sed failed"
 }
 
 src_install() {
