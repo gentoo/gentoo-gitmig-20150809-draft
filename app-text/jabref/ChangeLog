@@ -1,6 +1,14 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.44 2007/03/02 19:52:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.45 2007/04/25 00:41:35 caster Exp $
+
+*jabref-2.2 (25 Apr 2007)
+
+  25 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/jabref-2.2-build.xml.patch, +jabref-2.2.ebuild:
+  Version bump, bug #166273. As usual dropped keywords because of new deps.
+  Currently bundles antlr3beta5 jar because it makes no sense to have it in
+  tree yet - newer beta7 is already incompatible and nothing else needs it.
 
   02 Mar 2007; Vlastimil Babka <caster@gentoo.org>
   -files/jabref-1.7.1-nojarbundler.patch,
