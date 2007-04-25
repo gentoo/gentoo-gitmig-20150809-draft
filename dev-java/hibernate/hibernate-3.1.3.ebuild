@@ -1,17 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3.ebuild,v 1.4 2007/04/23 17:52:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3.ebuild,v 1.5 2007/04/25 20:10:38 nelchael Exp $
 
 WANT_ANT_TASKS="ant-antlr ant-swing ant-junit"
+JAVA_PKG_IUSE="doc source"
 
-inherit java-pkg-2 java-ant-2 eutils
+inherit java-pkg-2 java-ant-2
 
 MY_PV="3.1"
 DESCRIPTION="Hibernate is a powerful, ultra-high performance object / relational persistence and query service for Java."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.hibernate.org"
 LICENSE="LGPL-2"
-IUSE="doc source"
+IUSE=""
 SLOT="3.1"
 KEYWORDS="~x86 ~amd64"
 
@@ -73,12 +74,11 @@ src_unpack() {
 	java-pkg_jar-from ant-core ant.jar
 
 }
-src_compile() {
-	eant jar -Ddist.dir=dist $(use_doc)
-}
+
+EANT_EXTRA_ARGS="-Dnosplash -Ddist.dir=dist"
 
 src_install() {
-	java-pkg_dojar dist/hibernate3.jar
+	java-pkg_dojar hibernate3.jar
 	dodoc changelog.txt readme.txt
 	use doc && java-pkg_dohtml -r dist/doc/api doc/other doc/reference
 	use source && java-pkg_dosrc src/*
