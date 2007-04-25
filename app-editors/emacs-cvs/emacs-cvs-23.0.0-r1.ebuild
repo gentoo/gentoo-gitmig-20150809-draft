@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.10 2007/04/11 20:46:15 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.11 2007/04/25 06:09:11 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -35,11 +35,12 @@ DEPEND=">=sys-libs/ncurses-5.3
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="23.0.0"
+SLOT="23"
+OLD_SLOT="23.0.0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86"
 
-DFILE=emacs-${SLOT}.desktop
+DFILE=emacs-${OLD_SLOT}.desktop
 
 src_unpack() {
 	cvs_src_unpack
@@ -88,7 +89,7 @@ src_compile() {
 		einfo "Configuring to build with Carbon Emacs"
 		econf --enable-debug \
 			--enable-carbon-app=/Applications/Gentoo \
-			--program-suffix=.emacs-${SLOT} \
+			--program-suffix=.emacs-${OLD_SLOT} \
 			--without-x \
 			$(use_with jpeg) $(use_with tiff) \
 			$(use_with gif) $(use_with png) \
@@ -97,7 +98,7 @@ src_compile() {
 		make bootstrap || die "make carbon emacs bootstrap failed"
 	else
 		econf --enable-debug \
-			--program-suffix=.emacs-${SLOT} \
+			--program-suffix=.emacs-${OLD_SLOT} \
 			--without-carbon \
 			${myconf} || die "econf emacs failed"
 		make bootstrap || die "make emacs bootstrap failed"
@@ -106,8 +107,8 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	rm ${D}/usr/bin/emacs-${SLOT}.emacs-${SLOT} || die "removing duplicate emacs executable failed"
-	dohard /usr/bin/emacs.emacs-${SLOT} /usr/bin/emacs-${SLOT} || die
+	rm ${D}/usr/bin/emacs-${OLD_SLOT}.emacs-${OLD_SLOT} || die "removing duplicate emacs executable failed"
+	dohard /usr/bin/emacs.emacs-${OLD_SLOT} /usr/bin/emacs-${OLD_SLOT} || die
 
 	if use aqua ; then
 		einfo "Installing Carbon Emacs..."
@@ -119,34 +120,34 @@ src_install () {
 
 	# fix info documentation
 	einfo "Fixing info documentation..."
-	dodir /usr/share/info/emacs-${SLOT}
-	mv ${D}/usr/share/info/{,emacs-${SLOT}/}dir || die "mv dir failed"
+	dodir /usr/share/info/emacs-${OLD_SLOT}
+	mv ${D}/usr/share/info/{,emacs-${OLD_SLOT}/}dir || die "mv dir failed"
 	for i in ${D}/usr/share/info/*
 	do
-		if [ "${i##*/}" != emacs-${SLOT} ] ; then
-			mv ${i} ${i/info/info/emacs-${SLOT}}.info
+		if [ "${i##*/}" != emacs-${OLD_SLOT} ] ; then
+			mv ${i} ${i/info/info/emacs-${OLD_SLOT}}.info
 		fi
 	done
 
 	insinto /etc/env.d
-	cat >${D}/etc/env.d/50emacs-cvs-${SLOT} <<EOF
-INFOPATH=/usr/share/info/emacs-${SLOT}
+	cat >${D}/etc/env.d/50emacs-cvs-${OLD_SLOT} <<EOF
+INFOPATH=/usr/share/info/emacs-${OLD_SLOT}
 EOF
 	einfo "Fixing manpages..."
 	for m in  ${D}/usr/share/man/man1/* ; do
-		mv ${m} ${m/.1/.emacs-${SLOT}.1} || die "mv man failed"
+		mv ${m} ${m/.1/.emacs-${OLD_SLOT}.1} || die "mv man failed"
 	done
 
 	if use source; then
-		insinto /usr/share/emacs/${SLOT}/src
+		insinto /usr/share/emacs/${OLD_SLOT}/src
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.[ch]
-		cat >00emacs-cvs-${SLOT}-gentoo.el <<EOF
-(when (substring emacs-version 0 (length "${SLOT}"))
-  (setq find-function-C-source-directory "/usr/share/emacs/${SLOT}/src"))
+		cat >00emacs-cvs-${OLD_SLOT}-gentoo.el <<EOF
+(when (substring emacs-version 0 (length "${OLD_SLOT}"))
+  (setq find-function-C-source-directory "/usr/share/emacs/${OLD_SLOT}/src"))
 EOF
-		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
+		elisp-site-file-install 00emacs-cvs-${OLD_SLOT}-gentoo.el
 	fi
 
 
@@ -156,7 +157,7 @@ EOF
 	dodoc BUGS ChangeLog ChangeLog.unicode README README.unicode
 	insinto /usr/share/applications
 	cp ${FILESDIR}/emacs.desktop.in ${DFILE}
-	sed -i -e "s,@PV@,${SLOT},g" ${DFILE}
+	sed -i -e "s,@PV@,${OLD_SLOT},g" ${DFILE}
 	doins ${DFILE}
 }
 

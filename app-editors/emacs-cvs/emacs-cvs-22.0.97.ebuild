@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.97.ebuild,v 1.2 2007/04/04 13:26:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.97.ebuild,v 1.3 2007/04/25 06:09:11 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -35,7 +35,8 @@ DEPEND="sys-libs/ncurses
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="22.0.97"
+SLOT="22"
+OLD_SLOT="22.0.97"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 S="${WORKDIR}/emacs-${PV}"
@@ -105,7 +106,7 @@ src_compile() {
 			 || die "econf carbon emacs failed"
 	else
 		econf \
-			--program-suffix=.emacs-${SLOT} \
+			--program-suffix=.emacs-${OLD_SLOT} \
 			--without-carbon \
 			${myconf} || die "econf emacs failed"
 	fi
@@ -117,8 +118,8 @@ src_compile() {
 src_install () {
 	emake install DESTDIR="${D}" || die "make install failed"
 
-	rm "${D}"/usr/bin/emacs-${SLOT}.emacs-${SLOT} || die "removing duplicate emacs executable failed"
-	dohard /usr/bin/emacs.emacs-${SLOT} /usr/bin/emacs-${SLOT} || die
+	rm "${D}"/usr/bin/emacs-${OLD_SLOT}.emacs-${OLD_SLOT} || die "removing duplicate emacs executable failed"
+	dohard /usr/bin/emacs.emacs-${OLD_SLOT} /usr/bin/emacs-${OLD_SLOT} || die
 
 	if use aqua ; then
 		einfo "Installing Carbon Emacs..."
@@ -130,37 +131,37 @@ src_install () {
 
 	# fix info documentation
 	einfo "Fixing info documentation..."
-	dodir /usr/share/info/emacs-${SLOT}
-	mv "${D}"/usr/share/info/{,emacs-${SLOT}/}dir || die "mv dir failed"
+	dodir /usr/share/info/emacs-${OLD_SLOT}
+	mv "${D}"/usr/share/info/{,emacs-${OLD_SLOT}/}dir || die "mv dir failed"
 	for i in "${D}"/usr/share/info/*
 	do
-		if [ "${i##*/}" != emacs-${SLOT} ] ; then
-			mv ${i} ${i/info/info/emacs-${SLOT}}.info
+		if [ "${i##*/}" != emacs-${OLD_SLOT} ] ; then
+			mv ${i} ${i/info/info/emacs-${OLD_SLOT}}.info
 		fi
 	done
 
 	insinto /etc/env.d
-	cat >"${D}"/etc/env.d/50emacs-cvs-${SLOT} <<EOF
-INFOPATH=/usr/share/info/emacs-${SLOT}
+	cat >"${D}"/etc/env.d/50emacs-cvs-${OLD_SLOT} <<EOF
+INFOPATH=/usr/share/info/emacs-${OLD_SLOT}
 EOF
 	einfo "Fixing manpages..."
 	for m in  "${D}"/usr/share/man/man1/* ; do
-		mv ${m} ${m/.1/.emacs-${SLOT}.1} || die "mv man failed"
+		mv ${m} ${m/.1/.emacs-${OLD_SLOT}.1} || die "mv man failed"
 	done
 
 	# avoid collision between slots
 	rm "${D}"/usr/share/emacs/site-lisp/subdirs.el
 
 	if use source; then
-		insinto /usr/share/emacs/${SLOT}/src
+		insinto /usr/share/emacs/${OLD_SLOT}/src
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.[ch]
-		cat >00emacs-cvs-${SLOT}-gentoo.el <<EOF
-(when (substring emacs-version 0 (length "${SLOT}"))
-  (setq find-function-C-source-directory "/usr/share/emacs/${SLOT}/src"))
+		cat >00emacs-cvs-${OLD_SLOT}-gentoo.el <<EOF
+(when (substring emacs-version 0 (length "${OLD_SLOT}"))
+  (setq find-function-C-source-directory "/usr/share/emacs/${OLD_SLOT}/src"))
 EOF
-		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
+		elisp-site-file-install 00emacs-cvs-${OLD_SLOT}-gentoo.el
 	fi
 
 	dodoc BUGS ChangeLog README
@@ -186,7 +187,7 @@ update-alternatives() {
 
 pkg_postinst() {
 	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
-		cp ${ROOT}/usr/share/emacs{/${SLOT},}/site-lisp/subdirs.el
+		cp ${ROOT}/usr/share/emacs{/${OLD_SLOT},}/site-lisp/subdirs.el
 
 	update-alternatives
 	elisp-site-regen
@@ -194,7 +195,7 @@ pkg_postinst() {
 	# ecompress from Portage 2.2.* does auto-compression
 	# which is not desired for the dir file, so remove it to
 	# let it be recreated
-	rm "${ROOT}/usr/share/info/emacs-${SLOT}/dir.*" 2> /dev/null
+	rm "${ROOT}/usr/share/info/emacs-${OLD_SLOT}/dir.*" 2> /dev/null
 
 	if use X; then
 		elog "You need to install some fonts for Emacs.	 Under monolithic"
