@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.261 2007/04/25 08:56:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.262 2007/04/25 19:32:42 jer Exp $
+
+  25 Apr 2007; Jeroen Roovers <jer@gentoo.org> kdepim-3.5.5-r4.ebuild:
+  Stable for HPPA (bug #174678).
 
 *kdepim-3.5.5-r4 (25 Apr 2007)
 
