@@ -1,12 +1,12 @@
 # ChangeLog for games-sports/toycars
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.6 2007/04/04 14:51:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.7 2007/04/25 22:20:05 tupone Exp $
 
   04 Apr 2007; Samuli Suominen <drac@gentoo.org>
   files/toycars-0.3.2-asneeded.patch:
   Fix asneeded patch, after resurrecting this package it had size 0 bytes.
 
-  02 Apr 2007; <atupone@gentoo.org> +files/toycars-0.3.2-asneeded.patch,
+  02 Apr 2007; <tupone@gentoo.org> +files/toycars-0.3.2-asneeded.patch,
   +metadata.xml, +toycars-0.3.2.ebuild:
   Resurrecting, as there is a verbal permission to use the music on this game
   See bug #116905
@@ -20,6 +20,6 @@
 
 *toycars-0.3.2 (25 Mar 2007)
 
-  25 Mar 2007; <atupone@gentoo.org> +metadata.xml, +toycars-0.3.2.ebuild:
+  25 Mar 2007; <tupone@gentoo.org> +metadata.xml, +toycars-0.3.2.ebuild:
   New package, requested by roma1390 with bug #116905
 
