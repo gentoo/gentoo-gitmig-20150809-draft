@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.581 2007/02/17 16:27:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.582 2007/04/25 13:30:16 corsair Exp $
+
+  25 Apr 2007; Markus Rothe <corsair@gentoo.org> xorg-x11-7.2.ebuild:
+  Stable on ppc64; bug #175465
 
   17 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-x11-7.2.ebuild:
