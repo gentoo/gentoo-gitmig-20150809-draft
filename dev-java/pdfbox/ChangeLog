@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/pdfbox
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.1 2007/04/25 00:23:45 caster Exp $
+
+*pdfbox-0.7.3 (25 Apr 2007)
+
+  25 Apr 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
+  +pdfbox-0.7.3.ebuild:
+  Initial ebuild, bug #161917.
+
