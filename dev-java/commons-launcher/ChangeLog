@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-launcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.20 2007/04/08 20:01:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.21 2007/04/25 19:33:41 betelgeuse Exp $
+
+  25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-launcher-1.1.ebuild:
+  Add dev-java/ant-core to RDEPEND.
 
   08 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   commons-launcher-0.9-r1.ebuild:
