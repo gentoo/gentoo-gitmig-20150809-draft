@@ -1,0 +1,71 @@
+diff --git a/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi b/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
+index c982099..6368ad8 100644
+--- a/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
++++ b/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
+@@ -4,17 +4,20 @@
+ 
+   <device>
+     <match key="info.category" string="laptop_panel">
+-      <append key="info.interfaces" type="strlist">org.freedesktop.Hal.Device.LaptopPanel</append>
++      <!-- only set if the laptop_panel.access_method is not custom -->
++      <match key="laptop_panel.access_method" compare_ne="custom">
++        <append key="info.interfaces" type="strlist">org.freedesktop.Hal.Device.LaptopPanel</append>
+ 
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">SetBrightness</append>
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist">i</append>
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist">brightness_value</append>
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-set-brightness</append>
+-
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">GetBrightness</append>
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist"></append>
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist"></append>
+-      <append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-get-brightness</append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">SetBrightness</append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist">i</append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist">brightness_value</append>
++      	<append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-set-brightness</append>
++      
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_names" type="strlist">GetBrightness</append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_signatures" type="strlist"></append>
++        <append key="org.freedesktop.Hal.Device.LaptopPanel.method_argnames" type="strlist"></append>
++	<append key="org.freedesktop.Hal.Device.LaptopPanel.method_execpaths" type="strlist">hal-system-lcd-get-brightness</append>
++      
+     </match>
+   </device>
+ 
+diff --git a/fdi/policy/10osvendor/10-macbook-backlight.fdi b/fdi/policy/10osvendor/10-macbook-backlight.fdi
+index 227bbb5..a22fb20 100644
+--- a/fdi/policy/10osvendor/10-macbook-backlight.fdi
++++ b/fdi/policy/10osvendor/10-macbook-backlight.fdi
+@@ -13,6 +13,7 @@
+   <device>
+     <match key="info.udi" string="/org/freedesktop/Hal/devices/macbook_backlight">
+       <append key="info.capabilities" type="strlist">laptop_panel</append>
++      <merge key="info.category" type="string">laptop_panel</merge>
+       <merge key="info.product" type="string">MacBook Backlight Control</merge>
+       <merge key="laptop_panel.access_method" type="string">custom</merge>
+       <merge key="laptop_panel.num_levels" type="int">118</merge>
+diff --git a/fdi/policy/10osvendor/10-macbookpro-utils.fdi b/fdi/policy/10osvendor/10-macbookpro-utils.fdi
+index 8aed6c0..f02c614 100644
+--- a/fdi/policy/10osvendor/10-macbookpro-utils.fdi
++++ b/fdi/policy/10osvendor/10-macbookpro-utils.fdi
+@@ -32,6 +32,7 @@
+   <device>
+     <match key="info.udi" string="/org/freedesktop/Hal/devices/macbook_pro_lcd_panel">
+       <append key="info.capabilities" type="strlist">laptop_panel</append>
++      <merge key="info.category" type="string">laptop_panel</merge>
+       <merge key="info.product" type="string">MacBook Pro Laptop Panel</merge>
+       <merge key="laptop_panel.access_method" type="string">custom</merge>
+       <merge key="laptop_panel.num_levels" type="int">229</merge>
+diff --git a/fdi/policy/10osvendor/10-omap-backlight.fdi b/fdi/policy/10osvendor/10-omap-backlight.fdi
+index 5d3f1ce..2f041a1 100644
+--- a/fdi/policy/10osvendor/10-omap-backlight.fdi
++++ b/fdi/policy/10osvendor/10-omap-backlight.fdi
+@@ -10,6 +10,7 @@
+    <device>
+     <match key="info.udi" string="/org/freedesktop/Hal/devices/omapfb_bl">
+         <merge key="info.product" type="string">OMAP LCD controller and panel</merge>
++        <merge key="info.category" type="string">laptop_panel</merge>
+         <append key="info.capabilities" type="strlist">laptop_panel</append>
+         <merge key="laptop_panel.access_method" type="string">custom</merge>
+         <merge key="laptop_panel.num_levels" type="int">15</merge>

@@ -1,0 +1,132 @@
+Index: b/configure.in
+===================================================================
+--- a/configure.in	2007-04-03 00:36:44.000000000 -0400
++++ b/configure.in	2007-04-24 16:57:54.000000000 -0400
+@@ -234,79 +234,66 @@
+ fi
+ 
+ #### gcc warning flags
++dnl checks compiler support for CFLAG
++AC_DEFUN([HAL_CC_TRY_FLAG], [
++	  AC_MSG_CHECKING([whether $CC supports $1])
++
++  hal_save_CFLAGS="$CFLAGS"
++  CFLAGS="$CFLAGS $1"
++
++  AC_COMPILE_IFELSE([ ], [hal_cc_flag=yes], [hal_cc_flag=no])
++  CFLAGS="$hal_save_CFLAGS"
++
++  if test "x$hal_cc_flag" = "xyes"; then
++    ifelse([$2], , :, [$2])
++  else
++    ifelse([$3], , :, [$3])
++  fi
++  AC_MSG_RESULT([$hal_cc_flag])
++])
+ 
+-if test "x$GCC" = "xyes"; then
+-  changequote(,)dnl
+-  case " $CFLAGS " in
+-  *[\ \	]-Wall[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wall" ;;
+-  esac
+-
+-  case " $CFLAGS " in
+-  *[\ \	]-Wchar-subscripts[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wchar-subscripts" ;;
+-  esac
+-
+-  case " $CFLAGS " in
+-  *[\ \	]-Wmissing-declarations[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wmissing-declarations" ;;
+-  esac
++dnl Use as many warning flags as possible with gcc and compatible compilers
+ 
+-  case " $CFLAGS " in
+-  *[\ \	]-Wnested-externs[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wnested-externs" ;;
+-  esac
++dnl If you change anything below in the variable, the cache is automatically
++dnl ignored and everything is rechecked. So just add a flag and that's it.
++dnl if you need to force a recheck, add a whitespace somewhere
++dnl Also take note of order of flags, you should have the big inclusive flags
++dnl first, and the negating flags last
+ 
+-  case " $CFLAGS " in
+-  *[\ \	]-Wpointer-arith[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wpointer-arith" ;;
+-  esac
++MAYBE_WARN="-Wall -Wextra \
++-Wchar-subscripts -Wmissing-declarations -Wnested-externs \
++-Wpointer-arith -Wcast-align -Wsign-compare -Wbad-function-cast \
++-Waggregate-return -Wcast-align -Wcast-qual -Wshadow -Wredundant-decls"
+ 
+-  case " $CFLAGS " in
+-  *[\ \	]-Wcast-align[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wcast-align" ;;
+-  esac
++dnl invalidate cache if MAYBE_WARN has changed
++if test "x$hal_cv_warn_maybe" != "x$MAYBE_WARN"; then
++  unset hal_cv_warn_cflags
++fi
+ 
+-  case " $CFLAGS " in
+-  *[\ \	]-Wsign-compare[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wsign-compare" ;;
+-  esac
++AC_CACHE_CHECK([for supported warning flags], hal_cv_warn_cflags, [
++		echo
+ 
+-  if test "x$enable_ansi" = "xyes"; then
+-    case " $CFLAGS " in
+-    *[\ \	]-ansi[\ \	]*) ;;
+-    *) CFLAGS="$CFLAGS -ansi" ;;
+-    esac
++  for W in $MAYBE_WARN; do
++    HAL_CC_TRY_FLAG([$W], [CFLAGS="$CFLAGS $W"])
++  done
+ 
+-    case " $CFLAGS " in
+-    *[\ \	]-D_POSIX_C_SOURCE*) ;;
+-    *) CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=199309L" ;;
+-    esac
++  hal_cv_warn_cflags=$CFLAGS
++  hal_cv_warn_maybe=$MAYBE_WARN
+ 
+-    case " $CFLAGS " in
+-    *[\ \	]-D_BSD_SOURCE[\ \	]*) ;;
+-    *) CFLAGS="$CFLAGS -D_BSD_SOURCE" ;;
+-    esac
++  AC_MSG_CHECKING([which warning flags were supported])
++])
+ 
+-    case " $CFLAGS " in
+-    *[\ \	]-pedantic[\ \	]*) ;;
+-    *) CFLAGS="$CFLAGS -pedantic" ;;
+-    esac
++if test "x$GCC" = "xyes"; then
++  if test "x$enable_ansi" = "xyes"; then
++    HAL_CC_TRY_FLAG([-ansi], [CFLAGS="$CFLAGS -ansi"])
++    HAL_CC_TRY_FLAG([-pedanitc], [CFLAGS="$CFLAGS -pedantic"])
++    CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=199309L -D_BSD_SOURCE"
+   fi
+-  if test x$enable_gcov = xyes; then
+-    case " $CFLAGS " in
+-    *[\ \	]-fprofile-arcs[\ \	]*) ;;
+-    *) CFLAGS="$CFLAGS -fprofile-arcs" ;;
+-    esac
+-    case " $CFLAGS " in
+-    *[\ \	]-ftest-coverage[\ \	]*) ;;
+-    *) CFLAGS="$CFLAGS -ftest-coverage" ;;
+-    esac
+ 
+-    ## remove optimization
+-    CFLAGS=`echo "$CFLAGS" | sed -e 's/-O[0-9]*//g'`
++  if test "x$enable_gcov" = "xyes"; then
++    HAL_CC_TRY_FLAG([-fprofile-arcs], [CFLAGS="$CFLAGS -fprofile-arcs"])
++    HAL_CC_TRY_FLAG([-ftest-coverage], [CFLAGS="$CFLAGS -ftest-coverage"])
+   fi
+-  changequote([,])dnl
+ else
+   if test x$enable_gcov = xyes; then
+     AC_MSG_ERROR([--enable-gcov can only be used with gcc])
