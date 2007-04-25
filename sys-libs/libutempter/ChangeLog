@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libutempter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.24 2007/04/24 14:31:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.25 2007/04/25 13:52:25 gustavoz Exp $
+
+  25 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libutempter-1.1.5.ebuild:
+  Stable on sparc
 
   24 Apr 2007; Raúl Porcel <armin76@gentoo.org> libutempter-1.1.5.ebuild:
   ia64 + x86 stable
