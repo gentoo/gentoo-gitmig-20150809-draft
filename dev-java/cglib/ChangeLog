@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.24 2007/04/20 15:52:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.25 2007/04/25 21:03:03 caster Exp $
+
+  25 Apr 2007; Vlastimil Babka <caster@gentoo.org> cglib-2.0.2-r2.ebuild:
+  Fix dependencies, tweak style.
 
   20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> cglib-2.1.3.ebuild:
   Fix errors reported by java-pkg_ensure-dep.
