@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/openjms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.12 2007/04/09 11:45:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.13 2007/04/26 10:11:04 ali_bush Exp $
+
+*openjms-0.7.6.1-r2 (26 Apr 2007)
+
+  26 Apr 2007; Alistair John Bush <ali_bush@gentoo.org>
+  +openjms-0.7.6.1-r2.ebuild:
+  Bump openjms to generation 2 java eclasses
 
   09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   openjms-0.7.6.1-r1.ebuild:
