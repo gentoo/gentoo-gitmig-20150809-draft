@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.21.ebuild,v 1.1 2007/04/26 18:06:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.21.ebuild,v 1.2 2007/04/26 20:10:43 nyhm Exp $
 
 inherit eutils games
 
@@ -54,11 +54,15 @@ src_unpack() {
 	sed -i \
 		-e '/^gnulocaledir/s:$(prefix):/usr:' \
 		po/Makefile.in.in \
-		|| die "sed failed"
+		|| die "sed Makefile.in.in failed"
 	sed -i \
 		-e 's/getline/intlpo_getline/' \
 		po/intl2po.c \
-		|| die "sed failed"
+		|| die "sed intl2po.c failed"
+	sed -i \
+		-e '/SYNC=/s: $SYNC::' \
+		configure \
+		|| die "sed configure failed"
 	epatch "${FILESDIR}"/${P}-uicolor.patch #174056
 }
 

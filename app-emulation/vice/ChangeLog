@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.46 2007/04/26 18:06:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.47 2007/04/26 20:10:43 nyhm Exp $
+
+  26 Apr 2007; Tristan Heaven <nyhm@gentoo.org> vice-1.21.ebuild:
+  Fix build failure when SYNC is set, bug #176155
 
 *vice-1.21 (26 Apr 2007)
 
