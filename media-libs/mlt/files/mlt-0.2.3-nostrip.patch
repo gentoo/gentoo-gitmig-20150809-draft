@@ -1,0 +1,52 @@
+Index: mlt-0.2.3/src/albino/Makefile
+===================================================================
+--- mlt-0.2.3.orig/src/albino/Makefile
++++ mlt-0.2.3/src/albino/Makefile
+@@ -26,7 +26,7 @@ clean:	
+ 
+ install:	all
+ 	install -d "$(DESTDIR)$(bindir)"
+-	install -c -s -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
++	install -c -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
+ 
+ ifneq ($(wildcard .depend),)
+ include .depend
+Index: mlt-0.2.3/src/humperdink/Makefile
+===================================================================
+--- mlt-0.2.3.orig/src/humperdink/Makefile
++++ mlt-0.2.3/src/humperdink/Makefile
+@@ -28,7 +28,7 @@ clean:	
+ 
+ install:	all
+ 	install -d "$(DESTDIR)$(bindir)"
+-	install -c -s -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
++	install -c -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
+ 
+ ifneq ($(wildcard .depend),)
+ include .depend
+Index: mlt-0.2.3/src/inigo/Makefile
+===================================================================
+--- mlt-0.2.3.orig/src/inigo/Makefile
++++ mlt-0.2.3/src/inigo/Makefile
+@@ -27,7 +27,7 @@ clean:	
+ 
+ install:	all
+ 	install -d "$(DESTDIR)$(bindir)"
+-	install -c -s -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
++	install -c -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
+ 
+ ifneq ($(wildcard .depend),)
+ include .depend
+Index: mlt-0.2.3/src/miracle/Makefile
+===================================================================
+--- mlt-0.2.3.orig/src/miracle/Makefile
++++ mlt-0.2.3/src/miracle/Makefile
+@@ -54,7 +54,7 @@ clean:	
+ 
+ install:	all
+ 	install -d "$(DESTDIR)$(bindir)"
+-	install -c -s -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
++	install -c -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
+ 	install -m 755 $(LIBTARGET) $(DESTDIR)$(libdir)
+ 	ln -sf $(LIBTARGET) $(DESTDIR)$(libdir)/$(LIBNAME)
+ 	mkdir -p "$(DESTDIR)$(prefix)/include/mlt/miracle"
