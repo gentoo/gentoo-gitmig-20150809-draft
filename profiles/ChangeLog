@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.312 2007/04/25 20:39:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.313 2007/04/26 09:17:25 voyageur Exp $
+
+  26 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Removing package.mask on NX split packages, removed from the tree
 
   25 Apr 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   gimpprint useflag for media-video/cinepaint
