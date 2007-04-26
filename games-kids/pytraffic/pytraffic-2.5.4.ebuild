@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4.ebuild,v 1.1 2007/04/25 21:03:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4.ebuild,v 1.2 2007/04/26 08:45:33 nyhm Exp $
 
 inherit distutils eutils games
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="media-libs/sdl-mixer
-	>=dev-python/pygtk-2.4"
+DEPEND="media-libs/libsdl
+	media-libs/sdl-mixer"
+RDEPEND="${DEPEND}
+	dev-python/pygtk"
 
 src_compile() {
 	distutils_src_compile
