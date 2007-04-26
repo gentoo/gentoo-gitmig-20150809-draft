@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml2/openspml2-1.0_rc2.ebuild,v 1.1 2006/09/11 14:15:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml2/openspml2-1.0_rc2.ebuild,v 1.2 2007/04/26 20:24:03 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -15,11 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source"
 
-RDEPEND=">=virtual/jre-1.4"
-DEPEND="${RDEPEND}
-	>=virtual/jdk-1.4
+COMMON_DEP="
 	=dev-java/servletapi-2.4*
 	dev-java/openspml"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
+DEPEND="${COMMON_DEP}
+	>=virtual/jdk-1.4"
 
 S="${WORKDIR}"
 
