@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20060612.ebuild,v 1.6 2007/02/08 08:37:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20060612.ebuild,v 1.7 2007/04/26 14:58:01 nyhm Exp $
 
-use amd64 && ABI=x86
 inherit eutils multilib
 
 DESCRIPTION="Support library that allows third party applications access and use C.A.P.S. images"
@@ -32,6 +31,7 @@ src_install() {
 			dobin ipfdevlib_linux/examples/ppc/ipfinfo || die
 			;;
 		x86|amd64)
+			use amd64 && multilib_toolchain_setup x86
 			dolib.so ipfdevlib_linux/lib/i686/libcapsimage.so.2.0 || die
 			dobin ipfdevlib_linux/examples/i686/ipfinfo || die
 			;;
