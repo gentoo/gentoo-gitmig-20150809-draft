@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.25 2007/02/03 18:17:17 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.26 2007/04/26 21:13:56 centic Exp $
+
+*firehol-1.250-r1 (26 Apr 2007)
+
+  26 Apr 2007; Dominik Stadler <centic@gentoo.org>
+  +files/firehol-1.250-groupwith.patch, -firehol-1.226-r1.ebuild,
+  +firehol-1.250-r1.ebuild:
+  remove 1.226, 250 is as stable as 226. Add patch for 'group with', fixes Bug
+  171719, thanks to Marshal Newrock for the patch. Use newconfd, fixes Bug
+  174266.
 
   26 Jan 2007; Dominik Stadler <centic@gentoo.org> firehol-1.226-r1.ebuild,
   firehol-1.250.ebuild:

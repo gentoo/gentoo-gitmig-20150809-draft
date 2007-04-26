@@ -1,18 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.226-r1.ebuild,v 1.6 2007/02/03 18:17:17 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250-r1.ebuild,v 1.1 2007/04/26 21:13:56 centic Exp $
 
 inherit eutils
 
 DESCRIPTION="iptables firewall generator"
 HOMEPAGE="http://firehol.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-1.226.tar.bz2"
+
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 
+DEPEND="sys-apps/iproute2"
 RDEPEND="net-firewall/iptables
 	sys-apps/iproute2
 	virtual/modutils
@@ -20,6 +22,8 @@ RDEPEND="net-firewall/iptables
 		net-misc/wget
 		net-misc/curl
 	)"
+
+S="${WORKDIR}/${PN}-1.226"
 
 pkg_setup() {
 	# Bug 81600 fail if iproute2 is built with minimal
@@ -36,8 +40,11 @@ pkg_setup() {
 # backport from firehol-CVS.
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-to-228.patch || die
+	cd ${S} || die
+	epatch ${FILESDIR}/firehol-1.226-to-228.patch || die
+	epatch ${FILESDIR}/firehol-1.226-to-250.patch || die
+	epatch ${FILESDIR}/${P}-groupwith.patch || die
+	epatch ${FILESDIR}/${P}-printf.patch || die
 }
 
 src_install() {
@@ -47,8 +54,7 @@ src_install() {
 	insinto /etc/firehol/examples
 	doins examples/* || die
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/firehol.conf.d firehol || die
+	newconfd ${FILESDIR}/firehol.conf.d firehol || die
 
 	dodoc ChangeLog README TODO WhatIsNew || die
 	dohtml doc/*.html doc/*.css  || die
@@ -58,8 +64,7 @@ src_install() {
 
 	doman man/*.1 man/*.5 || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/firehol.initrd firehol || die
+	newinitd ${FILESDIR}/firehol.initrd firehol || die
 }
 
 pkg_postinst() {
