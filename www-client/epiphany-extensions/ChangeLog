@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.51 2007/03/27 18:53:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.52 2007/04/26 16:09:26 dang Exp $
+
+*epiphany-extensions-2.18.1 (26 Apr 2007)
+
+  26 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/epiphany-extensions-2.18.0-sessionsaver-v4.patch,
+  +epiphany-extensions-2.18.1.ebuild:
+  Bump to 2.18.1
+  	- bug fixes
+  	- re-added sessionsaver; it's been stable for me
 
 *epiphany-extensions-2.18.0 (27 Mar 2007)
 
