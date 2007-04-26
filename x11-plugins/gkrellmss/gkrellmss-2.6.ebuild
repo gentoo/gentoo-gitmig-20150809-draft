@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.4 2006/07/27 06:41:38 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.5 2007/04/26 17:46:36 lack Exp $
 
-inherit eutils
+inherit gkrellm-plugin
 
 IUSE="alsa esd nls"
 
@@ -10,14 +10,18 @@ DESCRIPTION="A plugin for GKrellM2 that has a VU meter and a sound chart"
 HOMEPAGE="http://members.dslextreme.com/users/billw/gkrellmss/gkrellmss.html"
 SRC_URI="http://web.wt.net/~billw/gkrellmss/${P}.tar.gz"
 
-DEPEND="=app-admin/gkrellm-2*
-	=sci-libs/fftw-2*
+RDEPEND="=sci-libs/fftw-2*
 	esd? ( media-sound/esound )
 	alsa? ( media-libs/alsa-lib )"
+
+DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+
+PLUGIN_SO="src/gkrellmss.so"
+PLUGIN_DOCS="Themes"
 
 src_compile() {
 	local myconf
@@ -28,8 +32,3 @@ src_compile() {
 	emake ${myconf} || die
 }
 
-src_install () {
-	exeinto /usr/$(get_libdir)/gkrellm2/plugins
-	doexe src/gkrellmss.so
-	dodoc README Changelog Themes
-}
