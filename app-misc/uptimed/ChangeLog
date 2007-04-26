@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.55 2007/04/24 14:12:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.56 2007/04/26 21:56:40 jer Exp $
+
+  26 Apr 2007; Jeroen Roovers <jer@gentoo.org> uptimed-0.3.11.ebuild:
+  Stable for HPPA (bug #176145).
 
   24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> uptimed-0.3.11.ebuild:
   Stable on sparc
