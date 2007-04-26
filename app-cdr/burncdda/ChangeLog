@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/burncdda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.18 2007/04/23 18:30:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.19 2007/04/26 23:58:21 beandog Exp $
+
+*burncdda-1.5.3 (26 Apr 2007)
+
+  26 Apr 2007; Steve Dibb <beandog@gentoo.org> +burncdda-1.5.3.ebuild:
+  Version bump, bug 175739
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> burncdda-1.5.0a.ebuild:
   x86 stable
