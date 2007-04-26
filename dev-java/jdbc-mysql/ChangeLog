@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.38 2007/04/25 17:24:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.39 2007/04/26 12:13:20 opfer Exp $
+
+  26 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  jdbc-mysql-3.1.13-r4.ebuild:
+  stable x86, bug 175993
 
   25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   jdbc-mysql-3.1.13-r4.ebuild:
