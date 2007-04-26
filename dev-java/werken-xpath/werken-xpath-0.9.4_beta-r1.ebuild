@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.2 2006/07/22 20:45:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.3 2007/04/26 21:40:37 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils versionator
 
@@ -16,14 +18,14 @@ SRC_URI="mirror://gentoo/${MY_P}-src.tar.gz"
 LICENSE="werken.xpath"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc source"
 
+COMMON_DEP="
+	~dev-java/jdom-1.0_beta9
+	dev-java/antlr"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	dev-java/antlr
-	source? ( app-arch/zip )"
+	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
-	~dev-java/jdom-1.0_beta9"
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_PN}"
 
@@ -64,7 +66,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/${MY_PN}.jar
 
-	dodoc README TODO LIMITATIONS
-	use doc && java-pkg_dohtml -r build/api
+	dodoc README TODO LIMITATIONS || die
+	use doc && java-pkg_dojavadoc build/api
 	use source && java-pkg_dosrc src/*
 }
