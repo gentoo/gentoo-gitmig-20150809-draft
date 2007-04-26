@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r1.ebuild,v 1.1 2007/04/26 08:46:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r1.ebuild,v 1.2 2007/04/26 16:45:58 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/${MY_PN}-${PV}
 
 pkg_setup() {
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="KDIR=${KERNEL_DIR}"
+	BUILD_PARAMS="KERNELSRC=${KERNEL_DIR}"
 	CONFIG_CHECK="HOTPLUG MODULES KMOD FW_LOADER I2C VIDEO_DEV SOUND SND USB
 		USB_DEVICEFS USB_EHCI_HCD"
 
@@ -28,10 +28,10 @@ pkg_setup() {
 		CONFIG_CHECK="${CONFIG_CHECK} SND_MIXER_OSS SND_PCM_OSS"
 	fi
 
-	if ! kernel_is 2 6 16; then
-		eerror "These drivers will only work with a 2.6.16 kernel"
-		die "Needs a different kernel"
-	fi
+	#if ! kernel_is 2 6 16; then
+	#	eerror "These drivers will only work with a 2.6.16 kernel"
+	#	#die "Needs a different kernel"
+	#fi
 
 	linux-mod_pkg_setup
 	MODULE_NAMES="go7007(extra:${S}:${S}/kernel)
@@ -49,6 +49,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${P}-fix-udev.diff"
+	if kernel_is ge 2 6 17; then
+		epatch "${FILESDIR}/${P}-kernel-2.6.17.diff"
+	fi
 }
 
 src_compile() {
