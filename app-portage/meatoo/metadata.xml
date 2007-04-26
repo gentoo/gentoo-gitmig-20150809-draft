@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>pythonhead@gentoo.org</email>
+		<name>Rob Cakebread</name>
+	</maintainer>
+	<longdescription lang="en">
+		meatoo is a command-line client for Meatoo
+		(http:meatoo.gentooexperimental.org)
+		The Meatoo website queries various release databases such as
+		freshmeat.net and cheeseshop.python.org/pypi and shows which
+		packages in portage need a version bump.
+	</longdescription>
+</pkgmetadata>
+
