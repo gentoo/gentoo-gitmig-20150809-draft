@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/gkrellm-vaiobright-2.5-r1.ebuild,v 1.2 2007/03/12 15:11:43 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/gkrellm-vaiobright-2.5-r1.ebuild,v 1.3 2007/04/26 19:14:35 armin76 Exp $
 
 inherit gkrellm-plugin
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://nerv-un.net/~dragorn/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -*"
+KEYWORDS="-* x86"
 
 PLUGIN_SO=vaiobright.so
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellfire
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/ChangeLog,v 1.2 2007/03/09 15:57:48 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/ChangeLog,v 1.3 2007/04/26 19:06:24 armin76 Exp $
+
+  26 Apr 2007; Raúl Porcel <armin76@gentoo.org> gkrellfire-0.3.3.ebuild:
+  x86 stable wrt #176144
 
   09 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellfire-0.3.3.ebuild:
   Updated to use new gkrellm-plugin eclass

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-imonc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-imonc/ChangeLog,v 1.5 2007/03/09 18:59:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-imonc/ChangeLog,v 1.6 2007/04/26 19:12:16 armin76 Exp $
+
+  26 Apr 2007; Raúl Porcel <armin76@gentoo.org> gkrellm-imonc-0.2.ebuild:
+  x86 stable wrt #176144
 
   09 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-imonc-0.2.ebuild:
   Updated to use new gkrellm-plugin eclass
