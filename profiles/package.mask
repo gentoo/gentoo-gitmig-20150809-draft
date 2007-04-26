@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7174 2007/04/26 09:17:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7175 2007/04/26 16:01:38 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -595,10 +595,6 @@ net-irc/nikibot
 # Deprecated in favor of dev-java/avalon-logkit that
 # is built from source
 dev-java/avalon-logkit-bin
-
-# Steve Dibb <beandog@gentoo.org> (26 Feb 2007)
-# Security bug 159727
-<media-video/mplayer-1.0_rc1-r2
 
 # Gustavo Felisberto <humpback@gentoo.org> (23 Feb 2007)
 # Masked for remove from tree. Contact me if you need this
