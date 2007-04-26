@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.305 2007/04/26 19:20:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.306 2007/04/26 22:37:35 masterdriverz Exp $
+
+  26 Apr 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  vanilla-sources-2.6.21.ebuild:
+  Readd dropped keywords, thanks to zibbe for reporting
 
   26 Apr 2007; Steve Dibb <beandog@gentoo.org>
   vanilla-sources-2.6.16.46.ebuild, vanilla-sources-2.6.18.8.ebuild,
