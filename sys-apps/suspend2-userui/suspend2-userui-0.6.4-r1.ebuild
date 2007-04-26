@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.6.4-r1.ebuild,v 1.3 2007/01/09 00:22:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.6.4-r1.ebuild,v 1.4 2007/04/26 05:41:10 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -62,7 +62,7 @@ pkg_postinst() {
 	fi
 
 	einfo
-	einfo "Please see /usr/share/doc/${PF}/README.gz for further"
+	einfo "Please see /usr/share/doc/${PF}/README.* for further"
 	einfo "instructions."
 	einfo
 }
