@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-2.1.0-r1.ebuild,v 1.1 2007/03/17 16:32:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-2.1.0-r1.ebuild,v 1.2 2007/04/26 09:48:03 voyageur Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ RDEPEND="
 	amd64? ( app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-soundlibs
 		app-emulation/emul-linux-x86-xlibs )
-"
+	!net-misc/nxclient-2xterminalserver"
 
 S=${WORKDIR}/NX
 
