@@ -1,3 +1,7 @@
+# 2007/04/27 Jeroen Roovers <jer@gentoo.org>
+# To my knowledge, no PA hardware supports variable CPU frequencies
+cpufreq
+
 # 2007/04/07 Jeroen Roovers <jer@gentoo.org>
 # gnustep-make needs gcc with USE=gcj
 gnustep
