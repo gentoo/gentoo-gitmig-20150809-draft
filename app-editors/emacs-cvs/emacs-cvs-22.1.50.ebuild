@@ -1,14 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.99.ebuild,v 1.2 2007/04/26 08:59:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.1 2007/04/26 08:59:31 ulm Exp $
+
+ECVS_AUTH="pserver"
+ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
+ECVS_MODULE="emacs"
+ECVS_BRANCH="HEAD"
+ECVS_LOCALNAME="emacs"
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
 
-inherit autotools elisp-common eutils flag-o-matic
+inherit autotools cvs elisp-common eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
-SRC_URI="ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
+SRC_URI=""
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 IUSE="alsa gif gtk gzip-el hesiod jpeg lesstif motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 
@@ -40,17 +46,24 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="22"
-# FULL_VERSION keeps the full version number, which is needed in order to
-# determine some path information correctly for copy/move operations later on
-FULL_VERSION="${PV}"
 LICENSE="GPL-2 FDL-1.2"
 KEYWORDS="~amd64 ~sparc ~x86"
-S="${WORKDIR}/emacs-${PV}"
+S="${WORKDIR}/${ECVS_LOCALNAME}"
+EMACS_SUFFIX="emacs-${SLOT}-cvs"
 
 src_unpack() {
-	unpack ${A}
+	cvs_src_unpack
 
 	cd "${S}"
+	# FULL_VERSION keeps the full version number, which is needed in order to
+	# determine some path information correctly for copy/move operations later on
+	FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
+		| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
+	[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
+	echo
+	einfo "Emacs version number is ${FULL_VERSION}"
+	echo
+
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
@@ -125,7 +138,7 @@ src_compile() {
 	use hesiod && myconf="${myconf} --with-hesiod"
 
 	econf \
-		--program-suffix=-emacs-${SLOT} \
+		--program-suffix=-${EMACS_SUFFIX} \
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
@@ -136,26 +149,26 @@ src_compile() {
 src_install () {
 	emake install DESTDIR="${D}" || die "make install failed"
 
-	rm "${D}"/usr/bin/emacs-${FULL_VERSION}-emacs-${SLOT} \
+	rm "${D}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
 		|| die "removing duplicate emacs executable failed"
-	mv "${D}"/usr/bin/emacs-emacs-${SLOT} "${D}"/usr/bin/emacs-${SLOT} \
+	mv "${D}"/usr/bin/emacs-${EMACS_SUFFIX} "${D}"/usr/bin/${EMACS_SUFFIX} \
 		|| die "moving Emacs executable failed"
 
 	# move info documentation to the correct place
 	einfo "Fixing info documentation..."
-	dodir /usr/share/info/emacs-${SLOT}
-	mv "${D}"/usr/share/info/{,emacs-${SLOT}/}dir || die "mv dir failed"
+	dodir /usr/share/info/${EMACS_SUFFIX}
+	mv "${D}"/usr/share/info/{,${EMACS_SUFFIX}/}dir || die "mv dir failed"
 	for i in "${D}"/usr/share/info/*
 	do
-		if [ "${i##*/}" != emacs-${SLOT} ] ; then
-			mv ${i} ${i/info/info/emacs-${SLOT}}.info
+		if [ "${i##*/}" != ${EMACS_SUFFIX} ] ; then
+			mv ${i} ${i/info/info/${EMACS_SUFFIX}}.info
 		fi
 	done
 
 	# move man pages to the correct place
 	einfo "Fixing manpages..."
 	for m in "${D}"/usr/share/man/man1/* ; do
-		mv ${m} ${m%.1}-emacs-${SLOT}.1 || die "mv man failed"
+		mv ${m} ${m%.1}-${EMACS_SUFFIX}.1 || die "mv man failed"
 	done
 
 	# avoid collision between slots, see bug #169033 e.g.
@@ -168,12 +181,12 @@ src_install () {
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.[ch]
-		sed 's/^X//' >00emacs-cvs-${SLOT}-gentoo.el <<EOF
+		sed 's/^X//' >00${PN}-${SLOT}-gentoo.el <<EOF
 (if (string-match "\\\\\`${FULL_VERSION//./\\\\.}\\\\>" emacs-version)
-X    (setq find-function-C-source-directory
+X	 (setq find-function-C-source-directory
 X	  "/usr/share/emacs/${FULL_VERSION}/src"))
 EOF
-		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
+		elisp-site-file-install 00${PN}-${SLOT}-gentoo.el
 	fi
 
 	dodoc AUTHORS BUGS CONTRIBUTE README || die "dodoc failed"
@@ -184,7 +197,7 @@ emacs-infodir-rebuild() {
 	# or removed. It is only rebuilt by Portage if our directory is in
 	# INFOPATH, which is not guaranteed. So we rebuild it ourselves.
 
-	local infodir=/usr/share/info/emacs-${SLOT} f
+	local infodir=/usr/share/info/${EMACS_SUFFIX} f
 	einfo "Regenerating Info directory index in ${infodir} ..."
 	rm -f ${ROOT}${infodir}/dir{,.*}
 	for f in ${ROOT}${infodir}/*.info*; do
@@ -200,13 +213,7 @@ pkg_postinst() {
 
 	elisp-site-regen
 	emacs-infodir-rebuild
-
-	if [[ "$(readlink ${ROOT}/usr/bin/emacs)" == emacs.emacs-${SLOT}* ]]; then
-		# transition from pre-eselect revision
-		eselect emacs set emacs-${SLOT}
-	else
-		eselect emacs update --if-unset
-	fi
+	eselect emacs update --if-unset
 
 	if use X; then
 		elog "You need to install some fonts for Emacs. Under monolithic"

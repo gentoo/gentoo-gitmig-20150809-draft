@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.98.ebuild,v 1.7 2007/04/20 19:45:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.98.ebuild,v 1.8 2007/04/26 08:59:31 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -155,7 +155,7 @@ src_install () {
 	# move man pages to the correct place
 	einfo "Fixing manpages..."
 	for m in "${D}"/usr/share/man/man1/* ; do
-		mv ${m} ${m/.1/-emacs-${SLOT}.1} || die "mv man failed"
+		mv ${m} ${m%.1}-emacs-${SLOT}.1 || die "mv man failed"
 	done
 
 	# avoid collision between slots, see bug #169033 e.g.
