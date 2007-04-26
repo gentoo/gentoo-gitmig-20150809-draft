@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.18.1.ebuild,v 1.1 2007/04/26 16:09:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.18.1.ebuild,v 1.2 2007/04/26 16:11:46 dang Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils gnome2 autotools
@@ -35,7 +35,7 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
-	epatch ${FILESDIR}/${PN}-2.18.0-sessionsaver-v4.patch
+	epatch "${FILESDIR}"/${PN}-2.18.0-sessionsaver-v4.patch.gz
 
 	cp aclocal.m4 old_macros.m4
 	AT_M4DIR=". ${S}/m4" eautoreconf
