@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.4.ebuild,v 1.10 2006/12/10 10:55:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.0.6.ebuild,v 1.1 2007/04/26 23:46:53 battousai Exp $
 
 inherit eutils perl-app
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cipherdyne.org/psad"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc alpha ~sparc"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 
 DEPEND="${DEPEND}
 	dev-lang/perl"
@@ -21,23 +21,21 @@ RDEPEND="virtual/logger
 	dev-perl/Unix-Syslog
 	dev-perl/Date-Calc
 	virtual/mailx
-	net-firewall/iptables"
+	net-firewall/iptables
+	net-misc/whois"
 
 src_compile() {
-	cd ${S}/Psad
-	SRC_PREP="no" perl-module_src_compile
-	emake test
-
 	cd ${S}/Net-IPv4Addr
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd ${S}/IPTables/Parse
+	cd ${S}/IPTables-Parse
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd ${S}/whois
-	emake || die "Make failed: whois"
+	cd ${S}/IPTables-ChainMgr
+	SRC_PREP="no" perl-module_src_compile
+	emake test
 
 	cd ${S}
 	# We'll use the C binaries
@@ -52,23 +50,15 @@ src_install() {
 
 	keepdir /var/lib/psad /var/log/psad /var/run/psad /var/lock/subsys/${PN}
 	dodir /etc/psad
-	cd ${S}/Psad
-	insinto /usr/lib/psad
-	doins Psad.pm
 
 	cd ${S}/Net-IPv4Addr
-	insinto /usr/lib/psad/Net
-	doins IPv4Addr.pm
+	perl-module_src_install
 
-	cd ${S}/IPTables/Parse
-	insinto /usr/lib/psad/IPTables
-	doins Parse.pm
+	cd ${S}/IPTables-ChainMgr
+	perl-module_src_install
 
-	cd ${S}/whois
-	# Makefile seems borken, do install by hand...
-	insinto /usr
-	newbin whois whois_psad
-	newman whois.1 whois_psad.1
+	cd ${S}/IPTables-Parse
+	perl-module_src_install
 
 	cd ${S}
 	insinto /usr
@@ -83,7 +73,7 @@ src_install() {
 	insinto /etc/psad
 	doins *.conf
 	doins psad_*
-	doins auto_dl icmp_types posf signatures
+	doins auto_dl icmp_types ip_options posf signatures pf.os
 
 	cd ${S}/init-scripts
 	exeinto /etc/init.d
@@ -112,10 +102,33 @@ pkg_postinst() {
 	einfo "the validity of the HOSTNAME setting and replace the EMAIL_ADDRESSES and"
 	einfo "HOME_NET settings at the least."
 	echo
-	einfo "If you are using a logger other than sysklogd, please be sure to change the"
-	einfo "syslogdCmd setting in /etc/psad/psad.conf. An example for syslog-ng users"
-	einfo "would be:"
-	einfo "		syslogdCmd	/usr/sbin/syslog-ng;"
+	if has_version ">=app-admin/syslog-ng-0.0.0"
+	then
+		ewarn "You appear to have installed syslog-ng. If you are using syslog-ng as your"
+		ewarn "default system logger, please change the SYSLOG_DAEMON entry in"
+		ewarn "/etc/psad/psad.conf to the following (per examples in psad.conf):"
+		ewarn "		SYSLOG_DAEMON	syslog-ng;"
+		echo
+	fi
+	if has_version ">=app-admin/sysklogd-0.0.0"
+	then
+		einfo "You have sysklogd installed. If this is your default system logger, no"
+		einfo "special configuration is needed. If it is not, please set SYSLOG_DAEMON"
+		einfo "in /etc/psad/psad.conf accordingly."
+		echo
+	fi
+	if has_version ">=app-admin/metalog-0.0"
+	then
+		ewarn "You appear to have installed metalog. If you are using metalog as your"
+		ewarn "default system logger, please change the SYSLOG_DAEMON entry in"
+		ewarn "/etc/psad/psad.conf to the following (per examples in psad.conf):"
+		ewarn "		SYSLOG_DAEMON	metalog"
+	fi
+
+	ewarn "NOTE: You need firewall rules to log dropped packets. Otherwise PSAD will"
+	ewarn "not be aware of any port scan attacks. Please see FW_EXAMPLE_RULES in the"
+	ewarn "psad documentation directory (ie /usr/share/doc/${P}) for the criteria and"
+	ewarn "sample rules."
 }
 
 fix_psad_conf() {
@@ -130,6 +143,6 @@ fix_psad_conf() {
 	# Fix up paths
 	sed -i "s:/sbin/syslogd:/usr/sbin/syslogd:g" psad.conf || die "fix_psad_conf failed"
 	sed -i "s:/sbin/syslog-ng:/usr/sbin/syslog-ng:g" psad.conf || die "fix_psad_conf failed"
-	sed -i "s:/bin/uname:/usr/bin/uname:g" psad.conf || die "fix_psad_conf failed"
-	sed -i "s:/bin/mknod:/usr/bin/mknod:g" psad.conf || die "fix_psad_conf failed"
+	sed -i "s:/usr/bin/whois_psad:/usr/bin/whois:g" psad.conf || die "fix_psad_conf failed"
 }
+

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.7 2006/12/18 12:31:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.8 2007/04/26 23:46:53 battousai Exp $
 
 inherit eutils perl-app
 
@@ -55,16 +55,16 @@ src_install() {
 	keepdir /var/lib/psad /var/log/psad /var/run/psad /var/lock/subsys/${PN}
 	dodir /etc/psad
 	cd ${S}/Psad
-	emake install DESTDIR=${D} || die "Install failed: Psad.pm"
+	perl-module_src_install
 
 	cd ${S}/Net-IPv4Addr
-	emake install DESTDIR=${D} || die "Install failed: Net-IPv4Addr.pm"
+	perl-module_src_install
 
 	cd ${S}/IPTables-ChainMgr
-	emake install DESTDIR=${D} || die "Install failed: IPTables-Mgr.pm"
+	perl-module_src_install
 
 	cd ${S}/IPTables-Parse
-	emake install DESTDIR=${D} || die "Install failed: IPTables-Parse.pm"
+	perl-module_src_install
 
 	cd ${S}
 	insinto /usr
