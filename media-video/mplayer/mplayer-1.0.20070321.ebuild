@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_pre20070321-r4.ebuild,v 1.5 2007/04/09 16:33:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070321.ebuild,v 1.1 2007/04/26 15:52:43 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -21,10 +21,10 @@ done
 
 BLUV=1.7
 SVGV=1.9.17
-
+MY_PV="1.0_rc2_pre20070321"
 S="${WORKDIR}/${PN}"
 AMR_URI="http://www.3gpp.org/ftp/Specs/archive"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
+SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.bz2
 	!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 				 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 				 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
@@ -156,7 +156,7 @@ pkg_setup() {
 
 src_unpack() {
 
-	unpack ${P}.tar.bz2
+	unpack ${PN}-${MY_PV}.tar.bz2
 
 	if ! use truetype ; then
 		unpack font-arial-iso-8859-1.tar.bz2 \
