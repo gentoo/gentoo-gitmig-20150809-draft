@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd,v 1.4 2007/04/13 08:23:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd,v 1.5 2007/04/26 19:02:44 dberkholz Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -80,7 +80,7 @@ setup_dm() {
 		*)
 			EXE=
 			# Fix #65586, where MY_XDM is empty so EXE=somedir
-			[ -x "/usr/bin/${MY_XDM}" -a -f "/usr/bin/${MY_XDM}" ] \
+			[ -x "/usr/bin/${MY_XDM}" ] && [ -f "/usr/bin/${MY_XDM}" ] \
 				&& EXE="/usr/bin/${MY_XDM}"
 			[ -z "${EXE}" ] && EXE="/usr/bin/xdm"
 			;;
@@ -90,7 +90,7 @@ setup_dm() {
 }
 
 cmdline_opt() {
-	if [ $# -ne 1 -o ! -r /proc/cmdline ]; then
+	if [ $# -ne 1 ] || ! [ -r /proc/cmdline ]; then
 		return 1
 	fi
 
@@ -116,7 +116,7 @@ start() {
 
 		# Start as soon as possible if XSTATICVT is set
 		# or if we don't have telinit (as on BSD)
-		if [ "${XSTATICVT}" = "yes" -o ! -x /sbin/telinit ] ; then
+		if [ "${XSTATICVT}" = "yes" ] || ! [ -x /sbin/telinit ] ; then
 			/etc/X11/startDM.sh
 		else
 			#tell init to run /etc/X11/startDM.sh after current
