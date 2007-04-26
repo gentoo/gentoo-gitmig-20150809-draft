@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.14 2007/04/26 17:47:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.15 2007/04/26 17:52:16 aballier Exp $
+
+  26 Apr 2007; Alexis Ballier <aballier@gentoo.org> -mlt-20051209.ebuild:
+  remove old snapshot and fix header
 
   26 Apr 2007; Alexis Ballier <aballier@gentoo.org>
   +files/mlt-0.2.3-nostrip.patch, mlt-0.2.3.ebuild:
