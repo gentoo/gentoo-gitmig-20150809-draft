@@ -1,6 +1,13 @@
 # ChangeLog for net-im/openc6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/ChangeLog,v 1.11 2007/02/09 04:21:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/ChangeLog,v 1.12 2007/04/26 13:58:15 drizzt Exp $
+
+*openc6-0.9.9 (26 Apr 2007)
+
+  26 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> metadata.xml,
+  +openc6-0.9.9.ebuild:
+  Version bump wrt bug #161767
+  Ebuild created by myself.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
