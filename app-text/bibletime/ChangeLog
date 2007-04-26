@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.40 2007/04/07 13:27:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.41 2007/04/26 22:07:28 philantrop Exp $
+
+  26 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  bibletime-1.6.3.ebuild:
+  Corrected lots of localisation issues. Fixes bug 172192.
 
 *bibletime-1.6.3 (20 Mar 2007)
 

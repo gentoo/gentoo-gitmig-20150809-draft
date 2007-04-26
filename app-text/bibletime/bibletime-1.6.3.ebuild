@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.3.ebuild,v 1.1 2007/03/20 23:19:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.3.ebuild,v 1.2 2007/04/26 22:07:28 philantrop Exp $
 
 inherit kde eutils versionator
 
@@ -41,47 +41,83 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	kde_src_unpack
-
-	local MAKE_LANGS MAKE_LANGS_DOC
-	for X in ${LANGS}; do
-		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X/pt_BR/pt_br}.po
-		${X/uk/ua}.po"
-	done
-	for X in ${LANGS_DOC}; do
-		use linguas_${X} && MAKE_LANGS_DOC="${MAKE_LANGS_DOC} ${X/pt_BR/pt-br}
-		${X/uk/ua}"
-	done
-
-	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
-		cd "${WORKDIR}/${LANGS_PKG}"
-		sed -i -e "s,^POFILES.*,POFILES = ${MAKE_LANGS}," po/Makefile.am
-		sed -i -e "s,^SUBDIRS.*,SUBDIRS = ${MAKE_LANGS_DOC}," docs/Makefile.am
-		rm configure
-	fi
-}
-
 src_compile() {
+	cd ${S}
+
+	# Those paths are missing a slash.
+	sed -i -e "s:\$(kde_htmldir):\$(kde_htmldir)/:g" ${KDE_S}/docs/handbook/unicode/Makefile.*
+	sed -i -e "s:\$(kde_htmldir):\$(kde_htmldir)/:g" ${KDE_S}/docs/handbook/html/Makefile.*
+	sed -i -e "s:\$(kde_htmldir):\$(kde_htmldir)/:g" ${KDE_S}/docs/howto/unicode/Makefile.*
+
 	kde_src_compile
 
-	local _S="${S}"
+	local MAKE_PO MAKE_DOC TMP
+	local _S="${KDE_S}"
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
-		S="${WORKDIR}/${LANGS_PKG}"
-		cd "${S}"
+		KDE_S="${WORKDIR}/${LANGS_PKG}"
+		cd "${KDE_S}"
+
+		# Adapted from kde.eclass
+		if [[ -z ${LINGUAS} ]]; then
+			einfo "You can add some of the translations of the interface and"
+			einfo "documentation by setting the \${LINGUAS} variable to the"
+			einfo "languages you want installed."
+			einfo
+			einfo "Enabling English interface and documentation only."
+		else
+			if [[ -n ${LANGS} ]]; then
+				MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | tr ' ' '\n' | sort | uniq -d))
+				TMP=$(echo $(echo "${MAKE_PO/pt_BR/pt_br}" | sort | uniq))
+				TMP=$(echo $(echo "${TMP/uk/ua}" | sort | uniq))
+				TMP+=" "
+				MAKE_PO=${TMP// /.po }
+
+				einfo "Enabling translations for: ${MAKE_PO}"
+				sed -i -e "s:^POFILES =.*:POFILES = ${MAKE_PO}:" "${KDE_S}/po/Makefile.am" \
+					|| die "sed for locale failed"
+				rm -f "${KDE_S}/configure"
+			fi
+
+			TMP=""
+
+			if [[ -n ${LANGS_DOC} ]]; then
+				MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | tr ' ' '\n' | sort | uniq -d))
+				TMP=$(echo $(echo "${MAKE_DOC/pt_BR/pt-br}" | sort | uniq))
+				TMP=$(echo $(echo "${TMP/uk/ua}" | sort | uniq))
+				MAKE_DOC=${TMP}
+
+				einfo "Enabling documentation for: ${MAKE_DOC}"
+				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC}:" \
+					"${KDE_S}/docs/Makefile.am" || die "sed for locale failed"
+
+				# Those paths are missing a slash.
+				for X in ${MAKE_DOC}; do
+					[[ -f ${KDE_S}/docs/${X}/handbook/unicode/Makefile.am ]] && \
+						sed -i -e "s:\$(kde_htmldir):\$(kde_htmldir)/:g" \
+							${KDE_S}/docs/${X}/handbook/unicode/Makefile.am || die "sed for handbook failed"
+					[[ -f ${KDE_S}/docs/${X}/handbook/unicode/Makefile.am ]] && \
+						sed -i -e "s:\$(kde_htmldir):\$(kde_htmldir)/:g" \
+							${KDE_S}/docs/${X}/howto/unicode/Makefile.am || die "sed for howto failed"
+				done
+
+				rm -f "${KDE_S}/configure"
+			fi
+		fi
+
 		kde_src_compile
 	fi
-	S="${_S}"
+	KDE_S="${_S}"
 }
 
 src_install() {
 	kde_src_install
 
-	local _S="${S}"
+	local _S="${KDE_S}"
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
-		S="${WORKDIR}/${LANGS_PKG}"
-		cd "${S}"
+		KDE_S="${WORKDIR}/${LANGS_PKG}"
+		cd "${KDE_S}"
+
 		kde_src_install
 	fi
-	S="${_S}"
+	KDE_S="${_S}"
 }
