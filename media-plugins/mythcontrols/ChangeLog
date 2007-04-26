@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythcontrols
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythcontrols/ChangeLog,v 1.5 2007/04/20 00:08:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythcontrols/ChangeLog,v 1.6 2007/04/26 18:42:11 cardoe Exp $
+
+*mythcontrols-0.20.1 (26 Apr 2007)
+
+  26 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythcontrols-0.20.1.ebuild:
+  bump to 0.20.1 release
 
   20 Apr 2007; Doug Goldstein <cardoe@gentoo.org> -mythcontrols-0.19.ebuild:
   remove old version
