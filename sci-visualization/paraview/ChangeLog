@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.5 2007/02/20 14:17:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.6 2007/04/26 13:53:43 markusle Exp $
+
+*paraview-2.6.1 (24 Apr 2007)
+
+  24 Apr 2007; Markus Dittrich <markusle@gentoo.org> +paraview-2.6.1.ebuild:
+  Version bump. Dropped ffmpeg keyword for now since the build 
+  fails due to undefined macros in one of the ffmpeg headers.
+  Thanks much to Sebastien Fabbro <bicatali@gentoo.org>
+  for his ebuild.
 
 *paraview-2.6.0 (20 Feb 2007)
 
