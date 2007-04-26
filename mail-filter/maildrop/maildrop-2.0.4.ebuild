@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.4.ebuild,v 1.1 2007/04/23 20:46:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.4.ebuild,v 1.2 2007/04/26 19:29:24 ferdy Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -42,8 +42,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-makedat.patch
+
 	# Do not use lazy bindings on /usr/bin/maildrop
-	sed -i -e "s~^maildrop_LDFLAGS =~& $(bindnow-flags)~g" maildrop/Makefile.in
+	sed -i -e "s~^maildrop_LDFLAGS =~& $(bindnow-flags)~g" maildrop/Makefile.am
 
 	# Prefer gdbm over berkdb
 	if use gdbm ; then
@@ -56,10 +58,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${PN}-1.8.1-disable-fam.patch
 	fi
 
-	# Only recreate configure if needed
-	if ! use fam || { ! use gdbm && use berkdb ; } ; then
-		eautoreconf
-	fi
+	eautoreconf
 }
 
 src_compile() {
