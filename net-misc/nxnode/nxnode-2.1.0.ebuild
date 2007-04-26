@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-2.1.0.ebuild,v 1.1 2007/03/30 16:06:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-2.1.0.ebuild,v 1.2 2007/04/26 10:01:57 voyageur Exp $
 
 inherit eutils
 
@@ -14,13 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
-DEPEND="
-	!net-misc/nx-x11
-	!net-misc/nx-x11-bin
-	!net-misc/nxcomp
-	!net-misc/nxproxy
-	!net-misc/nxserver-freenx
-"
+DEPEND="!net-misc/nxserver-freenx"
 
 RDEPEND="
 	=net-misc/nxclient-2*

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-2.1.0.ebuild,v 1.1 2007/03/21 00:15:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-2.1.0.ebuild,v 1.2 2007/04/26 10:06:32 voyageur Exp $
 
 inherit autotools eutils multilib
 
@@ -37,12 +37,7 @@ RDEPEND="x86? ( x11-libs/libXau
 
 DEPEND="${RDEPEND}
 		x11-misc/gccmakedep
-		x11-misc/imake
-		!net-misc/nx-x11
-		!net-misc/nx-x11-bin
-		!net-misc/nxcomp
-		!net-misc/nxproxy
-		!net-misc/nxssh"
+		x11-misc/imake"
 
 S=${WORKDIR}/${PN}-X11
 

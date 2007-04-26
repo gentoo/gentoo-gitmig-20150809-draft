@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.2 2007/03/21 00:15:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.3 2007/04/26 10:06:32 voyageur Exp $
+
+  26 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org> nx-1.5.0.ebuild,
+  nx-2.1.0.ebuild:
+  Cleaning old blockers
 
 *nx-2.1.0 (21 Mar 2007)
 

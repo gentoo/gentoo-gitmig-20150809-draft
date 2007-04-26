@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-1.5.0.ebuild,v 1.1 2006/11/08 21:27:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-1.5.0.ebuild,v 1.2 2007/04/26 10:06:32 voyageur Exp $
 
 inherit eutils
 
@@ -66,11 +66,6 @@ DEPEND="${RDEPEND}
 			virtual/x11
 		)
 		app-text/rman
-		!net-misc/nx-x11
-		!net-misc/nx-x11-bin
-		!net-misc/nxcomp
-		!net-misc/nxproxy
-		!net-misc/nxssh
 		"
 S=${WORKDIR}/${PN//x11/X11}
 
