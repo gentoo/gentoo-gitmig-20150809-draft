@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.21_rc6.ebuild,v 1.1 2007/04/07 22:28:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.21.ebuild,v 1.1 2007/04/26 09:45:41 phreak Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
