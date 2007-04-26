@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.2-r2.ebuild,v 1.3 2007/04/25 18:01:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.2-r2.ebuild,v 1.4 2007/04/26 12:15:36 opfer Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/jakarta/commons/jxpath/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEPEND="=dev-java/commons-beanutils-1.6*
