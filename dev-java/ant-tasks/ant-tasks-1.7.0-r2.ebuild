@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0-r2.ebuild,v 1.1 2007/03/28 09:36:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0-r2.ebuild,v 1.2 2007/04/26 23:28:02 caster Exp $
 
 inherit java-pkg-2 eutils
 
@@ -52,9 +52,8 @@ src_compile() { :; }
 
 my_reg_jars() {
 	# Recording jars to get the same behaviour as before
-	local oldifs="${IFS}"
-	IFS=":"
-	for jar in $(java-pkg_getjars ${1}); do
+	local jars="$(java-pkg_getjars ${1})"
+	for jar in ${jars//:/ }; do
 		# these two are only for tasks, not core
 		if [[ "${1}" != ant-core ]]; then
 			# this one for package.env, thus java-config -p etc
@@ -66,7 +65,6 @@ my_reg_jars() {
 		# doesn't use the launcher
 		dosym ${jar} /usr/share/ant/lib/
 	done
-	IFS="${oldifs}"
 }
 
 src_install() {

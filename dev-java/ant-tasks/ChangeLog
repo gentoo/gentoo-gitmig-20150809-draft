@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.60 2007/04/25 20:45:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.61 2007/04/26 23:28:02 caster Exp $
+
+  26 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  ant-tasks-1.7.0-r2.ebuild:
+  Remove IFS mangling to prevent potential breakage.
 
   25 Apr 2007; Vlastimil Babka <caster@gentoo.org> -ant-tasks-1.7.0.ebuild,
   -ant-tasks-1.7.0-r1.ebuild:
