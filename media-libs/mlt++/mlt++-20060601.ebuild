@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20060601.ebuild,v 1.3 2006/11/11 16:39:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20060601.ebuild,v 1.4 2007/04/26 21:05:40 aballier Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-relink.patch"
 }
 
 src_compile() {
