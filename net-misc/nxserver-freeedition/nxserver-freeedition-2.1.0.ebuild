@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-2.1.0.ebuild,v 1.1 2007/03/30 16:14:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-2.1.0.ebuild,v 1.2 2007/04/26 09:51:09 voyageur Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 RESTRICT="nostrip"
 
 DEPEND="=net-misc/nxnode-2.1*
-		!net-misc/nxserver-freenx"
+		!net-misc/nxserver-freenx
+		!net-misc/nxserver-2xterminalserver"
 RDEPEND="${DEPEND}"
 QA_TEXTRELS="usr/NX/lib/perl/GD.so"
 

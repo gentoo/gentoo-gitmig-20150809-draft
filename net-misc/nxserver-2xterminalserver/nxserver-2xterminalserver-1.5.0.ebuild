@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.1 2007/04/25 16:02:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.2 2007/04/26 09:56:53 voyageur Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,7 +45,9 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-proto/xproto
 	x11-proto/xextproto
-	x11-proto/fontsproto"
+	x11-proto/fontsproto
+	!net-misc/nxserver-freeedition
+	!net-misc/nxserver-freenx"
 
 S="${WORKDIR}"
 

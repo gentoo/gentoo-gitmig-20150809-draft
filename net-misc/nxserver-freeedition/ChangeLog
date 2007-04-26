@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.1 2007/03/30 16:14:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.2 2007/04/26 09:51:09 voyageur Exp $
+
+  26 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freeedition-2.1.0.ebuild:
+  Updated blockers on other NX servers
 
 *nxserver-freeedition-2.1.0 (30 Mar 2007)
 
