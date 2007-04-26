@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.150 2007/04/23 18:26:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.151 2007/04/26 16:11:51 cardoe Exp $
+
+*mythtv-0.20.1_p13344 (26 Apr 2007)
+
+  26 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20_p13271.ebuild, -mythtv-0.20_p13288.ebuild,
+  +mythtv-0.20.1_p13344.ebuild:
+  Upstream introduced a binary change so plugins need to be recompiled. Just
+  going with 0.20.1 based versions to force the update.
 
   23 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   -mythtv-0.20_p12288.ebuild, -mythtv-0.20_p12288-r1.ebuild,

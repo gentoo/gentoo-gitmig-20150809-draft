@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p13271.ebuild,v 1.1 2007/04/19 14:08:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p13344.ebuild,v 1.1 2007/04/26 16:11:51 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3
 
@@ -112,7 +112,7 @@ src_unpack() {
 
 	# As needed fix since they don't know how to write qmake let alone a real
 	# make system
-	epatch "${FILESDIR}"/${PN}-${MY_PV}-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-0.20-as-needed.patch
 }
 
 src_compile() {
