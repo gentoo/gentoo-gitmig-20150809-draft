@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.72 2007/04/23 12:44:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.73 2007/04/26 13:06:33 opfer Exp $
+
+  26 Apr 2007; Christian Faulhammer <opfer@gentoo.org> kino-1.0.0.ebuild:
+  stable amd64, bug 175553; added x11-libs/libXv to DEPEND
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> kino-1.0.0.ebuild:
   Stable on sparc wrt #175553
