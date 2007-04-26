@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/softsqueeze/softsqueeze-2.0.ebuild,v 1.2 2006/11/16 13:11:15 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/softsqueeze/softsqueeze-2.0.ebuild,v 1.3 2007/04/26 23:59:52 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://softsqueeze.sourceforge.net/"
 SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=""
 RDEPEND="
