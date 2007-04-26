@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tkcvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.17 2007/04/25 11:47:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.18 2007/04/26 06:49:15 opfer Exp $
+
+  26 Apr 2007; Christian Faulhammer <opfer@gentoo.org> tkcvs-8.0.3.ebuild:
+  stable x86, bug 137278
 
   25 Apr 2007; Ferris McCormick <fmccor@gentoo.org> tkcvs-8.0.3.ebuild:
   Sparc stable --- Bug #137278 --- works fine for me.
