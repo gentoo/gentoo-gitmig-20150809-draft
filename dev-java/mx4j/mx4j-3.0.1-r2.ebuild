@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.5 2007/02/03 22:49:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.6 2007/04/26 23:21:30 caster Exp $
 
 JAVA_PKG_OPT_USE="examples"
 
@@ -31,12 +31,12 @@ COMMON_DEP="
 		dev-java/jython
 		=dev-java/gnu-jaf-1*
 		=dev-java/gnu-javamail-1*
-	)"
-
-
-RDEPEND="
+	)
 	=dev-java/mx4j-core-3.0*
 	=dev-java/mx4j-tools-3.0*
+	"
+
+RDEPEND="
 	${COMMON_DEP}
 	examples? ( >=virtual/jre-1.4 )"
 
@@ -91,12 +91,10 @@ src_install() {
 	fi
 
 	# Recording jars to get the same behaviour as before
-	oldifs="${IFS}"
-	IFS=":"
-	for jar in $(java-pkg_getjars mx4j-core-3.0,mx4j-tools-3.0); do
+	local jars="$(java-pkg_getjars mx4j-core-3.0,mx4j-tools-3.0)"
+	for jar in ${jars//:/ }; do
 		java-pkg_regjar "${jar}"
 	done
-	IFS="${oldifs}"
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mx4j
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.19 2007/04/08 13:04:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.20 2007/04/26 23:21:30 caster Exp $
+
+  26 Apr 2007; Vlastimil Babka <caster@gentoo.org> mx4j-3.0.1-r2.ebuild:
+  Fix dependencies and recording of jars.
 
   08 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -mx4j-3.0.1-r1.ebuild:
   Time for the non splitted ebuild to go.
