@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.78 2007/04/24 21:11:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.79 2007/04/26 14:50:00 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -834,7 +834,8 @@ java-pkg_recordjavadoc()
 #	--with-dependencies - get jars also from requested package's dependencies
 #	  transitively.
 #	--into $dir - symlink jar(s) into $dir (must exist) instead of .
-# @param $1 - Package to get jars from.
+# @param $1 - Package to get jars from, or comma-separated list of packages in
+#	case other parameters are not used.
 # @param $2 - jar from package. If not specified, all jars will be used.
 # @param $3 - When a single jar is specified, destination filename of the
 #	symlink. Defaults to the name of the jar.
@@ -875,18 +876,22 @@ java-pkg_jar-from() {
 	classpath="$(java-config ${deep} --classpath=${target_pkg})"
 	[[ $? != 0 ]] && die ${error_msg}
 
-	java-pkg_ensure-dep "${build_only}" "${target_pkg}"
+	# When we have commas this functions is called to bring jars from multiple
+	# packages. This affects recording of dependencencies performed later
+	# which expects one package only, so we do it here.
+	if [[ ${target_pkg} = *,* ]]; then
+		for pkg in ${target_pkg//,/ }; do
+			java-pkg_ensure-dep "${build_only}" "${pkg}"
+			[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${pkg}"
+		done
+		# setting this disables further record-jar_ calls later
+		build_only="build"
+	else
+		java-pkg_ensure-dep "${build_only}" "${target_pkg}"
+	fi
 
 	pushd ${destdir} > /dev/null \
 		|| die "failed to change directory to ${destdir}"
-
-	# When we have commas this functions is called to bring jars from multiple
-	# packages. This affects recording of dependencencies because that syntax uses :
-	# if we don't change them to : gjl and java-config -d -p break
-	if [[ ${target_pkg} = *,* ]]; then
-		build_only="build"
-		java-pkg_record-jar_ ${target_pkg//,/:}
-	fi
 
 	local jar
 	for jar in ${classpath//:/ }; do
