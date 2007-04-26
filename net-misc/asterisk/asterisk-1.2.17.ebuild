@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17.ebuild,v 1.1 2007/04/26 19:03:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17.ebuild,v 1.2 2007/04/26 19:42:26 gustavoz Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -40,7 +40,7 @@ RDEPEND="dev-libs/newt
 	media-sound/sox
 	ssl? ( dev-libs/openssl )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	pri? ( >=net-libs/libpri-1.2.3 )
+	pri? ( >=net-libs/libpri-1.2.4 )
 	h323? ( >=dev-libs/pwlib-1.8.3
 		>=net-libs/openh323-1.15.0 )
 	alsa? ( media-libs/alsa-lib )
@@ -51,7 +51,7 @@ RDEPEND="dev-libs/newt
 	zaptel? ( >=net-misc/zaptel-1.2.8 )
 	postgres? ( dev-db/postgresql )
 	osp? ( >=net-libs/osptoolkit-3.3.4 )
-	bri? (  >=net-libs/libpri-1.2.3-r1
+	bri? (  >=net-libs/libpri-1.2.4-r2
 		>=net-misc/zaptel-1.2.8 )"
 
 DEPEND="${RDEPEND}

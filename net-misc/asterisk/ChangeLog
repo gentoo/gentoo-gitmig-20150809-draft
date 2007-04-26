@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.157 2007/04/26 19:03:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.158 2007/04/26 19:42:26 gustavoz Exp $
+
+  26 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  asterisk-1.2.17.ebuild:
+  Make 1.2.17 want libpri-1.2.4
 
 *asterisk-1.2.17 (26 Apr 2007)
 
