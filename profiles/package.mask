@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7175 2007/04/26 16:01:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7176 2007/04/26 17:23:48 battousai Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Bryan Stine <battousai@gentoo.org> (26 Apr 2007)
+# Masked until it works with current baselayout and
+# application locations.
+app-admin/bastille
 
 # Ulrich Mueller <ulm@gentoo.org> (26 Apr 2007)
 # Live ebuild for the Emacs 22 CVS trunk
