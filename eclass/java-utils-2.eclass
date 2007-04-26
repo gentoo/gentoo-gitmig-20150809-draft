@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.79 2007/04/26 14:50:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.80 2007/04/26 23:32:12 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -997,12 +997,9 @@ java-pkg_getjars() {
 
 	# Only record jars that aren't build-only
 	if [[ -z "${build_only}" ]]; then
-		oldifs="${IFS}"
-		IFS=","
-		for pkg in ${pkgs}; do
+		for pkg in ${pkgs//:/ }; do
 			java-pkg_record-jar_ "${pkg}"
 		done
-		IFS="${oldifs}"
 	fi
 
 	echo "${classpath}"
