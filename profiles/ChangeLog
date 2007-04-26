@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.314 2007/04/26 16:01:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.315 2007/04/26 17:55:52 aballier Exp $
+
+  26 Apr 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove unneeded media-libs/mlt snapshot mask as its now gone as there are
+  official releases
 
   26 Apr 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Removing mplayer since ebuilds removed from tree

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7176 2007/04/26 17:23:48 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7177 2007/04/26 17:55:52 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1068,10 +1068,6 @@ media-gfx/xzgv
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/sid-milter
-
-# Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
-# masking snapshot version, official release is out
-=media-libs/mlt-20051209
 
 # Alastair Tse <liquidx@gentoo.org> (15 Jul 2006)
 # Python 2.1 and 2.2 have reported vunerabilities. Masked pending
