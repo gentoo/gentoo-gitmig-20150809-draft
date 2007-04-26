@@ -94,3 +94,7 @@ games-emulation/zsnes ao
 # Mask mmx for media-libs/mlt
 # assembler is not 64bits compliant (yet)
 media-libs/mlt mmx
+
+# Apr 26 2007: Steve Dibb <beandog@gentoo.org>
+# Remove real use mask for xine-lib
+media-libs/xine-lib -real
