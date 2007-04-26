@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.159 2007/04/26 19:44:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.160 2007/04/26 22:14:26 gustavoz Exp $
+
+  26 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/1.2.0/asterisk-1.2.17-ASA-2007-011.patch,
+  -files/1.2.0/asterisk-1.2.17-ASA-2007-012.patch, asterisk-1.2.17.ebuild:
+  Fix for cvs breaking headers on patches #176170
 
   26 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   asterisk-1.2.17.ebuild:

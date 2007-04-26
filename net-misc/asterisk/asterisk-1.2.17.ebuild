@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17.ebuild,v 1.3 2007/04/26 19:44:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17.ebuild,v 1.4 2007/04/26 22:14:26 gustavoz Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -9,7 +9,7 @@ IUSE="alsa bri curl debug doc gtk genericjb h323 hardened lowmem mmx \
 	elibc_uclibc"
 
 BRI_VERSION="0.3.0-PRE-1y-d"
-AST_PATCHES="1.2.11-patches-1.0"
+AST_PATCHES="1.2.17-patches-1.0"
 JB_PATCHES="1.2.11-jb"
 
 ## NOTE:
@@ -228,12 +228,6 @@ src_unpack() {
 		epatch "${FILESDIR}"/1.0.0/${PN}-1.0.5-uclibc-dns.diff
 		epatch "${FILESDIR}"/1.2.0/${PN}-1.2.1-uclibc-getloadavg.diff
 	fi
-
-	#
-	# Security patch bug #175960
-	#
-	epatch "${FILESDIR}"/1.2.0/${P}-ASA-2007-011.patch
-	epatch "${FILESDIR}"/1.2.0/${P}-ASA-2007-012.patch
 
 	#
 	# BRI patches
