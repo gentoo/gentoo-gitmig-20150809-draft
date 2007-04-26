@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.23 2007/04/25 11:30:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.24 2007/04/26 11:55:32 opfer Exp $
+
+  26 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  adaptx-0.9.13_p20041105-r2.ebuild:
+  stable x86, bug 175949
 
   25 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   adaptx-0.9.13_p20041105-r2.ebuild:
