@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r1.ebuild,v 1.4 2007/04/25 19:58:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r1.ebuild,v 1.5 2007/04/26 12:31:48 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
@@ -9,9 +9,9 @@ DESCRIPTION="Data binding framework for Java"
 SRC_URI="http://dist.codehaus.org/${PN}/${PV}/${P}-src.tgz"
 HOMEPAGE="http://www.castor.org"
 LICENSE="Exolab"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0.9"
-IUSE="doc examples source"
+IUSE="doc examples postgres source"
 
 COMMON_DEP="
 	>=dev-java/adaptx-0.9.5.3
@@ -36,11 +36,11 @@ DEPEND="|| (
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# TODO this should be filed upstream
-	epatch ${FILESDIR}/0.9.5.3-jikes.patch
+	epatch "${FILESDIR}/0.9.5.3-jikes.patch"
 
-	cd ${S}/lib
+	cd "${S}/lib"
 	rm -f *.jar
 	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from adaptx-0.9
@@ -55,7 +55,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}/src"
 	eant jar $(use_doc)
 }
 
