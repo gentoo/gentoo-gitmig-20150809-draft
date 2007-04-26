@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.1 2007/04/22 13:02:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.2 2007/04/26 22:38:17 swegener Exp $
 
 inherit multilib eutils autotools
 
@@ -10,12 +10,13 @@ HOMEPAGE="http://www.powerdns.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc ldap mysql postgres sqlite static tdb opendbx"
+IUSE="debug doc ldap mysql postgres sqlite sqlite3 static tdb opendbx"
 
 DEPEND="mysql? ( virtual/mysql )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )
 	sqlite? ( =dev-db/sqlite-2.8* )
+	sqlite3? ( =dev-db/sqlite-3* )
 	opendbx? ( dev-db/opendbx )
 	tdb? ( dev-libs/tdb )
 	>=dev-libs/boost-1.31"
@@ -41,6 +42,7 @@ src_compile() {
 	use mysql && modules="${modules} gmysql"
 	use postgres && modules="${modules} gpgsql"
 	use sqlite && modules="${modules} gsqlite"
+	use sqlite3 && modules="${modules} gsqlite3"
 	use opendbx && modules="${modules} opendbx"
 	use ldap && modules="${modules} ldap"
 	use tdb && modules="${modules} xdb"
@@ -56,6 +58,7 @@ src_compile() {
 		--with-pgsql-lib=/usr/$(get_libdir) \
 		--with-mysql-lib=/usr/$(get_libdir) \
 		--with-sqlite-lib=/usr/$(get_libdir) \
+		--with-sqlite3-lib=/usr/$(get_libdir) \
 		$(use_enable static static-binaries) \
 		${myconf} \
 		|| die "econf failed"
