@@ -1,0 +1,10 @@
+# ChangeLog for games-simulation/fgrun
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.1 2007/04/26 06:16:18 tupone Exp $
+
+*fgrun-0.4.8 (26 Apr 2007)
+
+  26 Apr 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/fgrun-0.4.8-fltk.patch, +metadata.xml, +fgrun-0.4.8.ebuild:
+  New package. Bug #130115 by Lawrence Shafer
+
