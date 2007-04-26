@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r2.ebuild,v 1.9 2007/04/26 20:09:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r2.ebuild,v 1.10 2007/04/26 20:12:33 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="A powerful, high performance and quality Code Generation Library, It is used to extend Java classes and implements interfaces at runtime."
+DESCRIPTION="A powerful, high performance and quality Code Generation Library."
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.jar"
 HOMEPAGE="http://cglib.sourceforge.net"
 LICENSE="Apache-1.1"
