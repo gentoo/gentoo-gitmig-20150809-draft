@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.8 2006/10/21 15:01:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.9 2007/04/26 08:03:55 mcummings Exp $
 
 inherit eutils
 
 DESCRIPTION="Small file-manager written in perl"
-HOMEPAGE="http://blog.perldude.de/archives/category/programming/filer/"
+HOMEPAGE="http://wiki.perldude.de/doku.php?id=filer"
 SRC_URI="http://perldude.de/projects/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -42,5 +42,5 @@ src_install() {
 	dodir /usr/bin
 	dodir /usr/lib
 	make install PREFIX=${D}/usr/
-	dodoc AUTHORS COPYING README ChangeLog  || die "dodoc failed"
+	dodoc AUTHORS README ChangeLog  || die "dodoc failed"
 }
