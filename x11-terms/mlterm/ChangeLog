@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.57 2007/04/24 19:43:34 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.58 2007/04/26 06:52:38 opfer Exp $
+
+  26 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
+  mlterm-2.9.3-r1.ebuild:
+  stable x86, bug 175813
 
   24 Apr 2007; Peter Weller <welp@gentoo.org> mlterm-2.9.3-r1.ebuild:
   Stable on amd64 wrt bug 175813
