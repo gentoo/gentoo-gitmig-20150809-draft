@@ -1,0 +1,11 @@
+diff -Nura asterisk-1.2.17/channels/h323/Makefile asterisk-1.2.17.h323/channels/h323/Makefile
+--- asterisk-1.2.17/channels/h323/Makefile	2007-03-06 12:17:16.000000000 -0300
++++ asterisk-1.2.17.h323/channels/h323/Makefile	2007-04-19 16:33:25.113788190 -0300
+@@ -31,7 +32,6 @@
+ 	touch $(SOURCES)
+ 
+ libchanh323.a:	$(OBJS)
+-	include $(OPENH323DIR)/openh323u.mak
+ 	ar crv $@ $(OBJS)
+ 
+ Makefile.ast:	FORCE

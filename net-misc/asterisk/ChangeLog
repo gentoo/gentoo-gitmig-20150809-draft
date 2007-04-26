@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.156 2007/04/19 19:46:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.157 2007/04/26 19:03:23 gustavoz Exp $
+
+*asterisk-1.2.17 (26 Apr 2007)
+
+  26 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/1.2.0/asterisk-1.2.17-ASA-2007-011.patch,
+  +files/1.2.0/asterisk-1.2.17-ASA-2007-012.patch,
+  +files/1.2.0/asterisk-1.2.17-h323-dumb-makefile.diff,
+  +asterisk-1.2.17.ebuild:
+  Verbump, should close #175960, #175858, #172680 and #172257
 
   19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   files/1.2.0/asterisk.rc6:

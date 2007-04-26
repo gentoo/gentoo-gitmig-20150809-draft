@@ -1,0 +1,41 @@
+--- asterisk-1.2.17/manager.c	2007-03-06 21:27:04.000000000 -0300
++++ asterisk-1.2.18/manager.c	2007-04-24 18:33:59.000000000 -0300
+@@ -46,7 +46,7 @@
+ 
+ #include "asterisk.h"
+ 
+-ASTERISK_FILE_VERSION(__FILE__, "$Revision: 1.1 $")
++ASTERISK_FILE_VERSION(__FILE__, "$Revision: 1.1 $")
+ 
+ #include "asterisk/channel.h"
+ #include "asterisk/file.h"
+@@ -533,7 +533,8 @@
+ 				} else if (ha)
+ 					ast_free_ha(ha);
+ 				if (!strcasecmp(authtype, "MD5")) {
+-					if (!ast_strlen_zero(key) && s->challenge) {
++					if (!ast_strlen_zero(key) && 
++					    !ast_strlen_zero(s->challenge) && !ast_strlen_zero(password)) {
+ 						int x;
+ 						int len=0;
+ 						char md5key[256] = "";
+@@ -885,15 +886,15 @@
+ 		astman_send_error(s, m, buf);
+ 		return 0;
+ 	}
+-	if (chan->_state != AST_STATE_UP) {
+-		astman_send_error(s, m, "Redirect failed, channel not up.\n");
++	if (ast_check_hangup(chan)) {
++		astman_send_error(s, m, "Redirect failed, channel hung up.\n");
+ 		ast_mutex_unlock(&chan->lock);
+ 		return 0;
+ 	}
+ 	if (!ast_strlen_zero(name2))
+ 		chan2 = ast_get_channel_by_name_locked(name2);
+-	if (chan2 && chan2->_state != AST_STATE_UP) {
+-		astman_send_error(s, m, "Redirect failed, extra channel not up.\n");
++	if (chan2 && ast_check_hangup(chan2)) {
++		astman_send_error(s, m, "Redirect failed, extra channel hung up.\n");
+ 		ast_mutex_unlock(&chan->lock);
+ 		ast_mutex_unlock(&chan2->lock);
+ 		return 0;
