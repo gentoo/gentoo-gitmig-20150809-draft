@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibutils
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/ChangeLog,v 1.3 2006/10/27 16:13:26 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/ChangeLog,v 1.4 2007/04/26 23:46:09 beandog Exp $
+
+  26 Apr 2007; Steve Dibb <beandog@gentoo.org> bibutils-3.27.ebuild:
+  add ~amd64, bug 176140
 
   27 Oct 2006; Chris White <chriswhite@gentoo.org> bibutils-3.27.ebuild:
   Adding ~ppc keywords per bug #152979.
