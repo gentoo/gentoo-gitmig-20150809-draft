@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.44 2007/04/24 14:04:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.45 2007/04/26 12:14:59 matsuu Exp $
+
+  26 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> -scim-qtimm-0.8.95.ebuild,
+  -scim-qtimm-0.9.3.ebuild:
+  Removed old versions, bug #174180.
 
   24 Apr 2007; Jeroen Roovers <jer@gentoo.org> scim-qtimm-0.9.4.ebuild:
   Stable for HPPA (bug #175813).
