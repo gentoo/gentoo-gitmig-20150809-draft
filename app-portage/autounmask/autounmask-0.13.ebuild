@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.12.ebuild,v 1.1 2007/04/25 13:44:50 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.13.ebuild,v 1.1 2007/04/26 06:39:59 ian Exp $
 
 DESCRIPTION="autounmask - Unmasking packages the easy way"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/autounmask/"
