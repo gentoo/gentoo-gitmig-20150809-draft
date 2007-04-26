@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r4.ebuild,v 1.5 2007/04/02 21:11:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r4.ebuild,v 1.6 2007/04/26 22:06:56 caster Exp $
 
+JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="A Java-based template engine that allows easy creation/rendering of documents that format and present data."
@@ -11,16 +12,9 @@ SRC_URI="mirror://apache/jakarta/${PN}/binaries/${P}/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="doc source"
+IUSE=""
 
-DEPEND="
-	!doc? ( >=virtual/jdk-1.4 )
-	doc? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* ) )
-	dev-java/ant-core
-	dev-java/antlr
-	dev-java/junit
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.4
+CDEPEND="=dev-java/junit-3*
 	dev-java/bcel
 	dev-java/commons-collections
 	=dev-java/jdom-1.0_beta9*
@@ -28,7 +22,14 @@ RDEPEND=">=virtual/jdk-1.4
 	=dev-java/avalon-logkit-1.2*
 	=dev-java/jakarta-oro-2.0*
 	=dev-java/servletapi-2.2*
-	dev-java/werken-xpath"
+	dev-java/werken-xpath
+	dev-java/ant-core"
+DEPEND="!doc? ( >=virtual/jdk-1.4 )
+	doc? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
+	dev-java/ant-core
+	${CDEPEND}"
+RDEPEND=">=virtual/jdk-1.4
+	${CDEPEND}"
 
 pkg_setup() {
 	if ! built_with_use dev-java/log4j javamail; then
@@ -44,11 +45,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-versioned_jar.patch
+	epatch "${FILESDIR}/${P}-versioned_jar.patch"
 
+	rm -v *.jar
 	cd "${S}/build/lib"
-	rm *.jar
-	java-pkg_jar-from antlr
+	rm -v *.jar
 	java-pkg_jar-from bcel
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from jakarta-oro-2.0
@@ -63,8 +64,7 @@ src_unpack() {
 
 src_compile () {
 	cd "${S}/build"
-	local antflags="jar jar-core jar-util jar-servlet"
-	eant ${antflags} $(use_doc javadocs) || die "Ant failed"
+	eant jar jar-core jar-util jar-servlet $(use_doc javadocs)
 }
 
 
@@ -72,7 +72,7 @@ src_install () {
 	java-pkg_dojar bin/*.jar
 
 	dodoc NOTICE README.txt || die
-	#has other stuff besides api too
+	# has other stuff besides api too
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/java/*
 }
