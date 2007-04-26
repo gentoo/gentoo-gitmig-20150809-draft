@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.5 2007/03/22 22:29:32 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.6 2007/04/26 15:54:09 twp Exp $
+
+*ragel-5.20 (26 Apr 2007)
+
+  26 Apr 2007; <twp@gentoo.org> -ragel-5.17-r1.ebuild, +ragel-5.20.ebuild:
+  Version bump.
 
   22 Mar 2007; <twp@gentoo.org> ragel-5.17-r1.ebuild, ragel-5.19.ebuild:
   Fix repoman ebuild.nesteddie warnings.

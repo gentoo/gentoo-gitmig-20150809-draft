@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-5.17-r1.ebuild,v 1.3 2007/03/22 22:29:32 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-5.20.ebuild,v 1.1 2007/04/26 15:54:09 twp Exp $
 
 inherit eutils
 
@@ -20,16 +20,19 @@ RDEPEND=""
 
 src_compile() {
 	econf || die
-	emake || die
-	( cd doc && make ragel.1 rlcodegen.1 ) || die
+	make || die
+	( cd doc && make ragel.1 rlgen-{cd,java,ruby,dot}.1 ) || die
 	if use doc; then
 		( cd doc && make ragel-guide.pdf ) || die
 	fi
 }
 
 src_install() {
-	dobin ragel/ragel rlcodegen/rlcodegen
-	doman doc/ragel.1 doc/rlcodegen.1
+	einstall || die
+	for i in cd java ruby dot; do
+		dobin rlgen-${i}/rlgen-${i}
+	done
+	doman doc/ragel.1 doc/rlgen-{cd,java,ruby,dot}.1
 	dodoc ChangeLog CREDITS README TODO
 	use doc && \
 		install -m 644 -D doc/ragel-guide.pdf \
