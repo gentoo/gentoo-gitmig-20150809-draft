@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-uim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.23 2007/02/21 22:12:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.24 2007/04/26 11:51:19 matsuu Exp $
+
+*scim-uim-0.2.0 (26 Apr 2007)
+
+  26 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> +scim-uim-0.2.0.ebuild:
+  Version bumped. bug #162500.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
