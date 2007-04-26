@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r2.ebuild,v 1.8 2007/04/25 21:03:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r2.ebuild,v 1.9 2007/04/26 20:09:09 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
@@ -25,24 +25,20 @@ S=${WORKDIR}
 src_unpack() {
 	jar xf ${DISTDIR}/${A} || die "failed to unpack"
 
-	epatch ${FILESDIR}/${P}-asm-1.4.3.patch
+	epatch "${FILESDIR}/${P}-asm-1.4.3.patch"
 
-	cd ${S}/lib
-	rm -f *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 	java-pkg_jar-from asm-1.4
 	java-pkg_jar-from aspectwerkz-2
 	java-pkg_jar-from ant-core ant.jar
-}
-
-src_compile() {
-	eant jar $(use_doc)
 }
 
 src_install() {
 	java-pkg_newjar dist/${PN}-${PV}.jar
 	java-pkg_newjar dist/${PN}-full-${PV}.jar ${PN}-full.jar
 
-	dodoc NOTICE README
+	dodoc NOTICE README || die
 	use doc && java-pkg_dojavadoc docs
 	use source && java-pkg_dosrc src/proxy/net
 }
