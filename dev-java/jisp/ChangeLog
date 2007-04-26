@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jisp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.3 2006/09/10 15:18:28 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.4 2007/04/26 12:36:35 opfer Exp $
+
+  26 Apr 2007; Christian Faulhammer <opfer@gentoo.org> jisp-2.5.1-r2.ebuild:
+  stable x86, bug 176079
 
   10 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> jisp-2.5.1-r2.ebuild:
   Added ~ppc.

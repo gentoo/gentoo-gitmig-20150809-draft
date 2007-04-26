@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.7.9.ebuild,v 1.2 2007/04/26 08:20:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.7.9.ebuild,v 1.3 2007/04/26 12:38:20 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="admin doc source"
 
 RDEPEND=">=virtual/jre-1.4

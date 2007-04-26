@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/jisp-2.5.1-r2.ebuild,v 1.2 2006/09/10 15:18:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/jisp-2.5.1-r2.ebuild,v 1.3 2007/04/26 12:36:35 opfer Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://gentooexperimental.org/distfiles/${P}-source.tar.gz"
 
 LICENSE="SVFL"
 SLOT="2.5"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
