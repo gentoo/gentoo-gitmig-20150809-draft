@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>cluster</herd>
+  <herd>ha-cluster</herd>
   <maintainer>
-    <email>cluster@gentoo.org</email>
+    <email>ha-cluster@gentoo.org</email>
   </maintainer>
   <longdescription>
     Feedbackd is an add-on to the Linux Virtual Server project (LVS) to provide dynamic feedback of server health.
