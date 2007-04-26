@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.26 2007/04/10 09:17:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.27 2007/04/26 02:58:06 robbat2 Exp $
+
+  26 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> diradm-2.1.ebuild,
+  diradm-2.2.ebuild, diradm-2.3.ebuild, diradm-2.4.ebuild,
+  diradm-2.5.ebuild, diradm-2.8.2.ebuild, diradm-2.9.ebuild,
+  diradm-2.9.1.ebuild, diradm-2.9.3.ebuild:
+  Clean up all usage of HOMEPAGE in SRC_URI, as well as not installing COPYING.
 
   10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> diradm-2.9.ebuild:
   Refix #172174.

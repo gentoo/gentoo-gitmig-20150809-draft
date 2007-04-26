@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.4.ebuild,v 1.6 2007/01/24 14:04:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.4.ebuild,v 1.7 2007/04/26 02:58:06 robbat2 Exp $
 
 DESCRIPTION="diradm is a nearly complete nss/shadow suite for managing POSIX users/groups/data in LDAP."
 HOMEPAGE="http://research.iat.sfu.ca/custom-software/diradm/"
-SRC_URI="${HOMEPAGE}/${P}.tar.bz2"
+SRC_URI="http://research.iat.sfu.ca/custom-software/diradm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc CHANGES* README AUTHORS COPYING ChangeLog NEWS README.prefork THANKS TODO
+	dodoc CHANGES* README AUTHORS ChangeLog NEWS README.prefork THANKS TODO
 	if use irixpasswd; then
 		insinto /etc/openldap/schema
 		doins irixpassword.schema

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.2.ebuild,v 1.5 2007/01/24 14:04:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.2.ebuild,v 1.6 2007/04/26 02:58:06 robbat2 Exp $
 
 DESCRIPTION="diradm is for managing posix users/groups in an LDAP directory"
 BASE_URI="http://research.iat.sfu.ca/custom-software/"
@@ -27,7 +27,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die
-	dodoc CHANGES* README AUTHORS COPYING ChangeLog NEWS README.prefork THANKS
+	dodoc CHANGES* README AUTHORS ChangeLog NEWS README.prefork THANKS
 }
 
 pkg_postinst() {
