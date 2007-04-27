@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tkcvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.18 2007/04/26 06:49:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.19 2007/04/27 03:54:37 josejx Exp $
+
+  27 Apr 2007; Joseph Jezak <josejx@gentoo.org> tkcvs-8.0.3.ebuild:
+  Marked ppc stable for bug #137278.
 
   26 Apr 2007; Christian Faulhammer <opfer@gentoo.org> tkcvs-8.0.3.ebuild:
   stable x86, bug 137278
