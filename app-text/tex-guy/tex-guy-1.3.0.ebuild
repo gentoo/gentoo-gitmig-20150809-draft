@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tex-guy/tex-guy-1.3.0.ebuild,v 1.3 2007/01/17 13:47:28 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tex-guy/tex-guy-1.3.0.ebuild,v 1.4 2007/04/27 04:00:56 josejx Exp $
 
 inherit libtool
 
@@ -9,7 +9,7 @@ DESCRIPTION="Miscellaneous utilities using DVIlib"
 HOMEPAGE="http://typehack.aial.hiroshima-u.ac.jp/TeX-Guy/"
 SRC_URI="ftp://ftp.se.hiroshima-u.ac.jp/pub/TypeHack/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""
