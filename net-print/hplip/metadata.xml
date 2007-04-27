@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>printing</herd>
+<maintainer>
+<email>calchan@gentoo.org</email>
+<name>Denis Dupeyron</name>
+</maintainer>
 </pkgmetadata>

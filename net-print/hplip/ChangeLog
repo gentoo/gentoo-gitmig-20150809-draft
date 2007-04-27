@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.60 2007/04/23 22:29:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.61 2007/04/27 06:58:42 calchan Exp $
+
+*hplip-1.7.4a (27 Apr 2007)
+
+  27 Apr 2007; Denis Dupeyron <calchan@gentoo.org> metadata.xml,
+  +hplip-1.7.4a.ebuild:
+  Version bump. Added fax and parport local USE flags. Dependency cleanups.
 
 *hplip-1.7.4 (23 Apr 2007)
 
