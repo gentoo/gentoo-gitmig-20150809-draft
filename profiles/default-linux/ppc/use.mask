@@ -102,3 +102,7 @@ alsa_cards_wavefront
 # George Shapovalov <george@gentoo.org> (8 Apr 2007)
 # supported on ppc
 -ada
+
+# Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
+# # Dell does not ship or sell PPC systems
+dell
