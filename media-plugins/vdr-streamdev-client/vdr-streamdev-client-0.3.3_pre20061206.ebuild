@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-client/vdr-streamdev-client-0.3.3_pre20061206.ebuild,v 1.1 2006/12/06 16:00:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-client/vdr-streamdev-client-0.3.3_pre20061206.ebuild,v 1.2 2007/04/27 00:09:47 beandog Exp $
 
 inherit vdr-plugin eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/vdr-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.24"
