@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.1 2007/01/26 10:15:07 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.2 2007/04/27 15:37:51 s4t4n Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ccxvii.net/gargoyle/download/${MY_P}-source.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=media-libs/freetype-2.1.9-r1
