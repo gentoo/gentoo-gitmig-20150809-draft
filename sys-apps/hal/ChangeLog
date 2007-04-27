@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.179 2007/04/25 20:20:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.180 2007/04/27 18:37:09 cardoe Exp $
+
+*hal-0.5.9-r1 (27 Apr 2007)
+
+  27 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/0.5.9/17_autoconf_cflag_cleanup.patch, +hal-0.5.9-r1.ebuild:
+  Add version that's locked to a certain patchset.
 
   25 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
   files/0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch:

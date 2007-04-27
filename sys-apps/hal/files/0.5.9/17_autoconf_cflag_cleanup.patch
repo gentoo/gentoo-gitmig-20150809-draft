@@ -1,28 +1,10 @@
 Index: b/configure.in
 ===================================================================
 --- a/configure.in	2007-04-03 00:36:44.000000000 -0400
-+++ b/configure.in	2007-04-24 16:57:54.000000000 -0400
-@@ -234,79 +234,66 @@
- fi
++++ b/configure.in	2007-04-26 02:16:37.000000000 -0400
+@@ -235,78 +235,48 @@
  
  #### gcc warning flags
-+dnl checks compiler support for CFLAG
-+AC_DEFUN([HAL_CC_TRY_FLAG], [
-+	  AC_MSG_CHECKING([whether $CC supports $1])
-+
-+  hal_save_CFLAGS="$CFLAGS"
-+  CFLAGS="$CFLAGS $1"
-+
-+  AC_COMPILE_IFELSE([ ], [hal_cc_flag=yes], [hal_cc_flag=no])
-+  CFLAGS="$hal_save_CFLAGS"
-+
-+  if test "x$hal_cc_flag" = "xyes"; then
-+    ifelse([$2], , :, [$2])
-+  else
-+    ifelse([$3], , :, [$3])
-+  fi
-+  AC_MSG_RESULT([$hal_cc_flag])
-+])
  
 -if test "x$GCC" = "xyes"; then
 -  changequote(,)dnl
@@ -35,16 +17,11 @@ Index: b/configure.in
 -  *[\ \	]-Wchar-subscripts[\ \	]*) ;;
 -  *) CFLAGS="$CFLAGS -Wchar-subscripts" ;;
 -  esac
--
--  case " $CFLAGS " in
--  *[\ \	]-Wmissing-declarations[\ \	]*) ;;
--  *) CFLAGS="$CFLAGS -Wmissing-declarations" ;;
--  esac
 +dnl Use as many warning flags as possible with gcc and compatible compilers
  
 -  case " $CFLAGS " in
--  *[\ \	]-Wnested-externs[\ \	]*) ;;
--  *) CFLAGS="$CFLAGS -Wnested-externs" ;;
+-  *[\ \	]-Wmissing-declarations[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wmissing-declarations" ;;
 -  esac
 +dnl If you change anything below in the variable, the cache is automatically
 +dnl ignored and everything is rechecked. So just add a flag and that's it.
@@ -53,14 +30,19 @@ Index: b/configure.in
 +dnl first, and the negating flags last
  
 -  case " $CFLAGS " in
--  *[\ \	]-Wpointer-arith[\ \	]*) ;;
--  *) CFLAGS="$CFLAGS -Wpointer-arith" ;;
+-  *[\ \	]-Wnested-externs[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wnested-externs" ;;
 -  esac
 +MAYBE_WARN="-Wall -Wextra \
 +-Wchar-subscripts -Wmissing-declarations -Wnested-externs \
 +-Wpointer-arith -Wcast-align -Wsign-compare -Wbad-function-cast \
 +-Waggregate-return -Wcast-align -Wcast-qual -Wshadow -Wredundant-decls"
  
+-  case " $CFLAGS " in
+-  *[\ \	]-Wpointer-arith[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wpointer-arith" ;;
+-  esac
+-
 -  case " $CFLAGS " in
 -  *[\ \	]-Wcast-align[\ \	]*) ;;
 -  *) CFLAGS="$CFLAGS -Wcast-align" ;;
@@ -83,7 +65,7 @@ Index: b/configure.in
 -    *) CFLAGS="$CFLAGS -ansi" ;;
 -    esac
 +  for W in $MAYBE_WARN; do
-+    HAL_CC_TRY_FLAG([$W], [CFLAGS="$CFLAGS $W"])
++    AC_CC_TRY_FLAG([$W], [CFLAGS="$CFLAGS $W"])
 +  done
  
 -    case " $CFLAGS " in
@@ -106,8 +88,8 @@ Index: b/configure.in
 -    esac
 +if test "x$GCC" = "xyes"; then
 +  if test "x$enable_ansi" = "xyes"; then
-+    HAL_CC_TRY_FLAG([-ansi], [CFLAGS="$CFLAGS -ansi"])
-+    HAL_CC_TRY_FLAG([-pedanitc], [CFLAGS="$CFLAGS -pedantic"])
++    AC_CC_TRY_FLAG([-ansi], [CFLAGS="$CFLAGS -ansi"])
++    AC_CC_TRY_FLAG([-pedanitc], [CFLAGS="$CFLAGS -pedantic"])
 +    CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=199309L -D_BSD_SOURCE"
    fi
 -  if test x$enable_gcov = xyes; then
@@ -123,10 +105,51 @@ Index: b/configure.in
 -    ## remove optimization
 -    CFLAGS=`echo "$CFLAGS" | sed -e 's/-O[0-9]*//g'`
 +  if test "x$enable_gcov" = "xyes"; then
-+    HAL_CC_TRY_FLAG([-fprofile-arcs], [CFLAGS="$CFLAGS -fprofile-arcs"])
-+    HAL_CC_TRY_FLAG([-ftest-coverage], [CFLAGS="$CFLAGS -ftest-coverage"])
++    AC_CC_TRY_FLAG([-fprofile-arcs], [CFLAGS="$CFLAGS -fprofile-arcs"])
++    AC_CC_TRY_FLAG([-ftest-coverage], [CFLAGS="$CFLAGS -ftest-coverage"])
    fi
 -  changequote([,])dnl
  else
    if test x$enable_gcov = xyes; then
      AC_MSG_ERROR([--enable-gcov can only be used with gcc])
+Index: b/m4/try_flag.m4
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ b/m4/try_flag.m4	2007-04-26 02:15:05.000000000 -0400
+@@ -0,0 +1,23 @@
++dnl Copied from Cairo configure.in
++dnl Tweaked for more general use by Doug Goldstein <cardoe@gentoo.org>
++dnl
++dnl check compiler flags
++dnl $1 - flag to check
++dnl $2 - when successful do this
++dnl $3 - when not successful, do this
++AC_DEFUN([AC_CC_TRY_FLAG], [
++	  AC_MSG_CHECKING([whether $CC supports $1])
++
++	ac_save_CFLAGS="$CFLAGS"
++	CFLAGS="$CFLAGS $1"
++	AC_COMPILE_IFELSE([ ], [ac_cc_flag=yes], [ac_cc_flag=no])
++	CFLAGS="$ac_save_CFLAGS"
++
++	if test "x$ac_cc_flag" = "xyes"; then
++		ifelse([$2], , :, [$2])
++	else
++		ifelse([$3], , :, [$3])
++	fi
++
++	AC_MSG_RESULT([$ac_cc_flag])
++])
+Index: b/Makefile.am
+===================================================================
+--- a/Makefile.am	2007-03-07 16:52:19.000000000 -0500
++++ b/Makefile.am	2007-04-26 02:15:42.000000000 -0400
+@@ -3,6 +3,8 @@
+ SUBDIRS = libhal libhal-storage partutil  hald hald-runner tools \
+           fdi doc po privileges
+ 
++ACLOCAL_AMFLAGS = -I m4
++
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = hal.pc hal-storage.pc
+ 
