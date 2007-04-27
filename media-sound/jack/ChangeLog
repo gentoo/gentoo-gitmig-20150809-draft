@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.13 2007/02/03 19:20:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.14 2007/04/27 00:46:53 beandog Exp $
+
+  27 Apr 2007; Steve Dibb <beandog@gentoo.org> jack-3.1.1.ebuild:
+  amd64 stable, bug 172952
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
