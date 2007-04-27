@@ -99,7 +99,3 @@ media-libs/mlt mmx
 # Remove real use mask for xine-lib
 media-libs/xine-lib -real
 
-# Apr 26 2007: Steve Dibb <beandog@gentoo.org>
-# Mask 'nsplugin' use flag on blackdown-j(dk|re), security bug 161835
-dev-java/blackdown-jdk nsplugin
-dev-java/blackdown-jre nsplugin
