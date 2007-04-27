@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.33 2007/04/10 18:11:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.34 2007/04/27 19:50:05 hansmi Exp $
+
+*netqmail-1.05-r8 (27 Apr 2007)
+
+  27 Apr 2007; Michael Hanselmann <hansmi@gentoo.org>
+  -files/1.05-r7-sslfix.diff, -netqmail-1.05-r7.ebuild,
+  +netqmail-1.05-r8.ebuild:
+  Bump SMTP-AUTH/TLS composite patch to 20070417. This makes my own patch
+  obsolete.
 
   10 Apr 2007; Michael Hanselmann <hansmi@gentoo.org>
   netqmail-1.05-r7.ebuild:

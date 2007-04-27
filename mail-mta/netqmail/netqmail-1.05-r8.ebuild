@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r7.ebuild,v 1.4 2007/04/10 18:11:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r8.ebuild,v 1.1 2007/04/27 19:50:05 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
-TLS_AUTH_PATCH=20070321
+TLS_AUTH_PATCH=20070417
 QMAIL_SPP_PATCH=0.42
 
 DESCRIPTION="qmail -- a secure, reliable, efficient, simple message transfer agent"
@@ -77,9 +77,6 @@ src_unpack() {
 
 	if ! use vanilla; then
 		use ssl && epatch ${DISTDIR}/netqmail-${PV}-tls-smtpauth-${TLS_AUTH_PATCH}.patch
-
-		# Temporary patch until upstream fixes it
-		use ssl && epatch "${FILESDIR}/${PVR}-sslfix.diff"
 
 		if use highvolume; then
 			epatch ${DISTDIR}/big-todo.103.patch
