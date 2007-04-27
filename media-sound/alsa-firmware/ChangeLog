@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.64 2007/04/26 19:04:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.65 2007/04/27 00:15:50 dsd Exp $
+
+*alsa-firmware-1.0.14_rc3-r1 (27 Apr 2007)
+
+  27 Apr 2007; Daniel Drake <dsd@gentoo.org>
+  +alsa-firmware-1.0.14_rc3-r1.ebuild:
+  Add echo3g support thanks to chriskoe in bug #168209
 
   26 Apr 2007; Steve Dibb <beandog@gentoo.org>
   alsa-firmware-1.0.14_rc2-r1.ebuild:
