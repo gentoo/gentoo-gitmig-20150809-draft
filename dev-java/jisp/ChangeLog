@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jisp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.4 2007/04/26 12:36:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.5 2007/04/27 03:57:33 wltjr Exp $
+
+  27 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
+  Stable on amd64, bug #176079.
 
   26 Apr 2007; Christian Faulhammer <opfer@gentoo.org> jisp-2.5.1-r2.ebuild:
   stable x86, bug 176079
