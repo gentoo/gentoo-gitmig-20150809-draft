@@ -1,11 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jif/jif-3_rc1.ebuild,v 1.3 2007/04/27 15:39:55 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jif/jif-3.1_rc1.ebuild,v 1.1 2007/04/27 15:39:55 s4t4n Exp $
 
 inherit java-pkg-2
 
 MY_PN=${PN/jif/JIF}
 MY_PV=${PV/rc/RC}
+MY_PV=${MY_PV/./}
 MY_PV_MAJOR=${MY_PV/_*/}
 MY_PV_MINOR=${MY_PV/*_/}
 MY_P=${MY_PN}${MY_PV_MAJOR}_src_${MY_PV_MINOR}
@@ -14,11 +15,11 @@ IUSE=""
 
 DESCRIPTION="JIF is an IDE for the creation of text adventures based on Graham Nelson's Inform standard."
 HOMEPAGE="http://www.slade.altervista.org/JIF/"
-SRC_URI="http://www.slade.altervista.org/JIF/download/${MY_P}.zip"
+SRC_URI="http://www.slade.altervista.org/downloads/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=virtual/jdk-1.4
 	>=sys-apps/sed-4.1.4
@@ -41,7 +42,7 @@ src_compile()
 	sed -i -e "s:C\:\\\Inform\\\Lib\\\Base:/usr/share/inform/6.21/module:" Jif.cfg
 	sed -i -e "s:C\:\\\Inform\\\Lib\\\Contrib::" Jif.cfg
 	sed -i -e "s:C\:\\\Inform\\\Games::" Jif.cfg
-	sed -i -e "s:C\:\\\Inform\\\Bin\\\interpreter\\\Frotz\\\Frotz.exe:/usr/bin/frotz:" Jif.cfg
+	sed -i -e "s:C\:\\\Inform\\\Bin\\\interpreter\\\Frotz\\\Frotz.exe:/usr/games/bin/frotz:" Jif.cfg
 	sed -i -e "s:C\:\\\Inform\\\Bin\\\interpreter\\\Gargoyle\\\Gargoyle.exe:/usr/bin/gargoyle:" Jif.cfg
 	sed -i -e "s:C\:\\\Inform\\\Bin\\\compiler\\\inform.exe:/usr/bin/inform:" Jif.cfg
 	sed -i -e "s:C\:\\\Inform\\\Bin\\\tools\\\Blorb\\\bres.exe::" Jif.cfg
