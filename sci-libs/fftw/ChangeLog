@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.47 2007/03/31 09:54:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.48 2007/04/27 04:09:10 jer Exp $
+
+  27 Apr 2007; Jeroen Roovers <jer@gentoo.org> fftw-2.1.5-r2.ebuild:
+  Marked ~hppa.
 
   30 Mar 2007; Raúl Porcel <armin76@gentoo.org> fftw-2.1.5-r2.ebuild:
   Add ~ia64
