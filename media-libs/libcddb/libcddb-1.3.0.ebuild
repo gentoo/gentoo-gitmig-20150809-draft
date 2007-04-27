@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-1.3.0.ebuild,v 1.3 2007/04/27 00:28:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-1.3.0.ebuild,v 1.4 2007/04/27 00:29:17 beandog Exp $
 
 inherit libtool
 
@@ -34,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	# Create API docs if needed and possible
