@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.92 2007/04/19 18:02:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.93 2007/04/27 11:04:53 armin76 Exp $
+
+  27 Apr 2007; Raúl Porcel <armin76@gentoo.org> zaptel-1.2.16.ebuild:
+  x86 stable wrt bug 166679
 
 *zaptel-1.2.16 (19 Apr 2007)
 
