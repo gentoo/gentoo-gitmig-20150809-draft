@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.25 2007/04/20 23:22:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.ebuild,v 1.26 2007/04/27 19:06:35 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -24,6 +24,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		>=dev-libs/expat-1.95.8
 		>=sys-apps/pciutils-2.2.3
 		>=dev-libs/libusb-0.1.10a
+		sys-apps/usbutils
 		virtual/eject
 		amd64? ( >=sys-apps/dmidecode-2.7 )
 		x86? ( >=sys-apps/dmidecode-2.7 )
