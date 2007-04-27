@@ -1,27 +1,5 @@
-AUX fish-fillets-0.7.3-check-for-X.patch 1976 RMD160 aa766c8ce8e3ab943c8c9f7eea8927f28ccc54df SHA1 14fdb8e4a20905161922e08bdb461634b9a0acc2 SHA256 bd6cfacb6aac42a7f754c1b6c16f035de3d9ca3124f91dd0ddd7f4bf463cae61
-MD5 c2ee6a744d69f32dc7ccc62dce0fc90c files/fish-fillets-0.7.3-check-for-X.patch 1976
-RMD160 aa766c8ce8e3ab943c8c9f7eea8927f28ccc54df files/fish-fillets-0.7.3-check-for-X.patch 1976
-SHA256 bd6cfacb6aac42a7f754c1b6c16f035de3d9ca3124f91dd0ddd7f4bf463cae61 files/fish-fillets-0.7.3-check-for-X.patch 1976
-AUX fish-fillets-0.7.3-custom-datadir.patch 637 RMD160 3208e60de64befde0da8a2cae0ba2b985f3f98c3 SHA1 7009b9447710c4b19457a1f54af6e7b66012f64e SHA256 74decbee8ba17f532c9ac3bb61930cb49d99b25455f40b99d1c481e36394c9e4
-MD5 cfd7a67058d1b25a1c313f4bfd7c249f files/fish-fillets-0.7.3-custom-datadir.patch 637
-RMD160 3208e60de64befde0da8a2cae0ba2b985f3f98c3 files/fish-fillets-0.7.3-custom-datadir.patch 637
-SHA256 74decbee8ba17f532c9ac3bb61930cb49d99b25455f40b99d1c481e36394c9e4 files/fish-fillets-0.7.3-custom-datadir.patch 637
-AUX fish-fillets-0.7.3-no-local-paths.patch 285 RMD160 59ae338fb62477c97ef44aca55421913840f01f3 SHA1 989b5b4f6b2617a6b024a8695ddca5c200eb04ba SHA256 cdd80b17a435dee42161500d00e262c0921bd01c131ad6af37ada209914ff4a5
-MD5 470429d0e15b199215d7734bb334e2fc files/fish-fillets-0.7.3-no-local-paths.patch 285
-RMD160 59ae338fb62477c97ef44aca55421913840f01f3 files/fish-fillets-0.7.3-no-local-paths.patch 285
-SHA256 cdd80b17a435dee42161500d00e262c0921bd01c131ad6af37ada209914ff4a5 files/fish-fillets-0.7.3-no-local-paths.patch 285
-AUX fish-fillets-0.7.3-use-lua-pkg-config.patch 2111 RMD160 a22a89c5a0ba8fdd8139953ea91b147249df831c SHA1 041cd50e11d08d6ef3584f25466075ffa7711dcc SHA256 27a4760e72fd41b885e2e7dec909eca19738ad7f080fa6f0a9ad954d3c56944f
-MD5 90389127bc7153bc576d0fb04d0c4a92 files/fish-fillets-0.7.3-use-lua-pkg-config.patch 2111
-RMD160 a22a89c5a0ba8fdd8139953ea91b147249df831c files/fish-fillets-0.7.3-use-lua-pkg-config.patch 2111
-SHA256 27a4760e72fd41b885e2e7dec909eca19738ad7f080fa6f0a9ad954d3c56944f files/fish-fillets-0.7.3-use-lua-pkg-config.patch 2111
-DIST fillets-ng-0.7.3.tar.gz 311799 RMD160 6c8f41feab9df2b6dee3942c18848d61ab2f2c7d SHA1 58937e59c3108e0ed4d2a5e542f3d9b813655287 SHA256 cbcc62fa399f96f636f547cd424c0abbbc7860227e837f191e8eded686b6ffc2
 DIST fillets-ng-0.7.4.tar.gz 346022 RMD160 992c4a486d1986ca3a06f3b03bde281d3a46da15 SHA1 6caa8b9e04c27ec0cf0909704b24eefeaf5f0a58 SHA256 58a4fab8cd623aba438a4dbafe65eb2eb2f85de170652b2596cad134210f1ad7
-DIST fillets-ng-data-0.7.1.tar.gz 95672064 RMD160 bee5a815bbcb439bb3bf1fdcf925fb3db304a566 SHA1 37731b58877565165a258ff0df48243f29001d50 SHA256 7f9196e81e279ad088dd64a604bc6a8e9e10eedb75f080b6e845536e3ee13659
 DIST fillets-ng-data-0.7.4.tar.gz 97584418 RMD160 ee57945576476f777d3d55901b567d689f17bd98 SHA1 a604b18bf406de9aa2dfa1e2fe1abd477de1aba7 SHA256 60ecfca28814aacdf9dba188d10bc545d00644dc02285bff95760a2fcc5ca3a9
-EBUILD fish-fillets-0.7.3-r1.ebuild 1538 RMD160 670837f60a85b1c9253a2bda314070770b52c3b7 SHA1 01d53a264f7012b343c40ae9544308586a748864 SHA256 ef81ab9967c04b51d951f6caf8392ec64bb455dd072856929cd6c74cdaa265fc
-MD5 49993684c8c894a2f73531151717aa38 fish-fillets-0.7.3-r1.ebuild 1538
-RMD160 670837f60a85b1c9253a2bda314070770b52c3b7 fish-fillets-0.7.3-r1.ebuild 1538
-SHA256 ef81ab9967c04b51d951f6caf8392ec64bb455dd072856929cd6c74cdaa265fc fish-fillets-0.7.3-r1.ebuild 1538
 EBUILD fish-fillets-0.7.4.ebuild 1235 RMD160 1b771176899f4eee43ab1d490328f7b42edddc66 SHA1 636c7709124b7ac01e4c7f56de2ef75d8e59a176 SHA256 06265b16e248df058dec49686cd1e8c6c2381f3fc7490f84543bd8ca5eab8a3d
 MD5 c61768a7267eb34fc6c4932971eecb1a fish-fillets-0.7.4.ebuild 1235
 RMD160 1b771176899f4eee43ab1d490328f7b42edddc66 fish-fillets-0.7.4.ebuild 1235
@@ -34,9 +12,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 ce8b18dd1074506883ddf36c928a9553 files/digest-fish-fillets-0.7.3-r1 521
-RMD160 df05f9fe2fe844445142a59f1a868aedd2a76a49 files/digest-fish-fillets-0.7.3-r1 521
-SHA256 d3c6479161b59fecbb3666ad826d3b182975aba65e3afc55ef31929b3607e1d5 files/digest-fish-fillets-0.7.3-r1 521
 MD5 6cc0eb4720e8374efa8155985a757780 files/digest-fish-fillets-0.7.4 521
 RMD160 2f0d94a6a9298f4fdcb4b1c292372b261fd1ba6b files/digest-fish-fillets-0.7.4 521
 SHA256 9d8c7aec8d92fc81031e6c489145064f28ca2ab45f95418620719ba797e6c548 files/digest-fish-fillets-0.7.4 521
