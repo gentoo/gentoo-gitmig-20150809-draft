@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.160 2007/04/26 22:14:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.161 2007/04/27 19:38:08 gustavoz Exp $
+
+  27 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  files/1.2.0/asterisk-1.2.17-h323-dumb-makefile.diff:
+  Fix H323 for real wrt #176259
 
   26 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -files/1.2.0/asterisk-1.2.17-ASA-2007-011.patch,
