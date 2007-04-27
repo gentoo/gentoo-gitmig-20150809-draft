@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3.ebuild,v 1.2 2007/03/27 12:21:48 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3.ebuild,v 1.3 2007/04/27 01:05:22 beandog Exp $
 
 #
 # NOTES:
@@ -12,7 +12,7 @@
 #   by upstream, but by other users.
 #
 
-inherit linux-mod toolchain-funcs
+inherit linux-mod toolchain-funcs multilib
 
 DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
@@ -20,7 +20,7 @@ SRC_URI="http://www.truecrypt.org/downloads/truecrypt-${PV}-source-code.tar.gz"
 
 LICENSE="truecrypt-collective-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="sys-fs/device-mapper"
@@ -103,4 +103,3 @@ dmcrypt_check() {
 		epause 10
 	fi
 }
-
