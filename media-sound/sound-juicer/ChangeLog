@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.102 2007/02/26 00:49:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.103 2007/04/27 19:40:10 dang Exp $
+
+*sound-juicer-2.16.4 (27 Apr 2007)
+
+  27 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +sound-juicer-2.16.4.ebuild:
+  Bump to 2.16.4 * Follow the preferred sound device as set in control centre
+  (Bastien Nocera) * Detect FreeDB albums better (thanks David Mandelberg) *
+  Make path selector accessible (Rich Burridge) * Use xdg-data-dirs to set a
+  nice default directory on systems that support it (BN) * Init threading
+  earlier (Christian Kirbach) * Transcode errors to UTF-8 (Pascal Terjan) *
+  Remove Application category from desktop file * Fix build in
+  srcdir!=builddir (Loic Minier)
 
 *sound-juicer-2.16.3 (26 Feb 2007)
 
