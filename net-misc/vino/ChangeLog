@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.80 2007/03/27 22:16:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.81 2007/04/27 19:46:08 dang Exp $
+
+*vino-2.18.1 (27 Apr 2007)
+
+  27 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +vino-2.18.1.ebuild:
+  Bump to 2.18.1
+      + Fix the non-XDAMAGE, non-XSHM support
+      + Fix crash on vino_input_init()
+      + Fix crashes on critical warning in vino-preferences applet
 
 *vino-2.18.0 (27 Mar 2007)
 
