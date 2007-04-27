@@ -1,5 +1,5 @@
 
-;; site-lisp configuration for edb
+;; edb site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
-(require 'database)
+(autoload 'db-find-file "database" "EDB database package" t)
