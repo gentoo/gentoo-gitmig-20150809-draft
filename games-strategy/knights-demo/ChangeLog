@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/knights-demo
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/ChangeLog,v 1.1 2007/04/27 04:47:24 mr_bones_ Exp $
+
+*knights-demo-1.32 (27 Apr 2007)
+
+  27 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +knights-demo-1.32.ebuild:
+  initial commit - ebuild submitted by Paul Bredbury via bug #168505
+
