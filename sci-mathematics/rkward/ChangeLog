@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.1 2007/04/23 14:37:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.2 2007/04/27 08:33:14 bicatali Exp $
+
+  27 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> rkward-0.4.7.ebuild:
+  fixed for multilib, thanks to carlo for pointing that out.
 
 *rkward-0.4.7 (23 Apr 2007)
 
