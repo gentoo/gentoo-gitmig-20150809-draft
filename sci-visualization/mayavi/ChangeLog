@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.1 2007/04/24 15:55:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.2 2007/04/27 14:00:05 bicatali Exp $
+
+  27 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> mayavi-1.5.ebuild:
+  slotting 2->1
 
 *mayavi-1.5 (24 Apr 2007)
 

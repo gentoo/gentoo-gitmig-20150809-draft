@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5.ebuild,v 1.1 2007/04/24 15:55:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5.ebuild,v 1.2 2007/04/27 14:00:05 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://mayavi.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="2"
+SLOT="1"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="doc examples"
@@ -44,7 +44,7 @@ src_install() {
 
 pkg_postinst() {
 	if ! built_with_use sci-libs/vtk patented ; then
-		ewarn "Mayavi may require vtk to be built with the 'patent' USE flag"
-		ewarn "to be fully functional"
-		fi
+		elog "Mayavi may require vtk to be built with the 'patent' USE flag"
+		elog "to be fully functional"
+	fi
 }
