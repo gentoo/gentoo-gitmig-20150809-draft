@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.14 2007/04/23 17:22:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.15 2007/04/27 09:15:44 corsair Exp $
+
+  27 Apr 2007; Markus Rothe <corsair@gentoo.org>
+  ppc64/2007.0/32bit-userland/packages:
+  Move ppc64 32bit 2007.0 from gcc-powerpc64 to kgcc64, too (same as 2006.1
+  profile)
 
   23 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.use.mask:
   package.use.mask test for ~dev-util/checkstyle-4.3 because they require
