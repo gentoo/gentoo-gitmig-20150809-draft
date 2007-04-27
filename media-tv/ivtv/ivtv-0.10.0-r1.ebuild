@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.10.0-r1.ebuild,v 1.1 2007/03/10 23:13:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.10.0-r1.ebuild,v 1.2 2007/04/27 01:40:44 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -60,6 +60,27 @@ pkg_setup() {
 		epause 5
 	fi
 
+	if use fbcon; then
+		ewarn ""
+		ewarn "From the README regarding framebuffer support:"
+		ewarn ""
+		ewarn "ivtv-fb now requires that you enable the following kernel config"
+		ewarn "options: Go to 'Device drivers -> Graphics support'. Enable"
+		ewarn "'Support for frame buffer devices'. Enable 'Trident support'"
+		ewarn "(the Trident module itself is not required)."
+		ewarn ""
+		ewarn "To get working console output, keep going to 'Console display"
+		ewarn "driver support', and enable 'Framebuffer Console support'."
+		ewarn "Enable 'Select compiled-in fonts' & once that's done, you should"
+		ewarn "have a list of fonts. Choose one. With the default OSD size,"
+		ewarn "'VGA 8x16' gives 80x30(PAL) 80x25(NTSC)."
+		ewarn ""
+		ewarn "This ebuild checks for all the correct kernel config options for"
+		ewarn "framebuffer use with the exception of choosing a font.  Be sure"
+		ewarn "to pick one yourself!"
+		ewarn ""
+	fi
+
 	linux-mod_pkg_setup
 
 	BUILD_PARAMS="KDIR=${KV_DIR}"
@@ -115,26 +136,6 @@ pkg_postinst() {
 	elog "Gotview PCI DVD2 Deluxe"
 	elog "Yuan MPC622"
 	elog ""
-	if use fbcon; then
-		ewarn ""
-		ewarn "From the README regarding framebuffer support:"
-		ewarn ""
-		ewarn "ivtv-fb now requires that you enable the following kernel config"
-		ewarn "options: Go to 'Device drivers -> Graphics support'. Enable"
-		ewarn "'Support for frame buffer devices'. Enable 'Trident support'"
-		ewarn "(the Trident module itself is not required)."
-		ewarn ""
-		ewarn "To get working console output, keep going to 'Console display"
-		ewarn "driver support', and enable 'Framebuffer Console support'."
-		ewarn "Enable 'Select compiled-in fonts' & once that's done, you should"
-		ewarn "have a list of fonts. Choose one. With the default OSD size,"
-		ewarn "'VGA 8x16' gives 80x30(PAL) 80x25(NTSC)."
-		ewarn ""
-		ewarn "This ebuild checks for all the correct kernel config options for"
-		ewarn "framebuffer use with the exception of choosing a font.  Be sure"
-		ewarn "to pick one yourself!"
-		ewarn ""
-	fi
 	ewarn ""
 	ewarn "IMPORTANT: In case of problems first read this page:"
 	ewarn "http://www.ivtvdriver.org/index.php/Troubleshooting"
