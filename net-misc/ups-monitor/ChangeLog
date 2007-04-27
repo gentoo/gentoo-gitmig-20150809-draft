@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ups-monitor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ChangeLog,v 1.6 2007/02/20 01:06:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ChangeLog,v 1.7 2007/04/27 16:38:54 pva Exp $
+
+*ups-monitor-0.8.3-r1 (27 Apr 2007)
+
+  27 Apr 2007; <pva@gentoo.org> -ups-monitor-0.8.3.ebuild,
+  +ups-monitor-0.8.3-r1.ebuild:
+  Fixed compilation problem on amd64, bug #176141. Thank Scott Martin for
+  report and Thomas A. <gentoofan23 AT gmail.com> for the fix.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
