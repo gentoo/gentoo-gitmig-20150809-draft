@@ -125,12 +125,12 @@ ppc64		hardened/ppc64					dev
 x86		hardened/x86/2.6				stable
 
 # selinux profiles
-alpha		selinux/alpha/2006.1				dev
+#alpha		selinux/alpha/2006.1				dev
 amd64		selinux/amd64/2006.1				dev
-mips		selinux/mips/mips64/2006.1			dev
+#mips		selinux/mips/mips64/2006.1			dev
 ppc		selinux/ppc/ppc32/2006.1/G3			dev
 ppc		selinux/ppc/ppc32/2006.1/G4			dev
-sparc		selinux/sparc/sparc64/2006.1			dev
+#sparc		selinux/sparc/sparc64/2006.1			dev
 x86		selinux/x86/2006.1				dev
 
 # uclibc/embedded multiarch profiles
