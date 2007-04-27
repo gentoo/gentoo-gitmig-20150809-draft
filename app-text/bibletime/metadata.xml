@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<herd>theology</herd>
 <longdescription>
 BibleTime is a Bible study application for Linux. It is based on the 
 K Desktop Environment and uses the SWORD programming library to work 
