@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.2.ebuild,v 1.1 2006/11/15 03:46:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.2.ebuild,v 1.2 2007/04/27 22:45:59 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant dist
+	eant dist $(use_doc)
 }
 
 src_install() {

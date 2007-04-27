@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/junit
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.32 2006/11/24 21:45:43 corsair Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.33 2007/04/27 22:45:59 caster Exp $
+
+*junit-3.8.2-r1 (27 Apr 2007)
+
+  27 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  files/junit-3.8.2-build.xml, -junit-3.8.1-r1.ebuild, junit-3.8.2.ebuild,
+  +junit-3.8.2-r1.ebuild:
+  Revbump that depends on split-ant and stops symlinking to
+  /usr/share/ant-core/lib; Also don't generate javadoc without USE=doc.
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org> junit-3.8.1-r3.ebuild:
   Stable on ppc64; bug #155261
