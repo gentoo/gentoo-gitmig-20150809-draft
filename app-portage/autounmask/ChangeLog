@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/autounmask
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.3 2007/04/26 15:57:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.4 2007/04/27 11:35:00 armin76 Exp $
+
+  27 Apr 2007; Raúl Porcel <armin76@gentoo.org> autounmask-0.13.ebuild:
+  Add ~ia64
 
   26 Apr 2007; Ferris McCormick <fmccor@gentoo.org> autounmask-0.13.ebuild:
   Add ~sparc --- appears to work and potentially quite useful if it does.  Make
