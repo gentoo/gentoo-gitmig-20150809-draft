@@ -224,3 +224,7 @@ h323
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask specific HPPA ALSA drivers
 -alsa_cards_harmony
+
+# Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
+# Dell does not ship or sell HPPA systems
+dell
