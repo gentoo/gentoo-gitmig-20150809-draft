@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/fs-fonts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/ChangeLog,v 1.5 2006/11/26 22:49:32 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/ChangeLog,v 1.6 2007/04/27 04:05:33 josejx Exp $
+
+  27 Apr 2007; Joseph Jezak <josejx@gentoo.org> fs-fonts-0.1_alpha3.ebuild:
+  Added ~ppc for bug #175597.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   fs-fonts-0.1_alpha3.ebuild:
