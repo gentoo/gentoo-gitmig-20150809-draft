@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/macbook-backlight
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/ChangeLog,v 1.1 2007/03/16 18:09:29 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/ChangeLog,v 1.2 2007/04/27 00:06:00 beandog Exp $
+
+  27 Apr 2007; Steve Dibb <beandog@gentoo.org> macbook-backlight-0.1.ebuild:
+  Add ~amd64, bug 174612
 
 *macbook-backlight-0.1 (16 Mar 2007)
 
