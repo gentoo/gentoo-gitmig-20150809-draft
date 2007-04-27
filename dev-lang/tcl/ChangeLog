@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.72 2007/01/06 05:35:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.73 2007/04/27 17:34:53 matsuu Exp $
+
+  27 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> -tcl-8.4.11-r1.ebuild,
+  -tcl-8.4.12.ebuild, -tcl-8.4.13.ebuild, tcl-8.4.14.ebuild:
+  Fixed soname problem, bug #125971.
+  Removed old versions.
 
 *tcl-8.4.14 (06 Jan 2007)
 

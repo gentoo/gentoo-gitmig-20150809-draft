@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.14.ebuild,v 1.1 2007/01/06 05:35:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.14.ebuild,v 1.2 2007/04/27 17:34:53 matsuu Exp $
 
-inherit eutils multilib toolchain-funcs
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+
+inherit autotools eutils multilib toolchain-funcs
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://www.tcl.tk/"
@@ -44,6 +47,9 @@ src_unpack() {
 		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
 		epatch "${FILESDIR}"/tcl-configure-LANG.patch
 	done
+
+	cd "${S}"/unix
+	eautoreconf
 }
 
 src_compile() {
