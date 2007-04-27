@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/remember
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.7 2007/04/23 15:49:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.8 2007/04/27 22:24:12 ulm Exp $
+
+  27 Apr 2007; Ulrich Mueller <ulm@gentoo.org> remember-1.9.ebuild:
+  Undo change of 26 Mar 2007, app-emacs/planner is needed. (Moved us into
+  PDEPEND of app-emacs/planner to avoid the dependency circle, #172137.)
 
   23 Apr 2007; Ulrich Mueller <ulm@gentoo.org> files/50remember-gentoo.el,
   remember-1.9.ebuild:
