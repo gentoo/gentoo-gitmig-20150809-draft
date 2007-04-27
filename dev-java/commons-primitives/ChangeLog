@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.16 2007/04/27 06:12:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.17 2007/04/27 08:25:21 caster Exp $
+
+  27 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  -commons-primitives-1.0-r1.ebuild:
+  Remove unused revision.
 
   27 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   commons-primitives-1.0-r2.ebuild:
