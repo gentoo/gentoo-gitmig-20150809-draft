@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.34 2007/04/27 02:11:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.35 2007/04/27 09:06:49 bicatali Exp $
+
+  27 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> netcdf-3.6.2.ebuild:
+  Removed blocking of hdf-4, thanks to Erik Zeek <zeekec@mad.scientist.com>.
+  Fixed cppflags for non-debugging. Closing bug #176184.
 
   27 Apr 2007; Jeroen Roovers <jer@gentoo.org> netcdf-3.6.1-r1.ebuild:
   Stable for HPPA.
