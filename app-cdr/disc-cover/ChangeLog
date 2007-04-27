@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/disc-cover
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.28 2007/04/27 00:22:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.29 2007/04/27 14:34:50 gustavoz Exp $
+
+  27 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  disc-cover-1.5.6.ebuild:
+  Stable on sparc wrt #174087
 
   27 Apr 2007; Steve Dibb <beandog@gentoo.org> disc-cover-1.5.6.ebuild:
   amd64 stable, bug 174087
