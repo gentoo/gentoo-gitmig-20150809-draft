@@ -5,7 +5,7 @@ diff -Nur xtrs-4.9c-orig/ChangeLog xtrs-4.9c/ChangeLog
 +4.9c-Gentoo -- Sat Apr 21 14:37:00 MDT 2007  Joe Peterson <joe@skyrush.com>
 +
 +* Patched for Gentoo ebuild
-+  - Change "int i" in the z80 delay loop to "volatile int"
++  - Added assignment to volatile variable in the z80 delay loop
 +    (allows near-actual speed emulation with optimization)
 +  - Fixed keyboard wait issue that caused CPU spinning (i.e. max
 +    CPU usage) after using F10 (reset), F7, F8, or F9.
@@ -74,12 +74,13 @@ diff -Nur xtrs-4.9c-orig/trs_xinterface.c xtrs-4.9c/trs_xinterface.c
 diff -Nur xtrs-4.9c-orig/z80.c xtrs-4.9c/z80.c
 --- xtrs-4.9c-orig/z80.c	2005-05-22 08:57:01.000000000 +0200
 +++ xtrs-4.9c/z80.c	2007-04-25 22:12:20.000000000 +0200
-@@ -2999,7 +2999,7 @@
-     Uchar instruction;
-     Ushort address; /* generic temps */
-     int ret = 0;
--    int i;
-+    volatile int i;
-     trs_continuous = continuous;
+@@ -3027,7 +3027,8 @@
+ #endif
+         /* Speed control */
+         if ((i = z80_state.delay)) {
+-	    while (--i) /*nothing*/;
++	    volatile int dummy;
++	    while (--i) dummy = i;
+ 	}
  
-     /* loop to do a z80 instruction */
+ 	instruction = mem_read(REG_PC++);
