@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.38 2007/03/26 20:06:15 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.39 2007/04/27 11:39:14 betelgeuse Exp $
+
+  27 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-httpclient-2.0.2-r1.ebuild:
+  Stylistic cleanup.
 
   26 Mar 2007; Peter Weller <welp@gentoo.org>
   commons-httpclient-2.0.2-r1.ebuild:
