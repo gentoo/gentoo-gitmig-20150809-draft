@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.475 2007/04/26 16:45:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.476 2007/04/27 21:46:16 beandog Exp $
+
+*mplayer-1.0.20070427 (27 Apr 2007)
+
+  27 Apr 2007; Steve Dibb <beandog@gentoo.org> +mplayer-1.0.20070427.ebuild:
+  Version bump, fix bug 172198
 
   26 Apr 2007; Steve Dibb <beandog@gentoo.org> mplayer-1.0.20070321.ebuild:
   amd64 stable
