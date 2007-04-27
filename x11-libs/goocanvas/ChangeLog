@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.3 2007/04/27 23:15:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.4 2007/04/27 23:24:49 hansmi Exp $
+
+  27 Apr 2007; Michael Hanselmann <hansmi@gentoo.org> goocanvas-0.8.ebuild:
+  Fix description, dependencies and clean up functions.
 
 *goocanvas-0.8 (27 Apr 2007)
 
