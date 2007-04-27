@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r1.ebuild,v 1.7 2007/03/08 23:01:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r1.ebuild,v 1.8 2007/04/27 10:49:08 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,15 +13,14 @@ SRC_URI="mirror://apache/jakarta/commons/codec/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86"
-IUSE="doc source"
+IUSE=""
 
 RDEPEND=">=virtual/jre-1.3
-	~dev-java/avalon-logkit-1.2
+	=dev-java/avalon-logkit-1.2*
 	dev-java/log4j"
 
 DEPEND=">=virtual/jdk-1.3
-	${RDEPEND}
-	source? ( app-arch/zip )"
+	${RDEPEND}"
 
 S="${WORKDIR}"
 
