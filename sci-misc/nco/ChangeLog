@@ -1,6 +1,6 @@
 # ChangeLog for sci-misc/nco
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/ChangeLog,v 1.6 2007/04/27 17:01:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/ChangeLog,v 1.7 2007/04/27 17:03:42 bicatali Exp $
 
 *nco-3.2.0 (27 Apr 2007)
 
@@ -8,7 +8,7 @@
   +nco-3.2.0.ebuild:
   Version bump. Added functionality through new use flags: mpi, udunits and
   ncap2. Proper documentation and longdescription added to metadata.xml.
-  Closing bug #160843. Thanks snickl.freaks.de for his initial ebuild.
+  Closing bug #160843. Thanks to Stefan Nickl <snickl@snickl.freaks.de> for his initial ebuild.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
