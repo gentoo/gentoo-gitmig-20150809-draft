@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd></herd>
+<herd>theology</herd>
 <maintainer>
-<email>beandog@gentoo.org</email>
-<name>Steve Dibb</name>
+<email>theology@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 GRAMPS helps you track your family tree. It allows you to store, edit, and
@@ -17,4 +16,3 @@ or sequence) to assist the user in doing research, analysis and correlation with
 the potential of filling relationship gaps.
 </longdescription>
 </pkgmetadata>
-
