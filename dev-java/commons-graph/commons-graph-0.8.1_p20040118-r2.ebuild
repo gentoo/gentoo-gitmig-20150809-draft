@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/commons-graph-0.8.1_p20040118-r1.ebuild,v 1.2 2007/04/27 22:16:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/commons-graph-0.8.1_p20040118-r2.ebuild,v 1.1 2007/04/27 22:16:16 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -42,7 +42,7 @@ src_unpack(){
 src_install(){
 	java-pkg_newjar target/${PN}-${API_PV}.jar ${PN}.jar
 	use doc && java-pkg_dojavadoc dist/docs/api
-	use source && java-pkg_dosrc src/*
+	use source && java-pkg_dosrc src/java/*
 }
 
 src_test() {
