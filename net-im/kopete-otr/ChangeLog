@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kopete-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/ChangeLog,v 1.1 2007/04/27 10:06:10 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/ChangeLog,v 1.2 2007/04/27 10:12:10 drizzt Exp $
+
+  27 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
 *kopete-otr-0.2 (27 Apr 2007)
 
