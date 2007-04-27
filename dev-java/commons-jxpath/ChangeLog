@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-jxpath
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.18 2007/04/27 03:46:34 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.19 2007/04/27 06:16:50 fordfrog Exp $
+
+  27 Apr 2007; Miroslav Šulc <fordfrog@gentoo.org> Manifest:
+  Corrected digest
 
   27 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -commons-jxpath-1.1-r1.ebuild, -commons-jxpath-1.1-r2.ebuild,
