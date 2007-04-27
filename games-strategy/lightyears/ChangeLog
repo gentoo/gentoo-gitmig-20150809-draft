@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/lightyears
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.1 2007/04/27 20:57:33 tupone Exp $
+
+*lightyears-1.2a (27 Apr 2007)
+
+  27 Apr 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/lightyears-1.2a-gentoo.patch, +metadata.xml,
+  +lightyears-1.2a.ebuild:
+  New package, Bug #130485 by Alexandru Toma
+
