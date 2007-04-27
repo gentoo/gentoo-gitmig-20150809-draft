@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2775 2007/04/27 06:41:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2776 2007/04/27 16:56:17 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1671,6 +1671,8 @@ sci-mathematics/singular:boost - Compile against external boost headers.
 sci-mathematics/yacas:server -  Build the network server version.
 sci-misc/boinc:server - Enable compilation of server
 sci-misc/h5utils:octave - Build Octave plugins
+sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs dev-java/antlr)
+sci-misc/nco:udunits - Add udunits files support
 sci-visualization/gnuplot:xemacs - Add lisp files for emacs
 sci-visualization/hippodraw:fits - Add FITS support to hippodraw, via cfitsio
 sci-visualization/hippodraw:numarray - Add numarray python array support
