@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.315 2007/04/26 17:55:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.316 2007/04/27 06:41:14 calchan Exp $
+
+  27 Apr 2007; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
+  Added fax and parport local USE flags for net-print/hplip.
 
   26 Apr 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove unneeded media-libs/mlt snapshot mask as its now gone as there are
