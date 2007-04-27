@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.111 2007/03/30 04:45:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.112 2007/04/27 20:44:23 dang Exp $
+
+*gtkmm-2.10.9 (27 Apr 2007)
+
+  27 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +gtkmm-2.10.9.ebuild:
+  Bump to 2.10.9
 
   30 Mar 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/gtkmm-2.2.12-gcc41.patch, gtkmm-2.2.12.ebuild:
