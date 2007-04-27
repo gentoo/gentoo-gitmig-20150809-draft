@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.0.ebuild,v 1.1 2007/04/27 18:23:43 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.0.ebuild,v 1.2 2007/04/27 22:42:16 kugelfang Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -80,6 +80,7 @@ src_install() {
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
+		libdir=${D}/usr/$(get_libdir) \
 		rhome=${D}/usr/$(get_libdir)/R \
 		install || die "Installation Failed"
 

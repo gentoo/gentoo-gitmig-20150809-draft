@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.83 2007/04/27 18:23:43 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.84 2007/04/27 22:42:16 kugelfang Exp $
+
+  27 Apr 2007; Danny van Dyk <kugelfang@gentoo.org> R-2.5.0.ebuild:
+  Forgot to copy ebuild after final testing. Sandbox violations is fixed now.
 
 *R-2.5.0 (27 Apr 2007)
 
