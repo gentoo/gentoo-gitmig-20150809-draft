@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbtune/dvbtune-0.5.ebuild,v 1.4 2007/03/13 12:11:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbtune/dvbtune-0.5.ebuild,v 1.5 2007/04/27 01:13:59 beandog Exp $
 
 inherit eutils
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://sourceforge/dvbtools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="xml"
 
 RDEPEND="xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-		media-tv/linuxtv-dvb-headers"
+	media-tv/linuxtv-dvb-headers"
 
 src_unpack() {
 	unpack ${A}
@@ -36,4 +36,3 @@ src_install() {
 
 	dodoc README scripts/*
 }
-
