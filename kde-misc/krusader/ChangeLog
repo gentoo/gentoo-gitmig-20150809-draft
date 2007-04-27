@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.56 2007/04/01 16:30:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.57 2007/04/27 15:37:20 philantrop Exp $
+
+  27 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  krusader-1.70.1.ebuild:
+  Added information about bookmark functionality to the post-install message.
+  Fixes bug 146930.
 
 *krusader-1.80.0_beta2 (01 Apr 2007)
 

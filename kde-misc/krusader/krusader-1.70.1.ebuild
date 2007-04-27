@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.11 2007/01/05 17:03:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.12 2007/04/27 15:37:20 philantrop Exp $
 
 inherit kde
 
@@ -28,12 +28,15 @@ need-kde 3.4
 pkg_postinst() {
 	echo
 	elog "Krusader can use various external applications, including:"
-	elog "- KMail	 (kde-base/kdepim)"
+	elog "- Konqueror (kde-base/konqueror)"
+	elog "(If you want to be able to manage your Krusader bookmarks, you *must*"
+	elog "install Konqueror.)"
+	elog "- KMail	(kde-base/kdepim)"
 	elog "- Kompare (kde-base/kdesdk)"
-	elog "- KDiff3	 (kde-misc/kdiff3)"
-	elog "- XXdiff	 (dev-util/xxdiff)"
+	elog "- KDiff3	(kde-misc/kdiff3)"
+	elog "- XXdiff	(dev-util/xxdiff)"
 	elog "- KRename (kde-misc/krename)"
-	elog "- Eject	 (virtual/eject)"
+	elog "- Eject	(virtual/eject)"
 	elog ""
 	elog "It supports also quite a few archive formats, including:"
 	elog "- app-arch/arj"
