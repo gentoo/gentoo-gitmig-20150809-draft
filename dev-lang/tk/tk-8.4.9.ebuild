@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.16 2007/03/26 07:57:18 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.17 2007/04/27 17:54:42 matsuu Exp $
 
 inherit eutils
 
@@ -88,7 +88,7 @@ src_install() {
 		-e "s,^\(TK_BUILD_STUB_LIB_PATH='\)${S}/unix,\1/usr/${mylibdir}," \
 		-e "s,^\(TK_CC_SEARCH_FLAGS='.*\)',\1:/usr/${mylibdir}'," \
 		-e "s,^\(TK_LD_SEARCH_FLAGS='.*\)',\1:/usr/${mylibdir}'," \
-		${D}/usr/lib/tkConfig.sh
+		${D}/usr/${mylibdir}/tkConfig.sh
 
 	# install private headers
 	dodir /usr/${mylibdir}/tk${v1}/include/unix

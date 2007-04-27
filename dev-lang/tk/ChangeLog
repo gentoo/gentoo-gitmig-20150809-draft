@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.73 2007/03/26 07:57:18 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.74 2007/04/27 17:54:42 matsuu Exp $
+
+  27 Apr 2007; MATSUU Takuto <matsuu@gentoo.org>
+  -files/remove-control-v.diff, tk-8.4.9.ebuild, -tk-8.4.11-r1.ebuild,
+  -tk-8.4.12.ebuild, -tk-8.4.13.ebuild, tk-8.4.14.ebuild:
+  Fixed SONAME issue, bug #125971.
+  Fixed tkConfig.sh issue, bug #164649.
+  Added tc-export CC, bug #154328.
+  Removed old versions.
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> tk-8.4.9.ebuild,
   tk-8.4.11-r1.ebuild, tk-8.4.12.ebuild, tk-8.4.13.ebuild, tk-8.4.14.ebuild:
