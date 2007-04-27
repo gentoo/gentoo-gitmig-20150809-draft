@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.317 2007/04/27 09:02:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.318 2007/04/27 12:34:33 nelchael Exp $
+
+  27 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Mask dev-java/jcs-bin
 
   27 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> desc/lirc_devices.desc:
   Added new devices introduced with lirc-0.8.2_pre2.
