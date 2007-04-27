@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.1.ebuild,v 1.11 2007/03/09 14:58:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4.ebuild,v 1.1 2007/04/27 22:55:51 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -9,7 +9,7 @@ DESCRIPTION="An interface for filesystems implemented in userspace."
 HOMEPAGE="http://fuse.sourceforge.net"
 SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="kernel_linux kernel_FreeBSD"
 S=${WORKDIR}/${MY_P}
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
@@ -26,7 +26,7 @@ pkg_setup() {
 			older version from viewcvs"
 
 		BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
-					  fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
+					fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
 		BUILD_TARGETS="all"
 		ECONF_PARAMS="--with-kernel=${KV_DIR} --with-kernel-build=${KV_OUT_DIR}"
 	fi
@@ -36,7 +36,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/fuse-fix-lazy-binding.patch
-	epatch "${FILESDIR}"/fuse-2.6.20.patch
 	elibtoolize
 }
 
@@ -65,12 +64,12 @@ src_install() {
 
 	if use kernel_linux ; then
 		linux-mod_src_install
+		newinitd ${FILESDIR}/fuse.init fuse
 	else
 		insinto /usr/include/fuse
 		doins include/fuse_kernel.h
+		newinitd ${FILESDIR}/fuse-fbsd.init fuse
 	fi
-
-	newinitd ${FILESDIR}/fuse.init fuse
 
 	rm -rf "${D}/dev"
 }
