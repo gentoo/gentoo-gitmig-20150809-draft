@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7179 2007/04/27 12:34:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7180 2007/04/27 18:40:42 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -269,14 +269,6 @@ kde-misc/metabar
 # Use the from source version dev-java/saxon instead
 # Removal in 30 days.
 dev-java/saxon-bin
-
-# Steev Klimaszewski <steev@gentoo.org> (29 Mar 2007)
-# New hal release, Needs lots of testing.  Release candidate, soon should
-# be the actual release. And it adds a new package with all the fdi files.
-# Changes to these ebuilds happens often without a rev bump. Be aware!
-# Always make sure you've got the most current one.
->=sys-apps/hal-0.5.9_rc2
->=app-misc/hal-info-20070326
 
 # Petteri Räty <betelgeuse@gentoo.org> (29 Mar 2007)
 # -Last upstream release in 2003
