@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.143 2007/04/27 00:23:06 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.144 2007/04/27 00:28:57 dsd Exp $
+
+  27 Apr 2007; Daniel Drake <dsd@gentoo.org>
+  alsa-tools-1.0.14_rc3-r1.ebuild:
+  Fix rmedigicontrol build, patch from Andreas Sundebo in bug #172392
 
 *alsa-tools-1.0.14_rc3-r1 (27 Apr 2007)
 

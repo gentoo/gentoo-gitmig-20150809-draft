@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc3-r1.ebuild,v 1.1 2007/04/27 00:23:06 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc3-r1.ebuild,v 1.2 2007/04/27 00:28:57 dsd Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -50,8 +50,9 @@ pkg_setup() {
 	if use gtk; then
 		use midi && use alsa_cards_ice1712 && \
 			ALSA_TOOLS="${ALSA_TOOLS} envy24control"
-		use alsa_cards_rme32 && use alsa_cards_rme96 && \
+		if use alsa_cards_rme32 || use alsa_cards_rme96; then
 			ALSA_TOOLS="${ALSA_TOOLS} rmedigicontrol"
+		fi
 	fi
 
 	if use alsa_cards_hdsp || use alsa_cards_hdspm; then
