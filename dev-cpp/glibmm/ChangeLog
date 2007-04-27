@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.76 2007/03/19 15:29:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.77 2007/04/27 20:33:22 dang Exp $
+
+*glibmm-2.12.8 (27 Apr 2007)
+
+  27 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +glibmm-2.12.8.ebuild:
+  Bump to 2.12.8
 
 *glibmm-2.12.7 (19 Mar 2007)
 
