@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/u-vm-color
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.13 2007/04/07 19:59:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.14 2007/04/27 19:28:36 ulm Exp $
+
+  27 Apr 2007; Ulrich Mueller <ulm@gentoo.org> files/51u-vm-color-gentoo.el,
+  u-vm-color-2.8.1.ebuild:
+  Use autoload for functions.
 
 *u-vm-color-2.8.1 (07 Apr 2007)
 
