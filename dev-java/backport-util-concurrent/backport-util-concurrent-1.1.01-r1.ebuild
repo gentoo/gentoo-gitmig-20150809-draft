@@ -1,10 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-1.1.01-r1.ebuild,v 1.2 2006/07/22 21:44:22 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-1.1.01-r1.ebuild,v 1.3 2007/04/27 21:33:00 betelgeuse Exp $
 
-inherit java-pkg-2 java-ant-2
+JAVA_PKG_IUSE="doc source test"
 
-MY_PV="1.1_01" # TODO use versionator
+inherit versionator java-pkg-2 java-ant-2
+
+MY_PV="$(replace_version_separator 2 _)"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="This package is the backport of java.util.concurrent API, introduced in Java 5.0, to Java 1.4"
 HOMEPAGE="http://www.mathcs.emory.edu/dcl/util/backport-util-concurrent/"
@@ -13,28 +15,34 @@ SRC_URI="http://www.mathcs.emory.edu/dcl/util/${PN}/dist/${MY_P}/${MY_P}-src.tar
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE=""
 
+COMMON_DEP=""
 DEPEND="=virtual/jdk-1.4*
-	dev-java/ant-core
-	dev-java/junit"
-RDEPEND="=virtual/jre-1.4*"
+	${COMMON_DEP}
+	test? ( dev-java/junit )"
+RDEPEND="=virtual/jre-1.4*
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/external
-	rm -f *.jar
-	java-pkg_jar-from junit
+	use test || rm -fr "${S}"/test/tck/src/*
+	cd "${S}/external"
+	rm -v *.jar || die
+	use test && java-pkg_jar-from --build-only junit
 }
 
-src_compile() {
-	eant javacompile archive $(use_doc)
+EANT_BUILD_TARGET="javacompile archive"
+
+src_test() {
+	eant test
 }
 
 src_install() {
 	java-pkg_dojar ${PN}.jar
-	use doc && java-pkg_dohtml -r doc/api
-	java-pkg_dohtml README.html
+	dohtml README.html || die
+	use doc && java-pkg_dojavadoc doc/api
+	use source && java-pkg_dosrc src/edu
 }
