@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>theology</herd>
+<herd>no-herd</herd>
 <maintainer>
-<email>theology@gentoo.org</email>
+<email>beandog@gentoo.org</email>
+<name>Steve Dibb</name>
 </maintainer>
 <longdescription lang="en">
 GRAMPS helps you track your family tree. It allows you to store, edit, and
