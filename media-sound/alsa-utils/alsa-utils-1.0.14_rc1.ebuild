@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc1.ebuild,v 1.11 2007/02/11 23:35:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc1.ebuild,v 1.12 2007/04/27 00:47:48 dsd Exp $
 
 inherit eutils autotools
 
@@ -78,8 +78,8 @@ pkg_postinst() {
 	elog "	# rc-update add alsasound boot"
 	echo
 	elog "You will also need to edit the file /etc/modules.d/alsa"
-	elog "and run modules-update. You can do this like so:"
-	elog "	# nano -w /etc/modules.d/alsa && modules-update"
+	elog "and run update-modules. You can do this like so:"
+	elog "	# nano -w /etc/modules.d/alsa && update-modules"
 	echo
 
 	if use sparc; then

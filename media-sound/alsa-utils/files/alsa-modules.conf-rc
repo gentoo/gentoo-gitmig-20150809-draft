@@ -8,7 +8,7 @@ alias char-major-14 soundcore
 ##
 ## IMPORTANT:
 ## You need to customise this section for your specific sound card(s)
-## and then run `modules-update' command.
+## and then run `update-modules' command.
 ## Read alsa-driver's INSTALL file in /usr/share/doc for more info.
 ##
 ##  ALSA portion
