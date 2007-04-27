@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.33 2007/04/24 11:28:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.34 2007/04/27 02:11:07 jer Exp $
+
+  27 Apr 2007; Jeroen Roovers <jer@gentoo.org> netcdf-3.6.1-r1.ebuild:
+  Stable for HPPA.
 
 *netcdf-3.6.2 (24 Apr 2007)
 
