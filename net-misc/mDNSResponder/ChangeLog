@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.27 2007/02/22 02:32:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.28 2007/04/27 19:48:15 carlo Exp $
+
+*mDNSResponder-107.6 (27 Apr 2007)
+
+  27 Apr 2007; Carsten Lohrke <carlo@gentoo.org>
+  +files/mDNSResponder-107.6-Makefiles.diff, +mDNSResponder-107.6.ebuild:
+  Version bump. Hopefully fixing bug
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
