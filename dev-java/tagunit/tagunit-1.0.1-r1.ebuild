@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1-r1.ebuild,v 1.3 2007/01/30 00:41:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1-r1.ebuild,v 1.4 2007/04/28 22:49:41 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,14 +15,15 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc source"
 
-RDEPEND="|| ( =virtual/jre-1.3 =virtual/jre-1.4* )
-	=dev-java/servletapi-2.4*"
+COMMON_DEP="
+	=dev-java/servletapi-2.4*
+	>=dev-java/ant-core-1.6"
+RDEPEND=">=virtual/jre-1.3
+	${COMMON_DEP}"
 
-DEPEND=" || ( =virtual/jdk-1.3 =virtual/jdk-1.4* )
-	${RDEPEND}
-	>=dev-java/ant-core-1.6
-	app-arch/unzip
-	source? ( app-arch/zip )"
+DEPEND=" || ( =virtual/jdk-1.4* =virtual/jdk-1.3* )
+	${COMMON_DEP}
+	app-arch/unzip"
 
 S="${WORKDIR}/${P}-src/tagunit-core"
 
