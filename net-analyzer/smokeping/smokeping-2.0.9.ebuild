@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.6 2007/04/17 22:44:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.7 2007/04/28 12:17:12 tove Exp $
 
 inherit perl-module eutils
 
@@ -79,8 +79,7 @@ src_install() {
 	newins "${FILESDIR}/config.dist" ${PN}
 	newins etc/basepage.html.dist ${PN}.template
 	doins etc/smokemail.dist
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/${PN}.init" ${PN}
+	newinitd "${FILESDIR}/${PN}.init" ${PN}
 	if use apache2 ; then
 		insinto /etc/apache2/modules.d
 		doins "${FILESDIR}/78_${PN}.conf"
