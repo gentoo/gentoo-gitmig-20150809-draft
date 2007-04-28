@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.6 2007/04/22 10:35:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.7 2007/04/28 15:42:16 tove Exp $
 
 inherit eutils
 
@@ -16,16 +16,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="X ipv6"
 
-DEPEND="virtual/libc
-	X? ( || ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt )
-	   	 	  virtual/x11 ) )"
+DEPEND="X? ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt )"
 
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	#Change WNNOWNER to root so we don't need to add wnn user
 	sed -i -e "s/WNNOWNER = wnn/WNNOWNER = root/" makerule.mk.in || die
 }
@@ -43,11 +41,11 @@ src_compile() {
 
 src_install() {
 	# install executables, libs ,dictionaries
-	make DESTDIR=${D} install || die "installation failed"
+	make DESTDIR="${D}" install || die "installation failed"
 	# install man pages
-	make DESTDIR=${D} install.man || die "installation of manpages failed"
+	make DESTDIR="${D}" install.man || die "installation of manpages failed"
 	# install docs
 	dodoc ChangeLog* INSTALL* CONTRIBUTORS
 	# install rc script
-	exeinto /etc/init.d ; newexe ${FILESDIR}/freewnn.initd freewnn
+	newexe "${FILESDIR}"/freewnn.initd freewnn
 }
