@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.17 2007/03/29 08:15:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.18 2007/04/28 17:52:54 corsair Exp $
+
+  28 Apr 2007; Markus Rothe <corsair@gentoo.org> ctypes-1.0.1.ebuild:
+  Stable on ppc64; bug #171021
 
   29 Mar 2007; Markus Rothe <corsair@gentoo.org> ctypes-0.9.9.6.ebuild,
   ctypes-1.0.0.ebuild, ctypes-1.0.1.ebuild, ctypes-1.0.1-r1.ebuild:
