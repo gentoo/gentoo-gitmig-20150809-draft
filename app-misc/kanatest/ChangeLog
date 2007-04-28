@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.12 2007/04/26 12:19:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.13 2007/04/28 14:36:56 nixnut Exp $
+
+  28 Apr 2007; nixnut <nixnut@gentoo.org> kanatest-0.4.1.ebuild:
+  Stable on ppc wrt bug 174902
 
 *kanatest-0.4.2 (26 Apr 2007)
 
