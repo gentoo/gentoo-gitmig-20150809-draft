@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/daudio-0.3.ebuild,v 1.8 2006/03/07 14:20:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/daudio-0.3.ebuild,v 1.9 2007/04/28 14:54:06 tove Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/libmad-0.15.0b-r1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-makefile.patch"
 }
@@ -32,7 +32,6 @@ src_compile() {
 
 src_install() {
 	dobin client/daudioc server/daudiod streamer/dstreamer
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/daudio.rc daudio
+	newinitd "${FILESDIR}"/daudio.rc daudio
 	dodoc doc/*
 }
