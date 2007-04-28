@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.24 2007/04/20 16:41:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.25 2007/04/28 16:56:36 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -301,8 +301,7 @@ EOF
 SEARCH_DIRS="${QTBASE}"
 EOF
 
-	insinto /etc/env.d
-	doins ${T}/45qt3 ${T}/50qtdir3
+	doenvd ${T}/45qt3 ${T}/50qtdir3
 
 	insinto /etc/revdep-rebuild
 	doins ${T}/50-qt3-revdep

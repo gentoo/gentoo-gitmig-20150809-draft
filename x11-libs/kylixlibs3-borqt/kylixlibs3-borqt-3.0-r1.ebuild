@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/kylixlibs3-borqt-3.0-r1.ebuild,v 1.6 2006/10/28 12:22:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/kylixlibs3-borqt-3.0-r1.ebuild,v 1.7 2007/04/28 16:53:43 swegener Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Kylix 3 OE libraries"
@@ -26,6 +26,5 @@ src_install () {
 	dodoc README
 
 	echo "LDPATH=/opt/kylix3" > 99kylixlibs
-	insinto /etc/env.d
-	doins 99kylixlibs
+	doenvd 99kylixlibs
 }

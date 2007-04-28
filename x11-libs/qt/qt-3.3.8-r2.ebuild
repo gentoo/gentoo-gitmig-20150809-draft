@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r2.ebuild,v 1.8 2007/04/18 17:23:12 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r2.ebuild,v 1.9 2007/04/28 16:56:36 swegener Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -334,8 +334,7 @@ EOF
 	insinto /etc/revdep-rebuild
 	doins ${T}/50-qt3-revdep
 
-	insinto /etc/env.d
-	doins ${T}/45qt3 ${T}/50qtdir3
+	doenvd ${T}/45qt3 ${T}/50qtdir3
 
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${QTBASE}/lib

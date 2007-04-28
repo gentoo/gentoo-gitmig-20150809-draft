@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8.ebuild,v 1.1 2007/04/22 11:48:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8.ebuild,v 1.2 2007/04/28 16:56:09 swegener Exp $
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.trolltech.com/products/embedded/"
@@ -113,8 +113,7 @@ PATH=${QTBASE}/bin
 ROOTPATH=${QTBASE}/bin
 LDPATH=${QTBASE}/lib
 EOF
-	insinto /etc/env.d
-	doins ${T}/47qt-embedded3
+	doenvd ${T}/47qt-embedded3
 
 	# qmake cache file
 	sed -i -e "s:${S}:${QTBASE}:" .qmake.cache
