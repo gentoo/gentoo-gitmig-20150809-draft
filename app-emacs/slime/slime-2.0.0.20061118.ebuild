@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.6 2007/04/18 17:43:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.7 2007/04/28 06:56:37 ulm Exp $
 
 inherit elisp eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
 # use ${FILESDIR}/new-slime-ball to create new snapshots
 SRC_URI="mirror://gentoo/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-2 as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc"
