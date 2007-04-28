@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.16.ebuild,v 1.1 2007/04/28 07:33:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.16.ebuild,v 1.2 2007/04/28 17:48:17 hanno Exp $
 
 inherit fdo-mime flag-o-matic
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://gimp/v2.3/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec curl debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
 
 RDEPEND=">=dev-libs/glib-2.12.3
-	>=x11-libs/gtk+-2.8.20-r1
+	>=x11-libs/gtk+-2.10.6
 	>=x11-libs/pango-1.12.2
 	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2.0
@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/glib-2.12.3
 	pdf? ( >=app-text/poppler-bindings-0.3.1 )
 	png? ( >=media-libs/libpng-1.2.2 )
 	python?	( >=dev-lang/python-2.2.1
-		>=dev-python/pygtk-2.8 )
+		>=dev-python/pygtk-2.10.4 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svg? ( >=gnome-base/librsvg-2.8.0 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )"
