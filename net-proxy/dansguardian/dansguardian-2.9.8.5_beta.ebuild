@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.8.5_beta.ebuild,v 1.1 2007/04/04 13:01:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.8.5_beta.ebuild,v 1.2 2007/04/28 16:50:42 swegener Exp $
 
 inherit eutils autotools
 
@@ -78,8 +78,7 @@ src_install() {
 	make "DESTDIR=${D}" install || die "make install failed"
 
 	# Copying init script
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/dansguardian.init" dansguardian
+	newinitd "${FILESDIR}/dansguardian.init" dansguardian
 
 	if use clamav; then
 		sed -r -i -e 's/[ \t]+need net.*/& clamd/' "${D}/etc/init.d/dansguardian"
