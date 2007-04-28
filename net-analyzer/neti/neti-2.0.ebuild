@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-2.0.ebuild,v 1.3 2007/04/07 14:29:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-2.0.ebuild,v 1.4 2007/04/28 12:23:21 tove Exp $
 
 DESCRIPTION="NETI@Home research project from GATech"
 HOMEPAGE="http://www.neti.gatech.edu"
@@ -46,6 +46,5 @@ src_install() {
 	fi
 
 	dodoc README AUTHORS
-	exeinto /etc/init.d
-	newexe "${FILESDIR}"/neti-init2 neti
+	newinitd "${FILESDIR}"/neti-init2 neti
 }

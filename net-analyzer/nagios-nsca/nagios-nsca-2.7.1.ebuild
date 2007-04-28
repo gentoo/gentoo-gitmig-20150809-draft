@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.7.1.ebuild,v 1.1 2007/03/12 00:35:40 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.7.1.ebuild,v 1.2 2007/04/28 12:34:01 tove Exp $
 
 DESCRIPTION="Nagios NSCA  - Nagios Service Check Acceptor"
 HOMEPAGE="http://www.nagios.org/"
@@ -31,16 +31,15 @@ src_compile() {
 src_install() {
 	dodoc LEGAL Changelog README SECURITY
 	insinto /etc/nagios
-	doins ${S}/sample-config/nsca.cfg
-	doins ${S}/sample-config/send_nsca.cfg
+	doins "${S}"/sample-config/nsca.cfg
+	doins "${S}"/sample-config/send_nsca.cfg
 	exeinto /usr/nagios/bin
 	doexe src/nsca
 	fowners nagios:nagios /usr/nagios/bin/nsca
 	exeinto /usr/nagios/libexec
 	doexe src/send_nsca
 	fowners nagios:nagios /usr/nagios/libexec/send_nsca
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/nsca-${PV} nsca
+	newinitd "${FILESDIR}"/nsca-${PV} nsca
 }
 pkg_postinst() {
 	einfo

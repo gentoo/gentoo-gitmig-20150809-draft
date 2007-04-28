@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3-r2.ebuild,v 1.12 2006/09/30 01:30:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3-r2.ebuild,v 1.13 2007/04/28 12:28:16 tove Exp $
 
 inherit eutils
 
@@ -17,8 +17,8 @@ DEPEND="net-libs/libpcap"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-DLT_LINUX_SSL.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-DLT_LINUX_SSL.patch
 }
 
 src_compile() {
@@ -28,11 +28,10 @@ src_compile() {
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
+		prefix="${D}"/usr \
+		mandir="${D}"/usr/share/man \
 		install || die
 	dodoc AUTHORS NEWS README TODO example-iplog.conf
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/iplog.rc6 iplog
+	newinitd "${FILESDIR}"/iplog.rc6 iplog
 }

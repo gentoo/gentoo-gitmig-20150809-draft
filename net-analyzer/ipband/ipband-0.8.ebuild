@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.ebuild,v 1.3 2007/04/11 07:16:04 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.ebuild,v 1.4 2007/04/28 12:30:20 tove Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_install() {
 	doman ipband.1
 	dodoc CHANGELOG README
 	exeinto /usr/bin ; doexe ipband
-	exeinto /etc/init.d ; newexe "${FILESDIR}"/ipband-init ipband
+	newinitd "${FILESDIR}"/ipband-init ipband
 	insinto /etc/ ; newins ipband.sample.conf ipband.conf
 }
 
