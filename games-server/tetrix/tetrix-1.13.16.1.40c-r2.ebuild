@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.10 2006/11/25 14:00:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.11 2007/04/28 16:04:40 tove Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -45,8 +45,7 @@ src_install() {
 	insinto ${GAMES_SYSCONFDIR}/${PN}
 	doins bin/*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/tetrix.rc tetrix
+	newinitd "${FILESDIR}"/tetrix.rc tetrix
 
 	keepdir ${GAMES_STATEDIR}/${PN}
 	dodir ${GAMES_LOGDIR}

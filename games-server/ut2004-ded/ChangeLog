@@ -1,6 +1,9 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.20 2007/03/12 17:59:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.21 2007/04/28 16:06:50 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> ut2004-ded-3369.ebuild:
+  Use newinitd
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> ut2004-ded-3369.ebuild:
   Replacing einfo with elog

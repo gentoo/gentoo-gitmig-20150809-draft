@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.10 2007/03/12 17:59:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.11 2007/04/28 16:06:50 tove Exp $
 
 inherit games
 
@@ -53,8 +53,7 @@ src_install() {
 	rm -f ${Ddir}/System/*.dll || die "removing windows dlls"
 	rm -f ${Ddir}/System/*.exe || die "removing windows exes"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ut2004-ded.rc ut2004-ded
+	newinitd ${FILESDIR}/ut2004-ded.rc ut2004-ded
 	dosed "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
 		/etc/init.d/ut2004-ded || die "sed"
 
