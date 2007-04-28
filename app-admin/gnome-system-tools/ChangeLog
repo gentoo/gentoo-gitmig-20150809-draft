@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.74 2007/02/21 16:12:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.75 2007/04/28 15:43:28 remi Exp $
+
+  28 Apr 2007; Remi Cardona <remi@gentoo.org>
+  +files/gnome-system-tools-2.14.0-doc.patch,
+  gnome-system-tools-2.14.0.ebuild:
+  update docs source to newer gnome-doc-utils (fixes bug #175062)
 
   21 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
   files/digest-gnome-system-tools-1.0.2-r1,
