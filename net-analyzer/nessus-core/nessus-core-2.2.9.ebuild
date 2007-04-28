@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9.ebuild,v 1.2 2007/04/11 13:42:29 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9.ebuild,v 1.3 2007/04/28 18:57:39 tove Exp $
 
 inherit toolchain-funcs eutils
 
@@ -38,9 +38,7 @@ src_install() {
 	cd "${S}"
 	dodoc README* UPGRADE_README CHANGES
 	dodoc doc/*.txt doc/ntp/*
-	insinto /etc/init.d
-	insopts -m 755
-	newins "${FILESDIR}"/nessusd-r7 nessusd
+	newinitd "${FILESDIR}"/nessusd-r7 nessusd
 	keepdir /var/lib/nessus/logs
 	keepdir /var/lib/nessus/users
 	# newer version is provided by nessus-libraries
