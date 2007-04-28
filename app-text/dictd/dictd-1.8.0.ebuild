@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.19 2007/01/05 07:23:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.20 2007/04/28 18:04:36 swegener Exp $
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
@@ -52,8 +52,6 @@ src_install() {
 	doins ${FILESDIR}/${PVR}/site.info
 
 	# startups for dictd
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PVR}/dictd dictd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PVR}/dictd.confd dictd
+	newinitd ${FILESDIR}/${PVR}/dictd dictd
+	newconfd ${FILESDIR}/${PVR}/dictd.confd dictd
 }
