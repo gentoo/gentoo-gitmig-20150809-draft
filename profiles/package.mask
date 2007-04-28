@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7187 2007/04/28 18:18:51 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7188 2007/04/28 18:20:48 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,6 +26,12 @@
 # Will be moved to junkyard in 30 days Please contact 
 # java@gentoo.org if you need or use this package
 dev-util/j
+
+# Vlastimil Babka <caster@gentoo.org> (28 Apr 2007)
+# Stale upstream, library that nothing in tree uses
+# so it's not needed. Will be removed around 28 May.
+# Generation 2 revision is in the java-overlay.
+dev-java/jmbus
 
 # Vlastimil Babka <caster@gentoo.org> (28 Apr 2007)
 # Eclipse version slots below 3.2.1 are obsolete ebuilds,
