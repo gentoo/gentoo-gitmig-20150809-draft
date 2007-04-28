@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jscience
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.4 2007/02/09 02:09:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.5 2007/04/28 16:17:48 nelchael Exp $
+
+*jscience-1.0.4-r1 (28 Apr 2007)
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +jscience-1.0.4-r1.ebuild:
+  Migrated to generation 2.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
