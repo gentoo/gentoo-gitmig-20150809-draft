@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r2.ebuild,v 1.7 2007/04/28 17:37:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r2.ebuild,v 1.8 2007/04/28 19:22:06 tove Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	insinto /etc/jabber
 	doins  ${FILESDIR}/muctrans.xml
 
-	insinto /etc/conf.d ; newins ${FILESDIR}/mu-conference-conf.d muc-transport
+	newconfd ${FILESDIR}/mu-conference-conf.d muc-transport
 
 	newinitd ${FILESDIR}/muc-transport.init-r2 muc-transport
 
