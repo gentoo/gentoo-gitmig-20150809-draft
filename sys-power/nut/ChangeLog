@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.36 2007/04/25 05:38:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.37 2007/04/28 17:27:04 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> nut-2.0.0.ebuild,
+  nut-2.0.0-r1.ebuild, nut-2.0.1_pre4.ebuild, nut-2.0.3.ebuild,
+  nut-2.0.3-r1.ebuild, nut-2.0.4.ebuild, nut-2.0.4-r1.ebuild,
+  nut-2.0.5.ebuild, nut-2.0.5-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   25 Apr 2007; Daniel Black <dragonheart@gentoo.org> files/upsd.rc6:
   added reload to upsd init script. bug #175928

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.4-r1.ebuild,v 1.12 2007/03/18 20:24:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.4-r1.ebuild,v 1.13 2007/04/28 17:27:04 tove Exp $
 
 inherit eutils fixheadtails
 
@@ -135,10 +135,9 @@ src_install() {
 	dodoc docs/cables/*
 
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/upsd.rc6" upsd
-	newexe "${FILESDIR}/upsdrv.rc6-r1" upsdrv
-	newexe "${FILESDIR}/upsmon.rc6" upsmon
+	newinitd "${FILESDIR}/upsd.rc6" upsd
+	newinitd "${FILESDIR}/upsdrv.rc6-r1" upsdrv
+	newinitd "${FILESDIR}/upsmon.rc6" upsmon
 
 	# This sets up permissions for nut to access a UPS
 	insinto /etc/udev/rules.d/
