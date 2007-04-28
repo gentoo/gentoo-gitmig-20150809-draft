@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.2.1.ebuild,v 1.2 2006/06/07 14:23:44 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.2.1.ebuild,v 1.3 2007/04/28 17:55:46 swegener Exp $
 
 inherit eutils gnome2
 
@@ -97,8 +97,7 @@ src_install() {
 
 	insinto /etc/flumotion
 	doins default.pem
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/flumotion-init-0.2.0 flumotion
+	newinitd ${FILESDIR}/flumotion-init-0.2.0 flumotion
 
 	keepdir /var/run/flumotion
 	keepdir /var/log/flumotion
