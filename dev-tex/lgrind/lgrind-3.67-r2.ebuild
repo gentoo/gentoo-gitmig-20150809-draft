@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r2.ebuild,v 1.3 2004/12/28 21:28:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r2.ebuild,v 1.4 2007/04/28 16:19:32 tove Exp $
 
 inherit latex-package
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${PN}
 src_compile() {
 
 	latex-package_src_compile
-	cd ${S}/source
+	cd "${S}"/source
 	emake || die "Error compiling lgrind executable"
 
 }
@@ -31,14 +31,13 @@ src_install() {
 	insinto /usr/share/texmf/tex/latex/${PN}
 	doins lgrindef
 
-	insinto /etc/env.d
-	doins ${FILESDIR}/99lgrind || die
+	doenvd "${FILESDIR}"/99lgrind || die
 
 	# and finally, the documentation
 	dodoc FAQ README
 	docinto examples/
 	dodoc example/*
-	cd ${S}/source
+	cd "${S}"/source
 	doman lgrind.1 lgrindef.5
 
 }

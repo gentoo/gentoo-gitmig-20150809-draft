@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.12 2007/03/13 00:22:38 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.13 2007/04/28 16:17:13 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> hevea-1.07-r1.ebuild,
+  hevea-1.08.ebuild:
+  Use doenvd (#173884)
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
