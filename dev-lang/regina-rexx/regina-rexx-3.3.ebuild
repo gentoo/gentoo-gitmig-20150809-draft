@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.10 2007/02/06 08:40:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.11 2007/04/28 22:49:09 swegener Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -38,7 +38,7 @@ src_install() {
 	einstall datadir="${D}"/usr/share/regina || die
 	rm -rf "${D}"/etc/rc.d
 
-	newinitd "${FILESDIR}"/rxstack
+	doinitd "${FILESDIR}"/rxstack
 
 	dodoc BUGS HACKERS.txt README.Unix README_SAFE TODO
 }
