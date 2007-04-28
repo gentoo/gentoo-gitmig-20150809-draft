@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpudyn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.6 2007/02/22 00:36:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.7 2007/04/28 17:19:15 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> cpudyn-0.99.0.ebuild,
+  cpudyn-1.0.ebuild, cpudyn-1.0.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
