@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.6 2007/03/12 15:13:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.7 2007/04/28 18:07:53 swegener Exp $
 
 inherit eutils games
 
@@ -55,8 +55,7 @@ src_install() {
 
 	if use dedicated; then
 		games_make_wrapper wolf-ded ./wolfded.x86 "${dir}" "${dir}"
-		exeinto /etc/init.d
-		newexe "${FILESDIR}"/wolf-ded.rc wolf-ded
+		newinitd "${FILESDIR}"/wolf-ded.rc wolf-ded
 		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/wolf-ded
 	fi
 

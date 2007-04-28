@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.8 2007/03/12 15:15:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.9 2007/04/28 18:08:33 swegener Exp $
 
 inherit eutils games
 
@@ -56,8 +56,7 @@ src_install() {
 
 	if use dedicated; then
 		games_make_wrapper rtcwmp-demo-ded ./wolfded.x86 "${dir}" "${dir}"
-		exeinto /etc/init.d
-		newexe "${FILESDIR}"/rtcwmp-demo-ded.rc rtcwmp-demo-ded
+		newinitd "${FILESDIR}"/rtcwmp-demo-ded.rc rtcwmp-demo-ded
 		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/rtcwmp-demo-ded
 	fi
 
