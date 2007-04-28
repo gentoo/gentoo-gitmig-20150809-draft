@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.7 2007/01/05 17:24:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.8 2007/04/28 15:18:16 tove Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -28,9 +28,9 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-Makefile.patch
 	eautoreconf
 }
 
@@ -48,8 +48,7 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc README TODO API
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/bossogg.initd bossogg
+	newinitd "${FILESDIR}"/bossogg.initd bossogg
 }
 
 pkg_postinst() {
