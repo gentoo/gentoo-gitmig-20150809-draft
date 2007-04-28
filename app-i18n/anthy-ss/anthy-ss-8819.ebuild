@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-8728.ebuild,v 1.1 2007/04/01 12:45:10 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-8819.ebuild,v 1.1 2007/04/28 10:20:42 hattya Exp $
 
-inherit elisp-common eutils
+inherit autotools elisp-common eutils
 
 IUSE="emacs"
 
@@ -10,7 +10,7 @@ MY_P=${P/-ss/}
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/24669/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/25046/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
@@ -25,8 +25,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-calctrans-dep.diff
-
 	local cannadicdir=/var/lib/canna/dic/canna
 
 	if has_version 'app-dicts/canna-2ch'; then
@@ -34,6 +32,9 @@ src_unpack() {
 		sed -i /placename/a"read ${cannadicdir}/nichan.ctd" \
 			mkworddic/dict.args.in
 	fi
+
+	epatch "${FILESDIR}"/${PN}-calctrans-dep.diff
+	eautomake
 
 }
 

@@ -1,7 +1,7 @@
-diff -ur anthy-8728.orig/calctrans/Makefile.am anthy-8728/calctrans/Makefile.am
---- anthy-8728.orig/calctrans/Makefile.am	2007-03-16 04:37:26.000000000 +0900
-+++ anthy-8728/calctrans/Makefile.am	2007-03-30 23:22:20.610657676 +0900
-@@ -11,18 +11,18 @@
+diff -urN anthy-8819.orig/calctrans/Makefile.am anthy-8819/calctrans/Makefile.am
+--- anthy-8819.orig/calctrans/Makefile.am	2007-04-19 21:44:15.000000000 +0900
++++ anthy-8819/calctrans/Makefile.am	2007-04-20 22:44:01.398125421 +0900
+@@ -11,20 +11,20 @@
  proccorpus_SOURCES = proccorpus.c
  proccorpus_LDADD = ../src-util/libconvdb.la ../src-main/libanthy.la ../src-worddic/libanthydic.la
  
@@ -10,8 +10,8 @@ diff -ur anthy-8728.orig/calctrans/Makefile.am anthy-8728/calctrans/Makefile.am
  	./proccorpus $(srcdir)/corpus.?.txt > parsed_data
  	./calctrans parsed_data -o $(srcdir)/corpus_info
  	./calctrans -c $(srcdir)/corpus_info
- 	rm -f anthy.cand_info anthy.trans_info anthy.reorder_info
- 	make anthy.cand_info anthy.trans_info anthy.reorder_info
+ 	rm -f anthy.cand_info anthy.trans_info anthy.corpus_array anthy.corpus_bucket
+ 	make anthy.cand_info anthy.trans_info anthy.corpus_array anthy.corpus_bucket
  
 -anthy.trans_info: $(srcdir)/corpus_info
 +anthy.trans_info: calctrans $(srcdir)/corpus_info
@@ -19,8 +19,11 @@ diff -ur anthy-8728.orig/calctrans/Makefile.am anthy-8728/calctrans/Makefile.am
 -anthy.cand_info: $(srcdir)/corpus_info
 +anthy.cand_info: calctrans $(srcdir)/corpus_info
  	./calctrans -c $(srcdir)/corpus_info
--anthy.reorder_info: $(srcdir)/corpus_info
-+anthy.reorder_info: calctrans $(srcdir)/corpus_info
+-anthy.corpus_array: $(srcdir)/corpus_info
++anthy.corpus_array: calctrans $(srcdir)/corpus_info
+ 	./calctrans -c $(srcdir)/corpus_info
+-anthy.corpus_bucket: $(srcdir)/corpus_info
++anthy.corpus_bucket: calctrans $(srcdir)/corpus_info
  	./calctrans -c $(srcdir)/corpus_info
  
- noinst_DATA = anthy.trans_info anthy.cand_info anthy.reorder_info
+ noinst_DATA = anthy.trans_info anthy.cand_info anthy.corpus_array anthy.corpus_bucket
