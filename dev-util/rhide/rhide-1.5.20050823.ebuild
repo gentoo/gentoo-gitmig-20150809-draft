@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.5 2007/03/05 04:15:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.6 2007/04/28 18:02:21 swegener Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -226,8 +226,7 @@ src_install() {
 	doins "${FILESDIR}/tvrc"
 
 	# Install env file
-	insinto /etc/env.d
-	doins "${FILESDIR}/80rhide"
+	doenvd "${FILESDIR}/80rhide"
 
 	# We only need the Eterm stuff if TVision was not compiled
 	# with X11 support ...
