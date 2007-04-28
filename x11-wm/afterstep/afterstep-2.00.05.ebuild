@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.00.05.ebuild,v 1.7 2006/02/13 21:14:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.00.05.ebuild,v 1.8 2007/04/28 16:30:49 swegener Exp $
 
 inherit flag-o-matic
 
@@ -111,7 +111,6 @@ src_install() {
 	cp -pPR ${S}/doc/* ${D}/usr/share/doc/${PF}/html
 	rm ${D}/usr/share/doc/${PF}/html/{Makefile*,afterstepdoc.in}
 
-	dodir /usr/share/xsessions
 	insinto /usr/share/xsessions
 	newins ${S}/AfterStep.desktop.final AfterStep.desktop
 
