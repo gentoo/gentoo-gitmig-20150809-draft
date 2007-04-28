@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-3.0.2.ebuild,v 1.3 2007/01/24 13:57:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-3.0.2.ebuild,v 1.4 2007/04/28 17:02:54 tove Exp $
 
 inherit eutils
 
@@ -26,27 +26,27 @@ RDEPEND="net-firewall/iptables
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${P}-gentoo-${PATCHVER}.patch
+	epatch "${WORKDIR}"/${P}-gentoo-${PATCHVER}.patch
 
-	cd ${S}
-	cp ${FILESDIR}/bastille-${PV}-firewall.init ./bastille-firewall
+	cd "${S}"
+	cp "${FILESDIR}"/bastille-${PV}-firewall.init ./bastille-firewall
 	chmod a+x Install.sh bastille-ipchains bastille-netfilter
 }
 
 src_install() {
 
-	cd ${S}
-	DESTDIR=${D} ./Install.sh
+	cd "${S}"
+	DESTDIR="${D}" ./Install.sh
 
 	# Example configs
-	cd ${S}
+	cd "${S}"
 	insinto /usr/share/Bastille
 	doins *.config
 
-	exeinto /etc/init.d && newexe ${FILESDIR}/${P}-firewall.init ${PN}-firewall
+	newinitd "${FILESDIR}"/${P}-firewall.init ${PN}-firewall
 
 	# Documentation
-	cd ${S}
+	cd "${S}"
 	dodoc *.txt BUGS Change* README*
 }
 

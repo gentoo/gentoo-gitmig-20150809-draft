@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r4.ebuild,v 1.1 2006/08/12 12:32:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r4.ebuild,v 1.2 2007/04/28 17:05:28 tove Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -26,11 +26,11 @@ DEPEND=">=dev-perl/Mon-0.9
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && epatch ${FILESDIR}/alertafter.patch
+	cd "${S}" && epatch "${FILESDIR}"/alertafter.patch
 }
 
 src_compile() {
-	cd ${S}/mon.d
+	cd "${S}"/mon.d
 	make CC="$(tc-getCC) $CFLAGS" || die
 }
 
@@ -53,10 +53,9 @@ src_install() {
 	dodoc mon.lsm README TODO VERSION
 	docinto txt ; dodoc doc/README*
 	docinto etc ; dodoc etc/*
-	newdoc ${FILESDIR}/mon.cf mon.cf.sample
+	newdoc "${FILESDIR}"/mon.cf mon.cf.sample
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mon.rc6 mon
+	newinitd "${FILESDIR}"/mon.rc6 mon
 	insinto /etc/mon
-	newins ${FILESDIR}/mon.cf mon.cf.sample
+	newins "${FILESDIR}"/mon.cf mon.cf.sample
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r2.ebuild,v 1.2 2006/02/11 20:58:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r2.ebuild,v 1.3 2007/04/28 17:05:28 tove Exp $
 
 inherit toolchain-funcs
 
@@ -43,8 +43,7 @@ src_install() {
 	docinto etc ; dodoc etc/*
 	newdoc ${FILESDIR}/mon.cf mon.cf.sample
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mon.rc6 mon
+	newinitd ${FILESDIR}/mon.rc6 mon
 	insinto /etc/mon
 	newins ${FILESDIR}/mon.cf mon.cf.sample
 }

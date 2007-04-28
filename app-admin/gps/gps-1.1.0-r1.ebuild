@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0-r1.ebuild,v 1.9 2005/10/31 13:06:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0-r1.ebuild,v 1.10 2007/04/28 17:07:20 tove Exp $
 
 inherit eutils
 
@@ -20,14 +20,13 @@ RESTRICT="nouserpriv"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${P}-gentoo
+	epatch "${WORKDIR}"/${P}-gentoo
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/rgpsp
+	doinitd "${FILESDIR}"/rgpsp
 
 	dodoc TODO README* CHANGELOG
 
@@ -38,8 +37,8 @@ src_install() {
 	insinto /etc
 	newins rgpsp/sample.rgpsp.conf rgpsp.conf
 
-	rm -rf ${D}/usr/man ${D}/usr/doc ${D}/etc/rc.d
-	rm -f ${D}/usr/bin/rgpsp
+	rm -rf "${D}"/usr/man "${D}"/usr/doc "${D}"/etc/rc.d
+	rm -f "${D}"/usr/bin/rgpsp
 
 	dosym /usr/bin/rgpsp_linux /usr/bin/rgpsp
 }

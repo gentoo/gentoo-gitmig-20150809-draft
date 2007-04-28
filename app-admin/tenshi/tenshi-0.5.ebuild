@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.5.ebuild,v 1.3 2006/06/17 09:41:25 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.5.ebuild,v 1.4 2007/04/28 16:55:17 tove Exp $
 
 inherit eutils
 
@@ -23,11 +23,10 @@ pkg_setup() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install
+	emake DESTDIR="${D}" install
 	fowners tenshi:root /etc/tenshi/tenshi.conf
 	fowners tenshi:root /var/lib/tenshi
 	doman tenshi.8
-	exeinto /etc/init.d
-	newexe tenshi.gentoo-init tenshi
+	newinitd tenshi.gentoo-init tenshi
 	keepdir /var/lib/tenshi
 }
