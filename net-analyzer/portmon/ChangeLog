@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/portmon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.10 2007/02/20 00:26:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.11 2007/04/28 12:00:48 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> portmon-2.0.ebuild:
+  Use newinitd
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
