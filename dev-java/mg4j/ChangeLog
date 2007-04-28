@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/mg4j
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.12 2007/02/03 17:05:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.13 2007/04/28 19:19:18 nelchael Exp $
+
+*mg4j-0.9.1-r1 (28 Apr 2007)
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> +mg4j-0.9.1-r1.ebuild:
+  Migrated to generation 2.
 
   03 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   mg4j-0.9.1.ebuild:
