@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.52 2007/04/20 19:04:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.53 2007/04/28 17:59:31 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  libchipcard-0.9.1-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   20 Apr 2007; Hanno Boeck <hanno@gentoo.org>
   +files/libchipcard-ccid-dir.diff, libchipcard-3.0.2.ebuild:
