@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/libview-0.5.6-r1.ebuild,v 1.1 2007/04/04 19:17:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/libview-0.5.6-r1.ebuild,v 1.2 2007/04/28 22:20:42 compnerd Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/view/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4.0
