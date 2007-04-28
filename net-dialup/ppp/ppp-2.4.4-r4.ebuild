@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.14 2007/04/16 08:17:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.15 2007/04/28 16:45:43 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -164,7 +164,6 @@ src_install() {
 
 	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	#closing " for syntax coloring
-	dodir "${PLUGINS_DIR}"
 	insinto "${PLUGINS_DIR}"
 	insopts -m0755
 	doins pppd/plugins/minconn.so || die "minconn.so not build"
@@ -208,7 +207,6 @@ src_install() {
 	doman scripts/pon.1
 
 	# Adding misc. specialized scripts to doc dir
-	dodir /usr/share/doc/${PF}/scripts/chatchat
 	insinto /usr/share/doc/${PF}/scripts/chatchat
 	doins scripts/chatchat/*
 	insinto /usr/share/doc/${PF}/scripts
