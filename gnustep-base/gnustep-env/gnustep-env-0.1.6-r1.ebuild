@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6-r1.ebuild,v 1.8 2007/04/09 13:41:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6-r1.ebuild,v 1.9 2007/04/28 16:41:21 swegener Exp $
 
 inherit gnustep
 
@@ -32,8 +32,7 @@ src_compile() {
 
 src_install() {
 	egnustep_env
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/gnustep.runscript-${PV} gnustep
+	newinitd ${FILESDIR}/gnustep.runscript-${PV} gnustep
 	#dosed "s:XXX_GENTOO_GNUSTEP_ROOT_XXX:$(egnstep_prefix):g" /etc/init.d/gnustep
 	newenvd ${FILESDIR}/gnustep.env-${PV} 99gnustep
 	dosed "s:XXX_GNUSTEP_USER_ROOT_XXX:~$(egnustep_user_root_suffix):g" /etc/env.d/99gnustep
