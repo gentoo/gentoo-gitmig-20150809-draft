@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5-r4.ebuild,v 1.1 2005/08/09 20:53:29 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5-r4.ebuild,v 1.2 2007/04/28 17:48:05 swegener Exp $
 
 inherit eutils
 
@@ -58,8 +58,7 @@ src_install() {
 	#environment variables:
 	touch ${T}/97xpvm
 	echo XPVM_ROOT=/usr/local/pvm3/xpvm/src >> ${T}/97xpvm
-	insinto /etc/env.d
-	doins ${T}/97xpvm
+	doenvd ${T}/97xpvm
 
 	dodoc README
 }

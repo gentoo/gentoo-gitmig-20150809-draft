@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.5-r1.ebuild,v 1.2 2006/09/25 23:57:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.5-r1.ebuild,v 1.3 2007/04/28 17:46:56 swegener Exp $
 
 inherit flag-o-matic
 
@@ -69,6 +69,5 @@ src_install() {
 		rm ${D}/etc/ha.d/resource.d/ldirectord
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/heartbeat-init heartbeat
+	newinitd ${FILESDIR}/heartbeat-init heartbeat
 }

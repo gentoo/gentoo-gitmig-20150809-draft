@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.12 2006/07/16 21:32:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.13 2007/04/28 17:47:48 swegener Exp $
 
 inherit eutils
 
@@ -42,8 +42,7 @@ src_install() {
 	touch 98pvm
 	echo PVM_ROOT=/usr/local/pvm3 >98pvm
 	echo PVM_ARCH=LINUX >>98pvm
-	insinto /etc/env.d
-	doins 98pvm
+	doenvd 98pvm
 }
 
 pkg_postinst() {

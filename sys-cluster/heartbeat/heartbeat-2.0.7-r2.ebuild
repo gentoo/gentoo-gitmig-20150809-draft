@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.7-r2.ebuild,v 1.4 2007/03/01 00:51:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.7-r2.ebuild,v 1.5 2007/04/28 17:46:56 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -112,8 +112,7 @@ src_install() {
 
 	dodir /var/lib/heartbeat/cores/cluster
 	keepdir /var/lib/heartbeat/cores/cluster
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/heartbeat-init heartbeat
+	newinitd ${FILESDIR}/heartbeat-init heartbeat
 
 	dodoc ldirectord/ldirectord.cf doc/*.cf doc/haresources doc/authkeys || die
 	if use doc ; then

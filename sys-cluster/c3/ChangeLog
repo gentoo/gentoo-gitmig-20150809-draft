@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/c3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/c3/ChangeLog,v 1.3 2007/04/26 06:01:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/c3/ChangeLog,v 1.4 2007/04/28 17:46:16 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> c3-4.0.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.

@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.40 2007/04/28 07:24:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.41 2007/04/28 17:47:31 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> keepalived-1.1.11.ebuild,
+  keepalived-1.1.12.ebuild, keepalived-1.1.13.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
 *keepalived-1.1.13-r1 (28 Apr 2007)
 
