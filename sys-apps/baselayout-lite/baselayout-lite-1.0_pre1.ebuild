@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.12 2007/01/31 12:39:29 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.13 2007/04/28 18:09:21 swegener Exp $
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
@@ -42,8 +42,7 @@ src_install() {
 	sed -i -e 's:/usr/bin/tail:/bin/tail:' ${S}/init/inittab
 	doins ${S}/init/inittab
 
-	exeinto /etc/init.d
-	doexe ${S}/init/rc[SK]
+	doinitd ${S}/init/rc[SK]
 
 	mkdir -p ${D}/dev
 
