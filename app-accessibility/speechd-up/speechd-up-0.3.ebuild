@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.3.ebuild,v 1.1 2006/01/29 23:52:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.3.ebuild,v 1.2 2007/04/28 16:22:37 swegener Exp $
 
 IUSE=""
 
@@ -25,8 +25,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/speechd-up.rc speechd-up
+	newinitd ${FILESDIR}/speechd-up.rc speechd-up
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	doinfo speechd-up.info
 }

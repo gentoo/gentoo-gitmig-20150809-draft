@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.4.1.ebuild,v 1.9 2007/01/23 15:06:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.4.1.ebuild,v 1.10 2007/04/28 16:22:15 swegener Exp $
 
 DESCRIPTION="speech-dispatcher speech synthesis interface"
 HOMEPAGE="http://www.freebsoft.org/speechd"
@@ -21,8 +21,7 @@ DEPEND="${RDEPEND}
 src_install() {
 	make DESTDIR=${D} install || die
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/speech-dispatcher
+	doinitd ${FILESDIR}/speech-dispatcher
 
 	insinto /usr/include
 	doins ${S}/src/c/api/libspeechd.h

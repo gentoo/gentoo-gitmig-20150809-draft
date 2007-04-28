@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.20 2007/02/21 19:24:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.21 2007/04/28 16:22:15 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  speech-dispatcher-0.3.ebuild, speech-dispatcher-0.4.1.ebuild,
+  speech-dispatcher-0.5.ebuild, speech-dispatcher-0.6.ebuild:
+  Fix *initd and *envd calls, bug #173884.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

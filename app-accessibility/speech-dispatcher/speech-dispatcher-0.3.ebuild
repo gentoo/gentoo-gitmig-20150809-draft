@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.3.ebuild,v 1.6 2007/01/23 15:06:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.3.ebuild,v 1.7 2007/04/28 16:22:15 swegener Exp $
 
 inherit eutils libtool
 
@@ -43,8 +43,7 @@ src_install() {
 
 	mv ${D}/usr/bin/speechd ${D}/usr/bin/speech-dispatcher
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/speech-dispatcher
+	doinitd ${FILESDIR}/speech-dispatcher
 
 	insinto /usr/include
 	doins ${S}/src/c/api/libspeechd.h

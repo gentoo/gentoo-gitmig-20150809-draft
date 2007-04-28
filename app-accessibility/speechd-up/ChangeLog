@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-up
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.14 2007/03/03 23:09:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.15 2007/04/28 16:22:37 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> speechd-up-0.3.ebuild:
+  Fix *initd and *envd calls, bug #173884.
 
   03 Mar 2007; William Hubbs <williamh@gentoo.org> speechd-up-0.4-r1.ebuild:
   This fixes bug #163466.  Speech-dispatcher should have been a build-time
