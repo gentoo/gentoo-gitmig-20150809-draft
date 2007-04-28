@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.14 2007/03/03 23:10:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.15 2007/04/28 15:47:59 tove Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	insinto /etc
 	doins etc/openct.conf || die
@@ -41,8 +41,7 @@ src_install() {
 		newexe etc/hotplug.openct openct || die
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/openct.rc openct || die
+	newinitd "${FILESDIR}"/openct.rc openct || die
 
 	diropts -m0750 -gopenct
 	dodir /var/run/openct

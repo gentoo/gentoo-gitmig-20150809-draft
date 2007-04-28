@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.42 2007/04/06 20:28:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.43 2007/04/28 15:47:59 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> openct-0.5.0.ebuild:
+  Use newinitd
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   openct-0.6.11-r1.ebuild:
