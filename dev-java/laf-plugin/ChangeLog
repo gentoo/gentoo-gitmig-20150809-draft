@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/laf-plugin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/laf-plugin/ChangeLog,v 1.1 2007/04/28 22:08:06 caster Exp $
+
+*laf-plugin-0.2 (28 Apr 2007)
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/laf-plugin-0.2-build.xml, +metadata.xml, +laf-plugin-0.2.ebuild:
+  Initial ebuild, moved from java-overlay, added there by Alistair Bush.
+
