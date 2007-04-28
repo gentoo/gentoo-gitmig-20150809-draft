@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/amphetadesk/amphetadesk-0.93.1.ebuild,v 1.2 2005/04/23 20:12:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/amphetadesk/amphetadesk-0.93.1.ebuild,v 1.3 2007/04/28 13:18:17 tove Exp $
 
 DESCRIPTION="AmphetaDesk is a free syndicated news aggregator"
 HOMEPAGE="http://www.disobey.com/amphetadesk/"
@@ -19,13 +19,13 @@ S=${WORKDIR}/${PN}-src-v${PV}
 
 src_install() {
 	dodir /usr/share/amphetadesk
-	cp ${S}/AmphetaDesk.pl ${D}/usr/share/amphetadesk/AmphetaDesk.pl
+	cp "${S}"/AmphetaDesk.pl "${D}"/usr/share/amphetadesk/AmphetaDesk.pl
 	dodoc README.txt
-	cp -R ${S}/data ${D}/usr/share/amphetadesk
-	cp -R ${S}/docs ${D}/usr/share/amphetadesk
-	cp -R ${S}/lib ${D}/usr/share/amphetadesk
-	cp -R ${S}/templates ${D}/usr/share/amphetadesk
-	exeinto /etc/init.d; newexe ${FILESDIR}/amphetadesk.initd amphetadesk
+	cp -R "${S}"/data "${D}"/usr/share/amphetadesk
+	cp -R "${S}"/docs "${D}"/usr/share/amphetadesk
+	cp -R "${S}"/lib "${D}"/usr/share/amphetadesk
+	cp -R "${S}"/templates "${D}"/usr/share/amphetadesk
+	newinitd "${FILESDIR}"/amphetadesk.initd amphetadesk
 }
 
 pkg_postinst() {
