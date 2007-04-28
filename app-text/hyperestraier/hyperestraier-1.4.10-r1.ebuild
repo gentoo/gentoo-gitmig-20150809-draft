@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.10.ebuild,v 1.1 2007/03/12 14:27:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.10-r1.ebuild,v 1.1 2007/04/28 09:59:11 hattya Exp $
 
 inherit java-pkg-opt-2
 
@@ -29,6 +29,8 @@ src_unpack() {
 
 	# fix for insecure runpath warning.
 	sed -i "/^LDENV/d" Makefile.in
+
+	sed -i "/^JAVACFLAGS/s:$: ${JAVACFLAGS}:" java*/Makefile.in
 
 }
 
