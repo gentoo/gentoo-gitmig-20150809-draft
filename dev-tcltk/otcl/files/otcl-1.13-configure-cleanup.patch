@@ -1,0 +1,272 @@
+diff -Naur otcl-1.13.orig/conf/configure.in.audio otcl-1.13/conf/configure.in.audio
+--- otcl-1.13.orig/conf/configure.in.audio	1998-07-17 15:07:29.000000000 +0900
++++ otcl-1.13/conf/configure.in.audio	2007-04-28 09:49:05.000000000 +0900
+@@ -90,10 +90,10 @@
+ 	fi
+ fi
+ 
+-AC_TEST_CPP([#include <sys/audioio.h>], x=audio/audio-sun.o, x="")
++AC_PREPROC_IFELSE([AC_LANG_SOURCE([[#include <sys/audioio.h>]])],[x=audio/audio-sun.o],[x=""])
+ V_OBJ_AUDIO="$V_OBJ_AUDIO $x"
+ 
+-AC_TEST_CPP([#include <sun/audioio.h>], x=audio/audio-sun.o, x="")
++AC_PREPROC_IFELSE([AC_LANG_SOURCE([[#include <sun/audioio.h>]])],[x=audio/audio-sun.o],[x=""])
+ V_OBJ_AUDIO="$V_OBJ_AUDIO $x"
+ 
+ case "$target" in 
+diff -Naur otcl-1.13.orig/conf/configure.in.dynamic otcl-1.13/conf/configure.in.dynamic
+--- otcl-1.13.orig/conf/configure.in.dynamic	2006-09-28 14:25:04.000000000 +0900
++++ otcl-1.13/conf/configure.in.dynamic	2007-04-28 09:58:25.000000000 +0900
+@@ -148,7 +148,7 @@
+ 	SHLIB_LD_LIBS=""
+ 	SHLIB_SUFFIX=".so"
+ 	if test "$have_dl" = yes; then
+-	    SHLIB_LD="${CC} -shared"
++	    SHLIB_LD="${CC} -shared -Wl,-soname,${@}"
+ 	    DL_LIBS="-ldl"
+ 	    DL_LD_FLAGS="-rdynamic"
+ 	    DL_LD_SEARCH_FLAGS=""
+@@ -311,7 +311,7 @@
+ 	hold_ldflags=$LDFLAGS
+ 	AC_MSG_CHECKING(for ld accepts -Bexport flag)
+ 	LDFLAGS="${LDFLAGS} -Wl,-Bexport"
+-	AC_TRY_LINK(, [int i;], found=yes, found=no)
++	AC_LINK_IFELSE([AC_LANG_PROGRAM([[]], [[int i;]])],[found=yes],[found=no])
+ 	LDFLAGS=$hold_ldflags
+ 	AC_MSG_RESULT($found)
+ 	if test $found = yes; then
+diff -Naur otcl-1.13.orig/conf/configure.in.head otcl-1.13/conf/configure.in.head
+--- otcl-1.13.orig/conf/configure.in.head	2001-04-12 08:49:06.000000000 +0900
++++ otcl-1.13/conf/configure.in.head	2007-04-28 09:49:05.000000000 +0900
+@@ -32,12 +32,12 @@
+ fi
+ 
+ 
+-AC_CANONICAL_SYSTEM
++AC_CANONICAL_TARGET([])
+ 
+ AC_PROG_CC
+ AC_PROG_CXX
+-AC_STDC_HEADERS
+-AC_HAVE_HEADERS(string.h)
++AC_HEADER_STDC([])
++AC_CHECK_HEADERS([string.h])
+ 
+ V_INCLUDE=""
+ V_LIB=""
+@@ -76,8 +76,7 @@
+ else
+     if test "$CC" = gcc ; then
+ 	    AC_MSG_CHECKING(that $CXX can handle -O2)
+-	    AC_TRY_COMPILE(,
+-		#if __GNUC__ < 2  || __GNUC_MINOR__ < 8
++	    AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[#if __GNUC__ < 2  || __GNUC_MINOR__ < 8
+ 		/* gcc */
+ 		error
+ 		#endif
+@@ -85,9 +84,9 @@
+ 		/* egcs */
+ 		int error;
+ 		#endif
+-	    ,AC_MSG_RESULT(yes)
+-	    OonS="-O2",			# Optimize on Steroids
+-	    AC_MSG_RESULT(no))
++	    ]])],[AC_MSG_RESULT(yes)
++	    OonS="-O2"],[# Optimize on Steroids
++	    AC_MSG_RESULT(no)])
+     fi
+ fi
+ 
+@@ -152,19 +151,16 @@
+ 
+ # Checking validity of STL
+ AC_MSG_CHECKING(standard STL is available)
+-AC_LANG_SAVE
+-AC_LANG_CPLUSPLUS
++
++AC_LANG_PUSH([C++])
+ enable_stl="no"
+-AC_TRY_COMPILE(
+-	#include <list>
++AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <list>
+ 	#include <hash_map>
+ 	template <class _T> class tlist : public list <_T> {};
+-	,
+-	return 0;
+-	,AC_MSG_RESULT(yes)
+-	enable_stl="yes",
+-	AC_MSG_RESULT(no))
+-AC_LANG_RESTORE
++	]], [[return 0;
++	]])],[AC_MSG_RESULT(yes)
++	enable_stl="yes"],[AC_MSG_RESULT(no)])
++AC_LANG_POP([C++])
+ 
+ # This can be extended to support compilation-time module selection
+ V_STLOBJ=""
+diff -Naur otcl-1.13.orig/conf/configure.in.int64_t otcl-1.13/conf/configure.in.int64_t
+--- otcl-1.13.orig/conf/configure.in.int64_t	2005-09-01 10:54:05.000000000 +0900
++++ otcl-1.13/conf/configure.in.int64_t	2007-04-28 09:49:05.000000000 +0900
+@@ -22,19 +22,17 @@
+ fi
+ 
+ AC_CACHE_CHECK([for __int64_t],int64_t_HAVE___INT64_T,[
+-AC_TRY_RUN([
++AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ main() { __int64_t x; exit (sizeof(x) >= 8 ? 0 : 1); }
+-],
+-int64_t_HAVE___INT64_T=yes,int64_t_HAVE___INT64_T=no,int64_t_HAVE___INT64_T=cross)])
++]])],[int64_t_HAVE___INT64_T=yes],[int64_t_HAVE___INT64_T=no],[int64_t_HAVE___INT64_T=cross])])
+ if test x"$int64_t_HAVE___INT64_T" = x"yes" -a "x$INT64_T_ALTERNATIVE" = xnone; then
+ 	INT64_T_ALTERNATIVE=__int64_t
+ fi
+ 
+ AC_CACHE_CHECK([for long long],int64_t_HAVE_LONG_LONG,[
+-AC_TRY_RUN([
++AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ main() { long long x; exit (sizeof(x) >= 8 ? 0 : 1); }
+-],
+-int64_t_HAVE_LONG_LONG=yes,int64_t_HAVE_LONG_LONG=no,int64_t_HAVE_LONG_LONG=cross)])
++]])],[int64_t_HAVE_LONG_LONG=yes],[int64_t_HAVE_LONG_LONG=no],[int64_t_HAVE_LONG_LONG=cross])])
+ if test x"$int64_t_HAVE_LONG_LONG" = x"yes" -a "x$INT64_T_ALTERNATIVE" = xnone; then
+ 	INT64_T_ALTERNATIVE="long long"
+ fi
+diff -Naur otcl-1.13.orig/conf/configure.in.nse otcl-1.13/conf/configure.in.nse
+--- otcl-1.13.orig/conf/configure.in.nse	2000-03-10 10:49:32.000000000 +0900
++++ otcl-1.13/conf/configure.in.nse	2007-04-28 09:49:05.000000000 +0900
+@@ -9,20 +9,20 @@
+ dnl
+ 
+ AC_MSG_CHECKING([for struct ether_header])
+-AC_TRY_COMPILE([
++AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+ #include <stdio.h>
+ #include <net/ethernet.h>
+-], [
++]], [[
+ int main()
+ {
+ 	struct ether_header etherHdr;
+ 
+ 	return 1;
+ }
+-], [
++]])],[
+ AC_DEFINE(HAVE_ETHER_HEADER_STRUCT)
+ AC_MSG_RESULT(found)
+-], [
++],[
+ AC_MSG_RESULT(not found)
+ ])
+  
+@@ -31,20 +31,20 @@
+ dnl Look for ether_addr
+ dnl
+ AC_MSG_CHECKING([for struct ether_addr])
+-AC_TRY_COMPILE([
++AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+ #include <stdio.h>
+ #include <net/ethernet.h>
+-], [
++]], [[
+ int main()
+ {
+ 	struct ether_addr etherAddr;
+ 
+ 	return 0;
+ }
+-], [
++]])],[
+ AC_DEFINE(HAVE_ETHER_ADDRESS_STRUCT)
+ AC_MSG_RESULT(found)
+-], [
++],[
+ AC_MSG_RESULT(not found)
+ ])
+ 
+@@ -57,14 +57,13 @@
+ dnl
+ dnl look for SIOCGIFHWADDR
+ dnl
+-AC_TRY_RUN(
+-#include <stdio.h>
++AC_RUN_IFELSE([AC_LANG_SOURCE([[#include <stdio.h>
+ #include <sys/ioctl.h>
+ int main()
+ {
+ 	int i = SIOCGIFHWADDR;
+ 	return 0;
+ }
+-, AC_DEFINE(HAVE_SIOCGIFHWADDR), , echo 1
+-)
++]])],[AC_DEFINE(HAVE_SIOCGIFHWADDR)],[],[echo 1
++])
+ 
+diff -Naur otcl-1.13.orig/conf/configure.in.perl otcl-1.13/conf/configure.in.perl
+--- otcl-1.13.orig/conf/configure.in.perl	1999-01-22 11:37:20.000000000 +0900
++++ otcl-1.13/conf/configure.in.perl	2007-04-28 09:49:05.000000000 +0900
+@@ -19,8 +19,8 @@
+ dnl
+ AC_DEFUN(CHECK_PERL_VERSION,
+ [
+-echo $[$1] -e "require $[$2]" 1>&AC_FD_CC
+-if $[$1] -e "require $[$2]" 2>&AC_FD_CC
++echo $[$1] -e "require $[$2]" 1>&AS_MESSAGE_LOG_FD()
++if $[$1] -e "require $[$2]" 2>&AS_MESSAGE_LOG_FD()
+ then
+     : good version
+ else
+diff -Naur otcl-1.13.orig/conf/configure.in.tail otcl-1.13/conf/configure.in.tail
+--- otcl-1.13.orig/conf/configure.in.tail	2000-11-14 11:15:01.000000000 +0900
++++ otcl-1.13/conf/configure.in.tail	2007-04-28 09:49:05.000000000 +0900
+@@ -144,7 +144,8 @@
+ 
+ dnl backwards compability---if nothing else, do Makefile
+ define([AcOutputFiles],ifdef([AcOutputFiles],AcOutputFiles,Makefile))
+-AC_OUTPUT(AcOutputFiles)
++AC_CONFIG_FILES([Makefile])
++AC_OUTPUT
+ 
+ if test ! -d gen ; then 
+ 	echo "creating ./gen"
+diff -Naur otcl-1.13.orig/conf/configure.in.tcl otcl-1.13/conf/configure.in.tcl
+--- otcl-1.13.orig/conf/configure.in.tcl	2007-02-19 07:16:52.000000000 +0900
++++ otcl-1.13/conf/configure.in.tcl	2007-04-28 09:50:03.000000000 +0900
+@@ -91,6 +91,9 @@
+ 		$d/include/tcl$TCL_ALT_VERS \
+ 		$d/include \
+ 		/usr/local/include \ 
++ 		$d/lib/tcl$TCL_HI_VERS/include \
++ 		$d/lib/tcl$TCL_VERS/include \
++ 		$d/lib/tcl$TCL_ALT_VERS/include \
+ 		"
+ TCL_H_PLACES=" \
+ 		../include \
+@@ -144,7 +147,14 @@
+ 		/usr/include/tcl$TCL_VERS \
+ 		/usr/include/tcl$TCL_HI_VERS \
+ 		/usr/include/tcl$TCL_ALT_VERS \
+-		/usr/include/tcl"
++		/usr/include/tcl \
++		/usr/lib/tcl$TCL_VERS/include/unix \
++		/usr/lib/tcl$TCL_HI_VERS/include/unix \
++		/usr/lib/tcl$TCL_ALT_VERS/include/unix \
++		/usr/lib/tcl$TCL_VERS/include/generic \
++		/usr/lib/tcl$TCL_HI_VERS/include/generic \
++		/usr/lib/tcl$TCL_ALT_VERS/include/generic \
++		"
+ dnl /usr/include/tcl is for Debian Linux
+ dnl /usr/include/tcl-private/generic is for FC 4
+ TCL_LIB_PLACES_D="$d \
+diff -Naur otcl-1.13.orig/conf/configure.in.x11 otcl-1.13/conf/configure.in.x11
+--- otcl-1.13.orig/conf/configure.in.x11	2006-09-28 14:25:04.000000000 +0900
++++ otcl-1.13/conf/configure.in.x11	2007-04-28 09:49:05.000000000 +0900
+@@ -34,7 +34,7 @@
+ 
+ echo "checking for X11 header files"
+ if test "$x_includes" = NONE ; then
+-	AC_TEST_CPP([#include <X11/Intrinsic.h>],x_includes="",x_includes=NONE)
++	AC_PREPROC_IFELSE([AC_LANG_SOURCE([[#include <X11/Intrinsic.h>]])],[x_includes=""],[x_includes=NONE])
+ 	if test "$x_includes" = NONE ; then
+ 	        for i in $xincdirs ; do
+ 			if test -r $i/X11/Intrinsic.h; then
