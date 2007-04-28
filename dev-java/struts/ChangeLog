@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.31 2007/03/27 15:40:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.32 2007/04/28 23:50:26 caster Exp $
+
+*struts-1.1-r5 (28 Apr 2007)
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org> +struts-1.1-r5.ebuild:
+  Migrated 1.1 slot to gen-2 eclasses.
 
   27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> struts-1.2.9-r1.ebuild:
   Depend on dev-java/ant-tasks instead of dev-java/ant and cleanup ebuild a
