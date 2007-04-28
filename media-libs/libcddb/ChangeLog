@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.36 2007/04/27 14:20:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.37 2007/04/28 13:13:05 nixnut Exp $
+
+  28 Apr 2007; nixnut <nixnut@gentoo.org> libcddb-1.3.0.ebuild:
+  Stable on ppc wrt bug 166824
 
   27 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> libcddb-1.3.0.ebuild:
   Stable on sparc wrt #166824
