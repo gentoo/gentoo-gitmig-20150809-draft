@@ -1,6 +1,13 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-dev
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.25 2006/11/15 07:59:56 robbat2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.26 2007/04/28 23:36:49 robbat2 Exp $
+
+*fortune-mod-gentoo-dev-20070428 (28 Apr 2007)
+
+  28 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +fortune-mod-gentoo-dev-20070428.ebuild:
+  Add a new release for fortune-mod-gentoo-dev, upstream source is now also in
+  Gentoo CVS at gentoo/src/fortune-gentoo-dev/.
 
   15 Nov 2006; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update metadata as avenj is retiring. Please send me submissions for the
