@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/kopete-otr-0.2.ebuild,v 1.1 2007/04/27 10:06:10 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/kopete-otr-0.2.ebuild,v 1.2 2007/04/28 08:34:53 drizzt Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://kopete-otr.follefuder.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 #FIXME Fix deps before KDE-4
