@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.6 2007/04/21 20:52:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.7 2007/04/28 17:35:13 swegener Exp $
 
 inherit eutils
 
@@ -70,8 +70,7 @@ src_install() {
 	dobin ${FILESDIR}/ejabberdctl
 	dobin ${FILESDIR}/ejabberd
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ejabberd-0.7.5.initd ejabberd
+	newinitd ${FILESDIR}/ejabberd-0.7.5.initd ejabberd
 	if use ssl ; then
 		exeinto /etc/ejabberd
 		doexe ${FILESDIR}/self-cert.sh

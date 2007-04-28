@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.19 2007/02/04 10:37:23 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.20 2007/04/28 17:36:09 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -43,8 +43,7 @@ src_install() {
 	fowners jabber:jabber /usr/sbin/jit-wpjabber
 	fperms o-rwx /etc/jabber
 	fperms u+xs /usr/sbin/jit-wpjabber
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/jit-transport.init jit-transport
+	newinitd ${FILESDIR}/jit-transport.init jit-transport
 	dodoc ${FILESDIR}/README.Gentoo
 }
 

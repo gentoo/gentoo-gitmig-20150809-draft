@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/reaim-0.8.ebuild,v 1.3 2004/06/24 22:59:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/reaim-0.8.ebuild,v 1.4 2007/04/28 17:38:06 swegener Exp $
 
 DESCRIPTION="AIM transport proxy over NAT firewalls"
 HOMEPAGE="http://reaim.sourceforge.net/"
@@ -29,8 +29,7 @@ src_install() {
 	doman reaim.8
 	dodoc html/*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/reaim reaim
+	newinitd ${FILESDIR}/reaim reaim
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.1-r1.ebuild,v 1.7 2007/02/04 10:41:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.1-r1.ebuild,v 1.8 2007/04/28 17:39:01 swegener Exp $
 
 inherit eutils
 
@@ -34,8 +34,7 @@ src_install() {
 	doins yahoo-transport.so
 	insinto /etc/jabber
 	doins  ${FILESDIR}/yahootrans.xml
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/yahoo-transport.init yahoo-transport
+	newinitd ${FILESDIR}/yahoo-transport.init yahoo-transport
 	dodoc README ${FILESDIR}/README.Gentoo
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531.ebuild,v 1.11 2007/02/04 10:39:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531.ebuild,v 1.12 2007/04/28 17:36:54 swegener Exp $
 
 MY_PV="2004-05-31"
 #Ugly, msn-transport weired version numbers
@@ -33,8 +33,7 @@ src_install() {
 		doins ${WORKDIR}/${PN}-${MY_SDIR}/src/msntrans.so
 		insinto /etc/jabber
 		doins  ${FILESDIR}/msnt.xml
-		exeinto /etc/init.d
-		newexe ${FILESDIR}/msn-transport.init msn-transport
+		newinitd ${FILESDIR}/msn-transport.init msn-transport
 		dodoc README ${FILESDIR}/README.Gentoo msnt.xml
 }
 

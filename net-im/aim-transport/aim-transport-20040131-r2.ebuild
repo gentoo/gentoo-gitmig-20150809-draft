@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.11 2007/02/03 16:49:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.12 2007/04/28 17:34:08 swegener Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -44,8 +44,7 @@ src_install() {
 	doins src/aimtrans.so
 	insinto /etc/jabber
 	doins ${FILESDIR}/aimtrans.xml
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/aim-transport.init-r2 aim-transport
+	newinitd ${FILESDIR}/aim-transport.init-r2 aim-transport
 	insinto /etc/conf.d ; newins ${FILESDIR}/aim-transport-conf.d aim-transport
 	dodoc README ${FILESDIR}/README.Gentoo TODO aim.xml
 }
