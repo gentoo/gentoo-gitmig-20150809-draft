@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.17 2007/01/04 15:14:44 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.18 2007/04/28 13:06:11 carlo Exp $
+
+*kftpgrabber-0.8.1 (28 Apr 2007)
+
+  28 Apr 2007; Carsten Lohrke <carlo@gentoo.org> +kftpgrabber-0.8.1.ebuild:
+  Version bump.
 
 *kftpgrabber-0.8.0 (04 Jan 2007)
 
