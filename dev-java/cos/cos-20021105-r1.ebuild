@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/cos-20021105-r1.ebuild,v 1.1 2007/02/10 19:42:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/cos-20021105-r1.ebuild,v 1.2 2007/04/28 18:02:58 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip
-	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/servletapi-2.3*"
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
+	${RDEPEND}"
 S=${WORKDIR}
 
 src_unpack() {
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	dodoc readme.txt license.txt
+	dodoc readme.txt license.txt || die
 
-	use doc && java-pkg_dohtml -r dist/doc/api
+	use doc && java-pkg_dojavadoc dist/doc/api
 }
