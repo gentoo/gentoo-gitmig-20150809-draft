@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37.ebuild,v 1.2 2007/01/04 13:49:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37.ebuild,v 1.3 2007/04/28 17:18:13 swegener Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -42,8 +42,7 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	mv "${D}/usr/bin/say" "${D}/usr/bin/epos_say"
 
-	exeinto /etc/init.d
-	doexe "${FILESDIR}/eposd"
+	doinitd "${FILESDIR}/eposd"
 
 	dodoc WELCOME THANKS Changes "${FILESDIR}/README.gentoo"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.23-r1.ebuild,v 1.9 2006/05/25 00:04:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.23-r1.ebuild,v 1.10 2007/04/28 17:18:13 swegener Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ src_unpack() {
 src_install() {
 	einstall || die
 	mv ${D}/usr/bin/say ${D}/usr/bin/epos_say
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/epos
+	doinitd ${FILESDIR}/epos
 	dodoc WELCOME THANKS Changes ${FILESDIR}/README.gentoo
 }

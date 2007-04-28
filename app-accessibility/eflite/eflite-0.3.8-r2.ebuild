@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.12 2007/01/23 14:40:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.13 2007/04/28 17:17:53 swegener Exp $
 
 IUSE=""
 
@@ -40,8 +40,7 @@ src_install() {
 	insinto /etc/eflite
 	doins ${FILESDIR}/es.conf
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/eflite.rc eflite
+	newinitd ${FILESDIR}/eflite.rc eflite
 }
 
 pkg_postinst() {

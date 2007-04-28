@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r2.ebuild,v 1.4 2007/03/12 18:24:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r2.ebuild,v 1.5 2007/04/28 17:19:23 swegener Exp $
 
 inherit eutils
 
@@ -31,8 +31,7 @@ src_install() {
 	use esd && dosed 's,#\($use_esd\),\1,g' /usr/bin/speechd
 	insinto /etc
 	doins  speechd.sub speechdrc
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/speechd.rc speechd
+	newinitd ${FILESDIR}/speechd.rc speechd
 	doman ${S}/man/man1/*.1
 	dodoc README AUTHORS CHANGELOG TODO speechio.faq
 }

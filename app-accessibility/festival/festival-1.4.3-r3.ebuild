@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.14 2006/09/21 05:08:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.15 2007/04/28 17:18:39 swegener Exp $
 
 inherit eutils
 
@@ -160,13 +160,11 @@ src_install() {
 	doins ${FESTLIB}/us3_mbrola/festvox/*
 
 	# Sample server.scm configuration for the server
-	dodir /etc/festival
 	insinto /etc/festival
 	doins ${FILESDIR}/server.scm
 
 	# Install the init script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/festival.rc festival
+	newinitd ${FILESDIR}/festival.rc festival
 
 	# Need to fix saytime to look for festival in the correct spot
 	dosed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" /usr/bin/saytime

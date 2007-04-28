@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r4.ebuild,v 1.11 2006/09/21 05:08:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r4.ebuild,v 1.12 2007/04/28 17:18:39 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -100,8 +100,7 @@ src_install() {
 	doins ${FILESDIR}/server.scm
 
 	# Install the init script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/festival.rc festival
+	newinitd ${FILESDIR}/festival.rc festival
 
 	use mbrola && mbrola_voices
 
