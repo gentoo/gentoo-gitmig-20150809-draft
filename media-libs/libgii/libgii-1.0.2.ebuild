@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2.ebuild,v 1.2 2007/04/01 06:43:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2.ebuild,v 1.3 2007/04/28 02:19:27 zmedico Exp $
 
 inherit autotools eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="X"
 
-RDEPEND="X? ( x11-libs/libX11 )
+RDEPEND="X? ( x11-libs/libX11 x11-libs/libXxf86dga )
 	>=sys-kernel/linux-headers-2.6.11"
 DEPEND="${RDEPEND}"
 
