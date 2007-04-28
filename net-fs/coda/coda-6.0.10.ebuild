@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.10.ebuild,v 1.6 2007/04/28 16:51:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.10.ebuild,v 1.7 2007/04/28 22:33:09 swegener Exp $
 
 inherit eutils
 
@@ -79,9 +79,9 @@ src_install () {
 	dodoc README* ChangeLog CREDITS
 
 	doinitd ${FILESDIR}/${PV}/venus
-	doexe ${FILESDIR}/coda-update
-	doexe ${FILESDIR}/codasrv
-	doexe ${FILESDIR}/auth2
+	doinitd ${FILESDIR}/coda-update
+	doinitd ${FILESDIR}/codasrv
+	doinitd ${FILESDIR}/auth2
 
 	# We may use a conf.d/coda file at some point ?
 #	insinto /etc/conf.d
