@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-2.3.1.ebuild,v 1.1 2005/11/19 18:20:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-2.3.1.ebuild,v 1.2 2007/04/28 15:00:36 tove Exp $
 
 IUSE=""
 DESCRIPTION="The Ventrilo Voice Communication Server"
@@ -26,11 +26,8 @@ src_install() {
 	exeinto /opt/ventrilo-server
 	doexe ventrilo_{srv,status}
 
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/init.d.ventrilo ventrilo
-
-	exeinto /etc/conf.d/
-	newexe ${FILESDIR}/conf.d.ventrilo ventrilo
+	newinitd "${FILESDIR}"/init.d.ventrilo ventrilo
+	newconfd "${FILESDIR}"/conf.d.ventrilo ventrilo
 
 	insinto /opt/ventrilo-server
 	doins ventrilo_srv.ini
