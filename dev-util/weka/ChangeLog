@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.18 2007/02/04 00:18:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.19 2007/04/28 13:56:53 ali_bush Exp $
+
+*weka-3.4.10 (28 Apr 2007)
+
+  28 Apr 2007; Alistair John Bush <ali_bush@gentoo.org> +weka-3.4.10.ebuild:
+  Version bump and update weka to generation 2 java eclasses
 
   04 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   -files/weka-build_xml.patch, -weka-3.4.3_p20041113.ebuild:
