@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.13 2007/03/27 19:20:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.14 2007/04/28 22:26:18 caster Exp $
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org> tvbrowser-2.5.2.ebuild:
+  Raise dev-java/skinlf dependency to >=6.7 which fixes bug #170361.
 
   27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> tvbrowser-2.5.2.ebuild:
   Ebuild cleanup.

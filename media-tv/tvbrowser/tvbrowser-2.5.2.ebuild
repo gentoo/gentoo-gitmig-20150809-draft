@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.2 2007/03/27 19:20:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.3 2007/04/28 22:26:18 caster Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -33,7 +33,7 @@ RDEPEND="
 	>=dev-java/jgoodies-forms-1.0.7
 	>=dev-java/jgoodies-looks-2.0
 	>=dev-java/bsh-2.0_beta1
-	dev-java/skinlf
+	>=dev-java/skinlf-6.7
 	dev-java/l2fprod-common
 	>=dev-java/poi-2.5.1
 	>=dev-java/xerces-2.6.2"
