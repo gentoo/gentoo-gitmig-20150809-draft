@@ -1,12 +1,13 @@
 # ChangeLog for x11-misc/xcalib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/ChangeLog,v 1.4 2007/04/28 12:31:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/ChangeLog,v 1.5 2007/04/28 12:32:16 hansmi Exp $
 
 *xcalib-0.6-r1 (28 Apr 2007)
 
   28 Apr 2007; Michael Hanselmann <hansmi@gentoo.org>
   +files/0.6-Makefile-ldflags.diff, +xcalib-0.6-r1.ebuild:
   Add patch to respect LDFLAGS from bug #153160, install profiles and README.
+  Add to ~x86.
 
   17 Dec 2006; Michael Hanselmann <hansmi@gentoo.org> xcalib-0.6.ebuild:
   Stable on ppc.
