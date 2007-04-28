@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.13 2007/04/15 09:29:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.14 2007/04/28 16:43:32 swegener Exp $
 
 inherit eutils autotools
 
@@ -26,8 +26,7 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/rc_net.aol" net.aol
+	newinitd "${FILESDIR}/rc_net.aol" net.aol
 }
 
 pkg_postinst() {
