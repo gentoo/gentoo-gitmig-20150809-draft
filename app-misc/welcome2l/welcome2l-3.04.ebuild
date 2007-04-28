@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.13 2007/01/28 05:31:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.14 2007/04/28 19:19:47 tove Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${P}-gentoo.patch
+	cd "${S}"
+	epatch "${WORKDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
@@ -33,7 +33,7 @@ src_install() {
 	dobin ${MY_PN}
 	doman ${MY_PN}.1
 	dodoc AUTHORS README INSTALL ChangeLog BUGS TODO
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.initscript ${MY_PN}
+	newinitd "${FILESDIR}"/${PN}.initscript ${MY_PN}
 }
 
 pkg_postinst() {
