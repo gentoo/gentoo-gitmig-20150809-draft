@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7189 2007/04/28 18:37:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7190 2007/04/28 20:02:20 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Krzysiek Pawlik <nelchael@gentoo.org> (28 Apr 2007)
+# Package uses generation 1 eclasses and has stale upstream.
+# It will be removed from the tree around end of May.
+dev-java/qat
 
 # Vlastimil Babka <caster@gentoo.org> (28 Apr 2007)
 # Unused generation-1 fetch restricted binary libraries.
