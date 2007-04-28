@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.4.1.ebuild,v 1.2 2006/05/16 18:46:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.4.1.ebuild,v 1.3 2007/04/28 22:44:20 tove Exp $
 
 inherit eutils
 
@@ -39,11 +39,9 @@ src_install() {
 	dodir /var/lib/dibbler
 	use doc && dodoc ${DIBBLER_DOCDIR}/dibbler-user.pdf \
 			${DIBBLER_DOCDIR}/dibbler-devel.pdf
-	insinto /etc/init.d
-	doins ${FILESDIR}/dibbler-server ${FILESDIR}/dibbler-client ${FILESDIR}/dibbler-relay
-	fperms 755 /etc/init.d/dibbler-server
-	fperms 755 /etc/init.d/dibbler-client
-	fperms 755 /etc/init.d/dibbler-relay
+	doinitd ${FILESDIR}/dibbler-server \
+			${FILESDIR}/dibbler-client \
+			${FILESDIR}/dibbler-relay
 }
 
 pkg_postinst() {
