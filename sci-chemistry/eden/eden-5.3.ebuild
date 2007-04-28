@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.3 2007/03/15 17:32:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.4 2007/04/28 16:42:41 swegener Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -51,15 +51,12 @@ src_install() {
 	make install || die "install failed"
 
 	cd ${S}
-	dodir ${EDENHOME}/python
 	exeinto ${EDENHOME}/python
 	doexe python/*
 
-	dodir ${EDENHOME}/help
 	insinto ${EDENHOME}/help
 	doins help/*
 
-	dodir ${EDENHOME}/tools
 	insinto ${EDENHOME}/tools
 	doins tools/*
 

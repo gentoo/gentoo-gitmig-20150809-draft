@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/eden
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.7 2007/03/15 17:32:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.8 2007/04/28 16:42:41 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> eden-5.3.ebuild:
+  Drop dodir from dodir/*into combination.
 
   15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> eden-5.3.ebuild:
   QA: Removed illegal use of ${ROOT}. Bug #168043
