@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.4.ebuild,v 1.1 2006/02/24 13:58:51 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.4.ebuild,v 1.2 2007/04/28 12:20:46 tove Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 	-e "s:CXXFLAGS += -I./src/include:CXXFLAGS += ${CXXFLAGS} -I./src/include:" \
 	Makefile || die "custom CFLAGS patching failed"
@@ -52,7 +52,6 @@ src_install() {
 	dodoc README* doc/core-design.txt
 	doman doc/mwcollectd.1
 
-	newinitd ${FILESDIR}/initd mwcollectd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/confd mwcollectd
+	newinitd "${FILESDIR}"/initd mwcollectd
+	newconfd "${FILESDIR}"/confd mwcollectd
 }
