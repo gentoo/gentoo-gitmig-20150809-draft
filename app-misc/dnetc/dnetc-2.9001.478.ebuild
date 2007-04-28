@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.14 2007/01/28 05:11:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.15 2007/04/28 21:22:15 swegener Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -36,8 +36,8 @@ src_install() {
 	doman dnetc.1
 	dodoc CHANGES.txt dnetc.txt readme.*
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/dnetc.init dnetc
-	insinto /etc/conf.d ; newins ${FILESDIR}/dnetc.conf dnetc
+	newinitd ${FILESDIR}/dnetc.init dnetc
+	newconfd ${FILESDIR}/dnetc.conf dnetc
 }
 
 pkg_postinst() {

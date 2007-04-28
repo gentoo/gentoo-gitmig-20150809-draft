@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.42 2007/04/18 21:15:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.43 2007/04/28 21:22:15 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> dnetc-2.9001.478.ebuild,
+  dnetc-2.9002.479.ebuild, dnetc-2.9003.481-r1.ebuild,
+  dnetc-2.9005.483.ebuild, dnetc-2.9008.490.ebuild, dnetc-2.9009.494.ebuild,
+  dnetc-2.9011.496.ebuild, dnetc-2.9011.496-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   18 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Adding myself as the maintainer. I guess that means now I'll have to clean
