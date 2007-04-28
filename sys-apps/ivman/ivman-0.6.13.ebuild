@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.13.ebuild,v 1.6 2007/03/13 14:32:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.13.ebuild,v 1.7 2007/04/28 19:11:42 tove Exp $
 
 inherit eutils
 
@@ -30,8 +30,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/ivman-0.3.init ivman
+	newinitd "${FILESDIR}"/ivman-0.3.init ivman
 }
 
 pkg_postinst() {

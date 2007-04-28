@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.1 2007/03/06 15:02:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.2 2007/04/28 19:11:42 tove Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Add support for hotpluggable devices (not removable)
 	epatch "${FILESDIR}"/${PN}-0.6-hotpluggable.patch
@@ -38,8 +38,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/ivman-0.3.init ivman
+	newinitd "${FILESDIR}"/ivman-0.3.init ivman
 }
 
 pkg_postinst() {
