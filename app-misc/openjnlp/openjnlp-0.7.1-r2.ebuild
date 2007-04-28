@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r2.ebuild,v 1.1 2006/08/01 01:51:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r2.ebuild,v 1.2 2007/04/28 22:02:57 betelgeuse Exp $
 
-inherit java-pkg-2
+WANT_ANT_TASKS="ant-nodeps"
+
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="An open-source implementation of the JNLP"
 HOMEPAGE="http://openjnlp.nanode.org/"
@@ -17,30 +19,27 @@ RDEPEND=">=virtual/jre-1.3
 		dev-java/nanoxml"
 DEPEND=">=virtual/jdk-1.3
 		${RDEPEND}
-		app-arch/unzip
-		>=dev-java/ant-1.6"
+		app-arch/unzip"
 
 S="${WORKDIR}/OpenJNLP-src-rel_ver-${PV//./-}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/jars
-	rm *.jar
+	cd "${S}/jars"
+	rm -v *.jar || die
 	java-pkg_jar-from jnlp-bin
 	java-pkg_jar-from sax
 	java-pkg_jar-from nanoxml nanoxml.jar nanoxml-2.2.jar
 	java-pkg_jar-from nanoxml nanoxml-sax.jar nanoxml-sax-2.2.jar
 
-	cd ${S}
-	# Fix javac stuff that can't be handled by java-ant-2
-	sed -e 's/<javac/<javac target="1.3" source="1.3"/' -i targets/common.xml || die "sed failed"
+	sed -e "s/<javac/<javac target=\"$(java-pkg_get-target)\" source=\"$(java-pkg_get-source)\"/" \
+		-i "${S}/targets/common.xml" || die "failed to sed javac"
+	java-ant_rewrite-classpath "${S}/targets/OpenJNLP/build.xml"
 }
 
 src_compile() {
 	cd ${S}/targets
-	# FIXME patch targets/OpenJNLP/build.xml to do classpath correctly
-	# so we don't have to pass -lib to ant
-	eant -lib ../jars/MRJToolkitStubs.zip build
+	eant -Dgentoo.classpath=jars/MRJToolkitStubs.zip build
 }
 
 src_install() {
@@ -49,6 +48,6 @@ src_install() {
 	java-pkg_dojar lib/*.jar
 	java-pkg_dolauncher ${PN} --main org.nanode.app.OpenJNLP
 
-	dodoc {History,ReadMe}.txt
+	dodoc {History,ReadMe}.txt || die
 }
 
