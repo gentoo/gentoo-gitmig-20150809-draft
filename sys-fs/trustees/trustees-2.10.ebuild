@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.8 2004/10/28 16:01:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.9 2007/04/28 13:25:06 tove Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -37,8 +37,6 @@ src_install() {
 	dodoc README
 	newdoc trustee.conf trustee.conf.example
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/trustees.rc6" trustees
-	insinto /etc/conf.d
-	newins "${FILESDIR}/trustees.conf" trustees
+	newinitd "${FILESDIR}/trustees.rc6" trustees
+	newconfd "${FILESDIR}/trustees.conf" trustees
 }
