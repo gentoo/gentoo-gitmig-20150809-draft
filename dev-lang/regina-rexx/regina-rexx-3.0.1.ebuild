@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.15 2007/02/06 08:40:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.16 2007/04/28 16:57:05 swegener Exp $
 
 S=${WORKDIR}
 HOMEPAGE="http://regina-rexx.sourceforge.net"
@@ -27,8 +27,7 @@ src_compile() {
 src_install() {
 	einstall datadir=${D}/usr/share/regina || die
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/rc_rxstack rxstack
+	doinitd ${FILESDIR}/rc_rxstack rxstack
 
 	dodoc BUGS COPYING-LIB HACKERS.txt README.Unix README_SAFE \
 		TODO demo

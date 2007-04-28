@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan-bin/gwydion-dylan-bin-2.4.0.ebuild,v 1.2 2005/08/02 07:27:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan-bin/gwydion-dylan-bin-2.4.0.ebuild,v 1.3 2007/04/28 16:54:49 swegener Exp $
 
 DESCRIPTION="The Dylan Programming Language Compiler"
 HOMEPAGE="http://www.gwydiondylan.org/"
@@ -26,6 +26,5 @@ src_compile() {
 
 src_install() {
 	cp -pr * ${D}
-	insinto /etc/env.d
-	doins ${FILESDIR}/20gwydion-dylan
+	doenvd ${FILESDIR}/20gwydion-dylan
 }

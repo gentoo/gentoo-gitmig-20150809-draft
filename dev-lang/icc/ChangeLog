@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.40 2007/03/28 15:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.41 2007/04/28 16:55:09 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> icc-9.1.045.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   28 Mar 2007; Raúl Porcel <armin76@gentoo.org> icc-9.1.045.ebuild:
   ia64 stable wrt bug 169468

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.4 2007/03/28 15:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.5 2007/04/28 16:55:09 swegener Exp $
 
 inherit rpm versionator
 
@@ -97,8 +97,7 @@ src_install () {
 	dodir ${instdir}
 	cp -pPR opt/intel/cc*/${MMV}*/* ${D}/${instdir}
 	cp -pPR opt/intel/idb*/${MMV}*/* ${D}/${instdir}
-	insinto /etc/env.d
-	doins ${FILESDIR}/${PVR}/05icc-ifc || die
+	doenvd ${FILESDIR}/${PVR}/05icc-ifc || die
 	exeinto ${instdir}/bin
 	doexe ${FILESDIR}/${PVR}/icc || die
 	doexe ${FILESDIR}/${PVR}/icpc || die

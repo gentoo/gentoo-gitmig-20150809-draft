@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.14.ebuild,v 1.3 2005/11/04 13:55:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.14.ebuild,v 1.4 2007/04/28 16:57:49 swegener Exp $
 
 inherit flag-o-matic
 
@@ -24,6 +24,5 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	insinto /etc/env.d
-	doins ${FILESDIR}/42stratego
+	doenvd ${FILESDIR}/42stratego
 }

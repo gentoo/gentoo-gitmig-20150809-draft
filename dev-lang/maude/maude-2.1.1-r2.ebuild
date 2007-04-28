@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.3 2005/01/17 12:32:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.4 2007/04/28 16:55:54 swegener Exp $
 
 inherit toolchain-funcs eutils
 
@@ -52,8 +52,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# Sets the full maude library path.
-	insinto /etc/env.d
-	doins ${FILESDIR}/23maude
+	doenvd ${FILESDIR}/23maude
 
 	cd ${WORKDIR}/${PN}-full-doc-${PV}
 
