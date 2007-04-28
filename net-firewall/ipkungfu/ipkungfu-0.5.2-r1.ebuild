@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.5.2-r1.ebuild,v 1.6 2005/07/26 11:56:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.5.2-r1.ebuild,v 1.7 2007/04/28 17:39:27 swegener Exp $
 
 inherit eutils
 
@@ -38,8 +38,7 @@ src_install() {
 	dosbin ipkungfu
 
 	# Install Gentoo init script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ipkungfu.init ipkungfu
+	newinitd ${FILESDIR}/ipkungfu.init ipkungfu
 
 	# Install config files into /etc
 	dodir /etc/ipkungfu

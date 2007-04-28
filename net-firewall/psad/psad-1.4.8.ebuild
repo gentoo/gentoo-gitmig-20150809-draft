@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.8 2007/04/26 23:46:53 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.9 2007/04/28 17:39:09 swegener Exp $
 
 inherit eutils perl-app
 
@@ -82,8 +82,7 @@ src_install() {
 	doins auto_dl icmp_types posf signatures pf.os
 
 	cd ${S}/init-scripts
-	exeinto /etc/init.d
-	newexe psad-init.gentoo psad
+	newinitd psad-init.gentoo psad
 
 	cd ${S}/snort_rules
 	dodir /etc/psad/snort_rules

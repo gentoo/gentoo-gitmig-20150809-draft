@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/psad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.41 2007/04/26 23:50:55 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.42 2007/04/28 17:39:09 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> psad-1.4.8.ebuild,
+  psad-2.0.6.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   26 Apr 2007; Bryan Stine <battousai@gentoo.org> psad-2.0.6.ebuild:
   Forgot to re-KEYWORD.
