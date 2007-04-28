@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/crimson-1.1.3-r1.ebuild,v 1.4 2007/04/28 15:32:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/crimson-1.1.3-r1.ebuild,v 1.5 2007/04/28 17:22:51 wltjr Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -12,7 +12,7 @@ SRC_URI="http://xml.apache.org/dist/crimson/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.3* )"
