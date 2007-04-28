@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jscience
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.5 2007/04/28 16:17:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.6 2007/04/28 16:35:39 nelchael Exp $
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> -jscience-1.0.3.ebuild:
+  Remove old version.
 
 *jscience-1.0.4-r1 (28 Apr 2007)
 
