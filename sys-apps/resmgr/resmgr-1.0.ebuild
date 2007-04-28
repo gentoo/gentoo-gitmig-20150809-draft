@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/resmgr-1.0.ebuild,v 1.3 2005/09/03 19:29:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/resmgr-1.0.ebuild,v 1.4 2007/04/28 16:25:53 swegener Exp $
 
 inherit multilib
 
@@ -23,10 +23,8 @@ src_compile() {
 src_install() {
 	make LIBDIR="${D}/$(get_libdir)" PAMDIR="${D}/$(get_libdir)" DESTDIR="${D}" install || die
 	dosym $(basename ${D}/$(get_libdir)/libresmgr.so.*) /$(get_libdir)/libresmgr.so
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/resmgrd.rc" resmgrd
-	insinto /etc/conf.d
-	newins "${FILESDIR}/resmgrd.confd" resmgrd
+	newinitd "${FILESDIR}/resmgrd.rc" resmgrd
+	newconfd "${FILESDIR}/resmgrd.confd" resmgrd
 	exeinto /etc/hotplug/usb
 	newexe "${FILESDIR}/desktopdev" desktopdev
 	dodoc ANNOUNCE COPYING INSTALL README TODO
