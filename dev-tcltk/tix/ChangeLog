@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.17 2007/03/26 08:09:21 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.18 2007/04/28 23:22:43 matsuu Exp $
+
+*tix-8.4.2 (28 Apr 2007)
+
+  28 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> +tix-8.4.2.ebuild:
+  Version bumped.
+  Fixed bug #168897.
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> tix-8.2.0-r1.ebuild,
   tix-8.4.0.ebuild:
