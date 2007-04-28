@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-2.0.0_rc6-r1.ebuild,v 1.2 2006/06/28 14:58:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-2.0.0_rc6-r1.ebuild,v 1.3 2007/04/28 13:21:16 tove Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ SLOT="0"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/10-pam_smb-bash-3.1.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/10-pam_smb-bash-3.1.patch
 }
 
 src_compile() {
@@ -41,8 +41,7 @@ src_install() {
 	docinto pam.d
 	dodoc pam_smb.conf*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pamsmbd-init pamsmbd
+	newinitd "${FILESDIR}"/pamsmbd-init pamsmbd
 }
 
 pkg_postinst() {
