@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.156 2007/04/23 15:41:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.157 2007/04/28 10:04:05 ikelos Exp $
+
+  28 Apr 2007; Mike Auty <ikelos@gentoo.org> files/vmware-workstation.rc:
+  Redigest for vmware-any-any109, and fix rc file for baselayout-2.
 
   23 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   files/vmware-workstation.rc:
