@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.15 2007/02/22 00:28:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.16 2007/04/28 17:29:39 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> skunkweb-3.4.0-r1.ebuild,
+  skunkweb-3.4.1.ebuild, skunkweb-3.4.3.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

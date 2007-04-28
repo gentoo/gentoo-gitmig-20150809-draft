@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.12 2006/10/05 14:54:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.13 2007/04/28 17:28:43 swegener Exp $
 
 inherit eutils java-pkg
 
@@ -41,8 +41,7 @@ src_install() {
 		cp build/output/${P}/bin/${f} ${D}/${INSTALL_DIR}/bin || die "failed"
 	done
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/${PV}/init.d/jboss
+	doinitd ${FILESDIR}/${PV}/init.d/jboss
 	dodir /etc/conf.d
 	cp ${FILESDIR}/${PV}/conf.d/jboss ${D}/etc/conf.d
 	dodir /etc/env.d

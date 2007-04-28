@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.13-r1.ebuild,v 1.5 2007/03/13 14:44:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.13-r1.ebuild,v 1.6 2007/04/28 17:28:19 swegener Exp $
 
 inherit eutils
 
@@ -54,14 +54,12 @@ src_install() {
 	dodir /var/www/localhost/cgi-bin || die
 	dodir /var/www/localhost/icons || die
 
-	insinto /etc/conf.d
-	doins ${FILESDIR}/boa.conf.d
+	doconfd ${FILESDIR}/boa.conf.d
 
 	exeinto /usr/lib/boa
 	doexe src/boa_indexer || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/boa.rc6 boa || die
+	newinitd ${FILESDIR}/boa.rc6 boa || die
 
 	insinto /etc/boa
 	insopts -m700

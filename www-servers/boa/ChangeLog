@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/boa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.10 2007/04/24 13:29:49 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.11 2007/04/28 17:28:19 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> boa-0.94.13-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   24 Apr 2007; Thilo Bangert <bangert@gentoo.org> boa-0.94.13.ebuild,
   boa-0.94.14_alpha20.ebuild:

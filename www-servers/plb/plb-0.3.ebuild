@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/plb-0.3.ebuild,v 1.3 2006/10/13 21:25:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/plb-0.3.ebuild,v 1.4 2007/04/28 17:29:15 swegener Exp $
 
 DESCRIPTION="A free high-performance HTTP load balancer"
 HOMEPAGE="http://plb.sunsite.dk/"
@@ -20,8 +20,7 @@ src_install() {
 
 	insinto /etc/
 	doins ${FILESDIR}/plb.conf
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/plb.rc6 plb
+	newinitd ${FILESDIR}/plb.rc6 plb
 }
 
 pkg_postinst() {
