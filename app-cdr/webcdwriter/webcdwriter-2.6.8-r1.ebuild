@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8-r1.ebuild,v 1.4 2007/01/24 02:33:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8-r1.ebuild,v 1.5 2007/04/28 21:38:23 tove Exp $
 
 inherit eutils java-pkg
 
@@ -40,8 +40,7 @@ src_compile() {
 
 src_install() {
 
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/${PN}.rc CDWserver
+	newinitd ${FILESDIR}/${PN}.rc CDWserver
 
 	diropts -m700
 	dodir /etc/CDWserver
