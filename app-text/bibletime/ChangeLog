@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.41 2007/04/26 22:07:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.42 2007/04/28 15:34:10 carlo Exp $
+
+  28 Apr 2007; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
+  Remove the KDE team as maintainers.
 
   26 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
   bibletime-1.6.3.ebuild:
