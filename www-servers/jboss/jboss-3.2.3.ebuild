@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.3.ebuild,v 1.8 2007/04/28 17:28:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.3.ebuild,v 1.9 2007/04/28 23:12:51 swegener Exp $
 
 inherit eutils java-pkg
 
@@ -47,10 +47,8 @@ src_install() {
 	done
 
 	doinitd ${FILESDIR}/${PV}/init.d/jboss
-	dodir /etc/conf.d
-	cp ${FILESDIR}/${PV}/conf.d/jboss ${D}/etc/conf.d
-	dodir /etc/env.d
-	cp ${FILESDIR}/${PV}/env.d/50jboss ${D}/etc/env.d
+	doconfd ${FILESDIR}/${PV}/conf.d/jboss
+	doenvd ${FILESDIR}/${PV}/env.d/50jboss
 	sed "s#@JBOSSPREFIX@#${INSTALL_DIR}#" \
 		<${FILESDIR}/${PV}/env.d/50jboss \
 		>${D}/etc/env.d/50jboss
