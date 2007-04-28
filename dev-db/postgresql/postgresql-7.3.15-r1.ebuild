@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.15-r1.ebuild,v 1.12 2006/11/09 18:35:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.15-r1.ebuild,v 1.13 2007/04/28 22:04:20 tove Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -172,11 +172,8 @@ src_install() {
 	fi
 
 	cd ${S}
-	exeinto /etc/init.d/
-	newexe "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
-
-	insinto /etc/conf.d/
-	newins "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
+	newinitd "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
+	newconfd "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
 
 	keepdir /var/lib/postgresql
 }

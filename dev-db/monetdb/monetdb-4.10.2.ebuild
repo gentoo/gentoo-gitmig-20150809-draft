@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.8 2007/02/11 14:12:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.9 2007/04/28 22:07:02 tove Exp $
 
 inherit flag-o-matic eutils
 
@@ -152,11 +152,8 @@ src_install() {
 	cd "${WORKDIR}/pathfinder-${PV_XQ}"
 	emake -j1 DESTDIR="${D}" install || die "failed to install xquery"
 
-	exeinto /etc/init.d/
-	newexe "${FILESDIR}/${PN}.init-4.8.2" monetdb || die "init.d script"
-
-	insinto /etc/conf.d/
-	newins "${FILESDIR}/${PN}.conf-4.8.2" monetdb || die "conf.d file"
+	newinitd "${FILESDIR}/${PN}.init-4.8.2" monetdb || die "init.d script"
+	newconfd "${FILESDIR}/${PN}.conf-4.8.2" monetdb || die "conf.d file"
 
 	diropts -m750
 	dodir "${DATA_DIR}" "/var/log/${PN}"

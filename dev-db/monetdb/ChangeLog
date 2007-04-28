@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/monetdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.13 2007/02/11 14:12:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.14 2007/04/28 22:07:02 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> monetdb-4.10.2.ebuild,
+  monetdb-4.12.0.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   11 Feb 2007; Fabian Groffen <grobian@gentoo.org>
   -files/monetdb-4.10.0-darwin.patch,

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.13.ebuild,v 1.13 2006/11/09 18:35:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.13.ebuild,v 1.14 2007/04/28 22:04:20 tove Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
@@ -201,14 +201,12 @@ src_install() {
 	fi
 
 	cd ${S}
-	exeinto /etc/init.d/
-	newexe "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
-	newexe "${FILESDIR}/pg_autovacuum.init-${PV%.*}" pg_autovacuum || die
+	newinitd "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
+	newinitd "${FILESDIR}/pg_autovacuum.init-${PV%.*}" pg_autovacuum || die
 	dosed "s:___DOCDIR___:/usr/share/doc/${PF}:" /etc/init.d/pg_autovacuum
 
-	insinto /etc/conf.d/
-	newins "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
-	newins "${FILESDIR}/pg_autovacuum.conf-${PV%.*}" pg_autovacuum || die
+	newconfd "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
+	newconfd "${FILESDIR}/pg_autovacuum.conf-${PV%.*}" pg_autovacuum || die
 }
 
 pkg_postinst() {
