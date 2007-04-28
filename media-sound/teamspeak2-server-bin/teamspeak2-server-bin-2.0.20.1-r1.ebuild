@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1-r1.ebuild,v 1.4 2007/02/09 05:26:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1-r1.ebuild,v 1.5 2007/04/28 13:35:14 tove Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_install() {
 		doexe libsqlmy.so
 	fi
 
-	touch ${D}/opt/teamspeak2-server/bad_names.txt
+	touch "${D}"/opt/teamspeak2-server/bad_names.txt
 	fowners teamspeak2 /opt/teamspeak2-server/bad_names.txt
 
 	insinto /opt/teamspeak2-server/sql
@@ -61,8 +61,7 @@ src_install() {
 	fi
 
 	# runtime FS layout ...
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/2.0.20.1-r1/teamspeak2-server.rc6" teamspeak2-server
+	newinitd "${FILESDIR}/2.0.20.1-r1/teamspeak2-server.rc6" teamspeak2-server
 
 	keepdir /{etc,var/{lib,log,run}}/teamspeak2-server
 	fowners teamspeak2 /{etc,var/{lib,log,run}}/teamspeak2-server
