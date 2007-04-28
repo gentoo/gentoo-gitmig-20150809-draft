@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r3.ebuild,v 1.5 2005/04/21 18:51:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r3.ebuild,v 1.6 2007/04/28 15:35:11 tove Exp $
 
 inherit eutils
 
@@ -23,9 +23,9 @@ S="${WORKDIR}/skk-${PV}mu"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/skkserv
-	epatch ${FILESDIR}/${P}-segfault-gentoo.patch
-	epatch ${FILESDIR}/${P}-inet_ntoa-gentoo.patch
+	cd "${S}"/skkserv
+	epatch "${FILESDIR}"/${P}-segfault-gentoo.patch
+	epatch "${FILESDIR}"/${P}-inet_ntoa-gentoo.patch
 }
 
 src_compile() {
@@ -38,6 +38,5 @@ src_install() {
 	cd skkserv
 	dosbin skkserv || die
 
-	# install rc script
-	exeinto /etc/init.d ; newexe ${FILESDIR}/skkserv.initd skkserv
+	newinitd "${FILESDIR}"/skkserv.initd skkserv
 }

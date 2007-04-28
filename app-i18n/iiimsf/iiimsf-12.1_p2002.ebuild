@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/iiimsf-12.1_p2002.ebuild,v 1.2 2005/04/16 13:04:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/iiimsf-12.1_p2002.ebuild,v 1.3 2007/04/28 15:32:17 tove Exp $
 
 inherit iiimf flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 	sed -i -e 's,$(IM_LIBDIR)/iiimp,/usr/lib,g' Makefile* \
 		|| die "sed Makefile.{am,in} failed."
 }
@@ -33,10 +33,9 @@ src_compile() {
 src_install() {
 	exeinto /usr/lib/im
 	doexe src/htt src/htt_server
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/iiim.initd iiim
+	newinitd "${FILESDIR}"/iiim.initd iiim
 	insinto /etc/iiim
-	doins ${FILESDIR}/htt.xml.conf
+	doins "${FILESDIR}"/htt.xml.conf
 
 	# unix domain socket
 	keepdir /var/run/iiim

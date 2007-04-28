@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/iiimsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/ChangeLog,v 1.9 2007/02/08 22:12:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/ChangeLog,v 1.10 2007/04/28 15:32:17 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> iiimsf-11.4_p1467.ebuild,
+  iiimsf-12.1_p2002.ebuild:
+  Use newinitd
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
