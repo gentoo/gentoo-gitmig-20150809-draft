@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.14 2007/01/04 16:55:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.15 2007/04/28 12:47:19 tove Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -31,8 +31,8 @@ src_unpack() {
 }
 
 src_compile() {
-	epatch ${FILESDIR}/udev.patch
-	epatch ${FILESDIR}/${P}-kernel26.patch
+	epatch "${FILESDIR}"/udev.patch
+	epatch "${FILESDIR}"/${P}-kernel26.patch
 
 	use snmp \
 	&& myconf="${myconf} --with-snmp=/usr" \
@@ -92,8 +92,7 @@ src_install() {
 	doexe scripts/ptal-init
 	dodir /usr/lib/cups/backend
 	dosym /usr/sbin/ptal-cups /usr/lib/cups/backend/ptal
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/hpoj.init hpoj
+	newinitd "${FILESDIR}"/hpoj.init hpoj
 }
 
 pkg_postinst() {

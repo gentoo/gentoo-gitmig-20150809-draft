@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.15 2007/04/07 13:19:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.16 2007/04/28 12:51:51 tove Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,11 +27,11 @@ S=${WORKDIR}/${MY_PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-3.8.27-certs.diff
-	epatch ${FILESDIR}/${P}-lpq.diff
-	epatch ${FILESDIR}/${P}-make.diff
-	epatch ${FILESDIR}/${P}-krb.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-3.8.27-certs.diff
+	epatch "${FILESDIR}"/${P}-lpq.diff
+	epatch "${FILESDIR}"/${P}-make.diff
+	epatch "${FILESDIR}"/${P}-krb.diff
 }
 
 src_compile() {
@@ -60,18 +60,17 @@ src_install() {
 	dodir /var/spool/lpd/lp
 
 	emake install \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		POSTINSTALL="NO" \
-		gnulocaledir=${D}/usr/share/locale || die "emake install failed"
+		gnulocaledir="${D}"/usr/share/locale || die "emake install failed"
 
-	dodoc CHANGES README VERSION ${FILESDIR}/printcap lpd.conf lpd.perms
+	dodoc CHANGES README VERSION "${FILESDIR}"/printcap lpd.conf lpd.perms
 	dohtml HOWTO/*
 
 	insinto /etc/lprng
-	doins ${FILESDIR}/printcap lpd.conf lpd.perms
+	doins "${FILESDIR}"/printcap lpd.conf lpd.perms
 	dosym /etc/lprng/printcap /etc/printcap
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/lprng-init lprng
+	newinitd "${FILESDIR}"/lprng-init lprng
 }
 
 pkg_postinst() {
