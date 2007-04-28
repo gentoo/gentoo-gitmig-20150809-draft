@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.35 2007/04/23 20:13:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.36 2007/04/28 18:01:00 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> grass-6.0.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   23 Apr 2007; Sven Wegener <swegener@gentoo.org> grass-5.4.0.ebuild:
   Sync IUSE (-tcltk +tk)
