@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.20 2007/04/19 10:45:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.21 2007/04/28 16:31:49 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  noip-updater-2.1.1-r1.ebuild, noip-updater-2.1.3.ebuild,
+  noip-updater-2.1.4.ebuild:
+  Fix *initd and *envd calls, bug #173884.
 
 *noip-updater-2.1.4 (19 Apr 2007)
 

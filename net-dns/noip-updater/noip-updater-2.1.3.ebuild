@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.3.ebuild,v 1.1 2006/10/29 02:21:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.3.ebuild,v 1.2 2007/04/28 16:31:49 swegener Exp $
 
 inherit eutils
 
@@ -40,8 +40,7 @@ src_install() {
 	into /usr
 	dosbin noip2
 	dodoc README.FIRST COPYING
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/noip2.start noip
+	newinitd ${FILESDIR}/noip2.start noip
 	prepalldocs
 }
 
