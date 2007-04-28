@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.17 2007/03/05 00:00:03 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.18 2007/04/28 09:44:49 ikelos Exp $
+
+  28 Apr 2007; Mike Auty <ikelos@gentoo.org>
+  files/digest-vmware-modules-1.0.0.11,
+  files/digest-vmware-modules-1.0.0.11-r1,
+  files/digest-vmware-modules-1.0.0.13,
+  files/digest-vmware-modules-1.0.0.13-r1,
+  files/digest-vmware-modules-1.0.0.15-r1, Manifest:
+  Redigest for vmware-any-any109.
 
   04 Mar 2007; Mike Auty <ikelos@gentoo.org>
   -vmware-modules-1.0.0.15.ebuild:
