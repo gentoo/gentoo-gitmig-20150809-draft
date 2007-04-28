@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.92.ebuild,v 1.9 2007/04/28 17:34:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.92.ebuild,v 1.10 2007/04/28 20:49:36 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -93,7 +93,6 @@ src_install() {
 
 	newconfd ${FILESDIR}/bitlbeed.confd bitlbeed || die
 
-	dodir /var/run/bitlbeed
 	keepdir /var/run/bitlbeed
 
 	dodir /usr/share/bitlbee
