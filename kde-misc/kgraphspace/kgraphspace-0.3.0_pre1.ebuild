@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/kgraphspace-0.3.0_pre1.ebuild,v 1.5 2006/11/25 04:34:56 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/kgraphspace-0.3.0_pre1.ebuild,v 1.6 2007/04/28 15:33:13 carlo Exp $
 
 inherit kde eutils
 
@@ -15,9 +15,9 @@ IUSE=""
 
 S="$WORKDIR/${P//_/-}"
 
-need-kde 3
-
 DEPEND="|| ( kde-base/libkonq kde-base/kdebase )"
+
+need-kde 3.5
 
 src_unpack() {
 	kde_src_unpack
