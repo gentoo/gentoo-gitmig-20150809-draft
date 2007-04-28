@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.9 2007/03/22 16:13:53 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.3.ebuild,v 1.10 2007/04/28 21:31:54 tove Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -233,8 +233,8 @@ EOF
 	newbin contrib/client-side/svn_load_dirs.pl svn-load-dirs
 
 	# Install svnserve init-script and xinet.d snippet, bug 43245
-	exeinto /etc/init.d ; newexe ${FILESDIR}/svnserve.initd svnserve
-	insinto /etc/xinetd.d ; newins ${FILESDIR}/svnserve.xinetd svnserve
+	newinitd ${FILESDIR}/svnserve.initd svnserve
+	newconfd ${FILESDIR}/svnserve.xinetd svnserve
 
 	insinto /etc/conf.d
 	if use apache2 >/dev/null; then
