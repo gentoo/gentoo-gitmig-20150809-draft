@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.10.ebuild,v 1.2 2006/11/17 21:11:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.10.ebuild,v 1.3 2007/04/28 22:21:36 tove Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 	doman "${S}/polipo.1"
 	doinfo "${S}/polipo.info"
 
-	exeinto /etc/init.d ; newexe "${FILESDIR}/polipo.initd" polipo
+	newinitd "${FILESDIR}/polipo.initd" polipo
 	insinto /etc/polipo ; doins "${FILESDIR}/config"
 	exeinto /etc/cron.daily ; newexe "${FILESDIR}/polipo.crond" polipo.sh
 
