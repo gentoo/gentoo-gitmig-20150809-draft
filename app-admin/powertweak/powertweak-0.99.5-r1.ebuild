@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5-r1.ebuild,v 1.10 2006/12/14 18:37:36 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5-r1.ebuild,v 1.11 2007/04/28 16:49:04 tove Exp $
 
 inherit eutils
 
@@ -35,13 +35,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 	docinto Documentation
 	dodoc Documentation/* Documentation/Hackers/*
 
-	use gtk || rm ${D}/usr/bin/gpowertweak
+	use gtk || rm "${D}"/usr/bin/gpowertweak
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/powertweakd.rc6 powertweakd
+	newinitd "${FILESDIR}"/powertweakd.rc6 powertweakd
 }

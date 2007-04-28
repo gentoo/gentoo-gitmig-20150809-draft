@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.16 2007/01/24 14:12:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.17 2007/04/28 16:47:03 tove Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -47,8 +47,7 @@ src_install() {
 
 	dosed "s:local_only = false:local_only = true:g" /etc/fam.conf
 
-	exeinto /etc/init.d
-	doexe "${FILESDIR}/famd"
+	doinitd "${FILESDIR}/famd"
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS TODO README
 

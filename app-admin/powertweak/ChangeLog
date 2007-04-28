@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/powertweak
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.25 2007/01/05 23:02:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.26 2007/04/28 16:49:04 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> powertweak-0.99.5-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -powertweak-0.99.4.ebuild, -powertweak-0.99.5.ebuild:
