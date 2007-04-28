@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.2.0_rc2.ebuild,v 1.2 2007/03/06 01:00:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.2.0_rc2.ebuild,v 1.3 2007/04/28 20:30:16 swegener Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -18,7 +18,7 @@ IUSE="doc"
 # For transports
 PROVIDE="virtual/jabber-server"
 
-RDEPEND=" >=virtual/jre-1.5 "
+RDEPEND=">=virtual/jre-1.5"
 # Doesn't build against Java 1.6 due to changes in JDBC API
 DEPEND="net-im/jabber-base
 		=virtual/jdk-1.5*
@@ -56,27 +56,20 @@ src_compile() {
 }
 
 src_install() {
-	dodir /opt/wildfire
-	
 	doinitd ${FILESDIR}/init.d/wildfire
 	doconfd ${FILESDIR}/conf.d/wildfire
 
-	dodir /opt/wildfire/conf
 	insinto /opt/wildfire/conf
 	newins target/wildfire/conf/wildfire.xml wildfire.xml.sample
 
-	dodir /opt/wildfire/logs
 	keepdir /opt/wildfire/logs
 
-	dodir /opt/wildfire/lib
 	insinto /opt/wildfire/lib
 	doins target/wildfire/lib/*
 
-	dodir /opt/wildfire/plugins
 	insinto /opt/wildfire/plugins
 	doins -r target/wildfire/plugins/*
 
-	dodir /opt/wildfire/resources
 	insinto /opt/wildfire/resources
 	doins -r target/wildfire/resources/*
 
