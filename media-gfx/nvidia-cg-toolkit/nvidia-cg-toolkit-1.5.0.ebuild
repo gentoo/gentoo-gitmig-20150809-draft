@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-1.5.0.ebuild,v 1.3 2007/04/08 20:52:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-1.5.0.ebuild,v 1.4 2007/04/28 15:27:44 tove Exp $
 
 inherit versionator
 
@@ -32,8 +32,7 @@ src_install() {
 		dolib usr/lib64/*
 	fi
 
-	insinto /etc/env.d
-	doins "${FILESDIR}"/80cgc
+	doenvd "${FILESDIR}"/80cgc
 
 	insinto /usr/include/Cg
 	doins usr/include/Cg/*
