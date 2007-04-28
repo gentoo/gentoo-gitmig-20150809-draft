@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.20 2007/01/05 07:12:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.21 2007/04/28 13:10:38 tove Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -39,19 +39,19 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# we can do better security ourselves
-	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff || die
-	epatch ${FILESDIR}/${P}-chown.patch || die
-	epatch ${FILESDIR}/${P}-not_install_info.patch || die
-	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
-	epatch ${FILESDIR}/${P}-lib64.patch || die
-	epatch ${FILESDIR}/${P}-fflush-before-re-read-partition-table.patch || die
-	epatch ${FILESDIR}/${P}-LP64-fixes.patch || die
-	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch || die
-	epatch ${FILESDIR}/${P}-datadir-path.patch || die
-	epatch ${FILESDIR}/${P}-gui.diff || die
+	epatch "${FILESDIR}"/${P}-nodumbpermchecks.diff || die
+	epatch "${FILESDIR}"/${P}-chown.patch || die
+	epatch "${FILESDIR}"/${P}-not_install_info.patch || die
+	epatch "${FILESDIR}"/${P}-fixserverargs.diff || die
+	epatch "${FILESDIR}"/${P}-lib64.patch || die
+	epatch "${FILESDIR}"/${P}-fflush-before-re-read-partition-table.patch || die
+	epatch "${FILESDIR}"/${P}-LP64-fixes.patch || die
+	epatch "${FILESDIR}"/${P}-save_all_and_rest_all_actions.patch || die
+	epatch "${FILESDIR}"/${P}-datadir-path.patch || die
+	epatch "${FILESDIR}"/${P}-gui.diff || die
 }
 
 src_compile() {
@@ -76,13 +76,12 @@ src_install() {
 
 	keepdir /var/log/partimage
 
-	insinto /etc/partimaged; doins ${FILESDIR}/servercert.cnf || die
+	insinto /etc/partimaged; doins "${FILESDIR}"/servercert.cnf || die
 
-	# init.d / conf.d
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}d.init ${PN}d || die
-	insinto /etc/conf.d ; newins ${FILESDIR}/${PN}d.conf ${PN}d || die
+	newinitd "${FILESDIR}"/${PN}d.init ${PN}d || die
+	newconfd "${FILESDIR}"/${PN}d.conf ${PN}d || die
 
-	doman debian/partimage.1 debian/partimaged.8 ${FILESDIR}/partimagedusers.5 || die
+	doman debian/partimage.1 debian/partimaged.8 "${FILESDIR}"/partimagedusers.5 || die
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL README* TODO partimage.lsm
 }
 

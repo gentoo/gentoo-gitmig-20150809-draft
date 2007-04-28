@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.14 2006/10/14 22:45:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.15 2007/04/28 13:10:38 tove Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -52,25 +52,25 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# we can do better security ourselves
-	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff || die
-	epatch ${FILESDIR}/${P}-chown.patch || die
-	epatch ${FILESDIR}/${P}-not_install_info.patch || die
-	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
-	epatch ${FILESDIR}/${P}-1-lib64.patch
-	epatch ${FILESDIR}/${P}-fflush-before-re-read-partition-table.patch || die
-	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch || die
-	epatch ${FILESDIR}/${P}-datadir-path.patch || die
-	epatch ${FILESDIR}/${P}-dont-discard-error-message-in-batch-mode.patch || die
-	epatch ${FILESDIR}/${P}-save_file_and_rest_file_actions.patch || die
-	epatch ${FILESDIR}/${P}-varargs.patch || die
-	epatch ${FILESDIR}/${P}-gui.diff || die
-	epatch ${FILESDIR}/${P}-empty-salt.patch || die
-	epatch ${FILESDIR}/${P}-help.patch || die
-	epatch ${FILESDIR}/${P}-xfs.patch || die
-	epatch ${FILESDIR}/${P}-port.patch || die
+	epatch "${FILESDIR}"/${P}-nodumbpermchecks.diff || die
+	epatch "${FILESDIR}"/${P}-chown.patch || die
+	epatch "${FILESDIR}"/${P}-not_install_info.patch || die
+	epatch "${FILESDIR}"/${P}-fixserverargs.diff || die
+	epatch "${FILESDIR}"/${P}-1-lib64.patch
+	epatch "${FILESDIR}"/${P}-fflush-before-re-read-partition-table.patch || die
+	epatch "${FILESDIR}"/${P}-save_all_and_rest_all_actions.patch || die
+	epatch "${FILESDIR}"/${P}-datadir-path.patch || die
+	epatch "${FILESDIR}"/${P}-dont-discard-error-message-in-batch-mode.patch || die
+	epatch "${FILESDIR}"/${P}-save_file_and_rest_file_actions.patch || die
+	epatch "${FILESDIR}"/${P}-varargs.patch || die
+	epatch "${FILESDIR}"/${P}-gui.diff || die
+	epatch "${FILESDIR}"/${P}-empty-salt.patch || die
+	epatch "${FILESDIR}"/${P}-help.patch || die
+	epatch "${FILESDIR}"/${P}-xfs.patch || die
+	epatch "${FILESDIR}"/${P}-port.patch || die
 }
 
 src_compile() {
@@ -101,24 +101,24 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} \
+	emake DESTDIR="${D}" \
 		MKINSTALLDIRS=/usr/share/automake-1.8/mkinstalldirs install || die
 
 	keepdir /var/log/partimage
 
-	insinto /etc/partimaged; doins ${FILESDIR}/servercert.cnf || die
+	insinto /etc/partimaged; doins "${FILESDIR}"/servercert.cnf || die
 
 	# init.d / conf.d
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}d.init ${PN}d || die
-	insinto /etc/conf.d ; newins ${FILESDIR}/${PN}d.conf ${PN}d || die
+	newinitd "${FILESDIR}"/${PN}d.init ${PN}d || die
+	newconfd "${FILESDIR}"/${PN}d.conf ${PN}d || die
 
-	doman debian/partimage.1 debian/partimaged.8 ${FILESDIR}/partimagedusers.5 || die
+	doman debian/partimage.1 debian/partimaged.8 "${FILESDIR}"/partimagedusers.5 || die
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL README* TODO partimage.lsm
 
 	# pam
 	if use pam
 	then
-		newpamd ${FILESDIR}/partimaged.pam partimaged || die
+		newpamd "${FILESDIR}"/partimaged.pam partimaged || die
 	fi
 }
 
