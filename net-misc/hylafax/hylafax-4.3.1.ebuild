@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.4 2007/04/28 16:55:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.5 2007/04/28 22:30:06 tove Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -130,9 +130,7 @@ src_install() {
 	newenvd ${FILESDIR}/99hylafax-4.2 99hylafax
 
 	einfo "Adding init.d entry for Hylafax"
-	insinto /etc/init.d
-	insopts -m 755
-	newins ${FILESDIR}/hylafax-4.2 hylafax
+	newinitd ${FILESDIR}/hylafax-4.2 hylafax
 
 	use pam && pamd_mimic_system hylafax auth account session
 

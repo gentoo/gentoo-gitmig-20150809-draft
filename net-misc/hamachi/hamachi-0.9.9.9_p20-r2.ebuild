@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.4 2007/01/04 23:02:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.5 2007/04/28 22:34:59 tove Exp $
 
 inherit eutils linux-info
 
@@ -72,9 +72,9 @@ src_install() {
 
 	# Config files
 	einfo "Installing config files"
-	exeinto /etc/init.d; newexe ${FILESDIR}/tuncfg.initd tuncfg
-	insinto /etc/conf.d; newins ${FILESDIR}/hamachi.confd hamachi
-	exeinto /etc/init.d; newexe ${FILESDIR}/hamachi.initd hamachi
+	newinitd ${FILESDIR}/tuncfg.initd tuncfg
+	newconfd ${FILESDIR}/hamachi.confd hamachi
+	newinitd ${FILESDIR}/hamachi.initd hamachi
 
 	# Docs
 	dodoc CHANGES README LICENSE LICENSE.openssh LICENSE.openssl LICENSE.tuncfg
