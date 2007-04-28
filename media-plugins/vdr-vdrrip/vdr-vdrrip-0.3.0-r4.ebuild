@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/vdr-vdrrip-0.3.0-r4.ebuild,v 1.2 2007/01/05 17:00:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/vdr-vdrrip-0.3.0-r4.ebuild,v 1.3 2007/04/28 16:38:44 swegener Exp $
 
 inherit vdr-plugin eutils
 
@@ -61,8 +61,7 @@ src_install() {
 	newins scripts/queuehandler.sh.conf vdrrip-qh.conf
 	newconfd ${FILESDIR}/vdrrip-qh.conf vdrrip-qh
 	# add start script
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/vdrrip-qh
+	doinitd ${FILESDIR}/vdrrip-qh
 	# save in bin
 	newbin scripts/queuehandler.sh vdrrip-qh
 }
