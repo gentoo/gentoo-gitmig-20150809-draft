@@ -1,0 +1,15 @@
+diff -ruN pymsnt-0.11.2/src/main.py pymsnt-0.11.2-fixed/src/main.py
+--- pymsnt-0.11.2/src/main.py	2006-10-18 06:40:55.000000000 +0200
++++ pymsnt-0.11.2-fixed/src/main.py	2007-04-28 16:07:49.000000000 +0200
+@@ -390,7 +390,10 @@
+ 	# Set SIGHUP to reload the config file & close & open debug file
+ 	signal.signal(signal.SIGHUP, SIGHUPstuff)
+ 	# Load some scripts for PID and daemonising
+-	from twisted.scripts import twistd
++	try:
++		from twisted.scripts import _twistd_unix as twistd
++	except:
++		from twisted.scripts import twistd
+ 
+ 
+ def main():

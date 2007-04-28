@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-  <email>humpback@gentoo.org</email>
+  <email>griffon26@gentoo.org</email>
 </maintainer>
-	<longdescription>New Python based jabber transport for MSN</longdescription>
+	<longdescription>Python based jabber transport for MSN</longdescription>
 </pkgmetadata>
