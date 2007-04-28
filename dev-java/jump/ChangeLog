@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jump
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.10 2007/02/21 23:38:53 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.11 2007/04/28 12:52:57 nelchael Exp $
+
+*jump-0.4.1-r2 (28 Apr 2007)
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> +jump-0.4.1-r2.ebuild:
+  Migrated to generation 2.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
