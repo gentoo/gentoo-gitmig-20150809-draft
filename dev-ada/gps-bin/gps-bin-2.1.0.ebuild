@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.3 2007/02/05 10:57:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.4 2007/04/28 18:04:00 swegener Exp $
 
 IUSE=""
 
@@ -37,8 +37,7 @@ src_install () {
 	dosym /usr/lib/libpng.so /opt/${PN}/lib/libpng.so.2
 
 	#now some env vars
-	insinto /etc/env.d
-	doins ${FILESDIR}/10gps-bin
+	doenvd ${FILESDIR}/10gps-bin
 	echo "GPS_DOC_PATH=/usr/share/doc/${PF}/html" >> ${D}/etc/env.d/10gps-bin
 }
 

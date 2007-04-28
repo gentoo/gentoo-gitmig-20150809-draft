@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/gps-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.14 2007/02/05 10:57:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.15 2007/04/28 18:04:00 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> gps-bin-2.1.0.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   05 Feb 2007; George Shapovalov <george@gentoo.org> -gps-bin-1.2.2.ebuild,
   -gps-bin-1.4.0.ebuild:
