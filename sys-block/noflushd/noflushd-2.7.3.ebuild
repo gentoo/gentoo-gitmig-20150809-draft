@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/noflushd/noflushd-2.7.3.ebuild,v 1.1 2005/03/06 19:19:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/noflushd/noflushd-2.7.3.ebuild,v 1.2 2007/04/28 13:02:02 tove Exp $
 
 DESCRIPTION="A daemon to spin down your disks and force accesses to be cached"
 HOMEPAGE="http://noflushd.sourceforge.net"
@@ -26,8 +26,8 @@ src_install () {
 	doman man/noflushd.8
 	dodoc README NEWS
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/noflushd.rc6 noflushd
-	insinto /etc/conf.d ; newins ${FILESDIR}/noflushd.confd noflushd
+	newinitd "${FILESDIR}"/noflushd.rc6 noflushd
+	newconfd "${FILESDIR}"/noflushd.confd noflushd
 }
 
 pkg_postinst() {
