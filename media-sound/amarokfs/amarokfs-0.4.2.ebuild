@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.4.2.ebuild,v 1.4 2007/04/08 00:44:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.4.2.ebuild,v 1.5 2007/04/28 15:36:04 carlo Exp $
 
 inherit qt3 kde-functions toolchain-funcs
-
-need-kde 3
 
 MY_PN="${PN/fs/FS}"
 MY_P="${MY_PN}-qt3-${PV}"
@@ -22,6 +20,8 @@ IUSE=""
 
 RDEPEND="media-sound/amarok"
 DEPEND=""
+
+need-kde 3.5
 
 S="${WORKDIR}/${MY_P}"
 

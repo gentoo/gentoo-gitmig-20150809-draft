@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarokfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/ChangeLog,v 1.6 2007/04/08 00:44:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/ChangeLog,v 1.7 2007/04/28 15:36:04 carlo Exp $
+
+  28 Apr 2007; Carsten Lohrke <carlo@gentoo.org> amarokfs-0.4.2.ebuild,
+  amarokfs-0.5.ebuild:
+  QA: need-kde() has to be called after R/DEPEND.
 
   07 Apr 2007; Joseph Jezak <josejx@gentoo.org> amarokfs-0.4.2.ebuild,
   amarokfs-0.5.ebuild:
