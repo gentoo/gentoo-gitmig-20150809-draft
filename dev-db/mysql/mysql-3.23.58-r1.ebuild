@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.24 2007/03/04 07:42:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.25 2007/04/28 16:59:10 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -162,8 +162,7 @@ src_install() {
 
 	insinto /etc/mysql
 	doins ${FILESDIR}/my.cnf scripts/mysqlaccess.conf
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mysql.init mysql
+	newinitd ${FILESDIR}/mysql.init mysql
 }
 
 pkg_config() {

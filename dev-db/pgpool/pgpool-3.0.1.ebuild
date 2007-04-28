@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-3.0.1.ebuild,v 1.1 2006/02/22 09:39:30 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-3.0.1.ebuild,v 1.2 2007/04/28 17:00:00 swegener Exp $
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://pgpool.projects.postgresql.org/"
@@ -28,6 +28,5 @@ src_install () {
 	einstall || die
 	mv ${D}/etc/pgpool.conf.sample ${D}/etc/pgpool.conf
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}.init ${PN}
+	newinitd ${FILESDIR}/${PN}.init ${PN}
 }
