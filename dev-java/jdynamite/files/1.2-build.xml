@@ -2,7 +2,7 @@
 <project name="jdynamite" default="all" basedir=".">
 
 	<target name="compile">
-		<javac debug="true" srcdir="src" destdir="build"/>
+		<javac debug="true" srcdir="src" classpath="${gentoo.classpath}" destdir="build"/>
 	</target>
 
 	<target name="jar" depends="compile">

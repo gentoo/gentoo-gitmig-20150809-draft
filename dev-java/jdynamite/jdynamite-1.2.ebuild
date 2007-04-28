@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/jdynamite-1.2.ebuild,v 1.3 2006/09/11 17:47:13 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/jdynamite-1.2.ebuild,v 1.4 2007/04/28 20:03:50 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -31,14 +31,12 @@ src_unpack() {
 
 	cp "${FILESDIR}/${PV}-build.xml" "${S}/build.xml"
 
+	mkdir "${S}/build" || die "mkdir failed"
 }
 
 src_compile() {
-
-	mkdir "${S}/build" || die "mkdir failed"
-
-	eant -lib $(java-pkg_getjars gnu-regexp-1) jar || die "ant failed"
-
+	EANT_GENTOO_CLASSPATH="gnu-regexp-1" \
+		java-pkg-2_src_compile
 }
 
 src_install() {
