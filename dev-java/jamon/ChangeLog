@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamon/ChangeLog,v 1.1 2006/10/13 03:53:58 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamon/ChangeLog,v 1.2 2007/04/28 19:15:02 betelgeuse Exp $
+
+  28 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jamon-1.01-r1.ebuild:
+  Add missing dev-java/servletapi to RDEPEND and use java-pkg_dojavadoc.
 
 *jamon-1.01-r1 (13 Oct 2006)
 

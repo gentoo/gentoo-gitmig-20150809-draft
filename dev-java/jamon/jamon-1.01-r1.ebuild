@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamon/jamon-1.01-r1.ebuild,v 1.1 2006/10/13 03:53:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamon/jamon-1.01-r1.ebuild,v 1.2 2007/04/28 19:15:02 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
+
 MY_PN="JAMon"
 MY_PV="103005"
 DESCRIPTION="A free, simple, high performance, thread safe, Java API that allows
@@ -15,11 +16,11 @@ SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4
 	~dev-java/servletapi-2.3"
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
+	${RDEPEND}"
 
 src_unpack() {
 	# The structure of the archive is really messy, so we have to clean it up a
@@ -46,5 +47,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
-	use doc && java-pkg_dohtml -r dist/doc/api
+	use doc && java-pkg_dojavadoc dist/doc/api
 }
