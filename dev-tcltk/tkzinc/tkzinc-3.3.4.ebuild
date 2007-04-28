@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.2.100.ebuild,v 1.2 2004/08/30 23:38:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.1 2007/04/28 00:12:47 matsuu Exp $
 
 inherit eutils
 
@@ -9,21 +9,13 @@ HOMEPAGE="http://www.tkzinc.org"
 SRC_URI="http://www.tkzinc.org/Packages/zinc-tk_${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="threads opengl doc"
 DEPEND=">=dev-lang/tk-8.4
 	opengl? ( virtual/opengl )
 	doc? ( virtual/tetex )"
 
-S=${WORKDIR}/Tkzinc
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/without-opengl.patch
-	epatch ${FILESDIR}/fix-makefile.patch
-}
+S="${WORKDIR}/Tkzinc"
 
 src_compile() {
 	local myconf
@@ -42,8 +34,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc BUGS README
+	dohtml -r doc/*
 	use doc && dodoc doc/refman.pdf
 }
