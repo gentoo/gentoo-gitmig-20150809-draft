@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/hprofile-2.0_beta2.ebuild,v 1.2 2005/05/14 08:36:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/hprofile-2.0_beta2.ebuild,v 1.3 2007/04/28 17:07:55 swegener Exp $
 
 DESCRIPTION="Utility to manage hardware, network, power or other profiles"
 HOMEPAGE="http://hprofile.sourceforge.net/"
@@ -28,8 +28,7 @@ src_install() {
 	dodir /etc/hprofile
 	cp -r config/hprofile/* ${D}/etc/hprofile/ || die "cp"
 
-	exeinto /etc/init.d
-	doexe extra/rc-scripts/gentoo/*
+	doinitd extra/rc-scripts/gentoo/*
 
 	dodoc README
 }

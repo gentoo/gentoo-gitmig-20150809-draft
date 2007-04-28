@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.11 2006/03/05 22:23:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.12 2007/04/28 17:10:31 swegener Exp $
 
 inherit eutils
 
@@ -43,6 +43,5 @@ src_install() {
 	dodoc src/utils/README src/utils/sample.*
 	rm -rf ${D}/usr/doc
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pcscd-init pcscd
+	newinitd ${FILESDIR}/pcscd-init pcscd
 }

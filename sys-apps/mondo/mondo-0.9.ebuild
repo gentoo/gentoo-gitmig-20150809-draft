@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9.ebuild,v 1.9 2005/02/27 12:35:19 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9.ebuild,v 1.10 2007/04/28 17:09:39 swegener Exp $
 
 DESCRIPTION="A System Health Monitor"
 HOMEPAGE="http://mondo-daemon.sourceforge.net/"
@@ -23,8 +23,7 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mondo.sh mondo
+	newinitd ${FILESDIR}/mondo.sh mondo
 }
 
 pkg_postinst() {

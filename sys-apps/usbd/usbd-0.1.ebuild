@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/usbd-0.1.ebuild,v 1.10 2005/03/19 11:17:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/usbd-0.1.ebuild,v 1.11 2007/04/28 17:12:01 swegener Exp $
 
 inherit eutils
 
@@ -29,8 +29,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/usbd usbd
+	newinitd ${FILESDIR}/usbd usbd
 	insinto /usr/share/doc/${P}/example1
 	doins example1/*
 	dodoc AUTHORS COPYING ChangeLog INSTALL README NEWS
