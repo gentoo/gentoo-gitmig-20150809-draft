@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r2.ebuild,v 1.11 2005/01/01 14:41:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r2.ebuild,v 1.12 2007/04/28 21:54:47 swegener Exp $
 
 inherit eutils
 
@@ -38,5 +38,5 @@ src_install() {
 	dosbin skkserv || die
 
 	# install rc script
-	exeinto /etc/init.d ; newexe ${FILESDIR}/skkserv.initd skkserv
+	newinitd ${FILESDIR}/skkserv.initd skkserv
 }
