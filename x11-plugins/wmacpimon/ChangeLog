@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmacpimon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/ChangeLog,v 1.5 2007/02/06 01:53:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/ChangeLog,v 1.6 2007/04/28 17:50:17 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> wmacpimon-0.2.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

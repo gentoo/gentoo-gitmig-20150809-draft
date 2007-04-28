@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/wmacpimon-0.2.1.ebuild,v 1.4 2006/01/22 12:16:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/wmacpimon-0.2.1.ebuild,v 1.5 2007/04/28 17:50:17 swegener Exp $
 
 inherit eutils
 
@@ -47,8 +47,7 @@ src_install()
 {
 	dobin wmacpimond wmacpimon
 	dodoc AUTHORS ChangeLog README
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/wmacpimon.initscript wmacpimon
+	newinitd ${FILESDIR}/wmacpimon.initscript wmacpimon
 }
 
 pkg_postinst()
