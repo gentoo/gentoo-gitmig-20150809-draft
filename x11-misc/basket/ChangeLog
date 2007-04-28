@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.32 2007/04/10 19:31:55 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.33 2007/04/28 14:12:28 nelchael Exp $
+
+*basket-1.0.2 (28 Apr 2007)
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> +basket-1.0.2.ebuild:
+  Version bump.
 
   10 Apr 2007; Przemysław Maciąg <troll@gentoo.org> basket-0.6.0.ebuild,
   basket-1.0.ebuild, basket-1.0.1.ebuild:
