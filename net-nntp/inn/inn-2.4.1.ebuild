@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.5 2005/12/26 06:56:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.6 2007/04/28 16:29:07 swegener Exp $
 
 inherit fixheadtails ssl-cert eutils libtool flag-o-matic
 
@@ -112,8 +112,7 @@ src_install() {
 	insinto /usr/lib/news/include
 	doins include/*.h
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/innd innd
+	doinitd ${FILESDIR}/innd innd
 
 	if use ssl
 	then

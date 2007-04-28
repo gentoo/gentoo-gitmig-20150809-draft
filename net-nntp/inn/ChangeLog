@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.12 2007/04/24 18:49:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.13 2007/04/28 16:29:07 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> inn-2.4.1.ebuild,
+  inn-2.4.3.ebuild:
+  Fix *initd, *envd and *confd calls, bug #173884.
 
   24 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org> inn-2.4.3.ebuild:
   ppc stable, bug #173655

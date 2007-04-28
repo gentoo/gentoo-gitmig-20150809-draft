@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.6 2007/04/24 18:49:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.7 2007/04/28 16:29:07 swegener Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -105,8 +105,7 @@ src_install() {
 	insinto /usr/lib/news/include
 	doins include/*.h
 
-	exeinto /etc/init.d
-	doexe "${FILESDIR}"/innd innd
+	doinitd "${FILESDIR}"/innd innd
 
 	if use ssl
 	then
