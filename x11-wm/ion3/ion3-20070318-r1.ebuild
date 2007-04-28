@@ -1,40 +1,52 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070203.ebuild,v 1.2 2007/03/26 16:11:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070318-r1.ebuild,v 1.1 2007/04/28 21:52:22 mabi Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_PV=${PV/_p/-}
 MY_PN=ion-3ds-${MY_PV}
 
-SCRIPTS_PV=20070203
+SCRIPTS_PV=20070322
 SCRIPTS_PN=ion3-scripts
 
-IONXRANDR_PV=20061021
+IONFLUX_PV=20061022
+IONFLUX_PN=ion3-mod-ionflux
+
+IONXRANDR_PV=20070220
 IONXRANDR_PN=ion3-mod-xrandr
+
+IONDOC_PV=20070318
+IONDOC_PN=ion3-doc
 
 
 DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind"
 HOMEPAGE="http://www.iki.fi/tuomov/ion/"
 SRC_URI="http://iki.fi/tuomov/dl/${MY_PN}.tar.gz
-	mirror://debian/pool/main/i/${SCRIPTS_PN}/${SCRIPTS_PN}_${SCRIPTS_PV}.orig.tar.gz
-	mirror://gentoo/${IONXRANDR_PN}-${IONXRANDR_PV}.tar.bz2"
+	mirror://gentoo/${SCRIPTS_PN}-${SCRIPTS_PV}.tar.bz2
+	mirror://gentoo/${IONXRANDR_PN}-${IONXRANDR_PV}.tar.bz2
+	doc?	( mirror://gentoo/${IONDOC_PN}-${IONDOC_PV}.tar.bz2 )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="unicode"
+IUSE="unicode iontruetype doc"
 DEPEND="
 	|| (
 		(
 			x11-libs/libICE
 			x11-libs/libXext
 			x11-libs/libSM
+			iontruetype? ( x11-libs/libXft )
 		)
 		virtual/x11
 	)
+	dev-util/pkgconfig
 	app-misc/run-mailcap
-	>=dev-lang/lua-5.1.1"
+	>=dev-lang/lua-5.1.1
+	doc? ( dev-tex/latex2html
+			virtual/tetex )"
+
 S=${WORKDIR}/${MY_PN}
 
 SCRIPTS_DIRS="keybindings scripts statusbar statusd styles"
@@ -45,16 +57,17 @@ src_unpack() {
 
 	cd ${S}
 	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" epatch
+	use iontruetype && epatch ${FILESDIR}/xft-ion3-${PV}.patch
+
 
 	# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
-	sed -i Makefile */Makefile */*/Makefile build/rules.mk \
-		-e 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g'
+	sed -i 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g' Makefile */Makefile */*/Makefile build/rules.mk
 
 	for i in ${MODULES}
 	do
 		cd ${WORKDIR}/${i}
 		# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
-		sed -i Makefile \
+		sed -i Makefile */Makefile \
 			-e 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g'
 
 	done
@@ -64,6 +77,14 @@ src_unpack() {
 	# Fix an implicit rule that will kill the installation by rewriting a .mk
 	# should configure be given just the right set of options.
 	sed -i 's!%: %.in!ion-completeman: %: %.in!g' utils/Makefile
+
+	# Fix prestripping of files
+	sed -i mod_statusbar/ion-statusd/Makefile utils/ion-completefile/Makefile \
+		-e 's: -s::'
+
+	# Fix the docpath
+	#sed -i system.mk build/ac/system-ac.mk.in \
+	#	-e "s:\(DOCDIR=@datadir@/doc/\)@PACKAGE_TARNAME@:\1${PF}:"
 
 	cd ${S}/build/ac/
 	autoreconf -i --force
@@ -76,7 +97,11 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	# xfree
+	filter-ldflags "-Wl,--as-needed"
+
+	myconf="${myconf} `use_enable iontruetype xft`"
+
+	# xfree 
 	if has_version '>=x11-base/xfree-4.3.0'; then
 		myconf="${myconf} --disable-xfree86-textprop-bug-workaround"
 	fi
@@ -90,7 +115,7 @@ src_compile() {
 	cd build/ac/
 	econf \
 		${myconf} \
-		--sysconfdir=/etc/X11
+		--sysconfdir=/etc/X11 \
 
 	cd ${S}
 	make \
@@ -112,15 +137,21 @@ src_compile() {
 		LCDIR=/usr/lib/ion3/lc \
 		VARDIR=/var/cache/ion3
 	done
+
+	if ( use doc )
+	then
+		cd ${WORKDIR}/${IONDOC_PN}-${IONDOC_PV}
+		make all
+		make all-pdf
+	fi
 }
 
 src_install() {
 
 	emake \
 		DESTDIR=${D} \
+		DOCDIR=/usr/share/doc/${PF} \
 	install || die
-
-	prepalldocs
 
 	echo -e "#!/bin/sh\n/usr/bin/ion3" > ${T}/ion3
 	echo -e "#!/bin/sh\n/usr/bin/pwm3" > ${T}/pwm3
@@ -133,11 +164,13 @@ src_install() {
 	cd ${WORKDIR}/${SCRIPTS_PN}-${SCRIPTS_PV}
 	insinto /usr/share/ion3
 	find $SCRIPTS_DIRS -type f |\
-		while read FILE ; do
+		while read FILE
+		do
 			doins $PWD/$FILE
 		done
 
-	for i in ${MODULES} ; do
+	for i in ${MODULES}
+	do
 		cd ${WORKDIR}/${i}
 
 		emake \
@@ -146,15 +179,15 @@ src_install() {
 
 	done
 
-	echo 'dopath("mod_xrandr")' >> ${D}/etc/X11/ion3/cfg_modules.lua
+	if ( use doc )
+	then
+		cd ${WORKDIR}/${IONDOC_PN}-${IONDOC_PV}
+		dodoc *.pdf
+	fi
 
-	mv ${D}/usr/share/doc/ion3 ${D}/usr/share/doc/${PF}
+	sed -i -e '/dopath("mod_sp")/a\dopath("mod_xrandr")' ${D}/etc/X11/ion3/cfg_defaults.lua
 }
 
 pkg_postinst() {
-	elog "Please note that this release does *not* include xinerama support
-	anymore."
-	elog "Support for that feature has been dropped upstream."
-	elog "Also, xft (via iontruetype) is gone, in a bid to close the gap to
-	upstream."
+	elog "This version of ion3 contains no xinerama support (removed upstream)."
 }
