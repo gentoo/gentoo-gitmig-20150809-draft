@@ -20,14 +20,12 @@ DEPEND="virtual/libc
 		sys-apps/hotplug"
 
 src_install () {
-	make INSTALL_MOD_PATH=${D} install || die
+	make INSTALL_MOD_PATH="${D}" install || die
 	dodoc ChangeLog LICENSE
 
-	dodir /etc/init.d
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/iprinit iprinit
-	newexe ${FILESDIR}/iprupdate iprupdate
-	newexe ${FILESDIR}/iprdump iprdump
+	newinitd "${FILESDIR}"/iprinit iprinit
+	newinitd "${FILESDIR}"/iprupdate iprupdate
+	newinitd "${FILESDIR}"/iprdump iprdump
 }
 
 pkg_postinst() {
