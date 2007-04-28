@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.3.ebuild,v 1.4 2007/01/24 03:26:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.3.ebuild,v 1.5 2007/04/28 17:58:14 swegener Exp $
 
 KEYWORDS="~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -146,8 +146,7 @@ src_install() {
 		insinto /etc
 		insopts -m0600
 		newins samhainrc.linux samhainrc
-		exeinto /etc/init.d
-		newexe init/samhain.startGentoo samhain
+		newinitd init/samhain.startGentoo samhain
 		keepdir "/var/lib/samhain"
 	fi
 
