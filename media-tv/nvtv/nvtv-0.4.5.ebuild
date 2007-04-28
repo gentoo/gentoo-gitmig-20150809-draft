@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.8 2006/03/19 00:29:38 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.9 2007/04/28 11:40:45 tove Exp $
 
 IUSE="X gtk"
 
@@ -14,12 +14,11 @@ KEYWORDS="x86 amd64"
 
 RDEPEND="sys-apps/pciutils
 	gtk? ( x11-libs/gtk+ )
-	X? ( || ( ( x11-libs/libXi
-				x11-libs/libXmu
-				x11-libs/libXxf86vm )
-			virtual/x11 ) )"
+	X? ( x11-libs/libXi
+		x11-libs/libXmu
+		x11-libs/libXxf86vm )"
 DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xf86vidmodeproto virtual/x11 ) )"
+	X? ( x11-proto/xf86vidmodeproto )"
 
 src_compile() {
 	local myconf
@@ -50,6 +49,5 @@ src_install() {
 		doc/USAGE doc/chips.txt doc/overview.txt \
 		doc/timing.txt xine/tvxine
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/nvtv.start nvtv
+	newinitd ${FILESDIR}/nvtv.start nvtv
 }

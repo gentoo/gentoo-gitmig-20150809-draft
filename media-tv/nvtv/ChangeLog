@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/nvtv
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.9 2006/11/20 04:37:11 beandog Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.10 2007/04/28 11:40:45 tove Exp $
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> nvtv-0.4.5.ebuild,
+  nvtv-0.4.6.ebuild, nvtv-0.4.7.ebuild:
+  Removed virtual/x11 and made it use newinitd
 
   20 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
   Add to media-tv herd
