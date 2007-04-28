@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.6 2006/02/13 11:55:39 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.7 2007/04/28 21:48:58 tove Exp $
 
 inherit eutils
 
@@ -72,7 +72,7 @@ src_install() {
 	chown skunkweb:skunkweb ${D}/var/{lib,log}/${PN}
 	mkdir -p ${D}/var/lib/${PN}/run
 	# scripts------------------------------------------------------------
-	exeinto /etc/init.d; newexe ${FILESDIR}/skunkweb-init skunkweb
+	newinitd ${FILESDIR}/skunkweb-init skunkweb
 	exeinto /etc/cron.daily
 		newexe ${FILESDIR}/skunkweb-cron-cache_cleaner skunkweb-cache_cleaner
 	# docs --------------------------------------------------------------
