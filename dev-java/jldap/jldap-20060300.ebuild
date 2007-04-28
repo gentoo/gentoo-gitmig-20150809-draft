@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20060300.ebuild,v 1.1 2006/09/11 14:15:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20060300.ebuild,v 1.2 2007/04/28 20:19:05 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -18,8 +18,7 @@ RDEPEND=">=virtual/jre-1.4
 		dev-java/openspml
 		dev-java/openspml2"
 DEPEND=">=virtual/jdk-1.4
-	${REDEND}
-	>=dev-java/ant-core-1.5.1"
+	${RDEPEND}"
 
 S="${WORKDIR}/openldap-${PN}"
 
