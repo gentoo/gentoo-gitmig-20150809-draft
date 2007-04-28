@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.4-r1.ebuild,v 1.5 2006/01/12 00:48:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.4-r1.ebuild,v 1.6 2007/04/28 17:49:28 swegener Exp $
 
 inherit eutils
 
@@ -57,8 +57,7 @@ src_install() {
 		mv apmiser/README README.apmiser
 		dodoc README.apmiser
 		dosbin apmiser/apmiser
-		exeinto /etc/init.d
-		newexe ${FILESDIR}/apmiser.rc apmiser
+		newinitd ${FILESDIR}/apmiser.rc apmiser
 	fi
 	doman man/{ntpctl,tpctl}.1 man/apmiser.8
 }

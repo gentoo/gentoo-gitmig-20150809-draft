@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.4 2006/08/23 13:30:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.5 2007/04/28 17:49:10 swegener Exp $
 
 inherit eutils
 
@@ -46,10 +46,8 @@ src_install()
 	dohtml RobMiller-irda.html
 
 	# ...after that an init script...
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}.initscript ${PN}
+	newinitd ${FILESDIR}/${PN}.initscript ${PN}
 
 	# ...and finally its config file
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}.conf ${PN}
+	newconfd ${FILESDIR}/${PN}.conf ${PN}
 }

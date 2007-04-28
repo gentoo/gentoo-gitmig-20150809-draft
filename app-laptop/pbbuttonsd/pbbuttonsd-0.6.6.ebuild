@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.6.ebuild,v 1.8 2007/01/23 16:19:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.6.ebuild,v 1.9 2007/04/28 17:48:55 swegener Exp $
 
 inherit eutils
 
@@ -30,8 +30,7 @@ src_compile() {
 src_install() {
 	dodir /etc/power
 	make DESTDIR=${D} install || die "failed to install"
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
+	newinitd ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
 	dodoc README
 }
 

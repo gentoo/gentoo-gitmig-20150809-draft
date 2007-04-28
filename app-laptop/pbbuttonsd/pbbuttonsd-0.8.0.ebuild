@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.0.ebuild,v 1.4 2007/04/22 10:40:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.0.ebuild,v 1.5 2007/04/28 17:48:55 swegener Exp $
 
 inherit autotools flag-o-matic
 
@@ -63,8 +63,7 @@ src_install() {
 	dodir /etc/power
 	use ibam && dodir /var/lib/ibam
 	make DESTDIR=${D} install || die "failed to install"
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
+	newinitd ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
 	dodoc README
 	use doc && dohtml -r doc/*
 }

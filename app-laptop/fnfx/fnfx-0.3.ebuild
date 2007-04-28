@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/fnfx-0.3.ebuild,v 1.3 2007/01/23 16:12:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/fnfx-0.3.ebuild,v 1.4 2007/04/28 17:48:39 swegener Exp $
 
 DESCRIPTION="Daemon and client allowing use of Toshiba special keys"
 HOMEPAGE="http://fnfx.sourceforge.net/"
@@ -14,8 +14,7 @@ IUSE=""
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/fnfxd fnfxd
+	newinitd ${FILESDIR}/fnfxd fnfxd
 
 	dodoc AUTHORS README ChangeLog
 }
