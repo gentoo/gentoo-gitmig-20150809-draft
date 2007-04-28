@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.14 2007/04/28 06:46:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.15 2007/04/28 17:40:09 hanno Exp $
+
+# Hanno Boeck <hanno@gentoo.org> (28 Apr 2007)
+# Requires pygtk-2.10
+>=media-gfx/gimp-2.3.16
 
 # Robin H. Johnson <robbat2@gentoo.org> (27 Apr 2007)
 # Requires 2.6 headers
