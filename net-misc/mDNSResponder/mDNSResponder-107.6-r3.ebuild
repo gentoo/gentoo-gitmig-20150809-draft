@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6.ebuild,v 1.1 2007/04/27 19:48:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r3.ebuild,v 1.1 2007/04/28 12:43:13 carlo Exp $
 
 inherit eutils base toolchain-funcs flag-o-matic java-utils-2
 
@@ -70,15 +70,20 @@ src_install() {
 		objdir=debug
 	fi
 
-	#emake -j1 LOCALBASE="/usr" DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
-
 	dosbin ${S}/mDNSPosix/build/${objdir}/dnsextd
 	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSResponderPosix
 	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSNetMonitor
+	dosbin ${S}/mDNSPosix/build/${objdir}/mdnsd
 
 	dobin ${S}/Clients/build/dns-sd
 	dobin ${S}/mDNSPosix/build/${objdir}/mDNSProxyResponderPosix
 	dobin ${S}/mDNSPosix/build/${objdir}/mDNSIdentify
+	dobin ${S}/mDNSPosix/build/${objdir}/mDNSClientPosix
+
+	dolib ${S}/mDNSPosix/build/${objdir}/libdns_sd.so
+	dolib ${S}/mDNSPosix/build/${objdir}/libnss_mdns-0.2.so
+	dosym libdns_sd.so /usr/$(get_libdir)/libdns_sd.so.1
+	dosym libnss_mdns-0.2.so /usr/$(get_libdir)/libnss_mdns.so.2
 
 	newinitd ${FILESDIR}/mdnsd.init.d mdnsd
 	newinitd ${FILESDIR}/mDNSResponderPosix.init.d mDNSResponderPosix
@@ -89,19 +94,15 @@ src_install() {
 	insinto /etc
 	doins ${FILESDIR}/mDNSResponderPosix.conf
 
+	insinto /usr/include
+	doins ${S}/mDNSShared/dns_sd.h
+
 	dodoc ${S}/README.txt
 
-	# Fix multilib-strictness
-	local libdir=$(get_libdir)
-	if [[ $libdir != lib ]] ; then
-		mv ${D}/lib ${D}/$(get_libdir)
-		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
-	fi
-
 	if use java; then
-		java-pkg_dojar ${S}/mDNSPosix/build/prod/dns_sd.jar
-		java-pkg_doso ${S}/mDNSPosix/build/prod/libjdns_sd.so
-		use doc && java-pkg_dojavadoc ${S}/mDNSPosix/build/prod
+		java-pkg_dojar ${S}/mDNSPosix/build/${objdir}/dns_sd.jar
+		java-pkg_doso ${S}/mDNSPosix/build/${objdir}/libjdns_sd.so
+		use doc && java-pkg_dojavadoc ${S}/mDNSPosix/build/${objdir}
 	fi
 
 }

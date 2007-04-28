@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.30 2007/04/28 10:03:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.31 2007/04/28 12:43:13 carlo Exp $
+
+*mDNSResponder-107.6-r3 (28 Apr 2007)
+
+  28 Apr 2007; Carsten Lohrke <carlo@gentoo.org>
+  -mDNSResponder-107.6.ebuild, -mDNSResponder-107.6-r1.ebuild,
+  -mDNSResponder-107.6-r2.ebuild, +mDNSResponder-107.6-r3.ebuild:
+  And another round, bug #176348.
 
 *mDNSResponder-107.6-r2 (28 Apr 2007)
 
