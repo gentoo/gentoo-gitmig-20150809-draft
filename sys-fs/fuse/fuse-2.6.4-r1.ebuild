@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4.ebuild,v 1.1 2007/04/27 22:55:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.1 2007/04/28 20:25:08 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -36,6 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/fuse-fix-lazy-binding.patch
+	sed -i -e "s:die {:die() {:" util/mount.fuse
 	elibtoolize
 }
 
