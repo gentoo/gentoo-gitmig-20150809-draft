@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.3 2005/06/02 15:43:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.4 2007/04/28 15:54:24 tove Exp $
 
 inherit eutils
 
@@ -119,8 +119,7 @@ src_install() {
 	eend 0
 
 	# Install env.d file
-	insinto /etc/env.d
-	newins ${FILESDIR}/gempak.env.d 10gempak
+	newenvd ${FILESDIR}/gempak.env.d 10gempak
 }
 
 pkg_postinst() {
