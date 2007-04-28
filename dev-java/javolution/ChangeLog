@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/javolution
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.7 2007/04/24 10:19:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.8 2007/04/28 16:36:17 nelchael Exp $
+
+*javolution-2.2.4-r1 (28 Apr 2007)
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -javolution-2.2.0.ebuild, +javolution-2.2.4-r1.ebuild,
+  -javolution-3.2.4.ebuild:
+  Migrate 2.2.4 to generation 2, remove unneeded SLOTs.
 
 *javolution-4.0.2 (24 Apr 2007)
 
