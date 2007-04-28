@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r2.ebuild,v 1.2 2007/04/28 22:02:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r2.ebuild,v 1.3 2007/04/28 22:09:22 betelgeuse Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -13,11 +13,11 @@ LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-RDEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.4
 		dev-java/sax
 		dev-java/jnlp-bin
 		dev-java/nanoxml"
-DEPEND=">=virtual/jdk-1.3
+DEPEND=">=virtual/jdk-1.4
 		${RDEPEND}
 		app-arch/unzip"
 
