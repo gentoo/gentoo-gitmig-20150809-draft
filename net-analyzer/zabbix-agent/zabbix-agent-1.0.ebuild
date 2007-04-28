@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/zabbix-agent-1.0.ebuild,v 1.2 2005/12/31 13:43:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/zabbix-agent-1.0.ebuild,v 1.3 2007/04/28 17:41:46 swegener Exp $
 
 inherit eutils
 
@@ -44,10 +44,8 @@ src_install() {
 	keepdir /etc/zabbix /var/log/zabbix /var/run/zabbix
 	insinto /etc/zabbix
 	doins ${FILESDIR}/${PV}/zabbix_agent.conf ${FILESDIR}/${PV}/zabbix_agentd.conf
-	insinto /etc/conf.d
-	doins ${FILESDIR}/${PV}/conf.d/zabbix-agentd
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/${PV}/init.d/zabbix-agentd
+	doconfd ${FILESDIR}/${PV}/conf.d/zabbix-agentd
+	doinitd ${FILESDIR}/${PV}/init.d/zabbix-agentd
 	dosbin bin/zabbix_agent bin/zabbix_agentd bin/zabbix_sender
 	fowners zabbix:zabbix /etc/zabbix /var/log/zabbix /var/run/zabbix /etc/zabbix/zabbix_agent.conf /etc/zabbix/zabbix_agentd.conf
 	fperms 0640 /etc/zabbix/zabbix_agent.conf /etc/zabbix/zabbix_agentd.conf

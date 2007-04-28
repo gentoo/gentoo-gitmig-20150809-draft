@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.14 2007/04/16 16:27:09 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.15 2007/04/28 17:42:06 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> zabbix-server-1.0.ebuild,
+  zabbix-server-1.1_alpha7.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
 *zabbix-server-1.1.7 (16 Apr 2007)
 

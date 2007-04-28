@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-2.1.1.ebuild,v 1.1 2005/07/09 09:09:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-2.1.1.ebuild,v 1.2 2007/04/28 17:40:20 swegener Exp $
 
 DESCRIPTION="mwcollect collects worms and other autonomous spreading malware"
 HOMEPAGE="http://www.mwcollect.org/"
@@ -45,6 +45,5 @@ src_install() {
 	dodoc README*
 
 	newinitd ${FILESDIR}/initd mwcollectd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/confd mwcollectd
+	newconfd ${FILESDIR}/confd mwcollectd
 }

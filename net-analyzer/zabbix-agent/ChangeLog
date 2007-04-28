@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-agent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.10 2007/04/16 16:44:11 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.11 2007/04/28 17:41:46 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> zabbix-agent-1.0.ebuild,
+  zabbix-agent-1.1_alpha7.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
 *zabbix-agent-1.1.7 (16 Apr 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01-r2.ebuild,v 1.2 2006/07/25 08:56:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01-r2.ebuild,v 1.3 2007/04/28 17:41:13 swegener Exp $
 
 DESCRIPTION="NETI@Home research project from GATech"
 HOMEPAGE="http://www.neti.gatech.edu"
@@ -53,7 +53,6 @@ src_install() {
 	echo java -cp /usr/share/${PN} NETIMap > "${D}"/usr/bin/NETIMap
 	fperms ugo+x /usr/bin/NETIMap
 	dodoc COPYING
-	exeinto /etc/init.d
-	newexe "${FILESDIR}"/neti-init neti
+	newinitd "${FILESDIR}"/neti-init neti
 	sed -i -e s/ethereal/shark/g "${D}"/etc/init.d/neti "${D}"/usr/sbin/NETIStart
 }

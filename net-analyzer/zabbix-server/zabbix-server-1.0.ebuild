@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.3 2006/11/23 19:55:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.4 2007/04/28 17:42:06 swegener Exp $
 
 inherit eutils
 
@@ -68,10 +68,8 @@ src_install() {
 	keepdir /etc/zabbix /var/log/zabbix /var/run/zabbix
 	insinto /etc/zabbix
 	doins ${FILESDIR}/${PV}/zabbix_suckerd.conf ${FILESDIR}/${PV}/zabbix_trapper.conf ${FILESDIR}/${PV}/zabbix_trapperd.conf
-	insinto /etc/conf.d
-	doins ${FILESDIR}/${PV}/conf.d/zabbix-suckerd ${FILESDIR}/${PV}/conf.d/zabbix-trapperd
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/${PV}/init.d/zabbix-suckerd ${FILESDIR}/${PV}/init.d/zabbix-trapperd
+	doconfd ${FILESDIR}/${PV}/conf.d/zabbix-suckerd ${FILESDIR}/${PV}/conf.d/zabbix-trapperd
+	doinitd ${FILESDIR}/${PV}/init.d/zabbix-suckerd ${FILESDIR}/${PV}/init.d/zabbix-trapperd
 	fowners zabbix:zabbix /etc/zabbix /var/log/zabbix /var/run/zabbix /usr/share/zabbix/sripts /usr/share/zabbix/dbms /etc/zabbix/zabbix_suckerd.conf /etc/zabbix/zabbix_trapper.conf /etc/zabbix/zabbix_trapperd.conf
 	fperms 0640 /etc/zabbix/zabbix_suckerd.conf /etc/zabbix/zabbix_trapper.conf /etc/zabbix/zabbix_trapperd.conf
 	dosbin bin/zabbix_suckerd bin/zabbix_trapper bin/zabbix_trapperd

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.1.ebuild,v 1.2 2005/12/12 10:54:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.1.ebuild,v 1.3 2007/04/28 17:40:20 swegener Exp $
 
 inherit eutils
 
@@ -70,6 +70,5 @@ src_install() {
 	doman doc/mwcollectd.1
 
 	newinitd ${FILESDIR}/initd mwcollectd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/confd mwcollectd
+	newconfd ${FILESDIR}/confd mwcollectd
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1_alpha7.ebuild,v 1.4 2006/11/23 19:55:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1_alpha7.ebuild,v 1.5 2007/04/28 17:42:06 swegener Exp $
 
 inherit eutils
 
@@ -71,11 +71,9 @@ src_install() {
 	insinto /etc/zabbix
 	doins ${FILESDIR}/${PV}/zabbix_server.conf ${FILESDIR}/${PV}/zabbix_trapper.conf
 
-	insinto /etc/conf.d
-	doins ${FILESDIR}/${PV}/conf.d/zabbix-server
+	doconfd ${FILESDIR}/${PV}/conf.d/zabbix-server
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/${PV}/init.d/zabbix-server
+	doinitd ${FILESDIR}/${PV}/init.d/zabbix-server
 
 	fowners zabbix:zabbix /etc/zabbix /var/log/zabbix /var/run/zabbix /usr/share/zabbix/sripts /usr/share/zabbix/dbms /etc/zabbix/zabbix_server.conf /etc/zabbix/zabbix_trapper.conf
 	fperms 0640 /etc/zabbix/zabbix_server.conf /etc/zabbix/zabbix_trapper.conf

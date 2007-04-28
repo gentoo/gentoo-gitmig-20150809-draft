@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mwcollect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.13 2007/04/28 12:20:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.14 2007/04/28 17:40:20 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> mwcollect-2.1.1.ebuild,
+  mwcollect-2.1.2.ebuild, mwcollect-3.0.0.ebuild, mwcollect-3.0.1.ebuild,
+  mwcollect-3.0.2.ebuild, mwcollect-3.0.3.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> mwcollect-3.0.4.ebuild:
   Use newconfd (#174266)

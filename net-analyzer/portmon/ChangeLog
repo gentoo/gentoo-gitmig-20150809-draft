@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/portmon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.11 2007/04/28 12:00:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.12 2007/04/28 17:41:29 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> portmon-1.9.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> portmon-2.0.ebuild:
   Use newinitd
