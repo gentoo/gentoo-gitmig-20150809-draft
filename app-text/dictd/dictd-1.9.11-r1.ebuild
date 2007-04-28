@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11-r1.ebuild,v 1.11 2007/01/05 07:23:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11-r1.ebuild,v 1.12 2007/04/28 15:24:55 tove Exp $
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
@@ -22,7 +22,7 @@ src_compile() {
 
 src_install() {
 	# Now install it.
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	# Install docs
 	dodoc README TODO COPYING ChangeLog ANNOUNCE
@@ -32,13 +32,11 @@ src_install() {
 	# conf files.
 	dodir /etc/dict
 	insinto /etc/dict
-	doins ${FILESDIR}/${PVR}/dict.conf
-	doins ${FILESDIR}/${PVR}/dictd.conf
-	doins ${FILESDIR}/${PVR}/site.info
+	doins "${FILESDIR}"/${PVR}/dict.conf
+	doins "${FILESDIR}"/${PVR}/dictd.conf
+	doins "${FILESDIR}"/${PVR}/site.info
 
 	# startups for dictd
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PVR}/dictd dictd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PVR}/dictd.confd dictd
+	newinitd "${FILESDIR}"/${PVR}/dictd dictd
+	newconfd "${FILESDIR}"/${PVR}/dictd.confd dictd
 }
