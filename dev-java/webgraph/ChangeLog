@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/webgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.13 2007/04/12 13:50:08 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.14 2007/04/28 19:28:41 nelchael Exp $
+
+*webgraph-1.4.1-r1 (28 Apr 2007)
+
+  28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/webgraph-1.4-gentoo.patch, -webgraph-1.4.ebuild,
+  +webgraph-1.4.1-r1.ebuild:
+  Migrated to generation 2.
 
   12 Apr 2007; <welp@gentoo.org> webgraph-1.4.1.ebuild:
   Stable on amd64 wrt bug 161738
