@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11-r1.ebuild,v 1.10 2005/01/01 15:47:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11-r1.ebuild,v 1.11 2007/04/28 17:57:07 swegener Exp $
 
 DESCRIPTION="Libraries and utilities to communicate with a Psion palmtop via serial."
 HOMEPAGE="http://plptools.sourceforge.net"
@@ -28,9 +28,7 @@ src_install () {
 
 	dodoc CHANGES README TODO
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/psion.conf psion
+	newconfd ${FILESDIR}/psion.conf psion
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/psion
+	doinitd ${FILESDIR}/psion
 }
