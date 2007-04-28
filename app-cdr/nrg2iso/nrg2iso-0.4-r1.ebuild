@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.4-r1.ebuild,v 1.7 2007/01/04 22:37:40 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.4-r1.ebuild,v 1.8 2007/04/28 06:36:45 corsair Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://gregory.kokanosky.free.fr/v4/linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"

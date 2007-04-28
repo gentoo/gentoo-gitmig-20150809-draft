@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/nrg2iso
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.17 2007/02/21 20:18:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.18 2007/04/28 06:36:45 corsair Exp $
+
+  28 Apr 2007; Markus Rothe <corsair@gentoo.org> nrg2iso-0.4-r1.ebuild:
+  Added ~ppc64
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
