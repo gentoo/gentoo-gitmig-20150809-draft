@@ -1,0 +1,68 @@
+diff -Naur tovid-0.30/libtovid/gui/options.py tovid-0.30.2/libtovid/gui/options.py
+--- tovid-0.30/libtovid/gui/options.py	2007-02-12 22:51:57.000000000 +0000
++++ tovid-0.30/libtovid/gui/options.py	2007-04-17 17:00:03.000000000 +0000
+@@ -42,7 +42,7 @@
+         # Get global configuration (for output directory)
+         curConfig = TovidConfig()
+ 
+-        strCommand = "makexml -noask -quiet -overwrite -%s " % self.format
++        strCommand = "makexml -quiet -overwrite -%s " % self.format
+ 
+         for curItem in self.optionList:
+             # Prefix -topmenu or -menu if necessary
+diff -Naur tovid-0.30/src/makemenu tovid-0.30.2/src/makemenu
+--- tovid-0.30/src/makemenu	2007-02-12 22:51:57.000000000 +0000
++++ tovid-0.30/src/makemenu	2007-04-17 16:58:49.000000000 +0000
+@@ -755,14 +755,14 @@
+         MENU_LENGTH="-t 4"
+     fi
+     echo "Creating $(echo "$MENU_LENGTH" | cut -c 4-)-second silent $ASUF audio...   "
+-    AUDIO_CMD="ffmpeg -f s16le -i /dev/zero -ac 2 -ar $SAMPRATE -ab 224 \
++    AUDIO_CMD="ffmpeg -f s16le -i /dev/zero -ac 2 -ar $SAMPRATE -ab 224k \
+         $MENU_LENGTH -acodec $ASUF -y \"$AUDIO_STREAM\""
+     $DEBUG && echo -e "\n\nBG audio:\n$AUDIO_CMD" >> $REDIR
+     eval $AUDIO_CMD >> $REDIR 2>&1
+ # Otherwise, convert provided audio to the target format
+ else
+     echo "Converting \"$BG_AUDIO\" to $ASUF...   "
+-    AUDIO_CMD="ffmpeg -i \"$BG_AUDIO\" -ac 2 -ar $SAMPRATE -ab 224 \
++    AUDIO_CMD="ffmpeg -i \"$BG_AUDIO\" -ac 2 -ar $SAMPRATE -ab 224k \
+         $MENU_LENGTH -acodec $ASUF -y \"$AUDIO_STREAM\""
+     $DEBUG && echo -e "\n\nBG audio:\n$AUDIO_CMD" >> $REDIR
+     eval $AUDIO_CMD >> $REDIR 2>&1
+diff -Naur tovid-0.30/src/postproc tovid-0.30.2/src/postproc
+--- tovid-0.30/src/postproc	2006-12-05 05:19:32.000000000 +0000
++++ tovid-0.30/src/postproc	2007-04-17 16:59:03.000000000 +0000
+@@ -210,7 +210,7 @@
+    # Re-encode audio
+    mv -v audio_dump normed_audio
+    AUDIO_BITRATE=$(expr $ID_AUDIO_BITRATE / 1000)
+-   AUDIO_ENC="ffmpeg -i normed_audio -vn -ab $AUDIO_BITRATE -ar $ID_AUDIO_RATE"
++   AUDIO_ENC="ffmpeg -i normed_audio -vn -ab ${AUDIO_BITRATE}k -ar $ID_AUDIO_RATE"
+    AUDIO_ENC="$AUDIO_ENC -ac $ID_AUDIO_NCH -acodec $ID_AUDIO_CODEC"
+    AUDIO_ENC="$AUDIO_ENC -y audio_dump.$ID_AUDIO_CODEC"
+ 
+diff -Naur tovid-0.30/src/todisc tovid-0.30.2/src/todisc
+--- tovid-0.30/src/todisc	2007-04-17 17:53:57.000000000 +0000
++++ tovid-0.30/src/todisc	2007-04-17 16:58:26.000000000 +0000
+@@ -1856,7 +1856,7 @@
+ 
+ # easier to have non transparent showcase use the transparent block
+ if $SHOWCASE && ! $TRANSPARENT; then TRANSPARENT=:; fi
+-AUDIO_OPTS="-ab 224 -ar $SAMPLERATE -ac 2 -acodec $AUDIO_EXT"
++AUDIO_OPTS="-ab 224k -ar $SAMPLERATE -ac 2 -acodec $AUDIO_EXT"
+ # spumux and dvdauthor vars
+ if $WIDE_SCREEN; then
+         TITLES_VIDEO_TAG="<video widescreen=\"$WIDESCREEN\" $V_ASPECT/>"
+diff -Naur tovid-0.30/src/tovid tovid-0.30.2/src/tovid
+--- tovid-0.30/src/tovid	2007-02-11 20:11:11.000000000 +0000
++++ tovid-0.30/src/tovid	2007-04-17 16:59:50.000000000 +0000
+@@ -1810,7 +1810,7 @@
+         AUDIO_ENC=( "${AUDIO_ENC[@]}" -i "${AUDIO_IN_FILE[@]}" )
+         yecho "Encoding audio stream to $AUD_SUF with the following command:"
+     fi
+-    AUDIO_ENC=( "${AUDIO_ENC[@]}" -vn -ab $AUD_BITRATE -ar $SAMPRATE -ac 2 )
++    AUDIO_ENC=( "${AUDIO_ENC[@]}" -vn -ab ${AUD_BITRATE}k -ar $SAMPRATE -ac 2 )
+     ! $DO_NORM && AUDIO_ENC=( "${AUDIO_ENC[@]}" $CLIP_SEEK $FF_LENGTH $AUDIO_MAP )
+     AUDIO_ENC=( "${AUDIO_ENC[@]}" -acodec $AUD_SUF)
+     $DO_NORM && AUDIO_ENC=( "${AUDIO_ENC[@]}" "${AUDIO_WAV_MAP[@]}" )

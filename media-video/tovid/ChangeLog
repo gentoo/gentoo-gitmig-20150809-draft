@@ -1,6 +1,12 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.7 2007/03/30 03:46:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.8 2007/04/28 04:29:18 beandog Exp $
+
+*tovid-0.30-r1 (28 Apr 2007)
+
+  28 Apr 2007; Steve Dibb <beandog@gentoo.org>
+  +files/tovid-0.30-ffmpeg.patch, +tovid-0.30-r1.ebuild:
+  ffmpeg patch, bug 176266
 
   30 Mar 2007; Steve Dibb <beandog@gentoo.org> -tovid-0.29-r1.ebuild,
   tovid-0.30.ebuild:
