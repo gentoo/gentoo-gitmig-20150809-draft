@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/perltidy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.27 2007/03/05 12:55:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.28 2007/04/28 02:39:01 mcummings Exp $
+
+*perltidy-20070424 (28 Apr 2007)
+
+  28 Apr 2007; Michael Cummings <mcummings@gentoo.org>
+  +perltidy-20070424.ebuild:
+  Version bump
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> perltidy-20060719.ebuild:
   Stable on x86, bug #169152.
