@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r7.ebuild,v 1.7 2007/04/12 19:57:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r7.ebuild,v 1.8 2007/04/28 18:21:46 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -21,13 +21,13 @@ COMMON_DEP="
 	~dev-java/batik-1.5
 	dev-java/xalan
 	>=dev-java/xerces-2.7
-	!dev-java/fop-bin"
+	!dev-java/fop-bin
+	>=dev-java/ant-core-1.5.4"
 RDEPEND="=virtual/jre-1.4*
 	${COMMON_DEP}"
 DEPEND="=virtual/jdk-1.4*
 	${COMMON_DEP}
-	|| ( dev-java/ant-trax dev-java/ant-tasks )
-	>=dev-java/ant-core-1.5.4"
+	|| ( dev-java/ant-trax dev-java/ant-tasks )"
 
 S=${WORKDIR}/${P/_/}
 
