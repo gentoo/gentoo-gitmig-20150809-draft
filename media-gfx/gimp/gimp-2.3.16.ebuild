@@ -1,18 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.9 2007/04/28 07:33:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.16.ebuild,v 1.1 2007/04/28 07:33:27 hanno Exp $
 
-inherit subversion fdo-mime flag-o-matic
-
-ESVN_REPO_URI="http://svn.gnome.org/svn/gimp/trunk/"
+inherit fdo-mime flag-o-matic
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI=""
+SRC_URI="mirror://gimp/v2.3/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec curl debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
 
@@ -60,6 +58,12 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gimp-sunras-bufferoverflow.diff
+}
+
 src_compile() {
 	# workaround portage variable leakage
 	local AA=
@@ -67,9 +71,6 @@ src_compile() {
 	# gimp uses inline functions (e.g. plug-ins/common/grid.c) (#23078)
 	# gimp uses floating point math, needs accuracy (#98685)
 	filter-flags "-fno-inline" "-ffast-math"
-
-	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
-	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die
 
 	econf --enable-default-binary \
 		--with-x \
