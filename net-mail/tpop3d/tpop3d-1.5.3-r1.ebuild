@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3-r1.ebuild,v 1.3 2006/11/23 16:11:37 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3-r1.ebuild,v 1.4 2007/04/28 17:34:03 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -90,8 +90,7 @@ src_install() {
 		dosym /etc/pam.d/pop3 /etc/pam.d/tpop3d
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/tpop3d-init tpop3d
+	newinitd ${FILESDIR}/tpop3d-init tpop3d
 }
 
 pkg_postinst() {

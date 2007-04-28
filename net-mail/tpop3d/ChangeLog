@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/tpop3d
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.20 2006/11/23 16:11:37 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.21 2007/04/28 17:34:03 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> tpop3d-1.5.3.ebuild,
+  tpop3d-1.5.3-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> tpop3d-1.5.3.ebuild,
   tpop3d-1.5.3-r1.ebuild:

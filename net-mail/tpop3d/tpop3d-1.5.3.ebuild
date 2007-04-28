@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.12 2006/11/23 16:11:37 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.13 2007/04/28 17:34:03 swegener Exp $
 
 inherit eutils
 
@@ -80,8 +80,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodir /etc/tpop3d
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/tpop3d-init tpop3d
+	newinitd ${FILESDIR}/tpop3d-init tpop3d
 }
 
 pkg_postinst() {

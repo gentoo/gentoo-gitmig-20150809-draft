@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.78 2007/01/05 17:17:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.79 2007/04/28 17:34:39 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> vpopmail-5.4.16.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   05 Jan 2007; Andrej Kacian <ticho@gentoo.org>
   -files/vpopmail-5.2.1-showall.patch,

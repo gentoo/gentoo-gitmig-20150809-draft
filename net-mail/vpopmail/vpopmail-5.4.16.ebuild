@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.11 2007/01/26 09:43:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.12 2007/04/28 17:34:39 swegener Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -173,8 +173,7 @@ src_install() {
 
 	einfo "Installing env.d entry"
 	dodir /etc/env.d
-	insinto /etc/env.d
-	doins ${FILESDIR}/99vpopmail
+	doenvd ${FILESDIR}/99vpopmail
 
 	# Configure b0rked. We'll do this manually
 	#echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
