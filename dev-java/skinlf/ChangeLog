@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/skinlf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.7 2007/04/01 14:49:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.8 2007/04/28 22:14:23 caster Exp $
+
+*skinlf-6.7 (28 Apr 2007)
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/skinlf-6.7-build.xml, +files/skinlf-6.7-common.xml,
+  +files/skinlf-6.7-image-utils-without-jimi.patch, +skinlf-6.7.ebuild:
+  Version bump, migrated to generation-2 java eclasses.
 
   01 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -skinlf-1.2.12.ebuild:
   Remove gen 1 ebuild.
