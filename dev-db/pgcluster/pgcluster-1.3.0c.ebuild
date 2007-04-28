@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.8 2007/03/04 07:47:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.9 2007/04/28 22:17:40 tove Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -154,18 +154,16 @@ src_install() {
 	${D}/etc/pgcluster/pglb.conf
 
 	cd ${S}
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/pgcluster.init-${PV} pgcluster || die
-	newexe ${FILESDIR}/pglb.init-${PV} pglb || die
-	newexe ${FILESDIR}/pgreplicate.init-${PV} pgreplicate || die
-#	newexe ${FILESDIR}/pg_autovacuum.init-${PV} pg_autovacuum || die
+	newinitd ${FILESDIR}/pgcluster.init-${PV} pgcluster || die
+	newinitd ${FILESDIR}/pglb.init-${PV} pglb || die
+	newinitd ${FILESDIR}/pgreplicate.init-${PV} pgreplicate || die
+#	newinitd ${FILESDIR}/pg_autovacuum.init-${PV} pg_autovacuum || die
 	dosed "s:___DOCDIR___:/usr/share/doc/${PF}:" /etc/init.d/pg_autovacuum
 
-	insinto /etc/conf.d/
-	newins ${FILESDIR}/pgcluster.conf-${PV} pgcluster || die
-	newins ${FILESDIR}/pglb.conf-${PV} pglb || die
-	newins ${FILESDIR}/pgreplicate.conf-${PV} pgreplicate || die
-#	newins ${FILESDIR}/pg_autovacuum.conf-${PV} pg_autovacuum || die
+	newconfd ${FILESDIR}/pgcluster.conf-${PV} pgcluster || die
+	newconfd ${FILESDIR}/pglb.conf-${PV} pglb || die
+	newconfd ${FILESDIR}/pgreplicate.conf-${PV} pgreplicate || die
+#	newconfd ${FILESDIR}/pg_autovacuum.conf-${PV} pg_autovacuum || die
 
 	keepdir $PG_DIR
 	keepdir /var/log/pgcluster

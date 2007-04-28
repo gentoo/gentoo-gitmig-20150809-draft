@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-1.2.ebuild,v 1.2 2007/04/28 16:58:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-1.2.ebuild,v 1.3 2007/04/28 22:14:49 tove Exp $
 
 DESCRIPTION="Gentoo MySQL init scripts."
 HOMEPAGE="http://www.gentoo.org/"
@@ -15,12 +15,11 @@ DEPEND=""
 RDEPEND=""
 
 src_install() {
-	insinto "/etc/conf.d"
-	newins "${FILESDIR}/mysql.conf.d" "mysql"
-	newins "${FILESDIR}/mysqlmanager.conf.d" "mysqlmanager"
+	newconfd "${FILESDIR}/mysql.conf.d" "mysql"
+	newconfd "${FILESDIR}/mysqlmanager.conf.d" "mysqlmanager"
 
 	newinitd "${FILESDIR}/mysql.rc6" "mysql"
-	newexe "${FILESDIR}/mysqlmanager.rc6" "mysqlmanager"
+	newinitd "${FILESDIR}/mysqlmanager.rc6" "mysqlmanager"
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/logrotate.mysql" "mysql"
