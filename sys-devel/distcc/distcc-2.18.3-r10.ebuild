@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.7 2007/03/26 08:02:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.8 2007/04/28 17:56:39 swegener Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -83,11 +83,9 @@ src_install() {
 	exeinto /usr/bin
 	doexe "${FILESDIR}/distcc-config"
 
-	insinto /etc/conf.d
-	newins "${FILESDIR}/${PATCHLEVEL}/conf" distccd
+	newconfd "${FILESDIR}/${PATCHLEVEL}/conf" distccd
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/${PATCHLEVEL}/init" distccd
+	newinitd "${FILESDIR}/${PATCHLEVEL}/init" distccd
 
 	# create and keep the symlink dir
 	dodir /usr/lib/distcc/bin
