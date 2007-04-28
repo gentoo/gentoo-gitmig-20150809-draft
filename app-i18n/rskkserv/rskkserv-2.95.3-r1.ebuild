@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3-r1.ebuild,v 1.6 2007/01/05 16:23:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3-r1.ebuild,v 1.7 2007/04/28 15:45:13 tove Exp $
 
 inherit ruby eutils
 
@@ -34,8 +34,7 @@ src_install() {
 	keepdir /var/lib/rskkserv
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rskkserv-2.95.initd rskkserv || die
+	newinitd "${FILESDIR}"/rskkserv-2.95.initd rskkserv || die
 
 	dodoc ChangeLog
 	cd doc
