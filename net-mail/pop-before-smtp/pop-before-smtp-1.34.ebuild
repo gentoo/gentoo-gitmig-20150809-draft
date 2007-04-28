@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/pop-before-smtp-1.34.ebuild,v 1.7 2007/04/28 17:32:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/pop-before-smtp-1.34.ebuild,v 1.8 2007/04/28 22:23:55 swegener Exp $
 
 DESCRIPTION="a simple daemon to allow email relay control based on successful POP or IMAP logins"
 HOMEPAGE="http://popbsmtp.sourceforge.net"
@@ -37,5 +37,5 @@ src_install() {
 	insinto /etc
 	doins pop-before-smtp-conf.pl || die "doins failed"
 	newinitd "${FILESDIR}/pop-before-smtp.init" pop-before.smtp \
-		|| die "newexe failed"
+		|| die "newinitd failed"
 }
