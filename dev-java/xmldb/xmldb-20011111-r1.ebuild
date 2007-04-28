@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.11 2007/04/20 15:25:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.12 2007/04/28 11:46:45 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -43,7 +43,9 @@ src_unpack() {
 }
 
 src_compile() {
-	eant jar $(use_doc) -Dclasspath=$(java-pkg_getjars xerces-2,xalan,junit)
+	# --with-dependencies because of indirectly referenced xml-commons-external
+	eant jar $(use_doc) \
+		-Dclasspath=$(java-pkg_getjars --with-dependencies xerces-2,xalan,junit)
 }
 
 src_install() {
