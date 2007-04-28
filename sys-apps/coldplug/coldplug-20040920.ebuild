@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/coldplug-20040920.ebuild,v 1.11 2006/05/12 10:02:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/coldplug-20040920.ebuild,v 1.12 2007/04/28 17:04:51 swegener Exp $
 
 inherit eutils
 
@@ -20,6 +20,5 @@ IUSE=""
 DEPEND=">=sys-apps/hotplug-20040920"
 
 src_install() {
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/coldplug.rc coldplug
+	newinitd ${FILESDIR}/coldplug.rc coldplug
 }

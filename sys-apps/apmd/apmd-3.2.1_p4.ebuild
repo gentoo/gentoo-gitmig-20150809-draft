@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.18 2006/10/16 22:42:44 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.19 2007/04/28 17:02:53 swegener Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -67,10 +67,8 @@ src_install() {
 	# note: apmd_proxy.conf is currently disabled and not used, thus
 	#       not installed - liquidx (01 Mar 2004)
 
-	insinto /etc/conf.d
-	newins "${FILESDIR}"/apmd.confd apmd || die "newins failed"
-	exeinto /etc/init.d
-	newexe "${FILESDIR}"/apmd.rc6 apmd || die "newexe failed"
+	newconfd "${FILESDIR}"/apmd.confd apmd || die "newconfd failed"
+	newinitd "${FILESDIR}"/apmd.rc6 apmd || die "newinitd failed"
 
 	use nls || rm -rf "${D}"/usr/share/man/fr
 }

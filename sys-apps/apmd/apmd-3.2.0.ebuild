@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.13 2006/02/12 08:50:00 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.14 2007/04/28 17:02:53 swegener Exp $
 
 inherit eutils
 
@@ -63,8 +63,8 @@ src_install() {
 	exeinto /etc/apm ; doexe apmd_proxy
 	dodoc ANNOUNCE BUGS.apmsleep COPYING* README* ChangeLog LSM
 
-	insinto /etc/conf.d ; newins ${FILESDIR}/apmd.confd apmd
-	exeinto /etc/init.d ; newexe ${FILESDIR}/apmd.rc6 apmd
+	newconfd ${FILESDIR}/apmd.confd apmd
+	newinitd ${FILESDIR}/apmd.rc6 apmd
 
 	if use X ; then
 		make DESTDIR=${D} xinstall || die "xinstall failed"

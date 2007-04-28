@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/855resolution/855resolution-0.4.ebuild,v 1.2 2007/01/25 04:30:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/855resolution/855resolution-0.4.ebuild,v 1.3 2007/04/28 17:03:55 swegener Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -25,8 +25,6 @@ src_install() {
 
 	dodoc README.txt
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PV}/conf 855resolution
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PV}/init 855resolution
+	newconfd ${FILESDIR}/${PV}/conf 855resolution
+	newinitd ${FILESDIR}/${PV}/init 855resolution
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.36 2007/02/22 01:02:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.37 2007/04/28 17:02:53 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> apmd-3.0.2-r3.ebuild,
+  apmd-3.2.0.ebuild, apmd-3.2.1_p4.ebuild, apmd-3.2.2_p5.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
