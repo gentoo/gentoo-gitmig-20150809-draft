@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.18 2007/04/26 06:50:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.19 2007/04/28 22:47:46 compnerd Exp $
+
+  28 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/0.6.1-configure.patch, -files/transmission.desktop,
+  -transmission-0.6.1.ebuild, -transmission-0.7.ebuild:
+  prune unused ebuilds and files
 
   26 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   transmission-0.6.1-r1.ebuild:
