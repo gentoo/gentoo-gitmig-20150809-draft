@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.17 2007/04/21 20:58:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.18 2007/04/28 17:32:09 swegener Exp $
 
 inherit eutils
 
@@ -94,8 +94,7 @@ src_install() {
 
 	newconfd ${FILESDIR}/conf.d.timidity timidity
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d.timidity timidity
+	newinitd ${FILESDIR}/init.d.timidity timidity
 
 	insinto /etc
 	newins ${FILESDIR}/timidity.cfg-r1 timidity.cfg
