@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.61 2007/04/28 16:54:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.62 2007/04/28 23:16:18 swegener Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -383,7 +383,6 @@ src_install() {
 		MAILDIRMAKE="${D}/var/qmail/bin/maildirmake"
 
 	einfo "Adding env.d entry for qmail"
-	dodir /etc/env.d
 	doenvd ${FILESDIR}/99qmail
 
 	einfo "Creating sendmail replacement ..."

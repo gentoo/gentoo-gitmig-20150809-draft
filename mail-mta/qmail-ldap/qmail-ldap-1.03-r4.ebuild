@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.10 2007/04/28 16:53:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.11 2007/04/28 23:17:35 swegener Exp $
 
 IUSE="ssl"
 
@@ -148,7 +148,6 @@ src_install() {
 	done
 
 	einfo "Adding env.d entry for qmail"
-	dodir /etc/env.d
 	doenvd ${FILESDIR}/${PV}-${PR}/99qmail
 
 
