@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.2.2.ebuild,v 1.1 2006/09/18 19:53:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.2.2.ebuild,v 1.2 2007/04/28 17:42:54 swegener Exp $
 
 inherit eutils
 
@@ -25,8 +25,7 @@ src_install () {
 	dodoc ChangeLog LICENSE
 
 	dodir /etc/init.d
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/iprinit iprinit
+	newinitd ${FILESDIR}/iprinit iprinit
 	newexe ${FILESDIR}/iprupdate iprupdate
 	newexe ${FILESDIR}/iprdump iprdump
 }
