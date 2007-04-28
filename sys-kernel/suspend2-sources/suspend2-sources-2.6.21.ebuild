@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.20-r5.ebuild,v 1.2 2007/04/28 18:58:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.21.ebuild,v 1.1 2007/04/28 18:58:33 alonbl Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="7"
+K_GENPATCHES_VER="1"
 
 inherit kernel-2
 detect_version
@@ -14,7 +14,7 @@ DESCRIPTION="Software Suspend 2 + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches http://www.suspend2.net"
 
 SUSPEND2_VERSION="2.2.9.13"
-SUSPEND2_TARGET="2.6.20"
+SUSPEND2_TARGET="2.6.21-rc7"
 SUSPEND2_SRC="suspend2-${SUSPEND2_VERSION}-for-${SUSPEND2_TARGET}"
 SUSPEND2_URI="http://www.suspend2.net/downloads/all/${SUSPEND2_SRC}.patch.bz2"
 
