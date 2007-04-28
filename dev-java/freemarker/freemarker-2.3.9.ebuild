@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.9.ebuild,v 1.3 2007/03/17 16:18:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.9.ebuild,v 1.4 2007/04/28 15:01:29 nelchael Exp $
 
+JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2 eutils
@@ -13,15 +14,17 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="freemarker"
 SLOT="2.3"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="source doc"
+IUSE=""
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/javacc
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4
+COMMON_DEP="dev-java/javacc
 	dev-java/jython
 	=dev-java/servletapi-2.3*
 	=dev-java/jaxen-1.1*"
+
+DEPEND=">=virtual/jdk-1.4
+	${COMMON_DEP}"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
 
 src_unpack() {
 
