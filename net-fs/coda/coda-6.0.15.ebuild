@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.3 2007/04/11 17:30:14 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.4 2007/04/28 16:51:40 swegener Exp $
 
 inherit autotools eutils
 
@@ -74,8 +74,7 @@ src_install () {
 
 	dodoc README* ChangeLog CREDITS
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/${PV}/venus
+	doinitd ${FILESDIR}/${PV}/venus
 	doexe ${FILESDIR}/coda-update
 	doexe ${FILESDIR}/codasrv
 	doexe ${FILESDIR}/auth2

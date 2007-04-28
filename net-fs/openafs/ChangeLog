@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.105 2007/03/27 13:32:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.106 2007/04/28 16:52:25 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> openafs-1.2.10-r1.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   27 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> openafs-1.4.4.ebuild:
   Stable on amd64 wrt bug #171662.

@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.27 2007/04/11 17:30:14 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.28 2007/04/28 16:51:40 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> coda-6.0.10.ebuild,
+  coda-6.0.11.ebuild, coda-6.0.12.ebuild, coda-6.0.14.ebuild,
+  coda-6.0.15.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   11 Apr 2007; Maurice van der Pot <griffon26@gentoo.org>
   coda-6.0.14.ebuild, coda-6.0.15.ebuild:
