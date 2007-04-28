@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/jibx-1.1.3.ebuild,v 1.1 2007/04/24 09:56:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/jibx-1.1.3.ebuild,v 1.2 2007/04/28 20:21:47 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -20,6 +20,7 @@ IUSE=""
 COMMON_DEP="=dev-java/dom4j-1*
 	dev-java/ant-core
 	dev-java/bcel
+	dev-java/jsr173
 	dev-java/xpp3"
 
 DEPEND=">=virtual/jdk-1.4
@@ -37,10 +38,11 @@ src_unpack() {
 	cd "${S}/lib"
 	rm -f *.jar
 
-	java-pkg_jarfrom xpp3
-	java-pkg_jarfrom bcel
 	java-pkg_jarfrom ant-core
+	java-pkg_jarfrom bcel
 	java-pkg_jarfrom dom4j-1
+	java-pkg_jarfrom jsr173
+	java-pkg_jarfrom xpp3
 
 }
 
