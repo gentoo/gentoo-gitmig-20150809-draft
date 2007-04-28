@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dns2go
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.9 2007/02/22 02:01:22 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.10 2007/04/28 17:21:45 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> dns2go-1.1-r2.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

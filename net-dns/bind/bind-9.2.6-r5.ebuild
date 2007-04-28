@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6-r5.ebuild,v 1.4 2007/02/07 22:48:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6-r5.ebuild,v 1.5 2007/04/28 17:21:04 swegener Exp $
 
 inherit eutils libtool autotools
 
@@ -166,8 +166,7 @@ src_install() {
 		contrib/nanny/nanny.pl
 	}
 
-	insinto /etc/env.d
-	newins ${FILESDIR}/10bind.env 10bind
+	newenvd ${FILESDIR}/10bind.env 10bind
 
 	# some handy-dandy dynamic dns examples
 	cd ${D}/usr/share/doc/${PF}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r3.ebuild,v 1.5 2007/02/07 22:48:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r3.ebuild,v 1.6 2007/04/28 17:21:04 swegener Exp $
 
 inherit eutils libtool autotools
 
@@ -149,8 +149,7 @@ src_install() {
 		tar pjxf ${DISTFILES}/dyndns-samples.tbz2
 	}
 
-	insinto /etc/env.d
-	newins ${FILESDIR}/10bind.env 10bind
+	newenvd ${FILESDIR}/10bind.env 10bind
 
 	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec

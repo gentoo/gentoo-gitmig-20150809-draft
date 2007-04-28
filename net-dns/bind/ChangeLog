@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.158 2007/04/22 18:43:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.159 2007/04/28 17:21:04 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> bind-9.2.6.ebuild,
+  bind-9.2.6-r3.ebuild, bind-9.2.6-r4.ebuild, bind-9.2.6-r5.ebuild,
+  bind-9.2.7.ebuild, bind-9.2.8.ebuild, bind-9.2.8-r2.ebuild,
+  bind-9.3.2.ebuild, bind-9.3.2-r3.ebuild, bind-9.3.2-r4.ebuild,
+  bind-9.3.2-r5.ebuild, bind-9.3.3.ebuild, bind-9.3.4.ebuild,
+  bind-9.3.4-r2.ebuild, bind-9.4.0-r2.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   22 Apr 2007; Raúl Porcel <armin76@gentoo.org> bind-9.3.4-r2.ebuild:
   ia64 stable

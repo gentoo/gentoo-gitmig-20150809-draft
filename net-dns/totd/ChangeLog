@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/totd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.4 2007/02/05 00:44:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.5 2007/04/28 17:22:35 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> totd-1.3.ebuild,
+  totd-1.5.ebuild, totd-1.5.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

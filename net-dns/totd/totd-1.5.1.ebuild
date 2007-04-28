@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.1 2005/08/14 07:07:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.2 2007/04/28 17:22:35 swegener Exp $
 
 DESCRIPTION="Trick Or Treat Daemon, a DNS proxy for 6to4"
 HOMEPAGE="http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html"
@@ -23,8 +23,7 @@ src_install() {
 	doman totd.8
 	dodoc totd.conf.sample README INSTALL
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/totd
+	doinitd ${FILESDIR}/totd
 }
 
 pkg_postinst() {
