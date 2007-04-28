@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27-r1.ebuild,v 1.6 2005/05/22 18:27:44 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27-r1.ebuild,v 1.7 2007/04/28 18:01:17 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -77,8 +77,7 @@ src_install() {
 	insinto /etc/lprng
 	doins ${FILESDIR}/printcap lpd.conf lpd.perms
 	dosym /etc/lprng/printcap /etc/printcap
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/lprng-init lprng
+	newinitd ${FILESDIR}/lprng-init lprng
 }
 
 pkg_postinst() {
