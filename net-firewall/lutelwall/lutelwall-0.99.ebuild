@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/lutelwall-0.99.ebuild,v 1.3 2005/09/15 23:14:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/lutelwall-0.99.ebuild,v 1.4 2007/04/28 21:40:47 tove Exp $
 
 DESCRIPTION="High-level tool for firewall configuration"
 HOMEPAGE="http://firewall.lutel.pl"
@@ -17,7 +17,7 @@ DEPEND=">=net-firewall/iptables-1.2.6
 src_install() {
 	insinto /etc ; doins lutelwall.conf
 	dosbin lutelwall
-	exeinto /etc/init.d ; doexe ${FILESDIR}/lutelwall
+	doinitd "${FILESDIR}"/lutelwall
 	dodoc FEATURES ChangeLog
 }
 
