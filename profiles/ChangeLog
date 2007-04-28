@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.322 2007/04/28 16:32:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.323 2007/04/28 17:10:23 caster Exp $
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Masking eclipse-sdk versions below 3.2.1.
 
   28 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
   Masking dev-java/joscar for removal.

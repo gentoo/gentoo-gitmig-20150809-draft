@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7184 2007/04/28 16:32:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7185 2007/04/28 17:10:23 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Vlastimil Babka <caster@gentoo.org> (28 Apr 2007)
+# Eclipse version slots below 3.2.1 are obsolete ebuilds,
+# please install 3.2.1-r1 instead. Contact java@gentoo.org
+# in case you still need the old version for some reason.
+<dev-util/eclipse-sdk-3.2.1
 
 # Vlastimil Babka <caster@gentoo.org> (28 Apr 2007)
 # Still generation 1 and stale upstream, library that
