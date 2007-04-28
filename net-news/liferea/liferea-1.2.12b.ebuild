@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.7.ebuild,v 1.2 2007/03/07 19:12:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.12b.ebuild,v 1.1 2007/04/28 01:20:54 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="dbus firefox gtkhtml seamonkey libnotify gnutls xulrunner"
+IUSE="dbus firefox gtkhtml gnutls libnotify networkmanager seamonkey xulrunner"
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	x11-libs/pango
@@ -26,10 +26,9 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
 	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( =gnome-extra/gtkhtml-2* ) ) ) )
 	!amd64? ( gtkhtml? ( =gnome-extra/gtkhtml-2* ) )
-	dbus? ( || ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 ) )
-	)
+	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
+	networkmanager? ( net-misc/networkmanager )
 	gnutls? ( net-libs/gnutls )"
 
 DEPEND="${RDEPEND}
@@ -38,10 +37,9 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
+S="${WORKDIR}/liferea-1.2.12"
 src_unpack() {
-	unpack ${A}
-
-	cd ${S}
+	gnome2_src_unpack
 
 	epatch "${FILESDIR}/${PN}-1.1.0-libnotify.patch"
 
@@ -80,7 +78,8 @@ pkg_setup() {
 	G2CONF="${G2CONF} \
 		$(use_enable dbus) \
 		$(use_enable gnutls) \
-		$(use_enable libnotify)"
+		$(use_enable libnotify) \
+		$(use_enable networkmanager nm)"
 }
 
 src_install() {
