@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.4 2007/03/15 13:39:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.5 2007/04/28 22:58:55 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source"
+WANT_ANT_TASKS="ant-nodeps ant-trax"
+
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="XDoclet is an extended Javadoc Doclet engine."
@@ -22,9 +24,9 @@ CDEPEND="=dev-java/bsf-2.3*
 	dev-java/xjavadoc
 	dev-java/junit"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
 	${CDEPEND}"
 RDEPEND=">=virtual/jre-1.4
+	dev-java/ant-core
 	${CDEPEND}"
 
 
