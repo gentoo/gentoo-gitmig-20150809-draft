@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.187 2007/04/28 07:33:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.188 2007/04/28 16:01:36 armin76 Exp $
+
+  28 Apr 2007; Raúl Porcel <armin76@gentoo.org> gimp-2.2.14.ebuild:
+  ia64 + x86 wrt security bug 176226
 
 *gimp-2.3.16 (28 Apr 2007)
 *gimp-2.2.14 (28 Apr 2007)
