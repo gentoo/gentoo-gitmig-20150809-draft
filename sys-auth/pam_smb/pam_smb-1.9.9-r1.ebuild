@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-1.9.9-r1.ebuild,v 1.1 2005/07/02 14:17:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-1.9.9-r1.ebuild,v 1.2 2007/04/28 17:53:16 swegener Exp $
 
 DESCRIPTION="The PAM SMB module, which allows authentication against an NT server."
 HOMEPAGE="http://www.csn.ul.ie/~airlied/pam_smb/"
@@ -30,8 +30,7 @@ src_install() {
 	docinto pam.d
 	dodoc pam_smb.conf*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pamsmbd-init pamsmbd
+	newinitd ${FILESDIR}/pamsmbd-init pamsmbd
 }
 
 pkg_postinst() {

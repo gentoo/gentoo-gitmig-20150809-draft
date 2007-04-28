@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-1.9.9-r2.ebuild,v 1.2 2006/06/28 14:58:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-1.9.9-r2.ebuild,v 1.3 2007/04/28 17:53:16 swegener Exp $
 
 inherit eutils
 
@@ -38,8 +38,7 @@ src_install() {
 	docinto pam.d
 	dodoc pam_smb.conf*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pamsmbd-init pamsmbd
+	newinitd ${FILESDIR}/pamsmbd-init pamsmbd
 }
 
 pkg_postinst() {
