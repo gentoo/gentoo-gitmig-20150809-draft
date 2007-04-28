@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-javamail-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/ChangeLog,v 1.14 2007/02/28 17:17:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/ChangeLog,v 1.15 2007/04/28 22:44:16 betelgeuse Exp $
+
+  28 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  sun-javamail-bin-1.4.ebuild:
+  There is 1.4 bytecode in mail.jar so fix DEPEND.
 
   28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -sun-javamail-bin-1.3.1.ebuild, -sun-javamail-bin-1.3.3.01.ebuild:
