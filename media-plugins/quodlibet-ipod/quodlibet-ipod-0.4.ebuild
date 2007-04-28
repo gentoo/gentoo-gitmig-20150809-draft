@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/quodlibet-ipod-0.4.ebuild,v 1.4 2007/03/29 08:34:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/quodlibet-ipod-0.4.ebuild,v 1.5 2007/04/28 16:33:00 swegener Exp $
 
 inherit python eutils
 
@@ -37,7 +37,6 @@ src_install() {
 	insinto ${PLUGIN_DEST}
 	doins ipod_base.py
 
-	dodir ${PLUGIN_DEST}/ipod
 	insinto ${PLUGIN_DEST}/ipod
 	doins ipod/*
 }
