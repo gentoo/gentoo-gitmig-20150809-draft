@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.321 2007/04/28 13:15:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.322 2007/04/28 16:32:39 caster Exp $
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Masking dev-java/joscar for removal.
 
   28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask dev-java/fesi
