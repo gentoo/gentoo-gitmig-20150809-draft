@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.68 2007/01/19 18:23:21 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.69 2007/04/28 16:45:06 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  pure-ftpd-1.0.20-r1.ebuild, pure-ftpd-1.0.21-r1.ebuild:
+  Drop dodir from dodir/*into combination.
 
   19 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   pure-ftpd-1.0.21-r1.ebuild:

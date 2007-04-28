@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.21-r1.ebuild,v 1.10 2007/01/19 18:23:21 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.21-r1.ebuild,v 1.11 2007/04/28 16:45:06 swegener Exp $
 
 inherit eutils confutils
 
@@ -95,7 +95,6 @@ src_install() {
 	fi
 
 	if use ldap ; then
-		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
 		doins pureftpd.schema
 		insinto /etc/openldap
