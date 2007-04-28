@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.452 2007/04/27 21:10:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.453 2007/04/28 15:26:56 carlo Exp $
+
+  28 Apr 2007; Carsten Lohrke <carlo@gentoo.org> -kdelibs-3.5.5-r5.ebuild,
+  -kdelibs-3.5.5-r7.ebuild, -kdelibs-3.5.5-r8.ebuild,
+  -kdelibs-3.5.5-r9.ebuild, -kdelibs-3.5.6-r1.ebuild,
+  -kdelibs-3.5.6-r2.ebuild, -kdelibs-3.5.6-r3.ebuild,
+  -kdelibs-3.5.6-r4.ebuild, -kdelibs-3.5.6-r5.ebuild,
+  -kdelibs-3.5.6-r6.ebuild:
+  Clean up.
 
 *kdelibs-3.5.6-r7 (27 Apr 2007)
 
