@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.9.ebuild,v 1.1 2007/03/15 12:50:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.9.ebuild,v 1.2 2007/04/28 17:36:41 swegener Exp $
 
 inherit eutils versionator
 
@@ -71,8 +71,7 @@ src_install() {
 	touch ${D}/var/log/gwc/dns.log
 	touch ${D}/var/log/gwc/checks.log
 	chown -R gwc:gwc ${D}/var/log/gwc
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/gwc.init gwc
+	newinitd ${FILESDIR}/gwc.init gwc
 	dohtml doc/*.html doc/*.css doc/specs/*.html
 	dodoc doc/specs/*.txt examples/*
 }

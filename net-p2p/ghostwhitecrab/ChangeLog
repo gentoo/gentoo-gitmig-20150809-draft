@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ghostwhitecrab
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ChangeLog,v 1.10 2007/03/15 12:50:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ChangeLog,v 1.11 2007/04/28 17:36:41 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  ghostwhitecrab-0.9.7.2.ebuild, ghostwhitecrab-0.9.9.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
 *ghostwhitecrab-0.9.9 (15 Mar 2007)
 

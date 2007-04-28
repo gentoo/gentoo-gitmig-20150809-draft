@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.3 2007/03/30 20:16:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.4 2007/04/28 17:36:22 swegener Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -95,8 +95,7 @@ src_install() {
 	newins contrib/gnunet.root gnunet.conf
 	docinto contrib
 	dodoc contrib/*
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}-2 gnunet
+	newinitd ${FILESDIR}/${PN}-2 gnunet
 	dodir /var/lib/gnunet
 	chown gnunetd:gnunetd ${D}/var/lib/gnunet
 }
