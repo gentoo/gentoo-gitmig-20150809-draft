@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-4.2.2.ebuild,v 1.2 2007/04/18 20:14:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-4.2.2.ebuild,v 1.3 2007/04/28 16:53:02 swegener Exp $
 
 inherit eutils versionator
 
@@ -38,8 +38,7 @@ src_install() {
 	exeinto /etc/freenet6/template
 	doexe template/{linux,checktunnel}.sh
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/gw6c.rc gw6c
+	newinitd ${FILESDIR}/gw6c.rc gw6c
 
 	doman man/{man5/gw6c.conf.5,man8/gw6c.8}
 }

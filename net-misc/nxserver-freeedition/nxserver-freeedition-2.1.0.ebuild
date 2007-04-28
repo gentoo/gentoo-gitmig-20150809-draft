@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-2.1.0.ebuild,v 1.2 2007/04/26 09:51:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-2.1.0.ebuild,v 1.3 2007/04/28 17:00:17 swegener Exp $
 
 inherit eutils
 
@@ -63,8 +63,7 @@ src_install()
 	cp -R share ${D}/usr/NX || die
 	cp -R var ${D}/usr/NX || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/nxserver-2.1.0-init nxserver
+	newinitd ${FILESDIR}/nxserver-2.1.0-init nxserver
 }
 
 pkg_postinst ()

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.11.ebuild,v 1.2 2005/09/22 23:24:06 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.11.ebuild,v 1.3 2007/04/28 17:02:04 swegener Exp $
 
 inherit eutils
 
@@ -46,8 +46,7 @@ src_compile() {
 src_install() {
 	einstall || die "install failed"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/siproxd.rc6 siproxd
+	newinitd ${FILESDIR}/siproxd.rc6 siproxd
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO RELNOTES
 

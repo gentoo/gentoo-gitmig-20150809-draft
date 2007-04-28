@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-2.1.0.ebuild,v 1.2 2007/04/26 10:01:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-2.1.0.ebuild,v 1.3 2007/04/28 16:59:56 swegener Exp $
 
 inherit eutils
 
@@ -66,8 +66,7 @@ src_install()
 	cp -R var ${D}/usr/NX || die
 
 	dodir /etc/init.d
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/nxnode-2.1.0-init nxsensor
+	newinitd ${FILESDIR}/nxnode-2.1.0-init nxsensor
 }
 
 pkg_postinst()

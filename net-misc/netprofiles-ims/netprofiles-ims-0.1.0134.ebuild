@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netprofiles-ims/netprofiles-ims-0.1.0134.ebuild,v 1.3 2004/06/24 23:59:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netprofiles-ims/netprofiles-ims-0.1.0134.ebuild,v 1.4 2007/04/28 16:59:16 swegener Exp $
 
 DESCRIPTION="The Netprofiles Interface Management System (IMS) is an easy way to manage multiple network configurations for your wired or wireless network cards."
 
@@ -21,6 +21,5 @@ src_install() {
 	cd ${S}
 	exeinto /usr/sbin
 	dosbin netprofiles
-	exeinto /etc/init.d
-	doexe netprofiles-ims
+	doinitd netprofiles-ims
 }

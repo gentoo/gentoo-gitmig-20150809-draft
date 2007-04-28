@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cbqinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.14 2007/02/22 02:11:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.15 2007/04/28 16:51:02 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> cbqinit-0.7.2.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

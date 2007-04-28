@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.7 2007/04/24 09:26:33 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.8 2007/04/28 16:55:05 swegener Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -118,8 +118,7 @@ src_install() {
 	keepdir /var/spool/fax/{status,sendq,log,info,doneq,docq,dev}
 
 	einfo "Adding env.d entry for Hylafax"
-	insinto /etc/env.d
-	newins ${FILESDIR}/99hylafax-4.2 99hylafax
+	newenvd ${FILESDIR}/99hylafax-4.2 99hylafax
 
 	einfo "Adding init.d entry for Hylafax"
 	insinto /etc/init.d

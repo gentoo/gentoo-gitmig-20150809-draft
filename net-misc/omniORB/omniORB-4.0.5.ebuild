@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.8 2005/08/25 00:38:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.9 2007/04/28 17:00:45 swegener Exp $
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${PF}.tar.gz"
@@ -56,8 +56,7 @@ src_install () {
 	dodir /etc/env.d/
 	echo "PATH=/usr/share/omniORB/bin/scripts" > ${D}/etc/env.d/90omniORB
 	echo "OMNIORB_CONFIG=/etc/omniorb/omniORB.cfg" >> ${D}/etc/env.d/90omniORB
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/omniORB-4.0.0 omniORB
+	newinitd ${FILESDIR}/omniORB-4.0.0 omniORB
 
 	cp ${S}/sample.cfg ${S}/omniORB.cfg
 	dodir /etc/omniorb

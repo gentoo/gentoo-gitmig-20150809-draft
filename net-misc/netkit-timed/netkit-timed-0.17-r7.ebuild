@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r7.ebuild,v 1.8 2006/07/27 05:47:37 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r7.ebuild,v 1.9 2007/04/28 16:58:55 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -33,6 +33,5 @@ src_install() {
 	doman  timed/timedc/timedc.8
 	dodoc  README ChangeLog BUGS
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/timed.rc6 timed
+	newinitd ${FILESDIR}/timed.rc6 timed
 }

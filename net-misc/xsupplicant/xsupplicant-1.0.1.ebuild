@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.0.1.ebuild,v 1.2 2005/02/19 11:10:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.0.1.ebuild,v 1.3 2007/04/28 17:04:12 swegener Exp $
 
 DESCRIPTION="Open Source Implementation of IEEE 802.1x"
 
@@ -34,11 +34,9 @@ src_install() {
 	insinto /etc
 	newins etc/xsupplicant.conf xsupplicant.conf.example
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/xsupplicant.init.d xsupplicant
+	newinitd ${FILESDIR}/xsupplicant.init.d xsupplicant
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/xsupplicant.conf.d xsupplicant
+	newconfd ${FILESDIR}/xsupplicant.conf.d xsupplicant
 }
 
 pkg_postinst() {

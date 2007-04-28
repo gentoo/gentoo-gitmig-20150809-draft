@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.13_pre.ebuild,v 1.5 2006/11/12 03:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.13_pre.ebuild,v 1.6 2007/04/28 16:57:21 swegener Exp $
 
 inherit eutils
 
@@ -33,11 +33,9 @@ src_install() {
 	dobin ${S}/memcached
 	dodoc ${S}/{AUTHORS,COPYING,ChangeLog,INSTALL,NEWS,README}
 
-	insinto /etc/conf.d
-	newins "${FILESDIR}/1.1.12/conf" memcached
+	newconfd "${FILESDIR}/1.1.12/conf" memcached
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/1.1.12/init" memcached
+	newinitd "${FILESDIR}/1.1.12/init" memcached
 
 	doman ${S}/doc/memcached.1
 

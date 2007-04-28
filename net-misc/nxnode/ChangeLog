@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.2 2007/04/26 10:01:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.3 2007/04/28 16:59:56 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> nxnode-2.1.0.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   26 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org> nxnode-2.1.0.ebuild:
   Cleaning old blockers

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.1.0.ebuild,v 1.12 2007/04/18 10:59:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.1.0.ebuild,v 1.13 2007/04/28 16:55:28 swegener Exp $
 
 IUSE="doc yp"
 
@@ -34,8 +34,7 @@ src_install() {
 	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist
 	use doc && dohtml -A chm,hhc,hhp doc/*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d.icecast icecast
+	newinitd ${FILESDIR}/init.d.icecast icecast
 
 	fperms 600 /etc/icecast2/icecast.xml
 

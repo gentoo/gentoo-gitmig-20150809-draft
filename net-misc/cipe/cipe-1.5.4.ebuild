@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.7 2006/06/13 10:54:11 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.8 2007/04/28 16:51:27 swegener Exp $
 
 inherit eutils
 
@@ -54,8 +54,7 @@ src_install() {
 	insopts -m600
 	doins samples/options
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d-ciped ciped
+	newinitd ${FILESDIR}/init.d-ciped ciped
 
 
 	dodoc README* CHANGES COPYING tcpdump.patch

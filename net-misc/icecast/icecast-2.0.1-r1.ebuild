@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.1-r1.ebuild,v 1.9 2007/04/18 10:59:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.1-r1.ebuild,v 1.10 2007/04/28 16:55:28 swegener Exp $
 
 inherit eutils
 
@@ -34,8 +34,7 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS README TODO HACKING NEWS
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d.icecast icecast
+	newinitd ${FILESDIR}/init.d.icecast icecast
 
 	rm -rf ${D}usr/share/doc/icecast
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.0.ebuild,v 1.1 2007/02/02 23:28:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.0.ebuild,v 1.2 2007/04/28 17:00:45 swegener Exp $
 
 inherit python
 
@@ -59,8 +59,7 @@ src_install () {
 	dodir /etc/env.d/
 	echo "PATH=/usr/share/omniORB/bin/scripts" > ${D}/etc/env.d/90omniORB
 	echo "OMNIORB_CONFIG=/etc/omniorb/omniORB.cfg" >> ${D}/etc/env.d/90omniORB
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/omniORB-4.0.0 omniORB
+	newinitd ${FILESDIR}/omniORB-4.0.0 omniORB
 
 	cp ${S}/sample.cfg ${S}/omniORB.cfg
 	dodir /etc/omniorb

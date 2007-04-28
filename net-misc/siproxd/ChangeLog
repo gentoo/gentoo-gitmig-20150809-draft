@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/siproxd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.5 2007/02/22 02:46:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.6 2007/04/28 17:02:04 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> siproxd-0.5.11.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

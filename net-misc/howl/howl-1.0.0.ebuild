@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.14 2007/03/13 12:36:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.15 2007/04/28 16:54:13 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,8 +44,7 @@ src_install() {
 	dohtml -r docs/
 
 	# Install conf files
-	insinto /etc/conf.d
-	newins "${FILESDIR}"/nifd.conf.d nifd
+	newconfd "${FILESDIR}"/nifd.conf.d nifd
 	newins "${FILESDIR}"/mDNSResponder.conf.d mDNSResponder
 
 	# Install init scripts

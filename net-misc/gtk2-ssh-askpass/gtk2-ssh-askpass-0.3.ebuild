@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk2-ssh-askpass/gtk2-ssh-askpass-0.3.ebuild,v 1.16 2006/12/13 19:52:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk2-ssh-askpass/gtk2-ssh-askpass-0.3.ebuild,v 1.17 2007/04/28 16:53:45 swegener Exp $
 
 DESCRIPTION="A small SSH Askpass replacement written with GTK2."
 HOMEPAGE="https://www.cgabriel.org/software/wiki/SshAskpassFullscreen"
@@ -19,8 +19,7 @@ src_compile() {
 
 src_install() {
 	dobin gtk2-ssh-askpass
-	insinto /etc/env.d
-	doins ${FILESDIR}/99ssh_askpass
+	doenvd ${FILESDIR}/99ssh_askpass
 	dodoc README AUTHORS
 	doman debian/gtk2-ssh-askpass.1
 }

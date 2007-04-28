@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.11 2005/10/02 14:49:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.12 2007/04/28 16:58:08 swegener Exp $
 
 inherit eutils
 
@@ -53,8 +53,7 @@ src_install() {
 		doins ${T}/services
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ndtpd.initd ndtpd
+	newinitd ${FILESDIR}/ndtpd.initd ndtpd
 
 	insinto /etc
 	newins ndtpd.conf{.sample,}

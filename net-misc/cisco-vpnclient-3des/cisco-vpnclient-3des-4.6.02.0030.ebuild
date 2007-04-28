@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.12 2007/03/07 23:00:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.13 2007/04/28 16:51:49 swegener Exp $
 
 inherit eutils linux-mod
 
@@ -59,8 +59,7 @@ src_compile () {
 }
 
 src_install() {
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/vpnclient.rc vpnclient
+	newinitd ${FILESDIR}/vpnclient.rc vpnclient
 
 	exeinto /opt/cisco-vpnclient/bin
 	exeopts -m0711

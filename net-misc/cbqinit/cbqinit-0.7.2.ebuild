@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.2.ebuild,v 1.13 2004/11/03 17:35:25 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.2.ebuild,v 1.14 2007/04/28 16:51:02 swegener Exp $
 
 DESCRIPTION="Sets up class-based queue traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/cbqinit"
@@ -33,8 +33,7 @@ src_install() {
 	exeinto /usr/sbin
 	doexe cbqinit
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rc_cbqinit cbqinit
+	newinitd ${FILESDIR}/rc_cbqinit cbqinit
 
 	insinto /etc/cbqinit/sample
 	newins ${FILESDIR}/cbq-1280.My_first_shaper.sample cbq-1280.My_first_shaper

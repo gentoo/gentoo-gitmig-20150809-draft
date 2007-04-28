@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.0.ebuild,v 1.1 2005/01/09 14:46:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.0.ebuild,v 1.2 2007/04/28 17:04:12 swegener Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -35,11 +35,9 @@ src_install() {
 	insinto /etc
 	newins etc/xsupplicant.conf xsupplicant.conf.example
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/xsupplicant.init.d xsupplicant
+	newinitd ${FILESDIR}/xsupplicant.init.d xsupplicant
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/xsupplicant.conf.d xsupplicant
+	newconfd ${FILESDIR}/xsupplicant.conf.d xsupplicant
 }
 
 pkg_postinst() {

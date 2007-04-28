@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16.ebuild,v 1.7 2005/01/07 12:03:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16.ebuild,v 1.8 2007/04/28 16:48:58 swegener Exp $
 
 inherit fixheadtails eutils
 
@@ -32,8 +32,7 @@ src_install() {
 	dodoc README* ChangeLog
 	doman adjtimex.8 debian/adjtimexconfig.8
 	dosbin adjtimex debian/adjtimexconfig
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/adjtimex.init adjtimex
+	newinitd ${FILESDIR}/adjtimex.init adjtimex
 }
 
 pkg_postinst() {

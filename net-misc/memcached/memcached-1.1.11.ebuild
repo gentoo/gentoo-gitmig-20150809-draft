@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.11.ebuild,v 1.8 2006/01/02 11:07:06 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.11.ebuild,v 1.9 2007/04/28 16:57:21 swegener Exp $
 
 DESCRIPTION="memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load."
 
@@ -31,9 +31,7 @@ src_install() {
 	dobin ${S}/memcached
 	dodoc ${S}/{AUTHORS,COPYING,ChangeLog,INSTALL,NEWS,README}
 
-	insinto /etc/conf.d
-	newins "${FILESDIR}/conf" memcached
+	newconfd "${FILESDIR}/conf" memcached
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/init" memcached
+	newinitd "${FILESDIR}/init" memcached
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-timed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.17 2007/01/08 02:18:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.18 2007/04/28 16:58:55 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  netkit-timed-0.17-r7.ebuild, netkit-timed-0.17-r8.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -netkit-timed-0.17-r6.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.43 2007/02/22 02:39:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.44 2007/04/28 17:00:45 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> omniORB-4.0.5.ebuild,
+  omniORB-4.0.6.ebuild, omniORB-4.0.7.ebuild, omniORB-4.1.0.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
