@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.4.1.ebuild,v 1.1 2007/02/20 12:13:57 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.4.1.ebuild,v 1.2 2007/04/28 11:55:53 tove Exp $
 
 inherit eutils gnome2
 
@@ -76,7 +76,7 @@ src_install() {
 	dodir /etc/flumotion/managers/default/flows
 	dodir /etc/flumotion/workers
 
-	cd ${S}/conf
+	cd "${S}"/conf
 	insinto /etc/flumotion/managers/default
 	doins managers/default/planet.xml
 	insinto /etc/flumotion/workers
@@ -84,8 +84,7 @@ src_install() {
 
 	insinto /etc/flumotion
 	doins default.pem
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/flumotion-init-0.2.0 flumotion
+	newinitd "${FILESDIR}"/flumotion-init-0.2.0 flumotion
 
 	keepdir /var/run/flumotion
 	keepdir /var/log/flumotion
