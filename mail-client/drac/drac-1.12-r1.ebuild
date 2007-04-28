@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.12 2007/03/18 01:47:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.13 2007/04/28 18:01:54 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -52,8 +52,7 @@ src_install() {
 
 	dolib.a libdrac.a
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/dracd.rc6" dracd
+	newinitd "${FILESDIR}/dracd.rc6" dracd
 
 	dodoc Changes COPYRIGHT INSTALL PORTING README
 	newman rpc.dracd.1m dracd.8
