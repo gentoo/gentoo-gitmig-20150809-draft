@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.88 2007/04/02 17:08:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.89 2007/04/28 16:52:16 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> courier-0.53.2.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -courier-0.48.1.ebuild,
   -courier-0.48.1-r1.ebuild, -courier-0.48.2.20050224.ebuild,

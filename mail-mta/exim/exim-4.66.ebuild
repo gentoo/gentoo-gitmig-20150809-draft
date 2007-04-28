@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.66.ebuild,v 1.1 2007/03/18 20:35:59 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.66.ebuild,v 1.2 2007/04/28 16:52:41 swegener Exp $
 
 inherit eutils
 
@@ -284,11 +284,9 @@ src_install () {
 		newins ${FILESDIR}/pam.d-exim exim
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/exim.rc6 exim
+	newinitd ${FILESDIR}/exim.rc6 exim
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/exim.confd exim
+	newconfd ${FILESDIR}/exim.confd exim
 
 	DIROPTIONS="--mode=0750 --owner=mail --group=mail"
 	dodir /var/log/${PN}

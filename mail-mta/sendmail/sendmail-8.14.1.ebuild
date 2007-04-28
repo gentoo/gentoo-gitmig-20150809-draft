@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.1.ebuild,v 1.1 2007/04/04 10:28:18 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.1.ebuild,v 1.2 2007/04/28 16:54:46 swegener Exp $
 
 inherit eutils
 
@@ -153,8 +153,7 @@ src_install () {
 		KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
 
 	EOF
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/sendmail
+	doinitd ${FILESDIR}/sendmail
 	keepdir /usr/adm/sm.bin
 
 	if use mailwrapper

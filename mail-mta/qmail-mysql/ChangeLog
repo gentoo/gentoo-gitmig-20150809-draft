@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.13 2007/03/18 06:20:39 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.14 2007/04/28 16:54:02 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org>
+  qmail-mysql-1.03-r13.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> qmail-mysql-1.03.ebuild,
   qmail-mysql-1.03-r13.ebuild:

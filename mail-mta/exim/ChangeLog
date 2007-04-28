@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.87 2007/04/21 20:57:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.88 2007/04/28 16:52:41 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> exim-4.60-r1.ebuild,
+  exim-4.61.ebuild, exim-4.62.ebuild, exim-4.63.ebuild, exim-4.66.ebuild,
+  exim-4.67.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> exim-4.62.ebuild:
   ia64 stable

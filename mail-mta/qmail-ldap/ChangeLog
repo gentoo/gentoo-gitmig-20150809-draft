@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.14 2007/03/18 06:07:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.15 2007/04/28 16:53:42 swegener Exp $
+
+  28 Apr 2007; Sven Wegener <swegener@gentoo.org> qmail-ldap-1.03-r4.ebuild:
+  Fix *initd, *confd and *envd calls (#17388, #174266)
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> qmail-ldap-1.03-r1.ebuild,
   qmail-ldap-1.03-r2.ebuild, qmail-ldap-1.03-r3.ebuild, 

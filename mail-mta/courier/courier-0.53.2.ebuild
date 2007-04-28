@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.15 2007/04/02 17:08:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.16 2007/04/28 16:52:16 swegener Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -157,8 +157,7 @@ src_install() {
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
 	done
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/courier-init-r1 courier
+	newinitd ${FILESDIR}/courier-init-r1 courier
 	use fam || sed -i -e's|^.*use famd$||g' ${D}/etc/init.d/courier
 
 	cd ${D}/etc/courier

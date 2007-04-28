@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.11 2007/03/18 06:20:39 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.12 2007/04/28 16:54:02 swegener Exp $
 
 inherit eutils fixheadtails
 
@@ -236,8 +236,7 @@ src_install() {
 
 	einfo "Adding env.d entry for qmail"
 	dodir /etc/env.d
-	insinto /etc/env.d
-	doins ${FILESDIR}/${PV}-${PR}/99qmail
+	doenvd ${FILESDIR}/${PV}-${PR}/99qmail
 
 	einfo "Creating sendmail replacement ..."
 	diropts -m 755
