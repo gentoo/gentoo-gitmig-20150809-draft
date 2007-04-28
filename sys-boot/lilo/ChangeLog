@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.49 2007/04/21 20:54:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.50 2007/04/28 22:03:26 ulm Exp $
+
+*lilo-22.8-r1 (28 Apr 2007)
+
+  28 Apr 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/lilo-22.8-nodevmapper.patch, +lilo-22.8-r1.ebuild:
+  Don't detect libdevmapper automatically but control via new USE flag
+  device-mapper. Resolves bug #172167.
 
   21 Apr 2007; Tony Vroon <chainsaw@gentoo.org> lilo-22.7.3-r1.ebuild,
   lilo-22.8.ebuild:
