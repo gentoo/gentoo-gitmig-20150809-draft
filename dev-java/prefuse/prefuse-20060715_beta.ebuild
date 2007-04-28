@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.3 2007/04/22 08:04:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.4 2007/04/28 22:19:06 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -22,7 +22,7 @@ DEPEND=">=virtual/jdk-1.4
 	>=app-arch/unzip-5.50-r1
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
-	${COMMOND_DEP}"
+	${COMMON_DEP}"
 
 S=${WORKDIR}/${PN}-beta
 
