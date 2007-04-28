@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.324 2007/04/28 18:20:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.325 2007/04/28 18:37:27 caster Exp $
+
+  28 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Masking dev-java/sun-{connector-bin,dsml-bin,ejb-spec} for removal.
 
   28 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
   Masking dev-java/jmbus.
