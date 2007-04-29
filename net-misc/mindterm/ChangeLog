@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mindterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.9 2007/04/29 10:57:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.10 2007/04/29 13:30:25 betelgeuse Exp $
+
+*mindterm-3.1.2 (29 Apr 2007)
+
+  29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> +mindterm-3.1.2.ebuild:
+  Version bump. Uses system installed copy of jzlib now.
 
   29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> mindterm-3.0.1.ebuild:
   Only ant-core is not enough, mindterm needs ant-nodeps. Use
