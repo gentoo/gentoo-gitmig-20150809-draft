@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.8 2007/04/26 07:20:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.9 2007/04/29 17:02:08 corsair Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="21"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="X Xaw3d leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}/emacs-21.3-hppa.patch"
 	epatch "${FILESDIR}/emacs-21.2-sh.patch"
 	epatch "${FILESDIR}/emacs-21.4-libungif-gif-gentoo.patch"
+	epatch "${FILESDIR}/emacs-21.4-ppc64-fix-unexelf.patch"
 
 	use ppc64 && epatch "${FILESDIR}/emacs-21.3-ppc64.patch"
 
@@ -80,9 +81,6 @@ src_compile() {
 
 	# ever since GCC 3.2
 	replace-flags -O[3-9] -O2
-
-	# this fixes bug 152006
-	use ppc64 && append-flags -mno-fp-in-toc -mno-sum-in-toc
 
 	# -march is known to cause signal 6 on some environment
 	filter-flags "-march=*"
