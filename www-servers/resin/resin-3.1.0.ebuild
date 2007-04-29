@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.0.ebuild,v 1.3 2007/04/11 10:07:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.0.ebuild,v 1.4 2007/04/29 12:32:28 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -16,11 +16,11 @@ IUSE="admin"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="=virtual/jdk-1.5*
-	>=dev-java/iso-relax-20050331"
-DEPEND="${RDEPEND}
+	>=dev-java/iso-relax-20050331
 	dev-java/aopalliance
 	>=dev-java/sun-javamail-1.4
-	>=dev-java/sun-jaf-1.1
+	>=dev-java/sun-jaf-1.1"
+DEPEND="${RDEPEND}
 	dev-java/ant-core
 	dev-libs/openssl"
 
@@ -40,6 +40,7 @@ src_unpack() {
 
 pkg_setup() {
 
+	java-pkg-2_pkg_setup
 	enewgroup resin
 	enewuser resin -1 /bin/bash ${RESIN_HOME} resin
 

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.41 2007/04/21 20:49:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.42 2007/04/29 12:32:28 betelgeuse Exp $
+
+  29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> resin-3.1.0.ebuild:
+  Fix dependencies and call java-pkg-2_pkg_setup in pkg_setup.
 
   21 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> resin-2.1.17.ebuild:
   Use newinitd, newconfd and doenvd, see bug #174266.
