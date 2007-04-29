@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.62 2007/04/28 06:47:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.63 2007/04/29 15:06:06 dcoutts Exp $
+
+  29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org>
+  +sparc64/2006.1/2.4/package.use.mask:
+  Add sparc64/2006.1/2.4/package.use.mask and mask dev-haskell/gtk2hs's
+  optional use of librsvg since it's masked in that profile.
 
   28 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
   sparc64/2006.1/2.4/package.mask:
