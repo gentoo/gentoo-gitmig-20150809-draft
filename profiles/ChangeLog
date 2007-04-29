@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.326 2007/04/28 20:02:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.327 2007/04/29 08:41:01 griffon26 Exp $
+
+  29 Apr 2007; Maurice van der Pot <griffon26@gentoo.org> use.local.desc:
+  Added webinterface local USE-flag for net-im/pyicq-t.
 
   28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask dev-java/qat
