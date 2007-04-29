@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7198 2007/04/29 14:30:31 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7199 2007/04/29 17:14:17 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -637,11 +637,6 @@ net-misc/xsupplicant
 >media-plugins/mythweather-0.20.1_p99999
 >www-apps/mythweb-0.20.1_p99999
 >media-plugins/mythzoneminder-0.20.1_p99999
-
-# Duncan Coutts <dcoutts@gentoo.org> (5 Mar 2007)
-# Masking buddha since according to upstream it is bitrotted
-# see also bug #167139
-dev-haskell/buddha
 
 # Stefan Cornelius <dercorny@gentoo.org> (3 Mar 2007)
 # Masking wordpress due to a long list of security bugs
