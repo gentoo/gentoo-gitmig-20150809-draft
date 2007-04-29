@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r7.ebuild,v 1.1 2007/04/27 21:10:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r7.ebuild,v 1.2 2007/04/29 17:23:07 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -193,8 +193,7 @@ CONFIG_PROTECT="${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown /usr/sha
 KDEDIRS="/usr:/usr/local:${PREFIX}"
 #KDE_IS_PRELINKED=1
 XDG_DATA_DIRS="/usr/share:${PREFIX}/share:/usr/local/share"
-XDG_CONFIG_DIRS="/etc/xdg:${PREFIX}/etc/xdg"
-COLON_SEPARATED="XDG_DATA_DIRS XDG_CONFIG_DIRS"
+COLON_SEPARATED="XDG_DATA_DIRS"
 EOF
 
 cat <<EOF > "${D}"/etc/revdep-rebuild/50-kde3
