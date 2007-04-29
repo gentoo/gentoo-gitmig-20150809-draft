@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxyper/proxyper-333.ebuild,v 1.3 2005/07/15 10:51:34 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxyper/proxyper-333.ebuild,v 1.4 2007/04/29 17:44:16 tove Exp $
 
 DESCRIPTION="distributed.net personal proxy"
 HOMEPAGE="http://www.distributed.net"
@@ -22,7 +22,7 @@ elif use alpha; then
 	S="${WORKDIR}/${PN}${PV}-linux-alpha"
 fi
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 src_install() {
 	exeinto /opt/proxyper ; doexe proxyper
@@ -31,7 +31,7 @@ src_install() {
 	dodoc ChangeLog.txt
 	dohtml manual.html
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/proxyper.init proxyper
+	newinitd ${FILESDIR}/proxyper.init proxyper
 }
 
 pkg_postinst() {

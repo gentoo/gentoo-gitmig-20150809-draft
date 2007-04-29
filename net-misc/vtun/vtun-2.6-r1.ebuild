@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.4 2006/10/29 09:24:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.5 2007/04/29 17:52:39 tove Exp $
 
 inherit eutils
 
@@ -57,8 +57,7 @@ src_install () {
 
 	dodoc ChangeLog Credits FAQ README README.Setup README.Shaper TODO
 
-	exeinto etc/init.d;
-	newexe ${FILESDIR}/vtun.rc vtun
+	newinitd ${FILESDIR}/vtun.rc vtun
 
 	insinto etc
 	doins ${FILESDIR}/vtund-start.conf

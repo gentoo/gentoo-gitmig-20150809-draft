@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.28.ebuild,v 1.6 2007/02/20 13:32:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.28.ebuild,v 1.7 2007/04/29 17:58:29 tove Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.4"
@@ -57,13 +57,8 @@ src_install() {
 
 	dodoc cfg/*
 
-	insinto /etc/init.d
-	insopts -m0755
-	newins ${FILESDIR}/${PN}.init ${PN}
-
-	insinto /etc/conf.d
-	insopts -m0644
-	newins ${FILESDIR}/${PN}.confd ${PN}
+	newinitd ${FILESDIR}/${PN}.init ${PN}
+	newconfd ${FILESDIR}/${PN}.confd ${PN}
 }
 
 pkg_postinst() {

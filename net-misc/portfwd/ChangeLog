@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/portfwd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.19 2007/02/20 13:32:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.20 2007/04/29 17:58:29 tove Exp $
+
+  29 Apr 2007; Torsten Veller <tove@gentoo.org> portfwd-0.28.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org>
   +files/portfwd-0.28-64bit.patch, portfwd-0.28.ebuild:

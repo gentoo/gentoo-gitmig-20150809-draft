@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/utelnetd-0.1.9.ebuild,v 1.6 2004/10/29 13:26:45 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/utelnetd-0.1.9.ebuild,v 1.7 2007/04/29 17:50:15 tove Exp $
 
 inherit toolchain-funcs
 
@@ -23,5 +23,5 @@ src_install() {
 	dosbin utelnetd || die
 	dodoc ChangeLog README
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/utelnetd.initd utelnetd
+	newinitd "${FILESDIR}"/utelnetd.initd utelnetd
 }

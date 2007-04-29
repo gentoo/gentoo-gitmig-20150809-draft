@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/sobby-0.4.1.ebuild,v 1.3 2006/10/23 22:26:39 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/sobby-0.4.1.ebuild,v 1.4 2007/04/29 17:55:26 tove Exp $
 
 inherit eutils
 
@@ -32,13 +32,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	insinto /etc/conf.d/
-	newins ${FILESDIR}/sobby-conf-0.2.0 sobby
-
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/sobby-init-0.2.0 sobby
+	newconfd "${FILESDIR}"/sobby-conf-0.2.0 sobby
+	newinitd "${FILESDIR}"/sobby-init-0.2.0 sobby
 }
 
 pkg_postinst() {

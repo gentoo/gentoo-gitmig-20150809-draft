@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.6_alpha.ebuild,v 1.1 2007/01/27 23:58:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.6_alpha.ebuild,v 1.2 2007/04/29 17:48:03 tove Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_install() {
-	exeinto /etc/init.d ; newexe ${FILESDIR}/tor.initd tor
+	newinitd ${FILESDIR}/tor.initd tor
 	make DESTDIR=${D} install || die
 
 	dodoc README ChangeLog AUTHORS INSTALL \

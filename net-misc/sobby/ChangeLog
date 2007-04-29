@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sobby
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.10 2006/10/28 14:46:08 mabi Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.11 2007/04/29 17:55:26 tove Exp $
+
+  29 Apr 2007; Torsten Veller <tove@gentoo.org> sobby-0.3.0.ebuild,
+  sobby-0.4.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   28 Oct 2006; Matti Bickel <mabi@gentoo.org> sobby-0.3.0.ebuild:
   Stable on ppc (bug #115113)
