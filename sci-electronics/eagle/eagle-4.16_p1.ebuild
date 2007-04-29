@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p1.ebuild,v 1.3 2007/04/18 18:37:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p1.ebuild,v 1.4 2007/04/29 18:10:03 tove Exp $
 
 inherit eutils
 
@@ -60,9 +60,8 @@ src_install() {
 	# Remove docs left in INSTALLDIR
 	rm -rf "${D}"/${INSTALLDIR}/{README,install,${MANFILE}} "${D}"/${INSTALLDIR}/doc "${D}"/${INSTALLDIR}/man
 
-	insinto /etc/env.d
 	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}/bin" > "${S}"/90eagle
-	doins "${S}"/90eagle
+	doenvd "${S}"/90eagle
 
 	# Create desktop entry
 	doicon bin/${PN}.xpm
