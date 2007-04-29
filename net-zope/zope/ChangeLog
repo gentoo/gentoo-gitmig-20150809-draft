@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.126 2007/04/12 21:53:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.127 2007/04/29 18:02:53 radek Exp $
+
+*zope-3.3.1 (29 Apr 2007)
+
+  29 Apr 2007; Radoslaw Stachowiak <radek@gentoo.org> +zope-3.3.1.ebuild:
+  Fixed digest of 2.10.3 and 2.9.7 #174225 and #176478. Also new 3.3.1 release
 
   12 Apr 2007; Christian Faulhammer <opfer@gentoo.org> zope-3.3.0.ebuild:
   keyworded ~amd64, bug 152547
