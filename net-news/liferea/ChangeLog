@@ -1,6 +1,18 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.96 2007/04/28 01:20:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.97 2007/04/29 16:15:18 dang Exp $
+
+*liferea-1.2.13 (29 Apr 2007)
+
+  29 Apr 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.13.ebuild:
+  Bump to 1.2.13
+  	* Fixes a significant memory leak when dropping items
+  	  from cache reported by several users.
+  	* Changes the new item counting to a simpler counting
+  	  statistic so that on subsequent updates of the same
+  	  feed might present a lower new item number, but which
+  	  is a bit faster.
+  	* Added new Catalan default feed list (Gil Forcada)
 
 *liferea-1.2.12b (28 Apr 2007)
 
