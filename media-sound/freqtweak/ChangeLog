@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.18 2007/02/14 18:20:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.19 2007/04/29 04:57:49 dirtyepic Exp $
+
+  29 Apr 2007; Ryan Hill <dirtyepic@gentoo.org>
+  freqtweak-0.7.0_pre20070214.ebuild:
+  Fix up wxwidgets usage.
 
 *freqtweak-0.7.0_pre20070214 (14 Feb 2007)
 
