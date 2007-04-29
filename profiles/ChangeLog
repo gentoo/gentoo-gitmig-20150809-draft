@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.330 2007/04/29 17:14:17 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.331 2007/04/29 23:27:53 dcoutts Exp $
+
+  29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
+  Unmask dev-haskell/cabal-1.1.6.1 and dev-haskell/alex-2.1.0 which depended
+  on it
 
   29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
   removing dev-haskell/buddha from p.mask as that package has now been removed

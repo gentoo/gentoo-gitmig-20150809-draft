@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7200 2007/04/29 19:04:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7201 2007/04/29 23:27:53 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,11 +24,6 @@
 # Donnie Berkholz <dberkholz@gentoo.org> (29 Apr 2007)
 # Masked for testing
 ~media-libs/mesa-6.5.3
-
-# Duncan Coutts <dcoutts@gentoo> (29 Apr 2007)
-# Haskell packages that depend on masked ghc-6.6.x
-# These will be unmasked when ghc-6.6.x is unmasked
-=dev-haskell/alex-2.1.0
 
 # Ryan Hill <dirtyepic@gentoo.org> (29 Apr 2007)
 #  Has a hard dependency on wxGTK-2.4 (bug #121818)
@@ -608,7 +603,6 @@ app-text/biblestudy
 # Masked to let us try out our new package dependency scheme.
 # See bug 151012.
 >=dev-lang/ghc-6.6
->=dev-haskell/cabal-1.1.6.1
 
 # Daniel Drake <dsd@gentoo.org> (7 Mar 2007)
 # Unmaintained, replaced by vanilla-sources. Removal due on March 31st.
