@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.328 2007/04/29 10:55:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.329 2007/04/29 14:30:31 dcoutts Exp $
+
+  29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
+  masking new alex-2.1.0 pending the great ghc-6.6.x unmasking
 
   29 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
   Unmasking media-gfx/opcion.
