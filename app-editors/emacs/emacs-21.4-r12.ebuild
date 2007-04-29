@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.10 2007/04/29 17:42:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.11 2007/04/29 19:01:15 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -69,7 +69,7 @@ src_unpack() {
 
 	# This will need to be updated for X-Compilation
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
-		   "${S}/src/s/gnu-linux.h" || die
+		"${S}/src/s/gnu-linux.h" || die
 }
 
 src_compile() {
@@ -94,7 +94,7 @@ src_compile() {
 	if use X ; then
 		if use motif && use lesstif; then
 			append-ldflags -L/usr/X11R6/lib/lesstif -R/usr/X11R6/lib/lesstif
-			export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include/lesstif"
+			append-cppflags -I/usr/X11R6/include/lesstif
 		fi
 		myconf="${myconf}
 			--with-x
