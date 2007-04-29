@@ -5,19 +5,19 @@ AUX pouetchess-0.2.0-nvidia_glext.patch 373 RMD160 34d53944251ea3b6363ba0a4a4a5c
 MD5 65d18a3d457e64f6168ed2975cfa4b00 files/pouetchess-0.2.0-nvidia_glext.patch 373
 RMD160 34d53944251ea3b6363ba0a4a4a5cd7a831ffe93 files/pouetchess-0.2.0-nvidia_glext.patch 373
 SHA256 d0466dee4b11efab347409e7e83fffac5ea9c6b1350b660c01b20a0107564a4b files/pouetchess-0.2.0-nvidia_glext.patch 373
-AUX pouetchess-0.2.0-sconstruct-sandbox.patch 737 RMD160 f87cd2751ec05b88fdded2c016ef09757ffa4505 SHA1 bd68f2f45ca6813818b2258e3cf09c3c6a851152 SHA256 5fe18c0cdd21a0a1a6fe34e4cac9b1a0acf62e59dca2f2bd712044268979a86e
-MD5 f1396240dcbf1346bbc7d57cc51a3d66 files/pouetchess-0.2.0-sconstruct-sandbox.patch 737
-RMD160 f87cd2751ec05b88fdded2c016ef09757ffa4505 files/pouetchess-0.2.0-sconstruct-sandbox.patch 737
-SHA256 5fe18c0cdd21a0a1a6fe34e4cac9b1a0acf62e59dca2f2bd712044268979a86e files/pouetchess-0.2.0-sconstruct-sandbox.patch 737
+AUX pouetchess-0.2.0-sconstruct-sandbox.patch 754 RMD160 cd2b425d782fa1da12bd6a68c77f54d8b577c16b SHA1 ffbbf33d85f427cd04a7f57f4ec5e17d114ef3fb SHA256 0d0c7471bc5de6157f5d8c44dde061dbbf9215fc6b00bd4be590d41dabbdd70a
+MD5 3dc8152a95846a77ea06a0f88512cf40 files/pouetchess-0.2.0-sconstruct-sandbox.patch 754
+RMD160 cd2b425d782fa1da12bd6a68c77f54d8b577c16b files/pouetchess-0.2.0-sconstruct-sandbox.patch 754
+SHA256 0d0c7471bc5de6157f5d8c44dde061dbbf9215fc6b00bd4be590d41dabbdd70a files/pouetchess-0.2.0-sconstruct-sandbox.patch 754
 DIST pouetchess_src_0.2.0.tar.gz 1055338 RMD160 29611b78ef75b3707ad98752055da775335c0490 SHA1 023bea8043b5dcf8a134531b920497c7efb89adb SHA256 fe966ff1b0aa2dd6d0ca2b62692f5b788e3a286050a6a374e58ca0612f68b2ef
 EBUILD pouetchess-0.2.0.ebuild 1694 RMD160 5d547ca824e3f30148f94f8b1fdec3fd5cd2ac36 SHA1 ca4ded8addf4a945afe966831e25c867d9516e42 SHA256 bb595709bc85ba2e745e567ce1a004953cc7c1a75108f633069b4845f17550c4
 MD5 e5dd86fadfc1be0ee9c57aaa584e7108 pouetchess-0.2.0.ebuild 1694
 RMD160 5d547ca824e3f30148f94f8b1fdec3fd5cd2ac36 pouetchess-0.2.0.ebuild 1694
 SHA256 bb595709bc85ba2e745e567ce1a004953cc7c1a75108f633069b4845f17550c4 pouetchess-0.2.0.ebuild 1694
-MISC ChangeLog 1201 RMD160 e4083e9f795ce7bb76e1e09cf9926488300d11dc SHA1 4b29f58cd744983ef800085ecec9326d22dc83e5 SHA256 df577470fb30643cd8186cab985a318967191d29d66bac345a4ccc95329fb0ce
-MD5 fe8ca6f278ecb9c90123e77d20d13bd7 ChangeLog 1201
-RMD160 e4083e9f795ce7bb76e1e09cf9926488300d11dc ChangeLog 1201
-SHA256 df577470fb30643cd8186cab985a318967191d29d66bac345a4ccc95329fb0ce ChangeLog 1201
+MISC ChangeLog 1348 RMD160 1fa56880698572a07ff173cf4aaa9ad5fbef041c SHA1 424a0ffb3faf80b7a9c1493416a457ca1003b4fc SHA256 307e804b3a7f2927f8d12a55d00f6c98a81488a8f753fa3f17e85afbdc54dfc1
+MD5 7a9cefdee6c6cf0b85dd236ebea5db19 ChangeLog 1348
+RMD160 1fa56880698572a07ff173cf4aaa9ad5fbef041c ChangeLog 1348
+SHA256 307e804b3a7f2927f8d12a55d00f6c98a81488a8f753fa3f17e85afbdc54dfc1 ChangeLog 1348
 MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
@@ -26,9 +26,9 @@ MD5 7eadcc6fa4e9f41e6368827f20cef2e6 files/digest-pouetchess-0.2.0 265
 RMD160 e825bbeb7f491e368fabe13571d8fe089b9834f3 files/digest-pouetchess-0.2.0 265
 SHA256 702f567d5b88e40b6fa2a4769319aaad242f3eb11283dfd03c094de78d64c110 files/digest-pouetchess-0.2.0 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
+Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFF9Vvj6J2i8a8J4okRAsRjAJ96AOg1Uh037eWZRcTjl1MUY5aKSwCdHjVk
-LYrBDcnYmg+whoA1U9w2Oa8=
-=rGGw
+iD8DBQFGNRmbdz7hIScOURERAvdBAKDeIoyybgm6ps2u18SmxUWU9Pe+kACghcmD
+0+beXBNXlQL6DNpbA7h3VeQ=
+=6Gyy
 -----END PGP SIGNATURE-----
