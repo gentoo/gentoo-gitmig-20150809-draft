@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r1.ebuild,v 1.3 2007/04/07 00:35:32 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r1.ebuild,v 1.4 2007/04/29 13:06:31 betelgeuse Exp $
 
 #WANT_ANT_TASKS="ant-trax"
 
@@ -35,6 +35,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.2*
 	>=dev-java/log4j-1.2.9
 	>=dev-java/saxpath-1.0
 	~dev-java/tomcat-servlet-api-${PV}
+	dev-java/ant-core
 	admin? ( =dev-java/struts-1.2* )
 	dev-java/sun-javamail
 	java5? ( >=virtual/jre-1.5 )
@@ -56,6 +57,7 @@ TOMCAT_NAME="${PN}-${SLOT}"
 WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/webapps"
 
 pkg_setup() {
+	java-pkg-2_pkg_setup
 	# new user for tomcat
 	enewgroup tomcat
 	enewuser tomcat -1 -1 /dev/null tomcat
