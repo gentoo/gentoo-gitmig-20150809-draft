@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/struts-legacy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.14 2007/02/21 23:44:26 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.15 2007/04/29 00:01:43 caster Exp $
+
+*struts-legacy-1.0-r2 (29 Apr 2007)
+
+  29 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  +struts-legacy-1.0-r2.ebuild:
+  Revbump for migration to gen-2 eclasses.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
