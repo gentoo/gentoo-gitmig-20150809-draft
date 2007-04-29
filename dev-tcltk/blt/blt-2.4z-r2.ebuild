@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r2.ebuild,v 1.1 2007/04/29 00:40:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r2.ebuild,v 1.2 2007/04/29 00:59:53 matsuu Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ HOMEPAGE="http://blt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/blt/BLT2.4z.tar.gz"
 DESCRIPTION="BLT is an extension to the Tk toolkit adding new widgets, geometry managers, and miscellaneous commands."
 
-IUSE="jpeg"
+IUSE=""
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -41,9 +41,7 @@ src_compile() {
 	# bug 167934
 	append-flags -fPIC
 
-	econf \
-		--with-blt=/usr/$(get_libdir) \
-		$(use_enable jpeg) || die "./configure failed"
+	econf --with-blt=/usr/$(get_libdir) || die "./configure failed"
 	# parallel borks
 	emake -j1 || die "emake failed"
 }
