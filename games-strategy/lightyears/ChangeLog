@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/lightyears
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.1 2007/04/27 20:57:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.2 2007/04/29 01:33:33 tupone Exp $
+
+  29 Apr 2007; Tupone Alfredo <tupone@gentoo.org> lightyears-1.2a.ebuild:
+  Fix mkdirhier not available, bug #176394 by Federico Guglielmo Edoardo Granata
 
 *lightyears-1.2a (27 Apr 2007)
 
