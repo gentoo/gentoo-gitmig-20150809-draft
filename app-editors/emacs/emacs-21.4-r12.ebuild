@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.9 2007/04/29 17:02:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.10 2007/04/29 17:42:44 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -53,9 +53,11 @@ src_unpack() {
 	epatch "${FILESDIR}/emacs-21.3-hppa.patch"
 	epatch "${FILESDIR}/emacs-21.2-sh.patch"
 	epatch "${FILESDIR}/emacs-21.4-libungif-gif-gentoo.patch"
-	epatch "${FILESDIR}/emacs-21.4-ppc64-fix-unexelf.patch"
 
-	use ppc64 && epatch "${FILESDIR}/emacs-21.3-ppc64.patch"
+	if use ppc64; then
+		epatch "${FILESDIR}/emacs-21.3-ppc64.patch"
+		epatch "${FILESDIR}/emacs-21.4-ppc64-fix-unexelf.patch"
+	fi
 
 	epatch "${FILESDIR}/emacs-21.4-autosave-tmp.patch"
 	epatch "${FILESDIR}/emacs-21.4-blessmail-build.patch"
