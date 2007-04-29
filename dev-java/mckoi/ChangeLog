@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/mckoi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.9 2007/02/09 02:09:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.10 2007/04/29 23:00:59 caster Exp $
+
+*mckoi-1.0.3-r1 (29 Apr 2007)
+
+  29 Apr 2007; Vlastimil Babka <caster@gentoo.org> +mckoi-1.0.3-r1.ebuild:
+  Revbump for migration to gen-2 eclasses.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
