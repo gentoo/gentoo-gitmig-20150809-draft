@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.1 2007/04/28 20:25:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.2 2007/04/29 19:50:46 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -58,8 +58,9 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS ChangeLog Filesystems README README-2.4 \
-		README.NFS NEWS doc/how-fuse-works
+	dodoc AUTHORS ChangeLog Filesystems README \                                
+		README.NFS NEWS doc/how-fuse-works \
+		doc/kernel.txt FAQ
 	docinto example
 	dodoc example/*
 
