@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r1.ebuild,v 1.6 2006/08/01 14:48:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r1.ebuild,v 1.7 2007/04/29 00:40:37 matsuu Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 SRC_URI="mirror://sourceforge/blt/BLT2.4z.tar.gz"
 HOMEPAGE="http://blt.sf.net"
@@ -30,6 +30,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug 167934
+	append-flags -fPIC
+
 	cd ${S}
 	./configure --host=${CHOST} \
 				--prefix=/usr \
