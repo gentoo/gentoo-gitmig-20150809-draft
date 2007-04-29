@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portagemaster
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.20 2007/02/21 23:04:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.21 2007/04/29 01:49:19 ali_bush Exp $
+
+*portagemaster-0.2.1-r1 (29 Apr 2007)
+
+  29 Apr 2007; Alistair John Bush <ali_bush@gentoo.org>
+  +portagemaster-0.2.1-r1.ebuild:
+  Updating portagemaster to generation 2 java eclasses. Thanks to serkan for
+  doing the leg work.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
