@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.6.1_p04.ebuild,v 1.2 2007/04/29 12:30:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.6.1_p04.ebuild,v 1.3 2007/04/29 18:43:03 matsuu Exp $
 
 JAVA_PKG_BSFIX_NAME="build.xml build-impl.xml profiler-build-impl.xml"
 inherit java-pkg-2 java-ant-2
@@ -31,8 +31,8 @@ src_install() {
 	java-pkg_dolauncher ${PN} --jar OmegaT.jar
 
 	dodoc release/changes.txt release/readme*.txt
-	docinto lib; dodoc lib/*.txt
 	dohtml -A properties -r docs/*
+	docinto lib; dodoc lib/*.txt
 
 	doicon images/*.ico
 	make_desktop_entry ${PN} "OmegaT ${PV}" "/usr/share/pixmaps/OmegaT.ico" "Application;Office"
