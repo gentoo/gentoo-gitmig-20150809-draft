@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.158 2007/02/17 19:41:32 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.159 2007/04/29 02:13:36 marineam Exp $
+
+*ck-sources-2.6.21 (29 Apr 2007)
+
+  29 Apr 2007; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.19_p2-r5.ebuild, -ck-sources-2.6.20_p1.ebuild,
+  +ck-sources-2.6.21.ebuild:
+  Bump to 2.6.21, patchset based on 2.6.21-rc7-ck3. Remove old kernels w/
+  security issues.
 
   17 Feb 2007; Michael Marineau <marineam@gentoo.org> ChangeLog:
   -ck-sources-2.6.19_p2-r3.ebuild, -ck-sources-2.6.19_p2-r4.ebuild,
