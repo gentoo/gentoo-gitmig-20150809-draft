@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/mouseemu-0.13.ebuild,v 1.1 2005/02/14 08:14:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/mouseemu-0.13.ebuild,v 1.2 2007/04/29 18:28:45 tove Exp $
 
 inherit eutils
 
@@ -29,8 +29,7 @@ src_compile() {
 src_install() {
 	dosbin mouseemu
 	dodoc README COPYING
-	exeinto /etc/init.d/
-	newexe mouseemu.init.gentoo mouseemu
+	newinitd mouseemu.init.gentoo mouseemu
 	insinto /etc
 	doins mouseemu.conf
 }
