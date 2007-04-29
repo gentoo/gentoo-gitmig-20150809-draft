@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.327 2007/04/29 08:41:01 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.328 2007/04/29 10:55:32 caster Exp $
+
+  29 Apr 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Unmasking media-gfx/opcion.
 
   29 Apr 2007; Maurice van der Pot <griffon26@gentoo.org> use.local.desc:
   Added webinterface local USE-flag for net-im/pyicq-t.
