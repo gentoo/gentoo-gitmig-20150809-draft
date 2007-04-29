@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.28 2007/04/28 16:51:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.29 2007/04/29 10:21:59 griffon26 Exp $
+
+  29 Apr 2007; Maurice van der Pot <griffon26@gentoo.org>
+  coda-6.0.14.ebuild, coda-6.0.15.ebuild:
+  Fixed use of DEPEND/RDEPEND fixing bug #169554 submitted by Diego Pettenò
+  <flameeyes@gmail.com>
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> coda-6.0.10.ebuild,
   coda-6.0.11.ebuild, coda-6.0.12.ebuild, coda-6.0.14.ebuild,

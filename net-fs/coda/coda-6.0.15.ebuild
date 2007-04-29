@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.5 2007/04/28 22:33:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.6 2007/04/29 10:21:59 griffon26 Exp $
 
 inherit autotools eutils
 
@@ -16,12 +16,6 @@ KEYWORDS="~ppc x86"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
-DEPEND="${RDEPEND}
-	sys-apps/gawk
-	sys-devel/bison
-	sys-apps/grep
-	virtual/os-headers"
-
 RDEPEND=">=sys-libs/lwp-2.1
 	>=net-libs/rpc2-2.0
 	>=sys-libs/rvm-1.11
@@ -31,6 +25,12 @@ RDEPEND=">=sys-libs/lwp-2.1
 	>=dev-lang/perl-5.8
 	kerberos? ( virtual/krb5 )
 	ssl? ( dev-libs/openssl )"
+
+DEPEND="${RDEPEND}
+	sys-apps/gawk
+	sys-devel/bison
+	sys-apps/grep
+	virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
