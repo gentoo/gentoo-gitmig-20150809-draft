@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r2.ebuild,v 1.1 2005/09/17 13:45:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r2.ebuild,v 1.2 2007/04/29 18:06:37 tove Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ src_install() {
 	mv doc/frox.conf.man doc/frox.conf.man.8
 	doman doc/frox.man.8 doc/frox.conf.man.8
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/frox.rc frox
+	newinitd ${FILESDIR}/frox.rc frox
 
 	cd src
 	epatch ${FILESDIR}/config-${PV}.patch || die "config patch failed"
