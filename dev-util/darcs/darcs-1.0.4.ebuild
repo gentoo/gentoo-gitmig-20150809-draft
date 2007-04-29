@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.4.ebuild,v 1.2 2007/03/09 04:54:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.4.ebuild,v 1.3 2007/04/29 21:38:40 kolmodin Exp $
+
+inherit base
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -16,7 +18,8 @@ IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
 	virtual/mta
-	>=virtual/ghc-6.2.2
+	<virtual/ghc-6.6
+	!>=virtual/ghc-6.6
 	doc?  ( virtual/tetex
 		dev-tex/latex2html )"
 #	wxwindows?  ( dev-haskell/wxhaskell )
@@ -27,6 +30,15 @@ RDEPEND=">=net-misc/curl-7.10.2
 #	wxwindows?  ( dev-haskell/wxhaskell )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	base_src_unpack
+
+	# If we're going to use the CFLAGS with GHC's -optc flag then we'd better
+	# use it with -opta too or it'll break with some CFLAGS, eg -mcpu on sparc
+	sed -i 's:\($(addprefix -optc,$(CFLAGS))\):\1 $(addprefix -opta,$(CFLAGS)):' \
+		${S}/autoconf.mk.in
+}
 
 src_compile() {
 	local myconf

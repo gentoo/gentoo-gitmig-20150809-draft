@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.5.ebuild,v 1.7 2007/03/09 04:54:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.5.ebuild,v 1.8 2007/04/29 21:38:40 kolmodin Exp $
 
 inherit base fixheadtails
 
@@ -18,7 +18,8 @@ IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
 	virtual/mta
-	>=virtual/ghc-6.2.2
+	<virtual/ghc-6.6
+	!>=virtual/ghc-6.6
 	doc?  ( virtual/tetex
 		dev-tex/latex2html )"
 #	wxwindows?  ( dev-haskell/wxhaskell )

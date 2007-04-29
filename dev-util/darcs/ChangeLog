@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.65 2007/04/16 07:25:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.66 2007/04/29 21:38:40 kolmodin Exp $
+
+  29 Apr 2007; Lennart Kolmodin <kolmodin@gentoo.org> darcs-1.0.4.ebuild,
+  darcs-1.0.5.ebuild, darcs-1.0.6.ebuild, darcs-1.0.7.ebuild,
+  darcs-1.0.8-r1.ebuild:
+  Added ghc-6.6 blocks for 1.0.4, 1.0.5 and 1.0.6. Added proper extra-libs
+  deps to 1.0.7 and 1.0.8-r1. 1.0.4 also got a src_unpack which the otherones
+  already had, wrt compiling C code with correct C flags.
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> darcs-1.0.8-r1.ebuild:
   Stable on ppc64
