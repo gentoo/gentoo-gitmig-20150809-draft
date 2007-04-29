@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.1.ebuild,v 1.3 2007/04/08 22:55:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.1.ebuild,v 1.4 2007/04/29 17:25:54 phreak Exp $
+
+inherit pax-utils
 
 MY_P="BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i386.run"
 S="${WORKDIR}/i386"
@@ -53,6 +55,9 @@ src_install() {
 	insinto /opt/bdc
 	insopts -m 755
 	doins bdc
+
+	pax-mark -msp "${D}"/opt/bdc/bdc
+
 	dodir /usr/bin
 	dosym /opt/bdc/bdc /usr/bin/bdc
 
@@ -79,13 +84,6 @@ src_install() {
 
 pkg_postinst() {
 	elog You should update virus database by running bdc --update
-
-	[ -x /sbin/chpax ] && {
-		echo
-		ewarn "Disabling some PaX restrictions (\`/sbin/chpax -spm /opt/bdc/bdc\`, see bug #83695)"
-		/sbin/chpax -spm /opt/bdc/bdc
-		echo
-	}
 }
 
 pkg_postrm() {
