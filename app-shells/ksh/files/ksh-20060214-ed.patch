@@ -1,0 +1,12 @@
+diff -Naur work-orig/src/cmd/INIT/mamprobe.sh work/src/cmd/INIT/mamprobe.sh
+--- work-orig/src/cmd/INIT/mamprobe.sh	2007-04-28 19:58:12.000000000 -0600
++++ work/src/cmd/INIT/mamprobe.sh	2007-04-28 19:59:18.000000000 -0600
+@@ -219,7 +219,7 @@
+ 
+ # STD* are standard commands/flags with possible execrate(1)
+ 
+-if	( ed ) < /dev/null > /dev/null 2>&1
++if	( ed -V ) < /dev/null > /dev/null 2>&1
+ then	STDED=ed
+ else	STDED=ex
+ fi
