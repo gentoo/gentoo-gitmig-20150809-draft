@@ -1,23 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.12 2007/04/29 13:44:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0.ebuild,v 1.1 2007/04/29 13:44:20 usata Exp $
 
-inherit perl-app eutils
+inherit perl-app
+
+MY_P="${P/_pre/-preview}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Japanese Morphological Analysis System, ChaSen"
 HOMEPAGE="http://chasen-legacy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/chasen-legacy/24339/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp//chasen-legacy/24693/${MY_P}.tar.gz"
 
 LICENSE="chasen"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64"
 IUSE="perl"
 
-RDEPEND=">=dev-libs/darts-0.2
+DEPEND=">=dev-libs/darts-0.31"
+RDEPEND="${DEPEND}
 	perl? ( !dev-perl/Text-ChaSen )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
-PDEPEND=">=app-dicts/ipadic-2.6.1"
+PDEPEND=">=app-dicts/ipadic-2.7.0"
 
 src_unpack() {
 	unpack ${A}
@@ -25,12 +27,6 @@ src_unpack() {
 	if use perl ; then
 		cd ${S}/perl
 		sed -i -e '5a"LD" => "g++",' Makefile.PL || die
-		sed -i -e '/LIBS/s@\(-lchasen\)@-L../lib/.libs \1 -lstdc++@' Makefile.PL || die
-	fi
-	cd ${S}
-	epatch ${FILESDIR}/chasen-2.4.0_pre1-gcc34.patch
-	if has_version '>=dev-libs/darts-0.3' ; then
-		epatch "${FILESDIR}"/${P}-darts-0.3.patch
 	fi
 }
 
