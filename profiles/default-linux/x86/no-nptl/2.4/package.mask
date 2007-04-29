@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.76 2007/04/28 17:38:33 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.77 2007/04/29 18:03:30 dertobi123 Exp $
+
+# Tobias Scherbaum <dertobi123@gentoo.org> (29 Apr 2007)
+# Requires GNOME 2.16
+gnome-extra/contacts
 
 # Hanno Boeck <hanno@gentoo.org> (28 Apr 2007)
 # Requires pygtk-2.10
