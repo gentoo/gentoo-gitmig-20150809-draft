@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.25 2007/04/25 12:23:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.26 2007/04/29 06:07:59 ticho Exp $
+
+  29 Apr 2007; Andrej Kacian <ticho@gentoo.org> xfs-1.0.4.ebuild:
+  Stable on x86, bug #175465.
 
   25 Apr 2007; Markus Rothe <corsair@gentoo.org> xfs-1.0.4.ebuild:
   Stable on ppc64; bug #175465
