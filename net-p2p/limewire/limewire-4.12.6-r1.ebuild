@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.12.6-r1.ebuild,v 1.3 2007/02/08 16:11:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.12.6-r1.ebuild,v 1.4 2007/04/29 11:20:14 betelgeuse Exp $
 
 inherit eutils java-pkg-2
 
@@ -11,7 +11,7 @@ SRC_URI="http://maverick.limewire.com/download/LimeWireOther.zip"
 LICENSE="GPL-2 Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-arch/unzip
+COMMON_DEP="
 	dev-java/commons-logging
 	dev-java/commons-net
 	dev-java/icu4j
@@ -19,8 +19,11 @@ DEPEND="app-arch/unzip
 	=dev-java/xerces-1.3*
 	dev-java/xml-commons-external
 	gtk? ( >=x11-libs/gtk+-2.4 )"
+DEPEND="app-arch/unzip
+	${COMMON_DEP}"
 
-RDEPEND="virtual/jre"
+RDEPEND="virtual/jre
+	${COMMON_DEP}"
 
 S="${WORKDIR}/LimeWire"
 PREFIX="/opt/limewire"

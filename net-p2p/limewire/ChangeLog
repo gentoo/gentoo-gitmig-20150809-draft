@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.29 2007/03/19 15:07:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.30 2007/04/29 11:20:14 betelgeuse Exp $
+
+  29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
+  limewire-4.12.6-r1.ebuild:
+  Fix RDEPEND that was missing most needed things.
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> -limewire-4.9.37.ebuild:
   drop old
