@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20070421.ebuild,v 1.1 2007/04/21 02:26:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20070421.ebuild,v 1.2 2007/04/29 14:31:58 hanno Exp $
 
 inherit python multilib
 
@@ -13,7 +13,8 @@ DEPEND=">=dev-python/imaging-1.1.2-r1
 	dev-python/reportlab
 	dev-lang/tk
 	nls? ( sys-devel/gettext )"
-RDEPEND="!elibc_glibc? ( nls? ( sys-devel/gettext ) )"
+RDEPEND="!elibc_glibc? ( nls? ( sys-devel/gettext ) )
+	dev-python/pyxml"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
