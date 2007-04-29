@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.85 2007/04/16 17:33:56 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.86 2007/04/29 15:23:35 phreak Exp $
+
+  29 Apr 2007; Christian Heim <phreak@gentoo.org>
+  gradm-2.1.7.200511041858.ebuild, gradm-2.1.9.200602141850.ebuild:
+  Fixing the remaining MKNOD's in pkg_postinst, thanks to Michal Prihoda
+  <michal at prihoda.net> in #133700.
 
 *gradm-2.1.10.200702231759 (16 Apr 2007)
 
