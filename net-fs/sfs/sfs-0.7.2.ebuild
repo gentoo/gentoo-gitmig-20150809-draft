@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.15 2006/03/06 20:51:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.16 2007/04/29 17:35:14 tove Exp $
 
 inherit eutils
 
@@ -63,8 +63,7 @@ src_install() {
 		README README.0.7-upgrade \
 		STANDARDS TODO
 
-	exeinto /etc/init.d/
-	doexe ${FILESDIR}/sfscd \
+	doinitd ${FILESDIR}/sfscd \
 		${FILESDIR}/sfssd
 
 	dosym /lib/${P}/newaid /bin/newaid

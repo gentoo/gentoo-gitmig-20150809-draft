@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/sfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.13 2007/02/22 02:13:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.14 2007/04/29 17:35:14 tove Exp $
+
+  29 Apr 2007; Torsten Veller <tove@gentoo.org> sfs-0.7.2.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r7.ebuild,v 1.3 2006/11/25 14:32:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r7.ebuild,v 1.4 2007/04/29 17:39:43 tove Exp $
 
 inherit eutils multilib
 
@@ -66,13 +66,12 @@ src_install() {
 	sed -i 's:\/etc\/:\/etc\/autofs\/:g' *.8 *.5 *.in || die "Failed to update path in manpages"
 	doman auto.master.5 autofs.5 autofs.8 automount.8
 
-	dodir /etc/autofs /etc/init.d /etc/conf.d
 	insinto /etc/autofs ; doins ${FILESDIR}/auto.master
 	insinto /etc/autofs ; doins ${FILESDIR}/auto.misc
 	exeinto /etc/autofs ; doexe ${FILESDIR}/auto.net # chmod 755 is important!
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/autofs.rc11 autofs
-	insinto /etc/conf.d ; newins ${FILESDIR}/autofs.confd9 autofs
+	newinitd ${FILESDIR}/autofs.rc11 autofs
+	newconfd ${FILESDIR}/autofs.confd9 autofs
 	if use ldap; then
 		cd ${S}/samples
 		docinto samples ; dodoc ldap* auto.master.ldap
