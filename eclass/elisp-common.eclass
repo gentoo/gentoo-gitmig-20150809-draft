@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.19 2007/04/27 16:10:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.20 2007/04/29 12:59:39 ulm Exp $
 #
 # Copyright 2007 Christian Faulhammer <opfer@gentoo.org>
 # Copyright 2002-2007 Matthew Kennedy <mkennedy@gentoo.org>
@@ -151,13 +151,11 @@ elisp-site-regen() {
 ;;; -----------------------------------------------------------------
 
 EOF
-	ls ${ROOT}${SITELISP}/[0-9][0-9]*-gentoo.el | sort -n | \
-	while read sf
+	for sf in ${ROOT}${SITELISP}/[0-9][0-9]*-gentoo.el
 	do
-		einfo "  Adding $(basename $sf) ..."
-		# Great for debugging, too noisy and slow for users though
-#		echo "(message \"Loading $sf ...\")" >>${ROOT}${SITELISP}/site-start.el
-		cat $sf >>${ROOT}${SITELISP}/site-gentoo.el
+		[ -r "${sf}" ] || continue
+		einfo "  Adding $(basename ${sf}) ..."
+		cat "${sf}" >>${ROOT}${SITELISP}/site-gentoo.el
 	done
 	while read line; do einfo "${line}"; done <<EOF
 
