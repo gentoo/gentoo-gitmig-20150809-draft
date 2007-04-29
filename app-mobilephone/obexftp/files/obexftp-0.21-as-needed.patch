@@ -1,0 +1,10 @@
+diff -Nru obexftp-0.21.orig/obexftp/Makefile.am obexftp-0.21/obexftp/Makefile.am
+--- obexftp-0.21.orig/obexftp/Makefile.am	2007-04-28 20:13:54.000000000 +0200
++++ obexftp-0.21/obexftp/Makefile.am	2007-04-28 22:25:00.000000000 +0200
+@@ -26,3 +26,6 @@
+ 	
+ libobexftp_la_LDFLAGS =		-version-info $(OBEXFTP_VERSION)
+ 
++libobexftp_la_LIBADD =		../multicobex/libmulticobex.la \
++				../bfb/libbfb.la
++
