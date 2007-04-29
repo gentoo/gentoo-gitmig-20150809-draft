@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.6.1_p04.ebuild,v 1.1 2007/04/29 05:18:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.6.1_p04.ebuild,v 1.2 2007/04/29 12:30:56 caster Exp $
 
-inherit java-pkg-2
+JAVA_PKG_BSFIX_NAME="build.xml build-impl.xml profiler-build-impl.xml"
+inherit java-pkg-2 java-ant-2
 
 MY_PV=${PV/_p/_}
 DESCRIPTION="Open source computer assisted translation (CAT) tool written in Java."
@@ -15,10 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
 	app-arch/unzip"
-RDEPEND=">=virtual/jre-1.4
-	dev-java/java-config"
+RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}"
 

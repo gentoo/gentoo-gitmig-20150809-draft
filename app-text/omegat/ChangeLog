@@ -1,6 +1,9 @@
 # ChangeLog for app-text/omegat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.1 2007/04/29 05:18:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.2 2007/04/29 12:30:56 caster Exp $
+
+  29 Apr 2007; Vlastimil Babka <caster@gentoo.org> omegat-1.6.1_p04.ebuild:
+  Add java-ant-2 to inherit and rewrite build xml files.
 
 *omegat-1.6.1_p04 (29 Apr 2007)
 
