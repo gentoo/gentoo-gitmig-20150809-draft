@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.17.ebuild,v 1.2 2007/01/04 14:49:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.17.ebuild,v 1.3 2007/04/29 13:30:30 armin76 Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/otcl-tclcl/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.4.5
