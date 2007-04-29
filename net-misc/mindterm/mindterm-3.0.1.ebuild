@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.0.1.ebuild,v 1.2 2006/10/05 14:47:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.0.1.ebuild,v 1.3 2007/04/29 10:57:43 betelgeuse Exp $
 
-inherit eutils java-pkg-2
+inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="A Java SSH Client"
 HOMEPAGE="http://www.appgate.com/products/80_MindTerm/"
@@ -15,11 +15,11 @@ IUSE="doc examples"
 RDEPEND=">=virtual/jre-1.3"
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip
-	dev-java/ant-core"
+	|| ( dev-java/ant-nodeps dev-java/ant-tasks )"
 S=${WORKDIR}/${P/-/_}
 
 src_compile() {
-	eant mindterm.jar lite $(use_doc doc)
+	ANT_TASKS="ant-nodeps" eant mindterm.jar lite $(use_doc doc)
 }
 
 src_install() {
@@ -27,12 +27,8 @@ src_install() {
 
 	java-pkg_dolauncher ${PN} --main com.mindbright.application.MindTerm
 
-	dodoc README.txt
+	dodoc README.txt || die
 	use doc && java-pkg_dojavadoc javadoc
-
-	if use examples; then
-		dodir /usr/share/doc/${PF}/examples
-		cp -r ${S}/examples/* ${D}/usr/share/doc/${PF}/examples
-	fi
+	use examples && java-pkg_doexamples "${S}/examples/"
 }
 

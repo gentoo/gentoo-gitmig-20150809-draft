@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mindterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.8 2007/02/22 02:32:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.9 2007/04/29 10:57:43 betelgeuse Exp $
+
+  29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> mindterm-3.0.1.ebuild:
+  Only ant-core is not enough, mindterm needs ant-nodeps. Use
+  java-pkg_doexamples.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -8,6 +12,8 @@
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> mindterm-2.4.2.ebuild,
   mindterm-3.0.1.ebuild:
   Dropping sparc keywords, see #96229
+
+*mindterm-3.0.1 (01 Jul 2006)
 
   01 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +mindterm-3.0.1.ebuild:
   Version bump (bug #134528) and updated to support new Java system.
