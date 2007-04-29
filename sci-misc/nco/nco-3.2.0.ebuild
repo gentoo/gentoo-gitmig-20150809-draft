@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.2.0.ebuild,v 1.2 2007/04/27 19:18:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.2.0.ebuild,v 1.3 2007/04/29 18:42:15 tove Exp $
 
 DESCRIPTION="Command line utilities for operating on netCDF files"
 SRC_URI="http://dust.ess.uci.edu/nco/src/${P}.tar.gz"
@@ -14,7 +14,7 @@ IUSE="mpi doc ncap2 udunits"
 
 RDEPEND="sci-libs/netcdf
 	mpi? ( virtual/mpi )
-	udnunits? ( sci-libs/udunits )"
+	udunits? ( sci-libs/udunits )"
 
 DEPEND="${RDEPEND}
 	ncap2? ( !mpi? ( dev-java/antlr ) )
