@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-1.0.ebuild,v 1.10 2007/04/02 20:34:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-1.0.ebuild,v 1.11 2007/04/29 19:06:34 dcoutts Exp $
 
 inherit ghc-package
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="=virtual/ghc-6.4*"
+DEPEND="=virtual/ghc-6.4*
+		!>=virtual/ghc-6.6"
 
 pkg_setup () {
 	ghc-package_pkg_setup

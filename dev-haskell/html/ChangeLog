@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.13 2007/04/06 17:06:50 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.14 2007/04/29 19:03:48 dcoutts Exp $
+
+  29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> html-1.0.ebuild:
+  Fix deps so it cannot be installed with ghc-6.6
 
   06 Apr 2007; Chris Parrott <cparrott@gentoo.org> html-1.0-r1.ebuild:
   added ~ppc and ~sparc keywords
