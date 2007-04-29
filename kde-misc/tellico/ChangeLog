@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.63 2007/04/28 15:20:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.64 2007/04/29 11:21:06 armin76 Exp $
+
+  29 Apr 2007; Raúl Porcel <armin76@gentoo.org> tellico-1.2.10.ebuild:
+  x86 stable wrt #176289
 
   28 Apr 2007; nixnut <nixnut@gentoo.org> tellico-1.2.10.ebuild:
   Stable on ppc wrt bug 176289
