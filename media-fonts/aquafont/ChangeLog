@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/aquafont
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.16 2006/11/26 22:04:50 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.17 2007/04/29 01:52:02 dirtyepic Exp $
+
+*aquafont-2.8 (29 Apr 2007)
+
+  29 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> +aquafont-2.8.ebuild:
+  Version bump.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> aquafont-2.7-r2.ebuild:
   Add ~x86-fbsd keyword, fix quoting, add binchecks and strip restricts.
