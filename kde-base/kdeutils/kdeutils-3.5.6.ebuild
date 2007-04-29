@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.6.ebuild,v 1.4 2007/02/04 17:46:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.6.ebuild,v 1.5 2007/04/29 16:33:58 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -17,17 +17,15 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 	pbbuttonsd? ( app-laptop/pbbuttonsd )
 	dev-lang/python
 	dev-libs/gmp
-	|| ( x11-libs/libXtst <virtual/x11-7 )"
+	x11-libs/libXtst"
 
 RDEPEND="${BOTH_DEPEND}
 	crypt? ( app-crypt/gnupg )
 	!x11-misc/superkaramba"
 
 DEPEND="${BOTH_DEPEND}
-	|| ( (
-			x11-libs/libX11
-			x11-proto/xproto
-		) <virtual/x11-7 )
+	x11-libs/libX11
+	x11-proto/xproto
 	virtual/os-headers"
 
 src_unpack() {
@@ -49,4 +47,3 @@ src_install() {
 	# see bug 144731
 	rm ${D}${KDEDIR}/share/applications/kde/ksim.desktop
 }
-
