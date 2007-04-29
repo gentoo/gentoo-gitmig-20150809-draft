@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.6.ebuild,v 1.8 2007/04/21 23:03:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.6.ebuild,v 1.9 2007/04/29 17:16:08 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -21,12 +21,10 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 	sametime? ( =net-libs/meanwhile-1.0* )
 	slp? ( net-libs/openslp )
 	wifi? ( net-wireless/wireless-tools )
-	|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXrender
-		x11-libs/libXScrnSaver
-		) <virtual/x11-7 )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrender
+	x11-libs/libXScrnSaver
 	kernel_linux? ( virtual/opengl )"
 
 RDEPEND="${BOTH_DEPEND}
@@ -38,13 +36,10 @@ RDEPEND="${BOTH_DEPEND}
 
 DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
-	|| ( (
-			x11-proto/videoproto
-			x11-proto/xproto
-			kernel_linux? ( x11-libs/libXv )
-			x11-proto/scrnsaverproto
-		) <virtual/x11-7 )
-	dev-util/pkgconfig"
+	x11-proto/videoproto
+	x11-proto/xproto
+	kernel_linux? ( x11-libs/libXv )
+	x11-proto/scrnsaverproto"
 
 PATCHES="${FILESDIR}/kopete-3.5.5-icqfix.patch
 	${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"

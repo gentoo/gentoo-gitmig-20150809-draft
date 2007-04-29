@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksplashml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplashml/ChangeLog,v 1.69 2007/02/04 02:58:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplashml/ChangeLog,v 1.70 2007/04/29 17:13:30 carlo Exp $
+
+  29 Apr 2007; Carsten Lohrke <carlo@gentoo.org> ksplashml-3.5.6.ebuild:
+  Remove virtual/x11 dependency.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -ksplashml-3.5.2.ebuild:
