@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.127 2007/04/29 18:02:53 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.128 2007/04/29 18:17:39 radek Exp $
+
+  29 Apr 2007; Radoslaw Stachowiak <radek@gentoo.org> -zope-2.7.7.ebuild,
+  -zope-2.7.8.ebuild, -zope-2.9.4.ebuild, -zope-2.9.5.ebuild,
+  -zope-2.9.6.ebuild, -zope-2.10.0.ebuild, -zope-2.10.1.ebuild,
+  -zope-3.1.0.ebuild, -zope-3.2.1.ebuild, -zope-3.3.0.ebuild:
+  Removed old unnecessary versions to unclutter tree.
 
 *zope-3.3.1 (29 Apr 2007)
 
