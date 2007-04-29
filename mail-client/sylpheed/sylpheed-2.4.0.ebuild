@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.0.ebuild,v 1.1 2007/04/28 10:15:19 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.0.ebuild,v 1.2 2007/04/29 12:06:55 hattya Exp $
 
 inherit autotools eutils
 
@@ -25,6 +25,8 @@ DEPEND=">=x11-libs/gtk+-2.4
 RDEPEND="${DEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
+
+AT_M4DIR="ac"
 
 src_unpack() {
 
