@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.8 2007/03/01 12:45:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.9 2007/04/29 18:15:14 tove Exp $
 
 inherit eutils
 
@@ -55,13 +55,13 @@ src_install() {
 
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/mydns.rc6 mydns || die
+	newinitd "${FILESDIR}"/mydns.rc6 mydns || die
 
 	if ! use postgres; then
-		sed -i -e 's/__db__/mysql/g' ${D}/etc/init.d/mydns || die
+		sed -i -e 's/__db__/mysql/g' "${D}"/etc/init.d/mydns || die
 		dodoc QUICKSTART.mysql README.mysql
 	else
-		sed -i -e 's/__db__/postgresql/g' ${D}/etc/init.d/mydns || die
+		sed -i -e 's/__db__/postgresql/g' "${D}"/etc/init.d/mydns || die
 		dodoc QUICKSTART.postgres
 	fi
 }

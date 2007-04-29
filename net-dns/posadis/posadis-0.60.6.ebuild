@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.6 2006/12/14 23:03:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.7 2007/04/29 18:17:06 tove Exp $
 
 inherit libtool eutils multilib autotools
 
@@ -44,7 +44,7 @@ src_install() {
 	keepdir /var/posadis
 	keepdir /etc/posadis
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/${PN}-init posadis
+	newinitd ${FILESDIR}/${PN}-init posadis
 	insinto /etc/
 	doins posadisrc
 
