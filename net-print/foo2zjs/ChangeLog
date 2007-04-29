@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.23 2007/04/24 22:13:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.24 2007/04/29 09:24:29 genstef Exp $
+
+  29 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/foo2zjs-Makefile-20070204.diff,
+  -files/foo2zjs-udevfwld-20070204.diff, -foo2zjs-20070204.ebuild:
+  remove old
 
 *foo2zjs-20070424 (24 Apr 2007)
 
