@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.108 2007/03/01 00:54:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.109 2007/04/30 16:26:06 usata Exp $
+
+*zsh-4.3.4 (30 Apr 2007)
+
+  30 Apr 2007; Mamoru KOMACHI <usata@gentoo.org> files/zprofile,
+  +zsh-4.3.4.ebuild:
+  Version bumped. (bug #175302)
+  Changed zprofile to source /etc/profile.d/*.sh. (bug #19924)
+  Set $EDITOR variable. (bug #165000)
 
   01 Mar 2007; Jason Wever <weeve@gentoo.org> zsh-4.3.2-r2.ebuild:
   Stable on SPARC wrt bug #168320.
