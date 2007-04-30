@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.3-r1.ebuild,v 1.4 2007/02/20 15:25:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.6.1.ebuild,v 1.1 2007/04/30 16:18:25 nyhm Exp $
 
 inherit eutils java-pkg-2 java-ant-2 games
 
@@ -27,9 +27,7 @@ src_unpack() {
 	cd "${S}"
 	rm -rf FreeCol.jar src/classes jars/*
 
-	epatch \
-		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-home.patch
+	epatch "${FILESDIR}"/${P}-home.patch
 
 	sed -i "/Class-Path/s:jars/.*$:$(java-pkg_getjars higlayout):" \
 		src/MANIFEST.MF \
