@@ -1,6 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.77 2007/04/29 18:03:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.78 2007/04/30 13:38:27 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (30 Apr 2007)
+# For GNOME 2.18
+>=gnome-extra/at-spi-1.18
+>=app-text/evince-0.8
+>=x11-themes/gnome-icon-theme-2.16.0.1
+>=gnome-base/libgnomekbd-2.18
+>=gnome-base/control-center-2.18
+>=gnome-base/gnome-applets-2.18
+>=gnome-base/gnome-screensaver-2.18
+app-misc/hal-info
 
 # Tobias Scherbaum <dertobi123@gentoo.org> (29 Apr 2007)
 # Requires GNOME 2.16
