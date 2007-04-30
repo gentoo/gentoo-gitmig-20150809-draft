@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r1.ebuild,v 1.17 2006/07/15 16:20:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r1.ebuild,v 1.18 2007/04/30 13:32:25 cedk Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Ultrafast implementation of ping."
-HOMEPAGE="http://www.worldvisions.ca/~apenwarr/netselect/"
-SRC_URI="http://www.worldvisions.ca/~apenwarr/netselect/${P}.tar.gz"
+HOMEPAGE="http://alumnit.ca/~apenwarr/netselect/index.html"
+SRC_URI="http://alumnit.ca/~apenwarr/netselect/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

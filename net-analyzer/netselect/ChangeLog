@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.28 2006/07/15 16:20:42 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.29 2007/04/30 13:32:25 cedk Exp $
+
+  30 Apr 2007; Cedric Krier <cedk@gentoo.org> netselect-0.3-r1.ebuild:
+  Fix HOMEPAGE and SRC_URI for bug #176200
 
   15 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/netselect-0.3-bsd.patch, netselect-0.3-r1.ebuild:
