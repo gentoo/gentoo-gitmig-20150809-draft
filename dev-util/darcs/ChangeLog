@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.66 2007/04/29 21:38:40 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.67 2007/04/30 10:32:18 dcoutts Exp $
+
+  30 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> darcs-1.0.7.ebuild,
+  darcs-1.0.8-r1.ebuild:
+  Add missing inherit eutils.
 
   29 Apr 2007; Lennart Kolmodin <kolmodin@gentoo.org> darcs-1.0.4.ebuild,
   darcs-1.0.5.ebuild, darcs-1.0.6.ebuild, darcs-1.0.7.ebuild,
