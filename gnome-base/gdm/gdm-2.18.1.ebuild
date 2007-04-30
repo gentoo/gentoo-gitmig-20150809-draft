@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.1.ebuild,v 1.1 2007/04/21 00:08:46 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.1.ebuild,v 1.2 2007/04/30 14:03:21 uberlord Exp $
 
 inherit eutils pam gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="accessibility branding ipv6 pam selinux tcpd xinerama"
+IUSE="accessibility branding ipv6 pam selinux tcpd xinerama elibc_glibc"
 
 # Name of the tarball with gentoo specific files
 GDM_EXTRA="${PN}-2.8-gentoo-files-r2"
@@ -23,7 +23,7 @@ RDEPEND="pam?	(
 					virtual/pam
 					sys-auth/consolekit
 				)
-	!pam? ( sys-apps/shadow )
+	!pam? ( elibc_glibc? ( sys-apps/shadow ) )
 	>=dev-libs/glib-2.8
 	>=x11-libs/gtk+-2.6
 	>=x11-libs/pango-1.3
@@ -77,8 +77,12 @@ pkg_setup() {
 						  --with-console-kit=yes"
 	else
 		G2CONF="${G2CONF} --enable-console-helper=no \
-						  --enable-authentication-scheme=shadow \
 						  --with-console-kit=no"
+		if use elibc_glibc; then
+			G2CONF="${G2CONF} --enable-authentication-scheme=shadow"
+		else
+			G2CONF="${G2CONF} --enable-authentication-scheme=crypt"
+		fi
 	fi
 
 	enewgroup gdm
