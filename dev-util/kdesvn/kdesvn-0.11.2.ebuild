@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.0.ebuild,v 1.4 2007/03/14 01:07:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.2.ebuild,v 1.1 2007/04/30 15:24:27 george Exp $
 
 inherit eutils kde-functions toolchain-funcs
 
 DESCRIPTION="KDESvn is a frontend to the subversion vcs."
-HOMEPAGE="http://www.alwins-world.de/programs/kdesvn/"
+HOMEPAGE="http://www.alwins-world.de/wiki/programs/kdesvn"
 SRC_URI="http://www.alwins-world.de/programs/download/${PN}/${P}.tar.bz2"
 
 SLOT="0"
