@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.48 2007/04/27 04:09:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.49 2007/04/30 16:44:54 bicatali Exp $
+
+*fftw-2.1.5-r3 (30 Apr 2007)
+
+  30 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/fftw-2.1.5-as-needed.patch, metadata.xml, +fftw-2.1.5-r3.ebuild:
+  Revamped ebuild for version 2: x86 hacks now only for x86 arches, added a
+  doc flag, added a float USE flag instead of the SINGLE env variable,
+  switched to virtual/mpi, added a src_test, fixed the as-needed patch,
+  general cleaning and added longdescription in metadata.xml. Closing bugs
+  #130381 and bug #152393.
 
   27 Apr 2007; Jeroen Roovers <jer@gentoo.org> fftw-2.1.5-r2.ebuild:
   Marked ~hppa.
