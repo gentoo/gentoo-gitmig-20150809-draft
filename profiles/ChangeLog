@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.333 2007/04/30 11:56:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.334 2007/04/30 12:13:15 betelgeuse Exp $
+
+  30 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  package.mask rest of the Eclipse plugins.
 
   30 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask dev-util/eclipse-pydev-bin for removal to the junkyard.
