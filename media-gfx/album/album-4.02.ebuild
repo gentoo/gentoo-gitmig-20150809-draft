@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-4.02.ebuild,v 1.3 2007/04/16 07:33:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-4.02.ebuild,v 1.4 2007/04/30 20:57:54 genone Exp $
 
 DESCRIPTION="HTML photo album generator"
 HOMEPAGE="http://MarginalHacks.com/Hacks/album/"
@@ -25,9 +25,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "For some optional themes please browse:"
-	einfo "http://MarginalHacks.com/Hacks/album/Themes/"
-	einfo
-	einfo "For some optional tools please browse:"
-	einfo "http://MarginalHacks.com/Hacks/album/tools/"
+	elog "For some optional themes please browse:"
+	elog "http://MarginalHacks.com/Hacks/album/Themes/"
+	elog
+	elog "For some optional tools please browse:"
+	elog "http://MarginalHacks.com/Hacks/album/tools/"
 }

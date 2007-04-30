@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.4.ebuild,v 1.11 2006/10/05 14:45:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.4.ebuild,v 1.12 2007/04/30 21:00:36 genone Exp $
 
 inherit java-pkg
 
@@ -24,9 +24,9 @@ src_unpack() {
 	use doc && unpack manual.zip
 }
 src_compile() {
-	einfo " This ebuild is binary-only (for now)."
-	einfo " If you get this to compile from source, please file a bug"
-	einfo " and let us know.  http://bugs.gentoo.org/"
+	elog " This ebuild is binary-only (for now)."
+	elog " If you get this to compile from source, please file a bug"
+	elog " and let us know.  http://bugs.gentoo.org/"
 }
 
 src_install() {
