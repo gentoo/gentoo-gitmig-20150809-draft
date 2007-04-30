@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.16.1.ebuild,v 1.2 2006/11/10 19:49:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.16.1.ebuild,v 1.3 2007/04/30 20:55:21 genone Exp $
 
 inherit eutils pam gnome2
 
@@ -140,18 +140,18 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	einfo "To make GDM start at boot, edit /etc/conf.d/xdm"
-	einfo "and then execute 'rc-update add xdm default'."
+	elog "To make GDM start at boot, edit /etc/conf.d/xdm"
+	elog "and then execute 'rc-update add xdm default'."
 
-	einfo "GDM has changed the location of its configuration file.  Please"
-	einfo "edit /etc/X11/gdm/custom.conf.  The factory defaults are located"
-	einfo "at /usr/share/gdm/{defaults.conf,factory-defaults.conf}"
+	elog "GDM has changed the location of its configuration file.  Please"
+	elog "edit /etc/X11/gdm/custom.conf.  The factory defaults are located"
+	elog "at /usr/share/gdm/{defaults.conf,factory-defaults.conf}"
 
-	einfo "See README.install for more information about the change."
+	elog "See README.install for more information about the change."
 
 	if [ -f "/etc/X11/gdm/gdm.conf" ]; then
-		einfo "You had /etc/X11/gdm/gdm.conf which is the old configuration"
-		einfo "file.  It has been moved to /etc/X11/gdm/gdm-pre-gnome-2.16"
+		elog "You had /etc/X11/gdm/gdm.conf which is the old configuration"
+		elog "file.  It has been moved to /etc/X11/gdm/gdm-pre-gnome-2.16"
 		mv /etc/X11/gdm/gdm.conf /etc/X11/gdm/gdm-pre-gnome-2.16
 	fi
 
@@ -172,6 +172,6 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 
-	einfo "To remove GDM from startup please execute"
-	einfo "'rc-update del xdm default'"
+	elog "To remove GDM from startup please execute"
+	elog "'rc-update del xdm default'"
 }

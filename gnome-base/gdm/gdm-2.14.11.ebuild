@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.11.ebuild,v 1.5 2006/12/21 14:09:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.11.ebuild,v 1.6 2007/04/30 20:55:21 genone Exp $
 
 inherit eutils pam gnome2
 
@@ -153,19 +153,19 @@ pkg_postinst() {
 		fi
 	fi
 
-	einfo "To make GDM start at boot, edit /etc/conf.d/xdm"
-	einfo "and then execute 'rc-update add xdm default'."
+	elog "To make GDM start at boot, edit /etc/conf.d/xdm"
+	elog "and then execute 'rc-update add xdm default'."
 
-	einfo "GDM has changed the location of its configuration file.  Please"
-	einfo "edit /etc/X11/gdm/custom.conf.  The factory defaults are located"
-	einfo "at /usr/share/gdm/{defaults.conf,factory-defaults.conf}"
+	elog "GDM has changed the location of its configuration file.  Please"
+	elog "edit /etc/X11/gdm/custom.conf.  The factory defaults are located"
+	elog "at /usr/share/gdm/{defaults.conf,factory-defaults.conf}"
 
-	einfo "See README.install for more information about the change."
+	elog "See README.install for more information about the change."
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
 
-	einfo "To remove GDM from startup please execute"
-	einfo "'rc-update del xdm default'"
+	elog "To remove GDM from startup please execute"
+	elog "'rc-update del xdm default'"
 }
