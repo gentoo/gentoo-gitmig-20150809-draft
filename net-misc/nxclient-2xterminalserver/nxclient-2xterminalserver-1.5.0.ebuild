@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/nxclient-2xterminalserver-1.5.0.ebuild,v 1.1 2007/04/25 12:58:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/nxclient-2xterminalserver-1.5.0.ebuild,v 1.2 2007/04/30 13:34:53 voyageur Exp $
 
 inherit eutils qt3
 
-DESCRIPTION="2X Terminal Server NX client"
+DESCRIPTION="2X Terminal Server GPL NX client, based on NoMachine code"
 HOMEPAGE="http://www.2x.com/terminalserver/"
 SRC_URI="http://code.2x.com/release/linuxterminalserver/src/linuxterminalserver-1.5.0-common-r21-src.tar.gz
 	http://code.2x.com/release/linuxterminalserver/src/linuxterminalserver-1.5.0-client-r21-src.tar.gz"

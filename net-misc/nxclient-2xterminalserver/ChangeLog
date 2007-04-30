@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient-2xterminalserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/ChangeLog,v 1.1 2007/04/25 12:58:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/ChangeLog,v 1.2 2007/04/30 13:34:53 voyageur Exp $
+
+  30 Apr 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  nxclient-2xterminalserver-1.5.0.ebuild:
+  Extended description
 
 *nxclient-2xterminalserver-1.5.0 (25 Apr 2007)
 

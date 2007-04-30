@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.2 2007/04/26 09:56:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.3 2007/04/30 13:38:27 voyageur Exp $
 
 inherit flag-o-matic eutils
 
-DESCRIPTION="A X11/RDP/VNC proxy server especially well suited to low bandwidth links such as wireless, WANS, and worse"
+DESCRIPTION="GPL NX server, based on NoMachine 1.5 servers source code"
 HOMEPAGE="http://www.2x.com/terminalserver/"
 SRC_URI="http://code.2x.com/release/linuxterminalserver/src/linuxterminalserver-1.5.0-server-r21-src.tar.gz
 	http://code.2x.com/release/linuxterminalserver/src/linuxterminalserver-1.5.0-common-r21-src.tar.gz
