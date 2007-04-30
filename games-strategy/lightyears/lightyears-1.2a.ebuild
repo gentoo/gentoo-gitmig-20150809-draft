@@ -1,27 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.2a.ebuild,v 1.2 2007/04/29 01:33:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.2a.ebuild,v 1.3 2007/04/30 13:13:06 nyhm Exp $
 
 inherit eutils games
 
 MY_PN=LightYears
 MY_P=${MY_PN}-${PV}
-
 DESCRIPTION="a single-player game with a science-fiction theme"
-HOMEPAGE="http://www.jwhitham.org.uk/biscuit_games/LightYears"
+HOMEPAGE="http://www.jwhitham.org.uk/biscuit_games/LightYears/"
 SRC_URI="http://www.jwhitham.org.uk/biscuit_games/${MY_PN}/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygame-1.7"
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 
-S="${WORKDIR}/${MY_PN}"
+S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
@@ -41,18 +39,18 @@ src_unpack() {
 }
 
 src_install() {
-	dogamesbin ${MY_PN}.py  || die "dogamesbin failed"
+	newgamesbin ${MY_PN}.py ${PN} || die "newgamesbin failed"
 
 	insinto "$(games_get_libdir)/${PN}"
-	doins code/*.py || die "installing library files failed"
+	doins code/*.py || die "doins code failed"
 
 	dodoc README.txt
 	dohtml -r *.html html/data
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data/*
+	doins -r data/* || die "doins data failed"
 
 	newicon data/32.png ${PN}.png
-	make_desktop_entry ${MY_PN}.py ${MY_PN}
+	make_desktop_entry ${PN} "Light Years Into Space"
 	prepgamesdirs
 }
