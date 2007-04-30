@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.23 2007/02/09 03:27:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.24 2007/04/30 22:20:47 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org> maya-6.5.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

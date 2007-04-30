@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.4 2005/10/13 17:31:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.5 2007/04/30 22:20:47 genone Exp $
 
 inherit rpm eutils versionator
 
@@ -199,33 +199,33 @@ pkg_postinst() {
 	fi
 	# End rpm -qp --scripts Maya6_5-6.5-253.i686.rpm
 
-	einfo "There may be a more recent license for this workstation available on the"
-	einfo "Alias|Wavefront web site. Please visit the following URL to check for"
-	einfo "updated licenses:"
-	einfo "http://www.aliaswavefront.com/en/Community/Special/keys/maya/"
-	echo
-	einfo "To install your key, either place aw.dat in /var/flexlm or run the following"
-	einfo "command from an X session:"
-	einfo "${AWDIR}/COM/bin/installKey -input ${MAYADIR}/license_data/maya_prekey_data"
-	echo
-	einfo "One init scripts has been installed:"
-	einfo "maya-docs is for the document server (help system)."
-	echo
-	einfo "If you want to use the flexlm license server, emerge '>=app-admin/flexlm-9.5'"
-	echo
+	elog "There may be a more recent license for this workstation available on the"
+	elog "Alias|Wavefront web site. Please visit the following URL to check for"
+	elog "updated licenses:"
+	elog "http://www.aliaswavefront.com/en/Community/Special/keys/maya/"
+	elog
+	elog "To install your key, either place aw.dat in /var/flexlm or run the following"
+	elog "command from an X session:"
+	elog "${AWDIR}/COM/bin/installKey -input ${MAYADIR}/license_data/maya_prekey_data"
+	elog
+	elog "One init scripts has been installed:"
+	elog "maya-docs is for the document server (help system)."
+	elog
+	elog "If you want to use the flexlm license server, emerge '>=app-admin/flexlm-9.5'"
+	elog
 
 	# GCC_3.0
 	# GLIBC_2.1.3
 	# GLIBC_2.0
 	# GLIBCPP_3.2
 	# CXXABI_1.2
-	einfo "Maya 6.5 was compiled on the following system configuration:"
-	einfo "Linux 2.4.7-10 (RedHat 7.2, glibc-2.2.4-13), i686, gcc3"
-	einfo "If you intend to compile plugins for Maya, you will need to"
-	einfo "'emerge \=sys-devel/gcc-3.3*' and use gcc-config to switch compilers."
-	einfo "The Maya SDK headers are located in ${MAYADIR}/include, and libs"
-	einfo "are in ${MAYADIR}/lib."
-	echo
+	elog "Maya 6.5 was compiled on the following system configuration:"
+	elog "Linux 2.4.7-10 (RedHat 7.2, glibc-2.2.4-13), i686, gcc3"
+	elog "If you intend to compile plugins for Maya, you will need to"
+	elog "'emerge \=sys-devel/gcc-3.3*' and use gcc-config to switch compilers."
+	elog "The Maya SDK headers are located in ${MAYADIR}/include, and libs"
+	elog "are in ${MAYADIR}/lib."
+	elog
 	# http://www.highend2d.com/boards/showthreaded.php?Cat=&Board=linuxforum&Number=174726&page=&view=&sb=&o=
 	ewarn "You should disable klipper, xfce4-clipman, and any other clipboard"
 	ewarn "utilities as they have been shown to cause maya-5.0.1 to crash."
@@ -233,7 +233,7 @@ pkg_postinst() {
 	ewarn "appreciated at http://bugs.gentoo.org"
 
 	if use doc && [[ ! -x /usr/bin/mozilla ]] ; then
-		echo
+		ewarn
 		ewarn "The Maya document system has been installed, but we have detected"
 		ewarn "that you don't have Mozilla installed on your system.  Maya"
 		ewarn "launches mozilla to start the help program, so it is advised that"
