@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.5.1.ebuild,v 1.5 2006/04/01 16:09:10 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.5.1.ebuild,v 1.6 2007/04/30 03:51:41 dirtyepic Exp $
 
-inherit eutils
+inherit eutils wxwidgets
 
 DESCRIPTION="A phylogenetic tree viewer"
 HOMEPAGE="http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/"
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 x86"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK-2.6"
+DEPEND="=x11-libs/wxGTK-2.6*"
 
 S="${WORKDIR}/tv-${PV}"
 
@@ -33,6 +33,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-wxt.patch
+}
+
+src_compile() {
+	WX_GTK_VER="2.6"
+	need-wxwidgets gtk2
+
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {

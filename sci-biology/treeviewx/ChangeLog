@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/treeviewx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.15 2007/02/22 01:32:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.16 2007/04/30 03:51:41 dirtyepic Exp $
+
+  30 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> treeviewx-0.5.1.ebuild:
+  Use wxwidgets.eclass
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
