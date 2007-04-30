@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.25 2007/04/20 04:49:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.26 2007/04/30 15:07:24 mabi Exp $
+
+  30 Apr 2007; Matti Bickel <mabi@gentoo.org> vm-7.19.282.ebuild:
+  ~ppc readded (bug #174782)
 
   20 Apr 2007; Ulrich Mueller <ulm@gentoo.org> -vm-7.19-r1.ebuild,
   -vm-7.19-r2.ebuild:
