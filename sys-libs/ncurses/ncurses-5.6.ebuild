@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6.ebuild,v 1.12 2007/04/22 08:44:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6.ebuild,v 1.13 2007/04/30 08:59:14 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -57,16 +57,13 @@ src_compile() {
 do_compile() {
 	ECONF_SOURCE=${S}
 
-	local mylibprefix=""
-	[[ ${CHOST} == *-darwin* ]] && mylibprefix="/usr"
-
 	# We need the basic terminfo files in /etc, bug #37026.  We will
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
 	# src_install() ...
 	# The chtype/mmask-t settings below are to retain ABI compat
 	# with ncurses-5.4 so dont change em !
 	econf \
-		--libdir=${mylibprefix}/$(get_libdir) \
+		--libdir="/$(get_libdir)" \
 		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo" \
 		--disable-termcap \
 		--with-shared \
@@ -102,16 +99,14 @@ src_install() {
 		emake DESTDIR="${D}" install || die "make widec install failed"
 	fi
 
-	if [[ ${CHOST} != *-darwin* ]] ; then
-		# Move static and extraneous ncurses libraries out of /lib
-		dodir /usr/$(get_libdir)
-		cd "${D}"/$(get_libdir)
-		mv lib{form,menu,panel}.so* *.a "${D}"/usr/$(get_libdir)/
-		gen_usr_ldscript lib{,n}curses.so
-		if use unicode ; then
-			mv lib{form,menu,panel}w.so* "${D}"/usr/$(get_libdir)/
-			gen_usr_ldscript lib{,n}cursesw.so
-		fi
+	# Move static and extraneous ncurses libraries out of /lib
+	dodir /usr/$(get_libdir)
+	cd "${D}"/$(get_libdir)
+	mv lib{form,menu,panel}.so* *.a "${D}"/usr/$(get_libdir)/
+	gen_usr_ldscript lib{,n}curses.so
+	if use unicode ; then
+		mv lib{form,menu,panel}w.so* "${D}"/usr/$(get_libdir)/
+		gen_usr_ldscript lib{,n}cursesw.so
 	fi
 
 	# We need the basic terminfo files in /etc, bug #37026
