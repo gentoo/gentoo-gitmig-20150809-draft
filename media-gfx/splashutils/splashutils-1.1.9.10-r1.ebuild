@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.10 2007/04/22 14:28:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.11 2007/04/30 22:45:13 genone Exp $
 
 inherit eutils multilib linux-mod
 
@@ -102,7 +102,7 @@ src_unpack() {
 	if [[ ! -e ${KV_DIR}/include/linux/console_splash.h ]]; then
 		ewarn "Your kernel in ${KV_DIR} has not been patched with a compatible version"
 		ewarn "of fbsplash. You can download the latest patch from http://dev.gentoo.org/~spock/"
-		echo ""
+		ewarn ""
 		ewarn "Splashutils will be compiled without fbsplash support. Verbose mode will not"
 		ewarn "be supported."
 		spl_conf no CONFIG_FBSPLASH
@@ -188,7 +188,7 @@ pkg_postinst() {
 		ewarn "  mount --bind / /lib/splash/tmp"
 		ewarn "  mknod /lib/splash/tmp/dev/tty1 c 4 1"
 		ewarn "  umount /lib/splash/tmp"
-		echo ""
+		ewarn ""
 	else
 		eend 0
 	fi
@@ -200,24 +200,24 @@ pkg_postinst() {
 		ewarn "not supported. If you decide to switch to udev, you might want to have a"
 		ewarn "look at 'The Gentoo udev Guide', which can be found at"
 		ewarn "  http://www.gentoo.org/doc/en/udev-guide.xml"
-		echo ""
+		ewarn ""
 	fi
 
 	if has_version '<media-gfx/splashutils-1.0' ; then
 		ewarn "Since you are upgrading from a pre-1.0 version, please make sure that you"
 		ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
-		echo ""
+		ewarn ""
 	fi
 
 	if ! test -f /proc/cmdline ||
 		! egrep -q '(console|CONSOLE)=(tty1|/dev/tty1)' /proc/cmdline ; then
 		ewarn "It is required that you add 'console=tty1' to your kernel"
 		ewarn "command line parameters."
-		echo ""
-		einfo "After these modifications, the relevant part of the kernel command"
-		einfo "line might look like:"
-		einfo "  splash=silent,fadein,theme:emergence console=tty1"
-		echo ""
+		ewarn ""
+		elog "After these modifications, the relevant part of the kernel command"
+		elog "line might look like:"
+		elog "  splash=silent,fadein,theme:emergence console=tty1"
+		elog ""
 	fi
 
 	if ! has_version 'media-gfx/splash-themes-livecd' &&

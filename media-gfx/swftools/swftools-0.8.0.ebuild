@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.8.0.ebuild,v 1.3 2007/04/02 04:30:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.8.0.ebuild,v 1.4 2007/04/30 22:48:48 genone Exp $
 
 inherit eutils
 
@@ -32,8 +32,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "avifile is currently not supported."
-	einfo "Therefore, avi2swf was not installed."
-	einfo
+	elog
+	elog "avifile is currently not supported."
+	elog "Therefore, avi2swf was not installed."
+	elog
 }

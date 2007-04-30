@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/megapov-1.0.ebuild,v 1.3 2005/05/09 17:57:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/megapov-1.0.ebuild,v 1.4 2007/04/30 22:39:19 genone Exp $
 
 DESCRIPTION="The popular collection of unofficial extensions of POV-Ray"
 HOMEPAGE="http://megapov.inetart.net/"
@@ -51,15 +51,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The MegaPOV files have been installed.  You will have to"
-	einfo "adjust your main POV-Ray ini file by adding a new line:"
-	echo
-	einfo "Library_Path=/usr/share/${PN}/include"
-	echo
-	einfo "This ini file is possibly located at:"
-	echo
-	einfo "  - the place defined by the POVINI environment variable"
-	einfo "  - ./povray.ini"
-	einfo "  - \$HOME/.povrayrc"
-	einfo "  - SYSCONFDIR/povray.ini"
+	elog "The MegaPOV files have been installed.  You will have to"
+	elog "adjust your main POV-Ray ini file by adding a new line:"
+	elog
+	elog "Library_Path=/usr/share/${PN}/include"
+	elog
+	elog "This ini file is possibly located at:"
+	elog
+	elog "  - the place defined by the POVINI environment variable"
+	elog "  - ./povray.ini"
+	elog "  - \$HOME/.povrayrc"
+	elog "  - SYSCONFDIR/povray.ini"
 }

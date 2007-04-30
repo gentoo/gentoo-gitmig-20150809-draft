@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/megapov-1.2.1.ebuild,v 1.1 2007/03/24 19:58:47 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/megapov-1.2.1.ebuild,v 1.2 2007/04/30 22:39:19 genone Exp $
 
 inherit eutils
 
@@ -41,10 +41,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The MegaPOV files have been installed.  The following line"
-	einfo "has been added to the megapov/povray.ini to enable use of"
-	einfo "library files from the povray-3.6 installation:"
-	echo
-	einfo "Library_Path=/usr/share/${PN}/include"
+	elog "The MegaPOV files have been installed.  The following line"
+	elog "has been added to the megapov/povray.ini to enable use of"
+	elog "library files from the povray-3.6 installation:"
+	elog
+	elog "Library_Path=/usr/share/${PN}/include"
 	echo
 }

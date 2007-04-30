@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.22 2007/04/02 04:30:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.23 2007/04/30 22:48:48 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org> swftools-0.7.0.ebuild,
+  swftools-0.8.0.ebuild, swftools-0.8.1.ebuild:
+  Replacing einfo with elog
 
 *swftools-0.8.1 (02 Apr 2007)
 

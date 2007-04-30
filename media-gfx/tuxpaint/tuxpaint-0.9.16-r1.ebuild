@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.16-r1.ebuild,v 1.4 2007/04/08 19:51:24 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.16-r1.ebuild,v 1.5 2007/04/30 22:51:59 genone Exp $
 
 inherit eutils gnome2-utils
 
@@ -55,8 +55,8 @@ src_install () {
 pkg_postinst() {
 	gnome2_icon_cache_update
 
-	einfo ""
-	einfo "For additional graphic stamps, you can emerge the"
-	einfo "media-gfx/tuxpaint-stamps package."
-	einfo ""
+	elog ""
+	elog "For additional graphic stamps, you can emerge the"
+	elog "media-gfx/tuxpaint-stamps package."
+	elog ""
 }

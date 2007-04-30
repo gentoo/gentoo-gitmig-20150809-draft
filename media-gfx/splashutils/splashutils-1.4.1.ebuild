@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.1.ebuild,v 1.3 2007/04/22 14:28:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.1.ebuild,v 1.4 2007/04/30 22:45:13 genone Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -180,31 +180,31 @@ pkg_postinst() {
 		ewarn "not supported. If you decide to switch to udev, you might want to have a"
 		ewarn "look at 'The Gentoo udev Guide', which can be found at"
 		ewarn "  http://www.gentoo.org/doc/en/udev-guide.xml"
-		echo ""
+		ewarn ""
 	fi
 
 	if has_version '<media-gfx/splashutils-1.0' ; then
 		ewarn "Since you are upgrading from a pre-1.0 version, please make sure that you"
 		ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
-		echo ""
+		ewarn ""
 	fi
 
 	if ! test -f /proc/cmdline ||
 		! egrep -q '(console|CONSOLE)=(tty1|/dev/tty1)' /proc/cmdline ; then
 		ewarn "It is required that you add 'console=tty1' to your kernel"
 		ewarn "command line parameters."
-		echo ""
-		einfo "After these modifications, the relevant part of the kernel command"
-		einfo "line might look like:"
-		einfo "  splash=silent,fadein,theme:emergence console=tty1"
-		echo ""
+		ewarn ""
+		elog "After these modifications, the relevant part of the kernel command"
+		elog "line might look like:"
+		elog "  splash=silent,fadein,theme:emergence console=tty1"
+		elog ""
 	fi
 
 	if ! has_version 'media-gfx/splash-themes-livecd' &&
 		! has_version 'media-gfx/splash-themes-gentoo'; then
-		einfo "The sample Gentoo themes (emergence, gentoo) have been removed from the"
-		einfo "core splashutils package. To get some themes you might want to emerge:"
-		einfo "  media-gfx/splash-themes-livecd"
-		einfo "  media-gfx/splash-themes-gentoo"
+		elog "The sample Gentoo themes (emergence, gentoo) have been removed from the"
+		elog "core splashutils package. To get some themes you might want to emerge:"
+		elog "  media-gfx/splash-themes-livecd"
+		elog "  media-gfx/splash-themes-gentoo"
 	fi
 }

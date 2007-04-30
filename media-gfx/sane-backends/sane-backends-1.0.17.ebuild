@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.11 2007/04/10 08:07:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.12 2007/04/30 22:41:46 genone Exp $
 
 inherit eutils
 
@@ -68,8 +68,8 @@ pkg_setup() {
 
 src_unpack() {
 	if [ -z "${SANE_BACKENDS}" ]; then
-		einfo "You can use the variable SANE_BACKENDS to pick backends"
-		einfo "instead of building all of them."
+		elog "You can use the variable SANE_BACKENDS to pick backends"
+		elog "instead of building all of them."
 	fi
 	unpack ${A}
 	if use usb; then
