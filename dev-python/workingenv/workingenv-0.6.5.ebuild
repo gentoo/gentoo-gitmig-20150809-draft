@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/workingenv/workingenv-0.6.5.ebuild,v 1.2 2007/04/21 23:39:19 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/workingenv/workingenv-0.6.5.ebuild,v 1.3 2007/04/30 20:33:03 genone Exp $
 
 inherit distutils
 
@@ -17,13 +17,13 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 pkg_postinst() {
-	einfo "Quickstart:"
-	einfo ""
-	einfo "workingenv <directory name>"
-	einfo "source <directory name>/bin/activate"
-	einfo ""
-	einfo "You are now working in a sandboxed Python environment."
-	einfo "Any packages installed with distutils/easy_install/setuptools"
-	einfo "will be installed in <directory name>/lib"
-	einfo "Note: <directory name> will be created."
+	elog "Quickstart:"
+	elog ""
+	elog "workingenv <directory name>"
+	elog "source <directory name>/bin/activate"
+	elog ""
+	elog "You are now working in a sandboxed Python environment."
+	elog "Any packages installed with distutils/easy_install/setuptools"
+	elog "will be installed in <directory name>/lib"
+	elog "Note: <directory name> will be created."
 }
