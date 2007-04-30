@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.8 2007/04/30 15:56:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.1 2007/04/30 15:56:47 caster Exp $
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -9,12 +9,12 @@ MY_A="eclipse-sourceBuild-srcIncluded-${PV}.zip"
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/R-${PV}-${DATESTAMP}/${MY_A}
-mirror://gentoo/${PF}-patches.tar.bz2"
+mirror://gentoo/${P}-r1-patches.tar.bz2"
 IUSE="branding cairo gnome opengl seamonkey "
 SLOT="3.2"
 LICENSE="EPL-1.0"
 # TODO might be able to have ia64 and ppc64 support
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 S="${WORKDIR}"
 
 COMMON_DEP="
@@ -22,10 +22,8 @@ COMMON_DEP="
 	seamonkey? ( www-client/seamonkey )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
 	opengl? ( virtual/opengl )
+	>=dev-java/ant-1.7.0
 	=dev-java/junit-3*
-	dev-java/ant-core
-	dev-java/ant-tasks
-	dev-java/ant
 	=dev-java/lucene-1*"
 
 RDEPEND=">=virtual/jre-1.4
@@ -81,9 +79,9 @@ src_unpack() {
 
 	fix-swt-targets
 
-	pushd plugins/org.apache.ant/lib >/dev/null
-	rm *.jar
-	java-pkg_jar-from ant-core,ant-tasks
+	pushd plugins/org.apache.ant >/dev/null || die "pushd failed"
+	rm -rf lib
+	ln -s /usr/share/ant/lib lib
 	popd >/dev/null
 
 	pushd plugins/org.junit >/dev/null
