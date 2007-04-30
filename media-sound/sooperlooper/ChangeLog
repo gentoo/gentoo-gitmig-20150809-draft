@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sooperlooper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.4 2007/01/28 04:27:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.5 2007/04/30 02:24:19 dirtyepic Exp $
+
+*sooperlooper-1.1.0 (30 Apr 2007)
+
+  30 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> -sooperlooper-1.0.3.ebuild,
+  sooperlooper-1.0.8c.ebuild, +sooperlooper-1.1.0.ebuild:
+  Version bump. Fix wxwidgets usage to work with upcoming changes. Remove
+  ancient versions.
 
 *sooperlooper-1.0.8c (28 Jan 2007)
 
