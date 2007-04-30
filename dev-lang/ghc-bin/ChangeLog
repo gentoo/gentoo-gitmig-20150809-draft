@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.68 2007/04/12 18:07:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.69 2007/04/30 09:12:46 dcoutts Exp $
 
   12 Apr 2007; Lennart Kolmodin <kolmodin@gentoo.org> ghc-bin-6.2.2-r1.ebuild,
   ghc-bin-6.4.1.ebuild, ghc-bin-6.4.1-r1.ebuild, ghc-bin-6.4.2.ebuild,
@@ -19,7 +19,9 @@
   Added new revision with a new binary tarball of ghc to fix gcc 4 issues on
   ppc64; bug #145466
 
-  16 Mar 2007; Lennart Kolmodin <kolmodin@gentoo.org> ghc-bin-6.6.ebuild:
+*ghc-bin-6.6 (16 Mar 2007)
+
+  16 Mar 2007; Lennart Kolmodin <kolmodin@gentoo.org> +ghc-bin-6.6.ebuild:
   Version bump to 6.6
 
   28 Aug 2006; Jeroen Roovers <jer@gentoo.org> ghc-bin-6.4.2.ebuild:
