@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r4.ebuild,v 1.1 2007/04/28 15:12:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r4.ebuild,v 1.2 2007/04/30 21:07:22 caster Exp $
 
 inherit eutils base toolchain-funcs flag-o-matic java-pkg-opt-2
 
@@ -14,9 +14,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc ipv6"
 
 DEPEND="!sys-auth/nss-mdns
-		java? ( >=virtual/jdk-1.5 )"
+		java? ( >=virtual/jdk-1.4 )"
 RDEPEND="!sys-auth/nss-mdns
-		java? ( >=virtual/jre-1.5 )"
+		java? ( >=virtual/jre-1.4 )"
 
 PATCHES="${FILESDIR}/mDNSResponder-107.6-Makefiles.diff ${FILESDIR}/mDNSResponder-107.6-java.patch"
 pkg_setup() {
@@ -25,6 +25,7 @@ pkg_setup() {
 	else
 		os=linux
 	fi
+	java-pkg-opt-2_pkg_setup
 }
 
 mdnsmake() {
@@ -34,10 +35,10 @@ mdnsmake() {
 	use ipv6 && __ipv6='HAVE_IPV6=1' || __ipv6='HAVE_IPV6=0'
 	einfo "Running emake " os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
-		 LOCALBASE="/usr" JAVACFLAGS="$(java-pkg_javac-args)" "$@"
+		LOCALBASE="/usr" JAVACFLAGS="${JAVACFLAGS}" ${__ipv6} "$@"
 	emake -j1 os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
-		LOCALBASE="/usr" JAVACFLAGS="$(java-pkg_javac-args)" ${__ipv6} "$@"
+		LOCALBASE="/usr" JAVACFLAGS="${JAVACFLAGS}" ${__ipv6} "$@"
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.32 2007/04/28 15:12:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.33 2007/04/30 21:07:22 caster Exp $
+
+  30 Apr 2007; Vlastimil Babka <caster@gentoo.org>
+  mDNSResponder-107.6-r4.ebuild:
+  Fix building with USE=-java, bug #176561; call java-pkg-opt-2_pkg_setup;
+  lower jdk/jre deps to 1.4 because 1.5 isn't needed.
 
 *mDNSResponder-107.6-r4 (28 Apr 2007)
 
