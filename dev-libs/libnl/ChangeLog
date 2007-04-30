@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.16 2007/02/01 20:32:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.17 2007/04/30 12:03:17 armin76 Exp $
+
+  30 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/libnl-1.0_pre5-__u64_x86_64.patch,
+  -files/libnl-1.0_pre6-amd64-typedef.diff, libnl-1.0_pre6.ebuild:
+  Add patch from Fedora to make it compile on ia64 and amd64, add ~ia64
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -libnl-1.0_pre5.ebuild:
   cleanup
