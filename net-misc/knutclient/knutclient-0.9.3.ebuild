@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.9.3.ebuild,v 1.4 2007/04/29 10:51:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.9.3.ebuild,v 1.5 2007/04/30 19:07:32 gustavoz Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.buzuluk.cz/pub/alo/knutclient/stable/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 need-kde 3.5
