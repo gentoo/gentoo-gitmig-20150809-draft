@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.53 2007/04/27 06:29:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.54 2007/04/30 02:04:24 cardoe Exp $
+
+  30 Apr 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythmusic-0.20_p13239.ebuild:
+  Stable marking amd64, ppc, x86
 
 *mythmusic-0.20.1 (27 Apr 2007)
 
