@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.195 2007/04/29 21:19:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.196 2007/04/30 11:03:14 betelgeuse Exp $
+
+  30 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> files/sun-jdk-1.6.env:
+  Remove sunrsasign.jar from BOOTCLASSPATH as it hasn't been in use since 1.4.
 
   29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> files/sun-jdk-1.6.env:
   Fix BOOTCLASSPATH to match sun.boot.class.path property.
