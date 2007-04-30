@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.3.ebuild,v 1.1 2007/04/24 22:09:31 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.3.ebuild,v 1.2 2007/04/30 20:39:41 genone Exp $
 
 inherit java-pkg-2 versionator
 
@@ -67,12 +67,12 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The default, evaluation license allows usage for one month."
-	einfo "You may switch (per-user) to the license we obtained for Gentoo,"
-	einfo "located in /opt/${P}/licenses/${PN}_gentoo.license"
-	einfo "It is locked to Gentoo, ALM Works and Mozilla bugzilla only."
-	einfo
-	einfo "If you are going to use Deskzilla for an open source project,"
-	einfo "you can similarly request your own free license:"
-	einfo "http://almworks.com/opensource.html?product=deskzilla"
+	elog "The default, evaluation license allows usage for one month."
+	elog "You may switch (per-user) to the license we obtained for Gentoo,"
+	elog "located in /opt/${P}/licenses/${PN}_gentoo.license"
+	elog "It is locked to Gentoo, ALM Works and Mozilla bugzilla only."
+	elog
+	elog "If you are going to use Deskzilla for an open source project,"
+	elog "you can similarly request your own free license:"
+	elog "http://almworks.com/opensource.html?product=deskzilla"
 }
