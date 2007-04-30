@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.106 2007/04/16 06:36:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.107 2007/04/30 02:47:17 kumba Exp $
+
+*mips-sources-2.6.20.10 (30 Apr 2007)
+
+  30 Apr 2007; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.20.7-r1.ebuild, +mips-sources-2.6.20.10.ebuild:
+  Update 2.6.20.7 to 2.6.20.10 to fix several new security issues. IP28
+  support has been enabled for this revission too, however it may be flakey.
+  Problems should be filed at Bugzilla.
 
 *mips-sources-2.6.20.7-r1 (16 Apr 2007)
 *mips-sources-2.6.17.14 (16 Apr 2007)

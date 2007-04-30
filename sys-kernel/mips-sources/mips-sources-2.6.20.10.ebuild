@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.7-r1.ebuild,v 1.1 2007/04/16 06:36:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.10.ebuild,v 1.1 2007/04/30 02:47:17 kumba Exp $
 
 
 # INCLUDED:
@@ -21,7 +21,7 @@
 # Version Data
 OKV=${PV/_/-}
 GITDATE="20070415"			# Date of diff between kernel.org and lmo GIT
-GENPATCHVER="1.27"			# Tarball version for generic patches
+GENPATCHVER="1.28"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -52,7 +52,7 @@ USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y
 # Machine Support Control Variables
 DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
 DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
-DO_IP28="no"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
+DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
 DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
 DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
 DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
@@ -60,7 +60,7 @@ DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 # Machine Stable Version Variables 
 SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
 SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
-SV_IP28="2.6.17.14"			# 	    DO_IP28 == "no", 			   IP28
+SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
 SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
@@ -425,9 +425,7 @@ do_ip27_support() {
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.18-ip28-i2_impact-support.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-impact-mmapfix.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-wd93cac-tweak.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.20-ip28-i2_impact-support.patch
 }
 
 
