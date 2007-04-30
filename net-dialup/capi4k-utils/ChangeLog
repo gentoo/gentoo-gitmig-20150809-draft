@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.55 2007/04/22 23:39:14 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.56 2007/04/30 15:07:20 sbriesen Exp $
+
+  30 Apr 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  ,files/capi4k-utils-20050718-msg2str-safety.diff,
+  ,files/capi4k-utils-20050718-pppd244.diff:
+  moved patches to external tarball.
 
   22 Apr 2007; Stefan Briesenick <sbriesen@gentoo.org>
   ,capi4k-utils-20050718-r1.ebuild, ,capi4k-utils-20050718-r2.ebuild:

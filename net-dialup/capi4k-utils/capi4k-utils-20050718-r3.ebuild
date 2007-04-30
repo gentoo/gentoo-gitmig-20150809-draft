@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.4 2007/03/23 15:31:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.5 2007/04/30 15:07:20 sbriesen Exp $
 
 inherit eutils multilib linux-info
 
@@ -13,7 +13,8 @@ PPPVERSIONS="2.4.2 2.4.3 2.4.4"  # versions in portage
 DESCRIPTION="CAPI4Linux Utils"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz
-	ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz"
+	ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz
+	http://voip-cell.eu/gentoo/distfiles/${PF/utils/patches}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,6 +30,7 @@ RDEPEND="usb? ( sys-apps/hotplug )
 	dev-lang/perl"
 
 S="${WORKDIR}/${PN}"
+PATCHDIR="${WORKDIR}/capi4k-patches"
 
 pkg_setup() {
 	# check kernel config
@@ -42,10 +44,10 @@ src_unpack() {
 	cd "${S}"
 
 	# add ppp-2.4.4 support
-	epatch "${FILESDIR}/${P}-pppd244.diff"
+	epatch "${PATCHDIR}/pppd244.diff"
 
 	# apply msg2str-safety patch (see bug #170870)
-	epatch "${FILESDIR}/${P}-msg2str-safety.diff"
+	epatch "${PATCHDIR}/msg2str-safety.diff"
 
 	# set our config
 	cp -f "${FILESDIR}/config" .config
