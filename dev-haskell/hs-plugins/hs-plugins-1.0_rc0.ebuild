@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-1.0_rc0.ebuild,v 1.3 2006/10/14 14:11:32 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-1.0_rc0.ebuild,v 1.4 2007/04/30 07:34:42 dcoutts Exp $
 
 CABAL_FEATURES="lib"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-DEPEND="virtual/ghc
+DEPEND="<virtual/ghc-6.6
 	!>=virtual/ghc-6.6
 	>=dev-haskell/haskell-src-exts-0.2
 	dev-haskell/cabal"

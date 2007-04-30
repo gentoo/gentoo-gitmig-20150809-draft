@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hs-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.14 2007/02/21 23:18:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.15 2007/04/30 07:34:42 dcoutts Exp $
+
+  30 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> -hs-plugins-0.9.6.ebuild,
+  -hs-plugins-0.9.8.ebuild, hs-plugins-0.9.10-r1.ebuild:
+  Remove a couple old versions and fix ghc deps
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
