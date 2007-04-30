@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc,v 1.1 2007/04/30 14:21:11 dsd Exp $
+
+depend() {
+	before checkroot
+}
+
+start() {
+	if [ ! -e /lib/librc.so ]; then
+		eerror "The ${SVCNAME} init script is written for baselayout-2"
+		eerror "Please do not use it with baselayout-1"
+		return 1
+	fi
+
+	. /lib/rcscripts/addons/dm-start.sh
+}
+
