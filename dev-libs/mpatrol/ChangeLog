@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mpatrol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.14 2007/03/03 23:08:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.15 2007/04/30 17:07:58 solar Exp $
+
+*mpatrol-1.4.8-r2 (30 Apr 2007)
+
+  30 Apr 2007; <solar@gentoo.org> +files/mpatrol-1.4.8-soname.patch,
+  +files/mpatrol-textrel-fix.patch, +mpatrol-1.4.8-r2.ebuild:
+  - fix QA problems bug 176592
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> mpatrol-1.4.8-r1.ebuild:
   Replacing einfo with elog
