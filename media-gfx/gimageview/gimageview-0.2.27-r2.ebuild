@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r2.ebuild,v 1.4 2006/11/04 18:40:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r2.ebuild,v 1.5 2007/04/30 21:48:30 genone Exp $
 
 inherit eutils
 
@@ -53,9 +53,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "If you want to open archived files, you have to emerge"
-	einfo "'app-arch/rar' and/or 'app-arch/lha'."
-	einfo "e.g.) # emerge app-arch/rar"
-	einfo ""
+	elog ""
+	elog "If you want to open archived files, you have to emerge"
+	elog "'app-arch/rar' and/or 'app-arch/lha'."
+	elog "e.g.) # emerge app-arch/rar"
+	elog ""
 }

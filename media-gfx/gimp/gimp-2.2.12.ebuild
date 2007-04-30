@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.12.ebuild,v 1.12 2007/04/21 04:34:25 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.12.ebuild,v 1.13 2007/04/30 21:53:08 genone Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -155,9 +155,9 @@ pkg_postinst() {
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	einfo ""
-	einfo "If you want Postscript file support, emerge ghostscript."
-	einfo ""
+	elog ""
+	elog "If you want Postscript file support, emerge ghostscript."
+	elog ""
 }
 
 pkg_postrm() {
