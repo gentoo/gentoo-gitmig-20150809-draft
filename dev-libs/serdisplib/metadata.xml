@@ -6,4 +6,8 @@
 		<email>rbu@gentoo.org</email>
 		<name>Robert Buchholz</name>
 	</maintainer>
+	<longdescription lang="en">
+		Library to drive displays with built-in controllers connected to
+		a parallel port (and serial port for i2c-displays).
+	</longdescription>
 </pkgmetadata>
