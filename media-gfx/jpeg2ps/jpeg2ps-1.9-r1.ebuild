@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.11 2006/12/12 10:34:21 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.12 2007/04/30 22:02:28 genone Exp $
 
 inherit eutils
 
@@ -41,15 +41,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
+	elog
 	if [ -z ${pagesize} ]; then
-		einfo "By default, this installation of jpeg2ps will generate"
-		einfo "letter size output.  You can force A4 output with"
-		einfo "    jpeg2ps -p a4 file.jpg > file.ps"
+		elog "By default, this installation of jpeg2ps will generate"
+		elog "letter size output.  You can force A4 output with"
+		elog "    jpeg2ps -p a4 file.jpg > file.ps"
 	else
-		einfo "By default, this installation of jpeg2ps will generate"
-		einfo "A4 size output.  You can force letter output with"
-		einfo "    jpeg2ps -p letter file.jpg > file.ps"
+		elog "By default, this installation of jpeg2ps will generate"
+		elog "A4 size output.  You can force letter output with"
+		elog "    jpeg2ps -p letter file.jpg > file.ps"
 	fi
-	einfo
+	elog
 }

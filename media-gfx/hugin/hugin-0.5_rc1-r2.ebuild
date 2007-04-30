@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc1-r2.ebuild,v 1.1 2005/10/16 02:23:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc1-r2.ebuild,v 1.2 2007/04/30 21:58:47 genone Exp $
 
 inherit wxwidgets
 
@@ -51,7 +51,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please consider the helper apps autopano-sift and enblend."
-	einfo "autopano-sift is used to automagically generate control"
-	einfo "points and enblend is used to merge images smoothly."
+	elog "Please consider the helper apps autopano-sift and enblend."
+	elog "autopano-sift is used to automagically generate control"
+	elog "points and enblend is used to merge images smoothly."
 }

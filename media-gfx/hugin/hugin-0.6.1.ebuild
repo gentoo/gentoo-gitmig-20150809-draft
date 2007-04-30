@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1.ebuild,v 1.6 2007/04/16 09:35:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1.ebuild,v 1.7 2007/04/30 21:58:47 genone Exp $
 
 inherit wxwidgets eutils
 
@@ -29,15 +29,15 @@ pkg_setup() {
 		die "$msg"
 	fi
 	if ! use enblend; then
-		einfo "It is recommended to emerge this package with the"
-		einfo "enblend use flag to install media-gfx/enblend"
-		einfo "that blends the seams between images in a panorama."
+		elog "It is recommended to emerge this package with the"
+		elog "enblend use flag to install media-gfx/enblend"
+		elog "that blends the seams between images in a panorama."
 	fi
 	if ! use sift; then
-		einfo "It is recommended to emerge this package with the"
-		einfo "sift use flag to install media-gfx/autopano-sift"
-		einfo "that produces control points between images in a"
-		einfo "panorama."
+		elog "It is recommended to emerge this package with the"
+		elog "sift use flag to install media-gfx/autopano-sift"
+		elog "that produces control points between images in a"
+		elog "panorama."
 	fi
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9.ebuild,v 1.6 2006/12/12 10:34:21 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9.ebuild,v 1.7 2007/04/30 22:02:28 genone Exp $
 
 DESCRIPTION="Converts JPEG images to Postscript using a wrapper"
 HOMEPAGE="http://www.pdflib.com/download/free-software/jpeg2ps/"
@@ -32,10 +32,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "By default, this installation of jpeg2ps will generate"
-	einfo "letter size output.  You can force A4 output with"
-	einfo "    jpeg2ps -p a4 file.jpg > file.ps"
-	einfo
+	elog
+	elog "By default, this installation of jpeg2ps will generate"
+	elog "letter size output.  You can force A4 output with"
+	elog "    jpeg2ps -p a4 file.jpg > file.ps"
+	elog
 }
 
