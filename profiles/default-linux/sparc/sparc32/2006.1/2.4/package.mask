@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/2.4/package.mask,v 1.16 2007/04/25 16:57:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/2.4/package.mask,v 1.17 2007/04/30 17:26:22 gustavoz Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # This needs GNOME 2.16+
@@ -125,3 +125,14 @@ xfce-extra/thunar-volman
 >=sys-apps/iproute2-2.6.19.20061214
 net-misc/kvpnc
 net-misc/vpnc
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# Gnome 2.18 extra mask bug #176517
+>=gnome-extra/at-spi-1.18
+>=app-text/evince-0.8
+>=gnome-base/libgnomekbd-2.18
+>=gnome-base/control-center-2.18
+>=gnome-base/gnome-applets-2.18
+>=gnome-base/gnome-screensaver-2.18
+>=app-accessibility/orca-2.18
+app-misc/hal-info
