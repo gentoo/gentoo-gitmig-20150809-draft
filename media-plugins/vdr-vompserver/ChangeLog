@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-vompserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.4 2007/02/17 18:58:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.5 2007/04/30 14:04:35 zzam Exp $
+
+  30 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Fixed metadata to really contain Petric Frank to be proxied maintainer.
 
 *vdr-vompserver-0.2.6 (17 Feb 2007)
 
