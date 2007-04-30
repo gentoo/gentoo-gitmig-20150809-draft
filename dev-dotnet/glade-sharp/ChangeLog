@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.56 2007/04/13 22:01:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.57 2007/04/30 17:37:13 uberlord Exp $
+
+  30 Apr 2007; Roy Marples <uberlord@gentoo.org> glade-sharp-2.10.0.ebuild:
+  Added ~x86-fbsd keyword.
 
   13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   -glade-sharp-1.0.8-r1.ebuild, -glade-sharp-2.4.0.ebuild,
