@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.85 2007/04/17 23:48:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.86 2007/04/30 23:18:43 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org>
+  libquicktime-0.9.7-r1.ebuild, libquicktime-0.9.9.ebuild,
+  libquicktime-0.9.9-r1.ebuild, libquicktime-0.9.10.ebuild,
+  libquicktime-1.0.0.ebuild:
+  Replacing einfo with elog
 
 *libquicktime-1.0.0 (17 Apr 2007)
 

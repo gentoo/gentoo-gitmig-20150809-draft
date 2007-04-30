@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r3.ebuild,v 1.10 2007/02/08 19:29:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r3.ebuild,v 1.11 2007/04/30 23:13:59 genone Exp $
 
 inherit eutils
 
@@ -42,8 +42,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "if you've upgraded from ${PN}-0.5.8 you'll"
-	einfo "have to run revdep-rebuild from gentoolkit"
-	einfo
+	elog
+	elog "if you've upgraded from ${PN}-0.5.8 you'll"
+	elog "have to run revdep-rebuild from gentoolkit"
+	elog
 }

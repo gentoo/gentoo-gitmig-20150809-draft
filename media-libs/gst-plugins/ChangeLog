@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.150 2007/01/10 05:16:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.151 2007/04/30 22:59:18 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org> gst-plugins-0.8.11.ebuild,
+  gst-plugins-0.8.12.ebuild:
+  Replacing einfo with elog
 
   10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -files/gst-plugins-0.8.8-gstplaybin_subfont.patch,

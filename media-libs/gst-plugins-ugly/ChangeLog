@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.19 2007/02/16 13:05:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.20 2007/04/30 23:06:08 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org>
+  gst-plugins-ugly-0.10.3.ebuild, gst-plugins-ugly-0.10.4.ebuild:
+  Replacing einfo with elog
 
   16 Feb 2007; Roy Marples <uberlord@gentoo.org>
   gst-plugins-ugly-0.10.4.ebuild:

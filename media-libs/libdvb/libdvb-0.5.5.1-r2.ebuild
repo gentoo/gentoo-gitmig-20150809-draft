@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r2.ebuild,v 1.7 2006/03/18 17:34:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r2.ebuild,v 1.8 2007/04/30 23:10:44 genone Exp $
 
 inherit eutils
 
@@ -37,8 +37,8 @@ src_install() {
 	insinto "/usr/share/doc/${PF}/samplerc" && \
 	doins samplerc/*
 
-	einfo "The script called 'dia' has been installed as dia-dvb"
-	einfo "so that it doesn't overwrite the binary of app-office/dia."
+	elog "The script called 'dia' has been installed as dia-dvb"
+	elog "so that it doesn't overwrite the binary of app-office/dia."
 
 	dodoc README
 }

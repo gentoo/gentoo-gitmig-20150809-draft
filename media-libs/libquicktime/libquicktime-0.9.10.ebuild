@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.15 2007/03/27 15:02:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.16 2007/04/30 23:18:43 genone Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -104,17 +104,17 @@ src_install() {
 
 pkg_preinst() {
 	if [[ -d /usr/include/quicktime && ! -L /usr/include/quicktime ]]; then
-		einfo "For compatibility with other quicktime libraries, ${PN} was"
-		einfo "going to create a /usr/include/quicktime symlink, but for some"
-		einfo "reason that is a directory on your system."
+		elog "For compatibility with other quicktime libraries, ${PN} was"
+		elog "going to create a /usr/include/quicktime symlink, but for some"
+		elog "reason that is a directory on your system."
 
 		if $(has_version =media-libs/libquicktime-0.9.4); then
-			einfo "It seems this directory belongs to libquicktime-0.9.4."
-			einfo "We'll delete that directory now."
+			elog "It seems this directory belongs to libquicktime-0.9.4."
+			elog "We'll delete that directory now."
 			rm -rvf /usr/include/quicktime
 		else
-			einfo "Please check that is empty, and remove it, or submit a bug"
-			einfo "telling us which package owns the directory."
+			elog "Please check that is empty, and remove it, or submit a bug"
+			elog "telling us which package owns the directory."
 			die "/usr/include/quicktime is a directory."
 		fi
 	fi

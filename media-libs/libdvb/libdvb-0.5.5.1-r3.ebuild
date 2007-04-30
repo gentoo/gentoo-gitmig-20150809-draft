@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r3.ebuild,v 1.3 2006/11/02 10:55:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r3.ebuild,v 1.4 2007/04/30 23:10:44 genone Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -44,9 +44,9 @@ src_install() {
 		doins samplerc/*
 	fi
 
-	einfo "The script called 'dia' has been installed as dia_dvb"
-	einfo "so that it doesn't overwrite the binary of app-office/dia."
-	einfo "analyze has been renamed to analyze_mpg."
+	elog "The script called 'dia' has been installed as dia_dvb"
+	elog "so that it doesn't overwrite the binary of app-office/dia."
+	elog "analyze has been renamed to analyze_mpg."
 
 	dodoc README
 }

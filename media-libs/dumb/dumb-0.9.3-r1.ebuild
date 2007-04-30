@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3-r1.ebuild,v 1.8 2006/09/02 23:30:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3-r1.ebuild,v 1.9 2007/04/30 22:57:35 genone Exp $
 
 IUSE="debug"
 
@@ -48,20 +48,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "DUMB's core has been installed. This will enable you to convert module"
-	einfo "files to PCM data (ready for sending to /dev/dsp, writing to a .wav"
-	einfo "file, piping through oggenc, etc.)."
-	einfo
-	einfo "If you are using Allegro, you will also want to 'emerge aldumb'. This"
-	einfo "provides you with a convenient API for playing module files through"
-	einfo "Allegro's sound system, and also enables DUMB to integrate with"
-	einfo "Allegro's datafile system so you can add modules to datafiles."
-	einfo
-	einfo "As a developer, when you distribute your game and write your docs, be"
-	einfo "aware that 'dumb' and 'aldumb' actually come from the same download."
-	einfo "People who don't use Gentoo will only have to download and install one"
-	einfo "package. See /usr/share/doc/${PF}/readme.txt.gz for details on"
-	einfo "how DUMB would be compiled manually."
-	einfo
+	elog
+	elog "DUMB's core has been installed. This will enable you to convert module"
+	elog "files to PCM data (ready for sending to /dev/dsp, writing to a .wav"
+	elog "file, piping through oggenc, etc.)."
+	elog
+	elog "If you are using Allegro, you will also want to 'emerge aldumb'. This"
+	elog "provides you with a convenient API for playing module files through"
+	elog "Allegro's sound system, and also enables DUMB to integrate with"
+	elog "Allegro's datafile system so you can add modules to datafiles."
+	elog
+	elog "As a developer, when you distribute your game and write your docs, be"
+	elog "aware that 'dumb' and 'aldumb' actually come from the same download."
+	elog "People who don't use Gentoo will only have to download and install one"
+	elog "package. See /usr/share/doc/${PF}/readme.txt.gz for details on"
+	elog "how DUMB would be compiled manually."
+	elog
 }

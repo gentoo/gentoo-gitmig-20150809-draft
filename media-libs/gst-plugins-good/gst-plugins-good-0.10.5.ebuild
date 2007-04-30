@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.5.ebuild,v 1.2 2007/02/16 13:11:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.5.ebuild,v 1.3 2007/04/30 23:04:07 genone Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-good gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -52,12 +52,12 @@ pkg_postinst () {
 	gnome2_pkg_postinst
 
 	echo ""
-	einfo "The Gstreamer plugins setup has changed quite a bit on Gentoo,"
-	einfo "applications now should provide the basic plugins needed."
-	echo ""
-	einfo "The new seperate plugins are all named 'gst-plugins-<plugin>'."
-	einfo "To get a listing of currently available plugins execute 'emerge -s gst-plugins-'."
-	einfo "In most cases it shouldn't be needed though to emerge extra plugins."
+	elog "The Gstreamer plugins setup has changed quite a bit on Gentoo,"
+	elog "applications now should provide the basic plugins needed."
+	elog ""
+	elog "The new seperate plugins are all named 'gst-plugins-<plugin>'."
+	elog "To get a listing of currently available plugins execute 'emerge -s gst-plugins-'."
+	elog "In most cases it shouldn't be needed though to emerge extra plugins."
 }
 
 pkg_postrm() {
