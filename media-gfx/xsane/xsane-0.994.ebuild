@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.994.ebuild,v 1.1 2007/03/07 13:19:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.994.ebuild,v 1.2 2007/04/30 22:54:57 genone Exp $
 
 inherit eutils
 
@@ -73,10 +73,8 @@ src_install() {
 
 pkg_postinst() {
 	if [ x${OLDXSANE} = 'xyes' ]; then
-		einfo ""
 		ewarn "If you are upgrading from <=xsane-0.93, please make sure to"
 		ewarn "remove ~/.sane/xsane/xsane.rc _before_ you start xsane for"
 		ewarn "the first time."
-		einfo ""
 	fi
 }
