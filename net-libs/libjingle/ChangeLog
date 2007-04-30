@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libjingle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.8 2007/04/15 17:25:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.9 2007/04/30 22:05:15 tester Exp $
+
+*libjingle-0.3.11 (30 Apr 2007)
+
+  30 Apr 2007; <tester@gentoo.org> +libjingle-0.3.11.ebuild:
+  Version bump
 
 *libjingle-0.3.10 (15 Apr 2007)
 
