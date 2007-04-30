@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2780 2007/04/30 11:10:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2781 2007/04/30 16:24:42 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1638,6 +1638,7 @@ sci-geosciences/mapserver:gdal - Enables gdal library support
 sci-geosciences/mapserver:geos - Enables geos library support
 sci-geosciences/mapserver:postgis - Enables postgis support 
 sci-geosciences/mapserver:proj - Enables proj library support (geographic projections)
+sci-libs/fftw:float - Links default library to single precision instead of double (symlinks only)
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
 sci-libs/gdal:gml - Enables support for xerces-c API
