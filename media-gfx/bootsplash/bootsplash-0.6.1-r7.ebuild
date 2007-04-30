@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.10 2007/04/22 14:22:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.11 2007/04/30 21:17:39 genone Exp $
 
 inherit eutils
 
@@ -88,24 +88,24 @@ pkg_postinst() {
 	fi
 
 	echo ""
-	einfo "Execute \`bootsplash_patch\` to have your kernel sources in"
-	einfo "/usr/src/linux patched with the Framebuffer Bootsplash patches."
-	einfo
-	einfo "You can also use:"
-	einfo "    bootsplash_patch /path/to/your/custom/kernel/"
-	einfo "to patch your custom kernel sources."
-	echo ""
+	elog "Execute \`bootsplash_patch\` to have your kernel sources in"
+	elog "/usr/src/linux patched with the Framebuffer Bootsplash patches."
+	elog
+	elog "You can also use:"
+	elog "    bootsplash_patch /path/to/your/custom/kernel/"
+	elog "to patch your custom kernel sources."
+	elog ""
 	ewarn "If you have already patched the kernel then you only need to copy"
 	ewarn "an initrd from /usr/share/${PN} to /boot"
-	echo ""
-	einfo "Run:"
-	einfo "    rc-update add bootsplash default"
-	einfo "to change the console images after startup"
-	echo ""
-	einfo "If you want to automatically generate configs for a new resolution"
-	einfo "you can use the \`bootsplash_resize\` script. More info:"
-	einfo "    bootsplash_resize -h"
-	echo ""
+	ewarn ""
+	elog "Run:"
+	elog "    rc-update add bootsplash default"
+	elog "to change the console images after startup"
+	elog ""
+	elog "If you want to automatically generate configs for a new resolution"
+	elog "you can use the \`bootsplash_resize\` script. More info:"
+	elog "    bootsplash_resize -h"
+	elog ""
 	ewarn "If you're using bootsplash with a pre-2.6.7 kernel, it will only"
 	ewarn "work in 16bpp modes."
 	echo ""

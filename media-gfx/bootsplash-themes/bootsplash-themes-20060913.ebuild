@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.2 2006/09/15 09:31:11 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.3 2007/04/30 21:19:33 genone Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -196,7 +196,7 @@ src_unpack() {
 	cd ${S}
 
 	# clean it up a little, it's supposed to be config files, not scripts
-	einfo "Cleaning up the themes"
+	elog "Cleaning up the themes"
 	find -name *.sh -exec rm -f "{}" \; 2>/dev/null
 	find -name rc.d -exec rm -rf "{}" \; 2>/dev/null
 	find -name rc* -exec rm -f "{}" \; 2>/dev/null
@@ -217,7 +217,7 @@ src_unpack() {
 	rm -f Ayo/config/bootsplash-1600x1200.cfg
 
 	# gentooify all paths
-	einfo "Gentoo-ifying all paths"
+	elog "Gentoo-ifying all paths"
 	for i in `grep "/etc/bootsplash/themes" -lR *` ; do
 		sed -i 's#/etc/bootsplash/themes#/etc/bootsplash#g' "$i"
 	done
@@ -238,7 +238,7 @@ src_install() {
 
 	if has_version "media-gfx/splashutils" ; then
 		for i in * ; do
-			einfo "Converting ${i}"
+			elog "Converting ${i}"
 			[ -z "$(cd ${i} ; find -regex '.*config/bootsplash-[0-9]+x[0-9]+.cfg')" ] && continue
 			sed -i "s#/etc/bootsplash#${S}#g" ${i}/config/*.cfg
 			bootsplash2fbsplash --bootsplash-path "${S}" --fbsplash-path "${D}/etc/splash" "${i}"
@@ -270,29 +270,29 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The themes provided in this package come directly from bootsplash.de"
-	einfo "with only some very basic fixes applied along the way. Some of them"
-	einfo "might not work properly on your system, some might not support verbose"
-	einfo "or silent mode, or might only support a single resolution."
-	echo ""
+	elog "The themes provided in this package come directly from bootsplash.de"
+	elog "with only some very basic fixes applied along the way. Some of them"
+	elog "might not work properly on your system, some might not support verbose"
+	elog "or silent mode, or might only support a single resolution."
+	elog ""
 
 	if has_version "media-gfx/splashutils" ; then
-		einfo "The themes have been automatically converted to a format recognized"
-		einfo "by splashutils. Note that the conversion process is purely automatical"
-		einfo "and therefore 'dumb'. Some themes might not work, or work incorrectly."
-		einfo "If you happen to find a theme that you like, but which doesn't work"
-		einfo "after it has been automatically converted to the new format, please"
-		einfo "fix it manually and submit for inclusion into a generic splashutils"
-		einfo "theme package by posting it on bugzilla (http://bugs.gentoo.org/)"
-		einfo "or sending it directly to the maintainer of this package."
+		elog "The themes have been automatically converted to a format recognized"
+		elog "by splashutils. Note that the conversion process is purely automatical"
+		elog "and therefore 'dumb'. Some themes might not work, or work incorrectly."
+		elog "If you happen to find a theme that you like, but which doesn't work"
+		elog "after it has been automatically converted to the new format, please"
+		elog "fix it manually and submit for inclusion into a generic splashutils"
+		elog "theme package by posting it on bugzilla (http://bugs.gentoo.org/)"
+		elog "or sending it directly to the maintainer of this package."
 	else
-		einfo "When testing the themes, please make sure you're running in a 16bpp"
-		einfo "mode. 16bpp was the only supported color depth in the original bootsplash"
-		einfo "patches. The version of the patch that you happen to be using might"
-		einfo "work with other depths, but only 16bpp is guaranteed to be supported."
-		echo ""
-		einfo "You might want to use:"
-		einfo "  /sbin/splash -s -u 0 /etc/bootsplash/<theme>/config/<configfile>.cfg"
-		einfo "to test the themes. Note, that some of them don't support verbose mode."
+		elog "When testing the themes, please make sure you're running in a 16bpp"
+		elog "mode. 16bpp was the only supported color depth in the original bootsplash"
+		elog "patches. The version of the patch that you happen to be using might"
+		elog "work with other depths, but only 16bpp is guaranteed to be supported."
+		elog ""
+		elog "You might want to use:"
+		elog "  /sbin/splash -s -u 0 /etc/bootsplash/<theme>/config/<configfile>.cfg"
+		elog "to test the themes. Note, that some of them don't support verbose mode."
 	fi
 }

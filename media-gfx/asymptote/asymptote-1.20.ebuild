@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.20.ebuild,v 1.3 2007/03/02 12:48:14 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.20.ebuild,v 1.4 2007/04/30 21:14:19 genone Exp $
 
 inherit eutils elisp-common
 
@@ -113,8 +113,8 @@ pkg_postinst() {
 	einfo 'Updating TeX tree...'
 	texhash &> /dev/null
 
-	einfo 'Use the variable ASYMPTOTE_PSVIEWER to set the postscript viewer'
-	einfo 'Use the variable ASYMPTOTE_PDFVIEWER to set the PDF viewer'
+	elog 'Use the variable ASYMPTOTE_PSVIEWER to set the postscript viewer'
+	elog 'Use the variable ASYMPTOTE_PDFVIEWER to set the PDF viewer'
 
 	use emacs && elisp-site-regen
 }

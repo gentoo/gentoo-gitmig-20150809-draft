@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.7 2007/04/29 18:08:16 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.8 2007/04/30 21:14:19 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org> asymptote-1.20.ebuild,
+  asymptote-1.21.ebuild, asymptote-1.26.ebuild:
+  Replacing einfo with elog
 
   29 Apr 2007; Dominik Stadler <centic@gentoo.org>
   +files/asymptote-1.26-configure-ac.patch,
