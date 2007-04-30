@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0-r1.ebuild,v 1.1 2007/02/18 23:02:56 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0-r1.ebuild,v 1.2 2007/04/30 19:10:56 rbu Exp $
 
 inherit eutils
 
@@ -44,7 +44,6 @@ DEPEND="
 #	python support is b0rked, waiting for upstream release to fix
 # 	python? ( dev-lang/python )
 
-
 pkg_setup() {
 	elog "If you wish to compile only specific plugins, please use"
 	elog "the LCD4LINUX_PLUGINS environment variable. Plugins must be comma separated and can be either of:"
@@ -75,7 +74,6 @@ src_compile() {
 	# they didn't have python properly set up originally.
 	#myconf="${myconf} $(use_with python)"
 	myconf="${myconf} --without-python"
-
 
 	# plugins
 	if [ -n "$LCD4LINUX_PLUGINS" ]; then

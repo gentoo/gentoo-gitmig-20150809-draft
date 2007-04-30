@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc1.ebuild,v 1.2 2007/02/25 01:58:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2.ebuild,v 1.1 2007/04/30 19:10:56 rbu Exp $
 
 inherit eutils multilib
 
@@ -52,7 +52,6 @@ DEPEND="
 	lcd_devices_png?      ( media-libs/libpng media-libs/gd )
 	lcd_devices_X?        ( x11-libs/libX11  media-libs/gd )
 	lcd_devices_serdisplib? ( dev-libs/serdisplib  media-libs/gd )"
-
 
 S="${WORKDIR}/${MY_P}"
 

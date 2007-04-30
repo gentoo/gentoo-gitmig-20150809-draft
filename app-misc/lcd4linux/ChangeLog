@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.24 2007/02/25 01:58:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.25 2007/04/30 19:10:56 rbu Exp $
+
+*lcd4linux-0.10.1_rc2 (30 Apr 2007)
+
+  30 Apr 2007; Robert Buchholz <rbu@gentoo.org>
+  -files/lcd4linux-0.10.1_rc1.initd, +files/lcd4linux-0.10.1_rc2.initd,
+  lcd4linux-0.10.0-r1.ebuild, -lcd4linux-0.10.1_rc1.ebuild,
+  +lcd4linux-0.10.1_rc2.ebuild:
+  Version bump, upstream changes include linux-2.6.21 issue
 
   25 Feb 2007; Robert Buchholz <rbu@gentoo.org> lcd4linux-0.10.1_rc1.ebuild:
   SRC_URI fixed
