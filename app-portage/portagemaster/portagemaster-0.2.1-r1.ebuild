@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.1-r1.ebuild,v 1.1 2007/04/29 01:49:19 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.1-r1.ebuild,v 1.2 2007/04/30 20:16:03 genone Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -30,7 +30,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Programs needed for default configuration to work are"
-	einfo "xterm,nano (for editor) and mozilla (for browser)"
-	einfo "You can change these in ~/.portagemaster/conf file"
+	elog "Programs needed for default configuration to work are"
+	elog "xterm,nano (for editor) and mozilla (for browser)"
+	elog "You can change these in ~/.portagemaster/conf file"
 }
