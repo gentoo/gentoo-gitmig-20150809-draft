@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7201 2007/04/29 23:27:53 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7202 2007/04/30 11:56:35 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (30 Apr 2007)
+# Please use the Eclipse update manager to install this.
+# This ebuild is for Eclipse 3.0 which is going away. If you want
+# this to be installable via emerge, please submit a from source ebuild
+# that works with 3.2. (Might not be as easy as it sounds). In Java
+# junkyard after 30 days.
+dev-util/eclipse-pydev-bin
 
 # Donnie Berkholz <dberkholz@gentoo.org> (29 Apr 2007)
 # Masked for testing
