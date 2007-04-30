@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.90 2007/03/28 06:06:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.91 2007/04/30 19:43:20 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -326,7 +326,7 @@ BCAT="sys-devel"  ; BPKG="binutils"      ; BVER="[latest]" ; BUSE=""
 GCAT="sys-devel"  ; GPKG="gcc"           ; GVER="[latest]" ; GUSE=""
 KCAT="sys-kernel" ; KPKG="linux-headers" ; KVER="[latest]" ; KUSE=""
 LCAT="sys-libs"   ; LPKG=""              ; LVER="[latest]" ; LUSE=""
-GUSE_DISABLE="-boundschecking -fortran -gtk -gcj -mudflap -objc -objc++ -objc-gc"
+GUSE_DISABLE="-boundschecking -fortran -gtk -gcj -mudflap -objc -objc++ -objc-gc -d"
 GUSE_DISABLE_STAGE_2=${GUSE_DISABLE/-fortran}
 WITH_HEADERS="COW"   WITH_DEF_HEADERS="no"
 EX_FAST="no"
