@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/meatoo-0.1.0.ebuild,v 1.1 2007/04/26 15:53:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/meatoo-0.1.1.ebuild,v 1.1 2007/04/30 06:36:28 pythonhead Exp $
 
 inherit distutils
 
