@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.75 2007/04/16 17:52:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.76 2007/04/30 16:05:01 phreak Exp $
+
+*git-sources-2.6.21-r2 (30 Apr 2007)
+
+  30 Apr 2007; Christian Heim <phreak@gentoo.org>
+  -git-sources-2.6.21_rc2-r4.ebuild, -git-sources-2.6.21_rc3-r6.ebuild,
+  -git-sources-2.6.21_rc6-r6.ebuild, -git-sources-2.6.21_rc6-r7.ebuild,
+  -git-sources-2.6.21_rc7.ebuild, +git-sources-2.6.21-r2.ebuild:
+  Revision bump, first git prepatch after 2.6.21. Removing the _rc' ones.
 
 *git-sources-2.6.21_rc7 (16 Apr 2007)
 
