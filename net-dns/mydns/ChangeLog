@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/mydns
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.23 2007/04/29 18:15:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.24 2007/04/30 10:32:09 matsuu Exp $
+
+*mydns-1.1.0-r1 (30 Apr 2007)
+
+  30 Apr 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/04-update-smash-fix.dpatch, files/mydns.rc6,
+  +mydns-1.1.0-r1.ebuild:
+  Fixed security bug #176130.
+  Fixed bug #162644.
 
   29 Apr 2007; Torsten Veller <tove@gentoo.org> mydns-1.1.0.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
