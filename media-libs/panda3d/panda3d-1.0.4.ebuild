@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.0.4.ebuild,v 1.3 2005/07/06 18:02:03 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.0.4.ebuild,v 1.4 2007/04/30 23:28:32 genone Exp $
 
 inherit eutils
 
@@ -77,13 +77,13 @@ src_install()
 
 pkg_postinst()
 {
-	einfo "Panda3d is installed in /opt/panda3d"
+	elog "Panda3d is installed in /opt/panda3d"
 	if use doc ; then
-		einfo "Documentation is avaliable in /opt/panda3d/html"
-		einfo "Samples are avalaible in /opt/panda3d/samples"
+		elog "Documentation is avaliable in /opt/panda3d/html"
+		elog "Samples are avalaible in /opt/panda3d/samples"
 	fi
-	einfo "For C++ compiling, include directory must be set:"
-	einfo "g++ -I/opt/panda3d/include [other flags]"
-	einfo "Python scripts must be ran with ppython"
-	einfo "Tutorials avaliable at http://panda3d.org"
+	elog "For C++ compiling, include directory must be set:"
+	elog "g++ -I/opt/panda3d/include [other flags]"
+	elog "Python scripts must be ran with ppython"
+	elog "Tutorials avaliable at http://panda3d.org"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0.ebuild,v 1.5 2007/02/22 17:12:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0.ebuild,v 1.6 2007/04/30 23:25:32 genone Exp $
 
 inherit eutils toolchain-funcs java-pkg perl-module python distutils
 
@@ -92,8 +92,8 @@ src_install() {
 
 pkg_postinst() {
 	if use java ; then
-		einfo "You may want to add ming to the java classpath by running"
-		einfo "java-config --add-[user|system]-classpath=ming"
+		elog "You may want to add ming to the java classpath by running"
+		elog "java-config --add-[user|system]-classpath=ming"
 	fi
 
 	if use perl ; then
