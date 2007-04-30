@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.1 2007/01/24 04:47:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.2 2007/04/30 13:23:14 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( http://www.elegosoft.com/cm3/cm3-min-POSIX-LINUXLIBC6-${MY_PV}.t
 
 LICENSE="CMASS-M3 DEC-M3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
