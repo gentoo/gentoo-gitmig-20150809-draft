@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/sysrqd-9.ebuild,v 1.1 2007/03/05 22:40:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/sysrqd-9.ebuild,v 1.2 2007/04/30 20:03:39 genone Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,11 +45,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Be sure to change the initial secret in /etc/sysrqd/sysrqd.secret !"
-	einfo "As a security precaution, sysrqd is configured to only listen on"
-	einfo "127.0.0.1 by default. Change the content of /etc/sysrqd/sysrqd.bind"
-	einfo "to an IPv4 address you want it to listen on or remove the file"
-	einfo "to make it listen on any IP address (0.0.0.0)."
-	einfo
+	elog
+	elog "Be sure to change the initial secret in /etc/sysrqd/sysrqd.secret !"
+	elog "As a security precaution, sysrqd is configured to only listen on"
+	elog "127.0.0.1 by default. Change the content of /etc/sysrqd/sysrqd.bind"
+	elog "to an IPv4 address you want it to listen on or remove the file"
+	elog "to make it listen on any IP address (0.0.0.0)."
+	elog
 }
