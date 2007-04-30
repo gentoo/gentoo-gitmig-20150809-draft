@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.50 2007/04/30 12:57:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.51 2007/04/30 16:29:50 fmccor Exp $
+
+  30 Apr 2007; Ferris McCormick <fmccor@gentoo.org> rmagick-1.15.5.ebuild:
+  Stable on sparc --- Bug #176595 --- it's been around for a month and it runs
+  its examples.
 
 *rmagick-1.15.6 (30 Apr 2007)
 
