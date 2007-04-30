@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.41 2007/04/28 17:47:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.42 2007/04/30 06:45:49 robbat2 Exp $
+
+  30 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> files/init-keepalived:
+  Make init.d baselayout2 safe.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> keepalived-1.1.11.ebuild,
   keepalived-1.1.12.ebuild, keepalived-1.1.13.ebuild:
