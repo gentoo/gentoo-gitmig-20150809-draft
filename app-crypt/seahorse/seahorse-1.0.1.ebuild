@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.1 2007/04/11 07:23:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.2 2007/04/30 20:06:06 genone Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -50,18 +50,18 @@ DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 pkg_setup() {
 	if ! use dbus ; then
 		if use gedit ; then
-			einfo
-			einfo "The GEdit plugin requires that you build seahorse with DBUS support."
-			einfo
+			elog
+			elog "The GEdit plugin requires that you build seahorse with DBUS support."
+			elog
 		fi
 
 		if use gnome ; then
-			einfo
-			einfo "The panel applet requires that you build seahorse with DBUS support."
-			einfo
+			elog
+			elog "The panel applet requires that you build seahorse with DBUS support."
+			elog
 		fi
 
-		einfo "Please add dbus to your USE flags and re-emerge seahorse"
+		eerror "Please add dbus to your USE flags and re-emerge seahorse"
 		eerror "plugins require dbus support"
 	fi
 
