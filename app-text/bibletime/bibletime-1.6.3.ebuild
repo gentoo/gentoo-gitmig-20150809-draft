@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.3.ebuild,v 1.2 2007/04/26 22:07:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.3.ebuild,v 1.3 2007/04/30 20:18:13 genone Exp $
 
 inherit kde eutils versionator
 
@@ -59,11 +59,11 @@ src_compile() {
 
 		# Adapted from kde.eclass
 		if [[ -z ${LINGUAS} ]]; then
-			einfo "You can add some of the translations of the interface and"
-			einfo "documentation by setting the \${LINGUAS} variable to the"
-			einfo "languages you want installed."
-			einfo
-			einfo "Enabling English interface and documentation only."
+			elog "You can add some of the translations of the interface and"
+			elog "documentation by setting the \${LINGUAS} variable to the"
+			elog "languages you want installed."
+			elog
+			elog "Enabling English interface and documentation only."
 		else
 			if [[ -n ${LANGS} ]]; then
 				MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | tr ' ' '\n' | sort | uniq -d))
@@ -72,7 +72,7 @@ src_compile() {
 				TMP+=" "
 				MAKE_PO=${TMP// /.po }
 
-				einfo "Enabling translations for: ${MAKE_PO}"
+				elog "Enabling translations for: ${MAKE_PO}"
 				sed -i -e "s:^POFILES =.*:POFILES = ${MAKE_PO}:" "${KDE_S}/po/Makefile.am" \
 					|| die "sed for locale failed"
 				rm -f "${KDE_S}/configure"
@@ -86,7 +86,7 @@ src_compile() {
 				TMP=$(echo $(echo "${TMP/uk/ua}" | sort | uniq))
 				MAKE_DOC=${TMP}
 
-				einfo "Enabling documentation for: ${MAKE_DOC}"
+				elog "Enabling documentation for: ${MAKE_DOC}"
 				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC}:" \
 					"${KDE_S}/docs/Makefile.am" || die "sed for locale failed"
 
