@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.105 2007/03/04 11:14:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.106 2007/04/30 23:35:17 aross Exp $
+
+*libpq-8.0.13 (30 Apr 2007)
+
+  30 Apr 2007; Andrew Ross <aross@gentoo.org>
+  +files/libpq-8.0.13-gentoo.patch, +libpq-8.0.13.ebuild:
+  Version bump (bug #175791).
 
   04 Mar 2007; Simon Stelling <blubb@gentoo.org> libpq-7.4.16.ebuild,
   libpq-8.0.12.ebuild:
