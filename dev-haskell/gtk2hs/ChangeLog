@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.30 2007/04/29 19:33:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.31 2007/04/30 10:16:07 dcoutts Exp $
+
+  30 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> gtk2hs-0.9.11.ebuild:
+  Add missing dep on dev-haskell/mtl
 
   29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> -gtk2hs-0.9.9.ebuild,
   -gtk2hs-0.9.10.ebuild, gtk2hs-0.9.10-r1.ebuild:
