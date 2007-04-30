@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.1.ebuild,v 1.1 2007/04/21 17:17:18 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.1-r1.ebuild,v 1.1 2007/04/30 17:57:41 rbu Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,8 @@ SRC_URI="http://herrie.info/distfiles/${P}.tar.bz2"
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao http modplug mp3 scrobbler sdl sndfile vorbis xspf unicode linguas_nl linguas_tr linguas_de linguas_pl"
+IUSE="ao http modplug mp3 scrobbler sdl sndfile vorbis xspf unicode
+	linguas_de linguas_nl linguas_pl linguas_tr"
 
 DEPEND="sys-libs/ncurses
 	>=dev-libs/glib-2.0
@@ -72,5 +73,4 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README ChangeLog
-	mv  ${D}/etc/herrie.conf{.sample,}
 }
