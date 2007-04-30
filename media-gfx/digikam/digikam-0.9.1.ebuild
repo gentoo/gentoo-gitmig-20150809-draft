@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.1.ebuild,v 1.3 2007/04/23 16:15:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.1.ebuild,v 1.4 2007/04/30 21:42:42 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -64,12 +64,12 @@ src_unpack(){
 	rm -f "${S}/configure" "${S_DOC}/configure"
 
 	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
-	einfo "Enabling translations for: en ${MAKE_PO}"
+	elog "Enabling translations for: en ${MAKE_PO}"
 	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" "${S}/po/Makefile.am" || die "sed for locale failed"
 
 	if use doc; then
 		local MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
-		einfo "Enabling documentation for: en ${MAKE_DOC}"
+		elog "Enabling documentation for: en ${MAKE_DOC}"
 	fi
 }
 
