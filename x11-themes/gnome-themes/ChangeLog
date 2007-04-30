@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.155 2007/04/25 01:33:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.156 2007/04/30 01:56:36 dang Exp $
+
+  30 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-themes-2.14.2.ebuild:
+  Fix header date
 
 *gnome-themes-2.18.1 (25 Apr 2007)
 
