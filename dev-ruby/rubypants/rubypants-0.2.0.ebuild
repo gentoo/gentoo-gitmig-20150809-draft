@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0.ebuild,v 1.1 2007/04/18 11:46:14 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0.ebuild,v 1.2 2007/04/30 20:34:10 genone Exp $
 
 inherit ruby gems
 
@@ -19,5 +19,5 @@ DEPEND=">=dev-lang/ruby-1.8.2"
 RDEPEND="${DEPEND}"
 
 pkg_postinst() {
-	einfo "RubyPants uses an API compatible with RedCloth and BlueCloth"
+	elog "RubyPants uses an API compatible with RedCloth and BlueCloth"
 }

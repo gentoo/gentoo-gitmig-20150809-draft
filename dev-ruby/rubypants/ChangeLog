@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubypants
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.1 2007/04/18 11:46:14 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.2 2007/04/30 20:34:10 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org> rubypants-0.2.0.ebuild:
+  Replacing einfo with elog
 
 *rubypants-0.2.0 (18 Apr 2007)
 
