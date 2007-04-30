@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.99.2.ebuild,v 1.3 2006/05/13 17:11:21 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.99.2.ebuild,v 1.4 2007/04/30 23:45:20 genone Exp $
 
 inherit eutils
 
@@ -81,11 +81,8 @@ src_install() {
 pkg_postinst() {
 	if useq sse
 	then
-		einfo ""
-		einfo "Start ardour with the -o argument to use the optimized SSE functions:"
-		einfo ""
-		einfo "	  ardour -o"
-		einfo ""
+		elog "Start ardour with the -o argument to use the optimized SSE functions:"
+		elog "	  ardour -o"
 	fi
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.95 2007/04/20 22:30:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.96 2007/04/30 23:51:54 genone Exp $
+
+  30 Apr 2007; Marius Mauch <genone@gentoo.org> easytag-1.1.ebuild:
+  Replacing einfo with elog
 
   20 Apr 2007; Joseph Jezak <josejx@gentoo.org> easytag-2.0.ebuild:
   Marked ppc stable for bug #145777.

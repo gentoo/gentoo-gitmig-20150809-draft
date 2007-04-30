@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.1.ebuild,v 1.12 2006/10/28 00:59:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.1.ebuild,v 1.13 2007/04/30 23:51:54 genone Exp $
 
 inherit eutils
 
@@ -39,6 +39,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This version of EasyTAG is GTK+ 1.2 based only. GTK+ 2.4 support is"
-	einfo "available in the easytag-1.99.x releases (to become 2.0)."
+	elog "This version of EasyTAG is GTK+ 1.2 based only. GTK+ 2.4 support is"
+	elog "available in the easytag-1.99.x releases (to become 2.0)."
 }

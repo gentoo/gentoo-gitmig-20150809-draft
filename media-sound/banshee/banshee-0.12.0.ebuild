@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.12.0.ebuild,v 1.1 2007/03/15 02:09:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.12.0.ebuild,v 1.2 2007/04/30 23:47:17 genone Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -95,9 +95,9 @@ src_install() {
 }
 pkg_postinst() {
 	gnome2_pkg_postinst
-	einfo
-	einfo "In case you have an ipod please rebuild this package with USE=ipod"
-	einfo "If you have a audio player supported by libnjb please"
-	einfo "rebuild this package with USE=njb"
-	einfo
+	elog
+	elog "In case you have an ipod please rebuild this package with USE=ipod"
+	elog "If you have a audio player supported by libnjb please"
+	elog "rebuild this package with USE=njb"
+	elog
 }
