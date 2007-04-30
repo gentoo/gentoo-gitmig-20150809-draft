@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.16 2006/11/05 15:23:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.17 2007/04/30 14:52:43 matsuu Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -31,5 +31,7 @@ src_compile() {
 src_install() {
 	einstall || die "einstall failed"
 	dodoc CHANGES ChangeLog README license.terms
+	# Bug 115470 
+	rm doc/panedwindow.n
 	doman doc/*.n
 }
