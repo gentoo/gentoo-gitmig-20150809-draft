@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdnssd-avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.16 2007/02/14 17:37:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.17 2007/04/30 20:27:16 carlo Exp $
+
+  30 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdnssd-avahi-0.1.2.ebuild:
+  Fix thinko.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   kdnssd-avahi-0.1.2.ebuild:
