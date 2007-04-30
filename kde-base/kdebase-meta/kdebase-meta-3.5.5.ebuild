@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.5.5.ebuild,v 1.10 2006/12/11 14:49:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.5.5.ebuild,v 1.11 2007/04/30 15:20:55 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -18,7 +18,7 @@ $(deprange $PV $MAXKDEVER kde-base/drkonqi)
 $(deprange $PV $MAXKDEVER kde-base/kappfinder)
 $(deprange $PV $MAXKDEVER kde-base/kate)
 $(deprange 3.5.0 $MAXKDEVER kde-base/kcheckpass)
-$(deprange 3.5.0 $MAXKDEVER kde-base/kcminit)
+$(deprange 3.5.3 $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kcontrol)
 $(deprange 3.5.1 $MAXKDEVER kde-base/kdcop)
 $(deprange 3.5.0 $MAXKDEVER kde-base/kdebugdialog)

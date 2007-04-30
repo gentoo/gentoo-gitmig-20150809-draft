@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.71 2007/02/04 02:00:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.72 2007/04/30 15:20:55 carlo Exp $
+
+  30 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdebase-meta-3.5.5.ebuild:
+  Minor dependency correction, bug #159317.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kdebase-meta-3.5.2.ebuild:
