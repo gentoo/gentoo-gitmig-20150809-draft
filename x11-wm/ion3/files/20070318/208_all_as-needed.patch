@@ -1,0 +1,12 @@
+diff -uNr ion-3ds-20070318.orig/de/Makefile ion-3ds-20070318/de/Makefile
+--- ion-3ds-20070318.orig/de/Makefile	2007-03-18 21:31:37.000000000 +0100
++++ ion-3ds-20070318/de/Makefile	2007-04-30 17:30:23.000000000 +0200
+@@ -17,6 +17,8 @@
+ 
+ MAKE_EXPORTS=de
+ 
++LDFLAGS+=-lXext
++
+ ######################################
+ 
+ include $(TOPDIR)/build/rules.mk

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070318-r1.ebuild,v 1.1 2007/04/28 21:52:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070318-r2.ebuild,v 1.1 2007/04/30 16:04:17 mabi Exp $
 
 inherit eutils flag-o-matic
 
@@ -59,7 +59,6 @@ src_unpack() {
 	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" epatch
 	use iontruetype && epatch ${FILESDIR}/xft-ion3-${PV}.patch
 
-
 	# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
 	sed -i 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g' Makefile */Makefile */*/Makefile build/rules.mk
 
@@ -96,8 +95,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-
-	filter-ldflags "-Wl,--as-needed"
 
 	myconf="${myconf} `use_enable iontruetype xft`"
 
