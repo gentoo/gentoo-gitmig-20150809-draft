@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.2 2007/04/22 11:45:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.3 2007/04/30 09:16:51 dragonheart Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	readline? ( sys-libs/readline )
 	pam? ( sys-libs/pam )
 	ldap? ( net-nds/openldap )
-	kerberos? ( app-crypt/mit-krb5 )
+	kerberos? ( virtual/krb5 )
 	>=dev-libs/openssl-0.9.8
 	iconv? ( virtual/libiconv )"
 
@@ -226,6 +226,8 @@ src_install() {
 
 	docinto setkey
 	dodoc src/setkey/sample.cf
+
+	dodir /etc/racoon
 
 	# RFC are only available from CVS for the moment, see einfo below
 	#docinto "rfc"

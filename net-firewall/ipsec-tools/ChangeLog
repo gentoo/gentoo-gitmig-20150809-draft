@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.51 2007/04/22 11:45:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.52 2007/04/30 09:16:51 dragonheart Exp $
+
+  30 Apr 2007; Daniel Black <dragonheart@gentoo.org>
+  ipsec-tools-0.6.7.ebuild:
+  virtual/krb5 usage as suggest by Bill Merriam - bug #173219 comment #7
 
   22 Apr 2007; Daniel Black <dragonheart@gentoo.org>
   ipsec-tools-0.6.7.ebuild:
