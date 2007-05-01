@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0_beta7.ebuild,v 1.1 2007/05/01 03:04:18 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0_beta7.ebuild,v 1.2 2007/05/01 04:11:31 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib mono autotools perl-app gnome2
 
@@ -53,6 +53,8 @@ RDEPEND="
 	mono? ( dev-lang/mono )"
 
 DEPEND="$RDEPEND
+	dev-lang/perl
+	dev-perl/XML-Parser
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
@@ -76,6 +78,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 #   x11-plugins/gaim-otr
 #   x11-plugins/gaimosd
 #   x11-plugins/guifications
+#   x11-plugins/gaim-xfire
 
 # List of plugins
 #   x11-plugins/pidgin-extprefs
@@ -100,7 +103,7 @@ print_pidgin_warning() {
 	ewarn
 	ewarn "If you are merging ${MY_P} from an earlier version of gaim,"
 	ewarn "you may need to re-merge any plugins like gaim-encryption or"
-	wearn " gaim-snpp."
+	ewarn " gaim-snpp (when they are ported to pidgin!)."
 	ewarn
 	ewarn "If you experience problems with pidgin, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
