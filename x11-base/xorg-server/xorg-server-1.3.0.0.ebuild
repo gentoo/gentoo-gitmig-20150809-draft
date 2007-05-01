@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.3 2007/05/01 05:44:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.4 2007/05/01 07:45:22 drac Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -98,7 +98,8 @@ IUSE_VIDEO_CARDS="
 	video_cards_vga
 	video_cards_via
 	video_cards_vmware
-	video_cards_voodoo"
+	video_cards_voodoo
+	video_cards_nvidia"
 IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
@@ -258,9 +259,10 @@ PDEPEND="
 
 		video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
 		video_cards_nvidia? ( || (
+				>=x11-drivers/nvidia-drivers-1.0.9755-r1
 			)
 		)
-		!x11-drivers/nvidia-drivers
+		!<x11-drivers/nvidia-drivers-1.0.9755-r1
 		!x11-drivers/nvidia-legacy-drivers
 		!x11-drivers/ati-drivers
 	)"
