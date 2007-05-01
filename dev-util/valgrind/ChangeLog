@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.73 2007/03/04 20:22:42 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.74 2007/05/01 20:23:47 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> valgrind-3.2.3.ebuild:
+  Stable on ppc64; bug #176707
 
   04 Mar 2007; Maurice van der Pot <griffon26@gentoo.org>
   valgrind-3.2.3.ebuild:
