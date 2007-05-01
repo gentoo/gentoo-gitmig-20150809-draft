@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.39.ebuild,v 1.5 2006/11/11 09:18:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.39.ebuild,v 1.6 2007/05/01 17:15:15 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -61,13 +61,9 @@ src_install() {
 	dosym et/com_err.h /usr/include/com_err.h
 
 	dolib.a lib/libcom_err.a || die "dolib.a"
-	if [[ ${USERLAND} == "Darwin" ]] ; then
-		dosym /usr/$(get_libdir)/libcom_err.*.dylib /usr/$(get_libdir)/libcom_err.dylib || die
-	else
-		dodir /$(get_libdir)
-		mv "${D}"/usr/$(get_libdir)/*$(get_libname)* "${D}"/$(get_libdir)/ || die "move .so"
-		gen_usr_ldscript libcom_err.so
-	fi
+	dodir /$(get_libdir)
+	mv "${D}"/usr/$(get_libdir)/*$(get_libname)* "${D}"/$(get_libdir)/ || die "move $(get_libname)"
+	gen_usr_ldscript libcom_err$(get_libname)
 }
 
 pkg_postinst() {
