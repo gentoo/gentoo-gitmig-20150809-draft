@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.41 2007/04/29 16:35:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.42 2007/05/01 09:36:29 armin76 Exp $
+
+  01 May 2007; Raúl Porcel <armin76@gentoo.org> worker-2.14.0-r1.ebuild,
+  worker-2.14.4.ebuild:
+  Add ~ia64 wrt bug 172755
 
 *worker-2.14.4 (29 Apr 2007)
 
