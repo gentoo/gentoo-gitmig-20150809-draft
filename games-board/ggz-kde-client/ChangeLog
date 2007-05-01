@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-kde-client
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.7 2007/02/22 15:11:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.8 2007/05/01 16:21:47 nyhm Exp $
+
+  01 May 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/ggz-kde-client-0.0.14-howl.patch, ggz-kde-client-0.0.14.ebuild:
+  Add avahi USE flag, bug #172712
 
 *ggz-kde-client-0.0.14 (22 Feb 2007)
 
