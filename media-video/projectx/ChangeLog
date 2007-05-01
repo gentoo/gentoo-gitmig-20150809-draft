@@ -1,6 +1,13 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.22 2007/03/11 22:11:27 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.23 2007/05/01 23:48:22 sbriesen Exp $
+
+*projectx-0.90.4.00-r3 (01 May 2007)
+
+  01 May 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  +projectx-0.90.4.00-r3.ebuild:
+  added patches (BrowserLauncher2, subtitle clut, subtitle charset), added
+  fast IDCT implementation.
 
   11 Mar 2007; Stefan Briesenick <sbriesen@gentoo.org>
   files/build-0.90.4.xml, projectx-0.90.4.00-r2.ebuild:
