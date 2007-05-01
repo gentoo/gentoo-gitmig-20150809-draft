@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.10.0_rc1.ebuild,v 1.1 2007/05/01 05:59:19 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.10.0_rc1.ebuild,v 1.2 2007/05/01 06:12:55 trapni Exp $
 
 inherit webapp depend.php
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="imagemagick math mysql postgres restrict"
 
-S="${WORKDIR}/${P/.0_/}"
+S="${WORKDIR}/${P/_/}"
+#S="${WORKDIR}/${P/.0_/}"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 
@@ -46,7 +47,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/jobindexlength-mysql.patch
+
+	# XXX: besides, is/was this patch really that required? if so, why? (trapni)
+#	epatch ${FILESDIR}/jobindexlength-mysql.patch
+
 	if use restrict ; then
 		epatch ${FILESDIR}/access_restrict.patch
 	fi
