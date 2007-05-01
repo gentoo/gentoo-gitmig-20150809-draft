@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.29 2007/05/01 11:33:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.30 2007/05/01 11:37:14 caster Exp $
+
+  01 May 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/java-config-wrapper-0.12-generation_1_system_vm.patch,
+  -java-config-wrapper-0.12.ebuild, -java-config-wrapper-0.12-r1.ebuild:
+  Cleanup.
 
   01 May 2007; Markus Rothe <corsair@gentoo.org>
   java-config-wrapper-0.13.ebuild:
