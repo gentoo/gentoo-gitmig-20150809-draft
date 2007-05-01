@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.5 2007/04/28 22:58:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.6 2007/05/01 09:52:28 caster Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-nodeps ant-trax"
@@ -53,6 +53,8 @@ src_unpack() {
 # TODO investigate why compiling needs junit, ie is build not sane enough to
 # devide building of test classes separate from rest of classes?
 src_compile() {
+	# bug #167445
+	use amd64 && export ANT_OPTS="-Xmx512"
 	eant core modules maven
 }
 
