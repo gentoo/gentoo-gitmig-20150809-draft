@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apt-mirror/apt-mirror-1.0.ebuild,v 1.1 2007/05/01 19:34:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apt-mirror/apt-mirror-1.0.ebuild,v 1.2 2007/05/01 19:46:21 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -8,7 +8,7 @@ inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="Annotation processing apt mirror API introduced in J2SE 5.0"
 HOMEPAGE="http://aptmirrorapi.dev.java.net/"
-SRC_URI="http://overlays.gentoo.org/svn/proj/java/wsdp-overlay/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
