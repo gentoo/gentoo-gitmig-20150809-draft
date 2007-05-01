@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/relaxngcc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.1 2007/05/01 19:19:56 nelchael Exp $
+
+*relaxngcc-1.12 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/MANIFEST.MF-1.12, +files/build.xml-1.12, +metadata.xml,
+  +relaxngcc-1.12.ebuild:
+  Initial commit of relaxngcc.
+
