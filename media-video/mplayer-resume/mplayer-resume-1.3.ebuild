@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-1.3.ebuild,v 1.4 2007/02/27 13:44:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-1.3.ebuild,v 1.5 2007/05/01 00:57:27 genone Exp $
 
 inherit depend.php
 
@@ -39,11 +39,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To get mplayer-resume to save playback position with LIRC,"
-	einfo "you will need to setup an entry in ~/.lircrc to run "
-	einfo "'get_time_pos' and then 'quit'.  More instructions are"
-	einfo "detailed in the README, but the position will not be saved"
-	einfo "until you set it up."
-	echo ""
-	einfo "Playback position files are saved in ~/.mplayer/playback"
+	elog "To get mplayer-resume to save playback position with LIRC,"
+	elog "you will need to setup an entry in ~/.lircrc to run "
+	elog "'get_time_pos' and then 'quit'.  More instructions are"
+	elog "detailed in the README, but the position will not be saved"
+	elog "until you set it up."
+	elog ""
+	elog "Playback position files are saved in ~/.mplayer/playback"
 }
