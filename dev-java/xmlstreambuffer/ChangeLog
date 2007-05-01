@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/xmlstreambuffer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.1 2007/05/01 19:05:09 nelchael Exp $
+
+*xmlstreambuffer-0.5.20070412 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +xmlstreambuffer-0.5.20070412.ebuild:
+  Initial commit of xmlstreambuffer.
+
