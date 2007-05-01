@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.6-r2.ebuild,v 1.2 2007/05/01 20:39:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.6-r2.ebuild,v 1.3 2007/05/01 20:59:13 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -26,8 +26,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	if use tcpmd5 ; then
-		get_version || \
-			KV_FULL=$(uname -r)
+		get_version || get_running_version
 	fi
 	return 0
 }
