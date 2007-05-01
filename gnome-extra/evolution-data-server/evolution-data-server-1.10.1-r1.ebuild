@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.1.ebuild,v 1.3 2007/04/19 12:07:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.1-r1.ebuild,v 1.1 2007/05/01 16:44:48 pva Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -79,6 +79,9 @@ src_unpack() {
 
 	# Rewind in camel-disco-diary to fix a crash
 	epatch "${FILESDIR}"/${PN}-1.8.0-camel-rewind.patch
+
+	# Fix vulnerability in APOP authentification; bug #174210
+	epatch "${FILESDIR}"/${PN}-APOP-auth-fix.patch
 
 #-------------Upstream GNOME look here -----------------#
 
