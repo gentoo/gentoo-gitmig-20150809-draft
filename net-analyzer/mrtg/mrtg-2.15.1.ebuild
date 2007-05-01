@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.15.1.ebuild,v 1.5 2007/04/16 07:44:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.15.1.ebuild,v 1.6 2007/05/01 18:00:04 genone Exp $
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://oss.oetiker.ch/mrtg/"
@@ -27,7 +27,7 @@ src_install () {
 }
 
 pkg_postinst(){
-	einfo "You must configure mrtg before being able to run it. Try cfgmaker."
-	einfo "The following thread may be useful:"
-	einfo "http://forums.gentoo.org/viewtopic-t-105862.html"
+	elog "You must configure mrtg before being able to run it. Try cfgmaker."
+	elog "The following thread may be useful:"
+	elog "http://forums.gentoo.org/viewtopic-t-105862.html"
 }

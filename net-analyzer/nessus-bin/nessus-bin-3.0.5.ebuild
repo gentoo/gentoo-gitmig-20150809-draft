@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.0.5.ebuild,v 1.2 2007/04/08 18:32:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.0.5.ebuild,v 1.3 2007/05/01 18:07:06 genone Exp $
 
 inherit rpm
 
@@ -60,11 +60,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You can get started running the following commands:"
-	einfo "/opt/nessus/sbin/nessus-add-first-user"
-	einfo "/opt/nessus/sbin/nessus-mkcert"
-	einfo "/etc/init.d/nessusd-bin start"
-	einfo
-	einfo "For more information about nessus, please visit"
-	einfo "${HOMEPAGE}/documentation/"
+	elog "You can get started running the following commands:"
+	elog "/opt/nessus/sbin/nessus-add-first-user"
+	elog "/opt/nessus/sbin/nessus-mkcert"
+	elog "/etc/init.d/nessusd-bin start"
+	elog
+	elog "For more information about nessus, please visit"
+	elog "${HOMEPAGE}/documentation/"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.23.ebuild,v 1.12 2005/01/28 10:39:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.23.ebuild,v 1.13 2007/05/01 18:11:10 genone Exp $
 
 inherit toolchain-funcs
 
@@ -48,8 +48,8 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "NOTE: all files included in the upstream zip file have"
-	einfo "been installed to /usr/share/doc/${PF}, as required by"
-	einfo "the license."
+	elog "NOTE: all files included in the upstream zip file have"
+	elog "been installed to /usr/share/doc/${PF}, as required by"
+	elog "the license."
 	echo
 }

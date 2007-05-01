@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.7.3.ebuild,v 1.1 2006/10/08 21:15:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.7.3.ebuild,v 1.2 2007/05/01 18:03:10 genone Exp $
 
 MY_P="sap-ccms-plugin-${PV}"
 
@@ -43,7 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Have a look at /etc/sapmon for configuring ${PN}"
-	einfo "Further information can be found at"
-	einfo "http://nagios-sap-ccms.sourceforge.net/"
+	elog "Have a look at /etc/sapmon for configuring ${PN}"
+	elog "Further information can be found at"
+	elog "http://nagios-sap-ccms.sourceforge.net/"
 }

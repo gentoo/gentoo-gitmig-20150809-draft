@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.4.1.ebuild,v 1.4 2006/05/16 19:50:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.4.1.ebuild,v 1.5 2007/05/01 18:02:19 genone Exp $
 
 DESCRIPTION="The Nagios metapackage - merge this to pull install all of the nagios packages"
 HOMEPAGE="http://www.nagios.org/"
@@ -18,12 +18,12 @@ RDEPEND=">=net-analyzer/nagios-core-${PV}
 
 pkg_postrm() {
 
-	einfo "Note: this is a META ebuild for ${P}."
-	einfo "to remove it completely or before re-emerging"
-	einfo "either use 'depclean', or remove/re-emerge these packages:"
-	echo
+	elog "Note: this is a META ebuild for ${P}."
+	elog "to remove it completely or before re-emerging"
+	elog "either use 'depclean', or remove/re-emerge these packages:"
+	elog
 	for dep in ${RDEPEND}; do
-		einfo "     ${dep}"
+		elog "     ${dep}"
 	done
 	echo
 

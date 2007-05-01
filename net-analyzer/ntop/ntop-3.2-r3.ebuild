@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.2 2007/03/27 20:56:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.3 2007/05/01 18:14:06 genone Exp $
 
 inherit eutils autotools
 
@@ -104,6 +104,6 @@ pkg_postinst() {
 	fowners ntop:ntop /var/lib/ntop
 	fperms 750 /var/lib/ntop
 
-	einfo "You need to set a password first by running"
-	einfo "ntop --set-admin-password"
+	elog "You need to set a password first by running"
+	elog "ntop --set-admin-password"
 }

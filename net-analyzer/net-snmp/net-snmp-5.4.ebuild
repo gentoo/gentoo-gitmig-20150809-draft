@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.ebuild,v 1.9 2007/03/27 20:12:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.ebuild,v 1.10 2007/05/01 18:09:57 genone Exp $
 
 inherit fixheadtails flag-o-matic perl-module
 
@@ -154,7 +154,7 @@ src_install () {
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
 	if use minimal; then
-		einfo "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
+		elog "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
 		rm -rf
 		"${D}"/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform,snmpcheck}}
 		rm -rf "${D}"/usr/share/snmp/snmpconf-data "${D}"/usr/share/snmp/*.conf
@@ -169,6 +169,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "An example configuration file has been installed in"
-	einfo "/etc/snmp/snmpd.conf.example."
+	elog "An example configuration file has been installed in"
+	elog "/etc/snmp/snmpd.conf.example."
 }

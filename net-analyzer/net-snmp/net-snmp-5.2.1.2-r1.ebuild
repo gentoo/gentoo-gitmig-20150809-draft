@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2-r1.ebuild,v 1.7 2007/03/27 20:12:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2-r1.ebuild,v 1.8 2007/05/01 18:09:57 genone Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -163,7 +163,7 @@ src_install () {
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
 	if use minimal; then
-		einfo "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
+		elog "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
 		rm -rf ${D}/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
 		rm -rf ${D}/usr/share/snmp/snmpconf-data ${D}/usr/share/snmp/*.conf
 		rm -rf ${D}/usr/bin/{net-snmp-config,fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
