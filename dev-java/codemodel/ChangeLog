@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/codemodel
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/codemodel/ChangeLog,v 1.1 2007/05/01 18:46:58 nelchael Exp $
+
+*codemodel-2.1 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-2.1,
+  +metadata.xml, +codemodel-2.1.ebuild:
+  Initial commit of codemodel.
+
