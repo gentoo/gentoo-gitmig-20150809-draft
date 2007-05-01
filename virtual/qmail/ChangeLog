@@ -1,6 +1,9 @@
 # ChangeLog for virtual/qmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.5 2007/01/15 20:09:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.6 2007/05/01 21:32:48 hansmi Exp $
+
+  01 May 2007; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03.ebuild:
+  mail-mta/qmail was removed.
 
   15 Jan 2007; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03.ebuild:
   Switch default qmail ebuild from mail-mta/qmail to mail-mta/netqmail.
