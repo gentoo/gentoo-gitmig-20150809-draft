@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.75 2007/04/29 11:22:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.76 2007/05/01 12:18:20 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> vnc-4.1.2-r2.ebuild:
+  Stable on ppc64; bug #175985
 
   29 Apr 2007; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r2.ebuild:
   x86 stable wrt #175985
