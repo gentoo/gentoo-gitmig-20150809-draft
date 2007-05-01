@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.28 2007/04/12 13:46:28 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.29 2007/05/01 10:12:48 caster Exp $
+
+  01 May 2007; Vlastimil Babka <caster@gentoo.org> fastutil-5.0.5.ebuild:
+  Raise JDK heap size only for compilers other than javac, because fork for
+  javac causes twice memory consumption otherwise - bug #175578.
 
   12 Apr 2007; <welp@gentoo.org> fastutil-4.4.2-r1.ebuild,
   fastutil-5.0.5.ebuild:
