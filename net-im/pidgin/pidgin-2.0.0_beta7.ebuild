@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0_beta7.ebuild,v 1.2 2007/05/01 04:11:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0_beta7.ebuild,v 1.3 2007/05/01 14:17:18 tester Exp $
 
-inherit flag-o-matic eutils toolchain-funcs multilib mono autotools perl-app gnome2
+inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
 MY_PV=${P/_beta/beta}
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
-IUSE="${IUSE} gtk sasl console groupwise mono"
+IUSE="${IUSE} gtk sasl console groupwise" # mono"
 
 RDEPEND="
 	bonjour? ( !avahi? ( net-misc/howl )
@@ -49,8 +49,8 @@ RDEPEND="
 	gstreamer? ( >=media-libs/gstreamer-0.10 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	doc? ( app-doc/doxygen )
-	dev-libs/libxml2
-	mono? ( dev-lang/mono )"
+	dev-libs/libxml2"
+	#mono? ( dev-lang/mono )"
 
 DEPEND="$RDEPEND
 	dev-lang/perl
@@ -77,12 +77,12 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 #   x11-plugins/gaim-latex
 #   x11-plugins/gaim-otr
 #   x11-plugins/gaimosd
-#   x11-plugins/guifications
 #   x11-plugins/gaim-xfire
 
 # List of plugins
 #   x11-plugins/pidgin-extprefs
 #   x11-plugins/gaim-rhythmbox
+#   x11-plugins/guifications
 
 
 print_pidgin_warning() {
@@ -245,16 +245,9 @@ src_compile() {
 		$(use_enable gstreamer) \
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
-		$(use_enable mono) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		${myconf} || die "Configuration failed"
-
-	# This is a tempory fix until Makefile is fixed!!
-	if use mono; then
-		emake -j1
-	else
-		emake
-	fi
+		#$(use_enable mono) \
 }
 
 src_install() {
