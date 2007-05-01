@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r7.ebuild,v 1.1 2007/04/14 09:03:56 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r7.ebuild,v 1.2 2007/05/01 16:44:54 truedfx Exp $
 
 inherit eutils
 
@@ -54,10 +54,10 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Setting /usr/bin/vi symlink"
-	eselect vi set "${PN}"
+	eselect vi update --if-unset
 }
 
 pkg_postrm() {
 	einfo "Updating /usr/bin/vi symlink"
-	eselect vi update
+	eselect vi update --if-unset
 }
