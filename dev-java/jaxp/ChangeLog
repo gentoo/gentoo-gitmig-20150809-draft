@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jaxp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.5 2007/05/01 19:17:21 nelchael Exp $
+
+*jaxp-1.4 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-1.4,
+  +metadata.xml, +jaxp-1.4.ebuild:
+  Initial commit of jaxp.
+
