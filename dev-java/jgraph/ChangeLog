@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.16 2007/02/28 18:01:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.17 2007/05/01 15:18:30 betelgeuse Exp $
+
+*jgraph-5.9.2.1 (01 May 2007)
+
+  01 May 2007; Petteri Räty <betelgeuse@gentoo.org> +jgraph-5.9.2.1.ebuild:
+  Version bump.
 
   28 Feb 2007; Simon Stelling <blubb@gentoo.org> jgraph-5.9.2.0.ebuild:
   stable on amd64; bug 154366
