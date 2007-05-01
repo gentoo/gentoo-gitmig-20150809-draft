@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/video-entropyd-0.7.ebuild,v 1.6 2006/02/16 18:31:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/video-entropyd-0.7.ebuild,v 1.7 2007/05/01 01:49:18 genone Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
@@ -26,7 +26,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "As video-entropyd does not provide a daemon mode, you"
-	einfo "should configure a cron job to regularly run:"
-	einfo "/usr/sbin/video-entropyd VIDEODEVICE"
+	elog "As video-entropyd does not provide a daemon mode, you"
+	elog "should configure a cron job to regularly run:"
+	elog "/usr/sbin/video-entropyd VIDEODEVICE"
 }

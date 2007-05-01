@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.30-r1.ebuild,v 1.1 2007/04/28 04:29:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.30-r1.ebuild,v 1.2 2007/05/01 01:43:47 genone Exp $
 
 inherit eutils
 
@@ -56,21 +56,21 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "List of suite components:"
-	einfo "   idvid:       Identifies video format, resolution, and length"
-	einfo "   makemenu:    Creates (S)VCD/DVD menus"
-	einfo "   makeslides:  Creates mpeg still slides for (S)VCD"
-	einfo "   makexml:     Creates XML specification for an (S)VCD or DVD navigation hierarchy"
-	einfo "   makedvd:     Creates the DVD structure and/or iso image"
-	einfo "   postproc:    Adjusts A/V sync and does shrinking of encoded video"
-	einfo "   tovid:       Converts video to (S)VCD or DVD mpeg format"
-	einfo "   tovidgui:    The tovid GUI"
-	einfo "   pytovid:     The new (experimental) python based tovid script"
-	einfo "   todisc:      Create a DVD with animated menus"
-	einfo "   todiscgui:   Experimental gui for todisc"
-	einfo ""
-	einfo "Please check out the tovid documentation on the web:"
-	einfo "   http://tovid.wikia.com/"
-	einfo ""
+	elog ""
+	elog "List of suite components:"
+	elog "   idvid:       Identifies video format, resolution, and length"
+	elog "   makemenu:    Creates (S)VCD/DVD menus"
+	elog "   makeslides:  Creates mpeg still slides for (S)VCD"
+	elog "   makexml:     Creates XML specification for an (S)VCD or DVD navigation hierarchy"
+	elog "   makedvd:     Creates the DVD structure and/or iso image"
+	elog "   postproc:    Adjusts A/V sync and does shrinking of encoded video"
+	elog "   tovid:       Converts video to (S)VCD or DVD mpeg format"
+	elog "   tovidgui:    The tovid GUI"
+	elog "   pytovid:     The new (experimental) python based tovid script"
+	elog "   todisc:      Create a DVD with animated menus"
+	elog "   todiscgui:   Experimental gui for todisc"
+	elog ""
+	elog "Please check out the tovid documentation on the web:"
+	elog "   http://tovid.wikia.com/"
+	elog ""
 }

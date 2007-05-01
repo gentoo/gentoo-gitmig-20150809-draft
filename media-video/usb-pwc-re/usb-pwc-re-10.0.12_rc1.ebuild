@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.6 2007/04/12 10:36:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.7 2007/05/01 01:47:55 genone Exp $
 
 
 inherit linux-info toolchain-funcs eutils
@@ -56,5 +56,5 @@ pkg_postinst() {
 		/sbin/modules-update
 		depmod -a
 	fi
-	einfo "If you have problems loading the module, please check the \"dmesg\" output."
+	elog "If you have problems loading the module, please check the \"dmesg\" output."
 }
