@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.53 2007/05/01 10:35:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.54 2007/05/01 12:10:32 carlo Exp $
+
+  01 May 2007; Carsten Lohrke <carlo@gentoo.org> -kdbg-2.0.3.ebuild,
+  -kdbg-2.0.4.ebuild:
+  Clean up.
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> kdbg-2.0.5.ebuild:
   Stable on ppc64; bug #175384
