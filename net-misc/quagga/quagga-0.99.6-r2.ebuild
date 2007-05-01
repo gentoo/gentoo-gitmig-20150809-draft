@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.6-r2.ebuild,v 1.1 2007/04/25 22:24:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.6-r2.ebuild,v 1.2 2007/05/01 20:39:57 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -23,6 +23,14 @@ DEPEND=">=sys-libs/libcap-1.10-r5
 	pam? ( sys-libs/pam )"
 RDEPEND="${DEPEND}
 	sys-apps/iproute2"
+
+pkg_setup() {
+	if use tcpmd5 ; then
+		get_version || \
+			KV_FULL=$(uname -r)
+	fi
+	return 0
+}
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
