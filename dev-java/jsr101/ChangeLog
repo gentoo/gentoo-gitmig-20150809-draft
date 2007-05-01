@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jsr101
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.1 2007/05/01 19:13:43 nelchael Exp $
+
+*jsr101-1.1 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +jsr101-1.1.ebuild:
+  Initial commit of jsr101.
+
