@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.0_rc8.ebuild,v 1.1 2007/04/12 16:29:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.0_rc8.ebuild,v 1.2 2007/05/01 18:50:07 pythonhead Exp $
 
 NEED_PYTHON=2.2
 
@@ -29,5 +29,12 @@ pkg_postinst() {
 }
 
 src_test() {
-	PYTHONPATH=$(ls -d ./build/lib.*) "${python}" src/Tests/Test.py || die "tests failed"
+	#We need to do the sed here because files don't exist until after src_build
+	local p="$(ls -d ${S}/build/lib.* )"
+	local s="$(ls -d ${S}/build/scripts*)"
+	sed -i \
+		-e "s:\(self\.go(\"\)\(${PN}\):\1PYTHONPATH=\'${p}\' \'${s}/\2\':" \
+		src/Tests/CheetahWrapper.py || die "sed failed"
+
+	PYTHONPATH="${p}" "${python}" src/Tests/Test.py || die "tests failed"
 }
