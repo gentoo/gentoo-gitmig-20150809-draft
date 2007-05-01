@@ -1,4 +1,0 @@
-#!/bin/bash
-# Gentoo qmail rc booter
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/run-qmailsend,v 1.3 2005/01/03 20:55:10 hansmi Exp $
-exec /var/qmail/rc
