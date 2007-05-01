@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.331 2007/04/28 22:04:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.332 2007/05/01 05:59:46 aross Exp $
+
+*postgresql-8.0.13 (01 May 2007)
+
+  01 May 2007; Andrew Ross <aross@gentoo.org>
+  +files/postgresql-8.0.13-sh.patch, +postgresql-8.0.13.ebuild:
+  Version bump for bug #175791 (CVE-2007-2138 privilege escalation in SECURITY
+  DEFINER functions).
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> postgresql-7.3.15-r1.ebuild,
   postgresql-7.4.13.ebuild, postgresql-8.0.8.ebuild:
