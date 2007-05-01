@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/stax-ex
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/ChangeLog,v 1.1 2007/05/01 18:52:49 nelchael Exp $
+
+*stax-ex-1.0 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-1.0,
+  +metadata.xml, +stax-ex-1.0.ebuild:
+  Initial commit of stax-ex.
+
