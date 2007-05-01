@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.162 2007/04/30 19:14:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.163 2007/05/01 09:18:06 armin76 Exp $
+
+  01 May 2007; Raúl Porcel <armin76@gentoo.org> asterisk-1.2.17.ebuild:
+  x86 stable wrt security bug 175960
 
   30 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   asterisk-1.2.17.ebuild:
