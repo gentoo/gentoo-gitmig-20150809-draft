@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libdomainkeys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.2 2007/05/01 09:43:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.3 2007/05/01 19:56:22 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org>
+  libdomainkeys-0.68-r1.ebuild:
+  Added ~ppc64; bug #176487
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org>
   libdomainkeys-0.68-r1.ebuild:
