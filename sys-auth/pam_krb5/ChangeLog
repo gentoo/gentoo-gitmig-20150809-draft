@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.10 2007/02/22 01:01:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.11 2007/05/01 11:41:14 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org>
+  pam_krb5-20030601-r1.ebuild:
+  Added ~ppc64; bug #175868
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

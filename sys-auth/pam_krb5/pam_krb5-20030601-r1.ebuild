@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-20030601-r1.ebuild,v 1.3 2005/09/03 23:31:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-20030601-r1.ebuild,v 1.4 2007/05/01 11:41:14 corsair Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://pam-krb5.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="afs"
 
 DEPEND="virtual/krb5
