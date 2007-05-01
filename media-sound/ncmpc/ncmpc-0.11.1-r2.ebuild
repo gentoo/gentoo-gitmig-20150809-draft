@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r2.ebuild,v 1.2 2007/04/04 07:45:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r2.ebuild,v 1.3 2007/05/01 00:18:45 genone Exp $
 
 inherit eutils autotools
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	use search-screen && einfo "Please note that the search-screen is experimental"
+	use search-screen && elog "Please note that the search-screen is experimental"
 }
 
 src_unpack() {

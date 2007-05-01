@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.0.ebuild,v 1.4 2006/12/26 23:13:44 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.0.ebuild,v 1.5 2007/05/01 00:22:14 genone Exp $
 
 inherit eutils
 
@@ -99,15 +99,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	#einfo "To create the SlimServer database, run"
-	#einfo "\temerge --config =${CATEGORY}/${PF}"
-	einfo "To start SlimServer, run"
-	einfo "\t/etc/init.d/slimserver start"
-	einfo "To start SlimServer automatically on boot, run:"
-	einfo "\trc-update add slimserver default"
+	#elog "To create the SlimServer database, run"
+	#elog "\temerge --config =${CATEGORY}/${PF}"
+	elog "To start SlimServer, run"
+	elog "\t/etc/init.d/slimserver start"
+	elog "To start SlimServer automatically on boot, run:"
+	elog "\trc-update add slimserver default"
 	httpport=$(gawk '$1 == "httpport:" { print $2 }' ${R}/etc/slimserver.prefs)
-	einfo "To configure SlimServer, browse to:"
-	einfo "\thttp://localhost:${httpport:-9000}/"
+	elog "To configure SlimServer, browse to:"
+	elog "\thttp://localhost:${httpport:-9000}/"
 }
 
 #pkg_config() {

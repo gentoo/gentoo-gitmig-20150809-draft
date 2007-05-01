@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/radiomixer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.5 2007/02/11 18:11:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.6 2007/05/01 00:20:01 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> radiomixer-1.0.ebuild:
+  Replacing einfo with elog
 
   11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> radiomixer-1.0.ebuild:
   Don't depend on virtual/alsa (those are drivers), depend properly on

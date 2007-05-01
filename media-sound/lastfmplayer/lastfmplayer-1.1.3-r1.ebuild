@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r1.ebuild,v 1.1 2007/03/20 21:50:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r1.ebuild,v 1.2 2007/05/01 00:09:23 genone Exp $
 
 inherit eutils versionator
 
@@ -63,12 +63,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To use the Last.fm player with a mozilla based browser:"
-	einfo " 1. Go to about:config in the browser"
-	einfo " 2. Right-click on the page"
-	einfo " 3. Select New and then String"
-	einfo " 4. For the name: network.protocol-handler.app.lastfm"
-	einfo " 5. For the value: /usr/bin/lastfm"
-	einfo
-	einfo "If you experiance awkward fonts or widgets, try running qtconfig."
+	elog "To use the Last.fm player with a mozilla based browser:"
+	elog " 1. Go to about:config in the browser"
+	elog " 2. Right-click on the page"
+	elog " 3. Select New and then String"
+	elog " 4. For the name: network.protocol-handler.app.lastfm"
+	elog " 5. For the value: /usr/bin/lastfm"
+	elog
+	elog "If you experiance awkward fonts or widgets, try running qtconfig."
 }

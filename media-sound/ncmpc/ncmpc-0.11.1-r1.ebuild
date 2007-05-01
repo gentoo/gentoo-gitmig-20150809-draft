@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r1.ebuild,v 1.10 2007/02/20 18:45:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r1.ebuild,v 1.11 2007/05/01 00:18:45 genone Exp $
 
 DESCRIPTION="A ncurses client for the Music Player Daemon (MPD)"
 HOMEPAGE="http://www.musicpd.org/?page=ncmpc"
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	use search-screen && einfo "Please note that the search-screen is experimental"
+	use search-screen && elog "Please note that the search-screen is experimental"
 }
 
 src_compile() {

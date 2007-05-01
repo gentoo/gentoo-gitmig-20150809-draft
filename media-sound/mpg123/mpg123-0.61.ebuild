@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.5 2007/04/09 10:43:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.6 2007/05/01 00:15:44 genone Exp $
 
 inherit eutils
 
@@ -52,11 +52,11 @@ src_compile() {
 		myconf="--with-cpu=mmx"
 	fi
 
-	einfo "Compiling with ${audiodev} audio output."
-	einfo "If that is not what you want, then select exactly ONE"
-	einfo "of the following USE flags:"
-	einfo "alsa oss sdl esd nas jack portaudio"
-	einfo "and recompile ${PN}."
+	elog "Compiling with ${audiodev} audio output."
+	elog "If that is not what you want, then select exactly ONE"
+	elog "of the following USE flags:"
+	elog "alsa oss sdl esd nas jack portaudio"
+	elog "and recompile ${PN}."
 	epause 5
 
 	econf \

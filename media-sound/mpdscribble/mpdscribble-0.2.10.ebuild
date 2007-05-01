@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.10.ebuild,v 1.1 2006/06/03 10:22:06 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.10.ebuild,v 1.2 2007/05/01 00:11:46 genone Exp $
 
 DESCRIPTION="An MPD client that submits information to audioscrobbler."
 HOMEPAGE="http://www.frob.nl/scribble.html"
@@ -26,14 +26,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Please run:"
-	einfo "  /usr/share/mpdscribble/setup.sh"
-	einfo "in order to configure mpdscribble. If you do this as root, a"
-	einfo "system-wide configuration will be created. Otherwise, a per-user"
-	einfo "configuration file will be created."
-	einfo ""
-	einfo "To start mpdscribble:"
-	einfo "  /etc/init.d/mpdscribble start"
-	einfo ""
+	elog ""
+	elog "Please run:"
+	elog "  /usr/share/mpdscribble/setup.sh"
+	elog "in order to configure mpdscribble. If you do this as root, a"
+	elog "system-wide configuration will be created. Otherwise, a per-user"
+	elog "configuration file will be created."
+	elog ""
+	elog "To start mpdscribble:"
+	elog "  /etc/init.d/mpdscribble start"
+	elog ""
 }

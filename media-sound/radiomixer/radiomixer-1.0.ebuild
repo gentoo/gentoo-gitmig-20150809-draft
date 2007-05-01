@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.3 2007/02/11 18:11:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.4 2007/05/01 00:20:01 genone Exp $
 
 inherit kde-functions eutils
 
@@ -54,9 +54,9 @@ pkg_setup() {
 		echo
 	fi
 
-	einfo
-	einfo "Jack mode is recommended by upstream."
-	einfo
+	elog
+	elog "Jack mode is recommended by upstream."
+	elog
 }
 
 src_compile() {

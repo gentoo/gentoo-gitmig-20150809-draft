@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.7.ebuild,v 1.1 2007/01/22 18:54:26 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.7.ebuild,v 1.2 2007/05/01 00:17:11 genone Exp $
 
 inherit gnome2 mono eutils multilib autotools
 
@@ -78,10 +78,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Upstream no longer packages the tray icon plugin by default."
-	einfo "The Gentoo ebuilds will continue to install the plugin, if you don't"
-	einfo "want to use the plugin, remove TrayIcon.dll from"
-	einfo "/usr/$(get_libdir)/muine/plugins/"
-	einfo
+	elog
+	elog "Upstream no longer packages the tray icon plugin by default."
+	elog "The Gentoo ebuilds will continue to install the plugin, if you don't"
+	elog "want to use the plugin, remove TrayIcon.dll from"
+	elog "/usr/$(get_libdir)/muine/plugins/"
+	elog
 }

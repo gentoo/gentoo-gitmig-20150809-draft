@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.1.ebuild,v 1.13 2006/04/03 15:42:37 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.1.ebuild,v 1.14 2007/05/01 00:23:50 genone Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Remember to remove any old ~/.sprialmodular files"
-	einfo
+	elog
+	elog "Remember to remove any old ~/.sprialmodular files"
+	elog
 }

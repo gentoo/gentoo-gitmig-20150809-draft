@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903.ebuild,v 1.6 2005/09/08 11:13:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903.ebuild,v 1.7 2007/05/01 00:26:46 genone Exp $
 
 IUSE="emacs"
 
@@ -98,10 +98,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Notice: SuperCollider is not very intuitive to get up and running."
-	einfo "The best course of action to make sure that the installation was"
-	einfo "successful and get you started with using SuperCollider is to take"
-	einfo "a look through /usr/share/doc/${PF}/README-gentoo.txt.gz"
-	einfo
+	elog
+	elog "Notice: SuperCollider is not very intuitive to get up and running."
+	elog "The best course of action to make sure that the installation was"
+	elog "successful and get you started with using SuperCollider is to take"
+	elog "a look through /usr/share/doc/${PF}/README-gentoo.txt.gz"
+	elog
 }
