@@ -1,38 +1,39 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr250/jsr250-1.0.ebuild,v 1.3 2007/01/21 18:08:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr250/jsr250-1.0.ebuild,v 1.4 2007/05/01 19:01:21 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="JSR 250 Common Annotations"
-HOMEPAGE="http://jcp.org/en/jsr/detail?id=250"
-SRC_URI="com_annotations-1_0-fr-api-doc.zip"
+HOMEPAGE="http://jax-ws.dev.java.net/"
+DATE="20060817"
+MY_P="JAXWS2.0.1m1_source_${DATE}.jar"
+SRC_URI="https://jax-ws.dev.java.net/jax-ws-201-m1/${MY_P}"
 
-LICENSE="sun-jsr250"
+LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="doc"
-RESTRICT="fetch nostrip"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
-DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
+DEPEND="app-arch/unzip
+	${RDEPEND}"
 
-S="${WORKDIR}"
+S="${WORKDIR}/jaxws-si"
 
-pkg_nofetch() {
+src_unpack() {
+	echo "A" | java -jar "${DISTDIR}/${A}" -console > /dev/null || die "unpack failed"
 
-	einfo "Please go to following URL:"
-	einfo " http://jcp.org/aboutJava/communityprocess/final/jsr250/index.html"
-	einfo "download file named com_annotations-1_0-fr-api-doc.zip and place it in:"
-	einfo " ${DISTDIR}"
+	unpack ./jaxws-src.zip || die "unzip failed"
 
+}
+
+src_compile() {
+	:
 }
 
 src_install() {
 
-	cd "${S}"
-	java-pkg_dojar lib/jsr250-api.jar
-
-	use doc && java-pkg_dohtml -r docs/api
+	java-pkg_newjar lib/jsr250-api.jar
 
 }
