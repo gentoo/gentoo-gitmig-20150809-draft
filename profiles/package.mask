@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7209 2007/05/01 18:09:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7210 2007/05/01 21:33:42 hansmi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -562,11 +562,6 @@ net-im/aim-transport
 =dev-haskell/time-1.0
 =dev-haskell/x11-1.2
 =dev-haskell/xhtml-2006.9.13
-
-# Michael Hanselmann <hansmi@gentoo.org> (15 Mar 2007)
-# mail-mta/qmail has been superseeded by mail-mta/netqmail.
-# Pending removal mid April.
-mail-mta/qmail
 
 # Marijn Schouten <hkBst@gentoo.org> (13 Mar 2007)
 # masked for removal
