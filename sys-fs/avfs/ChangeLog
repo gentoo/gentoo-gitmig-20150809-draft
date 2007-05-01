@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.5 2006/10/20 12:35:09 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.6 2007/05/01 09:29:11 armin76 Exp $
+
+  01 May 2007; Raúl Porcel <armin76@gentoo.org> avfs-0.9.7.ebuild:
+  Add ~ia64 wrt bug 172755
 
   20 Oct 2006; Simon Stelling <blubb@gentoo.org> avfs-0.9.7.ebuild:
   added ~amd64
