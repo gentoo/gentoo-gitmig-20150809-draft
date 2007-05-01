@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407.ebuild,v 1.1 2007/05/01 19:24:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407.ebuild,v 1.2 2007/05/01 22:51:19 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -37,7 +37,7 @@ src_unpack() {
 	cd "${S}/lib"
 	rm -v *.jar || die
 
-	java-pkg_jarfrom ant-core
+	java-pkg_jarfrom --build-only ant-core
 	java-pkg_jarfrom codemodel-2
 	java-pkg_jarfrom jsr173
 	java-pkg_jarfrom relaxng-datatype
