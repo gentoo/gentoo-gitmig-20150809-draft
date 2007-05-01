@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.5 2007/03/23 14:51:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.6 2007/05/01 20:37:52 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="pch"
+IUSE=""
 
 DEPEND="dev-libs/boost
 	=x11-libs/qt-4*
@@ -28,13 +28,16 @@ pkg_setup() {
 		echo
 		die "Your Qt4 has no sqlite support"
 	fi
+	if [[ $(gcc-major-version) -eq 3 && $(gcc-minor-version) -lt 4 ]]; then
+		ewarn "You need >=sys-devel/gcc-3.4 to compile ${PN}."
+		die "System gcc is too old to compile ${PN}."
+	fi
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	use pch || sed -i -e '3s: precompile_header$::' mumble.pri
 	epatch "${FILESDIR}"/${P}-path.patch
 }
 
