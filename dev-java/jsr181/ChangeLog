@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsr181
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.4 2007/03/18 18:06:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.5 2007/05/01 18:59:10 nelchael Exp $
+
+*jsr181-1 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml,
+  +jsr181-1.ebuild:
+  Version bump.
 
   18 Mar 2007; Krzysiek Pawlik <nelchael@gentoo.org> jsr181-0.7.ebuild:
   Fix ebuild to work with strict Java settings.
