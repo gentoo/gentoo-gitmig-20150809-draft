@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.0-r2.ebuild,v 1.3 2007/04/28 23:32:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1.ebuild,v 1.1 2007/05/01 13:23:45 voxus Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
