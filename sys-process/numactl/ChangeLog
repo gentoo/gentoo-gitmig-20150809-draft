@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/numactl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.2 2006/07/16 23:04:25 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.3 2007/05/01 07:10:23 robbat2 Exp $
+
+*numactl-0.9.10 (01 May 2007)
+
+  01 May 2007; Robin H. Johnson <robbat2@gentoo.org> +numactl-0.9.10.ebuild:
+  Version bump.
 
 *numactl-0.9.9 (16 Jul 2006)
 
