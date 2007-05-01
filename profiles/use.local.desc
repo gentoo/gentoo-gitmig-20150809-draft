@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2783 2007/05/01 14:14:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2784 2007/05/01 20:29:30 rbrown Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -429,6 +429,7 @@ dev-lang/php:zip-external - Enable ZIP file support (external PECL extension)
 dev-lang/python:ucs2 - Enable byte size 2 unicode
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-lang/spidermonkey:threadsafe - Build a threadsafe version of spidermonkey
+dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
 dev-lang/swig:pike - Enable Pike scripting support
 dev-libs/DirectFB-extra:flash - Adds support for creating SWF files using Ming
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
