@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mtvg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mtvg/ChangeLog,v 1.4 2007/04/28 04:21:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mtvg/ChangeLog,v 1.5 2007/05/01 00:28:44 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> mtvg-6.2.18-r1.ebuild,
+  mtvg-7.3.2.ebuild:
+  Replacing einfo with elog
 
 *mtvg-7.3.2 (28 Apr 2007)
 

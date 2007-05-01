@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.67 2007/03/26 08:11:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.68 2007/05/01 00:36:31 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> xmltv-0.5.44.ebuild,
+  xmltv-0.5.45.ebuild:
+  Replacing einfo with elog
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> xmltv-0.5.44.ebuild,
   xmltv-0.5.45.ebuild:

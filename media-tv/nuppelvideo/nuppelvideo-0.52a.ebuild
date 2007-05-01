@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/nuppelvideo-0.52a.ebuild,v 1.5 2006/08/28 10:27:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/nuppelvideo-0.52a.ebuild,v 1.6 2007/05/01 00:31:16 genone Exp $
 
 inherit eutils
 
@@ -35,11 +35,11 @@ src_install() {
 	dobin nuvrec nuvplay nuvedit nuv2mpg nuv2vbr
 }
 pkg_postinst(){
-	einfo
-	einfo "If you experience problems with audio, please check:"
-	einfo "http://frost.htu.tuwien.ac.at/~roman/nuppelvideo/Sound-Howto.txt"
-	einfo
-	einfo "If you have bad tv reception you can fix sync problems with:"
-	einfo "http://frost.htu.tuwien.ac.at/~roman/nuppelvideo/nuvrepairsync.tcl"
-	einfo
+	elog
+	elog "If you experience problems with audio, please check:"
+	elog "http://frost.htu.tuwien.ac.at/~roman/nuppelvideo/Sound-Howto.txt"
+	elog
+	elog "If you have bad tv reception you can fix sync problems with:"
+	elog "http://frost.htu.tuwien.ac.at/~roman/nuppelvideo/nuvrepairsync.tcl"
+	elog
 }

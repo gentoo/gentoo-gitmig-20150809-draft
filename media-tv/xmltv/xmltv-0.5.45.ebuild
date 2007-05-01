@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.45.ebuild,v 1.3 2007/03/26 08:11:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.45.ebuild,v 1.4 2007/05/01 00:36:31 genone Exp $
 
 inherit eutils perl-module
 
@@ -166,15 +166,15 @@ src_install() {
 
 pkg_postinst() {
 	if use tv_pick_cgi ; then
-		einfo "To use tv_pick_cgi, please link it from /usr/bin/tv_pick_cgi"
-		einfo "to where the ScriptAlias directive is configured."
+		elog "To use tv_pick_cgi, please link it from /usr/bin/tv_pick_cgi"
+		elog "to where the ScriptAlias directive is configured."
 	fi
 	if use na_icons ; then
 		if use na_dd ; then
-			einfo "na_icons set for na_dd grabber user."
+			elog "na_icons set for na_dd grabber user."
 		else
-			einfo "na_icons works only when na_dd is set, "
-			einfo "otherwise it does nothing."
+			elog "na_icons works only when na_dd is set, "
+			elog "otherwise it does nothing."
 		fi
 	fi
 }

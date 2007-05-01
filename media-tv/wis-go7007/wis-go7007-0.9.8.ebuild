@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8.ebuild,v 1.1 2006/12/02 20:32:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8.ebuild,v 1.2 2007/05/01 00:34:16 genone Exp $
 
 inherit eutils linux-mod
 
@@ -77,14 +77,14 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	einfo ""
-	einfo "For more information on how to use the Plextor devices with Gentoo"
-	einfo "you can follow this thread for tips and tricks:"
-	einfo "http://forums.gentoo.org/viewtopic-t-306559-highlight-.html"
-	einfo ""
-	einfo "Also, the unofficial Gentoo wiki has a HOWTO page:"
-	einfo "http://gentoo-wiki.com/HARDWARE_go7007"
-	einfo ""
+	elog ""
+	elog "For more information on how to use the Plextor devices with Gentoo"
+	elog "you can follow this thread for tips and tricks:"
+	elog "http://forums.gentoo.org/viewtopic-t-306559-highlight-.html"
+	elog ""
+	elog "Also, the unofficial Gentoo wiki has a HOWTO page:"
+	elog "http://gentoo-wiki.com/HARDWARE_go7007"
+	elog ""
 	ewarn "Don't forget to add your modules to /etc/modules.autoload.d/kernel.2.6"
 	ewarn "so they will load on startup:"
 	ewarn ""

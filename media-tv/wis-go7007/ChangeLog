@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/wis-go7007
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.3 2007/04/26 16:45:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.4 2007/05/01 00:34:16 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> wis-go7007-0.9.8.ebuild,
+  wis-go7007-0.9.8-r1.ebuild:
+  Replacing einfo with elog
 
   26 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/wis-go7007-0.9.8-kernel-2.6.17.diff, wis-go7007-0.9.8-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r1.ebuild,v 1.3 2007/02/12 17:32:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r1.ebuild,v 1.4 2007/05/01 00:32:48 genone Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.5
@@ -72,11 +72,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "A default setup for ${PN} has been saved as"
-	einfo "/etc/tvtime/tvtime.xml. You may need to modify it"
-	einfo "for your needs."
-	einfo
-	einfo "Detailed information on ${PN} setup can be"
-	einfo "found at ${HOMEPAGE}help.html"
+	elog "A default setup for ${PN} has been saved as"
+	elog "/etc/tvtime/tvtime.xml. You may need to modify it"
+	elog "for your needs."
+	elog
+	elog "Detailed information on ${PN} setup can be"
+	elog "found at ${HOMEPAGE}help.html"
 	echo
 }
