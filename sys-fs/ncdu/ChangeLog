@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/ncdu
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.1 2007/05/01 01:13:00 wschlich Exp $
+
+*ncdu-1.1 (01 May 2007)
+
+  01 May 2007; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +ncdu-1.1.ebuild:
+  initial import
+
