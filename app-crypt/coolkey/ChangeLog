@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/coolkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.1 2007/02/18 16:04:42 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.2 2007/05/01 20:14:21 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> coolkey-1.1.0.ebuild:
+  Added ~ppc64; bug #176556
 
 *coolkey-1.1.0 (18 Feb 2007)
 
