@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.6.6_rc5.ebuild,v 1.1 2007/01/06 19:04:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.7.1.ebuild,v 1.1 2007/05/01 11:33:16 genstef Exp $
 
 inherit eutils multilib
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND="sys-libs/libieee1284"
-
-S=${WORKDIR}/${PN}
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
