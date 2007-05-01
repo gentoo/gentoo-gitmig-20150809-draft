@@ -1,21 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r3.ebuild,v 1.2 2007/03/22 17:12:20 drac Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="1.4"
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02.ebuild,v 1.1 2007/05/01 14:10:59 drac Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
-SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz
-	branding? ( http://dev.gentoo.org/~drac/distfiles/${P}-branding-1.1.patch.bz2 )"
-HOMEPAGE="http://www.jwz.org/xscreensaver/"
+SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
+HOMEPAGE="http://www.jwz.org/xscreensaver"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="branding gnome jpeg insecure-savers new-login offensive opengl pam xinerama"
+IUSE="gnome jpeg insecure-savers new-login offensive opengl pam xinerama"
 
 RDEPEND="x11-libs/libXxf86misc
 	x11-apps/xwininfo
@@ -47,17 +43,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Use Gentoo branding in Lock Screen
-	use branding && epatch "${WORKDIR}"/${P}-branding-1.1.patch
-
 	# Bug fixes:
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-5.01-gentoo.patch"
 
 	# disable not-safe-for-work xscreensavers
-	use offensive || epatch "${FILESDIR}/${P}-nsfw.patch"
+	use offensive || epatch "${FILESDIR}/${PN}-5.01-nsfw.patch"
 
 	# Fix bug #154444 - hypertorus hack:
-	epatch "${FILESDIR}/${P}-hypertorus.xml.patch"
+	epatch "${FILESDIR}/${PN}-5.01-hypertorus.xml.patch"
 
 	eautoreconf
 
@@ -78,7 +71,6 @@ src_compile() {
 		--with-configdir=/usr/share/xscreensaver/config \
 		--x-libraries=/usr/$(get_libdir) \
 		--x-includes=/usr/include \
-		--with-mit-ext \
 		--with-dpms-ext \
 		--with-xf86vmode-ext \
 		--with-xf86gamma-ext \
@@ -88,7 +80,6 @@ src_compile() {
 		--with-xdbe-ext \
 		--enable-locking \
 		--with-gtk \
-		--with-xml \
 		--without-kerberos \
 		$(use_with insecure-savers setuid-hacks) \
 		$(use_with new-login login-manager) \
@@ -104,13 +95,12 @@ src_compile() {
 src_install() {
 	[[ -n "${KDEDIR}" ]] && dodir "${KDEDIR}/bin"
 
-	make install_prefix="${D}" install || die "make install failed"
+	emake install_prefix="${D}" install || die "emake install failed."
 
-	dodoc README
+	dodoc README*
 
 	# install correctly in gnome, including info about configuration preferences
-	if use gnome ; then
-
+	if use gnome; then
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
@@ -120,7 +110,6 @@ src_install() {
 		dodir /usr/share/control-center-2.0/capplets
 		insinto /usr/share/control-center-2.0/capplets
 		newins "${FILESDIR}/desktop_entries/screensaver-properties.desktop"
-
 	fi
 
 	# Remove "extra" capplet
@@ -143,19 +132,19 @@ src_install() {
 	# Fix bug #152250:
 	dodir "/usr/share/X11/app-defaults"
 	mv "${D}/usr/lib/X11/app-defaults/XScreenSaver" \
-		"${D}/usr/share/X11/app-defaults/XScreenSaver" || die "mv failed"
+		"${D}/usr/share/X11/app-defaults/XScreenSaver"
 }
 
 pkg_postinst() {
 	if ! use new-login; then
-		einfo
-		einfo "You have chosen to not use the new-login USE flag."
-		einfo "This is a new USE flag which enables individuals to"
-		einfo "create new logins when the screensaver is active,"
-		einfo "allowing others to use their account, even though the"
-		einfo "screen is locked to another account. If you want this"
-		einfo "feature, please recompile with USE=\"new-login\"."
-		einfo
+		elog
+		elog "You have chosen to not use the new-login USE flag."
+		elog "This is a new USE flag which enables individuals to"
+		elog "create new logins when the screensaver is active,"
+		elog "allowing others to use their account, even though the"
+		elog "screen is locked to another account. If you want this"
+		elog "feature, please recompile with USE=\"new-login\"."
+		elog
 	fi
 
 	if use insecure-savers;then
@@ -167,10 +156,4 @@ pkg_postinst() {
 		ewarn "root privileges. You have been warned."
 		ewarn
 	fi
-
-	ewarn
-	ewarn "In XScreenSaver 5.00 API was changed. All third party screen savers"
-	ewarn "need to be ported to the new API. Until then they will not work."
-	ewarn
-	epause
 }
