@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.22 2007/04/23 14:50:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.23 2007/05/01 08:06:11 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> pygtkglext-1.1.0.ebuild:
+  Added ~ppc64; bug #176517
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   pygtkglext-1.1.0.ebuild:
