@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.16 2007/02/09 07:10:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.17 2007/05/01 06:48:46 robbat2 Exp $
+
+*mcrypt-2.6.5 (01 May 2007)
+
+  01 May 2007; Robin H. Johnson <robbat2@gentoo.org> +mcrypt-2.6.5.ebuild:
+  Version bump
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
