@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/fastinfoset-1.2.1.ebuild,v 1.1 2007/05/01 19:11:13 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/fastinfoset-1.2.1.ebuild,v 1.2 2007/05/01 22:04:51 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
+COMMON_DEP="dev-java/jsr173"
+
 RDEPEND=">=virtual/jre-1.5
-	dev-java/jsr173"
+	${COMMON_DEP}"
 
 DEPEND=">=virtual/jdk-1.5
-	app-arch/unzip
-	${RDEPEND}"
+	${COMMON_DEP}
+	app-arch/unzip"
 
 S="${WORKDIR}"
 
