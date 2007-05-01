@@ -13,6 +13,10 @@ AUX control-center-2.14.1-path-fix.patch 6726 RMD160 8a4bfc343e8f4b5ca3609fce696
 MD5 689f563f79fc4a72120cc4fcc2c58cf4 files/control-center-2.14.1-path-fix.patch 6726
 RMD160 8a4bfc343e8f4b5ca3609fce696cbe01c9bd69f7 files/control-center-2.14.1-path-fix.patch 6726
 SHA256 c846f18199d664f3e40fb468439b7fb83638a2b3a22e9294c6401dd71292ae64 files/control-center-2.14.1-path-fix.patch 6726
+AUX control-center-2.18.1-fbsd.patch 464 RMD160 02a401bafc5ec95e8048b064cfd85bdb59f826ad SHA1 3bb8b2997bbacd73d4bec85c783fdc7b547554a4 SHA256 371ca7807601e3dbd88604ecd6757fe70fa2287a21134b92c9e468b3e4bf2fec
+MD5 8cb0b82414bd857e2db8e328969598ae files/control-center-2.18.1-fbsd.patch 464
+RMD160 02a401bafc5ec95e8048b064cfd85bdb59f826ad files/control-center-2.18.1-fbsd.patch 464
+SHA256 371ca7807601e3dbd88604ecd6757fe70fa2287a21134b92c9e468b3e4bf2fec files/control-center-2.18.1-fbsd.patch 464
 AUX control-center-2.18.1-gnome-doc-utils-fix.patch 370 RMD160 1cee6610e683dbf6f162bd9c7d174f3555f3a435 SHA1 8e26e680fac18bdbec02aaba410c6b029b8071dc SHA256 197eafa5b4d445977b3a878d5642f6c5de621a410dc31524221816e4bf5a1675
 MD5 6149c16d446894940948cf2e21234bab files/control-center-2.18.1-gnome-doc-utils-fix.patch 370
 RMD160 1cee6610e683dbf6f162bd9c7d174f3555f3a435 files/control-center-2.18.1-gnome-doc-utils-fix.patch 370
@@ -42,14 +46,14 @@ EBUILD control-center-2.18.0.ebuild 2689 RMD160 bfe1f126c42ae9c4b0ffcffb2f161116
 MD5 9353d981b21565d9e4d2bf55b4d699b8 control-center-2.18.0.ebuild 2689
 RMD160 bfe1f126c42ae9c4b0ffcffb2f16111602e371d0 control-center-2.18.0.ebuild 2689
 SHA256 5819505572225f236f4d2d5edc9db740093ed0882fdf43a17ed3887b28724034 control-center-2.18.0.ebuild 2689
-EBUILD control-center-2.18.1.ebuild 2785 RMD160 b70a8ed714f6971ed167677d8412a1d869481e0f SHA1 8fb9b7b77f4d5226131d2117f6ea20f68a5b19ba SHA256 7da255f585e1a34bbb1900cc76df73e99a09d06c0ac24c5842f97d5b7a21c5f0
-MD5 242eb1fb8a0883e49adc5a8e0889fe0c control-center-2.18.1.ebuild 2785
-RMD160 b70a8ed714f6971ed167677d8412a1d869481e0f control-center-2.18.1.ebuild 2785
-SHA256 7da255f585e1a34bbb1900cc76df73e99a09d06c0ac24c5842f97d5b7a21c5f0 control-center-2.18.1.ebuild 2785
-MISC ChangeLog 30552 RMD160 71080581152645d43b78292ad47f6696aacea895 SHA1 5f41c69d56c4bb8e647359bd1e5d0b08227a7534 SHA256 dd445c6e6932607adff5be5bef9feb2bc7d328b267af2571792304a8c816fc5c
-MD5 d40cd8636a3b966b946a25f90de6ecaf ChangeLog 30552
-RMD160 71080581152645d43b78292ad47f6696aacea895 ChangeLog 30552
-SHA256 dd445c6e6932607adff5be5bef9feb2bc7d328b267af2571792304a8c816fc5c ChangeLog 30552
+EBUILD control-center-2.18.1.ebuild 2861 RMD160 d488ee1ca9bdb683abaeb8874bfea2a890663330 SHA1 21e1128b5f35bc3583c8e424fc879c63f5ffabe3 SHA256 eec827f898af10c00a31c0b948c47c1b99e7ba9a14896a9b55cabdd16ea55613
+MD5 1d52f323fefe9f74ac272872fa928871 control-center-2.18.1.ebuild 2861
+RMD160 d488ee1ca9bdb683abaeb8874bfea2a890663330 control-center-2.18.1.ebuild 2861
+SHA256 eec827f898af10c00a31c0b948c47c1b99e7ba9a14896a9b55cabdd16ea55613 control-center-2.18.1.ebuild 2861
+MISC ChangeLog 30710 RMD160 fe16fe90690f7423c0d260483778a98cfc58ba8e SHA1 205adcd5cfdce9351053eaa809cc37d01bd7ab07 SHA256 1232351e1d7ea4af1d8f3c0643c6a075ffa98f9fef8eab72fabffd7d983c62f9
+MD5 98f2399813f861f63319f7f97ee5c91c ChangeLog 30710
+RMD160 fe16fe90690f7423c0d260483778a98cfc58ba8e ChangeLog 30710
+SHA256 1232351e1d7ea4af1d8f3c0643c6a075ffa98f9fef8eab72fabffd7d983c62f9 ChangeLog 30710
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -72,7 +76,7 @@ SHA256 cf2bc498f431016785a9c2b0d2dca076c48dc66ac884bcfd4a8593f0be501df7 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD8DBQFGJi6LomPajV0RnrERArlIAKCAsoe+Ag+yBS2hdmxQblczBxtzwwCeMsgQ
-pp+LAK3dxgSFYV3sMnHf34Q=
-=zekK
+iD8DBQFGN2VdomPajV0RnrERAvgFAJkBOzMvycvq73b4p8jydn6RMOYqEQCfb+bk
+v6VrhwrMMaqFoMdCy3B+KOM=
+=HNyB
 -----END PGP SIGNATURE-----
