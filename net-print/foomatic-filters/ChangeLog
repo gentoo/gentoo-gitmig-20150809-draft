@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.53 2007/04/07 13:44:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.54 2007/05/01 12:01:15 calchan Exp $
+
+*foomatic-filters-3.0.20070501 (01 May 2007)
+
+  01 May 2007; Denis Dupeyron <calchan@gentoo.org>
+  +foomatic-filters-3.0.20070501.ebuild:
+  Version bump.
 
   07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> foomatic-filters-3.0.20060720.ebuild:
   Dont depend on cups for USE=-cups thanks to Cornelius Weig
