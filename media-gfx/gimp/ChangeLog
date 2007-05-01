@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.191 2007/04/30 21:53:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.192 2007/05/01 12:49:12 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> gimp-2.2.14.ebuild:
+  Stable on ppc64; bug #176226
 
   30 Apr 2007; Marius Mauch <genone@gentoo.org> gimp-2.2.12.ebuild,
   gimp-2.2.14.ebuild, gimp-2.3.15.ebuild, gimp-2.3.16.ebuild,
