@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/Date-Pcalc-1.2.ebuild,v 1.12 2007/01/15 17:20:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/Date-Pcalc-1.2.ebuild,v 1.13 2007/05/01 11:36:47 corsair Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~stbey/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="amd64 ia64 ppc x86"
+KEYWORDS="amd64 ia64 ppc ~ppc64 x86"
 IUSE=""
 
 
