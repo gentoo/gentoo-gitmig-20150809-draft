@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-frontend/zabbix-frontend-1.1_alpha7.ebuild,v 1.3 2005/07/19 16:47:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-frontend/zabbix-frontend-1.1_alpha7.ebuild,v 1.4 2007/05/01 22:45:42 genone Exp $
 
 inherit eutils webapp
 
@@ -28,7 +28,7 @@ src_install() {
 }
 
 pkg_postinst(){
-	einfo
-	einfo "For setting the SQL server settings, see include/db.inc.php"
-	einfo
+	elog
+	elog "For setting the SQL server settings, see include/db.inc.php"
+	elog
 }

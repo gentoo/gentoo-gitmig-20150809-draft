@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r2.ebuild,v 1.3 2007/03/22 14:12:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r2.ebuild,v 1.4 2007/05/01 22:30:04 genone Exp $
 
 inherit eutils toolchain-funcs
 
@@ -52,6 +52,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You can start the scanlogd monitoring program at boot by running"
-	einfo "rc-update add scanlogd default"
+	elog "You can start the scanlogd monitoring program at boot by running"
+	elog "rc-update add scanlogd default"
 }

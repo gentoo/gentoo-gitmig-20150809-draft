@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.7 2007/04/28 12:17:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.8 2007/05/01 22:35:42 genone Exp $
 
 inherit perl-module eutils
 
@@ -89,16 +89,16 @@ src_install() {
 pkg_postinst() {
 	chown smokeping:smokeping "${ROOT}/var/lib/${PN}"
 	chmod 755 "${ROOT}/var/lib/${PN}"
-	einfo
-	einfo "Four more steps are needed to get ${PN} un&running:"
-	einfo "1) You need to edit /etc/${PN}"
-	einfo "2) You need to edit the template at /etc/${PN}.template"
-	einfo "3) You need to make the fping binary setuid root:"
-	einfo "    # chmod 4755 /usr/sbin/fping"
+	elog
+	elog "Four more steps are needed to get ${PN} un&running:"
+	elog "1) You need to edit /etc/${PN}"
+	elog "2) You need to edit the template at /etc/${PN}.template"
+	elog "3) You need to make the fping binary setuid root:"
+	elog "    # chmod 4755 /usr/sbin/fping"
 	if use apache2 ; then
-		einfo "4) Make sure to add -D PERL to APACHE2_OPTS in /etc/conf.d/apache2"
-		einfo "   and to restart apache2."
+		elog "4) Make sure to add -D PERL to APACHE2_OPTS in /etc/conf.d/apache2"
+		elog "   and to restart apache2."
 	fi
-	einfo "You can now start ${PN} with '/etc/init.d/${PN} start'."
-	einfo
+	elog "You can now start ${PN} with '/etc/init.d/${PN} start'."
+	elog
 }

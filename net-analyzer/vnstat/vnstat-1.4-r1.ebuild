@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r1.ebuild,v 1.6 2006/09/08 11:07:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r1.ebuild,v 1.7 2007/05/01 22:44:33 genone Exp $
 
 inherit eutils toolchain-funcs
 
@@ -48,23 +48,26 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/var/spool/vnstat ]] ; then
 		mv -f "${ROOT}"/var/spool/vnstat/* "${ROOT}"/var/lib/vnstat/ \
 			&& rmdir "${ROOT}"/var/spool/vnstat
-		einfo "vnStat db files moved from /var/spool/vnstat to /var/lib/vnstat"
+		elog "vnStat db files moved from /var/spool/vnstat to /var/lib/vnstat"
+		elog
 	fi
 
-	einfo "Repeat the following command for every interface you"
-	einfo "wish to monitor (replace eth0):"
-	einfo "   vnstat -u -i eth0"
-	einfo
-	einfo "Note: if an interface transfers more than ~4GB in"
-	einfo "the time between cron runs, you may miss traffic"
-	einfo
+	elog "Repeat the following command for every interface you"
+	elog "wish to monitor (replace eth0):"
+	elog "   vnstat -u -i eth0"
+	elog
+	elog "Note: if an interface transfers more than ~4GB in"
+	elog "the time between cron runs, you may miss traffic"
+	elog
 
 	if [[ -e ${ROOT}/etc/cron.d/vnstat ]] ; then
-		einfo "vnstat\'s cron script is now installed as /etc/cron.hourly/vnstat."
-		einfo "Please remove /etc/cron.d/vnstat."
+		elog "vnstat\'s cron script is now installed as /etc/cron.hourly/vnstat."
+		elog "Please remove /etc/cron.d/vnstat."
+		elog
 	else
-		einfo "A cron script has been installed to /etc/cron.hourly/vnstat."
+		elog "A cron script has been installed to /etc/cron.hourly/vnstat."
+		elog
 	fi
-	einfo "To update your interface database automatically with"
-	einfo "cron, uncomment the lines in /etc/cron.hourly/vnstat."
+	elog "To update your interface database automatically with"
+	elog "cron, uncomment the lines in /etc/cron.hourly/vnstat."
 }

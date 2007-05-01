@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/snmpmon-0.5.ebuild,v 1.6 2005/08/17 13:21:48 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/snmpmon-0.5.ebuild,v 1.7 2007/05/01 22:36:42 genone Exp $
 
 inherit qt3
 
@@ -31,8 +31,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Every user of SNMPMonitor has to copy the file oid.map:"
-	einfo "mkdir ~/.snmpmon ; cp /usr/share/snmpmon/oid.map ~/.snmpmon"
-	einfo
+	elog
+	elog "Every user of SNMPMonitor has to copy the file oid.map:"
+	elog "mkdir ~/.snmpmon ; cp /usr/share/snmpmon/oid.map ~/.snmpmon"
+	elog
 }

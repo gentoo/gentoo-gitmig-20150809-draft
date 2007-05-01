@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scanlogd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.24 2007/03/22 14:12:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.25 2007/05/01 22:30:04 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> scanlogd-2.2.ebuild,
+  scanlogd-2.2.6-r1.ebuild, scanlogd-2.2.6-r2.ebuild:
+  Replacing einfo with elog
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   scanlogd-2.2.6-r2.ebuild:

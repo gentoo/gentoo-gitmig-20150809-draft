@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.6.ebuild,v 1.1 2006/07/09 22:11:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.6.ebuild,v 1.2 2007/05/01 22:22:51 genone Exp $
 
 inherit eutils
 
@@ -47,6 +47,6 @@ src_install () {
 }
 
 pkg_postinst(){
-	einfo "Adjust /etc/conf.d/p0f to your liking before using the"
-	einfo "init script. For more information on options, read man p0f."
+	elog "Adjust /etc/conf.d/p0f to your liking before using the"
+	elog "init script. For more information on options, read man p0f."
 }

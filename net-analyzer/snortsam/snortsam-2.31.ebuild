@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.31.ebuild,v 1.3 2005/06/27 07:27:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.31.ebuild,v 1.4 2007/05/01 22:39:36 genone Exp $
 
 inherit eutils
 
@@ -35,9 +35,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "To use snortsam with snort, you'll have to compile snort with USE=snortsam."
-	einfo "Read the INSTALL file to configure snort for snortsam, and configure"
-	einfo "snortsam for your particular firewall."
+	elog "To use snortsam with snort, you'll have to compile snort with USE=snortsam."
+	elog "Read the INSTALL file to configure snort for snortsam, and configure"
+	elog "snortsam for your particular firewall."
 	echo
 }
 

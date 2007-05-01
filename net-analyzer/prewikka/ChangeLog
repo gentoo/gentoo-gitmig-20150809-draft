@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.22 2007/02/20 00:27:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.23 2007/05/01 22:24:28 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> prewikka-0.9.3.ebuild,
+  prewikka-0.9.3-r1.ebuild, prewikka-0.9.5.ebuild:
+  Replacing einfo with elog
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

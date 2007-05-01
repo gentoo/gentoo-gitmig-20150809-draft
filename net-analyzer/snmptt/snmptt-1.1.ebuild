@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/snmptt-1.1.ebuild,v 1.1 2006/02/18 18:39:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/snmptt-1.1.ebuild,v 1.2 2007/05/01 22:38:10 genone Exp $
 
 MY_P="${P/-/_}"
 
@@ -54,7 +54,7 @@ src_install() {
 
 pkg_postinst() {
 	if ( use mysql || use postgres ); then
-		einfo "Read the html documentation to configure your database."
+		elog "Read the html documentation to configure your database."
 	fi
-	einfo "Please configure /etc/snmp/snmptt.conf before running."
+	elog "Please configure /etc/snmp/snmptt.conf before running."
 }

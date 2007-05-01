@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.7.ebuild,v 1.1 2007/04/16 16:27:09 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.7.ebuild,v 1.2 2007/05/01 22:50:32 genone Exp $
 
 inherit eutils
 
@@ -62,15 +62,15 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You need to configure your database for Zabbix."
-	einfo
-	einfo "Have a look at /usr/share/zabbix/database for"
-	einfo "database creation and upgrades."
-	einfo
-	einfo "For more info read the Zabbix manual at"
-	einfo "http://www.zabbix.com/manual/v1.1/"
-	einfo
+	elog
+	elog "You need to configure your database for Zabbix."
+	elog
+	elog "Have a look at /usr/share/zabbix/database for"
+	elog "database creation and upgrades."
+	elog
+	elog "For more info read the Zabbix manual at"
+	elog "http://www.zabbix.com/manual/v1.1/"
+	elog
 
 	zabbix_homedir="$(egetent passwd zabbix | cut -d : -f 6 )"
 	if [ -n "${zabbix_homedir}" ] && \

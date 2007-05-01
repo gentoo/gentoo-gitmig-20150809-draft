@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snmpmon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/ChangeLog,v 1.7 2007/02/09 04:08:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/ChangeLog,v 1.8 2007/05/01 22:36:42 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> snmpmon-0.5.ebuild:
+  Replacing einfo with elog
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

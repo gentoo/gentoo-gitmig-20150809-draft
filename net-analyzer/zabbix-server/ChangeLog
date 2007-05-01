@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.15 2007/04/28 17:42:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.16 2007/05/01 22:50:32 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> zabbix-server-1.0.ebuild,
+  zabbix-server-1.1_alpha7.ebuild, zabbix-server-1.1.ebuild,
+  zabbix-server-1.1.6.ebuild, zabbix-server-1.1.7.ebuild:
+  Replacing einfo with elog
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> zabbix-server-1.0.ebuild,
   zabbix-server-1.1_alpha7.ebuild:

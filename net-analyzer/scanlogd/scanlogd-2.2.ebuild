@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.ebuild,v 1.15 2005/04/24 02:58:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.ebuild,v 1.16 2007/05/01 22:30:04 genone Exp $
 
 IUSE=""
 DESCRIPTION="Scanlogd - detects and logs TCP port scans"
@@ -25,9 +25,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Before you can run scanlogd you need to create the user "
-	einfo "scanlog by running the following command"
-	einfo "adduser -s /bin/false scanlogd"
-	einfo "You can start the scanlogd monitoring program at boot by running"
-	einfo "rc-update add scanlogd default"
+	elog "Before you can run scanlogd you need to create the user "
+	elog "scanlog by running the following command"
+	elog "adduser -s /bin/false scanlogd"
+	elog "You can start the scanlogd monitoring program at boot by running"
+	elog "rc-update add scanlogd default"
 }

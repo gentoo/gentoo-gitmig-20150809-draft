@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1-r2.ebuild,v 1.1 2006/07/27 02:58:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1-r2.ebuild,v 1.2 2007/05/01 22:26:27 genone Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please modify /etc/sancp/sancp.conf to suit your environment"
-	einfo
+	elog
+	elog "Please modify /etc/sancp/sancp.conf to suit your environment"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.2 2006/07/21 10:27:09 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.3 2007/05/01 22:31:30 genone Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You can customize your configuration by modifying /etc/sguil/sguil.conf"
-	einfo
+	elog
+	elog "You can customize your configuration by modifying /etc/sguil/sguil.conf"
+	elog
 }

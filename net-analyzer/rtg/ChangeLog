@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rtg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.10 2007/04/22 10:06:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.11 2007/05/01 22:25:29 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> rtg-0.7.4-r2.ebuild:
+  Replacing einfo with elog
 
   22 Apr 2007; <pva@gentoo.org> rtg-0.7.4-r2.ebuild:
   Use do{conf,init}d, bug #174266.

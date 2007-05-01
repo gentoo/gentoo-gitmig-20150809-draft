@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/rtg-0.7.4-r2.ebuild,v 1.3 2007/04/22 10:06:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/rtg-0.7.4-r2.ebuild,v 1.4 2007/05/01 22:25:29 genone Exp $
 
 inherit eutils
 
@@ -40,10 +40,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "RTG has been installed."
-	einfo
-	einfo "The default configuration file location is now /etc/rtg"
-	einfo
-	einfo "Sample reports have been installed into /usr/share/rtg"
-	einfo
+	elog "RTG has been installed."
+	elog
+	elog "The default configuration file location is now /etc/rtg"
+	elog
+	elog "Sample reports have been installed into /usr/share/rtg"
+	elog
 }

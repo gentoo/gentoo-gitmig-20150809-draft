@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.3.ebuild,v 1.5 2006/10/31 21:53:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.3.ebuild,v 1.6 2007/05/01 22:24:28 genone Exp $
 
 inherit versionator distutils
 
@@ -33,6 +33,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "For additional installation instructions go to"
-	einfo "https://trac.prelude-ids.org/wiki/InstallingPrewikka"
+	elog "For additional installation instructions go to"
+	elog "https://trac.prelude-ids.org/wiki/InstallingPrewikka"
 }

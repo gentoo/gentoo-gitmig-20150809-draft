@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1_alpha7.ebuild,v 1.5 2007/04/28 17:42:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1_alpha7.ebuild,v 1.6 2007/05/01 22:50:32 genone Exp $
 
 inherit eutils
 
@@ -94,11 +94,11 @@ src_install() {
 
 pkg_postinst(){
 	if ( use mysql ); then
-		einfo "You need configure mysql for zabbix."
-		einfo "For more info read Zabbix Manual (/usr/share/doc/${P}/Zabbix Manual.pdf)"
+		elog "You need configure mysql for zabbix."
+		elog "For more info read Zabbix Manual (/usr/share/doc/${P}/Zabbix Manual.pdf)"
 	fi
 	if ( use postgres ); then
-		einfo "You need configure postgresql for zabbix."
-		einfo "For more info read Zabbix Manual (/usr/share/doc/${P}/Zabbix Manual.pdf)"
+		elog "You need configure postgresql for zabbix."
+		elog "For more info read Zabbix Manual (/usr/share/doc/${P}/Zabbix Manual.pdf)"
 	fi
 }

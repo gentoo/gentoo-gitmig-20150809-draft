@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.1-r1.ebuild,v 1.10 2007/04/08 17:53:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.1-r1.ebuild,v 1.11 2007/05/01 22:41:54 genone Exp $
 
 IUSE=""
 
@@ -24,10 +24,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Note: tcptrace outputs its graphs in the xpl (xplot)"
-	einfo "format. since xplot is unavailable, you will have to"
-	einfo "use the included xpl2gpl utility to convert it to"
-	einfo "the gnuplot format."
-	einfo
+	elog
+	elog "Note: tcptrace outputs its graphs in the xpl (xplot)"
+	elog "format. since xplot is unavailable, you will have to"
+	elog "use the included xpl2gpl utility to convert it to"
+	elog "the gnuplot format."
+	elog
 }

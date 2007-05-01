@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.6.0_p1.ebuild,v 1.1 2005/12/24 23:24:32 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.6.0_p1.ebuild,v 1.2 2007/05/01 22:33:00 genone Exp $
 
 inherit eutils
 
@@ -78,16 +78,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You should check /etc/sguil/sensor_agent.conf and"
-	einfo "/etc/init.d/logpackets and ensure that they are accurate"
-	einfo "for your environment. They should work providing that you"
-	einfo "are running the sensor on the same machine as the server."
-	einfo "This ebuild assumes that you are running a single sensor"
-	einfo "environment, if this is not the case then you must make sure"
-	einfo "to modify /etc/sguil/sensor_agent.conf and change the HOSTNAME variable."
-	einfo "You should crontab the /etc/init.d/log_packets script to restart"
-	einfo "each hour."
-	einfo
+	elog
+	elog "You should check /etc/sguil/sensor_agent.conf and"
+	elog "/etc/init.d/logpackets and ensure that they are accurate"
+	elog "for your environment. They should work providing that you"
+	elog "are running the sensor on the same machine as the server."
+	elog "This ebuild assumes that you are running a single sensor"
+	elog "environment, if this is not the case then you must make sure"
+	elog "to modify /etc/sguil/sensor_agent.conf and change the HOSTNAME variable."
+	elog "You should crontab the /etc/init.d/log_packets script to restart"
+	elog "each hour."
+	elog
 }
 

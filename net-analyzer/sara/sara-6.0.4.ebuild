@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-6.0.4.ebuild,v 1.4 2006/02/03 22:40:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-6.0.4.ebuild,v 1.5 2007/05/01 22:27:45 genone Exp $
 
 DESCRIPTION="SARA Security Auditor's Research Assistant is a derived work of Security Administrator Tool for Analyzing Networks SATAN"
 SRC_URI="http://www-arc.com/sara/downloads/${P}.tgz"
@@ -95,6 +95,6 @@ src_install(){
 }
 
 pkg_postinst() {
-	einfo "Read the documentation in ${SARA_HOME}/html before running this program."
-	einfo "You must have installed a web browser."
+	elog "Read the documentation in ${SARA_HOME}/html before running this program."
+	elog "You must have installed a web browser."
 }
