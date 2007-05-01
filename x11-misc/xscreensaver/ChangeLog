@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.171 2007/05/01 14:10:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.172 2007/05/01 18:41:16 drac Exp $
+
+  01 May 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xscreensaver-5.02-nsfw.patch, xscreensaver-5.02.ebuild:
+  Fix USE="offensive" patch.
 
 *xscreensaver-5.02 (01 May 2007)
 
