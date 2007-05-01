@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.355 2007/04/25 08:33:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.356 2007/05/01 12:05:03 carlo Exp $
+
+*kdebase-3.5.6-r3 (01 May 2007)
+
+  01 May 2007; Carsten Lohrke <carlo@gentoo.org> +kdebase-3.5.6-r3.ebuild:
+  Multiple fixes, see the recent corresponding split ebuild revision bumps for
+  more information.
 
   25 Apr 2007; Carsten Lohrke <carlo@gentoo.org> kdebase-3.5.6-r2.ebuild:
   XDG path care.
