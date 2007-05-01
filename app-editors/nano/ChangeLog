@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.162 2007/05/01 09:11:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.163 2007/05/01 09:51:25 chainsaw Exp $
+
+  01 May 2007; Tony Vroon <chainsaw@gentoo.org> nano-2.0.4.ebuild:
+  Stabilize on PPC & PPC64. Tested on a PowerBook 5,9 and a PowerMac 7,3
+  (64UL) respectively. Both on GCC 4.1.2. For bug #176601.
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org> nano-2.0.4.ebuild:
   x86 stable wrt #176601
