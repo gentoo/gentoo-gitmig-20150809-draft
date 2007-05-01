@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.3 2007/02/28 16:23:51 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.4 2007/05/01 09:07:41 uberlord Exp $
 
 # Mask out the GNU versions of various packages.
 # We want BSD versions wherever possible
@@ -23,7 +23,6 @@ sys-process/procps
 sys-apps/iproute2
 sys-fs/udev
 sys-fs/sysfsutils
-sys-apps/hal
 sys-apps/attr
 sys-apps/acl
 net-misc/udhcp

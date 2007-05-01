@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.31 2007/03/22 05:04:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.32 2007/05/01 09:07:41 uberlord Exp $
 
 # Linux-dependant flags
 selinux
@@ -12,7 +12,6 @@ v4l2
 fbcon
 directfb
 ev6
-hal
 gpm
 lirc
 multilib
