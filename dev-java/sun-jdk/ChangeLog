@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.196 2007/04/30 11:03:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.197 2007/05/01 14:29:36 caster Exp $
+
+*sun-jdk-1.4.2.14 (01 May 2007)
+
+  01 May 2007; Vlastimil Babka <caster@gentoo.org> +sun-jdk-1.4.2.14.ebuild,
+  -sun-jdk-1.5.0.10.ebuild:
+  Version bump for security bug #176675; src.zip moved completely for bug
+  #2241; remove 1.5.0.10 vulnerable to the same security bug.
 
   30 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> files/sun-jdk-1.6.env:
   Remove sunrsasign.jar from BOOTCLASSPATH as it hasn't been in use since 1.4.
