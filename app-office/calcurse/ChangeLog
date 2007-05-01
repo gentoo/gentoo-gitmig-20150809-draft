@@ -1,0 +1,10 @@
+# ChangeLog for app-office/calcurse
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.1 2007/05/01 13:47:50 cedk Exp $
+
+*calcurse-1.7 (01 May 2007)
+
+  01 May 2007; Cedric Krier <cedk@gentoo.org> +metadata.xml,
+  +calcurse-1.7.ebuild:
+  New ebuild for bug #111327, thanks to Tomoyuki Sakurai
+
