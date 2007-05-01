@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7208 2007/05/01 14:23:34 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7209 2007/05/01 18:09:23 graaff Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -357,10 +357,6 @@ kde-misc/metabar
 # Masked for testing
 # See bug 141617 for more information
 >=media-gfx/hugin-0.7_beta4
-
-# Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> (1 Apr 2007)
-# Masked for testing, #162463
->=dev-ruby/rubygems-0.9.1
 
 # Carsten Lohrke <carlo@gentoo.org> (31 Mar 2007)
 # no point to bug around with beta releases
