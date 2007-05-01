@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.30 2007/02/03 00:24:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.31 2007/05/01 11:53:15 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> otrs-2.1.5.ebuild:
+  Added ~ppc64; bug #175869
 
 *otrs-2.1.5 (03 Feb 2007)
 

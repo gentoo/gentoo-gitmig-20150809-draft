@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.5.ebuild,v 1.1 2007/02/03 00:24:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.5.ebuild,v 1.2 2007/05/01 11:53:15 corsair Exp $
 
 inherit webapp eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="OTRS is an Open source Ticket Request System"
 HOMEPAGE="http://otrs.org/"
 SRC_URI="ftp://ftp.otrs.org/pub/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="
 	${DEPEND}
