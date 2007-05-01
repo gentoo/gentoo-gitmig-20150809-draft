@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/libdomainkeys-0.68-r1.ebuild,v 1.1 2007/04/18 23:02:20 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/libdomainkeys-0.68-r1.ebuild,v 1.2 2007/05/01 09:43:12 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/domainkeys/${P}.tar.gz"
 LICENSE="libdomainkeys-1.1"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-devel/libtool-1.4.1-r8
