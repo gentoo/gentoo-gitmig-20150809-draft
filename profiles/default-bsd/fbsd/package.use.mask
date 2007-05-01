@@ -41,3 +41,6 @@ net-wireless/aircrack-ng wifi
 
 # sane-backends not yet keyworded, xv doesn't build
 dev-python/imaging scanner X
+
+# Uses consolekit, which currently doesn't build
+gnome-base/gdm pam
