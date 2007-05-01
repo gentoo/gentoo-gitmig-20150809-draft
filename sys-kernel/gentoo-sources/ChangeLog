@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.389 2007/04/27 19:24:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.390 2007/05/01 14:15:22 dsd Exp $
+
+  01 May 2007; Daniel Drake <dsd@gentoo.org>
+  -files/gentoo-sources-2.4.CAN-2004-1056.patch,
+  -files/gentoo-sources-2.4.81106.patch, -gentoo-sources-2.4.32-r7.ebuild:
+  Remove gentoo-sources-2.4 as previously discussed. Replaced by
+  vanilla-sources for 2.4 users, who are as usual strongly encouraged to
+  upgrade to 2.6
 
   27 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoo-sources-2.6.20-r7.ebuild:
