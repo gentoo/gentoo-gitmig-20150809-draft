@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.0.ebuild,v 1.3 2007/04/23 17:07:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.0.ebuild,v 1.4 2007/05/01 18:05:58 dang Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -12,7 +12,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="accessibility cdr cups dvdr hal ldap"
+IUSE="accessibility cdr cups dvdr ldap"
 
 S=${WORKDIR}
 
@@ -119,8 +119,6 @@ RDEPEND="!gnome-base/gnome-core
 	cdr? ( >=gnome-extra/nautilus-cd-burner-2.18.0 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.18.0 )
 
-	hal? ( >=gnome-base/gnome-volume-manager-2.17.0 )
-
 	>=gnome-extra/gtkhtml-3.14.0
 	>=mail-client/evolution-2.10.0
 	>=gnome-extra/evolution-data-server-1.10.0
@@ -141,6 +139,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-screensaver-2.18.0
 	>=x11-misc/alacarte-0.11.3
 	>=gnome-extra/gnome-power-manager-2.18.0
+	>=gnome-base/gnome-volume-manager-2.17.0
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.18.0
