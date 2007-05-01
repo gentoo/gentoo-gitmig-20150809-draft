@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.10 2007/01/17 22:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.11 2007/05/01 00:45:25 genone Exp $
 
 inherit eutils
 
@@ -59,5 +59,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
-	einfo "Please read /usr/share/doc/gephex/html/documentation.html to get started."
+	elog "Please read /usr/share/doc/gephex/html/documentation.html to get started."
 }

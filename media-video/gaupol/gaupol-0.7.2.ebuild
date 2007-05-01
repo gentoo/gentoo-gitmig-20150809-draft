@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.7.2.ebuild,v 1.1 2007/01/25 05:30:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.7.2.ebuild,v 1.2 2007/05/01 00:43:56 genone Exp $
 
 inherit distutils
 
@@ -27,10 +27,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please note that an external video player is required for"
-	einfo "preview. MPlayer or VLC is recommended."
+	elog "Please note that an external video player is required for"
+	elog "preview. MPlayer or VLC is recommended."
 	if use spell; then
-		einfo "Additionally, spell-checking requires a dictionary, any of"
-		einfo "Aspell/Pspell, Ispell, MySpell, Uspell, Hspell or AppleSpell."
+		elog "Additionally, spell-checking requires a dictionary, any of"
+		elog "Aspell/Pspell, Ispell, MySpell, Uspell, Hspell or AppleSpell."
 	fi
 }

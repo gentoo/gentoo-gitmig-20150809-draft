@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.5 2007/03/04 23:16:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.6 2007/05/01 00:42:38 genone Exp $
 
 inherit eutils
 
@@ -54,17 +54,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To have Xorg make use of the new GATOS modules, you should add the following"
-	einfo "line to /etc/X11/XF86Config, in the files section and above any other"
-	einfo "ModulePath directives:"
-	einfo
-	einfo "      ModulePath \"/usr/X11R6/lib/modules-extra/gatos\""
-	einfo
-	einfo "Please note that you may need to uncomment or add another ModulePath line with"
-	einfo "the default module path in it. If Xorg does not start after adding the line"
-	einfo "above, add this one under it:"
-	einfo
-	einfo "      ModulePath \"/usr/X11R6/lib/modules\""
+	elog "To have Xorg make use of the new GATOS modules, you should add the following"
+	elog "line to /etc/X11/XF86Config, in the files section and above any other"
+	elog "ModulePath directives:"
+	elog
+	elog "      ModulePath \"/usr/X11R6/lib/modules-extra/gatos\""
+	elog
+	elog "Please note that you may need to uncomment or add another ModulePath line with"
+	elog "the default module path in it. If Xorg does not start after adding the line"
+	elog "above, add this one under it:"
+	elog
+	elog "      ModulePath \"/usr/X11R6/lib/modules\""
 }
 
 fix_makefile() {
