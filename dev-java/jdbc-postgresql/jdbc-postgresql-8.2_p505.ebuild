@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.2_p505.ebuild,v 1.1 2007/04/21 20:06:59 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.2_p505.ebuild,v 1.2 2007/05/01 08:23:16 fordfrog Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -53,10 +53,6 @@ src_unpack() {
 	# patch to make junit test work + correction for doc target
 	cd ${S}
 	epatch ${FILESDIR}/${P}-build.xml.patch
-
-	mkdir lib
-	cd lib
-	java-pkg_jar-from --build-only junit
 }
 
 src_compile() {
@@ -76,7 +72,7 @@ src_install() {
 
 	if use_doc; then
 		java-pkg_dojavadoc build/publicapi
-		java-pkg_dohtml build/doc/pgjdbc.html
+		dohtml build/doc/pgjdbc.html
 	fi
 
 	use source && java-pkg_dosrc org
@@ -91,6 +87,9 @@ src_test() {
 	einfo
 	einfo "You can find a general info on how to perform these steps at"
 	einfo "http://gentoo-wiki.com/HOWTO_Configure_Postgresql"
+
+	mkdir lib
+	java-pkg_jar-from --into lib junit
 
 	ANT_TASKS="ant-junit" eant test
 }
