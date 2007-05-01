@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.18 2007/05/01 06:51:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.19 2007/05/01 06:53:55 robbat2 Exp $
+
+  01 May 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  This is a crypto package, mark metadata as such.
 
   01 May 2007; Robin H. Johnson <robbat2@gentoo.org> mcrypt-2.6.4.ebuild,
   mcrypt-2.6.5.ebuild:
