@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/sofia-sip-1.12.3.ebuild,v 1.2 2006/10/08 18:05:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/sofia-sip-1.12.5.ebuild,v 1.1 2007/05/01 09:34:16 genstef Exp $
 
 DESCRIPTION="RFC3261 compliant SIP User-Agent library"
 HOMEPAGE="http://sofia-sip.sourceforge.net/"
@@ -13,7 +13,6 @@ IUSE="ssl"
 
 RDEPEND="dev-libs/glib
 	ssl? ( dev-libs/openssl )"
-
 DEPEND="${RDEPEND}"
 
 src_compile() {
@@ -22,7 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc ChangeLog COPYRIGHTS README TODO
 }
