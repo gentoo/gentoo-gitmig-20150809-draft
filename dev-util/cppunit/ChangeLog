@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.28 2007/04/30 18:15:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.29 2007/05/01 17:17:57 corsair Exp $
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> cppunit-1.12.0.ebuild:
+  Stable on ppc64; bug #176279
 
   30 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> cppunit-1.12.0.ebuild:
   Stable on sparc wrt #176279
