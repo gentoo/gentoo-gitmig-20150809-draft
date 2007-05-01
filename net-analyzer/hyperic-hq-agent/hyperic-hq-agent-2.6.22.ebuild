@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.6.22.ebuild,v 1.1 2006/04/16 08:22:37 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.6.22.ebuild,v 1.2 2007/05/01 17:48:59 genone Exp $
 
 inherit eutils
 
@@ -29,12 +29,12 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "You should perform the following before attempting to start the agent:"
-	einfo
-	einfo "1) read and agree to the _commercial license_ at /usr/portage/licenses/hyperic"
-	einfo "2) ensure that your server has a license key permitting an additional agent install."
-	einfo "3) have your server ip, admin username, and admin password available"
-	einfo "4) rc-update add hyperic-hq-agent default"
-	einfo "5) /etc/init.d/hyperic-hq-agent start"
-	einfo
+	elog "You should perform the following before attempting to start the agent:"
+	elog
+	elog "1) read and agree to the _commercial license_ at /usr/portage/licenses/hyperic"
+	elog "2) ensure that your server has a license key permitting an additional agent install."
+	elog "3) have your server ip, admin username, and admin password available"
+	elog "4) rc-update add hyperic-hq-agent default"
+	elog "5) /etc/init.d/hyperic-hq-agent start"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r1.ebuild,v 1.3 2006/11/23 19:44:04 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r1.ebuild,v 1.4 2007/05/01 17:40:17 genone Exp $
 
 DESCRIPTION="Fast output system for Snort"
 SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz"
@@ -67,10 +67,10 @@ src_install () {
 
 pkg_postinst() {
 	if use sguil ; then
-		einfo
-		einfo "Make sure to edit /etc/snort/barnyard.conf and uncomment the"
-		einfo "sguil section along with supplying the appropriate database"
-		einfo "information."
-		einfo
+		elog
+		elog "Make sure to edit /etc/snort/barnyard.conf and uncomment the"
+		elog "sguil section along with supplying the appropriate database"
+		elog "information."
+		elog
 	fi
 }

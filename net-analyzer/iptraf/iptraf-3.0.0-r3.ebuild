@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r3.ebuild,v 1.8 2007/04/24 05:12:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r3.ebuild,v 1.9 2007/05/01 17:52:35 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -73,14 +73,14 @@ src_install() {
 
 pkg_postinst() {
 	if use suid ; then
-		einfo
-		einfo "You've chosen to build iptraf with run-as-user support"
-		einfo
-		einfo "The app now has this support, but for security reasons"
-		einfo "you need to run the following command to allow your users"
-		einfo "to suid-run it:"
-		einfo
-		einfo " # chmod 4755 /usr/sbin/iptraf"
-		einfo
+		elog
+		elog "You've chosen to build iptraf with run-as-user support"
+		elog
+		elog "The app now has this support, but for security reasons"
+		elog "you need to run the following command to allow your users"
+		elog "to suid-run it:"
+		elog
+		elog " # chmod 4755 /usr/sbin/iptraf"
+		elog
 	fi
 }

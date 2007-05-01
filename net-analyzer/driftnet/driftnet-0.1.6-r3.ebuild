@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r3.ebuild,v 1.6 2007/02/01 21:39:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r3.ebuild,v 1.7 2007/05/01 17:46:43 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,7 +65,7 @@ src_install () {
 
 	dodoc CHANGES CREDITS README TODO || die "dodoc failed"
 
-	einfo "marking the no-display driftnet as setuid root."
+	elog "marking the no-display driftnet as setuid root."
 	chown root:wheel "${D}/usr/bin/driftnet"
 	chmod 750 "${D}/usr/bin/driftnet"
 	chmod u+s "${D}/usr/bin/driftnet"
@@ -73,10 +73,10 @@ src_install () {
 
 pkg_postinst() {
 	if ! has_version 'virtual/mpg123' ; then
-		einfo
-		einfo "In case you want driftnet to be able to play"
-		einfo "audio files found on the streams, you need to do:"
-		einfo " # emerge mpg123"
-		einfo
+		elog
+		elog "In case you want driftnet to be able to play"
+		elog "audio files found on the streams, you need to do:"
+		elog " # emerge mpg123"
+		elog
 	fi
 }

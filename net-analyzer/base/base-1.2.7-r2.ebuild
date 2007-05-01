@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r2.ebuild,v 1.2 2007/02/01 21:14:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r2.ebuild,v 1.3 2007/05/01 17:42:04 genone Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -67,14 +67,14 @@ pkg_setup() {
 				BASE_DBTYPE=${db}
 				let dbtypecnt++
 			elif [ ${dbtypecnt} -ge 1 ]; then
-				einfo "You set multiple database types in your USE flags."
+				ewarn "You set multiple database types in your USE flags."
 				ewarn "You will have to setup DBtype configuration manually."
 			fi
 		fi
 	done
 
 	if [ ${dbtypecnt} -eq 0 ]; then
-		einfo "No database type selected in your USE flags."
+		ewarn "No database type selected in your USE flags."
 		ewarn "You will have to setup DBtype manually."
 	fi
 
@@ -202,12 +202,12 @@ pkg_postinst() {
 			ewarn "chown root:${HTTPD_GROUP} ${CONF_DIR}/${CONF_NEW}"
 	fi
 
-	einfo ""
-	einfo "You should edit \"${CONF_DIR}/${CONF_NEW}\" before using BASE."
-	einfo ""
-	einfo "To setup your initial database, direct your web browser to the"
-	einfo "location you installed BASE/base_db_setup.php"
-	einfo "You can find instructions in /usr/share/doc/${P}/README"
-	einfo "There is a guide at http://gentoo-wiki.com/HOWTO_Apache2_with_BASE"
-	einfo ""
+	elog ""
+	elog "You should edit \"${CONF_DIR}/${CONF_NEW}\" before using BASE."
+	elog ""
+	elog "To setup your initial database, direct your web browser to the"
+	elog "location you installed BASE/base_db_setup.php"
+	elog "You can find instructions in /usr/share/doc/${P}/README"
+	elog "There is a guide at http://gentoo-wiki.com/HOWTO_Apache2_with_BASE"
+	elog ""
 }

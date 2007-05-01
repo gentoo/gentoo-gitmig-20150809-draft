@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/hyperic-hq-agent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.14 2006/04/16 08:22:37 mattm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.15 2007/05/01 17:48:59 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org>
+  hyperic-hq-agent-2.5.15.ebuild, hyperic-hq-agent-2.6.22.ebuild,
+  hyperic-hq-agent-2.6.27.ebuild:
+  Replacing einfo with elog
 
 *hyperic-hq-agent-2.6.22 (16 Apr 2006)
 

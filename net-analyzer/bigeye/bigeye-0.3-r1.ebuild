@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r1.ebuild,v 1.2 2005/12/15 19:48:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r1.ebuild,v 1.3 2007/05/01 17:42:59 genone Exp $
 
 inherit toolchain-funcs eutils
 
@@ -37,6 +37,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The service emulation files mentioned in the README"
-	einfo "are located in /usr/share/bigeye/messages"
+	elog "The service emulation files mentioned in the README"
+	elog "are located in /usr/share/bigeye/messages"
 }

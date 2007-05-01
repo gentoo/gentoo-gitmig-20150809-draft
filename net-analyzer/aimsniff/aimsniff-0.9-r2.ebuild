@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.3 2007/02/01 21:03:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.4 2007/05/01 17:35:30 genone Exp $
 
 inherit eutils webapp eutils
 
@@ -85,8 +85,8 @@ pkg_postinst() {
 	if use mysql
 	then
 		echo
-		einfo "To create and enable the mysql database, please run: "
-		einfo "emerge --config =${PF}"
+		elog "To create and enable the mysql database, please run: "
+		elog "emerge --config =${PF}"
 
 		if use http
 		then
@@ -98,8 +98,8 @@ pkg_postinst() {
 
 	if use http
 	then
-		echo
-		einfo "Go to http://${HOSTNAME}/was/admin.php to configure WAS."
+		elog
+		elog "Go to http://${HOSTNAME}/was/admin.php to configure WAS."
 
 		echo "Go to http://${HOSTNAME}/was/admin.php to configure WAS." > was-postinst
 		webapp_postinst_txt en was-postinst

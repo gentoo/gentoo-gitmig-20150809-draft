@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.12 2006/11/23 19:49:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.13 2007/05/01 17:54:00 genone Exp $
 
 inherit webapp
 
@@ -74,13 +74,13 @@ pkg_postinst() {
 	chmod g+w /var/www/localhost/htdocs/midas-nms/{inc/config,php-graph}
 	cp ${FILESDIR}/install.php /var/www/localhost/htdocs/midas-nms/install
 
-	einfo
-	einfo "To install the web interface go to:"
-	einfo "http://localhost/midas-nms/install/install.php"
-	einfo
-	einfo "The conf files are located in /usr/etc/MIDAS*.cf.dist"
-	einfo "Please read INSTALL.txt for more info."
-	einfo
-	einfo "To use the sniffer and IDS you need install snort too."
-	einfo
+	elog
+	elog "To install the web interface go to:"
+	elog "http://localhost/midas-nms/install/install.php"
+	elog
+	elog "The conf files are located in /usr/etc/MIDAS*.cf.dist"
+	elog "Please read INSTALL.txt for more info."
+	elog
+	elog "To use the sniffer and IDS you need install snort too."
+	elog
 }

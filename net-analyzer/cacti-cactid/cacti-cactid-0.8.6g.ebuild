@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6g.ebuild,v 1.8 2007/03/10 14:16:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6g.ebuild,v 1.9 2007/05/01 17:45:16 genone Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -44,9 +44,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please see cacti's site for installation instructions."
-	einfo "Theres no need to change the crontab for this, just"
-	einfo "read the instructions on how to implement it"
-	einfo
-	einfo "http://cacti.net/cactid_install.php"
+	elog "Please see cacti's site for installation instructions."
+	elog "Theres no need to change the crontab for this, just"
+	elog "read the instructions on how to implement it"
+	elog
+	elog "http://cacti.net/cactid_install.php"
 }

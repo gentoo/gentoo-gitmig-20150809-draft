@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.29 2007/02/01 21:39:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.30 2007/05/01 17:46:43 genone Exp $
+
+  01 May 2007; Marius Mauch <genone@gentoo.org> driftnet-0.1.6-r3.ebuild:
+  Replacing einfo with elog
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
   -files/driftnet-0.1.6-tmpnam-is-bad.diff, -driftnet-0.1.6.ebuild,

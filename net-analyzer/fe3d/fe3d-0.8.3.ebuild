@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.6 2006/10/31 21:56:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.7 2007/05/01 17:47:55 genone Exp $
 
 inherit versionator
 
@@ -36,7 +36,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Example using a nmap log:"
-	einfo "/usr/bin/nmap -oX test.xml -O --osscan_limit 192.168.0.0/24"
-	einfo "/usr/bin/fe3d test.xml"
+	elog "Example using a nmap log:"
+	elog "/usr/bin/nmap -oX test.xml -O --osscan_limit 192.168.0.0/24"
+	elog "/usr/bin/fe3d test.xml"
 }

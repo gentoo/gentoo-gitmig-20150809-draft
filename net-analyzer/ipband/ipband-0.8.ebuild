@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.ebuild,v 1.4 2007/04/28 12:30:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.ebuild,v 1.5 2007/05/01 17:51:28 genone Exp $
 
 inherit eutils
 
@@ -38,14 +38,14 @@ src_install() {
 pkg_postinst() {
 	ewarn "If you plan to use ipband as a service, you must edit"
 	ewarn "/etc/ipband.conf"
-	einfo ""
-	einfo "The following command line example will:"
-	einfo "  o Listen on eth0"
-	einfo "  o Group results into a summary relative to 192.168.1.0/24"
-	einfo "  o Average bandwidth every 5 seconds"
-	einfo "  o Report when average bandwidth has exceeded 7 kB/sec"
-	einfo "    over the previous 10 seconds. The report is written to"
-	einfo "    stdout but can also be emailed or stored in a file."
-	einfo ""
-	einfo "ipband eth0 -L 192.168.1.0/24 -a 5 -r 10 -b 7 -o -"
+	elog ""
+	elog "The following command line example will:"
+	elog "  o Listen on eth0"
+	elog "  o Group results into a summary relative to 192.168.1.0/24"
+	elog "  o Average bandwidth every 5 seconds"
+	elog "  o Report when average bandwidth has exceeded 7 kB/sec"
+	elog "    over the previous 10 seconds. The report is written to"
+	elog "    stdout but can also be emailed or stored in a file."
+	elog ""
+	elog "ipband eth0 -L 192.168.1.0/24 -a 5 -r 10 -b 7 -o -"
 }
