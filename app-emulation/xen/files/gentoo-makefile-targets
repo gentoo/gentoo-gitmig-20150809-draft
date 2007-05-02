@@ -1,8 +1,0 @@
-
-gentoo-compile:
-	$(MAKE) -C xen
-	$(MAKE) -C tools
-
-gentoo-install:
-	$(MAKE) -C xen install
-	$(MAKE) -C tools install
