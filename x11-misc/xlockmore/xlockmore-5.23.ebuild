@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23.ebuild,v 1.2 2007/02/22 21:21:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23.ebuild,v 1.3 2007/05/02 10:47:38 drac Exp $
 
 inherit eutils pam flag-o-matic
 
@@ -34,9 +34,9 @@ src_compile() {
 		--enable-vtlock \
 		--without-ftgl \
 		$(use_enable crypt) \
-		$(use_enable opengl) \
-		$(use_enable opengl gltt) \
-		$(use_enable opengl mesa) \
+		$(use_with opengl) \
+		$(use_with opengl gltt) \
+		$(use_with opengl mesa) \
 		$(use_enable xlockrc xlockrc) \
 		$(use_enable unicode use-mb) \
 		$(use_enable pam) \
