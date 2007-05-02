@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.2.4.ebuild,v 1.1 2007/05/01 19:30:23 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.2.4-r1.ebuild,v 1.1 2007/05/02 08:50:01 voxus Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -78,8 +78,6 @@ src_unpack() {
 			chown portage "${S}/src/test/regress/results"
 			epatch "${FILESDIR}/${PN}-${PV}-regress_su.patch"
 		fi
-	else
-		epatch ${FILESDIR}/${PN}-${PV}-no-test.patch
 	fi
 }
 
