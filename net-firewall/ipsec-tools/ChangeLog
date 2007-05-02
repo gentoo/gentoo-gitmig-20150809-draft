@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.54 2007/05/01 11:28:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.55 2007/05/02 13:41:15 gustavoz Exp $
+
+  02 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  ipsec-tools-0.6.7.ebuild:
+  Stable on sparc wrt security #173219
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org> ipsec-tools-0.6.7.ebuild:
   x86 stable wrt security bug 173219
