@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.29 2007/02/06 18:25:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.30 2007/05/02 07:53:25 genone Exp $
+
+  02 May 2007; Marius Mauch <genone@gentoo.org> fritzcapi-2.6.43.ebuild:
+  Replacing einfo with elog
 
   06 Feb 2007; <genstef@gentoo.org> fritzcapi-2.6.43.ebuild:
   comment out 2.6.20 patch for dsd

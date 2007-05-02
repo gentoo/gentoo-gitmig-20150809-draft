@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.5-r1.ebuild,v 1.1 2007/03/14 22:05:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.5-r1.ebuild,v 1.2 2007/05/02 07:56:36 genone Exp $
 
 DESCRIPTION="A serial port terminal written in GTK+, similar to Windows' HyperTerminal."
 HOMEPAGE="http://www.jls-info.com/julien/linux/"
@@ -52,8 +52,8 @@ src_install() {
 			MY_LINGUAS="${MY_AVAILABLE_LINGUAS}"
 		fi
 
-		einfo "Locale messages will be installed for following languages:"
-		einfo "   ${MY_LINGUAS}"
+		elog "Locale messages will be installed for following languages:"
+		elog "   ${MY_LINGUAS}"
 
 		for lang in ${MY_LINGUAS}; do
 			msgfmt -o ${lang}.mo ${lang}.po && \

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtkterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.18 2007/03/14 22:05:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.19 2007/05/02 07:56:36 genone Exp $
+
+  02 May 2007; Marius Mauch <genone@gentoo.org> gtkterm-0.99.5-r1.ebuild:
+  Replacing einfo with elog
 
 *gtkterm-0.99.5-r1 (14 Mar 2007)
 

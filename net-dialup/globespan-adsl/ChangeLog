@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/globespan-adsl
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.19 2006/10/23 07:53:06 mrness Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.20 2007/05/02 07:54:52 genone Exp $
+
+  02 May 2007; Marius Mauch <genone@gentoo.org> globespan-adsl-0.10.ebuild,
+  globespan-adsl-0.11.ebuild:
+  Replacing einfo with elog
 
   23 Oct 2006; Alin Nastac <mrness@gentoo.org> globespan-adsl-0.10.ebuild,
   globespan-adsl-0.11.ebuild:

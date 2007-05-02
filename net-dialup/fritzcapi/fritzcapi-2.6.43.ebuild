@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.10 2007/02/06 18:25:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.11 2007/05/02 07:53:25 genone Exp $
 
 inherit linux-mod rpm eutils
 
@@ -68,12 +68,12 @@ pkg_setup() {
 			die "Module ${USERCARD} not present in ${P}"
 		done
 	else
-		einfo
-		einfo "You can control the modules which are built with the variable"
-		einfo "FRITZCAPI_CARDS which should contain a blank separated list"
-		einfo "of a selection from the following cards:"
-		einfo "   ${FRITZCAPI_MODULES[*]}"
-		einfo
+		elog
+		elog "You can control the modules which are built with the variable"
+		elog "FRITZCAPI_CARDS which should contain a blank separated list"
+		elog "of a selection from the following cards:"
+		elog "   ${FRITZCAPI_MODULES[*]}"
+		elog
 		ewarn "I give you the chance of hitting Ctrl-C and make the necessary"
 		ewarn "adjustments in /etc/make.conf."
 		ebeep
@@ -92,7 +92,7 @@ pkg_setup() {
 		done
 	fi
 
-	einfo "Selected cards: ${FRITZCAPI_BUILD_CARDS}"
+	elog "Selected cards: ${FRITZCAPI_BUILD_CARDS}"
 }
 
 src_unpack() {
@@ -137,11 +137,11 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	einfo "If your device needs a firmware, you should edit copy the firmware files"
-	einfo "in /lib/firmware and edit /etc/capi.conf."
-	einfo
+	elog "If your device needs a firmware, you should edit copy the firmware files"
+	elog "in /lib/firmware and edit /etc/capi.conf."
+	elog
 	[ "${FRITZCAPI_BUILD_TARGETS/usb2/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && (
-		einfo "Note: This ebuild has already installed firmware files necessary for following modules:"
-		einfo "   fcusb2"
+		elog "Note: This ebuild has already installed firmware files necessary for following modules:"
+		elog "   fcusb2"
 	)
 }
