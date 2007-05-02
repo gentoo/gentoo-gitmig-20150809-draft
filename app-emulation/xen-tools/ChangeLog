@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.20 2007/03/13 06:26:34 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.21 2007/05/02 04:10:04 marineam Exp $
+
+*xen-tools-3.0.4_p1 (02 May 2007)
+
+  02 May 2007; Michael Marineau <marineam@gentoo.org>
+  -files/3.0.2-r4/pygrub-progsreiserfs-0.3.1.patch,
+  -files/3.0.2-r4/xc_ptrace.patch, -files/3.0.2-r4/xend.initd,
+  -files/3.0.2-r4/xendomains.initd, +files/xen-tools-3.0.2-xc_ptrace.patch,
+  +files/xen-tools-3.0.2-pygrub-progsreiserfs-0.3.1.patch,
+  +files/xen-tools-3.0.4_p1--as-needed.patch,
+  +files/xen-tools-3.0.4_p1-network-bridge-broadcast.patch,
+  +files/xen-tools-3.0.4_p1-remove-monitor-mode-from-vnc.patch,
+  +files/xen-tools-3.0.4_p1-vnclisten.patch, +files/xend.initd,
+  +files/xendomains.initd, -files/xendomains-conf, -files/xendomains-init,
+  -xen-tools-3.0.2-r2.ebuild, -xen-tools-3.0.2-r3.ebuild,
+  xen-tools-3.0.2-r4.ebuild, +xen-tools-3.0.4_p1.ebuild:
+  Add Xen 3.0.4_1 from the marineam-xen overlay.
+  Clean out some old ebuilds and clean up the files dir.
 
   13 Mar 2007; Andrew Ross <aross@gentoo.org> xen-tools-3.0.2-r3.ebuild,
   xen-tools-3.0.2-r4.ebuild:

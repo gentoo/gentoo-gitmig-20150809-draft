@@ -1,37 +1,39 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.4 2007/05/02 04:10:04 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.1 2007/05/02 04:10:04 marineam Exp $
 
-inherit mount-boot flag-o-matic distutils eutils multilib
+inherit flag-o-matic distutils eutils multilib
 
 DESCRIPTION="Xend daemon and tools"
-HOMEPAGE="http://xen.sourceforge.net"
-SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/xen-${PV}-src.tgz"
-S="${WORKDIR}/xen-${PV}"
+HOMEPAGE="http://www.xensource.com/xen/xen/"
+MY_PV=${PV/_p/_}
+SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV/_/-}/src.tgz/xen-${MY_PV}-src.tgz"
+S="${WORKDIR}/xen-${MY_PV}-src"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug screen custom-cflags pygrub vnc sdl"
+IUSE="doc debug screen custom-cflags pygrub ioemu"
 
 CDEPEND="dev-lang/python
 	sys-libs/zlib
-	sdl? ( media-libs/libsdl )
-	vnc? ( media-libs/libsdl )
-	pygrub? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )"
+	ioemu? ( media-libs/libsdl )"
 
 DEPEND="${CDEPEND}
 	sys-devel/gcc
 	dev-lang/perl
+	sys-devel/dev86
 	app-misc/pax-utils
+	x11-proto/xproto
 	doc? (
 		dev-tex/latex2html
 		media-gfx/transfig
 	)
-	vnc? ( net-libs/libvncserver )"
+	ioemu? (
+		net-libs/libvncserver
+	)"
 
 RDEPEND="${CDEPEND}
-	~app-emulation/xen-${PV}
 	sys-apps/iproute2
 	net-misc/bridge-utils
 	screen? (
@@ -42,14 +44,12 @@ RDEPEND="${CDEPEND}
 
 PYTHON_MODNAME="xen grub"
 
-pkg_setup() {
-	if use vnc && ! use sdl ; then
-		ewarn "You have the 'vnc' USE flag set, but not 'sdl'."
-		ewarn "VNC functionality requires SDL support, so it"
-		ewarn "will be enabled anyway."
-	fi
+# hvmloader is used to bootstrap a fully virtualized kernel
+# Approved by QA team in bug #144032
+QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
 
-	if [[ "$(scanelf -s __guard -q `type -P python`)" ]] ; then
+pkg_setup() {
+	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
 		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
 		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
 	fi
@@ -91,55 +91,47 @@ src_unpack() {
 		"${S}"/tools/firmware/{hvmloader,vmxassist}/Makefile
 
 
-	# Disable the 32bit-only vmxassist if we are not on x86
-	# and we don't support the x86 ABI
+	# Disable the 32bit-only vmxassist if we are not on x86 and we don't
+	# support the x86 ABI. Also disable hvmloader, since it requires vmxassist.
 	if ! use x86 && ! has x86 $(get_all_abis); then
-		sed -i -e "/SUBDIRS += vmxassist/d" "${S}"tools/firmware/Makefile
+		sed -i -e "/SUBDIRS += vmxassist/d" "${S}"/tools/firmware/Makefile
+		sed -i -e "/SUBDIRS += hvmloader/d" "${S}"/tools/firmware/Makefile
 	fi
 
-	if use pygrub; then
-		# Upstream use Debian and hence progsreiserfs-0.3.0,
-		# which has a different API to 0.3.1
-		epatch "${FILESDIR}/${P}"-pygrub-progsreiserfs-0.3.1.patch
-	else
-		sed -i -e "/^SUBDIRS += pygrub$/d" "${S}"/tools/Makefile
+	if ! use pygrub; then
+		sed -i -e "/^SUBDIRS-y += pygrub$/d" "${S}"/tools/Makefile
 	fi
 
-	# Fixes for hardened and amd64
-	epatch "${FILESDIR}"/${P}-bxclobber.patch
-	epatch "${FILESDIR}"/${P}-pushpop.patch
+	# Don't bother with ioemu, only needed for fully virtualised guests
+	if ! use ioemu; then
+		sed -i -e "/^CONFIG_IOEMU := y$/d" "${S}"/config/*.mk
+	fi
 
 	# Allow --as-needed LDFLAGS
 	epatch "${FILESDIR}/${P}"--as-needed.patch
 
-	# Allow building with python-2.5 (bug #149138)
-	# Backported from upstream - should be in 3.0.3
-	sed -i 's/\.2|^2\.3|^2\.4/.[2345]/' "${S}"/tools/check/check_python
+	# Fix vnclisten
+	epatch "${FILESDIR}/${P}"-vnclisten.patch
 
-	# Fix upstream's broken test cases (bug #141233)
-	epatch "${FILESDIR}/${P}"-test-uuid.patch
-	epatch "${FILESDIR}/${P}"-test-xauthority.patch
+	# Fix network broadcast on bridged networks
+	epatch "${FILESDIR}/${P}"-network-bridge-broadcast.patch
 
-	# Fix compilation error with newer glibc (bug #151014)
-	# Backported from upstream - should be in 3.0.3
-	epatch "${FILESDIR}/${P}"-xc_ptrace.patch
+	# Disable QEMU monitor mode in VNC, bug #170917
+	epatch "${FILESDIR}/${P}"-remove-monitor-mode-from-vnc.patch
 }
 
 src_compile() {
 	local myopt myconf
 	use debug && myopt="${myopt} debug=y"
 
-	myconf="${myconf} $(use_enable vnc)"
-	if use vnc ; then
-		myconf="${myconf} --enable-sdl"
-	else
-		myconf="${myconf} $(use_enable sdl)"
-	fi
-
 	use custom-cflags || unset CFLAGS
 	gcc-specs-ssp && append-flags -fno-stack-protector -fno-stack-protector-all
 
-	(cd tools/ioemu && econf ${myconf}) || die "configure failured"
+	if use ioemu; then
+		myconf="${myconf} --disable-system --disable-user"
+		(cd tools/ioemu && econf ${myconf}) || die "configure failured"
+	fi
+
 	emake -C tools ${myopt} || die "compile failed"
 
 	if use doc; then
@@ -167,9 +159,12 @@ src_install() {
 
 	doman docs/man?/*
 
-	newinitd "${FILESDIR}"/xend.initd xend
-	newconfd "${FILESDIR}"/xendomains.confd xendomains
-	newinitd "${FILESDIR}"/xendomains.initd xendomains
+	newinitd "${FILESDIR}"/xend.initd xend \
+		|| die "Couldn't install xen.initd"
+	newconfd "${FILESDIR}"/xendomains.confd xendomains \
+		|| die "Couldn't install xendomains.confd"
+	newinitd "${FILESDIR}"/xendomains.initd xendomains \
+		|| die "Couldn't install xendomains.initd"
 
 	if use screen; then
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains
@@ -178,7 +173,7 @@ src_install() {
 	fi
 
 	# xend expects these to exist
-	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump
+	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
 }
 
 pkg_postinst() {

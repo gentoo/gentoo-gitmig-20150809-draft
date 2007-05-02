@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd,v 1.1 2006/08/14 07:11:47 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd,v 1.2 2007/05/02 04:10:04 marineam Exp $
 
 opts="start stop status restart"
 
@@ -11,7 +11,7 @@ depend() {
 }
 
 get_domname() {
-	local name_from_file=$(sed -rn 's/^name\W*=\W*\"?([[:alpha:]_]+)\"?\W*;?/\1/p' "${1}" | tail -n 1)
+	local name_from_file=$(sed -rn 's/^name\W*=\W*\"?([[:alnum:]_\.-]+)\"?\W*;?/\1/p' "${1}" | tail -n 1)
 
 	if [[ -z ${name_from_file} ]] ; then
 		basename "${1}"
