@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/autounmask
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.7 2007/04/28 16:45:01 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.8 2007/05/02 08:28:53 ian Exp $
+
+  02 May 2007; Christian Hartmann <ian@gentoo.org> -autounmask-0.13.ebuild,
+  -autounmask-0.14.ebuild:
+  old
 
 *autounmask-0.15 (28 Apr 2007)
 
