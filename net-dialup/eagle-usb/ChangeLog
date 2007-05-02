@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/eagle-usb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.10 2007/02/25 09:14:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.11 2007/05/02 00:20:19 genone Exp $
+
+  02 May 2007; Marius Mauch <genone@gentoo.org> eagle-usb-2.3.3.ebuild:
+  Replacing einfo with ewarn/eerror
 
   25 Feb 2007; <genstef@gentoo.org> eagle-usb-2.3.3.ebuild:
   use KV_DIR only after linux-mod_pkg_setup, bug 168051
