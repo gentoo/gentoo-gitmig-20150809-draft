@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3.1.ebuild,v 1.9 2007/04/22 09:40:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3.1.ebuild,v 1.10 2007/05/02 03:35:59 omp Exp $
 
 inherit eutils
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager."
 HOMEPAGE="http://icculus.org/openbox/"
-SRC_URI="http://icculus.org/openbox/releases/${P}.tar.gz"
+SRC_URI="http://icculus.org/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
@@ -39,8 +39,8 @@ src_compile() {
 
 src_install() {
 	dodir /etc/X11/Sessions
-	echo "/usr/bin/openbox" > "${D}/etc/X11/Sessions/openbox"
-	fperms a+x /etc/X11/Sessions/openbox
+	echo "/usr/bin/openbox" > "${D}/etc/X11/Sessions/${PN}"
+	fperms a+x /etc/X11/Sessions/${PN}
 
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}/${PN}.desktop"
