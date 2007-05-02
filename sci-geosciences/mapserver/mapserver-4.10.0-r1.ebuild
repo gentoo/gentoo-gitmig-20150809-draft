@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0-r1.ebuild,v 1.1 2007/04/28 18:32:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0-r1.ebuild,v 1.2 2007/05/02 22:51:22 caster Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
 
-inherit eutils autotools distutils depend.php depend.apache webapp ruby java-pkg-2
+inherit eutils autotools distutils depend.php depend.apache webapp ruby java-pkg-opt-2
 
 DESCRIPTION="OpenSource development environment for constructing spatially enabled Internet-web applications."
 
@@ -21,7 +21,7 @@ KEYWORDS="~x86"
 #"mono"
 IUSE="xml pdf proj geos tiff gdal xpm postgis flash php python perl ruby tcl java"
 
-
+# compilation fails with jdk > 1.4 on some native part probably
 DEPEND="media-libs/libpng
 	media-libs/jpeg
 	>=media-libs/gd-2.0.12
@@ -41,7 +41,7 @@ DEPEND="media-libs/libpng
 	ruby? ( dev-lang/ruby dev-lang/swig )
 	perl? ( dev-perl/DBI dev-lang/swig )
 	python? ( dev-lang/python dev-lang/swig )
-	java? ( =virtual/jdk-1.4* dev-java/java-config dev-lang/swig )
+	java? ( =virtual/jdk-1.4* dev-lang/swig )
 	tcl? ( dev-lang/tcl dev-lang/swig )"
 
 WEBAPP_MANUAL_SLOT=yes
@@ -55,6 +55,7 @@ cd_script() {
 
 pkg_setup(){
 	webapp_pkg_setup
+	java-pkg-opt-2_pkg_setup
 	if use php; then
 		# check how many versions of php was installed
 		has_php

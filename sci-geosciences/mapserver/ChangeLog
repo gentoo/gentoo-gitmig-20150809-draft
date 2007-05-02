@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.3 2007/04/28 18:32:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.4 2007/05/02 22:51:22 caster Exp $
+
+  02 May 2007; Vlastimil Babka <caster@gentoo.org>
+  mapserver-4.10.0-r1.ebuild:
+  Change java-pkg-2 eclass to java-pkg-opt-2 to fix compilation with USE=-java
+  - bug #176855; also call its pkg_setup.
 
 *mapserver-4.10.0-r1 (28 Apr 2007)
 
