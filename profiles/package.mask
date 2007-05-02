@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7210 2007/05/01 21:33:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7211 2007/05/02 00:47:07 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -180,11 +180,6 @@ dev-java/systray4j
 # Uses old Manifest format.
 app-emulation/vmware-gsx-console
 
-# Andrej Kacian <mr_bones_@gentoo.org> (20 Apr 2007)
-# Support dropped by upstream, buggy, likely to cause data loss.
-# Should be gone in 30 days.
-mail-client/claws-mail-maildir
-
 # Andrej Kacian <ticho@gentoo.org> (20 Apr 2007)
 # Support dropped by upstream, buggy, likely to cause data loss.
 # Should be gone in 30 days.
@@ -220,7 +215,7 @@ net-dialup/slirp
 # Masked for removal on 16 May 2007, per bug #174763
 games-arcade/ddrmat
 
-# Roy Marples <uberlord@gentoo.org> (2 Apr 2007)
+# Roy Marples <uberlord@gentoo.org> (15 Apr 2007)
 # Masked as it segfaults and fails with our scripts, #174693.
 =net-wireless/wireless-tools-29_pre17
 
