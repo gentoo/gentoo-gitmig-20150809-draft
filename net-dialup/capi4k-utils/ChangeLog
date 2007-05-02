@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.56 2007/04/30 15:07:20 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.57 2007/05/02 00:15:32 genone Exp $
+
+  02 May 2007; Marius Mauch <genone@gentoo.org>
+  capi4k-utils-20050718-r3.ebuild:
+  Replacing einfo with elog
 
   30 Apr 2007; Stefan Briesenick <sbriesen@gentoo.org>
   ,files/capi4k-utils-20050718-msg2str-safety.diff,

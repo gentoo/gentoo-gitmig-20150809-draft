@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.7 2007/04/13 10:29:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.8 2007/05/02 00:14:10 genone Exp $
 
 inherit eutils linux-mod
 
@@ -102,14 +102,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The following modules are available:"
-	einfo "   $(echo $MODULE_NAMES | sed s/\([^\)]*\)//g)"
-	echo
+	elog "The following modules are available:"
+	elog "   $(echo $MODULE_NAMES | sed s/\([^\)]*\)//g)"
+	elog
 	ewarn "You might need to use hotplug's blacklisting mechanism in order to prevent the"
 	ewarn "loading of an incorrect module at boot time, e.g. in case unicorn_pci_eth is"
 	ewarn "automatically loaded but you happen to need unicorn_pci_atm instead. List the"
 	ewarn "unwanted module in /etc/hotplug/blacklist. You might also need to blacklist it"
 	ewarn "in modprobe, see modprobe.conf(5)."
-	echo
+	ewarn
 	linux-mod_pkg_postinst
 }

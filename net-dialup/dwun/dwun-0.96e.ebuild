@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.6 2006/03/12 10:17:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.7 2007/05/02 00:17:24 genone Exp $
 
 DESCRIPTION="Dialer Without a Useful Name (DWUN)"
 HOMEPAGE="http://dwun.sourceforge.net/"
@@ -34,10 +34,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo 'Make sure you have "net-dialup/ppp" merged if you intend to use dwun'
-	einfo "to control a standard PPP network link."
-	einfo "See /usr/share/doc/${P}/QUICKSTART for instructions on"
-	einfo "configuring dwun."
-	einfo
+	elog
+	elog 'Make sure you have "net-dialup/ppp" merged if you intend to use dwun'
+	elog "to control a standard PPP network link."
+	elog "See /usr/share/doc/${P}/QUICKSTART for instructions on"
+	elog "configuring dwun."
+	elog
 }

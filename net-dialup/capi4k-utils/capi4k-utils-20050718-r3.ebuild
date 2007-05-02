@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.5 2007/04/30 15:07:20 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.6 2007/05/02 00:15:32 genone Exp $
 
 inherit eutils multilib linux-info
 
@@ -133,24 +133,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please read the instructions in:"
-	einfo "/usr/share/doc/${PF}/README.gentoo.gz"
-	einfo
-	einfo "Annotation for active AVM ISDN boards (B1 ISA/PCI, ...):"
-	einfo "If you run"
-	einfo "  emerge isdn-firmware"
-	einfo "you will probably find your board's firmware in /lib/firmware."
-	einfo
-	einfo "If you have another active ISDN board, you should create"
-	einfo "/lib/firmware and copy there your board's firmware."
-	einfo
-	einfo "There're several other packages available, which might have"
-	einfo "the CAPI driver you need for your card(s):"
-	einfo "  net-dialup/fritzcapi - AVM passive ISDN controllers"
-	einfo "  net-dialup/fcdsl     - AVM ISDN/DSL controllers PCI/USB"
-	einfo "  net-dialup/misdn     - some passive cards with HiSax chipset"
-	einfo
+	elog
+	elog "Please read the instructions in:"
+	elog "/usr/share/doc/${PF}/README.gentoo.gz"
+	elog
+	elog "Annotation for active AVM ISDN boards (B1 ISA/PCI, ...):"
+	elog "If you run"
+	elog "  emerge isdn-firmware"
+	elog "you will probably find your board's firmware in /lib/firmware."
+	elog
+	elog "If you have another active ISDN board, you should create"
+	elog "/lib/firmware and copy there your board's firmware."
+	elog
+	elog "There're several other packages available, which might have"
+	elog "the CAPI driver you need for your card(s):"
+	elog "  net-dialup/fritzcapi - AVM passive ISDN controllers"
+	elog "  net-dialup/fcdsl     - AVM ISDN/DSL controllers PCI/USB"
+	elog "  net-dialup/misdn     - some passive cards with HiSax chipset"
+	elog
 	ewarn "If you're upgrading from an older capi4k-utils, you must recompile"
 	ewarn "the other packages on your system that link with libcapi after the"
 	ewarn "upgrade completes. To perform this action, please run revdep-rebuild"
