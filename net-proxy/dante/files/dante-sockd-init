@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/files/dante-sockd-init,v 1.3 2005/12/24 16:51:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/files/dante-sockd-init,v 1.4 2007/05/02 19:25:15 mrness Exp $
 
 SOCKD_OPT="-D"
-[ "${SOCKD_FORKDEPTH}" -gt 1 ] && SOCKD_OPT="${SOCKD_OPT} -N ${SOCKD_FORKDEPTH}"
-[ "${SOCKD_DEBUG}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -d"
-[ "${SOCKD_DISABLE_KEEPALIVE}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -n"
+[ "${SOCKD_FORKDEPTH:-1}" -gt 1 ] && SOCKD_OPT="${SOCKD_OPT} -N ${SOCKD_FORKDEPTH}"
+[ "${SOCKD_DEBUG:-0}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -d"
+[ "${SOCKD_DISABLE_KEEPALIVE:-0}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -n"
 PIDFILE=/var/run/sockd.pid
 
 depend() {

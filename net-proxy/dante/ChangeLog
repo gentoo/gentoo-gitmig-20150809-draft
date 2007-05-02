@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.36 2007/04/22 00:21:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.37 2007/05/02 19:25:15 mrness Exp $
+
+*dante-1.1.19-r1 (02 May 2007)
+
+  02 May 2007; Alin Năstac <mrness@gentoo.org> files/dante-sockd-init,
+  -dante-1.1.19.ebuild, +dante-1.1.19-r1.ebuild:
+  Use default values for the parameters set in conf.d (#176548).
 
   22 Apr 2007; Alin Năstac <mrness@gentoo.org> dante-1.1.18.ebuild,
   dante-1.1.19.ebuild:
