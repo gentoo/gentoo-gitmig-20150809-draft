@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.98 2007/05/02 19:37:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.99 2007/05/02 19:43:55 corsair Exp $
+
+  02 May 2007; Markus Rothe <corsair@gentoo.org> e2fsprogs-1.39-r2.ebuild:
+  Stable on ppc64; bug #176841
 
   02 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   e2fsprogs-1.39-r2.ebuild:
