@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23.ebuild,v 1.3 2007/05/02 10:47:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23-r1.ebuild,v 1.1 2007/05/02 10:50:50 drac Exp $
 
 inherit eutils pam flag-o-matic
 

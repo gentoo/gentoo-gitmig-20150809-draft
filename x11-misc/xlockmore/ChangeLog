@@ -1,8 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.55 2007/05/02 10:47:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.56 2007/05/02 10:50:50 drac Exp $
 
-  02 May 2007; Samuli Suominen <drac@gentoo.org> xlockmore-5.23.ebuild:
+*xlockmore-5.23-r1 (02 May 2007)
+
+  02 May 2007; Samuli Suominen <drac@gentoo.org> +xlockmore-5.23-r1.ebuild:
   Fix linking with OpenGL libraries for bug 157402.
 
 *xlockmore-5.23 (22 Feb 2007)
