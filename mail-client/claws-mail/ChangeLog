@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.23 2007/05/02 14:35:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.24 2007/05/02 15:43:47 gustavoz Exp $
+
+  02 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  claws-mail-2.9.1.ebuild:
+  Stable on sparc wrt security #176805
 
   02 May 2007; Steve Dibb <beandog@gentoo.org> claws-mail-2.9.1.ebuild:
   amd64 stable, security bug 176805
