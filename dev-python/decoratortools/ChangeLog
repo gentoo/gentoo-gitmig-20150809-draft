@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/decoratortools
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.1 2007/05/02 17:06:37 pythonhead Exp $
+
+*decoratortools-1.4 (02 May 2007)
+
+  02 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +decoratortools-1.4.ebuild:
+  Initial commit.
+
