@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.57 2007/05/02 11:04:06 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.58 2007/05/02 16:40:30 corsair Exp $
+
+  02 May 2007; Markus Rothe <corsair@gentoo.org> xlockmore-5.23-r1.ebuild:
+  Stable on ppc64; bug #176776
 
   02 May 2007; Steve Dibb <beandog@gentoo.org> xlockmore-5.23-r1.ebuild:
   amd64 stable, bug 176776
