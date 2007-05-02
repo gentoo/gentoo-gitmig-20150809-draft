@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.52.ebuild,v 1.3 2006/09/22 05:37:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.52.ebuild,v 1.4 2007/05/02 06:46:27 dberkholz Exp $
 
 inherit eutils python rpm multilib
 
@@ -12,7 +12,7 @@ MY_P="${PN/lib}-${PV}"
 
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="mirror://fedora/development/source/SRPMS/${MY_P}-${RPMREV}.src.rpm"
-HOMEPAGE="http://fedora.redhat.com/projects/additional-projects/kudzu/"
+HOMEPAGE="http://rhlinux.redhat.com/kudzu/"
 
 LICENSE="GPL-2"
 SLOT="0"
