@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kopete-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/ChangeLog,v 1.4 2007/05/02 07:59:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/ChangeLog,v 1.5 2007/05/02 11:33:19 drizzt Exp $
+
+*kopete-otr-0.3 (02 May 2007)
+
+  02 May 2007; Timothy Redaelli <drizzt@gentoo.org> +kopete-otr-0.3.ebuild:
+  Version bump wrt bug #176785.
+  Thanks to Alan Jones for reporting.
 
   02 May 2007; Markus Rothe <corsair@gentoo.org> kopete-otr-0.2.ebuild:
   Added ~ppc64; bug #176731
