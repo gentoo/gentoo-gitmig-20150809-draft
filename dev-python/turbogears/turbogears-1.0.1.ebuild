@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.1.ebuild,v 1.2 2007/04/06 06:46:33 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.1.ebuild,v 1.3 2007/05/02 16:49:00 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-python/turbojson-1.0
 	>=dev-python/formencode-0.5.1
 	dev-python/ruledispatch
 	>=dev-python/configobj-4.3.2
-	|| ( >=dev-python/sqlobject-0.7.2 >=dev-python/sqlalchemy-0.3.3 )
+	|| ( =dev-python/sqlobject-0.7* >=dev-python/sqlalchemy-0.3.3 )
 	>=dev-python/genshi-0.3.6
 	test? ( >=dev-python/nose-0.9 >=dev-python/sqlalchemy-0.3.3 )"
 DEPEND="${RDEPEND}
