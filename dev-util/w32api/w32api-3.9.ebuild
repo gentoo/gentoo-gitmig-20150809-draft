@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.9.ebuild,v 1.1 2007/04/02 23:18:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.9.ebuild,v 1.2 2007/05/02 23:14:55 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -30,7 +30,7 @@ just_headers() {
 
 pkg_setup() {
 	if [[ ${CBUILD} == ${CHOST} ]] && [[ ${CHOST} == ${CTARGET} ]] ; then
-		die "Invalid configuration"
+		die "Invalid configuration; do not emerge this directly"
 	fi
 }
 
