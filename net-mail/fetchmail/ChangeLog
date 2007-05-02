@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.133 2007/05/01 09:14:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.134 2007/05/02 01:01:55 jer Exp $
+
+  02 May 2007; Jeroen Roovers <jer@gentoo.org> fetchmail-6.3.8.ebuild:
+  Stable for HPPA (bug #175022).
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> fetchmail-6.3.8.ebuild:
   Stable on ppc64; bug #175022
