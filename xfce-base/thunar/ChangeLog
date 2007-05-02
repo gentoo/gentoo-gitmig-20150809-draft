@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.28 2007/03/15 13:29:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.29 2007/05/02 12:34:51 drac Exp $
+
+*thunar-0.8.0-r3 (02 May 2007)
+
+  02 May 2007; Samuli Suominen <drac@gentoo.org>
+  +files/thunar-0.8.0-uca.patch, +thunar-0.8.0-r3.ebuild:
+  Apply patch from upstream to fix bug 173795, adding quotes to UCA browse.
+  Thanks to Alexander Skwar for reporting.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> thunar-0.8.0-r2.ebuild:
   Stable on ppc64; bug #169987
