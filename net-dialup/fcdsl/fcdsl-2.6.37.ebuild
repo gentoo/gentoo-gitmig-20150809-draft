@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.5 2007/02/22 12:11:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.6 2007/05/02 01:11:59 genone Exp $
 
 inherit linux-mod eutils rpm
 
@@ -52,11 +52,11 @@ pkg_setup() {
 			die "Driver for ${USERCARD} not present in ${P}"
 		done
 	else
-		einfo
-		einfo "You can control the modules which are built with the variable"
-		einfo "FCDSL_CARDS which should contain a blank separated list"
-		einfo "of a selection from the following cards:"
-		einfo "   ${FCDSL_MODULES[*]}"
+		elog
+		elog "You can control the modules which are built with the variable"
+		elog "FCDSL_CARDS which should contain a blank separated list"
+		elog "of a selection from the following cards:"
+		elog "   ${FCDSL_MODULES[*]}"
 		for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
 			MODULE_NAMES="${MODULE_NAMES} ${FCDSL_MODULES[CARD]}(net:${WORKDIR}/usr/src/kernel-modules/fcdsl/src/src.${FCDSL_MODULES[CARD]})"
 		done
@@ -126,14 +126,14 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	einfo "The preferred way to setup your card is either /etc/capi.conf"
-	einfo "or hotplug, since USB-Cards are detected automatically."
-	einfo
-	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
-	einfo "    etc-update"
-	einfo "    emerge --config '=${CATEGORY}/${PF}'"
-	einfo "    /etc/init.d/capi start"
-	einfo "    drdsl"
+	elog "The preferred way to setup your card is either /etc/capi.conf"
+	elog "or hotplug, since USB-Cards are detected automatically."
+	elog
+	elog "If you want to setup your DSL card driver and create a peer file, please run:"
+	elog "    etc-update"
+	elog "    emerge --config '=${CATEGORY}/${PF}'"
+	elog "    /etc/init.d/capi start"
+	elog "    drdsl"
 	#ewarn
 	#ewarn "'drdsl' has now its own ebuild. Please emerge net-dialup/drdsl."
 	epause 10
