@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.2.4.ebuild,v 1.1 2007/05/01 19:28:59 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.2.4.ebuild,v 1.2 2007/05/02 22:13:09 voxus Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -9,7 +9,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~spa
 DESCRIPTION="PostgreSQL libraries."
 HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="mirror://postgresql/source/v${PV}/postgresql-base-${PV}.tar.bz2
-		mirror://postgresql/source/v${PV}/postgresql-opt-${PV}.tar.bz2"
+		mirror://postgresql/source/v${PV}/postgresql-opt-${PV}.tar.bz2
+		threads? ( mirror://postgresql/source/v${PV}/postgresql-test-${PV}.tar.bz2 )"
 LICENSE="POSTGRESQL"
 SLOT="4"
 IUSE="kerberos nls pam pg-intdatetime readline ssl threads zlib"
