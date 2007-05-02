@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.12 2007/02/22 01:33:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.13 2007/05/02 07:57:40 corsair Exp $
+
+  02 May 2007; Markus Rothe <corsair@gentoo.org> libotr-3.0.0.ebuild:
+  Added ~ppc64; bug #176731
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
