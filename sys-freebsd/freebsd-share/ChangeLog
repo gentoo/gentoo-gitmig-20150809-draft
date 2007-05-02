@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.27 2007/01/18 21:14:00 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.28 2007/05/02 19:31:37 drizzt Exp $
+
+  02 May 2007; Timothy Redaelli <drizzt@gentoo.org>
+  freebsd-share-6.2.ebuild:
+  Remove builtins.1 manpage (collision with bash).
+  Thanks to Michael to reporting wrt bug #176838.
 
   18 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
   freebsd-share-6.2.ebuild:
