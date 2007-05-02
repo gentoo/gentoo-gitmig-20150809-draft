@@ -1,12 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a.ebuild,v 1.1 2007/05/02 17:25:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a.ebuild,v 1.2 2007/05/02 17:28:52 drac Exp $
 
 DESCRIPTION="SLiM (Simple Login Manager) themes pack"
 HOMEPAGE="http://slim.berlios.de"
-SRC_URI="
-	mirror://berlios/slim/slim-1.2.3-themepack1a.tar.gz
-
+SRC_URI="mirror://berlios/slim/slim-1.2.3-themepack1a.tar.gz
 	mirror://berlios/slim/slim-archlinux.tar.gz
 	mirror://berlios/slim/slim-debian-moreblue.tar.bz2
 	mirror://berlios/slim/slim-fingerprint.tar.gz
