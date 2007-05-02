@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/mythtv-themes-extra
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.1 2007/05/02 11:02:20 beandog Exp $
+
+*mythtv-themes-extra-1 (02 May 2007)
+
+  02 May 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +mythtv-themes-extra-1.ebuild:
+  Initial commit, bug 173822
+
