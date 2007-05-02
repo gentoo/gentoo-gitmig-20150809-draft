@@ -2,7 +2,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.58 2007/05/01 20:59:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.59 2007/05/02 22:01:36 mrness Exp $
+
+*quagga-0.99.7 (02 May 2007)
+
+  02 May 2007; Alin Năstac <mrness@gentoo.org> +quagga-0.99.7.ebuild:
+  Version bump. Add support for 32-bit AS numbers, activated through bgpas4
+  (#176657).
 
   01 May 2007; Alin Năstac <mrness@gentoo.org> -quagga-0.98.6-r1.ebuild,
   quagga-0.99.6-r2.ebuild:
