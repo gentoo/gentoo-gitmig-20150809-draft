@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r2.ebuild,v 1.1 2007/03/13 07:38:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r2.ebuild,v 1.2 2007/05/02 10:50:30 robbat2 Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.atconsultancy.nl/cowloop/"
 SRC_URI="http://www.atconsultancy.nl/cowloop/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc x86 ~amd64"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/linux-sources"
