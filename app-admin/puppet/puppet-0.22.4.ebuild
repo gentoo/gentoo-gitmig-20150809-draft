@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.22.1.ebuild,v 1.1 2007/03/17 17:44:12 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.22.4.ebuild,v 1.1 2007/05/02 00:14:26 nakano Exp $
 
 inherit eutils ruby
 
@@ -49,9 +49,6 @@ src_install() {
 	dodir /var/log/puppet
 	dodir /var/lib/puppet
 	keepdir /var/run/puppet
-
-	# lockdir option is obsoleted.
-	dosed "s:lockdir:#lockdir:" /etc/puppet/puppetca.conf /etc/puppet/puppetd.conf /etc/puppet/puppetmasterd.conf
 }
 
 pkg_postinst() {
