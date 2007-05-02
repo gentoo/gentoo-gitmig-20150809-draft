@@ -1,3 +1,7 @@
+# 2007/05/02 Jeroen Roovers <jer@gentoo.org>
+# Lack of user/dev support for WiFi (bug #176517)
+networkmanager
+
 # 2007/04/27 Jeroen Roovers <jer@gentoo.org>
 # To my knowledge, no PA hardware supports variable CPU frequencies
 cpufreq
