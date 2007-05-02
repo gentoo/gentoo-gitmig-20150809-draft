@@ -1,6 +1,16 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.158 2007/04/18 18:49:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.159 2007/05/02 15:01:01 dang Exp $
+
+*totem-2.18.1-r1 (02 May 2007)
+
+  02 May 2007; Daniel Gryniewicz <dang@gentoo.org> -totem-2.18.0.ebuild,
+  +totem-2.18.1-r1.ebuild:
+  Bump to 2.18.1-r1
+  	- Re-arrange gecko deps so that firefox is the default, and xulrunner and
+  	  seamonkey have USE flags.  This is for 2 reasons:  First, sparc needs a
+  	  seamonkey flag, so it can mask it; second, this brings totem in line with
+  	  other gnome packages like epiphany.
 
   18 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org> totem-2.18.1.ebuild:
   Add inputproto to DEPEND (bug #175128)

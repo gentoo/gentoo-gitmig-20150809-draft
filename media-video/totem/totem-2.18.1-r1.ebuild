@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.0.ebuild,v 1.1 2007/03/27 22:07:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.1-r1.ebuild,v 1.1 2007/05/02 15:01:01 dang Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 # No 0.10.0 release for gst-plugins-pitdfdll yet
 # IUSE="win32codecs"
 
-IUSE="a52 debug dvd ffmpeg firefox flac gnome hal lirc mad mpeg nsplugin nvtv ogg theora vorbis xulrunner xv"
+IUSE="a52 debug dvd ffmpeg flac gnome hal lirc mad mpeg nsplugin nvtv ogg seamonkey theora vorbis xulrunner xv"
 
 RDEPEND=">=dev-libs/glib-2.12
 	 >=x11-libs/gtk+-2.10
@@ -51,10 +51,10 @@ RDEPEND=">=dev-libs/glib-2.12
 	 hal? ( =sys-apps/hal-0.5* )
 	 lirc? ( app-misc/lirc )
 	 nsplugin?	(
-				 firefox? ( www-client/mozilla-firefox )
-				!firefox?	(
-								xulrunner? ( net-libs/xulrunner )
-								!xulrunner? ( www-client/seamonkey )
+				xulrunner? ( net-libs/xulrunner )
+				!xulrunner?	(
+								seamonkey? ( www-client/seamonkey )
+				 				!seamonkey? ( www-client/mozilla-firefox )
 							)
 				>=x11-misc/shared-mime-info-0.17
 				>=x11-libs/startup-notification-0.8
@@ -89,6 +89,7 @@ RDEPEND=">=dev-libs/glib-2.12
 
 DEPEND="${RDEPEND}
 	  x11-proto/xproto
+	  x11-proto/inputproto
 	  app-text/scrollkeeper
 	  gnome-base/gnome-common
 	>=dev-util/intltool-0.35
@@ -117,14 +118,13 @@ pkg_setup() {
 
 	if use nsplugin ; then
 	    G2CONF="${G2CONF} --enable-browser-plugins"
-
-	    if use firefox || use sparc ; then
-		G2CONF="${G2CONF} --with-gecko=firefox"
-		elif use xulrunner || use sparc; then
-		G2CONF="${G2CONF} --with-gecko=xulrunner"
+		if use xulrunner ; then
+			G2CONF="${G2CONF} --with-gecko=xulrunner"
+		elif use seamonkey ; then
+			G2CONF="${G2CONF} --with-gecko=seamonkey"
 		else
-		G2CONF="${G2CONF} --with-gecko=seamonkey"
-	    fi
+			G2CONF="${G2CONF} --with-gecko=firefox"
+	   	fi
 	else
 	    G2CONF="${G2CONF} --disable-browser-plugins"
 	fi
@@ -140,7 +140,7 @@ src_unpack() {
 	gnome2_src_unpack
 
 	if use nsplugin ; then
-		epatch ${FILESDIR}/${PN}-2.17.5-browser-plugins.patch
+		epatch ${FILESDIR}/${P}-browser-plugins.patch
 		eautoreconf
 	fi
 }
