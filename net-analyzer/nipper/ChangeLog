@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/nipper
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.1 2007/05/02 21:14:55 ikelos Exp $
+
+*nipper-0.9.4 (02 May 2007)
+
+  02 May 2007; Mike Auty <ikelos@gentoo.org>
+  +files/nipper-0.9.4-banner-exclamation.patch,
+  +files/nipper-0.9.4-pix-xml.patch, +metadata.xml, +nipper-0.9.4.ebuild:
+  Initial commit.
+
