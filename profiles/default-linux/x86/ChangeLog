@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.77 2007/04/30 13:38:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.78 2007/05/02 17:52:51 steev Exp $
+
+  02 May 2007; Steev Klimaszewski <steev@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Add nm-applet to the default-linux/x86/no-nptl/2.4 package.mask as it needs
+  both hal and networkmanager
 
   30 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   P.mask gnome-2.18 on 2.4 profiles, bug 176517
