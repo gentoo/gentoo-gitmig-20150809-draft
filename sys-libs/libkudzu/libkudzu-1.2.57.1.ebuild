@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.2 2007/02/13 15:16:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.3 2007/05/02 06:50:23 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Red Hat Hardware detection tools"
-HOMEPAGE="http://fedora.redhat.com/projects/additional-projects/kudzu/"
+HOMEPAGE="http://rhlinux.redhat.com/kudzu/"
 SRC_URI="mirror://gentoo/kudzu-${PV}.tar.gz"
 
 LICENSE="GPL-2"
