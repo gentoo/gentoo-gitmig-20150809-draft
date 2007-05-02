@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.247 2007/05/02 12:44:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.248 2007/05/02 13:29:58 kloeri Exp $
+
+  02 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  vim-core-7.0.235.ebuild:
+  Stable on Alpha, bug 176464.
 
   02 May 2007; Ferris McCormick <fmccor@gentoo.org> vim-core-7.0.235.ebuild:
   Stable on sparc --- Bug #176464
