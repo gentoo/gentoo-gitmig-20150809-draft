@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.14 2007/01/04 18:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.15 2007/05/02 16:01:42 bicatali Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -35,6 +35,7 @@ src_unpack() {
 
 	cd "${WORKDIR}"
 	use ppc-macos && epatch ${FILESDIR}/${PN}-ppc-macos.patch
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 	mv ${P} ${P}-single
 	cp -pPR ${P}-single ${P}-double
 }
@@ -92,6 +93,13 @@ src_compile() {
 		--enable-threads \
 		${myconf} ${myconfdouble} || die "./configure failed"
 	emake || die
+}
+
+src_test() {
+	cd "${S}-single"
+	emake check || die "emake check single failed"
+	cd "${S}-double"
+	emake check || die "emake check double failed"
 }
 
 src_install () {
