@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.60.00.01.ebuild,v 1.1 2007/02/10 08:25:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.60.00.01.ebuild,v 1.2 2007/05/02 08:12:41 genone Exp $
 
 inherit eutils linux-info
 
@@ -69,6 +69,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "To complete the installation and configuration of your HSF modem,"
-	einfo "please run hsfconfig."
+	elog "To complete the installation and configuration of your HSF modem,"
+	elog "please run hsfconfig."
 }

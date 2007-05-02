@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.9 2006/11/23 20:31:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.10 2007/05/02 08:17:07 genone Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -314,35 +314,35 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please edit:"
-	einfo
-	einfo "- /etc/conf.d/isdn   general config for init-script"
-	einfo "- /etc/hisax.conf    if you have hisax supported cards"
+	elog
+	elog "Please edit:"
+	elog
+	elog "- /etc/conf.d/isdn   general config for init-script"
+	elog "- /etc/hisax.conf    if you have hisax supported cards"
 	if use ipppd; then
-		einfo "- /etc/ppp/*         critical if you need networking"
+		elog "- /etc/ppp/*         critical if you need networking"
 	fi
-	einfo
+	elog
 	if use isdnlog; then
-		einfo "For isdnlog you should edit:"
-		einfo
-		einfo "- /etc/conf.d/isdnlog.contr0"
-		einfo "- /etc/isdn/isdnlog.options.contr0"
-		einfo "- /etc/isdn/*.conf"
-		einfo
+		elog "For isdnlog you should edit:"
+		elog
+		elog "- /etc/conf.d/isdnlog.contr0"
+		elog "- /etc/isdn/isdnlog.options.contr0"
+		elog "- /etc/isdn/*.conf"
+		elog
 	fi
-	einfo "/etc/init.d/isdn will save and restore your isdnctrl config."
-	einfo "it will also handle the modem-register daemon."
-	einfo
+	elog "/etc/init.d/isdn will save and restore your isdnctrl config."
+	elog "it will also handle the modem-register daemon."
+	elog
 	if use ipppd; then
-		einfo "/etc/init.d/net.ippp0 will start synchronous PPP connections"
-		einfo "which you need to set up using isdnctrl first!"
-		einfo
+		elog "/etc/init.d/net.ippp0 will start synchronous PPP connections"
+		elog "which you need to set up using isdnctrl first!"
+		elog
 	fi
 	if use isdnlog; then
-		einfo "/etc/init.d/isdnlog.contr0 starts and stops isdnlog for contr0"
-		einfo "You can symlink it to isdnlog.contr1 and copy the corresponding"
-		einfo "configs if you have more than one card."
-		einfo
+		elog "/etc/init.d/isdnlog.contr0 starts and stops isdnlog for contr0"
+		elog "You can symlink it to isdnlog.contr1 and copy the corresponding"
+		elog "configs if you have more than one card."
+		elog
 	fi
 }

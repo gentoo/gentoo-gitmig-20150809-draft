@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.36 2007/04/16 07:01:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.37 2007/05/02 08:12:41 genone Exp $
+
+  02 May 2007; Marius Mauch <genone@gentoo.org> hsfmodem-7.47.00.03.ebuild,
+  hsfmodem-7.47.00.05.ebuild, hsfmodem-7.47.00.07-r1.ebuild,
+  hsfmodem-7.60.00.01.ebuild, hsfmodem-7.60.00.02.ebuild:
+  Replacing einfo with elog
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   hsfmodem-7.60.00.02.ebuild:

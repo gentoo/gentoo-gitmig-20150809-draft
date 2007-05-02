@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.12.ebuild,v 1.1 2007/03/13 09:08:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.12.ebuild,v 1.2 2007/05/02 08:03:27 genone Exp $
 
 inherit eutils linux-info
 
@@ -68,7 +68,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "To complete the installation and configuration of your HCF modem,"
-	einfo "please run hcfpciconfig."
+	elog "To complete the installation and configuration of your HCF modem,"
+	elog "please run hcfpciconfig."
 }
 

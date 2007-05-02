@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.7 2006/11/23 20:32:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.8 2007/05/02 08:19:04 genone Exp $
 
 inherit webapp flag-o-matic
 
@@ -89,7 +89,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The first stage of the installation is done. Now you need to setup your virtual hosts via webapp-config"
-	einfo "Please read man webapp-config for a detailed description of the process and some examples"
+	elog "The first stage of the installation is done. Now you need to setup your virtual hosts via webapp-config"
+	elog "Please read man webapp-config for a detailed description of the process and some examples"
 	webapp_pkg_postinst
 }
