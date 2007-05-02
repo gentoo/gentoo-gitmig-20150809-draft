@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/metamail
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.35 2006/07/15 22:13:08 langthang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.36 2007/05/02 18:00:15 phreak Exp $
+
+*metamail-2.7.53.3 (02 May 2007)
+
+  02 May 2007; Christian Heim <phreak@gentoo.org> +metamail-2.7.53.3.ebuild:
+  Version bump, trying to fix #116084.
 
   15 Jul 2006; Tuấn Văn <langthang@gentoo.org> -files/mime.types,
   -metamail-2.7.45.3.ebuild:
