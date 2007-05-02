@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfontcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfontcache/ChangeLog,v 1.30 2007/04/29 05:49:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfontcache/ChangeLog,v 1.31 2007/05/02 08:21:15 gmsoft Exp $
+
+  02 May 2007; Guy Martin <gmsoft@gentoo.org> libXfontcache-1.0.4.ebuild:
+  Stable on hppa
 
   29 Apr 2007; Andrej Kacian <ticho@gentoo.org> libXfontcache-1.0.4.ebuild:
   Stable on x86, bug #175465.
