@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a.ebuild,v 1.2 2007/05/02 17:28:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a.ebuild,v 1.3 2007/05/02 18:13:23 drac Exp $
 
 DESCRIPTION="SLiM (Simple Login Manager) themes pack"
 HOMEPAGE="http://slim.berlios.de"
@@ -35,6 +35,14 @@ src_compile() {
 }
 
 src_install() {
+	for i in slim-archlinux capernoited flower2 mindlock lotus-{sage,midnight} \
+		Zenwalk	isolated subway; do
+			rm ${i}/README
+	done
+
+	rm parallel-dimensions/{LICENSE*,COPY*} debian-moreblue/COPY* \
+		lotus-{sage,midnight}/{LICENSE*,COPY*}
+
 	local themesdir="/usr/share/slim/themes"
 	dodir ${themesdir}
 	cp -R . "${D}"/${themesdir}
