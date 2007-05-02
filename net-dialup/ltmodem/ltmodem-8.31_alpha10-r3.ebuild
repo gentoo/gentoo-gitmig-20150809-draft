@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.5 2007/04/16 11:52:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.6 2007/05/02 08:27:40 genone Exp $
 
 inherit linux-mod eutils
 
@@ -116,17 +116,17 @@ pkg_postinst() {
 			killall -HUP devfsd
 		eend $?
 
-		einfo "Use /dev/tts/LT0 or /dev/ttyLT0 to access modem"
+		elog "Use /dev/tts/LT0 or /dev/ttyLT0 to access modem"
 	elif [ -e "${ROOT}/dev/.udev" ]; then
 		ebegin "Restarting udev to reread udev rules"
 			udevstart
 		eend $?
 
-		einfo "Use /dev/ttyLTM0 to access modem"
+		elog "Use /dev/ttyLTM0 to access modem"
 	else
 		mknod --mode=0660 /dev/ttyLTM0 c 62 64 && chgrp dialout /dev/ttyLTM0
 
-		einfo "Use /dev/ttyLTM0 to access modem"
+		elog "Use /dev/ttyLTM0 to access modem"
 	fi
 
 	echo
@@ -136,13 +136,13 @@ pkg_postinst() {
 	ewarn "you should have write access to /var/lock directory."
 
 	if linux_chkconfig_present SMP ; then
-		echo
+		ewarn
 		ewarn "Please note that Linux support for SMP (symmetric multi processor)"
 		ewarn "is reported to be incompatible with this driver!"
 		ewarn "In case it doesn't work, you should try first to disable CONFIG_SMP in your kernel."
 	fi
 
-	echo
-	einfo "If you have problems, read this doc:"
-	einfo "/usr/share/doc/${PF}/html/post-install.html"
+	elog
+	elog "If you have problems, read this doc:"
+	elog "/usr/share/doc/${PF}/html/post-install.html"
 }
