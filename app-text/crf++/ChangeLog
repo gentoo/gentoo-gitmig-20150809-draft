@@ -1,6 +1,12 @@
 # ChangeLog for app-text/crf++
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.4 2007/03/13 01:43:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.5 2007/05/02 17:21:46 usata Exp $
+
+*crf++-0.47 (02 May 2007)
+
+  02 May 2007; Mamoru KOMACHI <usata@gentoo.org> -crf++-0.3.ebuild,
+  -crf++-0.40.ebuild, crf++-0.45.ebuild, +crf++-0.47.ebuild:
+  Version bumped. Updated SRC_URI and HOMEPAGE.
 
   13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Removing text-markup herd, leaving usata as maintainer.

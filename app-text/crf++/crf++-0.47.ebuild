@@ -1,17 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/crf++-0.3.ebuild,v 1.1 2005/12/23 17:22:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/crf++-0.47.ebuild,v 1.1 2007/05/02 17:21:46 usata Exp $
+
+inherit eutils
 
 MY_P="${P/crf/CRF}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Yet Another CRF toolkit for segmenting/labelling sequential data"
-HOMEPAGE="http://chasen.org/~taku/software/CRF++/"
-SRC_URI="http://chasen.org/~taku/software/CRF++/src/${MY_P}.tar.gz"
+HOMEPAGE="http://crfpp.sourceforge.net/"
+SRC_URI="mirror://sourceforge/crfpp/${MY_P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="BSD LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="examples"
 
