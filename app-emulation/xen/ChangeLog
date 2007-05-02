@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.43 2007/01/25 23:07:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.44 2007/05/02 04:27:24 marineam Exp $
+
+*xen-3.0.4_p1 (02 May 2007)
+
+  02 May 2007; Michael Marineau <marineam@gentoo.org>
+  -files/gentoo-makefile-targets, -files/xend-conf, xen-3.0.2.ebuild,
+  +xen-3.0.4_p1.ebuild:
+  Add xen 3.0.4 from the marineam-xen overlay, cleanup the 3.0.2 ebuild a bit.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> xen-3.0.2.ebuild:
   Replacing einfo with elog

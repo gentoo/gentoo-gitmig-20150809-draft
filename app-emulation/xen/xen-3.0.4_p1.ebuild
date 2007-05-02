@@ -1,22 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.9 2007/05/02 04:27:24 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.4_p1.ebuild,v 1.1 2007/05/02 04:27:24 marineam Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor"
-HOMEPAGE="http://xen.sourceforge.net"
+HOMEPAGE="http://www.xensource.com/xen/xen/"
 MY_PV=${PV/_p/_}
 SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV/_/-}/src.tgz/xen-${MY_PV}-src.tgz"
+S="${WORKDIR}/xen-${MY_PV}-src"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug custom-cflags pae hardened"
+IUSE="debug custom-cflags pae"
 
 RDEPEND="|| ( sys-boot/grub
-		 sys-boot/grub-static )
-		 ~sys-kernel/xen-sources-2.6.16.28"
+		sys-boot/grub-static )
+		>=sys-kernel/xen-sources-2.6.16.33"
 PDEPEND="~app-emulation/xen-tools-${PV}"
 
 RESTRICT="test"
@@ -36,7 +37,6 @@ pkg_setup() {
 	fi
 }
 
-
 src_unpack() {
 	unpack ${A}
 	# if the user *really* wants to use their own custom-cflags, let them
@@ -51,10 +51,14 @@ src_unpack() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
 	fi
-	if use hardened; then
-		cd "${S}"
-		epatch "${FILESDIR}/${PN}"-3.0.2-nopiessp.patch
-	fi
+
+	# xen tries to be smart and filter out CFLAGs not supported by gcc.
+	# It doesn't handle no* flags though, but flag-o-matic's test-flag-CC does.
+	for FLAG in -nopie -fno-stack-protector -fno-stack-protector-all; do
+		test-flag-CC ${FLAG} && HARDFLAGS="${HARDFLAGS} ${FLAG}"
+	done
+	sed  -i "s/^CFLAGS-y.*__XEN__.*$/& ${HARDFLAGS}/" \
+		"${S}"/xen/Rules.mk
 }
 
 src_compile() {
@@ -77,7 +81,7 @@ src_install() {
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
 
-	make DESTDIR="${D}" install-xen ${myopt} || die "install failed"
+	make DESTDIR="${D}" ${myopt} install-xen || die "install failed"
 }
 
 pkg_postinst() {
