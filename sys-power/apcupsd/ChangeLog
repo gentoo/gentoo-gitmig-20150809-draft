@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.26 2007/03/23 19:56:58 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.27 2007/05/02 21:12:23 tantive Exp $
+
+  02 May 2007; Michael Imhof <tantive@gentoo.org> ChangeLog:
+  Version bumped. Closing #167469.
 
   23 Mar 2007; Jeff Gardner <je_fro@gentoo.org>
   +files/3.12.4/apcupsd-snmp.patch, apcupsd-3.12.4.ebuild:
