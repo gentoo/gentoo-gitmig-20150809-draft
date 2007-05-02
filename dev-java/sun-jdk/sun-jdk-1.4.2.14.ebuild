@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.14.ebuild,v 1.1 2007/05/01 14:29:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.14.ebuild,v 1.2 2007/05/02 10:53:24 armin76 Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit pax-utils java-vm-2 eutils
@@ -19,7 +19,7 @@ SRC_URI="${At}
 		jce? ( ${jce_policy} )"
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples nsplugin jce"
 
