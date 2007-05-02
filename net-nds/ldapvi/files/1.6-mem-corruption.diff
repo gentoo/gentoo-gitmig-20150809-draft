@@ -1,0 +1,11 @@
+--- ldapvi-1.6/misc.c	2006-11-04 13:53:40.000000000 +0100
++++ ldapvi/ldapvi/misc.c	2007-05-03 00:48:21.000000000 +0200
+@@ -277,7 +277,7 @@
+ 	}
+ 
+ 	n = strlen(home);
+-	result = xalloc(n + 1 + strlen(name));
++	result = xalloc(n + 1 + strlen(name) + 1);
+ 	strcpy(result, home);
+ 	result[n] = '/';
+ 	strcpy(result + n + 1, name);
