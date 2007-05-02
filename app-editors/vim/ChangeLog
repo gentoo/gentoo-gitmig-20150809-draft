@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.266 2007/05/02 16:14:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.267 2007/05/02 16:32:28 corsair Exp $
+
+  02 May 2007; Markus Rothe <corsair@gentoo.org> vim-7.0.235.ebuild:
+  Stable on ppc64; bug #176464
 
   02 May 2007; Jeroen Roovers <jer@gentoo.org> vim-7.0.235.ebuild:
   Stable for HPPA (bug #176464).
