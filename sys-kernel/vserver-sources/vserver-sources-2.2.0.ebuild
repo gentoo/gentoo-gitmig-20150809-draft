@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.2.0.ebuild,v 1.1 2007/04/02 08:30:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.2.0.ebuild,v 1.2 2007/05/02 19:57:26 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.20"
@@ -15,7 +15,7 @@ MY_PN=${PN/-sources/-patches}
 inherit kernel-2
 detect_version
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DESCRIPTION="Full sources including Gentoo and Linux-VServer patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree."
