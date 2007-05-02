@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2785 2007/05/01 21:31:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2786 2007/05/02 04:07:27 marineam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -141,6 +141,7 @@ app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather th
 app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:screen - Enable support for running domain U consoles in a screen session
 app-emulation/xen-tools:vnc - Enable support for VNC as a video device for domainUs
+app-emulation/xen-tools:ioemu - Enable support for emulated io devices including video via VNC for domainUs
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)
 app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events

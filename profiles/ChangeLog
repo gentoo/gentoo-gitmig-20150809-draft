@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.339 2007/05/01 18:09:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.340 2007/05/02 04:07:27 marineam Exp $
+
+  02 May 2007; Michael Marineau <marineam@gentoo.org> use.local.desc:
+  Add local use flag ioemu for xen-tools.
 
   01 May 2007; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove mask for rubygems-0.9.1 and better as rubygems-0.9.1 has left the tree
