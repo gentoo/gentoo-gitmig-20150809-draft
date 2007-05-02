@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-filters-ppds
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.11 2007/05/01 12:07:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.12 2007/05/02 16:16:34 dang Exp $
+
+  02 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/foomatic-filters-ppds-20070501-remove-bashisms.patch,
+  foomatic-filters-ppds-20070501.ebuild:
+  Fix building if /bin/sh isn't bash.  Bug #176799
 
 *foomatic-filters-ppds-20070501 (01 May 2007)
 

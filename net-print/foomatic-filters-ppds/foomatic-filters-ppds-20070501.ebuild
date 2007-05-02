@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.1 2007/05/01 12:07:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.2 2007/05/02 16:16:34 dang Exp $
+
+inherit eutils
 
 DESCRIPTION="linuxprinting.org PPD files for non-postscript printers"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
@@ -18,6 +20,8 @@ src_unpack() {
 	unpack "${A}"
 	# Fix a symlink collision, see bug #172341
 	sed -i -e '/ln -s \$prefix\/share\/ppd \$destdir\$ppddir\/foomatic-ppds/d' "${S}"/install
+	# Fix building if /bin/sh isn't bash.  Bug #176799
+	epatch "${FILESDIR}"/${P}-remove-bashisms.patch
 }
 
 src_compile() {
