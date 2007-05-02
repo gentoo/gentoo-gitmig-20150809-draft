@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.79 2007/05/02 20:55:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.80 2007/05/02 21:02:57 eradicator Exp $
+
+*squirrelmail-1.4.9a-r1 (02 May 2007)
+
+  02 May 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  +squirrelmail-1.4.9a-r1.ebuild:
+  Updated locales, compatibility, and ssl plugins.
 
 *squirrelmail-1.5.1-r2 (02 May 2007)
 
