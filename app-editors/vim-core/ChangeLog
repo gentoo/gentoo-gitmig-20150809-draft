@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.246 2007/05/02 11:15:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.247 2007/05/02 12:44:36 fmccor Exp $
+
+  02 May 2007; Ferris McCormick <fmccor@gentoo.org> vim-core-7.0.235.ebuild:
+  Stable on sparc --- Bug #176464
 
   02 May 2007; Raúl Porcel <armin76@gentoo.org> vim-core-7.0.235.ebuild:
   ia64 + x86 stable wrt security bug 176464

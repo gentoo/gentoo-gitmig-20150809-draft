@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.223 2007/05/02 12:05:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.224 2007/05/02 12:45:55 fmccor Exp $
+
+  02 May 2007; Ferris McCormick <fmccor@gentoo.org> gvim-7.0.235.ebuild:
+  Stable on sparc --- Bug #176464
 
   02 May 2007; Torsten Veller <tove@gentoo.org> gvim-7.0.235.ebuild:
   Stable on x86 (#176464)
