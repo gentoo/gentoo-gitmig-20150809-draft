@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.3.ebuild,v 1.1 2007/03/31 15:49:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.3.ebuild,v 1.2 2007/05/02 16:47:33 armin76 Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/yammi/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="cdr encode kde vorbis"
 
 DEPEND=">=media-libs/taglib-1.3"
