@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.235 2007/05/01 10:03:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.236 2007/05/02 08:22:22 dberkholz Exp $
+
+  02 May 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -xorg-server-1.1.1-r4.ebuild, -xorg-server-1.2.0.ebuild,
+  -xorg-server-1.2.0-r1.ebuild, -xorg-server-1.2.0-r2.ebuild:
+  Pull versions that will never go stable or are stale.
 
   01 May 2007; Samuli Suominen <drac@gentoo.org> xorg-server-1.3.0.0.ebuild:
   Allow also nvidia-drivers-1.0.9631-r1 which appears to be working and
