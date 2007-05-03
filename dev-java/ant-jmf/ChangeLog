@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-jmf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ChangeLog,v 1.5 2007/01/27 02:04:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ChangeLog,v 1.6 2007/05/03 20:07:53 corsair Exp $
+
+  03 May 2007; Markus Rothe <corsair@gentoo.org> ant-jmf-1.7.0.ebuild:
+  Stable on ppc64; bug #176856
 
   27 Jan 2007; Vlastimil Babka <caster@gentoo.org> ant-jmf-1.7.0.ebuild:
   Add ~ia64 keyword, bug #159820.

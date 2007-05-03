@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-regexp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.23 2007/05/03 14:13:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.24 2007/05/03 19:57:16 corsair Exp $
+
+  03 May 2007; Markus Rothe <corsair@gentoo.org>
+  jakarta-regexp-1.4-r1.ebuild:
+  Stable on ppc64; bug #176856
 
   03 May 2007; Andrej Kacian <ticho@gentoo.org>
   jakarta-regexp-1.4-r1.ebuild:

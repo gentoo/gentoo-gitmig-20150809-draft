@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.61 2007/04/26 23:28:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.62 2007/05/03 20:13:22 corsair Exp $
+
+  03 May 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Stable on ppc64; bug #176856
 
   26 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   ant-tasks-1.7.0-r2.ebuild:
