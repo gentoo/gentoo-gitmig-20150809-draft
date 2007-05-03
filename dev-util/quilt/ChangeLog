@@ -1,12 +1,12 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.24 2007/05/01 07:44:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.25 2007/05/03 13:57:15 tove Exp $
 
   01 May 2007; Christian Heim <phreak@gentoo.org> quilt-0.45-r1.ebuild,
   quilt-0.46.ebuild:
   Fixing up FEATURES=test, backporting vapier's changes to quilt-0.45-r1.
 
-  12 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> quilt-0.45-r1.ebuild:
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> quilt-0.45-r1.ebuild:
   x86 stable
 
   07 Mar 2007; Christian Heim <phreak@gentoo.org> quilt-0.42-r1.ebuild,
@@ -27,7 +27,7 @@
   stripping bug; noone reported yet); also introduction a new USE flag, that
   adds/removes the graphviz dependency.
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   08 Dec 2006; Luca Barbato <lu_zero@gentoo.org> quilt-0.45.ebuild:
