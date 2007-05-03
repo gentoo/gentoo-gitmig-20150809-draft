@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.335 2007/05/03 04:41:52 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.336 2007/05/03 05:31:14 aross Exp $
+
+*postgresql-7.4.17 (03 May 2007)
+
+  03 May 2007; Andrew Ross <aross@gentoo.org>
+  +files/postgresql-7.4.17-hppa-testandset.patch, +postgresql-7.4.17.ebuild:
+  Version bump from 7.4.16 to 7.4.17 for bug #175791 (CVE-2007-2138 privilege
+  escalation in SECURITY DEFINER functions).
 
 *postgresql-7.3.19 (03 May 2007)
 
