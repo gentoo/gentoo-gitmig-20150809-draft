@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.21.ebuild,v 1.3 2007/05/03 04:17:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.8 2007/05/03 04:17:04 jer Exp $
 
-inherit eutils games
+inherit games
 
 DESCRIPTION="The Versatile Commodore 8-bit Emulator"
 HOMEPAGE="http://www.viceteam.org/"
@@ -10,8 +10,8 @@ SRC_URI="http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/${P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
-IUSE="Xaw3d alsa arts esd ffmpeg gnome nls png readline sdl"
+KEYWORDS="~amd64 ~ppc sparc x86"
+IUSE="Xaw3d alsa arts esd gnome nls png readline sdl"
 
 RDEPEND="media-libs/giflib
 	media-libs/jpeg
@@ -29,10 +29,6 @@ RDEPEND="media-libs/giflib
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
-	ffmpeg? (
-		media-video/ffmpeg
-		media-sound/lame
-	)
 	gnome? ( gnome-base/libgnomeui )
 	nls? ( virtual/libintl )
 	png? ( media-libs/libpng )
@@ -54,25 +50,20 @@ src_unpack() {
 	sed -i \
 		-e '/^gnulocaledir/s:$(prefix):/usr:' \
 		po/Makefile.in.in \
-		|| die "sed Makefile.in.in failed"
-	sed -i \
-		-e 's/getline/intlpo_getline/' \
-		po/intl2po.c \
-		|| die "sed intl2po.c failed"
-	sed -i \
-		-e '/SYNC=/s: $SYNC::' \
-		configure \
-		|| die "sed configure failed"
-	epatch "${FILESDIR}"/${P}-uicolor.patch #174056
+		|| die "sed failed"
 }
 
 src_compile() {
+	# --enable-ffmpeg broken with 0.4.9_p20060530
 	egamesconf \
 		--disable-dependency-tracking \
+		--disable-ffmpeg \
+		--enable-ethernet \
 		--enable-fullscreen \
+		--enable-textfield \
+		--enable-realdevice \
+		--with-resid \
 		--without-midas \
-		--without-resid \
-		$(use_enable ffmpeg) \
 		$(use_enable gnome gnomeui) \
 		$(use_enable nls) \
 		$(use_with Xaw3d xaw3d) \
