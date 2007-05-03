@@ -9,7 +9,9 @@ populate_udev() {
 	# populate /dev with devices already found by the kernel
 
 	# tell modprobe.sh to be verbose to $CONSOLE
-	echo CONSOLE=${CONSOLE} > /dev/.udev_populate
+
+	echo export CONSOLE=${CONSOLE} > /dev/.udev_populate
+	echo export TERM=${TERM} >> /dev/.udev_populate
 
 	if get_bootparam "nocoldplug" ; then
 		RC_COLDPLUG="no"

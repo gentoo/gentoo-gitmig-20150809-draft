@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.298 2007/05/02 13:53:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.299 2007/05/03 14:43:37 zzam Exp $
+
+  03 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/udev-start-110.sh:
+  Make modprobe.sh write colorful output also with baselayout-2.
 
 *udev-110 (02 May 2007)
 
