@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.4.ebuild,v 1.1 2007/04/30 00:58:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.4.ebuild,v 1.2 2007/05/03 17:19:39 dang Exp $
 
 inherit gnome2 eutils
 
@@ -28,6 +28,7 @@ RDEPEND="${DEPEND}
 
 USEDESTDIR="1"
 G2CONF="$(use_enable nls)"
+DOCS="AUTHORS ChangeLog"
 
 src_unpack() {
 	gnome2_src_unpack
