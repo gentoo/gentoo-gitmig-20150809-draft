@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.344 2007/05/03 09:36:39 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.345 2007/05/03 19:28:01 betelgeuse Exp $
+
+  03 May 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Add soundex local use flag to dev-db/sqlite requested in bug #143794.
 
   03 May 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
   Mask pidgin-2.0.0_beta7

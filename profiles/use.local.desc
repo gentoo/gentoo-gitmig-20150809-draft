@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2787 2007/05/02 21:56:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2788 2007/05/03 19:28:01 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -306,6 +306,7 @@ dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure 
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
+dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings of strings
 dev-db/tora:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-games/cegui:devil - image loading support with DevIL
 dev-games/cegui:freeimage - image loading support with FreeImage
