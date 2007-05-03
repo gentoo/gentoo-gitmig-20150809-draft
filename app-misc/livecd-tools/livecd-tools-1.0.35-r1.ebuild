@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.35-r1.ebuild,v 1.1 2007/04/03 21:06:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.35-r1.ebuild,v 1.2 2007/05/03 13:25:03 wolf31o2 Exp $
 
 inherit eutils
 
@@ -10,8 +10,11 @@ SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-#KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+# Please don't touch the KEYWORDS on this package.  Since it is used by Release
+# Engineering, it needs to match on all architectures or we get very unexpected
+# results when release building.  Thanks.  -- wolf31o2
+#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="opengl X"
 
 OPENGL_DEPEND="virtual/opengl
