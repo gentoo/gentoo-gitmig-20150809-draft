@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.107 2007/05/03 20:18:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.108 2007/05/03 22:41:04 betelgeuse Exp $
+
+  03 May 2007; Petteri Räty <betelgeuse@gentoo.org> ChangeLog:
+  Fix ChangeLog version bump syntax.
 
   03 May 2007; Markus Rothe <corsair@gentoo.org> ant-1.7.0.ebuild:
   Stable on ppc64; bug #176856
@@ -89,6 +92,7 @@
   Stable on amd64.
 
 *ant-1.6.2-r6 (10 Sep 2004)
+*ant-1.5.4-r2 (10 Sep 2004)
 
   10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> -files/20ant,
   -files/build.sh-exit-fix.patch.gz, -files/rpmbuild.patch.gz,
