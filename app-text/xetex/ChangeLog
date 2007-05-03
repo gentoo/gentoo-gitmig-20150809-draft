@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xetex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.14 2007/03/26 11:20:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.15 2007/05/03 08:34:14 joslwah Exp $
+
+  03 May 2007; Joshua <joslwah@gentoo.org> xetex-0.995.ebuild:
+  ppc64 stable.
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org> xetex-0.995.ebuild:
   Add ~ia64 wrt bug 153132
