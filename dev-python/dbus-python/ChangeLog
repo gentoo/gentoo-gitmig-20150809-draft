@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.18 2007/05/03 12:02:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.19 2007/05/03 14:02:58 gustavoz Exp $
+
+  03 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dbus-python-0.80.2.ebuild:
+  Stable on sparc wrt #174810
 
   03 May 2007; Jeroen Roovers <jer@gentoo.org> dbus-python-0.80.2.ebuild:
   Stable for HPPA (bug #174810).
