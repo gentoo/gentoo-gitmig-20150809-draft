@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.7 2006/11/04 05:36:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.8 2007/05/03 21:18:32 mr_bones_ Exp $
 
-inherit eutils games
+inherit eutils autotools games
 
 data_ver=1.5
 snd_trk_ver=1.0
@@ -37,6 +37,7 @@ src_unpack() {
 	sed -i 's:$(localedir):/usr/share/locale:' \
 		$(find . -name 'Makefile.in*') \
 		|| die "sed failed"
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
