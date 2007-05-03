@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.19 2007/05/02 02:19:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.20 2007/05/03 06:43:37 jer Exp $
+
+  03 May 2007; Jeroen Roovers <jer@gentoo.org> xcb-util-0.2.ebuild:
+  Stable for HPPA (bug #176367).
 
   02 May 2007; Donnie Berkholz <dberkholz@gentoo.org>; xcb-util-0.2.ebuild:
   (#176736) Requires a new enough version of gperf for the --output-file option.
