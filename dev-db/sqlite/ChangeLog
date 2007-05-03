@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.136 2007/03/10 18:18:52 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.137 2007/05/03 18:51:47 beandog Exp $
+
+  03 May 2007; Steve Dibb <beandog@gentoo.org> sqlite-3.3.12.ebuild:
+  amd64 stable, bug 176942
 
   10 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
   -files/sqlite-3.2.1-data-corruption.patch,
