@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.15.ebuild,v 1.2 2007/05/02 19:32:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.15.ebuild,v 1.3 2007/05/03 16:43:32 armin76 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://claws.sylpheed.org"
 SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE=""
 DEPEND=">=mail-client/claws-mail-2.9.0
 		=gnome-extra/gtkhtml-2*
