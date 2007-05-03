@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ibuffer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ChangeLog,v 1.10 2007/03/07 09:56:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ChangeLog,v 1.11 2007/05/03 18:54:09 ulm Exp $
+
+  03 May 2007; Ulrich Mueller <ulm@gentoo.org> +files/51ibuffer-gentoo.el,
+  ibuffer-2.6.1.ebuild:
+  Replaced package loading by autoload mechanism.
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50ibuffer-gentoo.el:
