@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.33 2007/05/02 16:47:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.34 2007/05/03 13:31:03 gustavoz Exp $
+
+  03 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> yammi-1.2.3.ebuild:
+  Stable on sparc wrt #176693
 
   02 May 2007; Raúl Porcel <armin76@gentoo.org> yammi-1.2.3.ebuild:
   x86 stable wrt #176693
