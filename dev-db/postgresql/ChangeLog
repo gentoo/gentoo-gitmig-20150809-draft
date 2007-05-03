@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.336 2007/05/03 05:31:14 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.337 2007/05/03 09:38:31 aross Exp $
+
+*postgresql-8.1.9 (03 May 2007)
+
+  03 May 2007; Andrew Ross <aross@gentoo.org>
+  +files/postgresql-8.1.9-regress_su.patch,
+  +files/postgresql-8.1.9-sh.patch, +postgresql-8.1.9.ebuild:
+  Version bump from 8.1.8 to 8.1.9 for bug #175791 (CVE-2007-2138 privilege
+  escalation in SECURITY DEFINER functions).
 
 *postgresql-7.4.17 (03 May 2007)
 
