@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.0.ebuild,v 1.1 2007/05/02 21:12:23 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.0.ebuild,v 1.2 2007/05/03 14:49:55 je_fro Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 inherit eutils webapp
@@ -35,7 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}/etc.patch
 	epatch "${FILESDIR}"/${PV}/no-parallel.patch
 
-	epatch "${FILESDIR}"/${P}-apccontrol-gentoo.patch
+	epatch "${FILESDIR}"/${PV}/${P}-apccontrol-gentoo.patch
 }
 
 src_compile() {
