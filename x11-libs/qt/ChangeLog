@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.438 2007/05/01 13:48:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.439 2007/05/03 11:25:09 caleb Exp $
+
+  03 May 2007; Caleb Tennis <caleb@gentoo.org> qt-3.3.4-r8.ebuild:
+  readd amd64 as it likes this version for hardened as well
 
 *qt-4.3.0_beta1 (01 May 2007)
 
