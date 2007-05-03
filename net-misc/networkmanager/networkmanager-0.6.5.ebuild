@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5.ebuild,v 1.1 2007/05/02 17:59:18 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5.ebuild,v 1.2 2007/05/03 17:53:50 steev Exp $
 
 inherit gnome2 eutils
 
@@ -42,6 +42,7 @@ USE_DESTDIR="1"
 
 G2CONF="${G2CONF} \
 	`use_with crypt gcrypt` \
+	`use_with gnome` \
 	--disable-more-warnings \
 	--localstatedir=/var \
 	--with-distro=gentoo \
