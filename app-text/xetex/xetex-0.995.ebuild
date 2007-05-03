@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.13 2007/05/03 12:42:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.14 2007/05/03 16:34:10 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://scripts.sil.org/svn-view/xetex/TAGS/${P}.tar.gz"
 
 LICENSE="XeTeX"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ia64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="~amd64 hppa ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="app-text/xdvipdfmx >=app-text/tetex-3.0"
