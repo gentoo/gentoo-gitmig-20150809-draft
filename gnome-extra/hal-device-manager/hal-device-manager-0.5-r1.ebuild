@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.5-r1.ebuild,v 1.4 2006/11/18 07:23:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.5-r1.ebuild,v 1.5 2007/05/03 12:01:44 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/hal-${PV}-r1
