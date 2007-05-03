@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212-r2.ebuild,v 1.1 2007/02/05 18:19:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212-r2.ebuild,v 1.2 2007/05/03 19:39:00 swegener Exp $
 
 inherit eutils bash-completion
 
@@ -95,7 +95,7 @@ pkg_postinst() {
 	elog " rc-update add vprocunhide default"
 	elog
 
-	if has_version "<0.30.211" ; then
+	if has_version "<${CATEGORY}/${PN}-0.30.211" ; then
 		ewarn "Please make sure, that you remove the old init-script from any"
 		ewarn "runlevel and remove it from your init.d dir!"
 		ewarn
