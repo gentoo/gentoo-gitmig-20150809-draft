@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.18 2007/03/11 20:15:10 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.19 2007/05/03 02:17:16 nichoj Exp $
+
+*jruby-0.9.9 (03 May 2007)
+
+  03 May 2007; Joshua Nichols <nichoj@gentoo.org> +jruby-0.9.9.ebuild:
+  Version bump.
 
 *jruby-0.9.8-r1 (11 Mar 2007)
 
