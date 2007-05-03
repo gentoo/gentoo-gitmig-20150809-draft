@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cmail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.7 2007/02/06 13:23:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.8 2007/05/03 20:06:52 ulm Exp $
+
+  03 May 2007; Ulrich Mueller <ulm@gentoo.org> cmail-2.62.ebuild:
+  Dependency on virtual/semi changed to app-emacs/semi.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

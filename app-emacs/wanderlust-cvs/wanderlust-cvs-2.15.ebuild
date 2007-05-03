@@ -1,14 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/wanderlust-cvs-2.15.ebuild,v 1.2 2006/03/06 01:10:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/wanderlust-cvs-2.15.ebuild,v 1.3 2007/05/03 20:11:05 ulm Exp $
 
 ECVS_SERVER="cvs.m17n.org:/cvs/root"
 ECVS_MODULE="wanderlust"
 ECVS_BRANCH="HEAD"
 
 inherit elisp cvs
-
-IUSE="ssl"
 
 DESCRIPTION="Wanderlust -- Yet Another Message Interface on Emacsen"
 HOMEPAGE="http://www.gohome.org/wl/"
@@ -17,11 +15,12 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+IUSE="ssl"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6
 	virtual/flim
-	virtual/semi
+	app-emacs/semi
 	!app-emacs/wanderlust"
 
 S="${WORKDIR}/${ECVS_MODULE}"

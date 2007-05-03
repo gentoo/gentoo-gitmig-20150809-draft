@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/wanderlust-cvs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/ChangeLog,v 1.8 2007/03/08 10:01:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/ChangeLog,v 1.9 2007/05/03 20:11:05 ulm Exp $
+
+  03 May 2007; Ulrich Mueller <ulm@gentoo.org> wanderlust-cvs-2.15.ebuild:
+  Dependency on virtual/semi changed to app-emacs/semi.
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org> files/70wl-gentoo.el:
   add load path correctly, fixes bug 169588, reported by Ulrich Mueller

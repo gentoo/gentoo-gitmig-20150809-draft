@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/cmail-2.62.ebuild,v 1.7 2005/07/01 18:14:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/cmail-2.62.ebuild,v 1.8 2007/05/03 20:06:52 ulm Exp $
 
 inherit elisp
 
@@ -17,7 +17,7 @@ DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
 	app-emacs/apel
 	virtual/flim
-	virtual/semi"
+	app-emacs/semi"
 
 SITEFILE="70cmail-gentoo.el"
 
