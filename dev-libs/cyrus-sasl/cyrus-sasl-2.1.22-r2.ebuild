@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r2.ebuild,v 1.11 2007/04/16 16:25:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r2.ebuild,v 1.12 2007/05/03 15:36:34 ticho Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -29,7 +29,7 @@ RDEPEND="authdaemond? ( || ( >=net-mail/courier-imap-3.0.7 >=mail-mta/courier-0.
 		mysql? ( virtual/mysql )
 		ntlm_unsupported_patch? ( >=net-fs/samba-3.0.9 )
 		pam? ( virtual/pam )
-		postgres? ( >=dev-db/postgresql-7.2 )
+		postgres? ( >=dev-db/libpq-7.2 )
 		ssl? ( >=dev-libs/openssl-0.9.6d )"
 DEPEND="${RDEPEND}
 		>=sys-apps/sed-4
