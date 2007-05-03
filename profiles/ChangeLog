@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.342 2007/05/02 21:56:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.343 2007/05/03 05:46:29 ali_bush Exp $
+
+  03 May 2007; Alistair John Bush <ali_bush@gentoo.org> package.mask:
+  Mask dev-java/openjgraph for removal to javas junkyard
 
   02 May 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
   Add bgpas4 USE flag for net-misc/quagga (#176657).

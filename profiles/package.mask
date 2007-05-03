@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7216 2007/05/03 04:44:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7217 2007/05/03 05:46:29 ali_bush Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Alistair Bush <ali_bush@gentoo.org> (3 May 2007)
+# Masked for removal to junkyard in 30 days (2 June)
+# Generation 1 ebuild with stale upstream (last release 2002).
+dev-java/openjgraph
 
 # Samuli Suominen <drac@gentoo.org> (2 May 2007)
 # Masked for removal in 30 days. See bug #176150.
