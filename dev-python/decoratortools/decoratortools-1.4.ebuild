@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/decoratortools-1.4.ebuild,v 1.2 2007/05/03 04:51:49 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/decoratortools-1.4.ebuild,v 1.3 2007/05/03 06:47:29 pythonhead Exp $
 
 inherit distutils
 
@@ -18,5 +18,5 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 src_test() {
-	${python} setup.py test
+	${python} setup.py test || die "Test failed."
 }
