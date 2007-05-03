@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r2.ebuild,v 1.9 2007/03/31 09:42:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r2.ebuild,v 1.10 2007/05/03 20:19:04 ulm Exp $
 
 inherit elisp eutils
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 alpha sparc ppc"
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6
 	virtual/flim
-	virtual/semi
+	app-emacs/semi
 	!app-emacs/wanderlust-cvs"
 
 S="${WORKDIR}/${MY_P}"
