@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/JSON-XS
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.1 2007/05/03 18:08:37 ian Exp $
+
+*JSON-XS-1.11 (03 May 2007)
+
+  03 May 2007; Christian Hartmann <ian@gentoo.org> +metadata.xml,
+  +JSON-XS-1.11.ebuild:
+  New package; bug #175364
+
