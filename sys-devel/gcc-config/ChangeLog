@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.155 2007/05/03 05:20:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.156 2007/05/03 06:15:13 jer Exp $
+
+  03 May 2007; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Fix manifest.
 
   03 May 2007; Mike Frysinger <vapier@gentoo.org> +files/gcc-config-1.4.0,
   +files/wrapper-1.5.0.c, +gcc-config-1.4.0.ebuild:
