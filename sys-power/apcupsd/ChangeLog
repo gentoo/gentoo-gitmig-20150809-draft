@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.28 2007/05/03 14:49:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.29 2007/05/03 16:10:17 je_fro Exp $
+
+  03 May 2007; Jeff Gardner <je_fro@gentoo.org> apcupsd-3.14.0.ebuild:
+  Fix path to initscript.
 
   03 May 2007; Jeff Gardner <je_fro@gentoo.org> apcupsd-3.14.0.ebuild:
   Fixed path to patch wrt bug #176888.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.0.ebuild,v 1.2 2007/05/03 14:49:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.0.ebuild,v 1.3 2007/05/03 16:10:17 je_fro Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 inherit eutils webapp
@@ -97,7 +97,7 @@ src_install() {
 	fi
 
 	rm "${D}"/etc/init.d/apcupsd
-	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
+	newinitd "${FILESDIR}/${PV}/${PN}.initd" "${PN}"
 }
 
 pkg_postinst() {
