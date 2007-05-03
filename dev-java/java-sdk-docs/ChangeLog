@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.46 2007/04/20 10:48:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.47 2007/05/03 20:21:11 armin76 Exp $
+
+  03 May 2007; Raúl Porcel <armin76@gentoo.org> java-sdk-docs-1.4.2.ebuild:
+  ia64 + x86 stable wrt bug 176934
 
   20 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   -java-sdk-docs-1.4.1.ebuild, java-sdk-docs-1.4.2.ebuild,
