@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # compiz-start script
 #
 # hacky autodetection of neccessary options for XGL/AIGLX/NVIDIA
@@ -16,13 +18,13 @@ COMPIZ_OPTIONS="--replace --use-cow"
 if [ $GLX_WITH_DIRECT -eq 3 ]; then
 	if [ $GLX_RENDER -eq 0 ]; then
 		echo NVIDIA detected
-		export __GL_YIELD="NOTHING" 
+		__GL_YIELT="NOTHING; export __GL_YIELD
 	else
 		echo XGL detected
 	fi
 elif [ $GLX_WITH_INDIRECT -eq 3 ]; then
 	echo AIGLX detected
-	export LIBGL_ALWAYS_INDIRECT=1
+	LIBGL_ALWAYS_INDIRECT=1; export LIBGL_ALWAYS_INDIRECT
 	COMPIZ_OPTIONS="$COMPIZ_OPTIONS --strict-binding"
 fi
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.5.0.ebuild,v 1.1 2007/04/24 01:51:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.5.0.ebuild,v 1.2 2007/05/03 02:49:26 hanno Exp $
+
+inherit gnome2
 
 DESCRIPTION="3D composite- and windowmanager"
 HOMEPAGE="http://www.compiz.org/"
@@ -19,6 +21,7 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	x11-libs/libXinerama
 	media-libs/libpng
 	>=x11-libs/gtk+-2.0
+	x11-libs/pango
 	x11-libs/startup-notification
 	gnome-base/gconf
 	gnome? ( >=x11-libs/libwnck-2.16.1
