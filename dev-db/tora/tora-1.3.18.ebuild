@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.18.ebuild,v 1.8 2007/01/05 04:26:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.18.ebuild,v 1.9 2007/05/03 05:43:18 jer Exp $
 
 inherit eutils kde-functions
 
@@ -34,9 +34,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-        unpack ${A}
-        cd ${S}
-        epatch ${FILESDIR}/gcc41.patch
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc41.patch
 }
 
 
