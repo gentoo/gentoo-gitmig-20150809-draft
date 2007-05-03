@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.334 2007/05/02 08:50:01 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.335 2007/05/03 04:41:52 aross Exp $
+
+*postgresql-7.3.19 (03 May 2007)
+
+  03 May 2007; Andrew Ross <aross@gentoo.org>
+  +files/postgresql-7.3.19-cubeparse.patch, +postgresql-7.3.19.ebuild:
+  Version bump to 7.3.19 for bug #175791 (CVE-2007-2138 privilege escalation
+  in SECURITY DEFINER functions).
 
 *postgresql-8.2.4-r1 (02 May 2007)
 
