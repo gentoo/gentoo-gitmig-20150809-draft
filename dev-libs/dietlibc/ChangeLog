@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.67 2007/04/20 13:54:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.68 2007/05/03 21:26:52 hollow Exp $
+
+*dietlibc-0.31_pre20070503 (03 May 2007)
+
+  03 May 2007; Benedikt Böhm <hollow@gentoo.org> -files/gcc-33.patch,
+  -files/0.25-gcc34.patch, -dietlibc-0.25.ebuild, -dietlibc-0.29.ebuild,
+  +dietlibc-0.31_pre20070503.ebuild:
+  add pre release for new SSP stuff; remove old cruft where possible
 
   20 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   dietlibc-0.30-r2.ebuild:
