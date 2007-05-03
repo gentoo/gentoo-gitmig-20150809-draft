@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.509 2007/05/03 22:29:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.510 2007/05/03 22:54:00 corsair Exp $
+
+  03 May 2007; Markus Rothe <corsair@gentoo.org> glibc-2.5-r2.ebuild:
+  Stable on ppc64; bug #176712
 
   03 May 2007; Andrej Kacian <ticho@gentoo.org> glibc-2.5-r2.ebuild:
   Stable on x86, security bug #176712.
