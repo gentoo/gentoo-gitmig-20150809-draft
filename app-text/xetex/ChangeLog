@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xetex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.16 2007/05/03 11:44:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.17 2007/05/03 12:42:08 jer Exp $
+
+  03 May 2007; Jeroen Roovers <jer@gentoo.org> xetex-0.995.ebuild:
+  Stable for HPPA (bug #176895).
 
   03 May 2007; Ferris McCormick <fmccor@gentoo.org> xetex-0.995.ebuild:
   Stable on sparc --- Bug #176895 --- has been working fine for over 6 months.
