@@ -1,19 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.0.ebuild,v 1.2 2007/02/23 22:32:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.0.ebuild,v 1.3 2007/05/03 16:43:28 bicatali Exp $
 
 NEED_PYTHON=2.3
 
 inherit distutils python
 
-DOC_PV=0.87.7
+DOC_PV=0.90.0
 
 DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="http://matplotlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? ( http://matplotlib.sourceforge.net/users_guide_${DOC_PV}.pdf )"
 
-IUSE="doc gtk tk"
+IUSE="doc examples gtk tk"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="PYTHON"
@@ -53,7 +53,7 @@ src_unpack() {
 		-e "/^BUILD_GTK/s/'auto'/$(use gtk && echo 1 || echo 0)/g" \
 		-e "/^BUILD_WX/s/'auto'/0/g" \
 		-e "/^BUILD_TK/s/'auto'/$(use tk && echo 1 || echo 0)/g" \
-		setup.py
+		setup.py || die "sed failed"
 
 	# cleaning and remove vera fonts, they are now a dependency
 	chmod 644 images/*.svg
@@ -65,12 +65,14 @@ src_install() {
 	distutils_src_install --install-data=usr/share
 	insinto /etc
 	doins matplotlibrc
-	if use doc ; then
+	if use doc; then
+		insinto /usr/share/doc/${PF}/
+		doins "${DISTDIR}"/users_guide_${DOC_PV}.pdf
+	fi
+	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*.py examples/README
 		insinto /usr/share/doc/${PF}/examples/data
 		doins examples/data/*.dat
-		insinto /usr/share/doc/${PF}/
-		doins ${DISTDIR}/users_guide_${DOC_PV}.pdf
 	fi
 }
