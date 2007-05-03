@@ -18,8 +18,8 @@ login:
   driver = plaintext
   public_name = LOGIN
   server_prompts = "Username:: : Password::"
-  server_condition = "${if pam{$1:$2}{1}{0}}"
+  server_condition = "${if pam{$1:${sg{$2}{:}{::}}}{1}{0}}"
   server_set_id = $1
-
+#
 # FIXME
 # Need to add authenticator for SPA!!

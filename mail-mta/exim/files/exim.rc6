@@ -1,7 +1,8 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.6 2007/04/15 12:12:06 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.7 2007/05/03 19:57:50 peitolm Exp $
+opts="${opts} reload"
 
 depend() {
 	need logger
@@ -19,4 +20,10 @@ stop() {
 	ebegin "Stopping exim"
 	start-stop-daemon --stop --quiet --pidfile /var/run/exim.pid --name exim
 	eend $?
+}
+
+reload() {
+       ebegin "Reloading exim"
+       start-stop-daemon --stop --signal 1 --quiet --pidfile /var/run/exim.pid --name exim
+       eend $?
 }
