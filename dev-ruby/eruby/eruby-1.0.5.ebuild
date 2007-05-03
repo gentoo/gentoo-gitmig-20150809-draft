@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5.ebuild,v 1.14 2007/01/21 08:03:17 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5.ebuild,v 1.15 2007/05/03 16:43:39 rbrown Exp $
 
-RUBY_BUG_145222=yes
 inherit ruby
 
 IUSE="examples"
