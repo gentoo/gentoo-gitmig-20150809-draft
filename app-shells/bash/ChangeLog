@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.143 2007/05/03 07:44:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.144 2007/05/03 15:37:57 gustavoz Exp $
+
+  03 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  bash-3.2_p15-r1.ebuild:
+  Stable on sparc wrt #176882
 
   03 May 2007; Markus Rothe <corsair@gentoo.org> bash-3.2_p15-r1.ebuild:
   Stable on ppc64; bug #176882
