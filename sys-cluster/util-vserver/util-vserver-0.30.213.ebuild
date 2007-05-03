@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213_rc6.ebuild,v 1.3 2007/05/03 19:39:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213.ebuild,v 1.1 2007/05/03 20:23:12 hollow Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -8,7 +8,7 @@ inherit autotools eutils bash-completion
 
 DESCRIPTION="Linux-VServer admin utilities"
 HOMEPAGE="http://www.nongnu.org/util-vserver/"
-SRC_URI="http://people.linux-vserver.org/~dhozac/t/uv-testing/${P/_rc/-rc}.tar.bz2"
+SRC_URI="http://ftp.linux-vserver.org/pub/utils/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,8 +26,6 @@ RDEPEND="sys-apps/iproute2
 	net-misc/vconfig
 	net-firewall/iptables
 	dev-libs/beecrypt"
-
-S="${WORKDIR}/${P/_rc/-rc}"
 
 pkg_setup() {
 	if [[ -z "${VDIRBASE}" ]]; then
