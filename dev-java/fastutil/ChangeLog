@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.29 2007/05/01 10:12:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.30 2007/05/03 12:40:24 nelchael Exp $
+
+*fastutil-4.3.1-r1 (03 May 2007)
+
+  03 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml,
+  +fastutil-4.3.1-r1.ebuild, fastutil-4.4.2-r1.ebuild,
+  fastutil-5.0.5.ebuild:
+  Migrate fastutil-4.3.1, some QA fixes.
 
   01 May 2007; Vlastimil Babka <caster@gentoo.org> fastutil-5.0.5.ebuild:
   Raise JDK heap size only for compilers other than javac, because fork for
