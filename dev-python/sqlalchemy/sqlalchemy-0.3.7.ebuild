@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.6.ebuild,v 1.1 2007/03/24 07:59:14 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.7.ebuild,v 1.1 2007/05/03 19:54:07 lucass Exp $
 
 NEED_PYTHON=2.4
 
@@ -41,7 +41,7 @@ src_unpack() {
 	# skip testorderby and testorderby_desc
 	# which require sqlite-3.3.13 to pass
 	sed -i \
-		-e '1091,1119d' \
+		-e '1049,1177d' \
 		test/orm/mapper.py || die "sed failed"
 }
 
