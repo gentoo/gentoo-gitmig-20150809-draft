@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.507 2007/03/15 16:09:05 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.508 2007/05/03 01:14:53 vapier Exp $
+
+*glibc-2.5-r2 (03 May 2007)
+
+  03 May 2007; Mike Frysinger <vapier@gentoo.org> +glibc-2.5-r2.ebuild:
+  Fix building with sanitized headers for various arches, fix from upstream
+  #176712 for printf overflow, fix building under hppa, and respect env
+  CPPFLAGS.
 
   15 Mar 2007; Kevin F. Quinn <kevquinn@gentoo.org>
   files/2.5/glibc-2.5-hardened-pie.patch, glibc-2.5-r1.ebuild:
