@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.157 2007/05/03 07:47:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.158 2007/05/03 15:36:12 gustavoz Exp $
+
+  03 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gcc-config-1.3.16.ebuild:
+  Stable on sparc wrt #176869
 
   03 May 2007; Markus Rothe <corsair@gentoo.org> gcc-config-1.3.16.ebuild:
   Stable on ppc64; bug #176869
