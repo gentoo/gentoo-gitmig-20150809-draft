@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyprotocols
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.9 2007/02/28 00:18:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.10 2007/05/03 04:38:35 pythonhead Exp $
+
+*pyprotocols-1.0_pre2306 (03 May 2007)
+
+  03 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +pyprotocols-1.0_pre2306.ebuild:
+  Version bump snapshot required for turbogears-1.0.2.2. Dropped amd64 keyword
+  because of new dep on decoratortools.
 
 *pyprotocols-1.0_pre2082 (28 Feb 2007)
 
