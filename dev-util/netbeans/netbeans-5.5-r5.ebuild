@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r5.ebuild,v 1.1 2007/05/02 21:48:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r5.ebuild,v 1.2 2007/05/03 09:38:13 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="debug doc"
 
 COMMON_DEPEND="
-	>=dev-java/ant-1.6.3
+	>=dev-java/ant-1.7.0
 	>=dev-java/commons-logging-1.0.4
 	dev-java/flute
 	>=dev-java/jakarta-jstl-1.1.2

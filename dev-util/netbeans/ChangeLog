@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.59 2007/05/02 21:48:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.60 2007/05/03 09:38:13 betelgeuse Exp $
+
+  03 May 2007; Petteri Räty <betelgeuse@gentoo.org> netbeans-5.5-r5.ebuild:
+  Pull in >=dev-java/ant-1.7.0 because the ebuild uses the new layout.
 
 *netbeans-5.5-r5 (02 May 2007)
 
