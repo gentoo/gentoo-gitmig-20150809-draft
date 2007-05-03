@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.88 2007/04/29 19:50:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.89 2007/05/03 02:21:13 jer Exp $
+
+  03 May 2007; Jeroen Roovers <jer@gentoo.org> fuse-2.6.4-r1.ebuild:
+  Marked ~hppa (bug #172755).
 
   29 Apr 2007; Stefan Schweizer <genstef@gentoo.org> fuse-2.6.4-r1.ebuild:
   Fix up dodoc thanks to Alexander Skwar <askwar@digitalprojects.com> in bug
