@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.3-r3.ebuild,v 1.1 2007/05/01 16:44:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.3-r4.ebuild,v 1.1 2007/05/03 12:06:33 pva Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
