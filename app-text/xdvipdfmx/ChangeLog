@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.12 2007/05/03 08:35:06 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.13 2007/05/03 11:41:48 fmccor Exp $
+
+  03 May 2007; Ferris McCormick <fmccor@gentoo.org> xdvipdfmx-0.3.ebuild:
+  Sparc stable --- Bug #176895 --- Has been working for over 6 months.
 
   03 May 2007; Joshua <joslwah@gentoo.org> xdvipdfmx-0.3.ebuild:
   ppc64 stable
