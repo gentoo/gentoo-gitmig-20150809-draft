@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/crimson-1.1.3-r1.ebuild,v 1.5 2007/04/28 17:22:51 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/crimson-1.1.3-r1.ebuild,v 1.6 2007/05/03 11:49:14 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -25,8 +25,8 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/${PN}.jar
 
-	dodoc build/ChangeLog || die
-	java-pkg_dohtml build/README.html || die
+	dodoc ChangeLog || die
+	dohtml docs/README.html || die
 	if use doc; then
 		java-pkg_dojavadoc build/docs/api
 		java-pkg_dohtml -r -A class,java,xml build/examples
