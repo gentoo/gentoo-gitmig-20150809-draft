@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.75 2007/05/02 12:00:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.76 2007/05/04 19:06:44 dang Exp $
+
+  04 May 2007; Daniel Gryniewicz <dang@gentoo.org> valgrind-3.2.3.ebuild:
+  Marked stable on amd64 for bug #176707
 
   02 May 2007; Andrej Kacian <ticho@gentoo.org> valgrind-3.2.3.ebuild:
   Stable on x86, security bug #176707.
