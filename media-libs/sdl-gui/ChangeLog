@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-gui
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/ChangeLog,v 1.6 2006/09/10 22:39:15 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/ChangeLog,v 1.7 2007/05/04 05:50:12 mr_bones_ Exp $
+
+  04 May 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-gui-0.10.3.ebuild:
+  update HOMEPAGE
 
   10 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/sdl-gui-0.10.3-gcc4.patch, sdl-gui-0.10.3.ebuild:

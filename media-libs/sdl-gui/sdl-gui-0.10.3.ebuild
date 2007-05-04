@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/sdl-gui-0.10.3.ebuild,v 1.4 2006/09/10 22:39:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/sdl-gui-0.10.3.ebuild,v 1.5 2007/05/04 05:50:12 mr_bones_ Exp $
 
 inherit eutils
 
 MY_P="SDL_gui-${PV}"
 DESCRIPTION="Graphical User Interface library that utilizes SDL"
-HOMEPAGE="http://www.newimage.com/~rhk/SDL_gui/"
-SRC_URI="http://www.newimage.com/~rhk/SDL_gui/${MY_P}.tar.gz"
+HOMEPAGE="http://rhk.dataslab.com/SDL_gui"
+SRC_URI="http://rhk.dataslab.com/SDL_gui/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
