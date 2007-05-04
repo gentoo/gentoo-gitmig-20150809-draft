@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.5 2007/03/02 20:55:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.6 2007/05/04 13:36:42 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.4
 # so forcing 1.4 || 1.5
 
 DEPEND="
-	|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
+	|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	${COMMON_DEP}
 	dev-java/ant-core
 	app-arch/unzip"
@@ -34,8 +34,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	#rm -v *.jar
-	cp ${FILESDIR}/build-r1.xml "${S}/build.xml"
+	rm -v *.jar || die
+	cp "${FILESDIR}/build-r1.xml" "${S}/build.xml"
 
 	mkdir -p "${S}/src/"
 	cd "${S}/src"
