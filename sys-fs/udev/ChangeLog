@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.300 2007/05/04 07:05:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.301 2007/05/04 14:14:51 zzam Exp $
+
+*udev-110-r1 (04 May 2007)
+
+  04 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-start-110-r1.sh, +files/udev-stop-110-r1.sh,
+  +files/udev-110-root-link-1.diff, +udev-110-r1.ebuild:
+  Now creating /dev/root the easy way (mknod), Bug #175243. Printing a warning
+  at boot if persistent-net behaves bad, and if, then checking the stored
+  rules for duplicates.
 
   04 May 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/udev-110-makefile-depend.diff, udev-110.ebuild:
