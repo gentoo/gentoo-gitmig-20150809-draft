@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.341 2007/05/04 16:37:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.342 2007/05/04 17:31:21 jer Exp $
+
+  04 May 2007; Jeroen Roovers <jer@gentoo.org> postgresql-7.4.17.ebuild:
+  Stable for HPPA (bug #175791).
 
   04 May 2007; Jeroen Roovers <jer@gentoo.org> postgresql-7.3.19.ebuild:
   Stable for HPPA (bug #175791).
