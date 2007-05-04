@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.349 2007/05/04 13:29:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.350 2007/05/04 15:55:49 armin76 Exp $
+
+  04 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  net-libs/rb_libtorrent unmasked as it's the final release
 
   04 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> use.local.desc:
   Added local avfs use-flag for app-misc/worker
