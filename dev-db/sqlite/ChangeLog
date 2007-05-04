@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.138 2007/05/03 19:57:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.139 2007/05/04 11:25:49 armin76 Exp $
+
+  04 May 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.3.12.ebuild:
+  ia64 + x86 stable wrt #176942
 
 *sqlite-3.3.17 (03 May 2007)
 
