@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/cos-20021105-r1.ebuild,v 1.2 2007/04/28 18:02:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/cos-20021105-r1.ebuild,v 1.3 2007/05/04 16:15:13 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
 MY_PV=05Nov2002
 MY_P=${PN}-${MY_PV}
-DESCRIPTION=" The com.oreilly.servlet package is the \"must have\" class library for servlet developers."
+DESCRIPTION="The com.oreilly.servlet package is a class library for servlet developers."
 HOMEPAGE="http://servlets.com/cos/"
 SRC_URI="http://servlets.com/${PN}/${MY_P}.zip"
 

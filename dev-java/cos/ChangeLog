@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cos
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/ChangeLog,v 1.2 2007/04/28 18:02:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/ChangeLog,v 1.3 2007/05/04 16:15:13 betelgeuse Exp $
+
+  04 May 2007; Petteri Räty <betelgeuse@gentoo.org> cos-20021105-r1.ebuild:
+  Remove quotes from DESCRIPTION because they make package.env unsourceable by
+  bash. See bug #177049.
 
   28 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> cos-20021105-r1.ebuild:
   Add missing dev-java/servletapi to RDEPEND and switch to java-pkg_dojavadoc.
