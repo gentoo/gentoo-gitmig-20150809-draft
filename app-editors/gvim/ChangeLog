@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.230 2007/05/04 20:13:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.231 2007/05/04 21:10:28 pioto Exp $
 
   04 May 2007; Daniel Gryniewicz <dang@gentoo.org> gvim-7.0.235.ebuild:
   Marked stable on amd64 for bug #176464
@@ -25,6 +25,8 @@
 
   02 May 2007; Torsten Veller <tove@gentoo.org> gvim-7.0.235.ebuild:
   Stable on x86 (#176464)
+
+*gvim-7.0.235 (29 Apr 2007)
 
   29 Apr 2007; Mike Kelly <pioto@gentoo.org> +gvim-7.0.235.ebuild:
   Version bump. Fixes 2 security issues with modelines and other bugs.

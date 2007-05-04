@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.269 2007/05/04 20:10:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.270 2007/05/04 21:10:28 pioto Exp $
 
   04 May 2007; Daniel Gryniewicz <dang@gentoo.org> vim-7.0.235.ebuild:
   Marked stable on amd64 for bug #176464
@@ -22,6 +22,8 @@
 
   02 May 2007; Raúl Porcel <armin76@gentoo.org> vim-7.0.235.ebuild:
   ia64 + x86 stable wrt security bug 176464
+
+*vim-7.0.235 (29 Apr 2007)
 
   29 Apr 2007; Mike Kelly <pioto@gentoo.org> +vim-7.0.235.ebuild:
   Version bump. Fixes 2 security issues with modelines and other bugs.
