@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.4.ebuild,v 1.1 2007/05/01 19:17:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.4.ebuild,v 1.2 2007/05/04 18:21:54 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=virtual/jdk-1.4"
-RDEPEND=">=virtual/jre-1.4"
+DEPEND=">=virtual/jdk-1.5"
+RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/jaxp-1_4-20061026"
 
