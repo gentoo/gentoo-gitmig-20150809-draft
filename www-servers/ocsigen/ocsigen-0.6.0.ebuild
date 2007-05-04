@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.6.0.ebuild,v 1.1 2007/03/28 17:20:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.6.0.ebuild,v 1.2 2007/05/04 14:19:16 aballier Exp $
 
 inherit eutils findlib multilib
 
 DESCRIPTION="Ocaml-powered webserver and framework for dynamic web programming"
 HOMEPAGE="http://www.ocsigen.org"
-SRC_URI="http://www.ocsigen.org/download/ocsigen-0.6.0.tar.gz"
+SRC_URI="http://www.ocsigen.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
