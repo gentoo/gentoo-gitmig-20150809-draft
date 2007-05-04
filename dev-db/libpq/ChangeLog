@@ -1,9 +1,13 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.113 2007/05/04 16:30:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.114 2007/05/04 16:37:38 voxus Exp $
 
   04 May 2007; Jeroen Roovers <jer@gentoo.org> libpq-7.3.19.ebuild:
   Stable for HPPA (bug #175791).
+
+  04 May 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  libpq-7.3.19.ebuild, libpq-7.4.17.ebuild, libpq-8.0.13.ebuild:
+  Stable on amd64 wrt security bug #175791.
 
   04 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libpq-7.3.19.ebuild,
   libpq-7.4.17.ebuild, libpq-8.0.13.ebuild:
