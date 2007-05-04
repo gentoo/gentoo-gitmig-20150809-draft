@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2789 2007/05/04 08:13:08 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2790 2007/05/04 08:50:11 drizzt Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1361,6 +1361,7 @@ net-im/pidgin:custom-cflags - Disables stripping of "unsafe C[XX]FLAGS"
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support.
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support.
 net-im/pidgin:meanwhile - Enable meanwhile support for Sametime protocol.
+net-im/pidgin:prediction - Enable Contact Availability Prediction plugin.
 net-im/pidgin:qq - Enable QQ protocol support.
 net-im/pidgin:silc - Enable SILC protocol support
 net-im/pidgin:xscreensaver - Enable X idle time support instead of pidgin idle time.
