@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.1 2007/05/04 12:41:04 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.2 2007/05/04 19:33:21 fordfrog Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -375,8 +375,8 @@ symlink_extjars() {
 	cd ${1}/${TARGET_DIR}
 	dosymjar ${TARGET_DIR} sun-jaf activation.jar
 	dosymjar ${TARGET_DIR} fastinfoset fastinfoset.jar FastInfoset.jar
-	dosymjar ${TARGET_DIR} jaxp jaxp-api.jar
-	dosymjar ${TARGET_DIR} jaxp jaxp-impl.jar
+	dosymjar ${TARGET_DIR} jaxp jaxp-ri.jar jaxp-api.jar
+	dosymjar ${TARGET_DIR} jaxp jaxp-ri.jar jaxp-impl.jar
 	dosymjar ${TARGET_DIR} jsr101 jaxrpc-api.jar
 	dosymjar ${TARGET_DIR} jax-rpc jaxrpc-impl.jar
 	dosymjar ${TARGET_DIR} jax-rpc jaxrpc-spi.jar
