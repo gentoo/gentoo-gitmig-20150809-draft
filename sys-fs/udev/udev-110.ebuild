@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-110.ebuild,v 1.1 2007/05/02 13:53:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-110.ebuild,v 1.2 2007/05/04 07:05:24 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -28,6 +28,8 @@ src_unpack() {
 	# patches go here...
 	#epatch ${FILESDIR}/${P}-udev_volume_id.patch
 	epatch ${FILESDIR}/${PN}-104-peristent-net-disable-xen.patch
+
+	epatch ${FILESDIR}/${P}-makefile-depend.diff
 
 	# No need to clutter the logs ...
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
@@ -71,7 +73,7 @@ src_compile() {
 		EXTRAS="${extras}" \
 		udevdir="/dev/" \
 		CROSS_COMPILE=${mycross} \
-		OPTFLAGS=""
+		OPTFLAGS="" \
 		${myconf} || die
 }
 

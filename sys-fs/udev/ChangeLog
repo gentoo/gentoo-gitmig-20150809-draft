@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.299 2007/05/03 14:43:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.300 2007/05/04 07:05:24 zzam Exp $
+
+  04 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-110-makefile-depend.diff, udev-110.ebuild:
+  Fix parallel make issue, Bug #176918. Added forgotten backslash causing udev
+  to fail on selinux, Bug #176957.
 
   03 May 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/udev-start-110.sh:
