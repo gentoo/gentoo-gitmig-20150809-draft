@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.9.1.ebuild,v 1.7 2007/05/04 11:30:13 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.9.1.ebuild,v 1.8 2007/05/04 12:01:56 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -121,7 +121,7 @@ src_install() {
 		newins template_${desktopfile} ${desktopfile} || die
 		dodir ${kdeprefix}/bin
 		insopts -m 755
-		insinto ${kdeprefix}/bin
+		exeinto ${kdeprefix}/bin
 		doexe ${servicescript} || die
 	fi
 
