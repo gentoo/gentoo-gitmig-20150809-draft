@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.84 2007/05/03 11:18:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.85 2007/05/04 00:50:47 caster Exp $
+
+  04 May 2007; Vlastimil Babka <caster@gentoo.org>
+  sun-jre-bin-1.4.2.14.ebuild:
+  Fix src_unpack() to workaround bash bug triggered by paludis, bug #176979 by
+  Bo Ørsted Andresen <bo.andresen@zlin.dk>.
 
   03 May 2007; Vlastimil Babka <caster@gentoo.org>
   -sun-jre-bin-1.4.2.13.ebuild:
