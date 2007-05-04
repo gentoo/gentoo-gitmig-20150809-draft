@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2788 2007/05/03 19:28:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2789 2007/05/04 08:13:08 drizzt Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1355,6 +1355,15 @@ net-im/kadu:mail - Enables mail module in kadu
 net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
 net-im/naim:screen - Enable screen support
+net-im/pidgin:bonjour - Enable bonjour support
+net-im/pidgin:console - Enable pidgin-text
+net-im/pidgin:custom-cflags - Disables stripping of "unsafe C[XX]FLAGS"
+net-im/pidgin:gadu - Enable Gadu Gadu protocol support.
+net-im/pidgin:groupwise - Enable Novell Groupwise protocol support.
+net-im/pidgin:meanwhile - Enable meanwhile support for Sametime protocol.
+net-im/pidgin:qq - Enable QQ protocol support.
+net-im/pidgin:silc - Enable SILC protocol support
+net-im/pidgin:xscreensaver - Enable X idle time support instead of pidgin idle time.
 net-im/psi:audacious - Enable monitoring of audio tracks that are played in (media-sound/audacious)
 net-im/psi:extras - Enables extra non official patches
 net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risk
