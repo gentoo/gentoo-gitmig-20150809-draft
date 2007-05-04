@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.2 2007/05/01 12:28:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.3 2007/05/04 01:49:31 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -45,6 +45,14 @@ pkg_setup() {
 		ewarn "qt4 support has therefore been enabled by default."
 		echo
 	fi
+
+	use qt4 && use examples && \
+		if ! built_with_use =x11-libs/qt-4* qt3support; then
+			echo
+			eerror 'Please emerge qt4 with USE="qt3support" to'
+			eerror 'build the examples under qt4!'
+			die "qt4 setup error"
+		fi
 }
 
 src_compile() {
