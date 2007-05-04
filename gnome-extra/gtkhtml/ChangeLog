@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.92 2007/04/16 21:30:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.93 2007/05/04 16:54:17 uberlord Exp $
+
+  04 May 2007; Roy Marples <uberlord@gentoo.org> gtkhtml-2.6.3.ebuild:
+  Added ~x86-fbsd keyword
 
 *gtkhtml-3.14.1 (16 Apr 2007)
 
