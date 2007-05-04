@@ -2,7 +2,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-opts="depend checkconfig start stop"
+opts="depend checkconfig start stop reload"
 
 depend() {
 	need net
@@ -35,5 +35,16 @@ start() {
 stop() {
 	ebegin "Stopping ocsigen"
 	start-stop-daemon --stop --pidfile $PIDFILE
+	eend $?
+}
+
+reload() {
+	if [[ ! -f $PIDFILE ]] ; then
+		ewarn "$PIDFILE not found!!"
+		ewarn "Ocsigen is not running. Not reloading."
+		return 1
+	fi
+	ebegin "Reloading ocsigen"
+	echo reload > /var/run/ocsigen_command
 	eend $?
 }
