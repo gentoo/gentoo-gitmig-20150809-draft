@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/jarbundler-1.7.ebuild,v 1.1 2007/04/30 11:22:30 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/jarbundler-1.7.ebuild,v 1.2 2007/05/04 23:46:34 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=virtual/jdk-1.4
-		dev-java/ant-core"
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
 		 dev-java/ant-core"
 
-EANT_DOC_TARGET="javadocs"
+src_compile() {
+	eant -Dant.jar="$(java-pkg_getjar ant-core ant.jar)" $(use_doc javadocs)
+}
 
 src_install() {
 	java-pkg_newjar "build/${P}.jar"
