@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4.ebuild,v 1.14 2007/04/30 23:20:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4.ebuild,v 1.15 2007/05/04 16:49:49 uberlord Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="jpeg X expat xml debug doc gtk gd"
 
 RDEPEND="virtual/ghostscript
@@ -50,6 +50,10 @@ src_unpack() {
 	fi
 	epatch "${FILESDIR}"/${P}-intoverflow.patch
 	epatch "${FILESDIR}"/${P}-build.patch
+
+	# Remove install-sh so eautoreconf/elibtoolize gives us an updated one
+	# This allows us to install on FreeBSD :)
+	rm install-sh
 
 	eautoreconf
 }
