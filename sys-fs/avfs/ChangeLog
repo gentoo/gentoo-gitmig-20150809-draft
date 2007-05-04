@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.6 2007/05/01 09:29:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.7 2007/05/04 15:45:27 gustavoz Exp $
+
+  04 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> avfs-0.9.7.ebuild:
+  Keyworded ~sparc wrt #172755
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org> avfs-0.9.7.ebuild:
   Add ~ia64 wrt bug 172755

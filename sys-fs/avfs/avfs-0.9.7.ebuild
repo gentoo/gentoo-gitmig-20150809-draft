@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.7.ebuild,v 1.3 2007/05/01 09:29:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.7.ebuild,v 1.4 2007/05/04 15:45:27 gustavoz Exp $
 
 inherit linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/avf/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 
 DEPEND=">=sys-fs/fuse-2.4"
 RDEPEND="${DEPEND}"
