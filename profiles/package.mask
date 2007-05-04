@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7224 2007/05/04 19:08:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7225 2007/05/04 19:11:55 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -27,7 +27,6 @@
 # Will be removed by end of May.
 dev-java/sun-fastinfoset-bin
 dev-java/sun-jaxb-bin
-dev-java/sun-jaxb-bin
 dev-java/sun-jaxp-bin
 dev-java/sun-jaxr-bin
 dev-java/sun-jaxrpc-bin
@@ -35,7 +34,6 @@ dev-java/sun-jaxws-bin
 dev-java/sun-jwsdp-shared-bin
 dev-java/sun-saaj-bin
 dev-java/sun-sjsxp-bin
-dev-java/sun-wsdp-bin
 dev-java/sun-wsdp-bin
 dev-java/sun-xmldsig-bin
 dev-java/sun-xws-security-bin
