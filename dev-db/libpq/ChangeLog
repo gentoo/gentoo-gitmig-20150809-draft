@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.111 2007/05/04 13:04:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.112 2007/05/04 15:29:47 gustavoz Exp $
+
+  04 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libpq-7.3.19.ebuild,
+  libpq-7.4.17.ebuild, libpq-8.0.13.ebuild:
+  Stable on sparc wrt security #175791
 
   04 May 2007; Raúl Porcel <armin76@gentoo.org> libpq-7.3.19.ebuild,
   libpq-7.4.17.ebuild, libpq-8.0.13.ebuild:

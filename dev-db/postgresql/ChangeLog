@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.338 2007/05/04 13:06:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.339 2007/05/04 15:31:24 gustavoz Exp $
+
+  04 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  postgresql-7.3.19.ebuild, postgresql-7.4.17.ebuild,
+  postgresql-8.0.13.ebuild:
+  Stable on sparc wrt security #175791
 
   04 May 2007; Raúl Porcel <armin76@gentoo.org> postgresql-7.3.19.ebuild,
   postgresql-7.4.17.ebuild, postgresql-8.0.13.ebuild:
