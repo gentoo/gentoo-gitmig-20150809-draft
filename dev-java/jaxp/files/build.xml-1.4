@@ -9,11 +9,8 @@
     </javac>
   </target>
   <target name="jar" depends="compile">
-    <jar destfile="jaxp-api.jar">
-      <fileset dir="build" includes="javax/**/*.class"/>
-    </jar>
-    <jar destfile="jaxp-impl.jar">
-      <fileset dir="build" includes="org/**/*.class"/>
+    <jar destfile="jaxp-ri.jar">
+      <fileset dir="build" includes="**/*.class"/>
     </jar>
   </target>
 </project>
