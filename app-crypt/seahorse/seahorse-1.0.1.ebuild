@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.2 2007/04/30 20:06:06 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.3 2007/05/04 14:33:39 compnerd Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -41,6 +41,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 		 nautilus? ( >=gnome-base/nautilus-2.10 )"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
+		>=app-text/gnome-doc-utils-0.3.2
 		>=app-text/scrollkeeper-0.3
 		>=dev-util/pkgconfig-0.20
 		>=dev-util/intltool-0.35"
