@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.350 2007/05/04 15:55:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.351 2007/05/04 19:08:41 nelchael Exp $
+
+  04 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Mask binary JWSDP.
 
   04 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   net-libs/rb_libtorrent unmasked as it's the final release
