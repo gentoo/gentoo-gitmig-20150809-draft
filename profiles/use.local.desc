@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2790 2007/05/04 08:50:11 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2791 2007/05/04 13:29:39 dertobi123 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -204,6 +204,7 @@ app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home bank
 app-misc/tracker:applet - Enable deskbar applet support
 app-misc/tracker:gsf - Enable libgsf based data extractor
 app-misc/tracker:thumbnailing - Enable thumbnail generation
+app-misc/worker:avfs - Enable avfs support
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-mobilephone/gammu:irda - Enable infrared support
 app-mobilephone/gnokii:ical - Enable libical support
