@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.241 2007/05/03 13:52:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.242 2007/05/04 09:38:43 armin76 Exp $
+
+  04 May 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/xchat-2.6.6-suffix.patch, +xchat-2.6.6.ebuild:
+  Restore 2.6.6, bug 176975
 
   03 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> xchat-2.8.2.ebuild:
   Stable on sparc
