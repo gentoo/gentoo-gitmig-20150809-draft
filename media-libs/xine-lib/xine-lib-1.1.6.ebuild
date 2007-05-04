@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.6.ebuild,v 1.3 2007/04/22 01:38:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.6.ebuild,v 1.4 2007/05/04 19:51:49 drac Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -93,6 +93,8 @@ src_unpack() {
 	# Workaround from Flameeyes until using external
 	# libdts is done properly (in xine-lib-1.1.7)
 	echo '#include_next <dts.h>' > src/libdts/dts.h
+
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 }
 
 src_compile() {
