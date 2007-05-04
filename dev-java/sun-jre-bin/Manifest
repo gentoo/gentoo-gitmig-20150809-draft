@@ -57,10 +57,6 @@ MISC metadata.xml 240 RMD160 8c29e03b578ddd40c82afe82d42498d4c855e745 SHA1 9d97d
 MD5 c7683734eb61c03c450e551efa7b4d5a metadata.xml 240
 RMD160 8c29e03b578ddd40c82afe82d42498d4c855e745 metadata.xml 240
 SHA256 3736870ea8f5be547aa7555022da8690eba4e4c1cdfeac21a6cba84a7d1cc07f metadata.xml 240
-MISC sun-jre-bin-1.4.2.14.ebuild.orig 4610 RMD160 ce23c630eb204101a40d1bb5508201305e4a15d2 SHA1 2ec9cc4a26342b709283099f41d12aa475f1efdb SHA256 0aaaca5ac7afe724e7766d48047b7edaca0e08bc22d422fbe9097542b50a7951
-MD5 ba718f14a86add7bf060aa2094669c2d sun-jre-bin-1.4.2.14.ebuild.orig 4610
-RMD160 ce23c630eb204101a40d1bb5508201305e4a15d2 sun-jre-bin-1.4.2.14.ebuild.orig 4610
-SHA256 0aaaca5ac7afe724e7766d48047b7edaca0e08bc22d422fbe9097542b50a7951 sun-jre-bin-1.4.2.14.ebuild.orig 4610
 MD5 070ceb09f81531b78a08dea1545ad98f files/digest-sun-jre-bin-1.4.2.14 271
 RMD160 02e004d8c192e9333e0d0212af899e827f40c886 files/digest-sun-jre-bin-1.4.2.14 271
 SHA256 6b13dcea204a1fef7f2ff53dd6e222d2d747ee0b2b9f5d56d5a5cfd3b86207f4 files/digest-sun-jre-bin-1.4.2.14 271
