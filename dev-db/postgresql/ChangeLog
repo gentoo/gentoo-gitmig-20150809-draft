@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.337 2007/05/03 09:38:31 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.338 2007/05/04 13:06:39 armin76 Exp $
+
+  04 May 2007; Raúl Porcel <armin76@gentoo.org> postgresql-7.3.19.ebuild,
+  postgresql-7.4.17.ebuild, postgresql-8.0.13.ebuild:
+  ia64 + x86 stable wrt security bug 175791
 
 *postgresql-8.1.9 (03 May 2007)
 
