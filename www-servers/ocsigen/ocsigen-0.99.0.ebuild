@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.0.ebuild,v 1.1 2007/05/04 14:17:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.0.ebuild,v 1.2 2007/05/04 14:27:37 aballier Exp $
 
 inherit eutils findlib multilib
 
@@ -54,5 +54,7 @@ src_install() {
 	fi
 	newinitd "${FILESDIR}"/ocsigen.initd ocsigen || die
 	newconfd "${FILESDIR}"/ocsigen.confd ocsigen || die
+
+	dodoc README
 }
 
