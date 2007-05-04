@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93b.ebuild,v 1.1 2007/04/30 11:12:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93b.ebuild,v 1.2 2007/05/04 14:48:13 bicatali Exp $
 
 inherit multilib
 
@@ -28,8 +28,13 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/X11/app-defaults
+	local appdef=/usr/share/X11/app-defaults
+	dodir ${appdef}
 	dodir /usr/share/${PN}
+	# fix when root installs it.
+	sed -i \
+		-e "s:/usr/lib/X11/app-defaults:${D}${appdef}:g" \
+		install-appdef || die "sed failed"
 	emake \
 		DESTDIR="${D}" \
 		BINDIR="${D}/usr/bin" \
