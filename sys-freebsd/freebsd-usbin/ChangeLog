@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.44 2007/04/06 14:47:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.45 2007/05/04 13:47:32 drizzt Exp $
+
+  04 May 2007; Timothy Redaelli <drizzt@gentoo.org>
+  freebsd-usbin-6.2-r1.ebuild:
+  Does not compile mount_smbfs in stage1.
 
 *freebsd-usbin-6.2-r1 (06 Apr 2007)
 

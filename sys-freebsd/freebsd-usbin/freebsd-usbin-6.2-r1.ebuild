@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2-r1.ebuild,v 1.1 2007/04/06 14:47:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2-r1.ebuild,v 1.2 2007/05/04 13:47:32 drizzt Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -91,6 +91,8 @@ src_unpack() {
 	if ! use build; then
 		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 		ln -s "/usr/include" "${WORKDIR}/include"
+	else
+		dummy_mk mount_smbfs
 	fi
 }
 
