@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.63.ebuild,v 1.2 2007/01/29 16:09:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.63.ebuild,v 1.3 2007/05/04 01:33:03 markusle Exp $
 
-inherit eutils flag-o-matic
+inherit autotools eutils flag-o-matic
 
 IUSE="glut server"
 
@@ -23,11 +23,16 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	if ! use glut; then
-		sed -e 's:opengl::g' -i plugins/Makefile.in || die "sed (opengl) failed"
+		sed -e 's:opengl::g' -i plugins/Makefile.am || \
+			die "sed (opengl) failed"
 		sed -e 's/\(^PLUGINDOCSCHAPTERS.*\)opengl.chapt\(.*\)/\1 \2/' -i \
-		manmake/Makefile.in || die 'sed (manmake) failed'
+		manmake/Makefile.am || die 'sed (manmake) failed'
 	fi
+
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
 }
 
 src_compile() {

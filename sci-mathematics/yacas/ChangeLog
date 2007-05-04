@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.14 2007/01/29 16:09:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.15 2007/05/04 01:33:03 markusle Exp $
+
+  04 May 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/yacas-1.0.63-as-needed.patch, yacas-1.0.63.ebuild:
+  Added patch to fix the as-needed linking issues (see bug #167438).
+  Thanks much to Timothy Redaelli <drizzt@gentoo.org> for his patches.
 
   29 Jan 2007; Markus Dittrich <markusle@gentoo.org> yacas-1.0.63.ebuild:
   Disabled the proteus useflag for now since the fltk gui seems
