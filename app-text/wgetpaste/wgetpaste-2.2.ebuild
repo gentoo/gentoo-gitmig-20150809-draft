@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.2.ebuild,v 1.6 2007/04/27 20:11:50 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.2.ebuild,v 1.7 2007/05/04 14:24:21 gustavoz Exp $
 
 DESCRIPTION="Command-line interface to various pastebins"
 HOMEPAGE="http://wgetpaste.zlin.dk/"
@@ -8,7 +8,7 @@ SRC_URI="${HOMEPAGE}/${PF}.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
