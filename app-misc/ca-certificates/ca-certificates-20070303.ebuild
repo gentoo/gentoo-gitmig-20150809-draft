@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20070303.ebuild,v 1.1 2007/05/05 05:55:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20070303.ebuild,v 1.2 2007/05/05 05:56:41 vapier Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
+DEPEND=">=sys-apps/portage-2.1.2"
 RDEPEND="dev-libs/openssl"
 
 S=${WORKDIR}
