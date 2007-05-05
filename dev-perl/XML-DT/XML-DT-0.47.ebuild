@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.47.ebuild,v 1.5 2007/03/05 12:39:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.47.ebuild,v 1.6 2007/05/05 18:08:49 dertobi123 Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~ambs/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="amd64 ~hppa ia64 ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ia64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"

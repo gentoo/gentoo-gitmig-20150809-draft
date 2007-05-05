@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.42 2007/04/16 06:43:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.43 2007/05/05 18:10:33 dertobi123 Exp $
+
+  05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> XML-RSS-1.22.ebuild:
+  ppc stable
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> XML-RSS-1.22.ebuild:
   Stable on ppc64
