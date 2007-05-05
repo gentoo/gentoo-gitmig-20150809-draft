@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.1 2007/04/14 17:54:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.2 2007/05/05 08:11:21 lucass Exp $
+
+  05 May 2007; Lukasz Strzygowski <lucass@gentoo.org> pygments-0.7.1.ebuild:
+  Minor cleanup. Keyworded ~amd64 (bug #176459).
 
 *pygments-0.7.1 (14 Apr 2007)
 
