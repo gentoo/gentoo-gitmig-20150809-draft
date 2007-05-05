@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.128 2007/05/04 21:33:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.129 2007/05/05 16:58:53 ticho Exp $
+
+  05 May 2007; Andrej Kacian <ticho@gentoo.org> eclipse-sdk-3.2.1-r2.ebuild:
+  Stable on x86, bug #176856.
 
   04 May 2007; Vlastimil Babka <caster@gentoo.org>
   eclipse-sdk-3.2.1-r2.ebuild:
