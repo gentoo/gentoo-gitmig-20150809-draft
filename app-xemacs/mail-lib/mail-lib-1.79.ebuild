@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/mail-lib-1.76.ebuild,v 1.1 2006/11/12 10:17:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/mail-lib-1.79.ebuild,v 1.1 2007/05/05 07:19:46 graaff Exp $
 
 SLOT="0"
 IUSE=""
