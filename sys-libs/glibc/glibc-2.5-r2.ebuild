@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r2.ebuild,v 1.5 2007/05/04 13:17:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r2.ebuild,v 1.6 2007/05/05 03:55:33 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1043,6 +1043,7 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	>=app-misc/pax-utils-0.1.10
 	virtual/os-headers
 	nls? ( sys-devel/gettext )
+	>=sys-apps/portage-2.1.2
 	selinux? ( !build? ( sys-libs/libselinux ) )"
 RDEPEND="nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
@@ -1197,30 +1198,11 @@ src_strip() {
 	# Now, strip everything but the thread libs #46186, as well as the dynamic
 	# linker, else we cannot set breakpoints in shared libraries due to bugs in
 	# gdb.  Also want to grab stuff in tls subdir.  whee.
-#when new portage supports this ...
-#	env \
-#		-uRESTRICT \
-#		CHOST=${CTARGET} \
-#		STRIP_MASK="/*/{,tls/}{ld-,lib{pthread,thread_db}}*" \
-#		prepallstrip
-	pushd "${D}" > /dev/null
-
-	if ! is_crosscompile ; then
-		mkdir -p "${T}"/strip-backup
-		for x in $(find "${D}" -maxdepth 3 \
-		           '(' -name 'ld-*' -o -name 'libpthread*' -o -name 'libthread_db*' ')' \
-		           -a '(' '!' -name '*.a' ')' -type f -printf '%P ')
-		do
-			mkdir -p "${T}/strip-backup/${x%/*}"
-			cp -a -- "${D}/${x}" "${T}/strip-backup/${x}" || die "backing up ${x}"
-		done
-	fi
-	env -uRESTRICT CHOST=${CTARGET} prepallstrip
-	if ! is_crosscompile ; then
-		cp -a -- "${T}"/strip-backup/* "${D}"/ || die "restoring non-stripped libs"
-	fi
-
-	popd > /dev/null
+	env \
+		-uRESTRICT \
+		CHOST=${CTARGET} \
+		STRIP_MASK="/*/{,tls/}{ld-,lib{pthread,thread_db}}*" \
+		prepallstrip
 }
 
 src_install() {
