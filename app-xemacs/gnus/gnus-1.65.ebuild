@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/gnus-1.65.ebuild,v 1.6 2005/01/01 17:05:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/gnus-1.65.ebuild,v 1.7 2007/05/05 15:32:13 graaff Exp $
 
 SLOT="0"
 IUSE=""
 DESCRIPTION="The Gnus Newsreader and Mailreader."
 PKG_CAT="standard"
 
-DEPEND="app-xemacs/w3
+RDEPEND="app-xemacs/w3
 app-xemacs/mh-e
 app-xemacs/mailcrypt
 app-xemacs/rmail

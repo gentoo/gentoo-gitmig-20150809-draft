@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/bbdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/bbdb/ChangeLog,v 1.10 2007/05/05 07:15:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/bbdb/ChangeLog,v 1.11 2007/05/05 15:21:48 graaff Exp $
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> bbdb-1.21.ebuild:
+  Use RDEPEND instead of DEPEND
 
 *bbdb-1.32 (05 May 2007)
 

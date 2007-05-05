@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/gnus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.15 2007/05/05 07:22:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.16 2007/05/05 15:32:13 graaff Exp $
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> gnus-1.65.ebuild,
+  gnus-1.71.ebuild:
+  Use RDEPEND instead of DEPEND
 
 *gnus-1.91 (05 May 2007)
 

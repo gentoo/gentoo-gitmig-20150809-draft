@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mh-e/mh-e-1.17.ebuild,v 1.8 2005/09/29 06:43:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mh-e/mh-e-1.17.ebuild,v 1.9 2007/05/05 15:36:15 graaff Exp $
 
 SLOT="0"
 IUSE=""
 DESCRIPTION="Front end support for MH."
 PKG_CAT="standard"
 
-DEPEND="app-xemacs/gnus
+RDEPEND="app-xemacs/gnus
 app-xemacs/mail-lib
 app-xemacs/xemacs-base
 app-xemacs/speedbar

@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/net-utils-1.32.ebuild,v 1.8 2005/09/29 06:38:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/net-utils-1.32.ebuild,v 1.9 2007/05/05 15:30:20 graaff Exp $
 
 SLOT="0"
 IUSE=""
 DESCRIPTION="Miscellaneous Networking Utilities."
 PKG_CAT="standard"
 
-DEPEND="app-xemacs/bbdb
+RDEPEND="app-xemacs/bbdb
 app-xemacs/w3
 app-xemacs/efs
 app-xemacs/mail-lib

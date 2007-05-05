@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/pcl-cvs-1.64.ebuild,v 1.11 2005/09/29 06:29:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/pcl-cvs-1.64.ebuild,v 1.12 2007/05/05 15:26:04 graaff Exp $
 
 SLOT="0"
 IUSE=""
 DESCRIPTION="CVS frontend."
 PKG_CAT="standard"
 
-DEPEND="app-xemacs/xemacs-base
+RDEPEND="app-xemacs/xemacs-base
 app-xemacs/elib
 app-xemacs/vc
 app-xemacs/dired

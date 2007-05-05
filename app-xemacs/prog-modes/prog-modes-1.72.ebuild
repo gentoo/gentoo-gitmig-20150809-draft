@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/prog-modes-1.72.ebuild,v 1.8 2005/09/29 06:34:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/prog-modes-1.72.ebuild,v 1.9 2007/05/05 15:19:46 graaff Exp $
 
 SLOT="0"
 IUSE=""
 DESCRIPTION="Support for various programming languages."
 PKG_CAT="standard"
 
-DEPEND="app-xemacs/mail-lib
+RDEPEND="app-xemacs/mail-lib
 app-xemacs/xemacs-devel
 app-xemacs/xemacs-base
 app-xemacs/cc-mode

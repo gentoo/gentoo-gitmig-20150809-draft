@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/rmail/rmail-1.13.ebuild,v 1.11 2005/09/29 06:42:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/rmail/rmail-1.13.ebuild,v 1.12 2007/05/05 15:24:55 graaff Exp $
 
 SLOT="0"
 IUSE=""
 DESCRIPTION="An obsolete Emacs mailer."
 PKG_CAT="standard"
 
-DEPEND="app-xemacs/tm
+RDEPEND="app-xemacs/tm
 app-xemacs/apel
 app-xemacs/mail-lib
 app-xemacs/xemacs-base

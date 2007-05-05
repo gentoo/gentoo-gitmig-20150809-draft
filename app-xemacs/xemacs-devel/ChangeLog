@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xemacs-devel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.11 2007/03/06 08:08:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.12 2007/05/05 15:37:00 graaff Exp $
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> xemacs-devel-1.50.ebuild:
+  Use RDEPEND instead of DEPEND
 
   06 Mar 2007; Hans de Graaff <graaff@gentoo.org> -xemacs-devel-1.72.ebuild:
   Remove old version.
