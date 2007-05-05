@@ -1,6 +1,13 @@
 # ChangeLog for app-xemacs/viper
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.10 2007/02/22 00:54:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.11 2007/05/05 07:03:20 graaff Exp $
+
+*viper-1.55 (05 May 2007)
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> -viper-1.48.ebuild,
+  +viper-1.55.ebuild:
+  Version bump: minor bugfixes
+  Remove older version
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

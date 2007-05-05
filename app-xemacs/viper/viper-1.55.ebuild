@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/viper-1.48.ebuild,v 1.1 2006/11/12 14:40:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/viper-1.55.ebuild,v 1.1 2007/05/05 07:03:20 graaff Exp $
 
 SLOT="0"
 IUSE=""

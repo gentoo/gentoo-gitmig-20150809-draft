@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/edit-utils-2.34.ebuild,v 1.1 2006/11/11 14:41:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/edit-utils-2.37.ebuild,v 1.1 2007/05/05 07:08:05 graaff Exp $
 
 SLOT="0"
 IUSE=""
