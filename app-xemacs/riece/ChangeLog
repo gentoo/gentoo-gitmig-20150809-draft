@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/riece
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/riece/ChangeLog,v 1.1 2006/11/26 08:54:07 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/riece/ChangeLog,v 1.2 2007/05/05 07:00:20 graaff Exp $
+
+*riece-1.23 (05 May 2007)
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> +riece-1.23.ebuild:
+  Version bump: update to upstream 3.1.2, update dependencies
 
 *riece-1.22 (26 Nov 2006)
 
