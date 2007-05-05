@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.91 2007/04/30 19:43:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.92 2007/05/05 01:08:50 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -579,8 +579,8 @@ export UCLIBC_CPU=${UCLIBC_CPU}
 
 ex_fast || {
 
-ebegin "Forcing the latest versions of binutils-config/gcc-config"
-emerge {binutils,gcc}-config -qu --ignore-default-opts &> /dev/null
+ebegin "Forcing the latest versions of {binutils,gcc}-config/gnuconfig"
+emerge {binutils,gcc}-config gnuconfig -qu --ignore-default-opts &> /dev/null
 eend $? || exit 1
 
 doemerge ${BPKG}
