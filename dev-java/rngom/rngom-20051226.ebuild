@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/rngom-20051226.ebuild,v 1.2 2007/05/01 22:01:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/rngom-20051226.ebuild,v 1.3 2007/05/05 14:35:49 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -36,7 +36,7 @@ src_unpack() {
 	java-pkg_jarfrom relaxng-datatype
 	java-pkg_jarfrom xsdlib
 
-	cp "${FILESDIR}/build.xml-${PV}" "${S}/build.xml" -i || die "cp failed"
+	cp "${FILESDIR}/build.xml-${PV}" "${S}/build.xml" || die "cp failed"
 
 }
 
