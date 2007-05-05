@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627-r1.ebuild,v 1.9 2007/04/15 22:21:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627-r1.ebuild,v 1.10 2007/05/05 16:04:09 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -37,7 +37,7 @@ src_unpack() {
 	done
 	cd "${S}"
 
-	cp "${FILESDIR}/build-${PV}.xml" build.xml -i || die
+	cp -i "${FILESDIR}/build-${PV}.xml" build.xml || die
 }
 
 src_compile() {

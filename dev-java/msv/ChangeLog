@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/msv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.16 2007/04/15 22:21:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.17 2007/05/05 16:04:09 caster Exp $
+
+  05 May 2007; Vlastimil Babka <caster@gentoo.org> msv-20050627-r1.ebuild:
+  Move -i in cp to front.
 
   15 Apr 2007; Andrej Kacian <ticho@gentoo.org> msv-20050627-r1.ebuild:
   Stable on x86, bug #174395.

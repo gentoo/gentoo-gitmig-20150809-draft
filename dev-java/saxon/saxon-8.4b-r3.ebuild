@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r3.ebuild,v 1.4 2007/05/01 12:34:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r3.ebuild,v 1.5 2007/05/05 16:01:44 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-jikes.patch
 
-	cp "${FILESDIR}/build-${PV}.xml" build.xml -i || die
+	cp -i "${FILESDIR}/build-${PV}.xml" build.xml || die
 
 	rm -v *.jar || die
 	mkdir lib && cd lib
