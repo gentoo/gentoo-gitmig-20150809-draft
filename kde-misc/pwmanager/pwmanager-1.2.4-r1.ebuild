@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r1.ebuild,v 1.3 2007/04/03 10:08:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r1.ebuild,v 1.4 2007/05/05 16:10:58 carlo Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="smartcard"
 
-DEPEND="smartcard? ( >=sys-libs/libchipcard-1.9 )
+DEPEND="smartcard? ( =sys-libs/libchipcard-2* )
 	sys-libs/zlib
 	app-arch/bzip2"
 
@@ -59,10 +59,4 @@ src_install() {
 		KDE_S="${WORKDIR}/${LANGS_PKG}"
 		kde_src_install
 	fi
-}
-
-pkg_preinst() {
-	kde_pkg_preinst
-	dodir /usr/share/applications/kde/
-	mv ${D}/usr/share/applnk/Applications/pwmanager.desktop ${D}/usr/share/applications/kde/
 }

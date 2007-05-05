@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/pwmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.11 2007/04/03 10:08:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.12 2007/05/05 16:10:58 carlo Exp $
+
+  05 May 2007; Carsten Lohrke <carlo@gentoo.org> pwmanager-1.2.4-r1.ebuild:
+  Correct dependency, remove postinstall, it gets nicely handled by kde.eclass
+  in between.
 
   03 Apr 2007; Carsten Lohrke <carlo@gentoo.org> pwmanager-1.2.4-r1.ebuild:
   Stable on x86, bug #173192.
