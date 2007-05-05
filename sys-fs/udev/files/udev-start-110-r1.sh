@@ -10,15 +10,15 @@ populate_udev() {
 
 	# tell modprobe.sh to be verbose to $CONSOLE
 
-	echo export CONSOLE=${CONSOLE} > /dev/.udev_populate
-	echo export TERM=${TERM} >> /dev/.udev_populate
+	echo "export CONSOLE=${CONSOLE}" > /dev/.udev_populate
+	echo "export TERM=${TERM}" >> /dev/.udev_populate
 
 	if get_bootparam "nocoldplug" ; then
 		RC_COLDPLUG="no"
 		ewarn "Skipping udev coldplug as requested in kernel cmdline"
 	fi
 
-	if [ $(get_KV) -gt $(KV_to_int '2.6.14') ] ; then
+	if [ "$(get_KV)" -gt "$(KV_to_int '2.6.14')" ] ; then
 		ebegin "Populating /dev with existing devices through uevents"
 		local opts=
 		[ "${RC_COLDPLUG}" != "yes" ] && opts="--attr-match=dev"
@@ -81,16 +81,16 @@ unpack_device_tarball() {
 }
 
 make_dev_root() {
-	local DEV=$(/lib/udev/get_dir_major_minor "/")
-	if [ $? == 0 ] && [ -n "${DEV}" ]; then
+	local DEV="$(/lib/udev/get_dir_major_minor "/")"
+	if [ $? = 0 -a -n "${DEV}" ]; then
 		mknod -m 600 /dev/root b ${DEV}
 	fi
 }
 
 check_persistent_net() {
 	# check if there are problems with persistent-net
-	local syspath
-	local devs=""
+	local syspath=
+	local devs=
 	local problem_found=0
 	for syspath in /sys/class/net/*_rename*; do
 		if [ -d "${syspath}" ]; then
@@ -153,7 +153,7 @@ main() {
 	touch /dev/.rcsysinit
 
 	# Selinux lovin; /selinux should be mounted by selinux-patched init
-	if [ -x /sbin/restorecon ] && [ -c /selinux/null ] ; then
+	if [ -x /sbin/restorecon -a -c /selinux/null ] ; then
 		restorecon /dev > /selinux/null
 	fi
 
@@ -190,7 +190,7 @@ main() {
 		[ -x /sbin/lvm ] && \
 			/sbin/lvm vgscan -P --mknodes --ignorelockingfailure &>/dev/null
 		# Running evms_activate on a LiveCD causes lots of headaches
-		[ -z "${CDBOOT}" ] && [ -x /sbin/evms_activate ] && \
+		[ -z "${CDBOOT}" -a -x /sbin/evms_activate ] && \
 			/sbin/evms_activate -q &>/dev/null
 		eend 0
 	fi
