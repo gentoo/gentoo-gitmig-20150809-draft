@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.27 2007/04/28 17:39:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.28 2007/05/05 12:10:04 centic Exp $
+
+*firehol-1.250-r2 (05 May 2007)
+
+  05 May 2007; Dominik Stadler <centic@gentoo.org> +firehol-1.250-r2.ebuild:
+  Revert bug 171719, breaks group with, see Bug 176862.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> firehol-1.250.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
