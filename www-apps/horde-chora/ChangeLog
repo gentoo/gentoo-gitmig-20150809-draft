@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-chora
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.14 2007/05/05 07:09:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.15 2007/05/05 11:09:53 armin76 Exp $
+
+  05 May 2007; Raúl Porcel <armin76@gentoo.org> horde-chora-2.0.2.ebuild:
+  Back to ~arch
 
 *horde-chora-2.0.2 (05 May 2007)
 
