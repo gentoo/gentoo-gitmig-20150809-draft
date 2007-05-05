@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6e-r3.ebuild,v 1.7 2007/04/24 09:26:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6e-r3.ebuild,v 1.8 2007/05/05 06:39:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -64,6 +64,8 @@ src_unpack() {
 }
 
 src_compile() {
+	unset NLSPATH #175258
+
 	tc-export CC BUILD_CC
 
 	local mylang=
@@ -87,6 +89,8 @@ src_compile() {
 }
 
 src_install() {
+	unset NLSPATH #175258
+
 	emake PREFIX="${D}" install || die "make install failed"
 	dosym man /usr/bin/manpath
 
