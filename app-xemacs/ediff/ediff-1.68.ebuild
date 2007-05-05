@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ediff-1.62.ebuild,v 1.1 2006/11/11 14:34:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ediff-1.68.ebuild,v 1.1 2007/05/05 07:25:12 graaff Exp $
 
 SLOT="0"
 IUSE=""
