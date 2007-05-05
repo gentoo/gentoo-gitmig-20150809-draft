@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.76 2007/05/04 19:06:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.77 2007/05/05 18:11:03 nixnut Exp $
+
+  05 May 2007; nixnut <nixnut@gentoo.org> valgrind-3.2.3.ebuild:
+  Stable on ppc wrt bug 176707
 
   04 May 2007; Daniel Gryniewicz <dang@gentoo.org> valgrind-3.2.3.ebuild:
   Marked stable on amd64 for bug #176707
