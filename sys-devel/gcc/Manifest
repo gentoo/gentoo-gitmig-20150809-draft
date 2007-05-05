@@ -261,10 +261,10 @@ AUX pro-police-docs.patch 3287 RMD160 eef412d92bed145db05bffa3a3e54e2ba74ee50d S
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 RMD160 eef412d92bed145db05bffa3a3e54e2ba74ee50d files/pro-police-docs.patch 3287
 SHA256 ec012aed77285545b9d993cba1bc5fdb402c8dc9a17040f48b8b354746ede627 files/pro-police-docs.patch 3287
-AUX scan_libgcc_linked_ssp.sh 861 RMD160 c89d7e1f9aa7cea0d39281932dacfc1aec7bab74 SHA1 0e8bec97fe24af3bd5e2a06d66a6d27543dc3fab SHA256 9fe574de3978aad4d62cd10b47879384a4f03a7fb1f17e283daf74aad0e45f3b
-MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
-RMD160 c89d7e1f9aa7cea0d39281932dacfc1aec7bab74 files/scan_libgcc_linked_ssp.sh 861
-SHA256 9fe574de3978aad4d62cd10b47879384a4f03a7fb1f17e283daf74aad0e45f3b files/scan_libgcc_linked_ssp.sh 861
+AUX scan_libgcc_linked_ssp.sh 885 RMD160 adb1365621b622eb843611f1aaf65ec823555491 SHA1 3027bcdbb1c42f161c3f93e92a18ae96db4d27e7 SHA256 0de8bae299e3333d3bba7af7f85427952f18b906b1a4832232ad15e73a3ddfa2
+MD5 905788d3eb1924481f368e13465eb630 files/scan_libgcc_linked_ssp.sh 885
+RMD160 adb1365621b622eb843611f1aaf65ec823555491 files/scan_libgcc_linked_ssp.sh 885
+SHA256 0de8bae299e3333d3bba7af7f85427952f18b906b1a4832232ad15e73a3ddfa2 files/scan_libgcc_linked_ssp.sh 885
 AUX stubs/gcc-3.3-htb-stub.patch 2195 RMD160 0b067c3fda6631f2b327c566bdd3b030daa2f0a0 SHA1 8a687b84d5003eca986e03acab83cf8342b898e5 SHA256 36fd59370c87ac60c2fa1e98fc4a43dfc17ad8188d730b8c16fb680e83f7e9c2
 MD5 0f8035bc5ae6126fd9380ba9dcdcc271 files/stubs/gcc-3.3-htb-stub.patch 2195
 RMD160 0b067c3fda6631f2b327c566bdd3b030daa2f0a0 files/stubs/gcc-3.3-htb-stub.patch 2195
@@ -549,7 +549,7 @@ SHA256 105cb0b468f2560cba8691e17b7bd05e7e80eec60ceb1e15459b646ce4f37340 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.3 (GNU/Linux)
 
-iD4DBQFGO9ms8bi6rjpTunYRAtgQAJ9qA2UOENs4tjRonSoCWRAMAemgWQCVFdfJ
-iWqecTPCtZ7FU7e03Dk0oQ==
-=kZDK
+iD8DBQFGPBKF8bi6rjpTunYRAmOUAKDUf97a8QVLnfNe9myJsCGNVLvU4gCeJgR7
+T8OP09KvVKwmyB6K8oZUpO0=
+=X1/M
 -----END PGP SIGNATURE-----
