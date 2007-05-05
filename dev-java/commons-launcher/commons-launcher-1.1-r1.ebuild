@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-1.1.ebuild,v 1.2 2007/04/25 19:33:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-1.1-r1.ebuild,v 1.1 2007/05/05 13:42:10 betelgeuse Exp $
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="examples doc source"
 
-inherit java-pkg-2 java-ant-2
+inherit base java-pkg-2 java-ant-2
 
 DESCRIPTION="Commons-launcher eliminates the need for a batch or shell script to launch a Java class."
 HOMEPAGE="http://jakarta.apache.org/commons/launcher/"
-SRC_URI="ftp://ftp.ibiblio.org/pub/mirrors/apache/jakarta/commons/launcher/source/launcher-0.9-src.tar.gz"
-LICENSE="Apache-1.1"
+SRC_URI="mirror://apache/jakarta/${PN/-//}/source/${P}-src.tar.gz"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
@@ -19,6 +19,9 @@ RDEPEND=">=virtual/jre-1.4
 
 S=${WORKDIR}/${PN}
 
+# https://issues.apache.org/jira/browse/LAUNCHER-7
+PATCHES="${FILESDIR}/1.1-javadoc.patch"
+
 src_compile() {
 	java-ant_rewrite-classpath "${S}/build.xml"
 	EANT_GENTOO_CLASSPATH="ant-core" java-pkg-2_src_compile
@@ -26,8 +29,8 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/bin/*.jar || die "java-pkg_dojar died"
-	dodoc RELEASE-NOTES.txt || die
-	dohtml *.html || die
+	dodoc README.txt NOTICE.txt || die
 	use doc && java-pkg_dojavadoc dist/docs/api
+	use examples && java-pkg_doexamples example
 	use source && java-pkg_dosrc src/java/*
 }

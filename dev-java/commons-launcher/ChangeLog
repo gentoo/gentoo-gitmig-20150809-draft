@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/commons-launcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.22 2007/04/25 19:37:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.23 2007/05/05 13:42:10 betelgeuse Exp $
+
+*commons-launcher-1.1-r1 (05 May 2007)
+
+  05 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/1.1-javadoc.patch, commons-launcher-0.9-r1.ebuild,
+  -commons-launcher-1.1.ebuild, +commons-launcher-1.1-r1.ebuild:
+  The ebuild was hard coding 0.9 to SRC_URI so it wasn't a version bump at
+  all. Fixed that and added examples use flag, changed LICENSE to Apache-2.0
+  and used mirror://apache.
 
   25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   -commons-launcher-0.9.ebuild:
