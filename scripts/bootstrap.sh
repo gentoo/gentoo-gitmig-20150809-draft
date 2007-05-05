@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.83 2006/10/07 12:55:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.84 2007/05/05 01:41:21 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -10,14 +10,18 @@
 # (compnerd, Nov 2004)
 # (wolf31o2, Jan 2005)
 # (azarah, Mar 2005)
+# (uberlord, May 2007)
 
-if [ -e /etc/init.d/functions.sh ] ; then
+# sanity check
+[[ -e /etc/profile ]] && . /etc/profile
+
+if [[ -e /etc/init.d/functions.sh ]] ; then
 	source /etc/init.d/functions.sh
 
 	# Use our own custom script, else logger cause things to
 	# 'freeze' if we do not have a system logger running
 	esyslog() {
-		echo &> /dev/null
+		:
 	}
 else
 	eerror() { echo "!!! $*"; }
@@ -47,7 +51,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.83 2006/10/07 12:55:03 wolf31o2 Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.84 2007/05/05 01:41:21 vapier Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -112,7 +116,7 @@ else
 	export BOOTSTRAP_STAGE=0
 fi
 
-if [[ -n $(type -p realpath) ]]; then
+if type -P realpath > /dev/null ; then
     MYPROFILEDIR=$(realpath /etc/make.profile)
 else
     MYPROFILEDIR=$(readlink -f /etc/make.profile)
@@ -121,8 +125,6 @@ if [[ ! -d ${MYPROFILEDIR} ]] ; then
 	eerror "Error:  '${MYPROFILEDIR}' does not exist.  Exiting."
 	exit 1
 fi
-
-[[ -e /etc/profile ]] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux; ${BRACKET}http://www.gentoo.org/${NORMAL}"
 echo -e "Copyright 1999-${cvsyear} Gentoo Foundation; Distributed under the GPLv2"
