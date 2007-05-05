@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.30 2007/05/03 12:40:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.31 2007/05/05 19:15:58 betelgeuse Exp $
+
+*fastutil-5.0.9 (05 May 2007)
+
+  05 May 2007; Petteri Räty <betelgeuse@gentoo.org> +fastutil-5.0.9.ebuild:
+  Version bump.
 
 *fastutil-4.3.1-r1 (03 May 2007)
 
