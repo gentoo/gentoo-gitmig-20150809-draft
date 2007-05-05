@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/File-Find-Rule-0.30.ebuild,v 1.12 2007/04/15 21:34:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/File-Find-Rule-0.30.ebuild,v 1.13 2007/05/05 14:02:47 ian Exp $
 
 inherit perl-module
 
 DESCRIPTION="Alternative interface to File::Find"
 SRC_URI="mirror://cpan/authors/id/R/RC/RCLAMP/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/R/RC/RCLAMP/File-Find-Rule-0.28.readme"
+HOMEPAGE="http://www.cpan.org/modules/by-authors/id/R/RC/RCLAMP/File-Find-Rule-${PV}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
