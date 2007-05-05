@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/sandboxshell-0.3-r3.ebuild,v 1.1 2007/03/09 00:13:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/sandboxshell-0.3-r3.ebuild,v 1.2 2007/05/05 05:13:36 vapier Exp $
 
 inherit eutils
 
@@ -22,9 +22,19 @@ RDEPEND=">sys-apps/portage-2.1.1
 S=${WORKDIR}
 
 src_install() {
+	insinto ${D}
+	newins "${FILESDIR}"/sandboxshell-r1.conf sandboxshell.conf
+return 0
 	dobin "${FILESDIR}"/sandboxshell || die
 	doman "${FILESDIR}"/sandboxshell.1
 	insinto /etc
 	newins "${FILESDIR}"/sandboxshell-r1.conf sandboxshell.conf
 	make_desktop_entry /usr/bin/sandboxshell
+	echo asdf > foo
+	dodoc foo
+	ln "${D}"/usr/share/doc/${PF}/{foo,blah}
+	echo foo > blah.html
+	dohtml blah.html
+	prepalldocs
+	tree -a "${D}"
 }
