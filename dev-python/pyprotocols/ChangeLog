@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.10 2007/05/03 04:38:35 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.11 2007/05/05 17:18:09 pythonhead Exp $
+
+  05 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  pyprotocols-1.0_pre2306.ebuild:
+  Fixed setuptools dependency. bug #177203
 
 *pyprotocols-1.0_pre2306 (03 May 2007)
 

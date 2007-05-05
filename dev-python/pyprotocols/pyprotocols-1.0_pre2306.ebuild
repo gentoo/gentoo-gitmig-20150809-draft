@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2306.ebuild,v 1.1 2007/05/03 04:38:35 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2306.ebuild,v 1.2 2007/05/05 17:18:09 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -18,10 +18,9 @@ LICENSE="|| ( PSF-2.4 ZPL )"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-python/setuptools
-	app-arch/unzip
-	>=dev-python/decoratortools-1.4"
-RDEPEND=""
+RDEPEND=">=dev-python/decoratortools-1.4"
+DEPEND="${RDEPEND}
+	>=dev-python/setuptools-0.6_rc5"
 
 S=${WORKDIR}/${MY_PN}
 
