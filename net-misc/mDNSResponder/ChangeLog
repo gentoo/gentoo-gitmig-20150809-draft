@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.33 2007/04/30 21:07:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.34 2007/05/05 12:16:45 carlo Exp $
+
+*mDNSResponder-107.6-r5 (05 May 2007)
+
+  05 May 2007; Carsten Lohrke <carlo@gentoo.org>
+  -mDNSResponder-107.6-r3.ebuild, -mDNSResponder-107.6-r4.ebuild,
+  +mDNSResponder-107.6-r5.ebuild:
+  Revise the blocker to net-dns/avahi and remove the ipv6 support again, bug
+  #176403.
 
   30 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   mDNSResponder-107.6-r4.ebuild:

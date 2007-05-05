@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r3.ebuild,v 1.1 2007/04/28 12:43:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.1 2007/05/05 12:16:45 carlo Exp $
 
-inherit eutils base toolchain-funcs flag-o-matic java-utils-2
+inherit eutils base toolchain-funcs flag-o-matic java-pkg-opt-2
 
 DESCRIPTION="The mDNSResponder project is a component of Bonjour, Apple's initiative for zero-configuration networking."
 HOMEPAGE="http://developer.apple.com/networking/bonjour/index.html"
@@ -10,34 +10,35 @@ SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/${P}.tar.gz
 LICENSE="APSL-2 BSD"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc ipv6 java"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="debug doc"
 
-DEPEND="!sys-auth/nss-mdns
-		java? ( >=virtual/jdk-1.5 )"
-RDEPEND="!sys-auth/nss-mdns
-		java? ( >=virtual/jre-1.5 )"
+DEPEND="!net-dns/avahi
+		java? ( >=virtual/jdk-1.4 )"
+RDEPEND="!net-dns/avahi
+		java? ( >=virtual/jre-1.4 )"
 
-PATCHES="${FILESDIR}/mDNSResponder-107.6-Makefiles.diff"
+PATCHES="${FILESDIR}/mDNSResponder-107.6-Makefiles.diff ${FILESDIR}/mDNSResponder-107.6-java.patch"
 pkg_setup() {
 	if use elibc_FreeBSD; then
 		os=freebsd
 	else
 		os=linux
 	fi
+	java-pkg-opt-2_pkg_setup
 }
 
 mdnsmake() {
-	local debug jdk __ipv6
+	local debug jdk
 	use java && jdk="JDK=$(java-config -O)"
 	use debug && debug='DEBUG=1'
-	use ipv6 && __ipv6='HAVE_IPV6=1' || __ipv6='HAVE_IPV6=0'
+
 	einfo "Running emake " os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
-		 LOCALBASE="/usr" "$@"
+		LOCALBASE="/usr" JAVACFLAGS="${JAVACFLAGS}" "$@"
 	emake -j1 os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
-		LOCALBASE="/usr" ${__ipv6} "$@"
+		LOCALBASE="/usr" JAVACFLAGS="${JAVACFLAGS}" "$@"
 }
 
 src_compile() {
@@ -104,7 +105,6 @@ src_install() {
 		java-pkg_doso ${S}/mDNSPosix/build/${objdir}/libjdns_sd.so
 		use doc && java-pkg_dojavadoc ${S}/mDNSPosix/build/${objdir}
 	fi
-
 }
 
 pkg_postinst() {
