@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pytables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.23 2007/04/23 19:24:07 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.24 2007/05/05 08:53:44 lucass Exp $
+
+  05 May 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -pytables-0.7.2.ebuild, -pytables-0.8.1.ebuild, -pytables-0.9.1.ebuild,
+  pytables-1.4.ebuild:
+  Added: NEED_PYTHON, doc/examples use-flags, ~amd64 keyword. Dropped old
+  versions.
 
 *pytables-1.4 (23 Apr 2007)
 
