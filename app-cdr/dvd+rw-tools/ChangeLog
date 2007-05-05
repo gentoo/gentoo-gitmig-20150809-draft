@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.51 2007/01/24 02:21:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.52 2007/05/05 03:56:38 jer Exp $
+
+  05 May 2007; Jeroen Roovers <jer@gentoo.org> dvd+rw-tools-7.0.ebuild:
+  Stable for HPPA (bug #156770).
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> dvd+rw-tools-6.0.ebuild,
   dvd+rw-tools-6.1.ebuild, dvd+rw-tools-6.1-r1.ebuild,
