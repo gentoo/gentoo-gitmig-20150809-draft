@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.29 2007/04/26 22:06:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.30 2007/05/05 20:53:23 betelgeuse Exp $
+
+*velocity-1.5 (05 May 2007)
+
+  05 May 2007; Petteri Räty <betelgeuse@gentoo.org> +velocity-1.5.ebuild:
+  Version bump. Adds the examples use flag and src_test.
 
   26 Apr 2007; Vlastimil Babka <caster@gentoo.org> velocity-1.4-r4.ebuild:
   Fix deps, tweak style.
