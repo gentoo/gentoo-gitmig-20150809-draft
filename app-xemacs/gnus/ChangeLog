@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/gnus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.14 2007/02/22 00:34:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.15 2007/05/05 07:22:19 graaff Exp $
+
+*gnus-1.91 (05 May 2007)
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> +gnus-1.91.ebuild:
+  Version bump: to upstream 5.10.8
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
