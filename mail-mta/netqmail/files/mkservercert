@@ -1,11 +1,11 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/mkservercert,v 1.1 2006/02/12 18:42:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/mkservercert,v 1.2 2007/05/05 05:16:58 vapier Exp $
 # Self-signed certificate generator for Qmail under Gentoo
 # Robin H. Johnson <robbat2@gentoo.org> - October 17, 2003
 # Based on mkimapdcert from courier-imap.
 
 test -x /usr/bin/openssl || exit 0
-source /sbin/functions.sh
+source /etc/init.d/functions.sh || exit 1
 
 filedir="/var/qmail/control"
 pemfile="${filedir}/servercert.pem"
