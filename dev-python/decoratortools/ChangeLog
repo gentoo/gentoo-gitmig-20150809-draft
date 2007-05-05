@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decoratortools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.4 2007/05/03 06:47:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.5 2007/05/05 19:36:53 lucass Exp $
+
+  05 May 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  decoratortools-1.4.ebuild:
+  Marked ~amd64 (bug #176883).
 
   03 May 2007; Rob Cakebread <pythonhead@gentoo.org>
   decoratortools-1.4.ebuild:
