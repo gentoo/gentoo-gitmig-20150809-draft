@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/relaxngcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.1 2007/05/01 19:19:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.2 2007/05/05 15:39:26 caster Exp $
+
+  05 May 2007; Vlastimil Babka <caster@gentoo.org> relaxngcc-1.12.ebuild:
+  Remove -i from cp.
 
 *relaxngcc-1.12 (01 May 2007)
 
