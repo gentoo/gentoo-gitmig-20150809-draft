@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jax-rpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-rpc/ChangeLog,v 1.1 2007/05/01 19:50:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-rpc/ChangeLog,v 1.2 2007/05/05 13:07:10 nelchael Exp $
+
+  05 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  jax-rpc-1.1.3.01.ebuild:
+  Fix building with JDK 1.5, see bug #177170.
 
 *jax-rpc-1.1.3.01 (01 May 2007)
 
