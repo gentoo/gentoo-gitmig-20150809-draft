@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2794 2007/05/05 17:32:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2795 2007/05/05 17:43:33 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -534,7 +534,6 @@ dev-python/paste:openid - enable OpenID support
 dev-python/pycairo:numeric - enable Numeric support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/pyzor:pyzord - enable support for pyzord
-dev-python/ruledispatch:pyrex - enable speed boost using pyrex
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/twisted:serial - include serial port support
 dev-python/visual:numarray - enable support for numarray
