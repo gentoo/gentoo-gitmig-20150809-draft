@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lcdtest
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.3 2007/01/28 13:32:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.4 2007/05/05 17:11:12 chainsaw Exp $
+
+*lcdtest-1.03 (05 May 2007)
+
+  05 May 2007; Tony Vroon <chainsaw@gentoo.org> lcdtest-1.02.ebuild,
+  +lcdtest-1.03.ebuild:
+  Version bump. Add ~ppc64 keyword, tested on PowerMac 7,3 (64UL) with GCC
+  4.1.2; marked 1.02 stable on PPC.
 
 *lcdtest-1.02 (28 Jan 2007)
 
