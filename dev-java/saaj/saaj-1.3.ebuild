@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.ebuild,v 1.1 2007/05/01 18:37:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.ebuild,v 1.2 2007/05/05 15:50:04 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -39,7 +39,7 @@ src_unpack() {
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from xalan
 
-	cp "${FILESDIR}/build.xml-${PV}" "${S}/build.xml" -i || die
+	cp -i "${FILESDIR}/build.xml-${PV}" "${S}/build.xml" || die
 
 	cd "${S}/src"
 	# YES! There's nothing like using com.sun...internal ! YAY!

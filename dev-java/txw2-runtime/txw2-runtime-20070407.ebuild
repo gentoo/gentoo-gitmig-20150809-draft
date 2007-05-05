@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407.ebuild,v 1.2 2007/05/01 22:51:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407.ebuild,v 1.3 2007/05/05 15:51:43 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -48,7 +48,7 @@ src_unpack() {
 	unzip -qq txw2-src.zip -d runtime || die unzip failed
 	unzip -qq txw2c-src.zip -d compiler || die unzip failed
 
-	cp "${FILESDIR}/build.xml-20070407" "${S}/build.xml" -i || die cp failed
+	cp -i "${FILESDIR}/build.xml-20070407" "${S}/build.xml" || die cp failed
 
 }
 
