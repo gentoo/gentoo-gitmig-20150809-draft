@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_alpha2.ebuild,v 1.1 2007/05/04 15:29:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_alpha2.ebuild,v 1.2 2007/05/05 11:52:54 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -185,11 +185,6 @@ pkg_postinst() {
 		umount "${ROOT}${svcdir}" 2>/dev/null
 		rm -rf "${ROOT}${svcdir}"
 		)
-		# Install our new init script and mark it started
-		if use kernel_linux ; then
-			ln -snf ../../init.d/volumes "${ROOT}"etc/runlevels/boot
-			ln -snf /etc/init.d/volumes "${ROOT}"lib/rcscripts/init.d/started
-		fi
 	elif has_version "<sys-apps/${PN}-2.0.0_alpha" ; then
 		# The format has changed since 1.13
 		rm -rf "${ROOT}lib/rcscripts/init.d/daemons"
@@ -244,10 +239,10 @@ pkg_postinst() {
 		| egrep -q '\<(ifconfig|aliases|broadcasts|netmasks|inet6|ipaddr|iproute)_'; then
 			echo
 			ewarn "You are using deprecated variables in ${ROOT}etc/conf.d/net"
+			ewarn "that no longer work"
 			ewarn
 			ewarn "You are advised to review the new configuration variables as"
-			ewarn "found in ${ROOT}etc/conf.d/net.example as there is no"
-			ewarn "guarantee that they will work in future versions."
+			ewarn "found in ${ROOT}etc/conf.d/net.example"
 	fi
 
 	# Remove old stuff that may cause problems.
