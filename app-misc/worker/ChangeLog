@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.43 2007/05/04 15:46:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.44 2007/05/05 11:36:15 jer Exp $
+
+  05 May 2007; Jeroen Roovers <jer@gentoo.org> worker-2.14.0-r1.ebuild,
+  worker-2.14.4.ebuild:
+  Marked ~hppa (bug #172755).
 
   04 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   worker-2.14.0-r1.ebuild, worker-2.14.4.ebuild:
