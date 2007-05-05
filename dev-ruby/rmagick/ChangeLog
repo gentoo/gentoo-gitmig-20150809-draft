@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.55 2007/05/03 18:06:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.56 2007/05/05 09:43:53 kloeri Exp $
+
+  05 May 2007; Bryan Østergaard <kloeri@gentoo.org> rmagick-1.15.6.ebuild:
+  Add ~alpha keyword, bug 176595.
 
   03 May 2007; Daniel Gryniewicz <dang@gentoo.org> rmagick-1.15.5.ebuild:
   Marked stable on amd64 for bug #176595
