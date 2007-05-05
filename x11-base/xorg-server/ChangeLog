@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.237 2007/05/04 16:51:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.238 2007/05/05 16:07:09 joshuabaergen Exp $
+
+  05 May 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.3.0.0.ebuild:
+  Add a dependency on libXfixes when building dmx.  Thanks to Hopeless of
+  bug #177173.
 
   04 May 2007; Samuli Suominen <drac@gentoo.org> xorg-server-1.3.0.0.ebuild:
   Allow also nvidia-drivers-8xxx series, and nvidia-legacy-drivers-7xxx for

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.6 2007/05/04 16:51:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.7 2007/05/05 16:07:09 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -132,7 +132,8 @@ RDEPEND=">=x11-libs/libXfont-1.2.5
 	x11-libs/libXpm
 	x11-libs/libXxf86misc
 	x11-libs/libXxf86vm
-	dmx? ( x11-libs/libdmx )
+	dmx? ( x11-libs/libdmx
+			x11-libs/libXfixes )
 	!minimal? ( x11-libs/libXtst
 		x11-libs/libXres )
 	>=x11-libs/libxkbui-1.0.2
