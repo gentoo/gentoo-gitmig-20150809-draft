@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.92 2007/05/05 01:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.93 2007/05/05 05:12:12 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -11,7 +11,7 @@ if [[ ${ROOT:-/} != "/" ]] ; then
 	exit 2
 fi
 
-source /sbin/functions.sh || exit 1
+source /etc/init.d/functions.sh || exit 1
 esyslog() { :; }
 die() {
 	echo

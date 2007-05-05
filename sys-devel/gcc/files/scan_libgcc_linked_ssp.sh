@@ -2,7 +2,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/scan_libgcc_linked_ssp.sh,v 1.3 2004/07/15 00:59:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/scan_libgcc_linked_ssp.sh,v 1.4 2007/05/05 05:13:15 vapier Exp $
 
 usage() {
 cat << "USAGE_END"
@@ -22,8 +22,8 @@ then
 	usage
 fi
 
-source /etc/profile
-source /sbin/functions.sh
+source /etc/profile || exit 1
+source /etc/init.d/functions.sh || exit 1
 
 AWKDIR="$(portageq envvar PORTDIR)/sys-devel/gcc/files/awk"
 
