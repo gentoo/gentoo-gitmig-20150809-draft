@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-apache-bcel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bcel/ChangeLog,v 1.6 2007/05/03 19:52:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bcel/ChangeLog,v 1.7 2007/05/05 16:43:57 ticho Exp $
+
+  05 May 2007; Andrej Kacian <ticho@gentoo.org>
+  ant-apache-bcel-1.7.0.ebuild:
+  Stable on x86, bug #176856.
 
   03 May 2007; Markus Rothe <corsair@gentoo.org>
   ant-apache-bcel-1.7.0.ebuild:

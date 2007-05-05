@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.6 2007/05/03 19:51:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.7 2007/05/05 16:43:20 ticho Exp $
+
+  05 May 2007; Andrej Kacian <ticho@gentoo.org> ant-antlr-1.7.0.ebuild:
+  Stable on x86, bug #176856.
 
   03 May 2007; Markus Rothe <corsair@gentoo.org> ant-antlr-1.7.0.ebuild:
   Stable on ppc64; bug #176856

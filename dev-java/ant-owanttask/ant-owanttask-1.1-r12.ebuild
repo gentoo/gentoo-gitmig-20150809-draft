@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r12.ebuild,v 1.3 2007/04/20 10:41:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r12.ebuild,v 1.4 2007/05/05 16:56:12 ticho Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ MY_P="owanttask-${PV}"
 SRC_URI="http://www.gentoo.org/~karltk/java/distfiles/${MY_P}-gentoo.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 COMMON_DEP="dev-java/xalan"
 DEPEND=">=virtual/jdk-1.4
