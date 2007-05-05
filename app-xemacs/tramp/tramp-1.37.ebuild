@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/tramp-1.32.ebuild,v 1.1 2006/11/12 14:30:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/tramp-1.37.ebuild,v 1.1 2007/05/05 06:37:45 graaff Exp $
 
 SLOT="0"
 IUSE=""
