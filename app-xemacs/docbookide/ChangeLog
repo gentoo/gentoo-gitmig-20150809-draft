@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/docbookide
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/docbookide/ChangeLog,v 1.8 2007/02/22 00:26:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/docbookide/ChangeLog,v 1.9 2007/05/05 06:43:39 graaff Exp $
+
+*docbookide-0.08 (05 May 2007)
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> +docbookide-0.08.ebuild:
+  Version bump: packaging changes only
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
