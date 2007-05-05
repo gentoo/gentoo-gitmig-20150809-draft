@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.17 2007/04/27 08:25:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.18 2007/05/05 18:41:52 nixnut Exp $
+
+  05 May 2007; nixnut <nixnut@gentoo.org> commons-primitives-1.0-r2.ebuild:
+  Stable on ppc wrt bug 176012
 
   27 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   -commons-primitives-1.0-r1.ebuild:
