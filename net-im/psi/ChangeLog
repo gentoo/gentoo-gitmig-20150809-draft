@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.114 2007/03/14 23:34:03 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.115 2007/05/05 05:05:17 jer Exp $
+
+  05 May 2007; Jeroen Roovers <jer@gentoo.org> psi-0.11_pre20070314.ebuild:
+  Marked ~hppa too.
 
 *psi-0.11_pre20070314 (14 Mar 2007)
 
