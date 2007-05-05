@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.23.ebuild,v 1.1 2007/02/05 00:12:11 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.23.ebuild,v 1.2 2007/05/05 19:55:16 xmerlin Exp $
 
 inherit eutils versionator linux-mod linux-info
 
@@ -40,10 +40,10 @@ src_compile() {
 	einfo ""
 
 	if kernel_is 2 6; then
-		emake KDIR=${KERNEL_DIR} || die "compile problem"
+		emake -j1 KDIR=${KERNEL_DIR} || die "compile problem"
 	else
 		cp -R /usr/src/linux-${KV} ${WORKDIR}
-		emake KDIR=/${WORKDIR}/linux-${KV} || die "compile problem"
+		emake -j1 KDIR=/${WORKDIR}/linux-${KV} || die "compile problem"
 	fi
 }
 
