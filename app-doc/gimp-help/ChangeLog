@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.27 2007/04/02 21:14:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.28 2007/05/05 20:15:57 ticho Exp $
+
+  05 May 2007; Andrej Kacian <ticho@gentoo.org> gimp-help-0.12.ebuild:
+  Stable on x86, bug #177213.
 
 *gimp-help-0.12 (02 Apr 2007)
 
