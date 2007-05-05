@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.34 2007/05/01 06:34:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.35 2007/05/05 12:01:31 jer Exp $
+
+  05 May 2007; Jeroen Roovers <jer@gentoo.org> re2c-0.11.3.ebuild:
+  Marked ~hppa (bug #177144).
 
 *re2c-0.11.3 (01 May 2007)
 
