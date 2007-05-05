@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.24 2007/01/24 14:03:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.25 2007/05/05 04:05:37 jer Exp $
+
+  05 May 2007; Jeroen Roovers <jer@gentoo.org> -denyhosts-2.4b.ebuild,
+  -denyhosts-2.5.ebuild:
+  Remove "vulnerable" versions (only ebuild differences are in CVS headers and
+  KEYWORDS).
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> denyhosts-2.4b.ebuild,
   denyhosts-2.5.ebuild, denyhosts-2.6.ebuild:
