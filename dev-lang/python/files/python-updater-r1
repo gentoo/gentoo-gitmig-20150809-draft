@@ -40,7 +40,7 @@ PORTAGE_PYTHON="/usr/bin/python"
 # load the gentoo-style info macros, but hack to get around
 # it thinking this is an rc script
 EBUILD="1" 
-source /sbin/functions.sh
+source /etc/init.d/functions.sh || exit 1
 
 
 
