@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/jsr181-1.ebuild,v 1.1 2007/05/01 18:59:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/jsr181-1.0.ebuild,v 1.1 2007/05/05 20:53:03 nelchael Exp $
 
 inherit java-pkg-2
 
