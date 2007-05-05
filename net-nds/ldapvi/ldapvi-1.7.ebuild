@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ldapvi-1.6-r1.ebuild,v 1.1 2007/05/02 23:07:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ldapvi-1.7.ebuild,v 1.1 2007/05/05 11:48:34 hansmi Exp $
 
 inherit eutils
 
@@ -20,13 +20,6 @@ DEPEND="
 	sys-libs/readline
 	ssl? ( dev-libs/openssl )
 "
-
-src_unpack() {
-	unpack "${A}" || die
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PV}-mem-corruption.diff"
-}
 
 src_compile() {
 	econf $(use_with ssl libcrypto openssl) || die
