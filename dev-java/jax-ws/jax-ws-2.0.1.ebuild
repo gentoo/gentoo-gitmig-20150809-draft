@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/jax-ws-2.0.1.ebuild,v 1.1 2007/05/01 19:31:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/jax-ws-2.0.1.ebuild,v 1.2 2007/05/05 21:41:12 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -21,7 +21,7 @@ COMMON_DEP="dev-java/istack-commons-runtime
 	=dev-java/jax-ws-api-2*
 	=dev-java/jaxb-2*
 	dev-java/jsr173
-	dev-java/jsr181
+	>=dev-java/jsr181-1.0
 	dev-java/jsr250
 	=dev-java/sun-httpserver-bin-2*
 	dev-java/jsr67
