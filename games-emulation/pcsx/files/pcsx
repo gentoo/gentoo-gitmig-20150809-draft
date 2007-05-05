@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /sbin/functions.sh
+source /etc/init.d/functions.sh || exit 1
 
 if [[ ! -f ~/.pcsx/config ]]; then
 	einfo You are running PCSX for the first time.
