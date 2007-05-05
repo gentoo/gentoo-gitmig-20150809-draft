@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2795 2007/05/05 17:43:33 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2796 2007/05/05 20:47:01 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -50,6 +50,7 @@ app-backup/kdar:dar32 - Support libdar32.so to use.
 app-backup/kdar:dar64 - Support libdar64.so to use.
 app-backup/rdiff-backup:xattr - if you want extended attributes enabled
 app-benchmarks/bootchart:acct - Enable process accounting
+app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
 app-cdr/brasero:beagle - Enable Beagle support for searches.
 app-cdr/brasero:gdl - Enable gld support for customisable GUI.
 app-cdr/brasero:libburn - Enable libburn backend.

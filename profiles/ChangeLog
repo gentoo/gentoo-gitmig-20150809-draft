@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.354 2007/05/05 10:59:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.355 2007/05/05 20:47:01 betelgeuse Exp $
+
+  05 May 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Add beanshell local use flag for app-benchmarks/jmeter.
 
   05 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   P.mask findutils-4.3.3 since it breaks, bug 177148
