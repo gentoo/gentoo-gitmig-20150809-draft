@@ -1,45 +1,44 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/udftools-1.0.0b-r7.ebuild,v 1.1 2007/05/02 17:06:07 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/udftools-1.0.0b-r7.ebuild,v 1.2 2007/05/05 01:39:54 vapier Exp $
 
 inherit eutils
 
 MY_P="${P}3"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Ben Fennema's tools for packet writing and the UDF filesystem"
+HOMEPAGE="http://sourceforge.net/projects/linux-udf/"
 SRC_URI="mirror://sourceforge/linux-udf/${MY_P}.tar.gz
 	http://w1.894.telia.com/~u89404340/patches/packet/${MY_P}.patch.bz2"
-HOMEPAGE="http://sourceforge.net/projects/linux-udf/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# For new kernel packet writing driver
-	epatch ${WORKDIR}/${MY_P}.patch
+	epatch "${WORKDIR}"/${MY_P}.patch
 
 	# Fix CD blanking for 2.6.8 and newer
-	epatch ${FILESDIR}/cdrwtool-linux2.6-fix-v2.patch
+	epatch "${FILESDIR}"/cdrwtool-linux2.6-fix-v2.patch
 
 	# gcc4 compat, bug #112122
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	# BE fix, bug #120245
-	epatch ${FILESDIR}/${P}-bigendian.patch
+	epatch "${FILESDIR}"/${P}-bigendian.patch
 }
 
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc ChangeLog COPYING
-	newinitd ${FILESDIR}/pktcdvd.init pktcdvd
+	emake DESTDIR="${D}" install || die
+	dodoc ChangeLog
+	newinitd "${FILESDIR}"/pktcdvd.init pktcdvd
 	dosym /usr/bin/udffsck /usr/sbin/fsck.udf
 }
-
