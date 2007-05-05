@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p0.ebuild,v 1.1 2007/05/05 07:28:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p0.ebuild,v 1.2 2007/05/05 07:42:00 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,6 +18,7 @@ IUSE="parse-clocks caps selinux ssl ipv6 debug openntpd"
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
 	kernel_linux? ( caps? ( sys-libs/libcap ) )
+	mdnsresponder? ( net-misc/mDNSResponder )
 	!openntpd? ( !net-misc/openntpd )
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
@@ -56,6 +57,9 @@ src_unpack() {
 
 src_compile() {
 	hax_bitkeeper
+	# blah, no real configure options #176333
+	export ac_cv_header_dns_sd_h=$(use mdnsresponder && echo yes || echo no)
+	export ac_cv_lib_dns_sd_DNSServiceRegister=${ac_cv_header_dns_sd_h}
 	econf \
 		$(use_enable caps linuxcaps) \
 		$(use_enable parse-clocks) \
