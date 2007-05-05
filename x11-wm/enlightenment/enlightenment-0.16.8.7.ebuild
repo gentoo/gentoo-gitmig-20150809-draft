@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.7.ebuild,v 1.1 2007/05/05 07:44:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.7.ebuild,v 1.2 2007/05/05 07:46:29 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	x11-libs/libXfixes
 	x11-libs/libXdamage
 	x11-libs/libXxf86vm
+	virtual/xft
 	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender
 	x11-misc/xbitmaps
