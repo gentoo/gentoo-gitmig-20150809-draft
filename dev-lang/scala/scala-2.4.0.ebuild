@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.4.0.ebuild,v 1.1 2007/05/04 17:22:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.4.0.ebuild,v 1.2 2007/05/06 00:38:40 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.scala-lang.org/"
 SRC_URI="http://www.scala-lang.org/downloads/distrib/files/${MY_P}-sources.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=">=virtual/jdk-1.5
 	dev-java/ant-contrib"
@@ -25,7 +25,12 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 
 	debug-print "Checking for sufficient physical RAM"
-	CHECKREQS_MEMORY="512"
+
+	if use amd64; then
+		CHECKREQS_MEMORY="1024"
+	else
+		CHECKREQS_MEMORY="512"
+	fi
 	check_reqs
 }
 
@@ -44,7 +49,11 @@ src_unpack() {
 }
 
 src_compile() {
-	export ANT_OPTS="-Xmx512M -Xms512M"
+	if use amd64; then
+		export ANT_OPTS="-Xmx1024M -Xms1024M"
+	else
+		export ANT_OPTS="-Xmx512M -Xms512M"
+	fi
 	local target
 	if [[ "$(get_version_component_range 3)"  == "0" ]];
 	then
