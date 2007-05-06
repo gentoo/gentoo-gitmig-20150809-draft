@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r1.ebuild,v 1.4 2005/03/23 01:09:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r1.ebuild,v 1.5 2007/05/06 10:07:34 genone Exp $
 
 inherit eutils
 
@@ -75,10 +75,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Note: If you plan on using autofs for automounting"
-	einfo "remote NFS mounts without having the NFS daemon running"
-	einfo "please add portmap to your default run-level."
-	echo ""
-	einfo "Also the normal autofs status has been renamed stats"
-	einfo "as there is already a predefined Gentoo status"
+	elog "Note: If you plan on using autofs for automounting"
+	elog "remote NFS mounts without having the NFS daemon running"
+	elog "please add portmap to your default run-level."
+	elog
+	elog "Also the normal autofs status has been renamed stats"
+	elog "as there is already a predefined Gentoo status"
 }
