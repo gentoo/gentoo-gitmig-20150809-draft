@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/knetstats
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/ChangeLog,v 1.4 2007/05/06 19:46:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/ChangeLog,v 1.5 2007/05/06 21:16:06 ticho Exp $
+
+  06 May 2007; Andrej Kacian <ticho@gentoo.org> knetstats-1.6.1.ebuild:
+  Stable on x86, bug #158968.
 
   06 May 2007; Markus Rothe <corsair@gentoo.org> knetstats-1.6.1.ebuild:
   Stable on ppc64; bug #158968
