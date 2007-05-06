@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.4.4.ebuild,v 1.2 2006/11/04 16:26:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.4.4.ebuild,v 1.3 2007/05/06 22:36:16 kloeri Exp $
 
 DESCRIPTION="HTML documentation for Python"
 HOMEPAGE="http://www.python.org/doc/${PV}/"
@@ -33,5 +33,5 @@ src_install() {
 	doins ${S}/info/*
 
 	dodir /etc/env.d
-	echo "PYTHONDOCS=/usr/share/doc/${PF}/html" > ${D}/etc/env.d/50python-docs
+	echo "PYTHONDOCS=/usr/share/doc/${PF}/html/lib" > ${D}/etc/env.d/50python-docs
 }
