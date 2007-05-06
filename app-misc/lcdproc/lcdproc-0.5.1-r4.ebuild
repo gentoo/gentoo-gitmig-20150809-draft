@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r4.ebuild,v 1.5 2007/05/01 10:34:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r4.ebuild,v 1.6 2007/05/06 21:26:27 rbu Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -8,7 +8,8 @@ inherit eutils autotools multilib
 
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
 HOMEPAGE="http://lcdproc.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${P}-patches.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -68,10 +69,10 @@ src_unpack() {
 	sed -i "79s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf
 	einfo "Patching LCDd.conf to use DriverPath=/usr/$(get_libdir)/lcdproc/"
 
-	epatch "${FILESDIR}/${PV}-as-needed.patch"
-	epatch "${FILESDIR}/${PV}-serialvfd-parallel.patch"
-	epatch "${FILESDIR}/${PV}-nested-functions.patch"
-	epatch "${FILESDIR}/${PV}-g15daemon-1.9.patch"
+	epatch "${WORKDIR}/${P}-patches/${PV}-as-needed.patch"
+	epatch "${WORKDIR}/${P}-patches/${PV}-serialvfd-parallel.patch"
+	epatch "${WORKDIR}/${P}-patches/${PV}-nested-functions.patch"
+	epatch "${WORKDIR}/${P}-patches/${PV}-g15daemon-1.9.patch"
 	eautoreconf
 }
 

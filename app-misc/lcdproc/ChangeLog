@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.53 2007/05/01 10:34:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.54 2007/05/06 21:26:27 rbu Exp $
+
+*lcdproc-0.5.2 (06 May 2007)
+
+  06 May 2007; Robert Buchholz <rbu@gentoo.org>
+  -files/0.5.1-as-needed.patch, -files/0.5.1-nested-functions.patch,
+  -files/0.5.1-g15daemon-1.9.patch, -files/0.5.1-serialvfd-parallel.patch,
+  metadata.xml, -lcdproc-0.5.1-r3.ebuild, lcdproc-0.5.1-r4.ebuild,
+  +lcdproc-0.5.2.ebuild:
+  Version bump introducing new devices and some client fixes
+  Moved patches to distfiles and dropped 0.5.1-r3
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> lcdproc-0.5.1-r4.ebuild:
   Stable on ppc64; bug #175120
