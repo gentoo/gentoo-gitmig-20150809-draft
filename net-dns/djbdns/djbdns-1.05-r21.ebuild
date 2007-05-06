@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.2 2007/01/28 21:57:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.3 2007/05/06 08:55:35 genone Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -31,13 +31,13 @@ src_unpack() {
 	cd "${S}"
 
 	echo
-	einfo 'Several patches have been dropped from this djbdns ebuild revision.'
-	einfo 'Please use the DJBDNS_PATCH_DIR variable to specify a directory'
-	einfo 'of custom patches.'
-	echo
-	einfo 'Some of them can be found at http://tinydns.org/ or'
-	einfo 'http://homepages.tesco.net/J.deBoynePollard/Softwares/djbdns/'
-	echo
+	elog 'Several patches have been dropped from this djbdns ebuild revision.'
+	elog 'Please use the DJBDNS_PATCH_DIR variable to specify a directory'
+	elog 'of custom patches.'
+	elog
+	elog 'Some of them can be found at http://tinydns.org/ or'
+	elog 'http://homepages.tesco.net/J.deBoynePollard/Softwares/djbdns/'
+	elog
 
 	epatch \
 		"${FILESDIR}/headtail.patch" \
@@ -45,8 +45,8 @@ src_unpack() {
 		"${FILESDIR}/dnstracesort.patch"
 
 	if use ipv6; then
-		einfo "At present dnstrace does NOT support IPv6. It will"\
-		      "be compiled without IPv6 support."
+		elog "At present dnstrace does NOT support IPv6. It will"\
+		     "be compiled without IPv6 support."
 		cp -pR "${S}" "${S}-noipv6"
 		# Careful -- >=test21 of the IPv6 patch includes the errno patch
 		epatch "${DISTDIR}/${P}-${IPV6_PATCH}.diff.bz2"
@@ -78,7 +78,7 @@ src_compile() {
 	# Therefore we must compile dnstrace separately without IPv6
 	# support.
 	if use ipv6; then
-		einfo "Compiling dnstrace without ipv6 support"
+		elog "Compiling dnstrace without ipv6 support"
 		cd ${S}-noipv6
 		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 		echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
@@ -113,6 +113,5 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	einfo "Use dnscache-setup & tinydns-setup or djbdns-setup"\
-	      "to configure djbdns."
+	elog "Use dnscache-setup & tinydns-setup or djbdns-setup to configure djbdns."
 }

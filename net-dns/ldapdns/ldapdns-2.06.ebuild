@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.4 2006/08/18 04:40:29 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.5 2007/05/06 08:56:52 genone Exp $
 
 inherit eutils
 
@@ -43,5 +43,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Read the readme.configure and use ldapdns-conf to setup"
+	elog "Read the readme.configure and use ldapdns-conf to setup"
 }

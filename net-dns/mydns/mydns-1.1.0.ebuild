@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.9 2007/04/29 18:15:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.10 2007/05/06 08:58:26 genone Exp $
 
 inherit eutils
 
@@ -67,23 +67,23 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You should now run these commands:"
-	einfo
-	einfo "# /usr/sbin/mydns --dump-config > /etc/mydns.conf"
-	einfo "# chmod 0600 /etc/mydns.conf"
+	elog
+	elog "You should now run these commands:"
+	elog
+	elog "# /usr/sbin/mydns --dump-config > /etc/mydns.conf"
+	elog "# chmod 0600 /etc/mydns.conf"
 	if ! use postgres; then
-		einfo "# mysqladmin -u <useruname> -p create mydns"
-		einfo "# /usr/sbin/mydns --create-tables | mysql -u <username> -p mydns"
-		einfo
-		einfo "to create the tables in the MySQL-Database."
-		einfo "For more info see QUICKSTART.mysql."
+		elog "# mysqladmin -u <useruname> -p create mydns"
+		elog "# /usr/sbin/mydns --create-tables | mysql -u <username> -p mydns"
+		elog
+		elog "to create the tables in the MySQL-Database."
+		elog "For more info see QUICKSTART.mysql."
 	else
-		einfo "# createdb mydns"
-		einfo "# /usr/sbin/mydns --create-tables | psql mydns"
-		einfo
-		einfo "to create the tables in the PostgreSQL-Database."
-		einfo "For more info see QUICKSTART.postgres."
+		elog "# createdb mydns"
+		elog "# /usr/sbin/mydns --create-tables | psql mydns"
+		elog
+		elog "to create the tables in the PostgreSQL-Database."
+		elog "For more info see QUICKSTART.postgres."
 	fi
-	einfo
+	elog
 }

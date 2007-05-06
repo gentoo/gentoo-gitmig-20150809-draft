@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.10 2006/06/30 00:59:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.11 2007/05/06 08:55:35 genone Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 \
 	multipleip roundrobin semanticfix static selinux \
@@ -53,7 +53,7 @@ src_unpack() {
 	if use ipv6 && ( use fwdzone || use roundrobin ); then
 		eerror "ipv6 cannot currently be used with the fwdzone or "
 		eerror "roundrobin patch."
-		echo
+		eerror
 		eerror "If you would like to see ipv6 support along with one of "
 		eerror "those other patches please submit a working patch that "
 		eerror "combines ipv6 with either fwdzone or roundrobin but not "
@@ -93,8 +93,8 @@ src_unpack() {
 		${FILESDIR}/dnstracesort.patch
 
 	if use ipv6; then
-		einfo "At present dnstrace does NOT support IPv6. It will " \
-		      "be compiled without IPv6 support."
+		elog "At present dnstrace does NOT support IPv6. It will " \
+		     "be compiled without IPv6 support."
 		cp -pR ${S} ${S}-noipv6
 		# Careful -- >=test21 of the ipv6 patch includes the errno patch
 		epatch ${DISTDIR}/${P}-${IPV6_PATCH}.diff.bz2
@@ -149,6 +149,5 @@ pkg_postinst() {
 	enewuser dnslog -1 -1 /nonexistent nofiles
 	enewuser tinydns -1 -1 /nonexistent nofiles
 
-	einfo "Use (dnscache-setup + tinydns-setup) or djbdns-setup" \
-	      "to configure djbdns."
+	elog "Use (dnscache-setup + tinydns-setup) or djbdns-setup to configure djbdns."
 }
