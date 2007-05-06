@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.44 2007/05/06 17:17:19 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.45 2007/05/06 18:14:29 caster Exp $
+
+*commons-httpclient-3.0.1-r1 (06 May 2007)
+
+  06 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +commons-httpclient-3.0.1-r1.ebuild:
+  Revbump that stops building the contrib.jar and restricts tests - both rely
+  on com.sun.* classes not present in IBM JDK, the only JDK for ppc, bug
+  #176133.
 
   06 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -commons-httpclient-2.0.1.ebuild, -commons-httpclient-2.0.2.ebuild,
