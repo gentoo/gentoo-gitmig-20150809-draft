@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250.ebuild,v 1.3 2007/04/28 17:39:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250.ebuild,v 1.4 2007/05/06 09:33:05 genone Exp $
 
 inherit eutils
 
@@ -67,8 +67,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The default path to firehol's configuration file is /etc/firehol/firehol.conf"
-	einfo "See /etc/firehol/examples for configuration examples."
+	elog "The default path to firehol's configuration file is /etc/firehol/firehol.conf"
+	elog "See /etc/firehol/examples for configuration examples."
 	#
 	# Install a default configuration if none is available yet
 	if [[ ! -e "${ROOT}/etc/firehol/firehol.conf" ]]; then
@@ -76,4 +76,3 @@ pkg_postinst() {
 		cp "${ROOT}/etc/firehol/examples/client-all.conf" "${ROOT}/etc/firehol/firehol.conf"
 	fi
 }
-
