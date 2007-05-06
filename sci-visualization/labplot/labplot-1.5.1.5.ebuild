@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.2 2007/03/18 22:41:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.3 2007/05/06 12:16:50 carlo Exp $
 
 inherit eutils kde
 
@@ -34,9 +34,12 @@ DEPEND=">=sci-libs/gsl-1.6
 	opengl? ( virtual/opengl )
 	kexi? ( || ( app-office/kexi app-office/koffice ) )
 	!amd64? ( cdf? ( sci-libs/cdf )
-		>=media-gfx/pstoedit-3.33 )"
+		>=media-gfx/pstoedit-3.33 )
+	!sci-libs/liborigin"
+
 RDEPEND="${DEPEND}"
-need-kde 3.4
+
+need-kde 3.5
 
 [[ -n PV_BUGFIX ]] && PATCHES="${WORKDIR}/${BUGFIX}"
 
