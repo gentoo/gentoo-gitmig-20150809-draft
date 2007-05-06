@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.5.ebuild,v 1.1 2007/04/29 18:04:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.5.ebuild,v 1.2 2007/05/06 18:02:47 dertobi123 Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pimlico-project.org/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-extra/evolution-data-server-1.8
