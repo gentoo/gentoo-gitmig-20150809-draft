@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.5 2007/04/22 14:38:30 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.6 2007/05/06 13:29:05 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -89,5 +89,10 @@ src_install() {
 
 	if ! use pdf; then
 		rm -f ${D}/usr/bin/fbgs ${D}/usr/share/man/man1/fbgs.1
+	fi
+
+	if use X ; then
+		newicon logo.jpg ${PN}.jpg
+		make_desktop_entry ida "Ida" /usr/share/pixmaps/${PN}.jpg
 	fi
 }
