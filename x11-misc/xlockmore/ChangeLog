@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.62 2007/05/02 20:41:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.63 2007/05/06 15:04:38 dertobi123 Exp $
+
+  06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  xlockmore-5.23-r1.ebuild:
+  ppc stable, bug #176776
 
   02 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xlockmore-5.23-r1.ebuild:
