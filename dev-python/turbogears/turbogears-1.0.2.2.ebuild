@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.1.ebuild,v 1.4 2007/05/06 01:19:10 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.2.2.ebuild,v 1.1 2007/05/06 01:19:10 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -11,7 +11,7 @@ KEYWORDS="~amd64 ~x86"
 MY_PN=TurboGears
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="the rapid web development megaframework you've been looking for."
+DESCRIPTION="The rapid web development meta-framework you've been looking for."
 HOMEPAGE="http://www.turbogears.org/"
 SRC_URI="http://files.turbogears.org/eggs/${MY_P}.tar.gz"
 LICENSE="MIT"
@@ -20,20 +20,22 @@ IUSE="test"
 
 RDEPEND=">=dev-python/turbojson-1.0
 	>=dev-python/turbocheetah-0.9.5
-	>=dev-python/turbokid-0.9.8
+	>=dev-python/cheetah-2.0_rc7
+	>=dev-python/turbokid-1.0.1
 	=dev-python/cherrypy-2.2*
 	>=dev-python/simplejson-1.3
 	>=dev-python/elementtree-1.2.6
 	>=dev-python/pastescript-0.9.7
-	>=dev-python/celementtree-1.0.5
-	>=dev-python/formencode-0.5.1
-	dev-python/ruledispatch
+	>=dev-python/formencode-0.7.1
+	>=dev-python/ruledispatch-0.5_pre2306
+	>=dev-python/decoratortools-1.4
 	>=dev-python/configobj-4.3.2
-	|| ( =dev-python/sqlobject-0.7* >=dev-python/sqlalchemy-0.3.3 )
+	>=dev-python/celementtree-1.0.5
+	|| ( >=dev-python/sqlobject-0.7 >=dev-python/sqlalchemy-0.3.3 )
 	>=dev-python/genshi-0.3.6
-	test? ( >=dev-python/nose-0.9 >=dev-python/sqlalchemy-0.3.3 )"
+	test? ( >=dev-python/nose-0.9.1 >=dev-python/sqlalchemy-0.3.3 )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	>=dev-python/setuptools-0.6_rc5"
 
 S=${WORKDIR}/${MY_P}
 
@@ -44,7 +46,6 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e '/install_requires = \[.*\],/d' \
-		-e '/install_requires/, /],/d' \
 		-e '/use_setuptools/d' \
 		setup.py || die "sed failed"
 }
@@ -53,3 +54,4 @@ src_test() {
 	PYTHONPATH=. "${python}" setup.py test || die "tests failed"
 	PYTHONPATH=. "${python}" setup.py nosetests || die "nosetests failed"
 }
+

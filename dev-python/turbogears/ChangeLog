@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/turbogears
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/ChangeLog,v 1.3 2007/05/02 16:49:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/ChangeLog,v 1.4 2007/05/06 01:19:10 pythonhead Exp $
+
+*turbogears-1.0.2.2 (06 May 2007)
+
+  06 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -files/turbogears-1.0.1-py25.diff, turbogears-1.0.1.ebuild,
+  +turbogears-1.0.2.2.ebuild:
+  Version bump. Removed unsupported python2.5 patch from 1.0.1
 
   02 May 2007; Rob Cakebread <pythonhead@gentoo.org>
   turbogears-1.0.1.ebuild:
