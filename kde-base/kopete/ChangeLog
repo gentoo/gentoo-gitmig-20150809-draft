@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.109 2007/05/02 20:34:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.110 2007/05/06 22:16:27 philantrop Exp $
+
+  06 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kopete-3.5.6-cryptobug.patch, kopete-3.5.6-r1.ebuild:
+  Dropped the PDEPEND on net-im/kopete-otr because of keywording issues and
+  added a post-install message instead. Re-added ~alpha and ~x86-fbsd .
+  Invalidates bug 176731. Added upstream patch for cryptography, fixes bug
+  177319.
 
   02 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kopete-3.5.6-r1.ebuild:

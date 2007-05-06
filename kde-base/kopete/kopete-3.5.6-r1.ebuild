@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.6-r1.ebuild,v 1.4 2007/05/02 20:34:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.6-r1.ebuild,v 1.5 2007/05/06 22:16:27 philantrop Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="jingle sametime ssl xscreensaver slp kernel_linux latex crypt
 		winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
 		connectionstatus contactnotes translator webpresence texteffect highlight
@@ -49,8 +49,6 @@ RDEPEND="${BOTH_DEPEND}
 #	only needed for calling
 #	netmeeting? ( net-im/gnomemeeting )"
 
-PDEPEND="crypt? ( net-im/kopete-otr )"
-
 DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
 	x11-proto/videoproto
@@ -81,6 +79,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.5.5-icqfix.patch"
 
 	epatch "${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
+
+	# http://bugs.kde.org/show_bug.cgi?id=134907
+	epatch "${FILESDIR}/${P}-cryptobug.patch"
 
 	use latex || kopete_disable plugin latex
 	use crypt || kopete_disable plugin cryptography
@@ -123,4 +124,10 @@ src_install() {
 	kde_src_install
 
 	rm -f "${D}${KDEDIR}"/bin/{stun,relay}server
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	elog "If you would like to use Off-The-Record encryption, emerge net-im/kopete-otr."
 }
