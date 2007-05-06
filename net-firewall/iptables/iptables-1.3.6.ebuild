@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.6.ebuild,v 1.1 2006/09/30 19:24:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.6.ebuild,v 1.2 2007/05/06 09:54:40 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -153,28 +153,28 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This package now includes an initscript which loads and saves"
-	einfo "rules stored in /var/lib/iptables/rules-save"
-	use ipv6 && einfo "and /var/lib/ip6tables/rules-save"
-	einfo "This location can be changed in /etc/conf.d/iptables"
-	einfo
-	einfo "If you are using the iptables initsscript you should save your"
-	einfo "rules using the new iptables version before rebooting."
-	einfo
-	einfo "If you are upgrading to a >=2.4.21 kernel you may need to rebuild"
-	einfo "iptables."
-	einfo
+	elog "This package now includes an initscript which loads and saves"
+	elog "rules stored in /var/lib/iptables/rules-save"
+	use ipv6 && elog "and /var/lib/ip6tables/rules-save"
+	elog "This location can be changed in /etc/conf.d/iptables"
+	elog
+	elog "If you are using the iptables initsscript you should save your"
+	elog "rules using the new iptables version before rebooting."
+	elog
+	elog "If you are upgrading to a >=2.4.21 kernel you may need to rebuild"
+	elog "iptables."
+	elog
 	ewarn "!!! ipforwarding is not a part of the iptables initscripts."
-	einfo
-	einfo "To enable ipforwarding at bootup:"
-	einfo "/etc/sysctl.conf and set net.ipv4.ip_forward = 1"
+	ewarn
+	ewarn "To enable ipforwarding at bootup:"
+	ewarn "/etc/sysctl.conf and set net.ipv4.ip_forward = 1"
 	if use ipv6 ; then
-		einfo "and/or"
-		einfo "  net.ipv6.ip_forward = 1"
-		einfo "for ipv6."
+		ewarn "and/or"
+		ewarn "  net.ipv6.ip_forward = 1"
+		ewarn "for ipv6."
 	fi
 	if has_version '=net-firewall/iptables-1.2*' ; then
-		echo
+		ewarn
 		ewarn "When upgrading from iptables-1.2.x, you may be unable to remove"
 		ewarn "rules added with iptables-1.2.x.  This is a known issue, please see:"
 		ewarn "http://bugs.gentoo.org/92535"
