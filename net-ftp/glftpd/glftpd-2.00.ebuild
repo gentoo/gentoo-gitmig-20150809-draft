@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.00.ebuild,v 1.5 2006/07/15 05:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.00.ebuild,v 1.6 2007/05/06 10:55:09 genone Exp $
 
 inherit eutils
 
@@ -79,16 +79,16 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Read the documentation in /opt/glftpd/docs/"
-	einfo "After you setup your conf file, edit the xinetd"
-	einfo "entry in /etc/xinetd.d/glftpd to enable, then"
-	einfo "start xinetd: /etc/init.d/xinetd start"
-	echo
-	einfo "To add glftpd to your services file and to"
-	einfo "create a cronjob for auto generating statistics,"
-	einfo "just run this command after you install:"
-	echo
-	einfo "emerge --config =${CATEGORY}/${PF}"
+	elog "Read the documentation in /opt/glftpd/docs/"
+	elog "After you setup your conf file, edit the xinetd"
+	elog "entry in /etc/xinetd.d/glftpd to enable, then"
+	elog "start xinetd: /etc/init.d/xinetd start"
+	elog
+	elog "To add glftpd to your services file and to"
+	elog "create a cronjob for auto generating statistics,"
+	elog "just run this command after you install:"
+	elog
+	elog "emerge --config =${CATEGORY}/${PF}"
 }
 
 pkg_config() {

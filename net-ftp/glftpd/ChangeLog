@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/glftpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.14 2007/01/08 01:52:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.15 2007/05/06 10:55:09 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> glftpd-2.00.ebuild,
+  glftpd-2.01.ebuild:
+  Replacing einfo with elog
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -glftpd-1.32-r2.ebuild:
   QA: Removed unused versions.

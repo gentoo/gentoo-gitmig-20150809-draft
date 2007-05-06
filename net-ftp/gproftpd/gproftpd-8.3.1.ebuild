@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.1.ebuild,v 1.1 2007/03/25 17:53:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.1.ebuild,v 1.2 2007/05/06 10:58:10 genone Exp $
 
 
 DESCRIPTION="GTK frontend to proftpd"
@@ -31,7 +31,6 @@ src_compile() {
 	myconf="/etc/proftpd"
 
 	if use ssl; then
-		einfo ssl
 		# enable mod_tls
 		modules="${modules}:mod_tls"
 		includes="${include}:/usr/kerberos/include"
@@ -57,8 +56,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "gproftpd looks for your proftpd.conf file in /etc/proftpd"
-	einfo "run gproftpd with the option -c to specify an alternate location"
-	einfo "ex: gproftpd -c /etc/proftpd.conf"
-	ewarn "Do NOT edit /etc/conf.d/proftpd with this program"
+	elog "gproftpd looks for your proftpd.conf file in /etc/proftpd"
+	elog "run gproftpd with the option -c to specify an alternate location"
+	elog "ex: gproftpd -c /etc/proftpd.conf"
+	elog "Do NOT edit /etc/conf.d/proftpd with this program"
 }

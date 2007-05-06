@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r4.ebuild,v 1.1 2007/01/21 18:54:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r4.ebuild,v 1.2 2007/05/06 10:59:35 genone Exp $
 
 inherit eutils ssl-cert
 
@@ -50,8 +50,8 @@ src_install() {
 
 pkg_postinst() {
 	if use ssl ; then
-		einfo "In order to start the server with SSL support"
-		einfo "You need a certificate /etc/ssl/certs/ftpd.pem."
-		einfo "A temporary certificiate has been created."
+		elog "In order to start the server with SSL support"
+		elog "You need a certificate /etc/ssl/certs/ftpd.pem."
+		elog "A temporary certificiate has been created."
 	fi
 }
