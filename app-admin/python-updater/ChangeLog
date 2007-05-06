@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/python-updater
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.1 2007/05/06 00:33:41 kloeri Exp $
+
+*python-updater-0.1 (06 May 2007)
+
+  06 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  +python-updater-0.1.ebuild:
+  Initial import of stand-alone python-updater.
+
