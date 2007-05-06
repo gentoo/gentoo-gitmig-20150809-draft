@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.5 2006/03/12 21:23:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.6 2007/05/06 08:06:19 genone Exp $
 
 inherit linux-info eutils
 
@@ -17,8 +17,8 @@ S="${WORKDIR}/${P}/pppoed"
 
 pkg_setup() {
 	if kernel_is gt 2 4 ; then
-		einfo "This is a user space implementation of PPPoE!"
-		einfo
+		ewarn "This is a user space implementation of PPPoE!"
+		ewarn
 		ewarn "For 2.4 and 2.6 kernels you don't need this!"
 		ewarn "The kernel already supports PPPoE, just enable it."
 		epause 5
