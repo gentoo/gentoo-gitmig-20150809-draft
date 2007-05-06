@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.14 2007/03/06 00:16:31 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.15 2007/05/06 11:58:57 genone Exp $
 
 inherit eutils qt3
 
@@ -228,10 +228,10 @@ src_unpack() {
 
 			epatch ${PATCHDIR}/psi-gentoo-version.patch
 		fi
-		einfo ""
-		einfo "Unpacking language files, you must have linguas_* in USE where"
-		einfo "'*' is the language files you wish. English is always available"
-		einfo ""
+		elog
+		elog "Unpacking language files, you must have linguas_* in USE where"
+		elog "'*' is the language files you wish. English is always available"
+		elog
 		cd ${WORKDIR}
 		if ! [ -d langs ] ; then
 			mkdir langs

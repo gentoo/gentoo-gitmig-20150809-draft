@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.1.ebuild,v 1.2 2005/11/29 03:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.1.ebuild,v 1.3 2007/05/06 12:07:28 genone Exp $
 
 DESCRIPTION="TMSNC is a textbased MSN client written in C."
 HOMEPAGE="http://tmsnc.sourceforge.net/"
@@ -30,6 +30,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog README NEWS
 }
 pkg_postinst() {
-	einfo "If you want talkfilters support you need to add"
-	einfo "USE=talkfilters to enable support in this package"
+	elog "If you want talkfilters support you need to add"
+	elog "USE=talkfilters to enable support in this package"
 }

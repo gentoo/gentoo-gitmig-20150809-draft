@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/reaim-0.8.ebuild,v 1.4 2007/04/28 17:38:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/reaim-0.8.ebuild,v 1.5 2007/05/06 11:59:59 genone Exp $
 
 DESCRIPTION="AIM transport proxy over NAT firewalls"
 HOMEPAGE="http://reaim.sourceforge.net/"
@@ -33,13 +33,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "In order to use reaim, run the rc script in /etc/init.d."
-	einfo
-	einfo "To start:"
-	einfo "  /etc/init.d/reaim start"
-	einfo "To stop:"
-	einfo "  /etc/init.d/reaim stop"
-	einfo
-	einfo "To have reaim start at each system startup, run the following:"
-	einfo "  rc-update add reaim default"
+	elog "In order to use reaim, run the rc script in /etc/init.d."
+	elog
+	elog "To start:"
+	elog "  /etc/init.d/reaim start"
+	elog "To stop:"
+	elog "  /etc/init.d/reaim stop"
+	elog
+	elog "To have reaim start at each system startup, run the following:"
+	elog "  rc-update add reaim default"
 }

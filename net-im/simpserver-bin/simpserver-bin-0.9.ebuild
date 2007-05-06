@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-0.9.ebuild,v 1.4 2006/04/01 05:03:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-0.9.ebuild,v 1.5 2007/05/06 12:02:06 genone Exp $
 
 MY_PN=${PN/-bin/}
 MY_P="${MY_PN}-${PV}"
@@ -32,5 +32,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please edit the configuration file: /etc/simp.conf."
+	elog "Please edit the configuration file: /etc/simp.conf."
 }

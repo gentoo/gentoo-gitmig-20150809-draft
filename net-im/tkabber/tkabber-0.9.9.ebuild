@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.4 2007/04/30 15:45:04 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.5 2007/05/06 12:03:37 genone Exp $
 
 inherit eutils
 
@@ -72,10 +72,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "There's no UI option to disable emoticons yet, however"
-	einfo "you can put the following into your ~/.tkabber/config.tcl"
-	einfo
-	einfo "hook::add finload_hook {"
-	einfo " array unset emoteicons::emoteicons"
-	einfo "}"
+	elog "There's no UI option to disable emoticons yet, however"
+	elog "you can put the following into your ~/.tkabber/config.tcl"
+	elog
+	elog "hook::add finload_hook {"
+	elog " array unset emoteicons::emoteicons"
+	elog "}"
 }

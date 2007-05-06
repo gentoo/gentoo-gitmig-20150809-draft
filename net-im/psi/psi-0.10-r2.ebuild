@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r2.ebuild,v 1.3 2007/03/06 00:16:31 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r2.ebuild,v 1.4 2007/05/06 11:58:57 genone Exp $
 
 inherit eutils qt3
 
@@ -80,10 +80,10 @@ src_unpack() {
 	else
 		ewarn "You are about to build a version of Psi with extra patches."
 		ewarn "Patched psi versions will not be supported by the psi development team,"
-		ewarn "but only (int limited scope) by the psi-gentoo patchset author."
+		ewarn "but only (in limited scope) by the psi-gentoo patchset author."
 		ewarn "If you find any problem with patched psi, first contact with"
 		ewarn "troll@gentoo.org through the bugzilla or directly by email."
-		echo
+		ewarn
 		ewarn "If you do not want patched psi version, please press Control-C now and"
 		ewarn "add '-extras' to your USE flags."
 		ebeep
