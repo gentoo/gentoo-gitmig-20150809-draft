@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.66 2007/04/14 17:06:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.67 2007/05/06 16:12:19 phreak Exp $
+
+*openvz-sources-028.031 (06 May 2007)
+
+  06 May 2007; Christian Heim <phreak@gentoo.org>
+  openvz-sources-028.027.ebuild, +openvz-sources-028.031.ebuild:
+  Version bump, pushing 028.027 as latest x86/amd64 stable.
 
   14 Apr 2007; Christian Heim <phreak@gentoo.org>
   openvz-sources-023.037.ebuild, openvz-sources-023.040.ebuild,
