@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.16 2006/09/27 10:13:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.17 2007/05/06 10:52:00 genone Exp $
 
 inherit eutils pam
 
@@ -40,13 +40,13 @@ pkg_setup() {
 	fi
 
 	if ${collide} ; then
-		echo
-		einfo "Those files listed above have to be removed in order to"
-		einfo "install this version of ftpbase."
-		echo
-		ewarn "If you edited them, remember to backup and when restoring make"
-		ewarn " sure the first line in each file is:"
-		einfo "$(head -n 1 "${FILESDIR}/ftpusers")"
+		eerror
+		eerror "Those files listed above have to be removed in order to"
+		eerror "install this version of ftpbase."
+		eerror
+		eerror "If you edited them, remember to backup and when restoring make"
+		eerror " sure the first line in each file is:"
+		eerror "$(head -n 1 "${FILESDIR}/ftpusers")"
 		eend 1
 		die "Can't be installed, files will collide"
 	fi
