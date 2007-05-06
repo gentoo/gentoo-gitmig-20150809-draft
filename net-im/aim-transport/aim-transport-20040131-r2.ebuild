@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.13 2007/04/28 19:26:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.14 2007/05/06 11:24:42 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -50,9 +50,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
-	einfo "And please notice that now aim-transport comes with a init.d script"
-	einfo "dont forget to add it to your runlevel."
-	einfo
+	elog
+	elog "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
+	elog "And please notice that now aim-transport comes with a init.d script"
+	elog "dont forget to add it to your runlevel."
+	elog
 }

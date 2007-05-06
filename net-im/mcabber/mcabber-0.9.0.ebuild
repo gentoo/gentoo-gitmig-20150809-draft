@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.0.ebuild,v 1.2 2007/01/22 15:22:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.0.ebuild,v 1.3 2007/05/06 11:45:59 genone Exp $
 
 DESCRIPTION="A small Jabber console client with various features, like MUC, SSL, PGP"
 HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
@@ -53,28 +53,28 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "MCabber requires you to create a subdirectory .mcabber in your home"
-	einfo "directory and to place a configuration file there."
-	einfo "An example mcabberrc was installed as part of the documentation."
-	einfo "To create a new mcabberrc based on the example mcabberrc, execute the"
-	einfo "following commands:"
-	einfo
-	einfo "  mkdir -p ~/.mcabber"
-	einfo "  zcat ${ROOT}usr/share/doc/${PF}/mcabberrc.example.gz >~/.mcabber/mcabberrc"
-	einfo
-	einfo "Then edit ~/.mcabber/mcabberrc with your favorite editor."
-	einfo
-	einfo "As of MCabber version 0.8.2, there is also a wizard script"
-	einfo "with which you can create all necessary configuration options."
-	einfo "To use it, simply execute the following command:"
-	einfo
-	einfo "  ${PN}_mcwizz.pl"
-	einfo
-	einfo "See the CONFIGURATION FILE and FILES sections of the mcabber"
-	einfo "manual page (section 1) for more information."
-	einfo
-	einfo "From version 0.9.0 on, MCabber supports PGP encryption of messages."
-	einfo "See README_PGP.txt for details."
-	einfo
+	elog
+	elog "MCabber requires you to create a subdirectory .mcabber in your home"
+	elog "directory and to place a configuration file there."
+	elog "An example mcabberrc was installed as part of the documentation."
+	elog "To create a new mcabberrc based on the example mcabberrc, execute the"
+	elog "following commands:"
+	elog
+	elog "  mkdir -p ~/.mcabber"
+	elog "  zcat ${ROOT}usr/share/doc/${PF}/mcabberrc.example.gz >~/.mcabber/mcabberrc"
+	elog
+	elog "Then edit ~/.mcabber/mcabberrc with your favorite editor."
+	elog
+	elog "As of MCabber version 0.8.2, there is also a wizard script"
+	elog "with which you can create all necessary configuration options."
+	elog "To use it, simply execute the following command:"
+	elog
+	elog "  ${PN}_mcwizz.pl"
+	elog
+	elog "See the CONFIGURATION FILE and FILES sections of the mcabber"
+	elog "manual page (section 1) for more information."
+	elog
+	elog "From version 0.9.0 on, MCabber supports PGP encryption of messages."
+	elog "See README_PGP.txt for details."
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ntame/ntame-998020954.ebuild,v 1.7 2004/07/15 00:18:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ntame/ntame-998020954.ebuild,v 1.8 2007/05/06 11:50:25 genone Exp $
 
 S=${WORKDIR}/ntaim
 DESCRIPTION="Ncurses based AOL Instant Messenger"
@@ -29,5 +29,5 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "Executable name is actually ntaim"
+	elog "Executable name is actually ntaim"
 }

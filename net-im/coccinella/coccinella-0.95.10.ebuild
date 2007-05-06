@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.95.10.ebuild,v 1.2 2007/04/28 17:34:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.95.10.ebuild,v 1.3 2007/05/06 11:27:05 genone Exp $
 
 NAME=Coccinella
 S="${WORKDIR}/${NAME}-${PV}Src"
@@ -27,7 +27,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	echo
-	einfo "To run coccinella just type coccinella"
-	echo
+	elog "To run coccinella just type coccinella"
 }

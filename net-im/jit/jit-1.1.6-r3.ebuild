@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.20 2007/04/28 17:36:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.21 2007/05/06 11:35:55 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -48,9 +48,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
-	einfo "And please notice that now jit-transport comes with a init.d script"
-	einfo "dont forget to add it to your runlevel."
-	einfo
+	elog
+	elog "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
+	elog "And please notice that now jit-transport comes with a init.d script"
+	elog "dont forget to add it to your runlevel."
+	elog
 }

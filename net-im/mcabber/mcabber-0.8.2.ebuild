@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.8.2.ebuild,v 1.5 2007/01/10 23:14:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.8.2.ebuild,v 1.6 2007/05/06 11:45:59 genone Exp $
 
 DESCRIPTION="A small Jabber console client with various features, like MUC and ssl"
 HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
@@ -50,18 +50,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "MCabber requires you to create a subdirectory .mcabber in your home"
-	einfo "directory and to to place there a configuration file."
-	einfo "A template of such file was installed as part of the documentation"
-	einfo "and you can find it here:"
-	einfo "${ROOT}usr/share/doc/${PF}/mcabberrc.example.gz"
-	einfo "Use gunzip tool to unzip it and edit before running MCabber"
-	einfo
-	einfo "As of MCabber version 0.8.2, there is also an wizzard script"
-	einfo "with which you can create all neccessery configuration tasks."
-	einfo "To start it simply run ${PN}_mcwizz.pl in console"
-	einfo
-	einfo "See the CONFIGURATION FILE and FILES sections of mcabber(1) for more information."
-	einfo
+	elog
+	elog "MCabber requires you to create a subdirectory .mcabber in your home"
+	elog "directory and to to place there a configuration file."
+	elog "A template of such file was installed as part of the documentation"
+	elog "and you can find it here:"
+	elog "${ROOT}usr/share/doc/${PF}/mcabberrc.example.gz"
+	elog "Use gunzip tool to unzip it and edit before running MCabber"
+	elog
+	elog "As of MCabber version 0.8.2, there is also an wizzard script"
+	elog "with which you can create all neccessery configuration tasks."
+	elog "To start it simply run ${PN}_mcwizz.pl in console"
+	elog
+	elog "See the CONFIGURATION FILE and FILES sections of mcabber(1) for more information."
+	elog
 }

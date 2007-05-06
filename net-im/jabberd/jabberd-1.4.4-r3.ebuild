@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.13 2007/02/05 00:44:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.14 2007/05/06 11:31:22 genone Exp $
 
 inherit eutils
 
@@ -96,17 +96,17 @@ src_install() {
 pkg_postinst() {
 
 	echo
-	einfo 'The various IM transports for jabber are now separate packages,'
-	einfo 'which you will need to install separately if you want them:'
-	einfo '   net-im/jit - ICQ transport'
-	einfo '   net-im/pymsn-t - MSN transport'
-	einfo '   net-im/jud - Jabber User Directory'
-	einfo '   net-im/yahoo-transport - Yahoo IM system'
-	einfo '   net-im/mu-conference - Jabber multi user conference'
+	elog 'The various IM transports for jabber are now separate packages,'
+	elog 'which you will need to install separately if you want them:'
+	elog '   net-im/jit - ICQ transport'
+	elog '   net-im/pymsn-t - MSN transport'
+	elog '   net-im/jud - Jabber User Directory'
+	elog '   net-im/yahoo-transport - Yahoo IM system'
+	elog '   net-im/mu-conference - Jabber multi user conference'
 	echo
 	ewarn 'If upgrading from an older version, please stop jabberd BEFORE'
 	ewarn 'updating the init.d script, or you will end with a "dead" server.'
-	echo
+	ewarn
 	ewarn 'The configuration filename has changed:'
 	ewarn '   Configure your server in /etc/jabber/jabberd.xml'
 	echo

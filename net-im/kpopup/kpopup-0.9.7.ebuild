@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/kpopup-0.9.7.ebuild,v 1.4 2005/09/21 17:02:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/kpopup-0.9.7.ebuild,v 1.5 2007/05/06 11:42:05 genone Exp $
 
 inherit kde
 
@@ -25,10 +25,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Locate the [global] section of your Samba configuration file (smb.conf) and"
-	einfo "add the following line:"
-	einfo ""
-	einfo "message command = sh -c '/usr/bin/receivepopup.sh \"%s\" \"%f\"'"
-	einfo ""
+	elog ""
+	elog "Locate the [global] section of your Samba configuration file (smb.conf) and"
+	elog "add the following line:"
+	elog ""
+	elog "message command = sh -c '/usr/bin/receivepopup.sh \"%s\" \"%f\"'"
+	elog ""
 }

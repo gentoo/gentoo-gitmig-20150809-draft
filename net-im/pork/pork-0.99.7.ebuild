@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.7.ebuild,v 1.2 2005/05/05 13:25:34 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.7.ebuild,v 1.3 2007/05/06 11:52:07 genone Exp $
 
 DESCRIPTION="Console based AIM client that looks like ircII"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -33,8 +33,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Be aware that the syntax for IRC connections has"
-	einfo "changed. Read ${HOMEPAGE}/stuff/pork.news"
-	einfo "for details."
+	elog "Be aware that the syntax for IRC connections has"
+	elog "changed. Read ${HOMEPAGE}/stuff/pork.news"
+	elog "for details."
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.7.4.ebuild,v 1.2 2006/09/24 23:31:35 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.7.4.ebuild,v 1.3 2007/05/06 11:45:59 genone Exp $
 
 DESCRIPTION="A small Jabber console client that includes features such as SSL
 support, MUC (Multi-User Chat) support, history logging, commands completion,
@@ -36,8 +36,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "MCabber requires you to create a configuration file in your home directory."
-	einfo "A template of such file was installed as part of the documentation for this software."
-	einfo "This file is intended to be self-documenting."
-	einfo "See the CONFIGURATION FILE and FILES sections of mcabber(1) for more information."
+	elog "MCabber requires you to create a configuration file in your home directory."
+	elog "A template of such file was installed as part of the documentation for this software."
+	elog "This file is intended to be self-documenting."
+	elog "See the CONFIGURATION FILE and FILES sections of mcabber(1) for more information."
 }

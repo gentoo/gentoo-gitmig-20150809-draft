@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4-r1.ebuild,v 1.2 2006/12/01 23:47:43 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4-r1.ebuild,v 1.3 2007/05/06 11:43:30 genone Exp $
 
 inherit gnome2 eutils
 
@@ -42,17 +42,17 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "To be able to receive messages that are sent to you, you will need to"
-	einfo "edit your /etc/samba/smb.conf file."
-	einfo
-	einfo "Add this line to the [global settings] section:"
-	einfo
-	einfo "   message command = /usr/bin/linpopup \"%f\" \"%m\" %s; rm %s"
-	einfo
-	einfo "PLEASE NOTE that \"%f\" is not the same thing as %f , '%f' or %f"
-	einfo "and take care to enter \"%f\" \"%m\" %s exactly as shown above."
-	einfo
-	einfo "For more information, please refer to the documentation, found in"
-	einfo "/usr/share/doc/${P}/"
+	elog "To be able to receive messages that are sent to you, you will need to"
+	elog "edit your /etc/samba/smb.conf file."
+	elog
+	elog "Add this line to the [global settings] section:"
+	elog
+	elog "   message command = /usr/bin/linpopup \"%f\" \"%m\" %s; rm %s"
+	elog
+	elog "PLEASE NOTE that \"%f\" is not the same thing as %f , '%f' or %f"
+	elog "and take care to enter \"%f\" \"%m\" %s exactly as shown above."
+	elog
+	elog "For more information, please refer to the documentation, found in"
+	elog "/usr/share/doc/${P}/"
 	echo
 }
