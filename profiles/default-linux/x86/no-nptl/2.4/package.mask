@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.80 2007/05/02 17:52:51 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.81 2007/05/06 21:12:55 ticho Exp $
+
+# Andrej Kacian <ticho@gentoo.org> (6 May 2007)
+# Requires xen, which is already masked (bug 177286)
+app-emulation/libvirt
 
 # Steev Klimaszewski <steev@gentoo.org> (2 May 2007)
 # Requires hal/networkmanager

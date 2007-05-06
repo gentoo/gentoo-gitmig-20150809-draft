@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.78 2007/05/02 17:52:51 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.79 2007/05/06 21:12:55 ticho Exp $
+
+  06 May 2007; Andrej Kacian <ticho@gentoo.org> no-nptl/2.4/package.mask:
+  Masked app-emulation/libvirt in no-nptl/2.4 profile. Bug #177286.
 
   02 May 2007; Steev Klimaszewski <steev@gentoo.org>
   no-nptl/2.4/package.mask:
