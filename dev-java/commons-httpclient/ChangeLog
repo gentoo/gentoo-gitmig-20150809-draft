@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.43 2007/05/06 07:53:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.44 2007/05/06 17:17:19 wltjr Exp $
+
+  06 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -commons-httpclient-2.0.1.ebuild, -commons-httpclient-2.0.2.ebuild,
+  commons-httpclient-2.0.2-r1.ebuild:
+  Stable on amd64, bug #176230
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   commons-httpclient-2.0.2-r1.ebuild:
