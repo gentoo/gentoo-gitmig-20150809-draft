@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.16 2007/04/28 16:52:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.17 2007/05/06 10:30:01 genone Exp $
 
 inherit check-kernel fixheadtails eutils
 
@@ -43,7 +43,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	econf \
 		--with-afs-sysname=i386_linux24 \
 		--enable-transarc-paths || die
@@ -105,7 +104,7 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "UPDATE CellServDB and ThisCell to your needs !!"
-	einfo "FOLLOW THE INSTRUCTIONS IN AFS QUICK BEGINNINGS"
-	einfo "PAGE >45 TO DO INITIAL SERVER SETUP"
+	elog "UPDATE CellServDB and ThisCell to your needs !!"
+	elog "FOLLOW THE INSTRUCTIONS IN AFS QUICK BEGINNINGS"
+	elog "PAGE >45 TO DO INITIAL SERVER SETUP"
 }

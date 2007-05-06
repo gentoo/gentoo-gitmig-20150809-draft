@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13-r2.ebuild,v 1.2 2007/03/10 14:26:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13-r2.ebuild,v 1.3 2007/05/06 10:30:01 genone Exp $
 
 inherit fixheadtails flag-o-matic eutils toolchain-funcs versionator
 
@@ -274,32 +274,32 @@ pkg_postinst() {
 	# Create afs mountpoint
 	mkdir /afs 2>/dev/null
 
-	einfo
-	einfo "For browsing global Cells, please get CellServDB from"
-	einfo "/usr/share/doc/${PF} and put in /etc/openafs.  Then start"
-	einfo "using /etc/init.d/afs right away."
-	einfo "For more functionality, look at the limited README in the"
-	einfo "same directory, or turn to the more elaborate procedures"
-	einfo "described on http://www.openafs.org (quick beginnings)"
-	einfo "After initial server setup, you can edit /etc/conf.d/afs"
-	einfo "to enable the BOS Server."
-	einfo ""
-	einfo "To use AFS fully, you need either to start:"
-	einfo "1. kaserver, which is included with openafs but as it is"
-	einfo "based on kerberos4, it is not recommended."
-	einfo "2. app-crypt/kth-krb, but as it is also based on kerberos4 protocol,"
-	einfo "   you can keep passwords replicated in contrast to kaserver, but still"
-	einfo "   don't waste your time here."
-	einfo "3. app-crypt/heimdal, which is kerberos5 distribution written in Europe,"
-	einfo "   so no US export restrictions apply (*recommended*, compatible with"
-	einfo "   MIT krb5, see below)."
-	einfo "   BTW: if you need kerberos4 backwards compatibility,"
-	einfo "   heimdal can be compiled with --with-krb4 switch to provide it, but"
-	einfo "   app-crypt/kth-krb must be installed so that heimdal's configure"
-	einfo "   can find it. Beware that krb4 approach is not considered"
-	einfo "   safe anymore, so do not install kth-krb unless you really need it."
-	einfo "4. app-crypt/mit-krb5, if export restrictions allow you to do so."
-	einfo
+	elog
+	elog "For browsing global Cells, please get CellServDB from"
+	elog "/usr/share/doc/${PF} and put in /etc/openafs.  Then start"
+	elog "using /etc/init.d/afs right away."
+	elog "For more functionality, look at the limited README in the"
+	elog "same directory, or turn to the more elaborate procedures"
+	elog "described on http://www.openafs.org (quick beginnings)"
+	elog "After initial server setup, you can edit /etc/conf.d/afs"
+	elog "to enable the BOS Server."
+	elog ""
+	elog "To use AFS fully, you need either to start:"
+	elog "1. kaserver, which is included with openafs but as it is"
+	elog "based on kerberos4, it is not recommended."
+	elog "2. app-crypt/kth-krb, but as it is also based on kerberos4 protocol,"
+	elog "   you can keep passwords replicated in contrast to kaserver, but still"
+	elog "   don't waste your time here."
+	elog "3. app-crypt/heimdal, which is kerberos5 distribution written in Europe,"
+	elog "   so no US export restrictions apply (*recommended*, compatible with"
+	elog "   MIT krb5, see below)."
+	elog "   BTW: if you need kerberos4 backwards compatibility,"
+	elog "   heimdal can be compiled with --with-krb4 switch to provide it, but"
+	elog "   app-crypt/kth-krb must be installed so that heimdal's configure"
+	elog "   can find it. Beware that krb4 approach is not considered"
+	elog "   safe anymore, so do not install kth-krb unless you really need it."
+	elog "4. app-crypt/mit-krb5, if export restrictions allow you to do so."
+	elog
 
 	epause 20
 	ebeep 5

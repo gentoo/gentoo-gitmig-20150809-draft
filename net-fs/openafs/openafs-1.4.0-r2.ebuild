@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r2.ebuild,v 1.9 2007/03/10 14:26:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r2.ebuild,v 1.10 2007/05/06 10:30:01 genone Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
@@ -291,24 +291,24 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "If you are upgrading from a < 1.4.0_rc8 version of the ebuild,"
-	einfo "we urge you to look at the upgrade-section of the"
-	einfo "Gentoo OpenAFS documentation.  (If you're upgrading from"
-	einfo "< 1.3.85, then you really really should)"
+	elog
+	elog "If you are upgrading from a < 1.4.0_rc8 version of the ebuild,"
+	elog "we urge you to look at the upgrade-section of the"
+	elog "Gentoo OpenAFS documentation.  (If you're upgrading from"
+	elog "< 1.3.85, then you really really should)"
 
 	ebeep 5
 
-	einfo ""
-	einfo "This installation should work out of the box (at least the"
-	einfo "client part doing global afs-cell browsing, unless you had"
-	einfo "a previous and different configuration).  If you want to"
-	einfo "set up your own cell or modify the standard config,"
-	einfo "please have a look at the Gentoo OpenAFS documentation"
-	einfo "(warning: it is not yet up to date wrt the new file locations)"
-	einfo ""
-	einfo "The documentation can be found at:"
-	einfo "  http://www.gentoo.org/doc/en/openafs.xml"
+	elog
+	elog "This installation should work out of the box (at least the"
+	elog "client part doing global afs-cell browsing, unless you had"
+	elog "a previous and different configuration).  If you want to"
+	elog "set up your own cell or modify the standard config,"
+	elog "please have a look at the Gentoo OpenAFS documentation"
+	elog "(warning: it is not yet up to date wrt the new file locations)"
+	elog ""
+	elog "The documentation can be found at:"
+	elog "  http://www.gentoo.org/doc/en/openafs.xml"
 
 	epause 5
 }
