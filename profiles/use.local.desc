@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2796 2007/05/05 20:47:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2797 2007/05/06 15:55:37 calchan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1635,6 +1635,7 @@ sci-chemistry/ghemical:openbabel - Use the OpenBabel package for file conversion
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
 sci-chemistry/gromacs:double-precision - more precise calculations at the expense of speed
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
+sci-electronics/gwave:gnuplot - Enable gnuplot support
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT

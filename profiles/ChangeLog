@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.355 2007/05/05 20:47:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.356 2007/05/06 15:55:37 calchan Exp $
+
+  06 May 2007; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
+  Added local USE flag gnuplot for sci-electronics/gwave.
 
   05 May 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add beanshell local use flag for app-benchmarks/jmeter.
