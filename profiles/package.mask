@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7231 2007/05/06 22:53:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7232 2007/05/06 23:07:15 rajiv Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Rajiv Aaron Manglani <rajiv@gentoo.org> (6 May 2007)
+# open security issues, no longer supported upstream.
+<net-misc/asterisk-1.2
 
 # Petteri Räty <betelgeuse@gentoo.org> (7 May 2007)
 # Two open bugs about the launcher script:
