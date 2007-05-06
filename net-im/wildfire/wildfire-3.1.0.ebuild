@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.1.0.ebuild,v 1.5 2007/04/28 20:30:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.1.0.ebuild,v 1.6 2007/05/06 12:11:45 genone Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -35,7 +35,7 @@ pkg_setup() {
 		ewarn "If this is an upgrade stop right ( CONTROL-C ) and run the command:"
 		ewarn "echo 'CONFIG_PROTECT=\"/opt/wildfire/resources/security/\"' > /etc/env.d/98wildfire "
 		ewarn "For more info see bug #139708"
-		sleep 11
+		epause 11
 	fi
 }
 
@@ -86,9 +86,9 @@ src_install() {
 pkg_postinst() {
 	chown -R jabber:jabber /opt/wildfire
 
-	ewarn If this is a new install, please edit /opt/wildfire/conf/wildfire.xml.sample
-	ewarn and save it as /opt/wildfire/conf/wildfire.xml
-	einfo
-	ewarn The following must be be owned or writable by the jabber user.
-	einfo /opt/wildfire/conf/wildfire.xml
+	ewarn "If this is a new install, please edit /opt/wildfire/conf/wildfire.xml.sample"
+	ewarn "and save it as /opt/wildfire/conf/wildfire.xml"
+	ewarn
+	ewarn "The following must be be owned or writable by the jabber user."
+	ewarn /opt/wildfire/conf/wildfire.xml
 }
