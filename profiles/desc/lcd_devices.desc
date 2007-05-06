@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.4 2007/02/24 23:03:59 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.5 2007/05/06 21:24:59 rbu Exp $
 
 # This file contains descriptions of LCD_DEVICES USE_EXPAND flags.
 
@@ -13,6 +13,7 @@ cfontz - Add support for CrystalFontz displays
 cfontzpacket - Add support for CrystalFontz chipsets CFA-631, CFA-633 and CFA-635 
 cwlinux - Add support for serial / USB displays CW12232 and CW1602 by CwLinux
 ea232 - Add support for the Electronic Assembly RS232 graphic driver
+ea65 - Add support for the VFD in the AOpen XC Cube-AV EA65 media barebone
 eyeboxone - Add support for the displays on Rightvision's EyeboxOne server
 g15 - Add support for Logitech G15 Keyboard LCDs
 glk - Add support for MatrixOrbital GLK chipset
@@ -48,6 +49,7 @@ routerboard - Add support for the Router Board LCD port
 sed1330 - Add support for Seiko Epson SED1330/1335 graphical displays (S1D13300/S1D13305)
 sed1520 - Add support for the Seiko Epson SED1520 Controller
 serdisplib - Meta-driver to support drivers via dev-libs/serdisplib
+serialpos - Add support for character displays in serial point of sale ("POS") devices
 serialvfd - Add support for most NEC, Futaba and Noritake VFDs
 simplelcd - Add support for a simple serial terminal display
 sli - Add support for a Wirz SLI display

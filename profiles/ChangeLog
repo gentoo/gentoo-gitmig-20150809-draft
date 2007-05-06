@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.356 2007/05/06 15:55:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.357 2007/05/06 21:24:59 rbu Exp $
+
+  06 May 2007; Robert Buchholz <rbu@gentoo.org> desc/lcd_devices.desc:
+  Add new LCD_DEVICES for app-misc/lcdproc-0.5.2
 
   06 May 2007; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
   Added local USE flag gnuplot for sci-electronics/gwave.
