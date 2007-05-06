@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7229 2007/05/06 08:31:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7230 2007/05/06 17:20:33 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -220,12 +220,6 @@ app-emacs/erc-cvs
 # Generation 1 package with stale (2004) upstream.
 # Save this package by contacting the gentoo-java ml.
 dev-java/systray4j
-
-# Michael Sterrett <mr_bones_@gentoo.org> (20 Apr 2007)
-# masked for removal in May
-# No reply from maintainer on bug #169198
-# Uses old Manifest format.
-app-emulation/vmware-gsx-console
 
 # Andrej Kacian <ticho@gentoo.org> (20 Apr 2007)
 # Support dropped by upstream, buggy, likely to cause data loss.
