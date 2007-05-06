@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/fwipsec-0.4.2-r1.ebuild,v 1.5 2006/05/15 15:07:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/fwipsec-0.4.2-r1.ebuild,v 1.6 2007/05/06 09:44:06 genone Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Firewall scripts that control iptables, FreeS/WAN, and squid."
@@ -26,6 +26,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Edit /etc/fwipsec/fwipsec.defs to set your base rules."
-	echo
+	elog "Edit /etc/fwipsec/fwipsec.defs to set your base rules."
 }

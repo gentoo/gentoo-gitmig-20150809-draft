@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-1.0.3.ebuild,v 1.7 2005/08/01 17:17:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-1.0.3.ebuild,v 1.8 2007/05/06 09:39:49 genone Exp $
 
 inherit gnome2
 
@@ -33,10 +33,10 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	echo
-	einfo "Run /usr/bin/firestarter to configure and setup the firewall"
-	einfo "If you would like to have firestarter start automatically,"
-	einfo "add the init script to the default runlevel:"
-	einfo "    rc-update add firestarter default"
+	elog "Run /usr/bin/firestarter to configure and setup the firewall"
+	elog "If you would like to have firestarter start automatically,"
+	elog "add the init script to the default runlevel:"
+	elog "    rc-update add firestarter default"
 	echo
 	ewarn "If you are upgrading from a previous version of ${PN}"
 	ewarn "be aware that ${P} doesn't allow LAN connections to the"

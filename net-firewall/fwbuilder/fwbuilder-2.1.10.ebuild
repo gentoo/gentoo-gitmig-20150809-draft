@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.10.ebuild,v 1.1 2007/04/01 20:15:36 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.10.ebuild,v 1.2 2007/05/06 09:41:08 genone Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "You need to emerge iproute2 on the machine that"
-	einfo "will run the firewall script."
+	elog "You need to emerge iproute2 on the machine that"
+	elog "will run the firewall script."
 	echo
 }
