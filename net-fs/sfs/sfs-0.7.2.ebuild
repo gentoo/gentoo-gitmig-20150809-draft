@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.16 2007/04/29 17:35:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.17 2007/05/06 10:36:37 genone Exp $
 
 inherit eutils
 
@@ -70,15 +70,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Execute '/etc/init.d/sfscd start' to start the SFS client,"
-	einfo "	 or 'rc-update add sfscd default' to add it to the"
-	einfo "	 default runlevel."
-	einfo ""
-	einfo "See the SFS documentation for server configuration."
-	einfo ""
-	einfo "Both the client and server require kernel support"
-	einfo "	 for NFS version 3 in order to operate properly."
-	einfo ""
+	elog "Execute '/etc/init.d/sfscd start' to start the SFS client,"
+	elog "	 or 'rc-update add sfscd default' to add it to the"
+	elog "	 default runlevel."
+	elog
+	elog "See the SFS documentation for server configuration."
+	elog
+	elog "Both the client and server require kernel support"
+	elog "	 for NFS version 3 in order to operate properly."
+	elog
 }
 
 pkg_config() {

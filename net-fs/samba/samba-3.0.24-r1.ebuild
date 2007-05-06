@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.24-r1.ebuild,v 1.1 2007/04/09 08:17:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.24-r1.ebuild,v 1.2 2007/05/06 10:35:09 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="none"
@@ -285,10 +285,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	if use swat ; then
-		einfo "swat must be enabled by xinetd:"
-		einfo "    change the /etc/xinetd.d/swat configuration"
+		elog "swat must be enabled by xinetd:"
+		elog "    change the /etc/xinetd.d/swat configuration"
 	fi
-	einfo "Latest info: README.gentoo in documentation directory"
+	elog "Latest info: README.gentoo in documentation directory"
 }
 
 pkg_postrm(){

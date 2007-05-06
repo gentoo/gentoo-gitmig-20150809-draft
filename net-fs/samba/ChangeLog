@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.276 2007/04/09 08:17:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.277 2007/05/06 10:35:09 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> samba-3.0.22-r3.ebuild,
+  samba-3.0.24.ebuild, samba-3.0.24-r1.ebuild:
+  Replacing einfo with elog
 
 *samba-3.0.24-r1 (09 Apr 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r3.ebuild,v 1.14 2007/03/10 14:26:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r3.ebuild,v 1.15 2007/05/06 10:35:09 genone Exp $
 
 inherit eutils versionator pam
 
@@ -159,7 +159,7 @@ src_install() {
 	exeinto /usr/bin
 	for i in ${extra_bins}; do
 		[[ -x ${S}/bin/${i} ]] && doexe ${S}/bin/${i}
-		einfo "Extra binaries: ${i}"
+		elog "Extra binaries: ${i}"
 	done
 
 	# remove .old stuff from /usr/bin:
@@ -292,13 +292,14 @@ pkg_preinst() {
 
 pkg_postinst() {
 	if use swat; then
-		einfo "swat must be enabled by xinetd:"
-		einfo "    change the /etc/xinetd.d/swat configuration"
+		elog "swat must be enabled by xinetd:"
+		elog "    change the /etc/xinetd.d/swat configuration"
+		elog
 	fi
-	einfo "As of 3.0.20: New USE flags: syslog, automount, async (default: disabled)"
-	einfo "As of 3.0.20b: New USE flags: ldapsam, swat (default: disabled)"
-	einfo "SQL and XML backends are *experimental*: sql is being deprecated"
-	einfo "Latest info: README.gentoo in documentation directory"
+	elog "As of 3.0.20: New USE flags: syslog, automount, async (default: disabled)"
+	elog "As of 3.0.20b: New USE flags: ldapsam, swat (default: disabled)"
+	elog "SQL and XML backends are *experimental*: sql is being deprecated"
+	elog "Latest info: README.gentoo in documentation directory"
 }
 
 pkg_postrm(){
