@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.9 2007/04/23 20:40:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.10 2007/05/06 16:00:03 drac Exp $
+
+  06 May 2007; Samuli Suominen <drac@gentoo.org> linuxdcpp-9999.ebuild,
+  linuxdcpp-20070403.ebuild:
+  Fix OpenSSL deps for bug 177326. Thanks Naga.
 
   23 Apr 2007; Peter Weller <welp@gentoo.org> linuxdcpp-20070403.ebuild:
   Keyworded ~x86-fbsd
