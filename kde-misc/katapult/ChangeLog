@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/katapult
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.10 2006/11/21 12:32:13 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.11 2007/05/06 21:20:19 ticho Exp $
+
+  06 May 2007; Andrej Kacian <ticho@gentoo.org> katapult-0.3.1.4.ebuild:
+  Stable on x86, bug #177322.
 
   21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Give this back to kde herd.
