@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.15.ebuild,v 1.1 2007/04/28 16:45:01 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.15.ebuild,v 1.2 2007/05/06 05:05:51 dertobi123 Exp $
 
 DESCRIPTION="autounmask - Unmasking packages the easy way"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/autounmask/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.iansview.com/gentoo/tools/autounmask/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
