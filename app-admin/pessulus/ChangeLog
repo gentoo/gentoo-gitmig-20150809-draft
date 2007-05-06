@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.26 2007/05/06 20:07:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.27 2007/05/06 21:17:48 compnerd Exp $
+
+  06 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  pessulus-2.16.1.ebuild:
+  Inherit it in the stable release as well
 
   06 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -pessulus-0.9.1.ebuild:
