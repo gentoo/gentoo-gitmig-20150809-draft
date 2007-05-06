@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/tuxfrw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.10 2007/02/20 01:04:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.11 2007/05/06 10:04:16 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> tuxfrw-2.61.ebuild:
+  Replacing einfo with elog
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

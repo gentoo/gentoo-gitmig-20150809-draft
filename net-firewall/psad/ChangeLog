@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/psad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.42 2007/04/28 17:39:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.43 2007/05/06 10:00:48 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> psad-1.4.8.ebuild,
+  psad-2.0.6.ebuild:
+  Replacing einfo with elog
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> psad-1.4.8.ebuild,
   psad-2.0.6.ebuild:

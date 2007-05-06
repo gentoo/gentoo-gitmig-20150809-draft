@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.9 2007/04/28 17:39:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.10 2007/05/06 10:00:48 genone Exp $
 
 inherit eutils perl-app
 
@@ -102,25 +102,25 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "Please be sure to edit /etc/psad/psad.conf to reflect your system's"
-	einfo "configuration or it may not work correctly or start up. Specifically, check"
-	einfo "the validity of the HOSTNAME setting and replace the EMAIL_ADDRESSES and"
-	einfo "HOME_NET settings at the least."
-	echo
+	elog "Please be sure to edit /etc/psad/psad.conf to reflect your system's"
+	elog "configuration or it may not work correctly or start up. Specifically, check"
+	elog "the validity of the HOSTNAME setting and replace the EMAIL_ADDRESSES and"
+	elog "HOME_NET settings at the least."
+	elog
 	if has_version ">=app-admin/syslog-ng-0.0.0"
 	then
 		ewarn "You appear to have installed syslog-ng. If you are using syslog-ng as your"
 		ewarn "default system logger, please change the SYSLOG_DAEMON entry in"
 		ewarn "/etc/psad/psad.conf to the following (per examples in psad.conf):"
 		ewarn "		SYSLOG_DAEMON	syslog-ng;"
-		echo
+		ewarn
 	fi
 	if has_version ">=app-admin/sysklogd-0.0.0"
 	then
-		einfo "You have sysklogd installed. If this is your default system logger, no"
-		einfo "special configuration is needed. If it is not, please set SYSLOG_DAEMON"
-		einfo "in /etc/psad/psad.conf accordingly."
-		echo
+		elog "You have sysklogd installed. If this is your default system logger, no"
+		elog "special configuration is needed. If it is not, please set SYSLOG_DAEMON"
+		elog "in /etc/psad/psad.conf accordingly."
+		elog
 	fi
 	if has_version ">=app-admin/metalog-0.0"
 	then

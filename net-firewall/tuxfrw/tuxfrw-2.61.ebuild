@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.61.ebuild,v 1.2 2005/10/17 05:03:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.61.ebuild,v 1.3 2007/05/06 10:04:16 genone Exp $
 
 inherit eutils linux-info
 
@@ -26,9 +26,9 @@ pkg_setup() {
 		die "Kernel version not supported"
 	fi
 
-	einfo "Now checking your kernel configuration. If, for some reason, it"
-	einfo "fails, you can get a list of modules needed here:"
-	einfo "http://dev.gentoo.org/~angusyoung/docs/devel/tuxfrw/mod.txt"
+	elog "Now checking your kernel configuration. If, for some reason, it"
+	elog "fails, you can get a list of modules needed here:"
+	elog "http://dev.gentoo.org/~angusyoung/docs/devel/tuxfrw/mod.txt"
 	CONFIG_CHECK="NETFILTER IP_NF_CONNTRACK IP_NF_FTP IP_NF_TARGET_REDIRECT"
 	CONFIG_CHECK="${CONFIG_CHECK} IP_NF_IPTABLES IP_NF_MATCH_TOS IP_NF_FILTER"
 	CONFIG_CHECK="${CONFIG_CHECK} IP_NF_TARGET_REJECT IP_NF_TARGET_REJECT"
@@ -70,7 +70,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Configure /etc/tuxfrw/tuxfrw.conf manually"
-	einfo "To start: /etc/init.d/tuxfrw start "
-	einfo "To load on boot: rc-update add tuxfrw default"
+	elog "Configure /etc/tuxfrw/tuxfrw.conf manually"
+	elog "To start: /etc/init.d/tuxfrw start "
+	elog "To load on boot: rc-update add tuxfrw default"
 }

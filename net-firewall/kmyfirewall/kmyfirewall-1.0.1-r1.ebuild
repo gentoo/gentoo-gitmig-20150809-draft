@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0.1-r1.ebuild,v 1.1 2007/04/18 10:30:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0.1-r1.ebuild,v 1.2 2007/05/06 09:56:45 genone Exp $
 
 inherit kde eutils
 
@@ -33,9 +33,9 @@ src_install() {
 
 pkg_postinst() {
 	make_desktop_entry m "Kmyfirewall" kmyfirewall
-	einfo
-	einfo "Only run-as-user menuentry provided. If you want to directly"
-	einfo "run kmyfirewall as root (inside kdesu), just check:"
-	einfo "run-as-other-user inside the menu edit,leving blank the field"
-	einfo
+	elog
+	elog "Only run-as-user menuentry provided. If you want to directly"
+	elog "run kmyfirewall as root (inside kdesu), just check:"
+	elog "run-as-other-user inside the menu edit,leving blank the field"
+	elog
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.1 2007/04/12 19:17:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.2 2007/05/06 10:02:55 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> shorewall-perl-3.9.0.ebuild:
+  Replacing einfo with elog
 
 *shorewall-perl-3.9.0 (12 Apr 2007)
 
