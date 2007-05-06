@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.0-r3.ebuild,v 1.3 2004/07/03 11:40:15 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.0-r3.ebuild,v 1.4 2007/05/06 12:18:17 genone Exp $
 
 inherit eutils
 
@@ -43,13 +43,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
-	einfo "And please notice that now msn-transport comes with a init.d script"
-	einfo "dont forget to add it to your runlevel."
-	einfo
-	einfo "IMPORTANT"
-	einfo "This version uses a patch that was designed for version 2.3.1"
-	einfo "please consider using the updated version"
-	einfo
+	elog
+	elog "Please read /usr/share/doc/${P}/README.Gentoo.gz"
+	elog "And please notice that now msn-transport comes with a init.d script"
+	elog "dont forget to add it to your runlevel."
+	elog
+	elog "IMPORTANT"
+	elog "This version uses a patch that was designed for version 2.3.1"
+	elog "please consider using the updated version"
+	elog
 }

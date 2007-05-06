@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.2.ebuild,v 1.5 2007/04/28 17:39:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.2.ebuild,v 1.6 2007/05/06 12:18:17 genone Exp $
 
 inherit eutils
 
@@ -36,9 +36,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
-	einfo "And please notice that now yahoo-transport comes with a init.d script"
-	einfo "dont forget to add it to your runlevel."
-	einfo
+	elog
+	elog "Please read /usr/share/doc/${P}/README.Gentoo.gz"
+	elog "And please notice that now yahoo-transport comes with a init.d script"
+	elog "dont forget to add it to your runlevel."
+	elog
 }
