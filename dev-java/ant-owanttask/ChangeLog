@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.23 2007/05/05 17:01:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.24 2007/05/06 07:51:36 dertobi123 Exp $
+
+  06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  ant-owanttask-1.1-r12.ebuild:
+  ppc stable
 
   05 May 2007; Andrej Kacian <ticho@gentoo.org> ant-owanttask-1.1-r12:
 	Stable on x86, bug #176856.

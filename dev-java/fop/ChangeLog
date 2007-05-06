@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.39 2007/04/28 18:21:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.40 2007/05/06 07:49:59 dertobi123 Exp $
+
+  06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  fop-0.20.5-r3.ebuild:
+  ppc stable
 
   28 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.20.5-r7.ebuild:
   Add missing dev-java/ant-core to RDEPEND.

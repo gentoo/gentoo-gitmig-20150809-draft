@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.109 2007/05/05 16:55:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.110 2007/05/06 07:54:17 dertobi123 Exp $
+
+  06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> ant-1.7.0.ebuild:
+  ppc stable
 
   05 May 2007; Andrej Kacian <ticho@gentoo.org> ant-1.7.0.ebuild:
   Stable on x86, bug #176856.
