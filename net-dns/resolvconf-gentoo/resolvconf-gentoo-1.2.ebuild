@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.2.ebuild,v 1.11 2007/01/30 05:49:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.2.ebuild,v 1.12 2007/05/06 09:23:21 genone Exp $
 
 inherit eutils
 
@@ -26,8 +26,8 @@ pkg_postinst() {
 		"resolvconf/run/resolv.conf" ]] ; then
 		ewarn "resolvconf requires ${ROOT}/etc/resolv.conf to be a symbolic"
 		ewarn "to resolvconf/run/resolv.conf"
-		einfo "To set this up automatically type"
-		einfo "   emerge --config =${PF}"
+		ewarn "To set this up automatically type"
+		ewarn "   emerge --config =${PF}"
 	fi
 }
 

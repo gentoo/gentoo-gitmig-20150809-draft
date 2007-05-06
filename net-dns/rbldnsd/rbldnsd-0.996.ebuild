@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996.ebuild,v 1.2 2006/08/27 22:43:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996.ebuild,v 1.3 2007/05/06 09:21:15 genone Exp $
 
 inherit eutils
 DESCRIPTION="a DNS daemon which is designed to serve DNSBL zones"
@@ -34,6 +34,6 @@ pkg_postinst() {
 	enewuser rbldns -1 -1 /var/db/rbldnsd rbldns
 	chown rbldns:rbldns /var/db/rbldnsd
 
-	einfo "for testing purpose, example zone file has been installed"
-	einfo "see /usr/share/doc/${PF}/example.gz"
+	elog "for testing purpose, example zone file has been installed"
+	elog "see /usr/share/doc/${PF}/example.gz"
 }

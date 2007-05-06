@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.1-r1.ebuild,v 1.7 2007/04/28 16:31:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.1-r1.ebuild,v 1.8 2007/05/06 09:13:37 genone Exp $
 
 inherit eutils
 
@@ -46,15 +46,14 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	einfo "Configuration can be done manually via:"
-	einfo "/usr/sbin/noip2 -C or "
-	einfo "first time you use the /etc/init.d/noip script; or"
-	einfo "by using this ebuild's config option."
-	einfo
-	einfo "You must update the /etc/init.d/noip script, the "
-	einfo "binary name and the command line options have "
-	einfo "changed."
+	elog "Configuration can be done manually via:"
+	elog "/usr/sbin/noip2 -C or "
+	elog "first time you use the /etc/init.d/noip script; or"
+	elog "by using this ebuild's config option."
+	elog
+	elog "You must update the /etc/init.d/noip script, the "
+	elog "binary name and the command line options have "
+	elog "changed."
 }
 
 pkg_config() {

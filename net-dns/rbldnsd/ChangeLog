@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/rbldnsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.6 2007/02/22 02:05:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.7 2007/05/06 09:21:15 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> rbldnsd-0.995.ebuild,
+  rbldnsd-0.996.ebuild:
+  Replacing einfo with elog
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

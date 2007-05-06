@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r1.ebuild,v 1.5 2006/11/23 17:19:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r1.ebuild,v 1.6 2007/05/06 09:16:12 genone Exp $
 
 inherit multilib eutils autotools
 
@@ -90,15 +90,15 @@ pkg_postinst() {
 	ewarn
 	ewarn "ATTENTION: The recursor component has been split out to net-dns/pdns-recursor!"
 	ewarn
-	einfo
-	einfo "pdns now provides multiple instances support. You can create more instances"
-	einfo "by symlinking the pdns init script to another name."
-	einfo
-	einfo "The name must be in the format pdns-<suffix> and PowerDNS will use the"
-	einfo "/etc/powerdns/pdns-<suffix>.conf configuration file instead of the default."
-	einfo
-	einfo "Also all backends, except the bind and random backends, are now compiled as"
-	einfo "loadable modules and must be loaded with load-modules= in the configuration"
-	einfo "file."
-	einfo
+	elog
+	elog "pdns now provides multiple instances support. You can create more instances"
+	elog "by symlinking the pdns init script to another name."
+	elog
+	elog "The name must be in the format pdns-<suffix> and PowerDNS will use the"
+	elog "/etc/powerdns/pdns-<suffix>.conf configuration file instead of the default."
+	elog
+	elog "Also all backends, except the bind and random backends, are now compiled as"
+	elog "loadable modules and must be loaded with load-modules= in the configuration"
+	elog "file."
+	elog
 }

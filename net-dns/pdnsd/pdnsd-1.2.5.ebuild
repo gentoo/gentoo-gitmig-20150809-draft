@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.8 2007/04/22 18:17:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.9 2007/05/06 09:18:17 genone Exp $
 
 inherit eutils
 
@@ -108,11 +108,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Add pdnsd to your default runlevel - rc-update add pdnsd default"
-	einfo ""
-	einfo "Add pdnsd-online to your online runlevel."
-	einfo "The online interface will be listed in /etc/conf.d/pdnsd-online"
-	einfo ""
-	einfo "Sample config file in /etc/pdnsd/pdnsd.conf.sample"
+	elog
+	elog "Add pdnsd to your default runlevel - rc-update add pdnsd default"
+	elog ""
+	elog "Add pdnsd-online to your online runlevel."
+	elog "The online interface will be listed in /etc/conf.d/pdnsd-online"
+	elog ""
+	elog "Sample config file in /etc/pdnsd/pdnsd.conf.sample"
 }
