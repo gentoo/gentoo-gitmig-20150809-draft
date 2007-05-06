@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.4-r2.ebuild,v 1.9 2007/04/28 23:32:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.4-r2.ebuild,v 1.10 2007/05/06 08:50:30 genone Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -90,18 +90,18 @@ src_compile() {
 	if use threads; then
 		if use dlz && use mysql; then
 			echo
-			ewarn ""
-			einfo "MySQL uses thread local storage in its C api. Thus MySQL"
-			einfo "requires that each thread of an application execute a MySQL"
-			einfo "\"thread initialization\" to setup the thread local storage."
-			einfo "This is impossible to do safely while staying within the DLZ"
-			einfo "driver API. This is a limitation caused by MySQL, and not"
-			einfo "the DLZ API."
+			ewarn
+			ewarn "MySQL uses thread local storage in its C api. Thus MySQL"
+			ewarn "requires that each thread of an application execute a MySQL"
+			ewarn "\"thread initialization\" to setup the thread local storage."
+			ewarn "This is impossible to do safely while staying within the DLZ"
+			ewarn "driver API. This is a limitation caused by MySQL, and not"
+			ewarn "the DLZ API."
 			ewarn "Because of this BIND MUST only run with a single thread when"
 			ewarn "using the MySQL driver."
-			echo
+			ewarn
 			myconf="${myconf} --disable-linux-caps --disable-threads"
-			einfo "Threading support disabled"
+			ewarn "Threading support disabled"
 			epause 10
 		else
 			myconf="${myconf} --enable-linux-caps --enable-threads"
@@ -199,31 +199,31 @@ pkg_postinst() {
 		${ROOT}/var/bind/pri ${ROOT}/var/bind/sec
 	chown -R named:named ${ROOT}/var/bind
 
-	einfo "The default zone files are now installed as *.zone,"
-	einfo "be careful merging config files if you have modified"
-	einfo "/var/bind/pri/127 or /var/bind/pri/localhost"
-	einfo
-	einfo "You can edit /etc/conf.d/named to customize named settings"
-	einfo
-	einfo "The BIND ebuild now includes chroot support."
-	einfo "If you like to run bind in chroot AND this is a new install OR"
-	einfo "your bind doesn't already run in chroot, simply run:"
-	einfo "\`emerge --config '=${CATEGORY}/${PF}'\`"
-	einfo "Before running the above command you might want to change the chroot"
-	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
-	echo
-	einfo "Recently verisign added a wildcard A record to the .COM and .NET TLD"
-	einfo "zones making all .com and .net domains appear to be registered"
-	einfo "This causes many problems such as breaking important anti-spam checks"
-	einfo "which verify source domains exist. ISC released a patch for BIND which"
-	einfo "adds 'delegation-only' zones to allow admins to return the .com and .net"
-	einfo "domain resolution to their normal function."
-	echo
-	einfo "There is no need to create a com or net data file. Just the"
-	einfo "entries to the named.conf file is enough."
-	echo
-	einfo "	zone "com" IN { type delegation-only; };"
-	einfo "	zone "net" IN { type delegation-only; };"
+	elog "The default zone files are now installed as *.zone,"
+	elog "be careful merging config files if you have modified"
+	elog "/var/bind/pri/127 or /var/bind/pri/localhost"
+	elog
+	elog "You can edit /etc/conf.d/named to customize named settings"
+	elog
+	elog "The BIND ebuild now includes chroot support."
+	elog "If you like to run bind in chroot AND this is a new install OR"
+	elog "your bind doesn't already run in chroot, simply run:"
+	elog "\`emerge --config '=${CATEGORY}/${PF}'\`"
+	elog "Before running the above command you might want to change the chroot"
+	elog "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
+	elog
+	elog "Recently verisign added a wildcard A record to the .COM and .NET TLD"
+	elog "zones making all .com and .net domains appear to be registered"
+	elog "This causes many problems such as breaking important anti-spam checks"
+	elog "which verify source domains exist. ISC released a patch for BIND which"
+	elog "adds 'delegation-only' zones to allow admins to return the .com and .net"
+	elog "domain resolution to their normal function."
+	elog
+	elog "There is no need to create a com or net data file. Just the"
+	elog "entries to the named.conf file is enough."
+	elog
+	elog "	zone "com" IN { type delegation-only; };"
+	elog "	zone "net" IN { type delegation-only; };"
 
 	echo
 	ewarn "BIND >=9.2.5 makes the priority argument to MX records mandatory"
