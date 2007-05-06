@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.7 2007/04/29 18:17:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.8 2007/05/06 09:20:05 genone Exp $
 
 inherit libtool eutils multilib autotools
 
@@ -54,7 +54,7 @@ src_install() {
 pkg_preinst() {
 	source /etc/init.d/functions.sh
 	if [ -L ${svcdir}/started/posadis ]; then
-		einfo "The posadis init script is running. I'll stop it, merge the new files and restart the script."
+		ewarn "The posadis init script is running. I'll stop it, merge the new files and restart the script."
 		/etc/init.d/posadis stop
 	fi
 }
