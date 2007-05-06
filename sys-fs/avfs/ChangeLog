@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.8 2007/05/05 11:33:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.9 2007/05/06 21:56:09 genstef Exp $
+
+*avfs-0.9.7-r1 (06 May 2007)
+
+  06 May 2007; Stefan Schweizer <genstef@gentoo.org> +avfs-0.9.7-r1.ebuild:
+  Make avfs ready for worker thanks to dertobi123 in bug 177125
 
   05 May 2007; Jeroen Roovers <jer@gentoo.org> avfs-0.9.7.ebuild:
   Marked ~hppa (bug #172755).
