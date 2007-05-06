@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.11.ebuild,v 1.6 2007/04/28 22:33:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.11.ebuild,v 1.7 2007/05/06 10:14:23 genone Exp $
 
 inherit eutils
 
@@ -102,15 +102,15 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo
-	einfo "To enable the coda at boot up, please do:"
-	einfo "    rc-update add codasrv default"
-	einfo "    rc-update add venus default"
-	einfo
-	einfo "To get started, run vice-setup and venus-setup."
-	einfo
-	einfo "Alternatively you can get a default coda setup by running:"
-	einfo "    emerge --config =${PF}"
+	elog
+	elog "To enable the coda at boot up, please do:"
+	elog "    rc-update add codasrv default"
+	elog "    rc-update add venus default"
+	elog
+	elog "To get started, run vice-setup and venus-setup."
+	elog
+	elog "Alternatively you can get a default coda setup by running:"
+	elog "    emerge --config =${PF}"
 }
 
 pkg_config () {

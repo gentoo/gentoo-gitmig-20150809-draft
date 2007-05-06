@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.17 2007/03/26 08:18:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.18 2007/05/06 10:21:57 genone Exp $
 
 inherit eutils
 
@@ -88,14 +88,14 @@ pkg_postinst() {
 		cp -a ${f} ${ROOT}/var/lib/nfs/
 	done
 
-	echo
-	einfo "NFS V2 and V3 servers now default to \"sync\" IO if ${P}"
-	einfo "(or later) is installed."
-	einfo "More info at ${HOMEPAGE} (see questions 5, 12, 13, and 14)."
-	echo
+	elog
+	elog "NFS V2 and V3 servers now default to \"sync\" IO if ${P}"
+	elog "(or later) is installed."
+	elog "More info at ${HOMEPAGE} (see questions 5, 12, 13, and 14)."
+	elog
 	ewarn "PLEASE note: Since the latest NFS utils has changed the server"
 	ewarn "default to \"sync\" IO, then if no behavior is specified in the"
 	ewarn "export list, thus assuming the default behavior, a warning will"
 	ewarn "be generated at export time."
-	echo
+	ewarn
 }

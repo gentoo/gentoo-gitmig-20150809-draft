@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fex/fex-0.8.18.ebuild,v 1.1 2006/05/20 14:36:32 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fex/fex-0.8.18.ebuild,v 1.2 2007/05/06 10:15:50 genone Exp $
 
 DESCRIPTION="Fex is a replicating filesystem for disconnected computers similar to intermezzo"
 HOMEPAGE="http://www.zahlfee.de/fex/fex.html"
@@ -30,7 +30,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To enable fex on boot you will have to add it to the"
-	einfo "default profile, issue the following command as root to do so."
-	einfo "rc-update add fexd default"
+	elog "To enable fex on boot you will have to add it to the"
+	elog "default profile, issue the following command as root to do so."
+	elog "rc-update add fexd default"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.5.ebuild,v 1.1 2006/12/29 21:57:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.5.ebuild,v 1.2 2007/05/06 10:17:47 genone Exp $
 
 inherit eutils
 
@@ -33,9 +33,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "For quick usage, exec:"
-	einfo "'modprobe fuse'"
-	einfo "'fusesmb -oallow_other /mnt/samba'"
-	einfo ""
+	elog
+	elog "For quick usage, exec:"
+	elog "'modprobe fuse'"
+	elog "'fusesmb -oallow_other /mnt/samba'"
+	elog
 }
