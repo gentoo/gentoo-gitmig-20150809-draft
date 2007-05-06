@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.4.ebuild,v 1.1 2007/03/27 18:15:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.4.ebuild,v 1.2 2007/05/06 16:14:57 dertobi123 Exp $
 
 inherit eutils findlib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ocamlnet/${P}.tar.gz"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk ssl tk httpd"
 
 # the auth-dh compile flag has been disabled as well, since it depends on
