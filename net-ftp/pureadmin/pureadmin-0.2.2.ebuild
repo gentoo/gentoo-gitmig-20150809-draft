@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.2.2.ebuild,v 1.3 2006/10/23 15:58:20 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.2.2.ebuild,v 1.4 2007/05/06 11:22:42 genone Exp $
 
 inherit eutils
 
@@ -46,12 +46,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
 	ewarn "PureAdmin is at a beta-stage right now and it may break your"
 	ewarn "configuration. DO NOT use it for safety critical system"
 	ewarn "or production use!"
-	einfo
-	einfo "You need root-privileges to be able to use PureAdmin."
-	einfo "This will probably change in the future."
-	einfo
+	elog
+	elog "You need root-privileges to be able to use PureAdmin."
+	elog "This will probably change in the future."
+	elog
 }
