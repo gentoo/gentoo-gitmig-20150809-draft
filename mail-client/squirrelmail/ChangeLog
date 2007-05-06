@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.80 2007/05/02 21:02:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.81 2007/05/06 18:27:08 ticho Exp $
+
+  06 May 2007; Andrej Kacian <ticho@gentoo.org>
+  squirrelmail-1.4.9a-r1.ebuild:
+  Corrected name of sample config for secure_login plugin, so it actually gets
+  installed. Bug #176858, reported by Patrick Fourniols <Patrick.Fourniols at
+  wanadoo.fr>.
 
 *squirrelmail-1.4.9a-r1 (02 May 2007)
 
