@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p0.ebuild,v 1.2 2007/05/05 07:42:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p0.ebuild,v 1.3 2007/05/06 08:11:26 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-${PV:0:3}/${MY_P}.tar
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="parse-clocks caps selinux ssl ipv6 debug openntpd"
+IUSE="caps debug ipv6 mdnsresponder openntpd parse-clocks selinux ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
