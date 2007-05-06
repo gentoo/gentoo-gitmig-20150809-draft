@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20070115.ebuild,v 1.1 2007/04/23 16:12:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20070115.ebuild,v 1.2 2007/05/06 14:34:13 carlo Exp $
 
 inherit toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 IUSE=""
 
-DEPEND="!sci-visualization/labplot"
+DEPEND="!<sci-visualization/labplot-1.5.1.6"
 RESTRICT="test"
 
 src_compile() {
