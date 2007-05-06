@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.9 2007/04/22 00:16:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.10 2007/05/06 08:15:00 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -74,7 +74,7 @@ pkg_postinst() {
 	echo
 	ewarn "Make sure you have kernel support for USB, HDCL and PPP"
 	ewarn "NB: kernels >= 2.4.18 include the hdlc patch"
-	echo
+	ewarn
 	ewarn "Read and subscribe vendor's licence to download the microcode"
 	ewarn "You can get it from:"
 	ewarn "  1) vendor's site: http://www.speedtouchdsl.com/dvrreg_lx.htm"
@@ -83,13 +83,13 @@ pkg_postinst() {
 	ewarn "Then you should set its path in the /etc/conf.d/speedtouch file"
 	ewarn "edit and rename 'adsl.sample' to 'adsl' in /etc/ppp/peers/adsl and"
 	ewarn "bring up your adsl line using the /etc/init.d/speedtouch script"
-	echo
-	einfo "More info in the documentation in /usr/share/doc/${PF}"
-	echo
-	einfo "You need to pass -a /usr/share/speedtouch/boot.v123.bin to"
-	einfo "modem_run with this version. The URL for firmware is:"
-	einfo "http://www.speedtouchdsl.com/driver_upgrade_lx_3.0.1.2.htm"
-	echo
+	ewarn
+	elog "More info in the documentation in /usr/share/doc/${PF}"
+	elog
+	elog "You need to pass -a /usr/share/speedtouch/boot.v123.bin to"
+	elog "modem_run with this version. The URL for firmware is:"
+	elog "http://www.speedtouchdsl.com/driver_upgrade_lx_3.0.1.2.htm"
+	elog
 	ewarn "This driver is obsoleted by the kernel-space driver, available"
 	ewarn "in >=2.6.10 kernels. The firmware and installation instructions"
 	ewarn "for this driver are available through net-dialup/speedtouch-usb."

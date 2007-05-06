@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.56.ebuild,v 1.6 2006/11/04 21:37:59 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.56.ebuild,v 1.7 2007/05/06 08:17:10 genone Exp $
 
 inherit eutils
 
@@ -29,10 +29,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Use wvdialconf to automagically generate a configuration file."
-	einfo
-	einfo "Users have to be member of the dialout AND the uucp group"
-	einfo "to use wvdial!"
-	einfo
+	elog
+	elog "Use wvdialconf to automagically generate a configuration file."
+	elog
+	elog "Users have to be member of the dialout AND the uucp group"
+	elog "to use wvdial!"
+	elog
 }

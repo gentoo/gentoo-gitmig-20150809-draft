@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r2.ebuild,v 1.2 2007/04/15 09:12:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r2.ebuild,v 1.3 2007/05/06 07:57:44 genone Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -149,11 +149,11 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Users who wish to use the fax or voicemail capabilities must be members"
-	einfo "of the group fax in order to access files"
-	echo
-	einfo "If you want to grab voice messages from a remote location, you must save"
-	einfo "the password in ${ROOT}var/spool/voice/.code file"
+	elog "Users who wish to use the fax or voicemail capabilities must be members"
+	elog "of the group fax in order to access files"
+	elog
+	elog "If you want to grab voice messages from a remote location, you must save"
+	elog "the password in ${ROOT}var/spool/voice/.code file"
 	echo
 	ewarn "${ROOT}var/spool/voice/.code and ${ROOT}var/spool/voice/messages/Index"
 	ewarn "are not longer created by this automatically!"

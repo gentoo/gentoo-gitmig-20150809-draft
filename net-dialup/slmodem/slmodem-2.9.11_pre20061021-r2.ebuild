@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r2.ebuild,v 1.1 2007/03/14 21:31:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r2.ebuild,v 1.2 2007/05/06 08:12:57 genone Exp $
 
 inherit eutils linux-mod multilib
 
@@ -143,21 +143,23 @@ pkg_postinst() {
 	fi
 
 	ewarn "To avoid problems, slusb/slamr have been added to /etc/hotplug/blacklist"
-	einfo "You must edit /etc/conf.d/${PN} for your configuration"
-	einfo "To add slmodem to your startup - type : rc-update add slmodem default"
-
+	elog "You must edit /etc/conf.d/${PN} for your configuration"
+	elog "To add slmodem to your startup - type : rc-update add slmodem default"
+	elog
+	
 	if use alsa; then
-		einfo "I hope you have already added alsa to your startup: "
-		einfo "otherwise type: rc-update add alsasound boot"
-		einfo
-		einfo "If you need to use snd-intel8x0m from the kernel"
-		einfo "compile it as a module and edit /etc/modules.d/alsa"
-		einfo 'to: "alias snd-card-(number) snd-intel8x0m"'
+		elog "I hope you have already added alsa to your startup: "
+		elog "otherwise type: rc-update add alsasound boot"
+		elog
+		elog "If you need to use snd-intel8x0m from the kernel"
+		elog "compile it as a module and edit /etc/modules.d/alsa"
+		elog 'to: "alias snd-card-(number) snd-intel8x0m"'
+		elog
 	fi
 
-	einfo "You need to be in the uucp AND dialout group to make calls as a user."
-	einfo
-	einfo "If you see the following in dmesg:"
-	echo slamr: device 10b9:5457 is grabbed by driver serial
-	einfo "you need to modprobe ungrab-winmodem before slamr"
+	elog "You need to be in the uucp AND dialout group to make calls as a user."
+	elog
+	elog "If you see the following in dmesg:"
+	elog "    slamr: device 10b9:5457 is grabbed by driver serial"
+	elog "you need to modprobe ungrab-winmodem before slamr"
 }

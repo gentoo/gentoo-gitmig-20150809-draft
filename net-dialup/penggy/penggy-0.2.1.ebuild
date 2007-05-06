@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.14 2007/04/28 16:43:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.15 2007/05/06 08:00:52 genone Exp $
 
 inherit eutils autotools
 
@@ -30,11 +30,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The penggy AOL/Compuserve IP tunneling package has been installed."
-	einfo
-	einfo "You now need to configure it by editing penggy.cfg, aol-secrets, and phonetab in /etc/penggy."
-	einfo "Also you will need to have tuntap, built into your kernel or compiled as a module."
-	einfo
+	elog
+	elog "The penggy AOL/Compuserve IP tunneling package has been installed."
+	elog
+	elog "You now need to configure it by editing penggy.cfg, aol-secrets, and phonetab in /etc/penggy."
+	elog "Also you will need to have tuntap, built into your kernel or compiled as a module."
+	elog
 	ewarn "IMPORTANT: Penggy is neither endorsed by or affiliated with AOL."
 }

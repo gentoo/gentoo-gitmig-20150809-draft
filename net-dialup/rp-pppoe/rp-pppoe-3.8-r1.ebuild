@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8-r1.ebuild,v 1.1 2007/04/14 07:45:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8-r1.ebuild,v 1.2 2007/05/06 08:11:04 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -79,5 +79,5 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "Use pppoe-setup to configure your dialup connection."
+	elog "Use pppoe-setup to configure your dialup connection."
 }

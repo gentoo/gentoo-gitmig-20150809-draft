@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.15 2007/04/28 16:45:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.16 2007/05/06 08:03:29 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -27,8 +27,8 @@ pkg_setup() {
 		ewarn "The mppe-mppc flag overwrites the pppd native MPPE support with MPPE-MPPC"
 		ewarn "patch developed by Jan Dubiec."
 		ewarn "The resulted pppd will work only with patched kernels with version <= 2.6.14."
-		einfo "You could obtain the kernel patch from MPPE-MPPC homepage:"
-		einfo "   http://mppe-mppc.alphacron.de/"
+		ewarn "You could obtain the kernel patch from MPPE-MPPC homepage:"
+		ewarn "   http://mppe-mppc.alphacron.de/"
 		ewarn "CAUTION: MPPC is a U.S. patented algorithm!"
 		ewarn "Ask yourself if you really need it and, if you do, consult your lawyer first."
 		ebeep
@@ -277,7 +277,7 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "Pon, poff and plog scripts have been supplied for experienced users."
-	einfo "Users needing particular scripts (ssh,rsh,etc.) should check out the"
-	einfo "/usr/share/doc/${PF}/scripts directory."
+	elog "Pon, poff and plog scripts have been supplied for experienced users."
+	elog "Users needing particular scripts (ssh,rsh,etc.) should check out the"
+	elog "/usr/share/doc/${PF}/scripts directory."
 }

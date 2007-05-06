@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.2.ebuild,v 1.1 2007/04/12 12:06:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.2.ebuild,v 1.2 2007/05/06 07:59:43 genone Exp $
 
 inherit eutils linux-mod
 
@@ -97,12 +97,12 @@ pkg_setup() {
 			die "Module ${USERCARD} not present in ${P}"
 		done
 	else
-		einfo
-		einfo "You can control the modules which are built with the variable"
-		einfo "MISDN_CARDS which should contain a blank separated list"
-		einfo "of a selection from the following cards:"
-		einfo "   ${MISDN_MODULES[*]}"
-		einfo
+		elog
+		elog "You can control the modules which are built with the variable"
+		elog "MISDN_CARDS which should contain a blank separated list"
+		elog "of a selection from the following cards:"
+		elog "   ${MISDN_MODULES[*]}"
+		elog
 		ewarn "I give you the chance of hitting Ctrl-C and make the necessary"
 		ewarn "adjustments in /etc/make.conf."
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.6 2006/09/23 14:41:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.7 2007/05/06 08:07:59 genone Exp $
 
 inherit eutils kde-functions
 
@@ -37,7 +37,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use qlcr you should add the appropriate user to the dialout group."
-	einfo
+	elog
+	elog "To use qlcr you should add the appropriate user to the dialout group."
+	elog
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.36 2007/04/22 00:16:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.37 2007/05/06 08:15:01 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> speedtouch-1.3.1-r2.ebuild,
+  speedtouch-1.3.1-r3.ebuild:
+  Replacing einfo with elog
 
   22 Apr 2007; Alin Năstac <mrness@gentoo.org> speedtouch-1.3.1-r2.ebuild:
   Use newinitd and newconfd (#174266).
