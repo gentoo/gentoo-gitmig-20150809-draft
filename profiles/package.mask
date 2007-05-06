@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7230 2007/05/06 17:20:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7231 2007/05/06 22:53:59 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (7 May 2007)
+# Two open bugs about the launcher script:
+# https://bugs.gentoo.org/show_bug.cgi?id=166974
+# https://bugs.gentoo.org/show_bug.cgi?id=166976
+# Way behind in versions. The latest upstream is 4.1.
+# Please submit a working ebuild for 4.1 if you want to
+# keep this. dev-util/eclipse-sdk has a working open source
+# debugger as an alternative to this package. In Java junkyard
+# in 30 days.
+dev-java/jswat
 
 # Mike Frysinger <vapier@gentoo.org> (5 May 2007)
 # Unsupported upstream; doesnt build with current cm3
