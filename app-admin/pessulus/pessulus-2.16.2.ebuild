@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.2.ebuild,v 1.1 2007/02/08 18:05:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.2.ebuild,v 1.2 2007/05/06 20:04:27 compnerd Exp $
 
-inherit gnome2 python
+inherit gnome2 multilib python
 
 DESCRIPTION="lockdown editor for GNOME"
 HOMEPAGE="http://live.gnome.org/Pessulus"

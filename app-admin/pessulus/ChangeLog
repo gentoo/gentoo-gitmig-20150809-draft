@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.24 2007/02/17 00:04:48 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.25 2007/05/06 20:04:27 compnerd Exp $
+
+  06 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  pessulus-2.16.2.ebuild:
+  add multilib to inherit as per bug #177343
 
   17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
   Removed allanonjl from metadata.xml
