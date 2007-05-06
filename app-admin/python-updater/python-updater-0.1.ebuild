@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.1.ebuild,v 1.1 2007/05/06 00:33:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.1.ebuild,v 1.2 2007/05/06 07:54:19 kloeri Exp $
 
 DESCRIPTION="Script used to remerge python packages when changing Python version."
 HOMEPAGE="http://dev.gentoo.org/"
@@ -16,5 +16,6 @@ RDEPEND=""
 
 src_install()
 {
+	cd "${WORKDIR}"
 	newsbin ${P} ${PN}
 }
