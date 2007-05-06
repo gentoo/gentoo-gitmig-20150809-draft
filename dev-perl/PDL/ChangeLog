@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.65 2007/04/14 14:02:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.66 2007/05/06 17:59:46 dertobi123 Exp $
+
+  06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> PDL-2.4.3-r1.ebuild:
+  Added ~ppc, bug #165651
 
   14 Apr 2007; Michael Cummings <mcummings@gentoo.org> PDL-2.4.3.ebuild:
   sparc stable
