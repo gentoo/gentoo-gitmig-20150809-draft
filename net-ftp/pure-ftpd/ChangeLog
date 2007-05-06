@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.69 2007/04/28 16:45:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.70 2007/05/06 11:09:40 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> pure-ftpd-1.0.20-r1.ebuild,
+  pure-ftpd-1.0.21-r1.ebuild:
+  Replacing einfo with elog
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   pure-ftpd-1.0.20-r1.ebuild, pure-ftpd-1.0.21-r1.ebuild:

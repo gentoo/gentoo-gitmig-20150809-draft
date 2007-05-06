@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20-r1.ebuild,v 1.14 2007/04/28 16:45:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20-r1.ebuild,v 1.15 2007/05/06 11:09:40 genone Exp $
 
 inherit eutils confutils
 
@@ -89,11 +89,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Before starting Pure-FTPd, you have to edit the /etc/conf.d/pure-ftpd file!"
-	einfo
+	elog
+	elog "Before starting Pure-FTPd, you have to edit the /etc/conf.d/pure-ftpd file!"
+	elog
 	ewarn "It's *really* important to read the README provided with Pure-FTPd!"
 	ewarn "Check out http://download.pureftpd.org/pub/pure-ftpd/doc/README for general info"
 	ewarn "and http://download.pureftpd.org/pub/pure-ftpd/doc/README.TLS for SSL/TLS info."
-	einfo
 }
