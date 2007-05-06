@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.8 2007/01/04 05:14:18 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.9 2007/05/06 15:48:02 compnerd Exp $
 
 inherit linux-mod eutils
 
@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="X amd doc"
 
-RDEPEND="virtual/modutils
-		net-misc/openssh
-		amd? ( net-fs/am-utils )"
-DEPEND="<virtual/linux-sources-2.6.19
-		sys-apps/sed
-		${RDEPEND}"
+RDEPEND="net-misc/openssh
+		 amd? ( net-fs/am-utils )"
+DEPEND="${RDEPEND}"
 PDEPEND="X? ( net-misc/x11-ssh-askpass )"
 
 CONFIG_CHECK="@SH_FS:shfs"
@@ -26,6 +23,12 @@ SH_FS_ERROR="SHFS is built into the kernel.  Only userland utilities will be pro
 
 pkg_setup() {
 	linux-mod_pkg_setup
+
+	if kernel_is 2 6 ; then
+		if [[ ${KV_PATCH} -gt 19 ]] ; then
+			die "This package will not build against kernels newer than 2.6.19"
+		fi
+	fi
 
 	# Setup the Kernel module build
 	BUILD_PARAMS="-j1 KERNEL_SOURCES=${KV_DIR}"

@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.40 2007/01/04 05:28:14 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.41 2007/05/06 15:48:02 compnerd Exp $
+
+  06 May 2007; Saleem Abdulrasool <compnerd@gentoo.org> shfs-0.35-r3.ebuild,
+  shfs-0.35-r4.ebuild:
+  Update deps, add a check for the kernel version instead of a dependency
+  string which does not guarantee the sources
 
 *shfs-0.35-r4 (04 Jan 2007)
 
