@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/emech-3.0.2.ebuild,v 1.4 2007/02/10 23:21:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/emech-3.0.2.ebuild,v 1.5 2007/05/06 12:26:53 genone Exp $
 
 inherit toolchain-funcs
 
@@ -69,8 +69,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You can find a sample config file at"
-	einfo "/usr/share/doc/${PF}/sample.conf.gz"
-	einfo
+	elog
+	elog "You can find a sample config file at"
+	elog "/usr/share/doc/${PF}/sample.conf.gz"
+	elog
 }

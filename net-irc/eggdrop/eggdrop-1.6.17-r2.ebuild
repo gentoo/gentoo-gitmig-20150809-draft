@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17-r2.ebuild,v 1.13 2006/11/23 17:27:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17-r2.ebuild,v 1.14 2007/05/06 12:25:38 genone Exp $
 
 inherit eutils
 
@@ -32,8 +32,8 @@ src_unpack()  {
 
 	if use vanilla
 	then
-		einfo "Excluding patches that install additional modules, this effectively"
-		einfo "disables the mysql, postgres and ssl USE flags."
+		elog "Excluding patches that install additional modules, this effectively"
+		elog "disables the mysql, postgres and ssl USE flags."
 		echo
 		rm "${WORKDIR}"/patch/[12345678]*.patch
 	fi
@@ -105,8 +105,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "NOTE: IPV6 support has been dropped by upstream maintainers."
-	einfo "Please run /usr/bin/eggdrop-installer to install your eggdrop bot."
-	einfo
+	elog
+	elog "NOTE: IPV6 support has been dropped by upstream maintainers."
+	elog "Please run /usr/bin/eggdrop-installer to install your eggdrop bot."
+	elog
 }

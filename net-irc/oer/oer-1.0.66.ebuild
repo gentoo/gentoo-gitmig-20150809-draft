@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/oer-1.0.66.ebuild,v 1.2 2007/03/13 18:48:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/oer-1.0.66.ebuild,v 1.3 2007/05/06 12:38:16 genone Exp $
 
 inherit fixheadtails eutils versionator
 
@@ -39,8 +39,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You can find a sample configuration file set in"
-	einfo "/usr/share/doc/${PF}/sample-configuration"
-	einfo
+	elog
+	elog "You can find a sample configuration file set in"
+	elog "/usr/share/doc/${PF}/sample-configuration"
+	elog
 }

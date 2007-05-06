@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/oer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.8 2007/03/13 18:48:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.9 2007/05/06 12:38:16 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> oer-1.0.66.ebuild:
+  Replacing einfo with elog
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> -oer-1.0.64.ebuild,
   -oer-1.0.65.ebuild, oer-1.0.66.ebuild:

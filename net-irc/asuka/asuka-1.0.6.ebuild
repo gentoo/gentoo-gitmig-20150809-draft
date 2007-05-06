@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.13 2007/04/22 11:38:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.14 2007/05/06 12:19:41 genone Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ pkg_postinst() {
 	enewuser asuka
 	chown asuka ${ROOT}/var/log/asuka
 
-	einfo
-	einfo "A sample config file can be found at /etc/asuka/ircd.conf.sample"
-	einfo
+	elog
+	elog "A sample config file can be found at /etc/asuka/ircd.conf.sample"
+	elog
 }

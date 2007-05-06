@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2a.ebuild,v 1.4 2007/04/24 18:04:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2a.ebuild,v 1.5 2007/05/06 12:37:15 genone Exp $
 
 DESCRIPTION="Persistent IRC bouncer"
 HOMEPAGE="http://mind.riot.org/muh/"
@@ -24,10 +24,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You'll need to configure muh before running it."
-	einfo "Put your config in ~/.muh/muhrc"
-	einfo "A sample config is /usr/share/muh/muhrc"
-	einfo "For more information, see the documentation."
-	einfo
+	elog
+	elog "You'll need to configure muh before running it."
+	elog "Put your config in ~/.muh/muhrc"
+	elog "A sample config is /usr/share/muh/muhrc"
+	elog "For more information, see the documentation."
+	elog
 }

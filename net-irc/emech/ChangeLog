@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/emech
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.10 2007/02/10 23:21:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.11 2007/05/06 12:26:53 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> emech-3.0.2.ebuild:
+  Replacing einfo with elog
 
   10 Feb 2007; Christian Faulhammer <opfer@gentoo.org> emech-3.0.2.ebuild:
   moved from USE flag tcltk to tcl, see bug 17808

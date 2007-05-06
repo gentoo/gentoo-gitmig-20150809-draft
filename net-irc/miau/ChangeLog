@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/miau
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.10 2007/04/11 18:24:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.11 2007/05/06 12:36:02 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> miau-0.6.2.ebuild,
+  miau-0.6.4.ebuild:
+  Replacing einfo with elog
 
 *miau-0.6.4 (11 Apr 2007)
 

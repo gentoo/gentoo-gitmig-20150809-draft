@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.2.2.ebuild,v 1.3 2007/04/06 22:04:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.2.2.ebuild,v 1.4 2007/05/06 12:22:54 genone Exp $
 
 DESCRIPTION="A flexible IRC bot scriptable in scheme"
 HOMEPAGE="http://unknownlamer.org/code/bobot.html"
@@ -33,8 +33,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You can find a sample configuration file set in"
-	einfo "/usr/share/doc/${PF}/example-config"
-	einfo
+	elog
+	elog "You can find a sample configuration file set in"
+	elog "/usr/share/doc/${PF}/example-config"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ircstats-1.0.ebuild,v 1.1 2005/08/18 00:59:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ircstats-1.0.ebuild,v 1.2 2007/05/06 12:34:43 genone Exp $
 
 inherit toolchain-funcs
 
@@ -31,6 +31,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The IRCStats files have been installed in /usr/share/ircstats"
-	einfo "You can find an example ircstats.cfg in /usr/share/doc/${PF}"
+	elog "The IRCStats files have been installed in /usr/share/ircstats"
+	elog "You can find an example ircstats.cfg in /usr/share/doc/${PF}"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.22 2007/05/05 10:43:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.23 2007/05/06 12:47:11 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> supybot-0.83.2.ebuild:
+  Replacing einfo with elog
 
   05 May 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/supybot-0.77.0-setup.py.patch, -supybot-0.83.1.ebuild:

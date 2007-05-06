@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.11 2006/08/09 20:22:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.12 2007/05/06 12:33:18 genone Exp $
 
 DESCRIPTION="This script connects to the specified IRC server and creates a diagram of the network performing LINKS command."
 HOMEPAGE="http://pasky.ji.cz/~pasky/irc/"
@@ -37,14 +37,14 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo 'Usage:'
-	einfo 'IRCSERVER="irc.generic.com ircmapS.pl [-options parameters] \'
-	einfo '| tee /tmp/sendmethisifitdoesntwork \'
-	einfo '| ircmapC.pl \'
-	einfo '| tee /tmp/coredump \'
-	einfo '| ircmapR-aa.pl > ${IRCSERVER}.txt'
-	einfo ''
-	einfo 'cat /tmp/coredump \'
-	einfo '| ircmapR-gvdot.pl \'
-	einfo '| dot -Tgif -o  ${IRCSERVER}.gif'
+	elog 'Usage:'
+	elog 'IRCSERVER="irc.generic.com ircmapS.pl [-options parameters] \'
+	elog '| tee /tmp/sendmethisifitdoesntwork \'
+	elog '| ircmapC.pl \'
+	elog '| tee /tmp/coredump \'
+	elog '| ircmapR-aa.pl > ${IRCSERVER}.txt'
+	elog ''
+	elog 'cat /tmp/coredump \'
+	elog '| ircmapR-gvdot.pl \'
+	elog '| dot -Tgif -o  ${IRCSERVER}.gif'
 }

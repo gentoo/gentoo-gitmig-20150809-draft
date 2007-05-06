@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-1.2.1.ebuild,v 1.1 2006/10/22 12:09:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-1.2.1.ebuild,v 1.2 2007/05/06 12:21:19 genone Exp $
 
 inherit eutils autotools
 
@@ -78,7 +78,7 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Don't forget to edit /etc/atheme/atheme.conf!"
-	einfo
+	elog
+	elog "Don't forget to edit /etc/atheme/atheme.conf!"
+	elog
 }

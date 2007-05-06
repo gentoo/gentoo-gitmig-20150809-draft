@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.8.2.ebuild,v 1.1 2007/03/13 19:14:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.8.2.ebuild,v 1.2 2007/05/06 12:39:41 genone Exp $
 
 inherit eutils
 
@@ -40,8 +40,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The onis themes have been installed in /usr/share/onis/*-theme"
-	einfo "You can find a sample configuration at /usr/share/doc/${PF}/onis.conf.gz"
-	einfo
+	elog
+	elog "The onis themes have been installed in /usr/share/onis/*-theme"
+	elog "You can find a sample configuration at /usr/share/doc/${PF}/onis.conf.gz"
+	elog
 }

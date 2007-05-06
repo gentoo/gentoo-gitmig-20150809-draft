@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/psybnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.6 2007/02/26 12:35:49 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.7 2007/05/06 12:41:07 genone Exp $
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> psybnc-2.3.2.7-r2.ebuild:
+  Replacing einfo with elog
 
   26 Feb 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org>:
   Fixes several compiler warnings, output should be much cleaner.
