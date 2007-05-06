@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.148 2007/05/02 18:14:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.149 2007/05/06 15:58:26 phreak Exp $
+
+  06 May 2007; Christian Heim <phreak@gentoo.org>
+  hardened-sources-2.6.21.ebuild:
+  Bumping the hardened-patches version, needed for the fix for #177234.
 
 *hardened-sources-2.6.21 (02 May 2007)
 
