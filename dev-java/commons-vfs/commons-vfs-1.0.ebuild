@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/commons-vfs-1.0.ebuild,v 1.1 2007/03/29 15:53:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/commons-vfs-1.0.ebuild,v 1.2 2007/05/06 18:08:45 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -47,6 +47,7 @@ EANT_GENTOO_CLASSPATH="
 	commons-collections
 	ant-core
 "
+EANT_EXTRA_ARGS="-Dlibdir=${T}"
 
 # The build.xml is generated from maven and can't run the tests properly
 # Use maven test to execute these manually but that means downloading deps from

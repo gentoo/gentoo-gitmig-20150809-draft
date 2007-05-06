@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-vfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.1 2007/03/29 15:53:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.2 2007/05/06 18:08:45 caster Exp $
+
+  06 May 2007; Vlastimil Babka <caster@gentoo.org> commons-vfs-1.0.ebuild:
+  Fix sandbox issue.
 
 *commons-vfs-1.0 (29 Mar 2007)
 
