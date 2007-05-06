@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/skim-scim-anthy-1.2.2.ebuild,v 1.5 2007/04/18 18:16:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/skim-scim-anthy-1.2.2.ebuild,v 1.6 2007/05/06 04:47:59 dertobi123 Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/scim-imengine/22713/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=app-i18n/skim-1.3
