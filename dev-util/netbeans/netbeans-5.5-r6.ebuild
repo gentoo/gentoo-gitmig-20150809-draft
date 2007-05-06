@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.3 2007/05/04 21:36:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.4 2007/05/06 19:02:28 fordfrog Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -207,18 +207,11 @@ src_install() {
 	use doc && java-pkg_dojavadoc ${S}/nbbuild/build/javadoc
 
 	# Icons and shortcuts
-	einfo "Installing icons..."
+	einfo "Installing icon..."
+	dodir /usr/share/icons/hicolor/32x32/apps
+	dosym ${DESTINATION}/nb5.5/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
 
-	dodir ${DESTINATION}/icons
-	insinto ${DESTINATION}/icons
-	doins ${S}/ide/branding/release/*png
-
-	for res in "16x16" "24x24" "32x32" "48x48" "128x128" ; do
-		dodir /usr/share/icons/hicolor/${res}/apps
-		dosym ${DESTINATION}/icons/netbeans.png /usr/share/icons/hicolor/${res}/apps/netbeans.png
-	done
-
-	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans Development
+	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT}.png Development
 }
 
 pkg_postinst () {
