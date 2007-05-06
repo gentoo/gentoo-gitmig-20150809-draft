@@ -1,6 +1,10 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.30 2007/03/12 15:25:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.31 2007/05/06 04:55:41 dertobi123 Exp $
+
+  06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  crm114-20060704a.ebuild:
+  ppc stable
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> crm114-20060704a.ebuild:
   x86 stable

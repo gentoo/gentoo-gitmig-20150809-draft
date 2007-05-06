@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.93.ebuild,v 1.4 2007/04/15 20:01:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.93.ebuild,v 1.5 2007/05/06 04:56:53 dertobi123 Exp $
 
 IUSE="unicode"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mecab.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 ~sparc x86"
 SLOT="0"
 
 DEPEND="dev-lang/perl"
