@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.56 2007/05/05 13:47:13 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.57 2007/05/06 15:41:57 ian Exp $
+
+  06 May 2007; Christian Hartmann <ian@gentoo.org>
+  +DBD-SQLite-0.31-r1.ebuild:
+  Readding 0.31 for net-proxy/vultureng dep
 
   05 May 2007; Christian Hartmann <ian@gentoo.org>
   -files/sparc-DBD-SQLite-1.06.patch, -DBD-SQLite-0.31-r1.ebuild,
