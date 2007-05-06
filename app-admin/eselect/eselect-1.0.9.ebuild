@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.9.ebuild,v 1.1 2007/03/28 19:16:48 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.9.ebuild,v 1.2 2007/05/06 23:17:05 pioto Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="doc bash-completion"
+IUSE="doc bash-completion vim-syntax"
 
 DEPEND="sys-apps/sed
 	doc? ( dev-python/docutils )
@@ -22,6 +22,8 @@ DEPEND="sys-apps/sed
 	)"
 RDEPEND="sys-apps/sed
 	sys-apps/file"
+
+PDEPEND="vim-syntax? ( app-vim/eselect-syntax )"
 
 src_compile() {
 	econf || die "econf failed"
