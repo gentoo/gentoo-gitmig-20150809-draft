@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.138 2007/05/05 12:12:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.139 2007/05/06 19:45:07 ticho Exp $
+
+  06 May 2007; Andrej Kacian <ticho@gentoo.org>
+  spamassassin-3.2.0-r1.ebuild:
+  Depend on >=re2c-0.12.0, because 0.11.3 can produce buggy code. Bug #177302,
+  reported by Andreas Korinek <andreas.korinek at wizards-of-chemistry.net>.
 
   05 May 2007; Jeroen Roovers <jer@gentoo.org> spamassassin-3.2.0-r1.ebuild:
   Marked ~hppa (bug #177144).
