@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.2 2006/01/26 01:27:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.3 2007/05/06 17:32:23 dertobi123 Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.math.uni.wroc.pl/~hebisch/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND="virtual/libc"
