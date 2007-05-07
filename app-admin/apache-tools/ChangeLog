@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/apache-tools
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.1 2007/05/07 14:07:23 phreak Exp $
+
+*apache-tools-2.2.4 (07 May 2007)
+
+  07 May 2007; Christian Heim <phreak@gentoo.org> +metadata.xml,
+  +apache-tools-2.2.4.ebuild:
+  Importing the ebuild from our overlay for #150943 (needed for Auth/Digest w/
+  lighttpd).
+
