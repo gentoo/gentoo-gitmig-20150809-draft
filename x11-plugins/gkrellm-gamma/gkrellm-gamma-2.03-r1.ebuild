@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.4 2007/04/26 21:58:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.5 2007/05/07 17:30:24 dertobi123 Exp $
 
 inherit gkrellm-plugin
 
@@ -11,7 +11,7 @@ SRC_URI="http://sweb.cz/tripie/gkrellm/gamma/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~ppc sparc x86"
+KEYWORDS="ppc sparc x86"
 
 DEPEND="x11-libs/libXxf86vm"
 

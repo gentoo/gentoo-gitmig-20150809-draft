@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.1.7.ebuild,v 1.4 2007/03/12 18:04:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.1.7.ebuild,v 1.5 2007/05/07 17:29:47 dertobi123 Exp $
 
 inherit gkrellm-plugin
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.bender-suhl.de/stefan/comp/sources/${MY_P}.tar.gz"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ppc sparc x86"
 
 PLUGIN_SO=gkrellmbgchg.so
 PLUGIN_DOCS="bgchg_info.sh kdewallpaper.sh"
