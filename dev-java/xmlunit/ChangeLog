@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.9 2007/04/25 23:04:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.10 2007/05/07 16:56:01 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org> xmlunit-1.0-r2.ebuild:
+  Migrate to split-ant, fix compiling with java-strict.
 
   25 Apr 2007; Vlastimil Babka <caster@gentoo.org> -xmlunit-1.0.ebuild:
   Remove unused version.

@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.1 2007/02/09 23:27:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.2 2007/05/07 16:56:01 caster Exp $
 
-JAVA_PKG_IUSE="doc source"
-
+JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="XMLUnit extends JUnit and NUnit to enable unit testing of XML."
@@ -12,42 +11,46 @@ HOMEPAGE="http://xmlunit.sourceforge.net/"
 LICENSE="BSD"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="test"
+IUSE=""
 # We depend on jdk-1.4 as tests fail with jdk > 1.4
 # see http://sourceforge.net/tracker/index.php?func=detail&aid=1614984&group_id=23187&atid=377768
 # Also docs cannot be built with jdk > 1.5
+CDEPEND="=dev-java/junit-3*"
 DEPEND="=virtual/jdk-1.4*
-	>=app-arch/unzip-5.50-r1
+	app-arch/unzip
 	test? (
-		>=dev-java/ant-1.6
-		=dev-java/junit-3.8*
-		dev-java/xalan
+		dev-java/ant-junit
+		dev-java/ant-trax
 	)
-	!test? ( >=dev-java/ant-core-1.6 )
-	source? ( app-arch/zip )"
-RDEPEND="=virtual/jre-1.4*"
-EANT_BUILD_TARGET="jar"
-EANT_DOC_TARGET="docs"
+	${CDEPEND}"
+RDEPEND="=virtual/jre-1.4*
+	${CDEPEND}"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PVR}-build.xml.patch
-	rm -f ${S}/lib/*.jar
+	cd "${S}"
+
+	epatch "${FILESDIR}/${PN}-${PVR}-build.xml.patch"
+	rm -v ${S}/lib/*.jar || die
+	
+	java-ant_rewrite-classpath
 }
 
+EANT_DOC_TARGET="docs"
+EANT_GENTOO_CLASSPATH="junit"
+
 src_test() {
-	eant test
+	ANT_TASKS="ant-junit ant-trax" eant test
 }
 
 src_install() {
-	java-pkg_newjar lib/${PN}${PV}.jar ${PN}.jar
+	java-pkg_newjar lib/${PN}${PV}.jar
 
 	dodoc README.txt
 	use doc && java-pkg_dojavadoc doc
-	use source && java-pkg_dosrc src/java/*
+	use source && java-pkg_dosrc src/java/org
 }
 
 pkg_postinst() {
