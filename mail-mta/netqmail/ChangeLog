@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.36 2007/05/03 03:54:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.37 2007/05/07 18:08:11 hansmi Exp $
+
+  07 May 2007; Michael Hanselmann <hansmi@gentoo.org>
+  netqmail-1.05-r8.ebuild:
+  Stable on hppa, ppc, sparc, x86. Fixes problem with OpenSSL 0.9.8e.
 
 *netqmail-1.05-r8 (27 Apr 2007)
 
