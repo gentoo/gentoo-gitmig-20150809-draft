@@ -1,0 +1,11 @@
+# ChangeLog for app-vim/securemodelines
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.1 2007/05/07 19:23:00 pioto Exp $
+
+*securemodelines-20070409 (07 May 2007)
+
+  07 May 2007; Mike Kelly <pioto@gentoo.org> +metadata.xml,
+  +securemodelines-20070409.ebuild:
+  Initial ebuild. This package provides a secure replacement for vim's builtin
+  modeline support.
+
