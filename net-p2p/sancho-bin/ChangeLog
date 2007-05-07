@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.41 2007/03/24 14:25:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.42 2007/05/07 18:30:09 armin76 Exp $
+
+  07 May 2007; Raúl Porcel <armin76@gentoo.org> sancho-bin-0.9.4.58.ebuild:
+  Remove unneeded deps, bug 177529
 
   24 Mar 2007; Raúl Porcel <armin76@gentoo.org> sancho-bin-0.9.4.58.ebuild:
   Add missing IUSE

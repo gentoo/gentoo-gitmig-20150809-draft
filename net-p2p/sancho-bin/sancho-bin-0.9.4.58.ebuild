@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58.ebuild,v 1.4 2007/03/24 14:25:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58.ebuild,v 1.5 2007/05/07 18:30:09 armin76 Exp $
 
 inherit eutils
 
@@ -17,13 +17,10 @@ SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 IUSE=""
 
-DEPEND="virtual/libc
-	|| ( ( x11-libs/libXxf86vm
-		x11-libs/libXext
-		x11-libs/libX11
-	    ) virtual/x11 )
+DEPEND="x11-libs/libXxf86vm
+	x11-libs/libXext
+	x11-libs/libX11
 	>=x11-libs/gtk+-2
-	>=net-libs/linc-1.0.3
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0
 			>=app-emulation/emul-linux-x86-gtklibs-1.0 )"
 
@@ -67,3 +64,4 @@ pkg_postinst() {
 	einfo "net-p2p/mldonkey, in order to operate."
 	einfo
 }
+
