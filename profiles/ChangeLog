@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.365 2007/05/07 21:24:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.366 2007/05/07 22:32:14 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org> thirdpartymirrors:
+  Remove http://apache.get-software.com/ from apache mirrors, all distfiles
+  redirect to a 'domain-for-sale' page; not listed in Apache's mirror list
+  anymore.
 
   07 May 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
   Add new alsa-lib version-r1 to IUSE_PCM_PLUGIN masking
