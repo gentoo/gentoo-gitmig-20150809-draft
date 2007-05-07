@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7237 2007/05/07 20:59:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7238 2007/05/07 21:24:40 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -955,6 +955,7 @@ games-action/d2x-rebirth
 =media-libs/alsa-lib-1.0.14_rc1-r1
 =media-libs/alsa-lib-1.0.14_rc2-r1
 =media-libs/alsa-lib-1.0.14_rc3-r1
+=media-libs/alsa-lib-1.0.14_rc4-r1
 
 # Timothy Redaelli <drizzt@gentoo.org> (09 Dec 2006)
 # pending removal (#156989)
