@@ -1,9 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.23 2007/04/20 20:42:28 gustavoz Exp $
-
-# Mask gcc-4.x for upgrade reasons
->=sys-devel/gcc-4.0.0
-
-# STLport-5.1.0+ needs gcc4
->=dev-libs/STLport-5.1.0

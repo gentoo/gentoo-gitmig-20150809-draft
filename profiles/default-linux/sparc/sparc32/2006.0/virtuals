@@ -1,6 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/virtuals,v 1.2 2006/01/19 13:40:17 gustavoz Exp $
-
-virtual/dev-manager			sys-fs/udev
-virtual/linux-sources			sys-kernel/gentoo-sources
