@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.69 2007/04/15 10:56:32 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.70 2007/05/07 15:52:14 betelgeuse Exp $
+
+  07 May 2007; Petteri Räty <betelgeuse@gentoo.org> kaffe-1.1.7-r4.ebuild,
+  kaffe-1.1.7-r5.ebuild:
+  Call java-vm-2_pkg_setup in pkg_setup.
 
   15 Apr 2007; Matti Bickel <mabi@gentoo.org> kaffe-1.1.7-r5.ebuild:
   ~ppc back (bug #163801)

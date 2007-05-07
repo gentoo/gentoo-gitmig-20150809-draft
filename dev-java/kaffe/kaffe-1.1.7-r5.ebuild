@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.3 2007/04/15 10:56:32 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.4 2007/05/07 15:52:14 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -65,6 +65,7 @@ pkg_setup() {
 		ewarn "Don't file bugs for awt not working when you have"
 		ewarn "gtk use flag turned off."
 	fi
+	java-vm-2_pkg_setup
 }
 
 src_compile() {

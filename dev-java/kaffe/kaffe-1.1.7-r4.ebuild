@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r4.ebuild,v 1.2 2007/02/14 19:27:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r4.ebuild,v 1.3 2007/05/07 15:52:14 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -61,6 +61,7 @@ pkg_setup() {
 		ewarn "gtk use flag turned off."
 		epause 3
 	fi
+	java-vm-2_pkg_setup
 }
 
 src_compile() {
