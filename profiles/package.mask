@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7235 2007/05/07 19:00:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7236 2007/05/07 20:30:33 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1354,10 +1354,12 @@ dev-tex/mpm
 sci-mathematics/mupad
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
-# This is the Gentoo Linux Installer.  This is currently masked because it can
+# This is the Gentoo Linux Installer.  This is currently masked because it will
 # lead to some serious breakages on a machine.  If you are not developing on
 # this package, I would strongly recommend against using it.  If you break your
 # system with this, you're on your own.  You have been warned.
+# This package now is no longer safe to run except on a system where you are
+# planning on doing an install.
 sys-apps/gli
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
