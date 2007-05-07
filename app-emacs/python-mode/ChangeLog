@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.23 2006/08/19 19:44:50 mkennedy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.24 2007/05/07 15:24:41 jer Exp $
+
+  07 May 2007; Jeroen Roovers <jer@gentoo.org> python-mode-1.0.ebuild:
+  Marked ~hppa (bug #177495).
 
   19 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
   -files/55python-mode-gentoo.el, -files/50python-mode-gentoo.el,
