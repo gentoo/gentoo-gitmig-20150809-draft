@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.31 2007/05/04 01:49:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.32 2007/05/07 12:38:32 markusle Exp $
+
+  06 May 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/vtk-5.0.3-lammpi.patch, vtk-5.0.3.ebuild:
+  Added patch fixing cmake files to properly detect and add lam-mpi
+  libraries.
 
   04 May 2007; Markus Dittrich <markusle@gentoo.org> vtk-5.0.3.ebuild:
   Check for qt3support useflag when building the examples under qt4

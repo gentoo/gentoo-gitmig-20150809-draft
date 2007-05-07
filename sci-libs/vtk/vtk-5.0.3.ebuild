@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.3 2007/05/04 01:49:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.4 2007/05/07 12:38:32 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -54,6 +54,13 @@ pkg_setup() {
 			die "qt4 setup error"
 		fi
 }
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-lammpi.patch
+}
+
 
 src_compile() {
 	# gcc versions 3.2.x seem to have sse-related bugs that are 

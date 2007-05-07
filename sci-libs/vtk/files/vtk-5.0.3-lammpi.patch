@@ -1,0 +1,45 @@
+diff -Naur VTK/Parallel/CMakeLists.txt VTK-new/Parallel/CMakeLists.txt
+--- VTK/Parallel/CMakeLists.txt	2007-03-28 16:38:46.000000000 -0400
++++ VTK-new/Parallel/CMakeLists.txt	2007-05-06 08:46:55.000000000 -0400
+@@ -78,6 +78,7 @@
+ 
+ IF (VTK_USE_MPI)
+   INCLUDE (${CMAKE_ROOT}/Modules/FindMPI.cmake)
++  INCLUDE(${VTK_SOURCE_DIR}/Parallel/FindLAMMPI.cmake)
+   SET ( Kit_SRCS
+     ${Kit_SRCS}
+     vtkMPICommunicator.cxx
+@@ -94,6 +95,12 @@
+   IF (MPI_EXTRA_LIBRARY)   
+     SET(KIT_LIBS ${KIT_LIBS} "${MPI_EXTRA_LIBRARY}")   
+   ENDIF (MPI_EXTRA_LIBRARY) 
++  IF (LAMMPI_LIBRARY) 
++    SET(KIT_LIBS ${KIT_LIBS} "${LAMMPI_LIBRARY}")   
++  ENDIF (LAMMPI_LIBRARY)   
++  IF (LAMMPI_EXTRA_LIBRARY)   
++    SET(KIT_LIBS ${KIT_LIBS} "${LAMMPI_EXTRA_LIBRARY}")   
++  ENDIF (LAMMPI_EXTRA_LIBRARY) 
+ ENDIF (VTK_USE_MPI)
+ 
+ SET(Kit_EXTRA_SRCS)
+diff -Naur VTK/Parallel/FindLAMMPI.cmake VTK-new/Parallel/FindLAMMPI.cmake
+--- VTK/Parallel/FindLAMMPI.cmake	1969-12-31 19:00:00.000000000 -0500
++++ VTK-new/Parallel/FindLAMMPI.cmake	2007-05-06 18:30:22.000000000 -0400
+@@ -0,0 +1,17 @@
++# - Find LamMPI
++FIND_LIBRARY(LAMMPI_LIBRARY 
++             NAMES lam
++             PATHS /usr/lib /usr/lib64 
++             "$ENV{ProgramFiles}/MPICH/SDK/Lib"
++             "$ENV{ProgramFiles}/MPICH2/Lib"
++             "C:/Program Files/MPICH/SDK/Lib" 
++)
++
++FIND_LIBRARY(LAMMPI_EXTRA_LIBRARY 
++             NAMES lammpi++
++             PATHS /usr/lib /usr/lib64 
++             "$ENV{ProgramFiles}/MPICH/SDK/Lib"
++             "C:/Program Files/MPICH/SDK/Lib" 
++             DOC "If a second mpi library is necessary, specify it here.")
++
++MARK_AS_ADVANCED(LAMMPI_LIBRARY LAMMPI_EXTRA_LIBRARY)
