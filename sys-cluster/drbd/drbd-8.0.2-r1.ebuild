@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.2.ebuild,v 1.1 2007/05/05 19:49:54 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.2-r1.ebuild,v 1.1 2007/05/07 15:48:57 xmerlin Exp $
 
 inherit eutils versionator linux-mod linux-info
 
@@ -53,7 +53,7 @@ src_install() {
 	emake PREFIX=${D} install || die "install problem"
 
 	# gentoo-ish init-script
-	newinitd ${FILESDIR}/${PN}-0.7.rc ${PN} || die
+	newinitd ${FILESDIR}/${PN}-8.0.rc ${PN} || die
 
 	# needed by drbd startup script
 	#keepdir /var/lib/drbd
