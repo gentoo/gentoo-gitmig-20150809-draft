@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r2.ebuild,v 1.1 2007/04/14 11:14:06 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r2.ebuild,v 1.2 2007/05/07 15:34:06 gurligebis Exp $
 
 inherit eutils
 DESCRIPTION="Deamon that emulates Microsoft's Internet Connection Sharing (ICS)
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=net-misc/libupnp-1.4.1"
+DEPEND=">=net-libs/libupnp-1.4.1"
 RDEPEND="net-firewall/iptables"
 S=${WORKDIR}/linuxigd-${PV}
 
