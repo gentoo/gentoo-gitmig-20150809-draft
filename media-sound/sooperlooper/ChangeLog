@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sooperlooper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.5 2007/04/30 02:24:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.6 2007/05/07 01:37:52 dirtyepic Exp $
+
+  07 May 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/sooperlooper-1.1.0-amd64.patch, sooperlooper-1.0.8c.ebuild,
+  sooperlooper-1.1.0.ebuild:
+  Add patch for build failure on amd64 (bug #176751).
 
 *sooperlooper-1.1.0 (30 Apr 2007)
 
