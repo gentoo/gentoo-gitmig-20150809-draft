@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.259 2007/05/05 05:16:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.260 2007/05/07 16:07:55 philantrop Exp $
+
+  07 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kopete-3.5.6-cryptobug.patch, kdenetwork-3.5.6-r1.ebuild:
+  Dropped the PDEPEND on net-im/kopete-otr because of keywording issues and
+  added a post-install message instead. Re-added ~alpha. Invalidates bug
+  176926. Added upstream patch for cryptography, fixes bug 177319.
 
   05 May 2007; Jeroen Roovers <jer@gentoo.org> kdenetwork-3.5.6-r1.ebuild:
   Marked ~hppa (bug #176926).

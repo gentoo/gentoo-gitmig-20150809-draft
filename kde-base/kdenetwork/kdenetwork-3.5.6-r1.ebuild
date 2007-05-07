@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.6-r1.ebuild,v 1.3 2007/05/05 05:16:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.6-r1.ebuild,v 1.4 2007/05/07 16:07:55 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
 DESCRIPTION="KDE network applications: Kopete, KPPP, KGet,..."
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt jingle kdehiddenvisibility rdesktop sametime slp ssl wifi"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="jingle kdehiddenvisibility rdesktop sametime slp ssl wifi"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/kdenetwork-3.5-patchset-01.tar.bz2"
@@ -36,8 +36,7 @@ RDEPEND="${BOTH_DEPEND}
 	dev-lang/perl
 	ssl? ( dev-perl/IO-Socket-SSL
 		app-crypt/qca-tls )
-	net-dialup/ppp
-	crypt? ( app-crypt/gnupg )"
+	net-dialup/ppp"
 
 DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
@@ -46,10 +45,9 @@ DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( x11-libs/libXv )
 	x11-proto/scrnsaverproto"
 
-PDEPEND="crypt? ( net-im/kopete-otr )"
-
 PATCHES="${FILESDIR}/kopete-3.5.5-icqfix.patch
-	${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
+	${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch
+	${FILESDIR}/kopete-3.5.6-cryptobug.patch"
 
 pkg_setup() {
 	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
@@ -87,4 +85,10 @@ src_install() {
 
 	newconfd "${WORKDIR}/patches/lisa.conf" lisa
 	newconfd "${WORKDIR}/patches/reslisa.conf" reslisa
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	elog "If you would like to use Off-The-Record encryption with Kopete, emerge net-im/kopete-otr."
 }
