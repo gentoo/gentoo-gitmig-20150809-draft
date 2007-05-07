@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.127 2007/05/07 15:17:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.128 2007/05/07 15:29:27 gustavoz Exp $
+
+  07 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> freetype-2.3.3.ebuild:
+  Stable on sparc wrt #173804
 
   07 May 2007; Jeroen Roovers <jer@gentoo.org> freetype-2.3.3.ebuild:
   Stable for HPPA (bug #173804).
