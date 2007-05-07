@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.22 2007/03/07 22:04:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.23 2007/05/07 15:51:48 betelgeuse Exp $
+
+  07 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  emul-linux-x86-java-1.4.2.03-r2.ebuild:
+  Call java-vm-2_pkg_setup in pkg_setup.
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   emul-linux-x86-java-1.4.2.03-r2.ebuild,

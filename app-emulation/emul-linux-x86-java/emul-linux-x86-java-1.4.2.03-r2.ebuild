@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.3 2007/03/07 22:04:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.4 2007/05/07 15:51:48 betelgeuse Exp $
 
 inherit multilib java-vm-2 versionator
 
@@ -31,6 +31,7 @@ JAVAHOME="${D}/opt/java32"
 # 32bit binary package
 pkg_setup() {
 	ABI="x86"
+	java-vm-2_pkg_setup
 }
 
 RESTRICT="nostrip"
