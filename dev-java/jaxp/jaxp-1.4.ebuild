@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.4.ebuild,v 1.3 2007/05/04 19:29:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.4.ebuild,v 1.4 2007/05/07 22:52:53 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -26,8 +26,7 @@ src_unpack() {
 
 }
 
-# bundled javadocs but no build.xml to generate
-EANT_DOC_TARGET="jar"
+EANT_DOC_TARGET=""
 
 src_install() {
 
