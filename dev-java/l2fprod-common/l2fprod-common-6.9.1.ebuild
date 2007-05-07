@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-6.9.1.ebuild,v 1.2 2006/12/03 00:49:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-6.9.1.ebuild,v 1.3 2007/05/07 16:23:09 caster Exp $
 
+WANT_ANT_TASKS="ant-trax"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Java/Swing GUI components and libraries for building desktop applications"
@@ -12,7 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
 	dev-java/jreleaseinfo"
 RDEPEND=">=virtual/jre-1.4"
 
@@ -36,5 +36,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar build/jars/*.jar
-	dodoc README.txt
+	dodoc README.txt || die
 }

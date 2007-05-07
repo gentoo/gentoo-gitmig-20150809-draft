@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/jvyaml-0.2.1-r1.ebuild,v 1.4 2007/03/09 11:35:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/jvyaml-0.2.1-r1.ebuild,v 1.5 2007/05/07 16:20:17 caster Exp $
 
 JAVA_PKG_IUSE="source test"
-
 inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="Java YAML parser and emitter"
@@ -12,13 +11,13 @@ SRC_URI="https://${PN}.dev.java.net/files/documents/5215/41455/${PN}-src-${PV}.t
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
 	test? (
-		dev-java/ant
-		dev-java/junit
-	)
-	dev-java/ant-core"
+		dev-java/ant-junit
+		=dev-java/junit-3*
+	)"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
@@ -44,5 +43,5 @@ src_install() {
 }
 
 src_test() {
-	eant test
+	ANT_TASKS="ant-junit" eant test
 }

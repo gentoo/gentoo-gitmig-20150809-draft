@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.9.ebuild,v 1.2 2007/05/03 16:24:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.9.ebuild,v 1.3 2007/05/07 16:16:50 caster Exp $
 
+JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Java based ruby interpreter implementation"
@@ -20,12 +21,11 @@ COMMON_DEPEND=">=dev-java/jline-0.9.91
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	!test? ( dev-java/ant-core )
 	test? (
-		dev-java/junit
-		dev-java/ant
+		=dev-java/junit-3*
+		dev-java/ant-junit
+		dev-java/ant-trax
 	)
-	source? ( app-arch/zip )
 	${COMMON_DEPEND}"
 
 EANT_DOC_TARGET="create-apidocs"
@@ -88,5 +88,5 @@ src_install() {
 }
 
 src_test() {
-	eant test
+	ANT_TASKS="ant-junit ant-trax" eant test
 }

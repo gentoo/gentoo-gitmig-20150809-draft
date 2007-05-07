@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jvyaml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.9 2007/03/09 11:35:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.10 2007/05/07 16:20:17 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org> jvyaml-0.2.1-r1.ebuild:
+  Migrate to split-ant.
 
   09 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> jvyaml-0.2.1-r1.ebuild:
   Remove doc from IUSE because the ebuild does not support it. Fixes 
