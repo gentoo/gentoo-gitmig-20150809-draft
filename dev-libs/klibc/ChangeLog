@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.37 2007/02/10 14:23:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.38 2007/05/07 19:22:32 wolf31o2 Exp $
+
+  07 May 2007; Chris Gianelloni <wolf31o2@gentoo.org> klibc-1.4.13.ebuild:
+  Stable on amd64/ppc/x86 for splashutils.
 
   10 Feb 2007; Christian Heim <phreak@gentoo.org> klibc-1.2.1-r2.ebuild:
   Backporting the types.h fix from 1.4.33 to 1.2.1-r2, making current stable
