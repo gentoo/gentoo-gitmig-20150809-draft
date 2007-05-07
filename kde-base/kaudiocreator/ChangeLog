@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kaudiocreator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.67 2007/02/04 01:46:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.68 2007/05/07 08:14:08 masterdriverz Exp $
+
+*kaudiocreator-3.5.6-r1 (07 May 2007)
+
+  07 May 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/kaudiocreator-3.5.6-arts.patch, -kaudiocreator-3.5.6.ebuild,
+  +kaudiocreator-3.5.6-r1.ebuild:
+  Add a patch to fix kaudiocreator building against arts with USE="-arts".
+  Thanks to jmbsvicetto and Shealdon Hearn
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kaudiocreator-3.5.2.ebuild:
