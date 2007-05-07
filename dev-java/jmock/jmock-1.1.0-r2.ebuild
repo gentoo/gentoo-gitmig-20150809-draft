@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.1.0-r2.ebuild,v 1.1 2007/04/07 19:15:36 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.1.0-r2.ebuild,v 1.2 2007/05/07 17:08:43 caster Exp $
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc examples source test"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Library for testing Java code using mock objects."
@@ -11,7 +11,7 @@ HOMEPAGE="http://jmock.codehaus.org"
 LICENSE="BSD"
 SLOT="1.0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples test"
+IUSE=""
 
 COMMON_DEPEND="
 	=dev-java/cglib-2.0*
@@ -22,39 +22,34 @@ RDEPEND=">=virtual/jre-1.4
 
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPEND}
-	dev-java/ant-core
 	app-arch/unzip
-	test? ( dev-java/ant-tasks )"
+	test? ( dev-java/ant-junit )"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
 	epatch "${FILESDIR}/1.1.0-build.xml.patch"
 	epatch "${FILESDIR}/1.1.0-junit-3.8.2.patch"
 
-	cd ${S}/lib
-	rm *.jar
-	java-pkg_jar-from cglib-2
-	java-pkg_jar-from junit
+	cd ${S}/lib || die
+	rm -v *.jar || die
+	java-pkg_jar-from cglib-2,junit
 }
 
 EANT_BUILD_TARGET="core.jar cglib.jar"
 
 src_test() {
-	eant core.test.unit cglib.test.unit
+	ANT_TASKS="ant-junit" eant core.test.unit cglib.test.unit
 }
 
 src_install() {
-	java-pkg_newjar build/dist/jars/${PN}-SNAPSHOT.jar ${PN}.jar
+	java-pkg_newjar build/dist/jars/${PN}-SNAPSHOT.jar
 	java-pkg_newjar build/dist/jars/${PN}-cglib-SNAPSHOT.jar ${PN}-cglib.jar
-	dodoc CHANGELOG
-	dohtml overview.html
+	dodoc CHANGELOG || die
+	dohtml overview.html || die
 
 	use doc && java-pkg_dojavadoc build/javadoc-*
+	use examples && java-pkg_doexamples examples
 	use source && java-pkg_dosrc core/src/org
-	if use examples; then
-		dodir /usr/share/doc/${PF}/examples
-		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
-	fi
 }
