@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.160 2007/05/04 12:02:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.161 2007/05/07 21:56:24 chtekk Exp $
+
+*php-5.2.2-r1 (07 May 2007)
+*php-4.4.7 (07 May 2007)
+
+  07 May 2007; Luca Longinotti <chtekk@gentoo.org> +php-4.4.7.ebuild,
+  +php-5.2.2-r1.ebuild:
+  PHP 4.4.7 and 5.2.2, fixes various security issues, see bug #169372.
 
   04 May 2007; Luca Longinotti <chtekk@gentoo.org> -php-4.3.11-r5.ebuild,
   -php-4.4.4-r6.ebuild, php-4.4.6.ebuild, -php-5.0.5-r5.ebuild,
