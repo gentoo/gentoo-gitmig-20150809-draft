@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.515 2007/04/21 21:28:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.516 2007/05/07 15:01:09 phreak Exp $
+
+  07 May 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4.ebuild:
+  Importing Luca's and my work from the overlay, apache-2.2.4 should now be
+  ready and should be fixing all those open bugreports.
 
   21 Apr 2007; Christian Heim <phreak@gentoo.org> apache-1.3.34-r14.ebuild,
   apache-1.3.37.ebuild:

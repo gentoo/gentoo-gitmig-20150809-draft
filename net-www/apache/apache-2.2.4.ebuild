@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4.ebuild,v 1.2 2007/01/28 20:00:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4.ebuild,v 1.3 2007/05/07 15:01:09 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -18,21 +18,25 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 # some helper scripts are apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 
-SLOT="2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc ldap mpm-event mpm-peruser mpm-prefork mpm-worker no-suexec selinux ssl static-modules threads"
 
-DEPEND="app-misc/mime-types
-		dev-lang/perl
-		=dev-libs/apr-1*
-		=dev-libs/apr-util-1*
-		dev-libs/expat
-		dev-libs/libpcre
-		sys-libs/zlib
-		ldap? ( =net-nds/openldap-2* )
-		selinux? ( sec-policy/selinux-apache )
-		ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+DEPEND="dev-lang/perl
+	=dev-libs/apr-1*
+	=dev-libs/apr-util-1*
+	dev-libs/expat
+	dev-libs/libpcre
+	sys-libs/zlib
+	ldap? ( =net-nds/openldap-2* )
+	selinux? ( sec-policy/selinux-apache )
+	ssl? ( dev-libs/openssl )
+	!=net-www/apache-1*"
+
+RDEPEND="${DEPEND}
+	app-misc/mime-types"
+
+PDEPEND="~app-admin/apache-tools-${PV}"
 
 S="${WORKDIR}/httpd-${PV}"
 
@@ -104,12 +108,9 @@ src_unpack() {
 		epatch "${GENTOO_PATCHDIR}"/patches/[6-9]?_*_${PV}_*
 	fi
 
-	# avoid utf-8 charset problems
-	export LC_CTYPE=C
-
 	# setup the filesystem layout config
-	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> config.layout
-	sed -i -e "s:version:${PF}:g" config.layout
+	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> "${S}"/config.layout
+	sed -i -e "s:version:${PF}:g" "${S}"/config.layout
 
 	# patched-in MPMs need the build environment rebuilt
 	sed -i -e '/sinclude/d' configure.in
@@ -117,23 +118,25 @@ src_unpack() {
 }
 
 src_compile() {
-	local modtype
-	if use static-modules ; then
-		modtype="static"
-	else
-		modtype="shared"
-	fi
+	local modtype="shared" myconf=""
+	cd "${S}"
 
+	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
+	# Thanks to Harald van Dijk
+	append-ldflags -Wl,--no-as-needed
+
+	use static-modules && modtype="static"
 	select_modules_config || die "determining modules failed"
 
-	local myconf=""
-	use ldap \
-		&& mods="${mods} ldap authnz_ldap" \
-		&& myconf="${myconf} --enable-authnz-ldap=${modtype}" \
-		&& myconf="${myconf} --enable-ldap=${modtype}"
-	use ssl \
-		&& mods="${mods} ssl" \
-		&& myconf="${myconf} --with-ssl=/usr --enable-ssl=${modtype}"
+	if use ldap ; then
+		mods="${mods} ldap authnz_ldap"
+		myconf="${myconf} --enable-authnz-ldap=${modtype} --enable-ldap=${modtype}"
+	fi
+
+	if use ssl; then
+		mods="${mods} ssl"
+		myconf="${myconf} --with-ssl=/usr --enable-ssl=${modtype}"
+	fi
 
 	# Fix for bug #24215 - robbat2@gentoo.org, 30 Oct 2003
 	# We pre-load the cache with the correct answer! This avoids
@@ -141,7 +144,7 @@ src_compile() {
 	# non-Linux systems or if sem_open changes on Linux. This
 	# hack is built around documentation in /usr/include/semaphore.h
 	# and the glibc (pthread) source.
-	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> "${S}/config.cache"
+	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> config.cache
 
 	if use no-suexec ; then
 		myconf="${myconf} --disable-suexec"
@@ -153,27 +156,28 @@ src_compile() {
 				--enable-suexec=${modtype}"
 	fi
 
-	# common confopts
-	myconf="--cache-file='${S}/config.cache' \
-			--with-mpm=${mpm} \
-			--with-perl=/usr/bin/perl \
-			--with-expat=/usr \
-			--with-z=/usr \
-			--with-apr=/usr \
-			--with-apr-util=/usr \
-			--with-pcre=/usr \
-			--with-port=80 \
-			--enable-layout=Gentoo \
-			--with-program-name=apache2 \
-			${myconf} \
-			${MY_BUILTINS}"
+	# econf overwrites the stuff from config.layout, so we have to put them into
+	# our myconf line too
 
-	# debugging support
-	if use debug ; then
-		myconf="${myconf} --enable-maintainer-mode"
-	fi
-
-	econf ${myconf} || die "econf failed: please submit a bug report to bugs.gentoo.org, including your config.layout and config.log"
+	econf \
+		--includedir=/usr/include/apache2 \
+		--libexecdir=/usr/$(get_libdir)/apache2/modules \
+		--datadir=/var/www/localhost \
+		--sysconfdir=/etc/apache2 \
+		--localstatedir=/var \
+		--cache-file="${S}/config.cache" \
+		--with-mpm=${mpm} \
+		--with-perl=/usr/bin/perl \
+		--with-expat=/usr \
+		--with-z=/usr \
+		--with-apr=/usr \
+		--with-apr-util=/usr \
+		--with-pcre=/usr \
+		--with-port=80 \
+		--with-program-name=apache2 \
+		--enable-layout=Gentoo \
+		$( use_enable debug maintainer-mode ) \
+		${myconf} ${MY_BUILTINS} || die "econf failed!"
 
 	sed -i -e 's:apache2\.conf:httpd.conf:' include/ap_config_auto.h
 
@@ -181,21 +185,15 @@ src_compile() {
 }
 
 src_install () {
-	#### DEFAULT SETUP & INSTALL
-
-	# general install
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	#### CLEAN-UP
-	rm -Rf "${D}"/etc
-	rm -f "${D}"/usr/sbin/envvars*
-	rm -f "${D}"/usr/sbin/apachectl
-
-	#### CONFIGURATION
-	insinto /etc/apache2
-
-	# restore the magic file
-	doins docs/conf/magic
+	# Remove some of the default files installed by `make install'
+	# and those binaries/manpages, that belong to app-admin/apache-tools now
+	rm -Rf "${D}"/etc \
+		"${D}"/usr/sbin/{envvars*,apachectl} \
+		"${D}"/usr/sbin/{htdigest,htpasswd,ab,htdbm} \
+		"${D}"/usr/share/man/man1/{htdigest,htpasswd,htdbm}.1* \
+		"${D}"/usr/share/man/man8/ab.8*
 
 	# This is a mapping of module names to the -D options in APACHE2_OPTS
 	# Used for creating optional LoadModule lines
@@ -231,9 +229,10 @@ src_install () {
 	sed -i -e "s:%%LOAD_MODULE%%:${load_module}:" \
 		"${GENTOO_PATCHDIR}"/conf/httpd.conf || die "sed failed"
 
-	# install our configuration	
+	# Install our configuration files
+	insinto /etc/apache2
+	doins docs/conf/magic
 	doins -r "${GENTOO_PATCHDIR}"/conf/*
-
 	insinto /etc/logrotate.d
 	newins "${GENTOO_PATCHDIR}"/scripts/apache2-logrotate apache2
 
@@ -246,15 +245,13 @@ src_install () {
 	sed -i -e "s:APACHE2_OPTS=\".*\":APACHE2_OPTS=\"${APACHE2_OPTS}\":" \
 		"${GENTOO_PATCHDIR}"/init/apache2.confd || die "sed failed"
 
-	mv -f "${D}"/etc/apache2/apache2-builtin-mods "${D}"/etc/apache2/apache2-builtin-mods-2.2
-
 	newconfd "${GENTOO_PATCHDIR}"/init/apache2.confd apache2
 	newinitd "${GENTOO_PATCHDIR}"/init/apache2.initd apache2
 
 	# link apache2ctl to the init script
 	dosym /etc/init.d/apache2 /usr/sbin/apache2ctl
 
-	#### HELPER SCRIPTS
+	# Install some thirdparty scripts
 	exeinto /usr/sbin
 	for i in apache2logserverstatus apache2splitlogfile suexec2-config ; do
 		doexe "${GENTOO_PATCHDIR}"/scripts/${i}
@@ -270,35 +267,10 @@ src_install () {
 	doins "${GENTOO_PATCHDIR}"/scripts/Makefile.suexec
 	doins support/suexec.c
 
-	#### SLOTTING
-	cd "${D}"
-
-	# sbin binaries
-	slotmv="apxs htpasswd htdigest rotatelogs logresolve log_server_status
-			ab checkgid dbmmanage split-logfile suexec"
-	for i in ${slotmv} ; do
-		mv -f usr/sbin/${i} usr/sbin/${i}2
-	done
-	mv -f usr/sbin/logresolve.pl usr/sbin/logresolve2.pl
-
-	# man.1
-	for i in dbmmanage htdigest htpasswd ; do
-		mv -f usr/share/man/man1/${i}.1 usr/share/man/man1/${i}2.1
-	done
-
-	# man.8
-	for i in ab apxs logresolve rotatelogs suexec ; do
-		mv -f usr/share/man/man8/${i}.8 usr/share/man/man8/${i}2.8
-	done
-
-	mv -f usr/share/man/man8/httpd.8 usr/share/man/man8/apache2.8
-
 	# we don't use apachectl anymore, it's symlinked to the init script now
 	rm -f usr/share/man/man8/apachectl.8
 
-	#### DOCS
-	# basic info
-	cd "${S}"
+	# Install some documentation
 	dodoc ABOUT_APACHE CHANGES LAYOUT README README.platforms VERSIONING
 
 	# drop in a convenient link to the manual
@@ -314,11 +286,10 @@ src_install () {
 	mv -f "${D}/var/www/localhost" "${D}/usr/share/doc/${PF}/webroot"
 	eend $?
 
-	#### PERMISSONS
-	# protect the suexec binary
+	# Set up some sane permissions
 	if ! use no-suexec ; then
-		fowners 0:apache /usr/sbin/suexec2
-		fperms 4710 /usr/sbin/suexec2
+		fowners 0:apache /usr/sbin/suexec
+		fperms 4710 /usr/sbin/suexec
 	fi
 
 	keepdir /etc/apache2/vhosts.d
@@ -355,12 +326,12 @@ pkg_postinst() {
 	# when apache is upgraded.
 
 	if [[ -e "${ROOT}/var/www/localhost" ]] ; then
-		einfo "The default webroot has not been installed into"
-		einfo "${ROOT}/var/www/localhost because the directory already exists"
-		einfo "and we do not want to overwrite any files you have put there."
-		einfo
-		einfo "If you would like to install the latest webroot, please run"
-		einfo "emerge --config =${PF}"
+		elog "The default webroot has not been installed into"
+		elog "${ROOT}/var/www/localhost because the directory already exists"
+		elog "and we do not want to overwrite any files you have put there."
+		elog
+		elog "If you would like to install the latest webroot, please run"
+		elog "emerge --config =${PF}"
 	else
 		einfo "Installing default webroot to ${ROOT}/var/www/localhost"
 		mkdir -p "${ROOT}"/var/www/localhost
@@ -371,33 +342,26 @@ pkg_postinst() {
 	# Check for dual/upgrade install
 	# The hasq is a hack so we don't throw QA warnings for not putting
 	# apache2 in IUSE - the only use of the flag is this warning
-	if has_version '=net-www/apache-1*' || ! hasq apache2 ${USE} ; then
-		ewarn
-		ewarn "Please add the 'apache2' flag to your USE variable and (re)install"
-		ewarn "any additional DSO module(s) you may wish to use with Apache-2.x."
-		ewarn "Addon modules are configured in ${ROOT}/etc/apache2/modules.d"
-		ewarn
-	fi
 
 	if has_version '<net-www/apache-2.2.0' ; then
-		einfo
-		einfo "When upgrading from versions below 2.2.0 to this version, you"
-		einfo "need to rebuild all your modules. Please do so for your modules"
-		einfo "to continue working correctly."
-		einfo
-		einfo "Also note that some configuration directives have been"
-		einfo "split into their own files under ${ROOT}/etc/apache2/modules.d"
-		einfo
-		einfo "For more information on what you may need to change, please"
-		einfo "see the overview of changes at:"
-		einfo "http://httpd.apache.org/docs/2.2/new_features_2_2.html"
-		einfo
-		einfo "Some modules do not yet work with Apache 2.2."
-		einfo "To keep from accidentally downgrading to Apache 2.0, you should"
-		einfo "add the following to ${ROOT}/etc/portage/package.mask:"
-		einfo
-		einfo "    <net-www/apache-2.2.0"
-		einfo
+		elog
+		elog "When upgrading from versions below 2.2.0 to this version, you"
+		elog "need to rebuild all your modules. Please do so for your modules"
+		elog "to continue working correctly."
+		elog
+		elog "Also note that some configuration directives have been"
+		elog "split into their own files under ${ROOT}/etc/apache2/modules.d"
+		elog
+		elog "For more information on what you may need to change, please"
+		elog "see the overview of changes at:"
+		elog "http://httpd.apache.org/docs/2.2/new_features_2_2.html"
+		elog
+		elog "Some modules do not yet work with Apache 2.2."
+		elog "To keep from accidentally downgrading to Apache 2.0, you should"
+		elog "add the following to ${ROOT}/etc/portage/package.mask:"
+		elog
+		elog "    <net-www/apache-2.2.0"
+		elog
 	fi
 }
 
@@ -455,7 +419,7 @@ parse_modules_config() {
 }
 
 select_modules_config() {
-	parse_modules_config "${ROOT}"/etc/apache2/apache2-builtin-mods-2.2 || \
+	parse_modules_config "${ROOT}"/etc/apache2/apache2-builtin-mods || \
 	parse_modules_config "${GENTOO_PATCHDIR}"/conf/apache2-builtin-mods || \
 	return 1
 }
