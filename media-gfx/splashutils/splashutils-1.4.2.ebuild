@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.ebuild,v 1.1 2007/05/06 22:17:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.ebuild,v 1.2 2007/05/07 19:55:25 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -63,6 +63,9 @@ src_unpack() {
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
+
+	cd ${SG}
+	epatch ${FILESDIR}/${P}-rcabort.patch
 
 	cd ${S}
 	ln -sf ${S} ${WORKDIR}/core
