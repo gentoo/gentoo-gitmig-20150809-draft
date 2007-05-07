@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/ChangeLog,v 1.9 2007/02/14 00:40:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/ChangeLog,v 1.10 2007/05/07 18:52:27 wolf31o2 Exp $
+
+*gli-0.5.4 (07 May 2007)
+
+  07 May 2007; Chris Gianelloni <wolf31o2@gentoo.org> +gli-0.5.4.ebuild:
+  Version bump to 0.5.4 for 2007.0's release.
 
   14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> -gli-0.4.ebuild,
   -gli-0.4.1.ebuild, gli-0.4.2.ebuild:
