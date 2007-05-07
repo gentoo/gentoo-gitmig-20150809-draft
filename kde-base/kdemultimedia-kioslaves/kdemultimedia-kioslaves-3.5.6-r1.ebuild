@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5.6.ebuild,v 1.2 2007/01/17 11:14:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5.6-r1.ebuild,v 1.1 2007/05/07 08:20:18 masterdriverz Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=kioslave
@@ -26,7 +26,8 @@ KMCOMPILEONLY="
 	kscd/libwm
 	libkcddb"
 
-PATCHES="${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch"
+PATCHES="${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch
+	${FILESDIR}/${P}-arts.patch"
 
 src_compile() {
 	myconf="--with-cdparanoia --enable-cdparanoia"
