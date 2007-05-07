@@ -1,0 +1,2 @@
+# require dev-libs/pcre++
+sys-apps/paludis qa inquisitio

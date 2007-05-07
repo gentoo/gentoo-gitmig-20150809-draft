@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7232 2007/05/06 23:07:15 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7233 2007/05/07 13:24:12 pioto Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Mike Kelly <pioto@gentoo.org> (7 May 2007)
+# Not a very good or useful script, has an open bug (#158231), not really worth
+# fixing. To be removed in 30 days.
+app-vim/sudo
 
 # Rajiv Aaron Manglani <rajiv@gentoo.org> (6 May 2007)
 # open security issues, no longer supported upstream.
