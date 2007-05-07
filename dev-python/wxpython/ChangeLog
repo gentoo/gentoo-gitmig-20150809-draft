@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.57 2007/05/01 12:23:31 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.58 2007/05/07 10:30:20 kloeri Exp $
+
+  07 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  wxpython-2.6.3.3.ebuild:
+  Add missing category to built_with_use call. Bug reported by kimrhh on irc.
 
   01 May 2007; Mart Raudsepp <leio@gentoo.org>
   -files/scripts-multiver-2.6.0.0.diff, -files/wxversion.py,
