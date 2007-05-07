@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.15 2007/05/01 09:48:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.16 2007/05/07 03:45:46 jer Exp $
+
+  07 May 2007; Jeroen Roovers <jer@gentoo.org> radiusclient-0.3.2.ebuild:
+  Marked ~hppa (bug #176487).
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org> radiusclient-0.3.2.ebuild:
   Add ~ia64 wrt bug 176487
