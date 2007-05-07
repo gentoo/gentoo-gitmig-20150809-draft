@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.10 2007/05/07 10:18:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.11 2007/05/07 15:05:40 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.bytesex.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ppc ppc64 ~sh sparc x86"
 IUSE="png jpeg gif tiff curl lirc X fbcon pdf"
 
 RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
