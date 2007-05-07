@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.90 2007/05/07 10:35:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.91 2007/05/07 12:46:26 kloeri Exp $
+
+  07 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  python-docs-2.3.5.ebuild, python-docs-2.4.4.ebuild,
+  python-docs-2.5.1.ebuild:
+  Fix collision protect problem, bug 145241.
 
   07 May 2007; Bryan Østergaard <kloeri@gentoo.org>
   python-docs-2.4.4.ebuild:
