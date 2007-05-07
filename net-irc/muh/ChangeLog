@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/muh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.17 2007/05/06 12:37:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.18 2007/05/07 19:34:47 dang Exp $
+
+  07 May 2007; Daniel Gryniewicz <dang@gentoo.org> muh-2.2a.ebuild:
+  Marked ~amd64 for bug #176238
 
   06 May 2007; Marius Mauch <genone@gentoo.org> muh-2.2a.ebuild:
   Replacing einfo with elog
