@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/japitools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.5 2007/03/16 19:10:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.6 2007/05/07 17:05:14 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org> japitools-0.9.7.ebuild:
+  Migrate to split-ant, tweak style.
 
   16 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -japitools-0.9.5-r1.ebuild, japitools-0.9.7.ebuild:
