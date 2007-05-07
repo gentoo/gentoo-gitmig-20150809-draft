@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r8.ebuild,v 1.1 2007/05/05 12:30:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r8.ebuild,v 1.2 2007/05/07 21:09:44 genstef Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="acl alsa arts branding cups doc jpeg2k kerberos legacyssl utempter openexr spell tiff
-avahi kernel_linux fam lua linguas_he kdehiddenvisibility"
+avahi kernel_linux fam lua kdehiddenvisibility"
 
 # Added aspell-en as dependency to work around bug 131512.
 # Made openssl and zeroconf mandatory dependencies, see bug #172972 and #175984
@@ -43,8 +43,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	utempter? ( sys-libs/libutempter )
 	!kde-base/kde-env
 	lua? ( dev-lang/lua )
-	spell? ( >=app-text/aspell-0.60.5 >=app-dicts/aspell-en-6.0.0
-	linguas_he? ( >=app-text/hspell-1.0 ) )
+	spell? ( >=app-text/aspell-0.60.5 >=app-dicts/aspell-en-6.0.0 )
 	>=sys-apps/portage-2.1.2.6"
 
 DEPEND="${RDEPEND}
@@ -115,6 +114,7 @@ src_compile() {
 
 	myconf="--with-distribution=Gentoo --disable-fast-malloc
 			--with-libart --with-libidn --with-ssl
+			--without-hspell
 			$(use_enable fam libfam) $(use_enable kernel_linux dnotify)
 			$(use_with acl) $(use_with alsa)
 			$(use_with arts) $(use_enable cups)
@@ -128,12 +128,6 @@ src_compile() {
 		myconf="${myconf} --enable-dnssd"
 	else
 		myconf="${myconf} --disable-dnssd"
-	fi
-
-	if use spell; then
-		myconf="${myconf} $(use_with linguas_he hspell)"
-	else
-		myconf="${myconf} --without-hspell"
 	fi
 
 	if has_version x11-apps/rgb; then

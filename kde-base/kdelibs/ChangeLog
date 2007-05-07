@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.456 2007/05/05 13:56:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.457 2007/05/07 21:09:44 genstef Exp $
+
+  07 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  kdelibs-3.5.5-r10.ebuild, kdelibs-3.5.6-r7.ebuild,
+  kdelibs-3.5.6-r8.ebuild:
+  Remove hpell depend thanks to alonbl in bug 177546
 
   05 May 2007; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Restore ChangeLog.
