@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.22 2007/04/28 10:00:58 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.23 2007/05/07 18:06:36 ikelos Exp $
+
+*vmware-server-1.0.3.44356 (07 May 2007)
+
+  07 May 2007; Mike Auty <ikelos@gentoo.org>
+  -vmware-server-1.0.1.29996-r5.ebuild, -vmware-server-1.0.2.39867.ebuild,
+  +vmware-server-1.0.3.44356.ebuild:
+  Version bump to 1.0.3, security/maintenance release so removing old versions.
 
   28 Apr 2007; Mike Auty <ikelos@gentoo.org> files/vmware-server.rc:
   Redigest for vmware-any-any109, and fix rc file for baselayout-2.
