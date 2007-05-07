@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlrpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.12 2007/04/24 21:49:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.13 2007/05/07 07:44:21 dertobi123 Exp $
+
+  07 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  xmlrpc-1.2_beta1-r1.ebuild:
+  ppc stable
 
 *xmlrpc-2.0.1 (24 Apr 2007)
 
