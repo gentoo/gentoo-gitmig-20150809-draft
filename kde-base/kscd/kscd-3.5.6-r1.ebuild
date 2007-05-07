@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.6.ebuild,v 1.2 2007/02/07 02:14:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.6-r1.ebuild,v 1.1 2007/05/07 08:24:01 masterdriverz Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -21,7 +21,7 @@ KMCOPYLIB="libkcddb libkcddb"
 
 KMCOMPILEONLY="libkcddb"
 
-PATCHES="${FILESDIR}/${P}-alsa-tests.patch"
+PATCHES="${FILESDIR}/${P}-alsa-tests.patch ${FILESDIR}/${P}-arts.patch"
 
 src_compile() {
 	DO_NOT_COMPILE=libkcddb kde-meta_src_compile myconf configure
