@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.34 2007/04/25 21:38:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.35 2007/05/07 15:20:16 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org>
+  commons-fileupload-1.2.ebuild:
+  Migrate to split-ant; raise JDK/JRE deps to 1.4.
 
   25 Apr 2007; Miroslav Šulc <fordfrog@gentoo.org>
   commons-fileupload-1.2.ebuild:

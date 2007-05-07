@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2.ebuild,v 1.3 2007/04/25 21:38:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2.ebuild,v 1.4 2007/05/07 15:20:16 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
@@ -11,13 +11,13 @@ SRC_URI="mirror://apache/jakarta/commons/fileupload/source/${P}-src.tar.gz"
 COMMON_DEPEND=">=dev-java/commons-io-1.1
 	=dev-java/portletapi-1*
 	~dev-java/servletapi-2.3"
-DEPEND=">=virtual/jdk-1.3
+DEPEND=">=virtual/jdk-1.4
 	test? (
-		>=dev-java/ant-1.5
+		dev-java/ant-junit
 		=dev-java/junit-3.8*
 	)
 	${COMMON_DEPEND}"
-RDEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -42,7 +42,7 @@ EANT_DOC_TARGET="javadoc"
 src_test() {
 	mkdir -p target/lib/junit/jars
 	java-pkg_jar-from --into "${S}"/target/lib/junit/jars junit junit.jar junit-3.8.1.jar
-	eant test
+	ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {
