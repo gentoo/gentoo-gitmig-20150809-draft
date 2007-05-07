@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.9 2007/03/12 19:56:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.10 2007/05/07 20:19:18 swegener Exp $
 
 opts="reload monitor dump"
 
@@ -21,7 +21,10 @@ depend() {
 
 start() {
 	ebegin "Starting PowerDNS (${PDNS_INSTANCE})"
-	/usr/sbin/pdns_server ${PDNS_CONFIG} --daemon=yes --guardian=yes
+	/usr/sbin/pdns_server \
+		${PDNS_CONFIG} \
+		--daemon=yes \
+		--guardian=yes
 	eend $?
 }
 
@@ -38,13 +41,20 @@ reload() {
 }
 
 dump() {
-       ebegin "Dumping PowerDNS (${PDNS_INSTANCE}) variables"
-       /usr/bin/pdns_control ${PDNS_CONFIG} list
-       eend $?
+	ebegin "Dumping PowerDNS (${PDNS_INSTANCE}) variables"
+	/usr/bin/pdns_control ${PDNS_CONFIG} list
+	eend $?
 }
 
 monitor() {
-       ebegin "Starting PowerDNS (${PDNS_INSTANCE}) in monitor mode"
-       /usr/sbin/pdns_server ${PDNS_CONFIG} --daemon=no --guardian=no --control-console=yes --loglevel=9 --log-dns-details=yes --query-logging=yes
-       eend $?
+	ebegin "Starting PowerDNS (${PDNS_INSTANCE}) in monitor mode"
+	/usr/sbin/pdns_server \
+		${PDNS_CONFIG} \
+		--daemon=no \
+		--guardian=no \
+		--control-console=yes \
+		--loglevel=9 \
+		--log-dns-details=yes \
+		--query-logging=yes
+	eend $?
 }
