@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.89 2007/05/06 22:17:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.90 2007/05/07 19:24:05 wolf31o2 Exp $
+
+  07 May 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  splashutils-1.4.1.ebuild:
+  Stable on amd64/ppc/x86 wrt it being required for the new themes for 2007.0
+  and our testing it on the release.
 
 *splashutils-1.4.2 (06 May 2007)
 
