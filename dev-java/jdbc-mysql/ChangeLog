@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.41 2007/05/06 22:36:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.42 2007/05/07 21:11:19 betelgeuse Exp $
+
+*jdbc-mysql-5.0.5 (07 May 2007)
+
+  07 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/5.0.5-dist-target-depends.patch,
+  +files/5.0.5-remove-jboss-dependency-from-tests.patch,
+  +jdbc-mysql-5.0.5.ebuild:
+  Version bump. Make log4j support optional via the log4j use flag. Fixes bug
+  #156765. Thanks to Johan Bergström <bugs@bergstroem.nu>.
 
 *jdbc-mysql-3.1.13-r5 (06 May 2007)
 
