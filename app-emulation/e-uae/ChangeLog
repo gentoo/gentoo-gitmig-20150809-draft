@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.35 2007/04/09 15:19:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.36 2007/05/07 16:12:48 kevquinn Exp $
+
+  07 May 2007; Kevin F. Quinn <kevquinn@gentoo.org> e-uae-0.8.28-r3.ebuild,
+  e-uae-0.8.29_rc4.ebuild:
+  Mark the main executable to permit it to create executable heap
+  bug #177390 - thanks to Yaroslav Isakov.
 
 *e-uae-0.8.29_rc4 (09 Apr 2007)
 
