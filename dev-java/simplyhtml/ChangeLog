@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/simplyhtml
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.1 2007/05/07 12:47:54 caster Exp $
+
+*simplyhtml-0.12.2_pre20070424 (07 May 2007)
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
+  +simplyhtml-0.12.2_pre20070424.ebuild:
+  Initial ebuild as dependency of freemind. Had to package CVS snapshot for that.
+
