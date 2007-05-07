@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.3.1.ebuild,v 1.7 2007/01/10 19:59:51 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.3.1.ebuild,v 1.8 2007/05/07 15:14:38 gurligebis Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE="doc debug"
 
 RDEPEND="sys-fs/e2fsprogs"
 DEPEND="${RDEPEND}
-	!net-misc/libupnp
+	!net-libs/libupnp
 	doc? ( app-doc/doc++
 	       virtual/tetex
 	       virtual/ghostscript )"
