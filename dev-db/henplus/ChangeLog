@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/henplus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.15 2007/04/26 23:06:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.16 2007/05/07 16:29:59 betelgeuse Exp $
+
+*henplus-0.9.7-r1 (07 May 2007)
+
+  07 May 2007; Petteri Räty <betelgeuse@gentoo.org> files/henplus.pre,
+  +henplus-0.9.7-r1.ebuild:
+  Make the -pre file behave the same way as upstream wrapper script in
+  populating CLASSPATH.
 
   26 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> henplus-0.9.7.ebuild:
   inherit java-ant-2 to make JAVA_PKG_STRICT happy and stylistic cleanup.
