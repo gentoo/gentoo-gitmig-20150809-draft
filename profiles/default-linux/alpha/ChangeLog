@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.40 2007/04/28 06:46:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.41 2007/05/07 20:14:59 wolf31o2 Exp $
+
+  07 May 2007; Chris Gianelloni <wolf31o2@gentoo.org> 2005.0/deprecated,
+  +2006.0/deprecated:
+  Updated depcrecation notice to point users to the 2007.0 profiles and added
+  depcrecation notice to 2006.0's profile.
 
   28 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
   no-nptl/2.4/package.mask:
