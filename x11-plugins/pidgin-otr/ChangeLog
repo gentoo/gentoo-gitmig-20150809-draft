@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.1 2007/05/07 13:02:28 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.2 2007/05/07 13:37:24 drizzt Exp $
+
+  07 May 2007; Timothy Redaelli <drizzt@gentoo.org> pidgin-otr-3.0.0.ebuild:
+  Readd old keywords.
 
 *pidgin-otr-3.0.0 (07 May 2007)
 
