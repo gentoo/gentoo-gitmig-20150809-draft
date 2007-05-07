@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/portletapi-1.0.ebuild,v 1.7 2006/12/09 09:23:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/portletapi-1.0.ebuild,v 1.8 2007/05/07 16:37:36 caster Exp $
 
+JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
 
 JETSPEED_P="jetspeed-2.0-src"
@@ -12,26 +13,20 @@ SRC_URI="mirror://apache/portals/jetspeed-2/sources/${JETSPEED_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.5
-	source? ( app-arch/unzip )"
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${JETSPEED_P}/portlet-api"
 
 src_unpack() {
 	unpack ${A}
-	cp ${FILESDIR}/${P}-build.xml ${S}/build.xml
-}
-
-src_compile() {
-	eant jar $(use_doc javadoc)
+	cp "${FILESDIR}/${P}-build.xml" "${S}/build.xml" || die
 }
 
 src_install() {
 	java-pkg_dojar target/${PN}.jar
-	use doc && java-pkg_dohtml -r dist/docs
-	use source && java-pkg_dosrc src/java/*
+	use doc && java-pkg_dojavadoc dist/docs/api
+	use source && java-pkg_dosrc src/java/javax
 }
