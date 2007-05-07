@@ -1,0 +1,25 @@
+will set a always missconfigured part to a default setup and remove
+the config part from osd plugin setup
+
+07 May 2007 ,Joerg Bornkessel <hd_brummy@gentoo.org>
+diff -Naur burn-0.1.0-pre21.orig/setup.c burn-0.1.0-pre21/setup.c
+--- burn-0.1.0-pre21.orig/setup.c	2007-01-16 22:57:03.078284171 +0100
++++ burn-0.1.0-pre21/setup.c	2007-01-16 22:57:45.124680261 +0100
+@@ -83,7 +83,7 @@
+ 	//!--- plugin_setup -----------------------------------------------------------
+ 
+ 	plugin_setup::plugin_setup():
+-			PROCTOOLS_INIT_PROPERTY( RemovePath,          false ),
++			PROCTOOLS_INIT_PROPERTY( RemovePath,          true ),
+ 			PROCTOOLS_INIT_PROPERTY( CustomDiskSize,      200 ),
+ 			PROCTOOLS_INIT_PROPERTY( BurnSpeed,           0 ),
+ 			PROCTOOLS_INIT_PROPERTY( DemuxType,           demuxtype_vdrsync ),
+@@ -199,7 +199,7 @@
+ 		m_defaults = job_defaults();
+ 
+ 		Add( new menu::text_item( tr("--- Common settings --------------------------------------------------") ) );
+-		Add( new menu::bool_edit_item( tr("Remove path component"), m_setup.RemovePath ) );
++//		Add( new menu::bool_edit_item( tr("Remove path component"), m_setup.RemovePath ) );
+ 		Add( new menu::list_edit_item( tr("Demux using"), m_setup.DemuxType, demuxtype_strings ) );
+ 		Add( new menu::list_edit_item( tr("Requant using"), m_setup.RequantType, requanttype_strings ) );
+ 		Add( new menu::number_edit_item( tr("Burn speed"), m_setup.BurnSpeed, 0, 32, tr("unlimited") ) );

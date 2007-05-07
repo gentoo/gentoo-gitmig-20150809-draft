@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.18 2007/04/17 12:40:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.19 2007/05/07 10:26:30 hd_brummy Exp $
+
+*vdr-burn-0.1.0_pre21-r2 (07 May 2007)
+
+  07 May 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/0.1.0_pre21/confd, +files/0.1.0_pre21/i18n.diff,
+  +files/0.1.0_pre21/menuburn.diff, +files/0.1.0_pre21/menuitems.diff,
+  +files/0.1.0_pre21/vdr-burn-0.1.0_pre21-gentoo.diff,
+  +files/0.1.0_pre21/rc-addon.sh,
+  +files/0.1.0_pre21/vdr-burn-0.1.0_pre21_RemovePath-fix.diff,
+  +vdr-burn-0.1.0_pre21-r2.ebuild:
+  version bump; total rewrite of vdr-burn sources
 
   17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/rc-addon-0.0.9.sh:
