@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/jaffm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.15 2007/02/21 23:46:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.16 2007/05/07 01:00:14 dirtyepic Exp $
+
+  07 May 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/jaffm-1.2.1-gcc41.patch, jaffm-1.2.1.ebuild, jaffm-1.3.ebuild:
+  Fix GCC 4 compile error (bug #150823), wxGTK usage, and general Makefile
+  cruddiness.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

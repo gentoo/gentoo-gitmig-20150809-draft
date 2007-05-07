@@ -1,0 +1,12 @@
+diff -Naur jaffm-1.2.1-orig/filetree.h jaffm-1.2.1/filetree.h
+--- jaffm-1.2.1-orig/filetree.h	2007-04-30 21:53:27.000000000 -0600
++++ jaffm-1.2.1/filetree.h	2007-04-30 21:57:44.000000000 -0600
+@@ -20,7 +20,7 @@
+ public:
+ 	UFiletree(wxWindow *oParent, wxWindowID iID, wxTextCtrl *oLocation, MainWindow *oParentWindow, Settings *oNewSettings);
+ 	
+-	wxTreeItemId UFiletree::GetParent(wxTreeItemId item) const { return GetItemParent(item); }
++	wxTreeItemId GetParent(wxTreeItemId item) const { return GetItemParent(item); }
+ 	wxString getFullpath(wxTreeItemId iItem);
+ 	void selectPrevItem();
+ 	void selectNextItem();
