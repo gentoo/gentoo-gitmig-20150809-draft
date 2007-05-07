@@ -1,14 +1,5 @@
 --- i18n.c	2006-09-16 20:33:36.000000000 +0200
 +++ i18n.c.patched	2007-01-03 13:37:08.000000000 +0100
-@@ -2,7 +2,7 @@
-  * See the files COPYING and README for copyright information and how to reach
-  * the author.
-  *
-- *  $Id: i18n.diff,v 1.1 2007/05/07 10:26:31 hd_brummy Exp $
-+ *  $Id: i18n.diff,v 1.1 2007/05/07 10:26:31 hd_brummy Exp $
-  */
- 
- #include "i18n.h"
 @@ -210,7 +210,7 @@
  #endif
  #endif

@@ -1,14 +1,5 @@
 --- menuitems.c	2006-09-16 20:33:36.000000000 +0200
 +++ menuitems.c.patched	2007-01-03 13:38:09.000000000 +0100
-@@ -2,7 +2,7 @@
-  * See the files COPYING and README for copyright information and how to reach
-  * the author.
-  *
-- *  $Id: menuitems.diff,v 1.1 2007/05/07 10:26:31 hd_brummy Exp $
-+ *  $Id: menuitems.diff,v 1.1 2007/05/07 10:26:31 hd_brummy Exp $
-  */
- 
- #include "menuitems.h"
 @@ -102,7 +102,7 @@
  
  	void size_text_item::update( bool cut_ )

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.19 2007/05/07 10:26:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.20 2007/05/07 13:18:38 hd_brummy Exp $
+
+  07 May 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/0.1.0_pre21/i18n.diff, files/0.1.0_pre21/menuburn.diff,
+  files/0.1.0_pre21/menuitems.diff:
+  removed unneeded patchlines for header
 
 *vdr-burn-0.1.0_pre21-r2 (07 May 2007)
 
