@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0.ebuild,v 1.5 2007/04/22 04:29:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.0.ebuild,v 1.6 2007/05/07 13:58:13 armin76 Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ IUSE="libnotify"
 
 DEPEND=">=dev-lang/python-2.3
 	dev-libs/boost
-	>=net-libs/rb_libtorrent-0.11"
+	=net-libs/rb_libtorrent-0.11"
 RDEPEND="${DEPEND}
 	>=dev-python/pygtk-2
 	dev-python/pyxdg

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.6 2007/04/20 14:48:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.7 2007/05/07 13:58:13 armin76 Exp $
+
+  07 May 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
+  0.5.0 only works with rb_libtorrent-0.11, bug 177469
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
   Fix threads USE-flag check if boost >1.33, bug 174714
