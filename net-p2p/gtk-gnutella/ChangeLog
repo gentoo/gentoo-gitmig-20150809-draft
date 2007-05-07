@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.73 2007/04/23 20:28:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.74 2007/05/07 00:06:34 graaff Exp $
+
+  07 May 2007; Hans de Graaff <graaff@gentoo.org>
+  -gtk-gnutella-0.96.1.ebuild:
+  Remove old version
 
   23 Apr 2007; Peter Weller <welp@gentoo.org> gtk-gnutella-0.96.3.ebuild:
   Keyworde ~x86-fbsd
