@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jtds
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.10 2007/04/25 17:42:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.11 2007/05/07 18:43:33 betelgeuse Exp $
+
+*jtds-1.2-r2 (07 May 2007)
+
+  07 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/1.2-com.sun.patch, +jtds-1.2-r2.ebuild:
+  Use javax.net.ssl instead of com.sun.net.ssl. Now compiles with
+  ibm-jdk-bin-1.5. Bug #175994.
 
 *jtds-1.2-r1 (25 Apr 2007)
 
