@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.361 2007/05/07 19:59:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.362 2007/05/07 20:24:32 wolf31o2 Exp $
+
+  07 May 2007; Chris Gianelloni <wolf31o2@gentoo.org> profiles.desc:
+  Update profiles on some arches to make 2007.0 stable.
 
   07 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> profiles.desc:
   Better reflect reality for sparc profiles
