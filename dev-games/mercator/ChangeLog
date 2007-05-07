@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/mercator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.1 2007/02/01 21:03:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.2 2007/05/07 22:02:28 tupone Exp $
+
+  07 May 2007; Tupone Alfredo <tupone@gentoo.org> mercator-0.2.5.ebuild:
+  Added ~amd64 keyword
 
 *mercator-0.2.5 (01 Feb 2007)
 
