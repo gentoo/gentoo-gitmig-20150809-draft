@@ -18,3 +18,4 @@ slotmove app-editors/emacs-cvs 23.0.0 23
 move app-editors/elisp-manual app-doc/elisp-manual
 move app-crypt/aes-crypt app-crypt/aesutil
 move media-fonts/cjkuni-fonts media-fonts/arphicfonts
+move net-misc/libupnp net-libs/libupnp
