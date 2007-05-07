@@ -22,10 +22,10 @@ AUX 1.0_rc3/fluxbox-1.0_rc3-our-styles-go-over-here.patch 653 RMD160 058f69363e8
 MD5 9f435966e5fec7450005c4e1672f58c2 files/1.0_rc3/fluxbox-1.0_rc3-our-styles-go-over-here.patch 653
 RMD160 058f69363e88fa40be28ff5b3fa991fe2e03031f files/1.0_rc3/fluxbox-1.0_rc3-our-styles-go-over-here.patch 653
 SHA256 9f823872980c8566aeaf0e163d00854987c7ea9115b898bc49d8003bb776fc2d files/1.0_rc3/fluxbox-1.0_rc3-our-styles-go-over-here.patch 653
-AUX 1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1730 RMD160 a4427b9e54e7c9fa60e5dedc04427430c5a5c6b7 SHA1 249263732547b4a4107eff7df92b4f94c2479596 SHA256 6f9eefbf4ead1029048a3e4d6dd192918eb9f48acaffc0b30f202178d439e39d
-MD5 4fa4695869ca753087f34ca9535990a4 files/1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1730
-RMD160 a4427b9e54e7c9fa60e5dedc04427430c5a5c6b7 files/1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1730
-SHA256 6f9eefbf4ead1029048a3e4d6dd192918eb9f48acaffc0b30f202178d439e39d files/1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1730
+AUX 1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1367 RMD160 71105d042a915375a0a9685569188d7c63cac22a SHA1 fdd2c99237637364f002808c1f66a2b601f9a454 SHA256 f8cbae58370d6173f018a5e87f3e86e2d45b06796f61bc6ba4ef3420d05250dd
+MD5 540deca02f9a4b05e5e0c952d2fac426 files/1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1367
+RMD160 71105d042a915375a0a9685569188d7c63cac22a files/1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1367
+SHA256 f8cbae58370d6173f018a5e87f3e86e2d45b06796f61bc6ba4ef3420d05250dd files/1.0_rc3/fluxbox-1.0_rc3-textproperties_segfault.patch 1367
 AUX fluxbox.desktop 202 RMD160 255bb2cdae75e1fc204d4b60f39c8aba66770e7a SHA1 d57b4d0fad653660cc6cf0a2cd808b7a34d72b95 SHA256 8859f44f3eccc7b3e08c9f61f40351c49cd77c4624aabe3029572a3412687834
 MD5 133c9b57600834dedcdbca2ed789327d files/fluxbox.desktop 202
 RMD160 255bb2cdae75e1fc204d4b60f39c8aba66770e7a files/fluxbox.desktop 202

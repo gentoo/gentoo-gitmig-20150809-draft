@@ -1,14 +1,5 @@
 --- src/FbTk/FbWindow.cc	2007-03-19 15:57:07.000000000 -0400
-+++ ../src/src/FbTk/FbWindow.cc	2007-05-05 18:41:03.000000000 -0400
-@@ -19,7 +19,7 @@
- // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- // DEALINGS IN THE SOFTWARE.
- 
--// $Id: fluxbox-1.0_rc3-textproperties_segfault.patch,v 1.1 2007/05/07 15:22:25 lack Exp $
-+// $Id: fluxbox-1.0_rc3-textproperties_segfault.patch,v 1.1 2007/05/07 15:22:25 lack Exp $
- 
- #include "FbWindow.hh"
- #include "FbPixmap.hh"
++++ src/FbTk/FbWindow.cc	2007-05-05 18:41:03.000000000 -0400
 @@ -465,7 +465,7 @@
  std::string FbWindow::textProperty(Atom property) const {
      XTextProperty text_prop;
