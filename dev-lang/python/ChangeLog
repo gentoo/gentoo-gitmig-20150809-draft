@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.233 2007/05/07 19:17:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.234 2007/05/07 19:25:09 jer Exp $
+
+  07 May 2007; Jeroen Roovers <jer@gentoo.org> python-2.4.4-r2.ebuild:
+  Marked ~hppa (bug #177426).
 
   07 May 2007; Jeroen Roovers <jer@gentoo.org> python-2.3.6-r1.ebuild:
   Marked ~hppa (bug #177426).

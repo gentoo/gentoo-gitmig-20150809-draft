@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r2.ebuild,v 1.1 2007/05/07 15:22:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r2.ebuild,v 1.2 2007/05/07 19:25:09 jer Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -23,7 +23,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="2.4"
-KEYWORDS="~x86"
+KEYWORDS="~hppa ~x86"
 IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 doc nocxx nptl examples"
 
 DEPEND=">=sys-libs/zlib-1.1.3
