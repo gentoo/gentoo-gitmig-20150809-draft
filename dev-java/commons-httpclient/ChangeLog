@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.45 2007/05/06 18:14:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.46 2007/05/07 15:21:56 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org>
+  commons-httpclient-3.0.1-r1.ebuild:
+  Migrate to split-ant.
 
 *commons-httpclient-3.0.1-r1 (06 May 2007)
 

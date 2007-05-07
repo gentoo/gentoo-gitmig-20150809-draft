@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0.1-r1.ebuild,v 1.1 2007/05/06 18:14:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0.1-r1.ebuild,v 1.2 2007/05/07 15:21:56 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	test? (
 		=dev-java/junit-3.8*
-		dev-java/ant
+		dev-java/ant-junit
 	)
 	${COMMON_DEPEND}"
 
