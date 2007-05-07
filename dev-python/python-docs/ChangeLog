@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.89 2007/05/06 22:36:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.90 2007/05/07 10:35:24 kloeri Exp $
+
+  07 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  python-docs-2.4.4.ebuild:
+  Stable on Alpha, IA64 and x86.
 
 *python-docs-2.5.1 (06 May 2007)
 
