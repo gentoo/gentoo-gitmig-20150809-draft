@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.8 2007/05/01 11:04:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.9 2007/05/07 11:18:32 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -69,4 +69,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die "Installation failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README* TODO
+	# Fix bug #177378
+	fowners root:root -R /usr/share/kino/help
 }
