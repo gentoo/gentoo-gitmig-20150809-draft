@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.4.ebuild,v 1.1 2007/05/07 14:07:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.4.ebuild,v 1.2 2007/05/07 20:27:21 kloeri Exp $
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
 HOMEPAGE="http://httpd.apache.org/"
@@ -10,6 +10,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+RESTRICT="test"
 
 RDEPEND="=dev-libs/apr-1*
 	=dev-libs/apr-util-1*
