@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71.ebuild,v 1.3 2007/03/01 05:33:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71.ebuild,v 1.4 2007/05/07 15:11:07 gurligebis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="sys-fs/fuse
-		net-misc/libupnp"
+		net-libs/libupnp"
 RDEPEND="${DEPEND}"
 
 src_install() {
