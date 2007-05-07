@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.15 2007/01/07 16:36:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.16 2007/05/07 16:37:30 caster Exp $
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org>
+  mockobjects-0.09-r2.ebuild:
+  Migrate to split-ant; add examples USEflag, fix source installation, tweak
+  style.
 
 *mockobjects-0.09-r2 (07 Jan 2007)
 
