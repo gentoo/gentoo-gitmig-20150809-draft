@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4.ebuild,v 1.3 2007/05/07 15:01:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4.ebuild,v 1.4 2007/05/07 18:47:34 kloeri Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 # some helper scripts are apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 
-SLOT="0"
+SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc ldap mpm-event mpm-peruser mpm-prefork mpm-worker no-suexec selinux ssl static-modules threads"
 
