@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7234 2007/05/07 14:29:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7235 2007/05/07 19:00:25 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -641,30 +641,6 @@ x11-plugins/desklet-hypertail
 # dead upstream, requires xmms to build
 # p.masking for treecleaners
 media-sound/DBMix
-
-# Raúl Porcel <armin76@gentoo.org> (8 Mar 2007)
-# P.masking for treecleaners, pending removal in 60 days
-# That is, 8 May 2007
-# www-servers/aolserver and its rdeps -> bug 108022
-#	www-misc/nscache
-#	www-misc/nsopenssl
-#	www-misc/nssha1
-#	www-misc/nsxml
-# app-emulation/tiger -> bug 110298
-# sys-apps/evkeyd -> bug 115407
-# media-libs/libuta -> bug 117665
-# net-misc/cipe -> bug 137329
-# app-text/biblestudy -> bug 164144
-www-servers/aolserver
-www-misc/nscache
-www-misc/nsopenssl
-www-misc/nssha1
-www-misc/nsxml
-app-emulation/tiger
-sys-apps/evkeyd
-media-libs/libuta
-net-misc/cipe
-app-text/biblestudy
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (7 Mar 2007)
 # Masked to let us try out our new package dependency scheme.
