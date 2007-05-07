@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/sensors-applet
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.20 2006/11/02 21:15:28 allanonjl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.21 2007/05/07 17:17:32 dang Exp $
+
+*sensors-applet-1.7.12 (07 May 2007)
+
+  07 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +sensors-applet-1.7.12.ebuild:
+  Bump to 1.7.12
+  	* Fixed bug - Don't see second core on Core/Core 2
+  	* Added notifications to alert user when errors occur while
+  	  updating sensors or when trying to save or restore sensor settings.
 
 *sensors-applet-1.7.9 (02 Nov 2006)
 
