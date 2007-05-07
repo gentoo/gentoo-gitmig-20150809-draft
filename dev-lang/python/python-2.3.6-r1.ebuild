@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r1.ebuild,v 1.2 2007/05/07 10:56:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r1.ebuild,v 1.3 2007/05/07 11:13:58 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
 
-inherit eutils flag-o-matic python versionator
+inherit autotools eutils flag-o-matic python versionator
 
 PYVER_MAJOR=$(get_major_version)
 PYVER_MINOR=$(get_version_component_range 2)
