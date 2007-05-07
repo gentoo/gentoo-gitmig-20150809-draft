@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.27 2007/04/11 12:37:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.28 2007/05/07 12:57:35 caster Exp $
+
+*freemind-0.9.0_beta9 (07 May 2007)
+
+  07 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +freemind-0.9.0_beta9.ebuild:
+  Version bump, bug #170892. Got rid of all bundled jar files - bug #89893.
 
   11 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   freemind-0.8.0-r3.ebuild:
