@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.241 2007/04/24 20:37:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.242 2007/05/07 15:27:27 gurligebis Exp $
+
+  07 May 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> vlc-0.8.6b.ebuild,
+  vlc-0.8.6-r1.ebuild:
+  net-misc/libupnp moved to net-libs/libupnp, updated dependencies
 
   24 Apr 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6b.ebuild:
   Add support for IIDC cameras with dc1394 useflag, thanks to Christopher
