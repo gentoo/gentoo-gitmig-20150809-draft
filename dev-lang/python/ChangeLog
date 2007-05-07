@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.228 2007/05/07 07:43:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.229 2007/05/07 10:56:34 kloeri Exp $
+
+  07 May 2007; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5-r2.ebuild,
+  python-2.3.5-r3.ebuild, python-2.3.6.ebuild, python-2.3.6-r1.ebuild,
+  python-2.4.3-r1.ebuild, python-2.4.3-r4.ebuild, python-2.4.4.ebuild,
+  python-2.4.4-r1.ebuild, python-2.5-r1.ebuild, python-2.5-r2.ebuild:
+  Stable on Alpha, IA64 and x86 + fix digest issue reported in bug 177440.
 
 *python-2.5.1 (06 May 2007)
 *python-2.4.4-r1 (06 May 2007)

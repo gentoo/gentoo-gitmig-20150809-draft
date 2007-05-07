@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5-r2.ebuild,v 1.1 2007/03/31 00:29:10 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5-r2.ebuild,v 1.2 2007/05/07 10:56:34 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -43,7 +43,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		dev-libs/expat
 	)"
 
-# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python 
+# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python
 #       provides the functionality expected from previous pythons.
 
 # NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
@@ -146,8 +146,8 @@ src_compile() {
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=50309
 	if is-flag -O3; then
-	   is-flag -fstack-protector-all && replace-flags -O3 -O2
-	   use hardened && replace-flags -O3 -O2
+		is-flag -fstack-protector-all && replace-flags -O3 -O2
+		use hardened && replace-flags -O3 -O2
 	fi
 
 	export OPT="${CFLAGS}"

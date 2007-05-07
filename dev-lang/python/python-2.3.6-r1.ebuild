@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r1.ebuild,v 1.1 2007/05/07 07:43:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r1.ebuild,v 1.2 2007/05/07 10:56:34 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -37,7 +37,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		dev-libs/expat
 	)"
 
-# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python 
+# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python
 #       provides the functionality expected from previous pythons.
 
 # NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
@@ -61,7 +61,7 @@ src_unpack() {
 
 	sed -ie 's/OpenBSD\/3.\[01234/OpenBSD\/3.\[012345/' configure || die "OpenBSD sed failed"
 
-	# fix os.utime() on hppa. utimes it not supported but unfortunately 
+	# fix os.utime() on hppa. utimes it not supported but unfortunately
 	# reported as working - gmsoft (22 May 04)
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 

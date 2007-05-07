@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r1.ebuild,v 1.1 2007/05/07 07:43:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r1.ebuild,v 1.2 2007/05/07 10:56:34 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -38,7 +38,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		dev-libs/expat
 	)"
 
-# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python 
+# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python
 #       provides the functionality expected from previous pythons.
 
 # NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
@@ -70,7 +70,7 @@ src_unpack() {
 		Modules/getpath.c \
 		setup.py || die
 
-	# fix os.utime() on hppa. utimes it not supported but unfortunately 
+	# fix os.utime() on hppa. utimes it not supported but unfortunately
 	# reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
@@ -110,8 +110,8 @@ src_compile() {
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=50309
 	if is-flag -O3; then
-	   is-flag -fstack-protector-all && replace-flags -O3 -O2
-	   use hardened && replace-flags -O3 -O2
+		is-flag -fstack-protector-all && replace-flags -O3 -O2
+		use hardened && replace-flags -O3 -O2
 	fi
 
 	export OPT="${CFLAGS}"
@@ -133,7 +133,7 @@ src_compile() {
 
 	if tc-is-cross-compiler ; then
 		OPT="-O1" CFLAGS="" LDFLAGS="" CC="" \
-		./configure --with-cxx=no || die "cross-configure failed"
+			./configure --with-cxx=no || die "cross-configure failed"
 		emake python Parser/pgen || die "cross-make failed"
 		mv python hostpython
 		mv Parser/pgen Parser/hostpgen

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4.ebuild,v 1.2 2007/02/06 08:39:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4.ebuild,v 1.3 2007/05/07 10:56:34 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -23,7 +23,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="2.4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 doc nocxx"
 
 DEPEND=">=sys-libs/zlib-1.1.3
@@ -38,7 +38,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		dev-libs/expat
 	)"
 
-# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python 
+# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python
 #       provides the functionality expected from previous pythons.
 
 # NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
@@ -87,7 +87,7 @@ src_unpack() {
 	# add support for struct stat st_flags attribute (bug 94637)
 	epatch ${WORKDIR}/${PV}/2.4.1-st_flags.patch
 
-	# fix os.utime() on hppa. utimes it not supported but unfortunately 
+	# fix os.utime() on hppa. utimes it not supported but unfortunately
 	# reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
@@ -132,8 +132,8 @@ src_compile() {
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=50309
 	if is-flag -O3; then
-	   is-flag -fstack-protector-all && replace-flags -O3 -O2
-	   use hardened && replace-flags -O3 -O2
+		is-flag -fstack-protector-all && replace-flags -O3 -O2
+		use hardened && replace-flags -O3 -O2
 	fi
 
 	export OPT="${CFLAGS}"
