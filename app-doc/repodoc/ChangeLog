@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/repodoc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/ChangeLog,v 1.1 2007/05/07 22:56:05 yoswink Exp $
+
+*repodoc-9999 (08 May 2007)
+*repodoc-0.1.0 (08 May 2007)
+
+  08 May 2007; Jose Luis Rivero <yoswink@gentoo.org> +metadata.xml,
+  +repodoc-0.1.0.ebuild, +repodoc-9999.ebuild:
+  Initial import.
+
