@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.32 2007/05/07 11:35:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.33 2007/05/07 14:46:30 gustavoz Exp $
+
+  07 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> gimp-help-0.12.ebuild:
+  Stable on sparc wrt #177213
 
   07 May 2007; Raúl Porcel <armin76@gentoo.org> gimp-help-0.12.ebuild:
   ia64 stable wrt #177213
