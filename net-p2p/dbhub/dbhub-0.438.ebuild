@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.437.ebuild,v 1.1 2007/05/01 09:25:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.438.ebuild,v 1.1 2007/05/08 10:58:57 armin76 Exp $
 
 inherit eutils
 
