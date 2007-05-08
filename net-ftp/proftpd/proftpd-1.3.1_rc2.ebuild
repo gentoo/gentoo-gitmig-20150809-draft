@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2.ebuild,v 1.1 2007/01/25 13:03:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2.ebuild,v 1.2 2007/05/08 22:34:42 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -197,16 +197,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You can find the config files in /etc/proftpd"
-	einfo
+	elog
+	elog "You can find the config files in /etc/proftpd"
+	elog
 	ewarn "With the introduction of net-ftp/ftpbase the ftp user is now ftp."
 	ewarn "Remember to change that in the configuration file."
-	einfo
+	ewarn
 	if use clamav ; then
 		ewarn "mod_clamav was updated to a new version, which uses Clamd"
 		ewarn "only for virus scanning, so you'll have to set Clamd up"
 		ewarn "and start it, also re-check the mod_clamav docs."
-		einfo
+		ewarn
 	fi
 }
