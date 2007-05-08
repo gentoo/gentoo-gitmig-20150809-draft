@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.86 2007/04/23 13:11:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.87 2007/05/08 15:54:17 cardoe Exp $
 
 # Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
 # no tested dbus on mips. Masking for now.
@@ -305,3 +305,9 @@ l7filter
 # Fernando J. Pereda <ferdy@gentoo.org> (20 Mar 2007)
 # New optional dependency of >=mail-client/mutt-1.5.14
 qdbm
+
+# Doug Goldstein <cardoe@gentoo.org> (08 May 2007)
+# no one in mips land has smartcard hardware to test with
+# see bug #162205 comment 10.
+smartcard
+openct
