@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r10.ebuild,v 1.10 2007/05/07 21:09:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r10.ebuild,v 1.11 2007/05/08 19:28:24 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
-zeroconf avahi kernel_linux fam lua kdehiddenvisibility"
+zeroconf avahi kernel_linux fam lua linguas_he kdehiddenvisibility"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -45,7 +45,8 @@ RDEPEND="$(qt_min_version 3.3.3)
 	utempter? ( sys-libs/libutempter )
 	!kde-base/kde-env
 	lua? ( dev-lang/lua )
-	spell? ( app-text/aspell app-dicts/aspell-en )"
+	spell? ( app-text/aspell app-dicts/aspell-en
+		linguas_he? ( >=app-text/hspell-1.0 ) )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
@@ -138,7 +139,11 @@ src_compile() {
 		myconf="${myconf} --disable-dnssd"
 	fi
 
-	myconf="${myconf} --without-hspell"
+	if use spell; then
+		myconf="${myconf} $(use_with linguas_he hspell)"
+	else
+		myconf="${myconf} --without-hspell"
+	fi
 
 	if has_version x11-apps/rgb; then
 		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
