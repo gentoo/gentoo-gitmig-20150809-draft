@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.37 2007/05/07 18:08:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.38 2007/05/08 14:36:25 armin76 Exp $
+
+  08 May 2007; Raúl Porcel <armin76@gentoo.org> netqmail-1.05-r8.ebuild:
+  ia64 stable wrt #169591
 
   07 May 2007; Michael Hanselmann <hansmi@gentoo.org>
   netqmail-1.05-r8.ebuild:
