@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.33 2007/05/07 14:46:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.34 2007/05/08 14:11:46 jer Exp $
+
+  08 May 2007; Jeroen Roovers <jer@gentoo.org> gimp-help-0.12.ebuild:
+  Stable for HPPA (bug #177213).
 
   07 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> gimp-help-0.12.ebuild:
   Stable on sparc wrt #177213
