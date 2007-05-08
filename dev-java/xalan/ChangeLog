@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.65 2007/05/08 00:08:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.66 2007/05/08 13:32:34 caster Exp $
+
+  08 May 2007; Vlastimil Babka <caster@gentoo.org> xalan-2.7.0-r2.ebuild:
+  Also remove unused bsf dep.
 
   08 May 2007; Vlastimil Babka <caster@gentoo.org> xalan-2.7.0-r3.ebuild:
   Remove unused bsf dep; update LICENSE to 2.0; style tweaks.

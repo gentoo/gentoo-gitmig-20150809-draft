@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r2.ebuild,v 1.12 2007/01/05 21:55:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r2.ebuild,v 1.13 2007/05/08 13:32:34 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils versionator
 
@@ -18,7 +18,6 @@ COMMON_DEP="
 	dev-java/javacup
 	dev-java/bcel
 	=dev-java/jakarta-regexp-1.3*
-	=dev-java/bsf-2.3*
 	>=dev-java/xerces-2.7
 	=dev-java/xml-commons-external-1.3*"
 RDEPEND=">=virtual/jre-1.4
