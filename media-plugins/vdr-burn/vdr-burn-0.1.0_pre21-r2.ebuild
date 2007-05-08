@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r2.ebuild,v 1.1 2007/05/07 10:26:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r2.ebuild,v 1.2 2007/05/08 08:15:33 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -34,7 +34,7 @@ RDEPEND=">=media-video/dvdauthor-0.6.10
 		>=media-video/m2vrequantizer-20060306
 		media-fonts/ttf-bitstream-vera
 		media-video/vdrtools-genindex
-		>=app-cdr/cdrtools-2.01.01_alpha10
+		virtual/cdrtools
 		>=app-cdr/dvd+rw-tools-5.21
 		projectx? ( >=media-video/projectx-0.90.4.00-r2 )"
 
