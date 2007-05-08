@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.93 2007/04/27 15:43:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.94 2007/05/08 11:05:46 ali_bush Exp $
+
+  08 May 2007; Alistair John Bush <ali_bush@gentoo.org>
+  2007.0/package.use.mask, package.use.mask:
+  Mask doc flag on fop to stop OutOfMemory errors. see #177585
 
   27 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.use.mask:
   Remove package.use.mask for blackdown-jdk|jre nsplugin to move it to the base
