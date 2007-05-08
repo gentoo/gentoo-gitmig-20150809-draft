@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.40 2007/04/15 20:03:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.41 2007/05/08 23:22:33 caster Exp $
+
+*bsf-2.4.0 (08 May 2007)
+
+  08 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/bsf-2.4.0-build-properties.xml, -bsf-2.3.0-r2.ebuild,
+  +bsf-2.4.0.ebuild:
+  Version bump, bug #160813. Same slot as 2.3.0, seems fine. Uses rhino-1.6
+  instead of 1.5. Renamed jython flag to python, added tcl flag which adds
+  jacl support. Added examples flag. Added bsf launcher for commandline use.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> bsf-2.3.0-r5.ebuild:
   Stable on ppc64
