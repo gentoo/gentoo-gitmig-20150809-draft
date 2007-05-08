@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7242 2007/05/08 14:35:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7243 2007/05/08 19:45:39 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -406,9 +406,7 @@ dev-java/aterm-java
 
 # Carsten Lohrke <carlo@gentoo.org> (4 Apr 2007)
 # mask kmess prereleases
-# bury kde-misc/metabar
 >=net-im/kmess-1.5_pre1
-kde-misc/metabar
 
 # Marcelo Goes <vanquirius@gentoo.org> (3 Apr 2007)
 # Nessus 2.3.x was discontinued
@@ -1247,10 +1245,6 @@ net-misc/asterisk-app_authenticate_ldap
 # a patch
 =sys-devel/gcc-4.3*
 =sys-devel/gcc-4.2*
-
-# Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
-# Couple of issues with this version, waiting for the next release.
-~kde-misc/kdiff3-0.9.89
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Apr 2006)
 # masked pending unresolved security issues #122845
