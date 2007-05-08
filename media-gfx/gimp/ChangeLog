@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.197 2007/05/06 16:50:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.198 2007/05/08 14:25:36 jer Exp $
+
+  08 May 2007; Jeroen Roovers <jer@gentoo.org> gimp-2.2.14.ebuild:
+  Stable for HPPA, despite that it does not run (bug #176226 and bug #168131).
 
   06 May 2007; Hanno Boeck <hanno@gentoo.org> gimp-2.2.14.ebuild,
   gimp-2.3.16.ebuild, gimp-9999.ebuild:
