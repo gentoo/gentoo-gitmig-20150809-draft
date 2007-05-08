@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/xsom-20060901.ebuild,v 1.1 2007/05/01 19:22:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/xsom-20060901.ebuild,v 1.2 2007/05/08 15:10:16 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -45,6 +45,6 @@ src_unpack() {
 src_install() {
 	java-pkg_dojar build/xsom.jar
 
-	use doc && java-pkg_dojavadoc build/javadoc/*
+	use doc && java-pkg_dojavadoc build/javadoc
 	use source && java-pkg_dosrc src/* build/src/*
 }
