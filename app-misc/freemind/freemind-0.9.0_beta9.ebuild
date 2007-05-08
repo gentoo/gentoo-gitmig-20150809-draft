@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta9.ebuild,v 1.1 2007/05/07 12:57:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta9.ebuild,v 1.2 2007/05/08 20:27:04 caster Exp $
 
 # will handle rewriting myself
 JAVA_PKG_BSFIX="off"
@@ -25,7 +25,6 @@ COMMON_DEP="dev-java/jgoodies-forms
 	=dev-java/batik-1.6*
 	>=dev-java/fop-0.93"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/jarbundler
 	dev-java/xsd2jibx
 	app-arch/unzip
 	${COMMON_DEP}"
@@ -38,6 +37,9 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
+	# kill the jarbundler taskdef
+	epatch "${FILESDIR}/${P}-build.xml.patch"
+
 	local xml
 	for xml in $(find . -name 'build*.xml'); do
 		java-ant_rewrite-classpath ${xml}
@@ -49,7 +51,7 @@ src_unpack() {
 src_compile() {
 	local jibxlibs="$(java-pkg_getjars --build-only --with-dependencies xsd2jibx)"
 	local gcp="$(java-pkg_getjars jgoodies-forms,jibx,commons-lang,javahelp,groovy-1,batik-1.6,fop,simplyhtml):lib/bindings.jar"
-	ANT_TASKS="${WANT_ANT_TASKS} jarbundler jibx xsd2jibx" eant -Djibxlibs="${jibxlibs}" \
+	ANT_TASKS="${WANT_ANT_TASKS} jibx xsd2jibx" eant -Djibxlibs="${jibxlibs}" \
 		-Dgentoo.classpath="${gcp}" dist browser $(use_doc doc)
 }
 
