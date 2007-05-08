@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.21 2007/05/07 16:16:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.22 2007/05/08 20:57:01 caster Exp $
+
+  08 May 2007; Vlastimil Babka <caster@gentoo.org> jruby-0.7.0-r1.ebuild,
+  jruby-0.9.2.ebuild, jruby-0.9.8.ebuild, jruby-0.9.8-r1.ebuild,
+  jruby-0.9.9.ebuild:
+  Update dev-java/bsf dependency for upcoming new version.
 
   07 May 2007; Vlastimil Babka <caster@gentoo.org> jruby-0.9.9.ebuild:
   Migrate to split-ant.

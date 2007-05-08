@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.2.ebuild,v 1.1 2007/01/05 04:24:29 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.2.ebuild,v 1.2 2007/05/08 20:57:01 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -16,7 +16,7 @@ IUSE="doc source test"
 COMMON_DEPEND=">=dev-java/jvyaml-0.2
 	dev-java/jline
 	=dev-java/asm-2.2*
-	=dev-java/bsf-2.3*"
+	>=dev-java/bsf-2.3"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4

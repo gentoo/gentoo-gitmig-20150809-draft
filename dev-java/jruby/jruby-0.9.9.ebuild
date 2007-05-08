@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.9.ebuild,v 1.3 2007/05/07 16:16:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.9.ebuild,v 1.4 2007/05/08 20:57:01 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2
@@ -16,7 +16,7 @@ IUSE="doc source test"
 
 COMMON_DEPEND=">=dev-java/jline-0.9.91
 	=dev-java/asm-2.2*
-	=dev-java/bsf-2.3*
+	>=dev-java/bsf-2.3
 	dev-java/backport-util-concurrent"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"

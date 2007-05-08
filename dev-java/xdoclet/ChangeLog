@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.26 2007/05/01 09:52:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.27 2007/05/08 20:57:45 caster Exp $
+
+  08 May 2007; Vlastimil Babka <caster@gentoo.org> xdoclet-1.2.2.ebuild,
+  xdoclet-1.2.3.ebuild:
+  Update dev-java/bsf dependency for upcoming new version.
 
   01 May 2007; Vlastimil Babka <caster@gentoo.org> xdoclet-1.2.3.ebuild:
   Increase JDK heap size on amd64 when compiling for bug #167445.

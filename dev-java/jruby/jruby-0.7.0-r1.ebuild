@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.7.0-r1.ebuild,v 1.4 2006/09/13 06:17:01 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.7.0-r1.ebuild,v 1.5 2007/05/08 20:57:01 caster Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc examples jikes junit source"
 RDEPEND=">=virtual/jre-1.4
-	=dev-java/bsf-2.3*
+	>=dev-java/bsf-2.3
 	=dev-java/jakarta-oro-2.0*
 	=dev-java/gnu-regexp-1.1*"
 DEPEND=">=virtual/jdk-1.4
