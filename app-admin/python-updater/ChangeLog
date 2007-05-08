@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.5 2007/05/07 16:39:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.6 2007/05/08 13:40:03 armin76 Exp $
+
+  08 May 2007; Raúl Porcel <armin76@gentoo.org> python-updater-0.2.ebuild:
+  Add ~ia64 wrt bug 177270
 
   07 May 2007; Jeroen Roovers <jer@gentoo.org> python-updater-0.2.ebuild:
   Marked ~hppa (bug #177270).
