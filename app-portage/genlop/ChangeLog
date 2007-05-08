@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.50 2007/04/09 14:58:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.51 2007/05/08 15:03:52 jer Exp $
+
+  08 May 2007; Jeroen Roovers <jer@gentoo.org> genlop-0.30.7.ebuild:
+  Stable for HPPA already!!!
 
 *genlop-0.30.7 (09 Apr 2007)
 
