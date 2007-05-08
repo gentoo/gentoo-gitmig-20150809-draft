@@ -17,6 +17,9 @@
 17_autoconf_cflag_cleanup.patch
 18_hal_fix_info.category_for_laptop_panel_v2.patch
 19_hald_runner_catch_dbus_disconnect.patch
+20_firewire_prober_ioctls_fix.patch
+21_pm-suspend_correct_options.patch
+22_pm-hibernate_correct_options.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch
 97_ignore_fixed_drives.patch

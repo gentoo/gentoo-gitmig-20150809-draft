@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.181 2007/05/07 16:18:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.182 2007/05/08 03:17:59 cardoe Exp $
+
+  08 May 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/0.5.9/13_detect_newer_macbooks.patch,
+  +files/0.5.9/20_firewire_prober_ioctls_fix.patch,
+  +files/0.5.9/21_pm-suspend_correct_options.patch,
+  +files/0.5.9/22_pm-hibernate_correct_options.patch, files/0.5.9/series:
+  Touch up MacBook detection patch. Add firewire prober update for ioctls. Fix
+  pm-suspend/pm-hibernate options
 
   07 May 2007; Tony Vroon <chainsaw@gentoo.org> hal-0.5.9.ebuild,
   hal-0.5.9-r1.ebuild:
