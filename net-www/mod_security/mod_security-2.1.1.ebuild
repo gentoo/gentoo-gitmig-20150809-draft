@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/mod_security-2.1.1.ebuild,v 1.1 2007/05/06 15:36:11 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/mod_security-2.1.1.ebuild,v 1.2 2007/05/08 13:39:30 dertobi123 Exp $
 
 inherit apache-module
 
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ppc ~sparc ~x86"
 
 MY_P=${P/mod_security-/modsecurity-apache_}
 
