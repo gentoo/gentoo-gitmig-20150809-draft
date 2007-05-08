@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.58 2007/05/08 21:38:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.59 2007/05/08 21:59:28 dertobi123 Exp $
+
+*nagios-plugins-1.4.8 (08 May 2007)
+
+  08 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  +nagios-plugins-1.4.8.ebuild:
+  Version bump to 1.4.8, setuid the check_icmp plugin, bug #155929
 
   08 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   nagios-plugins-1.4.6.ebuild:
