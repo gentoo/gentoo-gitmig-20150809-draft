@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlgraphics-commons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.1 2007/05/07 10:09:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.2 2007/05/08 14:21:04 armin76 Exp $
+
+  08 May 2007; Raúl Porcel <armin76@gentoo.org>
+  xmlgraphics-commons-1.1.ebuild:
+  Add ~ia64 wrt #177466
 
 *xmlgraphics-commons-1.1 (07 May 2007)
 

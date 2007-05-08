@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.1.ebuild,v 1.2 2007/03/17 19:36:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.1.ebuild,v 1.3 2007/05/08 14:18:21 armin76 Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/jakarta/commons/io/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="test"
 
 DEPEND=">=virtual/jdk-1.4
