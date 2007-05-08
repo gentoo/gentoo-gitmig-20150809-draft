@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9.ebuild,v 1.1 2007/05/08 14:31:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9.ebuild,v 1.2 2007/05/08 20:32:04 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -59,7 +59,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.3.8-pathfixes.patch" # fixes bug 78385 and 146099
 	epatch "${FILESDIR}/${PN}-1.3.8-imake-tmpdir.patch" # fixes bug 23483
 	epatch "${FILESDIR}/${PN}-1.3.8-darwin.patch" # fixes bug 89908
-	use amd64 && epatch "${FILESDIR}/${PN}-1.3.8-amd64.patch" # fixes bug 82583
 	use mips && epatch "${FILESDIR}/${PN}-1.3.8-mips.patch"
 	epatch "${FILESDIR}"/server-CVE-2007-1003.patch
 	epatch "${FILESDIR}"/server-CVE-2007-1351-1352.patch
