@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93.ebuild,v 1.2 2007/05/08 11:14:00 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93.ebuild,v 1.3 2007/05/08 13:09:18 caster Exp $
 
 # TODO: hyphenation support doesn't seem to be built correctly, because there's no xml in hyph dir
 #		but upstream binary distro contains only fop.jar, no hyph nor sandbox
@@ -75,7 +75,7 @@ src_compile() {
 	use jai && af="${af} -Djai.present=true"
 	use jimi && af="${af} -Djimi.present=true"
 
-	ANT_OPTS="-Xmx256M"
+	export ANT_OPTS="-Xmx256M"
 	java-pkg_force-compiler ecj-3.2
 	eant ${af} package $(use_doc javadocs)
 }
@@ -100,6 +100,6 @@ src_install() {
 	dodoc NOTICE README
 
 	use doc && java-pkg_dojavadoc build/javadocs
-	use examples && java-pkg_doexamples examples
+	use examples && java-pkg_doexamples examples/* conf
 	use source && java-pkg_dosrc src/java/org src/java-1.4/* src/sandbox/org
 }

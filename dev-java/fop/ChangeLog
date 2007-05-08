@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.41 2007/05/07 16:01:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.42 2007/05/08 13:09:18 caster Exp $
+
+  08 May 2007; Vlastimil Babka <caster@gentoo.org> fop-0.93.ebuild:
+  Fixed out of memory build issues on amd64 by using ecj for compiling and
+  raising memory limit to 256M, bug #177585; Install also sample config via
+  examples flag, bug #177615.
 
   07 May 2007; Vlastimil Babka <caster@gentoo.org> fop-0.93.ebuild ChangeLog:
   Version bump. Thanks to people in bug #113589 and other developers for work
