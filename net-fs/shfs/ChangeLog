@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.41 2007/05/06 15:48:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.42 2007/05/08 22:30:25 genone Exp $
+
+  08 May 2007; Marius Mauch <genone@gentoo.org> shfs-0.35-r3.ebuild,
+  shfs-0.35-r4.ebuild:
+  Replacing einfo with elog
 
   06 May 2007; Saleem Abdulrasool <compnerd@gentoo.org> shfs-0.35-r3.ebuild,
   shfs-0.35-r4.ebuild:

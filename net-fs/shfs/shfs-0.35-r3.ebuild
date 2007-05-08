@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.9 2007/05/06 15:48:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.10 2007/05/08 22:30:25 genone Exp $
 
 inherit linux-mod eutils
 
@@ -105,17 +105,17 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	echo
-	einfo "Use either 'shfsmount' or 'mount -t shfs' to mount remote"
-	einfo "filesystems into your local filesystem."
-	echo
-	einfo "Note the following:"
-	einfo
-	einfo " 1. The shfs kernel module has to be loaded first before you can"
-	einfo "    start mounting filesystems."
-	einfo "    Try: 'modprobe shfs' as root."
-	einfo
-	einfo " 2. When mouting, you must enter the absolute path of the remote"
-	einfo "    filesystem without any special characters such as tilde (~),"
-	einfo "    for example as they will not be evaluated."
+	elog "Use either 'shfsmount' or 'mount -t shfs' to mount remote"
+	elog "filesystems into your local filesystem."
+	elog
+	elog "Note the following:"
+	elog
+	elog " 1. The shfs kernel module has to be loaded first before you can"
+	elog "    start mounting filesystems."
+	elog "    Try: 'modprobe shfs' as root."
+	elog
+	elog " 2. When mouting, you must enter the absolute path of the remote"
+	elog "    filesystem without any special characters such as tilde (~),"
+	elog "    for example as they will not be evaluated."
 	echo
 }
