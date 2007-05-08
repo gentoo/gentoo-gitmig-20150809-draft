@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.236 2007/05/08 14:42:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.237 2007/05/08 14:55:52 uberlord Exp $
+
+  08 May 2007; Roy Marples <uberlord@gentoo.org> python-2.4.4-r2.ebuild:
+  Added ~x86-fbsd keyword, #177426.
 
   08 May 2007; Bryan Østergaard <kloeri@gentoo.org> python-2.3.6-r1.ebuild,
   python-2.4.4-r2.ebuild, python-2.5.1.ebuild:
