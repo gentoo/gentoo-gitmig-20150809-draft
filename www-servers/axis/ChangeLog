@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/axis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.10 2007/05/08 12:59:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.11 2007/05/08 20:58:39 caster Exp $
+
+  08 May 2007; Vlastimil Babka <caster@gentoo.org> axis-1.2_rc2.ebuild,
+  axis-1.2_rc2-r1.ebuild:
+  Update dev-java/bsf dependency for upcoming new version.
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> axis-1.2_rc2-r1.ebuild:
   x86 stable wrt #176963

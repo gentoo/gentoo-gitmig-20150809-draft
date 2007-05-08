@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2-r1.ebuild,v 1.2 2007/05/08 12:59:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2-r1.ebuild,v 1.3 2007/05/08 20:58:39 caster Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 		=dev-java/castor-0.9*
 		>=dev-java/sun-jimi-1.0
 		=dev-java/commons-httpclient-2*
-		=dev-java/bsf-2.3*
+		>=dev-java/bsf-2.3
 		dev-java/sun-jaf
 		dev-java/sun-javamail"
 RDEPEND="
