@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.16 2005/07/25 18:35:10 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.17 2007/05/08 22:53:37 genone Exp $
 
 inherit eutils
 
@@ -50,9 +50,9 @@ src_install() {
 }
 
 pkg_postinst(){
-	einfo "libnet ${SLOT} is deprecated !"
-	einfo "config script: libnet-${SLOT}-config"
-	einfo "manpage: libnet-${SLOT}"
-	einfo "library: libnet-${SLOT}.a"
-	einfo "include: libnet-${SLOT}.h"
+	elog "libnet ${SLOT} is deprecated !"
+	elog "config script: libnet-${SLOT}-config"
+	elog "manpage: libnet-${SLOT}"
+	elog "library: libnet-${SLOT}.a"
+	elog "include: libnet-${SLOT}.h"
 }

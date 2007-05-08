@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap-ringbuffer
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/ChangeLog,v 1.9 2006/07/25 09:01:17 dragonheart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/ChangeLog,v 1.10 2007/05/08 22:56:03 genone Exp $
+
+  08 May 2007; Marius Mauch <genone@gentoo.org>
+  libpcap-ringbuffer-0.9.20060417.ebuild:
+  Replacing einfo with elog
 
   25 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   libpcap-ringbuffer-0.9.20060417.ebuild:

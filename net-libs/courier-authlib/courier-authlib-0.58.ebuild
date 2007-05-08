@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.14 2007/04/08 14:10:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.15 2007/05/08 22:50:40 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -35,9 +35,9 @@ S="${WORKDIR}/${P%%_pre}"
 pkg_setup() {
 	if ! has_version 'dev-tcltk/expect' ; then
 		ewarn 'The dev-tcltk/expect package is not installed.'
-		einfo 'Without it, you will not be able to change system login passwords.'
-		einfo 'However non-system authentication modules (LDAP, MySQL, PostgreSQL,'
-		einfo 'and others) will work just fine.'
+		ewarn 'Without it, you will not be able to change system login passwords.'
+		ewarn 'However non-system authentication modules (LDAP, MySQL, PostgreSQL,'
+		ewarn 'and others) will work just fine.'
 	fi
 }
 
@@ -171,7 +171,7 @@ pkg_postinst() {
 	list="$(find /etc/courier -type f -maxdepth 1 | grep \"^/etc/courier/auth\")"
 	if [ ! -z "${list}" ] ; then
 		ewarn "Courier authentication files are now in /etc/courier/authlib/"
-		einfo "The following files are no longer needed and can likely be removed:"
-		einfo " rm $(echo \"${list}\")"
+		elog "The following files are no longer needed and can likely be removed:"
+		elog " rm $(echo \"${list}\")"
 	fi
 }

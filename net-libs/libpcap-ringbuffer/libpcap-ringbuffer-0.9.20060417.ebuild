@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-0.9.20060417.ebuild,v 1.2 2006/07/25 09:01:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-0.9.20060417.ebuild,v 1.3 2007/05/08 22:56:03 genone Exp $
 
 inherit eutils toolchain-funcs linux-info multilib libtool autotools
 
@@ -52,21 +52,21 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Use of the ringbuffer requires that the environment variable PCAP_FRAMES be set."
-	einfo "This has automaticaly been set to the maximal accepted value"
-	einfo "   PCAP_FRAMES=32768"
-	echo
-	einfo "This will tie up at around 51 Mbytes of memory for the ring buffer alone"
-	einfo "when capturing packets with tools like tcpdump or snort."
-	einfo "You can change this environment variable by editing"
-	einfo "   /etc/env.d/99libpcap-ringbuffer"
-	einfo "and then run"
-	einfo "   env-update && source /etc/profile"
-	echo
-	einfo "To continue to use libpcap-ringbuffer without the ringbuffer,  just set PCAP_FRAMES=0"
-	einfo "in the env.d file. Alternatively, you could run wireshark like this:"
-	einfo "   PCAP_FRAMES=0 wireshark"
-	echo
-	einfo "For further details see:"
-	einfo "   /usr/share/doc/${PF}/README.ring.gz"
+	elog "Use of the ringbuffer requires that the environment variable PCAP_FRAMES be set."
+	elog "This has automaticaly been set to the maximal accepted value"
+	elog "   PCAP_FRAMES=32768"
+	elog
+	elog "This will tie up at around 51 Mbytes of memory for the ring buffer alone"
+	elog "when capturing packets with tools like tcpdump or snort."
+	elog "You can change this environment variable by editing"
+	elog "   /etc/env.d/99libpcap-ringbuffer"
+	elog "and then run"
+	elog "   env-update && source /etc/profile"
+	elog
+	elog "To continue to use libpcap-ringbuffer without the ringbuffer,  just set PCAP_FRAMES=0"
+	elog "in the env.d file. Alternatively, you could run wireshark like this:"
+	elog "   PCAP_FRAMES=0 wireshark"
+	elog
+	elog "For further details see:"
+	elog "   /usr/share/doc/${PF}/README.ring.gz"
 }
