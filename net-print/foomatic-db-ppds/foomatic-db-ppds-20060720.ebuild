@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-20060720.ebuild,v 1.11 2006/12/03 19:06:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-20060720.ebuild,v 1.12 2007/05/08 12:07:32 calchan Exp $
 
 DESCRIPTION="linuxprinting.org PPD files for postscript printers"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
