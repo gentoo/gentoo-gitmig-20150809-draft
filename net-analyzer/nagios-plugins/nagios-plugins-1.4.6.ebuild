@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.6.ebuild,v 1.1 2007/03/12 01:07:25 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.6.ebuild,v 1.2 2007/05/08 21:38:01 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -42,7 +42,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	enewgroup nagios
-	enewuser nagios -1 /bin/bash /dev/null nagios
+	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
 
 src_unpack() {
