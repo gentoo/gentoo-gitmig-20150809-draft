@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.92.ebuild,v 1.5 2007/05/07 17:21:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.92.ebuild,v 1.6 2007/05/08 21:46:01 carlo Exp $
 
 inherit kde
 
@@ -16,9 +16,3 @@ IUSE=""
 RDEPEND="sys-apps/diffutils"
 
 need-kde 3.5
-
-pkg_preinst(){
-	kde_pkg_preinst
-	dodir /usr/share/applications/kde/
-	mv ${D}/usr/share/applnk/Development/kdiff3.desktop ${D}/usr/share/applications/kde/
-}
