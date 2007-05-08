@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.3.0.ebuild,v 1.1 2007/05/07 02:16:39 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.3.0.ebuild,v 1.2 2007/05/08 22:46:00 genone Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -95,11 +95,11 @@ pkg_postinst() {
 
 	ewarn If this is a new install, please edit /opt/openfire/conf/openfire.xml.sample
 	ewarn and save it as /opt/openfire/conf/openfire.xml
-	einfo
+	ewarn
 	ewarn The following must be be owned or writable by the jabber user.
-	einfo /opt/openfire/conf/openfire.xml
-	einfo
+	ewarn /opt/openfire/conf/openfire.xml
+	ewarn
 	ewarn If you are upgrading please have a look at the Wildfire to Openfire Upgrade Guide:
 	ewarn http://wiki.igniterealtime.org/display/WILDFIRE/Wildfire+to+Openfire+Upgrade+Guide
-	einfo
+	ewarn
 }
