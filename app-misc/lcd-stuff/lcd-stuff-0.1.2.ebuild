@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2.ebuild,v 1.4 2007/04/10 23:43:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2.ebuild,v 1.5 2007/05/08 21:32:20 jokey Exp $
 
 DESCRIPTION="lcd-stuff is a client for lcdproc that displays RSS, Weather, MPD and new mail."
 HOMEPAGE="http://lcd-stuff.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2" # and GPL-2 only
 
-DEPEND="app-misc/lcdproc
+RDEPEND="app-misc/lcdproc
 	net-misc/curl
 	dev-libs/glib
 	imap? ( net-libs/libetpan )
@@ -18,7 +18,6 @@ DEPEND="app-misc/lcdproc
 	mp3? ( media-libs/taglib )
 	xml? ( net-libs/libnxml )
 	rss? ( net-libs/libmrss net-libs/libnxml )"
-RDEPEND=${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
@@ -45,7 +44,7 @@ src_compile() {
 
 src_install()
 {
-	emake DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	insinto /etc
 	doins lcd-stuff.conf
