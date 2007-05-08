@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios,v 1.9 2007/02/03 07:04:42 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios,v 1.10 2007/05/08 21:36:14 dertobi123 Exp $
 
 opts="${opts} reload checkconfig"
 
@@ -35,7 +35,8 @@ start() {
 	chown nagios:nagios /var/nagios/nagios.log /var/nagios/status.sav
 	rm -f /var/nagios/rw/nagios.cmd
 	start-stop-daemon --quiet --start --startas /usr/nagios/bin/nagios \
-		--pidfile /var/nagios/nagios.lock -- -d /etc/nagios/nagios.cfg
+		-e HOME="/var/nagios/home" --pidfile /var/nagios/nagios.lock \
+		-- -d /etc/nagios/nagios.cfg
 	eend $?
 }
 

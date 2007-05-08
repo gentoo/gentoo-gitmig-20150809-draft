@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9.ebuild,v 1.1 2007/05/08 19:45:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9.ebuild,v 1.2 2007/05/08 21:36:14 dertobi123 Exp $
 
 inherit eutils apache-module toolchain-funcs gnuconfig
 
@@ -28,30 +28,26 @@ DEPEND="virtual/mailx
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	# If there's a gd lib on the system, it will try to build with it.
-	# check if gdlib-config is on, and then check its output.
-	if [[ -x ${ROOT}usr/bin/gdlib-config ]]; then
-		if [[ ! $(${ROOT}usr/bin/gdlib-config --libs | grep -- -ljpeg) ]]; then
-			eerror "Your gd has been compiled without jpeg support."
+	# Check if gd has been compiled with jpeg and png support
+	if ! use noweb; then
+		if ! built_with_use media-libs/gd jpeg png; then
+			eerror "Your gd has been compiled without jpeg and/or png support."
 			eerror "Please re-emerge gd:"
-			eerror "# USE="jpeg" emerge gd"
+			eerror "# USE="jpeg png" emerge gd"
 			die "pkg_setup failed"
 		fi
 	fi
 
 	enewgroup nagios
-
-	if use noweb; then
-		enewuser nagios -1 /bin/bash /dev/null nagios
-	else
-		enewuser nagios -1 /bin/bash /dev/null nagios,apache
-	fi
+	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/2.x-series-nsca.patch
+	local strip="$(echo '$(MAKE) strip-post-install')"
+	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
 	# ppc64 needs this
 	gnuconfig_update
 }
@@ -199,6 +195,13 @@ pkg_postinst() {
 		einfo "That will make nagios's web front end visable via"
 		einfo "http://localhost/nagios/"
 		einfo
+		einfo "Note that the user your webserver is running at needs"
+		einfo "read-access to /etc/nagios. There are several possible"
+		einfo "solutions to accomplish this, choose the one you are"
+		einfo "most comfortable with:"
+		einfo "	usermod -G nagios apache"
+		einfo "or"
+		einfo "	chown nagios:apache /etc/nagios"
 
 	else
 		einfo "Please note that you have installed Nagios without web interface."
