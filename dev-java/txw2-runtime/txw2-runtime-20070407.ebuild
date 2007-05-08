@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407.ebuild,v 1.3 2007/05/05 15:51:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407.ebuild,v 1.4 2007/05/08 17:07:31 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -53,10 +53,11 @@ src_unpack() {
 }
 
 EANT_BUILD_TARGET="runtime-jar"
+EANT_DOC_TARGET=""
 
 src_install() {
 	java-pkg_newjar txw2.jar
 
-	use doc && java-pkg_dojavadoc build/javadoc/*
+	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc runtime/*
 }
