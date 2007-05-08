@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.2.3.ebuild,v 1.3 2007/04/28 13:31:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.2.3.ebuild,v 1.4 2007/05/08 16:47:28 ranger Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 		>=sys-libs/ncurses-5.4-r5
 		>=sys-apps/pciutils-2.1.11-r1
 		>=sys-fs/sysfsutils-1.3.0
-		sys-apps/hotplug"
+		|| ( >=sys-fs/udev-096 sys-apps/hotplug )"
 
 src_install () {
 	make INSTALL_MOD_PATH="${D}" install || die

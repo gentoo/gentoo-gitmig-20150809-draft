@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.18 2007/04/28 17:42:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.19 2007/05/08 16:47:28 ranger Exp $
+
+  08 May 2007; Brent Baude <ranger@gentoo.org> iprutils-2.2.0.ebuild,
+  iprutils-2.2.2.ebuild, iprutils-2.2.3.ebuild:
+  Incorporating fix for udev foo, stablize 2.2.2.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> iprutils-2.0.15.8.ebuild,
   iprutils-2.2.2.ebuild:
