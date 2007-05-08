@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.9 2007/04/28 17:38:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.10 2007/05/08 11:43:46 drac Exp $
+
+*ffmpegthumbnailer-1.1.1 (08 May 2007)
+
+  08 May 2007; Samuli Suominen <drac@gentoo.org>
+  -files/ffmpegthumbnailer-1.1-int.patch,
+  -files/ffmpegthumbnailer-1.1-inttypes.patch,
+  -ffmpegthumbnailer-1.1.ebuild, -ffmpegthumbnailer-1.1-r1.ebuild,
+  +ffmpegthumbnailer-1.1.1.ebuild:
+  Version bump.
 
   28 Apr 2007; nixnut <nixnut@gentoo.org> ffmpegthumbnailer-1.1-r1.ebuild:
   Added ~ppc wrt bug 175749
