@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.03.00.ebuild,v 1.6 2007/03/03 00:00:09 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.03.00-r1.ebuild,v 1.1 2007/05/08 10:53:48 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
-MY_P="cluster-${PV}"
+CLUSTER_RELEASE="1.03.00"
+MY_P="cluster-${CLUSTER_RELEASE}"
 
 DESCRIPTION="GFS kernel module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -17,8 +18,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/linux-sources-2.6.16
-	>=sys-cluster/dlm-headers-1.03.00
-	>=sys-cluster/cman-headers-1.03.00"
+	=sys-cluster/dlm-headers-${CLUSTER_RELEASE}*
+	=sys-cluster/cman-headers-${CLUSTER_RELEASE}*"
 
 RDEPEND=""
 
@@ -38,6 +39,15 @@ src_unpack() {
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -lt "17" ] ; then
 			epatch ${FILESDIR}/gfs-kernel-1.03.00-pre2.6.17-compilefix.patch || die
+		fi
+
+		if [ "$KV_PATCH" -ge "18" ] ; then
+			epatch ${FILESDIR}/${P}-post-2.6.18.patch || die
+
+			sed -i \
+				-e 's|version.h|utsrelease.h|g' \
+				configure \
+				|| die "sed failed"
 		fi
 	fi
 }

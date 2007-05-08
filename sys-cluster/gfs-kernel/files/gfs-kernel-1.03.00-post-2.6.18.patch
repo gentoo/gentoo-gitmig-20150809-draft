@@ -1,0 +1,197 @@
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/dlm/lock_dlm.h cluster-1.03.00/gfs-kernel/src/dlm/lock_dlm.h
+--- cluster-1.03.00.orig/gfs-kernel/src/dlm/lock_dlm.h	2006-07-12 23:58:29.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/dlm/lock_dlm.h	2007-03-09 21:00:27.000000000 +0100
+@@ -24,7 +24,7 @@
+ #include <linux/socket.h>
+ #include <linux/kthread.h>
+ #include <net/sock.h>
+-#include <linux/lm_interface.h>
++#include "lm_interface.h"
+ #include <cluster/cnxman.h>
+ #include <cluster/service.h>
+ #include <cluster/dlm.h>
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gfs/gfs.h cluster-1.03.00/gfs-kernel/src/gfs/gfs.h
+--- cluster-1.03.00.orig/gfs-kernel/src/gfs/gfs.h	2006-08-16 23:52:45.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gfs/gfs.h	2007-03-09 21:46:50.000000000 +0100
+@@ -16,7 +16,7 @@
+ 
+ #define GFS_RELEASE_NAME "1.03.00"
+ 
+-#include <linux/lm_interface.h>
++#include "lm_interface.h"
+ #include <linux/gfs_ondisk.h>
+ 
+ #include "fixed_div64.h"
+@@ -67,8 +67,8 @@
+ 
+ #define get_v2sdp(sb) ((struct gfs_sbd *)(sb)->s_fs_info)
+ #define set_v2sdp(sb, sdp) (sb)->s_fs_info = (sdp)
+-#define get_v2ip(inode) ((struct gfs_inode *)(inode)->u.generic_ip)
+-#define set_v2ip(inode, ip) (inode)->u.generic_ip = (ip)
++#define get_v2ip(inode) ((struct gfs_inode *)(inode)->i_private)
++#define set_v2ip(inode, ip) (inode)->i_private = (ip)
+ #define get_v2fp(file) ((struct gfs_file *)(file)->private_data)
+ #define set_v2fp(file, fp) (file)->private_data = (fp)
+ #define get_v2bd(bh) ((struct gfs_bufdata *)(bh)->b_private)
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gfs/inode.c cluster-1.03.00/gfs-kernel/src/gfs/inode.c
+--- cluster-1.03.00.orig/gfs-kernel/src/gfs/inode.c	2005-09-18 05:01:24.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gfs/inode.c	2007-03-09 21:48:37.000000000 +0100
+@@ -97,7 +97,6 @@
+ 	inode->i_mtime.tv_sec = ip->i_di.di_mtime;
+ 	inode->i_ctime.tv_sec = ip->i_di.di_ctime;
+ 	inode->i_atime.tv_nsec = inode->i_mtime.tv_nsec = inode->i_ctime.tv_nsec = 0;
+-	inode->i_blksize = PAGE_SIZE;
+ 	inode->i_blocks = ip->i_di.di_blocks <<
+ 		(ip->i_sbd->sd_sb.sb_bsize_shift - GFS_BASIC_BLOCK_SHIFT);
+ 	inode->i_generation = ip->i_di.di_header.mh_incarn;
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gfs/ops_inode.c cluster-1.03.00/gfs-kernel/src/gfs/ops_inode.c
+--- cluster-1.03.00.orig/gfs-kernel/src/gfs/ops_inode.c	2006-08-16 16:40:54.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gfs/ops_inode.c	2007-03-09 21:50:15.000000000 +0100
+@@ -171,22 +171,22 @@
+ 	parent = dget_parent(dentry);
+ 
+ 	if (gfs_filecmp(&dentry->d_name, "@hostname", 9))
+-		new = lookup_one_len(system_utsname.nodename,
++		new = lookup_one_len(init_utsname()->nodename,
+ 				     parent,
+-				     strlen(system_utsname.nodename));
++				     strlen(init_utsname()->nodename));
+ 	else if (gfs_filecmp(&dentry->d_name, "@nodeid", 7))
+ 		new = lookup_one_len(buf, 
+ 				     parent, 
+ 				     sprintf(buf, "%s%i", "node", 
+ 					     get_my_nodeid()));
+ 	else if (gfs_filecmp(&dentry->d_name, "@mach", 5))
+-		new = lookup_one_len(system_utsname.machine,
++		new = lookup_one_len(init_utsname()->machine,
+ 				     parent,
+-				     strlen(system_utsname.machine));
++				     strlen(init_utsname()->machine));
+ 	else if (gfs_filecmp(&dentry->d_name, "@os", 3))
+-		new = lookup_one_len(system_utsname.sysname,
++		new = lookup_one_len(init_utsname()->sysname,
+ 				     parent,
+-				     strlen(system_utsname.sysname));
++				     strlen(init_utsname()->sysname));
+ 	else if (gfs_filecmp(&dentry->d_name, "@uid", 4))
+ 		new = lookup_one_len(buf,
+ 				     parent,
+@@ -199,8 +199,8 @@
+ 		new = lookup_one_len(buf,
+ 				     parent,
+ 				     sprintf(buf, "%s_%s",
+-					     system_utsname.machine,
+-					     system_utsname.sysname));
++					     init_utsname()->machine,
++					     init_utsname()->sysname));
+ 	else if (gfs_filecmp(&dentry->d_name, "@jid", 4))
+ 		new = lookup_one_len(buf,
+ 				     parent,
+@@ -235,22 +235,22 @@
+ 	parent = dget_parent(dentry);
+ 
+ 	if (gfs_filecmp(&dentry->d_name, "{hostname}", 10))
+-		new = lookup_one_len(system_utsname.nodename,
++		new = lookup_one_len(init_utsname()->nodename,
+ 				     parent,
+-				     strlen(system_utsname.nodename));
++				     strlen(init_utsname()->nodename));
+ 	else if (gfs_filecmp(&dentry->d_name, "{nodeid}", 8))
+ 		new = lookup_one_len(buf,
+ 				     parent,
+ 				     sprintf(buf, "%s%i", "node",
+ 					     get_my_nodeid()));
+ 	else if (gfs_filecmp(&dentry->d_name, "{mach}", 6))
+-		new = lookup_one_len(system_utsname.machine,
++		new = lookup_one_len(init_utsname()->machine,
+ 				     parent,
+-				     strlen(system_utsname.machine));
++				     strlen(init_utsname()->machine));
+ 	else if (gfs_filecmp(&dentry->d_name, "{os}", 4))
+-		new = lookup_one_len(system_utsname.sysname,
++		new = lookup_one_len(init_utsname()->sysname,
+ 				     parent,
+-				     strlen(system_utsname.sysname));
++				     strlen(init_utsname()->sysname));
+ 	else if (gfs_filecmp(&dentry->d_name, "{uid}", 5))
+ 		new = lookup_one_len(buf,
+ 				     parent,
+@@ -263,8 +263,8 @@
+ 		new = lookup_one_len(buf,
+ 				     parent,
+ 				     sprintf(buf, "%s_%s",
+-					     system_utsname.machine,
+-					     system_utsname.sysname));
++					     init_utsname()->machine,
++					     init_utsname()->sysname));
+ 	else if (gfs_filecmp(&dentry->d_name, "{jid}", 5))
+ 		new = lookup_one_len(buf,
+ 				     parent,
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gulm/gulm.h cluster-1.03.00/gfs-kernel/src/gulm/gulm.h
+--- cluster-1.03.00.orig/gfs-kernel/src/gulm/gulm.h	2006-08-16 23:53:36.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gulm/gulm.h	2007-03-09 21:03:23.000000000 +0100
+@@ -24,7 +24,6 @@
+ #include <linux/slab.h>
+ #include <linux/spinlock.h>
+ #include <asm/atomic.h>
+-#include <linux/config.h>
+ #include <linux/version.h>
+ #include <linux/smp_lock.h>
+ #include <linux/list.h>
+@@ -73,7 +72,7 @@
+ /*  Divide x by y.  Round up if there is a remainder.  */
+ #define DIV_RU(x, y) (((x) + (y) - 1) / (y))
+ 
+-#include <linux/lm_interface.h>
++#include "lm_interface.h"
+ 
+ #include "gulm_prints.h"
+ 
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gulm/gulm_fs.c cluster-1.03.00/gfs-kernel/src/gulm/gulm_fs.c
+--- cluster-1.03.00.orig/gfs-kernel/src/gulm/gulm_fs.c	2005-03-04 21:08:00.000000000 +0100
++++ cluster-1.03.00/gfs-kernel/src/gulm/gulm_fs.c	2007-03-09 21:06:14.000000000 +0100
+@@ -258,7 +258,7 @@
+ 		if (hostdata != NULL && strlen (hostdata) > 0) {
+ 			strncpy (gulm_cm.myName, hostdata, 64);
+ 		} else {
+-			strncpy (gulm_cm.myName, system_utsname.nodename, 64);
++			strncpy (gulm_cm.myName, init_utsname()->nodename, 64);
+ 		}
+ 		gulm_cm.myName[63] = '\0';
+ 
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gulm/handler.h cluster-1.03.00/gfs-kernel/src/gulm/handler.h
+--- cluster-1.03.00.orig/gfs-kernel/src/gulm/handler.h	2004-06-24 10:53:28.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gulm/handler.h	2007-03-09 21:00:13.000000000 +0100
+@@ -13,7 +13,7 @@
+ 
+ #ifndef __handler_c__
+ #define __handler_c__
+-#include <linux/lm_interface.h>
++#include "lm_interface.h"
+ 
+ struct callback_qu_s {
+ 	struct completion startup;
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/harness/main.c cluster-1.03.00/gfs-kernel/src/harness/main.c
+--- cluster-1.03.00.orig/gfs-kernel/src/harness/main.c	2006-08-16 23:53:01.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/harness/main.c	2007-03-09 20:58:29.000000000 +0100
+@@ -19,7 +19,7 @@
+ #include <linux/sched.h>
+ #include <linux/kmod.h>
+ #include <linux/fs.h>
+-#include <linux/lm_interface.h>
++#include "lm_interface.h"
+ 
+ #define RELEASE_NAME "1.03.00"
+ 
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/nolock/main.c cluster-1.03.00/gfs-kernel/src/nolock/main.c
+--- cluster-1.03.00.orig/gfs-kernel/src/nolock/main.c	2006-08-16 23:53:20.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/nolock/main.c	2007-03-09 20:59:52.000000000 +0100
+@@ -18,7 +18,7 @@
+ #include <linux/types.h>
+ #include <linux/fs.h>
+ #include <linux/smp_lock.h>
+-#include <linux/lm_interface.h>
++#include "lm_interface.h"
+ 
+ #define RELEASE_NAME "1.03.00"
+ 
