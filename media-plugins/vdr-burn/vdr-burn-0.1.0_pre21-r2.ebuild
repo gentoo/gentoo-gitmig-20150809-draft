@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r2.ebuild,v 1.2 2007/05/08 08:15:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r2.ebuild,v 1.3 2007/05/08 15:23:12 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -21,7 +21,7 @@ IUSE="projectx"
 PATCHES="${FILESDIR}/${PV}/i18n.diff
 		${FILESDIR}/${PV}/menuburn.diff
 		${FILESDIR}/${PV}/menuitems.diff
-		${FILESDIR}/${PV}/${P}_RemovePath-fix.diff"
+		${FILESDIR}/${PV}/${P}_setdefaults.diff"
 
 DEPEND=">=media-video/vdr-1.4
 		>=dev-libs/libcdio-0.71
@@ -32,6 +32,7 @@ RDEPEND=">=media-video/dvdauthor-0.6.10
 		>=media-video/mjpegtools-1.6.2
 		>=media-video/vdrsync-0.1.3_pre1-r5
 		>=media-video/m2vrequantizer-20060306
+		media-video/transcode
 		media-fonts/ttf-bitstream-vera
 		media-video/vdrtools-genindex
 		virtual/cdrtools
@@ -87,12 +88,12 @@ src_install() {
 
 	use projectx && newins ${S}/burn/ProjectX.ini projectx-vdr.ini
 
-	if [[ ! -f ${root}/usr/share/vdr/burn/counters/standard ]]; then
-		insinto /usr/share/vdr/burn/counters
-		doins ${S}/burn/counters/standard
-	fi
-
 	fowners -R vdr:vdr /usr/share/vdr/burn
+
+	(
+		diropts -ovdr -gvdr
+		keepdir /usr/share/vdr/burn/counters
+	)
 }
 
 pkg_preinst() {
@@ -103,6 +104,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+
+	local DMH_FILE="${ROOT}/usr/share/vdr/burn/counters/standard"
+	if [[ ! -e "${DMH_FILE}" ]]; then
+		echo 0001 > "${DMH_FILE}"
+		chown vdr:vdr "${DMH_FILE}"
+	fi
+
 	vdr-plugin_pkg_postinst
 
 	echo
