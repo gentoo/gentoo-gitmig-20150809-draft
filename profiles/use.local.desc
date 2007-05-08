@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2798 2007/05/07 10:23:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2799 2007/05/08 04:46:43 pioto Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -279,6 +279,9 @@ app-text/webgen:textile - Textile support
 app-text/webgen:thumbnail - Thumbnail creation support using rmagick
 app-text/xpdf:nodrm - Disable the drm feature decoder.
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
+app-vim/vcscommand:cvs - Enable CVS support
+app-vim/vcscommand:subversion - Enable subversion support
+app-vim/vcscommand:svk - Enable SVK support
 dev-cpp/sptk:excel - Enable Excel support
 dev-db/libpq:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/mysql-community:big-tables - Make tables contain up to 1.844E+19 rows
