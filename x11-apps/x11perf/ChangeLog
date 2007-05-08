@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/x11perf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.15 2007/05/08 14:51:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.16 2007/05/08 17:42:59 gustavoz Exp $
+
+  08 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> x11perf-1.4.1.ebuild:
+  Stable on sparc wrt #165892
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> x11perf-1.4.1.ebuild:
   x86 stable wrt bug 165892
