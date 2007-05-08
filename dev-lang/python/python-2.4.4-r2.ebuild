@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r2.ebuild,v 1.2 2007/05/07 19:25:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r2.ebuild,v 1.3 2007/05/08 14:42:26 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -24,7 +24,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.4"
 KEYWORDS="~hppa ~x86"
-IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 doc nocxx nptl examples"
+IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 doc nocxx threads examples"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	!dev-python/cjkcodecs
@@ -154,7 +154,7 @@ src_compile() {
 		`use_enable ipv6` \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
-		`use_with nptl threads` \
+		`use_with threads` \
 		--with-libc='' \
 		${myconf} || die
 	emake || die "Parallel make failed"
