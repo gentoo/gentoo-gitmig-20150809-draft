@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.11 2007/04/12 14:43:17 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.12 2007/05/08 13:36:09 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -17,7 +17,6 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc readline source"
 
 RDEPEND=">=virtual/jdk-1.4
-	=dev-java/bsf-2.3*
 	=dev-java/servletapi-2.4*
 	readline? ( dev-java/libreadline-java )"
 DEPEND="${RDEPEND}
@@ -39,7 +38,6 @@ src_unpack() {
 	cd "${S}/lib/"
 	rm -v *.jar
 	java-pkg_jar-from servletapi-2.4
-	java-pkg_jar-from bsf-2.3
 	use readline && java-pkg_jar-from libreadline-java
 }
 
