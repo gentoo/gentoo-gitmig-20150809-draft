@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.1.ebuild,v 1.4 2007/05/08 16:16:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.1.ebuild,v 1.5 2007/05/08 16:45:41 uberlord Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
 
-inherit eutils autotools flag-o-matic python multilib versionator toolchain-funcs alternatives
+inherit eutils autotools flag-o-matic python multilib versionator toolchain-funcs alternatives libtool
 
 # we need this so that we don't depends on python.eclass
 PYVER_MAJOR=$(get_major_version)
@@ -24,7 +24,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="2.5"
-KEYWORDS="~hppa ~ia64 ~x86"
+KEYWORDS="~hppa ~ia64 ~x86 ~x86-fbsd"
 IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 sqlite doc nocxx threads examples"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes,cjkcodecs}
@@ -154,8 +154,15 @@ src_compile() {
 
 	# export CXX so it ends up in /usr/lib/python2.x/config/Makefile
 	tc-export CXX
+
 	# set LINKCC to prevent python from being linked to libstdc++.so
 	export LINKCC="\$(PURIFY) \$(CC)"
+
+	# set LDFLAGS so we link modules with -lpython2.5 correctly.
+	# Needed on FreeBSD unless python2.5 is already installed.
+	# Please query BSD team before removing this!
+	export LDFLAGS="-L."
+
 	econf \
 		--with-fpectl \
 		--enable-shared \
