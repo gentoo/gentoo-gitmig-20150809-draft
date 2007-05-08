@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.11.ebuild,v 1.5 2006/10/28 12:45:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.11.ebuild,v 1.6 2007/05/08 23:03:35 genone Exp $
 
 inherit eutils
 
@@ -52,23 +52,23 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "To start bicimap at boot you have to enable the /etc/init.d/svscan rc file"
-	einfo "and create the following link:"
-	einfo "ln -s /etc/bincimap/service/bincimap /service/bincimap"
-	einfo
+	elog "To start bicimap at boot you have to enable the /etc/init.d/svscan rc file"
+	elog "and create the following link:"
+	elog "ln -s /etc/bincimap/service/bincimap /service/bincimap"
+	elog
 
 	if use ssl; then
-		einfo "If you want to use ssl connections, create the following link:"
-		einfo "ln -s /etc/bincimap/service/bincimaps /service/bincimaps"
-		einfo
-		einfo "And this command will setup bincimap-ssl on your system."
-		einfo "emerge --config =${CATEGORY}/${PF}"
-		einfo
+		elog "If you want to use ssl connections, create the following link:"
+		elog "ln -s /etc/bincimap/service/bincimaps /service/bincimaps"
+		elog
+		elog "And this command will setup bincimap-ssl on your system."
+		elog "emerge --config =${CATEGORY}/${PF}"
+		elog
 	fi
 
-	einfo "NOTE: Default Maildir path is '~/.maildir'. If you want to modify it,"
-	einfo "edit /etc/bincimap/bincimap.conf"
-	einfo
+	elog "NOTE: Default Maildir path is '~/.maildir'. If you want to modify it,"
+	elog "edit /etc/bincimap/bincimap.conf"
+	elog
 }
 
 pkg_config() {
