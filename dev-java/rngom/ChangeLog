@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/rngom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.3 2007/05/05 14:35:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.4 2007/05/08 06:21:14 ali_bush Exp $
+
+  08 May 2007; Alistair John Bush <ali_bush@gentoo.org>
+  rngom-20051226.ebuild:
+  Fix ebuild so it doesn't attempt to build javadocs and actually installs
+  bunded javadoc
 
   05 May 2007; Vlastimil Babka <caster@gentoo.org> rngom-20051226.ebuild:
   Remove -i from cp.
