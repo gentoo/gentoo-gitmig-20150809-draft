@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93.ebuild,v 1.1 2007/05/07 10:22:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93.ebuild,v 1.2 2007/05/08 11:14:00 ali_bush Exp $
 
 # TODO: hyphenation support doesn't seem to be built correctly, because there's no xml in hyph dir
 #		but upstream binary distro contains only fop.jar, no hyph nor sandbox
@@ -37,6 +37,7 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 
 DEPEND=">=virtual/jdk-1.4
+	=dev-java/eclipse-ecj-3.2*
 	${COMMON_DEPEND}"
 #	test? (
 #		=dev-java/junit-3.8*
@@ -74,6 +75,8 @@ src_compile() {
 	use jai && af="${af} -Djai.present=true"
 	use jimi && af="${af} -Djimi.present=true"
 
+	ANT_OPTS="-Xmx256M"
+	java-pkg_force-compiler ecj-3.2
 	eant ${af} package $(use_doc javadocs)
 }
 
