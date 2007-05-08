@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.52 2007/02/10 12:04:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.53 2007/05/08 19:25:34 jokey Exp $
+
+  08 May 2007; Markus Ullmann <jokey@gentoo.org> qemu-0.9.0.ebuild:
+  Stable on x86 wrt security bug #176674
 
 *qemu-0.9.0 (06 Feb 2007)
 
