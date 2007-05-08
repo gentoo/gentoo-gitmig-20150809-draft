@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/checkpw-1.01.ebuild,v 1.4 2005/05/16 16:25:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/checkpw-1.01.ebuild,v 1.5 2007/05/08 23:09:27 genone Exp $
 
 inherit toolchain-funcs
 
@@ -53,12 +53,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "How to set password:"
-	einfo
-	einfo " % echo 'YOURPASSWORD' > ~/.maildir/.password"
-	einfo " % chmod 600 ~/.maildir/.password"
-	einfo
-	einfo "Replace YOURPASSWORD with your plain password."
-	einfo
+	elog
+	elog "How to set password:"
+	elog
+	elog " % echo 'YOURPASSWORD' > ~/.maildir/.password"
+	elog " % chmod 600 ~/.maildir/.password"
+	elog
+	elog "Replace YOURPASSWORD with your plain password."
+	elog
 }
