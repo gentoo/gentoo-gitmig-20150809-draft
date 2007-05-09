@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.283 2007/04/02 09:00:32 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.284 2007/05/09 13:27:08 gustavoz Exp $
+
+  09 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> gnupg-1.4.7-r1.ebuild:
+  Stable on sparc wrt #177747
 
 *gnupg-2.0.3-r1 (02 Apr 2007)
 *gnupg-1.4.7-r1 (02 Apr 2007)
