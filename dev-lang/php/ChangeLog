@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.165 2007/05/09 09:34:24 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.166 2007/05/09 21:00:48 chtekk Exp $
+
+  09 May 2007; Luca Longinotti <chtekk@gentoo.org> php-4.4.7.ebuild,
+  php-5.2.2-r1.ebuild:
+  AMD64 stable for security bug #169372.
 
   09 May 2007; Jose Luis Rivero <yoswink@gentoo.org> php-4.4.7.ebuild:
   Stable on alpha wrt security bug #169372
