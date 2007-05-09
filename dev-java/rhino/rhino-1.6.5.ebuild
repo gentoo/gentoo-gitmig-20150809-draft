@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.5.ebuild,v 1.1 2007/05/09 01:22:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.5.ebuild,v 1.2 2007/05/09 08:03:31 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2 eutils versionator
@@ -19,7 +19,7 @@ IUSE=""
 
 S="${WORKDIR}/${MY_P}"
 
-CDEPEND=">=dev-java/xml-xmlbeans-20041217"
+CDEPEND="=dev-java/xml-xmlbeans-1*"
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
