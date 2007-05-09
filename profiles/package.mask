@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7243 2007/05/08 19:45:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7244 2007/05/09 18:13:19 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (9 may 2007)
+# waiting for better upstream versions
+# 170997 doesn't open the configuration dialog
+>=sys-power/kpowersave-0.7.0
+# 175933 cannot suspend because of missing org.freedesktop.PolicyKit
+>=sys-power/powersave-0.15.0
 
 # Gustavo Felisberto <humpback@gentoo.org> (7 may 2007)
 # Alpha software.
