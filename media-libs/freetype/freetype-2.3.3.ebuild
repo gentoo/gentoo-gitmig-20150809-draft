@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.3.ebuild,v 1.7 2007/05/07 20:25:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.3.ebuild,v 1.8 2007/05/09 01:31:40 dirtyepic Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -13,13 +13,14 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 LICENSE="FTL GPL-2"
 SLOT="2"
 KEYWORDS="~alpha amd64 ~arm hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
-IUSE="bindist debug doc zlib"
+IUSE="X bindist debug doc zlib"
 
 # The RDEPEND below makes sure that if there is a version of moz/ff/tb
 # installed, then it will have the freetype-2.1.8+ binary compatibility patch.
 # Otherwise updating freetype will cause moz/ff/tb crashes.  #59849
 # 20 Nov 2004 agriffis
-DEPEND="zlib? ( sys-libs/zlib )"
+DEPEND="zlib? ( sys-libs/zlib )
+		X?    ( x11-libs/libX11 )"
 
 RDEPEND="${DEPEND}
 	!<www-client/mozilla-1.7.3-r3
@@ -68,7 +69,21 @@ src_unpack() {
 	# http://savannah.nongnu.org/bugs/?19536
 	epatch "${FILESDIR}"/${P}-buffer-overwrite.patch
 
-	sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" ../ft2demos-${PV}/Makefile
+	### ft2demos ###
+		cd ../ft2demos-${PV}
+
+		# fttimer demo does not require X11.  fix linking appropriately.
+		epatch "${FILESDIR}"/${P}-fttimer-noX.patch
+
+		sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" Makefile
+
+		# Disable tests needing X11 when USE="-X". (bug #177597)
+		if ! use X; then
+			sed -i -e "/EXES\ +=\ ftview/ s:^:#:" Makefile
+		fi
+
+		cd ${S}
+	### end ft2demos ###
 
 	elibtoolize
 	epunt_cxx
