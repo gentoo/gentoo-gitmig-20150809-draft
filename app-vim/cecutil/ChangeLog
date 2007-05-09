@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/cecutil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.23 2007/02/21 23:53:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.24 2007/05/09 19:14:02 pioto Exp $
+
+*cecutil-16 (09 May 2007)
+
+  09 May 2007; Mike Kelly <pioto@gentoo.org> +cecutil-16.ebuild:
+  Version bump. Now requires vim 7.0.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
