@@ -1,12 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/xphotohunter-1.4.ebuild,v 1.1 2007/05/08 21:35:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/xphotohunter-1.4-r1.ebuild,v 1.1 2007/05/09 19:15:35 tupone Exp $
 
 inherit eutils games
 
 DESCRIPTION="Find the differences between two pictures."
 HOMEPAGE="http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/main-english.html"
-SRC_URI="http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/${P}.tar.gz"
+SRC_URI="http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/${P}.tar.gz
+	http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/${PN}_pictures1-${PV}.tar.gz
+	http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/${PN}_pictures2-${PV}.tar.gz
+	http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/${PN}_pictures3-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,8 +33,11 @@ src_compile() {
 src_install() {
 	dogamesbin xphotohunter || die "Installing binary failed"
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r Picture *.jpg *.xpm *.bmp *.wav \
+	doins -r *.jpg *.xpm *.bmp *.wav \
 		|| die "Installing data files failed"
+	insinto "${GAMES_DATADIR}/${PN}/Picture"
+	doins Picture/* ../${PN}_pictures*-${PV}/* \
+		|| die "Installing picture files failed"
 	insinto "${GAMES_STATEDIR}/${PN}"
 	insopts -m0660
 	doins ${PN}.dat \
