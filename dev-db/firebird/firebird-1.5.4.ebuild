@@ -1,24 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.13 2007/04/28 21:58:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4.ebuild,v 1.1 2007/05/09 16:13:04 carlo Exp $
 
 inherit flag-o-matic eutils
 
-extra_ver="4731"
-DESCRIPTION="A relational database offering many ANSI SQL-99 features"
+extra_ver="4910"
+MY_P=${P}.${extra_ver}
+DESCRIPTION="A relational database offering many ANSI SQL-99 features."
 HOMEPAGE="http://firebird.sourceforge.net/"
-SRC_URI="mirror://sourceforge/firebird/${P}.${extra_ver}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+	 mirror://gentoo/firebird-1.5.4-debian-patchset.tar.bz2
+		doc? (	http://firebird.sourceforge.net/pdfmanual/Firebird-1.5-QuickStart.pdf
+				ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
 LICENSE="Interbase-1.0"
 SLOT="0"
 KEYWORDS="~amd64 -ia64 ~sparc ~x86"
-IUSE="xinetd"
+IUSE="xinetd doc"
 RESTRICT="nouserpriv"
 
-DEPEND="virtual/libc
-	xinetd? ( virtual/inetd )"
+RDEPEND="xinetd? ( virtual/inetd )"
+DEPEND="${RDEPEND}
+	doc? ( app-arch/unzip )"
 
-S=${WORKDIR}/${P}.${extra_ver}
+
+S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
 	enewgroup firebird 450
@@ -26,10 +32,24 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	if use doc; then
+	    # Unpack docs
+	    mkdir ${WORKDIR}/manuals
+	    cd ${WORKDIR}/manuals
+	    unpack ib_b60_doc.zip
+	    cd ${WORKDIR}
+	fi
+
+	unpack ${MY_P}.tar.bz2
+	unpack firebird-1.5.4-debian-patchset.tar.bz2
 	cd ${S}
 
-	epatch ${FILESDIR}/${PN}-1.5-build.patch
+	for p in $(ls ${WORKDIR}/patches) ; do
+		epatch ${WORKDIR}/patches/${p} || die "Patch did not apply."
+	done
+
+	# This file must be regenerated during build
+	rm ${S}/src/dsql/parse.cpp
 }
 
 src_compile() {
@@ -44,8 +64,11 @@ src_compile() {
 	use xinetd || myconf="${myconf} --enable-superserver"
 
 	NOCONFIGURE=1
+
 	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
+
 	find . -type f -exec sed -i -e "s/-lcurses/-lncurses/g" {} \;
+
 	econf ${myconf} || die "./configure failed"
 	emake -j 1 || die "error during make"
 }
@@ -68,13 +91,16 @@ src_install() {
 	if use xinetd ; then
 		insinto /etc/xinetd.d ; newins ${FILESDIR}/${PN}-1.5.0.xinetd firebird
 	else
-		newinitd ${FILESDIR}/${PN}.init.d firebird
-		newconfd ${FILESDIR}/firebird.conf.d firebird
+		exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.init.d firebird
+		insinto /etc/conf.d ; newins ${FILESDIR}/firebird.conf.d firebird
 		fperms 640 /etc/conf.d/firebird
 	fi
-	newenvd ${FILESDIR}/70${PN} 70firebird
+	insinto /etc/env.d ; newins ${FILESDIR}/70${PN} 70firebird
 
 	# Following is adapted from postinstall.sh
+
+	dodir /opt/firebird/run
+	keepdir /opt/firebird/run
 
 	# make sure everything is owned by firebird
 	chown -R firebird:firebird ${D}/opt/firebird
@@ -99,17 +125,31 @@ src_install() {
 	chmod ug=rx,o= ${D}/opt/firebird/{intl/fbintl,UDF/fbudf.so,UDF/ib_udf.so}
 
 	# create links for back compatibility
-	dosym /opt/firebird/lib/libfbclient.so /usr/lib/libgds.so
-	dosym /opt/firebird/lib/libfbclient.so /usr/lib/libgds.so.0
-	dosym /opt/firebird/lib/libfbclient.so /opt/firebird/lib/libgds.so
-	dosym /opt/firebird/lib/libfbclient.so /opt/firebird/lib/libgds.so.0
+	dosym ../../opt/firebird/lib/libfbclient.so /usr/lib/libgds.so
+	dosym ../../opt/firebird/lib/libfbclient.so /usr/lib/libgds.so.0
+	dosym ./libfbclient.so /opt/firebird/lib/libgds.so
+	dosym ./libfbclient.so /opt/firebird/lib/libgds.so.0
+
+	# we want relative symlinks...
+	rm /usr/lib/libfbclient.so
+	rm /usr/lib/libfbclient.so.1
+	rm /usr/lib/libfbclient.so.1.5.4
+	dosym ../../opt/firebird/lib/libfbclient.so /usr/lib/libfbclient.so
+	dosym ../../opt/firebird/lib/libfbclient.so.1 /usr/lib/libfbclient.so.1
+	dosym ../../opt/firebird/lib/libfbclient.so.1.5.4 /usr/lib/libfbclient.so.1.5.4
 
 	# move and link config files to /etc/firebird so they'll be protected
 	dodir /etc/firebird
 	mv ${D}/opt/firebird/{security.fdb,aliases.conf,firebird.conf} ${D}/etc/firebird
-	dosym /etc/firebird/security.fdb /opt/firebird/security.fdb
-	dosym /etc/firebird/aliases.conf /opt/firebird/aliases.conf
-	dosym /etc/firebird/firebird.conf /opt/firebird/firebird.conf
+	dosym ../../etc/firebird/security.fdb /opt/firebird/security.fdb
+	dosym ../../etc/firebird/aliases.conf /opt/firebird/aliases.conf
+	dosym ../../etc/firebird/firebird.conf /opt/firebird/firebird.conf
+
+	# Install docs
+	if use doc; then
+	    dodoc ${DISTDIR}/Firebird-1.5-QuickStart.pdf
+	    dodoc ${WORKDIR}/manuals/*
+	fi
 }
 
 pkg_postinst() {
