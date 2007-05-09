@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta1.ebuild,v 1.3 2006/12/01 19:05:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta2.ebuild,v 1.1 2007/05/09 16:16:19 genstef Exp $
 
 inherit linux-mod
 
@@ -37,7 +37,7 @@ src_compile() {
 
 src_install() {
 	linux-mod_src_install
-	dodoc BIG_FAT_WARNING CHANGELOG FAQ TESTING THANKS
+	dodoc CHANGELOG FAQ TESTING THANKS
 	dodoc Module/README Module/STA_iwpriv_ATE_usage.txt
 	insinto /etc/Wireless/RT61STA
 	doins Module/rt{2{561{,s},661}.bin,61sta.dat}
