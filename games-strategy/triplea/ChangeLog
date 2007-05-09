@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.29 2007/02/16 00:48:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.30 2007/05/09 08:50:16 caster Exp $
+
+  09 May 2007; Vlastimil Babka <caster@gentoo.org> triplea-0.9.0.2.ebuild:
+  Add junit to DEPEND to fix building with java-strict. Tests don't seem
+  separable from rest of compile.
 
   16 Feb 2007; Tristan Heaven <nyhm@gentoo.org> triplea-0.9.0.2.ebuild:
   Fix from Arttu Valo for jdk-1.6, bug #164553

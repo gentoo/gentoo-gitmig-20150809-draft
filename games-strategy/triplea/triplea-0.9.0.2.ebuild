@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2.ebuild,v 1.3 2007/02/16 00:48:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2.ebuild,v 1.4 2007/05/09 08:50:16 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator games
 
@@ -21,6 +21,7 @@ RDEPEND="=dev-java/jgoodies-looks-2*
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.5
 	dev-java/ant
+	dev-java/junit
 	app-arch/unzip"
 RDEPEND="${RDEPEND}
 	>=virtual/jre-1.5"
@@ -49,6 +50,7 @@ src_unpack() {
 		lib/commons-logging-1.1.jar
 	java-pkg_jar-from commons-codec commons-codec.jar \
 		lib/commons-codec-1.3.jar
+	java-pkg_jar-from --build-only junit
 	java-pkg_ensure-no-bundled-jars
 }
 
