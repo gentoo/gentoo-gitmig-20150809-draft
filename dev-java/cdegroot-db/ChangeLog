@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cdegroot-db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/ChangeLog,v 1.9 2007/04/25 16:50:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/ChangeLog,v 1.10 2007/05/09 21:31:30 betelgeuse Exp $
+
+  09 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  cdegroot-db-0.08-r1.ebuild:
+  Remove bundled jars in src_unpack.
 
   25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   -cdegroot-db-0.08.ebuild, cdegroot-db-0.08-r1.ebuild:

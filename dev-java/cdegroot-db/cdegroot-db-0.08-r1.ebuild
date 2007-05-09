@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08-r1.ebuild,v 1.2 2007/04/25 16:50:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08-r1.ebuild,v 1.3 2007/05/09 21:31:30 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -22,11 +22,12 @@ S=${WORKDIR}/com.${P/-/.}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	rm -rf src/db/test
+	cd "${S}"
+	rm -rv src/db/test || die
+	rm -v lib/*.jar || die
 
-	cp ${FILESDIR}/build.xml ${S}/build.xml
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cp "${FILESDIR}/build.xml" "${S}/build.xml"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 EANT_DOC_TARGET="docs"
@@ -34,7 +35,7 @@ EANT_DOC_TARGET="docs"
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
-	dodoc TODO VERSION CHANGES BUGS README
+	dodoc TODO VERSION CHANGES BUGS README || die
 	use doc && java-pkg_dojavadoc docs
 	use source && java-pkg_dosrc src/*
 }
