@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.198 2007/05/08 14:25:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.199 2007/05/09 04:44:12 hanno Exp $
+
+  09 May 2007; Hanno Boeck <hanno@gentoo.org> -gimp-2.2.12.ebuild,
+  -gimp-2.3.15.ebuild, gimp-2.3.16.ebuild, gimp-9999.ebuild:
+  Cleanup of vulnerable ebuilds, disable automagic detection for dbus.
 
   08 May 2007; Jeroen Roovers <jer@gentoo.org> gimp-2.2.14.ebuild:
   Stable for HPPA, despite that it does not run (bug #176226 and bug #168131).
