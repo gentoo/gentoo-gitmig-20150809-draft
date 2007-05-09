@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2.ebuild,v 1.1 2007/01/15 21:40:03 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2.ebuild,v 1.2 2007/05/09 09:29:08 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -40,6 +40,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.2-gcc41.patch"
 	epatch "${FILESDIR}/${PN}-6.2-sparc64.patch"
 	epatch "${FILESDIR}/${PN}-6.1-ntfs.patch"
+	epatch "${FILESDIR}/${PN}-6.2-debug-O2.patch"
 
 	# Disable SSP for the kernel
 	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \

@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.35 2007/01/15 21:40:03 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.36 2007/05/09 09:29:08 uberlord Exp $
+
+  09 May 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-sources-6.2-debug-O2.patch, freebsd-sources-6.2.ebuild:
+  Added a patch to stop DEBUG forcing -O if no COPTFLAGS defined to fix a kernel
+  panic on boot with sparc64.
 
 *freebsd-sources-6.2 (15 Jan 2007)
 
