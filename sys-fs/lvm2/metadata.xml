@@ -6,4 +6,14 @@
 	<email>rocket@gentoo.org</email>
 	<name>Eric Edgar</name>
 </maintainer>
+<maintainer>
+	<email>agk@redhat.com</email>
+	<name>Alasdair Kergon</name>
+	<description>Upstream Maintainer</description>
+</maintainer>
+<maintainer>
+	<email>cardoe@gentoo.org</email>
+	<name>Doug Goldstein</name>
+	<description>Assisting until Eric returns</description>
+</maintainer>
 </pkgmetadata>
