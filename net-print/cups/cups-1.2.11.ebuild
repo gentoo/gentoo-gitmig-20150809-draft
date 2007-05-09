@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.11.ebuild,v 1.1 2007/05/09 21:11:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.11.ebuild,v 1.2 2007/05/09 21:25:28 genstef Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -66,8 +66,8 @@ pkg_setup() {
 	if [ ${ARCH} -eq "x86" -a -d "/usr/lib64" ]
 	then
 		eerror "You are running an x86 system, but /usr/lib64 exists, cups will install all library objects into this directory!"
-		eerror "You should remove /usr/lib64, but before you do, you should check for existing objects, and re-compile all effected packages."
-		eerror "You can use qfile (emerge portage-utils to install qfile) to get a list of the effected ebuilds:"
+		eerror "You should remove /usr/lib64, but before you do, you should check for existing objects, and re-compile all affected packages."
+		eerror "You can use qfile (emerge portage-utils to install qfile) to get a list of the affected ebuilds:"
 		eerror "# qfile -qC /usr/lib64"
 	fi
 
