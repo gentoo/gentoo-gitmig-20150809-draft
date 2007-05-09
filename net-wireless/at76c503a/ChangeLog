@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.13 2007/02/12 20:17:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.14 2007/05/09 18:48:00 genstef Exp $
+
+*at76c503a-9999 (09 May 2007)
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  at76c503a-0.14_beta1.ebuild, +at76c503a-9999.ebuild:
+  Add cvs version thanks to manny15 <windowsucks2000@netscape.net> in bug 173034
 
   12 Feb 2007; <genstef@gentoo.org> at76c503a-0.14_beta1.ebuild:
   remove hotplug only dep, thanks jakub in bug 129882
