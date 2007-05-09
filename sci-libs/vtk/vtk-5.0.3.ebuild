@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.4 2007/05/07 12:38:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.5 2007/05/09 09:56:23 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -16,8 +16,7 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc examples mpi patented python tcl tk threads qt3 qt4"
-RDEPEND="java? ( =virtual/jdk-1.5* )
-	mpi? ( virtual/mpi )
+RDEPEND="mpi? ( virtual/mpi )
 	python? ( >=dev-lang/python-2.0 )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
@@ -30,6 +29,7 @@ RDEPEND="java? ( =virtual/jdk-1.5* )
 	|| ( x11-libs/libXmu virtual/x11 )"
 
 DEPEND="${RDEPEND}
+		java? ( >=virtual/jdk-1.5 )
 		>=dev-util/cmake-2.2.3
 		qt3? ( $(qt_min_version 3.3.4) )
 		qt4? ( >=x11-libs/qt-4.1.0 )"
@@ -164,6 +164,13 @@ src_compile() {
 	# configuration with cmake 2.2.x
 	cmake ${CMAKE_VARIABLES} . && cmake ${CMAKE_VARIABLES} . \
 		|| die "cmake configuration failed"
+
+	# fix java.lang.OutOfMemoryError on amd64 (see bug #123178)
+	if use java && [ "${ARCH}" == "amd64" ]; then
+		sed -e "s/javac/javac -J-Xmx256m/" \
+		-i "${S}"/Wrapping/Java/CMakeFiles/VTKBuildAll.dir/build.make \
+		|| die "Failed to patch javac"
+	fi
 
 	emake -j1 || die "emake failed"
 }
