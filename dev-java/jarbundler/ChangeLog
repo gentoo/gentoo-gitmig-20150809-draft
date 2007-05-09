@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarbundler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.4 2007/05/04 23:46:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.5 2007/05/09 20:54:46 caster Exp $
+
+  09 May 2007; Vlastimil Babka <caster@gentoo.org> -jarbundler-1.4.ebuild:
+  Remove unused version, which symlinked to ant-core/lib.
 
   04 May 2007; Vlastimil Babka <caster@gentoo.org> jarbundler-1.7.ebuild:
   Fix compiling with JAVA_PKG_STRICT and record ant-core to package.env DEPEND.
