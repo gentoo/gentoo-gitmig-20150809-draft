@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam_mount/pam_mount-0.18.ebuild,v 1.1 2007/04/21 04:47:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam_mount/pam_mount-0.18.ebuild,v 1.2 2007/05/09 04:37:59 hanno Exp $
 
 inherit eutils
 
 DESCRIPTION="A PAM module that can mount volumes for a user session"
-HOMEPAGE="http://pam-mount.souceforge.net"
+HOMEPAGE="http://pam-mount.sourceforge.net"
 SRC_URI="mirror://sourceforge/pam-mount/${P}.tar.bz2"
 
 LICENSE="GPL-2"
