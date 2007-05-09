@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.17.ebuild,v 1.2 2007/05/09 16:36:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.17.ebuild,v 1.3 2007/05/09 19:39:21 robbat2 Exp $
 
 inherit eutils
 
@@ -94,7 +94,7 @@ src_install() {
 	insinto /lib/rcscripts/addons
 	newins ${FILESDIR}/lvm2-start.sh lvm-start.sh || die
 	newins ${FILESDIR}/lvm2-stop.sh lvm-stop.sh || die
-	newinitd ${FILESIDR}/lvm.rc lvm || die
+	newinitd ${FILESDIR}/lvm.rc lvm || die
 	if use clvm; then
 		newinitd ${FILESDIR}/clvmd.rc clvmd || die
 	fi
