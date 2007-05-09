@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.164 2007/05/09 01:06:47 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.165 2007/05/09 15:02:02 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -58,15 +58,11 @@ if [[ "${MY_PN}" == "vim-core" ]] ; then
 	IUSE="${IUSE} livecd"
 else
 	IUSE="${IUSE} cscope gpm perl python ruby"
-	# python-2.5 block: Bug #177716
 	DEPEND="${DEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
-		python?  ( 
-			dev-lang/python
-			!>=dev-lang/python-2.5
-		)
+		python?  ( dev-lang/python )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
 		ruby?    ( virtual/ruby )"
 	RDEPEND="${RDEPEND}
