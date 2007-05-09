@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_pre2007020911.ebuild,v 1.5 2007/03/17 18:05:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_pre2007020911.ebuild,v 1.6 2007/05/09 16:44:10 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -17,8 +17,8 @@ IUSE="qt3"
 DEPEND="net-wireless/wireless-tools
 	qt3? ( =x11-libs/qt-3* )"
 
-#S="${WORKDIR}/${MY_P}"
-S="${WORKDIR}/rt2500-cvs-2007020911"
+MY_PRE_VERSION=${PV/1.1.0_pre}
+S="${WORKDIR}/${PN}-cvs-${MY_PRE_VERSION}"
 
 MODULE_NAMES="rt2500(net:${S}/Module)"
 CONFIG_CHECK="NET_RADIO"
