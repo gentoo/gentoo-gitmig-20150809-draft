@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.8 2006/11/06 22:28:58 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.9 2007/05/09 15:48:59 drizzt Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -31,7 +31,3 @@ media-sound/mpg123
 # Don't use them, use the one in base system
 dev-util/yacc
 dev-util/byacc
-
-# Timothy Redaelli <drizzt@gentoo.org> (06 Nov 2006)
-# Unmask the newer version, it's only that works
-->=sys-apps/dbus-0.91
