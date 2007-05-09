@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.8.ebuild,v 1.1 2007/05/08 21:59:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.8.ebuild,v 1.2 2007/05/09 13:56:39 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -53,7 +53,7 @@ src_unpack() {
 			${FILESDIR}/nagios-plugins-1.4-noradius.patch
 	fi
 
-	AT_M4DIR="gl/m4" eautoreconf
+	AT_M4DIR="m4 gl/m4" eautoreconf
 }
 
 src_compile() {
