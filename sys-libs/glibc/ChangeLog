@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.515 2007/05/05 20:11:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.516 2007/05/09 18:58:33 kloeri Exp $
+
+  09 May 2007; Bryan Østergaard <kloeri@gentoo.org> glibc-2.5-r2.ebuild:
+  Stable on Alpha, bug 176712.
 
   05 May 2007; Daniel Gryniewicz <dang@gentoo.org> glibc-2.5-r2.ebuild:
   Marked stable on amd64 for bug #176712
