@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.23 2007/05/07 15:51:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.24 2007/05/09 18:49:41 betelgeuse Exp $
+
+*emul-linux-x86-java-1.6.0-r1 (09 May 2007)
+
+  09 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +emul-linux-x86-java-1.6.0-r1.ebuild:
+  Use pax-utils.eclass and use m instead of pemsv as the chpax flags.
 
   07 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   emul-linux-x86-java-1.4.2.03-r2.ebuild:
