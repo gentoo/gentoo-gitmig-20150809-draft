@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.58_alpha.ebuild,v 1.1 2007/05/07 23:16:17 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.58_alpha.ebuild,v 1.2 2007/05/09 17:09:36 genstef Exp $
 
 inherit eutils qt4
 
@@ -42,9 +42,10 @@ pkg_setup() {
 		die "There is no pre-built qt4 for amd64. Please turn the static flag on"
 	fi
 
-	if has_version ">=x11-libs/qt-4.3" && ! use static;
+	if ! use static && ! built_with_use ">=x11-libs/qt-4.0" accessibility;
 	then
-		die "Only works with qt-4.2.3. Please turn static flag on"
+		eerror "Rebuild qt-4 with USE=accessibility or try again with USE=static"
+		die "USE=-static only works with qt-4 built with USE=accessibility."
 	fi
 }
 
