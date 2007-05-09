@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.113 2007/04/10 21:17:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.114 2007/05/09 20:07:27 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -21,6 +21,7 @@ dvb
 dmi
 glitz
 i8x0
+jfs
 ibm
 lirc
 lm_sensors
@@ -34,6 +35,8 @@ pbs
 pcmcia
 rar
 real
+reiser4
+reiserfs
 tcc
 tordns
 trusted
@@ -42,6 +45,7 @@ voodoo3
 wavelan
 wifi
 wlan
+xfs
 xvmc
 
 # Steve Dibb <beandog@gentoo.org> (21 Mar 2007)
