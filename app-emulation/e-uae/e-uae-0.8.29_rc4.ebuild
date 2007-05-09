@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4.ebuild,v 1.2 2007/05/07 16:12:48 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4.ebuild,v 1.3 2007/05/09 20:18:47 kevquinn Exp $
 
 inherit eutils flag-o-matic pax-utils
 
@@ -123,7 +123,8 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	# The emulator needs to be able to create executable heap
-	pax-mark m "${D}/usr/bin/uae"
+	# - doesn't need trampoline emulation though.
+	pax-mark me "${D}/usr/bin/uae"
 
 	# Rename it to e-uae
 	mv "${D}/usr/bin/uae" "${D}/usr/bin/${PN}"
