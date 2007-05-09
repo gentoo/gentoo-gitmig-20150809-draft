@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.31 2007/04/27 03:51:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.32 2007/05/09 19:10:45 gustavoz Exp $
+
+  09 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> ntfs3g-1.417.ebuild:
+  Keyworded ~sparc
 
   27 Apr 2007; Joseph Jezak <josejx@gentoo.org> ntfs3g-1.417.ebuild:
   Marked ~ppc for bug #176057.
