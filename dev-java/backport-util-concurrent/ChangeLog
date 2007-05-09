@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/backport-util-concurrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.9 2007/04/27 21:33:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.10 2007/05/09 21:52:26 caster Exp $
+
+*backport-util-concurrent-3.0 (09 May 2007)
+
+  09 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/backport-util-concurrent-3.0-notest.patch,
+  +files/backport-util-concurrent-3.0-test.patch,
+  +backport-util-concurrent-3.0.ebuild:
+  Version bump, bug #157961. Initial work in java-overlay by Miroslav Šulc
+  <fordfrog@gentoo.org>. Adds java5 USE flag for 1.6 > 1.5 backport.
 
   27 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   backport-util-concurrent-1.1.01-r1.ebuild:
