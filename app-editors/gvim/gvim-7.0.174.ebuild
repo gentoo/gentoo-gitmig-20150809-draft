@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.0.174.ebuild,v 1.8 2007/03/21 16:03:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.0.174.ebuild,v 1.9 2007/05/09 00:05:19 pioto Exp $
 
 inherit vim
 
@@ -20,6 +20,7 @@ DESCRIPTION="GUI version of the Vim text editor"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="aqua gnome gtk motif nextaw"
 PROVIDE="virtual/editor"
+# gnome-2.18 block: Bug #176566
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}
 	|| ( x11-libs/libXext virtual/x11 )
@@ -27,7 +28,10 @@ DEPEND="${DEPEND}
 		gtk? (
 			>=x11-libs/gtk+-2.6
 			virtual/xft
-			gnome? ( >=gnome-base/libgnomeui-2.6 )
+			gnome? (
+				>=gnome-base/libgnomeui-2.6
+				!>=gnome-base/libgnomeui-2.18
+			)
 		)
 		!gtk? (
 			motif? (

@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.231 2007/05/04 21:10:28 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.232 2007/05/09 00:05:19 pioto Exp $
+
+  09 May 2007; Mike Kelly <pioto@gentoo.org> gvim-7.0.17.ebuild,
+  -gvim-7.0.91.ebuild, -gvim-7.0.146.ebuild, gvim-7.0.174.ebuild,
+  -gvim-7.0.201.ebuild, gvim-7.0.235.ebuild:
+  Block gnome-2.18 for gnome support, see Bug #176566. Remove old versions.
 
   04 May 2007; Daniel Gryniewicz <dang@gentoo.org> gvim-7.0.235.ebuild:
   Marked stable on amd64 for bug #176464
