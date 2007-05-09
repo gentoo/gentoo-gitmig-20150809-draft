@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.143 2007/04/21 14:21:56 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.144 2007/05/09 16:36:44 carlo Exp $
+
+*kdesdk-3.5.6-r1 (09 May 2007)
+
+  09 May 2007; Carsten Lohrke <carlo@gentoo.org> +kdesdk-3.5.6-r1.ebuild:
+  kapptemplate, kioslave and umbrello update, see split ebuilds for more
+  information.
 
   21 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/umbrello-diagram-fix.diff, kdesdk-3.5.6.ebuild:
