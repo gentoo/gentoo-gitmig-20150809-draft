@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/toshiba-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.10 2007/04/16 14:53:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.11 2007/05/09 17:54:34 genstef Exp $
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  toshiba-utils-2.0.1-r2.ebuild:
+  Drop bogus gtk+-1 depend thanks to azazello in bug 174283
 
   16 Apr 2007; Christian Heim <phreak@gentoo.org>
   toshiba-utils-2.0.1-r1.ebuild, toshiba-utils-2.0.1-r2.ebuild:
