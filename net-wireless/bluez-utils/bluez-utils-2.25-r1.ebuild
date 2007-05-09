@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.10 2007/02/13 12:55:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.11 2007/05/09 20:20:41 genstef Exp $
 
 inherit eutils
 
@@ -66,6 +66,7 @@ src_compile() {
 		--enable-dfutool \
 		--enable-hid2hci \
 		--enable-obex \
+		--enable-bccmd \
 		--disable-initscripts \
 		--localstatedir=/var \
 		|| die "econf failed"
@@ -80,7 +81,7 @@ src_install() {
 
 	# optional bluetooth utils
 	cd ${S}/tools
-	dosbin bccmd hcisecfilter ppporc pskey
+	dosbin bccmd hcisecfilter ppporc
 
 	exeinto /etc/bluetooth
 	newexe ${FILESDIR}/${PN}-2.24-pin-helper.sh pin-helper
