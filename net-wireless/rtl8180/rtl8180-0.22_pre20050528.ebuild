@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.22_pre20050528.ebuild,v 1.3 2006/06/25 17:19:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.22_pre20050528.ebuild,v 1.4 2007/05/09 20:15:51 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -30,6 +30,12 @@ src_unpack() {
 	sed -i -e 's:MODULE_PARM(\([^,]*\),"i");:module_param(\1, int, 0);:' \
 		-e 's:MODULE_PARM(\([^,]*\),"s");:module_param(\1, charp, 0);:' r8180_core.c
 	sed -i -e 's:MODVERDIR=$(PWD) ::' {,ieee80211/}Makefile
+
+	# 2.6.19 patch
+	epatch ${FILESDIR}/${PN}-2.6.19.patch
+
+	# 2.6.20 patch
+	epatch ${FILESDIR}/${PN}-2.6.20.patch
 }
 
 src_install() {

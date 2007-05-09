@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rtl8180
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.10 2006/06/25 17:19:45 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.11 2007/05/09 20:15:51 genstef Exp $
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/rtl8180-2.6.19.patch, +files/rtl8180-2.6.20.patch,
+  rtl8180-0.22_pre20050528.ebuild:
+  Fix for newer kernels thanks to many people in bug 160058
 
   25 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/rtl8180-pci_name.patch, -files/rtl8180_gcc4_fix.patch,
