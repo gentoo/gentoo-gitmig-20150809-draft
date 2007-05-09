@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r2.ebuild,v 1.8 2007/01/10 00:47:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r2.ebuild,v 1.9 2007/05/09 15:10:38 armin76 Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/dom4j/${P}.tar.gz
 	mirror://gentoo/${P}-java5.patch.bz2"
 LICENSE="dom4j"
 SLOT="1"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc source"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/jaxme

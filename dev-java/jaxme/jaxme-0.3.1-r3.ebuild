@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.9 2007/05/08 22:06:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.10 2007/05/09 15:09:34 armin76 Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ SRC_URI="http://mirrors.combose.com/apache/ws/jaxme/source/${MY_P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="

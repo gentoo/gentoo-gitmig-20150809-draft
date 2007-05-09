@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.14 2007/04/15 22:23:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.15 2007/05/09 14:53:21 armin76 Exp $
+
+  09 May 2007; Raúl Porcel <armin76@gentoo.org> xpp3-1.1.4c.ebuild:
+  Add ~ia64 wrt #160813
 
   15 Apr 2007; Andrej Kacian <ticho@gentoo.org> ChangeLog:
   Stable on x86, bug #174394.

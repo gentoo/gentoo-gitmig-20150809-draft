@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.41 2007/05/08 23:22:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.42 2007/05/09 15:19:47 armin76 Exp $
+
+  09 May 2007; Raúl Porcel <armin76@gentoo.org> bsf-2.4.0.ebuild:
+  Add ~ia64 wrt #160813
 
 *bsf-2.4.0 (08 May 2007)
 

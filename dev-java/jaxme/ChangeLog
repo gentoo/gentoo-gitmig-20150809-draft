@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.23 2007/05/08 22:06:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.24 2007/05/09 15:09:34 armin76 Exp $
+
+  09 May 2007; Raúl Porcel <armin76@gentoo.org> jaxme-0.3.1-r3.ebuild:
+  Add ~ia64 wrt #160813
 
   08 May 2007; Vlastimil Babka <caster@gentoo.org> jaxme-0.3.1-r3.ebuild:
   Remove the unused hsqldb dependency. It's only for junit test which we don't

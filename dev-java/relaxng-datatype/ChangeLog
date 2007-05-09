@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/relaxng-datatype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/ChangeLog,v 1.15 2007/04/15 22:14:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/ChangeLog,v 1.16 2007/05/09 14:58:59 armin76 Exp $
+
+  09 May 2007; Raúl Porcel <armin76@gentoo.org>
+  relaxng-datatype-1.0-r1.ebuild:
+  Add ~ia64 wrt #160813
 
   15 Apr 2007; Andrej Kacian <ticho@gentoo.org>
   relaxng-datatype-1.0-r1.ebuild:
