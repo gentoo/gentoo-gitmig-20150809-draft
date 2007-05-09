@@ -1,10 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc,v 1.1 2007/04/30 14:21:11 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc,v 1.2 2007/05/09 16:53:11 cardoe Exp $
 
 depend() {
-	before checkroot
+	if [ -e /lib/librc.so ]; then
+		# on baselayout-1 this causes
+		# a dependency loop with checkroot (before *)
+		before checkroot
+	fi
 }
 
 start() {
