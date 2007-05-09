@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/zd1211
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.9 2006/09/13 16:48:48 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.10 2007/05/09 19:33:13 genstef Exp $
+
+*zd1211-85 (09 May 2007)
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org> -zd1211-83.ebuild,
+  +zd1211-85.ebuild:
+  Version bump, fixes new kernel compiling, bug 159552
 
 *zd1211-83 (13 Sep 2006)
 
