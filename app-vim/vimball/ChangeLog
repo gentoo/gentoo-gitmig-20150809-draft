@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vimball
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimball/ChangeLog,v 1.1 2007/05/09 18:13:42 pioto Exp $
+
+*vimball-22 (09 May 2007)
+
+  09 May 2007; Mike Kelly <pioto@gentoo.org> +metadata.xml,
+  +vimball-22.ebuild:
+  Initial ebuild.
+
