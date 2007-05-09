@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-contrib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.17 2007/04/26 12:19:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.18 2007/05/09 16:05:25 betelgeuse Exp $
+
+*ant-contrib-1.0_beta2-r2 (09 May 2007)
+
+  09 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +ant-contrib-1.0_beta2-r2.ebuild:
+  Register task using java-pkg_register-ant-task so it doesn't automatically
+  get picked up any more. Reported in #177814.
 
   26 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   -ant-contrib-1.0_beta2.ebuild:
