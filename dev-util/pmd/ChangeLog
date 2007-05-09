@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.23 2007/03/28 19:12:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.24 2007/05/09 22:14:34 caster Exp $
+
+*pmd-3.9 (09 May 2007)
+
+  09 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/pmd-3.9-build.xml.patch, +files/pmd-3.9-launcher-pre-commands,
+  +pmd-3.9.ebuild:
+  Version bump, bug #170603. Initially worked on in java-overlay by Miroslav
+  Šulc <fordfrog@gentoo.org> and Petteri Räty <betelgeuse@gentoo.org>.
+  Migrated to split-ant, no longer installs symlink to
+  /usr/share/ant-core/lib.
 
   28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> -pmd-1.5.ebuild,
   -pmd-1.5-r1.ebuild, -pmd-3.7.ebuild:
