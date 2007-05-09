@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.122 2007/04/22 18:52:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.123 2007/05/09 14:44:50 chutzpah Exp $
+
+*dnsmasq-2.39 (09 May 2007)
+
+  09 May 2007; Patrick McLean <chutz@gentoo.org> +dnsmasq-2.39.ebuild:
+  Version bump (bug #177608).
 
   22 Apr 2007; Raúl Porcel <armin76@gentoo.org> dnsmasq-2.38-r1.ebuild:
   ia64 stable
