@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.51 2007/04/15 20:15:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.52 2007/05/09 01:22:13 caster Exp $
+
+*rhino-1.6.5 (09 May 2007)
+
+  09 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/rhino-1.6-noget.patch, -files/jsscript, +rhino-1.6.5.ebuild:
+  Version bump, various bugfixes and new dual MPL/GPL license. Adds examples
+  use flag.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> rhino-1.6.1-r3.ebuild:
   Stable on ppc64
