@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rtl8187
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/ChangeLog,v 1.4 2007/02/22 03:11:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/ChangeLog,v 1.5 2007/05/09 20:00:14 genstef Exp $
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/kernel-2.6.19.patch, rtl8187-1.10.ebuild:
+  2.6.19 support for bug 161895 thanks to Christian Holler and Paul Bredbury
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

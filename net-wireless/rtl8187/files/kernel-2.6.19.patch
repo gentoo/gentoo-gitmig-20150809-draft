@@ -1,0 +1,231 @@
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/r8180_wx.c ./beta-8187/r8180_wx.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/r8180_wx.c	2006-06-06 03:58:02.000000000 +0100
++++ ./beta-8187/r8180_wx.c	2007-01-21 18:45:13.000000000 +0000
+@@ -664,7 +664,7 @@
+ };
+ 
+ #if WIRELESS_EXT >= 17	
+-static struct iw_statistics *r8180_get_wireless_stats(struct net_device *dev)
++static struct iw_statistics *r8180_get_stats(struct net_device *dev)
+ {
+        struct r8180_priv *priv = ieee80211_priv(dev);
+ 
+@@ -680,7 +680,7 @@
+ 	.num_private = sizeof(r8180_private_handler) / sizeof(iw_handler),
+  	.num_private_args = sizeof(r8180_private_args) / sizeof(struct iw_priv_args),
+ #if WIRELESS_EXT >= 17	
+-	.get_wireless_stats = r8180_get_wireless_stats,
++	.get_wireless_stats = r8180_get_stats,
+ #endif
+ 	.private_args = (struct iw_priv_args *)r8180_private_args,	
+ };
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/r8187_core.c ./beta-8187/r8187_core.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/r8187_core.c	2007-01-21 18:43:35.000000000 +0000
++++ ./beta-8187/r8187_core.c	2007-01-21 18:45:13.000000000 +0000
+@@ -266,7 +266,7 @@
+ }
+ 
+ 
+-//irqreturn_t rtl8180_interrupt(int irq, void *netdev, struct pt_regs *regs);
++//irqreturn_t rtl8180_interrupt(int irq, void *netdev);
+ //void set_nic_rxring(struct net_device *dev);
+ //void set_nic_txring(struct net_device *dev);
+ static struct net_device_stats *rtl8180_stats(struct net_device *dev);
+@@ -408,7 +408,7 @@
+ }		
+ 
+ 
+-static struct iw_statistics *r8180_get_wireless_stats(struct net_device *dev)
++static struct iw_statistics *r8180_get_stats(struct net_device *dev)
+ {
+        struct r8180_priv *priv = ieee80211_priv(dev);
+ 
+@@ -678,7 +678,7 @@
+ 	write_nic_dword(dev,TX_CONF,tx | (TX_LOOPBACK_NONE<<TX_LOOPBACK_SHIFT));
+ #endif
+ }
+-void rtl8187_rx_isr(struct urb *rx_urb, struct pt_regs *regs);
++void rtl8187_rx_isr(struct urb *rx_urb);
+ 
+ 
+ void rtl8187_rx_urbsubmit(struct net_device *dev, struct urb* rx_urb)
+@@ -1048,7 +1048,7 @@
+ }
+ 		
+ 
+-void rtl8187_rx_isr(struct urb *rx_urb, struct pt_regs *regs)
++void rtl8187_rx_isr(struct urb *rx_urb)
+ {
+ 	struct net_device *dev = (struct net_device*)rx_urb->context;
+ 	struct r8180_priv *priv = ieee80211_priv(dev);
+@@ -1225,7 +1225,7 @@
+ 
+ void rtl8180_try_wake_queue(struct net_device *dev, int pri);
+ 
+-void rtl8187_lptx_isr(struct urb *tx_urb, struct pt_regs *regs)
++void rtl8187_lptx_isr(struct urb *tx_urb)
+ {
+ 	struct net_device *dev = (struct net_device*)tx_urb->context;
+ 	struct r8180_priv *priv = ieee80211_priv(dev);
+@@ -1324,7 +1324,7 @@
+ 	
+ }
+ 
+-void rtl8187_nptx_isr(struct urb *tx_urb, struct pt_regs *regs)
++void rtl8187_nptx_isr(struct urb *tx_urb)
+ {
+ 	struct net_device *dev = (struct net_device*)tx_urb->context;
+ 	struct r8180_priv *priv = ieee80211_priv(dev);
+@@ -2418,7 +2418,7 @@
+ 	dev->do_ioctl = rtl8180_ioctl;
+ 	dev->set_multicast_list = r8180_set_multicast;
+ 	dev->set_mac_address = r8180_set_mac_adr;
+-	dev->get_wireless_stats = r8180_get_wireless_stats;
++	dev->get_stats = r8180_get_stats;
+ 	dev->type=ARPHRD_ETHER;
+ 	
+ 	if (dev_alloc_name(dev, ifname) < 0){
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/r8187.h ./beta-8187/r8187.h
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/r8187.h	2007-01-21 18:45:06.000000000 +0000
++++ ./beta-8187/r8187.h	2007-01-21 18:45:13.000000000 +0000
+@@ -26,7 +26,7 @@
+ 
+ #include <linux/module.h>
+ #include <linux/kernel.h>
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/init.h>
+ #include <linux/ioport.h>
+ #include <linux/sched.h>
+@@ -285,5 +285,6 @@
+ void write_phy_cck(struct net_device *dev, u8 adr, u32 data);
+ void write_phy_ofdm(struct net_device *dev, u8 adr, u32 data);
+ void rtl8185_tx_antenna(struct net_device *dev, u8 ant);
++void rtl8180_set_mode(struct net_device *dev,int mode);
+ void rtl8187_set_rxconf(struct net_device *dev);
+ #endif
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/tags ./beta-8187/tags
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/beta-8187/tags	2006-06-07 03:14:06.000000000 +0100
++++ ./beta-8187/tags	2007-01-21 18:45:13.000000000 +0000
+@@ -1118,8 +1118,8 @@
+ ps_timeout	ieee80211.h	/^	int ps_timeout;$/;"	m	struct:ieee80211_device
+ ps_tl	ieee80211.h	/^	u32 ps_tl;$/;"	m	struct:ieee80211_device
+ queue_stop	ieee80211.h	/^	short queue_stop;$/;"	m	struct:ieee80211_device
+-r8180_get_wireless_stats	r8180_wx.c	/^static struct iw_statistics *r8180_get_wireless_stats(struct net_device *dev)$/;"	f	file:
+-r8180_get_wireless_stats	r8187_core.c	/^static struct iw_statistics *r8180_get_wireless_stats(struct net_device *dev)$/;"	f	file:
++r8180_get_stats	r8180_wx.c	/^static struct iw_statistics *r8180_get_stats(struct net_device *dev)$/;"	f	file:
++r8180_get_stats	r8187_core.c	/^static struct iw_statistics *r8180_get_stats(struct net_device *dev)$/;"	f	file:
+ r8180_priv	r8187.h	/^typedef struct r8180_priv$/;"	s
+ r8180_priv	r8187.h	/^}r8180_priv;$/;"	t
+ r8180_private_args	r8180_wx.c	/^static const struct iw_priv_args r8180_private_args[] = { $/;"	v	file:
+@@ -1228,11 +1228,11 @@
+ rtl8187_beacon_stop	r8187_core.c	/^void rtl8187_beacon_stop(struct net_device *dev)$/;"	f
+ rtl8187_beacon_tx	r8187_core.c	/^void rtl8187_beacon_tx(struct net_device *dev)$/;"	f
+ rtl8187_link_change	r8187_core.c	/^void rtl8187_link_change(struct net_device *dev)$/;"	f
+-rtl8187_lptx_isr	r8187_core.c	/^void rtl8187_lptx_isr(struct urb *tx_urb, struct pt_regs *regs)$/;"	f
++rtl8187_lptx_isr	r8187_core.c	/^void rtl8187_lptx_isr(struct urb *tx_urb)$/;"	f
+ rtl8187_net_update	r8187_core.c	/^void rtl8187_net_update(struct net_device *dev)$/;"	f
+-rtl8187_nptx_isr	r8187_core.c	/^void rtl8187_nptx_isr(struct urb *tx_urb, struct pt_regs *regs)$/;"	f
++rtl8187_nptx_isr	r8187_core.c	/^void rtl8187_nptx_isr(struct urb *tx_urb)$/;"	f
+ rtl8187_rx_initiate	r8187_core.c	/^void rtl8187_rx_initiate(struct net_device *dev)$/;"	f
+-rtl8187_rx_isr	r8187_core.c	/^void rtl8187_rx_isr(struct urb *rx_urb, struct pt_regs *regs)$/;"	f
++rtl8187_rx_isr	r8187_core.c	/^void rtl8187_rx_isr(struct urb *rx_urb)$/;"	f
+ rtl8187_rx_urbsubmit	r8187_core.c	/^void rtl8187_rx_urbsubmit(struct net_device *dev, struct urb* rx_urb)$/;"	f
+ rtl8187_set_rate	r8187_core.c	/^void rtl8187_set_rate(struct net_device *dev)$/;"	f
+ rtl8187_set_rxconf	r8187_core.c	/^void rtl8187_set_rxconf(struct net_device *dev)$/;"	f
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt.c ./ieee80211/ieee80211_crypt.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt.c	2006-06-06 03:57:56.000000000 +0100
++++ ./ieee80211/ieee80211_crypt.c	2007-01-21 18:45:13.000000000 +0000
+@@ -11,7 +11,7 @@
+  *
+  */
+ 
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
+ #include <linux/init.h>
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt_ccmp.c ./ieee80211/ieee80211_crypt_ccmp.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt_ccmp.c	2006-06-06 03:58:00.000000000 +0100
++++ ./ieee80211/ieee80211_crypt_ccmp.c	2007-01-21 18:45:13.000000000 +0000
+@@ -9,7 +9,7 @@
+  * more details.
+  */
+ 
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
+ #include <linux/init.h>
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt_tkip.c ./ieee80211/ieee80211_crypt_tkip.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt_tkip.c	2006-06-06 03:57:54.000000000 +0100
++++ ./ieee80211/ieee80211_crypt_tkip.c	2007-01-21 18:45:13.000000000 +0000
+@@ -9,7 +9,7 @@
+  * more details.
+  */
+ 
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
+ #include <linux/init.h>
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt_wep.c ./ieee80211/ieee80211_crypt_wep.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_crypt_wep.c	2006-06-06 03:57:54.000000000 +0100
++++ ./ieee80211/ieee80211_crypt_wep.c	2007-01-21 18:45:13.000000000 +0000
+@@ -9,7 +9,7 @@
+  * more details.
+  */
+ 
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
+ #include <linux/init.h>
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_module.c ./ieee80211/ieee80211_module.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_module.c	2006-06-06 03:58:00.000000000 +0100
++++ ./ieee80211/ieee80211_module.c	2007-01-21 18:45:13.000000000 +0000
+@@ -31,7 +31,7 @@
+ *******************************************************************************/
+ 
+ #include <linux/compiler.h>
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/errno.h>
+ #include <linux/if_arp.h>
+ #include <linux/in6.h>
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_rx.c ./ieee80211/ieee80211_rx.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_rx.c	2006-06-06 03:58:00.000000000 +0100
++++ ./ieee80211/ieee80211_rx.c	2007-01-21 18:45:13.000000000 +0000
+@@ -22,7 +22,7 @@
+  
+ 
+ #include <linux/compiler.h>
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/errno.h>
+ #include <linux/if_arp.h>
+ #include <linux/in6.h>
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_softmac_wx.c ./ieee80211/ieee80211_softmac_wx.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_softmac_wx.c	2006-06-06 03:57:54.000000000 +0100
++++ ./ieee80211/ieee80211_softmac_wx.c	2007-01-21 18:45:13.000000000 +0000
+@@ -356,7 +356,7 @@
+ 	spin_lock_irqsave(&ieee->lock, flags);
+ 	
+ 	if (wrqu->essid.flags && wrqu->essid.length) {
+-		len = ((wrqu->essid.length-1) < IW_ESSID_MAX_SIZE) ? (wrqu->essid.length-1) : IW_ESSID_MAX_SIZE;
++		len = ((wrqu->essid.length) < IW_ESSID_MAX_SIZE) ? (wrqu->essid.length) : IW_ESSID_MAX_SIZE;
+ 		
+ 		strncpy(ieee->current_network.ssid, extra, len);
+ 		ieee->current_network.ssid_len = len;
+diff -Naur ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_tx.c ./ieee80211/ieee80211_tx.c
+--- ../../../rtl8187-1.10-orig/work/rtl8187_linux_26.1010.0622.2006/ieee80211/ieee80211_tx.c	2006-06-06 03:57:54.000000000 +0100
++++ ./ieee80211/ieee80211_tx.c	2007-01-21 18:45:13.000000000 +0000
+@@ -32,7 +32,7 @@
+ ******************************************************************************/
+ 
+ #include <linux/compiler.h>
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/errno.h>
+ #include <linux/if_arp.h>
+ #include <linux/in6.h>
