@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.29 2007/04/08 12:34:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.30 2007/05/09 14:46:55 armin76 Exp $
+
+  09 May 2007; Raúl Porcel <armin76@gentoo.org> xom-1.0-r2.ebuild:
+  Add ~ia64 wrt #160813
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> xom-1.0-r2.ebuild:
   Stable on ppc64; bug #173207
