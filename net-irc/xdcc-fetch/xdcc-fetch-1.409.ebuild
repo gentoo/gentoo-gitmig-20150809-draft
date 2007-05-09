@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/xdcc-fetch-1.409.ebuild,v 1.2 2005/05/16 15:48:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/xdcc-fetch-1.409.ebuild,v 1.3 2007/05/09 15:24:19 armin76 Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8
-	>=dev-ruby/fxruby-1.2"
+	=dev-ruby/fxruby-1.2*"
 
 S="${WORKDIR}"/${MY_PN}
 
