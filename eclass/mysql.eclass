@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.75 2007/04/25 18:22:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.76 2007/05/09 16:25:33 cardoe Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -329,18 +329,18 @@ configure_40_41_50() {
 		myconf="${myconf} $(use_with ssl openssl)"
 	fi
 
+	if use berkdb ; then
 	# The following fix is due to a bug with bdb on SPARC's. See:
 	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 	# It comes down to non-64-bit safety problems.
-	if use alpha || use amd64 || use hppa || use mips || use sparc ; then
-		elog "Berkeley DB support was disabled due to incompatible arch"
-		myconf="${myconf} --without-berkeley-db"
-	else
-		if use berkdb ; then
-			myconf="${myconf} --with-berkeley-db=./bdb"
-		else
+		if use alpha || use amd64 || use hppa || use mips || use sparc ; then
+			elog "Berkeley DB support was disabled due to compatiblity issues on this arch"
 			myconf="${myconf} --without-berkeley-db"
+		else
+			myconf="${myconf} --with-berkeley-db=./bdb"
 		fi
+	else
+		myconf="${myconf} --without-berkeley-db"
 	fi
 
 	if mysql_version_is_at_least "4.1.3" ; then
