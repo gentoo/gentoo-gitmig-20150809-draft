@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlitebrowser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.2 2007/02/13 17:33:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.3 2007/05/09 19:19:34 drizzt Exp $
+
+  09 May 2007; Timothy Redaelli <drizzt@gentoo.org>
+  sqlitebrowser-1.3.ebuild:
+  Fix qt deps.
+  Thanks to REdOG for reporting wrt bug #177840.
 
   13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
   sqlitebrowser-1.3.ebuild:

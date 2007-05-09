@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.2 2007/02/13 17:33:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.3 2007/05/09 19:19:34 drizzt Exp $
 
 inherit eutils qt3
 
@@ -13,9 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="=dev-db/sqlite-3*
-	$(qt_min_version 3.12)"
-DEPEND="${RDEPEND}"
+DEPEND="=dev-db/sqlite-3*
+	$(qt_min_version 3.1.2)"
 
 S="${WORKDIR}/${PN}/${PN}"
 
