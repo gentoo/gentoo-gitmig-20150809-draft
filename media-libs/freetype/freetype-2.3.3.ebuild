@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.3.ebuild,v 1.8 2007/05/09 01:31:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.3.ebuild,v 1.9 2007/05/09 14:53:05 dirtyepic Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -72,9 +72,7 @@ src_unpack() {
 	### ft2demos ###
 		cd ../ft2demos-${PV}
 
-		# fttimer demo does not require X11.  fix linking appropriately.
-		epatch "${FILESDIR}"/${P}-fttimer-noX.patch
-
+		epatch "${FILESDIR}"/${P}-ft2demos-Makefile.patch
 		sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" Makefile
 
 		# Disable tests needing X11 when USE="-X". (bug #177597)
