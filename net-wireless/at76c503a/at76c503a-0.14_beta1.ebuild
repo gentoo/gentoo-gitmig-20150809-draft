@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.3 2007/05/09 18:48:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.4 2007/05/09 19:22:21 genstef Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 MY_P=at76_usb-${PV/_}
+DESCRIPTION="at76c503 is a Linux driver for the wlan USB adapter based on the Atmel at76c503 chip. It currently supports ad-hoc mode, infrastructure mode, and WEP. It supports adapters from Atmel, the Belkin F5D6050, Netgear MA101, and others."
 HOMEPAGE="http://developer.berlios.de/projects/at76c503a/"
 SRC_URI="http://download.berlios.de/at76c503a/${MY_P}.tar.gz"
 LICENSE="GPL-2"
@@ -25,6 +26,12 @@ NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) &
 pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNEL_PATH=${KV_DIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/at76c503a-2.6.20.patch
 }
 
 src_install() {

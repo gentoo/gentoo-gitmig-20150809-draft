@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.14 2007/05/09 18:48:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.15 2007/05/09 19:22:21 genstef Exp $
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/at76c503a-2.6.20.patch, at76c503a-0.14_beta1.ebuild:
+  Add kernel 2.6.20 support thanks to steev in bug 164659
 
 *at76c503a-9999 (09 May 2007)
 
