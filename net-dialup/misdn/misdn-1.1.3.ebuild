@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.2.ebuild,v 1.2 2007/05/06 07:59:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.3.ebuild,v 1.1 2007/05/09 20:43:22 genstef Exp $
 
 inherit eutils linux-mod
 
