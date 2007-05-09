@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/jtagger
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.1 2007/05/09 13:13:24 betelgeuse Exp $
+
+*jtagger-2007.02 (09 May 2007)
+
+  09 May 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +jtagger-2007.02.ebuild:
+  Initial addition. Thanks to Serkan Kaba <serkan_kaba@yahoo.com> for the
+  initial ebuild. Fixes bug #173994.
+
