@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.144 2007/05/09 16:36:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.145 2007/05/09 16:54:58 carlo Exp $
+
+  09 May 2007; Carsten Lohrke <carlo@gentoo.org> kdesdk-3.5.6-r1.ebuild:
+  Update valgrind dependency, bug #158066.
 
 *kdesdk-3.5.6-r1 (09 May 2007)
 

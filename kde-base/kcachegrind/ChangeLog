@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.57 2007/02/04 01:49:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.58 2007/05/09 16:52:43 carlo Exp $
+
+  09 May 2007; Carsten Lohrke <carlo@gentoo.org>
+  kcachegrind-3.5.6-r1.ebuild:
+  Update valgrind dependency, bug #158066.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kcachegrind-3.5.2.ebuild, -kcachegrind-3.5.6.ebuild:

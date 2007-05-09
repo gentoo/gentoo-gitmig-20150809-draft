@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.6-r1.ebuild,v 1.1 2007/05/09 16:36:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.6-r1.ebuild,v 1.2 2007/05/09 16:54:58 carlo Exp $
 
 inherit db-use kde-dist
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/kdesdk-3.5-patchset-01.tar.bz2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="berkdb kdehiddenvisibility subversion"
 
-DEPEND="x86? ( >=dev-util/valgrind-3.2.0 )
+DEPEND="!alpha? ( !sparc? ( !ia64? ( >=dev-util/valgrind-3.2.0 ) ) )
 	subversion? ( dev-util/subversion )
 	berkdb? ( =sys-libs/db-4* )"
 
