@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.4 2007/05/06 19:02:28 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.5 2007/05/09 08:03:30 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -77,7 +77,7 @@ DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 	>=dev-java/rome-0.6
 	=dev-java/servletapi-2.3*
 	dev-java/sun-jmx
-	>=dev-java/xml-xmlbeans-1.0.4
+	=dev-java/xml-xmlbeans-1*
 	>=dev-util/pmd-1.3
 	${COMMON_DEPEND}"
 
