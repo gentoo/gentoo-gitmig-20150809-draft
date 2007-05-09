@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/acpitool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.5 2007/02/12 19:18:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.6 2007/05/09 19:16:22 genstef Exp $
+
+*acpitool-0.4.7-r1 (09 May 2007)
+
+  09 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  files/acpitool-0.4.7-proc_acpi_info_move.patch, -acpitool-0.4.7.ebuild,
+  +acpitool-0.4.7-r1.ebuild:
+  Change patch to work for Phillip Berndt <phillip.berndt@googlemail.com> in
+  bug 176457 too
 
 *acpitool-0.4.7 (12 Feb 2007)
 

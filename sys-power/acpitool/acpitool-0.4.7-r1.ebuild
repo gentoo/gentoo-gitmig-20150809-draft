@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/acpitool-0.4.7.ebuild,v 1.1 2007/02/12 19:18:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/acpitool-0.4.7-r1.ebuild,v 1.1 2007/05/09 19:16:22 genstef Exp $
 
 inherit eutils
 
