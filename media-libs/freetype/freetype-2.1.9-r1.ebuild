@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9-r1.ebuild,v 1.25 2007/04/01 04:48:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9-r1.ebuild,v 1.26 2007/05/09 22:39:11 dirtyepic Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -21,8 +21,7 @@ IUSE="zlib bindist doc"
 # installed, then it will have the freetype-2.1.8+ binary compatibility patch.
 # Otherwise updating freetype will cause moz/ff/tb crashes.  #59849
 # 20 Nov 2004 agriffis
-DEPEND="virtual/libc
-	zlib? ( sys-libs/zlib )"
+DEPEND="zlib? ( sys-libs/zlib )"
 
 RDEPEND="${DEPEND}
 	!<www-client/mozilla-1.7.3-r3
