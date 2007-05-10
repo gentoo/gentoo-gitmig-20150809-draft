@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.11.ebuild,v 1.3 2007/05/10 08:46:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.11.ebuild,v 1.4 2007/05/10 08:46:59 genstef Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -69,6 +69,7 @@ pkg_setup() {
 		eerror "You should remove /usr/lib64, but before you do, you should check for existing objects, and re-compile all affected packages."
 		eerror "You can use qfile (emerge portage-utils to install qfile) to get a list of the affected ebuilds:"
 		eerror "# qfile -qC /usr/lib64"
+		die "lib64 on x86 detected"
 	fi
 
 	enewgroup lp
