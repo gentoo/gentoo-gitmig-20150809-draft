@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.9 2007/05/03 19:54:07 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.10 2007/05/10 11:49:54 lucass Exp $
+
+  10 May 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  sqlalchemy-0.3.7.ebuild:
+  Fixed sqlite deps, removed src_unpack. Thanks to Betelgeuse.
 
 *sqlalchemy-0.3.7 (03 May 2007)
 
