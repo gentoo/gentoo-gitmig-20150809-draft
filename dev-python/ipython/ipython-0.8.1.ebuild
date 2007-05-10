@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3-r2.ebuild,v 1.3 2007/02/22 06:48:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.1.ebuild,v 1.1 2007/05/10 15:08:26 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,7 @@ SRC_URI="http://ipython.scipy.org/dist/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~s390 ~x86"
-IUSE="doc examples emacs gnuplot test"
+IUSE="doc examples emacs gnuplot"
 
 RDEPEND="gnuplot? ( dev-python/gnuplot-py )
 	emacs? ( virtual/emacs
@@ -61,4 +61,12 @@ src_install() {
 		elisp-install ${PN} ipython.el ipython.elc || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
