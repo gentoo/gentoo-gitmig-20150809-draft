@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.232 2007/05/09 00:05:19 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.233 2007/05/10 07:24:32 pioto Exp $
+
+*gvim-7.1_beta001 (10 May 2007)
+
+  10 May 2007; Mike Kelly <pioto@gentoo.org> +gvim-7.1_beta001.ebuild:
+  Version bump, new beta version w/ updated runtime files, etc. Also includes
+  a patch to fix building against gnome-2.18 from Daniel Drake (dsd); fixes
+  Bug #176566.
 
   09 May 2007; Mike Kelly <pioto@gentoo.org> gvim-7.0.17.ebuild,
   -gvim-7.0.91.ebuild, -gvim-7.0.146.ebuild, gvim-7.0.174.ebuild,
