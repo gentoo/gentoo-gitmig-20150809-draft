@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.240 2007/05/08 22:19:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.241 2007/05/10 14:01:01 kloeri Exp $
+
+*python-2.5.1-r1 (10 May 2007)
+*python-2.4.4-r3 (10 May 2007)
+*python-2.3.6-r2 (10 May 2007)
+
+  10 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  +python-2.3.6-r2.ebuild, +python-2.4.4-r3.ebuild, +python-2.5.1-r1.ebuild:
+  Change threads USE flag to nothreads, fix non-linux linker issue and fix
+  man-page symlink.
 
   08 May 2007; Roy Marples <uberlord@gentoo.org> python-2.5.1.ebuild:
   Added ~sparc-fbsd keyword, #177426.
