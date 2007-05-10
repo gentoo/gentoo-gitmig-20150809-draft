@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.102 2007/05/09 21:15:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.103 2007/05/10 20:10:48 swegener Exp $
+
+  10 May 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.19-ui-sharp-automake.patch, avahi-0.6.19.ebuild:
+  Add patch from upstream to fix avahi-ui-sharp building, bug #177879.
 
 *avahi-0.6.19 (09 May 2007)
 
