@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/hgcommand
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/hgcommand/ChangeLog,v 1.3 2006/08/08 20:38:10 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/hgcommand/ChangeLog,v 1.4 2007/05/10 07:58:52 pioto Exp $
+
+  10 May 2007; Mike Kelly <pioto@gentoo.org> metadata.xml:
+  This is now maintainer-needed.
 
   08 Aug 2006; Aron Griffis <agriffis@gentoo.org> hgcommand-0.9.1.ebuild:
   Sometimes hgcommand.txt updates anyway, so remove the auto-installer entirely
