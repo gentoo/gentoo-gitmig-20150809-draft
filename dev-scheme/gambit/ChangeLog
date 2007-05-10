@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.5 2007/05/10 15:19:57 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.6 2007/05/10 15:22:45 hkbst Exp $
+
+  10 May 2007; Marijn Schouten <hkBst@gentoo.org> -gambit-4.0_beta15.ebuild,
+  -gambit-4.0_beta20.ebuild:
+  remove older, probably broken ebuilds
 
   10 May 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0_beta22.ebuild:
   fix beta22 syntax-case support
