@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.94 2007/03/22 20:22:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.95 2007/05/10 08:08:16 grobian Exp $
+
+  10 May 2007; Fabian Groffen <grobian@gentoo.org>
+  -files/esound-0.2.36-ppc-macos.patch, esound-0.2.36-r1.ebuild,
+  esound-0.2.36-r2.ebuild, esound-0.2.37.ebuild, esound-0.2.37-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   22 Mar 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/esound-0.2.37-cpu-drain.patch:
