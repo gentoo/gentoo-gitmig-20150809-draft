@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7245 2007/05/10 15:41:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7246 2007/05/10 16:41:31 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org< (10 May 2007)
+# package does not compile complains of missing pygtk when
+# --disable-pygtk was passed to econf
+=net-dns/avahi-0.6.19
 
 # Stefan Schweizer <genstef@gentoo.org> (9 may 2007)
 # waiting for better upstream versions
