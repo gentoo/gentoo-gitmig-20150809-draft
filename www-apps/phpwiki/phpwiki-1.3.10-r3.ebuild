@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r2.ebuild,v 1.3 2007/05/10 12:57:53 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r3.ebuild,v 1.1 2007/05/10 12:57:53 wrobel Exp $
 
 inherit eutils webapp
 
@@ -30,6 +30,9 @@ src_install() {
 
 	cp -pPR * ${D}/${MY_HTDOCSDIR}
 	rm -rf ${D}/${MY_HTDOCSDIR}/{doc,schemas,README,INSTALL,UPGRADING}
+
+	# Fix for security issue (Gentoo bug #174451 and http://secunia.com/advisories/24888/)
+	rm -rf ${D}/${MY_HTDOCSDIR}/lib/plugin/UpLoad.php
 
 	dodoc README INSTALL UPGRADING doc/* schemas/*
 
