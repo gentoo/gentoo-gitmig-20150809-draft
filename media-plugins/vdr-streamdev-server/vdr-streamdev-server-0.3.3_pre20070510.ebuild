@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20070510.ebuild,v 1.1 2007/05/10 14:36:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20070510.ebuild,v 1.2 2007/05/10 15:45:27 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -10,7 +10,8 @@ MY_P=${VDRPLUGIN_BASE}-${MY_PV}
 
 DESCRIPTION="Video Disk Recorder Client/Server streaming plugin"
 HOMEPAGE="http://www.magoa.net/linux/"
-SRC_URI="mirror://gentoo/vdr-${MY_P}.tar.bz2"
+SRC_URI="mirror://gentoo/vdr-${MY_P}.tar.bz2
+		http://dev.gentoo.org/~zzam/distfiles/vdr-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,6 +21,8 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.3.24"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES="${FILESDIR}/${P}-gentoo.diff"
 
 VDRPLUGIN_MAKE_TARGET="libvdr-${VDRPLUGIN}.so"
 
@@ -51,7 +54,7 @@ src_install() {
 	vdr-plugin_src_install
 
 	cd ${S}
-	insinto /etc/vdr/plugins
+	insinto /etc/vdr/plugins/streamdev
 	newins streamdevhosts.conf.example streamdevhosts.conf
 	chown vdr:vdr ${D}/etc/vdr -R
 }
@@ -60,5 +63,10 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 	elog "If you want to use the externremux-feature, then put"
 	elog "your custom script as ${EXTERNREMUX_PATH}."
-}
 
+	if [ ! -e ${ROOT}/etc/vdr/plugins/streamdev/streamdevhosts.conf ]; then
+		einfo "move config file to new config DIR ${ROOT}/etc/vdr/plugins/streamdev/"
+		mv ${ROOT}/etc/vdr/plugins/streamdevhosts.conf ${ROOT}/etc/vdr/plugins/streamdev/streamdevhosts.conf
+	fi
+
+}
