@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.28 2007/04/19 10:26:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.29 2007/05/10 21:42:35 dragonheart Exp $
+
+*freepops-0.2.2-r1 (10 May 2007)
+
+  10 May 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/freepops-0.2.2-gcrypt.patch, +freepops-0.2.2-r1.ebuild:
+  gcrypt initialisation fault. bug #177682 thanks to Przemyslaw Wroblewski for
+  providing a good bug report and a test environment
 
 *freepops-0.2.2 (19 Apr 2007)
 
