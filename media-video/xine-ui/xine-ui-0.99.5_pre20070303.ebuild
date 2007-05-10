@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5_pre20070303.ebuild,v 1.3 2007/04/18 20:05:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5_pre20070303.ebuild,v 1.4 2007/05/10 14:38:08 yoswink Exp $
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -15,7 +15,7 @@ SRC_URI="http://dev.gentooexperimental.org/~flameeyes/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="X nls lirc aalib libcaca readline curl ncurses vdr xinerama debug"
 
 RDEPEND=">=media-libs/libpng-1.2.8
