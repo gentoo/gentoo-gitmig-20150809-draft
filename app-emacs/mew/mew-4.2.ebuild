@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.2.ebuild,v 1.5 2007/05/10 09:50:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.2.ebuild,v 1.6 2007/05/10 13:44:11 ulm Exp $
 
-inherit elisp
+inherit elisp eutils
 
 DESCRIPTION="Great MIME mail reader for Emacs/XEmacs"
 HOMEPAGE="http://www.mew.org/"
@@ -17,9 +17,15 @@ RDEPEND="ssl? ( net-misc/stunnel )"
 
 SITEFILE=50${PN}-gentoo.el
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/mew-5.1-make-check.patch"
+}
+
 src_compile() {
-	econf || die
-	emake || die
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -27,11 +33,12 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		elispdir=${D}/${SITELISP}/${PN} \
 		etcdir=${D}/usr/share/${PN} \
-		mandir=${D}/usr/share/man/man1 || die
+		mandir=${D}/usr/share/man/man1 || die "einstall failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
-	dodoc 00* mew.dot.*
+	dodoc 00api 00changes* 00diff 00readme* 00roadmap mew.dot.* \
+		|| die "dodoc failed"
 }
 
 pkg_postinst() {
