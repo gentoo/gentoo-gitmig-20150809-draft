@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.41 2007/03/08 07:25:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.42 2007/05/10 09:50:57 ulm Exp $
+
+  10 May 2007; Ulrich Mueller <ulm@gentoo.org> -files/3.x/50mew-gentoo.el,
+  files/50mew-gentoo.el, mew-4.1.ebuild, mew-4.2.ebuild, mew-5.1.ebuild:
+  Removed unused old sitefile; moved new sitefile from files/3.x/ to files/.
+  Add load path correctly in the new sitefile, too, finally fixing bug #169588.
+  Updated SRC_URI.
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50mew-gentoo.el:
