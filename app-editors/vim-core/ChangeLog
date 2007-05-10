@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.254 2007/05/09 00:06:54 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.255 2007/05/10 07:18:39 pioto Exp $
+
+*vim-core-7.1_beta001 (10 May 2007)
+
+  10 May 2007; Mike Kelly <pioto@gentoo.org> +vim-core-7.1_beta001.ebuild:
+  Version bump, new beta version w/ updated runtime files, etc.
 
   09 May 2007; Mike Kelly <pioto@gentoo.org> -vim-core-7.0.91.ebuild,
   -vim-core-7.0.146.ebuild, -vim-core-7.0.201.ebuild:
