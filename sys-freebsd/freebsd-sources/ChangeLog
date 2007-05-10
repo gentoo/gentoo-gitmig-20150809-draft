@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.36 2007/05/09 09:29:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.37 2007/05/10 10:24:54 uberlord Exp $
+
+*freebsd-sources-6.2-r1 (10 May 2007)
+
+  10 May 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-sources-6.2-ipv6.patch, +freebsd-sources-6.2-r1.ebuild:
+  Add a security fix to disable IPv6 source routing headers.
 
   09 May 2007; Roy Marples <uberlord@gentoo.org>
   +files/freebsd-sources-6.2-debug-O2.patch, freebsd-sources-6.2.ebuild:
