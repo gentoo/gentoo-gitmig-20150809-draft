@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.16 2007/05/01 20:07:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.17 2007/05/10 15:55:18 alonbl Exp $
+
+*ccid-1.3.0 (10 May 2007)
+
+  10 May 2007; Alon Bar-Lev <alonbl@gentoo.org> +ccid-1.3.0.ebuild:
+  Version bump
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> ccid-1.2.1.ebuild:
   Added ~ppc64; bug #176528
