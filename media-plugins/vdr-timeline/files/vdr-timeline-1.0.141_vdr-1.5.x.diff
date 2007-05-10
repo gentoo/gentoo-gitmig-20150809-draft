@@ -1,0 +1,25 @@
+http://www.vdr-portal.de/board/thread.php?postid=565546#post565546
+
+Joerg Bornkessel <hd_brummy@gentoo.org> 10 May 2007
+
+diff -Naur timeline-1.0.141.orig/checkerOsd.c timeline-1.0.141/checkerOsd.c
+--- timeline-1.0.141.orig/checkerOsd.c	2007-05-10 18:04:03.701564938 +0200
++++ timeline-1.0.141/checkerOsd.c	2007-05-10 18:07:40.290012641 +0200
+@@ -338,9 +338,15 @@
+ 							if (ch1->Frequency()!=ch2->Frequency())
+ 							{ // verschiedene Kanäle, genug Devices?
+ 								bool nofree=true;
+-								
++
++#if APIVERSNUM >= 10500
++                                cDevice *cd1=cDevice::GetDevice(ch1,-1,false);
++                                cDevice *cd2=cDevice::GetDevice(ch2,-1,false);
++#else								
+ 								cDevice *cd1=cDevice::GetDevice(ch1);
+-								cDevice *cd2=cDevice::GetDevice(ch2),*cdt;
++								cDevice *cd2=cDevice::GetDevice(ch2);
++#endif
++								cDevice *cdt;
+ 								if (cd1->DeviceNumber()!=cd2->DeviceNumber())
+ 								{ // Sonderfall: ch2 kann gar nicht auf Device von ch1 empfangen werden
+ 									nofree=false;

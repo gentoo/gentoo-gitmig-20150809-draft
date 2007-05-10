@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-1.0.141.ebuild,v 1.4 2007/01/04 11:37:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-1.0.141.ebuild,v 1.5 2007/05/10 16:13:35 hd_brummy Exp $
 
 inherit vdr-plugin
 
-DESCRIPTION="Video Disk Recorder Timeline PlugIn"
+DESCRIPTION="VDR plugin: Timeline"
 HOMEPAGE="http://www.js-home.org/vdr/timeline/"
 SRC_URI="http://www.js-home.org:80/vdr/timeline/${P}.tar.gz"
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 PATCHES="${FILESDIR}/${P}-german.diff
-	${FILESDIR}/vdr-timeline-fix-crash-no-timer.diff"
+	${FILESDIR}/${PN}-fix-crash-no-timer.diff
+	${FILESDIR}/${P}_vdr-1.5.x.diff"
 
 DEPEND=">=media-video/vdr-1.4.1"
 
