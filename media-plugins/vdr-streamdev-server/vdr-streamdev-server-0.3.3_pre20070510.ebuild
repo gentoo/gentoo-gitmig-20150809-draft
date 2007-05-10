@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20070510.ebuild,v 1.2 2007/05/10 15:45:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20070510.ebuild,v 1.3 2007/05/10 15:51:43 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -64,7 +64,7 @@ pkg_postinst() {
 	elog "If you want to use the externremux-feature, then put"
 	elog "your custom script as ${EXTERNREMUX_PATH}."
 
-	if [ ! -e ${ROOT}/etc/vdr/plugins/streamdev/streamdevhosts.conf ]; then
+	if [[ -e ${ROOT}/etc/vdr/plugins/streamdevhosts.conf ]]; then
 		einfo "move config file to new config DIR ${ROOT}/etc/vdr/plugins/streamdev/"
 		mv ${ROOT}/etc/vdr/plugins/streamdevhosts.conf ${ROOT}/etc/vdr/plugins/streamdev/streamdevhosts.conf
 	fi
