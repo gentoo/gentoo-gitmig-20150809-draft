@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7244 2007/05/09 18:13:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7245 2007/05/10 15:41:41 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -380,12 +380,6 @@ app-text/mgv
 net-misc/dhcp-agent
 x11-plugins/wmmail
 
-# Rémi Cardona <remi@gentoo.org> (08 Apr 2007)
-# Meta packages for Gnome 2.18.0
-# See below for actual packages
->=gnome-base/gnome-2.18.0
->=gnome-base/gnome-light-2.18.0
-
 # Petteri Räty <betelgeuse@gentoo.org> (08 Apr 2007)
 # Still generation 1 and we are one major version behind
 # 30 days and in junkyard unless someone expresses a need
@@ -501,6 +495,8 @@ media-video/gspca
 
 # Daniel Gryniewicz <dang@gentoo.org> (23 Mar 2007)
 # The Great GNOME 2.18.0 mask
+>=gnome-base/gnome-2.18.0
+>=gnome-base/gnome-light-2.18.0
 >=app-admin/sabayon-2.18.0
 >=gnome-base/gconf-2.16.0
 >=gnome-extra/at-spi-1.18.0
