@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r2.ebuild,v 1.3 2007/05/09 17:54:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r2.ebuild,v 1.4 2007/05/10 11:53:56 genstef Exp $
 
 inherit eutils autotools
 
@@ -12,12 +12,18 @@ SRC_URI="http://www.buzzard.org.uk/toshiba/downloads/toshutils-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-ppc ~x86"
-IUSE="X"
+IUSE="gtk X"
 
-DEPEND="=x11-libs/gtk+-1*"
+DEPEND="gtk? ( =x11-libs/gtk+-1* )
+	X? ( x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
+	sed -i -e "s:asm/io.h:sys/io.h:" src/hotkey.c
+
 	rm -f config.{cache,log,status} src/*.o
 
 	sed -i -e "s:-m486 -O2::" \
@@ -27,13 +33,13 @@ src_unpack() {
 		src/Makefile.in \
 		|| die "sed failed"
 	epatch ${FILESDIR}/${P}-arg-fix.diff
-	use X || epatch ${FILESDIR}/${P}-gentoo.diff
+	use gtk || epatch ${FILESDIR}/${P}-gentoo.diff
 	eautoconf || die "autoconf failed"
 }
 
 src_compile() {
 	econf \
-		$(use_with X) \
+		$(use_with X x) \
 		|| die "econf failed"
 	make depend || die "make depend failed"
 	make -C src || die "make src failed"
