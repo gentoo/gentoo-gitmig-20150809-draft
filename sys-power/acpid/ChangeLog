@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.25 2007/02/23 10:55:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.26 2007/05/10 17:11:39 genstef Exp $
+
+*acpid-1.0.4-r5 (10 May 2007)
+
+  10 May 2007; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  +acpid-1.0.4-r5.ebuild:
+  Clean up ebuild, use scripts from debian, maintainer back to mobile@, fixes
+  bugs #126131 and #170213
 
 *acpid-1.0.4-r4 (23 Feb 2007)
 
