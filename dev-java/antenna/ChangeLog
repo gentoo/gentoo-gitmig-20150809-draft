@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/antenna
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.4 2007/01/14 12:49:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.5 2007/05/10 11:40:39 betelgeuse Exp $
+
+*antenna-0.9.14 (10 May 2007)
+
+  10 May 2007; Petteri Räty <betelgeuse@gentoo.org> +antenna-0.9.14.ebuild:
+  Version bump. Adds source and examples use flags and uses
+  java-pkg_register-ant-task to register ant task.
 
   14 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   antenna-0.9.13-r1.ebuild:
