@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.17.ebuild,v 1.3 2007/05/09 19:39:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.17.ebuild,v 1.4 2007/05/10 15:07:27 cardoe Exp $
 
 inherit eutils
 
@@ -106,4 +106,10 @@ src_install() {
 	ewarn "by default and need to be unmasked to use them"
 	ewarn ""
 	ewarn "Rebuild your genkernel initramfs if you are using lvm"
+}
+
+pkg_postinst() {
+	elog "lvm volumes are no longer automatically created for"
+	elog "baselayout-2 users. If you are using baselayout-2, be sure to"
+	elog "run: # rc-update add lvm boot"
 }
