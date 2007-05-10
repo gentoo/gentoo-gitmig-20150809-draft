@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.11.ebuild,v 1.2 2007/05/09 21:25:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.11.ebuild,v 1.3 2007/05/10 08:46:02 genstef Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -63,7 +63,7 @@ RESTRICT="test"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	if [ ${ARCH} -eq "x86" -a -d "/usr/lib64" ]
+	if use x86 && [ -d "/usr/lib64" ]
 	then
 		eerror "You are running an x86 system, but /usr/lib64 exists, cups will install all library objects into this directory!"
 		eerror "You should remove /usr/lib64, but before you do, you should check for existing objects, and re-compile all affected packages."
