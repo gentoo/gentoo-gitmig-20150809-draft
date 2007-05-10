@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 689 RMD160 8475e71ed31ff31a071e6f99abe8bc2b9b4cb269 SHA1 3a063976d2556afb22f9b66ea3adc2f3229844a7 SHA256 71bfb5afd04a96eba5942ca57f155fe00252ce47d02a730045ea0c7156953d9d
-MD5 a722ea7f2557042da8c721af9b4821bf files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 689
-RMD160 8475e71ed31ff31a071e6f99abe8bc2b9b4cb269 files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 689
-SHA256 71bfb5afd04a96eba5942ca57f155fe00252ce47d02a730045ea0c7156953d9d files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 689
+AUX vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 692 RMD160 1160469e62bd07cb770eb72c7a01669940959a8f SHA1 da0cb1bbe5b2d42d66c57062569c34de3cd0d91b SHA256 f6f7ba042e34849ac9113cb042dc292fdf88bc6fe6de2a362f0420683a05b017
+MD5 2f6d3d281f5e32f03dc3550ad0a218e5 files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 692
+RMD160 1160469e62bd07cb770eb72c7a01669940959a8f files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 692
+SHA256 f6f7ba042e34849ac9113cb042dc292fdf88bc6fe6de2a362f0420683a05b017 files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff 692
 AUX vdr-streamdev-server-20060502-old-vdr-headers.diff 1183 RMD160 c98e70689cf0fb83484bd2f2bf0e6f1dc7c15b0d SHA1 7c48fa4fa9f583a3269086c6a9297cffd34f97cc SHA256 6608d265a9c96d48856b84a6573234da4e8c26d7f3dd1655292ef77577fb9a60
 MD5 76eeb01cf75ac90c3599d77be0da63a7 files/vdr-streamdev-server-20060502-old-vdr-headers.diff 1183
 RMD160 c98e70689cf0fb83484bd2f2bf0e6f1dc7c15b0d files/vdr-streamdev-server-20060502-old-vdr-headers.diff 1183
@@ -24,10 +21,10 @@ EBUILD vdr-streamdev-server-0.3.3_pre20070510.ebuild 2024 RMD160 f5f1445aa6cb315
 MD5 1cde0c84b73b92c367db4c050d74bbea vdr-streamdev-server-0.3.3_pre20070510.ebuild 2024
 RMD160 f5f1445aa6cb31587765155300e099d033350394 vdr-streamdev-server-0.3.3_pre20070510.ebuild 2024
 SHA256 4493cd408f6f3854905669a28c31746eeb9e880c6023f1e0f650af800f14de40 vdr-streamdev-server-0.3.3_pre20070510.ebuild 2024
-MISC ChangeLog 3296 RMD160 c5602fb162c66de51cc65aac13b5fecba328213c SHA1 67a5c949b34d01359caae240d7278cd03e2c5e79 SHA256 d865396195a56017d0edcc2ae113654fb6e302c68c1f3cc4cafadaa58eccceae
-MD5 a474bc57bc74e9338ee5812252f14146 ChangeLog 3296
-RMD160 c5602fb162c66de51cc65aac13b5fecba328213c ChangeLog 3296
-SHA256 d865396195a56017d0edcc2ae113654fb6e302c68c1f3cc4cafadaa58eccceae ChangeLog 3296
+MISC ChangeLog 3480 RMD160 daf8d655fa9078845e7d199c2ff99a2e65d19224 SHA1 b29260d6089ef4c70b97858e24dbaca31e3fc14b SHA256 d9e4649415f320ac73f5ebbeebdffe6c1b13b2cedb7a217c2b0f5820ab542c31
+MD5 6231ffdaecdb0243e087f795f2abdf32 ChangeLog 3480
+RMD160 daf8d655fa9078845e7d199c2ff99a2e65d19224 ChangeLog 3480
+SHA256 d9e4649415f320ac73f5ebbeebdffe6c1b13b2cedb7a217c2b0f5820ab542c31 ChangeLog 3480
 MISC metadata.xml 257 RMD160 8bee49b98c59996aaaa019fb2c764c08d8004507 SHA1 d2419394e7d5c7463d7dea33e9190ebd57484531 SHA256 0dd45fbbaf1c6173535e371e3ff8a3faa41f3f89123ac9dffe338998599ebe26
 MD5 116de98355049ce943c3b6fedc00b4a3 metadata.xml 257
 RMD160 8bee49b98c59996aaaa019fb2c764c08d8004507 metadata.xml 257
@@ -41,11 +38,3 @@ SHA256 f3c4eb02e9097de46bda46674296d225b7465566b2955eb0d9fdab586b6fcd8f files/di
 MD5 6c743b27107fd3d5ebdb4fe31094fbb0 files/digest-vdr-streamdev-server-0.3.3_pre20070510 271
 RMD160 78e84a01ea71710a93853348762277e2f8821b9a files/digest-vdr-streamdev-server-0.3.3_pre20070510 271
 SHA256 6613f96fe9955c28f16bb8d87091d1617029b7c3bb8cf933f7e53dd7f1662952 files/digest-vdr-streamdev-server-0.3.3_pre20070510 271
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: added by hd_brummy@gentoo.org
-
-iD8DBQFGQz+Ydn07HTTCgIoRAj1iAKCEBS4lj5fKKY8OeqTwqMLwZBXfgwCglb1Z
-mDDbNzGANm/egICDGI6qQsI=
-=pqJ3
------END PGP SIGNATURE-----

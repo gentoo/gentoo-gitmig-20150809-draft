@@ -10,7 +10,7 @@ diff -Naur streamdev-20070510.orig/server/server.h streamdev-20070510/server/ser
  #include "server/connection.h"
  
 -#define STREAMDEVHOSTSPATH (*AddDirectory(cPlugin::ConfigDirectory(), "streamdevhosts.conf"))
-+#define STREAMDEVHOSTSPATH (*AddDirectory(cPlugin::ConfigDirectory( "plugin" ), "streamdevhosts.conf"))
++#define STREAMDEVHOSTSPATH (*AddDirectory(cPlugin::ConfigDirectory( "streamdev" ), "streamdevhosts.conf"))
  
  class cStreamdevServer: public cThread {
  private:
