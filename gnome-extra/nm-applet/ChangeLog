@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.2 2007/05/04 20:06:44 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.3 2007/05/11 16:57:00 gustavoz Exp $
+
+  11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  nm-applet-0.6.5.ebuild:
+  Keyworded ~ppc
 
   04 May 2007; Steev Klimaszewski <steev@gentoo.org> nm-applet-0.6.5.ebuild:
   Fix the dependency/iuse mismatch issue reported by Jakub Moc in bug #177002.
