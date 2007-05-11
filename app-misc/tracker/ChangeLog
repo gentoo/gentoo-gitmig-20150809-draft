@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.14 2007/04/23 15:56:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.15 2007/05/11 16:58:51 gustavoz Exp $
+
+  11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  tracker-0.5.4-r1.ebuild:
+  Keyworded ~ppc
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   tracker-0.5.4-r1.ebuild:
