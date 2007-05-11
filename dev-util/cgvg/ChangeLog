@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cgvg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgvg/ChangeLog,v 1.1 2006/11/26 08:16:41 gregkh Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgvg/ChangeLog,v 1.2 2007/05/11 16:07:51 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
 *cgvg-1.6.2 (26 Nov 2006)
 
