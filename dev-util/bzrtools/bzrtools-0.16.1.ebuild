@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-0.14.0.ebuild,v 1.1 2007/01/26 20:50:46 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-0.16.1.ebuild,v 1.1 2007/05/11 02:00:19 marienz Exp $
+
+NEED_PYTHON=2.4
 
 inherit distutils versionator
 
@@ -13,9 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.4
-	=dev-util/bzr-$(get_version_component_range 1-2)*"
+DEPEND="=dev-util/bzr-$(get_version_component_range 1-2)*"
+RDEPEND="${DEPEND}"
 
 DOCS="CREDITS NEWS NEWS.Shelf README README.Shelf TODO TODO.Shelf"
 
 S="${WORKDIR}/${PN}"
+
+PYTHON_MODNAME=bzrlib
