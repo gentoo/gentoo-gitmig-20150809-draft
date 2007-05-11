@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/tig-0.6.ebuild,v 1.1 2007/05/09 10:09:49 gregkh Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/tig-0.6.ebuild,v 1.2 2007/05/11 20:14:31 swegener Exp $
 
 DESCRIPTION="Tig: text mode interface for git"
 HOMEPAGE="http://jonas.nitro.dk/tig/"
@@ -16,19 +14,13 @@ DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 		dev-util/git"
 
-src_unpack() {
-	unpack ${A}
-
-	# patches go here...
-	#epatch ${FILESDIR}/${P}-man-install.patch
-
-}
-
 src_compile() {
-	make clean || die
-	emake || die
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "einstall failed"
+	doman tig.1 tigrc.5
+	dodoc manual.txt tigrc
+	dohtml manual.html
 }
