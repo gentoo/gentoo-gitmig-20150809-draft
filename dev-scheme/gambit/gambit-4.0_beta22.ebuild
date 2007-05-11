@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.2 2007/05/10 15:19:57 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.3 2007/05/11 12:53:51 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -22,19 +22,19 @@ SITEFILE="50gambit-gentoo.el"
 
 S=${WORKDIR}/${MY_P}
 
-IUSE="emacs macros gcc-opts"
+IUSE="emacs big-iron"
 
 pkg_setup() {
-	if ! use gcc-opts; then
-		ewarn "not using gcc specific optimizations"
+	if ! use big-iron; then
+		ewarn "not using gcc specific optimizations and not compiling syntax-case macro system"
 		ewarn "approximately 0.5GB ram will be needed"
 		ewarn "if you experience thrashing, try disabling parallel building"
 		# need this much memory in MBytes (does *not* check swap)
 		CHECKREQS_MEMORY="768"check_reqs
 	else
-		ewarn "using gcc specific optimizations."
+		ewarn "using gcc specific optimizations and compiling syntax-case macro system"
 		ewarn "this will cause approximately 2GB ram to be used instead of 0.5GB."
-		ewarn "this will probably cause heavy thrashing of your system."
+		ewarn "this will cause heavy thrashing of your system unless your system is big iron"
 		# need this much memory in MBytes (does *not* check swap)
 		CHECKREQS_MEMORY="2560"	check_reqs
 	fi
@@ -47,18 +47,17 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-shared --enable-single-host $(use_enable gcc-opts)
+	econf --enable-shared --enable-single-host $(use_enable big-iron)
 	emake || die "emake failed"
 
 	if use emacs; then
 		( cd misc; elisp-comp *.el )
 	fi
 
-	# uses lots of memory
-	if use macros; then
+	# compile syntax-case
+	if use big-iron; then
 		einfo "compiling syntax-case.scm..."
-		einfo "(this may take some time and cause thrashing)"
-		time LD_LIBRARY_PATH="lib/" GAMBCOPT="=." gsc/gsc misc/syntax-case.scm
+		LD_LIBRARY_PATH="lib/" GAMBCOPT="=." gsc/gsc misc/syntax-case.scm
 	fi
 }
 
@@ -67,7 +66,7 @@ src_install() {
 
 	rm ${D}/usr/current
 
-	use macros && dolib syntax-case.*
+	use big-iron && dolib syntax-case.*
 	mv ${D}/usr/syntax-case.scm ${D}/usr/$(get_libdir)
 
 	# rename the /usr/bin/gsc to avoid collision with gsc from ghostscript
@@ -88,6 +87,7 @@ src_install() {
 	dosym gsc-gambit usr/bin/gambit-compiler
 	dosym gsi usr/bin/gambit-interpreter
 
-	use macros && dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/$(get_libdir)/\"" > ${D}/etc/env.d/50gambit
-#		echo '(load "~~syntax-case")' > ${D}/usr/$(get_libdir)/gambcext
+	# automatically load syntx-case for r5rs+ goodness
+	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/$(get_libdir)/\"" > ${D}/etc/env.d/50gambit
+	echo '(load "~~/syntax-case")' > ${D}/usr/$(get_libdir)/gambcext
 }
