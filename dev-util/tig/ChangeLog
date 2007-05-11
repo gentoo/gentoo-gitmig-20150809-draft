@@ -1,6 +1,6 @@
-# ChangeLog for dev-util/eric
+# ChangeLog for dev-util/tig
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.1 2007/05/09 10:09:49 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.2 2007/05/11 19:57:04 swegener Exp $
 
 *tig-0.6 (09 May 2007)
 
