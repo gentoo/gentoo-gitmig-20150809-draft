@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.369 2007/05/11 15:45:26 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.370 2007/05/11 15:52:04 armin76 Exp $
+
+  11 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  net-misc/aria has been removed, bug 153355
 
   11 May 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
   Mask dev-db/firebird-2.0.1 for testing.
