@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.45 2007/04/22 17:39:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.46 2007/05/11 16:10:27 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   22 Apr 2007; Christian Heim <phreak@gentoo.org> freevo-1.5.4.ebuild,
   freevo-1.5.4-r2.ebuild, freevo-1.6.0.ebuild, freevo-1.6.1.ebuild:
