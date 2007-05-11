@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linux-kernel-in-a-nutshell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-kernel-in-a-nutshell/ChangeLog,v 1.1 2007/01/26 17:08:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-kernel-in-a-nutshell/ChangeLog,v 1.2 2007/05/11 18:08:43 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
 *linux-kernel-in-a-nutshell-1 (26 Jan 2007)
 
