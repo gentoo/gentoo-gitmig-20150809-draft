@@ -29,10 +29,6 @@ EBUILD xfce-utils-4.4.1-r1.ebuild 1233 RMD160 b806bd71c8444e60ede4aa9e6032598680
 MD5 763bf351e3ababbaac78dc06c72d5f97 xfce-utils-4.4.1-r1.ebuild 1233
 RMD160 b806bd71c8444e60ede4aa9e6032598680c854e7 xfce-utils-4.4.1-r1.ebuild 1233
 SHA256 3af9def6182928d981bda64aaa561b19463602a96eb9c7217f1c52804b7c6b54 xfce-utils-4.4.1-r1.ebuild 1233
-EBUILD xfce-utils-4.4.1.ebuild 1032 RMD160 0edaf02a9fb1fd2c40aa35ebc54344b340fe1441 SHA1 e43da3f45a211022f0fd7e6325686caa47126d6a SHA256 012bb60b64b8a2f4fc896fc2e77b16804eebebacad6d8972bcdcca8becbcd467
-MD5 92aa1d1d7876b0e65fe5bcb6cc174c67 xfce-utils-4.4.1.ebuild 1032
-RMD160 0edaf02a9fb1fd2c40aa35ebc54344b340fe1441 xfce-utils-4.4.1.ebuild 1032
-SHA256 012bb60b64b8a2f4fc896fc2e77b16804eebebacad6d8972bcdcca8becbcd467 xfce-utils-4.4.1.ebuild 1032
 MISC ChangeLog 13051 RMD160 82785a1248ef5f96fa12343f83da8a0ed43a8d49 SHA1 c760229b8974cd07dec716dc34aefd39918718c6 SHA256 d542240389fe80a1e6f7618f16462137a3b2ee6a0590cde848a8267fa03a041c
 MD5 87726eb1c6f8aacb9797e50996f9c9c5 ChangeLog 13051
 RMD160 82785a1248ef5f96fa12343f83da8a0ed43a8d49 ChangeLog 13051
@@ -47,9 +43,6 @@ SHA256 8fe6300e1ebc7c0212f2b10e66a8c4c1cdb05f1cfc2c558ba91c002336fe42ac files/di
 MD5 647e6fbc8e329f415a2b8c434d4e3970 files/digest-xfce-utils-4.4.0-r3 253
 RMD160 6bcf776bab98f4c2a6a81425a1ccf5bcda4ae6ae files/digest-xfce-utils-4.4.0-r3 253
 SHA256 ce45e806ecb968c9c13e4ef00b768a7bea71f0a9f46c2b6c246d739fa5bab939 files/digest-xfce-utils-4.4.0-r3 253
-MD5 c43c810897ba7b4b82f9a3b0b6d669a2 files/digest-xfce-utils-4.4.1 253
-RMD160 ac5c698c978b4379382ea5b3eb813aeed1144637 files/digest-xfce-utils-4.4.1 253
-SHA256 63e872c24850434e986cf46833cd1d42100f8ae83096dce411fdfc96208588d2 files/digest-xfce-utils-4.4.1 253
 MD5 c43c810897ba7b4b82f9a3b0b6d669a2 files/digest-xfce-utils-4.4.1-r1 253
 RMD160 ac5c698c978b4379382ea5b3eb813aeed1144637 files/digest-xfce-utils-4.4.1-r1 253
 SHA256 63e872c24850434e986cf46833cd1d42100f8ae83096dce411fdfc96208588d2 files/digest-xfce-utils-4.4.1-r1 253
