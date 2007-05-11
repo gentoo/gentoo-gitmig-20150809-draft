@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.16 2007/04/28 17:41:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.17 2007/05/11 06:42:19 drac Exp $
+
+  11 May 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-archive-0.2.4-r1.ebuild:
+  Flip archive manager deps around and add file-roller as alternative.
 
   28 Apr 2007; nixnut <nixnut@gentoo.org> thunar-archive-0.2.4-r1.ebuild:
   Added ~ppc wrt bug 175749
