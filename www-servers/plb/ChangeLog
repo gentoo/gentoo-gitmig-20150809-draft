@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/plb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/ChangeLog,v 1.5 2007/04/28 17:29:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/ChangeLog,v 1.6 2007/05/11 18:07:02 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> plb-0.3.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
