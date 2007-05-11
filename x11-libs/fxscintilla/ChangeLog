@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.30 2007/04/19 13:02:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.31 2007/05/11 08:51:15 mabi Exp $
+
+*fxscintilla-1.71-r1 (11 May 2007)
+
+  11 May 2007; Matti Bickel <mabi@gentoo.org> +fxscintilla-1.71-r1.ebuild:
+  Drop fox-1.2 support in fxscintilla-1.71 (fox-1.2 will be removed soon)
 
   19 Apr 2007; Ferris McCormick <fmccor@gentoo.org>
   fxscintilla-1.62-r2.ebuild:
