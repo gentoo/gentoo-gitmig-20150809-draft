@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/ncpfs
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.22 2006/11/28 17:31:37 chtekk Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.23 2007/05/11 19:49:06 griffon26 Exp $
+
+  11 May 2007; Maurice van der Pot <griffon26@gentoo.org>
+  +files/ncpfs-2.2.6-missing-includes.patch, ncpfs-2.2.6.ebuild:
+  Added some includes for missing header files, fixing errors during
+  compilation reported as bug #157462 and bug #178090 by Willard Dawson
+  <willard.dawson@sungard.com> and Marat Radchenko <valder@yandex.ru>
+  respectively.
 
   28 Nov 2006; Luca Longinotti <chtekk@gentoo.org> -ncpfs-2.2.0.19.ebuild,
   -ncpfs-2.2.0.19-r1.ebuild, -ncpfs-2.2.0.19-r2.ebuild, -ncpfs-2.2.3.ebuild,

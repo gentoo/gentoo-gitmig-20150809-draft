@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6.ebuild,v 1.3 2006/01/28 05:40:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6.ebuild,v 1.4 2007/05/11 19:49:06 griffon26 Exp $
 
 inherit eutils confutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S} || die "Unable to cd to ${S}"
 	epatch "${FILESDIR}"/${PN}-2.2.5-php.patch || die "Unable to apply PHP patch"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-missing-includes.patch
 }
 
 src_compile() {
