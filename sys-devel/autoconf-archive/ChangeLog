@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.14 2007/02/12 01:20:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.15 2007/05/11 21:55:08 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
 *autoconf-archive-2007.02.03 (12 Feb 2007)
 
