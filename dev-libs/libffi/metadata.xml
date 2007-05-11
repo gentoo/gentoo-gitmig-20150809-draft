@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>maintainer-needed@gentoo.org</herd>
+<herd>no-herd</herd>
 <longdescription>
 Compilers for high level languages generate code that follow certain
 conventions. These conventions are necessary, in part, for separate
