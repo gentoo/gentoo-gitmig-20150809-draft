@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.83 2007/05/11 19:21:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.84 2007/05/11 20:47:27 compnerd Exp $
+
+  11 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Mask giggle on x86/2.4/no-nptl
 
   11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
