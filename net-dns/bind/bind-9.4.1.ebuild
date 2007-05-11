@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1.ebuild,v 1.2 2007/05/06 08:50:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1.ebuild,v 1.3 2007/05/11 13:17:02 voxus Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -55,7 +55,7 @@ src_unpack() {
 			"${i}"
 	done
 
-	use dlz && epatch ${FILESDIR}/${P}-dlzbdb-close_cursor.patch
+	use dlz && epatch ${FILESDIR}/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i ${S}/bin/Makefile.in
