@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.62 2007/02/04 01:33:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.63 2007/05/11 17:26:46 carlo Exp $
+
+  11 May 2007; Carsten Lohrke <carlo@gentoo.org> ark-3.5.6.ebuild:
+  Update post install message a bit.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -ark-3.5.2.ebuild:
   Remove old versions.
