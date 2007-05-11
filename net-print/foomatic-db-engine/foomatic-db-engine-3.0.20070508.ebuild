@@ -1,13 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20070508.ebuild,v 1.1 2007/05/08 11:50:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20070508.ebuild,v 1.2 2007/05/11 11:12:17 calchan Exp $
 
 inherit perl-app eutils versionator
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
 DESCRIPTION="Generates ppds out of xml foomatic printer description files"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
-SRC_URI="http://www.linuxprinting.org/download/foomatic/${MY_P}.tar.gz"
+SRC_URI="http://gentooexperimental.org/~calchan/distfiles/${MY_P}.tar.gz
+	http://www.linuxprinting.org/download/foomatic/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
