@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>no-herd</herd>
 <maintainer>
 <email>duarte.henriques@gmail.com</email>
 <name>Duarte Henriques</name>
 </maintainer>
-
-<maintainer>
-	<email>gothgirl@gentoo.org</email>
-	<name>Kathryn Kulick</name>
-</maintainer>
-<longdescription lang="en">
-Duarte is the maintainer for this package. He is responsable for it on
-portage and he is the upstream too. I will act as his proxy.
-</longdescription>
 </pkgmetadata>
-

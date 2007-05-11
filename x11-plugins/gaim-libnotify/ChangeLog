@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-libnotify
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/ChangeLog,v 1.4 2006/11/04 03:38:22 gothgirl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/ChangeLog,v 1.5 2007/05/11 22:31:17 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  remove retired dev - add no-herd
 
   04 Nov 2006; gothgirl <gothgirl@gentoo.org> metadata.xml:
   removed metalgod and added self to metadata
