@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/egypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.1 2007/04/19 23:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.2 2007/05/11 22:01:37 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
 *egypt-1.6 (19 Apr 2007)
 
