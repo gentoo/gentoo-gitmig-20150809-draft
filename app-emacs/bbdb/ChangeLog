@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.21 2007/04/19 13:59:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.22 2007/05/11 13:16:57 gustavoz Exp $
+
+  11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> bbdb-2.35.ebuild:
+  Stable on sparc wrt #177921
 
   19 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> bbdb-2.35.ebuild:
   Add ~alpha keyword, bug 168420.
