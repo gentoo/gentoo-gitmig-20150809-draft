@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.27 2007/03/12 23:49:50 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.28 2007/05/11 23:48:41 matsuu Exp $
+
+*dvipdfmx-20070409 (11 May 2007)
+
+  11 May 2007; MATSUU Takuto <matsuu@gentoo.org> +dvipdfmx-20070409.ebuild:
+  Version bumped.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
