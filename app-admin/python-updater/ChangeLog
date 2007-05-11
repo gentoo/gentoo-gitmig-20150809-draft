@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.8 2007/05/08 21:56:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.9 2007/05/11 22:04:54 kloeri Exp $
+
+  11 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  python-updater-0.2.ebuild:
+  Add ~alpha and ~mips keywords.
 
   08 May 2007; Roy Marples <uberlord@gentoo.org> python-updater-0.2.ebuild:
   Added ~sparc-fbsd keyword, #177426.
