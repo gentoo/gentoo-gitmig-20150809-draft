@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.241 2007/05/10 14:01:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.242 2007/05/11 13:47:09 kloeri Exp $
+
+*python-2.5.1-r2 (11 May 2007)
+*python-2.4.4-r4 (11 May 2007)
+
+  11 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  +python-2.4.4-r4.ebuild, +python-2.5.1-r2.ebuild:
+  Only apply crosscompile patch conditionally, drop tests if crosscompiling
+  and fix PyLocale.strxfrm leak from bug 177804. srtxfrm from Debian bug
+  416934
 
 *python-2.5.1-r1 (10 May 2007)
 *python-2.4.4-r3 (10 May 2007)
