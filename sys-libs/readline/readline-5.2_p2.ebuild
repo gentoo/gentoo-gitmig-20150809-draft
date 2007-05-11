@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2_p2.ebuild,v 1.3 2007/05/02 05:34:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2_p2.ebuild,v 1.4 2007/05/11 12:40:17 grobian Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -73,14 +73,12 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodir /$(get_libdir)
 
-	if ! use userland_Darwin ; then
-		mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
-		chmod a+rx "${D}"/$(get_libdir)/*.so*
+	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
+	chmod a+rx "${D}"/$(get_libdir)/*.so*
 
-		# Bug #4411
-		gen_usr_ldscript libreadline.so
-		gen_usr_ldscript libhistory.so
-	fi
+	# Bug #4411
+	gen_usr_ldscript libreadline.so
+	gen_usr_ldscript libhistory.so
 
 	if ! tc-is-cross-compiler; then
 		dobin examples/rlfe/rlfe || die
