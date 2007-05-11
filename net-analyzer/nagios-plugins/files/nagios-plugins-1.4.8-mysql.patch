@@ -1,0 +1,12 @@
+diff -Nru nagios-plugins-1.4.8.orig/configure.in nagios-plugins-1.4.8/configure.in
+--- nagios-plugins-1.4.8.orig/configure.in	2007-04-11 15:08:05.000000000 +0300
++++ nagios-plugins-1.4.8/configure.in	2007-05-11 19:44:10.000000000 +0300
+@@ -246,7 +246,7 @@
+   AC_MSG_WARN([Skipping mysql plugin])
+   AC_MSG_WARN([install mysql client libs to compile this plugin (see REQUIREMENTS).])
+ else
+-  EXTRAS="$EXTRA check_mysql check_mysql_query"
++  EXTRAS="$EXTRAS check_mysql check_mysql_query"
+   MYSQLINCLUDE="$np_mysql_include"
+   MYSQLLIBS="$np_mysql_libs"
+   MYSQLCFLAGS="$np_mysql_cflags"
