@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.83 2007/05/06 12:11:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.84 2007/05/11 15:31:24 beandog Exp $
+
+  11 May 2007; Steve Dibb <beandog@gentoo.org> nsplugins-3.5.5-r2.ebuild:
+  amd64 stable
 
   06 May 2007; Carsten Lohrke <carlo@gentoo.org> nsplugins-3.5.5-r2.ebuild:
   Stable on x86.
