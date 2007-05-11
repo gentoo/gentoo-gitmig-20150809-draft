@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.368 2007/05/10 12:15:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.369 2007/05/11 15:45:26 drizzt Exp $
+
+  11 May 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
+  Mask dev-db/firebird-2.0.1 for testing.
 
   10 May 2007; Daniel Black <dragonheart@gentoo.org> thirdpartymirrors:
   removed bad gnupg mirrors as per bug #177893 thanks Jakub
