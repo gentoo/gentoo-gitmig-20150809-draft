@@ -1,17 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.1.ebuild,v 1.1 2007/04/12 14:42:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.1.ebuild,v 1.2 2007/05/11 13:26:39 drac Exp $
 
 inherit xfce44
 
 XFCE_VERSION=4.4.1
 xfce44
 
-HOMEPAGE="http://www.xfce.org/"
-DESCRIPTION="Meta package for Xfce4 desktop, merge this package to install"
+HOMEPAGE="http://www.xfce.org"
+DESCRIPTION="Meta package for Xfce4 desktop, merge this package to install."
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa cups minimal oss"
+IUSE="alsa cups minimal oss xscreensaver"
 
+# xscreensaver dep to 5.02 because of previous security bug in lock screen,
+# but also for .desktop file we get in settings.
 RDEPEND=">=x11-themes/gtk-engines-xfce-2.4
 	>=xfce-base/thunar-${THUNAR_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-plugins-${XFCE_MASTER_VERSION}
@@ -28,7 +30,8 @@ RDEPEND=">=x11-themes/gtk-engines-xfce-2.4
 	!minimal? ( >=xfce-base/orage-${XFCE_MASTER_VERSION}
 		>=xfce-extra/mousepad-0.2.12
 		>=xfce-extra/xfwm4-themes-${XFCE_MASTER_VERSION}
-		>=xfce-extra/terminal-0.2.6 )"
+		>=xfce-extra/terminal-0.2.6 )
+	xscreensaver? ( >=x11-misc/xscreensaver-5.02 )"
 DEPEND="${RDEPEND}"
 
 # hack to avoid exporting function from eclass.
