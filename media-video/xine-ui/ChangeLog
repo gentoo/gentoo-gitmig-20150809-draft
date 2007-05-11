@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.150 2007/05/11 09:00:24 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.151 2007/05/11 14:50:48 beandog Exp $
+
+  11 May 2007; Steve Dibb <beandog@gentoo.org> xine-ui-0.99.5.ebuild:
+  amd64 stable, bug 177008
 
   11 May 2007; Jose Luis Rivero <yoswink@gentoo.org> xine-ui-0.99.5.ebuild:
   Stable on alpha wrt security #177008. Sorry about the first commit. 0.99.5
