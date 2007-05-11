@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.32 2007/01/24 02:56:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.33 2007/05/11 16:00:44 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> xxe-3.5.1.ebuild:
   Replacing einfo with elog
