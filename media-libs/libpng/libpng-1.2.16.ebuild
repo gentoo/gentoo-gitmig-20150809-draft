@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.16.ebuild,v 1.3 2007/04/24 11:41:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.16.ebuild,v 1.4 2007/05/11 17:48:33 gustavoz Exp $
 
 inherit multilib eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libpng/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="sys-libs/zlib"
