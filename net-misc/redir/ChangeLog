@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/redir
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.8 2007/02/09 04:51:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.9 2007/05/11 16:13:35 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
