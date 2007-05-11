@@ -1,0 +1,12 @@
+diff -ur xscreensaver-5.02.orig/configure.in xscreensaver-5.02/configure.in
+--- xscreensaver-5.02.orig/configure.in	2007-04-17 07:56:11.000000000 +0300
++++ xscreensaver-5.02/configure.in	2007-05-11 12:02:20.000000000 +0300
+@@ -2265,7 +2265,7 @@
+ 
+ have_login_manager=no
+ with_login_manager_req=unspecified
+-default_login_manager='gdmflexiserver -l'
++default_login_manager='gdmflexiserver -ls'
+ 
+ AC_ARG_WITH(login-manager,
+ [  --with-login-manager    Put a "New Login" button on the unlock dialog that
