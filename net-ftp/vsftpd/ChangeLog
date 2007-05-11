@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.84 2007/04/10 13:00:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.85 2007/05/11 08:47:39 yoswink Exp $
+
+  11 May 2007; Jose Luis Rivero <yoswink@gentoo.org> vsftpd-2.0.5-r2.ebuild:
+  Stable on alpha wrt bug #166805
 
 *vsftpd-2.0.5-r2 (10 Apr 2007)
 
