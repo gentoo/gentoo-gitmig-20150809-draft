@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.4.ebuild,v 1.14 2007/02/17 19:16:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.4.ebuild,v 1.15 2007/05/11 19:12:07 aballier Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 -s390 sparc ~x86"
 IUSE="tk latex"
 
-DEPEND="virtual/libc
-	tk? ( >=dev-lang/tk-3.3.3 )"
+DEPEND="tk? ( >=dev-lang/tk-3.3.3 )"
 
 pkg_setup() {
 	ewarn

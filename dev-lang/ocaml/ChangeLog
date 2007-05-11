@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.99 2007/04/22 20:00:56 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.100 2007/05/11 19:12:07 aballier Exp $
+
+  11 May 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/ocaml-3.08.3-gcc4.patch, -ocaml-3.08.3.ebuild, ocaml-3.08.4.ebuild,
+  ocaml-3.09.2.ebuild, ocaml-3.09.3.ebuild, ocaml-3.09.3-r1.ebuild:
+  Fix bug #135641 again, remove unused version, drop virtual/libc dep as it is
+  in system anyway
 
   22 Apr 2007; Christian Heim <phreak@gentoo.org> ocaml-3.09.3-r1.ebuild:
   Restricting FEATURES=test for now, make bootstrap deletes the *.opt files
