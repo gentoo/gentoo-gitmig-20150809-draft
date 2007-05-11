@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.244 2007/05/11 18:30:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.245 2007/05/11 22:07:50 kloeri Exp $
+
+  11 May 2007; Bryan Østergaard <kloeri@gentoo.org> python-2.4.4-r4.ebuild,
+  python-2.5.1-r2.ebuild:
+  Add ~alpha and ~mips keywords.
 
   11 May 2007; Bryan Østergaard <kloeri@gentoo.org>
   -python-2.1.3-r1.ebuild, -python-2.2.3-r6.ebuild:
