@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.7 2007/05/11 12:53:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.8 2007/05/11 16:08:45 hkbst Exp $
+
+  11 May 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0_beta22.ebuild:
+  fix tests
 
   11 May 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0_beta22.ebuild:
   add automatic loading of syntax-case. This may cause tests to fail. The

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.3 2007/05/11 12:53:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.4 2007/05/11 16:08:45 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -61,6 +61,14 @@ src_compile() {
 	fi
 }
 
+src_test() {
+	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	if ! GAMBCOPT="=." emake -j1 check; then
+		hasq test $FEATURES && die "Make test failed. See above for details."
+		hasq test $FEATURES || eerror "Make test failed. See above for details."
+	fi
+}
+
 src_install() {
 	einstall docdir=${D}/usr/share/doc/${PF} || die "einstall failed"
 
@@ -88,6 +96,6 @@ src_install() {
 	dosym gsi usr/bin/gambit-interpreter
 
 	# automatically load syntx-case for r5rs+ goodness
-	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/$(get_libdir)/\"" > ${D}/etc/env.d/50gambit
-	echo '(load "~~/syntax-case")' > ${D}/usr/$(get_libdir)/gambcext
+	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/\"" > ${D}/etc/env.d/50gambit
+	echo "(load \"/usr/$(get_libdir)/syntax-case\")" > ${D}/usr/gambcext
 }
