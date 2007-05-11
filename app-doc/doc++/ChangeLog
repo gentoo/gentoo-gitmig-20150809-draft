@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.20 2007/03/09 21:04:10 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.21 2007/05/11 18:16:25 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
+  doc++-3.4.10-r1.ebuild:
+  fix whitespace error in ebuild
+  add metadata.xml
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 169429
