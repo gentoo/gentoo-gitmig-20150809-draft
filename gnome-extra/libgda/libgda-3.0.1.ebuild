@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-2.99.6.ebuild,v 1.1 2007/03/26 02:48:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.1.ebuild,v 1.1 2007/05/11 02:20:28 leonardop Exp $
 
 # TODO:
 # * Verify if the parallel compilation problems persist, and if so fix them.
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2.8
 	virtual/fam
 	sys-libs/readline
 	sys-libs/ncurses
-	dev-libs/popt
 	berkdb?   ( sys-libs/db )
 	odbc?     ( >=dev-db/unixODBC-2.0.6 )
 	mysql?    ( virtual/mysql )
@@ -35,7 +34,6 @@ RDEPEND=">=dev-libs/glib-2.8
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.30
-	app-text/scrollkeeper
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
