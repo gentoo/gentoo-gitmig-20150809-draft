@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.51 2007/04/30 22:44:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.52 2007/05/11 03:28:01 kumba Exp $
+
+  11 May 2007; Joshua Kinard <kumba@gentoo.org> sysvinit-2.86-r8.ebuild:
+  Stable on mips.
 
   30 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   sysvinit-2.86-r8.ebuild:
