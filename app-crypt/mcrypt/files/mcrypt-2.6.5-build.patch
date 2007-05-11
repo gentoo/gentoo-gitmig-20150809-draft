@@ -1,0 +1,46 @@
+diff -urNp mcrypt-2.6.5.org/Makefile.am mcrypt-2.6.5/Makefile.am
+--- mcrypt-2.6.5.org/Makefile.am	2003-01-19 20:09:30.000000000 +0200
++++ mcrypt-2.6.5/Makefile.am	2007-05-11 22:52:14.000000000 +0300
+@@ -3,10 +3,10 @@
+ EXTRA_DIST = config.rpath  INSTALL.generic THANKS NEWS
+ SUBDIRS = m4 doc src po
+ install-exec-hook:
+-	-$(RM) -f $(bindir)/mdecrypt
+-	$(LN_S) mcrypt $(bindir)/mdecrypt
++	-$(RM) -f $(DESTDIR)$(bindir)/mdecrypt
++	$(LN_S) mcrypt $(DESTDIR)$(bindir)/mdecrypt
+ uninstall-local:
+-	-$(RM) -f $(bindir)/mdecrypt
++	-$(RM) -f $(DESTDIR)$(bindir)/mdecrypt
+ 
+ ChangeLog:
+ 	cvs2cl --utc --fsf -t -S --prune
+diff -urNp mcrypt-2.6.5.org/Makefile.in mcrypt-2.6.5/Makefile.in
+--- mcrypt-2.6.5.org/Makefile.in	2007-02-19 08:47:03.000000000 +0200
++++ mcrypt-2.6.5/Makefile.in	2007-05-11 22:52:33.000000000 +0300
+@@ -636,10 +636,10 @@ uninstall-info: uninstall-info-recursive
+ 	uninstall uninstall-am uninstall-info-am uninstall-local
+ 
+ install-exec-hook:
+-	-$(RM) -f $(bindir)/mdecrypt
+-	$(LN_S) mcrypt $(bindir)/mdecrypt
++	-$(RM) -f $(DESTDIR)$(bindir)/mdecrypt
++	$(LN_S) mcrypt $(DESTDIR)$(bindir)/mdecrypt
+ uninstall-local:
+-	-$(RM) -f $(bindir)/mdecrypt
++	-$(RM) -f $(DESTDIR)$(bindir)/mdecrypt
+ 
+ ChangeLog:
+ 	cvs2cl --utc --fsf -t -S --prune
+diff -urNp mcrypt-2.6.5.org/po/Makefile.in.in mcrypt-2.6.5/po/Makefile.in.in
+--- mcrypt-2.6.5.org/po/Makefile.in.in	2003-02-21 19:45:55.000000000 +0200
++++ mcrypt-2.6.5/po/Makefile.in.in	2007-05-11 22:50:07.000000000 +0300
+@@ -27,7 +27,7 @@ gettextsrcdir = $(datadir)/gettext/po
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_builddir)/$(MKINSTALLDIRS)" ;; esac`
++mkinstalldirs = $(MKINSTALLDIRS)
+ 
+ GMSGFMT = @GMSGFMT@
+ MSGFMT = @MSGFMT@

@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.5.ebuild,v 1.2 2007/05/01 06:51:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.5.ebuild,v 1.3 2007/05/11 19:52:12 alonbl Exp $
+
+inherit eutils
 
 DESCRIPTION="replacement of the old unix crypt(1)"
 HOMEPAGE="http://mcrypt.sourceforge.net/"
@@ -12,13 +14,12 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND=">=dev-libs/libmcrypt-2.5.8
-	>=app-crypt/mhash-0.8.15"
+	>=app-crypt/mhash-0.9.9"
 
 src_unpack() {
 	unpack ${A}
-	for f in ${S}/Makefile.am ${S}/Makefile.in; do
-		sed -e 's,$(bindir),$(DESTDIR)$(bindir),g' -i ${f} || die 'sed failed'
-	done
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-build.patch"
 }
 
 src_compile() {
