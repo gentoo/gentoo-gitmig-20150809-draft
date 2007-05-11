@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/kylixlibs3-borqt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/ChangeLog,v 1.11 2007/04/28 16:53:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/ChangeLog,v 1.12 2007/05/11 18:28:15 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   kylixlibs3-borqt-3.0-r1.ebuild:

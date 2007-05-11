@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xclass
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.17 2007/03/09 21:04:11 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.18 2007/05/11 18:23:15 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
   05 Mar 2007; Raúl Porcel <armin76@gentoo.org> xclass-0.8.2-r2.ebuild:
   x86 stable wrt bug 169454
