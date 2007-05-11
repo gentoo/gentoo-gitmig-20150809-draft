@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-3.10.ebuild,v 1.2 2007/05/11 21:08:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-3.10.ebuild,v 1.3 2007/05/11 21:32:35 betelgeuse Exp $
 
-inherit multilib
+inherit multilib libtool
 
 DESCRIPTION="Bluetooth Userspace Libraries"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -17,6 +17,7 @@ DEPEND="!net-wireless/bluez-sdp"
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	elibtoolize
 	econf $(use_enable debug) || die "econf failed"
 	if use debug ; then
 		echo "#define SDP_DEBUG 1" >> config.h
