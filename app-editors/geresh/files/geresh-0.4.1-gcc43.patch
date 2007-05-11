@@ -1,0 +1,44 @@
+diff -Naur geresh-0.4.1-orig/dialogline.cc geresh-0.4.1/dialogline.cc
+--- geresh-0.4.1-orig/dialogline.cc	2007-05-11 12:49:55.000000000 -0600
++++ geresh-0.4.1/dialogline.cc	2007-05-11 12:50:56.000000000 -0600
+@@ -16,6 +16,7 @@
+ 
+ #include <config.h>
+ 
++#include <cstdlib>
+ #include <stdarg.h>
+ 
+ #include "dialogline.h"
+diff -Naur geresh-0.4.1-orig/editbox2.cc geresh-0.4.1/editbox2.cc
+--- geresh-0.4.1-orig/editbox2.cc	2007-05-11 12:49:55.000000000 -0600
++++ geresh-0.4.1/editbox2.cc	2007-05-11 12:51:31.000000000 -0600
+@@ -14,6 +14,7 @@
+ // along with this program; if not, write to the Free Software
+ // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA.
+ 
++#include <cstdlib>
+ #include <config.h>
+ 
+ #include "editbox.h"
+diff -Naur geresh-0.4.1-orig/io.cc geresh-0.4.1/io.cc
+--- geresh-0.4.1-orig/io.cc	2007-05-11 12:49:55.000000000 -0600
++++ geresh-0.4.1/io.cc	2007-05-11 12:52:13.000000000 -0600
+@@ -16,6 +16,7 @@
+ 
+ #include <config.h>
+ 
++#include <cstdlib>
+ #include <stdarg.h>
+ #include <fcntl.h>  // file primitives
+ #include <unistd.h>
+diff -Naur geresh-0.4.1-orig/transtbl.cc geresh-0.4.1/transtbl.cc
+--- geresh-0.4.1-orig/transtbl.cc	2007-05-11 12:49:55.000000000 -0600
++++ geresh-0.4.1/transtbl.cc	2007-05-11 12:53:00.000000000 -0600
+@@ -16,6 +16,7 @@
+ 
+ #include <config.h>
+ 
++#include <cstdlib>
+ #include <stdio.h>
+ #include <errno.h>
+ 
