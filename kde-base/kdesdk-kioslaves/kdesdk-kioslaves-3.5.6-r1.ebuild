@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-3.5.6-r1.ebuild,v 1.1 2007/05/09 11:51:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-3.5.6-r1.ebuild,v 1.2 2007/05/11 17:35:59 carlo Exp $
 
 KMNAME=kdesdk
 KMMODULE=kioslave
@@ -14,13 +14,13 @@ IUSE="kdehiddenvisibility"
 DEPEND="dev-util/subversion"
 
 pkg_setup() {
-	if [[ -n "$(svn-config --includes | grep -o /usr/include/apr-0)" ]] \
+	if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-0)" ]] \
 		&& ! has_version =dev-libs/apr-0* ;
 	then
 		eerror "Subversion has been built against =dev-libs/apr-0*, but no matching version is installed."
 		die "Please rebuild dev-util/subversion."
 	fi
-	if [[ -n "$(svn-config --includes | grep -o /usr/include/apr-1)" ]] \
+	if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-1)" ]] \
 		&& ! has_version =dev-libs/apr-1* ;
 	then
 		eerror "Subversion has been built against =dev-libs/apr-1*, but no matching version is installed."
@@ -29,7 +29,7 @@ pkg_setup() {
 }
 
 src_comile() {
-	if [[ -n "$(svn-config --includes | grep -o /usr/include/apr-0)" ]] ; then
+	if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-0)" ]] ; then
 		myconf="--with-apr-config=/usr/bin/apr-config"
 	else
 		myconf="--with-apr-config=/usr/bin/apr-1-config"
