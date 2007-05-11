@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/meatoo-0.1.1.ebuild,v 1.1 2007/04/30 06:36:28 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/meatoo-0.1.1.ebuild,v 1.2 2007/05/11 14:59:50 pythonhead Exp $
 
 inherit distutils
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
 IUSE=""
+DEPEND=">=dev-python/setuptools-0.6_rc3"
 
 
 

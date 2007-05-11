@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/meatoo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/ChangeLog,v 1.2 2007/04/30 06:36:28 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/ChangeLog,v 1.3 2007/05/11 14:59:50 pythonhead Exp $
+
+  11 May 2007; Rob Cakebread <pythonhead@gentoo.org> meatoo-0.1.1.ebuild:
+  Added setuptools dependency.
 
 *meatoo-0.1.1 (30 Apr 2007)
 
