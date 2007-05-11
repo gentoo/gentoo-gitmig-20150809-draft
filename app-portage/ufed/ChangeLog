@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.58 2007/03/24 11:20:36 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.59 2007/05/11 01:49:50 kumba Exp $
+
+  11 May 2007; Joshua Kinard <kumba@gentoo.org> ufed-0.40-r6.ebuild:
+  Stable on mips
 
   06 Jan 2007; Michael Cummings <mcummings@gentoo.org> ufed-0.40-r6.ebuild:
   Bug 159124, amd64 stable
