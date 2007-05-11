@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/monmotha
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/ChangeLog,v 1.8 2007/04/28 16:57:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/ChangeLog,v 1.9 2007/05/11 17:55:41 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml - currently this package is unmaintained
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> monmotha-2.3.8.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)
