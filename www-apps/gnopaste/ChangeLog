@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gnopaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.1 2007/04/24 10:34:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.2 2007/05/11 20:04:43 jurek Exp $
+
+  11 May 2007; Jurek Bartuszek <jurek@gentoo.org> gnopaste-0.5.5.ebuild:
+  Added ~amd64 keyword
 
 *gnopaste-0.5.5 (24 Apr 2007)
 
