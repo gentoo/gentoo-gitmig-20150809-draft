@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.81 2007/05/11 15:59:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.82 2007/05/11 16:22:28 betelgeuse Exp $
+
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  no-nptl/2.4/package.mask:
+  package.mask bluez-gnome for needing bluez-utils-3*
 
   11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
