@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.10.ebuild,v 1.1 2007/05/11 16:02:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.10.ebuild,v 1.2 2007/05/11 18:49:26 betelgeuse Exp $
 
 inherit eutils
 
@@ -90,5 +90,6 @@ pkg_postinst() {
 	elog "Since 3.0 bluez has changed the passkey handling to use a dbus based"
 	elog "API so please remember to update your /etc/bluetooth/hcid.conf."
 	elog "For a password asking program, there is for example"
-	elog "net-wireless/bluez-gnome."
+	elog "net-wireless/bluez-gnome for gnome and net-wireless/kdebluetooth"
+	elog "for kde."
 }

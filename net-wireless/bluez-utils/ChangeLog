@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.86 2007/05/11 16:02:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.87 2007/05/11 18:49:26 betelgeuse Exp $
+
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-utils-3.10.ebuild:
+  Add net-wireless/kdebluetooth as a pin key helper provider to pkg_postinst.
 
 *bluez-utils-3.10 (11 May 2007)
 
