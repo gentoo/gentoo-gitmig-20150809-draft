@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libipod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipod/ChangeLog,v 1.1 2007/03/02 23:13:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipod/ChangeLog,v 1.2 2007/05/11 18:20:57 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
 *libipod-0.1 (02 Mar 2007)
 
