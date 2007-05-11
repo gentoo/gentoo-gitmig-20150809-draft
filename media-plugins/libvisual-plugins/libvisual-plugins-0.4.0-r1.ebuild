@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.8 2007/04/07 11:47:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.9 2007/05/11 18:02:11 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -10,7 +10,8 @@ inherit eutils autotools
 DESCRIPTION="Visualization plugins for use with the libvisual framework."
 HOMEPAGE="http://libvisual.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libvisual/${P}.tar.gz
-	mirror://gentoo/${P}-patches-2.tar.bz2"
+	mirror://gentoo/${P}-patches-2.tar.bz2
+	mirror://gentoo/${P}-m4-1.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0.4"
@@ -49,7 +50,7 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}-gforce.patch"
 	epatch "${WORKDIR}/${P}-automagic.patch"
 	epatch "${WORKDIR}/${P}-gstreamer.patch"
-	eautoreconf
+	AT_M4DIR="${WORKDIR}/m4" eautoreconf
 }
 
 src_compile() {

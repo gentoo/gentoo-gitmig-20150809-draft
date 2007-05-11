@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.33 2007/04/07 11:47:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.34 2007/05/11 18:02:11 aballier Exp $
+
+  11 May 2007; Alexis Ballier <aballier@gentoo.org>
+  libvisual-plugins-0.4.0-r1.ebuild:
+  Add alsa.m4 so that autotools do not fail when alsa is not present, bug #177328
 
   07 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   libvisual-plugins-0.4.0-r1.ebuild:
