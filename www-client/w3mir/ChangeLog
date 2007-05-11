@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mir
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.12 2007/02/22 00:25:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.13 2007/05/11 18:24:00 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/netrik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.3 2007/02/04 02:01:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.4 2007/05/11 18:26:28 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
