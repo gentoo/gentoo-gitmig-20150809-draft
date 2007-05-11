@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20070508.ebuild,v 1.1 2007/05/08 11:59:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20070508.ebuild,v 1.2 2007/05/11 11:06:18 calchan Exp $
 
 DESCRIPTION="Printer information files for foomatic-db-engine to generate ppds"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
-SRC_URI="http://gentooexperimental.org/~genstef/dist/${PN}-3.0-${PV}.tar.gz
+SRC_URI="http://gentooexperimental.org/~calchan/distfiles/${PN}-3.0-${PV}.tar.gz
 	http://linuxprinting.org/download/foomatic/${PN}-3.0-${PV}.tar.gz"
 
 LICENSE="GPL-2"
