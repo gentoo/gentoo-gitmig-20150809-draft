@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.7 2007/03/28 20:32:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.8 2007/05/11 21:06:27 gustavoz Exp $
+
+  11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libopensync-0.22.ebuild:
+  Keyworded ~sparc wrt #178071
 
   28 Mar 2007; Piotr Jaroszyński <peper@gentoo.org>
   +libopensync-0.20.ebuild:
