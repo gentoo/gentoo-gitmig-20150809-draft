@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.85 2007/04/30 13:43:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.86 2007/05/11 13:31:28 markusle Exp $
+
+  11 May 2007; Markus Dittrich <markusle@gentoo.org> R-2.5.0.ebuild:
+  Added gd useflag to allow users to install the GDD module (this
+  fixes bug #177846). Thanks much to Neil <nshephard@gmail.com>
+  for bringing this to our attention.
 
   30 Apr 2007; Markus Dittrich <markusle@gentoo.org> R-2.5.0.ebuild:
   Fixed improper path in Rscript (closes bug #176546).
