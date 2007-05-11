@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-2.99.6.ebuild,v 1.1 2007/03/26 02:52:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.1 2007/05/11 02:24:01 leonardop Exp $
 
 inherit gnome2
 
@@ -20,7 +20,7 @@ IUSE="doc"
 # There is no evolution-data-server support yet, only a check in configure.
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/gconf-2
-	>=gnome-extra/libgda-2.99.5
+	>=gnome-extra/libgda-3
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libglade-2
 	>=x11-libs/gtksourceview-1"
@@ -31,4 +31,4 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-DOCS="AUTHORS ChangeLog NEWS"
+DOCS="AUTHORS ChangeLog NEWS README"
