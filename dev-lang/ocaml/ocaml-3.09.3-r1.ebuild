@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.3 2007/05/11 19:12:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.4 2007/05/11 19:42:00 aballier Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -15,8 +15,7 @@ IUSE="tk latex"
 
 DEPEND="tk? ( >=dev-lang/tk-3.3.3 )"
 
-# ocaml deletes the *.opt files when running bootstrap
-RESTRICT="test"
+# ocaml deletes the *.opt files when running make bootstrap
 
 QA_EXECSTACK="/usr/lib/ocaml/compiler-*"
 
@@ -80,10 +79,6 @@ src_compile() {
 		make opt.opt || die "make opt.opt failed!"
 	fi
 }
-
-#src_test() {
-#	make bootstrap
-#}
 
 src_install() {
 	make BINDIR="${D}"/usr/bin \
