@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.128 2007/04/29 18:17:39 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.129 2007/05/11 18:25:29 kloeri Exp $
+
+  11 May 2007; Bryan Østergaard <kloeri@gentoo.org> -zope-2.6.4-r1.ebuild:
+  Masked for a year and finally going away due to <python-2.3 being removed.
 
   29 Apr 2007; Radoslaw Stachowiak <radek@gentoo.org> -zope-2.7.7.ebuild,
   -zope-2.7.8.ebuild, -zope-2.9.4.ebuild, -zope-2.9.5.ebuild,
