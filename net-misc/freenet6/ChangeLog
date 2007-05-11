@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.18 2007/04/28 16:53:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.19 2007/05/11 03:29:24 jer Exp $
+
+  11 May 2007; Jeroen Roovers <jer@gentoo.org> freenet6-4.2.2.ebuild:
+  Marked ~hppa (bug #174840).
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> freenet6-1.0.0.ebuild,
   freenet6-4.2.2.ebuild:
