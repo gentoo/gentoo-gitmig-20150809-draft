@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/pscan-20000721.ebuild,v 1.6 2005/08/12 20:33:44 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/pscan-20000721.ebuild,v 1.7 2007/05/11 09:05:05 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -13,6 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
+
+# Does NOT contain a testsuite, but does contain a test.c that confuses src_test
+RESTRICT="test"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}

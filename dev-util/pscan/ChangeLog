@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pscan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.10 2007/04/09 16:38:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.11 2007/05/11 09:05:05 robbat2 Exp $
+
+  11 May 2007; Robin H. Johnson <robbat2@gentoo.org> pscan-20000721.ebuild,
+  pscan-20000721-r1.ebuild:
+  Block src_test due to weirdness.
 
   09 Apr 2007; nixnut <nixnut@gentoo.org> pscan-20000721-r1.ebuild:
   Stable on ppc wrt bug 173852
