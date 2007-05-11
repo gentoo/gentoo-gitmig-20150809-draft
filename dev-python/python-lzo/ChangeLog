@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-lzo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/ChangeLog,v 1.1 2007/04/14 01:27:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/ChangeLog,v 1.2 2007/05/11 01:16:35 bangert Exp $
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix spelling of herd in metadata
 
 *python-lzo-1.08 (14 Apr 2007)
 
