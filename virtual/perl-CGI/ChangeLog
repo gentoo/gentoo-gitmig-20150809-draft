@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.34 2007/05/07 08:19:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.35 2007/05/11 05:16:59 kumba Exp $
+
+  11 May 2007; Joshua Kinard <kumba@gentoo.org> perl-CGI-3.27.ebuild:
+  Stable on mips.
 
   07 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   perl-CGI-3.27.ebuild:
