@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.1 2007/05/11 16:27:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.2 2007/05/11 19:11:59 betelgeuse Exp $
+
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/0.6-linking-order.patch, bluez-gnome-0.6.ebuild:
+  Add patch for -Wl,--as-needed and remove dependency on gnome-base/orbit as
+  it is only needed via gconf.
 
 *bluez-gnome-0.6 (11 May 2007)
 
