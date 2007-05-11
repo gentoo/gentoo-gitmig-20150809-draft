@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7249 2007/05/11 15:52:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7250 2007/05/11 20:17:17 kloeri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1155,14 +1155,6 @@ media-gfx/xzgv
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/sid-milter
-
-# Alastair Tse <liquidx@gentoo.org> (15 Jul 2006)
-# Python 2.1 and 2.2 have reported vunerabilities. Masked pending
-# removal, along with net-zope/zope-2.6. (GLSA: 200509-08, 200502-09,
-# 200510-20)
-<dev-lang/python-2.3
-=net-zope/zope-2.6*
-mail-client/mahogany
 
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
