@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.77 2007/02/13 12:54:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.78 2007/05/11 16:01:11 betelgeuse Exp $
+
+*bluez-libs-3.10 (11 May 2007)
+
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  +bluez-libs-3.10.ebuild:
+  Version bump for bug #143154. Thanks to everyone contributing. Take
+  maintainership.
 
   13 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org> bluez-libs-2.25.ebuild:
   Stable on amd64.
