@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.77 2007/05/09 21:14:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.78 2007/05/11 08:25:11 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -675,6 +675,7 @@ mysql_src_install() {
 
 	# Docs
 	dodoc README COPYING ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
+	doinfo ${S}/Docs/mysql.info
 
 	# Minimal builds don't have the MySQL server
 	if ! use minimal ; then
@@ -691,6 +692,7 @@ mysql_src_install() {
 		for script in scripts/mysql* ; do
 			[[ "${script%.sh}" == "${script}" ]] && dodoc "${script}"
 		done
+
 	fi
 
 	mysql_lib_symlinks "${D}"
