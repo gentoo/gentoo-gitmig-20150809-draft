@@ -1,6 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.81 2007/05/06 21:12:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.82 2007/05/11 15:59:24 betelgeuse Exp $
+
+# Petteri Räty <betelgeuse@gentoo.org (11 May 2007)
+# Needs sys-fs/udev
+>=net-wireless/bluez-libs-3
+>=net-wireless/bluez-utils-3
 
 # Andrej Kacian <ticho@gentoo.org> (6 May 2007)
 # Requires xen, which is already masked (bug 177286)

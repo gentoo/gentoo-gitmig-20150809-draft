@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.80 2007/05/07 20:12:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.81 2007/05/11 15:59:24 betelgeuse Exp $
+
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Package.mask bluez >=3.0 on 2.4 kernel because it requires udev.
 
   07 May 2007; Chris Gianelloni <wolf31o2@gentoo.org> +2006.0/deprecated:
   Added deprecation notice to x86's 2006.0 profile.
