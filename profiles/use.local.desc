@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2800 2007/05/10 13:58:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2801 2007/05/11 13:08:15 hkbst Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -554,7 +554,7 @@ dev-ruby/sqlite3-ruby:swig - Use swig to generate binding
 dev-scheme/drscheme:3m - compile drscheme3m binary that uses the 3m GC instead of the Bohem GC
 dev-scheme/drscheme:backtrace - support GC backtrace dumps
 dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
-dev-scheme/gambit:gcc-opts - use expensive GCC optimizations
+dev-scheme/gambit:big-iron - use expensive GCC optimizations and compile syntax-case macro system, try only if you have more than 2GB RAM
 dev-scheme/gauche-gl:cg - enable NVidia Cg binding
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-scheme/guile:debug-freelist - include garbage collector freelist debugging code
