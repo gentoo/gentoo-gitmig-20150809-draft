@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.35 2007/05/10 15:02:01 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.36 2007/05/12 04:59:41 chtekk Exp $
 
 # ========================================================================
 #
@@ -297,7 +297,7 @@ php5_0-sapi_src_unpack() {
 	sed -e 's/'`echo "\!getenv('NO_INTERACTION')"`'/false/g' -i run-tests.php
 
 	# Stop PHP from activating the Apache config, as we will do that ourselves
-	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
+	for i in configure sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
 		sed -i.orig -e 's,-i -a -n php5,-i -n php5,g' ${i}
 		sed -i.orig -e 's,-i -A -n php5,-i -n php5,g' ${i}
 	done
