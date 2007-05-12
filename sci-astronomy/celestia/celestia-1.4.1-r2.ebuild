@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.6 2007/03/26 09:25:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.7 2007/05/12 09:52:06 beandog Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="cairo gnome gtk kde arts threads nls lua"
 
 DEPEND="virtual/glu
