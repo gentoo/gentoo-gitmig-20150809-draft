@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/amrwb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/ChangeLog,v 1.1 2007/05/12 16:52:52 beandog Exp $
+
+*amrwb-7.0.0.0 (12 May 2007)
+*amrwb-6.0.0.1 (12 May 2007)
+
+  12 May 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +amrwb-6.0.0.1.ebuild, +amrwb-7.0.0.0.ebuild:
+  Initial commit
+
