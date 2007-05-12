@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.4 2007/05/01 17:35:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.5 2007/05/12 03:13:37 chtekk Exp $
 
 inherit eutils webapp eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 #SLOT empty due to webapp
-IUSE="samba mysql apache2 http"
+IUSE="samba mysql http"
 
 DEPEND="dev-lang/perl
 	dev-perl/Net-Pcap
@@ -28,7 +28,7 @@ DEPEND="dev-lang/perl
 	dev-perl/Unix-Syslog
 	mysql? ( virtual/mysql dev-perl/DBD-mysql )
 	samba? ( net-fs/samba )
-	http? ( apache2? ( =net-www/apache-2* ) !apache2? ( =net-www/apache-1* ) )"
+	http? ( =net-www/apache-2* )"
 
 RESTRICT="nomirror"
 
