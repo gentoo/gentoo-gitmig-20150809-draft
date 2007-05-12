@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.5.ebuild,v 1.2 2007/05/01 11:53:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.5.ebuild,v 1.3 2007/05/12 04:50:56 chtekk Exp $
 
 inherit webapp eutils
 
-IUSE="mysql postgres fastcgi apache2 ldap gd pdf"
+IUSE="mysql postgres fastcgi ldap gd pdf"
 
 DESCRIPTION="OTRS is an Open source Ticket Request System"
 HOMEPAGE="http://otrs.org/"
@@ -35,12 +35,9 @@ RDEPEND="
 	ldap? ( dev-perl/perl-ldap net-nds/openldap )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	apache2? ( >=net-www/apache-2
-		fastcgi? ( dev-perl/FCGI )
-		!fastcgi? ( =www-misc/libapreq2-2* ) )
-	!apache2? ( =net-www/apache-1*
-		fastcgi? ( dev-perl/FCGI )
-		!fastcgi? ( =www-misc/libapreq-1* ) )
+	>=net-www/apache-2
+	fastcgi? ( dev-perl/FCGI )
+	!fastcgi? ( =www-misc/libapreq2-2* )
 	gd? ( dev-perl/GD dev-perl/GDTextUtil dev-perl/GDGraph )
 "
 
@@ -66,14 +63,8 @@ src_unpack() {
 	rm -rf auto_* redhat* suse*
 
 	if use fastcgi; then
-		if ! use apache2; then
-			epatch ${FILESDIR}/apache1.patch
-			sed -e "s|cgi-bin|fcgi-bin|" -i ${S}/scripts/apache-httpd.include.conf
-		fi
-		if use apache2; then
-			epatch ${FILESDIR}/apache2.patch
-			sed -e "s|cgi-bin|fcgi-bin|" -i ${S}/scripts/apache2-httpd.include.conf
-		fi
+		epatch ${FILESDIR}/apache2.patch
+		sed -e "s|cgi-bin|fcgi-bin|" -i ${S}/scripts/apache2-httpd.include.conf
 		sed -e "s|index.pl|index.fpl|" -i ${S}/var/httpd/htdocs/index.html
 	fi
 }
