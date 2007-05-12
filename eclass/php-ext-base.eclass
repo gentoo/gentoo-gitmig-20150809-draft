@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.20 2007/05/12 02:54:35 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -44,7 +44,7 @@ php-ext-base_buildinilist () {
 	# work out the list of .ini files to edit/add to
 
 	if [ -z "${PHPSAPILIST}" ]; then
-		PHPSAPILIST="apache1 apache2 cli cgi"
+		PHPSAPILIST="apache2 cli cgi"
 	fi
 
 	PHPINIFILELIST=
