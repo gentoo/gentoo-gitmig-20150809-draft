@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.95 2007/05/12 16:44:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.96 2007/05/12 18:00:06 pva Exp $
+
+  12 May 2007; <pva@gentoo.org> ChangeLog:
+  I was too fast in my previous bump. cacti works with snmp utilities fine
+  too. No need in snmp support in php.
 
   12 May 2007; <pva@gentoo.org> cacti-0.8.6j-r4.ebuild:
   php should be compiled with snmp for cacti.
