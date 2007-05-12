@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.3.1-r1.ebuild,v 1.2 2007/04/22 10:19:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.3.1-r1.ebuild,v 1.3 2007/05/12 04:01:57 chtekk Exp $
 
 inherit eutils apache-module toolchain-funcs gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="noweb perl debug apache2"
+IUSE="noweb perl debug"
 # mysql postgres
 DEPEND="virtual/mailx
 	!noweb? (
@@ -142,13 +142,9 @@ src_install() {
 
 	# Apache Module
 	if use !noweb; then
-		if use apache2; then
-			insinto ${APACHE2_MODULES_CONFDIR}
-			doins ${FILESDIR}/99_nagios.conf
-		else
-			insinto ${APACHE1_MODULES_CONFDIR}
-			doins ${FILESDIR}/nagios.conf
-		fi
+		insinto ${APACHE2_MODULES_CONFDIR}
+		doins ${FILESDIR}/99_nagios.conf
+
 		if use perl; then
 			into /usr/nagios ; dosbin contrib/traceroute.cgi
 		fi
@@ -189,11 +185,7 @@ pkg_postinst() {
 		einfo "To have ministatus.cgi requires copying of ministatus.c"
 		einfo "to cgi directory for compiling."
 
-		if use apache2; then
-			einfo " Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
-		else
-			einfo " Edit /etc/conf.d/apache and add \"-D NAGIOS\""
-		fi
+		einfo " Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 
 		einfo
 		einfo "That will make nagios's web front end visable via"
