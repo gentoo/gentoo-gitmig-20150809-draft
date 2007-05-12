@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r12.ebuild,v 1.12 2007/05/11 04:25:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r12.ebuild,v 1.13 2007/05/12 09:57:44 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -26,7 +26,6 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
-	#epatch ${FILESDIR}/${P}-udev_volume_id.patch
 	epatch ${FILESDIR}/${P}-netif-rename-busywait.patch
 	epatch ${FILESDIR}/${PN}-104-peristent-net-disable-xen.patch
 	epatch ${FILESDIR}/${PN}-104-persistent-net-fix-name-dups.patch

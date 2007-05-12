@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-111.ebuild,v 1.1 2007/05/10 20:35:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-111.ebuild,v 1.2 2007/05/12 09:57:44 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -26,7 +26,6 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
-	#epatch ${FILESDIR}/${P}-udev_volume_id.patch
 	epatch ${FILESDIR}/${PN}-104-peristent-net-disable-xen.patch
 	EPATCH_OPTS="-p1" epatch ${FILESDIR}/${PN}-110-root-link-1.diff
 
