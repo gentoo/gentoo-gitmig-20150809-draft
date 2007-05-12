@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/x11perf-1.4.1.ebuild,v 1.5 2007/05/08 17:42:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/x11perf-1.4.1.ebuild,v 1.6 2007/05/12 08:57:05 beandog Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="summarize x11perf results"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~s390 sparc x86"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}"
