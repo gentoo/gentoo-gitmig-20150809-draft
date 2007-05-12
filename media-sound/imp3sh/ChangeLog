@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/imp3sh
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.11 2007/02/22 01:04:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.12 2007/05/12 18:31:24 beandog Exp $
+
+*imp3sh-0.2.4 (12 May 2007)
+
+  12 May 2007; Steve Dibb <beandog@gentoo.org> +imp3sh-0.2.4.ebuild:
+  Version bump, bug 107832
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
