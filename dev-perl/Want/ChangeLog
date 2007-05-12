@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.23 2007/03/05 12:38:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.24 2007/05/12 15:12:40 mcummings Exp $
+
+*Want-0.14 (12 May 2007)
+
+  12 May 2007; Michael Cummings <mcummings@gentoo.org> +Want-0.14.ebuild:
+  Version bump
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Want-0.12.ebuild:
   Stable on x86, bug #169152.
