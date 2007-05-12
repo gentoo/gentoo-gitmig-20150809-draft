@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.15 2007/01/20 15:12:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.16 2007/05/12 04:44:46 chtekk Exp $
 
 inherit webapp eutils
 
-IUSE="mysql postgres fastcgi apache2 lighttpd"
+IUSE="mysql postgres fastcgi lighttpd"
 
 DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
@@ -32,13 +32,10 @@ DEPEND="
 
 	!lighttpd? (
 		>=dev-perl/Apache-DBI-0.92
-		apache2? (
-			!fastcgi? ( >=www-misc/libapreq2-2.06
-						>=dev-perl/HTML-Mason-1.31 )
-			fastcgi? ( dev-perl/FCGI ) )
-		!apache2? (
-			fastcgi? ( dev-perl/FCGI )
-			!fastcgi? ( =www-misc/libapreq-1* ) ) )
+		!fastcgi? ( >=www-misc/libapreq2-2.06
+					>=dev-perl/HTML-Mason-1.31 )
+		fastcgi? ( dev-perl/FCGI )
+	)
 	lighttpd? ( dev-perl/FCGI )
 
 	mysql? ( >=dev-perl/DBD-mysql-2.1018 )
@@ -82,9 +79,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	virtual/mta
-	!lighttpd? (
-		apache2? ( >=net-www/apache-2
-		!apache2? ( =net-www/apache-1* ) ) )
+	!lighttpd? ( >=net-www/apache-2 )
 	lighttpd? ( >=www-servers/lighttpd-1.3.13 )
 "
 
@@ -197,9 +192,8 @@ src_compile() {
 		$(use_with postgres pg) \
 		$(use_with fastcgi) \
 		$(use_with lighttpd fastcgi)"
-	if ! useq fastcgi && ! useq lighttpd; then
-		myconf="${myconf} $(use_with apache2 modperl2)"
-		! useq apache2 && myconf="${myconf} --with-modperl1"
+	if ! useq fastcgi && ! useq lighttpd ; then
+		myconf="${myconf} --with-modperl2"
 	fi
 
 	/usr/bin/perl ./sbin/rt-test-dependencies ${myconf} > ${T}/t
@@ -232,11 +226,7 @@ src_install() {
 		newinitd ${FILESDIR}/${PN}.init.d ${PN}
 		newconfd ${FILESDIR}/${PN}.conf.d ${PN}
 	else
-		if useq apache2; then
-			local CONF="rt_apache2_fcgi.conf rt_apache2.conf"
-		else
-			local CONF="rt_apache1_fcgi.conf rt_apache.conf"
-		fi
+		local CONF="rt_apache2_fcgi.conf rt_apache2.conf"
 		cd ${FILESDIR} && cp ${CONF} ${D}/${MY_HOSTROOTDIR}/${PF}/etc
 	fi
 	webapp_postinst_txt en ${FILESDIR}/${PV}/postinstall-en.txt
