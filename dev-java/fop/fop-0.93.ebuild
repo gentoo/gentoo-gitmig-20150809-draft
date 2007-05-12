@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93.ebuild,v 1.4 2007/05/08 14:34:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93.ebuild,v 1.5 2007/05/12 14:02:42 corsair Exp $
 
 # TODO: hyphenation support doesn't seem to be built correctly, because there's no xml in hyph dir
 #		but upstream binary distro contains only fop.jar, no hyph nor sandbox
@@ -19,7 +19,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 # doesn't work with java.awt.headless
 RESTRICT="test"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86"
 IUSE="jai jimi"
 
 COMMON_DEPEND="

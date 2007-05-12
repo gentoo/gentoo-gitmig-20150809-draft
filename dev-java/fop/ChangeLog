@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.43 2007/05/08 14:34:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.44 2007/05/12 14:02:42 corsair Exp $
+
+  12 May 2007; Markus Rothe <corsair@gentoo.org> fop-0.93.ebuild:
+  Added ~ppc64; bug #177466
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> fop-0.93.ebuild:
   Add ~ia64 wrt #177466

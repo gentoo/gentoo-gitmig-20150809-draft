@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.59 2007/05/08 14:20:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.60 2007/05/12 13:59:02 corsair Exp $
+
+  12 May 2007; Markus Rothe <corsair@gentoo.org> servletapi-2.2-r3.ebuild:
+  Added ~ppc64; bug #177466
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> servletapi-2.2-r3.ebuild:
   Add ~ia64 wrt #177466
