@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.18 2007/05/01 15:22:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.19 2007/05/12 11:07:42 ali_bush Exp $
+
+*jgraph-5.10.1.0 (12 May 2007)
+
+  12 May 2007; Alistair John Bush <ali_bush@gentoo.org>
+  +jgraph-5.10.1.0.ebuild:
+  Version bump
 
   01 May 2007; Petteri Räty <betelgeuse@gentoo.org> -jgraph-3.2.ebuild:
   Time for generation 1 ebuild to go.
