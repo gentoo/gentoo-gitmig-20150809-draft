@@ -1,12 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2.ebuild,v 1.6 2007/05/12 11:24:49 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2-r1.ebuild,v 1.1 2007/05/12 11:24:49 rbu Exp $
+
+inherit eutils
 
 DESCRIPTION="lcd-stuff is a client for lcdproc that displays RSS, Weather, MPD and new mail."
 HOMEPAGE="http://lcd-stuff.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2" # and GPL-2 only
 
@@ -22,6 +24,13 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 IUSE="imap mpd mp3 xml rss"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-mpd.patch"
+}
 
 src_compile() {
 	local XMLRSSLIB="$(use_enable rss mrss)"

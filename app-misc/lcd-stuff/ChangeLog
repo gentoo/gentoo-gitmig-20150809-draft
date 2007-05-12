@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lcd-stuff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.6 2007/05/08 21:32:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.7 2007/05/12 11:24:49 rbu Exp $
+
+*lcd-stuff-0.1.2-r1 (12 May 2007)
+
+  12 May 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/lcd-stuff-0.1.2-mpd.patch, +files/lcd-stuff-0.1.2-r1.initd,
+  +files/lcd-stuff-0.1.2.initd, -files/lcd-stuff.initd,
+  lcd-stuff-0.1.2.ebuild, +lcd-stuff-0.1.2-r1.ebuild:
+  Revision bump fixing the libmpd issue (thanks ticho and tove, bug #177587)
+  and init-script/pid (bug #177184)
 
   08 May 2007; Markus Ullmann <jokey@gentoo.org> lcd-stuff-0.1.2.ebuild:
   Stable wrt bug #177184
