@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.134 2007/05/09 22:39:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.135 2007/05/12 11:58:38 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/digest-freetype-2.3.4:
+  Regen digest to remove unused entry.
 
 *freetype-2.3.4-r1 (09 May 2007)
 
