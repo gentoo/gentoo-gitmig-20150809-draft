@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r4,v 1.1 2006/10/22 18:05:21 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r4,v 1.2 2007/05/12 23:19:40 uberlord Exp $
 
 opts="start stop reload restart"
 
@@ -38,7 +38,7 @@ start() {
 	checkconfig || return 1
 	start-stop-daemon --start --quiet --pidfile ${PIDFILE} \
 		--exec /usr/sbin/named \
-		-- -u named -n ${CPU} ${OPTIONS} ${CHROOT:+-t $CHROOT}
+		-- -u named -n ${CPU} ${OPTIONS} ${CHROOT:+-t} ${CHROOT}
 	eend $?
 }
 
