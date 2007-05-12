@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-	<herd>kernel</herd>
+	<herd>kernel-misc</herd>
 	<maintainer>
 		<email>phreak@gentoo.org</email>
 		<name>Christian Heim</name>
