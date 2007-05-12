@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.30 2007/05/12 02:28:51 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.31 2007/05/12 03:47:35 chtekk Exp $
 
 inherit multilib
 
@@ -103,7 +103,7 @@ APACHE2_2_DEPEND="=net-www/apache-2.2*"
 ## If you change this, please check the DEPENDS in need_apache()
 ####
 
-NEED_APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
+NEED_APACHE_DEPEND="${APACHE2_DEPEND}"
 WANT_APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} )"
 
 ####
@@ -221,22 +221,18 @@ need_apache2_2() {
 ##
 ## If no arguments are specified, then all versions are assumed to be supported
 ##
-## If both 1.3 and 2.x are specified, the apache2 USE-flag will be used in
-## DEPEND/RDEPEND to determine which version to use.
-##
-## Currently supported versions: 1.3 2.0 2.2 2.x
+## Currently supported versions: 2.0 2.2 2.x
+####
 need_apache() {
 	debug-print-function $FUNCNAME $*
 
-	local supports13 supports20 supports22 supports2x
+	local supports20 supports22 supports2x
 
 	if [[ $# -eq 0 ]] ; then
-		supports13="yes"
 		supports2x="yes"
 	else
 		while [[ $# -gt 0 ]] ; do
 			case "$1" in
-				1.3) supports13="yes"; shift;;
 				2.0) supports20="yes"; shift;;
 				2.2) supports22="yes"; shift;;
 				2.x) supports2x="yes"; shift;;
@@ -249,44 +245,16 @@ need_apache() {
 		supports2x="yes";
 	fi
 
-	debug-print "supports13: ${supports13}"
 	debug-print "supports20: ${supports20}"
 	debug-print "supports22: ${supports22}"
 	debug-print "supports2x: ${supports2x}"
 
-	if [[ "${supports13}" != "yes" ]] ; then
-		if [[ "${supports2x}" == "yes" ]] ; then
-			need_apache2
-		elif [[ "${supports20}" == "yes" ]] ; then
-			need_apache2_0
-		elif [[ "${supports22}" == "yes" ]] ; then
-			need_apache2_2
-		fi
-	elif [[ "${supports13}" == "yes" ]] ; then
-		if [[ "${supports2x}" == "yes" || "${supports20}" == "yes" || "${supports22}" == "yes" ]] ; then
-			# We support both apache-1.3 and apache-2.*, set up USE-flag based
-			# DEPEND and RDEPEND, determined by which apache-2.x we support
-			IUSE="${IUSE} apache2"
-
-			if [[ "${supports2x}" != "yes" ]] ; then
-				if [[ "${supports20}" == "yes" ]] ; then
-					NEED_APACHE_DEPEND="apache2? ( ${APACHE2_0_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
-				elif [[ "${supports22}" == "yes" ]] ; then
-					NEED_APACHE_DEPEND="apache2? ( ${APACHE2_2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
-				fi
-			fi
-
-			DEPEND="${DEPEND} ${NEED_APACHE_DEPEND}"
-			RDEPEND="${RDEPEND} ${NEED_APACHE_DEPEND}"
-
-			if use apache2 ; then
-				uses_apache2
-			else
-				uses_apache1
-			fi
-		else
-			need_apache1
-		fi
+	if [[ "${supports2x}" == "yes" ]] ; then
+		need_apache2
+	elif [[ "${supports20}" == "yes" ]] ; then
+		need_apache2_0
+	elif [[ "${supports22}" == "yes" ]] ; then
+		need_apache2_2
 	fi
 }
 
