@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.66.ebuild,v 1.2 2007/05/12 15:12:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.4.ebuild,v 1.1 2007/05/12 15:12:23 pylon Exp $
 
 inherit eutils gnome2
 
@@ -9,9 +9,9 @@ HOMEPAGE="http://dvdisaster.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE_LINGUAS="linguas_cs linguas_de linguas_it"
+IUSE_LINGUAS="linguas_cs linguas_de linguas_it linguas_sv"
 IUSE="${IUSE_LINGUAS} gnome nls"
 
 DEPEND=">=x11-libs/gtk+-2.2
@@ -20,14 +20,10 @@ DEPEND=">=x11-libs/gtk+-2.2
 RDEPEND=">=x11-libs/gtk+-2.2
 	nls? ( virtual/libintl )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# This patch lets dvdisaster work with DVD-ROM booktype discs
-	epatch ${FILESDIR}/dvd-rom-${PV}.patch || die "patch failed"
-}
+S=${WORKDIR}/${P/.1/}
 
 src_compile() {
+	cd ${S}
 	local myconf
 	# use_with won't work
 	if use nls ; then
@@ -36,8 +32,11 @@ src_compile() {
 		myconf="${myconf} --with-nls=no"
 	fi
 	use debug && myconf="${myconf} --debug --with-memdebug=yes"
-	econf ${myconf} --docdir=/usr/share/doc || die "econf failed"
-	emake || die "emake failed"
+	econf ${myconf} \
+		--docdir=/usr/share/doc \
+		--docsubdir=${PF} \
+		|| die "econf failed"
+	make || die "make failed"
 }
 
 src_install() {
@@ -65,7 +64,7 @@ src_install() {
 
 	# no sane way to disable unwanted LINGUAS at compile time
 	# there are no Italian docs, only manpage and localization for now
-	for lang in cs de it ; do
+	for lang in cs de it sv ; do
 		use linguas_${lang} || rm -rf ${docdir}/${lang} ${mandir}/${lang} ${localedir}/${lang}
 		use linguas_${lang} || rm -f ${docdir}/CREDITS.${lang}
 	done
