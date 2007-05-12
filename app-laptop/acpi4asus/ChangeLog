@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/acpi4asus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.14 2007/04/07 13:26:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.15 2007/05/12 22:29:25 genstef Exp $
+
+*acpi4asus-0.41 (12 May 2007)
+
+  12 May 2007; Stefan Schweizer <genstef@gentoo.org> +files/cvs.patch,
+  +acpi4asus-0.41.ebuild:
+  Fix for kernel 2.6.21 thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> in bug 177956
 
   22 Mar 2007; Stefan Schweizer <genstef@gentoo.org> +acpi4asus-0.40-r1.ebuild:
   change emake command thanks CHARY Corentin <corentincj@iksaif.net> in bug
