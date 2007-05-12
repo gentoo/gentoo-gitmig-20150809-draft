@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.23 2007/05/12 03:02:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.24 2007/05/12 14:30:48 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org>
+  pecl-apc-3.0.12_p2.ebuild, pecl-apc-3.0.13.ebuild:
+  Fix require_php_sapi_from usage wrt apache1.
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org>
   pecl-apc-3.0.12_p2.ebuild, pecl-apc-3.0.13.ebuild:

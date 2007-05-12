@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.6 2007/05/12 03:00:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.7 2007/05/12 14:31:59 chtekk Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -26,7 +26,7 @@ need_php_by_category
 
 pkg_setup() {
 	has_php
-	require_php_sapi_from cgi apache apache2
+	require_php_sapi_from cgi apache2
 }
 
 src_compile() {

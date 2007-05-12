@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.15 2007/03/06 15:21:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.16 2007/05/12 14:28:32 chtekk Exp $
+
+*eaccelerator-0.9.5.1 (12 May 2007)
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org>
+  -eaccelerator-0.9.5.ebuild, +eaccelerator-0.9.5.1.ebuild:
+  Fix bug #170023.
+  Fix require_php_sapi_from usage wrt apache1.
 
   06 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
   eaccelerator-0.9.5.ebuild:
