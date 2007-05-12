@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.9 2007/03/08 19:13:19 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.10 2007/05/12 03:02:32 chtekk Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -41,7 +41,6 @@ src_compile() {
 	my_conf="--enable-apc"
 	enable_extension_enable "apc-mmap" "mmap" 0
 	enable_extension_with_built_with =${PHP_PKG} apache2 apxs /usr/sbin/apxs2 "optimisation for apache2"
-	enable_extension_with_built_with =${PHP_PKG} apache apxs /usr/sbin/apxs "optimisation for apache1"
 
 	php-ext-pecl-r1_src_compile
 }
