@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.1.ebuild,v 1.1 2007/04/21 11:50:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.1.ebuild,v 1.2 2007/05/12 15:37:37 pylon Exp $
 
 inherit eutils games
 
@@ -17,12 +17,14 @@ SRC_URI="${SB}/${P}-source.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
-IUSE="alsa debug dedicated png scenarios timidity unicode zlib"
+IUSE="alsa debug dedicated iconv png scenarios timidity zlib"
 
-DEPEND="!dedicated? ( media-libs/libsdl >=media-libs/fontconfig-2.3.2 )
+DEPEND="!dedicated? ( media-libs/libsdl
+		media-libs/fontconfig
+	)
+	iconv? ( virtual/libiconv )
 	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )
-	unicode? ( virtual/libiconv )"
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	!dedicated? (
 		timidity? ( media-sound/timidity++ )
@@ -56,23 +58,21 @@ src_compile() {
 	local myopts=""
 	use debug && myopts="${myopts} DEBUG=1"
 	use dedicated && myopts="${myopts} DEDICATED=1"
+	use iconv && myopts="${myopts} WITH_ICONV=1"
 	use png && myopts="${myopts} WITH_PNG=1"
 	use zlib && myopts="${myopts} WITH_ZLIB=1"
-	use unicode && myopts="${myopts} WITH_ICONV=1"
 	if ! use dedicated ; then
-		myopts="${myopts} WITH_SDL=1"
+		myopts="${myopts} WITH_SDL=1 WITH_FREETYPE=1 WITH_FONTCONFIG=1"
 		if ! use timidity; then
 			use alsa && myopts="${myopts} MIDI=/usr/bin/aplaymidi"
 		fi
 	fi
 
-	# parallel build not supported
-	emake -j1 \
+	emake \
 		MANUAL_CONFIG=1 \
 		UNIX=1 \
 		WITH_NETWORK=1 \
 		INSTALL=1 \
-		RELEASE=${PV} \
 		USE_HOMEDIR=1 \
 		DEST_DIR=${D} \
 		PERSONAL_DIR=.openttd \
@@ -116,7 +116,7 @@ src_install() {
 		newinitd "${FILESDIR}"/openttd.initd openttd
 	fi
 
-	dodoc readme.txt known-bugs.txt changelog.txt docs/Manual.txt docs/console.txt docs/multiplayer.txt
+	dodoc readme.txt known-bugs.txt changelog.txt docs/Manual.txt docs/multiplayer.txt
 	dohtml -a html,gif,png,svg docs/*
 	newdoc scripts/readme.txt readme_scripts.txt
 	doman docs/openttd.6
