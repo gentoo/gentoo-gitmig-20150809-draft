@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.45 2007/05/04 20:49:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.46 2007/05/12 19:28:33 nixnut Exp $
+
+  12 May 2007; nixnut <nixnut@gentoo.org> libdrm-2.3.0.ebuild:
+  Stable on ppc wrt bug 175465
 
   04 May 2007; Daniel Gryniewicz <dang@gentoo.org> libdrm-2.3.0.ebuild:
   Marked stable on amd64 for bug #175465
