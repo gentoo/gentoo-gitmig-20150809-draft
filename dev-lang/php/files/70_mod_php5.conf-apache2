@@ -1,5 +1,4 @@
 <IfDefine PHP5>
-
 	# Load the module first
 	<IfModule !mod_php5.c>
 		LoadModule php5_module    modules/libphp5.so

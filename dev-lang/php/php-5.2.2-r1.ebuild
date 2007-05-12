@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.2-r1.ebuild,v 1.7 2007/05/10 14:56:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.2-r1.ebuild,v 1.8 2007/05/12 05:32:57 chtekk Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -29,7 +29,7 @@ CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-concurrent_apache_modul
 
 inherit php5_2-sapi apache-module
 
-DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache SAPIs."
+DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
 DEPEND="app-admin/php-toolkit"
 RDEPEND="${DEPEND}"
@@ -41,12 +41,12 @@ pkg_setup() {
 
 	# Make sure the user has specified at least one SAPI
 	einfo "Determining SAPI(s) to build"
-	phpconfutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache apache2
+	phpconfutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache2
 
 	# Threaded Apache2 support
-	if useq apache2 ; then
+	if use apache2 ; then
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			if ! useq threads ; then
+			if ! use threads ; then
 				APACHE2_SAFE_MPMS="itk peruser prefork"
 			else
 				APACHE2_SAFE_MPMS="event leader metuxmpm perchild threadpool worker"
@@ -66,9 +66,9 @@ pkg_setup() {
 	fi
 
 	# Concurrent PHP Apache2 modules support
-	if useq apache2 ; then
+	if use apache2 ; then
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			if useq concurrentmodphp ; then
+			if use concurrentmodphp ; then
 				ewarn
 				ewarn "'concurrentmodphp' makes it possible to load multiple, differently"
 				ewarn "versioned mod_php's into the same Apache instance. This is done with"
@@ -90,7 +90,7 @@ pkg_setup() {
 	fi
 
 	# fastbuild support
-	if useq fastbuild ; then
+	if use fastbuild ; then
 		ewarn
 		ewarn "'fastbuild' attempts to build all SAPIs in a single pass."
 		ewarn "This is an experimental feature, so please rebuild PHP"
@@ -110,17 +110,16 @@ php_determine_sapis() {
 	# holds the list of sapis that we want to build
 	PHPSAPIS=
 
-	if useq cli || phpconfutils_usecheck cli ; then
+	if use cli || phpconfutils_usecheck cli ; then
 		PHPSAPIS="${PHPSAPIS} cli"
 	fi
 
-	if useq cgi ; then
+	if use cgi ; then
 		PHPSAPIS="${PHPSAPIS} cgi"
 	fi
 
-	# note - we can only build one apache sapi for now
 	# note - apache SAPI comes after the simpler cli/cgi sapis
-	if useq apache || useq apache2 ; then
+	if use apache2 ; then
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
 			PHPSAPIS="${PHPSAPIS} apache${APACHE_VERSION}"
 		fi
@@ -135,9 +134,9 @@ src_unpack() {
 	cd "${S}"
 
 	# Concurrent PHP Apache2 modules support
-	if useq apache2 ; then
+	if use apache2 ; then
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			if useq concurrentmodphp ; then
+			if use concurrentmodphp ; then
 				if [[ -n "${CONCURRENTMODPHP_PATCH}" ]] && [[ -f "${WORKDIR}/${CONCURRENTMODPHP_PATCH}" ]] ; then
 					epatch "${WORKDIR}/${CONCURRENTMODPHP_PATCH}"
 				else
@@ -148,7 +147,7 @@ src_unpack() {
 	fi
 
 	# fastbuild support
-	if useq fastbuild ; then
+	if use fastbuild ; then
 		if [[ -n "${FASTBUILD_PATCH}" ]] && [[ -f "${WORKDIR}/${FASTBUILD_PATCH}" ]] ; then
 			epatch "${WORKDIR}/${FASTBUILD_PATCH}"
 		else
@@ -160,14 +159,14 @@ src_unpack() {
 	php5_2-sapi_src_unpack
 
 	# Fix Makefile.global:test to consider the CGI SAPI if present
-	if useq cgi ; then
+	if use cgi ; then
 		sed -e "s|test \! -z \"\$(top_builddir)/php-cli\" \&\& test -x \"\$(top_builddir)/php-cli\"|test \! -z \"\$(top_builddir)/php-cli\" \&\& test -x \"\$(top_builddir)/php-cli\" \&\& test \! -z \"\$(top_builddir)/php-cgi\" \&\& test -x \"\$(top_builddir)/php-cgi\"|g" -i Makefile.global
 		sed -e "s|TEST_PHP_EXECUTABLE=\"\$(top_builddir)/php-cli\"|TEST_PHP_EXECUTABLE=\"\$(top_builddir)/php-cli\" TEST_PHP_CGI_EXECUTABLE=\"\$(top_builddir)/php-cgi\"|g" -i Makefile.global
 	fi
 }
 
 src_compile() {
-	if useq fastbuild && [[ -n "${FASTBUILD_PATCH}" ]] ; then
+	if use fastbuild && [[ -n "${FASTBUILD_PATCH}" ]] ; then
 		src_compile_fastbuild
 	else
 		src_compile_normal
@@ -179,7 +178,6 @@ src_compile_fastbuild() {
 
 	build_cli=0
 	build_cgi=0
-	build_apache1=0
 	build_apache2=0
 	my_conf=""
 
@@ -190,9 +188,6 @@ src_compile_fastbuild() {
 				;;
 			cgi)
 				build_cgi=1
-				;;
-			apache1)
-				build_apache1=1
 				;;
 			apache2)
 				build_apache2=1
@@ -214,21 +209,17 @@ src_compile_fastbuild() {
 		my_conf="${my_conf} --disable-cgi"
 	fi
 
-	if [[ ${build_apache1} = 1 ]] ; then
-		my_conf="${my_conf} --with-apxs=/usr/sbin/apxs"
-	fi
-
 	if [[ ${build_apache2} = 1 ]] ; then
 		my_conf="${my_conf} --with-apxs2=/usr/sbin/apxs2"
 
 		# Threaded Apache2 support
-		if useq threads ; then
+		if use threads ; then
 			my_conf="${my_conf} --enable-maintainer-zts"
 			ewarn "Enabling ZTS for Apache2 MPM"
 		fi
 
 		# Concurrent PHP Apache2 modules support
-		if useq concurrentmodphp ; then
+		if use concurrentmodphp ; then
 			append-ldflags "-Wl,--version-script=${FILESDIR}/php5-ldvs"
 		fi
 	fi
@@ -267,7 +258,7 @@ src_compile_fastbuild() {
 		cp sapi/cgi/php php-cgi || die "Unable to copy CGI SAPI"
 	fi
 
-	if [[ ${build_apache1} = 1 ]] || [[ ${build_apache2} = 1 ]] ; then
+	if [[ ${build_apache2} = 1 ]] ; then
 		einfo
 		einfo "Building apache${APACHE_VERSION} SAPI"
 		einfo
@@ -289,10 +280,10 @@ src_compile_normal() {
 
 	# Support the Apache2 extras, they must be set globally for all
 	# SAPIs to work correctly, especially for external PHP extensions
-	if useq apache2 ; then
+	if use apache2 ; then
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
 			# Concurrent PHP Apache2 modules support
-			if useq concurrentmodphp ; then
+			if use concurrentmodphp ; then
 				append-ldflags "-Wl,--version-script=${FILESDIR}/php5-ldvs"
 			fi
 		fi
@@ -301,10 +292,10 @@ src_compile_normal() {
 	for x in ${PHPSAPIS} ; do
 		# Support the Apache2 extras, they must be set globally for all
 		# SAPIs to work correctly, especially for external PHP extensions
-		if useq apache2 ; then
+		if use apache2 ; then
 			if [[ "${APACHE_VERSION}" != "0" ]] ; then
 				# Threaded Apache2 support
-				if useq threads ; then
+				if use threads ; then
 					my_conf="${my_conf} --enable-maintainer-zts"
 					ewarn "Enabling ZTS for Apache2 MPM"
 				fi
@@ -329,10 +320,6 @@ src_compile_normal() {
 				phpconfutils_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
 				php5_2-sapi_src_compile
 				cp sapi/cgi/php php-cgi || die "Unable to copy CGI SAPI"
-				;;
-			apache1)
-				my_conf="${my_conf} --disable-cli --with-apxs=/usr/sbin/apxs"
-				php5_2-sapi_src_compile
 				;;
 			apache2)
 				my_conf="${my_conf} --disable-cli --with-apxs2=/usr/sbin/apxs2"
@@ -374,18 +361,10 @@ src_install() {
 				dobin php-cgi || die "Unable to install ${x} sapi"
 				php5_2-sapi_install_ini
 				;;
-			apache1)
-				einfo "Installing Apache${APACHE_VERSION} SAPI"
-				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
-				einfo "Installing Apache${APACHE_VERSION} config file for PHP5 (70_mod_php5.conf)"
-				insinto ${APACHE_MODULES_CONFDIR}
-				newins "${FILESDIR}/70_mod_php5.conf-apache1" "70_mod_php5.conf"
-				php5_2-sapi_install_ini
-				;;
 			apache2)
 				einfo "Installing Apache${APACHE_VERSION} SAPI"
 				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
-				if useq concurrentmodphp ; then
+				if use concurrentmodphp ; then
 					einfo "Installing Apache${APACHE_VERSION} config file for PHP5-concurrent (70_mod_php5_concurr.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
 					newins "${FILESDIR}/70_mod_php5_concurr.conf-apache2" "70_mod_php5_concurr.conf"
@@ -413,11 +392,9 @@ src_install() {
 
 pkg_postinst() {
 	# Output some general info to the user
-	if useq apache || useq apache2 ; then
-		APACHE1_MOD_DEFINE="PHP5"
-		APACHE1_MOD_CONF="70_mod_php5"
+	if use apache2 ; then
 		APACHE2_MOD_DEFINE="PHP5"
-		if useq concurrentmodphp ; then
+		if use concurrentmodphp ; then
 			APACHE2_MOD_CONF="70_mod_php5_concurr"
 		else
 			APACHE2_MOD_CONF="70_mod_php5"
@@ -425,24 +402,8 @@ pkg_postinst() {
 		apache-module_pkg_postinst
 	fi
 
-	# Update Apache1 to use mod_php
-	if useq apache ; then
-		"${ROOT}/usr/sbin/php-select" -t apache1 php5 > /dev/null 2>&1
-		exitStatus=$?
-		if [[ ${exitStatus} == 2 ]] ; then
-			php-select apache1 php5
-		elif [[ ${exitStatus} == 4 ]] ; then
-			ewarn
-			ewarn "Apache1 is configured to load a different version of PHP."
-			ewarn "To make Apache1 use PHP v5, use php-select:"
-			ewarn
-			ewarn "    php-select apache1 php5"
-			ewarn
-		fi
-	fi
-
 	# Update Apache2 to use mod_php
-	if useq apache2 ; then
+	if use apache2 ; then
 		"${ROOT}/usr/sbin/php-select" -t apache2 php5 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 2 ]] ; then
@@ -458,7 +419,7 @@ pkg_postinst() {
 	fi
 
 	# Create the symlinks for php-cli
-	if useq cli || phpconfutils_usecheck cli ; then
+	if use cli || phpconfutils_usecheck cli ; then
 		"${ROOT}/usr/sbin/php-select" -t php php5 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 5 ]] ; then
@@ -474,7 +435,7 @@ pkg_postinst() {
 	fi
 
 	# Create the symlinks for php-cgi
-	if useq cgi ; then
+	if use cgi ; then
 		"${ROOT}/usr/sbin/php-select" -t php-cgi php5 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 5 ]] ; then

@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.168 2007/05/10 14:56:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.169 2007/05/12 05:32:57 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org>
+  files/70_mod_php.conf-apache2, files/70_mod_php5_concurr.conf-apache2,
+  -files/70_mod_php5.conf-apache1, files/70_mod_php5.conf-apache2,
+  files/20php4-envd, files/20php5-envd, -files/70_mod_php.conf-apache1,
+  files/70_mod_php_concurr.conf-apache2, php-4.4.6.ebuild, php-4.4.7.ebuild,
+  php-5.1.6-r11.ebuild, php-5.2.1-r3.ebuild, php-5.2.2-r1.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   10 May 2007; Jeroen Roovers <jer@gentoo.org> php-4.4.7.ebuild,
   php-5.2.2-r1.ebuild:
