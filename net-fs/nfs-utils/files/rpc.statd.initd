@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.statd.initd,v 1.2 2007/04/02 12:28:30 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.statd.initd,v 1.3 2007/05/12 11:27:06 vapier Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
@@ -14,6 +14,22 @@ depend() {
 	after quota
 }
 
+mount_nfsd() {
+	# Make sure nfs support is loaded in the kernel #64709
+	if [ -e /proc/modules ] && ! grep -qs nfsd /proc/filesystems ; then
+		modprobe nfsd &> /dev/null
+	fi
+
+	# This is the new "kernel 2.6 way" to handle the exports file
+	if grep -qs nfsd /proc/filesystems ; then
+		if ! grep -qs "nfsd /proc/fs/nfs" /proc/mounts ; then
+			ebegin "Mounting nfsd filesystem in /proc"
+			mount -t nfsd -o nodev,noexec,nosuid nfsd /proc/fs/nfs
+			eend $?
+		fi
+	fi
+}
+
 is_running() {
 	# Don't start rpc.statd if already started by someone else ...
 	# Don't try and kill it if it's already dead ...
@@ -21,6 +37,8 @@ is_running() {
 }
 
 start() {
+	mount_nfsd
+
 	is_running && return 0
 	ebegin "Starting NFS statd"
 	start-stop-daemon --start --quiet --exec ${rpc_bin} -- ${OPTS_RPC_STATD}

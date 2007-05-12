@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.102 2007/05/06 10:21:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.103 2007/05/12 11:27:06 vapier Exp $
+
+*nfs-utils-1.1.0 (12 May 2007)
+
+  12 May 2007; Mike Frysinger <vapier@gentoo.org> files/nfs.initd,
+  files/nfsmount.initd, files/rpc.gssd.initd, files/rpc.idmapd.initd,
+  files/rpc.statd.initd, +nfs-utils-1.1.0.ebuild:
+  Version bump.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> nfs-utils-1.0.6-r6.ebuild:
   Replacing einfo with elog

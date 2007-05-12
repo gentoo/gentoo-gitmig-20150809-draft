@@ -1,15 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.4 2007/04/15 20:50:08 vapier Exp $
-
-#---------------------------------------------------------------------------
-# This script starts/stops the following
-#	rpc.nfsd
-#	rpc.mountd
-#---------------------------------------------------------------------------
-
-# NB: Config is in /etc/conf.d/nfs
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.5 2007/05/12 11:27:06 vapier Exp $
 
 opts="reload"
 
@@ -21,6 +13,7 @@ restarting=no
 exportfs=/usr/sbin/exportfs
   mountd=/usr/sbin/rpc.mountd
     nfsd=/usr/sbin/rpc.nfsd
+smnotify=/usr/sbin/sm-notify
 
 depend() {
 	local myneed="" myuse=""
@@ -48,14 +41,7 @@ waitfor_exportfs() {
 	wait $1
 }
 
-start_it() {
-	ebegin "Starting NFS $1"
-	shift
-	"$@"
-	eend $?
-	ret=$((ret + $?))
-}
-start() {
+mount_nfsd() {
 	# Make sure nfs support is loaded in the kernel #64709
 	if [ -e /proc/modules ] && ! grep -qs nfsd /proc/filesystems ; then
 		modprobe nfsd &> /dev/null
@@ -65,12 +51,21 @@ start() {
 	if grep -qs nfsd /proc/filesystems ; then
 		if ! grep -qs "nfsd /proc/fs/nfs" /proc/mounts ; then
 			ebegin "Mounting nfsd filesystem in /proc"
-			mount -t nfsd nfsd /proc/fs/nfs
+			mount -t nfsd -o nodev,noexec,nosuid nfsd /proc/fs/nfs
 			eend $?
 		fi
 	fi
-	# now that nfsd is mounted inside /proc, we can safely start mountd later
+}
 
+start_it() {
+	ebegin "Starting NFS $1"
+	shift
+	"$@"
+	eend $?
+	ret=$((ret + $?))
+}
+start() {
+	mount_nfsd
 	mkdir_nfsdirs
 
 	# Exportfs likes to hang if networking isn't working.
@@ -84,8 +79,9 @@ start() {
 	fi
 
 	local ret=0
-	start_it daemon ${nfsd} ${OPTS_RPC_NFSD}
 	start_it mountd ${mountd} ${OPTS_RPC_MOUNTD}
+	start_it daemon ${nfsd} ${OPTS_RPC_NFSD}
+	[ -x "${smnotify}" ] && start_it smnotify ${smnotify} ${OPTS_SMNOTIFY}
 	return ${ret}
 }
 
