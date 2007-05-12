@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.2.ebuild,v 1.7 2005/10/13 22:05:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.2.ebuild,v 1.8 2007/05/12 07:24:51 dirtyepic Exp $
 
 inherit eutils libtool wxwidgets
 
@@ -15,13 +15,13 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="alpha amd64 ppc sparc x86"
 
-DEPEND=">=x11-libs/wxGTK-2.6.0
+DEPEND="=x11-libs/wxGTK-2.6*
 	dev-db/libpq
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	if ! built_with_use '>=x11-libs/wxGTK-2.6.0' unicode ; then
-		die "${PN} requires >=x11-libs/wxGTK-2.6.0 emerged with USE='unicode'"
+	if ! built_with_use '=x11-libs/wxGTK-2.6*' unicode ; then
+		die "${PN} requires =x11-libs/wxGTK-2.6* emerged with USE='unicode'"
 	fi
 }
 
@@ -32,15 +32,15 @@ src_unpack() {
 }
 
 src_compile() {
-	export WX_GTK_VER=2.6
-	export WX_HOME=/usr
+	export WX_GTK_VER="2.6"
+	export WX_HOME="/usr"
 	need-wxwidgets unicode
 
 	local myconf
 	myconf="${myconf} --enable-unicode"
 	myconf="${myconf} --enable-gtk2"
 	myconf="${myconf} --with-pgsql-include=/usr/include/postgresql"
-	myconf="${myconf} --with-wx-config=/lib/wx/config/${WX_CONFIG_NAME}"
+	myconf="${myconf} --with-wx-config=${WX_CONFIG/\/usr}"
 	myconf="${myconf} --enable-postgres"
 	LDFLAGS=-L/usr/lib/postgresql econf ${myconf} || die
 
