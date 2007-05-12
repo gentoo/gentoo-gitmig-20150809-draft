@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.23-r1.ebuild,v 1.3 2007/04/27 11:25:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.23-r1.ebuild,v 1.4 2007/05/12 11:27:30 truedfx Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-anonunion.patch
 	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-nxbit.patch
 
 	# Don't strip
 	sed -i -e 's|$(INSTALL) -s|$(INSTALL)|' Makefile
