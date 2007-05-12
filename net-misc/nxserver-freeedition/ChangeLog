@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.3 2007/04/28 17:00:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.4 2007/05/12 14:59:54 voyageur Exp $
+
+  12 May 2007; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
+  Fixed maintainer in metadata.xml
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   nxserver-freeedition-2.1.0.ebuild:
