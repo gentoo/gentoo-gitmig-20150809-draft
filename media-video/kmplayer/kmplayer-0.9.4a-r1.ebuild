@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a-r1.ebuild,v 1.2 2007/05/09 12:46:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a-r1.ebuild,v 1.3 2007/05/12 10:13:29 beandog Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="gstreamer mplayer xine cairo"
 
 RDEPEND="mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )
