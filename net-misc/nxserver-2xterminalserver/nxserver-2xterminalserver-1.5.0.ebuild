@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.3 2007/04/30 13:38:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.4 2007/05/12 16:41:35 voyageur Exp $
 
 inherit flag-o-matic eutils
 
@@ -171,7 +171,13 @@ src_install() {
 	done
 	cp ${NODE_SRC}/node-gentoo.cfg.sample ${D}/usr/NX/etc/ || die
 
-	cp -R ${S}/server/nxnode/share ${D}/usr/NX || die
+	# share/keys/server.id_dsa.key is installed with the client
+	dodir /usr/NX/share/keys
+	for x in config fonts keymaps; do
+		cp -R ${S}/server/nxnode/share/${x} ${D}/usr/NX/share/ || die
+	done
+	cp ${S}/server/nxnode/share/keys/default.id_dsa.key \
+		${D}/usr/NX/share/keys/ ||die
 	cp -R ${S}/server/nxnode/home ${D}/usr/NX || die
 	keepdir /usr/NX/var/log
 	keepdir /usr/NX/var/run

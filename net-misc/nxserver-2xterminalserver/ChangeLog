@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-2xterminalserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/ChangeLog,v 1.4 2007/05/12 14:59:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/ChangeLog,v 1.5 2007/05/12 16:41:35 voyageur Exp $
+
+  12 May 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-2xterminalserver-1.5.0.ebuild:
+  Fixed file collision with nxclient-2xterminalserver
+  Closes bug #178124
 
   12 May 2007; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Fixed maintainer in metadata.xml
