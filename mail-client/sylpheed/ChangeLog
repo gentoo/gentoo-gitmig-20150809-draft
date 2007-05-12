@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.228 2007/05/06 10:49:20 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.229 2007/05/12 14:56:14 hattya Exp $
+
+*sylpheed-2.4.1 (12 May 2007)
+
+  12 May 2007; Akinori Hattori <hattya@gentoo.org>
+  +files/sylpheed-2.4-firefox.diff, +sylpheed-2.4.1.ebuild:
+  new upstream release. fixes bug #177436.
 
   06 May 2007; Akinori Hattori <hattya@gentoo.org> -sylpheed-2.3.0.ebuild,
   -sylpheed-2.3.1.ebuild, sylpheed-2.4.0.ebuild:
