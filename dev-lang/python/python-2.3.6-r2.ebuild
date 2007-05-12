@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r2.ebuild,v 1.1 2007/05/10 14:01:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r2.ebuild,v 1.2 2007/05/12 11:45:22 corsair Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -21,7 +21,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="2.3"
-KEYWORDS="~hppa ~ia64 ~x86"
+KEYWORDS="~hppa ~ia64 ~ppc64 ~x86"
 IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 doc nocxx nothreads examples"
 
 # INFO: 2.3.5 docs are used for python-2.3.6 as upstream writes in their release
