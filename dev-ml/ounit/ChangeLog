@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.6 2007/02/09 02:50:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.7 2007/05/12 22:41:01 aballier Exp $
+
+*ounit-1.0.2 (12 May 2007)
+
+  12 May 2007; Alexis Ballier <aballier@gentoo.org> +ounit-1.0.2.ebuild:
+  version bump
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
