@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.13.ebuild,v 1.3 2007/05/12 02:58:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.13.ebuild,v 1.4 2007/05/12 14:35:18 chtekk Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -23,7 +23,7 @@ need_php_by_category
 
 pkg_setup() {
 	has_php
-	require_php_sapi_from cgi apache apache2
+	require_php_sapi_from cgi apache2
 }
 
 src_unpack() {

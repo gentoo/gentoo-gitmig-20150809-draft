@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.8 2007/03/06 15:16:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.9 2007/05/12 14:33:50 chtekk Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -31,7 +31,7 @@ need_php_by_category
 pkg_setup() {
 	has_php
 
-	require_php_sapi_from cgi apache apache2
+	require_php_sapi_from cgi apache2
 
 	if use session ; then
 		require_php_with_use session zlib
