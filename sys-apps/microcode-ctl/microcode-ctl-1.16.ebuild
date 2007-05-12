@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.16.ebuild,v 1.2 2007/05/05 18:31:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.16.ebuild,v 1.3 2007/05/12 08:59:37 beandog Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.urbanmyth.org/microcode/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

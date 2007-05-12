@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/microcode-ctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.25 2007/05/05 18:31:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.26 2007/05/12 08:59:37 beandog Exp $
+
+  12 May 2007; Steve Dibb <beandog@gentoo.org> microcode-ctl-1.16.ebuild:
+  amd64 stable, bug 177124
 
   05 May 2007; Andrej Kacian <ticho@gentoo.org> microcode-ctl-1.16.ebuild:
   Stable on x86, bug #177124.
