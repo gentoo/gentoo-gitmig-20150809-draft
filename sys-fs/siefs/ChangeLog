@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/siefs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.8 2007/02/22 00:54:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.9 2007/05/12 02:21:54 dsd Exp $
+
+  12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Move from kernel to kernel-misc herd
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

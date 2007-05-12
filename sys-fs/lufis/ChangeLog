@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.8 2007/02/09 06:04:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.9 2007/05/12 02:20:01 dsd Exp $
+
+  12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Move from kernel to kernel-misc herd
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

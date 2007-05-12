@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.31 2007/04/26 07:40:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.32 2007/05/12 02:22:44 dsd Exp $
+
+  12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Move from kernel to kernel-misc herd
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
