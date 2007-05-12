@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.169 2007/05/12 05:32:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.170 2007/05/12 11:26:51 corsair Exp $
+
+  12 May 2007; Markus Rothe <corsair@gentoo.org> php-4.4.7.ebuild,
+  php-5.2.2-r1.ebuild:
+  Stable on ppc64; bug #169372
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org>
   files/70_mod_php.conf-apache2, files/70_mod_php5_concurr.conf-apache2,
