@@ -1,6 +1,32 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.304 2007/05/11 04:25:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.305 2007/05/12 09:39:02 zzam Exp $
+
+  12 May 2007; Matthias Schwarzott <zzam@gentoo.org> -files/udev.rules-018,
+  -files/udev-021-udev_add_c-gcc295-compat.patch,
+  -files/udev-050-udev_volume_id.patch, -files/udev.rules-064-r1,
+  -files/udev.rules-077, -files/udev.rules-077-r1, -files/udev.rules-077-r5,
+  -files/udev-start-077-r2.sh, -files/udev-start-077-r4.sh,
+  -files/udev-start-077.sh, -files/05-udev-early.rules-078,
+  -files/udev.rules-078, -files/05-udev-early.rules-079,
+  -files/udev-start-079.sh, -files/udev.rules-084, -files/udev.rules-089,
+  -files/udev-start-089.sh, -files/udev-start-090.sh, -files/udev.rules-094,
+  -files/udev.rules-096, -files/udev.rules-096-r1,
+  -files/udev-096-udevtrigger.patch, -files/udev-start-096.sh,
+  -files/udev.rules-098, -files/udev-098-udevtrigger.patch,
+  -files/udev-start-098.sh, -files/udev-start-099.sh,
+  -files/udev-start-104-r10.sh, -files/modprobe.sh, -files/udev.conf,
+  -files/udev.conf.post_024, -files/udev.conf.post_046,
+  -files/udev.conf.post_050, -files/udev.conf.post_059,
+  -files/udev.hotplug.empty, -files/udev.permissions, -files/udev.rules,
+  -files/udev.rules.post_012, -files/udev-parisc-path_id.patch,
+  -files/udev-parisc-path_id-again.patch, -files/udev-start.sh,
+  -files/udev-stop.sh, -udev-079-r2.ebuild, -udev-087.ebuild,
+  -udev-087-r1.ebuild, -udev-090-r1.ebuild, -udev-094.ebuild,
+  -udev-096.ebuild, -udev-096-r1.ebuild, -udev-098.ebuild, -udev-099.ebuild,
+  -udev-100.ebuild, -udev-100-r2.ebuild, -udev-103.ebuild,
+  -udev-104-r11.ebuild:
+  Removed all ebuilds older than stable version 104-r12.
 
   11 May 2007; Joshua Kinard <kumba@gentoo.org> udev-104-r12.ebuild:
   Stable on mips, per #159871.
