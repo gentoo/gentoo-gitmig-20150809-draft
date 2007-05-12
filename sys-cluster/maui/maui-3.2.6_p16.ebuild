@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p16.ebuild,v 1.1 2006/09/26 04:33:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p16.ebuild,v 1.2 2007/05/12 00:10:05 dberkholz Exp $
 
 inherit autotools eutils multilib
 
@@ -8,8 +8,7 @@ DESCRIPTION="Maui Cluster Scheduler"
 HOMEPAGE="http://www.clusterresources.com/products/maui/"
 SRC_URI="http://www.clusterresources.com/downloads/maui/${P/_/}.tar.gz"
 IUSE=""
-DEPEND="virtual/pbs
-	!<sys-cluster/openpbs-2.3.16-r4"
+DEPEND="virtual/pbs"
 RDEPEND="${DEPEND}
 		 virtual/libc"
 SLOT="0"
