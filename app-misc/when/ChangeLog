@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.18 2007/01/22 00:13:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.19 2007/05/12 11:43:12 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> Manifest:
+  Regen digest to remove unused entry.
 
   22 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> when-1.0.23.ebuild:
   Undo last revision and apply patch by James Rowe to fix tests (bug #138415).
