@@ -1,6 +1,12 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.21 2007/04/23 07:19:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.22 2007/05/12 15:57:31 zzam Exp $
+
+*noad-0.6.0-r8 (12 May 2007)
+
+  12 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/noad-0.6.0-hangcheck.diff, +noad-0.6.0-r8.ebuild:
+  Added a hangcheck timer to noad, to kill it after running 30 minutes.
 
   23 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> noad-0.6.0-r7.ebuild:
   Now really using newconfd, fixing Bug #174266.

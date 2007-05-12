@@ -1,0 +1,21 @@
+Nur in noad-0.6.0: confdefs.h.
+Nur in noad-0.6.0: config.log.
+Nur in noad-0.6.0: conftest.cc.
+diff -ru noad-0.6.0-orig/main.cpp noad-0.6.0/main.cpp
+--- noad-0.6.0-orig/main.cpp	2007-05-12 17:28:01.000000000 +0200
++++ noad-0.6.0/main.cpp	2007-05-12 17:31:51.000000000 +0200
+@@ -566,10 +566,14 @@
+     signal(SIGABRT, signal_handler);
+     signal(SIGSEGV, signal_handler);
+     signal(SIGUSR1, signal_handler);
++    signal(SIGALRM, signal_handler);
+     
+     // do cleanup at exit...
+     atexit(cleanUp);
+     
++   
++    // now start alarm timer to kill hanging noad (hardcoded 30min timeout)
++    alarm(30*60);
+     // now do the work..,
+     doNoad(bBefore, recDir);
+ 
