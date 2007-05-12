@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/raddump-0.2.1.ebuild,v 1.2 2007/05/12 04:58:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/raddump-0.3.1.ebuild,v 1.1 2007/05/12 04:58:13 robbat2 Exp $
 
 inherit autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/raddump/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=">=net-analyzer/tcpdump-3.8.3-r1"
 
@@ -21,5 +21,5 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README TODO ChangeLog
+	dodoc AUTHORS README TODO ChangeLog CREDITS
 }
