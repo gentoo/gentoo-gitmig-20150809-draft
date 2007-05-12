@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.1 2007/05/12 10:57:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.2 2007/05/12 20:41:24 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,12 @@ S=${WORKDIR}/${PN}_${PV}
 pkg_setup() {
 	enewgroup rpc 111
 	enewuser rpc 111 -1 /dev/null rpc
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-tcpd.patch"
 }
 
 src_compile() {

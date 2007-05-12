@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.36 2007/05/12 10:57:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.37 2007/05/12 20:41:24 uberlord Exp $
+
+  12 May 2007; Roy Marples <uberlord@gentoo.org>
+  +files/portmap-6.0-tcpd.patch, portmap-6.0.ebuild:
+  Enable compile without tcp-wrappers, #178242.
 
 *portmap-6.0 (12 May 2007)
 
