@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.164 2007/04/10 11:36:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.165 2007/05/12 16:03:06 pylon Exp $
+
+  12 May 2007; Lars Weiler <pylon@gentoo.org> -cdrtools-2.01-r3.ebuild:
+  Removing old version which was stable for m68k, but as no m68k-arch-alias
+  exists, I can't ask for new stabilisations.
 
 *cdrtools-2.01.01_alpha25 (10 Apr 2007)
 
