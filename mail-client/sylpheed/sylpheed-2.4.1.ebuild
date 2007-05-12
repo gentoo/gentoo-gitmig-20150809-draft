@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.1.ebuild,v 1.1 2007/05/12 14:56:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.1.ebuild,v 1.2 2007/05/12 15:04:04 hattya Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,6 @@ DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.sraoss.jp/"
 SRC_URI="http://sylpheed.sraoss.jp/${PN}/v${PV%.*}/${P}.tar.bz2"
 
-RESTRICT="nomirror"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
