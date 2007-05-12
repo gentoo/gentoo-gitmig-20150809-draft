@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.28 2007/04/26 07:38:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.29 2007/05/12 13:36:42 xmerlin Exp $
+
+  12 May 2007; Christian Zoffoli <xmerlin@gentoo.org> gfs-1.03.00.ebuild:
+  Stable on x86.
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
