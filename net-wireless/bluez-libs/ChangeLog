@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.81 2007/05/12 14:04:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.82 2007/05/12 15:06:01 betelgeuse Exp $
+
+  12 May 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Add Dick Marinus <dm@chello.nl> as a proxy maintainer to metadata.xml.
 
   12 May 2007; Petteri Räty <betelgeuse@gentoo.org> bluez-libs-3.10.ebuild:
   Replacing libbluetooth.so.1 with a symlink doesn't work when upgrading so
