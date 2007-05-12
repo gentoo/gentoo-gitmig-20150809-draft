@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.5 2007/05/12 11:00:11 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.6 2007/05/12 11:02:00 phreak Exp $
 
 inherit eutils linux-info multilib
 
@@ -206,7 +206,7 @@ src_install() {
 	# Actually I have no idea, why the includes have those weird-ass permissions
 	# or a particular system, might be due to inherited permissions from parent
 	# directory
-	
+
 	find /usr/$(get_libdir)/klibc/include/linux -type f | xargs chmod 0644
 
 	# Hardlinks becoming copies
