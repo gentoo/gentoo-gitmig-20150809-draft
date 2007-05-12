@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/glsof
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.10 2007/02/21 18:52:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.11 2007/05/12 12:55:48 ticho Exp $
+
+*glsof-0.10.0_alpha4 (12 May 2007)
+
+  12 May 2007; Andrej Kacian <ticho@gentoo.org> +glsof-0.10.0_alpha4.ebuild:
+  0.10.0-pre-alpha4 has been the latest upstream release for quite some time
+  now. Adding it to the tree as _alpha4.
 
   21 Feb 2007; Andrej Kacian <ticho@gentoo.org> -glsof-0.9.16.ebuild:
   REALLY remove 0.9.16. I mean it.
