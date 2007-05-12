@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.3 2007/01/02 22:17:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.4 2007/05/12 04:15:15 chtekk Exp $
 
 inherit webapp
 S=${WORKDIR}/bugs_${PV}
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/BUGS_${PV}.zip"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="app-arch/unzip"
-RDEPEND=">=net-www/apache-1.3
+RDEPEND=">=net-www/apache-2.0
 		virtual/php"
 
 LICENSE="MPL-1.1"

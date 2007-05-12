@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugs-bug-genie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.11 2007/01/02 22:17:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.12 2007/05/12 04:15:15 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org>
+  bugs-bug-genie-1.7.2.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   02 Jan 2007; Renat Lumpau <rl03@gentoo.org> bugs-bug-genie-1.7.2.ebuild:
   Drop mysql dep wrt bug 159781.
