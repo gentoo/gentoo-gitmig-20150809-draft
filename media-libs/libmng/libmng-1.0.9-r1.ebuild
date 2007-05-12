@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.9-r1.ebuild,v 1.13 2007/04/14 18:38:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.9-r1.ebuild,v 1.14 2007/05/12 07:26:57 kumba Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/libmng/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="lcms"
 
 DEPEND=">=media-libs/jpeg-6b
