@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.127 2007/05/01 16:00:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.128 2007/05/12 17:27:45 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/postfix-2.3.0-SASL_README.patch, -files/postfix.rc6.2.2.4,
+  -files/postfix.rc6.2.2.5, -postfix-2.2.4.ebuild, -postfix-2.2.5.ebuild,
+  -postfix-2.2.5-r1.ebuild, -postfix-2.2.8.ebuild, -postfix-2.2.8-r1.ebuild,
+  -postfix-2.2.9.ebuild, -postfix-2.2.9-r1.ebuild, -postfix-2.3.7.ebuild,
+  -postfix-2.4.0.ebuild, -postfix-2.4.0-r1.ebuild:
+  Cleanup, remove old ebuild versions and files.
 
 *postfix-2.4.1 (01 May 2007)
 
