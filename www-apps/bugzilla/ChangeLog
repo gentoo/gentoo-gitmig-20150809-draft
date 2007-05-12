@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.82 2007/04/23 12:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.83 2007/05/12 04:20:35 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> bugzilla-2.18.6.ebuild,
+  bugzilla-2.20.4.ebuild, bugzilla-2.22.2.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> bugzilla-2.22.2.ebuild:
   ia64 stable

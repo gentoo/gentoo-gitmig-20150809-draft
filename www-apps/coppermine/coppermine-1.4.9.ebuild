@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.9.ebuild,v 1.3 2007/03/01 01:20:22 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.9.ebuild,v 1.4 2007/05/12 04:22:12 chtekk Exp $
 
 inherit webapp versionator
 
@@ -14,7 +14,7 @@ IUSE="imagemagick"
 
 DEPEND="app-arch/unzip"
 
-RDEPEND=">=net-www/apache-1.3.24-r1
+RDEPEND=">=net-www/apache-2.0
 	virtual/httpd-php
 	imagemagick? ( media-gfx/imagemagick )"
 

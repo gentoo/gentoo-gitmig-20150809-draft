@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mod_survey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/ChangeLog,v 1.1 2007/01/15 20:28:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/ChangeLog,v 1.2 2007/05/12 04:30:35 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> mod_survey-3.2.4.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   15 Jan 2007; Luca Longinotti <chtekk@gentoo.org> +files/language-list.txt,
   +files/postinstall-en.txt, +files/reconfig, +metadata.xml,

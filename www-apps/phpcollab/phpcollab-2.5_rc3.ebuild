@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/phpcollab-2.5_rc3.ebuild,v 1.3 2007/01/02 22:45:58 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/phpcollab-2.5_rc3.ebuild,v 1.4 2007/05/12 04:32:05 chtekk Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 KEYWORDS="~x86 ~ppc"
 
 RDEPEND="
-	>=net-www/apache-1.3
+	>=net-www/apache-2.0
 	virtual/httpd-php
 "
 

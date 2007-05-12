@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.10 2007/01/02 22:20:03 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.11 2007/05/12 04:20:35 chtekk Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.bugzilla.org"
 LICENSE="MPL-1.1 NPL-1.1"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
-IUSE="apache2"
+IUSE=""
 
 # http://www.bugzilla.org/docs218/html/stepbystep.html to verify dependancies
 # updated list of deps: http://www.bugzilla.org/releases/2.18/release-notes.html
@@ -32,8 +32,7 @@ RDEPEND="
 	dev-perl/perl-ldap
 	>=dev-perl/PatchReader-0.9.4
 	dev-perl/XML-Parser
-	apache2? ( >=net-www/apache-2.0 )
-	!apache2? ( =net-www/apache-1* )"
+	>=net-www/apache-2.0"
 
 src_unpack() {
 	unpack ${A}

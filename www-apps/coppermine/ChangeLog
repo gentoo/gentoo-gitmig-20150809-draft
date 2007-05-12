@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.15 2007/03/01 01:20:22 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.16 2007/05/12 04:22:12 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> coppermine-1.4.9.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   01 Mar 2007; Renat Lumpau <rl03@gentoo.org> -coppermine-1.4.8.ebuild,
   coppermine-1.4.9.ebuild:

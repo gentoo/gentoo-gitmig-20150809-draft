@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.5 2007/01/04 10:25:55 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.6 2007/05/12 04:34:26 chtekk Exp $
 
 # Source: http://bugs.gentoo.org/show_bug.cgi?id=50035
 # Submitted-By: SteveB <tp22a@softhome.net>
 # Reviewed-By: wrobel 2005-12-14
-# $Id: postfixadmin-2.1.0.ebuild,v 1.5 2007/01/04 10:25:55 wrobel Exp $
+# $Id: postfixadmin-2.1.0.ebuild,v 1.6 2007/05/12 04:34:26 chtekk Exp $
 
 inherit eutils webapp
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/httpd-php
 		>=mail-mta/postfix-2.0.0
-		>=net-www/apache-1.3.27
+		>=net-www/apache-2.0
 		>=dev-lang/perl-5.0
 		dev-perl/DBI
 		dev-perl/DBD-mysql"
