@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mppenc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.5 2007/05/12 15:30:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.6 2007/05/12 17:22:33 armin76 Exp $
+
+  12 May 2007; Raúl Porcel <armin76@gentoo.org> mppenc-1.16.ebuild:
+  x86 stable wrt #178218
 
   12 May 2007; Steve Dibb <beandog@gentoo.org> mppenc-1.16.ebuild:
   amd64 stable
