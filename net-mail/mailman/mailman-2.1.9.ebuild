@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9.ebuild,v 1.5 2007/05/06 15:08:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9.ebuild,v 1.6 2007/05/12 04:08:33 chtekk Exp $
 
 inherit eutils depend.apache
-IUSE="apache2 postfix sendmail qmail courier exim xmail"
+IUSE="postfix sendmail qmail courier exim xmail"
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
@@ -78,11 +78,7 @@ src_install () {
 	keepdir ${INSTALLDIR}/lists
 	keepdir ${INSTALLDIR}/qfiles
 
-	if use apache2; then
-		insinto ${APACHE2_MODULES_CONFDIR}
-	else
-		insinto ${APACHE1_MODULES_CONFDIR}
-	fi
+	insinto ${APACHE2_MODULES_CONFDIR}
 	doins ${FILESDIR}/50_mailman.conf
 
 	dodoc ${FILESDIR}/README.gentoo
@@ -126,11 +122,9 @@ pkg_postinst() {
 	einfo ""
 
 	einfo "An example Mailman configuration file for Apache has been installed into:"
-	use apache2 && einfo "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
-	use apache2 || einfo "  ${APACHE1_MODULES_CONFDIR}/50_mailman.conf"
+	einfo "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
 	einfo ""
 	einfo "To enable, you will need to add \"-D MAILMAN\" to"
-	use apache2 && einfo "/etc/conf.d/apache2."
-	use apache2 || einfo "/etc/conf.d/apache."
+	einfo "/etc/conf.d/apache2."
 	einfo ""
 }
