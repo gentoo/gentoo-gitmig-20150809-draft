@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.36 2007/03/05 12:23:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.37 2007/05/12 12:32:56 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> RPC-XML-0.54.ebuild,
+  RPC-XML-0.58.ebuild, RPC-XML-0.59.ebuild:
+  Remove apache1 support (mod_perl-1* dependency).
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> RPC-XML-0.59.ebuild:
   Stable on x86, bug #169152.

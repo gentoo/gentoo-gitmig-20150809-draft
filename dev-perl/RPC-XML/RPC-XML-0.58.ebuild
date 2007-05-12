@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.58.ebuild,v 1.12 2007/03/04 00:02:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.58.ebuild,v 1.13 2007/05/12 12:32:56 chtekk Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/~rjray/${P}/"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
-IUSE="modperl apache2"
+IUSE=""
 
 #SRC_TEST="do"
 
@@ -19,7 +19,6 @@ DEPEND=">=dev-perl/libwww-perl-5.801
 	>=dev-perl/XML-LibXML-1.58
 	>=dev-perl/XML-Parser-2.31
 	dev-perl/net-server
-	modperl? ( !apache2? ( <www-apache/mod_perl-1.99 ) )
 	dev-lang/perl"
 
 pkg_postinst() {
@@ -27,13 +26,13 @@ pkg_postinst() {
 
 	SETWARN=0
 	has_version '=net-www/apache-2*' && HAVE_APACHE2=1
-	has_version '>=www-apache/mod_perl-1.99' && HAVE_MP2=2
+	has_version '>=www-apache/mod_perl-2.0' && HAVE_MP2=2
 
 	[ -n "${HAVE_APACHE2}" ] && SETWARN=1
 	[ -n "${HAVE_MP2}" ] && SETWARN=1
 
 	if [ "$SETWARN" == "1" ]; then
-	ewarn "Apache2 or mod-perl-1.99 (mod_perl2) were detected."
+	ewarn "Apache2 or mod_perl2 were detected."
 	ewarn ""
 	ewarn "NOTE FROM THE AUTHOR OF RPC-XML"
 	ewarn ""
@@ -44,5 +43,3 @@ pkg_postinst() {
 	ewarn "are the real strength of the Apache::RPC::Server class."
 	fi
 }
-
-
