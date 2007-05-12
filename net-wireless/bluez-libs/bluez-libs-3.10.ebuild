@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-3.10.ebuild,v 1.3 2007/05/11 21:32:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-3.10.ebuild,v 1.4 2007/05/12 14:04:26 betelgeuse Exp $
 
-inherit multilib libtool
+inherit libtool
 
 DESCRIPTION="Bluetooth Userspace Libraries"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -31,5 +31,13 @@ src_install() {
 
 	# http://article.gmane.org/gmane.linux.bluez.announce/57
 	# Although library major number changed, API is compatible.
-	dosym libbluetooth.so.2 /usr/$(get_libdir)/libbluetooth.so.1
+	# Does not work with upgrades because ldconfig changes the symlink
+	# to point back to the old version.
+	#dosym libbluetooth.so.2 /usr/$(get_libdir)/libbluetooth.so.1
+}
+
+pkg_postinst() {
+	elog "The ABI version of libbluetooth has changed."
+	elog "Please run:"
+	elog "  revdep-rebuild --library libbluetooth.so.1"
 }
