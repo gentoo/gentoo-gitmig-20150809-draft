@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.86 2007/05/08 12:56:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.87 2007/05/12 18:50:00 wltjr Exp $
+
+  12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  xerces-2.8.1.ebuild:
+  Stable on amd64, bug #174726
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> xerces-2.8.1.ebuild:
   x86 stable wrt #174726
