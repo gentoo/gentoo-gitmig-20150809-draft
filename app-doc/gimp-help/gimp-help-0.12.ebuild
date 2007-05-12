@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.12.ebuild,v 1.8 2007/05/08 14:11:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.12.ebuild,v 1.9 2007/05/12 20:08:04 kumba Exp $
 
 MY_P=${P/gimp-help/gimp-help-2}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="mirror://gimp/help/${MY_P}.tar.gz"
 
 LICENSE="FDL-1.2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="webinstall linguas_cs linguas_de linguas_en linguas_es linguas_fr linguas_hr linguas_it linguas_ko linguas_nl linguas_no linguas_ru linguas_sv linguas_zh_CN"
 DEPEND="=app-text/docbook-xml-dtd-4.3*
