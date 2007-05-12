@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/xcache-1.2.0.ebuild,v 1.3 2007/03/06 22:15:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/xcache-1.2.0.ebuild,v 1.4 2007/05/12 02:59:35 chtekk Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -41,7 +41,6 @@ src_compile() {
 			--enable-xcache-decoder"
 
 	enable_extension_with_built_with =${PHP_PKG} apache2 apxs2 /usr/sbin/apxs2 "optimisation for apache2"
-	enable_extension_with_built_with =${PHP_PKG} apache apxs /usr/sbin/apxs "optimisation for apache1"
 
 	php-ext-source-r1_src_compile
 }
