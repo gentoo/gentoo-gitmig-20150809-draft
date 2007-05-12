@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.1d.ebuild,v 1.4 2007/03/15 02:10:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.1d.ebuild,v 1.5 2007/05/12 09:20:55 beandog Exp $
 
 inherit eutils wxwidgets games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/Scorched3D-${PV}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="mysql"
 
 DEPEND="virtual/opengl
