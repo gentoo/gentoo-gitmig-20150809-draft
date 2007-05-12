@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.6 2007/03/12 14:14:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.7 2007/05/12 03:44:50 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -45,6 +45,9 @@ EOF
 
 src_compile() {
 	local myconf="--backend=sdl" # x11 backend no worky (bug #83502)
+
+	# let the engine find its data files in the right place (bug #178116)
+	myconf="${myconf} --datadir=${GAMES_DATADIR}"
 
 	( use vorbis || use ogg ) \
 		&& myconf="${myconf} --enable-vorbis" \
