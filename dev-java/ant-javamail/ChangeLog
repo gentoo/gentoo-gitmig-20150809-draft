@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-javamail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.7 2007/05/06 08:00:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.8 2007/05/12 18:11:58 wltjr Exp $
+
+  12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  ant-javamail-1.7.0.ebuild:
+  Stable on amd64, bug #176856
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ant-javamail-1.7.0.ebuild:

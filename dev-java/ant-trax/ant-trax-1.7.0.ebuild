@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ant-trax-1.7.0.ebuild,v 1.9 2007/05/06 07:49:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ant-trax-1.7.0.ebuild,v 1.10 2007/05/12 18:19:06 wltjr Exp $
 
 ANT_TASK_DEPNAME="xalan"
 
 inherit ant-tasks
 
 DESCRIPTION="Apache Ant .jar with optional tasks depending on XML transformer (xalan)"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 
 # it will build without it (ant manual says it's not needed since 1.4 JDK, dunno bout kaffe
 # but contains a Xalan2Executor task which probably wouldn't work
