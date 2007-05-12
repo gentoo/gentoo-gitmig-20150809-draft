@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.110 2007/05/06 22:16:27 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.111 2007/05/12 22:17:52 cryos Exp $
+
+  12 May 2007; Marcus D. Hanwell <cryos@gentoo.org> kopete-3.5.5-r2.ebuild,
+  kopete-3.5.6.ebuild, kopete-3.5.6-r1.ebuild:
+  Removed !kde-base/kopete lines from RDEPEND, thanks to ferringb for pointing
+  it out.
 
   06 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kopete-3.5.6-cryptobug.patch, kopete-3.5.6-r1.ebuild:
