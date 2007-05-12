@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.15 2007/03/13 07:33:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.16 2007/05/12 02:06:33 dsd Exp $
+
+  12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Move from kernel to kernel-misc herd
 
 *kexec-tools-1.101-r4 (13 Mar 2007)
 
