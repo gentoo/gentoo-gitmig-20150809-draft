@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.40 2007/05/11 14:20:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.41 2007/05/12 13:39:14 pva Exp $
+
+  12 May 2007; <pva@gentoo.org> -mantisbt-1.0.6.ebuild:
+  Cleaning vulnerable version.
 
   11 May 2007; <pva@gentoo.org> metadata.xml, mantisbt-1.0.7.ebuild:
   Quotation update. Added myself to metadata. Version 1.0.7 fixes bug #157970.
