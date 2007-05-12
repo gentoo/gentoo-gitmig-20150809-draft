@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/amrnb-6.1.0.3.ebuild,v 1.1 2007/05/12 16:40:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/amrnb-6.1.0.3.ebuild,v 1.2 2007/05/12 16:54:56 beandog Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -24,11 +24,6 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
 	cp "${DISTDIR}/${SPEC_VER}.zip" .
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
