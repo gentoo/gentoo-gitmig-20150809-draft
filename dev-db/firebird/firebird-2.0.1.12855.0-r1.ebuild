@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0.ebuild,v 1.1 2007/05/11 15:49:53 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r1.ebuild,v 1.1 2007/05/12 05:52:12 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
 
 LICENSE="Interbase-1.0"
 SLOT="0"
-KEYWORDS="~amd64 -ia64 ~sparc ~x86"
+KEYWORDS="~amd64 -ia64 ~x86"
 IUSE="doc xinetd examples debug"
 RESTRICT="userpriv"
 
@@ -78,6 +78,9 @@ src_install() {
 	dolib.so lib/*.so*
 	dolib.a lib/*.a*
 
+	insinto /opt/firebird
+	doins *.msg
+
 	rm -rf "${D}"/opt/firebird/bin/*.sh
 	dobin bin/{changeRunUser,restoreRootRunUser,changeDBAPassword}.sh
 
@@ -90,6 +93,7 @@ src_install() {
 	insinto /etc/firebird
 	insopts -m0644 -o firebird -g firebird
 	doins misc/*
+	doins ../install/misc/aliases.conf
 	insopts -m0660 -o firebird -g firebird
 	doins security2.fdb
 
@@ -98,13 +102,34 @@ src_install() {
 	exeinto /opt/firebird/intl
 	doexe intl/*.so
 
+	diropts -m 755 -o tomcat -g tomcat
+	dodir /var/log/firebird
+	dodir /var/run/firebird
+	keepdir /var/log/firebird
+	keepdir /var/run/firebird
+
+	touch "${D}"/var/log/firebird/firebird.log
+	chown firebird:firebird "${D}"/var/log/firebird/firebird.log
+
+	if [ ${ARCH} == "amd64" ] ; then
+		cd "${D}/opt/firebird/"
+		ln -s lib64 lib
+		cd "${S}/gen/firebird"
+	fi
+
+	# create links for split config & log file
+	dosym /etc/firebird/aliases.conf /opt/firebird/aliases.conf
+	dosym /etc/firebird/security2.fdb /opt/firebird/security2.fdb
+	dosym /etc/firebird/firebird.conf /opt/firebird/firebird.conf
+	dosym /var/log/firebird/firebird.log /opt/firebird/firebird.log
+
 	if use xinetd ; then
 		insinto /etc/xinetd.d
 		newins "${S}/gen/install/misc/${PN}.xinetd" "${PN}" || die "newins xinetd file failed"
 	else
-		# TODO: this sucks, write a new one.
-		newinitd "${S}/gen/install/misc/${PN}.init.d.gentoo" "${PN}"
-		newconfd "${S}/gen/install/misc/${PN}.conf" "${PN}"
+		newinitd "${FILESDIR}/${PN}.init.d" ${PN}
+		newconfd "${FILESDIR}/firebird.conf.d" ${PN}
+		fperms 640 /etc/conf.d/firebird
 	fi
 	doenvd "${FILESDIR}/70${PN}"
 
@@ -113,6 +138,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	# Hack to fix ownership/perms
+	chown -fR firebird:firebird /etc/firebird /opt/firebird
+	chmod 750 /etc/firebird
+
 	elog
 	elog "1. If haven't done so already, please run:"
 	elog
@@ -164,28 +193,28 @@ pkg_config() {
 		ln -s /var/log/firebird.log firebird.log
 	fi
 
-	# if found /etc/isc4.gdb from previous install, backup, and restore as
-	# /etc/security.fdb
-	if [ -f /etc/firebird/isc4.gdb ]
+	# if found /etc/security.gdb from previous install, backup, and restore as
+	# /etc/security2.fdb
+	if [ -f /etc/firebird/security.gdb ]
 	then
 		# if we have scurity2.fdb already, back it 1st
 		if [ -f /etc/firebird/security2.fdb ]
 		then
 			cp /etc/firebird/security2.fdb /etc/firebird/security2.fdb.old
 		fi
-		gbak -B /etc/firebird/isc4.gdb /etc/firebird/isc4.gbk
-		gbak -R /etc/firebird/isc4.gbk /etc/firebird/security2.fdb
-		mv /etc/firebird/isc4.gdb /etc/firebird/isc4.gdb.old
-		rm /etc/firebird/isc4.gbk
+		gbak -B /etc/firebird/security.gdb /etc/firebird/security.gbk
+		gbak -R /etc/firebird/security.gbk /etc/firebird/security2.fdb
+		mv /etc/firebird/security.gdb /etc/firebird/security.gdb.old
+		rm /etc/firebird/security.gbk
 
 		# make sure they are readable only to firebird
-		chown firebird:firebird /etc/firebird/{isc4.*,security2.*}
-		chmod 660 /etc/firebird/{isc4.*,security2.*}
+		chown firebird:firebird /etc/firebird/{security.*,security2.*}
+		chmod 660 /etc/firebird/{security.*,security2.*}
 
 		einfo
-		einfo "Converted old isc4.gdb to security.fdb, isc4.gdb has been "
-		einfo "renamed to isc4.gdb.old. if you had previous security.fdb, "
-		einfo "it's backed to security.fdb.old (all under /etc/firebird)."
+		einfo "Converted old security.gdb to security2.fdb, security.gdb has been "
+		einfo "renamed to security.gdb.old. if you had previous security2.fdb, "
+		einfo "it's backed to security2.fdb.old (all under /etc/firebird)."
 		einfo
 	fi
 
