@@ -1,12 +1,15 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.10 2007/05/12 09:04:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.11 2007/05/12 09:53:42 ulm Exp $
+
+*ocaml-mode-3.09.3-r1 (12 May 2007)
 
   12 May 2007; Ulrich Mueller <ulm@gentoo.org> files/50ocaml-mode-gentoo.el,
-  ocaml-mode-3.08.1.ebuild, ocaml-mode-3.09.3.ebuild:
+  ocaml-mode-3.08.1.ebuild, -ocaml-mode-3.09.3.ebuild,
+  +ocaml-mode-3.09.3-r1.ebuild:
   Correct LICENSE. Use standard method of elisp-common.eclass for compiling.
   Install README* files. Remove redundant pkg_postinst and pkg_postrm
-  functions. Don't require caml-font in site file.
+  functions. Don't require caml-font in site file. Revision bump.
 
 *ocaml-mode-3.09.3 (30 Mar 2007)
 
