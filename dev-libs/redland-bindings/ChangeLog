@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/redland-bindings
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.7 2006/11/26 14:42:56 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.8 2007/05/12 12:59:56 phreak Exp $
+
+*redland-bindings-1.0.6.1 (12 May 2007)
+
+  12 May 2007; Christian Heim <phreak@gentoo.org> metadata.xml,
+  +redland-bindings-1.0.6.1.ebuild:
+  Version bump, assigning dev-libs/redland-bindings to myself. Fixing the
+  remaining ebuild.badheader.
 
 *redland-bindings-1.0.5.1 (26 Nov 2006)
 
