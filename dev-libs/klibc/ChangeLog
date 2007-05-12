@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.39 2007/05/12 02:04:03 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.40 2007/05/12 11:00:11 phreak Exp $
+
+  12 May 2007; Christian Heim <phreak@gentoo.org> klibc-1.4.13.ebuild:
+  Fixing the permissions bug (#178053 - thanks to Tobias Sager <moixa at
+  gmx.ch>), hopefully fixing any further issues.
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd
