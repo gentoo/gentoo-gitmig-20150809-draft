@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.04.00.ebuild,v 1.1 2007/05/08 10:53:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.04.00.ebuild,v 1.2 2007/05/12 13:28:14 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -37,9 +37,6 @@ src_unpack() {
 	cd ${S}
 
 	if kernel_is 2 6; then
-		#if [ "$KV_PATCH" -lt "17" ] ; then
-		#	epatch ${FILESDIR}/gfs-kernel-1.04.00-pre2.6.17-compilefix.patch || die
-		#fi
 		if [ "$KV_PATCH" -lt "18" ] ; then
 			sed -i \
 				-e 's|utsrelease.h|version.h|g' \

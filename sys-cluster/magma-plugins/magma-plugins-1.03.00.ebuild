@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.03.00.ebuild,v 1.4 2007/03/09 11:15:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.03.00.ebuild,v 1.5 2007/05/12 13:30:01 xmerlin Exp $
 
 CLUSTER_RELEASE="1.03.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
@@ -11,7 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 #IUSE="nogulm"
 IUSE=""
 

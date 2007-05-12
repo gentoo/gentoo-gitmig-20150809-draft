@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.11 2007/03/09 14:48:47 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.12 2007/05/12 13:31:38 xmerlin Exp $
 
 inherit linux-mod linux-info
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/linux-sources-2.6.16"
@@ -35,9 +35,7 @@ src_unpack() {
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -ge "18" ] ; then
 			epatch ${FILESDIR}/${PN}-remove-devfs-support.patch || die
-		fi
 
-		if [ "$KV_PATCH" -ge "18" ] ; then
 			sed -i \
 				-e 's|version.h|utsrelease.h|g' \
 				configure \
