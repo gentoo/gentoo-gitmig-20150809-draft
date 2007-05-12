@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.35.ebuild,v 1.7 2007/03/05 11:59:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.35.ebuild,v 1.8 2007/05/12 03:10:55 chtekk Exp $
 
 inherit perl-module
 
@@ -11,19 +11,14 @@ HOMEPAGE="http://www.masonhq.com/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~alpha amd64 ppc sparc x86"
-IUSE="apache2 modperl doc"
+IUSE="modperl doc"
 SRC_TEST="do"
 
 DEPEND="!modperl? ( virtual/perl-CGI )
 	modperl? (
-		!apache2? (
-			=net-www/apache-1*
-			>=www-misc/libapreq-1.0-r2
-			<www-apache/mod_perl-2 )
-		apache2? (
-			>=net-www/apache-2
-			www-misc/libapreq2
-			>=www-apache/mod_perl-2 )
+		>=net-www/apache-2
+		www-misc/libapreq2
+		>=www-apache/mod_perl-2
 	)
 	>=dev-perl/Params-Validate-0.7
 	>=dev-perl/module-build-0.28
@@ -46,13 +41,7 @@ perl-module_src_prep() {
 		sleep 5
 	fi
 	# rendhalver - needed to set an env var for the build script so it finds our apache.
-	if use apache2; then
-		APACHE="/usr/sbin/apache2"
-	else
-		APACHE="/usr/sbin/apache"
-	fi
-
-	APACHE="${APACHE}" perl ${S}/Build.PL installdirs=vendor destdir=${D} ${myconf}
+	APACHE="/usr/sbin/apache2" perl ${S}/Build.PL installdirs=vendor destdir=${D} ${myconf}
 }
 
 src_install () {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.65 2007/03/05 11:59:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.66 2007/05/12 03:10:55 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> HTML-Mason-1.32.ebuild,
+  HTML-Mason-1.33.ebuild, HTML-Mason-1.35.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> HTML-Mason-1.35.ebuild:
   Stable on x86, bug #169152.
