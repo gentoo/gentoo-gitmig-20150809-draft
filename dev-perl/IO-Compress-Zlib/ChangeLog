@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Compress-Zlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Zlib/ChangeLog,v 1.15 2007/05/05 17:52:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Zlib/ChangeLog,v 1.16 2007/05/12 06:43:45 kumba Exp $
+
+  12 May 2007; Joshua Kinard <kumba@gentoo.org>
+  IO-Compress-Zlib-2.004.ebuild:
+  Stable on mips.
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   IO-Compress-Zlib-2.004.ebuild:
