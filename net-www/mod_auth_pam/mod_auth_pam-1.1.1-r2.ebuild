@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r2.ebuild,v 1.2 2007/01/20 11:16:56 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r2.ebuild,v 1.3 2007/05/12 10:57:59 chtekk Exp $
 
 inherit eutils apache-module
 
@@ -15,13 +15,8 @@ IUSE=""
 DEPEND="sys-libs/pam"
 RDEPEND="${DEPEND}"
 
-APXS1_ARGS="-c ${PN}.c -lpam"
 APXS2_ARGS="-c ${PN}.c -lpam"
-
 APACHE2_EXECFILES=".libs/mod_auth_sys_group.so"
-
-APACHE1_MOD_CONF="10_${PN}_ap1"
-APACHE1_MOD_DEFINE="AUTH_PAM"
 
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="AUTH_PAM"
@@ -30,30 +25,26 @@ DOCFILES="INSTALL README doc/*"
 
 need_apache
 
-SRC_URI="apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz )
-		!apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${P}.tar.gz )"
+SRC_URI="http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz"
 
-use apache2 && S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	use apache2 || epatch "${FILESDIR}/${P}-compile-fix.patch"
-	use apache2 && epatch "${FILESDIR}/${P}-service_name.patch"
-	use apache2 || sed -i -e 's/servicename = "httpd"/servicename = "apache"/' "${PN}.c"
+	epatch "${FILESDIR}/${P}-service_name.patch"
 }
 
 src_compile() {
 	apache-module_src_compile
-	use apache2 && ${APXS2} -c mod_auth_sys_group.c
+	${APXS2} -c mod_auth_sys_group.c
 }
 
 src_install() {
 	apache-module_src_install
 	insinto /etc/pam.d
-	use apache2 && newins "${FILESDIR}/apache2.pam" apache2
-	use apache2 || newins "${FILESDIR}/apache2.pam" apache
+	newins "${FILESDIR}/apache2.pam" apache2
 }
 
 pkg_postinst() {

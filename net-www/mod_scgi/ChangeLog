@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_scgi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.17 2007/01/14 19:59:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.18 2007/05/12 11:00:59 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> mod_scgi-1.10.ebuild:
+  Remove Apache1 support, fix Apache2 support.
 
   14 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
   -files/1.2/20_mod_scgi.conf, files/20_mod_scgi.conf, -mod_scgi-1.2.ebuild,
