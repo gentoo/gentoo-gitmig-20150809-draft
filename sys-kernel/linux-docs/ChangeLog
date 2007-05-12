@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-docs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.11 2006/11/13 00:03:23 josejx Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.12 2007/05/12 02:23:53 dsd Exp $
+
+  12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Remove kernel herd from metadata
 
   13 Nov 2006; Joseph Jezak <josejx@gentoo.org> linux-docs-2.6.16.ebuild:
   Marked ppc stable for bug #154904.
