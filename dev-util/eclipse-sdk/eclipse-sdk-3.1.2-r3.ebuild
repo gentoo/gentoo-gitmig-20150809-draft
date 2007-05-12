@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r3.ebuild,v 1.2 2007/01/29 18:44:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r3.ebuild,v 1.3 2007/05/12 18:51:24 wltjr Exp $
 
 inherit eutils java-pkg java-utils flag-o-matic check-reqs
 

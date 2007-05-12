@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.3 2007/05/05 16:58:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.4 2007/05/12 18:51:24 wltjr Exp $
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -14,7 +14,7 @@ IUSE="branding cairo gnome opengl seamonkey "
 SLOT="3.2"
 LICENSE="EPL-1.0"
 # TODO might be able to have ia64 and ppc64 support
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 S="${WORKDIR}"
 
 COMMON_DEP="
