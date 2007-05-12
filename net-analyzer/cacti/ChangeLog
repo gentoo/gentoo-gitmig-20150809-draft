@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.94 2007/04/19 18:28:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.95 2007/05/12 16:44:26 pva Exp $
+
+  12 May 2007; <pva@gentoo.org> cacti-0.8.6j-r4.ebuild:
+  php should be compiled with snmp for cacti.
 
   19 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   cacti-0.8.6j-r4.ebuild:

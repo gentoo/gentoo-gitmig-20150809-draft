@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r4.ebuild,v 1.4 2007/04/19 18:28:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r4.ebuild,v 1.5 2007/05/12 16:44:26 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -63,9 +63,9 @@ pkg_setup() {
 	webapp_pkg_setup
 	has_php
 	if [ $PHP_VERSION = 5 ] ; then
-		require_php_with_use cli mysql xml
+		require_php_with_use cli mysql xml snmp
 	elif [ $PHP_VERSION = 4 ] ; then
-		require_php_with_use cli mysql xml expat
+		require_php_with_use cli mysql xml snmp expat
 	fi
 	use bundled-adodb || require_php_with_use sockets
 }
