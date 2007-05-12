@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.28 2007/05/11 23:48:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.29 2007/05/12 09:06:31 beandog Exp $
+
+  12 May 2007; Steve Dibb <beandog@gentoo.org> dvipdfmx-20050831.ebuild:
+  amd64 stable, bug 170299
 
 *dvipdfmx-20070409 (11 May 2007)
 

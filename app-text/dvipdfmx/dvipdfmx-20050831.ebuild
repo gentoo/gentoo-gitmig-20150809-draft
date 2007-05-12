@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20050831.ebuild,v 1.1 2006/11/14 03:54:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20050831.ebuild,v 1.2 2007/05/12 09:06:31 beandog Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/current/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64 ~ppc ~sparc"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/tetex
 	virtual/ghostscript
@@ -61,7 +61,7 @@ src_install() {
 	dosym /opt/Acroread7/Resource /usr/share/texmf/fonts/cmap/Acroread7
 	dosym /usr/share/xpdf /usr/share/texmf/fonts/cmap/xpdf
 
-	dodoc BUGS ChangeLog FONTMAP INSTALL README TODO
+	dodoc BUGS ChangeLog FONTMAP README TODO
 }
 
 pkg_postinst() {
