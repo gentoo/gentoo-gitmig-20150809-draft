@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.7 2007/04/28 21:48:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.8 2007/05/12 03:52:33 chtekk Exp $
 
 inherit eutils
 
@@ -12,11 +12,10 @@ SRC_URI="mirror://sourceforge/skunkweb/${MY_P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="apache apache2 doc"
+IUSE="apache2 doc"
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
-		apache2? ( >=net-www/apache-2.0.47 )
-		!apache2? ( apache? ( <=net-www/apache-2 ) )"
+		apache2? ( >=net-www/apache-2.0.47 )"
 
 pkg_setup() {
 	enewgroup skunkweb
@@ -25,14 +24,10 @@ pkg_setup() {
 
 src_compile() {
 	local myconf
-	if use apache2; then
+	if use apache2 ; then
 		myconf="${myconf} --with-apxs=/usr/sbin/apxs2"
 	else
-		if use apache; then
-			myconf="${myconf} --with-apxs=/usr/sbin/apxs"
-		else
-			myconf="${myconf} --without-mod_skunkweb"
-		fi
+		myconf="${myconf} --without-mod_skunkweb"
 	fi
 	econf \
 		--with-user=skunkweb \
@@ -54,18 +49,11 @@ src_compile() {
 src_install() {
 	INSTALLING="yes"
 	make DESTDIR=${D} APXSFLAGS="-c" install || die
-	if use apache2; then
+	if use apache2 ; then
 		exeinto /usr/lib/apache2-extramodules
 		doexe SkunkWeb/mod_skunkweb/.libs/mod_skunkweb.so
 		insinto /etc/apache2/conf/modules.d
 		newins SkunkWeb/mod_skunkweb/httpd_conf.stub mod_skunkweb.conf
-	else
-		if use apache; then
-			exeinto /usr/lib/apache-extramodules
-			doexe SkunkWeb/mod_skunkweb/mod_skunkweb.so
-			insinto /etc/apache/conf/addon-modules
-			newins SkunkWeb/mod_skunkweb/httpd_conf.stub mod_skunkweb.conf
-		fi
 	fi
 	# dirs --------------------------------------------------------------
 	mkdir -p ${D}/var/{lib,log}/${PN}

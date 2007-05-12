@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0-r1.ebuild,v 1.7 2007/04/28 17:29:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0-r1.ebuild,v 1.8 2007/05/12 03:52:33 chtekk Exp $
 
 inherit eutils apache-module
 
@@ -10,20 +10,17 @@ SRC_URI="mirror://sourceforge/skunkweb/${P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="apache2 doc"
+IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
 		app-admin/sudo"
 RDEPEND="${DEPEND}"
 
-APACHE1_MOD_FILE="${S}/SkunkWeb/mod_skunkweb/mod_skunkweb.so"
 APACHE2_MOD_FILE="${S}/SkunkWeb/mod_skunkweb/.libs/mod_skunkweb.so"
 
-APACHE1_MOD_DEFINE="SKUNKWEB"
 APACHE2_MOD_DEFINE="SKUNKWEB"
 
-APACHE1_MOD_CONF="100_mod_skunkweb"
 APACHE2_MOD_CONF="100_mod_skunkweb"
 
 need_apache
@@ -34,9 +31,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local apxs
-	use apache2 && apxs="${APXS2}"
-	use apache2 || apxs="${APXS1}"
+	local apxs="${APXS2}"
 
 	econf \
 		--with-user=skunkweb \

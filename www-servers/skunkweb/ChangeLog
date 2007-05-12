@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.16 2007/04/28 17:29:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.17 2007/05/12 03:52:33 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> skunkweb-3.4.0.ebuild,
+  skunkweb-3.4.0-r1.ebuild, skunkweb-3.4.1.ebuild, skunkweb-3.4.3.ebuild:
+  Apache 1.X masking (fix ebuilds to not require apache-1*).
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> skunkweb-3.4.0-r1.ebuild,
   skunkweb-3.4.1.ebuild, skunkweb-3.4.3.ebuild:
