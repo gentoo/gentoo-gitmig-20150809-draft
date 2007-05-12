@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r2.ebuild,v 1.4 2007/05/10 11:53:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r2.ebuild,v 1.5 2007/05/12 13:32:08 armin76 Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.buzzard.org.uk/toshiba/downloads/toshutils-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-ppc ~x86"
+KEYWORDS="-ppc x86"
 IUSE="gtk X"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1* )
