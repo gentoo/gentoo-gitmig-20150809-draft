@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-he
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.10 2007/05/07 21:07:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.11 2007/05/12 10:34:53 corsair Exp $
+
+  12 May 2007; Markus Rothe <corsair@gentoo.org> aspell-he-1.0.0.ebuild:
+  Added ~ppc64; bug #147568
 
 *aspell-he-1.0.0 (07 May 2007)
 

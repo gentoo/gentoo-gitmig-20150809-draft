@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.10 2007/01/22 08:06:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.11 2007/05/12 10:30:49 corsair Exp $
+
+  12 May 2007; Markus Rothe <corsair@gentoo.org>
+  aspell-it-2.2.20050523.ebuild:
+  Added ~ppc64; bug #147568
 
   22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   aspell-it-2.2.20050523.ebuild:
