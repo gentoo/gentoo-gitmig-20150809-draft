@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.458 2007/05/08 19:28:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.459 2007/05/12 10:53:10 corsair Exp $
+
+  12 May 2007; Markus Rothe <corsair@gentoo.org> kdelibs-3.5.6-r8.ebuild:
+  Added ~ppc64; bug #147568
 
   08 May 2007; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.5.5-r10.ebuild:
   Restore kdelibs-3.5.5-r10.
