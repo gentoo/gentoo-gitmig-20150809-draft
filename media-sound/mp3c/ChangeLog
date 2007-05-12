@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3c
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.26 2007/05/12 18:29:16 nixnut Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.27 2007/05/12 19:24:41 aballier Exp $
+
+  12 May 2007; Alexis Ballier <aballier@gentoo.org> -mp3c-0.29-r1.ebuild:
+  Cleanup old version
 
   12 May 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 157857
