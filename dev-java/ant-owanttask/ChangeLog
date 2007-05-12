@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.24 2007/05/06 07:51:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.25 2007/05/12 18:25:22 wltjr Exp $
+
+  12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -ant-owanttask-1.1-r11.ebuild, ant-owanttask-1.1-r12.ebuild:
+  Stable on amd64, bug #176856. Removed older version in same slot.
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ant-owanttask-1.1-r12.ebuild:
