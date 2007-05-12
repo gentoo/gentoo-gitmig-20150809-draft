@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.35 2007/04/20 04:29:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.36 2007/05/12 10:57:28 vapier Exp $
+
+*portmap-6.0 (12 May 2007)
+
+  12 May 2007; Mike Frysinger <vapier@gentoo.org> +portmap-6.0.ebuild:
+  Version bump.
 
 *portmap-9999 (20 Apr 2007)
 
