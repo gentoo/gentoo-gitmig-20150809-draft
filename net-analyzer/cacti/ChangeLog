@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.96 2007/05/12 18:00:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.97 2007/05/12 23:55:28 chtekk Exp $
+
+  12 May 2007; Luca Longinotti <chtekk@gentoo.org> cacti-0.8.6i-r1.ebuild,
+  cacti-0.8.6j-r4.ebuild:
+  Fix bug #178258 (remove apache1 support).
 
   12 May 2007; <pva@gentoo.org> ChangeLog:
   I was too fast in my previous bump. cacti works with snmp utilities fine
