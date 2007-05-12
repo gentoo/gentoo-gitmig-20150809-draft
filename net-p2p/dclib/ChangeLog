@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.73 2007/03/13 17:52:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.74 2007/05/12 13:34:19 armin76 Exp $
+
+*dclib-0.3.9 (12 May 2007)
+
+  12 May 2007; Raúl Porcel <armin76@gentoo.org> +dclib-0.3.9.ebuild:
+  Version bump, bug 178115
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> dclib-0.3.8.ebuild:
   Fix HOMEPAGE
