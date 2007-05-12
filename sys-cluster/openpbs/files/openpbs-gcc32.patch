@@ -1,8 +1,0 @@
---- OpenPBS_2_3_16/buildutils/exclude_script	1998-10-14 23:46:20.000000000 +0100
-+++ OpenPBS_2_3_16-patched/buildutils/exclude_script	2003-02-17 13:46:22.000000000 +0000
-@@ -1,3 +1,5 @@
- / \/usr\/include\//d
- / \/usr\/local\/lib\//d
- / \/gcc-lib\//d
-+/ \<built-in>//d
-+/ \<command//d
