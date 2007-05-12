@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.4 2007/05/11 19:42:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.5 2007/05/12 08:25:44 aballier Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -113,6 +113,9 @@ src_install() {
 		echo "TEXINPUTS=/usr/$(get_libdir)/ocaml/ocamldoc:" > "${T}"/99ocamldoc
 		doenvd "${T}"/99ocamldoc
 	fi
+
+	# Install ocaml-rebuild.sh script rather than keeping it in $PORTDIR
+	dosbin "${FILESDIR}/ocaml-rebuild.sh"
 }
 
 pkg_postinst() {
@@ -126,7 +129,7 @@ pkg_postinst() {
 	elog "OCaml is not binary compatible from version to version, so you (may)"
 	elog "need to rebuild all packages depending on it, that are actually"
 	elog "installed on your system. To do so, you can run:"
-	elog "sh ${FILESDIR}/ocaml-rebuild.sh [-h | emerge options]"
+	elog "/usr/sbin/ocaml-rebuild.sh [-h | emerge options]"
 	elog "Which will call emerge on all old packages with the given options"
 	echo
 }
