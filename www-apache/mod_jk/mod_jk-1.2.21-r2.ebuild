@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.21-r2.ebuild,v 1.2 2007/03/08 19:16:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.21-r2.ebuild,v 1.3 2007/05/13 20:05:10 chtekk Exp $
 
 inherit apache-module autotools
 
@@ -18,10 +18,6 @@ IUSE=""
 
 S="${WORKDIR}/${MY_P}/native"
 
-APACHE1_MOD_FILE="${S}/apache-1.3/${PN}.so"
-APACHE1_MOD_CONF="88_${PN}"
-APACHE1_MOD_DEFINE="JK"
-
 APACHE2_MOD_FILE="${S}/apache-2.0/${PN}.so"
 APACHE2_MOD_CONF="88_${PN}"
 APACHE2_MOD_DEFINE="JK"
@@ -38,12 +34,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local apxs
-	use apache2 && apxs="${APXS2}"
-	use apache2 || apxs="${APXS1}"
-
 	econf \
-		--with-apxs=${apxs} \
+		--with-apxs=${APXS2} \
 		--with-apr-config=/usr/bin/apr-config \
 		|| die "econf failed"
 	emake LIBTOOL="/bin/sh $(pwd)/libtool --silent" || die "emake failed"
@@ -56,11 +48,6 @@ src_install() {
 
 	# call the nifty default src_install :-)
 	apache-module_src_install
-
-	if ! use apache2 ; then
-		sed -i -e 's:/apache2/:/apache/:' "${D}${APACHE_CONFDIR}/modules.d/88_${PN}.conf" \
-			|| die "Could not update jk-workers.properties for apache"
-	fi
 }
 
 pkg_postinst() {
