@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.18 2007/04/21 15:36:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.19 2007/05/13 16:16:26 graaff Exp $
+
+*daemons-1.0.5 (13 May 2007)
+
+  13 May 2007; Hans de Graaff <graaff@gentoo.org> -daemons-0.4.2.ebuild,
+  +daemons-1.0.5.ebuild:
+  Version bump: thanks to Jochen Schalanda in #177159.
+  
+  Changes in this version:
+  * Applied patch that causes daemons to use '/var/log' as logfile 
+    directory if you use :dir_mode = :system (thanks to Han Holl).
+  * Daemons should now work with Ruby 1.9 (at least the basic features).
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> daemons-1.0.4.ebuild:
   ia64 stable
