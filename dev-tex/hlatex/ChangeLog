@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/hlatex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.9 2007/03/13 00:23:10 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.10 2007/05/13 03:18:27 matsuu Exp $
+
+*hlatex-1.0.1 (13 May 2007)
+
+  13 May 2007; MATSUU Takuto <matsuu@gentoo.org> +hlatex-1.0.1.ebuild:
+  Version bumped, bug #99059.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
