@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgtksourceviewmm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/ChangeLog,v 1.4 2007/02/06 23:22:22 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/ChangeLog,v 1.5 2007/05/13 18:31:47 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *libgtksourceviewmm-0.3.0-r1 (06 Feb 2007)
 
