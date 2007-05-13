@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.84.ebuild,v 1.4 2007/02/27 12:12:04 mrness Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.86.ebuild,v 1.1 2007/05/13 16:56:58 mrness Exp $
 
 DESCRIPTION="HTTP AntiVirus Proxy"
 HOMEPAGE="http://www.server-side.de/"
@@ -10,24 +8,19 @@ SRC_URI="http://www.server-side.de/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="clamav ssl"
 
-DEPEND="clamav? ( app-antivirus/clamav )"
+DEPEND="clamav? ( >=app-antivirus/clamav-0.90 )"
 
 pkg_setup() {
 	enewgroup havp
 	enewuser havp -1 -1 /etc/havp havp
 }
 
-src_unpack() {
-	unpack ${A}
-
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-}
-
 src_compile() {
-	econf $(use_enable clamav) \
+	econf --localstatedir=/var \
+		$(use_enable clamav) \
 		$(use_enable ssl ssl-tunnel) || die "configure failed"
 	emake || die "make failed"
 }
@@ -63,5 +56,12 @@ pkg_postinst() {
 		ewarn "      HTTPS pages will not be scanned for viruses!"
 		ewarn "      It is impossible to decrypt data sent through SSL connections without knowing"
 		ewarn "      the private key of the used certificate."
+	fi
+
+	if use clamav; then
+		echo
+		ewarn "If you plan to use clamav daemon, you should make sure clamav user can read"
+		ewarn "/var/tmp/havp content. This can be accomplished by enabling AllowSupplementaryGroups"
+		ewarn "in /etc/clamd.conf and adding clamav user to the havp group."
 	fi
 }
