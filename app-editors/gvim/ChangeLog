@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.234 2007/05/13 04:07:05 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.235 2007/05/13 06:32:52 kumba Exp $
+
+  13 May 2007; Joshua Kinard <kumba@gentoo.org> gvim-7.0.235.ebuild:
+  Stable on mips, per #176464.
 
   13 May 2007; Mike Kelly <pioto@gentoo.org> gvim-7.0.17.ebuild,
   gvim-7.0.174.ebuild, gvim-7.0.235.ebuild:
