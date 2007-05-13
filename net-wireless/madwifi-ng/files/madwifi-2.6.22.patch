@@ -1,0 +1,82 @@
+diff -ur madwifi-0.9.3.orig/ath/if_ath_pci.c madwifi-0.9.3/ath/if_ath_pci.c
+--- madwifi-0.9.3.orig/ath/if_ath_pci.c	2007-01-22 04:07:30.000000000 +0100
++++ madwifi-0.9.3/ath/if_ath_pci.c	2007-05-13 16:12:59.000000000 +0200
+@@ -207,7 +207,7 @@
+ 
+ 	pci_set_drvdata(pdev, dev);
+ 
+-	if (request_irq(dev->irq, ath_intr, SA_SHIRQ, dev->name, dev)) {
++	if (request_irq(dev->irq, ath_intr, IRQF_SHARED, dev->name, dev)) {
+ 		printk(KERN_WARNING "%s: request_irq failed\n", dev->name);
+ 		goto bad3;
+ 	}
+diff -ur madwifi-0.9.3.orig/net80211/ieee80211_input.c madwifi-0.9.3/net80211/ieee80211_input.c
+--- madwifi-0.9.3.orig/net80211/ieee80211_input.c	2007-02-02 21:01:51.000000000 +0100
++++ madwifi-0.9.3/net80211/ieee80211_input.c	2007-05-13 16:17:28.000000000 +0200
+@@ -1127,8 +1127,8 @@
+ 		}
+ 		if (skb1 != NULL) {
+ 			skb1->dev = dev;
+-			skb1->mac.raw = skb1->data;
+-			skb1->nh.raw = skb1->data + sizeof(struct ether_header);
++			skb1->mac_header = skb1->data;
++			skb1->network_header = skb1->data + sizeof(struct ether_header);
+ 			skb1->protocol = __constant_htons(ETH_P_802_2);
+ 			/* XXX insert vlan tag before queue it? */
+ 			dev_queue_xmit(skb1);
+@@ -2250,7 +2250,7 @@
+ 		if (skb1 == NULL)
+ 			return;
+ 		skb1->dev = dev;
+-		skb1->mac.raw = skb1->data;
++		skb1->mac_header = skb1->data;
+ 		skb1->ip_summed = CHECKSUM_NONE;
+ 		skb1->pkt_type = PACKET_OTHERHOST;
+ 		skb1->protocol = __constant_htons(0x0019);  /* ETH_P_80211_RAW */
+@@ -2525,7 +2525,7 @@
+ 	
+ 	skb->dev = dev;
+ 	skb->protocol = eth_type_trans(skb, dev);
+-	skb->mac.raw = skb->data;
++	skb->mac_header = skb->data;
+ 	ieee80211_deliver_data(ni, skb);
+ 	return;
+ }
+@@ -3691,14 +3691,14 @@
+ {
+ 	struct ethhdr *eth;
+ 	
+-	skb->mac.raw=skb->data;
++	skb->mac_header=skb->data;
+ 	skb_pull(skb, ETH_HLEN);
+ 	/*
+ 	 * NB: mac.ethernet is replaced in 2.6.9 by eth_hdr but
+ 	 *     since that's an inline and not a define there's
+ 	 *     no easy way to do this cleanly.
+ 	 */
+-	eth = (struct ethhdr *)skb->mac.raw;
++	eth = (struct ethhdr *)skb->mac_header;
+ 	
+ 	if (*eth->h_dest & 1)
+ 		if (memcmp(eth->h_dest, dev->broadcast, ETH_ALEN) == 0)
+diff -ur madwifi-0.9.3.orig/net80211/ieee80211_monitor.c madwifi-0.9.3/net80211/ieee80211_monitor.c
+--- madwifi-0.9.3.orig/net80211/ieee80211_monitor.c	2007-02-15 00:45:48.000000000 +0100
++++ madwifi-0.9.3/net80211/ieee80211_monitor.c	2007-05-13 16:18:25.000000000 +0200
+@@ -373,7 +373,7 @@
+ 		if (vap->iv_monitor_txf_len && tx) {
+ 			/* truncate transmit feedback packets */
+ 			skb_trim(skb1, vap->iv_monitor_txf_len);
+-			skb1->nh.raw = skb1->data;
++			skb1->network_header = skb1->data;
+ 		}
+ 		switch (vap->iv_dev->type) {
+ 		case ARPHRD_IEEE80211:
+@@ -555,7 +555,7 @@
+ 				skb_trim(skb1, skb1->len - IEEE80211_CRC_LEN);
+ 			}
+ 			skb1->dev = dev; /* NB: deliver to wlanX */
+-			skb1->mac.raw = skb1->data;
++			skb1->mac_header = skb1->data;
+ 			skb1->ip_summed = CHECKSUM_NONE;
+ 			skb1->pkt_type = pkttype;
+ 			skb1->protocol = __constant_htons(0x0019); /* ETH_P_80211_RAW */

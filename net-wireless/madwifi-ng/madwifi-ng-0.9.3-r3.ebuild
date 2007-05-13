@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3-r3.ebuild,v 1.1 2007/04/16 19:37:23 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3-r3.ebuild,v 1.2 2007/05/13 14:49:12 genstef Exp $
 
 inherit linux-mod
 
@@ -22,9 +22,9 @@ RDEPEND="!net-wireless/madwifi-old
 		net-wireless/wireless-tools
 		~net-wireless/madwifi-ng-tools-${PV:0:5}"
 
-CONFIG_CHECK="CRYPTO NET_RADIO SYSCTL"
+CONFIG_CHECK="CRYPTO WIRELESS_EXT SYSCTL"
 ERROR_CRYPTO="${P} requires Cryptographic API support (CONFIG_CRYPTO)."
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+ERROR_NET_RADIO="${P} requires CONFIG_WIRELESS_EXT selected by Wireless LAN drivers (non-hamradio) & Wireless Extensions"
 ERROR_SYSCTL="${P} requires Sysctl support (CONFIG_SYSCTL)."
 BUILD_TARGETS="all"
 MODULESD_ATH_PCI_DOCS="README"
@@ -58,6 +58,8 @@ src_unpack() {
 	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/onoe ath_rate/sample; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
+
+	kernel_is ge 2 6 22 && epatch ${FILESDIR}/madwifi-2.6.22.patch
 }
 
 src_install() {
