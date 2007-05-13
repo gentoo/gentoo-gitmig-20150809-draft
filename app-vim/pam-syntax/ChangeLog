@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/pam-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.20 2007/03/08 16:47:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.21 2007/05/13 18:32:43 yoswink Exp $
+
+  13 May 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  pam-syntax-20060424.ebuild:
+  Stable on alpha wrt #169089. Tested by Brian Evans <grknight2k@bluebottle.com>
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   pam-syntax-20060424.ebuild:
