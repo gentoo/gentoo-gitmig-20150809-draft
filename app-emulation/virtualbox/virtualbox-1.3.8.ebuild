@@ -34,6 +34,16 @@ RDEPEND="${RDEPEND}
 
 S=${WORKDIR}/vbox-ose-${PV}
 
+pkg_setup() {
+	# The VBoxSDL frontend needs media-libs/libsdl compiled 
+	# with USE flag X enabled (bug #177335)
+	if ! built_with_use media-libs/libsdl X; then
+		eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
+		eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
+		die "media-libs/libsdl should be compiled with the \"X\" USE flag."
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"

@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions alsa nowrapper sdk vboxbfe vditool"
+IUSE="additions nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
-	alsa? ( >=media-libs/alsa-lib-1.0.13 )"
+	>=media-libs/alsa-lib-1.0.13"
 RDEPEND="${RDEPEND}
 	additions? ( app-emulation/virtualbox-additions )"
 
@@ -34,6 +34,14 @@ BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
 
 pkg_setup() {
+	# The VBoxSDL frontend needs media-libs/libsdl compiled
+	# with USE flag X enabled (bug #177335)
+	if ! built_with_use media-libs/libsdl X; then
+		eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
+		eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
+		die "media-libs/libsdl should be compiled with the \"X\" USE flag."
+	fi
+
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 }
