@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.3 2007/04/30 09:19:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.4 2007/05/13 18:31:33 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   30 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> missingh-0.16.0.ebuild:
   Add missing deps on the new modular libs.
