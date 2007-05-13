@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.14 2007/05/13 14:19:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.1.ebuild,v 1.15 2007/05/13 14:22:15 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -74,8 +74,7 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	# Needed by some of the patches
-	WANT_AUTOCONF=2.1 eautoreconf || die "Failed running eautoreconf"
+	eautoreconf
 }
 
 src_compile() {
