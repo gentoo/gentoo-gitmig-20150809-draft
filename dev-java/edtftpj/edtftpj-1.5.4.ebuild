@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.5.4.ebuild,v 1.2 2007/05/13 17:13:24 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.5.4.ebuild,v 1.3 2007/05/13 17:16:54 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar lib/*.jar
 
-	use doc && java-pkg_dohtml -r build/doc/api
+	use doc && java-pkg_dojavadoc build/doc/api
 	use source && java-pkg_dosrc src/com
 
 	if use examples; then
@@ -43,5 +43,5 @@ src_install() {
 		doins demo/*.{java,txt} || die "Failed to install examples."
 	fi
 
-	dodoc doc/*.TXT doc/*.pdf
+	dodoc doc/*.TXT doc/*.pdf || die
 }
