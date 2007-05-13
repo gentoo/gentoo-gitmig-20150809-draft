@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/Perlbal-1.57.ebuild,v 1.1 2007/04/30 06:01:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/Perlbal-1.57.ebuild,v 1.2 2007/05/13 08:33:47 robbat2 Exp $
 
 inherit perl-module
 
 DESCRIPTION="Reverse-proxy load balancer and webserver"
-HOMEPAGE="http://search.cpan.org/search?query=Perlbal&mode=dist"
+HOMEPAGE="http://www.danga.com/perlbal/"
 SRC_URI="mirror://cpan/authors/id/B/BR/BRADFITZ/${P}.tar.gz"
 
 IUSE=""
