@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Perlbal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/ChangeLog,v 1.1 2007/04/30 06:01:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/ChangeLog,v 1.2 2007/05/13 08:18:36 robbat2 Exp $
+
+*Perlbal-1.58 (13 May 2007)
+
+  13 May 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/Perlbal-1.58-Use-saner-name-in-process-listing.patch,
+  +files/perlbal_conf.d_1.58, +files/perlbal_init.d_1.58,
+  +Perlbal-1.58.ebuild:
+  Patch perlbal to have a suitable cmdline in the process listing, and add an
+  init script now that it is possible.
 
 *Perlbal-1.57 (30 Apr 2007)
 
