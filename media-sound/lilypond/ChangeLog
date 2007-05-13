@@ -1,9 +1,19 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.50 2007/02/22 01:10:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.51 2007/05/13 15:12:07 hkbst Exp $
+
+*lilypond-2.10.23 (13 May 2007)
+
+  13 May 2007; Marijn Schouten <hkBst@gentoo.org> +lilypond-2.10.23.ebuild:
+  add 2.10.23
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
+
+*lilypond-2.10.16 (06 Feb 2007)
+
+  06 Feb 2007; Marijn Schouten <hkBst@gentoo.org> +lilypond-2.10.16.ebuild:
+  add lilypond-2.10.16
 
   28 Jan 2007; Marijn Schouten <hkBst@gentoo.org> metadata.xml:
   take over maintainership, fix metadata
