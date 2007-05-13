@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-nl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.2 2007/02/21 22:07:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.3 2007/05/13 18:28:40 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
