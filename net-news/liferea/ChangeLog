@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.98 2007/05/12 11:41:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.99 2007/05/13 17:51:22 beandog Exp $
+
+  13 May 2007; Steve Dibb <beandog@gentoo.org> liferea-1.0.24.ebuild:
+  amd64 stable
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> Manifest:
   Regen digest to remove unused entry.
