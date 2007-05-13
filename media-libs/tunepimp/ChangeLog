@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.55 2007/05/06 15:02:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.56 2007/05/13 16:54:01 beandog Exp $
+
+  13 May 2007; Steve Dibb <beandog@gentoo.org> tunepimp-0.5.3.ebuild:
+  amd64 stable, security bug 176290
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   tunepimp-0.5.3.ebuild:
