@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.31 2007/05/12 03:47:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.32 2007/05/13 20:11:37 chtekk Exp $
 
 inherit multilib
 
@@ -226,7 +226,7 @@ need_apache2_2() {
 need_apache() {
 	debug-print-function $FUNCNAME $*
 
-	local supports20 supports22 supports2x
+	local supports2x supports20 supports22
 
 	if [[ $# -eq 0 ]] ; then
 		supports2x="yes"
@@ -242,7 +242,7 @@ need_apache() {
 	fi
 
 	if [[ "${supports20}" == "yes" ]] && [[ "${supports22}" == "yes" ]] ; then
-		supports2x="yes";
+		supports2x="yes"
 	fi
 
 	debug-print "supports20: ${supports20}"
@@ -256,6 +256,8 @@ need_apache() {
 	elif [[ "${supports22}" == "yes" ]] ; then
 		need_apache2_2
 	fi
+
+	uses_apache2
 }
 
 want_apache() {
