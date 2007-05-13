@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.7 2007/05/12 22:20:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.8 2007/05/13 20:53:06 armin76 Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-$( get_version_component_range 1-2 )
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gdbm ncurses tk latex X"
 
 DEPEND="tk? ( >=dev-lang/tk-3.3.3 )
