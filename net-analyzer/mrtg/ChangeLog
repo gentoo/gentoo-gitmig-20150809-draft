@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.75 2007/05/01 18:00:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.76 2007/05/13 13:41:33 cedk Exp $
+
+*mrtg-2.15.2 (13 May 2007)
+
+  13 May 2007; Cedric Krier <cedk@gentoo.org> +mrtg-2.15.2.ebuild:
+  Version bump
 
   01 May 2007; Marius Mauch <genone@gentoo.org> mrtg-2.14.5.ebuild,
   mrtg-2.15.0.ebuild, mrtg-2.15.1.ebuild:
