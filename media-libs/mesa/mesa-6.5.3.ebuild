@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.3.ebuild,v 1.1 2007/04/29 19:08:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.3.ebuild,v 1.2 2007/05/13 16:15:24 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability versionator
 
@@ -114,6 +114,9 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
+	# Bug #177329
+	epatch "${FILESDIR}/${P}-pthread.patch"
 
 	# FreeBSD 6.* doesn't have posix_memalign().
 	[[ ${CHOST} == *-freebsd6.* ]] && sed -i -e "s/-DHAVE_POSIX_MEMALIGN//" configs/freebsd{,-dri}
