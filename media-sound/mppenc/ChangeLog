@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mppenc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.7 2007/05/13 10:22:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.8 2007/05/13 15:14:52 nixnut Exp $
+
+  13 May 2007; nixnut <nixnut@gentoo.org> mppenc-1.16.ebuild:
+  Stable on ppc wrt bug 178218
 
   13 May 2007; Markus Rothe <corsair@gentoo.org> mppenc-1.16.ebuild:
   Added ~ppc64; bug #178214
