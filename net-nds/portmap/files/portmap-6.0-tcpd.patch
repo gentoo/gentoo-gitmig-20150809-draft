@@ -1,8 +1,11 @@
-Enable compile without tcp-wrappers, #178242.
+Enable compile without tcp-wrappers
 
-diff -Nur portmap_6.0.orig/pmap_check.c portmap_6.0/pmap_check.c
---- portmap_6.0.orig/pmap_check.c	2007-05-12 22:04:31.146962495 +0200
-+++ portmap_6.0/pmap_check.c	2007-05-12 22:05:14.938449291 +0200
+Patch by Timothy Redaelli <drizzt@gentoo.org>
+
+http://bugs.gentoo.org/178242
+
+--- portmap_6.0/pmap_check.c
++++ portmap_6.0/pmap_check.c
 @@ -44,7 +44,9 @@
  #include <netinet/in.h>
  #include <rpc/rpcent.h>
