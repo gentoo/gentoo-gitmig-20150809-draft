@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.30 2007/04/24 19:05:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.31 2007/05/13 18:32:19 aballier Exp $
+
+*spidermonkey-1.6 (13 May 2007)
+
+  13 May 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/spidermonkey-1.6-header.patch, +spidermonkey-1.6.ebuild:
+  Version bump
 
   24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   spidermonkey-1.5-r2.ebuild:
