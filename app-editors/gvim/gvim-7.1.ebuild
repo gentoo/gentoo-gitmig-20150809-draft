@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1_beta001.ebuild,v 1.1 2007/05/10 07:24:32 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.ebuild,v 1.1 2007/05/13 13:25:38 pioto Exp $
 
 inherit vim
 
-VIM_VERSION="7.1a"
+VIM_VERSION="7.1"
 VIM_GENTOO_PATCHES="vim-${VIM_VERSION}-gentoo-patches.tar.bz2"
-VIM_ORG_PATCHES="vim-patches-${PV}.tar.gz"
+#VIM_ORG_PATCHES="vim-patches-${PV}.tar.gz"
 GVIMRC_FILE_SUFFIX="-r1"
 
 SRC_URI="ftp://ftp.vim.org/pub/vim/unstable/unix/vim-${VIM_VERSION}.tar.bz2
-	mirror://gentoo/${VIM_ORG_PATCHES}
 	mirror://gentoo/${VIM_GENTOO_PATCHES}"
+	#mirror://gentoo/${VIM_ORG_PATCHES}
 
 S="${WORKDIR}/vim${VIM_VERSION/.}"
 DESCRIPTION="GUI version of the Vim text editor"
