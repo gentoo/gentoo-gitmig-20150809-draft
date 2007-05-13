@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.274 2007/05/13 13:19:01 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.275 2007/05/13 13:29:34 pioto Exp $
+
+  13 May 2007; Mike Kelly <pioto@gentoo.org> -vim-7.0.17.ebuild:
+  Remove old version.
 
 *vim-7.1 (13 May 2007)
 
