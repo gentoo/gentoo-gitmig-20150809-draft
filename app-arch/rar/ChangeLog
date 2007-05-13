@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.43 2007/02/12 16:48:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.44 2007/05/13 17:51:25 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org> rar-3.7.0_beta1.ebuild:
   stable on amd64; security bug 166440
