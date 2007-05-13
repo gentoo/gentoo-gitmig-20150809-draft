@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/frodo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.9 2007/01/25 22:04:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.10 2007/05/13 18:28:44 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> frodo-4.1b.ebuild:
   Replacing einfo with elog
