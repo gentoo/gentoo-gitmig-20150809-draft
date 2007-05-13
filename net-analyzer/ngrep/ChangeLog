@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.39 2007/04/24 13:12:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.40 2007/05/13 17:24:16 beandog Exp $
+
+  13 May 2007; Steve Dibb <beandog@gentoo.org> ngrep-1.45.ebuild:
+  amd64 stable
 
   24 Apr 2007; Jeroen Roovers <jer@gentoo.org> ngrep-1.45.ebuild:
   Stable for HPPA too.
