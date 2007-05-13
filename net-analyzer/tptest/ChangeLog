@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tptest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.8 2007/02/20 00:44:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.9 2007/05/13 17:39:02 beandog Exp $
+
+  13 May 2007; Steve Dibb <beandog@gentoo.org> tptest-3.1.7.ebuild:
+  amd64 stable
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
