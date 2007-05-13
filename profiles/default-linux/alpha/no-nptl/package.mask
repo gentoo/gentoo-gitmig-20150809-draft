@@ -1,4 +1,12 @@
-# Bryan Øtergaard <kloeri@gentoo.org> (13 Feb 2007)
+# Gnome-2.18 masks (bug 176517)
+>=gnome-extra/at-spi/at-spi-1.18
+>=app-text/evince/evince-0.8
+>=gnome-base/libgnomekbd-2.18
+>=gnome-base/control-center-2.18
+>=gnome-base/gnome-applets-2.18
+>=gnome-base/gnome-screensaver-2.18
+
+# Bryan Østergaard <kloeri@gentoo.org> (13 Feb 2007)
 # Mask as linuxthreads are broken.
 >=sys-libs/glibc-2.5
 
