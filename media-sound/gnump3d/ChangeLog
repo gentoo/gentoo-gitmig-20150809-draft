@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.53 2007/04/20 19:29:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.54 2007/05/13 16:28:58 beandog Exp $
+
+  13 May 2007; Steve Dibb <beandog@gentoo.org> gnump3d-2.9.9.9.ebuild:
+  amd64 stable
 
   20 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gnump3d-2.9.9.9.ebuild:
