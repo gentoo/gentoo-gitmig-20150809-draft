@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.264 2007/05/01 21:17:42 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.265 2007/05/13 14:38:53 graaff Exp $
+
+*ruby-1.8.5_p2-r1 (13 May 2007)
+
+  13 May 2007; Hans de Graaff <graaff@gentoo.org> +ruby-1.8.5_p2-r1.ebuild:
+  Bump to get people to recompile ruby now that coreutils-6.7-r1 is stable
+  on most arches so that ruby properly picks up new location of /bin/install. 
+  See #159922 for details.
 
 *ruby-1.8.6-r1 (01 May 2007)
 
