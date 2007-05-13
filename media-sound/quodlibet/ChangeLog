@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.49 2007/03/29 08:20:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.50 2007/05/13 20:23:15 aballier Exp $
+
+*quodlibet-1.0 (13 May 2007)
+
+  13 May 2007; Alexis Ballier <aballier@gentoo.org> +quodlibet-1.0.ebuild:
+  Version bump, thanks to Kai Huuhko <kai.huuhko@gmail.com>, bug #177140, also
+  closing bug #171371
 
   29 Mar 2007; Markus Rothe <corsair@gentoo.org> quodlibet-0.24-r1.ebuild:
   Added ~ppc64; bug #172367
