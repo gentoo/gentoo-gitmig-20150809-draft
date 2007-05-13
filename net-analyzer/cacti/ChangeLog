@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.97 2007/05/12 23:55:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.98 2007/05/13 08:56:53 pva Exp $
+
+  13 May 2007; <pva@gentoo.org> cacti-0.8.6i-r1.ebuild,
+  cacti-0.8.6j-r4.ebuild:
+  lighttpd is stable on alpha and sparc so removing !archs from RDEPEND.
+  Actually remove snmp from php check, bug #178263.
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> cacti-0.8.6i-r1.ebuild,
   cacti-0.8.6j-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r4.ebuild,v 1.6 2007/05/12 23:55:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r4.ebuild,v 1.7 2007/05/13 08:56:53 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -33,9 +33,7 @@ want_apache
 need_php_cli
 need_php_httpd
 
-# alpha doesn't have lighttpd keyworded yet
-# sparc doesn't have a stable keyword for lighttpd yet
-RDEPEND="!alpha? ( !sparc? ( !apache2? ( www-servers/lighttpd ) ) )
+RDEPEND="!apache2? ( www-servers/lighttpd )
 	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
 	!bundled-adodb? ( dev-php/adodb )
@@ -63,9 +61,9 @@ pkg_setup() {
 	webapp_pkg_setup
 	has_php
 	if [ $PHP_VERSION = 5 ] ; then
-		require_php_with_use cli mysql xml snmp
+		require_php_with_use cli mysql xml
 	elif [ $PHP_VERSION = 4 ] ; then
-		require_php_with_use cli mysql xml snmp expat
+		require_php_with_use cli mysql xml expat
 	fi
 	use bundled-adodb || require_php_with_use sockets
 }
