@@ -1,6 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.15 2007/04/28 17:40:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.16 2007/05/13 23:00:45 kloeri Exp $
+
+# Gnome-2.18 masks (bug 176517)
+>=gnome-extra/at-spi/at-spi-1.18
+>=app-text/evince/evince-0.8
+>=gnome-base/libgnomekbd-2.18
+>=gnome-base/control-center-2.18
+>=gnome-base/gnome-applets-2.18
+>=gnome-base/gnome-screensaver-2.18
 
 # Hanno Boeck <hanno@gentoo.org> (28 Apr 2007)
 # Requires pygtk-2.10
