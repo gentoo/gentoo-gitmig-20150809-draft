@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 0.1/zprod-manager 7156 RMD160 741d53aa3d415f1180ff77ba1e57a2f8ab986be7 SHA1 0f395532015715bf29f939fd6e3e295be4fbdc68 SHA256 8038fb769486238e15d6a369ede8478c99442408026091988131f42f99a0608c
 MD5 6093a6000b6b8a6577e7948f0f180877 files/0.1/zprod-manager 7156
 RMD160 741d53aa3d415f1180ff77ba1e57a2f8ab986be7 files/0.1/zprod-manager 7156
@@ -33,16 +30,9 @@ MISC metadata.xml 314 RMD160 25181cde297628576a9545bea3a76601485bfaf3 SHA1 ac16b
 MD5 38cacf4270b8a100918bf328ed9154d3 metadata.xml 314
 RMD160 25181cde297628576a9545bea3a76601485bfaf3 metadata.xml 314
 SHA256 736baab77aea9c4da199c01e3cd6877c271bd02357ff9b41b537a2232c6e96d7 metadata.xml 314
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-zprod-manager-0.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-zprod-manager-0.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-zprod-manager-0.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-zprod-manager-0.3.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-zprod-manager-0.3.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-zprod-manager-0.3.1 1
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFFnt1Z5mJXAu5GbtIRAteHAJ9QKe6tphCnMzXSeO9l3iUqa23MggCeNPZ1
-q4i+Ej5bt/89Y95x4E0JKyM=
-=Vhfi
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zprod-manager-0.3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-zprod-manager-0.3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-zprod-manager-0.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zprod-manager-0.3.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-zprod-manager-0.3.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-zprod-manager-0.3.1 0
