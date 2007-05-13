@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.69 2007/03/26 07:28:20 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.70 2007/05/13 07:50:28 kumba Exp $
+
+  13 May 2007; Joshua Kinard <kumba@gentoo.org> logrotate-3.7.2.ebuild:
+  Stable on mips.
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> logrotate-3.7.1-r2.ebuild,
   logrotate-3.7.2.ebuild:
