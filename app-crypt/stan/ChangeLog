@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/stan
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.1 2006/10/23 06:07:24 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.2 2007/05/13 18:05:41 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
 *stan-0.4.1 (23 Oct 2006)
 

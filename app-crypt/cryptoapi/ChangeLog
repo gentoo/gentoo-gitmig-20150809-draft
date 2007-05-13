@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.15 2007/04/12 18:45:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.16 2007/05/13 18:05:41 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   12 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
   cryptoapi-2.4.7.0.ebuild:

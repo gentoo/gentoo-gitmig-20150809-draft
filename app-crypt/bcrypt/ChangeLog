@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bcrypt
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.7 2006/11/23 13:11:29 drizzt Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.8 2007/05/13 18:05:41 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   23 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
   +files/bcrypt-1.1-Makefile.patch, bcrypt-1.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.10 2007/04/15 19:52:27 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.11 2007/05/13 18:05:41 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
 *ophcrack-2.3.4 (15 Apr 2007)
 

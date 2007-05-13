@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pgpdump
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.9 2007/02/09 07:10:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.10 2007/05/13 18:05:42 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
