@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.1.ebuild,v 1.1 2007/05/13 18:45:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.1.ebuild,v 1.2 2007/05/13 19:10:27 genstef Exp $
 
 inherit toolchain-funcs
 
@@ -19,8 +19,8 @@ RDEPEND=""
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} powertop.c config.c -o powertop
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} powertop.c config.c -o powertop
+	echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} powertop.c config.c process.c -o powertop
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} powertop.c config.c process.c -o powertop
 }
 
 src_install() {
