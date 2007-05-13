@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r3.ebuild,v 1.6 2007/05/13 13:53:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r3.ebuild,v 1.7 2007/05/13 19:42:30 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2 eutils versionator
@@ -53,5 +53,5 @@ src_install() {
 	java-pkg_dojar build/*.jar
 	java-pkg_dolauncher ${PN} --main org.apache.xalan.xslt.Process
 	use doc && java-pkg_dohtml -r build/docs/*
-	use source && java-pkg_dosrc src/*
+	use source && java-pkg_dosrc src/org
 }
