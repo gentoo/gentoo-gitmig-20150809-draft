@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman-Server/files/gearmand-init.d-1.09,v 1.1 2007/05/13 02:18:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman-Server/files/gearmand-init.d-1.09,v 1.2 2007/05/13 08:10:05 robbat2 Exp $
 
 NAME="gearmand"
 BINARY="/usr/bin/gearmand"
@@ -12,23 +12,15 @@ start() {
 	# start-stop-daemon does not work properly in certain cases
 	# this hack should go away when bug #178274 is resolved.
 	ebegin "Starting $NAME"
-	${BINARY} ${GEARMAND_OPTS}
-	rc=$?
-	[ $rc -ne 0 ] && eend $rc
-	local i=0
-	# wait 4*500ms
-	while [ $i -lt 4 ] && ! [ -s $PIDFILE ]; do
-		sleep 0.5
-		i=$(($i+1))
-	done
-	# final check
-	start-stop-daemon --oknodo --start --pidfile="${PIDFILE}" \
+	start-stop-daemon --start --pidfile="${PIDFILE}" \
 		--exec ${BINARY} -- ${GEARMAND_OPTS}
 	eend $?
 }
+
 stop() {
 	ebegin "Stopping $NAME"
 	start-stop-daemon --stop --pidfile="${PIDFILE}"
 	eend $?
 }
+
 # vim: ft=gentoo-init-d:
