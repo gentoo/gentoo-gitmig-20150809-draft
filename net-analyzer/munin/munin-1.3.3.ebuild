@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.3.ebuild,v 1.2 2007/03/13 18:40:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.3.ebuild,v 1.3 2007/05/13 06:09:08 robbat2 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/munin/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="minimal munin-irc munin-dhcp munin-surfboard munin-apache munin-squid ssl"
+IUSE="doc minimal munin-irc munin-dhcp munin-surfboard munin-apache munin-squid ssl"
 
 # Upstream's listing of required modules is NOT correct!
 DEPEND_COM="dev-lang/perl
@@ -56,7 +56,7 @@ src_unpack() {
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.3.3-Makefile.patch
 	# Fix noise in the plugins
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.3.2-plugin-cleanup.patch
-	
+
 	# Merged by upstream
 	## Make it work with new versions of Rrdtool where : in COMMENT blocks must
 	## be escaped!
