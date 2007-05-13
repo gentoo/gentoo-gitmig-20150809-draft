@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/orinoco-sn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-sn/ChangeLog,v 1.1 2007/05/10 11:05:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-sn/ChangeLog,v 1.2 2007/05/13 07:02:17 genstef Exp $
+
+  13 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  orinoco-sn-0.13e_pre15.ebuild:
+  Make sure the user has a kernel >=2.6.20
 
 *orinoco-sn-0.13e_pre15 (10 May 2007)
 

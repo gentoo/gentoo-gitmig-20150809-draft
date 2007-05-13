@@ -34,10 +34,8 @@ MODULESD_ORINOCO_TMD_ENABLED="no"
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	if kernel_is lt 2 6 11; then
-		eerror
-		eerror "${P} requires kernel 2.6.11 or above."
-		eerror
+	if kernel_is lt 2 6 20; then
+		eerror "${P} requires kernel 2.6.20 or above."
 		die "Kernel version too old."
 	fi
 
