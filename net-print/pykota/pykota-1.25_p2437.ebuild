@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.1 2007/03/14 16:29:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.2 2007/05/13 09:28:29 genstef Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -17,6 +17,8 @@ IUSE="ldap mysql postgres snmp sqlite snmp xml"
 DEPEND="dev-lang/python
 	dev-python/egenix-mx-base
 	net-print/pkpgcounter
+	dev-python/chardet
+	dev-python/pkipplib
 	ldap?     ( dev-python/python-ldap )
 	mysql?    ( dev-python/mysql-python )
 	postgres? ( dev-db/postgresql dev-db/pygresql )
