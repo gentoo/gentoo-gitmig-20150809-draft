@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.8 2007/04/20 14:44:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.9 2007/05/13 18:23:19 nelchael Exp $
+
+  13 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  qdox-20050104-r1.ebuild:
+  Fix building qdox.
 
   20 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   qdox-20050104-r1.ebuild:
