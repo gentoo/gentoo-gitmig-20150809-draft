@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.112 2007/05/12 15:15:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.113 2007/05/13 15:53:51 nixnut Exp $
+
+  13 May 2007; nixnut <nixnut@gentoo.org> gpgme-1.1.4.ebuild:
+  Stable on ppc wrt bug 177745
 
   12 May 2007; Markus Rothe <corsair@gentoo.org> gpgme-1.1.4.ebuild:
   Stable on ppc64; bug #177745
