@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.24 2007/05/13 17:16:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.25 2007/05/13 17:18:06 betelgeuse Exp $
+
+  13 May 2007; Petteri Räty <betelgeuse@gentoo.org> edtftpj-1.5.4.ebuild:
+  Add app-arch/unzip to DEPEND.
 
   13 May 2007; Petteri Räty <betelgeuse@gentoo.org> edtftpj-1.5.4.ebuild:
   Switch to java-pkg_dojavadoc.
