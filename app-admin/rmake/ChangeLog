@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rmake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.11 2007/04/24 21:24:05 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.12 2007/05/13 08:08:11 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
 *rmake-1.0.8 (24 Apr 2007)
 

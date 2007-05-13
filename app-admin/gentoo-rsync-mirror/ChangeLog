@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.31 2007/01/24 14:19:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.32 2007/05/13 08:08:11 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org>
   gentoo-rsync-mirror-1.0-r4.ebuild, gentoo-rsync-mirror-1.0-r5.ebuild:

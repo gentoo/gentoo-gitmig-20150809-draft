@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/phpsyslogng
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/ChangeLog,v 1.5 2006/11/23 15:09:00 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/ChangeLog,v 1.6 2007/05/13 08:08:11 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> phpsyslogng-2.8.ebuild,
   phpsyslogng-2.8-r1.ebuild:

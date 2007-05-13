@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conary
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.15 2007/04/24 21:22:54 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.16 2007/05/13 08:08:11 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
 *conary-1.1.22 (24 Apr 2007)
 
