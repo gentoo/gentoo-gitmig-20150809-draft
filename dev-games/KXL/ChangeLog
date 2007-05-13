@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/KXL
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.7 2006/10/21 00:18:23 nyhm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.8 2007/05/13 20:42:28 tupone Exp $
+
+*KXL-1.1.7-r1 (13 May 2007)
+
+  13 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/KXL-1.1.7-amd64.patch, +KXL-1.1.7-r1.ebuild:
+  Fixing bug #148332 by Pacho Ramos
+  Patch are from debian. It regards 64bit, sound and autorepeat
 
   21 Oct 2006; Tristan Heaven <nyhm@gentoo.org> KXL-1.1.7.ebuild:
   HOMEPAGE update
