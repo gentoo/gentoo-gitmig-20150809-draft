@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0-r1.ebuild,v 1.2 2006/12/17 13:58:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0-r1.ebuild,v 1.3 2007/05/13 16:22:44 betelgeuse Exp $
 
 inherit pax-utils eutils java-vm-2
 
@@ -10,11 +10,7 @@ MY_PVA=6
 
 X86_AT="jdk-${MY_PVA}-dlj-linux-i586.bin"
 AMD64_AT="jdk-${MY_PVA}-dlj-linux-amd64.bin"
-if use x86; then
-	At=${X86_AT}
-elif use amd64; then
-	At=${AMD64_AT}
-fi
+
 DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
 HOMEPAGE="http://java.sun.com/javase/6/"
 SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
@@ -27,17 +23,16 @@ IUSE="X alsa nsplugin"
 
 RDEPEND="
 	sys-libs/glibc
+	x86? ( =virtual/libstdc++-3.3 )
 	alsa? ( media-libs/alsa-lib )
-	X? ( || ( ( x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXi
-				x11-libs/libXp
-				x11-libs/libXt
-				x11-libs/libXtst
-			  )
-				virtual/x11
-			)
-		)"
+	X? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXp
+		x11-libs/libXt
+		x11-libs/libXtst
+	)"
 
 DEPEND=""
 
@@ -51,13 +46,13 @@ QA_TEXTRELS_x86="opt/${P}/lib/i386/client/libjvm.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${At} ]; then
-		die "cannot read ${At}. Please check the permission and try again."
+	if [ ! -r ${DISTDIR}/${A} ]; then
+		die "cannot read ${A}. Please check the permission and try again."
 	fi
 
 	mkdir bundled-jdk
 	cd bundled-jdk
-	sh ${DISTDIR}/${At} --accept-license --unpack || die "Failed to unpack"
+	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
 	bash ${FILESDIR}/construct-1.6.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
@@ -77,8 +72,8 @@ src_install() {
 	for i in $dirs ; do
 		cp -pPR $i ${D}/opt/${P}/ || die "failed to copy"
 	done
-	dodoc CHANGES README THIRDPARTYLICENSEREADME.txt
-	dohtml Welcome.html
+	dodoc README THIRDPARTYLICENSEREADME.txt || die
+	dohtml Welcome.html || die
 	dodir /opt/${P}/share/
 
 	if use nsplugin; then
