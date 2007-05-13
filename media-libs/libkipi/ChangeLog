@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkipi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.22 2007/04/22 18:11:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.23 2007/05/13 16:40:03 beandog Exp $
+
+  13 May 2007; Steve Dibb <beandog@gentoo.org> libkipi-0.1.4.ebuild:
+  amd64 stable
 
   22 Apr 2007; Raúl Porcel <armin76@gentoo.org> libkipi-0.1.4.ebuild:
   ia64 stable
