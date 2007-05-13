@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/qpxtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.8 2007/03/19 05:44:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.9 2007/05/13 17:51:04 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
 *qpxtool-0.6.0.9 (19 Mar 2007)
 
