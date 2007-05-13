@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/quanta-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.34 2007/02/21 20:53:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.35 2007/05/13 06:37:17 kumba Exp $
+
+  13 May 2007; Joshua Kinard <kumba@gentoo.org> quanta-docs-20051201.ebuild:
+  Stable on mips, per #134761.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

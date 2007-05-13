@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/quanta-docs-20051201.ebuild,v 1.9 2006/09/06 21:12:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/quanta-docs-20051201.ebuild,v 1.10 2007/05/13 06:37:17 kumba Exp $
 
 DESCRIPTION="Language documentation files for Quanta."
 HOMEPAGE="http://quanta.kdewebdev.org/"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/quanta-css-${PV}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="mysql"
 
 S=${WORKDIR}
