@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpitool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.7 2007/05/12 01:26:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.8 2007/05/13 15:17:44 armin76 Exp $
+
+  13 May 2007; Raúl Porcel <armin76@gentoo.org> acpitool-0.4.7-r1.ebuild:
+  x86 stable wrt bug 173946
 
   12 May 2007; Daniel Gryniewicz <dang@gentoo.org> acpitool-0.4.7-r1.ebuild:
   Marked stable on amd64 for bug #173946
