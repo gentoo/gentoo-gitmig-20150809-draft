@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/alien
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.17 2007/02/19 14:59:17 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.18 2007/05/13 22:40:26 lordvan Exp $
+
+*alien-8.66 (13 May 2007)
+
+  13 May 2007; Thomas Raschbacher <lordvan@gentoo.org> +alien-8.66.ebuild:
+  added version 8.66 which now uses perl-app eclass (should fix bug #174095
+  thanks to Pacho Ramos <pacho@condmat1.ciencias.uniovi.es> and
+  jakub@gentoo.org)
 
 *alien-8.65 (19 Feb 2007)
 
