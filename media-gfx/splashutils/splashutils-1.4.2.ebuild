@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.ebuild,v 1.4 2007/05/12 10:20:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.ebuild,v 1.5 2007/05/13 09:54:56 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -64,6 +64,9 @@ src_unpack() {
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
 
+	cd ${SM}
+	epatch ${FILESDIR}/${P}-misc-strip.patch
+
 	cd ${SG}
 	epatch ${FILESDIR}/${P}-rcabort.patch
 
@@ -116,7 +119,7 @@ src_compile() {
 	fi
 
 	cd ${SM}
-	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
+	emake LIB=$(get_libdir) STRIP=true || die "failed to build miscsplashutils"
 
 	cd ${S}
 	./configure \
