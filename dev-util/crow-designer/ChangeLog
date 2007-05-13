@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/crow-designer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.3 2007/02/27 12:46:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.4 2007/05/13 19:47:19 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   27 Feb 2007; <pva@gentoo.org> crow-designer-2.8.1.ebuild:
   Homepage changed on crow-designer.sourceforge.net.
