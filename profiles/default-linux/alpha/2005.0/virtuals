@@ -1,5 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2005.0/virtuals,v 1.1 2005/01/20 21:07:26 wolf31o2 Exp $
-
-virtual/linux-sources			sys-kernel/vanilla-sources
