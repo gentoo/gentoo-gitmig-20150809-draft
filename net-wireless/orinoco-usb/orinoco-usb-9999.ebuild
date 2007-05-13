@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-usb/orinoco-usb-9999.ebuild,v 1.1 2007/05/10 11:10:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-usb/orinoco-usb-9999.ebuild,v 1.2 2007/05/13 07:00:20 genstef Exp $
 
 inherit linux-mod subversion
 
@@ -28,11 +28,8 @@ ERROR_USB="${P} requires USB support (CONFIG_USB)."
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	# Preempt package kernel rev check
-	if kernel_is lt 2 6 14; then
-		eerror
-		eerror "${P} requires kernel 2.6.14 or above."
-		eerror
+	if kernel_is lt 2 6 20; then
+		eerror "${P} requires kernel 2.6.20 or above."
 		die "Kernel version too old."
 	fi
 
@@ -40,6 +37,5 @@ pkg_setup() {
 	MODULE_NAMES="orinoco(${MOD_PATH}:) orinoco_usb(${MOD_PATH}:)"
 	BUILD_PARAMS="KERNEL_PATH=${KV_OUT_DIR}"
 }
-
 
 # Don't have modified install in order to provide docs, since docs are too old
