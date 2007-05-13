@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.19.2-r2.ebuild,v 1.5 2007/02/25 17:57:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.19.2-r2.ebuild,v 1.6 2007/05/13 03:04:51 kumba Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm cris hppa m68k mips ia64 ppc ppc64 s390 sh sparc x86"
@@ -11,7 +11,7 @@ PATCH_VER="4"
 SRC_URI="mirror://gentoo/gentoo-headers-base-${PV}.tar.bz2"
 [[ -n ${PATCH_VER} ]] && SRC_URI="${SRC_URI} mirror://gentoo/gentoo-headers-${PV}-${PATCH_VER}.tar.bz2"
 
-KEYWORDS="-* -alpha ~amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc ~x86"
+KEYWORDS="-* -alpha ~amd64 arm ~hppa ~ia64 m68k mips ~ppc ~ppc64 s390 sh sparc ~x86"
 
 DEPEND="dev-util/unifdef"
 RDEPEND=""
