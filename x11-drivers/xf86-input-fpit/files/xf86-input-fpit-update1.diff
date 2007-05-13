@@ -1,0 +1,400 @@
+commit 4b06c8f70e8b1d6cfaeb41e1584f9efcfef83bb0
+Author: Justin Blanchard <justinb04@aim.com>
+Date:   Tue Jan 30 20:12:07 2007 -0500
+
+    Updates from Justin Blanchard - patch 1
+    
+    * Make the docs reflect more accurately what the code actually does.
+    * Update the docs: remove material specific to XFree86 3.x/4.0. Re-organize to
+    reflect the wider variety of machines that use this device. Change the link to
+    linuxslate.com. Expand troubleshooting section.
+    * Code cleanup: assorted trivial changes.
+
+diff --git a/man/fpit.man b/man/fpit.man
+index fba0e6f..4964dbe 100644
+--- a/man/fpit.man
++++ b/man/fpit.man
+@@ -23,11 +23,15 @@ driver functions as a pointer input devi
+ X server's core pointer.
+ .SH SUPPORTED HARDWARE
+ This driver supports the touchscreen of the Stylistic LT and (with
+-special options) of the Stylistic 500, 1000 and 2300.
++special options) of the Stylistic 500, 1000, 1200, 2300, and 3400.
++Modern FinePoint MP800 devices will also work with this driver.
+ 
+-Under Linux the Fujitsus serial port is not, by default, detected.
+-Therefore the following must be added to one of your start-up scripts.
+-(Either one of the X scripts, or to rc.local or similar).
++Under Linux the Fujitsu's serial port is not, by default, detected.
++Therefore the port must be configured manually as described in the
++accompanying readme.txt file.
++
++For example, add the following to your startup scripts for Stylistic xx00
++devices:
+ 
+ .TP 4
+ .B setserial /dev/ttyS3 autoconfig
+@@ -70,12 +74,12 @@ Same as for X axis, but for Y axis.
+ Invert the specified axis.
+ .TP 4
+ .B Option \fI"SwapXY"\fP
+-Swap the X and Y axis.
++Swap the X and Y axis (after inversions).
+ .TP 4
+ .B Option \fI"Rotate"\fP \fI"CW"\fP
+ .B Option \fI"Rotate"\fP \fI"CWW"\fP
+ Manipulate the invert and swap options to match screen
+-rotations.
++rotations. (Will behave strangely if combined with invert or swap options.)
+ .TP 4
+ .B Option \fI"DeviceName"\fP \fI"name"\fP
+ .B Option \fI"DeviceName"\fP \fI"name"\fP
+@@ -92,7 +96,7 @@ enabled for any other value.
+ .B Option \fI"DebugLevel"\fP \fInumber \fP
+ sets the level of debugging info reported.
+ .TP 4
+-.B Option \fI"BaudRate"\fP \fI"38400"\fP, \fI"19200"\fP or \fI"9600"\fP (default)
++.B Option \fI"BaudRate"\fP \fI"38400"\fP, \fI"19200"\fP (default) or \fI"9600"\fP
+ changes the serial link speed.
+ .TP 4
+ .B Option \fI"Passive"\fP
+diff --git a/readme.txt b/readme.txt
+index fd0990c..075c52e 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1,15 +1,8 @@
+ xf86Fpit.c
+ (and associated files).
+ 
+-Documentation updated by John Apfelbaum, linuxslate.com Oct 2001
+-
+-***    P L E A S E     N O T E    ***
+-*  Due to a Hardrive failure, the version of this driver that was previously
+-*  on the linuxslate.com website was lost. This is a version came from a
+-*  directory on my development system that was marked "Works", and I belive it
+-*  to be the latest version I worked on (about a year ago), but I have not had
+-*  time to build from this source and verify this driver.
+-***
++Last updated Jan 2007
++This information applies to version 1.1.0 of this driver.
+ 
+ Supported Hardware:
+ 
+@@ -19,6 +12,8 @@ Supported Hardware:
+ 	Fujistu Stylistic 1000  (Should Work)
+ 	Fujistu Stylistic 1200  (Should Work)
+ 	Fujistu Stylistic 2300  (Should Work)
++	Fujitsu Stylistic 3400  (and possibly other passive-pen systems)
++	FinePoint MP800
+ 
+ History and Contributors:
+ 
+@@ -30,9 +25,11 @@ History and Contributors:
+    project into the XFree86 4.0.2 Elographics driver by Patrick Lecoanet.
+ -  John Apfelbaum continuted the work to produce a working XFree86 4.0.x driver for the
+    Stylistic 1200.  
+--  David Clay added support for Stylistic 3400 passive pen.
++-  David Clay added support for Stylistic 3400 passive pen, and possibly
++   others. (Also fixed processing of all packets, and enabled right mouse button.)
+ 
+-Please visit http://linuxslate.com for the latest information.
++Please visit http://webcvs.freedesktop.org/xorg/driver/xf86-input-fpit/ for the
++latest version of this driver.
+ 
+ License:
+ 
+@@ -52,73 +49,53 @@ Please visit http://XFree86.org for lice
+ 
+ Installation:
+ 
+-THIS RELEASE IS FOR XFree86 Version 4.0.2. Hopefully it will also work
+-with other Version 4 systems. The source is written so that hopefully
+-it can be compiled under 3.3.6 - THIS HAS NOT BEEN TESTED (yet).
+-
+-Copied from original xf86fpit.c readme:
+-
+ 1.  Install and configure Linux w/o consideration of the digitizer tablet.
+ 2.  Get X working the way you want it. 
+-3.  Add or Change your appropriate startup scripts to include:
++3.  Set up a serial device to be initialized at startup.
++    Modify /etc/serial.conf if your distribution uses it. Otherwise
++    add or modify your appropriate startup scripts to include:
+ 
+ setserial /dev/ttyS3 autoconfig
+-setserial /dev/ttyS3 IRQ 15 baud_base 115200
+-(Some models may also have to specify:  port 0xfce8)
++setserial /dev/ttyS3 port ??? IRQ ?? baud_base 115200 [uart 16450]
+ 
+-
+-New/Different for Ver 4.0.2
++The uart setting may be necessary for the device to work.
++See below for appropriate port/IRQ values.
+ 
+ 4.  Copy fpit_drv.o to /usr/X11R6/lib/modules/input
+ 
+-5.  Add the following to your XF86Config(-4) file:
++5.  Add the following to your X config file (XF86Config/XF86Config-4/xorg.conf)
+ 
+ Section "InputDevice"
+ 	Identifier	"mouse0"
+ 	Driver		"fpit"
+ 	Option		"Device"	"/dev/ttyS3"
++	# These may need tweaking; see below.
+ 	Option		"BaudRate"	"19200"
+ 	Option		"MaximumXPosition"	"6250"
+ 	Option		"MaximumYPosition"	"4950"
+ 	Option		"MinimumXPosition"	"130"
+ 	Option		"MinimumYPosition"	"0"
+ 	Option		"InvertY"
++	# For a passive pen, e.g. Stylistic 3400
++	Option		"Passive"
+ EndSection
+ 
+ 6. Remember to add this Input Device to the server description (Near the end of the file.)
+ 
+ 7. Start or restart X.
+ 
+-8. If required adjust the Min/Max X/Y positions so that the pointer
++8. If required adjust the baud rate and Min/Max X/Y positions so that the pointer
+    tracks the pen correctly.
+ 
++For Fujitsu Stylistic xx00 models, try IRQ 15, with port either unspecified
++ or set to 0xfce8.
+ 
+-New for Ver 4.5.0
+-
+- * supports Stylistic 3400 (and possibly other passive-pen systems)
+- * Fixed processing of all packets
+- * Fixed hover-mode pointer movement
+- * Added Passive parameter for passive displays
+- * Added switch 3 for "right" mouse button
+-
+-Try this serial configuration for the 3400:
++For Fujitsu Stylistic 3400 models, try IRQ 4 and port 0xfd68.
++ Recommended X config settings are BaudRate 9600, Min X/Y 0, MaxX 4070, MaxY 4020.
+ 
+-setserial /dev/ttyS3 autoconfig
+-setserial /dev/ttyS3 uart 16450 irq 5 port 0xfd68
+-
+-Try this config for the 3400:
+-Section "InputDevice"
+-    Identifier "mouse0"
+-    Driver     "fpit"       
+-    Option     "Device"   "/dev/ttyS3"
+-    Option     "BaudRate" "9600"   
+-    Option     "Passive"
+-    Option     "MaximumXPosition" "4070"  
+-    Option     "MaximumYPosition" "4020"  
+-    Option     "MinimumXPosition" "0"     
+-    Option     "MinimumYPosition" "0"  
+-    Option     "SendCoreEvents"
+-EndSection
++In general you may wish to consult /proc/ioports or /sys/devices/pnp0/*
++(under Linux 2.6) for serial information. BaudRate should generally be 9600,
++19200, or 38400.
+ 
+ 
+ Hints if you are having problems (Thanks to Aron Hsiao):
+@@ -135,6 +112,8 @@ This should be re-stating the defaults,
+ to be an XFree86 4.x bug. 
+ 
+ Problem 2:  X Server crash during GUI startup (Particularly Gnome). 
++            Or: programs using high-resolution pen tracking via XInput
++            don't work.
+ 
+ Solution:   You must have a regular mouse defined as the default pointer
+ 	    even if no mouse is used.  During startup, Gnome attempts to
+@@ -142,6 +121,10 @@ Solution:   You must have a regular mous
+ 	    pendrivers are absolute pointers, and acceleration is meaningless,
+ 	    they do not take well to attempts to set it :-)
+ 
++	    Additionally, setting the tablet as a core pointer prevents X
++            from sending XInput events. This lowers the pen-tracking
++            resolution available to programs by 1 or 2 orders of magnitude!
++
+ Problem 3:  Jittery cursor and undesired mouse clicks (both buttons),
+             particuarly on the Stylistic 1200, and particuarly after the
+ 	    system has warmed up.
+@@ -152,6 +135,9 @@ Solution:   (Not really a solution) This
+ 	    actively using it extends battery life, and keeps the system from
+ 	    getting too hot.
+ 
++            If cursor movement seems completely random and mouse clicks seem
++            inexplicable, your baud rate may be set incorrectly.
++
+ Bugs and Needed Work:
+ 
+ (See above)
+diff --git a/src/xf86Fpit.c b/src/xf86Fpit.c
+index b7a9a60..d0b9fe3 100644
+--- a/src/xf86Fpit.c
++++ b/src/xf86Fpit.c
+@@ -63,8 +63,6 @@
+ 
+ #  include <misc.h>
+ #  include <xf86.h>
+-#  if !defined(DGUX)
+-#  endif
+ #  include <xf86_OSproc.h>
+ #  include <xf86Xinput.h>
+ #  include <exevents.h>
+@@ -79,7 +77,6 @@
+  *
+  ***************************************************************************
+  */
+-#define FPIT_LINK_SPEED		B19200	/* 19200 Baud                           */
+ #define FPIT_PORT		"/dev/ttyS3"
+ 
+ #define FPIT_MAX_X		4100
+@@ -87,19 +84,6 @@
+ #define FPIT_MAX_Y		4100
+ #define FPIT_MIN_Y		0
+ 
+-#define PHASING_BIT	0x80
+-#define PROXIMITY_BIT	0x20 /* DMC: This was 0x40 but the chart says its bit 5 which is 0x20 */
+-/*#define TABID_BIT	0x20  */
+-#define XSIGN_BIT	0x10
+-#define YSIGN_BIT	0x08
+-#define BUTTON_BITS	0x07
+-#define COORD_BITS	0x7f
+-
+-/* DMC: Added these */
+-#define SW1	0x01
+-#define SW2	0x02
+-#define SW3	0x04
+-
+ 
+ /*
+  ***************************************************************************
+@@ -123,8 +107,6 @@ typedef struct {
+ 	int screen_width;
+ 	int screen_height;
+ 	int screen_no;
+-	int fpitInc;		/* increment between transmits */
+-	int fpitButTrans;	/* button translation flags */
+ 	int fpitOldX;		/* previous X position */
+ 	int fpitOldY;		/* previous Y position */
+ 	int fpitOldProximity;	/* previous proximity */
+@@ -135,10 +117,7 @@ typedef struct {
+ 	int fpitMaxY;		/* max Y value */
+ 	int fpitInvX;		/* Invert X axis */
+ 	int fpitInvY;		/* Invert Y axis */
+-	int fpitRes;		/* resolution in lines per inch */
+-	int flags;		/* various flags */
+ 	int fpitIndex;		/* number of bytes read */
+-	int fpitBaud;		/* Baud rate of device */
+ 	unsigned char fpitData[BUFFER_SIZE];	/* data read on the device */
+ 	int fpitSwapXY;		/* swap X and Y values */
+ 	int fpitPassive;	/* translate passive buttons */
+@@ -209,37 +188,45 @@ static void xf86FpitReadInput(LocalDevic
+ 
+ 	priv->fpitIndex += len;
+ 
+-	/* process each packet in this block */
+-	for (loop=0;loop+FPIT_PACKET_SIZE<=priv->fpitIndex;loop++) { 
+-		if (!(priv->fpitData[loop] & 0x80)) continue; /* we don't have a start bit yet */
+ 
++#define PHASING_BIT	0x80
++#define PROXIMITY_BIT	0x20
++#define BUTTON_BITS	0x07
++#define SW1	0x01
++#define SW2	0x02
++#define SW3	0x04
++
++	/* process each packet in this block */
+ /* Format of 5 bytes data packet for Fpit Tablets
+      Byte 1
+-       bit 7  Phasing bit always 1
+-       bit 6  Switch status change
+-       bit 5  Proximity
+-       bit 4  Always 0
+-       bit 3  Test data
+-       bit 2  Sw3 (2nd side sw) 
+-       bit 1  Sw2 (1st side sw) 
+-       bit 0  Sw1 (Pen tip sw) 
++       bit  7   (0x80)  Phasing bit always 1
++       bit  6   (0x40)  Switch status change
++       bit  5   (0x20)  Proximity
++       bit  4   (0x10)  Always 0
++       bit  3   (0x08)  Test data
++       bits 2-0 (0x07)  Buttons:
++       bit  2   (0x04)   Sw3 (2nd side sw) 
++       bit  1   (0x02)   Sw2 (1st side sw) 
++       bit  0   (0x01)   Sw1 (Pen tip sw) 
+ 
+      Byte 2
+-       bit 7  Always 0
+-       bits 6-0 = X6 - X0
++       bit  7   (0x80)  Always 0
++       bits 6-0 (0x7f)  X6 - X0
+ 
+      Byte 3
+-       bit 7  Always 0
+-       bits 6-0 = X13 - X7
++       bit  7   (0x80)  Always 0
++       bits 6-0 (0x7f)  X13 - X7
+ 
+      Byte 4
+-       bit 7  Always 0
+-       bits 6-0 = Y6 - Y0
++       bit  7   (0x80)  Always 0
++       bits 6-0 (0x7f)  Y6 - Y0
+ 
+      Byte 5
+-       bit 7  Always 0
+-       bits 6-0 = Y13 - Y7
++       bit  7   (0x80)  Always 0
++       bits 6-0 (0x7f)  Y13 - Y7
+ */
++	for (loop=0;loop+FPIT_PACKET_SIZE<=priv->fpitIndex;loop++) { 
++		if (!(priv->fpitData[loop] & PHASING_BIT)) continue; /* we don't have a start bit yet */
+ 
+ 		x = (int) (priv->fpitData[loop + 1] & 0x7f) + ((int) (priv->fpitData[loop + 2] & 0x7f) << 7);
+ 		y = (int) (priv->fpitData[loop + 3] & 0x7f) + ((int) (priv->fpitData[loop + 4] & 0x7f) << 7);
+@@ -256,7 +243,7 @@ static void xf86FpitReadInput(LocalDevic
+ 		xf86FpitConvert(local, 0, 2, x, y, 0, 0, 0, 0, &conv_x, &conv_y);
+ 		xf86XInputSetScreen(local, priv->screen_no, conv_x, conv_y);
+ 
+-		/* coordonates are ready we can send events */
++		/* coordinates are ready we can send events */
+ 
+ 		if (prox!=priv->fpitOldProximity) /* proximity changed */
+ 			if (!is_core_pointer) xf86PostProximityEvent(device, prox, 0, 2, x, y);
+@@ -268,9 +255,7 @@ static void xf86FpitReadInput(LocalDevic
+ 			/*
+ 				For passive pen (Stylistic 3400, et al.):
+ 				sw1 = 1 if pen is moving
+-				sw1 = 0 if pen is not moving
+-				sw2 = 0 if pen is contacting the pad
+-				sw2 = 1 if pen was lifted from the pad
++				sw2 = 1 if pen was lifted from the pad / isn't in contact
+ 				sw3 = 1 if right mouse-button icon was chosen
+ 			*/
+ 			/* convert the pen button bits to actual mouse buttons */
+@@ -378,7 +363,7 @@ static Bool xf86FpitControl(DeviceIntPtr
+ 			 * screen to fit one meter.
+ 			 */
+ 			if (InitValuatorClassDeviceStruct(dev, 2, xf86GetMotionEvents, local->history_size, Absolute) == FALSE) {
+-				ErrorF("Unable to allocate Elographics touchscreen ValuatorClassDeviceStruct\n");
++				ErrorF("Unable to allocate Fpit touchscreen ValuatorClassDeviceStruct\n");
+ 				return !Success;
+ 			} else {
+ 				InitValuatorAxisStruct(dev, 0, priv->fpitMinX, priv->fpitMaxX, 9500, 0 /* min_res */ ,
+@@ -542,13 +527,13 @@ static InputInfoPtr xf86FpitInit(InputDr
+ 	xf86Msg(X_CONFIG, "FPIT device name: %s\n", local->name);
+ 	priv->screen_no = xf86SetIntOption(local->options, "ScreenNo", 0);
+ 	xf86Msg(X_CONFIG, "Fpit associated screen: %d\n", priv->screen_no);
+-	priv->fpitMaxX = xf86SetIntOption(local->options, "MaximumXPosition", 4100);
++	priv->fpitMaxX = xf86SetIntOption(local->options, "MaximumXPosition", FPIT_MAX_X);
+ 	xf86Msg(X_CONFIG, "FPIT maximum x position: %d\n", priv->fpitMaxX);
+-	priv->fpitMinX = xf86SetIntOption(local->options, "MinimumXPosition", 0);
++	priv->fpitMinX = xf86SetIntOption(local->options, "MinimumXPosition", FPIT_MIN_X);
+ 	xf86Msg(X_CONFIG, "FPIT minimum x position: %d\n", priv->fpitMinX);
+-	priv->fpitMaxY = xf86SetIntOption(local->options, "MaximumYPosition", 4100);
++	priv->fpitMaxY = xf86SetIntOption(local->options, "MaximumYPosition", FPIT_MAX_Y);
+ 	xf86Msg(X_CONFIG, "FPIT maximum y position: %d\n", priv->fpitMaxY);
+-	priv->fpitMinY = xf86SetIntOption(local->options, "MinimumYPosition", 0);
++	priv->fpitMinY = xf86SetIntOption(local->options, "MinimumYPosition", FPIT_MIN_Y);
+ 	xf86Msg(X_CONFIG, "FPIT minimum y position: %d\n", priv->fpitMinY);
+ 	priv->fpitInvX = xf86SetBoolOption(local->options, "InvertX", 0);
+ 	priv->fpitInvY = xf86SetBoolOption(local->options, "InvertY", 0);
