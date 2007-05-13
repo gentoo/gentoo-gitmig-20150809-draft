@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+	<herd>no-herd</herd>
+	<maintainer>
+	    <email>anant@gentoo.org</email>
+        <name>Anant Narayanan</name>
+	</maintainer>
+	<longdescription>
+		The xclass library is a C++ GUI toolkit for the X windows environment
+		based on Xlib.
+	</longdescription>
 </pkgmetadata>
