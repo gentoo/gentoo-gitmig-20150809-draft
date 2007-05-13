@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7254 2007/05/13 01:55:24 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7255 2007/05/13 02:18:42 dirtyepic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,11 @@
 ##   End example
 ##
 
-# Luis Araujo <araujo@gentoo.org> (12 May 1007)
+# Ryan Hill <dirtyepic@gentoo.org> (13 May 2007)
+#   Mask for testing.
+=net-fs/sfs-0.8.0_pre20070512
+
+# Luis Araujo <araujo@gentoo.org> (12 May 2007)
 # Keep Himerge masked because it depends on ghc-6.6
 app-portage/himerge
 # Luca Longinotti <chtekk@gentoo.org> (12 May 2007)
