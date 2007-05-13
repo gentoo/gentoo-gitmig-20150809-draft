@@ -1,6 +1,21 @@
 # ChangeLog for dev-ruby/xmpp4r
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.5 2007/03/05 19:49:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.6 2007/05/13 16:07:24 graaff Exp $
+
+*xmpp4r-0.3.1 (13 May 2007)
+
+  13 May 2007; Hans de Graaff <graaff@gentoo.org> -xmpp4r-0.3.ebuild,
+  +xmpp4r-0.3.1.ebuild:
+  Version bump: thanks for Jochen Schalanda in #177161.
+  
+  Changes in this version:
+  * SASL fixes
+  * Message#x and Presence#x support element selection by namespace
+  * Proper XML entity escaping for REXML text nodes
+  * Improvements to FileTransfer::Helper and SOCKS5BytestreamsServer
+  * Vcard::Helper fixes
+  * Update Digest module usage to reflect recent Ruby versions
+  * More documentation
 
   04 Mar 2007; Tom Gall <tgall@gentoo.org> xmpp4r-0.3-r1.ebuild:
   added ~ppc64
