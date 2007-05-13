@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/beaver
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.15 2006/08/20 22:42:14 malc Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.16 2007/05/13 18:20:02 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
 
   20 Aug 2006; <malc@gentoo.org> beaver-0.2.6.ebuild:
   Stable on amd64
