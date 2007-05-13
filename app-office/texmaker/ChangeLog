@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.29 2007/03/12 23:42:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.30 2007/05/13 08:34:18 jokey Exp $
+
+  13 May 2007; Markus Ullmann <jokey@gentoo.org> texmaker-1.50-r1.ebuild:
+  Stable on x86
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
