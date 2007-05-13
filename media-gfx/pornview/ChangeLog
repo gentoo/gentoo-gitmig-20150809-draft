@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.30 2007/01/19 15:30:46 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.31 2007/05/13 19:49:08 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   pornview-0.2.0_pre1.ebuild, pornview-0.2.0_pre1-r1.ebuild:
