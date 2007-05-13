@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.9 2007/05/03 19:57:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.10 2007/05/13 22:12:33 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions qt3 multilib
@@ -65,7 +65,7 @@ pkg_setup() {
 		die "kde and agg not supported at the same time"
 	fi
 
-	if has_version <dev-libs/boost-1.34 && ! built_with_use dev-libs/boost threads; then
+	if has_version '<dev-libs/boost-1.34' && ! built_with_use dev-libs/boost threads; then
 		eerror "dev-libst/boost has to be built with the 'threads' USE flag"
 		die "dev-libs/boost not built with threads"
 	fi
