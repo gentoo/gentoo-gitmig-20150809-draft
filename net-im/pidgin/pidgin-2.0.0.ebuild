@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.1 2007/05/04 15:19:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.2 2007/05/13 21:27:42 drizzt Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -104,10 +104,10 @@ print_pidgin_warning() {
 	ewarn "seek help in #pidgin."
 	ewarn
 	ewarn "Be sure to USE=\"debug\" and include a backtrace for any seg"
-	ewarn "faults, see http://pidgin.im/gdb.php for details on"
+	ewarn "faults, see http://developer.pidgin.im/wiki/GetABacktrace for details on"
 	ewarn "backtraces."
 	ewarn
-	ewarn "Please read the pidgin FAQ at http://pidgin.im/faq.php"
+	ewarn "Please read the pidgin FAQ at http://developer.pidgin.im/wiki/FAQ"
 	ewarn
 	einfo
 	if  use custom-cflags; then
