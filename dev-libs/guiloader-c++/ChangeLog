@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/guiloader-c++
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.4 2007/02/27 12:50:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.5 2007/05/13 19:45:56 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   27 Feb 2007; <pva@gentoo.org> -guiloader-c++-2.8.0.ebuild,
   guiloader-c++-2.8.1.ebuild:
