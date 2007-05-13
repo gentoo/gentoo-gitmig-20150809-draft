@@ -5,5 +5,9 @@
 	<maintainer>
 	    <email>anant@gentoo.org</email>
         <name>Anant Narayanan</name>
-    </maintainer>
+	</maintainer>
+	<longdescription>
+		DOC++ is a documentation system for C, C++, IDL and Java
+		generating both TeX and HTML outputs.
+	</longdescription>
 </pkgmetadata>
