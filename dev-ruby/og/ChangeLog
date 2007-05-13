@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/og
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.12 2007/03/15 10:15:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.13 2007/05/13 16:32:14 graaff Exp $
+
+  13 May 2007; Hans de Graaff <graaff@gentoo.org> -og-0.29.0.ebuild,
+  og-0.40.0.ebuild:
+  og depends on sqlite3, not sqlite. Update USE flag and dependency. Bug 176308.
+  Dropped ~ppc64 keyword since ppc64 does not have sqlite3-ruby keyworded.
+  Remove old version.
 
   14 Mar 2007; Tom Gall <tgall@gentoo.org> og-0.40.0.ebuild:
   added ~ppc64 
