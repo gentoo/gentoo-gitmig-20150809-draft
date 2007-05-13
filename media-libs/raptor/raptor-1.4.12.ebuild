@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.12.ebuild,v 1.2 2006/10/15 02:26:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.12.ebuild,v 1.3 2007/05/13 16:49:12 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="LGPL-2 Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="curl xml gnome ssl"
 
 DEPEND="virtual/libc
