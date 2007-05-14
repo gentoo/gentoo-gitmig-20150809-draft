@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6.ebuild,v 1.6 2007/05/06 12:48:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6-r1.ebuild,v 1.1 2007/05/14 20:06:57 jokey Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -16,7 +16,7 @@ SRC_URI="http://unreal.brueggisite.de/${MY_P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
-IUSE="hub ipv6 ssl zlib curl prefixaq"
+IUSE="hub ipv6 ssl zlib curl prefixaq showlistmodes"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
@@ -58,6 +58,7 @@ src_compile() {
 	use hub      && myconf="${myconf} --enable-hub"
 	use ssl      && myconf="${myconf} --enable-ssl"
 	use prefixaq && myconf="${myconf} --enable-prefixaq"
+	use showlistmodes && myconf="${myconf} --with-showlistmodes"
 
 	econf \
 		--with-listen=5 \
