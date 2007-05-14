@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.ebuild,v 1.5 2007/05/13 09:54:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.ebuild,v 1.6 2007/05/14 19:26:05 jokey Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -30,7 +30,7 @@ SRC_URI="mirror://gentoo/${PN}-lite-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 RDEPEND="truetype? ( >=media-libs/freetype-2 )
 	png? ( >=media-libs/libpng-1.2.7 )
 	mng? ( media-libs/lcms media-libs/libmng )
