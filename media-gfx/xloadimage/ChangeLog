@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/xloadimage
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.38 2006/06/08 13:48:28 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.39 2007/05/14 17:29:10 drac Exp $
+
+*xloadimage-4.1-r5 (14 May 2007)
+
+  14 May 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xloadimage-4.1-unaligned-access.patch, +xloadimage-4.1-r5.ebuild:
+  Apply patch from bug 87218 fixing unaligned access with libX11. Use
+  ecompress to define manpage format for bug 173522.
 
   08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   xloadimage-4.1-r4.ebuild:

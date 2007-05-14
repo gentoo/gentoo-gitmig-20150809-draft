@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX xloadimage-4.1-endif.patch 321 RMD160 9d65994d8a2090bcf321bc48eaa4028263fe013f SHA1 4b3ed8fedb88c9ec9276a6bf2b48f372193f415c SHA256 a621ead90d893fd5d07d3034adf674d39235484f205198d47092e8e51bd71204
 MD5 fb91a22d37e6c6db534f1dc81add707e files/xloadimage-4.1-endif.patch 321
 RMD160 9d65994d8a2090bcf321bc48eaa4028263fe013f files/xloadimage-4.1-endif.patch 321
@@ -9,6 +6,10 @@ AUX xloadimage-4.1-include-errno_h.patch 303 RMD160 a6125c8e94db89d348a4e358610b
 MD5 c411c977cc7ae79dd96aad933980dbb2 files/xloadimage-4.1-include-errno_h.patch 303
 RMD160 a6125c8e94db89d348a4e358610bd195db044720 files/xloadimage-4.1-include-errno_h.patch 303
 SHA256 705ea25d75585bd763b4330757266ac412ee30562e65b937722dad3e3141c56a files/xloadimage-4.1-include-errno_h.patch 303
+AUX xloadimage-4.1-unaligned-access.patch 1784 RMD160 3d202efa9049d5d8c78f80eaaf61ccb75ad31338 SHA1 0539e95b9ab30c4c11ab9b5cf00d5a0851f8f3a7 SHA256 b61cfcefd43b55888fb8125240fbb02788baa280fbba0c482d0d48802ac6221a
+MD5 cf1cf5f3d3444ae7ed0e48ca30837731 files/xloadimage-4.1-unaligned-access.patch 1784
+RMD160 3d202efa9049d5d8c78f80eaaf61ccb75ad31338 files/xloadimage-4.1-unaligned-access.patch 1784
+SHA256 b61cfcefd43b55888fb8125240fbb02788baa280fbba0c482d0d48802ac6221a files/xloadimage-4.1-unaligned-access.patch 1784
 AUX xloadimage-4.1-zio-shell-meta-char.diff 1372 RMD160 bdff2a42743659179ff9faaf7d2451d3d2c94678 SHA1 4ac943a7b4eb78d65577838b910628fa14fb84e6 SHA256 253064f5eebcd6c1c318b9637f1010657927b5f65be59581ef37523a50f3601e
 MD5 9208b10866e00f1e47bb12a7f8bec04a files/xloadimage-4.1-zio-shell-meta-char.diff 1372
 RMD160 bdff2a42743659179ff9faaf7d2451d3d2c94678 files/xloadimage-4.1-zio-shell-meta-char.diff 1372
@@ -23,10 +24,14 @@ EBUILD xloadimage-4.1-r4.ebuild 2420 RMD160 6221bfaf97eaddfb7b2d7dd70bc5cf74ebe7
 MD5 1d3c7518c43c05015f188698faeae95d xloadimage-4.1-r4.ebuild 2420
 RMD160 6221bfaf97eaddfb7b2d7dd70bc5cf74ebe78240 xloadimage-4.1-r4.ebuild 2420
 SHA256 88934764d764e863520e51a9de24f2f7b17a0cdf3fcc3cbbd8c0b58a848a66cf xloadimage-4.1-r4.ebuild 2420
-MISC ChangeLog 6467 RMD160 401bece9b89c5fd89d8a1bf77361e1d474b47aaf SHA1 9b14ae2e03216e3e350933d6d623f792013c7416 SHA256 8b3f7841719d08e8d253cabf925e8f6278da54b35830eca7a70870428c6d1653
-MD5 ac7d79b44bea6df54982cb4154d04d27 ChangeLog 6467
-RMD160 401bece9b89c5fd89d8a1bf77361e1d474b47aaf ChangeLog 6467
-SHA256 8b3f7841719d08e8d253cabf925e8f6278da54b35830eca7a70870428c6d1653 ChangeLog 6467
+EBUILD xloadimage-4.1-r5.ebuild 2532 RMD160 1cffb510cbe2238d87745606bad694f1655e2588 SHA1 ce78eeb5ecf6169fc1c937ba2a5456b9fea0d784 SHA256 481faa2b6a356f6f5b8d0115be454c38f67e0b3d3dcd422cd179150e9ea25043
+MD5 a3bc5b247f16cb3ee7e7b3ff1b1ec853 xloadimage-4.1-r5.ebuild 2532
+RMD160 1cffb510cbe2238d87745606bad694f1655e2588 xloadimage-4.1-r5.ebuild 2532
+SHA256 481faa2b6a356f6f5b8d0115be454c38f67e0b3d3dcd422cd179150e9ea25043 xloadimage-4.1-r5.ebuild 2532
+MISC ChangeLog 6744 RMD160 44a896b1b3ff3a71b044f4971009bddda42bc0d9 SHA1 cc8d81741901008d07dffe0d554eacbf43ae1860 SHA256 964242852f3059c74f50310cd093bc947a9f1110989ea24a60c83666988a2356
+MD5 371a2b4bf76a83d78e23a13b085b2740 ChangeLog 6744
+RMD160 44a896b1b3ff3a71b044f4971009bddda42bc0d9 ChangeLog 6744
+SHA256 964242852f3059c74f50310cd093bc947a9f1110989ea24a60c83666988a2356 ChangeLog 6744
 MISC metadata.xml 166 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 SHA1 e6c6436c304a65b4a012a5b7be7ee264b228a645 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
@@ -34,10 +39,6 @@ SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata
 MD5 e9887ef75bc71d534094ad4a9c227086 files/digest-xloadimage-4.1-r4 512
 RMD160 6a8f2b116fd7a1b299dcc788e30c70bdb7b3216f files/digest-xloadimage-4.1-r4 512
 SHA256 424d8d1b9f514d4c25e350dd85d4617854b76d1edce1912aeec1ec9490238d5f files/digest-xloadimage-4.1-r4 512
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEiCqyAiZjviIA2XgRAqrcAKCWyEEU3fjLXi/l4hhO4Fc6n82P/QCfVWv1
-+ZY/rxEPbW7K/L0ZD376G/U=
-=h5JJ
------END PGP SIGNATURE-----
+MD5 e9887ef75bc71d534094ad4a9c227086 files/digest-xloadimage-4.1-r5 512
+RMD160 6a8f2b116fd7a1b299dcc788e30c70bdb7b3216f files/digest-xloadimage-4.1-r5 512
+SHA256 424d8d1b9f514d4c25e350dd85d4617854b76d1edce1912aeec1ec9490238d5f files/digest-xloadimage-4.1-r5 512
