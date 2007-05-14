@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/towitoko
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.12 2007/03/12 18:34:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.13 2007/05/14 16:47:40 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> towitoko-2.0.7-r1.ebuild:
   x86 stable

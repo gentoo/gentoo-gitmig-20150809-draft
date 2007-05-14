@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/away
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.10 2007/02/09 07:14:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.11 2007/05/14 16:47:40 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
