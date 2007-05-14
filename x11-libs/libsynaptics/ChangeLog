@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libsynaptics
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/ChangeLog,v 1.4 2006/09/14 03:31:28 trapni Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/ChangeLog,v 1.5 2007/05/14 13:01:59 trapni Exp $
+
+*libsynaptics-0.14.6c (14 May 2007)
+
+  14 May 2007; Christian Parpart <trapni@gentoo.org>
+  +libsynaptics-0.14.6c.ebuild:
+  version bump
 
 *libsynaptics-0.14.6b (14 Sep 2006)
 
