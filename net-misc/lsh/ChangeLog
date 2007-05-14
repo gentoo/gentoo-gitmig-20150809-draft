@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lsh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.16 2007/03/26 08:06:35 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.17 2007/05/14 19:45:44 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> lsh-2.0.1-r2.ebuild:
   Remove dependency on portage: ref bug 162516

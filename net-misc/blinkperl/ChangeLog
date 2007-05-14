@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blinkperl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.6 2007/04/22 16:25:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.7 2007/05/14 19:45:45 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   22 Apr 2007; Christian Heim <phreak@gentoo.org> blinkperl-20030301.ebuild:
   Use newconfd/newinitd for #174266; Properly quote variables.

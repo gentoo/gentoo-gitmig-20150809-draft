@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.28 2007/04/23 13:20:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.29 2007/05/14 19:45:45 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *scponly-4.6-r2 (23 Apr 2007)
 

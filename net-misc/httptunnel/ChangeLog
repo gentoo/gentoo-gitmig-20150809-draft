@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/httptunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.14 2007/01/23 19:24:39 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.15 2007/05/14 19:45:44 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   23 Jan 2007; Peter Weller <welp@gentoo.org> httptunnel-3.3.ebuild:
   Keyworded on ~x86-fbsd

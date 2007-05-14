@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.22 2007/01/08 02:17:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.23 2007/05/14 19:45:44 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -netkit-talk-0.17-r3.ebuild:

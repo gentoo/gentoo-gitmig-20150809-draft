@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.17 2007/01/08 02:02:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.18 2007/05/14 19:45:45 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -bwwhois-3.2.ebuild,
   -bwwhois-3.4.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.50 2007/04/28 16:51:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.51 2007/05/14 19:45:45 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   cisco-vpnclient-3des-4.6.02.0030.ebuild,
