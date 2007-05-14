@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.89 2007/05/14 02:56:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.90 2007/05/14 03:23:27 jer Exp $
+
+*opera-9.21.641 (14 May 2007)
+
+  14 May 2007; Jeroen Roovers <jer@gentoo.org>
+  +files/opera-9.21-install.patch, +opera-9.21.641.ebuild:
+  Weekly build 641.
 
   14 May 2007; Jeroen Roovers <jer@gentoo.org> opera-9.20.ebuild,
   opera-9.20-r1.ebuild:
