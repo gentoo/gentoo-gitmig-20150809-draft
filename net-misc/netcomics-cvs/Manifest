@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 EBUILD netcomics-cvs-0.14.1.ebuild 1175 RMD160 ae176be43fcb036774b6c4665603f13646b31c92 SHA1 2035d31a335ede34d364e1097098cee2249dc0d6 SHA256 47682ac6f86181acea1af18423dbbb4bd33dcbecc7f140af5d0ddbdc223661ec
 MD5 d7d9312bb06fae48cf817ca5a76f1deb netcomics-cvs-0.14.1.ebuild 1175
 RMD160 ae176be43fcb036774b6c4665603f13646b31c92 netcomics-cvs-0.14.1.ebuild 1175
@@ -13,13 +10,6 @@ MISC metadata.xml 1121 RMD160 28f13332829c2423fb583e9f4a30cddf2540b83f SHA1 9837
 MD5 72bb72b5a5c1bef3201a245e23e2b331 metadata.xml 1121
 RMD160 28f13332829c2423fb583e9f4a30cddf2540b83f metadata.xml 1121
 SHA256 b7a0976711ac1ffc8c3594f8146ef1f4cdbd20cab934549571382ca46c7a5655 metadata.xml 1121
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-netcomics-cvs-0.14.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-netcomics-cvs-0.14.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-netcomics-cvs-0.14.1 1
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFE1CYdFdQwWVoAgN4RAvGtAJoCPdoI7RIErZEE1fX/GE4IoeCRtACgleTj
-Cd2D5KODF0+dICiDYHbQ69U=
-=zhYG
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-netcomics-cvs-0.14.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-netcomics-cvs-0.14.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-netcomics-cvs-0.14.1 0
