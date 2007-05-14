@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.153 2007/05/14 08:58:30 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.154 2007/05/14 21:09:48 gustavoz Exp $
+
+  14 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  proftpd-1.3.1_rc2-r1.ebuild:
+  Stable on sparc wrt security #175082
 
   14 May 2007; Jose Luis Rivero <yoswink@gentoo.org>
   proftpd-1.3.1_rc2-r1.ebuild:
