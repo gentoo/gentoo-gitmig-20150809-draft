@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/chillispot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.14 2007/02/22 03:09:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.15 2007/05/14 23:34:40 solar Exp $
+
+*chillispot-1.1.0 (14 May 2007)
+
+  14 May 2007; <solar@gentoo.org> +chillispot-1.1.0.ebuild:
+  - version bump
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
