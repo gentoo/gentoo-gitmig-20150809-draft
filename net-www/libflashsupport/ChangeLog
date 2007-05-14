@@ -1,0 +1,11 @@
+# ChangeLog for net-www/libflashsupport
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/libflashsupport/ChangeLog,v 1.1 2007/05/14 14:17:21 lack Exp $
+
+*libflashsupport-1.2 (14 May 2007)
+
+  14 May 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +libflashsupport-1.2.ebuild:
+  Libflashsupport - Adds optional features such as pulseaudio, esd, oss, and
+  ssl to the netscape-flash binary.
+
