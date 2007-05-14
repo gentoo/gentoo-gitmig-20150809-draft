@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpudyn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.7 2007/04/28 17:19:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.8 2007/05/14 18:15:41 tove Exp $
+
+  14 May 2007; Torsten Veller <tove@gentoo.org> cpudyn-1.0.1.ebuild:
+  Correct initd and confd again - bug #178451.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> cpudyn-0.99.0.ebuild,
   cpudyn-1.0.ebuild, cpudyn-1.0.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/cpudyn-1.0.1.ebuild,v 1.4 2007/04/28 17:19:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/cpudyn-1.0.1.ebuild,v 1.5 2007/05/14 18:15:41 tove Exp $
 
 inherit eutils
 
@@ -32,8 +32,8 @@ src_install() {
 	dodoc INSTALL README VERSION changelog
 	dohtml *.html
 
-	newexe "${FILESDIR}"/cpudyn.init cpudyn
-	newins debian/cpudyn.conf cpudyn
+	newinitd "${FILESDIR}"/cpudyn.init cpudyn
+	newconfd debian/cpudyn.conf cpudyn
 }
 
 pkg_postinst() {
