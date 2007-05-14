@@ -5,3 +5,6 @@
 # For ease of use, we allow auth and ssh ports through as well.
 # To override the list of allowed ports
 #PORTS_IN="auth ssh"
+
+# You may want to enable logging of denied connections
+#LOG_DENY="yes"

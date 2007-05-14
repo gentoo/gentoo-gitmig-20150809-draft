@@ -39,12 +39,14 @@ init() {
 }
 
 start() {
-	local x=
+	local x= log=
 	ebegin "Starting firewall rules"
 	if ! init ; then
 		eend 1 "Failed to flush firewall ruleset"
 		return 1
 	fi
+
+	[ "${LOG_DENY}" = "yes" ] && log="log"
 
 	# Use a statefull firewall
 	ipfw add check-state
@@ -53,23 +55,30 @@ start() {
 	if [ -n "${PORTS_IN}" ] ; then
 		local pin=
 		for x in ${PORTS_IN} ; do
-		    [ -n "${pin}" ] && pin="${pin},"
-		    pin="${pin}${x}"
+		    pin="${pin}${pin:+,}${x}"
 		done
+		ipfw add allow tcp from any to me ${pin} established keep-state
+		ipfw add allow tcp from any to me6 ${pin} established keep-state
 		ipfw add allow tcp from any to me ${pin} setup keep-state
 		ipfw add allow tcp from any to me6 ${pin} setup keep-state
+		ipfw add allow udp from any to me ${pin} established
 		ipfw add allow udp from any to me ${pin} keep-state
+		ipfw add allow udp from any to me6 ${pin} established
 		ipfw add allow udp from any to me6 ${pin} keep-state
 	fi
 
 	# Nice flexable rules that disallow incoming except for stuff we
 	# have asked for, and allow all outgoing.
+	ipfw add allow tcp from me to any established keep-state
 	ipfw add allow tcp from me to any setup keep-state
+	ipfw add allow tcp from me6 to any established keep-state 
 	ipfw add allow tcp from me6 to any setup keep-state 
-	ipfw add deny tcp from any to any
+	ipfw add deny ${log} tcp from any to any
+	ipfw add allow udp from me to any established 
 	ipfw add allow udp from me to any keep-state
+	ipfw add allow udp from me6 to any established
 	ipfw add allow udp from me6 to any keep-state
-	ipfw add deny udp from any to any
+	ipfw add deny ${log} udp from any to any
 
 	# Be a good firewall and allow some ICMP traffic.
 	# Remove 8 if you really want to disallow ping.
