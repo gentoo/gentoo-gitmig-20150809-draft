@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.21 2007/05/14 15:33:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.22 2007/05/14 20:17:51 compnerd Exp $
+
+*nss-mdns-0.10 (14 May 2007)
+
+  14 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +nss-mdns-0.10.ebuild:
+  Version bump from upstream to fix building on FreeBSD and SPARC
 
   14 May 2007; Markus Ullmann <jokey@gentoo.org> nss-mdns-0.9-r1.ebuild:
   Stable on x86 wrt bug #178470
