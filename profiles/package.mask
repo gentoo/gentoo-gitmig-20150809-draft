@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7257 2007/05/13 18:10:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7258 2007/05/14 00:33:51 jer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeroen Roovers <jer@gentoo.org> (14 May 2007)
+# Opera 9.21 weekly builds are masked until it goes into beta.
+=www-client/opera-9.21*
 
 # Ulrich Mueller <ulm@gentoo.org> (13 May 2007)
 # Live CVS ebuilds for Emacs
