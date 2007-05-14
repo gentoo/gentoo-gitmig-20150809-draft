@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.417 2007/05/11 09:38:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.418 2007/05/14 15:13:29 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.0_alpha3 (14 May 2007)
+
+  14 May 2007; Roy Marples <uberlord@gentoo.org>
+  +baselayout-2.0.0_alpha3.ebuild:
+  New alpha, fixing many things. Now works on ppc and arm :)
 
 *baselayout-1.12.10-r4 (11 May 2007)
 
