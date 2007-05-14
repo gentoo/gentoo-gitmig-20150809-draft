@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.8 2007/03/04 07:50:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.9 2007/05/14 01:46:59 dirtyepic Exp $
 
-inherit java-pkg-opt-2 multilib
+inherit java-pkg-opt-2 multilib wxwidgets
 
 MY_P=${PN}-src-${PV}
 DESCRIPTION="Portable 3D Game Development Kit written in C++"
@@ -30,7 +30,7 @@ RDEPEND="virtual/opengl
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
 	wxwindows? ( x11-libs/pango
-		>=x11-libs/wxGTK-2.6 )
+		=x11-libs/wxGTK-2.6* )
 	javascript? ( dev-lang/spidermonkey )
 	cegui? ( >=dev-games/cegui-0.5.0 )
 	x11-libs/libXaw
@@ -57,6 +57,14 @@ src_unpack() {
 }
 
 src_compile() {
+	if useq wxwindows; then
+		WX_GTK_VER=2.6
+		need-wxwidgets gtk2
+		if [[ ! -e /usr/bin/wx-config ]]; then
+			sed -i -e "s:wx-config:${WX_CONFIG_NAME}:g" configure
+		fi
+	fi
+
 	econf --enable-cpu-specific-optimizations=no \
 		--disable-separate-debug-info \
 		--without-lcms \
