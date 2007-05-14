@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/authforce
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.9 2007/05/06 09:32:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.10 2007/05/14 10:17:02 dragonheart Exp $
+
+*authforce-0.9.9 (14 May 2007)
+
+  14 May 2007; Daniel Black <dragonheart@gentoo.org>
+  +authforce-0.9.9.ebuild:
+  version bump - thanks to Zachary Landau for the notification and for
+  accepting my patches.
 
   06 May 2007; Daniel Black <dragonheart@gentoo.org> ChangeLog:
   fixed broken authforce ebuild. Appoligies to cygeus (and all others) as per
