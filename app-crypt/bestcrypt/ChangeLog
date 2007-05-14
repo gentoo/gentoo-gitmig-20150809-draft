@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.57 2007/02/01 11:47:10 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.58 2007/05/14 04:38:48 alonbl Exp $
+
+*bestcrypt-1.6_p13 (14 May 2007)
+
+  14 May 2007; Alon Bar-Lev <alonbl@gentoo.org> +bestcrypt-1.6_p13.ebuild:
+  Version bump
 
 *bestcrypt-1.6_p11 (01 Feb 2007)
 
