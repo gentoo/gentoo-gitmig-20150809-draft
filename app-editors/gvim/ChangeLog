@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.237 2007/05/13 13:32:03 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.238 2007/05/14 10:16:15 pioto Exp $
+
+*gvim-7.1-r1 (14 May 2007)
+
+  14 May 2007; Mike Kelly <pioto@gentoo.org> +gvim-7.1-r1.ebuild:
+  Revision bump. Add a patch to fix the patch to fix the libintl compile error
+  from Bug #176566.
 
   13 May 2007; Mike Kelly <pioto@gentoo.org> -gvim-7.0.17.ebuild:
   Remove old version.
