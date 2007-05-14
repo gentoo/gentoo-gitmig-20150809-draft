@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.11 2007/05/05 07:04:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.12 2007/05/14 19:38:18 jokey Exp $
+
+  14 May 2007; Markus Ullmann <jokey@gentoo.org>
+  emacs-desktop-0.2-r1.ebuild:
+  Works on arm as well
 
 *emacs-desktop-0.2-r1 (01 May 2007)
 
