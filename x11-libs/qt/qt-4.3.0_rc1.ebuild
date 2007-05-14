@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0_rc1.ebuild,v 1.2 2007/05/13 00:14:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0_rc1.ebuild,v 1.3 2007/05/14 11:52:42 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -137,8 +137,8 @@ src_unpack() {
 	# separately as well.
 	cd ${S}/mkspecs/common
 
-	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
-		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
+	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CPPFLAGS} ${CFLAGS} ${ASFLAGS}:" \
+		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CPPFLAGS} ${CXXFLAGS} ${ASFLAGS}:" \
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
 		g++.conf
 
@@ -147,6 +147,11 @@ src_unpack() {
 
 	# Replace X11R6/ directories, so /usr/X11R6/lib -> /usr/lib
 	sed -i -e "s:X11R6/::" linux.conf
+
+	cd ${S}/qmake
+
+	sed -i -e "s:CXXFLAGS.*=:CXXFLAGS=${CPPFLAGS} ${CXXFLAGS} ${ASFLAGS} :" \
+	-e "s:LFLAGS.*=:LFLAGS=${LDFLAGS} :" Makefile.unix
 
 	cd ${S}
 
