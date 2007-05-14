@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.66.ebuild,v 1.1 2007/05/13 22:40:26 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.66.ebuild,v 1.2 2007/05/14 10:39:24 lordvan Exp $
 
 inherit perl-app
 
@@ -21,6 +21,7 @@ DEPEND=">=dev-lang/perl-5.6.0
 S=${WORKDIR}/${PN}
 
 src_compile() {
+	sed -i s%'$(VARPREFIX)'%${D}% ${S}/Makefile.PL # Extutils::MakeMaker does not accept VARPREFIX
 	perl Makefile.PL PREFIX="${D}/usr" || die "configuration failed"
 	emake || die "emake failed."
 }
