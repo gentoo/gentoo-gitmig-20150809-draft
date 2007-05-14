@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.39 2007/04/11 20:53:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.40 2007/05/14 04:38:18 dirtyepic Exp $
+
+  14 May 2007; Ryan Hill <dirtyepic@gentoo.org> gpac-0.4.2-r1.ebuild:
+  Use wxwidgets.eclass.  Touch up ebuild.
 
   11 Apr 2007; Alexis Ballier <aballier@gentoo.org>
   +files/gpac-0.4.2-ffmpeg-errno.patch, gpac-0.4.2-r1.ebuild:

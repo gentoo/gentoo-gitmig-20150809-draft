@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.10 2007/04/11 20:53:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.11 2007/05/14 04:38:18 dirtyepic Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -31,7 +31,7 @@ RDEPEND="aac? ( media-libs/faad2 )
 	vorbis? ( media-libs/libvorbis )
 	theora? ( media-libs/libtheora )
 	truetype? ( >=media-libs/freetype-2.1 )
-	wxwindows? ( >=x11-libs/wxGTK-2.6.0 )
+	wxwindows? ( =x11-libs/wxGTK-2.6* )
 	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
 	sdl? ( media-libs/libsdl )
@@ -75,9 +75,11 @@ src_unpack() {
 	chmod +x configure
 	# make sure configure looks for wx-2.6
 	if use wxwindows; then
-		sed -i -e 's/wx-config/wx-config-2.6/' configure
+		WX_GTK_VER=2.6
+		need-wxwidgets gtk2
+		sed -i -e "s:wx-config:${WX_CONFIG}:g" configure
 	else
-		sed -i 's:^has_wx="yes:has_wx="no:' configure
+		sed -i -e 's:^has_wx="yes:has_wx="no:' configure
 	fi
 
 	use !sdl && sed -i 's:^has_sdl=yes:has_sdl=no:' configure
@@ -92,12 +94,12 @@ src_unpack() {
 	# make sure mozilla won't be used
 	sed -i -e 's/osmozilla//g' applications/Makefile
 
-	# use this to cute down on the warnings noise
+	# use this to cut down on the warnings noise
 	append-flags -fno-strict-aliasing
 
 	# multilib libdir fix
-	sed -i 's:$(prefix)/lib:$(prefix)/'$(get_libdir)':' Makefile src/Makefile
-	sed -i 's:/lib/gpac:/'$(get_libdir)'/gpac:' configure
+	sed -i -e 's:$(prefix)/lib:$(prefix)/'$(get_libdir)':' Makefile src/Makefile
+	sed -i -e 's:/lib/gpac:/'$(get_libdir)'/gpac:' configure
 
 	epatch "${WORKDIR}/${P}-pic.patch"
 	epatch "${FILESDIR}/${P}-bsd.patch"
