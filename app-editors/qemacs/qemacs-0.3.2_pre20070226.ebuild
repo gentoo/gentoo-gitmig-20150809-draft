@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.2_pre20070226.ebuild,v 1.1 2007/02/26 14:19:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.2_pre20070226.ebuild,v 1.2 2007/05/14 13:11:41 opfer Exp $
 
 inherit eutils versionator flag-o-matic
 
-DESCRIPTION="Quick Emacs) is a very small but powerful UNIX editor."
+DESCRIPTION="Quick Emacs is a very small but powerful UNIX editor."
 HOMEPAGE="http://fabrice.bellard.free.fr/qemacs/"
 SRC_URI="http://fabrice.bellard.free.fr/qemacs/${P}.tar.bz2"
 
@@ -15,12 +15,11 @@ IUSE="X png unicode xv"
 
 # For those so inclined, the libXv dep can probably
 # be made conditional on the xv USE flag somehow.
-RDEPEND="X? ( || ( x11-libs/libXv virtual/x11 ) )
+RDEPEND="X? ( x11-libs/libXv )
 	png? ( =media-libs/libpng-1.2* )"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-libs/libXft
-				x11-proto/xextproto )
-			virtual/x11 ) )"
+	X? ( x11-libs/libXft
+				x11-proto/xextproto )"
 RESTRICT="strip"
 
 src_unpack() {

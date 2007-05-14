@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.25 2007/02/26 14:19:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.26 2007/05/14 13:11:41 opfer Exp $
+
+  14 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  qemacs-0.3.2_pre20070226.ebuild:
+  removed virtual/x11 from DEPEND lines; fixed a typo in DESCRIPTION
 
 *qemacs-0.3.2_pre20070226 (26 Feb 2007)
 
