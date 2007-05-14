@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.23 2007/05/03 20:53:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.24 2007/05/14 15:07:33 alonbl Exp $
+
+*aircrack-ng-0.9 (14 May 2007)
+
+  14 May 2007; Alon Bar-Lev <alonbl@gentoo.org> +aircrack-ng-0.9.ebuild:
+  Version bump
 
 *aircrack-ng-0.8 (03 May 2007)
 
