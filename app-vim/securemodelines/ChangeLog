@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/securemodelines
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.3 2007/05/14 08:23:21 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.4 2007/05/14 09:15:20 drizzt Exp $
+
+  14 May 2007; Timothy Redaelli <drizzt@gentoo.org>
+  securemodelines-20070513.ebuild:
+  Add ~x86-fbsd keyword wrt bug #178480.
 
   14 May 2007; Mike Kelly <pioto@gentoo.org>
   -securemodelines-20070409.ebuild:
