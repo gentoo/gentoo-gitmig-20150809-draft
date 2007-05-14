@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.87 2007/05/13 23:46:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.88 2007/05/14 02:46:07 jer Exp $
+
+  14 May 2007; Jeroen Roovers <jer@gentoo.org>
+  files/opera-9.00-install.patch, -files/opera-qt.2.patch:
+  Fix whitespace in install.sh patch. Remove deprecated patch.
 
 *opera-9.20-r1 (13 May 2007)
 

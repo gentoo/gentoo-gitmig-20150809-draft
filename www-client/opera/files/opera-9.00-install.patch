@@ -5,7 +5,7 @@
  xdg()
  {   # http://standards.freedesktop.org
 +
-+	return; # Handled by ebuild.
++    return; # Handled by ebuild.
 +
      UDD=''
      for BIN_DIR in `pathdirs`; do
