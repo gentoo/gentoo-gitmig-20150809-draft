@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/camping
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.8 2007/03/05 19:32:09 tove Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.9 2007/05/14 20:24:56 rbrown Exp $
+
+*camping-1.5 (14 May 2007)
+
+  14 May 2007; Richard Brown <rbrown@gentoo.org> -camping-1.4.ebuild,
+  +camping-1.5.ebuild:
+  Version bump thanks to Timo Boettcher, bug #178494. Remove old version.
+  Keyword ~amd64
 
   04 Mar 2007; Tom Gall <tgall@gentoo.org> camping-1.4.2.ebuild:
   added ~ppc64
