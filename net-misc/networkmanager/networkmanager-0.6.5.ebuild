@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5.ebuild,v 1.3 2007/05/11 16:56:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5.ebuild,v 1.4 2007/05/14 16:33:39 steev Exp $
 
 inherit gnome2 eutils
 
 MY_PN=NetworkManager
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop env independent"
-HOMEPAGE="http://people.redhat.com/dcbw/NetworkManager/"
+HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 #http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.6/
 SRC_URI="http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.6/${MY_PN}-${PV}.tar.gz"
 
