@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.36 2007/02/25 11:49:32 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.37 2007/05/14 20:13:36 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   25 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> -hspell-0.4.ebuild,
   -hspell-0.5.ebuild, -hspell-0.6.ebuild, -hspell-0.7.ebuild,
