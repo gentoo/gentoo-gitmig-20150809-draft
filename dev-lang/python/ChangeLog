@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.249 2007/05/13 10:14:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.250 2007/05/14 05:01:12 jer Exp $
+
+  14 May 2007; Jeroen Roovers <jer@gentoo.org> python-2.4.4-r4.ebuild:
+  Stable for HPPA (bug #177804).
 
   13 May 2007; Markus Rothe <corsair@gentoo.org> python-2.4.4-r4.ebuild:
   Stable on ppc64; bug #177804
