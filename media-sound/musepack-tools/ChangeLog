@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.32 2007/05/12 15:45:34 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.33 2007/05/14 21:21:37 beandog Exp $
+
+  14 May 2007; Steve Dibb <beandog@gentoo.org>
+  musepack-tools-1.15v-r1.ebuild:
+  Only patch Makefile if use esd, bug 178569
 
 *musepack-tools-1.15v-r1 (12 May 2007)
 
