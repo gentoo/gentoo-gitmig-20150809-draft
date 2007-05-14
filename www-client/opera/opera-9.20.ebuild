@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.20.ebuild,v 1.5 2007/04/12 06:49:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.20.ebuild,v 1.6 2007/05/14 02:56:56 jer Exp $
 
 inherit eutils gnome2
 
@@ -137,7 +137,7 @@ src_install() {
 				export SANITY_CHECK_LIBZ_FAILED=1
 				break
 			fi
-		    sed -i -e 's/libz\.so\.3/libz.so.1/g' "$i"
+			sed -i -e 's/libz\.so\.3/libz.so.1/g' "$i"
 		done
 		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
 	fi
