@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4-r1.ebuild,v 1.1 2007/05/12 05:52:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4-r2.ebuild,v 1.1 2007/05/14 02:56:09 wltjr Exp $
 
 inherit flag-o-matic eutils
 
@@ -123,19 +123,21 @@ src_install() {
 	for i in include lib UDF intl; do chmod a=r ${D}/opt/firebird/${i}/*; done
 	chmod ug=rx,o= ${D}/opt/firebird/{intl/fbintl,UDF/fbudf.so,UDF/ib_udf.so}
 
+	local my_lib=$(get_libdir)
+
 	# create links for back compatibility
-	dosym ../../opt/firebird/lib/libfbclient.so /usr/lib/libgds.so
-	dosym ../../opt/firebird/lib/libfbclient.so /usr/lib/libgds.so.0
-	dosym ./libfbclient.so /opt/firebird/lib/libgds.so
-	dosym ./libfbclient.so /opt/firebird/lib/libgds.so.0
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libgds.so
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libgds.so.0
+	dosym ./libfbclient.so /opt/firebird/${my_lib}/libgds.so
+	dosym ./libfbclient.so /opt/firebird/${my_lib}/libgds.so.0
 
 	# we want relative symlinks...
-	rm /usr/lib/libfbclient.so
-	rm /usr/lib/libfbclient.so.1
-	rm /usr/lib/libfbclient.so.1.5.4
-	dosym ../../opt/firebird/lib/libfbclient.so /usr/lib/libfbclient.so
-	dosym ../../opt/firebird/lib/libfbclient.so.1 /usr/lib/libfbclient.so.1
-	dosym ../../opt/firebird/lib/libfbclient.so.1.5.4 /usr/lib/libfbclient.so.1.5.4
+	rm /usr/${my_lib}/libfbclient.so
+	rm /usr/${my_lib}/libfbclient.so.1
+	rm /usr/${my_lib}/libfbclient.so.1.5.4
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libfbclient.so
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so.1 /usr/${my_lib}/libfbclient.so.1
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so.1.5.4 /usr/${my_lib}/libfbclient.so.1.5.4
 
 	# move and link config files to /etc/firebird so they'll be protected
 	dodir /etc/firebird

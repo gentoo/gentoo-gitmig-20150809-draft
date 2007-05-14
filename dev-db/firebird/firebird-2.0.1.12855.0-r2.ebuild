@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r1.ebuild,v 1.1 2007/05/12 05:52:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r2.ebuild,v 1.1 2007/05/14 02:56:09 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -111,17 +111,31 @@ src_install() {
 	touch "${D}"/var/log/firebird/firebird.log
 	chown firebird:firebird "${D}"/var/log/firebird/firebird.log
 
-	if [ ${ARCH} == "amd64" ] ; then
-		cd "${D}/opt/firebird/"
-		ln -s lib64 lib
-		cd "${S}/gen/firebird"
-	fi
-
 	# create links for split config & log file
 	dosym /etc/firebird/aliases.conf /opt/firebird/aliases.conf
 	dosym /etc/firebird/security2.fdb /opt/firebird/security2.fdb
 	dosym /etc/firebird/firebird.conf /opt/firebird/firebird.conf
 	dosym /var/log/firebird/firebird.log /opt/firebird/firebird.log
+
+	local my_lib=$(get_libdir)
+
+	# firebird has a problem with lib64 dir name, bug?
+	if [ ${my_lib} == "lib64" ] ; then
+		dosym ./lib64 /opt/firebird/lib
+	fi
+
+	# create links for backwards compatibility dosym puts link in / :(
+	cd "${D}/opt/firebird/${my_lib}/"
+	ln -s libfbclient.so libgds.so
+	ln -s libfbclient.so libgds.so.0
+	ln -s libfbclient.so libfbclient.so.1
+
+	# create system links for ld
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libgds.so
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libgds.so.0
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libfbclient.so
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so.1 /usr/${my_lib}/libfbclient.so.1
+	dosym ../../opt/firebird/${my_lib}/libfbclient.so.2 /usr/${my_lib}/libfbclient.so.2
 
 	if use xinetd ; then
 		insinto /etc/xinetd.d
