@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2805 2007/05/13 11:18:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2806 2007/05/14 20:04:52 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1393,6 +1393,7 @@ net-irc/ngircd:ident - Enables support for libident
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/unrealircd:hub - Enable hub support
 net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
+net-irc/unrealircd:showlistmodes - support displaying channel modes during compilation
 net-irc/xchat-gnome:libsexy - Enable libsexy support
 net-irc/xchat-xsys:audacious - Enables Audacious (media player) integration
 net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
