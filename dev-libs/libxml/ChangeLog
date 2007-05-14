@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.19 2007/02/07 14:09:48 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.20 2007/05/14 20:18:59 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   07 Feb 2007; Harald van Dĳk <truedfx@gentoo.org>
   +files/configure-LANG.patch, libxml-1.8.17-r2.ebuild:

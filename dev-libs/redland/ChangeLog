@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.20 2007/05/11 08:30:34 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.21 2007/05/14 20:18:59 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *redland-1.0.6 (11 May 2007)
 

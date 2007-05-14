@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.2 2005/03/01 00:00:33 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.3 2007/05/14 20:18:59 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *libtar-1.2.11-r1 (28 Feb 2005)
 

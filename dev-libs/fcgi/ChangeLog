@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.28 2007/05/08 19:48:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.29 2007/05/14 20:18:59 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   08 May 2007; Fabian Groffen <grobian@gentoo.org> ChangeLog:
   Dropped ppc-macos keyword, see you in prefix
