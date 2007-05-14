@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/galculator
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.16 2007/05/05 19:39:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.17 2007/05/14 19:32:21 drac Exp $
+
+*galculator-1.2.5.2-r1 (14 May 2007)
+
+  14 May 2007; Samuli Suominen <drac@gentoo.org> -galculator-1.2.5.ebuild,
+  +galculator-1.2.5.2-r1.ebuild:
+  Adjust .desktop file to get Icon on non-gnome desktops for bug 112614. Drop
+  old version.
 
   05 May 2007; Daniel Gryniewicz <dang@gentoo.org>
   galculator-1.2.5.2.ebuild:
