@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.4.ebuild,v 1.1 2007/05/13 13:25:13 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.4.ebuild,v 1.2 2007/05/14 21:31:45 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,9 +17,9 @@ IUSE="gtk X"
 
 DEPEND="media-libs/alsa-lib
 	x86? ( sys-apps/pciutils
-		sys-libs/libsmbios )
+		>=sys-libs/libsmbios-0.13.6 )
 	amd64? (  sys-apps/pciutils
-		sys-libs/libsmbios )
+		>=sys-libs/libsmbios-0.13.6 )
 	dev-libs/confuse
 	sys-apps/dbus
 	sys-libs/zlib

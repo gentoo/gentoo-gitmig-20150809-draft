@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.4 2007/05/13 13:25:13 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.5 2007/05/14 21:31:45 cedk Exp $
+
+  14 May 2007; Cédric Krier <cedk@gentoo.org> files/pommed.rc,
+  pommed-1.4.ebuild:
+  Fix rc script for bug #178496 and dependencies for bug #178508
 
 *pommed-1.4 (13 May 2007)
 
