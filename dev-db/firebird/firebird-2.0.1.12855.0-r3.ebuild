@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r2.ebuild,v 1.1 2007/05/14 02:56:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r3.ebuild,v 1.1 2007/05/14 14:28:03 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -102,7 +102,7 @@ src_install() {
 	exeinto /opt/firebird/intl
 	doexe intl/*.so
 
-	diropts -m 755 -o tomcat -g tomcat
+	diropts -m 755 -o firebird -g firebird
 	dodir /var/log/firebird
 	dodir /var/run/firebird
 	keepdir /var/log/firebird
