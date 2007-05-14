@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.20-r1.ebuild,v 1.2 2007/05/14 02:56:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.20-r1.ebuild,v 1.3 2007/05/14 03:55:45 jer Exp $
 
 inherit eutils gnome2
 
@@ -151,14 +151,15 @@ pkg_postinst() {
 	use gnome && gnome2_pkg_postinst
 
 	elog "For localized language files take a look at:"
-	elog "http://www.opera.com/download/languagefiles/index.dml?platform=linux"
+	elog " http://www.opera.com/download/languagefiles/index.dml"
 	elog
-	elog "To change the spellcheck language edit /opt/opera/share/opera/ini/spellcheck.ini"
+	elog "To change the spellcheck language edit"
+	elog " /opt/opera/share/opera/ini/spellcheck.ini"
 	elog "and emerge app-dicts/aspell-language."
 	elog
 	elog "If you would like to watch videos on websites like YouTube, you will"
 	elog "need to edit \$HOME/.opera/pluginpath.ini and set:"
-	elog "   /opt/netscape/plugins=2"
+	elog " /opt/netscape/plugins=2"
 }
 
 
