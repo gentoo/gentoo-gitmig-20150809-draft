@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.10 2007/05/14 18:42:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r1.ebuild,v 1.11 2007/05/14 22:37:06 aballier Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -55,6 +55,11 @@ src_unpack() {
 	# ocaml has automagics on libX11 and gdbm
 	# http://caml.inria.fr/mantis/view.php?id=4278
 	epatch "${FILESDIR}/${P}-automagic.patch"
+
+	# Call ld with proper flags, different from gcc ones
+	# This happens when calling ocamlc -pack
+	# See comment in the patch
+	epatch "${FILESDIR}/${P}-call_ld_with_proper_flags.patch"
 
 	# Change the configure script to add the CFLAGS to bytecccompopts, LDFLAGS
 	# to bytecclinkopts.
