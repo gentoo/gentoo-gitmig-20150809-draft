@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.19 2007/05/01 09:41:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.20 2007/05/14 07:37:24 zzam Exp $
 
 inherit eutils
 
@@ -24,7 +24,9 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 
-	if has_version ">=sys-kernel/linux-headers-2.6.19"; then
+	if has_version ">=sys-kernel/linux-headers-2.6.21"; then
+		epatch ${FILESDIR}/${P}-linux-headers-2.6.21.patch
+	elif has_version ">=sys-kernel/linux-headers-2.6.19"; then
 		epatch ${FILESDIR}/${P}-linux-headers-2.6.19.patch
 	fi
 }
