@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.254 2007/05/14 15:44:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.255 2007/05/14 18:20:49 kloeri Exp $
+
+  14 May 2007; Bryan Østergaard <kloeri@gentoo.org> python-2.4.4-r4.ebuild:
+  Stable on Alpha and Mips.
 
   14 May 2007; Daniel Gryniewicz <dang@gentoo.org> python-2.4.4-r4.ebuild:
   Marked ~amd64 for bug #177804
