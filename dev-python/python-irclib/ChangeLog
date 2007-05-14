@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-irclib
-# Copyright 2000-2006 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.1 2006/10/22 20:28:52 radek Exp $
+# Copyright 2000-2007 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.2 2007/05/14 06:14:05 bangert Exp $
+
+  14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *python-irclib-0.4.6 (22 Oct 2006)
 

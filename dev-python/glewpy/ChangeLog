@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/glewpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/glewpy/ChangeLog,v 1.2 2007/02/13 22:04:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/glewpy/ChangeLog,v 1.3 2007/05/14 06:16:08 bangert Exp $
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix herd
 
   13 Feb 2007; Raúl Porcel <armin76@gentoo.org> glewpy-0.7.4.ebuild:
   keyword ~x86, bug 166720
