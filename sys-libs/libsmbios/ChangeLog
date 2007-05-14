@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsmbios
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.4 2007/05/07 16:30:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.5 2007/05/14 21:29:26 cedk Exp $
+
+*libsmbios-0.13.6 (14 May 2007)
+
+  14 May 2007; Cédric Krier <cedk@gentoo.org> +libsmbios-0.13.6.ebuild:
+  Version bump
 
   07 May 2007; Bryan Østergaard <kloeri@gentoo.org>
   libsmbios-0.13.5.ebuild:
