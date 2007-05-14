@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.14 2007/05/14 19:52:06 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.15 2007/05/14 20:04:07 pioto Exp $
 #
 # This eclass is used by vim.eclass and vim-plugin.eclass to update
 # the documentation tags.  This is necessary since vim doesn't look in
@@ -68,5 +68,5 @@ update_vim_helptags() {
 		fi
 	done
 
-	[[ -n "${vim}" ]] && rm "${vim}"
+	[[ -n "${vim}" && -f "${vim}" ]] && rm "${vim}"
 }
