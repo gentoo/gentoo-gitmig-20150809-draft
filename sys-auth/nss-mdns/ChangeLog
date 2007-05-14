@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.19 2007/04/28 12:44:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.20 2007/05/14 04:54:28 compnerd Exp $
+
+  14 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -nss-mdns-0.8-r1.ebuild, -nss-mdns-0.9.ebuild:
+  prune unused versions
 
   28 Apr 2007; Carsten Lohrke <carlo@gentoo.org> nss-mdns-0.9-r1.ebuild:
   Remove the blocker again as it is necessary in avahi anyways.
