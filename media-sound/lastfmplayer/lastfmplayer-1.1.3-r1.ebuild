@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r1.ebuild,v 1.2 2007/05/01 00:09:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r1.ebuild,v 1.3 2007/05/14 19:57:43 genstef Exp $
 
 inherit eutils versionator
 
@@ -22,6 +22,7 @@ DEPEND=">=x11-libs/qt-4.2
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/13_alsa-r1.diff
+	epatch ${FILESDIR}/qt4.patch
 }
 
 src_compile() {
