@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.2 2007/01/14 11:08:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.3 2007/05/14 16:53:56 steev Exp $
+
+*dhcdbd-2.7 (14 May 2007)
+
+  14 May 2007; Steev Klimaszewski <steev@gentoo.org>
+  -files/dhcdbd-1.14-dbus_close.patch,
+  -files/dhcdbd-1.14-enable_debug.patch,
+  -files/dhcdbd-1.14-fix_dhclientconf.patch, +files/dhcdbd-2.5-fixes.patch,
+  -dhcdbd-1.14-r1.ebuild, +dhcdbd-2.7.ebuild:
+  New upstream release, version 2.7, was testing locally, with no issues.  Fixes
+  bug #178523.  Thanks to Davide Pesavento <davidepesa@gmail.com> for reporting.
+  Remove the dhcdbd-1.14 line.
 
   14 Jan 2007; Markus Rothe <corsair@gentoo.org> dhcdbd-1.14-r1.ebuild:
   Added ~ppc64
