@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.84 2007/05/05 01:41:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.85 2007/05/14 06:22:21 kumba Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -11,6 +11,7 @@
 # (wolf31o2, Jan 2005)
 # (azarah, Mar 2005)
 # (uberlord, May 2007)
+# (kumba, May 2007)
 
 # sanity check
 [[ -e /etc/profile ]] && . /etc/profile
@@ -51,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.84 2007/05/05 01:41:21 vapier Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.85 2007/05/14 06:22:21 kumba Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -222,24 +223,13 @@ for opt in ${ORIGUSE} ; do
 			;;
 		nptl)
 			export MYARCH=$(portageq envvar ARCH)
-			if [[ "${MYARCH}" != "mips" ]] ; then
-	 			if [[ -z $(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0') ]] ; then
-					eerror "You need to have >=sys-kernel/linux-headers-2.6.0 unmasked!"
-					eerror "Please edit the latest >=sys-kernel/linux-headers-2.6.0 package,"
-					eerror "and add your ARCH to KEYWORDS or change your make.profile link"
-					eerror "to a profile which does not have 2.6 headers masked."
-					echo
-					cleanup 1
-				fi
-			else
-	 			if [[ -z $(portageq best_visible / '>=sys-kernel/mips-headers-2.6.0') ]] ; then
-					eerror "You need to have >=sys-kernel/mips-headers-2.6.0 unmasked!"
-					eerror "Please edit the latest >=sys-kernel/mips-headers-2.6.0 package,"
-					eerror "and add your ARCH to KEYWORDS or change your make.profile link"
-					eerror "to a profile which does not have 2.6 headers masked."
-					echo
-					cleanup 1
-				fi
+ 			if [[ -z $(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0') ]] ; then
+				eerror "You need to have >=sys-kernel/linux-headers-2.6.0 unmasked!"
+				eerror "Please edit the latest >=sys-kernel/linux-headers-2.6.0 package,"
+				eerror "and add your ARCH to KEYWORDS or change your make.profile link"
+				eerror "to a profile which does not have 2.6 headers masked."
+				echo
+				cleanup 1
 			fi
 			USE_NPTL=1
 			;;
@@ -281,11 +271,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # Do we really have no 2.4.x nptl kernels in portage?
 if [[ ${USE_NPTL} = "1" ]] ; then
-	if [[ "${MYARCH}" != "mips" ]] ; then
-		myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0')"
-	else
-		myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/mips-headers-2.6.0')"
-	fi
+	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0')"
 	[[ -n ${myOS_HEADERS} ]] && myOS_HEADERS=">=${myOS_HEADERS}"
 	ALLOWED_USE="${ALLOWED_USE} nptl"
 	# Should we build with nptl only?
