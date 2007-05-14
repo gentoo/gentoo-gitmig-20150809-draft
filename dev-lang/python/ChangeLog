@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.250 2007/05/14 05:01:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.251 2007/05/14 09:20:02 kloeri Exp $
+
+  14 May 2007; Bryan Østergaard <kloeri@gentoo.org> python-2.3.6-r2.ebuild,
+  python-2.4.4-r4.ebuild, -python-2.5.1-r1.ebuild, python-2.5.1-r2.ebuild:
+  Fix small bug preventing tests from running, fix manpage symlinks (bug
+  177471) and filter as-needed in python-2.3.6-r2 (bug 177614).
 
   14 May 2007; Jeroen Roovers <jer@gentoo.org> python-2.4.4-r4.ebuild:
   Stable for HPPA (bug #177804).

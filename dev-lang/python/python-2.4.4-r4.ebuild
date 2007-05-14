@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r4.ebuild,v 1.7 2007/05/14 05:01:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r4.ebuild,v 1.8 2007/05/14 09:20:02 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -220,14 +220,14 @@ src_install() {
 }
 
 pkg_postrm() {
-python_makesym
+	local mansuffix=$(ecompress --suffix)
+	python_makesym
 	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/bin/python-config" \
 								"python-config-[0-9].[0-9]"
-	suffix=$(echo /usr/share/man/man1/python${PYVER}.1* | sed "s/.*python${PYVER}.1//")
-	ln -s "/usr/share/man/man1/python[0-9][0-9].1${suffix}" \
-		"/usr/share/man/man1/python.1${suffix}"
+	alternatives_auto_makesym "/usr/share/man/man1/python.1${mansuffix}" \
+								"python[0-9].[0-9].1${mansuffix}"
 
 	python_mod_cleanup /usr/lib/python${PYVER}
 	[[ "$(get_libdir)" == "lib" ]] || \
@@ -237,15 +237,15 @@ python_makesym
 pkg_postinst() {
 	local myroot
 	myroot=$(echo $ROOT | sed 's:/$::')
+	local mansuffix=$(ecompress --suffix)
 
 	python_makesym
 	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/bin/python-config" \
 								"python-config-[0-9].[0-9]"
-	suffix=$(echo /usr/share/man/man1/python${PYVER}.1* | sed "s/.*python${PYVER}.1//")
-	ln -s "/usr/share/man/man1/python[0-9][0-9].1${suffix}" \
-		"/usr/share/man/man1/python.1${suffix}"
+	alternatives_auto_makesym "/usr/share/man/man1/python.1${mansuffix}" \
+								"python[0-9].[0-9].1${mansuffix}"
 
 	python_mod_optimize
 	python_mod_optimize -x site-packages \

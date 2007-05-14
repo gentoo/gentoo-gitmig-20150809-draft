@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r2.ebuild,v 1.2 2007/05/12 11:45:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r2.ebuild,v 1.3 2007/05/14 09:20:02 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -103,6 +103,7 @@ src_configure() {
 
 src_compile() {
 	filter-flags -malign-double
+	filter-ldflags -Wl,--as-needed --as-needed
 
 	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
