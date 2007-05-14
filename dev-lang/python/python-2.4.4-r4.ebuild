@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r4.ebuild,v 1.9 2007/05/14 14:07:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r4.ebuild,v 1.10 2007/05/14 14:22:19 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -283,7 +283,7 @@ pkg_postinst() {
 
 src_test() {
 	# Tests won't work when cross compiling
-	if [[ tc-is-cross-compiler ]] ; then
+	if tc-is-cross-compiler ; then
 		elog "Disabling tests due to crosscompiling."
 		return
 	fi
