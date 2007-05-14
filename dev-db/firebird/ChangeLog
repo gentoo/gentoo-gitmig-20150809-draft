@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.56 2007/05/14 14:28:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.57 2007/05/14 21:06:44 wltjr Exp $
+
+  14 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  firebird-1.5.4-r2.ebuild:
+  Dropped calls to rm symlinks from the live system, which should be the cause
+  for bug #177916.
 
 *firebird-2.0.1.12855.0-r3 (14 May 2007)
 

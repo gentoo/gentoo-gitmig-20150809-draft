@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4-r2.ebuild,v 1.1 2007/05/14 02:56:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4-r2.ebuild,v 1.2 2007/05/14 21:06:44 wltjr Exp $
 
 inherit flag-o-matic eutils
 
@@ -132,9 +132,6 @@ src_install() {
 	dosym ./libfbclient.so /opt/firebird/${my_lib}/libgds.so.0
 
 	# we want relative symlinks...
-	rm /usr/${my_lib}/libfbclient.so
-	rm /usr/${my_lib}/libfbclient.so.1
-	rm /usr/${my_lib}/libfbclient.so.1.5.4
 	dosym ../../opt/firebird/${my_lib}/libfbclient.so /usr/${my_lib}/libfbclient.so
 	dosym ../../opt/firebird/${my_lib}/libfbclient.so.1 /usr/${my_lib}/libfbclient.so.1
 	dosym ../../opt/firebird/${my_lib}/libfbclient.so.1.5.4 /usr/${my_lib}/libfbclient.so.1.5.4
