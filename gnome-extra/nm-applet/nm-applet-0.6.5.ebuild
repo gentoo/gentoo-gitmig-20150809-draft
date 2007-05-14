@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5.ebuild,v 1.3 2007/05/11 16:57:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5.ebuild,v 1.4 2007/05/14 16:29:08 steev Exp $
 
 inherit gnome2 eutils
 
 MY_PV=${PV/_*/}
 
 DESCRIPTION="Gnome applet for NetworkManager."
-HOMEPAGE="http://people.redhat.com/dcbw/NetworkManager/"
+HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 SRC_URI="http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.6/network-manager-applet-0.6.5.tar.gz"
 
 LICENSE="GPL-2"
