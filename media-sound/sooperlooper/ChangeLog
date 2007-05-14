@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sooperlooper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.6 2007/05/07 01:37:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.7 2007/05/14 03:59:40 dirtyepic Exp $
+
+  14 May 2007; Ryan Hill <dirtyepic@gentoo.org> -sooperlooper-1.0.8c.ebuild:
+  Remove old.
 
   07 May 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/sooperlooper-1.1.0-amd64.patch, sooperlooper-1.0.8c.ebuild,
