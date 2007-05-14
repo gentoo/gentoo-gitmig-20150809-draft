@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.5.0.ebuild,v 1.1 2007/03/31 06:21:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.5.0.ebuild,v 1.2 2007/05/14 20:35:41 compnerd Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -17,6 +17,7 @@ RDEPEND=">=dev-lang/mono-1.1.14
 		 >=dev-dotnet/gtk-sharp-2.8
 		 >=dev-dotnet/glade-sharp-2.8"
 DEPEND="${RDEPEND}
+		  app-text/scrollkeeper
 		>=sys-devel/gettext-0.15
 		>=dev-util/pkgconfig-0.19"
 
