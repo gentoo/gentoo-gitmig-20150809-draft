@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.146 2007/05/14 19:39:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.147 2007/05/14 20:11:06 ulm Exp $
+
+  14 May 2007; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r12.ebuild:
+  Remove !arm inverse arch flag for Xaw3d and motif, according to jokey it is
+  not needed anymore.
 
   14 May 2007; Markus Ullmann <jokey@gentoo.org> emacs-21.4-r12.ebuild:
   Works on arm as well
