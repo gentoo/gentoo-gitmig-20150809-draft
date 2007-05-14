@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.5a.ebuild,v 1.5 2007/05/13 16:30:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.5a.ebuild,v 1.6 2007/05/14 12:29:39 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.6.10 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack ${A}
