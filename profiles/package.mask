@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7261 2007/05/14 10:22:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7262 2007/05/14 13:16:50 hkbst Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
+# development version
+=media-sound/lilypond-2.11*
 
 # Roy Marples <uberlord@gentoo.org> (14 May 2007)
 # debianutils-2.18 requires update-grub which vanilla grub does not supply
