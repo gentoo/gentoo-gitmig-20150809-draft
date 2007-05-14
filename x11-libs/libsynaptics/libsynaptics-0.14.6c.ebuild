@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6c.ebuild,v 1.1 2007/05/14 13:01:59 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6c.ebuild,v 1.2 2007/05/14 13:17:21 trapni Exp $
 
 inherit eutils
 
@@ -13,9 +13,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 #RESTRICT=""
 
-DEPEND=""
-#RDEPEND=""
-#S=${WORKDIR}/${P}
+#DEPEND=""
+RDEPEND=">=x11-drivers/synaptics-0.14.4"
 
 src_compile() {
 	econf || die "econf failed"
