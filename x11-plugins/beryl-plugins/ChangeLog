@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/beryl-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/ChangeLog,v 1.10 2007/03/23 03:23:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/ChangeLog,v 1.11 2007/05/15 20:38:54 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   23 Mar 2007; Joshua Jackson <tsunam@gentoo.org>
   beryl-plugins-0.2.1.ebuild:
