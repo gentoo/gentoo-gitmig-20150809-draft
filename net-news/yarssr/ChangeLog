@@ -1,6 +1,9 @@
 # ChangeLog for net-news/yarssr
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.1 2006/10/25 04:18:03 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.2 2007/05/15 14:08:03 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *yarssr-0.2.2 (25 Oct 2006)
 
