@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.12.2.ebuild,v 1.3 2007/03/05 02:59:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.12.2.ebuild,v 1.4 2007/05/15 21:09:34 pythonhead Exp $
 
 inherit distutils eutils
 
@@ -8,15 +8,27 @@ DESCRIPTION="PyLint is a tool to check if a Python module satisfies a coding sta
 SRC_URI="ftp://ftp.logilab.org/pub/pylint/${P}.tar.gz"
 HOMEPAGE="http://www.logilab.org/projects/pylint/"
 
-IUSE=""
+IUSE="tk"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 DEPEND="|| ( >=dev-python/optik-1.4 >=dev-lang/python-2.3 )
 		>=dev-python/logilab-common-0.21.0
-		>=dev-python/astng-0.16.0"
+		>=dev-python/astng-0.16.0
+		tk? ( >=dev-lang/tk-8.4.9 )"
 
 DOCS="doc/*.txt"
+
+
+pkg_setup() {
+	if use tk && ! built_with_use dev-lang/python tk; then
+		eerror "You have USE='tk' enabled."
+		eerror "Python has not been compiled with tkinter support."
+		eerror "Please re-emerge python with the 'tk' USE-flag set."
+		die "Missing USE-flag for dev-lang/python"
+	fi
+}
+
 
 src_unpack() {
 	unpack ${A}
@@ -27,6 +39,7 @@ src_unpack() {
 
 	# Make pylint-gui print a gentoo-specific message if Tkinter is missing
 	epatch "${FILESDIR}/${PN}-0.11.0-gui-no-tkinter.patch"
+
 }
 
 src_install() {
