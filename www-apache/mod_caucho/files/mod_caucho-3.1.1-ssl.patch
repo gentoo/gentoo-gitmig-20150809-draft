@@ -1,6 +1,6 @@
-diff -Nru resin-3.0.22.vanilla/modules/c/src/apache2/mod_caucho.c resin-3.0.22/modules/c/src/apache2/mod_caucho.c
---- resin-3.0.22.vanilla/modules/c/src/apache2/mod_caucho.c	2007-04-13 15:41:18.000000000 +0200
-+++ resin-3.0.22/modules/c/src/apache2/mod_caucho.c	2007-04-13 16:00:24.000000000 +0200
+diff -Nru resin-3.1.1.vanilla/modules/c/src/apache2/mod_caucho.c resin-3.1.1/modules/c/src/apache2/mod_caucho.c
+--- resin-3.1.1.vanilla/modules/c/src/apache2/mod_caucho.c	2007-04-13 15:41:18.000000000 +0200
++++ resin-3.1.1/modules/c/src/apache2/mod_caucho.c	2007-04-13 16:00:24.000000000 +0200
 @@ -582,6 +582,16 @@
      }
    }

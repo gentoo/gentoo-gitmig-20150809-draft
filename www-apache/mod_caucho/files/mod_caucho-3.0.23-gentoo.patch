@@ -1,6 +1,6 @@
-diff -Nru resin-3.1.0.vanilla/modules/c/src/apache2/Makefile.in resin-3.1.0/modules/c/src/apache2/Makefile.in
---- resin-3.1.0.vanilla/modules/c/src/apache2/Makefile.in	2006-12-26 02:44:02.000000000 +0100
-+++ resin-3.1.0/modules/c/src/apache2/Makefile.in	2006-12-26 02:46:14.000000000 +0100
+diff -Nru resin-3.0.23.vanilla/modules/c/src/apache2/Makefile.in resin-3.0.23/modules/c/src/apache2/Makefile.in
+--- resin-3.0.23.vanilla/modules/c/src/apache2/Makefile.in	2006-08-14 22:44:04.000000000 +0200
++++ resin-3.0.23/modules/c/src/apache2/Makefile.in	2006-08-14 23:24:00.000000000 +0200
 @@ -36,11 +36,8 @@
  	$(CC) -c $(INCLUDES) $(CFLAGS) $<
  
