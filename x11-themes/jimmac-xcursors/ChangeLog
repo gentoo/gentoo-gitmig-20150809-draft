@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/jimmac-xcursors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/ChangeLog,v 1.11 2007/03/19 03:45:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/ChangeLog,v 1.12 2007/05/15 14:27:20 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove gothgirl from metadata.xml due to retirement.
