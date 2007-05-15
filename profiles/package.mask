@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7264 2007/05/14 21:17:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7265 2007/05/15 10:16:48 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org> (15 May 2007)
+# Masked for removal unless someone picks up these packages. See Bug #177782.
+app-office/khacc
+app-office/qhacc
 
 # Samuli Suominen <drac@gentoo.org> (14 May 2007)
 # Masked for removal in 30 days unless bug 175730
