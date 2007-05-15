@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kavi2svcd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.14 2006/07/05 10:26:48 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.15 2007/05/15 13:56:23 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *kavi2svcd-0.8.7 (05 Jul 2006)
 

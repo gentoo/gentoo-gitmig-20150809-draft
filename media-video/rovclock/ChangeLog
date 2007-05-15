@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rovclock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.3 2006/11/08 01:15:21 dang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.4 2007/05/15 13:56:23 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   08 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> rovclock-0.6e.ebuild:
   Marked stable on amd64 for bug #152753

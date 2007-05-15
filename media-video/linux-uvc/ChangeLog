@@ -1,6 +1,9 @@
 # ChangeLog for media-video/linux-uvc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.7 2007/05/07 20:21:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.8 2007/05/15 13:56:23 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *linux-uvc-0.1.0_pre100 (07 May 2007)
 
