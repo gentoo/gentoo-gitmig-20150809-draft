@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/viaideinfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.7 2007/01/28 16:43:45 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.8 2007/05/15 14:13:31 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *viaideinfo-0.5 (28 Jan 2007)
 
