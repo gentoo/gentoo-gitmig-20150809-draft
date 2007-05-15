@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.29 2007/04/09 16:17:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.30 2007/05/15 16:10:29 pva Exp $
+
+*flow-tools-0.68-r5 (15 May 2007)
+
+  15 May 2007; <pva@gentoo.org>
+  +files/flow-tools-0.68-another-amd64-casting-fixes.patch,
+  +flow-tools-0.68-r5.ebuild:
+  Fixed amd64 specific problem reported by Alexander Zubkov <green AT
+  mes.msu.ru> in bug #177955.
 
 *flow-tools-0.68-r4 (09 Apr 2007)
 

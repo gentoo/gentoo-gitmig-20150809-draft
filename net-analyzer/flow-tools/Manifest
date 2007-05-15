@@ -6,6 +6,10 @@ AUX flow-tools-0.67-nodebug.patch 933 RMD160 fe974a8a69f168783d7c77ca6aaf302010f
 MD5 f16f4ba51648f2b7f0e3830bc7670f6e files/flow-tools-0.67-nodebug.patch 933
 RMD160 fe974a8a69f168783d7c77ca6aaf302010ffcacb files/flow-tools-0.67-nodebug.patch 933
 SHA256 e862d823543f422319c31e305149b25a0d74ffbc9d0ee98ec756a90fc053b373 files/flow-tools-0.67-nodebug.patch 933
+AUX flow-tools-0.68-another-amd64-casting-fixes.patch 2070 RMD160 a46a9eb144c5ca130b3af1351194af212b0fd8c3 SHA1 95d0e154e064cbc67fafab9729b37ef1da3e3bb7 SHA256 ff5a14e7c3999888325c3bee057e40410c3bb600bfb8c15f931094b164799c98
+MD5 623cfba25dc7745f3024e7b894320c01 files/flow-tools-0.68-another-amd64-casting-fixes.patch 2070
+RMD160 a46a9eb144c5ca130b3af1351194af212b0fd8c3 files/flow-tools-0.68-another-amd64-casting-fixes.patch 2070
+SHA256 ff5a14e7c3999888325c3bee057e40410c3bb600bfb8c15f931094b164799c98 files/flow-tools-0.68-another-amd64-casting-fixes.patch 2070
 AUX flow-tools-0.68-fix-a-zillion-warnings-updated.diff 19404 RMD160 81535106be145c56a6a201125ad1cd137ec25378 SHA1 fad3da5429d8d3edef5ea9af09cac11484c4b159 SHA256 03991fe055eae71b58d7ac1b7cb1b4cdfe33566e9ee8c0cd99144b583bb2affe
 MD5 f314eeae896fbee31ee20e8023f0b11c files/flow-tools-0.68-fix-a-zillion-warnings-updated.diff 19404
 RMD160 81535106be145c56a6a201125ad1cd137ec25378 files/flow-tools-0.68-fix-a-zillion-warnings-updated.diff 19404
@@ -39,10 +43,14 @@ EBUILD flow-tools-0.68-r4.ebuild 2635 RMD160 745bf0231bf79bbe0a749567eefa0a437c4
 MD5 6723ca766756cc17621ca678eb2b4131 flow-tools-0.68-r4.ebuild 2635
 RMD160 745bf0231bf79bbe0a749567eefa0a437c40c8ec flow-tools-0.68-r4.ebuild 2635
 SHA256 6e6d104e14a3157dac989ffc5d8e70618429e5121603e1f5bc6482681a732e3d flow-tools-0.68-r4.ebuild 2635
-MISC ChangeLog 5882 RMD160 c4f70ea4ef8f3622eae0b06f9c37c59d377e135c SHA1 87d5ce748dfba690acd2fc5a340b0f9e36d1a746 SHA256 96b56f687b300c61f7b60fc09bfb638656af4f34b8f748923d8cc2ed88aa4eab
-MD5 7f585fa357cbdd212c3e088dcb44634a ChangeLog 5882
-RMD160 c4f70ea4ef8f3622eae0b06f9c37c59d377e135c ChangeLog 5882
-SHA256 96b56f687b300c61f7b60fc09bfb638656af4f34b8f748923d8cc2ed88aa4eab ChangeLog 5882
+EBUILD flow-tools-0.68-r5.ebuild 2696 RMD160 32ebe4a54dbd556eb1e4cc4b19286535cdbed1e6 SHA1 79c421da0b83a25d9def17b9e8ef558086fdaf24 SHA256 1219bc1fe8765acdfe8141dc8590dfcf5a6e21ad858652de98c4623878be756a
+MD5 1c6a9d82387740746be5f66b4380ea3a flow-tools-0.68-r5.ebuild 2696
+RMD160 32ebe4a54dbd556eb1e4cc4b19286535cdbed1e6 flow-tools-0.68-r5.ebuild 2696
+SHA256 1219bc1fe8765acdfe8141dc8590dfcf5a6e21ad858652de98c4623878be756a flow-tools-0.68-r5.ebuild 2696
+MISC ChangeLog 6140 RMD160 472718a0e3361215417948e079c95bc2a4ba794e SHA1 db8907329cb7ce32bdb8d244c9a1530e504ed80d SHA256 65dbbe0ec95dabc3bc3a32e1803a2ef5334827c379aa06b160fbe9fa531170f6
+MD5 fac670a7e274db45dcc877cb351e0904 ChangeLog 6140
+RMD160 472718a0e3361215417948e079c95bc2a4ba794e ChangeLog 6140
+SHA256 65dbbe0ec95dabc3bc3a32e1803a2ef5334827c379aa06b160fbe9fa531170f6 ChangeLog 6140
 MISC metadata.xml 706 RMD160 48d179b230fd01a49853e73fc46f534373bb8488 SHA1 44ba0dd063806d48e8d6aa341c0bc28ea2d932b3 SHA256 4d947ce226ad090ea1274c75c6b360cb14ffdcd2f5730b0e596098aecb1b8daf
 MD5 eaeb632d289698ba9b0c30e0a014a5dd metadata.xml 706
 RMD160 48d179b230fd01a49853e73fc46f534373bb8488 metadata.xml 706
@@ -53,3 +61,6 @@ SHA256 2a161650036d0ba16f3063c2faa0d7216de6320edc9865de530b0ec6c970b1a6 files/di
 MD5 fcf03a34dcb47c4b9b40e694a5f51c6c files/digest-flow-tools-0.68-r4 247
 RMD160 cc28190761ebc35199c32d71a026d51c01dd67ab files/digest-flow-tools-0.68-r4 247
 SHA256 2a161650036d0ba16f3063c2faa0d7216de6320edc9865de530b0ec6c970b1a6 files/digest-flow-tools-0.68-r4 247
+MD5 fcf03a34dcb47c4b9b40e694a5f51c6c files/digest-flow-tools-0.68-r5 247
+RMD160 cc28190761ebc35199c32d71a026d51c01dd67ab files/digest-flow-tools-0.68-r5 247
+SHA256 2a161650036d0ba16f3063c2faa0d7216de6320edc9865de530b0ec6c970b1a6 files/digest-flow-tools-0.68-r5 247
