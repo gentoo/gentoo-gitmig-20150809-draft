@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.147 2007/05/14 20:11:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.148 2007/05/15 09:59:40 uberlord Exp $
+
+  15 May 2007; Roy Marples <uberlord@gentoo.org>
+  +files/emacs-21.4-freebsd-terminfo.patch, emacs-21.4-r12.ebuild:
+  Added ~x86-fbsd keyword, #174884
 
   14 May 2007; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r12.ebuild:
   Remove !arm inverse arch flag for Xaw3d and motif, according to jokey it is
