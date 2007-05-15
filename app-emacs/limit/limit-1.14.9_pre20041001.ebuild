@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.9_pre20041001.ebuild,v 1.6 2007/05/15 09:38:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.9_pre20041001.ebuild,v 1.7 2007/05/15 14:47:01 ulm Exp $
 
 inherit elisp
 
@@ -17,8 +17,6 @@ IUSE=""
 
 DEPEND="!app-emacs/flim
 	>=app-emacs/apel-10.3"
-
-PROVIDE="virtual/flim"
 
 S=${WORKDIR}/flim
 SITEFILE=60flim-gentoo.el
