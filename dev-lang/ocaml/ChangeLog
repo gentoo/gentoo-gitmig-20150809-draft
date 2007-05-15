@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.110 2007/05/15 09:37:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.111 2007/05/15 22:29:52 jer Exp $
+
+  15 May 2007; Jeroen Roovers <jer@gentoo.org> ocaml-3.09.3-r1.ebuild:
+  Marked ~hppa (bug #178256).
 
   15 May 2007; Alexis Ballier <aballier@gentoo.org>
   +files/ocaml-3.09.3-hppa-optimize-for-size-ocamlp4.patch,
