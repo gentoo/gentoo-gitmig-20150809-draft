@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.138 2007/05/15 04:37:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.139 2007/05/15 04:50:31 wltjr Exp $
+
+  15 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/5.5/tomcat.init.2, files/6/tomcat.init:
+  Additional fixes for bug #174498
 
 *tomcat-6.0.10-r5 (09 May 2007)
 *tomcat-5.5.23-r2 (09 May 2007)

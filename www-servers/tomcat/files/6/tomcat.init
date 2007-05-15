@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init,v 1.6 2007/05/15 04:37:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init,v 1.7 2007/05/15 04:50:31 wltjr Exp $
 
 init_env_vars() {
 	# Populate JAVA_HOME
@@ -61,19 +61,19 @@ start()	{
 	ebegin "Starting Tomcat"
 	init_env_vars
 	# Figure out what arguments to pass start_helper based on TOMCAT_START
-	if [ "${TOMCAT_START}" == "debug" ] ; then
+	if [ "${TOMCAT_START}" = "debug" ] ; then
 		start_helper ${JAVA_HOME}/bin/jdb \
 			-sourcepath ${CATALINA_HOME}/../../jakarta-tomcat-catalina/catalina/src/share
-	elif [ "${TOMCAT_START}" == "-security debug" ] ; then
+	elif [ "${TOMCAT_START}" = "-security debug" ] ; then
 		start_helper ${JAVA_HOME}/bin/jdb \
 			-sourcepath ${CATALINA_HOME}/../../jakarta-tomcat-catalina/catalina/src/share \
 			-Djava.security.manager \
 			-Djava.security.policy=${CATALINA_BASE}/conf/catalina.policy
-	elif [ "${TOMCAT_START}" == "jpda start" ] ; then
+	elif [ "${TOMCAT_START}" = "jpda start" ] ; then
 		start_helper ${JAVA_HOME}/bin/java ${JPDA_OPTS}
-	elif [ "${TOMCAT_START}" == "start" ] ; then
+	elif [ "${TOMCAT_START}" = "start" ] ; then
 		start_helper ${JAVA_HOME}/bin/java
-	elif [ "${TOMCAT_START}" == "-security start" ] ; then
+	elif [ "${TOMCAT_START}" = "-security start" ] ; then
 		start_helper ${JAVA_HOME}/bin/java \
 			-Djava.security.manager \
 			-Djava.security.policy=${CATALINA_BASE}/conf/catalina.policy
