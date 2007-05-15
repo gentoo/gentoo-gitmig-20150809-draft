@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.9 2007/05/07 14:51:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.10 2007/05/15 22:58:06 jer Exp $
+
+  15 May 2007; Jeroen Roovers <jer@gentoo.org> builder-2.0.0.ebuild:
+  Marked ~hppa (bug #177287).
 
   07 May 2007; Ferris McCormick <fmccor@gentoo.org> builder-2.0.0.ebuild:
   Add ~sparc keyword --- Bug #177287 --- required by rubygems when USE=server
