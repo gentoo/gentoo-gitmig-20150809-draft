@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krename
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.42 2007/05/01 17:19:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.43 2007/05/15 16:16:05 opfer Exp $
+
+  15 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  krename-3.0.14.ebuild:
+  stable amd64, bug 176288
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> krename-3.0.14.ebuild:
   Stable on ppc64; bug #176228
