@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/dshieldpy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.5 2007/04/09 14:02:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.6 2007/05/15 13:59:32 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> dshieldpy-3.2.ebuild:
   Stable on amd64 wrt bug 173905

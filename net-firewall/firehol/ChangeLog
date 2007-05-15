@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.29 2007/05/06 09:33:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.30 2007/05/15 13:59:32 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   06 May 2007; Marius Mauch <genone@gentoo.org> firehol-1.250.ebuild,
   firehol-1.250-r1.ebuild, firehol-1.250-r2.ebuild:
