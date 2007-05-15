@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-0.9.0.ebuild,v 1.1 2007/03/18 14:52:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-0.9.3.ebuild,v 1.1 2007/05/15 09:22:07 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
@@ -26,9 +26,6 @@ src_install() {
 	php-lib-r1_src_install library/Zend `cd library/Zend ; find . -type f -print`
 	php-lib-r1_src_install incubator/library/Zend `cd incubator/library/Zend ; find . -type f -print`
 
-	insinto /usr/share/${PHP_SHARED_CAT}
-	doins library/Zend.php
-
 	if use examples ; then
 		insinto /usr/share/doc/${P}
 		doins -r demos
@@ -39,4 +36,11 @@ src_install() {
 		dodoc *.txt
 		dohtml -r documentation/*
 	fi
+}
+
+pkg_postinst() {
+	ewarn "As of version 0.9.3, the Zend.php class has been removed."
+	ewarn "For more info, please take a look at the manual at:"
+	ewarn "http://framework.zend.com/manual"
+	ebeep
 }
