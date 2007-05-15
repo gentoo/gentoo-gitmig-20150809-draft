@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.13.ebuild,v 1.1 2007/05/15 17:02:42 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.13.ebuild,v 1.2 2007/05/15 20:09:59 wltjr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -10,7 +10,7 @@ MY_A="apache-${P}-src"
 MY_P="${MY_A/-servlet-api/}"
 DESCRIPTION="Tomcat's Servlet API 2.5/JSP API 2.1 implementation"
 HOMEPAGE="http://tomcat.apache.org/"
-SRC_URI="mirror://apache/jakarta/tomcat-6/v${PV/_/-}/src/${MY_P}.tar.gz"
+SRC_URI="mirror://apache/tomcat/tomcat-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2.5"
