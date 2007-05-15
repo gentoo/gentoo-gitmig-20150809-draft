@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.103 2007/05/10 20:10:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.104 2007/05/15 19:35:37 swegener Exp $
+
+  15 May 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.16-r1.ebuild,
+  avahi-0.6.17.ebuild, avahi-0.6.18.ebuild, avahi-0.6.19.ebuild:
+  Disable byte-compiling python modules during src_install, we will do it in
+  pkg_post* later.
 
   10 May 2007; Sven Wegener <swegener@gentoo.org>
   +files/avahi-0.6.19-ui-sharp-automake.patch, avahi-0.6.19.ebuild:

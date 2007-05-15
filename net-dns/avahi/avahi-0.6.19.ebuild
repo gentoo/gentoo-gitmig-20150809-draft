@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19.ebuild,v 1.2 2007/05/10 20:10:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19.ebuild,v 1.3 2007/05/15 19:35:37 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -147,7 +147,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	make install py_compile=true DESTDIR="${D}" || die "make install failed"
 	use bookmarks || rm -f "${D}"/usr/bin/avahi-bookmarks
 
 	use howl-compat && ln -s avahi-compat-howl.pc "${D}"/usr/$(get_libdir)/pkgconfig/howl.pc

@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.17.ebuild,v 1.5 2007/05/06 08:22:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.17.ebuild,v 1.6 2007/05/15 19:35:37 swegener Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -138,7 +138,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	make install py_compile=true DESTDIR="${D}" || die "make install failed"
 	use bookmarks || rm -f "${D}"/usr/bin/avahi-bookmarks
 
 	use howl-compat && ln -s avahi-compat-howl.pc "${D}"/usr/$(get_libdir)/pkgconfig/howl.pc
