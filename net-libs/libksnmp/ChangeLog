@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libksnmp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/ChangeLog,v 1.6 2007/03/19 03:18:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/ChangeLog,v 1.7 2007/05/15 14:09:45 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
