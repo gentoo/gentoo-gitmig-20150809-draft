@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.12 2007/05/14 19:38:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.13 2007/05/15 09:56:03 uberlord Exp $
+
+  15 May 2007; Roy Marples <uberlord@gentoo.org>
+  emacs-desktop-0.2-r1.ebuild:
+  Added ~x86-fbsd keyword, #174884
 
   14 May 2007; Markus Ullmann <jokey@gentoo.org>
   emacs-desktop-0.2-r1.ebuild:
