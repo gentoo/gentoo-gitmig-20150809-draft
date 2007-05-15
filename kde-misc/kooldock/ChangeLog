@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.21 2007/04/30 19:01:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.22 2007/05/15 16:07:21 opfer Exp $
+
+  15 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  kooldock-0.4.6.ebuild:
+  stable amd64, bug 176286
 
   30 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> kooldock-0.4.6.ebuild:
   Stable on sparc wrt #176286
