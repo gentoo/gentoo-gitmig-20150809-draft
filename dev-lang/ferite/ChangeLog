@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.22 2007/04/22 09:55:33 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.23 2007/05/15 09:49:42 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   22 Apr 2007; Matti Bickel <mabi@gentoo.org> ferite-1.0.2.ebuild:
   ppc stable (bug #169458)
