@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.98 2007/04/12 14:42:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.99 2007/05/15 17:52:33 gustavoz Exp $
+
+  15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libxfcegui4-4.4.1.ebuild:
+  Stable on sparc wrt #178510
 
 *libxfcegui4-4.4.1 (11 Apr 2007)
 
