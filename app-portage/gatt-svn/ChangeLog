@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt-svn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.9 2007/04/06 18:58:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.10 2007/05/15 09:28:15 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org> gatt-svn-9999.ebuild:
   removed spaces from ESVN_PROJECT variable, so path names will be without
