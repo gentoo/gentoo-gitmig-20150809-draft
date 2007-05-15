@@ -1,6 +1,19 @@
 # ChangeLog for media-plugins/vdr-mplayer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.16 2007/04/17 12:50:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.17 2007/05/15 12:51:41 zzam Exp $
+
+*vdr-mplayer-0.9.15-r1 (15 May 2007)
+
+  15 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-mplayer-0.9.15-gentoo.diff,
+  -files/vdr-mplayer-0.9.15-slave-mode-default.diff, +files/confd-0.9.15.sh,
+  +files/rc-addon-0.9.15.sh, +files/0.9.15/03_vdr-1.5.1.diff,
+  +files/0.9.15/01_gentoo.diff, +files/0.9.15/series,
+  -files/vdr-mplayer-0.9.15-vdr-1.5.1.patch,
+  +files/0.9.15/02_slave_mode_default.diff, files/mplayersources.conf,
+  vdr-mplayer-0.9.15.ebuild, +vdr-mplayer-0.9.15-r1.ebuild:
+  Changed default sources-file to refer /var/vdr/video. Moved 0.9.15 patches
+  to own subdir. Add support for mplay-sh.
 
   17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
   Removed bash specific stuff.
