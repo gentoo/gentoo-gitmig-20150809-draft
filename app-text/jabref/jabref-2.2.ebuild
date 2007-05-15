@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.2.ebuild,v 1.1 2007/04/25 00:41:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.2.ebuild,v 1.2 2007/05/15 10:23:35 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc"
 inherit eutils java-pkg-2 java-ant-2
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/JabRef-${PV}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-java/spin
