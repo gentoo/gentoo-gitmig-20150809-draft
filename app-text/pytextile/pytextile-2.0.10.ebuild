@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.0.10.ebuild,v 1.8 2006/09/11 02:56:37 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.0.10.ebuild,v 1.9 2007/05/15 16:45:31 beandog Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://dealmeida.net/public/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-lang/python"
