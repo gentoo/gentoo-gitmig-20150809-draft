@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/list
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/ChangeLog,v 1.8 2006/11/23 21:02:08 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/ChangeLog,v 1.9 2007/05/15 14:19:07 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *list-2.0.0 (23 Nov 2006)
 

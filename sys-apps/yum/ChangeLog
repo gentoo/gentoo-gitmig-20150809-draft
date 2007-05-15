@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/yum
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.2 2006/08/28 11:05:44 chrb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.3 2007/05/15 14:19:07 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   28 Aug 2006; Chris Bainbridge <chrb@gentoo.org> yum-2.6.1.ebuild:
   Add depend on >=dev-python/urlgrabber-2.9.6 to fix #145276
