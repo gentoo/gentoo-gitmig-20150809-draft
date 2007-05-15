@@ -1,6 +1,10 @@
 # ChangeLog for media-video/goggles
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.18 2007/04/21 17:29:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.19 2007/05/15 17:25:03 opfer Exp $
+
+  15 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  -goggles-0.7.4-r2.ebuild, -goggles-0.8.0-r2.ebuild, goggles-0.9.1.ebuild:
+  stable amd64, bug 141683; clean up
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> goggles-0.9.1.ebuild:
   x86 stable wrt bug 141683
