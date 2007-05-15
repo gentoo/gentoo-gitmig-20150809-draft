@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-places
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.9 2007/04/22 16:56:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.10 2007/05/15 18:17:39 gustavoz Exp $
+
+  15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-places-0.2.0.ebuild:
+  Stable on sparc wrt #178510
 
 *xfce4-places-0.2.0 (22 Apr 2007)
 
