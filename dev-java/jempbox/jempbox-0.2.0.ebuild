@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/jempbox-0.2.0.ebuild,v 1.2 2007/05/15 09:43:17 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/jempbox-0.2.0.ebuild,v 1.3 2007/05/15 21:34:43 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 WANT_ANT_TASKS="ant-nodeps"
@@ -49,8 +49,10 @@ src_compile() {
 	#install jar and javadoc.
 	mkdir gentoo-dist
 	cp "lib/${MY_P}.jar" "gentoo-dist/${MY_P}.jar" || die "Failed to copy jar."
-	use doc && cp -R website/build/site/javadoc gentoo-dist || die \
-		"Unable to copy javadoc"
+	if use doc; then
+		cp -R website/build/site/javadoc gentoo-dist || die \
+			"Unable to copy javadoc"
+	fi
 }
 
 src_test() {
