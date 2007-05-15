@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.8 2007/04/21 15:11:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.9 2007/05/15 16:52:53 beandog Exp $
 
 inherit eutils distutils
 
@@ -12,13 +12,13 @@ DEPEND=">=dev-lang/python-2.4
 	>=dev-db/libpq-7.4"
 
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc x86"
 LICENSE="GPL-2"
 IUSE="debug"
 
 S=${WORKDIR}/${PN}2-${PV}
 
-DOCS="AUTHORS ChangeLog COPYING CREDITS INSTALL README NEWS docs/*"
+DOCS="AUTHORS ChangeLog CREDITS README"
 
 src_unpack() {
 	unpack ${A}
