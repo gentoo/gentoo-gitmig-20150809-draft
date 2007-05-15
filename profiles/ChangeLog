@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.375 2007/05/15 11:05:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.376 2007/05/15 14:11:59 zzam Exp $
+
+  15 May 2007; Matthias Schwarzott <zzam@gentoo.org> use.local.desc:
+  Add media-plugins/vdr-text2skin:direct_blit.
 
   15 May 2007; Ulrich Mueller <ulm@gentoo.org> base/virtuals,
   default-bsd/fbsd/6.2/sparc/virtuals, default-darwin/virtuals,
