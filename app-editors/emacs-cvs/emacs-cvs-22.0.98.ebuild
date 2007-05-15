@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.98.ebuild,v 1.9 2007/04/28 20:45:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.98.ebuild,v 1.10 2007/05/15 15:02:26 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -37,7 +37,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
-PROVIDE="virtual/emacs virtual/editor"
+PROVIDE="virtual/editor"
 
 SLOT="22"
 # FULL_VERSION keeps the full version number, which is needed in order to

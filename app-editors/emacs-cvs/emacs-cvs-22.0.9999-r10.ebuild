@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.12 2007/05/15 09:30:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r10.ebuild,v 1.13 2007/05/15 15:02:26 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -43,7 +43,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
-PROVIDE="virtual/emacs virtual/editor"
+PROVIDE="virtual/editor"
 
 SLOT="22"
 LICENSE="GPL-2 FDL-1.2"

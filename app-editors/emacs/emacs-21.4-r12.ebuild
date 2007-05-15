@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.17 2007/05/15 10:12:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.18 2007/05/15 15:03:56 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -40,7 +40,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	X? ( x11-misc/xbitmaps )"
 
-PROVIDE="virtual/emacs virtual/editor"
+PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack ${A}
