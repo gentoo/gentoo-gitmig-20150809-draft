@@ -17,6 +17,6 @@ MISC metadata.xml 271 RMD160 97ca0ddb9a15a816617c07bcdc0f341aa18f4319 SHA1 9c312
 MD5 8b3c0a00d01e47f2b1eddab5aa68eca7 metadata.xml 271
 RMD160 97ca0ddb9a15a816617c07bcdc0f341aa18f4319 metadata.xml 271
 SHA256 044ce804f1a438223870a7b46b6a03c4e3922c417ac0a79689733c08b1fd4b99 metadata.xml 271
-MD5 c0d0bf548cfc3679aa11a3b9d73502da files/digest-deltup-0.4.3 579
-RMD160 fb123da179477536a7ab2277e82d41ceff3e8f80 files/digest-deltup-0.4.3 579
-SHA256 37f4ac9c7799f8b8ccc59318ea83cb54bcede4d39f1c59491e4871253d7f2c19 files/digest-deltup-0.4.3 579
+MD5 5c439f4ef5c2dea8b38c1f6acf70a0d6 files/digest-deltup-0.4.3 642
+RMD160 4587f0d5b6e211fcab485af54e2ac499457db075 files/digest-deltup-0.4.3 642
+SHA256 0d167c83852fe0fa3008373d7b76bd903c36ceaed8fbba80b27938a01b4bc0bf files/digest-deltup-0.4.3 642
