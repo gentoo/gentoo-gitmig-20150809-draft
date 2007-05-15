@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-appfinder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.52 2007/04/12 14:45:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.53 2007/05/15 17:55:38 gustavoz Exp $
+
+  15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-appfinder-4.4.1.ebuild:
+  Stable on sparc wrt #178510
 
 *xfce4-appfinder-4.4.1 (11 Apr 2007)
 
