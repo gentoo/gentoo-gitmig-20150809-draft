@@ -1,6 +1,10 @@
 # ChangeLog for app-text/silvercity
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.19 2007/04/28 14:27:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.20 2007/05/15 17:04:16 beandog Exp $
+
+  15 May 2007; Steve Dibb <beandog@gentoo.org> silvercity-0.9.5-r1.ebuild,
+  silvercity-0.9.7.ebuild:
+  amd64 stable
 
   28 Apr 2007; nixnut <nixnut@gentoo.org> silvercity-0.9.7.ebuild:
   Stable on ppc wrt bug 175695
