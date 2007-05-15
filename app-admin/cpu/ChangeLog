@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cpu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/ChangeLog,v 1.17 2007/04/02 01:33:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/ChangeLog,v 1.18 2007/05/15 20:17:22 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  fix maintainer -> maintainer-needed@g.o
 
   02 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Reassign to maintainer-wanted.
