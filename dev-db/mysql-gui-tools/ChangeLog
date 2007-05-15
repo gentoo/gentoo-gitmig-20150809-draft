@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql-gui-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.13 2007/05/03 16:59:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.14 2007/05/15 21:33:20 swegener Exp $
+
+*mysql-gui-tools-5.0_p12 (15 May 2007)
+
+  15 May 2007; Sven Wegener <swegener@gentoo.org>
+  +mysql-gui-tools-5.0_p12.ebuild:
+  Version bump.
 
   03 May 2007; Sven Wegener <swegener@gentoo.org>
   -files/mysql-gui-tools-5.0_p6-i18n-fix.patch,
