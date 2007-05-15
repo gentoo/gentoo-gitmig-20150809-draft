@@ -1,6 +1,6 @@
-diff -Nru resin-3.1.0.vanilla/Makefile.in resin-3.1.0/Makefile.in
---- resin-3.1.0.vanilla/Makefile.in	2006-12-26 01:39:34.000000000 +0100
-+++ resin-3.1.0/Makefile.in	2006-12-26 01:40:38.000000000 +0100
+diff -Nru resin-3.1.1.vanilla/Makefile.in resin-3.1.1/Makefile.in
+--- resin-3.1.1.vanilla/Makefile.in	2007-05-15 18:11:40.000000000 +0200
++++ resin-3.1.1/Makefile.in	2007-05-15 18:17:07.000000000 +0200
 @@ -8,20 +8,20 @@
  
  install	:
@@ -37,9 +37,9 @@ diff -Nru resin-3.1.0.vanilla/Makefile.in resin-3.1.0/Makefile.in
 +	    cp conf/app-default.xml $(DESTDIR)$(PREFIX)/conf/app-default.xml; \
  	  fi; \
  	fi
-diff -Nru resin-3.1.0.vanilla/build.xml resin-3.1.0/build.xml
---- resin-3.1.0.vanilla/build.xml	2006-12-26 01:39:34.000000000 +0100
-+++ resin-3.1.0/build.xml	2006-12-26 01:53:05.000000000 +0100
+diff -Nru resin-3.1.1.vanilla/build.xml resin-3.1.1/build.xml
+--- resin-3.1.1.vanilla/build.xml	2007-05-15 18:11:40.000000000 +0200
++++ resin-3.1.1/build.xml	2007-05-15 18:18:04.000000000 +0200
 @@ -7,7 +7,6 @@
  
    <property name="modules" location="${basedir}/modules"/>
@@ -68,8 +68,8 @@ diff -Nru resin-3.1.0.vanilla/build.xml resin-3.1.0/build.xml
    </target>
  
    <target name="compile" 
--          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf, ext, jsf">
-+          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf, jsf">
+-          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf, ext">
++          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf">
    </target>
  
    <target name="ant" depends="init">
