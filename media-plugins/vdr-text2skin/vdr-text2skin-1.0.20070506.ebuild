@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.0.20070506.ebuild,v 1.1 2007/05/15 14:12:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.0.20070506.ebuild,v 1.2 2007/05/15 14:17:19 zzam Exp $
 
 
 inherit vdr-plugin versionator
@@ -55,7 +55,6 @@ src_install() {
 	doexe ${S}/contrib/skin_to_*.pl
 	doexe ${S}/contrib/transform.pl
 
-	dodoc SKINS*
 	dodoc ${S}/Docs/*.txt
 }
 
