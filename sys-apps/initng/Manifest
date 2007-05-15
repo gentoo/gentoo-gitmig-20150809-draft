@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX initng-0.6.7-inotify-ppc.patch 378 RMD160 8568e8e55f5da312dd0ac14e3faa13eac91ca53c SHA1 77cb5dc7bdbd34c7bf8e8cb950461a256992b2ee SHA256 54954ee42e6a11d266d455c31cd695b5eee2202d5afbd3aac9e666b7155ef9a6
 MD5 389ae9255b0cfadad0933c4994529c92 files/initng-0.6.7-inotify-ppc.patch 378
 RMD160 8568e8e55f5da312dd0ac14e3faa13eac91ca53c files/initng-0.6.7-inotify-ppc.patch 378
@@ -25,13 +22,6 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 MD5 f531b7ad859407a53dc79b67a0f94faf files/digest-initng-0.6.7 241
 RMD160 2bfa1868fd7f3fdb8793ee63fd69fa6e38b4224c files/digest-initng-0.6.7 241
 SHA256 9112e3407c6f6b5fcc6fba4f770840ab7bb0a62575e267de508433e263376128 files/digest-initng-0.6.7 241
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-initng-9999 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-initng-9999 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-initng-9999 1
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFE9kftamhnQswr0vIRAhblAJ9/ToSa62EQsrC7e0+MDu6dpManzACdGaD8
-VOjgbsuOJke62Nk0monrTIk=
-=PEKT
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-initng-9999 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-initng-9999 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-initng-9999 0
