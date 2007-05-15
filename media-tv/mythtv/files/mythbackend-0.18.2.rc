@@ -1,11 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/mythbackend-0.18.2.rc,v 1.6 2007/05/10 03:37:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/mythbackend-0.18.2.rc,v 1.7 2007/05/15 17:57:20 cardoe Exp $
 
 depend() {
-	need net mysql
-	use lircd LCDd
+	# future note for me, backend doesn't have to run on
+	# same machine as MySQL so should be use
+	need net
+	use mysql lircd LCDd
 }
 
 start() {
