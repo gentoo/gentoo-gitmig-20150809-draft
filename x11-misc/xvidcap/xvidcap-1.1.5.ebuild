@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.5.ebuild,v 1.1 2007/05/15 14:46:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.5.ebuild,v 1.2 2007/05/15 14:48:23 drac Exp $
 
 GCONF_DEBUG="no"
 
@@ -21,8 +21,7 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libXext
 	x11-libs/libXfixes
 	>=x11-libs/gtk+-2.4
-	media-sound/lame
-	>=media-video/ffmpeg-0.4.9_p20070330"
+	media-sound/lame"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
