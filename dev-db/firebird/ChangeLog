@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.57 2007/05/14 21:06:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.58 2007/05/15 06:27:54 opfer Exp $
+
+  15 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  firebird-1.5.4-r2.ebuild:
+  stable x86/amd64, security bug 120343
 
   14 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   firebird-1.5.4-r2.ebuild:
