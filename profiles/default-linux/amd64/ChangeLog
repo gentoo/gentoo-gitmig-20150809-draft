@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.94 2007/05/08 11:05:46 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.95 2007/05/15 15:52:29 welp Exp $
+
+  15 May 2007; Peter Weller <welp@gentoo.org> make.defaults:
+  VIDEO_CARDS: remove ati and add mach64 r128 radeon
 
   08 May 2007; Alistair John Bush <ali_bush@gentoo.org>
   2007.0/package.use.mask, package.use.mask:
