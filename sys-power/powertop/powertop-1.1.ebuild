@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.1.ebuild,v 1.2 2007/05/13 19:10:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.1.ebuild,v 1.3 2007/05/15 18:12:02 compnerd Exp $
 
 inherit toolchain-funcs
 
@@ -29,7 +29,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "For PowerTOP to work best, use a Linux kernel with the" 
+	einfo "For PowerTOP to work best, use a Linux kernel with the"
 	einfo "tickless idle (NO_HZ) feature enabled (version 2.6.21 or later)."
 	echo
 }

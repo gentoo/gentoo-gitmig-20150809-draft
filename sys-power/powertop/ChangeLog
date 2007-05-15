@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.3 2007/05/15 00:20:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.4 2007/05/15 18:12:02 compnerd Exp $
+
+  15 May 2007; Saleem Abdulrasool <compnerd@gentoo.org> powertop-1.2.ebuild:
+  Keyword ~amd64
 
 *powertop-1.2 (15 May 2007)
 
