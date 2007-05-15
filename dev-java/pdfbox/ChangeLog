@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.1 2007/04/25 00:23:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.2 2007/05/15 10:05:00 ali_bush Exp $
+
+  15 May 2007; Alistair John Bush <ali_bush@gentoo.org> pdfbox-0.7.3.ebuild:
+  Adding to ~amd64
 
 *pdfbox-0.7.3 (25 Apr 2007)
 
