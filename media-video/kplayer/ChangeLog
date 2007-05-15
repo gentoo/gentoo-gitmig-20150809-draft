@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.23 2007/05/14 19:23:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.24 2007/05/15 10:42:42 carlo Exp $
+
+*kplayer-0.6.2 (15 May 2007)
+
+  15 May 2007; Carsten Lohrke <carlo@gentoo.org> +kplayer-0.6.2.ebuild:
+  Version bump.
 
   14 May 2007; Markus Ullmann <jokey@gentoo.org> kplayer-0.6.1.ebuild:
   Stable on x86 wrt bug #178178
