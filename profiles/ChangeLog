@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.374 2007/05/14 20:04:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.375 2007/05/15 11:05:19 ulm Exp $
+
+  15 May 2007; Ulrich Mueller <ulm@gentoo.org> base/virtuals,
+  default-bsd/fbsd/6.2/sparc/virtuals, default-darwin/virtuals,
+  embedded/virtuals:
+  Removed old-style virtual/emacs and virtual/flim from profiles.
 
   14 May 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
   add net-irc/unrealircd:showlistmodes

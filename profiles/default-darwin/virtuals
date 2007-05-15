@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/virtuals,v 1.21 2006/06/22 18:58:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/virtuals,v 1.22 2007/05/15 11:05:19 ulm Exp $
 
 # virtual/os-headers should actually be sys-kernel/xnu
 # but we have to wait until its in the tree
@@ -25,4 +25,3 @@ virtual/ruby		dev-lang/ruby
 virtual/ssh			net-misc/openssh
 virtual/tetex		app-text/tetex
 virtual/w3m			www-client/w3m
-virtual/emacs		app-editors/emacs
