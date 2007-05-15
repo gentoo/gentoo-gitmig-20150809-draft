@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.48 2007/05/15 07:22:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.49 2007/05/15 20:18:52 grobian Exp $
+
+  15 May 2007; Fabian Groffen <grobian@gentoo.org> mew-4.1.ebuild,
+  mew-4.2.ebuild, mew-5.1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   15 May 2007; Christian Faulhammer <opfer@gentoo.org> mew-5.1.ebuild:
   stable amd64, bug 177904
