@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.46 2007/05/15 13:23:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.47 2007/05/15 13:25:24 hkbst Exp $
+
+  15 May 2007; Marijn Schouten <hkBst@gentoo.org> metadata.xml:
+  add scheme as backup herd
 
 *drscheme-360-r2 (15 May 2007)
 
