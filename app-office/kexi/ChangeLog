@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.75 2007/03/18 22:35:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.76 2007/05/15 19:12:11 carlo Exp $
+
+*kexi-1.6.2-r2 (15 May 2007)
+
+  15 May 2007; Carsten Lohrke <carlo@gentoo.org>
+  +files/kexi-1.6.2-query.diff, +kexi-1.6.2-r2.ebuild:
+  SQL view query fix.
 
 *kexi-1.6.2-r1 (18 Mar 2007)
 

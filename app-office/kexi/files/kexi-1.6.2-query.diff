@@ -1,0 +1,74 @@
+Index: kexi/kexidb/field.cpp
+===================================================================
+--- kexi/kexidb/field.cpp	(wersja 664945)
++++ kexi/kexidb/field.cpp	(kopia robocza)
+@@ -268,11 +268,6 @@
+ 	return false;
+ }
+ 
+-bool Field::isQueryAsterisk() const
+-{
+-	return dynamic_cast<QueryAsterisk const *>(this);
+-}
+-
+ bool Field::hasEmptyProperty(uint type)
+ {
+ 	return Field::isTextType(type) || type==BLOB;
+Index: kexi/kexidb/queryschema.cpp
+===================================================================
+--- kexi/kexidb/queryschema.cpp	(wersja 664945)
++++ kexi/kexidb/queryschema.cpp	(kopia robocza)
+@@ -1837,7 +1837,7 @@
+ 	m_table=table;
+ }
+ 
+-QString QueryAsterisk::debugString()
++QString QueryAsterisk::debugString() const
+ {
+ 	QString dbg;
+ 	if (isAllTableAsterisk()) {
+Index: kexi/kexidb/queryschema.h
+===================================================================
+--- kexi/kexidb/queryschema.h	(wersja 664945)
++++ kexi/kexidb/queryschema.h	(kopia robocza)
+@@ -775,7 +775,7 @@
+  There can be many asterisks of 1st type defined for given single query.
+  There can be one asterisk of 2nd type defined for given single query.
+ */
+-class KEXI_DB_EXPORT QueryAsterisk : protected Field
++class KEXI_DB_EXPORT QueryAsterisk : public Field
+ {
+ 	public:
+ 		/*! Constructs query asterisk definition object.
+@@ -803,6 +803,9 @@
+ 		 \a table may be NULL - then the asterisk becames "all-tables" type asterisk. */
+ 		virtual void setTable(TableSchema *table);
+ 
++		/*! Reimplemented. */
++		virtual bool isQueryAsterisk() const  { return true; }
++
+ 		/*! This is convenience method that returns true 
+ 		 if the asterisk has "all-tables" type (2nd type).*/
+ 		bool isSingleTableAsterisk() const { return m_table!=NULL; }
+@@ -812,7 +815,7 @@
+ 		bool isAllTableAsterisk() const { return m_table==NULL; }
+ 		
+ 		/*! \return String for debugging purposes. */
+-		virtual QString debugString();
++		virtual QString debugString() const;
+ 
+ 	protected:
+ 		//! \return a deep copy of this object. Used in FieldList(const FieldList& fl).
+Index: kexi/kexidb/field.h
+===================================================================
+--- kexi/kexidb/field.h	(wersja 664945)
++++ kexi/kexidb/field.h	(kopia robocza)
+@@ -507,7 +507,7 @@
+ 		 Every QueryAsterisk object returns true here,
+ 		 and every Field object returns false.
+ 		*/
+-		bool isQueryAsterisk() const;
++		virtual bool isQueryAsterisk() const { return false; }
+ 		
+ 		/*! \return string for debugging purposes. */
+ 		virtual QString debugString() const;
