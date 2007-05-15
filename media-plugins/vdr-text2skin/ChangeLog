@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/vdr-text2skin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.1 2007/05/15 14:12:32 zzam Exp $
+
+*vdr-text2skin-1.0.20070506 (15 May 2007)
+
+  15 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/20070506/03_gentoo.diff, +files/20070506/01_gcc-4.diff,
+  +files/20070506/02_uint64.diff, +files/20070506/04_no_direct_blit.diff,
+  +files/20070506/series, +metadata.xml, +vdr-text2skin-1.0.20070506.ebuild:
+  Initial import of vdr-text2skin (optimized version). Based on ebuild from
+  gentoo.de. Bug #145575.
+
