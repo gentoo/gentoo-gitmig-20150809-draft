@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bouml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.27 2007/05/07 20:01:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.28 2007/05/15 22:18:37 ferdy Exp $
+
+*bouml-2.26.1 (15 May 2007)
+
+  15 May 2007; Fernando J. Pereda <ferdy@gentoo.org> +bouml-2.26.1.ebuild:
+  New upstream version.
 
 *bouml-2.25.2 (07 May 2007)
 
