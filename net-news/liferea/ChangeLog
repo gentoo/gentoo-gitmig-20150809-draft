@@ -1,6 +1,18 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.101 2007/05/15 14:08:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.102 2007/05/15 15:38:54 dang Exp $
+
+*liferea-1.2.14 (15 May 2007)
+
+  15 May 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.14.ebuild:
+  Bump to 1.2.14
+  	* Adds network execution priviledges for the XSPF flash applet
+  	  Liferea uses to play MP3 enclosures (fix suggested by Tsukasa)
+  	* Allowing HTTP headers with tab character at line start.
+  	  (suggested by Joern P. Meier)
+  	* Fixes a crash when updating the Atom 0.3 GMail feed 
+  	  (reported by Paul Keuseman)
+  	* Update of Japanese translation (Takeshi AIHANA)
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
