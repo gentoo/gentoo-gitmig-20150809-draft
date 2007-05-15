@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.8 2007/04/16 15:00:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.9 2007/05/15 17:48:48 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -80,6 +80,9 @@ src_unpack(){
 
 	# Limits on gv buffer lengths.  Bug #156573
 	epatch "${FILESDIR}"/${P}-gv-limit.patch
+
+	# Fix build on fbsd.  Bug #178471
+	epatch "${FILESDIR}"/${P}-freebsd.patch
 
 	eautoreconf
 }

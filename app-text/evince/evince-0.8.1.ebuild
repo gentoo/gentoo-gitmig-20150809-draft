@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.8.1.ebuild,v 1.1 2007/04/21 10:22:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.8.1.ebuild,v 1.2 2007/05/15 17:48:48 dang Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils gnome2 autotools
@@ -75,6 +75,9 @@ src_unpack(){
 
 	# Make dbus actually switchable
 	epatch ${FILESDIR}/${PN}-0.6.1-dbus-switch.patch
+
+	# Fix build on fbsd.  Bug #178471
+	epatch "${FILESDIR}"/${P}-freebsd.patch
 
 	cp aclocal.m4 old_macros.m4
 	AT_M4DIR="." eautoreconf

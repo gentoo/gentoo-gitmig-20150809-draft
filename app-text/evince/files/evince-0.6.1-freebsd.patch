@@ -1,0 +1,11 @@
+--- evince-0.6.1/impress/zip.c.orig	2006-07-10 15:03:38 -0600
++++ evince-0.6.1/impress/zip.c	2007-05-14 00:01:37 -0600
+@@ -9,6 +9,8 @@
+ #include <zlib.h>
+ #define _(x) x
+ 
++typedef unsigned long ulong;
++
+ enum {
+ 	ZIP_OK = 0,
+ 	ZIP_NOMEM,
