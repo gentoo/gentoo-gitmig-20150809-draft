@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7269 2007/05/15 19:44:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7270 2007/05/15 21:03:37 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -784,13 +784,6 @@ app-misc/jive
 app-text/mgv
 net-misc/dhcp-agent
 x11-plugins/wmmail
-
-# Petteri Räty <betelgeuse@gentoo.org> (08 Apr 2007)
-# Still generation 1 and we are one major version behind
-# 30 days and in junkyard unless someone expresses a need
-# for this package. Do it in:
-# https://bugs.gentoo.org/show_bug.cgi?id=157427
-dev-db/c-jdbc
 
 # Benedikt Böhm <hollow@gentoo.org> (07 Apr 2007)
 # masked for testing
