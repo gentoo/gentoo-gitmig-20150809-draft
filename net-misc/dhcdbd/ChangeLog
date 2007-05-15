@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.3 2007/05/14 16:53:56 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.4 2007/05/15 20:31:15 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *dhcdbd-2.7 (14 May 2007)
 
