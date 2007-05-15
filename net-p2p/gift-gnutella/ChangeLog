@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.36 2007/04/20 14:32:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.37 2007/05/15 12:57:48 armin76 Exp $
+
+  15 May 2007; Raúl Porcel <armin76@gentoo.org>
+  gift-gnutella-0.0.11.ebuild:
+  alpha stable wrt #133915
 
   20 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gift-gnutella-0.0.11.ebuild:
