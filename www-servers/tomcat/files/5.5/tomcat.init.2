@@ -1,12 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init,v 1.6 2007/05/15 04:37:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.1 2007/05/15 04:37:21 wltjr Exp $
 
 init_env_vars() {
-	# Populate JAVA_HOME
-	JAVA_HOME=`java-config --jre-home`
-
 	# Set some sane defaults
 	if [ -z "${CATALINA_TMPDIR}" ] ; then
 		CATALINA_TMPDIR="${CATALINA_BASE}"/temp
@@ -22,13 +19,15 @@ init_env_vars() {
 	fi
 
 	# Populate the classpath
-	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/lib:${JAVA_HOME}/lib/tools.jar"
+	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/server/lib:${JAVA_HOME}/lib/tools.jar"
 	if [ -n "${JSSE_HOME}" ]; then
 		CLASSPATH="${CLASSPATH}:${JSSE_HOME}/lib/jcert.jar:${JSSE_HOME}/lib/jnet.jar:${JSSE_HOME}/lib/jsse.jar"
 	fi
-	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/tomcat-juli.jar"
+	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/commons-logging-api.jar"
 
-	OPTS_CP="${JAVA_OPTS} ${CATALINA_OPTS} -classpath ${CLASSPATH}"
+	OPTS_CP="${JAVA_OPTS} ${CATALINA_OPTS} \
+			 -Djava.endorsed.dirs=${CATALINA_HOME}/common/endorsed \
+			 -classpath ${CLASSPATH}"
 
 	CATALINA_ARGS="-Dcatalina.base=${CATALINA_BASE} \
 			-Dcatalina.home=${CATALINA_HOME} \
@@ -47,7 +46,7 @@ start_helper() {
 	local arguments="--start --quiet --background \
 		--chdir "${CATALINA_TMPDIR}" \
 		--chuid ${CATALINA_USER}:${CATALINA_GROUP} \
-		--make-pidfile --pidfile /var/run/tomcat-6.pid"
+		--make-pidfile --pidfile /var/run/tomcat-5.5.pid"
 	start-stop-daemon ${arguments} --exec ${executor} -- ${OPTS_CP} "$@" \
 		${CATALINA_ARGS} ${TOMCAT_START} >> "${CATALINA_BASE}"/logs/catalina.out 2>&1
 	return $?
@@ -79,7 +78,7 @@ start()	{
 			-Djava.security.policy=${CATALINA_BASE}/conf/catalina.policy
 	else
 		eerror "Invalid TOMCAT_START variable value, or one is not set"
-		eerror "Please see /etc/conf.d/tomcat-6 for more information"
+		eerror "Please see /etc/conf.d/tomcat-5.5 for more information"
 		eend 1
 	fi
 	eend $?
@@ -89,7 +88,7 @@ stop()	{
 	ebegin "Stopping Tomcat"
 	init_env_vars
 	start-stop-daemon --stop --quiet \
-	       	--make-pidfile --pidfile /var/run/tomcat-6.pid \
-			--exec ${JAVA_HOME}/bin/java -- ${OPTS_CP} ${CATALINA_ARGS} stop ${STD_OUT}
+	       	--make-pidfile --pidfile /var/run/tomcat-5.5.pid \
+			--exec ${JAVA_HOME}/bin/java -- ${OPTS_CP} ${CATALINA_ARGS} ${STD_OUT} stop
 	eend $?
 }

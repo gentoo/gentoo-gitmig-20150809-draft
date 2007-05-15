@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r4.ebuild,v 1.1 2007/04/23 20:40:14 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r5.ebuild,v 1.1 2007/05/15 04:37:21 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -118,6 +118,9 @@ src_install() {
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME} || die "failed to copy conf"
 	cp -pPR output/build/bin ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
+	# replace catalina.policy with gentoo specific one bug #176701
+#	cp ${FILESDIR}/${SLOT}/catalina.policy ${D}/etc/${TOMCAT_NAME} || die "failed to replace catalina.policy"
+
 	cp ${T}/tomcat6-deps/jdt/jasper-jdt.jar ${D}/usr/share/${TOMCAT_NAME}/lib \
 		|| die "failed to copy"
 
@@ -161,6 +164,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	# temp fix for bug #176097	
+	chown -fR tomcat:tomcat /etc/${TOMCAT_NAME}
+
 	elog
 	elog " This ebuild implements a FHS compliant layout for tomcat"
 	elog " Please read http://www.gentoo.org/proj/en/java/tomcat6-guide.xml"
