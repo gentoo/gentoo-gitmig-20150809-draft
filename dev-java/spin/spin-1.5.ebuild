@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.5.ebuild,v 1.2 2007/04/25 22:46:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.5.ebuild,v 1.3 2007/05/15 11:51:37 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -41,6 +41,6 @@ src_test() {
 src_install() {
 	java-pkg_newjar target/${P}.jar
 
-	use doc && java-pkg_dojavdoc target/site/apidocs
+	use doc && java-pkg_dojavadoc target/site/apidocs
 	use source && java-pkg_dosrc src/main/java/*
 }
