@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.99.ebuild,v 1.3 2007/04/29 17:50:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.99.ebuild,v 1.4 2007/05/15 09:30:26 chainsaw Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -44,7 +44,7 @@ SLOT="22"
 # determine some path information correctly for copy/move operations later on
 FULL_VERSION="${PV}"
 LICENSE="GPL-2 FDL-1.2"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86 ~ppc"
 S="${WORKDIR}/emacs-${PV}"
 
 src_unpack() {
