@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.4 2007/04/22 11:23:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.5 2007/05/15 14:33:11 redhatter Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -8,7 +8,7 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedi
 
 LANGS="be bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE hu it ja lt mk nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
-PATCH="${PN}-2.0_beta2-patches-0.5"
+PATCH="${PN}-2.0_beta2-patches-0.6"
 MY_PV=${PV/_/}
 
 DESCRIPTION="Thunderbird Mail Client"
