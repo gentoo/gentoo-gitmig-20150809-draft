@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.66 2007/05/09 20:07:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.67 2007/05/15 14:52:51 gustavoz Exp $
+
+  15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> sparc64/make.defaults:
+  Switch default VIDEO_CARDS ati -> mach64, r128, radeon
 
   09 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
   Mask jfs, reiser4, reiserfs and xfs filesystems
