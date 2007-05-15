@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/ChangeLog,v 1.4 2007/04/24 15:34:50 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/ChangeLog,v 1.5 2007/05/15 17:49:03 mabi Exp $
+
+  15 May 2007; Matti Bickel <mabi@gentoo.org> sge-030809.ebuild:
+  keyworded ~ppc (bug #168745)
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> sge-030809.ebuild:
   Add ~x86-fbsd keyword.
