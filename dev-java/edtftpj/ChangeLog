@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.25 2007/05/13 17:18:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.26 2007/05/15 06:44:08 opfer Exp $
+
+  15 May 2007; Christian Faulhammer <opfer@gentoo.org> edtftpj-1.5.4.ebuild:
+  stable x86, bug 178381
 
   13 May 2007; Petteri Räty <betelgeuse@gentoo.org> edtftpj-1.5.4.ebuild:
   Add app-arch/unzip to DEPEND.

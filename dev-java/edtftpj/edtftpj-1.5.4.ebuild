@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.5.4.ebuild,v 1.4 2007/05/13 17:18:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.5.4.ebuild,v 1.5 2007/05/15 06:44:08 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.enterprisedt.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=virtual/jre-1.4
 	dev-java/junit"
