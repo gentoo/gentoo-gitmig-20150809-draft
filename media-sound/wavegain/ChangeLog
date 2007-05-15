@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavegain
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/ChangeLog,v 1.3 2007/04/17 20:07:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/ChangeLog,v 1.4 2007/05/15 20:29:02 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   17 Apr 2007; Tony Vroon <chainsaw@gentoo.org>
   -files/1.2.6-faulty-includes.patch, metadata.xml,

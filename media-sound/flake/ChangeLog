@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/ChangeLog,v 1.2 2007/03/08 21:39:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/ChangeLog,v 1.3 2007/05/15 20:27:09 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   08 Mar 2007; Zac Medico <zmedico@gentoo.org>
   Fix broken Manifest due to commit without repoman.
