@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.2.ebuild,v 1.9 2007/05/12 14:14:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.2.ebuild,v 1.10 2007/05/15 03:23:43 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mew.org/Release/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc-macos sparc x86"
 IUSE="ssl"
 RESTRICT="test"
 
