@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dns2go
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.10 2007/04/28 17:21:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.11 2007/05/15 13:55:25 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> dns2go-1.1-r2.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
