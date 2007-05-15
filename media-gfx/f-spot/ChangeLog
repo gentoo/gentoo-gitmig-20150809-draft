@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.18 2007/03/20 22:50:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.19 2007/05/15 09:55:15 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *f-spot-0.3.5 (20 Mar 2007)
 
