@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2.ebuild,v 1.4 2007/05/07 15:20:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2.ebuild,v 1.5 2007/05/15 14:26:50 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="The Commons FileUpload package makes it easy to add robust, high-performance, file upload capability to your servlets and web applications."
+DESCRIPTION="A Java library for adding robust, high-performance, file upload capability to your servlets and web applications."
 HOMEPAGE="http://jakarta.apache.org/commons/fileupload/"
 SRC_URI="mirror://apache/jakarta/commons/fileupload/source/${P}-src.tar.gz"
 COMMON_DEPEND=">=dev-java/commons-io-1.1
@@ -35,9 +35,6 @@ src_unpack() {
 	java-pkg_jar-from --into ${libdir}/javax.servlet/jars servletapi-2.3 servlet.jar servlet-api-2.3.jar
 	java-pkg_jar-from --into ${libdir}/javax.portlet/jars portletapi-1 portletapi.jar portlet-api-1.0.jar
 }
-
-EANT_BUILD_TARGET="jar"
-EANT_DOC_TARGET="javadoc"
 
 src_test() {
 	mkdir -p target/lib/junit/jars
