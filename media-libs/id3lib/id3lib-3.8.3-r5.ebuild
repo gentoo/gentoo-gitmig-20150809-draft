@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r5.ebuild,v 1.10 2007/04/18 17:17:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r5.ebuild,v 1.11 2007/05/15 17:09:01 drac Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="latest"
 inherit eutils autotools
 
 MY_P=${P/_/}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 DESCRIPTION="Id3 library for C/C++"
 HOMEPAGE="http://id3lib.sourceforge.net/"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
-IUSE="doc examples"
+IUSE="doc"
 
 RESTRICT="test"
 
@@ -39,8 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
+	econf || die "econf failed."
+	emake || die "emake failed."
 
 	if use doc; then
 		cd doc/
@@ -50,15 +50,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
-
 	dodoc AUTHORS ChangeLog HISTORY README THANKS TODO
-
-	# some example programs to be placed in docs dir.
-	if use examples; then
-		cp -pPR examples ${D}/usr/share/doc/${PF}/examples
-		cd ${D}/usr/share/doc/${PF}/examples
-		make distclean
-	fi
 
 	if use doc; then
 		dohtml -r doc
