@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.20 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.21 2007/05/15 19:24:01 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> ChangeLog:
   add <herd>no-herd</herd>
