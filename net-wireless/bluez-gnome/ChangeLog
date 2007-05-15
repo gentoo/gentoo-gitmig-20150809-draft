@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.4 2007/05/12 15:08:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.5 2007/05/15 19:35:11 dang Exp $
+
+  15 May 2007; Daniel Gryniewicz <dang@gentoo.org> bluez-gnome-0.6.ebuild:
+  Marked ~amd64 for bug #178071
 
   11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   bluez-gnome-0.6.ebuild:
