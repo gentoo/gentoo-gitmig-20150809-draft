@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.59 2007/05/15 11:54:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.60 2007/05/15 21:08:33 wltjr Exp $
+
+  15 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/70firebird-1.5.0, -files/firebird-1.5.1-gcc34.patch,
+  -files/firebird-1.5.3-gcc412.patch, -files/firebird-1.5-build.patch,
+  -firebird-1.5.3-r1.ebuild, -firebird-1.5.4.ebuild:
+  House cleaning removed older versions and unused patches
 
   15 May 2007; Ferris McCormick <fmccor@gentoo.org>
   firebird-1.5.4-r2.ebuild:
