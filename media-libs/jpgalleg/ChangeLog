@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpgalleg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.7 2007/03/09 21:04:11 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.8 2007/05/15 10:25:37 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *jpgalleg-2.5 (08 Mar 2007)
 

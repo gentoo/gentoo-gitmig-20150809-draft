@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lib3ds
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.9 2007/03/31 03:20:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.10 2007/05/15 10:25:37 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
 *lib3ds-1.2.0-r1 (31 Mar 2007)
 

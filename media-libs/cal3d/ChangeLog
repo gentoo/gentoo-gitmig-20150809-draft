@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.24 2007/03/18 14:15:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.25 2007/05/15 10:25:37 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   18 Mar 2007; nixnut <nixnut@gentoo.org> cal3d-0.11.0-r1.ebuild:
   Stable on ppc wrt bug 162982
