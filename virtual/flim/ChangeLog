@@ -1,0 +1,10 @@
+# ChangeLog for virtual/flim
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/flim/ChangeLog,v 1.1 2007/05/15 09:54:51 ulm Exp $
+
+*flim-0 (15 May 2007)
+
+  15 May 2007; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +flim-0.ebuild:
+  New-style virtual/flim.
+
