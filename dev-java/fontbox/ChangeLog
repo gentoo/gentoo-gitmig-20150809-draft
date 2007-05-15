@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fontbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.1 2007/01/24 14:47:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.2 2007/05/15 09:54:12 ali_bush Exp $
+
+  15 May 2007; Alistair John Bush <ali_bush@gentoo.org>
+  fontbox-0.1.0.ebuild:
+  Adding to ~amd64
 
 *fontbox-0.1.0 (24 Jan 2007)
 
