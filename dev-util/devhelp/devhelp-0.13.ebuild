@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.13.ebuild,v 1.1 2007/02/03 21:33:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.13.ebuild,v 1.2 2007/05/15 21:08:06 gustavoz Exp $
 
 inherit toolchain-funcs gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.imendio.com/wiki/Devhelp"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE="firefox zlib"
 
 RDEPEND=">=gnome-base/gconf-2.6
