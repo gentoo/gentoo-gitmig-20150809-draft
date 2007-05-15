@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/pvm-povray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/ChangeLog,v 1.13 2007/02/22 00:54:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/ChangeLog,v 1.14 2007/05/15 14:18:46 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

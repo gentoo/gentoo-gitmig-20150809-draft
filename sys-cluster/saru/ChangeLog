@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/saru
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/ChangeLog,v 1.8 2007/04/22 17:11:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/ChangeLog,v 1.9 2007/05/15 14:20:04 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   22 Apr 2007; Christian Heim <phreak@gentoo.org> metadata.xml,
   saru-0.0.1.ebuild:

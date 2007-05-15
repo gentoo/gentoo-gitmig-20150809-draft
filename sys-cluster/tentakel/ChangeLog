@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/tentakel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/tentakel/ChangeLog,v 1.6 2007/01/08 01:43:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/tentakel/ChangeLog,v 1.7 2007/05/15 14:21:04 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -tentakel-2.1.3.ebuild:
   QA: Removed unused versions.
