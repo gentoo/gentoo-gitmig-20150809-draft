@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krename
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.43 2007/05/15 16:16:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.44 2007/05/15 21:18:23 carlo Exp $
+
+  15 May 2007; Carsten Lohrke <carlo@gentoo.org> -krename-3.0.9.ebuild,
+  -krename-3.0.11.ebuild, -krename-3.0.11-r1.ebuild, -krename-3.0.12.ebuild,
+  -krename-3.0.13.ebuild:
+  Clean up.
 
   15 May 2007; Christian Faulhammer <opfer@gentoo.org>
   krename-3.0.14.ebuild:
