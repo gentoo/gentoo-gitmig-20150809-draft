@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jempbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/ChangeLog,v 1.1 2007/04/24 23:23:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/ChangeLog,v 1.2 2007/05/15 09:43:17 ali_bush Exp $
+
+  15 May 2007; Alistair John Bush <ali_bush@gentoo.org>
+  jempbox-0.2.0.ebuild:
+  Adding to ~amd64. Fixed build problem where tests were deleting jar and javadoc.
 
 *jempbox-0.2.0 (24 Apr 2007)
 
