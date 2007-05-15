@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/glftpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.15 2007/05/06 10:55:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.16 2007/05/15 14:03:32 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   06 May 2007; Marius Mauch <genone@gentoo.org> glftpd-2.00.ebuild,
   glftpd-2.01.ebuild:

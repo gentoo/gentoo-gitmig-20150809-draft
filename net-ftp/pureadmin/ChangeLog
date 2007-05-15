@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pureadmin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.12 2007/05/06 11:22:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.13 2007/05/15 14:03:32 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   06 May 2007; Marius Mauch <genone@gentoo.org> pureadmin-0.2.2.ebuild,
   pureadmin-0.3.ebuild:
