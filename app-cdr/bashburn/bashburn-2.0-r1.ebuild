@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-2.0.ebuild,v 1.1 2007/05/12 17:59:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-2.0-r1.ebuild,v 1.1 2007/05/15 00:09:48 mjolnir Exp $
 
 MY_P=BashBurn-${PV}
 
@@ -40,7 +40,7 @@ src_install() {
 	dodir /opt/BashBurn
 	dodir /usr/bin
 
-	mv {burning,config,convert,menus,misc,lang} ${D}/opt/BashBurn
+	mv {burning,config,convert,func,menus,misc,lang} ${D}/opt/BashBurn
 
 	exeinto /opt/BashBurn
 	doexe BashBurn.sh || die

@@ -1,6 +1,19 @@
 # ChangeLog for app-cdr/bashburn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.24 2007/05/12 17:59:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.25 2007/05/15 00:09:48 mjolnir Exp $
+
+  15 May 2007; Martin Jackson <mjolnir@gentoo.org> -bashburn-1.4.ebuild,
+  -bashburn-2.0.ebuild, +bashburn-2.0-r1.ebuild:
+  Remove obsolete version while here
+
+  15 May 2007; Martin Jackson <mjolnir@gentoo.org> -bashburn-2.0.ebuild,
+  +bashburn-2.0-r1.ebuild:
+  Fix to #178411, remove bad version
+
+*bashburn-2.0-r1 (14 May 2007)
+
+  14 May 2007;  <>  bashburn-2.0-r1.ebuild files/digest-bashburn-2.0-r1
+  # INSERT ENTRY HERE
 
 *bashburn-2.0 (12 May 2007)
 
