@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/ax25-apps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.9 2007/04/28 13:14:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.10 2007/05/15 13:26:51 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> ax25-apps-0.0.6-r1.ebuild:
   Use newinitd
