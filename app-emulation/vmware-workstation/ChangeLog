@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.157 2007/04/28 10:04:05 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.158 2007/05/15 01:47:45 wolf31o2 Exp $
+
+*vmware-workstation-5.5.4.44386 (15 May 2007)
+
+  15 May 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/5.5.4.44386/000_all_initd-location.patch,
+  +files/5.5.4.44386/001_all_fix-permissions.patch,
+  +files/5.5.4.44386/002_all_pagebreak-detection-fix.patch,
+  +files/5.5.4.44386/004_all_do-not-build-modules.patch,
+  +files/5.5.4.44386/007_all_use-modprobe-over-insmod.patch,
+  +files/5.5.4.44386/009_all_init.d-modules-warning.patch,
+  +vmware-workstation-5.5.4.44386.ebuild:
+  Version bump to 5.5.4 for bug #176678 and bug #176647.
 
   28 Apr 2007; Mike Auty <ikelos@gentoo.org> files/vmware-workstation.rc:
   Redigest for vmware-any-any109, and fix rc file for baselayout-2.
