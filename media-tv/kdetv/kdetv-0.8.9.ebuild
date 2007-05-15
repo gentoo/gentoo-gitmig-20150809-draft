@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.1 2006/10/19 21:35:04 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.2 2007/05/15 15:49:55 opfer Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -45,8 +45,8 @@ PATCHES="${FILESDIR}/${P}-xinerama.patch
 src_compile() {
 	local myconf="$(use_enable arts) $(use_enable lirc kdetv-lirc)
 		$(use_with zvbi) $(use_with opengl gl)"
-	#Filtering the below on x86 for bug #145754
-	if [ "$ARCH" == "x86" ]; then
+	#Filtering the below on x86 and amd64 for bug #145754 and bug #153721
+	if [[ ( "$ARCH" == "x86" ) || ( "$ARCH" == "amd64" ) ]]; then
 		filter-flags -fforce-addr
 	fi
 	append-flags -fno-strict-aliasing

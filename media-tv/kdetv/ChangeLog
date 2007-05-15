@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kdetv
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.29 2006/11/06 11:26:10 opfer Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.30 2007/05/15 15:49:55 opfer Exp $
+
+  15 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  kdetv-0.8.8-r1.ebuild, kdetv-0.8.9.ebuild:
+  filter -fforce-addr on amd64, too. Fixes bug 153721 reported by Mike Benson
+  <mike@kambe.com.au>
 
   06 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   kdetv-0.8.8-r1.ebuild:
