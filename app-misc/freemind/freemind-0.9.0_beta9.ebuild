@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta9.ebuild,v 1.2 2007/05/08 20:27:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta9.ebuild,v 1.3 2007/05/15 11:43:00 ali_bush Exp $
 
 # will handle rewriting myself
 JAVA_PKG_BSFIX="off"
@@ -14,7 +14,7 @@ HOMEPAGE="http://${PN}.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 COMMON_DEP="dev-java/jgoodies-forms
 	dev-java/jibx
