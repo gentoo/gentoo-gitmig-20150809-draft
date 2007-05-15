@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.10-r5.ebuild,v 1.1 2007/05/15 04:37:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13.ebuild,v 1.1 2007/05/15 17:04:37 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -50,10 +50,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${SLOT}/build-xml.patch"
 
-	if use examples; then
-		cd webapps/examples/WEB-INF/lib/
-		rm -v *.jar
-	fi
+	cd webapps/examples/WEB-INF/lib/
+	rm -v *.jar
 }
 
 src_compile(){
@@ -104,10 +102,9 @@ src_install() {
 	diropts -m0755
 
 	cd "${S}"
-	# fix context's since upstream is slackin
-	sed -i -e 's:}/server/:}/:' ${S}/webapps/host-manager/host-manager.xml
-	sed -i -e 's:}/server/:}/:' ${S}/webapps/host-manager/manager.xml
-	sed -i -e 's:}/server/:}/:' ${S}/webapps/manager/manager.xml
+	# fix context's so webapps will be deployed
+	sed -i -e 's:Context a:Context docBase="${catalina.home}/webapps/host-manager"  a:' ${S}/webapps/host-manager/META-INF/context.xml
+	sed -i -e 's:Context a:Context docBase="${catalina.home}/webapps/manager"  a:' ${S}/webapps/manager/META-INF/context.xml
 
 	# replace the default pw with a random one, see #92281
 	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)
@@ -156,16 +153,18 @@ src_install() {
 	dosym /var/run/${TOMCAT_NAME} ${CATALINA_BASE}/work
 
 	# link the manager's context to the right position
-	dosym ${TOMCAT_HOME}/webapps/host-manager/host-manager.xml /etc/${TOMCAT_NAME}/Catalina/localhost/host-manager.xml
-	dosym ${TOMCAT_HOME}/webapps/manager/manager.xml /etc/${TOMCAT_NAME}/Catalina/localhost/manager.xml
+	dosym ${TOMCAT_HOME}/webapps/host-manager/META-INF/context.xml /etc/${TOMCAT_NAME}/Catalina/localhost/host-manager.xml
+	dosym ${TOMCAT_HOME}/webapps/manager/META-INF/context.xml /etc/${TOMCAT_NAME}/Catalina/localhost/manager.xml
 
 	dodoc  ${S}/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/tomcat-users.xml
 }
 
 pkg_postinst() {
+	ewarn "Changing ownership recursively on /etc/${TOMCAT_NAME}"
 	# temp fix for bug #176097	
 	chown -fR tomcat:tomcat /etc/${TOMCAT_NAME}
+	ewarn "Owner ship changed to tomcat:tomcat. Temp hack/fix."
 
 	elog
 	elog " This ebuild implements a FHS compliant layout for tomcat"
