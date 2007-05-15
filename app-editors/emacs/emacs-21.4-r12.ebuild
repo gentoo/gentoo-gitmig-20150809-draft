@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.16 2007/05/15 09:59:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.17 2007/05/15 10:12:55 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -13,26 +13,26 @@ SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="21"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="X Xaw3d leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
-	X? ( x11-libs/libXext
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXmu
-			x11-libs/libXpm
-			x11-misc/emacs-desktop
-			>=media-libs/giflib-4.1.0.1b
-			>=media-libs/jpeg-6b-r2
-			>=media-libs/tiff-3.5.5-r3
-			>=media-libs/libpng-1.2.1
-			!arm? (
-				Xaw3d? ( x11-libs/Xaw3d )
-				motif? (
-					lesstif? ( x11-libs/lesstif )
-				!lesstif? ( >=x11-libs/openmotif-2.1.30 ) )
-			)
+	X? (
+		x11-libs/libXext
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXmu
+		x11-libs/libXpm
+		x11-misc/emacs-desktop
+		>=media-libs/giflib-4.1.0.1b
+		>=media-libs/jpeg-6b-r2
+		>=media-libs/tiff-3.5.5-r3
+		>=media-libs/libpng-1.2.1
+		Xaw3d? ( x11-libs/Xaw3d )
+		motif? (
+			lesstif? ( x11-libs/lesstif )
+			!lesstif? ( >=x11-libs/openmotif-2.1.30 )
+		)
 	)
 	!nosendmail? ( virtual/mta )
 	>=app-admin/eselect-emacs-0.7-r1"
