@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.1.23.ebuild,v 1.8 2007/04/29 17:48:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.1.23.ebuild,v 1.9 2007/05/15 16:08:36 humpback Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	dev-libs/libevent"
-RDEPEND="net-proxy/tsocks"
+RDEPEND="net-proxy/tsocks
+		${DEPEND}"
 
 pkg_setup() {
 	enewgroup tor
@@ -31,6 +32,7 @@ src_unpack() {
 src_install() {
 	newinitd ${FILESDIR}/tor.initd tor
 	make DESTDIR=${D} install || die
+	keepdir /var/{lib,log,run}/tor
 
 	dodoc README ChangeLog AUTHORS INSTALL \
 		doc/{HACKING,TODO} \

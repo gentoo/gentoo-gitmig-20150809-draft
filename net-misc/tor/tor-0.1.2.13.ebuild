@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.13.ebuild,v 1.1 2007/05/15 15:57:21 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.13.ebuild,v 1.2 2007/05/15 16:08:36 humpback Exp $
 
 inherit eutils
 
@@ -39,14 +39,12 @@ src_compile() {
 src_install() {
 	newinitd "${FILESDIR}"/tor.initd-r2 tor
 	emake DESTDIR="${D}" install || die
+	keepdir /var/{lib,log,run}/tor
 
 	dodoc README ChangeLog AUTHORS ReleaseNotes \
 		doc/{HACKING,TODO} \
 		doc/spec/*.txt
 
-	keepdir /var/lib/tor
-	keepdir /var/log/tor
-	keepdir /var/run/tor
 	fperms 750 /var/lib/tor /var/log/tor
 	fperms 755 /var/run/tor
 	fowners tor:tor /var/lib/tor /var/log/tor /var/run/tor

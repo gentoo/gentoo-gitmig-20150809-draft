@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.78 2007/05/15 15:57:21 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.79 2007/05/15 16:08:36 humpback Exp $
+
+  15 May 2007; <humpback@gentoo.org> tor-0.1.0.18.ebuild,
+  tor-0.1.0.18-r1.ebuild, tor-0.1.1.23.ebuild, tor-0.1.1.26.ebuild,
+  tor-0.1.2.13.ebuild:
+  Added keepdir. Close Bug #177590.
+
+  15 May 2007; <humpback@gentoo.org> tor-0.1.1.23.ebuild,
+  tor-0.1.1.26.ebuild:
+  Fixed missing RDEP's. Close Bug #174185.
 
 *tor-0.1.2.13 (15 May 2007)
 

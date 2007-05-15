@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.18.ebuild,v 1.9 2006/10/22 16:06:24 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.18.ebuild,v 1.10 2007/05/15 16:08:36 humpback Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,6 +45,7 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/tor.initd-r1 tor
 	insinto /etc/conf.d ; newins ${FILESDIR}/tor.confd tor
 	make DESTDIR=${D} install || die
+	keepdir /var/{lib,log,run}/tor
 
 	dodoc README ChangeLog AUTHORS INSTALL \
 		doc/{CLIENTS,FAQ,HACKING,TODO} \
