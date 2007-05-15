@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/autounmask
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.10 2007/05/07 14:54:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.11 2007/05/15 20:23:49 bangert Exp $
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
 
   07 May 2007; Raúl Porcel <armin76@gentoo.org> autounmask-0.15.ebuild:
   ia64 + x86 stable wrt #172238
