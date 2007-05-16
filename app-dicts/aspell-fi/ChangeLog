@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fi/ChangeLog,v 1.4 2007/05/12 10:40:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fi/ChangeLog,v 1.5 2007/05/16 21:02:02 armin76 Exp $
+
+  16 May 2007; Raúl Porcel <armin76@gentoo.org> aspell-fi-0.7.0.ebuild:
+  Add ~alpha wrt #147568
 
   12 May 2007; Markus Rothe <corsair@gentoo.org> aspell-fi-0.7.0.ebuild:
   Added ~ppc64; bug #147568
