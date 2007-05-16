@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7270 2007/05/15 21:03:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7271 2007/05/16 04:50:50 pythonhead Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1769,10 +1769,6 @@ www-apps/open-xchange
 # This is a binary package version.
 # Masked for more testing.
 =dev-lang/smalltalkx-5.2.6
-
-# Rob Cakebread <pythonhead@gentoo.org> (04 Aug 2005)
-# Needs testing, in particular svn, cvs and darcs control
-dev-util/pida
 
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
