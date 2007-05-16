@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.40.ebuild,v 1.1 2007/05/16 22:26:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.40.ebuild,v 1.2 2007/05/16 22:39:22 josejx Exp $
 
 inherit eutils multilib
 
@@ -16,6 +16,7 @@ IUSE="gtk divx gmedia mplayer-bin realmedia quicktime wmp"
 DEPEND="
 		|| ( www-client/mozilla-firefox
 				www-client/seamonkey
+				www-client/epiphany
 		)
 		|| ( ( x11-libs/libXpm
 				x11-proto/xextproto
