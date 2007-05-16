@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.4 2007/04/10 19:43:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.5 2007/05/16 15:05:14 ulm Exp $
+
+*org-mode-4.74 (16 May 2007)
+
+  16 May 2007; Ulrich Mueller <ulm@gentoo.org> files/51org-mode-gentoo.el,
+  +org-mode-4.74.ebuild:
+  Version bump. Install some documentation. Dropped ~ppc-macos keyword.
+  Activate auto-mode for .org files, as suggested by MATSUYAMA Tomohiro
+  <matsuyama@ariel-networks.com> in bug #178770.
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> org-mode-4.68.ebuild:
   added FDL license
