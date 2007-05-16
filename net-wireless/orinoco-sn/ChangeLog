@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/orinoco-sn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-sn/ChangeLog,v 1.2 2007/05/13 07:02:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-sn/ChangeLog,v 1.3 2007/05/16 20:33:36 genstef Exp $
+
+  16 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  orinoco-sn-0.13e_pre15.ebuild:
+  Make patch 2.6.21 conditional, bug 178449
 
   13 May 2007; Stefan Schweizer <genstef@gentoo.org>
   orinoco-sn-0.13e_pre15.ebuild:

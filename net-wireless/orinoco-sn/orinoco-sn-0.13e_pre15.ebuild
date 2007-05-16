@@ -63,7 +63,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/orinoco-sn-2.6.21.patch
+	kernel_is ge 2 6 21 && epatch ${FILESDIR}/orinoco-sn-2.6.21.patch
 }
 
 src_compile() {
