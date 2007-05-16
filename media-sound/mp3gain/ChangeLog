@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.22 2007/02/22 01:15:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.23 2007/05/16 16:58:55 armin76 Exp $
+
+  16 May 2007; Raúl Porcel <armin76@gentoo.org> mp3gain-1.4.6-r1.ebuild:
+  alpha stable wrt #153918
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
