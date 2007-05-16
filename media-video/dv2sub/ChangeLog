@@ -1,0 +1,10 @@
+# ChangeLog for media-video/dv2sub
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dv2sub/ChangeLog,v 1.1 2007/05/16 06:50:33 sbriesen Exp $
+
+*dv2sub-0.2 (16 May 2007)
+
+  16 May 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +dv2sub-0.2.ebuild:
+  initial commit.
+
