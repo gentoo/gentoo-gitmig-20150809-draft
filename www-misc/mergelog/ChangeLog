@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/mergelog
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.5 2007/05/13 15:16:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.6 2007/05/16 07:28:07 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org> mergelog-4.5.ebuild:
+  stable amd64, bug 170960
 
   13 May 2007; Raúl Porcel <armin76@gentoo.org> mergelog-4.5.ebuild:
   x86 stable wrt bug 177567
