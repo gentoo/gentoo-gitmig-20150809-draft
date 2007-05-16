@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.42 2007/05/06 17:05:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.43 2007/05/16 00:28:16 dang Exp $
+
+  16 May 2007; Daniel Gryniewicz <dang@gentoo.org> dosemu-1.4.0.ebuild:
+  Marked ~amd64
 
 *dosemu-1.4.0 (06 May 2007)
 
