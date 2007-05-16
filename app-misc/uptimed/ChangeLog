@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.60 2007/05/16 15:41:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.61 2007/05/16 15:46:01 armin76 Exp $
+
+  16 May 2007; Raúl Porcel <armin76@gentoo.org> -uptimed-0.3.9.ebuild,
+  uptimed-0.3.11.ebuild:
+  alpha stable wrt bug 176145 and remove old
 
   16 May 2007; Daniel Gryniewicz <dang@gentoo.org> uptimed-0.3.11.ebuild:
   Marked stable on amd64 for bug #176145
