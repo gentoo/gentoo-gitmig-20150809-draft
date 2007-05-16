@@ -1,0 +1,2 @@
+# Start/Stop bluetooth service on device insertion. Gentoo specific.
+SUBSYSTEM=="bluetooth", KERNEL=="hci[0-9]*", RUN+="bluetooth.sh"

@@ -1,6 +1,19 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.91 2007/05/16 09:51:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.92 2007/05/16 12:34:45 betelgeuse Exp $
+
+*bluez-utils-3.10.1 (16 May 2007)
+
+  16 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/bluez-utils-3.10.1-init.d, +files/bluez-utils-3.10.1-udev.rules,
+  +files/bluez-utils-3.10.1-udev.script, +bluez-utils-3.10.1.ebuild:
+  Version bump. A new simpler init script that uses the service architechture
+  so we only need the hcid daemon. Disabled alsa, obex and sync support
+  because upstream says they are not working yet. Added examples use flag to
+  install the echo example service, old-daemons to install the old daemons and
+  test-programs to install l2test and rctest programs. Made the udev helper
+  use IN_HOTPLUG and fix starting the service via udev. Fixes bug #178268, 
+  #178210, #178160, #160273 and #144812.
 
 *bluez-utils-3.10-r2 (16 May 2007)
 
