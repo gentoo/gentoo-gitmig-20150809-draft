@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.18 2007/04/12 21:09:55 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.19 2007/05/16 07:22:13 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  jxplorer-3.1-r5.ebuild:
+  stable x86, bug 176971
 
   12 Apr 2007; <welp@gentoo.org> jxplorer-3.1-r3.ebuild:
   Stable on amd64 wrt bug 169117
