@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-111.ebuild,v 1.2 2007/05/12 09:57:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-111.ebuild,v 1.3 2007/05/16 10:31:30 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -19,6 +19,14 @@ RDEPEND="${DEPEND} ${RDEPEND}
 	>=sys-apps/baselayout-1.12.5"
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
+
+pkg_setup() {
+	udev_helper_dir="/$(get_libdir)/udev"
+}
+
+sed_helper_dir() {
+	sed -e "s#/lib/udev#${udev_helper_dir}#" -i "$@"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -44,6 +52,12 @@ src_unpack() {
 		eerror "gentoo/udev.rules has been updated, please validate!"
 		die "gentoo/udev.rules has been updated, please validate!"
 	fi
+
+	sed_helper_dir \
+		etc/udev/gentoo/50-udev.rules \
+		extras/rule_generator/write_*_rules \
+		udev_rules_parse.c \
+		udev_utils_run.c
 }
 
 src_compile() {
@@ -90,7 +104,7 @@ src_install() {
 	dosbin udevsettle	|| die "Required binary not installed properly"
 
 	# Helpers
-	exeinto /lib/udev
+	exeinto "${udev_helper_dir}"
 	doexe extras/ata_id/ata_id		|| die "Required helper not installed properly"
 	doexe extras/volume_id/vol_id	|| die "Required helper not installed properly"
 	doexe extras/scsi_id/scsi_id	|| die "Required helper not installed properly"
@@ -102,13 +116,18 @@ src_install() {
 	doexe extras/rule_generator/write_net_rules	|| die "Required helper not installed properly"
 	doexe extras/rule_generator/rule_generator.functions	|| die "Required helper not installed properly"
 	doexe extras/root_link/get_dir_major_minor || die "Required helper not installed properly"
-	keepdir /lib/udev/state
-	keepdir /lib/udev/devices
+	doexe extras/floppy/create_floppy_devices	|| die "Required binary not installed properly"
+	doexe extras/firmware/firmware.sh			|| die "Required binary not installed properly"
+	newexe ${FILESDIR}/net-104-r10.sh net.sh	|| die "Required binary not installed properly"
+	newexe ${FILESDIR}/modprobe-105.sh modprobe.sh	|| die "Required binary not installed properly"
+
+	keepdir "${udev_helper_dir}"/state
+	keepdir "${udev_helper_dir}"/devices
 
 	# create symlinks for these utilities to /sbin
 	# where multipath-tools expect them to be (Bug #168588)
-	dosym ../lib/udev/vol_id /sbin/vol_id
-	dosym ../lib/udev/scsi_id /sbin/scsi_id
+	dosym "..${udev_helper_dir}/vol_id" /sbin/vol_id
+	dosym "..${udev_helper_dir}/scsi_id" /sbin/scsi_id
 
 	# vol_id library (needed by mount and HAL)
 	dolib extras/volume_id/lib/*.a extras/volume_id/lib/*.so*
@@ -123,15 +142,6 @@ src_install() {
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins extras/volume_id/lib/*.pc
 
-	#exeinto /etc/udev/scripts
-	exeinto /lib/udev
-	#doexe extras/ide-devfs.sh
-	#doexe extras/scsi-devfs.sh
-	#doexe extras/raid-devfs.sh
-	doexe extras/floppy/create_floppy_devices	|| die "Required binary not installed properly"
-	doexe extras/firmware/firmware.sh			|| die "Required binary not installed properly"
-	newexe ${FILESDIR}/net-104-r10.sh net.sh	|| die "Required binary not installed properly"
-	newexe ${FILESDIR}/modprobe-105.sh modprobe.sh	|| die "Required binary not installed properly"
 
 	# Our udev config file
 	insinto /etc/udev
@@ -169,6 +179,9 @@ src_install() {
 	newins "${FILESDIR}"/udev-start-110-r1.sh udev-start.sh
 	newins "${FILESDIR}"/udev-stop-110-r1.sh udev-stop.sh
 
+	# convert /lib/udev to real used dir
+	sed_helper_dir "${D}/$(get_libdir)"/rcscripts/addons/*.sh
+
 	# needed to compile latest Hal
 	insinto /usr/include
 	doins extras/volume_id/lib/libvolume_id.h
@@ -182,6 +195,9 @@ src_install() {
 	insinto /etc/modprobe.d
 	newins ${FILESDIR}/blacklist-110 blacklist
 	doins ${FILESDIR}/pnp-aliases
+
+	# convert /lib/udev to real used dir
+	sed_helper_dir "${D}"/etc/modprobe.d/*
 
 	if use s390; then
 		# s390 does not has persistent mac addresses
