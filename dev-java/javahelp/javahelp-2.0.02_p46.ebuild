@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/javahelp-2.0.02_p46.ebuild,v 1.3 2007/04/07 16:30:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/javahelp-2.0.02_p46.ebuild,v 1.4 2007/05/16 07:17:28 opfer Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc examples source"
@@ -16,7 +16,7 @@ SRC_URI="https://${PN}.dev.java.net/files/documents/5985/47404/${MY_PN}-src-${MY
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 COMMON_DEP="
 	=dev-java/servletapi-2.4*"
@@ -39,6 +39,7 @@ src_unpack() {
 	rm -v javax/help/plaf/basic/BasicNativeContentViewerUI.java || die
 	cd "${BDIR}/lib" || die
 	java-pkg_jar-from servletapi-2.4
+	java-pkg_filter-compiler jikes
 }
 
 _eant() {

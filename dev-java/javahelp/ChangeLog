@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.7 2007/04/07 16:30:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.8 2007/05/16 07:17:28 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  javahelp-2.0.02_p46.ebuild:
+  stable x86, bug 176971
 
   07 Apr 2007; Joseph Jezak <josejx@gentoo.org> javahelp-2.0.02_p46.ebuild:
   Marked ~ppc for bug #168991, thanks to ndansmith for testing.
