@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.4 2007/04/18 17:20:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.5 2007/05/16 06:12:03 jer Exp $
+
+  16 May 2007; Jeroen Roovers <jer@gentoo.org> libnfnetlink-0.0.25.ebuild:
+  Marked ~hppa (bug #176568).
 
   18 Apr 2007; Markus Ullmann <jokey@gentoo.org> libnfnetlink-0.0.25.ebuild:
   Add check for more recent kernels, clean overshadowed and stable on x86
