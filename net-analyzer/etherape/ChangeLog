@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.47 2007/05/15 14:04:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.48 2007/05/16 02:20:39 beandog Exp $
+
+  16 May 2007; Steve Dibb <beandog@gentoo.org> etherape-0.9.7-r1.ebuild:
+  amd64 stable, bug 178611
 
   15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   etherape-0.9.7-r1.ebuild:
