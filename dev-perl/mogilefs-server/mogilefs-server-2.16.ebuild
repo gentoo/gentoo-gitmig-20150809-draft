@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.16.ebuild,v 1.1 2007/05/16 11:11:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.16.ebuild,v 1.2 2007/05/16 11:11:57 robbat2 Exp $
 
 inherit perl-module
 
@@ -53,7 +53,7 @@ src_install() {
 
 	newconfd ${FILESDIR}/mogstored-conf.d-2.16 mogstored
 	newinitd ${FILESDIR}/mogstored-init.d-2.16 mogstored
-	
+
 	diropts -m 700 -o ${MOGILE_USER}
 	keepdir /var/run/mogile
 	keepdir /var/mogdata
