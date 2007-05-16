@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/elfkickers
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.13 2006/08/12 18:50:34 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.14 2007/05/16 19:37:09 solar Exp $
+
+*elfkickers-2.0a-r2 (16 May 2007)
+
+  16 May 2007; <solar@gentoo.org> +elfkickers-2.0a-r2.ebuild:
+  - make rebind and elfls 64bit aware when compiled on 64bit hosts
 
   12 Aug 2006; Jason Wever <weeve@gentoo.org> elfkickers-2.0a-r1.ebuild:
   Stable on SPARC.
