@@ -1,7 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.3.0.ebuild,v 1.2 2007/05/08 22:46:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.3.0.ebuild,v 1.3 2007/05/16 19:47:46 caster Exp $
 
+# because of ant-contrib
+WANT_SPLIT_ANT=true
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Openfire (formerly wildfire) real time collaboration (RTC) server"
@@ -18,14 +20,10 @@ IUSE="doc"
 # For transports
 PROVIDE="virtual/jabber-server"
 
-RDEPEND=" >=virtual/jre-1.5 "
-# Doesn't build against Java 1.6 due to changes in JDBC API
+RDEPEND=">=virtual/jre-1.5"
 DEPEND="net-im/jabber-base
-		=virtual/jdk-1.5*
-		>=dev-java/ant-1.6
-		<dev-java/ant-1.7
 		dev-java/ant-contrib
-		>=dev-java/commons-net-1.4"
+		>=virtual/jdk-1.5"
 
 S=${WORKDIR}/${PN//-/_}_src
 
@@ -52,7 +50,8 @@ src_compile() {
 	# Jikes doesn't support -source 1.5
 	java-pkg_filter-compiler jikes
 
-	eant -f build/build.xml openfire plugins plugins-dev $(use_doc)
+	ANT_TASKS="ant-contrib"
+	eant -f build/build.xml openfire plugins $(use_doc)
 }
 
 src_install() {
