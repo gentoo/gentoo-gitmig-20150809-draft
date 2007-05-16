@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.43 2007/05/15 14:14:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.44 2007/05/16 02:01:58 dang Exp $
+
+  16 May 2007; Daniel Gryniewicz <dang@gentoo.org> freeglut-2.4.0-r1.ebuild:
+  Marked stable on amd64 for bug #170609
 
   15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   freeglut-2.4.0-r1.ebuild:
