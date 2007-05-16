@@ -1,10 +1,26 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.82 2007/05/06 08:12:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.83 2007/05/16 10:44:58 mrness Exp $
+
+*slmodem-2.9.11_pre20070505 (16 May 2007)
+
+  16 May 2007; Alin Năstac <mrness@gentoo.org> files/slmodem-modules,
+  +files/slmodem-ungrab-winmodem-hp500.patch, +files/slusb-udev.script,
+  +slmodem-2.9.11_pre20070505.ebuild:
+  Version bump based on the current sunrise ebuild, thanks to Jakub Moc
+  <jakub@gentoo.org> (see bugs #178030 and #178173).
 
   06 May 2007; Marius Mauch <genone@gentoo.org>
   slmodem-2.9.11_pre20061021-r2.ebuild:
   Replacing einfo with elog
+
+*slmodem-2.9.11_pre20070505 (16 May 2007)
+
+  16 May 2007; Alin Năstac <mrness@gentoo.org> files/slmodem-modules,
+  +files/slmodem-ungrab-winmodem-hp500.patch, +files/slusb-udev.script,
+  +slmodem-2.9.11_pre20070505.ebuild:
+  Version bump based on the current sunrise ebuild, thanks to Jakub Moc
+  <jakub@gentoo.org> (see bugs #178030 and #178173).
 
 *slmodem-2.9.11_pre20061021-r2 (14 Mar 2007)
 

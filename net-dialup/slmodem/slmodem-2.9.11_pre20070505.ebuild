@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r2.ebuild,v 1.3 2007/05/16 10:44:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20070505.ebuild,v 1.1 2007/05/16 10:44:58 mrness Exp $
 
 inherit eutils linux-mod multilib
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://linmodems.technion.ac.il/packages/smartlink/"
 SRC_URI="http://linmodems.technion.ac.il/packages/smartlink/${P/_pre/-}.tar.gz
-	http://linmodems.technion.ac.il/packages/smartlink/ungrab-winmodem.tar.gz"
+	http://linmodems.technion.ac.il/packages/smartlink/ungrab-winmodem-${PV/*_pre/}.tar.gz"
 
 LICENSE="Smart-Link"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="alsa usb"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
@@ -24,7 +24,7 @@ S="${WORKDIR}"/${P/_pre/-}
 pkg_setup() {
 	use amd64 && multilib_toolchain_setup x86
 
-	MODULE_NAMES="ungrab-winmodem(:${WORKDIR}/ungrab-winmodem)"
+	MODULE_NAMES="ungrab-winmodem(:${WORKDIR}/ungrab-winmodem-${PV/*_pre/})"
 	if ! use amd64; then
 		MODULE_NAMES="${MODULE_NAMES} slamr(net:${S}/drivers)"
 		if use usb; then
@@ -40,13 +40,15 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
-	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${WORKDIR}/ungrab-winmodem:" \
-		ungrab-winmodem/Makefile
-	convert_to_m ungrab-winmodem/Makefile
+	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${WORKDIR}/ungrab-winmodem-${PV/*_pre/}:" \
+		ungrab-winmodem-${PV/*_pre/}/Makefile
+	convert_to_m ungrab-winmodem-${PV/*_pre/}/Makefile
 
-	epatch "${FILESDIR}/${P%%_*}-kernel-2.6.19.patch"
+	epatch "${FILESDIR}"/${PN}-ungrab-winmodem-hp500.patch
+
 	cd "${S}"
 	epatch "${FILESDIR}/${P%%_*}-makefile.patch"
+
 
 	cd "${S}"/drivers
 	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${S}/drivers:" Makefile
@@ -90,59 +92,43 @@ src_install() {
 
 
 	# Add module aliases and install hotplug script
-	insinto /etc/modules.d/; newins "${FILESDIR}/slmodem-modules" ${PN}
+	insinto /etc/modules.d/
+	newins "${FILESDIR}/slmodem-modules" ${PN}
 	if use usb; then
-		exeinto /etc/hotplug/usb; newexe "${FILESDIR}/slusb.hotplug" slusb
+		exeinto /$(get_libdir)/udev
+		newexe "${FILESDIR}/slusb-udev.script" slmodem_usb.sh
 	fi
 
-	dodir /etc/hotplug/blacklist.d
-	echo -e "slusb\nslamr\nsnd-intel8x0m" >> "${D}/etc/hotplug/blacklist.d/${PN}"
+	dodir /etc/modprobe.d
+	echo -e "blacklist slusb\nblacklist slamr\nblacklist snd-intel8x0m" >> "${D}/etc/modprobe.d/${PN}"
 
-	# Add configuration for devfs, udev
-	insinto /etc/devfs.d/; newins "${FILESDIR}/${PN}-2.9.devfs" ${PN}
+	# Add configuration for udev
 	dodir /etc/udev/rules.d/
 	echo 'KERNEL=="slamr", NAME="slamr0" GROUP="dialout"' > \
 		 "${D}/etc/udev/rules.d/55-${PN}.rules"
 	if use usb; then
-		echo 'KERNEL=="slusb", NAME="slusb0" GROUP="dialout"' >> \
+		echo 'KERNEL=="slusb", NAME="slusb0" GROUP="dialout" RUN+="slmodem_usb.sh"' >> \
 			 "${D}/etc/udev/rules.d/55-${PN}.rules"
 	fi
 
-	dodoc Changes README "${WORKDIR}/ungrab-winmodem/Readme.txt"
-}
-
-pkg_preinst() {
-	linux-mod_pkg_preinst
-
-	# Remove obsolete devfs configuration files if the box use udev
-	if [ -e "${ROOT}/dev/.udev" ]; then
-		rm -r "${D}/etc/devfs.d"
-	fi
+	dodoc Changes README
+	newdoc "${WORKDIR}"/ungrab-winmodem-${PV/*_pre}/Readme.txt README-ungrab-winmodem.txt
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	# Make some devices if we aren't using devfs or udev
-	if [ -e "${ROOT}/dev/.devfsd" ]; then
-		ebegin "Restarting devfsd to reread devfs rules"
-			killall -HUP devfsd
-		eend $?
-
-	elif [ -e "${ROOT}/dev/.udev" ]; then
-		ebegin "Restarting udev to reread udev rules"
-			udevstart
+	if [ -e "${ROOT}/dev/.udev" ]; then
+		ebegin "Reloading udev rules..."
+			udevcontrol reload_rules
 		eend $?
 	else
 		cd "${S}/drivers"
 		make DESTDIR="${ROOT}" install-devices
 	fi
 
-	if [ ! -e "${ROOT}/dev/ppp" ]; then
-		mknod "${ROOT}/dev/ppp" c 108 0
-	fi
-
-	ewarn "To avoid problems, slusb/slamr have been added to /etc/hotplug/blacklist"
+	ewarn "To avoid problems, slusb/slamr have been blacklisted in /etc/modprobe.d/${PN}"
 	elog "You must edit /etc/conf.d/${PN} for your configuration"
 	elog "To add slmodem to your startup - type : rc-update add slmodem default"
 	elog
@@ -162,4 +148,5 @@ pkg_postinst() {
 	elog "If you see the following in dmesg:"
 	elog "    slamr: device 10b9:5457 is grabbed by driver serial"
 	elog "you need to modprobe ungrab-winmodem before slamr"
+	elog "See /etc/modules.d/slmodem for details."
 }
