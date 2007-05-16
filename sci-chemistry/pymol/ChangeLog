@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.23 2007/05/07 15:41:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.24 2007/05/16 02:36:42 beandog Exp $
+
+  16 May 2007; Steve Dibb <beandog@gentoo.org> pymol-0.99_rc6-r2.ebuild:
+  amd64 stable, bug 176831
 
   07 May 2007; Raúl Porcel <armin76@gentoo.org> pymol-0.99_rc6-r2.ebuild:
   x86 stable wrt #176831
