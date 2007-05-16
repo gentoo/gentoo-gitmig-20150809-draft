@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.71 2007/04/30 17:21:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.72 2007/05/16 22:21:03 compnerd Exp $
+
+*libgdiplus-1.2.4 (16 May 2007)
+
+  16 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +libgdiplus-1.2.4.ebuild:
+  Version bump from upstream
 
   30 Apr 2007; Roy Marples <uberlord@gentoo.org> libgdiplus-1.2.3.ebuild:
   Added ~x86-fbsd keyword.
