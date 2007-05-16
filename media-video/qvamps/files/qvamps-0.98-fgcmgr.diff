@@ -1,0 +1,17 @@
+--- qvamps-0.98.orig/FpcMgr.pm	2006-02-19 09:14:01.000000000 +0100
++++ qvamps-0.98/FpcMgr.pm	2006-08-22 22:45:20.000000000 +0200
+@@ -246,10 +246,10 @@
+ }
+ 
+ 
+-sub subtitle_stream
+-{
+-  return audio_combo -> currentItem () - 1;
+-}
++sub subtitle_stream 
++{ 
++  return subtitle_combo -> currentItem () - 1; 
++} 
+ 
+ 
+ 1;
