@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aacgain
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aacgain/ChangeLog,v 1.2 2006/06/11 20:57:20 sbriesen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aacgain/ChangeLog,v 1.3 2007/05/16 07:41:42 sbriesen Exp $
+
+*aacgain-1.7 (16 May 2007)
+
+  16 May 2007; Stefan Briesenick <sbriesen@gentoo.org> +aacgain-1.7.ebuild:
+  version bump.
 
   11 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org> aacgain-1.5.ebuild:
   added BIG FAT WARNING (see bug #136170)
