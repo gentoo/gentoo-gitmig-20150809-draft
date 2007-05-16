@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.3.2.ebuild,v 1.1 2006/02/13 18:33:07 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.3.2.ebuild,v 1.2 2007/05/16 07:30:08 opfer Exp $
 
 inherit eutils distutils webapp
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://pyblosxom.sourceforge.net/"
 
 LICENSE="MIT"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
