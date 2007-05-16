@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.76 2007/05/15 15:23:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.77 2007/05/16 07:34:04 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org> tcl-8.4.14.ebuild:
+  stable amd64, bug 178320
 
   15 May 2007; Raúl Porcel <armin76@gentoo.org> tcl-8.4.14.ebuild:
   alpha/ia64/x86 stable wrt #178320
