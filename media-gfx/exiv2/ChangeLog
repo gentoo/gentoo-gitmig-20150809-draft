@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.21 2007/05/11 18:09:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.22 2007/05/16 13:58:59 armin76 Exp $
+
+  16 May 2007; Raúl Porcel <armin76@gentoo.org> exiv2-0.13.ebuild:
+  Add ~alpha wrt #169164
 
   11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> exiv2-0.13.ebuild:
   Stable on sparc
