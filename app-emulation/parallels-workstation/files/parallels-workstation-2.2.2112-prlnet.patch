@@ -1,0 +1,16 @@
+--- data/drivers/drv_net/linux/prlnet.c
++++ data/drivers/drv_net/linux/prlnet.c
+
+13a14
+> #include <linux/mm.h>
+882a884,887
+> #ifndef CHECKSUM_HW
+> 		int do_csum = skb->pkt_type == PACKET_OUTGOING
+> 			&& skb->ip_summed == CHECKSUM_COMPLETE;
+> #else
+884a890
+> #endif
+1010a1017
+> #if WIRELESS_EXT >=12 && WIRELESS_EXT < 17
+1012a1020
+> #endif

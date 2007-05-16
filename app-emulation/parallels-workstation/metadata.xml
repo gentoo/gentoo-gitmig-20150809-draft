@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>andreyr@parallels.com</email>
+  <name>Andrey Romanchev</name>
+  <description>Official Maintainer</description>
+</maintainer>
+<maintainer>
+	<email>cardoe@gentoo.org</email>
+	<name>Doug Goldstein</name>
+	<description>Proxy Maintainer</description>
+</maintainer>
+<longdescription>Parallels Workstation is a powerful, easy to use, cost
+effective desktop virtualization solution that empowers PC users with the
+ability to create completely networked, fully portable, entirely independent
+virtual machines on a single physical machine.</longdescription>
+</pkgmetadata>

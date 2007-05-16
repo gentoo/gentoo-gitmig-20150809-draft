@@ -1,0 +1,39 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/parallels-workstation/files/parallels.rc,v 1.1 2007/05/16 19:04:11 cardoe Exp $
+
+NAME="Parallels Workstation 2.2"
+
+checkconfig() {
+	if [ -e /usr/lib/parallels/.not_configured ]; then
+		eerror "You should configure ${NAME}"
+		eerror "before starting it for the first time."
+		eerror "Issue \"parallels-config\" command."
+
+		return 1
+	fi
+}
+
+depend() {
+	need net
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting ${NAME}"
+
+	/usr/lib/parallels/autostart/drivers_start > /dev/null 2>&1
+
+	eend $? "Failed to start ${NAME}"
+}
+
+stop() {
+	ebegin "Stopping ${NAME}"
+
+	/usr/lib/parallels/autostart/drivers_stop > /dev/null 2>&1
+
+	eend $? "Failed to stop ${NAME}"
+}
+

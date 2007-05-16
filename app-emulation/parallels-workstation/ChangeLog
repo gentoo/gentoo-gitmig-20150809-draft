@@ -1,0 +1,13 @@
+# ChangeLog for app-emulation/parallels-workstation
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/parallels-workstation/ChangeLog,v 1.1 2007/05/16 19:04:11 cardoe Exp $
+
+*parallels-workstation-2.2.2112-r1 (16 May 2007)
+
+  16 May 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/parallels-workstation-2.2.2112-prlnet.patch, +files/parallels.rc,
+  +metadata.xml, +parallels-workstation-2.2.2112-r1.ebuild:
+  Adding Parallels Workstation ebuilds to the tree. These are written and
+  maintained by Andrey Romanchev <andreyr@parallels.com> and proxy committed
+  by me.
+
