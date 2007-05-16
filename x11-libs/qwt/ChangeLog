@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.42 2007/04/10 07:59:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.43 2007/05/16 15:22:31 corsair Exp $
+
+  16 May 2007; Markus Rothe <corsair@gentoo.org> qwt-5.0.0_rc1.ebuild,
+  qwt-5.0.1.ebuild:
+  Removed ~ppc64 keyword until we have working QT4; bug #178779
 
   10 Apr 2007; Patrick Kursawe <phosphan@gentoo.org> metadata.xml:
   Changed maintainer to caleb because (see this ChangeLog) he is it in fact.
