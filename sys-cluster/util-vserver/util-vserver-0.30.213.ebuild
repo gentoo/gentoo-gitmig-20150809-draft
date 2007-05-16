@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213.ebuild,v 1.1 2007/05/03 20:23:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213.ebuild,v 1.2 2007/05/16 09:50:50 phreak Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -41,6 +41,13 @@ pkg_setup() {
 	einfo
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-init-vserver.sh.patch
+}
+
 src_compile() {
 	econf --with-vrootdir=${VDIRBASE} \
 		--with-initscripts=gentoo \
@@ -71,6 +78,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	# Create VDIRBASE in postinst, so it is (a) not unmerged and (b) also
+	# present when merging.
+	mkdir "${VDIRBASE}"
+	rm /etc/vservers/.defaults/vdirbase
+	ln -sf "${VDIRBASE}" /etc/vservers/.defaults/vdirbase
+
 	elog
 	elog "You have to run the vprocunhide command after every reboot"
 	elog "in order to setup /proc permissions correctly for vserver"

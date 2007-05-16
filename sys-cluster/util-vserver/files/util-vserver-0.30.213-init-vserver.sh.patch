@@ -1,0 +1,18 @@
+---
+ distrib/gentoo/init-vserver.sh |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+--- a/distrib/gentoo/init-vserver.sh
++++ b/distrib/gentoo/init-vserver.sh
+@@ -22,8 +22,10 @@
+ # Your vserver will not boot anymore!
+ #
+ # You have been warned...
+-#
+ 
++# Force TERM=linux for baselayout-2
++
++export TERM=linux
+ RUNLEVEL=1 /sbin/rc sysinit || exit 1
+ /sbin/rc boot || exit 1
+ /sbin/rc ${1:-default}
