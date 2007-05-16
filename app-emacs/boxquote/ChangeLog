@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/boxquote
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.12 2007/04/16 18:25:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.13 2007/05/16 12:01:22 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  boxquote-1.18-r1.ebuild:
+  stable x86/amd64, bug 178722
 
 *boxquote-1.18-r1 (16 Apr 2007)
 
