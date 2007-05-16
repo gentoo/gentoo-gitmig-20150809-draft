@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/securemodelines
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.7 2007/05/15 14:15:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.8 2007/05/16 05:15:08 jer Exp $
+
+  16 May 2007; Jeroen Roovers <jer@gentoo.org>
+  securemodelines-20070513.ebuild:
+  Marked ~hppa (bug #178480).
 
   15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   securemodelines-20070513.ebuild:
