@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.29 2007/03/07 17:02:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.30 2007/05/16 18:35:28 tupone Exp $
+
+*bsd-games-2.17-r3 (16 May 2007)
+
+  16 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/bsd-games-2.17-bg.patch, +bsd-games-2.17-r3.ebuild:
+  Fixed backgammon segfaults in too-small window. Bug #150282 by carlosqueso
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   bsd-games-2.17-r2.ebuild:
