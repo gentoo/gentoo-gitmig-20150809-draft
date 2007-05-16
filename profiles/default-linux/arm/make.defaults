@@ -26,5 +26,5 @@ zlib \
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="ati chips dummy fbdevglint mga nv s3 s3virge savage sis sisusb \
-	tdfx trident v4l vga voodoo"
+VIDEO_CARDS="chips dummy fbdevglint mach64 mga nv r128 radeon s3 s3virge \
+	savage sis sisusb tdfx trident v4l vga voodoo"

@@ -1,3 +1,3 @@
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="ati dummy fbdev mga nv sisusb v4l"
+VIDEO_CARDS="dummy fbdev mach64 mga nv r128 radeon sisusb v4l"

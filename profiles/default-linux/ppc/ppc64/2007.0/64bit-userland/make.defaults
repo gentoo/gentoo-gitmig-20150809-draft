@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2007.0/64bit-userland/make.defaults,v 1.6 2007/04/16 21:14:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2007.0/64bit-userland/make.defaults,v 1.7 2007/05/16 19:33:34 dberkholz Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
@@ -16,7 +16,7 @@ STAGE1_USE="unicode nptl nptlonly"
 
 USE="unicode nptl nptlonly berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
 
-VIDEO_CARDS="mga ati dummy fbdev nv s3 vega vga"
+VIDEO_CARDS="dummy fbdev mach64 mga nv r128 radeon s3 vega vga"
 
 # While this profile uses multilib functionality it is just to maintain
 # some similarity across profiles this profile is truly for a singe ABI, ppc64.
