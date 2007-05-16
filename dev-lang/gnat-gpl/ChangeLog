@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.15 2007/02/15 14:08:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.16 2007/05/16 18:13:18 george Exp $
+
+  16 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
+  gnat-gpl-3.4.6.2006.ebuild, gnat-gpl-3.4.6.2006-r1.ebuild:
+  added QA_EXECSTACK bypass. See #119382
 
 *gnat-gpl-3.4.6.2006-r1 (15 Feb 2007)
 
