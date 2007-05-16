@@ -1,6 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.36 2007/03/12 21:35:44 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.37 2007/05/16 07:33:37 gregkh Exp $
+
+  16 May 2007; Greg Kroah-Hartman <gregkh@gentoo.org> asciidoc-8.1.0.ebuild:
+  add ~arm, ~s390, ~sh, and ~x86-fbsd so that dev-util/tig can rely on this
+  package.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
