@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.35 2007/05/12 20:08:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.36 2007/05/16 15:56:42 dang Exp $
+
+  16 May 2007; Daniel Gryniewicz <dang@gentoo.org> gimp-help-0.12.ebuild:
+  Marked stable on amd64 for bug #177213
 
   12 May 2007; Joshua Kinard <kumba@gentoo.org> gimp-help-0.12.ebuild:
   Stable on mips, per #177213.
