@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.2.ebuild,v 1.2 2007/05/13 04:55:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.2.ebuild,v 1.3 2007/05/16 20:17:16 josejx Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-util/git-1.4.4.3
