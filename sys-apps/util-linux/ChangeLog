@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.187 2007/05/15 02:28:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.188 2007/05/16 02:12:30 dang Exp $
+
+  16 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  util-linux-2.12r-r7.ebuild:
+  Marked stable on amd64 for bug #178444
 
   15 May 2007; Jeroen Roovers <jer@gentoo.org> util-linux-2.12r-r7.ebuild:
   Stable for HPPA (bug #178444).
