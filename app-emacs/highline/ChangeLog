@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/highline
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.14 2007/04/16 18:32:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.15 2007/05/16 11:56:43 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  highline-4.2-r1.ebuild:
+  stable x86/amd64, bug 178723
 
 *highline-4.2-r1 (16 Apr 2007)
 
