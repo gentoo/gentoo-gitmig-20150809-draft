@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.380 2007/05/16 15:31:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.381 2007/05/16 22:05:38 josejx Exp $
+
+  16 May 2007; Joseph Jezak <josejx@gentoo.org> base/use.mask,
+  default-linux/amd64/use.mask, use.local.desc:
+  Add mplayer-bin use flag for mplayerplug-in on amd64.
 
   16 May 2007; Markus Rothe <corsair@gentoo.org> hardened/ppc64/use.mask:
   Add qt4 to use.mask in hardened ppc64 profile; bug #178779

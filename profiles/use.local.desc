@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2811 2007/05/16 21:56:48 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2812 2007/05/16 22:05:38 josejx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1614,6 +1614,7 @@ net-www/mod_ftpd:dbi - Enables support for libDBI
 net-www/mod_log_sql:dbi - Enables support for libDBI
 net-www/mplayerplug-in:divx - Divx Playback Support
 net-www/mplayerplug-in:gmedia - Google Media Playback Support
+net-www/mplayerplug-in:mplayer-bin - Use binary mplayer for 32 bit codecs on amd64
 net-www/mplayerplug-in:realmedia - Real Media Playback Support
 net-www/mplayerplug-in:wmp - Windows Media Playback Support
 net-www/netscape-flash:flashsupport - Adds libflashsupport for pulseaudio/esd/oss and ssl/gnutls
