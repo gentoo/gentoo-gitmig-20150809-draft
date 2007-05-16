@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mode-compile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mode-compile/ChangeLog,v 1.1 2007/05/01 16:24:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mode-compile/ChangeLog,v 1.2 2007/05/16 06:08:17 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  mode-compile-2.29.ebuild:
+  added ~amd64, bug 177508
 
 *mode-compile-2.29 (01 May 2007)
 
