@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/gnome-thumbnailer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/gnome-thumbnailer/ChangeLog,v 1.1 2007/05/16 14:51:38 lack Exp $
+
+*gnome-thumbnailer-0.3 (16 May 2007)
+
+  16 May 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +gnome-thumbnailer-0.3.ebuild:
+  New package, requested in bug 125759
+
