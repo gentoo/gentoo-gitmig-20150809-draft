@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r2.ebuild,v 1.12 2007/05/15 06:53:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r2.ebuild,v 1.13 2007/05/16 13:41:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-* alpha amd64 ~arm hppa ia64 mips ppc ppc64 sh sparc x86"
+KEYWORDS="-* alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 
 BRANCH_UPDATE=""
 
@@ -71,6 +71,8 @@ GLIBC_LT_VER=${GLIBC_RELEASE_VER}
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
 NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
 LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
+
+[[ ${CTARGET} == hppa* ]] && NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-2.6.20}
 
 ### SRC_URI ###
 
@@ -326,6 +328,23 @@ toolchain-glibc_pkg_preinst() {
 
 	# Shouldnt need to keep this updated
 	[[ -e ${ROOT}/etc/locale.gen ]] && rm -f "${D}"/etc/locale.gen
+
+	# simple test to make sure our new glibc isnt completely broken.
+	# make sure we don't test with statically built binaries since
+	# they will fail.
+	[[ ${ROOT} != "/" ]] && return 0
+	local x striptest
+	for x in date env ls true uname ; do
+		x=$(type -p ${x})
+		[[ -z ${x} ]] && continue
+		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null)
+		[[ -z ${striptest} ]] && continue
+		[[ ${striptest} == *"statically linked"* ]] && continue
+		"${D}"/$(get_libdir)/ld-*.so \
+			--library-path "${D}"/$(get_libdir) \
+			${x} > /dev/null \
+			|| die "simple run test (${x}) failed"
+	done
 }
 
 toolchain-glibc_src_install() {
@@ -507,23 +526,6 @@ toolchain-glibc_src_install() {
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
 	rm -f "${D}"/etc/localtime
-
-	# simple test to make sure our new glibc isnt completely broken.
-	# for now, skip the multilib scenario.  also make sure we don't
-	# test with statically built binaries since they will fail.
-	[[ ${CBUILD} != ${CHOST} ]] && return 0
-	[[ $(get_libdir) != "lib" ]] && return 0
-	for x in date env ls true uname ; do
-		x=$(type -p ${x})
-		[[ -z ${x} ]] && continue
-		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null)
-		[[ -z ${striptest} ]] && continue
-		[[ ${striptest} == *"statically linked"* ]] && continue
-		"${D}"/$(get_libdir)/ld-*.so \
-			--library-path "${D}"/$(get_libdir) \
-			${x} > /dev/null \
-			|| die "simple run test (${x}) failed"
-	done
 }
 
 toolchain-glibc_headers_install() {
@@ -536,8 +538,8 @@ toolchain-glibc_headers_install() {
 	doins misc/syscall-list.h bits/stdio_lim.h || die "doins include bits"
 	insinto $(alt_headers)/gnu
 	doins "${S}"/include/gnu/stubs.h || die "doins include gnu"
-	# Make sure we install the sys-include symlink so that when 
-	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# Make sure we install the sys-include symlink so that when
+	# we build a 2nd stage cross-compiler, gcc finds the target
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	dosym usr/include /usr/${CTARGET}/sys-include
 }
