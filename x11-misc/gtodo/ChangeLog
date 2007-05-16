@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.17 2007/05/16 02:12:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.18 2007/05/16 06:46:29 opfer Exp $
+
+  16 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  gtodo-0.16.0_rc2.ebuild:
+  stable x86, bug 178687
 
   16 May 2007; Steve Dibb <beandog@gentoo.org> gtodo-0.16.0_rc2.ebuild:
   amd64 stable, bug 178687
