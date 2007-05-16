@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.21 2007/05/02 04:10:04 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.22 2007/05/16 00:57:34 marineam Exp $
+
+  16 May 2007; Michael Marineau <marineam@gentoo.org>
+  xen-tools-3.0.4_p1.ebuild:
+  Only depend on xproto when ioemu is enabled. Bug #177110.
 
 *xen-tools-3.0.4_p1 (02 May 2007)
 

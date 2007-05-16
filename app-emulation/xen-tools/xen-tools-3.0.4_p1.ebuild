@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.1 2007/05/02 04:10:04 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.2 2007/05/16 00:57:34 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -24,12 +24,12 @@ DEPEND="${CDEPEND}
 	dev-lang/perl
 	sys-devel/dev86
 	app-misc/pax-utils
-	x11-proto/xproto
 	doc? (
 		dev-tex/latex2html
 		media-gfx/transfig
 	)
 	ioemu? (
+		x11-proto/xproto
 		net-libs/libvncserver
 	)"
 
@@ -104,6 +104,7 @@ src_unpack() {
 
 	# Don't bother with ioemu, only needed for fully virtualised guests
 	if ! use ioemu; then
+		chmod 644 tools/check/check_x11_devel
 		sed -i -e "/^CONFIG_IOEMU := y$/d" "${S}"/config/*.mk
 	fi
 
