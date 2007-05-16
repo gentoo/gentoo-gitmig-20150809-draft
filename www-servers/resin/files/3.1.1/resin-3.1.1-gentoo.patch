@@ -1,6 +1,6 @@
 diff -Nru resin-3.1.1.vanilla/Makefile.in resin-3.1.1/Makefile.in
---- resin-3.1.1.vanilla/Makefile.in	2007-05-15 18:11:40.000000000 +0200
-+++ resin-3.1.1/Makefile.in	2007-05-15 18:17:07.000000000 +0200
+--- resin-3.1.1.vanilla/Makefile.in	2007-05-16 12:48:20.000000000 +0200
++++ resin-3.1.1/Makefile.in	2007-05-16 12:48:38.000000000 +0200
 @@ -8,20 +8,20 @@
  
  install	:
@@ -38,8 +38,8 @@ diff -Nru resin-3.1.1.vanilla/Makefile.in resin-3.1.1/Makefile.in
  	  fi; \
  	fi
 diff -Nru resin-3.1.1.vanilla/build.xml resin-3.1.1/build.xml
---- resin-3.1.1.vanilla/build.xml	2007-05-15 18:11:40.000000000 +0200
-+++ resin-3.1.1/build.xml	2007-05-15 18:18:04.000000000 +0200
+--- resin-3.1.1.vanilla/build.xml	2007-05-16 12:48:20.000000000 +0200
++++ resin-3.1.1/build.xml	2007-05-16 12:48:58.000000000 +0200
 @@ -7,7 +7,6 @@
  
    <property name="modules" location="${basedir}/modules"/>
@@ -69,7 +69,7 @@ diff -Nru resin-3.1.1.vanilla/build.xml resin-3.1.1/build.xml
  
    <target name="compile" 
 -          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf, ext">
-+          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf">
++          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf">
    </target>
  
    <target name="ant" depends="init">
@@ -96,13 +96,36 @@ diff -Nru resin-3.1.1.vanilla/build.xml resin-3.1.1/build.xml
      </antcall>
    </target>
  
-@@ -111,7 +105,6 @@
+@@ -107,11 +101,10 @@
+     </antcall>
+   </target>
+ 
+-  <target name="jaxrpc" depends="init,saaj,jsdk">
++  <target name="jaxrpc" depends="init,saaj">
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="jaxrpc"/>
        <param name="module.jar" value="jaxrpc-15.jar"/>
 -      <param name="javac.source" value="1.5"/>
      </antcall>
    </target>
+ 
+@@ -157,7 +150,7 @@
+     </antcall>
+   </target>
+ 
+-  <target name="jstl" depends="init, jsdk">
++  <target name="jstl" depends="init">
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="jstl"/>
+       <param name="module.jar" value="jstl-11.jar"/>
+@@ -203,7 +196,7 @@
+     </antcall>
+   </target>
+ 
+-  <target name="resin-dev" depends="init, ejb, jca, jcr, jms, jsdk, jstl, jta, j2ee-deploy, j2ee-management, saaj, jaxrpc, portlet, script, resin-util">
++  <target name="resin-dev" depends="init, ejb, jca, jcr, jms, jstl, jta, j2ee-deploy, j2ee-management, saaj, jaxrpc, portlet, script, resin-util">
+ 
+     <!-- filter to insert version -->
  
 @@ -233,7 +226,6 @@
  
@@ -179,3 +202,11 @@ diff -Nru resin-3.1.1.vanilla/build.xml resin-3.1.1/build.xml
          </classpath>
        </java>
  
+@@ -658,7 +636,6 @@
+         <include name="lib/j2ee-management-10.jar"/>
+         <include name="lib/jca-15.jar"/>
+         <include name="lib/jms-11.jar"/>
+-        <include name="lib/jsdk-15.jar"/>
+         <include name="lib/jsf-12.jar"/>
+         <include name="lib/jstl-11.jar"/>
+         <include name="lib/jta-101.jar"/>

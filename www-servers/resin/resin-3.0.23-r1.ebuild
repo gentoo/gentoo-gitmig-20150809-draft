@@ -1,28 +1,32 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.1.ebuild,v 1.1 2007/05/15 16:36:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.23-r1.ebuild,v 1.1 2007/05/16 10:52:02 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
-DESCRIPTION="A fast Servlet 2.5 and JSP 2.0 engine."
+DESCRIPTION="A fast Servlet 2.4 and JSP 2.0 engine."
 HOMEPAGE="http://www.caucho.com"
 SRC_URI="http://www.caucho.com/download/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="admin"
+IUSE=""
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="=virtual/jdk-1.5*
-	>=dev-java/iso-relax-20050331
+COMMON_DEP="~dev-java/resin-servlet-api-${PV}
 	dev-java/aopalliance
 	>=dev-java/sun-javamail-1.4
-	>=dev-java/sun-jaf-1.1"
+	>=dev-java/sun-jaf-1.1
+	>=dev-java/iso-relax-20050331"
+
+RDEPEND="=virtual/jdk-1.5*
+	${COMMON_DEP}"
 DEPEND="${RDEPEND}
 	dev-java/ant-core
-	dev-libs/openssl"
+	dev-libs/openssl
+	${COMMON_DEP}"
 
 RESIN_HOME="/usr/lib/resin"
 
@@ -40,7 +44,6 @@ src_unpack() {
 
 pkg_setup() {
 
-	java-pkg-2_pkg_setup
 	enewgroup resin
 	enewuser resin -1 /bin/bash ${RESIN_HOME} resin
 
@@ -63,6 +66,7 @@ src_compile() {
 	java-pkg_jar-from sun-javamail
 	java-pkg_jar-from iso-relax
 	java-pkg_jar-from aopalliance-1
+	java-pkg_jar-from resin-servlet-api-2.4
 	ln -s $(java-config --jdk-home)/lib/tools.jar
 	cd ${S}
 
@@ -91,7 +95,7 @@ src_install() {
 	dosym /var/log/resin ${RESIN_HOME}/logs
 	dosym /var/log/resin ${RESIN_HOME}/log
 
-	dodoc README ${S}/conf/*.conf
+	dodoc README
 
 	newinitd ${FILESDIR}/${PV}/resin.init resin
 	newconfd ${FILESDIR}/${PV}/resin.conf resin
@@ -108,17 +112,13 @@ src_install() {
 
 	dosym /etc/resin/resin.conf /etc/resin/resin.xml
 
-	use admin && {
-		cp -a ${S}/php ${D}/${RESIN_HOME}/ || die "cp failed"
-	}
-
 	use source && {
 		einfo "Zipping source..."
 		java-pkg_dosrc ${S}/modules/*/src/* 2> /dev/null
 	}
 
 	einfo "Removing unneeded files..."
-	rm -fr ${D}/${RESIN_HOME}/bin
+	rm -f ${D}/${RESIN_HOME}/bin/*.in
 	rm -f ${D}/etc/resin/*.orig
 
 	einfo "Fixing permissions..."
@@ -128,6 +128,7 @@ src_install() {
 	chown -R resin:resin ${D}/var/lib/resin
 	chown -R resin:resin ${D}/var/run/resin
 
+	chmod 755 ${D}${RESIN_HOME}/bin/*
 	chmod 644 ${D}/etc/conf.d/resin
 	chmod 755 ${D}/etc/init.d/resin
 	chmod 750 ${D}/var/lib/resin
@@ -144,10 +145,16 @@ pkg_postinst() {
 	elog " By default, Resin runs on port 8080.  You can change this"
 	elog " value by editing /etc/conf/resin.conf."
 	elog
-	elog " webapps directory was moved to /var/lib/resin/webapps"
+	elog " To test Resin while it's running, point your web browser to:"
+	elog " http://localhost:8080/"
 	elog
-	elog " Most options has been moved from /etc/conf.d/resin to"
-	elog " /etc/resin/resin.conf."
+	elog " Resin cannot run on port 80 as non-root (as of this time)."
+	elog " The best way to get Resin to respond on port 80 is via port"
+	elog " forwarding -- by installing a firewall on the machine running"
+	elog " Resin or the network gateway.  Simply redirect port 80 to"
+	elog " port 8080."
+	elog
+	elog " webapps directory was moved to /var/lib/resin/webapps "
 	elog
 
 }

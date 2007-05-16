@@ -1,6 +1,6 @@
 diff -Nru resin-3.0.23.vanilla/Makefile.in resin-3.0.23/Makefile.in
---- resin-3.0.23.vanilla/Makefile.in	2006-11-19 12:59:49.000000000 +0100
-+++ resin-3.0.23/Makefile.in	2006-11-19 13:00:27.000000000 +0100
+--- resin-3.0.23.vanilla/Makefile.in	2007-05-16 12:41:21.000000000 +0200
++++ resin-3.0.23/Makefile.in	2007-05-16 12:41:38.000000000 +0200
 @@ -1,6 +1,6 @@
  PREFIX=@prefix@
  
@@ -46,8 +46,8 @@ diff -Nru resin-3.0.23.vanilla/Makefile.in resin-3.0.23/Makefile.in
  	  fi; \
  	fi
 diff -Nru resin-3.0.23.vanilla/bin/wrapper.pl resin-3.0.23/bin/wrapper.pl
---- resin-3.0.23.vanilla/bin/wrapper.pl	2006-11-19 12:59:41.000000000 +0100
-+++ resin-3.0.23/bin/wrapper.pl	2006-11-19 13:00:27.000000000 +0100
+--- resin-3.0.23.vanilla/bin/wrapper.pl	2007-05-16 12:41:15.000000000 +0200
++++ resin-3.0.23/bin/wrapper.pl	2007-05-16 12:41:38.000000000 +0200
 @@ -447,9 +447,6 @@
  	$pid=`cat $pid_file`;
  	chop($pid);
@@ -77,8 +77,8 @@ diff -Nru resin-3.0.23.vanilla/bin/wrapper.pl resin-3.0.23/bin/wrapper.pl
        # when the wrapper dies, the httpd class will detect that and
        # close gracefully
 diff -Nru resin-3.0.23.vanilla/bin/wrapper.pl.in resin-3.0.23/bin/wrapper.pl.in
---- resin-3.0.23.vanilla/bin/wrapper.pl.in	2006-11-19 12:59:41.000000000 +0100
-+++ resin-3.0.23/bin/wrapper.pl.in	2006-11-19 13:00:27.000000000 +0100
+--- resin-3.0.23.vanilla/bin/wrapper.pl.in	2007-05-16 12:41:15.000000000 +0200
++++ resin-3.0.23/bin/wrapper.pl.in	2007-05-16 12:41:38.000000000 +0200
 @@ -447,9 +447,6 @@
  	$pid=`cat $pid_file`;
  	chop($pid);
@@ -108,8 +108,8 @@ diff -Nru resin-3.0.23.vanilla/bin/wrapper.pl.in resin-3.0.23/bin/wrapper.pl.in
        # when the wrapper dies, the httpd class will detect that and
        # close gracefully
 diff -Nru resin-3.0.23.vanilla/build.xml resin-3.0.23/build.xml
---- resin-3.0.23.vanilla/build.xml	2006-11-19 12:59:49.000000000 +0100
-+++ resin-3.0.23/build.xml	2006-11-19 13:00:27.000000000 +0100
+--- resin-3.0.23.vanilla/build.xml	2007-05-16 12:41:21.000000000 +0200
++++ resin-3.0.23/build.xml	2007-05-16 12:42:18.000000000 +0200
 @@ -7,7 +7,6 @@
  
    <property name="modules" location="${basedir}/modules"/>
@@ -139,7 +139,7 @@ diff -Nru resin-3.0.23.vanilla/build.xml resin-3.0.23/build.xml
  
    <target name="compile" 
 -          depends="init, ejb, ejb30, j2ee-deploy, j2ee-management, jaxrpc, jca, jms, jmx, jsdk, jstl, jta, portlet, script, resin-jdk15, resin, quercus, webutil, deploy, conf, ext">
-+          depends="init, ejb, ejb30, j2ee-deploy, j2ee-management, jaxrpc, jca, jms, jmx, jsdk, jstl, jta, portlet, script, resin-jdk15, resin, quercus, webutil, deploy, conf">
++          depends="init, ejb, ejb30, j2ee-deploy, j2ee-management, jaxrpc, jca, jms, jmx, jstl, jta, portlet, script, resin-jdk15, resin, quercus, webutil, deploy, conf">
    </target>
  
    <target name="ejb" depends="init, jta">
@@ -151,7 +151,12 @@ diff -Nru resin-3.0.23.vanilla/build.xml resin-3.0.23/build.xml
      </antcall>
    </target>
  
-@@ -102,7 +98,6 @@
+@@ -98,11 +94,10 @@
+     </antcall>
+   </target>
+ 
+-  <target name="jaxrpc" depends="init,saaj,jsdk">
++  <target name="jaxrpc" depends="init,saaj">
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="jaxrpc"/>
        <param name="module.jar" value="jaxrpc.jar"/>
@@ -166,6 +171,24 @@ diff -Nru resin-3.0.23.vanilla/build.xml resin-3.0.23/build.xml
 -      <param name="javac.source" value="1.5"/>
      </antcall>
    </target>
+ 
+@@ -148,7 +142,7 @@
+     </antcall>
+   </target>
+ 
+-  <target name="jstl" depends="init, jsdk">
++  <target name="jstl" depends="init">
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="jstl"/>
+       <param name="module.jar" value="jstl-11.jar"/>
+@@ -187,7 +181,7 @@
+     </antcall>
+   </target>
+ 
+-  <target name="resin-dev" depends="init, ejb, ejb30, jca, jcr, jms, jmx, jsdk, jstl, jta, j2ee-deploy, j2ee-management, saaj, jaxrpc, portlet, script, resin-jdk15">
++  <target name="resin-dev" depends="init, ejb, ejb30, jca, jcr, jms, jmx, jstl, jta, j2ee-deploy, j2ee-management, saaj, jaxrpc, portlet, script, resin-jdk15">
+ 
+     <!-- filter to insert version -->
  
 @@ -217,7 +211,6 @@
  
@@ -234,9 +257,17 @@ diff -Nru resin-3.0.23.vanilla/build.xml resin-3.0.23/build.xml
        </classpath>
      </java>
  
+@@ -688,7 +668,6 @@
+         <include name="lib/jca-15.jar"/>
+         <include name="lib/jms-11.jar"/>
+         <include name="lib/jmx-12.jar"/>
+-        <include name="lib/jsdk-24.jar"/>
+         <include name="lib/jstl-11.jar"/>
+         <include name="lib/jta-101.jar"/>
+         <include name="lib/portlet-10.jar"/>
 diff -Nru resin-3.0.23.vanilla/modules/resin/src/com/caucho/server/resin/Resin.java resin-3.0.23/modules/resin/src/com/caucho/server/resin/Resin.java
---- resin-3.0.23.vanilla/modules/resin/src/com/caucho/server/resin/Resin.java	2006-11-19 12:59:48.000000000 +0100
-+++ resin-3.0.23/modules/resin/src/com/caucho/server/resin/Resin.java	2006-11-19 13:00:27.000000000 +0100
+--- resin-3.0.23.vanilla/modules/resin/src/com/caucho/server/resin/Resin.java	2007-05-16 12:41:19.000000000 +0200
++++ resin-3.0.23/modules/resin/src/com/caucho/server/resin/Resin.java	2007-05-16 12:41:38.000000000 +0200
 @@ -700,10 +700,10 @@
        throw new ConfigException(L().l("The following system property must be set:\n  -Djava.util.logging.manager=com.caucho.log.LogManagerImpl\nThe JDK 1.4 Logging manager must be set to Resin's log manager."));
      }
