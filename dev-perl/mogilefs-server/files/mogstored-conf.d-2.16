@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/files/mogstored-conf.d-2.16,v 1.1 2007/05/16 11:11:17 robbat2 Exp $
+#Pidfile not yet supported by upstream
+#PIDFILE="/var/run/mogile/mogstored.pid"
+MOGSTORED_OPTS="--daemonize"
+# vim: ft=gentoo-conf-d:
