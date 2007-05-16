@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.29 2006/11/22 21:03:18 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.30 2007/05/16 17:37:42 armin76 Exp $
+
+  16 May 2007; Raúl Porcel <armin76@gentoo.org> libdvbpsi-0.1.5.ebuild:
+  alpha stable wrt #153929
 
   22 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> libdvbpsi-0.1.5.ebuild:
   Add ~x86-fbsd keyword.
