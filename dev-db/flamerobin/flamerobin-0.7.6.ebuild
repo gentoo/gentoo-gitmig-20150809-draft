@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.6.ebuild,v 1.2 2007/01/08 18:13:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.6.ebuild,v 1.3 2007/05/16 16:15:40 dirtyepic Exp $
 
 inherit eutils wxwidgets
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="doc"
 
-RDEPEND=">=x11-libs/wxGTK-2.6.0
+RDEPEND="=x11-libs/wxGTK-2.6*
 	 dev-db/firebird"
 
 DEPEND="${RDEPEND}"
@@ -21,12 +21,16 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${P}-src"
 
 pkg_setup() {
-	export	WX_GTK_VER="2.6"
+	export WX_GTK_VER="2.6"
 	need-wxwidgets gtk2
 }
 src_compile() {
 	local myconf
-	myconf="${myconf} --disable-shared --disable-debug --with-wx=yes"
+	myconf="${myconf} \
+		--disable-shared \
+		--disable-debug \
+		--with-wx=yes \
+		--with-wx-config=${WX_CONFIG}"
 	econf ${myconf} || die "Could not configure FlameRobin"
 	emake || die "error during make"
 }

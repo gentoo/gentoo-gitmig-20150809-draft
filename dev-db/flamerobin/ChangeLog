@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.7 2007/01/08 18:13:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.8 2007/05/16 16:15:40 dirtyepic Exp $
+
+  16 May 2007; Ryan Hill <dirtyepic@gentoo.org> flamerobin-0.7.5-r1.ebuild,
+  flamerobin-0.7.6.ebuild:
+  Pass wx-config location to econf for bug #178713.
 
   08 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   flamerobin-0.7.6.ebuild:
