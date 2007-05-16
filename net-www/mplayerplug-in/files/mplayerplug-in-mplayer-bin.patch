@@ -1,0 +1,11 @@
+--- Source/plugin-threads.cpp.bak	2007-04-27 09:45:14.000000000 -0400
++++ Source/plugin-threads.cpp	2007-04-27 09:46:10.000000000 -0400
+@@ -364,7 +364,7 @@
+     }
+ 
+     i = 0;
+-    snprintf(buffer, 1024, "mplayer");
++    snprintf(buffer, 1024, "mplayer-bin");
+     instance->td->argv[i++] = strdup(buffer);
+     if (instance->novop == 1) {
+ 	snprintf(buffer, 1024, "-vop");
