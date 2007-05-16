@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-demo
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.41 2006/10/03 20:23:45 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.42 2007/05/16 23:52:24 wolf31o2 Exp $
+
+  16 May 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3334.ebuild:
+  Move the virtual/libstdc++ inside the x86 check as we don't need it on
+  amd64. Thanks to Cardoe for finding this.
 
   03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3334.ebuild:
