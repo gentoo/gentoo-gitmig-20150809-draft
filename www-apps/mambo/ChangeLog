@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.29 2007/01/02 22:36:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.30 2007/05/16 15:22:30 wrobel Exp $
+
+*mambo-4.6.2 (16 May 2007)
+
+  16 May 2007; wrobel@gentoo.org +mambo-4.6.2.ebuild:
+  Added mambo-4.6.2 to the tree.
 
   02 Jan 2007; Renat Lumpau <rl03@gentoo.org> -mambo-4.5.4-r2.ebuild,
   mambo-4.6.1.ebuild:
