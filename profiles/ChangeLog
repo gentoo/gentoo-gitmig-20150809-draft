@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.381 2007/05/16 22:05:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.382 2007/05/16 23:12:44 caster Exp $
+
+  16 May 2007; Vlastimil Babka <caster@gentoo.org> use.local.desc:
+  Add local java5 useflag to dev-java/backport-util-concurrent and hyphenation
+  use flag to dev-java/fop.
 
   16 May 2007; Joseph Jezak <josejx@gentoo.org> base/use.mask,
   default-linux/amd64/use.mask, use.local.desc:

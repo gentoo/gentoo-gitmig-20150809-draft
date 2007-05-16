@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2812 2007/05/16 22:05:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2813 2007/05/16 23:12:44 caster Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -357,6 +357,7 @@ dev-java/antlr:script - Install a script to run antlr
 dev-java/aspectwerkz:java5 - Enable Java 5 specific features
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
+dev-java/backport-util-concurrent:java5 - Enable also the 1.6 > 1.5 backport.
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
@@ -365,6 +366,7 @@ dev-java/commons-logging:log4j - Add optional support for log4j
 dev-java/commons-logging:servletapi - Add optional support for servletapi
 dev-java/commons-modeler:commons-digester - Add support for the commons-digester based Mbeans Descriptor source
 dev-java/diablo-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
+dev-java/fop:hyphenation - Precompile hyphenation patterns from the dev-java/offo-hyphenation package and install them as fop-hyph.jar
 dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
 dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
