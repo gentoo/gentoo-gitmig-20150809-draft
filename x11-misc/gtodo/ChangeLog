@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.16 2007/02/12 17:21:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.17 2007/05/16 02:12:23 beandog Exp $
+
+  16 May 2007; Steve Dibb <beandog@gentoo.org> gtodo-0.16.0_rc2.ebuild:
+  amd64 stable, bug 178687
 
   12 Feb 2007; Samuli Suominen <drac@gentoo.org> gtodo-0.16.0_rc2.ebuild:
   Add missing XML-Parser dep for bug 150681.
