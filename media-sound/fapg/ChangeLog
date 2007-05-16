@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fapg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.17 2007/05/16 16:46:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.18 2007/05/16 17:18:24 gustavoz Exp $
+
+  16 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> fapg-0.38.ebuild:
+  Stable on sparc wrt #178786
 
   16 May 2007; Steve Dibb <beandog@gentoo.org> fapg-0.38.ebuild:
   amd64 stable
