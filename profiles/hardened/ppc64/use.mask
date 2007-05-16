@@ -132,3 +132,6 @@ alsa_cards_interwave-stb
 -alsa_cards_aoa-tas
 -alsa_cards_aoa-toonie
 -alsa_cards_powermac
+
+# mask qt4 (does not work) - bug #178779
+qt4

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.379 2007/05/16 12:34:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.380 2007/05/16 15:31:11 corsair Exp $
+
+  16 May 2007; Markus Rothe <corsair@gentoo.org> hardened/ppc64/use.mask:
+  Add qt4 to use.mask in hardened ppc64 profile; bug #178779
 
   16 May 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add old-daemons and test-programs local use flags for net-wireless/bluez-utils.
