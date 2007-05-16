@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.15.ebuild,v 1.4 2007/03/12 13:22:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.20.ebuild,v 1.1 2007/05/16 18:23:26 drac Exp $
 
-inherit eutils
+inherit eutils gnome2-utils
 
 DESCRIPTION="a derivative of the standard Tango theme, using a more orange approach"
 HOMEPAGE="http://packages.ubuntu.com/feisty/x11/tangerine-icon-theme"
@@ -47,4 +47,12 @@ src_install() {
 
 	emake DESTDIR=${D} install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
