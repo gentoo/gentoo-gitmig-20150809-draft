@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/cdogs-sdl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cdogs-sdl/ChangeLog,v 1.1 2007/05/16 06:42:21 tupone Exp $
+
+*cdogs-sdl-0.3 (16 May 2007)
+
+  16 May 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +cdogs-sdl-0.3.ebuild:
+  New package. Request bug #150036 by Lucas Martin-King
+
