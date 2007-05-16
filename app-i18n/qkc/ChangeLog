@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/qkc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/ChangeLog,v 1.10 2007/02/03 18:16:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/ChangeLog,v 1.11 2007/05/16 15:19:13 matsuu Exp $
+
+  16 May 2007; MATSUU Takuto <matsuu@gentoo.org> qkc-1.00.ebuild:
+  Fixed doman locale.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/qkc-1.00.ebuild,v 1.12 2005/05/15 18:31:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/qkc-1.00.ebuild,v 1.13 2007/05/16 15:19:13 matsuu Exp $
 
 inherit toolchain-funcs
 
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	dobin qkc || die
 	dodoc qkc.doc
-	doman qkc.1
+	doman -i18n=ja qkc.1
 }
