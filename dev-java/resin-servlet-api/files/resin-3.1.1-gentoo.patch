@@ -1,0 +1,181 @@
+diff -Nru resin-3.1.1.vanilla/Makefile.in resin-3.1.1/Makefile.in
+--- resin-3.1.1.vanilla/Makefile.in	2007-05-15 18:11:40.000000000 +0200
++++ resin-3.1.1/Makefile.in	2007-05-15 18:17:07.000000000 +0200
+@@ -8,20 +8,20 @@
+ 
+ install	:
+ 	(cd modules/c/src; $(MAKE) install)
+-	if test $(PREFIX) != `pwd`; then \
+-	  mkdir -p $(PREFIX)/lib; \
+-	  mkdir -p $(PREFIX)/libexec; \
+-	  cp -r libexec/* $(PREFIX)/libexec; \
+-	  cp lib/*.jar $(PREFIX)/lib; \
+-	  mkdir -p $(PREFIX)/bin; \
+-	  cp bin/* $(PREFIX)/bin; \
+-	  mkdir -p $(PREFIX)/webapps; \
+-	  cp -r webapps/* $(PREFIX)/webapps; \
+-	  mkdir -p $(PREFIX)/conf; \
+-	  cp conf/resin.conf $(PREFIX)/conf/resin.conf.orig; \
+-	  cp conf/app-default.xml $(PREFIX)/conf/app-default.xml.orig; \
+-	  if test ! -r $(PREFIX)/conf/resin.conf; then \
+-	    cp conf/resin.conf $(PREFIX)/conf/resin.conf; \
+-	    cp conf/app-default.xml $(PREFIX)/conf/app-default.xml; \
++	if test $(DESTDIR)$(PREFIX) != `pwd`; then \
++	  mkdir -p $(DESTDIR)$(PREFIX)/lib; \
++	  mkdir -p $(DESTDIR)$(PREFIX)/libexec; \
++	  cp -r libexec/* $(DESTDIR)$(PREFIX)/libexec; \
++	  cp lib/*.jar $(DESTDIR)$(PREFIX)/lib; \
++	  mkdir -p $(DESTDIR)$(PREFIX)/bin; \
++	  cp bin/* $(DESTDIR)$(PREFIX)/bin; \
++	  mkdir -p $(DESTDIR)$(PREFIX)/webapps; \
++	  cp -r webapps/* $(DESTDIR)$(PREFIX)/webapps; \
++	  mkdir -p $(DESTDIR)$(PREFIX)/conf; \
++	  cp conf/resin.conf $(DESTDIR)$(PREFIX)/conf/resin.conf.orig; \
++	  cp conf/app-default.xml $(DESTDIR)$(PREFIX)/conf/app-default.xml.orig; \
++	  if test ! -r $(DESTDIR)$(PREFIX)/conf/resin.conf; then \
++	    cp conf/resin.conf $(DESTDIR)$(PREFIX)/conf/resin.conf; \
++	    cp conf/app-default.xml $(DESTDIR)$(PREFIX)/conf/app-default.xml; \
+ 	  fi; \
+ 	fi
+diff -Nru resin-3.1.1.vanilla/build.xml resin-3.1.1/build.xml
+--- resin-3.1.1.vanilla/build.xml	2007-05-15 18:11:40.000000000 +0200
++++ resin-3.1.1/build.xml	2007-05-15 18:18:04.000000000 +0200
+@@ -7,7 +7,6 @@
+ 
+   <property name="modules" location="${basedir}/modules"/>
+   <property name="src" location="${basedir}/src"/>
+-  <property name="ext" location="${basedir}/modules/ext"/>
+   <property name="doc" location="${basedir}/doc"/>
+ 
+   <property name="build" location="${install}/build"/>
+@@ -17,14 +16,12 @@
+ 
+ 
+   <property name="javac.verbose" value="off"/>
+-  <property name="javac.debug" value="on"/>
++  <property name="javac.debug" value="off"/>
+   <property name="javac.optimize" value="off"/>
+   <property name="javac.deprecation" value="off"/>
+   <property name="javac.nowarn" value="on"/>
+   <property name="javac.memoryMaximumSize" value="256m"/>
+ 
+-  <property name="javac.source" value="1.5"/>
+-
+   <property name="jar.compress" value="false"/>
+   <!--
+   <property name="jar.index" value="true"/>
+@@ -66,14 +63,13 @@
+   </target>
+ 
+   <target name="compile" 
+-          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf, ext">
++          depends="init, jaxrpc, ejb, jpa, j2ee-deploy, j2ee-management, jca, jms, jsdk, jstl, jsf, jta, portlet, script, resin-util, quercus, resin, ecmascript, webutil, deploy, conf">
+   </target>
+ 
+   <target name="ant" depends="init">
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="ant"/>
+       <param name="module.jar" value="resin-ant.jar"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+@@ -81,7 +77,6 @@
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="ejb"/>
+       <param name="module.jar" value="ejb-15.jar"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+@@ -89,7 +84,6 @@
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="jpa"/>
+       <param name="module.jar" value="jpa-15.jar"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+@@ -111,7 +105,6 @@
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="jaxrpc"/>
+       <param name="module.jar" value="jaxrpc-15.jar"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+@@ -233,7 +226,6 @@
+ 
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="resin"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+   
+@@ -258,14 +250,12 @@
+   <target name="webutil" depends="init, resin">
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="webutil"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+   <target name="quercus-dev" depends="init">
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="quercus"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+@@ -274,7 +264,6 @@
+   <target name="ecmascript" depends="init">
+     <antcall target="module" inheritRefs="true">
+       <param name="module.name" value="ecmascript"/>
+-      <param name="javac.source" value="1.5"/>
+     </antcall>
+   </target>
+ 
+@@ -306,16 +295,15 @@
+            verbose="${javac.verbose}" 
+            debug="${javac.debug}" optimize="${javac.optimize}"
+            deprecation="${javac.deprecation}" nowarn="${javac.nowarn}"
+-           source="${javac.source}"
+            excludes="**/.svn/**"
+            memoryMaximumSize="${javac.memoryMaximumSize}">
+       <classpath>
+         <dirset dir="${modules}">
+           <include name="*/classes"/>
+        </dirset>
+-        <fileset dir="${ext}">
+-          <include name="**/*.jar"/>
+-        </fileset>
++       <fileset dir="lib/">
++           <include name="*.jar"/>
++       </fileset>
+       </classpath>
+     </javac>
+ 
+@@ -385,13 +373,6 @@
+     </copy>
+   </target>
+ 
+-  <target name="ext" depends="init, resin">
+-    <copy todir="${install}/lib" preservelastmodified="true">
+-      <fileset dir="${ext}">
+-      </fileset>
+-    </copy>
+-  </target>
+-
+   <target name="webapps" depends="init, doc, quercus">
+   </target>
+ 
+@@ -527,9 +508,6 @@
+           <dirset dir="${modules}">
+             <include name="*/classes"/>
+           </dirset>
+-          <fileset dir="${modules}/ext">
+-            <include name="**/*.jar"/>
+-          </fileset>
+         </classpath>
+       </java>
+ 
