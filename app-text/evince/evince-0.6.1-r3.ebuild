@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.9 2007/05/15 17:48:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r3.ebuild,v 1.10 2007/05/16 06:56:50 uberlord Exp $
 
 inherit eutils gnome2 autotools
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 IUSE="dbus djvu doc dvi gnome t1lib tiff"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 # dang: libxml2 is not in configure, but it's required by libegg; bug #172732
 RDEPEND="

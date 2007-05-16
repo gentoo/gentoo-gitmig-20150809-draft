@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.104 2007/05/15 17:48:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.105 2007/05/16 06:56:50 uberlord Exp $
+
+  16 May 2007; Roy Marples <uberlord@gentoo.org> evince-0.6.1-r3.ebuild,
+  evince-0.8.1.ebuild:
+  Keyworded ~x86-fbsd, ##178471 thanks to Joe Peterson.
 
   15 May 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/evince-0.6.1-freebsd.patch, +files/evince-0.8.1-freebsd.patch,
