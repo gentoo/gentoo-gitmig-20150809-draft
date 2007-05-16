@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.3-r1.ebuild,v 1.11 2007/04/18 17:23:12 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.3-r1.ebuild,v 1.12 2007/05/16 15:41:52 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
