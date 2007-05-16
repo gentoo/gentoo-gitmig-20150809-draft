@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.10.1.ebuild,v 1.2 2007/05/16 16:45:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.10.1-r1.ebuild,v 1.1 2007/05/16 16:45:15 betelgeuse Exp $
 
 inherit eutils
 
