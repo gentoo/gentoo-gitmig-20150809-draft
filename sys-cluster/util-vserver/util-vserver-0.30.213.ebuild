@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213.ebuild,v 1.2 2007/05/16 09:50:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.213.ebuild,v 1.3 2007/05/16 13:54:31 phreak Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -80,7 +80,10 @@ src_install() {
 pkg_postinst() {
 	# Create VDIRBASE in postinst, so it is (a) not unmerged and (b) also
 	# present when merging.
-	mkdir "${VDIRBASE}"
+
+	[ ! -d "${VDIRBASE}" ] && mkdir -p "${VDIRBASE}" &> /dev/null
+	setattr --barrier "${VDIRBASE}" &> /dev/null
+
 	rm /etc/vservers/.defaults/vdirbase
 	ln -sf "${VDIRBASE}" /etc/vservers/.defaults/vdirbase
 
