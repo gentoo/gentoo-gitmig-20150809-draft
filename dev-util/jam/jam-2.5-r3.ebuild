@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.7 2007/03/12 18:59:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.8 2007/05/16 20:44:11 dirtyepic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Just Another Make - advanced make replacement"
 HOMEPAGE="http://www.perforce.com/jam/jam.html"
@@ -24,6 +24,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Temporary work-around for bug #173703
+	append-flags -fno-strict-aliasing
+
 	# The bootstrap makefile assumes ${S} is in the path
 	env PATH="${PATH}:${S}" \
 	emake -j1 \
