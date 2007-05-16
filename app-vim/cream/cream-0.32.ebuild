@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.32.ebuild,v 1.10 2007/01/23 16:31:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.32.ebuild,v 1.11 2007/05/16 10:58:12 armin76 Exp $
 
 inherit vim-plugin eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=app-editors/gvim-6.2
 	dev-util/ctags"
 
 VIM_PLUGIN_HELPTEXT=\
-"Cream is completly independent from the rest of your Vim/GVim setup.
+"Cream is completely independent from the rest of your Vim/GVim setup.
 To launch GVim in Cream mode, use this wrapper script:
 \    % cream [filename...]
 
