@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-6.0.3-r1.ebuild,v 1.3 2007/05/16 05:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-6.0.3-r1.ebuild,v 1.4 2007/05/16 07:46:32 opfer Exp $
 
 # eutils must be inherited since get_libdir() is only
 # globally available on baselayout-1.11 (still on ~arch)
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.pdflib.com/"
 SRC_URI="http://www.pdflib.com/products/pdflib/download/${PV//./}src/${MY_P}.tar.gz"
 LICENSE="Aladdin"
 SLOT="5"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE="doc tcl perl python java"
 
 COMMON_DEP="
