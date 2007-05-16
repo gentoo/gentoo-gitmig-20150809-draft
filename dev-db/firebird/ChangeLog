@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.60 2007/05/15 21:08:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.61 2007/05/16 17:04:39 wltjr Exp $
+
+*firebird-1.5.4-r3 (16 May 2007)
+
+  16 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +firebird-1.5.4-r3.ebuild:
+  Fixed issue *.so being installed into /opt/firebird/lib instead of
+  /opt/firebird/lib64 on stable 64bit archs. Where ~arch creates and installs
+  to /opt/firebird/lib64 ?
 
   15 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -files/70firebird-1.5.0, -files/firebird-1.5.1-gcc34.patch,
