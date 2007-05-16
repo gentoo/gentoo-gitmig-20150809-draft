@@ -65,3 +65,6 @@ pike
 
 # mask pcmcia (bug #131306)
 pcmcia
+
+# mask qt4 (does not work) - bug #178779
+qt4

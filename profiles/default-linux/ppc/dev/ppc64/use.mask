@@ -1,2 +1,5 @@
 # Unmask the "ibm" USE flag on ppc64
 -ibm
+
+# mask qt4 (does not work) - bug #178779
+qt4

@@ -71,3 +71,6 @@ ivtv
 mpd
 # app-admin/hddtemp
 hddtemp
+
+# mask qt4 (does not work) - bug #178779
+qt4

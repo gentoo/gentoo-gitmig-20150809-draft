@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.15 2007/04/27 09:15:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.16 2007/05/16 15:39:28 corsair Exp $
+
+  16 May 2007; Markus Rothe <corsair@gentoo.org>
+  2005.1/ppc64/64bit-userland/use.mask, dev/ppc64/use.mask,
+  ppc64/2006.0/64bit-userland/use.mask,
+  ppc64/2006.1/64bit-userland/use.mask,
+  ppc64/2007.0/64bit-userland/use.mask:
+  Add qt4 to use.mask in ppc64 profiles; bug #178779
 
   27 Apr 2007; Markus Rothe <corsair@gentoo.org>
   ppc64/2007.0/32bit-userland/packages:
