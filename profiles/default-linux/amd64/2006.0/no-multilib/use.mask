@@ -11,3 +11,7 @@ real
 # 2006/05/04 Chris Gianelloni <wolf31o2@gentoo.org>
 # games-fps/quake3-teamarena is 32-bit
 teamarena
+
+# 2007/05/16 Joseph Jezak <josejx@gentoo.org>
+# mplayer-bin is 32 bit only
+mplayer-bin
