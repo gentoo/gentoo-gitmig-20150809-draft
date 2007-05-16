@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7271 2007/05/16 04:50:50 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7272 2007/05/16 19:25:13 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -389,6 +389,7 @@ dev-tex/preview-latex
 # Luis Araujo <araujo@gentoo.org> (12 May 2007)
 # Keep Himerge masked because it depends on ghc-6.6
 app-portage/himerge
+
 # Luca Longinotti <chtekk@gentoo.org> (12 May 2007)
 # Apache 1.X and stuff only used by it
 =net-www/apache-1*
