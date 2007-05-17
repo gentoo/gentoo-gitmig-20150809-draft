@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/foremost
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.9 2007/02/21 20:03:13 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.10 2007/05/17 16:57:23 hyakuhei Exp $
+
+*foremost-1.5 (17 May 2007)
+
+  17 May 2007; Robert Clark <hyakuhei@gentoo.org> +foremost-1.5.ebuild:
+  Added foremost-1.5 this no longer requires the location patch
 
   21 Feb 2007; Mike Auty <ikelos@gentoo.org> foremost-1.4.ebuild:
   Added in ~amd64 after reported success.
