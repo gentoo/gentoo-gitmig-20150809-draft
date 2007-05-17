@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.13.1.ebuild,v 1.3 2007/05/15 21:09:34 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.13.1.ebuild,v 1.4 2007/05/17 11:05:18 armin76 Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.logilab.org/projects/pylint/"
 
 IUSE="tk"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86"
 LICENSE="GPL-2"
 DEPEND="|| ( >=dev-python/optik-1.4 >=dev-lang/python-2.3 )
 		>=dev-python/logilab-common-0.21.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.17.0.ebuild,v 1.1 2007/03/02 01:57:49 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.17.0.ebuild,v 1.2 2007/05/17 11:04:39 armin76 Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.logilab.org/projects/astng/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 LICENSE="GPL-2"
 DEPEND=">=dev-lang/python-2.1
 	>=dev-python/logilab-common-0.13-r1"

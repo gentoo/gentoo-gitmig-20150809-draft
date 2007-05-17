@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.16 2007/03/02 01:57:49 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.17 2007/05/17 11:04:39 armin76 Exp $
+
+  17 May 2007; Raúl Porcel <armin76@gentoo.org> astng-0.17.0.ebuild:
+  x86 stable wrt #176201
 
 *astng-0.17.0 (02 Mar 2007)
 

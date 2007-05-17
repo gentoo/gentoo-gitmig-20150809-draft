@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.33 2007/05/14 21:39:28 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.34 2007/05/17 11:02:27 armin76 Exp $
+
+  17 May 2007; Raúl Porcel <armin76@gentoo.org>
+  logilab-common-0.21.2.ebuild:
+  x86 stable wrt #176201
 
   14 May 2007; Marien Zwart <marienz@gentoo.org>
   +files/logilab-common-0.21.2-disable-access-tests-as-root.patch,
