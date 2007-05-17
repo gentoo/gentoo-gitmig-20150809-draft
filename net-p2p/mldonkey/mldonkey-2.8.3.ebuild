@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.3.ebuild,v 1.9 2007/04/22 11:44:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.8.3.ebuild,v 1.10 2007/05/17 15:25:03 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -104,7 +104,7 @@ src_compile() {
 src_install() {
 	if ! use guionly; then
 		dobin mlnet mld_hash get_range copysources make_torrent subconv \
-			${FILESDIR}/mldonkey || die "dobin failed"
+			|| die "dobin failed"
 
 		newconfd "${FILESDIR}/mldonkey.confd-2.8" mldonkey
 		fperms 600 /etc/conf.d/mldonkey
@@ -147,9 +147,6 @@ pkg_preinst() {
 pkg_postinst() {
 	if ! use guionly; then
 		echo
-		einfo "Running \`mldonkey' will start the server inside ~/.mldonkey/"
-		einfo "If you want to start MLDonkey in a particular working directory,"
-		einfo "use the \`mlnet' command."
 		einfo "If you want to start MLDonkey as a system service, use"
 		einfo "the /etc/init.d/mldonkey script. To control bandwidth, use"
 		einfo "the 'slow' and 'fast' arguments. Be sure to have a look at"
