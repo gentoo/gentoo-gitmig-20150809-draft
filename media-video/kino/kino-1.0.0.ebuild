@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.9 2007/05/07 11:18:32 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.0.0.ebuild,v 1.10 2007/05/17 14:23:25 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="alsa dvdr quicktime sox vorbis"
+IUSE="alsa dvdr gpac quicktime sox vorbis"
 
 DEPEND=">=x11-libs/gtk+-2.6.0
 	>=gnome-base/libglade-2.5.0
@@ -30,6 +30,7 @@ RDEPEND="${DEPEND}
 	media-sound/rawrec
 	dvdr? ( media-video/dvdauthor
 		app-cdr/dvd+rw-tools )
+	gpac? ( !sparc? ( media-video/gpac ) )
 	sox? ( media-sound/sox )
 	vorbis? ( media-sound/vorbis-tools )"
 
