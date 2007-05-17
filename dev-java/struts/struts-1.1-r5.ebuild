@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r5.ebuild,v 1.1 2007/04/28 23:50:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r5.ebuild,v 1.2 2007/05/17 20:38:39 betelgeuse Exp $
 
 WANT_ANT_TASKS="ant-trax"
 JAVA_PKG_IUSE="doc source"
@@ -33,7 +33,8 @@ S=${WORKDIR}/jakarta-${P}-src
 src_compile() {
 	local antflags="compile.library"
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.6 commons-beanutils.jar)"
-	antflags="${antflags} -Dcommons-collections.jar=$(java-pkg_getjars commons-collections)"
+	antflags="${antflags} -Dcommons-collections.jar=$(java-pkg_getjar \
+		commons-collections commons-collections.jar)"
 	antflags="${antflags} -Dstruts-legacy.jar=$(java-pkg_getjars struts-legacy)"
 	antflags="${antflags} -Dcommons-digester.jar=$(java-pkg_getjars commons-digester)"
 	antflags="${antflags} -Dcommons-fileupload.jar=$(java-pkg_getjars commons-fileupload)"
@@ -53,7 +54,7 @@ src_install() {
 	insinto /usr/share/${PN}-${SLOT}/lib
 	doins target/library/*.tld
 
-	dodoc README STATUS
+	dodoc README STATUS || die
 	use doc && java-pkg_dojavadoc target/documentation/api
 	use source && java-pkg_dosrc src/*/*
 }
