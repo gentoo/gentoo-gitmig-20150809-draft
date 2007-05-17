@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors-modules/lm_sensors-modules-2.10.2.ebuild,v 1.1 2007/01/28 18:22:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors-modules/lm_sensors-modules-2.10.2.ebuild,v 1.2 2007/05/17 07:49:09 phreak Exp $
 
 inherit eutils toolchain-funcs linux-info
 
-MY_P=${P/-modules/}
-S=${WORKDIR}/${MY_P}
+MY_PN=${PN/-modules/}
+S=${WORKDIR}/${MY_PN}-${PV}
 
 DESCRIPTION="Hardware Monitoring kernel modules for linux-2.4.x"
 HOMEPAGE="http://www.lm-sensors.org/"
-SRC_URI="http://dl.lm-sensors.org/lm-sensors/releases/${MY_P}.tar.gz"
+SRC_URI="http://dl.lm-sensors.org/lm-sensors/releases/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -42,8 +42,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${MY_P}-module-path.patch
-	epatch "${FILESDIR}"/${MY_P}-modules-only.patch
+	epatch "${FILESDIR}"/${MY_PN}-module-path.patch
+	epatch "${FILESDIR}"/${MY_PN}-modules-only.patch
 }
 
 src_compile()  {
