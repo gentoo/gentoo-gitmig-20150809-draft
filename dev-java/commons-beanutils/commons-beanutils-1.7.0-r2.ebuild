@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0-r2.ebuild,v 1.10 2007/02/10 19:04:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0-r2.ebuild,v 1.11 2007/05/17 21:36:46 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Provides easy-to-use wrappers around Reflection and Introspection A
 HOMEPAGE="http://jakarta.apache.org/commons/beanutils/"
 SRC_URI="mirror://apache/jakarta/commons/beanutils/source/${P}-src.tar.gz"
 
-LICENSE="Apache-1.1"
+LICENSE="Apache-2.0"
 SLOT="1.7"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc source"

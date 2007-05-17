@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.37 2007/05/17 20:16:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.38 2007/05/17 21:36:46 betelgeuse Exp $
+
+  17 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-beanutils-1.7.0-r2.ebuild:
+  Fix LICENSE to Apache-2.0.
 
   17 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-beanutils-1.6.1-r3.ebuild:
