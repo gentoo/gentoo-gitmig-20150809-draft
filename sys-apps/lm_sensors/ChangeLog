@@ -1,6 +1,34 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.67 2007/04/11 19:51:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.68 2007/05/17 07:31:41 phreak Exp $
+
+  17 May 2007; Christian Heim <phreak@gentoo.org>
+  -files/lm_sensors-2.9.2-lm_sensors-init.d,
+  -files/lm_sensors-2.9.2-sensord-conf.d,
+  -files/lm_sensors-2.9.2-sensord-init.d,
+  -files/lm_sensors-2.9.2-sensors-detect-gentoo.patch,
+  -files/lm_sensors-2.10.0-fancontrol-init.d,
+  -files/lm_sensors-2.10.0-lm_sensors-init.d,
+  -files/lm_sensors-2.10.0-sensord-conf.d,
+  -files/lm_sensors-2.10.0-sensord-init.d,
+  -files/lm_sensors-2.10.0-sensors-detect-gentoo.patch,
+  -files/lm_sensors-2.10.1-fancontrol-init.d,
+  -files/lm_sensors-2.10.1-lm_sensors-init.d,
+  -files/lm_sensors-2.10.1-sensord-conf.d,
+  -files/lm_sensors-2.10.1-sensord-init.d,
+  -files/lm_sensors-2.10.2-fancontrol-init.d,
+  -files/lm_sensors-2.10.2-lm_sensors-init.d,
+  -files/lm_sensors-2.10.2-sensord-conf.d,
+  -files/lm_sensors-2.10.2-sensord-init.d,
+  -files/lm_sensors-2.10.2-sensors-detect-gentoo.patch,
+  +files/fancontrol-init.d, +files/lm_sensors-init.d, +files/sensord-conf.d,
+  +files/sensord-init.d, -lm_sensors-2.9.2.ebuild,
+  -lm_sensors-2.9.2-r2.ebuild, -lm_sensors-2.10.0.ebuild,
+  -lm_sensors-2.10.0-r2.ebuild, lm_sensors-2.10.1.ebuild,
+  lm_sensors-2.10.2.ebuild, lm_sensors-2.10.3.ebuild:
+  Cleaning up FILESDIR, cleaning up some of the older versions. Fixing the
+  bashisms in the init-script (thanks to Mike Arthur <mike at
+  mikearthur.co.uk> in #178781).
 
 *lm_sensors-2.10.3 (11 Apr 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.3.ebuild,v 1.1 2007/04/11 19:51:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.3.ebuild,v 1.2 2007/05/17 07:31:41 phreak Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -71,7 +71,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.10.2-sensors-detect-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-2.10.1-sensors-detect-gentoo.patch
 
 	if use sensord; then
 		sed -i -e 's:^# \(PROG_EXTRA\):\1:' "${S}"/Makefile
@@ -94,12 +94,12 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man LIBDIR=/usr/$(get_libdir) \
 		KERNELINCLUDEFILES="" user_install || die "emake user_install failed"
 
-	newinitd "${FILESDIR}"/${PN}-2.10.2-lm_sensors-init.d lm_sensors
-	newinitd "${FILESDIR}"/${PN}-2.10.2-fancontrol-init.d fancontrol
+	newinitd "${FILESDIR}"/lm_sensors-init.d lm_sensors
+	newinitd "${FILESDIR}"/fancontrol-init.d fancontrol
 
 	if use sensord; then
-		newconfd "${FILESDIR}"/${PN}-2.10.2-sensord-conf.d sensord
-		newinitd "${FILESDIR}"/${PN}-2.10.2-sensord-init.d sensord
+		newconfd "${FILESDIR}"/sensord-conf.d sensord
+		newinitd "${FILESDIR}"/sensord-init.d sensord
 	fi
 
 	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS INSTALL QUICKSTART \

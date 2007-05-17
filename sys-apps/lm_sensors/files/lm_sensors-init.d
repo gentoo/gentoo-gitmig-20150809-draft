@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-2.10.0-lm_sensors-init.d,v 1.3 2006/07/17 08:46:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-init.d,v 1.1 2007/05/17 07:31:41 phreak Exp $
 
 checkconfig() {
 	if [ ! -f /etc/conf.d/lm_sensors ]; then
@@ -24,7 +24,7 @@ start() {
 		einfo "Loading lm_sensors modules..."
 
 		mount | grep sysfs &> /dev/null
-		if [ ${?} == 0 ]; then
+		if [ ${?} = 0 ]; then
 			if ! ( [ -e /sys/i2c ] || [ -e /sys/bus/i2c ] ); then
 				ebegin "  Loading i2c-core"
 				modprobe i2c-core &> /dev/null
@@ -56,7 +56,7 @@ start() {
 			ebegin "  Loading ${module}"
 			modprobe ${module} ${module_args} &> /dev/null
 			eend $?
-			i=$((i+1))
+			i=$((${i}+1))
 		done
 	fi
 
