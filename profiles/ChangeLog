@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.384 2007/05/17 12:13:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.385 2007/05/17 14:15:30 calchan Exp $
+
+  17 May 2007; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
+  Added local USE flag gpac for media-video/kino.
 
   17 May 2007; Alin Năstac <mrness@gentoo.org> package.mask:
   Remove net-dialup/slirp & net-dialup/pppoed from the tree.
