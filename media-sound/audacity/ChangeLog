@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.62 2007/05/12 10:02:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.63 2007/05/17 04:32:08 josejx Exp $
+
+  17 May 2007; Joseph Jezak <josejx@gentoo.org> audacity-1.3.2-r1.ebuild:
+  Marked ppc stable for bug #167126.
 
   12 May 2007; Steve Dibb <beandog@gentoo.org> audacity-1.3.2-r1.ebuild:
   amd64 stable, bug 167126
