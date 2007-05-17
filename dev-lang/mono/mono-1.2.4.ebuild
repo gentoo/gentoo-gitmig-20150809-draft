@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.1 2007/05/16 22:24:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.2 2007/05/17 17:37:39 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 		  sys-devel/bc
 		>=dev-util/pkgconfig-0.19"
 PDEPEND="dev-dotnet/pe-format"
+
+# Parallel build unfriendly
+MAKEOPTS="${MAKEOPTS} -j1"
 
 # confcache causes build errors
 RESTRICT="confcache"

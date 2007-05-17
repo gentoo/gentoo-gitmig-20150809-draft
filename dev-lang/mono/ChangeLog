@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.111 2007/05/16 22:29:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.112 2007/05/17 17:37:39 compnerd Exp $
+
+  17 May 2007; Saleem Abdulrasool <compnerd@gentoo.org> mono-1.2.4.ebuild:
+  Apparently the build was a fluke, still parallel build unfriendly
 
   16 May 2007; Saleem Abdulrasool <compnerd@gentoo.org> -mono-1.2.3.ebuild:
   prune unused version
