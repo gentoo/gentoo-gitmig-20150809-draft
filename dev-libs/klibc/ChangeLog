@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.41 2007/05/13 11:21:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.42 2007/05/17 11:31:44 phreak Exp $
+
+*klibc-1.5 (17 May 2007)
+
+  17 May 2007; Christian Heim <phreak@gentoo.org> +klibc-1.5.ebuild:
+  Version bump, finally at klibc-1.5.
 
   13 May 2007; Christian Heim <phreak@gentoo.org> klibc-1.4.13.ebuild:
   Really fix the permission problem (#178053) and also fix the sandbox
