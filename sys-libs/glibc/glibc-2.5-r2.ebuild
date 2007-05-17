@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r2.ebuild,v 1.13 2007/05/16 13:41:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r2.ebuild,v 1.14 2007/05/17 18:53:40 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -331,8 +331,9 @@ toolchain-glibc_pkg_preinst() {
 
 	# simple test to make sure our new glibc isnt completely broken.
 	# make sure we don't test with statically built binaries since
-	# they will fail.
+	# they will fail.  also, skip if this glibc is a cross compiler.
 	[[ ${ROOT} != "/" ]] && return 0
+	is_crosscompile && return 0
 	local x striptest
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
