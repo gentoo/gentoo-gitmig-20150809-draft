@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r2.ebuild,v 1.10 2007/03/17 16:53:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r2.ebuild,v 1.11 2007/05/17 21:45:09 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 eutils
 
@@ -11,20 +13,19 @@ SRC_URI="mirror://sourceforge/java-readline/${P}-src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="doc source elibc_FreeBSD"
+IUSE="elibc_FreeBSD"
 
 COMMON_DEP="sys-libs/ncurses"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	source? ( app-arch/zip )
 	${COMMON_DEP}"
 RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/termcap-to-ncurses.patch
+	cd "${S}"
+	epatch "${FILESDIR}/termcap-to-ncurses.patch"
 	# bug #157387, reported upstream
 	epatch "${FILESDIR}/${P}-gmake.patch"
 
