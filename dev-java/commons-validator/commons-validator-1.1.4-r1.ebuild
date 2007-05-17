@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.4-r1.ebuild,v 1.7 2007/05/07 15:44:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.4-r1.ebuild,v 1.8 2007/05/17 20:25:30 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
@@ -44,14 +44,13 @@ src_unpack() {
 src_compile() {
 	local antflags="compile"
 
-	# Because the build.xml file uses <pathelement location=""> 
+	# Because the build.xml file uses <pathelement location="">
 	# we can only have only have one jar per property
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
-	antflags="${antflags} -Dcommons-collections.jar=$(java-pkg_getjars commons-collections)"
 
-	use doc && antflags="${antflags} javadoc"
-
-	eant ${antflags} || die "build failed"
+	local col=$(java-pkg_getjar commons-collections	commons-collections.jar)
+	eant ${antflags} $(use_doc) \
+		-Dcommons-collections.jar="${col}" || die "build failed"
 	jar -cf ${PN}.jar -C target/classes/ . || die "could not create jar"
 }
 
