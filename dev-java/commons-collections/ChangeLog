@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.40 2007/02/14 22:29:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.41 2007/05/17 21:03:54 betelgeuse Exp $
+
+*commons-collections-3.2-r1 (17 May 2007)
+
+  17 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +commons-collections-3.2-r1.ebuild:
+  Add src_test support and test-framework local use flag for installing the
+  test framework needed by commons-beanutils-collections unit tests.
 
   14 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   -commons-collections-3.1.ebuild, -commons-collections-3.1-r1.ebuild:
