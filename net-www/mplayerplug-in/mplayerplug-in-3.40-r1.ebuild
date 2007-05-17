@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.40.ebuild,v 1.2 2007/05/16 22:39:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.40-r1.ebuild,v 1.1 2007/05/17 00:38:16 josejx Exp $
 
 inherit eutils multilib
 
@@ -71,10 +71,10 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/${get_libdir}/nsbrowser/plugins
+	exeinto /usr/$(get_libdir)/nsbrowser/plugins
 	doexe mplayerplug-in.so || die "plugin failed"
 
-	insinto /usr/${get_libdir}/nsbrowser/plugins
+	insinto /usr/$(get_libdir)/nsbrowser/plugins
 	doins mplayerplug-in.xpt || die "xpt failed"
 
 	PLUGINS="gmp rm qt wmp dvx"
@@ -82,10 +82,10 @@ src_install() {
 	for plugin in ${PLUGINS}; do
 		if [ -e "mplayerplug-in-${plugin}.so" ]; then
 			### Install the plugin
-			exeinto /usr/${get_libdir}/nsbrowser/plugins
+			exeinto /usr/$(get_libdir)/nsbrowser/plugins
 			doexe "mplayerplug-in-${plugin}.so" || die "plugin ${plugin} failed"
 			### Install the xpt
-			insinto /usr/${get_libdir}/nsbrowser/plugins
+			insinto /usr/$(get_libdir)/nsbrowser/plugins
 		    doins "mplayerplug-in-${plugin}.xpt" || die "plugin ${plugin} xpt failed"
 		fi
 	done
