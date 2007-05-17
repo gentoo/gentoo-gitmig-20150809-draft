@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.32 2007/04/28 23:50:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.33 2007/05/17 20:09:57 betelgeuse Exp $
+
+  17 May 2007; Petteri Räty <betelgeuse@gentoo.org> -struts-1.1-r4.ebuild:
+  Remove generation 1 ebuild.
 
 *struts-1.1-r5 (28 Apr 2007)
 
@@ -116,12 +119,7 @@
   version bump
 
 *struts-1.2.2-r1 (08 Oct 2004)
-
-  08 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +struts-1.1-r2.ebuild,
-  +struts-1.2.2-r1.ebuild:
-  Install *.tld files
-
-*struts-1.2.2-r1 (08 Oct 2004)
+*struts-1.1-r2 (08 Oct 2004)
 
   08 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +struts-1.1-r2.ebuild,
   +struts-1.2.2-r1.ebuild:
