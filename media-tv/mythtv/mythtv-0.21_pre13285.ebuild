@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre13285.ebuild,v 1.1 2007/04/19 14:08:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre13285.ebuild,v 1.2 2007/05/17 01:50:02 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion
 
@@ -57,7 +57,7 @@ PDEPEND="=x11-themes/mythtv-themes-${MY_PV}*"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-MYTHTV_GROUPS="video,audio,tty"
+MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
 

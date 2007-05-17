@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.153 2007/05/15 17:57:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.154 2007/05/17 01:50:02 cardoe Exp $
+
+  17 May 2007; Doug Goldstein <cardoe@gentoo.org> mythtv-0.20_p11626.ebuild,
+  mythtv-0.20_p12172.ebuild, mythtv-0.20_p12325.ebuild,
+  mythtv-0.20_p12884.ebuild, mythtv-0.20_p12963.ebuild,
+  mythtv-0.20_p13053.ebuild, mythtv-0.20_p13110.ebuild,
+  mythtv-0.20.1_p13344.ebuild, mythtv-0.21_pre12945.ebuild,
+  mythtv-0.21_pre13285.ebuild:
+  udev & static dev seem to switch between tty and uucp group for serial
+  devices. add MythTV to both
 
   15 May 2007; Doug Goldstein <cardoe@gentoo.org>
   files/mythbackend-0.18.2.rc:
