@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/transaction-simple
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.8 2007/02/22 01:23:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.9 2007/05/17 19:08:11 rbrown Exp $
+
+*transaction-simple-1.4.0 (17 May 2007)
+
+  17 May 2007; Richard Brown <rbrown@gentoo.org>
+  +transaction-simple-1.4.0.ebuild:
+  Version bump
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
