@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.68 2007/05/17 07:31:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.69 2007/05/17 07:34:09 phreak Exp $
+
+  17 May 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning sys-apps/lm_sensors directly to mobile at gentoo.org.
 
   17 May 2007; Christian Heim <phreak@gentoo.org>
   -files/lm_sensors-2.9.2-lm_sensors-init.d,
