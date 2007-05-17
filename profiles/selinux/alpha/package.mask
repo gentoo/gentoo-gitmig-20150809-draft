@@ -91,13 +91,5 @@ dev-tex/ppower4
 net-p2p/xnap
 dev-util/jarwizard
 
-# Thomas Cort <tcort@gentoo.org> (10 Jun 2006)
-# Masked for security Bug #134792 ; latest version broken
-net-p2p/amule
-
-# Thomas Cort <tcort@gentoo.org> (02 Jun 2006)
-# Masked for security Bug #130888 ; all other versions are broken, Bug #131359.
-mail-client/mozilla-thunderbird
-
 # until sec-policy/selinux-wireshark is keyworded for alpha
 net-analyzer/wireshark
