@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.140 2007/05/15 17:04:37 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.141 2007/05/17 21:15:05 wltjr Exp $
+
+*tomcat-6.0.13-r1 (17 May 2007)
+*tomcat-5.5.23-r3 (17 May 2007)
+
+  17 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/5.5/tomcat.init.2, files/6/tomcat.init, -tomcat-5.5.23-r2.ebuild,
+  +tomcat-5.5.23-r3.ebuild, -tomcat-6.0.13.ebuild, +tomcat-6.0.13-r1.ebuild:
+  Fixed init scripts to capture stdout/stderr. Work around for s-s-d lack of
+  --stdout/--stderr.
 
 *tomcat-6.0.13 (15 May 2007)
 
