@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.4-r2.ebuild,v 1.12 2007/05/17 17:50:03 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.1 2007/05/17 17:50:03 chtekk Exp $
 
 inherit apache-module
 
-KEYWORDS="alpha amd64 ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 DESCRIPTION="Embeds the Ruby interpreter into Apache."
 HOMEPAGE="http://modruby.net/"
