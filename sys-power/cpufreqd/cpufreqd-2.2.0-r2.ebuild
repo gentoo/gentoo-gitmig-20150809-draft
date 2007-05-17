@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.2.0-r2.ebuild,v 1.2 2007/03/13 16:53:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.2.0-r2.ebuild,v 1.3 2007/05/17 08:51:45 phreak Exp $
 
 inherit eutils autotools
 
@@ -64,7 +64,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
-	newinitd "${FILESDIR}"/${P}-init.d ${PN}
+	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
 }
 
 pkg_postinst() {

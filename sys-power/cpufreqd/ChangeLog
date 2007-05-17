@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.48 2007/03/13 16:53:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.49 2007/05/17 08:51:45 phreak Exp $
+
+  17 May 2007; Christian Heim <phreak@gentoo.org>
+  -files/cpufreqd-2.2.0-init.d, -files/cpufreqd-2.2.1-init.d,
+  +files/cpufreqd-init.d, cpufreqd-2.2.0-r2.ebuild, cpufreqd-2.2.1.ebuild:
+  Cleaning up $FILESDIR.
 
   13 Mar 2007; Christian Heim <phreak@gentoo.org>
   +files/cpufreqd-conf.d.patch, cpufreqd-2.2.0-r2.ebuild,
