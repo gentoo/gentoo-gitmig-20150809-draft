@@ -1,0 +1,86 @@
+--- ../../minorGems/util/TranslationManager.cpp.old	2007-05-17 00:04:50.000000000 +0200
++++ ../../minorGems/util/TranslationManager.cpp	2007-05-17 00:05:09.000000000 +0200
+@@ -147,7 +147,7 @@
+       mNaturalLanguageStrings( NULL ) {
+ 
+     // default
+-    setDirectoryAndLanguage( "languages", "English" );
++    setDirectoryAndLanguage( "@GENTOO_DATADIR@/languages", "English" );
+     }
+ 
+ 
+--- game.cpp.old	2007-05-17 00:16:44.000000000 +0200
++++ game.cpp	2007-05-17 00:17:18.000000000 +0200
+@@ -589,7 +589,7 @@
+       mStartTimeSeconds( time( NULL ) ),
+       mPaused( false ),
+       mMaxFrameRate( 400 ),  // don't limit frame rate
+-      mPrintFrameRate( true ),
++      mPrintFrameRate( false ),
+       mNumFrames( 0 ), mFrameBatchSize( 100 ),
+       mFrameBatchStartTimeSeconds( time( NULL ) ),
+       mFrameBatchStartTimeMilliseconds( 0 ),
+@@ -897,7 +897,7 @@
+     // load font image
+     TGAImageConverter tga;
+ 
+-    File fontFile( NULL, "font.tga" );
++    File fontFile( NULL, "@GENTOO_DATADIR@/font.tga" );
+     FileInputStream fontInput( &fontFile );
+ 
+     Image *fontImage = tga.deformatImage( &fontInput );
+@@ -980,7 +980,7 @@
+     mCurrentTipStoredItem = -1;
+     
+     // translation language for tool tips
+-    File languageNameFile( NULL, "language.txt" );
++    File languageNameFile( NULL, "@GENTOO_DATADIR@/language.txt" );
+ 
+     if( languageNameFile.exists() ) {
+         char *languageNameText = languageNameFile.readFileContents();
+--- features.cpp.old	2007-05-17 00:20:16.000000000 +0200
++++ features.cpp	2007-05-17 00:20:54.000000000 +0200
+@@ -57,7 +57,7 @@
+ 
+ 
+ void initializeFeatures() {
+-    FILE *featuresFile = fopen( "features.txt", "r" );
++    FILE *featuresFile = fopen( "@GENTOO_DATADIR@/features.txt", "r" );
+ 
+     char stringBuffer[100];
+     int switchValue;
+--- sound/SoundPlayer.h.old	2007-05-17 20:23:32.000000000 +0200
++++ sound/SoundPlayer.h	2007-05-17 20:24:39.000000000 +0200
+@@ -52,8 +52,8 @@
+ #include "SoundFilter.h"
+ #include "PlayableSound.h"
+ 
+-#include "minorGems/sound/portaudio/pa_common/portaudio.h"
+-#include "minorGems/sound/portaudio/pablio/pablio.h"
++#include <portaudio/portaudio.h>
++#include <portaudio/pablio.h>
+ 
+ 
+ #include "minorGems/util/SimpleVector.h"
+--- ../Makefile.common.old	2007-05-17 20:33:05.000000000 +0200
++++ ../Makefile.common	2007-05-17 20:33:37.000000000 +0200
+@@ -51,7 +51,7 @@
+ 
+ 
+ 
+-COMPILE_FLAGS = -Wall ${DEBUG_FLAG} ${PLATFORM_COMPILE_FLAGS} ${PROFILE_FLAG} ${OPTIMIZE_FLAG} -I${ROOT_PATH} -I${PORT_AUDIO_PATH}/pa_common
++COMPILE_FLAGS = $(CXXFLAGS) ${PLATFORM_COMPILE_FLAGS} -I${ROOT_PATH}
+ 
+ 
+ COMPILE = ${GXX} ${COMPILE_FLAGS} -c
+--- ../Makefile.GnuLinux.old	2007-05-17 20:32:12.000000000 +0200
++++ ../Makefile.GnuLinux	2007-05-17 20:32:35.000000000 +0200
+@@ -17,7 +17,7 @@
+ 
+ # various GL and X windows  librariesneeded for linux
+ # also need portaudio library (which in turn needs pthreads)
+-PLATFORM_LINK_FLAGS = -L/usr/X11R6/lib -lGL -lglut -lGLU -lX11 -lXi -lXext -lXmu ${PORT_AUDIO_PATH}/lib/libportaudio.a -lpthread
++PLATFORM_LINK_FLAGS = -L/usr/X11R6/lib -lGL -lglut -lGLU -lX11 -lXi -lXext -lXmu -lportaudio -lpthread
+ 
+ 
+ # All platforms but OSX support g++ and need no linker hacks

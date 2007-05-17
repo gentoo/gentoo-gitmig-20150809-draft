@@ -1,0 +1,10 @@
+# ChangeLog for games-simulation/cultivation
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/ChangeLog,v 1.1 2007/05/17 20:11:01 tupone Exp $
+
+*cultivation-7 (17 May 2007)
+
+  17 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/cultivation-7-gentoo.patch, +metadata.xml, +cultivation-7.ebuild:
+  New package. Bug #150406 by Cedric Krier <cedk@gentoo.org>
+
