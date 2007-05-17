@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.383 2007/05/17 10:54:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.384 2007/05/17 12:13:24 mrness Exp $
+
+  17 May 2007; Alin Năstac <mrness@gentoo.org> package.mask:
+  Remove net-dialup/slirp & net-dialup/pppoed from the tree.
 
   17 May 2007; Sven Wegener <swegener@gentoo.org> use.local.desc:
   Drop gnustep-apps/cynthiune:arts from local USE flags, arts is already global.

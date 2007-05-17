@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7272 2007/05/16 19:25:13 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7273 2007/05/17 12:13:24 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -703,14 +703,6 @@ media-libs/libdca
 # - No upstream releases since Oct '05
 media-gfx/graphicsmagick
 
-# Alin Năstac <mrness@gentoo.org> (17 Apr 2007)
-# Pending for removal on 17 May 2007
-# Reasons:
-#    - all keywords are -arch (except for x86)
-#    - source has numerous QA violations
-#    - unmaintained for years
-net-dialup/slirp
-
 # Chris Gianelloni <wolf31o2@gentoo.org> (16 Apr 2007)
 # Masked for removal on 16 May 2007, per bug #174763
 games-arcade/ddrmat
@@ -718,11 +710,6 @@ games-arcade/ddrmat
 # Roy Marples <uberlord@gentoo.org> (15 Apr 2007)
 # Masked as it segfaults and fails with our scripts, #174693.
 =net-wireless/wireless-tools-29_pre17
-
-# Alin Năstac <mrness@gentoo.org> (15 Apr 2007)
-# Pending for removal on 15 May 2007
-# Kernel versions >2.4 have PPPoE support
-net-dialup/pppoed
 
 # Samuli Suominen <drac@gentoo.org> (15 Apr 2007)
 # Using deprecated gdk functions from imlib.
