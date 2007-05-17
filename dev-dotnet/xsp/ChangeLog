@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.41 2007/04/29 18:03:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.42 2007/05/17 18:18:53 jurek Exp $
+
+*xsp-1.2.4 (17 May 2007)
+
+  17 May 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/1.2.4/mod-mono-server.confd, +files/1.2.4/mod-mono-server.initd,
+  +files/1.2.4/xsp.confd, +files/1.2.4/xsp.initd, +xsp-1.2.4.ebuild:
+  Version bump (1.2.4).
 
   29 Apr 2007; Torsten Veller <tove@gentoo.org> xsp-1.2.1.ebuild,
   xsp-1.2.3.ebuild:
