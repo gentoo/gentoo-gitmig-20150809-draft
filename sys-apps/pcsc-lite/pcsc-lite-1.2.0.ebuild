@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.12 2007/04/28 17:10:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.13 2007/05/17 05:14:02 alonbl Exp $
 
 inherit eutils
 
@@ -13,17 +13,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="static"
 
-RDEPEND="!static? ( virtual/libc )
-	!static? ( dev-libs/libusb )"
-DEPEND="sys-devel/make
-	sys-devel/libtool
-	sys-apps/sed
+RDEPEND="!static? ( dev-libs/libusb )"
+DEPEND="sys-devel/libtool
 	sys-devel/flex
 	sys-apps/gawk
 	dev-libs/libusb
 	dev-util/pkgconfig
-	sys-devel/gcc
-	virtual/libc
 	dev-libs/libusb"
 
 src_compile() {

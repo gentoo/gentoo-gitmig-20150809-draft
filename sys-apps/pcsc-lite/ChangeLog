@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.36 2007/04/28 17:10:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.37 2007/05/17 05:14:02 alonbl Exp $
+
+*pcsc-lite-1.4.1 (17 May 2007)
+
+  17 May 2007; Alon Bar-Lev <alonbl@gentoo.org> +pcsc-lite-1.4.1.ebuild:
+  Version bump
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> pcsc-lite-1.2.0.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
