@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.6 2007/05/16 20:22:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.7 2007/05/17 21:51:42 armin76 Exp $
 
 PATCH_VER="1.0.1"
 UCLIBC_VER="1.0"
@@ -17,7 +17,7 @@ inherit toolchain
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="-* ~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc ~sparc-fbsd x86 ~x86-fbsd"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )
