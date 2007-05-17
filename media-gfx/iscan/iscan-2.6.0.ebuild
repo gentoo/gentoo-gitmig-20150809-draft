@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.6.0.ebuild,v 1.1 2007/05/17 18:43:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.6.0.ebuild,v 1.2 2007/05/17 22:57:18 sbriesen Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils toolchain-funcs flag-o-matic autotools rpm
 
@@ -203,10 +206,12 @@ src_unpack() {
 			-e 's:^\([[:space:]]*\)po[[:space:]]*\\:\1\\:g' Makefile*
 		sed -i -e 's:iscan.1::g' doc/Makefile*
 	fi
+
+	# autotool stuff
+	eautoconf
 }
 
 src_compile() {
-	eautoconf
 	append-flags -D_GNU_SOURCE  # needed for 'strndup'
 	econf --enable-jpeg --enable-png --with-pic || die "econf failed"
 	emake || die "emake failed"
