@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-002-init.d,v 1.4 2006/10/20 19:21:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-init.d,v 1.1 2007/05/17 09:02:01 phreak Exp $
 
 checkconfig() {
 	if [ -z "${GOVERNOR}" ]; then

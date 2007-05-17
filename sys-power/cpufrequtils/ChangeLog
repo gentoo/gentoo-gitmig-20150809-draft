@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.34 2007/05/17 08:56:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.35 2007/05/17 09:02:01 phreak Exp $
+
+  17 May 2007; Christian Heim <phreak@gentoo.org>
+  -files/cpufrequtils-001-conf.d, -files/cpufrequtils-001-init.d,
+  -files/cpufrequtils-002-conf.d, -files/cpufrequtils-002-init.d,
+  +files/cpufrequtils-conf.d, +files/cpufrequtils-init.d,
+  -cpufrequtils-001.ebuild:
+  Cleaning up the older version; cleaning up $FILESDIR.
 
   17 May 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning sys-power/cpufrequtils directly to mobile at gentoo.org.
