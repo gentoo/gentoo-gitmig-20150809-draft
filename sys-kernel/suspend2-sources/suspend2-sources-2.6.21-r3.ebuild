@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.21-r3.ebuild,v 1.1 2007/05/17 17:20:43 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.21-r3.ebuild,v 1.2 2007/05/17 19:42:41 alonbl Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -25,7 +25,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${SUSPEND2_URI}"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="${RDEPEND}
-		~sys-apps/suspend2-userui-0.7.0
+		>=sys-apps/suspend2-userui-0.7.1_pre
 		>=sys-power/hibernate-script-1.94"
 
 K_EXTRAEINFO="If there are issues with this kernel, please direct any
