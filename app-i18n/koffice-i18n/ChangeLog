@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.89 2007/04/03 09:21:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.90 2007/05/17 13:55:20 armin76 Exp $
+
+  17 May 2007; Raúl Porcel <armin76@gentoo.org> koffice-i18n-1.6.2.ebuild:
+  Add ~alpha wrt #156614
 
   03 Apr 2007; Raúl Porcel <armin76@gentoo.org> koffice-i18n-1.6.2.ebuild:
   Add ~ia64 wrt bug 156614
