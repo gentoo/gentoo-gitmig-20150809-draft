@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7273 2007/05/17 12:13:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7274 2007/05/17 12:53:54 graaff Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -722,11 +722,6 @@ media-gfx/qiv
 # vim7, no point in keeping this around. See Bug #174637. Scheduled for
 # removal in 30 days.
 app-vim/doxygen-syntax
-
-# Hans de Graaff <graaff@gentoo.org> (13 Apr 2007)
-# ruby development is no longer taking place in CVS, leaving ruby-cvs broken
-# An initial ruby-svn ebuild is in bug 173817.
-dev-lang/ruby-cvs
 
 # Petteri Räty <betelgeuse@gentoo.org> (13 Apr 2007)
 # Use dev-java/jdbc-postgresql instead. If you need the 7.3*
