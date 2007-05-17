@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.12b.ebuild,v 1.1 2007/04/28 01:20:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.15.ebuild,v 1.1 2007/05/17 19:49:05 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -37,7 +37,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-S="${WORKDIR}/liferea-1.2.12"
 src_unpack() {
 	gnome2_src_unpack
 

@@ -1,6 +1,21 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.102 2007/05/15 15:38:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.103 2007/05/17 19:49:05 dang Exp $
+
+*liferea-1.2.15 (17 May 2007)
+
+  17 May 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2.10c.ebuild,
+  -liferea-1.2.12b.ebuild, +liferea-1.2.15.ebuild:
+  Bump to 1.2.15
+  	* Better update result processing timer, should cause
+  	  less CPU usage. (patch from Arjan van de Ven)
+  	* Increased security: disallowing clicking on file://
+  	  links in the rendering widget, as well as preventing
+  	  from opening such links using the context menu.
+  	* Fixes unresolved symbol in LUA binding.
+  	  (SF #1720462, reported by Jonathan Cristoforetti)
+  	* Fixes broken base URL when selecting items in 3 pane
+  	  mode from folders.
 
 *liferea-1.2.14 (15 May 2007)
 
