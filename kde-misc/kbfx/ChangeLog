@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kbfx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.10 2007/02/06 10:27:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.11 2007/05/17 10:07:38 carlo Exp $
+
+*kbfx-0.4.9.3.1 (17 May 2007)
+
+  17 May 2007; Carsten Lohrke <carlo@gentoo.org> -kbfx-0.4.9.2_pre3.ebuild,
+  -kbfx-0.4.9.2_pre4.ebuild, -kbfx-0.4.9.2_rc4.ebuild,
+  +kbfx-0.4.9.3.1.ebuild:
+  Version bump. Clean up.
 
 *kbfx-0.4.9.2_rc4 (06 Feb 2007)
 
