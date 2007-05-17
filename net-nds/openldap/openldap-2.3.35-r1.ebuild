@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.35-r1.ebuild,v 1.1 2007/04/25 06:40:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.35-r1.ebuild,v 1.2 2007/05/17 14:19:28 uberlord Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 AT_M4DIR="./build"
-inherit autotools eutils flag-o-matic multilib ssl-cert toolchain-funcs versionator
+inherit autotools db-use eutils flag-o-matic multilib ssl-cert toolchain-funcs versionator
 
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
@@ -232,6 +232,8 @@ src_compile() {
 		if use berkdb ; then
 			einfo "Using Berkeley DB for local backend"
 			myconf="${myconf} ${myconf_berkdb}"
+			# We need to include the slotted db.h dir for FreeBSD
+			append-cppflags -I$(db_includedir)
 		elif use gdbm ; then
 			einfo "Using GDBM for local backend"
 			myconf="${myconf} ${myconf_gdbm}"
@@ -239,6 +241,8 @@ src_compile() {
 			ewarn "Neither gdbm or berkdb USE flags present, falling back to"
 			ewarn "Berkeley DB for local backend"
 			myconf="${myconf} ${myconf_berkdb}"
+			# We need to include the slotted db.h dir for FreeBSD
+			append-cppflags -I$(db_includedir)
 		fi
 		# extra backend stuff
 		myconf="${myconf} --enable-passwd=mod --enable-phonetic=mod"
@@ -470,7 +474,7 @@ pkg_postinst() {
 		# Additionally, it overwrites
 		if use ssl; then
 			insinto /etc/openldap/ssl
-			insopts -m0644 -u ldap -g ldap
+			insopts -m0644 -o ldap -g ldap
 			docert ldap
 			##fowners ldap:ldap /etc/openldap/ssl/ldap.*
 			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"

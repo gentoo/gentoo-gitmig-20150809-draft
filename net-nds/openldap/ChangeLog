@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.264 2007/04/25 06:40:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.265 2007/05/17 14:19:28 uberlord Exp $
+
+  17 May 2007; Roy Marples <uberlord@gentoo.org> openldap-2.3.35-r1.ebuild:
+  Include the correct db.h on FreeBSD.
+  Fix install to use -o and not -u for SSL certs.
 
 *openldap-2.3.35-r1 (25 Apr 2007)
 
