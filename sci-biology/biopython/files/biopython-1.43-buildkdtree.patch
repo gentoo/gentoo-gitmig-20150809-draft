@@ -1,0 +1,28 @@
+--- setup.py.old	2007-03-17 15:21:04.000000000 -0400
++++ setup.py	2007-05-17 14:02:42.000000000 -0400
+@@ -64,6 +64,7 @@
+         _CHECKED = check_dependencies()
+     return _CHECKED
+ 
++USE_KDTREE = False
+ def check_dependencies():
+     """Return whether the installation should continue."""
+     # There should be some way for the user to tell specify not to
+@@ -112,15 +113,8 @@
+         
+     
+     # Compile KDTree ? Not compiled by default
+-    print "\n*** Bio.KDTree *** NOT built by default "
+-    kdtree_msg = """
+-The Bio.PDB.NeighborSearch module depends on the Bio.KDTree module,
+-which in turn, depends on C++ code that does not compile cleanly on
+-all platforms. Hence, Bio.KDTree is not built by default.
+-
+-Would you like to build Bio.KDTree ?"""
+-
+-    if get_yes_or_no (kdtree_msg, 0):
++    global USE_KDTREE
++    if USE_KDTREE:
+         NUMPY_PACKAGES.append("Bio.KDTree")
+         NUMPY_EXTENSIONS.append(
+             CplusplusExtension('Bio.KDTree._CKDTree', 

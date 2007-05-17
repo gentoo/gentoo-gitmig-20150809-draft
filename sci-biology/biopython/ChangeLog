@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.17 2007/05/16 17:49:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.18 2007/05/17 18:47:30 ribosome Exp $
+
+*biopython-1.43 (17 May 2007)
+
+  17 May 2007; Olivier Fisette <ribosome@gentoo.org>
+  +files/biopython-1.43-buildkdtree.patch, -biopython-1.40b.ebuild,
+  +biopython-1.43.ebuild:
+  New upstream version. Ebuild clean-up. Pruned old version.
 
   16 May 2007; Raúl Porcel <armin76@gentoo.org> biopython-1.42.ebuild:
   alpha stable wrt #153774
