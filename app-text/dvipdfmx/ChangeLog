@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.31 2007/05/13 15:12:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.32 2007/05/17 13:43:45 gustavoz Exp $
+
+  17 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dvipdfmx-20050831.ebuild:
+  Stable on sparc wrt #170299
 
   13 May 2007; Raúl Porcel <armin76@gentoo.org> dvipdfmx-20050831.ebuild:
   x86 stable wrt bug 170299
