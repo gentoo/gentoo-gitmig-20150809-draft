@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.442 2007/05/14 11:52:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.443 2007/05/17 11:48:46 caleb Exp $
+
+  17 May 2007; Caleb Tennis <caleb@gentoo.org> qt-4.3.0_rc1.ebuild:
+  explicitly disable pch here, from bug #178843
 
   14 May 2007; Caleb Tennis <caleb@gentoo.org> qt-4.3.0_rc1.ebuild:
   Some sed foo to change CFLAG stuff, from bug #172219

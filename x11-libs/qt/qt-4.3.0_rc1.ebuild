@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0_rc1.ebuild,v 1.3 2007/05/14 11:52:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0_rc1.ebuild,v 1.4 2007/05/17 11:48:46 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -191,7 +191,7 @@ src_compile() {
 	use qt3support		&& myconf="${myconf} -qt3support" || myconf="${myconf} -no-qt3support"
 	use ssl		&& myconf="${myconf} -openssl" || myconf="${myconf} -no-openssl"
 
-	use pch		&& myconf="${myconf} -pch"
+	use pch		&& myconf="${myconf} -pch" || myconf="${myconf} -no-pch"
 
 	use input_devices_wacom	&& myconf="${myconf} -tablet" || myconf="${myconf} -no-tablet"
 
