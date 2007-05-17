@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/cmospwd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.5 2007/02/08 22:00:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.6 2007/05/17 12:24:47 hyakuhei Exp $
+
+*cmospwd-4.8 (17 May 2007)
+
+  17 May 2007; Robert Clark <hyakuhei@gentoo.org> +cmospwd-4.8.ebuild:
+  Version bump to 4.8
+  HOMEPAGE changed
+  SRC_URI changed, files are now .tar.bz2
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>forensics</herd>
 <maintainer>
-  <email>forensics@gentoo.org</email>
-    <name>Forensics Herd</name>
+  <email>hyakuhei@gentoo.org</email>
 </maintainer>
 <longdescription>
 CmosPwd decrypts password stored in cmos used to access BIOS SETUP.
