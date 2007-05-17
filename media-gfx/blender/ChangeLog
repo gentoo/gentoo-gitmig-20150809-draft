@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.114 2007/04/17 17:23:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.115 2007/05/17 06:58:54 lu_zero Exp $
+
+*blender-2.44 (17 May 2007)
+
+  17 May 2007; Luca Barbato <lu_zero@gentoo.org> +blender-2.44.ebuild:
+  New ebuild contributed by Cornelius Weig
+  <bitte.keine.werbung.einwerfen@googlemail.com>, Daniel Genrich
+  <daniel.genrich@gmx.net> and mattepiu
 
   17 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org> blender-2.43.ebuild:
   ppc stable, bug #168907
