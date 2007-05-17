@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r3.ebuild,v 1.10 2007/02/10 18:59:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r3.ebuild,v 1.11 2007/05/17 20:16:39 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,8 +21,6 @@ COMMON_DEP="
 RDEPEND=">=virtual/jre-1.3
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	source? ( app-arch/zip )
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${P}-src"
@@ -28,10 +28,10 @@ S="${WORKDIR}/${P}-src"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	echo "commons-collections.jar=$(java-pkg_getjars commons-collections)" 	> build.properties
-	echo "commons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)" >> build.properties
+	java-ant_rewrite-classpath
 }
+
+EANT_GENTOO_CLASSPATH="commons-collections,commons-logging"
 
 src_install() {
 	java-pkg_dojar dist/${PN}*.jar

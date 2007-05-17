@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.36 2007/02/11 12:23:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.37 2007/05/17 20:16:39 betelgeuse Exp $
+
+  17 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-beanutils-1.6.1-r3.ebuild:
+  Use EANT_GENTOO_CLASSPATH so that emerge doesn't fail when
+  commons-collections has more than one jar.
 
   11 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   -commons-beanutils-1.6.1-r2.ebuild, -commons-beanutils-1.7.0-r1.ebuild:
