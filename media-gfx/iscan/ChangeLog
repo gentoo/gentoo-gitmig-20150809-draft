@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.16 2007/01/06 20:12:56 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.17 2007/05/17 18:43:41 sbriesen Exp $
+
+*iscan-2.6.0 (17 May 2007)
+
+  17 May 2007; Stefan Briesenick <sbriesen@gentoo.org> +iscan-2.6.0.ebuild:
+  version bump, solving bug #178667.
 
 *iscan-2.4.0-r1 (06 Jan 2007)
 
