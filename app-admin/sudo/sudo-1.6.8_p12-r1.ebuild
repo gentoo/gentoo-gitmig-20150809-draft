@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.12 2007/03/04 13:00:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.13 2007/05/17 12:39:19 taviso Exp $
 
 inherit eutils pam flag-o-matic
 
@@ -76,6 +76,9 @@ src_unpack() {
 
 	# prevent binaries from being stripped.
 	sed -i 's/\($(INSTALL).*\) -s \(.*[(sudo|visudo)]\)/\1 \2/g' Makefile.in
+	
+	# remove useless c++ checks
+	epunt_cxx
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.105 2007/03/04 13:00:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.106 2007/05/17 12:39:18 taviso Exp $
+
+  17 May 2007; Tavis Ormandy <taviso@gentoo.org> sudo-1.6.8_p12-r1.ebuild:
+  remove c++ checks
 
   04 Mar 2007; Andrej Kacian <ticho@gentoo.org> sudo-1.6.8_p12-r1.ebuild:
   Stable on x86, bug #169272.
