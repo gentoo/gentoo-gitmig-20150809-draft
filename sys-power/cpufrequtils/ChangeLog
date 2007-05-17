@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.35 2007/05/17 09:02:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.36 2007/05/17 09:07:35 phreak Exp $
+
+  17 May 2007; Christian Heim <phreak@gentoo.org> files/cpufrequtils-init.d:
+  Updating the init-script to be busybox/dash compatible (thanks to Mike
+  Arthur <mike at mikearthur.co.uk> in #178763).
 
   17 May 2007; Christian Heim <phreak@gentoo.org>
   -files/cpufrequtils-001-conf.d, -files/cpufrequtils-001-init.d,

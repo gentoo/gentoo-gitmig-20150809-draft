@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-init.d,v 1.1 2007/05/17 09:02:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-init.d,v 1.2 2007/05/17 09:07:35 phreak Exp $
 
 checkconfig() {
 	if [ -z "${GOVERNOR}" ]; then
@@ -22,8 +22,7 @@ affect_change() {
 	local cpu n
 
 	for cpu in /sys/devices/system/cpu/cpu[0-9]*; do
-		n=${cpu##*/}
-		n=${n/cpu/}
+		n=${cpu##*cpu}
 
 		ebegin "${1} ${2} cpufreq governor on CPU${n}"
 		cpufreq-set -c ${n} -g "${2}"
