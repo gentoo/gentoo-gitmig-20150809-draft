@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2-r1.ebuild,v 1.1 2007/04/06 14:51:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2-r1.ebuild,v 1.2 2007/05/17 14:52:38 uberlord Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -62,6 +62,9 @@ src_install() {
 	dodir /bin
 	mv "${D}/sbin/ping" "${D}/bin/" || die "mv failed"
 
+	# ext2fs can mount ext3, you just don't get the journalling
+	dosym mount_ext2fs sbin/mount_ext3
+
 	newinitd "${FILESDIR}/devd.initd" devd
 	newinitd "${FILESDIR}/ipfw.initd" ipfw
 	newconfd "${FILESDIR}/ipfw.confd" ipfw
@@ -98,4 +101,5 @@ src_install() {
 	use ipfilter && doperiodic security \
 		security/*.ipf6denied \
 		security/*.ipfdenied
+
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.37 2007/05/14 14:01:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.38 2007/05/17 14:52:38 uberlord Exp $
+
+  17 May 2007; Roy Marples <uberlord@gentoo.org> freebsd-sbin-6.2-r1.ebuild:
+  symlink mount_ext2fs to mount_ext3 so we can automatically mount ext3
+  partitions without journaling support.
 
   14 May 2007; Roy Marples <uberlord@gentoo.org> files/ipfw.confd,
   files/ipfw.initd:
