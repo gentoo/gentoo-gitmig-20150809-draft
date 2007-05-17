@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.8 2007/05/11 21:06:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.9 2007/05/17 16:41:19 jer Exp $
+
+  17 May 2007; Jeroen Roovers <jer@gentoo.org> libopensync-0.22.ebuild:
+  Marked ~hppa (bug #178853).
 
   11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libopensync-0.22.ebuild:
