@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hamachi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.5 2007/04/28 22:34:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.6 2007/05/18 12:34:38 caleb Exp $
+
+  18 May 2007; Caleb Tennis <caleb@gentoo.org> files/hamachi.initd:
+  Fix init script per bug #178767
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org>
   hamachi-0.9.9.9_p20-r2.ebuild:
