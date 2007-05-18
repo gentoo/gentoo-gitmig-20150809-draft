@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.4 2007/05/18 08:10:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.5 2007/05/18 09:07:03 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
 # latest gentoo apache files
-GENTOO_PATCHNAME="gentoo-apache-${PV}"
-GENTOO_PATCHSTAMP="20070121"
+GENTOO_PATCHNAME="gentoo-${PF}"
+GENTOO_PATCHSTAMP="20070518"
 GENTOO_DEVSPACE="phreak"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 

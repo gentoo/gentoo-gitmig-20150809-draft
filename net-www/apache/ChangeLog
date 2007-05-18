@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.521 2007/05/18 08:10:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.522 2007/05/18 09:07:03 phreak Exp $
+
+  18 May 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r1.ebuild:
+  Updated patchtarball, including updated peruser and itk patches.
 
   18 May 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r1.ebuild:
   Explicitly mention USERDIR in pkg_postinst since users keep overlooking it.
