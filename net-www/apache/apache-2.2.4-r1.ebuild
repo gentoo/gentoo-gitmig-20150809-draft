@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.2 2007/05/18 07:09:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.3 2007/05/18 07:58:02 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -252,7 +252,7 @@ src_install () {
 	dosym /etc/init.d/apache2 /usr/sbin/apache2ctl
 
 	# provide symlinks for all the stuff we no longer rename, bug 177697
-	for i in logresolve apxs rotatelogs dbmmanage checkgid split-logfile; do
+	for i in logresolve apxs rotatelogs dbmmanage checkgid split-logfile suexec; do
 		dosym /usr/sbin/${i} /usr/sbin/${i}2
 	done
 
@@ -293,8 +293,8 @@ src_install () {
 
 	# Set up some sane permissions
 	if ! use no-suexec ; then
-		fowners 0:apache /usr/sbin/suexec
-		fperms 4710 /usr/sbin/suexec
+		fowners 0:apache /usr/sbin/suexec2
+		fperms 4710 /usr/sbin/suexec2
 	fi
 
 	keepdir /etc/apache2/vhosts.d
