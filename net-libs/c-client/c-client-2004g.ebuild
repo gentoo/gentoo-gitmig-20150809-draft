@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.3 2006/12/26 02:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.4 2007/05/18 12:21:16 uberlord Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -14,8 +14,8 @@ SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ssl pam"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="ssl pam kernel_linux kernel_FreeBSD"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	!virtual/imap-c-client"
@@ -42,6 +42,10 @@ src_unpack() {
 		-e 's:SSLCERTS=$(SSLDIR)/certs:SSLCERTS=/etc/ssl/certs:g' \
 		-i src/osdep/unix/Makefile || die "Makefile sed fixing failed"
 
+	# Targets should use the Gentoo (ie linux) fs
+	sed -e '/^bsf:/,/^$/ s:ACTIVEFILE=.*:ACTIVEFILE=/var/lib/news/active:g' \
+		-i src/osdep/unix/Makefile || die "Makefile sex fixing failed for FreeBSD"
+
 	# Apply a patch to only build the stuff we need for c-client
 	epatch ${FILESDIR}/2002d-Makefile.patch || die "epatch failed"
 
@@ -57,7 +61,11 @@ src_unpack() {
 src_compile() {
 	local ssltype target
 	use ssl && ssltype="unix" || ssltype="none"
-	use pam && target=lnp || target=lnx
+	if use kernel_linux ; then
+		use pam && target=lnp || target=lnx
+	elif use kernel_FreeBSD ; then
+		target=bsf
+	fi
 	# no parallel builds supported!
 	make $target SSLTYPE=${ssltype} EXTRACFLAGS="${CFLAGS}" || die "make failed"
 }

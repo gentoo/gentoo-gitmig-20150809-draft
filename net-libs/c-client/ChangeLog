@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.32 2007/02/22 01:26:41 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.33 2007/05/18 12:21:16 uberlord Exp $
+
+  18 May 2007; Roy Marples <uberlord@gentoo.org> c-client-2004g.ebuild:
+  Keyworded ~x86-fbsd, #138170 thanks to Nicholas Steicke.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
