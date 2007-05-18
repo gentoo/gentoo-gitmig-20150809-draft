@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.32 2007/05/09 19:10:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.33 2007/05/18 14:50:42 chutzpah Exp $
+
+*ntfs3g-1.516 (18 May 2007)
+
+  18 May 2007; Patrick McLean <chutz@gentoo.org> +ntfs3g-1.516.ebuild:
+  Version bump
 
   09 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> ntfs3g-1.417.ebuild:
   Keyworded ~sparc
