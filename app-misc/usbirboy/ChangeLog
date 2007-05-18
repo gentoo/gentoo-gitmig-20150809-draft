@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/usbirboy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.16 2007/01/06 16:14:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.17 2007/05/18 20:59:09 zzam Exp $
+
+  18 May 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to herd media-tv.
 
   06 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   usbirboy-0.2.1-r1.ebuild:
