@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.0.1.ebuild,v 1.5 2007/05/05 17:34:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.0.1.ebuild,v 1.6 2007/05/18 19:03:25 welp Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.appgate.com/products/80_MindTerm/110_MindTerm_Download/${P/-
 
 LICENSE="mindterm"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 RDEPEND=">=virtual/jre-1.3"
 DEPEND=">=virtual/jdk-1.3
