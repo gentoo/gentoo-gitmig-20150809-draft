@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/squeeze
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.8 2007/05/18 18:23:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/squeeze/ChangeLog,v 1.9 2007/05/18 20:04:31 welp Exp $
+
+  18 May 2007; Peter Weller <welp@gentoo.org> squeeze-0.2.1.ebuild:
+  Added a dep on app-arch/tar, keyworded ~x86-fbsd
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> squeeze-0.2.1.ebuild:
   Add ~alpha wrt #175749
