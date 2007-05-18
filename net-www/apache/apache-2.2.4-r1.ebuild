@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.5 2007/05/18 09:07:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.6 2007/05/18 12:16:47 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -293,8 +293,8 @@ src_install () {
 
 	# Set up some sane permissions
 	if ! use no-suexec ; then
-		fowners 0:apache /usr/sbin/suexec2
-		fperms 4710 /usr/sbin/suexec2
+		fowners 0:apache /usr/sbin/suexec
+		fperms 4710 /usr/sbin/suexec
 	fi
 
 	keepdir /etc/apache2/vhosts.d

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.522 2007/05/18 09:07:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.523 2007/05/18 12:16:47 phreak Exp $
+
+  18 May 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r1.ebuild:
+  Fix the chmod's for suexec, as chmod can't be used on symlinks (triggers a
+  sandbox violation).
 
   18 May 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r1.ebuild:
   Updated patchtarball, including updated peruser and itk patches.
