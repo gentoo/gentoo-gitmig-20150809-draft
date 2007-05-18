@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.14 2007/05/09 14:45:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.15 2007/05/18 21:57:31 welp Exp $
+
+  18 May 2007; Peter Weller <welp@gentoo.org> icu4j-3.0-r1.ebuild:
+  Stable on amd64 wrt bug 176634
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> icu4j-3.0-r1.ebuild:
   Add ~ia64 wrt #160813
