@@ -6,6 +6,7 @@ gnome-extra/gnome-screensaver pam
 kde-base/kcontrol ieee1394
 kde-base/kdenetwork-meta wifi
 media-video/ffmpeg ieee1394
+net-libs/c-client pam
 net-proxy/squid -ipf-transparent -pf-transparent
 sys-apps/baselayout pam
 sys-apps/coreutils acl
