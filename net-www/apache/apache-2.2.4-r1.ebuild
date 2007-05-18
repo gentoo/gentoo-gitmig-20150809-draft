@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.3 2007/05/18 07:58:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.4 2007/05/18 08:10:45 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -355,7 +355,10 @@ pkg_postinst() {
 		elog "to continue working correctly."
 		elog
 		elog "Also note that some configuration directives have been"
-		elog "split into their own files under ${ROOT}/etc/apache2/modules.d"
+		elog "split into their own files under ${ROOT}/etc/apache2/modules.d."
+		elog
+		elog "Some examples:"
+		elog "  - USERDIR is now configureable in ${ROOT}etc/apache2/modules.d/00_mod_userdir.conf."
 		elog
 		elog "For more information on what you may need to change, please"
 		elog "see the overview of changes at:"
