@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.1 2007/04/03 22:34:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.2 2007/05/18 15:40:49 jokey Exp $
+
+*italc-1.0.2 (18 May 2007)
+
+  18 May 2007; Markus Ullmann <jokey@gentoo.org> +italc-1.0.2.ebuild:
+  Version bump
 
 *italc-1.0.1 (03 Apr 2007)
 
