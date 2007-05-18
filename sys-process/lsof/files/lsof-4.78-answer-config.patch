@@ -1,0 +1,107 @@
+diff -ur a/Configure b/Configure
+--- a/Configure	2007-05-18 15:02:13 +0100
++++ b/Configure	2007-05-18 15:03:04 +0100
+@@ -2294,7 +2294,7 @@
+ 
+       LSOF_VERS=`echo $LSOF_VSTR | sed 's/\./ /g' | awk '{printf "%d%d%03d",\$1,\$2,\$3}'`
+     fi	# }
+-    LSOF_CFGF="-DLINUXV=$LSOF_VERS"
++    LSOF_CFGF="${CFLAGS} -DLINUXV=$LSOF_VERS"
+     if test $LSOF_VERS -lt 21072	# {
+     then
+       echo ""
+@@ -4828,7 +4828,7 @@
+ if test "X$LSOF_LIB_NO" = "X"	# {
+ then
+   echo "" >> $LSOF_MKFC
+-  echo "CFGL=	$LSOF_FCFGL -L./$LSOF_LIB -llsof $LSOF_CFGL" >> $LSOF_MKFC
++  echo "CFGL=	$LSOF_FCFGL -L./$LSOF_LIB -llsof $LSOF_CFGL ${LDFLAGS}" >> $LSOF_MKFC
+ fi	# }
+ echo "" >> $LSOF_MKFC
+ if test "X$LSOF_DEBUG" = "X"	# {
+Only in b: Configure.orig
+diff -ur a/Customize b/Customize
+--- a/Customize	2007-05-18 15:02:13 +0100
++++ b/Customize	2007-05-18 15:05:46 +0100
+@@ -110,7 +110,7 @@
+ do
+   echo ""
+   echo $EO "Do you want to customize (y|n) [y]? $EC"
+-  read ANS EXCESS
++  ANS=y
+   if test "X$ANS" = "Xn" -o "X$ANS" = "XN"
+   then
+     exit 0
+@@ -214,7 +214,7 @@
+   else
+     echo $EO "Enable HASSECURITY (y|n) [n]? $EC"
+   fi
+-  read ANS EXCESS
++  ANS=y
+   if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+   then
+     echo ""
+@@ -277,7 +277,7 @@
+     else
+       echo $EO "Enable HASNOSOCKSECURITY (y|n) [n]? $EC"
+     fi
+-    read ANS EXCESS
++    ANS=y
+     if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+     then
+       echo ""
+@@ -339,7 +339,7 @@
+   else
+     echo $EO "Disable WARNINGSTATE? (y|n) [n]? $EC"
+   fi
+-  read ANS EXCESS
++  ANS=n
+   if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+   then
+     echo ""
+@@ -408,7 +408,7 @@
+     else
+       echo $EO "Enable WARNDEVACCESS (y|n) [n]? $EC"
+     fi
+-    read ANS EXCESS
++    ANS=n
+     if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+     then
+       echo ""
+@@ -491,7 +491,7 @@
+     else
+       echo $EO "Enable HASDCACHE (y|n) [n]? $EC"
+     fi
+-    read ANS EXCESS
++    ANS=n
+     if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+     then
+       echo ""
+@@ -545,7 +545,7 @@
+     do
+       echo ""
+       echo $EO "Do you want to change path options (y|n) [n]? $EC"
+-      read ANS EXCESS
++      ANS=n
+       if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+       then
+         CDC=1
+@@ -928,7 +928,7 @@
+       else
+         echo $EO "Enable HASKERNIDCK (y|n) [n]? $EC"
+       fi
+-      read ANS EXCESS
++      ANS=y
+       if test "X$ANS" = "Xy" -o "X$ANS" = "XY"
+       then
+         echo ""
+@@ -1125,7 +1125,7 @@
+   echo ""
+   echo "Do you want to rename $OLD to ${OLD}.old and replace it with"
+   echo $EO "$NEW (y|n) [y]? $EC"
+-  read ANS EXCESS
++  ANS=y
+   if test "X$ANS" = "Xn" -o "X$ANS" = "XN"
+   then
+     END=1
+Only in b: Customize.orig
