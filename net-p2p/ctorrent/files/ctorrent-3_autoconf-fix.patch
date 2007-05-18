@@ -1,0 +1,8 @@
+--- version.m4.orig	2007-05-18 19:30:29.000000000 +0200
++++ version.m4	2007-05-18 19:30:35.000000000 +0200
+@@ -1,5 +1,4 @@
+ m4_define([m4_PACKAGE_NAME],      [Enhanced CTorrent])
+ m4_define([m4_PACKAGE_TARNAME],   [ctorrent])
+-m4_define([m4_PACKAGE_VERSION],   [dnh3])
+ m4_define([m4_PACKAGE_BUGREPORT], [dholmes@ct.boxmail.com])
+ 
