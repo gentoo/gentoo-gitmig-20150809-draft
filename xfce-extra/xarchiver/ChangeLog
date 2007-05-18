@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.27 2007/04/23 19:49:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.28 2007/05/18 11:37:52 armin76 Exp $
+
+  18 May 2007; Raúl Porcel <armin76@gentoo.org> xarchiver-0.4.6.ebuild:
+  alpha/ia64 stable wrt #178510
 
   23 Apr 2007; Samuli Suominen <drac@gentoo.org> xarchiver-0.4.6.ebuild:
   Kill USE flags for automagic runtime deps.
