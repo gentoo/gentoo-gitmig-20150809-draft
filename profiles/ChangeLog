@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.400 2007/05/18 06:33:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.401 2007/05/18 06:35:25 robbat2 Exp $
 
   17 May 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add the test-framework local use flag for dev-java/commons-collections.
