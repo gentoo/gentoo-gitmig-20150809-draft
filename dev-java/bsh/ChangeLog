@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.43 2007/05/08 13:36:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.44 2007/05/18 17:57:42 caster Exp $
+
+*bsh-2.0_beta4-r2 (18 May 2007)
+
+  18 May 2007; Vlastimil Babka <caster@gentoo.org> -bsh-2.0_beta4-r1.ebuild,
+  +bsh-2.0_beta4-r2.ebuild:
+  Revbump without change to make the removed bsf dep visible in package.env.
+  Fixes bug #178142.
 
   08 May 2007; Vlastimil Babka <caster@gentoo.org> -files/bsh2-build.patch,
   -files/beanshell.desktop, -bsh-1.3.0.ebuild, -bsh-2.0_beta1-r1.ebuild,

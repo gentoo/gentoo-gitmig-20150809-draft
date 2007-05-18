@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.12 2007/05/08 13:36:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r2.ebuild,v 1.1 2007/05/18 17:57:42 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
