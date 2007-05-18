@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.0.ebuild,v 1.6 2007/05/17 18:34:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.0.ebuild,v 1.7 2007/05/18 10:31:02 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -11,16 +11,15 @@ SHORTLANGS="ca-AD es-ES fi-FI fr-FR hu-HU it-IT ja-JP nb-NO pl-PL pt-PT ru-RU sl
 
 EMVER=${PV}
 TBVER="2.0.0.0"
-MY_TBVER="2.0_beta2"
-TBPVER="0.6"
+TBPVER="0.1"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://enigmail.mozdev.org"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/source/thunderbird-${TBVER}-source.tar.bz2
-	mirror://gentoo/mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2
+	mirror://gentoo/mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE=""
@@ -37,7 +36,7 @@ for X in ${SHORTLANGS} ; do
 done
 #( mirror://gentoo/${PN}-${X}-0.9x.xpi )"
 
-DEPEND="=mail-client/mozilla-thunderbird-2*"
+DEPEND=">=mail-client/mozilla-thunderbird-${TBVER}"
 RDEPEND="${DEPEND}
 	>=app-crypt/gnupg-1.4.7
 	>=www-client/mozilla-launcher-1.56"
@@ -78,7 +77,7 @@ linguas() {
 }
 
 src_unpack() {
-	unpack thunderbird-${TBVER}-source.tar.bz2 mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2 || die "unpack failed"
+	unpack thunderbird-${TBVER}-source.tar.bz2 mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2 || die "unpack failed"
 
 	linguas
 	for X in ${linguas}; do
