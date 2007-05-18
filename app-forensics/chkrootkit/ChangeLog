@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.38 2007/05/18 20:01:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.39 2007/05/18 20:16:47 hyakuhei Exp $
+
+  18 May 2007; Robert Clark <hyakuhei@gentoo.org> metadata.xml:
+  Added myself to metadata.xml as maintainer
 
   18 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   chkrootkit-0.47.ebuild:
