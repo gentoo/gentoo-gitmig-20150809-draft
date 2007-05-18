@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/securemodelines
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.8 2007/05/16 05:15:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.9 2007/05/18 16:53:15 pioto Exp $
+
+*securemodelines-20070518 (18 May 2007)
+
+  18 May 2007; Mike Kelly <pioto@gentoo.org>
+  +securemodelines-20070518.ebuild:
+  Version bump. Some bug fixes. The number of lines to search is now
+  controllable via let g:secure_modelines_modelines=5. If
+  g:secure_modelines_leave_modeline is defined, the internal &modeline
+  variable will be left alone.
 
   16 May 2007; Jeroen Roovers <jer@gentoo.org>
   securemodelines-20070513.ebuild:
