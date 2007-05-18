@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.407 2007/05/18 11:33:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.408 2007/05/18 13:58:37 armin76 Exp $
+
+  18 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Remove www-servers/ncsa-httpd, www-servers/plb and net-im/aim-transport from
+  p.mask as they have been removed, bug 122134 150966 and 145858
 
   18 May 2007; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   hardmask the prerelease of capistrano-2.0 for testing.
