@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.27 2007/05/18 13:50:21 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.28 2007/05/18 13:55:36 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -252,7 +252,7 @@ should_we_eselect_gnat() {
 		elog "switch to the newly installed gcc version, do the"
 		elog "following:"
 		echo
-		elog "eselect compiler set <profile>"
+		elog "eselect gnat set <profile>"
 		echo
 		ebeep
 		return 1
