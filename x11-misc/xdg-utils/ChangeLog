@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.22 2007/05/15 14:27:05 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.23 2007/05/18 07:26:31 pva Exp $
+
+*xdg-utils-1.0.1 (18 May 2007)
+
+  18 May 2007; <pva@gentoo.org> +xdg-utils-1.0.1.ebuild:
+  Version bump.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
