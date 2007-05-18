@@ -64,6 +64,9 @@ SHA256 767934953dff21a7f32c662c0cdc85f0f9c0d24084e332b4f075d397e5e1cf8f mozilla-
 MD5 52fae52e9322d6122536d7bbac32666b mozilla-thunderbird-2.0.0.0-pa-IN.xpi 203142
 RMD160 76636279135af469fac9a253ae9e94e8b71e25a5 mozilla-thunderbird-2.0.0.0-pa-IN.xpi 203142
 SHA256 84ed27471f103ff6b65991b842d31f0e505fbeab85e5eec476447b0dcf391f6f mozilla-thunderbird-2.0.0.0-pa-IN.xpi 203142
+MD5 df7378e326a515e45d979934a77b4674 mozilla-thunderbird-2.0.0.0-patches-0.1.tar.bz2 32619
+RMD160 4be91473fb324659601b01757733ba6d54c5d5c0 mozilla-thunderbird-2.0.0.0-patches-0.1.tar.bz2 32619
+SHA256 88ba254e33c34f48b75b88ab31895f84315e1fa03ed78e9493d40f82135c9677 mozilla-thunderbird-2.0.0.0-patches-0.1.tar.bz2 32619
 MD5 db1d58d424b1d182e308319a1c3d6806 mozilla-thunderbird-2.0.0.0-pl.xpi 175831
 RMD160 169d1dfc57a80c1239a2d5cd288d36bda6f9d5eb mozilla-thunderbird-2.0.0.0-pl.xpi 175831
 SHA256 5ba999ba93aeb3c34a90a5b0649062bedcadd857b5cf16b63266faeff705cae8 mozilla-thunderbird-2.0.0.0-pl.xpi 175831
@@ -94,9 +97,6 @@ SHA256 3b167f04ba40ef051eaf2d4f49da54e39840228b5125b6156fcc9030fab543e2 mozilla-
 MD5 7325bca526939edcdfddcb3c1e100304 mozilla-thunderbird-2.0.0.0-zh-TW.xpi 152126
 RMD160 c12b5e4cb420eaf61a54dc12b00b0fe6ff870b6b mozilla-thunderbird-2.0.0.0-zh-TW.xpi 152126
 SHA256 32733dc9058e9cf00656c323796d3fc7b82952fda74f75f95fd515a0d4a70460 mozilla-thunderbird-2.0.0.0-zh-TW.xpi 152126
-MD5 d0613075060e51aa62b8709cc9460eb1 mozilla-thunderbird-2.0_beta2-patches-0.6.tar.bz2 32522
-RMD160 a9867555944e3bdf892832e74f58ac0fc5814994 mozilla-thunderbird-2.0_beta2-patches-0.6.tar.bz2 32522
-SHA256 cdb49cb4ebbf2e6bd37a7b64156ac99fc0e4a9a845e3a0e30a5d0d1a73d51b52 mozilla-thunderbird-2.0_beta2-patches-0.6.tar.bz2 32522
 MD5 8e672d9f9206e0e1f03790dacb51e1bb thunderbird-2.0.0.0-source.tar.bz2 37379868
 RMD160 e605aaab16a52ed1bdd28ec0b4235499aa6549ab thunderbird-2.0.0.0-source.tar.bz2 37379868
 SHA256 cb2f5ea449521438cf668ff8cf26cce958e5ab454686d3ce56a48e011d8da1eb thunderbird-2.0.0.0-source.tar.bz2 37379868

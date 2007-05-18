@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.6 2007/05/17 18:32:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.7 2007/05/18 10:35:17 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -8,7 +8,7 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedi
 
 LANGS="be bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE hu it ja lt mk nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
-PATCH="${PN}-2.0_beta2-patches-0.6"
+PATCH="${P}-patches-0.1"
 MY_PV=${PV/_/}
 
 DESCRIPTION="Thunderbird Mail Client"
@@ -18,7 +18,7 @@ MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${MY_P
 SRC_URI="${MOZ_URI}/source/thunderbird-${MY_PV}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ia64 -mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ldap crypt bindist mozdom replytolist"
