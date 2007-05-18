@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/klaptopdaemon-3.5.5.ebuild,v 1.10 2007/02/03 09:42:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/klaptopdaemon-3.5.5.ebuild,v 1.11 2007/05/18 19:18:18 philantrop Exp $
 
 KMNAME=kdeutils
 MAXKDEVER=$PV
@@ -13,6 +13,8 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KLaptopdaemon - KDE battery monitoring and management for laptops."
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
+
+RESTRICT="strip"
 
 RDEPEND="|| ( x11-libs/libXtst <virtual/x11-7 )"
 
