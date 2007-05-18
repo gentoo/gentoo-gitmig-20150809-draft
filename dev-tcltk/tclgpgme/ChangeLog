@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.22 2007/04/13 23:42:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.23 2007/05/18 22:04:40 welp Exp $
+
+  18 May 2007; Peter Weller <welp@gentoo.org> tclgpgme-1.0-r2.ebuild:
+  Stable on amd64
 
   13 Apr 2007; <dan@gentoo.org> tclgpgme-1.0-r1.ebuild,
   tclgpgme-1.0-r2.ebuild:
