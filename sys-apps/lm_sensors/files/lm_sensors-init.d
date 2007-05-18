@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-init.d,v 1.1 2007/05/17 07:31:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-init.d,v 1.2 2007/05/18 07:39:12 phreak Exp $
 
 checkconfig() {
 	if [ ! -f /etc/conf.d/lm_sensors ]; then
@@ -56,7 +56,7 @@ start() {
 			ebegin "  Loading ${module}"
 			modprobe ${module} ${module_args} &> /dev/null
 			eend $?
-			i=$((${i}+1))
+			i=$(($i+1))
 		done
 	fi
 
@@ -85,11 +85,11 @@ stop() {
 			if [ -z "${module}" ] ; then
 				break
 			fi
-			i=$((i+1))
+			i=$(($i+1))
 		done
 
 		while [ ${i} -gt 0 ]; do
-			i=$((i-1))
+			i=$(($i-1))
 			module=`eval echo '$'MODULE_${i}`
 			ebegin "  Unloading ${module}"
 			rmmod ${module} &> /dev/null
