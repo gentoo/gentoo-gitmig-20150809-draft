@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.15 2007/05/01 08:55:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.16 2007/05/18 18:57:01 welp Exp $
+
+  18 May 2007; Peter Weller <welp@gentoo.org> kanatest-0.4.1.ebuild:
+  Stable on amd64 wrt bug 174902
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> kanatest-0.4.1.ebuild:
   Stable on ppc64; bug #174902
