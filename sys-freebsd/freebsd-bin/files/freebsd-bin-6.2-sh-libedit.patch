@@ -1,0 +1,14 @@
+To avoid another libedit mess, we'll statically link it into sh
+
+diff -ur a/sh/Makefile b/sh/Makefile
+--- a/sh/Makefile	2007-05-18 17:27:25 +0100
++++ b/sh/Makefile	2007-05-18 17:27:47 +0100
+@@ -16,7 +16,7 @@
+ # builtin.1 in share/man/man1/.  
+ 
+ DPADD= ${LIBL} ${LIBEDIT} ${LIBTERMCAP}
+-LDADD= -ll -ledit -ltermcap
++LDADD= -Wl,-Bstatic -ledit -Wl,-Bdynamic -ll -ltermcap
+ 
+ LFLAGS= -8	# 8-bit lex scanner for arithmetic
+ CFLAGS+=-DSHELL -I. -I${.CURDIR}
