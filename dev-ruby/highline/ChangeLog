@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.5 2007/05/16 06:12:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.6 2007/05/18 11:30:28 robbat2 Exp $
+
+*highline-1.2.7 (18 May 2007)
+
+  18 May 2007; Robin H. Johnson <robbat2@gentoo.org> +highline-1.2.7.ebuild:
+  Version bump, dep for capistrano-1.99*
 
   16 May 2007; Robin H. Johnson <robbat2@gentoo.org> highline-1.2.0.ebuild:
   Works on ~ppc and ~amd64.
