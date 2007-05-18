@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.72 2007/05/18 10:26:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.73 2007/05/18 23:58:01 marienz Exp $
+
+  18 May 2007; Marien Zwart <marienz@gentoo.org> files/atieventsd.init:
+  Fix line endings issue (bug #179062), thanks to Elias Probst
+  <mail@eliasprobst.eu> for reporting.
 
   18 May 2007; Roy Marples <uberlord@gentoo.org> files/atieventsd.init:
   Fix the init script to work on baselayout-2
