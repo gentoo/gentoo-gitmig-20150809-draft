@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hwinfo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.5 2006/09/29 22:40:15 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.6 2007/05/18 14:39:09 drizzt Exp $
+
+*hwinfo-13.28 (18 May 2007)
+
+  18 May 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/hwinfo-13.11-makefile-fixes.patch, +hwinfo-13.28.ebuild:
+  Version bump wrt bug #157256.
+  Authorized by maintainer.
 
   29 Sep 2006; Robin H. Johnson <robbat2@gentoo.org>
   +files/hwinfo-13.0-makefile-fixes.patch, hwinfo-13.0.ebuild:
