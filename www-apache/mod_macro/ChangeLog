@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_macro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.10 2007/05/18 08:15:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.11 2007/05/18 11:33:03 chtekk Exp $
+
+  18 May 2007; Luca Longinotti <chtekk@gentoo.org> mod_macro-1.1.8.ebuild:
+  Use eclass depends for this.
 
 *mod_macro-1.1.8 (18 May 2007)
 

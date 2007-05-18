@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/mod_macro-1.1.8.ebuild,v 1.1 2007/05/18 08:15:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/mod_macro-1.1.8.ebuild,v 1.2 2007/05/18 11:33:03 chtekk Exp $
 
 inherit apache-module
 
@@ -13,12 +13,12 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="=net-www/apache-2.2*"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND=""
 
 APACHE2_MOD_CONF="27_${PN}"
 APACHE2_MOD_DEFINE="MACRO"
 
 DOCFILES="CHANGES INSTALL README mod_macro.html"
 
-need_apache2
+need_apache2_2
