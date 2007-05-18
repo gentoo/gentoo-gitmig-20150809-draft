@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_bw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/ChangeLog,v 1.8 2007/01/14 02:10:08 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/ChangeLog,v 1.9 2007/05/18 08:22:10 phreak Exp $
+
+*mod_bw-0.8 (18 May 2007)
+
+  18 May 2007; Christian Heim <phreak@gentoo.org> +mod_bw-0.8.ebuild:
+  Version bump, adding an explicit DEPEND/RDEPEND on net-www/apache-2.2*. Also
+  changing the LICENSE to Apache-2.0.
 
   14 Jan 2007; Luca Longinotti <chtekk@gentoo.org> -mod_bw-0.5_rc1.ebuild,
   -mod_bw-0.5.ebuild, -mod_bw-0.6.ebuild, mod_bw-0.7.ebuild:
