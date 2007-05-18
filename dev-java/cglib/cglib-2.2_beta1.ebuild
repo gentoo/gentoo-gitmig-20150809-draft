@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.2_beta1.ebuild,v 1.3 2007/04/26 20:12:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.2_beta1.ebuild,v 1.4 2007/05/18 11:37:20 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,11 +13,11 @@ LICENSE="Apache-1.1"
 SLOT="2.2"
 KEYWORDS="~x86 ~amd64"
 COMMON_DEP="=dev-java/asm-2.2*
-	dev-java/ant-core"
+	>=dev-java/ant-core-1.7.0"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/jarjar
+	>=dev-java/jarjar-0.9
 	${COMMON_DEP}"
 IUSE=""
 
@@ -32,11 +32,12 @@ src_unpack() {
 	java-pkg_jar-from asm-2.2 asm-util.jar
 	java-pkg_jar-from asm-2.2 asm-commons.jar
 	java-pkg_jar-from ant-core ant.jar
-	java-pkg_jar-from --build-only jarjar-1
 }
 
+ANT_TASKS="jarjar-1"
+
 src_install() {
-	java-pkg_newjar dist/${PN}-${PV}.jar ${PN}.jar
+	java-pkg_newjar dist/${P}.jar ${PN}.jar
 	java-pkg_newjar dist/${PN}-nodep-${PV}.jar ${PN}-nodep.jar
 
 	dodoc NOTICE README || die
