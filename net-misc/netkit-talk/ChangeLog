@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.24 2007/05/17 15:32:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.25 2007/05/18 15:30:04 jer Exp $
+
+  18 May 2007; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Marked ~hppa (bug #178854).
 
   17 May 2007; Raúl Porcel <armin76@gentoo.org> netkit-talk-0.17-r4.ebuild:
   Add ~ia64 wrt #178854
