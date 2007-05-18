@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.37 2007/03/19 01:16:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.38 2007/05/18 20:01:19 gustavoz Exp $
+
+  18 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  chkrootkit-0.47.ebuild:
+  Stable on sparc wrt #170634
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
