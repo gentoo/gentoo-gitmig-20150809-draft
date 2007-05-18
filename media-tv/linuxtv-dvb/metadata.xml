@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-tv</herd>
-<maintainer>
-<email>zzam@gentoo.org</email>
-<name>Matthias Schwarzott</name>
-</maintainer>
 </pkgmetadata>
 
