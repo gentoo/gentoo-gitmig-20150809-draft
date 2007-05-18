@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.30 2007/05/15 18:09:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.31 2007/05/18 10:57:31 armin76 Exp $
+
+  18 May 2007; Raúl Porcel <armin76@gentoo.org> thunar-0.8.0-r3.ebuild:
+  alpha/ia64/x86 stable wrt #178510
 
   15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   thunar-0.8.0-r3.ebuild:
