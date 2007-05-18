@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/yolk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.2 2007/04/23 18:35:43 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.3 2007/05/18 02:58:43 pythonhead Exp $
+
+*yolk-0.1.0 (18 May 2007)
+
+  18 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -files/yolk-0.0.7-bad-egg.patch, -yolk-0.0.7-r1.ebuild,
+  +yolk-0.1.0.ebuild:
+  Version bump, removed old version.
 
 *yolk-0.0.7-r1 (23 Apr 2007)
 
