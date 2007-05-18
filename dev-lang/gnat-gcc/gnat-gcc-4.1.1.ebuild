@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.1.ebuild,v 1.4 2006/10/25 13:47:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.1.ebuild,v 1.5 2007/05/18 21:44:06 george Exp $
 
 inherit gnatbuild
 
@@ -17,6 +17,10 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2
 	amd64? ( http://mirrors/gentoo/gnatboot-${BOOT_SLOT}-amd64.tar.bz2 )"
 
 KEYWORDS="~amd64 ~ppc ~x86"
+
+
+QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind ${BINPATH:1}/gnatmake
+	${LIBEXECPATH:1}/gnat1 ${LIBPATH:1}/adalib/libgnat-${SLOT}.so"
 
 src_unpack() {
 	gnatbuild_src_unpack
