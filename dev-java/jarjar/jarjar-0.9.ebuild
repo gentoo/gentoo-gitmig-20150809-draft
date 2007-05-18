@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.1 2007/05/18 11:33:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.2 2007/05/18 11:37:11 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -16,7 +16,7 @@ IUSE=""
 COMMON_DEP="
 	=dev-java/asm-3.0*
 	=dev-java/gnu-regexp-1*
-	dev-java/ant-core
+	>=dev-java/ant-core-1.7.0
 	dev-java/java-getopt"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"

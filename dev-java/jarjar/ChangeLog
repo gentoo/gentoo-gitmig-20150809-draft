@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.14 2007/05/18 11:33:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.15 2007/05/18 11:37:11 betelgeuse Exp $
+
+  18 May 2007; Petteri Räty <betelgeuse@gentoo.org> jarjar-0.9.ebuild:
+  DEPEND on splitted ant.
 
 *jarjar-0.9 (18 May 2007)
 
