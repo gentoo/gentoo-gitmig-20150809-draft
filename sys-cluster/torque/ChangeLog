@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.49 2007/04/27 03:47:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.50 2007/05/18 14:05:18 armin76 Exp $
+
+  18 May 2007; Raúl Porcel <armin76@gentoo.org> torque-2.1.6.ebuild:
+  ia64 stable
 
   27 Apr 2007; Jeroen Roovers <jer@gentoo.org> torque-2.1.6.ebuild:
   Marked ~hppa.
