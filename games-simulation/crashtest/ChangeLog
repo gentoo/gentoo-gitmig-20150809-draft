@@ -1,0 +1,10 @@
+# ChangeLog for games-simulation/crashtest
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/ChangeLog,v 1.1 2007/05/18 19:06:50 tupone Exp $
+
+*crashtest-1.0 (18 May 2007)
+
+  18 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/crashtest-1.0-gentoo.patch, +metadata.xml, +crashtest-1.0.ebuild:
+  New package. Bug #153560 by Paul Bredbury
+

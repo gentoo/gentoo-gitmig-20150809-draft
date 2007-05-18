@@ -1,0 +1,72 @@
+--- crashtest.cxx.old	2007-05-18 19:56:02.000000000 +0200
++++ crashtest.cxx	2007-05-18 19:58:54.000000000 +0200
+@@ -607,13 +607,7 @@
+ 
+ int main(int argc, char *argv[]) 
+ {
+-  char *bindirname  = dirname(argv[0]);
+-  if (!strcmp(bindirname,"."))
+-    dirprefix="/usr/share/games/crashtest";
+-  else
+-  {
+-    dirprefix = dirname(bindirname) + std::string("/share/games/crashtest");
+-  }
++  dirprefix="@GENTOO_DATADIR@";
+   if (getenv("PLODE_DATADIR"))
+     dirprefix = getenv("PLODE_DATADIR");
+   modelmap = new ModelMap(dirprefix);
+--- Makefile.old	2007-05-18 20:08:12.000000000 +0200
++++ Makefile	2007-05-18 20:16:40.000000000 +0200
+@@ -10,19 +10,13 @@
+ 
+ # END OF CUSTOM SETTINGS
+ 
+-CXXFLAGS=\
+-  -I$(ODEPREFIX)/include \
+-  -I$(PLIBPREFIX)/include \
+-  -I../src-common \
+-  -O2 -g -Wall
+-
+ LFLAGS=\
+   -L$(PLIBPREFIX)/lib \
+   -L/usr/X11R6/lib
+ 
+ OBJS=staticworldobject.o crashtest.o dynamicobject.o cartobject.o
+ 
+-LIBS= $(ODEPREFIX)/lib/libode.a -lplibssgaux -lplibssg -lplibsg -lplibpu -lplibfnt -lplibul -lGLU -lGL -lasound `fltk-config --use-gl --use-images --ldflags` -lglut
++LIBS= `ode-config --libs` -lplibssgaux -lplibssg -lplibsg -lplibpu -lplibfnt -lplibul -lGLU -lGL -lasound `fltk-config --use-gl --use-images --ldflags` -lglut
+ 
+ 
+ all: crashtest
+@@ -31,10 +31,10 @@
+ 	$(CXX) -c $(CXXFLAGS) ../src-common/dynamicobject.cxx
+ 
+ cartobject.o: cartobject.cxx cartobject.h
+-	$(CXX) -c $(CXXFLAGS) cartobject.cxx
++	$(CXX) -c $(CXXFLAGS) -I../src-common cartobject.cxx
+ 
+ crashtest.o: crashtest.cxx crashworld.h ../src-common/modelmap.h cartobject.h bipedobject.h ../src-common/brickwall.h ../src-common/stereocontext.h ../src-common/usercam.h
+-	$(CXX) -c $(CXXFLAGS) crashtest.cxx
++	$(CXX) -c $(CXXFLAGS) -I../src-common crashtest.cxx
+ 
+ 
+ 
+@@ -48,13 +42,13 @@
+ 	PLODE_DATADIR=`pwd` ./crashtest
+ 
+ 
+-GAMEDIR=$(DESTDIR)/usr/share/games/crashtest
++GAMEDIR=$(DESTDIR)@GENTOO_DATADIR@
+ install: crashtest
+ 	# Directories
+-	mkdir -p $(DESTDIR)/usr/games/
++	mkdir -p $(DESTDIR)@GENTOO_BINDIR@
+ 	mkdir -p $(GAMEDIR)/models/
+ 	# Binary
+-	install crashtest $(DESTDIR)/usr/games/crashtest
++	install crashtest $(DESTDIR)@GENTOO_BINDIR@
+ 	# Models
+ 	install -m 644 models/testground.3ds $(GAMEDIR)/models/testground.3ds
+ 	install -m 644 models/biped_torso.3ds $(GAMEDIR)/models/biped_torso.3ds
+--- Makefile.old	2007-05-18 20:22:57.000000000 +0200
++++ Makefile	2007-05-18 20:23:27.000000000 +0200
