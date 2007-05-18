@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/mod_bw-0.8.ebuild,v 1.1 2007/05/18 08:22:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/mod_bw-0.8.ebuild,v 1.2 2007/05/18 11:30:52 chtekk Exp $
 
 inherit apache-module
 
@@ -13,12 +13,12 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-DEPEND="=net-www/apache-2.2*"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND=""
 
 APACHE2_MOD_CONF="11_${PN}"
 APACHE2_MOD_DEFINE="BW"
 
-need_apache2
+need_apache2_2
 
 S="${WORKDIR}/${PN}"
