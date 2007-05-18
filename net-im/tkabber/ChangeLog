@@ -1,6 +1,9 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.31 2007/05/06 12:03:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.32 2007/05/18 22:10:55 welp Exp $
+
+  18 May 2007; Peter Weller <welp@gentoo.org> tkabber-0.9.9.ebuild:
+  Stable on amd64 wrt bug 176729
 
   06 May 2007; Marius Mauch <genone@gentoo.org> tkabber-0.9.9.ebuild:
   Replacing einfo with elog
