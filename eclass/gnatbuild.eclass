@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.26 2007/05/15 14:05:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.27 2007/05/18 13:50:21 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -571,13 +571,15 @@ gnatbuild_src_install() {
 		done
 
 
-		# The install itself. Straight make DESTDIR=${D} install causes access
-		# violation (unlink of gprmake). A siple workaround for now.
 		cd "${GNATBUILD}"
-		make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die
-		mv "${D}${D}${PREFIX}/${CTARGET}" "${D}${PREFIX}" \
-			|| die "please post the fialed mv line to #178140"
-		rm -rf "${D}var"
+		make DESTDIR=${D} install || die
+#		# The install itself. Straight make DESTDIR=${D} install causes access
+#		# violation (unlink of gprmake). A siple workaround for now.
+#		cd "${GNATBUILD}"
+#		make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die
+#		mv "${D}${D}${PREFIX}/${CTARGET}" "${D}${PREFIX}" \
+#			|| die "please post the fialed mv line to #178140"
+#		rm -rf "${D}var"
 
 		#make a convenience info link
 		dosym ${DATAPATH}/info/gnat_ugn_unw.info ${DATAPATH}/info/gnat.info
