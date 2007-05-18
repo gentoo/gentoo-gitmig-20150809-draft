@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.1 2007/05/09 12:48:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r1.ebuild,v 1.2 2007/05/18 07:09:07 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -20,7 +20,7 @@ LICENSE="Apache-2.0 Apache-1.1"
 
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc ldap mpm-event mpm-peruser mpm-prefork mpm-worker no-suexec selinux ssl static-modules threads"
+IUSE="debug doc ldap mpm-event mpm-itk mpm-peruser mpm-prefork mpm-worker no-suexec selinux ssl static-modules threads"
 
 DEPEND="dev-lang/perl
 	=dev-libs/apr-1*
@@ -49,7 +49,7 @@ pkg_setup() {
 	fi
 
 	# select our MPM
-	MPM_LIST="event peruser prefork worker"
+	MPM_LIST="event itk peruser prefork worker"
 	for x in ${MPM_LIST} ; do
 		if use mpm-${x} ; then
 			if [[ "x${mpm}" == "x" ]] ; then
