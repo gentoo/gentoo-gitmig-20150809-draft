@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.17 2007/04/22 15:06:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.18 2007/05/18 12:12:12 armin76 Exp $
+
+  18 May 2007; Raúl Porcel <armin76@gentoo.org> verve-0.3.5.ebuild:
+  alpha stable wrt #178510
 
   22 Apr 2007; Raúl Porcel <armin76@gentoo.org> verve-0.3.5.ebuild:
   ia64 stable
