@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.7 2007/02/03 21:41:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.8 2007/05/18 09:23:02 betelgeuse Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://apache.mirrors.pair.com/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz
 	http://apache.mirrors.hoobly.com/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz
 	http://www.tux.org/pub/net/apache/dist/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz"
 
-LICENSE="Apache-1.1"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE="doc"
@@ -26,6 +26,8 @@ S=${WORKDIR}/xml-xalan/c
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# https://issues.apache.org/jira/browse/XALANC-643
+	epatch "${FILESDIR}/1.10.0-as-needed.patch"
 	chmod a+r $(find . -type f)
 	chmod a+rx $(find . -type d)
 
