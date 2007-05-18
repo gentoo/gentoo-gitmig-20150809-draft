@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.1-r1.ebuild,v 1.1 2007/05/16 10:52:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.1-r1.ebuild,v 1.2 2007/05/18 13:10:16 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -67,7 +67,7 @@ src_compile() {
 	java-pkg_jar-from sun-javamail
 	java-pkg_jar-from iso-relax
 	java-pkg_jar-from aopalliance-1
-	java-pkg_jar-from resin-servlet-api-2.5
+	java-pkg_jar-from resin-servlet-api-2.5 resin-servlet-api.jar jsdk-15.jar
 	ln -s $(java-config --jdk-home)/lib/tools.jar
 	cd ${S}
 

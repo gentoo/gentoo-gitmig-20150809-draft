@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.44 2007/05/16 10:52:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.45 2007/05/18 13:10:16 nelchael Exp $
+
+  18 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> files/3.1.1/resin.conf,
+  files/3.1.1/resin.init, resin-3.1.1-r1.ebuild:
+  Fix starting of resin (bug #178149).
 
 *resin-3.1.1-r1 (16 May 2007)
 *resin-3.0.23-r1 (16 May 2007)
