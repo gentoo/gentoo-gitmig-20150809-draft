@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.24 2007/05/09 15:09:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.25 2007/05/18 01:53:28 caster Exp $
+
+*jaxme-0.3.1-r4 (18 May 2007)
+
+  18 May 2007; Vlastimil Babka <caster@gentoo.org> -jaxme-0.3.1.ebuild,
+  -jaxme-0.3.1-r3.ebuild, +jaxme-0.3.1-r4.ebuild:
+  Stable on amd64 for bug #175360; Revbump without change to remove the hsqldb
+  depedency from everyone's package.env, workarounds bug #178953. Remove old
+  versions.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> jaxme-0.3.1-r3.ebuild:
   Add ~ia64 wrt #160813
