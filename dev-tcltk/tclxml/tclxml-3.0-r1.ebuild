@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.5 2007/04/30 15:17:11 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.6 2007/05/18 22:06:54 welp Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 IUSE="expat threads xml"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~ppc sparc x86"
 
 DEPEND=">=dev-lang/tcl-8.2
 	>=dev-tcltk/tcllib-1.2
