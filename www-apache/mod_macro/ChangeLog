@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_macro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.9 2007/01/15 17:14:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.10 2007/05/18 08:15:50 phreak Exp $
+
+*mod_macro-1.1.8 (18 May 2007)
+
+  18 May 2007; Christian Heim <phreak@gentoo.org> +mod_macro-1.1.8.ebuild:
+  Version bump, adding an explicit DEPEND/RDEPEND on net-www/apache-2.2*.
 
   15 Jan 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   mod_macro-1.1.2.ebuild, mod_macro-1.1.6.ebuild:
