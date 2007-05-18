@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.71 2007/03/30 15:46:11 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.72 2007/05/18 10:26:40 uberlord Exp $
+
+  18 May 2007; Roy Marples <uberlord@gentoo.org> files/atieventsd.init:
+  Fix the init script to work on baselayout-2
 
   30 Mar 2007; Marien Zwart <marienz@gentoo.org>
   +files/ati-drivers-8.35.5-2.6.19.patch,
