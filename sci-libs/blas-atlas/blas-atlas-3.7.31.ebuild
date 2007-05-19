@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.24.ebuild,v 1.3 2007/03/03 15:45:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.31.ebuild,v 1.1 2007/05/19 02:21:03 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -60,8 +60,16 @@ src_unpack() {
 	else
 		libs="${LDFLAGS} -lpthread -lg2c"
 	fi
-	sed -e "s/SHRD_LNK/${libs}/g" -i Make.top || \
+
+	#increase amount of workspace to improve threaded performance
+	sed -e "s:16777216:167772160:" -i include/atlas_lvl3.h ||
+		die "Failed to fix ATL_MaxMalloc"
+
+	sed -e "s:SHRD_LNK:${libs}:g" -i Make.top || \
 		die "Failed to add addtional libs to shared object build"
+
+	sed -e "s:= gcc:= $(tc-getCC) ${CFLAGS}:" \
+		-i CONFIG/src/SpewMakeInc.c || die "Failed to fix Spewmake"
 
 	mkdir ${BLD_DIR}  || die "failed to generate build directory"
 	cp "${FILESDIR}"/war ${BLD_DIR} && chmod a+x ${BLD_DIR}/war || \
