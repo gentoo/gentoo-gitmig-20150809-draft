@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.8 2007/03/13 00:34:19 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.9 2007/05/19 07:49:23 dirtyepic Exp $
 
-inherit eutils
+inherit eutils wxwidgets
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -17,7 +17,7 @@ IUSE="server X unicode"
 RDEPEND="sys-libs/zlib
 	>=net-misc/curl-7.15.0
 	>=dev-libs/openssl-0.9.7
-	X? ( >=x11-libs/wxGTK-2.6.2 )
+	X? ( =x11-libs/wxGTK-2.6* )
 	server? ( net-www/apache
 		>=virtual/mysql-4.0
 		virtual/php
@@ -51,10 +51,20 @@ src_unpack() {
 }
 
 src_compile() {
+	if use X; then
+		WX_GTK_VER=2.6
+		if use unicode; then
+			need-wxwidgets unicode
+		else
+			need-wxwidgets gtk2
+		fi
+		wxconf="--with-wx-config=${WX_CONFIG}"
+	fi
+
 	econf \
 		--enable-client \
 		--disable-static-client \
-		--with-wx-config=$(type -P wx-config-2.6) \
+		${wxconf} \
 		$(use_enable unicode) \
 		$(use_enable server) \
 		$(use_with X x) || die "econf failed"

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.6 2007/03/13 00:34:19 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.7 2007/05/19 07:49:23 dirtyepic Exp $
 
-inherit eutils
+inherit eutils wxwidgets
 
 MY_PN="boinc_public-cvs"
 MY_PV="2005-08-13"
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="server X"
 
 RDEPEND="sys-libs/zlib
-	X? ( >=x11-libs/wxGTK-2.6.1 )
+	X? ( =x11-libs/wxGTK-2.6* )
 	server? ( net-www/apache
 		>=virtual/mysql-4.0
 		virtual/php
@@ -50,10 +50,16 @@ src_unpack() {
 }
 
 src_compile() {
+	if use X; then
+		WX_GTK_VER=2.6
+		need-wxwidgets gtk2
+		wxconf="--with-wx-config=${WX_CONFIG}"
+	fi
+
 	econf \
 		--enable-client \
 		--disable-static-client \
-		--with-wx-config=$(type -P wx-config-2.6) \
+		${wxconf} \
 		$(use_enable server) \
 		$(use_with X x) || die "econf failed"
 	emake || die "emake failed"

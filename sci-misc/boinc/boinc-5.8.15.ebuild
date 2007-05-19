@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.8.15.ebuild,v 1.1 2007/03/27 05:29:11 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.8.15.ebuild,v 1.2 2007/05/19 07:49:23 dirtyepic Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic wxwidgets
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -16,7 +16,7 @@ IUSE="server X unicode"
 RDEPEND="sys-libs/zlib
 	>=net-misc/curl-7.15.5
 	>=dev-libs/openssl-0.9.7
-	X? ( >=x11-libs/wxGTK-2.6.2 )
+	X? ( =x11-libs/wxGTK-2.6* )
 	server? ( net-www/apache
 		>=virtual/mysql-4.0
 		virtual/php
@@ -45,6 +45,17 @@ src_unpack() {
 
 src_compile() {
 	append-flags -O3 -funroll-loops -fforce-addr -ffast-math
+
+	if use X; then
+		WX_GTK_VER=2.6
+		if use unicode; then
+			need-wxwidgets unicode
+		else
+			need-wxwidgets gtk2
+		fi
+		wxconf="--with-wx-config=${WX_CONFIG}"
+	fi
+
 	# Just run the necessary tools directly
 	#einfo "Running necessary autotools..."
 	#aclocal -I m4 || die "aclocal failed."
@@ -55,7 +66,7 @@ src_compile() {
 		--enable-client \
 		--disable-static-client \
 		--with-ssl \
-		--with-wx-config=$(type -P wx-config-2.6) \
+		${wxconf} \
 		$(use_enable unicode) \
 		$(use_enable server) \
 		$(use_with X x) || die "econf failed"
