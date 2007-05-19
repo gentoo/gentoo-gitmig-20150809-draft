@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.34 2007/04/17 19:16:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.35 2007/05/19 16:35:44 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> tango-icon-theme-0.8.0.ebuild:
+  Keyworded ~x86-fbsd
 
   17 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
   tango-icon-theme-0.8.0.ebuild:
