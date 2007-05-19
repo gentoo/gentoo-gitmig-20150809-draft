@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.7 2007/04/28 16:29:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.8 2007/05/19 21:33:41 philantrop Exp $
 
 WANT_AUTOCONF="2.1"
 
-inherit fixheadtails ssl-cert eutils libtool flag-o-matic autotools
+inherit fixheadtails ssl-cert eutils multilib libtool flag-o-matic autotools
 
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="http://www.isc.org/products/INN"
@@ -43,18 +43,23 @@ src_unpack() {
 	# Fixes compatibility problems with sys-libs/db-4.4 and 4.5,
 	# bug 174680.
 	epatch ${FILESDIR}/${P}-berkdb45.patch
+
+	# Fixes problems with the test suite.
+	epatch ${FILESDIR}/${P}-runtests.patch
 }
 
 src_compile() {
+	elibtoolize
+
 	append-ldflags $(bindnow-flags)
 
 	econf \
-		--prefix=/usr/lib/news \
+		--prefix=/usr/$(get_libdir)/news \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
-		--with-control-dir=/usr/lib/news/bin/control \
+		--with-control-dir=/usr/$(get_libdir)/news/bin/control \
 		--with-etc-dir=/etc/news \
-		--with-filter-dir=/usr/lib/news/bin/filter \
+		--with-filter-dir=/usr/$(get_libdir)/news/bin/filter \
 		--with-db-dir=/var/spool/news/db \
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-spool-dir=/var/spool/news \
@@ -82,7 +87,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}/" P="" SPECIAL="" install || die "make install failed"
 
-	chown -R root:0 "${D}"/usr/{lib/news/{lib,include},share/{doc,man}}
+	chown -R root:0 "${D}"/usr/{$(get_libdir)/news/{lib,include},share/{doc,man}}
 	chmod 644 "${D}"/etc/news/*
 	for file in control.ctl expire.ctl incoming.conf nntpsend.ctl passwd.nntp readers.conf
 	do
@@ -102,7 +107,7 @@ src_install() {
 	use ipv6 && dodoc doc/IPv6-info
 
 	# So other programs can build against INN. (eg. Suck)
-	insinto /usr/lib/news/include
+	insinto /usr/$(get_libdir)/news/include
 	doins include/*.h
 
 	doinitd "${FILESDIR}"/innd innd
@@ -201,12 +206,12 @@ pkg_config() {
 			chown news:news "${NEWSSPOOL_DIR}"/db/history
 			chmod 644 "${NEWSSPOOL_DIR}"/db/history
 
-			su - news -c "/usr/lib/news/bin/makedbz -i"
+			su - news -c "/usr/$(get_libdir)/news/bin/makedbz -i"
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.dir ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.dir "${NEWSSPOOL_DIR}"/db/history.dir
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.pag ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.pag "${NEWSSPOOL_DIR}"/db/history.pag
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.hash ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.hash "${NEWSSPOOL_DIR}"/db/history.hash
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.index ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.index "${NEWSSPOOL_DIR}"/db/history.index
-			su - news -c /usr/lib/news/bin/makehistory
+			su - news -c /usr/$(get_libdir)/news/bin/makehistory
 		else
 			NEWS_ERRFLAG="1"
 			eerror
@@ -234,13 +239,13 @@ pkg_config() {
 		chmod 644 /etc/news/inn.conf
 	fi
 
-	INNCHECK_LINES="$(su - news -c "/usr/lib/news/bin/inncheck | wc -l")"
+	INNCHECK_LINES="$(su - news -c "/usr/$(get_libdir)/news/bin/inncheck | wc -l")"
 	if [[ ${INNCHECK_LINES} -gt 0 ]]
 	then
 		NEWS_ERRFLAG="1"
 		ewarn "inncheck most certainly found an error."
 		ewarn "Please check its output:"
-		eerror "`su - news -c /usr/lib/news/bin/inncheck`"
+		eerror "`su - news -c /usr/$(get_libdir)/news/bin/inncheck`"
 	fi
 
 	if [[ ${NEWS_ERRFLAG} -gt 0 ]]

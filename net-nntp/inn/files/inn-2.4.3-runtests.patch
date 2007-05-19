@@ -1,0 +1,58 @@
+diff -Nur inn-2.4.3.orig/tests/runtests.c inn-2.4.3/tests/runtests.c
+--- inn-2.4.3.orig/tests/runtests.c	2006-03-20 05:14:57.000000000 +0100
++++ inn-2.4.3/tests/runtests.c	2007-05-18 21:42:05.000000000 +0200
+@@ -126,13 +126,13 @@
+ static void sysdie(const char *format, ...);
+ static void *x_malloc(size_t, const char *file, int line);
+ static char *x_strdup(const char *, const char *file, int line);
+-static int test_analyze(const struct testset *);
++static int test_analyze(struct testset *);
+ static int test_batch(const char *testlist);
+ static void test_checkline(const char *line, struct testset *);
+ static void test_fail_summary(const struct testlist *);
+ static int test_init(const char *line, struct testset *);
+ static int test_print_range(int first, int last, int chars, int limit);
+-static void test_summarize(const struct testset *, int status);
++static void test_summarize(struct testset *, int status);
+ static pid_t test_start(const char *path, int *fd);
+ static double tv_diff(const struct timeval *, const struct timeval *);
+ static double tv_seconds(const struct timeval *);
+@@ -369,7 +369,7 @@
+    with a non-zero status, and a negative integer representing the signal
+    that terminated it if it was killed by a signal. */
+ static void
+-test_summarize(const struct testset *ts, int status)
++test_summarize(struct testset *ts, int status)
+ {
+     int i;
+     int missing = 0;
+@@ -436,7 +436,7 @@
+    few special error messages, and then pass it along to test_summarize()
+    for the regular output. */
+ static int
+-test_analyze(const struct testset *ts)
++test_analyze(struct testset *ts)
+ {
+     if (ts->reported) return 0;
+     if (WIFEXITED(ts->status) && WEXITSTATUS(ts->status) != 0) {
+@@ -522,7 +522,7 @@
+ static void
+ test_fail_summary(const struct testlist *fails)
+ {
+-    const struct testset *ts;
++    struct testset *ts;
+     int i, chars, total, first, last;
+ 
+     puts(header);
+diff -Nur inn-2.4.3.orig/tests/lib/snprintf-t.c inn-2.4.3/tests/lib/snprintf-t.c
+--- inn-2.4.3.orig/tests/lib/snprintf-t.c	2006-03-20 05:14:57.000000000 +0100
++++ inn-2.4.3/tests/lib/snprintf-t.c	2007-05-19 12:33:14.000000000 +0200
+@@ -125,7 +125,7 @@
+     test_format(21, true, "abcdefghij4444", 14, "%.10s%n%d", string, &count,
+                 4444);
+     ok(22, count == 10);
+-    test_format(23, true, "abcdefghijklmnopqrstuvwxyz01234", 36, "%ln%s%n",
++    test_format(23, true, "abcdefghijklmnopqrstuvwxyz01234", 36, "%n%s%ln",
+                 &count, string, &lcount);
+     ok(24, count == 0);
+     ok(25, lcount == 31);
