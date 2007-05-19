@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/emma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.6 2007/05/10 09:58:24 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.7 2007/05/19 20:40:40 opfer Exp $
+
+  19 May 2007; Christian Faulhammer <opfer@gentoo.org> emma-2.0.5312.ebuild:
+  stable x86, bug 178938
 
   10 May 2007; Alistair John Bush <ali_bush@gentoo.org>
   emma-2.0.5312-r1.ebuild:
