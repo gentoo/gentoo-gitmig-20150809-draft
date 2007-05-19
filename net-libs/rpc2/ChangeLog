@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.27 2007/03/27 18:48:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.28 2007/05/19 16:11:17 griffon26 Exp $
+
+  19 May 2007; Maurice van der Pot <griffon26@gentoo.org> metadata.xml,
+  -rpc2-1.27.ebuild, -rpc2-1.28.ebuild:
+  Removing old rpc2 ebuilds as agreed upon in bug #167919.
+  Also transferring maintenance to net-fs.
 
   27 Mar 2007; Raúl Porcel <armin76@gentoo.org> rpc2-2.0.ebuild:
   ia64 stable wrt bug 167919
