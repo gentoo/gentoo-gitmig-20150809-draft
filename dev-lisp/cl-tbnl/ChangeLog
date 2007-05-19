@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-tbnl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.41 2007/05/12 13:31:21 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.42 2007/05/19 21:02:41 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> cl-tbnl-0.11.2.ebuild:
+  Keyworded ~amd64 wrt bug 178192
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> -cl-tbnl-0.10.0.ebuild,
   -cl-tbnl-0.10.1.ebuild, -cl-tbnl-0.10.3.ebuild, -cl-tbnl-0.11.3.ebuild:
