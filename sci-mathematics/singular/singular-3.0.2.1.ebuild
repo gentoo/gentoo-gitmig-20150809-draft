@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.2.1.ebuild,v 1.1 2006/10/13 19:46:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.2.1.ebuild,v 1.2 2007/05/19 21:56:11 welp Exp $
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools multilib
 
 PV_MAJOR=${PV%.*}
 MY_PV=${PV//./-}
@@ -16,7 +16,7 @@ SRC_URI="ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/$MY_PV_MAJOR/${MY_
 
 LICENSE="singular"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc emacs boost"
 
 DEPEND=">=dev-lang/perl-5.6
@@ -83,7 +83,7 @@ src_install () {
 	fi
 
 	# install libraries
-	insinto /usr/lib/${PN}
+	insinto /usr/$(get_libdir)/${PN}
 	doins *.so || die "failed to install libraries"
 
 	# create symbolic link
