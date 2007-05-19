@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/mod_lisp2-1.2.ebuild,v 1.3 2007/01/15 17:10:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/mod_lisp2-1.2.ebuild,v 1.4 2007/05/19 21:01:32 welp Exp $
 
 inherit apache-module eutils
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="mod_lisp2 is an Apache2 module to easily write web applications in Common Lisp."
 HOMEPAGE="http://www.fractalconcept.com/asp/sdataQIceRsMvtN9fDM==/sdataQuvY9x3g$ecX"
