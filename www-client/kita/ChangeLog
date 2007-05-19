@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kita
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.32 2007/02/13 10:37:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.33 2007/05/19 11:18:38 armin76 Exp $
+
+  19 May 2007; Raúl Porcel <armin76@gentoo.org> kita-0.177.3-r1.ebuild:
+  alpha stable wrt #165420
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> kita-0.177.3-r1.ebuild:
   Stable on ppc64; bug #165420
