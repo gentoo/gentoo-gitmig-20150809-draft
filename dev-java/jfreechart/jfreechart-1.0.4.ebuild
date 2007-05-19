@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.4.ebuild,v 1.2 2007/04/26 20:01:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.4.ebuild,v 1.3 2007/05/19 13:44:14 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -58,7 +58,7 @@ src_install() {
 
 get_jars() {
 	local antflags="
-		-Ditext.jar=$(java-pkg_getjars itext) \
+		-Ditext.jar=$(java-pkg_getjar itext iText.jar) \
 		-Djcommon.jar=$(java-pkg_getjar jcommon-1.0 jcommon.jar) \
 		-Dservlet.jar=$(java-pkg_getjars servletapi-2.3)"
 	use test && antflags="${antflags} \
