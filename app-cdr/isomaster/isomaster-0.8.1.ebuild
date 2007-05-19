@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-0.8.1.ebuild,v 1.1 2007/04/10 13:56:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-0.8.1.ebuild,v 1.2 2007/05/19 16:41:16 welp Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://littlesvr.ca/isomaster/"
 SRC_URI="http://littlesvr.ca/isomaster/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 

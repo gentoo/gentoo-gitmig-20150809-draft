@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/isomaster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.5 2007/04/10 13:56:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.6 2007/05/19 16:41:16 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> isomaster-0.8.1.ebuild:
+  Keyworded ~x86-fbsd
 
 *isomaster-0.8.1 (10 Apr 2007)
 
