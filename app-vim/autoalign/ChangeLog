@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/autoalign
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.22 2006/11/06 07:54:41 pioto Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.23 2007/05/19 17:36:53 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> autoalign-11.ebuild:
+  Stable on amd64 wrt bug 170899
 
   19 Sep 2006; Mike Kelly <pioto@gentoo.org> autoalign-4.ebuild,
   autoalign-5.ebuild, autoalign-6.ebuild, autoalign-8.ebuild:
