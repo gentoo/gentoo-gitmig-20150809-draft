@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.52 2007/05/16 20:46:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.53 2007/05/19 17:50:03 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> pisg-0.71.ebuild:
+  Stable on amd64 wrt bug 178804
 
   16 May 2007; Raúl Porcel <armin76@gentoo.org> pisg-0.71.ebuild:
   x86 stable wrt #178804

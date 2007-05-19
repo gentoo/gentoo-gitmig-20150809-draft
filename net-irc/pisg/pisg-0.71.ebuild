@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.71.ebuild,v 1.2 2007/05/16 20:46:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.71.ebuild,v 1.3 2007/05/19 17:50:03 welp Exp $
 
 inherit perl-app
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pisg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 IUSE=""
 
