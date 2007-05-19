@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-murrine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.21 2007/05/15 14:27:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.22 2007/05/19 16:46:14 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org>
+  gtk-engines-murrine-0.52.ebuild:
+  Keyworded ~x86-fbsd
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
