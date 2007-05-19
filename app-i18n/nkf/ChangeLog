@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.37 2007/05/19 09:22:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.38 2007/05/19 20:05:29 opfer Exp $
+
+  19 May 2007; Christian Faulhammer <opfer@gentoo.org> nkf-2.0.7.ebuild:
+  stable x86/amd64, bug 178899
 
   19 May 2007; Markus Rothe <corsair@gentoo.org> nkf-2.0.7.ebuild:
   Stable on ppc64; bug #178899
