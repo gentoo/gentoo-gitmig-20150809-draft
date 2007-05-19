@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.16 2007/05/16 18:13:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.17 2007/05/19 10:27:07 george Exp $
+
+  19 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
+  gnat-gpl-3.4.6.2006-r1.ebuild:
+  reverted  the ${D}${D} trickery that was in place to work around sandbox violation. 
+  No longer necessary. (#178140)
 
   16 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
   gnat-gpl-3.4.6.2006.ebuild, gnat-gpl-3.4.6.2006-r1.ebuild:

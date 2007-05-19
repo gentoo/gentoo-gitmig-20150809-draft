@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.2 2007/05/16 18:13:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.3 2007/05/19 10:27:07 george Exp $
 
 inherit gnatbuild
 
@@ -47,15 +47,15 @@ src_unpack() {
 }
 
 src_install() {
-	gnatbuild_src_install install
+	gnatbuild_src_install
 
-	# there is something strange with provided Makefiles, causing an
-	# access violation on gprmake. Have to do funny things..
-	make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die
-	cp -dPr "${D}${D}${PREFIX}"/* "${D}${PREFIX}/"
-	rm -rf "${D}var"
-
-	gnatbuild_src_install move_libs cleanup prep_env
+#	# there is something strange with provided Makefiles, causing an
+#	# access violation on gprmake. Have to do funny things..
+#	make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die
+#	cp -dPr "${D}${D}${PREFIX}"/* "${D}${PREFIX}/"
+#	rm -rf "${D}var"
+#
+#	gnatbuild_src_install move_libs cleanup prep_env
 
 	# docs have to be fetched from 3rd place, quite messy package
 	dodir /usr/share/doc/${PF}/html
