@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/helpgui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/ChangeLog,v 1.4 2007/05/03 12:12:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/ChangeLog,v 1.5 2007/05/19 17:57:06 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> helpgui-1.1-r1.ebuild:
+  Stable on amd64 wrt bug 176289
 
   03 May 2007; Raúl Porcel <armin76@gentoo.org> helpgui-1.1-r1.ebuild:
   x86 stable wrt #176389
