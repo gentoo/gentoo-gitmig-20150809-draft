@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.410 2007/05/19 12:41:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.411 2007/05/19 18:20:11 betelgeuse Exp $
+
+  19 May 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.mask dev-java/sun-javamail-bin as nothing is using it any more.
 
   19 May 2007; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
   Added local USE flag epiphany for dev-embedded/ponyprog.
