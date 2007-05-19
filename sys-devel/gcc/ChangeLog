@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.620 2007/05/19 09:18:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.621 2007/05/19 22:58:33 opfer Exp $
+
+  19 May 2007; Christian Faulhammer <opfer@gentoo.org> gcc-4.1.2.ebuild:
+  stable amd64, bug 178768
 
   19 May 2007; Markus Rothe <corsair@gentoo.org> gcc-4.1.2.ebuild:
   Stable on ppc64; bug #178768
