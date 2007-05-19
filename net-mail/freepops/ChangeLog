@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.29 2007/05/10 21:42:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.30 2007/05/19 00:47:18 dragonheart Exp $
+
+*freepops-0.2.3 (19 May 2007)
+
+  19 May 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/freepops-0.2.3-pop3config.diff, -freepops-0.0.99.ebuild,
+  -freepops-0.0.99-r1.ebuild, -freepops-0.2.0.ebuild,
+  -freepops-0.2.2.ebuild, +freepops-0.2.3.ebuild:
+  version bump + a little tree cleaning
 
 *freepops-0.2.2-r1 (10 May 2007)
 
