@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.83 2007/05/18 12:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.84 2007/05/19 15:20:28 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> xfwm4-themes-4.4.1.ebuild:
+  Stable on amd64 wrt bug 178510
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> xfwm4-themes-4.4.1.ebuild:
   alpha/ia64/x86 stable wrt #178510
