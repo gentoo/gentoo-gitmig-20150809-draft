@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.42 2007/05/14 18:48:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.43 2007/05/19 18:07:36 armin76 Exp $
+
+  19 May 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask networkmanager, as it needs wpa_supplicant which is not keyworded,
+  bug 175714
 
   14 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask, use.mask:
   P.mask cpufreq use-flag and remove useless masks
