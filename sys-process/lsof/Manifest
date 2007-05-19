@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 4.73-answer-config.patch 1755 RMD160 e7a11d6028e7f91c8621078034ac438e5065ac4e SHA1 9237a3a2200867471091c43c0e1552b74824b85e SHA256 0d6257c35020dc4a45c1832ba5c0f925c005914fa44702d2f6d357a3944ac6a3
 MD5 8a26fd08042572a5821e4f5fa51ac5ff files/4.73-answer-config.patch 1755
 RMD160 e7a11d6028e7f91c8621078034ac438e5065ac4e files/4.73-answer-config.patch 1755
 SHA256 0d6257c35020dc4a45c1832ba5c0f925c005914fa44702d2f6d357a3944ac6a3 files/4.73-answer-config.patch 1755
-AUX lsof-4.78-answer-config.patch 2656 RMD160 1a14c80d8b4702b6c9d0269fd70bea1a3643a210 SHA1 7f1adedd267028cb472a4007c71befa9b019da79 SHA256 dbc2d386efcfc1ad45a9e65ffe98e3f05c3b940344574032114668cffd8a9514
-MD5 157ed78e5a27619b1d611f27492fce95 files/lsof-4.78-answer-config.patch 2656
-RMD160 1a14c80d8b4702b6c9d0269fd70bea1a3643a210 files/lsof-4.78-answer-config.patch 2656
-SHA256 dbc2d386efcfc1ad45a9e65ffe98e3f05c3b940344574032114668cffd8a9514 files/lsof-4.78-answer-config.patch 2656
+AUX lsof-4.78-answer-config.patch 2217 RMD160 a8ecfaf246398a016f2ce942ba8142f2554f1fc1 SHA1 0708b69847a6ff8619cbc514a915f80f6db2db84 SHA256 61dafde48ff6ebb469b2e318ea8c45c5ecafc3bc229098ed9fdad84feb25d444
+MD5 5d97573c42f737e188deb53e735a3718 files/lsof-4.78-answer-config.patch 2217
+RMD160 a8ecfaf246398a016f2ce942ba8142f2554f1fc1 files/lsof-4.78-answer-config.patch 2217
+SHA256 61dafde48ff6ebb469b2e318ea8c45c5ecafc3bc229098ed9fdad84feb25d444 files/lsof-4.78-answer-config.patch 2217
 AUX lsof-4.78-freebsd.patch 455 RMD160 8595b877ed722cffda486232cbbbbe6cfc61b4f7 SHA1 a5ce7efd2fd074fdd97114e1f4fc0822b83d0834 SHA256 6a3c841f11fbabb17cf8ff7c6c7b19c04cf169dc01002ee243370003fd81367b
 MD5 7736ad97778540dee579a128d91bbabe files/lsof-4.78-freebsd.patch 455
 RMD160 8595b877ed722cffda486232cbbbbe6cfc61b4f7 files/lsof-4.78-freebsd.patch 455
@@ -34,3 +37,10 @@ SHA256 b07f2bfa9a80ca792889f9ea744d534308f9914a5c55f1917e61fe1ca15659e0 files/di
 MD5 ac99813bdddfddafacc0ac98bf146123 files/digest-lsof-4.78 232
 RMD160 1819b9e9600756877cf79852077c6e96b4748cd1 files/digest-lsof-4.78 232
 SHA256 d0ad63269404932186ef2aa538eb9600ae127bc7b2f444c8f4e9f65ed4754502 files/digest-lsof-4.78 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGToD28bi6rjpTunYRAsYhAKCiUVEbYSYeLKQFhMOuuZDtZxYbQgCfRzoO
+ua8b/Y/g7CoAFmP4amLCSRs=
+=kO9z
+-----END PGP SIGNATURE-----
