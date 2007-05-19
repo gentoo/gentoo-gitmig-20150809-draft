@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.30 2007/05/06 10:14:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.31 2007/05/19 16:09:17 griffon26 Exp $
+
+  19 May 2007; Maurice van der Pot <griffon26@gentoo.org>
+  -files/coda-6.0.10-venus-setup-fix.patch,
+  -files/coda-6.0.14-with-includes-fix.patch, -files/6.0.10/venus,
+  -files/6.0.11/venus, -files/6.0.12/venus, -files/6.0.14/venus,
+  metadata.xml, -coda-6.0.10.ebuild, -coda-6.0.11.ebuild,
+  -coda-6.0.12.ebuild, -coda-6.0.14.ebuild:
+  Removed old coda ebuilds and related files and turned over maintenance to
+  net-fs.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> coda-6.0.10.ebuild,
   coda-6.0.11.ebuild, coda-6.0.12.ebuild, coda-6.0.15.ebuild:

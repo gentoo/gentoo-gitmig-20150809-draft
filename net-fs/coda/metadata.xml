@@ -2,11 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-fs</herd>
-<maintainer>
-  <email>griffon26@gentoo.org</email>
-  <name>Maurice van der Pot</name>
-</maintainer>
-<maintainer>
-  <email>net-fs@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
