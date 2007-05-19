@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.15 2007/05/17 12:37:08 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.16 2007/05/19 09:06:11 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org> guile-1.6.8.ebuild:
+  Stable on ppc64; bug #178360
 
   17 May 2007; Marijn Schouten <hkBst@gentoo.org> +files/slibtest.patch,
   guile-1.6.8.ebuild:
