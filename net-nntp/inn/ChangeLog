@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.14 2007/05/19 21:33:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.15 2007/05/19 22:29:07 opfer Exp $
+
+  19 May 2007; Christian Faulhammer <opfer@gentoo.org> inn-2.4.3.ebuild:
+  stable amd64, bug 173655
 
   19 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/inn-2.4.3-runtests.patch, inn-2.4.3.ebuild:
