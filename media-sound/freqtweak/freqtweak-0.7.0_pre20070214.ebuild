@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.7.0_pre20070214.ebuild,v 1.5 2007/05/06 15:03:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.7.0_pre20070214.ebuild,v 1.6 2007/05/19 22:06:30 dirtyepic Exp $
 
 inherit eutils autotools wxwidgets flag-o-matic
 
@@ -25,14 +25,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-amd64-fixes.patch
 	eautoreconf
 }
 
 src_compile() {
 	WX_GTK_VER="2.6"
-	need-wxwidgets gtk2 || die "No gtk2 version of x11-libs/wxGTK found"
+	need-wxwidgets gtk2
 
-	append-flags "-fno-strict-aliasing"
+	append-flags -fno-strict-aliasing
 
 	econf \
 		--with-wxconfig-path=${WX_CONFIG} || die "econf failed"

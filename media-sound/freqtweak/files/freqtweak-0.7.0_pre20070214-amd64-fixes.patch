@@ -1,0 +1,30 @@
+diff -Naur freqtweak-orig/src/FTprocOrderDialog.cpp freqtweak/src/FTprocOrderDialog.cpp
+--- freqtweak-orig/src/FTprocOrderDialog.cpp	2005-08-14 10:15:47.000000000 -0600
++++ freqtweak/src/FTprocOrderDialog.cpp	2007-05-19 15:39:33.000000000 -0600
+@@ -210,7 +210,7 @@
+ 	for (; mod != mlist.end(); ++mod)
+ 	{
+ 		item.SetText (wxString::FromAscii ((*mod)->getName().c_str()));
+-		item.SetData ((unsigned) (*mod));
++		item.SetData ((unsigned long) (*mod));
+ 		item.SetId(pos++);
+ 		
+ 		_sourceList->InsertItem(item);
+@@ -230,7 +230,7 @@
+ 		for (unsigned int n=0; n < procmods.size(); ++n)
+ 		{
+ 			item.SetText (wxString::FromAscii (procmods[n]->getName().c_str()));
+-			item.SetData ((unsigned) procmods[n]);
++			item.SetData ((unsigned long) procmods[n]);
+ 			item.SetId (n);
+ 			
+ 			_targetList->InsertItem(item);
+@@ -441,7 +441,7 @@
+ 
+ 		if (proc) {
+ 			item.SetText (wxString::FromAscii (proc->getName().c_str()));
+-			item.SetData ((unsigned)proc);
++			item.SetData ((unsigned long)proc);
+ 			item.SetId (_targetList->GetItemCount());
+ 			
+ 			_targetList->InsertItem(item);
