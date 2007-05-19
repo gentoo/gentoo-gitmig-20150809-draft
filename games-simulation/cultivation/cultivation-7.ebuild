@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/cultivation-7.ebuild,v 1.1 2007/05/17 20:11:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/cultivation-7.ebuild,v 1.2 2007/05/19 21:17:02 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/glut
