@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.5 2007/05/06 15:01:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.6 2007/05/19 18:45:08 armin76 Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc examples qt3"
 
 RDEPEND="qt3? ( $(qt_min_version 3.3) )"
