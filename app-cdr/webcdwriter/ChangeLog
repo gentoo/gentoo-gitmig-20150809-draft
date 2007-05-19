@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/webcdwriter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.11 2007/04/28 21:38:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.12 2007/05/19 21:24:08 betelgeuse Exp $
+
+*webcdwriter-2.8.0-r1 (19 May 2007)
+
+  19 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/2.8.0-javac-flags.patch, metadata.xml,
+  +webcdwriter-2.8.0-r1.ebuild:
+  Migrate to generation 2 eclasses for bug #175525. Add java to metadata.xml
+  for future updates. Java is now mandatory because it was just installing
+  then bundled stuff before.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> webcdwriter-2.6.8-r1.ebuild,
   webcdwriter-2.7.1.ebuild, webcdwriter-2.7.2.ebuild,

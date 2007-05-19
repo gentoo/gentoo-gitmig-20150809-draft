@@ -1,0 +1,70 @@
+diff -Naur webCDwriter-2.8.0.orig/configure webCDwriter-2.8.0/configure
+--- webCDwriter-2.8.0.orig/configure	2007-04-29 23:23:42.000000000 +1200
++++ webCDwriter-2.8.0/configure	2007-04-30 18:43:42.000000000 +1200
+@@ -47,6 +47,9 @@
+ 	--destDir=*)
+ 		DESTDIR=`echo $1 | sed "s:--destDir=::g"`
+ 		;;
++	--javac-flags=*)
++		JAVACFLAGS=`echo $1 | sed "s:--javac-flags=::g"`
++		;;
+ 	--doNotCompileCDWserver)
+ 		doNotCompileCDWserver="on"
+ 		;;
+@@ -105,6 +108,8 @@
+ 
+ --destDir              use a prefix invisible to the installed files
+ 
++--javac-flags		Flags to pass to javac
++
+ --doNotCompileCDWserver  if you want to install CDWserver Pro
+ 
+ --doNotCompileWebCDcreator  use the precompiled and signed webCDcreator
+@@ -152,7 +157,8 @@
+ 	}
+ }
+ EOF
+-javac Test.java 2> /dev/null \
++#2> /dev/null
++javac ${JAVACFLAGS} Test.java Test0.java \
+ 	&& webCDcreator="webCDcreator.jar $webCDcreator" \
+ 	&& echo " OK -> will build webCDcreator.jar" \
+ 	|| echo " not found -> will use precompiled webCDcreator.jar"
+@@ -284,13 +290,17 @@
+ 	forPluginRSA=""
+ fi
+ 
++echo "JAVACFLAGS=${JAVACFLAGS}"
++
+ cat webCDcreator/Makefile.in \
+ 	| sed s/@nosCert@/"$nosCert"/g \
+ 	| sed s/@sunCert@/"$sunCert"/g \
+ 	| sed s/@all@/"$webCDcreator"/g \
+ 	| sed s/@4pi@/"$forPlugin"/g \
+ 	| sed s/@4ns@/"$forPluginRSA"/g \
++	| sed s_@JAVACFLAGS@_"$JAVACFLAGS"_g \
+ 	> webCDcreator/Makefile
++#| sed s_@JAVACFLAGS@_"\"$JAVACFLAGS\""_g \
+ 
+ 
+ echo "Creating config"
+diff -Naur webCDwriter-2.8.0.orig/webCDcreator/Makefile.in webCDwriter-2.8.0/webCDcreator/Makefile.in
+--- webCDwriter-2.8.0.orig/webCDcreator/Makefile.in	2007-04-29 23:23:42.000000000 +1200
++++ webCDwriter-2.8.0/webCDcreator/Makefile.in	2007-04-30 20:16:01.000000000 +1200
+@@ -14,6 +14,7 @@
+ 
+ nosCert=@nosCert@
+ sunCert=@sunCert@
++JAVACFLAGS=@JAVACFLAGS@
+ 
+ all: @all@
+ 
+@@ -21,7 +22,7 @@
+ 	$(MAKE) -C icons
+ 
+ webCDcreator.jar: *.java icons/up.jpg
+-	javac -target 1.4 *.java
++	javac ${JAVACFLAGS} *.java netscape/security/*.java
+ 	jar cfm webCDcreator.jar Manifest \
+ 		gpl.html \
+ 		*.class \

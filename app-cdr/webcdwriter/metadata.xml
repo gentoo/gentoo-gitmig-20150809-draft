@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>media-optical</herd>
+	<herd>media-optical</herd>
+	<herd>java</herd>
 <longdescription>webCDwriter can be used to make the CD- and DVD-writer(s)
 	connected to a Linux box available to all users in your network. It consists
 	of the server CDWserver and the clients webCDcreator and rcdrecord.
