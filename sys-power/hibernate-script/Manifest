@@ -6,6 +6,10 @@ EBUILD hibernate-script-1.94-r5.ebuild 2020 RMD160 4fdc84dd228c386e291023d5bb1df
 MD5 65b42a45f8ea2f6d7fa4da06720c2560 hibernate-script-1.94-r5.ebuild 2020
 RMD160 4fdc84dd228c386e291023d5bb1dff3a854490c3 hibernate-script-1.94-r5.ebuild 2020
 SHA256 053c8c75eded6be2033be0ba5a3cf19a0636fcf84aedc9fb4158b125ea92aaf9 hibernate-script-1.94-r5.ebuild 2020
+EBUILD hibernate-script-1.95-r1.ebuild 2081 RMD160 3ff3b9b98b735949103bee7d11db4d80b8ab7393 SHA1 6729933acfce317f8afaaca8d56698fdd653d38f SHA256 749e50b29e9abddb2d477113c7b1458bf090ef31d9b90e1f7ac563990ef2fc27
+MD5 b36191d4cc3fa701cac1ea5f5f11e447 hibernate-script-1.95-r1.ebuild 2081
+RMD160 3ff3b9b98b735949103bee7d11db4d80b8ab7393 hibernate-script-1.95-r1.ebuild 2081
+SHA256 749e50b29e9abddb2d477113c7b1458bf090ef31d9b90e1f7ac563990ef2fc27 hibernate-script-1.95-r1.ebuild 2081
 EBUILD hibernate-script-1.95.ebuild 2057 RMD160 1429fdaf5fc9470091a89b9aea53505f85ea2c00 SHA1 f92bee37edce15f908502090b4e0764a25b4ae19 SHA256 19f93ebf7183dbc640b00ee7b143a571526735493146e6fc57dee0313d10e62b
 MD5 d26c3e64f4ab2e711fec8b7335287fe1 hibernate-script-1.95.ebuild 2057
 RMD160 1429fdaf5fc9470091a89b9aea53505f85ea2c00 hibernate-script-1.95.ebuild 2057
@@ -24,3 +28,6 @@ SHA256 f1d8eff3fc5ec2e58550e58ff0fdd515c81c191eefb1c1beccca6904f8b72201 files/di
 MD5 a981eb50fc6ea477759c8f22998ab91f files/digest-hibernate-script-1.95 554
 RMD160 f3ee59ea742354ca2686c7fa37dcab5b665390cd files/digest-hibernate-script-1.95 554
 SHA256 2f12fab85f0702f3af4052515a6d1c0e254f0f154390ac76b52d27d740136ad4 files/digest-hibernate-script-1.95 554
+MD5 a981eb50fc6ea477759c8f22998ab91f files/digest-hibernate-script-1.95-r1 554
+RMD160 f3ee59ea742354ca2686c7fa37dcab5b665390cd files/digest-hibernate-script-1.95-r1 554
+SHA256 2f12fab85f0702f3af4052515a6d1c0e254f0f154390ac76b52d27d740136ad4 files/digest-hibernate-script-1.95-r1 554
