@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.108 2007/05/09 05:00:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.109 2007/05/19 01:59:53 kumba Exp $
+
+  19 May 2007; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.20.11.ebuild:
+  Mark 2.6.20.11 as stable on mips.  It is time.
 
 *mips-sources-2.6.20.11 (09 May 2007)
 
