@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/mpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.4 2007/03/13 00:42:24 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.5 2007/05/19 21:13:10 opfer Exp $
+
+  19 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/mpm-2.5.2398_beta14-multipleroots.patch,
+  mpm-2.5.2398_beta14.ebuild:
+  added patch to fix search for multiple root directories. Fixes bes bug
+  144285, patch provided by Peter Ansell; added ~amd64, see bug 178928
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
