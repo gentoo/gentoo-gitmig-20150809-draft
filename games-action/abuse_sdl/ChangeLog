@@ -1,6 +1,12 @@
 # ChangeLog for games-action/abuse_sdl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.12 2007/03/12 13:12:29 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.13 2007/05/19 09:04:10 tupone Exp $
+
+*abuse_sdl-0.7.0-r3 (19 May 2007)
+
+  19 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +abuse_sdl-0.7.0-r3.ebuild:
+  Patched for amd64 from debian and menu entry. Bug #155617 by Pachos Ramos
 
   11 Mar 2007; Marius Mauch <genone@gentoo.org> abuse_sdl-0.7.0-r2.ebuild:
   Replacing einfo with elog
