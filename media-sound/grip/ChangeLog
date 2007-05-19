@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.73 2007/02/01 20:12:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.74 2007/05/19 21:23:58 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> grip-3.3.1.ebuild:
+  Keyworded ~x86-fbsd wrt bug 178236
 
   01 Feb 2007; Jeroen Roovers <jer@gentoo.org> grip-3.3.1.ebuild:
   Stable for HPPA (bug #136137).
