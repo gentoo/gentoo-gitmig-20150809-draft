@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.129 2007/05/19 08:59:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.130 2007/05/19 09:05:03 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org> libpng-1.2.16.ebuild:
+  Stable on ppc64; bug #178359
 
   19 May 2007; Markus Rothe <corsair@gentoo.org> libpng-1.2.18.ebuild:
   Stable on ppc64; bug #178004
