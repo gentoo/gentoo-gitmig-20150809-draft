@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.16 2007/04/12 13:11:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.17 2007/05/19 09:02:50 dirtyepic Exp $
+
+  19 May 2007; Ryan Hill <dirtyepic@gentoo.org> kicad-20060828.ebuild,
+  kicad-20070115.ebuild:
+  Fix wxwidgets.eclass usage to work with upcoming changes.
 
   12 Apr 2007; Markus Rothe <corsair@gentoo.org> kicad-20070115.ebuild:
   Added ~ppc64
