@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sqlite3-ruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.17 2007/04/27 12:57:37 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.18 2007/05/19 08:51:56 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org> sqlite3-ruby-1.2.1.ebuild:
+  Added ~ppc64; bug #176308
 
   27 Apr 2007; Matti Bickel <mabi@gentoo.org> sqlite3-ruby-1.2.1.ebuild:
   ~ppc keyword readded (bug #168110)

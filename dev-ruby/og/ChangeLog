@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/og
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.13 2007/05/13 16:32:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.14 2007/05/19 08:53:52 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org> og-0.40.0.ebuild:
+  Added ~ppc64; bug #176308
 
   13 May 2007; Hans de Graaff <graaff@gentoo.org> -og-0.29.0.ebuild,
   og-0.40.0.ebuild:
