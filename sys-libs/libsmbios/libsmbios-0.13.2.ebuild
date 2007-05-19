@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-0.13.2.ebuild,v 1.2 2007/03/05 22:21:57 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-0.13.2.ebuild,v 1.3 2007/05/19 21:19:28 cedk Exp $
 
 DESCRIPTION="Provide access to (SM)BIOS information"
 HOMEPAGE="http://linux.dell.com/libsmbios/main/index.html"
@@ -12,7 +12,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2
-	sys-libs/zlib"
+	sys-libs/zlib
+	test? ( dev-util/cppunit )"
 RDEPEND=${DEPEND}
 
 src_compile() {
