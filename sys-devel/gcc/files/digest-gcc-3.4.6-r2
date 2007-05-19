@@ -4,9 +4,9 @@ SHA256 a29adc9260071f5928f2e491803b73117ee176e4b19b56ce421aa3ca461370b2 bounds-c
 MD5 90aa9cb64d7edcd9a2306abe910cbe3b gcc-3.4.5-uclibc-patches-1.1.tar.bz2 70923
 RMD160 89e42889420fbab22e418261d248a89ee2bbbe9b gcc-3.4.5-uclibc-patches-1.1.tar.bz2 70923
 SHA256 5b92fac2afe835a127976fdb6602fb5628cf28e67dd19e8289768a3bb8631ec2 gcc-3.4.5-uclibc-patches-1.1.tar.bz2 70923
-MD5 cc05b66335b2fd31076f70bc3a8de225 gcc-3.4.6-patches-1.4.tar.bz2 55772
-RMD160 bdc96bf39b806a30d566d18dfe1f0b4b2f34af22 gcc-3.4.6-patches-1.4.tar.bz2 55772
-SHA256 ee3ba71670f9fd3857035744563a21ae8238c679ebef54502e5d298d4d1af04a gcc-3.4.6-patches-1.4.tar.bz2 55772
+MD5 062052e9bf8370ce434bd17bb79208ca gcc-3.4.6-patches-1.5.tar.bz2 57250
+RMD160 15dd24bf2c8fcff195ce0645fd5bd593602883d8 gcc-3.4.6-patches-1.5.tar.bz2 57250
+SHA256 e294cf73e905a3e67831bd73b37085ba521f786ccc8e6ffe7e948a6cee2f9c7f gcc-3.4.6-patches-1.5.tar.bz2 57250
 MD5 6f43591e4b221c17f6cec4ceffcc04c6 gcc-3.4.6-piepatches-v8.7.10.tar.bz2 8207
 RMD160 b74560140ce242d0e3c7db113c13f77ca7b5a9b9 gcc-3.4.6-piepatches-v8.7.10.tar.bz2 8207
 SHA256 8ed5bbaebc2ce54071063c12e6a11b9913bd9d993d33a51dec52e7b42f477cc6 gcc-3.4.6-piepatches-v8.7.10.tar.bz2 8207
