@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_2-sapi.eclass,v 1.7 2007/05/18 13:32:14 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_2-sapi.eclass,v 1.8 2007/05/19 00:12:17 chtekk Exp $
 
 # ========================================================================
 #
@@ -464,9 +464,9 @@ php5_2-sapi_src_compile() {
 	fi
 
 	# Tell PHP where the db.h is on FreeBSD
-	if use berkdb ; then
-		append-cppflags "-I$(db_includedir)"
-	fi
+#	if use berkdb ; then
+#		append-cppflags "-I$(db_includedir)"
+#	fi
 
 	# DBA drivers support
 	phpconfutils_extension_with "cdb"		"cdb"		0
