@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r2.ebuild,v 1.1 2007/05/02 20:55:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r2.ebuild,v 1.2 2007/05/19 02:23:20 eradicator Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -95,7 +95,7 @@ src_unpack() {
 
 	use ssl &&
 		unpack secure_login-${SECURELOGIN_VER}.tar.gz &&
-		mv secure_login/config.php.sample secure_login/config.php &&
+		mv secure_login/config.sample.php secure_login/config.php &&
 		unpack show_ssl_link-${SHOWSSL_VER}.tar.gz &&
 		mv show_ssl_link/config.php.sample show_ssl_link/config.php
 

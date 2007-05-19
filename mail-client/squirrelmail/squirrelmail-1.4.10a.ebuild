@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.9a-r1.ebuild,v 1.2 2007/05/06 18:27:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.10a.ebuild,v 1.1 2007/05/19 02:23:20 eradicator Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
