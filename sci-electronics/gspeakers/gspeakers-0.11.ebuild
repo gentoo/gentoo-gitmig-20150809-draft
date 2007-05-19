@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/gspeakers-0.11.ebuild,v 1.4 2007/05/16 21:44:32 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/gspeakers-0.11.ebuild,v 1.5 2007/05/19 14:52:14 calchan Exp $
 
 inherit gnome2
 
@@ -13,9 +13,13 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~ppc"
 IUSE=""
 
-DEPEND=">=dev-cpp/gtkmm-2.4
-	>=sci-electronics/gnucap-0.34
-	dev-libs/libxml2
+RDEPEND=">=dev-cpp/gtkmm-2.4
+	dev-libs/libxml2"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+RDEPEND="${RDEPEND}
+	|| ( >=sci-electronics/gnucap-0.34
+		sci-electronics/ng-spice-rework
+		sci-electronics/spice )"
 
 DOCS="README* INSTALL Changelog AUTHORS NEWS ABOUT"
