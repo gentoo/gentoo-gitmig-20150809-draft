@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.41 2007/05/19 13:01:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.42 2007/05/19 15:24:56 nixnut Exp $
+
+  19 May 2007; nixnut <nixnut@gentoo.org> chkrootkit-0.47.ebuild:
+  Stable on ppc wrt bug 170634
 
   19 May 2007; Andrej Kacian <ticho@gentoo.org> chkrootkit-0.47.ebuild:
   Stable on x86, bug #170634.
