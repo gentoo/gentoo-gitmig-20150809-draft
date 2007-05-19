@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.27 2007/05/16 17:54:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.28 2007/05/19 09:01:55 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org>
+  mdbtools-0.6_pre1-r1.ebuild:
+  Added ~ppc64; bug #178310
 
   16 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   mdbtools-0.6_pre1-r1.ebuild:
