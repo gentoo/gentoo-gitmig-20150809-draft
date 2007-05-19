@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.21 2007/05/07 17:20:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.22 2007/05/19 16:42:41 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> transmission-0.72.ebuild:
+  Keyworded ~x86-fbsd
 
   07 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   transmission-0.6.1-r1.ebuild:
