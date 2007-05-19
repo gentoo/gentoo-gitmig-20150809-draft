@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.2 2007/01/02 21:47:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.3 2007/05/19 05:42:42 dirtyepic Exp $
 
 inherit eutils wxwidgets
 
@@ -23,7 +23,7 @@ DEPEND="
    =x11-libs/wxGTK-2.6*
    >=www-client/mozilla-firefox-2.0
    python? ( dev-lang/python
-           >=dev-python/wxpython-2.6.3 )"
+           =dev-python/wxpython-2.6* )"
 
 SLOT="0"
 LICENSE="wxWinLL-3"
@@ -38,14 +38,6 @@ src_unpack() {
 
 src_compile() {
 
-	# Current Problems:
-	#   -can't find wx-config without the funky configure option
-	#   -configure will give a warning about wxpython, but it can be ignored.
-
-	# Currently Working:
-	#
-	# Firefox 2.0 support.  Builds against seamonkey-1.0.7 but crashes
-
 	WX_GTK_VER="2.6"
 	need-wxwidgets unicode
 
@@ -58,8 +50,7 @@ src_compile() {
 
 	econf \
 		$(use_enable python) \
-		--disable-gtktest \
-		--with-wx-config=wx-config-2.6 \
+		--with-wx-config="${WX_CONFIG}" \
 		${myconf} \
 		|| die "configure failed"
 
