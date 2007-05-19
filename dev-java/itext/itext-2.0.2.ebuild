@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.2.ebuild,v 1.1 2007/04/18 18:02:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.2.ebuild,v 1.2 2007/05/19 13:51:41 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -8,11 +8,19 @@ inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A Java library that generate documents in the Portable Document Format (PDF) and/or HTML."
 HOMEPAGE="http://www.lowagie.com/iText/"
-SRC_URI="mirror://sourceforge/itext/${PN}-src-${PV}.tar.gz"
+DISTFILE="${PN}-src-${PV}.tar.gz"
+ASIANJAR="iTextAsian.jar"
+ASIANCMAPSJAR="iTextAsianCmaps.jar"
+SRC_URI="mirror://sourceforge/itext/${DISTFILE}
+	cjk? (
+		mirror://sourceforge/itext/${ASIANJAR}
+		mirror://sourceforge/itext/${ASIANCMAPSJAR}
+	)"
 
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="cjk"
 
 COMMON_DEPEND=">=dev-java/bcmail-1.36
 	>=dev-java/bcprov-1.36"
@@ -25,7 +33,11 @@ S=${WORKDIR}
 
 src_unpack() {
 	mkdir "${WORKDIR}/src" && cd "${WORKDIR}/src"
-	unpack ${A}
+	unpack ${DISTFILE}
+
+	if use cjk; then
+		cp "${DISTDIR}/${ASIANJAR}" "${DISTDIR}/${ASIANCMAPSJAR}" "${S}" || die
+	fi
 
 	epatch ${FILESDIR}/${PV}-compile_xml.patch
 	epatch ${FILESDIR}/${PV}-site_xml.patch
@@ -41,6 +53,10 @@ EANT_BUILD_XML="src/build.xml"
 
 src_install() {
 	java-pkg_dojar build/bin/iText.jar
+	if use cjk; then
+		java-pkg_dojar "${ASIANJAR}"
+		java-pkg_dojar "${ASIANCMAPSJAR}"
+	fi
 
 	use source && java-pkg_dosrc src/com
 	use doc && java-pkg_dojavadoc build/docs

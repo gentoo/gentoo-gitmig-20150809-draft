@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.41 2007/04/18 18:02:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.42 2007/05/19 13:51:41 caster Exp $
+
+  19 May 2007; Vlastimil Babka <caster@gentoo.org> itext-2.0.2.ebuild:
+  Add cjk useflag that downloads and installs Asian fonts and cmaps.
 
 *itext-2.0.2 (18 Apr 2007)
 
