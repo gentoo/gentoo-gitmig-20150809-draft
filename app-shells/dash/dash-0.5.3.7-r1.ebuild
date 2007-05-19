@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.3.7-r1.ebuild,v 1.2 2007/05/19 13:42:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.3.7-r1.ebuild,v 1.3 2007/05/19 15:57:12 uberlord Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -24,13 +24,6 @@ DEPEND="libedit? ( dev-libs/libedit )"
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	if use static && use libedit ; then
-		eerror "You cannot build dash with both static and libedit USE flags"
-		die "You cannot build dash with both static and libedit USE flags"
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 
@@ -44,7 +37,9 @@ src_unpack() {
 
 	# Always statically link libedit in to ensure we always boot if it changes
 	# which it has done in the past.
-	sed -i -e 's/-ledit/-lncurses -Wl,-Bstatic -ledit -Wl,-Bdynamic/g' configure.ac || die
+	local s="s/-ledit/-Wl,-Bstatic -ledit -Wl,-Bdynamic -lcurses/g"
+	use static && s="s/-ledit/-ledit -lcurses/g"
+	sed -i -e "${s}" configure.ac || die "Failed to sed configure.ac"
 
 	# May as well, as the debian patches force this anyway
 	eautoreconf
@@ -53,12 +48,11 @@ src_unpack() {
 src_compile() {
 	local myconf=
 
-	use libedit && myconf="${myconf} --with-libedit"
 	use static && append-ldflags -static
+	use libedit && myconf="${myconf} --with-libedit"
 	export CC="$(tc-getCC)"
 
 	econf ${myconf} || die "econf failed"
-
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
