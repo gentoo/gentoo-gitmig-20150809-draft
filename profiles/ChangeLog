@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.408 2007/05/18 13:58:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.409 2007/05/19 09:03:28 alonbl Exp $
+
+  19 May 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Remove suspend2 group
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove www-servers/ncsa-httpd, www-servers/plb and net-im/aim-transport from

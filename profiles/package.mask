@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7277 2007/05/18 13:58:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7278 2007/05/19 09:03:28 alonbl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1140,11 +1140,6 @@ media-font/mikachan-font
 # Libnotify doesn't work with dbus-python-0.80.x
 # fixed in a newer version
 =net-im/gajim-0.11-r3
-
-# Alon Bar-Lev <alonbl@gentoo.org> (09 Feb 2007)
-# This is a development version
->=sys-kernel/suspend2-sources-2.6.20
->=sys-apps/suspend2-userui-0.7.0
 
 # Renat Lumpau <rl03@gentoo.org> (06 Feb 2007)
 # masking a bleeding edge version
