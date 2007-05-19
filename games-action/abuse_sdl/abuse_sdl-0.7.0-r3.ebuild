@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r3.ebuild,v 1.1 2007/05/19 09:04:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r3.ebuild,v 1.2 2007/05/19 11:24:53 tupone Exp $
 
 inherit eutils games
 
@@ -31,9 +31,12 @@ src_unpack() {
 	cd ${DATA}
 	unpack abuse_datafiles.tar.gz
 
-	# hard-coded path in the default config writer.
 	cd "${S}"
 	epatch ../${PN}-patch/*
+	sed -i -e "s:/var/games:${GAMES_DATADIR}:" \
+		src/sdlport/setup.cpp
+
+	# hard-coded path in the default config writer.
 	sed -i \
 		-e "s:/usr/local/share/games/abuse:${GAMES_DATADIR}/abuse:" \
 			src/sdlport/setup.cpp || die "sed src/sdlport/setup.cpp failed"
