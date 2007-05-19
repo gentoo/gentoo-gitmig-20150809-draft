@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.37 2007/05/17 11:05:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.38 2007/05/19 16:24:00 nixnut Exp $
+
+  19 May 2007; nixnut <nixnut@gentoo.org> pylint-0.13.1.ebuild:
+  Stable on ppc wrt bug 176201
 
   17 May 2007; Raúl Porcel <armin76@gentoo.org> pylint-0.13.1.ebuild:
   x86 stable wrt #176201
