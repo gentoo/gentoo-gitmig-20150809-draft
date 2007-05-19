@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.39 2007/05/18 20:16:47 hyakuhei Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.40 2007/05/19 08:50:00 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org> chkrootkit-0.47.ebuild:
+  Stable on ppc64; bug #170634
 
   18 May 2007; Robert Clark <hyakuhei@gentoo.org> metadata.xml:
   Added myself to metadata.xml as maintainer
