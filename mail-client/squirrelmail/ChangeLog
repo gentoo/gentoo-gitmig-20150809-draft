@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.83 2007/05/19 08:56:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.84 2007/05/19 09:44:46 dertobi123 Exp $
+
+  19 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  squirrelmail-1.4.10a.ebuild:
+  ppc stable, bug #177820
 
   19 May 2007; Markus Rothe <corsair@gentoo.org>
   squirrelmail-1.4.10a.ebuild:
