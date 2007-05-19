@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.26 2007/02/20 22:43:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.27 2007/05/19 03:25:01 vapier Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -13,8 +13,8 @@
 # build X in an expected way
 USE="bitmap-fonts truetype-fonts type1-fonts"
 
-# make sure toolchain has sane defaults
-USE="${USE} fortran"
+# make sure toolchain has sane defaults <tooclhain@gentoo.org>
+USE="${USE} mudflap fortran openmp"
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default
