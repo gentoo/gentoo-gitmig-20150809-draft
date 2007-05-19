@@ -1,0 +1,11 @@
+--- mk/base/tendra.install.mk
++++ mk/base/tendra.install.mk
+@@ -76,7 +76,7 @@
+ 
+ 
+ # Our main target.
+-install-all: install-dir ${INSTALL_TARGETS}
++install-all: install-dir .WAIT ${INSTALL_TARGETS}
+ 
+ 
+ # Create our directories.

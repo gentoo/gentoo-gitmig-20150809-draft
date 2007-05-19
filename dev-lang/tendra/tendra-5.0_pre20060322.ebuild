@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20060322.ebuild,v 1.2 2006/09/06 16:18:31 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20060322.ebuild,v 1.3 2007/05/19 20:52:01 truedfx Exp $
 
 inherit eutils toolchain-funcs bsdmk
 
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack tendra-${MY_PV}.tar.bz2
 	cd "${S}"
 	epatch "${DISTDIR}"/${P}-misc.patch.bz2
+	epatch "${FILESDIR}"/${P}-install.patch
 }
 
 src_compile() {
