@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.156 2007/05/05 22:54:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.157 2007/05/19 21:14:36 welp Exp $
+
+  19 May 2007; Peter Weller <welp@gentoo.org> syslog-ng-2.0.3.ebuild:
+  Keyworded ~x86-fbsd wrt bug 176930
 
   05 May 2007; Michael Sterrett <mr_bones_@gentoo.org>
   files/syslog-ng.rc6-r1:
