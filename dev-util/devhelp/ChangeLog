@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.51 2007/05/19 17:08:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.52 2007/05/19 21:48:44 dang Exp $
+
+  19 May 2007; Daniel Gryniewicz <dang@gentoo.org> devhelp-0.14.ebuild:
+  Add xulrunner support; make gecko choices match the rest of gnome
 
   19 May 2007; nixnut <nixnut@gentoo.org> devhelp-0.13.ebuild:
   Stable on ppc wrt bug 178681
