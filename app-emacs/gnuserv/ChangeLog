@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.13 2007/03/07 09:52:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.14 2007/05/19 16:02:05 ulm Exp $
+
+  19 May 2007; Ulrich Mueller <ulm@gentoo.org> gnuserv-3.12.7.ebuild:
+  Add IUSE="X" and missing libXau dependency. Add messages to die commands.
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50gnuserv-gentoo.el:
