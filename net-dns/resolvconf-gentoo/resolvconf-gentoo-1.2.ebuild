@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.2.ebuild,v 1.12 2007/05/06 09:23:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.2.ebuild,v 1.13 2007/05/19 17:14:26 kumba Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~uberlord/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
