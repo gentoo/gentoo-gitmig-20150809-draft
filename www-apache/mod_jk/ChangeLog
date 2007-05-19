@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.30 2007/05/13 20:05:10 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.31 2007/05/19 16:51:48 wltjr Exp $
+
+*mod_jk-1.2.23 (19 May 2007)
+
+  19 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +mod_jk-1.2.23.ebuild:
+  Bumped to latest release
 
   13 May 2007; Luca Longinotti <chtekk@gentoo.org> mod_jk-1.2.21-r2.ebuild,
   mod_jk-1.2.22.ebuild:
