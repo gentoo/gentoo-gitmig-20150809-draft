@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.619 2007/05/19 03:22:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.620 2007/05/19 09:18:01 corsair Exp $
+
+  19 May 2007; Markus Rothe <corsair@gentoo.org> gcc-4.1.2.ebuild:
+  Stable on ppc64; bug #178768
 
 *gcc-4.2.0 (19 May 2007)
 
