@@ -1,9 +1,9 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.12 2007/05/18 21:44:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.13 2007/05/19 10:14:13 george Exp $
 
   18 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
-  gnat-gcc-4.1.1.ebuild, gnat-gcc-4.1.2.ebuild:
+  gnat-gcc-4.1.1.ebuild, gnat-gcc-4.1.2.ebuild, gnat-gcc-3.4.5-r2.ebuild, gnat-gcc-3.4.6.ebuild:
   added QA_EXECSTACK bypass (#141315)
 
   18 May 2007; George Shapovalov <george@gentoo.org>
