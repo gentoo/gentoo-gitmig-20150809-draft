@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.21-r3.ebuild,v 1.2 2007/05/17 19:42:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.20-r6.ebuild,v 1.1 2007/05/19 08:58:20 alonbl Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="10"
 
 inherit kernel-2
 detect_version
@@ -13,8 +13,8 @@ detect_arch
 DESCRIPTION="Software Suspend 2 + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches http://www.suspend2.net"
 
-SUSPEND2_VERSION="2.2.9.17"
-SUSPEND2_TARGET="2.6.21"
+SUSPEND2_VERSION="2.2.10"
+SUSPEND2_TARGET="2.6.20.11"
 SUSPEND2_SRC="suspend2-${SUSPEND2_VERSION}-for-${SUSPEND2_TARGET}"
 SUSPEND2_URI="http://www.suspend2.net/downloads/all/${SUSPEND2_SRC}.patch.bz2"
 
@@ -25,8 +25,8 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${SUSPEND2_URI}"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="${RDEPEND}
-		>=sys-apps/suspend2-userui-0.7.1_pre
-		>=sys-power/hibernate-script-1.94"
+		>=sys-apps/suspend2-userui-0.7.1
+		>=sys-power/hibernate-script-1.95"
 
 K_EXTRAEINFO="If there are issues with this kernel, please direct any
 queries to the suspend2-users mailing list:
