@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.141 2007/05/17 21:15:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.142 2007/05/20 21:42:12 wltjr Exp $
+
+*tomcat-5.5.23-r4 (20 May 2007)
+
+  20 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/5.5/tomcat.init.2, -tomcat-5.5.23-r3.ebuild,
+  +tomcat-5.5.23-r4.ebuild:
+  Added code to init script to check VM version, fix for bug #179119
 
 *tomcat-6.0.13-r1 (17 May 2007)
 *tomcat-5.5.23-r3 (17 May 2007)

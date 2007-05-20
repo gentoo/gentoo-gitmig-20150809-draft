@@ -1,9 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.3 2007/05/17 21:15:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.4 2007/05/20 21:42:12 wltjr Exp $
 
 init_env_vars() {
+	if [ "$(gjl -p tomcat-5.5 --get-vm)" ] ; then
+		error "Tomcat has been compiled with java5 USE flag set."
+		error "Tomcat now requires a VM >=1.5 to run."
+		error "Please check your VM version, and restart Tomcat."
+		eend 1
+	fi
+
 	# Set some sane defaults
 	if [ -z "${CATALINA_TMPDIR}" ] ; then
 		CATALINA_TMPDIR="${CATALINA_BASE}"/temp
