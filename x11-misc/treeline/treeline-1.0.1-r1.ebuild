@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.0.1-r1.ebuild,v 1.1 2007/05/16 22:37:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.0.1-r1.ebuild,v 1.2 2007/05/20 07:39:32 opfer Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.bellz.org/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="spell"
 
 DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
