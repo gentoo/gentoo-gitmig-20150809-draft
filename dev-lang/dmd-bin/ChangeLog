@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/dmd-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.3 2007/03/09 21:04:11 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.4 2007/05/20 20:37:11 anant Exp $
+
+*dmd-bin-1.010 (21 May 2007)
+
+  21 May 2007; Anant Narayanan <anant@gentoo.org> +dmd-bin-1.010.ebuild:
+  vBump to 1.010 and make Phobos compile instead of using the bundled binary
 
   08 Mar 2007; Anant Narayanan <anant@gentoo.org> dmd-bin-1.0.0.ebuild:
   Change incorrect dependency on libstdc++ and update post-install message.
