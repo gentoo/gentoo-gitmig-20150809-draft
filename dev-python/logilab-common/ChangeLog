@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.35 2007/05/19 16:18:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.36 2007/05/20 08:45:54 opfer Exp $
+
+  20 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  logilab-common-0.21.2.ebuild:
+  stable amd64, bug 176201
 
   19 May 2007; nixnut <nixnut@gentoo.org> logilab-common-0.21.2.ebuild:
   Stable on ppc wrt bug 176201
