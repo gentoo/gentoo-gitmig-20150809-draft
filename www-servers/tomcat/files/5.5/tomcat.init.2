@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.4 2007/05/20 21:42:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.5 2007/05/20 23:11:45 wltjr Exp $
 
 init_env_vars() {
 	if [ "$(gjl -p tomcat-5.5 --get-vm)" ] ; then
-		error "Tomcat has been compiled with java5 USE flag set."
-		error "Tomcat now requires a VM >=1.5 to run."
-		error "Please check your VM version, and restart Tomcat."
+		eerror "Tomcat has been compiled with java5 USE flag set."
+		eerror "Tomcat now requires a VM >=1.5 to run."
+		eerror "Please check your VM version, and restart Tomcat."
 		eend 1
 	fi
 
