@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.47 2007/04/28 16:54:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.48 2007/05/20 17:16:15 drizzt Exp $
+
+  20 May 2007; Timothy Redaelli <drizzt@gentoo.org> howl-1.0.0.ebuild:
+  Add ~x86-fbsd keyword.
+  Thanks to Mauro Toffanin for reporting.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> howl-0.9.6-r2.ebuild,
   howl-0.9.8.ebuild, howl-1.0.0.ebuild:
