@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.37 2007/05/12 18:56:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.38 2007/05/20 21:44:47 jer Exp $
+
+  20 May 2007; Jeroen Roovers <jer@gentoo.org> mesa-progs-6.5.2.ebuild:
+  Stable for HPPA (bug #175465).
 
   12 May 2007; nixnut <nixnut@gentoo.org> mesa-progs-6.5.2.ebuild:
   Stable on ppc wrt bug 175465
