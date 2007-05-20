@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.134 2007/04/23 22:53:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.135 2007/05/20 23:02:13 mjolnir Exp $
+
+*shorewall-3.4.3 (20 May 2007)
+
+  20 May 2007; Martin Jackson <mjolnir@gentoo.org> +shorewall-3.4.3.ebuild:
+  Version bump to 3.4.3 in partial satisfaction of #177339
 
   23 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> shorewall-3.4.2.ebuild:
   Add ~mips keyword, bug 172163.
