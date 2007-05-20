@@ -1,5 +1,5 @@
---- /var/tmp/portage/sys-fs/fuse-2.6.4-r1/work/fuse-2.6.4/kernel/file.c	2007-05-19 19:54:45.000000000 +0930
-+++ /var/tmp/portage/sys-fs/fuse-2.6.4-r1/work/fuse-2.6.4/kernel/file.c	2007-05-19 19:58:40.000000000 +0930
+--- fuse-2.6.4-r1/work/fuse-2.6.4/kernel/file.c	2007-05-19 19:54:45.000000000 +0930
++++ fuse-2.6.4-r1/work/fuse-2.6.4/kernel/file.c	2007-05-19 19:58:40.000000000 +0930
 @@ -781,7 +781,8 @@
  
  	if (cmd == F_GETLK) {
@@ -10,8 +10,8 @@
  			if (!posix_test_lock(file, fl, fl))
  				fl->fl_type = F_UNLCK;
  #else
---- /var/tmp/portage/sys-fs/fuse-2.6.4-r1/work/fuse-2.6.4/kernel/inode.c	2007-05-20 09:13:34.000000000 +0930
-+++ /var/tmp/portage/sys-fs/fuse-2.6.4-r1/work/fuse-2.6.4/kernel/inode.c	2007-05-20 09:18:33.000000000 +0930
+--- fuse-2.6.4-r1/work/fuse-2.6.4/kernel/inode.c	2007-05-20 09:13:34.000000000 +0930
++++ fuse-2.6.4-r1/work/fuse-2.6.4/kernel/inode.c	2007-05-20 09:18:33.000000000 +0930
 @@ -809,9 +809,13 @@
  {
  	struct inode * inode = foo;
