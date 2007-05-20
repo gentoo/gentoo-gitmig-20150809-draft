@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/wengophone-bin/wengophone-bin-2.1_rc2.ebuild,v 1.2 2007/04/18 19:24:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/wengophone-bin/wengophone-bin-2.1_rc2.ebuild,v 1.3 2007/05/20 03:36:50 rajiv Exp $
 
 inherit	eutils
 
 MY_PN="WengoPhone"
-DESCRIPTION="Wengophone NG is a VoIP client featuring the SIP protcol"
+DESCRIPTION="Wengophone NG is a VoIP client featuring the SIP protocol"
 HOMEPAGE="http://www.openwengo.org/"
 SRC_URI="http://download.wengo.com/releases/${MY_PN}-${PV/_*}/RC${PV/*rc}/linux/${MY_PN}-${PV/_/-}-linux-bin-x86.tar.bz2
 	amd64? (
