@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.411 2007/05/19 18:20:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.412 2007/05/20 21:32:52 welp Exp $
+
+  20 May 2007; Peter Weller <welp@gentoo.org>
+  default-linux/amd64/2006.0/no-multilib/package.mask,
+  default-linux/amd64/2006.1/no-multilib/package.mask,
+  default-linux/amd64/2007.0/no-multilib/package.mask:
+  package.masked dev-lang/dmd-bin on amd64 no-multilib profiles
 
   19 May 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask dev-java/sun-javamail-bin as nothing is using it any more.
