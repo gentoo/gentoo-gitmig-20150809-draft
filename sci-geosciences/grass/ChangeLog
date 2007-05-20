@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.37 2007/05/19 22:13:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.38 2007/05/20 18:31:12 fmccor Exp $
+
+  20 May 2007; Ferris McCormick <fmccor@gentoo.org> grass-6.2.0-r1.ebuild:
+  Stable on sparc --- Bug #179150 --- seems fine for sparc.
 
 *grass-6.2.1 (19 May 2007)
 
