@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14-r1.ebuild,v 1.3 2007/01/14 17:24:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14-r1.ebuild,v 1.4 2007/05/20 22:05:01 caster Exp $
+
+JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,13 +12,11 @@ HOMEPAGE="http://blowfishj.sourceforge.net/index.html"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc test source"
 
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	app-arch/unzip
-	test? ( dev-java/junit dev-java/ant-tasks ) "
+	test? ( =dev-java/junit-3* dev-java/ant-junit ) "
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
@@ -29,11 +29,11 @@ src_unpack() {
 }
 
 src_test() {
-	eant test -DJunit.present=true || die "test failed"
+	ANT_TASKS="ant-junit" eant test -DJunit.present=true
 }
 
 src_install() {
-	java-pkg_newjar target/${P}.jar ${PN}.jar
+	java-pkg_newjar target/${P}.jar
 
 	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc src/java/net
