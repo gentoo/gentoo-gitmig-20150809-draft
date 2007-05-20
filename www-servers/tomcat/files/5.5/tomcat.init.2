@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.5 2007/05/20 23:11:45 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.6 2007/05/20 23:24:56 wltjr Exp $
 
 init_env_vars() {
 	if [ "$(gjl -p tomcat-5.5 --get-vm)" ] ; then
@@ -10,6 +10,9 @@ init_env_vars() {
 		eerror "Please check your VM version, and restart Tomcat."
 		eend 1
 	fi
+
+	# Populate JAVA_HOME
+	JAVA_HOME=`java-config --jre-home`
 
 	# Set some sane defaults
 	if [ -z "${CATALINA_TMPDIR}" ] ; then
