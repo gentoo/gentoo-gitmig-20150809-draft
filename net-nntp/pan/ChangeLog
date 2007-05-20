@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.44 2007/05/18 18:16:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.45 2007/05/20 16:29:29 swegener Exp $
+
+*pan-0.130 (20 May 2007)
+
+  20 May 2007; Sven Wegener <swegener@gentoo.org> +pan-0.130.ebuild:
+  Version bump.
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> pan-0.129.ebuild:
   Add ~alpha wrt #159654
