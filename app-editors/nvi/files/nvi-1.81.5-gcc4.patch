@@ -151,7 +151,7 @@
 -	CHAR_T *L__bp = bp;						\
 -	ADD_SPACE_RET(sp, (char *)bp, blen, (nlen) * sizeof(CHAR_T))	\
 +	char *L__bp = (char *) bp;					\
-+	ADD_SPACE_RET(sp, bp, blen, (nlen) * sizeof(CHAR_T))		\
++	ADD_SPACE_RET(sp, L__bp, blen, (nlen) * sizeof(CHAR_T))		\
 +	bp = (CHAR_T *) L__bp;						\
  }
  
