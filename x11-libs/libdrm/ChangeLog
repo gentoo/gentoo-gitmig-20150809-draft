@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.46 2007/05/12 19:28:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.47 2007/05/20 20:47:52 jer Exp $
+
+  20 May 2007; Jeroen Roovers <jer@gentoo.org> libdrm-2.3.0.ebuild:
+  Stable for HPPA (bug #175465).
 
   12 May 2007; nixnut <nixnut@gentoo.org> libdrm-2.3.0.ebuild:
   Stable on ppc wrt bug 175465
