@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.32 2007/05/12 19:01:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.33 2007/05/20 23:03:55 jer Exp $
+
+  20 May 2007; Jeroen Roovers <jer@gentoo.org> xorg-docs-1.4.ebuild:
+  Stable for HPPA (bug #175465).
 
   12 May 2007; nixnut <nixnut@gentoo.org> xorg-docs-1.3.ebuild:
   Stable on ppc wrt bug 175465
