@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.33 2007/05/19 18:35:17 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.34 2007/05/20 18:34:45 leio Exp $
+
+  20 May 2007; <leio@gentoo.org> -wxglade-0.4.ebuild:
+  Remove old
 
   19 May 2007; Peter Weller <welp@gentoo.org> wxglade-0.4.1.ebuild:
   Stable on amd64 wrt bug 177753
