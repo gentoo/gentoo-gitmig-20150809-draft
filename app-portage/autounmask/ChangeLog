@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/autounmask
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.12 2007/05/16 02:30:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.13 2007/05/20 19:52:33 ian Exp $
+
+*autounmask-0.16 (20 May 2007)
+
+  20 May 2007; Christian Hartmann <ian@gentoo.org> +autounmask-0.16.ebuild:
+  Version bump
 
   16 May 2007; Steve Dibb <beandog@gentoo.org> autounmask-0.15.ebuild:
   amd64 stable, bug 177238
