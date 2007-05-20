@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.7.ebuild,v 1.1 2007/05/20 16:00:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.7.ebuild,v 1.2 2007/05/20 19:20:01 betelgeuse Exp $
 
 inherit gnome2
 
@@ -22,7 +22,5 @@ DEPEND=">=dev-libs/glib-2.0
 	>=x11-libs/gtk+-2.6"
 RDEPEND="=net-wireless/bluez-utils-3*
 	${DEPEND}"
-
-G2CONF="--disable-schemas-install"
 
 DOCS="dodoc AUTHORS README NEWS ChangeLog"
