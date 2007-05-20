@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.2 2007/05/13 21:27:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.3 2007/05/20 20:42:52 drizzt Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
 IUSE="${IUSE} gtk sasl console groupwise prediction" # mono"
 
@@ -155,6 +155,13 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-cchar_t-undeclared.patch"
+}
+
 src_compile() {
 	# Stabilize things, for your own good
 	if ! use custom-cflags; then
@@ -163,7 +170,7 @@ src_compile() {
 	replace-flags -O? -O2
 
 	# -msse2 doesn't play nice on gcc 3.2
-	[ "`gcc-version`" == "3.2" ] && filter-flags -msse2
+	[[ "`gcc-version`" == "3.2" ]] && filter-flags -msse2
 
 	local myconf
 
@@ -243,6 +250,8 @@ src_compile() {
 		--disable-mono \
 		${myconf} || die "Configuration failed"
 		#$(use_enable mono) \
+
+		emake || die "make failed"
 }
 
 src_install() {
