@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/edb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.3 2007/04/27 21:01:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.4 2007/05/20 18:23:03 ulm Exp $
+
+*edb-1.27_p2 (20 May 2007)
+
+  20 May 2007; Ulrich Mueller <ulm@gentoo.org> +files/51edb-gentoo.el,
+  +edb-1.27_p2.ebuild:
+  Version bump; updated HOMEPAGE and SRC_URI; use install system of package;
+  added Info dir entry.
 
   27 Apr 2007; Ulrich Mueller <ulm@gentoo.org> files/50edb-gentoo.el:
   Don't load at Emacs startup; use autoload instead.
