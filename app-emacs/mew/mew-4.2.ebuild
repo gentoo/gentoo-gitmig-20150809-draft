@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.2.ebuild,v 1.12 2007/05/20 21:03:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.2.ebuild,v 1.13 2007/05/20 22:15:40 ulm Exp $
 
 inherit elisp
 
@@ -18,6 +18,7 @@ RDEPEND="ssl? ( net-misc/stunnel )"
 
 SITEFILE=50${PN}-gentoo.el
 
+# this is needed; elisp.eclass redefines src_compile() from portage default
 src_compile() {
 	econf || die "econf failed"
 	emake || die "emake failed"
