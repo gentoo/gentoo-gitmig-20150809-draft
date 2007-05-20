@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.38 2007/05/16 21:34:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.39 2007/05/20 08:29:28 opfer Exp $
+
+  20 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  qemu-softmmu-0.9.0.ebuild:
+  stable amd64, security bug 176674
 
   16 May 2007; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.9.0.ebuild:
   Marked ppc
