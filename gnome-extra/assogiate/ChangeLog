@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/assogiate
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/ChangeLog,v 1.1 2007/05/20 19:22:03 dang Exp $
+
+*assogiate-0.2.0 (20 May 2007)
+
+  20 May 2007; Daniel Gryniewicz <dang@gentoo.org> +metadata.xml,
+  +assogiate-0.2.0.ebuild:
+  New mime-type editor assogiate.  Bug #174738
+
