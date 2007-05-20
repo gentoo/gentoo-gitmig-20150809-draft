@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.148 2007/05/13 16:15:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.149 2007/05/20 21:28:31 jer Exp $
+
+  20 May 2007; Jeroen Roovers <jer@gentoo.org> mesa-6.5.2-r1.ebuild:
+  Stable for HPPA (bug #175465).
 
   13 May 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/mesa-6.5.3-pthread.patch, mesa-6.5.3.ebuild:
