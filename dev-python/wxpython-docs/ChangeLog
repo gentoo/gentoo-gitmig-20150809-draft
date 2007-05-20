@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.23 2007/05/19 18:11:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.24 2007/05/20 13:34:28 leio Exp $
+
+  20 May 2007; <leio@gentoo.org> -files/viewdocs-2.4.2.4.patch,
+  -wxpython-docs-2.4.2.4-r1.ebuild:
+  Remove wxpython-2.4 docs as wxpython-2.4 itself is already removed
 
   19 May 2007; Peter Weller <welp@gentoo.org>
   wxpython-docs-2.6.0.0-r1.ebuild:
