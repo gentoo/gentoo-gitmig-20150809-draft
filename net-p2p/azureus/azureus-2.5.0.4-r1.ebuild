@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.3 2007/04/08 00:50:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.4 2007/05/20 23:22:39 caster Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	>=virtual/jdk-1.5
 	dev-util/desktop-file-utils
 	>=dev-java/ant-core-1.6.2
-	|| ( =dev-java/eclipse-ecj-3.2* =dev-java/eclipse-ecj-3.1* )
 	source? ( app-arch/zip )
 	>=app-arch/unzip-5.0"
 
@@ -63,8 +62,10 @@ src_unpack() {
 }
 
 src_compile() {
-	# javac likes to run out of memory during build... use ecj instead
-	java-pkg_force-compiler ecj-3.2 ecj-3.1
+	# we started to force ecj because -Xmx seemed to have no effect but that
+	# was because of ANT_OPTS not exported. Bug #145338
+	use x86 && export ANT_OPTS="-Xmx128m"
+	use amd64 && export ANT_OPTS="-Xmx256m"
 
 	eant ${ant_extra_opts} jar
 }
