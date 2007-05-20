@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.115 2007/03/04 07:52:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.116 2007/05/20 20:53:23 caster Exp $
+
+*blackdown-jdk-1.4.2.03-r15 (20 May 2007)
+*blackdown-jdk-1.4.2.03-r14 (20 May 2007)
+
+  20 May 2007; Vlastimil Babka <caster@gentoo.org>
+  -blackdown-jdk-1.4.2.03-r12.ebuild, -blackdown-jdk-1.4.2.03-r13.ebuild,
+  +blackdown-jdk-1.4.2.03-r14.ebuild, +blackdown-jdk-1.4.2.03-r15.ebuild:
+  Artifical revbumps without change so glsa can be applied for bug #161835.
 
   04 Mar 2007; Marius Mauch <genone@gentoo.org>
   blackdown-jdk-1.4.2.03-r12.ebuild:
