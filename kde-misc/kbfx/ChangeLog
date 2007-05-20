@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kbfx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.13 2007/05/20 21:49:43 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.14 2007/05/20 23:36:03 robbat2 Exp $
+
+  20 May 2007; Robin H. Johnson <robbat2@gentoo.org>
+  -kbfx-0.4.9.3.1-r1.ebuild:
+  Fixing broken header on 0.4.9.3.1.
 
   20 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kbfx-0.4.9.3.1-r1.ebuild:
