@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.3.ebuild,v 1.1 2007/05/20 19:57:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.3.ebuild,v 1.2 2007/05/20 23:46:31 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -91,8 +91,11 @@ src_install() {
 			"${GAMES_DATADIR}"/${PN}/${so} || die "dosym ${so} failed"
 	done
 
-	dosym "$(games_get_libdir)"/${PN} "${GAMES_DATADIR}"/${PN}/libs \
-		|| die "dosym libs failed"
+	dodir "${GAMES_DATADIR}"/${PN}/libs
+	for so in libs/*.so ; do
+		dosym "$(games_get_libdir)"/${PN}/${so##*/} \
+			"${GAMES_DATADIR}"/${PN}/${so} || die "dosym ${so} failed"
+	done
 
 	dodoc "${WORKDIR}"{/${PN},}/docs/*
 	prepgamesdirs
