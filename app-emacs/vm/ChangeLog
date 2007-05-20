@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.30 2007/05/15 03:20:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.31 2007/05/20 21:20:06 armin76 Exp $
+
+  20 May 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/vm-direntry-fix-gentoo.patch, -vm-7.19.ebuild, vm-7.19-r3.ebuild:
+  alpha stable wrt #1777422 and remove old
 
   15 May 2007; Christian Faulhammer <opfer@gentoo.org> vm-7.19-r3.ebuild:
   stable amd64; bug 177422
