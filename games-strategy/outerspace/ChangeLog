@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/outerspace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.4 2007/02/26 23:50:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.5 2007/05/20 21:21:58 nyhm Exp $
+
+*outerspace-0.5.62 (20 May 2007)
+
+  20 May 2007; Tristan Heaven <nyhm@gentoo.org> +outerspace-0.5.62.ebuild:
+  Version bump
 
 *outerspace-0.5.61 (26 Feb 2007)
 
