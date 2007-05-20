@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.32 2007/05/19 17:02:34 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.33 2007/05/20 08:18:41 opfer Exp $
+
+  20 May 2007; Christian Faulhammer <opfer@gentoo.org> mod_jk-1.2.22.ebuild:
+  stable x86/amd64, bug 179121
 
   19 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   mod_jk-1.2.22.ebuild:
