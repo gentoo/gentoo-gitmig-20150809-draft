@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkexiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.9 2007/05/20 08:22:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.10 2007/05/20 10:25:53 pva Exp $
+
+  20 May 2007; <pva@gentoo.org> Manifest:
+  Fixing manifest.
 
 *libkexiv2-0.1.5 (20 May 2007)
 
