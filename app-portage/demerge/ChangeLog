@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/demerge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.29 2007/05/13 19:43:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.30 2007/05/20 10:13:37 ian Exp $
+
+*demerge-0.044 (20 May 2007)
+
+  20 May 2007; Christian Hartmann <ian@gentoo.org> +demerge-0.044.ebuild:
+  Version bump
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   fix herd
