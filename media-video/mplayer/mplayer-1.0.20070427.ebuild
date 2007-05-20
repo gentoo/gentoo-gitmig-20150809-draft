@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070427.ebuild,v 1.1 2007/04/27 21:46:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070427.ebuild,v 1.2 2007/05/20 22:46:57 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -490,7 +490,7 @@ src_install() {
 		dosym mplayer /usr/bin/gmplayer
 
 		insinto /usr/share/pixmaps
-		newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
+		newins ${D}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
 		insinto /usr/share/applications
 		doins ${FILESDIR}/mplayer.desktop
 	fi
