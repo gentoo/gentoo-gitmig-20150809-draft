@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.109 2007/05/19 01:59:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.110 2007/05/20 07:20:39 kumba Exp $
+
+  20 May 2007; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.20.11.ebuild:
+  Update the patchset with a patch to bring the uber experimental IP32 R10k
+  support up to par, as well as update the info text of the various machines.
+  No rev bump needed as no sane person should be using the IP32 R10k system
+  anyways.
 
   19 May 2007; Joshua Kinard <kumba@gentoo.org>
   mips-sources-2.6.20.11.ebuild:

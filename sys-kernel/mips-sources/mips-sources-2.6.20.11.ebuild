@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.11.ebuild,v 1.2 2007/05/19 01:59:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.11.ebuild,v 1.3 2007/05/20 07:20:39 kumba Exp $
 
 
 # INCLUDED:
@@ -21,7 +21,7 @@
 # Version Data
 OKV=${PV/_/-}
 GITDATE="20070415"			# Date of diff between kernel.org and lmo GIT
-GENPATCHVER="1.28"			# Tarball version for generic patches
+GENPATCHVER="1.29"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -150,53 +150,39 @@ err_disabled_mach() {
 
 show_ip22_info() {
 	echo -e ""
-	einfo "IP22 systems should work well with this release, however, R4600"
-	einfo "setups may still experience bugs.  Please report any encountered"
-	einfo "problems."
+	einfo "IP22 systems with an R5000 processor should work well with this release."
+	einfo "The R4x00 series of processors tend to be rather flaky, especially the"
+	einfo "R4600.  If you have to run an R4x00 processor, then try to use an R4400."
 	einfo ""
 	einfo "Some Notes:"
 	einfo "\t- Supported graphics card right now is Newport (XL)."
-	einfo "\t- A driver for Extreme (XZ) is in the works, but remains"
-	einfo "\t\040\040unreleased by its author for public consumption."
+	einfo "\t- A driver for Extreme (XZ) supposedly exists, but its author"
+	einfo "\t\040\040has steadfastly refused to release the code for various reasons."
+	einfo "\t\040\040Any questions regarding its status should be directed to "onion" in"
+	einfo "\t\040\040#mipslinux on the Freenode IRC network.  Given he is the author, he"
+	einfo "\t\040\040will know the most current status of the driver."
 	echo -e ""
 }
 
 show_ip27_info() {
 	echo -e ""
-	einfo "IP27 support can be considered a game of Russian Roulette.  It'll work"
-	einfo "great for some but not for others.  It also uses some rather horrible"
-	einfo "hacks to get going -- hopefully these will be repaired in the future."
-	echo -e ""
-	ewarn "Please keep all kittens and any other small, cute, and fluffy creatures"
-	ewarn "away from an IP27 Box running these sources.  Failure to do so may cause"
-	ewarn "the IP27 to consume the hapless creature.  Consider this your only"
-	ewarn "warning regarding the experimental nature of this particular machine."
+	ewarn "IP27 support can be considered a game of Russian Roulette.  It'll work"
+	ewarn "great for some but not for others.  We don't get a chance to test this"
+	ewarn "machine very often with each new kernel, so your mileage may vary."
 	echo -e ""
 }
 
 show_ip28_info() {
 	echo -e ""
-	einfo "Support for the Indigo2 Impact R10000 is very experimental.  If you do not"
-	einfo "have a clue in the world about what an IP28 is, what the mips architecture"
-	einfo "is about, or are new to Gentoo, then it is highly advised that you steer"
-	einfo "clear of messing with this machine.  Due to the experimental nature of this"
-	einfo "particular class of system, we have to provide such warnings, as it is only"
-	einfo "for use by those who know what they are doing."
+	einfo "Support for the Indigo2 Impact R10000 is experimental, and will likely remain so."
+	einfo "As such, If you do not have a clue in the world about what an IP28 is, what the"
+	einfo "mips architecture is about, are new to Gentoo, or even Linux in particular, then"
+	einfo "it is highly advised that you steer clear of messing with this machine.  Due to"
+	einfo "the experimental nature of this particular class of system, we have to provide"
+	einfo "such warnings, as it is only for use by those who know what they are doing."
 	echo -e ""
-	einfo "Be advised that attempting to run Gentoo/Linux (or any Linux distro) on this"
-	einfo "system may cause the sudden, unexplained disappearence of any nearby furry"
-	einfo "creatures.  So please keep any and all small pets away from this system at"
-	einfo "all times."
-	echo -e ""
-	ewarn "That said, support for this system REQUIRES that you use the ip28 cascade"
-	ewarn "profile (${HILITE}default-linux/mips/2006.1/ip28/o32${NORMAL}), because a very special"
-	ewarn "patch is used on the kernel-gcc (${GOOD}gcc-mips64${NORMAL}) and the kernel itself"
-	ewarn "in order to support this machine.  These patches will only be applied"
-	ewarn "if \"ip28\" is defined in USE, which the profile sets.  As of gcc-4.1.1,"
-	ewarn "this patch is automatically applied.  In time, ${HILITE}kgcc64${NORMAL} will replace ${GOOD}gcc-mips64${NORMAL}"
-	echo -e ""
-	ewarn "As a final warning, _nothing_ is guaranteed to work smoothly.  However,"
-	ewarn "the Impact console driver and X driver do work somewhat decently."
+	ewarn "Remember, due to the R10000 Speculative Execution issue that exists with this"
+	ewarn "machine class, _nothing_ is guaranteed to work smoothly.  Your mileage may vary."
 	echo -e ""
 }
 
@@ -221,16 +207,19 @@ show_ip30_info() {
 show_ip32_info() {
 	echo -e ""
 	einfo "IP32 systems function well, however there are some notes:"
-	einfo "\t- No driver exists yet for the sound card."
+	einfo "\t- No driver exists yet for the sound card.  There is active work on one,"
+	einfo "\t\040\040however.  Interested parties are encouraged to browse the Linux/MIPS"
+	einfo "\t\040\040mailing list archives during the first few months of 2007 for more"
+	einfo "\t\040\040information on this driver's status."
 	einfo "\t- Framebuffer console is limited to 4MB.  Anything greater"
 	einfo "\t\040\040specified when building the kernel will likely oops or panic"
 	einfo "\t\040\040the kernel."
 	einfo "\t- X support is limited to the generic fbdev driver.  No X gbefb"
-	einfo "\t\040\040driver exists for O2 yet."
+	einfo "\t\040\040driver exists for O2 yet.  Patches are welcome, however :)"
 	echo -e ""
 
 	if use ip32r10k; then
-		eerror "R10000/R12000 Support on IP32 is HIGHLY EXPERIMENTAL!"
+		eerror "R10000/R12000 Support on IP32 is ${HILITE}HIGHLY EXPERIMENTAL!${NORMAL}"
 		eerror "This is intended ONLY for people interested in fixing it up.  And"
 		eerror "by that, I mean people willing to SEND IN PATCHES!  If you're not"
 		eerror "interested in debugging this issue seriously or just want to run it"
@@ -247,22 +236,19 @@ show_ip32_info() {
 		eerror "manual, or those who are familiar with the IP32 chipset and the feature"
 		eerror "called \"Juice\"."
 		echo -e ""
-		eerror "To build this kernel tree, make sure you re-merge your kernel compiler"
-		eerror "with the \"ip32r10k\" USE flag enabled via crossdev.  This uses a"
-		eerror "tweaked version of the gcc cache barriers patch that makes gcc emit "
-		eerror "more barriers, as IP32 needs them to have any hope of staying online."
 	fi
 
 	eerror "!!! BIG FAT WARNING"
 	eerror "!!! To Build 64bit kernels for SGI O2 (IP32) or SGI Indy/Indigo2 R4x00 (IP22)"
-	eerror "!!! systems, you _need_ to be using a >=gcc-4.1.1 compiler.  In prior times, an"
-	eerror "!!! ugly hack was used to build an ELF64 binary that resembled an ELF32 binary in"
-	eerror "!!! order to make the ARCS PROMs on these systems boot the kernel. This hack is no"
-	eerror "!!! longer in use nor supported in 2.6.17 and beyond.  In order to achieve the same"
-	eerror "!!! effect, a new flag available in >=gcc-4.x is used, and as such, makes"
-	eerror "!!! >=gcc-4.1.1 the preferred compiler for 2.6.17 and beyond."
+	eerror "!!! systems, you _need_ to be using a >=gcc-4.1.1 compiler, have CONFIG_BUILD_ELF64"
+	eerror "!!! disabled in your kernel config, and building with the ${HILITE}vmlinux.32${NORMAL} make target."
+	eerror "!!! In prior times, an ugly hack was used to build an ELF64 binary that resembled"
+	eerror "!!! an ELF32 binary in order to make the ARCS PROMs on these systems boot the"
+	eerror "!!! kernel. This hack is no longer in use nor supported in 2.6.17 and beyond.  In"
+	eerror "!!! order to achieve the same effect, a new flag available in >=gcc-4.x is used,"
+	eerror "!!! and as such, makes >=gcc-4.1.1 the preferred compiler for 2.6.17 and beyond."
 	eerror ""
-	eerror "!!! One side effect of this is the need to build 64bit IP32 and IP22 kernels with the"
+	eerror "!!! Remember, build your IP22 and IP32 kernels with the following command:"
 	eerror "!!! following make command: ${GOOD}make vmlinux.32${NORMAL}"
 	eerror "!!! Once done, copy the ${GOOD}vmlinux.32${NORMAL} file and boot that.  Do not use the"
 	eerror "!!! ${BAD}vmlinux${NORMAL} file -- this will either not boot on IP22 or result in"
@@ -394,7 +380,7 @@ do_sekrit_patches() {
 		# Modified version of the IP28 cache barriers patch for the kernel
 		# that removes all the IP28 specific pieces and leaves behind only
 		# the generic segments.
-		epatch ${MIPS_PATCHES}/misc-2.6.17-ip32-r10k-support.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.20-ip32-r10k-support.patch
 	fi
 
 ##	# No Sekrit Patches!
