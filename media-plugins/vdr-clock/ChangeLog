@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-clock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/ChangeLog,v 1.4 2006/08/15 10:27:35 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/ChangeLog,v 1.5 2007/05/20 14:13:54 zzam Exp $
+
+*vdr-clock-0.0.6 (20 May 2007)
+
+  20 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.0.6/pingpong-fixes.diff, +vdr-clock-0.0.6.ebuild:
+  Version bumped. Applied patch by pingpong from
+  http://www.vdr-portal.de/board/thread.php?threadid=64465.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.

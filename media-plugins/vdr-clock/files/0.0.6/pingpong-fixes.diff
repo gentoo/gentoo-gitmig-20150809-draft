@@ -1,0 +1,637 @@
+diff -u --recursive --new-file clock-0.0.6/clock.c clock-0.0.6-fixes/clock.c
+--- clock-0.0.6/clock.c	2006-05-21 17:28:06.000000000 +0200
++++ clock-0.0.6-fixes/clock.c	2007-05-20 01:16:15.000000000 +0200
+@@ -23,6 +23,9 @@
+ 
+ // Global variables
+ 
++bool      ClockActive = false;
++
++int       HideMenuEntry = 1;
+ int       TimeWidth  = Setup.OSDWidth;
+ int       TimeHeight = Setup.OSDHeight;
+ int       XOffset    = 100;
+@@ -76,13 +79,12 @@
+ class cOSDClock : public cThread, public cOsdObject{
+ private:
+   cOsd *osd;
+-  eKeys LastKey;
+   bool running, shutdown;
+   tColor ColorH, ColorM, ColorS, ColorForeGround, ColorBackGround;
+   int r;
+   void DrawArrow(double width, double len, tColor col, double ang, cEnhancedBitmap &img);
+   void DrawScale(int r, tColor col, cEnhancedBitmap &Analog);
+-  void cOSDClock::DrawModernSec(int r, int sec, tColor col, cEnhancedBitmap &Analog);
++  void DrawModernSec(int r, int sec, tColor col, cEnhancedBitmap &Analog);
+   void DrawPoint(double x, double y, int r, tColor col, cEnhancedBitmap &Analog);
+   tColor getColor(int color);
+   static cBitmap bmClock;
+@@ -413,7 +415,6 @@
+     } // while running
+   shutdown = true;
+   delete osd;
+-  cRemote::Put(LastKey);
+ }
+ 
+ 
+@@ -421,9 +422,9 @@
+ {
+   if (Key != kNone)
+     {
++      ClockActive = false;
+       if (AlarmTime == -1)
+ 	Alarm = false;
+-      if (Key != kOk) LastKey = Key;
+       return (osEnd);
+     }
+   return (osContinue);
+@@ -435,6 +436,7 @@
+ class cMenuSetupClock : public cMenuSetupPage {
+ private:
+   char Color[16][32];
++  int newHideMainMenuEntry;
+   int newSize;
+   int newShowSec;
+   int newShowAlarm;
+@@ -465,6 +467,7 @@
+ cMenuSetupClock::cMenuSetupClock(void)
+ {
+   cSetup data;
++  newHideMainMenuEntry = HideMenuEntry;
+   newSize       = Size;
+   newShowSec    = ShowSec;
+   newShowAlarm  = ShowAlarm;
+@@ -501,6 +504,7 @@
+     }
+ 
+   int current = Current();
++  Add(new cMenuEditBoolItem( tr("Hide main menu entry"),         &newHideMainMenuEntry));
+   Add(new cMenuEditIntItem(  tr("x Position"),                   &newXOffset,    0, Setup.OSDWidth - x));
+   Add(new cMenuEditIntItem(  tr("y Position"),                   &newYOffset,    0, Setup.OSDHeight - y));
+   Add(new cMenuEditStraItem( tr("Type of the clock"),            &newType,       7, ClockType));
+@@ -539,6 +543,7 @@
+ 
+ void cMenuSetupClock::Store(void)
+ {
++  SetupStore("HideMenuEntry",    HideMenuEntry    = newHideMainMenuEntry);
+   SetupStore("XOffset",    XOffset    = newXOffset);
+   SetupStore("YOffset",    YOffset    = newYOffset);
+   SetupStore("ShowSec",    ShowSec    = newShowSec);
+@@ -571,13 +576,13 @@
+   cPluginClock(void);
+   virtual ~cPluginClock();
+   virtual const char *Version(void) { return VERSION; }
+-  virtual const char *Description(void) { return DESCRIPTION; }
++  virtual const char *Description(void) { return tr(DESCRIPTION); }
+   virtual const char *CommandLineHelp(void);
+   virtual bool ProcessArgs(int argc, char *argv[]);
+   virtual bool Initialize(void);
+   virtual bool Start(void);
+   virtual void Housekeeping(void);
+-  virtual const char *MainMenuEntry(void) { return MAINMENUENTRY; }
++  virtual const char *MainMenuEntry(void);
+   virtual cOsdObject *MainMenuAction(void);
+   virtual cMenuSetupPage *SetupMenu(void);
+   virtual bool SetupParse(const char *Name, const char *Value);
+@@ -625,10 +630,24 @@
+   // Perform any cleanup or other regular tasks.
+ }
+ 
++const char *cPluginClock::MainMenuEntry(void) {
++  if (HideMenuEntry)
++     return NULL;
++  else
++     return tr(MAINMENUENTRY);
++}
++
+ cOsdObject *cPluginClock::MainMenuAction(void)
+ {
+-  // Perform the action when selected from the main VDR menu.
+-  return new cOSDClock();
++    // Perform the action when selected from the main VDR menu.
++    if (ClockActive) {
++        ClockActive = false;
++        return NULL;
++    }
++    else {
++        ClockActive = true;
++        return new cOSDClock();
++    }
+ }
+ 
+ cMenuSetupPage *cPluginClock::SetupMenu(void)
+@@ -642,7 +661,8 @@
+ {
+   // Parse your own setup parameters and store their values.
+ 
+-  if      (!strcasecmp(Name, "XOffset"))          XOffset    = atoi(Value);
++  if      (!strcasecmp(Name, "HideMenuEntry"))    HideMenuEntry    = atoi(Value);
++  else if (!strcasecmp(Name, "XOffset"))          XOffset    = atoi(Value);
+   else if (!strcasecmp(Name, "YOffset"))          YOffset    = atoi(Value);
+   else if (!strcasecmp(Name, "ShowSec"))          ShowSec    = atoi(Value);
+   else if (!strcasecmp(Name, "ShowAlarm"))        ShowAlarm  = atoi(Value);
+diff -u --recursive --new-file clock-0.0.6/HISTORY clock-0.0.6-fixes/HISTORY
+--- clock-0.0.6/HISTORY	2004-08-09 15:46:17.000000000 +0200
++++ clock-0.0.6-fixes/HISTORY	2007-05-20 01:41:33.000000000 +0200
+@@ -1,5 +1,18 @@
+ VDR Plugin 'clock' Revision History
+ ----------------------------------
++2007-05-20: Version 0.0.6patched
++- Fixed segmention fault if user key is pressed again with clock shown.
++- Updated i18n.c for VDR 1.3.42 and higher.
++- Added option "Hide main menu entry".
++- Fixed Compiler fault by adding patch reported on VDR-Portal
++  see http://vdr-portal.de/board/thread.php?threadid=57401
++- Added english and german translations for description and main menu entry 
++- Known Problem: If mainmenu is opened during the clock is shown on screen,
++                 user key or Menuentry must pressed two times for open the
++		 clock again.
++
++XXXX-XX-XX: Version 0.0.6
++- Someone know it ????????
+ 
+ 2004-08-09: Version 0.0.5b1
+ - Adapted to VDR 1.3.x (tanks to Alexander Hans)
+diff -u --recursive --new-file clock-0.0.6/i18n.c clock-0.0.6-fixes/i18n.c
+--- clock-0.0.6/i18n.c	2006-05-07 10:44:51.000000000 +0200
++++ clock-0.0.6-fixes/i18n.c	2007-05-20 01:16:15.000000000 +0200
+@@ -26,6 +26,10 @@
+     "",// TODO
+     "",// TODO
+     "Часы",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Offset",
+     "Abstand vom linken Rand",
+@@ -44,6 +48,10 @@
+     "",// TODO
+     "",// TODO
+     "Растояние от левого края",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Show Seconds",
+     "Sekunden anzeigen",
+@@ -62,6 +70,10 @@
+     "",// TODO
+     "",// TODO
+     "Показать секунды",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Type of the clock",
+     "Art der Uhr",
+@@ -80,6 +92,10 @@
+     "",// TODO
+     "",// TODO
+     "Вид часов",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Length of sec arrow [%]",
+     "Lфnge des Sekundenzeigers [%]",
+@@ -98,6 +114,10 @@
+     "",// TODO
+     "",// TODO
+     "Длина секундной стрелки [%]",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Length of min arrow [%]",
+     "Lфnge des Minutenzeigers [%]",
+@@ -116,6 +136,10 @@
+     "",// TODO
+     "",// TODO
+     "Длина минутной стрелки [%]",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Length of hour arrow [%]",
+     "Lфnge des Stundenzeigers [%]",
+@@ -134,6 +158,10 @@
+     "",// TODO
+     "",// TODO
+     "Длина  часовой стрелки [%]",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Width of sec arrow [%]",
+     "Breite des Sekundenzeigers [%]",
+@@ -152,6 +180,10 @@
+     "",// TODO
+     "",// TODO
+     "Ширина секундной стрелки [%]",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Width of min arrow [%]",
+     "Breite des Minutenzeigers [%]",
+@@ -170,6 +202,10 @@
+     "",// TODO
+     "",// TODO
+     "Ширина минутной стрелки [%]",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Width of hour arrow [%]",
+     "Breite des Stundenzeigers [%]",
+@@ -188,6 +224,10 @@
+     "",// TODO
+     "",// TODO
+     "Ширина часовой стрелки [%]",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Analog clock size",
+     "Grіпe der Analogen Uhr",
+@@ -206,6 +246,10 @@
+     "",// TODO
+     "",// TODO
+     "Размер стрелочных часов",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Transparent",
+     "Transparent",
+@@ -224,6 +268,10 @@
+     "",// TODO
+     "",// TODO
+     "Прозрачные",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "White",
+     "Weiss",
+@@ -242,6 +290,10 @@
+     "",// TODO
+     "",// TODO
+     "Белые",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Background color",
+     "Hintergrundfarbe",
+@@ -260,6 +312,10 @@
+     "",// TODO
+     "",// TODO
+     "Цвет заднего фона",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Black",
+     "Schwarz",
+@@ -278,6 +334,10 @@
+     "",// TODO
+     "",// TODO
+     "Чёрный",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Hour arrow color",
+     "Farbe des Stundenzeigers",
+@@ -296,6 +356,10 @@
+     "",// TODO
+     "",// TODO
+     "Цвет часовой стрелки",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Red",
+     "Rot",
+@@ -314,6 +378,10 @@
+     "",// TODO
+     "",// TODO
+     "Красный",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Green",
+     "Grќn",
+@@ -331,7 +399,11 @@
+     "",// TODO
+     "",// TODO
+     "",// TODO
+-    "Зелёный",// TODO  
++    "Зелёный",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Yellow",
+     "Gelb",
+@@ -350,6 +422,10 @@
+     "",// TODO
+     "",// TODO
+     "Жёлтый",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Blue",
+     "Blau",
+@@ -368,6 +444,10 @@
+     "",// TODO
+     "",// TODO
+     "Синий",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Seconds arrow color",
+     "Farbe des Sekundenzeigers",
+@@ -386,6 +466,10 @@
+     "",// TODO
+     "",// TODO
+     "Цвет секундной стрелки",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Minutes arrow color",
+     "Farbe des Minutenzeigers",
+@@ -404,6 +488,10 @@
+     "",// TODO
+     "",// TODO
+     "Цвет минутной стрелки",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Foreground color",
+     "Vordergrund Farbe",
+@@ -422,6 +510,10 @@
+     "",// TODO
+     "",// TODO
+     "Цвет переднего фона",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Arrow color",
+     "Zeigerfarbe",
+@@ -440,6 +532,10 @@
+     "",// TODO
+     "",// TODO
+     "Цвет стрелок",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Digital",
+     "Digital",
+@@ -458,6 +554,10 @@
+     "",// TODO
+     "",// TODO
+     "Цыфровые",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Analog",
+     "Analog",
+@@ -476,6 +576,10 @@
+     "",// TODO
+     "",// TODO
+     "Стрелочные",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Internet time",
+     "Internet Zeit",
+@@ -494,6 +598,10 @@
+     "",// TODO
+     "",// TODO
+     "Интернет время",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Tea clock",
+     "Teekocher",
+@@ -512,6 +620,10 @@
+     "",// TODO
+     "",// TODO
+     "Время для чая",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "It's tea time",
+     "Es ist Tee Zeit!",
+@@ -530,6 +642,10 @@
+     "",// TODO
+     "",// TODO
+     "Время чая!",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Time till tea",
+     "Zeit bis der Tee fertig ist",
+@@ -548,6 +664,10 @@
+     "",// TODO
+     "",// TODO
+     "Время заварки чая",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "Show Countdown",
+     "Countdown anzeigen",
+@@ -566,6 +686,10 @@
+     "",// TODO
+     "",// TODO
+     "Обратный отчёт времени",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "FullScreen",
+     "FullScreen",
+@@ -584,6 +708,10 @@
+     "",// TODO
+     "",// TODO
+     "Весь размер",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { "x Position",
+     "x Position",
+@@ -602,24 +730,76 @@
+     "",// TODO
+     "",// TODO
+     "x Позиция",// TODO
+-  },
+-  { "y Position",
+-    "y Position",
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "y Position",
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "",// TODO
+-    "y Позиция",// TODO
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
++  },
++  { "y Position", // English
++    "y Position", // German
++    "", // Slovenski
++    "", // Italian
++    "", // Nederlands
++    "", // Portuguъs
++    "y Position", // Franчais
++    "", // Norsk
++    "", // Finnish
++    "", // Polski
++    "", // Espaёol
++    "", // Хыычэщъм (Greek)
++    "", // Svenska
++    "", // Romaneste
++    "", // Magyar
++    "", // Catalр
++    "y Позиция", // Русский (Russian)
++    "", // Hrvatski (Croatian)
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
++  },
++  { "A Simple Clock",
++    "Eine einfache Uhr",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
++  },
++  { "Hide main menu entry", // English
++    "Hauptmenќeintrag verstecken", // Deutsch
++    "", // Slovenski
++    "Nascondi voce menљ", // Italiano
++    "", // Nederlands
++    "", // Portuguъs
++    "Masquer dans le menu principal", // Franчais
++    "", // Norsk
++    "Piilota valinta pффvalikosta", // suomi
++    "", // Polski
++    "Ocultar en el menњ principal", // Espaёol
++    "", // Хыычэщъм (Greek)
++    "", // Svenska
++    "", // Romaneste
++    "", // Magyar
++    "", // Catalр
++    "Скрыть команду в главном меню", // Русский (Russian)
++    "", // Hrvatski (Croatian)
++    "Peida valik peamenќќs", // Eesti
++    "", // Dansk
++    "", // Шesky (Czech)
+   },
+   { NULL }
+   };
+diff -u --recursive --new-file clock-0.0.6/Makefile clock-0.0.6-fixes/Makefile
+--- clock-0.0.6/Makefile	2006-05-21 18:03:28.000000000 +0200
++++ clock-0.0.6-fixes/Makefile	2006-06-29 10:29:28.000000000 +0200
+@@ -66,10 +66,10 @@
+ ### Targets:
+ 
+ all: libvdr-$(PLUGIN).so
+-	@install -d ../../man
++	
+ libvdr-$(PLUGIN).so: $(OBJS)
+-	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
++	@cp -v $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+@@ -81,3 +81,4 @@
+ 
+ clean:
+ 	@-rm -f $(OBJS) $(DEPFILE) *.so *.tgz core* *~
++	@-rm -f ../../man/$(PLUGIN).man
+diff -u --recursive --new-file clock-0.0.6/README clock-0.0.6-fixes/README
+--- clock-0.0.6/README	2004-08-09 15:14:37.000000000 +0200
++++ clock-0.0.6-fixes/README	2007-05-20 01:44:24.000000000 +0200
+@@ -24,3 +24,5 @@
+ 
+ The clock will be disabled as soon as you press any other button.
+ Otherwise there would be a mess in the OSD. 
++
++The "Hide main menu entry" opton is normaly set to "yes" as default.
