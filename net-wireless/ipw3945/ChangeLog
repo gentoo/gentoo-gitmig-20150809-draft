@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.27 2007/05/20 17:14:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.28 2007/05/20 17:51:25 phreak Exp $
+
+  20 May 2007; Christian Heim <phreak@gentoo.org> ipw3945-1.2.1.ebuild:
+  Make ipw3945-1.2.1 aware of the changed CONFIG options of Linux 2.6.22
+  (thanks to Momsen Reincke <mreincke at gmx.net> in #179028).
 
 *ipw3945-1.2.1 (20 May 2007)
 
