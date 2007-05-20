@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX pan-0.14.2-update-desktop-file.patch 1028 RMD160 12a05a7a1050b9d10d0ece9a117ecec930e4f6c2 SHA1 c2f41ecbccf27f440d61414b535b8112b13aff7b SHA256 ee4b8d882baf52c19ac5b2897fbaa05dfd6efd6b066fc65eea7b4d53d7d99606
 MD5 daf054bb0ce6c974d349b379460e882b files/pan-0.14.2-update-desktop-file.patch 1028
 RMD160 12a05a7a1050b9d10d0ece9a117ecec930e4f6c2 files/pan-0.14.2-update-desktop-file.patch 1028
@@ -68,3 +71,10 @@ SHA256 fe8c623cf540b747754d6a036dcc2676907148e285b791833c73a891c3a52677 files/di
 MD5 d152a8653dee5ea6431db5edf1755d13 files/digest-pan-0.14.2.91-r3 247
 RMD160 c0e544450dd8022c47ba3b5280903cf4dc843ae4 files/digest-pan-0.14.2.91-r3 247
 SHA256 fe8c623cf540b747754d6a036dcc2676907148e285b791833c73a891c3a52677 files/digest-pan-0.14.2.91-r3 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGUHeVI1lqEGTUzyQRAqBUAJ9jFDbih1IpvteqWdFyHDZnIl4tKwCgk+ls
+MtA9wuulms1tBrbk8y+MS34=
+=pm4E
+-----END PGP SIGNATURE-----
