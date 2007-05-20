@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.1.4.ebuild,v 1.1 2007/05/09 08:40:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.1.6.ebuild,v 1.1 2007/05/20 13:39:17 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 		dev-lang/perl
 		perl? ( dev-perl/Error )
 		tk? ( dev-lang/tk )
-		gtk? ( >=dev-python/pygtk-2.6 )"
+		gtk? ( >=dev-python/pygtk-2.8 )"
 
 S="${WORKDIR}/${MY_P}"
 
