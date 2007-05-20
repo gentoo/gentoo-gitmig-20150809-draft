@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.2_pre20070519.ebuild,v 1.1 2007/05/19 03:13:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.2_pre20070519.ebuild,v 1.2 2007/05/20 20:04:50 eroyf Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -26,7 +26,7 @@ S="${WORKDIR}/${MY_P}"
 PLUGINS_LOC="http://www.squirrelmail.org/plugins"
 
 #mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-SRC_URI="mirrors://gentoo/squirrelmail-20070519_0000-SVN.devel.tar.bz2
+SRC_URI="mirror://gentoo/squirrelmail-20070519_0000-SVN.devel.tar.bz2
 	mirror://sourceforge/retruserdata/retrieveuserdata.${USERDATA_VER}.tar.gz
 	${PLUGINS_LOC}/compatibility-${COMPATIBILITY_VER}.tar.gz
 	ssl? ( ${PLUGINS_LOC}/secure_login-${SECURELOGIN_VER}.tar.gz )
