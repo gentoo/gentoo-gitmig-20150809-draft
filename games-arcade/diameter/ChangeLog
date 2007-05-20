@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/diameter
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/ChangeLog,v 1.1 2007/05/20 08:21:28 tupone Exp $
+
+*diameter-0.4.0.1 (20 May 2007)
+
+  20 May 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +diameter-0.4.0.1.ebuild:
+  New package. Bug #156084 by Paul Bredbury
+
