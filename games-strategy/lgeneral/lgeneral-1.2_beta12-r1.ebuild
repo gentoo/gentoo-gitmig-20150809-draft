@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta12-r1.ebuild,v 1.4 2007/01/15 22:36:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta12-r1.ebuild,v 1.5 2007/05/20 20:12:50 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -20,7 +20,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}
 
