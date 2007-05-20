@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.19 2007/05/13 16:16:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.20 2007/05/20 16:57:55 rbrown Exp $
+
+  20 May 2007; Richard Brown <rbrown@gentoo.org> +daemons-0.4.2.ebuild:
+  Restore daemons-0.4.2 for nitro-0.40.0
 
 *daemons-1.0.5 (13 May 2007)
 
