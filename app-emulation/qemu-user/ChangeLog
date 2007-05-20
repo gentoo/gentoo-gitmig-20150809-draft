@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.28 2007/05/16 21:32:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.29 2007/05/20 08:36:49 opfer Exp $
+
+  20 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  qemu-user-0.9.0.ebuild:
+  stable amd64, security bug 176674
 
   16 May 2007; Luca Barbato <lu_zero@gentoo.org> qemu-user-0.9.0.ebuild:
   Marked ppc
