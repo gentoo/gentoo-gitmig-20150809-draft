@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.7 2007/05/20 07:12:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.8 2007/05/20 17:09:57 nixnut Exp $
 
 inherit depend.apache perl-module webapp
 
@@ -12,7 +12,7 @@ SRC_URI="http://apachegallery.dk/download/${MY_P}.tar.gz"
 HOMEPAGE="http://apachegallery.dk/"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
