@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.12 2007/05/20 22:32:27 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.13 2007/05/20 23:06:34 mjolnir Exp $
+
+*shorewall-lite-3.4.3 (20 May 2007)
+
+  20 May 2007; Martin Jackson <mjolnir@gentoo.org>
+  +shorewall-lite-3.4.3.ebuild:
+  Bump to 3.4.3 for #177339
 
   20 May 2007; Martin Jackson <mjolnir@gentoo.org> +files/shorewall-lite:
   Commit shorewall-lite init script to fix 174590
