@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.20-r1.ebuild,v 1.3 2007/05/14 03:55:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21.ebuild,v 1.1 2007/05/21 19:04:48 jer Exp $
 
 inherit eutils gnome2
 
@@ -15,9 +15,9 @@ IUSE="qt-static spell gnome"
 RESTRICT="strip mirror"
 
 OPERALNG="en"
-OPERASUFF="638"
-OPERAVER="9.20-20070409"
-OPERAFTP="920/final/${OPERALNG}"
+OPERASUFF="641"
+OPERAVER="9.21-20070510"
+OPERAFTP="921/final/${OPERALNG}"
 
 OPERA_URI="mirror://opera/"
 SRC_URI="
@@ -52,7 +52,9 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 	!amd64? ( media-libs/libexif
 			  spell? ( app-text/aspell )
 			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
-			  media-libs/jpeg )"
+			  media-libs/jpeg )
+	x86-fbsd? ( =virtual/libstdc++-3*
+	            !qt-static? ( =x11-libs/qt-3* ) )"
 
 S=${WORKDIR}/${A/.tar.bz2/}-${OPERASUFF}
 
@@ -84,7 +86,7 @@ src_install() {
 	dodir /etc
 
 	# Opera's native installer.
-	if [ ${ARCH} = "amd64" ]; then
+	if use amd64; then
 		linux32 ./install.sh --prefix="${D}"/opt/opera || die
 	else
 		./install.sh --prefix="${D}"/opt/opera || die
@@ -129,7 +131,7 @@ src_install() {
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
-	if [ ${ARCH} = "x86-fbsd" ]; then
+	if use x86-fbsd; then
 		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
 		while read i; do
 			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];
@@ -157,9 +159,16 @@ pkg_postinst() {
 	elog " /opt/opera/share/opera/ini/spellcheck.ini"
 	elog "and emerge app-dicts/aspell-language."
 	elog
-	elog "If you would like to watch videos on websites like YouTube, you will"
-	elog "need to edit \$HOME/.opera/pluginpath.ini and set:"
+	elog "If you want to watch videos on websites like YouTube,"
+	elog "you will need to emerge net-www/netscape-flash,"
+	elog "then edit \$HOME/.opera/pluginpath.ini and set:"
 	elog " /opt/netscape/plugins=2"
+
+	if use x86-fbsd; then
+		elog
+		elog "To improve shared memory usage please set:"
+		elog "	sysctl kern.ipc.shm_allow_removed=1"
+	fi
 }
 
 

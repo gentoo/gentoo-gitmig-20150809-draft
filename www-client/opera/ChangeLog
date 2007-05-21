@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.91 2007/05/14 03:55:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.92 2007/05/21 19:04:48 jer Exp $
+
+*opera-9.21 (21 May 2007)
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.20-r1.ebuild,
+  +opera-9.21.ebuild, -opera-9.21.641.ebuild:
+  Removed deprecated versions, added 9.21 final (same as the weekly I removed,
+  basically), added patch for bug #179224.
 
   14 May 2007; Jeroen Roovers <jer@gentoo.org> opera-9.20-r1.ebuild,
   opera-9.21.641.ebuild:
