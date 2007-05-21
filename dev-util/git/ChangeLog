@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.194 2007/05/21 02:16:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.195 2007/05/21 02:48:17 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> git-1.5.1.6.ebuild:
+  Reverting to ~hppa.
 
   21 May 2007; Jeroen Roovers <jer@gentoo.org> git-1.5.1.6.ebuild:
   Stable for HPPA (bug #179245).
