@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.2.2.ebuild,v 1.3 2007/05/06 12:32:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.2.2.ebuild,v 1.4 2007/05/21 10:29:30 welp Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 # Additional configuration options
 MAX_NICK_LENGTH=30
@@ -99,7 +99,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib/ircd-hybrid-7
+	dodir /usr/$(get_libdir)/ircd-hybrid-7
 	keepdir /var/run/ircd /var/log/ircd
 
 	make DESTDIR="${D}" install || die "make install failed"
@@ -107,12 +107,12 @@ src_install() {
 	insinto /usr/share/ircd-hybrid-7/messages
 	doins messages/*.lang || die "doins failed"
 
-	mv "${D}"/usr/{modules,lib/ircd-hybrid-7}
+	mv "${D}"/usr/{modules,$(get_libdir)/ircd-hybrid-7}
 	mv "${D}"/usr/bin/{,ircd-}mkpasswd
 	mv "${D}"/etc/ircd/{example,ircd}.conf
 
 	sed -i \
-		-e s:/usr/local/ircd/modules:/usr/lib/ircd-hybrid-7/modules: \
+		-e s:/usr/local/ircd/modules:/usr/$(get_libdir)/ircd-hybrid-7/modules: \
 		"${D}"/etc/ircd/ircd.conf
 
 	use ssl && dosbin "${S}"/respond

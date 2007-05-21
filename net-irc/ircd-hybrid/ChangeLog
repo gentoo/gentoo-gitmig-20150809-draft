@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircd-hybrid
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.25 2007/05/06 12:32:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.26 2007/05/21 10:29:30 welp Exp $
+
+  21 May 2007; Peter Weller <welp@gentoo.org> ircd-hybrid-7.2.2.ebuild:
+  multilib-strict fix for amd64 - bug 178519
 
   06 May 2007; Marius Mauch <genone@gentoo.org> ircd-hybrid-7.2.2.ebuild:
   Replacing einfo with elog
