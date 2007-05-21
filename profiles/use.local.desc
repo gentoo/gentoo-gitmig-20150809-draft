@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2822 2007/05/19 21:52:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2823 2007/05/21 23:54:15 nyhm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -128,6 +128,7 @@ app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the
 app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use libsdl for audio output
+app-emulation/vice:resid - Enable support for ReSID
 app-emulation/virtualbox-bin:additions - Install Guest System Tools ISO
 app-emulation/virtualbox-bin:nowrapper - Disable the VirtualBox XPCom Server autostart wrapper
 app-emulation/virtualbox-bin:sdk - Enable building of SDK
