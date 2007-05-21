@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.3.ebuild,v 1.1 2007/05/20 23:02:13 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.3.ebuild,v 1.2 2007/05/21 23:27:38 ticho Exp $
+
+inherit eutils
 
 #MY_P_TREE="development/3.9"
 MY_P_TREE="3.4"

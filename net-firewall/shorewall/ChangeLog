@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.135 2007/05/20 23:02:13 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.136 2007/05/21 23:27:38 ticho Exp $
+
+  21 May 2007; Andrej Kacian <ticho@gentoo.org> shorewall-3.4.2.ebuild,
+  shorewall-3.4.3.ebuild:
+  Inherit eutils, so built_with_use actually has some effect other than
+  "command not found" during emerge.
 
 *shorewall-3.4.3 (20 May 2007)
 

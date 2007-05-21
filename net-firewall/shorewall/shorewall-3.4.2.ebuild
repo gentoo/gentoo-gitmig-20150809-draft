@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.2.ebuild,v 1.2 2007/04/23 22:53:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.2.ebuild,v 1.3 2007/05/21 23:27:38 ticho Exp $
+
+inherit eutils
 
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
