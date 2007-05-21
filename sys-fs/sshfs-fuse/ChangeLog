@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.28 2007/05/16 21:09:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.29 2007/05/21 19:31:53 genstef Exp $
+
+  21 May 2007; Stefan Schweizer <genstef@gentoo.org> sshfs-fuse-1.8.ebuild:
+  remove pre-stripped binary thanks betelgeuse in bug 179344
 
 *sshfs-fuse-1.8 (16 May 2007)
 
