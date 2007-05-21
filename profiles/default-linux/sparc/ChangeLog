@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.67 2007/05/15 14:52:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.68 2007/05/21 17:36:51 fmccor Exp $
+
+  21 May 2007; Ferris McCormick <fmccor@gentoo.org> sparc64/package.mask:
+  Unmask fxscintilla (stable -1.71-r1) no longer builds the fox12 version (the
+  bus error one).
 
   15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> sparc64/make.defaults:
   Switch default VIDEO_CARDS ati -> mach64, r128, radeon
