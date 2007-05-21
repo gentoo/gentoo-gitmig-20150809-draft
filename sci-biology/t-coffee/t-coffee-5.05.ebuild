@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-4.45.ebuild,v 1.1 2006/09/13 23:52:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.05.ebuild,v 1.1 2007/05/21 15:26:35 ribosome Exp $
 
 inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="A multiple sequence alignment package"
 LICENSE="t-coffee"
-HOMEPAGE="http://igs-server.cnrs-mrs.fr/~cnotred/Projects_home_page/t_coffee_home_page.html"
-SRC_URI="http://igs-server.cnrs-mrs.fr/~cnotred/Packages/T-COFFEE_distribution_Version_${PV}.tar.gz"
+HOMEPAGE="http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html"
+SRC_URI="http://www.tcoffee.org/Packages/T-COFFEE_distribution_Version_${PV}.tar.gz"
 
 SLOT="0"
 IUSE=""
@@ -42,18 +42,21 @@ src_compile() {
 }
 
 src_install() {
-	cd "${TCDIR}"/bin
-	dobin t_coffee || die "Failed to install program."
-	insinto /usr/share/${PN}/lib/html
-	doins ${TCDIR}/html/* || die "Failed to install HTML documentation,"
+	dobin "${TCDIR}"/bin/t_coffee || die "Failed to install program."
 
-	dodoc ${TCDIR}/doc/README4T-COFFEE || die \
-		"Failed to install basic documentation."
+	insinto /usr/share/${PN}/lib/html
+	doins "${TCDIR}"/html/* || die "Failed to install Web interface files."
+
+	cd "${TCDIR}"/doc
+	dodoc aln_compare.doc.txt README4T-COFFEE seq_reformat.doc.txt \
+			t_coffee_technical.txt t_coffee_tutorial.txt || die \
+			"Failed to install text documentation."
+	dohtml t_coffee_technical.htm t_coffee_tutorial.htm || die \
+			"Failed to install HTML documentation."
 	insinto /usr/share/doc/${PF}
-	doins ${TCDIR}/doc/t_coffee{_doc.{doc,pdf},.pdf} || die \
-		"Failed to install manuals and articles."
-	doins ${TCDIR}/doc/*.txt || die "Failed to install documentation."
+	doins t_coffee.pdf t_coffee_technical.doc t_coffee_tutorial.doc || die \
+	"Failed to install DOC and PDF documentation."
 
 	insinto /usr/share/${PN}/example
-	doins ${TCDIR}/example/* || die "Failed to install example files."
+	doins "${TCDIR}"/example/* || die "Failed to install example files."
 }
