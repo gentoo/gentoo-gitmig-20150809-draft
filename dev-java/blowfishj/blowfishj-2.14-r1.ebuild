@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14-r1.ebuild,v 1.4 2007/05/20 22:05:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14-r1.ebuild,v 1.5 2007/05/21 07:09:52 opfer Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://blowfishj.sourceforge.net/index.html"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc test source"
 
 DEPEND=">=virtual/jdk-1.4
