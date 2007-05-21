@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.412 2007/05/20 21:32:52 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.413 2007/05/21 19:05:08 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Unmasking www-client/opera-9.21.
 
   20 May 2007; Peter Weller <welp@gentoo.org>
   default-linux/amd64/2006.0/no-multilib/package.mask,
