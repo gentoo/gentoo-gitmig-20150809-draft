@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.7 2007/05/19 12:00:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.8 2007/05/21 07:14:09 bangert Exp $
+
+*varnish-1.0.4 (21 May 2007)
+
+  21 May 2007; Thilo Bangert <bangert@gentoo.org> +varnish-1.0.4.ebuild:
+  version bump
 
   19 May 2007; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd:
   fix stop in init script
