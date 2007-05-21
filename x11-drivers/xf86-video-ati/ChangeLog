@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.48 2007/03/28 00:07:51 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.49 2007/05/21 05:25:33 dberkholz Exp $
+
+*xf86-video-ati-6.6.192 (21 May 2007)
+
+  21 May 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.6.192.ebuild:
+  Bump to 6.7 RC2. Contains fixes for dual-head and dealing with modes, also
+  allows for direct rendering on RS480 (Xpress 300M).
 
   28 Mar 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   xf86-video-ati-6.6.191.ebuild:
