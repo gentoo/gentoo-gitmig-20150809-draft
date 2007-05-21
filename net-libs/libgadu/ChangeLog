@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.20 2007/05/21 12:29:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.21 2007/05/21 13:20:02 armin76 Exp $
+
+  21 May 2007; Raúl Porcel <armin76@gentoo.org> libgadu-1.7.1.ebuild:
+  alpha/ia64 stable wrt security #176021
 
   21 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libgadu-1.7.1.ebuild:
   Stable on sparc wrt security #176021
