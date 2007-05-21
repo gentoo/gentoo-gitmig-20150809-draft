@@ -1,0 +1,21 @@
+diff -ru pommed-1.5~/pommed/Makefile pommed-1.5/pommed/Makefile
+--- pommed-1.5~/pommed/Makefile	2007-04-28 13:44:15.000000000 +0200
++++ pommed-1.5/pommed/Makefile	2007-05-21 22:44:23.000000000 +0200
+@@ -11,7 +11,7 @@
+ CONFUSE_CFLAGS = $(shell pkg-config libconfuse --cflags)
+ CONFUSE_LIBS = $(shell pkg-config libconfuse --libs)
+ 
+-CFLAGS = -g -O2 -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(CONFUSE_CFLAGS)
++CFLAGS += -g -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(CONFUSE_CFLAGS)
+ 
+ ifeq ($(ARCH), ppc)
+ OFLIB ?=
+@@ -36,7 +36,7 @@
+ 
+ else
+ 
+-LDFLAGS = -lz -lsmbios $(DBUS_LIBS) $(ALSA_LIBS) $(CONFUSE_LIBS)
++LDFLAGS = -lz -lsmbios -lstdc++ $(DBUS_LIBS) $(ALSA_LIBS) $(CONFUSE_LIBS)
+ 
+ SOURCES = pommed.c cd_eject.c evdev.c conffile.c audio.c dbus.c \
+ 		mactel/x1600_backlight.c mactel/gma950_backlight.c \
