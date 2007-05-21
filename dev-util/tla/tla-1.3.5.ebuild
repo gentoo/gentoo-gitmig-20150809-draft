@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.5.ebuild,v 1.8 2007/02/11 21:52:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.5.ebuild,v 1.9 2007/05/21 16:48:02 armin76 Exp $
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Revision control system ideal for widely distributed development"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gnu-arch/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc sh sparc x86"
 IUSE="doc"
 
 DEPEND="sys-apps/coreutils
