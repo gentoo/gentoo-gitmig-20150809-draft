@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/alien
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.19 2007/05/14 10:39:24 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.20 2007/05/21 15:47:19 armin76 Exp $
+
+  21 May 2007; Raúl Porcel <armin76@gentoo.org> alien-8.64.ebuild:
+  alpha stable wrt #149666
 
   14 May 2007; Thomas Raschbacher <lordvan@gentoo.org> alien-8.66.ebuild:
   fixed bug where alien violates sandbox trying to write to /var/lib/alien
