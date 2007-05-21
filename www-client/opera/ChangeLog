@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.92 2007/05/21 19:04:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.93 2007/05/21 19:19:36 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.10.ebuild:
+  Removing 9.10 because of security bugs and because it is no longer required
+  for bug #176085).
 
 *opera-9.21 (21 May 2007)
 
