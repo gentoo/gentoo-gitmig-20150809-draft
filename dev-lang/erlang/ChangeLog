@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.62 2007/04/20 09:19:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.63 2007/05/21 06:27:20 opfer Exp $
+
+*erlang-11.2.4-r1 (21 May 2007)
+
+  21 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  +erlang-11.2.4-r1.ebuild:
+  remove internal copy of zlib, so the header files from the system are used.
+  Fixes bug #178996, reported by Diego Pettenò <flameeyes@gmail.com>
 
   20 Apr 2007; Christian Faulhammer <opfer@gentoo.org> erlang-11.2.4.ebuild:
   remove unneeded symlinks
