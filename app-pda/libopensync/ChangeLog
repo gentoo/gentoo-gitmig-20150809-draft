@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.9 2007/05/17 16:41:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.10 2007/05/21 13:38:11 armin76 Exp $
+
+  21 May 2007; Raúl Porcel <armin76@gentoo.org> libopensync-0.22.ebuild:
+  Add ~alpha/~ia64 wrt #178853
 
   17 May 2007; Jeroen Roovers <jer@gentoo.org> libopensync-0.22.ebuild:
   Marked ~hppa (bug #178853).
