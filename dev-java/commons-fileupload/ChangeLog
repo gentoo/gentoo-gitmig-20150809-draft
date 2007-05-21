@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.38 2007/05/19 09:15:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.39 2007/05/21 20:10:07 betelgeuse Exp $
+
+  21 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-fileupload-1.2.ebuild:
+  Needs >=dev-java/commons-io-1.3. Found in bug #178645.
 
   19 May 2007; Markus Rothe <corsair@gentoo.org>
   commons-fileupload-1.2.ebuild:
