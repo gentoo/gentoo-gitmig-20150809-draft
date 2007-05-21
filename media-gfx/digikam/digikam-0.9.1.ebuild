@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.1.ebuild,v 1.7 2007/05/20 18:48:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.1.ebuild,v 1.8 2007/05/21 20:15:55 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -63,6 +63,10 @@ src_unpack(){
 	kde_src_unpack
 	rm -f "${S}/configure" "${S_DOC}/configure"
 
+	if has_version ">=media-gfx/exiv2-0.14"; then
+		epatch "${FILESDIR}/${P}-exiv2.patch"
+	fi
+
 	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
 	elog "Enabling translations for: en ${MAKE_PO}"
 	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" "${S}/po/Makefile.am" || die "sed for locale failed"
@@ -91,4 +95,3 @@ src_install(){
 	mv "${D}/usr/share/applnk/Graphics/digikam.desktop" \
 		"${D}/usr/share/applications/kde"
 }
-

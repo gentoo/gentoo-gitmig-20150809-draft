@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.88 2007/05/20 18:48:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.89 2007/05/21 20:15:56 philantrop Exp $
+
+  21 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/digikam-0.9.1-exiv2.patch, digikam-0.9.1.ebuild:
+  Added patch to compile with >=media-gfx/exiv2-0.14. Fixes bug 178939. Fixed
+  manifest, fixes bug 166516.
 
   20 May 2007; Matti Bickel <mabi@gentoo.org> digikam-0.9.1.ebuild:
   keyworded ~ppc (bug #169160)
