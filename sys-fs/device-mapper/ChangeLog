@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.62 2007/05/14 08:48:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.63 2007/05/21 14:05:37 cardoe Exp $
+
+  21 May 2007; Doug Goldstein <cardoe@gentoo.org> files/dm-start.sh:
+  de-bash-ification by Uberlord
 
 *device-mapper-1.02.19 (14 May 2007)
 

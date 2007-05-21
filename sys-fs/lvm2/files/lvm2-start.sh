@@ -1,25 +1,32 @@
 # /lib/rcscripts/addons/lvm2-start.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.4 2005/06/18 06:42:42 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.5 2007/05/21 14:09:47 cardoe Exp $
+
+dm_in_proc() {
+	local retval=0
+	for x in devices misc ; do
+		grep -qs 'device-mapper' /proc/${x}
+		retval=$((${retval} + $?))
+	done
+	return ${retval}
+}
 
 # LVM support for /usr, /home, /opt ....
 # This should be done *before* checking local
 # volumes, or they never get checked.
-			        
+
 # NOTE: Add needed modules for LVM or RAID, etc
 #       to /etc/modules.autoload if needed
-if [[ -z ${CDBOOT} ]] && [[ -x /sbin/vgscan ]] ; then
-	if [[ -e /proc/modules ]] && \
-	   ! grep -qs 'device-mapper' /proc/{devices,misc}
-	then
-		modprobe dm-mod &>/dev/null
+if [ -z "${CDBOOT}" -a -x /sbin/vgscan ] ; then
+	if [ -e /proc/modules ] && ! dm_in_proc ; then
+		modprobe dm-mod 2>/dev/null
 	fi
 
-	if [[ -d /proc/lvm ]] || grep -qs 'device-mapper' /proc/{devices,misc} ; then
+	if [ -d /proc/lvm ] || dm_in_proc ; then
 		ebegin "Setting up the Logical Volume Manager"
 		#still echo stderr for debugging
 		/sbin/vgscan --mknodes --ignorelockingfailure >/dev/null
-		if [[ $? == 0 ]] && [[ -x /sbin/vgchange ]] && \
-		   [[ -f /etc/lvmtab || -d /etc/lvm ]]
+		if [ $? = 0 -a -x /sbin/vgchange ] && \
+		   [ -f /etc/lvmtab -o -d /etc/lvm ]
 		then
 			/sbin/vgchange --ignorelockingfailure -a y >/dev/null
 		fi
