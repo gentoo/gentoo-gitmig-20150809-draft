@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.5.ebuild,v 1.1 2007/05/20 12:13:19 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.5.ebuild,v 1.2 2007/05/21 17:49:27 kevquinn Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -53,6 +53,15 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	# hunspell is derived from myspell
 	dodoc AUTHORS.myspell README.myspell license.myspell
+
+	# Fixup broken install results.
+	# These are included by hunspell.hxx, but aren't installed by the install
+	# script
+	insinto /usr/include/hunspell/
+	doins license.myspell license.hunspell config.h
+	# These are in the wrong place.
+	mv ${D}/usr/include/munch.h ${D}/usr/include/hunspell/munch.h
+	mv ${D}/usr/include/unmunch.h ${D}/usr/include/hunspell/unmunch.h
 }
 
 pkg_postinst() {
