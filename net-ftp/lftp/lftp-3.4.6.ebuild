@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.6.ebuild,v 1.12 2006/11/04 11:29:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.6.ebuild,v 1.13 2007/05/21 19:51:46 grobian Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://lftp.yar.ru/lftp/old/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND=">=sys-libs/ncurses-5.1
@@ -24,7 +24,7 @@ RDEPEND=">=sys-libs/ncurses-5.1
 			!gnutls? ( >=dev-libs/openssl-0.9.6 )
 		)
 		virtual/libc
-		!ppc-macos? ( >=sys-libs/readline-5.1 )"
+		>=sys-libs/readline-5.1"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -54,7 +54,6 @@ src_compile() {
 	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
 		|| myconf="${myconf} --without-socksdante"
 
-	use ppc-macos && myconf="${myconf} --with-included-readline"
 	econf \
 		--sysconfdir=/etc/lftp \
 		--without-modules \
