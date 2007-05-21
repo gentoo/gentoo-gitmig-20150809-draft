@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r8.ebuild,v 1.1 2007/05/12 15:57:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r8.ebuild,v 1.2 2007/05/21 16:56:29 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -28,13 +28,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-directoryfix.diff
-	epatch ${FILESDIR}/${P}-as-needed.diff
-	epatch ${FILESDIR}/${P}-cflags.diff
-	epatch ${FILESDIR}/${P}-framesize.diff
-	epatch ${FILESDIR}/${P}-delete-while-scanning.diff
-	epatch ${FILESDIR}/${P}-fix-osd.patch
-	epatch ${FILESDIR}/${P}-hangcheck.diff
+	epatch ${FILESDIR}/patches-${PV}/directoryfix.diff
+	epatch ${FILESDIR}/patches-${PV}/as-needed.diff
+	epatch ${FILESDIR}/patches-${PV}/cflags.diff
+	epatch ${FILESDIR}/patches-${PV}/framesize.diff
+	epatch ${FILESDIR}/patches-${PV}/delete-while-scanning.diff
+	epatch ${FILESDIR}/patches-${PV}/fix-osd.patch
+	epatch ${FILESDIR}/patches-${PV}/hangcheck.diff
 
 	rm configure
 	eautoreconf

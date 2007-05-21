@@ -1,6 +1,19 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.23 2007/05/12 16:22:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.24 2007/05/21 16:56:29 zzam Exp $
+
+  21 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  -files/noad-0.6.0-as-needed.diff, -files/noad-0.6.0-cflags.diff,
+  -files/noad-0.6.0-delete-while-scanning.diff,
+  -files/noad-0.6.0-directoryfix.diff, -files/noad-0.6.0-fix-osd.patch,
+  -files/noad-0.6.0-framesize.diff, -files/noad-0.6.0-hangcheck.diff,
+  +files/patches-0.6.0/as-needed.diff, +files/patches-0.6.0/cflags.diff,
+  +files/patches-0.6.0/delete-while-scanning.diff,
+  +files/patches-0.6.0/directoryfix.diff,
+  +files/patches-0.6.0/fix-osd.patch, +files/patches-0.6.0/framesize.diff,
+  +files/patches-0.6.0/hangcheck.diff, +files/patches-0.6.0/series,
+  noad-0.6.0-r7.ebuild, noad-0.6.0-r8.ebuild:
+  Moved patches to subdirectory.
 
   12 May 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/noad-0.6.0-hangcheck.diff:
