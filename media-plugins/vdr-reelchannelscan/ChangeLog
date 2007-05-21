@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-reelchannelscan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/ChangeLog,v 1.9 2007/05/19 14:16:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/ChangeLog,v 1.10 2007/05/21 10:12:42 zzam Exp $
+
+*vdr-reelchannelscan-0.4.3-r1 (21 May 2007)
+
+  21 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.4.3/gentoo.diff, +files/0.4.3/series,
+  -vdr-reelchannelscan-0.4.3.ebuild, +vdr-reelchannelscan-0.4.3-r1.ebuild:
+  No longer install transponder files/symlink to them into /etc/conf.
 
 *vdr-reelchannelscan-0.4.3 (19 May 2007)
 
