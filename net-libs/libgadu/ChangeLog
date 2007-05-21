@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.17 2007/05/20 20:38:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.18 2007/05/21 03:36:29 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> libgadu-1.7.1.ebuild:
+  Stable for HPPA (bug #176021).
 
   20 May 2007; Timothy Redaelli <drizzt@gentoo.org> libgadu-1.7.1.ebuild:
   Add ~x86-fbsd keyword.
