@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.1 2007/05/16 23:19:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.2 2007/05/21 21:36:31 betelgeuse Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -71,7 +71,7 @@ src_unpack() {
 src_compile() {
 	# because I killed the automagic tests; all our JDK's have JCE
 	local af="-Djdk14.present=true -Djce.present=true"
-	use hyphenation && af="-Duser.hyph.dir=/usr/share/offo-hyphenation/hyph/"
+	use hyphenation && af="${af} -Duser.hyph.dir=/usr/share/offo-hyphenation/hyph/"
 	use jai && af="${af} -Djai.present=true"
 	use jimi && af="${af} -Djimi.present=true"
 
