@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.116 2007/05/20 20:53:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.117 2007/05/21 07:53:09 opfer Exp $
+
+  21 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  blackdown-jdk-1.4.2.03-r15.ebuild:
+  stable x86/amd64, bug 179275
 
 *blackdown-jdk-1.4.2.03-r15 (20 May 2007)
 *blackdown-jdk-1.4.2.03-r14 (20 May 2007)
