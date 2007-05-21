@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.16 2007/03/22 23:36:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.17 2007/05/21 21:12:01 armin76 Exp $
+
+  21 May 2007; Raúl Porcel <armin76@gentoo.org> units-1.86.ebuild:
+  alpha stable wrt #164094
 
   22 Mar 2007; Jeroen Roovers <jer@gentoo.org> -units-1.85.ebuild:
   Remove intermediate version.
