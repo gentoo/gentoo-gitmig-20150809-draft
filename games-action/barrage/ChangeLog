@@ -1,6 +1,11 @@
 # ChangeLog for games-action/barrage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.10 2007/02/08 20:49:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.11 2007/05/21 17:24:48 tupone Exp $
+
+*barrage-1.0.2-r1 (21 May 2007)
+
+  21 May 2007; Tupone Alfredo <tupone@gentoo.org> +barrage-1.0.2-r1.ebuild:
+  Add menu entry. Fix bug #159744 by Pacho Ramos
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
