@@ -1,6 +1,20 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.90 2007/05/21 14:20:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.91 2007/05/21 17:11:33 eradicator Exp $
+
+*squirrelmail-1.5.1-r4 (21 May 2007)
+
+  21 May 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/squirrelmail-1.5.1-CVE-2006-4019.patch,
+  +files/squirrelmail-1.5.1-CVE-2006-6142-draft_composesess.patch,
+  +files/squirrelmail-1.5.1-CVE-2006-6142-mailto.patch,
+  +files/squirrelmail-1.5.1-CVE-2006-6142-mime.patch,
+  files/squirrelmail-1.5.1-CVE-2007-1262.patch,
+  +files/squirrelmail-1.5.1-ie-mime.patch, -files/sec-135921.patch,
+  -files/squirrelmail-fortune.patch, -squirrelmail-1.5.1-r3.ebuild,
+  +squirrelmail-1.5.1-r4.ebuild:
+  Added patches to fix CVE-2006-4019, and CVE-2006-6142 in 1.5.1. Removed
+  unused patches.
 
   21 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   squirrelmail-1.4.10a.ebuild:

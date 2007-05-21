@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r3.ebuild,v 1.1 2007/05/19 14:26:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r4.ebuild,v 1.1 2007/05/21 17:11:33 eradicator Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -54,6 +54,11 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 
 	cd ${S}
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-4019.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-draft_composesess.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mailto.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mime.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-ie-mime.patch
 	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2007-1262.patch
 
 	mv config/config_default.php config/config.php

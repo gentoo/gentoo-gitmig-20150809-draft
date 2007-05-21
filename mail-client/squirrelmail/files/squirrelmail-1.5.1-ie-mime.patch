@@ -1,0 +1,33 @@
+diff -u -r1.265.2.69 mime.php
+--- functions/mime.php	2 Dec 2006 09:57:21 -0000	1.265.2.69
++++ functions/mime.php	2 Dec 2006 14:30:29 -0000
+@@ -477,7 +477,11 @@
+         if ($where && $what) {
+            $defaultlink .= '&amp;where='. urlencode($where).'&amp;what='.urlencode($what);
+         }
+-
++        // IE does make use of mime content sniffing. Forcing a download
++        // prohibit execution of XSS inside an application/octet-stream attachment
++        if ($type0 == 'application' && $type1 == 'octet-stream') {
++            $defaultlink .= '&amp;absolute_dl=true';
++        }
+         /* This executes the attachment hook with a specific MIME-type.
+          * If that doesn't have results, it tries if there's a rule
+          * for a more generic type. Finally, a hook for ALL attachment
+@@ -2195,11 +2253,15 @@
+ 
+             // This works for most types, but doesn't work with Word files
+             header ("Content-Type: application/download; name=\"$filename\"");
+-
++            // This is to prevent IE for MIME sniffing and auto open a file in IE
++            header ("Content-Type: application/force-download; name=\"$filename\"");
+             // These are spares, just in case.  :-)
+             //header("Content-Type: $type0/$type1; name=\"$filename\"");
+             //header("Content-Type: application/x-msdownload; name=\"$filename\"");
+             //header("Content-Type: application/octet-stream; name=\"$filename\"");
++        } else if ($isIE) {
++             // This is to prevent IE for MIME sniffing and auto open a file in IE
++             header ("Content-Type: application/force-download; name=\"$filename\"");
+         } else {
+             // another application/octet-stream forces download for Netscape
+             header ("Content-Type: application/octet-stream; name=\"$filename\"");
