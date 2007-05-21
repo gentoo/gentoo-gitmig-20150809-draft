@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/mpm-2.5.2398_beta14.ebuild,v 1.4 2007/05/21 05:58:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/mpm-2.5.2398_beta14-r1.ebuild,v 1.1 2007/05/21 05:58:00 opfer Exp $
 
 inherit eutils
 
@@ -20,6 +20,11 @@ DEPEND="net-misc/curl
 
 S="${WORKDIR}/miktex-tools-${MY_PV}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-multipleroots.patch"
+}
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 }
