@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.8-r1.ebuild,v 1.5 2006/10/20 15:58:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.8-r1.ebuild,v 1.6 2007/05/21 19:59:35 grobian Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cs.toronto.edu/~cosmin/pngtech/optipng/"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ~ppc-macos x86"
+KEYWORDS="alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
