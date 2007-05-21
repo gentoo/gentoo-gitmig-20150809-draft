@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.58 2007/03/03 23:26:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.59 2007/05/21 18:04:15 ulm Exp $
+
+  21 May 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/2.41-linux-headers.patch, clisp-2.41.ebuild:
+  Apply patch from upstream to fix compilation with sanitised linux-headers.
+  Fixes bug #173050.
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> clisp-2.38-r2.ebuild,
   clisp-2.41.ebuild:
