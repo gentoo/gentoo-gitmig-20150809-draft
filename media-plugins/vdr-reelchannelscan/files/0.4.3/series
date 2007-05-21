@@ -1,1 +1,4 @@
+default-source-if-no-channel-set.diff
+device-numbering.diff
+i18n.diff
 gentoo.diff

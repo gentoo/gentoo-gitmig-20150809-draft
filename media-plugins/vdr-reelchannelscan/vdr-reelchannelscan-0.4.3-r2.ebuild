@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/vdr-reelchannelscan-0.4.3-r1.ebuild,v 1.1 2007/05/21 10:12:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/vdr-reelchannelscan-0.4.3-r2.ebuild,v 1.1 2007/05/21 11:51:20 zzam Exp $
 
 inherit vdr-plugin
 
@@ -27,6 +27,9 @@ pkg_setup(){
 
 src_unpack() {
 	vdr-plugin_src_unpack
+	epatch "${FILESDIR}/${PV}/default-source-if-no-channel-set.diff"
+	epatch "${FILESDIR}/${PV}/device-numbering.diff"
+	epatch "${FILESDIR}/${PV}/i18n.diff"
 	epatch "${FILESDIR}/${PV}/gentoo.diff"
 
 	fix_vdr_libsi_include filter.[ch]
