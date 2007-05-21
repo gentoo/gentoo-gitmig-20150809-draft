@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.23 2007/05/20 14:28:31 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.24 2007/05/21 12:22:49 fmccor Exp $
+
+  21 May 2007; Ferris McCormick <fmccor@gentoo.org>
+  PortageXS-0.02.07.ebuild:
+  Stable on sparc --- early bump for Bug #178745 --- needed for autounmask to
+  work on sparc (and also perl-info).
 
 *PortageXS-0.02.07 (20 May 2007)
 
