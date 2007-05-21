@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kbfx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.15 2007/05/20 23:38:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.16 2007/05/21 12:49:49 philantrop Exp $
+
+  21 May 2007; Wulf C. Krueger <philantrop@gentoo.org> Manifest:
+  Fixed Manifest.
 
   20 May 2007; Robin H. Johnson <robbat2@gentoo.org>
   +kbfx-0.4.9.3.1-r1.ebuild:
