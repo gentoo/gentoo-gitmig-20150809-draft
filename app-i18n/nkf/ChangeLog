@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.39 2007/05/20 16:30:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.40 2007/05/21 05:46:25 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> nkf-2.0.7.ebuild:
+  Stable for HPPA (bug #178899).
 
   20 May 2007; Raúl Porcel <armin76@gentoo.org> nkf-2.0.7.ebuild:
   alpha/ia64 stable wrt #178899
