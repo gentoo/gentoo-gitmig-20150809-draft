@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.42 2007/04/02 23:12:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.43 2007/05/21 20:46:25 armin76 Exp $
+
+  21 May 2007; Raúl Porcel <armin76@gentoo.org> gwenhywfar-2.4.0.ebuild:
+  alpha stable wrt #149970
 
 *gwenhywfar-2.5.4 (02 Apr 2007)
 

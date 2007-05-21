@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-2.1.8.ebuild,v 1.7 2006/12/22 21:08:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-2.1.8.ebuild,v 1.8 2007/05/21 20:47:32 armin76 Exp $
 
 MY_P="${PN}2-${PV}"
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.libchipcard.de"
 SRC_URI="mirror://sourceforge/libchipcard/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
 IUSE="debug doc ssl usb"
 
