@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack/conntrack-1.00_beta2.ebuild,v 1.3 2007/05/16 06:27:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack/conntrack-1.00_beta2.ebuild,v 1.4 2007/05/21 22:48:45 gustavoz Exp $
 
 inherit linux-info
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netfilter.org/projects/conntrack/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa x86"
+KEYWORDS="~hppa ~sparc x86"
 IUSE=""
 
 DEPEND="net-libs/libnfnetlink
