@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.29 2007/02/21 19:10:55 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.30 2007/05/21 15:00:21 gustavoz Exp $
+
+*avrdude-5.4 (21 May 2007)
+
+  21 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> +avrdude-5.4.ebuild:
+  Verbump
 
   21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> files/digest-avrdude-5.1,
   Manifest:
