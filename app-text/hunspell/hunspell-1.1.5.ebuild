@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.5.ebuild,v 1.2 2007/05/21 17:49:27 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.5.ebuild,v 1.3 2007/05/21 21:20:57 kevquinn Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -50,18 +50,26 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR=${D} install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO license.hunspell
 	# hunspell is derived from myspell
 	dodoc AUTHORS.myspell README.myspell license.myspell
 
-	# Fixup broken install results.
+	# Upstream install has a few problems - rather than try to figure out
+	# what's broken in the build system, just fix things up manually.
+
 	# These are included by hunspell.hxx, but aren't installed by the install
-	# script
+	# script.
 	insinto /usr/include/hunspell/
 	doins license.myspell license.hunspell config.h
+
 	# These are in the wrong place.
 	mv ${D}/usr/include/munch.h ${D}/usr/include/hunspell/munch.h
 	mv ${D}/usr/include/unmunch.h ${D}/usr/include/hunspell/unmunch.h
+
+	# Libraries include the version in their name, so make a sensible
+	# default symlink.  They should probably be libhunspell.so.1.1 etc.
+	cd ${D}/usr/lib
+	ln -s libhunspell-1.1.so.0.0.0 libhunspell.so
 }
 
 pkg_postinst() {

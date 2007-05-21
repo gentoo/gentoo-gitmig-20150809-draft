@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.24 2007/05/21 17:49:27 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.25 2007/05/21 21:20:57 kevquinn Exp $
+
+  21 May 2007; Kevin F. Quinn <kevquinn@gentoo.org> hunspell-1.1.5.ebuild:
+  Yet more brokenness in the install (bug #179285)
 
   21 May 2007; Kevin F. Quinn <kevquinn@gentoo.org> hunspell-1.1.5.ebuild:
   Fixup wobbly header installation (bug #179285).
