@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.32 2007/05/19 14:46:36 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.33 2007/05/21 17:10:04 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> thunar-0.8.0-r3.ebuild:
+  Stable for HPPA (bug #178510).
 
   19 May 2007; Peter Weller <welp@gentoo.org> thunar-0.8.0-r3.ebuild:
   Stable on amd64 wrt bug 178510
