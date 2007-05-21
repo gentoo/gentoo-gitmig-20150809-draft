@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.90 2007/05/19 15:10:02 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.91 2007/05/21 17:57:19 jer Exp $
+
+  21 May 2007; Jeroen Roovers <jer@gentoo.org> xfce4-mixer-4.4.1.ebuild:
+  Stable for HPPA (bug #178510).
 
   19 May 2007; Peter Weller <welp@gentoo.org> xfce4-mixer-4.4.1.ebuild:
   Stable on amd64 wrt bug 178510
