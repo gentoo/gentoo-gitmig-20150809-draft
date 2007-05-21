@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.139 2007/05/20 16:43:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.140 2007/05/21 07:21:03 opfer Exp $
+
+  21 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  freetype-2.3.4-r2.ebuild:
+  stable amd64, security bug 179161
 
   20 May 2007; Raúl Porcel <armin76@gentoo.org> freetype-2.3.4-r2.ebuild:
   alpha/ia64/x86 stable wrt security #179161
