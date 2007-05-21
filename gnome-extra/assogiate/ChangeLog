@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/assogiate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/ChangeLog,v 1.1 2007/05/20 19:22:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/ChangeLog,v 1.2 2007/05/21 16:24:16 gustavoz Exp $
+
+  21 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  assogiate-0.2.0.ebuild:
+  Keyworded ~sparc
 
 *assogiate-0.2.0 (20 May 2007)
 
