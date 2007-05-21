@@ -1,0 +1,75 @@
+diff -ru realmagic-0.2.1/devfs.c realmagic-0.2.2/devfs.c
+--- realmagic-0.2.1/devfs.c	2006-02-24 00:58:38.000000000 +0100
++++ realmagic-0.2.2/devfs.c	2007-03-10 14:28:11.000000000 +0100
+@@ -22,13 +22,14 @@
+ 
+ /*****************************************************************************/
+ 
+-#include <linux/config.h>
+-#include <linux/devfs_fs_kernel.h>
+ 
+ #include "devfs.h"
+ 
+ #ifdef CONFIG_DEVFS_FS
+ 
++//#include <linux/config.h>
++#include <linux/devfs_fs_kernel.h>
++
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,5,70)
+ devfs_handle_t em84xx_handle[4];
+ #endif
+diff -ru realmagic-0.2.1/Makefile realmagic-0.2.2/Makefile
+--- realmagic-0.2.1/Makefile	2006-02-23 17:43:33.000000000 +0100
++++ realmagic-0.2.2/Makefile	2007-03-10 14:28:11.000000000 +0100
+@@ -10,9 +10,10 @@
+ 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+ 
+ install:
+-	$(MAKE) -C $(KDIR) SUBDIRS=$(pwd) modules_install
++	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules_install
+ endif
+ 
+ 
+ clean:
+-	-rm *.o *.ko .*.cmd *.mod.c *~
++	-rm -f *.o *.ko .*.cmd *.mod.c *~ 
++	-rm -rf .tmp_versions
+Nur in realmagic-0.2.2/: Module.symvers.
+diff -ru realmagic-0.2.1/realmagicdev.c realmagic-0.2.2/realmagicdev.c
+--- realmagic-0.2.1/realmagicdev.c	2006-02-24 01:00:52.000000000 +0100
++++ realmagic-0.2.2/realmagicdev.c	2007-05-21 22:12:59.000000000 +0200
+@@ -29,6 +29,7 @@
+ 
+ #include <linux/init.h>
+ #include <linux/version.h>
++#include <linux/autoconf.h>
+ #include <linux/module.h>
+ #include <linux/moduleparam.h>
+ #include <linux/fs.h>
+@@ -161,7 +162,11 @@
+ #define writePIO(b,thisregister) writel((b),(em84xx_card.mem+((thisregister)<<2)))
+ #define readPIO(thisregister) readl(em84xx_card.mem+((thisregister)<<2))
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19)
+ static irqreturn_t quasar_interrupt(int irq, void *dev_t, struct pt_regs * regs)
++#else
++static irqreturn_t quasar_interrupt(int irq, void *dev_t)
++#endif
+ {
+     static int otherirqcount = 0;
+     long keepme=0; // initialized because gcc makes pointless ``might be used uninitialized''
+@@ -183,10 +188,10 @@
+     em84xx_card.ring0_irqcount++;
+     em84xx_card.irqstilltobeserviced++;
+ 
+-    // (playback) with 5000 this should log about every minute
+-    if (em84xx_card.ring0_irqcount%5000 == 0)
+-        printk("[ring0 received %ld interrupts so far (skipped %d for other devices sharing line)]\n",
+-            em84xx_card.ring0_irqcount, otherirqcount);
++    // (playback) with 50000 this should log about every 20 minute
++//    if (em84xx_card.ring0_irqcount%50000 == 0)
++//        printk("[ring0 received %ld interrupts so far (skipped %d for other devices sharing line)]\n",
++//            em84xx_card.ring0_irqcount, otherirqcount);
+ 
+     // FIXME: what sould make this part?
+     if (keepme & 0x1) {
