@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.16 2007/05/21 17:22:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.2-r1.ebuild,v 1.1 2007/05/21 20:57:59 spock Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
 
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
-MY_P=${P/_/}
+MY_P="${P/_/}"
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz/"
 SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
@@ -15,9 +15,9 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bittorrent bzip2 debug finger ftp gopher gpm guile idn ipv6 \
-	  javascript lua nls nntp perl ruby samba ssl unicode X zlib"
+	  javascript lua nls nntp perl ruby ssl unicode X zlib"
 RESTRICT="test"
 
 DEPEND=">=dev-libs/expat-1.95.4
@@ -32,11 +32,19 @@ DEPEND=">=dev-libs/expat-1.95.4
 	idn? ( net-dns/libidn )
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby )
-	!hppa? ( !mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) ) )
-	samba? ( net-fs/samba )"
+	!hppa? ( !mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) ) )"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use guile && has_version ">dev-scheme/guile-1.6.8" &&
+	   ! built_with_use -a dev-scheme/guile deprecated discouraged; then
+		eerror "To install elinks with the 'guile' USE flag, dev-scheme/guile has to"
+		eerror "be built with 'deprecated' and 'discouraged' USE flags."
+		die "dev-scheme/guile not built with deprecated/discouraged"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -50,9 +58,16 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.11.0-gcc4-inline.patch
 	epatch ${FILESDIR}/${PN}-0.11.0-ruby.patch
 	epatch ${FILESDIR}/${PN}-0.11.1-time.patch
+	epatch ${FILESDIR}/${PN}-0.11.2-lua-5.patch
+
+	if use lua && has_version ">=dev-lang/lua-5.1"; then
+		epatch ${FILESDIR}/${PN}-0.11.2-lua-5.1.patch
+	fi
+
 	if use unicode ; then
 		epatch ${FILESDIR}/elinks-0.10.1-utf_8_io-default.patch
 	fi
+
 	epatch ${FILESDIR}/elinks-po-path.patch
 	sed -i -e 's/-Werror//' configure*
 }
@@ -96,7 +111,6 @@ src_compile() {
 		$(use_enable bittorrent) \
 		$(use_enable nls) \
 		$(use_enable ipv6) \
-		$(use_enable samba smb) \
 		$(use_enable ftp) \
 		$(use_enable gopher) \
 		$(use_enable nntp) \
@@ -135,12 +149,6 @@ pkg_postinst() {
 	einfo
 	einfo "Please have a look at /etc/elinks/keybind-full.sample and"
 	einfo "/etc/elinks/keybind.conf.sample for some bindings examples."
-	if use guile ; then
-		einfo
-		einfo "Since you have compiled ELinks with Guile support, you will have to"
-		einfo "copy internal-hooks.scm and user-hooks.scm from"
-		einfo "/usr/share/doc/${PF}/contrib/guile/ to ~/.elinks/"
-	fi
 	einfo
 	einfo "You will have to set your TERM variable to 'xterm-256color'"
 	einfo "to be able to use 256 colors in elinks."
