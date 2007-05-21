@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2-r1.ebuild,v 1.2 2007/05/04 13:47:32 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2-r1.ebuild,v 1.3 2007/05/21 10:43:25 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -8,8 +8,8 @@ DESCRIPTION="FreeBSD /usr/sbin tools"
 SLOT="0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
-IUSE="atm bluetooth tcpd ssl usb ipv6 acpi ipfilter isdn pam ssl radius
-	 minimal ipsec nis pam suid nat radius build"
+IUSE="acpi atm bluetooth build ipsec ipv6 ipfilter isdn minimal nat nis
+	pam radius ssl suid tcpd usb"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
@@ -23,6 +23,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
+	acpi? ( sys-power/iasl )
 	build? ( virtual/baselayout )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -43,29 +44,24 @@ pkg_setup() {
 	# which is not needed to work.
 	use minimal && mymakeopts="${mymakeopts} RELEASE_CRUNCH= "
 
+	use acpi || mymakeopts="${mymakeopts} NO_ACPI= "
 	use atm || mymakeopts="${mymakeopts} NO_ATM= "
 	use bluetooth || mymakeopts="${mymakeopts} NO_BLUETOOTH= "
-	use ipv6 || mymakeopts="${mymakeopts} NO_INET6= "
-	use ipfilter || mymakeopts="${mymakeopts} NO_IPFILTER= "
-	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
-	use usb || mymakeopts="${mymakeopts} NO_USB= "
-	use acpi || mymakeopts="${mymakeopts} NO_ACPI= "
-	use isdn || mymakeopts="${mymakeopts} NO_I4B= "
-	use pam || mymakeopts="${mymakeopts} NO_PAM= "
-	use radius || mymakeopts="${mymakeopts} NO_RADIUS= "
-	use suid || mymakeopts="${mymakeopts} NO_SUID= "
 	use ipsec || mymakeopts="${mymakeopts} NO_IPSEC= "
-	use nis || mymakeopts="${mymakeopts} NO_NIS= "
+	use ipfilter || mymakeopts="${mymakeopts} NO_IPFILTER= "
+	use ipv6 || mymakeopts="${mymakeopts} NO_INET6= "
+	use isdn || mymakeopts="${mymakeopts} NO_I4B= "
 	use nat || mymakeopts="${mymakeopts} NO_NAT= "
+	use nis || mymakeopts="${mymakeopts} NO_NIS= "
 	use pam || mymakeopts="${mymakeopts} NO_PAM= "
-	use suid || mymakeopts="${mymakeopts} NO_SUID= PPP_NOSUID= "
 	use radius || mymakeopts="${mymakeopts} NO_RADIUS= "
+	use suid || mymakeopts="${mymakeopts} NO_SUID= PPP_NOSUID= "
 	use tcpd || mymakeopts="${mymakeopts} NO_WRAP= "
+	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
+	use suid || mymakeopts="${mymakeopts} NO_SUID= "
+	use usb || mymakeopts="${mymakeopts} NO_USB= "
 
 	mymakeopts="${mymakeopts} NO_MAILWRAPPER= NO_BIND= NO_SENDMAIL= NO_PF= NO_AUTHPF= NO_LPR="
-
-	# kldxref does not build with -O2
-	replace-flags "-O?" "-O1"
 }
 
 PATCHES="${FILESDIR}/${PN}-6.0-fixmakefiles.patch

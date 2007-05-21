@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.45 2007/05/04 13:47:32 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.46 2007/05/21 10:43:25 uberlord Exp $
+
+  21 May 2007; Roy Marples <uberlord@gentoo.org>
+  freebsd-usbin-6.2-r1.ebuild:
+  acpi builds acpidump, which needs iasl
 
   04 May 2007; Timothy Redaelli <drizzt@gentoo.org>
   freebsd-usbin-6.2-r1.ebuild:
