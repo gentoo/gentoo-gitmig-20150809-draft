@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.15 2007/04/22 16:56:44 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.16 2007/05/21 12:08:18 fmccor Exp $
+
+  21 May 2007; Ferris McCormick <fmccor@gentoo.org> perl-info-0.15.ebuild:
+  Add ~sparc --- works fine with PortageXS-0.02.07.
 
 *perl-info-0.15 (22 Apr 2007)
 
