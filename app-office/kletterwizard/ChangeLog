@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.23 2007/05/21 09:56:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.24 2007/05/21 12:38:58 philantrop Exp $
+
+  21 May 2007; Wulf C. Krueger <philantrop@gentoo.org> Manifest:
+  Fixed Manifest.
 
   21 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +kletterwizard-0.9.8.ebuild:
