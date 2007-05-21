@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-MDB2_Driver_mssql
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mssql/ChangeLog,v 1.1 2007/05/21 14:23:02 anant Exp $
+
+*PEAR-MDB2_Driver_mssql-1.2.1 (21 May 2007)
+
+  21 May 2007; Anant Narayanan <anant@gentoo.org> +metadata.xml,
+  +PEAR-MDB2_Driver_mssql-1.2.1.ebuild:
+  Add mssql driver for PEAR_MDB2
+
