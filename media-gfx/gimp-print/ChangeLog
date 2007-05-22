@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.83 2007/05/21 18:16:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.84 2007/05/22 21:54:02 genstef Exp $
+
+  22 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  gimp-print-5.1.1.ebuild:
+  hard-enable USE=nls to avoid compile problems thanks Neil Bothwick
+  <neil@digimed.co.uk> in bug 179449
 
 *gimp-print-5.1.1 (21 May 2007)
 

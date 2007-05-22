@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.1.ebuild,v 1.1 2007/05/21 18:16:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.1.ebuild,v 1.2 2007/05/22 21:54:02 genstef Exp $
 
 inherit flag-o-matic eutils multilib
 
-IUSE="cups foomaticdb gimp gtk nls readline ppds"
+IUSE="cups foomaticdb gimp gtk readline ppds"
 
 MY_P=gutenprint-${PV/_/-}
 
@@ -55,7 +55,7 @@ src_compile() {
 		--with-samples \
 		--with-escputil \
 		--disable-translated-cups-ppds \
-		$(use_enable nls) \
+		--enable-nls \
 		$(use_with readline) \
 		$(use_with gimp gimp2) \
 		$(use_with gimp gimp2-as-gutenprint) \
