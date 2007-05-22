@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21.ebuild,v 1.1 2007/05/21 19:04:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21.ebuild,v 1.2 2007/05/22 08:36:21 jer Exp $
+
+GCONF_DEBUG="no"
 
 inherit eutils gnome2
 
