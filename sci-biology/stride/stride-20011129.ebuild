@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129.ebuild,v 1.4 2006/12/03 00:53:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129.ebuild,v 1.5 2007/05/22 01:15:19 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A program for protein secondary structure assignment from atomic coordinates."
 LICENSE="as-is"
-HOMEPAGE="http://binfo.bio.wzw.tum.de/groups/frishman/software"
+HOMEPAGE="http://www.embl-heidelberg.de/argos/stride/stride_info.html"
 SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/${PN}/src/${PN}.tar.gz
 	mirror://gentoo/${PN}-20060723-update.patch.bz2"
 
