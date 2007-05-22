@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.307 2007/05/16 10:31:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.308 2007/05/22 21:41:18 zzam Exp $
+
+*udev-111-r1 (22 May 2007)
+
+  22 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/modprobe-111-r1.sh, +udev-111-r1.ebuild:
+  Do not print modprobe-errors. Do some locking to not get multiple concurrent
+  modprobe calls for same module, and no multiple loading messages.
 
   16 May 2007; Matthias Schwarzott <zzam@gentoo.org> udev-111.ebuild:
   Use /get_libdir/udev, instead of /lib/udev.
