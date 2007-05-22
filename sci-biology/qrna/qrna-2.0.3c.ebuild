@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.8 2007/04/09 22:49:29 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.9 2007/05/22 01:08:10 ribosome Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Prototype ncRNA genefinder"
-HOMEPAGE="http://www.genetics.wustl.edu/eddy/software/"
+HOMEPAGE="http://selab.wustl.edu/cgi-bin/selab.pl?mode=software#qrna"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 
