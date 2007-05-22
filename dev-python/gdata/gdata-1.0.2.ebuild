@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-1.0.2.ebuild,v 1.1 2007/05/22 16:19:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-1.0.2.ebuild,v 1.2 2007/05/22 16:26:31 lack Exp $
 
 inherit distutils
 
@@ -15,6 +15,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
 
 S="${WORKDIR}/${MY_P}"

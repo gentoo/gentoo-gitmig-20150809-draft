@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.1 2007/05/22 16:19:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.2 2007/05/22 16:26:31 lack Exp $
+
+  22 May 2007; Jim Ramsay <lack@gentoo.org> gdata-1.0.2.ebuild:
+  Added elementtree dependency
 
 *gdata-1.0.2 (22 May 2007)
 
