@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/pynetworkmanager-0.1.ebuild,v 1.1 2007/05/22 19:34:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/pynetworkmanager-0.1.ebuild,v 1.2 2007/05/22 19:43:01 drac Exp $
 
 MY_PN="${PN/n/N}" ; MY_PN="${MY_PN/m/M}" ; MY_P="${MY_PN}-${PV}"
 
 inherit eutils python xfce44
 
-DESCRIPTION="Connects to NetworkManager through DBUS."
+DESCRIPTION="Xfce4 Panel Plugin that connects to NetworkManager through DBUS."
 HOMEPAGE="http://www.tfd.chalmers.se/~mk0foma/pyNetworkManager"
 SRC_URI="http://www.tfd.chalmers.se/~mk0foma/${MY_PN}/${MY_P}.tar.bz2"
 
@@ -18,7 +18,8 @@ IUSE="doc"
 RDEPEND="net-misc/networkmanager
 	dev-python/dbus-python
 	dev-python/pyxfce
-	dev-python/configobj"
+	dev-python/configobj
+	xfce-base/xfce4-panel"
 DEPEND=""
 
 S="${WORKDIR}"/${MY_P}
