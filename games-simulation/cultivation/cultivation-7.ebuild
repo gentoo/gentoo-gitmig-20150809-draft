@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/cultivation-7.ebuild,v 1.2 2007/05/19 21:17:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/cultivation-7.ebuild,v 1.3 2007/05/22 02:04:31 nyhm Exp $
 
-inherit eutils flag-o-matic games
+inherit games
 
 MY_P=Cultivation_${PV}_UnixSource
-
-DESCRIPTION="A game about the interactions within a gardening community."
-HOMEPAGE="http://cultivation.sourceforge.net"
+DESCRIPTION="A game about the interactions within a gardening community"
+HOMEPAGE="http://cultivation.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
@@ -18,7 +17,7 @@ IUSE=""
 DEPEND="virtual/glut
 	media-libs/pablio"
 
-S="${WORKDIR}/${MY_P}/game2/gameSource"
+S=${WORKDIR}/${MY_P}/game2/gameSource
 
 src_unpack() {
 	unpack ${A}
@@ -27,23 +26,22 @@ src_unpack() {
 	sed -i -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		../../minorGems/util/TranslationManager.cpp \
 		features.cpp \
-		game.cpp || die "Changing data path failed"
+		game.cpp \
+		|| die "sed failed"
 }
 
 src_compile() {
 	cd ..
-	platformSelection=1 ./configure
+	# not an autoconf script
+	platformSelection=1 ./configure || die
 	cd gameSource
 	emake || die "emake failed"
 }
 
 src_install() {
-	dogamesbin Cultivation || die "Installing binary failed"
+	newgamesbin Cultivation ${PN} || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r features.txt font.tga language.txt languages \
-		|| die "doins languages failed"
-	cd ../documentation
-	dodoc how_to_*.txt changeLog.txt
-
+	doins -r features.txt font.tga language.txt languages || die "doins failed"
+	dodoc ../documentation/*.txt
 	prepgamesdirs
 }
