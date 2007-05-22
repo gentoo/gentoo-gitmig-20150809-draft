@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.251 2007/02/21 10:40:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.252 2007/05/22 20:19:45 carlo Exp $
+
+  22 May 2007; Carsten Lohrke <carlo@gentoo.org>
+  +files/arts-1.5.5-gcc4.3-build-fix.diff, arts-3.5.5.ebuild:
+  Apply trivial GCC 4.3 build fix, instead bumping to 3.5.7.
 
   21 Feb 2007; Simon Stelling <blubb@gentoo.org>
   files/arts-1.5.4-multilib.patch, arts-3.5.5.ebuild:

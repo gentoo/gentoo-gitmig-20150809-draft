@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.5.ebuild,v 1.11 2007/02/21 10:40:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.5.ebuild,v 1.12 2007/05/22 20:19:45 carlo Exp $
 
 inherit kde flag-o-matic eutils versionator
 set-kdedir 3.5
@@ -35,7 +35,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 PATCHES="${FILESDIR}/arts-1.5.0-bindnow.patch
-	${FILESDIR}/arts-1.5.4-multilib.patch"
+	${FILESDIR}/arts-1.5.4-multilib.patch
+	${FILESDIR}/arts-1.5.5-gcc4.3-build-fix.diff"
 
 src_unpack() {
 	kde_src_unpack
