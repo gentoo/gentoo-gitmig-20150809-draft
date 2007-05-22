@@ -1,0 +1,10 @@
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -13,6 +13,4 @@
+         ./glf/libglf.a            \
+         ./MyFisix/libmyfisix.a    \
+         ./Scoobie/libscoobie.a    \
+-        ./tinyxml/libtinyxml.a
+-
+-toycars_LDFLAGS = @SDL_LIBS@ @GLU_LIBS@ @OpenAL_LIBS@
++        ./tinyxml/libtinyxml.a @SDL_LIBS@ @GLU_LIBS@ @OpenAL_LIBS@
