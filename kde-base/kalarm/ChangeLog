@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.67 2007/02/04 01:41:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.68 2007/05/22 21:07:23 carlo Exp $
+
+*kalarm-3.5.7 (22 May 2007)
+
+  22 May 2007; Carsten Lohrke <carlo@gentoo.org> +kalarm-3.5.7.ebuild:
+  Version bump.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kalarm-3.5.2.ebuild:
   Remove old versions.

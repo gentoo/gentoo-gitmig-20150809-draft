@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.52 2007/05/16 20:40:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.53 2007/05/22 20:56:14 carlo Exp $
+
+*dcoppython-3.5.7 (22 May 2007)
+
+  22 May 2007; Carsten Lohrke <carlo@gentoo.org> +dcoppython-3.5.7.ebuild:
+  Version bump.
 
   16 May 2007; Raúl Porcel <armin76@gentoo.org> dcoppython-3.5.5-r1.ebuild:
   alpha stable wrt #163802
