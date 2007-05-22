@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.22 2007/05/08 15:23:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.23 2007/05/22 17:40:56 zzam Exp $
+
+  22 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/0.1.0_pre21/rc-addon.sh:
+  Removed bashism.
 
   08 May 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/0.1.0_pre21/vdr-burn-0.1.0_pre21_setdefaults.diff,
