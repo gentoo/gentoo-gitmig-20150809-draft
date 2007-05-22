@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r1.ebuild,v 1.3 2007/05/14 19:57:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r2.ebuild,v 1.1 2007/05/22 19:58:35 genstef Exp $
 
 inherit eutils versionator
 
@@ -58,6 +58,9 @@ src_install() {
 	make_wrapper lastfm ./last.fm ${destination} ${destination}
 	newicon data/icons/as.png lastfm.png
 	make_desktop_entry lastfm "Last.fm Player" lastfm.png
+
+	# make sure no hanging instance of lastfm is running
+	sed -i -e 's:exec:if ! ps aux | grep "^$USER.*last.fm.app" | grep Sl >/dev/null 2>\&1; then killall -u $USER last.fm.app >/dev/null 2>\&1; fi\nexec:' ${D}/usr/bin/lastfm
 
 	insinto /usr/share/services
 	doins ${FILESDIR}/lastfm.protocol
