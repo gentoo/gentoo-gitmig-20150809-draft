@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarokfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/ChangeLog,v 1.7 2007/04/28 15:36:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/ChangeLog,v 1.8 2007/05/22 21:36:58 philantrop Exp $
+
+  22 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/amarokfs-0.5-FixMountPointIdQuery.patch, amarokfs-0.5.ebuild:
+  Added a patch to fix problems with displaying covers. Fixes bug 175432.
 
   28 Apr 2007; Carsten Lohrke <carlo@gentoo.org> amarokfs-0.4.2.ebuild,
   amarokfs-0.5.ebuild:
