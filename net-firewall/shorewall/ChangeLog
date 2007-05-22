@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.136 2007/05/21 23:27:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.137 2007/05/22 02:39:11 mjolnir Exp $
+
+  22 May 2007; Martin Jackson <mjolnir@gentoo.org> shorewall-3.4.3.ebuild:
+  Remove notice to install shorewall-perl or shorewall-shell
 
   21 May 2007; Andrej Kacian <ticho@gentoo.org> shorewall-3.4.2.ebuild,
   shorewall-3.4.3.ebuild:

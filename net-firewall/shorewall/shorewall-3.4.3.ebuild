@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.3.ebuild,v 1.2 2007/05/21 23:27:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.3.ebuild,v 1.3 2007/05/22 02:39:11 mjolnir Exp $
 
 inherit eutils
 
@@ -105,5 +105,5 @@ pkg_postinst() {
 	einfo "Whether upgrading or installing you should run shorewall check,"
 	einfo "correct any errors found and run shorewall restart|start."
 	einfo
-	ewarn "You should now emerge shorewall-shell and/or shorewall-perl."
+	#ewarn "You should now emerge shorewall-shell and/or shorewall-perl."
 }
