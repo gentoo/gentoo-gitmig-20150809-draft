@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.35 2007/03/20 13:11:47 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.36 2007/05/22 22:42:40 markusle Exp $
+
+*scilab-4.1.1 (22 May 2007)
+
+  22 May 2007; Markus Dittrich <markusle@gentoo.org> +scilab-4.1.1.ebuild:
+  Version bump (fixes bug #179379).
 
   20 Mar 2007; Markus Dittrich <markusle@gentoo.org>
   +files/scilab-4.1-java-pic.patch, scilab-4.1.ebuild:
