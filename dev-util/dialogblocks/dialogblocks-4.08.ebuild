@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-3.17.ebuild,v 1.1 2007/03/23 08:36:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.08.ebuild,v 1.1 2007/05/22 09:16:51 mrness Exp $
 
 DESCRIPTION="GUI builder tool for wxWidgets"
 HOMEPAGE="http://www.anthemion.co.uk/dialogblocks/"
