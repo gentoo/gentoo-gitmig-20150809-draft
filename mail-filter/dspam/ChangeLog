@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.88 2007/04/18 11:03:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.89 2007/05/22 13:06:39 gustavoz Exp $
+
+  22 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> dspam-3.8.0-r1.ebuild:
+  Stable on sparc wrt #179400
 
 *dspam-3.8.0-r1 (18 Apr 2007)
 
