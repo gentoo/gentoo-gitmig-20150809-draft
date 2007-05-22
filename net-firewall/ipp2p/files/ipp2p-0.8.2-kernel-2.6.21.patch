@@ -1,7 +1,6 @@
-diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
---- ipp2p-0.8.2.orig/ipt_ipp2p.c	2007-05-22 20:13:59.000000000 +0300
-+++ ipp2p-0.8.2/ipt_ipp2p.c	2007-05-22 20:25:32.000000000 +0300
-@@ -2,9 +2,17 @@
+--- ipp2p-0.8.2.orig/ipt_ipp2p.c	2006-09-27 06:52:00.000000000 -0300
++++ ipp2p-0.8.2/ipt_ipp2p.c	2007-05-22 15:58:57.000000000 -0300
+@@ -2,9 +2,18 @@
  #include <linux/modversions.h>
  #endif
  #include <linux/module.h>
@@ -12,6 +11,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
 +#	include <linux/netfilter/x_tables.h>
 +#	define ipt_register_match xt_register_match
 +#	define ipt_unregister_match xt_unregister_match
++#	define ipt_match xt_match
 +#else 
 +#	include <linux/netfilter_ipv4/ip_tables.h>
  //#include <linux/netfilter_ipv4/ipt_ipp2p.h>
@@ -20,7 +20,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  #include "ipt_ipp2p.h"
  #include <net/tcp.h>
  #include <net/udp.h>
-@@ -831,7 +839,9 @@
+@@ -831,7 +840,9 @@
             const struct ipt_ip *ip,
  #endif
  	   void *matchinfo,
@@ -30,7 +30,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  	   unsigned int hook_mask)
  {
          /* Must specify -p tcp */
-@@ -843,15 +853,6 @@
+@@ -843,15 +854,6 @@
  }
  									    
  
@@ -46,7 +46,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  static struct ipt_match ipp2p_match = { 
  #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
  	{ NULL, NULL }, 
-@@ -860,17 +861,16 @@
+@@ -860,17 +862,16 @@
  	&checkentry, 
  	NULL, 
  	THIS_MODULE
