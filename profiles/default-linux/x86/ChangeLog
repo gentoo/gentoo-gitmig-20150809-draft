@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.85 2007/05/15 15:08:42 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.86 2007/05/22 16:28:21 phreak Exp $
+
+  22 May 2007; Christian Heim <phreak@gentoo.org>
+  default-linux/x86/vserver/no-nptl/package.mask:
+  Adjusting the mask in default-linux/x86/vserver/no-nptl, to exclude 
+  glibc-2.5. This isn't needed, as glibc-2.5 supports non-threaded
+  versions too.
 
   15 May 2007; Christian Heim <phreak@gentoo.org> make.defaults:
   VIDEO_CARDS="ati" has been split into three different drivers
