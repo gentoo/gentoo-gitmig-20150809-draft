@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.524 2007/05/22 10:52:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.525 2007/05/22 20:52:35 hollow Exp $
+
+*apache-2.2.4-r2 (22 May 2007)
+
+  22 May 2007; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.4-r2.ebuild:
+  fix digests; whitespace cleanups; remove apache-tools at patch level
 
   22 May 2007; Benedikt Böhm <hollow@gentoo.org> apache-2.2.4-r1.ebuild:
   fix itk patch name
