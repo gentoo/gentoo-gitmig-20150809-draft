@@ -1,0 +1,26 @@
+diff -ur pyNetworkManager-0.1.orig/pyNetworkManager.desktop pyNetworkManager-0.1/pyNetworkManager.desktop
+--- pyNetworkManager-0.1.orig/pyNetworkManager.desktop	2007-05-21 00:59:53.000000000 +0300
++++ pyNetworkManager-0.1/pyNetworkManager.desktop	2007-05-22 20:29:13.000000000 +0300
+@@ -1,8 +1,8 @@
+ [Xfce Panel]
+ Encoding=UTF-8
+-Name=Network Mangager
++Name=Network Manager
+ Comment=Easy network manager also displaying network information
+ Icon=nm-device-wireless
+ Type=Panel
+ X-XFCE-Unique=true
+-X-XFCE-Exec=/home/martin/projekt/xfce/panel/pyNetworkManager/pyNMxfcePanel.py
++X-XFCE-Exec=/usr/share/xfce4/pyNetworkManager/pyNMxfcePanel.py
+diff -ur pyNetworkManager-0.1.orig/pyNetworkManager.py pyNetworkManager-0.1/pyNetworkManager.py
+--- pyNetworkManager-0.1.orig/pyNetworkManager.py	2007-05-21 00:26:19.000000000 +0300
++++ pyNetworkManager-0.1/pyNetworkManager.py	2007-05-22 20:30:08.000000000 +0300
+@@ -11,7 +11,7 @@
+ # Filesystem
+ 
+ # Change to suit your system.
+-FILES_PATH='/home/martin/projekt/xfce/panel/pyNetworkManager/'
++FILES_PATH='/usr/share/xfce4/pyNetworkManager/'
+ 
+ # DBus
+ #  Networkmanager
