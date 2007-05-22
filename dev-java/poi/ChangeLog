@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.28 2007/05/22 18:00:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.29 2007/05/22 18:04:17 betelgeuse Exp $
+
+  22 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/poi-3.0-src-isDateFormat.patch:
+  Add missing patch.
 
 *poi-3.0 (22 May 2007)
 
