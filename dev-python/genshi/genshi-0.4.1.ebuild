@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.3.6.ebuild,v 1.1 2007/02/28 00:05:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.4.1.ebuild,v 1.1 2007/05/22 16:20:02 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -17,14 +17,12 @@ SRC_URI="ftp://ftp.edgewall.com/pub/genshi/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 IUSE="examples"
-
-DEPEND="dev-python/setuptools"
-RDEPEND=""
-
+DEPEND=""
+RDEPEND=">=dev-python/setuptools-0.6_rc3"
 S=${WORKDIR}/${MY_P}
+DOCS="INSTALL.txt UPGRADE.txt"
 
 src_install() {
-	DOCS="INSTALL.txt UPGRADE.txt"
 	distutils_src_install
 
 	dohtml -r doc/*
@@ -38,3 +36,4 @@ src_install() {
 src_test() {
 	PYTHONPATH=. "${python}" setup.py test || die "test failed"
 }
+
