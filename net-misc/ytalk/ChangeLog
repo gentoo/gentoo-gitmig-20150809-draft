@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ytalk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.24 2007/05/18 15:32:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.25 2007/05/22 16:10:20 corsair Exp $
+
+  22 May 2007; Markus Rothe <corsair@gentoo.org> ytalk-3.3.0.ebuild:
+  Added ~ppc64; bug #178854
 
   18 May 2007; Jeroen Roovers <jer@gentoo.org> ytalk-3.3.0.ebuild:
   Marked ~hppa (bug #178854).
