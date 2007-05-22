@@ -1,6 +1,9 @@
 # ChangeLog for games-board/openyahtzee
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.1 2007/05/11 05:38:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.2 2007/05/22 03:09:16 nyhm Exp $
+
+  22 May 2007; Tristan Heaven <nyhm@gentoo.org> openyahtzee-1.7.ebuild:
+  Add ~x86 keyword
 
 *openyahtzee-1.7 (11 May 2007)
 
