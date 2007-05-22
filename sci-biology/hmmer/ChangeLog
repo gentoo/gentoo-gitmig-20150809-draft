@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/hmmer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.18 2007/02/22 01:27:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.19 2007/05/22 01:03:55 ribosome Exp $
+
+  22 May 2007; Olivier Fisette <ribosome@gentoo.org> hmmer-2.3.2-r1.ebuild,
+  hmmer-2.3.2-r2.ebuild:
+  Updated home page. Stabilised bug-fix release on x86 and amd64.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
