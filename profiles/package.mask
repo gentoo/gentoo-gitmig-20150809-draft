@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7281 2007/05/21 21:49:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7282 2007/05/22 14:24:55 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Benedikt Böhm <hollow@gentoo.org> (22 May 2007)
+# new version with experimental cmake patch for testing
+=dev-libs/xmlrpc-c-1.10.00
 
 # Stefan Briesenick <sbriesen@gentoo.org> (21 May 2007)
 # due to popular wish in portage, but this driver seems
