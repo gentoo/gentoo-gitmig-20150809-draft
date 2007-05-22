@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/vecmath-objectclub
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vecmath-objectclub/ChangeLog,v 1.1 2007/05/22 05:58:01 je_fro Exp $
+
+*vecmath-objectclub-1.14 (22 May 2007)
+
+  22 May 2007; Jeff Gardner <je_fro@gentoo.org> +metadata.xml,
+  +vecmath-objectclub-1.14.ebuild:
+  Initial import.
+
