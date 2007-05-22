@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.68 2007/05/03 21:26:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.69 2007/05/22 16:06:53 phreak Exp $
+
+  22 May 2007; Christian Heim <phreak@gentoo.org>
+  dietlibc-0.31_pre20070503.ebuild:
+  Removing the MAKEOPTS override, seems to work now.
 
 *dietlibc-0.31_pre20070503 (03 May 2007)
 
