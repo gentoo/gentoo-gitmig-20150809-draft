@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.13 2007/05/04 16:51:30 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.14 2007/05/22 17:36:41 nyhm Exp $
+
+*cegui-0.5.0b-r2 (22 May 2007)
+
+  22 May 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/cegui-0.5.0b-lua.patch, +cegui-0.5.0b-r2.ebuild:
+  Patch for lua 5.1 support from Devils-Hawk, bug #177670
 
   04 May 2007; Matti Bickel <mabi@gentoo.org> cegui-0.5.0b-r1.ebuild:
   ~ppc readded (bug #174055)
