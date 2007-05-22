@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.24 2007/05/14 20:18:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.25 2007/05/22 14:26:29 hollow Exp $
+
+*xmlrpc-c-1.10.00 (22 May 2007)
+
+  22 May 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/xmlrpc-c-1.10.00-cmake.patch,
+  +files/xmlrpc-c-1.10.00-mutexcreate.patch, -xmlrpc-c-1.09.00.ebuild,
+  +xmlrpc-c-1.10.00.ebuild:
+  version bump; uses experimental cmake patch from Enrico Scholz
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

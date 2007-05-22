@@ -1,0 +1,1256 @@
+diff -NurpP ../xmlrpc-c-1.10.00.orig/cmake/try-attr.cc ./cmake/try-attr.cc
+--- ../xmlrpc-c-1.10.00.orig/cmake/try-attr.cc	1970-01-01 01:00:00.000000000 +0100
++++ ./cmake/try-attr.cc	2007-05-22 14:29:26.590927100 +0200
+@@ -0,0 +1,3 @@
++int x __attribute__((CMAKE_TEST_ATTR));
++
++int main() {}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/cmake/va-list-is-array.c ./cmake/va-list-is-array.c
+--- ../xmlrpc-c-1.10.00.orig/cmake/va-list-is-array.c	1970-01-01 01:00:00.000000000 +0100
++++ ./cmake/va-list-is-array.c	2007-05-22 14:29:26.606928015 +0200
+@@ -0,0 +1,9 @@
++#include <stdarg.h>
++
++void foo()
++{
++  va_list list1, list2;
++  list1 = list2;
++}
++
++int main() {}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/CMakeLists.txt ./CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./CMakeLists.txt	2007-05-22 14:30:38.827953376 +0200
+@@ -0,0 +1,236 @@
++## -*- cmake -*-
++project(xmlrpc-c)
++include(UsePkgConfig)
++include(CheckIncludeFile)
++include(CheckFunctionExists)
++
++set(XMLRPC_C_VERSION    "1.10.00" CACHE STRING "Version of xmlrpc-c")
++set(XMLRPC_C_LIBVERSION "3.6.11")
++set(XMLRPC_C_SOVERSION  "3")
++
++
++macro(ensc_set_bool NAME VALUE DESC)
++  set(${NAME} ${VALUE} CACHE BOOL ${DESC})
++  if(${NAME})
++    set(_${NAME} 1)
++  else(${NAME})
++    set(_${NAME} 0)
++  endif(${NAME})
++endmacro(ensc_set_bool)
++
++macro(ensc_pkgconfig COMP)
++  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${COMP}.pc.cmake
++    ${CMAKE_CURRENT_BINARY_DIR}/${COMP}.pc
++    @ONLY)
++  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${COMP}.pc
++    DESTINATION ${pkgconfdir})
++endmacro(ensc_pkgconfig)
++
++macro(ensc_pkgconfig_lib TARGET LIBS)
++  get_target_property(libtype ${TARGET} TYPE)
++  if("${libtype}" STREQUAL "STATIC_LIBRARY")
++    list(APPEND ${TARGET}_pkgconfig_libs "${LIBS}")
++  endif("${libtype}" STREQUAL "STATIC_LIBRARY")
++endmacro(ensc_pkgconfig_lib)
++
++macro(ensc_set_link_exe_flags)
++  ## HACK: libwww has broken inter-lib dependencies and '-Wl,--as-needed' fails with it
++  if(NOT MUST_BUILD_LIBWWW_CLIENT)
++    set_target_properties(${ARGV}
++      PROPERTIES
++      LINK_FLAGS ${XMLRPC_LINKER_FLAGS})
++  endif(NOT MUST_BUILD_LIBWWW_CLIENT)
++endmacro(ensc_set_link_exe_flags)
++
++
++###########
++if(WIN32)
++  find_program(WININET_CONFIG_EXECUTABLE wininet-config)
++
++  if(DEFINED MUST_BUILD_WININET_CLIENT)
++    set(tmp ${MUST_BUILD_WININET_CLIENT})
++  else(DEFINED MUST_BUILD_WININET_CLIENT)
++    if(WININET_CONFIG_EXECUTABLE)
++      set(tmp 1)
++    else(WININET_CONFIG_EXECUTABLE)
++      set(tmp 0)
++    endif(WININET_CONFIG_EXECUTABLE)
++  endif(DEFINED MUST_BUILD_WININET_CLIENT)
++else(WIN32)
++  set(tmp 0)
++endif(WIN32)
++
++if(tmp)
++  set(MUST_BUILD_CLIENT 1)
++  exec_program(${WININET_CONFIG_EXECUTABLE} ARGS --version OUTPUT_VARIABLE WININET_VERSION)
++  exec_program(${WININET_CONFIG_EXECUTABLE} ARGS --cflags  OUTPUT_VARIABLE WININET_CFLAGS)
++  exec_program(${WININET_CONFIG_EXECUTABLE} ARGS --libs    OUTPUT_VARIABLE WININET_LDADD)
++  message(STATUS "Using WinInet ${WININET_VERSION} transport")
++endif(tmp)
++
++ensc_set_bool(MUST_BUILD_WININET_CLIENT ${tmp} "Set iff WinInet client transport shall be built")
++set(wininet_srcdir ${xmlrpc-c_SOURCE_DIR}/lib/wininet_transport)
++
++###########
++pkgconfig(libcurl CURL_INCLUDE_DIR CURL_LINK_DIR CURL_LINK_FLAGS CURL_CFLAGS)
++if(DEFINED MUST_BUILD_CURL_CLIENT)
++  set(tmp ${MUST_BUILD_CURL_CLIENT})
++else(DEFINED MUST_BUILD_CURL_CLIENT)
++  if(CURL_LINK_FLAGS)
++    set(tmp 1)
++  else(CURL_LINK_FLAGS)
++    set(tmp 0)
++  endif(CURL_LINK_FLAGS)
++endif(DEFINED MUST_BUILD_CURL_CLIENT)
++
++if(tmp)
++  set(MUST_BUILD_CLIENT 1)
++  STRING(REGEX REPLACE "\n" "" CURL_CFLAGS ${CURL_CFLAGS})	# HACK!!
++  message(STATUS "Using libcurl transport ${CURL_CFLAGS}")
++endif(tmp)
++ensc_set_bool(MUST_BUILD_CURL_CLIENT ${tmp} "Set iff Curl client transport shall be built")
++set(curl_srcdir ${xmlrpc-c_SOURCE_DIR}/lib/curl_transport)
++
++###########
++find_program(LIBWWW_CONFIG_EXECUTABLE libwww-config)
++if(DEFINED MUST_BUILD_LIBWWW_CLIENT)
++  set(tmp ${MUST_BUILD_LIBWWW_CLIENT})
++else(DEFINED MUST_BUILD_LIBWWW_CLIENT)
++  if(LIBWWW_CONFIG_EXECUTABLE)
++    set(tmp 1)
++  else(LIBWWW_CONFIG_EXECUTABLE)
++    set(tmp 0)
++  endif(LIBWWW_CONFIG_EXECUTABLE)
++endif(DEFINED MUST_BUILD_LIBWWW_CLIENT)
++
++if(tmp)
++  set(MUST_BUILD_CLIENT 1)
++  exec_program(${LIBWWW_CONFIG_EXECUTABLE} ARGS --version OUTPUT_VARIABLE LIBWWW_VERSION)
++  exec_program(${LIBWWW_CONFIG_EXECUTABLE} ARGS --libs    OUTPUT_VARIABLE LIBWWW_LIBS)
++  exec_program(${LIBWWW_CONFIG_EXECUTABLE} ARGS --cflags  OUTPUT_VARIABLE LIBWWW_CFLAGS)
++  message(STATUS "Using libwww ${LIBWWW_VERSION} transport")
++endif(tmp)
++ensc_set_bool(MUST_BUILD_LIBWWW_CLIENT ${tmp} "Set iff LibWWW client transport shall be built")
++set(libwww_srcdir ${xmlrpc-c_SOURCE_DIR}/lib/libwww_transport)
++
++############
++
++set(ENABLE_CGI_SERVER      1 CACHE BOOL "Set iff CGI server shall be enabled")
++set(ENABLE_CPLUSPLUS       1 CACHE BOOL "Set iff C++ part shall be enabled")
++set(ENABLE_ABYSS_SERVER    1 CACHE BOOL "Set iff Abyss server shall be enabled")
++set(ENABLE_LIBXML2_BACKEND 1 CACHE BOOL "Set iff libxml2 backend shall be used")
++set(ENABLE_ABYSS_THREADS   1 CACHE BOOL "Use pthread")
++
++if(ENABLE_LIBXML2_BACKEND)
++  foreach(tmp libxml-2.0 libxml2 libxml)
++    if (NOT DEFINED libxml_pkgconfig)
++      pkgconfig(${tmp} LIBXML2_INCLUDE_DIR LIBXML2_LINK_DIR LIBXML2_LINK_FLAGS LIBXML2_CFLAGS)
++      if(LIBXML2_LINK_FLAGS)
++	set(libxml_pkgconfig ${tmp})
++      endif(LIBXML2_LINK_FLAGS)
++    endif(NOT DEFINED libxml_pkgconfig)
++  endforeach(tmp)
++endif(ENABLE_LIBXML2_BACKEND)
++
++
++####  <wchar.h> tests
++check_include_file(wchar.h _have_wchar_h)
++if(_have_wchar_h)
++  set(HAVE_WCHAR_H 1)
++else(_have_wchar_h)
++  set(HAVE_WCHAR_H 1)
++endif(_have_wchar_h)
++set(XMLRPC_HAVE_WCHAR   ${HAVE_WCHAR_H})
++set(HAVE_WCHAR_H_DEFINE ${HAVE_WCHAR_H})
++
++
++#######
++set(LINKER_AS_NEEDED  1 CACHE BOOL "Use the --as-needed linker option")
++if(LINKER_AS_NEEDED)
++  set(XMLRPC_LINKER_FLAGS "-Wl,--as-needed")
++endif(LINKER_AS_NEEDED)
++
++
++try_compile(HAVE_ATTR_UNUSED
++  ${CMAKE_BINARY_DIR}/
++  ${xmlrpc-c_SOURCE_DIR}/cmake/try-attr.cc
++  CMAKE_FLAGS -DCOMPILE_DEFINITIONS:STRING=-DCMAKE_TEST_ATTR=__unused__)
++
++try_compile(VA_LIST_IS_NOT_ARRAY
++  ${CMAKE_BINARY_DIR}/
++  ${xmlrpc-c_SOURCE_DIR}/cmake/va-list-is-array.c)
++
++if(VA_LIST_IS_NOT_ARRAY)
++  set(VA_LIST_IS_ARRAY 0)
++  message(STATUS "va_list is not an array")
++else(VA_LIST_IS_NOT_ARRAY)
++  set(VA_LIST_IS_ARRAY 1)
++  message(STATUS "va_list is an array")
++endif(VA_LIST_IS_NOT_ARRAY)
++
++
++if(HAVE_ATTR_UNUSED)
++  set(ATTR_UNUSED "__attribute__((__unused__))")
++endif(HAVE_ATTR_UNUSED)
++
++if(WIN32)
++  set(DIRECTORY_SEPARATOR "\\")
++else(WIN32)
++  set(DIRECTORY_SEPARATOR "/")
++endif(WIN32)
++
++check_include_file(sys/filio.h HAVE_SYS_FILIO_H)
++check_include_file(sys/ioctl.h HAVE_SYS_IOCTL_H)
++check_function_exists(setenv HAVE_SETENV)
++
++configure_file(${xmlrpc-c_SOURCE_DIR}/xmlrpc_config.h.cmake
++               ${xmlrpc-c_BINARY_DIR}/xmlrpc_config.h
++     	       ESCAPE_QUOTES @ONLY)
++
++configure_file(${xmlrpc-c_SOURCE_DIR}/version.h.cmake
++               ${xmlrpc-c_BINARY_DIR}/version.h
++     	       ESCAPE_QUOTES @ONLY)
++
++configure_file(${xmlrpc-c_SOURCE_DIR}/transport_config.h.cmake
++               ${xmlrpc-c_BINARY_DIR}/transport_config.h
++     	       ESCAPE_QUOTES @ONLY)
++
++configure_file(${xmlrpc-c_SOURCE_DIR}/include/xmlrpc-c/config.h.cmake
++               ${xmlrpc-c_BINARY_DIR}/include/xmlrpc-c/config.h
++     	       ESCAPE_QUOTES @ONLY)
++
++
++include_directories(${xmlrpc-c_SOURCE_DIR}/include)
++include_directories(${xmlrpc-c_BINARY_DIR}/include)
++include_directories(${xmlrpc-c_SOURCE_DIR}/lib/util/include)
++include_directories(${xmlrpc-c_BINARY_DIR})
++
++add_custom_target(dist
++  rm -rf _dist && mkdir -p _dist/xmlrpc-c-${XMLRPC_C_VERSION}
++  COMMAND cp -a ${xmlrpc-c_SOURCE_DIR}/* _dist/xmlrpc-c-${XMLRPC_C_VERSION}/
++  COMMAND cd _dist && tar cjf ../xmlrpc-c-${XMLRPC_C_VERSION}.tar.bz2 xmlrpc-c-${XMLRPC_C_VERSION} --exclude=.git --exclude=CVS --exclude=.svn
++  )
++
++set(_lib       lib CACHE STRING "Basename of the library-directory; usually 'lib' or 'lib64' (on multilib archs)")
++set(_bin       bin CACHE STRING "Basename of the bin-directory; usually 'bin'")
++set(prefix     ${CMAKE_INSTALL_PREFIX})
++set(libdir     "${prefix}/${_lib}")
++set(bindir     "${prefix}/${_bin}")
++set(mandir     "${prefix}/share/man")
++set(pkgconfdir "${libdir}/pkgconfig")
++set(includedir "${prefix}/include")
++
++#############
++
++install(PROGRAMS xmlrpc-c-config DESTINATION ${_bin})
++
++enable_testing()
++
++add_subdirectory(lib)
++add_subdirectory(Windows)
++add_subdirectory(conf)
++add_subdirectory(doc)
++add_subdirectory(examples)
++add_subdirectory(include)
++add_subdirectory(src)
++add_subdirectory(tools)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/examples/CMakeLists.txt ./examples/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/examples/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./examples/CMakeLists.txt	2007-05-22 14:29:26.630929383 +0200
+@@ -0,0 +1,51 @@
++# -*- cmake -*-
++
++include_directories(${CMAKE_CURRENT_BINARY_DIR})
++
++macro(ensc_add_example name ext class)
++  # HACK: avoid name collision of c and c++ program
++  if("${ext}" STREQUAL "cpp")
++    set(_target ${name}++)
++  else("${ext}" STREQUAL "cpp")
++    set(_target ${name})
++  endif("${ext}" STREQUAL "cpp")
++
++  add_executable(${_target} ${name}.${ext})
++  target_link_libraries(${_target} ${${class}_LIBS})
++  list(APPEND ${class}_TARGETS ${_target})
++  list(APPEND example_TARGETS ${_target})
++endmacro(ensc_add_example)
++
++if(ENABLE_CPLUSPLUS)
++  add_subdirectory(cpp)
++endif(ENABLE_CPLUSPLUS)
++
++
++
++if(MUST_BUILD_CLIENT)
++  set(client_LIBS xmlrpc_client)
++
++  ensc_add_example(auth_client              c client)
++  ensc_add_example(query-meerkat            c client)
++  ensc_add_example(synch_client             c client)
++  ensc_add_example(xmlrpc_sample_add_client c client)
++  ensc_add_example(xmlrpc_asynch_client     c client)
++endif(MUST_BUILD_CLIENT)
++
++if(ENABLE_CGI_SERVER)
++  set(cgi_server_LIBS xmlrpc_server_cgi)
++
++  ensc_add_example(xmlrpc_sample_add_server_cgi c cgi_server)
++endif(ENABLE_CGI_SERVER)
++
++if(ENABLE_ABYSS_SERVER)
++  set(abyss_server_LIBS xmlrpc_server_abyss)
++
++  ensc_add_example(xmlrpc_inetd_server      c abyss_server)
++  ensc_add_example(xmlrpc_socket_server     c abyss_server)
++  ensc_add_example(xmlrpc_loop_server       c abyss_server)
++  ensc_add_example(xmlrpc_sample_add_server c abyss_server)
++  ensc_add_example(xmlrpc_server_validatee  c abyss_server)
++endif(ENABLE_ABYSS_SERVER)
++
++ensc_set_link_exe_flags(${example_TARGETS})
+diff -NurpP ../xmlrpc-c-1.10.00.orig/examples/config.h ./examples/config.h
+--- ../xmlrpc-c-1.10.00.orig/examples/config.h	1970-01-01 01:00:00.000000000 +0100
++++ ./examples/config.h	2007-05-22 14:29:26.646930294 +0200
+@@ -0,0 +1 @@
++#include "../xmlrpc_config.h"
+diff -NurpP ../xmlrpc-c-1.10.00.orig/examples/cpp/CMakeLists.txt ./examples/cpp/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/examples/cpp/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./examples/cpp/CMakeLists.txt	2007-05-22 14:29:26.662931202 +0200
+@@ -0,0 +1,20 @@
++# -*- cmake -*-
++
++if(ENABLE_ABYSS_SERVER)
++  set(abyss_serverxx_LIBS xmlrpc_server_abyss++)
++
++  ensc_add_example(xmlrpc_inetd_server cpp abyss_serverxx)
++endif(ENABLE_ABYSS_SERVER)
++
++if(MUST_BUILD_CLIENT)
++  set(abyss_clientxx_LIBS        xmlrpc_client++)
++  set(abyss_clientxx_legacy_LIBS xmlrpc_cpp)
++
++  ensc_add_example(xmlrpc_sample_add_client  cpp abyss_clientxx)
++  ensc_add_example(sample_add_client_complex cpp abyss_clientxx)
++
++  ensc_add_example(meerkat-app-list          cpp abyss_clientxx_legacy)
++endif(MUST_BUILD_CLIENT)
++
++
++ensc_set_link_exe_flags(${example_TARGETS})
+diff -NurpP ../xmlrpc-c-1.10.00.orig/include/CMakeLists.txt ./include/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/include/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./include/CMakeLists.txt	2007-05-22 14:29:26.674931890 +0200
+@@ -0,0 +1,3 @@
++# -*- cmake -*-
++
++add_subdirectory(xmlrpc-c)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/include/xmlrpc-c/CMakeLists.txt ./include/xmlrpc-c/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/include/xmlrpc-c/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./include/xmlrpc-c/CMakeLists.txt	2007-05-22 14:29:26.694933029 +0200
+@@ -0,0 +1,52 @@
++# -*- cmake -*-
++
++macro(ensc_install_symlink src dst)
++  install(CODE "EXECUTE_PROCESS(COMMAND ln -s xmlrpc-c/${src} \$ENV{DESTDIR}${includedir}/${dst})")
++endmacro(ensc_install_symlink)
++
++list(APPEND headers
++  ${CMAKE_CURRENT_BINARY_DIR}/config.h
++  util.h base.h abyss.h server.h
++  server_abyss.h server_w32httpsys.h oldxmlrpc.h)
++
++list(APPEND compat_links "oldxmlrpc.h         xmlrpc.h")
++list(APPEND compat_links "server.h            xmlrpc_server.h")
++list(APPEND compat_links "server_abyss.h      xmlrpc_server_abyss.h")
++list(APPEND compat_links "server_w32httpsys.h xmlrpc_server_w32httpsys.h")
++
++
++if(ENABLE_CPLUSPLUS)
++  list(APPEND headers
++    oldcppwrapper.hpp girerr.hpp girmem.hpp base.hpp
++    timeout.hpp xml.hpp registry.hpp server_abyss.hpp)
++
++  list(APPEND compat_links "oldcppwrapper.hpp XmlRpcCpp.h")
++endif(ENABLE_CPLUSPLUS)
++
++if(MUST_BUILD_CLIENT)
++  list(APPEND headers
++    client.h transport.h client_global.h)
++
++  list(APPEND compat_links "client.h xmlrpc_client.h")
++  
++  if(ENABLE_CPLUSPLUS)
++    list(APPEND headers
++      client.hpp client_transport.hpp client_simple.hpp)
++  endif(ENABLE_CPLUSPLUS)
++endif(MUST_BUILD_CLIENT)
++
++if(ENABLE_CGI_SERVER)
++  list(APPEND headers
++    server_cgi.h)
++
++  list(APPEND compat_links "server_cgi.h xmlrpc_cgi.h")
++endif(ENABLE_CGI_SERVER)
++
++install(FILES
++  ${headers}
++  DESTINATION ${includedir}/xmlrpc-c)
++
++foreach (ln ${compat_links})
++  separate_arguments(ln)
++  ensc_install_symlink(${ln})
++endforeach(ln)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/include/xmlrpc-c/config.h.cmake ./include/xmlrpc-c/config.h.cmake
+--- ../xmlrpc-c-1.10.00.orig/include/xmlrpc-c/config.h.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./include/xmlrpc-c/config.h.cmake	2007-05-22 14:29:26.722934625 +0200
+@@ -0,0 +1,8 @@
++/* This file, part of XML-RPC For C/C++, is meant to
++   define characteristics of this particular installation
++   that the other <xmlrpc-c/...> header files need in order to
++   compile correctly when #included in a Xmlrpc-c user code.
++
++   Those header files #include this one.
++*/
++#define XMLRPC_HAVE_WCHAR		@HAVE_WCHAR_H@
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/abyss/CMakeLists.txt ./lib/abyss/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/abyss/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/abyss/CMakeLists.txt	2007-05-22 14:29:26.770937361 +0200
+@@ -0,0 +1,3 @@
++## -*- cmake -*-
++
++SUBDIRS(src)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/abyss/src/CMakeLists.txt ./lib/abyss/src/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/abyss/src/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/abyss/src/CMakeLists.txt	2007-05-22 14:29:26.794938726 +0200
+@@ -0,0 +1,64 @@
++## -*- cmake -*-
++
++set(xmlrpc_abyss_SOURCES
++  abyss_info.h
++  channel.c
++  channel.h
++  chanswitch.c
++  chanswitch.h
++  conf.c
++  conn.c
++  conn.h
++  data.c
++  data.h
++  date.c
++  date.h
++  file.c
++  file.h
++  handler.c
++  handler.h
++  http.c
++  http.h
++  init.c
++  response.c
++  server.c
++  server.h
++  session.c
++  session.h
++  socket.c
++  socket.h
++  socket_unix.c
++  socket_unix.h
++  thread.h
++  token.c
++  token.h
++  trace.c
++  trace.h)
++
++if(ENABLE_ABYSS_THREADS)
++  list(APPEND xmlrpc_abyss_SOURCES thread_pthread.c)
++else(ENABLE_ABYSS_THREADS)
++  list(APPEND xmlrpc_abyss_SOURCES thread_fork.c)
++endif(ENABLE_ABYSS_THREADS)
++
++add_library(xmlrpc_abyss SHARED ${xmlrpc_abyss_SOURCES})
++target_link_libraries(xmlrpc_abyss xmlrpc_util)
++
++if(ENABLE_ABYSS_THREADS)
++  set_target_properties(xmlrpc_abyss PROPERTIES DEFINE_SYMBOL _THREAD)
++  target_link_libraries(xmlrpc_abyss pthread)
++  ensc_pkgconfig_lib(xmlrpc_abyss "-lpthread")
++endif(ENABLE_ABYSS_THREADS)
++
++install(TARGETS xmlrpc_abyss
++  RUNTIME DESTINATION ${_bin}
++  LIBRARY DESTINATION ${_lib}
++  ARCHIVE DESTINATION ${_lib})
++
++set_target_properties(xmlrpc_abyss
++  PROPERTIES
++  LINK_FLAGS ${XMLRPC_LINKER_FLAGS}
++  VERSION    ${XMLRPC_C_LIBVERSION}
++  SOVERSION  ${XMLRPC_C_SOVERSION})
++
++ensc_pkgconfig(xmlrpc_abyss)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/abyss/src/xmlrpc_abyss.pc.cmake ./lib/abyss/src/xmlrpc_abyss.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/lib/abyss/src/xmlrpc_abyss.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/abyss/src/xmlrpc_abyss.pc.cmake	2007-05-22 14:29:26.810939641 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_abyss
++Description: XMLRPC Abyss base library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc_util
++Libs:   		-L${libdir} -lxmlrpc_abyss @xmlrpc_abyss_pkgconfig_libs@
++Cflags:
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/CMakeLists.txt ./lib/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/CMakeLists.txt	2007-05-22 14:29:26.746935991 +0200
+@@ -0,0 +1,12 @@
++## -*- cmake -*-
++
++add_subdirectory(abyss)
++add_subdirectory(libutil)
++add_subdirectory(util)
++add_subdirectory(curl_transport)
++add_subdirectory(libwww_transport)
++add_subdirectory(wininet_transport)
++
++if(NOT ENABLE_LIBXML2_BACKEND)
++  add_subdirectory(expat)
++endif(NOT ENABLE_LIBXML2_BACKEND)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/curl_transport/CMakeLists.txt ./lib/curl_transport/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/curl_transport/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/curl_transport/CMakeLists.txt	2007-05-22 14:29:26.834941009 +0200
+@@ -0,0 +1,7 @@
++# -*- cmake -*-
++
++if(MUST_BUILD_CURL_CLIENT)
++  list(APPEND transport_SOURCES
++    ${CMAKE_CURRENT_SOURCE_DIR}/xmlrpc_curl_transport.c
++    ${CMAKE_CURRENT_SOURCE_DIR}/xmlrpc_curl_transport.h)
++endif(MUST_BUILD_CURL_CLIENT)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/expat/CMakeLists.txt ./lib/expat/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/expat/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/expat/CMakeLists.txt	2007-05-22 14:29:26.854942149 +0200
+@@ -0,0 +1,9 @@
++# -*- cmake -*-
++
++
++INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/xmltok)
++
++add_subdirectory(gennmtab)
++add_subdirectory(xmlparse)
++add_subdirectory(xmltok)
++add_subdirectory(xmlwf)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/expat/gennmtab/CMakeLists.txt ./lib/expat/gennmtab/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/expat/gennmtab/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/expat/gennmtab/CMakeLists.txt	2007-05-22 14:29:26.870943060 +0200
+@@ -0,0 +1,3 @@
++# -*- cmake -*-
++
++ADD_EXECUTABLE(gennmtab gennmtab.c)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/expat/xmlparse/CMakeLists.txt ./lib/expat/xmlparse/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/expat/xmlparse/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/expat/xmlparse/CMakeLists.txt	2007-05-22 14:29:26.886943970 +0200
+@@ -0,0 +1,7 @@
++# -*- cmake -*-
++
++add_library(xmlrpc_xmlparse STATIC
++  xmlparse.c)
++target_link_libraries(xmlrpc_xmlparse xmlrpc_xmltok)
++
++ensc_pkgconfig(xmlrpc_xmlparse)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/expat/xmlparse/xmlrpc_xmlparse.pc.cmake ./lib/expat/xmlparse/xmlrpc_xmlparse.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/lib/expat/xmlparse/xmlrpc_xmlparse.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/expat/xmlparse/xmlrpc_xmlparse.pc.cmake	2007-05-22 14:29:26.914945564 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_xmlparse
++Description: XMLRPC xmlparse library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc_xmltok
++Libs:   		-L${libdir} -lxmlrpc_xmlparse
++Cflags:
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/expat/xmltok/CMakeLists.txt ./lib/expat/xmltok/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/expat/xmltok/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/expat/xmltok/CMakeLists.txt	2007-05-22 14:29:26.942947165 +0200
+@@ -0,0 +1,20 @@
++# -*- cmake -*-
++
++include_directories(${CMAKE_CURRENT_BINARY_DIR})
++
++add_library(xmlrpc_xmltok STATIC
++  xmltok.c xmlrole.c ${CMAKE_CURRENT_BINARY_DIR}/nametab.h)
++
++set_source_files_properties(${CMAKE_CURRENT_BINARY_DIR}/nametab.h
++  PROPERTIES
++  OBJECT_DEPENDS gennmtab
++  GENERATED true)
++
++
++get_target_property(GENNMTAB_EXECUTABLE gennmtab LOCATION)
++add_custom_command(
++  OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/nametab.h
++  COMMAND ${GENNMTAB_EXECUTABLE} >nametab.h || { rm -f nametab.h\; false\; }
++  DEPENDS gennmtab)
++
++ensc_pkgconfig(xmlrpc_xmltok)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/expat/xmltok/xmlrpc_xmltok.pc.cmake ./lib/expat/xmltok/xmlrpc_xmltok.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/lib/expat/xmltok/xmlrpc_xmltok.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/expat/xmltok/xmlrpc_xmltok.pc.cmake	2007-05-22 14:29:26.950947617 +0200
+@@ -0,0 +1,9 @@
++prefix=@prefix@
++libdir=@libdir@
++
++Name:        xmlrpc_xmltok
++Description: XMLRPC xmltok library
++Version:     @XMLRPC_C_VERSION@
++
++Libs:   	-L${libdir}
++Cflags:
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/libutil/CMakeLists.txt ./lib/libutil/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/libutil/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/libutil/CMakeLists.txt	2007-05-22 14:29:26.970948760 +0200
+@@ -0,0 +1,23 @@
++# -*- cmake -*-
++
++add_library(xmlrpc_util SHARED
++  casprintf.c
++  error.c
++  make_printable.c
++  memblock.c
++  select.c
++  sleep.c
++  time.c)
++
++set_target_properties(xmlrpc_util
++  PROPERTIES
++  LINK_FLAGS ${XMLRPC_LINKER_FLAGS}
++  VERSION    ${XMLRPC_C_LIBVERSION}
++  SOVERSION  ${XMLRPC_C_SOVERSION})
++
++install(TARGETS xmlrpc_util
++  RUNTIME DESTINATION ${_bin}
++  LIBRARY DESTINATION ${_lib}
++  ARCHIVE DESTINATION ${_lib})
++
++ensc_pkgconfig(xmlrpc_util)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/libutil/xmlrpc_util.pc.cmake ./lib/libutil/xmlrpc_util.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/lib/libutil/xmlrpc_util.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/libutil/xmlrpc_util.pc.cmake	2007-05-22 14:29:27.002950579 +0200
+@@ -0,0 +1,10 @@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_util
++Description: XMLRPC utility library
++Version:     @XMLRPC_C_VERSION@
++
++Libs:   	-L${libdir} -lxmlrpc_util
++Cflags:
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/libwww_transport/CMakeLists.txt ./lib/libwww_transport/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/libwww_transport/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/libwww_transport/CMakeLists.txt	2007-05-22 14:29:27.030952177 +0200
+@@ -0,0 +1,4 @@
++# -*- cmake -*-
++
++if(MUST_BUILD_LIBWWW_CLIENT)
++endif(MUST_BUILD_LIBWWW_CLIENT)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/util/CMakeLists.txt ./lib/util/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/util/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/util/CMakeLists.txt	2007-05-22 14:29:27.054953545 +0200
+@@ -0,0 +1,13 @@
++## -*- cmake -*-
++
++set(util_SOURCES
++  casprintf.c
++  cmdline_parser.c
++  getoptx.c
++  getoptx.h)
++
++if(WIN32)
++  list(APPEND util_SOURCES pthreadx_win32.c)
++endif(WIN32)
++
++add_library(util STATIC ${util_SOURCES})
+diff -NurpP ../xmlrpc-c-1.10.00.orig/lib/wininet_transport/CMakeLists.txt ./lib/wininet_transport/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/lib/wininet_transport/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./lib/wininet_transport/CMakeLists.txt	2007-05-22 14:29:27.074954686 +0200
+@@ -0,0 +1,4 @@
++# -*- cmake -*-
++
++if(MUST_BUILD_WININET_CLIENT)
++endif(MUST_BUILD_WININET_CLIENT)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/CMakeLists.txt ./src/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/src/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./src/CMakeLists.txt	2007-05-22 14:29:27.094955824 +0200
+@@ -0,0 +1,106 @@
++# -*- cmake -*-
++
++if(ENABLE_LIBXML2_BACKEND)
++  set(xmlrpc_xml_parser xmlrpc_libxml2.c)
++  set(libxml_INCLUDES ${LIBXML2_CFLAGS})
++  set(libxml_LIBS     ${LIBXML2_LINK_FLAGS})
++  set(xmlrpc_pkgconfig_req ${libxml_pkgconfig})
++else(ENABLE_LIBXML2_BACKEND)
++  set(xmlrpc_xml_parser xmlrpc_expat.c)
++  set(libxml_INCLUDES -I${xmlrpc-c_SOURCE_DIR}/lib/expat/xmlparse)
++  set(libxml_LIBS xmlrpc_xmlparse)
++  set(xmlrpc_pkgconfig_req xmlrpc_xmlparse)
++endif(ENABLE_LIBXML2_BACKEND)
++
++if(MUST_BUILD_WININET_CLIENT)
++  set(client_wininet_CFLAGS "")
++  set(client_wininet_LIBS   "${WININET_LDADD}")
++  list(APPEND transport_SOURCES
++    ${wininet_srcdir}/xmlrpc_wininet_transport.c ${wininet_srcdir}/xmlrpc_wininet_transport.h)
++endif(MUST_BUILD_WININET_CLIENT)
++
++if(MUST_BUILD_LIBWWW_CLIENT)
++  set(client_libwww_CFLAGS "${LIBWWW_CFLAGS}")
++  set(client_libwww_LIBS   "${LIBWWW_LIBS}")
++  list(APPEND transport_SOURCES ${libwww_srcdir}/xmlrpc_libwww_transport.c ${libwww_srcdir}/xmlrpc_libwww_transport.h)
++endif(MUST_BUILD_LIBWWW_CLIENT)
++
++if(MUST_BUILD_CURL_CLIENT)
++  set(client_curl_CFLAGS ${CURL_CFLAGS})
++  set(client_curl_LIBS   ${CURL_LINK_FLAGS})
++  set(xmlrpc_client_pkgconfig_req libcurl)
++  list(APPEND transport_SOURCES ${curl_srcdir}/xmlrpc_curl_transport.c)
++endif(MUST_BUILD_CURL_CLIENT)
++
++set(client_CFLAGS "-I${wininet_srcdir} -I${libwww_srcdir} -I${curl_srcdir} ${client_wininet_CFLAGS} ${client_libwww_CFLAGS} ${client_curl_CFLAGS}")
++set(client_LIBS   "${client_wininet_LIBS} ${client_libwww_LIBS} ${client_curl_LIBS}")
++
++
++add_subdirectory(cpp)
++add_subdirectory(test)
++
++
++
++### libxmlrpc.so
++add_library(xmlrpc SHARED
++  resource.c trace.c ${xmlrpc_xml_parser}
++  xmlrpc_data.c xmlrpc_datetime.c xmlrpc_array.c xmlrpc_struct.c
++  xmlrpc_build.c xmlrpc_decompose.c xmlrpc_parse.c xmlrpc_serialize.c
++  xmlrpc_base64.c xmlrpc_utf8.c xmlrpc_authcookie.c)
++
++set_target_properties(xmlrpc
++  PROPERTIES
++  COMPILE_FLAGS ${libxml_INCLUDES})
++
++ensc_pkgconfig(xmlrpc)
++target_link_libraries(xmlrpc ${libxml_LIBS} xmlrpc_util)
++list(APPEND lib_TARGETS xmlrpc)
++
++### libxmlrpc_client.so
++add_library(xmlrpc_client SHARED
++  xmlrpc_client.c xmlrpc_client_global.c ${transport_SOURCES})
++
++target_link_libraries(xmlrpc_client xmlrpc ${client_LIBS})
++set_target_properties(xmlrpc_client
++  PROPERTIES
++  COMPILE_FLAGS "${client_CFLAGS}")
++list(APPEND lib_TARGETS xmlrpc_client)
++ensc_pkgconfig(xmlrpc_client)
++
++### libxmlrpc_server.so
++add_library(xmlrpc_server SHARED
++  registry.c method.c system_method.c)
++target_link_libraries(xmlrpc_server xmlrpc)
++list(APPEND lib_TARGETS xmlrpc_server)
++ensc_pkgconfig(xmlrpc_server)
++
++
++### libxmlrpc_server_abyss.so
++add_library(xmlrpc_server_abyss SHARED
++  xmlrpc_server_abyss.c)
++target_link_libraries(xmlrpc_server_abyss xmlrpc_abyss xmlrpc_server)
++list(APPEND lib_TARGETS xmlrpc_server_abyss)
++ensc_pkgconfig(xmlrpc_server_abyss)
++
++
++
++### libxmlrpc_server_cgi.so
++add_library(xmlrpc_server_cgi SHARED
++  xmlrpc_server_cgi)
++target_link_libraries(xmlrpc_server_cgi xmlrpc_server)
++list(APPEND lib_TARGETS xmlrpc_server_cgi)
++ensc_pkgconfig(xmlrpc_server_cgi)
++
++
++install(TARGETS ${lib_TARGETS}
++  RUNTIME DESTINATION ${_bin}
++  LIBRARY DESTINATION ${_lib})
++
++set_target_properties(${lib_TARGETS}
++  PROPERTIES
++  LINK_FLAGS ${XMLRPC_LINKER_FLAGS}
++  VERSION    ${XMLRPC_C_LIBVERSION}
++  SOVERSION  ${XMLRPC_C_SOVERSION})
++
++
++enable_testing()
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/cpp/CMakeLists.txt ./src/cpp/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/src/cpp/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./src/cpp/CMakeLists.txt	2007-05-22 14:29:27.118957190 +0200
+@@ -0,0 +1,48 @@
++# -*- cmake -*-
++
++####### libxmlrpc++.so
++add_library(xmlrpc++ SHARED
++  base64.cpp env_wrap.cpp fault.cpp girerr.cpp girmem.cpp
++  outcome.cpp param_list.cpp value.cpp xml.cpp)
++target_link_libraries(xmlrpc++ xmlrpc)
++list(APPEND lib_TARGETS xmlrpc++)
++ensc_pkgconfig(xmlrpc++)
++
++####### libxmlrpc_cpp.so
++add_library(xmlrpc_cpp            SHARED XmlRpcCpp)
++target_link_libraries(xmlrpc_cpp xmlrpc xmlrpc_server xmlrpc_client)
++list(APPEND lib_TARGETS xmlrpc_cpp)
++ensc_pkgconfig(xmlrpc_cpp)
++
++####### libxmlrpc_server++.so
++add_library(xmlrpc_server++       SHARED registry.cpp)
++target_link_libraries(xmlrpc_server++ xmlrpc++ xmlrpc_server)
++list(APPEND lib_TARGETS xmlrpc_server++)
++ensc_pkgconfig(xmlrpc_server++)
++
++####### libxmlrpc_server_abyss++.so
++add_library(xmlrpc_server_abyss++ SHARED server_abyss.cpp)
++target_link_libraries(xmlrpc_server_abyss++ xmlrpc_server++ xmlrpc_server_abyss)
++list(APPEND lib_TARGETS xmlrpc_server_abyss++)
++ensc_pkgconfig(xmlrpc_server_abyss++)
++
++####### libxmlrpc_client++.so
++add_library(xmlrpc_client++       SHARED
++  client.cpp client_simple.cpp curl.cpp libwww.cpp wininet.cpp)
++set_target_properties(xmlrpc_client++
++  PROPERTIES
++  COMPILE_FLAGS "-I${wininet_srcdir} -I${libwww_srcdir} -I${curl_srcdir}")
++target_link_libraries(xmlrpc_client++ xmlrpc++ xmlrpc_client)
++list(APPEND lib_TARGETS xmlrpc_client++)
++ensc_pkgconfig(xmlrpc_client++)
++
++
++install(TARGETS ${lib_TARGETS}
++  RUNTIME DESTINATION ${_bin}
++  LIBRARY DESTINATION ${_lib})
++
++set_target_properties(${lib_TARGETS}
++  PROPERTIES
++  LINK_FLAGS ${XMLRPC_LINKER_FLAGS}
++  VERSION    ${XMLRPC_C_LIBVERSION}
++  SOVERSION  ${XMLRPC_C_SOVERSION})
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_client++.pc.cmake ./src/cpp/xmlrpc_client++.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_client++.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/cpp/xmlrpc_client++.pc.cmake	2007-05-22 14:29:27.150959017 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_client++
++Description: XMLRPC C++ Client library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc++ xmlrpc_client
++Libs:   		-L${libdir} -lxmlrpc_client++
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_cpp.pc.cmake ./src/cpp/xmlrpc_cpp.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_cpp.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/cpp/xmlrpc_cpp.pc.cmake	2007-05-22 14:29:27.158959471 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_cpp
++Description: XMLRPC CPP library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc xmlrpc_server xmlrpc_client
++Libs:   		-L${libdir} -lxmlrpc_cpp
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc++.pc.cmake ./src/cpp/xmlrpc++.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc++.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/cpp/xmlrpc++.pc.cmake	2007-05-22 14:29:27.126957651 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc++
++Description: XMLRPC C++ Base library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc
++Libs:   		-L${libdir} -lxmlrpc++
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_server_abyss++.pc.cmake ./src/cpp/xmlrpc_server_abyss++.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_server_abyss++.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/cpp/xmlrpc_server_abyss++.pc.cmake	2007-05-22 14:29:27.202961978 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_server_abyss++
++Description: XMLRPC C++ Abyss-Server library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc_server_abyss xmlrpc_server++
++Libs:   		-L${libdir} -lxmlrpc_server_abyss++
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_server++.pc.cmake ./src/cpp/xmlrpc_server++.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/cpp/xmlrpc_server++.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/cpp/xmlrpc_server++.pc.cmake	2007-05-22 14:29:27.186961065 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_server++
++Description: XMLRPC C++ Server library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc++ xmlrpc_server
++Libs:   		-L${libdir} -lxmlrpc_server++
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/test/CMakeLists.txt ./src/test/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/src/test/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./src/test/CMakeLists.txt	2007-05-22 14:30:51.166822176 +0200
+@@ -0,0 +1,28 @@
++# -*- cmake -*-
++
++set(test_SOURCES
++  abyss.c abyss.h
++  test.c cgi.c method_registry.c parse_xml.c serialize.c server_abyss.c
++  value.c xml_data.c)
++
++if(MUST_BUILD_CLIENT)
++  list(APPEND test_SOURCES client.c)
++  list(APPEND test_LIBS xmlrpc_client)
++else(MUST_BUILD_CLIENT)
++  list(APPEND test_SOURCES client_dummy.c)
++endif(MUST_BUILD_CLIENT)
++
++
++add_executable(src-test ${test_SOURCES})
++target_link_libraries(src-test xmlrpc_server_abyss util ${test_LIBS})
++
++add_executable(cgitest1 cgitest1.c)
++target_link_libraries(cgitest1 xmlrpc_server_cgi)
++
++add_custom_command(TARGET src-test
++  POST_BUILD
++  COMMAND rm -rf ${CMAKE_CURRENT_BINARY_DIR}/data
++  COMMAND ln -s ${CMAKE_CURRENT_SOURCE_DIR}/data ${CMAKE_CURRENT_BINARY_DIR})
++
++enable_testing()
++add_test(runtests src-test)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/xmlrpc_client.pc.cmake ./src/xmlrpc_client.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/xmlrpc_client.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/xmlrpc_client.pc.cmake	2007-05-22 14:29:27.250964713 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_client
++Description: XMLRPC client library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc @xmlrpc_client_pkgconfig_req@
++Libs:   		-L${libdir} -lxmlrpc_client @client_libwww_LIBS@ @client_wininet_LIBS@
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/xmlrpc.pc.cmake ./src/xmlrpc.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/xmlrpc.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/xmlrpc.pc.cmake	2007-05-22 14:29:27.242964261 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc
++Description: XMLRPC base library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	@xmlrpc_pkgconfig_req@ xmlrpc_util
++Libs:   		-L${libdir} -lxmlrpc @xmlrpc_pkgconfig_libs@
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/xmlrpc_server_abyss.pc.cmake ./src/xmlrpc_server_abyss.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/xmlrpc_server_abyss.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/xmlrpc_server_abyss.pc.cmake	2007-05-22 14:29:27.294967222 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_server_abyss
++Description: XMLRPC Server Abyss library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc_server xmlrpc_abyss
++Libs:   		-L${libdir} -lxmlrpc_server_abyss
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/xmlrpc_server_cgi.pc.cmake ./src/xmlrpc_server_cgi.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/xmlrpc_server_cgi.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/xmlrpc_server_cgi.pc.cmake	2007-05-22 14:29:27.326969047 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_server_cgi
++Description: XMLRPC CGI-Server library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc_server
++Libs:   		-L${libdir} -lxmlrpc_server_cgi
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/src/xmlrpc_server.pc.cmake ./src/xmlrpc_server.pc.cmake
+--- ../xmlrpc-c-1.10.00.orig/src/xmlrpc_server.pc.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./src/xmlrpc_server.pc.cmake	2007-05-22 14:29:27.278966312 +0200
+@@ -0,0 +1,12 @@
++bindir=@bindir@
++prefix=@prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name:        xmlrpc_server
++Description: XMLRPC Server library
++Version:     @XMLRPC_C_VERSION@
++
++Requires.private:	xmlrpc
++Libs:   		-L${libdir} -lxmlrpc_server
++Cflags:			-I${includedir}
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/binmode-rpc-kit/CMakeLists.txt ./tools/binmode-rpc-kit/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/tools/binmode-rpc-kit/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/binmode-rpc-kit/CMakeLists.txt	2007-05-22 14:29:27.362971097 +0200
+@@ -0,0 +1,2 @@
++# -*- cmake -*-
++
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/CMakeLists.txt ./tools/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/tools/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/CMakeLists.txt	2007-05-22 14:29:27.342969956 +0200
+@@ -0,0 +1,9 @@
++# -*- cmake -*-
++
++add_subdirectory(binmode-rpc-kit)
++add_subdirectory(turbocharger)
++
++add_subdirectory(xmlrpc)
++add_subdirectory(xmlrpc_transport)
++
++add_subdirectory(xml-rpc-api2cpp )
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/turbocharger/CMakeLists.txt ./tools/turbocharger/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/tools/turbocharger/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/turbocharger/CMakeLists.txt	2007-05-22 14:29:27.386972464 +0200
+@@ -0,0 +1 @@
++# -*- cmake -*-
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/xmlrpc/CMakeLists.txt ./tools/xmlrpc/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/tools/xmlrpc/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/xmlrpc/CMakeLists.txt	2007-05-22 14:29:27.418974292 +0200
+@@ -0,0 +1,15 @@
++# -*- cmake -*-
++
++add_executable(tool-xmlrpc
++  xmlrpc.c
++  dumpvalue.c
++  dumpvalue.h)
++target_link_libraries(tool-xmlrpc xmlrpc_client util)
++
++set_target_properties(tool-xmlrpc
++  PROPERTIES OUTPUT_NAME xmlrpc)
++
++install(TARGETS tool-xmlrpc
++  DESTINATION ${_bin})
++
++ensc_set_link_exe_flags(tool-xmlrpc)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/xmlrpc/config.h ./tools/xmlrpc/config.h
+--- ../xmlrpc-c-1.10.00.orig/tools/xmlrpc/config.h	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/xmlrpc/config.h	2007-05-22 14:29:27.426974744 +0200
+@@ -0,0 +1 @@
++#include <xmlrpc_config.h>
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/xml-rpc-api2cpp/CMakeLists.txt ./tools/xml-rpc-api2cpp/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/tools/xml-rpc-api2cpp/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/xml-rpc-api2cpp/CMakeLists.txt	2007-05-22 14:29:27.402973379 +0200
+@@ -0,0 +1,15 @@
++# -*- cmake -*-
++
++add_executable(xml-rpc-api2cpp
++  xml-rpc-api2cpp.cpp
++  DataType.cpp
++  XmlRpcFunction.cpp
++  XmlRpcClass.cpp
++  SystemProxy.cpp)
++target_link_libraries(xml-rpc-api2cpp xmlrpc_cpp xmlrpc_client xmlrpc_server)
++
++install(TARGETS xml-rpc-api2cpp
++  RUNTIME DESTINATION bin)
++
++install(FILES xml-rpc-api2cpp.1
++  DESTINATION ${mandir}/man1)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/xmlrpc_transport/CMakeLists.txt ./tools/xmlrpc_transport/CMakeLists.txt
+--- ../xmlrpc-c-1.10.00.orig/tools/xmlrpc_transport/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/xmlrpc_transport/CMakeLists.txt	2007-05-22 14:29:27.442975657 +0200
+@@ -0,0 +1,9 @@
++# -*- cmake -*-
++
++add_executable(xmlrpc_transport xmlrpc_transport.c)
++target_link_libraries(xmlrpc_transport xmlrpc_client util)
++
++install(TARGETS xmlrpc_transport
++  DESTINATION ${_bin})
++
++ensc_set_link_exe_flags(xmlrpc_transport)
+diff -NurpP ../xmlrpc-c-1.10.00.orig/tools/xmlrpc_transport/config.h ./tools/xmlrpc_transport/config.h
+--- ../xmlrpc-c-1.10.00.orig/tools/xmlrpc_transport/config.h	1970-01-01 01:00:00.000000000 +0100
++++ ./tools/xmlrpc_transport/config.h	2007-05-22 14:29:27.470977254 +0200
+@@ -0,0 +1 @@
++#include <xmlrpc_config.h>
+diff -NurpP ../xmlrpc-c-1.10.00.orig/transport_config.h.cmake ./transport_config.h.cmake
+--- ../xmlrpc-c-1.10.00.orig/transport_config.h.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./transport_config.h.cmake	2007-05-22 14:29:27.478977706 +0200
+@@ -0,0 +1,16 @@
++/* -*- c -*- */
++#define MUST_BUILD_WININET_CLIENT	@_MUST_BUILD_WININET_CLIENT@
++#define MUST_BUILD_LIBWWW_CLIENT	@_MUST_BUILD_LIBWWW_CLIENT@
++#define MUST_BUILD_CURL_CLIENT		@_MUST_BUILD_CURL_CLIENT@
++
++static char const * const XMLRPC_DEFAULT_TRANSPORT =
++#if MUST_BUILD_LIBWWW_CLIENT
++  "libwww"
++#elif MUST_BUILD_CURL_CLIENT
++  "curl"
++#elif MUST_BUILD_WININET_CLIENT
++  "wininet"
++#else
++#  error "no client XML transport configured"
++#endif
++  ;
+diff -NurpP ../xmlrpc-c-1.10.00.orig/version.h.cmake ./version.h.cmake
+--- ../xmlrpc-c-1.10.00.orig/version.h.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./version.h.cmake	2007-05-22 14:29:27.502979076 +0200
+@@ -0,0 +1,2 @@
++/* This file was generated by a make rule */
++#define XMLRPC_C_VERSION "@XMLRPC_C_VERSION@"
+diff -NurpP ../xmlrpc-c-1.10.00.orig/xmlrpc-c-config ./xmlrpc-c-config
+--- ../xmlrpc-c-1.10.00.orig/xmlrpc-c-config	1970-01-01 01:00:00.000000000 +0100
++++ ./xmlrpc-c-config	2007-05-22 14:29:27.514979762 +0200
+@@ -0,0 +1,67 @@
++#! /bin/sh
++
++comp=
++
++need_cxx=
++need_client=
++need_server=
++need_abyss=
++
++while test $# -gt 0; do
++    case $1 in
++      (c++)          		comp="$comp xmlrpc_cpp";;
++      (server-util)  		comp="$comp xmlrpc_server_util";;
++      (cgi-server)   		comp="$comp xmlrpc_server_cgi";;
++      (c++2)         		need_cxx=1;;
++      (abyss-server) 		need_abyss=1;;
++      (client|libwww-client)	need_client=1;;
++      (--) shift; break;;
++      (--*) break;;
++      (*)
++      echo "Unrecognized token '$1'"
++      exit 1
++      ;;
++    esac
++    shift
++done
++
++if test -z "$need_cxx"; then
++    test -z "$need_client" || comp="$comp xmlrpc_client"
++    test -z "$need_abyss"  || comp="$comp xmlrpc_abyss"
++    test -z "$need_server" || comp="$comp xmlrpc_server"
++else
++    test -z "$need_client" || comp="$comp xmlrpc_client++"
++    test -z "$need_abyss"  || comp="$comp xmlrpc_abyss++"
++    test -z "$need_server" || comp="$comp xmlrpc_server++"
++fi
++
++dummy_comp=xmlrpc_client
++
++case $1 in
++  (--features|--modules)
++  echo "c++ abyss-server curl-client"
++  exit 0
++  ;;
++  (--version)
++  set -- --modversion
++  ;;
++  (--exec-prefix)
++  set -- --variable=prefix
++  ;;
++  (--*dir|--prefix)
++  set -- --variable=${1##--}
++  ;;
++  (--ldflags)
++  set -- --libs-only-L
++  ;;
++  (--ldadd)
++  set -- --libs-only-l
++  ;;
++  (*)
++  dummy_comp=
++  ;;
++esac
++
++test x"$comp" != x || comp=$dummy_comp
++
++exec pkg-config "$@" $comp
+diff -NurpP ../xmlrpc-c-1.10.00.orig/xmlrpc_config.h.cmake ./xmlrpc_config.h.cmake
+--- ../xmlrpc-c-1.10.00.orig/xmlrpc_config.h.cmake	1970-01-01 01:00:00.000000000 +0100
++++ ./xmlrpc_config.h.cmake	2007-05-22 14:29:27.530980673 +0200
+@@ -0,0 +1,21 @@
++/* -*- c -*- */
++
++#ifndef H_XMLRPC_C_CONFIG_H
++
++#cmakedefine			HAVE_WCHAR_H
++#cmakedefine			HAVE_SETENV
++#define HAVE_SYS_IOCTL_H	0@HAVE_SYS_IOCTL_H@
++
++#define VA_LIST_IS_ARRAY	@VA_LIST_IS_ARRAY@
++#define XMLRPC_HAVE_WCHAR	@XMLRPC_HAVE_WCHAR@
++#define ATTR_UNUSED		@ATTR_UNUSED@
++#define DIRECTORY_SEPARATOR	"@DIRECTORY_SEPARATOR@"
++
++#ifdef HAVE_WCHAR_H
++#  define HAVE_UNICODE_WCHAR	1
++#else
++#  define HAVE_UNICODE_WCHAR	0
++#endif
++
++
++#endif
