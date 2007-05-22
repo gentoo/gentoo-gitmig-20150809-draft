@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/groovy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.21 2007/02/10 19:45:35 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.22 2007/05/22 06:58:24 caster Exp $
+
+*groovy-1.0-r1 (22 May 2007)
+
+  22 May 2007; Vlastimil Babka <caster@gentoo.org> +groovy-1.0-r1.ebuild:
+  Replace fetch restricted sun-jmx dep with mx4j-core, upstream uses it too
+  according to maven xmls.
 
   10 Feb 2007; Joshua Nichols <nichoj@gentoo.org> -groovy-1.0_rc01.ebuild:
   Pruned old version with same keywords.
