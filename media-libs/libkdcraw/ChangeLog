@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libkdcraw
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.1 2007/05/22 10:22:32 pva Exp $
+
+*libkdcraw-0.1.0 (22 May 2007)
+
+  22 May 2007; <pva@gentoo.org> +metadata.xml, +libkdcraw-0.1.0.ebuild:
+  Initial bump.
+
