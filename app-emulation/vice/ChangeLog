@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.49 2007/05/03 05:28:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.50 2007/05/22 00:01:14 nyhm Exp $
+
+  21 May 2007; Tristan Heaven <nyhm@gentoo.org> vice-1.21.ebuild:
+  Add resid USE flag, bug #177102
 
   03 May 2007; Mike Frysinger <vapier@gentoo.org> vice-1.21.ebuild:
   Tweak @SYNC@ fix some more #176522.

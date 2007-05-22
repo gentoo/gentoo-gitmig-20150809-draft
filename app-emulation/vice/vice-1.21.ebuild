@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.21.ebuild,v 1.4 2007/05/03 05:28:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.21.ebuild,v 1.5 2007/05/22 00:01:14 nyhm Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/${P
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
-IUSE="Xaw3d alsa arts esd ffmpeg gnome nls png readline sdl"
+IUSE="Xaw3d alsa arts esd ffmpeg gnome nls png readline resid sdl"
 
 RDEPEND="media-libs/giflib
 	media-libs/jpeg
@@ -24,6 +24,7 @@ RDEPEND="media-libs/giflib
 	x11-libs/libXv
 	x11-libs/libXxf86dga
 	x11-libs/libXxf86vm
+	x11-apps/xset
 	Xaw3d? ( x11-libs/Xaw3d )
 	!Xaw3d? ( x11-libs/libXaw )
 	alsa? ( media-libs/alsa-lib )
@@ -37,6 +38,7 @@ RDEPEND="media-libs/giflib
 	nls? ( virtual/libintl )
 	png? ( media-libs/libpng )
 	readline? ( sys-libs/readline )
+	resid? ( media-libs/resid )
 	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
 	x11-apps/bdftopcf
@@ -71,7 +73,6 @@ src_compile() {
 		--disable-dependency-tracking \
 		--enable-fullscreen \
 		--without-midas \
-		--without-resid \
 		$(use_enable ffmpeg) \
 		$(use_enable gnome gnomeui) \
 		$(use_enable nls) \
@@ -81,6 +82,7 @@ src_compile() {
 		$(use_with esd) \
 		$(use_with png) \
 		$(use_with readline) \
+		$(use_with resid) \
 		$(use_with sdl) \
 		|| die
 	emake || die "emake failed"
