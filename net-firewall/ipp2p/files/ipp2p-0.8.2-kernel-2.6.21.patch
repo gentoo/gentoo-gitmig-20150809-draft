@@ -1,0 +1,69 @@
+diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
+--- ipp2p-0.8.2.orig/ipt_ipp2p.c	2007-05-22 20:13:59.000000000 +0300
++++ ipp2p-0.8.2/ipt_ipp2p.c	2007-05-22 20:25:32.000000000 +0300
+@@ -2,9 +2,17 @@
+ #include <linux/modversions.h>
+ #endif
+ #include <linux/module.h>
+-#include <linux/netfilter_ipv4/ip_tables.h>
+ #include <linux/version.h>
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,21)
++#	include <linux/netfilter/x_tables.h>
++#	define ipt_register_match xt_register_match
++#	define ipt_unregister_match xt_unregister_match
++#else 
++#	include <linux/netfilter_ipv4/ip_tables.h>
+ //#include <linux/netfilter_ipv4/ipt_ipp2p.h>
++#endif /* LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,21) */
++
+ #include "ipt_ipp2p.h"
+ #include <net/tcp.h>
+ #include <net/udp.h>
+@@ -831,7 +839,9 @@
+            const struct ipt_ip *ip,
+ #endif
+ 	   void *matchinfo,
++#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,18)
+ 	   unsigned int matchsize,
++#endif
+ 	   unsigned int hook_mask)
+ {
+         /* Must specify -p tcp */
+@@ -843,15 +853,6 @@
+ }
+ 									    
+ 
+-// TODO: find out what this structure is for (scheme taken
+-// from kernel sources)
+-// content seems to have a length of 8 bytes 
+-// (at least on my x86 machine)
+-struct ipp2p_match_info {
+-	long int dunno_what_this_is_for;
+-	long int i_also_dunno_what_this_is_for;
+-};
+-
+ static struct ipt_match ipp2p_match = { 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ 	{ NULL, NULL }, 
+@@ -860,17 +861,16 @@
+ 	&checkentry, 
+ 	NULL, 
+ 	THIS_MODULE
+-#endif
+-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)) && (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17))
++#elif LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17)
+ 	.name		= "ipp2p",
+ 	.match		= &match,
+ 	.checkentry	= &checkentry,
+ 	.me		= THIS_MODULE,
+-#elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
++#else /* LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17) */
+ 	.name		= "ipp2p",
+ 	.match		= &match,
+ 	.family         = AF_INET,
+-	.matchsize      = sizeof(struct ipp2p_match_info),
++	.matchsize      = XT_ALIGN(sizeof(struct ipt_p2p_info)),
+ 	.checkentry	= &checkentry,
+ 	.me		= THIS_MODULE,
+ #endif
