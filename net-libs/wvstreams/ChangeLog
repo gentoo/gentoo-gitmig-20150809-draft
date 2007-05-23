@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.103 2007/05/23 17:25:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.104 2007/05/23 22:37:05 gustavoz Exp $
+
+  23 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  wvstreams-4.3-r2.ebuild:
+  Stable on sparc wrt #179401 take 2
 
 *wvstreams-4.3-r2 (23 May 2007)
 
