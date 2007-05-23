@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/OilWar
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/OilWar/ChangeLog,v 1.7 2006/09/24 11:36:08 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/OilWar/ChangeLog,v 1.8 2007/05/23 06:08:16 tupone Exp $
+
+*OilWar-1.2.1-r1 (23 May 2007)
+
+  23 May 2007; Tupone Alfredo <tupone@gentoo.org> +OilWar-1.2.1-r1.ebuild:
+  Added menu. Bug #159757 by Pacho Ramos
 
   24 Sep 2006; <blubb@gentoo.org> OilWar-1.2.1.ebuild:
   stable on amd64
