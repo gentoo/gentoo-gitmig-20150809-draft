@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7285 2007/05/23 17:34:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7286 2007/05/23 17:35:51 humpback Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -479,7 +479,7 @@ www-misc/libapreq
 
 # Gustavo Felisberto <humpback@gentoo.org> (7 may 2007)
 # Alpha software.
-=net-im/skype-1.4.0.58_alpha
+>=net-im/skype-1.4.0
 
 # George Shapovalov (7 May 2007)
 # masked old style ( non split and problematic) gnat compiler
