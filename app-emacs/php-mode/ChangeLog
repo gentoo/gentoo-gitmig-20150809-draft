@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/php-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.17 2007/04/21 05:52:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.18 2007/05/23 20:28:19 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> php-mode-1.2.0.ebuild:
+  Add ~x86-fbsd keyword as per bug #178434 by Joe Peterson.
 
   21 Apr 2007; Ulrich Mueller <ulm@gentoo.org> +files/51php-mode-gentoo.el,
   php-mode-1.2.0.ebuild:
