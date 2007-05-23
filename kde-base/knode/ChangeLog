@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.70 2007/05/23 00:35:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.71 2007/05/23 11:01:12 carlo Exp $
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> knode-3.5.7.ebuild:
+  Correct dependencies.
 
 *knode-3.5.7 (23 May 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.7.ebuild,v 1.1 2007/05/23 00:19:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.7.ebuild,v 1.2 2007/05/23 10:57:00 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -18,14 +18,14 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 	$(deprange $PV $MAXKDEVER kde-base/certmanager)
 	$(deprange $PV $MAXKDEVER kde-base/libkcal)
 	$(deprange $PV $MAXKDEVER kde-base/kontact)
-	$(deprange 3.5.6-r3 $MAXKDEVER kde-base/libkpgp)
+	$(deprange 3.5.4 $MAXKDEVER kde-base/libkpgp)
 	$(deprange $PV $MAXKDEVER kde-base/libkmime)"
 RDEPEND="${DEPEND}
 	crypt? ( app-crypt/pinentry )
 	$(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
-	$(deprange 3.5.6-r3 $MAXKDEVER kde-base/kmailcvt)
-	$(deprange-dual 3.5.6-r3 $MAXKDEVER kde-base/kdebase-kioslaves)
-	$(deprange-dual 3.5.6-r3 $MAXKDEVER kde-base/kcontrol)" # for the "looknfeel" icon, and probably others.
+	$(deprange 3.5.5 $MAXKDEVER kde-base/kmailcvt)
+	$(deprange-dual $PV $MAXKDEVER kde-base/kdebase-kioslaves)
+	$(deprange-dual $PV $MAXKDEVER kde-base/kcontrol)" # for the "looknfeel" icon, and probably others.
 
 KMCOPYLIB="
 	libkdepim libkdepim/

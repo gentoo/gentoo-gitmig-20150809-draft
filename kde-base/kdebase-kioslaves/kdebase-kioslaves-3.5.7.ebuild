@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.7.ebuild,v 1.1 2007/05/22 22:37:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.7.ebuild,v 1.2 2007/05/23 10:53:15 carlo Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdebase-3.5-patchset-04.tar.bz2"
+	mirror://gentoo/kdebase-3.5-patchset-05.tar.bz2"
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -23,7 +23,7 @@ DEPEND="ldap? ( net-nds/openldap )
 	!<kde-base/kdesktop-3.5.6-r1"
 RDEPEND="${DEPEND}
 	virtual/ssh
-	$(deprange 3.5.6-r1 $MAXKDEVER kde-base/kdialog)"	# for the kdeeject script used by the devices/mounthelper ioslave
+	$(deprange 3.5.5 $MAXKDEVER kde-base/kdialog)"	# for the kdeeject script used by the devices/mounthelper ioslave
 DEPEND="${DEPEND}
 	x11-apps/xhost"
 
