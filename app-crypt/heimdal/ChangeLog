@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.116 2007/04/14 00:43:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.117 2007/05/23 01:34:43 cardoe Exp $
+
+  23 May 2007; Doug Goldstein <cardoe@gentoo.org> heimdal-0.7.2-r3.ebuild:
+  heimdal LDAP bits use deprecated functions so we need to define
+  LDAP_DEPRECATED during compile
 
   14 Apr 2007; <dan@gentoo.org> heimdal-0.7.2-r3.ebuild:
   remove krb4 as per bug #173354

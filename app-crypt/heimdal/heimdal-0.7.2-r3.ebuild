@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.13 2007/04/14 00:43:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.14 2007/05/23 01:34:43 cardoe Exp $
 
 WANT_AUTOMAKE=1.8
 WANT_AUTOCONF=latest
 
-inherit autotools libtool eutils virtualx toolchain-funcs
+inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 
 PATCHVER=0.2
 PATCH_P=${P}-gentoo-patches-${PATCHVER}
@@ -45,7 +45,10 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	use ldap && myconf="${myconf} --with-openldap=/usr"
+	if use ldap; then
+		myconf="${myconf} --with-openldap=/usr"
+		append-flags -DLDAP_DEPRECATED=1
+	fi
 
 	econf \
 		$(use_with ipv6) \
