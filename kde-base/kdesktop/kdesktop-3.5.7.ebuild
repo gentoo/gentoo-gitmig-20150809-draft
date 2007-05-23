@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.7.ebuild,v 1.1 2007/05/22 23:21:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.7.ebuild,v 1.2 2007/05/23 10:30:26 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -21,8 +21,8 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkonq)
 	# so until we separate the kcontrol modules into separate ebuilds :-),
 	# there's a dep here
 RDEPEND="${DEPEND}
-	$(deprange 3.5.6-r2 $MAXKDEVER kde-base/kcheckpass)
-	$(deprange 3.5.6-r2 $MAXKDEVER kde-base/kdialog)
+	$(deprange 3.5.6 $MAXKDEVER kde-base/kcheckpass)
+	$(deprange 3.5.5 $MAXKDEVER kde-base/kdialog)
 	$(deprange $PV $MAXKDEVER kde-base/konqueror)
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 
