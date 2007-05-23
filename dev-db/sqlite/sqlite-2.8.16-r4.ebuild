@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.17 2007/05/08 20:25:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.18 2007/05/23 01:14:54 cardoe Exp $
 
 inherit eutils alternatives toolchain-funcs
 
@@ -21,19 +21,13 @@ RDEPEND="tcl? ( dev-lang/tcl )"
 SOURCE="/usr/bin/lemon"
 ALTERNATIVES="${SOURCE}-3 ${SOURCE}-0"
 
+RESTRICT="tcl? ( test )"
+
 src_unpack() {
 	# test
-	if has test ${FEATURES} ; then
-		if ! has userpriv ${FEATURES} ; then
-			ewarn "The userpriv feature must be enabled to run tests."
-			eerror "Testsuite will not be run."
-		fi
-		if ! use tcl ; then
-			eerror "The tcl USE flag must be enabled to run tests."
-			ewarn "Please note that turning on tcl installs runtime"
-			ewarn "support too."
-			eerror "Testsuite will not be run."
-		fi
+	if has test ${FEATURES} && ! has userpriv ${FEATURES}; then
+		ewarn "The userpriv feature must be enabled to run tests."
+		eerror "Testsuite will not be run."
 	fi
 
 	unpack ${A}
