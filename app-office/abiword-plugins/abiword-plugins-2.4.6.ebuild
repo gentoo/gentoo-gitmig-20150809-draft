@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.4 2007/05/06 04:53:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.5 2007/05/23 15:35:48 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.abisource.com/downloads/abiword/${PV}/abiword-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc64 sparc ~x86"
 IUSE="bzip2 debug gnome grammar jpeg libgda math ots pdf readline svg thesaurus wmf wordperfect"
 
 # libgsf dependency used by some document format importers
