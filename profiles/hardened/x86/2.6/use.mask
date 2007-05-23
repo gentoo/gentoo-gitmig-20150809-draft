@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.12 2006/07/19 18:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.13 2007/05/23 19:50:58 phreak Exp $
 
 -3dnow
 -3dnowext
@@ -14,7 +14,6 @@
 -win32codecs
 -real
 -kqemu
--x264
 
 # Copied from default-linux/x86 2006-04-02; bug #128490
 # Modular X: unmask for architectures on which they are available
@@ -23,5 +22,48 @@
 -video_cards_fglrx
 -video_cards_vmware
 # Modular X: mask for architectures on which they aren't available
+input_devices_evdev
 video_cards_newport
 
+nptl
+nptlonly
+hal
+v4l2
+ipod
+uml
+cman
+gulm
+
+# 2006/06/22 Chris Gianelloni <wolf31o2@gentoo.org>
+# # Masking for bug #136866
+pmount
+
+# Christian Faulhammer <opfer@gentoo.org> (23 Nov 2006)
+# only available for ppc64, see bug #156000
+ibm
+
+#input_devices_wacom
+-x264
+
+# Diego Pettenò <flameeyes@gentoo.org> (4 Jan 2007)
+# Unmask the flags for PHP that are available only on x86
+-fdftk
+-sybase-ct
+-ingres
+-birdstep
+-adabas
+-filepro
+-pfpro
+-informix
+-empress
+-empress-bcs
+-sybase
+-frontbase
+-dbmaker
+-esoob
+-solid
+# Shared with amd64
+-oci8
+-oracle7
+-firebird
+-db2
