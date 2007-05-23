@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.30 2007/05/21 15:00:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.31 2007/05/23 19:11:26 gustavoz Exp $
+
+  23 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> avrdude-5.1.ebuild,
+  avrdude-5.2.ebuild, avrdude-5.3.1.ebuild, avrdude-5.4.ebuild:
+  Block parallel make, it's broken, thanks to Ralf Gerbig for pointing out
 
 *avrdude-5.4 (21 May 2007)
 
