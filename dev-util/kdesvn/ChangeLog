@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.24 2007/04/30 15:54:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.25 2007/05/23 18:26:43 genstef Exp $
+
+*kdesvn-0.12.0 (23 May 2007)
+
+  23 May 2007; Stefan Schweizer <genstef@gentoo.org> +kdesvn-0.12.0.ebuild:
+  version bump thanks to Jannick Kuhr <jakuhr-linux@gmx.de> in bug 179507
 
   30 Apr 2007; George Shapovalov <george@gentoo.org> ChangeLog:
   removed old (pre-stable) version
