@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.64_alpha.ebuild,v 1.1 2007/05/23 14:32:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.64_alpha.ebuild,v 1.2 2007/05/23 17:02:52 drizzt Exp $
 
 inherit eutils qt4
 
@@ -35,6 +35,8 @@ DEPEND="
 
 QA_EXECSTACK_x86="opt/skype/skype"
 QA_EXECSTACK_amd64="opt/skype/skype"
+
+S="${WORKDIR}"/${MY_PN}-${MY_PV}
 
 pkg_setup() {
 	if use amd64 && ! use static;
