@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.11 2007/04/08 12:23:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.12 2007/05/23 20:53:14 flameeyes Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -29,7 +29,7 @@ src_unpack() {
 	cd "${S}"
 	echo "commons-collections.jar=$(java-pkg_getjars commons-collections)" > build.properties
 	echo "commons-pool.jar=$(java-pkg_getjars commons-pool)" >> build.properties
-	rm *.jar -v || die
+	rm -v *.jar || die
 }
 
 EANT_BUILD_TARGET="build-jar"

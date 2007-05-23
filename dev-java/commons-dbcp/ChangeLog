@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.35 2007/05/15 23:15:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.36 2007/05/23 20:53:14 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  commons-dbcp-1.2.1-r1.ebuild, commons-dbcp-1.2.2.ebuild:
+  Put -v switch before the files to remove. Closes bug #173564 reported by
+  Alessio Cassibba.
 
   15 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   -commons-dbcp-1.2.1.ebuild:
