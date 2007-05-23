@@ -1,8 +1,12 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.23 2007/04/26 14:02:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.24 2007/05/23 14:36:19 humpback Exp $
 
 # This file is additional masking for the hardened profile
+
+# Gustavo Felisberto <humpback@gentoo.org> (23 May 2007)
+# This is to be removed as soon as there is a unmasked >=sys-libs/glibc-2.4
+net-im/skype
 
 # Christian Heim <phreak@gentoo.org> (28 January 2007)
 # Mask sys-devel/autoconf-2.61 due to bug #161566
