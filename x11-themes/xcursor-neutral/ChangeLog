@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xcursor-neutral
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.4 2007/05/15 14:27:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.5 2007/05/23 15:40:05 gustavoz Exp $
+
+  23 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xcursor-neutral-1.13a.ebuild:
+  Keyworded ~sparc
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
