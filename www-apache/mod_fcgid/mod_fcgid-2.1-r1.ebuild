@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1.ebuild,v 1.3 2007/03/14 19:17:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1-r1.ebuild,v 1.1 2007/05/23 20:12:11 phreak Exp $
 
 inherit apache-module eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 S="${WORKDIR}/${PN}.${PV}"
 
-APACHE2_MOD_CONF="20_${PN}"
+#APACHE2_MOD_CONF="20_${PN}"
 APACHE2_MOD_DEFINE="FCGID"
 
 APXS2_ARGS="-I ${S} -c ${PN}.c fcgid_bridge.c \
@@ -35,4 +35,13 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-apr_shm_remove.patch
+}
+
+src_install() {
+	make DESTDIR="${D}" install || die "make install failed!"
+
+	# Once APACHE2_MOD_CONF is able to use newconfd (probably never), this line
+	# should go.
+	insinto ${APACHE2_MODULES_CONFDIR}
+	newins "${FILESDIR}"/20_mod_fcgid-${PV}.conf 20_mod_fcgid.conf
 }
