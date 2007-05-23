@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.24 2007/05/09 22:14:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.25 2007/05/23 17:13:44 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ~x86-fbsd keyword. Bug #176906.
 
 *pmd-3.9 (09 May 2007)
 
