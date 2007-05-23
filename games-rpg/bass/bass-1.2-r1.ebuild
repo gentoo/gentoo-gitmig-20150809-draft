@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.1 2007/05/21 22:57:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.2 2007/05/23 02:12:35 nyhm Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/scummvm/bass-cd-${PV}.zip
 
 LICENSE="bass"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=games-engines/scummvm-0.5.0"
@@ -27,6 +27,6 @@ src_install() {
 	doins sky.* || die "doins failed"
 	dodoc readme.txt
 	doicon "${DISTDIR}"/${PN}.png
-	make_desktop_entry ${PN} "Beneath a Steel Sky" ${PN}.png
+	make_desktop_entry ${PN} "Beneath a Steel Sky"
 	prepgamesdirs
 }
