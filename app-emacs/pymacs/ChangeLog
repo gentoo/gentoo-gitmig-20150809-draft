@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.17 2007/05/07 15:24:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.18 2007/05/23 20:31:37 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> pymacs-0.22-r1.ebuild:
+  Add ~x86-fbsd keyword as per bug #178375 by Joe Peterson.
 
   07 May 2007; Jeroen Roovers <jer@gentoo.org> pymacs-0.22-r1.ebuild:
   Marked ~hppa (bug #177495).
