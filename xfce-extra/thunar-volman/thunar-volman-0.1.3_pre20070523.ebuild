@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.1.3_pre20070523.ebuild,v 1.1 2007/05/23 00:27:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.1.3_pre20070523.ebuild,v 1.2 2007/05/23 12:49:42 drac Exp $
 
 inherit eutils xfce44
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://foo-projects.org/~benny/projects/thunar-volman"
 SRC_URI="http://dev.gentoo.org/~drac/distfiles/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="debug"
 
 RDEPEND="dev-libs/dbus-glib
 	sys-apps/hal
