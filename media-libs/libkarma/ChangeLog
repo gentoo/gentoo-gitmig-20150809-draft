@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkarma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.5 2007/03/09 23:41:04 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.6 2007/05/23 18:42:50 genstef Exp $
+
+*libkarma-0.1.0 (23 May 2007)
+
+  23 May 2007; Stefan Schweizer <genstef@gentoo.org> +libkarma-0.1.0.ebuild:
+  version bump thanks to Frank Zschockelt <gentoo@freakysoft.de> in bug 179039
 
 *libkarma-0.0.6-r1 (09 Mar 2007)
 
