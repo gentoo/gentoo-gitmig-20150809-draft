@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.36 2007/05/22 22:42:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.37 2007/05/23 01:37:54 markusle Exp $
+
+  23 May 2007; Markus Dittrich <markusle@gentoo.org> scilab-4.1.1.ebuild:
+  Fixed improper SCR_URI.
 
 *scilab-4.1.1 (22 May 2007)
 

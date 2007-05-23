@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.1.ebuild,v 1.1 2007/05/22 22:42:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.1.ebuild,v 1.2 2007/05/23 01:37:54 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 LICENSE="scilab"
-SRC_URI="http://scilabsoft.inria.fr/download/stable/${P}-src.tar.gz"
+SRC_URI="http://www.scilab.org/download/${PV}/${P}-src.tar.gz"
 HOMEPAGE="http://www.scilab.org/"
 
 SLOT="0"
