@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.35 2007/05/13 14:49:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.36 2007/05/23 16:04:00 genstef Exp $
+
+*madwifi-ng-0.9.3.1 (23 May 2007)
+
+  23 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  +madwifi-ng-0.9.3.1.ebuild:
+  Version bump to fix security bug 179532 and to not contain the headers bug
+  179348
 
   13 May 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/madwifi-2.6.22.patch, madwifi-ng-0.9.3-r3.ebuild:
