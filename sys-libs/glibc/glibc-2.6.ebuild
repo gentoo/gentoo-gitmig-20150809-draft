@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.1 2007/05/19 07:26:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.2 2007/05/23 22:52:37 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="" #~alpha ~amd64 -arm -hppa ~ia64 -mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="" #DO NOT KEYWORD; WAIT FOR 2.6.1 ~alpha ~amd64 ~arm -hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 BRANCH_UPDATE=""
 
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
@@ -64,7 +64,7 @@ GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 # Don't set this to :-, - allows BRANCH_UPDATE=""
 BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
 GLIBC_PORTS_VER=${GLIBC_RELEASE_VER}
-#GLIBC_LT_VER=${GLIBC_RELEASE_VER}
+GLIBC_LT_VER=""
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
 NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
@@ -117,8 +117,12 @@ get_glibc_src_uri() {
 
 	GLIBC_SRC_URI="mirror://gnu/glibc/glibc-${GLIBC_RELEASE_VER}.tar.bz2
 	               mirror://gnu/glibc/glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2"
-	#               mirror://gnu/glibc/glibc-ports-${GLIBC_PORTS_VER}.tar.bz2
-	#               ftp://sources.redhat.com/pub/glibc/snapshots/glibc-ports-${GLIBC_PORTS_VER}.tar.bz2
+
+	if [[ -n ${GLIBC_PORTS_VER} ]] ; then
+		GLIBC_SRC_URI="${GLIBC_SRC_URI}
+			mirror://gnu/glibc/glibc-ports-${GLIBC_PORTS_VER}.tar.bz2
+			ftp://sources.redhat.com/pub/glibc/snapshots/glibc-ports-${GLIBC_PORTS_VER}.tar.bz2"
+	fi
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
@@ -170,8 +174,8 @@ toolchain-glibc_src_unpack() {
 
 	cd "${S}"
 	[[ -n ${GLIBC_LT_VER} ]] && unpack glibc-linuxthreads-${GLIBC_LT_VER}.tar.bz2
+	[[ -n ${GLIBC_PORTS_VER} ]] && unpack_addon ports ${GLIBC_PORTS_VER}
 	unpack_addon libidn
-	#unpack_addon ports ${GLIBC_PORTS_VER}
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${WORKDIR}"
@@ -277,9 +281,10 @@ toolchain-glibc_headers_compile() {
 	cd "${GBUILDDIR}"
 
 	# Pick out the correct location for build headers
-	local myconf="--disable-sanity-checks --enable-hacker-mode"
+	local ports="" myconf="--disable-sanity-checks --enable-hacker-mode"
+	[[ -n ${GLIBC_PORTS_VER} ]] && ports=",ports"
 	myconf="${myconf}
-		--enable-add-ons=nptl,ports
+		--enable-add-ons=nptl${ports}
 		--without-cvs
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
