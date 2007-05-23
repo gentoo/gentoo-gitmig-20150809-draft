@@ -1,8 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kdemultimedia-3.5.5.tar.bz2 6287234 RMD160 c31d81efeb02cea29048fbdefcb8c4f13726fded SHA1 8ddc3174d400827e58e2e5cf87a5bd279a6bfdc1 SHA256 1c15f9572bec29fbfac5224b7f7c88bd57375c827622a9017d3861475881fb4c
 DIST kdemultimedia-3.5.6.tar.bz2 6291692 RMD160 7411019e2765f740ad0f3fd592e74f62e04b8387 SHA1 030ca0b5e79f04c6baa99108f1c871f194effee7 SHA256 1a08f71c73cacb1da1d2269d0376193c23de727235a255866f869caeea300719
+DIST kdemultimedia-3.5.7.tar.bz2 6347766 RMD160 23354d5b5b527c0c5bb1a123b018b130a0734906 SHA1 4b3d45403aed404c5c06d03fdb095400aed75f2c SHA256 7fda798eed8ad5c2b3a2f729f9790aba24ff23f5e40c0fc4aca77c40d5d6f6a5
 EBUILD kdemultimedia-kappfinder-data-3.5.5.ebuild 493 RMD160 fb077a4aa877ad0b8a5b4cc27112a7e94ec06a02 SHA1 84f1e8bc787d0f236353d911e81566790890033e SHA256 c9448754ed5c80a3214876619d6bd0f60f545f7779182bc2f58eb00b4b90cc27
 MD5 72c3ffc3f95e79444f062f4f74d28b45 kdemultimedia-kappfinder-data-3.5.5.ebuild 493
 RMD160 fb077a4aa877ad0b8a5b4cc27112a7e94ec06a02 kdemultimedia-kappfinder-data-3.5.5.ebuild 493
@@ -11,10 +9,14 @@ EBUILD kdemultimedia-kappfinder-data-3.5.6.ebuild 503 RMD160 989164a6c5e3208c640
 MD5 f4079b719a2c34fd2dbebbe2e29ed167 kdemultimedia-kappfinder-data-3.5.6.ebuild 503
 RMD160 989164a6c5e3208c640a5cc4425671f8eba7cca5 kdemultimedia-kappfinder-data-3.5.6.ebuild 503
 SHA256 69219f2d7edd422207e5711e4e7bf28c12b4b0cd553cc379fe29b3bd2df15c0d kdemultimedia-kappfinder-data-3.5.6.ebuild 503
-MISC ChangeLog 9446 RMD160 bd06460731dfba41177b8eeb8ee53a41501765f4 SHA1 b66ff6e3ee80e1557b64a8360a69949dd184a727 SHA256 99aeea2bc6b940167ac85352671ebd87e664849ffa854ad4e7e8df9b3abe050d
-MD5 e5d5ba80e244d9c615a5ef5d22bbc7b0 ChangeLog 9446
-RMD160 bd06460731dfba41177b8eeb8ee53a41501765f4 ChangeLog 9446
-SHA256 99aeea2bc6b940167ac85352671ebd87e664849ffa854ad4e7e8df9b3abe050d ChangeLog 9446
+EBUILD kdemultimedia-kappfinder-data-3.5.7.ebuild 499 RMD160 a3441312a7394cf546f63ffbab966b35a070fb21 SHA1 9596093afc51d30020f4f4b172269301d4efa1e2 SHA256 67e155852345850c2b90153e14c1cd8ba4e5bdf802adc5c65bbdeb5979cde3d1
+MD5 4e6fd75449a03af79318b9212b328e68 kdemultimedia-kappfinder-data-3.5.7.ebuild 499
+RMD160 a3441312a7394cf546f63ffbab966b35a070fb21 kdemultimedia-kappfinder-data-3.5.7.ebuild 499
+SHA256 67e155852345850c2b90153e14c1cd8ba4e5bdf802adc5c65bbdeb5979cde3d1 kdemultimedia-kappfinder-data-3.5.7.ebuild 499
+MISC ChangeLog 9607 RMD160 e990f47f51844fbd06fefd4b160e4e31ffd90ca1 SHA1 02039ff15506551ef22be6631c808c4c0953cd30 SHA256 bf358523c755c2962d6b33b54176e3b2ae730106453c512708f0442bcce2f277
+MD5 178d6790839c592b09a4943ae600231f ChangeLog 9607
+RMD160 e990f47f51844fbd06fefd4b160e4e31ffd90ca1 ChangeLog 9607
+SHA256 bf358523c755c2962d6b33b54176e3b2ae730106453c512708f0442bcce2f277 ChangeLog 9607
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -25,10 +27,6 @@ SHA256 111420f825959311ddc64c7db1fd49d34f2e21b5cf5187fdba09feef59f83ddc files/di
 MD5 a7633ce4b94337a83bcb97d203366623 files/digest-kdemultimedia-kappfinder-data-3.5.6 265
 RMD160 df099dd3f0f56e5dc2a7dc37a0ff582d10ffb076 files/digest-kdemultimedia-kappfinder-data-3.5.6 265
 SHA256 8c8f0b56dd810d9202f532206814eed4c4ff4e6062a88e0bbee4523b8cf5f4d7 files/digest-kdemultimedia-kappfinder-data-3.5.6 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
-
-iD8DBQFFxUAUAiZjviIA2XgRAlHqAKCW4rWlnsP2FusF5pVvj4VoyQk0SQCgvKqP
-/YrJW4A8XjDGpCqhP+77SZM=
-=B/cX
------END PGP SIGNATURE-----
+MD5 a716b7f3a2e7ff27907f056d06c2c804 files/digest-kdemultimedia-kappfinder-data-3.5.7 265
+RMD160 4e58982f9a58d1c396075128e27acd8a7bbbb98e files/digest-kdemultimedia-kappfinder-data-3.5.7 265
+SHA256 0da34e9a548299a606ef0fc4a7e23d98b53d3aa5ad01db2831b99b84b859ea5b files/digest-kdemultimedia-kappfinder-data-3.5.7 265
