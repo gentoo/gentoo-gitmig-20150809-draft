@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.70 2007/05/23 03:29:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.71 2007/05/23 13:38:49 armin76 Exp $
+
+  23 May 2007; Raúl Porcel <armin76@gentoo.org> dietlibc-0.30-r2.ebuild:
+  alpha stable wrt #179408
 
   23 May 2007; Jeroen Roovers <jer@gentoo.org> dietlibc-0.30-r2.ebuild:
   Stable for HPPA (bug #179408).
