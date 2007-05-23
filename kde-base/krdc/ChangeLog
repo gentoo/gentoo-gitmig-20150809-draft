@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.69 2007/05/23 01:10:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.70 2007/05/23 11:12:40 carlo Exp $
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> krdc-3.5.7.ebuild:
+  Remove stale patch.
 
 *krdc-3.5.7 (23 May 2007)
 
