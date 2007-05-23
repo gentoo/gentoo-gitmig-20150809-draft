@@ -1,0 +1,4 @@
+# This file requires >=portage-2.1.2 (see bug #61732)
+
+# Strongly recommended, otherwise all logos, icons, etc. appear in b/w.
+app-editors/emacs-cvs xpm
