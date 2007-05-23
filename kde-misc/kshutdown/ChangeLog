@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.10 2007/02/22 00:48:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.11 2007/05/23 19:30:14 genstef Exp $
+
+*kshutdown-1.0 (23 May 2007)
+
+  23 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/kshutdown-0.6.0-makefile-fix.patch, -kshutdown-0.6.0.ebuild,
+  -kshutdown-0.8.ebuild, +kshutdown-1.0.ebuild:
+  version bump
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

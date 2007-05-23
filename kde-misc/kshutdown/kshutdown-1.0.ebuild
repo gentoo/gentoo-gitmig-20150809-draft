@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-0.8.ebuild,v 1.3 2005/12/08 00:26:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-1.0.ebuild,v 1.1 2007/05/23 19:30:14 genstef Exp $
 
 inherit kde
 
