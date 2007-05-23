@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.58_alpha.ebuild,v 1.2 2007/05/09 17:09:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.58_alpha.ebuild,v 1.3 2007/05/23 09:07:55 drizzt Exp $
 
 inherit eutils qt4
 
-
 #If you want to know when this package will be marked stable please see the Changelog
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror strip"
 AVATARV="1.0"
 DESCRIPTION="${PN} is a P2P-VoiceIP client."
 MY_PN=${PN}
@@ -19,28 +18,28 @@ SRC_URI="
 
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="static"
 DEPEND="
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
 		>=app-emulation/emul-linux-x86-baselibs-2.1.1
 		>=app-emulation/emul-linux-x86-soundlibs-2.4
 		app-emulation/emul-linux-x86-compat )
-	x86? ( >=sys-libs/glibc-2.3.2
+	x86? ( >=sys-libs/glibc-2.4
 		>=media-libs/alsa-lib-1.0.11
-		virtual/libstdc++
+		>=dev-libs/libsigc++-2
 		!static? ( $(qt4_min_version 4.2.3) ) )"
-RDEPEND="${DEPEND}
-	>=sys-apps/dbus-0.23.4"
+#RDEPEND="${DEPEND}
+#	>=sys-apps/dbus-0.23.4"
 
 QA_EXECSTACK_x86="opt/skype/skype"
 QA_EXECSTACK_amd64="opt/skype/skype"
 
 pkg_setup() {
-	if use amd64 && ! use static;
-	then
-		die "There is no pre-built qt4 for amd64. Please turn the static flag on"
-	fi
+#	if use amd64 && ! use static;
+#	then
+#		die "There is no pre-built qt4 for amd64. Please turn the static flag on"
+#	fi
 
 	if ! use static && ! built_with_use ">=x11-libs/qt-4.0" accessibility;
 	then
@@ -50,14 +49,12 @@ pkg_setup() {
 }
 
 src_unpack() {
-	echo ${MY_PV}
 	if use static;
 	then
 		unpack ${MY_PN}-alpha_staticQT-${MY_PV}-generic.tar.bz2
 	else
 		unpack ${MY_PN}-alpha-${MY_PV}-generic.tar.bz2
 	fi
-
 }
 
 src_install() {
