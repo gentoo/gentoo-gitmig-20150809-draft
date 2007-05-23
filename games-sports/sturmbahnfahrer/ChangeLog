@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/sturmbahnfahrer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/sturmbahnfahrer/ChangeLog,v 1.3 2007/05/18 17:42:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/sturmbahnfahrer/ChangeLog,v 1.4 2007/05/23 03:15:25 nyhm Exp $
+
+*sturmbahnfahrer-1.4 (23 May 2007)
+
+  23 May 2007; Tristan Heaven <nyhm@gentoo.org> +sturmbahnfahrer-1.4.ebuild:
+  Version bump, bug #179464
 
   18 May 2007; Tupone Alfredo <tupone@gentoo.org>
   sturmbahnfahrer-1.3.ebuild:
