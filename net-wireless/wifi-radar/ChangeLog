@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wifi-radar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.16 2007/04/18 21:27:55 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.17 2007/05/23 14:09:20 s4t4n Exp $
+
+  23 May 2007; Michele Noberasco <s4t4n@gentoo.org> wifi-radar-1.9.8-r1.ebuild:
+  Stable for x86, closing bug #179012.
+  wifi-radar-1.9.7.ebuild:
+  Wiped out.
 
 *wifi-radar-1.9.8-r1 (18 Apr 2007)
 
