@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.5b.ebuild,v 1.12 2005/05/05 23:19:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.5b.ebuild,v 1.13 2007/05/23 10:48:15 opfer Exp $
 
-DESCRIPTION="Featurefull Jabber client for tcl/tk."
+DESCRIPTION="Featureful Jabber client for tcl/tk."
 HOMEPAGE="http://tkabber.jabber.ru/"
 IUSE="crypt ssl"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.32 2007/05/18 22:10:55 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.33 2007/05/23 10:48:15 opfer Exp $
+
+  23 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  tkabber-0.9.5b.ebuild:
+  fix typo, featurefull -> featureful, spotted by nightmorph
 
   18 May 2007; Peter Weller <welp@gentoo.org> tkabber-0.9.9.ebuild:
   Stable on amd64 wrt bug 176729
