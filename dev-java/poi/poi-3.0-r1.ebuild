@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.ebuild,v 1.2 2007/05/23 20:51:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0-r1.ebuild,v 1.1 2007/05/23 20:51:25 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
