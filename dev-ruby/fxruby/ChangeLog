@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.48 2007/05/23 08:46:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.49 2007/05/23 10:52:09 fmccor Exp $
+
+  23 May 2007; Ferris McCormick <fmccor@gentoo.org> Manifest:
+  Fix Manifest for fxruby-1.2.6.ebuild.
 
   23 May 2007; Matti Bickel <mabi@gentoo.org> +fxruby-1.2.6.ebuild:
   revive old until bug #177785 is solved
