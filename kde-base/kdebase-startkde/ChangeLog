@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.86 2007/05/23 10:40:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.87 2007/05/23 10:50:14 carlo Exp $
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org>
+  kdebase-startkde-3.5.7.ebuild:
+  Use updated patch set.
 
 *kdebase-startkde-3.5.7 (23 May 2007)
 

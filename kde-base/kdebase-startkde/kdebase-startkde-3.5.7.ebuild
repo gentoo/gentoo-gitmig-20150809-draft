@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.7.ebuild,v 1.1 2007/05/23 10:40:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.7.ebuild,v 1.2 2007/05/23 10:50:14 carlo Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -10,7 +10,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdebase-3.5-patchset-04.tar.bz2"
+	mirror://gentoo/kdebase-3.5-patchset-05.tar.bz2"
 
 DESCRIPTION="startkde script, which starts a complete KDE session, and associated scripts"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
