@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.ebuild,v 1.7 2007/04/14 21:43:02 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.ebuild,v 1.8 2007/05/23 00:11:41 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -39,27 +39,23 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack_makeself
-	# make the postinst scripts behave
+	# make the postinst script only create the files; it's  installation
+	# are too complicated and inserting them ourselves is easier than
+	# hacking around it
 	sed -i -e 's:$SETUP_INSTALLPATH/::' \
-		-e "s:^xdg-mime:linux/xdg/xdg-mime:" \
-		-e "s:^xdg-menu:linux/xdg/xdg-menu:" \
-		-e "s: --user: --system:" \
-		-e 's:$SETUP_INSTALLPATH:1:' postinstall.sh
-	sed -i -e "s:/usr:${D}/usr:g" \
-		-e "s:^detectDE$::" \
-		-e 's:-x $x/update-mime:-d nonexis:' \
-		-e 's:-x $x/update-desktop:-d nonexis:' linux/xdg/xdg-m{ime,enu}
+		-e 's:$SETUP_INSTALLPATH:1:' \
+		-e "s:^xdg-desktop-icon.*$::" \
+		-e "s:^xdg-desktop-menu.*$::" \
+		-e "s:^xdg-mime.*$::" postinstall.sh
 }
 
 src_install() {
 	make_wrapper ${PN} ./${PN} /opt/${PN} . || die "make_wrapper failed"
-
-	unset XDG_DATA_DIRS
-	dodir /usr/share/{appl{ications,nk},gnome/apps,mime/packages}
 	./postinstall.sh
-	rm -rf ${D}/usr/share/{applnk,gnome}
+	insinto /usr/share/mime/packages
+	doins ${PN}-mimetypes.xml
+	domenu Google-${PN}.desktop
 	doicon ${PN}-icon.png
-
 	dodoc README.linux
 
 	cd bin
