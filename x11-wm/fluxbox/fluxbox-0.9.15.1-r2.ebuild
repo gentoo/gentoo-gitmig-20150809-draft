@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.15.1-r2.ebuild,v 1.8 2007/04/19 18:48:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.15.1-r2.ebuild,v 1.9 2007/05/23 23:01:54 lack Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ src_unpack() {
 	# We need to be able to include directories rather than just plain
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
-	epatch "${FILESDIR}/0.9.13/${PN}-0.9.13-our-styles-go-over-here.patch"
+	epatch "${FILESDIR}/0.9.15/${PN}-0.9.15-our-styles-go-over-here.patch"
 	epatch "${FILESDIR}/0.9.15/129065-fix-doubleclick-64bit.patch"
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
