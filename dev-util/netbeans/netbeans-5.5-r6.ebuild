@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.5 2007/05/09 08:03:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.6 2007/05/23 17:36:03 flameeyes Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -12,7 +12,7 @@ MY_PV=$(replace_all_version_separators '_')
 SRC_URI="http://us2.mirror.netbeans.org/download/${MY_PV}/fcs/200610171010/${PN}-${MY_PV}-ide_sources.tar.bz2"
 LICENSE="CDDL"
 SLOT="5.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="debug doc"
 
 COMMON_DEPEND="
