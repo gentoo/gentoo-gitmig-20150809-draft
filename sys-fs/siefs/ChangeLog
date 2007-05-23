@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/siefs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.9 2007/05/12 02:21:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.10 2007/05/23 11:17:20 mrness Exp $
+
+*siefs-0.5-r1 (23 May 2007)
+
+  23 May 2007; Alin Năstac <mrness@gentoo.org>
+  +files/siefs-0.5-qa-fixes.patch, -siefs-0.5.ebuild, +siefs-0.5-r1.ebuild:
+  Fix QA notices.
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd
