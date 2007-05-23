@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.59 2007/05/22 21:30:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.60 2007/05/23 11:28:50 carlo Exp $
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> kcachegrind-3.5.7.ebuild:
+  Remove inappropriate patch.
 
 *kcachegrind-3.5.7 (22 May 2007)
 
