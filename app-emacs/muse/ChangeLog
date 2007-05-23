@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/muse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.14 2007/03/30 18:51:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.15 2007/05/23 20:44:20 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> muse-3.02.93.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 Mar 2007; Christian Faulhammer <opfer@gentoo.org> -muse-3.02.6b.ebuild,
   -muse-3.02.8.ebuild:
