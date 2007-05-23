@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.3 2006/04/10 19:57:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.4 2007/05/23 07:20:55 eradicator Exp $
 
 depend() {
 	need net portmap
@@ -10,22 +10,25 @@ depend() {
 
 start() {
 	ebegin "Starting ypbind"
-	if [ -n "${YPBIND_OPTS}" ]; then YOPTS="-- ${YPBIND_OPTS}"; fi	
+	if [[ -n "${YPBIND_OPTS}" ]]; then
+		YOPTS="-- ${YPBIND_OPTS}"
+	fi
 	start-stop-daemon --start --quiet --exec /usr/sbin/ypbind ${YOPTS}
-	if [ -n "$?" ] ; then
+	local ret=$?
+	if [[ $ret -eq 0 ]] ; then
 		notfound=1
 		for i in 0 1 2 3 4 5 6 7 8 9
 		do
 			ypwhich &>/dev/null && { notfound=0; break; }
 			sleep 1
 		done
-		if [ $notfound -eq 1 ] ; then
+		if [[ $notfound -eq 1 ]] ; then
 			eend 1 "No NIS server found"
 		else
 			eend 0
 		fi
 	else
-		eend $?
+		eend $ret
 	fi
 }
 

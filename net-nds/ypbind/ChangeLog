@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.38 2007/03/26 07:58:34 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.39 2007/05/23 07:20:55 eradicator Exp $
+
+  23 May 2007; Jeremy Huddleston <eradicator@gentoo.org> files/ypbind.initd:
+  Fixed bug #176125 thanks to DominikBuerkle <dominik.buerkle@webde.de>.
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> ypbind-1.19.1.ebuild,
   ypbind-1.19.1-r1.ebuild:
