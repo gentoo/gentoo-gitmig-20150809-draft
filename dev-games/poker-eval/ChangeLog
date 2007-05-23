@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/poker-eval
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/ChangeLog,v 1.12 2007/03/19 12:02:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/ChangeLog,v 1.13 2007/05/23 21:50:00 nyhm Exp $
+
+*poker-eval-134.0 (23 May 2007)
+
+  23 May 2007; Tristan Heaven <nyhm@gentoo.org> +poker-eval-134.0.ebuild:
+  Version bump
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
