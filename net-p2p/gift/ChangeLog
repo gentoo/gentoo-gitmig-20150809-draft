@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.72 2007/05/16 21:23:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.73 2007/05/23 20:44:59 gustavoz Exp $
+
+  23 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gift-0.11.8.1-r1.ebuild:
+  Stable on sparc
 
   16 May 2007; Matti Bickel <mabi@gentoo.org> gift-0.11.8.1-r1.ebuild:
   keyworded ~ppc (bug #174858)
