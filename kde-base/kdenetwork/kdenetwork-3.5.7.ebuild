@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.7.ebuild,v 1.1 2007/05/22 23:01:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.7.ebuild,v 1.2 2007/05/23 19:56:10 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -37,7 +37,7 @@ RDEPEND="${BOTH_DEPEND}
 	ssl? ( dev-perl/IO-Socket-SSL
 		app-crypt/qca-tls )
 	net-dialup/ppp
-	|| ( net-misc/netkit-talk net-misc/ytalk )"
+	|| ( net-misc/netkit-talk net-misc/ytalk sys-freebsd/freebsd-ubin )"
 
 DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )

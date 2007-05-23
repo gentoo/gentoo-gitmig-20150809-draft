@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktalkd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktalkd/ChangeLog,v 1.62 2007/05/23 01:39:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktalkd/ChangeLog,v 1.63 2007/05/23 19:57:00 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ktalkd-3.5.7.ebuild:
+  Accept also freebsd-ubin as talk(1) implementation. Solves bug #178854 for
+  FreeBSD.
 
 *ktalkd-3.5.7 (23 May 2007)
 
