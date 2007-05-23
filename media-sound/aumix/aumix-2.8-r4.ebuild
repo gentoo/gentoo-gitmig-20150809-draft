@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r4.ebuild,v 1.10 2006/07/09 05:23:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r4.ebuild,v 1.11 2007/05/23 07:28:25 eradicator Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51
 	sys-apps/findutils
 	nls? ( sys-devel/gettext )"
 

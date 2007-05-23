@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.62 2007/03/25 13:05:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.63 2007/05/23 07:28:25 eradicator Exp $
+
+  23 May 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  aumix-2.8-r4.ebuild:
+  Removed old portage dep.  Ref bug #162516.
 
   25 Mar 2007; Samuli Suominen <drac@gentoo.org> files/aumix.rc6:
   Remove unnecessary bashism for bug 171689.
