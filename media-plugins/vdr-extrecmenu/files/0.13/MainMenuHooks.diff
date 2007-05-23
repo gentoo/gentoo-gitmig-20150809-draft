@@ -1,0 +1,27 @@
+# 90_MainMenuHooks.dpatch by Tobias Grimm <tg@e-tobi.net>
+#
+# All lines beginning with `## DP:' are a description of the patch.
+# DP: Adds support fpr the MainMenuHook patch in VDR.
+
+diff -urNad vdr-plugin-extrecmenu-0.13~/extrecmenu.c vdr-plugin-extrecmenu-0.13/extrecmenu.c
+--- vdr-plugin-extrecmenu-0.13~/extrecmenu.c	2007-02-03 21:13:28.000000000 +0100
++++ vdr-plugin-extrecmenu-0.13/extrecmenu.c	2007-03-11 11:52:23.000000000 +0100
+@@ -137,7 +137,16 @@
+ 
+ bool cPluginExtrecmenu::Service(const char *Id,void *Data)
+ {
+- return false;
++  if (strcmp(Id, "MainMenuHooksPatch-v1.0::osRecordings") == 0 && mysetup.ReplaceOrgRecMenu==true) 
++  {
++    if (Data == NULL)
++      return true;
++    cOsdMenu **menu = (cOsdMenu**) Data;
++    if (menu)
++      *menu = (cOsdMenu*) MainMenuAction();
++    return true;
++  }
++  return false;
+ }
+ 
+ const char **cPluginExtrecmenu::SVDRPHelpPages(void)
+

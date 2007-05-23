@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-extrecmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.15 2007/02/05 09:59:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.16 2007/05/23 11:01:30 zzam Exp $
+
+*vdr-extrecmenu-0.13-r1 (23 May 2007)
+
+  23 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.13/MainMenuHooks.diff, +files/0.13/series,
+  +vdr-extrecmenu-0.13-r1.ebuild:
+  Added mainmenuhooks support.
 
   05 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/digest-vdr-extrecmenu-0.13, Manifest:
