@@ -1,0 +1,10 @@
+# ChangeLog for virtual/gnus
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.1 2007/05/23 15:25:17 ulm Exp $
+
+*gnus-0 (23 May 2007)
+
+  23 May 2007; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +gnus-0.ebuild:
+  Initial import.
+
