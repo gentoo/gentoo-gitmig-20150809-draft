@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.67 2007/05/23 01:47:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.68 2007/05/23 11:55:42 carlo Exp $
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> kttsd-3.5.7.ebuild:
+  Correct dependency.
 
 *kttsd-3.5.7 (23 May 2007)
 
