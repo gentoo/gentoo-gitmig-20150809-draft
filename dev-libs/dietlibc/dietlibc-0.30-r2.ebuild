@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.30-r2.ebuild,v 1.5 2007/04/20 13:54:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.30-r2.ebuild,v 1.6 2007/05/23 03:29:10 jer Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~mips ~ppc ~ppc64 sparc x86"
 IUSE="debug"
 
 DEPEND=""
