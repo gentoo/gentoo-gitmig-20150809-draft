@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.1.ebuild,v 1.1 2007/05/20 08:21:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.1.ebuild,v 1.2 2007/05/23 02:24:35 nyhm Exp $
 
 inherit eutils autotools games
 
-DESCRIPTION="Arcade game with elements of economy and adventure."
-HOMEPAGE="http://gamediameter.sourceforge.net"
+DESCRIPTION="Arcade game with elements of economy and adventure"
+HOMEPAGE="http://gamediameter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gamediameter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-games/guichan
@@ -23,7 +23,7 @@ RDEPEND="dev-games/guichan
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/gamediameter"
+S=${WORKDIR}/gamediameter
 
 pkg_setup() {
 	if ! built_with_use dev-games/guichan opengl sdl; then
@@ -44,7 +44,7 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon data/texture/gui/eng/main/logo.png ${PN}.png
-	make_desktop_entry ${PN} "Diameter" ${PN}.png
+	make_desktop_entry ${PN} Diameter
 	dodoc README
 	prepgamesdirs
 }
