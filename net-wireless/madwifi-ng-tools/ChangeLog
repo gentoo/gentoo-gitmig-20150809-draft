@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/madwifi-ng-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.21 2007/04/09 19:52:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.22 2007/05/23 16:02:35 genstef Exp $
+
+*madwifi-ng-tools-0.9.3.1 (23 May 2007)
+
+  23 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  +madwifi-ng-tools-0.9.3.1.ebuild:
+  Version bump to fix security bug 179532 and to contain the headers bug 179348
 
   09 Apr 2007; Marcus D. Hanwell <cryos@gentoo.org>
   madwifi-ng-tools-0.9.3.ebuild:
