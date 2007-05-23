@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-1.0.ebuild,v 1.8 2007/05/07 15:24:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-1.0.ebuild,v 1.9 2007/05/23 20:33:31 flameeyes Exp $
 
 inherit elisp distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ia64 ppc ppc-macos s390 sh x86"
+KEYWORDS="amd64 arm ~hppa ia64 ppc ppc-macos s390 sh x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-emacs/pymacs"

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.24 2007/05/07 15:24:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.25 2007/05/23 20:33:31 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> python-mode-1.0.ebuild:
+  Add ~x86-fbsd keyword as per bug #178377 by Joe Peterson.
 
   07 May 2007; Jeroen Roovers <jer@gentoo.org> python-mode-1.0.ebuild:
   Marked ~hppa (bug #177495).
