@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.2.ebuild,v 1.1 2007/05/20 13:39:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.2.ebuild,v 1.2 2007/05/23 18:36:19 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -145,7 +145,10 @@ pkg_postinst() {
 	showpkgdeps git-archimport "dev-util/tla"
 	showpkgdeps git-cvsimport ">=dev-util/cvsps-2.1"
 	showpkgdeps git-svnimport "dev-util/subversion(USE=perl)"
-	showpkgdeps git-svn "dev-util/subversion(USE=perl)" "dev-perl/libwww-perl"
+	showpkgdeps git-svn \
+		"dev-util/subversion(USE=perl)" \
+		"dev-perl/libwww-perl" \
+		"dev-perl/TermReadKey"
 	showpkgdeps git-quiltimport "dev-util/quilt"
 	showpkgdeps git-cvsserver "dev-perl/DBI" "dev-perl/DBD-SQLite"
 	showpkgdeps git-instaweb "|| ( www-servers/lighttpd net-www/apache(SLOT=2) )"
