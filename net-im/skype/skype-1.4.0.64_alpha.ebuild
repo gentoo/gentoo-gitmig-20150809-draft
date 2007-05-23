@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.58_alpha.ebuild,v 1.3 2007/05/23 09:07:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.64_alpha.ebuild,v 1.1 2007/05/23 14:32:56 humpback Exp $
 
 inherit eutils qt4
 
@@ -14,11 +14,12 @@ HOMEPAGE="http://www.skype.com/"
 SRC_URI="
 		!static? ( http://download.skype.com/linux/${MY_PN}-alpha-${MY_PV}-generic.tar.bz2 )
 		static? (
-		http://download.skype.com/linux/${MY_PN}-alpha_staticQT-${MY_PV}-generic.tar.bz2 )"
+		http://download.skype.com/linux/${MY_PN}-alpha_staticQT-${MY_PV}-generic.tar.bz2 )
+		amd64? ( http://felisberto.net/~humpback/libsigc++20-2.0.17-1-from-fc5.rf.i386.tar.gz )"
 
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="static"
 DEPEND="
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
@@ -36,10 +37,10 @@ QA_EXECSTACK_x86="opt/skype/skype"
 QA_EXECSTACK_amd64="opt/skype/skype"
 
 pkg_setup() {
-#	if use amd64 && ! use static;
-#	then
-#		die "There is no pre-built qt4 for amd64. Please turn the static flag on"
-#	fi
+	if use amd64 && ! use static;
+	then
+		die "There is no pre-built qt4 for amd64. Please turn the static flag on"
+	fi
 
 	if ! use static && ! built_with_use ">=x11-libs/qt-4.0" accessibility;
 	then
@@ -54,6 +55,10 @@ src_unpack() {
 		unpack ${MY_PN}-alpha_staticQT-${MY_PV}-generic.tar.bz2
 	else
 		unpack ${MY_PN}-alpha-${MY_PV}-generic.tar.bz2
+	fi
+	if use amd64;
+	then
+		unpack libsigc++20-2.0.17-1-from-fc5.rf.i386.tar.gz
 	fi
 }
 
@@ -114,6 +119,17 @@ src_install() {
 
 
 	make_desktop_entry skype "Skype VoIP" skype
+
+	#AMD64 team does not provide this so we add it:
+	if use amd64;
+	then
+		cd ${WORKDIR}
+		exeinto /opt/${PN}
+		doexe libsigc-2.0.so.0
+		doexe libsigc-2.0.so.0.0.0
+		doenvd "${FILESDIR}"/99skype
+	fi
+
 
 	# TODO: Optional configuration of callto:// in KDE, Mozilla and friends
 }
