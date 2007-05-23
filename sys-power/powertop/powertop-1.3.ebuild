@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.2.ebuild,v 1.2 2007/05/15 18:12:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.3.ebuild,v 1.1 2007/05/23 15:57:57 genstef Exp $
 
 inherit toolchain-funcs
 
