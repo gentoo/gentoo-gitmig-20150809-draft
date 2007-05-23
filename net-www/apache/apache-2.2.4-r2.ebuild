@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r2.ebuild,v 1.1 2007/05/22 20:52:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r2.ebuild,v 1.2 2007/05/23 21:26:16 chtekk Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -28,6 +28,7 @@ DEPEND="dev-lang/perl
 	dev-libs/expat
 	dev-libs/libpcre
 	sys-libs/zlib
+	mpm-itk? ( sys-libs/libcap )
 	ldap? ( =net-nds/openldap-2* )
 	selinux? ( sec-policy/selinux-apache )
 	ssl? ( dev-libs/openssl )
