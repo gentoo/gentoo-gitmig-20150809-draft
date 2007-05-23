@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.1.ebuild,v 1.10 2007/04/24 16:38:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.1.ebuild,v 1.11 2007/05/23 22:51:10 ticho Exp $
 
 inherit eutils
 
@@ -49,11 +49,6 @@ RDEPEND="${DEPEND}
 	milter? ( >=mail-mta/sendmail-8.12 )"
 
 AMAVIS_ROOT="/var/amavis"
-
-pkg_preinst() {
-	enewgroup amavis
-	enewuser amavis -1 -1 ${AMAVIS_ROOT} amavis
-}
 
 src_unpack() {
 	if $(has_version "<mail-filter/spamassassin-3") ; then
@@ -158,6 +153,11 @@ src_install() {
 
 	find ${D}/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
 	find ${D}/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
+}
+
+pkg_preinst() {
+	enewgroup amavis
+	enewuser amavis -1 -1 ${AMAVIS_ROOT} amavis
 }
 
 pkg_postinst() {

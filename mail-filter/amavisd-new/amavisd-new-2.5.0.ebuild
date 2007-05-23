@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.0.ebuild,v 1.1 2007/04/24 16:38:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.0.ebuild,v 1.2 2007/05/23 22:51:10 ticho Exp $
 
 inherit eutils
 
@@ -48,11 +48,6 @@ RDEPEND="${DEPEND}
 	milter? ( || ( >=mail-mta/sendmail-8.12 mail-filter/libmilter ) )"
 
 AMAVIS_ROOT="/var/amavis"
-
-pkg_preinst() {
-	enewgroup amavis
-	enewuser amavis -1 -1 ${AMAVIS_ROOT} amavis
-}
 
 src_unpack() {
 	unpack ${A}
@@ -143,6 +138,9 @@ src_install() {
 }
 
 pkg_preinst() {
+	enewgroup amavis
+	enewuser amavis -1 -1 ${AMAVIS_ROOT} amavis
+
 	if [ -z "$(dnsdomainname)" ] ; then
 		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(hostname)';:" \
 			/etc/amavisd.conf
