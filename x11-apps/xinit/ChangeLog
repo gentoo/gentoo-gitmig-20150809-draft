@@ -1,6 +1,14 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.87 2007/05/20 22:24:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.88 2007/05/23 12:21:51 uberlord Exp $
+
+*xinit-1.0.3-r4 (23 May 2007)
+
+  23 May 2007; Roy Marples <uberlord@gentoo.org> +files/xdm.confd-1,
+  +files/xdm.initd-1, +xinit-1.0.3-r4.ebuild:
+  New init script does away with STATICVT option.
+  A static VT is always preferred, and we check to see if VT7 is 
+  available.
 
   20 May 2007; Jeroen Roovers <jer@gentoo.org> xinit-1.0.3-r3.ebuild:
   Stable for HPPA (bug #175465).
