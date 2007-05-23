@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.76 2007/04/25 08:26:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.77 2007/05/23 00:44:15 carlo Exp $
+
+*konqueror-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +konqueror-3.5.7.ebuild:
+  Version bump.
 
   25 Apr 2007; Carsten Lohrke <carlo@gentoo.org> konqueror-3.5.6.ebuild:
   XDG path care.

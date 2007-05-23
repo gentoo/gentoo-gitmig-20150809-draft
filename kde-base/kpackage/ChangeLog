@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpackage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.40 2007/02/04 02:47:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.41 2007/05/23 00:57:48 carlo Exp $
+
+*kpackage-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kpackage-3.5.7.ebuild:
+  Version bump.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kpackage-3.5.2.ebuild:
   Remove old versions.

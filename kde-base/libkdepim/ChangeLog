@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.75 2007/04/11 20:57:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.76 2007/05/23 02:19:14 carlo Exp $
+
+*libkdepim-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +libkdepim-3.5.7.ebuild:
+  Version bump.
 
 *libkdepim-3.5.6-r1 (11 Apr 2007)
 

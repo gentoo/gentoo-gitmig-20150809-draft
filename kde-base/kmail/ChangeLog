@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.108 2007/05/21 03:10:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.109 2007/05/23 00:19:16 carlo Exp $
+
+*kmail-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kmail-3.5.7.ebuild:
+  Version bump.
 
   21 May 2007; Joseph Jezak <josejx@gentoo.org> kmail-3.5.5-r2.ebuild:
   Marked ppc stable for bug #174678.

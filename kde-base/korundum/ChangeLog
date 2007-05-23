@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.57 2007/02/05 12:11:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.58 2007/05/23 00:56:47 carlo Exp $
+
+*korundum-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +korundum-3.5.7.ebuild:
+  Version bump.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/korundum-3.5.4-more.patch, -files/qtruby-3.5.4-more.patch:

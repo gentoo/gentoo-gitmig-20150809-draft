@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.57 2007/02/05 12:26:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.58 2007/05/23 02:43:23 carlo Exp $
+
+*qtruby-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +qtruby-3.5.7.ebuild:
+  Version bump.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/qtruby-3.4.1-handlers.diff, -files/qtruby-3.5.4-more.patch,

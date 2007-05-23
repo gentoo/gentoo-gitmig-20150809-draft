@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kolf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.65 2007/02/04 02:41:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.66 2007/05/23 00:38:37 carlo Exp $
+
+*kolf-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kolf-3.5.7.ebuild:
+  Version bump.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kolf-3.5.2.ebuild:
   Remove old versions.

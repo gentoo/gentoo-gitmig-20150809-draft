@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.90 2007/04/30 20:00:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.91 2007/05/22 23:21:32 carlo Exp $
+
+*kdesktop-3.5.7 (22 May 2007)
+
+  22 May 2007; Carsten Lohrke <carlo@gentoo.org> +kdesktop-3.5.7.ebuild:
+  Version bump.
 
 *kdesktop-3.5.6-r2 (30 Apr 2007)
 

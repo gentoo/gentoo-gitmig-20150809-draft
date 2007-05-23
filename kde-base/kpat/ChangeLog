@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.63 2007/02/04 02:48:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.64 2007/05/23 01:00:05 carlo Exp $
+
+*kpat-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kpat-3.5.7.ebuild:
+  Version bump.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kpat-3.5.2.ebuild:
   Remove old versions.

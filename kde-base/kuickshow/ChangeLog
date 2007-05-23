@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kuickshow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuickshow/ChangeLog,v 1.54 2007/02/04 03:04:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuickshow/ChangeLog,v 1.55 2007/05/23 01:52:28 carlo Exp $
+
+*kuickshow-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kuickshow-3.5.7.ebuild:
+  Version bump.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kuickshow-3.5.2.ebuild:

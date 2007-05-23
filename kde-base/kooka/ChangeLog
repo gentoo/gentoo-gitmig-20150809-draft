@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kooka
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.65 2007/02/05 11:55:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.66 2007/05/23 00:52:12 carlo Exp $
+
+*kooka-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kooka-3.5.7.ebuild:
+  Version bump.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdegraphics-3.4.1-gocr.patch,

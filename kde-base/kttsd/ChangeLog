@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.66 2007/02/05 11:56:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.67 2007/05/23 01:47:57 carlo Exp $
+
+*kttsd-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kttsd-3.5.7.ebuild:
+  Version bump.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdeaccessibility-3.4.0-noarts.patch:

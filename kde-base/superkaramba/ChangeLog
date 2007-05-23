@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.46 2007/02/05 12:27:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.47 2007/05/23 02:48:14 carlo Exp $
+
+*superkaramba-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +superkaramba-3.5.7.ebuild:
+  Version bump.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/superkaramba-3.5.0-fbsd.patch:

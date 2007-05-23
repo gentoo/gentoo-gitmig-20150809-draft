@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksirc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.72 2007/03/31 13:11:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.73 2007/05/23 01:25:03 carlo Exp $
+
+*ksirc-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +ksirc-3.5.7.ebuild:
+  Version bump.
 
   31 Mar 2007; Raúl Porcel <armin76@gentoo.org> ksirc-3.5.5-r1.ebuild:
   ia64 stable wrt bug 159658

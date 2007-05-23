@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.65 2007/02/05 12:10:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.66 2007/05/23 02:01:52 carlo Exp $
+
+*kweather-3.5.7 (23 May 2007)
+
+  23 May 2007; Carsten Lohrke <carlo@gentoo.org> +kweather-3.5.7.ebuild:
+  Version bump.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/kweather-3.4.1-fix-icon-size.diff:
