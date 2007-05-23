@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7286 2007/05/23 17:35:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7287 2007/05/23 21:42:05 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -548,10 +548,6 @@ dev-java/sun-xws-security-bin
 # Masked for removal to junkyard in 30 days (3 June)
 # Generation 1 ebuild with stale upstream
 dev-java/violinstrings
-
-# Benedikt Böhm <hollow@gentoo.org> (3 May 2007)
-# pre release for new SSP stuff; please test
-=dev-libs/dietlibc-0.31_pre20070503
 
 # Daniel Gryniewicz <dang@gentoo.org> (3 May 2007)
 # It's now part of gnome-utils; bug #176864
