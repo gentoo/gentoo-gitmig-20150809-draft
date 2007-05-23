@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.8 2007/05/16 07:17:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.9 2007/05/23 17:11:21 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  javahelp-2.0.02_p46.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   16 May 2007; Christian Faulhammer <opfer@gentoo.org>
   javahelp-2.0.02_p46.ebuild:

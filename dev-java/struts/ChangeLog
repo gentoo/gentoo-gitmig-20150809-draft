@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.34 2007/05/17 20:38:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.35 2007/05/23 17:28:20 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   17 May 2007; Petteri Räty <betelgeuse@gentoo.org> struts-1.1-r5.ebuild:
   Make the ebuild work when commons-collections installs multiple jars.

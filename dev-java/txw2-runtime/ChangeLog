@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/txw2-runtime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.4 2007/05/08 17:07:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.5 2007/05/23 17:30:14 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  txw2-runtime-20070407.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   08 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   txw2-runtime-20070407.ebuild:

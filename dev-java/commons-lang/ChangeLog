@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.42 2007/03/15 17:46:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.43 2007/05/23 17:18:52 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> commons-lang-2.1-r1.ebuild:
   Stable on ppc64; bug #171003

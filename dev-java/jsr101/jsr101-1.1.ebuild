@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/jsr101-1.1.ebuild,v 1.1 2007/05/01 19:13:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/jsr101-1.1.ebuild,v 1.2 2007/05/23 17:07:06 flameeyes Exp $
 
 JAVA_PKG_IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="jaxrpc-1_1-fr-spec-api.zip"
 LICENSE="sun-bcla-jsr101"
 RESTRICT="fetch"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 IUSE=""
 

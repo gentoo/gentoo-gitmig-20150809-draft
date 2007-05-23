@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/relaxngcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.3 2007/05/08 15:04:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.4 2007/05/23 17:23:14 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> relaxngcc-1.12.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   08 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> relaxngcc-1.12.ebuild:
   Fix building with USE="doc", see bug #177646.

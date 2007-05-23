@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swing-layout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.7 2007/04/15 22:30:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.8 2007/05/23 17:18:10 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   15 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   swing-layout-1.0.1-r1.ebuild:

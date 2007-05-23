@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.8 2007/05/07 22:52:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.9 2007/05/23 17:04:20 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> jaxp-1.4.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   07 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> jaxp-1.4.ebuild:
   Disable building javadocs using new features from java-pkg-2.eclass.

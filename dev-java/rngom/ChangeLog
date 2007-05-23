@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rngom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.4 2007/05/08 06:21:14 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.5 2007/05/23 17:01:17 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> rngom-20051226.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   08 May 2007; Alistair John Bush <ali_bush@gentoo.org>
   rngom-20051226.ebuild:

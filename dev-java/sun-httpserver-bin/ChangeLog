@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-httpserver-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-httpserver-bin/ChangeLog,v 1.1 2007/05/01 18:55:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-httpserver-bin/ChangeLog,v 1.2 2007/05/23 17:05:13 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  sun-httpserver-bin-2.0.1.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
 *sun-httpserver-bin-2.0.1 (01 May 2007)
 

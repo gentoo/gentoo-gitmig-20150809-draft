@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxb-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.1 2007/05/01 19:42:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.2 2007/05/23 17:33:29 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  jaxb-tools-2.1.2.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
 *jaxb-tools-2.1.2 (01 May 2007)
 

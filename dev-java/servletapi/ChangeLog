@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.60 2007/05/12 13:59:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.61 2007/05/23 17:15:30 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ~x86-fbsd keyword. Bug #176906.
 
   12 May 2007; Markus Rothe <corsair@gentoo.org> servletapi-2.2-r3.ebuild:
   Added ~ppc64; bug #177466

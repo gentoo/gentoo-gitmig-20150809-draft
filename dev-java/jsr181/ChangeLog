@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr181
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.6 2007/05/05 20:53:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.7 2007/05/23 17:34:12 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> jsr181-1.0.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
 *jsr181-1.0 (05 May 2007)
 

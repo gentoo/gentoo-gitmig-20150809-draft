@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/codemodel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/codemodel/ChangeLog,v 1.1 2007/05/01 18:46:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/codemodel/ChangeLog,v 1.2 2007/05/23 17:06:01 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> codemodel-2.1.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
 *codemodel-2.1 (01 May 2007)
 

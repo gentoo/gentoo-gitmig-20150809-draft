@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/stax-ex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/ChangeLog,v 1.1 2007/05/01 18:52:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/ChangeLog,v 1.2 2007/05/23 17:09:42 flameeyes Exp $
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org> stax-ex-1.0.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
 
 *stax-ex-1.0 (01 May 2007)
 
