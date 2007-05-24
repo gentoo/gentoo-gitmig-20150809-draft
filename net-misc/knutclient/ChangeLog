@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.31 2007/05/15 16:02:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.32 2007/05/24 10:24:25 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org> knutclient-0.9.3.ebuild:
+  Stable on ppc; bug #175221.
 
   15 May 2007; Christian Faulhammer <opfer@gentoo.org>
   knutclient-0.9.3.ebuild:
