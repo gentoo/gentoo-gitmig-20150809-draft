@@ -1,6 +1,13 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.24 2007/05/21 16:56:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.25 2007/05/24 07:18:55 zzam Exp $
+
+*noad-0.6.0-r9 (24 May 2007)
+
+  24 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/pre-shutdown-15-noad.sh, +noad-0.6.0-r9.ebuild:
+  Added shutdown hook to check if there are hanging long running noad process
+  and kill them.
 
   21 May 2007; Matthias Schwarzott <zzam@gentoo.org>
   -files/noad-0.6.0-as-needed.diff, -files/noad-0.6.0-cflags.diff,
