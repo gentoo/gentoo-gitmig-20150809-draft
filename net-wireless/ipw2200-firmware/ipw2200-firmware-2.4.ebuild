@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-2.4.ebuild,v 1.4 2007/01/15 13:07:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-2.4.ebuild,v 1.5 2007/05/24 09:05:31 uberlord Exp $
 
 inherit bsdmk
 
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 x86 ~x86-fbsd"
 
 IUSE="kernel_linux kernel_FreeBSD"
-DEPEND="kernel_linux? ( || ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 ) )
-	kernel_FreeBSD? ( >=sys-freebsd/freebsd-sources-6.2_rc1 )"
+DEPEND="kernel_FreeBSD? ( >=sys-freebsd/freebsd-sources-6.2 )"
+RDEPEND="kernel_linux? ( || ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 ) )"
 
 src_unpack() {
 	unpack ${A}
