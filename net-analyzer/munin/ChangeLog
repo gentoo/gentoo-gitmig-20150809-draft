@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.9 2007/05/13 06:09:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.10 2007/05/24 05:48:24 robbat2 Exp $
+
+*munin-1.3.3-r2 (22 May 2007)
+
+  22 May 2007; Robin H. Johnson <robbat2@gentoo.org>
+  files/munin-1.3.3-Makefile.patch, +munin-1.3.3-r2.ebuild:
+  Bug #179321, previous DESTDIR patching missed a single case for the
+  munin-node.conf file.
 
   13 May 2007; Robin H. Johnson <robbat2@gentoo.org> munin-1.3.3.ebuild:
   Forgot IUSE=doc.

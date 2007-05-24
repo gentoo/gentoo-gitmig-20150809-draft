@@ -177,7 +177,7 @@
 +
 +	$(INSTALL) -m 0755 build/node/munin-node $(DESTDIR)$(SBINDIR)/
 +	$(INSTALL) -m 0755 build/node/munin-node-configure $(DESTDIR)$(SBINDIR)/
-+	test -f "$(CONFDIR)/munin-node.conf" || $(INSTALL) -m 0644 build/node/munin-node.conf $(DESTDIR)$(CONFDIR)/
++	test -f "$(DESTDIR)$(CONFDIR)/munin-node.conf" || $(INSTALL) -m 0644 build/node/munin-node.conf $(DESTDIR)$(CONFDIR)/
 +	$(INSTALL) -m 0755 build/node/munin-run $(DESTDIR)$(SBINDIR)/
  
  uninstall-node-non-snmp: build
