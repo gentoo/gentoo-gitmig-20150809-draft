@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/gift-ares-0.3.0-r1.ebuild,v 1.9 2007/05/23 20:44:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/gift-ares-0.3.0-r1.ebuild,v 1.10 2007/05/24 19:45:57 opfer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gift-ares.berlios.de/"
 SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
 
 DEPEND="dev-util/pkgconfig"
 
