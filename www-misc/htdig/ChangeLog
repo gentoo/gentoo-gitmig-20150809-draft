@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/htdig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.24 2007/05/02 17:19:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.25 2007/05/24 15:15:54 flameeyes Exp $
+
+  24 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  htdig-3.2.0_beta6-r2.ebuild:
+  Add ~x86-fbsd keyword, as per bug #176620.
 
   02 May 2007; Jeroen Roovers <jer@gentoo.org> htdig-3.2.0_beta6-r2.ebuild:
   Marked ~hppa (bug #176620).
