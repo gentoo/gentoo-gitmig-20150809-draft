@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.63 2007/04/07 14:58:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.64 2007/05/24 17:52:25 beandog Exp $
+
+  24 May 2007; Steve Dibb <beandog@gentoo.org> a2ps-4.13c-r5.ebuild:
+  Fix mktemp deps for x86-fbsd
 
   07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> a2ps-4.13c-r5.ebuild:
   RDEPEND on needed mktemp thanks to Paul DiSciascio <thenut@bytemonkey.net>
