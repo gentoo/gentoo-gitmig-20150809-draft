@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.38 2007/04/28 06:56:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.39 2007/05/24 20:41:10 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   28 Apr 2007; Ulrich Mueller <ulm@gentoo.org> slime-2.0.0.20061118.ebuild:
   Added "as-is" to LICENSE wrt file xref.lisp, resolving bug #168616.
@@ -216,6 +219,7 @@
   files to ${FILESDIR}/${PV}; Mark 1.0.20041010 as stable for x86
 
 *slime-1.0.20041010 (10 Oct 2004)
+* slime-1.0 (10 Oct 2004)
 
   10 Oct 2004; <mkennedy@gentoo.org> +slime-1.0.20041010.ebuild,
   +slime-1.0.ebuild:
