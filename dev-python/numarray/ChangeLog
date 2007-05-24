@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.24 2007/05/19 22:00:54 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.25 2007/05/24 16:29:22 flameeyes Exp $
+
+  24 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  numarray-1.5.2-r1.ebuild:
+  Remove ~x86-fbsd keyword till the tests pass.
 
   19 May 2007; Peter Weller <welp@gentoo.org> numarray-1.5.2-r1.ebuild:
   Keyworded ~x86-fbsd wrt bug 178368
