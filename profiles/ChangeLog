@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.416 2007/05/23 22:11:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.417 2007/05/24 06:17:24 opfer Exp $
 
   23 May 2007; Wulf C. Krueger <philantrop@gentoo.org> use.desc:
   Changed description for kdeenablefinal USE flag. Its use is strongly
   discouraged.
+
+  23 May 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  add gnus USE flag for app-emacs/easypg
 
   23 May 2007; Alistair John Bush <ali_bush@gentoo.org> package.mask:
   Remove systray4j from package mask as it is gone from the tree.
