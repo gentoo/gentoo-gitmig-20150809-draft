@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.52 2007/05/14 13:19:44 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.53 2007/05/24 11:35:06 hkbst Exp $
+
+*lilypond-2.10.25 (24 May 2007)
+
+  24 May 2007; Marijn Schouten <hkBst@gentoo.org> +lilypond-2.10.25.ebuild:
+  add 2.10.25, fixed bug 179166
 
 *lilypond-2.11.23 (14 May 2007)
 
