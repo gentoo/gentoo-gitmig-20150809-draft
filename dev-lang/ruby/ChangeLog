@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.273 2007/05/19 09:03:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.274 2007/05/24 17:34:06 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org> ruby-1.8.5_p2-r1.ebuild:
+  Stable on ppc; bug #178346.
 
   19 May 2007; Markus Rothe <corsair@gentoo.org> ruby-1.8.5_p2-r1.ebuild:
   Stable on ppc64; bug #178346
