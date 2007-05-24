@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.101 2007/05/08 20:32:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.102 2007/05/24 21:15:15 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.9.ebuild:
   Don't apply patch for amd64, since it's applied upstream, bug 177683
@@ -396,24 +399,24 @@
 
   closes bug #4603; thanks to Ivan C.
 
-*tightvnc-1.2.3-r1 (3 June 2002)
+*tightvnc-1.2.3-r1 (3 Jun 2002)
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> tightvnc-1.2.3-r1.ebuild :
   Added KEYWORDS, LICENSE.
 
-  3 June 2002; Ryan Phillips <rphillips@gentoo.org> tightvnc-1.2.3-r1.ebuild :
+  3 Jun 2002; Ryan Phillips <rphillips@gentoo.org> tightvnc-1.2.3-r1.ebuild :
   Fixed installation procedure.  Fixes #3337
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> tightvnc-1.2.3-r1.ebuild :
   tightvnc needs libjpeg in order to compile correctly, so it has been added as
   a dependency.  Thanks to kpullin@socal.rr.com for spotting it.
 
-*tightvnc-1.2.3 (25 March 2002)
+*tightvnc-1.2.3 (25 Mar 2002)
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> tightvnc-1.2.3.ebuild :
   Added KEYWORDS, LICENSE.
 
-  25 March 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+  25 Mar 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
   Upgraded to 1.2.3, and removed the old 2 versions..
   Since 1.2.2 never compiled, the TightVNC people assured me 1.2.3
   fixes all the problems, and it does! :o) So we have a fully working 
