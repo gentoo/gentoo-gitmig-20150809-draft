@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.94 2007/05/24 16:35:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.95 2007/05/24 16:44:05 betelgeuse Exp $
+
+  24 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -files/bluez-utils-2.22-dbus-0.60.patch, -files/bluez-utils-2.22-init.d,
+  -files/bluez-utils-2.22-pin, -files/bluez-utils-2.22-pin-helper.sh,
+  -files/bluetooth.rc, -bluez-utils-2.22-r1.ebuild,
+  -bluez-utils-2.24.ebuild, -bluez-utils-3.10.ebuild,
+  -bluez-utils-3.10-r1.ebuild, -bluez-utils-3.10.1.ebuild:
+  Remove old versions and associated files.
 
 *bluez-utils-3.11 (24 May 2007)
 
