@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.418 2007/05/24 18:58:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.419 2007/05/24 20:23:02 alonbl Exp $
+
+  24 May 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  sys-apps/855resolution last rites
 
   24 May 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.masked =app-text/jasperreports-1.0.1 because it doesn't compile. See
