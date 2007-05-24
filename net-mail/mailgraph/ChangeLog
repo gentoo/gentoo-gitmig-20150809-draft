@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.19 2007/04/01 19:30:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.20 2007/05/24 08:43:31 ticho Exp $
+
+  24 May 2007; Andrej Kacian <ticho@gentoo.org> mailgraph-1.13.ebuild:
+  Stable on x86.
 
   01 Apr 2007; Andrej Kacian <ticho@gentoo.org> +files/mailgraph.confd-new,
   +files/mailgraph.initd-new, +files/mailgraph.logrotate-new,
