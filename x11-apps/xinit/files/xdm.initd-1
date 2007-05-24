@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-1,v 1.1 2007/05/23 12:21:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-1,v 1.2 2007/05/24 09:34:36 uberlord Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -113,7 +113,7 @@ cmdline_opt() {
 # Check to see if something is defined on our VT
 vtstatic() {
 	if [ -e /etc/inittab ] ; then
-		grep -Eq "^[^#]+.*\<tty7\>" /etc/inittab 
+		grep -Eq "^[^#]+.*\<tty$1\>" /etc/inittab 
 	elif [ -e /etc/ttys ] ; then
 		grep -q "^ttyv$(($1 - 1))" /etc/ttys
 	else
