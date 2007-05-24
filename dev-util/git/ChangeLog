@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.198 2007/05/23 18:36:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.199 2007/05/24 15:24:21 armin76 Exp $
+
+  24 May 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.1.6.ebuild:
+  ia64 + x86 stable wrt #179245
 
   23 May 2007; Fernando J. Pereda <ferdy@gentoo.org> git-1.5.2.ebuild:
   Add dev-perl/TermReadKey for git-svn. Fixes bug #179560
