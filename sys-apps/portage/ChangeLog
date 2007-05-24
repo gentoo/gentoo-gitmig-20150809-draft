@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.384 2007/05/20 16:16:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.385 2007/05/24 15:32:57 corsair Exp $
+
+  24 May 2007; Markus Rothe <corsair@gentoo.org> portage-2.1.2.7.ebuild:
+  Stable on ppc64; bug #179036
 
   20 May 2007; Jeroen Roovers <jer@gentoo.org> portage-2.1.2.7.ebuild:
   Stable for HPPA (bug #179036).
