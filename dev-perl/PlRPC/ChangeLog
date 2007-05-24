@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.32 2007/01/19 15:26:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.33 2007/05/24 15:12:05 mcummings Exp $
+
+*PlRPC-0.2019 (24 May 2007)
+
+  24 May 2007; Michael Cummings <mcummings@gentoo.org> +PlRPC-0.2019.ebuild:
+  Version bump
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -PlRPC-0.2016-r1.ebuild, PlRPC-0.2018.ebuild:
