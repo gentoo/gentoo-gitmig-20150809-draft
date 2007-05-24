@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.13 2007/05/23 19:50:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.14 2007/05/24 06:47:20 phreak Exp $
 
 -3dnow
 -3dnowext
@@ -25,27 +25,10 @@
 input_devices_evdev
 video_cards_newport
 
-nptl
-nptlonly
-hal
-v4l2
-ipod
-uml
-cman
-gulm
-
-# 2006/06/22 Chris Gianelloni <wolf31o2@gentoo.org>
-# # Masking for bug #136866
-pmount
-
-# Christian Faulhammer <opfer@gentoo.org> (23 Nov 2006)
-# only available for ppc64, see bug #156000
-ibm
-
 #input_devices_wacom
 -x264
 
-# Diego Pettenò <flameeyes@gentoo.org> (4 Jan 2007)
+# Diego Petteno <flameeyes@gentoo.org> (4 Jan 2007)
 # Unmask the flags for PHP that are available only on x86
 -fdftk
 -sybase-ct
