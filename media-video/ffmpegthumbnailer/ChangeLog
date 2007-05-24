@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.15 2007/05/21 16:52:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.16 2007/05/24 20:16:09 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org>
+  ffmpegthumbnailer-1.1.1.ebuild:
+  Stable on ppc; bug #178510.
 
   21 May 2007; Jeroen Roovers <jer@gentoo.org>
   ffmpegthumbnailer-1.1.1.ebuild:
