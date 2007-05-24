@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.23 2007/05/18 20:31:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.24 2007/05/24 18:49:04 nichoj Exp $
+
+*jruby-1.0.0_rc2-r1 (24 May 2007)
+
+  24 May 2007; Joshua Nichols <nichoj@gentoo.org>
+  +jruby-1.0.0_rc2-r1.ebuild:
+  Now uses dev-lang/ruby's site_ruby and gems directory. This is accomplished
+  by using symlinks. Because the package manager doesn't handle directories
+  changing into symlinks well, we now block older versions of jruby, and there
+  are appropriate warnings and errors if you have these older directories on
+  your system. Also now has a post-dependency on rubygems, so there is no
+  longer a need for jgem and company.
 
 *jruby-1.0.0_rc2 (18 May 2007)
 
