@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-j2ee
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/ChangeLog,v 1.27 2007/05/24 20:30:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/ChangeLog,v 1.28 2007/05/24 20:51:14 betelgeuse Exp $
+
+  24 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  sun-j2ee-1.3.1-r4.ebuild:
+  Remove sys-libs/lib-compat from DEPEND as I see no reason why it would be
+  needed at merge time although it was reported in bug #14710 in year 2003.
 
   24 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   -sun-j2ee-1.3.1-r2.ebuild, -sun-j2ee-1.3.1-r3.ebuild:
