@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ant-apache-bsf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ChangeLog,v 1.10 2007/05/12 17:52:22 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ChangeLog,v 1.11 2007/05/24 20:01:51 caster Exp $
+
+*ant-apache-bsf-1.7.0-r1 (24 May 2007)
+
+  24 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +ant-apache-bsf-1.7.0-r1.ebuild:
+  Revbump to add runtime dependency on ant-nodeps which has the <script> task
+  needed to run this via ant. Keeping keywords, only package.env is changed.
+  Add warnings about missing USE flags in dev-java/bsf for bug #179536.
 
   12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   ant-apache-bsf-1.7.0.ebuild:
