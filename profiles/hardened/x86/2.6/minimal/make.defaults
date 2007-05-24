@@ -1,6 +1,6 @@
-# Copyright 2006 Gentoo Foundation.
+# Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/minimal/make.defaults,v 1.2 2007/02/20 22:43:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/minimal/make.defaults,v 1.3 2007/05/24 04:40:53 solar Exp $
 
 # - TESTING PROFILE - TESTING PROFILE - 
 #  ------ USE AT YOUR OWN RISK ------
@@ -8,7 +8,6 @@
 ARCH="x86"
 ACCEPT_KEYWORDS="${ARCH}"
 USE="-* ${ARCH} crypt hardened minimal multicall ncurses pic readline zlib"
-USE_ORDER=env:pkg:conf:defaults
 PORTDIR=/usr/portage/
 PKGDIR=${PORTDIR}/packages/${ARCH}/
 
