@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.26 2007/03/07 10:01:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.27 2007/05/24 20:35:39 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/70jde-gentoo.el:
@@ -59,8 +62,9 @@
   Readded to ~ppc
 
 *jde-2.3.3-r1 (12 Jan 2005)
+*jde-2.3.5 (12 Jan 2005)
 
-  12 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+   12 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
   +files/2.3.3-jde-new-buffer-menu-gentoo.patch, -jde-2.2.8.ebuild,
   -jde-2.3.2.ebuild, +jde-2.3.3-r1.ebuild, -jde-2.3.4_beta5.ebuild,
   +jde-2.3.5.ebuild:
