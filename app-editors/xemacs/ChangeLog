@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.88 2007/04/30 23:04:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.89 2007/05/24 20:54:38 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   30 Apr 2007; Ulrich Mueller <ulm@gentoo.org> xemacs-21.4.20-r3.ebuild:
   Added previously removed ~ppc keyword again, reflecting keywording of the
@@ -349,7 +352,7 @@
   Made SRC_URI static, added KEYWORDS, fixed empty mule flag, updated
   efs, xemacs-base and mule-base subpackage versions.
 
-*xemacs-21.4.8-r1 (26 June 2002)
+*xemacs-21.4.8-r1 (26 Jun 2002)
 
   26 June 2002; Mark Guertin <gerk@gentoo.org> xemacs-21.4.8-r1.ebuild,
   files/xemacs-21.4.8-ppc.diff
