@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.21 2007/05/15 19:24:01 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.22 2007/05/24 21:02:12 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
@@ -81,6 +84,8 @@
   mark x86
 
 *ltsp-3.0.9-r3 (25 Sep 2004)
+*ltsp-4.1-r1 (25 Sep 2004)
+*ltsp-4.0 (25 Sep 2004)
 
   25 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
   +files/INSTALL.Gentoo, +files/Xaccess, +files/Xsetup_workstation,
@@ -154,12 +159,12 @@
   - workaround for config overwrite n update
   - added -r3 with new kernel image
 
-*ltsp-core-3.0.9-r2 (26 June 2003)
+*ltsp-core-3.0.9-r2 (26 Jun 2003)
 
   26 June 2003; Andres Toomsalu <frame@gentoo.org>:
   ltsp_x_core bumped to 3.0.4 (XFree 4.2.99)
       
-*ltsp-core-3.0.9-r1 (25 June 2003)
+*ltsp-core-3.0.9-r1 (25 Jun 2003)
 
   25 June 2003; Andres Toomsalu <frame@pfm.ee>:
   fixed typo in subnet declaration with dhcpd.conf and unmasked ltsp-core-3.0.9-r1.ebuild
@@ -185,14 +190,14 @@
   19 Mar 2003; Martin Holzer <mholzer@gentoo.org> ltsp-core-3.0.7-r1.ebuild:
   corrected kde and gnome dependencies.
 
-*ltsp-core-3.0.7-r1 (11-02-2003)
+*ltsp-core-3.0.7-r1 (11 Feb 2003)
 
   Small fixes and improvements:
   1) No need to create kdmrc symlink anymore
   2) Added sample dhcpd.conf with multiboot menu and password protection
   3) Added 3 bootroms for pxe booting out of the box with rtl8139, eepro100 and 3c905c cards 
 
-*ltsp-core-3.0.7 (10-10-2002)
+*ltsp-core-3.0.7 (10 Oct 2002)
 
   17 Oct 2002; Andres Toomsalu <frame@pfm.ee>:
   
@@ -202,7 +207,7 @@
   
   Updated ltsp-core-3.0.5.ebuild to reflect ltsp-core-3.0.7.
 
-*ltsp-core-3.0.5 (10-10-2002)
+*ltsp-core-3.0.5 (10 Oct 2002)
 
   10 Oct 2002; Andres Toomsalu <frame@pfm.ee>:
   
