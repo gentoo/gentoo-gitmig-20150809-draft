@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.5.5.ebuild,v 1.1 2007/05/01 10:36:19 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.5.6.ebuild,v 1.1 2007/05/24 15:23:43 agorf Exp $
 
 inherit ruby gems
 
