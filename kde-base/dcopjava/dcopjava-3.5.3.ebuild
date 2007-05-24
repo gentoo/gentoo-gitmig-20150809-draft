@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/dcopjava-3.5.3.ebuild,v 1.4 2007/02/03 09:19:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/dcopjava-3.5.3.ebuild,v 1.5 2007/05/24 11:08:31 carlo Exp $
 
 # NOTE TODO install a jar file rather than a tree of class files, and use java-pkg.eclass,
 # in keeping with policy
@@ -8,7 +8,7 @@
 KMNAME=kdebindings
 KMEXTRACTONLY="kdejava/configure.in.in"
 KM_MAKEFILESREV=1
-MAXKDEVER=3.5.5
+MAXKDEVER=3.5.7
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

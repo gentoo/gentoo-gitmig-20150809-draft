@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.35 2007/01/20 00:31:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.36 2007/05/24 11:22:51 carlo Exp $
+
+  24 May 2007; Carsten Lohrke <carlo@gentoo.org> kspy-3.5.6.ebuild:
+  Adjust MAXKDEVER.
 
   20 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kspy-3.5.6.ebuild:
   Correct MAXKDEVER.

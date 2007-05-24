@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/kdeaddons-kfile-plugins-3.5.6-r1.ebuild,v 1.1 2007/04/30 20:24:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/kdeaddons-kfile-plugins-3.5.6-r1.ebuild,v 1.2 2007/05/24 11:14:12 carlo Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kfile-plugins/"
-MAXKDEVER=$PV
+MAXKDEVER=3.5.7
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

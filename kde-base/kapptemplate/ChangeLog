@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.44 2007/05/09 16:25:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.45 2007/05/24 11:11:19 carlo Exp $
+
+  24 May 2007; Carsten Lohrke <carlo@gentoo.org> kapptemplate-3.5.6.ebuild:
+  Adjust MAXKDEVER.
 
 *kapptemplate-3.5.6 (09 May 2007)
 

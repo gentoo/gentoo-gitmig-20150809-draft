@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/dcopperl-3.5.6.ebuild,v 1.1 2007/01/27 15:05:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/dcopperl-3.5.6.ebuild,v 1.2 2007/05/24 11:09:30 carlo Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
-MAXKDEVER=3.5.6
+MAXKDEVER=3.5.7
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit perl-app kde-meta
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.44 2007/01/20 00:38:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.45 2007/05/24 11:23:38 carlo Exp $
+
+  24 May 2007; Carsten Lohrke <carlo@gentoo.org> kstart-3.5.6.ebuild:
+  Adjust MAXKDEVER.
 
   20 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kstart-3.5.6.ebuild:
   Correct MAXKDEVER.

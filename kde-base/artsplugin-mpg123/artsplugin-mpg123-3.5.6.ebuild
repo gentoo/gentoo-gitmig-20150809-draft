@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/artsplugin-mpg123-3.5.6.ebuild,v 1.1 2007/02/03 12:24:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/artsplugin-mpg123-3.5.6.ebuild,v 1.2 2007/05/24 11:05:15 carlo Exp $
 
 ARTS_REQUIRED="yes"
 KMNAME=kdemultimedia
 KMMODULE=mpg123_artsplugin
-MAXKDEVER=$PV
+MAXKDEVER=3.5.7
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
