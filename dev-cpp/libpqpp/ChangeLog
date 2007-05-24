@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libpqpp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.18 2007/03/12 15:56:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.19 2007/05/24 14:59:48 gustavoz Exp $
+
+  24 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libpqpp-4.0-r6.ebuild:
+  Stable on sparc
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> libpqpp-4.0-r6.ebuild:
   x86 stable
