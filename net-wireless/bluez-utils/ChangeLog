@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.93 2007/05/16 16:45:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.94 2007/05/24 16:35:25 betelgeuse Exp $
+
+*bluez-utils-3.11 (24 May 2007)
+
+  24 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/3.11/conf.d-hidd, +files/3.11/init.d-hidd,
+  +bluez-utils-3.11.ebuild:
+  Version bump. Added an init script for the hidd daemon when the old-daemons
+  use flag is on as suggested in bug #178160. The input service is also disabled
+  by default when the old-daemons use flag is on.
 
 *bluez-utils-3.10.1-r1 (16 May 2007)
 
