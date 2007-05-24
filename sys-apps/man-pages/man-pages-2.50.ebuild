@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.50.ebuild,v 1.1 2007/05/24 01:11:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.50.ebuild,v 1.2 2007/05/24 01:21:29 vapier Exp $
 
 inherit eutils
 
@@ -40,9 +40,6 @@ src_compile() { :; }
 src_install() {
 	emake install prefix="${D}" || die
 	dodoc man-pages-*.Announce README Changes* HOWTOHELP
-
-	# upstream is sending these the way of the dodo
-	rm -rf "${D}"/usr/share/man/man1
 }
 
 pkg_postinst() {
