@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.24 2007/01/15 22:36:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.25 2007/05/24 06:35:26 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  lgeneral-1.2_beta12-r1.ebuild:
+  x86/amd64 stable, bug 173488
 
   15 Jan 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/lgeneral-1.2_beta12-build.patch,
