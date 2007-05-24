@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.27 2007/03/08 19:41:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.28 2007/05/24 07:00:50 robbat2 Exp $
+
+*sg3_utils-1.24 (24 May 2007)
+
+  24 May 2007; Robin H. Johnson <robbat2@gentoo.org> +sg3_utils-1.24.ebuild:
+  Version bump. Break rescan-scsi-bus back out to a seperate package.
 
   08 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> sg3_utils-1.23.ebuild:
   Stable on sparc
