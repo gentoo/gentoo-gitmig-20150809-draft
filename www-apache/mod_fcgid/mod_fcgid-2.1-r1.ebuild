@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1-r1.ebuild,v 1.1 2007/05/23 20:12:11 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1-r1.ebuild,v 1.2 2007/05/24 20:14:16 phreak Exp $
 
-inherit apache-module eutils
+inherit apache-module eutils multilib
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
@@ -35,6 +35,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-apr_shm_remove.patch
+
+	# Fix the stupid Makefile, assuming our builddir is in /usr/local
+	sed -e "s,^top_dir.*=.*,top_dir = /usr/$(get_libdir)/apache2," -i Makefile
 }
 
 src_install() {
