@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.26 2007/05/20 17:09:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.27 2007/05/24 14:35:37 gustavoz Exp $
+
+  24 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  Apache-Gallery-1.0_rc3.ebuild:
+  Stable on sparc wrt #178194
 
   20 May 2007; nixnut <nixnut@gentoo.org> Apache-Gallery-1.0_rc3.ebuild:
   Stable on ppc wrt bug 178194
