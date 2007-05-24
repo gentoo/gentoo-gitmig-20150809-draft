@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.5 2007/04/06 06:31:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.6 2007/05/24 12:54:58 gustavoz Exp $
+
+  24 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> viewvc-1.0.3.ebuild:
+  Keyworded ~sparc wrt #129395
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org> viewvc-1.0.3.ebuild:
   ppc stable, bug #129395
