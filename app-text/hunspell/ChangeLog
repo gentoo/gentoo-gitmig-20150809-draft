@@ -1,6 +1,6 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.25 2007/05/21 21:20:57 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.26 2007/05/24 09:43:59 tove Exp $
 
   21 May 2007; Kevin F. Quinn <kevquinn@gentoo.org> hunspell-1.1.5.ebuild:
   Yet more brokenness in the install (bug #179285)
@@ -58,11 +58,11 @@
   05 Jul 2006; Lars Weiler <pylon@gentoo.org> hunspell-1.1.4.ebuild:
   Stable on ppc.
 
-  18 May 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  18 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   hunspell-1.1.4-r1.ebuild:
   Add ~x86-fbsd keyword.
 
-  18 May 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  18 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   hunspell-1.1.4-r1.ebuild:
   Add ~amd64 keyword.
 
