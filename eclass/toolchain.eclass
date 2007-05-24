@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.334 2007/05/19 03:16:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.335 2007/05/24 02:46:53 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -137,7 +137,7 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 else
 	IUSE="multislot test"
 
-	if [[ ${PN} != "kgcc64" ]] ; then
+	if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		IUSE="${IUSE} altivec build fortran nls nocxx"
 		[[ -n ${PIE_VER} ]] && IUSE="${IUSE} nopie"
 		[[ -n ${PP_VER}	 ]] && IUSE="${IUSE} nossp"
