@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.23 2007/04/24 09:47:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.24 2007/05/24 13:46:57 gustavoz Exp $
+
+  24 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> botan-1.6.1.ebuild:
+  Stable on sparc
 
   24 Apr 2007; Raúl Porcel <armin76@gentoo.org> botan-1.6.1.ebuild:
   x86 stable
