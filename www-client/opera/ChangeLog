@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.94 2007/05/22 08:36:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.95 2007/05/24 05:30:37 jer Exp $
+
+  24 May 2007; Jeroen Roovers <jer@gentoo.org> files/opera.desktop:
+  Updated to meet desktop entry specification, except for the previous GNOME
+  "fix".
 
   22 May 2007; Jeroen Roovers <jer@gentoo.org> opera-9.21.ebuild:
   Make the debug USE flag go away. Tx jakub (bug #179393).
