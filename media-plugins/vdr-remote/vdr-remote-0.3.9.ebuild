@@ -1,6 +1,6 @@
 # Copyright 2003-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/vdr-remote-0.3.9.ebuild,v 1.1 2007/03/06 16:58:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/vdr-remote-0.3.9.ebuild,v 1.2 2007/05/24 07:37:53 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.escape-edv.de/endriss/vdr/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6"
