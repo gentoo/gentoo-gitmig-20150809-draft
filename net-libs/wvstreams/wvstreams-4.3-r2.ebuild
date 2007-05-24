@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.3-r2.ebuild,v 1.2 2007/05/23 22:37:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.3-r2.ebuild,v 1.3 2007/05/24 07:32:47 mrness Exp $
 
 WANT_AUTOCONF=2.59
 WANT_AUTOMAKE=none
@@ -83,7 +83,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake CXXOPTS="-fPIC -DPIC" COPTS="-fPIC -DPIC" DESTDIR="${D}" install || die "make install failed"
 
 	if use doc ; then
 		#the list of files is too big for dohtml -r Docs/doxy-html/*
