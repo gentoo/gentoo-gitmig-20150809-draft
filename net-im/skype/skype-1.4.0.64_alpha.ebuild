@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.64_alpha.ebuild,v 1.2 2007/05/23 17:02:52 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.64_alpha.ebuild,v 1.3 2007/05/24 09:51:21 drizzt Exp $
 
 inherit eutils qt4
 
@@ -30,8 +30,8 @@ DEPEND="
 		>=media-libs/alsa-lib-1.0.11
 		>=dev-libs/libsigc++-2
 		!static? ( $(qt4_min_version 4.2.3) ) )"
-#RDEPEND="${DEPEND}
-#	>=sys-apps/dbus-0.23.4"
+RDEPEND="${DEPEND}
+	>=sys-apps/dbus-1.0.0"
 
 QA_EXECSTACK_x86="opt/skype/skype"
 QA_EXECSTACK_amd64="opt/skype/skype"
@@ -76,8 +76,7 @@ src_install() {
 	exeopts -m0755
 	exeinto /opt/${PN}
 	doexe skype
-	doexe ${FILESDIR}/skype.sh
-	dosym /opt/skype/skype.sh /usr/bin/skype
+	make_wrapper skype /opt/${PN}/skype /opt/${PN} /opt/${PN} /usr/bin
 
 	#doexe skype-callto-handler
 	insinto /opt/${PN}/sounds
@@ -119,19 +118,18 @@ src_install() {
 	# Install the Documentation
 	#dodoc README LICENSE
 
-
 	make_desktop_entry skype "Skype VoIP" skype
 
 	#AMD64 team does not provide this so we add it:
-	if use amd64;
-	then
-		cd ${WORKDIR}
+	if use amd64; then
 		exeinto /opt/${PN}
-		doexe libsigc-2.0.so.0
-		doexe libsigc-2.0.so.0.0.0
-		doenvd "${FILESDIR}"/99skype
+		dosym libsigc-2.0.so.0.0.0 /opt/${PN}/libsigc-2.0.so.0
+		doexe "${WORKDIR}"/libsigc-2.0.so.0.0.0
 	fi
 
+	#Ugly hack for bug #179568
+	use amd64 && multilib_toolchain_setup x86
+	dosym /usr/$(get_libdir)/libdbus-1.so /opt/${PN}/libdbus-1.so.2
 
 	# TODO: Optional configuration of callto:// in KDE, Mozilla and friends
 }
