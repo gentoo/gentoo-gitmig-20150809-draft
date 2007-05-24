@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0.ebuild,v 1.1 2007/05/09 21:52:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0.ebuild,v 1.2 2007/05/24 13:33:33 flameeyes Exp $
 
 JAVA_PKG_IUSE="doc java5 source test"
 inherit java-pkg-2 java-ant-2
@@ -12,7 +12,7 @@ SRC_URI="!java5? ( http://dcl.mathcs.emory.edu/util/${PN}/dist/${P}/Java14/${P}-
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="java5? ( =virtual/jdk-1.5* )

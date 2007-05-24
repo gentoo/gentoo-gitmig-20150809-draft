@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.25 2007/05/12 18:25:22 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.26 2007/05/24 13:35:21 flameeyes Exp $
+
+  24 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  ant-owanttask-1.1-r12.ebuild:
+  Add ~x86-fbsd keyword, as per bug #170603.
 
   12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -ant-owanttask-1.1-r11.ebuild, ant-owanttask-1.1-r12.ebuild:

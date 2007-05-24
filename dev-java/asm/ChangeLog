@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.39 2007/04/05 11:06:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.40 2007/05/24 13:36:14 flameeyes Exp $
+
+  24 May 2007; Diego Pettenò <flameeyes@gentoo.org> asm-3.0.ebuild:
+  Add ~x86-fbsd keyword, as per bug #170603.
 
 *asm-1.5.3 (10 Feb 2007)
 

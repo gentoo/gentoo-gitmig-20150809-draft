@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/backport-util-concurrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.10 2007/05/09 21:52:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.11 2007/05/24 13:33:33 flameeyes Exp $
+
+  24 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  backport-util-concurrent-3.0.ebuild:
+  Add ~x86-fbsd keyword, as per bug #170603.
 
 *backport-util-concurrent-3.0 (09 May 2007)
 
