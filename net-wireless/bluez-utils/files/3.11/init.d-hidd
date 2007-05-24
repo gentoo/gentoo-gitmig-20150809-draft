@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/3.11/init.d-hidd,v 1.1 2007/05/24 16:33:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/3.11/init.d-hidd,v 1.2 2007/05/24 16:59:00 betelgeuse Exp $
 
 depend() {
 	need bluetooth
@@ -13,7 +13,7 @@ start() {
 		--exec /usr/bin/hidd -- ${HIDD_OPTIONS} --server
 	local result="$?"
 	local service="/etc/bluetooth/input.service"
-	if [ "${result}" != "0" ] && grep "Autostart=true" ${service} >/dev/null; then
+	if [ "${result}" != "0" ] && grep -q "Autostart=true" ${service}; then
 		eerror "You have Autostart=true in ${service}."
 		eerror "Change this to false if you want to use hidd."
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.95 2007/05/24 16:44:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.96 2007/05/24 16:59:00 betelgeuse Exp $
+
+  24 May 2007; Petteri Räty <betelgeuse@gentoo.org> files/3.11/init.d-hidd:
+  Use qgrep -q instead of directing to /dev/null at the request of drizztbsd.
 
   24 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   -files/bluez-utils-2.22-dbus-0.60.patch, -files/bluez-utils-2.22-init.d,
