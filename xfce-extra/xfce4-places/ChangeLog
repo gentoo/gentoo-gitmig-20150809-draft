@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-places
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.15 2007/05/22 17:05:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.16 2007/05/24 20:29:20 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org> xfce4-places-0.2.0.ebuild:
+  Stable on ppc; bug #178510.
 
 *xfce4-places-0.3.0 (22 May 2007)
 

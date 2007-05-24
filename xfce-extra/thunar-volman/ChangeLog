@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.16 2007/05/23 15:08:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.17 2007/05/24 20:28:04 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org> thunar-volman-0.1.2.ebuild:
+  Stable on ppc; bug #178510.
 
   23 May 2007; Samuli Suominen <drac@gentoo.org>
   thunar-volman-0.1.3_pre20070523.ebuild:

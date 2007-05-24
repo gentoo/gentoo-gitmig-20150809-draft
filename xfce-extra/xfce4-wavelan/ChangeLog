@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-wavelan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.27 2007/03/15 14:01:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.28 2007/05/24 20:26:23 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org> ChangeLog:
+  Stable on ppc; bug #178510.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce4-wavelan-0.5.4.ebuild:
   Stable on ppc64; bug #169987
