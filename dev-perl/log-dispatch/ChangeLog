@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/log-dispatch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.38 2007/04/10 12:59:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.39 2007/05/24 14:14:09 mcummings Exp $
+
+*log-dispatch-2.18 (24 May 2007)
+
+  24 May 2007; Michael Cummings <mcummings@gentoo.org>
+  +log-dispatch-2.18.ebuild:
+  Version bump
 
   10 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   log-dispatch-2.16.ebuild:
