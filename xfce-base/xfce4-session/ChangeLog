@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.63 2007/05/21 17:44:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.64 2007/05/24 21:07:50 pylon Exp $
+
+  24 May 2007; Lars Weiler <pylon@gentoo.org> xfce4-session-4.4.1.ebuild:
+  Stable on ppc; bug #178510.
 
   21 May 2007; Jeroen Roovers <jer@gentoo.org> xfce4-session-4.4.1.ebuild:
   Stable for HPPA (bug #178510).

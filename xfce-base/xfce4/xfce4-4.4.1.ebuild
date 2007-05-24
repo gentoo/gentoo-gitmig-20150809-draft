@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.1.ebuild,v 1.6 2007/05/21 17:58:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.1.ebuild,v 1.7 2007/05/24 21:09:32 pylon Exp $
 
 inherit xfce44
 
@@ -9,7 +9,7 @@ xfce44
 
 HOMEPAGE="http://www.xfce.org"
 DESCRIPTION="Meta package for Xfce4 desktop, merge this package to install."
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="alsa cups minimal oss xscreensaver"
 
 # xscreensaver dep to 5.02 because of previous security bug in lock screen,
