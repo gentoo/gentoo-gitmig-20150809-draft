@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.4 2007/05/22 14:56:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.5 2007/05/24 04:21:13 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
+IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
 IUSE="${IUSE} gtk sasl console groupwise prediction" # mono"
 
 RDEPEND="
@@ -30,8 +30,8 @@ RDEPEND="
 		xscreensaver? (	x11-libs/libXScrnSaver )
 		eds? ( gnome-extra/evolution-data-server ) 	)
 	>=dev-libs/glib-2.0
-	gstreamer? ( media-libs/gstreamer
-		     media-libs/gst-plugins-good )
+	gstreamer? ( =media-libs/gstreamer-0.10*
+		     =media-libs/gst-plugins-good-0.10* )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	gadu?  ( net-libs/libgadu )
 	ssl? (
@@ -46,10 +46,10 @@ RDEPEND="
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
-	gstreamer? ( >=media-libs/gstreamer-0.10 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	doc? ( app-doc/doxygen )
 	dev-libs/libxml2
+	networkmanager? ( net-misc/networkmanager )
 	prediction? ( =dev-db/sqlite-3.3* )"
 	#mono? ( dev-lang/mono )"
 
@@ -74,7 +74,6 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 #   net-im/gaim-snpp (will soon be net-im/pidgin-snpp)
 #   x11-plugins/autoprofile
 #   x11-plugins/gaim-assistant
-#   x11-plugins/gaim-encryption
 #   x11-plugins/gaim-latex
 #   x11-plugins/gaim-otr
 #   x11-plugins/gaimosd
@@ -84,7 +83,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 #   x11-plugins/pidgin-extprefs
 #   x11-plugins/gaim-rhythmbox
 #   x11-plugins/guifications
-
+#   x11-plugins/pidgin-encryption
 
 print_pidgin_warning() {
 	ewarn
@@ -246,6 +245,7 @@ src_compile() {
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
 		$(use_enable prediction cap) \
+		$(use_enable networkmanager nm) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		${myconf} || die "Configuration failed"
