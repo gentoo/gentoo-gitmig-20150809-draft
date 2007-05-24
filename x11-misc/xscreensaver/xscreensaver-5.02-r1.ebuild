@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r1.ebuild,v 1.1 2007/05/11 09:09:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r1.ebuild,v 1.2 2007/05/24 12:24:41 drac Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bc
 	dev-util/pkgconfig
 	sys-devel/gettext
+	dev-util/intltool
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
