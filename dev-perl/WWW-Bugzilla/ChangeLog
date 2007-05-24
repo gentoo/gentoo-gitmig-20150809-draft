@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.22 2007/04/22 13:50:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.23 2007/05/24 16:53:11 mcummings Exp $
+
+*WWW-Bugzilla-1.0 (24 May 2007)
+
+  24 May 2007; Michael Cummings <mcummings@gentoo.org>
+  +WWW-Bugzilla-1.0.ebuild:
+  Version bump
 
 *WWW-Bugzilla-0.9 (22 Apr 2007)
 
