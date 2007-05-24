@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xemacs-packages-sumo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-sumo/ChangeLog,v 1.13 2007/05/05 07:37:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-sumo/ChangeLog,v 1.14 2007/05/24 20:56:55 opfer Exp $
+
+  24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
 *xemacs-packages-sumo-2007.04.27 (05 May 2007)
 
@@ -71,48 +74,48 @@
   xemacs-packages-sumo-2003.08.31.ebuild:
   Stable on alpha
 
-*xemacs-packages-sumo-2003.11.13 (Nov 20, 2003)
+*xemacs-packages-sumo-2003.11.13 (20 Nov 2003)
 
   Nov 20, 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
-*xemacs-packages-sumo-2003.08.31 (Sep 09, 2003)
+*xemacs-packages-sumo-2003.08.31 (09 Sep 2003)
 
   Sep 09 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
-*xemacs-packages-sumo-2003.06.29 (Jul 03, 2003)
+*xemacs-packages-sumo-2003.06.29 (03 Jul 2003)
 
   03 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
-*xemacs-packages-sumo-2003.04.14 (Apr 25, 2003)
+*xemacs-packages-sumo-2003.04.14 (25 Apr 2003)
 
   25 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
-*xemacs-packages-sumo-2003.02.05 (Feb 14, 2003)
+*xemacs-packages-sumo-2003.02.05 (14 Feb 2003)
 
   14 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
-*xemacs-packages-sumo-2002.12.30 (Dec 31, 2002)
+*xemacs-packages-sumo-2002.12.30 (31 Dec 2002)
 
   31 Dec 2002; Arcady Genkin <agenkin@thpoon.com> :
   New version.
 
-*xemacs-packages-sumo-2002.09.19-r1 (Dec 25, 2002)
+*xemacs-packages-sumo-2002.09.19-r1 (25 Dec 2002)
 
   25 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
   Now installs mule packages for those with "mule" in the USE variable.
 
-*xemacs-packages-sumo-2002.09.19 (Sep 23, 2002)
+*xemacs-packages-sumo-2002.09.19 (23 Sep 2002)
 
   23 Sep 2002; Arcady Genkin <agenkin@thpoon.com>
         xemacs-packages-sumo-2002.09.19.ebuild :
   New version.
 
-*xemacs-packages-sumo-2002.07.20 (Aug 19, 2002)
+*xemacs-packages-sumo-2002.07.20 (19 Aug 2002)
 
   19 Aug  2002; Arcady Genkin <agenkin@thpoon.com>
         xemacs-packages-sumo-2002.07.20.ebuild :
@@ -124,21 +127,21 @@
   Newer version of the packages.
 
 
-*xemacs-packages-sumo-2002.05.22 (May 25, 2002)
+*xemacs-packages-sumo-2002.05.22 (25 May 2002)
 
   25 May 2002; Arcady Genkin <agenkin@thpoon.com>
         xemacs-packages-sumo-2002.05.22.ebuild :
   Newer version of the packages.
 
 
-*xemacs-packages-sumo-2002.03.29 (Apr 01, 2002)
+*xemacs-packages-sumo-2002.03.29 (01 Apr 2002)
 
   01 Apr 2002; Arcady Genkin <agenkin@thpoon.com>
         xemacs-packages-sumo-2002.03.29.ebuild :
   Newer version of the packages.
 
 
-*xemacs-packages-sumo-2002.01.19 (Feb 16, 2002)
+*xemacs-packages-sumo-2002.01.19 (16 Feb 2002)
 
   16 Feb 2002; Arcady Genkin <agenkin@thpoon.com>
 	xemacs-packages-sumo-2002.01.19.ebuild :
