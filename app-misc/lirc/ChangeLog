@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.142 2007/05/18 20:54:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.143 2007/05/24 20:12:16 zzam Exp $
+
+  24 May 2007; Matthias Schwarzott <zzam@gentoo.org> files/irexec-initd:
+  Fixed irexec initscript to work with non-bash shells, Bug #179634.
 
   18 May 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to herd media-tv.
