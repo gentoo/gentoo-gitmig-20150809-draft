@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2.ebuild,v 1.16 2007/04/30 20:27:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2.ebuild,v 1.17 2007/05/24 13:13:14 flameeyes Exp $
 
 inherit kde
 
@@ -20,10 +20,10 @@ DEPEND="${RDEPEND}"
 need-kde 3.5
 
 pkg_setup() {
-	if ! built_with_use net-dns/avahi qt3; then
-		eerror "To compile kdnssd-avahi package you need Avahi with Qt 3.x support."
-		eerror "but net-dns/avahi is not built with qt3 USE flag enabled."
-		die "Please, rebuild net-dns/avahi with the \"qt3\" USE flag."
+	if ! built_with_use net-dns/avahi qt3 dbus; then
+		eerror "To compile kdnssd-avahi package you need Avahi with DBus and Qt 3.x support."
+		eerror "but net-dns/avahi is not built with qt3 and/or dbus USE flags enabled."
+		die "Please, rebuild net-dns/avahi with the \"qt3\" and \"dbus\" USE flags."
 	fi
 }
 
