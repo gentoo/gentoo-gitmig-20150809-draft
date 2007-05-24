@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.40 2007/04/21 19:09:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.41 2007/05/24 16:05:32 flameeyes Exp $
+
+*xxdiff-3.2-r1 (24 May 2007)
+
+  24 May 2007; Diego Pettenò <flameeyes@gentoo.org> +xxdiff-3.2-r1.ebuild:
+  New revision adding a debug useflag to enable/disable the debug codepaths
+  (the default was enabled), to respect users' CFLAGS/CXXFLAGS and compiler
+  chosen, and to remove the getopt replacement when the target system already
+  contains the getopt_long function. Also add ~x86-fbsd keyword as per bug
+  #178435.
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> xxdiff-3.2.ebuild:
   ia64 stable
