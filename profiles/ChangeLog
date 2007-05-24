@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.417 2007/05/24 06:17:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.418 2007/05/24 18:58:01 betelgeuse Exp $
+
+  24 May 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.masked =app-text/jasperreports-1.0.1 because it doesn't compile. See
+  bug #164074.
 
   23 May 2007; Wulf C. Krueger <philantrop@gentoo.org> use.desc:
   Changed description for kdeenablefinal USE flag. Its use is strongly

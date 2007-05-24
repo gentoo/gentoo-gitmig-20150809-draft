@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7289 2007/05/24 06:19:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7290 2007/05/24 18:58:01 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (24 May 2007)
+# Doesn't compile atm. See https://bugs.gentoo.org/show_bug.cgi?id=164074
+# for more details.
+=app-text/jasperreports-1.0.1
 
 # Benedikt Böhm <hollow@gentoo.org> (23 May 2007)
 # masked for removal as per #114453
