@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.44 2007/05/09 15:16:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.45 2007/05/25 16:45:14 caster Exp $
+
+*jaxen-1.1.1 (25 May 2007)
+
+  25 May 2007; Vlastimil Babka <caster@gentoo.org> +jaxen-1.1.1.ebuild:
+  Version bump, bug #179721. Based on 1.1 from java-overlay by betelgeuse.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> jaxen-1.1_beta11.ebuild:
   Add ~ia64 wrt #160813
