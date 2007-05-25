@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.5 2007/05/24 04:21:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.6 2007/05/25 09:16:49 drizzt Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
 IUSE="${IUSE} gtk sasl console groupwise prediction" # mono"
+IUSE="${IUSE} krb4"
 
 RDEPEND="
 	bonjour? ( !avahi? ( net-misc/howl )
@@ -44,6 +45,7 @@ RDEPEND="
 	)
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
+	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
@@ -152,6 +154,14 @@ pkg_setup() {
 		elog "console only."
 		einfo
 	fi
+
+	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4 ; then
+		eerror
+		eerror You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to
+		eerror enable krb4 support for the zephyr protocol in gaim.
+		eerror
+		die "Configure failed"
+	fi
 }
 
 src_unpack() {
@@ -246,6 +256,7 @@ src_compile() {
 		$(use_enable doc doxygen) \
 		$(use_enable prediction cap) \
 		$(use_enable networkmanager nm) \
+		$(use_with krb4) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		${myconf} || die "Configuration failed"
