@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.25 2007/05/23 18:26:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.26 2007/05/25 15:13:42 armin76 Exp $
+
+  25 May 2007; Raúl Porcel <armin76@gentoo.org> kdesvn-0.11.2.ebuild:
+  x86 stable wrt #171710
 
 *kdesvn-0.12.0 (23 May 2007)
 
