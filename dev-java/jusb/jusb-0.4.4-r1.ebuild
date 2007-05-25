@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/jusb-0.4.4-r1.ebuild,v 1.1 2007/01/06 11:18:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/jusb-0.4.4-r1.ebuild,v 1.2 2007/05/25 19:33:48 betelgeuse Exp $
 
 inherit eutils java-pkg-2 linux-info flag-o-matic multilib
 
@@ -25,6 +25,11 @@ ERROR_CONFIG_USB_DEVICEFS="
 You need to turn on the USB device filesystem
 option under USB support in order to use jUSB
 "
+
+pkg_setup() {
+	linux-info_pkg_setup
+	java-pkg-2_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}

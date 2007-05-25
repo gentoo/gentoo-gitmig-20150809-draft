@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4-r1.ebuild,v 1.5 2007/04/02 16:20:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4-r1.ebuild,v 1.6 2007/05/25 19:31:36 betelgeuse Exp $
 
 inherit eutils java-pkg-2 versionator linux-info
 
@@ -23,6 +23,11 @@ DEPEND=">=virtual/jdk-1.4
 		>=sys-apps/sed-4"
 
 S=${WORKDIR}/${P}-src
+
+pkg_setup() {
+	linux-info_pkg_setup
+	java-pkg-2_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}

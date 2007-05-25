@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.14 2007/04/02 16:20:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.15 2007/05/25 19:31:36 betelgeuse Exp $
+
+  25 May 2007; Petteri Räty <betelgeuse@gentoo.org> jss-3.4-r1.ebuild:
+  Add pkg_setup that calls both linux-info_pkg_setup and java-pkg-2_pkg_setup
+  for bug #179788.
 
   02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -jss-3.4.ebuild,
   jss-3.4-r1.ebuild:
