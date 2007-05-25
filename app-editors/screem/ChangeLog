@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/screem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.7 2007/02/21 21:22:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.8 2007/05/25 06:10:36 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -101,6 +104,10 @@
   ended up having the whole thing compiled with 'prefix=${D}/usr'.
 
 *screem-0.6.2 (15 Aug 2004)
+*screem-0.10.2 (15 Aug 2004)
+*screem-0.4.1-r2 (15 Aug 2004)
+*screem-0.6.0 (15 Aug 2004)
+*screem-0.8.1 (15 Aug 2004)
 
   15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
   +files/Makefile.in, +files/screem-0.8.1-makefile-fix.patch,
