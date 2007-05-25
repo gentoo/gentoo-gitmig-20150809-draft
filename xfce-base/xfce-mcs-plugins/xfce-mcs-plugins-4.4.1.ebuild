@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.1.ebuild,v 1.7 2007/05/24 20:58:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.1.ebuild,v 1.8 2007/05/25 11:47:21 drac Exp $
 
 inherit xfce44
 
@@ -26,7 +26,9 @@ RDEPEND="x11-libs/libX11
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	sys-devel/gettext
+	dev-util/intltool"
 
 XFCE_CONFIG="${XFCE_CONFIG} --enable-xf86misc --enable-xkb --enable-randr --enable-xf86vm"
 
