@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-qt3-old
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.11 2007/02/09 19:38:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.12 2007/05/25 01:43:30 beandog Exp $
+
+  25 May 2007; Steve Dibb <beandog@gentoo.org> dbus-qt3-old-0.70.ebuild:
+  Add ~x86-fbsd
 
   09 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   dbus-qt3-old-0.70.ebuild:
