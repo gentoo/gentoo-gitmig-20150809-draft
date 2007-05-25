@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmidecode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.17 2007/03/17 00:11:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.18 2007/05/25 15:18:55 armin76 Exp $
+
+  25 May 2007; Raúl Porcel <armin76@gentoo.org> dmidecode-2.9.ebuild:
+  x86 stable
 
 *dmidecode-2.9 (17 Mar 2007)
 
