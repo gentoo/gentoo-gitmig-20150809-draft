@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.18.1.ebuild,v 1.1 2007/04/17 03:41:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.18.1.ebuild,v 1.2 2007/05/25 20:36:09 leio Exp $
 
 inherit gnome2
 
@@ -75,7 +75,7 @@ src_install() {
 
 	# Conversion information
 	sed -e "s:\${PF}:${PF}:" \
-		< ${FILESDIR}/xss-conversion.txt > ${S}/xss-conversion.txt
+		< ${FILESDIR}/xss-conversion-2.txt > ${S}/xss-conversion.txt
 
 	dodoc ${S}/xss-conversion.txt
 

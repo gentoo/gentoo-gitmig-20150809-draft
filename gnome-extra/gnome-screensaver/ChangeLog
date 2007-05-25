@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.38 2007/04/17 03:41:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.39 2007/05/25 20:36:09 leio Exp $
+
+*gnome-screensaver-2.16.3 (25 May 2007)
+
+  25 May 2007; Mart Raudsepp <leio@gentoo.org> +files/xss-conversion-2.txt,
+  +gnome-screensaver-2.16.3.ebuild, gnome-screensaver-2.18.0.ebuild,
+  gnome-screensaver-2.18.1.ebuild:
+  Bump 2.16 series to 2.16.3. Update screensaver migration help text to work
+  with 2.16+ versions, bug 166647
 
 *gnome-screensaver-2.18.1 (17 Apr 2007)
 
