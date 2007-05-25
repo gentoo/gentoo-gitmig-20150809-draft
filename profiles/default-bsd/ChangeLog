@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.3 2007/05/25 01:52:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.4 2007/05/25 13:22:50 beandog Exp $
+
+  25 May 2007; Steve Dibb <beandog@gentoo.org> package.use.mask:
+  p.use.mask ieee1394 on kdebase, since dep isn't keyworded
 
   25 May 2007; Steve Dibb <beandog@gentoo.org> package.use.mask:
   p.use.mask sys-apps/hal disk-partition dell since deps are not keyworded

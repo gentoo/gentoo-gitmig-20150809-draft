@@ -1,5 +1,9 @@
 # Steve Dibb <beandog@gentoo.org> (24 May 2007)
 # Dependency packages not keyworded
+kde-base/kdebase ieee1394
+
+# Steve Dibb <beandog@gentoo.org> (24 May 2007)
+# Dependency packages not keyworded
 sys-apps/hal disk-partition dell
 
 media-video/mplayer dvdnav mp2
