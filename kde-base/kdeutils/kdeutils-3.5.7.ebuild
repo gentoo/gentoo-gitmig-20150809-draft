@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.7.ebuild,v 1.1 2007/05/22 23:26:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.7.ebuild,v 1.2 2007/05/25 13:53:18 cryos Exp $
 
 inherit kde-dist eutils
 
@@ -27,6 +27,8 @@ DEPEND="${BOTH_DEPEND}
 	x11-libs/libX11
 	x11-proto/xproto
 	virtual/os-headers"
+
+EPATCH_EXCLUDE="klaptopdaemon-3.5-suspend2+xsession-errors.diff"
 
 src_unpack() {
 	kde_src_unpack
