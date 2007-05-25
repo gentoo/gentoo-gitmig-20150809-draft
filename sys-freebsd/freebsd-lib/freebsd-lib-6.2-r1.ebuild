@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r1.ebuild,v 1.1 2007/04/06 14:44:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r1.ebuild,v 1.2 2007/05/25 16:44:58 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -68,8 +68,6 @@ pkg_setup() {
 
 	mymakeopts="${mymakeopts} NO_OPENSSH= NO_BIND= NO_SENDMAIL= "
 
-	replace-flags "-O?" -"O1"
-
 	if [[ ${CTARGET} != ${CHOST} ]]; then
 		mymakeopts="${mymakeopts} MACHINE=$(tc-arch-kernel ${CTARGET})"
 		mymakeopts="${mymakeopts} MACHINE_ARCH=$(tc-arch-kernel ${CTARGET})"
@@ -110,6 +108,20 @@ src_unpack() {
 
 	sed -i -e 's:-o/dev/stdout:-t:' "${S}/libc/net/Makefile.inc"
 	sed -i -e 's:histedit.h::' "${WORKDIR}/include/Makefile"
+
+	# Upstream Display Managers default to using VT7
+	# We should make FreeBSD allow this by default
+	local x=
+	for x in "${WORKDIR}"/etc/etc.*/ttys ; do
+		sed -i \
+			-e '/ttyv5[[:space:]]/ a\
+# Display Managers default to VT7.\
+# If you use the xdm init script, keep ttyv6 commented out\
+# unless you force a different VT for the DM being used.' \
+			-e '/^ttyv[678][[:space:]]/ s/^/# /' "${x}" \
+			|| die "Failed to sed ${x}"
+
+	done
 
 	# Apply this patch for Gentoo/FreeBSD/SPARC64 to build correctly
 	# from catalyst, then don't do anything else
