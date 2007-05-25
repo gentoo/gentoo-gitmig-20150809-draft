@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.4.1.ebuild,v 1.1 2007/05/24 13:32:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.4.1-r1.ebuild,v 1.1 2007/05/25 15:17:05 drac Exp $
 
 MY_P="gtk-xfce-engine-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -22,5 +22,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e 's:ICON.png README.html::g' "${S}"/themes/*/Makefile.in
+}
 
 xfce44_extra_package

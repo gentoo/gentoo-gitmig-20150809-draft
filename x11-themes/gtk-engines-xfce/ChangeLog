@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.75 2007/05/24 13:32:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.76 2007/05/25 15:17:05 drac Exp $
+
+*gtk-engines-xfce-2.4.1-r1 (25 May 2007)
+
+  25 May 2007; Samuli Suominen <drac@gentoo.org>
+  -gtk-engines-xfce-2.4.1.ebuild, +gtk-engines-xfce-2.4.1-r1.ebuild:
+  Stop installing redudant files for bug 178791.
 
 *gtk-engines-xfce-2.4.1 (24 May 2007)
 
