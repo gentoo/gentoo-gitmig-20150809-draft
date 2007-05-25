@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/henplus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.16 2007/05/07 16:29:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.17 2007/05/25 07:56:13 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  henplus-0.9.7-r1.ebuild:
+  x86 stable, bug 179562
 
 *henplus-0.9.7-r1 (07 May 2007)
 
