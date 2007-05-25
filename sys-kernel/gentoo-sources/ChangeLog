@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.396 2007/05/19 05:31:20 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.397 2007/05/25 02:40:19 dsd Exp $
+
+*gentoo-sources-2.6.21-r2 (25 May 2007)
+
+  25 May 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.21-r2.ebuild:
+  Update to Linux 2.6.21.3. Fix libata disk spindown issues. Fix tifm MMC
+  driver. Fix silent audio on Asus M2V.
 
 *gentoo-sources-2.6.21-r1 (19 May 2007)
 
