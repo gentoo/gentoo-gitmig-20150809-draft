@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.84 2007/05/06 09:47:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.85 2007/05/25 10:27:57 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1120,7 +1120,33 @@ java-pkg_register-dependency() {
 		java-pkg_record-jar_ "${pkgs}" "${jar}"
 	fi
 
-	java-pkg_do_write_	
+	java-pkg_do_write_
+}
+
+# ------------------------------------------------------------------------------
+# @ebuild-function java-pkg_register-environment-variable
+#
+# Register an arbitrary environment variable into package.env. The gjl launcher
+# for this package or any package depending on this will export it into
+# environement before executing java command.
+# Must only be called in src_install phase.
+#
+# @param $1 - variable name
+# @param $2 - variable value
+# ------------------------------------------------------------------------------
+JAVA_PKG_EXTRA_ENV="${T}/java-pkg-extra-env"
+JAVA_PKG_EXTRA_ENV_VARS=""
+java-pkg_register-environment-variable() {
+	debug-print-function ${FUNCNAME} $*
+
+	java-pkg_check-phase install
+
+	[[ ${#} != 2 ]] && die "${FUNCNAME} takes two arguments"
+
+	echo "${1}=\"${2}\"" >> ${JAVA_PKG_EXTRA_ENV}
+	JAVA_PKG_EXTRA_ENV_VARS="${JAVA_PKG_EXTRA_ENV_VARS} ${1}"
+
+	java-pkg_do_write_
 }
 
 # This function reads stdin, and based on that input, figures out how to
@@ -2142,6 +2168,14 @@ java-pkg_do_write_() {
 
 		echo "MERGE_VM=\"${GENTOO_VM}\"" >> "${JAVA_PKG_ENV}"
 		[[ -n ${GENTOO_COMPILER} ]] && echo "MERGE_COMPILER=\"${GENTOO_COMPILER}\"" >> "${JAVA_PKG_ENV}"
+
+		# extra env variables
+		if [[ -n "${JAVA_PKG_EXTRA_ENV_VARS}" ]]; then
+			cat "${JAVA_PKG_EXTRA_ENV}" >> "${JAVA_PKG_ENV}" || die
+			# nested echo to remove leading/trailing spaces
+			echo "ENV_VARS=\"$(echo ${JAVA_PKG_EXTRA_ENV_VARS})\"" \
+				>> "${JAVA_PKG_ENV}" || die
+		fi
 
 		# Strip unnecessary leading and trailing colons
 		# TODO try to cleanup if possible
