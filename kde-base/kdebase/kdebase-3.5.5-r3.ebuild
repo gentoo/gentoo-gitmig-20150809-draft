@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r3.ebuild,v 1.11 2007/03/26 20:42:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r3.ebuild,v 1.12 2007/05/25 13:24:50 beandog Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -9,7 +9,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
 pam samba ssl zeroconf xcomposite xscreensaver xinerama kdehiddenvisibility"
 # hal: enables hal backend for 'media:' ioslave
