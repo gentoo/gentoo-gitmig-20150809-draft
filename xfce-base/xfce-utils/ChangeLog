@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.109 2007/05/24 20:54:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.110 2007/05/25 12:32:38 drac Exp $
+
+  25 May 2007; Samuli Suominen <drac@gentoo.org>
+  -files/xfce-utils-4.4.1-dpi.patch, -xfce-utils-4.4.1-r2.ebuild:
+  Remove upstream patch that breaks DPI. Force downgrade to working version.
 
   24 May 2007; Lars Weiler <pylon@gentoo.org> xfce-utils-4.4.1-r1.ebuild:
   Stable on ppc; bug #178510.
