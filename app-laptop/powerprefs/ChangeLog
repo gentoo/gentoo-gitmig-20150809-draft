@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/powerprefs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.24 2007/04/16 13:02:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.25 2007/05/25 07:04:10 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   16 Apr 2007; Joseph Jezak <josejx@gentoo.org> powerprefs-0.8.0.ebuild:
   Marked ppc stable.
@@ -108,7 +111,7 @@
 
   This is a powerprefs update to bring us up-to-date with pbbuttonsd-0.5+.
 
-*powerprefs-0.2.1 - June 21 2002 Gerk (gerk@gentoo.org)
+*powerprefs-0.2.1 (21 June 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> powerprefs-0.2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
