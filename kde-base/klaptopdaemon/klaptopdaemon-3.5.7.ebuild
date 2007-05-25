@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/klaptopdaemon-3.5.7.ebuild,v 1.1 2007/05/23 00:08:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/klaptopdaemon-3.5.7.ebuild,v 1.2 2007/05/25 13:48:14 cryos Exp $
 
 KMNAME=kdeutils
 MAXKDEVER=$PV
@@ -20,3 +20,5 @@ DEPEND="${RDEPEND}
 	x11-libs/libX11
 	x11-proto/xproto
 	virtual/os-headers"
+
+EPATCH_EXCLUDE="klaptopdaemon-3.5-suspend2+xsession-errors.diff"

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.77 2007/05/23 00:08:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.78 2007/05/25 13:48:14 cryos Exp $
+
+  25 May 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  klaptopdaemon-3.5.7.ebuild:
+  Exclude obsolete patch that no longer applies cleanly. Closes bug 179553.
 
 *klaptopdaemon-3.5.7 (23 May 2007)
 
