@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.8 2007/05/13 18:20:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.9 2007/05/25 06:27:29 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
@@ -30,7 +33,9 @@
   Removing stale ebuild (bug #153234)
 
 *adie-1.2.15 (07 May 2005)
-
+*adie-1.4.12 (07 May 2005)
+*adie-1.5.4.ebuild (07 May 2005)
+	
   07 May 2005; <rphillips@gentoo.org> +adie-1.0.53.ebuild,
   +adie-1.2.15.ebuild, +adie-1.4.12.ebuild, +adie-1.5.4.ebuild:
   Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
