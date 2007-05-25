@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.5 2007/03/14 07:02:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.6 2007/05/25 17:33:43 markusle Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -56,7 +56,7 @@ src_compile() {
 		-i include/config.Makefile.in || \
 		die "failed to fix makefile"
 	make && CPPFLAGS="-I/usr/include/gc -I${WORKDIR}/include" \
-		LDFLAGS="-L${WORKDIR}/lib" \
+		LDFLAGS="-L${WORKDIR}/$(get_libdir)" \
 		./configure --prefix="${D}/usr" --disable-encap \
 		--with-lapacklibs="-llapack -lblas" || \
 		die "failed to configure Macaulay"
@@ -74,7 +74,8 @@ src_install () {
 	make install || die "install failed"
 
 	# nothing in here, get rid of it
-	rm -fr "${D}"/usr/lib || die "failed to remove empty /usr/lib"
+	rm -fr "${D}"/usr/$(get_libdir) || \
+		die "failed to remove empty /usr/lib"
 
 	use emacs && elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
