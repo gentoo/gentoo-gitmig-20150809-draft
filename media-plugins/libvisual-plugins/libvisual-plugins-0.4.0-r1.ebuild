@@ -1,16 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.9 2007/05/11 18:02:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.10 2007/05/25 06:49:14 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
 inherit eutils autotools
 
+PATCHLEVEL="3"
+
 DESCRIPTION="Visualization plugins for use with the libvisual framework."
 HOMEPAGE="http://libvisual.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libvisual/${P}.tar.gz
-	mirror://gentoo/${P}-patches-2.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2
 	mirror://gentoo/${P}-m4-1.tar.bz2"
 LICENSE="GPL-2"
 
@@ -39,17 +41,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	epatch "${WORKDIR}/${P}-cxxflags.patch"
 
 	sed -i -e "s:@MKINSTALLDIRS@:${S}/mkinstalldirs:" "${S}"/po/Makefile.*
 
 	cd "${S}"
-	epatch "${WORKDIR}/${P}-LIBADD.patch"
-	epatch "${WORKDIR}/${P}-64bit.patch"
-	epatch "${WORKDIR}/${P}-analyzer.patch"
-	epatch "${WORKDIR}/${P}-gforce.patch"
-	epatch "${WORKDIR}/${P}-automagic.patch"
-	epatch "${WORKDIR}/${P}-gstreamer.patch"
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="${WORKDIR}/m4" eautoreconf
 }
 
