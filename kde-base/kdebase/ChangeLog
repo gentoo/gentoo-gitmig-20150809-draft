@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.366 2007/05/25 13:24:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.367 2007/05/25 21:19:54 armin76 Exp $
+
+  25 May 2007; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.6-r3.ebuild,
+  kdebase-3.5.7.ebuild:
+  Readd ~alpha wrt #176620
 
   25 May 2007; Steve Dibb <beandog@gentoo.org> kdebase-3.5.5-r1.ebuild,
   kdebase-3.5.5-r3.ebuild, kdebase-3.5.5-r4.ebuild, kdebase-3.5.6-r1.ebuild,
