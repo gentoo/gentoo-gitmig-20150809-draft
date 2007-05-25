@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.19 2007/05/25 12:54:36 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.20 2007/05/25 15:51:07 flameeyes Exp $
+
+  25 May 2007; Diego Pettenò <flameeyes@gentoo.org> guile-1.8.1-r3.ebuild:
+  The FreeBSD patches has to be applied before eautoreconf is ran, or they
+  will not be picked up.
 
   25 May 2007; Marijn Schouten <hkBst@gentoo.org>
   +files/guile-1.8.1-clog-cexp.patch,
