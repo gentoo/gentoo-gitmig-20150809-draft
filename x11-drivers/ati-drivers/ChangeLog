@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.74 2007/05/24 22:22:47 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.75 2007/05/25 06:57:22 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  ati-drivers-8.35.5.ebuild:
+  x86/amd64 stable, bug 179526
 
 *ati-drivers-8.36.5 (24 May 2007)
 
