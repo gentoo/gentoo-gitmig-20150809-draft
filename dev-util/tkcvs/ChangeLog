@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/tkcvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.20 2007/04/27 06:06:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.21 2007/05/25 16:29:46 matsuu Exp $
+
+*tkcvs-8.0.4 (25 May 2007)
+
+  25 May 2007; MATSUU Takuto <matsuu@gentoo.org> -tkcvs-7.2.1.ebuild,
+  -tkcvs-7.2.2-r1.ebuild, +tkcvs-8.0.4.ebuild:
+  Version bumped.
+  Removed old versions.
 
   27 Apr 2007; Christian Faulhammer <opfer@gentoo.org> tkcvs-8.0.3.ebuild:
   stable amd64, bug 137278
