@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.77 2007/05/17 14:23:25 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.78 2007/05/25 06:09:19 calchan Exp $
+
+  25 May 2007; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Fixed metadata.
 
   17 May 2007; Denis Dupeyron <calchan@gentoo.org> kino-1.0.0.ebuild:
   Added conditional GPAC dependency, thanks to Stefan Huszics (bug #178583).

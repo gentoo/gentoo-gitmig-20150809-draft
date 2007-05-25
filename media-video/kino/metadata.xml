@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>video</herd>
-<maintainer>
-  <email>media-video@gentoo.org</email>
-</maintainer>
 <maintainer> 	 
   <email>calchan@gentoo.org</email> 	 
   <name>Denis Dupeyron</name> 	 
