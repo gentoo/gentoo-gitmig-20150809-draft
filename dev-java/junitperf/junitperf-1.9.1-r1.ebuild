@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.8 2007/04/15 22:29:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.9 2007/05/25 23:50:45 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc test source"
 
@@ -21,8 +21,7 @@ RDEPEND=">=virtual/jre-1.3
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	app-arch/unzip
-	test? ( || ( dev-java/ant-junit dev-java/ant-tasks ) )"
-
+	test? ( dev-java/ant-junit )"
 
 src_unpack () {
 	unpack ${A}
@@ -31,9 +30,7 @@ src_unpack () {
 	java-pkg_jar-from junit
 }
 
-src_compile() {
-	eant jar
-}
+EANT_DOC_TARGET=""
 
 src_test() {
 	ANT_TASKS="ant-junit" eant test

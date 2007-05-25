@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/junitperf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.15 2007/05/07 17:09:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.16 2007/05/25 23:50:45 betelgeuse Exp $
+
+  25 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  junitperf-1.9.1-r1.ebuild:
+  Drop ant-tasks from satisfying test use flag as ant-junit is now stable.
 
   07 May 2007; Vlastimil Babka <caster@gentoo.org> -junitperf-1.9.1.ebuild:
   Remove unused revision.
