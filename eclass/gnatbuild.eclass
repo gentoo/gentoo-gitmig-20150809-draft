@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.28 2007/05/18 13:55:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.29 2007/05/25 11:40:20 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -367,6 +367,11 @@ gnatbuild_src_unpack() {
 					|| eerror "Please file a bug about this"
 				eend $?
 			done
+
+			# regenerate some configures tp fix ACT's omissions
+			pushd ${S}/gnattools &> /dev/null
+				autoconf
+			popd &> /dev/null
 		;;
 
 		common_prep)
