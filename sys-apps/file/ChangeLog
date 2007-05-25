@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.138 2007/05/25 07:00:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.139 2007/05/25 07:46:12 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> file-4.21.ebuild:
+  x86/amd64 stable, security bug 179583
 
   25 May 2007; Jeroen Roovers <jer@gentoo.org> file-4.21.ebuild:
   Stable for HPPA (bug #179583).
