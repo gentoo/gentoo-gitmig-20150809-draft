@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tpctl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/ChangeLog,v 1.15 2007/04/28 17:49:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/ChangeLog,v 1.16 2007/05/25 07:11:14 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> tpctl-3.2.ebuild,
   tpctl-4.2.ebuild, tpctl-4.4.ebuild, tpctl-4.4-r1.ebuild, tpctl-4.8.ebuild:
@@ -74,7 +77,7 @@
   17 Feb 2003; Wout Mertens (wmertens@gentoo.org) tpctl-4.2.ebuild :
   Version bump
 
-*tpctl-3.2 (25 April 2002)
+*tpctl-3.2 (25 Apr 2002)
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (-ppc)
@@ -82,7 +85,7 @@
   14 Jul 2002; phoen][x <phoenix@gentoo.org> tpctl-3.2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-  25 April 2002; Wout Mertens <Wout.Mertens@advalvas.be> ChangeLog :
+  25 Apr 2002; Wout Mertens <Wout.Mertens@advalvas.be> ChangeLog :
 
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
