@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/e3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.16 2007/05/13 18:20:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.17 2007/05/25 06:38:47 opfer Exp $
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
@@ -29,15 +32,15 @@
 
   Version bump.
 
-*e3-2.42 (29 March 2003)
+*e3-2.42 (29 Mar 2003)
 
-  29 March 2003; Jon Portnoy <avenj@gentoo.org> e3-2.42.ebuild :
+  29 Mar 2003; Jon Portnoy <avenj@gentoo.org> e3-2.42.ebuild :
 
   Version bump.
 
-*e3-2.41 (02 March 2003)
+*e3-2.41 (02 Mar 2003)
 
-  02 March 2003; Jon Portnoy <avenj@gentoo.org> e3-2.41.ebuild :
+  02 Mar 2003; Jon Portnoy <avenj@gentoo.org> e3-2.41.ebuild :
 
   Version bump.
 
