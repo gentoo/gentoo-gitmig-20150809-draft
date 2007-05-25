@@ -1,0 +1,179 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/kernel/skas/clone.c linux-2.6.18-usermode-r1/arch/um/kernel/skas/clone.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/kernel/skas/clone.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/kernel/skas/clone.c	2007-05-24 22:44:48.000000000 -0400
+@@ -3,7 +3,6 @@
+ #include <sys/mman.h>
+ #include <sys/time.h>
+ #include <asm/unistd.h>
+-#include <asm/page.h>
+ #include "ptrace_user.h"
+ #include "skas.h"
+ #include "stub-data.h"
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/main.c linux-2.6.18-usermode-r1/arch/um/os-Linux/main.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/main.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/os-Linux/main.c	2007-05-24 22:44:48.000000000 -0400
+@@ -12,7 +12,6 @@
+ #include <sys/resource.h>
+ #include <sys/mman.h>
+ #include <sys/user.h>
+-#include <asm/page.h>
+ #include "user_util.h"
+ #include "kern_util.h"
+ #include "mem_user.h"
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/skas/mem.c linux-2.6.18-usermode-r1/arch/um/os-Linux/skas/mem.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/skas/mem.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/os-Linux/skas/mem.c	2007-05-24 22:44:48.000000000 -0400
+@@ -8,7 +8,6 @@
+ #include <string.h>
+ #include <sys/mman.h>
+ #include <sys/wait.h>
+-#include <asm/page.h>
+ #include <asm/unistd.h>
+ #include "mem_user.h"
+ #include "mem.h"
+@@ -109,6 +108,8 @@ static inline long do_syscall_stub(struc
+ 	return ret;
+ }
+ 
++#define PAGE_MASK   (~(UM_KERN_PAGE_SIZE-1))
++#define PAGE_SHIFT  12
+ long run_syscall_stub(struct mm_id * mm_idp, int syscall,
+ 		      unsigned long *args, long expected, void **addr,
+ 		      int done)
+@@ -133,7 +134,7 @@ long run_syscall_stub(struct mm_id * mm_
+ 	multi_op_count++;
+ 
+ 	if(!done && ((((unsigned long) stack) & ~PAGE_MASK) <
+-		     PAGE_SIZE - 10 * sizeof(long))){
++		     UM_KERN_PAGE_SIZE - 10 * sizeof(long))){
+ 		*addr = stack;
+ 		return 0;
+ 	}
+@@ -152,7 +153,7 @@ long syscall_stub_data(struct mm_id * mm
+ 	 * Thus in this case do_syscall_stub correctly won't be called.
+ 	 */
+ 	if((((unsigned long) *addr) & ~PAGE_MASK) >=
+-	   PAGE_SIZE - (10 + data_count) * sizeof(long)) {
++	   UM_KERN_PAGE_SIZE - (10 + data_count) * sizeof(long)) {
+ 		ret = do_syscall_stub(mm_idp, addr);
+ 		/* in case of error, don't overwrite data on stack */
+ 		if(ret)
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/start_up.c linux-2.6.18-usermode-r1/arch/um/os-Linux/start_up.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/start_up.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/os-Linux/start_up.c	2007-05-24 22:44:48.000000000 -0400
+@@ -19,7 +19,6 @@
+ #include <sys/wait.h>
+ #include <sys/mman.h>
+ #include <asm/unistd.h>
+-#include <asm/page.h>
+ #include <sys/types.h>
+ #include "user_util.h"
+ #include "kern_util.h"
+@@ -80,11 +79,11 @@ static int start_ptraced_child(void **st
+ 	unsigned long sp;
+ 	int pid, n, status;
+ 
+-	stack = mmap(NULL, PAGE_SIZE, PROT_READ | PROT_WRITE | PROT_EXEC,
++	stack = mmap(NULL, UM_KERN_PAGE_SIZE, PROT_READ | PROT_WRITE | PROT_EXEC,
+ 		     MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+ 	if(stack == MAP_FAILED)
+ 		panic("check_ptrace : mmap failed, errno = %d", errno);
+-	sp = (unsigned long) stack + PAGE_SIZE - sizeof(void *);
++	sp = (unsigned long) stack + UM_KERN_PAGE_SIZE - sizeof(void *);
+ 	pid = clone(ptrace_child, (void *) sp, SIGCHLD, NULL);
+ 	if(pid < 0)
+ 		panic("start_ptraced_child : clone failed, errno = %d", errno);
+@@ -129,7 +128,7 @@ static int stop_ptraced_child(int pid, v
+ 		ret = -1;
+ 	}
+ 
+-	if(munmap(stack, PAGE_SIZE) < 0)
++	if(munmap(stack, UM_KERN_PAGE_SIZE) < 0)
+ 		panic("check_ptrace : munmap failed, errno = %d", errno);
+ 	return ret;
+ }
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/tt.c linux-2.6.18-usermode-r1/arch/um/os-Linux/tt.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/os-Linux/tt.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/os-Linux/tt.c	2007-05-24 22:53:08.000000000 -0400
+@@ -18,7 +18,6 @@
+ #include <sys/mman.h>
+ #include <asm/ptrace.h>
+ #include <asm/unistd.h>
+-#include <asm/page.h>
+ #include "user_util.h"
+ #include "kern_util.h"
+ #include "user.h"
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/sys-i386/ptrace_user.c linux-2.6.18-usermode-r1/arch/um/sys-i386/ptrace_user.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/sys-i386/ptrace_user.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/sys-i386/ptrace_user.c	2007-05-24 22:46:26.000000000 -0400
+@@ -7,9 +7,8 @@
+ #include <errno.h>
+ #include <unistd.h>
+ #include <linux/stddef.h>
++#include <sys/user.h>
+ #include "ptrace_user.h"
+-/* Grr, asm/user.h includes asm/ptrace.h, so has to follow ptrace_user.h */
+-#include <asm/user.h>
+ #include "kern_util.h"
+ #include "sysdep/thread.h"
+ #include "user.h"
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/sys-i386/user-offsets.c linux-2.6.18-usermode-r1/arch/um/sys-i386/user-offsets.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/sys-i386/user-offsets.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/sys-i386/user-offsets.c	2007-05-24 22:56:43.000000000 -0400
+@@ -1,7 +1,8 @@
+ #include <stdio.h>
+ #include <signal.h>
++#include <stddef.h>
+ #include <asm/ptrace.h>
+-#include <asm/user.h>
++#include <sys/user.h>
+ #include <linux/stddef.h>
+ #include <sys/poll.h>
+ 
+@@ -14,6 +15,34 @@
+ #define OFFSET(sym, str, mem) \
+ 	DEFINE(sym, offsetof(struct str, mem));
+ 
++/* These are gone from userspace; not sure where to pull them from */
++struct user_i387_struct {
++	long	cwd;
++	long	swd;
++	long	twd;
++	long	fip;
++	long	fcs;
++	long	foo;
++	long	fos;
++	long	st_space[20];	/* 8*10 bytes for each FP-reg = 80 bytes */
++};
++
++struct user_fxsr_struct {
++	unsigned short	cwd;
++	unsigned short	swd;
++	unsigned short	twd;
++	unsigned short	fop;
++	long	fip;
++	long	fcs;
++	long	foo;
++	long	fos;
++	long	mxcsr;
++	long	reserved;
++	long	st_space[32];	/* 8*16 bytes for each FP-reg = 128 bytes */
++	long	xmm_space[32];	/* 8*16 bytes for each XMM-reg = 128 bytes */
++	long	padding[56];
++};
++
+ void foo(void)
+ {
+ 	OFFSET(HOST_SC_IP, sigcontext, eip);
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN linux-2.6.18-usermode-r1.orig/arch/um/sys-x86_64/user-offsets.c linux-2.6.18-usermode-r1/arch/um/sys-x86_64/user-offsets.c
+--- linux-2.6.18-usermode-r1.orig/arch/um/sys-x86_64/user-offsets.c	2007-05-24 22:32:15.000000000 -0400
++++ linux-2.6.18-usermode-r1/arch/um/sys-x86_64/user-offsets.c	2007-05-24 22:44:48.000000000 -0400
+@@ -12,7 +12,7 @@
+  */
+ typedef __u64 u64;
+ typedef __u32 u32;
+-#include <asm/user.h>
++#include <sys/user.h>
+ 
+ #define DEFINE(sym, val) \
+         asm volatile("\n->" #sym " %0 " #val : : "i" (val))

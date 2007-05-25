@@ -25,6 +25,10 @@ AUX usermode-sources-2.6.18-r1-CVE-2006-4572.patch 4192 RMD160 5522cf0607475788b
 MD5 a8ae4d41e9513925ba02e10813f68c79 files/usermode-sources-2.6.18-r1-CVE-2006-4572.patch 4192
 RMD160 5522cf0607475788bc40bf3d23140fb9ea80149d files/usermode-sources-2.6.18-r1-CVE-2006-4572.patch 4192
 SHA256 dc6efb9d1617e109945c36b8dac7c14eb7df43b6f3bbdeebcaa1b7067c3fd781 files/usermode-sources-2.6.18-r1-CVE-2006-4572.patch 4192
+AUX usermode-sources-2.6.18-r2-gentoo-headers.patch 7098 RMD160 7a3da2168cd4c465feffe8541e54a6f15e3b5170 SHA1 c2447178f649b9498330f6471e8dd4b273271d92 SHA256 0e598bf1c8accf5f94ba39977141ab3cee0fbf0c7600b4a5158ab5dbc8665ee5
+MD5 355df74ad606c6bf5c94b6b04efb752d files/usermode-sources-2.6.18-r2-gentoo-headers.patch 7098
+RMD160 7a3da2168cd4c465feffe8541e54a6f15e3b5170 files/usermode-sources-2.6.18-r2-gentoo-headers.patch 7098
+SHA256 0e598bf1c8accf5f94ba39977141ab3cee0fbf0c7600b4a5158ab5dbc8665ee5 files/usermode-sources-2.6.18-r2-gentoo-headers.patch 7098
 DIST genpatches-2.6.16-13.base.tar.bz2 98287 RMD160 55e01ae4090fdbb65c2033d7df3f6d667bcd874f SHA1 0d5bc13616264f0e58c67337dafe72e92a7b7025 SHA256 3bfa570f10939a838a3d460563f30b429d227e9f5b4cd0bd6b448a22bdb63858
 DIST genpatches-2.6.16-15.base.tar.bz2 98632 RMD160 46e8cfcae8fea262d7599c2e4d3e7fbc8af239b2 SHA1 e0f253ad01a4da388675af4b90223289d9bcd578 SHA256 fb78f2a4d32d1770a34d9ee254686a6a12102fa99c1bb73e9c282ab5f82dddaa
 DIST genpatches-2.6.18-1.base.tar.bz2 2397 RMD160 1b02d9e5adba7a9a17f85691f312ee2c870c9a48 SHA1 790186d9d44c358d05489cdff417beab03124708 SHA256 e87db440591d48f74b8d50f47bde55a1652c969626befa94aba48cee57aa5da8
@@ -50,14 +54,18 @@ EBUILD usermode-sources-2.6.18-r1.ebuild 1009 RMD160 e0bac77c7776dfbaa506767af62
 MD5 7baf7387a1b63224d1a3befe7e3970dd usermode-sources-2.6.18-r1.ebuild 1009
 RMD160 e0bac77c7776dfbaa506767af62d2e213cb746f3 usermode-sources-2.6.18-r1.ebuild 1009
 SHA256 b2429ddd86eeab6168edd80c446ba1beb0d5cec7371dbb7033ae1b4d22e5f490 usermode-sources-2.6.18-r1.ebuild 1009
+EBUILD usermode-sources-2.6.18-r2.ebuild 1051 RMD160 5a8b0cc87d385529177ff4c9d0c60732d77f048f SHA1 a6d3a617d303d424e132b5f3eeb89a32365f2a24 SHA256 0c9b3c9f4bb067c48693d39b6e2cdaa0fac40f42aaa0fe9001497fef1188b021
+MD5 7c9946f1addfb4652c3e5082e178494b usermode-sources-2.6.18-r2.ebuild 1051
+RMD160 5a8b0cc87d385529177ff4c9d0c60732d77f048f usermode-sources-2.6.18-r2.ebuild 1051
+SHA256 0c9b3c9f4bb067c48693d39b6e2cdaa0fac40f42aaa0fe9001497fef1188b021 usermode-sources-2.6.18-r2.ebuild 1051
 EBUILD usermode-sources-2.6.18.ebuild 919 RMD160 2d409c33d4e75ada220c339ddb887ac6cdae521c SHA1 47bcb8a03fce0c8bf006728e578c73111e358858 SHA256 a936b615f74f3af610e5bbb43eeec34b74bb088a6433e744bf935c9ac1df5cf2
 MD5 80ad0f13a00939853185c632c423fd4c usermode-sources-2.6.18.ebuild 919
 RMD160 2d409c33d4e75ada220c339ddb887ac6cdae521c usermode-sources-2.6.18.ebuild 919
 SHA256 a936b615f74f3af610e5bbb43eeec34b74bb088a6433e744bf935c9ac1df5cf2 usermode-sources-2.6.18.ebuild 919
-MISC ChangeLog 23915 RMD160 3e0546eb02ce0bf8ab273741fac273d854dc5a86 SHA1 14f94632732a0023a7e10b8671dedd4719d5bc24 SHA256 64f245e96a8463cc022f957d1dc4ee932f3e32522be5400bf58ac3fc2a237b9a
-MD5 e89e45d56526a7214432a7dfe29e6d5f ChangeLog 23915
-RMD160 3e0546eb02ce0bf8ab273741fac273d854dc5a86 ChangeLog 23915
-SHA256 64f245e96a8463cc022f957d1dc4ee932f3e32522be5400bf58ac3fc2a237b9a ChangeLog 23915
+MISC ChangeLog 24181 RMD160 66ad21c12c3772689ec3b61b35008d4175e44cfc SHA1 2c3bcfaa36f188560eb3b0ae58de7e08f6cde852 SHA256 f9854e7b9f60ced45888c67ecaa1b0ed0dd13f6d049647ca47a0e3791b062a44
+MD5 8345fc45d122b69b5ed3f6fe7c98a0ca ChangeLog 24181
+RMD160 66ad21c12c3772689ec3b61b35008d4175e44cfc ChangeLog 24181
+SHA256 f9854e7b9f60ced45888c67ecaa1b0ed0dd13f6d049647ca47a0e3791b062a44 ChangeLog 24181
 MISC metadata.xml 250 RMD160 9657d63a141d387fa3a42ef4087ee0ed3757cf67 SHA1 7a59aecd3ddaed1b49f15c552a7893929b5155ed SHA256 c1aa14289c2eb84cdf6c739f3d48b122a09d4c99de38bd22ae558ac47be0cf90
 MD5 5811f74eb87a97c082114675db0ef41b metadata.xml 250
 RMD160 9657d63a141d387fa3a42ef4087ee0ed3757cf67 metadata.xml 250
@@ -77,10 +85,13 @@ SHA256 0d6676ef2ae421b16b6c04e38bdcd6c6deabe3df4873669eda46c47f5af0d631 files/di
 MD5 bb664042fcd485eb4961aebdfe1b7ecf files/digest-usermode-sources-2.6.18-r1 780
 RMD160 76b5427db2aa54c270a317dafc2939a56bf6c443 files/digest-usermode-sources-2.6.18-r1 780
 SHA256 f3424bc44e5d7f5e8b016bfb117b6bb2fea5d20d7cc997cdce3012b1baa6c6f1 files/digest-usermode-sources-2.6.18-r1 780
+MD5 bb664042fcd485eb4961aebdfe1b7ecf files/digest-usermode-sources-2.6.18-r2 780
+RMD160 76b5427db2aa54c270a317dafc2939a56bf6c443 files/digest-usermode-sources-2.6.18-r2 780
+SHA256 f3424bc44e5d7f5e8b016bfb117b6bb2fea5d20d7cc997cdce3012b1baa6c6f1 files/digest-usermode-sources-2.6.18-r2 780
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFFmzGjomPajV0RnrERAtckAJ9iHmVYBNkaInctZOEC1/2YjT7xkACaAla4
-tW8r7oPBjIkCWesimiqrzJc=
-=e5Fw
+iD8DBQFGVlbgomPajV0RnrERAoANAJ0QyRvuSXEpHPITBds5Nuk9aFgWmACfcUS8
++3+UGQFE4jqzJA3FB5BNU0Q=
+=7kIr
 -----END PGP SIGNATURE-----
