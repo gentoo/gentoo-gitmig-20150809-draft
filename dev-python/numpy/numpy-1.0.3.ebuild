@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.4 2007/03/06 10:06:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.3.ebuild,v 1.1 2007/05/25 15:52:03 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -26,7 +26,7 @@ LICENSE="BSD"
 
 S="${WORKDIR}/${MY_P}"
 
-FORTRAN="g77 gfortran"
+FORTRAN="gfortran g77"
 
 numpy_configure() {
 	local mycblas
@@ -110,10 +110,7 @@ src_unpack() {
 	fortran_src_unpack
 	cd "${S}"
 	# fix some paths and docs in f2py
-	epatch "${FILESDIR}"/${P}-f2py.patch
-
-	# fix cpuinfo for p4 (gentoo bug #169262/ numpy ticket #349)
-	epatch "${FILESDIR}"/${P}-cpuinfo.patch
+	epatch "${FILESDIR}"/${PN}-1.0.1-f2py.patch
 
 	# gentoo patch for ATLAS library names
 	sed -i \
@@ -121,7 +118,8 @@ src_unpack() {
 		-e "s:'ptblas':'blas':g" \
 		-e "s:'ptcblas':'cblas':g" \
 		-e "s:'lapack_atlas':'lapack':g" \
-		numpy/distutils/system_info.py
+		numpy/distutils/system_info.py \
+		|| die "sed system_info.py failed"
 }
 
 src_compile() {
