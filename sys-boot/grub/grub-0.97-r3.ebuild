@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.9 2007/04/04 18:43:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.10 2007/05/25 05:05:11 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -148,6 +148,7 @@ setup_boot_dir() {
 
 pkg_postinst() {
 	[[ ${ROOT} != "/" ]] && return 0
+	[[ -n ${DONT_MOUNT_BOOT} ]] && return 0
 	setup_boot_dir /boot
 	einfo "To install grub files to another device (like a usb stick), just run:"
 	einfo "   emerge --config =${PF}"
