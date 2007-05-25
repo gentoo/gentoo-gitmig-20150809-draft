@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.33 2007/04/26 08:39:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.34 2007/05/25 15:34:11 caster Exp $
+
+  25 May 2007; Vlastimil Babka <caster@gentoo.org>
+  hibernate-3.0.5-r2.ebuild:
+  Add missing dependencies.
 
   26 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   -hibernate-3.0_rc1.ebuild:

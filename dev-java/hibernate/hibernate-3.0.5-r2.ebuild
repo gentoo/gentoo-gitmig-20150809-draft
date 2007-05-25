@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0.5-r2.ebuild,v 1.4 2007/01/24 17:48:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0.5-r2.ebuild,v 1.5 2007/05/25 15:34:11 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -16,6 +16,8 @@ SLOT="3"
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
+	dev-java/ant-core
+	=dev-java/antlr-2*
 	=dev-java/asm-2.0*
 	dev-java/c3p0
 	=dev-java/cglib-2.1*
@@ -63,7 +65,7 @@ src_unpack() {
 #	fi
 
 	cd lib
-	rm *.jar
+	rm -v *.jar || die
 
 	local JAR_PACKAGES="ant-core antlr asm-2 c3p0 commons-collections
 		commons-logging dom4j-1 ehcache jaxen-1.1 jta
