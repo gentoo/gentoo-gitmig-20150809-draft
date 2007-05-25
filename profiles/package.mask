@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7293 2007/05/25 18:54:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7294 2007/05/25 22:25:54 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andrej Kacian <ticho@gentoo.org> (26 May 2007)
+# Use mail-client/claws-mail - upstream changed application name after 2.6.0.
+mail-client/sylpheed-claws
 
 # Zac Medico <zmedico@gentoo.org> (25 May 2007)
 # Bug #179766, USE="-*" destroys USE_EXPAND variables
@@ -772,23 +776,6 @@ dev-java/jdbc3-postgresql
 # Markus Ullmann <jokey@gentoo.org> (12 Apr 2007)
 # mask for security bug #170569
 net-analyzer/netperf
-
-# Andrej Kacian <ticho@gentoo.org> (12 Apr 2007)
-# Mask pending removal, sylpheed-claws -> claws-mail migration.
-mail-client/sylpheed-claws-acpi-notifier
-mail-client/sylpheed-claws-att-remover
-mail-client/sylpheed-claws-cachesaver
-mail-client/sylpheed-claws-etpan-privacy
-mail-client/sylpheed-claws-fetchinfo
-mail-client/sylpheed-claws-gtkhtml
-mail-client/sylpheed-claws-maildir
-mail-client/sylpheed-claws-mailmbox
-mail-client/sylpheed-claws-newmail
-mail-client/sylpheed-claws-notification
-mail-client/sylpheed-claws-perl
-mail-client/sylpheed-claws-rssyl
-mail-client/sylpheed-claws-smime
-mail-client/sylpheed-claws-vcalendar
 
 # Jeffrey Gardner <je_fro@gentoo.org> (10 Apr 2007)
 # Initial import of experimental folding@home client.
