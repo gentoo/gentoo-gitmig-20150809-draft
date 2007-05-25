@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r1.ebuild,v 1.1 2007/05/17 21:15:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r1.ebuild,v 1.2 2007/05/25 14:29:08 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -40,6 +40,7 @@ TOMCAT_HOME="/usr/share/${TOMCAT_NAME}"
 WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/webapps"
 
 pkg_setup() {
+	java-pkg-2_pkg_setup
 	enewgroup tomcat 265
 	enewuser tomcat 265 -1 /dev/null tomcat
 }
