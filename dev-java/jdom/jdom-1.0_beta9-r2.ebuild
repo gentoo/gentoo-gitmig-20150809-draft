@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r2.ebuild,v 1.5 2007/01/05 23:31:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r2.ebuild,v 1.6 2007/05/25 09:24:07 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -22,7 +22,6 @@ RDEPEND=">=virtual/jre-1.4
 		dev-java/xalan
 		>=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.4
-		dev-java/ant-core
 		${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -41,11 +40,10 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-
-	eant package || die "compile problem"
-
-}
+EANT_BUILD_TARGET="package"
+EANT_DOC_TARGET=""
+# to prevent a newer jdom from going into cp
+ANT_TASKS="none"
 
 src_install() {
 	java-pkg_dojar build/*.jar

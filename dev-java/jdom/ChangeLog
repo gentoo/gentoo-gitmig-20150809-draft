@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.46 2007/05/09 15:16:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.47 2007/05/25 09:24:07 betelgeuse Exp $
+
+  25 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jdom-1.0_beta9-r2.ebuild:
+  Use ANT_TASKS=none so that a newer jdom doesn't get put to classpath and
+  break compiling.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> jdom-1.0-r2.ebuild:
   Add ~ia64 wrt #160813
@@ -116,7 +121,10 @@
   jdom-1.0_beta10-r3.ebuild, jdom-1.0_beta6.ebuild, jdom-1.0_beta9-r1.ebuild:
   jaxen depends on jdom, jdom has optional jaxen support. thanks to HumpBack.
 
+*jdom-1.0 (03 Feb 2005)
+*jdom-1.0_beta10-r3 (03 Feb 2005)
 *jdom-1.0_beta9-r1 (03 Feb 2005)
+*jdom-1.0_beta6 (03 Feb 2005)
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +jdom-1.0.ebuild,
   -jdom-1.0_beta10-r1.ebuild, +jdom-1.0_beta10-r3.ebuild,
