@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.78 2007/05/20 17:29:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.79 2007/05/25 15:15:26 ranger Exp $
+
+  25 May 2007; Brent Baude <ranger@gentoo.org> tcl-8.4.14.ebuild:
+  Marking tcl-8.4.14 ppc64 stable for bug 178320
 
   20 May 2007; nixnut <nixnut@gentoo.org> tcl-8.4.14.ebuild:
   Stable on ppc wrt bug 178320
