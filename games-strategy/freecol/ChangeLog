@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freecol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.17 2007/05/04 13:46:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.18 2007/05/25 21:05:12 betelgeuse Exp $
+
+  25 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/freecol-0.6.1-installer-taskdefs.patch, freecol-0.6.1.ebuild:
+  Add a pkg_setup that calls both games_pkg_setup and java-pkg-2_pkg_setup.
+  Ensure that no bundled jars are used and add src_test.
 
   04 May 2007; Steve Dibb <beandog@gentoo.org> freecol-0.5.3.ebuild:
   amd64 stable, bug 174770
