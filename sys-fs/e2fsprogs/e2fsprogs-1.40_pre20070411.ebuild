@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40_pre20070411.ebuild,v 1.1 2007/05/05 06:37:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40_pre20070411.ebuild,v 1.2 2007/05/25 16:38:04 welp Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/e2fsprogs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls static"
 
 RDEPEND="~sys-libs/com_err-${PV}
