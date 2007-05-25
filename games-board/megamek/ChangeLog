@@ -1,6 +1,10 @@
 # ChangeLog for games-board/megamek
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.9 2007/01/30 00:53:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.10 2007/05/25 20:22:17 betelgeuse Exp $
+
+  25 May 2007; Petteri Räty <betelgeuse@gentoo.org> megamek-0.32.0.ebuild:
+  Add pkg_setup that calls both linux-info_pkg_setup and java-pkg-2_pkg_setup
+  for bug #179788.
 
   30 Jan 2007; Vlastimil Babka <caster@gentoo.org> megamek-0.32.0.ebuild:
   Put java-ant-2 after java-pkg-2 in inherit.
