@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.42 2007/05/09 15:19:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.43 2007/05/25 11:16:29 flameeyes Exp $
+
+  25 May 2007; Diego Pettenò <flameeyes@gentoo.org> bsf-2.4.0.ebuild:
+  Add ~x86-fbsd keyword as per bug #160813.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> bsf-2.4.0.ebuild:
   Add ~ia64 wrt #160813
