@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xstream
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.5 2007/04/15 18:43:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.6 2007/05/26 17:36:39 nelchael Exp $
+
+  26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> xstream-1.2.ebuild:
+  Add ~ppc.
 
   15 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> xstream-1.2.ebuild:
   Add java-ant-2 to inherit to make JAVA_PKG_STRICT happy.

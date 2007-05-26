@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.2_beta1.ebuild,v 1.4 2007/05/18 11:37:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.2_beta1.ebuild,v 1.5 2007/05/26 17:29:08 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.jar"
 HOMEPAGE="http://cglib.sourceforge.net"
 LICENSE="Apache-1.1"
 SLOT="2.2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 COMMON_DEP="=dev-java/asm-2.2*
 	>=dev-java/ant-core-1.7.0"
 RDEPEND=">=virtual/jre-1.4

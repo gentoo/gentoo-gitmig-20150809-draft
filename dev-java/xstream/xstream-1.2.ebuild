@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.5 2007/04/15 18:43:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.6 2007/05/26 17:36:39 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://dist.codehaus.org/xstream/distributions/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples java5 source"
 
 COMMON_DEPS="

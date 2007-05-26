@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.4 2007/05/26 17:15:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.5 2007/05/26 17:26:12 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jarjar/${PN}-src-${PV}.zip"
 HOMEPAGE="http://jarjar.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 COMMON_DEP="
 	=dev-java/asm-2.0*

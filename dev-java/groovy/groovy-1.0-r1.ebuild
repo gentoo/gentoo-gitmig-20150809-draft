@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0-r1.ebuild,v 1.1 2007/05/22 06:58:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0-r1.ebuild,v 1.2 2007/05/26 17:37:55 nelchael Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://groovy.codehaus.org/"
 SRC_URI="http://dist.codehaus.org/groovy/distributions/${MY_P/JSR/jsr}-src.tar.gz"
 LICENSE="codehaus-groovy"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="source"
 
 COMMON_DEPS="
