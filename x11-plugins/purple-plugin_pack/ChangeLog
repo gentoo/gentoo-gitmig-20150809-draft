@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/purple-plugin_pack
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.1 2007/05/26 20:41:43 tester Exp $
+
+*purple-plugin_pack-1.0 (26 May 2007)
+
+  26 May 2007; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +purple-plugin_pack-1.0.ebuild:
+  New package, ebuild submitted by Jürgen Geuter on bug #134430
+
