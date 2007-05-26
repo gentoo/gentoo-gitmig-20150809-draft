@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.31 2007/05/26 22:36:28 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.32 2007/05/26 22:38:49 rl03 Exp $
+
+*phpsysinfo-2.5.3 (26 May 2007)
+
+  26 May 2007; Renat Lumpau <rl03@gentoo.org> +phpsysinfo-2.5.3.ebuild:
+  Version bump, bugs 171874 and #176055.
 
   26 May 2007; Renat Lumpau <rl03@gentoo.org> -phpsysinfo-2.5.1-r2.ebuild:
   Clean out old version
