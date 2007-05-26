@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.31 2007/05/08 16:24:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.32 2007/05/26 01:34:52 jer Exp $
+
+  26 May 2007; Jeroen Roovers <jer@gentoo.org> claws-mail-2.9.1.ebuild:
+  Stable for HPPA (bug #176805).
 
 *claws-mail-2.9.2 (08 May 2007)
 
