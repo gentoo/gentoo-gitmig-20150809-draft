@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.2 2007/05/26 13:36:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.3 2007/05/26 19:05:10 armin76 Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-$( get_version_component_range 1-2)/
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gdbm ncurses tk latex X"
 
 DEPEND="tk? ( >=dev-lang/tk-3.3.3 )
@@ -68,6 +68,9 @@ src_compile() {
 	# dev-lang/ocaml tends to break/give unexpected results with "unsafe" CFLAGS.
 	strip-flags
 	replace-flags "-O?" -O2
+
+	# It doesn't compile on alpha without this LDFLAGS
+	use alpha && append-ldflags "-Wl,--no-relax"
 
 	use tk || myconf="${myconf} -no-tk"
 	use ncurses || myconf="${myconf} -no-curses"
