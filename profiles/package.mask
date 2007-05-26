@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7298 2007/05/26 15:41:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7299 2007/05/26 15:58:50 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -393,11 +393,6 @@ dev-java/fesi
 # Package uses generation 1 eclasses and has stale upstream.
 # It will be removed from the tree around end of May.
 dev-java/nice
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (27 Apr 2007)
-# Mask binary-only version of jcs, please use dev-java/jcs,
-# will be removed from the tree around end of May.
-dev-java/jcs-bin
 
 # Bryan Stine <battousai@gentoo.org> (26 Apr 2007)
 # Masked until it works with current baselayout and

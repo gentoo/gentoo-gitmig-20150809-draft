@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.420 2007/05/26 12:53:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.421 2007/05/26 15:58:50 nelchael Exp $
+
+  26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Remove mask of jcs-bin.
 
   26 May 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   Mask ocaml 3.10.0
