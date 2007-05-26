@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.7 2007/05/20 08:32:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.8 2007/05/26 11:42:59 dev-zero Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -27,6 +27,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-1.10.2-asneeded.patch"
 	epatch "${FILESDIR}/${P}-add_missing_include.patch"
+
+	sed -i \
+		-e 's|-L\($${CPPUNIT_LIB_DIR}\)|\1|' \
+		-e 's|\(../../lib\)|-L\1 -L../../src/cppunit/.libs|' \
+		examples/qt/qt_example.pro || die "sed failed"
 
 	AT_M4DIR="${S}/config"
 	eautomake
