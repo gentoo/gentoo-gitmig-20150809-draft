@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.47 2007/05/24 14:18:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.48 2007/05/26 12:50:41 nelchael Exp $
+
+  26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.0.22.ebuild,
+  resin-3.0.23-r1.ebuild:
+  Add calls to java-pkg-2_pkg_setup, see bug #179788.
 
   24 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   files/3.0.22/resin.init, files/3.0.23/resin.init, files/3.1.1/resin.init:

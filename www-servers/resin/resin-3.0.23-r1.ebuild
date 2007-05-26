@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.23-r1.ebuild,v 1.1 2007/05/16 10:52:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.23-r1.ebuild,v 1.2 2007/05/26 12:50:41 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 pkg_setup() {
 
+	java-pkg-2_pkg_setup
 	enewgroup resin
 	enewuser resin -1 /bin/bash ${RESIN_HOME} resin
 
