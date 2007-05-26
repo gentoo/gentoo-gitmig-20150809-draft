@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2830 2007/05/26 22:46:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2831 2007/05/26 23:07:58 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1904,6 +1904,7 @@ www-apache/mod_suphp:mode-paranoid - Run scripts with owner UID/GID but also che
 www-apps/Embperl:modperl - Enable modperl support
 www-apps/bugzilla:extras - optional Perl modules
 www-apps/bugzilla:modperl - Enable modperl support
+www-apps/egroupware:contrib - Install all contributed modules
 www-apps/egroupware:jpgraph - Add jpgraph support
 www-apps/gallery:dcraw - Add dcraw support
 www-apps/gallery:netpbm - Add NetPBM support
