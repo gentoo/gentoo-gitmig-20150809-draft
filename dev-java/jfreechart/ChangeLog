@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.23 2007/05/26 10:18:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.24 2007/05/26 14:40:10 opfer Exp $
+
+  26 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  jfreechart-0.9.21-r2.ebuild:
+  x86 stable, bug 164121, removed a whitespace
 
 *jfreechart-0.9.21-r2 (26 May 2007)
 
