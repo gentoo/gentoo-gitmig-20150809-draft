@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.286 2007/05/26 12:50:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.287 2007/05/26 14:59:03 jer Exp $
+
+  26 May 2007; Jeroen Roovers <jer@gentoo.org> samba-3.0.24-r3.ebuild:
+  Stable for HPPA (bug #179867).
 
 *samba-3.0.24-r3 (26 May 2007)
 
