@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7299 2007/05/26 15:58:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7300 2007/05/26 18:23:15 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,7 +25,9 @@
 # New major release, camlp4 has lots of api chages
 # Thus it breaks lots of ocaml packages
 # Other things that needs to be checked : hardened, hppa
+# Also mask apps that strictly depend on it
 >=dev-lang/ocaml-3.10.0
+>=dev-ml/ulex-1.0
 
 # Samuli Suominen <drac@gentoo.org> (26 May 2007)
 # Masked for testing and because it might not get
