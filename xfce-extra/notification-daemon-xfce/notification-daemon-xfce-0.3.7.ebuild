@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.1 2007/05/26 18:22:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.2 2007/05/26 22:07:16 welp Exp $
 
 inherit xfce44
 
@@ -10,7 +10,7 @@ DESCRIPTION="Port of notification daemon for Xfce Desktop Environment"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/notification-daemon-xfce"
 SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.6
