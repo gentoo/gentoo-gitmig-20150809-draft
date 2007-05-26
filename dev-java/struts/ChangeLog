@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.35 2007/05/23 17:28:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.36 2007/05/26 23:50:20 caster Exp $
+
+  26 May 2007; Vlastimil Babka <caster@gentoo.org> struts-1.2.9-r1.ebuild:
+  Migrated to split-ant, style cleanup.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Add ~x86-fbsd keyword. Bug #176906.

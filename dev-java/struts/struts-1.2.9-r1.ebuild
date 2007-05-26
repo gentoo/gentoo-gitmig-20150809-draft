@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r1.ebuild,v 1.5 2007/03/27 15:40:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r1.ebuild,v 1.6 2007/05/26 23:50:20 caster Exp $
+
+JAVA_PKG_IUSE="doc examples source"
+WANT_ANT_TASKS="ant-trax"
 
 inherit java-pkg-2 java-ant-2
 
@@ -23,10 +26,8 @@ COMMON_DEPS="
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPS}"
 DEPEND=">=virtual/jdk-1.4
-	${COMMON_DEPS}
-	>=dev-java/ant-tasks-1.6.0
-	source? ( app-arch/zip )"
-IUSE="doc examples source"
+	${COMMON_DEPS}"
+IUSE=""
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_P}"
