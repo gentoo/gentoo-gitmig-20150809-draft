@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/obexfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.4 2007/04/17 14:45:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.5 2007/05/26 21:21:07 ticho Exp $
+
+  26 May 2007; Andrej Kacian <ticho@gentoo.org> obexfs-0.10.ebuild:
+  Stable on x86, bug #179505.
 
   17 Apr 2007; Christian Faulhammer <opfer@gentoo.org> obexfs-0.10.ebuild:
   keyworded ~amd64, bug 172311
