@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.22 2007/03/28 18:14:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.23 2007/05/26 22:45:41 betelgeuse Exp $
+
+  26 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  gnu-classpath-inetlib-1.0-r2.ebuild, gnu-classpath-inetlib-1.1-r2.ebuild:
+  Add -j1 because this package doesn't like parallel make and switch to
+  java-pkg_dojavadoc. Fixes bug #179897.
 
   28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   gnu-classpath-inetlib-1.0-r2.ebuild, gnu-classpath-inetlib-1.1-r2.ebuild:

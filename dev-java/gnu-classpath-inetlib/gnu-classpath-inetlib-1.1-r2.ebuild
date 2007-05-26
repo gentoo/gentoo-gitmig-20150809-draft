@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r2.ebuild,v 1.4 2007/03/28 18:14:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r2.ebuild,v 1.5 2007/05/26 22:45:41 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -44,9 +44,10 @@ src_compile() {
 		--with-jsse-jar=${S}/ext \
 		--with-javax-security-jar=${S}/ext \
 		|| die
-	emake JAVACFLAGS="${JAVACFLAGS}" || die
+	# https://bugs.gentoo.org/show_bug.cgi?id=179897
+	emake JAVACFLAGS="${JAVACFLAGS}" -j1 || die
 	if use doc ; then
-		make javadoc || die
+		emake -j1 javadoc || die
 	fi
 }
 
@@ -54,6 +55,6 @@ src_install() {
 	einstall || die
 	rm -rf ${D}/usr/share/java
 	java-pkg_dojar inetlib.jar
-	use doc && java-pkg_dohtml -r docs/*
-	dodoc AUTHORS NEWS README
+	use doc && java-pkg_dojavadoc docs
+	dodoc AUTHORS NEWS README || die
 }

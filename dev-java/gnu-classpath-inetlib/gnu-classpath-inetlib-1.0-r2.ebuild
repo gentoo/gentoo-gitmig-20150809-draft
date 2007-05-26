@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.7 2007/03/28 18:14:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.8 2007/05/26 22:45:41 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -48,9 +48,10 @@ src_compile() {
 		--with-javax-security-auth-callback-jar=${S}/ext \
 		--with-javax-security-sasl-jar=${S}/ext \
 		|| die "econf failed"
-	emake JAVACFLAGS="${JAVACFLAGS}" || die "emake failed"
+	# https://bugs.gentoo.org/show_bug.cgi?id=179897
+	emake JAVACFLAGS="${JAVACFLAGS}" -j1 || die "emake failed"
 	if use doc ; then
-		emake javadoc || die "emake javadoc failed"
+		emake -j1 javadoc || die "emake javadoc failed"
 	fi
 }
 
@@ -58,6 +59,6 @@ src_install() {
 	einstall || die
 	rm -rf ${D}/usr/share/java
 	java-pkg_dojar ${MY_PN}.jar
-	use doc && java-pkg_dohtml -r docs/*
-	dodoc AUTHORS NEWS README
+	use doc && java-pkg_dojavadoc docs
+	dodoc AUTHORS NEWS README || die
 }
