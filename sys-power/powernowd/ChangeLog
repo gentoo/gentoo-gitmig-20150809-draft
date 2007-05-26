@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powernowd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.8 2007/05/16 21:08:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.9 2007/05/26 12:19:08 opfer Exp $
+
+  26 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  powernowd-0.97.ebuild:
+  amd64 stable, bug 175925
 
   16 May 2007; Joseph Jezak <josejx@gentoo.org> powernowd-0.97.ebuild:
   Marked ppc stable for bug #175925.
