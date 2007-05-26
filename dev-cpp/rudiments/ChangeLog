@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/rudiments
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.10 2007/02/22 01:01:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.11 2007/05/26 02:01:34 matsuu Exp $
+
+*rudiments-0.30 (26 May 2007)
+
+  26 May 2007; MATSUU Takuto <matsuu@gentoo.org> +rudiments-0.30.ebuild:
+  Version bumped.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
