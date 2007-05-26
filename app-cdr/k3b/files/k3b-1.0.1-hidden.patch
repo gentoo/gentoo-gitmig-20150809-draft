@@ -1,0 +1,39 @@
+diff -Naur k3b-1.0.1.orig/src/k3b-cue.desktop k3b-1.0.1/src/k3b-cue.desktop
+--- k3b-1.0.1.orig/src/k3b-cue.desktop	2007-04-18 17:43:19.000000000 +0200
++++ k3b-1.0.1/src/k3b-cue.desktop	2007-05-26 14:51:07.000000000 +0200
+@@ -1,6 +1,7 @@
+ # KDE Config File
+ [Desktop Entry]
+ Type=Application
++NoDisplay=true
+ Exec=k3b --cdimage %U
+ Icon=k3b
+ Terminal=false
+diff -Naur k3b-1.0.1.orig/src/k3b-iso.desktop k3b-1.0.1/src/k3b-iso.desktop
+--- k3b-1.0.1.orig/src/k3b-iso.desktop	2007-04-18 17:43:19.000000000 +0200
++++ k3b-1.0.1/src/k3b-iso.desktop	2007-05-26 14:50:51.000000000 +0200
+@@ -1,6 +1,7 @@
+ # KDE Config File
+ [Desktop Entry]
+ Type=Application
++NoDisplay=true
+ Exec=k3b --image %U
+ Icon=k3b
+ Terminal=false
+diff -Naur k3b-1.0.1.orig/src/Makefile.am k3b-1.0.1/src/Makefile.am
+--- k3b-1.0.1.orig/src/Makefile.am	2007-04-18 17:43:19.000000000 +0200
++++ k3b-1.0.1/src/Makefile.am	2007-05-26 14:45:28.000000000 +0200
+@@ -32,10 +32,10 @@
+ 
+ SUBDIRS = option misc rip projects fastscale pics icons konqi mimetypes sounds
+ 
+-xdg_apps_DATA = k3b.desktop
++xdg_apps_DATA = k3b.desktop k3b-iso.desktop k3b-cue.desktop
+ 
+-silent_DATA = k3b-iso.desktop k3b-cue.desktop
+-silentdir = $(kde_appsdir)/.hidden/
++#silent_DATA = k3b-iso.desktop k3b-cue.desktop
++#silentdir = $(kde_appsdir)/.hidden/
+ 
+ ###################
+ # this 10 paths are KDE specific. Use them:
