@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.252 2007/03/12 09:27:18 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.253 2007/05/26 23:11:41 rl03 Exp $
+
+  26 May 2007; Renat Lumpau <rl03@gentoo.org> -phpmyadmin-2.9.2_rc1.ebuild:
+  Clean out old version
 
   12 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org>
   phpmyadmin-2.10.0.2.ebuild:
