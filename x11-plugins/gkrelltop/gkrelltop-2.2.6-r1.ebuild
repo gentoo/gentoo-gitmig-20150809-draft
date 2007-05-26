@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.6-r1.ebuild,v 1.6 2007/05/07 17:32:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.6-r1.ebuild,v 1.7 2007/05/26 12:59:56 opfer Exp $
 
 inherit gkrellm-plugin
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://psychology.rutgers.edu/~zaimi/software.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 
 IUSE=""
 
