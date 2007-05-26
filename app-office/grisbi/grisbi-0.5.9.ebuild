@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.9.ebuild,v 1.4 2007/01/25 05:16:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.9.ebuild,v 1.5 2007/05/26 17:36:20 philantrop Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/grisbi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc ~x86"
+KEYWORDS="amd64 ppc sparc ~x86"
 
 DEPEND="dev-libs/libxml2
 	>=dev-util/pkgconfig-0.20
