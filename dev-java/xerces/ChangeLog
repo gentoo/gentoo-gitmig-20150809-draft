@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.87 2007/05/12 18:50:00 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.88 2007/05/26 19:14:27 caster Exp $
+
+*xerces-2.9.0 (26 May 2007)
+
+  26 May 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/xerces-2.7.1-gentoo.patch, -files/xerces-2.7.1-no_dom3.patch,
+  +files/xerces-2.9.0-gentoo.patch, +files/xerces-2.9.0-no_dom3.patch,
+  -xerces-2.7.1-r2.ebuild, +xerces-2.9.0.ebuild:
+  Version bump, now using serializer.jar from xalan, bug #156258; Remove
+  unused 2.7.1.
 
   12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   xerces-2.8.1.ebuild:
