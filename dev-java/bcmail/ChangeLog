@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.3 2007/04/25 11:39:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.4 2007/05/26 12:57:51 nelchael Exp $
+
+  26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> bcmail-1.36.ebuild:
+  Add ~ppc.
 
   25 Apr 2007; Vlastimil Babka <caster@gentoo.org> bcmail-1.36.ebuild:
   Add missing sun-jaf dependency.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/jempbox-0.2.0.ebuild,v 1.3 2007/05/15 21:34:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/jempbox-0.2.0.ebuild,v 1.4 2007/05/26 12:56:18 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source test"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.jempbox.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"
