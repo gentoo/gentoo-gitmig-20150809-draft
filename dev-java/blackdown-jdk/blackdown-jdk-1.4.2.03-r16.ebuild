@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r14.ebuild,v 1.1 2007/05/20 20:53:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r16.ebuild,v 1.1 2007/05/26 10:50:01 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
-inherit java-vm-2 versionator
+inherit java-vm-2 versionator pax-utils
 
 JREV=$(get_version_component_range 4- )
 JV=$(get_version_component_range 1-3 )
@@ -17,11 +17,10 @@ HOMEPAGE="http://www.blackdown.org"
 
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="-* amd64 x86"
-IUSE="doc nsplugin"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="doc examples nsplugin"
 
-DEPEND=">=dev-java/java-config-1.2.11
-	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+DEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 JAVA_PROVIDE="jdbc-stdext"
 
@@ -82,12 +81,21 @@ unpack_jars() {
 src_install() {
 	typeset platform
 
+	# Set PaX markings on all JDK/JRE executables to allow code-generation on
+	# the heap by the JIT compiler.
+	pax-mark m $(list-paxables ${S}{,/jre}/bin/*)
+
 	dodir /opt/${P}
 
 	cp -pPR ${S}/{bin,jre,lib,man,include} ${D}/opt/${P} || die "failed to copy"
 
-	dodir /opt/${P}/share/java
-	cp -pPR ${S}/{demo,src.zip} ${D}/opt/${P}/share || die "failed to copy"
+	dodir /opt/${P}/share/
+	if use examples; then
+		cp -pPR ${S}/demo ${D}/opt/${P}/share/ || die "failed to copy"
+	fi
+
+	cp -pPR ${S}/src.zip "${D}/opt/${P}/" || die "failed to copy"
+	dosym "../src.zip" /opt/${P}/share || die "failed dosym"
 
 	dodoc README
 	dohtml README.html
@@ -124,28 +132,12 @@ pkg_postinst() {
 	# Set as default system VM if none exists
 	java-vm-2_pkg_postinst
 
-	# if chpax is on the target system, set the appropriate PaX flags
-	# this will not hurt the binary, it modifies only unused ELF bits
-	# but may confuse things like AV scanners and automatic tripwire
-	if has_version "sys-apps/chpax"
-	then
-		echo
-		elog "setting up conservative PaX flags for jar and javac"
-
-		CHPAX_CONSERVATIVE_FLAGS="pemrxs"
-
-		for paxkills in "jar" "javac" "java" "javah" "javadoc"
-		do
-			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
-		done
-
-		# /opt/blackdown-jdk-1.4.1/jre/bin/java_vm
-		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/jre/bin/java_vm
-
-		ewarn "you should have seen lots of chpax output above now"
-		ewarn "make sure the grsec ACL contains those entries also"
-		ewarn "because enabling it will override the chpax setting"
-		ewarn "on the physical files - help for PaX and grsecurity"
-		ewarn "can be given by #gentoo-hardened + hardened@gentoo.org"
-	fi
+	elog ""
+	elog "Starting with 1.4.0.03-r16 demos are installed only with USE=examples"
+	elog ""
+	elog "Starting with 1.4.0.03-r16 the src.jar is installed to the standard"
+	elog "location. It is still symlinked to the old location (/opt/${P}/share)"
+	elog "but it will be removed if there will ever be a version bump."
+	elog "See https://bugs.gentoo.org/show_bug.cgi?id=2241"
+	elog "for more details."
 }
