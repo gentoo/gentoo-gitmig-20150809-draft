@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.68 2007/05/26 22:41:41 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.69 2007/05/26 23:09:04 rl03 Exp $
+
+*egroupware-1.2.106.2 (26 May 2007)
+
+  26 May 2007; Renat Lumpau <rl03@gentoo.org> +egroupware-1.2.106.2.ebuild:
+  Version bump, fixes bugs #167613, #169807, #171438.
 
   26 May 2007; Renat Lumpau <rl03@gentoo.org> egroupware-1.2.106.ebuild:
   Fix bug #174420
