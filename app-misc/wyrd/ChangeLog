@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/wyrd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/ChangeLog,v 1.11 2007/01/25 04:24:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/ChangeLog,v 1.12 2007/05/26 10:58:39 tove Exp $
+
+*wyrd-1.4.2 (26 May 2007)
+
+  26 May 2007; Torsten Veller <tove@gentoo.org> +wyrd-1.4.2.ebuild:
+  Version bump. Added unicode useflag.
 
   25 Jan 2007; Steve Dibb <beandog@gentoo.org> wyrd-1.4.1.ebuild:
   add ~amd64, bug 150499
