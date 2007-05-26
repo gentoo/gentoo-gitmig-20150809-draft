@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.1.1.ebuild,v 1.1 2007/02/06 21:49:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.1.2.ebuild,v 1.1 2007/05/26 21:48:05 rl03 Exp $
 
 inherit webapp eutils depend.apache
 
@@ -41,7 +41,6 @@ src_unpack() {
 	cd ${S}
 
 	mv ${S}/bin/LocalLib.cfg.txt ${S}/bin/LocalLib.cfg
-	mv ${S}/lib/LocalSite.cfg.txt ${S}/lib/LocalSite.cfg
 	# change web user to apache
 	cd ${S}/lib/TWiki
 	find . -name '*,v' -exec sed -i 's|nobody:|apache:|g' '{}' ';'
@@ -55,11 +54,11 @@ src_install() {
 	dodoc readme.txt
 	dohtml T*.html INSTALL.html
 
-	for file in $(find data pub) lib/LocalSite.cfg; do
+	for file in $(find data pub) ; do
 		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
 	done
 
-	for a in bin/setlib.cfg bin/LocalLib.cfg lib/LocalSite.cfg; do
+	for a in bin/setlib.cfg bin/LocalLib.cfg ; do
 		webapp_configfile ${MY_HTDOCSDIR}/${a}
 	done
 	webapp_hook_script ${FILESDIR}/reconfig

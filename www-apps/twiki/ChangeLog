@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.41 2007/02/06 21:49:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.42 2007/05/26 21:48:05 rl03 Exp $
+
+*twiki-4.1.2 (26 May 2007)
+
+  26 May 2007; Renat Lumpau <rl03@gentoo.org> -twiki-4.1.1.ebuild,
+  +twiki-4.1.2.ebuild:
+  Version bump, bug #174641.
 
 *twiki-4.1.1 (06 Feb 2007)
 
