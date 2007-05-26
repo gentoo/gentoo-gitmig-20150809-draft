@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.3 2007/05/26 16:46:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.4 2007/05/26 17:15:41 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -14,7 +14,7 @@ SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 COMMON_DEP="
-	=dev-java/asm-3.0*
+	=dev-java/asm-2.0*
 	=dev-java/gnu-regexp-1*
 	>=dev-java/ant-core-1.7.0
 	dev-java/java-getopt"
@@ -33,7 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}/0.9-system-jars.patch"
 	cd "${S}/lib"
 	rm -v *.jar || die
-	java-pkg_jar-from asm-3
+	java-pkg_jar-from asm-2
 	java-pkg_jar-from gnu-regexp-1
 	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from java-getopt-1
