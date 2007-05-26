@@ -1,6 +1,15 @@
 # ChangeLog for sci-electronics/ng-spice-rework
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.16 2007/01/31 18:14:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.17 2007/05/26 20:57:56 calchan Exp $
+
+*ng-spice-rework-17-r2 (26 May 2007)
+
+  26 May 2007; Denis Dupeyron <calchan@gentoo.org>
+  +ng-spice-rework-17-r2.ebuild:
+  Enabled xspice and intnoise after testing them, which closes bug #140402.
+  Added optional ngspice and xspice documentation. Fixed X dependencies and
+  made them optional. Fixed collision with external xgraph. Fixed debug
+  messing with compilation optimizations. Made debug even more chatty.
 
   31 Jan 2007; Denis Dupeyron <calchan@gentoo.org>
   ng-spice-rework-9999.ebuild:
