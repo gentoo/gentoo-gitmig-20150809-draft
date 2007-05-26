@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.6 2007/02/09 02:49:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.7 2007/05/26 18:55:38 aballier Exp $
+
+  26 May 2007; Alexis Ballier <aballier@gentoo.org> ocamlweb-1.37.ebuild:
+  ~amd64, dont install COPYING, quote directory variables
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
