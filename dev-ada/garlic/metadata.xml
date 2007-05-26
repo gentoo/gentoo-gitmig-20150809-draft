@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>ada</herd>
-<longdescription>GLADE, aka Garlic, is the first industrial-strength implementation of the distributed Ada 95 programming model. It allows parts of a single program to run concurrently on different machines and communicate with each other. It supports different network protocols, and provides replication and replay capabilities.</longdescription>
-</pkgmetadata>
