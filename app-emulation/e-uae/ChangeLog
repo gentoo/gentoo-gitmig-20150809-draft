@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.37 2007/05/09 20:18:47 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.38 2007/05/26 10:23:38 pva Exp $
+
+*e-uae-0.8.29_rc4-r1 (26 May 2007)
+
+  26 May 2007; <pva@gentoo.org>
+  +files/e-uae-0.8.29_rc4-high-cpu-usage.patch, +e-uae-0.8.29_rc4-r1.ebuild:
+  Added fix for high cpu usage when compiled with --disable-audio.
 
   09 May 2007; Kevin F. Quinn <kevquinn@gentoo.org> e-uae-0.8.28-r3.ebuild,
   e-uae-0.8.29_rc4.ebuild:
