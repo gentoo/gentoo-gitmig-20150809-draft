@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.21 2007/03/17 20:17:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.22 2007/05/26 10:35:33 pva Exp $
+
+*kipi-plugins-0.1.3-r2 (26 May 2007)
+
+  26 May 2007; <pva@gentoo.org>
+  +files/kipi-plugins-0.1.3-exiv2-fedora.patch,
+  +kipi-plugins-0.1.3-r2.ebuild:
+  Fixed compilation problem with exiv2-0.14: now used libkexiv interface
+  instead of exiv2. Patch from fedora.
 
 *kipi-plugins-0.1.3-r1 (17 Mar 2007)
 

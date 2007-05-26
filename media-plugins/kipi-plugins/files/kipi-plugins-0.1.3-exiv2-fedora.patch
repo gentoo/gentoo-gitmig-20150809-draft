@@ -1,0 +1,2810 @@
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/common/Makefile.am kipi-plugins-0.1.3/kipi-plugins/common/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/common/Makefile.am	2007-05-21 12:08:28.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/common/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,2 +1,2 @@
+-SUBDIRS = exiv2iface libkipiplugins
++SUBDIRS = libkipiplugins
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/configure.in.bot kipi-plugins-0.1.3/kipi-plugins/configure.in.bot
+--- kipi-plugins-0.1.3.orig/kipi-plugins/configure.in.bot	2007-05-21 12:08:28.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/configure.in.bot	2007-05-21 12:08:37.000000000 +0400
+@@ -20,22 +20,22 @@
+   echo "-- libkipi found.................. NO"
+   echo ""
+   echo "Kipi-Plugins needs libkipi >= 0.1.5. You need to install libkipi first"
+-  echo "libkipi website is at http://extragear.kde.org/apps/kipi"
++  echo "libkipi website is at http://www.kipi-plugins.org"
+   echo ""
+   all_tests=bad
+ else
+   echo "-- libkipi found.................. YES"
+ fi
+ 
+-if test "x$have_exiv2" != "xyes"; then
+-  echo "-- Exiv2 library found............ NO"
++if test "x$have_libkexiv2" != "xyes"; then
++  echo "-- libkexiv2 library found............ NO"
+   echo ""
+-  echo "Kipi-Plugins needs Exiv2 library >= 0.12. You need to install Exiv2 first"
+-  echo "Exiv2 website is at http://www.exiv2.org"
++  echo "Kipi-Plugins needs libkexiv2 library >= 0.1. You need to install libkexiv2 first"
++  echo "libkexiv2 website is at http://www.kipi-plugins.org"
+   echo ""
+   all_tests=bad
+ else
+-  echo "-- Exiv2 library found............ YES"
++  echo "-- libkexiv2 library found............ YES"
+ fi
+ 
+ if test "x$have_tiff" != "xyes"; then
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/configure.in.in kipi-plugins-0.1.3/kipi-plugins/configure.in.in
+--- kipi-plugins-0.1.3.orig/kipi-plugins/configure.in.in	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/configure.in.in	2007-05-21 12:08:37.000000000 +0400
+@@ -60,8 +60,55 @@
+      DO_NOT_COMPILE="$DO_NOT_COMPILE kipi-plugins"
+ fi
+ 
++# --------------------------------------------------------------------
++# Check for libkexiv2
++# --------------------------------------------------------------------
++
++AC_MSG_CHECKING([for libkexiv2 in our sources])
++if test -d $srcdir/libkexiv2; then
++    have_libkexiv2=yes
++    LIBKEXIV2_CFLAGS='-I$(top_srcdir)'
++    LIBKEXIV2_LIBS='$(top_builddir)/libkexiv2/libkexiv2.la'
++    LIBKEXIV2_LIBS_DEP='$(LIBKEXIV2_LIBS)'
++    AC_MSG_RESULT([found])
++    AC_SUBST(LIBKEXIV2_CFLAGS)
++    AC_SUBST(LIBKEXIV2_LIBS)
++    AC_SUBST(LIBKEXIV2_LIBS_DEP)
++else
++
++    if test "$PKGCONFIGFOUND" = "yes" ; then
++        # check for libkexiv2
++        have_libkexiv2=no
++
++        KDE_PKG_CHECK_MODULES(LIBKEXIV2, libkexiv2 >= 0.1,
++                have_libkexiv2=yes, have_libkexiv2=no)
++
++        if test "x$have_libkexiv2" = "xno"; then
++           LIBKEXIV2_CFLAGS=""
++           LIBKEXIV2_LIBS=""
++           AC_MSG_RESULT([not found])
++        else
++           AC_MSG_RESULT([found])
++        fi
++     else
++        LIBKEXIV2_CFLAGS=""
++        LIBKEXIV2_LIBS=""
++        AC_MSG_RESULT([not found])
++     fi
++     AC_SUBST(LIBKEXIV2_CFLAGS)
++     AC_SUBST(LIBKEXIV2_LIBS)
++     AM_CONDITIONAL(compile_LIBKEXIV2, true)
++fi
++
++if test x$have_libkexiv2 != xyes; then
++  AC_MSG_ERROR([libkexiv2 library is required by kipi-plugins.])
++  DO_NOT_COMPILE="$DO_NOT_COMPILE kipi-plugins"
++fi
++
+ #------------------------------------------------------------------
++#
+ # Check for libtiff
++#
+ #------------------------------------------------------------------
+ 
+ have_tiff=no
+@@ -129,21 +176,9 @@
+ AM_CONDITIONAL(compile_HTMLEXPORT, test -n "${XSLT_CONFIG}")
+ 
+ #------------------------------------------------------------------
+-# Check for Exiv2 library
+-#------------------------------------------------------------------
+-have_exiv2='no'
+-if test "$PKGCONFIGFOUND" = "yes" ; then
+- KDE_PKG_CHECK_MODULES(EXIV2, exiv2 >= 0.12, have_exiv2=yes,have_exiv2=no)
+-fi
+-
+-if test "x$have_exiv2" != "xyes"; then
+-  AC_MSG_ERROR([Exiv2 library is required by kipi-plugins.])
+-  DO_NOT_COMPILE="$DO_NOT_COMPILE kipi-plugins"
+-fi
+-
+-
+-#------------------------------------------------------------------
++#
+ # Check for libgpod (ipod export plugin)
++#
+ #------------------------------------------------------------------
+ 
+ 
+@@ -234,7 +269,9 @@
+ ###############################################################################
+ 
+ #---------------------------------------------------------
++#
+ # imlib2-detection
++#
+ #---------------------------------------------------------
+ # checking for Imlib2...
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/galleryexport/gallerytalker.cpp kipi-plugins-0.1.3/kipi-plugins/galleryexport/gallerytalker.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/galleryexport/gallerytalker.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/galleryexport/gallerytalker.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -34,10 +34,13 @@
+ #include <cstring>
+ #include <cstdio>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ #include "galleryitem.h"
+ #include "gallerympform.h"
+ #include "gallerytalker.h"
+-#include "exiv2iface.h"
+ 
+ namespace KIPIGalleryExportPlugin
+ {
+@@ -219,7 +222,7 @@
+ 
+             if ("JPEG" == QString(QImageIO::imageFormat(photoPath)).upper())
+             {
+-              KIPIPlugins::Exiv2Iface exiv2;
++              KExiv2Iface::KExiv2 exiv2;
+               if (exiv2.load(photoPath))
+               {
+                 exiv2.save(path);
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/galleryexport/Makefile.am kipi-plugins-0.1.3/kipi-plugins/galleryexport/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/galleryexport/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/galleryexport/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,12 +1,11 @@
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKEXIV2_CFLAGS) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_galleryexport.la
+ 
+-kipiplugin_galleryexport_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_galleryexport_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP)  
+ 
+ kipiplugin_galleryexport_la_SOURCES = plugin_galleryexport.cpp \
+ 		galleries.cpp gallerylist.cpp galleryconfig.cpp \
+@@ -14,7 +13,7 @@
+ 		gallerywidget.cpp gallerympform.cpp galleryalbumdialog.ui \
+ 		galleryviewitem.cpp
+ 
+-kipiplugin_galleryexport_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
++kipiplugin_galleryexport_la_LIBADD = $(LIBKEXIV2_LIBS) \
+ 	-lkwalletclient $(LIB_KHTML) $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ kipiplugin_galleryexport_la_LDFLAGS = $(KIPI_PLUGINS_COMMON_LDFLAGS) -module $(KDE_PLUGIN) $(all_libraries) -lkipiplugins
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/gpslistviewitem.cpp kipi-plugins-0.1.3/kipi-plugins/gpssync/gpslistviewitem.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/gpslistviewitem.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/gpssync/gpslistviewitem.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-09-19
+  * Description : GPS file list view item.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -29,9 +29,12 @@
+ #include <kio/previewjob.h>
+ #include <kiconloader.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "gpslistviewitem.h"
+ #include "gpslistviewitem.moc"
+ 
+@@ -85,7 +88,7 @@
+         d->readOnly = true;
+     }
+ 
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.load(d->url.path());
+     setDateTime(exiv2Iface.getImageDateTime());
+     double alt, lat, lng;
+@@ -189,7 +192,7 @@
+     if (isEnabled() && isDirty() && !isReadOnly())
+     {
+         setPixmap(1, SmallIcon("run"));
+-        KIPIPlugins::Exiv2Iface exiv2Iface;
++        KExiv2Iface::KExiv2 exiv2Iface;
+         bool ret = exiv2Iface.load(d->url.path());
+ 
+         if (d->erase)
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/gpslistviewitem.h kipi-plugins-0.1.3/kipi-plugins/gpssync/gpslistviewitem.h
+--- kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/gpslistviewitem.h	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/gpssync/gpslistviewitem.h	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-09-19
+  * Description : GPS file list view item.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/Makefile.am kipi-plugins-0.1.3/kipi-plugins/gpssync/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/gpssync/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,21 +1,20 @@
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKEXIV2_CFLAGS) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_gpssync.la
+ 
+-kipiplugin_gpssync_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_gpssync_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP)  
+ 
+ # Srcs for the plugin
+ kipiplugin_gpssync_la_SOURCES = plugin_gpssync.cpp gpssyncdialog.cpp gpslistviewitem.cpp \
+-	                            gpsbabelbinary.cpp gpsdataparser.cpp gpseditdialog.cpp \
+-	                            gpsmapwidget.cpp 
++	                        gpsbabelbinary.cpp gpsdataparser.cpp gpseditdialog.cpp \
++	                        gpsmapwidget.cpp 
+ 
+ # Libs needed by the plugin
+-kipiplugin_gpssync_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
+-		-lkipiplugins $(LIBKIPI_LIBS) $(LIB_KHTML) $(LIB_KPARTS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
++kipiplugin_gpssync_la_LIBADD = $(LIBKEXIV2_LIBS) -lkipiplugins $(LIBKIPI_LIBS) $(LIB_KHTML) \
++	                       $(LIB_KPARTS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ # LD flags for the plugin
+ kipiplugin_gpssync_la_LDFLAGS = $(KIPI_PLUGINS_COMMON_LDFLAGS) -module $(KDE_PLUGIN) $(all_libraries)
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/plugin_gpssync.cpp kipi-plugins-0.1.3/kipi-plugins/gpssync/plugin_gpssync.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/plugin_gpssync.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/gpssync/plugin_gpssync.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -4,7 +4,7 @@
+  * Description : a plugin to synchronize pictures with 
+  *               a GPS device.
+  *
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -38,9 +38,12 @@
+ 
+ #include <libkipi/imagecollection.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "gpsbabelbinary.h"
+ #include "gpsdatacontainer.h"
+ #include "gpseditdialog.h"
+@@ -181,7 +184,7 @@
+         return;
+ 
+     KURL img = images.images().first();
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.load(img.path());
+     double alt, lat, lng;
+     bool hasGPSInfo = exiv2Iface.getGPSInfo(alt, lat, lng);
+@@ -275,7 +278,7 @@
+         if (ext == QString("JPG") || ext == QString("JPEG") || ext == QString("JPE"))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+             ret &= exiv2Iface.removeGPSInfo();
+             ret &= exiv2Iface.save(url.path());
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/plugin_gpssync.h kipi-plugins-0.1.3/kipi-plugins/gpssync/plugin_gpssync.h
+--- kipi-plugins-0.1.3.orig/kipi-plugins/gpssync/plugin_gpssync.h	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/gpssync/plugin_gpssync.h	2007-05-21 12:08:37.000000000 +0400
+@@ -4,7 +4,7 @@
+  * Description : a plugin to synchronize pictures with 
+  *               a GPS device.
+  *
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/jpeglossless/jpegtransform.cpp kipi-plugins-0.1.3/kipi-plugins/jpeglossless/jpegtransform.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/jpeglossless/jpegtransform.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/jpeglossless/jpegtransform.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -6,7 +6,7 @@
+  * 
+  * Copyright 2004 by  Ralf Hoelzer
+  * Copyright 2004-2005 by Marcel Wiesweg
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -186,7 +186,7 @@
+     (void) jpeg_read_header(&srcinfo, true);
+ 
+     // Get Exif orientation action to do.
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.load(src);
+     getExifAction(exifAction, exiv2Iface.getImageOrientation());
+ 
+@@ -334,7 +334,7 @@
+     QImage img(destGiven);
+     QImage exifThumbnail = img.scale(160, 120, QImage::ScaleMin);
+     exiv2Iface.load(destGiven);
+-    exiv2Iface.setImageOrientation(KIPIPlugins::Exiv2Iface::ORIENTATION_NORMAL);
++    exiv2Iface.setImageOrientation(KExiv2Iface::KExiv2::ORIENTATION_NORMAL);
+     exiv2Iface.setImageProgramId(QString("Kipi JPEGLossLess"), QString(kipiplugins_version));
+     exiv2Iface.setImageDimensions(img.size());
+     exiv2Iface.setExifThumbnail(exifThumbnail);
+@@ -385,42 +385,42 @@
+     }
+ }
+ 
+-void getExifAction(Matrix &action, KIPIPlugins::Exiv2Iface::ImageOrientation exifOrientation) 
++void getExifAction(Matrix &action, KExiv2Iface::KExiv2::ImageOrientation exifOrientation) 
+ {
+     switch (exifOrientation) 
+     {
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_NORMAL:
++        case KExiv2Iface::KExiv2::ORIENTATION_NORMAL:
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_HFLIP:
++        case KExiv2Iface::KExiv2::ORIENTATION_HFLIP:
+             action*=Matrix::flipHorizontal;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_ROT_180:
++        case KExiv2Iface::KExiv2::ORIENTATION_ROT_180:
+             action*=Matrix::rotate180;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_VFLIP:
++        case KExiv2Iface::KExiv2::ORIENTATION_VFLIP:
+             action*=Matrix::flipVertical;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_ROT_90_HFLIP:
++        case KExiv2Iface::KExiv2::ORIENTATION_ROT_90_HFLIP:
+             action*=Matrix::rotate90flipHorizontal;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_ROT_90:
++        case KExiv2Iface::KExiv2::ORIENTATION_ROT_90:
+             action*=Matrix::rotate90;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_ROT_90_VFLIP:
++        case KExiv2Iface::KExiv2::ORIENTATION_ROT_90_VFLIP:
+             action*=Matrix::rotate90flipVertical;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_ROT_270:
++        case KExiv2Iface::KExiv2::ORIENTATION_ROT_270:
+             action*=Matrix::rotate270;
+             break;
+ 
+-        case KIPIPlugins::Exiv2Iface::ORIENTATION_UNSPECIFIED:
++        case KExiv2Iface::KExiv2::ORIENTATION_UNSPECIFIED:
+             action*=Matrix::none;
+             break;
+     }
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/jpeglossless/jpegtransform.h kipi-plugins-0.1.3/kipi-plugins/jpeglossless/jpegtransform.h
+--- kipi-plugins-0.1.3.orig/kipi-plugins/jpeglossless/jpegtransform.h	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/jpeglossless/jpegtransform.h	2007-05-21 12:08:37.000000000 +0400
+@@ -6,7 +6,7 @@
+  * 
+  * Copyright 2004 by  Ralf Hoelzer
+  * Copyright 2004-2005 by Marcel Wiesweg
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2006 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -28,9 +28,9 @@
+ 
+ #include <qstring.h>
+ 
+-// Local includes.
++// LibKExiv2 includes. 
+ 
+-#include "exiv2iface.h"
++#include <libkexiv2/kexiv2.h>
+ 
+ namespace KIPIJPEGLossLessPlugin
+ {
+@@ -40,7 +40,7 @@
+    the user will request rotating operations relative to what he sees,
+    and that is the picture rotated according to the EXIF tag.
+    So the operation requested and the given EXIF angle must be combined.
+-   E.g. if orientation is "6" (rotate 90° clockwiseto show correctly) 
++   E.g. if orientation is "6" (rotate 90 clockwiseto show correctly) 
+    and the user selects 180 clockwise, the operation is 270.
+    If the user selected 270, the operation would be None (and clearing the exif tag).
+    
+@@ -52,7 +52,7 @@
+    All transformations needed here - rotate 90, 180, 270, flipV, flipH - 
+    can be described in a 2x2 matrix with the values 0,1,-1
+    (because flipping is expressed by changing the sign only,
+-    and sine and cosine of 90°, 180° and 270° are either 0,1 or -1).
++    and sine and cosine of 90, 180 and 270 are either 0,1 or -1).
+     
+     x' = m11 x + m12 y
+     y' = m21 x + m22 y
+@@ -124,7 +124,7 @@
+ 
+ void convertTransform(Matrix &action, JXFORM_CODE &flip, JXFORM_CODE &rotate);
+ 
+-void getExifAction(Matrix &action, KIPIPlugins::Exiv2Iface::ImageOrientation exifOrientation);
++void getExifAction(Matrix &action, KExiv2Iface::KExiv2::ImageOrientation exifOrientation);
+ 
+ }  // NameSpace KIPIJPEGLossLessPlugin
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/jpeglossless/Makefile.am kipi-plugins-0.1.3/kipi-plugins/jpeglossless/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/jpeglossless/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/jpeglossless/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,5 +1,5 @@
+ METASOURCES = AUTO
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKEXIV2_CFLAGS) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ # --enable-final triggers: http://bugs.kde.org/show_bug.cgi?id=126326
+ # digikam: camera download: auto-rotated images loose EXIF info ...
+@@ -9,15 +9,14 @@
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_jpeglossless.la
+ 
+-kipiplugin_jpeglossless_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_jpeglossless_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP)
+ 
+ kipiplugin_jpeglossless_la_SOURCES = plugin_jpeglossless.cpp jpegtransform.cpp \
+-		                             actionthread.cpp utils.cpp transupp.cpp \
+-		                             imagerotate.cpp convert2grayscale.cpp imageflip.cpp 
++	                             actionthread.cpp utils.cpp transupp.cpp \
++	                             imagerotate.cpp convert2grayscale.cpp imageflip.cpp 
+ 
+-kipiplugin_jpeglossless_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
+-		                            -ljpeg $(LIBKIPI_LIBS) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
++kipiplugin_jpeglossless_la_LIBADD = -ljpeg $(LIBKIPI_LIBS) $(LIBKEXIV2_LIBS) $(LIB_KDEUI) \
++	                            $(LIB_KDECORE) $(LIB_QT)
+ 
+ 
+ kipiplugin_jpeglossless_la_LDFLAGS = -module $(KDE_PLUGIN) $(all_libraries)
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifadjust.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifadjust.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifadjust.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifadjust.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-18
+  * Description : EXIF adjustments settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -35,10 +35,13 @@
+ #include <kdialog.h>
+ #include <knuminput.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "metadatacheckbox.h"
+-#include "exiv2iface.h"
+ #include "exifadjust.h"
+ #include "exifadjust.moc"
+ 
+@@ -231,7 +234,7 @@
+ void EXIFAdjust::readMetadata(QByteArray& exifData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+     long     val=0;
+@@ -320,7 +323,7 @@
+ 
+ void EXIFAdjust::applyMetadata(QByteArray& exifData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifcaption.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifcaption.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifcaption.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifcaption.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : EXIF caption settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -37,10 +37,13 @@
+ #include <kapplication.h>
+ #include <kaboutdata.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "pluginsversion.h"
+-#include "exiv2iface.h"
+ #include "exifcaption.h"
+ #include "exifcaption.moc"
+ 
+@@ -267,7 +270,7 @@
+ void EXIFCaption::readMetadata(QByteArray& exifData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     QString data;
+ 
+@@ -329,7 +332,7 @@
+ 
+ void EXIFCaption::applyMetadata(QByteArray& exifData, QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     exiv2Iface.setIptc(iptcData);
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifdatetime.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifdatetime.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifdatetime.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifdatetime.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-18
+  * Description : EXIF date and time settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -36,9 +36,12 @@
+ #include <kaboutdata.h>
+ #include <kseparator.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "exifdatetime.h"
+ #include "exifdatetime.moc"
+ 
+@@ -258,7 +261,7 @@
+ void EXIFDateTime::readMetadata(QByteArray& exifData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+ 
+     QDateTime datetime;
+@@ -358,7 +361,7 @@
+ 
+ void EXIFDateTime::applyMetadata(QByteArray& exifData, QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     exiv2Iface.setIptc(iptcData);
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifdevice.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifdevice.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifdevice.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifdevice.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-18
+  * Description : EXIF device settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -38,10 +38,13 @@
+ #include <klineedit.h>
+ #include <kseparator.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "metadatacheckbox.h"
+-#include "exiv2iface.h"
+ #include "exifdevice.h"
+ #include "exifdevice.moc"
+ 
+@@ -463,7 +466,7 @@
+ void EXIFDevice::readMetadata(QByteArray& exifData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+     long     val=0;
+@@ -660,7 +663,7 @@
+ 
+ void EXIFDevice::applyMetadata(QByteArray& exifData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifeditdialog.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifeditdialog.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exifeditdialog.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exifeditdialog.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : a dialog to edit EXIF metadata
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -41,11 +41,14 @@
+ #include <libkipi/imagecollection.h>
+ #include <libkipi/plugin.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "kpaboutdata.h"
+ #include "pluginsversion.h"
+-#include "exiv2iface.h"
+ #include "exifcaption.h"
+ #include "exifdatetime.h"
+ #include "exiflens.h"
+@@ -251,7 +254,7 @@
+ 
+ void EXIFEditDialog::slotItemChanged()
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.load((*d->currItem).path());
+     d->exifData = exiv2Iface.getExif();
+     d->iptcData = exiv2Iface.getIptc();
+@@ -262,7 +265,7 @@
+     d->lightPage->readMetadata(d->exifData);
+     d->adjustPage->readMetadata(d->exifData);
+ 
+-    d->isReadOnly = KIPIPlugins::Exiv2Iface::isReadOnly((*d->currItem).path()); 
++    d->isReadOnly = KExiv2Iface::KExiv2::isReadOnly((*d->currItem).path()); 
+     d->page_caption->setEnabled(!d->isReadOnly);
+     d->page_datetime->setEnabled(!d->isReadOnly);
+     d->page_lens->setEnabled(!d->isReadOnly);
+@@ -304,7 +307,7 @@
+         d->devicePage->applyMetadata(d->exifData);
+         d->lightPage->applyMetadata(d->exifData);
+         d->adjustPage->applyMetadata(d->exifData);
+-        KIPIPlugins::Exiv2Iface exiv2Iface;
++        KExiv2Iface::KExiv2 exiv2Iface;
+         exiv2Iface.load((*d->currItem).path());
+         exiv2Iface.setExif(d->exifData);
+         exiv2Iface.setIptc(d->iptcData);
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exiflens.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exiflens.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exiflens.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exiflens.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-18
+  * Description : EXIF lens settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -35,10 +35,13 @@
+ #include <kdialog.h>
+ #include <knuminput.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "metadatacheckbox.h"
+-#include "exiv2iface.h"
+ #include "exiflens.h"
+ #include "exiflens.moc"
+ 
+@@ -258,7 +261,7 @@
+ void EXIFLens::readMetadata(QByteArray& exifData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+     long     val=0;
+@@ -362,7 +365,7 @@
+ 
+ void EXIFLens::applyMetadata(QByteArray& exifData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exiflight.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/exiflight.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/exiflight.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/exiflight.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-18
+  * Description : EXIF light settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -36,10 +36,13 @@
+ #include <kdialog.h>
+ #include <knuminput.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "metadatacheckbox.h"
+-#include "exiv2iface.h"
+ #include "exiflight.h"
+ #include "exiflight.moc"
+ 
+@@ -247,7 +250,7 @@
+ void EXIFLight::readMetadata(QByteArray& exifData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+     long     val=0;
+@@ -323,7 +326,7 @@
+ 
+ void EXIFLight::applyMetadata(QByteArray& exifData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     long int num=1, den=1;
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptccaption.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptccaption.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptccaption.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptccaption.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : IPTC caption settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -38,9 +38,12 @@
+ #include <kaboutdata.h>
+ #include <kseparator.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "iptccaption.h"
+ #include "iptccaption.moc"
+ 
+@@ -248,7 +251,7 @@
+ void IPTCCaption::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QString data;
+ 
+@@ -300,7 +303,7 @@
+ 
+ void IPTCCaption::applyMetadata(QByteArray& exifData, QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     exiv2Iface.setIptc(iptcData);
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptccategories.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptccategories.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptccategories.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptccategories.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-15
+  * Description : IPTC categories settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -34,9 +34,12 @@
+ #include <klistbox.h>
+ #include <klineedit.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "iptccategories.h"
+ #include "iptccategories.moc"
+ 
+@@ -236,7 +239,7 @@
+ void IPTCCategories::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QString data;
+ 
+@@ -270,7 +273,7 @@
+ void IPTCCategories::applyMetadata(QByteArray& iptcData)
+ {
+     QStringList newCategories;    
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+ 
+     if (d->categoryCheck->isChecked())
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptccredits.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptccredits.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptccredits.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptccredits.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : IPTC credits settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -34,9 +34,12 @@
+ #include <kdialog.h>
+ #include <klineedit.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "iptccredits.h"
+ #include "iptccredits.moc"
+ 
+@@ -230,7 +233,7 @@
+ void IPTCCredits::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QString data;
+ 
+@@ -299,7 +302,7 @@
+ 
+ void IPTCCredits::applyMetadata(QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+ 
+     if (d->copyrightCheck->isChecked())
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcdatetime.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcdatetime.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcdatetime.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcdatetime.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : IPTC date and time settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -37,9 +37,12 @@
+ #include <kaboutdata.h>
+ #include <kseparator.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "iptcdatetime.h"
+ #include "iptcdatetime.moc"
+ 
+@@ -299,7 +302,7 @@
+ void IPTCDateTime::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+ 
+     QDate date;
+@@ -429,7 +432,7 @@
+ 
+ void IPTCDateTime::applyMetadata(QByteArray& exifData, QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setExif(exifData);
+     exiv2Iface.setIptc(iptcData);
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptceditdialog.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptceditdialog.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptceditdialog.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptceditdialog.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : a dialog to edit IPTC metadata
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -41,11 +41,14 @@
+ #include <libkipi/imagecollection.h>
+ #include <libkipi/plugin.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "kpaboutdata.h"
+ #include "pluginsversion.h"
+-#include "exiv2iface.h"
+ #include "iptccaption.h"
+ #include "iptccredits.h"
+ #include "iptcstatus.h"
+@@ -271,7 +274,7 @@
+ 
+ void IPTCEditDialog::slotItemChanged()
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.load((*d->currItem).path());
+     d->exifData = exiv2Iface.getExif();
+     d->iptcData = exiv2Iface.getIptc();
+@@ -284,7 +287,7 @@
+     d->statusPage->readMetadata(d->iptcData);
+     d->originPage->readMetadata(d->iptcData);
+ 
+-    d->isReadOnly = KIPIPlugins::Exiv2Iface::isReadOnly((*d->currItem).path()); 
++    d->isReadOnly = KExiv2Iface::KExiv2::isReadOnly((*d->currItem).path()); 
+     d->page_caption->setEnabled(!d->isReadOnly);
+     d->page_datetime->setEnabled(!d->isReadOnly);
+     d->page_subjects->setEnabled(!d->isReadOnly);
+@@ -330,7 +333,7 @@
+         d->creditsPage->applyMetadata(d->iptcData);
+         d->statusPage->applyMetadata(d->iptcData);
+         d->originPage->applyMetadata(d->iptcData);
+-        KIPIPlugins::Exiv2Iface exiv2Iface;
++        KExiv2Iface::KExiv2 exiv2Iface;
+         exiv2Iface.load((*d->currItem).path());
+         exiv2Iface.setExif(d->exifData);
+         exiv2Iface.setIptc(d->iptcData);
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptckeywords.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptckeywords.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptckeywords.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptckeywords.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-15
+  * Description : IPTC keywords settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -34,9 +34,12 @@
+ #include <klistbox.h>
+ #include <klineedit.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "iptckeywords.h"
+ #include "iptckeywords.moc"
+ 
+@@ -194,7 +197,7 @@
+ void IPTCKeywords::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     d->oldKeywords = exiv2Iface.getImageKeywords();
+ 
+@@ -215,7 +218,7 @@
+ 
+ void IPTCKeywords::applyMetadata(QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QStringList newKeywords;    
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcorigin.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcorigin.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcorigin.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcorigin.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-13
+  * Description : IPTC origin settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -34,10 +34,13 @@
+ #include <kdialog.h>
+ #include <klineedit.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "metadatacheckbox.h"
+-#include "exiv2iface.h"
+ #include "iptcorigin.h"
+ #include "iptcorigin.moc"
+ 
+@@ -524,7 +527,7 @@
+ void IPTCOrigin::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QString data;
+ 
+@@ -635,7 +638,7 @@
+ 
+ void IPTCOrigin::applyMetadata(QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+ 
+     if (d->objectNameCheck->isChecked())
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcstatus.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcstatus.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcstatus.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcstatus.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-12
+  * Description : IPTC status settings page.
+  * 
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -34,11 +34,14 @@
+ #include <kapplication.h>
+ #include <kaboutdata.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "metadatacheckbox.h"
+ #include "pluginsversion.h"
+-#include "exiv2iface.h"
+ #include "iptcstatus.h"
+ #include "iptcstatus.moc"
+ 
+@@ -291,7 +294,7 @@
+ void IPTCStatus::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QString data;
+     int     val;
+@@ -408,7 +411,7 @@
+ 
+ void IPTCStatus::applyMetadata(QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+ 
+     if (d->statusCheck->isChecked())
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcsubjects.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcsubjects.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/iptcsubjects.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/iptcsubjects.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -34,9 +34,12 @@
+ #include <klistbox.h>
+ #include <klineedit.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "iptcsubjects.h"
+ #include "iptcsubjects.moc"
+ 
+@@ -194,7 +197,7 @@
+ void IPTCSubjects::readMetadata(QByteArray& iptcData)
+ {
+     blockSignals(true);
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     d->oldSubjects = exiv2Iface.getImageSubjects();
+ 
+@@ -215,7 +218,7 @@
+ 
+ void IPTCSubjects::applyMetadata(QByteArray& iptcData)
+ {
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     exiv2Iface.setIptc(iptcData);
+     QStringList newSubjects;    
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/Makefile.am kipi-plugins-0.1.3/kipi-plugins/metadataedit/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,12 +1,11 @@
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKEXIV2_CFLAGS) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_metadataedit.la
+ 
+-kipiplugin_metadataedit_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_metadataedit_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP) 
+ 
+ # Srcs for the plugin
+ kipiplugin_metadataedit_la_SOURCES = plugin_metadataedit.cpp metadatacheckbox.cpp \
+@@ -19,7 +18,7 @@
+ 				     commenteditdialog.cpp commentremovedialog.cpp 
+ 
+ # Libs needed by the plugin
+-kipiplugin_metadataedit_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
++kipiplugin_metadataedit_la_LIBADD = $(LIBKEXIV2_LIBS) \
+ 	       -lkipiplugins $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ # LD flags for the plugin
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/plugin_metadataedit.cpp kipi-plugins-0.1.3/kipi-plugins/metadataedit/plugin_metadataedit.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/metadataedit/plugin_metadataedit.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/metadataedit/plugin_metadataedit.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2006-10-11
+  * Description : a plugin to edit pictures metadata
+  *
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -36,9 +36,12 @@
+ 
+ #include <libkipi/imagecollection.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+-#include "exiv2iface.h"
+ #include "exifeditdialog.h"
+ #include "iptceditdialog.h"
+ #include "commenteditdialog.h"
+@@ -186,10 +189,10 @@
+         KURL url = *it;
+         bool ret = false;
+ 
+-        if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++        if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+             ret &= exiv2Iface.clearExif();
+             ret &= exiv2Iface.save(url.path());
+@@ -229,7 +232,7 @@
+     if( importEXIFFile.isEmpty() )
+        return;
+     
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     if (!exiv2Iface.load(importEXIFFile.path()))
+     {
+         KMessageBox::error(kapp->activeWindow(), 
+@@ -266,10 +269,10 @@
+         KURL url = *it;
+         bool ret = false;
+ 
+-        if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++        if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+             ret &= exiv2Iface.setExif(exifData);
+             ret &= exiv2Iface.save(url.path());
+@@ -332,10 +335,10 @@
+         KURL url = *it;
+         bool ret = false;
+ 
+-        if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++        if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+             ret &= exiv2Iface.clearIptc();
+             ret &= exiv2Iface.save(url.path());
+@@ -375,7 +378,7 @@
+     if( importIPTCFile.isEmpty() )
+        return;
+     
+-    KIPIPlugins::Exiv2Iface exiv2Iface;
++    KExiv2Iface::KExiv2 exiv2Iface;
+     if (!exiv2Iface.load(importIPTCFile.path()))
+     {
+         KMessageBox::error(kapp->activeWindow(), 
+@@ -412,10 +415,10 @@
+         KURL url = *it;
+         bool ret = false;
+ 
+-        if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++        if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+             ret &= exiv2Iface.setIptc(iptcData);
+             ret &= exiv2Iface.save(url.path());
+@@ -467,10 +470,10 @@
+         KIPI::ImageInfo info = m_interface->info(url);
+         info.setDescription(dlg.getComments());
+ 
+-        if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++        if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+ 
+             if (dlg.syncEXIFCommentIsChecked())
+@@ -534,10 +537,10 @@
+             info.setDescription(QString::null);
+         }
+ 
+-        if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++        if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+         {
+             ret = true;
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             ret &= exiv2Iface.load(url.path());
+ 
+             if (dlg.removeEXIFCommentIsChecked())
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/rawconverter/dcrawiface.cpp kipi-plugins-0.1.3/kipi-plugins/rawconverter/dcrawiface.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/rawconverter/dcrawiface.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/rawconverter/dcrawiface.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -4,7 +4,7 @@
+  * Date   : 2006-12-09
+  * Description : dcraw interface (tested with dcraw 8.x releases)
+  *
+- * Copyright 2006 by Gilles Caulier and Marcel Wiesweg
++ * Copyright 2006-2007 by Gilles Caulier and Marcel Wiesweg
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -58,11 +58,14 @@
+ #include <kprocess.h>
+ #include <kstandarddirs.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "pluginsversion.h"
+ #include "rawfiles.h"
+-#include "exiv2iface.h"
+ #include "dcrawbinary.h"
+ #include "dcrawiface.h"
+ #include "dcrawiface.moc"
+@@ -492,7 +495,7 @@
+             fclose(f);
+ 
+             // Metadata restoration and update.
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             exiv2Iface.load(filePath);
+             exiv2Iface.setImageProgramId(QString("Kipi Raw Converter"), QString(kipiplugins_version));
+             exiv2Iface.setImageDimensions(QSize(d->width, d->height));
+@@ -547,7 +550,7 @@
+             png_set_text(png_ptr, info_ptr, &(text), 1);
+ 
+             // Metadata restoration and update.
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             exiv2Iface.load(filePath);
+             exiv2Iface.setImageProgramId(QString("Kipi Raw Converter"), QString(kipiplugins_version));
+             exiv2Iface.setImageDimensions(QSize(d->width, d->height));
+@@ -624,7 +627,7 @@
+ 
+ 
+             // Metadata restoration and update.
+-            KIPIPlugins::Exiv2Iface exiv2Iface;
++            KExiv2Iface::KExiv2 exiv2Iface;
+             exiv2Iface.load(filePath);
+             exiv2Iface.setImageProgramId(QString("Kipi Raw Converter"), QString(kipiplugins_version));
+             exiv2Iface.setImageDimensions(QSize(d->width, d->height));
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/rawconverter/dcrawiface.h kipi-plugins-0.1.3/kipi-plugins/rawconverter/dcrawiface.h
+--- kipi-plugins-0.1.3.orig/kipi-plugins/rawconverter/dcrawiface.h	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/rawconverter/dcrawiface.h	2007-05-21 12:08:37.000000000 +0400
+@@ -4,7 +4,7 @@
+  * Date   : 2006-12-09
+  * Description : dcraw interface (tested with dcraw 8.x releases)
+  *
+- * Copyright 2006 by Gilles Caulier and Marcel Wiesweg
++ * Copyright 2006-2007 by Gilles Caulier and Marcel Wiesweg
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/rawconverter/Makefile.am kipi-plugins-0.1.3/kipi-plugins/rawconverter/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/rawconverter/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/rawconverter/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -5,23 +5,21 @@
+ METASOURCES = AUTO
+ SUBDIRS = profiles
+ 
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(LIBKEXIV2_CFLAGS) $(all_includes)
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_rawconverter.la
+ 
+-kipiplugin_rawconverter_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_rawconverter_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP) 
+ 
+ # Srcs for the plugin
+ kipiplugin_rawconverter_la_SOURCES = plugin_rawconverter.cpp dcrawiface.cpp savesettingswidget.cpp \
+-	                                 batchdialog.cpp actionthread.cpp dcrawsettingswidget.cpp \
+-	                                 singledialog.cpp previewwidget.cpp iccjpeg.c dcrawbinary.cpp 
++	                             batchdialog.cpp actionthread.cpp dcrawsettingswidget.cpp \
++	                             singledialog.cpp previewwidget.cpp iccjpeg.c dcrawbinary.cpp 
+ 
+ # Libs needed by the plugin
+-kipiplugin_rawconverter_la_LIBADD = -ljpeg -lpng \
+-				     $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
+-				     $(LIB_TIFF) $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
++kipiplugin_rawconverter_la_LIBADD = -ljpeg -lpng $(LIBKEXIV2_LIBS) \
++	                            $(LIB_TIFF) $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ # LD flags for the plugin
+ kipiplugin_rawconverter_la_LDFLAGS = $(KIPI_PLUGINS_COMMON_LDFLAGS) -module $(KDE_PLUGIN) $(all_libraries) -lkipiplugins
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/Makefile.am kipi-plugins-0.1.3/kipi-plugins/sendimages/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/sendimages/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,23 +1,22 @@
+-INCLUDES = -I$(top_srcdir)/kipi-plugins/common/exiv2iface \
+-           $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(LIBKEXIV2_CFLAGS) $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_sendimages.la
+-kipiplugin_sendimages_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP)
++kipiplugin_sendimages_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP)
+ 
+ # Srcs for the plugin
+ kipiplugin_sendimages_la_SOURCES = plugin_sendimages.cpp sendimagesdialog.cpp \
+                                    listimageserrordialog.cpp sendimages.cpp 
+ 
+ # Libs needed by the plugin
+-kipiplugin_sendimages_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
+-                                  $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
++kipiplugin_sendimages_la_LIBADD = $(LIBKEXIV2_LIBS) $(LIBKIPI_LIBS) $(LIB_KIO) \
++	                          $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ # LD flags for the plugin
+ kipiplugin_sendimages_la_LDFLAGS = $(KIPI_PLUGINS_COMMON_LDFLAGS) \
+-                                   -module $(KDE_PLUGIN) $(all_libraries) -lkipiplugins
++	                           -module $(KDE_PLUGIN) $(all_libraries) -lkipiplugins
+ 
+ # Install the desktop file needed to detect the plugin
+ kde_services_DATA = kipiplugin_sendimages.desktop
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/sendimages.cpp kipi-plugins-0.1.3/kipi-plugins/sendimages/sendimages.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/sendimages.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/sendimages/sendimages.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2004-02-25
+  * Description : a kipi plugin to e-mailing images
+  * 
+- * Copyright 2004-2005 by Gilles Caulier
++ * Copyright 2004-2007 by Gilles Caulier
+  * Copyright 2006 by Tom Albers
+  *
+  * This program is free software; you can redistribute it
+@@ -50,11 +50,14 @@
+ #include <knuminput.h>
+ #include <kurlrequester.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local include files
+ 
+ #include "sendimagesdialog.h"
+ #include "listimageserrordialog.h"
+-#include "exiv2iface.h"
+ #include "actions.h"
+ #include "pluginsversion.h"
+ #include "sendimages.h"
+@@ -187,7 +190,7 @@
+                     m_imageFormat.upper() == "JPEG")
+                 {
+                     QString targetFile = m_tmp + imageNameFormat;
+-                    KIPIPlugins::Exiv2Iface exiv2Iface;
++                    KExiv2Iface::KExiv2 exiv2Iface;
+ 
+                     if (exiv2Iface.load(imageName))
+                     {
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/sendimages.cpp.orig kipi-plugins-0.1.3/kipi-plugins/sendimages/sendimages.cpp.orig
+--- kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/sendimages.cpp.orig	1970-01-01 03:00:00.000000000 +0300
++++ kipi-plugins-0.1.3/kipi-plugins/sendimages/sendimages.cpp.orig	2007-05-21 12:08:37.000000000 +0400
+@@ -0,0 +1,851 @@
++/* ============================================================
++ * Authors: Gilles Caulier <caulier dot gilles at free.fr>
++ * Date   : 2004-02-25
++ * Description : a kipi plugin to e-mailing images
++ * 
++ * Copyright 2004-2007 by Gilles Caulier
++ * Copyright 2006 by Tom Albers
++ *
++ * This program is free software; you can redistribute it
++ * and/or modify it under the terms of the GNU General
++ * Public License as published by the Free Software Foundation;
++ * either version 2, or (at your option)
++ * any later version.
++ * 
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ * 
++ * ============================================================ */
++
++// Include files for Qt
++
++#include <qfileinfo.h>
++#include <qdir.h>
++#include <qimage.h>
++#include <qprogressdialog.h>
++#include <qcombobox.h>
++#include <qcheckbox.h>
++#include <qtimer.h>
++#include <qurl.h>
++#include <qdeepcopy.h>
++
++// Include files for KDE
++
++#include <klocale.h>
++#include <kinstance.h>
++#include <kconfig.h>
++#include <kapplication.h>
++#include <kimageeffect.h>
++#include <kprogress.h>
++#include <kmessagebox.h>
++#include <kstandarddirs.h>
++#include <kio/job.h>
++#include <kio/jobclasses.h>
++#include <kio/netaccess.h>
++#include <kio/global.h>
++#include <kprocess.h>
++#include <kimageio.h>
++#include <knuminput.h>
++#include <kurlrequester.h>
++
++// LibKExiv2 includes. 
++
++#include <libkexiv2/libkexiv2.h>
++
++// Local include files
++
++#include "sendimagesdialog.h"
++#include "listimageserrordialog.h"
++#include "actions.h"
++#include "pluginsversion.h"
++#include "sendimages.h"
++#include "sendimages.moc"
++
++namespace KIPISendimagesPlugin
++{
++
++SendImages::SendImages(KIPI::Interface* interface, const QString &tmpFolder,
++                       const KIPI::ImageCollection& imagesCollection, QObject *parent)
++          : QObject(parent), QThread()
++{
++    m_invokedBefore=false;
++    m_interface    = interface;
++    m_tmp          = tmpFolder;
++    m_collection   = imagesCollection;
++    m_parent       = parent;
++    m_mozillaTimer = new QTimer(this);
++    KImageIO::registerFormats();
++
++    connect(m_mozillaTimer, SIGNAL(timeout()),
++            this, SLOT(slotMozillaTimeout()));
++}
++
++SendImages::~SendImages()
++{
++    delete m_sendImagesDialog;
++    wait();
++}
++
++void SendImages::showDialog()
++{
++    m_sendImagesDialog = new KIPISendimagesPlugin::SendImagesDialog(kapp->activeWindow(),
++                             m_interface, m_collection);
++    m_sendImagesDialog->show();
++
++    connect(m_sendImagesDialog, SIGNAL(signalAccepted()),
++            m_parent, SLOT(slotAcceptedConfigDlg()));
++}
++
++/** Execute the no threadable operations before the real thread.*/
++void SendImages::prepare(void)
++{
++    m_filesSendList.clear();
++    m_imagesResizedWithError.clear();
++    m_imagesPackage.clear();
++    m_images           = m_sendImagesDialog->m_images2send;
++    m_changeProp       = m_sendImagesDialog->m_changeImagesProp->isChecked();
++    m_imageFormat      = m_sendImagesDialog->m_imagesFormat->currentText();
++    m_sizeFactor       = getSize( m_sendImagesDialog->m_imagesResize->currentItem() );
++    m_imageCompression = m_sendImagesDialog->m_imageCompression->value();
++    
++    // Base64-encoding needs a lot of space.
++    m_attachmentlimit = m_sendImagesDialog->m_attachmentlimit->value()*770000-2000; 
++}
++
++/** List of threaded operations.*/
++void SendImages::run()
++{
++    KIPISendimagesPlugin::EventData *d;
++
++    d = new KIPISendimagesPlugin::EventData;
++    d->action   = KIPISendimagesPlugin::Initialize;
++    d->starting = true;
++    d->success  = false;
++    d->total    = m_images.count();
++    QApplication::postEvent(m_parent, new QCustomEvent(QEvent::User, d));
++
++    for( KURL::List::Iterator it = m_images.begin() ; it != m_images.end() ; ++it )
++    {
++        QString imageName = (*it).path();
++        QString ItemName  = imageName.section( '/', -1 );
++
++        d = new KIPISendimagesPlugin::EventData;
++        d->action    = KIPISendimagesPlugin::ResizeImages;
++        d->fileName  = (*it).fileName();
++        d->albumName = (*it).directory().section('/', -1);
++        d->starting  = true;
++        d->success   = false;
++        QApplication::postEvent(m_parent, new QCustomEvent(QEvent::User, d));
++
++        // Prepare resized target images to send.
++
++        QString imageFileName = ItemName;
++        //QString TempFileName             = (*it).directory().section('/', -1);
++        QString TempFileName=(*it).path().section('/', -2,-1);
++        qDebug("TempFileName: %s",TempFileName.ascii());
++        TempFileName.replace(QChar('/'), "-");
++        
++        // Thunderbird does not like (). Replace them, BUG:131343
++        TempFileName.replace(QChar('('), "_").replace(QChar(')'), "_");
++        // and these characters are better eliminated, too ;-)
++        TempFileName.replace(QChar(','), "_").replace(QChar(' '), "_");
++        TempFileName.replace(QChar(';'), "_").replace(QChar('%'), "_");
++
++        if ( m_changeProp == true )
++        {
++            // Prepare resizing images.
++
++            QString imageNameFormat = TempFileName.replace(QChar('.'), "_") +
++                                      extension(m_imageFormat);
++   
++            qDebug( "Resizing %s-> '%s %s ' (%s ; %d )",imageName.ascii(),
++            m_tmp.ascii(),imageNameFormat.ascii(),m_imageFormat.ascii(),m_sizeFactor);
++ 
++            // Return value for resizeImageProcess-function, in order to avoid reopening 
++            // the image for exiv-writing.
++            QSize newsize;
++    
++            if ( resizeImageProcess( imageName, m_tmp, m_imageFormat, imageNameFormat,
++                                        m_sizeFactor, m_imageCompression, newsize) == false )
++            {
++                // Resized images failed...
++    
++                d = new KIPISendimagesPlugin::EventData;
++                d->action    = KIPISendimagesPlugin::ResizeImages;
++                d->fileName  = (*it).fileName();
++                d->albumName = (*it).directory().section('/', -1);
++                d->starting  = false;
++                d->success   = false;
++                QApplication::postEvent(m_parent, new QCustomEvent(QEvent::User, d));
++    
++                m_imagesResizedWithError.append(*it);
++            } 
++            else          // Resized images OK...
++            {
++                // Only try to write Exif if both src and destination are JPEG files.
++    
++                if (QString(QImageIO::imageFormat(imageName)).upper() == "JPEG" && 
++                    m_imageFormat.upper() == "JPEG")
++                {
++                    QString targetFile = m_tmp + imageNameFormat;
++                    KExiv2Iface::KExiv2 exiv2Iface;
++
++                    if (exiv2Iface.load(imageName))
++                    {
++                        exiv2Iface.setImageProgramId(QString("Kipi SendImages"), QString(kipiplugins_version));
++                        exiv2Iface.setImageDimensions(newsize);
++                        exiv2Iface.save(targetFile);
++                    }
++                } 
++                else 
++                {
++                    qWarning( "createThumb::No Exif Data Found") ;
++		}
++	
++                d = new KIPISendimagesPlugin::EventData;
++                d->action    = KIPISendimagesPlugin::ResizeImages;
++                d->fileName  = (*it).fileName();
++                d->albumName = (*it).directory().section('/', -1);
++                d->starting  = false;
++                d->success   = true;
++                QApplication::postEvent(m_parent, new QCustomEvent(QEvent::User, d));
++    
++                m_filesSendList.append(m_tmp + imageNameFormat);
++                m_imagesPackage.append(*it);
++                m_imagesPackage.append(m_tmp + imageNameFormat);
++            }
++        }
++        else     // No resize images operations...
++        {
++            if ( copyImageProcess( imageName, m_tmp, TempFileName) == true )
++            {
++                d = new KIPISendimagesPlugin::EventData;
++                d->action    = KIPISendimagesPlugin::Progress;
++                d->fileName  = (*it).fileName();
++                d->albumName = (*it).directory().section('/', -1);
++                d->starting  = true;
++                d->success   = false;
++                QApplication::postEvent(m_parent, new QCustomEvent(QEvent::User, d));
++
++                m_filesSendList.append(m_tmp + TempFileName);
++                m_imagesPackage.append(*it);
++                m_imagesPackage.append(m_tmp + TempFileName);
++            }
++        }
++    }
++
++    d = new KIPISendimagesPlugin::EventData;
++    d->action   = KIPISendimagesPlugin::Progress;
++    d->starting = false;
++    d->success = true;
++    QApplication::postEvent(m_parent, new QCustomEvent(QEvent::User, d));
++}
++
++/** Create a text file with the images comments.*/
++void SendImages::makeCommentsFile(void)
++{
++    if ( m_sendImagesDialog->m_addComments->isChecked() == true )
++    {
++        QString ImageCommentsText;
++
++        KURL::List::Iterator it = m_imagesPackage.begin();
++        bool anyCommentsPresent = false;
++       
++        while( it != m_imagesPackage.end() )
++        {
++            KIPI::ImageInfo info = m_interface->info( *it );
++
++            QString commentItem = info.description();
++            ++it;
++            QString targetFile = (*it).filename();
++
++            if ( commentItem.isEmpty() )
++                commentItem = i18n("no comment");
++            else
++                anyCommentsPresent = true;
++
++            ImageCommentsText += i18n("Comments for image \"%1\": %2\n")
++                                      .arg(targetFile).arg(commentItem);
++            
++            //Tags from the database
++            if (m_interface->hasFeature(KIPI::HostSupportsTags))
++            {
++                QMap <QString, QVariant> attribs=info.attributes();
++                if (attribs["tags"].asStringList().count() > 0)
++                {
++                    ImageCommentsText += i18n("Tags: %2\n").arg(attribs["tags"].asStringList().join(","));
++                    anyCommentsPresent = true;
++                }
++            }
++        
++            ImageCommentsText += "\n";
++            ++it;
++        }
++
++        if ( anyCommentsPresent )
++        {
++            QFile commentsFile( m_tmp + i18n("comments.txt") );
++            QTextStream stream( &commentsFile );
++            stream.setEncoding( QTextStream::UnicodeUTF8 );
++            commentsFile.open( IO_WriteOnly );
++            stream << ImageCommentsText << "\n";
++            commentsFile.close();
++            m_filesSendList.append( m_tmp + i18n("comments.txt") );
++        }
++    }
++}
++
++bool SendImages::showErrors()
++{
++    if ( m_imagesResizedWithError.isEmpty() == false )
++    {
++        listImagesErrorDialog *ErrorImagesDialog = new listImagesErrorDialog(kapp->activeWindow(),
++                                                       i18n("Error during resize images process."),
++                                                       i18n("Cannot resize the following image files:"),
++                                                       i18n("Do you want them to be added as attachments "
++                                                            "(without resizing)?"),
++                                                       m_imagesResizedWithError);
++
++        int ValRet = ErrorImagesDialog->exec();
++
++        switch (ValRet)
++        {
++            case KDialogBase::Yes :        // Added source image files instead resized images...
++        
++                for ( KURL::List::Iterator it = m_imagesResizedWithError.begin();
++                      it != m_imagesResizedWithError.end(); ++it )
++                {
++                    m_filesSendList.append (*it);
++                    m_imagesPackage.append(*it);
++                    m_imagesPackage.append(*it);
++                }
++                break;
++        
++            case KDialogBase::No :         // Do nothing...
++                break;
++        
++            case KDialogBase::Cancel :     // Stop process...
++                removeTmpFiles();
++                return false;
++                break;
++        }
++    }
++
++    return true;
++}
++
++/** Returns a list of Filenames, whose sum filesize is smaller than the quota
++    by Michael Hoechstetter.*/
++KURL::List SendImages::divideEmails(void)
++{
++    unsigned long mylistsize=0;
++    
++    KURL::List sendnow;
++    KURL::List filesSendList;
++
++    for ( KURL::List::Iterator it = m_filesSendList.begin() ; it != m_filesSendList.end() ; ++it )
++    {
++        qDebug("m_attachmentlimit: %lu ", m_attachmentlimit);
++        QString imageName = (*it).path();	
++        qDebug("Imagename: %s", imageName.ascii());
++        QFile file(imageName);
++        qDebug("filesize: %lu", file.size());
++
++        if ((mylistsize + file.size()) <= m_attachmentlimit)
++        {
++            mylistsize+=file.size();
++            sendnow.append(*it);
++            qDebug("mylistsize: %lu; attachmentlimit: %lu",mylistsize, m_attachmentlimit);
++        }
++        else 
++        {
++            qDebug("file %s is out of %lu",imageName.ascii(),m_attachmentlimit);
++            filesSendList.append(*it);
++        }
++	}
++	m_filesSendList=filesSendList;
++  
++	return sendnow;
++}
++
++/** Invoke mailer agent.*/
++bool SendImages::invokeMailAgent(void)
++{
++    bool agentInvoked = false;
++    
++    // default agent call
++    // FIXME: seems to fail for thunderbird. Fix kdelibs or maybe work around it.
++    
++    
++    KURL::List filelist;
++    kurllistdeepcopy(m_filesSendList_copy,m_filesSendList);
++
++
++    qDebug("invokeMailagent1: Anzahl der Elemente in m_filesSendList=%d, und in der m_filesSendList_copy=%d)",m_filesSendList.size(),m_filesSendList_copy.size());
++
++    while (!((filelist=divideEmails()).empty()))
++    {
++
++        qDebug("invokeMailagent2: Anzahl der Elemente in m_filesSendList=%d, und in der m_filesSendList_copy=%d)",m_filesSendList.size(),m_filesSendList_copy.size());
++        qDebug("number of elements in filelist %d",filelist.size());
++        qDebug("number of elements in m_filelist %d", m_filesSendList.size());	
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Default" )
++        {
++            KApplication::kApplication()->invokeMailer(
++                QString::null,                     // Destination address.
++                QString::null,                     // Carbon Copy address.
++                QString::null,                     // Blind Carbon Copy address
++                QString::null,                     // Message Subject.
++                QString::null,                     // Message Body.
++                QString::null,                     // Message Body File.
++                filelist.toStringList());          // Images attachments (+ comments).
++            agentInvoked = true;
++        }
++        
++        // KMail mail agent call.
++    
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "KMail" )
++        {
++            m_mailAgentProc = new KProcess;
++            *m_mailAgentProc << "kmail";
++    
++        for ( KURL::List::Iterator it = filelist.begin() ; it != filelist.end() ; ++it )
++        {
++            *m_mailAgentProc << "--attach";
++            *m_mailAgentProc << QFile::encodeName((*it).path());
++        }
++    
++        if ( m_mailAgentProc->start() == false )
++            KMessageBox::error(kapp->activeWindow(), 
++                               i18n("Cannot start '%1' program;\nplease "
++                                    "check your installation.")
++                                    .arg(m_sendImagesDialog->m_mailAgentName->currentText()));
++        else
++            agentInvoked = true;
++        }
++    
++        // Sylpheed mail agent call.
++    
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Sylpheed" ||
++             m_sendImagesDialog->m_mailAgentName->currentText() == "Sylpheed-Claws" )
++        {
++            m_mailAgentProc = new KProcess;
++
++            if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Sylpheed")
++                *m_mailAgentProc << "sylpheed";
++            else
++                *m_mailAgentProc << "sylpheed-claws";
++        
++            *m_mailAgentProc << "--compose" << "--attach";
++        
++            for ( KURL::List::Iterator it = filelist.begin() ; it != filelist.end() ; ++it )
++                *m_mailAgentProc << QFile::encodeName((*it).path());
++        
++            if ( m_mailAgentProc->start() == false )
++                KMessageBox::error(kapp->activeWindow(), 
++                                   i18n("Cannot start '%1' program;\nplease "
++                                        "check your installation.")
++                                        .arg(m_sendImagesDialog->m_mailAgentName->currentText()));
++            else
++                agentInvoked = true;
++        }
++    
++        // Balsa mail agent call.
++    
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Balsa" )
++        {
++            m_mailAgentProc = new KProcess;
++            *m_mailAgentProc << "balsa" << "-m" << "mailto:";
++        
++            for ( KURL::List::Iterator it = filelist.begin() ; it != filelist.end() ; ++it )
++            {
++                *m_mailAgentProc << "-a";
++                *m_mailAgentProc << QFile::encodeName((*it).path());
++            }
++        
++            if ( m_mailAgentProc->start() == false )
++                KMessageBox::error(kapp->activeWindow(), 
++                                   i18n("Cannot start '%1' program;\nplease "
++                                        "check your installation.")
++                                        .arg(m_sendImagesDialog->m_mailAgentName->currentText()));
++            else
++                agentInvoked = true;
++        }
++    
++        // Evolution mail agent call.
++
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Evolution" )    
++        {
++            m_mailAgentProc = new KProcess;
++            *m_mailAgentProc << "evolution";
++        
++            QString Temp = "mailto:?subject=";
++        
++            for ( KURL::List::Iterator it = filelist.begin() ; it != filelist.end() ; ++it )
++            {
++                Temp.append("&attach=");
++                Temp.append( QFile::encodeName((*it).path()) );
++            }
++        
++            *m_mailAgentProc << Temp;
++        
++            if ( m_mailAgentProc->start() == false )
++                KMessageBox::error(kapp->activeWindow(), 
++                                   i18n("Cannot start '%1' program;\nplease "
++                                        "check your installation.")
++                                        .arg(m_sendImagesDialog->m_mailAgentName->currentText()));
++            else
++                agentInvoked = true;
++        }
++    
++        // Mozilla | Netscape | Thunderbird mail agent call.
++    
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Mozilla" ||
++             m_sendImagesDialog->m_mailAgentName->currentText() == "Netscape" ||
++             m_sendImagesDialog->m_mailAgentName->currentText() == "Thunderbird" ||
++             m_sendImagesDialog->m_mailAgentName->currentText() == "GmailAgent")
++        {
++            m_mailAgentProc = new KProcess;
++        
++            m_thunderbirdUrl = m_sendImagesDialog->m_ThunderbirdBinPath->url();
++        
++            if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Mozilla" )
++            {
++                *m_mailAgentProc << "mozilla" << "-remote";
++            }
++            else if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Thunderbird" )
++            {
++                *m_mailAgentProc << m_thunderbirdUrl << "-remote";
++                qDebug("URL: %s", m_thunderbirdUrl.ascii());
++            }
++            else if ( m_sendImagesDialog->m_mailAgentName->currentText() == "GmailAgent" )
++            {
++                *m_mailAgentProc << "gmailagent" << "-remote";
++            }
++            else
++            {
++                *m_mailAgentProc << "netscape" << "-remote";
++            }
++        
++            QString Temp = " xfeDoCommand(composeMessage,attachment='";
++        
++            for ( KURL::List::Iterator it = filelist.begin() ; it != filelist.end() ; ++it )
++            {
++                Temp.append( "file://" );
++                QString toencode=(*it).encodedPathAndQuery();
++                Temp.append(toencode);
++                Temp.append( "," );
++            }
++    
++            Temp.remove(Temp.length()-1,1);
++            Temp.append("')");
++            
++            *m_mailAgentProc << Temp;
++       
++            if (!m_invokedBefore)
++            {
++                connect(m_mailAgentProc, SIGNAL(processExited(KProcess *)),
++                    this, SLOT(slotMozillaExited(KProcess*)));
++        
++                connect(m_mailAgentProc, SIGNAL(receivedStderr(KProcess *, char*, int)),
++                    this, SLOT(slotMozillaReadStderr(KProcess*, char*, int)));
++            }
++            qDebug ("%s", Temp.ascii());
++        
++            if ( m_mailAgentProc->start(KProcess::NotifyOnExit , KProcess::All) == false )
++                KMessageBox::error(kapp->activeWindow(), 
++                                   i18n("Cannot start '%1' program;\nplease "
++                                        "check your installation.")
++                                        .arg(m_sendImagesDialog->m_mailAgentName->currentText()));
++            else
++            {   agentInvoked = true;
++                m_invokedBefore=true;
++            }
++            
++        }
++    }
++    
++    return agentInvoked;
++}
++
++void SendImages::removeTmpFiles(void)
++{
++    if (DeleteDir(m_tmp) == false)
++       KMessageBox::error(kapp->activeWindow(), i18n("Cannot remove temporary folder %1.").arg(m_tmp));
++}
++
++bool SendImages::DeleteDir(QString dirname)
++{
++    if ( !dirname.isEmpty() )
++    {
++        QDir dir;
++    
++        if (dir.exists ( dirname ) == true)
++        {
++            if (deldir(dirname) == false)
++                return false;
++    
++            if (dir.rmdir( dirname ) == false )
++                return false;
++        }
++        else
++            return false;
++    }
++    else
++        return false;
++
++    return true;
++}
++
++bool SendImages::deldir(QString dirname)
++{
++    QDir *dir = new QDir(dirname);
++    dir->setFilter ( QDir::Dirs | QDir::Files | QDir::NoSymLinks );
++
++    const QFileInfoList* fileinfolist = dir->entryInfoList();
++    QFileInfoListIterator it(*fileinfolist);
++    QFileInfo* fi;
++
++    while( (fi = it.current() ) )
++    {
++        if(fi->fileName() == "." || fi->fileName() == ".." )
++        {
++            ++it;
++            continue;
++        }
++    
++        if( fi->isDir() )
++        {
++            if (deldir( fi->absFilePath() ) == false)
++                return false;
++            if (dir->rmdir( fi->absFilePath() ) == false)
++                return false;
++        }
++        else
++            if( fi->isFile() )
++                if (dir->remove(fi->absFilePath() ) == false)
++                    return false;
++    
++        kapp->processEvents();
++        ++it;
++    }
++
++    return true;
++}
++
++QString SendImages::extension(const QString& imageFileFormat)
++{
++    if (imageFileFormat == "PNG")
++        return ".png";
++
++    if (imageFileFormat == "JPEG")
++        return ".jpg";
++
++    Q_ASSERT(false);
++    return "";
++}
++
++int SendImages::getSize ( int choice )
++{
++    switch (choice)
++    {
++       case 0:
++          return (320);
++          break;
++       case 1:
++          return (640);
++          break;
++       case 2:
++          return (800);
++          break;
++       case 3:
++          return (1024);
++          break;
++       case 4:
++          return (1280);
++          break;
++       case 5:
++    	  return (1600);
++	      break;
++       default:
++          return (800); // Default value...
++          break;
++    }
++}
++
++// This function can be replaced with Qt4 QFile.copy
++bool SendImages::copyImageProcess(const QString &oldFilePath, const QString &DestPath,
++                                  const QString &ImageName)
++{
++        
++        
++        //same file, no need to copy
++        qDebug("DestPath: %s",(DestPath).ascii());
++        qDebug("ImageName: %s",(ImageName).ascii());
++        if(oldFilePath.compare(DestPath+ImageName) == 0)
++                return true;
++
++        //load both files
++        QFile oldFile(oldFilePath);
++        QFile newFile(DestPath+ImageName);
++        bool openOld = oldFile.open( IO_ReadOnly );
++        bool openNew = newFile.open( IO_WriteOnly );
++
++        //if either file fails to open bail
++        if(!openOld || !openNew) { return false; }
++
++        //copy contents
++        uint BUFFER_SIZE = 16000;
++        char* buffer = new char[BUFFER_SIZE];
++        while(!oldFile.atEnd())
++        {
++                Q_LONG len = oldFile.readBlock( buffer, BUFFER_SIZE );
++                newFile.writeBlock( buffer, len );
++        }
++
++        //deallocate buffer
++        delete[] buffer;
++        buffer = NULL;
++        return true;
++}
++
++bool SendImages::resizeImageProcess(const QString &SourcePath, const QString &DestPath,
++                                    const QString &ImageFormat, const QString &ImageName,
++                                    int SizeFactor, int ImageCompression, QSize &newsize)
++{
++    QImage img;
++
++    if ( img.load(SourcePath) == true )
++    {
++        int w = img.width();
++        int h = img.height();
++
++        if( w > SizeFactor || h > SizeFactor )
++        {
++            if( w > h )
++            {
++                h = (int)( (double)( h * SizeFactor ) / w );
++    
++                if ( h == 0 ) h = 1;
++    
++                w = SizeFactor;
++                Q_ASSERT( h <= SizeFactor );
++            }
++            else
++            {
++                w = (int)( (double)( w * SizeFactor ) / h );
++    
++                if ( w == 0 ) w = 1;
++    
++                h = SizeFactor;
++                Q_ASSERT( w <= SizeFactor );
++            }
++    
++            const QImage scaleImg(img.smoothScale( w, h ));
++    
++            if ( scaleImg.width() != w || scaleImg.height() != h )
++            {
++                qDebug ("Resizing failed. Aborting.");
++                return false;
++            }
++    
++            img = scaleImg;
++            newsize=img.size();
++        }
++    
++        if ( !img.save(DestPath + ImageName, ImageFormat.latin1(), ImageCompression) )
++        {
++            qDebug("Saving failed with specific compression value. Aborting.");
++            return false;
++        }
++    
++        return true;
++    }
++
++    return false;
++}
++
++void SendImages::slotMozillaExited(KProcess*)
++{
++    qDebug("slotMozillaExited");
++    ///Here would be the right point to clear the sendlist in order to avoid infinite resendings!!
++    m_filesSendList.clear();
++    ///Also disconnect SLOT
++    m_mailAgentProc->disconnect(SIGNAL(processExited(KProcess *)),
++                    this, SLOT(slotMozillaExited(KProcess*)));
++
++    qDebug("Anzahl der Elemente in m_filesSendList=%d, und in der m_filesSendList_copy=%d)",m_filesSendList.size(),m_filesSendList_copy.size()); 
++   if ( m_mozillaStdErr.find("No running window found") != -1 )   // No remote Mozilla | Netscape |
++    {                                                              // Thunderbird env. loaded !
++        m_mailAgentProc2 = new KProcess;                           // Init a new env.
++
++        if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Mozilla" )
++           *m_mailAgentProc2 << "mozilla" << "-mail";
++        else if ( m_sendImagesDialog->m_mailAgentName->currentText() == "Thunderbird" )
++           *m_mailAgentProc2 << m_thunderbirdUrl << "-mail";  ///for new versions of thunderbird, we don't need it anymore
++           //*m_mailAgentProc2 << m_thunderbirdUrl;
++        else
++           *m_mailAgentProc2 << "netscape" << "-mail";
++
++        // Start an instance of mozilla mail agent before a remote call.
++
++        if ( m_mailAgentProc2->start() == false )
++        {
++            KMessageBox::error(kapp->activeWindow(), 
++                               i18n("Cannot start '%1' program;\nplease "
++                                    "check your installation.")
++                                    .arg(m_sendImagesDialog->m_mailAgentName->currentText()));
++        }
++        else
++        {
++            // Mozilla | Netscape | Thunderbird mail agent started correctly
++            // -> start a remote mail agent with multiple attachments after the env. is loaded !
++    
++            m_mozillaTimer->start(5000, true);
++            return;
++        }
++    }
++}
++
++void SendImages::slotMozillaTimeout(void)
++{
++        
++    m_mozillaTimer->disconnect(SIGNAL(timeout()), this, SLOT(slotMozillaTimeout()));
++
++    qDebug("slotMozillaTimeout: Anzahl der Elemente in m_filesSendList=%d, und in der m_filesSendList_copy=%d)",m_filesSendList.size(),m_filesSendList_copy.size());
++    kurllistdeepcopy(m_filesSendList,m_filesSendList_copy);
++    invokeMailAgent();
++
++}
++
++void SendImages::slotMozillaReadStderr(KProcess*, char *buffer, int buflen)
++{
++    m_mozillaStdErr = QString::fromLocal8Bit(buffer, buflen);
++}
++
++bool SendImages::kurllistdeepcopy(KURL::List &Destination, KURL::List Source)
++{
++    Destination.clear();
++    qDebug("kurllistdeepcopy");
++    for ( KURL::List::Iterator it = Source.begin() ; it != Source.end() ; ++it )
++    {
++        //QString Tempstring;
++        QString Getstring=(*it).path();
++        QString Tempstring=Getstring.copy();
++        Destination.append(Tempstring);
++        qDebug("%s",Tempstring.ascii());
++    }
++    
++    /*qDebug("deepcopytest");
++    Source.clear();
++    for ( KURL::List::Iterator it = Destination.begin() ; it != Destination.end() ; ++it )
++    {
++        qDebug("%s",(*it).path().ascii());
++    }*/
++    qDebug("kurllistdeepcopyend\n");
++    return true;
++}
++}  // NameSpace KIPISendimagesPlugin
++
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/sendimages.h kipi-plugins-0.1.3/kipi-plugins/sendimages/sendimages.h
+--- kipi-plugins-0.1.3.orig/kipi-plugins/sendimages/sendimages.h	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/sendimages/sendimages.h	2007-05-21 12:08:37.000000000 +0400
+@@ -3,7 +3,7 @@
+  * Date   : 2004-02-25
+  * Description : a kipi plugin to e-mailing images
+  * 
+- * Copyright 2004-2005 by Gilles Caulier
++ * Copyright 2004-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/sync/gallerytalker.cpp kipi-plugins-0.1.3/kipi-plugins/sync/gallerytalker.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/sync/gallerytalker.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/sync/gallerytalker.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -34,10 +34,13 @@
+ #include <cstring>
+ #include <cstdio>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/libkexiv2.h>
++
+ #include "galleryitem.h"
+ #include "gallerympform.h"
+ #include "gallerytalker.h"
+-#include "exiv2iface.h"
+ 
+ namespace KIPIGalleryExportPlugin
+ {
+@@ -219,7 +222,7 @@
+ 
+             if ("JPEG" == QString(QImageIO::imageFormat(photoPath)).upper())
+             {
+-              KIPIPlugins::Exiv2Iface exiv2;
++              KExiv2Library::LibKExiv2 exiv2;
+               if (exiv2.load(photoPath))
+               {
+                 exiv2.save(path);
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/sync/Makefile.am kipi-plugins-0.1.3/kipi-plugins/sync/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/sync/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/sync/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,18 +1,17 @@
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKEXIV2_CFLAGS) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_sync.la
+ 
+-kipiplugin_sync_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_sync_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP) 
+ 
+ kipiplugin_sync_la_SOURCES = plugin_sync.cpp \
+ 		sink.cpp sinkfactory.cpp sinks.cpp \
+ 		sinklist.cpp sinklistbase.ui
+ 
+-kipiplugin_sync_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
++kipiplugin_sync_la_LIBADD = $(LIBKEXIV2_LIBS) \
+ 	-lkwalletclient $(LIB_KHTML) $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ kipiplugin_sync_la_LDFLAGS = $(KIPI_PLUGINS_COMMON_LDFLAGS) -module $(KDE_PLUGIN) $(all_libraries) -lkipiplugins
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/timeadjust/Makefile.am kipi-plugins-0.1.3/kipi-plugins/timeadjust/Makefile.am
+--- kipi-plugins-0.1.3.orig/kipi-plugins/timeadjust/Makefile.am	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/timeadjust/Makefile.am	2007-05-21 12:08:37.000000000 +0400
+@@ -1,19 +1,17 @@
+-INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKIPI_CFLAGS) $(all_includes)
++INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) $(LIBKEXIV2_CFLAGS) $(LIBKIPI_CFLAGS) $(all_includes)
+ 
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+ kde_module_LTLIBRARIES = kipiplugin_timeadjust.la
+ 
+-kipiplugin_timeadjust_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) \
+-	$(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la 
++kipiplugin_timeadjust_la_DEPENDENCIES = $(LIBKIPI_LIBS_DEP) $(LIBKEXIV2_LIBS_DEP) 
+ 
+ # Srcs for the plugin
+ kipiplugin_timeadjust_la_SOURCES = plugin_timeadjust.cpp timeadjustdialog.cpp
+ 
+ # Libs needed by the plugin
+-kipiplugin_timeadjust_la_LIBADD = $(top_builddir)/kipi-plugins/common/exiv2iface/libexiv2iface.la \
+-	       $(LIBKIPI_LIBS) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
++kipiplugin_timeadjust_la_LIBADD = $(LIBKEXIV2_LIBS) $(LIBKIPI_LIBS) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+ 
+ # LD flags for the plugin
+ kipiplugin_timeadjust_la_LDFLAGS = $(KIPI_PLUGINS_COMMON_LDFLAGS) -module $(KDE_PLUGIN) $(all_libraries) -lkipiplugins
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/timeadjust/timeadjustdialog.cpp kipi-plugins-0.1.3/kipi-plugins/timeadjust/timeadjustdialog.cpp
+--- kipi-plugins-0.1.3.orig/kipi-plugins/timeadjust/timeadjustdialog.cpp	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/timeadjust/timeadjustdialog.cpp	2007-05-21 12:08:37.000000000 +0400
+@@ -5,7 +5,7 @@
+  * Description : a plugin to set time stamp of picture files.
+  *
+  * Copyright 2003-2005 by Jesper Pedersen
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+@@ -54,11 +54,14 @@
+ #include <libkipi/interface.h>
+ #include <libkipi/imageinfo.h>
+ 
++// LibKExiv2 includes. 
++
++#include <libkexiv2/kexiv2.h>
++
+ // Local includes.
+ 
+ #include "kpaboutdata.h"
+ #include "pluginsversion.h"
+-#include "exiv2iface.h"
+ #include "timeadjustdialog.h"
+ #include "timeadjustdialog.moc"
+ 
+@@ -435,10 +438,10 @@
+         {
+             if (d->syncEXIFDateCheck->isChecked() || d->syncIPTCDateCheck->isChecked())
+             {
+-                if (!KIPIPlugins::Exiv2Iface::isReadOnly(url.path()))
++                if (!KExiv2Iface::KExiv2::isReadOnly(url.path()))
+                 {
+                     ret = true;
+-                    KIPIPlugins::Exiv2Iface exiv2Iface;
++                    KExiv2Iface::KExiv2 exiv2Iface;
+     
+                     ret &= exiv2Iface.load(url.path());
+                     if (ret)
+@@ -494,7 +497,7 @@
+     }
+     else if (d->exif->isChecked())
+     {
+-        KIPIPlugins::Exiv2Iface exiv2Iface;
++        KExiv2Iface::KExiv2 exiv2Iface;
+         if ( !exiv2Iface.load(url.path()) )
+             return time;
+ 
+diff -Naur kipi-plugins-0.1.3.orig/kipi-plugins/timeadjust/timeadjustdialog.h kipi-plugins-0.1.3/kipi-plugins/timeadjust/timeadjustdialog.h
+--- kipi-plugins-0.1.3.orig/kipi-plugins/timeadjust/timeadjustdialog.h	2007-05-21 12:08:27.000000000 +0400
++++ kipi-plugins-0.1.3/kipi-plugins/timeadjust/timeadjustdialog.h	2007-05-21 12:08:37.000000000 +0400
+@@ -5,7 +5,7 @@
+  * Description : a plugin to set time stamp of picture files.
+  *
+  * Copyright 2003-2005 by Jesper Pedersen
+- * Copyright 2006 by Gilles Caulier
++ * Copyright 2006-2007 by Gilles Caulier
+  *
+  * This program is free software; you can redistribute it
+  * and/or modify it under the terms of the GNU General
+diff -Naur kipi-plugins-0.1.3.orig/NEWS kipi-plugins-0.1.3/NEWS
+--- kipi-plugins-0.1.3.orig/NEWS	2007-05-21 12:08:28.000000000 +0400
++++ kipi-plugins-0.1.3/NEWS	2007-05-21 12:08:37.000000000 +0400
+@@ -6,6 +6,9 @@
+ 
+ Kipi-plugins NEW FEATURES
+ 
++General        : Moved Exiv2Iface class to a new shared library named libkexiv2 used by 
++                 kipi-plugins and digiKam.
++
+ Kipi-plugins BUG FIXING from B.K.O (http://bugs.kde.org):
+ 
+ 001 ==> 137582 : GalleryExport : Add preliminary support for Gallery 2.2 security features
+@@ -16,7 +19,7 @@
+ 
+ Kipi-plugins NEW FEATURES
+ 
+-Slideshow     : Show image comments (configurable)
++Slideshow      : Show image comments (configurable)
+ 
+ 
+ Kipi-plugins BUG FIXING from B.K.O (http://bugs.kde.org):
+diff -Naur kipi-plugins-0.1.3.orig/NEWS.orig kipi-plugins-0.1.3/NEWS.orig
+--- kipi-plugins-0.1.3.orig/NEWS.orig	1970-01-01 03:00:00.000000000 +0300
++++ kipi-plugins-0.1.3/NEWS.orig	2007-01-25 00:04:18.000000000 +0300
+@@ -0,0 +1,214 @@
++Note: for details and info about current version, see ChangeLog.
++
++
++v 0.1.3 
++----------------------------------------------------------------------------
++
++Kipi-plugins NEW FEATURES
++
++Kipi-plugins BUG FIXING from B.K.O (http://bugs.kde.org):
++
++001 ==> 137582 : GalleryExport : Add preliminary support for Gallery 2.2 security features
++002 ==> 132220 : SendImages    : Solved problems with filenames and commandline with thunderbird and mozilla
++
++v 0.1.3 rc1
++----------------------------------------------------------------------------
++
++Kipi-plugins NEW FEATURES
++
++Slideshow     : Show image comments (configurable)
++
++
++Kipi-plugins BUG FIXING from B.K.O (http://bugs.kde.org):
++
++001 ==> 138410 : General     : kipi-plugins-0.1.3-beta1 requires latest libkipi/libkexif.
++002 ==> 106133 : Slideshow   : Show image comments in slideshow mode.
++003 ==> 124057 : SendImages  : Problems sending jpeg-pictures from digiKam using the "send picture"-feature.
++004 ==> 108147 : Slideshow   : Interval below 1 second.
++
++
++v 0.1.3 beta1
++----------------------------------------------------------------------------
++
++Kipi-plugins NEW FEATURES
++
++New Plugin    : MetadataEdit : New kipi plugin to edit EXIF and IPTC pictures metadata (by Gilles Caulier).
++New Plugin    : GPSSync      : New kipi plugin to sync photo metadata with a GPS device (by Gilles Caulier).
++New Plugin    : IpodExport   : New kipi plugin to export pictures to an ipod device (by Seb Ruiz).
++
++GalleryExport : Support for multiple galleries.
++
++HTMLExport    : New "s0" theme from Petr Vanek
++
++JPEGLossLess  : Removed libmagic++ depency.
++JPEGLossLess  : Removed libkexif depency. Using Exiv2 instead.
++
++RAWConverter  : New core to be compatible with recent dcraw release. A lot 
++                of RAW decoding settings have been added.
++RAWConverter  : Embedding ouput color space in target image (JPEG/PNG/TIFF).
++RAWConverter  : Metadata preservation in target image during Raw conversion (JPEG/PNG).
++RAWConverter  : Removing external dcraw depency. Now plugin include a full supported version of 
++                dcraw program in core.
++RAWConverter  : updated dcraw.c implementation to version 8.41.
++
++SendImages    : Added image size limit x mail (Michael Hï¿½hstetter)
++ 
++TimeAdjust    : Removed libkexif depency. Using Exiv2 instead.
++TimeAdjust    : New option to customize Date and Time to a specific timestamp.
++TimeAdjust    : New options sync EXIF/IPTC Creation Date with timestamp.
++
++
++Kipi-plugins BUG FIXING from B.K.O (http://bugs.kde.org):
++
++001 ==> 127101 : BatchProcess : expand sequence number start value in batch rename images.
++002 ==>  94494 : GalleryExport: support for multiple galleries.
++003 ==> 128394 : RAWCanverter : convertion of RAW files fails with dcraw 8.21
++004 ==> 132659 : FlickrExport : "Missing signature" - Flickr API changed and upload of 
++                                images is no longer possible.
++005 ==> 107905 : RAWConverter : copy exif data from raw to converted images.
++006 ==> 119537 : JPEGLossLess : Exif width and height are not corrected after lossless rotation.
++007 ==> 91545  : Slideshow    : plugin does nothing if an album only contains subalbums, but no 
++                                images directly or is empty.
++008 ==> 134749 : GPS Sync     : altitude shown is wrong.
++009 ==> 134298 : SimpleViewer : save settings / keep settings missing!
++010 ==> 134747 : GPS Sync     : not optimal correlation.
++011 ==> 135157 : GPS Sync     : warning about changes not applied always appear even when already applied.
++012 ==> 135237 : GPS Sync     : filenames with multiple periods in them do not show up in the file 
++                                listing (incorrect extension identification).
++013 ==> 135484 : GPS Sync     : thumbnail generation for multible images can cause severe overload.
++014 ==> 135353 : GPS Sync     : the name of the plugin is missleading.
++015 ==> 136257 : MetadataEdit : Editing the EXIF-data overwrites all the data for selected files.
++016 ==> 128341 : HTMLExport   : kipi html export should not resize images if "resize target images" 
++                                is not checked.
++017 ==> 127476 : PrintWizzard : Printing as very very slow (added a workaround running kjobviewer)
++018 ==> 136941 : BatchProcess : graphical picture ordering and renaming.
++019 ==> 136855 : MetadataEdit : Editing metadata on a few selected imagefiles and clicking forward 
++                                or apply crashes digiKam.
++020 ==> 135408 : BatchProcess : Window does not fit on screen.
++021 ==> 117399 : BatchProcess : Usability of Target folder.
++022 ==> 137921 : MetadataEdit : wrong country code in IPTC.
++
++
++v 0.1.2                                                           2006-07-08
++----------------------------------------------------------------------------
++
++Compilation fix release.
++
++v 0.1.1                                                           2006-06-26
++----------------------------------------------------------------------------
++
++Compilation fix release.
++
++v 0.1.0                                                           2006-06-22
++----------------------------------------------------------------------------
++
++Kipi-plugins NEW FEATURES
++
++GalleryExport : added Gallery 2 version support.
++ImageGallery  : removed is removed and replaced by HTML export plugin.
++
++Kipi-plugins BUGFIX from B.K.O (http://bugs.kde.org):
++
++001 ==> 117105 : Calendar      : Calendar tool should use internationalized country setting.
++002 ==> 101656 : CDArchive     : Use irretating filenames foo.jpeg.jpeg for images.
++003 ==> 128125 : CDArchive     : Album title from digikam are not converted into html entities.
++004 ==> 123978 : GalleryExport : "Invalid response" error when exporting images to Gallery 1.5.2.
++005 ==> 96352  : GalleryExport : Can not login into Gallery2.
++006 ==> 123141 : GalleryExport : Gallery Export - manage several cookies.
++007 ==> 88887  : HTMLExport    : No Exif-rotation in HTML export.
++008 ==> 115474 : HTMLExport    : Web export creats duplicate extensions.
++009 ==> 120739 : HTMLExport    : Wrong thumbnail for album.
++010 ==> 89068  : HTMLExport    : Improvement for the HTML export plugin.
++011 ==> 90943  : HTMLEXPORT    : Add CSS functionality.
++012 ==> 95116  : HTMLEXPORT    : Incremental local export or other easy web publishing method.
++013 ==> 96009  : HTMLEXPORT    : Unnecessary deletion of directories in "export HTML" .
++014 ==> 96363  : HTMLEXPORT    : Option to save full/different sized images in gallery.
++015 ==> 107380 : HTMLEXPORT    : Split long html pages by number of images per page.
++016 ==> 108696 : HTMLEXPORT    : Themable html export.
++017 ==> 109708 : HTMLEXPORT    : Number of thumbnails per row should be in the same tab as size of thumbnail.
++018 ==> 109709 : HTMLEXPORT    : Create target dir when it does not exist.
++019 ==> 109710 : HTMLEXPORT    : Make clicking on image going to the next image.
++020 ==> 111136 : HTMLEXPORT    : export to non-local directory (fish://) does not work.
++021 ==> 111509 : HTMLEXPORT    : Subalbums not supported by HTML export.
++022 ==> 111880 : HTMLEXPORT    : New option to add original image (as link in thumbnail).
++023 ==> 112107 : HTMLEXPORT    : Avi files in html exports.
++024 ==> 113355 : HTMLEXPORT    : Add auto-forwarding (slide show) to HTML-Export.
++025 ==> 127219 : MPEGEncoder   : Creation of mpeg slide show fails.
++026 ==> 127532 : MPEGEncoder   : 'image2mpg' wrong directory error.
++027 ==> 101455 : RAWConverter  : Make it possible to enter numbers with 2 digit precision in RAW converter dialog.
++
++v0.1.0-rc2                                                        2006-05-06
++----------------------------------------------------------------------------
++
++Kipi-plugins NEW FEATURES
++
++New Plugin     : HTMLExport   : new images gallery export supporting XHTML and CSS (by Aurelien Gateau).
++New Plugin     : SimpleViewer : new plugin to export to flash web page (by Joern Ahrens)
++
++Kipi-plugins BUGFIX from B.K.O (http://bugs.kde.org):
++
++001 ==> 120242 : HTMLExport   : Bad sorting of images in html export.
++002 ==> 112025 : HTMLExport   : digiKam overwrites albums previously exported to HTML.
++003 ==> 106152 : HTMLExport   : Creates faulty links when choosing picture filenames derived from the EXIF info.
++004 ==> 119933 : HTMLExport   : Image gallery has problems with german umlauts in file-/directorynames.
++005 ==> 99418  : HTMLExport   : Help menu in progress dialog refers to batch process plugin about instead of image gallery plugins.
++006 ==> 103449 : HTMLExport   : Title and name of album are together and album with accents do not function.
++007 ==> 110596 : HTMLExport   : Apos entitity is not correct for HTML (it is XML entity).
++008 ==> 116605 : HTMLExport   : Crash when exporting to an existing dir an choosing no to overwrite.
++009 ==> 123499 : JPEGLossLess : RAW images are rotated wrong.
++010 ==> 99157  : KameraKlient : Some kameraklient source files miss copyright and license info.
++011 ==> 98286  : PrintWizard  : Print Wizard has wrong default paper size.
++012 ==> 101495 : PrintWizard  : Raster effect on printout.
++013 ==> 117670 : PrintWizard  : Printing is awfully slow.
++014 ==> 108945 : BatchProcess : Batch image filtering overwrite mode: always overwrite doesn't work.
++015 ==> 117397 : BatchProcess : batchplugins 'start' not disabled when target folder is not writeable orwith no image in list.
++016 ==> 114512 : BatchProcess : The checkbox "Remove original" is left disabled after a preview.
++017 ==> 120868 : Calendar     : Failed to create PDF callendar
++018 ==> 118936 : calendar     : kipi calendar wizard should default to next year.
++019 ==> 109739 : MpegEncoder  : yuvscaler error in digikam.
++020 ==> 114514 : MpegEncoder  : Do not delete the temporary folder "~/tmp/kde-user/kipi-mpegencoderplugin-PID/" after 
++                                each encoding process.
++021 ==> 114515 : MpegEncoder  : Verify the existence of the MPEG output file path and the existence of the audio input file 
++                                before launching the encoding process.
++022 ==> 114519 : AcquireImage : Crash when stopping a Final Scan.
++023 ==> 103763 : RAWConverter : Rawconverter (single) should fill a default file name into the save as dialog.
++024 ==> 118407 : RAWConverter : dcrawprocess.cpp does not compileon Solaris
++025 ==> 119562 : SendImages   : A patch that adds support for the Sylpheed-Claws mua.
++026 ==> 119867 : Slideshow    : Different icon types used by slideshow for for backwards/forwards.
++
++v0.1.0-rc1                                                        2005-09-04
++----------------------------------------------------------------------------
++
++Kipi-plugins NEW FEATURES
++
++New Plugin     : FlickrExport : new plugin to upload pictures on Flickr web service.
++
++SendImages     : support for Thunderbird and GmailAgent.
++Calendar       : The weekdays are now localized.
++HTMLExport     : Export multiple tags to an html-page.
++JPEGLossLess   : Rotate or flip your images lossless, while preserving  the timestamp.
++RAWConverter   : Supports of dcraw>=6.x.
++
++Kipi-plugins BUGFIX from B.K.O (http://bugs.kde.org):
++
++001 ==> 108227 : SendImages   : Thunderbird will not open when sending emails in digiKam.
++002 ==> 98269  : CDArchive    : Status bar in archive to CD/DVD goes to 100% while creating thumbs.
++003 ==> 89394  : CDArchive    : Make CDArchivingplugin work when ImageCollection!=Folder.
++004 ==> 91651  : CDArchive    : Running cdarchiving plugin from kimdaba sends all images to the cd, not just the selected images.
++005 ==> 100877 : CDArchive    : kimdaba can not create temporary directories for CD-archive.
++006 ==> 110391 : BatchProcess : Batch rename removes tags and comments.
++007 ==> 110659 : BatchProcess : Batch rename function makes copies instead of renaming.
++008 ==> 110698 : TimeAdjust   : Adjust time and date does not work.
++009 ==> 110575 : BatchProcess : Crash when renaming images.
++010 ==> 99895  : BatchProcess : Rename ordered by modification date sorts by name.
++011 ==> 104032 : BatchProcess : Renaming images takes a lot memory and time.
++012 ==> 105727 : BatchProcess : digiKam adds to the first picture an additional "_1".
++013 ==> 110508 : BatchProcess : Umlauts-conversion error when renaming images.
++014 ==> 104511 : BatchProcess : Why a destination path for a rename action ? "No valid URL" when blank.
++015 ==> 102219 : HTMLExport   : When you export html from a tags gallery links are incorrect.
++016 ==> 98199  : HTMLExport   : Missing whitespace in german html-export (headline).
++017 ==> 108537 : JPEGLossLess : Plugin change file date/time. Could this be made optional since I want to keep 
++                                the original file date/time.
++018 ==> 101110 : MPEGEncoder  : Cannot create MPEG from photos using transitions.
++019 ==> 103282 : Slideshow    : No exif-rotation.
++
+diff -Naur kipi-plugins-0.1.3.orig/README kipi-plugins-0.1.3/README
+--- kipi-plugins-0.1.3.orig/README	2007-05-21 12:08:28.000000000 +0400
++++ kipi-plugins-0.1.3/README	2007-05-21 12:08:37.000000000 +0400
+@@ -1,11 +1,11 @@
+-KIPIPLUGINS
++KIPIPLUGINS PROJECT
+ 
+ Note: Most of the LibKipiPlugins have previously been Digikamplugins.
+ 
+       kipi-plugins is based in part on the work of the Independent
+       JPEG Group.
+ 
+-Please visit this url: http://www.kipi-plugins.org/
++Please visit this url: http://www.kipi-plugins.org
+ 
+ Summary:
+ ----------------------------------------------------------------------
+@@ -110,7 +110,7 @@
+ imlib2      >= 1.1.0
+ libgphoto2  >= 2.x
+ libtiff     >= 3.5.x
+-libexiv2    >= 0.12
++libkexiv2   >= 0.1
+ libxslt     >= 1.1
+ libgpod     > 0.4.0 (fails to build with 0.4.0)
+ 
