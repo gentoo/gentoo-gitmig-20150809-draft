@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-xkb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-xkb/ChangeLog,v 1.5 2007/03/12 16:38:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-xkb/ChangeLog,v 1.6 2007/05/26 14:11:11 opfer Exp $
+
+  26 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  gkrellm-xkb-1.05.ebuild:
+  amd64 stable, bug 176144
 
   12 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-xkb-1.05.ebuild:
   Updated to use new gkrellm-plugin eclass
