@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.2.ebuild,v 1.4 2007/04/27 21:52:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.2.ebuild,v 1.5 2007/05/26 14:43:10 opfer Exp $
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -25,7 +25,7 @@ SRC_URI="x86? (
 
 SLOT="3"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 
 IUSE="cairo gnome seamonkey opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6

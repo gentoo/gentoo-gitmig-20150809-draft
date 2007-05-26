@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.64 2007/05/25 22:04:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.65 2007/05/26 14:43:10 opfer Exp $
+
+  26 May 2007; Christian Faulhammer <opfer@gentoo.org> swt-3.2.2.ebuild:
+  x86 stable, bug 179815
 
 *swt-3.2.2-r1 (25 May 2007)
 
