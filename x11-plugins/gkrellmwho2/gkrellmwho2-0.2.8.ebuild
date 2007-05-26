@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho2/gkrellmwho2-0.2.8.ebuild,v 1.8 2007/04/26 19:16:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho2/gkrellmwho2-0.2.8.ebuild,v 1.9 2007/05/26 13:49:43 opfer Exp $
 
 inherit gkrellm-plugin
 
@@ -12,5 +12,5 @@ HOMEPAGE="http://shisha.spb.ru/projects/GkrellmWHO2"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
