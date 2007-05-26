@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.07.ebuild,v 1.5 2007/02/11 20:32:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.07.ebuild,v 1.6 2007/05/26 13:40:07 drac Exp $
 
-inherit toolchain-funcs python
+inherit eutils toolchain-funcs python
 
 DESCRIPTION="a Rhythmbox-like PyGTK+ client for Music Player Daemon"
 HOMEPAGE="http://sourceforge.net/projects/pympd"
