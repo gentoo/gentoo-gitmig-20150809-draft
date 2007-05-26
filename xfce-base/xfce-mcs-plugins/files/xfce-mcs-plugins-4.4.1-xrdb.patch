@@ -1,0 +1,350 @@
+diff -ur xfce-mcs-plugins-4.4.1.orig/plugins/ui_plugin/ui_plugin.c xfce-mcs-plugins-4.4.1/plugins/ui_plugin/ui_plugin.c
+--- xfce-mcs-plugins-4.4.1.orig/plugins/ui_plugin/ui_plugin.c	2007-02-17 10:38:20.000000000 +0200
++++ xfce-mcs-plugins-4.4.1/plugins/ui_plugin/ui_plugin.c	2007-05-26 10:28:34.000000000 +0300
+@@ -16,6 +16,7 @@
+         gnome theme-switcher capplet - (c) Jonathan Blandford <jrb@gnome.org>
+         xfce4 mcs plugin   - (c) 2002      Olivier Fourdan <ofourdan@xfce.org>
+                              (c) 2004-2006 Benedikt Meurer <benny@xfce.org>
++                             (c) 2005-2007 Brian Tarircone <bjt23@cornell.edu>
+         sub-pixel icons stolen from KDE :)
+ 
+  */
+@@ -29,6 +30,10 @@
+ #include <string.h>
+ #endif
+ 
++#ifdef HAVE_STDLIB_H
++#include <stdlib.h>
++#endif
++
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4mcs/mcs-common.h>
+@@ -112,6 +117,17 @@
+     "aaaaaaaaaaaa"
+ };
+ 
++static const gchar *xft_dpi_default_entries[4] =
++{
++    N_("System Default"), "75", "96", "100",
++};
++static const gint xft_dpi_default_values[4] = 
++{
++    /* fortunately, 'Xft.dpi: 0' appears to be interpreted as
++     * 'system default' */
++    0, 75, 96, 100,
++};
++
+ #define RCDIR "mcs_settings"
+ #define OLDRCDIR "settings"
+ #define RCFILE  "gtk.xml"
+@@ -143,6 +159,7 @@
+ static gint current_xft_hinting = DEFAULT_XFT_HINTING;
+ static gchar *current_xft_hintstyle = NULL;
+ static gchar *current_xft_rgba = NULL;
++static gint current_dpi = 0;
+ 
+ static GtkTooltips *tooltips = NULL;
+ 
+@@ -167,7 +184,9 @@
+     GtkWidget *label1;
+     GtkWidget *vbox3;
+     GtkWidget *frame2;
++    GtkWidget *font_vbox;
+     GtkWidget *button3;
++    GtkWidget *dpi_combo;
+     GtkWidget *frame3;
+     GtkWidget *optionmenu1;
+     GtkWidget *frame5;
+@@ -499,6 +518,188 @@
+     }
+ }
+ 
++static void
++handle_dpi_change(Itf *itf)
++{
++    gint r;
++    
++    mcs_manager_set_int(itf->mcs_plugin->manager, "Xfce/XftDPI", CHANNEL, current_dpi);
++    mcs_manager_notify(itf->mcs_plugin->manager, CHANNEL);
++    write_options(itf->mcs_plugin);
++    apply_xft_options(itf);
++    
++    r = xfce_message_dialog(GTK_WINDOW(itf->theme_dialog), _("DPI Changed"),
++                            GTK_STOCK_DIALOG_INFO,
++                            _("DPI was changed successfully"),
++                            _("However, you may need to restart your session for the settings to take effect."),
++                            XFCE_CUSTOM_STOCK_BUTTON,
++                            _("Log Out Later"),
++                            GTK_STOCK_CLOSE, GTK_RESPONSE_CANCEL,
++                            XFCE_CUSTOM_STOCK_BUTTON, _("Log Out Now"),
++                            GTK_STOCK_QUIT, GTK_RESPONSE_ACCEPT, NULL);
++    if(GTK_RESPONSE_ACCEPT == r) {
++        GError *error = NULL;
++        
++        if(!xfce_exec("xfce4-session-logout", FALSE, FALSE, &error)) {
++            xfce_message_dialog(GTK_WINDOW(itf->theme_dialog),
++                                _("Exec Error"), GTK_STOCK_DIALOG_ERROR,
++                                _("Failed to run \"xfce4-session-logout\""),
++                                error->message,
++                                GTK_STOCK_CLOSE, GTK_RESPONSE_ACCEPT, NULL);
++            g_error_free(error);
++        }
++    }
++}
++
++static gboolean
++handle_user_entered_dpi(Itf *itf)
++{
++    GtkWidget *dlg, *topvbox, *hbox, *img, *lbl, *spin, *spacer;
++    gint resp;
++    
++    dlg = xfce_titled_dialog_new_with_buttons(_("Custom DPI"),
++                                              GTK_WINDOW(itf->theme_dialog),
++                                              GTK_DIALOG_NO_SEPARATOR
++                                              | GTK_DIALOG_DESTROY_WITH_PARENT,
++                                              GTK_STOCK_CANCEL,
++                                              GTK_RESPONSE_CANCEL,
++                                              GTK_STOCK_SAVE,
++                                              GTK_RESPONSE_ACCEPT, NULL);
++    gtk_dialog_set_default_response(GTK_DIALOG(dlg), GTK_RESPONSE_ACCEPT);
++    gtk_window_set_icon_name(GTK_WINDOW(dlg), "xfce4-ui");
++    topvbox = GTK_DIALOG(dlg)->vbox;
++    
++    hbox = gtk_hbox_new(FALSE, BORDER);
++    gtk_widget_show(hbox);
++    gtk_box_pack_start(GTK_BOX(topvbox), hbox, FALSE, FALSE, 0);
++    
++    img = gtk_image_new_from_stock(GTK_STOCK_DIALOG_INFO,
++                                   GTK_ICON_SIZE_DIALOG);
++    gtk_widget_show(img);
++    gtk_box_pack_start(GTK_BOX(hbox), img, FALSE, FALSE, 0);
++    
++    lbl = gtk_label_new(_("Enter your display's DPI below.  Numbers that are multiples of 6 usually work best.  The smaller the number, the smaller your fonts will look."));
++    gtk_label_set_line_wrap(GTK_LABEL(lbl), TRUE);
++    gtk_misc_set_alignment(GTK_MISC(lbl), 0.0, 0.5);
++    gtk_widget_show(lbl);
++    gtk_box_pack_start(GTK_BOX(hbox), lbl, TRUE, TRUE, 0);
++    
++    spacer = gtk_alignment_new(0.5, 0.5, 1.0, 1.0);
++    gtk_widget_set_size_request(spacer, -1, 12);
++    gtk_widget_show(spacer);
++    gtk_box_pack_start(GTK_BOX(topvbox), spacer, FALSE, FALSE, 0);
++    
++    hbox = gtk_hbox_new(FALSE, BORDER);
++    gtk_widget_show(hbox);
++    gtk_box_pack_start(GTK_BOX(topvbox), hbox, FALSE, FALSE, 0);
++    
++    lbl = gtk_label_new_with_mnemonic(_("Custom _DPI:"));
++    gtk_widget_show(lbl);
++    gtk_box_pack_start(GTK_BOX(hbox), lbl, FALSE, FALSE, 0);
++    
++    spin = gtk_spin_button_new_with_range(24, 264, 1);
++    if(!current_dpi) {
++        /* FIXME: get the actual current dpi */
++        gtk_spin_button_set_value(GTK_SPIN_BUTTON(spin), 100);
++    } else
++        gtk_spin_button_set_value(GTK_SPIN_BUTTON(spin), current_dpi);
++    gtk_widget_show(spin);
++    gtk_box_pack_start(GTK_BOX(hbox), spin, FALSE, FALSE, 0);
++    gtk_label_set_mnemonic_widget(GTK_LABEL(lbl), spin);
++    
++    resp = gtk_dialog_run(GTK_DIALOG(dlg));
++    
++    if(GTK_RESPONSE_ACCEPT == resp)
++        current_dpi = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(spin));
++    
++    gtk_widget_destroy(dlg);
++    
++    return (GTK_RESPONSE_ACCEPT == resp);
++}
++
++static void
++on_dpi_combo_changed(GtkComboBox *combo,
++                     gpointer user_data)
++{
++    Itf *itf = (Itf *)user_data;
++    gint selected, old_dpi = current_dpi;
++    
++    selected = gtk_combo_box_get_active(combo);
++    
++    if(selected < G_N_ELEMENTS(xft_dpi_default_values))
++        current_dpi = xft_dpi_default_values[selected];
++    else {
++        gchar *text = gtk_combo_box_get_active_text(combo);
++        if(!strcmp(text, _("Other..."))) {
++            if(handle_user_entered_dpi(itf)) {
++                gint i;
++                gboolean done = FALSE;
++                
++                /* if there's an old custom dpi, remove it from the box */
++                if(selected > G_N_ELEMENTS(xft_dpi_default_values))
++                    gtk_combo_box_remove_text(combo, selected - 1);
++                
++                /* make sure they didn't set one of our default values */
++                for(i = 1; i < G_N_ELEMENTS(xft_dpi_default_values); ++i) {
++                    if(xft_dpi_default_values[i] == current_dpi) {
++                        g_signal_handlers_block_by_func(G_OBJECT(combo),
++                                                        G_CALLBACK(on_dpi_combo_changed),
++                                                        itf);
++                        gtk_combo_box_set_active(combo, i);
++                        g_signal_handlers_unblock_by_func(G_OBJECT(combo),
++                                                          G_CALLBACK(on_dpi_combo_changed),
++                                                          itf);
++                        done = TRUE;
++                        break;
++                    }
++                }
++                
++                if(!done) {
++                    /* if we get here, we have to create a new entry */
++                    gchar *str = g_strdup_printf("%d", current_dpi);
++                    gtk_combo_box_insert_text(combo,
++                                              G_N_ELEMENTS(xft_dpi_default_values),
++                                              str);
++                    
++                    /* set the combo to the new entry, but block this func
++                     * from getting called on the change */
++                    g_signal_handlers_block_by_func(G_OBJECT(combo),
++                                                    G_CALLBACK(on_dpi_combo_changed),
++                                                    itf);
++                    gtk_combo_box_set_active(combo,
++                                             G_N_ELEMENTS(xft_dpi_default_values));
++                    g_signal_handlers_unblock_by_func(G_OBJECT(combo),
++                                                      G_CALLBACK(on_dpi_combo_changed),
++                                                      itf);
++                }
++            } else {
++                /* user canceled, so reset the last-selected item */
++                gint i;
++                
++                for(i = 0; i <= G_N_ELEMENTS(xft_dpi_default_values); ++i) {
++                    if(G_N_ELEMENTS(xft_dpi_default_values) == i
++                       || xft_dpi_default_values[i] == current_dpi)
++                    {
++                        g_signal_handlers_block_by_func(G_OBJECT(combo),
++                                                        G_CALLBACK(on_dpi_combo_changed),
++                                                        itf);
++                        gtk_combo_box_set_active(combo, i);
++                        g_signal_handlers_unblock_by_func(G_OBJECT(combo),
++                                                          G_CALLBACK(on_dpi_combo_changed),
++                                                          itf);
++                        break;
++                    }
++                }
++            }
++        } else
++            current_dpi = atoi(text);  /* we should be able to trust this */
++        g_free(text);
++    }
++    
++    if(old_dpi != current_dpi)
++        handle_dpi_change(itf);
++}
++
+ static gint sort_func(GtkTreeModel * model, GtkTreeIter * a, GtkTreeIter * b, gpointer user_data)
+ {
+     gchar *a_str = NULL;
+@@ -672,6 +873,8 @@
+     GdkPixbuf *icon;
+     GtkTreeIter iter;
+     GtkCellRenderer *cell[2];
++    GtkWidget *hbox, *lbl;
++    gint i, selected = -1;
+ 
+     dialog = g_new(Itf, 1);
+ 
+@@ -758,11 +961,50 @@
+     gtk_widget_show(dialog->vbox3);
+     gtk_box_pack_start(GTK_BOX(dialog->hbox1), dialog->vbox3, TRUE, TRUE, 0);
+ 
++    dialog->font_vbox = gtk_vbox_new(FALSE, BORDER);
++    gtk_widget_show(dialog->font_vbox);
++    
+     dialog->button3 = gtk_button_new();
+     gtk_button_set_label(GTK_BUTTON(dialog->button3), current_font);
+     gtk_widget_show(dialog->button3);
++    gtk_box_pack_start(GTK_BOX(dialog->font_vbox), dialog->button3, FALSE, FALSE, 0);
++    
++    hbox = gtk_hbox_new(FALSE, BORDER);
++    gtk_widget_show(hbox);
++    gtk_box_pack_start(GTK_BOX(dialog->font_vbox), hbox, FALSE, FALSE, 0);
++    
++    lbl = gtk_label_new_with_mnemonic(_("Font _DPI:"));
++    gtk_widget_show(lbl);
++    gtk_box_pack_start(GTK_BOX(hbox), lbl, FALSE, FALSE, 0);
++    
++    for(i = 0; i < G_N_ELEMENTS(xft_dpi_default_values); ++i) {
++        if(xft_dpi_default_values[i] == current_dpi) {
++            selected = i;
++            break;
++        }
++    }
++    
++    dialog->dpi_combo = gtk_combo_box_new_text();
++    for(i = 0; i < G_N_ELEMENTS(xft_dpi_default_entries); ++i) {
++        gtk_combo_box_append_text(GTK_COMBO_BOX(dialog->dpi_combo),
++                                  _(xft_dpi_default_entries[i]));
++        if(selected == i)
++            gtk_combo_box_set_active(GTK_COMBO_BOX(dialog->dpi_combo), selected);
++    }
++    if(-1 == selected) {
++        gchar *str = g_strdup_printf("%d", current_dpi);
++        gtk_combo_box_append_text(GTK_COMBO_BOX(dialog->dpi_combo), str);
++        gtk_combo_box_set_active(GTK_COMBO_BOX(dialog->dpi_combo),
++                                 G_N_ELEMENTS(xft_dpi_default_entries));
++        g_free(str);
++    }
++    gtk_combo_box_append_text(GTK_COMBO_BOX(dialog->dpi_combo),
++                              _("Other..."));
++    gtk_widget_show(dialog->dpi_combo);
++    gtk_box_pack_start(GTK_BOX(hbox), dialog->dpi_combo, TRUE, TRUE, 0);
++    gtk_label_set_mnemonic_widget(GTK_LABEL(lbl), dialog->dpi_combo);
+ 
+-    dialog->frame2 = xfce_create_framebox_with_content (_("Font"), dialog->button3);
++    dialog->frame2 = xfce_create_framebox_with_content (_("Font"), dialog->font_vbox);
+     gtk_widget_show(dialog->frame2);
+     gtk_box_pack_start(GTK_BOX(dialog->vbox3), dialog->frame2, TRUE, FALSE, 0);
+ 
+@@ -919,6 +1161,7 @@
+ 
+     g_signal_connect(G_OBJECT(itf->theme_dialog), "response", G_CALLBACK(cb_dialog_response), itf->mcs_plugin);
+     g_signal_connect(G_OBJECT(itf->button3), "clicked", G_CALLBACK(show_font_selection), itf);
++    g_signal_connect(G_OBJECT(itf->dpi_combo), "changed", G_CALLBACK(on_dpi_combo_changed), itf);
+     g_signal_connect(G_OBJECT(itf->optionmenu1), "changed", G_CALLBACK(on_icons_changed), itf);
+     g_signal_connect(G_OBJECT(itf->accel_checkbox), "toggled", G_CALLBACK(on_change_accel_toggled), itf);
+ 
+@@ -1036,6 +1279,12 @@
+         current_font = g_strdup(DEFAULT_FONT);
+         mcs_manager_set_string(mcs_plugin->manager, "Gtk/FontName", CHANNEL, current_font);
+     }
++    
++    setting = mcs_manager_setting_lookup(mcs_plugin->manager, "Xfce/XftDPI", CHANNEL);
++    if(setting)
++        current_dpi = setting->data.v_int;
++    else
++        mcs_manager_set_int(mcs_plugin->manager, "Xfce/XftDPI", CHANNEL, current_dpi);
+ 
+     setting = mcs_manager_setting_lookup(mcs_plugin->manager, "Gtk/ToolbarStyle", CHANNEL);
+     if(setting)
+@@ -1167,12 +1416,20 @@
+             else
+                 fprintf(fp, "Xft.hintstyle: hintnone\n");
+             fprintf(fp, "Xft.rgba: %s\n", current_xft_rgba);
++            if(current_dpi > 0)
++                fprintf(fp, "Xft.dpi: %d\n", current_dpi);
+             fclose(fp);
+ 
+             /* run xrdb to merge the new settings */
+             cmd = g_strdup_printf("xrdb -nocpp -merge \"%s\"", path);
+             g_spawn_command_line_async(cmd, NULL);
+             g_free(cmd);
++            
++            if(!current_dpi) {
++                /* filter out Xft.dpi from xrdb */
++                g_spawn_command_line_async("sh -c \"xrdb -query | grep -i -v '^Xft.dpi:' | xrdb\"",
++                                           NULL);
++            }
+         }
+         g_free(path);
+     }
