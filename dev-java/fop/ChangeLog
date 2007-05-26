@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.46 2007/05/21 21:36:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.47 2007/05/26 14:33:55 nelchael Exp $
+
+  26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> fop-0.93-r1.ebuild:
+  Add ~ppc.
 
   21 May 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.93-r1.ebuild:
   Fixed compiling on ibm-jdk-bin that this revision bump broke.
