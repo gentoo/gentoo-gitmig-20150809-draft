@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2827 2007/05/26 15:53:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2828 2007/05/26 19:48:52 tester Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1382,6 +1382,7 @@ net-im/pidgin:prediction - Enable Contact Availability Prediction plugin.
 net-im/pidgin:qq - Enable QQ protocol support.
 net-im/pidgin:silc - Enable SILC protocol support
 net-im/pidgin:xscreensaver - Enable X idle time support instead of pidgin idle time.
+net-im/pidgin:zephyr - Enable Zephyr protocol support
 net-im/psi:audacious - Enable monitoring of audio tracks that are played in (media-sound/audacious)
 net-im/psi:extras - Enables extra non official patches
 net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risk
