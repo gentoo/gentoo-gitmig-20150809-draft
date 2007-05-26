@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.ebuild,v 1.1 2007/03/17 21:25:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.1.ebuild,v 1.1 2007/05/26 23:46:06 rl03 Exp $
 
 inherit webapp eutils depend.php
 
