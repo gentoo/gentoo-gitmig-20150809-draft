@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.14 2007/01/20 10:22:17 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.15 2007/05/26 21:38:27 welp Exp $
 
 inherit virtualx multilib eutils
 
@@ -26,7 +26,7 @@ RDEPEND="!<=dev-python/gnome-python-2
 		)
 	)
 	gnome? ( >=dev-python/gnome-python-extras-2.10 )
-	libnotify? ( x11-misc/notification-daemon )
+	libnotify? ( x11-libs/libnotify )
 	srv? ( net-dns/bind-tools )"
 
 DEPEND="dev-util/intltool
