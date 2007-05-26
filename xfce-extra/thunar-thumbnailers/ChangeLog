@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/thunar-thumbnailers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.18 2007/05/24 20:33:06 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.19 2007/05/26 12:52:44 drac Exp $
+
+*thunar-thumbnailers-0.2.1 (26 May 2007)
+
+  26 May 2007; Samuli Suominen <drac@gentoo.org>
+  +thunar-thumbnailers-0.2.1.ebuild:
+  Version bump. Enable thumbnailing of raw images which have the generic
+  mimetype image/x-dcraw.
 
   24 May 2007; Lars Weiler <pylon@gentoo.org>
   thunar-thumbnailers-0.2.0.ebuild:
