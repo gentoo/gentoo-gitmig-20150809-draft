@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.1.ebuild,v 1.1 2007/05/26 23:46:06 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.1.ebuild,v 1.2 2007/05/26 23:47:08 rl03 Exp $
 
 inherit webapp eutils depend.php
 
@@ -30,7 +30,7 @@ need_php
 pkg_setup() {
 	webapp_pkg_setup
 
-	local php_flags="session"
+	local php_flags="pcre session"
 	local DIE=
 
 	use mysql && php_flags="${php_flags} mysql"
