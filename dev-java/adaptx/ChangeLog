@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.25 2007/04/26 12:17:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.26 2007/05/26 09:37:03 caster Exp $
+
+*adaptx-0.9.13_p20041105-r3 (26 May 2007)
+
+  26 May 2007; Vlastimil Babka <caster@gentoo.org>
+  +adaptx-0.9.13_p20041105-r3.ebuild:
+  Revbump to remove unused gnu-jaxp and rhino deps and change xml-commons to
+  xml-commons-external.
 
   26 Apr 2007; Vlastimil Babka <caster@gentoo.org>
   adaptx-0.9.13_p20041105-r2.ebuild:
