@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2825 2007/05/24 04:17:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2826 2007/05/26 15:49:57 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1027,7 +1027,8 @@ media-sound/shntool:wavpack - Add support for wavpack
 media-sound/slimserver:alac - Enable support for alac
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/sonata:lyrics - Support for lyrics fetching
-media-sound/sonata:tagwriting - Support audio file tags editing
+media-sound/sonata:tagwriting - Enable tagging support with taglib
+media-sound/sonata:taglib - Enable tagging support with taglib
 media-sound/transkode:amarok - Build Amarok script
 media-sound/transkode:wavpack - Add support for wavpack decoding/encoding
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
