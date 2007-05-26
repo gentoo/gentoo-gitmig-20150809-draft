@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.0.1.ebuild,v 1.3 2006/12/11 02:18:29 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.8.4.ebuild,v 1.1 2007/05/26 23:42:55 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -9,14 +9,14 @@ HOMEPAGE="http://phpldapadmin.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-need_php5
+need_php4
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use ldap pcre session xml nls
+	require_php_with_use ldap pcre session expat
 }
 
 src_unpack() {
