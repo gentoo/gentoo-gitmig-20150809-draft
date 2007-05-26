@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.0.1.ebuild,v 1.4 2007/05/26 16:30:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.1.1.ebuild,v 1.1 2007/05/26 16:30:52 ticho Exp $
 
 inherit distutils
 
@@ -11,12 +11,13 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 SLOT="0"
-IUSE="gnome taglib lyrics"
+IUSE="taglib lyrics dbus"
 
+DEPEND=""
 RDEPEND=">=virtual/python-2.4
-	>=dev-python/pygtk-2.6
-	gnome? ( dev-python/gnome-python-extras )
+	>=dev-python/pygtk-2.10
 	taglib? ( >=dev-python/tagpy-0.91 )
+	dbus? ( dev-python/dbus-python )
 	lyrics? ( dev-python/soappy )"
 
 pkg_setup() {
