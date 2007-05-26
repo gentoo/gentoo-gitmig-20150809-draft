@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.4 2007/02/09 02:45:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.5 2007/05/26 20:34:04 aballier Exp $
+
+*camlzip-1.03 (26 May 2007)
+
+  26 May 2007; Alexis Ballier <aballier@gentoo.org> +camlzip-1.03.ebuild:
+  Version bump, ~amd64, closes bug #147523
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
