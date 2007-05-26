@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2828 2007/05/26 19:48:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2829 2007/05/26 20:32:58 tester Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1372,8 +1372,6 @@ net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
 net-im/naim:screen - Enable screen support
 net-im/pidgin:bonjour - Enable bonjour support
-net-im/pidgin:console - Enable pidgin-text
-net-im/pidgin:custom-cflags - Disables stripping of "unsafe C[XX]FLAGS"
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support.
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support.
 net-im/pidgin:meanwhile - Enable meanwhile support for Sametime protocol.
