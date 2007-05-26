@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pympd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.15 2007/05/26 13:40:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.16 2007/05/26 21:23:27 ticho Exp $
+
+*pympd-0.08.1 (26 May 2007)
+
+  26 May 2007; Andrej Kacian <ticho@gentoo.org> +pympd-0.08.1.ebuild:
+  Version bump. Bug #177882, by Tony Harmelink <aceofaces at gmail.com>.
 
   26 May 2007; Samuli Suominen <drac@gentoo.org> pympd-0.07.ebuild:
   inherit eutils for built_with_use.
