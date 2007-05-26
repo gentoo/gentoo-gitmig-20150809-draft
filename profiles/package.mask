@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7295 2007/05/26 06:36:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7296 2007/05/26 07:43:33 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (26 May 2007)
+# Masked for testing and because it might not get
+# applied unchanged. This change adds option to
+# change DPI into User Interface settings.
+# http://bugzilla.xfce.org/show_bug.cgi?id=3164
+=xfce-base/xfce-mcs-plugins-4.4.1-r1
 
 # Luca Barbato <lu_zero@gentoo.org> (26 May 2007)
 # Temp mask for ffmpeg
