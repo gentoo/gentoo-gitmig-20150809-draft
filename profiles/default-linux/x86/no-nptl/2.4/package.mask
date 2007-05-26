@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.86 2007/05/22 19:33:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.87 2007/05/26 15:45:39 ticho Exp $
+
+# Andrej Kacian <ticho@gentoo.org> (26 May 2007)
+# Requires >=pygtk-2.10.
+>=media-sound/sonata-1.1.1
 
 # Samuli Suominen <drac@gentoo.org> (22 May 2007)
 # Requires networkmanager.
