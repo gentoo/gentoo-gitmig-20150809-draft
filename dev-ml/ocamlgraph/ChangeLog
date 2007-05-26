@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.4 2007/02/09 02:48:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.5 2007/05/26 19:34:05 aballier Exp $
+
+*ocamlgraph-0.98 (26 May 2007)
+
+  26 May 2007; Alexis Ballier <aballier@gentoo.org> +ocamlgraph-0.98.ebuild:
+  Version bump, ~amd64
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
