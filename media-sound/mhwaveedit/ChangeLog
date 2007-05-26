@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.19 2007/01/07 18:13:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.20 2007/05/26 15:25:10 aballier Exp $
+
+*mhwaveedit-1.4.12 (26 May 2007)
+
+  26 May 2007; Alexis Ballier <aballier@gentoo.org>
+  +mhwaveedit-1.4.12.ebuild:
+  version bump
 
 *mhwaveedit-1.4.11 (07 Jan 2007)
 
