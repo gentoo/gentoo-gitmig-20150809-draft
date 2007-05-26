@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.3.6-r1.ebuild,v 1.13 2007/02/05 23:30:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.3.6-r1.ebuild,v 1.14 2007/05/26 18:26:01 drac Exp $
 
 inherit gnome2 eutils
 
@@ -25,7 +25,8 @@ RDEPEND=">=dev-libs/glib-2.4.0
 	dev-libs/popt"
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.9*
-	>=sys-devel/gettext-0.14"
+	>=sys-devel/gettext-0.14
+	!xfce-extra/notification-daemon-xfce"
 
 DOCS="AUTHORS ChangeLog NEWS"
 
