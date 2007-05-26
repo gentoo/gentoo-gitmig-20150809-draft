@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.34 2007/05/12 13:18:52 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.35 2007/05/26 13:27:34 xmerlin Exp $
+
+  26 May 2007; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/cman-1.04.00-qdisk-makefile.patch, cman-1.04.00.ebuild:
+  Fixed bug #179603.
 
   12 May 2007; Christian Zoffoli <xmerlin@gentoo.org>
   +files/cman-1.03.00-qdisk-makefile.patch, cman-1.03.00.ebuild,
