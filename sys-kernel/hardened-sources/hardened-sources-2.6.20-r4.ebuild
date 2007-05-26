@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.20-r3.ebuild,v 1.2 2007/05/15 23:07:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.20-r4.ebuild,v 1.1 2007/05/26 20:05:15 phreak Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
-K_GENPATCHES_VER="10"
+K_GENPATCHES_VER="11"
 
 inherit kernel-2
 detect_version
