@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.30 2007/02/28 23:06:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.31 2007/05/26 18:47:11 drac Exp $
+
+  26 May 2007; Samuli Suominen <drac@gentoo.org> libnotify-0.4.3.ebuild,
+  libnotify-0.4.4.ebuild:
+  Add notification-daemon-xfce as second alternative to notification-daemon.
 
 *libnotify-0.4.4 (28 Feb 2007)
 
