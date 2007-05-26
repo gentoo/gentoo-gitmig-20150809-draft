@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apse
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.6 2006/07/31 20:00:54 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.7 2007/05/26 11:57:49 welp Exp $
+
+  26 May 2007; Peter Weller <welp@gentoo.org> apse-0.2.ebuild:
+  Keyworded ~amd64 wrt bug 179661
 
   31 Jul 2006; Tom Gall <tgall@gentoo.org> apse-0.2.ebuild:
   added ~ppc64
