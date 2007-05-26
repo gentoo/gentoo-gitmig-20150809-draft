@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.48 2007/04/15 13:04:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.49 2007/05/26 08:42:43 betelgeuse Exp $
+
+  26 May 2007; Petteri Räty <betelgeuse@gentoo.org> -bcel-5.1-r3.ebuild:
+  Removed old version.
 
   15 Apr 2007; nixnut <nixnut@gentoo.org> bcel-5.2.ebuild:
   Stable on ppc wrt bug 173914
