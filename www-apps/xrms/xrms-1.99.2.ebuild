@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.1 2007/01/03 00:50:48 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.2 2007/05/26 22:44:54 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -13,7 +13,7 @@ LICENSE="OSL-2.0"
 KEYWORDS="~x86"
 S="${WORKDIR}/${PN}"
 
-IUSE="intl"
+IUSE=""
 
 RDEPEND="
 	>=virtual/php-4.3.0
@@ -23,8 +23,6 @@ RDEPEND="
 pkg_setup() {
 	webapp_pkg_setup
 	local php_flags="mysql"
-
-	use intl && php_flags="${php_flags} nls recode"
 	require_php_with_use ${php_flags}
 }
 
