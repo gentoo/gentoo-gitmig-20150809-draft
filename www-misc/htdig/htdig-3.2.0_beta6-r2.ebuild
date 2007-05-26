@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r2.ebuild,v 1.6 2007/05/25 12:12:25 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r2.ebuild,v 1.7 2007/05/26 22:34:15 rl03 Exp $
 
 inherit eutils autotools
 
@@ -30,14 +30,17 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with ssl) \
+	local conf="
 		--with-config-dir=/etc/${PN} \
 		--with-default-config-file=/etc/${PN}/${PN}.conf \
 		--with-database-dir=/var/lib/${PN}/db \
 		--with-cgi-bin-dir=/var/www/localhost/cgi-bin \
 		--with-search-dir=/var/www/localhost/htdocs/${PN} \
-		--with-image-dir=/var/www/localhost/htdocs/${PN} \
-		|| die "configure failed"
+		--with-image-dir=/var/www/localhost/htdocs/${PN}
+	"
+	use ssl && conf="${conf} --with-ssl"
+
+	econf ${conf} || die "configure failed"
 
 #		--with-image-url-prefix=file:///var/www/localhost/htdocs/${PN} \
 
