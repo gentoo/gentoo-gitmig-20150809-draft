@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.526 2007/05/23 21:26:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.527 2007/05/26 17:55:03 phreak Exp $
+
+*apache-2.2.4-r3 (26 May 2007)
+
+  26 May 2007; Christian Heim <phreak@gentoo.org> -apache-2.2.4-r2.ebuild,
+  +apache-2.2.4-r3.ebuild:
+  Updated ebuild, including an updated patch tarball. Fixing bug #110556, bug
+  #178457, bug #179445, bug #179522.
 
   23 May 2007; Luca Longinotti <chtekk@gentoo.org> -apache-2.2.4.ebuild,
   -apache-2.2.4-r1.ebuild, apache-2.2.4-r2.ebuild:

@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r2.ebuild,v 1.2 2007/05/23 21:26:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r3.ebuild,v 1.1 2007/05/26 17:55:03 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-${PF}"
-GENTOO_PATCHSTAMP="20070522"
-GENTOO_DEVSPACE="hollow"
+GENTOO_PATCHSTAMP="20070526"
+GENTOO_DEVSPACE="phreak"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server."
@@ -28,7 +28,6 @@ DEPEND="dev-lang/perl
 	dev-libs/expat
 	dev-libs/libpcre
 	sys-libs/zlib
-	mpm-itk? ( sys-libs/libcap )
 	ldap? ( =net-nds/openldap-2* )
 	selinux? ( sec-policy/selinux-apache )
 	ssl? ( dev-libs/openssl )
@@ -77,6 +76,21 @@ pkg_setup() {
 	# setup apache user and group
 	enewgroup apache 81
 	enewuser apache 81 -1 /var/www apache
+
+	if ! use no-suexec ; then
+		elog
+		elog "You can manipulate several configure options of suexec"
+		elog "through the following environment variables:"
+		elog
+		elog "  SUEXEC_LOGFILE: Path to the suexec logfile (default: /var/log/apache2/suexec_log)"
+		elog "   SUEXEC_CALLER: Name of the user Apache is running as (default: apache)"
+		elog "  SUEXEC_DOCROOT: Directory in which suexec will run scripts (default: /var/www)"
+		elog "   SUEXEC_MINUID: Minimum UID, which is allowed to run scripts via suexec (default: 1000)"
+		elog "   SUEXEC_MINGID: Minimum GID, which is allowed to run scripts via suexec (default: 100)"
+		elog "  SUEXEC_USERDIR: User subdirectories (like /home/user/html) (default: public_html)"
+		elog "    SUEXEC_UMASK: Umask for the suexec process (default: 077)"
+		elog
+	fi
 }
 
 src_unpack() {
@@ -85,7 +99,7 @@ src_unpack() {
 
 	# Use correct multilib libdir in gentoo patches
 	sed -i -e "s:/usr/lib:/usr/$(get_libdir):g" \
-		"${GENTOO_PATCHDIR}"/{conf/httpd.conf,init/*,patches/config.layout,scripts/Makefile.suexec,scripts/suexec2-config} \
+		"${GENTOO_PATCHDIR}"/{conf/httpd.conf,init/*,patches/config.layout} \
 		|| die "libdir sed failed"
 
 	#### Patch Organization
@@ -147,14 +161,20 @@ src_compile() {
 	# and the glibc (pthread) source.
 	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> config.cache
 
+	# Only build suexec with USE=-no-suexec
 	if use no-suexec ; then
 		myconf="${myconf} --disable-suexec"
 	else
-		mods="${mods} suexec"
-		myconf="${myconf} $(${GENTOO_PATCHDIR}/scripts/suexec2-config --config)"
-		myconf="${myconf} \
-				--with-suexec-bin=/usr/sbin/suexec2 \
-				--enable-suexec=${modtype}"
+		myconf="${myconf} --with-suexec-safepath='/usr/local/bin:/usr/bin:/bin'"
+		myconf="${myconf} --with-suexec-logfile=${SUEXEC_LOGFILE:-/var/log/apache2/suexec_log}"
+		myconf="${myconf} --with-suexec-bin=/usr/sbin/suexec"
+		myconf="${myconf} --with-suexec-userdir=${SUEXEC_USERDIR:-public_html}"
+		myconf="${myconf} --with-suexec-caller=${SUEXEC_CALLER:-apache}"
+		myconf="${myconf} --with-suexec-docroot=${SUEXEC_DOCROOT:-/var/www}"
+		myconf="${myconf} --with-suexec-uidmin=${SUEXEC_MINUID:-1000}"
+		myconf="${myconf} --with-suexec-gidmin=${SUEXEC_MINGID:-100}"
+		myconf="${myconf} --with-suexec-umask=${SUEXEC_UMASK:-077}"
+		myconf="${myconf} --enable-suexec=${modtype}"
 	fi
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
@@ -187,13 +207,6 @@ src_compile() {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
-	# Remove some of the default files installed by `make install'
-	# and those binaries/manpages, that belong to app-admin/apache-tools now
-	rm -Rf "${D}"/etc \
-		"${D}"/usr/sbin/{envvars*,apachectl} \
-		"${D}"/usr/share/man/man1/{htdigest,htpasswd,htdbm}.1* \
-		"${D}"/usr/share/man/man8/ab.8*
 
 	# This is a mapping of module names to the -D options in APACHE2_OPTS
 	# Used for creating optional LoadModule lines
@@ -248,32 +261,20 @@ src_install () {
 	newconfd "${GENTOO_PATCHDIR}"/init/apache2.confd apache2
 	newinitd "${GENTOO_PATCHDIR}"/init/apache2.initd apache2
 
-	# link apache2ctl to the init script
+	# Link apache2ctl to the init script
 	dosym /etc/init.d/apache2 /usr/sbin/apache2ctl
 
 	# provide symlinks for all the stuff we no longer rename, bug 177697
-	for i in logresolve apxs rotatelogs dbmmanage checkgid split-logfile suexec; do
+	for i in suexec; do
 		dosym /usr/sbin/${i} /usr/sbin/${i}2
 	done
 
 	# Install some thirdparty scripts
 	exeinto /usr/sbin
-	for i in apache2logserverstatus apache2splitlogfile suexec2-config ; do
+	for i in apache2logserverstatus apache2splitlogfile ; do
 		doexe "${GENTOO_PATCHDIR}"/scripts/${i}
 	done
 	use ssl && doexe "${GENTOO_PATCHDIR}"/scripts/gentestcrt.sh
-
-	for i in logresolve.pl split-logfile log_server_status ; do
-		doexe support/${i}
-	done
-
-	# needed for suexec2-config
-	insinto /usr/$(get_libdir)/apache2/build
-	doins "${GENTOO_PATCHDIR}"/scripts/Makefile.suexec
-	doins support/suexec.c
-
-	# we don't use apachectl anymore, it's symlinked to the init script now
-	rm -f usr/share/man/man8/apachectl.8
 
 	# Install some documentation
 	dodoc ABOUT_APACHE CHANGES LAYOUT README README.platforms VERSIONING
@@ -291,8 +292,8 @@ src_install () {
 	mv -f "${D}/var/www/localhost" "${D}/usr/share/doc/${PF}/webroot"
 	eend $?
 
-	# Set up some sane permissions
 	if ! use no-suexec ; then
+		# Set some sane permissions for suexec
 		fowners 0:apache /usr/sbin/suexec
 		fperms 4710 /usr/sbin/suexec
 	fi
@@ -309,9 +310,6 @@ src_install () {
 
 	# We'll be needing /etc/apache2/ssl if USE=ssl
 	use ssl && keepdir /etc/apache2/ssl
-
-	fperms 0755 /usr/sbin/apache2logserverstatus
-	fperms 0755 /usr/sbin/apache2splitlogfile
 }
 
 pkg_postinst() {
