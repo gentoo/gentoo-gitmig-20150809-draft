@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-002-r2.ebuild,v 1.4 2006/11/04 17:48:20 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-002-r3.ebuild,v 1.1 2007/05/26 19:55:14 phreak Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -41,8 +41,8 @@ src_install() {
 	make DESTDIR="${D}" NLS=${nls} mandir=/usr/share/man libdir=/usr/$(get_libdir) \
 		install || die "make install failed"
 
-	newconfd "${FILESDIR}"/${P}-conf.d ${PN}
-	newinitd "${FILESDIR}"/${P}-init.d ${PN}
+	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
+	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
 
 	dodoc AUTHORS README
 }

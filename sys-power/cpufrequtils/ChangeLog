@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.36 2007/05/17 09:07:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.37 2007/05/26 19:55:14 phreak Exp $
+
+*cpufrequtils-002-r3 (26 May 2007)
+
+  26 May 2007; Christian Heim <phreak@gentoo.org>
+  -cpufrequtils-002-r2.ebuild, +cpufrequtils-002-r3.ebuild:
+  Fix src_install to actually install the init/conf.d files. Thanks to Peter
+  Hjalmarsson <xake at rymdraket.net> for spotting.
 
   17 May 2007; Christian Heim <phreak@gentoo.org> files/cpufrequtils-init.d:
   Updating the init-script to be busybox/dash compatible (thanks to Mike
