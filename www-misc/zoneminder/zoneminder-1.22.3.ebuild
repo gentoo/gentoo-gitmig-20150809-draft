@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.3.ebuild,v 1.2 2007/04/19 18:09:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.3.ebuild,v 1.3 2007/05/26 23:55:43 rl03 Exp $
 
 inherit eutils webapp autotools depend.php depend.apache
 
@@ -37,7 +37,7 @@ DEPEND="
 "
 
 want_apache
-need_php_httpd
+need_php
 
 RDEPEND="mpeg? ( media-video/ffmpeg )
 	media-libs/netpbm
@@ -56,6 +56,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/Makefile.am.patch
 	epatch ${FILESDIR}/zm_create.sql.in.diff
+	epatch ${FILESDIR}/ffmpeg.patch
 }
 
 src_compile() {

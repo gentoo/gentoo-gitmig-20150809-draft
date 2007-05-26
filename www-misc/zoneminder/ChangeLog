@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.21 2007/04/19 18:09:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.22 2007/05/26 23:55:43 rl03 Exp $
+
+  26 May 2007; Renat Lumpau <rl03@gentoo.org> +files/ffmpeg.patch,
+  zoneminder-1.22.3.ebuild:
+  Fix bugs #175261, #174616.
 
   19 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   zoneminder-1.22.3.ebuild:
