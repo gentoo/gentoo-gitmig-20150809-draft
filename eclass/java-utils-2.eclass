@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.85 2007/05/25 10:27:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.86 2007/05/26 23:24:52 ali_bush Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -2499,16 +2499,21 @@ java-pkg_ensure-dep() {
 		fi
 	fi
 
-	if [[ ${limit_to} != build && ! ( ${RDEPEND} =~ "${stripped_pkg}" ) ]]; then
-		dev_error="The ebuild is attempting to use ${target_pkg},"
-		dev_error="${dev_error} without specifying --build-only, that is not declared in RDEPEND."
-		if is-java-strict; then
-			die "${dev_error}"
-		elif [[ ${BASH_SUBSHELL} = 0 ]]; then
-			eerror "${dev_error}"
-			elog "The package will build without problems, but may fail to run"
-			elog "if you don't have ${target_pkg} installed, so please report"
-			elog "this to http://bugs.gentoo.org"
+	if [[ ${limit_to} != build ]]; then
+		if [[ ! ( ${RDEPEND} =~ "${stripped_pkg}" ) ]]; then
+			if [[ ! ( ${PDEPEND} =~ "${stripped_pkg}" ) ]]; then
+				dev_error="The ebuild is attempting to use ${target_pkg},"
+				dev_error="${dev_error} without specifying --build-only, that is not declared in RDEPEND"
+				dev_error="${dev_error} or PDEPEND."
+				if is-java-strict; then
+					die "${dev_error}"
+				elif [[ ${BASH_SUBSHELL} = 0 ]]; then
+					eerror "${dev_error}"
+					elog "The package will build without problems, but may fail to run"
+					elog "if you don't have ${target_pkg} installed, so please report"
+					elog "this to http://bugs.gentoo.org"
+				fi
+			fi
 		fi
 	fi
 }
