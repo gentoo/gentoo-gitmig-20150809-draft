@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20070510.ebuild,v 1.1 2007/05/25 22:36:35 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20070510.ebuild,v 1.2 2007/05/26 21:36:46 truedfx Exp $
 
-inherit eutils bsdmk
+inherit eutils flag-o-matic bsdmk
 
 REV=1073
-PATCHVER=1.0
+PATCHVER=1.1
 
 DESCRIPTION="A C/C++ compiler initially developed by DERA"
 HOMEPAGE="http://www.tendra.org/"
@@ -36,6 +36,8 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-flags '-O*' '-O'
+
 	PREFIX=/usr sh makedefs || die "makedefs failed"
 	emake -DBOOTSTRAP || die "bootstrap failed"
 	emake || die "build failed"
