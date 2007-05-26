@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.1 2007/05/26 19:49:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.2 2007/05/26 20:34:30 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -13,8 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
-IUSE="${IUSE} gtk sasl console groupwise prediction zephyr" # mono"
+IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell ssl qq msn gadu"
+IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
 
 RDEPEND="
 	bonjour? ( !avahi? ( net-misc/howl )
@@ -110,14 +110,6 @@ print_pidgin_warning() {
 	ewarn "Please read the pidgin FAQ at http://developer.pidgin.im/wiki/FAQ"
 	ewarn
 	einfo
-	if  use custom-cflags; then
-		einfo "Note that you have chosen NOT TO FILTER UNSTABLE C[XX]FLAGS."
-		einfo "DO NOT file bugs with GENTOO or UPSTREAM while using custom-cflags"
-		einfo
-	else
-		einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
-		einfo
-	fi
 }
 
 pkg_setup() {
@@ -139,7 +131,7 @@ pkg_setup() {
 	die "Configure failed"
 	fi
 
-	if use console &&  ! built_with_use sys-libs/ncurses unicode; then
+	if use ncurses &&  ! built_with_use sys-libs/ncurses unicode; then
 		eerror
 		eerror "You need to rebuild sys-libs/ncurses with USE=unicode in order"
 		eerror "to build finch the console client of pidgin."
@@ -147,7 +139,7 @@ pkg_setup() {
 		die "Configure failed"
 	fi
 
-	if ! use gtk && ! use console; then
+	if ! use gtk && ! use ncurses ; then
 		einfo
 		elog "As you did not pick gtk or console use flag, building"
 		elog "console only."
@@ -173,9 +165,7 @@ src_unpack() {
 
 src_compile() {
 	# Stabilize things, for your own good
-	if ! use custom-cflags; then
-		strip-flags
-	fi
+	strip-flags
 	replace-flags -O? -O2
 
 	# -msse2 doesn't play nice on gcc 3.2
@@ -236,10 +226,10 @@ src_compile() {
 			myconf="${myconf} --x-includes=/usr/include/X11"
 	fi
 
-	if ! use console && ! use gtk; then
+	if ! use ncurses && ! use gtk; then
 		myconf="${myconf} --enable-consoleui"
 	else
-		myconf="${myconf} $(use_enable console consoleui) $(use_enable gtk gtkui)"
+		myconf="${myconf} $(use_enable ncurses consoleui) $(use_enable gtk gtkui)"
 	fi
 
 	econf \
