@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r3.ebuild,v 1.1 2007/05/26 17:55:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r3.ebuild,v 1.2 2007/05/26 19:44:09 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -39,6 +39,8 @@ RDEPEND="${DEPEND}
 PDEPEND="~app-admin/apache-tools-${PV}"
 
 S="${WORKDIR}/httpd-${PV}"
+
+RESTRICT="primaryuri"
 
 pkg_setup() {
 	if use ldap && ! built_with_use 'dev-libs/apr-util' ldap ; then

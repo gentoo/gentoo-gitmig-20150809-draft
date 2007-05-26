@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.527 2007/05/26 17:55:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.528 2007/05/26 19:44:09 phreak Exp $
+
+  26 May 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r3.ebuild:
+  Restrict to primaryuri for now, as the patchtarball on the mirrors is broken.
 
 *apache-2.2.4-r3 (26 May 2007)
 
