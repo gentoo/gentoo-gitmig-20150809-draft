@@ -1,18 +1,23 @@
-0. If this is a new installation, create MySQL's grant tables and the pmadb
-   database. NOTE: this will change the existing pma password to a random
-   string!
+If this is a new installation:
 
-     mysql -u root -p < /usr/share/webapps/phpmyadmin/${PVR}/sqlscripts/mysql/${PVR}_create.sql
+1. Configure ${PN}:
 
-1. Create config.inc.php. You can use the web-based installer:
+   a) Create config.inc.php. You can use the web-based installer:
+
    http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/scripts/setup.php
 
-   Alternatively, use the default config file in libraries/config.default.php
+   b) Alternatively, use an existing configuration:
 
    mkdir ${MY_INSTALLDIR}/config
    chmod o+rw ${MY_INSTALLDIR}/config
-   # if you want to edit existing configuration:
-   cp ${MY_INSTALLDIR}/config.inc.php ${MY_INSTALLDIR}/config/
+   cp <path to existing config.inc.php file>/config.inc.php ${MY_INSTALLDIR}/config/
+   chown -R ${VHOST_SERVER_UID}:${VHOST_SERVER_UID} ${MY_INSTALLDIR}/config
+
+   C) Alternatively, use the default config file in libraries/config.default.php
+
+   mkdir ${MY_INSTALLDIR}/config
+   chmod o+rw ${MY_INSTALLDIR}/config
+   cp ${MY_INSTALLDIR}/libraries/config.default.php ${MY_INSTALLDIR}/config/
    chown -R ${VHOST_SERVER_UID}:${VHOST_SERVER_UID} ${MY_INSTALLDIR}/config
 
 2. Be sure that the libraries/ directory is not visible. You can use the
@@ -20,7 +25,8 @@ provided .htaccess file.
 
 ===============
 
-If you are upgrading from an earlier version and are using phpMyAdmin's
-features for master/foreign tables be sure to read
+If you are upgrading from an earlier version:
+
+1.  If you are using ${PN}'s features for master/foreign tables, be sure to read
   http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/Documentation.html#col_com
 You will need to perform the ALTER TABLE step yourself.
