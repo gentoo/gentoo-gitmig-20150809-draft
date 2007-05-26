@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.1 2007/05/26 13:08:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.2 2007/05/26 13:36:50 aballier Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -38,17 +38,14 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-exec-stack-fixes.patch
 
 	# Quick and somewhat dirty fix for bug #110541
-#	epatch "${FILESDIR}"/${P}-execheap.patch
+	# The sed in the Makefile doesn't replace all occurences of @compiler@
+	# in driver/ocamlcomp.sh.in. Reported upstream as issue 0004268.
+	epatch "${FILESDIR}"/${P}-execheap.patch
 
 	# The configure script doesn't inherit previous defined variables, 
 	# overwriting previous declarations of bytecccompopts, bytecclinkopts,
 	# nativecccompopts and nativecclinkopts. Reported upstream as issue 0004267.
 	epatch "${FILESDIR}"/${P}-configure.patch
-
-	# The sed in the Makefile doesn't replace all occurences of @compiler@
-	# in driver/ocamlcomp.sh.in. Reported upstream as issue 0004268.
-#	epatch "${FILESDIR}"/${P}-Makefile.patch
-
 
 	# ocaml has automagics on libX11 and gdbm
 	# http://caml.inria.fr/mantis/view.php?id=4278

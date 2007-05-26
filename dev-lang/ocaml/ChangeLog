@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.112 2007/05/26 13:08:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.113 2007/05/26 13:36:50 aballier Exp $
+
+  26 May 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/ocaml-3.10.0-execheap.patch, ocaml-3.10.0.ebuild:
+  merge paxmarking of the compilers and makefile patch to replace multiple
+  occurences of @compiler@ in ocamlcomp.sh.in that allows building with an
+  hardened kernel
 
 *ocaml-3.10.0 (26 May 2007)
 
