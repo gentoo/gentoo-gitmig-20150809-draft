@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2829 2007/05/26 20:32:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2830 2007/05/26 22:46:04 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1935,7 +1935,6 @@ www-apps/viewvc:highlight - Add highlight support to colourize code stored in th
 www-apps/viewvc:mod_python - Add mod_python support
 www-apps/viewvc:subversion - Add subversion support
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
-www-apps/xrms:intl - Enable different languages
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
