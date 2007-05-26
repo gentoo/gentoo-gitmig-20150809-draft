@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/adasockets
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.16 2007/01/25 23:37:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.17 2007/05/26 14:15:02 george Exp $
+
+  26 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
+  -adasockets-1.7-r1.ebuild, -adasockets-1.8.4.4.ebuild:
+  removed old style versions
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> adasockets-1.7-r1.ebuild,
   adasockets-1.8.4.4.ebuild:
