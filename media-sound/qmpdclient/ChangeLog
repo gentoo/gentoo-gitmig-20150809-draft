@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.14 2007/04/12 22:13:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.15 2007/05/26 02:17:08 jer Exp $
+
+  26 May 2007; Jeroen Roovers <jer@gentoo.org> qmpdclient-1.0.7.ebuild:
+  Stable for HPPA too.
 
   12 Apr 2007; Jeroen Roovers <jer@gentoo.org> qmpdclient-1.0.7.ebuild:
   Marked ~hppa (bug #158756).
