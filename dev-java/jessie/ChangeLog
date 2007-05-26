@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jessie
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.16 2006/11/28 03:50:26 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.17 2007/05/26 14:59:09 betelgeuse Exp $
+
+  26 May 2007; Petteri Räty <betelgeuse@gentoo.org> jessie-1.0.0-r2.ebuild:
+  Add -j1 because jessie build system most likely doesn't like parallel
+  compiles. Should fix bug #158849.
 
   28 Nov 2006; Joshua Nichols <nichoj@gentoo.org> -jessie-1.0.0.ebuild,
   -jessie-1.0.0-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0-r2.ebuild,v 1.3 2006/11/28 03:48:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0-r2.ebuild,v 1.4 2007/05/26 14:59:09 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	local target="$(java-pkg_get-target)"
 
 	econf --with-java-target=${target} --disable-awt || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	if use doc; then
 		emake apidoc || "emake apidoc failed"
