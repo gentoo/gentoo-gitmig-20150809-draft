@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camomile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.8 2007/02/09 02:46:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.9 2007/05/26 21:19:46 aballier Exp $
+
+*camomile-0.7.1 (26 May 2007)
+
+  26 May 2007; Alexis Ballier <aballier@gentoo.org> +camomile-0.7.1.ebuild:
+  Version bump, ~amd64
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
