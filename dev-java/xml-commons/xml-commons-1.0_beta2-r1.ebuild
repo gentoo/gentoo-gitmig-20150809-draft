@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2-r1.ebuild,v 1.3 2006/12/09 09:26:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2-r1.ebuild,v 1.4 2007/05/26 08:54:36 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -18,20 +20,18 @@ SRC_URI="mirror://apache/xml/commons/${MY_P}.tar.gz"
 LICENSE="Apache-1.1 public-domain W3C-document W3C"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	source? ( app-arch/zip )"
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PV}-jdk15.patch
+	epatch "${FILESDIR}/${PV}-jdk15.patch"
 }
 
 src_compile() {
@@ -48,7 +48,7 @@ src_install() {
 	java-pkg_dojar java/build/resolver.jar
 	java-pkg_dojar java/external/build/xml-apis.jar
 
-	dodoc README.html
-	use doc && java-pkg_dohtml -r java/build/docs/*
+	dodoc README.html || die
+	use doc && java-pkg_dojavadoc java/build/docs/javadocs
 	use source && java-pkg_dosrc java/src/org
 }

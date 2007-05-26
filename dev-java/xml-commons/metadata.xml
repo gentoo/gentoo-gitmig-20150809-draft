@@ -6,11 +6,11 @@
 
 <longdescription>
 
-These are some of the components that are provided by the Apache XML Commons 
+These are some of the components that are provided by the Apache XML Commons
 project.
 
  * Resolver - An XML Entity and URI Resolver donated by Norman Walsh.
- * Which - A simple environment checking utility for Apache projects by Shane 
+ * Which - A simple environment checking utility for Apache projects by Shane
    Curcuru
  * External Interfaces (xml-apis) - An Apache-hosted set of externally-defined
    standards interfaces, namely DOM, SAX, and JAXP.
