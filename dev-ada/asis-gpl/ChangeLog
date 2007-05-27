@@ -1,11 +1,10 @@
 # ChangeLog for dev-ada/asis-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/ChangeLog,v 1.3 2007/05/25 20:49:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/ChangeLog,v 1.4 2007/05/27 09:43:11 george Exp $
 
 *asis-gpl-4.1.3.2007 (25 May 2007)
 
-  25 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
-  +asis-gpl-4.1.3.2007.ebuild:
+  25 May 2007; George Shapovalov <george@gentoo.org> +asis-gpl-4.1.3.2007.ebuild:
   added new version to match gnat-2007
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> asis-gpl-3.4.6.2006.ebuild:

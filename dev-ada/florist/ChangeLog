@@ -1,8 +1,8 @@
 # ChangeLog for dev-ada/florist
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.14 2007/05/26 14:03:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.15 2007/05/27 09:45:01 george Exp $
 
-  26 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
+  26 May 2007; George Shapovalov <george@gentoo.org>
   -files/florist-3.15p-fix.patch, -florist-3.15p.ebuild:
   removed old style version
 
