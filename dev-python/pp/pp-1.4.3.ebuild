@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/pp-1.4.2.ebuild,v 1.1 2007/04/27 19:50:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/pp-1.4.3.ebuild,v 1.1 2007/05/27 09:15:20 dev-zero Exp $
 
 NEED_PYTHON=2.3
 
 inherit distutils versionator
 
-EX_P=${PN}-$(get_version_component_range 1-2)-examples-1.0
+EX_P=${PN}-$(get_version_component_range 1-2)-examples-1.1
 
 DESCRIPTION="Parallel and distributed programming for Python"
 HOMEPAGE="http://www.parallelpython.com/"
-SRC_URI="http://www.parallelpython.com/downloads/${PN}/${P}.tar.gz
+SRC_URI="http://www.parallelpython.com/downloads/${PN}/${P}.tar.bz2
 	examples? ( http://www.parallelpython.com/downloads/${PN}/${EX_P}.tar.bz2 )"
 
 LICENSE="BSD"
