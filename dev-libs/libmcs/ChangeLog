@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.16 2007/04/15 20:51:56 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.17 2007/05/27 00:59:11 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org> libmcs-0.4.1.ebuild:
+  Stable on mips.
 
   15 Apr 2007; Peter Weller <welp@gentoo.org> libmcs-0.4.1.ebuild:
   Stable on amd64
