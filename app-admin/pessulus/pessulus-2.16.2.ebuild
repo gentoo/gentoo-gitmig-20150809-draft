@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.2.ebuild,v 1.2 2007/05/06 20:04:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.2.ebuild,v 1.3 2007/05/27 22:11:22 leio Exp $
 
 inherit gnome2 multilib python
 
@@ -26,6 +26,9 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 src_unpack() {
 	gnome2_src_unpack
 	intltoolize --force
+	# Fix tests. Remove this echo when upstream fixes it. Problem comes from
+	# intltool-0.35.5 that is more strict about this, and we intltoolize it to that version
+	echo "data/pessulus.desktop.in" >> "${S}/po/POTFILES.skip"
 }
 
 pkg_postinst() {
