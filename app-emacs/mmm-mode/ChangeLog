@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mmm-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.8 2007/03/08 07:26:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.9 2007/05/27 16:18:06 ulm Exp $
+
+  27 May 2007; Ulrich Mueller <ulm@gentoo.org> -mmm-mode-0.4.8.ebuild:
+  Remove old.
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50mmm-mode-gentoo.el:
