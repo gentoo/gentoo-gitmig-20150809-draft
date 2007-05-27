@@ -6,8 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.86 2007/05/26 23:24:52 ali_bush Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.87 2007/05/27 11:09:11 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -1689,18 +1688,23 @@ java-pkg_ant-tasks-depend() {
 # ejunit org.blinkenlights.jid3.test.AllTests
 #
 # @param $1 - -cp or -classpath
-# @param $2 - classpath, junit gets appended
+# @param $2 - classpath; junit and recorded dependencies get appended
 # @param $@ - the rest of the parameters are passed to java
 # ------------------------------------------------------------------------------
 ejunit() {
 	debug-print-function ${FUNCNAME} $*
 
-	local cp
+	local pkgs
+	for atom in $(cat ${JAVA_PKG_DEPEND_FILE} | tr : ' '); do
+		pkgs=${pkgs},$(echo ${atom} | sed -re "s/^.*@//")
+	done
+
+	local cp=$(java-pkg_getjars --with-dependencies junit${pkgs})
 	if [[ ${1} = -cp || ${1} = -classpath ]]; then
-		cp=${2}:$(java-pkg_getjars --build-only junit)
+		cp="${2}:${cp}"
 		shift 2
 	else
-		cp=$(java-pkg_getjars --build-only junit):.
+		cp=".:${cp}"
 	fi
 
 	local runner=junit.textui.TestRunner
@@ -2136,10 +2140,12 @@ java-pkg_init_paths_() {
 # ------------------------------------------------------------------------------
 # TODO change to do-write, to match everything else
 java-pkg_do_write_() {
+	debug-print-function ${FUNCNAME} $*
 	java-pkg_init_paths_
 	# Create directory for package.env
 	dodir "${JAVA_PKG_SHAREPATH}"
-	if [[ -n "${JAVA_PKG_CLASSPATH}" || -n "${JAVA_PKG_LIBRARY}" || -f "${JAVA_PKG_DEPEND}" ]]; then
+	if [[ -n "${JAVA_PKG_CLASSPATH}" || -n "${JAVA_PKG_LIBRARY}" || -f \
+			"${JAVA_PKG_DEPEND_FILE}" ]]; then
 		# Create package.env
 		(
 			echo "DESCRIPTION=\"${DESCRIPTION}\""
@@ -2148,7 +2154,8 @@ java-pkg_do_write_() {
 			[[ -n "${JAVA_PKG_CLASSPATH}" ]] && echo "CLASSPATH=\"${JAVA_PKG_CLASSPATH}\""
 			[[ -n "${JAVA_PKG_LIBRARY}" ]] && echo "LIBRARY_PATH=\"${JAVA_PKG_LIBRARY}\""
 			[[ -n "${JAVA_PROVIDE}" ]] && echo "PROVIDES=\"${JAVA_PROVIDE}\""
-			[[ -f "${JAVA_PKG_DEPEND}" ]] && echo "DEPEND=\"$(cat ${JAVA_PKG_DEPEND} | uniq | tr '\n' ':')\""
+			[[ -f "${JAVA_PKG_DEPEND_FILE}" ]] \
+				&& echo "DEPEND=\"$(cat	${JAVA_PKG_DEPEND_FILE} | uniq | tr '\n' ':')\""
 			echo "VM=\"$(echo ${RDEPEND} ${DEPEND} | sed -e 's/ /\n/g' | sed -n -e '/virtual\/\(jre\|jdk\)/ { p;q }')\"" # TODO cleanup !
 		) > "${JAVA_PKG_ENV}"
 
@@ -2180,6 +2187,10 @@ java-pkg_do_write_() {
 		# Strip unnecessary leading and trailing colons
 		# TODO try to cleanup if possible
 		sed -e "s/=\":/=\"/" -e "s/:\"$/\"/" -i "${JAVA_PKG_ENV}" || die "Did you forget to call java_init ?"
+	else
+		debug-print "JAVA_PKG_CLASSPATH, JAVA_PKG_LIBRARY or"
+		debug-print "JAVA_PKG_DEPEND_FILE not defined so can't"
+		debug-print "write package.env."
 	fi
 }
 
@@ -2189,7 +2200,7 @@ java-pkg_do_write_() {
 # Record a dependency to the package.env
 #
 # ------------------------------------------------------------------------------
-JAVA_PKG_DEPEND="${T}/java-pkg-depend"
+JAVA_PKG_DEPEND_FILE="${T}/java-pkg-depend"
 
 java-pkg_record-jar_() {
 	debug-print-function ${FUNCNAME} $*
@@ -2201,7 +2212,7 @@ java-pkg_record-jar_() {
 		append="$(basename ${jar})@${pkg}"
 	fi
 
-	echo ${append} >> ${JAVA_PKG_DEPEND}
+	echo ${append} >> ${JAVA_PKG_DEPEND_FILE}
 }
 
 # ------------------------------------------------------------------------------
@@ -2476,6 +2487,7 @@ java-pkg_verify-classes() {
 # @param $1 - empty - check both vars; "runtime" or "build" - check only
 #	RDEPEND, resp. DEPEND
 # @param $2 - Package name and slot.
+
 java-pkg_ensure-dep() {
 	debug-print-function ${FUNCNAME} $*
 
@@ -2486,10 +2498,13 @@ java-pkg_ensure-dep() {
 	local stripped_pkg=$(echo "${target_pkg}" | sed \
 		's/-[0-9]*\(\.[0-9]\)*$//')
 
+	debug-print "Matching against: ${stripped_pkg}"
+
 	if [[ ${limit_to} != runtime && ! ( "${DEPEND}" =~ "$stripped_pkg" ) ]]; then
 		dev_error="The ebuild is attempting to use ${target_pkg} that is not"
 		dev_error="${dev_error} declared in DEPEND."
 		if is-java-strict; then
+			eerror "${dev_error}"
 			die "${dev_error}"
 		elif [[ ${BASH_SUBSHELL} = 0 ]]; then
 			eerror "${dev_error}"
@@ -2506,6 +2521,7 @@ java-pkg_ensure-dep() {
 				dev_error="${dev_error} without specifying --build-only, that is not declared in RDEPEND"
 				dev_error="${dev_error} or PDEPEND."
 				if is-java-strict; then
+					eerror "${dev_error}"
 					die "${dev_error}"
 				elif [[ ${BASH_SUBSHELL} = 0 ]]; then
 					eerror "${dev_error}"
