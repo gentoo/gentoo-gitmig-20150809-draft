@@ -7,33 +7,19 @@
 
 alias pcivideo:v00008086d00001132sv*sd*bc*sc*i* i810	# i815
 alias pcivideo:v00008086d00002562sv*sd*bc*sc*i* i810	# 845G
-
 alias pcivideo:v00008086d00002572sv*sd*bc*sc*i* i810	# 865G
-# katzj's laptop
-alias pcivideo:v00008086d00002572sv0000103Csd000030A0bc*sc*i* intel
-
 alias pcivideo:v00008086d00002582sv*sd*bc*sc*i* i810	# 915G
 # ajax's desktop
 alias pcivideo:v00008086d00002582sv00008086sd00004556bc*sc*i* intel
-
 alias pcivideo:v00008086d0000258Asv*sd*bc*sc*i* i810	# E7221G
-
-alias pcivideo:v00008086d00002592sv*sd*bc*sc*i* i810	# 915GM
-# Toshiba Satellite M45 S351 (#202365)
-alias pcivideo:v00008086d00002592sv00001179sd0000FF10bc*sc*i* intel
-
+alias pcivideo:v00008086d00002592sv*sd*bc*sc*i* intel	# 915GM
 alias pcivideo:v00008086d00002772sv*sd*bc*sc*i* i810	# 945G
-
-alias pcivideo:v00008086d000027A2sv*sd*bc*sc*i* i810	# 945GM
-# Apple 945GM machines (Intel Mini and Macbook Pro)
-alias pcivideo:v00008086d000027A2sv00008086sd00007270bc*sc*i* intel
-# Aopen Mini PC
-alias pcivideo:v00008086d000027A2sv0000A0A0sd00000589bc*sc*i* intel
-
-alias pcivideo:v00008086d00002972sv*sd*bc*sc*i* i810	# 946GZ
-alias pcivideo:v00008086d00002982sv*sd*bc*sc*i* i810	# 965G1
-alias pcivideo:v00008086d00002992sv*sd*bc*sc*i* i810	# 965Q
-alias pcivideo:v00008086d000029A2sv*sd*bc*sc*i* i810	# 965G
+alias pcivideo:v00008086d000027A2sv*sd*bc*sc*i* intel	# 945GM
+alias pcivideo:v00008086d00002972sv*sd*bc*sc*i* intel	# 946GZ, really a 965
+alias pcivideo:v00008086d00002982sv*sd*bc*sc*i* intel	# 965G1
+alias pcivideo:v00008086d00002992sv*sd*bc*sc*i* intel	# 965Q
+alias pcivideo:v00008086d000029A2sv*sd*bc*sc*i* intel	# 965G
+alias pcivideo:v00008086d00002A02sv*sd*bc*sc*i* intel	# 965GM
 alias pcivideo:v00008086d00003577sv*sd*bc*sc*i* i810	# i830
 alias pcivideo:v00008086d00003582sv*sd*bc*sc*i* i810	# 855GM
 alias pcivideo:v00008086d00007121sv*sd*bc*sc*i* i810	# i810
