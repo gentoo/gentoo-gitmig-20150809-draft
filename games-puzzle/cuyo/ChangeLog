@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/cuyo
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.13 2006/10/08 22:22:59 nyhm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.14 2007/05/27 08:36:20 tupone Exp $
+
+*cuyo-1.8.6 (27 May 2007)
+
+  27 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/cuyo-1.8.6-gcc4.patch, +cuyo-1.8.6.ebuild:
+  Version bump. Bug #160072 by Pacho Ramos
 
   08 Oct 2006; Tristan Heaven <nyhm@gentoo.org> cuyo-1.8.5.ebuild:
   Use qt3 eclass
