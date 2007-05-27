@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.46 2007/02/20 13:09:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.47 2007/05/27 05:23:38 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org> eterm-0.9.4.ebuild:
+  Stable on mips.
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org> eterm-0.9.4.ebuild:
   stable on amd64; bug 167034
