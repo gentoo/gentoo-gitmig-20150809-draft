@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/dtdparser-1.21-r1.ebuild,v 1.1 2006/12/27 22:45:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/dtdparser-1.21-r1.ebuild,v 1.2 2007/05/27 15:40:28 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -11,18 +13,17 @@ SRC_URI="http://www.wutka.com/download/${P}.tgz"
 LICENSE="LGPL-2.1 Apache-1.1"
 SLOT="${PV}"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="doc source"
+IUSE=""
 
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4
-	source? ( app-arch/zip )"
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/buildfile.patch
+	cd "${S}"
+	rm -v *.jar || die
+	rm -v classes/com/wutka/dtd/*.class || die
+	epatch "${FILESDIR}/buildfile.patch"
 }
 
 EANT_BUILD_TARGET="build"
@@ -30,7 +31,7 @@ EANT_DOC_TARGET="createdoc"
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	dodoc CHANGES README
+	dodoc CHANGES README || die
 
 	use doc && java-pkg_dojavadoc doc
 	use source && java-pkg_dosrc source/*
