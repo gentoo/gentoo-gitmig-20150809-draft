@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.88 2007/05/22 18:21:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.89 2007/05/27 17:52:25 kumba Exp $
 
 # 22 May 2007; Christian Heim <phreak@gentoo.org>
 # unmask ip28 and ip32r10k only on mips
@@ -294,6 +294,7 @@ sh
 sparc
 x86
 x86-fbsd
+sparc-fbsd
 
 # disable until tested
 # bug 148402
@@ -316,3 +317,12 @@ qdbm
 # see bug #162205 comment 10.
 smartcard
 openct
+
+# mips doesn't support cpufeq, at least on
+# the machines we use.
+#
+# Same goes for battery support.  No one has
+# seen a mips laptop since the dinosaurs
+# lived.
+cpufreq
+battery
