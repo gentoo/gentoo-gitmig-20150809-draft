@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.48 2007/05/05 18:29:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.49 2007/05/27 05:35:28 dberkholz Exp $
+
+  27 May 2007; Donnie Berkholz <dberkholz@gentoo.org>; files/nv.xinf:
+  Import new stuff from RH: add a lot of newer stuff, particularly G80's.
 
   05 May 2007; Daniel Gryniewicz <dang@gentoo.org>
   xf86-video-nv-1.2.2.1.ebuild:
