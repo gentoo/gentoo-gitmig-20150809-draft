@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.54 2007/04/28 12:51:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.55 2007/05/27 07:24:19 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org> lprng-3.8.28.ebuild:
+  Stable on mips.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> lprng-3.8.28.ebuild:
   Use newinitd
