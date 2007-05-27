@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.4-r2.ebuild,v 1.2 2007/05/27 20:11:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.4-r3.ebuild,v 1.1 2007/05/27 20:11:02 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -72,7 +72,7 @@ src_install () {
 
 	# install manpages
 	doman "${S}"/docs/man/{dbmmanage,htdigest,htpasswd,htdbm}.1 \
-		"${S}"/docs/man/{ab,apxs,htcacheclean,logresolve,rotatelogs}.8
+		"${S}"/docs/man/{ab,htcacheclean,logresolve,rotatelogs}.8
 
 	# Providing compatiblity symlinks for #177697 (which we'll stop to install
 	# at some point).
