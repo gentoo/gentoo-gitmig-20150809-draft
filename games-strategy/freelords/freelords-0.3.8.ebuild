@@ -1,0 +1,67 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.1 2007/05/27 20:19:23 nyhm Exp $
+
+inherit eutils games
+
+DESCRIPTION="Free Warlords clone"
+HOMEPAGE="http://freelords.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="editor nls"
+
+RDEPEND="dev-libs/expat
+	media-libs/sdl-mixer
+	media-libs/libsdl
+	media-libs/sdl-image
+	>=media-libs/freetype-2
+	>=media-libs/paragui-1.1.8
+	=dev-libs/libsigc++-1.2*
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	dev-util/pkgconfig"
+
+pkg_setup() {
+	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+		die "Please emerge sdl-mixer with USE=vorbis"
+	fi
+	games_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/locale/s:$(datadir):/usr/share:' \
+		-e '/locale/s:$(prefix):/usr:' \
+		-e 's:$(localedir):/usr/share/locale:' \
+		-e '/freelords.desktop/d' \
+		$(find -name 'Makefile.in*') \
+		|| die "sed failed"
+}
+
+src_compile() {
+	egamesconf \
+		--disable-dependency-tracking \
+		--disable-paraguitest \
+		$(use_enable editor) \
+		$(use_enable nls) \
+		|| die
+	emake || die "emake failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+	doicon dat/various/${PN}.png
+	make_desktop_entry ${PN} FreeLords
+	if use editor ; then
+		doicon dat/various/${PN}_editor.png
+		make_desktop_entry ${PN}_editor "FreeLords Editor" ${PN}_editor.png
+	fi
+	dodoc AUTHORS ChangeLog HACKER NEWS README TODO doc/*.pdf
+	prepgamesdirs
+}
