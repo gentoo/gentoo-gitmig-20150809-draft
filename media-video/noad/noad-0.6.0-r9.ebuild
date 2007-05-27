@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.1 2007/05/24 07:18:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.2 2007/05/27 16:46:34 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -18,10 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ffmpeg imagemagick"
 
 DEPEND="media-libs/libmpeg2
-	media-video/vdr
 	ffmpeg? ( >=media-video/ffmpeg-0.4.8 )
 	imagemagick? ( >=media-gfx/imagemagick-6.2.4.2-r1 )"
-RDEPEND=">=media-tv/gentoo-vdr-scripts-0.3.5"
 
 src_unpack() {
 
