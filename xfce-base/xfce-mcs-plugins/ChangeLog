@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-mcs-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.97 2007/05/26 10:31:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.98 2007/05/27 06:18:40 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org>
+  xfce-mcs-plugins-4.4.1.ebuild:
+  Stable on mips.
 
 *xfce-mcs-plugins-4.4.1-r1 (26 May 2007)
 
