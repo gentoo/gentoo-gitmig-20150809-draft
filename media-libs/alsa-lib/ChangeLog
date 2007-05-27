@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.231 2007/05/07 21:25:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.232 2007/05/27 07:55:11 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org> alsa-lib-1.0.14_rc2.ebuild:
+  Stable on mips.
 
 *alsa-lib-1.0.14_rc4-r1 (07 May 2007)
 *alsa-lib-1.0.14_rc4 (07 May 2007)
