@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.288 2007/05/27 00:44:11 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.289 2007/05/27 12:59:15 ranger Exp $
+
+  27 May 2007; Brent Baude <ranger@gentoo.org> samba-3.0.24-r3.ebuild:
+  Marking samba-3.0.24-r3 ppc64 for bug 179867
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> samba-3.0.24-r2.ebuild:
   Stable on mips.
