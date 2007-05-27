@@ -1,24 +1,28 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.1 2006/12/26 18:14:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.2 2007/05/27 00:16:23 caster Exp $
+
+JAVA_PKG_IUSE="doc source test"
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Expression language engine, can be embedded in applications and frameworks."
 HOMEPAGE="http://jakarta.apache.org/commons/jexl"
 SRC_URI="mirror://apache/jakarta/commons/jexl/source/${P}-src.tar.gz"
+
+CDEPEND="dev-java/commons-logging
+	=dev-java/junit-3*"
+
 RDEPEND=">=virtual/jre-1.4
-	dev-java/commons-logging
-	>=dev-java/junit-3.8"
-DEPEND="${RDEPEND}
-	>=virtual/jdk-1.4
-	dev-java/ant-core
-	test? ( dev-java/ant-tasks )"
+	${CDEPEND}"
+DEPEND=">=virtual/jdk-1.4
+	test? ( dev-java/ant-junit )
+	${CDEPEND}"
 
 LICENSE="Apache-2.0"
 SLOT="1.0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc source test"
+IUSE=""
 
 S="${WORKDIR}/${P}-src"
 
@@ -35,13 +39,13 @@ src_unpack() {
 }
 
 src_test() {
-	eant test
+	ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {
-	java-pkg_newjar target/${P}*.jar ${PN}.jar
+	java-pkg_newjar target/${P}*.jar
 
-	dodoc RELEASE-NOTES.txt
+	dodoc RELEASE-NOTES.txt || die
 
 	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc ${S}/src/java/*
