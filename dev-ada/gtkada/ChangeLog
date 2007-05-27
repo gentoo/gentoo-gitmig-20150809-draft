@@ -1,11 +1,14 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.22 2007/05/27 18:25:01 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.23 2007/05/27 18:31:05 george Exp $
+
+  27 May 2007; George Shapovalov <george@gentoo.org> gtkada-2.8.0.ebuild:
+  fixed prestripping libs
 
 *gtkada-2.8.0 (27 May 2007)
 
   27 May 2007; George Shapovalov <george@gentoo.org> +gtkada-2.8.0.ebuild:
-  new version
+  new version (#174307)
 
   08 Apr 2007; Joseph Jezak <josejx@gentoo.org> gtkada-2.4.0-r2.ebuild:
   Marked ~ppc for bug #172416.

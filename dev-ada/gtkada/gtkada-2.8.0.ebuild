@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.1 2007/05/27 18:25:01 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.2 2007/05/27 18:31:05 george Exp $
 
 inherit eutils gnat
 
@@ -44,7 +44,7 @@ src_unpack() {
 	sed -i -e "/testgtk_dir/d" Makefile.in
 
 	# remove lib stripping
-	sed -i -e "/strip/d" src/Makefile.in
+	find src/ -name Makefile.in -exec sed -i -e "/strip/d" {} \;
 }
 
 lib_compile() {
