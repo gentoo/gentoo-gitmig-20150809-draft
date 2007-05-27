@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.2 2007/05/27 18:31:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.3 2007/05/27 18:35:33 george Exp $
 
 inherit eutils gnat
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~george/src/${Name}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="nls opengl"
 
 DEPEND="virtual/gnat
