@@ -199,6 +199,9 @@ main() {
 
 	# trigger executing initscript when /etc is writable
 	IN_HOTPLUG=1 /etc/init.d/udev-postmount start >/dev/null 2>/dev/null
+
+	# udev started successfully
+	return 0
 }
 
 main

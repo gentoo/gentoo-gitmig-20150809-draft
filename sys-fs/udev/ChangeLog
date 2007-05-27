@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.309 2007/05/25 13:51:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.310 2007/05/27 08:15:44 zzam Exp $
+
+*udev-111-r3 (27 May 2007)
+
+  27 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  -files/udev-start-111-r2.sh, +files/udev-start-111-r3.sh,
+  -udev-111-r2.ebuild, +udev-111-r3.ebuild:
+  Changed udev-start.sh to return an exit-code of 0, to not let baselayout
+  think udev failed, and start mdev afterwards, solving bug #179847.
 
 *udev-111-r2 (25 May 2007)
 
