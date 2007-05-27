@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.105 2007/05/27 07:34:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.106 2007/05/27 09:52:34 drac Exp $
+
+  27 May 2007; Samuli Suominen <drac@gentoo.org> -xfce4-4.2.3.2.ebuild:
+  Remove old version.
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> xfce4-4.4.1.ebuild:
   Stable on mips.
@@ -28,16 +31,6 @@
   11 Apr 2007; Joshua Nichols <nichoj@gentoo.org> +xfce4-4.4.1.ebuild:
   Version bump for 4.4.1.
 
-  06 Apr 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
-  Remove all KEYWORDS except mips because it's broken. Unsupported by upstream
-  and unsupported by gentoo-xfce.
-
-  23 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
-  Delete xfce4-toys dep.
-
-  23 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
-  Delete some obsolete deps.
-
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce4-4.4.0.ebuild:
   Stable on ppc64; bug #169987
 
@@ -51,7 +44,7 @@
   Stable on Alpha + IA64.
 
   11 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.2.3.2.ebuild:
-  Stop installing xffm and xfcalendar.
+  Remove deprecated deps.
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> xfce4-4.4.0.ebuild:
   Stable on ppc wrt bug 169987
@@ -70,9 +63,6 @@
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-4.4.0.ebuild:
   Keyworded on ~x86-fbsd
-
-  24 Feb 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.4.0.ebuild:
-  Remove whitespace from lines 28, 29, 30.
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org> -xfce4-4.3.99.2-r1.ebuild:
   Removing old version.
