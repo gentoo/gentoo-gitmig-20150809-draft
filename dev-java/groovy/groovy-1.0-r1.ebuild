@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0-r1.ebuild,v 1.2 2007/05/26 17:37:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0-r1.ebuild,v 1.3 2007/05/27 20:02:16 caster Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -13,7 +13,9 @@ SRC_URI="http://dist.codehaus.org/groovy/distributions/${MY_P/JSR/jsr}-src.tar.g
 LICENSE="codehaus-groovy"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="source"
+IUSE="bsf"
+# testcases won't even compile in current state
+RESTRICT="test"
 
 COMMON_DEPS="
 	=dev-java/asm-2.2*
@@ -24,27 +26,28 @@ COMMON_DEPS="
 	=dev-java/junit-3*
 	dev-java/qdox
 	>=dev-java/commons-cli-1.0
-	>=dev-java/bsf-2.3.0_rc1
 	>=dev-java/mockobjects-0.09
 	~dev-java/servletapi-2.4
 	=dev-java/mx4j-core-3.0*"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPS}"
 # FIXME doesn't compile with 1.6 due to JDBC api change
-DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
+DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+	bsf? ( >=dev-java/bsf-2.3 )
 	${COMMON_DEPS}"
+# needs to be keyworded
+#	test? ( dev-java/jmock )
 
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 #	epatch ${FILESDIR}/${P}-compiler-exit-code.patch
 
-	mkdir -p ${S}/target/lib
+	mkdir -p target/lib && cd target/lib
 
-	cd ${S}/target/lib
 	java-pkg_jar-from commons-cli-1
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from ant-core ant.jar
@@ -54,11 +57,21 @@ src_unpack() {
 	java-pkg_jar-from mockobjects
 	java-pkg_jar-from junit
 	java-pkg_jar-from servletapi-2.4
-	java-pkg_jar-from bsf-2.3
 	java-pkg_jar-from mx4j-core-3.0
+#	use test && java-pkg_jar-from --build-only jmock-1.0
+	if use bsf; then
+		# build-only because it's invoked only from bsf itself
+		# so no need to pollute classpath
+		java-pkg_jar-from --build-only bsf-2.3
+	else
+		cd "${S}"
+		# remove the adapter classes
+		rm -rf src/{main,test}/org/codehaus/groovy/bsf || die
+		sed -i -e '/org.codehaus.groovy.bsf/d' -e '/BSFTest/d' \
+			src/test/AllCodehausJavaTestsSuite.java || die
+	fi
 
-	cd ${S}
-
+	cd "${S}"
 	# We use ant NOT maven. This build.xml is generated using 'maven ant', and
 	# then the following tweaks:
 	#  - change libdir from /root/.ant/maven to target/lib
@@ -91,6 +104,10 @@ src_compile() {
 	jar uf ../../target/${MY_P}.jar  $(find -name *.class) || die "Failed to backpatch Console*.class"
 }
 
+src_test() {
+	eant test
+}
+
 src_install() {
 	java-pkg_newjar target/${MY_P}.jar
 	java-pkg_dolauncher "grok" --main org.codehaus.groovy.tools.Grok
@@ -98,8 +115,4 @@ src_install() {
 	java-pkg_dolauncher "groovy" --main groovy.ui.GroovyMain
 	java-pkg_dolauncher "groovysh" --main groovy.ui.InteractiveShell
 	java-pkg_dolauncher "groovyConsole" --main groovy.ui.Console
-}
-
-src_test() {
-	eant test
 }

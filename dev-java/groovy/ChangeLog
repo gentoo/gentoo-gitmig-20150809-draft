@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/groovy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.23 2007/05/26 17:37:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.24 2007/05/27 20:02:16 caster Exp $
+
+  27 May 2007; Vlastimil Babka <caster@gentoo.org> groovy-1.0-r1.ebuild:
+  Make BSF support optional via new local USE flag and minor style tweaks;
+  restrict test until it's at least compiling.
 
   26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> groovy-1.0-r1.ebuild:
   Add ~ppc.
