@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7305 2007/05/27 17:19:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7306 2007/05/27 23:15:51 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -351,11 +351,6 @@ media-sound/jsynthlib
 # java@gentoo.org if you need or use this package
 net-libs/jaimlib
 
-# Krzysiek Pawlik <nelchael@gentoo.org> (28 Apr 2007)
-# Package uses generation 1 eclasses and has stale upstream.
-# It will be removed from the tree around end of May.
-dev-java/qat
-
 # Vlastimil Babka <caster@gentoo.org> (28 Apr 2007)
 # Unused generation-1 fetch restricted binary libraries.
 # Will be moved to junkyard around 28 May.
@@ -387,17 +382,6 @@ dev-java/jmbus
 # removed around 28 May. Generation 2 revision is in
 # the java-overlay.
 dev-java/joscar
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (28 Apr 2007)
-# Package uses generation 1 eclasses and has stale upstream.
-# For JS use dev-java/rhino.
-# It will be removed from the tree around end of May.
-dev-java/fesi
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (28 Apr 2007)
-# Package uses generation 1 eclasses and has stale upstream.
-# It will be removed from the tree around end of May.
-dev-java/nice
 
 # Bryan Stine <battousai@gentoo.org> (26 Apr 2007)
 # Masked until it works with current baselayout and

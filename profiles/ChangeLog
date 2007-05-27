@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.428 2007/05/27 22:26:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.429 2007/05/27 23:15:52 nelchael Exp $
+
+  27 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Remove masks of removed packages.
 
   27 May 2007; Vlastimil Babka <caster@gentoo.org> use.local.desc:
   Add local bsf flag to dev-java/bsh
