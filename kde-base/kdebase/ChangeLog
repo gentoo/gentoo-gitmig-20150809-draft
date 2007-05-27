@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.367 2007/05/25 21:19:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.368 2007/05/27 15:19:59 philantrop Exp $
+
+  27 May 2007; Wulf C. Krueger <philantrop@gentoo.org> kdebase-3.5.7.ebuild:
+  Added a postinst message explaining how to avoid the problem of an outdated
+  ksycoca database (cf. bug 180004).
 
   25 May 2007; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.6-r3.ebuild,
   kdebase-3.5.7.ebuild:

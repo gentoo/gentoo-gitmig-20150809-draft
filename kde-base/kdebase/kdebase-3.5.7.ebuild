@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.7.ebuild,v 1.3 2007/05/25 21:19:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.7.ebuild,v 1.4 2007/05/27 15:19:59 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -29,7 +29,7 @@ DEPEND=">=media-libs/freetype-2
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( || ( dev-libs/dbus-qt3-old ( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
-		   =sys-apps/hal-0.5* )
+			=sys-apps/hal-0.5* )
 	xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )
 	x11-libs/libX11
 	x11-libs/libXau
@@ -197,5 +197,10 @@ pkg_postinst() {
 	elog "To enable gpg-agent and/or ssh-agent in KDE sessions,"
 	elog "edit ${KDEDIR}/env/agent-startup.sh and"
 	elog "${KDEDIR}/shutdown/agent-shutdown.sh"
+	echo
+	elog "If you can't open new konqueror windows and get something like"
+	elog "'WARNING: Outdated database found' when starting konqueror in a console, run"
+	elog "kbuildsycoca as the user you're running KDE under."
+	elog "This is NOT a bug."
 	echo
 }
