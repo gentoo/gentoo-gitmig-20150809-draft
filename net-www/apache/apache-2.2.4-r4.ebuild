@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r3.ebuild,v 1.2 2007/05/26 19:44:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.1 2007/05/27 16:15:54 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-${PF}"
-GENTOO_PATCHSTAMP="20070526"
+GENTOO_PATCHSTAMP="20070527"
 GENTOO_DEVSPACE="phreak"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
@@ -39,8 +39,6 @@ RDEPEND="${DEPEND}
 PDEPEND="~app-admin/apache-tools-${PV}"
 
 S="${WORKDIR}/httpd-${PV}"
-
-RESTRICT="primaryuri"
 
 pkg_setup() {
 	if use ldap && ! built_with_use 'dev-libs/apr-util' ldap ; then
@@ -267,7 +265,7 @@ src_install () {
 	dosym /etc/init.d/apache2 /usr/sbin/apache2ctl
 
 	# provide symlinks for all the stuff we no longer rename, bug 177697
-	for i in suexec; do
+	for i in suexec apxs; do
 		dosym /usr/sbin/${i} /usr/sbin/${i}2
 	done
 
