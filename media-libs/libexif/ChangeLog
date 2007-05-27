@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.68 2007/05/27 05:35:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.69 2007/05/27 13:03:35 ranger Exp $
+
+  27 May 2007; Brent Baude <ranger@gentoo.org> libexif-0.6.15.ebuild:
+  Marking libexif-0.6.15 ppc64 stable for bug 178081
 
 *libexif-0.6.15 (27 May 2007)
 
