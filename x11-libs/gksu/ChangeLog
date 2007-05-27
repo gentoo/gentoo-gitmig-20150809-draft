@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.39 2007/05/03 17:29:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.40 2007/05/27 04:07:11 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org> gksu-2.0.0.ebuild:
+  Stable on mips.
 
   03 May 2007; Daniel Gryniewicz <dang@gentoo.org> gksu-2.0.0.ebuild:
   Install docs; bug #176871
