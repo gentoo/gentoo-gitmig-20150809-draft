@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/stripes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/stripes/ChangeLog,v 1.9 2007/05/20 06:39:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/stripes/ChangeLog,v 1.10 2007/05/27 15:55:50 ulm Exp $
+
+  27 May 2007; Ulrich Mueller <ulm@gentoo.org> -stripes-0.2.ebuild:
+  Remove old.
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org>
   stripes-0.2-r1.ebuild:
