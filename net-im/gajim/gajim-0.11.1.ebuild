@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.1.ebuild,v 1.7 2007/05/20 20:35:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.1.ebuild,v 1.8 2007/05/27 12:53:12 welp Exp $
 
 inherit multilib python eutils
 
@@ -64,6 +64,11 @@ pkg_setup() {
 			eerror "support: dbus gtk python"
 			die "Please rebuild avahi with these use flags enabled."
 		fi
+	fi
+
+	if has_version ">=dev-lang/python-2.5" && ! built_with_use dev-lang/python sqlite; then
+		eerror "Please rebuild python with USE=\"sqlite\""
+		die "USE=\"sqlite\" needed for python"
 	fi
 }
 

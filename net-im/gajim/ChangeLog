@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.51 2007/05/26 21:38:27 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.52 2007/05/27 12:53:12 welp Exp $
+
+  27 May 2007; Peter Weller <welp@gentoo.org> gajim-0.11.1.ebuild:
+  Added check to ensure that python >=2.5 has USE="sqlite"
 
   26 May 2007; Peter Weller <welp@gentoo.org> gajim-0.10.1.ebuild,
   -gajim-0.11.0.7951.ebuild:
