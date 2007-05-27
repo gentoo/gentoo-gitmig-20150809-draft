@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.15 2007/05/06 07:52:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.16 2007/05/27 00:14:19 betelgeuse Exp $
+
+  27 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  avalon-framework-4.1.5-r1.ebuild, avalon-framework-4.2.0-r1.ebuild:
+  Switch to java-pkg_dojavadoc and otherwise cleanup ebuilds.
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   avalon-framework-4.1.5.ebuild:
@@ -63,6 +67,7 @@
   avalon-framework-4.2.0.ebuild:
   Added ~ppc64 to KEYWORDS
 
+*avalon-framework-4.2.0 (28 Feb 2005)
 *avalon-framework-4.1.5 (28 Feb 2005)
 
   28 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
