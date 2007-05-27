@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.77 2007/05/23 00:44:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.78 2007/05/27 14:56:34 philantrop Exp $
+
+  27 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  konqueror-3.5.7.ebuild:
+  Added a postinst message explaining how to avoid the problem of an outdated
+  ksycoca database (cf. bug 180004).
 
 *konqueror-3.5.7 (23 May 2007)
 

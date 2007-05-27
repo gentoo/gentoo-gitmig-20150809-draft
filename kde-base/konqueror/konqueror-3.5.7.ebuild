@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.7.ebuild,v 1.1 2007/05/23 00:44:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.7.ebuild,v 1.2 2007/05/27 14:56:34 philantrop Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -31,4 +31,15 @@ pkg_preinst() {
 	# if it does not find konqueror.desktop in the legacy path.
 	dodir ${PREFIX}/share/applications/kde
 	dosym ../../applnk/konqueror.desktop ${PREFIX}/share/applications/kde/konqueror.desktop
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	echo
+	elog "If you can't open new ${PN} windows and get something like"
+	elog "'WARNING: Outdated database found' when starting ${PN} in a console, run"
+	elog "kbuildsycoca as the user you're running KDE under."
+	elog "This is NOT a bug."
+	echo
 }
