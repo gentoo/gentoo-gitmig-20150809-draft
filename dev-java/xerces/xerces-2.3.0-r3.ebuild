@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r3.ebuild,v 1.1 2007/02/12 00:51:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r3.ebuild,v 1.2 2007/05/27 16:21:09 caster Exp $
 
 WANT_SPLIT_ANT=true
 JAVA_PKG_IUSE="doc examples source"
@@ -48,5 +48,5 @@ src_install() {
 		dodir /usr/share/doc/${PF}/examples
 		cp -a samples/* ${D}/usr/share/doc/${PF}
 	fi
-	use source && java-pkg_dosrc ${S}/src/*
+	use source && java-pkg_dosrc ${S}/src/org
 }
