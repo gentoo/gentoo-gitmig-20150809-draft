@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.41 2007/03/09 20:27:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.42 2007/05/27 00:34:03 betelgeuse Exp $
+
+  27 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-digester-1.6-r1.ebuild:
+  Removed old version still using generation 1.
 
   09 Mar 2007; nixnut <nixnut@gentoo.org> commons-digester-1.7-r2.ebuild:
   Stable on ppc wrt bug 169745
