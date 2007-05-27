@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.13 2007/05/26 20:34:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.14 2007/05/27 20:05:49 tester Exp $
+
+  27 May 2007; <tester@gentoo.org>
+  +files/pidgin-2.0.1-purple-remote-syntax-fix.patch, pidgin-2.0.1.ebuild:
+  Add patch to fix purple-remote, bug #179958
 
   26 May 2007; Olivier Crête <tester@gentoo.org> pidgin-2.0.0.ebuild,
   pidgin-2.0.1.ebuild:

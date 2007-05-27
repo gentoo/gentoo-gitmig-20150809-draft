@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.2 2007/05/26 20:34:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.3 2007/05/27 20:05:49 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -109,7 +109,6 @@ print_pidgin_warning() {
 	ewarn
 	ewarn "Please read the pidgin FAQ at http://developer.pidgin.im/wiki/FAQ"
 	ewarn
-	einfo
 }
 
 pkg_setup() {
@@ -161,6 +160,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-2.0.0-cchar_t-undeclared.patch"
+	epatch "${FILESDIR}/pidgin-2.0.1-purple-remote-syntax-fix.patch"
 }
 
 src_compile() {
