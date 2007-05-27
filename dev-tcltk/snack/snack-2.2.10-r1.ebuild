@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10.ebuild,v 1.3 2007/05/27 01:55:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r1.ebuild,v 1.1 2007/05/27 01:55:51 matsuu Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.speech.kth.se/snack/dist/${PN}${PV}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="alsa python threads vorbis"
+IUSE="alsa examples python threads vorbis"
 
 RESTRICT="test" # Bug 78354
 
@@ -36,10 +36,12 @@ src_compile() {
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
+
+
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	if use python ; then
 		cd "${S}"/../python
@@ -50,4 +52,15 @@ src_install() {
 
 	dodoc README changes
 	dohtml doc/*
+
+	if use examples ; then
+		sed -i -e 's/wish[0-9.]+/wish/g' demos/tcl/* || die
+		docinto examples/tcl
+		dodoc demos/tcl/*
+
+		if use python ; then
+			docinto examples/python
+			dodoc demos/python/*
+		fi
+	fi
 }
