@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.0.0_rc2-r1.ebuild,v 1.1 2007/05/24 18:49:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.0.0_rc2-r1.ebuild,v 1.2 2007/05/27 19:20:23 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2
@@ -15,16 +15,16 @@ SRC_URI="http://dist.codehaus.org/${PN}/${PN}-src-${MY_PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc source test"
+IUSE="bsf"
 
 COMMON_DEPEND=">=dev-java/jline-0.9.91
 	=dev-java/asm-2.2*
-	>=dev-java/bsf-2.3
 	dev-java/backport-util-concurrent
 	!<dev-java/jruby-1.0.0_rc2-r1"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
+	bsf? ( >=dev-java/bsf-2.3 )
 	test? (
 		=dev-java/junit-3*
 		dev-java/ant-junit
@@ -34,11 +34,6 @@ DEPEND=">=virtual/jdk-1.4
 PDEPEND="dev-ruby/rubygems"
 
 S="${WORKDIR}/${MY_P}"
-
-EANT_DOC_TARGET="create-apidocs"
-
-# only use javac, see http://jira.codehaus.org/browse/JRUBY-675
-JAVA_PKG_FILTER_COMPILER="ecj-3.2 ecj-3.1 jikes"
 
 RUBY_HOME=/usr/share/${PN}/lib/ruby
 SITE_RUBY=${RUBY_HOME}/site_ruby
@@ -55,6 +50,9 @@ pkg_setup() {
 		ewarn "dev-java/jruby now uses dev-lang/ruby's gems directory by creating symlinks."
 		ewarn "${GEMS} is a directory right now, which will cause problems when being merged onto the filesystem."
 	fi
+
+	# only use javac, see http://jira.codehaus.org/browse/JRUBY-675
+	java-pkg_force-compiler javac
 }
 
 src_unpack() {
@@ -64,21 +62,43 @@ src_unpack() {
 	# FEATURES="-userpriv"
 	# see http://bugs.gentoo.org/show_bug.cgi?id=170058
 	epatch ${FILESDIR}/${PN}-0.9.8-sandbox.patch
+	# search only lib, kills jdk1.4+ property which we set manually
+	java-ant_ignore-system-classes
 
 	cd ${S}/lib
-	rm *.jar
+	rm -v *.jar || die
 
 	java-pkg_jar-from --build-only ant-core ant.jar
 	java-pkg_jar-from asm-2.2 asm.jar
 	java-pkg_jar-from asm-2.2 asm-commons.jar
-	java-pkg_jar-from bsf-2.3
 	java-pkg_jar-from jline
 	java-pkg_jar-from backport-util-concurrent
 	use test && java-pkg_jar-from --build-only junit
+
+	# build-only because it's just BSF adapter classes and won't be used
+	# unless invoked from bsf itself, so no need to pollute classpath
+	if use bsf; then
+		java-pkg_jar-from --build-only bsf-2.3
+	else
+		cd ${S}
+		# testcases depending on bsf
+		rm test/org/jruby/test/TestAdoptedThreading.java || die
+		rm test/org/jruby/javasupport/test/TestBSF.java || die
+		sed -i -e '/TestBSF.class/d' \
+			test/org/jruby/javasupport/test/JavaSupportTestSuite.java || die
+		sed -i -e '/TestAdoptedThreading.class/d' \
+			test/org/jruby/test/MainTestSuite.java || die
+	fi
 }
 
 src_compile() {
-	eant jar $(use_doc create-apidocs) -Djruby.home=${T}/.jruby
+	eant jar $(use_doc create-apidocs) -Djruby.home=${T}/.jruby -Djdk1.4+=true
+}
+
+src_test() {
+	# needs bsf's runtime deps to work
+	use bsf && java-pkg_jar-from --into lib --with-dependencies bsf-2.3
+	ANT_TASKS="ant-junit ant-trax" eant test -Djdk1.4+=true
 }
 
 src_install() {
@@ -121,6 +141,3 @@ pkg_preinst() {
 	fi
 }
 
-src_test() {
-	ANT_TASKS="ant-junit ant-trax" eant test
-}

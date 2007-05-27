@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.24 2007/05/24 18:49:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.25 2007/05/27 19:20:23 caster Exp $
+
+  27 May 2007; Vlastimil Babka <caster@gentoo.org>
+  jruby-1.0.0_rc2-r1.ebuild:
+  Make BSF support optional via new local USE flag and minor style tweaks.
 
 *jruby-1.0.0_rc2-r1 (24 May 2007)
 
