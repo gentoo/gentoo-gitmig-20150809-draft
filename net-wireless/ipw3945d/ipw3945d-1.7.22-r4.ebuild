@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.8 2007/04/16 14:47:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.9 2007/05/27 16:34:37 phreak Exp $
 
 inherit eutils
 
@@ -12,12 +12,10 @@ LICENSE="ipw3945"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-# The daemon is binary only, is setXid, dyn linked,
-# and using lazy bindings
-RESTRICT="stricter"
-
 IUSE=""
 DEPEND=""
+
+RESTRICT="strip"
 
 pkg_setup() {
 	# Create a user for the ipw3945d daemon
