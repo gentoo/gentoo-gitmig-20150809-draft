@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7302 2007/05/26 23:56:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7303 2007/05/27 00:11:51 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -844,10 +844,6 @@ media-font/mikachan-font
 # Libnotify doesn't work with dbus-python-0.80.x
 # fixed in a newer version
 =net-im/gajim-0.11-r3
-
-# Renat Lumpau <rl03@gentoo.org> (06 Feb 2007)
-# masking a bleeding edge version
->=www-apps/bugzilla-2.23.0
 
 # Alec Warner <antarus@gentoo.org> (05 Feb 2007)
 # Masked to security problems, use 1.23-r1 until I fix it
