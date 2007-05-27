@@ -1,0 +1,21 @@
+diff -ur xfce4-weather-plugin-0.6.0.orig/panel-plugin/weather-http.c xfce4-weather-plugin-0.6.0/panel-plugin/weather-http.c
+--- xfce4-weather-plugin-0.6.0.orig/panel-plugin/weather-http.c	2007-05-27 10:05:48 +0100
++++ xfce4-weather-plugin-0.6.0/panel-plugin/weather-http.c	2007-05-27 10:07:44 +0100
+@@ -171,7 +171,7 @@
+           return FALSE;
+         }
+     }
+-  else if (errno != EAGAIN)        /* some other error happened */
++  else if (errno != EAGAIN && errno != ENOTCONN)        /* some other error happened */
+     {
+ 
+       DBG ("file desc: %d", request->fd);
+@@ -239,7 +239,7 @@
+       callback (TRUE, request->cb_data);
+       return FALSE;
+     }
+-  else if (errno != EAGAIN)
++  else if (errno != EAGAIN && errno != ENOTCONN)
+     {
+       perror ("keep_receiving()");
+       request->cb_function (FALSE, request->cb_data);

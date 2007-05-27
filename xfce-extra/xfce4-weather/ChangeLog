@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-weather
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.35 2007/03/15 16:32:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.36 2007/05/27 09:31:50 welp Exp $
+
+*xfce4-weather-0.6.0-r1 (27 May 2007)
+
+  27 May 2007; Peter Weller <welp@gentoo.org>
+  +files/xfce4-weather-0.6.0-freebsd.patch, +xfce4-weather-0.6.0-r1.ebuild:
+  Added patch for FreeBSD, revbumped
 
   15 Mar 2007; Samuli Suominen <drac@gentoo.org> xfce4-weather-0.6.0.ebuild:
   RESTRICT="test" which is not supported by goodies upstream.
