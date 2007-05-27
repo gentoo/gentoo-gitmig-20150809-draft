@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-animation
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.5 2007/01/10 22:01:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.6 2007/05/27 00:07:08 caster Exp $
+
+  27 May 2007; Vlastimil Babka <caster@gentoo.org>
+  jgoodies-animation-1.2.0.ebuild:
+  Migrate to split-ant.
 
 *jgoodies-animation-1.2.0 (10 Jan 2007)
 

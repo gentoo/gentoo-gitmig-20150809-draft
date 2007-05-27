@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.2.0.ebuild,v 1.1 2007/01/10 22:01:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.2.0.ebuild,v 1.2 2007/05/27 00:07:08 caster Exp $
+
+JAVA_PKG_IUSE="doc examples source test"
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,13 +14,11 @@ SRC_URI="http://www.jgoodies.com/download/libraries/animation-${MY_V}.zip"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="doc examples source test"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4
 	app-arch/unzip
-	source? ( app-arch/zip )
-	test? ( dev-java/junit dev-java/ant-tasks )"
+	test? ( =dev-java/junit-3* dev-java/ant-junit )"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/animation-${PV}"
@@ -28,11 +28,10 @@ src_unpack() {
 	cd ${S}
 
 	# Remove the packaged jar
-	rm -v lib/*.jar *.jar
+	rm -v lib/*.jar *.jar || die
 
-	# Copy the Gentoo'ized build.xml
 	# cp ${FILESDIR}/build-${PV}.xml ${S}
-	xml-rewrite.py -f build.xml -d -e javac -a bootclasspath \
+	java-ant_xml-rewrite -f build.xml -d -e javac -a bootclasspath \
 		|| die "Failed to fix bootclasspath"
 }
 src_compile() {
