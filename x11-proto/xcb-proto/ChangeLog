@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.15 2007/04/21 15:25:06 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.16 2007/05/27 02:25:27 kumba Exp $
+
+  27 May 2007; Joshua Kinard <kumba@gentoo.org> xcb-proto-1.0.ebuild:
+  Stable on mips.
 
   21 Apr 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   -xcb-proto-0.9.93.ebuild:
