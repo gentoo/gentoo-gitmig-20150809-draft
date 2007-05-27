@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.41 2007/05/21 23:02:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.42 2007/05/27 01:18:18 matsuu Exp $
+
+  27 May 2007; MATSUU Takuto <matsuu@gentoo.org> -skk-jisyo-200410.ebuild,
+  -skk-jisyo-200501.ebuild, skk-jisyo-200705.ebuild:
+  Fixed LICENSE.
+  Removed old versions.
 
 *skk-jisyo-200705 (21 May 2007)
 
