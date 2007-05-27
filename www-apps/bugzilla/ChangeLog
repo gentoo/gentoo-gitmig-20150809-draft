@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.83 2007/05/12 04:20:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.84 2007/05/27 00:37:55 rl03 Exp $
+
+*bugzilla-3.0 (27 May 2007)
+
+  27 May 2007; Renat Lumpau <rl03@gentoo.org>
+  -files/2.23/postinstall-en.txt, +files/3.0/postinstall-en.txt,
+  -files/2.23/reconfig, +files/3.0/reconfig, -bugzilla-2.23.4.ebuild,
+  +bugzilla-3.0.ebuild:
+  Version bump
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> bugzilla-2.18.6.ebuild,
   bugzilla-2.20.4.ebuild, bugzilla-2.22.2.ebuild:
