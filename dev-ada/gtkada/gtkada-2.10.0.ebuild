@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.4 2007/05/28 07:18:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.1 2007/05/28 07:18:23 george Exp $
 
-inherit eutils gnat
+inherit eutils gnat versionator
 
 Name="GtkAda-gpl"
+MajorPV=$(get_version_component_range 1-2)
 DESCRIPTION="Gtk+ bindings to the Ada language"
 HOMEPAGE="https://libre2.adacore.com/GtkAda/"
 SRC_URI="http://dev.gentoo.org/~george/src/${Name}-${PV}.tgz"
@@ -15,10 +16,11 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="nls opengl"
 
 DEPEND="virtual/gnat
-	>=dev-libs/glib-2.8.0
-	>=x11-libs/pango-1.10.0
-	>=dev-libs/atk-1.10.0
-	>=x11-libs/gtk+-2.8.13
+	>=x11-libs/cairo-1.2.6
+	>=dev-libs/glib-2.12.4
+	>=x11-libs/pango-1.14.9
+	>=dev-libs/atk-1.12.1
+	>=x11-libs/gtk+-2.10.9
 	>=sys-apps/sed-4"
 RDEPEND=""
 
@@ -27,27 +29,27 @@ S="${WORKDIR}/${Name}-${PV}"
 
 # only needed for gcc-3.x based gnat profiles, but matching them individually
 # would be insane
-QA_EXECSTACK="${AdalibLibTop:1}/*/gtkada/libgtkada-2.8.so.0"
+QA_EXECSTACK="${AdalibLibTop:1}/*/gtkada/libgtkada-${MajorPV}.so.0"
 
 src_unpack() {
 	gnat_src_unpack
 
 	cd ${S}
 	sed -i -e "s:-aI\$prefix/include/gtkada:-aI${AdalibSpecsDir}/gtkada:" \
-		src/gtkada-config.in
+		src/tools/gtkada-config.in
 
 	# disable building tests to avoid waisting time while building for every
 	# profile. The tests are nonetheless installed under doc dir.
 	sed -i -e "/testgtk_dir/d" Makefile.in
 
 	# remove lib stripping
-	find src/ -name Makefile.in -exec sed -i -e "/strip/d" {} \;
+	sed -i -e "s: strip \$(LIBNAME)::" src/Makefile.common.in
 }
 
 lib_compile() {
 	# some profile specific fixes first
 	sed -i -e "s:\$prefix/lib\(/gtkada\)*:${AdalibLibTop}/$1/gtkada:" \
-		src/gtkada-config.in
+		src/tools/gtkada-config.in
 
 	local myconf
 	use opengl && myconf="--with-GL=auto" || myconf="--with-GL=no"
@@ -61,9 +63,10 @@ lib_install() {
 	# make install misses all the .so and .a files and otherwise creates more
 	# problems than it's worth. Will do everything manually
 	mkdir -p ${DL}
-	cp src/*.ali src/gtkada-config ${DL}
-	find -iname "*.a" -exec mv {} ${DL} \;
-	find -iname "*.so*" -exec mv {} ${DL} \;
+	mv src/lib-obj/* src/*/obj/* src/tools/gtkada-config ${DL}
+	rm ${DL}/*.o
+	chmod 0444 ${DL}/*.ali
+	chmod 0755 ${DL}/gtkada-config
 }
 
 src_install() {
@@ -75,16 +78,18 @@ src_install() {
 
 	gnat_src_install
 
-	cd ${S}
 	#specs
+	cd ${S}/src
 	dodir "${AdalibSpecsDir}/${PN}"
 	insinto "${AdalibSpecsDir}/${PN}"
-	doins src/*.ad?
+	doins *.ad? glade/*.ad? gnome/*.ad? opengl/*.{ad?,c,h}
 
 	#docs
+	cd ${S}
 	dodoc ANNOUNCE AUTHORS COPYING README
 	cp -dPr examples/ testgtk/ "${D}/usr/share/doc/${PF}"
-	cd docs
+	cd ${S}/docs
+	doinfo gtkada_ug/gtkada_ug.info
 	ps2pdf gtkada_ug/gtkada_ug.ps
 	ps2pdf gtkada_rm/gtkada_rm.ps
 	cp gtkada_ug.pdf gtkada_rm.pdf "${D}/usr/share/doc/${PF}"
