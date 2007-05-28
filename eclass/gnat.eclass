@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.23 2007/05/28 12:47:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.24 2007/05/28 15:49:48 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -305,6 +305,7 @@ gnat_src_compile() {
 			lib_compile ${compilers[${i}]} || die "failed compiling for ${compilers[${i}]}"
 
 			# call install callback
+			cd ${SL}
 			lib_install ${compilers[${i}]} || die "failed installing profile-specific part for ${compilers[${i}]}"
 			# move installed and cleanup
 			mv ${DL} ${DL}-${compilers[${i}]}
