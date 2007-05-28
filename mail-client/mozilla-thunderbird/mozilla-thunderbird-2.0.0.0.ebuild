@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.10 2007/05/20 14:06:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.11 2007/05/28 17:03:15 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -75,7 +75,7 @@ linguas() {
 				fi
 			done
 		fi
-		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
 	elog "Selected language packs (first will be default): $linguas"
 }
