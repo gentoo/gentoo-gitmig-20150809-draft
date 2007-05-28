@@ -1,6 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+find_mdev() {
+	if [ -x /sbin/mdev ] ; then
+		echo "/sbin/mdev"
+	else
+		echo "/bin/busybox mdev"
+	fi
+}
+
 populate_mdev() {
 	# populate /dev with devices already found by the kernel
 
@@ -10,7 +18,7 @@ populate_mdev() {
 	fi
 
 	ebegin "Populating /dev with existing devices with mdev -s"
-	mdev -s
+	$(find_mdev) -s
 	eend $?
 
 	return 0
@@ -80,7 +88,7 @@ main() {
 		ebegin "Setting up proper hotplug agent"
 		eindent
 		einfo "Setting /sbin/mdev as hotplug agent ..."
-		echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+		echo $(find_mdev) > /proc/sys/kernel/hotplug
 		eoutdent
 		eend 0
 	fi
