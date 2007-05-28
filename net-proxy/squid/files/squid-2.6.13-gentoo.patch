@@ -1,6 +1,30 @@
+diff -Nru squid-2.6.STABLE13.orig/helpers/basic_auth/MSNT/confload.c squid-2.6.STABLE13/helpers/basic_auth/MSNT/confload.c
+--- squid-2.6.STABLE13.orig/helpers/basic_auth/MSNT/confload.c	2002-06-26 22:09:48.000000000 +0300
++++ squid-2.6.STABLE13/helpers/basic_auth/MSNT/confload.c	2007-05-28 08:16:10.000000000 +0300
+@@ -24,7 +24,7 @@
+ 
+ /* Path to configuration file */
+ #ifndef SYSCONFDIR
+-#define SYSCONFDIR "/usr/local/squid/etc"
++#define SYSCONFDIR "/etc/squid"
+ #endif
+ #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
+ 
+diff -Nru squid-2.6.STABLE13.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-2.6.STABLE13/helpers/basic_auth/MSNT/msntauth.conf.default
+--- squid-2.6.STABLE13.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2002-06-26 21:44:28.000000000 +0300
++++ squid-2.6.STABLE13/helpers/basic_auth/MSNT/msntauth.conf.default	2007-05-28 08:15:06.000000000 +0300
+@@ -8,6 +8,6 @@
+ server other_PDC	other_BDC	otherdomain
+ 
+ # Denied and allowed users. Comment these if not needed.
+-#denyusers	/usr/local/squid/etc/msntauth.denyusers
+-#allowusers	/usr/local/squid/etc/msntauth.allowusers
++#denyusers	/etc/squid/msntauth.denyusers
++#allowusers	/etc/squid/msntauth.allowusers
+ 
 diff -Nru squid-2.6.STABLE13.orig/helpers/basic_auth/SMB/Makefile.am squid-2.6.STABLE13/helpers/basic_auth/SMB/Makefile.am
 --- squid-2.6.STABLE13.orig/helpers/basic_auth/SMB/Makefile.am	2005-05-17 19:56:26.000000000 +0300
-+++ squid-2.6.STABLE13/helpers/basic_auth/SMB/Makefile.am	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/helpers/basic_auth/SMB/Makefile.am	2007-05-28 08:13:59.000000000 +0300
 @@ -14,7 +14,7 @@
  ## FIXME: autoconf should test for the samba path.
  
@@ -12,7 +36,7 @@ diff -Nru squid-2.6.STABLE13.orig/helpers/basic_auth/SMB/Makefile.am squid-2.6.S
  libexec_SCRIPTS	= $(SMB_AUTH_HELPER)
 diff -Nru squid-2.6.STABLE13.orig/helpers/basic_auth/SMB/smb_auth.sh squid-2.6.STABLE13/helpers/basic_auth/SMB/smb_auth.sh
 --- squid-2.6.STABLE13.orig/helpers/basic_auth/SMB/smb_auth.sh	2001-01-08 01:36:46.000000000 +0200
-+++ squid-2.6.STABLE13/helpers/basic_auth/SMB/smb_auth.sh	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/helpers/basic_auth/SMB/smb_auth.sh	2007-05-28 08:13:59.000000000 +0300
 @@ -24,7 +24,7 @@
  read AUTHSHARE
  read AUTHFILE
@@ -33,7 +57,7 @@ diff -Nru squid-2.6.STABLE13.orig/helpers/basic_auth/SMB/smb_auth.sh squid-2.6.S
  
 diff -Nru squid-2.6.STABLE13.orig/snmplib/snmp_api.c squid-2.6.STABLE13/snmplib/snmp_api.c
 --- squid-2.6.STABLE13.orig/snmplib/snmp_api.c	2006-06-02 20:32:44.000000000 +0300
-+++ squid-2.6.STABLE13/snmplib/snmp_api.c	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/snmplib/snmp_api.c	2007-05-28 08:13:59.000000000 +0300
 @@ -121,7 +121,7 @@
  }
  
@@ -43,9 +67,21 @@ diff -Nru squid-2.6.STABLE13.orig/snmplib/snmp_api.c squid-2.6.STABLE13/snmplib/
   * the input pdu.  length is the length of the input packet.  If any errors
   * are encountered, NULL is returned.  If not, the community is.
   */
+diff -Nru squid-2.6.STABLE13.orig/src/access_log.c squid-2.6.STABLE13/src/access_log.c
+--- squid-2.6.STABLE13.orig/src/access_log.c	2007-02-03 23:59:24.000000000 +0200
++++ squid-2.6.STABLE13/src/access_log.c	2007-05-28 08:15:36.000000000 +0300
+@@ -1225,7 +1225,7 @@
+ 	LogfileStatus = LOG_ENABLE;
+     }
+ #if HEADERS_LOG
+-    headerslog = logfileOpen("/usr/local/squid/logs/headers.log", MAX_URL << 1, 0);
++    headerslog = logfileOpen("/var/log/squid/headers.log", MAX_URL << 1, 0);
+     assert(NULL != headerslog);
+ #endif
+ #if FORW_VIA_DB
 diff -Nru squid-2.6.STABLE13.orig/src/auth/digest/auth_digest.c squid-2.6.STABLE13/src/auth/digest/auth_digest.c
 --- squid-2.6.STABLE13.orig/src/auth/digest/auth_digest.c	2006-07-31 02:27:04.000000000 +0300
-+++ squid-2.6.STABLE13/src/auth/digest/auth_digest.c	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/auth/digest/auth_digest.c	2007-05-28 08:13:59.000000000 +0300
 @@ -1271,7 +1271,7 @@
      nonce = authenticateDigestNonceFindNonce(digest_request->nonceb64);
      if (!nonce) {
@@ -68,7 +104,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/auth/digest/auth_digest.c squid-2.6.STABLE
  	/* we don't need the scheme specific data anymore */
 diff -Nru squid-2.6.STABLE13.orig/src/cf.data.pre squid-2.6.STABLE13/src/cf.data.pre
 --- squid-2.6.STABLE13.orig/src/cf.data.pre	2007-04-25 00:30:03.000000000 +0300
-+++ squid-2.6.STABLE13/src/cf.data.pre	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/cf.data.pre	2007-05-28 08:13:59.000000000 +0300
 @@ -344,12 +344,12 @@
  NAME: htcp_port
  IFDEF: USE_HTCP
@@ -174,7 +210,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/cf.data.pre squid-2.6.STABLE13/src/cf.data
  NAME: snmp_access
 diff -Nru squid-2.6.STABLE13.orig/src/client_side.c squid-2.6.STABLE13/src/client_side.c
 --- squid-2.6.STABLE13.orig/src/client_side.c	2007-03-20 23:26:34.000000000 +0200
-+++ squid-2.6.STABLE13/src/client_side.c	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/client_side.c	2007-05-28 08:13:59.000000000 +0300
 @@ -4591,14 +4591,7 @@
  	debug(83, 2) ("clientNegotiateSSL: Session %p reused on FD %d (%s:%d)\n", SSL_get_session(ssl), fd, fd_table[fd].ipaddr, (int) fd_table[fd].remote_port);
      } else {
@@ -192,7 +228,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/client_side.c squid-2.6.STABLE13/src/clien
  	debug(83, 2) ("clientNegotiateSSL: New session %p on FD %d (%s:%d)\n", SSL_get_session(ssl), fd, fd_table[fd].ipaddr, (int) fd_table[fd].remote_port);
 diff -Nru squid-2.6.STABLE13.orig/src/defines.h squid-2.6.STABLE13/src/defines.h
 --- squid-2.6.STABLE13.orig/src/defines.h	2007-02-04 00:58:20.000000000 +0200
-+++ squid-2.6.STABLE13/src/defines.h	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/defines.h	2007-05-28 08:13:59.000000000 +0300
 @@ -259,7 +259,7 @@
  
  /* were to look for errors if config path fails */
@@ -204,7 +240,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/defines.h squid-2.6.STABLE13/src/defines.h
  /* gb_type operations */
 diff -Nru squid-2.6.STABLE13.orig/src/delay_pools.c squid-2.6.STABLE13/src/delay_pools.c
 --- squid-2.6.STABLE13.orig/src/delay_pools.c	2006-10-23 14:22:21.000000000 +0300
-+++ squid-2.6.STABLE13/src/delay_pools.c	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/delay_pools.c	2007-05-28 08:13:59.000000000 +0300
 @@ -613,7 +613,7 @@
  }
  
@@ -216,7 +252,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/delay_pools.c squid-2.6.STABLE13/src/delay
   */
 diff -Nru squid-2.6.STABLE13.orig/src/main.c squid-2.6.STABLE13/src/main.c
 --- squid-2.6.STABLE13.orig/src/main.c	2007-03-13 00:25:40.000000000 +0200
-+++ squid-2.6.STABLE13/src/main.c	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/main.c	2007-05-28 08:13:59.000000000 +0300
 @@ -372,6 +372,22 @@
      asnFreeMemory();
  }
@@ -296,7 +332,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/main.c squid-2.6.STABLE13/src/main.c
  	squid_signal(SIGINT, SIG_IGN, SA_RESTART);
 diff -Nru squid-2.6.STABLE13.orig/src/Makefile.am squid-2.6.STABLE13/src/Makefile.am
 --- squid-2.6.STABLE13.orig/src/Makefile.am	2007-05-06 01:06:55.000000000 +0300
-+++ squid-2.6.STABLE13/src/Makefile.am	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/Makefile.am	2007-05-28 08:13:59.000000000 +0300
 @@ -320,12 +320,12 @@
  DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
  DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
@@ -315,7 +351,7 @@ diff -Nru squid-2.6.STABLE13.orig/src/Makefile.am squid-2.6.STABLE13/src/Makefil
  DEFAULT_DISKD		= $(libexecdir)/`echo diskd-daemon | sed '$(transform);s/$$/$(EXEEXT)/'`
 diff -Nru squid-2.6.STABLE13.orig/src/mib.txt squid-2.6.STABLE13/src/mib.txt
 --- squid-2.6.STABLE13.orig/src/mib.txt	2006-09-22 05:49:24.000000000 +0300
-+++ squid-2.6.STABLE13/src/mib.txt	2007-05-28 07:26:25.000000000 +0300
++++ squid-2.6.STABLE13/src/mib.txt	2007-05-28 08:13:59.000000000 +0300
 @@ -314,7 +314,7 @@
                  MAX-ACCESS read-only
                  STATUS current
