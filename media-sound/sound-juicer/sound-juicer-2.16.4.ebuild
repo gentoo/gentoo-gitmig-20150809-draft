@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.4.ebuild,v 1.1 2007/04/27 19:40:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.4.ebuild,v 1.2 2007/05/28 07:38:35 leio Exp $
 
 inherit gnome2
 
@@ -41,6 +41,12 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 # needed to get around some sandboxing checks
 export GST_INSPECT=/bin/true
+
+src_unpack() {
+	gnome2_src_unpack
+	# Fix tests. Upstream SVN has this fixed so we can probably remove it for next version
+	echo "data/sound-juicer.desktop.in" >> "${S}/po/POTFILES.skip"
+}
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
