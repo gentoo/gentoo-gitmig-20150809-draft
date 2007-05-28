@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.351 2007/05/27 13:03:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.352 2007/05/28 22:26:38 drac Exp $
 
 # Keep them sorted
 
@@ -358,6 +358,7 @@ xmlrpc - Support for xml-rpc library
 xosd - Sends display using the X On Screen Display library
 xpm - Adds support for XPM graphics format
 xprint - Support for xprint, http://www.mozilla.org/projects/xprint/
+xscreensaver - Adds support for XScreenSaver extension.
 xsl - Check/Support flag for XSL library (version 1)
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec

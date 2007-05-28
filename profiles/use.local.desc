@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2837 2007/05/28 22:18:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2838 2007/05/28 22:26:38 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -727,10 +727,7 @@ kde-base/juk:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via Gnokii.
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format.
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice.
-kde-base/kdeartwork-kscreensaver:xscreensaver - Detection of xscreensavers.
-kde-base/kdeartwork:xscreensaver - Detection of xscreensavers.
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
-kde-base/kdebase:xscreensaver - support for the XScreenSaver extension.
 kde-base/kdebase:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig.
 kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray.
@@ -745,11 +742,8 @@ kde-base/kdenetwork:sametime - Support for the Sametime protocol for instant mes
 kde-base/kdepim:gnokii - Address synchronization with mobile phones via Gnokii.
 kde-base/kdesdk-meta:subversion - Support for the subversion ioslave.
 kde-base/kdesdk:subversion - Support for the subversion ioslave.
-kde-base/kdesktop:xscreensaver - Support for XScreenSaver extension.
 kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
-kde-base/kdeutils:xscreensaver - Support for XScreenSaver extension.
 kde-base/kig:kig-scripting - Support Python scripting.
-kde-base/klaptopdaemon:xscreensaver - Support for XScreenSaver extension.
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
 kde-base/kopete:addbookmarks - Builds Add Bookmarks plugin
 kde-base/kopete:alias - Builds Alias plugin
@@ -772,7 +766,6 @@ kde-base/kopete:texteffect - Builds Text Effect plugin
 kde-base/kopete:translator - Builds Translator plugin
 kde-base/kopete:webpresence - Builds Web Presence plugin
 kde-base/kopete:winpopup - Builds WinPopUp protocol handler
-kde-base/kopete:xscreensaver - Enables support for XScreenSaver extension
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-misc/ksensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
@@ -1359,7 +1352,6 @@ net-im/gaim:groupwise - Enable Novell Groupwise protocol support.
 net-im/gaim:meanwhile - Enable meanwhile support for Sametime protocol.
 net-im/gaim:qq - Enable QQ protocol support.
 net-im/gaim:silc - Enable SILC protocol support
-net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
 net-im/gajim:trayicon - Enable the trayicon module
@@ -1384,14 +1376,12 @@ net-im/pidgin:networkmanager - Enable networkmanager support
 net-im/pidgin:prediction - Enable Contact Availability Prediction plugin.
 net-im/pidgin:qq - Enable QQ protocol support.
 net-im/pidgin:silc - Enable SILC protocol support
-net-im/pidgin:xscreensaver - Enable X idle time support instead of pidgin idle time.
 net-im/pidgin:zephyr - Enable Zephyr protocol support
 net-im/psi:audacious - Enable monitoring of audio tracks that are played in (media-sound/audacious)
 net-im/psi:extras - Enables extra non official patches
 net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risk
 net-im/psi:jingle - Enables voice calls for jabber
 net-im/psi:plugins - Enables plugins support in psi
-net-im/psi:xscreensaver - Enables detection of xscreensaver
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/tkabber:extras - Enables extra non official patches
 net-im/tkabber:plugins - Enables instalation the extra plugins
@@ -2011,7 +2001,6 @@ x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/adesklets:fontconfig - Support for mananging custom fonts via fontconfig
 x11-misc/dmenu:savedconfig - Add support to user defined configs
 x11-misc/openclipart:gzip - Compresses clip art using gzip
-x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
 x11-misc/xscreensaver:insecure-savers - Installs some screensaver modules as setuid root to enable cooler effects
@@ -2059,7 +2048,6 @@ x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 xfce-base/thunar:plugins - Enable trash panel plugin.
-xfce-base/xfce4:xscreensaver - Pulls in XScreenSaver, used by Lock Screen and Actions Panel Plugin.
 xfce-base/xfce4-extras:battery - Meta pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce4-cpu-freq dependency.
 xfce-extra/thunar-thumbnailers:dcraw - Enable .raw thumbnailers, dcraw support.
