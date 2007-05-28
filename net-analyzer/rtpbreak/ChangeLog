@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/rtpbreak
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.1 2007/05/28 15:19:29 drizzt Exp $
+
+*rtpbreak-1.0 (28 May 2007)
+
+  28 May 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/rtpbreak-1.0-ldflags.patch, +rtpbreak-1.0.ebuild:
+  New ebuild.
+

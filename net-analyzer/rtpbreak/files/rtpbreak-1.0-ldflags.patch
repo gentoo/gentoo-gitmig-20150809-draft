@@ -1,0 +1,18 @@
+--- Makefile.orig	2007-05-28 17:04:50.000000000 +0200
++++ Makefile	2007-05-28 17:05:37.000000000 +0200
+@@ -7,13 +7,14 @@
+ 	$(CC) -c $(CFLAGS) $(DEFS) rtpbreak.c
+ 	$(CC) -c $(CFLAGS) $(DEFS) common.c
+ 	$(CC) -c $(CFLAGS) $(DEFS) net.c
+-	$(CC) $(LIBS) rtpbreak.o common.o net.o -o rtpbreak
++	$(CC) $(LDFLAGS) rtpbreak.o common.o net.o -o rtpbreak $(LIBS)
+ 	@echo "%"
+ 
+ header:
+ 	@echo "%"
+ 	@echo "%  CC...................: $(CC)"
+ 	@echo "%  CFLAGS...............: $(CFLAGS)"
++	@echo "%  LDFLAGS..............: $(LDFLAGS)"
+ 	@echo "%  LIBS.................: $(LIBS)"
+ 	@echo "%  DEFS.................: $(DEFS)"
+ 	@echo "%"
