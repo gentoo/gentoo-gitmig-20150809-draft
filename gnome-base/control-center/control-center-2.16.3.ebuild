@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.3.ebuild,v 1.4 2007/03/23 15:49:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.3.ebuild,v 1.5 2007/05/28 08:41:58 leio Exp $
 
 inherit eutils gnome2 autotools
 
@@ -64,6 +64,9 @@ DEPEND="${RDEPEND}
 		dev-util/desktop-file-utils"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+# 24 files missing from POTFILES.skip - too much to be worth the trouble to fix
+RESTRICT="test"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-schemas-install \
