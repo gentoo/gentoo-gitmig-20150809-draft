@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.257 2007/05/28 12:55:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.258 2007/05/28 16:33:03 jer Exp $
+
+  28 May 2007; Jeroen Roovers <jer@gentoo.org> phpmyadmin-2.10.1.ebuild:
+  Stable for HPPA (bug #175847).
 
   28 May 2007; Brent Baude <ranger@gentoo.org> phpmyadmin-2.10.1.ebuild:
   Marking phpmyadmin-2.10.1 ppc64 stable for 175847
