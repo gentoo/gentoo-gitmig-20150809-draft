@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.152 2007/05/01 12:29:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.153 2007/05/28 00:45:33 philantrop Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -918,8 +918,10 @@ postprocess_desktop_entries() {
 
 		if [[ -n ${desktop_entries} ]]; then
 			for entry in ${desktop_entries} ; do
-				dodir ${PREFIX}/share/applications/kde
-				mv ${entry} ${D}${PREFIX}/share/applications/kde
+				if [[ ! -f ${D}${PREFIX}/share/applications/kde/$(basename ${entry}) ]]; then
+					dodir ${PREFIX}/share/applications/kde
+					mv ${entry} ${D}${PREFIX}/share/applications/kde
+				fi
 			done
 		fi
 	fi
