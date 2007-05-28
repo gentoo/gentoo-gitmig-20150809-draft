@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.8-r1.ebuild,v 1.3 2007/05/28 14:23:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.8-r1.ebuild,v 1.4 2007/05/28 14:53:19 opfer Exp $
 
 inherit elisp
 
@@ -11,20 +11,17 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="x86 ~amd64 ppc sparc"
+KEYWORDS="x86 amd64 ppc sparc"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
 	app-crypt/gnupg"
+RESTRICT="test"
 
 src_compile() {
 	export EMACS=/usr/bin/emacs
 	econf || die
 	make || die
-}
-
-src_test() {
-	.
 }
 
 src_install() {
