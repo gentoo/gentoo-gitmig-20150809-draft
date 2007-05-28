@@ -1,0 +1,13 @@
+Index: pulseaudio-0.9.6/src/pulsecore/core-util.c
+===================================================================
+--- pulseaudio-0.9.6.orig/src/pulsecore/core-util.c
++++ pulseaudio-0.9.6/src/pulsecore/core-util.c
+@@ -544,6 +544,8 @@ fail:
+         cap_free(caps);
+     }
+ #endif
++
++    return;
+ }
+ 
+ /* Reset the priority to normal, inverting the changes made by pa_raise_priority() */
