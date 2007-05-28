@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-2.0-r1.ebuild,v 1.4 2007/04/07 13:06:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-2.0-r1.ebuild,v 1.5 2007/05/28 16:25:10 lack Exp $
 
 ROX_LIB_VER=1.9.8
 inherit rox
@@ -17,7 +17,7 @@ IUSE="libnotify"
 
 RDEPEND="libnotify? (
 			>=dev-python/dbus-python-0.71
-			x11-misc/notification-daemon )"
+			x11-libs/libnotify )"
 
 APPNAME=${MY_PN}
 APPCATEGORY="Utility;Clock"
