@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.26 2007/05/19 20:46:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.27 2007/05/28 10:58:05 nixnut Exp $
+
+  28 May 2007; nixnut <nixnut@gentoo.org> checkstyle-4.2.ebuild:
+  Stable on ppc wrt bug 178938
 
   19 May 2007; Christian Faulhammer <opfer@gentoo.org>
   checkstyle-4.2.ebuild:

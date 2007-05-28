@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.2.ebuild,v 1.4 2007/05/19 20:46:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.2.ebuild,v 1.5 2007/05/28 10:58:05 nixnut Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/checkstyle/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc source test"
 
 COMMON_DEP="dev-java/antlr
