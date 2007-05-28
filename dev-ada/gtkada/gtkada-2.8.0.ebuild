@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.4 2007/05/28 07:18:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.5 2007/05/28 07:23:55 george Exp $
 
-inherit eutils gnat
+inherit eutils gnat versionator
 
 Name="GtkAda-gpl"
+MajorPV=$(get_version_component_range 1-2)
 DESCRIPTION="Gtk+ bindings to the Ada language"
 HOMEPAGE="https://libre2.adacore.com/GtkAda/"
 SRC_URI="http://dev.gentoo.org/~george/src/${Name}-${PV}.tgz"
@@ -27,7 +28,7 @@ S="${WORKDIR}/${Name}-${PV}"
 
 # only needed for gcc-3.x based gnat profiles, but matching them individually
 # would be insane
-QA_EXECSTACK="${AdalibLibTop:1}/*/gtkada/libgtkada-2.8.so.0"
+QA_EXECSTACK="${AdalibLibTop:1}/*/gtkada/libgtkada-${MajorPV}.so.0"
 
 src_unpack() {
 	gnat_src_unpack
@@ -75,16 +76,18 @@ src_install() {
 
 	gnat_src_install
 
-	cd ${S}
 	#specs
+	cd ${S}/src
 	dodir "${AdalibSpecsDir}/${PN}"
 	insinto "${AdalibSpecsDir}/${PN}"
-	doins src/*.ad?
+	doins *.ad? glade/*.ad? gnome/*.ad? opengl/*.{ad?,c,h}
 
 	#docs
+	cd ${S}
 	dodoc ANNOUNCE AUTHORS COPYING README
 	cp -dPr examples/ testgtk/ "${D}/usr/share/doc/${PF}"
-	cd docs
+	cd ${S}/docs
+	doinfo gtkada_ug/gtkada_ug.info
 	ps2pdf gtkada_ug/gtkada_ug.ps
 	ps2pdf gtkada_rm/gtkada_rm.ps
 	cp gtkada_ug.pdf gtkada_rm.pdf "${D}/usr/share/doc/${PF}"
