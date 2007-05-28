@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.87 2007/05/26 15:45:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.88 2007/05/28 07:17:36 george Exp $
+
+# George Shapovalov <george@gentoo.org> (28 May 2007)
+# requires >=x11-libs/pango-1.14.9
+>=dev-ada/gtkada-2.10.0
 
 # Andrej Kacian <ticho@gentoo.org> (26 May 2007)
 # Requires >=pygtk-2.10.
