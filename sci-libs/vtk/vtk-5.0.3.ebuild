@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.5 2007/05/09 09:56:23 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.6 2007/05/28 14:26:47 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -233,6 +233,7 @@ src_install() {
 	# environment
 	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> ${T}/40${PN}
 	echo "VTK_DIR=/usr/lib/${PN}-${SPV}" >> ${T}/40${PN}
+	echo "VTKHOME=/usr" >> ${T}/40${PN}
 	doenvd ${T}/40${PN}
 }
 
