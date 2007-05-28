@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.1 2007/05/25 12:53:01 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.2 2007/05/28 19:26:27 george Exp $
 
 inherit gnatbuild
 
@@ -8,15 +8,15 @@ DESCRIPTION="GNAT Ada Compiler - AdaCore GPL version"
 HOMEPAGE="https://libre.adacore.com/"
 LICENSE="GPL-2"
 
-SRC_URI="http://dev.gentoo.org/~george/src/gcc-branch-${GCCVER}.tar.bz2
+SRC_URI="mirror://gentoo/gcc-branch-${GCCVER}.tar.bz2
 	http://www.adaic.org/standards/05rm/RM-05-Html.zip
-	http://dev.gentoo.org/~george/src/${P}.tar.bz2
-	x86?   ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-i386.tar.bz2 )
-	ppc?   ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )
-	amd64? ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-amd64.tar.bz2 )"
+	mirror://gentoo/${P}.tar.bz2
+	x86?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-i386.tar.bz2 )
+	ppc?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )
+	amd64? ( mirror://gentoo/gnatboot-${BOOT_SLOT}-amd64.tar.bz2 )"
 # ${BOOT_SLOT} and ${GCCVER} are defined in gnatbuild.eclass and depend 
 # only on $PV, so should be safe to use in DEPEND/SRC_URI
-#	http://dev.gentoo.org/~george/src/${PN}-gcc-3.4.6.1.diff.bz2
+#	mirror://gentoo/${PN}-gcc-3.4.6.1.diff.bz2
 
 KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND="app-arch/unzip"

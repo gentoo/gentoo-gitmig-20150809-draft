@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.3 2007/05/19 10:27:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.4 2007/05/28 19:26:27 george Exp $
 
 inherit gnatbuild
 
@@ -10,11 +10,11 @@ LICENSE="GPL-2"
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCCVER}/gcc-core-${GCCVER}.tar.bz2
 	http://www.adaic.org/standards/05rm/RM-05-Html.zip
-	http://dev.gentoo.org/~george/src/${PN}-3.4.6.1-src.tar.bz2
-	http://dev.gentoo.org/~george/src/${PN}-gcc-3.4.6.1.diff.bz2
-	x86?   ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-i386.tar.bz2 )
-	ppc?   ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )
-	amd64? ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-amd64-r2.tar.bz2 )"
+	mirror://gentoo/${PN}-3.4.6.1-src.tar.bz2
+	mirror://gentoo/${PN}-gcc-3.4.6.1.diff.bz2
+	x86?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-i386.tar.bz2 )
+	ppc?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )
+	amd64? ( mirror://gentoo/gnatboot-${BOOT_SLOT}-amd64-r2.tar.bz2 )"
 # ${BOOT_SLOT} and ${GCCVER} are defined in gnatbuild.eclass and depend 
 # only on $PV, so should be safe to use in DEPEND/SRC_URI
 
