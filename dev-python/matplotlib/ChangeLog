@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.29 2007/05/03 16:43:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.30 2007/05/28 15:40:49 bicatali Exp $
+
+  28 May 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  matplotlib-0.90.0.ebuild:
+  Default backend to gtk if tk and gtk are selected
 
   03 May 2007; Sébastien Fabbro <bicatali@gentoo.org>
   matplotlib-0.90.0.ebuild:
