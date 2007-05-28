@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mailcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.13 2007/03/08 07:21:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.14 2007/05/28 14:23:14 opfer Exp $
+
+  28 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  mailcrypt-3.5.8-r1.ebuild:
+  stable amd64, bug 180027. Removed test suite (will not work in sandbox).
+  Quoted some variables
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50mailcrypt-gentoo.el:
