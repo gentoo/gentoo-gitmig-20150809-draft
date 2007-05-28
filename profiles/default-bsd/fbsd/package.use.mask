@@ -1,11 +1,3 @@
-# libestmp untested
-mail-client/muttng smtp
-
-# monodoc untested
-dev-dotnet/gtk-sharp doc
-
-app-text/crm114 mew mimencode test
-
 # ptex isn't tested yet
 app-text/xdvik cjk
 
@@ -38,9 +30,6 @@ net-irc/rbot spell
 sys-process/vixie-cron pam
 
 x11-misc/xscreensaver new-login
-
-# media-libs/mesa with xcb actually doesn't work
-media-libs/mesa xcb
 
 # net-wireless/aircrack-ng - wireless capture tools not needed.
 net-wireless/aircrack-ng wifi
