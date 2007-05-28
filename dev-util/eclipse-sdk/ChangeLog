@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.130 2007/05/12 18:51:24 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.131 2007/05/28 23:58:39 caster Exp $
+
+  28 May 2007; Vlastimil Babka <caster@gentoo.org> -files/eclipse-2.desktop,
+  -files/eclipse-3, -files/04-amd64-gtk.patch, -files/eclipse-3.0.2,
+  -files/eclipse-3.1, -files/05-mozilla-xpcom.patch,
+  -files/eclipse-3.1.desktop, -files/03-motif-java1.5-build.patch,
+  -files/eclipse-3.desktop, -files/06-path-fixups.patch, -files/eclipse-2,
+  -files/eclipse.1, -eclipse-sdk-3.0.1-r3.ebuild,
+  -eclipse-sdk-3.0.2-r1.ebuild, -eclipse-sdk-3.1.2-r3.ebuild:
+  Cleanup old versions after month in package.mask.
 
   12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   eclipse-sdk-3.2.1-r2.ebuild:
