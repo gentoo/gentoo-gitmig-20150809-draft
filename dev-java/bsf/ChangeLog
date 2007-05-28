@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.43 2007/05/25 11:16:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.44 2007/05/28 23:00:41 caster Exp $
+
+*bsf-2.4.0-r1 (28 May 2007)
+
+  28 May 2007; Vlastimil Babka <caster@gentoo.org> +bsf-2.4.0-r1.ebuild:
+  Change local rhino USE flag to global javascript flag with the same meaning.
+  Add optional support for groovy, jruby and beanshell, bug #179686.
 
   25 May 2007; Diego Pettenò <flameeyes@gentoo.org> bsf-2.4.0.ebuild:
   Add ~x86-fbsd keyword as per bug #160813.
