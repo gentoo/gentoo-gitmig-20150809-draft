@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.154 2007/05/28 14:42:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.155 2007/05/28 21:12:41 ulm Exp $
+
+  28 May 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/emacs-21.4-oldxmenu-malloc.patch, emacs-21.4-r12.ebuild:
+  Fix segmentation faults on ia64, bug #180142.
 
   28 May 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-18.59-r4.ebuild:
@@ -509,7 +513,7 @@
   don't use deprecated ? : use syntax
 
 *emacs-21.3-r3 (13 May 2004)
-*emacs-18.59 (13 May 2004
+*emacs-18.59 (13 May 2004)
 
   13 May 2004; <mkennedy@gentoo.org> +files/emacs-18.59-gcc-gentoo.patch,
   +files/emacs-18.59-gentoo.patch, +files/emacs-18.59-unexelf.patch,
