@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.22 2007/02/22 15:50:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.23 2007/05/28 12:47:53 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -230,7 +230,8 @@ gnat_src_unpack() {
 	unpack ${A}
 	cat /usr/share/eselect/modules/gnat.eselect | \
 		grep -v svn_date_to_version | \
-		grep -v DESCRIPTION >	${EselectScript}
+		grep -v DESCRIPTION | \
+		grep -v env-update > ${EselectScript}
 }
 
 
