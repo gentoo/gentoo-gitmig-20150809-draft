@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.64 2007/05/03 20:51:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.65 2007/05/28 17:49:05 compnerd Exp $
+
+*glade-3.2.2 (28 May 2007)
+
+  28 May 2007; Saleem Abdulrasool <compnerd@gentoo.org> +glade-3.2.2.ebuild:
+  Version bump from upstream with fixes
 
 *glade-3.2.1 (03 May 2007)
 
