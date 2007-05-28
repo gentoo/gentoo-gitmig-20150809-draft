@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2834 2007/05/27 22:26:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2835 2007/05/28 05:06:00 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1571,6 +1571,7 @@ net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
 net-proxy/squid:ipf-transparent - Adds transparent proxy support for systems using IP-Filter (only for *bsd)
 net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:pf-transparent - Adds transparent proxy support for systems using PF (only for *bsd)
+net-proxy/squid:qos - Adds tcp_outgoing_priority for setting the Qdisc priority
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/sshproxy:client-only - Install only the client wrappers
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
