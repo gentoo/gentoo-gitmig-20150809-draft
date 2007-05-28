@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.1 2007/02/23 11:01:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.2 2007/05/28 17:23:47 armin76 Exp $
 
 #WANT_AUTOCONF="latest"
 #WANT_AUTOMAKE="1.8"
@@ -14,7 +14,7 @@ SRC_URI="http://dev.mmgsecurity.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="doc gnome"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND="dev-lang/mono
 	gnome? ( >=dev-dotnet/gtk-sharp-2.4
