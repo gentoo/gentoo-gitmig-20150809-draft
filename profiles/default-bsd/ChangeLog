@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.5 2007/05/26 19:48:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.6 2007/05/28 15:30:01 flameeyes Exp $
+
+  28 May 2007; Diego Pettenò <flameeyes@gentoo.org> package.use.mask, use.mask
+  fbsd/package.use.mask: Unmask the useflags that shouldn't have been masked
+  in the first place.
 
   26 May 2007; Olivier Crête <tester@gentoo.org> package.use.mask:
   Mask zephyr flag for pidgin on bsd because mit-krb5 is not keyworded
