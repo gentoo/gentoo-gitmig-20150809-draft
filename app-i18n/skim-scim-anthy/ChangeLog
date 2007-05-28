@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/skim-scim-anthy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/ChangeLog,v 1.14 2007/05/06 04:47:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/ChangeLog,v 1.15 2007/05/28 23:23:47 matsuu Exp $
+
+*skim-scim-anthy-1.2.4 (28 May 2007)
+
+  28 May 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +skim-scim-anthy-1.2.4.ebuild:
+  Version bumped.
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   skim-scim-anthy-1.2.2.ebuild:
