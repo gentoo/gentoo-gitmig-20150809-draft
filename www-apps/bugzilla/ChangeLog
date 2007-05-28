@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.84 2007/05/27 00:37:55 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.85 2007/05/28 00:21:43 rl03 Exp $
+
+  28 May 2007; Renat Lumpau <rl03@gentoo.org> bugzilla-3.0.ebuild:
+  Add German translation, bug #175271
 
 *bugzilla-3.0 (27 May 2007)
 
