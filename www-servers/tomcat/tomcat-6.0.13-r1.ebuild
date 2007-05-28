@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r1.ebuild,v 1.2 2007/05/25 14:29:08 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r1.ebuild,v 1.3 2007/05/28 23:32:54 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -56,6 +56,11 @@ src_unpack() {
 }
 
 src_compile(){
+	# Fix for bug # 178980
+	if use amd64 && [[ "${GENTOO_VM}" = "sun-jdk-1.5" ]] ; then
+	        java-pkg_force-compiler ecj-3.2
+	fi
+
 	local antflags="build-jasper-jdt deploy -Dbase.path=${T}"
 	antflags="${antflags} -Dcompile.debug=false"
 	if ! use doc; then
