@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2836 2007/05/28 20:01:45 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2837 2007/05/28 22:18:07 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -747,6 +747,7 @@ kde-base/kdesdk-meta:subversion - Support for the subversion ioslave.
 kde-base/kdesdk:subversion - Support for the subversion ioslave.
 kde-base/kdesktop:xscreensaver - Support for XScreenSaver extension.
 kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
+kde-base/kdeutils:xscreensaver - Support for XScreenSaver extension.
 kde-base/kig:kig-scripting - Support Python scripting.
 kde-base/klaptopdaemon:xscreensaver - Support for XScreenSaver extension.
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
