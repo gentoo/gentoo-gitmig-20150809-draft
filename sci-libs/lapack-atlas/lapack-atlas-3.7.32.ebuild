@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.30.ebuild,v 1.2 2007/03/27 12:55:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.32.ebuild,v 1.1 2007/05/28 12:25:49 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/blas
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
-	~sci-libs/blas-atlas-3.7.30"
+	~sci-libs/blas-atlas-3.7.31"
 
 PROVIDE="virtual/lapack"
 

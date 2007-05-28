@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.30.ebuild,v 1.2 2007/04/24 01:42:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.32.ebuild,v 1.1 2007/05/28 12:23:57 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -53,7 +53,6 @@ src_unpack() {
 
 	epatch "${DISTDIR}"/${MY_PN}-3.7.23-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
-	epatch "${FILESDIR}"/gnuc_default_fix.patch
 
 	# make sure shared libs link against proper libraries
 	if [[ ${FORTRANC} == "gfortran" ]]; then
@@ -61,6 +60,11 @@ src_unpack() {
 	else
 		libs="${LDFLAGS} -lpthread -lg2c"
 	fi
+
+	#increase amount of workspace to improve threaded performance
+	sed -e "s:16777216:167772160:" -i include/atlas_lvl3.h ||
+		die "Failed to fix ATL_MaxMalloc"
+
 	sed -e "s:SHRD_LNK:${libs}:g" -i Make.top || \
 		die "Failed to add addtional libs to shared object build"
 
