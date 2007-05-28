@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.21 2007/04/28 16:22:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.22 2007/05/28 19:29:05 williamh Exp $
+
+*speech-dispatcher-0.6.2 (28 May 2007)
+
+  28 May 2007; William Hubbs <williamh@gentoo.org>
+  +files/speech-dispatcher-0.6.2-espeak.patch,
+  +files/speech-dispatcher-0.6.2-python.patch,
+  +speech-dispatcher-0.6.2.ebuild:
+  Version bump.
+  This version makes espeak the default synthesizer.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   speech-dispatcher-0.3.ebuild, speech-dispatcher-0.4.1.ebuild,

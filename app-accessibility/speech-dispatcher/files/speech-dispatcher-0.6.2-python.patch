@@ -1,0 +1,11 @@
+--- speech-dispatcher-0.6.2.orig/src/python/Makefile	2006-08-09 06:00:46.000000000 -0500
++++ speech-dispatcher-0.6.2/src/python/Makefile	2007-04-13 18:31:15.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ install:
+ 	if test -x /usr/bin/python; then \
+-		./setup.py install --prefix=$(prefix); \
++		./setup.py install --root $(DESTDIR) --no-compile; \
+ 	else \
+ 	echo "Python not found, not installing speechd module"; \
+ 	fi

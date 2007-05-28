@@ -1,0 +1,11 @@
+--- speech-dispatcher-0.6.2/config/speechd.conf.in.orig	2007-04-13 22:13:29.000000000 -0500
++++ speech-dispatcher-0.6.2/config/speechd.conf.in	2007-04-13 22:13:48.000000000 -0500
+@@ -153,7 +153,7 @@
+ # DefaultModule selects which output module is the default.
+ # You must use one of the modules loaded with AddModule.
+ 
+-DefaultModule flite
++DefaultModule espeak-generic
+ 
+ # LanguageDefaultModule selects which output modules are prefered
+ # for specified languages.
