@@ -1,6 +1,11 @@
 # ChangeLog for dev-ada/aunit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/ChangeLog,v 1.9 2007/05/28 15:30:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/ChangeLog,v 1.10 2007/05/28 16:04:15 george Exp $
+
+*aunit-2.01 (28 May 2007)
+
+  28 May 2007; George Shapovalov <george@gentoo.org> +aunit-2.01.ebuild:
+  new (2007) version
 
 *aunit-1.05 (28 May 2007)
 
