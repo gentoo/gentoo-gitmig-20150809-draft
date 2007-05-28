@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.10.ebuild,v 1.1 2007/03/10 09:39:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.13.ebuild,v 1.1 2007/05/28 05:07:21 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,7 +20,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate zero-penalty-hit \
+IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
@@ -48,6 +48,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-ToS_Hit_ToS_Preserve.patch
+	use qos && epatch "${FILESDIR}"/${P}-qos.patch
 
 	sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
 

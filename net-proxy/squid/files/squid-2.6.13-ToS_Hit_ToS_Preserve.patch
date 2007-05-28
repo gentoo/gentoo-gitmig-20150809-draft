@@ -1,6 +1,6 @@
-diff -Nru squid-2.6.STABLE10.orig/src/cf.data.pre squid-2.6.STABLE10/src/cf.data.pre
---- squid-2.6.STABLE10.orig/src/cf.data.pre	2007-03-10 10:16:19.000000000 +0200
-+++ squid-2.6.STABLE10/src/cf.data.pre	2007-03-10 10:16:55.000000000 +0200
+diff -Nru squid-2.6.STABLE13.orig/src/cf.data.pre squid-2.6.STABLE13/src/cf.data.pre
+--- squid-2.6.STABLE13.orig/src/cf.data.pre	2007-05-28 07:27:37.000000000 +0300
++++ squid-2.6.STABLE13/src/cf.data.pre	2007-05-28 07:28:11.000000000 +0300
 @@ -3193,6 +3193,64 @@
  	to off when using this directive in such configurations.
  DOC_END
@@ -66,9 +66,9 @@ diff -Nru squid-2.6.STABLE10.orig/src/cf.data.pre squid-2.6.STABLE10/src/cf.data
  NAME: tcp_outgoing_address
  TYPE: acl_address
  DEFAULT: none
-diff -Nru squid-2.6.STABLE10.orig/src/client_side.c squid-2.6.STABLE10/src/client_side.c
---- squid-2.6.STABLE10.orig/src/client_side.c	2007-03-10 10:16:19.000000000 +0200
-+++ squid-2.6.STABLE10/src/client_side.c	2007-03-10 10:16:55.000000000 +0200
+diff -Nru squid-2.6.STABLE13.orig/src/client_side.c squid-2.6.STABLE13/src/client_side.c
+--- squid-2.6.STABLE13.orig/src/client_side.c	2007-05-28 07:27:37.000000000 +0300
++++ squid-2.6.STABLE13/src/client_side.c	2007-05-28 07:28:11.000000000 +0300
 @@ -2621,6 +2621,55 @@
  	return;
      }
@@ -125,10 +125,10 @@ diff -Nru squid-2.6.STABLE10.orig/src/client_side.c squid-2.6.STABLE10/src/clien
      rep = http->reply = clientBuildReply(http, buf, size);
      if (!rep) {
  	/* Forward as HTTP/0.9 body with no reply */
-diff -Nru squid-2.6.STABLE10.orig/src/http.c squid-2.6.STABLE10/src/http.c
---- squid-2.6.STABLE10.orig/src/http.c	2007-02-27 00:41:46.000000000 +0200
-+++ squid-2.6.STABLE10/src/http.c	2007-03-10 10:16:55.000000000 +0200
-@@ -1373,6 +1373,53 @@
+diff -Nru squid-2.6.STABLE13.orig/src/http.c squid-2.6.STABLE13/src/http.c
+--- squid-2.6.STABLE13.orig/src/http.c	2007-03-27 02:08:00.000000000 +0300
++++ squid-2.6.STABLE13/src/http.c	2007-05-28 07:28:11.000000000 +0300
+@@ -1389,6 +1389,53 @@
      peer *p = httpState->peer;
      CWCB *sendHeaderDone;
      int fd = httpState->fd;
@@ -182,9 +182,9 @@ diff -Nru squid-2.6.STABLE10.orig/src/http.c squid-2.6.STABLE10/src/http.c
  
      debug(11, 5) ("httpSendRequest: FD %d: httpState %p.\n", fd, httpState);
  
-diff -Nru squid-2.6.STABLE10.orig/src/structs.h squid-2.6.STABLE10/src/structs.h
---- squid-2.6.STABLE10.orig/src/structs.h	2007-02-27 03:20:01.000000000 +0200
-+++ squid-2.6.STABLE10/src/structs.h	2007-03-10 10:16:55.000000000 +0200
+diff -Nru squid-2.6.STABLE13.orig/src/structs.h squid-2.6.STABLE13/src/structs.h
+--- squid-2.6.STABLE13.orig/src/structs.h	2007-04-27 02:11:51.000000000 +0300
++++ squid-2.6.STABLE13/src/structs.h	2007-05-28 07:28:11.000000000 +0300
 @@ -669,6 +669,8 @@
  	int relaxed_header_parser;
  	int accel_no_pmtu_disc;
