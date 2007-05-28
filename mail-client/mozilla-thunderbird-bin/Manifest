@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 10thunderbird-bin 36 RMD160 a1b06f9b7f2833c253a71a99a3e6e0521487a813 SHA1 ea9ab715ceef5c61d75ae14e15ef52d61f5cbaa8 SHA256 6e49ce8f02cd128d353625d04c74103ae83c25baf41c76323c61465acb6ca116
 MD5 25bfc2a32f915b8ca584bdb451ca9224 files/10thunderbird-bin 36
 RMD160 a1b06f9b7f2833c253a71a99a3e6e0521487a813 files/10thunderbird-bin 36
@@ -87,10 +84,10 @@ EBUILD mozilla-thunderbird-bin-1.5.0.10.ebuild 4040 RMD160 9e9df965e9c1e4de6a3d4
 MD5 a6d1f0f742387dce6d12d91e78432993 mozilla-thunderbird-bin-1.5.0.10.ebuild 4040
 RMD160 9e9df965e9c1e4de6a3d473d531fdbbd33500a8c mozilla-thunderbird-bin-1.5.0.10.ebuild 4040
 SHA256 6d5ad644c369208935b72d73a93c08e27b49c24f8a9e75f0ac8b912a50909efd mozilla-thunderbird-bin-1.5.0.10.ebuild 4040
-EBUILD mozilla-thunderbird-bin-2.0.0.0.ebuild 4577 RMD160 539ccb4eb87d3a6077acb09749b7b1cdd8fd66cd SHA1 10e12ebee734e8726236d84410c464709291dd8e SHA256 2d1240c639d1f3795c4318e69378c352b2ef2ec6314c03234cb07c713d798536
-MD5 2d205850c47cf72ffc3dcab5d3fcfb4a mozilla-thunderbird-bin-2.0.0.0.ebuild 4577
-RMD160 539ccb4eb87d3a6077acb09749b7b1cdd8fd66cd mozilla-thunderbird-bin-2.0.0.0.ebuild 4577
-SHA256 2d1240c639d1f3795c4318e69378c352b2ef2ec6314c03234cb07c713d798536 mozilla-thunderbird-bin-2.0.0.0.ebuild 4577
+EBUILD mozilla-thunderbird-bin-2.0.0.0.ebuild 4569 RMD160 cd99b192a2370073835d0a2ec06cd420bfcf767a SHA1 400fd645cb910f75415c8cdd06d9c440f54700f2 SHA256 206a25e5a54f7a1cd7d1bd6363f2d3c1d8a4c7fe2b7257ea5e26f4e0bfcc7b26
+MD5 c140eb3539a3a0dc5970162ebbee82ed mozilla-thunderbird-bin-2.0.0.0.ebuild 4569
+RMD160 cd99b192a2370073835d0a2ec06cd420bfcf767a mozilla-thunderbird-bin-2.0.0.0.ebuild 4569
+SHA256 206a25e5a54f7a1cd7d1bd6363f2d3c1d8a4c7fe2b7257ea5e26f4e0bfcc7b26 mozilla-thunderbird-bin-2.0.0.0.ebuild 4569
 MISC ChangeLog 14716 RMD160 072ea3da680a4672456105bfd19a1e7a8d6b2a6c SHA1 ff037b374dbadf08449675d430c7648270a2b3c7 SHA256 c628010bf988b6b0c6f7c1cadd4befb95bdf657292a6f807aa70540eefb3d765
 MD5 fea8e4e006061bfe0d37128d4683c1b5 ChangeLog 14716
 RMD160 072ea3da680a4672456105bfd19a1e7a8d6b2a6c ChangeLog 14716
@@ -105,10 +102,3 @@ SHA256 3e9f79bdb5d1701f94523d5cf379c42f07e046b0d1993b70c5951cf4ade6e75b files/di
 MD5 aa9e6c6231ebd9ace82574b7f35966f8 files/digest-mozilla-thunderbird-bin-2.0.0.0 9420
 RMD160 45272af89515d16690284102073d72e80add59c9 files/digest-mozilla-thunderbird-bin-2.0.0.0 9420
 SHA256 eee21439de0b7b3639b41e59e2a91beeaa4168fa3f8005ca908a505d76cbe8f0 files/digest-mozilla-thunderbird-bin-2.0.0.0 9420
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFGT39ZNQqtfCuFneMRAu4IAKCGz0Dxk/+EquFT8K/twHz2ljJuEACfZWk8
-HLP8asJtoKfZlbOeEJeilpw=
-=eyHN
------END PGP SIGNATURE-----
