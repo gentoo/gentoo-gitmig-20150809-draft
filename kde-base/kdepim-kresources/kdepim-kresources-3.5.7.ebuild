@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.7.ebuild,v 1.1 2007/05/22 23:10:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.7.ebuild,v 1.2 2007/05/28 17:55:46 philantrop Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -19,6 +19,10 @@ $(deprange 3.5.6 $MAXKDEVER kde-base/kode)
 	dev-libs/libical
 	>=app-crypt/gpgme-1.0.2"
 RDEPEND="${DEPEND}"
+
+# Tests fail due to a missing file (kde-features_parser.custom.h) which
+# is not in the kdepim tarball.
+RESTRICT="test"
 
 KMCOPYLIB="
 	libkcal libkcal
