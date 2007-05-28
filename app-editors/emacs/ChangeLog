@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.152 2007/05/28 13:07:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.153 2007/05/28 14:09:30 opfer Exp $
+
+  28 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-21.4-r12.ebuild:
+  x86/amd64 stable, bug 180100
 
   28 May 2007; Brent Baude <ranger@gentoo.org> emacs-21.4-r12.ebuild:
   Marking emacs-21.4-r12 ppc64 stable for 180100
