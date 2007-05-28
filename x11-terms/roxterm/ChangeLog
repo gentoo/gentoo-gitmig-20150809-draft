@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.11 2007/05/15 20:40:53 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.12 2007/05/28 17:32:35 compnerd Exp $
+
+*roxterm-1.5.2 (28 May 2007)
+
+  28 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +roxterm-1.5.2.ebuild:
+  Version bump from upstream with some fixes for geometry
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
