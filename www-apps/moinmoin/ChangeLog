@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.30 2007/05/20 08:44:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.31 2007/05/28 00:51:51 rl03 Exp $
+
+*moinmoin-1.5.8 (28 May 2007)
+
+  28 May 2007; Renat Lumpau <rl03@gentoo.org> +moinmoin-1.5.8.ebuild:
+  Version bump
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org>
   moinmoin-1.5.7.ebuild:
