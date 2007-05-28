@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.258 2007/05/28 16:33:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.259 2007/05/28 18:31:52 yoswink Exp $
+
+  28 May 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  phpmyadmin-2.10.1.ebuild:
+  Stable on alpha wrt security #175847
 
   28 May 2007; Jeroen Roovers <jer@gentoo.org> phpmyadmin-2.10.1.ebuild:
   Stable for HPPA (bug #175847).
