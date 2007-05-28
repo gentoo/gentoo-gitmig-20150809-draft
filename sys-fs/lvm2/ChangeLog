@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.101 2007/05/21 14:09:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.102 2007/05/28 21:54:08 rocket Exp $
+
+*lvm2-2.02.25 (28 May 2007)
+
+  28 May 2007; <eje001@gentoo.org> +lvm2-2.02.25.ebuild:
+  Version bump.
 
   21 May 2007; Doug Goldstein <cardoe@gentoo.org> files/lvm2-start.sh:
   de-bash-ification by Uberlord
