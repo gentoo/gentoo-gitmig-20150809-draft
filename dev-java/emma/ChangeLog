@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/emma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.8 2007/05/23 17:20:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.9 2007/05/28 10:55:26 nixnut Exp $
+
+  28 May 2007; nixnut <nixnut@gentoo.org> emma-2.0.5312-r1.ebuild:
+  Stable on ppc wrt bug 178938
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> emma-2.0.5312.ebuild:
   Add ~x86-fbsd keyword. Bug #176906.
