@@ -1,6 +1,6 @@
-diff -Naur bubblemon-dockapp-1.46.orig/bubblemon.c bubblemon-dockapp-1.46/bubblemon.c
---- bubblemon-dockapp-1.46.orig/bubblemon.c	2003-10-01 02:37:32.000000000 +0200
-+++ bubblemon-dockapp-1.46/bubblemon.c	2007-05-28 16:11:57.000000000 +0200
+diff -ur bubblemon-dockapp-1.46.orig/bubblemon.c bubblemon-dockapp-1.46/bubblemon.c
+--- bubblemon-dockapp-1.46.orig/bubblemon.c	2003-10-01 03:37:32.000000000 +0300
++++ bubblemon-dockapp-1.46/bubblemon.c	2007-05-28 18:10:43.000000000 +0300
 @@ -58,6 +58,7 @@
  #include <gdk/gdk.h>
  #include <gdk/gdkx.h>
@@ -34,9 +34,9 @@ diff -Naur bubblemon-dockapp-1.46.orig/bubblemon.c bubblemon-dockapp-1.46/bubble
  #ifdef KDE_DOCKAPP
      /* makes the dockapp visible inside KDE wm */
      gdk_window_show(bm.iconwin);
-diff -Naur bubblemon-dockapp-1.46.orig/Makefile bubblemon-dockapp-1.46/Makefile
---- bubblemon-dockapp-1.46.orig/Makefile	2003-10-04 02:22:07.000000000 +0200
-+++ bubblemon-dockapp-1.46/Makefile	2007-05-28 16:12:26.000000000 +0200
+diff -ur bubblemon-dockapp-1.46.orig/Makefile bubblemon-dockapp-1.46/Makefile
+--- bubblemon-dockapp-1.46.orig/Makefile	2003-10-04 03:22:07.000000000 +0300
++++ bubblemon-dockapp-1.46/Makefile	2007-05-28 18:11:20.000000000 +0300
 @@ -11,30 +11,49 @@
  
  # no user serviceable parts below
@@ -95,7 +95,7 @@ diff -Naur bubblemon-dockapp-1.46.orig/Makefile bubblemon-dockapp-1.46/Makefile
      INSTALL = -c -g kmem -m 2755 -o root
  endif
  
-@@ -62,17 +81,22 @@
+@@ -62,17 +81,21 @@
      ifeq ($(COMPILER), gcc)
  	CFLAGS=-O3 -Wall
      endif
@@ -114,7 +114,6 @@ diff -Naur bubblemon-dockapp-1.46.orig/Makefile bubblemon-dockapp-1.46/Makefile
 +bubblemon: clean_obj
 +	$(CC) $(GTK2_CFLAGS) $(CFLAGS) -o $(BUBBLEMON) \
 +		$(LIBS) $(GTK2_LIBS) $(SRCS)
-+	$(STRIP) $(BUBBLEMON)
  
 -bubblemon: $(OBJS)
 -	$(CC) $(CFLAGS) -o bubblemon $(OBJS) $(LIBS)
