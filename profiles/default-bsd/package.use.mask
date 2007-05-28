@@ -1,9 +1,5 @@
 # Steve Dibb <beandog@gentoo.org> (24 May 2007)
 # Dependency packages not keyworded
-kde-base/kdebase ieee1394
-
-# Steve Dibb <beandog@gentoo.org> (24 May 2007)
-# Dependency packages not keyworded
 sys-apps/hal disk-partition dell
 
 media-video/mplayer dvdnav mp2
@@ -11,8 +7,12 @@ app-misc/mc pam
 dev-util/catalyst cdr
 # See http://bugzilla.gnome.org/show_bug.cgi?id=370847 for why we disable pam
 gnome-extra/gnome-screensaver pam
+
+# Requires Linux-only packages
 kde-base/kcontrol ieee1394
+kde-base/kdebase ieee1394
 kde-base/kdenetwork-meta wifi
+
 media-video/ffmpeg ieee1394
 net-libs/c-client pam
 net-proxy/squid -ipf-transparent -pf-transparent
