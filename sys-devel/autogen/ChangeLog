@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.26 2007/04/16 08:05:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.27 2007/05/28 15:14:21 flameeyes Exp $
+
+  28 May 2007; Diego Pettenò <flameeyes@gentoo.org> autogen-5.9.ebuild:
+  Add ~x86-fbsd keyword.
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> autogen-5.9.ebuild:
   Stable on ppc64
