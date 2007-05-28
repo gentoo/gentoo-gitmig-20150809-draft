@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7306 2007/05/27 23:15:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7307 2007/05/28 14:58:50 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -121,12 +121,6 @@ dev-scheme/mzscheme
 # Masked for removal unless someone picks up these packages. See Bug #177782.
 app-office/khacc
 app-office/qhacc
-
-# Samuli Suominen <drac@gentoo.org> (14 May 2007)
-# Masked for removal in 30 days unless bug 175730
-# gets solved. Bug has unfinished patch to port
-# this for GTK+-2.0. Use x11-plugins/bfm instead.
-x11-misc/bubblemon
 
 # Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
 # development version
