@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.4.ebuild,v 1.1 2007/05/28 17:03:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.5.ebuild,v 1.1 2007/05/28 17:22:22 genstef Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="tool that helps you find what software is using the most power"
 HOMEPAGE="http://www.linuxpowertop.org/"
@@ -12,6 +12,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	if ! built_with_use sys-libs/ncurses unicode; then
+		eerror "You need USE=unicode for sys-libs/ncurses"
+		die "You need USE=unicode for sys-libs/ncurses"
+	fi
+}
 
 src_compile() {
 	tc-export CC
