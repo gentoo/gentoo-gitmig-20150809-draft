@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.2.3.ebuild,v 1.1 2007/03/28 01:14:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.2.3.ebuild,v 1.2 2007/05/28 07:14:32 leio Exp $
 
 inherit virtualx gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.11
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
 	>=gnome-base/orbit-2
-	usb? ( dev-libs/libusb )
+	usb? ( >=dev-libs/libusb-0.1.11 )
 
 	x11-libs/libXi
 	x11-libs/libX11
@@ -55,9 +55,9 @@ pkg_setup() {
 }
 
 src_test() {
-	# Remove missing file from the Makefile to fix tests (bug #140265)
+	# Remove missing file from the Makefile to fix tests (bug #140265), and POTFILES.in
 	sed -i -e '/char-frequency.xml.in/d' ${S}/po/Makefile
-
+	sed -i -e '/char-frequency.xml.in/d' ${S}/po/POTFILES.in
 	addwrite "/root/.gnome2_private"
 	Xmake check || die
 }
