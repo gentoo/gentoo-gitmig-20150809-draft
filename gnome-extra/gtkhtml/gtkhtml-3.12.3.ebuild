@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.12.3.ebuild,v 1.2 2007/03/10 21:19:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.12.3.ebuild,v 1.3 2007/05/28 08:15:40 leio Exp $
 
 inherit gnome2 eutils
 
@@ -33,4 +33,11 @@ DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 pkg_setup() {
 	ELTCONF="--reverse-deps"
 	G2CONF="$(use_enable static) --enable-file-chooser"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	# Fix tests. Upstream has fix in gnome 2.19 only at this time
+	echo "components/html-editor/GNOME_GtkHTML_Editor-emacs.xml" >> "${S}/po/POTFILES.skip"
+	echo "components/html-editor/GNOME_GtkHTML_Editor.xml" >> "${S}/po/POTFILES.skip"
 }
