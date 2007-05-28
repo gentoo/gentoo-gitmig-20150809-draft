@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.2.ebuild,v 1.5 2007/05/26 14:43:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.2.ebuild,v 1.6 2007/05/28 19:41:59 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs
 
 MY_DMF="R-${PV}-200702121330"
 # https://overlays.gentoo.org/svn/proj/java/other/swt-patches
-PATCHSET="${PN}-3.2.2-gentoo-patches"
+PATCHSET="${P}-gentoo-patches-r1"
 DESCRIPTION="GTK based SWT Library"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="x86? (
@@ -50,7 +50,6 @@ COMMON=">=dev-libs/glib-2.6
 				)"
 DEPEND=">=virtual/jdk-1.4
 		${COMMON}
-		dev-java/ant-core
 		app-arch/unzip
 		x11-libs/libX11
 		x11-libs/libXrender
@@ -153,7 +152,7 @@ src_compile() {
 	use xulrunner && local gecko="xulrunner"
 
 	if [[ ${gecko} ]]; then
-		einfo "Building the Mozilla component"
+		einfo "Building the Mozilla component against ${gecko}"
 		#local idir="$(pkg-config ${gecko}-xpcom --variable=includedir)"
 		local inc="$(pkg-config ${gecko}-xpcom --cflags)"
 		GECKO_INCLUDES="${inc}" \
