@@ -1,0 +1,17 @@
+=== modified file 'PAMmodule.c'
+--- PAMmodule.c	2007-05-28 17:50:59 +0000
++++ PAMmodule.c	2007-05-28 18:13:33 +0000
+@@ -9,10 +9,11 @@
+ 
+ static char revision[] = "$Id: pypam-0.5.0-stricter.patch,v 1.1 2007/05/28 19:04:57 marienz Exp $";
+ 
++#include <Python.h>
+ #include <security/pam_appl.h>
+ #include <security/pam_misc.h>
+-#include <Python.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <dlfcn.h>
+ 
+ static PyObject *PyPAM_Error;
+
