@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.106 2007/05/27 09:52:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.107 2007/05/28 14:26:02 drac Exp $
+
+  28 May 2007; Samuli Suominen <drac@gentoo.org> ChangeLog:
+  Fix Manifest.
 
   27 May 2007; Samuli Suominen <drac@gentoo.org> -xfce4-4.2.3.2.ebuild:
   Remove old version.
