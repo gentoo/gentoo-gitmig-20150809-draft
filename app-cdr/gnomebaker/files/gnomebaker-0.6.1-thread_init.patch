@@ -1,0 +1,27 @@
+--- src/main.c	2006-08-31 01:41:15.000000000 +0200
++++ src/main_fixed.c	2007-05-10 23:22:33.000000000 +0200
+@@ -49,6 +49,9 @@ static GOptionEntry entries[] =
+ gint
+ main(gint argc, gchar *argv[])
+ {
++    /* This must happen before any other GLib function is called */
++    if (!g_thread_supported ()) g_thread_init(NULL);
++
+ 	GError *error = NULL;
+ 	GOptionContext *context = g_option_context_new(_(" - GNOME CD/DVD burning application"));
+ 	/* add main entries */
+@@ -71,12 +74,11 @@ main(gint argc, gchar *argv[])
+     textdomain (GETTEXT_PACKAGE);
+ #endif
+ 
++    gdk_threads_init();
++
+ #ifdef GST_010
+     struct poptOption* options = NULL;
+ #else
+-    if (!g_thread_supported ()) g_thread_init(NULL);
+-    gdk_threads_init();
+-
+ 	struct poptOption options[] =
+ 	{
+     	{NULL, '\0', POPT_ARG_INCLUDE_TABLE, NULL, 0, "GStreamer", NULL},
