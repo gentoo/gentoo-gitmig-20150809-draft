@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.27 2007/05/28 10:52:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.28 2007/05/28 11:03:56 caster Exp $
+
+  28 May 2007; Vlastimil Babka <caster@gentoo.org> -edtftpj-1.5.3-r1.ebuild:
+  Remove unused version.
 
   28 May 2007; nixnut <nixnut@gentoo.org> edtftpj-1.5.4.ebuild:
   Stable on ppc wrt bug 178381
