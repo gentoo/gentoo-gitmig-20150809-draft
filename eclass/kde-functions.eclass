@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.153 2007/05/28 00:45:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.154 2007/05/28 19:09:30 philantrop Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -916,11 +916,20 @@ postprocess_desktop_entries() {
 		local desktop_entries="$(find "${D}${PREFIX}/share/applnk" -mindepth 2 -maxdepth 2 \
 									-name '*\.desktop' -not -path '*.hidden*' 2>/dev/null)"
 
+		local uninstall_file="[Desktop Entry]
+Encoding=UTF-8
+Hidden=true"
+
 		if [[ -n ${desktop_entries} ]]; then
 			for entry in ${desktop_entries} ; do
-				if [[ ! -f ${D}${PREFIX}/share/applications/kde/$(basename ${entry}) ]]; then
-					dodir ${PREFIX}/share/applications/kde
-					mv ${entry} ${D}${PREFIX}/share/applications/kde
+				echo "$uninstall_file" | diff -qs ${entry} - &> /dev/null
+				if [[ "$?" != "0" ]]; then
+					if [[ ! -f ${D}${PREFIX}/share/applications/kde/$(basename ${entry}) ]]; then
+						dodir ${PREFIX}/share/applications/kde
+						mv ${entry} ${D}${PREFIX}/share/applications/kde
+					else
+						ewarn "QA: $(basename ${entry}) already exists in ${PREFIX}/share/applications/kde."
+					fi
 				fi
 			done
 		fi
