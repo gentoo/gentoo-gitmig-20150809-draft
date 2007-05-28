@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.59 2007/04/24 17:36:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.60 2007/05/28 17:17:15 armin76 Exp $
+
+  28 May 2007; Raúl Porcel <armin76@gentoo.org> libidn-0.6.5-r1.ebuild:
+  alpha stable wrt #175845
 
   24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> libidn-0.6.5-r1.ebuild:
   Stable on Mips, bug 175845.
