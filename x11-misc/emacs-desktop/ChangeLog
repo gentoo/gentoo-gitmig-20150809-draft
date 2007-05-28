@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.15 2007/05/28 13:06:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emacs-desktop/ChangeLog,v 1.16 2007/05/28 14:07:36 opfer Exp $
+
+  28 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-desktop-0.2-r1.ebuild:
+  x86/amd64 stable, bug 180100
 
   28 May 2007; Brent Baude <ranger@gentoo.org> emacs-desktop-0.2-r1.ebuild:
   Marking ppc64 stable to support stablization of bug 180100
