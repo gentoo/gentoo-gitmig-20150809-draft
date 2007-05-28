@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.5 2007/05/23 15:57:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.6 2007/05/28 17:03:31 genstef Exp $
+
+*powertop-1.4 (28 May 2007)
+
+  28 May 2007; Stefan Schweizer <genstef@gentoo.org> -powertop-1.3.ebuild,
+  +powertop-1.4.ebuild:
+  version bump thanks Hijacker in irc
 
 *powertop-1.3 (23 May 2007)
 
