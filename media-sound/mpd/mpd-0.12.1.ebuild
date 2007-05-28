@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.1.ebuild,v 1.10 2007/04/28 15:15:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.1.ebuild,v 1.11 2007/05/28 21:59:00 ticho Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/mpd-${PV%.*}-conf.patch || die "epatch for config file
+	epatch "${FILESDIR}"/mpdconf.patch || die "epatch for config file
 	failed"
 }
 
@@ -97,7 +97,7 @@ src_install() {
 	insinto /etc
 	newins doc/mpdconf.example mpd.conf
 
-	newinitd "${FILESDIR}"/mpd-0.12.rc6 mpd
+	newinitd "${FILESDIR}"/mpd.rc mpd
 
 	if use unicode; then
 		dosed 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' /etc/mpd.conf

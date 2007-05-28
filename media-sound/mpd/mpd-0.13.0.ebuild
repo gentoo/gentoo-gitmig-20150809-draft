@@ -1,84 +1,95 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.2.ebuild,v 1.3 2007/05/28 21:59:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.0.ebuild,v 1.1 2007/05/28 21:59:00 ticho Exp $
 
 inherit eutils
 
 DESCRIPTION="A development version of Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="http://musicpd.org/uploads/files/${P}.tar.bz2"
+SRC_URI="http://www.musicpd.org/uploads/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="aac alsa ao audiofile flac icecast ipv6 mp3 mikmod mp3 musepack oss pulseaudio unicode vorbis"
+IUSE="aac alsa ao audiofile avahi flac icecast iconv ipv6 jack libsamplerate mp3 mikmod musepack ogg oss pulseaudio unicode vorbis"
 
-DEPEND="dev-util/gperf
-	!media-sound/mpd-svn
-	!sys-cluster/mpich2
-	sys-libs/zlib
+DEPEND="!sys-cluster/mpich2
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	alsa? ( media-sound/alsa-utils )
 	ao? ( >=media-libs/libao-0.8.4 )
 	audiofile? ( media-libs/audiofile )
-	flac? ( ~media-libs/flac-1.1.2 )
+	avahi? ( net-dns/avahi )
+	flac? ( media-libs/flac )
 	icecast? ( media-libs/libshout )
+	iconv? ( virtual/libiconv )
+	jack? ( media-sound/jack-audio-connection-kit )
+	libsamplerate? ( media-libs/libsamplerate )
 	mp3? ( media-libs/libmad
 	       media-libs/libid3tag )
 	mikmod? ( media-libs/libmikmod )
 	musepack? ( media-libs/libmpcdec )
+	ogg? ( media-libs/libogg )
 	pulseaudio? ( media-sound/pulseaudio )
 	vorbis? ( media-libs/libvorbis )"
 
-upgrade_warning() {
-	echo
-	ewarn "In 0.12, home directory of user mpd, as well as default locations in mpd.conf"
-	ewarn "have been changed to /var/lib/mpd, please bear that in mind while updating"
-	ewarn "your mpd.conf file."
-	echo
-	epause 5
-}
-
 pkg_setup() {
-	upgrade_warning
-	enewuser mpd '' '' "/var/lib/mpd" audio || die "problem adding user mpd"
+	if use ogg && use flac && ! built_with_use media-libs/flac ogg; then
+		eerror "To be able to play OggFlac files you need to build"
+		eerror "media-libs/flac with +ogg, to build libOggFLAC."
+		die "Missing libOggFLAC library."
+	fi
 
-	# also change the homedir if the user has existed before
-	usermod -d "/var/lib/mpd" mpd
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/mpdconf.patch || die "epatch for config file
-	failed"
+	epatch "${FILESDIR}"/mpdconf.patch || die "epatch for config file failed"
 }
 
 src_compile() {
+	local myconf
+
+	myconf=""
+
+	if use avahi; then
+		myconf="${myconf} --with-zeroconf=avahi"
+	else
+		myconf="${myconf} --with-zeroconf=no"
+	fi
+
+	if use ogg && use flac; then
+		myconf="${myconf} --enable-oggflac --enable-libOggFLACtest"
+	else
+		myconf="${myconf} --disable-oggflac --disable-libOggFLACtest"
+	fi
+
 	econf \
+		$(use_enable aac) \
 		$(use_enable alsa) \
 		$(use_enable alsa alsatest) \
-		$(use_enable oss) \
-		$(use_enable mp3) \
-		$(use_enable aac) \
 		$(use_enable ao) \
 		$(use_enable ao aotest) \
 		$(use_enable audiofile) \
 		$(use_enable audiofile audiofiletest) \
-		$(use_enable flac libFLACtest) \
 		$(use_enable flac) \
-		$(use_enable flac oggflac) \
+		$(use_enable flac libFLACtest) \
 		$(use_enable icecast shout) \
+		$(use_enable iconv) \
 		$(use_enable ipv6) \
+		$(use_enable jack) \
+		$(use_enable libsamplerate lsr) \
 		$(use_enable mp3) \
 		$(use_enable mp3 id3) \
-		$(use_enable mikmod libmikmodtest) \
 		$(use_enable mikmod mod) \
+		$(use_enable mikmod libmikmodtest) \
 		$(use_enable musepack mpc) \
+		$(use_enable oss) \
+		$(use_enable ogg oggtest) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable vorbis oggvorbis) \
 		$(use_enable vorbis vorbistest) \
-		|| die "could not configure"
+		${myconf} || die "could not configure"
 
 	emake || die "emake failed"
 }
@@ -91,7 +102,7 @@ src_install() {
 
 	emake install DESTDIR="${D}" || die
 	rm -rf "${D}"/usr/share/doc/mpd/
-	dodoc ChangeLog INSTALL README TODO UPGRADING
+	dodoc AUTHORS ChangeLog INSTALL README TODO UPGRADING
 	dodoc doc/COMMANDS doc/mpdconf.example
 
 	insinto /etc
@@ -115,10 +126,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	upgrade_warning
-	elog "If you are upgrading from 0.11.x, check the configuration file carefully,"
-	elog "the format has changed. See the example config file installed as"
-	elog "/usr/share/doc/${PF}/mpdconf.example.gz, and mpd.conf manual page."
-	elog ""
-	elog "Please make sure that MPD's pid_file is set to /var/run/mpd/mpd.pid."
+	elog "If you will be starting mpd via /etc/init.d/mpd initscript, please make"
+	elog "sure that MPD's pid_file is set to /var/run/mpd/mpd.pid."
+
+	enewuser mpd "" "" "/var/lib/mpd" audio || die "problem adding user mpd"
+
+	# also change the homedir if the user has existed before
+	usermod -d "/var/lib/mpd" mpd
 }
