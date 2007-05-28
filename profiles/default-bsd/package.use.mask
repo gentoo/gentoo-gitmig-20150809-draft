@@ -19,4 +19,6 @@ net-proxy/squid -ipf-transparent -pf-transparent
 sys-apps/baselayout pam
 sys-apps/coreutils acl
 sys-apps/help2man nls
-net-im/pidgin silc networkmanager zephyr
+
+# NetworkManager is Linux-only, Zephyr requires kerberos
+net-im/pidgin networkmanager zephyr
