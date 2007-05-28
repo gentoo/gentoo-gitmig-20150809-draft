@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ant-apache-bsf-1.7.0-r1.ebuild,v 1.1 2007/05/24 20:01:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ant-apache-bsf-1.7.0-r1.ebuild,v 1.2 2007/05/28 23:37:24 caster Exp $
 
 ANT_TASK_DEPNAME="bsf-2.3"
 
@@ -22,14 +22,16 @@ src_install() {
 }
 
 built_with_use_warn() {
-	if ! built_with_use --missing false dev-java/bsf ${1}; then
-		elog "dev-java/bsf is not installed with \"${1}\" useflag"
-		elog "You won't be able to use ${2} with <script> task in build.xml files."
+	if ! built_with_use --missing false -o dev-java/bsf ${1}; then
+		elog "If you want to use ${2} in <script> tasks in build.xml files,"
+		elog "dev-java/bsf must be installed with \"${3-${1}}\" USE flag"
 	fi
 }
 
 pkg_postinst() {
 	built_with_use_warn python Python
-	built_with_use_warn rhino JavaScript
+	built_with_use_warn "rhino javascript" JavaScript "rhino or javascript"
 	built_with_use_warn tcl TCL
+	elog "Also, >=dev-java/bsf-2.4.0-r1 adds optional support for groovy,"
+	elog "ruby and beanshell. See its postinst elog messages for instructions."
 }
