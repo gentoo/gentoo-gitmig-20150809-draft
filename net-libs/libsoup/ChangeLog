@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.117 2007/03/17 08:03:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.118 2007/05/29 15:38:43 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libsoup-2.2.100.ebuild:
+  Stable on sparc wrt #171107
 
 *libsoup-2.2.100 (17 Mar 2007)
 
