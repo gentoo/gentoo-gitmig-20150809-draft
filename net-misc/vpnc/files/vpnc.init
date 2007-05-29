@@ -4,7 +4,7 @@
 
 VPNDIR="/etc/vpnc"
 VPN="${SVCNAME#*.}"
-if [[ -n ${VPN} && ${SVCNAME} != "vpnc" ]]; then
+if [ -n ${VPN} ] && [ ${SVCNAME} != "vpnc" ]; then
 	VPNPID="/var/run/vpnc/${VPN}.pid"
 else
 	VPNPID="/var/run/vpnc.pid"
@@ -17,13 +17,13 @@ depend() {
 }
 
 checktundevice() {
-	if [[ ! -e /dev/net/tun ]]; then
+	if [ ! -e /dev/net/tun ]; then
 		if ! modprobe tun ; then
 			eerror "TUN/TAP support is not available in this kernel"
 			return 1
 		fi
 	fi
-	if [[ -h /dev/net/tun && -c /dev/misc/net/tun ]]; then
+	if [ -h /dev/net/tun ] && [ -c /dev/misc/net/tun ]; then
 		ebegin "Detected broken /dev/net/tun symlink, fixing..."
 		rm -f /dev/net/tun
 		ln -s /dev/misc/net/tun /dev/net/tun
@@ -36,7 +36,7 @@ start() {
 
 	checktundevice || return 1
 
-	if [[ ! -e "${VPNCONF}" ]]; then
+	if [ ! -e "${VPNCONF}" ]; then
 		eend 1 "${VPNCONF} does not exist"
 		return 1
 	fi
