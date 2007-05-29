@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.14 2007/05/29 06:39:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.15 2007/05/29 07:21:59 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -138,6 +138,10 @@ src_compile() {
 			einfo "Configuring to build with motif toolkit support"
 			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=motif"
+		else
+			einfo "Configuring to build with no toolkit"
+			myconf="${myconf} --without-gtk"
+			myconf="${myconf} --with-x-toolkit=no"
 		fi
 	else
 		myconf="${myconf} --without-x"
