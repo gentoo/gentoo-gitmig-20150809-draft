@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/phalanx-22.ebuild,v 1.1 2007/05/29 21:40:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/phalanx-22.ebuild,v 1.2 2007/05/29 22:12:36 nyhm Exp $
 
 inherit games
 
@@ -9,15 +9,15 @@ MY_PV="XXII"
 MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="A chess engine suitable for beginner and intermediate players"
-HOMEPAGE="http://phalanx.sourceforge.net"
+HOMEPAGE="http://phalanx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/phalanx/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	# configure is not used in the project; confs are in Makefile,
