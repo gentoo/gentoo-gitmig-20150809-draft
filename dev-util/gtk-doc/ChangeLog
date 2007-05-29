@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.77 2007/05/27 03:30:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.78 2007/05/29 15:42:23 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> gtk-doc-1.8.ebuild:
+  Stable on sparc wrt #171107
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> gtk-doc-1.8.ebuild:
   Stable on mips.
