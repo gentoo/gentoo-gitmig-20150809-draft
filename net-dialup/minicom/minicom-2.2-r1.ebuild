@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.2-r1.ebuild,v 1.3 2007/05/29 06:01:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.2-r1.ebuild,v 1.4 2007/05/29 16:40:36 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils
 
 STUPID_NUM="1806"
 
@@ -27,8 +27,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# avoid lazy binding (minicom is sgided)
-	append-ldflags $(bindnow-flags)
 	econf --sysconfdir=/etc/${PN} || die "econf failed"
 	emake || die "emake failed"
 }
@@ -42,6 +40,6 @@ src_install() {
 }
 
 pkg_preinst() {
-	[[ -s /etc/minicom/minirc.dfl ]] \
+	[[ -s ${ROOT}/etc/minicom/minirc.dfl ]] \
 		&& rm -f "${D}"/etc/minicom/minirc.dfl
 }
