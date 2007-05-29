@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.4.ebuild,v 1.1 2007/05/28 22:05:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.4.ebuild,v 1.2 2007/05/29 11:51:57 flameeyes Exp $
 
 inherit eutils multilib perl-app
 
@@ -51,7 +51,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-${PV}-docs.patch
+	epatch "${FILESDIR}"/${PN}-6.3.3-docs.patch
 }
 
 src_compile() {
