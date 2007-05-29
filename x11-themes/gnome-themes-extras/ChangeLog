@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.35 2007/01/10 10:22:00 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.36 2007/05/29 15:47:26 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-themes-extras-0.9.0.ebuild:
+  Stable on sparc wrt #171107
 
 *gnome-themes-extras-0.9.0 (10 Jan 2007)
 
