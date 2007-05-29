@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.0.ebuild,v 1.1 2007/05/29 13:57:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.0.ebuild,v 1.2 2007/05/29 17:16:07 zzam Exp $
 
 DESCRIPTION="A modular, multithreaded webapplicationserver written from scratch for C++."
 HOMEPAGE="http://www.tntnet.org/index.hms"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="dev-libs/cxxtools
+RDEPEND="dev-libs/cxxtools
 	>=net-libs/gnutls-1.2.0"
+DEPEND="${RDEPEND}
+	app-arch/zip"
 
 src_compile() {
 	econf --with-ssl=gnutls \
