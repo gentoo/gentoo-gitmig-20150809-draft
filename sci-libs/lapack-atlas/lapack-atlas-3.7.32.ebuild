@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.32.ebuild,v 1.1 2007/05/28 12:25:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.32.ebuild,v 1.2 2007/05/29 13:15:05 markusle Exp $
 
-inherit eutils flag-o-matic toolchain-funcs fortran
+inherit eutils flag-o-matic toolchain-funcs fortran versionator
 
 MY_PN="${PN/lapack-/}"
 L_PN="lapack"
 L_PV="3.1.1"
+BlasRelease=$(get_version_component_range 1-3)
 
 DESCRIPTION="Full LAPACK implementation using available ATLAS routines"
 LICENSE="BSD"
@@ -25,7 +26,7 @@ RDEPEND="virtual/blas
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
-	~sci-libs/blas-atlas-3.7.31"
+	~sci-libs/blas-atlas-${BlasRelease}"
 
 PROVIDE="virtual/lapack"
 
