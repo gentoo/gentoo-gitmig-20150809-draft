@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.27.ebuild,v 1.1 2007/05/25 11:04:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.27.ebuild,v 1.2 2007/05/29 13:29:02 mrness Exp $
 
 DESCRIPTION="Nullsoft Scriptable Install System"
 HOMEPAGE="http://nsis.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="config-log"
 
 DEPEND=">=dev-util/scons-0.96.93"
 
@@ -32,25 +32,31 @@ pkg_setup() {
 	die "mingw32 is needed"
 }
 
-get_arch_options() {
+get_additional_options() {
+	local opts="VERSION=${PV} DEBUG=no STRIP=no"
+	if use config-log ; then
+		opts="${opts} NSIS_CONFIG_LOG=yes"
+	fi
 	if use amd64; then
 		# Some part of the code cannot be compiled on 64-bit arches
-		echo APPEND_CCFLAGS=-m32 APPEND_LINKFLAGS=-m32
+		opts="${opts} APPEND_CCFLAGS=-m32 APPEND_LINKFLAGS=-m32"
 	fi
+
+	echo ${opts}
 }
 
 src_compile() {
 	# Try next version without SKIPUTILS
 	scons PREFIX=/usr PREFIX_CONF=/etc PREFIX_DOC="/usr/share/doc/${P}" PREFIX_DEST="${D}" \
-		SKIPPLUGINS=System SKIPUTILS="NSIS Menu" VERSION=${PV} DEBUG=no STRIP=no \
-		$(get_arch_options) || die "scons failed"
+		SKIPPLUGINS=System SKIPUTILS="NSIS Menu" \
+		$(get_additional_options) || die "scons failed"
 }
 
 src_install() {
 	# Try next version without SKIPUTILS
 	scons PREFIX=/usr PREFIX_CONF=/etc PREFIX_DOC="/usr/share/doc/${P}" PREFIX_DEST="${D}" \
-		SKIPPLUGINS=System SKIPUTILS="NSIS Menu" VERSION=${PV} DEBUG=no STRIP=no \
-		$(get_arch_options) install || die "scons install failed"
+		SKIPPLUGINS=System SKIPUTILS="NSIS Menu" \
+		$(get_additional_options) install || die "scons install failed"
 
 	fperms -R go-w,a-x,a+X /usr/share/${PN}/ /usr/share/doc/${P}/ /etc/nsisconf.nsh
 

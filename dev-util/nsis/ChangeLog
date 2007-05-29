@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.9 2007/05/25 11:04:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.10 2007/05/29 13:29:02 mrness Exp $
+
+  29 May 2007; Alin Năstac <mrness@gentoo.org>
+  -files/nsis-2.24-no-strict-aliasing.patch, -nsis-2.24.ebuild,
+  nsis-2.27.ebuild:
+  Remove obsolete version. Add config-log USE flag (#180060).
 
 *nsis-2.27 (25 May 2007)
 
