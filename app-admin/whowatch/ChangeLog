@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.17 2007/05/13 08:08:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.18 2007/05/29 14:35:24 yoswink Exp $
+
+  29 May 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  whowatch-1.5.2-r1.ebuild:
+  Added ~alpha thanks to Jimi A. <folajimi@speakeasy.net> request in bug #178391
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
