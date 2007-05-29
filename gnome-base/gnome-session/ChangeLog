@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.175 2007/03/27 03:32:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.176 2007/05/29 15:19:00 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-session-2.16.3.ebuild:
+  Stable on sparc wrt #171107
 
 *gnome-session-2.18.0 (27 Mar 2007)
 
