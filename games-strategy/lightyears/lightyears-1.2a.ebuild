@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.2a.ebuild,v 1.3 2007/04/30 13:13:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.2a.ebuild,v 1.4 2007/05/29 22:35:37 nyhm Exp $
 
-inherit eutils games
+inherit eutils python games
 
 MY_PN=LightYears
 MY_P=${MY_PN}-${PV}
@@ -53,4 +53,13 @@ src_install() {
 	newicon data/32.png ${PN}.png
 	make_desktop_entry ${PN} "Light Years Into Space"
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	python_mod_optimize "$(games_get_libdir)/${PN}"
+}
+
+pkg_postrm() {
+	python_mod_cleanup "$(games_get_libdir)/${PN}"
 }
