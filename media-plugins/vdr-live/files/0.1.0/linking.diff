@@ -7,26 +7,25 @@ Index: live-0.1.0/Makefile
  CXXFLAGS += `tntnet-config --cxxflags`
  
 -LDFLAGS  += `tntnet-config --libs`
-+LDLIBS  += $(shell tntnet-config --libs)
++LIBS  += $(shell tntnet-config --libs)
  
  ### The directory environment:
  
-@@ -54,7 +54,8 @@ INCLUDES += -I$(VDRDIR)/include -Ihttpd
- DEFINES  += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
- export DEFINES
+@@ -71,7 +71,7 @@ WEBLIBS    = pages/libpages.a css/libcss
  
--LIBS     += httpd/libhttpd.a -lssl
-+LIBS     += httpd/libhttpd.a
-+LDLIBS   += -lssl
+ .PHONY: all dist clean SUBDIRS
  
- SUBDIRS   = httpd pages css images javascript
+-all: SUBDIRS libvdr-$(PLUGIN).so
++all: libvdr-$(PLUGIN).so
  
-@@ -95,7 +96,7 @@ SUBDIRS:
+ ### Implicit rules:
+ 
+@@ -94,7 +94,7 @@ SUBDIRS:
+ 		make -C $$dir CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" || exit 1; \
  	done
  
- libvdr-$(PLUGIN).so: $(PLUGINOBJS) $(LIBS) $(WEBLIBS)
--	$(CXX) $(LDFLAGS) -shared -o $@  $(PLUGINOBJS) -Wl,--whole-archive $(WEBLIBS) -Wl,--no-whole-archive $(LIBS)
-+	$(CXX) $(LDFLAGS) -shared -o $@  $(PLUGINOBJS) -Wl,--whole-archive $(WEBLIBS) -Wl,--no-whole-archive $(LIBS) $(LDLIBS)
+-libvdr-$(PLUGIN).so: $(PLUGINOBJS) $(LIBS) $(WEBLIBS)
++libvdr-$(PLUGIN).so: SUBDIRS $(PLUGINOBJS)
+ 	$(CXX) $(LDFLAGS) -shared -o $@  $(PLUGINOBJS) -Wl,--whole-archive $(WEBLIBS) -Wl,--no-whole-archive $(LIBS)
  	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
  
- dist: clean

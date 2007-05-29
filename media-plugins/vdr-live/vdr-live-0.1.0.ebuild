@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.1.0.ebuild,v 1.1 2007/05/29 14:01:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.1.0.ebuild,v 1.2 2007/05/29 16:07:04 zzam Exp $
 
 inherit vdr-plugin
 
 DESCRIPTION="VDR Plugin: Web Access To Settings"
 HOMEPAGE="http://live.vdr-developer.org"
-SRC_URI="http://live.vdr-developer.org/downloads/${P#vdr-}.tar.gz"
+SRC_URI="http://live.vdr-developer.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
