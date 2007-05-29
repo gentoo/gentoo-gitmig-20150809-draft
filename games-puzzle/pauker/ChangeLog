@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/pauker
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.15 2007/03/09 07:41:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.16 2007/05/29 21:46:33 nyhm Exp $
+
+*pauker-1.7.5 (29 May 2007)
+
+  29 May 2007; Tristan Heaven <nyhm@gentoo.org> +pauker-1.7.5.ebuild:
+  Version bump, bug #180243
 
 *pauker-1.7.4 (09 Mar 2007)
 
