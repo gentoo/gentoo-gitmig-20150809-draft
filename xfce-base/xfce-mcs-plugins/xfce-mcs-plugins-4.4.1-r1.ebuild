@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.1-r1.ebuild,v 1.1 2007/05/26 07:46:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.1-r1.ebuild,v 1.2 2007/05/29 16:44:02 drac Exp $
 
 inherit eutils xfce44
 
@@ -24,7 +24,8 @@ RDEPEND="x11-libs/libX11
 	>=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
-	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}"
+	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
+	x11-apps/xrdb"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
