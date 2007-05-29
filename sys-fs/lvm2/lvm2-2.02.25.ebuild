@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.25.ebuild,v 1.1 2007/05/28 21:54:08 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.25.ebuild,v 1.2 2007/05/29 14:38:05 rocket Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="readline nolvmstatic clvm cman gulm nolvm1 nosnapshots nomirrors selinux"
 
-DEPEND=">=sys-fs/device-mapper-1.02.18
+DEPEND=">=sys-fs/device-mapper-1.02.19
 		clvm? ( >=sys-cluster/dlm-1.01.00
 			cman? ( >=sys-cluster/cman-1.01.00 )
 			gulm? ( >=sys-cluster/gulm-1.00.00 ) )"
@@ -94,6 +94,7 @@ src_install() {
 	insinto /lib/rcscripts/addons
 	newins ${FILESDIR}/lvm2-start.sh lvm-start.sh || die
 	newins ${FILESDIR}/lvm2-stop.sh lvm-stop.sh || die
+	newinitd ${FILESDIR}/lvm.rc lvm || die
 	if use clvm; then
 		newinitd ${FILESDIR}/clvmd.rc clvmd || die
 	fi
@@ -105,4 +106,10 @@ src_install() {
 	ewarn "by default and need to be unmasked to use them"
 	ewarn ""
 	ewarn "Rebuild your genkernel initramfs if you are using lvm"
+}
+
+pkg_postinst() {
+	elog "lvm volumes are no longer automatically created for"
+	elog "baselayout-2 users. If you are using baselayout-2, be sure to"
+	elog "run: # rc-update add lvm boot"
 }
