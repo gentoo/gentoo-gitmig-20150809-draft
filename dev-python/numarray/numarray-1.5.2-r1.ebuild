@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.5 2007/05/24 16:29:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.6 2007/05/29 15:33:57 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -27,8 +27,8 @@ LICENSE="BSD"
 
 DOCS="LICENSE.txt Doc/*.txt Doc/release_notes/ANNOUNCE-${PV:0:3}"
 
-# test with lapack buggy
-RESTRICT="lapack? ( test )"
+# test with lapack buggy on amd64 (at least)
+RESTRICT="amd64? ( lapack? ( test ) )"
 
 pkg_setup() {
 	if use lapack; then
@@ -58,10 +58,24 @@ src_unpack() {
 	# fix refcount problem from a debian bug
 	epatch "${FILESDIR}"/${P}-refcount.patch
 
+	# Fix missing exceptions (e.g. divide by zero, overflow) in FreeBSD
+	# (i.e. need to include "__FreeBSD__" in pre-processor conditionals)
+	epatch "${FILESDIR}"/${P}-freebsd.patch
+
+	# fix array_protocol tests with numpy
+	#sed -i \
+	#	-e 's/True/ True/g' \
+	#	Lib/array_protocol.py || die "sed array_protocol failed"
+
+	# array_protocol tests are buggy with various numeric/numpy versions
+	sed -i \
+		-e '/array_protocol/d' \
+		Lib/testall.py || die "sed testall failed"
+
 	# fix hard-coded path in numinclude
 	sed -i \
 		-e "s:/home/jmiller/work/debug/include/python2.5:/usr/include/python${PYVER}:" \
-		Lib/numinclude.py || die "sed failed"
+		Lib/numinclude.py || die "sed numinclude failed"
 
 	# configure cfg_packages.py for lapack
 	if use lapack; then
@@ -70,18 +84,19 @@ src_unpack() {
 			-e 's:/usr/local/include/atlas:/usr/include/atlas:g' \
 			-e "s:/usr/local/lib/atlas:/usr/$(get_libdir):g" \
 			-e 's:f77blas:blas:g' \
-			cfg_packages.py
+			cfg_packages.py || die "sed for lapack failed"
 		# fix gfortran for > gcc-4
 		if  [[ "${FORTRANC}" == gfortran ]]; then
 			sed -i \
 				-e "s:g2c:gfortran:g" \
-				cfg_packages.py
+				cfg_packages.py || die "sed for gfortran failed"
 		fi
-		[[ "${mycblas}" == reference ]] && \
+		if [[ "${mycblas}" == reference ]]; then
 			sed -i \
-			-e "s:'atlas',::g" \
-			-e "s:include/atlas:include/cblas:g" \
-			cfg_packages.py
+				-e "s:'atlas',::g" \
+				-e "s:include/atlas:include/cblas:g" \
+				cfg_packages.py || die "sed for reference lapack failed"
+		fi
 	fi
 	${python} setup.py config --gencode || die "API code generation failed"
 }
