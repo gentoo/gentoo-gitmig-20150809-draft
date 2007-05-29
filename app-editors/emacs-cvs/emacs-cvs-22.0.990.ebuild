@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.990.ebuild,v 1.3 2007/05/29 06:26:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.990.ebuild,v 1.4 2007/05/29 06:39:00 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -120,10 +120,6 @@ src_compile() {
 			myconf="${myconf} --without-gtk"
 		elif use motif; then
 			einfo "Configuring to build with motif toolkit support"
-			myconf="${myconf} --without-gtk"
-			myconf="${myconf} --with-x-toolkit=motif"
-		elif use lesstif; then
-			einfo "Configuring to build with lesstif toolkit support"
 			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=motif"
 		fi
