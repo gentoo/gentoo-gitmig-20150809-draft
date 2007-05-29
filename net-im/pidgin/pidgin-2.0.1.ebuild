@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.3 2007/05/27 20:05:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.4 2007/05/29 17:15:59 drizzt Exp $
+
+WANT_AUTOMAKE=1.9
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -140,7 +142,7 @@ pkg_setup() {
 
 	if ! use gtk && ! use ncurses ; then
 		einfo
-		elog "As you did not pick gtk or console use flag, building"
+		elog "As you did not pick gtk or ncurses use flag, building"
 		elog "console only."
 		einfo
 	fi
@@ -161,6 +163,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-2.0.0-cchar_t-undeclared.patch"
 	epatch "${FILESDIR}/pidgin-2.0.1-purple-remote-syntax-fix.patch"
+	epatch "${FILESDIR}/${P}-desktop.patch"
+
+	eautomake
 }
 
 src_compile() {

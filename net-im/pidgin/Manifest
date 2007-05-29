@@ -5,6 +5,10 @@ AUX pidgin-2.0.0-cchar_t-undeclared.patch 278 RMD160 f126c8410896bb7933cc81e05eb
 MD5 64f45de10775a81453340b4f9aae2b5d files/pidgin-2.0.0-cchar_t-undeclared.patch 278
 RMD160 f126c8410896bb7933cc81e05ebae9f5b83af0c7 files/pidgin-2.0.0-cchar_t-undeclared.patch 278
 SHA256 a0c33e57f509bc87a84903689ef7ce4a33b615e79658e5bbf83bf9cc7077efea files/pidgin-2.0.0-cchar_t-undeclared.patch 278
+AUX pidgin-2.0.1-desktop.patch 510 RMD160 dc7d5d1f55aa7382aa0b7ff6a9df16f6cd3bbb35 SHA1 aa840cdc76248b5a24079f842fd5ceade28c4143 SHA256 cd8856376b12e7178cc874cc4d7f22d85cb2f411bb1a45faccccb3ce13ad5369
+MD5 3ca950c8f2d71d8830340517577cc55f files/pidgin-2.0.1-desktop.patch 510
+RMD160 dc7d5d1f55aa7382aa0b7ff6a9df16f6cd3bbb35 files/pidgin-2.0.1-desktop.patch 510
+SHA256 cd8856376b12e7178cc874cc4d7f22d85cb2f411bb1a45faccccb3ce13ad5369 files/pidgin-2.0.1-desktop.patch 510
 AUX pidgin-2.0.1-purple-remote-syntax-fix.patch 403 RMD160 e2f3a38a25b9a1a5493c7ef94e86f5467cd522f1 SHA1 e0ba9a09feaf047d8d9d7d379bcca437a1b22470 SHA256 0ba68c5452a18bb25c1d4b60bd66d836313b22ed00eb357ad4004dca869c54da
 MD5 1afebb41f11e4fa398bc4212a7229f2c files/pidgin-2.0.1-purple-remote-syntax-fix.patch 403
 RMD160 e2f3a38a25b9a1a5493c7ef94e86f5467cd522f1 files/pidgin-2.0.1-purple-remote-syntax-fix.patch 403
@@ -15,14 +19,14 @@ EBUILD pidgin-2.0.0.ebuild 7444 RMD160 a40a25ef123ddb4b42a6e92eeffaedb74424b857 
 MD5 c865dde3dd44e6e02af418e43521a486 pidgin-2.0.0.ebuild 7444
 RMD160 a40a25ef123ddb4b42a6e92eeffaedb74424b857 pidgin-2.0.0.ebuild 7444
 SHA256 a02967839dfd37989b6b46d0c5ed49073090e4a4eff4fb8a30eaac7e8edfeeeb pidgin-2.0.0.ebuild 7444
-EBUILD pidgin-2.0.1.ebuild 7585 RMD160 3d335addfdf063e34be710af008dabe6bcacdbd5 SHA1 833b3c5267e43ee433c394f2ae5e0130756d0c73 SHA256 dc44959930a1cca9945f4906495fc2da55b58f25b862cb46782ec943ba79a599
-MD5 9496fa0278568e02ffdd759b6eefdfd7 pidgin-2.0.1.ebuild 7585
-RMD160 3d335addfdf063e34be710af008dabe6bcacdbd5 pidgin-2.0.1.ebuild 7585
-SHA256 dc44959930a1cca9945f4906495fc2da55b58f25b862cb46782ec943ba79a599 pidgin-2.0.1.ebuild 7585
-MISC ChangeLog 2082 RMD160 2aa7b7d6ead14ed6b3f41a43e614d67e7e6a1a92 SHA1 badee268b250d4e5495435a5bd2e19e717d12e96 SHA256 ea0f014733ba5be51a4557d858ad2c99a7e56b212e7ca66964b897e7e3f1f519
-MD5 f2507bc2f8a0defe392b45bf41fcb4aa ChangeLog 2082
-RMD160 2aa7b7d6ead14ed6b3f41a43e614d67e7e6a1a92 ChangeLog 2082
-SHA256 ea0f014733ba5be51a4557d858ad2c99a7e56b212e7ca66964b897e7e3f1f519 ChangeLog 2082
+EBUILD pidgin-2.0.1.ebuild 7657 RMD160 c0ccb8db6ffcd7f31c097a5efcd82024fccac3a7 SHA1 75bb52e3012024acdac1280ad24a69c09240fb14 SHA256 54e717e9c52333e4d30df8451eaedc2058393a54440f7791a0d40ffb28ccc9b4
+MD5 b6a52df6a861cf505817182b29bdfaa7 pidgin-2.0.1.ebuild 7657
+RMD160 c0ccb8db6ffcd7f31c097a5efcd82024fccac3a7 pidgin-2.0.1.ebuild 7657
+SHA256 54e717e9c52333e4d30df8451eaedc2058393a54440f7791a0d40ffb28ccc9b4 pidgin-2.0.1.ebuild 7657
+MISC ChangeLog 2252 RMD160 7816c905df65f908281eac1ac487b257d026550b SHA1 d731884969031615c6e17a7a8fa2d7f6b958e266 SHA256 fba4e88974cb379593fb345cb020dde0cd32d09e56f9614e742b7d3c38a7db8c
+MD5 ffc092b36476b28f0ef3cb09cffbc4d7 ChangeLog 2252
+RMD160 7816c905df65f908281eac1ac487b257d026550b ChangeLog 2252
+SHA256 fba4e88974cb379593fb345cb020dde0cd32d09e56f9614e742b7d3c38a7db8c ChangeLog 2252
 MISC metadata.xml 458 RMD160 dca91f12277688e0a35ab2aefc0d46c8c70facbd SHA1 7dc17a356911852b3f5867e3629ef02a46adb675 SHA256 4457ab0d5db90f61e9d916879c32d1e0a7c6d15f2f7c955a17e5e31cb0777ba9
 MD5 bba7b9e682937ac5182b872b00b19d93 metadata.xml 458
 RMD160 dca91f12277688e0a35ab2aefc0d46c8c70facbd metadata.xml 458
@@ -34,9 +38,9 @@ MD5 8625234e10b93d02c0a52b604e76aa56 files/digest-pidgin-2.0.1 244
 RMD160 5959d54d422c8908183f7f4f148e4eb4c79dcf23 files/digest-pidgin-2.0.1 244
 SHA256 4497649139e101148737beee7286ec99251c0f212d04d0870ff7b4b467b7e34a files/digest-pidgin-2.0.1 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFGWeSn+IXOQtHLm/gRAl53AJ4xPLOwvX2ncDYrUvyLlgJYGDQi6QCeNov/
-wlHB23fGNWCIrffQYTctdUY=
-=tlEj
+iD8DBQFGXF/XjJyKLBkBVroRAspLAKCRKUJ3nvJJfYxJ40BE1IY1kNJmrwCfbwSm
+UUSsO9E3wadNbU7ip3/cLwE=
+=Hw51
 -----END PGP SIGNATURE-----
