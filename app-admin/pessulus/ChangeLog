@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.28 2007/05/27 22:11:22 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.29 2007/05/29 15:34:02 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  pessulus-2.16.2.ebuild:
+  Stable on sparc wrt #171107
 
   27 May 2007; Mart Raudsepp <leio@gentoo.org> pessulus-2.16.2.ebuild:
   Fix tests, bug 180042
