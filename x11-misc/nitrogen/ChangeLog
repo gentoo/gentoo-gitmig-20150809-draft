@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/nitrogen
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.1 2006/10/20 04:14:02 omp Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.2 2007/05/29 06:42:34 omp Exp $
+
+*nitrogen-1.0 (29 May 2007)
+
+  29 May 2007; David Shakaryan <omp@gentoo.org> +nitrogen-1.0.ebuild:
+  Version bump. (bug #180052)
 
   20 Oct 2006; David Shakaryan <omp@gentoo.org> +metadata.xml,
   +nitrogen-1.0_rc4.ebuild:
