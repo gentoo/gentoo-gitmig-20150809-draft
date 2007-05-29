@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.144 2007/05/09 10:55:57 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.145 2007/05/29 19:21:40 voxus Exp $
+
+*nginx-0.5.22 (29 May 2007)
+
+  29 May 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  -nginx-0.5.20.ebuild, +nginx-0.5.22.ebuild:
+  Version bump.
 
   09 May 2007; Timothy Redaelli <drizzt@gentoo.org> nginx-0.5.20.ebuild:
   Add ~x86-fbsd keyword.
