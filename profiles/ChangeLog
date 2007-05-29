@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.433 2007/05/28 22:26:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.434 2007/05/29 00:13:21 caster Exp $
+
+  29 May 2007; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Removing removed packages from package.mask.
 
   28 May 2007; Samuli Suominen <drac@gentoo.org> use.desc, use.local.desc:
   Moved dozen xscreensaver USE flags from local to global.
