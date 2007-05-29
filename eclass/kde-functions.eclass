@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.154 2007/05/28 19:09:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.155 2007/05/29 17:26:18 philantrop Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -922,8 +922,8 @@ Hidden=true"
 
 		if [[ -n ${desktop_entries} ]]; then
 			for entry in ${desktop_entries} ; do
-				echo "$uninstall_file" | diff -qs ${entry} - &> /dev/null
-				if [[ "$?" != "0" ]]; then
+				echo "${uninstall_file}" | diff -qs ${entry} - &> /dev/null
+				if [[ $? != 0 ]]; then
 					if [[ ! -f ${D}${PREFIX}/share/applications/kde/$(basename ${entry}) ]]; then
 						dodir ${PREFIX}/share/applications/kde
 						mv ${entry} ${D}${PREFIX}/share/applications/kde
