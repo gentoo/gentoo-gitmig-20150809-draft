@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/primateplunge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.5 2007/04/24 14:55:57 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.6 2007/05/29 20:40:56 tupone Exp $
+
+*primateplunge-1.1-r1 (29 May 2007)
+
+  29 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +primateplunge-1.1-r1.ebuild:
+  Added menu entry. Bug #160242 by Pacho Ramos
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
   primateplunge-1.1.ebuild:
