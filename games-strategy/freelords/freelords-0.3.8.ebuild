@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.1 2007/05/27 20:19:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.2 2007/05/29 17:00:02 nyhm Exp $
 
 inherit eutils games
 
@@ -56,6 +56,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -f "${D}"/usr/share/locale/locale.alias
 	doicon dat/various/${PN}.png
 	make_desktop_entry ${PN} FreeLords
 	if use editor ; then
