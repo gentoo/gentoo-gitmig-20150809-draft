@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/apel-1.32.ebuild,v 1.3 2007/04/22 10:57:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/apel-1.32.ebuild,v 1.4 2007/05/29 11:49:17 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -10,6 +10,6 @@ PKG_CAT="standard"
 RDEPEND="app-xemacs/fsf-compat
 app-xemacs/xemacs-base
 "
-KEYWORDS="~alpha ~amd64 hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ~ppc ppc64 ~sparc ~x86"
 
 inherit xemacs-packages
