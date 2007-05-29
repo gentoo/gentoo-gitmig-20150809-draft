@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/daimonin-client
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.17 2007/02/01 13:01:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.18 2007/05/29 21:19:42 nyhm Exp $
+
+*daimonin-client-0.9.7 (29 May 2007)
+
+  29 May 2007; Tristan Heaven <nyhm@gentoo.org>
+  -files/0.96.7_beta3-gentoo-paths.patch,
+  -files/daimonin-client-0.96.7_beta3-64bits.patch,
+  +daimonin-client-0.9.7.ebuild, -daimonin-client-0.96.7_beta3.ebuild:
+  Version bump
 
   01 Feb 2007; Simon Stelling <blubb@gentoo.org>
   daimonin-client-0.96.7_beta3.ebuild:
