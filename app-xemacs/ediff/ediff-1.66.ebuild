@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ediff-1.66.ebuild,v 1.1 2006/12/22 09:05:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ediff-1.66.ebuild,v 1.2 2007/05/29 18:28:46 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -14,6 +14,6 @@ app-xemacs/xemacs-base
 app-xemacs/edebug
 app-xemacs/prog-modes
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages

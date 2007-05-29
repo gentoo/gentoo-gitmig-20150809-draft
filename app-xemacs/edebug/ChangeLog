@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/edebug
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edebug/ChangeLog,v 1.10 2006/12/22 09:03:28 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edebug/ChangeLog,v 1.11 2007/05/29 18:24:30 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> edebug-1.22.ebuild:
+  alpha stable wrt #175560
 
 *edebug-1.22 (22 Dec 2006)
 
