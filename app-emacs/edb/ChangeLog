@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/edb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.4 2007/05/20 18:23:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.5 2007/05/29 20:14:28 ulm Exp $
+
+*edb-1.28 (29 May 2007)
+
+  29 May 2007; Ulrich Mueller <ulm@gentoo.org> files/51edb-gentoo.el,
+  +files/52edb-gentoo.el, +edb-1.28.ebuild:
+  Version bump. Fix autoload command in site file.
 
 *edb-1.27_p2 (20 May 2007)
 
