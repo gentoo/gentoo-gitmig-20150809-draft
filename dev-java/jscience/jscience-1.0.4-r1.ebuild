@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4-r1.ebuild,v 1.1 2007/04/28 16:17:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4-r1.ebuild,v 1.2 2007/05/29 21:43:34 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -25,23 +25,18 @@ DEPEND=">=virtual/jdk-1.4
 S="${WORKDIR}/jscience-${PV%.*}"
 
 src_unpack() {
-
 	unpack ${A}
-
-	cd ${S}/lib
-	rm -f *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 	java-pkg_jar-from javolution-2.2.4
-
 }
 
 EANT_BUILD_TARGET="jarfile"
 
 src_install() {
-
 	java-pkg_dojar jscience.jar
 
-	dodoc doc/coding_standard.txt
+	dodoc doc/coding_standard.txt || die
 	use doc && java-pkg_dojavadoc api
-	use source && java-pkg_dosrc "${S}/src"/*
-
+	use source && java-pkg_dosrc "${S}/src/org"
 }
