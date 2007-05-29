@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.92 2007/05/10 15:42:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.93 2007/05/29 13:53:55 ranger Exp $
+
+  29 May 2007; Brent Baude <ranger@gentoo.org> sip-4.5.2-r1.ebuild:
+  Marking sip-4.5.2-r1 ppc64 stable for 174413
 
   10 May 2007; Caleb Tennis <caleb@gentoo.org> -files/license-3.8.diff,
   -sip-3.8-r1.ebuild, -sip-3.10.2.ebuild, -sip-3.11.1.ebuild,
