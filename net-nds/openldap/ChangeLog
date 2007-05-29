@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.267 2007/05/29 18:40:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.268 2007/05/29 19:22:16 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  openldap-2.3.35-r1.ebuild:
+  Stable on sparc wrt #180012
 
   29 May 2007; Brent Baude <ranger@gentoo.org> openldap-2.3.35-r1.ebuild:
   Marking openldap-2.3.35-r1 ppc64 stable for bug 180012
