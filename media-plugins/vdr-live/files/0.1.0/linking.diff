@@ -1,0 +1,32 @@
+Index: live-0.1.0/Makefile
+===================================================================
+--- live-0.1.0.orig/Makefile
++++ live-0.1.0/Makefile
+@@ -26,7 +26,7 @@ LDFLAGS  ?= -fPIC -g
+ ECPPC    ?= ecppc
+ CXXFLAGS += `tntnet-config --cxxflags`
+ 
+-LDFLAGS  += `tntnet-config --libs`
++LDLIBS  += $(shell tntnet-config --libs)
+ 
+ ### The directory environment:
+ 
+@@ -54,7 +54,8 @@ INCLUDES += -I$(VDRDIR)/include -Ihttpd
+ DEFINES  += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
+ export DEFINES
+ 
+-LIBS     += httpd/libhttpd.a -lssl
++LIBS     += httpd/libhttpd.a
++LDLIBS   += -lssl
+ 
+ SUBDIRS   = httpd pages css images javascript
+ 
+@@ -95,7 +96,7 @@ SUBDIRS:
+ 	done
+ 
+ libvdr-$(PLUGIN).so: $(PLUGINOBJS) $(LIBS) $(WEBLIBS)
+-	$(CXX) $(LDFLAGS) -shared -o $@  $(PLUGINOBJS) -Wl,--whole-archive $(WEBLIBS) -Wl,--no-whole-archive $(LIBS)
++	$(CXX) $(LDFLAGS) -shared -o $@  $(PLUGINOBJS) -Wl,--whole-archive $(WEBLIBS) -Wl,--no-whole-archive $(LIBS) $(LDLIBS)
+ 	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean

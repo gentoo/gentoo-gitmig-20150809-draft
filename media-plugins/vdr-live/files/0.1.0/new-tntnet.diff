@@ -1,0 +1,12 @@
+Index: live-0.1.0/httpd/worker.cpp
+===================================================================
+--- live-0.1.0.orig/httpd/worker.cpp
++++ live-0.1.0/httpd/worker.cpp
+@@ -77,7 +77,6 @@ namespace tnt
+   {
+     cxxtools::MutexLock lock(mutex);
+     workers.erase(this);
+-    comploader.cleanup();
+ 
+     log_debug("delete worker " << threadId << " - " << workers.size() << " threads left - " << application.getQueue().getWaitThreadCount() << " waiting threads");
+   }
