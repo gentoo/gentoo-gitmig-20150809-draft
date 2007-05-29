@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.10 2007/02/22 00:42:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.11 2007/05/29 21:22:09 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> ocaml-0.06.ebuild:
+  alpha stable wrt #175560
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

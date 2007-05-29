@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ps-print
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ps-print/ChangeLog,v 1.10 2006/11/12 18:30:51 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ps-print/ChangeLog,v 1.11 2007/05/29 21:33:48 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> ps-print-1.11.ebuild:
+  alpha stable wrt #175560
 
   12 Nov 2006; Hans de Graaff <graaff@gentoo.org> ChangeLog:
   Add ~ppc64 keyword due to new gnus dependency

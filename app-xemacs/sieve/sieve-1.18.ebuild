@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sieve/sieve-1.18.ebuild,v 1.2 2006/11/12 18:35:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sieve/sieve-1.18.ebuild,v 1.3 2007/05/29 21:44:27 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -14,7 +14,7 @@ app-xemacs/sasl
 app-xemacs/ecrypto
 app-xemacs/sh-script
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages
 

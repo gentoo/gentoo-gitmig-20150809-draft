@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pc/ChangeLog,v 1.9 2007/02/22 00:42:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pc/ChangeLog,v 1.10 2007/05/29 21:24:43 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> pc-1.28.ebuild:
+  alpha stable wrt #175560
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

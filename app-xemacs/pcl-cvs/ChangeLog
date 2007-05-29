@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pcl-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.11 2007/05/05 15:26:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.12 2007/05/29 21:26:02 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> pcl-cvs-1.67.ebuild:
+  alpha stable wrt #175560
 
   05 May 2007; Hans de Graaff <graaff@gentoo.org> pcl-cvs-1.64.ebuild:
   Use RDEPEND instead of DEPEND
