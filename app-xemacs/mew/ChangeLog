@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mew
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mew/ChangeLog,v 1.8 2006/11/12 18:22:11 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mew/ChangeLog,v 1.9 2007/05/29 20:54:09 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> mew-1.19.ebuild:
+  alpha stable wrt #175560
 
   12 Nov 2006; Hans de Graaff <graaff@gentoo.org> mew-1.19.ebuild:
   Add ~ppc64 keyword due to net-utils dependency

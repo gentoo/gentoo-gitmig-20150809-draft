@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mailcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/ChangeLog,v 1.10 2007/05/05 15:34:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/ChangeLog,v 1.11 2007/05/29 20:49:18 armin76 Exp $
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> mailcrypt-2.14.ebuild:
+  alpha stable wrt #175560
 
   05 May 2007; Hans de Graaff <graaff@gentoo.org> mailcrypt-2.12.ebuild:
   Use RDEPEND instead of DEPEND

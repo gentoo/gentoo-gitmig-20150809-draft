@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/igrep-1.14.ebuild,v 1.1 2006/11/12 09:02:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/igrep-1.14.ebuild,v 1.2 2007/05/29 20:39:45 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -11,7 +11,7 @@ RDEPEND="app-xemacs/dired
 app-xemacs/xemacs-base
 app-xemacs/efs
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages
 
