@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.27 2007/05/23 02:40:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.28 2007/05/29 21:16:28 philantrop Exp $
+
+  29 May 2007; Wulf C. Krueger <philantrop@gentoo.org> pykde-3.5.7.ebuild:
+  Removed obsolete patch, fixes bug 179653.
 
 *pykde-3.5.7 (23 May 2007)
 
