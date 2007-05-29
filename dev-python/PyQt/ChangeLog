@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.85 2007/05/10 15:32:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.86 2007/05/29 14:09:39 ranger Exp $
+
+  29 May 2007; Brent Baude <ranger@gentoo.org> PyQt-3.17.ebuild:
+  Marking PyQt-3.17 ppc64 stable for bug 174413
 
 *PyQt-3.17.2 (10 May 2007)
 
