@@ -1,0 +1,10 @@
+# ChangeLog for games-board/phalanx
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/ChangeLog,v 1.1 2007/05/29 21:40:14 tupone Exp $
+
+*phalanx-22 (29 May 2007)
+
+  29 May 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +phalanx-22.ebuild:
+  New package. Bug #157264 by Ville Oikarinen
+
