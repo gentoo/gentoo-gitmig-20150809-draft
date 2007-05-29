@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.162 2007/04/21 09:31:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.163 2007/05/29 15:31:18 gustavoz Exp $
+
+  29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> eog-2.16.3.ebuild:
+  Stable on sparc wrt #171107
 
 *eog-2.18.1 (21 Apr 2007)
 
