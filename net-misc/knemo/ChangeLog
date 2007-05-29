@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.35 2007/04/30 19:02:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.36 2007/05/29 15:45:31 genstef Exp $
+
+*knemo-0.4.8 (29 May 2007)
+
+  29 May 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/knemo-0.4.6-sysbackend.patch, -knemo-0.4.0.ebuild,
+  -knemo-0.4.5.ebuild, -knemo-0.4.6.ebuild, -knemo-0.4.6-r1.ebuild,
+  +knemo-0.4.8.ebuild:
+  version bump remove old
 
   30 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> knemo-0.4.7.ebuild:
   Stable on sparc wrt #176292
