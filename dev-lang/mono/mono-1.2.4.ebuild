@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.2 2007/05/17 17:37:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.3 2007/05/29 19:36:04 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -71,7 +71,7 @@ src_compile() {
 		# force __thread on amd64 (bug #83770)
 		myconf="${myconf} --with-tls=__thread"
 	else
-		myconf="${myconf} --wiht-tls=pthread"
+		myconf="${myconf} --with-tls=pthread"
 	fi
 
 	# Enable large heaps if memory is more than >=3GB
@@ -83,7 +83,7 @@ src_compile() {
 	touch ${S}/mcs/build/deps/use-monolite
 
 	econf ${myconf} || die "configure failed"
-	emake || die "compile failed"
+	emake -j1 || die "compile failed"
 }
 
 src_install() {
