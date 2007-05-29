@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX evolution-data-server-1.2.0-gentoo_etc_services.patch 815 RMD160 d48ad5a34bfdf9f814b9ae22ba188f2f0c7f0304 SHA1 9248c74b334534f74e027fc119509673bff4542f SHA256 a64e0e4d74ac91f69c4b7a011b6325e27af6fa28a58e20f48ff09ec2a1538c5a
 MD5 ab9f8a22a7b870a6e1e2edc463949c82 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
 RMD160 d48ad5a34bfdf9f814b9ae22ba188f2f0c7f0304 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
@@ -66,18 +69,18 @@ EBUILD evolution-data-server-1.8.3-r2.ebuild 4953 RMD160 4abcee4295fee6f8b7ff825
 MD5 78687ad28951013cf444ac16db843e60 evolution-data-server-1.8.3-r2.ebuild 4953
 RMD160 4abcee4295fee6f8b7ff8256a6d771583e5e2652 evolution-data-server-1.8.3-r2.ebuild 4953
 SHA256 9fa49faa24030d12cb8ecdf6a0731632daa3e1a0ef443a3d7936a59a4a9b8a5a evolution-data-server-1.8.3-r2.ebuild 4953
-EBUILD evolution-data-server-1.8.3-r4.ebuild 5058 RMD160 458ff236ae1b0dea366d2649674d452c0d6a562d SHA1 f9f298c9c2d6a30a28f1ee7ec3b74771a5f8fcfe SHA256 90c79f201fb4f2bdcd37a2cd13efc7579704598a90c8eed6c871cfe83f1bedd2
-MD5 272dc89064cc33dd388d59c36881ab44 evolution-data-server-1.8.3-r4.ebuild 5058
-RMD160 458ff236ae1b0dea366d2649674d452c0d6a562d evolution-data-server-1.8.3-r4.ebuild 5058
-SHA256 90c79f201fb4f2bdcd37a2cd13efc7579704598a90c8eed6c871cfe83f1bedd2 evolution-data-server-1.8.3-r4.ebuild 5058
+EBUILD evolution-data-server-1.8.3-r4.ebuild 5062 RMD160 922c924cb77fd63c23688c528e1b5084c4237945 SHA1 078df287026899a478f580e6b3b5d4d051be3fad SHA256 e31b17d439970dfc9d8e499bbd3137b06e2604be4fe3fd7fe8e7da1c3bc341e2
+MD5 bbf1c829f1cb52f1bda5fb7e719a0335 evolution-data-server-1.8.3-r4.ebuild 5062
+RMD160 922c924cb77fd63c23688c528e1b5084c4237945 evolution-data-server-1.8.3-r4.ebuild 5062
+SHA256 e31b17d439970dfc9d8e499bbd3137b06e2604be4fe3fd7fe8e7da1c3bc341e2 evolution-data-server-1.8.3-r4.ebuild 5062
 EBUILD evolution-data-server-1.8.3.ebuild 4729 RMD160 9a5e76ee1fe1571d2870fd57c251e6597248464c SHA1 d24dc9946500ed22607bdb6adf90ed63c4642fd4 SHA256 56ae3975cb9c27a969fd4d2338f2f734f9b24ac17b5a45a910568ee5a940ffaa
 MD5 1b04e7a1837f3d52f305f325bd2c5388 evolution-data-server-1.8.3.ebuild 4729
 RMD160 9a5e76ee1fe1571d2870fd57c251e6597248464c evolution-data-server-1.8.3.ebuild 4729
 SHA256 56ae3975cb9c27a969fd4d2338f2f734f9b24ac17b5a45a910568ee5a940ffaa evolution-data-server-1.8.3.ebuild 4729
-MISC ChangeLog 18330 RMD160 8bcb88ae82e267cd7a2069045d5a2833756fd4c4 SHA1 57050ab329f96ee103a9064b622ec2f8c0fd9e43 SHA256 33ec086e50876b10d502c54f50a426a3d157f97c29fc9411bb88c9c99562f31c
-MD5 2904721bc6c2fd28e64912376923efd8 ChangeLog 18330
-RMD160 8bcb88ae82e267cd7a2069045d5a2833756fd4c4 ChangeLog 18330
-SHA256 33ec086e50876b10d502c54f50a426a3d157f97c29fc9411bb88c9c99562f31c ChangeLog 18330
+MISC ChangeLog 18461 RMD160 78ea00b9a08de4c0235d147539d989db411f1f32 SHA1 d9026e38b343bfbea8c8005b3d4f2c203cf45051 SHA256 367a1fb4d9fedf96dc2e99cd3615be0b49f6d4cf73bb30cef0df87aded039498
+MD5 55c5eb204db8d3576f2b4313984b540a ChangeLog 18461
+RMD160 78ea00b9a08de4c0235d147539d989db411f1f32 ChangeLog 18461
+SHA256 367a1fb4d9fedf96dc2e99cd3615be0b49f6d4cf73bb30cef0df87aded039498 ChangeLog 18461
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -103,3 +106,10 @@ SHA256 00dcc94a5030febdfc278394de4449c744c57e0fa812818a260fa807276ecca8 files/di
 MD5 159e4efbb6f5fe2e3973464851a6015b files/digest-evolution-data-server-1.8.3-r4 289
 RMD160 9311383fcc0546bb79ba3632bf984e3bb2783652 files/digest-evolution-data-server-1.8.3-r4 289
 SHA256 00dcc94a5030febdfc278394de4449c744c57e0fa812818a260fa807276ecca8 files/digest-evolution-data-server-1.8.3-r4 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFGXEWFKRy60XGEcJIRArUBAJ9PX3eKn8wF4ysXPPDS0Q9hGeOEJACfQSFn
+U76MKjbeRiZ0e/TAnG01B/M=
+=Ro8S
+-----END PGP SIGNATURE-----
