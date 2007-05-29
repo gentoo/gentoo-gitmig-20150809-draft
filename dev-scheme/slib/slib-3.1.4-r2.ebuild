@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r2.ebuild,v 1.1 2007/01/28 11:19:38 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r2.ebuild,v 1.2 2007/05/29 11:57:13 hkbst Exp $
 
 inherit versionator eutils
 
@@ -18,30 +18,42 @@ HOMEPAGE="http://swiss.csail.mit.edu/~jaffer/SLIB"
 SLOT="0"
 LICENSE="public-domain BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="" #test"
 
 #unzip for unpacking
-#depend on guile for now, until slib actually works with another scheme implementation in portage
-RDEPEND="~dev-scheme/guile-1.6.8"
-DEPEND="app-arch/unzip
-	${RDEPEND}"
-
-# slib tests rely on scm being installed. It isn't even in portage :(
-RESTRICT="test"
+RDEPEND=""
+DEPEND="app-arch/unzip"
+#		test? ( dev-scheme/scm )"
 
 # maybe also do "make infoz"
-
 src_install() {
-	insinto /usr/share/slib/ #don't install directly into guile dir
+	INSTALL_DIR="/usr/share/slib/"
+
+	insinto ${INSTALL_DIR} #don't install directly into guile dir
 	doins *.scm
 	doins *.init
 	dodoc ANNOUNCE ChangeLog FAQ README
 	doinfo slib.info
-	dosym /usr/share/slib/ /usr/share/guile/slib # link from guile dir
-	dodir /etc/env.d/ && echo "SCHEME_LIBRARY_PATH=/usr/share/slib/" > ${D}/etc/env.d/50slib
+	dosym ${INSTALL_DIR} /usr/share/guile/slib # link from guile dir
+	dosym ${INSTALL_DIR} /usr/lib/slib
+	dodir /etc/env.d/ && echo "SCHEME_LIBRARY_PATH=\"${INSTALL_DIR}\"" > ${D}/etc/env.d/50slib
 }
 
 pkg_postinst() {
-	einfo "Installing slib for guile..."
-	${ROOT}/usr/bin/guile -c "(use-modules (ice-9 slib)) (require 'new-catalog)"
+	[ "${ROOT}" == "/" ] && pkg_config
+}
+
+pkg_config() {
+	install_slib dev-scheme/guile "guile -c \"(use-modules (ice-9 slib)) (require 'new-catalog)\""
+#	install_slib dev-scheme/gauche "gosh -e \"(require 'new-catalog)\""
+}
+
+install_slib() {
+	if has_version $1; then
+		einfo "Registering slib with $1..."
+#		echo running: $2
+		eval $2
+	else
+		einfo "$1 not installed, not registering ..."
+	fi
 }
