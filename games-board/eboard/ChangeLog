@@ -1,6 +1,11 @@
 # ChangeLog for games-board/eboard
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.17 2007/02/13 19:56:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.18 2007/05/29 14:26:49 nyhm Exp $
+
+*eboard-1.0.4 (29 May 2007)
+
+  29 May 2007; Tristan Heaven <nyhm@gentoo.org> +eboard-1.0.4.ebuild:
+  Version bump
 
   13 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org> eboard-1.0.3.ebuild:
   clean up src_install; configure is not an autoconf script
