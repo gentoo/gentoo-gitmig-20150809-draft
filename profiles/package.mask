@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7308 2007/05/29 00:13:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7309 2007/05/29 00:25:12 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -292,16 +292,6 @@ x11-misc/login-app
 # Christian Parpart <trapni@gentoo.org> (01 May 2007)
 # Masked for testing.
 =www-apps/mediawiki-1.10.0_rc1
-
-# Vlastimil Babka <caster@gentoo.org> (30 Apr 2007)
-# Fetch-restricted binary library that nothing in tree uses, upstream
-# unsupported (EOL). Will be removed into java junkyard around 30 May.
-dev-java/infobus-bin
-
-# Vlastimil Babka <caster@gentoo.org> (30 Apr 2007)
-# Stale upstream (since 2002), -bin library that nothing in tree uses
-# so it's not needed. Will be removed into java junkyard around 30 May.
-dev-java/dbconnectionbroker-bin
 
 # Petteri Räty <betelgeuse@gentoo.org> (30 Apr 2007)
 # Please use the Eclipse update manager to install these.
