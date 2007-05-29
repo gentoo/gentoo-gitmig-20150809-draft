@@ -1,17 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.6.ebuild,v 1.11 2007/01/03 19:20:34 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.6.ebuild,v 1.12 2007/05/29 00:21:00 rl03 Exp $
 
 inherit eutils webapp versionator depend.apache
 
 DESCRIPTION="AWStats is short for Advanced Web Statistics."
 HOMEPAGE="http://awstats.sourceforge.net/"
-#SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-SRC_URI="http://awstats.sourceforge.net/files/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="geoip"
 
 RESTRICT="mirror"
 
@@ -21,9 +20,8 @@ WEBAPP_MANUAL_SLOT="yes"
 RDEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/libpng-1.2
 	virtual/perl-Time-Local
-	dev-perl/URI"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	dev-perl/URI
+	geoip? ( dev-perl/Geo-IP )"
 
 want_apache
 
@@ -46,7 +44,7 @@ src_unpack() {
 	done
 
 	# set the logpath
-	if use apache || use apache2; then
+	if use apache2; then
 		logpath="apache${USE_APACHE2}/access_log"
 	else
 		logpath="awstats_log"
@@ -129,5 +127,14 @@ pkg_postinst() {
 	elog
 	ewarn "Copy the /etc/awstats/awstats.model.conf to"
 	ewarn "/etc/awstats/awstats.<yourdomain>.conf and edit it."
+
+	if use geoip ; then
+		einfo
+		einfo "Add the following line to /etc/awstats/awstats.<yourdomain>.conf"
+		einfo "to enable GeoIP plugin:"
+		einfo "LoadPlugin=\"geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat\" "
+		einfo
+	fi
+
 	webapp_pkg_postinst
 }
