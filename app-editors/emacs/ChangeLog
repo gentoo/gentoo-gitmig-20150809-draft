@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.155 2007/05/28 21:12:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.156 2007/05/29 02:40:56 jer Exp $
+
+  29 May 2007; Jeroen Roovers <jer@gentoo.org> emacs-21.4-r12.ebuild:
+  Stable for HPPA (bug #180100).
 
   28 May 2007; Ulrich Mueller <ulm@gentoo.org>
   +files/emacs-21.4-oldxmenu-malloc.patch, emacs-21.4-r12.ebuild:
