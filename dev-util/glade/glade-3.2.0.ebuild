@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.2.0.ebuild,v 1.2 2007/05/29 13:49:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.2.0.ebuild,v 1.3 2007/05/29 14:35:13 ranger Exp $
 
 inherit eutils gnome2
 MY_PN="glade3"
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 sparc ~x86"
 IUSE="devhelp doc gnome python"
 
 RDEPEND=">=dev-libs/glib-2.8.0
