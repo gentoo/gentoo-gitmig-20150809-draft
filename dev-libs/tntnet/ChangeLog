@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/tntnet
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.1 2007/05/29 13:57:40 zzam Exp $
+
+*tntnet-1.6.0 (29 May 2007)
+
+  29 May 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +tntnet-1.6.0.ebuild:
+  Initial import of ebuild.
+
