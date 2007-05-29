@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.1.009.ebuild,v 1.6 2006/11/06 15:11:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.1.009.ebuild,v 1.7 2007/05/29 05:45:05 vapier Exp $
 
 EKEY_STATE="release"
 inherit enlightenment toolchain-funcs libtool
@@ -20,8 +20,6 @@ DEPEND="=media-libs/freetype-2*
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	X? ( || ( ( x11-libs/libXext x11-proto/xextproto ) virtual/x11 ) )
 	mp3? ( media-libs/libid3tag )"
-
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 
 src_compile() {
 	local mymmx=""
