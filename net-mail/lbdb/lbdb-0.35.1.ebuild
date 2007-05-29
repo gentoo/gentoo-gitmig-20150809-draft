@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.35.ebuild,v 1.1 2007/05/21 06:07:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.35.1.ebuild,v 1.1 2007/05/29 16:02:31 tove Exp $
 
 inherit eutils
 
