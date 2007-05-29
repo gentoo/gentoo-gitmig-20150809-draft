@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.7 2007/05/23 10:29:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.8 2007/05/29 06:26:35 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -14,10 +14,13 @@ WANT_AUTOMAKE="latest"
 inherit autotools cvs elisp-common eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
-SRC_URI=""
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-IUSE="alsa gif gtk gzip-el hesiod jpeg lesstif motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
+SRC_URI=""
 
+LICENSE="GPL-2 FDL-1.2"
+SLOT="22"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86 ~ppc"
+IUSE="alsa gif gtk gzip-el hesiod jpeg lesstif motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
@@ -40,8 +43,10 @@ RDEPEND="sys-libs/ncurses
 		!gtk? (
 			Xaw3d? ( x11-libs/Xaw3d )
 			!Xaw3d? (
-				motif? ( x11-libs/openmotif )
-				!motif? ( lesstif? ( x11-libs/lesstif ) )
+				motif? (
+					lesstif? ( x11-libs/lesstif )
+					!lesstif? ( x11-libs/openmotif )
+				)
 			)
 		)
 	)"
@@ -51,10 +56,8 @@ DEPEND="${RDEPEND}
 
 PROVIDE="virtual/editor"
 
-SLOT="22"
-LICENSE="GPL-2 FDL-1.2"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86 ~ppc"
 S="${WORKDIR}/${ECVS_LOCALNAME}"
+
 EMACS_SUFFIX="emacs-${SLOT}-cvs"
 
 src_unpack() {
