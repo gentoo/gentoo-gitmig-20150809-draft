@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX ibm-powerpc-utils-1.0.0-remove-doc.patch 646 RMD160 ee2e9e044dcec5db98bb2378b70d2d5f1c2d24bd SHA1 cf9e3bccea6f7749296cde250bb5e45e0a5bd485 SHA256 346a7416540cfc8b1fc0d7949b0b8d7311f32596d7d49d17088e12eb14dcc8af
 MD5 a0b88c60b83161126a59980aaf905b62 files/ibm-powerpc-utils-1.0.0-remove-doc.patch 646
 RMD160 ee2e9e044dcec5db98bb2378b70d2d5f1c2d24bd files/ibm-powerpc-utils-1.0.0-remove-doc.patch 646
@@ -9,8 +6,13 @@ AUX ibm-powerpc-utils-1.0.2-remove-doc.patch 646 RMD160 8dde5475d4c49c4f4ae8e688
 MD5 3ebe3a72e1f4d4c964f5742f41d2face files/ibm-powerpc-utils-1.0.2-remove-doc.patch 646
 RMD160 8dde5475d4c49c4f4ae8e688653fb9b06e1275a7 files/ibm-powerpc-utils-1.0.2-remove-doc.patch 646
 SHA256 5879b74e8ccd02bb70e3c9135391491dd9b91467a83059f5adf8ea4e10f9e8f7 files/ibm-powerpc-utils-1.0.2-remove-doc.patch 646
+AUX ibm-powerpc-utils-1.0.4-remove-doc.patch 646 RMD160 0f550e3433888c45c4ee57af859942049b505611 SHA1 ecc5139e4f42891b3b57eb38053584ea17cb287b SHA256 bc774e27accadeef67992859abdbc9d7b14026686700f0644e9454ca1e192f28
+MD5 9c35841a09703f4c53dd620bf2e4aad6 files/ibm-powerpc-utils-1.0.4-remove-doc.patch 646
+RMD160 0f550e3433888c45c4ee57af859942049b505611 files/ibm-powerpc-utils-1.0.4-remove-doc.patch 646
+SHA256 bc774e27accadeef67992859abdbc9d7b14026686700f0644e9454ca1e192f28 files/ibm-powerpc-utils-1.0.4-remove-doc.patch 646
 DIST powerpc-utils-1.0.0.tar.gz 44082 RMD160 d37c2eea525dc093c6c8b0cddb8be8d454faf8b0 SHA1 f5eb7418917d30d0c7e68c67731f201798f5ce38 SHA256 4839b2c6eb8a3c6a893ea708d07ea5e39fd6d52e907fa274faae8f76d1a00275
 DIST powerpc-utils-1.0.2.tar.gz 44188 RMD160 979dfbb07446dd9a7da11a1f5430a3f294ac7d1e SHA1 a3b34ab2234676c8c020f4442794152d49f3753d SHA256 2b1adaea08cc715f642663997c47e2f66e83cac6a5cd91960b9f132d845951ed
+DIST powerpc-utils-1.0.4.tar.gz 86650 RMD160 3e6399c6e620dae28ca1eff360d854e7daae2426 SHA1 7601811728b102f40847c62535331ba05383deed SHA256 86a6e3f4b08e12b0820628e1a81afae4e3a4ea6424edcc8906b04e497afd452b
 EBUILD ibm-powerpc-utils-1.0.0.ebuild 1061 RMD160 03f15d9afc374cb4224f4b2f755e901b92ebbbeb SHA1 1c2de0f5968188bbb07dcacca504280ce4264f8a SHA256 3b5a7eb1b0d7342e4240c78e5de65163394162521c3516d745899af8edcd47b5
 MD5 4345660eec69f5f892998a409b610802 ibm-powerpc-utils-1.0.0.ebuild 1061
 RMD160 03f15d9afc374cb4224f4b2f755e901b92ebbbeb ibm-powerpc-utils-1.0.0.ebuild 1061
@@ -19,10 +21,14 @@ EBUILD ibm-powerpc-utils-1.0.2.ebuild 1061 RMD160 01da1b24331d39fbfac24f0e03e9cd
 MD5 3deac0446be737566e49302b8ad6eb71 ibm-powerpc-utils-1.0.2.ebuild 1061
 RMD160 01da1b24331d39fbfac24f0e03e9cdc1e378357a ibm-powerpc-utils-1.0.2.ebuild 1061
 SHA256 b66efff4d749b320efb506d62cc7415a640f648d8503f5ac385cc59e968bad20 ibm-powerpc-utils-1.0.2.ebuild 1061
-MISC ChangeLog 1471 RMD160 8512c0eb02b4b63cebe3931ff6366eacdd4be721 SHA1 5c0165f612ba07d3a7abba3f47bc4e241db91bdf SHA256 6b7abb754f22e29d3d8d01d996cc5245d4228b3525855bb83d7a8efd76bac704
-MD5 b419cf5c4e22d67a19e175643d3fb74d ChangeLog 1471
-RMD160 8512c0eb02b4b63cebe3931ff6366eacdd4be721 ChangeLog 1471
-SHA256 6b7abb754f22e29d3d8d01d996cc5245d4228b3525855bb83d7a8efd76bac704 ChangeLog 1471
+EBUILD ibm-powerpc-utils-1.0.4.ebuild 1070 RMD160 43c616724a2326b0ee06170534a338ea62a84d1c SHA1 9ff6a5b7e776fd52e2ee09bd1852783af7f5e4f1 SHA256 1acd7f5bc72eb831ff2fe8cc2c4c991e133d706b7ba6e1aaf78e8a82e20ac78a
+MD5 a891b09290ac51621dc88798c60721f6 ibm-powerpc-utils-1.0.4.ebuild 1070
+RMD160 43c616724a2326b0ee06170534a338ea62a84d1c ibm-powerpc-utils-1.0.4.ebuild 1070
+SHA256 1acd7f5bc72eb831ff2fe8cc2c4c991e133d706b7ba6e1aaf78e8a82e20ac78a ibm-powerpc-utils-1.0.4.ebuild 1070
+MISC ChangeLog 1675 RMD160 61635d39d7e808b65afe54802cbc1b9113d07986 SHA1 69b9456d791a0d9ffde913f67d27574875c5f374 SHA256 7127075931fe43ec7df4257876ae5da67112473827d781f3090ba6dd8124d267
+MD5 41a44db44a2554cb1486e00a4ff5f3df ChangeLog 1675
+RMD160 61635d39d7e808b65afe54802cbc1b9113d07986 ChangeLog 1675
+SHA256 7127075931fe43ec7df4257876ae5da67112473827d781f3090ba6dd8124d267 ChangeLog 1675
 MISC metadata.xml 245 RMD160 8638b7d90df2c413afd9c975553010d6bfa97965 SHA1 52046272a686ecad1b7223b29d6701e5118ae3ff SHA256 a09ece2e39954e335916376b6a82a1c14d4168b114ebbfbf2d50ee27ef06fd26
 MD5 702fa4fed6bdb3969c5e5bad5b654368 metadata.xml 245
 RMD160 8638b7d90df2c413afd9c975553010d6bfa97965 metadata.xml 245
@@ -33,10 +39,6 @@ SHA256 f1f13cec74a722fa78555a5e77c69fddf891c15704c43b4ce25f9fb43b2219d0 files/di
 MD5 4b9d9b5dd496a82b36ea2e301e50c9b5 files/digest-ibm-powerpc-utils-1.0.2 256
 RMD160 ed803846de6ec4145f275826e19d48edaf8d2f6d files/digest-ibm-powerpc-utils-1.0.2 256
 SHA256 b2894e46f8bd975134bc0efa14c4ca81c911524a58db546e0c4193d5104f39f1 files/digest-ibm-powerpc-utils-1.0.2 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
-
-iD8DBQFFzAc6AiZjviIA2XgRArvYAJsFqiisPlz1bkrsibbh3QPCjRgoAQCg3R+x
-tdMaDTY9iWYlM+HfYaAc3fI=
-=EJ3S
------END PGP SIGNATURE-----
+MD5 c1426d95d827ccf136dc38d5522b10be files/digest-ibm-powerpc-utils-1.0.4 256
+RMD160 a77b38f92194d2f7652a5bb0f101ad74b53f23c9 files/digest-ibm-powerpc-utils-1.0.4 256
+SHA256 3eedaaa8296801257f60277519efd6aa1632bf5523ebe6af7f6c61bf9d4961a3 files/digest-ibm-powerpc-utils-1.0.4 256

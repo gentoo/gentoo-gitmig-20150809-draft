@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.7 2007/02/09 05:31:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.8 2007/05/29 17:05:46 ranger Exp $
+
+*ibm-powerpc-utils-1.0.4 (29 May 2007)
+
+  29 May 2007; Brent Baude <ranger@gentoo.org>
+  +files/ibm-powerpc-utils-1.0.4-remove-doc.patch,
+  +ibm-powerpc-utils-1.0.4.ebuild:
+  Adding ibm-powerpc-utils-1.0.4
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
