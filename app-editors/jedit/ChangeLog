@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.74 2007/04/02 20:58:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.75 2007/05/29 09:21:24 caster Exp $
+
+  29 May 2007; Vlastimil Babka <caster@gentoo.org> jedit-4.2-r2.ebuild,
+  jedit-4.3_pre9.ebuild:
+  Hint users to ignore postrm message if they are reinstalling or upgrading,
+  bug #180101.
 
   02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -jedit-4.3_pre7.ebuild,
   -jedit-4.3_pre7-r1.ebuild:

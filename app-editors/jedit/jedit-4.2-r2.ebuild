@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.8 2007/01/09 15:27:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.9 2007/05/29 09:21:24 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -80,4 +80,5 @@ pkg_postrm() {
 	elog "want to run"
 	elog ""
 	elog "\trm -r /usr/share/jedit"
+	elog "Ignore this message if you are reinstalling or upgrading."
 }
