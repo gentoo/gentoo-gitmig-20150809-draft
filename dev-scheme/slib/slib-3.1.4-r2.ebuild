@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r2.ebuild,v 1.2 2007/05/29 11:57:13 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r2.ebuild,v 1.3 2007/05/29 14:04:41 hkbst Exp $
 
 inherit versionator eutils
 
@@ -25,6 +25,21 @@ RDEPEND=""
 DEPEND="app-arch/unzip"
 #		test? ( dev-scheme/scm )"
 
+IMPLEMENTATIONS="guile"
+
+src_compile() {
+	mkdir installers
+	cd installers
+
+	guile_install_command="guile -c \"(use-modules (ice-9 slib)) (require 'new-catalog)\""
+#	gauche_install_command="gosh -e \"(require 'new-catalog)\""
+
+	for impl in ${IMPLEMENTATIONS}; do
+		command_var=${impl}_install_command
+		make_installer ${impl} "${!command_var}"
+	done
+}
+
 # maybe also do "make infoz"
 src_install() {
 	INSTALL_DIR="/usr/share/slib/"
@@ -37,6 +52,8 @@ src_install() {
 	dosym ${INSTALL_DIR} /usr/share/guile/slib # link from guile dir
 	dosym ${INSTALL_DIR} /usr/lib/slib
 	dodir /etc/env.d/ && echo "SCHEME_LIBRARY_PATH=\"${INSTALL_DIR}\"" > ${D}/etc/env.d/50slib
+
+	dosbin installers/*
 }
 
 pkg_postinst() {
@@ -44,16 +61,22 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	install_slib dev-scheme/guile "guile -c \"(use-modules (ice-9 slib)) (require 'new-catalog)\""
-#	install_slib dev-scheme/gauche "gosh -e \"(require 'new-catalog)\""
+	for impl in ${IMPLEMENTATIONS}; do
+		install_slib dev-scheme/${impl}
+	done
+}
+
+make_installer() {
+	echo $2 > install_slib_for_$1
 }
 
 install_slib() {
 	if has_version $1; then
+		script=install_slib_for_${1##*/}
 		einfo "Registering slib with $1..."
-#		echo running: $2
-		eval $2
+		echo running: $(cat /usr/sbin/${script})
+		$script
 	else
-		einfo "$1 not installed, not registering ..."
+		einfo "$1 not installed, not registering..."
 	fi
 }
