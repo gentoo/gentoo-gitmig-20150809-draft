@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.1-r1.ebuild,v 1.7 2007/05/27 06:39:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.1-r1.ebuild,v 1.8 2007/05/30 19:33:54 drac Exp $
 
 inherit autotools eutils xfce44
 
@@ -40,5 +40,5 @@ src_unpack() {
 src_install() {
 	xfce44_src_install
 	insinto /usr/share/xfce4
-	newins ${FILESDIR}/Gentoo Gentoo
+	doins "${FILESDIR}"/Gentoo
 }

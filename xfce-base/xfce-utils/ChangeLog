@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.111 2007/05/27 06:39:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.112 2007/05/30 19:33:54 drac Exp $
+
+  30 May 2007; Samuli Suominen <drac@gentoo.org> xfce-utils-4.4.1-r1.ebuild:
+  Change from newins to doins and quote FILESDIR as it should.
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> xfce-utils-4.4.1-r1.ebuild:
   Stable on mips.
