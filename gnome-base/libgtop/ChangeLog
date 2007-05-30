@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.158 2007/05/29 15:16:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.159 2007/05/30 00:16:46 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org> libgtop-2.14.8.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libgtop-2.14.8.ebuild:
   Stable on sparc wrt #171107
