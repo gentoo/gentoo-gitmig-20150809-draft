@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/offo-hyphenation/offo-hyphenation-1.0.ebuild,v 1.1 2007/05/16 23:19:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/offo-hyphenation/offo-hyphenation-1.0.ebuild,v 1.2 2007/05/30 20:34:12 mr_bones_ Exp $
 
 DESCRIPTION="Hyphenation patterns for Apache Fop"
 HOMEPAGE="http://offo.sourceforge.net"
