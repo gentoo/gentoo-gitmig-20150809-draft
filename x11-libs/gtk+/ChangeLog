@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.311 2007/05/29 15:09:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.312 2007/05/30 00:11:02 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org> gtk+-2.10.11.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> gtk+-2.10.11.ebuild:
   Stable on sparc wrt #171107
