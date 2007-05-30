@@ -1,17 +1,6 @@
-diff -urN gtk-canvas-0.1.1.orig/configure.in gtk-canvas-0.1.1/configure.in
---- gtk-canvas-0.1.1.orig/configure.in	2007-05-28 23:15:22.000000000 -0700
-+++ gtk-canvas-0.1.1/configure.in	2007-05-29 00:15:22.000000000 -0700
-@@ -236,6 +236,7 @@
- dnl Substitutions
- dnl
- 
-+AC_SUBST(ART_LIBS)
- AC_SUBST(GTK_LIBS)
- AC_SUBST(GTK_CANVAS_LIBS)
- AC_SUBST(GTK_CANVAS_LIBDIR)
 diff -urN gtk-canvas-0.1.1.orig/gtk-canvas/Makefile.am gtk-canvas-0.1.1/gtk-canvas/Makefile.am
---- gtk-canvas-0.1.1.orig/gtk-canvas/Makefile.am	2007-05-28 23:15:22.000000000 -0700
-+++ gtk-canvas-0.1.1/gtk-canvas/Makefile.am	2007-05-28 23:15:43.000000000 -0700
+--- gtk-canvas-0.1.1.orig/gtk-canvas/Makefile.am	2007-05-30 12:13:53.000000000 -0700
++++ gtk-canvas-0.1.1/gtk-canvas/Makefile.am	2007-05-30 12:18:57.000000000 -0700
 @@ -98,5 +98,5 @@
  	gtk-canvastypebuiltins_evals.c
  
@@ -19,4 +8,4 @@ diff -urN gtk-canvas-0.1.1.orig/gtk-canvas/Makefile.am gtk-canvas-0.1.1/gtk-canv
 -libgtk_canvas_la_LIBADD = $(LIBGTK_CANVAS_LIBS)
 -
 +libgtk_canvas_la_LIBADD = $(LIBGTK_CANVAS_LIBS) \
-+	$(ART_LIBS)
++	${top_builddir}/libart_lgpl/libart_lgpl.la
