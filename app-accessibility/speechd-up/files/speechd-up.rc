@@ -1,16 +1,35 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/files/speechd-up.rc,v 1.5 2006/11/19 19:01:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/files/speechd-up.rc,v 1.6 2007/05/30 04:05:27 williamh Exp $
 
 depend() {
 	use eflite festival
 	need speech-dispatcher
 }
 
+SPEAKUPDIR=/proc/speakup
+SPEAKUPDEV=/dev/softsynth
+
+load_speakup() {
+	if [ ! -d ${SPEAKUPDIR} ]; then
+		eerror "Speakup is either not part of the kernel or the main"
+		eerror "part of it is built as a module."
+		eerror "Please correct this before using speechd-up."
+		return 1
+	fi
+
+	if [ ! -c ${SPEAKUPDEV} ]; then
+		mknod ${SPEAKUPDEV} c 10 26
+	fi
+	echo sftsyn > ${SPEAKUPDIR}/synth_name
+	sleep 1
+}
+
 start() {
+	load_speakup || return 1
 	ebegin "Starting speechd-up"
-	start-stop-daemon --start --quiet --nicelevel ${NICELEVEL} --exec /usr/bin/speechd-up -- -d
+	start-stop-daemon --start --quiet --nicelevel ${NICELEVEL} --exec /usr/bin/speechd-up -- -d -t
 	eend $?
 }
 
