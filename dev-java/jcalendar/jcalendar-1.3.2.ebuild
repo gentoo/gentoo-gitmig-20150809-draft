@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.3.2.ebuild,v 1.2 2007/01/21 18:05:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.3.2.ebuild,v 1.3 2007/05/30 16:48:45 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,12 +12,11 @@ HOMEPAGE="http://www.toedter.com/en/jcalendar/"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 COMMON_DEPEND="=dev-java/jgoodies-looks-1.2*"
 RDEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4
 	>=app-arch/unzip-5.50-r1
 	${COMMON_DEPEND}"
 
@@ -26,8 +27,8 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}/lib
-	rm -f *.jar
+	cd "${S}/lib"
+	rm -v *.jar || die
 	java-pkg_jar-from jgoodies-looks-1.2 looks.jar looks-1.2.2.jar
 }
 
@@ -44,9 +45,9 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_newjar lib/${P}.jar ${PN}.jar
+	java-pkg_newjar lib/${P}.jar
 
-	dodoc readme.txt
-	use doc && java-pkg_dojavadoc doc
+	dodoc readme.txt || die
+	use doc && java-pkg_dohtml -r doc/*
 	use source && java-pkg_dosrc src/com
 }
