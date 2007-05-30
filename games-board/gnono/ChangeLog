@@ -1,0 +1,23 @@
+# ChangeLog for games-board/gnono
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/ChangeLog,v 1.8 2007/05/30 22:22:07 tupone Exp $
+
+*gnono-1.9.1 (30 May 2007)
+
+  30 May 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/gnono-1.9.1-gentoo.patch, +metadata.xml, +gnono-1.9.1.ebuild:
+  Version bump to 1.9.1 Bug #158261 by Serkan Kaba
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> gnono-0.0.3.ebuild:
+  Stable on ppc.
+
+  31 Dec 2004; Joseph Jezak <josejx@gentoo.org> gnono-0.0.3.ebuild:
+  Marked ~ppc.
+
+  11 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> gnono-0.0.3.ebuild:
+  Added ~amd64 KEYWORD and closing bug #69770.
+
+*gnono-0.0.3 (12 Dec 2002)
+
+  12 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Rigo Ketelings <rigo@home.nl>.

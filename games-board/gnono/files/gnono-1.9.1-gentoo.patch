@@ -1,0 +1,38 @@
+--- pixmaps/Makefile.am.old	2007-05-30 21:38:38.000000000 +0200
++++ pixmaps/Makefile.am	2007-05-30 21:39:48.000000000 +0200
+@@ -1,9 +1,9 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-pixmapdir = $(datadir)/pixmaps
++pixmapdir = $(pkgdatadir)/pixmaps
+ pixmap_DATA = gnono-about.png 
+ 
+-hicolordir = $(datadir)/icons/hicolor
++hicolordir = /usr/share/icons/hicolor
+ 
+ install-data-local:
+ 	@for depth in 16x16 22x22 24x24 32x32 48x48 ; do \
+--- po/Makefile.in.in.old	2007-05-30 23:38:43.000000000 +0200
++++ po/Makefile.in.in	2007-05-30 23:39:14.000000000 +0200
+@@ -34,7 +34,7 @@
+ datarootdir = @datarootdir@
+ libdir = @libdir@
+ DATADIRNAME = @DATADIRNAME@
+-itlocaledir = $(prefix)/$(DATADIRNAME)/locale
++itlocaledir = /usr/share/locale
+ subdir = po
+ install_sh = @install_sh@
+ # Automake >= 1.8 provides @mkdir_p@.
+--- src/Makefile.am.old	2007-05-30 23:49:20.000000000 +0200
++++ src/Makefile.am	2007-05-30 23:50:45.000000000 +0200
+@@ -7,8 +7,8 @@
+ 	-DG_LOG_DOMAIN=\"$(PACKAGE)\" \
+ 	-DG_DISABLE_DEPRECATED \
+ 	-DGTK_DISABLE_DEPRECATED \
+-	-DLOCALEDIR="\"$(datadir)/locale\"" \
+-	-DPIXMAPDIR="\"$(datadir)/pixmaps\"" \
++	-DLOCALEDIR="\"/usr/share/locale\"" \
++	-DPIXMAPDIR="\"$(pkgdatadir)/pixmaps\"" \
+ 	$(LIBGNOMEUI_CFLAGS)
+ 
+ bin_PROGRAMS = gnono
