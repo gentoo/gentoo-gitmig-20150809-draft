@@ -1,9 +1,17 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.418 2007/05/14 15:13:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.419 2007/05/30 15:39:15 cardoe Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  30 May 2007; Doug Goldstein <cardoe@gentoo.org>
+  baselayout-1.11.15-r3.ebuild, baselayout-1.12.9-r2.ebuild,
+  baselayout-1.12.10-r3.ebuild, baselayout-1.12.10-r4.ebuild,
+  baselayout-1.13.0_alpha12.ebuild, baselayout-2.0.0_alpha1.ebuild,
+  baselayout-2.0.0_alpha2.ebuild, baselayout-2.0.0_alpha2-r1.ebuild,
+  baselayout-2.0.0_alpha3.ebuild:
+  depreciated -> deprecated. bug #180352
 
 *baselayout-2.0.0_alpha3 (14 May 2007)
 

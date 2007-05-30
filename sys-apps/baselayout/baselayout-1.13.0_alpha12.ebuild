@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha12.ebuild,v 1.5 2007/03/11 01:56:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha12.ebuild,v 1.6 2007/05/30 15:39:15 cardoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -231,7 +231,7 @@ pkg_postinst() {
 	if sed -e 's/#.*//' "${ROOT}"etc/conf.d/{net,wireless} 2>/dev/null \
 		| egrep -q '\<(domain|nameservers|searchdomains)_' ; then
 			echo
-			ewarn "You have depreciated variables in ${ROOT}etc/conf.d/net"
+			ewarn "You have deprecated variables in ${ROOT}etc/conf.d/net"
 			ewarn "or ${ROOT}etc/conf.d/wireless"
 			ewarn
 			ewarn "domain_* -> dns_domain_*"
