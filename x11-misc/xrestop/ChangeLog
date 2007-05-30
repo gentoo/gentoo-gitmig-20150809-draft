@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrestop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.27 2007/04/09 21:22:41 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.28 2007/05/30 16:58:19 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> xrestop-0.4.ebuild:
+  alpha stable wrt #157780
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> xrestop-0.4.ebuild:
   Keyworded ~x86-fbsd wrt bug 171728
