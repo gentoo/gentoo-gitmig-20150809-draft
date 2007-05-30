@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.43 2007/05/30 14:38:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.44 2007/05/30 17:58:38 wltjr Exp $
+
+  30 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/2.0-ImageIO.patch, itext-2.0.3.ebuild:
+  Added patch that switches from com.sun.* stuff for JPEGs to ImageIO. Fix for
+  bug # 180339
 
 *itext-2.0.3 (30 May 2007)
 

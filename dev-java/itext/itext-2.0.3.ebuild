@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.3.ebuild,v 1.1 2007/05/30 14:38:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.3.ebuild,v 1.2 2007/05/30 17:58:38 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -41,6 +41,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/2.0.2-compile_xml.patch
 	epatch ${FILESDIR}/2.0.2-site_xml.patch
+	epatch ${FILESDIR}/2.0-ImageIO.patch
 	java-ant_bsfix_files ant/*.xml || die "failed to rewrite build xml files"
 
 	mkdir -p "${WORKDIR}/build/bin" || die
