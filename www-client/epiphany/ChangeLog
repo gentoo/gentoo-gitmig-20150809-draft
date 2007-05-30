@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.107 2007/05/30 00:35:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.108 2007/05/30 12:30:19 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.16.3.ebuild:
+  alpha/ia64 stable wrt #171107
 
   29 May 2007; Andrej Kacian <ticho@gentoo.org> epiphany-2.16.3.ebuild:
   Stable on x86, bug #171107.
