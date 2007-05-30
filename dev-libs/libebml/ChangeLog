@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.81 2007/04/18 13:24:22 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.82 2007/05/30 15:41:54 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha stable wrt #154055
 
   18 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> libebml-0.7.7-r1.ebuild:
   Keyworded ~x86-bsd wrt bug #175090
