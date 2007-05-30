@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/burlap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.13 2007/02/11 12:54:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.14 2007/05/30 06:16:16 opfer Exp $
+
+  30 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  burlap-3.0.8-r2.ebuild:
+  stable x86, bug 179893
 
   11 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -files/build-2.1.12.xml, -burlap-2.1.12-r1.ebuild:
