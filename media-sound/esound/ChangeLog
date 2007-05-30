@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.95 2007/05/10 08:08:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.96 2007/05/30 15:09:20 dang Exp $
+
+*esound-0.2.38 (30 May 2007)
+
+  30 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/esound-0.2.38-as-needed.patch, +esound-0.2.38.ebuild:
+  Bump to 0.2.38
+  	* Fix 100% CPU problem introduced in 0.2.37 (Joe Marcus Clarke)
+  	* Fix libesddsp not linking against libesd (Loïc Minier)
+  	* Fix file descriptor leaks (Pierre Ossman)
+  	* Fix a build problem with the read/write wrapper (Jean Bréfort)
+  	* chdir to "/" when starting up (Dan Winship)
+  	* Only install the esddsp man page if we build the binary
+  	(<yselkowitz@users.sourceforge.net>)
 
   10 May 2007; Fabian Groffen <grobian@gentoo.org>
   -files/esound-0.2.36-ppc-macos.patch, esound-0.2.36-r1.ebuild,
