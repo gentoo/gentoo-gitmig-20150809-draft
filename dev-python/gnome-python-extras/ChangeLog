@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.48 2007/05/29 15:41:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.49 2007/05/30 00:39:42 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org>
+  gnome-python-extras-2.14.2.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-python-extras-2.14.2-r1.ebuild:
