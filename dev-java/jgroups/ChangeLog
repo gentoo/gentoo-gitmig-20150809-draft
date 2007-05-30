@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgroups
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.16 2007/04/23 17:58:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.17 2007/05/30 08:46:04 opfer Exp $
+
+  30 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  jgroups-2.4.1_p1.ebuild:
+  stable x86, bug 179938; filtered jikes, removed test from IUSE
 
 *jgroups-2.4.1_p1 (23 Apr 2007)
 

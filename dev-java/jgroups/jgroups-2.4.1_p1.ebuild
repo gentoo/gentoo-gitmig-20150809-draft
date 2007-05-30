@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.4.1_p1.ebuild,v 1.1 2007/04/23 17:58:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.4.1_p1.ebuild,v 1.2 2007/05/30 08:46:04 opfer Exp $
 
-JAVA_PKG_IUSE="doc source test"
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/javagroups/${MY_P}.src.zip"
 HOMEPAGE="http://www.jgroups.org/javagroupsnew/docs/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/bsh
 	dev-java/commons-logging
@@ -52,6 +52,7 @@ src_unpack() {
 	# Always tries to compile them. Does not build on 1.4 if we don't remove
 	# these as they require java.lang.management
 	rm -vr "${S}"/tests/{junit,other}/org || die
+	java-pkg_filter-compiler jikes
 }
 
 # The jar target generates jgroups-all.jar that has the demos and tests in it
