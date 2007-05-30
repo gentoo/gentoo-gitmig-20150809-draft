@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r1.ebuild,v 1.10 2007/05/30 05:55:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.1 2007/05/30 05:55:05 tupone Exp $
+
+inherit eutils
 
 DESCRIPTION="Stickers Book for small children"
 HOMEPAGE="http://users.powernet.co.uk/kienzle/stickers/"
@@ -8,7 +10,7 @@ SRC_URI="http://users.powernet.co.uk/kienzle/stickers/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
 RDEPEND="media-libs/imlib
@@ -48,4 +50,6 @@ src_install () {
 		infodir="${D}/usr/share/info" \
 		mandir="${D}/usr/share/man" install \
 		|| die "make install failed"
+	newicon scenes/Aquarium.scene.xpm ${PN}.xpm
+	make_desktop_entry ${PN} Stickers ${PN}.xpm
 }
