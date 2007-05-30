@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.5 2007/01/28 21:30:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.6 2007/05/30 17:02:44 betelgeuse Exp $
+
+  30 May 2007; Petteri Räty <betelgeuse@gentoo.org> xp-0.5-r1.ebuild:
+  Fix use source dependencies.
 
   28 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> xp-0.5-r1.ebuild:
   Add the source use flag.

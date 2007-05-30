@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/xp-0.5-r1.ebuild,v 1.2 2007/01/28 21:30:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/xp-0.5-r1.ebuild,v 1.3 2007/05/30 17:02:44 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,10 +13,9 @@ LICENSE="JamesClark"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-IUSE="doc source"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
 	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
@@ -22,13 +23,12 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	rm -v xp.jar
+	rm -v xp.jar || die
 	cp "${FILESDIR}/build.xml" .
 }
 
-src_compile() {
-	eant jar #precompiled javadocs
-}
+#premade javadocs
+EANT_DOC_TARGET=""
 
 src_install() {
 	java-pkg_dojar xp.jar
