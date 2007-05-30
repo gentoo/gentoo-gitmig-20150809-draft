@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.8.ebuild,v 1.3 2007/05/29 15:42:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.8.ebuild,v 1.4 2007/05/30 00:40:35 ticho Exp $
 
 inherit elisp-common gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gtk.org/gtk-doc/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86"
 IUSE="doc emacs"
 
 RDEPEND=">=dev-lang/perl-5.6
