@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/eudc-1.39.ebuild,v 1.1 2006/11/11 15:48:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/eudc-1.39.ebuild,v 1.2 2007/05/30 13:23:25 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -19,6 +19,6 @@ app-xemacs/xemacs-eterm
 app-xemacs/sh-script
 app-xemacs/net-utils
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ~sparc ~x86"
 
 inherit xemacs-packages

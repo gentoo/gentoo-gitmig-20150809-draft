@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/calendar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.12 2007/05/05 06:56:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.13 2007/05/30 13:20:36 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> calendar-1.30.ebuild:
+  alpha stable wrt #175560
 
 *calendar-1.32 (05 May 2007)
 
