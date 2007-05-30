@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.0.17.ebuild,v 1.1 2007/03/28 19:51:40 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.0.ebuild,v 1.1 2007/05/30 20:43:25 cedk Exp $
 
-inherit ssl-cert
+inherit ssl-cert eutils
 
 DESCRIPTION="An enterprise grade authenticating firewall based on netfilter"
 HOMEPAGE="http://www.nufw.org/"
@@ -11,16 +11,14 @@ SRC_URI="http://www.nufw.org/download/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="debug gdbm ident ldap mysql pam pam_nuauth pic postgres prelude \
-unicode nfqueue nfconntrack static"
+IUSE="debug ldap mysql pam pam_nuauth pic plaintext postgres prelude \
+unicode nfqueue nfconntrack static syslog"
 
 DEPEND=">=dev-libs/glib-2
 	dev-libs/libgcrypt
 	>=dev-libs/cyrus-sasl-2
 	net-firewall/iptables
 	>=net-libs/gnutls-1.1
-	gdbm? ( sys-libs/gdbm )
-	ident? ( net-libs/libident )
 	ldap? ( >=net-nds/openldap-2 )
 	mysql? ( virtual/mysql )
 	pam? ( sys-libs/pam )
@@ -38,20 +36,23 @@ src_unpack() {
 		-e "s/nuauth-key.pem/nuauth.key/" \
 		-e "s/nuauth-cert.pem/nuauth.pem/" \
 		conf/nuauth.conf || die "sed failed"
+	epatch "${FILESDIR}/${P}-nuauth_command.patch"
 }
 
 src_compile() {
 	econf \
+		--with-shared \
 		$(use_enable static) \
 		$(use_enable pam_nuauth pam-nuauth) \
 		$(use_with pic) \
 		$(use_with prelude prelude-log) \
 		$(use_with mysql mysql-log) \
 		$(use_with postgres pgsql-log) \
+		$(use_with syslog syslog-log) \
+		$(use_with plaintext plaintext-auth) \
+		--with-mark-group \
 		$(use_with pam system-auth) \
 		$(use_with ldap) \
-		$(use_with gdbm) \
-		$(use_with ident) \
 		$(use_with nfqueue) \
 		$(use_with nfconntrack) \
 		$(use_with unicode utf8) \
@@ -79,7 +80,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	docinto scripts
-	dodoc scripts/*
+	dodoc scripts/{clean_conntrack.pl,nuaclgen,nutop,README,ulog_rotate_daily.sh,ulog_rotate_weekly.sh}
 	docinto conf
 	dodoc conf/*.{nufw,schema,conf,dump,xml}
 }
