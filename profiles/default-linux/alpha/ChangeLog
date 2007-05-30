@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.43 2007/05/19 18:07:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.44 2007/05/30 12:28:59 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Re-use.mask firefox as firefox-1* is not keyworded
 
   19 May 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask networkmanager, as it needs wpa_supplicant which is not keyworded,
