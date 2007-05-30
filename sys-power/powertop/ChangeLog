@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.7 2007/05/28 17:22:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.8 2007/05/30 00:06:43 genstef Exp $
+
+  29 May 2007; Stefan Schweizer <genstef@gentoo.org> powertop-1.5.ebuild:
+  work around portage trying to compress twice thanks Andre
+  <andre.muller@web.de> in bug 180222
 
 *powertop-1.5 (28 May 2007)
 
