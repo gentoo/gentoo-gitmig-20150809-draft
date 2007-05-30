@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.435 2007/05/29 13:28:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.436 2007/05/30 21:54:58 gurligebis Exp $
+
+  30 May 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> package.mask:
+  Masked net-misc/upnp, going to be removed 20070629.
 
   29 May 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
   Add dev-util/nsis:config-log (#180060).
