@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.23 2007/05/29 15:32:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.24 2007/05/30 00:30:25 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org> alacarte-0.10.2.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   alacarte-0.10.2.ebuild:
