@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.93 2007/05/29 15:48:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.94 2007/05/30 00:46:53 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org> gtk-engines-2.8.2-r1.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-2.8.2-r1.ebuild:
