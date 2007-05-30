@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.8 2007/05/30 17:37:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.9 2007/05/30 21:54:40 armin76 Exp $
+
+*deluge-0.5.1_beta1 (30 May 2007)
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.1_beta1.ebuild:
+  Add beta version
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
   Re-fix threads use-flag check if >boost-1.33, bug 180322
