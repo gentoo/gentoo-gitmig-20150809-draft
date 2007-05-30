@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.2.13.ebuild,v 1.1 2007/04/25 17:44:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.2.13.ebuild,v 1.2 2007/05/30 16:54:07 betelgeuse Exp $
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc examples source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -36,4 +36,5 @@ src_install() {
 	# other stuff besides javadocs
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/*
+	use examples && java-pkg_doexamples examples
 }

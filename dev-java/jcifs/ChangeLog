@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcifs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.7 2007/04/25 17:46:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.8 2007/05/30 16:54:07 betelgeuse Exp $
+
+  30 May 2007; Petteri Räty <betelgeuse@gentoo.org> jcifs-1.2.13.ebuild:
+  Add examples use flag.
 
   25 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove trailing white space.
