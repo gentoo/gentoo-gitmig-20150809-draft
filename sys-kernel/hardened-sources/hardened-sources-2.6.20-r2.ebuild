@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.20-r2.ebuild,v 1.4 2007/04/29 16:12:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.20-r2.ebuild,v 1.5 2007/05/30 19:24:16 phreak Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
@@ -16,4 +16,4 @@ DESCRIPTION="Hardened kernel sources ${OKV}"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI} ${ARCH_URI}"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"

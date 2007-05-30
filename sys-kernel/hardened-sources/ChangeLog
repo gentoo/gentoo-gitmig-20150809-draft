@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.156 2007/05/30 18:52:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.157 2007/05/30 19:24:16 phreak Exp $
+
+  30 May 2007; Christian Heim <phreak@gentoo.org>
+  -hardened-sources-2.6.18.ebuild, hardened-sources-2.6.20-r2.ebuild:
+  Marking 2.6.20-r2 stable on ppc with permission of Gysbert. Removing more
+  stale ebuild(s).
 
   30 May 2007; Christian Heim <phreak@gentoo.org>
   -hardened-sources-2.6.14-r7.ebuild, -hardened-sources-2.6.16-r11.ebuild,
