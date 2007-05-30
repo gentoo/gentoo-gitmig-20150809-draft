@@ -6,7 +6,7 @@ diff -burN ladcca-0.4.0/ladccad/main.c /tmp/ladcca-0.4.0/ladccad/main.c
          break;
        case 'D':
 -        jack_set_server_dir (optarg);
-+        printf("error: jack_set_server_dir is depreciated!\n");
++        printf("error: jack_set_server_dir is deprecated!\n");
 +		//jack_set_server_dir (optarg);
          break;
        case 'd':
