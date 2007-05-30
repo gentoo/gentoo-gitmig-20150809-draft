@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-0.8.0.ebuild,v 1.3 2007/04/20 15:09:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-0.8.0.ebuild,v 1.4 2007/05/30 17:40:42 armin76 Exp $
 
 inherit eutils qt4
 
@@ -21,10 +21,11 @@ DEPEND=">=net-libs/rb_libtorrent-0.11
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if has_version "<dev-libs/boost-1.34" && \
+	# We need boost built with threads
+	if ! has_version ">=dev-libs/boost-1.34_pre20061214" && \
 		! built_with_use "dev-libs/boost" threads; then
-		eerror "dev-libs/boost has to be built with threads or threadsonly USE-flag."
-		die "Missing threads/threadsonly USE-flag for dev-libs/boost"
+		eerror "${PN} needs dev-libs/boost built with threads USE flag"
+		die "dev-libs/boost is built without threads USE flag"
 	fi
 }
 

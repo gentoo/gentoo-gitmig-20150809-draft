@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.7 2007/05/08 13:50:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.8 2007/05/30 17:40:42 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> qbittorrent-0.8.0.ebuild,
+  qbittorrent-0.9.2.ebuild, qbittorrent-0.9.3.ebuild:
+  Re-fix threads use-flag check if >boost-1.33, bug 180322
 
 *qbittorrent-0.9.3 (08 May 2007)
 
