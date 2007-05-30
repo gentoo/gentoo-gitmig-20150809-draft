@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.23 2007/04/18 08:30:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.24 2007/05/30 08:48:05 opfer Exp $
+
+  30 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  xjavac-20041208-r5.ebuild:
+  stable x86, bug 179927
 
   18 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   xjavac-20041208-r5.ebuild:
