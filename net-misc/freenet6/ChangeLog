@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.20 2007/05/12 08:15:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.21 2007/05/30 13:18:16 gustavoz Exp $
+
+  30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> freenet6-4.2.2.ebuild:
+  Stable on sparc
 
   12 May 2007; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Added no-herd to metadata.xml
