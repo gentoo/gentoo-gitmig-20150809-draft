@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.5 2007/05/30 15:41:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.6 2007/05/30 20:36:36 cardoe Exp $
+
+  30 May 2007; Doug Goldstein <cardoe@gentoo.org> libupnp-1.4.6.ebuild:
+  stable on amd64 wrt bug #168789. Even though it still has 64 bit issues that
+  prevent apps like djmount from working, stabling it so it can replace upnp
+  which has more issues but was marked stable
 
   30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libupnp-1.4.6.ebuild:
   Stable on sparc wrt #168789
