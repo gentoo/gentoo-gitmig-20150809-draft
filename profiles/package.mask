@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7313 2007/05/29 19:43:35 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7314 2007/05/30 04:57:20 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,18 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 May 2007)
+# masked for removal on 20070629
+# Upstream is dead and there are several open bugs:
+# http://bugs.gentoo.org/show_bug.cgi?id=146620
+# http://bugs.gentoo.org/show_bug.cgi?id=179792
+# http://bugs.gentoo.org/show_bug.cgi?id=180104
+# http://bugs.gentoo.org/show_bug.cgi?id=180105
+# See http://article.gmane.org/gmane.comp.security.firewalls.firestarter.user/1342
+# for a thread on the mailing list regarding the state of things, including
+# mention of the problems with the newest netfilter code.
+net-firewall/firestarter
 
 # Samuli Suominen <drac@gentoo.org> (27 May 2007)
 # Orphaned library which was used for Xfce 4.2.
