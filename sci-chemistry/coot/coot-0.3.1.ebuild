@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.3.1.ebuild,v 1.2 2007/05/29 08:55:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.3.1.ebuild,v 1.3 2007/05/30 22:03:44 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -16,7 +16,7 @@ else
 fi
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 RDEPEND=">=sci-libs/gsl-1.3
 	=dev-libs/glib-1.2*
