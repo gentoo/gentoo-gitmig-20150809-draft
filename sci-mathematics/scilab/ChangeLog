@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.37 2007/05/23 01:37:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.38 2007/05/30 12:52:45 markusle Exp $
+
+  30 May 2007; Markus Dittrich <markusle@gentoo.org> scilab-4.1.1.ebuild:
+  configure with tcl/tk by default to avoid strange crashes using
+  the gtk interface (see bug #167698).
 
   23 May 2007; Markus Dittrich <markusle@gentoo.org> scilab-4.1.1.ebuild:
   Fixed improper SCR_URI.
