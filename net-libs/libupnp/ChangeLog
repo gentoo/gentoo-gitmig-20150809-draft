@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.4 2007/05/30 03:58:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.5 2007/05/30 15:41:32 gustavoz Exp $
+
+  30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libupnp-1.4.6.ebuild:
+  Stable on sparc wrt #168789
 
   30 May 2007; Doug Goldstein <cardoe@gentoo.org> libupnp-1.4.6.ebuild:
   stable on x86 wrt bug #168789
