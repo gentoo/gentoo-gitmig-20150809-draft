@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xemacs-ispell
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-ispell/ChangeLog,v 1.8 2006/11/14 12:37:49 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-ispell/ChangeLog,v 1.9 2007/05/30 10:05:38 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> xemacs-ispell-1.32.ebuild:
+  alpha stable wrt #175560
 
   14 Nov 2006; Hans de Graaff <graaff@gentoo.org> xemacs-ispell-1.32.ebuild:
   Update download location.
