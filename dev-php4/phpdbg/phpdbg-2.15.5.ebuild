@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/phpdbg-2.15.1.ebuild,v 1.2 2007/03/18 01:27:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/phpdbg-2.15.5.ebuild,v 1.1 2007/05/30 15:49:47 chtekk Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_INI="yes"
