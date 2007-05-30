@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-3.9.ebuild,v 1.1 2007/04/09 15:36:33 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-4.2.ebuild,v 1.1 2007/05/30 20:04:50 cedk Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -21,12 +21,8 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e "s/.*strip.*//" \
-		Makefile || die "sed failed"
-
-	sed -i \
-		-e "s/CFLAGS = -Os/CFLAGS +=/" \
-		-e "s/LDFLAGS =/LDFLAGS +=/" \
+		-e "s/CFLAGS = -Os/CFLAGS += -g/" \
+		-e "s/LDFLAGS = -s/LDFLAGS += -g/" \
 		config.mk || die "sed failed"
 
 	if use savedconfig; then
