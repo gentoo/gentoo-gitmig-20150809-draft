@@ -1,3 +1,7 @@
+# Raúl Porcel <armin76@gentoo.org> (30 May 2007)
+# Doesn't work, segfaults
+dev-util/ltrace
+
 # Jose Luis Rivero <yoswink@gentoo.org> (7 Jul 2006)
 # Masked by lost of virtual java/{jdk,jre} providers see Bug #138747
 # also compaq java is dead upstream and buggy: Bug #84306, and others.
