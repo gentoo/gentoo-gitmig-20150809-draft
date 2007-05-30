@@ -1,0 +1,666 @@
+Index: init.d/halt.sh
+===================================================================
+--- init.d/halt.sh	(revision 2702)
++++ init.d/halt.sh	(working copy)
+@@ -14,6 +14,12 @@
+ stop_addon devfs
+ stop_addon udev
+ 
++# Really kill things off before unmounting
++if [ -x /sbin/killall5 ] ; then
++	killall5 -15
++	killall5 -9
++fi
++
+ # Flush all pending disk writes now
+ sync ; sync
+ 
+Index: init.d/bootmisc
+===================================================================
+--- init.d/bootmisc	(revision 2702)
++++ init.d/bootmisc	(working copy)
+@@ -21,7 +21,7 @@
+     if [ -e /etc/sysctl.conf -a ! -x /etc/init.d/sysctl ] ; then
+ 		if [ "${RC_SYS}" != "VPS" ] ; then
+ 			ebegin "Configuring kernel parameters"
+-			sysctl -q -p /etc/sysctl.conf
++			sysctl -p /etc/sysctl.conf >/dev/null
+ 			eend $?
+ 		fi
+ 	fi
+Index: init.d/checkroot
+===================================================================
+--- init.d/checkroot	(revision 2702)
++++ init.d/checkroot	(working copy)
+@@ -31,7 +31,7 @@
+ 	rm -f /etc/mtab~ /etc/mtab~~
+ }
+ 
+-start() {
++do_fsck() {
+ 	local retval=0 opts="-F"
+ 	[ "${RC_UNAME}" = "Linux" ] && opts="-T -C0"
+ 
+@@ -110,8 +110,12 @@
+ 	else
+ 		mount -u -o rw /
+ 	fi
+-	eend $? "Root filesystem could not be mounted read/write :(" || return 1
++	eend $? "Root filesystem could not be mounted read/write :("
++}
+ 
++start() {
++	do_fsck || return 1
++
+ 	# Only Linux has mtab
+ 	[ "${RC_UNAME}" = "Linux" ] && do_mtab
+ 
+Index: sh/rc-mount.sh
+===================================================================
+--- sh/rc-mount.sh	(revision 2702)
++++ sh/rc-mount.sh	(working copy)
+@@ -8,7 +8,7 @@
+ 	local cmd="$1" retval=0 retry=
+ 	local f_opts="-m -c" f_kill="-s " mnt=
+ 	if [ "${RC_UNAME}" = "Linux" ] ; then
+-		f_opts="-c"
++		f_opts="-m"
+ 		f_kill="-"
+ 	fi
+ 
+@@ -34,7 +34,7 @@
+ 		esac
+ 
+ 		retry=3
+-		while ! ${cmd} "${mnt}" 2>/dev/null ; do
++		while ! LC_ALL=C ${cmd} "${mnt}" 2>/dev/null ; do
+ 			# Don't kill if it's us (/ and possibly /usr)
+ 			local pids="$(fuser ${f_opts} "${mnt}" 2>/dev/null)"
+ 			case " ${pids} " in
+@@ -52,14 +52,14 @@
+ 
+ 			# OK, try forcing things
+ 			if [ ${retry} -le 0 ] ; then
+-				local extra_opts="-f"
+ 				case "${cmd}" in
+-					mount*)
+-						# Silly reiserfs helper blocks us, so bypass it
+-						[ "${RC_UNAME}" = "Linux" ] && extra_opts="-i" 
++					umount*)
++						LC_ALL=C ${cmd} -f "${mnt}" || retry=-999
+ 						;;
++					*)
++						retry=-999
++						;;
+ 				esac
+-				${cmd} ${extra_opts} "${mnt}" || retry=-999
+ 				break
+ 			fi
+ 		done
+Index: sh/net.sh
+===================================================================
+--- sh/net.sh	(revision 2702)
++++ sh/net.sh	(working copy)
+@@ -118,8 +118,8 @@
+ 
+ # Basically sorts our modules into order and saves the list
+ _gen_module_list() {
+-	local x= f=
+-	if [ -s "${MODULESLIST}" -a "${MODULESLIST}" -nt "${MODULESDIR}" ] ; then
++	local x= f= force=$1
++	if ! ${force} && [ -s "${MODULESLIST}" -a "${MODULESLIST}" -nt "${MODULESDIR}" ] ; then
+ 		local update=false
+ 		for x in "${MODULESDIR}"/* ; do
+ 			[ -e "${x}" ] || continue
+@@ -230,18 +230,21 @@
+ }
+ 
+ _load_modules() {
++	local starting=$1 mymods=
++
+ 	# Ensure our list is up to date
+-	_gen_module_list
++	_gen_module_list false
++	if ! . "${MODULESLIST}" ; then
++		_gen_module_list true
++		. "${MODULESLIST}"
++	fi
+ 
+-	local starting=$1 mymods=
+-
+ 	MODULES=
+ 	if [ "${IFACE}" != "lo" -a "${IFACE}" != "lo0" ] ; then
+ 		eval mymods=\$modules_${IFVAR}
+ 		[ -z "${mymods}" ] && mymods=${modules}
+ 	fi
+ 
+-	. "${MODULESLIST}"
+ 	local i=-1 x= mod= f= provides=
+ 	while true ; do
+ 		i=$((${i} + 1))
+Index: init.d.Linux/clock
+===================================================================
+--- init.d.Linux/clock	(revision 2702)
++++ init.d.Linux/clock	(working copy)
+@@ -79,24 +79,25 @@
+ 
+ 	ebegin "Setting system clock using the hardware clock" "[${TBLURB}]"
+ 	if [ ${fakeit} -eq 1 ] ; then
+-		ret=0
++		retval=0
+ 	elif [ -x /sbin/hwclock ] ; then
+-		# Since hwclock always exit's with a 0, need to check its output.
+-		errstr="$(/sbin/hwclock ${myadj} ${myopts} 2>&1 >/dev/null)"
+-		errstr="${errstr}$(/sbin/hwclock --hctosys ${myopts} 2>&1 >/dev/null)"
++		# Don't call hwclock unless we need to
++		if [ "${TBLURB}" != "UTC" -o "${myadj}" != "--noadjfile" ] ; then
++			# Since hwclock always exit's with a 0, need to check its output.
++			errstr="$(/sbin/hwclock ${myadj} ${myopts} 2>&1 >/dev/null)"
++			errstr="${errstr}$(/sbin/hwclock --hctosys ${myopts} 2>&1 >/dev/null)"
+ 
+-		if [ -n "${errstr}" ] ; then
+-			ewarn "${errstr}"
+-			ret=1
+-		else
+-			ret=0
++			if [ -n "${errstr}" ] ; then
++				ewarn "${errstr}"
++				retval=1
++			fi
++			errstr="Failed to set clock"
+ 		fi
+-		errstr="Failed to set clock"
+ 	else
+-		ret=1
++		retval=1
+ 		errstr="/sbin/hwclock not found"
+ 	fi
+-	eend ${ret} "${errstr}" "You will need to set the clock yourself"
++	eend ${retval} "${errstr}" "You will need to set the clock yourself"
+ 
+ 	return 0
+ }
+@@ -111,16 +112,16 @@
+ 
+ 	ebegin "Setting hardware clock using the system clock" "[${TBLURB}]"
+ 	if [ ${fakeit} -eq 1 ] ; then
+-		ret=0
++		retval=0
+ 	elif [ -x /sbin/hwclock ] ; then
+ 		[ -z "$(/sbin/hwclock --systohc ${myopts} 2>&1 >/dev/null)" ]
+-		ret=$?
++		retval=$?
+ 		errstr="Failed to sync clocks"
+ 	else
+-		ret=1
++		retval=1
+ 		errstr="/sbin/hwclock not found"
+ 	fi
+-	eend ${ret} "${errstr}"
++	eend ${retval} "${errstr}"
+ }
+ 
+ save() {
+Index: src/rc-plugin.c
+===================================================================
+--- src/rc-plugin.c	(revision 2702)
++++ src/rc-plugin.c	(working copy)
+@@ -23,12 +23,25 @@
+ {
+ 	char *name;
+ 	void *handle;
+-	int (*hook) (rc_hook_t hook, const char *name);
++	int (*hook) (rc_hook_t, const char *);
+ 	struct plugin *next;
+ } plugin_t;
+ 
+ static plugin_t *plugins = NULL;
+ 
++#ifndef __FreeBSD__
++dlfunc_t dlfunc (void * __restrict handle, const char * __restrict symbol)
++{
++	union {
++		void *d;
++		dlfunc_t f;
++	} rv;
++
++	rv.d = dlsym (handle, symbol);
++	return (rv.f);
++}
++#endif
++
+ void rc_plugin_load (void)
+ {
+ 	char **files;
+@@ -47,7 +60,7 @@
+ 		char *p = rc_strcatpaths (RC_PLUGINDIR, file, NULL);
+ 		void *h = dlopen (p, RTLD_LAZY);
+ 		char *func;
+-		void *f;
++		int (*fptr) (rc_hook_t, const char *); 
+ 		int len;
+ 
+ 		if (! h) {
+@@ -62,8 +75,8 @@
+ 		func = rc_xmalloc (sizeof (char *) * len);
+ 		snprintf (func, len, "_%s_hook", file);
+ 
+-		f = dlsym (h, func);
+-		if (! f) {
++		fptr = (int (*)(rc_hook_t, const char*)) dlfunc (h, func);
++		if (! fptr) {
+ 			eerror ("`%s' does not expose the symbol `%s'", p, func);
+ 			dlclose (h);
+ 		} else {
+@@ -76,7 +89,7 @@
+ 			memset (plugin, 0, sizeof (plugin_t));
+ 			plugin->name = rc_xstrdup (file);
+ 			plugin->handle = h;
+-			plugin->hook = f;
++			plugin->hook = fptr;
+ 		}
+ 
+ 		free (func);
+Index: src/rc.c
+===================================================================
+--- src/rc.c	(revision 2702)
++++ src/rc.c	(working copy)
+@@ -143,8 +143,6 @@
+ 				argv++;
+ 			}
+ 		}
+-		else
+-			retval = EXIT_FAILURE;
+ 	}
+ 
+ 	if (argc > 0) {
+@@ -579,6 +577,29 @@
+ 	errno = serrno;
+ }
+ 
++static void run_script (const char *script) {
++	int status = 0;
++	pid_t pid = vfork ();
++	
++	if (pid < 0)
++		eerrorx ("%s: vfork: %s", applet, strerror (errno));
++	else if (pid == 0) {
++		execl (script, script, (char *) NULL);
++		eerror ("%s: unable to exec `%s': %s",
++				script, applet, strerror (errno));
++		_exit (EXIT_FAILURE);
++	}
++
++	do {
++		pid_t wpid = waitpid (pid, &status, 0);
++		if (wpid < 1)
++			eerror ("waitpid: %s", strerror (errno));
++	} while (! WIFEXITED (status) && ! WIFSIGNALED (status));
++
++	if (! WIFEXITED (status) || ! WEXITSTATUS (status) == 0)
++		exit (EXIT_FAILURE);
++}
++
+ int main (int argc, char **argv)
+ {
+ 	char *RUNLEVEL = NULL;
+@@ -709,9 +730,6 @@
+ 			/* OK, we're either in runlevel 1 or single user mode */
+ 			if (strcmp (newlevel, RC_LEVEL_SYSINIT) == 0) {
+ 				struct utsname uts;
+-				pid_t pid;
+-				pid_t wpid;
+-				int status = 0;
+ #ifdef __linux__
+ 				FILE *fp;
+ #endif
+@@ -719,24 +737,9 @@
+                 /* exec init-early.sh if it exists
+                  * This should just setup the console to use the correct
+                  * font. Maybe it should setup the keyboard too? */
+-                if (rc_exists (INITEARLYSH)) {
+-                    if ((pid = vfork ()) == -1)
+-                        eerrorx ("%s: vfork: %s", applet, strerror (errno));
++                if (rc_exists (INITEARLYSH))
++					run_script (INITEARLYSH);
+ 
+-                    if (pid == 0) {
+-                        execl (INITEARLYSH, INITEARLYSH, (char *) NULL);
+-                        eerror ("%s: unable to exec `" INITEARLYSH "': %s",
+-                                applet, strerror (errno));
+-                        _exit (EXIT_FAILURE);
+-                    }
+-
+-                    do {
+-                        wpid = waitpid (pid, &status, 0);
+-                        if (wpid < 1)
+-                            eerror ("waitpid: %s", strerror (errno));
+-                    } while (! WIFEXITED (status) && ! WIFSIGNALED (status));
+-                }
+-
+ 				uname (&uts);
+ 
+ 				printf ("\n");
+@@ -752,26 +755,8 @@
+ 
+ 				setenv ("RC_SOFTLEVEL", newlevel, 1);
+ 				rc_plugin_run (rc_hook_runlevel_start_in, newlevel);
++				run_script (INITSH);
+ 
+-				if ((pid = vfork ()) == -1)
+-					eerrorx ("%s: vfork: %s", applet, strerror (errno));
+-
+-				if (pid == 0) {
+-					execl (INITSH, INITSH, (char *) NULL);
+-					eerror ("%s: unable to exec `" INITSH "': %s",
+-							applet, strerror (errno));
+-					_exit (EXIT_FAILURE);
+-				}
+-
+-				do {
+-					wpid = waitpid (pid, &status, 0);
+-					if (wpid < 1)
+-						eerror ("waitpid: %s", strerror (errno));
+-				} while (! WIFEXITED (status) && ! WIFSIGNALED (status));
+-
+-				if (! WIFEXITED (status) || ! WEXITSTATUS (status) == 0)
+-					exit (EXIT_FAILURE);
+-
+ 				/* If we requested a softlevel, save it now */
+ #ifdef __linux__
+ 				set_ksoftlevel (NULL);
+Index: src/rc-plugin.h
+===================================================================
+--- src/rc-plugin.h	(revision 2702)
++++ src/rc-plugin.h	(working copy)
+@@ -12,4 +12,15 @@
+ void rc_plugin_unload ();
+ void rc_plugin_run (rc_hook_t, const char *value);
+ 
++/* dlfunc defines needed to avoid ISO errors. FreeBSD has this right :) */
++#ifndef __FreeBSD__
++struct __dlfunc_arg {
++	int	__dlfunc_dummy;
++};
++
++typedef	void (*dlfunc_t) (struct __dlfunc_arg);
++
++dlfunc_t dlfunc (void * __restrict handle, const char * __restrict symbol);
+ #endif
++
++#endif
+Index: src/start-stop-daemon.c
+===================================================================
+--- src/start-stop-daemon.c	(revision 2702)
++++ src/start-stop-daemon.c	(working copy)
+@@ -30,6 +30,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <time.h>
+ #include <unistd.h>
+ 
+ #ifdef HAVE_PAM
+@@ -90,6 +91,20 @@
+ 		rc_strlist_free (newenv);
+ }
+ 
++static int get_time(struct timeval *tp)
++{
++	struct timespec ts;
++
++	if (clock_gettime (CLOCK_MONOTONIC, &ts) == -1) {
++		eerror ("clock_gettime: %s", strerror (errno));
++		return (-1);
++	}
++
++	tp->tv_sec = ts.tv_sec;
++	tp->tv_usec = ts.tv_nsec / 1000;
++	return (0);
++}
++
+ static int parse_signal (const char *sig)
+ {
+ 	typedef struct signalpair
+@@ -374,10 +389,8 @@
+ 					break;
+ 				}
+ 
+-				if (gettimeofday (&stopat, NULL) != 0) {
+-					eerror ("%s: gettimeofday: %s", progname, strerror (errno));
++				if (get_time (&stopat) != 0)
+ 					return (0);
+-				}
+ 
+ 				stopat.tv_sec += item->value;
+ 				while (1) {
+@@ -396,10 +409,8 @@
+ 						}
+ 					}
+ 
+-					if (gettimeofday (&now, NULL) != 0) {
+-						eerror ("%s: gettimeofday: %s", progname, strerror (errno));
++					if (get_time (&now) != 0)
+ 						return (0);
+-					}
+ 					if (timercmp (&now, &stopat, >))
+ 						break;
+ 				}
+@@ -952,7 +963,7 @@
+ 
+ 		if (! WIFEXITED (status) || WEXITSTATUS (status) != 0) {
+ 			if (! quiet)
+-				eerrorx ("%s: failed to started `%s'", progname, exec);
++				eerrorx ("%s: failed to start `%s'", progname, exec);
+ 			exit (EXIT_FAILURE);
+ 		}
+ 
+@@ -966,8 +977,8 @@
+ 		struct timeval now;
+ 		bool retestpid = false;
+ 
+-		if (gettimeofday (&stopat, NULL) != 0)
+-			eerrorx ("%s: gettimeofday: %s", progname, strerror (errno));
++		if (get_time (&stopat) != 0)
++			exit (EXIT_FAILURE);
+ 
+ 		stopat.tv_usec += START_WAIT;
+ 		while (1) {
+@@ -981,9 +992,6 @@
+ 					eerrorx ("%s: select: %s", progname, strerror (errno));
+ 			}
+ 
+-			if (gettimeofday (&now, NULL) != 0)
+-				eerrorx ("%s: gettimeofday: %s", progname, strerror (errno));
+-
+ 			/* This is knarly.
+ 			   If we backgrounded then we know the exact pid.
+ 			   Otherwise if we have a pidfile then it *may* know the exact pid.
+@@ -1015,7 +1023,9 @@
+ 			if (! alive)
+ 				eerrorx ("%s: %s died", progname, exec);
+ 
+-			if (timercmp (&now, &stopat, >))
++			if (get_time (&now) != 0)
++				exit (EXIT_FAILURE);
++			if (timercmp (&now, &stopat, >)) 
+ 				break;
+ 		}
+ 
+Index: src/librc-misc.c
+===================================================================
+--- src/librc-misc.c	(revision 2702)
++++ src/librc-misc.c	(working copy)
+@@ -572,7 +572,7 @@
+ 	char *line;
+ 	int i;
+ 	char *p;
+-	char **config = rc_get_config (NULL, RC_CONFIG);
++	char **config;
+ 	char *e;
+ 	char sys[6];
+ 	struct utsname uts;
+@@ -580,6 +580,13 @@
+ 	FILE *fp;
+ 	char buffer[PATH_MAX];
+ 
++	/* Don't trust environ for softlevel yet */
++	snprintf (buffer, PATH_MAX, "%s.%s", RC_CONFIG, rc_get_runlevel());
++	if (rc_exists (buffer))
++		config = rc_get_config (NULL, buffer);
++	else
++		config = rc_get_config (NULL, RC_CONFIG);
++
+ 	STRLIST_FOREACH (config, line, i) {
+ 		p = strchr (line, '=');
+ 		if (! p)
+@@ -670,13 +677,15 @@
+ 			if (file_regex ("/proc/xen/capabilities", "control_d"))
+ 				snprintf (sys, sizeof (sys), "XENU");
+ 		}
+-		if (! sys)
++		if (! sys[0])
+ 			snprintf (sys, sizeof (sys), "XEN0");
+-	} else if (file_regex ("/proc/cpuinfo", "UML"))
++	} else if (file_regex ("/proc/cpuinfo", "UML")) {
+ 		snprintf (sys, sizeof (sys), "UML");
+-	else if (file_regex ("/proc/self/status",
+-						 "(s_context|VxID|envID):[[:space:]]*[1-9]"))
+-													snprintf (sys, sizeof (sys), "VPS"); 
++	} else if (file_regex ("/proc/self/status",
++						   "(s_context|VxID|envID):[[:space:]]*[1-9]"))
++	{
++		snprintf (sys, sizeof (sys), "VPS");
++	}
+ #endif
+ 
+ 	/* Only add a NET_FS list if not defined */
+Index: src/runscript.c
+===================================================================
+--- src/runscript.c	(revision 2702)
++++ src/runscript.c	(working copy)
+@@ -80,8 +80,8 @@
+ 		 * which sucks ass
+ 		 * http://www.opengroup.org/onlinepubs/009695399/functions/dlsym.html
+ 		 */
+-		selinux_run_init_old = dlsym (lib_handle, "selinux_runscript");
+-		selinux_run_init_new = dlsym (lib_handle, "selinux_runscript2");
++		selinux_run_init_old = (void (*)(void)) dlfunc (lib_handle, "selinux_runscript");
++		selinux_run_init_new = (void (*)(int, char **)) dlfunc (lib_handle, "selinux_runscript2");
+ 
+ 		/* Use new run_init if it rc_exists, else fall back to old */
+ 		if (selinux_run_init_new)
+@@ -975,6 +975,9 @@
+ 	int opt;
+ 
+ 	service = argv[1];
++	applet = rc_xstrdup (basename (service));
++	atexit (cleanup);
++	
+ 	/* Show help if insufficient args */
+ 	if (argc < 3) {
+ 		execl (RCSCRIPT_HELP, RCSCRIPT_HELP, service, (char *) NULL);
+@@ -982,9 +985,6 @@
+ 				 applet, strerror (errno));
+ 	}
+ 
+-	applet = rc_xstrdup (basename (service));
+-	atexit (cleanup);
+-
+ #ifdef __linux__
+ 	/* coldplug events can trigger init scripts, but we don't want to run them
+ 	   until after rc sysinit has completed so we punt them to the boot runlevel */
+Index: src/Makefile
+===================================================================
+--- src/Makefile	(revision 2702)
++++ src/Makefile	(working copy)
+@@ -65,6 +65,7 @@
+ ifeq ($(OS),Linux)
+ LDLIBS_RC = -ldl
+ LDLIBS_RS = -ldl
++LDLIBS_SSD = -lrt
+ # Shouldn't need this, but it's the easiest workaround for silly
+ # Linux headers that don't work with -std=c99
+ override CPPFLAGS += -D_GNU_SOURCE
+@@ -76,7 +77,7 @@
+ HAVE_PAM = 
+ ifdef HAVE_PAM
+ CPPFLAGS_SSD = -DHAVE_PAM
+-LDLIBS_SSD = -lpam
++LDLIBS_SSD += -lpam
+ endif
+ 
+ # We also define _BSD_SOURCE so both Linux and the BSDs get a few
+Index: net.BSD/iwconfig.sh
+===================================================================
+--- net.BSD/iwconfig.sh	(revision 2702)
++++ net.BSD/iwconfig.sh	(working copy)
+@@ -71,7 +71,7 @@
+ 
+ iwconfig_set_mode() {
+     local x= opt= unopt="hostap adhoc"
+-    case "${mode}" in
++    case "$1" in
+ 	master|hostap) unopt="adhoc" opt="hostap" ;;
+ 	ad-hoc|adhoc) unopt="hostap" opt="adhoc" ;;
+     esac
+@@ -474,7 +474,7 @@
+ 	    ad-hoc|adhoc|hostap|master) iwconfig_setup_specific "${x}" ;;
+ 	esac
+ 
+-	if [ "${x}" != "managed" -a "${x}" != "auto" ] ; then
++	if [ "${x}" != "managed" -a "${x}" != "auto" -a "${x}" != "ad-hoc" -a "${x}" != "adhoc" -a ${x} != "master" ] ; then
+ 		eerror "Only managed, ad-hoc, master and auto modes are supported"
+ 		return 1
+ 	fi
+Index: sh.Linux/init.sh
+===================================================================
+--- sh.Linux/init.sh	(revision 2702)
++++ sh.Linux/init.sh	(working copy)
+@@ -100,7 +100,24 @@
+ check_statedir /proc
+ 
+ # By default VServer already has /proc mounted, but OpenVZ does not!
+-if [ ! -e /proc/self/stat ] ; then
++# However, some of our users have an old proc image in /proc
++# NFC how they managed that, but the end result means we have to test if
++# /proc actually works or not. We to this by comparing uptime to one a second
++# ago
++mountproc=true
++if [ -e /proc/uptime ] ; then
++	up="$(cat /proc/uptime)"
++	sleep 1
++	if [ "${up}" = "$(cat /proc/uptime)" ] ; then
++		eerror "You have cruft in /proc that should be deleted"
++	else
++		einfo "/proc is already mounted, skipping"
++		mountproc=false
++	fi
++	unset up
++fi
++
++if ${mountproc} ; then
+ 	procfs="proc"
+ 	[ "${RC_UNAME}" = "GNU/kFreeBSD" ] && proc="linprocfs"
+ 	ebegin "Mounting ${procfs} at /proc"
+@@ -108,6 +125,7 @@
+ 	try mount -n ${mntcmd:--t ${procfs} -o noexec,nosuid,nodev proc /proc}
+ 	eend $?
+ fi
++unset mountproc
+ 
+ # Read off the kernel commandline to see if there's any special settings
+ # especially check to see if we need to set the  CDBOOT environment variable
+Index: etc.Linux/sysctl.conf
+===================================================================
+--- etc.Linux/sysctl.conf	(revision 2702)
++++ etc.Linux/sysctl.conf	(working copy)
+@@ -22,7 +22,7 @@
+ 
+ # Enable SYN cookies (yum!)
+ # http://cr.yp.to/syncookies.html
+-net.ipv4.tcp_syncookies = 1
++#net.ipv4.tcp_syncookies = 1
+ 
+ # Disable source route
+ #net.ipv4.conf.all.accept_source_route = 0

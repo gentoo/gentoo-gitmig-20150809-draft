@@ -1,9 +1,17 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.419 2007/05/30 15:39:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.420 2007/05/30 22:39:31 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.0_alpha3-r1 (30 May 2007)
+
+  30 May 2007; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-2.0.0_alpha3-2721.patch,
+  +baselayout-2.0.0_alpha3-r1.ebuild:
+  Push out some misc fixes, hopefully including one that finally solves our
+  shutdown issues with certain configs.
 
   30 May 2007; Doug Goldstein <cardoe@gentoo.org>
   baselayout-1.11.15-r3.ebuild, baselayout-1.12.9-r2.ebuild,
