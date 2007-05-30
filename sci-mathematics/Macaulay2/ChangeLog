@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.13 2007/05/25 17:33:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.14 2007/05/30 13:25:07 markusle Exp $
+
+*Macaulay2-0.9.95-r2 (30 May 2007)
+
+  30 May 2007; Markus Dittrich <markusle@gentoo.org>
+  +Macaulay2-0.9.95-r2.ebuild:
+  This revision includes a cleaned up ebuild which now properly
+  builds on amd64 (see bug #179700).
 
   25 May 2007; Markus Dittrich <markusle@gentoo.org>
   Macaulay2-0.9.95-r1.ebuild:
