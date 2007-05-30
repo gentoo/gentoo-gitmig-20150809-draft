@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0_rc1.ebuild,v 1.4 2007/05/17 11:48:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0_rc1.ebuild,v 1.5 2007/05/30 11:49:19 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -181,7 +181,7 @@ src_compile() {
 
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/pgsql" || myconf="${myconf} -no-sql-psql"
-	use firebird	&& myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
+	use firebird	&& myconf="${myconf} -plugin-sql-ibase -I/opt/firebird/include" || myconf="${myconf} -no-sql-ibase"
 	use sqlite3	&& myconf="${myconf} -plugin-sql-sqlite -system-sqlite" || myconf="${myconf} -no-sql-sqlite"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite2" || myconf="${myconf} -no-sql-sqlite2"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r2.ebuild,v 1.9 2007/04/28 16:56:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r2.ebuild,v 1.10 2007/05/30 11:49:19 caleb Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -177,7 +177,7 @@ src_compile() {
 	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf="${myconf} -no-sql-psql"
-	use firebird    && myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
+	use firebird    && myconf="${myconf} -plugin-sql-ibase -I/opt/firebird/include" || myconf="${myconf} -no-sql-ibase"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
 	use cups	&& myconf="${myconf} -cups" || myconf="${myconf} -no-cups"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
