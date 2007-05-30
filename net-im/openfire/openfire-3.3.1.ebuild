@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.3.1.ebuild,v 1.1 2007/05/21 08:41:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.3.1.ebuild,v 1.2 2007/05/30 22:47:46 humpback Exp $
 
 # because of ant-contrib
 WANT_SPLIT_ANT=true
@@ -36,6 +36,7 @@ pkg_setup() {
 		ewarn "For more info see bug #139708"
 		sleep 11
 	fi
+	java-pkg-2_pkg_setup
 }
 
 src_unpack() {
