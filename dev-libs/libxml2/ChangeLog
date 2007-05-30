@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.184 2007/05/29 15:37:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.185 2007/05/30 00:36:16 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org> libxml2-2.6.28.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libxml2-2.6.28.ebuild:
   Stable on sparc wrt #171107
