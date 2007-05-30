@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.2.ebuild,v 1.2 2007/05/10 22:47:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.2.ebuild,v 1.3 2007/05/30 11:51:59 caleb Exp $
 
 inherit distutils
 
@@ -48,8 +48,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} INSTALL_ROOT=${D} install || die "install failed"
-	dodoc ChangeLog LICENSE NEWS README README.Linux THANKS
-	use doc && dohtml doc/PyQt.html
+	dodoc ChangeLog LICENSE NEWS README THANKS
+	use doc && dohtml -r doc/html/*
 	if use examples ; then
 		dodir /usr/share/doc/${PF}/examples
 		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
