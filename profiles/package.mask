@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7315 2007/05/30 21:54:58 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7316 2007/05/30 21:56:07 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (30 May 2007)
+# Mask beta version
+=net-p2p/deluge-0.5.1_beta1
 
 # Bjarke Istrup Pedersen <gurligebis@gentoo.org> (30 May 2007)
 # masked for removal on 20070629
