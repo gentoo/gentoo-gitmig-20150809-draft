@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.54 2007/05/29 19:33:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.55 2007/05/30 20:48:40 welp Exp $
+
+  30 May 2007; Peter Weller <welp@gentoo.org> minicom-2.2-r1.ebuild:
+  Stable on amd64 wrt bug 180120
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> minicom-2.2-r1.ebuild:
   Stable on sparc wrt #180120
