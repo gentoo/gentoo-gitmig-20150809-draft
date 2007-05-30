@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.68 2007/05/29 23:14:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.69 2007/05/30 13:41:10 armin76 Exp $
+
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> glade-3.2.0.ebuild,
+  glade-3.2.2.ebuild:
+  alpha stable and add ~ia64 wrt #180132
 
   29 May 2007; Andrej Kacian <ticho@gentoo.org> glade-3.2.0.ebuild:
   Stable on x86, bug #180132.
