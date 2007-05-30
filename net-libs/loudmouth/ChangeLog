@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.45 2007/04/07 13:42:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.46 2007/05/30 17:03:12 tester Exp $
+
+*loudmouth-1.2.2 (30 May 2007)
+
+  30 May 2007; <tester@gentoo.org> +loudmouth-1.2.2.ebuild:
+  New version (for gossip 0.25)
 
 *loudmouth-1.2.1 (06 Apr 2007)
 
