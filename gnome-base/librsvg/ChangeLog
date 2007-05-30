@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.140 2007/05/29 15:39:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.141 2007/05/30 00:38:01 ticho Exp $
+
+  29 May 2007; Andrej Kacian <ticho@gentoo.org> librsvg-2.16.1-r1.ebuild:
+  Stable on x86, bug #171107.
 
   29 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   librsvg-2.16.1-r1.ebuild:
