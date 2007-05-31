@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/omnievents
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/ChangeLog,v 1.2 2005/10/01 13:48:49 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/ChangeLog,v 1.3 2007/05/31 02:01:00 kloeri Exp $
+
+  31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove myself as I'm retiring.
 
   01 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
   omnievents-2.6.2.ebuild:

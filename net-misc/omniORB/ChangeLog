@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.44 2007/04/28 17:00:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.45 2007/05/31 02:04:37 kloeri Exp $
+
+  31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove myself as I'm retiring.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> omniORB-4.0.5.ebuild,
   omniORB-4.0.6.ebuild, omniORB-4.0.7.ebuild, omniORB-4.1.0.ebuild:
