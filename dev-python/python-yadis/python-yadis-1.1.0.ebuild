@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0.ebuild,v 1.1 2007/05/31 18:53:27 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0.ebuild,v 1.2 2007/05/31 20:52:41 lucass Exp $
 
 PYTHON_MODNAME="yadis"
 NEED_PYTHON=2.3
@@ -12,7 +12,7 @@ DESCRIPTION="Yadis service discovery library."
 HOMEPAGE="http://www.openidenabled.com/yadis/libraries/python/"
 SRC_URI="http://www.openidenabled.com/resources/downloads/python-openid/${P}.tar.gz"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="test"
 RDEPEND="test? ( >=dev-python/pyflakes-0.2.1 )
