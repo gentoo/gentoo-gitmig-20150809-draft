@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.113 2007/05/29 19:36:04 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.114 2007/05/31 19:29:27 jurek Exp $
+
+  31 May 2007; Jurek Bartuszek <jurek@gentoo.org> mono-1.1.16.1.ebuild,
+  mono-1.2.3.1.ebuild, mono-1.2.4.ebuild:
+  Fixed mono re-emerging bug (#146424). Credit goes to Raja R Harinath
+  <rharinath@novell.com> for proposing the solution.
 
   29 May 2007; Jurek Bartuszek <jurek@gentoo.org> mono-1.2.4.ebuild:
   Fixed typo (bug #180192)
@@ -45,7 +50,7 @@
   -mono-1.1.18-r1.ebuild, -mono-1.2.ebuild, -mono-1.2.1.ebuild:
   Long overdue cleaning of mono ebuilds. 1.1.16.1 left for visual basic
 
-  14 Jan 2007; Olivier Crête <tester@gentoo.org> mono-1.2.2.1.ebuild:
+  14 Jan 2007; Olivier CrĂŞte <tester@gentoo.org> mono-1.2.2.1.ebuild:
   Stable on amd64 per bug #159886
 
   08 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> mono-1.2.2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.3 2007/05/29 19:36:04 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.4 2007/05/31 19:29:27 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -83,7 +83,10 @@ src_compile() {
 	touch ${S}/mcs/build/deps/use-monolite
 
 	econf ${myconf} || die "configure failed"
-	emake -j1 || die "compile failed"
+
+	# Force LC_ALL=C and the use of internal mcs/mono to prevent issues with
+	# I18N.dll (bug #146424)
+	LC_ALL=C emake EXTERNAL_MCS=false EXTERNAL_MONO=false || die "compile failed"
 }
 
 src_install() {
