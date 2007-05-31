@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.13.ebuild,v 1.2 2007/05/15 16:08:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.14.ebuild,v 1.1 2007/05/31 09:50:14 humpback Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/torrc.sample-0.1.2.6.patch
+	epatch "${FILESDIR}"/tor.logrotate.patch
 }
 
 src_compile() {

@@ -1,0 +1,10 @@
+--- contrib/tor.logrotate.in.ori	2007-05-31 10:38:24.774901656 +0100
++++ contrib/tor.logrotate.in	2007-05-31 10:38:52.189956005 +0100
+@@ -7,6 +7,6 @@
+ 	notifempty
+ 	sharedscripts
+ 	postrotate
+-		/etc/rc.d/init.d/tor reload > /dev/null
++		/etc/rc.d/init.d/tor reload > /dev/null || true
+ 	endscript
+ }

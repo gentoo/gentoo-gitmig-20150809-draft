@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.79 2007/05/15 16:08:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.80 2007/05/31 09:50:14 humpback Exp $
+
+*tor-0.1.2.14 (31 May 2007)
+
+  31 May 2007; <humpback@gentoo.org> -tor-0.1.0.18.ebuild,
+  -tor-0.1.0.18-r1.ebuild, -tor-0.1.2.13.ebuild, +tor-0.1.2.14.ebuild:
+  Bumped 0.1.2.13 to 0.1.2.14, removed older versions. Fixed #178975 with idea 
+  from Remy Blank
 
   15 May 2007; <humpback@gentoo.org> tor-0.1.0.18.ebuild,
   tor-0.1.0.18-r1.ebuild, tor-0.1.1.23.ebuild, tor-0.1.1.26.ebuild,
