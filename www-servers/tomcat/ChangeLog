@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.146 2007/05/28 23:32:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.147 2007/05/31 18:15:52 wltjr Exp $
+
+*tomcat-6.0.13-r2 (31 May 2007)
+
+  31 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +tomcat-6.0.13-r2.ebuild:
+  Re-worked directory creation and permissions. Some modifications to make IDE
+  integration a bit more friendly. While not reducing security on servers.
 
   28 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-6.0.13-r1.ebuild:
