@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-cs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-cs/ChangeLog,v 1.3 2006/11/06 15:20:07 pioto Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-cs/ChangeLog,v 1.4 2007/05/31 13:31:19 gustavoz Exp $
+
+  31 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  vim-spell-cs-20061021.ebuild:
+  Keyworded ~sparc
 
   06 Nov 2006; Mike Kelly <pioto@gentoo.org> metadata.xml:
   Add Czech description to metadata.xml

@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-de
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.6 2007/03/27 18:23:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.7 2007/05/31 13:27:15 gustavoz Exp $
+
+  31 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  vim-spell-de-20051008.ebuild:
+  Keyworded ~sparc
 
   27 Mar 2007; Peter Weller <welp@gentoo.org> vim-spell-de-20051008.ebuild:
   Stable on amd64 wrt bug 169999
