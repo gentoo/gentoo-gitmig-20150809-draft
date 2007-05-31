@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/xfce4-mpc-0.3.2.ebuild,v 1.1 2007/05/31 07:16:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/xfce4-mpc-0.3.2.ebuild,v 1.2 2007/05/31 15:26:51 welp Exp $
 
 inherit xfce44
 
@@ -11,7 +11,7 @@ xfce44_gzipped
 RESTRICT="test"
 
 DESCRIPTION="Music Player Daemon (mpd) panel plugin"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=media-sound/mpd-0.12.1"
