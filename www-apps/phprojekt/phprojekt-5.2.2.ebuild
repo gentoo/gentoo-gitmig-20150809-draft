@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.2.2.ebuild,v 1.1 2007/05/28 01:02:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.2.2.ebuild,v 1.2 2007/05/31 10:15:48 opfer Exp $
 
 inherit webapp depend.php
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.phprojekt.com/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="postgres mysql"
 
 need_php
