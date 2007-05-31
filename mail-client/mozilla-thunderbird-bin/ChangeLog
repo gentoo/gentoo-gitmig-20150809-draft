@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.73 2007/05/19 22:50:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.74 2007/05/31 14:04:40 armin76 Exp $
+
+*mozilla-thunderbird-bin-1.5.0.12 (31 May 2007)
+
+  31 May 2007; Raúl Porcel <armin76@gentoo.org>
+  +mozilla-thunderbird-bin-1.5.0.12.ebuild:
+  Version bump, security bug #180436
 
   19 May 2007; Christian Faulhammer <opfer@gentoo.org>
   mozilla-thunderbird-bin-2.0.0.0.ebuild:
