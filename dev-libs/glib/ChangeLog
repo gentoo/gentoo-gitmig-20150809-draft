@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.260 2007/05/30 23:55:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.261 2007/05/31 00:01:54 ranger Exp $
+
+  30 May 2007; Brent Baude <ranger@gentoo.org> glib-2.12.11.ebuild:
+  Marking glib-2.12.11 ppc64 stable for bug 171107
 
   30 May 2007; Daniel Gryniewicz <dang@gentoo.org> glib-2.12.11.ebuild:
   Marked stable on amd64 for bug #171107
