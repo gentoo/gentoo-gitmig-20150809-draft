@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r2.ebuild,v 1.6 2007/05/31 03:46:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r2.ebuild,v 1.7 2007/05/31 15:55:03 jer Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
 # gstreamer for audio-inline, when it uses 0.10
 IUSE="bogofilter crypt dbus debug doc hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
 
