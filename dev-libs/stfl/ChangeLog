@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.2 2007/04/18 21:04:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.3 2007/05/31 08:01:22 ticho Exp $
+
+*stfl-0.9 (31 May 2007)
+
+  31 May 2007; Andrej Kacian <ticho@gentoo.org> +stfl-0.9.ebuild:
+  Version bump.
 
   18 Apr 2007; Andrej Kacian <ticho@gentoo.org> stfl-0.8.ebuild:
   Specify toolchain compiler. Do not build perl or ruby bindings if respective
