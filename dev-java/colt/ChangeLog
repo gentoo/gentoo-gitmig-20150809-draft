@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/colt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.14 2007/02/03 10:10:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.15 2007/05/31 16:58:51 opfer Exp $
+
+  31 May 2007; Christian Faulhammer <opfer@gentoo.org> colt-1.2.0-r1.ebuild:
+  stable x86, bug 179950
 
   03 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -colt-1.1.0.ebuild:
   Removed old version.
