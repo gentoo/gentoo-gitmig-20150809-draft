@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.63 2007/02/18 14:09:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.64 2007/05/31 13:41:31 armin76 Exp $
+
+  31 May 2007; Raúl Porcel <armin76@gentoo.org> ettercap-0.7.3-r2.ebuild:
+  alpha stable wrt #164922
 
   18 Feb 2007; Markus Rothe <corsair@gentoo.org> ettercap-0.7.3-r2.ebuild:
   Added ~ppc64
