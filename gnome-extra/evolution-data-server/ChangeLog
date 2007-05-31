@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.120 2007/05/31 00:18:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.121 2007/05/31 03:42:23 dang Exp $
+
+  31 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  evolution-data-server-1.8.3-r4.ebuild:
+  Marked stable on amd64 for bug #171107
 
   31 May 2007; Brent Baude <ranger@gentoo.org>
   evolution-data-server-1.8.3-r4.ebuild:
