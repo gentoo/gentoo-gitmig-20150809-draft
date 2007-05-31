@@ -1,10 +1,10 @@
 # ChangeLog for www-apps/phprojekt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.25 2007/05/31 10:15:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.26 2007/05/31 10:18:15 opfer Exp $
 
   31 May 2007; Christian Faulhammer <opfer@gentoo.org>
   phprojekt-5.2.2.ebuild:
-  stable x86, security bug 1709604
+  stable x86, security bug 170905
 
 *phprojekt-5.2.2 (28 May 2007)
 
