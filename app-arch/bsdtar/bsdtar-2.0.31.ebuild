@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-2.0.31.ebuild,v 1.1 2007/04/15 15:17:50 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-2.0.31.ebuild,v 1.2 2007/05/31 01:39:33 dang Exp $
 
 inherit eutils autotools toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="build static acl xattr"
 
 RDEPEND="!dev-libs/libarchive
