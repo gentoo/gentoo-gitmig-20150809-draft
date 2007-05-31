@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-stopbutton
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-stopbutton/ChangeLog,v 1.2 2007/04/27 14:57:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-stopbutton/ChangeLog,v 1.3 2007/05/31 01:57:26 dang Exp $
+
+  31 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  gmpc-stopbutton-0.14.0.ebuild:
+  Marked ~amd64 for bug #180277
 
   27 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gmpc-stopbutton-0.14.0.ebuild:
