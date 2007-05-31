@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.74 2007/05/30 20:24:27 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.75 2007/05/31 10:41:26 uberlord Exp $
+
+*libexif-0.6.15-r1 (31 May 2007)
+
+  31 May 2007; Roy Marples <uberlord@gentoo.org> +libexif-0.6.15-r1.ebuild:
+  Dropping elibtoolize makes FreeBSD users cry.
 
   30 May 2007; Peter Weller <welp@gentoo.org> libexif-0.6.15.ebuild:
   Stable on amd64 wrt bug 178081
