@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.198 2007/05/31 00:24:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.199 2007/05/31 03:44:36 dang Exp $
+
+  31 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  file-roller-2.16.3.ebuild:
+  Marked stable on amd64 for bug #171107
 
   31 May 2007; Brent Baude <ranger@gentoo.org> file-roller-2.16.3.ebuild:
   Marking file-roller-2.16.3 ppc64 stable for bug #171107
