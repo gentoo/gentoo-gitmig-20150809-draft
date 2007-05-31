@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0-r1.ebuild,v 1.2 2007/05/30 07:38:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0-r1.ebuild,v 1.3 2007/05/31 10:35:22 opfer Exp $
 
 inherit eutils multilib
 
@@ -52,6 +52,7 @@ src_unpack(){
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-faad-2.0.patch"
+	sed -i -e "s~\(/doc/cmus\)~\1-${PVR}~" "${S}/Makefile" || die "sed failed"
 }
 
 src_compile() {
