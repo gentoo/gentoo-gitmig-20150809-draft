@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-inherit eutils linux-mod qt3 subversion
+inherit eutils flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
@@ -50,7 +50,17 @@ src_compile() {
 	cd "${S}"
 	./configure || die "configure failed"
 	source ./env.sh
-	kmk all || die "kmk failed"
+
+	# Force kBuild to respect C[XX]FLAGS and MAKEOPTS (bug #178529)
+	# and strip all flags
+	strip-flags
+
+	MAKE="kmk" emake TOOL_GCC3_CC="$(tc-getCC)" TOOL_GCC3_CXX="$(tc-getCXX)" \
+		TOOL_GCC3_AS="$(tc-getCC)" TOOL_GCC3_AR="$(tc-getAR)" \
+		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
+		TOOL_GCC3_CFLAGS="${CFLAGS}" TOOL_GCC3_CXXFLAGS="${CXXFLAGS}" \
+		all || die "kmk failed"
+
 	linux-mod_src_compile
 }
 
