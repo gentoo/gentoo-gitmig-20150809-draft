@@ -1,0 +1,25 @@
+--- admin/runtests.orig	2007-05-31 11:30:01.000000000 -0700
++++ admin/runtests	2007-05-31 11:31:26.000000000 -0700
+@@ -1,7 +1,6 @@
+ #!/bin/bash
+ 
+-ADMINDIR=$(dirname $0)
+-YDIR=${ADMINDIR}/..
++YDIR='.'
+ 
+ declare -i errorcode=0
+ 
+@@ -17,13 +16,6 @@
+     echo 'Install pyflakes. http://divmod.org/trac/wiki/DivmodPyflakes'
+ fi
+ 
+-if [[ $1 != "darcs" ]] ; then
+-    echo 'Checking docs... '
+-    if ! ${ADMINDIR}/epyrun check; then
+-        # Who knows?  Epydoc --check doesn't modify the return code.
+-        errorcode=$errorcode+2
+-    fi
+-fi
+ 
+ echo -n 'Running tests... '
+ if ! python ${YDIR}/yadis/test/runtests ; then

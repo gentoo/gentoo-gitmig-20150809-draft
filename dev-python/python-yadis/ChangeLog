@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/python-yadis
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/ChangeLog,v 1.1 2007/05/31 18:53:27 pythonhead Exp $
+
+*python-yadis-1.1.0 (31 May 2007)
+
+  31 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/python-yadis-1.1.0-gentoo-test.patch, +metadata.xml,
+  +python-yadis-1.1.0.ebuild:
+  Initial commit.
+
