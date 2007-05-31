@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.25 2007/05/15 10:25:37 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.26 2007/05/31 01:59:43 kloeri Exp $
+
+  31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove myself as I'm retiring.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
