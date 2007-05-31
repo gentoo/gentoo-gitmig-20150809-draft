@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.19 2007/04/10 09:07:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.20 2007/05/31 15:09:48 drac Exp $
+
+  31 May 2007; Samuli Suominen <drac@gentoo.org> numlockx-1.1.ebuild:
+  Cleanup.
 
 *numlockx-1.1 (10 Apr 2007)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.1.ebuild,v 1.1 2007/04/10 09:07:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.1.ebuild,v 1.2 2007/05/31 15:09:48 drac Exp $
 
 inherit autotools
 
 DESCRIPTION="Turns on numlock in X"
-HOMEPAGE="http://ktown.kde.org/~seli/numlockx/"
+HOMEPAGE="http://ktown.kde.org/~seli/numlockx"
 SRC_URI="http://ktown.kde.org/~seli/numlockx/${P}.tar.gz"
 
 SLOT="0"
@@ -16,29 +16,25 @@ IUSE=""
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXtst"
-
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd "${S}"
 	sed -i -e '/^K_.*$/d' configure.in || die
 	sed -i -e 's,@X_[_A-Z]\+@,,g' Makefile.am || die
 	eautoreconf
-
 }
 
 src_install(){
 	dobin numlockx
-	dodoc AUTHORS LICENSE README
+	dodoc AUTHORS README
 }
 
 pkg_postinst(){
-	einfo
-	einfo "add 'numlockx' to your X startup programs to have numlock turn on when X starts"
-	einfo
+	elog
+	elog "add 'numlockx' to your X startup programs to have numlock turn on when X starts"
+	elog
 }
