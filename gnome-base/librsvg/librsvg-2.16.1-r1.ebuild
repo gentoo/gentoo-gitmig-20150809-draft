@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.1-r1.ebuild,v 1.4 2007/05/30 12:35:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.1-r1.ebuild,v 1.5 2007/05/31 00:43:14 ranger Exp $
 
 inherit multilib gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc gnome zlib"
 
 RDEPEND=">=media-libs/fontconfig-1.0.1
