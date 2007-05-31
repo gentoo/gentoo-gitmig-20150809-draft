@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.87 2007/05/31 01:13:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.88 2007/05/31 03:36:07 dang Exp $
+
+  31 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-speech-0.4.11.ebuild:
+  Marked stable on amd64 for bug #171107
 
   31 May 2007; Brent Baude <ranger@gentoo.org> gnome-speech-0.4.11.ebuild:
   Marking gnome-speech-0.4.11 ppc64 stable for bug #171107
