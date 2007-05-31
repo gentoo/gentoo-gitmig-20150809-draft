@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.62 2007/05/13 14:19:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.63 2007/05/31 15:02:39 armin76 Exp $
+
+*seamonkey-1.1.2 (31 May 2007)
+
+  31 May 2007; Raúl Porcel <armin76@gentoo.org> +seamonkey-1.1.2.ebuild:
+  Version bump, security bug #180436
 
   13 May 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.1.ebuild:
   Add missing WANT_AUTOCONF, bug 177012
