@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9.ebuild,v 1.3 2007/05/31 20:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9.ebuild,v 1.4 2007/05/31 21:53:41 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -62,6 +62,7 @@ src_unpack() {
 	use mips && epatch "${FILESDIR}/${PN}-1.3.8-mips.patch"
 	epatch "${FILESDIR}"/server-CVE-2007-1003.patch
 	epatch "${FILESDIR}"/server-CVE-2007-1351-1352.patch
+	epatch "${FILESDIR}"/${PV}-fbsd.patch
 
 }
 

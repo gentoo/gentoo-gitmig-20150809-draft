@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.103 2007/05/31 20:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.104 2007/05/31 21:53:41 armin76 Exp $
+
+  31 May 2007; Raúl Porcel <armin76@gentoo.org> +files/1.3.9-fbsd.patch,
+  tightvnc-1.3.9.ebuild:
+  Add patch to compile on fbsd, thanks to ebfe <knabberknusperhaus at yahoo
+  dot de> for the patch, bug 171945
 
   31 May 2007; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.8-r1.ebuild,
   tightvnc-1.3.9.ebuild:
