@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.444 2007/05/30 11:49:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.445 2007/05/31 11:51:46 caleb Exp $
+
+*qt-4.3.0 (31 May 2007)
+
+  31 May 2007; Caleb Tennis <caleb@gentoo.org> +qt-4.3.0.ebuild:
+  Adding 4.3.0 final
 
   30 May 2007; Caleb Tennis <caleb@gentoo.org> qt-3.3.8-r2.ebuild:
   Add firebird include dir
