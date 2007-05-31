@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bugle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.1 2007/03/26 22:28:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.2 2007/05/31 02:28:42 dang Exp $
+
+  31 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  bugle-0.0.20070325.ebuild:
+  Marked ~amd64 for bug #177783
 
 *bugle-0.0.20070325 (26 Mar 2007)
 
