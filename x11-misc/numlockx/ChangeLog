@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.21 2007/05/31 16:23:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.22 2007/05/31 19:21:56 tgall Exp $
+
+  31 May 2007; Tom Gall <tgall@gentoo.org> numlockx-1.1.ebuild:
+  stable on ppc64
 
   31 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> numlockx-1.1.ebuild:
   Stable on sparc wrt #180462
