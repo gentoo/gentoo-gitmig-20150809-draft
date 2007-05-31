@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.108 2007/05/30 12:30:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.109 2007/05/31 00:40:55 ranger Exp $
+
+  31 May 2007; Brent Baude <ranger@gentoo.org> epiphany-2.14.2.1-r1.ebuild,
+  epiphany-2.14.3.ebuild, epiphany-2.16.3.ebuild:
+  Dropping ppc64 keywords on epiphany-2.14.3.ebuild
+  epiphany-2.14.2.1-r1.ebuild to clean up indev mess
+
+  31 May 2007; Brent Baude <ranger@gentoo.org> epiphany-2.16.3.ebuild:
+  Marking epiphany-2.16.3 ppc64 stable for bug #171107
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.16.3.ebuild:
   alpha/ia64 stable wrt #171107
