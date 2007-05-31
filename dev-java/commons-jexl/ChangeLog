@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jexl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.5 2007/05/27 00:16:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.6 2007/05/31 16:27:13 opfer Exp $
+
+  31 May 2007; Christian Faulhammer <opfer@gentoo.org>
+  commons-jexl-1.1.ebuild:
+  stable x86, bug 179944
 
   27 May 2007; Vlastimil Babka <caster@gentoo.org> commons-jexl-1.1.ebuild:
   Migrate to split-ant, tweak style.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.2 2007/05/27 00:16:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.3 2007/05/31 16:27:13 opfer Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 
 LICENSE="Apache-2.0"
 SLOT="1.0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 S="${WORKDIR}/${P}-src"
