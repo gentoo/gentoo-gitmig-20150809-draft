@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.12.ebuild,v 1.1 2007/05/31 10:34:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.12.ebuild,v 1.2 2007/05/31 10:49:28 zzam Exp $
 
 inherit eutils
 
@@ -75,7 +75,7 @@ src_install() {
 	keepdir "${VAR_DIR}/downloadfiles"
 	keepdir "${VAR_DIR}/downloadupdatefiles"
 	keepdir "/var/vdr/epgimages"
-	chown -R vdr:vdr "${D}/${VAR_DIR}"
+	chown -R vdr:vdr "${D}/${VAR_DIR}" "${D}/var/vdr/epgimages"
 
 	# install documentation
 	dodoc HISTORY README tvm2vdr.sh
@@ -92,7 +92,7 @@ pkg_postinst() {
 
 	elog "You have to configure the following files:"
 	elog "\t${CONF_DIR}/config.pl"
-	elog "\t${CONF_DIR}/channels.pl"
+	elog "\t${CONF_DIR}/channels_wanted.pl"
 	elog
 	elog "It's a good idea to add the following to /etc/crontab:"
 	elog "\t3  5  * * *	   vdr	   /usr/bin/tvinfomerk2vdr.pl"
