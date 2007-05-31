@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.49 2007/05/28 17:23:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.50 2007/05/31 00:15:00 dang Exp $
+
+  31 May 2007; Daniel Gryniewicz <dang@gentoo.org> sussen-0.35.ebuild:
+  Marked stable on amd64 for bug #179982
 
   28 May 2007; Raúl Porcel <armin76@gentoo.org> sussen-0.35.ebuild:
   x86 stable wrt #179982
