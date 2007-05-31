@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r1.ebuild,v 1.3 2007/04/15 19:43:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r2.ebuild,v 1.1 2007/05/31 10:08:50 jokey Exp $
 
 inherit multilib
 
@@ -20,12 +20,13 @@ DEPEND="${RDEPEND}
 CONFIGVARS="PREFIX=\"${ROOT}usr\"
 		SA_LIB_DIR=\"${ROOT}usr/$(get_libdir)/sa\"
 		SA_DIR=\"${ROOT}var/log/sa\"
+		CRON_OWNER=\"root\"
 		DOC_DIR=\"${ROOT}usr/share/doc/${PF}\"
 		MAN_DIR=\"${ROOT}usr/share/man/\""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
 }
 
@@ -42,7 +43,6 @@ src_compile() {
 
 src_install() {
 	keepdir /var/log/sa
-	newdoc "${FILESDIR}/crontab" crontab.example
 
 	emake \
 		LFLAGS="${LDFLAGS}" \
@@ -51,5 +51,9 @@ src_install() {
 		install || die "make install failed"
 
 	rm "${D}/usr/share/doc/${PF}/COPYING"
-	gzip "${D}/usr/share/doc/${PF}/"*[^mz]
+	ecompress "${D}/usr/share/doc/${PF}/"*[^mz]
+	newdoc sysstat.crond.sample crontab.example
+	insinto /etc/cron.d
+	newins sysstat.crond sysstat
+	newinitd "${FILESDIR}"/sysstat.init.d sysstat
 }

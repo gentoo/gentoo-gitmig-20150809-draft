@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.52 2007/04/15 19:43:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.53 2007/05/31 10:08:50 jokey Exp $
+
+*sysstat-7.0.4-r2 (31 May 2007)
+
+  31 May 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/sysstat-6.0.0-gcc4.diff, -files/sysstat-6.0.1-gcc4.diff,
+  +files/sysstat.init.d, -sysstat-5.0.2.ebuild, -sysstat-6.0.1.ebuild,
+  -sysstat-7.0.1.ebuild, -sysstat-7.0.4-r1.ebuild, +sysstat-7.0.4-r2.ebuild:
+  Cleanup and fix paths per bug #172548 thanks to Sergij Borodych
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> sysstat-7.0.4-r1.ebuild:
   Stable on ppc64
