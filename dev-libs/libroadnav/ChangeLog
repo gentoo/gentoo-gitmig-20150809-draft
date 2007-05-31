@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libroadnav
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.3 2006/11/27 22:43:30 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.4 2007/05/31 01:55:14 kloeri Exp $
+
+  31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove myself as I'm retiring.
 
 *libroadnav-0.16 (27 Nov 2006)
 
