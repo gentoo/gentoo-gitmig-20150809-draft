@@ -1,0 +1,56 @@
+--- sar/string.cpp.old	2007-05-31 21:48:38.000000000 +0200
++++ sar/string.cpp	2007-05-31 21:48:50.000000000 +0200
+@@ -3,7 +3,7 @@
+ #include <stdlib.h>
+ #include <ctype.h>
+ 
+-extern char *tzname[2];
++extern "C" char *tzname[2];
+ 
+ #include <time.h>
+ #include "../include/os.h"
+--- sar/explosion.c.old	2007-05-31 22:02:05.000000000 +0200
++++ sar/explosion.c	2007-05-31 22:02:15.000000000 +0200
+@@ -1,4 +1,5 @@
+ #include <stdlib.h>
++#include <string.h>
+ #include "v3dtex.h"
+ #include "obj.h"
+ #include "objutils.h"
+--- sar/fire.c.old	2007-05-31 22:03:08.000000000 +0200
++++ sar/fire.c	2007-05-31 22:03:34.000000000 +0200
+@@ -1,4 +1,5 @@
+ #include <stdlib.h>
++#include <string.h>
+ #include "v3dtex.h"
+ #include "obj.h"
+ #include "objutils.h"
+--- sar/sardraw.c.old	2007-05-31 22:13:32.000000000 +0200
++++ sar/sardraw.c	2007-05-31 22:13:57.000000000 +0200
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include <sys/types.h>
+ #include <math.h>
++#include <string.h>
+ 
+ #ifdef __MSW__
+ # include <windows.h>
+--- sar/sardrawmessages.c.old	2007-05-31 22:14:43.000000000 +0200
++++ sar/sardrawmessages.c	2007-05-31 22:15:02.000000000 +0200
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include <sys/types.h>
+ #include <math.h>
++#include <string.h>
+ 
+ #ifdef __MSW__
+ # include <windows.h>
+--- sar/sardrawrunway.c.old	2007-05-31 22:17:02.000000000 +0200
++++ sar/sardrawrunway.c	2007-05-31 22:17:35.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include <math.h>
+ #include <sys/types.h>
++#include <string.h>
+ 
+ #ifdef __MSW__
+ # include <windows.h>
