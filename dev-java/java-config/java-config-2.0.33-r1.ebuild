@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.33-r1.ebuild,v 1.1 2007/05/28 19:25:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.33-r1.ebuild,v 1.2 2007/05/31 10:55:28 betelgeuse Exp $
 
 inherit distutils eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}
-	dev-java/java-config-wrapper"
+	>=dev-java/java-config-wrapper-0.13"
 
 src_unpack() {
 	unpack ${A}
