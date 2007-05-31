@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.39 2007/05/31 03:56:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.40 2007/05/31 16:36:11 jer Exp $
+
+  31 May 2007; Jeroen Roovers <jer@gentoo.org>
+  gnome-themes-extras-0.9.0.ebuild:
+  Stable for HPPA (bug #171107).
 
   31 May 2007; Daniel Gryniewicz <dang@gentoo.org>
   gnome-themes-extras-0.9.0.ebuild:
