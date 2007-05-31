@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.436 2007/05/30 21:54:58 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.437 2007/05/31 13:34:43 genstef Exp $
+
+  31 May 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  Mask new poppler rc
 
   30 May 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> package.mask:
   Masked net-misc/upnp, going to be removed 20070629.
