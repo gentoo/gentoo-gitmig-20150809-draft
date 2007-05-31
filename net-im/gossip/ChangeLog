@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.65 2007/05/30 17:03:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.66 2007/05/31 11:56:07 tester Exp $
+
+*gossip-0.26 (31 May 2007)
+
+  31 May 2007; <tester@gentoo.org> +gossip-0.26.ebuild:
+  Version bump, bug #180387
 
 *gossip-0.25 (30 May 2007)
 
