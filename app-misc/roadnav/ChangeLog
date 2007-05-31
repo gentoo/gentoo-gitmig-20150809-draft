@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/roadnav
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.3 2006/11/27 22:48:33 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.4 2007/05/31 02:06:58 kloeri Exp $
+
+  31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove myself as I'm retiring.
 
 *roadnav-0.16 (27 Nov 2006)
 

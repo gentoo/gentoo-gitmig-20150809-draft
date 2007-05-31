@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdircmp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.8 2005/03/22 16:05:36 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.9 2007/05/31 02:05:53 kloeri Exp $
+
+  31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove myself as I'm retiring.
 
   22 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> cdircmp-0.3.ebuild:
   Add ~alpha keyword.
