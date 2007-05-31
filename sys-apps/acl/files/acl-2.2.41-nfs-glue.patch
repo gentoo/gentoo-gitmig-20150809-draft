@@ -1,0 +1,23 @@
+--- acl-2.2.41-CITI_NFS4_ALL-3.dif
++++ acl-2.2.41-CITI_NFS4_ALL-3.dif
+@@ -5,20 +5,6 @@
+ 	  ACLs.
+ 	- miscellaneous cleanup
+ 
+-diff --git a/debian/changelog b/debian/changelog
+-index 60ded06..089507e 100644
+---- a/debian/changelog
+-+++ b/debian/changelog
+-@@ -1,3 +1,9 @@
+-+acl (2.2.41.nfsv4-1) unstable; urgency=low
+-+
+-+  * Add support for NFSv4 ACLs
+-+
+-+ -- J. Bruce Fields <bfields@fieldses.org>  Fri, 02 Sep 2006 00:22:07 -0400
+-+
+- acl (2.2.41-1) unstable; urgency=low
+- 
+-   * New upstream release
+ diff --git a/exports b/exports
+ index 59c1311..2296b7d 100644
+ --- a/exports
