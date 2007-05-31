@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.177 2007/05/19 15:39:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.178 2007/05/31 20:55:21 corsair Exp $
+
+  31 May 2007; Markus Rothe <corsair@gentoo.org> transcode-1.0.3.ebuild:
+  Do not break on ppc64 any more; use patch from previous versions
 
   19 May 2007; nixnut <nixnut@gentoo.org> transcode-1.0.3.ebuild:
   Stable on ppc wrt bug 178871

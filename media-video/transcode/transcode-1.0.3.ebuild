@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3.ebuild,v 1.6 2007/05/19 15:39:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3.ebuild,v 1.7 2007/05/31 20:55:21 corsair Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -9,7 +9,8 @@ inherit libtool flag-o-matic eutils multilib autotools
 
 DESCRIPTION="video stream processing tool"
 HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
-SRC_URI="http://fromani.exit1.org/${P}.tar.bz2"
+SRC_URI="http://fromani.exit1.org/${P}.tar.bz2
+	mirror://gentoo/transcode-types.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
@@ -49,6 +50,8 @@ DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${DISTDIR}/${PN}-types.patch.bz2"
 
 	dosed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
