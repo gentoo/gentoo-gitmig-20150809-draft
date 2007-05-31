@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.10 2007/05/03 15:19:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.11 2007/05/31 14:48:23 peper Exp $
+
+*libtelepathy-0.0.55 (31 May 2007)
+
+  31 May 2007; Piotr Jaroszyński <peper@gentoo.org>
+  +libtelepathy-0.0.55.ebuild:
+  Version bump.
 
 *libtelepathy-0.0.54 (03 May 2007)
 
