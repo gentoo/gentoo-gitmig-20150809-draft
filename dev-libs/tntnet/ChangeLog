@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tntnet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.3 2007/05/30 12:47:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.4 2007/05/31 10:16:42 zzam Exp $
+
+  31 May 2007; Matthias Schwarzott <zzam@gentoo.org> tntnet-1.6.0-r1.ebuild:
+  Switch over to already existing use-flag examples (instead of demo).
 
 *tntnet-1.6.0-r1 (30 May 2007)
 
