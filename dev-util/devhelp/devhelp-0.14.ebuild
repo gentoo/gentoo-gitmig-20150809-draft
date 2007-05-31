@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.14.ebuild,v 1.2 2007/05/19 21:48:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.14.ebuild,v 1.3 2007/05/31 19:45:35 dang Exp $
 
 inherit toolchain-funcs gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://developer.imendio.com/wiki/Devhelp"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="seamonkey xulrunner zlib"
+IUSE="xulrunner zlib"
 
 RDEPEND=">=gnome-base/gconf-2.6
 	>=x11-libs/gtk+-2.8
@@ -20,7 +20,6 @@ RDEPEND=">=gnome-base/gconf-2.6
 	sparc? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	|| (
 		xulrunner? ( net-libs/xulrunner )
-		seamonkey? ( >=www-client/seamonkey-1 )
 		>=www-client/mozilla-firefox-1.0.2-r1
 	)
 	zlib? ( sys-libs/zlib )"
@@ -37,8 +36,6 @@ pkg_setup() {
 
 	if use xulrunner ; then
 		G2CONF="${G2CONF} --with-gecko=xulrunner"
-	elif use seamonkey ; then
-		G2CONF="${G2CONF} --with-gecko=seamonkey"
 	else
 		G2CONF="${G2CONF} --with-gecko=firefox"
 	fi
