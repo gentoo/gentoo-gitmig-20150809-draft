@@ -1,8 +1,14 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.93 2007/05/07 03:50:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.94 2007/05/31 23:08:28 peitolm Exp $
 
-03 May 2007; Colin Morey <peitolm@gentoo.org> files/auth_conf.sub,
+*exim-4.67-r1 (31 May 2007)
+
+  31 May 2007; Colin Morey <peitolm@gentoo.org> +exim-4.67-r1.ebuild:
+  new ebuild provides fixes for #82772, moved synlinks to the negative side of
+  an if use mailwrapper.
+
+  03 May 2007; Colin Morey <peitolm@gentoo.org> files/auth_conf.sub,
   files/exim.rc6:
   files/exim-rc6 - fix for Bug 116196, add reload option
   files/auth_conf.sub - Fix for Bug 150695, escape colons
