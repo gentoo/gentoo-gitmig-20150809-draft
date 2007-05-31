@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-codec
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.26 2007/05/23 17:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.27 2007/05/31 09:15:34 betelgeuse Exp $
+
+  31 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-codec-1.3-r1.ebuild:
+  Fix javadoc installation.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
   commons-codec-1.3-r1.ebuild:

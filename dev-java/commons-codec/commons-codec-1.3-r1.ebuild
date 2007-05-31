@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r1.ebuild,v 1.9 2007/05/23 17:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r1.ebuild,v 1.10 2007/05/31 09:15:34 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -40,6 +40,6 @@ src_install() {
 	java-pkg_dojar output/dist/${PN}.jar
 
 	dodoc RELEASE-NOTES.txt || die
-	use doc && java-pkg_dojavadoc output/dist/docs
+	use doc && java-pkg_dojavadoc output/dist/docs/api
 	use source && java-pkg_dosrc src/java/*
 }
