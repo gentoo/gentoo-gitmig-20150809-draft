@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7318 2007/05/31 02:17:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7319 2007/05/31 06:02:22 uberlord Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Roy Marples <uberlord@gentoo.org> (31 May 2007)
+# Masked, pending removal. Remove in 30 days
+# Use dash instead
+app-shells/ash
 
 # Raúl Porcel <armin76@gentoo.org> (30 May 2007)
 # Mask beta version
@@ -445,11 +450,6 @@ dev-java/aterm-java
 >=net-analyzer/nessus-core-2.3.1
 >=net-analyzer/nessus-plugins-2.3.1
 >=net-analyzer/nessus-2.3.1
-
-# Roy Marples <uberlord@gentoo.org> (2 Apr 2007)
-# Masked, pending removal. Remove in 30 days
-# Use dash instead
-#app-shells/ash
 
 # Marcelo Goes <vanquirius@gentoo.org> (1 Apr 2007)
 # Masked for testing
