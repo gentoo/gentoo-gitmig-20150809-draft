@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.82 2007/05/31 13:07:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.83 2007/05/31 14:32:18 ranger Exp $
+
+  31 May 2007; Brent Baude <ranger@gentoo.org> tor-0.1.2.14.ebuild:
+  Marking tor-0.1.2.14 ppc64 stable for bug#180139
 
   31 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> tor-0.1.2.14.ebuild:
   Stable on sparc wrt security #180139
