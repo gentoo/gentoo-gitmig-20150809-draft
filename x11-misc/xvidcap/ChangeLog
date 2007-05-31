@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.33 2007/05/15 14:46:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.34 2007/05/31 12:20:03 drac Exp $
+
+*xvidcap-1.1.6 (31 May 2007)
+
+  31 May 2007; Samuli Suominen <drac@gentoo.org> +xvidcap-1.1.6.ebuild:
+  Version bump.
 
 *xvidcap-1.1.5 (15 May 2007)
 
