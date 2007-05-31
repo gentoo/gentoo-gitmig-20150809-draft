@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gnopaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.2 2007/05/11 20:04:43 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.3 2007/05/31 19:48:19 jurek Exp $
+
+  31 May 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/postinstall-en-0.5.5.txt:
+  Added missing file (bug #180395)
 
   11 May 2007; Jurek Bartuszek <jurek@gentoo.org> gnopaste-0.5.5.ebuild:
   Added ~amd64 keyword
