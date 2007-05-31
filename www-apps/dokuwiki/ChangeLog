@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.22 2007/03/23 22:21:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.23 2007/05/31 19:21:32 ticho Exp $
+
+*dokuwiki-20070524 (31 May 2007)
+
+  31 May 2007; Andrej Kacian <ticho@gentoo.org> +dokuwiki-20070524.ebuild:
+  Version bump. Bug #180349, by Marco Clocchiatti <ziapannocchia at gmail.com>.
 
   23 Mar 2007; Andrej Kacian <ticho@gentoo.org> dokuwiki-20061106.ebuild:
   Add missing call to webapp_pkg_setup.
