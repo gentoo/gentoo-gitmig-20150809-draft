@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r5.ebuild,v 1.1 2007/05/20 23:24:56 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r6.ebuild,v 1.1 2007/05/31 23:01:57 wltjr Exp $
 
 #WANT_ANT_TASKS="ant-trax"
 
