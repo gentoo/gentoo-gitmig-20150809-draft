@@ -1,6 +1,20 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.49 2007/04/30 16:04:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.50 2007/05/31 09:42:57 mabi Exp $
+
+*ion3-20070506 (12 May 2007)
+
+  12 May 2007; Matti Bickel <mabi@gentoo.org>
+  +files/20070506/200_all_fix_includes.patch,
+  +files/20070506/201_all_fix-paths.patch,
+  +files/20070506/202_all_fix-menus.patch,
+  +files/20070506/205_all_ion-lock.patch,
+  +files/20070506/208_all_as-needed.patch, +ion3-20070506.ebuild:
+  Version bump. Note that this is the first release candidate. All
+  unconditional patches are minor according to the changed license file.
+  Also note that IUSE has changed in accordance with the new license.
+  Please reproduce any error you might have with all useflags disabled before
+  bugging upstream. File bugs at bugs.gentoo.org instead.
 
 *ion3-20070318-r2 (30 Apr 2007)
 

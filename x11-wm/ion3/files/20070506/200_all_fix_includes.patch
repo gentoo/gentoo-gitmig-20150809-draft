@@ -1,0 +1,22 @@
+diff -uNr ion-3rc-20070506.orig/ioncore/ioncore.c ion-3rc-20070506/ioncore/ioncore.c
+--- ion-3rc-20070506.orig/ioncore/ioncore.c	2007-05-12 22:04:33.000000000 +0200
++++ ion-3rc-20070506/ioncore/ioncore.c	2007-05-12 22:23:30.000000000 +0200
+@@ -11,6 +11,7 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <string.h>
++#include <strings.h>
+ #include <errno.h>
+ #include <sys/types.h>
+ #include <ctype.h>
+diff -uNr ion-3rc-20070506.orig/utils/ion-completefile/ion-completefile.c ion-3rc-20070506/utils/ion-completefile/ion-completefile.c
+--- ion-3rc-20070506.orig/utils/ion-completefile/ion-completefile.c	2007-05-12 22:04:33.000000000 +0200
++++ ion-3rc-20070506/utils/ion-completefile/ion-completefile.c	2007-05-12 22:05:13.000000000 +0200
+@@ -54,6 +54,7 @@
+ 
+ #include <sys/param.h>
+ #include <sys/types.h>
++#include <stdio.h>
+ #include <stdlib.h>
+ #include <dirent.h>
+ #include <string.h>
