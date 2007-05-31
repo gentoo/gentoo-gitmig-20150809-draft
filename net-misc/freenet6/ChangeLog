@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.21 2007/05/30 13:18:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.22 2007/05/31 13:30:16 voyageur Exp $
+
+*freenet6-5.0 (31 May 2007)
+
+  31 May 2007; Bernard Cafarelli <voyageur@gentoo.org> +freenet6-5.0.ebuild:
+  Version bump
 
   30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> freenet6-4.2.2.ebuild:
   Stable on sparc
