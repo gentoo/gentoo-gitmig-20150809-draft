@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7319 2007/05/31 06:02:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7320 2007/05/31 09:02:17 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -299,11 +299,6 @@ app-misc/baobab
 # Masked for removal to junkyard in 30 days (2 June)
 # Generation 1 ebuild with stale upstream (last release 2002).
 dev-java/openjgraph
-
-# Samuli Suominen <drac@gentoo.org> (2 May 2007)
-# Masked for removal in 30 days. See bug #176150.
-# Use x11-misc/slim instead.
-x11-misc/login-app
 
 # Christian Parpart <trapni@gentoo.org> (01 May 2007)
 # Masked for testing.
