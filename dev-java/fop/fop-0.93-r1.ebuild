@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.3 2007/05/26 14:33:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.4 2007/05/31 16:50:04 betelgeuse Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
 # TODO: package and use optional dependency jeuclid
 
-JAVA_PKG_IUSE="doc examples source test"
+JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-trax"
 inherit eutils java-pkg-2 java-ant-2
 
