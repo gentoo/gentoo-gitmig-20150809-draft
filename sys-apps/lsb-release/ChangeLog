@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lsb-release
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.4 2007/05/15 20:33:07 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.5 2007/05/31 04:27:19 pioto Exp $
+
+  31 May 2007; Mike Kelly <pioto@gentoo.org> metadata.xml:
+  This is now maintainer-needed, as I don't use it any more.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
