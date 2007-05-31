@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>kloeri@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
 	<longdescription>Stan's Python Editor is a Python IDE with full Blender support.</longdescription>
 </pkgmetadata>
