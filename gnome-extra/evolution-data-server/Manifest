@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX evolution-data-server-1.2.0-gentoo_etc_services.patch 815 RMD160 d48ad5a34bfdf9f814b9ae22ba188f2f0c7f0304 SHA1 9248c74b334534f74e027fc119509673bff4542f SHA256 a64e0e4d74ac91f69c4b7a011b6325e27af6fa28a58e20f48ff09ec2a1538c5a
 MD5 ab9f8a22a7b870a6e1e2edc463949c82 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
 RMD160 d48ad5a34bfdf9f814b9ae22ba188f2f0c7f0304 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
@@ -66,18 +69,18 @@ EBUILD evolution-data-server-1.8.3-r2.ebuild 4953 RMD160 4abcee4295fee6f8b7ff825
 MD5 78687ad28951013cf444ac16db843e60 evolution-data-server-1.8.3-r2.ebuild 4953
 RMD160 4abcee4295fee6f8b7ff8256a6d771583e5e2652 evolution-data-server-1.8.3-r2.ebuild 4953
 SHA256 9fa49faa24030d12cb8ecdf6a0731632daa3e1a0ef443a3d7936a59a4a9b8a5a evolution-data-server-1.8.3-r2.ebuild 4953
-EBUILD evolution-data-server-1.8.3-r4.ebuild 5056 RMD160 6bd7228046f9e4c0e8ad593ebb21fa0fc40efdb4 SHA1 19067571213e73905fa7669fb162df8f408c85c9 SHA256 f27f38133cd6f6cc58179dfcb62feca3fcd968d0f3f35dbe998603700f3fad9f
-MD5 2e4ad99a80348f3d051619783f47a540 evolution-data-server-1.8.3-r4.ebuild 5056
-RMD160 6bd7228046f9e4c0e8ad593ebb21fa0fc40efdb4 evolution-data-server-1.8.3-r4.ebuild 5056
-SHA256 f27f38133cd6f6cc58179dfcb62feca3fcd968d0f3f35dbe998603700f3fad9f evolution-data-server-1.8.3-r4.ebuild 5056
+EBUILD evolution-data-server-1.8.3-r4.ebuild 5053 RMD160 0d5cc5019cd3123d8376f7c80d967e1a75ec9d09 SHA1 802a7a1a7d200fcc23249e282d950e2864dbb487 SHA256 4190bf39cdaf3ccf715c362d5df217ba0d7b03372c6d67fb1640dbaf8c1f4a85
+MD5 3832134c81c26629b861be2093aa412c evolution-data-server-1.8.3-r4.ebuild 5053
+RMD160 0d5cc5019cd3123d8376f7c80d967e1a75ec9d09 evolution-data-server-1.8.3-r4.ebuild 5053
+SHA256 4190bf39cdaf3ccf715c362d5df217ba0d7b03372c6d67fb1640dbaf8c1f4a85 evolution-data-server-1.8.3-r4.ebuild 5053
 EBUILD evolution-data-server-1.8.3.ebuild 4729 RMD160 9a5e76ee1fe1571d2870fd57c251e6597248464c SHA1 d24dc9946500ed22607bdb6adf90ed63c4642fd4 SHA256 56ae3975cb9c27a969fd4d2338f2f734f9b24ac17b5a45a910568ee5a940ffaa
 MD5 1b04e7a1837f3d52f305f325bd2c5388 evolution-data-server-1.8.3.ebuild 4729
 RMD160 9a5e76ee1fe1571d2870fd57c251e6597248464c evolution-data-server-1.8.3.ebuild 4729
 SHA256 56ae3975cb9c27a969fd4d2338f2f734f9b24ac17b5a45a910568ee5a940ffaa evolution-data-server-1.8.3.ebuild 4729
-MISC ChangeLog 18861 RMD160 8fb690624d030ffb7c9e31f68d3b4964f36d9a64 SHA1 735270623daa081c294c2f0c05116eb5c59bd3a0 SHA256 ab5548180ab193cd6dd6dc2d672dad54200752d6eab8e6c3b35309dc5eaf3fd5
-MD5 17576cd338c58530ead862bba9615ea3 ChangeLog 18861
-RMD160 8fb690624d030ffb7c9e31f68d3b4964f36d9a64 ChangeLog 18861
-SHA256 ab5548180ab193cd6dd6dc2d672dad54200752d6eab8e6c3b35309dc5eaf3fd5 ChangeLog 18861
+MISC ChangeLog 18993 RMD160 0dd8a7ec8748a354ba29e15e4cd023969b0814b9 SHA1 b3626df6fb72a62e595a9a0ba38fdd2b1639f820 SHA256 7afe43d37a85e13afb0fca8e128b4a332ed7182b3b2a9646f7786127b4e7dbc7
+MD5 224afaebdac70d065e547423e321c6c0 ChangeLog 18993
+RMD160 0dd8a7ec8748a354ba29e15e4cd023969b0814b9 ChangeLog 18993
+SHA256 7afe43d37a85e13afb0fca8e128b4a332ed7182b3b2a9646f7786127b4e7dbc7 ChangeLog 18993
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -103,3 +106,10 @@ SHA256 00dcc94a5030febdfc278394de4449c744c57e0fa812818a260fa807276ecca8 files/di
 MD5 159e4efbb6f5fe2e3973464851a6015b files/digest-evolution-data-server-1.8.3-r4 289
 RMD160 9311383fcc0546bb79ba3632bf984e3bb2783652 files/digest-evolution-data-server-1.8.3-r4 289
 SHA256 00dcc94a5030febdfc278394de4449c744c57e0fa812818a260fa807276ecca8 files/digest-evolution-data-server-1.8.3-r4 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGXkQ0omPajV0RnrERAiI5AJ4wDfyox1jprJ1oujC8ZImmORCfRACfaDkm
+nAqeReUbeOROdFNNbrQd1y4=
+=wo6k
+-----END PGP SIGNATURE-----
