@@ -1,5 +1,5 @@
 # /lib/rcscripts/addons/lvm2-start.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.5 2007/05/21 14:09:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.6 2007/05/31 14:34:11 cardoe Exp $
 
 dm_in_proc() {
 	local retval=0
@@ -25,7 +25,7 @@ if [ -z "${CDBOOT}" -a -x /sbin/vgscan ] ; then
 		ebegin "Setting up the Logical Volume Manager"
 		#still echo stderr for debugging
 		/sbin/vgscan --mknodes --ignorelockingfailure >/dev/null
-		if [ $? = 0 -a -x /sbin/vgchange ] && \
+		if [ -x /sbin/vgchange ] && \
 		   [ -f /etc/lvmtab -o -d /etc/lvm ]
 		then
 			/sbin/vgchange --ignorelockingfailure -a y >/dev/null
