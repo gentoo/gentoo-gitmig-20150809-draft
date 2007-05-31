@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.44 2007/05/18 09:16:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.45 2007/05/31 15:30:52 betelgeuse Exp $
+
+  31 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jdbc-mysql-5.0.5.ebuild, jdbc-mysql-5.0.6.ebuild:
+  Drop ~ppc64 keywords because this needs dev-java/ant-contrib that isn't
+  keyworded. Didn't see this because I had some local eclass modifications
+  hiding it.
 
 *jdbc-mysql-5.0.6 (18 May 2007)
 
