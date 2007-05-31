@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/python-openid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.1 2007/02/27 23:29:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.2 2007/05/31 19:01:26 pythonhead Exp $
+
+*python-openid-1.2.0-r1 (31 May 2007)
+
+  31 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -python-openid-1.2.0.ebuild, +python-openid-1.2.0-r1.ebuild:
+  Dropped amd64 keyword due to two missing deps bug#180397 - Thanks Paul Rauch
+  <LightLan@lightlan.de>. Added src_test, missing deps for python-yadis,
+  python-urljr and USE/dep for postgres/pyscopg, added PYTHON_MODNAME. Dropped
+  old version.
 
   04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   python-openid-1.2.0.ebuild:
