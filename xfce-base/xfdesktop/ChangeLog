@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.105 2007/05/27 07:09:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.106 2007/06/01 00:11:11 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> xfdesktop-4.4.1-r1.ebuild:
+  Marking xfdesktop-4.4.1-r1 ppc64 stable for bug #178510
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> xfdesktop-4.4.1-r1.ebuild:
   Stable on mips.
