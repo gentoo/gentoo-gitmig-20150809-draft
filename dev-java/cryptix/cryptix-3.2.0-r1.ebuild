@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/cryptix-3.2.0-r1.ebuild,v 1.4 2007/06/01 06:25:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/cryptix-3.2.0-r1.ebuild,v 1.5 2007/06/01 06:45:00 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/cryptix32-20001002-r${PV}.zip"
 
 LICENSE="CGL"
 SLOT="3.2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
