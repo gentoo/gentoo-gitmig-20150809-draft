@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.61 2007/06/01 18:03:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.62 2007/06/01 18:13:05 leio Exp $
+
+  01 Jun 2007; <leio@gentoo.org> -meld-1.1.4.ebuild:
+  Remove old
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> meld-1.1.4-r1.ebuild:
   Stable on ppc wrt bug 179829
