@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha6-r1.ebuild,v 1.12 2007/03/10 20:27:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha6-r1.ebuild,v 1.13 2007/06/01 20:14:30 aballier Exp $
+
+WANT_AUTOMAKE=1.9
+WANT_AUTOCONF=2.5
 
 inherit flag-o-matic libtool autotools
 
