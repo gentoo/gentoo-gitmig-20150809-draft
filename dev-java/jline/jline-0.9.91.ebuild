@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.91.ebuild,v 1.3 2007/05/31 16:15:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.91.ebuild,v 1.4 2007/06/01 20:00:06 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
