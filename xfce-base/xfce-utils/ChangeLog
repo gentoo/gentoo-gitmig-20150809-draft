@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.112 2007/05/30 19:33:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.113 2007/06/01 00:08:48 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> xfce-utils-4.4.1-r1.ebuild:
+  Marking xfce-utils-4.4.1-r1 ppc64 stable for bug #178510
 
   30 May 2007; Samuli Suominen <drac@gentoo.org> xfce-utils-4.4.1-r1.ebuild:
   Change from newins to doins and quote FILESDIR as it should.

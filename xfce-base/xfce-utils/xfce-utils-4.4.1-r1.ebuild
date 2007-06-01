@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.1-r1.ebuild,v 1.8 2007/05/30 19:33:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.1-r1.ebuild,v 1.9 2007/06/01 00:08:48 ranger Exp $
 
 inherit autotools eutils xfce44
 
@@ -9,7 +9,7 @@ xfce44
 
 DESCRIPTION="Collection of utils"
 HOMEPAGE="http://www.xfce.org/projects/xfce-utils/"
-KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus debug"
 
 RDEPEND="x11-apps/xrdb
