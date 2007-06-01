@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.3 2007/04/27 10:01:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.4 2007/06/01 00:55:22 bicatali Exp $
+
+*rkward-0.4.7a (01 Jun 2007)
+
+  01 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +rkward-0.4.7a.ebuild:
+  Version bump+small fix for R 2.5. 
+  Thanks Skander Morgenthaler <smorg@gmx.de> for reporting.
 
   27 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> rkward-0.4.7.ebuild:
   added a need-kde to bring kdelibs deps, thanks for Andre
