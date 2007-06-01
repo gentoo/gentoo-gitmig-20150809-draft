@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/x86-chroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.8 2007/04/08 11:42:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.9 2007/06/01 02:06:25 angelos Exp $
+
+  01 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  x86-chroot-2006.1.ebuild:
+  Added RESTRICT=userpriv, bug 178935
 
   08 Apr 2007; Simon Stelling <blubb@gentoo.org> metadata.xml:
   reassign to maintainer-needed

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.4 2007/01/27 21:26:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.5 2007/06/01 02:06:25 angelos Exp $
 
 inherit linux-info
 
@@ -15,6 +15,8 @@ IUSE="X"
 
 RDEPEND="sys-apps/setarch
 	X? ( x11-apps/xhost )"
+
+RESTRICT="userpriv" #178935
 
 CONFIG_CHECK="IA32_EMULATION"
 CHROOT_LOCATION=${CHROOT_LOCATION:-/opt/x86-chroot}
