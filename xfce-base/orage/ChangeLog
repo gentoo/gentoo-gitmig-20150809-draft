@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.30 2007/05/27 06:31:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.31 2007/06/01 00:07:16 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> orage-4.4.1.ebuild:
+  Marking orage-4.4.1 ppc64 stable for bug #178510
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> orage-4.4.1.ebuild:
   Stable on mips.
