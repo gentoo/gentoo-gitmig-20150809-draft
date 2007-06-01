@@ -1,0 +1,10 @@
+--- ffm.cpp.org	2007-05-28 09:58:00.555083916 +0200
++++ ffm.cpp	2007-05-28 09:55:55.074227146 +0200
+@@ -22,6 +22,7 @@
+  */
+ 
+ 
++#define __STDC_CONSTANT_MACROS
+ #include <stdio.h>
+ #include <unistd.h>
+ #include <errno.h>
