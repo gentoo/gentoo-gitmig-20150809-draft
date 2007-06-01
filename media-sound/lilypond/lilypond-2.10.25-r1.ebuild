@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.10.25-r1.ebuild,v 1.1 2007/06/01 12:53:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.10.25-r1.ebuild,v 1.2 2007/06/01 21:58:08 ulm Exp $
 
 inherit eutils autotools versionator toolchain-funcs elisp-common
 
@@ -100,10 +100,11 @@ src_install () {
 #	fi
 
 	# remove elisp files since they are in the wrong directory
-	rm -r ${D}/usr/share/emacs
+	rm -r "${D}"/usr/share/emacs
 
 	if use emacs; then
-		elisp-install ${PN} elisp/*.{el,elc} || die "elisp-install failed"
+		elisp-install ${PN} elisp/*.{el,elc} elisp/out/*.el \
+			|| die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el
 	fi
 
