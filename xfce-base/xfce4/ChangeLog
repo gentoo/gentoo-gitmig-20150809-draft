@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.107 2007/05/28 14:26:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.108 2007/06/01 00:19:59 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> xfce4-4.4.1.ebuild:
+  Marking xfce4-4.4.1 ppc64 stable for bug #178510
 
   28 May 2007; Samuli Suominen <drac@gentoo.org> ChangeLog:
   Fix Manifest.
