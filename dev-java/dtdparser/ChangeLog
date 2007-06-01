@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dtdparser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/ChangeLog,v 1.5 2007/05/27 15:40:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/ChangeLog,v 1.6 2007/06/01 06:32:51 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  dtdparser-1.21-r1.ebuild:
+  stable x86, bug 180021
 
   27 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   dtdparser-1.21-r1.ebuild:
