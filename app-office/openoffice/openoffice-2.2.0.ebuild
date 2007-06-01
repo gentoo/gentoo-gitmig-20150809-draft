@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.0.ebuild,v 1.8 2007/05/18 13:54:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.0.ebuild,v 1.9 2007/06/01 13:54:58 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -114,6 +114,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-apps/findutils-4.1.20-r1
 	dev-perl/Archive-Zip
 	dev-perl/Compress-Zlib
+	>=dev-perl/Compress-Raw-Zlib-2.002
 	dev-util/pkgconfig
 	dev-util/intltool
 	>=dev-libs/boost-1.33.1

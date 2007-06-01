@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.322 2007/05/18 13:54:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.323 2007/06/01 13:54:58 suka Exp $
+
+  01 Jun 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.1.0-r1.ebuild, openoffice-2.2.0.ebuild:
+  OOo need >=dev-perl/Compress-Raw-Zlib-2.002, see bug #180414
 
   18 May 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.2.0.ebuild:
