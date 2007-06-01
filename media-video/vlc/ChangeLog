@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.244 2007/05/30 15:44:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.245 2007/06/01 21:24:02 gurligebis Exp $
+
+  01 Jun 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> vlc-0.8.6b.ebuild,
+  vlc-0.8.6-r1.ebuild:
+  net-misc/upnp has been package.mask'ed, removed dependency
 
   30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> vlc-0.8.6b.ebuild:
   Stable on sparc wrt #179862
