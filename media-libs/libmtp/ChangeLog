@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.24 2007/03/19 12:01:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.25 2007/06/01 22:18:39 chainsaw Exp $
+
+*libmtp-0.1.5 (01 Jun 2007)
+
+  01 Jun 2007; Tony Vroon <chainsaw@gentoo.org> metadata.xml,
+  +libmtp-0.1.5.ebuild:
+  Version bump, closes bug #176632. Took maintainership.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
