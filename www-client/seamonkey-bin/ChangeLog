@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.12 2007/05/31 14:12:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.13 2007/06/01 13:10:17 armin76 Exp $
+
+  01 Jun 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-bin-1.1.2.ebuild:
+  x86 stable wrt security #180436
 
 *seamonkey-bin-1.1.2 (31 May 2007)
 
