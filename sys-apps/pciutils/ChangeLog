@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.100 2007/06/01 14:45:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.101 2007/06/01 16:20:49 welp Exp $
+
+  01 Jun 2007; Peter Weller <welp@gentoo.org> pciutils-2.2.4-r3.ebuild:
+  Stable on amd64 wrt bug 180554
 
   01 Jun 2007; Brent Baude <ranger@gentoo.org> pciutils-2.2.4-r3.ebuild:
   Marking pciutils-2.2.4-r3 ppc64 stable for bug #180554
