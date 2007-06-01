@@ -1,0 +1,162 @@
+Index: live-0.1.0/timers.cpp
+===================================================================
+--- live-0.1.0.orig/timers.cpp
++++ live-0.1.0/timers.cpp
+@@ -15,6 +15,9 @@ namespace vdrlive {
+ using namespace std;
+ using namespace vdrlive;
+ 
++static char const* const TIMER_DELETE = "DELETE";
++static char const* const TIMER_TOGGLE = "TOGGLE";
++
+ SortedTimers::SortedTimers():
+ 		m_state( 0 )
+ {
+@@ -79,6 +82,8 @@ TimerManager::TimerManager()
+ void TimerManager::UpdateTimer( cTimer* timer, int flags, tChannelID& channel, string const& weekdays, string const& day,
+ 								int start, int stop, int priority, int lifetime, string const& title, string const& aux )
+ {
++	cMutexLock lock( this );
++
+ 	ostringstream builder;
+ 	builder << flags << ":" << channel << ":" << ( weekdays != "-------" ? weekdays : "" )
+ 			<< ( weekdays == "-------" || day.empty() ? "" : "@" ) << day << ":" << start << ":" << stop << ":"
+@@ -98,22 +103,33 @@ void TimerManager::UpdateTimer( cTimer* 
+ 		throw HtmlError( error );
+ }
+ 
+-void TimerManager::DelTimer( cTimer* timer)
++void TimerManager::DelTimer( cTimer* timer )
+ {
+-	cTimer* delTimer = Timers.GetTimer(timer);
+-	Timers.Del(delTimer, true);
+-	Timers.SetModified();
+-	m_timers.ReloadTimers(false);
++	cMutexLock lock( this );
++
++	TimerPair timerData( timer, TIMER_DELETE );
++
++	m_updateTimers.push_back( timerData );
++	m_updateWait.Wait( *this );
++
++	string error = GetError( timerData );
++	if ( !error.empty() )
++		throw HtmlError( error );
+ }
+ 
+ void TimerManager::ToggleTimerActive( cTimer* timer)
+ {
+-	cTimer* toggleTimer = Timers.GetTimer(timer);
+-	toggleTimer->OnOff();
+-	Timers.SetModified();
+-	m_timers.ReloadTimers(false);
+-}
++	cMutexLock lock( this );
++
++	TimerPair timerData( timer, TIMER_TOGGLE );
++
++	m_updateTimers.push_back( timerData );
++	m_updateWait.Wait( *this );
+ 
++	string error = GetError( timerData );
++	if ( !error.empty() )
++		throw HtmlError( error );
++}
+ 
+ void TimerManager::DoPendingWork()
+ {
+@@ -123,10 +139,10 @@ void TimerManager::DoPendingWork()
+ 	cMutexLock lock( this );
+ 	if ( m_updateTimers.size() > 0 ) {
+ 		DoUpdateTimers();
+-		dsyslog("SV: signalling waiters");
+-		m_updateWait.Broadcast();
+ 	}
+ 	DoReloadTimers();
++	dsyslog("SV: signalling waiters");
++	m_updateWait.Broadcast();
+ }
+ 
+ void TimerManager::DoUpdateTimers()
+@@ -135,8 +151,10 @@ void TimerManager::DoUpdateTimers()
+ 	for ( TimerList::iterator timer = m_updateTimers.begin(); timer != m_updateTimers.end(); ++timer ) {
+ 		if ( timer->first == 0 ) // new timer
+ 			DoInsertTimer( *timer );
+-		else if ( timer->second == "" ) // delete timer
+-			; // XXX
++		else if ( timer->second == TIMER_DELETE ) // delete timer
++			DoDeleteTimer( *timer );
++		else if ( timer->second == TIMER_TOGGLE ) // toggle timer
++			DoToggleTimer( *timer );
+ 		else // update timer
+ 			DoUpdateTimer( *timer );
+ 	}
+@@ -187,6 +205,47 @@ void TimerManager::DoUpdateTimer( TimerP
+ 	isyslog("live timer %s modified (%s)", *oldTimer->ToDescr(), oldTimer->HasFlags(tfActive) ? "active" : "inactive");
+ }
+ 
++void TimerManager::DoDeleteTimer( TimerPair& timerData )
++{
++	if ( Timers.BeingEdited() ) {
++		StoreError( timerData, tr("Timers are being edited - try again later") );
++		return;
++	}
++
++	cTimer* oldTimer = Timers.GetTimer( timerData.first );
++	if ( oldTimer == 0 ) {
++		StoreError( timerData, tr("Timer not defined") );
++		return;
++	}
++
++	cTimer copy = *oldTimer;
++	if ( oldTimer->Recording() ) {
++		oldTimer->Skip();
++		cRecordControls::Process( time( 0 ) );
++	}
++	Timers.Del( oldTimer );
++	Timers.SetModified();
++	isyslog("live timer %s deleted", *copy.ToDescr());
++}
++
++void TimerManager::DoToggleTimer( TimerPair& timerData )
++{
++	if ( Timers.BeingEdited() ) {
++		StoreError( timerData, tr("Timers are being edited - try again later") );
++		return;
++	}
++
++	cTimer* toggleTimer = Timers.GetTimer( timerData.first );
++	if ( toggleTimer == 0 ) {
++		StoreError( timerData, tr("Timer not defined") );
++		return;
++	}
++
++	toggleTimer->OnOff();
++	Timers.SetModified();
++	isyslog("live timer %s toggled %s", *toggleTimer->ToDescr(), toggleTimer->HasFlags(tfActive) ? "on" : "off");
++}
++
+ void TimerManager::StoreError( TimerPair const& timerData, std::string const& error )
+ {
+ 	m_failedUpdates.push_back( ErrorPair( timerData, error ) );
+Index: live-0.1.0/timers.h
+===================================================================
+--- live-0.1.0.orig/timers.h
++++ live-0.1.0/timers.h
+@@ -4,6 +4,7 @@
+ #include <list>
+ #include <string>
+ #include <vdr/channels.h>
++#include <vdr/menu.h>
+ #include <vdr/timers.h>
+ #include <vdr/thread.h>
+ #include "live.h"
+@@ -63,6 +64,8 @@ private:
+ 	void DoUpdateTimers();
+ 	void DoInsertTimer( TimerPair& timerData );
+ 	void DoUpdateTimer( TimerPair& timerData );
++	void DoDeleteTimer( TimerPair& timerData );
++	void DoToggleTimer( TimerPair& timerData );
+ 
+ 	void StoreError( TimerPair const& timerData, std::string const& error );
+ 	std::string GetError( TimerPair const& timerData );
