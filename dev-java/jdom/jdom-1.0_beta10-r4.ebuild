@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r4.ebuild,v 1.5 2007/01/05 23:31:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r4.ebuild,v 1.6 2007/06/01 19:40:06 caster Exp $
+
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,43 +16,47 @@ HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="${PV}"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc source"
-RDEPEND=">=virtual/jre-1.4
-		dev-java/saxpath
-		dev-java/xalan
+COMMON_DEP="dev-java/saxpath
 		>=dev-java/xerces-2.7"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-		dev-java/ant-core
-		${RDEPEND}"
+	${COMMON_DEP}"
+IUSE=""
 
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	rm -f build/*.jar lib/*.jar
+	cd "${S}"
+
+	rm -v build/*.jar lib/*.jar || die
+	rm -rf build/{apidocs,samples} || die
 
 	cd ${S}/lib
-	java-pkg_jar-from saxpath
-	java-pkg_jar-from xerces-2
+	java-pkg_jar-from saxpath,xerces-2
 
 	if has_version '=dev-java/jaxen-1.1*'; then
-		java-pkg_jar-from jaxen-1.1
+		elog "jaxen detected - building jaxen support."
+		elog "you can ignore the warnings below"
+		elog "one day there will be better solution"
+		JAVA_PKG_STRICT="" java-pkg_jar-from jaxen-1.1
 	fi
 }
 
 src_compile() {
-
-	eant package || die "compile problem"
-
+	# to prevent a newer jdom from going into cp
+	# (EANT_ANT_TASKS doesn't work with none)
+	ANT_TASKS="none" eant package $(use_doc)
 }
 
 src_install() {
 	java-pkg_dojar build/*.jar
 
-	dodoc CHANGES.txt COMMITTERS.txt README.txt TODO.txt
-	use doc && java-pkg_dohtml -r build/apidocs/*
-	use source && java-pkg_dosrc src/java/*
+	dodoc CHANGES.txt COMMITTERS.txt README.txt TODO.txt || die
+	use doc && java-pkg_dojavadoc build/apidocs
+	use examples && java-pkg_doexamples samples
+	use source && java-pkg_dosrc src/java/org
 }
 
 pkg_postinst() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.47 2007/05/25 09:24:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.48 2007/06/01 19:40:06 caster Exp $
+
+  01 Jun 2007; Vlastimil Babka <caster@gentoo.org> jdom-1.0_beta9-r2.ebuild,
+  jdom-1.0_beta10-r4.ebuild, jdom-1.0-r2.ebuild:
+  Add examples USE flag, prevent breakage with java-strict due to optional
+  jaxen; prevent breakage with different slot brought by ant task.
 
   25 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   jdom-1.0_beta9-r2.ebuild:
