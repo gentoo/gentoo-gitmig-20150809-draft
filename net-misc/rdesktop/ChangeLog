@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.84 2007/05/30 18:47:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.85 2007/06/01 04:45:24 jer Exp $
+
+  01 Jun 2007; Jeroen Roovers <jer@gentoo.org> rdesktop-1.5.0-r2.ebuild:
+  Stable for HPPA (bug #180310).
 
   30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   rdesktop-1.5.0-r2.ebuild:
