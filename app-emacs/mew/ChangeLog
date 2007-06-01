@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.51 2007/05/20 22:15:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.52 2007/06/01 15:48:07 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> mew-4.2.ebuild, mew-5.1.ebuild:
+  Stable on ppc wrt bug 177904
 
 *mew-5.2 (20 May 2007)
 
