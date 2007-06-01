@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.20 2007/05/14 16:47:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.21 2007/06/01 07:08:46 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common format
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
@@ -58,7 +61,7 @@
   08 Jun 2003; Brad Laue <brad@gentoo.org> geekcode-1.7.ebuild:
   Mark stable on x86
 
-*geekcode-1.7 (05 June 2003)
+*geekcode-1.7 (05 Jun 2003)
 
-  05 June 2003; Brad Laue <brad@gentoo.org> Manifest, files/digest-geekcode-1.7, geekcode-1.7.ebuild, ChangeLog :
+  05 Jun 2003; Brad Laue <brad@gentoo.org> Manifest, files/digest-geekcode-1.7, +geekcode-1.7.ebuild, ChangeLog :
   Initial import, submitted by Ferdy <ferdy@ferdyx.org>

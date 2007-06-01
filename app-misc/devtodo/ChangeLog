@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.68 2007/04/07 15:53:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.69 2007/06/01 07:04:43 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common format
 
   07 Apr 2007; Markus Ullmann <jokey@gentoo.org>
   -files/devtodo-0.1.18-gentoo.diff, -files/devtodo-0.1.19-gentoo.diff,
@@ -257,20 +260,17 @@
   04 Jan 2003; Hannes Mehnert <hannes@gentoo.org> devtodo-0.1.17.ebuild:
   version bump
 
-*devtodo-0.1.14 (24 July 2002)
-
   02 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> devtodo-0.1.14.ebuild :
-
   Added ppc to KEYWORDS.
 
-  24 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog :
+*devtodo-0.1.14 (24 Jul 2002)
 
+  24 Jul 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog :
   Updated to the newest version.
  
 *devtodo-0.1.11-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
