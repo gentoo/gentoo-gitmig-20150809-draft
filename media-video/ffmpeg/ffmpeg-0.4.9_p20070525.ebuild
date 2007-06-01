@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070525.ebuild,v 1.2 2007/06/01 10:18:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070525.ebuild,v 1.3 2007/06/01 11:20:27 drac Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -46,6 +46,10 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S}
 
+	#Append -DBROKEN_RELOCATIONS to build for bug 179872.
+	#Pretty please fix me if you can.
+	append-flags "-DBROKEN_RELOCATIONS"
+	
 	#Append -fomit-frame-pointer to avoid some common issues
 	use debug || append-flags "-fomit-frame-pointer"
 
