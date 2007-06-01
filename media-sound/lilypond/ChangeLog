@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.53 2007/05/24 11:35:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.54 2007/06/01 12:53:52 ulm Exp $
+
+*lilypond-2.10.25-r1 (01 Jun 2007)
+
+  01 Jun 2007; Ulrich Mueller <ulm@gentoo.org> +files/50lilypond-gentoo.el,
+  +lilypond-2.10.25-r1.ebuild:
+  Emacs support: Compile elisp files and install them in the proper place,
+  add an Emacs sitefile. Also fixes bug #179177.
 
 *lilypond-2.10.25 (24 May 2007)
 
