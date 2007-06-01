@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.29 2007/05/26 17:18:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.30 2007/06/01 00:22:05 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> xarchiver-0.4.6.ebuild:
+  Marking xarchiver-0.4.6 ppc64 stable for bug #178510
 
   26 May 2007; nixnut <nixnut@gentoo.org> xarchiver-0.4.6.ebuild:
   Stable on ppc wrt bug 178510

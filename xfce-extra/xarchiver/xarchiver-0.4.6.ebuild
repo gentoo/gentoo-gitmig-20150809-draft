@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/xarchiver-0.4.6.ebuild,v 1.21 2007/05/26 17:18:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/xarchiver-0.4.6.ebuild,v 1.22 2007/06/01 00:22:05 ranger Exp $
 
 inherit xfce44
 
@@ -8,7 +8,7 @@ DESCRIPTION="Archive manager"
 HOMEPAGE="http://xarchiver.xfce.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.6
