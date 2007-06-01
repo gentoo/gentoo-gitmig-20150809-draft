@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.26 2007/06/01 17:16:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.27 2007/06/01 18:14:18 caster Exp $
+
+  01 Jun 2007; Vlastimil Babka <caster@gentoo.org>
+  -jfreechart-0.9.21.ebuild, -jfreechart-0.9.21-r1.ebuild:
+  Remove unused revisions.
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> jfreechart-0.9.21-r2.ebuild:
   Stable on ppc wrt bug 164121
