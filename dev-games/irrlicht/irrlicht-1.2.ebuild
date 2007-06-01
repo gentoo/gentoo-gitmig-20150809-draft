@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.2.ebuild,v 1.2 2007/04/10 12:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.2.ebuild,v 1.3 2007/06/01 18:09:07 nyhm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,7 +42,7 @@ src_unpack() {
 	   $(tc-getCC) -E - | \
 	   grep -q glXGetProcAddressARB
 	then
-		epatch "${FILESDIR}"/${PN}-0.12.0-opengl.patch
+		epatch "${FILESDIR}"/${P}-opengl.patch
 	fi
 
 	# use the system zlib/jpeg/png
