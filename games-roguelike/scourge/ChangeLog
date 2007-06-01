@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/scourge
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.24 2007/01/15 18:17:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.25 2007/06/01 01:23:40 nyhm Exp $
+
+*scourge-0.18 (01 Jun 2007)
+
+  01 Jun 2007; Tristan Heaven <nyhm@gentoo.org> +scourge-0.18.ebuild:
+  Version bump, bug #177204
 
 *scourge-0.17 (15 Jan 2007)
 
