@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r3.ebuild,v 1.5 2007/05/05 16:01:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r3.ebuild,v 1.6 2007/06/01 19:06:45 caster Exp $
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -41,6 +41,8 @@ src_unpack() {
 	cp -i "${FILESDIR}/build-${PV}.xml" build.xml || die
 
 	rm -v *.jar || die
+	rm samples/java/*.class || die
+
 	mkdir lib && cd lib
 	java-pkg_jar-from jdom-1.0
 	java-pkg_jar-from xom
@@ -59,5 +61,6 @@ src_install() {
 		java-pkg_dojavadoc dist/doc/api doc/*
 		java-pkg_dohtml doc/*
 	fi
+	use examples && java-pkg_doexamples samples
 	use source && java-pkg_dosrc src/*
 }

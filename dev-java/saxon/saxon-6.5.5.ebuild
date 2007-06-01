@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.5.ebuild,v 1.1 2007/04/22 13:51:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.5.ebuild,v 1.2 2007/06/01 19:06:45 caster Exp $
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2 eutils versionator
 
 MY_P="${PN}$(replace_all_version_separators -)"
@@ -31,15 +31,13 @@ src_unpack() {
 
 	unzip -qq source.zip -d src || die "failed to unpack"
 
-	# TODO update patch for 6.5.2
-	#epatch ${FILESDIR}/${P}-jikes.patch
+	cp "${FILESDIR}/build-${PV}.xml" build.xml || die
 
-	cp ${FILESDIR}/build-${PV}.xml build.xml
-
-	rm -v *.jar
-	rm -rf doc/api
+	rm -v *.jar || die
+	rm -rf doc/api || die
+	rm samples/java/*.class || die
 	mkdir lib && cd lib
-	java-pkg_jarfrom jdom-1.0
+	java-pkg_jar-from jdom-1.0
 }
 
 src_compile() {
@@ -55,5 +53,6 @@ src_install() {
 		java-pkg_dojavadoc dist/doc/api
 		dohtml -r doc/*
 	fi
+	use examples && java-pkg_doexamples samples
 	use source && java-pkg_dosrc src/*
 }
