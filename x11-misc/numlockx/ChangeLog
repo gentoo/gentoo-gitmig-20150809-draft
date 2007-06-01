@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.23 2007/05/31 23:04:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.24 2007/06/01 13:11:13 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> numlockx-1.1.ebuild:
+  Stable on ppc wrt bug 180462
 
   31 May 2007; Christoph Mende <angelos@gentoo.org> numlockx-1.1.ebuild:
   Stable on amd64 wrt bug 180462
