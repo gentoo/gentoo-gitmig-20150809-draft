@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4-r1.ebuild,v 1.2 2007/05/29 21:43:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4-r1.ebuild,v 1.3 2007/06/01 06:30:13 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://jscience.org/${P}-src.zip"
 HOMEPAGE="http://jscience.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 COMMON_DEP="~dev-java/javolution-2.2.4"
