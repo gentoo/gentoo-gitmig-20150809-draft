@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.2 2007/06/01 13:05:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.3 2007/06/01 17:54:38 jer Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -109,6 +109,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/qt-4.1.4-sparc.patch
+	epatch ${FILESDIR}/qt-4.2.3-hppa-ldcw-fix.patch
 
 	cd ${S}/mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
