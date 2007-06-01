@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/thunar-media-tags-0.1.2.ebuild,v 1.15 2007/05/24 20:22:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/thunar-media-tags-0.1.2.ebuild,v 1.16 2007/06/01 00:21:16 ranger Exp $
 
 inherit xfce44
 
 xfce44
 
 DESCRIPTION="Thunar media tags plugin"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 RDEPEND=">=media-libs/taglib-1.4"
 DEPEND="${RDEPEND}"
