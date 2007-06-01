@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.4.ebuild,v 1.1 2007/04/14 23:18:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.4.ebuild,v 1.2 2007/06/01 18:47:34 aballier Exp $
 
 inherit qt3 eutils
 
@@ -36,6 +36,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.5.3-ffmpeg-compat.patch"
+	epatch "${FILESDIR}/${P}-gcc42.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg-compat2.patch"
 }
 
 src_compile() {

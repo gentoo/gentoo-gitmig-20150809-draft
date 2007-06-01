@@ -1,6 +1,12 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.5 2007/04/14 23:18:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.6 2007/06/01 18:47:34 aballier Exp $
+
+  01 Jun 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/dvbcut-0.5.4-ffmpeg-compat2.patch, +files/dvbcut-0.5.4-gcc42.patch,
+  dvbcut-0.5.4.ebuild:
+  Fix compilation against newest ffmpeg, bug #180547, also remove long time
+  deprecated max c++ syntax that has been removed in gcc 4.2
 
 *dvbcut-0.5.4 (14 Apr 2007)
 
