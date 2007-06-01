@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/tuxpuck
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.7 2007/04/09 21:26:23 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.8 2007/06/01 06:18:45 tupone Exp $
+
+*tuxpuck-0.8.2-r1 (01 Jun 2007)
+
+  01 Jun 2007; Tupone Alfredo <tupone@gentoo.org> +tuxpuck-0.8.2-r1.ebuild:
+  Added menu entry. Bug #160257 by Pacho Ramos
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> tuxpuck-0.8.2.ebuild:
   Keyworded ~x86-fbsd wrt bug 173386
