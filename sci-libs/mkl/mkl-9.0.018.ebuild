@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.0.018.ebuild,v 1.2 2007/03/26 10:47:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.0.018.ebuild,v 1.3 2007/06/01 00:59:49 bicatali Exp $
 
 inherit toolchain-funcs fortran
 
@@ -184,7 +184,7 @@ src_install() {
 	eselect lapack add $(get_libdir) ${FILESDIR}/eselect.lapack mkl
 
 	echo "INCLUDE=${install_dir}/include"  > 35mkl
-	echo "MANPATH=${install_dir}/man"  > 35mkl
+	echo "MANPATH=${install_dir}/man"  >> 35mkl
 	echo "LDPATH=${install_dir}/lib/${INTEL_ARCH}" >> 35mkl
 	doenvd 35mkl
 }

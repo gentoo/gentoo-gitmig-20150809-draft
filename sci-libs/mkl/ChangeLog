@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.13 2007/03/26 10:47:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.14 2007/06/01 00:59:49 bicatali Exp $
+
+  01 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org> mkl-9.0.018.ebuild:
+  small fix while creating the env.d file
 
   26 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org> mkl-9.0.018.ebuild:
   Allow $INTEL_LICENSE in install file.
