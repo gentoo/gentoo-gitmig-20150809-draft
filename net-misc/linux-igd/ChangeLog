@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/linux-igd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.23 2007/05/14 19:45:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.24 2007/06/01 21:37:13 gurligebis Exp $
+
+  01 Jun 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> -linux-igd-0.95.ebuild:
+  Removed old version, broken, and needs the even more broken net-misc/upnp that has
+  been package.masked.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
