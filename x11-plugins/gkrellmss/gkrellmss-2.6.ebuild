@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.8 2007/05/07 17:31:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.9 2007/06/01 00:21:01 angelos Exp $
 
 inherit gkrellm-plugin
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 
 PLUGIN_SO="src/gkrellmss.so"
 PLUGIN_DOCS="Themes"
