@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.36 2007/05/29 08:00:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.37 2007/06/01 06:15:36 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> vpnc-0.4.0-r2.ebuild:
+  added the path for the new vpnc HowTo
 
   29 May 2007; Christian Faulhammer <opfer@gentoo.org> files/vpnc.init:
   remove bashisms from init file, fixes bug 179747 reported by Mike Arthur
