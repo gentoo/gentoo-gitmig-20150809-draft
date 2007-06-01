@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.10 2007/05/31 19:49:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.11 2007/06/01 06:10:35 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> -cmus-2.1.0.ebuild,
+  cmus-2.1.0-r1.ebuild:
+  Add examples USE flag and clean up
 
   31 May 2007; Daniel Gryniewicz <dang@gentoo.org> cmus-2.1.0-r1.ebuild:
   Marked stable on amd64 for bug #180295

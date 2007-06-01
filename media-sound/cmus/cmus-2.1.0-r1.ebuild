@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0-r1.ebuild,v 1.4 2007/05/31 19:49:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0-r1.ebuild,v 1.5 2007/06/01 06:10:35 opfer Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://onion.dynserv.net/~timo/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="aac alsa ao arts debug flac mad mikmod modplug mp3 mp4 musepack oss vorbis"
+IUSE="aac alsa ao arts debug examples flac mad mikmod modplug mp3 mp4 musepack oss vorbis"
 
 DEPEND="sys-libs/ncurses
 	alsa? ( >=media-libs/alsa-lib-1.0.11 )
@@ -51,7 +51,9 @@ pkg_setup() {
 src_unpack(){
 	unpack ${A}
 	cd "${S}"
+	# Port to older faad, will be included in next release
 	epatch "${FILESDIR}/${P}-faad-2.0.patch"
+	# Will have a configurable path in next release, now it would install in the wrong directory
 	sed -i -e "s~\(/doc/cmus\)~\1-${PVR}~" "${S}/Makefile" || die "sed failed"
 }
 
@@ -84,4 +86,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README
+	use examples || rm -rf "${D}/usr/share/doc/${PF}/examples/"
 }
