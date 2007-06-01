@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.12 2007/05/31 16:31:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.13 2007/06/01 06:09:49 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -134,12 +134,12 @@ src_compile() {
 			myconf="${myconf} --without-gtk"
 		elif use motif; then
 			einfo "Configuring to build with motif toolkit support"
-			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=motif"
+			myconf="${myconf} --without-gtk"
 		else
 			einfo "Configuring to build with no toolkit"
-			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=no"
+			myconf="${myconf} --without-gtk"
 		fi
 	else
 		myconf="${myconf} --without-x"
@@ -154,8 +154,7 @@ src_compile() {
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
-	emake CC="$(tc-getCC) " bootstrap \
-		|| die "make bootstrap failed."
+	emake CC="$(tc-getCC)" bootstrap || die "make bootstrap failed"
 }
 
 src_install () {
@@ -167,7 +166,7 @@ src_install () {
 		|| die "moving Emacs executable failed"
 
 	# move info documentation to the correct place
-	einfo "Fixing info documentation..."
+	einfo "Fixing info documentation ..."
 	dodir /usr/share/info/${EMACS_SUFFIX}
 	mv "${D}"/usr/share/info/{,${EMACS_SUFFIX}/}dir || die "mv dir failed"
 	for i in "${D}"/usr/share/info/*
@@ -178,7 +177,7 @@ src_install () {
 	done
 
 	# move man pages to the correct place
-	einfo "Fixing manpages..."
+	einfo "Fixing manpages ..."
 	for m in "${D}"/usr/share/man/man1/* ; do
 		mv ${m} ${m%.1}-${EMACS_SUFFIX}.1 || die "mv man failed"
 	done

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.17 2007/05/31 12:48:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.18 2007/06/01 06:09:49 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -136,12 +136,12 @@ src_compile() {
 			myconf="${myconf} --without-gtk"
 		elif use motif; then
 			einfo "Configuring to build with motif toolkit support"
-			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=motif"
+			myconf="${myconf} --without-gtk"
 		else
 			einfo "Configuring to build with no toolkit"
-			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=no"
+			myconf="${myconf} --without-gtk"
 		fi
 	else
 		myconf="${myconf} --without-x"
@@ -156,8 +156,7 @@ src_compile() {
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
-	emake CC="$(tc-getCC) " bootstrap \
-		|| die "make bootstrap failed."
+	emake CC="$(tc-getCC)" bootstrap || die "make bootstrap failed"
 }
 
 src_install () {
@@ -169,7 +168,7 @@ src_install () {
 		|| die "moving Emacs executable failed"
 
 	# move info documentation to the correct place
-	einfo "Fixing info documentation..."
+	einfo "Fixing info documentation ..."
 	dodir /usr/share/info/emacs-${SLOT}
 	mv "${D}"/usr/share/info/{,emacs-${SLOT}/}dir || die "mv dir failed"
 	for i in "${D}"/usr/share/info/*
@@ -180,7 +179,7 @@ src_install () {
 	done
 
 	# move man pages to the correct place
-	einfo "Fixing manpages..."
+	einfo "Fixing manpages ..."
 	for m in "${D}"/usr/share/man/man1/* ; do
 		mv ${m} ${m%.1}-emacs-${SLOT}.1 || die "mv man failed"
 	done
@@ -195,12 +194,12 @@ src_install () {
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.[ch]
-		sed 's/^X//' >00emacs-cvs-${SLOT}-gentoo.el <<EOF
+		sed 's/^X//' >00${PN}-${SLOT}-gentoo.el <<EOF
 (if (string-match "\\\\\`${FULL_VERSION//./\\\\.}\\\\>" emacs-version)
 X    (setq find-function-C-source-directory
 X	  "/usr/share/emacs/${FULL_VERSION}/src"))
 EOF
-		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
+		elisp-site-file-install 00${PN}-${SLOT}-gentoo.el
 	fi
 
 	dodoc AUTHORS BUGS CONTRIBUTE README README.unicode || die "dodoc failed"
