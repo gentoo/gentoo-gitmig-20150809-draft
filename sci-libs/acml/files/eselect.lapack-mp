@@ -1,0 +1,3 @@
+libacml_mp.so /usr/@LIBDIR@/liblapack.so
+libacml_mp.so /usr/@LIBDIR@/liblapack.so.0
+libacml_mp.a /usr/@LIBDIR@/liblapack.a

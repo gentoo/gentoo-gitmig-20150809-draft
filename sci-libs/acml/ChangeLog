@@ -1,6 +1,19 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.19 2007/02/22 05:48:15 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.20 2007/06/01 16:05:35 bicatali Exp $
+
+*acml-3.6.1 (01 Jun 2007)
+*acml-3.6.0 (01 Jun 2007)
+
+  01 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/eselect.blas-mp, +files/eselect.cblas-mp, +files/eselect.lapack-mp,
+  +acml-3.6.0.ebuild, +acml-3.6.1.ebuild:
+  Version bump. Reorganized the ebuild to take into account new systems. 
+  acml-3.6.0 is for g77 and ifc compilers, acml-3.6.1 for the gfortran
+  compiler. Added a multi-processor profile, only used with the ifc case, but
+  soon with gfortran-4.2. Fix bug #141127, thanks to Adam
+  <ediap@et.put.poznan.pl>, Sun Bing <subi.the.dream.walker@gmail.com> and
+  others in the bug.
 
   22 Feb 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Really changing the manifest this time...
