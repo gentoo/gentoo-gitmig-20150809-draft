@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-trayicon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/ChangeLog,v 1.14 2007/05/24 14:04:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/ChangeLog,v 1.15 2007/06/01 23:18:14 mcummings Exp $
+
+  01 Jun 2007; Michael Cummings <mcummings@gentoo.org> metadata.xml:
+  Updating metadata per request from drac
 
 *gtk2-trayicon-0.06 (24 May 2007)
 
