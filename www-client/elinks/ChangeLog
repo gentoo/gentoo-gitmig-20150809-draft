@@ -1,6 +1,10 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.82 2007/06/01 12:44:48 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.83 2007/06/01 13:23:38 gustavoz Exp $
+
+  01 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  elinks-0.11.2-r1.ebuild:
+  Stable on sparc wrt security #177512
 
   01 Jun 2007; Peter Weller <welp@gentoo.org> elinks-0.11.2-r1.ebuild:
   Stable on amd64 wrt security bug 177512
