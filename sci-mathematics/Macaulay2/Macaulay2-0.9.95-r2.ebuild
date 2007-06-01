@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r2.ebuild,v 1.1 2007/05/30 13:25:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r2.ebuild,v 1.2 2007/06/01 01:02:30 markusle Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -50,17 +50,17 @@ src_compile() {
 	emake DEFS=-DHAVE_SINGULAR_ERROR || die "failed to build libfac"
 	make install || die "failed to install libfac"
 
-	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 	cd "${S}"
 	sed -e "/^docm2RelDir/s:Macaulay2:${P}:" \
 		-i include/config.Makefile.in || \
 		die "failed to fix makefile"
+
+	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
+	append-ldflags "-L${WORKDIR}/$(get_libdir)"
 	emake -j1 && CPPFLAGS="-I/usr/include/gc -I${WORKDIR}/include" \
-		LDFLAGS="-L${WORKDIR}/$(get_libdir)" \
 		./configure --prefix="${D}/usr" --disable-encap \
 		--with-lapacklibs="-llapack -lblas" || \
 		die "failed to configure Macaulay"
-	# fix install paths
 	emake -j1 || die "failed to build Macaulay"
 }
 
