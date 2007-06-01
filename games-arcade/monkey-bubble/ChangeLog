@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.24 2007/06/01 00:35:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.25 2007/06/01 18:46:11 gustavoz Exp $
+
+  01 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  monkey-bubble-0.4.0.ebuild:
+  Stable on sparc wrt #180458
 
   01 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
   monkey-bubble-0.4.0.ebuild:
