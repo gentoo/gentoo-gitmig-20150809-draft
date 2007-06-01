@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/boxquote
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.14 2007/05/19 09:16:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.15 2007/06/01 16:40:03 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> boxquote-1.18-r1.ebuild:
+  Stable on ppc wrt bug 178722
 
   19 May 2007; Markus Rothe <corsair@gentoo.org> boxquote-1.18-r1.ebuild:
   Stable on ppc64; bug #178722
