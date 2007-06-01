@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.72.ebuild,v 1.2 2007/05/19 16:42:41 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.72.ebuild,v 1.3 2007/06/01 11:08:30 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.m0k.org/transmission/files/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="daemon gtk"
 
 RDEPEND="sys-devel/gettext
