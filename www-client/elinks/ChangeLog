@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.84 2007/06/01 14:49:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.85 2007/06/01 16:11:30 jer Exp $
+
+  01 Jun 2007; Jeroen Roovers <jer@gentoo.org> elinks-0.11.2-r1.ebuild:
+  Stable for HPPA (bug #177512).
 
   01 Jun 2007; Brent Baude <ranger@gentoo.org> elinks-0.11.2-r1.ebuild:
   Marking elinks-0.11.2-r1 ppc64 for bug #177512
