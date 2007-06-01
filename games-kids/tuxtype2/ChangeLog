@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/tuxtype2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.5 2006/09/27 14:04:57 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.6 2007/06/01 22:15:07 tupone Exp $
+
+*tuxtype2-1.5.3-r1 (01 Jun 2007)
+
+  01 Jun 2007; Tupone Alfredo <tupone@gentoo.org> +tuxtype2-1.5.3-r1.ebuild:
+  Added menu entry. Bug #160258 by Pacho Ramos
 
   27 Sep 2006; Tristan Heaven <nyhm@gentoo.org> tuxtype2-1.5.3.ebuild:
   Add inherit eutils
