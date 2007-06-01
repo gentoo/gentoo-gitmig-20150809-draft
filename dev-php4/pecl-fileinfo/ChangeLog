@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-fileinfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-fileinfo/ChangeLog,v 1.18 2007/05/25 15:07:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-fileinfo/ChangeLog,v 1.19 2007/06/01 17:10:40 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> pecl-fileinfo-1.0.4.ebuild:
+  Stable on ppc wrt bug 176542
 
   25 May 2007; Brent Baude <ranger@gentoo.org> pecl-fileinfo-1.0.4.ebuild:
   Marking pecl-fileinfo-1.0.4 ppc64 stable for bug 176542
