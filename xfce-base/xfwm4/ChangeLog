@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.101 2007/05/27 06:23:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.102 2007/06/01 00:12:52 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> xfwm4-4.4.1.ebuild:
+  Marking xfwm4-4.4.1 ppc64 stable for bug #178510
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> xfwm4-4.4.1.ebuild:
   Stable on mips.
