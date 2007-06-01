@@ -1,0 +1,11 @@
+diff -urNp kdelibs-3.5.7.org/khtml/html/html_elementimpl.cpp kdelibs-3.5.7/khtml/html/html_elementimpl.cpp
+--- kdelibs-3.5.7.org/khtml/html/html_elementimpl.cpp	2007-01-15 13:34:00.000000000 +0200
++++ kdelibs-3.5.7/khtml/html/html_elementimpl.cpp	2007-06-01 21:21:19.000000000 +0300
+@@ -503,7 +503,6 @@ DocumentFragment HTMLElementImpl::create
+         case ID_COLGROUP:
+         case ID_FRAMESET:
+         case ID_HEAD:
+-        case ID_STYLE:
+         case ID_TABLE:
+         case ID_TBODY:
+         case ID_TFOOT:

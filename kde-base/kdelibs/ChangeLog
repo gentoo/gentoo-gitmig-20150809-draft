@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.462 2007/05/22 22:51:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.463 2007/06/01 20:10:15 philantrop Exp $
+
+  01 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdelibs-3.5.7-html-style.patch, kdelibs-3.5.7.ebuild:
+  Added a patch for using Gmail with konqueror, fixes bug 179152.
 
 *kdelibs-3.5.7 (22 May 2007)
 

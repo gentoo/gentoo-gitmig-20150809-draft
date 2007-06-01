@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.7.ebuild,v 1.1 2007/05/22 22:51:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.7.ebuild,v 1.2 2007/06/01 20:10:15 philantrop Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -58,6 +58,8 @@ PDEPEND="avahi? ( kde-misc/kdnssd-avahi )"
 
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"
+
+PATCHES="${FILESDIR}/${P}-html-style.patch"
 
 pkg_setup() {
 	if use legacyssl ; then
