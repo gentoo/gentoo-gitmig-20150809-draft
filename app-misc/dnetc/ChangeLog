@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.43 2007/04/28 21:22:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.44 2007/06/01 06:49:26 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common format
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> dnetc-2.9001.478.ebuild,
   dnetc-2.9002.479.ebuild, dnetc-2.9003.481-r1.ebuild,
@@ -141,9 +144,9 @@
   23 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9003.481.ebuild :
   Alpha client officially released.
 
-*dnetc-2.9005.483 (04 June 2003)
+*dnetc-2.9005.483 (04 Jun 2003)
 
-  04 June 2003; Brad Laue <brad@gentoo.org> dnetc-2.9005.483.ebuild :
+  04 Jun 2003; Brad Laue <brad@gentoo.org> dnetc-2.9005.483.ebuild :
   Mark stable on x86 and ppc.
 
 29 May 2003; Tavis Ormandy <taviso@gentoo.org> dnetc-2.9003.481.ebuild:

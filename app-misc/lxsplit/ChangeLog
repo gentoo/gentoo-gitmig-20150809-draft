@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lxsplit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.10 2007/02/08 22:38:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.11 2007/06/01 06:51:23 opfer Exp $
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common format
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
@@ -17,15 +20,13 @@
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lxsplit-0.1.1.ebuild:
   Don't assign default to S; header fix
 
-*lxsplit-0.1.1 (21 August 2002)
+*lxsplit-0.1.1 (21 Aug 2002)
 
-  21 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, lxsplit-0.1.1.ebuild :
-
+  21 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, lxsplit-0.1.1.ebuild :
   Added ppc to keywords..
 
-*lxsplit-0.1.1 (21 August 2002)
+*lxsplit-0.1.1 (21 Aug 2002)
 
-  21 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, lxsplit-0.1.1.ebuild, files/digest-lxsplit-0.1.1 :
-
+  21 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, lxsplit-0.1.1.ebuild, files/digest-lxsplit-0.1.1 :
   Initial version in Portage now..
   Initial Ebuild by Maurizio Disimino <kevin@aptbasilicata.it>
