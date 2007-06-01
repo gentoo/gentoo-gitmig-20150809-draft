@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.23 2007/05/24 20:30:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.24 2007/06/01 00:20:46 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org>
+  thunar-archive-0.2.4-r1.ebuild:
+  Marking thunar-archive-0.2.4-r1 ppc64 stable for bug #178510
 
   24 May 2007; Lars Weiler <pylon@gentoo.org>
   thunar-archive-0.2.4-r1.ebuild:
