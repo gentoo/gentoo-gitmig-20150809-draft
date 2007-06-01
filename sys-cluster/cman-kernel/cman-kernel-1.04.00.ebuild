@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.04.00.ebuild,v 1.4 2007/06/01 00:29:33 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.04.00.ebuild,v 1.5 2007/06/01 00:33:00 xmerlin Exp $
 
 inherit linux-mod linux-info
 
@@ -43,7 +43,7 @@ src_unpack() {
 				|| die "sed failed"
 
 		fi
-		if [ "$KV_PATCH" -gt "19" ] ; then
+		if [ "$KV_PATCH" -lt "19" ] ; then
 			sed -i \
 				-e 's|init_utsname()->nodename|system_utsname.nodename|g' \
 				src/cnxman.c \
