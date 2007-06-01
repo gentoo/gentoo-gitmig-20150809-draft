@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.37 2007/05/20 22:55:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.38 2007/06/01 06:18:56 kumba Exp $
+
+  01 Jun 2007; Joshua Kinard <kumba@gentoo.org>
+  xf86-video-fbdev-0.3.1.ebuild:
+  Stable on mips.
 
   20 May 2007; Jeroen Roovers <jer@gentoo.org>
   xf86-video-fbdev-0.3.1.ebuild:
