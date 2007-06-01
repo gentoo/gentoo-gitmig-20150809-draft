@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-volstatus-icon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.1 2007/05/29 10:47:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.2 2007/06/01 14:36:45 welp Exp $
+
+  01 Jun 2007; Peter Weller <welp@gentoo.org>
+  xfce4-volstatus-icon-0.1.0.ebuild:
+  Keyworded ~amd64
 
 *xfce4-volstatus-icon-0.1.0 (29 May 2007)
 
