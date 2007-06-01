@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.445 2007/05/31 11:51:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.446 2007/06/01 13:05:19 gustavoz Exp $
+
+  01 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> qt-4.3.0.ebuild:
+  Keyworded ~sparc wrt #180444
 
 *qt-4.3.0 (31 May 2007)
 
