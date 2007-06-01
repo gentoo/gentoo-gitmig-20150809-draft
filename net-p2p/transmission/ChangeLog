@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.23 2007/06/01 11:08:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.24 2007/06/01 11:32:14 welp Exp $
+
+  01 Jun 2007; Peter Weller <welp@gentoo.org> transmission-0.72.ebuild:
+  Stable on amd64 wrt security bug 180525
 
   01 Jun 2007; Raúl Porcel <armin76@gentoo.org> transmission-0.72.ebuild:
   x86 stable wrt security #180525
