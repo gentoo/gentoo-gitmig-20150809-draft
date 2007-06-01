@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cryptix
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/ChangeLog,v 1.10 2007/06/01 06:45:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/ChangeLog,v 1.11 2007/06/01 19:06:41 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> cryptix-3.2.0-r1.ebuild:
+  Stable on ppc wrt bug 179988
 
   01 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   cryptix-3.2.0-r1.ebuild:
