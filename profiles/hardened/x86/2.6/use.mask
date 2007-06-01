@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.16 2007/05/25 21:56:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.17 2007/06/01 19:21:50 solar Exp $
 
 -3dnow
 -3dnowext
@@ -20,7 +20,6 @@
 -input_devices_synaptics
 -input_devices_vmmouse
 -input_devices_wacom
--video_cards_nvidia
 -video_cards_fglrx
 -video_cards_vmware
 
