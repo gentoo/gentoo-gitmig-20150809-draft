@@ -105,10 +105,10 @@ EBUILD mozilla-firefox-bin-2.0.0.3.ebuild 4136 RMD160 3fb069561c36971ac00f5d5d8f
 MD5 cfbb1596789b469223358e361337fe5b mozilla-firefox-bin-2.0.0.3.ebuild 4136
 RMD160 3fb069561c36971ac00f5d5d8f964578d4d98b31 mozilla-firefox-bin-2.0.0.3.ebuild 4136
 SHA256 327e9e94e06e3be9be07f2c25425ff68fe841cfb87d88be2ac69cd3c40992d09 mozilla-firefox-bin-2.0.0.3.ebuild 4136
-EBUILD mozilla-firefox-bin-2.0.0.4.ebuild 4143 RMD160 9135d7f9eb7f2a51fd60dc0a7350680648cdf157 SHA1 e2beaaf6c0552f0f209d25f928cceb17afa5147b SHA256 993a6f9ecfa1926002040c9be176fcdffbd2a112b076eb0ab531c021a4db8ee8
-MD5 cddf3830a5ff975aa6ead014e7e0fc57 mozilla-firefox-bin-2.0.0.4.ebuild 4143
-RMD160 9135d7f9eb7f2a51fd60dc0a7350680648cdf157 mozilla-firefox-bin-2.0.0.4.ebuild 4143
-SHA256 993a6f9ecfa1926002040c9be176fcdffbd2a112b076eb0ab531c021a4db8ee8 mozilla-firefox-bin-2.0.0.4.ebuild 4143
+EBUILD mozilla-firefox-bin-2.0.0.4.ebuild 4142 RMD160 de3fd8ac648305a5e7893079751aa18ed0ced123 SHA1 9bcb591255f67e9887addfca9b7931a087b983d7 SHA256 7a8336ba1fe6bfcb0ba33120cd0545cc6136139fb0b2b393380888d1fbbd178b
+MD5 e334e4ded3be582a0eb469d48eb15549 mozilla-firefox-bin-2.0.0.4.ebuild 4142
+RMD160 de3fd8ac648305a5e7893079751aa18ed0ced123 mozilla-firefox-bin-2.0.0.4.ebuild 4142
+SHA256 7a8336ba1fe6bfcb0ba33120cd0545cc6136139fb0b2b393380888d1fbbd178b mozilla-firefox-bin-2.0.0.4.ebuild 4142
 MISC ChangeLog 19690 RMD160 eada0b6a08f8307fb7100e8b542cd9887da67b14 SHA1 9323820be53c0efadffe8efb3af1d7725992be71 SHA256 060b7f276e6db699ae744f63f9118cb6529a193cbc18869544451d37407f06db
 MD5 49e1bec8722ff04cd9a7d3bb24555adc ChangeLog 19690
 RMD160 eada0b6a08f8307fb7100e8b542cd9887da67b14 ChangeLog 19690
