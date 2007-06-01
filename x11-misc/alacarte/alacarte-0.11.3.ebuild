@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3.ebuild,v 1.2 2007/04/16 17:13:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3.ebuild,v 1.3 2007/06/01 02:27:52 dang Exp $
 
 inherit gnome2 python eutils
 
@@ -14,7 +14,7 @@ SLOT=0
 
 RDEPEND=">=dev-lang/python-2.4
 		 >=dev-python/pygtk-2.8
-		 >=gnome-base/gnome-menus-2.15"
+		 >=gnome-base/gnome-menus-2.18"
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
 		>=dev-util/intltool-0.35
