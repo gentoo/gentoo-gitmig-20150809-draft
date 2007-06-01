@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.4.ebuild,v 1.1 2007/06/01 16:26:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.4.ebuild,v 1.2 2007/06/01 16:51:09 zzam Exp $
 
 inherit eutils qt4
 
@@ -42,6 +42,6 @@ src_install() {
 	make_desktop_entry ttcut TTCut "" "AudioVideo;Video;AudioVideoEditing" || \
 		die "Couldn't make ttcut desktop entry"
 
-	dodoc AUTHORS BUGS CHANGELOG COPYING INSTALL.DE \
-		INSTALL.EN README.DE README.EN TODO || die "Couldn't install documentation"
+	dodoc AUTHORS BUGS CHANGELOG \
+		README.DE README.EN TODO || die "Couldn't install documentation"
 }
