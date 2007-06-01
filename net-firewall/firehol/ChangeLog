@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.30 2007/05/15 13:59:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.31 2007/06/01 14:03:10 centic Exp $
+
+*firehol-1.256 (01 Jun 2007)
+
+  01 Jun 2007; <dstadler@gentoo.org> +files/firehol-1.256-printf.patch,
+  +firehol-1.256.ebuild:
+  Bump to version 1.256, fixes bug 180302, thanks for providing patches
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
