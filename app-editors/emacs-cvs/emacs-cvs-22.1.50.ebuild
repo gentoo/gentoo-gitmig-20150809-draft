@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.13 2007/06/01 06:09:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.14 2007/06/01 18:42:08 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -151,6 +151,7 @@ src_compile() {
 
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
+		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
@@ -167,13 +168,8 @@ src_install () {
 
 	# move info documentation to the correct place
 	einfo "Fixing info documentation ..."
-	dodir /usr/share/info/${EMACS_SUFFIX}
-	mv "${D}"/usr/share/info/{,${EMACS_SUFFIX}/}dir || die "mv dir failed"
-	for i in "${D}"/usr/share/info/*
-	do
-		if [ "${i##*/}" != ${EMACS_SUFFIX} ] ; then
-			mv ${i} ${i/info/info/${EMACS_SUFFIX}}.info
-		fi
+	for i in "${D}"/usr/share/info/${EMACS_SUFFIX}/*; do
+		mv ${i} ${i}.info || die "mv info failed"
 	done
 
 	# move man pages to the correct place

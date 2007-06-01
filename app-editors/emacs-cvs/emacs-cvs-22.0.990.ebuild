@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.990.ebuild,v 1.7 2007/06/01 06:09:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.990.ebuild,v 1.8 2007/06/01 18:42:08 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -137,6 +137,7 @@ src_compile() {
 
 	econf \
 		--program-suffix=-emacs-${SLOT} \
+		--infodir=/usr/share/info/emacs-${SLOT} \
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
@@ -153,13 +154,8 @@ src_install () {
 
 	# move info documentation to the correct place
 	einfo "Fixing info documentation ..."
-	dodir /usr/share/info/emacs-${SLOT}
-	mv "${D}"/usr/share/info/{,emacs-${SLOT}/}dir || die "mv dir failed"
-	for i in "${D}"/usr/share/info/*
-	do
-		if [ "${i##*/}" != emacs-${SLOT} ] ; then
-			mv ${i} ${i/info/info/emacs-${SLOT}}.info
-		fi
+	for i in "${D}"/usr/share/info/emacs-${SLOT}/*; do
+		mv ${i} ${i}.info || die "mv info failed"
 	done
 
 	# move man pages to the correct place
