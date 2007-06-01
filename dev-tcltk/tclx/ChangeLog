@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.37 2007/06/01 05:11:12 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.38 2007/06/01 21:52:52 armin76 Exp $
+
+  01 Jun 2007; Raúl Porcel <armin76@gentoo.org> tclx-8.4-r1.ebuild:
+  Add ~alpha wrt #176268
 
   01 Jun 2007; Peter Weller <welp@gentoo.org> tclx-8.4-r1.ebuild:
   Stable on amd64 wrt bug 176268
