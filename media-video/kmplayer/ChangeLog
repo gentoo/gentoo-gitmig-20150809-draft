@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.99 2007/05/12 11:37:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.100 2007/06/01 14:32:05 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> kmplayer-0.9.4a-r1.ebuild:
+  Stable on ppc wrt bug 176893
 
   12 May 2007; Markus Rothe <corsair@gentoo.org> kmplayer-0.9.4a-r1.ebuild:
   Stable on ppc64; bug #176893
