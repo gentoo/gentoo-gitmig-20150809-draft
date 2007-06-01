@@ -1,0 +1,29 @@
+diff -ur ffmpegthumbnailer-1.1.1.orig/src/moviedecoder.cpp ffmpegthumbnailer-1.1.1/src/moviedecoder.cpp
+--- ffmpegthumbnailer-1.1.1.orig/src/moviedecoder.cpp	2007-05-07 21:05:11.000000000 +0300
++++ ffmpegthumbnailer-1.1.1/src/moviedecoder.cpp	2007-06-01 22:47:21.000000000 +0300
+@@ -3,7 +3,10 @@
+ 
+ #include <assert.h>
+ #include <iostream>
++
++extern "C" {
+ #include <ffmpeg/swscale.h>
++}
+ 
+ using namespace std;
+ 
+diff -ur ffmpegthumbnailer-1.1.1.orig/src/moviedecoder.h ffmpegthumbnailer-1.1.1/src/moviedecoder.h
+--- ffmpegthumbnailer-1.1.1.orig/src/moviedecoder.h	2007-05-07 20:49:26.000000000 +0300
++++ ffmpegthumbnailer-1.1.1/src/moviedecoder.h	2007-06-01 22:41:01.000000000 +0300
+@@ -7,8 +7,11 @@
+ 
+ #include <string>
+ #include <vector>
++
++extern "C" {
+ #include <ffmpeg/avcodec.h>
+ #include <ffmpeg/avformat.h>
++}
+ 
+ typedef unsigned char byte;
+ 
