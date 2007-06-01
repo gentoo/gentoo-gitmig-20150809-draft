@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfprint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.99 2007/05/27 07:26:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.100 2007/06/01 00:11:55 ranger Exp $
+
+  01 Jun 2007; Brent Baude <ranger@gentoo.org> xfprint-4.4.1.ebuild:
+  Marking xfprint-4.4.1 ppc64 stable for bug #178510
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> xfprint-4.4.1.ebuild:
   Stable on mips.
