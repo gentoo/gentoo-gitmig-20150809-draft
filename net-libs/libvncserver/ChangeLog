@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.22 2007/06/01 11:40:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.23 2007/06/01 17:05:36 nixnut Exp $
+
+  01 Jun 2007; nixnut <nixnut@gentoo.org> libvncserver-0.9.ebuild:
+  Stable on ppc wrt bug 180174
 
   01 Jun 2007; Raúl Porcel <armin76@gentoo.org> libvncserver-0.9.ebuild:
   x86 stable wrt #180174
