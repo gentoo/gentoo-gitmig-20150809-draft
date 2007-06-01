@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.3.ebuild,v 1.5 2007/06/01 12:51:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.3.ebuild,v 1.6 2007/06/01 15:31:06 betelgeuse Exp $
 
 inherit base java-pkg-2
 
@@ -31,6 +31,12 @@ src_compile() {
 		econf --enable-jacl --without-jikes || die
 	JAVAC_FLAGS="${jflags}" \
 		emake DESTDIR="/usr/share/${PN}" || die "emake failed"
+}
+
+src_test() {
+	emake check || die "Tests failed"
+	einfo "Some tests are known to fail. We didn't restrict them"
+	einfo "because the ebuild doesn't die."
 }
 
 src_install() {
