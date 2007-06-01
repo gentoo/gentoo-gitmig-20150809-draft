@@ -1,0 +1,6 @@
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/access"
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/context"
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/create"
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/member"
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/relabel"
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/user"
