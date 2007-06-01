@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.33.ebuild,v 1.1 2007/05/22 16:37:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.34.ebuild,v 1.1 2007/06/01 09:08:36 genstef Exp $
 
 inherit fixheadtails linux-info
 
