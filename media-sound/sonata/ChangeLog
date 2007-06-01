@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.12 2007/05/26 16:30:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.13 2007/06/01 14:34:47 ticho Exp $
+
+  01 Jun 2007; Andrej Kacian <ticho@gentoo.org> sonata-1.0.1.ebuild,
+  sonata-1.1.1.ebuild:
+  Update DESCRIPTION to match upstream homepage.
 
 *sonata-1.1.1 (26 May 2007)
 

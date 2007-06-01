@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.1.1.ebuild,v 1.1 2007/05/26 16:30:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.1.1.ebuild,v 1.2 2007/06/01 14:34:47 ticho Exp $
 
 inherit distutils
 
 DESCRIPTION="A lightweight music player for MPD, written in Python."
+DESCRIPTION="Sonata is an elegant GTK+ music client for the Music Player Daemon (MPD)."
 HOMEPAGE="http://sonata.berlios.de/"
 SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
