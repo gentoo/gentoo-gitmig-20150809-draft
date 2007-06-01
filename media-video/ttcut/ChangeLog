@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.3 2007/05/14 19:55:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.4 2007/06/01 16:26:29 zzam Exp $
+
+*ttcut-0.19.4 (01 Jun 2007)
+
+  01 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  -ttcut-0.11.4_alpha.ebuild, -ttcut-0.19.2.ebuild, -ttcut-0.19.3.ebuild,
+  +ttcut-0.19.4.ebuild:
+  Version bumped, thanks to Daniel Pielmeier.
 
 *ttcut-0.19.3 (14 May 2007)
 
