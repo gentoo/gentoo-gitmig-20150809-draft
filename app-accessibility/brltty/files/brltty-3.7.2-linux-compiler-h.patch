@@ -1,0 +1,11 @@
+--- brltty-3.7.2/Programs/usb_linux.c	2006-07-12 13:27:57.000000000 +0200
++++ brltty-3.7.2/Programs/usb_linux.c	2006-07-12 13:27:28.000000000 +0200
+@@ -30,7 +30,7 @@
+ #include <sys/stat.h>
+ #include <sys/vfs.h>
+ #include <sys/ioctl.h>
+-#include <linux/compiler.h>
++// #include <linux/compiler.h>
+ #include <linux/usbdevice_fs.h>
+ 
+ #ifndef USBDEVFS_DISCONNECT

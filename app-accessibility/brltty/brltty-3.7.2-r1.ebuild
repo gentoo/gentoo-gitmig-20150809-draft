@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2-r1.ebuild,v 1.2 2007/03/29 02:24:07 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2-r1.ebuild,v 1.3 2007/06/01 06:54:21 williamh Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -13,17 +13,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gpm usb X"
 
-RDEPEND="virtual/libc
-	gpm? ( >=sys-libs/gpm-1.20 )
+DEPEND=" gpm? ( >=sys-libs/gpm-1.20 )
 	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
-DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch "${FILESDIR}"/${PN}-3.7.2-nostrip.patch
+	epatch "${FILESDIR}"/${P}-nostrip.patch
+	epatch "${FILESDIR}"/${P}-linux-compiler-h.patch
 }
 
 src_compile() {

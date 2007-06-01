@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.53 2007/03/29 02:24:07 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.54 2007/06/01 06:54:21 williamh Exp $
+
+  01 Jun 2007; William Hubbs <williamh@gentoo.org>
+  +files/brltty-3.7.2-linux-compiler-h.patch, brltty-3.7.2-r1.ebuild:
+  Added the patch from fedora to fix bug #155887.
+  Also cleaned up the dependencies.
 
   29 Mar 2007; William Hubbs <williamh@gentoo.org> brltty-3.7.2-r1.ebuild:
   Fixed a typo that prevented installing the startup script.
