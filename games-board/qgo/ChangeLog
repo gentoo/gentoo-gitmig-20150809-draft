@@ -1,6 +1,10 @@
 # ChangeLog for games-board/qgo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.25 2007/01/12 09:52:33 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.26 2007/06/02 10:00:02 tupone Exp $
+
+  02 Jun 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/qgo-1.5.3-parallel.patch, qgo-1.5.3.ebuild:
+  Fix double install of data files, bug #161362 by Martin von Gagern
 
 *qgo-1.5.3 (12 Jan 2007)
 
