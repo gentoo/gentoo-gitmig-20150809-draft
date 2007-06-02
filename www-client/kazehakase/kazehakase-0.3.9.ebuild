@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.3.9.ebuild,v 1.7 2006/10/04 14:46:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.3.9.ebuild,v 1.8 2007/06/02 02:41:57 matsuu Exp $
+
+inherit flag-o-matic
 
 IUSE="hyperestraier migemo ruby ssl thumbnail"
 
@@ -27,6 +29,9 @@ RDEPEND="${DEPEND}
 
 src_compile(){
 	local myconf
+
+	# Bug 159949
+	replace-flags -Os -O2
 
 	if use hyperestraier; then
 		myconf="${myconf} --with-search-engine=hyperestraier"

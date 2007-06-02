@@ -1,6 +1,10 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.41 2007/05/31 16:03:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.42 2007/06/02 02:41:57 matsuu Exp $
+
+  02 Jun 2007; MATSUU Takuto <matsuu@gentoo.org> kazehakase-0.3.9.ebuild,
+  kazehakase-0.4.7.ebuild:
+  Added replace-flags -Os -O2, bug #159949.
 
   31 May 2007; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.4.0.ebuild,
   -kazehakase-0.4.1.ebuild, -kazehakase-0.4.2.ebuild,
