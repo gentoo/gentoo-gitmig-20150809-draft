@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.38 2007/06/01 21:52:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.39 2007/06/02 15:48:57 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> tclx-8.4-r1.ebuild:
+  Stabilizing latest as actual stable doesn't work with stable gcc
 
   01 Jun 2007; Raúl Porcel <armin76@gentoo.org> tclx-8.4-r1.ebuild:
   Add ~alpha wrt #176268
