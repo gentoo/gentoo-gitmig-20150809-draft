@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.45 2007/05/30 18:16:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.46 2007/06/02 18:57:13 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> package.mask, use.mask:
+  P.mask libgii and libggi as it doesn't compile and mask ggi use-flag
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   P.mask dev-util/ltrace as it doesn't work

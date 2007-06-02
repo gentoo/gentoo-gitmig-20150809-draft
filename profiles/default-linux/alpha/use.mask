@@ -1,11 +1,16 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.63 2007/05/30 12:28:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.64 2007/06/02 18:57:13 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
 # profile (such as the selinux profiles) have a USE flag associated with
 # them.
+
+# 2 Jun 2007 Raúl Porcel <armin76@gentoo.org>
+# No version works with actual setup, it's fixed using
+# newer linux-headers
+ggi
 
 # 14 May 2007 Raúl Porcel <armin76@gentoo.org>
 # Alpha doesn't have wpa_supplicant keyworded, bug 175714
