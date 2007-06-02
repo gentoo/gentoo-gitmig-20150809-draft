@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.24 2007/06/01 11:32:14 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.25 2007/06/02 21:27:00 killerfox Exp $
+
+  02 Jun 2007; René Nussbaumer <killerfox@gentoo.org>
+  transmission-0.72.ebuild:
+  Stable on ppc. See bug #180525.
 
   01 Jun 2007; Peter Weller <welp@gentoo.org> transmission-0.72.ebuild:
   Stable on amd64 wrt security bug 180525
