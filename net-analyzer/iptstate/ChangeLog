@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptstate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.22 2007/06/02 00:40:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.23 2007/06/02 03:31:27 jer Exp $
+
+  02 Jun 2007; Jeroen Roovers <jer@gentoo.org> iptstate-2.2.1.ebuild:
+  Marked ~hppa (bug #175564).
 
 *iptstate-2.2.1 (02 Jun 2007)
 
