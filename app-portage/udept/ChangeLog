@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/udept
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.8 2006/11/01 19:32:35 fuzzyray Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.9 2007/06/02 03:22:21 kumba Exp $
+
+  02 Jun 2007; Joshua Kinard <kumba@gentoo.org> udept-0.5.96.2.ebuild:
+  Mark unstable on mips.
 
 *udept-0.5.99.0.2.95-r1 (01 Nov 2006)
 
