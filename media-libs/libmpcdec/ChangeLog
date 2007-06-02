@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmpcdec
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/ChangeLog,v 1.22 2007/06/02 19:40:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/ChangeLog,v 1.23 2007/06/02 19:46:34 aballier Exp $
+
+  02 Jun 2007; Alexis Ballier <aballier@gentoo.org> -libmpcdec-1.2.4.ebuild,
+  libmpcdec-1.2.6.ebuild:
+  Remove version that had abi changes without so number bump, remove unneeded
+  inherit from 1.2.6
 
 *libmpcdec-1.2.6 (02 Jun 2007)
 

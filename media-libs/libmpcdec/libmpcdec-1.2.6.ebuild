@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/libmpcdec-1.2.6.ebuild,v 1.1 2007/06/02 19:40:41 aballier Exp $
-
-inherit autotools
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/libmpcdec-1.2.6.ebuild,v 1.2 2007/06/02 19:46:34 aballier Exp $
 
 DESCRIPTION="Musepack decoder library"
 HOMEPAGE="http://www.musepack.net"
