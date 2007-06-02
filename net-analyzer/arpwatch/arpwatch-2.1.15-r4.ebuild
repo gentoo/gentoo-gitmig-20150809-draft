@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r4.ebuild,v 1.7 2007/05/05 17:59:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r4.ebuild,v 1.8 2007/06/02 22:37:16 jokey Exp $
 
 inherit eutils versionator
 
@@ -53,23 +53,8 @@ src_install () {
 	keepdir /var/lib/arpwatch
 	dodoc README CHANGES
 
-	newinitd "${FILESDIR}"/arpwatch.init-2 arpwatch
+	newinitd "${FILESDIR}"/arpwatch.initd arpwatch
 	newconfd "${FILESDIR}"/arpwatch.confd arpwatch
-}
-
-pkg_config() {
-	enewgroup arpwatch
-	enewuser arpwatch -1 -1 /var/lib/arpwatch arpwatch
-
-	einfo "Setting permitions for data directory"
-	chown -R arpwatch:arpwatch /var/lib/arpwatch
-
-	cat >> /etc/conf.d/arpwatch << EOF
-
-# Uncomment this line if you wish arpwatch to drop privileges.
-ARPUSER="arpwatch"
-EOF
-	einfo "Done."
 }
 
 pkg_postinst() {

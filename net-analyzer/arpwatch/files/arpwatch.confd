@@ -7,3 +7,7 @@ IFACES="eth0"
 
 # Additional options to pass to arpwatch.
 OPTIONS="-N -p"
+
+# Uncomment this line if you wish arpwatch to drop privileges.
+# Don't forget to adjust permissions on /var/lib/arpwarch
+#ARPUSER="arpwatch"
