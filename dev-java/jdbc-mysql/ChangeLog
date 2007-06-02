@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.47 2007/05/31 15:52:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.48 2007/06/02 18:24:29 nixnut Exp $
+
+  02 Jun 2007; nixnut <nixnut@gentoo.org> jdbc-mysql-3.1.13-r5.ebuild:
+  Stable on ppc wrt bug 179939
 
   31 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -jdbc-mysql-3.1.10.ebuild, jdbc-mysql-3.1.13-r5.ebuild:
