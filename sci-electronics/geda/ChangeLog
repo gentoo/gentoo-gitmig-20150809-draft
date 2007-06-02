@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.34 2007/04/05 07:00:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.35 2007/06/02 16:19:51 calchan Exp $
+
+*geda-20070526 (02 Jun 2007)
+
+  02 Jun 2007; Denis Dupeyron <calchan@gentoo.org> +geda-20070526.ebuild:
+  Version bump, thanks to Stefan Salewski (bug #180465).
 
   05 Apr 2007; Denis Dupeyron <calchan@gentoo.org> geda-20070216.ebuild:
   Fixed bug #173398, thanks to Stefan Salewski.
