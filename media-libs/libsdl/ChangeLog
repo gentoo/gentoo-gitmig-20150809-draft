@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.129 2007/04/25 14:04:38 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.130 2007/06/02 16:25:10 jer Exp $
+
+  02 Jun 2007; Jeroen Roovers <jer@gentoo.org> libsdl-1.2.11-r2.ebuild:
+  Stable for HPPA : the unrevised 1.2.11 does not build because of sanitised
+  headers.
 
   25 Apr 2007; Alexander Færøy <eroyf@gentoo.org> libsdl-1.2.11-r2.ebuild:
   Stable on MIPS.
