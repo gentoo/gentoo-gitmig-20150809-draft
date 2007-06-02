@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.46 2007/04/01 06:45:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.47 2007/06/02 03:21:36 jer Exp $
+
+  02 Jun 2007; Jeroen Roovers <jer@gentoo.org> libggi-2.2.2.ebuild:
+  Stable for HPPA (bug #180569).
 
   01 Apr 2007; Samuli Suominen <drac@gentoo.org> libggi-2.2.2.ebuild:
   Warn users about API change with elog.
