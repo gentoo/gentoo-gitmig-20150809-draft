@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.5 2007/05/06 21:24:59 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.6 2007/06/02 21:34:20 rbu Exp $
 
 # This file contains descriptions of LCD_DEVICES USE_EXPAND flags.
 
@@ -31,6 +31,7 @@ lcdterm - Add support for LCDTerm serial-to-HD44780 adapter boards
 lcterm - Add support for Neumark's LCTerm serial LCD
 ledmatrix - Add support for SLM1606/8 LED Matrix displays
 lph7508 - Add support for the Pollin LPH7508
+luise - Add support for the Wallbraun Electronics LCD-USB-Interface to Hitachi SP14Q002
 m50530 - Add support for M50530 and compatible displays
 md8800 - Add support for the VFD of the Medion MD8800 PC
 milfordbpk - Add support for Milford Instruments BPK serial interface board for HD44780

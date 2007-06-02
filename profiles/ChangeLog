@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.444 2007/06/02 21:16:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.445 2007/06/02 21:34:20 rbu Exp $
+
+  02 Jun 2007; Robert Buchholz <rbu@gentoo.org> desc/lcd_devices.desc:
+  Added luise to LCD_DEVICES
 
   02 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Removed mask for >=kde-misc/tork-0.13. Fixes bug 180330.
