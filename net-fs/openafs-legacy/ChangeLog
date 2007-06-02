@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs-legacy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.4 2007/02/09 04:13:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.5 2007/06/02 11:57:21 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> openafs-legacy-0.1.ebuild:
+  Drop ia64 keyword as it doesn't work with current glibc, bug 156008
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

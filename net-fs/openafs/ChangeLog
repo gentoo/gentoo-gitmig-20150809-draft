@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.108 2007/05/07 14:53:29 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.109 2007/06/02 11:51:33 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> openafs-1.2.13-r2.ebuild,
+  openafs-1.4.0-r2.ebuild, openafs-1.4.2.ebuild, openafs-1.4.3_rc2.ebuild,
+  openafs-1.4.3_rc3.ebuild, openafs-1.4.4.ebuild, openafs-1.5.19.ebuild:
+  Drop ia64 keyword as it doesn't work with current glibc, bug 156008
 
 *openafs-1.5.19 (07 May 2007)
 

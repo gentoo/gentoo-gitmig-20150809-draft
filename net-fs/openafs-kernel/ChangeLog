@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.67 2007/05/07 14:52:23 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.68 2007/06/02 11:54:00 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  openafs-kernel-1.2.13.ebuild, openafs-kernel-1.4.0-r1.ebuild,
+  openafs-kernel-1.4.2-r2.ebuild, openafs-kernel-1.4.3_rc2.ebuild,
+  openafs-kernel-1.4.3_rc3.ebuild, openafs-kernel-1.4.4.ebuild,
+  openafs-kernel-1.5.19.ebuild:
+  Drop ia64 keyword as it doesn't work with current glibc, bug 156008
 
 *openafs-kernel-1.5.19 (07 May 2007)
 
