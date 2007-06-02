@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcifs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.8 2007/05/30 16:54:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.9 2007/06/02 09:48:29 opfer Exp $
+
+  02 Jun 2007; Christian Faulhammer <opfer@gentoo.org> jcifs-1.2.13.ebuild:
+  stable x86, bug 180363
 
   30 May 2007; Petteri Räty <betelgeuse@gentoo.org> jcifs-1.2.13.ebuild:
   Add examples use flag.

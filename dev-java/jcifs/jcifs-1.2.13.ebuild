@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.2.13.ebuild,v 1.2 2007/05/30 16:54:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.2.13.ebuild,v 1.3 2007/06/02 09:48:29 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://jcifs.samba.org/src/${P}.tgz"
 HOMEPAGE="http://jcifs.samba.org/"
 LICENSE="LGPL-2.1"
 SLOT="1.1"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/servletapi-2.4*"
 DEPEND=">=virtual/jdk-1.4
