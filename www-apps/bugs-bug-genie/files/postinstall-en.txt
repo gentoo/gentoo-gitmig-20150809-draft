@@ -1,2 +1,6 @@
 To configure BUGS - The Bug Genie please use install.php
 After you've configured BUGS, please delete install.php
+
+If this is a new installation, you may need to create
+  include/userbase_connect.inc.php
+and make it writeable by the webserver.

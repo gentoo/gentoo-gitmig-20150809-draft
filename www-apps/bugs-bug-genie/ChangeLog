@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/bugs-bug-genie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.12 2007/05/12 04:15:15 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.13 2007/06/02 05:28:44 rl03 Exp $
+
+*bugs-bug-genie-1.8 (02 Jun 2007)
+
+  02 Jun 2007; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
+  -bugs-bug-genie-1.7.2.ebuild, +bugs-bug-genie-1.8.ebuild:
+  Version bump
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org>
   bugs-bug-genie-1.7.2.ebuild:
