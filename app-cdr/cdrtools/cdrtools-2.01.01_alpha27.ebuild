@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha27.ebuild,v 1.1 2007/06/02 13:58:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha27.ebuild,v 1.2 2007/06/02 14:24:59 pylon Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -30,6 +30,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.01.01a03-warnings.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01a01-scanbus.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01a18-rezero.patch
+
+	use unicode && epatch "${FILESDIR}"/mkisofs-iconv-25.patch
 
 	# ppc-macos support
 	cd "${S}"/DEFAULTS
