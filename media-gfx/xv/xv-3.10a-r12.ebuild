@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.15 2006/05/23 18:16:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.16 2007/06/02 18:28:26 lavajoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,13 +11,14 @@ SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.bz2 ftp:/
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc-macos ppc64 sparc x86 ~x86-fbsd"
 IUSE="jpeg tiff png"
 
 DEPEND="|| ( x11-libs/libXt virtual/x11 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )
 	png? ( >=media-libs/libpng-1.2 >=sys-libs/zlib-1.1.4 )"
+RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A}
@@ -31,8 +32,10 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-jumbo-fix-patch-20050410.txt || die
 	epatch ${WORKDIR}/${P}-jumbo-enh-patch-${JUMBOV}.txt || die
 
-	# OSX malloc and define patches
-	epatch "${FILESDIR}/${P}"-r12-xv-osx.patch || die
+	# OSX and BSD xv.h define patches
+	epatch "${FILESDIR}/${P}"-osx-bsd.patch || die
+
+	# OSX malloc patch
 	epatch "${FILESDIR}/${P}"-vdcomp-osx.patch || die
 
 	sed -i	-e 's/\(^JPEG.*\)/#\1/g' \
