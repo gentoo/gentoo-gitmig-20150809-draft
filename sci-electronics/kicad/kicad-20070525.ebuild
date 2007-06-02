@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070525.ebuild,v 1.1 2007/05/31 06:09:10 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070525.ebuild,v 1.2 2007/06/02 16:56:24 calchan Exp $
 
 inherit wxwidgets
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc examples minimal unicode"
 
-DEPEND=">=x11-libs/wxGTK-2.6
-	media-gfx/wings"
+DEPEND=">=x11-libs/wxGTK-2.6"
 
 pkg_setup() {
 	# Tell wxwidgets.eclass the version we need. We pick the latest on the system.
@@ -104,4 +103,6 @@ pkg_postinst() {
 		elog "${HOMEPAGE}"
 		elog "and install them manually."
 	fi
+	elog
+	elog "You may want to emerge media-gfx/wings if you want to create 3D models of components."
 }
