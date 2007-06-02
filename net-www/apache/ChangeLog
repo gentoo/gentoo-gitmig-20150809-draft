@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.531 2007/06/02 08:05:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.532 2007/06/02 19:34:35 chtekk Exp $
+
+  02 Jun 2007; Luca Longinotti <chtekk@gentoo.org> apache-2.2.4-r4.ebuild:
+  Expand elog message for upgrades.
 
   02 Jun 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r4.ebuild:
   Adding the missing mods="${mods} suexec" declaration to the ebuild, fixing

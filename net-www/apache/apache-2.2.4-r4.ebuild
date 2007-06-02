@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.3 2007/06/02 08:05:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.4 2007/06/02 19:34:35 chtekk Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -345,8 +345,6 @@ pkg_postinst() {
 	fi
 
 	# Check for dual/upgrade install
-	# The hasq is a hack so we don't throw QA warnings for not putting
-	# apache2 in IUSE - the only use of the flag is this warning
 
 	if has_version '<net-www/apache-2.2.0' ; then
 		elog
@@ -355,7 +353,9 @@ pkg_postinst() {
 		elog "to continue working correctly."
 		elog
 		elog "Also note that some configuration directives have been"
-		elog "split into their own files under ${ROOT}/etc/apache2/modules.d."
+		elog "split into their own files under ${ROOT}/etc/apache2/modules.d/"
+		elog "and that some modules, foremost the authentication related ones,"
+		elog "have been renamed."
 		elog
 		elog "Some examples:"
 		elog "  - USERDIR is now configureable in ${ROOT}etc/apache2/modules.d/00_mod_userdir.conf."
@@ -363,6 +363,8 @@ pkg_postinst() {
 		elog "For more information on what you may need to change, please"
 		elog "see the overview of changes at:"
 		elog "http://httpd.apache.org/docs/2.2/new_features_2_2.html"
+		elog "and the upgrading guide at:"
+		elog "http://httpd.apache.org/docs/2.2/upgrading.html"
 		elog
 		elog "Some modules do not yet work with Apache 2.2."
 		elog "To keep from accidentally downgrading to Apache 2.0, you should"
