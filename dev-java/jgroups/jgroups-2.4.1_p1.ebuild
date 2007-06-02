@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.4.1_p1.ebuild,v 1.2 2007/05/30 08:46:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.4.1_p1.ebuild,v 1.3 2007/06/02 18:01:14 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/javagroups/${MY_P}.src.zip"
 HOMEPAGE="http://www.jgroups.org/javagroupsnew/docs/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/bsh
 	dev-java/commons-logging
