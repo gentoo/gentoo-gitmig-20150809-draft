@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/nfbtrans
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.10 2007/02/09 07:07:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.11 2007/06/02 03:48:11 dmwaters Exp $
+
+  02 Jun 2007; deedra waters <dmwaters@gentoo.org> nfbtrans-7.74.ebuild:
+  Adding ~amd64 keyword.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
