@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.64 2007/06/02 05:12:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.65 2007/06/02 12:28:55 angelos Exp $
+
+  02 Jun 2007; Christoph Mende <angelos@gentoo.org> phppgadmin-4.1.2.ebuild:
+  Stable on amd64 wrt security bug 180133
 
 *phppgadmin-4.1.2 (02 Jun 2007)
 
