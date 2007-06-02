@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.5 2007/04/14 21:02:27 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.6 2007/06/02 22:14:41 jokey Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://net.doit.wisc.edu/~plonka/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 RDEPEND="|| ( app-shells/pdksh app-shells/ksh )
