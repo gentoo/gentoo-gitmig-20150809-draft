@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/rlocate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.23 2007/06/02 10:20:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.24 2007/06/02 19:01:37 zzam Exp $
+
+  02 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> +files/updatedb.conf,
+  rlocate-0.5.5.ebuild:
+  Added updatedb.conf file of slocate, fixing Bug #162739.
 
   02 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> rlocate-0.5.5.ebuild:
   Make sure /var/lib/rlocate exists, solving Bug #144229.

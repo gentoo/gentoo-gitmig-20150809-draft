@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.5.5.ebuild,v 1.2 2007/06/02 10:20:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.5.5.ebuild,v 1.3 2007/06/02 19:01:37 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -46,4 +46,6 @@ src_install() {
 	linux-mod_src_install
 	dodoc AUTHORS ChangeLog* NEWS README
 	keepdir /var/lib/rlocate
+	insinto /etc
+	doins "${FILESDIR}/updatedb.conf"
 }
