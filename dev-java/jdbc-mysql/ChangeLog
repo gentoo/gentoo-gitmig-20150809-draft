@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.49 2007/06/02 21:49:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.50 2007/06/02 21:51:21 betelgeuse Exp $
+
+  02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jdbc-mysql-3.1.13-r4.ebuild:
+  Remove ebuild using jdbc2-stdext.
 
   02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   jdbc-mysql-3.1.13-r5.ebuild:
