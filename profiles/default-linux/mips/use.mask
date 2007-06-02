@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.89 2007/05/27 17:52:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.90 2007/06/02 06:41:18 kumba Exp $
 
 # 22 May 2007; Christian Heim <phreak@gentoo.org>
 # unmask ip28 and ip32r10k only on mips
@@ -326,3 +326,7 @@ openct
 # lived.
 cpufreq
 battery
+
+# kumba (02 Jun 2007)
+# pulseaudio hasn't been tested on mips; maybe someday
+pulseaudio
