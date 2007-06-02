@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/galib
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.6 2006/09/26 23:51:45 markusle Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.7 2007/06/02 13:04:50 angelos Exp $
+
+  02 Jun 2007; Christoph Mende <angelos@gentoo.org> galib-2.4.6.ebuild:
+  Added ~amd64 for bug 178262
 
   26 Sep 2006; Markus Dittrich <markusle@gentoo.org>
   +files/galib-2.4.6-gcc4-gentoo.patch, galib-2.4.6.ebuild:
