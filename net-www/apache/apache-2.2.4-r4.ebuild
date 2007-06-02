@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.1 2007/05/27 16:15:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.2 2007/06/02 07:30:36 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -31,7 +31,8 @@ DEPEND="dev-lang/perl
 	ldap? ( =net-nds/openldap-2* )
 	selinux? ( sec-policy/selinux-apache )
 	ssl? ( dev-libs/openssl )
-	!=net-www/apache-1*"
+	!=net-www/apache-1*
+	!=app-admin/apache-tools-2.2.4-r2"
 
 RDEPEND="${DEPEND}
 	app-misc/mime-types"

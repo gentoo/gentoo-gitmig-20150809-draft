@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.529 2007/05/27 16:15:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.530 2007/06/02 07:30:36 phreak Exp $
+
+  02 Jun 2007; Christian Heim <phreak@gentoo.org> apache-2.2.4-r4.ebuild:
+  Adding a blocker, due to apxs.8 previously belonging to apache-tools, which
+  needs to be in apache now.
 
 *apache-2.2.4-r4 (27 May 2007)
 
