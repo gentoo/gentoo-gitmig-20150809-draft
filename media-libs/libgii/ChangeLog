@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.32 2007/06/02 03:19:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.33 2007/06/02 19:05:23 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> libgii-1.0.2.ebuild:
+  alpha/ia64/x86 stable wrt #180569, alpha is masked though
 
   02 Jun 2007; Jeroen Roovers <jer@gentoo.org> libgii-1.0.2.ebuild:
   Stable for HPPA (bug #180569).
