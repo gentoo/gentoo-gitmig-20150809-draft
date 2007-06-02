@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/luise-bin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/ChangeLog,v 1.1 2007/06/02 21:09:51 rbu Exp $
+
+*luise-bin-0.1.1 (02 Jun 2007)
+
+  02 Jun 2007; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
+  +luise-bin-0.1.1.ebuild:
+  Initial version
+
