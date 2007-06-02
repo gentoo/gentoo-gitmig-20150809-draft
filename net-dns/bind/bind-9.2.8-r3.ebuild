@@ -1,20 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1.ebuild,v 1.3 2007/05/11 13:17:02 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.8-r3.ebuild,v 1.1 2007/06/02 22:34:48 voxus Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
-DLZ_VERSION="9.3.3"
+DLZ_VERSION="9.2.7"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_/}/${P/_/}.tar.gz
-	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
+	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
+	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${DLZ_VERSION}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -25,8 +26,6 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
-
-S="${WORKDIR}/${P/_/}"
 
 pkg_setup() {
 	use threads && {
@@ -55,7 +54,14 @@ src_unpack() {
 			"${i}"
 	done
 
-	use dlz && epatch ${FILESDIR}/${PN}-9.4.0-dlzbdb-close_cursor.patch
+	use dlz && {
+		epatch ${DISTDIR}/dlz-${DLZ_VERSION}.patch.bz2
+		epatch ${FILESDIR}/bind-9.2.5-berkdb_fix.patch
+		epatch ${FILESDIR}/${PN}-dlzbdb-includes.patch
+		epatch ${FILESDIR}/${PN}-dlzbdb-close_cursor.patch
+
+		# use odbc && epatch ${FILESDIR}/${P}-missing_odbc_test.patch
+	}
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i ${S}/bin/Makefile.in
@@ -63,8 +69,8 @@ src_unpack() {
 	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
 
 	# bug #151839
-	sed \
-		-e 's:<config.h>:<config.h>\n\n#undef SO_BSDCOMPAT:' \
+	sed -e \
+		's:struct isc_socket {:#undef SO_BSDCOMPAT\n\nstruct isc_socket {:' \
 		-i lib/isc/unix/socket.c
 }
 
@@ -105,12 +111,6 @@ src_compile() {
 		fi
 	else
 		myconf="${myconf} --disable-linux-caps --disable-threads"
-	fi
-
-	if use urandom; then
-		myconf="${myconf} --with-randomdev=/dev/urandom"
-	else
-		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
 
 	# bug #158664
@@ -167,8 +167,8 @@ src_install() {
 	doins ${FILESDIR}/127.zone
 	newins ${FILESDIR}/localhost.zone-r2 localhost.zone
 
-	newinitd ${FILESDIR}/named.init-r4 named
-	newconfd ${FILESDIR}/named.confd-r1 named
+	newinitd ${FILESDIR}/named.init-r5 named
+	newconfd ${FILESDIR}/named.confd-r2 named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
