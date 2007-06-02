@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cryptcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.12 2007/03/20 13:33:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.13 2007/06/02 22:48:57 jokey Exp $
+
+  02 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  -cryptcat-0.20031202.ebuild, cryptcat-1.2.1.ebuild:
+  quotes and cleanup
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> cryptcat-1.2.1.ebuild:
   x86 stable

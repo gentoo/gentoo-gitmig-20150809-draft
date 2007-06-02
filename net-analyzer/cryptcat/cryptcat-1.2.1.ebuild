@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-1.2.1.ebuild,v 1.2 2007/03/20 13:33:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-1.2.1.ebuild,v 1.3 2007/06/02 22:48:57 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cryptcat/${PN}-unix-${PV}.tar"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=""
@@ -19,7 +19,7 @@ S=${WORKDIR}/unix
 
 src_unpack() {
 	unpack ${A}
-cp -a ${S} ${S}.orig
+	cp -a "${S}" "${S}".orig
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
 	echo "#define arm arm_timer" >> generic.h
@@ -31,6 +31,6 @@ cp -a ${S} ${S}.orig
 }
 
 src_install() {
-	dobin cryptcat || die
+	dobin cryptcat || die "dobin failed"
 	dodoc Changelog README README.cryptcat netcat.blurb
 }
