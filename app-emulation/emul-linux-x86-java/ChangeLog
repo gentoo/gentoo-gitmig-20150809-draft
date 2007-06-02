@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.26 2007/05/14 09:42:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.27 2007/06/02 16:41:18 betelgeuse Exp $
+
+*emul-linux-x86-java-1.6.0.1 (02 Jun 2007)
+
+  02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +emul-linux-x86-java-1.6.0.1.ebuild:
+  Version bump. Fixes security bug #178851. Depend on the emul-linux
+  packages instead of the 64 bit packages for alsa and xlibs.
 
   14 May 2007; Vlastimil Babka <caster@gentoo.org>
   -emul-linux-x86-java-1.5.0.10.ebuild:
