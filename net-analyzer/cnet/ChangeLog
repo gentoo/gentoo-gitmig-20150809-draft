@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cnet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.14 2007/04/07 04:21:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.15 2007/06/02 22:42:58 jokey Exp $
+
+  02 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/cnet-2.0.5-gentoo.patch, -files/cnet-2.0.9-gentoo.patch,
+  -files/cnet-2.0.9-parser.patch, -cnet-2.0.9.ebuild:
+  cleanup and drop old
 
   07 Apr 2007; Mike Frysinger <vapier@gentoo.org> cnet-2.0.9.ebuild,
   cnet-2.0.10.ebuild:
