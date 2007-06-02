@@ -1,10 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.1.ebuild,v 1.1 2007/06/02 16:23:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.01.ebuild,v 1.1 2007/06/02 16:59:45 betelgeuse Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
-MY_PV=$(get_version_component_range 2)u$(get_version_component_range 4)
+UPDATE="$(get_version_component_range 4)"
+UPDATE="${UPDATE#0}"
+MY_PV="$(get_version_component_range 2)u${UPDATE}"
 
 X86_AT="jdk-${MY_PV}-dlj-linux-i586.sh"
 AMD64_AT="jdk-${MY_PV}-dlj-linux-amd64.sh"
