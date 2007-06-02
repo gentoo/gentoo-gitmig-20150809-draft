@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.448 2007/06/01 22:45:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.449 2007/06/02 11:33:49 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> qt-4.3.0.ebuild:
+  Add ~ia64 wrt #180444
 
   01 Jun 2007; Jeroen Roovers <jer@gentoo.org> qt-4.3.0.ebuild:
   Marked ~hppa (bug #180444).
