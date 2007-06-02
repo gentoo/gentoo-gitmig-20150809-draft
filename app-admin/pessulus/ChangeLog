@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.34 2007/05/31 15:55:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.35 2007/06/02 02:51:05 ranger Exp $
+
+  02 Jun 2007; Brent Baude <ranger@gentoo.org> pessulus-2.16.2.ebuild:
+  Marking pessulus-2.16.2 ppc stable for bug #171107
 
   31 May 2007; Jeroen Roovers <jer@gentoo.org> pessulus-2.16.2.ebuild:
   Stable for HPPA (bug #171107).
