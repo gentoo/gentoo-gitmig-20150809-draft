@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.59 2007/06/02 08:08:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.60 2007/06/02 21:09:16 armin76 Exp $
+
+  02 Jun 2007; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.5-r6.ebuild,
+  pulseaudio-0.9.6.ebuild:
+  Add ~alpha/~ia64 wrt #180117 and alpha/ia64 stable wrt security #180203
 
   02 Jun 2007; Markus Rothe <corsair@gentoo.org> pulseaudio-0.9.5-r6.ebuild:
   Stable on ppc64; bug #180203
