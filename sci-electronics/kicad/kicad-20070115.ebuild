@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070115.ebuild,v 1.6 2007/06/02 16:56:24 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070115.ebuild,v 1.7 2007/06/02 19:41:58 philantrop Exp $
 
 inherit wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="unicode doc examples minimal"
 
 DEPEND=">=x11-libs/wxGTK-2.6"
