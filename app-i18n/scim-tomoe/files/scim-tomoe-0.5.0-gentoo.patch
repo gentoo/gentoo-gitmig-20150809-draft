@@ -1,0 +1,35 @@
+diff -Naur scim-tomoe-0.5.0.orig/configure scim-tomoe-0.5.0/configure
+--- scim-tomoe-0.5.0.orig/configure	2006-12-18 16:40:23.000000000 +0900
++++ scim-tomoe-0.5.0/configure	2007-06-02 08:56:26.000000000 +0900
+@@ -30623,7 +30623,7 @@
+ SCIM_DATADIR=`$PKG_CONFIG --variable=scimdatadir scim`
+ SCIM_ICONDIR=`$PKG_CONFIG --variable=icondir scim`
+ SCIM_MODULEDIR=`$PKG_CONFIG --variable=moduledir scim`
+-SCIM_LIBEXECDIR=`$PKG_CONFIG --variable=moduledir scim`
++SCIM_LIBEXECDIR=`$PKG_CONFIG --variable=libdir scim`/scim-1.0
+ 
+ if test "x$SCIM_DATADIR" = "x"; then
+   SCIM_DATADIR=${datadir}/scim
+@@ -30637,6 +30637,10 @@
+   SCIM_MODULEDIR=${libdir}/scim-1.0
+ fi
+ 
++if test "x$SCIM_LIBEXECDIR" = "x/scim-1.0"; then
++  SCIM_MODULEDIR=${libdir}/scim-1.0
++fi
++
+ SCIM_TOMOE_DATADIR=${SCIM_DATADIR}/tomoe
+ 
+ 
+diff -Naur scim-tomoe-0.5.0.orig/src/Makefile.in scim-tomoe-0.5.0/src/Makefile.in
+--- scim-tomoe-0.5.0.orig/src/Makefile.in	2006-12-18 16:40:22.000000000 +0900
++++ scim-tomoe-0.5.0/src/Makefile.in	2007-06-02 08:39:13.000000000 +0900
+@@ -262,7 +262,7 @@
+ 	scim_tomoe_prefs.h \
+ 	scim_tomoe_prefs_widget.h
+ 
+-moduledir = @SCIM_MODULEDIR@/`pkg-config --variable=scim_binary_version scim`/Helper
++moduledir = @SCIM_MODULEDIR@/Helper
+ module_LTLIBRARIES = tomoe.la
+ tomoe_la_SOURCES = \
+ 	scim_tomoe.cpp \

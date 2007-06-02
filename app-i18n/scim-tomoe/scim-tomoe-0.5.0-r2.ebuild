@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/scim-tomoe-0.5.0-r1.ebuild,v 1.2 2007/06/02 00:26:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/scim-tomoe-0.5.0-r2.ebuild,v 1.1 2007/06/02 00:26:52 matsuu Exp $
+
+inherit eutils
 
 DESCRIPTION="Japanese input method Tomoe IMEngine for SCIM"
 HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMTomoe"
@@ -17,7 +19,7 @@ DEPEND="|| ( >=app-i18n/scim-1.2.0 >=app-i18n/scim-cvs-1.2.0 )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e '/^moduledir = /s/`pkg-config --variable=scim_binary_version scim`\///' src/Makefile* || die
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_install() {
