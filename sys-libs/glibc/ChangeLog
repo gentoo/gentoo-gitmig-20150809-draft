@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.529 2007/06/01 13:35:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.530 2007/06/02 20:02:58 mabi Exp $
+
+  02 Jun 2007; Matti Bickel <mabi@gentoo.org> glibc-2.5-r3.ebuild:
+  ppc stable
 
   01 Jun 2007; Raúl Porcel <armin76@gentoo.org> glibc-2.5-r3.ebuild:
   ia64 stable wrt security #176712
