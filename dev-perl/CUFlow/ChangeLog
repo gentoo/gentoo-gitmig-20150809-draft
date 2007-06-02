@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CUFlow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/ChangeLog,v 1.4 2007/03/03 23:37:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/ChangeLog,v 1.5 2007/06/02 22:15:49 jokey Exp $
+
+  02 Jun 2007; Markus Ullmann <jokey@gentoo.org> CUFlow-1.5.ebuild:
+  Stable on x86
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> CUFlow-1.5.ebuild:
   Replacing einfo with elog
