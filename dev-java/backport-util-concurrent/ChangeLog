@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/backport-util-concurrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.14 2007/06/02 15:11:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.15 2007/06/02 15:13:42 betelgeuse Exp $
+
+  02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -backport-util-concurrent-1.1.01.ebuild,
+  backport-util-concurrent-3.0.ebuild:
+  Remove generation 1 ebuild and add app-arch/unzip to DEPEND for 3.0.
 
   02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   backport-util-concurrent-1.1.01-r1.ebuild:

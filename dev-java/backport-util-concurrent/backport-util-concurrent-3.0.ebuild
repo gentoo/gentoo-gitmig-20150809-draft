@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0.ebuild,v 1.2 2007/05/24 13:33:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0.ebuild,v 1.3 2007/06/02 15:13:42 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc java5 source test"
 inherit java-pkg-2 java-ant-2
@@ -17,7 +17,8 @@ IUSE=""
 
 DEPEND="java5? ( =virtual/jdk-1.5* )
 	!java5? ( =virtual/jdk-1.4* )
-	test? ( =dev-java/junit-3* )"
+	test? ( =dev-java/junit-3* )
+	app-arch/unzip"
 RDEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( >=virtual/jre-1.4 )"
 
