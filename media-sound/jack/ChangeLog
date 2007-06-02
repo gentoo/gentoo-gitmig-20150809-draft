@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.17 2007/04/28 18:02:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.18 2007/06/02 16:16:02 nixnut Exp $
+
+  02 Jun 2007; nixnut <nixnut@gentoo.org> jack-3.1.1.ebuild:
+  Stable on ppc wrt bug 172952
 
   28 Apr 2007; Markus Rothe <corsair@gentoo.org> jack-3.1.1.ebuild:
   Stable on ppc64; bug #172952
