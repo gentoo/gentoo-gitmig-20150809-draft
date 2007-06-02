@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/axis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.13 2007/05/19 21:01:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.14 2007/06/02 17:54:24 betelgeuse Exp $
+
+*axis-1.2_rc2-r2 (02 Jun 2007)
+
+  02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +axis-1.2_rc2-r2.ebuild:
+  axis compiles fine against the latest slot of dev-java/castor so use that
 
   19 May 2007; Petteri Räty <betelgeuse@gentoo.org> -axis-1.2_rc2.ebuild:
   Remove generation 1 ebuild from the tree so that sun-javamail-bin can be
