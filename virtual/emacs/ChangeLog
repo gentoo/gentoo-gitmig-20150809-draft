@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.3 2007/06/02 13:14:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.4 2007/06/02 13:49:35 flameeyes Exp $
+
+  02 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> emacs-22.ebuild:
+  Add ~x86-fbsd keyword.
 
   02 Jun 2007; Ulrich Mueller <ulm@gentoo.org> emacs-22.ebuild,
   emacs-23.ebuild:
