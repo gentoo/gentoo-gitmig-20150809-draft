@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.18 2007/06/02 17:02:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.19 2007/06/02 17:18:22 betelgeuse Exp $
+
+  02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  avalon-framework-4.1.5-r1.ebuild, avalon-framework-4.2.0-r1.ebuild:
+  Marked stable on amd64 for bug #179946.
 
   02 Jun 2007; nixnut <nixnut@gentoo.org> avalon-framework-4.1.5-r1.ebuild,
   avalon-framework-4.2.0-r1.ebuild:
