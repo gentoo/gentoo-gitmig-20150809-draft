@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-1.1.0.ebuild,v 1.1 2007/02/27 23:11:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-1.2.0.ebuild,v 1.1 2007/06/02 05:33:52 rl03 Exp $
 
 inherit webapp depend.php
 
 MY_PV=${PV//./_}
 DESCRIPTION="phpWebSite Content Management System"
 HOMEPAGE="http://phpwebsite.appstate.edu"
-SRC_URI="http://phpwebsite.appstate.edu/downloads/stable/full/1.x.x/${PN}_${MY_PV}.tgz"
+SRC_URI="http://phpwebsite.appstate.edu/downloads/stable/full/1.x.x/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~ppc ~sparc ~x86"
