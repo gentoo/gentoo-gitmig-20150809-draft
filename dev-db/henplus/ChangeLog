@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/henplus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.18 2007/06/02 18:26:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.19 2007/06/02 21:51:55 betelgeuse Exp $
+
+  02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -henplus-0.9.5-r2.ebuild, -henplus-0.9.7.ebuild:
+  Remove generation 1 ebuild.
 
   02 Jun 2007; nixnut <nixnut@gentoo.org> henplus-0.9.7-r1.ebuild:
   Stable on ppc wrt bug 179562
