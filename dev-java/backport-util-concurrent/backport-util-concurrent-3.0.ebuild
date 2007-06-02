@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0.ebuild,v 1.3 2007/06/02 15:13:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0.ebuild,v 1.4 2007/06/02 15:19:21 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc java5 source test"
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="This package is the backport of java.util.concurrent API, introduced in Java 5.0, to Java 1.4, and from Java 6.0 to Java 5.0"
+DESCRIPTION="A backport of java.util.concurrent API, from Java 5.0, to 1.4, and from Java 6.0 to 5.0"
 HOMEPAGE="http://www.mathcs.emory.edu/dcl/util/backport-util-concurrent/"
 SRC_URI="!java5? ( http://dcl.mathcs.emory.edu/util/${PN}/dist/${P}/Java14/${P}-src.zip )
 	java5? ( http://dcl.mathcs.emory.edu/util/${PN}/dist/${P}/Java50/${PN}-Java50-${PV}-src.zip )"
