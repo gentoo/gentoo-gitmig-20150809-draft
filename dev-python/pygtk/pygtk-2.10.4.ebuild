@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.4.ebuild,v 1.10 2007/05/31 16:10:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.4.ebuild,v 1.11 2007/06/02 02:54:49 ranger Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 mips ~ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc examples opengl"
 
 RDEPEND=">=dev-libs/glib-2.8.0
