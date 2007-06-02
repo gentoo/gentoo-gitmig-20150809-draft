@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/linux-igd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.24 2007/06/01 21:37:13 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.25 2007/06/02 18:07:51 pylon Exp $
+
+  02 Jun 2007; Lars Weiler <pylon@gentoo.org> linux-igd-1.0-r2.ebuild:
+  Stable on ppc; bug #168279.
 
   01 Jun 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> -linux-igd-0.95.ebuild:
   Removed old version, broken, and needs the even more broken net-misc/upnp that has
