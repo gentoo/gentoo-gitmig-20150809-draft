@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/backport-util-concurrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.12 2007/05/31 16:54:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.13 2007/06/02 11:57:43 nixnut Exp $
+
+  02 Jun 2007; nixnut <nixnut@gentoo.org>
+  backport-util-concurrent-1.1.01-r1.ebuild:
+  Stable on ppc wrt bug 179948
 
   31 May 2007; Christian Faulhammer <opfer@gentoo.org>
   backport-util-concurrent-1.1.01-r1.ebuild:
