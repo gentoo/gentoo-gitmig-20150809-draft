@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.159 2007/06/02 12:44:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.160 2007/06/02 13:45:34 flameeyes Exp $
+
+  02 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> emacs-22.1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *emacs-22.1 (02 Jun 2007)
 
