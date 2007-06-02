@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.51 2007/06/01 22:55:01 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.52 2007/06/02 20:25:18 mabi Exp $
+
+  02 Jun 2007; Matti Bickel <mabi@gentoo.org>
+  +files/xft-ion3-20070506.patch:
+  Added missing xft-ion3-20070506.patch (bug #180491)
 
 *ion3-20070506-r1 (01 Jun 2007)
 
