@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.26 2007/05/24 06:11:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.27 2007/06/02 12:39:54 vapier Exp $
 
 # This file is additional masking for the hardened profile
 
@@ -31,9 +31,6 @@ app-i18n/uim-svn
 # around if you try it in a live system.
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
-
-# needs >=sys-libs/glibc-2.4
->=app-arch/rar-3.7.0_beta1
 
 # These packages do more harm than good w/ hardened.
 # users must now the opensource xorg nv driver with nvidia cards.
