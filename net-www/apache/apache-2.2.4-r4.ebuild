@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.2 2007/06/02 07:30:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.3 2007/06/02 08:05:58 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -176,6 +176,7 @@ src_compile() {
 		myconf="${myconf} --with-suexec-gidmin=${SUEXEC_MINGID:-100}"
 		myconf="${myconf} --with-suexec-umask=${SUEXEC_UMASK:-077}"
 		myconf="${myconf} --enable-suexec=${modtype}"
+		mods="${mods} suexec"
 	fi
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
