@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptstate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.21 2007/03/22 14:28:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.22 2007/06/02 00:40:45 vanquirius Exp $
+
+*iptstate-2.2.1 (02 Jun 2007)
+
+  02 Jun 2007; Marcelo Goes <vanquirius@gentoo.org> +iptstate-2.2.1.ebuild:
+  2.2.1 version bump for bug 175564. Works in recent kernels. Thanks to Peter
+  Gantner (a.k.a. nephros) <gentoo at nephros dot org>. Dropping all keywords
+  but x86 because of net-libs/libnetfilter_conntrack dependency.
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> iptstate-2.1.ebuild:
   Stable on sparc
