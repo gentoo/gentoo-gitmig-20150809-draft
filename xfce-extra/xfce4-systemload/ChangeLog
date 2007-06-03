@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.43 2007/03/15 16:27:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.44 2007/06/03 17:47:38 drac Exp $
+
+  03 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-systemload-0.4.2.ebuild:
+  Add missing DOCS variable.
 
   15 Mar 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-systemload-0.4.2.ebuild:
