@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.23 2007/05/24 11:08:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.24 2007/06/03 16:21:32 philantrop Exp $
+
+  03 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  dcopjava-3.5.3.ebuild:
+  Added patch from bug 139912 to make it compile at least.
 
   24 May 2007; Carsten Lohrke <carlo@gentoo.org> dcopjava-3.5.3.ebuild:
   Adjust MAXKDEVER.
