@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-im-exporter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.5 2007/06/03 22:19:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.6 2007/06/03 22:25:44 betelgeuse Exp $
+
+  03 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  xml-im-exporter-1.1-r1.ebuild:
+  Shorten description in the ebuild by adding a longdescription.
 
   03 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   -xml-im-exporter-1.1.ebuild:
