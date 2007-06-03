@@ -1,6 +1,10 @@
 # ChangeLog for games-board/jrisk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.15 2007/03/25 09:29:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.16 2007/06/03 16:54:39 mr_bones_ Exp $
+
+  03 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  jrisk-1.0.8.9-r1.ebuild:
+  need to call java-pkg-2_src_compile to build the files
 
   25 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   jrisk-1.0.8.9-r1.ebuild:
