@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.11.ebuild,v 1.2 2007/04/30 10:16:07 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.11.ebuild,v 1.3 2007/06/03 18:57:55 dcoutts Exp $
 
 inherit base eutils ghc-package multilib
 
@@ -37,7 +37,7 @@ src_compile() {
 		$(use_enable gnome sourceview) \
 		$(use_enable gnome svg) \
 		$(use_enable opengl opengl) \
-		$(use_enable seamonkey mozilla) \
+		$(use_enable seamonkey seamonkey) \
 		$(use_enable firefox firefox) \
 		$(use_enable doc docs) \
 		$(use_enable profile profiling) \
