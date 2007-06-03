@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.56 2007/05/16 22:05:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.57 2007/06/03 01:50:47 rbu Exp $
 
 # SECTION: Unmask
 
@@ -47,6 +47,10 @@
 # Joseph Jezak <josejx@gentoo.org> (16 May 2007)
 # Only supported on amd64
 -mplayer-bin
+
+# Robert Buchholz <rbu@gentoo.org> (03 Jun 2007)
+# Unmask as it works on amd64
+-lcd_devices_luise
 
 # SECTION: Unavailable/Broken
 
