@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.6.ebuild,v 1.1 2007/03/25 19:37:05 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.7.ebuild,v 1.1 2007/06/03 19:09:36 lucass Exp $
 
 inherit distutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_test() {
-	${python} test.py || die "test.py failed"
+	"${python}" test.py || die "test.py failed"
 }
 
 src_install() {
