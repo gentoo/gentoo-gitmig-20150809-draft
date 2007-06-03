@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206.ebuild,v 1.2 2007/04/24 14:06:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206.ebuild,v 1.3 2007/06/03 22:28:38 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 eutils java-ant-2
@@ -26,13 +26,13 @@ DEPEND="
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	
+
 	epatch "${FILESDIR}/20051206-java5.patch"
-	
+
 	rm -v lib/*.jar || die
 	rm -v thirdparty/servlet/*.jar || die
 	rm -vr ant || die
-	
+
 	cd lib
 	java-pkg_jar-from servletapi-2.4 servlet-api.jar servlets.jar
 }
@@ -46,10 +46,10 @@ src_install() {
 		--main com.jclark.xsl.sax.Driver
 	# loads this only on runtime
 	java-pkg_register-dep xp
-	
+
 	dodoc README.txt || die
 	dohtml index.html || die
-	
+
 	use doc && java-pkg_dojavadoc docs/api
 	use source && java-pkg_dosrc src/xt/java/com
 }
