@@ -1,24 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.14 2007/02/02 20:56:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.15 2007/06/03 20:55:25 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="Make use of extra buttons on newer keyboards."
+HOMEPAGE="http://ypwong.org/hotkeys"
 SRC_URI="http://ypwong.org/hotkeys/${PV}/${PN}_${PV}.tar.gz"
-HOMEPAGE="http://ypwong.org/hotkeys/"
-IUSE="gtk xosd"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc"
+IUSE="gtk xosd"
 
-DEPEND="|| ( ( x11-libs/libXmu 
-		x11-libs/libxkbfile )
-	virtual/x11 )
+RDEPEND="x11-libs/libXmu
+	x11-libs/libxkbfile
 	>=dev-libs/libxml2-2.2.8
 	=sys-libs/db-3.2*
-	xosd? ( >=x11-libs/xosd-1.0.0 )
-	gtk? ( >=x11-libs/gtk+-2.0.0 )"
+	xosd? ( >=x11-libs/xosd-1 )
+	gtk? ( >=x11-libs/gtk+-2 )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -33,12 +34,12 @@ src_compile() {
 	econf \
 		--disable-db3test \
 		$(use_with xosd) \
-		${opts} \
-		|| die "./configure failed"
-	emake || die
+		${opts}
+
+	emake || die "emake failed."
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS BUGS ChangeLog COPYING README TODO
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS BUGS ChangeLog README TODO
 }

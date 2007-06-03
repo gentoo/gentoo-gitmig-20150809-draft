@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/hotkeys
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.27 2007/02/02 20:56:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.28 2007/06/03 20:55:25 drac Exp $
+
+  03 Jun 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
+  hotkeys-0.5.7.1-r1.ebuild:
+  QA, various fixes from trailing whitespaces to virtual/x11.
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   hotkeys-0.5.7.1-r1.ebuild:
