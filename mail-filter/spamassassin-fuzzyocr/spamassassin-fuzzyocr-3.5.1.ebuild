@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.5.1.ebuild,v 1.4 2007/03/25 10:59:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.5.1.ebuild,v 1.5 2007/06/03 16:25:20 armin76 Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://users.own-hero.net/~decoder/fuzzyocr/${MY_P}-devel.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbm gocr ocrad tesseract mysql logrotate amavis"
 
 DEPEND="dev-lang/perl
