@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.183 2007/05/22 22:44:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.184 2007/06/03 23:02:44 kumba Exp $
+
+  03 Jun 2007; Joshua Kinard <kumba@gentoo.org> kdegames-3.5.6.ebuild:
+  Marked unstable on mips.
 
 *kdegames-3.5.7 (22 May 2007)
 
