@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.11.ebuild,v 1.6 2007/05/24 19:31:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.11.ebuild,v 1.7 2007/06/03 11:41:44 corsair Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -13,7 +13,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/19801/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.6"
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="examples doc"
 
 DEPEND="=x11-libs/fox-1.6*
