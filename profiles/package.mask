@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7331 2007/06/03 16:28:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7332 2007/06/03 19:53:56 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,13 @@
 ##   End example
 ##
 
-# Doug Goldstein <cardoe@gento..org> (03 Jun 2007)
+# Fabian Groffen <grobian@gentoo.org> (03 Jun 2007)
+# muttng is outdated and unmaintained, try plain mutt instead.
+# see http://article.gmane.org/gmane.linux.gentoo.devel/49234
+# Masked pending removal.  Remove in 30 days.
+mail-client/muttng
+
+# Doug Goldstein <cardoe@gentoo.org> (03 Jun 2007)
 # beta drivers for testing
 >x11-drivervs/nvidia-drivers-100
 
