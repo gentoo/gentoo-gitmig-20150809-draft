@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glsof
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.11 2007/05/12 12:55:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.12 2007/06/03 20:21:21 drac Exp $
+
+  03 Jun 2007; Samuli Suominen <drac@gentoo.org> ChangeLog:
+  Fix digestentry.unused to make repoman silent.
 
 *glsof-0.10.0_alpha4 (12 May 2007)
 
