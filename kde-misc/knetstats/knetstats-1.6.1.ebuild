@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/knetstats-1.6.1.ebuild,v 1.4 2007/05/06 21:16:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/knetstats-1.6.1.ebuild,v 1.5 2007/06/03 09:11:46 philantrop Exp $
 
 inherit kde
 
-DESCRIPTION="A simple KDE network monitor that show rx/tx LEDs or numeric information about the transfer rate of any network interface in a system tray."
+DESCRIPTION="A simple KDE network monitor that shows statistical information about any network interface in the system tray."
 HOMEPAGE="http://knetstats.sourceforge.net"
 SRC_URI="mirror://sourceforge/knetstats/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc64 x86"
+KEYWORDS="~amd64 ppc64 x86"
 IUSE=""
 
 need-kde 3
@@ -32,5 +32,3 @@ src_unpack() {
 	rm -f ${S}/configure
 	sed -i -e "s:SUBDIRS=.*:SUBDIRS=${MAKE_LANGS}:" Makefile.am
 }
-
-
