@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/eieio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eieio/ChangeLog,v 1.9 2007/05/29 18:43:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eieio/ChangeLog,v 1.10 2007/06/03 18:15:16 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> eieio-1.05.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   29 May 2007; Raúl Porcel <armin76@gentoo.org> eieio-1.05.ebuild:
   alpha stable wrt #175560

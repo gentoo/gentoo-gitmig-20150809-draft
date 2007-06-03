@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xetla/xetla-1.01.ebuild,v 1.1 2006/11/22 07:10:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xetla/xetla-1.01.ebuild,v 1.2 2007/06/03 19:39:53 graaff Exp $
 
 SLOT="0"
 IUSE=""
@@ -15,7 +15,7 @@ app-xemacs/mail-lib
 app-xemacs/dired
 app-xemacs/prog-modes
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages
 

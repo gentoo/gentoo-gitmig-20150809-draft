@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xemacs-base
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/ChangeLog,v 1.15 2007/05/30 10:01:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/ChangeLog,v 1.16 2007/06/03 19:34:19 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> xemacs-base-2.08.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> xemacs-base-2.08.ebuild:
   alpha stable wrt #175560

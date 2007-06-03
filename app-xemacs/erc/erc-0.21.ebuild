@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/erc-0.21.ebuild,v 1.1 2006/11/22 07:03:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/erc-0.21.ebuild,v 1.2 2007/06/03 18:18:48 graaff Exp $
 
 SLOT="0"
 IUSE=""
@@ -9,6 +9,6 @@ PKG_CAT="standard"
 
 DEPEND="app-xemacs/xemacs-base"
 
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages

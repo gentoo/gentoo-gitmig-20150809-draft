@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ecrypto
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ecrypto/ChangeLog,v 1.10 2007/05/30 13:21:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ecrypto/ChangeLog,v 1.11 2007/06/03 18:06:12 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> ecrypto-0.20.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> ecrypto-0.20.ebuild:
   alpha stable wrt #175560

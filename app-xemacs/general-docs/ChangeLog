@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/general-docs
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/general-docs/ChangeLog,v 1.1 2006/11/22 21:45:45 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/general-docs/ChangeLog,v 1.2 2007/06/03 18:30:17 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> general-docs-1.04.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
 *general-docs-1.04 (22 Nov 2006)
 

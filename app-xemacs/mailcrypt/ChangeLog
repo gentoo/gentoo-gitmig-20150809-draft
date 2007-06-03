@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mailcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/ChangeLog,v 1.11 2007/05/29 20:49:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/ChangeLog,v 1.12 2007/06/03 18:46:09 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> mailcrypt-2.14.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   29 May 2007; Raúl Porcel <armin76@gentoo.org> mailcrypt-2.14.ebuild:
   alpha stable wrt #175560

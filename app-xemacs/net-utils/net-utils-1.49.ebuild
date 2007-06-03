@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/net-utils-1.49.ebuild,v 1.2 2007/05/29 21:01:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/net-utils-1.49.ebuild,v 1.3 2007/06/03 18:54:20 graaff Exp $
 
 SLOT="0"
 IUSE=""
@@ -23,7 +23,7 @@ app-xemacs/mh-e
 app-xemacs/mew
 app-xemacs/ecrypto
 "
-KEYWORDS="alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages
 

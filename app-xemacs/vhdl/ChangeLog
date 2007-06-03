@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/vhdl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vhdl/ChangeLog,v 1.10 2007/05/30 09:55:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vhdl/ChangeLog,v 1.11 2007/06/03 19:29:25 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> vhdl-1.22.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> vhdl-1.22.ebuild:
   alpha stable wrt #175560

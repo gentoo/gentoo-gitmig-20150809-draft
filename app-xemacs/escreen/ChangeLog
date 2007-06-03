@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/escreen
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/escreen/ChangeLog,v 1.1 2006/11/22 21:52:14 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/escreen/ChangeLog,v 1.2 2007/06/03 18:19:58 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> escreen-1.01.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
 *escreen-1.01 (22 Nov 2006)
 

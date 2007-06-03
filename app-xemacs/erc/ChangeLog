@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/erc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.1 2006/11/22 07:03:47 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.2 2007/06/03 18:18:48 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> erc-0.21.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
 *erc-0.21 (22 Nov 2006)
 
