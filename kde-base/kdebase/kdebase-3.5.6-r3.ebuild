@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r3.ebuild,v 1.5 2007/05/25 21:19:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6-r3.ebuild,v 1.6 2007/06/03 21:00:20 kumba Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -9,7 +9,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
 pam samba xcomposite xscreensaver xinerama kdehiddenvisibility"
 
