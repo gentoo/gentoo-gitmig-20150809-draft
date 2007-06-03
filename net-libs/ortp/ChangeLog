@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.25 2007/05/05 05:17:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.26 2007/06/03 21:41:16 kumba Exp $
+
+  03 Jun 2007; Joshua Kinard <kumba@gentoo.org> ortp-0.7.1-r1.ebuild:
+  Marked unstable on mips.
 
   05 May 2007; Jeroen Roovers <jer@gentoo.org> ortp-0.7.1-r1.ebuild:
   Marked ~hppa (bug #176926).
