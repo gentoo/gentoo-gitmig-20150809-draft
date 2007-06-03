@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/lipstik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.20 2007/05/15 14:27:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.21 2007/06/03 11:53:37 voxus Exp $
+
+  03 Jun 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  lipstik-2.2.2.ebuild:
+  Goes stable on amd64 and x86 wrt bug #180716.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
