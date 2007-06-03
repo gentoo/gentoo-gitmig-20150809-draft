@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.16 2007/04/24 20:42:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.17 2007/06/03 01:07:26 rbu Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -233,9 +233,6 @@ alsa_cards_wavefront
 
 # Robert Buchholz <rbu@gentoo.org> - 19 Feb 2007
 # Mask deps not covered by sparc
-ula200
-graphlcd
-g15
 lcd_devices_ula200
 lcd_devices_graphlcd
 lcd_devices_g15
