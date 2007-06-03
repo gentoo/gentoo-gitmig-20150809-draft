@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions nowrapper sdk vboxbfe vditool"
+IUSE="additions hal nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
@@ -21,12 +21,13 @@ RDEPEND="!app-emulation/virtualbox-bin
 	media-libs/libsdl
 	x11-libs/libXcursor
 	$(qt_min_version 3.3.5)
-	=virtual/libstdc++-3.3"
+	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
-	>=media-libs/alsa-lib-1.0.13"
+	>=media-libs/alsa-lib-1.0.13
+	=virtual/libstdc++-3.3"
 RDEPEND="${RDEPEND}
 	additions? ( app-emulation/virtualbox-additions )"
 
@@ -48,7 +49,14 @@ pkg_setup() {
 
 src_compile() {
 	cd "${S}"
-	./configure || die "configure failed"
+
+	local myconf
+	if ! use hal; then
+		myconf="${myconf} --without-hal"
+	fi
+
+	./configure \
+	${myconf} || die "configure failed"
 	source ./env.sh
 
 	# Force kBuild to respect C[XX]FLAGS and MAKEOPTS (bug #178529)
