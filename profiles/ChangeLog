@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.447 2007/06/03 01:50:47 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.448 2007/06/03 16:28:55 philantrop Exp $
+
+  03 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
+  Removed the mask for kde-base/dcopjava.
 
   03 Jun 2007; Robert Buchholz <rbu@gentoo.org> base/use.mask,
   default-linux/amd64/use.mask, default-linux/x86/use.mask:

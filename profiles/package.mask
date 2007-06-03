@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7330 2007/06/03 07:38:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7331 2007/06/03 16:28:55 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1429,7 +1429,6 @@ dev-lisp/cl-imho
 # Considered broken by upstream; future to be decided
 kde-base/qtsharp
 kde-base/xparts
-kde-base/dcopjava
 
 # <dragonheart@gentoo.org> (04 Dec 2004)
 # Bug #70529 indicates problems with configuration file reading
