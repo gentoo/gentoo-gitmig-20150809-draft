@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/uriparser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.3 2007/04/25 20:41:16 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.4 2007/06/03 01:59:30 rbu Exp $
+
+  03 Jun 2007; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  uriparser-0.3.4.ebuild:
+  Added ~ppc and long description
 
 *uriparser-0.3.4 (25 Apr 2007)
 
