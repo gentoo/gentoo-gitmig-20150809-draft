@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/nanoblogger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.23 2007/03/19 01:07:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.24 2007/06/03 19:48:40 rl03 Exp $
+
+*nanoblogger-3.3 (03 Jun 2007)
+
+  03 Jun 2007; Renat Lumpau <rl03@gentoo.org>
+  -files/nanoblogger-3.1-fix-rss2.diff, -nanoblogger-3.1-r3.ebuild,
+  +nanoblogger-3.3.ebuild:
+  Version bump, bug #152446
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
