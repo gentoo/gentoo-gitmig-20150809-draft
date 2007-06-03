@@ -1,0 +1,99 @@
+--- nload-0.6.0.orig/src/proc.h
++++ nload-0.6.0/src/proc.h
+@@ -36,8 +36,8 @@
+ 	
+ 	void readLoad( unsigned long& in, unsigned long& out );
+ 
+-	unsigned long totalIn();
+-	unsigned long totalOut();
++	long long totalIn();
++	long long totalOut();
+ 	
+ 	int getElapsedTime();
+ 	
+@@ -51,7 +51,7 @@
+ 	
+ 	char m_ip[16];
+ 	
+-	unsigned long m_total[2];
++	long long m_total[2];
+ 
+ };
+ 
+--- nload-0.6.0.orig/src/status.h
++++ nload-0.6.0/src/status.h
+@@ -52,7 +52,7 @@
+ 		gigabyte = 7
+ 	};
+ 	
+-	void update( unsigned long, unsigned long );
++	void update( unsigned long, long long);
+ 	void print( Window&, int, int, status_format traff_format, status_format data_format );
+ 	void resetTrafficData();
+ 
+--- nload-0.6.0.orig/src/proc.cpp
++++ nload-0.6.0/src/proc.cpp
+@@ -126,7 +126,7 @@
+ 
+ void Proc::readLoad( unsigned long& in, unsigned long& out )
+ {
+-	unsigned long total_new[2] = { 0, 0 };
++	long long total_new[2] = { 0, 0 };
+ 	int curr_time = 0;
+ 	struct timeval time;
+ 
+@@ -181,7 +181,7 @@
+ 			
+ 			if( ! strcmp( m_dev, dev ) )
+ 			{
+-				sscanf( tmp, "%lu %*u %*u %*u %*u %*u %*u %*u %lu", &total_new[0], &total_new[1] );
++				sscanf( tmp, "%llu %*u %*u %*u %*u %*u %*u %*u %llu", &total_new[0], &total_new[1] );
+ 				
+ 				if( total_new[0] > m_total[0] )
+ 					in = total_new[0] - m_total[0];
+@@ -198,7 +198,7 @@
+ 		}
+ 	} while( 0 );
+ 
+-	fclose(fd);
++	if (fd != NULL) fclose(fd);
+ 	
+ #endif
+ // === End Linux specific network data reading code ===
+@@ -513,12 +513,12 @@
+ 	return m_elapsed_time;
+ }
+ 
+-unsigned long Proc::totalIn()
++long long Proc::totalIn()
+ {
+ 	return m_total[0];
+ }
+ 
+-unsigned long Proc::totalOut()
++long long Proc::totalOut()
+ {
+ 	return m_total[1];
+ }
+--- nload-0.6.0.orig/src/status.cpp
++++ nload-0.6.0/src/status.cpp
+@@ -30,7 +30,7 @@
+ }
+ 
+ //new traffic measurement has been made => update statistics
+-void Status::update( unsigned long new_value, unsigned long new_total )
++void Status::update( unsigned long new_value, long long new_total )
+ {
+ 	
+ 	m_cur = new_value;
+@@ -44,7 +44,9 @@
+ 	 *the /proc/net/dev file
+ 	 *(the total bytes value reaches 4GB and then switches to 0)
+ 	 */
+-	if( new_total < ( m_total % UINT_MAX ) )
++	if (new_total >= UINT_MAX )
++		m_total = new_total;
++	else if ( new_total < ( m_total % UINT_MAX ) )
+ 		m_total = ( ( m_total / UINT_MAX ) + 1 ) * UINT_MAX + new_total;
+ 	else
+ 		m_total = ( m_total / UINT_MAX ) * UINT_MAX + new_total;

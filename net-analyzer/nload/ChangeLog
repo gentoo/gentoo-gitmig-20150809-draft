@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.21 2007/03/22 14:25:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.22 2007/06/03 07:56:25 jokey Exp $
+
+*nload-0.6.0-r2 (03 Jun 2007)
+
+  03 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/nload-0.6.0-signedness.patch, -nload-0.6.0-r1.ebuild,
+  +nload-0.6.0-r2.ebuild:
+  Fix amd64 signedness bug, thanks to phreak
 
   22 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> nload-0.6.0-r1.ebuild:
   Stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.6.0-r1.ebuild,v 1.3 2007/03/22 14:25:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.6.0-r2.ebuild,v 1.1 2007/06/03 07:56:25 jokey Exp $
 
 inherit eutils autotools
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-prevent-stripping.patch
+	epatch "${FILESDIR}"/${P}-signedness.patch
 	eautoreconf
 }
 
@@ -27,4 +28,3 @@ src_install () {
 	einstall || die
 	dodoc README INSTALL ChangeLog AUTHORS
 }
-
