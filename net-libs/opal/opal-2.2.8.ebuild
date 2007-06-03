@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.8.ebuild,v 1.2 2007/04/16 14:21:52 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.8.ebuild,v 1.3 2007/06/03 21:58:58 genstef Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -31,6 +31,9 @@ src_compile() {
 
 	# remove -fstack-protector, may cause problems (bug #75259)
 	filter-flags -fstack-protector
+
+	# -Os causes problems, bug #180718
+	replace-flags -Os -O2
 
 	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
 	# compile with PTRACING if the user wants to debug stuff
