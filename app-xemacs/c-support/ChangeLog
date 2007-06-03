@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/c-support
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/c-support/ChangeLog,v 1.10 2007/05/29 18:12:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/c-support/ChangeLog,v 1.11 2007/06/03 17:54:44 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> c-support-1.22.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   29 May 2007; Raúl Porcel <armin76@gentoo.org> c-support-1.22.ebuild:
   alpha stable wrt #175560

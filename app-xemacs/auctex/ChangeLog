@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/auctex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.12 2007/05/29 11:51:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.13 2007/06/03 17:45:45 graaff Exp $
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> auctex-1.46.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
 
   29 May 2007; Raúl Porcel <armin76@gentoo.org> auctex-1.46.ebuild:
   alpha stable wrt #175560
