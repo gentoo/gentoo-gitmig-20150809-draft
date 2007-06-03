@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070506-r1.ebuild,v 1.1 2007/06/01 22:55:01 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070506-r1.ebuild,v 1.2 2007/06/03 10:55:18 mabi Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,14 +30,14 @@ SRC_URI="http://iki.fi/tuomov/dl/${MY_PN}.tar.gz
 LICENSE="LGPL-2.1+tuomov"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="unicode voidsupport-truetype doc"
+IUSE="unicode ion3-voidupstreamsupport-truetype doc"
 DEPEND="
 	|| (
 		(
 			x11-libs/libICE
 			x11-libs/libXext
 			x11-libs/libSM
-			voidsupport-truetype? ( x11-libs/libXft )
+			ion3-voidupstreamsupport-truetype? ( x11-libs/libXft )
 		)
 		virtual/x11
 	)
@@ -57,9 +57,13 @@ src_unpack() {
 
 	cd ${S}
 	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" epatch
-	use voidsupport-truetype && epatch ${FILESDIR}/xft-ion3-${PV}.patch
+	if (use ion3-voidupstreamsupport-truetype); then
+		epatch ${FILESDIR}/xft-ion3-${PV}.patch
 
-	use voidsupport-truetype && sed -i -e "s:#USE_XFT=1:USE_XFT=1:" ${S}/system.mk
+		sed -i -e "s:#USE_XFT=1:USE_XFT=1:" ${S}/system.mk
+		sed -i -e 's:\(#define ION_VERSION
+		"3rc-20070506\):\1-gentoo-xft-enabled:' ${S}/version.h
+	fi;
 
 	# Allow user CFLAGS
 	sed -i "s:\(CFLAGS=\)-g -Os\(.*\):\1\2 ${CFLAGS}:" system.mk
@@ -183,7 +187,9 @@ src_install() {
 
 pkg_postinst() {
 	elog "This version of ion3 contains no xinerama support (removed upstream)."
-	elog "If you encouter a bug in ion-3, be sure to to reproduce it with a"
+	elog "Remember that USE='ion3-voidupstreamsupport-truetype' will render"
+	elog "upstream support for your installation of ion3 void."
+	elog "Thus, if you encouter a bug in ion-3, be sure to to reproduce it with a"
 	elog "vanilla build before reporting it upstream. You are welcome to report"
 	elog "any problem as a bug on http://bugs.gentoo.org."
 }
