@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-sr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sr/ChangeLog,v 1.5 2007/05/16 21:04:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sr/ChangeLog,v 1.6 2007/06/03 20:20:34 kumba Exp $
+
+  03 Jun 2007; Joshua Kinard <kumba@gentoo.org> aspell-sr-0.60.ebuild:
+  Marked unstable on mips.
 
   16 May 2007; Raúl Porcel <armin76@gentoo.org> aspell-sr-0.60.ebuild:
   Add ~alpha wrt #147568
