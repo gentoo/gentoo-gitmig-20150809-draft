@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.66 2007/06/02 20:08:35 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.67 2007/06/03 10:29:56 corsair Exp $
+
+  03 Jun 2007; Markus Rothe <corsair@gentoo.org> seamonkey-1.1.2.ebuild:
+  Stable on ppc64; bug #180436
 
   02 Jun 2007; René Nussbaumer <killerfox@gentoo.org>
   seamonkey-1.1.2.ebuild:
