@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-et
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.4 2007/05/16 21:05:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.5 2007/06/03 20:32:56 kumba Exp $
+
+  03 Jun 2007; Joshua Kinard <kumba@gentoo.org> aspell-et-0.1.21.1.ebuild:
+  Marked unstable on mips.
 
   16 May 2007; Raúl Porcel <armin76@gentoo.org> aspell-et-0.1.21.1.ebuild:
   Add ~alpha wrt #147568
