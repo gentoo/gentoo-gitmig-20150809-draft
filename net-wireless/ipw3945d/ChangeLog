@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.17 2007/05/27 16:34:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.18 2007/06/03 05:19:35 cardoe Exp $
+
+  03 Jun 2007; Doug Goldstein <cardoe@gentoo.org> files/ipw3945d-init.d:
+  s-s-d start was wrong.
 
   27 May 2007; Christian Heim <phreak@gentoo.org> ipw3945d-1.7.22-r4.ebuild:
   We don't need use RESTRICT=stricter, RESTRICT=strip should be enough.
