@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.23 2007/06/02 23:01:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.24 2007/06/03 20:59:43 voyageur Exp $
+
+  03 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org> -files/gentoo.sh,
+  -files/tspc.conf, -files/tspc.rc, -freenet6-1.0.0.ebuild:
+  Remove old version
 
   02 Jun 2007; Markus Ullmann <jokey@gentoo.org> freenet6-4.2.2.ebuild:
   Stable on x86 wrt bug #180450
