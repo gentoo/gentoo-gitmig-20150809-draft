@@ -1,11 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.4.ebuild,v 1.4 2006/09/24 09:24:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.9.0.ebuild,v 1.1 2007/06/03 19:48:57 drac Exp $
 
 inherit multilib
 
-MY_P=${PN/-/_}-${PV}
-S=${WORKDIR}/${MY_P}
+MY_P=${P/.0/}
 
 DESCRIPTION="Xosd plugin for LINEAK"
 HOMEPAGE="http://lineak.sourceforge.net/"
@@ -13,22 +12,23 @@ SRC_URI="mirror://sourceforge/lineak/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="debug"
 
 RDEPEND="=x11-misc/lineakd-${PV}*
 		x11-libs/xosd"
 DEPEND="${RDEPEND}"
 
+S="${WORKDIR}"/${MY_P}
+
 src_compile() {
-	econf --with-x || die "econf failed"
-	emake || die "emake failed"
+	econf $(use_enable debug) --with-x
+	emake || die "emake failed."
 }
 
 src_install() {
-	make DESTDIR=${D} \
+	emake DESTDIR="${D}" \
 		PLUGINDIR=/usr/$(get_libdir)/lineakd/plugins \
-		lineakddocdir=/usr/share/doc/${P} \
-		install || die "make install failed"
+		install || die "emake install failed."
 	dodoc AUTHORS README
 }
