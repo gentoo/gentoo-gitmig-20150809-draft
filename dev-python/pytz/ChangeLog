@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.8 2006/10/21 01:24:52 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.9 2007/06/03 18:59:33 lucass Exp $
+
+*pytz-2007f (03 Jun 2007)
+
+  03 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> +pytz-2007f.ebuild:
+  Version bump.
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org> pytz-2005m.ebuild:
   Mark 2005m stable on ia64
