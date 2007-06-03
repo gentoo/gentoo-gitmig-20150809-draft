@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.15.ebuild,v 1.5 2007/05/06 04:57:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.15.ebuild,v 1.6 2007/06/03 16:17:27 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/software/ocrad/ocrad.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ppc ~ppc64 sparc ~x86"
 
 DEPEND="virtual/libc"
 
