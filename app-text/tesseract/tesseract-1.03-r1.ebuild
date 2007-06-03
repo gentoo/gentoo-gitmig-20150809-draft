@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-1.03-r1.ebuild,v 1.7 2007/04/24 14:26:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-1.03-r1.ebuild,v 1.8 2007/06/03 16:24:26 armin76 Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tesseract-ocr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND="media-libs/tiff"
