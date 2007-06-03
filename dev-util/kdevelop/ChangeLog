@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.143 2007/05/24 09:58:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.144 2007/06/03 17:55:54 philantrop Exp $
+
+  03 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdevelop-3.3.5.ebuild, kdevelop-3.3.6.ebuild, kdevelop-3.4.0-r2.ebuild,
+  kdevelop-3.4.1.ebuild:
+  Set MAKEOPTS=-j1 to ensure successful compilation. Fixes bug 130139.
 
   24 May 2007; Matthias Schwarzott <zzam@gentoo.org> kdevelop-3.4.1.ebuild:
   Fixed SRC_URI.
