@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070506-r1.ebuild,v 1.2 2007/06/03 10:55:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070506-r1.ebuild,v 1.3 2007/06/03 15:08:02 mabi Exp $
 
 inherit eutils flag-o-matic
 
@@ -62,7 +62,7 @@ src_unpack() {
 
 		sed -i -e "s:#USE_XFT=1:USE_XFT=1:" ${S}/system.mk
 		sed -i -e 's:\(#define ION_VERSION
-		"3rc-20070506\):\1-gentoo-xft-enabled:' ${S}/version.h
+		"3rc-20070506\):\1-voidupstreamsupport-xft-enabled:' ${S}/version.h
 	fi;
 
 	# Allow user CFLAGS
