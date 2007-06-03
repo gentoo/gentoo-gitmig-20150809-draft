@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ctypes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.22 2007/05/17 15:27:45 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.23 2007/06/03 19:43:10 lucass Exp $
+
+*ctypes-1.0.2 (03 Jun 2007)
+
+  03 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> +ctypes-1.0.2.ebuild:
+  Version bump.
 
   17 May 2007; Matti Bickel <mabi@gentoo.org> ChangeLog:
   fixed fubared Manifest
