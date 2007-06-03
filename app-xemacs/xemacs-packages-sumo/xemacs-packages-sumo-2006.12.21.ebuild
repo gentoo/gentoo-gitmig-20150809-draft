@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-sumo/xemacs-packages-sumo-2006.12.21.ebuild,v 1.1 2007/01/07 10:32:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-sumo/xemacs-packages-sumo-2006.12.21.ebuild,v 1.2 2007/06/03 19:38:50 graaff Exp $
 
 DESCRIPTION="The SUMO bundle of ELISP packages for Xemacs"
 HOMEPAGE="http://www.xemacs.org"
@@ -16,7 +16,7 @@ S="${WORKDIR}"
 IUSE="mule"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 src_compile() {
 	true
