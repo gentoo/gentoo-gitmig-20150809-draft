@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.89.ebuild,v 1.7 2007/01/08 20:33:36 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.89.ebuild,v 1.8 2007/06/03 08:40:44 jokey Exp $
 
 DESCRIPTION="A simple console menu program"
 HOMEPAGE="http://www.kitenet.net/programs/pdmenu/"
@@ -10,13 +10,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ia64 mips x86"
 IUSE="nls gpm examples"
-RESTRICT="test"
 
 DEPEND="sys-libs/slang
-		gpm? ( sys-libs/gpm )
-		nls? ( sys-devel/gettext )"
+	gpm? ( sys-libs/gpm )
+	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}/${PN}/"
+S=${WORKDIR}/${PN}
+
+RESTRICT="test"
 
 src_compile() {
 	econf \
@@ -28,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc doc/ANNOUNCE doc/BUGS doc/COPYING doc/TODO
+	dodoc doc/ANNOUNCE doc/BUGS doc/TODO
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}

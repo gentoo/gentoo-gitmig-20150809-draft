@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/pdmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/ChangeLog,v 1.7 2007/01/08 20:33:36 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/ChangeLog,v 1.8 2007/06/03 08:40:44 jokey Exp $
+
+  03 Jun 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml,
+  pdmenu-1.2.89.ebuild:
+  Take over maintainership from eroyf
 
   08 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> pdmenu-1.2.89.ebuild:
   Stable on IA64.
