@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.18 2007/05/09 15:08:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.19 2007/06/03 22:40:01 betelgeuse Exp $
+
+  03 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -jsr173-1.0.ebuild:
+  Remove generation 1 ebuild.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> jsr173-1.0-r1.ebuild:
   Add ~ia64 wrt #160813

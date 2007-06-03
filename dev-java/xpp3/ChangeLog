@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.15 2007/05/09 14:53:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.16 2007/06/03 22:38:19 betelgeuse Exp $
+
+  03 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -xpp3-1.1.3.4m.ebuild:
+  Remove generation 1 ebuild.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> xpp3-1.1.4c.ebuild:
   Add ~ia64 wrt #160813
