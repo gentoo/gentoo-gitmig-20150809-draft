@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0.ebuild,v 1.2 2007/06/03 21:01:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.1 2007/06/04 19:26:19 drac Exp $
 
 inherit multilib
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/${MY_P}
 
 src_compile() {
-	econf $(use_enable debug) --with-x
+	econf $(use_enable debug) --with-x --enable-evtest
 	emake || die "emake failed."
 }
 
@@ -37,7 +37,7 @@ src_install () {
 
 	dodir /usr/share/man/man8
 
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake -j1 DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS README TODO
 	keepdir /usr/$(get_libdir)/lineakd/plugins
 
