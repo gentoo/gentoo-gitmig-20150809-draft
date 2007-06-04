@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.229 2007/05/12 14:56:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.230 2007/06/04 09:46:59 hattya Exp $
+
+*sylpheed-2.4.2 (04 Jun 2007)
+
+  04 Jun 2007; Akinori Hattori <hattya@gentoo.org> +sylpheed-2.4.2.ebuild:
+  new upstream release. fixes bug #179195.
 
 *sylpheed-2.4.1 (12 May 2007)
 
