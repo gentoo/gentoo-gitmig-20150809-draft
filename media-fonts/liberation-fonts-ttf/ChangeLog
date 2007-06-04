@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/liberation-fonts-ttf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/ChangeLog,v 1.5 2007/06/04 08:30:22 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/ChangeLog,v 1.6 2007/06/04 17:08:14 cardoe Exp $
+
+  04 Jun 2007; Doug Goldstein <doug@gentoo.org>
+  -liberation-fonts-0.2.ebuild, +liberation-fonts-ttf-3.ebuild:
+  previous commit totally broke the package. We are also a source based distro
+  and should name matching the tarball, not the RPM file. This commit reverses
+  the brokenness.
 
 *liberation-fonts-0.2 (04 Jun 2007)
 
