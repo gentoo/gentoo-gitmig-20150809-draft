@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.449 2007/06/04 17:06:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.450 2007/06/04 21:07:06 armin76 Exp $
+
+  04 Jun 2007; Raúl Porcel <armin76@gentoo.org> thirdpartymirrors:
+  Remove archive.progeny.com, bug #180900
 
   04 Jun 2007; Jeroen Roovers <jer@gentoo.org> package.mask:
   Masking media-fonts/liberation-fonts-ttf until it is sorted out.
