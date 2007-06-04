@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-kdeplugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.24 2007/06/03 20:02:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.25 2007/06/04 16:12:02 drac Exp $
+
+  04 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  lineak-kdeplugins-0.9.0.ebuild:
+  Use kde_src_compile instead of overwriting it with custom src_compile.
 
 *lineak-kdeplugins-0.9.0 (03 Jun 2007)
 
