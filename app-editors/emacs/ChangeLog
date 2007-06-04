@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.161 2007/06/02 20:51:37 dmwaters Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.162 2007/06/04 14:51:40 ranger Exp $
+
+  04 Jun 2007; Brent Baude <ranger@gentoo.org> emacs-22.1.ebuild:
+  Marking emacs-22.1 ppc64 ~ for bug#180642
 
   02 Jun 2007; deedra waters <dmwaters@gentoo.org> emacs-22.1.ebuild:
   Adding ~amd64 keyword
