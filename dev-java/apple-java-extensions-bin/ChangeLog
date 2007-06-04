@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/apple-java-extensions-bin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.8 2006/09/13 22:41:15 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.9 2007/06/04 08:00:27 opfer Exp $
+
+  04 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  apple-java-extensions-bin-1.2-r1.ebuild:
+  stable x86, bug 179941
 
   13 Sep 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml,
   apple-java-extensions-bin-1.2.ebuild,
