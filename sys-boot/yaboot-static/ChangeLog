@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/yaboot-static
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.15 2007/06/04 18:32:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.16 2007/06/04 19:42:39 ranger Exp $
+
+  04 Jun 2007; Brent Baude <ranger@gentoo.org>
+  yaboot-static-1.3.14_pre1.ebuild:
+  Removing the patch from the new ebuild
 
 *yaboot-static-1.3.14_pre1 (04 Jun 2007)
 

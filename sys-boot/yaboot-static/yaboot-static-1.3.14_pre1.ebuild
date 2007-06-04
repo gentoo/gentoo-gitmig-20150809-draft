@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14_pre1.ebuild,v 1.1 2007/06/04 18:32:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14_pre1.ebuild,v 1.2 2007/06/04 19:42:39 ranger Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/ofpath_device-tree_check.patch
 }
 
 src_install() {
