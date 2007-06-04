@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.1 2007/06/04 19:26:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.2 2007/06/04 21:52:13 drac Exp $
 
 inherit multilib
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/${MY_P}
 
 src_compile() {
-	econf $(use_enable debug) --with-x --enable-evtest
+	econf $(use_enable debug) --with-x
 	emake || die "emake failed."
 }
 
@@ -44,4 +44,11 @@ src_install () {
 	insinto /etc/lineak
 	doins lineakd.conf.example
 	doins lineakd.conf.kde.example
+}
+
+pkg_postinst() {
+	elog
+	elog "evtest utility has not been installed. evtest can be found"
+	elog "in games-util/joystick."
+	elog
 }
