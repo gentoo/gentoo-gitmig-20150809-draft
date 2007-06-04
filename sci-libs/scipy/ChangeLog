@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.17 2007/02/19 11:35:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.18 2007/06/04 13:51:25 bicatali Exp $
+
+  04 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/system_info.diff, -scipy-0.4.9.ebuild, -scipy-0.5.1.ebuild:
+  Removed old unused versions
 
   19 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> -scipy-0.3.2.ebuild,
   -scipy-0.4.8.ebuild, -scipy-0.4.8-r1.ebuild:
