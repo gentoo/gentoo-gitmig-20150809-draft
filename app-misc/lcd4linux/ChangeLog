@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.25 2007/04/30 19:10:56 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.26 2007/06/04 18:13:56 rbu Exp $
+
+*lcd4linux-0.10.1_rc2-r1 (04 Jun 2007)
+
+  04 Jun 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/lcd4linux-0.10.1_rc2-mpd.patch,
+  +files/lcd4linux-0.10.1_rc2-warnings.patch, metadata.xml,
+  -lcd4linux-0.10.1_rc2.ebuild, +lcd4linux-0.10.1_rc2-r1.ebuild:
+  Revbump introducing new luise driver (for amd64/x86 only), added ~ppc and
+  fixed the plugin_mpd code.
 
 *lcd4linux-0.10.1_rc2 (30 Apr 2007)
 

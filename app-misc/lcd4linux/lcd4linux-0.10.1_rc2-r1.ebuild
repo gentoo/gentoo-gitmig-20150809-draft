@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2.ebuild,v 1.1 2007/04/30 19:10:56 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r1.ebuild,v 1.1 2007/06/04 18:13:56 rbu Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="mysql python iconv mpd"
 
@@ -23,7 +23,7 @@ IUSE_LCD_DEVICES=(beckmannegle bwct cfontz ncurses cwlinux
 		mtxorb milfordbpk noritake null picolcd
 		png ppm routerboard serdisplib simplelcd
 		t6963 trefon usbhub usblcd wincor
-		X)
+		X luise)
 
 # Iterate through the array and add the lcd_devices_* that we support
 NUM_DEVICES=${#IUSE_LCD_DEVICES[@]}
@@ -46,6 +46,7 @@ DEPEND="
 	lcd_devices_trefon?   ( dev-libs/libusb )
 	lcd_devices_usbhub?   ( dev-libs/libusb )
 	lcd_devices_usblcd?   ( dev-libs/libusb )
+	lcd_devices_luise?    ( dev-libs/luise-bin )
 	lcd_devices_ncurses?  ( sys-libs/ncurses )
 	lcd_devices_noritake? ( media-libs/gd )
 	lcd_devices_t6963?    ( media-libs/gd )
@@ -63,6 +64,14 @@ pkg_setup() {
 	echo
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-warnings.patch"
+	epatch "${FILESDIR}/${P}-mpd.patch"
+}
+
 src_compile() {
 	# This array contains the driver names required by configure --with-drivers=
 	# The positions must be the same as the corresponding use_expand flags
@@ -72,8 +81,7 @@ src_compile() {
 		MatrixOrbital MilfordInstruments Noritake NULL picoLCD
 		PNG PPM RouterBoard serdisplib SimpleLCD
 		T6963 Trefon USBHUB USBLCD WincorNixdorf
-		X11)
-	# We're missing 'LUIse' as libluise is not open source. Contacted their upstream about it.
+		X11 LUIse)
 
 	local myconf myp
 
@@ -81,7 +89,7 @@ src_compile() {
 	if [ -n "$LCD4LINUX_PLUGINS" ]; then
 		myp="$LCD4LINUX_PLUGINS"
 	else
-		myp="all"
+		myp="all,!xmms"
 	fi
 	use iconv || myp="${myp},!iconv"
 	use mpd || myp="${myp},!mpd"
