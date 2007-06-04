@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.33 2007/05/11 02:01:43 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.34 2007/06/04 23:11:06 marienz Exp $
+
+  04 Jun 2007; Marien Zwart <marienz@gentoo.org> bzr-0.15.ebuild,
+  bzr-0.16.ebuild:
+  Enhance DESCRIPTION.
 
   11 May 2007; Marien Zwart <marienz@gentoo.org> -bzr-0.14.ebuild:
   Remove stale version.

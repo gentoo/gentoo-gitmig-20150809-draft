@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.16.ebuild,v 1.1 2007/05/11 01:59:44 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.16.ebuild,v 1.2 2007/06/04 23:11:06 marienz Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="next generation distributed version control"
+DESCRIPTION="Bazaar is a next generation distributed version control system."
 HOMEPAGE="http://bazaar-vcs.org/"
 SRC_URI="http://bazaar-vcs.org/releases/src/${MY_P}.tar.gz"
 
