@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.67 2007/05/06 16:12:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.68 2007/06/04 17:08:08 phreak Exp $
+
+*openvz-sources-028.033 (04 Jun 2007)
+
+  04 Jun 2007; Christian Heim <phreak@gentoo.org>
+  +openvz-sources-028.033.ebuild:
+  Version bump, multiple fixes including nfs, ubc, cpt vzqd, fuse ioprio and
+  fairsched; also drbd got updated to 8.0.3.
 
 *openvz-sources-028.031 (06 May 2007)
 
