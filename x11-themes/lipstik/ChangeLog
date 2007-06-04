@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/lipstik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.21 2007/06/03 11:53:37 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.22 2007/06/04 12:53:03 gustavoz Exp $
+
+  04 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> lipstik-2.2.2.ebuild:
+  Stable on sparc wrt #180716
 
   03 Jun 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
   lipstik-2.2.2.ebuild:
