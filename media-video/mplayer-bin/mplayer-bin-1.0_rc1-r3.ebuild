@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_rc1-r3.ebuild,v 1.1 2007/02/24 16:56:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_rc1-r3.ebuild,v 1.2 2007/06/04 11:06:00 angelos Exp $
 
 inherit multilib
 
@@ -28,6 +28,11 @@ pkg_setup() {
 	# Daniel Gryniewicz <dang@gentoo.org>
 	has_multilib_profile || die
 	ABI="x86"
+
+	if ! built_with_use app-emulation/emul-linux-x86-xlibs opengl; then
+		eerror "Please rebuild emul-linux-x86-xlibs with the opengl USE flag"
+		die "emul-linux-x86-xlibs needs support for opengl"
+	fi
 }
 
 src_install() {
