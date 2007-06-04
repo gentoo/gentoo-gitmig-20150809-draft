@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.8 2007/04/13 23:32:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.9 2007/06/04 20:36:35 graaff Exp $
+
+*rubyforge-0.4.2 (04 Jun 2007)
+
+  04 Jun 2007; Hans de Graaff <graaff@gentoo.org> +rubyforge-0.4.2.ebuild:
+  Version bump:
+    * Fix for windoze users (spaces in path).
+    * Added check for extant release.
+    * Added default hash for first-time releases.
 
   13 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> rubyforge-0.4.1.ebuild:
   Add ~ppc for work.
