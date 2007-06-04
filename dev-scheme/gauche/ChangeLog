@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/gauche
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.6 2007/04/21 15:50:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.7 2007/06/04 09:55:57 hattya Exp $
+
+*gauche-0.8.10 (04 Jun 2007)
+
+  04 Jun 2007; Akinori Hattori <hattya@gentoo.org>
+  +files/gauche-0.8.10-stack-trace.diff, +gauche-0.8.10.ebuild:
+  new upstream release.
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> gauche-0.8.9.ebuild:
   ia64 stable
