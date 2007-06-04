@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.46 2007/06/02 18:57:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.47 2007/06/04 06:44:30 mr_bones_ Exp $
+
+  04 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org> package.mask:
+  games-action/koth needs ggi so mask that as well.
 
   02 Jun 2007; Raúl Porcel <armin76@gentoo.org> package.mask, use.mask:
   P.mask libgii and libggi as it doesn't compile and mask ggi use-flag

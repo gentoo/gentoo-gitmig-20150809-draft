@@ -3,6 +3,9 @@
 media-libs/libgii
 media-libs/libggi
 
+# needs libggi
+games-action/koth
+
 # Raúl Porcel <armin76@gentoo.org> (30 May 2007)
 # Doesn't work, segfaults
 dev-util/ltrace
