@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.448 2007/06/03 16:28:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.449 2007/06/04 17:06:02 jer Exp $
+
+  04 Jun 2007; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Masking media-fonts/liberation-fonts-ttf until it is sorted out.
 
   03 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Removed the mask for kde-base/dcopjava.
