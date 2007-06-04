@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.3.ebuild,v 1.1 2007/05/31 21:44:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.3.ebuild,v 1.2 2007/06/04 11:03:24 angelos Exp $
 
 inherit multilib flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 		append-flags -ggdb
 	fi
 
-	sed -i "/^set MODULE_PATH/s:modules:/usr/$(get_libdir)/modules:" sample.conf
+	sed -i "/^set MODULE_PATH/s:modules:/usr/$(get_libdir)/eiwic:" sample.conf
 	sed -i "/^load MODULE/s:$:.so:" sample.conf
 }
 
