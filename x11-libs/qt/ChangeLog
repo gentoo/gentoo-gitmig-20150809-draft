@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.451 2007/06/04 10:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.452 2007/06/04 15:07:29 flameeyes Exp $
+
+  04 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> qt-4.3.0.ebuild:
+  Make png, jpeg, zlib and mng turn off the relative support from Qt 4.3, see
+  bug #180835.
 
   04 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> qt-4.3.0.ebuild:
   Add ~x86-fbsd keyword.

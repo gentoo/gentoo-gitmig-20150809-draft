@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.7 2007/06/04 10:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.8 2007/06/04 15:07:30 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -69,7 +69,14 @@ pkg_setup() {
 }
 
 qt_use() {
-	useq ${1} && echo "-${1}" || echo "-no-${1}"
+	local flag="$1"
+	local feature="$1"
+	local enableval=
+
+	[[ -n $2 ]] && feature=$2
+	[[ -n $3 ]] && enableval="-$3"
+
+	useq $flag && echo "${enableval}-${feature}" || echo "-no-${feature}"
 	return 0
 }
 
@@ -170,12 +177,12 @@ src_compile() {
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
-	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
-	use png		&& myconf="${myconf} -system-libpng" || myconf="${myconf} -qt-libpng"
-	use jpeg	&& myconf="${myconf} -system-libjpeg" || myconf="${myconf} -qt-libjpeg"
-	use tiff	&& myconf="${myconf} -system-libtiff" || myconf="${myconf} -no-libtiff"
+
+	myconf="${myconf} $(qt_use gif gif qt) $(qt_use png libpng system)"
+	myconf="${myconf} $(qt_use jpeg libjpeg system) $(qt_use tiff libtiff system)"
+	myconf="${myconf} $(qt_use zlib zlib system) $(qt_use mng libmng system)"
+
 	use debug	&& myconf="${myconf} -debug -no-separate-debug-info" || myconf="${myconf} -release -no-separate-debug-info"
-	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
 
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/pgsql" || myconf="${myconf} -no-sql-psql"
@@ -199,12 +206,15 @@ src_compile() {
 		myconf="${myconf} -nomake examples"
 	fi
 
-	./configure -stl -verbose -largefile -confirm-license \
+	myconf="-stl -verbose -largefile -confirm-license \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} -no-rpath \
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR} -datadir ${QTDATADIR} \
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR} \
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} \
-		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR} ${myconf} || die
+		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR} ${myconf}"
+
+	echo ./configure ${myconf}
+	./configure ${myconf} || die
 
 	emake all || die
 }
@@ -221,7 +231,7 @@ src_install() {
 		make INSTALL_ROOT=${D} install_htmldocs || die
 	fi
 
-	# Install the translations.  This may get use flagged later somehow
+	# Install the translations.	 This may get use flagged later somehow
 	make INSTALL_ROOT=${D} install_translations || die
 
 	keepdir "${QTSYSCONFDIR}"
