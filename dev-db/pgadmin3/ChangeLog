@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.32 2007/05/12 07:24:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.33 2007/06/04 22:05:01 armin76 Exp $
+
+  04 Jun 2007; Raúl Porcel <armin76@gentoo.org> pgadmin3-1.4.3.ebuild:
+  alpha stable wrt #155828
 
   12 May 2007; Ryan Hill <dirtyepic@gentoo.org> pgadmin3-1.2.2.ebuild:
   Patch up old ebuild to work with new wxwidgets.eclass changes.
