@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.3 2007/04/08 23:11:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.4 2007/06/04 20:39:32 drac Exp $
+
+  04 Jun 2007; Samuli Suominen <drac@gentoo.org> sexy-python-0.1.9.ebuild:
+  License is LGPL-2.1, not GPL-2.
 
   08 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   sexy-python-0.1.9.ebuild:
