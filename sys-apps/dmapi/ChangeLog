@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.45 2007/05/31 06:03:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.46 2007/06/04 23:30:48 robbat2 Exp $
+
+  04 Jun 2007; Robin H. Johnson <robbat2@gentoo.org> dmapi-2.2.8.ebuild:
+  Bug #180672, fix parallel install failure.
 
 *dmapi-2.2.8 (31 May 2007)
 

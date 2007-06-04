@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.8.ebuild,v 1.1 2007/05/31 06:03:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.8.ebuild,v 1.2 2007/06/04 23:30:48 robbat2 Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DIST_ROOT="${D}" install install-dev || die
+	emake -j1 DIST_ROOT="${D}" install install-dev || die
 	prepalldocs
 
 	# move shared libs to /
