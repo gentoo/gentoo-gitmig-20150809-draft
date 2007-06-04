@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/gst-plugins-flac-0.10.5.ebuild,v 1.3 2007/05/13 09:44:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/gst-plugins-flac-0.10.5.ebuild,v 1.4 2007/06/04 07:03:33 mr_bones_ Exp $
 
 WANT_AUTOCONF=2.5
 
-inherit gst-plugins-good eutils autotools
+inherit eutils autotools gst-plugins-good
 
 SRC_URI="${SRC_URI} mirror://gentoo/${P}-flac-1.1.3.patch.bz2"
 
