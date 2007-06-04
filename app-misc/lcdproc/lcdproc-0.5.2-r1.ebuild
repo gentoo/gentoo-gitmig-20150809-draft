@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2.ebuild,v 1.1 2007/05/06 21:26:27 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.1 2007/06/04 20:37:58 rbu Exp $
 
-inherit eutils multilib
+WANT_AUTOMAKE="1.9"
+inherit eutils autotools multilib
 
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
 HOMEPAGE="http://lcdproc.org/"
