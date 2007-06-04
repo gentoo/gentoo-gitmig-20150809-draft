@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6-r3.ebuild,v 1.1 2007/04/24 17:01:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6-r3.ebuild,v 1.2 2007/06/04 01:09:30 kumba Exp $
 
 inherit kde-dist
 
@@ -9,7 +9,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="KDE PIM (Personal Information Management) applications: KOrganizer, KMail, KNode,..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt gnokii"
 
 # We use GnuPG 1.4.x for OpenPGP and 1.9 (via gpgme) for s/mime as upstream advises.
