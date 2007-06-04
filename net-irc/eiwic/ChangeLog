@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eiwic
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.2 2007/06/04 11:03:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.3 2007/06/04 13:29:26 opfer Exp $
+
+  04 Jun 2007; Christian Faulhammer <opfer@gentoo.org> eiwic-1.1.3.ebuild:
+  add ~x86, bug 180500
 
   04 Jun 2007; Christoph Mende <angelos@gentoo.org> eiwic-1.1.3.ebuild:
   Fixed wrong path in the sample.conf
