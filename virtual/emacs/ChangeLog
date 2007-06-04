@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.6 2007/06/04 14:53:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.7 2007/06/04 15:04:32 ranger Exp $
+
+  04 Jun 2007; Brent Baude <ranger@gentoo.org> emacs-22.ebuild:
+  Marking emacs-22 ppc ~ for bug#180642
 
   04 Jun 2007; Brent Baude <ranger@gentoo.org> emacs-22.ebuild:
   Marking emacs-22 ppc64 ~ for bug#180642
