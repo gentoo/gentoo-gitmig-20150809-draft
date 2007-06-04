@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.57.ebuild,v 1.3 2007/06/04 14:07:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.57.ebuild,v 1.4 2007/06/04 17:28:48 ticho Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	fowners defang:defang /etc/mail/mimedefang-filter
-	fperms 600 /etc/mail/mimedefang-filter
+	fperms 644 /etc/mail/mimedefang-filter
 	insinto /etc/mail/
 	insopts -m 644
 	newins "${S}"/SpamAssassin/spamassassin.cf sa-mimedefang.cf
