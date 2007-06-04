@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ralink-rt61-1.1.0.0.ebuild,v 1.2 2006/12/01 19:06:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ralink-rt61-1.1.0.0.ebuild,v 1.3 2007/06/04 06:19:07 welp Exp $
 
 inherit eutils linux-mod
 
@@ -12,7 +12,7 @@ MY_P=${P/${PN}-/RT61_Linux_STA_Drv}
 
 SRC_URI="http://www.ralinktech.com/drivers/Linux/${MY_P}.tar.gz"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 SLOT="0"
 
