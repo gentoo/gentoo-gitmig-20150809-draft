@@ -1,33 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST AppleJavaExtensions.zip 3720 RMD160 869f85d4bf7642b72098afcf737f26fca2155b90 SHA1 1c8da51a1825750093ad80b58aaa602f95b18db1 SHA256 859531cbf87327bdb23cf5f006a7848f5173b01c5666891aac06497968c0fd40
 EBUILD apple-java-extensions-bin-1.2-r1.ebuild 802 RMD160 94cbee272aad6b68b6c4f4319441ad9012acccdd SHA1 ae86167afea16c8bef432b9648d02f5c5e0274ea SHA256 31da497edcf28be55952a5fcc160d7cd0f9e0914ff04ec66be16101136f591d9
 MD5 57dfad91ee09ae646b29c2c487442bc0 apple-java-extensions-bin-1.2-r1.ebuild 802
 RMD160 94cbee272aad6b68b6c4f4319441ad9012acccdd apple-java-extensions-bin-1.2-r1.ebuild 802
 SHA256 31da497edcf28be55952a5fcc160d7cd0f9e0914ff04ec66be16101136f591d9 apple-java-extensions-bin-1.2-r1.ebuild 802
-EBUILD apple-java-extensions-bin-1.2.ebuild 799 RMD160 1ac47de8e0087d08987118220aef5db828aad381 SHA1 89a59bfe9c0d720e84df50f90f1c88334e223cad SHA256 eaba17e8ae1fb6558f1f45feb7909b22fbc5ce24afab15554bb9f1851d5b5e8a
-MD5 1d3bf79da1075c9d173c3de9583d9ed8 apple-java-extensions-bin-1.2.ebuild 799
-RMD160 1ac47de8e0087d08987118220aef5db828aad381 apple-java-extensions-bin-1.2.ebuild 799
-SHA256 eaba17e8ae1fb6558f1f45feb7909b22fbc5ce24afab15554bb9f1851d5b5e8a apple-java-extensions-bin-1.2.ebuild 799
-MISC ChangeLog 1382 RMD160 d70729b8d586cd558f15a58f3bd3cb57e301d176 SHA1 9283a072d67e42694f820b2809be1e9beda57fdb SHA256 61de14bbbfae6c7800ec378e96668f47c15e8d3befa0c2930f596112c3ecb8d5
-MD5 b96c2efce7cf9c942bf1de1f85f9681c ChangeLog 1382
-RMD160 d70729b8d586cd558f15a58f3bd3cb57e301d176 ChangeLog 1382
-SHA256 61de14bbbfae6c7800ec378e96668f47c15e8d3befa0c2930f596112c3ecb8d5 ChangeLog 1382
+MISC ChangeLog 1501 RMD160 46b027c28728469f5ee3cf1e5b85bfbbedb4050c SHA1 47e2b9e2d5a3cd1fd66fceec37c746e6c77e2638 SHA256 5fca12b3865e726e96fc4b8d97e4cd0d53ab90df106a9a5c1497d91675cf9d65
+MD5 42c1152a5a647ad5f726ecbc6803ff0d ChangeLog 1501
+RMD160 46b027c28728469f5ee3cf1e5b85bfbbedb4050c ChangeLog 1501
+SHA256 5fca12b3865e726e96fc4b8d97e4cd0d53ab90df106a9a5c1497d91675cf9d65 ChangeLog 1501
 MISC metadata.xml 426 RMD160 c614f92c1c313d3e2a28b4b88c1e11f3694e1766 SHA1 fdb71b3a414e18acce88dc7d1c2a0472a3acd1e5 SHA256 2c5cf491094a7e9c8a82d8805b13e3dd1050ba88c58a3f823d5399c1aba7b38b
 MD5 b133269746cbae97bdc57596df82e129 metadata.xml 426
 RMD160 c614f92c1c313d3e2a28b4b88c1e11f3694e1766 metadata.xml 426
 SHA256 2c5cf491094a7e9c8a82d8805b13e3dd1050ba88c58a3f823d5399c1aba7b38b metadata.xml 426
-MD5 5e53ca32f4b558ca5cf98b2f2f5961c4 files/digest-apple-java-extensions-bin-1.2 244
-RMD160 585e1024574faf3ceb2e67eac38a04da1118da86 files/digest-apple-java-extensions-bin-1.2 244
-SHA256 fd8f853ee37e0842d340f29f480452450e75c16e032ac411e716726840492404 files/digest-apple-java-extensions-bin-1.2 244
 MD5 5e53ca32f4b558ca5cf98b2f2f5961c4 files/digest-apple-java-extensions-bin-1.2-r1 244
 RMD160 585e1024574faf3ceb2e67eac38a04da1118da86 files/digest-apple-java-extensions-bin-1.2-r1 244
 SHA256 fd8f853ee37e0842d340f29f480452450e75c16e032ac411e716726840492404 files/digest-apple-java-extensions-bin-1.2-r1 244
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFGY8ahNQqtfCuFneMRAtLoAJ9LfZ9t1tr2XPyIiv/Rbtjjxm1qXwCfefT/
-D6tYDFMxadf5jy0rZWNyCG0=
-=66re
------END PGP SIGNATURE-----
