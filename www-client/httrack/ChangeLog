@@ -1,6 +1,10 @@
 # ChangeLog for www-client/httrack
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.13 2007/06/02 14:25:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.14 2007/06/04 18:29:57 gustavoz Exp $
+
+  04 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  httrack-3.41.20.ebuild:
+  Stable on sparc wrt #180193
 
   02 Jun 2007; nixnut <nixnut@gentoo.org> httrack-3.41.20.ebuild:
   Stable on ppc wrt bug 180193
