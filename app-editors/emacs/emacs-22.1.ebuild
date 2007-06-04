@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1.ebuild,v 1.5 2007/06/04 15:05:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1.ebuild,v 1.6 2007/06/04 17:36:26 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -72,6 +72,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-Xaw3d-headers.patch"
 	epatch "${FILESDIR}/${P}-freebsd-sparc.patch"
+	epatch "${FILESDIR}/${P}-oldxmenu-qa.patch"
 	# ALSA is detected and used even if not requested by the USE=alsa flag.
 	# So remove the automagic check
 	use alsa || epatch "${FILESDIR}/${P}-disable_alsa_detection.patch"
