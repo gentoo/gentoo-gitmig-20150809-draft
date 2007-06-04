@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/jabber-server
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-jabber-server/ChangeLog,v 1.5 2007/03/29 23:37:50 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-jabber-server/ChangeLog,v 1.6 2007/06/04 00:26:42 pebenito Exp $
+
+  04 Jun 2007; Chris PeBenito <pebenito@gentoo.org>
+  selinux-jabber-server-20070329.ebuild:
+  Mark stable.
 
 *selinux-jabber-server-20070329 (29 Mar 2007)
 

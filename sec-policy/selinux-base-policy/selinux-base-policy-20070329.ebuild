@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20070329.ebuild,v 1.2 2007/03/30 13:29:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20070329.ebuild,v 1.3 2007/06/04 00:26:41 pebenito Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 #KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 mips ppc sparc x86"
 
 RDEPEND=">=sys-apps/policycoreutils-1.30.30"
 DEPEND="${RDEPEND}

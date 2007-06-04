@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-procmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.15 2007/03/29 23:37:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.16 2007/06/04 00:26:41 pebenito Exp $
+
+  04 Jun 2007; Chris PeBenito <pebenito@gentoo.org>
+  selinux-procmail-20070329.ebuild:
+  Mark stable.
 
 *selinux-procmail-20070329 (29 Mar 2007)
 
