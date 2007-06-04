@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.162 2007/06/04 14:51:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.163 2007/06/04 15:05:57 ranger Exp $
+
+  04 Jun 2007; Brent Baude <ranger@gentoo.org> emacs-22.1.ebuild:
+  Marking emacs-22.1 ppc ~ for bug#180642
 
   04 Jun 2007; Brent Baude <ranger@gentoo.org> emacs-22.1.ebuild:
   Marking emacs-22.1 ppc64 ~ for bug#180642
