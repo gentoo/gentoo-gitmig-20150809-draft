@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gallery-remote
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/ChangeLog,v 1.14 2007/04/24 12:36:52 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/ChangeLog,v 1.15 2007/06/04 08:04:04 opfer Exp $
+
+  04 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  gallery-remote-1.4.1-r4.ebuild:
+  stable x86, bug 144568
 
 *gallery-remote-1.4.1-r4 (24 Apr 2007)
 

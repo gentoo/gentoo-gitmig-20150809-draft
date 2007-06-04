@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.4.1-r4.ebuild,v 1.1 2007/04/24 12:36:52 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.4.1-r4.ebuild,v 1.2 2007/06/04 08:04:04 opfer Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gallery.sourceforge.net/gallery_remote.php"
 SRC_URI="mirror://gentoo/gallery-remote-${PV}-cvs-gentoo.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RDEPEND=">=virtual/jre-1.4
 		dev-java/apple-java-extensions-bin
