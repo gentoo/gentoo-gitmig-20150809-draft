@@ -29,9 +29,3 @@ stop() {
 	$NX_SERVER_CMD --statistics stop
 	eend 0
 }
-
-restart() {
-	$NX_SERVER_CMD --restart
-	$NX_SERVER_CMD --statistics restart
-	eend 0
-}
