@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.55 2007/06/04 20:37:58 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.56 2007/06/05 19:43:41 rbu Exp $
+
+  05 Jun 2007; Robert Buchholz <rbu@gentoo.org> lcdproc-0.5.2-r1.ebuild:
+  Fixed another issue where picolcd would not build correctly.
 
 *lcdproc-0.5.2-r1 (04 Jun 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.1 2007/06/04 20:37:58 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.2 2007/06/05 19:43:41 rbu Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools multilib
@@ -69,6 +69,8 @@ src_unpack() {
 
 	sed -i "79s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf
 	einfo "Patching LCDd.conf to use DriverPath=/usr/$(get_libdir)/lcdproc/"
+
+	eautoreconf
 }
 
 src_compile() {
