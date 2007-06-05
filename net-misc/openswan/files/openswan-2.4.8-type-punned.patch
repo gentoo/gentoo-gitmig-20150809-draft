@@ -1,0 +1,34 @@
+diff -Nru openswan-2.4.8.orig/programs/pluto/connections.c openswan-2.4.8/programs/pluto/connections.c
+--- openswan-2.4.8.orig/programs/pluto/connections.c	2007-01-23 17:37:06.000000000 +0200
++++ openswan-2.4.8/programs/pluto/connections.c	2007-06-05 09:44:35.000000000 +0300
+@@ -364,6 +364,15 @@
+ #ifdef DEBUG
+     lset_t old_cur_debugging = cur_debugging;
+ #endif
++	union {
++		struct alg_info**     ppai;
++#ifdef KERNEL_ALG
++		struct alg_info_esp** ppai_esp;
++#endif
++#ifdef IKE_ALG
++		struct alg_info_ike** ppai_ike;
++#endif
++	} palg_info;
+ 
+     set_cur_connection(c);
+ 
+@@ -439,10 +448,12 @@
+ 
+     gw_delref(&c->gw_info);
+ #ifdef KERNEL_ALG
+-    alg_info_delref((struct alg_info **)&c->alg_info_esp);
++    palg_info.ppai_esp = &c->alg_info_esp;
++    alg_info_delref(palg_info.ppai);
+ #endif
+ #ifdef IKE_ALG
+-    alg_info_delref((struct alg_info **)&c->alg_info_ike);
++    palg_info.ppai_ike = &c->alg_info_ike;
++    alg_info_delref(palg_info.ppai);
+ #endif
+     pfree(c);
+ }
