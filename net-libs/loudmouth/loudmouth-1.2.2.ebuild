@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.2.2.ebuild,v 1.1 2007/05/30 17:03:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.2.2.ebuild,v 1.2 2007/06/05 20:17:21 genstef Exp $
 
 inherit gnome2
 
@@ -12,12 +12,13 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc ssl debug"
+IUSE="doc ssl debug test"
 
 RDEPEND=">=dev-libs/glib-2.4
 	ssl? ( >=net-libs/gnutls-1 )"
 
 DEPEND="${RDEPEND}
+	test? ( dev-libs/check )
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
