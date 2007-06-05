@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.22 2007/04/14 06:36:30 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.23 2007/06/05 22:19:27 jokey Exp $
+
+*qgit-1.5.6 (05 Jun 2007)
+
+  05 Jun 2007; Markus Ullmann <jokey@gentoo.org> -qgit-1.5.3.ebuild,
+  +qgit-1.5.6.ebuild:
+  Version bump
 
   14 Apr 2007; Peter Weller <welp@gentoo.org> qgit-1.5.5.ebuild:
   Stable on amd64 wrt bug 173331
