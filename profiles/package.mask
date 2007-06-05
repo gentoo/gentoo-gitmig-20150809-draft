@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7336 2007/06/04 22:34:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7337 2007/06/05 06:14:29 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -171,8 +171,7 @@ app-office/qhacc
 
 # Ulrich Mueller <ulm@gentoo.org> (13 May 2007)
 # Live CVS ebuilds for Emacs
-~app-editors/emacs-cvs-22.1.50
->=app-editors/emacs-cvs-23
+>=app-editors/emacs-cvs-22.1
 >=virtual/emacs-23
 
 # Christian Faulhammer <opfer@gentoo.org> (13 May 2007)
