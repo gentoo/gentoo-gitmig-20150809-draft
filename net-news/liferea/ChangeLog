@@ -1,6 +1,19 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.104 2007/05/20 00:16:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.105 2007/06/05 01:48:01 dang Exp $
+
+*liferea-1.2.16 (05 Jun 2007)
+
+  05 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2.15.ebuild,
+  +liferea-1.2.16.ebuild:
+  Bump to 1.2.16
+  	* Major code reorganisation to minimize the number
+  	  of gettimeofday() calls which caused a lot of CPU
+  	  activity and wakeups on laptops.
+  	* Fixes "jumpy" behaviour of the HTML view item menu
+  	  in three pane mode. Now the menu is visible 
+  	  immediately on rendering.
+  	* New Basque translation from Iñaki Larrañaga Murgoitio
 
 *liferea-1.2.15b (20 May 2007)
 
