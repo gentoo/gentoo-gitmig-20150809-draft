@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.12.ebuild,v 1.1 2007/06/05 11:01:26 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.12.ebuild,v 1.2 2007/06/05 19:06:25 dang Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -41,6 +41,8 @@ src_unpack() {
 			epatch "${FILESDIR}/glib-2.10.3-ia64-atomic-ops.patch"
 		fi
 	fi
+
+	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
 
 src_compile() {

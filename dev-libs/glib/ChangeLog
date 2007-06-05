@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.265 2007/06/05 11:01:26 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.266 2007/06/05 19:06:25 dang Exp $
+
+  05 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> glib-2.12.12.ebuild:
+  Add back elibtoolize for fbsd
 
 *glib-2.12.12 (05 Jun 2007)
 
