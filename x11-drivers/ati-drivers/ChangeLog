@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.76 2007/06/01 18:37:36 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.77 2007/06/05 18:49:04 marienz Exp $
+
+*ati-drivers-8.37.6-r1 (05 Jun 2007)
+
+  05 Jun 2007; Marien Zwart <marienz@gentoo.org> +files/libGL.la.in,
+  +ati-drivers-8.37.6-r1.ebuild:
+  Add a check for paravirt in the kernel (bug #165634, thanks to Elias Probst
+  for the patch), add a dependency on emul-linux-x86-compat on amd64 for a 32
+  bit libstdc++ (bug #173962, thanks to Bernd Steinhauser and Christoph
+  Mende), create a (hopefully) sane libGL.la (should fix bug #179713, thanks
+  to Anarchy on irc for the initial implementation).
 
 *ati-drivers-8.37.6 (01 Jun 2007)
 
