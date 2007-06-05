@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.54 2007/06/03 15:08:02 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.55 2007/06/05 13:29:53 mabi Exp $
+
+  05 Jun 2007; Matti Bickel <mabi@gentoo.org> ion3-20060326.ebuild,
+  ion3-20061223.ebuild, ion3-20070318-r2.ebuild:
+  Change all ion-truetype USE to ion3-voidupstreamsupport-truetype, thanks to
+  Mr. Bones for notifying me
 
   03 Jun 2007; Matti Bickel <mabi@gentoo.org> ion3-20070506-r1.ebuild:
   Patch version.h at request of upstream

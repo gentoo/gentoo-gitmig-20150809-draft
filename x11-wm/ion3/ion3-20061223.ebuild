@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20061223.ebuild,v 1.5 2007/03/26 16:11:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20061223.ebuild,v 1.6 2007/06/05 13:29:53 mabi Exp $
 
 inherit autotools eutils
 
@@ -23,19 +23,19 @@ SRC_URI="http://iki.fi/tuomov/dl/${MY_PN}.tar.gz
 	mirror://debian/pool/main/i/${SCRIPTS_PN}/${SCRIPTS_PN}_${SCRIPTS_PV}.orig.tar.gz
 	mirror://debian/pool/main/i/${IONFLUX_PN}/${IONFLUX_PN}_${IONFLUX_PV}.orig.tar.gz
 	mirror://gentoo/${IONXRANDR_PN}-${IONXRANDR_PV}.tar.bz2
-	iontruetype? (
+	ion3-voidupstreamsupport-truetype? (
 	http://clemens.endorphin.org/patches/xft-ion3-for-darcs-20061202.diff )"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="xinerama unicode iontruetype"
+IUSE="xinerama unicode ion3-voidupstreamsupport-truetype"
 DEPEND="
 	|| (
 		(
 			x11-libs/libICE
 			x11-libs/libXext
 			x11-libs/libSM
-			iontruetype? ( x11-libs/libXft )
+			ion3-voidupstreamsupport-truetype? ( x11-libs/libXft )
 			xinerama? ( x11-libs/libXinerama )
 		)
 		virtual/x11
@@ -51,8 +51,8 @@ src_unpack() {
 	cd ${S}
 	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" epatch
 
-#	use iontruetype && epatch ${DISTDIR}/xft-ion3-for-darcs-20061202.diff
-	use iontruetype && patch -p1 < ${DISTDIR}/xft-ion3-for-darcs-20061202.diff
+#	use ion3-voidupstreamsupport-truetype && epatch ${DISTDIR}/xft-ion3-for-darcs-20061202.diff
+	use ion3-voidupstreamsupport-truetype && patch -p1 < ${DISTDIR}/xft-ion3-for-darcs-20061202.diff
 
 	# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
 	sed -i Makefile */Makefile */*/Makefile build/rules.mk \
@@ -91,7 +91,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	myconf="${myconf} `use_enable iontruetype xft`"
+	myconf="${myconf} `use_enable ion3-voidupstreamsupport-truetype xft`"
 
 	# xfree
 	if has_version '>=x11-base/xfree-4.3.0'; then

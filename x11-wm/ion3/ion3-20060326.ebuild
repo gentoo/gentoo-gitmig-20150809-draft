@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.3 2006/12/27 01:02:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.4 2007/06/05 13:29:53 mabi Exp $
 
 inherit eutils
 
@@ -12,14 +12,14 @@ SRC_URI="http://modeemi.cs.tut.fi/~tuomov/ion/dl/${MY_PN}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="iontruetype xinerama"
+IUSE="ion3-voidupstreamsupport-truetype xinerama"
 DEPEND="
 	|| (
 		(
 			x11-libs/libICE
 			x11-libs/libSM
 			x11-libs/libXext
-			iontruetype? ( x11-libs/libXft )
+			ion3-voidupstreamsupport-truetype? ( x11-libs/libXft )
 			xinerama? ( x11-libs/libXinerama )
 		)
 		virtual/x11
@@ -30,7 +30,7 @@ S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
-	use iontruetype && epatch ${FILESDIR}/ion3-20060326-truetype.patch
+	use ion3-voidupstreamsupport-truetype && epatch ${FILESDIR}/ion3-20060326-truetype.patch
 }
 
 src_compile() {
@@ -47,7 +47,7 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/X11 \
-		`use_enable iontruetype xft` \
+		`use_enable ion3-voidupstreamsupport-truetype xft` \
 		`use_enable xinerama` \
 		${myconf} || die
 

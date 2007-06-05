@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070318-r2.ebuild,v 1.1 2007/04/30 16:04:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20070318-r2.ebuild,v 1.2 2007/06/05 13:29:53 mabi Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,14 +30,14 @@ SRC_URI="http://iki.fi/tuomov/dl/${MY_PN}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="unicode iontruetype doc"
+IUSE="unicode ion3-voidupstreamsupport-truetype doc"
 DEPEND="
 	|| (
 		(
 			x11-libs/libICE
 			x11-libs/libXext
 			x11-libs/libSM
-			iontruetype? ( x11-libs/libXft )
+			ion3-voidupstreamsupport-truetype? ( x11-libs/libXft )
 		)
 		virtual/x11
 	)
@@ -57,7 +57,7 @@ src_unpack() {
 
 	cd ${S}
 	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" epatch
-	use iontruetype && epatch ${FILESDIR}/xft-ion3-${PV}.patch
+	use ion3-voidupstreamsupport-truetype && epatch ${FILESDIR}/xft-ion3-${PV}.patch
 
 	# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
 	sed -i 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g' Makefile */Makefile */*/Makefile build/rules.mk
@@ -96,7 +96,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	myconf="${myconf} `use_enable iontruetype xft`"
+	myconf="${myconf} `use_enable ion3-voidupstreamsupport-truetype xft`"
 
 	# xfree 
 	if has_version '>=x11-base/xfree-4.3.0'; then
