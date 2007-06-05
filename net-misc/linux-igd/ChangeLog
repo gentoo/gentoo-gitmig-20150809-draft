@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/linux-igd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.25 2007/06/02 18:07:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.26 2007/06/05 17:53:46 gustavoz Exp $
+
+  05 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  linux-igd-1.0-r2.ebuild:
+  Stable on sparc wrt #168279
 
   02 Jun 2007; Lars Weiler <pylon@gentoo.org> linux-igd-1.0-r2.ebuild:
   Stable on ppc; bug #168279.
