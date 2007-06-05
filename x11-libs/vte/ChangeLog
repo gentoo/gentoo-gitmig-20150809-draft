@@ -1,6 +1,31 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.156 2007/06/02 02:45:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.157 2007/06/05 16:44:39 dang Exp $
+
+*vte-0.16.5 (05 Jun 2007)
+
+  05 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> +vte-0.16.5.ebuild:
+  Bump to 0.16.5 - Fix issue with 'some strange "underline" line where cursor
+  is
+  
+  located and blinking'. - Misc bug fixes. - Bugs fixed in this release:
+  
+  – Cursor drawn strangely in joe
+  
+  – scrolling vim in full screen is painfully slow and takes up 100% of the
+  cpu
+  
+  – Display glitch with transparent backgroud
+  
+  – ctrl-key combinations yielding just key
+  
+  Original patch by <samo@altern.org> and refactored by Loïc Minier.
+  
+  – gnome-terminal cannot refresh terminal when accessibility enabled
+  
+  Original patch by Li Yuan.
+  
+  – gnome-terminal crashes when open preedit area
 
   02 Jun 2007; Brent Baude <ranger@gentoo.org> vte-0.14.2.ebuild:
   Marking vte-0.14.2 ppc stable for bug #171107
