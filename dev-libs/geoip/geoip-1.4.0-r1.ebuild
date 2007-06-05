@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.0-r1.ebuild,v 1.9 2007/01/23 10:57:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.0-r1.ebuild,v 1.10 2007/06/05 22:11:56 jokey Exp $
 
 inherit autotools eutils libtool
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	econf --enable-shared || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
