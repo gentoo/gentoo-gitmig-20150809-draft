@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13-r1.ebuild,v 1.12 2007/02/19 01:46:44 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13-r1.ebuild,v 1.13 2007/06/05 08:45:07 eradicator Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="arm s390 sh"
 IUSE="doc nls"
 
 DEPEND="dev-util/pkgconfig
