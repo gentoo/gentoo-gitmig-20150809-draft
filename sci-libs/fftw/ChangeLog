@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.53 2007/06/05 15:04:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.54 2007/06/05 21:46:36 jer Exp $
+
+  05 Jun 2007; Jeroen Roovers <jer@gentoo.org> fftw-3.1.2.ebuild:
+  Stable for HPPA (bug #180963).
 
   05 Jun 2007; Ferris McCormick <fmccor@gentoo.org> fftw-3.1.2.ebuild:
   Sparc stable --- Bug #180963 --- Good on sparc since July 2006.
