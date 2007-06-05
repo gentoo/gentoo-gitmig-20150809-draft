@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.451 2007/06/05 06:14:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.452 2007/06/05 07:04:49 mrness Exp $
+
+  05 Jun 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
+  Add extra-algorithms and weak-algorithms USE flags for openswan (#180472).
 
   05 Jun 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask for emacs-cvs extended to cover upstream version number change.
