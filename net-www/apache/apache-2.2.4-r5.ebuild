@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r4.ebuild,v 1.4 2007/06/02 19:34:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r5.ebuild,v 1.1 2007/06/05 16:41:01 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-${PF}"
-GENTOO_PATCHSTAMP="20070527"
+GENTOO_PATCHSTAMP="20070605"
 GENTOO_DEVSPACE="phreak"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
@@ -49,13 +49,15 @@ pkg_setup() {
 		die "ldap USE-flag enabled while not supported in apr-util"
 	fi
 
-	# select our MPM
+	# Select the default MPM module
 	MPM_LIST="event itk peruser prefork worker"
 	for x in ${MPM_LIST} ; do
 		if use mpm-${x} ; then
 			if [[ "x${mpm}" == "x" ]] ; then
 				mpm=${x}
-				einfo "Selected MPM: ${mpm}"
+				elog
+				elog "Selected MPM: ${mpm}"
+				elog
 			else
 				eerror "You have selected more then one mpm USE-flag."
 				eerror "Only one MPM is supported."
@@ -67,10 +69,14 @@ pkg_setup() {
 	if [[ "x${mpm}" == "x" ]] ; then
 		if use threads ; then
 			mpm=worker
-			einfo "Selected default threaded MPM: ${mpm}";
+			elog
+			elog "Selected default threaded MPM: ${mpm}";
+			elog
 		else
 			mpm=prefork
-			einfo "Selected default MPM: ${mpm}";
+			elog
+			elog "Selected default MPM: ${mpm}";
+			elog
 		fi
 	fi
 
@@ -125,7 +131,8 @@ src_unpack() {
 	fi
 
 	# setup the filesystem layout config
-	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> "${S}"/config.layout
+	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> "${S}"/config.layout || \
+		die "Failed preparing config.layout!"
 	sed -i -e "s:version:${PF}:g" "${S}"/config.layout
 
 	# patched-in MPMs need the build environment rebuilt
@@ -134,7 +141,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local modtype="shared" myconf=""
+	local modtype="shared" myconf="" mods=""
 	cd "${S}"
 
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
@@ -153,14 +160,6 @@ src_compile() {
 		mods="${mods} ssl"
 		myconf="${myconf} --with-ssl=/usr --enable-ssl=${modtype}"
 	fi
-
-	# Fix for bug #24215 - robbat2@gentoo.org, 30 Oct 2003
-	# We pre-load the cache with the correct answer! This avoids
-	# it violating the sandbox. This may have to be changed for
-	# non-Linux systems or if sem_open changes on Linux. This
-	# hack is built around documentation in /usr/include/semaphore.h
-	# and the glibc (pthread) source.
-	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> config.cache
 
 	# Only build suexec with USE=-no-suexec
 	if use no-suexec ; then
@@ -188,7 +187,6 @@ src_compile() {
 		--datadir=/var/www/localhost \
 		--sysconfdir=/etc/apache2 \
 		--localstatedir=/var \
-		--cache-file="${S}/config.cache" \
 		--with-mpm=${mpm} \
 		--with-perl=/usr/bin/perl \
 		--with-expat=/usr \
@@ -344,8 +342,32 @@ pkg_postinst() {
 		chown -R apache:0 "${ROOT}"/var/www/localhost
 	fi
 
-	# Check for dual/upgrade install
+	# Previous installations of apache-2.2 installed the upstream configuration
+	# files, which shouldn't even have been installed!
+	if has_version '>=net-www/apache-2.2.4' ; then
+		[ -f "${ROOT}"/etc/apache2/apache2.conf ] && \
+			rm -f "${ROOT}"/etc/apache2/apache2.conf >/dev/null 2>&1
 
+		for i in extra original ; do
+			[ -d "${ROOT}"/etc/apache2/$i ] && \
+				rm -rf "${ROOT}"/etc/apache2/$i >/dev/null 2>&1
+		done
+	fi
+
+	# Note the user of the config changes
+	if has_version '<net-www/apache-2.2.4-r5' ; then
+		elog
+		elog "Please make sure that you update your /etc directory."
+		elog "Between the versions, we had to changes some config files"
+		elog "and move some stuff out of the main httpd.conf file to a seperate"
+		elog "modules.d entry."
+		elog
+		elog "Thus please update your /etc directory either via etc-update,"
+		elog "dispatch-conf or conf-update !"
+		elog
+	fi
+
+	# Check for dual/upgrade install
 	if has_version '<net-www/apache-2.2.0' ; then
 		elog
 		elog "When upgrading from versions below 2.2.0 to this version, you"
