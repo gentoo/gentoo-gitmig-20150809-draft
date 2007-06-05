@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_rc1-r3.ebuild,v 1.2 2007/06/04 11:06:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_rc1-r3.ebuild,v 1.3 2007/06/05 12:22:56 angelos Exp $
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="Pre-build mplayer binary for amd64 systems"
 HOMEPAGE="http://www.gentoo.org/"
