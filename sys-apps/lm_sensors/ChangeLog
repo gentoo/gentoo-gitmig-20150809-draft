@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.71 2007/06/03 07:33:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.72 2007/06/05 18:43:08 marienz Exp $
+
+  05 Jun 2007; Marien Zwart <marienz@gentoo.org> lm_sensors-2.10.1.ebuild,
+  lm_sensors-2.10.2.ebuild, lm_sensors-2.10.3.ebuild:
+  Make the CONFIG_I2C check a warning instead of an error (not all sensor
+  chips need this).
 
   03 Jun 2007; Doug Goldstein <cardoe@gentoo.org> lm_sensors-2.10.3.ebuild:
   Add missing depend. decode-edid.pl needs parse-edid from x11-misc/read-edid

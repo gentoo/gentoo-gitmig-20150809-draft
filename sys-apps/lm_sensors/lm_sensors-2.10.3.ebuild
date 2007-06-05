@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.3.ebuild,v 1.3 2007/06/03 07:33:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.3.ebuild,v 1.4 2007/06/05 18:43:08 marienz Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -60,10 +60,9 @@ pkg_setup() {
 			ewarn
 		fi
 		if ! (linux_chkconfig_present I2C); then
-			eerror
-			eerror "${P} requires CONFIG_I2C to be enabled for non-2.4.x kernels."
-			eerror
-			die "CONFIG_I2C not detected"
+			ewarn
+			ewarn "${P} requires CONFIG_I2C to be enabled for non-2.4.x kernels for most sensors."
+			ewarn
 		fi
 	fi
 }
