@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-utopia-75dpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-75dpi/ChangeLog,v 1.20 2007/06/05 17:39:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-75dpi/ChangeLog,v 1.21 2007/06/05 17:47:20 lu_zero Exp $
+
+  05 Jun 2007; Luca Barbato <lu_zero@gentoo.org>
+  font-adobe-utopia-75dpi-1.0.1.ebuild:
+  Marked ppc
 
   05 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   font-adobe-utopia-75dpi-1.0.1.ebuild:
