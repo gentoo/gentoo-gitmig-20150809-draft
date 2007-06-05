@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.2-r1.ebuild,v 1.1 2007/06/04 05:17:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.2-r2.ebuild,v 1.1 2007/06/05 06:34:49 williamh Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-espeak.patch
-	epatch ${FILESDIR}/${P}-espeak-generic.patch
 	epatch ${FILESDIR}/${P}-python.patch
 }
 
@@ -44,5 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "The default synthesizer for speech-dispatcher in gentoo is espeak."
+	elog "This has been set up in /etc/speech-dispatcher/speechd.conf."
 	elog "To enable Festival support, you must install app-accessibility/festival-freebsoft-utils."
 }

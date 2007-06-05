@@ -6,14 +6,10 @@ AUX speech-dispatcher-0.3-gentoo.patch 2891 RMD160 c3484bb8cdedde5c04444883a1bb3
 MD5 0b47aa388bba472bb4dc934c1d99a47f files/speech-dispatcher-0.3-gentoo.patch 2891
 RMD160 c3484bb8cdedde5c04444883a1bb3734da421ce5 files/speech-dispatcher-0.3-gentoo.patch 2891
 SHA256 736d6e8c0d4c132dc89d2d9323fa05ae4cf272be8abf7c6023b63460b5030c8e files/speech-dispatcher-0.3-gentoo.patch 2891
-AUX speech-dispatcher-0.6.2-espeak-generic.patch 724 RMD160 1beed392bdf7d0a545ca8e6d05ff8b553f1864c8 SHA1 21cb0b1e83472f90975024532817954ecda7f485 SHA256 a544634f9367873ab9c28be421c506782ff935e0056ee80f9f04b21d70e8e74b
-MD5 55df09bc57ace7b87a963734899ebfe4 files/speech-dispatcher-0.6.2-espeak-generic.patch 724
-RMD160 1beed392bdf7d0a545ca8e6d05ff8b553f1864c8 files/speech-dispatcher-0.6.2-espeak-generic.patch 724
-SHA256 a544634f9367873ab9c28be421c506782ff935e0056ee80f9f04b21d70e8e74b files/speech-dispatcher-0.6.2-espeak-generic.patch 724
-AUX speech-dispatcher-0.6.2-espeak.patch 468 RMD160 d56b62ec11c987551feaf867e0792b4dc34dffd2 SHA1 c22fd10006f40010642eed025dc388faad04ff9f SHA256 ecd08060e2f8a3d26304443e5bcd075493f8e8d427193a171db84b9eec01e54e
-MD5 03237254d43e67ceb6defb88472fcfbb files/speech-dispatcher-0.6.2-espeak.patch 468
-RMD160 d56b62ec11c987551feaf867e0792b4dc34dffd2 files/speech-dispatcher-0.6.2-espeak.patch 468
-SHA256 ecd08060e2f8a3d26304443e5bcd075493f8e8d427193a171db84b9eec01e54e files/speech-dispatcher-0.6.2-espeak.patch 468
+AUX speech-dispatcher-0.6.2-espeak.patch 2098 RMD160 e09873b417028564f9c7c0592d7b716b95f9440d SHA1 353a705a14e0a0ed9edb9f94de0287eab3a3a2bf SHA256 cff9362a6c45ab8378b8b097ac6401075dc874816fc6c14e1c54bf5ea99344fb
+MD5 b0581373d058dcb9be6d1bd64f6aeaaa files/speech-dispatcher-0.6.2-espeak.patch 2098
+RMD160 e09873b417028564f9c7c0592d7b716b95f9440d files/speech-dispatcher-0.6.2-espeak.patch 2098
+SHA256 cff9362a6c45ab8378b8b097ac6401075dc874816fc6c14e1c54bf5ea99344fb files/speech-dispatcher-0.6.2-espeak.patch 2098
 AUX speech-dispatcher-0.6.2-python.patch 412 RMD160 a174853ac722af2ba887fb258fcf3fb12e0ef62d SHA1 3f64cacc4541816841542d8634a936c3d76266dd SHA256 38f96ec443ce1ca4d1f195b6f614fd203a30b4cc95449e36bfb03596f4d1baee
 MD5 4adcfd4719e86512314ade075daeb212 files/speech-dispatcher-0.6.2-python.patch 412
 RMD160 a174853ac722af2ba887fb258fcf3fb12e0ef62d files/speech-dispatcher-0.6.2-python.patch 412
@@ -40,10 +36,10 @@ EBUILD speech-dispatcher-0.6.1.ebuild 1115 RMD160 7ebc85f6d9e99dc467c0866a199412
 MD5 c5a863da5b0f2e685f64686cb6e1bab0 speech-dispatcher-0.6.1.ebuild 1115
 RMD160 7ebc85f6d9e99dc467c0866a199412a0a1d231f3 speech-dispatcher-0.6.1.ebuild 1115
 SHA256 aaf01d69885a051f556c26f514f1ef409903f3a9be8f18e035df182f78be206f speech-dispatcher-0.6.1.ebuild 1115
-EBUILD speech-dispatcher-0.6.2-r1.ebuild 1196 RMD160 506f9b05c09692c385132b8de9ffddaca640444a SHA1 bc0827163923450a41f677544eeb48eabce5d2b3 SHA256 dfab8717c31494da76732c2cc1dce6c521a3c8fcf5fd7eb9cbfa5578f1525860
-MD5 2e4f05ef8cffd9c79d76c877fcca4d6b speech-dispatcher-0.6.2-r1.ebuild 1196
-RMD160 506f9b05c09692c385132b8de9ffddaca640444a speech-dispatcher-0.6.2-r1.ebuild 1196
-SHA256 dfab8717c31494da76732c2cc1dce6c521a3c8fcf5fd7eb9cbfa5578f1525860 speech-dispatcher-0.6.2-r1.ebuild 1196
+EBUILD speech-dispatcher-0.6.2-r2.ebuild 1294 RMD160 0ab92ee1f32af6317a23e5ad45e5ab8946a049d7 SHA1 c5857c8e31786bd5e5526a934f85f473a8ee4de2 SHA256 8a30afb341bf36d4b43267c2b1d186a38cf2058921383b810186753f056c8586
+MD5 596e733f8096e773a3f6946ddaca131b speech-dispatcher-0.6.2-r2.ebuild 1294
+RMD160 0ab92ee1f32af6317a23e5ad45e5ab8946a049d7 speech-dispatcher-0.6.2-r2.ebuild 1294
+SHA256 8a30afb341bf36d4b43267c2b1d186a38cf2058921383b810186753f056c8586 speech-dispatcher-0.6.2-r2.ebuild 1294
 EBUILD speech-dispatcher-0.6.2.ebuild 1147 RMD160 e70cd553937438d0964f52b3291d57a139c54aca SHA1 977f9df95fd064de29ecb9e76b3d22dfad76b0f6 SHA256 bf4f195cdb2a9ad7cc88c35f6dd1732d94ede006418b9058d6a444dcc93951e4
 MD5 9c9270adbe69df589d539615707ba2f2 speech-dispatcher-0.6.2.ebuild 1147
 RMD160 e70cd553937438d0964f52b3291d57a139c54aca speech-dispatcher-0.6.2.ebuild 1147
@@ -52,10 +48,10 @@ EBUILD speech-dispatcher-0.6.ebuild 901 RMD160 0dc42dde948feec274281e275d7c6bb6f
 MD5 7221a3377f4d6fdecbe1dc1609f26c5f speech-dispatcher-0.6.ebuild 901
 RMD160 0dc42dde948feec274281e275d7c6bb6f82556fe speech-dispatcher-0.6.ebuild 901
 SHA256 7cc07eb184c09aeb090cbbb8a38d8461c143900addad6d680e1e960011e4da15 speech-dispatcher-0.6.ebuild 901
-MISC ChangeLog 4000 RMD160 5536f2334ca933d870c1db957fb0f62b9472037a SHA1 f2f3be65af0bee2452bda3e156aa2506f28bb03e SHA256 d149edba22524d8ee6155ee60f0b6b8e2c281a3827c452089d22c081ee5b61ee
-MD5 2e488e1aa70850a3d84a34a74f5d4f87 ChangeLog 4000
-RMD160 5536f2334ca933d870c1db957fb0f62b9472037a ChangeLog 4000
-SHA256 d149edba22524d8ee6155ee60f0b6b8e2c281a3827c452089d22c081ee5b61ee ChangeLog 4000
+MISC ChangeLog 4308 RMD160 6356b0d2c231f197f685f109d230c140f170469d SHA1 af535758ff52a4ccca4947d0b80c3d3248bb1770 SHA256 117bd603af09bafd0e496ddd1bec8a7910a6c4eb9270ffadd15b41b6708aa14e
+MD5 b90f056ca1d74a3e4e1599617005a40a ChangeLog 4308
+RMD160 6356b0d2c231f197f685f109d230c140f170469d ChangeLog 4308
+SHA256 117bd603af09bafd0e496ddd1bec8a7910a6c4eb9270ffadd15b41b6708aa14e ChangeLog 4308
 MISC metadata.xml 248 RMD160 ba4734da964d3d5db60feb339d3e89de2eb87ab6 SHA1 bdd70f0d466d7bea88716581054941113ce22a16 SHA256 b40271c6a99e7610d9df3544a98da28417f406b82a48b04f1a8a9bb474cd04cc
 MD5 dd298b30a3c1071fdfd33569480dcfd3 metadata.xml 248
 RMD160 ba4734da964d3d5db60feb339d3e89de2eb87ab6 metadata.xml 248
@@ -78,6 +74,6 @@ SHA256 767be418e45e2fd8d92dce1637ab41b9e9148f033646a104695b68a0894b45f1 files/di
 MD5 9fca67ec4c95f3051615a656a8488e14 files/digest-speech-dispatcher-0.6.2 271
 RMD160 922e36faa6bbdcab9cb157123cfe2d50cd161be2 files/digest-speech-dispatcher-0.6.2 271
 SHA256 066855531c7cbc73fcbd39c09445ebd99ac2c389cbbb1473a9ba98df3054b773 files/digest-speech-dispatcher-0.6.2 271
-MD5 9fca67ec4c95f3051615a656a8488e14 files/digest-speech-dispatcher-0.6.2-r1 271
-RMD160 922e36faa6bbdcab9cb157123cfe2d50cd161be2 files/digest-speech-dispatcher-0.6.2-r1 271
-SHA256 066855531c7cbc73fcbd39c09445ebd99ac2c389cbbb1473a9ba98df3054b773 files/digest-speech-dispatcher-0.6.2-r1 271
+MD5 9fca67ec4c95f3051615a656a8488e14 files/digest-speech-dispatcher-0.6.2-r2 271
+RMD160 922e36faa6bbdcab9cb157123cfe2d50cd161be2 files/digest-speech-dispatcher-0.6.2-r2 271
+SHA256 066855531c7cbc73fcbd39c09445ebd99ac2c389cbbb1473a9ba98df3054b773 files/digest-speech-dispatcher-0.6.2-r2 271
