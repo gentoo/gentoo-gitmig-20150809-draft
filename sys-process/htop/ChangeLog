@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.40 2007/06/05 10:27:05 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.41 2007/06/05 10:29:46 wschlich Exp $
+
+  05 Jun 2007; Wolfram Schlich <wschlich@gentoo.org> htop-0.6.6.ebuild:
+  fixed KEYWORDS
 
 *htop-0.6.6 (05 Jun 2007)
 
