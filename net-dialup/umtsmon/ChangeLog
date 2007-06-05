@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/umtsmon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.1 2007/03/31 09:05:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.2 2007/06/05 07:40:47 mrness Exp $
+
+*umtsmon-0.6 (05 Jun 2007)
+
+  05 Jun 2007; Alin Năstac <mrness@gentoo.org> +umtsmon-0.6.ebuild:
+  Version bump (#180441).
 
 *umtsmon-0.5 (31 Mar 2007)
 
