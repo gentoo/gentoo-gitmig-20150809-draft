@@ -1,6 +1,18 @@
 # ChangeLog for sci-astronomy/wcstools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.3 2007/02/21 16:45:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.4 2007/06/05 16:35:59 bicatali Exp $
+
+*wcstools-3.6.8 (05 Jun 2007)
+
+  05 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/wcstools-3.6.6-autotools.patch,
+  -files/wcstools-3.6.6-codewarn.patch,
+  -files/wcstools-3.6.7-autotools.patch,
+  +files/wcstools-3.6.8-autotools.patch,
+  +files/wcstools-3.6.8-imsetwcs.patch, -wcstools-3.6.6.ebuild,
+  -wcstools-3.6.7.ebuild, +wcstools-3.6.8.ebuild:
+  Version bump. Added a patch removing segfault on imwcs (from fedora).
+  Removed older and buggy versions
 
 *wcstools-3.6.7 (21 Feb 2007)
 

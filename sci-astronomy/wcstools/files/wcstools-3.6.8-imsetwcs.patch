@@ -1,0 +1,18 @@
+--- libwcs/imsetwcs.c.orig	2007-06-05 17:06:28.886476000 +0100
++++ libwcs/imsetwcs.c	2007-06-05 17:06:20.245936000 +0100
+@@ -854,13 +854,13 @@
+     if (gc) free ((char *)gc);
+ 
+     /* Free memory used for object names in reference catalog */
+-    if (gobj1 != NULL) {
++/*    if (gobj1 != NULL) {
+ 	for (i = 0; i < ns; i++) {
+ 	    if (gobj[i] != NULL) free (gobj[i]);
+ 	    gobj[i] = NULL;
+ 	    }
+ 	}
+-
++*/
+     /* Free image source arrays */
+     if (sx) free ((char *)sx);
+     if (sy) free ((char *)sy);
