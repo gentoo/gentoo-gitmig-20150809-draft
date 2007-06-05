@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r5.ebuild,v 1.1 2007/06/05 16:41:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.4-r6.ebuild,v 1.1 2007/06/05 23:34:59 jokey Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
 # latest gentoo apache files
-GENTOO_PATCHNAME="gentoo-${PF}"
+GENTOO_PATCHNAME="gentoo-${P}-r5"
 GENTOO_PATCHSTAMP="20070605"
 GENTOO_DEVSPACE="phreak"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
@@ -141,7 +141,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local modtype="shared" myconf="" mods=""
+	local modtype="shared" myconf=""
 	cd "${S}"
 
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
