@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.3 2007/05/11 11:40:08 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.4 2007/06/05 14:13:06 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://gentooexperimental.org/~calchan/distfiles/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86"
 IUSE=""
 
 RDEPEND="net-print/foomatic-filters"

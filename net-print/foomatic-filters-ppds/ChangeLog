@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters-ppds
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.13 2007/05/11 11:40:08 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.14 2007/06/05 14:13:06 gustavoz Exp $
+
+  05 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  foomatic-filters-ppds-20070501.ebuild:
+  Stable on sparc wrt #180906
 
   11 May 2007; Denis Dupeyron <calchan@gentoo.org>
   foomatic-filters-ppds-20070501.ebuild:
