@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.0.ebuild,v 1.2 2007/06/05 23:43:02 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.0.ebuild,v 1.3 2007/06/05 23:51:01 omp Exp $
+
+inherit fdo-mime
 
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
 HOMEPAGE="http://icculus.org/openbox/index.php/ObConf:About"
@@ -28,4 +30,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
