@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.310 2007/05/27 08:15:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.311 2007/06/05 12:51:29 zzam Exp $
+
+*udev-112 (05 Jun 2007)
+
+  05 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-112-rules.diff, +udev-112.ebuild:
+  Version bumped. Now go back to using make install. udevmonitor is now
+  installed into /usr/sbin.
 
 *udev-111-r3 (27 May 2007)
 
