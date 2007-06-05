@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.369 2007/06/03 21:00:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.370 2007/06/05 10:57:34 armin76 Exp $
+
+  05 Jun 2007; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.5-r4.ebuild:
+  ia64 stable
 
   03 Jun 2007; Joshua Kinard <kumba@gentoo.org> kdebase-3.5.6-r3.ebuild:
   Marked unstable on mips.
