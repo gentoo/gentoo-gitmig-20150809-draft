@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.7.ebuild,v 1.1 2007/06/03 20:35:16 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.7-r1.ebuild,v 1.1 2007/06/05 19:26:40 rbu Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Herrie is a command line music player."
 HOMEPAGE="http://herrie.info/"
@@ -54,8 +54,11 @@ src_compile() {
 	use vorbis || EXTRA_CONF="${EXTRA_CONF} no_vorbis"
 	use xspf || EXTRA_CONF="${EXTRA_CONF} no_xspf"
 
+	append-flags "-DCLOSE_STDERR"
+
 	einfo "./configure ${EXTRA_CONF}"
-	CC="$(tc-getCC)" PREFIX=/usr MANDIR=/usr/share/man ./configure ${EXTRA_CONF} || die "configure failed"
+	CC="$(tc-getCC)" PREFIX=/usr MANDIR=/usr/share/man \
+		./configure ${EXTRA_CONF} || die "configure failed"
 	emake || die "make failed"
 }
 
