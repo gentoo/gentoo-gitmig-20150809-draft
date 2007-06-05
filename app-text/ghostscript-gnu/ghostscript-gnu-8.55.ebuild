@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.3 2007/04/07 16:22:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.4 2007/06/05 20:05:23 genstef Exp $
 
 WANT_AUTOMAKE=1.6
 inherit autotools elisp-common eutils versionator flag-o-matic
@@ -87,7 +87,7 @@ src_unpack() {
 		-e "s:exdir=.*:exdir=/usr/share/doc/${PF}/examples:" \
 		-e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
-		src/Makefile.in src/*.mak || die "sed failed"
+		Makefile.in src/Makefile.in src/*.mak || die "sed failed"
 }
 
 src_compile() {
