@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/mongrel_cluster-0.2.2.ebuild,v 1.1 2007/02/03 11:36:03 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/mongrel_cluster-0.2.2.ebuild,v 1.2 2007/06/05 03:51:11 nichoj Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ SRC_URI="http://mongrel.rubyforge.org/releases/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 USE_RUBY="any"
