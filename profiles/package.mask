@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7337 2007/06/05 06:14:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7338 2007/06/05 11:10:18 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -54,8 +54,8 @@ x11-misc/xfm
 app-shells/ash
 
 # Raúl Porcel <armin76@gentoo.org> (30 May 2007)
-# Mask beta version
-=net-p2p/deluge-0.5.1_beta1
+# Mask beta versions
+=net-p2p/deluge-0.5.1_beta*
 
 # Bjarke Istrup Pedersen <gurligebis@gentoo.org> (30 May 2007)
 # masked for removal on 20070629
