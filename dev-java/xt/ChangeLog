@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.16 2007/06/06 08:42:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.17 2007/06/06 09:28:34 opfer Exp $
+
+  06 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  xt-20051206-r1.ebuild:
+  stable x86, bug 180795
 
 *xt-20051206-r1 (06 Jun 2007)
 
