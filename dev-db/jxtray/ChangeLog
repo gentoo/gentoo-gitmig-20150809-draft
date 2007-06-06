@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/jxtray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.24 2007/04/25 17:33:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.25 2007/06/06 22:06:48 corsair Exp $
+
+  06 Jun 2007; Markus Rothe <corsair@gentoo.org> jxtray-0.5-r4.ebuild:
+  Added ~ppc64; bug #175994
 
 *jxtray-0.5-r4 (25 Apr 2007)
 
