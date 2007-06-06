@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.99 2007/06/02 19:44:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.100 2007/06/06 19:39:40 falco Exp $
+
+*cacti-0.8.6j-r5 (06 Jun 2007)
+
+  06 Jun 2007; Raphael Marichez <falco@gentoo.org>
+  +files/cacti-0.8.6j-dos-large-values.patch, +cacti-0.8.6j-r5.ebuild:
+  Version bump, security bug 181112
 
   02 Jun 2007; Lars Weiler <pylon@gentoo.org> cacti-0.8.6j-r4.ebuild:
   Stable on ppc; bug #174551.
