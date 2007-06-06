@@ -7,18 +7,18 @@ inherit eutils linux-mod
 MY_P=vbox-kernel-module-src-${PV}
 DESCRIPTION="Modules for Virtualbox OSE"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="!<app-emulation/virtualbox-bin-1.3.6
 	!<app-emulation/virtualbox-1.3.6
 	!=app-emulation/virtualbox-9999"
 
-S=${WORKDIR}/src
+S=${WORKDIR}/vboxdrv
 
 BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.17 2007/06/03 07:35:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.18 2007/06/06 14:39:45 jokey Exp $
+
+*virtualbox-1.4.0 (06 Jun 2007)
+
+  06 Jun 2007; Markus Ullmann <jokey@gentoo.org> +virtualbox-1.4.0.ebuild:
+  Version bump, thanks to Alessio
 
   03 Jun 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
   Fix hal use dep bug #180565
