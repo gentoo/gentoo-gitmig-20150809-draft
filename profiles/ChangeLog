@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.456 2007/06/06 19:21:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.457 2007/06/06 19:43:48 dev-zero Exp $
+
+  06 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Unmasking boost-1.34.0
 
   06 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added sandbox local flag for sci-libs/scipy
