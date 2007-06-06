@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.17.ebuild,v 1.1 2007/06/02 21:10:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.17.ebuild,v 1.2 2007/06/06 17:26:06 philantrop Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/geoip-1.4.0
-	kde-base/libkonq"
+	|| ( kde-base/libkonq kde-base/kdebase )"
 
 RDEPEND="${DEPEND}
 	>=net-misc/tor-0.1.2.14

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.16 2007/06/02 21:10:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.17 2007/06/06 17:26:06 philantrop Exp $
+
+  06 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> tork-0.17.ebuild:
+  Allow either libkonq OR kdebase to satisfy tork's dependencies, fixes bug
+  181072.
 
 *tork-0.17 (02 Jun 2007)
 
