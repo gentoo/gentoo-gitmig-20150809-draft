@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-1.0.ebuild,v 1.1 2007/05/26 20:41:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-1.0.ebuild,v 1.2 2007/06/06 16:40:49 ticho Exp $
 
 MY_P="$PN-${PV}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.guifications.org/plugins/Plugin%20Pack/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 PLUGINS="autorejoin awaynotify bashorg bit blistops dice difftopic eight_ball
 flip gRIM groupmsg irssi lastseen listhandler mystatusbox nicksaid oldlogger
 plonkers sepandtab showoffline simfix slashexec sslinfo xchat-chats"
