@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.99.1.ebuild,v 1.1 2007/03/23 13:41:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.99.1.ebuild,v 1.2 2007/06/06 14:27:04 markusle Exp $
 
 inherit fortran
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="blas cblas debug doc fftw lapack minimal"
 
-DEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
+DEPEND="!minimal? ( fftw? ( || ( >=sci-libs/fftw-3.0.0
+								>=sci-libs/acml-2.5.3 ) ) )
 		blas? ( virtual/blas
 				cblas? ( || ( >=sci-libs/gsl-1.4
 							>=sci-libs/acml-2.5.3
