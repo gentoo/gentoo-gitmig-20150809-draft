@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.49 2007/04/04 19:30:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.50 2007/06/06 23:10:25 dberkholz Exp $
+
+*g-wrap-1.9.8 (06 Jun 2007)
+
+  06 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.9.8-fix-gcc-4.2.0-libffi.patch,
+  +files/1.9.8-fix-ffi-build-issue.patch, +g-wrap-1.9.8.ebuild:
+  Bump to latest. Add a large patch on mirrors to forward-port libffi to the
+  code distributed in gcc 4.2.0, because I was getting segfaults on ppc with
+  the original code, and an accompanying patch to let it build outside the gcc
+  tree. Add another patch to make sure the ffi header directory gets found
+  during the compile. Removed ~amd64 and ~sparc because guile-lib isn't
+  keyworded for them yet.
 
   04 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   g-wrap-1.9.6-r3.ebuild:
