@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.1 2007/06/06 08:12:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.2 2007/06/06 08:14:05 jokey Exp $
 
 inherit eutils apache-module toolchain-funcs gnuconfig
 
@@ -165,12 +165,12 @@ src_install() {
 	chmod ug+s ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
 	chmod 0750 ${D}/etc/nagios || die "Failed chmod of ${D}/etc/nagios"
 
-        cat << EOF > "${T}"/55-nagios-core-revdep
+	cat << EOF > "${T}"/55-nagios-core-revdep
 SEARCH_DIRS="/usr/nagios/bin /usr/nagios/libexec"
 EOF
 
-        insinto /etc/revdep-rebuild
-        doins "${T}"/55-nagios-core-revdep
+	insinto /etc/revdep-rebuild
+	doins "${T}"/55-nagios-core-revdep
 }
 
 pkg_postinst() {
