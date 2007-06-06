@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/linuxtv-dvb-firmware
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.15 2007/04/25 00:29:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.16 2007/06/06 15:51:02 zzam Exp $
+
+*linuxtv-dvb-firmware-2007.04.13 (06 Jun 2007)
+
+  06 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +linuxtv-dvb-firmware-2007.04.13.ebuild:
+  Splitted tda1004x flag into tda10045, tda10046 and tda10046lifeview, as
+  requested in bug #174491.
 
   25 Apr 2007; Steve Dibb <beandog@gentoo.org>
   linuxtv-dvb-firmware-1.ebuild, linuxtv-dvb-firmware-2006.11.13.ebuild:
