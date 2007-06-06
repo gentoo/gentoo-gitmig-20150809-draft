@@ -1,0 +1,16 @@
+--- fluxbox-1.0rc3/util/startfluxbox.in	2007-03-19 13:57:15.000000000 -0600
++++ fluxbox-1.0rc3-svn-4917/util/startfluxbox.in	2007-03-27 20:56:21.000000000 -0600
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+-# $Id: startfluxbox_doesnt.patch,v 1.1 2007/06/06 22:01:05 lack Exp $
++# $Id: startfluxbox_doesnt.patch,v 1.1 2007/06/06 22:01:05 lack Exp $
+ 
+ command="`basename \"$0\"`"
+ startup="$HOME/.fluxbox/startup"
+@@ -86,5 +86,5 @@
+     ) > "$startup"
+     fi
+     chmod 644 "$startup"
+-    exec "$startup"
++    exec sh "$startup"
+ fi
