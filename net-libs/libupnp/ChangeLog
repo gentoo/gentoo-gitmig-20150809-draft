@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.7 2007/05/30 21:10:48 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.8 2007/06/06 19:53:08 corsair Exp $
+
+  06 Jun 2007; Markus Rothe <corsair@gentoo.org> libupnp-1.4.6.ebuild:
+  Stable on ppc64; bug #168789
 
   30 May 2007; René Nussbaumer <killerfox@gentoo.org> libupnp-1.4.6.ebuild:
   Stable on ppc. See bug #168789.
