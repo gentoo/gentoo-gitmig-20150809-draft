@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/snakeoil
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.1 2007/06/06 11:59:52 marienz Exp $
+
+*snakeoil-0.1_rc2 (06 Jun 2007)
+
+  06 Jun 2007; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +snakeoil-0.1_rc2.ebuild:
+  New ebuild.
+
