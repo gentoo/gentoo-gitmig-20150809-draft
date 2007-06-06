@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/sparky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.8 2007/03/15 21:58:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.9 2007/06/06 00:06:09 dberkholz Exp $
+
+*sparky-3.113 (06 Jun 2007)
+
+  06 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; +sparky-3.113.ebuild:
+  (#164813) Bump. Works with Python 2.4, cleans out Python bytecode on
+  uninstallation (Jakub Moc), makes sure python was built with Tk. Keyword
+  ~ppc while I'm at it.
 
   15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> sparky-3.111.ebuild:
   QA: Removed illegal use of ${ROOT}. Bug #168043
