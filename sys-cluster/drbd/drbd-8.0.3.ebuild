@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.3.ebuild,v 1.1 2007/05/11 12:14:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.3.ebuild,v 1.2 2007/06/06 17:50:07 xmerlin Exp $
 
 inherit eutils versionator linux-mod linux-info
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND="virtual/linux-sources"
 RDEPEND=""
 SLOT="0"
+CONFIG_CHECK="CONNECTOR"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -35,11 +36,7 @@ src_unpack() {
 src_compile() {
 	set_arch_to_kernel
 
-	einfo ""
-	einfo "Your kernel-sources in /usr/src/linux-${KV} must be properly configured and"
-	einfo "CONFIG_CONNECTOR must be enabled"
-	einfo "If otherwise -> build will fail."
-	einfo ""
+	linux_chkconfig_present
 
 	if kernel_is 2 6; then
 		emake -j1 KDIR=${KERNEL_DIR} || die "compile problem"
