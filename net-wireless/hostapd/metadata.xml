@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>mobile</herd>
+	<maintainer>
+		<email>gurligebis@gentoo.org</email>
+		<name>Bjarke Istrup Pedersen</name>
+	</maintainer>
 	<longdescription>
 		User space daemon for the hostap-driver.
 		Extended IEEE 802.11 management, IEEE 802.1X Authenticator,
