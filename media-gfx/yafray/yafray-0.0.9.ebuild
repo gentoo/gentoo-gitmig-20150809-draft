@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9.ebuild,v 1.3 2007/01/04 15:08:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9.ebuild,v 1.4 2007/06/06 18:13:14 lu_zero Exp $
 
 inherit eutils python multilib
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="openexr"
 
 RDEPEND="media-libs/jpeg
-	sys-libs/zlib"
+	sys-libs/zlib
+	openexr? ( media-libs/openexr )"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-3.3
 	>=sys-apps/sed-4

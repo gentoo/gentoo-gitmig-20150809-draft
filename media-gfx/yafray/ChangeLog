@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.35 2007/02/22 01:44:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.36 2007/06/06 18:13:14 lu_zero Exp $
+
+  06 Jun 2007; Luca Barbato <lu_zero@gentoo.org> yafray-0.0.9.ebuild:
+  fix openexr dep
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
