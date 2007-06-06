@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.7.1-r1.ebuild,v 1.2 2007/04/28 12:07:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.7.1-r2.ebuild,v 1.1 2007/06/06 08:09:49 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -69,12 +69,12 @@ src_install() {
 
 	newinitd "${FILESDIR}"/nrpe nrpe
 
-	cat << EOF > "${T}"/55-nagios-revdep
+	cat << EOF > "${T}"/55-nagios-nrpe-revdep
 SEARCH_DIRS="/usr/nagios/bin /usr/nagios/libexec"
 EOF
 
 	insinto /etc/revdep-rebuild
-	doins "${T}"/55-nagios-revdep
+	doins "${T}"/55-nagios-nrpe-revdep
 }
 
 pkg_postinst() {
