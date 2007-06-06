@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.18 2007/06/06 14:39:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.19 2007/06/06 19:55:26 jokey Exp $
+
+  06 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.4.0-remove-alsa.patch,
+  +files/virtualbox-1.4.0-remove-splitted-stuff.patch:
+  Required patches not added
 
 *virtualbox-1.4.0 (06 Jun 2007)
 

@@ -1,0 +1,22 @@
+--- Config.kmk.orig	2007-06-06 12:01:05.000000000 +0200
++++ Config.kmk	2007-06-06 12:01:24.000000000 +0200
+@@ -202,7 +202,7 @@
+ # Enable the ISCSI feature.
+ VBOX_WITH_ISCSI = 1
+ # Enable ALSA support for Linux
+-VBOX_WITH_ALSA = 1
++#VBOX_WITH_ALSA = 1
+ # Disable WINMM support for Windows (not implemented)
+ VBOX_WITH_WINMM =
+ # Enable the kchmviewer
+--- configure.orig	2007-06-06 12:01:11.000000000 +0200
++++ configure	2007-06-06 12:01:49.000000000 +0200
+@@ -1269,7 +1269,7 @@
+ (($OSE==0)) && [ "$OS" = "linux" ] && check_pam
+ [ "$OS" != "darwin" ] && check_sdl
+ (($WITH_SDL_TTF==1)) && (($OSE==0)) && check_sdl_ttf
+-[ "$OS" != "darwin" ] && check_alsa
++[ "$OS" != "darwin" ]
+ [ "$OS" != "darwin" ] && check_x
+ [ "$OS" != "darwin" ] && check_xcursor
+ (($WITH_QT==1))       && check_qt
