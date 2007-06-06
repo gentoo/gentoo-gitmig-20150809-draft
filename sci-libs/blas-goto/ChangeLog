@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.5 2007/05/08 07:12:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.6 2007/06/06 13:10:03 markusle Exp $
+
+  06 Jun 2007; Markus Dittrich <markusle@gentoo.org> blas-goto-1.14.ebuild:
+  Depend on >=binutils-2.17 since we may need SSSE3 instructions
+  in gas on some CPUs (see bug #180385).
 
 *blas-goto-1.14 (08 May 2007)
 

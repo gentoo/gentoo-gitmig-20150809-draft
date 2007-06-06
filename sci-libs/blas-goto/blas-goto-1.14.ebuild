@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.14.ebuild,v 1.1 2007/05/08 07:12:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.14.ebuild,v 1.2 2007/06/06 13:10:03 markusle Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
@@ -17,7 +17,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE="threads"
 RESTRICT="mirror"
 RDEPEND="app-admin/eselect-blas"
-DEPEND="${RDEPEND}"
+
+DEPEND="${RDEPEND}
+		>=sys-devel/binutils-2.17"
+
 S="${WORKDIR}/${MY_PN}"
 FORTRAN="g77 gfortran" # ifc g95 pgf77 pathf90 f90 f77
 
