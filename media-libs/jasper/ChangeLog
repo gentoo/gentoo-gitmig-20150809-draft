@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.37 2007/06/06 07:50:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.38 2007/06/06 13:26:47 armin76 Exp $
+
+  06 Jun 2007; Raúl Porcel <armin76@gentoo.org> jasper-1.900.1-r1.ebuild:
+  alpha/ia64 stable wrt security #179159
 
   06 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   jasper-1.900.1-r1.ebuild:
