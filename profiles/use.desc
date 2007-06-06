@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.353 2007/06/02 08:16:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.354 2007/06/06 16:26:20 drac Exp $
 
 # Keep them sorted
 
@@ -360,6 +360,7 @@ xpm - Adds support for XPM graphics format
 xprint - Support for xprint, http://www.mozilla.org/projects/xprint/
 xscreensaver - Adds support for XScreenSaver extension.
 xsl - Check/Support flag for XSL library (version 1)
+xulrunner - Build native browser integration against xulrunner instead of firefox or seamonkey.
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
 yahoo - Enable Yahoo Messenger IM protocol support

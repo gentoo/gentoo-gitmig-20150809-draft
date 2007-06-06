@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2851 2007/06/05 07:04:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2852 2007/06/06 16:26:20 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -402,7 +402,6 @@ dev-java/quartz:struts - Enable struts support
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jaxp-bin:dom4j - Enable dom4j
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
-dev-java/swt:xulrunner - Build native browser integration against xulrunner
 dev-java/tomcat-servlet-api:java5 - Use Java 1.5 source/target for compilation
 dev-java/xstream:java5 - Enable Java 5 specific features
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
@@ -537,7 +536,6 @@ dev-php5/znf:smarty - Include support for Smarty
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
-dev-python/gnome-python-extras:xulrunner - Enable support for xulrunner instead of firefox
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
@@ -583,7 +581,6 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Don't install dpkg (useful for building a non-debian system)
-dev-util/devhelp:xulrunner - Enable support for xulrunner instead of firefox
 dev-util/eclipse-sdk:branding - Enable Gentoo branded splash screen
 dev-util/eric:idl - Enable omniorb support
 dev-util/git:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs
@@ -707,7 +704,6 @@ gnome-extra/nautilus-sendto:thunderbird - Enable support for thunderbird
 gnome-extra/sensors-applet:hddtemp - Enable support the hddtemp daemon
 gnome-extra/sensors-applet:nvidia - Enable support for nvidia sensors
 gnome-extra/yelp:beagle - Enable beagle support
-gnome-extra/yelp:xulrunner - Enable support for xulrunner instead of firefox
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-apps/gworkspace:pdfkit - Enable PDFkit bindings
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
@@ -1130,7 +1126,6 @@ media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/oxine:polling - Enables support to automatically check the drive for a new disc
 media-video/totem:nvtv - Support for nvtv to use tv in on nvidia cards
-media-video/totem:xulrunner - Enable support for xulrunner instead of firefox
 media-video/transcode:extrafilters - Install some filters only if we ask for them
 media-video/transcode:fame - Enables libfame support
 media-video/transcode:lzo - Enables LZO compression support
@@ -1533,7 +1528,6 @@ net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
 net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-news/liferea:networkmanager - Enable networkmanager support
-net-news/liferea:xulrunner - Enable xulrunner as renderer in liferea
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
@@ -1931,8 +1925,6 @@ www-apps/websvn:enscript - Add enscript support to colourize code stored in the 
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
-www-client/epiphany-extensions:xulrunner - Enable support for xulrunner instead of firefox
-www-client/epiphany:xulrunner - Enable support for xulrunner instead of firefox
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
