@@ -1,0 +1,13 @@
+# ChangeLog for dev-scheme/guile-gnome-platform
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.1 2007/06/06 23:17:29 dberkholz Exp $
+
+*guile-gnome-platform-2.15.92 (06 Jun 2007)
+
+  06 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/2.15.92-add-atk-overrides.patch,
+  +files/2.15.92-add-cairo-fix-from-bzr.patch, +metadata.xml,
+  +guile-gnome-platform-2.15.92.ebuild:
+  Add Guile Scheme code that wraps the GNOME developer platform. The cairo fix
+  is from upstream bzr, but the atk fix hasn't yet made its way upstream.
+
