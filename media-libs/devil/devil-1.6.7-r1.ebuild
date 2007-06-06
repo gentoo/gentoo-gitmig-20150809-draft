@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.14 2007/06/06 03:57:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.15 2007/06/06 04:34:29 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 inherit autotools eutils
 
 DESCRIPTION="DevIL image library"
-HOMEPAGE="http://www.imagelib.org/"
+HOMEPAGE="http://openil.sourceforge.net/"
 SRC_URI="mirror://sourceforge/openil/DevIL-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
