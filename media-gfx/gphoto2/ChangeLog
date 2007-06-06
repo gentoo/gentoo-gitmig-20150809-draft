@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.52 2007/03/28 12:13:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.53 2007/06/06 16:15:37 zzam Exp $
+
+  06 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  I do no longer maintain gphoto. Added to herd graphics.
 
   28 Mar 2007; Raúl Porcel <armin76@gentoo.org> gphoto2-2.2.0.ebuild:
   ia64 stable wrt bug 158684
