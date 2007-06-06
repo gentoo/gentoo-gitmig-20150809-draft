@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krecipes
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.28 2006/11/23 17:39:26 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.29 2007/06/06 18:11:37 philantrop Exp $
+
+  06 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  krecipes-1.0_beta1.ebuild:
+  Disallow the tests to run as they're broken. Fixes bug 181027.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> krecipes-0.9.1.ebuild,
   krecipes-1.0_beta1.ebuild:
