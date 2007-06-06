@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2853 2007/06/06 16:35:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2854 2007/06/06 18:35:15 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1677,6 +1677,7 @@ sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculat
 sci-libs/mkl:fortran95 - Add support for a Fortran95 BLAS/LAPACK interface
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
+sci-libs/scipy:sandbox - Installs experimental scipy sandbox modules (pull some dependencies)
 sci-libs/scipy:umfpack - Add support for sparse solving via UMFPACK
 sci-libs/vtk:patented - Builds patented classes.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
