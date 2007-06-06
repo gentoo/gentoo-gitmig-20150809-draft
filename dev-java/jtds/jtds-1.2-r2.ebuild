@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2-r2.ebuild,v 1.1 2007/05/07 18:43:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2-r2.ebuild,v 1.2 2007/06/06 22:05:28 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://jtds.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 COMMON_DEPEND="
 	=dev-java/jcifs-1*
 	>=dev-java/junit-3.8"
