@@ -1,11 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.455 2007/06/06 18:35:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.456 2007/06/06 19:21:47 drac Exp $
 
   06 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added sandbox local flag for sci-libs/scipy
 
-  28 May 2007; Samuli Suominen <drac@gentoo.org> use.desc, use.local.desc:
+  06 Jun 2007; Samuli Suominen <drac@gentoo.org> use.desc, use.local.desc:
   Move xulrunner from local to global use.
 
   06 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> desc/dvb_cards.desc:
