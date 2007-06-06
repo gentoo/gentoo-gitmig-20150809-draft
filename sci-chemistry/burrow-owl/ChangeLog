@@ -1,0 +1,12 @@
+# ChangeLog for sci-chemistry/burrow-owl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/ChangeLog,v 1.1 2007/06/06 23:32:33 dberkholz Exp $
+
+*burrow-owl-1.2 (06 Jun 2007)
+
+  06 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/burrow-owl-1.2-make-script-dir.patch, +metadata.xml,
+  +burrow-owl-1.2.ebuild:
+  New package to visualize multidimensional nuclear magnetic resonance (NMR)
+  spectra.
+
