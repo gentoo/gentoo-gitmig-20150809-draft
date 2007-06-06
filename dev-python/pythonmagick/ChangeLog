@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.7 2006/10/29 19:54:37 dev-zero Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.8 2007/06/06 19:45:35 dev-zero Exp $
+
+  06 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
+  pythonmagick-0.6.ebuild:
+  Changed boost dependency to latest official version
 
   29 Oct 2006; Tiziano Müller <dev-zero@gentoo.org>
   -pythonmagick-0.5-r1.ebuild:

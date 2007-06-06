@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.6.ebuild,v 1.1 2006/10/01 13:18:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.6.ebuild,v 1.2 2007/06/06 19:45:35 dev-zero Exp $
 
 inherit eutils python toolchain-funcs
 
@@ -16,7 +16,7 @@ LICENSE="as-is"
 IUSE=""
 
 RDEPEND=">=media-gfx/imagemagick-1.1.7
-		>=dev-libs/boost-1.34_pre20060930"
+		>=dev-libs/boost-1.34.0"
 DEPEND="${RDEPEND}
 		dev-util/scons"
 
