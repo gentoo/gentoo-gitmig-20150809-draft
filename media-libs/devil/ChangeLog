@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/devil
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.27 2006/12/31 07:40:48 mr_bones_ Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.28 2007/06/06 03:57:48 mr_bones_ Exp $
+
+  06 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/devil-1.6.7-gcc42.patch, devil-1.6.7-r1.ebuild:
+  patch to make g++ 4.2 happy from Philipp via bug #179843
 
   31 Dec 2006; Michael Sterrett <mr_bones_@gentoo.org>
   devil-1.6.7-r1.ebuild:
