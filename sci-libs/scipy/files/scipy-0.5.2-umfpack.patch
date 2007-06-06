@@ -1,0 +1,28 @@
+--- Lib/linsolve/umfpack/umfpack.i.orig	2007-06-06 14:53:42.261505250 +0100
++++ Lib/linsolve/umfpack/umfpack.i	2007-06-06 14:54:12.167374250 +0100
+@@ -114,6 +114,7 @@
+     return NULL; \
+   } \
+   $1 = (double *) obj->data; \
++  Py_DECREF( obj ); \
+ };
+ 
+ /*!
+@@ -127,7 +128,7 @@
+ }; \
+ %typemap( python, argout ) ttype* opaque_argout { \
+   PyObject *obj; \
+-  obj = SWIG_NewPointerObj( (ttype) (*$1), $*1_descriptor, 1 ); \
++  obj = SWIG_NewPointerObj( (ttype) (*$1), $*1_descriptor, 0 ); \
+   $result = helper_appendToTuple( $result, obj ); \
+ };
+ 
+@@ -143,7 +144,7 @@
+ }; \
+ %typemap( python, argout ) ttype* opaque_arginout { \
+   PyObject *obj; \
+-  obj = SWIG_NewPointerObj( (ttype) (*$1), $*1_descriptor, 1 ); \
++  obj = SWIG_NewPointerObj( (ttype) (*$1), $*1_descriptor, 0 ); \
+   $result = helper_appendToTuple( $result, obj ); \
+ };
+ 

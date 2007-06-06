@@ -1,0 +1,524 @@
+diff -Nur Lib/io.orig/mio4.py Lib/io/mio4.py
+--- Lib/io.orig/mio4.py	2007-06-06 14:56:05.610464000 +0100
++++ Lib/io/mio4.py	2007-06-06 14:56:17.015176750 +0100
+@@ -1,9 +1,9 @@
+ ''' Classes for read / write of matlab (TM) 4 files
+ '''
+ 
+-from numpy import *
++import numpy as N
+ 
+-from miobase import *
++from scipy.io.miobase import *
+ 
+ miDOUBLE = 0
+ miSINGLE = 1
+@@ -76,7 +76,7 @@
+         header['mclass'] = T
+         header['dims'] = (data['mrows'], data['ncols'])
+         header['is_complex'] = data['imagf'] == 1
+-        remaining_bytes = header['dtype'].itemsize * product(header['dims'])
++        remaining_bytes = header['dtype'].itemsize * N.product(header['dims'])
+         if header['is_complex'] and not header['mclass'] == mxSPARSE_CLASS:
+             remaining_bytes *= 2
+         next_pos = self.mat_stream.tell() + remaining_bytes
+@@ -109,7 +109,7 @@
+         num_bytes = dt.itemsize
+         for d in dims:
+             num_bytes *= d
+-        arr = ndarray(shape=dims,
++        arr = N.ndarray(shape=dims,
+                       dtype=dt,
+                       buffer=self.mat_stream.read(num_bytes),
+                       order='F')
+@@ -122,9 +122,9 @@
+     def __init__(self, array_reader, header):
+         super(Mat4FullGetter, self).__init__(array_reader, header)
+         if header['is_complex']:
+-            self.mat_dtype = dtype(complex128)
++            self.mat_dtype = N.dtype(N.complex128)
+         else:
+-            self.mat_dtype = dtype(float64)
++            self.mat_dtype = N.dtype(N.float64)
+         
+     def get_raw_array(self):
+         if self.header['is_complex']:
+@@ -137,12 +137,12 @@
+ 
+ class Mat4CharGetter(Mat4MatrixGetter):
+     def get_raw_array(self):
+-        arr = self.read_array().astype(uint8)
++        arr = self.read_array().astype(N.uint8)
+         # ascii to unicode
+         S = arr.tostring().decode('ascii')
+-        return ndarray(shape=self.header['dims'],
+-                       dtype=dtype('U1'),
+-                       buffer = array(S)).copy()
++        return N.ndarray(shape=self.header['dims'],
++                       dtype=N.dtype('U1'),
++                       buffer = N.array(S)).copy()
+ 
+ 
+ class Mat4SparseGetter(Mat4MatrixGetter):
+@@ -166,7 +166,7 @@
+         res = self.read_array()
+         tmp = res[:-1,:]
+         dims = res[-1,0:2]
+-        ij = transpose(tmp[:,0:2]) - 1 # for 1-based indexing
++        ij = N.transpose(tmp[:,0:2]) - 1 # for 1-based indexing
+         vals = tmp[:,2]
+         if res.shape[1] == 4:
+             vals = vals + res[:-1,3] * 1j
+@@ -196,15 +196,15 @@
+     def format_looks_right(self):
+         # Mat4 files have a zero somewhere in first 4 bytes
+         self.mat_stream.seek(0)
+-        mopt_bytes = ndarray(shape=(4,),
+-                             dtype=uint8,
++        mopt_bytes = N.ndarray(shape=(4,),
++                             dtype=N.uint8,
+                              buffer = self.mat_stream.read(4))
+         self.mat_stream.seek(0)
+         return 0 in mopt_bytes
+     
+     def guess_byte_order(self):
+         self.mat_stream.seek(0)
+-        mopt = self.read_dtype(dtype('i4'))
++        mopt = self.read_dtype(N.dtype('i4'))
+         self.mat_stream.seek(0)
+         if mopt < 0 or mopt > 5000:
+             return ByteOrder.swapped_code
+@@ -222,7 +222,7 @@
+         '''
+         if dims is None:
+             dims = self.arr.shape
+-        header = empty((), mdtypes_template['header'])
++        header = N.empty((), mdtypes_template['header'])
+         M = not ByteOrder.little_endian
+         O = 0
+         header['mopt'] = (M * 1000 +
+@@ -237,11 +237,10 @@
+         self.write_string(self.name + '\0')
+         
+     def arr_to_2d(self):
+-        self.arr = atleast_2d(self.arr)
++        self.arr = N.atleast_2d(self.arr)
+         dims = self.arr.shape
+         if len(dims) > 2:
+-            dims = [product(dims[:-1]), dims[-1]]
+-            self.arr = reshape(self.arr, dims)
++            self.arr = self.arr.reshape(-1,dims[-1])
+             
+     def write(self):
+         assert False, 'Not implemented'
+@@ -280,12 +279,12 @@
+                           T=mxCHAR_CLASS)
+         if self.arr.dtype.kind == 'U':
+             # Recode unicode to ascii
+-            n_chars = product(dims)
+-            st_arr = ndarray(shape=(),
++            n_chars = N.product(dims)
++            st_arr = N.ndarray(shape=(),
+                              dtype=self.arr_dtype_number(n_chars),
+                              buffer=self.arr)
+             st = st_arr.item().encode('ascii')
+-            self.arr = ndarray(shape=dims, dtype='S1', buffer=st)
++            self.arr = N.ndarray(shape=dims, dtype='S1', buffer=st)
+         self.write_bytes(self.arr)
+ 
+ 
+@@ -296,9 +295,9 @@
+         See docstring for Mat4SparseGetter
+         '''
+         imagf = self.arr.dtype.kind == 'c'
+-        N = self.arr.nnz
+-        ijd = zeros((N+1, 3+imagf), dtype='f8')
+-        for i in range(N):
++        nnz = self.arr.nnz
++        ijd = N.zeros((nnz+1, 3+imagf), dtype='f8')
++        for i in range(nnz):
+             ijd[i,0], ijd[i,1] = self.arr.rowcol(i)
+         ijd[:-1,0:2] += 1 # 1 based indexing
+         if imagf:
+@@ -322,13 +321,13 @@
+     if have_sparse:
+         if scipy.sparse.issparse(arr):
+             return Mat4SparseWriter(stream, arr, name)
+-    arr = array(arr)
++    arr = N.array(arr)
+     dtt = arr.dtype.type
+-    if dtt is object_:
++    if dtt is N.object_:
+         raise TypeError, 'Cannot save object arrays in Mat4'
+-    elif dtt is void:
++    elif dtt is N.void:
+         raise TypeError, 'Cannot save void type arrays'
+-    elif dtt in (unicode_, string_):
++    elif dtt in (N.unicode_, N.string_):
+         return Mat4CharWriter(stream, arr, name)
+     else:
+         return Mat4NumericWriter(stream, arr, name)
+diff -Nur Lib/io.orig/mio5.py Lib/io/mio5.py
+--- Lib/io.orig/mio5.py	2007-06-06 14:56:05.610464000 +0100
++++ Lib/io/mio5.py	2007-06-06 14:56:17.019177000 +0100
+@@ -29,9 +29,9 @@
+ import zlib
+ from copy import copy as pycopy
+ from cStringIO import StringIO
+-from numpy import *
++import numpy as N
+ 
+-from miobase import *
++from scipy.io.miobase import *
+ 
+ try:  # Python 2.3 support
+     from sets import Set as set
+@@ -154,10 +154,10 @@
+ 
+     def read_element(self, copy=True):
+         raw_tag = self.mat_stream.read(8)
+-        tag = ndarray(shape=(),
++        tag = N.ndarray(shape=(),
+                       dtype=self.dtypes['tag_full'],
+                       buffer = raw_tag)
+-        mdtype = tag['mdtype']
++        mdtype = tag['mdtype'].item()
+         byte_count = mdtype >> 16
+         if byte_count: # small data element format
+             if byte_count > 4:
+@@ -165,10 +165,10 @@
+             mdtype = mdtype & 0xFFFF
+             dt = self.dtypes[mdtype]
+             el_count = byte_count / dt.itemsize
+-            return ndarray(shape=(el_count,),
++            return N.ndarray(shape=(el_count,),
+                            dtype=dt,
+                            buffer=raw_tag[4:])
+-        byte_count = tag['byte_count']
++        byte_count = tag['byte_count'].item()
+         if mdtype == miMATRIX:
+             return self.current_getter(byte_count).get_array()
+         if mdtype in self.codecs: # encoded char data
+@@ -180,7 +180,7 @@
+         else: # numeric data
+             dt = self.dtypes[mdtype]
+             el_count = byte_count / dt.itemsize
+-            el = ndarray(shape=(el_count,),
++            el = N.ndarray(shape=(el_count,),
+                          dtype=dt,
+                          buffer=self.mat_stream.read(byte_count))
+             if copy:
+@@ -193,8 +193,8 @@
+     def matrix_getter_factory(self):
+         ''' Returns reader for next matrix at top level '''
+         tag = self.read_dtype(self.dtypes['tag_full'])
+-        mdtype = tag['mdtype']
+-        byte_count = tag['byte_count']
++        mdtype = tag['mdtype'].item()
++        byte_count = tag['byte_count'].item()
+         next_pos = self.mat_stream.tell() + byte_count
+         if mdtype == miCOMPRESSED:
+             getter = Mat5ZArrayReader(self, byte_count).matrix_getter_factory()
+@@ -285,7 +285,7 @@
+         self.mat_dtype = 'f8'
+     
+     def get_raw_array(self):
+-        return array([[]])
++        return N.array([[]])
+ 
+ 
+ class Mat5NumericMatrixGetter(Mat5MatrixGetter):
+@@ -293,7 +293,7 @@
+     def __init__(self, array_reader, header):
+         super(Mat5NumericMatrixGetter, self).__init__(array_reader, header)
+         if header['is_logical']:
+-            self.mat_dtype = dtype('bool')
++            self.mat_dtype = N.dtype('bool')
+         else:
+             self.mat_dtype = self.class_dtypes[header['mclass']]
+ 
+@@ -305,7 +305,7 @@
+             res = res + (res_j * 1j)
+         else:
+             res = self.read_element()
+-        return ndarray(shape=self.header['dims'],
++        return N.ndarray(shape=self.header['dims'],
+                        dtype=res.dtype,
+                        buffer=res,
+                        order='F')
+@@ -334,14 +334,14 @@
+         stored in column order, this gives the column corresponding to
+         each rowind
+         '''
+-        cols = empty((len(res)), dtype=rowind.dtype)
+-        col_counts = diff(colind)
++        cols = N.empty((len(res)), dtype=rowind.dtype)
++        col_counts = N.diff(colind)
+         start_row = 0
+-        for i in where(col_counts)[0]:
++        for i in N.where(col_counts)[0]:
+             end_row = start_row + col_counts[i]
+             cols[start_row:end_row] = i
+             start_row = end_row
+-        ij = vstack((rowind[:len(res)], cols))
++        ij = N.vstack((rowind[:len(res)], cols))
+         if have_sparse:
+             result = scipy.sparse.csc_matrix((res,ij),
+                                              self.header['dims'])
+@@ -354,19 +354,19 @@
+     def get_raw_array(self):
+         res = self.read_element()
+         # Convert non-string types to unicode
+-        if isinstance(res, ndarray):
+-            if res.dtype.type == uint16:
++        if isinstance(res, N.ndarray):
++            if res.dtype.type == N.uint16:
+                 codec = miUINT16_codec
+                 if self.codecs['uint16_len'] == 1:
+-                    res = res.astype(uint8)
+-            elif res.dtype.type in (uint8, int8):
++                    res = res.astype(N.uint8)
++            elif res.dtype.type in (N.uint8, N.int8):
+                 codec = 'ascii'
+             else:
+                 raise TypeError, 'Did not expect type %s' % res.dtype
+             res = res.tostring().decode(codec)
+-        return ndarray(shape=self.header['dims'],
+-                       dtype=dtype('U1'),
+-                       buffer=array(res),
++        return N.ndarray(shape=self.header['dims'],
++                       dtype=N.dtype('U1'),
++                       buffer=N.array(res),
+                        order='F').copy()
+ 
+ 
+@@ -374,12 +374,11 @@
+     def get_raw_array(self):
+         # Account for fortran indexing of cells
+         tupdims = tuple(self.header['dims'][::-1])
+-        length = product(tupdims)
+-        result = empty(length, dtype=object)
++        length = N.product(tupdims)
++        result = N.empty(length, dtype=object)
+         for i in range(length):
+             result[i] = self.get_item()
+-        result = transpose(reshape(result,tupdims))
+-        return result
++        return result.reshape(tupdims).T
+ 
+     def get_item(self):
+         return self.read_element()
+@@ -507,7 +506,7 @@
+         ''' Read in mat 5 file header '''
+         hdict = {}
+         hdr = self.read_dtype(self.dtypes['file_header'])
+-        hdict['__header__'] = hdr['description'].strip(' \t\n\000')
++        hdict['__header__'] = hdr['description'].item().strip(' \t\n\000')
+         v_major = hdr['version'] >> 8
+         v_minor = hdr['version'] & 0xFF
+         hdict['__version__'] = '%d.%d' % (v_major, v_minor)
+@@ -516,8 +515,8 @@
+     def format_looks_right(self):
+         # Mat4 files have a zero somewhere in first 4 bytes
+         self.mat_stream.seek(0)
+-        mopt_bytes = ndarray(shape=(4,),
+-                             dtype=uint8,
++        mopt_bytes = N.ndarray(shape=(4,),
++                             dtype=N.uint8,
+                              buffer = self.mat_stream.read(4))
+         self.mat_stream.seek(0)
+         return 0 not in mopt_bytes
+@@ -525,7 +524,7 @@
+ 
+ class Mat5MatrixWriter(MatStreamWriter):
+ 
+-    mat_tag = zeros((), mdtypes_template['tag_full'])
++    mat_tag = N.zeros((), mdtypes_template['tag_full'])
+     mat_tag['mdtype'] = miMATRIX
+ 
+     def __init__(self, file_stream, arr, name, is_global=False):
+@@ -555,14 +554,14 @@
+         self._mat_tag_pos = self.file_stream.tell()
+         self.write_dtype(self.mat_tag)
+         # write array flags (complex, global, logical, class, nzmax)
+-        af = zeros((), mdtypes_template['array_flags'])
++        af = N.zeros((), mdtypes_template['array_flags'])
+         af['data_type'] = miUINT32
+         af['byte_count'] = 8
+         flags = is_complex << 3 | is_global << 2 | is_logical << 1
+         af['flags_class'] = mclass | flags << 8
+         af['nzmax'] = nzmax
+         self.write_dtype(af)
+-        self.write_element(array(self.arr.shape, dtype='i4'))
++        self.write_element(N.array(self.arr.shape, dtype='i4'))
+         self.write_element(self.name)
+ 
+     def update_matrix_tag(self):
+@@ -598,12 +597,12 @@
+                           T=mxCHAR_CLASS)
+         if self.arr.dtype.kind == 'U':
+             # Recode unicode to ascii
+-            n_chars = product(dims)
+-            st_arr = ndarray(shape=(),
++            n_chars = N.product(dims)
++            st_arr = N.ndarray(shape=(),
+                              dtype=self.arr_dtype_number(n_chars),
+                              buffer=self.arr)
+             st = st_arr.item().encode('ascii')
+-            self.arr = ndarray(shape=dims, dtype='S1', buffer=st)
++            self.arr = N.ndarray(shape=dims, dtype='S1', buffer=st)
+         self.write_bytes(self.arr)
+ 
+ 
+@@ -615,7 +614,7 @@
+         '''
+         imagf = self.arr.dtype.kind == 'c'
+         N = self.arr.nnz
+-        ijd = zeros((N+1, 3+imagf), dtype='f8')
++        ijd = N.zeros((N+1, 3+imagf), dtype='f8')
+         for i in range(N):
+             ijd[i,0], ijd[i,1] = self.arr.rowcol(i)
+         ijd[:-1,0:2] += 1 # 1 based indexing
+@@ -649,7 +648,7 @@
+         if have_sparse:
+             if scipy.sparse.issparse(arr):
+                 return Mat5SparseWriter(self.stream, arr, name, is_global)
+-        arr = array(arr)
++        arr = N.array(arr)
+         if arr.dtype.hasobject:
+             types, arr_type = classify_mobjects(arr)
+             if arr_type == 'c':
+@@ -680,13 +679,13 @@
+                         o  - object array
+         '''
+         N = objarr.size
+-        types = empty((N,), dtype='S1')
++        types = N.empty((N,), dtype='S1')
+         types[:] = 'i'
+         type_set = set()
+         flato = objarr.flat
+         for i in range(N):
+             obj = flato[i]
+-            if isinstance(obj, ndarray):
++            if isinstance(obj, N.ndarray):
+                 types[i] = 'a'
+                 continue
+             try:
+@@ -743,7 +742,7 @@
+                 ).write()
+             if self.do_compression:
+                 str = zlib.compress(stream.getvalue())
+-                tag = empty((), mdtypes_template['tag_full'])
++                tag = N.empty((), mdtypes_template['tag_full'])
+                 tag['mdtype'] = miCOMPRESSED
+                 tag['byte_count'] = len(str)
+                 self.file_stream.write(tag.tostring() + str)
+diff -Nur Lib/io.orig/miobase.py Lib/io/miobase.py
+--- Lib/io.orig/miobase.py	2007-06-06 14:56:05.610464000 +0100
++++ Lib/io/miobase.py	2007-06-06 14:56:17.019177000 +0100
+@@ -6,7 +6,7 @@
+ 
+ import sys
+ 
+-from numpy import *
++import numpy as N
+ 
+ try:
+     import scipy.sparse
+@@ -71,10 +71,10 @@
+         a_dtype is assumed to be correct endianness
+         '''
+         num_bytes = a_dtype.itemsize
+-        arr = ndarray(shape=(),
+-                      dtype=a_dtype,
+-                      buffer=self.mat_stream.read(num_bytes),
+-                      order='F')
++        arr = N.ndarray(shape=(),
++                        dtype=a_dtype,
++                        buffer=self.mat_stream.read(num_bytes),
++                        order='F')
+         return arr
+ 
+     def read_ztstring(self, num_bytes):
+@@ -184,7 +184,7 @@
+     def convert_dtypes(self, dtype_template):
+         dtypes = dtype_template.copy()
+         for k in dtypes:
+-            dtypes[k] = dtype(dtypes[k]).newbyteorder(
++            dtypes[k] = N.dtype(dtypes[k]).newbyteorder(
+                 self.order_code)
+         return dtypes
+     
+@@ -227,10 +227,10 @@
+                 if len(dims) >= 2: # return array of strings
+                     dtt = self.order_code + 'U'
+                     n_dims = dims[:-1]
+-                    str_arr = reshape(arr,
+-                                    (small_product(n_dims),
+-                                     dims[-1]))
+-                    arr = empty(n_dims, dtype=object)
++                    str_arr = arr.reshape(
++                        (small_product(n_dims),
++                         dims[-1]))
++                    arr = N.empty(n_dims, dtype=object)
+                     for i in range(0, n_dims[-1]):
+                         arr[...,i] = self.chars_to_str(str_arr[i])
+                 else: # return string
+@@ -241,9 +241,9 @@
+                 if getter.mat_dtype is not None:
+                     arr = arr.astype(getter.mat_dtype)
+             if self.squeeze_me:
+-                arr = squeeze(arr)
++                arr = N.squeeze(arr)
+                 if not arr.size:
+-                    arr = array([])
++                    arr = N.array([])
+                 elif not arr.shape: # 0d coverted to scalar
+                     arr = arr.item()
+             return arr
+@@ -251,8 +251,8 @@
+ 
+     def chars_to_str(self, str_arr):
+         ''' Convert string array to string '''
+-        dt = dtype('U' + str(small_product(str_arr.shape)))
+-        return ndarray(shape=(),
++        dt = N.dtype('U' + str(small_product(str_arr.shape)))
++        return N.ndarray(shape=(),
+                        dtype = dt,
+                        buffer = str_arr.copy()).item()
+ 
+@@ -354,7 +354,7 @@
+         
+     def arr_dtype_number(self, num):
+         ''' Return dtype for given number of items per element'''
+-        return dtype(self.arr.dtype.str[:2] + str(num))
++        return N.dtype(self.arr.dtype.str[:2] + str(num))
+ 
+     def arr_to_chars(self):
+         ''' Convert string array to char array '''
+@@ -362,7 +362,7 @@
+         if not dims:
+             dims = [1]
+         dims.append(int(self.arr.dtype.str[2:]))
+-        self.arr = ndarray(shape=dims,
++        self.arr = N.ndarray(shape=dims,
+                            dtype=self.arr_dtype_number(1),
+                            buffer=self.arr)
+ 
+diff -Nur Lib/io.orig/mio.py Lib/io/mio.py
+--- Lib/io.orig/mio.py	2007-06-06 14:56:05.610464000 +0100
++++ Lib/io/mio.py	2007-06-06 14:56:17.015176750 +0100
+@@ -7,10 +7,10 @@
+ import os
+ import sys
+ 
+-from numpy import *
++from scipy.io.mio4 import MatFile4Reader, MatFile4Writer
++from scipy.io.mio5 import MatFile5Reader, MatFile5Writer
+ 
+-from mio4 import MatFile4Reader, MatFile4Writer
+-from mio5 import MatFile5Reader, MatFile5Writer
++__all__ = ['find_mat_file','mat_reader_factory','loadmat', 'savemat']
+ 
+ def find_mat_file(file_name, appendmat=True):
+     ''' Try to find .mat file on system path

@@ -1,0 +1,10 @@
+--- Lib/optimize/__minpack.h.orig	2007-06-06 17:34:35.232483750 +0100
++++ Lib/optimize/__minpack.h	2007-06-06 17:34:37.788643500 +0100
+@@ -585,7 +585,6 @@
+   else {
+     Py_DECREF(ap_fvec);
+     Py_DECREF(ap_fjac);
+-    Py_DECREF(ap_diag);
+     Py_DECREF(ap_ipvt);
+     Py_DECREF(ap_qtf);
+     return Py_BuildValue("Ni",PyArray_Return(ap_x),info);

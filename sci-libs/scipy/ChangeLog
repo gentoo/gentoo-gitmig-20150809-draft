@@ -1,6 +1,19 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.18 2007/06/04 13:51:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.19 2007/06/06 21:27:52 bicatali Exp $
+
+*scipy-0.5.2-r2 (06 Jun 2007)
+
+  06 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scipy-0.5.2-getpath.patch, +files/scipy-0.5.2-minpack.patch,
+  +files/scipy-0.5.2-mio.patch, +files/scipy-0.5.2-montecarlo-test.patch,
+  +files/scipy-0.5.2-nonexisting.patch, +files/scipy-0.5.2-randomkit.patch,
+  +files/scipy-0.5.2-signals.patch, +files/scipy-0.5.2-umfpack.patch,
+  +files/scipy-0.5.2-viewer.patch, +files/enabled_packages.txt,
+  +files/scipy-0.5.2-bspline.patch +scipy-0.5.2-r2.ebuild:
+  Revision including a bunch of patches from scipy-svn. Now also includes
+  sandbox modules with a use flag. Revert to fftw-2.* for fftw, faster for
+  complex. Added a patch to enable numpy-1.0.3 API changes.
 
   04 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org>
   -files/system_info.diff, -scipy-0.4.9.ebuild, -scipy-0.5.1.ebuild:
