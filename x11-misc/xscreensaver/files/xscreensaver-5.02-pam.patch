@@ -1,0 +1,13 @@
+diff -ur xscreensaver-5.02.orig/driver/lock.c xscreensaver-5.02/driver/lock.c
+--- xscreensaver-5.02.orig/driver/lock.c	2007-04-20 13:15:56.000000000 +0300
++++ xscreensaver-5.02/driver/lock.c	2007-06-06 21:48:51.000000000 +0300
+@@ -2066,7 +2066,8 @@
+       }
+     }
+ 
+-  destroy_passwd_window (si);
++  if (si->pw_data)
++    destroy_passwd_window (si);
+ }
+ 
+ 

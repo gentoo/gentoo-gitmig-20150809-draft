@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.182 2007/05/27 05:00:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.183 2007/06/06 19:11:00 drac Exp $
+
+*xscreensaver-5.02-r2 (06 Jun 2007)
+
+  06 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xscreensaver-5.02-pam.patch, +xscreensaver-5.02-r2.ebuild:
+  Patch to fix segmentation fault with non-interactive pam by Andrea Luzzardi
+  in bug 180542.
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> xscreensaver-5.02-r1.ebuild:
   Stable on mips.
