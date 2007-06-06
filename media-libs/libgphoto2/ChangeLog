@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.101 2007/03/28 16:53:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.102 2007/06/06 16:13:37 zzam Exp $
+
+  06 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml,
+  libgphoto2-2.2.1-r1.ebuild:
+  I do no longer maintain libgphoto. Added to herd graphics.
 
   28 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
   -files/libgphoto2-2.1.6-gtk-doc-digit-attribute.patch,

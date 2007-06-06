@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.21 2007/03/28 11:48:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.22 2007/06/06 16:13:37 zzam Exp $
 
 inherit libtool eutils autotools
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="nls doc exif hal"
-RESTRICT="test confcache"
+RESTRICT="confcache"
 
 RDEPEND="
 	>=dev-libs/libusb-0.1.8

@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
+<herd>graphics</herd>
 <maintainer><email>liquidx@gentoo.org</email></maintainer>
-<maintainer><email>zzam@gentoo.org</email></maintainer>
 </pkgmetadata>
