@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.20.ebuild,v 1.1 2007/05/16 18:23:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.20.ebuild,v 1.2 2007/06/07 18:09:37 gustavoz Exp $
 
 inherit eutils gnome2-utils
 
@@ -11,7 +11,7 @@ SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/t/${PN}/${PN}_${PV}.orig.tar
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 sparc ~x86"
 IUSE="png"
 
 RESTRICT="binchecks strip"
