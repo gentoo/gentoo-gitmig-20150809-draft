@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.68 2007/05/06 22:56:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.69 2007/06/07 14:22:50 opfer Exp $
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common standards
 
 *metalog-0.8 (06 May 2007)
 
@@ -237,9 +240,9 @@
   24 Apr 2002; Thilo Bangert <bangert@gentoo.org> matalog-0.6-r9.ebuild :  
   added consolelog.sh - script to be able to log to a console - from LFS
   
-*metalog-0.6-r9 (11 March 2002)
+*metalog-0.6-r9 (11 Mar 2002)
 
-  11 March 2002; M.Schlemmer <azarah@gentoo.org> :
+  11 Mar 2002; M.Schlemmer <azarah@gentoo.org> :
   Update rc-script to provide "logger".
 
 *metalog-0.6-r8 (1 Feb 2002)

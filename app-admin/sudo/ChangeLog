@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.106 2007/05/17 12:39:18 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.107 2007/06/07 14:16:48 opfer Exp $
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common standards
 
   17 May 2007; Tavis Ormandy <taviso@gentoo.org> sudo-1.6.8_p12-r1.ebuild:
   remove c++ checks
@@ -241,6 +244,7 @@
   enable ldap support.
 
 *sudo-1.6.8_p8-r1 (05 Jun 2005)
+*sudo-1.6.7_p5-r4 (05 Jun 2005)
 
   05 Jun 2005; Tavis Ormandy <taviso@gentoo.org>
   +files/sudo-strip-shellopts.diff, +sudo-1.6.7_p5-r4.ebuild,
@@ -296,6 +300,7 @@
   new release
 
 *sudo-1.6.8_p1-r2 (11 Nov 2004)
+*sudo-1.6.7_p5-r2 (11 Nov 2004)
 
   11 Nov 2004; Tavis Ormandy <taviso@gentoo.org> +files/sudoers,
   +sudo-1.6.7_p5-r2.ebuild, +sudo-1.6.8_p1-r2.ebuild:

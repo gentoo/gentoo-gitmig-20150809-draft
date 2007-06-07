@@ -1,13 +1,17 @@
 # ChangeLog for app-admin/integrit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.16 2007/01/24 14:28:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.17 2007/06/07 14:19:03 opfer Exp $
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  modified ChangeLog to meet common standards
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> integrit-3.02.00.ebuild,
   integrit-3.05.ebuild, integrit-4.0.ebuild:
   Replacing einfo with elog
 
-*integrit-4.0 (17/01/07)
-  17 Jan 2007; Robert Clark <hyakuhei@gentoo.org> integrit-4.0.ebuild:
+*integrit-4.0 (17 Jan 07)
+
+  17 Jan 2007; Robert Clark <hyakuhei@gentoo.org> +integrit-4.0.ebuild:
   bumped to version 4. No outstanding bugs as of this date.
 
   08 May 2006; Thomas Cort <tcort@gentoo.org> integrit-3.02.00.ebuild,
