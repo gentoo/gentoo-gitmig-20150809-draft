@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.59 2007/06/07 08:28:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.60 2007/06/07 11:02:58 armin76 Exp $
+
+  07 Jun 2007; Raúl Porcel <armin76@gentoo.org> xsane-0.991.ebuild:
+  Drop ia64 stable keyword as nobody can't test this
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> xsane-0.994.ebuild:
   Stable on ppc64; bug #178933
