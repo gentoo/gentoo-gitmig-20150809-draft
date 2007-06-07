@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.45 2007/06/07 18:15:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.46 2007/06/07 18:20:33 alonbl Exp $
+
+  07 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org> -gpa-0.7.0-r2.ebuild:
+  Cleanup
 
   07 Jun 2007; Raúl Porcel <armin76@gentoo.org> gpa-0.7.3.ebuild:
   alpha stable wrt #150386
