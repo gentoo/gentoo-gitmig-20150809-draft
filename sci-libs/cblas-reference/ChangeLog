@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.15 2007/01/08 02:32:25 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.16 2007/06/07 19:26:08 lavajoe Exp $
+
+  07 Jun 2007; Joe Peterson <lavajoe@gentoo.org>
+  cblas-reference-20030223-r3.ebuild:
+  Add ~x86-fbsd keyword
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -cblas-reference-20030223.ebuild, -cblas-reference-20030223-r2.ebuild:
