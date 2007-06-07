@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.15 2007/06/05 04:52:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.16 2007/06/07 10:36:03 ferdy Exp $
+
+  07 Jun 2007; Fernando J. Pereda <ferdy@gentoo.org> espeak-1.25.ebuild:
+  Added ~alpha as per bug #163285. Thanks to Brian Evans
+  <grknight2k@bluebottle.com> for testing.
 
   05 Jun 2007; Jeroen Roovers <jer@gentoo.org> espeak-1.25.ebuild:
   Marked ~hppa (bug #163285).
