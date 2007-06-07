@@ -1,0 +1,11 @@
+--- qtjambi_designer/jambipropertysheet.cpp.orig	2007-06-07 10:45:39.000000000 -0400
++++ qtjambi_designer/jambipropertysheet.cpp	2007-06-07 10:45:49.000000000 -0400
+@@ -27,7 +27,7 @@
+ #include "qtjambi_core.h"
+ #include "qtjambi_utils.h"
+ 
+-#include <QtDesigner/private/qdesigner_utils_p.h>
++#include <qdesigner_utils_p.h>
+ 
+ jclass class_NamedIntSet;
+ 

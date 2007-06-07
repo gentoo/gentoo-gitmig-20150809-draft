@@ -1,0 +1,14 @@
+# ChangeLog for dev-java/qtjambi
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/ChangeLog,v 1.1 2007/06/07 16:35:40 caleb Exp $
+
+*qtjambi-4.3.0_p1 (07 Jun 2007)
+
+  07 Jun 2007; Caleb Tennis <caleb@gentoo.org> +files/generator.patch,
+  +files/jambi.pri.diff, +files/jambipropertysheet.diff,
+  +files/java_files_remove_accessibility.diff,
+  +files/java_files_remove_ssl.diff, +files/qdesigner_utils_p.h,
+  +files/qtjambi_base.pri.diff, +files/shared_global_p.h, +metadata.xml,
+  +qtjambi-4.3.0_p1.ebuild:
+  Initial ebuild
+
