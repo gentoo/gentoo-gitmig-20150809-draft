@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.ebuild,v 1.2 2007/06/07 11:13:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.ebuild,v 1.3 2007/06/07 13:11:24 fmccor Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~ia64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/pkgcore-0.3

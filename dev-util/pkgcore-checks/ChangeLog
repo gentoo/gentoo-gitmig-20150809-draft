@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.23 2007/06/07 11:13:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.24 2007/06/07 13:11:24 fmccor Exp $
+
+  07 Jun 2007; Ferris McCormick <fmccor@gentoo.org>
+  pkgcore-checks-0.4.ebuild:
+  Add ~sparc --- Bug #181133 --- passes all tests and appears to work.
 
   07 Jun 2007; Raúl Porcel <armin76@gentoo.org> pkgcore-checks-0.4.ebuild:
   Re-add ~ia64 wrt #181133
