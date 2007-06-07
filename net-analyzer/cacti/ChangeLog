@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.104 2007/06/07 13:47:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.105 2007/06/07 13:55:47 corsair Exp $
+
+  07 Jun 2007; Markus Rothe <corsair@gentoo.org> cacti-0.8.6j-r5.ebuild:
+  Stable on ppc64; bug #181112
 
   07 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   cacti-0.8.6j-r6.ebuild:
