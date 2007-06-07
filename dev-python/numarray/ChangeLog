@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.26 2007/05/29 15:33:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.27 2007/06/07 22:49:44 lavajoe Exp $
+
+  07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> numarray-1.5.2-r1.ebuild:
+  Add ~x86-fbsd keyword (bug #178368)
 
   29 May 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +files/numarray-1.5.2-freebsd.patch, numarray-1.5.2-r1.ebuild:
