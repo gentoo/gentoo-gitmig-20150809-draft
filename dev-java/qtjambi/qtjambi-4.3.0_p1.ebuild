@@ -1,14 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1.ebuild,v 1.1 2007/06/07 16:35:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1.ebuild,v 1.2 2007/06/07 17:02:48 caleb Exp $
 
 inherit eutils java-pkg-2
 
 QTVERSION=4.3.0
 PATCHRELEASE=01
 
-SRCTYPE="opensource-src"
-DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
+DESCRIPTION="QtJambi is a set of Java bindings and utilities for the Qt C++ toolkit."
 HOMEPAGE="http://www.trolltech.com/"
 
 MY_PV=${QTVERSION}_${PATCHRELEASE}
