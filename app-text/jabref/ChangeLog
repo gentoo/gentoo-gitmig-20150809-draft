@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.47 2007/05/26 13:01:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.48 2007/06/07 11:43:03 opfer Exp $
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org> jabref-2.2.ebuild:
+  stable x86, bug 181086
 
   26 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> jabref-2.2.ebuild:
   Add ~ppc, see bug #166273.
