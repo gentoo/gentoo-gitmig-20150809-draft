@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.33 2007/06/07 12:50:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.34 2007/06/07 13:20:16 marienz Exp $
+
+  07 Jun 2007; Marien Zwart <marienz@gentoo.org> pkgcore-0.3.ebuild:
+  use get_libdir instead of lib for cleaning stale plugincache files.
 
   07 Jun 2007; Ferris McCormick <fmccor@gentoo.org> pkgcore-0.3.ebuild:
   Add ~sparc --- Bug #181133 --- Builds, reinstalls itself, trial is good.

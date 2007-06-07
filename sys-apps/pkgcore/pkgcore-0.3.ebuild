@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.3.ebuild,v 1.3 2007/06/07 12:50:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.3.ebuild,v 1.4 2007/06/07 13:20:16 marienz Exp $
 
 inherit distutils eutils
 
@@ -61,7 +61,7 @@ pkg_postinst() {
 	fi
 
 	# This is left behind by pkgcore 0.2.
-	rm -f "${ROOT}"usr/lib/python${PYVER}/site-packages/pkgcore/plugins/plugincache
+	rm -f "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/pkgcore/plugins/plugincache
 
 	elog "If the new layman sync support causes problems you can disable it"
 	elog "with FEATURES=-layman-sync. If you cannot sync a layman overlay"
@@ -72,7 +72,7 @@ pkg_postinst() {
 pkg_postrm() {
 	python_version
 	# Careful not to remove this on up/downgrades.
-	local sitep="${ROOT}"usr/lib/python${PYVER}/site-packages
+	local sitep="${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages
 	if [[ -e "${sitep}/pkgcore/plugins/plugincache2" ]] &&
 		! [[ -e "${sitep}/pkgcore/plugin.py" ]]; then
 		rm "${sitep}/pkgcore/plugins/plugincache2"
