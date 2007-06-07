@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilycomp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilycomp/ChangeLog,v 1.4 2007/02/03 19:32:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilycomp/ChangeLog,v 1.5 2007/06/07 15:13:12 genstef Exp $
+
+  07 Jun 2007; Ali Polatel (hawking) <polatel@gmail.com>
+  lilycomp-1.0.2.ebuild:
+  Add tk check for bug 176980, thanks to Elliott Sales de Andrade
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
