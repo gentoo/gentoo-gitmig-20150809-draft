@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.12.ebuild,v 1.4 2007/05/16 04:47:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.12.ebuild,v 1.5 2007/06/07 18:08:48 gustavoz Exp $
 
 DESCRIPTION="An MPD client that submits information to audioscrobbler."
 HOMEPAGE="http://www.frob.nl/scribble.html"
 SRC_URI="http://www.frob.nl/projects/scribble/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc sparc ~x86"
 IUSE=""
 DEPEND=">=net-libs/libsoup-2.2"
 

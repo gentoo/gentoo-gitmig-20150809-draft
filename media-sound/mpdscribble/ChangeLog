@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.16 2007/05/16 04:47:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.17 2007/06/07 18:08:48 gustavoz Exp $
+
+  07 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  mpdscribble-0.2.12.ebuild:
+  Stable on sparc
 
   16 May 2007; Jeroen Roovers <jer@gentoo.org> mpdscribble-0.2.12.ebuild:
   Marked ~hppa (bug #177664).
