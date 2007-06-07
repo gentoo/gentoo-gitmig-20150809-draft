@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-3.2.ebuild,v 1.10 2007/03/26 08:01:58 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-3.2.ebuild,v 1.11 2007/06/07 00:06:22 vapier Exp $
 
 inherit cron toolchain-funcs
 
@@ -22,11 +22,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/dcron-2.9-Makefile.patch
-	epatch "${FILESDIR}"/dcron-2.9-pidfile.patch
+	epatch "${FILESDIR}"/dcron-3.2-pidfile.patch
 	epatch "${FILESDIR}"/dcron-2.9-EDITOR.patch
+	epatch "${FILESDIR}"/${P}-build.patch #181043
 }
 
 src_compile() {
+	append-cppflags -D_GNU_SOURCE # for asprintf()
 	emake CC="$(tc-getCC)" || die
 }
 
