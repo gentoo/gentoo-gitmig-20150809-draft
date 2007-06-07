@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r1.ebuild,v 1.1 2007/05/01 12:10:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r1.ebuild,v 1.2 2007/06/07 10:55:46 opfer Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="cups fax foomaticdb parport ppds qt3 scanner snmp X"
 
 DEPEND="!net-print/hpijs
