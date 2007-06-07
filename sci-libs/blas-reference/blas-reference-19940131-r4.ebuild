@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r4.ebuild,v 1.5 2006/09/13 18:08:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r4.ebuild,v 1.6 2007/06/07 19:16:00 lavajoe Exp $
 
 inherit autotools fortran multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netlib.org/blas/${Name}.tgz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="app-admin/eselect-blas"
 DEPEND="${RDEPEND}"

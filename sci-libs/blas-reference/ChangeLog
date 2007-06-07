@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.22 2007/01/08 02:31:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.23 2007/06/07 19:16:00 lavajoe Exp $
+
+  07 Jun 2007; Joe Peterson <lavajoe@gentoo.org>
+  blas-reference-19940131-r4.ebuild:
+  Add ~x86-fbsd keyword
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -blas-reference-19940131-r2.ebuild:
