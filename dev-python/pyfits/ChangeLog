@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.1 2007/02/07 11:18:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.2 2007/06/07 22:55:45 lavajoe Exp $
+
+  07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> pyfits-1.0.1.ebuild:
+  Add ~x86-fbsd keyword (bug #178370)
 
 *pyfits-1.0.1 (06 Feb 2007)
 
