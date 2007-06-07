@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>nelchael@gentoo.org</email>
-  </maintainer>
-  <herd>net-im</herd>
-  <longdescription>
-    This is the original implementation of jabberd server.
-    This serves as the basis for running a jabber server in Gentoo.
-  </longdescription>
+	<maintainer>
+		<email>nelchael@gentoo.org</email>
+		<name>Krzysiek Pawlik</name>
+		<description>Takes care of jabberd-1*</description>
+	</maintainer>
+	<maintainer>
+		<email>marko.durkovic@gmail.com</email>
+		<name>Marko Durkovic</name>
+		<description>
+			Maintainer by proxy, through nelchael. Takes care of
+			jabberd-2*
+		</description>
+	</maintainer>
+	<herd>net-im</herd>
 </pkgmetadata>
