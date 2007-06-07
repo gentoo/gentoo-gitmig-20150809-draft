@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.20 2007/06/07 11:01:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.21 2007/06/07 12:20:03 caster Exp $
+
+  07 Jun 2007; Vlastimil Babka <caster@gentoo.org>
+  -avalon-framework-4.1.5.ebuild, -avalon-framework-4.2.0.ebuild:
+  Cleanup gen-1 revisions.
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org>
   avalon-framework-4.2.0-r1.ebuild:
