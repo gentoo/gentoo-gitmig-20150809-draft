@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.214 2007/03/19 03:07:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.215 2007/06/07 16:30:45 flameeyes Exp $
+
+  07 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  -amarok-1.4.4-r3.ebuild:
+  Remove old version and take over package again.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
