@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.15 2007/01/13 13:39:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.16 2007/06/07 21:04:40 dang Exp $
 
 inherit libtool
 
@@ -18,7 +18,7 @@ IUSE=""
 # 25 Aug 2003; foser <foser@gentoo.org>
 
 RDEPEND=">=dev-libs/glib-2
-	|| ( virtual/aspell-dict app-text/ispell app-text/hspell app-text/hunspell )"
+	|| ( virtual/aspell-dict app-text/ispell app-text/hunspell )"
 
 # libtool is needed for the install-sh to work
 DEPEND="${RDEPEND}

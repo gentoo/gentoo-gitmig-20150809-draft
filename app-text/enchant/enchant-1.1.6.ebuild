@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.6.ebuild,v 1.10 2005/09/02 15:46:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.6.ebuild,v 1.11 2007/06/07 21:04:40 dang Exp $
 
 inherit gnome2
 
@@ -18,7 +18,7 @@ IUSE=""
 # 25 Aug 2003; foser <foser@gentoo.org>
 
 RDEPEND=">=dev-libs/glib-2
-	|| ( virtual/aspell-dict app-text/ispell app-text/hspell )"
+	|| ( virtual/aspell-dict app-text/ispell )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
