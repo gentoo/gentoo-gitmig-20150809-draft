@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.67 2007/04/30 10:32:18 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.68 2007/06/07 20:48:46 kolmodin Exp $
+
+*darcs-1.0.8-r2 (07 Jun 2007)
+
+  07 Jun 2007; Lennart Kolmodin <kolmodin@gentoo.org>
+  +files/darcs-1.0.9-bashcomp.patch, +darcs-1.0.8-r2.ebuild:
+  Patching to not use have() in the bash completion. Fixes bug #171001
 
   30 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> darcs-1.0.7.ebuild,
   darcs-1.0.8-r1.ebuild:
