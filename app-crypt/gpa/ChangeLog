@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.44 2007/06/02 06:29:36 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.45 2007/06/07 18:15:06 armin76 Exp $
+
+  07 Jun 2007; Raúl Porcel <armin76@gentoo.org> gpa-0.7.3.ebuild:
+  alpha stable wrt #150386
 
   02 Jun 2007; Joshua <joslwah@gentoo.org> gpa-0.7.4.ebuild:
   Adding ~ppc64 to 0.7.4 since it seems to work.
