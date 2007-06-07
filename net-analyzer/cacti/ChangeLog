@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.101 2007/06/06 20:48:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.102 2007/06/07 10:24:31 pva Exp $
+
+*cacti-0.8.6j-r6 (07 Jun 2007)
+
+  07 Jun 2007; <pva@gentoo.org> +cacti-0.8.6j-r6.ebuild:
+  New patch from upstream: snmpwalk_fix.
 
   06 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   cacti-0.8.6j-r5.ebuild:
