@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-cblas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.11 2007/01/27 11:29:48 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.12 2007/06/07 18:52:50 lavajoe Exp $
+
+  07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> eselect-cblas-0.1.ebuild:
+  Add ~x86-fbsd keyword
 
   27 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   eselect-cblas-0.1.ebuild:
