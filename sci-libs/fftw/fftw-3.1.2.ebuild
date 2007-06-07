@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.2.ebuild,v 1.5 2007/06/06 17:09:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.2.ebuild,v 1.6 2007/06/07 12:48:46 corsair Exp $
 
 inherit flag-o-matic eutils toolchain-funcs autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fftw.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3.0"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc-macos ppc64 sparc x86"
 IUSE="altivec sse sse2 test"
 
 DEPEND="test? ( dev-lang/perl )"
