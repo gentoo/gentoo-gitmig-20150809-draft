@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.56 2007/06/07 12:48:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.57 2007/06/07 17:32:13 grobian Exp $
+
+  07 Jun 2007; Fabian Groffen <grobian@gentoo.org> fftw-3.0.1-r2.ebuild,
+  fftw-3.1.2.ebuild:
+  Dropped ppc-macos keyword, see you in prefix.
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> fftw-3.1.2.ebuild:
   Stable on ppc64; bug #180963

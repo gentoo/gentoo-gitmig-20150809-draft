@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.15 2007/05/02 16:01:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.16 2007/06/07 17:32:13 grobian Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -13,7 +13,7 @@ SRC_URI="http://www.fftw.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3.0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="3dnow altivec mpi sse sse2"
 
 DEPEND=""
@@ -34,7 +34,6 @@ src_unpack() {
 	eautoreconf
 
 	cd "${WORKDIR}"
-	use ppc-macos && epatch ${FILESDIR}/${PN}-ppc-macos.patch
 	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 	mv ${P} ${P}-single
 	cp -pPR ${P}-single ${P}-double
