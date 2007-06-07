@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.32 2007/06/07 11:12:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.33 2007/06/07 12:50:13 fmccor Exp $
+
+  07 Jun 2007; Ferris McCormick <fmccor@gentoo.org> pkgcore-0.3.ebuild:
+  Add ~sparc --- Bug #181133 --- Builds, reinstalls itself, trial is good.
 
   07 Jun 2007; Raúl Porcel <armin76@gentoo.org> pkgcore-0.3.ebuild:
   Re-add ~ia64 wrt #181133
