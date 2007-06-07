@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/nagios-plugins-snmp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.1 2007/06/07 06:43:34 dertobi123 Exp $
+
+*nagios-plugins-snmp-0.5.5 (07 Jun 2007)
+
+  07 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> +metadata.xml,
+  +nagios-plugins-snmp-0.5.5.ebuild:
+  Initial import, bug #180563
+
