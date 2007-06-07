@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.19 2007/04/28 16:10:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.20 2007/06/07 16:50:20 alonbl Exp $
+
+*truecrypt-4.3a (07 Jun 2007)
+
+  07 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org> +truecrypt-4.3a.ebuild:
+  Version bump, bug#181201, thanks to Yoann Pannier
 
   28 Apr 2007; Raúl Porcel <armin76@gentoo.org> truecrypt-4.3.ebuild:
   x86 stable wrt #176159
