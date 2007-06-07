@@ -1,0 +1,10 @@
+# ChangeLog for games-kids/memonix-bin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/ChangeLog,v 1.1 2007/06/07 22:50:43 mr_bones_ Exp $
+
+*memonix-bin-1.6 (07 Jun 2007)
+
+  07 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +memonix-bin-1.6.ebuild:
+  intial commit
+
