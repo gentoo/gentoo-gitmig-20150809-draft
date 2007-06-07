@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.1.ebuild,v 1.7 2007/06/02 16:27:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.1.ebuild,v 1.8 2007/06/07 21:57:23 armin76 Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://ktown.kde.org/~seli/numlockx/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="EDB"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
