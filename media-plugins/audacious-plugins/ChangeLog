@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.54 2007/05/04 11:20:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.55 2007/06/07 16:23:12 chainsaw Exp $
+
+*audacious-plugins-1.3.5 (07 Jun 2007)
+
+  07 Jun 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.3.5.ebuild:
+  Version bump, various stability fixes. No new features. May skip 1.3.4 and
+  push 1.3.5 for stable based on the outcome of bug #178625.
 
 *audacious-plugins-1.3.4 (04 May 2007)
 
