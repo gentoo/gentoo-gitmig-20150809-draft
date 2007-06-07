@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.63 2007/06/07 10:55:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.64 2007/06/07 14:39:26 corsair Exp $
+
+  07 Jun 2007; Markus Rothe <corsair@gentoo.org> hplip-1.7.4a-r1.ebuild:
+  Added ~ppc64
 
   07 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   hplip-1.7.4a-r1.ebuild:
