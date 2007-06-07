@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.39 2007/05/12 14:57:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.40 2007/06/07 15:38:33 voyageur Exp $
+
+  07 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  nxclient-2.1.0-r1.ebuild:
+  Get DESCRIPTION back in one line, bug #181184
 
   12 May 2007; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Fixed maintainer in metadata.xml
