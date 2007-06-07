@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3.ebuild,v 1.3 2007/05/26 12:59:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3.ebuild,v 1.4 2007/06/07 11:40:10 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.pdfbox.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 CDEPEND="dev-java/fontbox
