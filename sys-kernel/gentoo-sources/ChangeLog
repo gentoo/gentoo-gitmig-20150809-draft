@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.397 2007/05/25 02:40:19 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.398 2007/06/07 17:12:07 armin76 Exp $
+
+  07 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  gentoo-sources-2.6.21-r1.ebuild:
+  alpha stable as decided
 
 *gentoo-sources-2.6.21-r2 (25 May 2007)
 
