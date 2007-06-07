@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.23 2007/05/15 20:09:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.24 2007/06/07 07:38:00 corsair Exp $
+
+  07 Jun 2007; Markus Rothe <corsair@gentoo.org>
+  tomcat-servlet-api-6.0.13.ebuild:
+  Added ~ppc64; bug #178701
 
   15 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-servlet-api-5.5.23.ebuild, tomcat-servlet-api-6.0.13.ebuild:
