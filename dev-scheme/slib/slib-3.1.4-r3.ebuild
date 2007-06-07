@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r3.ebuild,v 1.1 2007/06/06 16:28:00 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r3.ebuild,v 1.2 2007/06/07 18:10:34 hkbst Exp $
 
 inherit versionator eutils
 
@@ -47,6 +47,8 @@ src_unpack() {
 
 #	einstall || die "install failed"
 #	emake infodir="${D}/usr/share/info/" mandir="${D}/usr/share/doc/${P}/" infoz || die "infoz failed"
+
+	sed 's:(lambda () "/usr/local/share/gambc/")):(lambda () "/usr/share/gambit")):' -i gambit.init
 }
 
 src_compile() {
@@ -57,6 +59,7 @@ src_install() {
 	emake install || die "install failed"
 
 	dodoc ANNOUNCE ChangeLog FAQ README
+	dodir /usr/share/gambit/
 	more_install
 }
 
@@ -84,43 +87,46 @@ pkg_postinst() {
 	[ "${ROOT}" == "/" ] && pkg_config
 }
 
-IMPLEMENTATIONS="bigloo elk gambit guile drscheme scm"
+IMPLEMENTATIONS="bigloo drscheme elk gambit guile scm" # mit-scheme
 
 pkg_config() {
 	for impl in ${IMPLEMENTATIONS}; do
-		install_slib dev-scheme/${impl}
+		install_slib ${impl}
 #		echo '(slib:report-version)' | slib ${impl}
 	done
 }
 
 make_load_expression() {
-	echo "(load \\\"${INSTALL_DIR}/$1.init\\\")"
+	echo "(load \\\"${INSTALL_DIR}$1.init\\\")"
 }
 
 make_installers()
 {
-	PROGRAM="(require 'new-catalog)" # (slib:report-version)"
+	PROGRAM="(require 'new-catalog) (slib:report-version)"
 
 	bigloo_install_command="bigloo -s -eval \"(begin "$(make_load_expression bigloo)" ${PROGRAM} (exit))\""
+	drscheme_install_command="mzscheme -vme \"(begin $(make_load_expression DrScheme) ${PROGRAM})\""
 	elk_install_command="echo \"$(make_load_expression elk) ${PROGRAM}\" | elk -l -"
 	gambit_install_command="gambit-interpreter -e \"$(make_load_expression gambit) ${PROGRAM}\""
 	guile_install_command="guile -c \"$(make_load_expression guile) ${PROGRAM}\""
+	#variable names may not contain hyphens (-)
+	mitscheme_install_command="echo \"(set! load/suppress-loading-message? #t) $(make_load_expression mitscheme) ${PROGRAM}\" | mit-scheme --batch-mode"
+	echo ${mitscheme_install_command}
 	scm_install_command="scm -e \"${PROGRAM}\""
-	drscheme_install_command="mzscheme -vme \"(begin $(make_load_expression DrScheme) ${PROGRAM})\""
 
 	for impl in ${IMPLEMENTATIONS}; do
-		command_var=${impl}_install_command
+		command_var=${impl//-/}_install_command
 		make_installer ${impl} "${!command_var}"
 	done
 }
 
 make_installer() {
-	echo $2 > install_slib_for_$1
+	echo $2 > install_slib_for_${1//-/}
 }
 
 install_slib() {
-	if has_version $1; then
-		script=install_slib_for_${1##*/}
+	if has_version dev-scheme/$1; then
+		script=install_slib_for_${1//-/}
 		einfo "Registering slib with $1..."
 #		echo running: $(cat /usr/sbin/${script})
 		$script
