@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/kftpgrabber-0.8.1-r1.ebuild,v 1.2 2007/05/09 13:17:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/kftpgrabber-0.8.1-r1.ebuild,v 1.3 2007/06/07 09:59:39 mabi Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.kftp.org/uploads/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
