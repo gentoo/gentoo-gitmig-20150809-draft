@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.5.ebuild,v 1.5 2007/06/07 23:02:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.6.ebuild,v 1.1 2007/06/07 23:02:41 dev-zero Exp $
 
 inherit autotools eutils bash-completion
 
@@ -9,12 +9,13 @@ HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
 SRC_URI="mirror://gnu/src-highlite/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~mips ~ppc x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 SLOT="0"
 IUSE="doc"
 
 DEPEND=">=dev-libs/boost-1.33.1-r1
 	dev-util/ctags"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -37,7 +38,7 @@ src_compile() {
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dobashcompletion "${FILESDIR}/${P}.bash-completion"
+	dobashcompletion "${FILESDIR}/${PN}-2.5.bash-completion"
 
 	# That's not how we want it
 	rm -fr "${D}/usr/share/doc"
