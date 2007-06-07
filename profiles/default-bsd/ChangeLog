@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.6 2007/05/28 15:30:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.7 2007/06/07 18:00:07 lavajoe Exp $
+
+  07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> virtuals:
+  For FreeBSD, default to the "reference implementation" versions rather
+  than using the "atlas" versions of LAPACK and BLAS.
 
   28 May 2007; Diego Pettenò <flameeyes@gentoo.org> package.use.mask, use.mask
   fbsd/package.use.mask: Unmask the useflags that shouldn't have been masked
