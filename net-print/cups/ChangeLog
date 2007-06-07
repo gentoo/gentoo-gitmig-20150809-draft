@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.239 2007/06/06 15:38:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.240 2007/06/07 10:58:40 opfer Exp $
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  cups-1.2.10-r1.ebuild:
+  stable x86, bug 180909
 
   06 Jun 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
   Restore ~x86 as it needs some dep that isn't stable
