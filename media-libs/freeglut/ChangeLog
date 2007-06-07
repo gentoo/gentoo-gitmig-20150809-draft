@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.48 2007/05/20 16:41:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.49 2007/06/07 16:08:11 grobian Exp $
+
+  07 Jun 2007; Fabian Groffen <grobian@gentoo.org> freeglut-2.2.0.ebuild,
+  freeglut-2.4.0.ebuild, freeglut-2.4.0-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix.
 
   20 May 2007; Jeroen Roovers <jer@gentoo.org> freeglut-2.4.0-r1.ebuild:
   Stable for HPPA (bug #170609).
