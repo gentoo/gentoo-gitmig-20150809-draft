@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/replytolist/replytolist-0.2.0.ebuild,v 1.12 2007/05/24 21:46:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/replytolist/replytolist-0.2.0.ebuild,v 1.13 2007/06/07 09:40:56 corsair Exp $
 
 inherit mozextension multilib
 
 DESCRIPTION="Thunderbird extension to reply to mailing list"
 HOMEPAGE="http://open.nit.ca/wiki/index.php?page=ReplyToListThunderbirdExtension"
 
-KEYWORDS="~alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
