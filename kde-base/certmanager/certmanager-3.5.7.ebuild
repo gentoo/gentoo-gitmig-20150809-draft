@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.7.ebuild,v 1.1 2007/05/22 20:53:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.7.ebuild,v 1.2 2007/06/07 15:02:18 philantrop Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -31,5 +31,5 @@ src_compile() {
 
 pkg_postinst() {
 	kde_pkg_postinst
-	elog "For X.509 CRL and OCSP support, install kde-base/dirmngr, please."
+	elog "For X.509 CRL and OCSP support, install app-crypt/dirmngr, please."
 }
