@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.2 2007/06/07 11:10:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.3 2007/06/07 12:36:58 fmccor Exp $
+
+  07 Jun 2007; Ferris McCormick <fmccor@gentoo.org> snakeoil-0.1_rc2.ebuild:
+  Add ~sparc keyword --- Bug #181133 --- Builds and runs all tests (pkgcore
+  support).
 
   07 Jun 2007; Raúl Porcel <armin76@gentoo.org> snakeoil-0.1_rc2.ebuild:
   Add ~ia64 wrt #181133
