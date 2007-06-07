@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.144 2007/06/03 17:55:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.145 2007/06/07 15:40:57 philantrop Exp $
+
+  07 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdevelop-3.4.1.ebuild:
+  Removed the useless graphviz USE flag and instead added to the post-install
+  messages. Fixes bug 180271.
 
   03 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kdevelop-3.3.5.ebuild, kdevelop-3.3.6.ebuild, kdevelop-3.4.0-r2.ebuild,
