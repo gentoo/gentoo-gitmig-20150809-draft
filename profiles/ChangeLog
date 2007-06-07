@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.457 2007/06/06 19:43:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.458 2007/06/07 09:46:17 opfer Exp $
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org> use.desc,
+  use.local.desc:
+  making gsl a global USE flag
 
   06 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Unmasking boost-1.34.0
