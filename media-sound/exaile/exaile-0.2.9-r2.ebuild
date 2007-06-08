@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r2.ebuild,v 1.2 2007/06/08 00:01:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r2.ebuild,v 1.3 2007/06/08 15:59:21 drac Exp $
 
-inherit eutils python toolchain-funcs
+inherit eutils fdo-mime python toolchain-funcs
 
 GVER="0.10"
 
@@ -76,3 +76,13 @@ src_install() {
 	exeinto /usr/share/${PN}
 	doexe scripts/*
 }
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}          
