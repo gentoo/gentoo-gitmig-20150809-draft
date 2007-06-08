@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.158 2007/06/03 15:33:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.159 2007/06/08 11:17:53 armin76 Exp $
+
+  08 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  files/mldonkey.initd-2.8-r1:
+  Swap one line in the init script, thanks to Jörg Eitemüller <destotelhorus
+  at googlemail dot com> for reporting in bug 181140
 
 *mldonkey-2.8.7 (03 Jun 2007)
 

@@ -119,9 +119,10 @@ fast() {
 
 	setup_uri
 	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
-		${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q
-	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
 		${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
+		${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q
+
 
 	eend $?
 }
