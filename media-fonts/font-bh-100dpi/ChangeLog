@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-100dpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-100dpi/ChangeLog,v 1.18 2007/06/07 13:10:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-100dpi/ChangeLog,v 1.19 2007/06/08 00:30:45 jer Exp $
+
+  08 Jun 2007; Jeroen Roovers <jer@gentoo.org> font-bh-100dpi-1.0.0.ebuild:
+  Stable for HPPA (bug #181091).
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
   Stable on ppc64; bug #181091
