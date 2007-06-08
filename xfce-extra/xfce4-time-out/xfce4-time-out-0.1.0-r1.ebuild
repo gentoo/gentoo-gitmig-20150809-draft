@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out/xfce4-time-out-0.1.0-r1.ebuild,v 1.1 2007/05/31 07:28:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out/xfce4-time-out-0.1.0-r1.ebuild,v 1.2 2007/06/08 17:04:14 drac Exp $
 
 inherit eutils xfce44
 
 xfce44
 
 DESCRIPTION="Panel plugin for taking break from computer work."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~arm ~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND=""
