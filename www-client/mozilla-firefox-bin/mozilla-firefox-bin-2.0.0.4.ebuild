@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.4.ebuild,v 1.5 2007/06/08 13:46:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.4.ebuild,v 1.6 2007/06/08 13:51:41 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -83,7 +83,7 @@ src_unpack() {
 		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
 	if [[ ${linguas} != "" ]]; then
-		elog "Selected language packs (first will be default): ${linguas}"
+		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
 }
 
