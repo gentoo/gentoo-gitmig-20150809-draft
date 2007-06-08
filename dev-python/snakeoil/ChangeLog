@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.4 2007/06/07 14:01:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.5 2007/06/08 00:05:03 jer Exp $
+
+  08 Jun 2007; Jeroen Roovers <jer@gentoo.org> snakeoil-0.1_rc2.ebuild:
+  Marked ~hppa (bug #181133).
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> snakeoil-0.1_rc2.ebuild:
   Added ~ppc64; bug #181133

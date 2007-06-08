@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.1_rc2.ebuild,v 1.4 2007/06/07 14:01:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.1_rc2.ebuild,v 1.5 2007/06/08 00:05:03 jer Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DOCS="AUTHORS NEWS"
