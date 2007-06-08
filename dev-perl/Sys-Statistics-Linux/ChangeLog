@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-Statistics-Linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.5 2007/05/28 08:42:14 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.6 2007/06/08 03:50:13 ticho Exp $
+
+  08 Jun 2007; Andrej Kacian <ticho@gentoo.org>
+  Sys-Statistics-Linux-0.08.ebuild:
+  Stable on x86, bug #181154.
 
 *Sys-Statistics-Linux-0.10 (28 May 2007)
 
