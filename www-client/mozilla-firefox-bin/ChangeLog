@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.87 2007/06/01 18:07:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.88 2007/06/08 13:46:48 armin76 Exp $
+
+  08 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-bin-2.0.0.4.ebuild:
+  Some small modifications, thanks to Cardoe for the suggestion
 
   01 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   -mozilla-firefox-bin-2.0.0.3.ebuild:

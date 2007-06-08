@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.4.ebuild,v 1.4 2007/06/04 06:46:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.4.ebuild,v 1.5 2007/06/08 13:46:48 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -73,7 +73,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
 	done
-	elog "Selected language packs (first will be default): $linguas"
 }
 
 src_unpack() {
@@ -83,6 +82,9 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
+	if [[ ${linguas} != "" ]]; then
+		elog "Selected language packs (first will be default): ${linguas}"
+	fi
 }
 
 src_install() {
@@ -135,7 +137,7 @@ pkg_preinst() {
 pkg_postinst() {
 	if use amd64; then
 		echo
-		elog "NB: You just installed a 32-bit firefox"
+		einfo "NB: You just installed a 32-bit firefox"
 	fi
 
 	update_mozilla_launcher_symlinks
