@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.6.ebuild,v 1.2 2007/05/02 16:50:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.6.ebuild,v 1.3 2007/06/08 10:28:58 zzam Exp $
 
 inherit vdr-plugin
 
@@ -20,7 +20,7 @@ PATCHES="${FILESDIR}/${P}-gentoo.diff"
 src_install() {
 	vdr-plugin_src_install
 
-	dodoc README HISTORY COPYING
+	dodoc README HISTORY
 
 	insinto /etc/vdr/plugins/vomp
 	newins vomp.conf.sample vomp.conf
