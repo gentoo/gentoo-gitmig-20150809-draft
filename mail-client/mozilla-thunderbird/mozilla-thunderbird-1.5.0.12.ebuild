@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.12.ebuild,v 1.5 2007/06/02 21:21:36 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.12.ebuild,v 1.6 2007/06/08 13:57:25 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -88,6 +88,9 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != en ]] && xpi_unpack ${P}-${X}.xpi
 	done
+	if [[ ${linguas} != "" ]]; then
+		einfo "Selected language packs (first will be default): ${linguas}"
+	fi
 
 	cd ${S} || die "cd failed"
 	# Apply our patches

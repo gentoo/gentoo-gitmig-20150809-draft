@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.12 2007/06/07 09:42:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.13 2007/06/08 13:57:25 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -77,7 +77,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
-	elog "Selected language packs (first will be default): $linguas"
 }
 
 pkg_setup() {
@@ -91,6 +90,9 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
+	if [[ ${linguas} != "" ]]; then
+		elog "Selected language packs (first will be default): ${linguas}"
+	fi
 
 	# Apply our patches
 	cd "${S}" || die "cd failed"
