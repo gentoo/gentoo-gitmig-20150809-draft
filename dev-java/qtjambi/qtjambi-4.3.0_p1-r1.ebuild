@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r1.ebuild,v 1.4 2007/06/08 17:47:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r1.ebuild,v 1.5 2007/06/08 20:13:19 caleb Exp $
 
 inherit eutils java-pkg-2
 
@@ -72,7 +72,7 @@ src_compile() {
 
 	# Step 5, compiling java files
 	einfo "Compiling java files"
-#	cd ${S} && ejavac @java_files
+	cd ${S} && ejavac @java_files
 
 	# Step 6, build the jar file
 	cd ${S} && jar cf qtjambi.jar com
