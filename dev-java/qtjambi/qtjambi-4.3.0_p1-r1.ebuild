@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r1.ebuild,v 1.2 2007/06/08 12:01:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r1.ebuild,v 1.3 2007/06/08 14:48:16 caleb Exp $
 
 inherit eutils java-pkg-2
 
@@ -81,13 +81,17 @@ src_compile() {
 src_install() {
         java-pkg_dojar qtjambi.jar
         java-pkg_sointo /usr/$(get_libdir)/qt4
-        java-pkg_doso lib/*.so
+        java-pkg_doso lib/libcom*.so
+
+	# Install qtjambi library
+	dolib lib/libqtjambi*
 
 	# Install binaries
 	dobin bin/*
 
 	# Install designer plugins
 	insinto /usr/$(get_libdir)/qt4/plugins/designer
+	insopts -m0755
 	doins plugins/designer/*.so
 
 }
