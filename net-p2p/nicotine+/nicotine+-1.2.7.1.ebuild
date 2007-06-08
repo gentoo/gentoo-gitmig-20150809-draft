@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.7.1.ebuild,v 1.4 2007/04/15 11:25:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.7.1.ebuild,v 1.5 2007/06/08 15:49:06 armin76 Exp $
 
 inherit distutils eutils multilib toolchain-funcs
 
 DESCRIPTION="A fork of nicotine, a Soulseek client in Python"
-HOMEPAGE="http://www.nicotine-plus.org"
+HOMEPAGE="http://nicotine-plus.sourceforge.net"
 SRC_URI="mirror://sourceforge/nicotine-plus/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
