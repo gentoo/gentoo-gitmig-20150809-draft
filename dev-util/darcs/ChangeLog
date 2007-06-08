@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.68 2007/06/07 20:48:46 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.69 2007/06/08 05:42:15 zmedico Exp $
+
+  08 Jun 2007; Zac Medico <zmedico@gentoo.org> Manifest:
+  Fix broken manifest due to commit withot repoman.
 
 *darcs-1.0.8-r2 (07 Jun 2007)
 
