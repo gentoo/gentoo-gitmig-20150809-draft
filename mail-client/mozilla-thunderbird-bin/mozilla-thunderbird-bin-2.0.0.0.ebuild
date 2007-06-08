@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.0.ebuild,v 1.6 2007/05/28 17:09:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.0.ebuild,v 1.7 2007/06/08 13:50:30 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -83,7 +83,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
-	einfo "Selected language packs (first will be default): $linguas"
 }
 
 src_unpack() {
@@ -93,6 +92,9 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != en ]] && xpi_unpack ${P/-bin}-${X}.xpi
 	done
+	if [[ ${linguas} != "" ]]; then
+		einfo "Selected language packs (first will be default): ${linguas}"
+	fi
 }
 
 src_install() {
