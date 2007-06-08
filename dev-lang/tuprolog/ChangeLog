@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.15 2007/06/08 06:17:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.16 2007/06/08 07:56:20 keri Exp $
+
+  08 Jun 2007; keri <keri@gentoo.org> +files/tuprolog-2.1-java1.4.patch,
+  tuprolog-2.1.ebuild:
+  Tidy up deprecated Java code.
 
 *tuprolog-2.1 (08 Jun 2007)
 
