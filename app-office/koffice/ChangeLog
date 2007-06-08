@@ -1,6 +1,11 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.219 2007/05/15 19:14:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.220 2007/06/08 17:18:28 carlo Exp $
+
+*koffice-1.6.3 (08 Jun 2007)
+
+  08 Jun 2007; Carsten Lohrke <carlo@gentoo.org> +koffice-1.6.3.ebuild:
+  Version bump.
 
 *koffice-1.6.2-r2 (15 May 2007)
 

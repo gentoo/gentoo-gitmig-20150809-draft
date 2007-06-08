@@ -1,6 +1,11 @@
 # ChangeLog for app-office/koffice-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.66 2007/03/02 04:09:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.67 2007/06/08 17:22:39 carlo Exp $
+
+*koffice-meta-1.6.3 (08 Jun 2007)
+
+  08 Jun 2007; Carsten Lohrke <carlo@gentoo.org> +koffice-meta-1.6.3.ebuild:
+  Version bump.
 
   02 Mar 2007; Jeroen Roovers <jer@gentoo.org> koffice-meta-1.6.1.ebuild:
   Stable for HPPA.
