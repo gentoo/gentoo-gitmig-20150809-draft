@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/vbindiff
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.1 2007/06/08 20:13:49 flameeyes Exp $
+
+*vbindiff-3.0_beta1 (08 Jun 2007)
+
+  08 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +vbindiff-3.0_beta1.ebuild:
+  Initial import of vbindiff, a visual binary diff tool.
+
