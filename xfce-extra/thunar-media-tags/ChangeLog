@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-media-tags
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/ChangeLog,v 1.17 2007/06/01 00:21:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/ChangeLog,v 1.18 2007/06/08 17:14:04 drac Exp $
+
+  08 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-media-tags-0.1.2.ebuild:
+  Add keyword for arm.
 
   01 Jun 2007; Brent Baude <ranger@gentoo.org>
   thunar-media-tags-0.1.2.ebuild:
