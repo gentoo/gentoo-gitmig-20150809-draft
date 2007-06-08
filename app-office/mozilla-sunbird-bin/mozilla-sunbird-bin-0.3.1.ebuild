@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.3.1.ebuild,v 1.4 2007/03/24 15:01:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.3.1.ebuild,v 1.5 2007/06/08 13:53:24 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -73,7 +73,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
-	elog "Selected language packs (first will be default): $linguas"
 }
 
 
@@ -84,6 +83,9 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${MY_P/-bin/}.${X}.langpack.xpi"
 	done
+	if [[ ${linguas} != "" ]]; then
+		einfo "Selected language packs (first will be default): ${linguas}"
+	fi
 }
 
 src_install() {

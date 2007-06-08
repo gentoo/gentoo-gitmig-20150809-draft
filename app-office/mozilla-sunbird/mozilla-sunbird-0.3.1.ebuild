@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.8 2007/03/24 13:11:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.9 2007/06/08 13:55:12 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -60,7 +60,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
-	elog "Selected language packs (first will be default): $linguas"
 }
 
 pkg_setup(){
@@ -86,6 +85,9 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${MY_PN}-${PV}.${X}.langpack.xpi"
 	done
+	if [[ ${linguas} != "" ]]; then
+		elog "Selected language packs (first will be default): ${linguas}"
+	fi
 
 	# Apply our patches
 	cd "${S}" || die "cd failed"
