@@ -1,0 +1,10 @@
+diff -Nur pdns-recursor-3.1.4.orig/config.h pdns-recursor-3.1.4/config.h
+--- pdns-recursor-3.1.4.orig/config.h	2006-11-12 16:56:13.000000000 +0000
++++ pdns-recursor-3.1.4/config.h	2007-06-08 21:54:26.227713454 +0000
+@@ -1,5 +1,5 @@
+ #define SYSCONFDIR "/etc/powerdns/" 
+-#define LOCALSTATEDIR "/var/run/" 
++#define LOCALSTATEDIR "/var/run/powerdns" 
+ #define VERSION "3.1.4"
+ #define RECURSOR
+ #ifndef WIN32

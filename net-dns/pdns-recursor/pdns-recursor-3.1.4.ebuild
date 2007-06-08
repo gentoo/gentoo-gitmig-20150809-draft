@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.4.ebuild,v 1.3 2007/03/18 11:27:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.4.ebuild,v 1.4 2007/06/08 22:28:14 swegener Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -16,6 +16,14 @@ IUSE=""
 DEPEND=">=dev-libs/boost-1.33.1"
 RDEPEND="${DEPEND}
 	!<net-dns/pdns-2.9.20-r1"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-statedir.patch
+	epatch "${FILESDIR}"/${P}-chdir.patch
+}
 
 src_compile() {
 	filter-flags -ftree-vectorize
@@ -37,5 +45,8 @@ src_install() {
 
 	doinitd "${FILESDIR}"/precursor || die "doinitd failed"
 
-	keepdir /var/empty
+	# Pretty ugly, uh?
+	keepdir /var/lib/powerdns/var/run/powerdns
+	dodir /var/run
+	dosym /var/lib/powerdns/var/run/powerdns /var/run/powerdns
 }

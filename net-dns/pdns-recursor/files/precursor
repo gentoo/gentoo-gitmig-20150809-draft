@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/files/precursor,v 1.3 2006/10/27 16:40:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/files/precursor,v 1.4 2007/06/08 22:28:14 swegener Exp $
+
+opts="ping"
 
 depend() {
 	need net
@@ -15,6 +17,12 @@ start() {
 
 stop() {
 	ebegin "Stopping PowerDNS Recursor"
-	start-stop-daemon --stop --quiet --pidfile=/var/run/pdns_recursor.pid
+	/usr/sbin/rec_control quit &>/dev/null
+	eend $?
+}
+
+ping() {
+	ebegin "Pinging PowerDNS Recursor"
+	/usr/sbin/rec_control ping &>/dev/null
 	eend $?
 }
