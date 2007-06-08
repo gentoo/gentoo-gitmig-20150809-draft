@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.56 2007/03/16 11:02:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.57 2007/06/08 06:05:43 kumba Exp $
+
+  08 Jun 2007; Joshua Kinard <kumba@gentoo.org> mod_python-3.3.1.ebuild:
+  Marked unstable on mips, per #181068.
 
 *mod_python-3.3.1 (16 Mar 2007)
 
