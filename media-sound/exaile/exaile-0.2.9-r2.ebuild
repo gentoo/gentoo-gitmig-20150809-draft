@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r2.ebuild,v 1.1 2007/05/16 23:35:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r2.ebuild,v 1.2 2007/06/08 00:01:35 dberkholz Exp $
 
 inherit eutils python toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.exaile.org/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aac alsa cdparanoia flac gnome ipod libnotify libsexy mad musepack ogg
 	oss serpentine streamripper vorbis"
 

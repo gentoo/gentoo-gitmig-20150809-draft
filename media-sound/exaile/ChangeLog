@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.15 2007/05/16 23:35:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.16 2007/06/08 00:01:35 dberkholz Exp $
+
+  07 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  exaile-0.2.9-r2.ebuild:
+  Keyword ~ppc.
 
 *exaile-0.2.9-r2 (16 May 2007)
 
