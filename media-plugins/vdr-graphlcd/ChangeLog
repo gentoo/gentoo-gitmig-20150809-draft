@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-graphlcd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/ChangeLog,v 1.16 2007/04/17 12:39:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/ChangeLog,v 1.17 2007/06/08 10:05:46 zzam Exp $
+
+  08 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-graphlcd-0.1.3.ebuild, vdr-graphlcd-0.1.3-r1.ebuild,
+  vdr-graphlcd-0.1.4.ebuild, vdr-graphlcd-0.1.5.ebuild:
+  Changed SRC_URI to mirror://berlios
 
   17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
   Removed bash specific stuff.

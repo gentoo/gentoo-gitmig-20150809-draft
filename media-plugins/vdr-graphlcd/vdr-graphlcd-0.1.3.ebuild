@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.3.ebuild,v 1.3 2007/01/05 16:31:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.3.ebuild,v 1.4 2007/06/08 10:05:46 zzam Exp $
 
 inherit eutils vdr-plugin
 
 DESCRIPTION="VDR Graphical LCD Plugin"
 HOMEPAGE="http://graphlcd.berlios.de/"
-SRC_URI="http://download.berlios.de/graphlcd/${P}.tgz"
+SRC_URI="mirror://berlios/${PN#vdr-}/${P}.tgz"
 
 KEYWORDS="x86 ~amd64"
 SLOT="0"

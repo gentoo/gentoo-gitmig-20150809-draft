@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.6 2007/02/17 01:18:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.7 2007/06/08 10:02:08 zzam Exp $
 
 inherit vdr-plugin eutils
 
 DESCRIPTION="VDR Plugin: Output device which offers OSD via VNC and Video as raw mpeg over network"
 HOMEPAGE="http://ffnetdev.berlios.de"
-SRC_URI="http://download.berlios.de/ffnetdev/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN#vdr-}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.6-r1.ebuild,v 1.4 2007/01/05 16:34:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.6-r1.ebuild,v 1.5 2007/06/08 10:00:33 zzam Exp $
 
 inherit vdr-plugin eutils
 
 DESCRIPTION="Video Disk Recorder Image Plugin"
 HOMEPAGE="http://vdr-image.berlios.de/"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 KEYWORDS="~amd64 x86"
 SLOT="0"
