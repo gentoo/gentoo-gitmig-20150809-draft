@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.64-r1.ebuild,v 1.2 2006/12/23 23:35:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.64-r1.ebuild,v 1.3 2007/06/08 10:27:46 zzam Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="A KDE GUI for VDR (Video Disk Recorder)."
 HOMEPAGE="http://www.s.netic.de/gfiala/"
