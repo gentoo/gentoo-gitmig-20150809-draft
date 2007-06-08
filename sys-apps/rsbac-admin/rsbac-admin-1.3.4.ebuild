@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.1.ebuild,v 1.3 2007/06/08 14:26:20 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.4.ebuild,v 1.1 2007/06/08 14:26:20 kang Exp $
 
 inherit eutils libtool
 
@@ -15,8 +15,8 @@ SRC_URI="http://download.rsbac.org/code/${PV}/rsbac-admin-${PV}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
-NSS="1.3.1"
+KEYWORDS="~x86 ~amd64"
+NSS="1.3.4"
 
 DEPEND="dev-util/dialog
 	pam? ( sys-libs/pam )
