@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.106 2007/06/08 11:47:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.107 2007/06/08 13:10:37 armin76 Exp $
+
+  08 Jun 2007; Raúl Porcel <armin76@gentoo.org> cacti-0.8.6j-r6.ebuild:
+  alpha stable wrt security #181112
 
   08 Jun 2007; <pva@gentoo.org> cacti-0.8.6j-r6.ebuild:
   Call require_php_with_use only once. Thank armin76 for the fix.
