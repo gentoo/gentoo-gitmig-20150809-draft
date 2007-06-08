@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.29 2007/06/06 21:18:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.30 2007/06/08 15:20:30 betelgeuse Exp $
+
+  08 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  adaptx-0.9.13_p20041105-r3.ebuild:
+  Mark stable on amd64 for bug #175949.
 
   06 Jun 2007; Markus Rothe <corsair@gentoo.org>
   adaptx-0.9.13_p20041105-r3.ebuild:
@@ -47,6 +51,8 @@
   06 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
   adaptx-0.9.13_p20041105-r2.ebuild:
   Fixed building with java-strict.
+
+*adaptx-0.9.13_p20041105-r2 (02 Jul 2006)
 
   02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +adaptx-0.9.13_p20041105-r2.ebuild:
