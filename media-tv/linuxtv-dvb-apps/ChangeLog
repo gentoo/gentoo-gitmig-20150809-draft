@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.30 2007/06/06 17:21:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.31 2007/06/08 10:31:04 zzam Exp $
+
+  08 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  linuxtv-dvb-apps-1.1.1.20060917.ebuild,
+  linuxtv-dvb-apps-1.1.1.20070114.ebuild:
+  Do not install INSTALL file.
 
   06 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   linuxtv-dvb-apps-1.1.0.ebuild:

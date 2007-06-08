@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20070114.ebuild,v 1.5 2007/04/27 01:10:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20070114.ebuild,v 1.6 2007/06/08 10:31:04 zzam Exp $
 
 inherit eutils versionator multilib
 
@@ -77,7 +77,7 @@ src_install()
 	doins ${S}/util/av7110_loadkeys/*.rc*
 
 	# install Documentation
-	dodoc README TODO INSTALL
+	dodoc README TODO
 	newdoc util/scan/README README.dvbscan
 	newdoc util/szap/README README.zap
 	newdoc util/av7110_loadkeys/README README.av7110_loadkeys
