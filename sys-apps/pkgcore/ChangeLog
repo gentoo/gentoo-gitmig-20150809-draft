@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.35 2007/06/07 14:02:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.36 2007/06/08 00:15:54 jer Exp $
+
+  08 Jun 2007; Jeroen Roovers <jer@gentoo.org> pkgcore-0.3.ebuild:
+  Marked ~hppa, removed deprecated patch (bug #181133).
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> pkgcore-0.3.ebuild:
   Added ~ppc64; bug #181133
