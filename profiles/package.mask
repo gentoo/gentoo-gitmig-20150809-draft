@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7344 2007/06/08 10:19:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7345 2007/06/08 23:30:11 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -154,11 +154,6 @@ games-fps/unreal-tounrament-infiltration
 # masked for removal, use >=dev-scheme/drscheme-360-r2
 # without X use flag instead
 dev-scheme/mzscheme
-
-# Carsten Lohrke <carlo@gentoo.org> (15 May 2007)
-# Masked for removal unless someone picks up these packages. See Bug #177782.
-app-office/khacc
-app-office/qhacc
 
 # Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
 # development version
