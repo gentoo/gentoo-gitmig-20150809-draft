@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.25 2007/06/07 14:04:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.26 2007/06/08 00:19:08 jer Exp $
+
+  08 Jun 2007; Jeroen Roovers <jer@gentoo.org> pkgcore-checks-0.4.ebuild:
+  Marked ~hppa (bug #181133).
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> pkgcore-checks-0.4.ebuild:
   Added ~ppc64; bug #181133
