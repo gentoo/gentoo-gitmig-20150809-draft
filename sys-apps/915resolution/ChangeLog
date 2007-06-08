@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/915resolution
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.9 2007/04/17 16:52:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.10 2007/06/08 18:04:35 lavajoe Exp $
+
+*915resolution-0.5.3-r1 (08 Jun 2007)
+
+  08 Jun 2007; Joe Peterson <lavajoe@gentoo.org>
+  +files/915resolution-0.5.3-freebsd.patch, +files/initd-r1,
+  +915resolution-0.5.3-r1.ebuild:
+  Port to ~x86-fbsd by adding code from FreeBSD-compatible version of 
+  855resolution (found here: 
+  http://www.sigusr1.org/~kurahone/misc-hacks/); remove optimization flags 
+  (breaks assembly code part of build and is not necessary anyway); fix 
+  init.d file to return correct error code if any of the resolutions in 
+  config fail; improve formatting of log file; keyword with *only* 
+  ~x86-fbsd for now awaiting testing on other archs
+  (bug #175500)
 
   17 Apr 2007; Stefan Schweizer <genstef@gentoo.org> files/confd,
   metadata.xml:
