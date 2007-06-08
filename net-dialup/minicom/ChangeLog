@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.57 2007/06/01 15:36:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.58 2007/06/08 10:07:55 armin76 Exp $
+
+  08 Jun 2007; Raúl Porcel <armin76@gentoo.org> minicom-2.2-r1.ebuild:
+  alpha stable wrt security #180120
 
   01 Jun 2007; Raúl Porcel <armin76@gentoo.org> minicom-2.2-r1.ebuild:
   ia64 stable wrt security #180120
