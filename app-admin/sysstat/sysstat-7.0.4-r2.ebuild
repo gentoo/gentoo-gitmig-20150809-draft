@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r2.ebuild,v 1.1 2007/05/31 10:08:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r2.ebuild,v 1.2 2007/06/08 11:03:52 jer Exp $
 
 inherit multilib
 
@@ -53,7 +53,5 @@ src_install() {
 	rm "${D}/usr/share/doc/${PF}/COPYING"
 	ecompress "${D}/usr/share/doc/${PF}/"*[^mz]
 	newdoc sysstat.crond.sample crontab.example
-	insinto /etc/cron.d
-	newins sysstat.crond sysstat
 	newinitd "${FILESDIR}"/sysstat.init.d sysstat
 }
