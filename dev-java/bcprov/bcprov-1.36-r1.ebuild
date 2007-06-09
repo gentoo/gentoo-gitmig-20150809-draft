@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.36-r1.ebuild,v 1.3 2007/06/07 11:37:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.36-r1.ebuild,v 1.4 2007/06/09 08:19:39 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -35,7 +35,7 @@ src_compile() {
 	mkdir "${S}/classes"
 
 	find . -name "*.java" > "${T}/src.list"
-	ejavac -d "${S}/classes" "@${T}/src.list"
+	ejavac -encoding ISO-8859-1 -d "${S}/classes" "@${T}/src.list"
 
 	cd "${S}/classes"
 	jar -cf "${S}/${PN}.jar" * || die "failed to create jar"
