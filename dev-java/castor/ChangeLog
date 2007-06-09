@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.34 2007/06/09 14:30:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.35 2007/06/09 15:24:57 betelgeuse Exp $
+
+*castor-0.9.9.1-r2 (09 Jun 2007)
+
+  09 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +castor-0.9.9.1-r2.ebuild:
+  Drop the postgres use flag because the jdbc driver is only used at runtime
+  and it's only one of many possible drivers.
 
 *castor-1.1.1 (09 Jun 2007)
 
