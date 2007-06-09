@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.42 2007/03/02 03:23:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.43 2007/06/09 00:12:50 carlo Exp $
+
+  09 Jun 2007; Carsten Lohrke <carlo@gentoo.org> kplato-1.6.2.ebuild:
+  Adjust MAXKOFFICEVER.
 
   02 Mar 2007; Jeroen Roovers <jer@gentoo.org> kplato-1.6.1.ebuild:
   Stable for HPPA.

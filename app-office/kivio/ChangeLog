@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.67 2007/03/02 03:12:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.68 2007/06/09 00:13:38 carlo Exp $
+
+  09 Jun 2007; Carsten Lohrke <carlo@gentoo.org> kivio-1.6.2.ebuild:
+  Adjust MAXKOFFICEVER.
 
   02 Mar 2007; Jeroen Roovers <jer@gentoo.org> kivio-1.6.1.ebuild:
   Stable for HPPA.

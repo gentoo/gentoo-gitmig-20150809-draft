@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/koshell-1.6.2.ebuild,v 1.1 2007/02/16 11:32:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/koshell-1.6.2.ebuild,v 1.2 2007/06/09 00:11:54 carlo Exp $
 
-MAXKOFFICEVER=${PV}
+MAXKOFFICEVER=1.6.3
 KMNAME=koffice
 inherit kde-meta eutils
 
