@@ -1,7 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.4 2007/03/28 04:28:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.5 2007/06/09 09:35:04 drac Exp $
+
+  06 Jun 2007; Samuli Suominen <drac@gentoo.org> +package.use.mask:
+  Mask cpufreq on xfce4-extras.
 
   28 Mar 2007; Steve Dibb <beandog@gentoo.org> +package.use.mask:
-  Add package.use.mask, ChangeLog, mask mp2 on mplayer
+  Add package.use.mask, ChangeLog, mask mp2 on mplayer.
 

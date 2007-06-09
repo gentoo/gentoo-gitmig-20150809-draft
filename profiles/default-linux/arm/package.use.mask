@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.1 2007/03/28 04:28:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.2 2007/06/09 09:35:04 drac Exp $
+
+# Samuli Suominen <drac@gentoo.org>
+# cpu frequency scaling not tested
+xfce-base/xfce4-extras cpufreq
 
 # Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
 # media-sound/twolame not tested
