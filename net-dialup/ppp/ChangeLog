@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.180 2007/05/28 18:30:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.181 2007/06/09 22:11:33 mrness Exp $
+
+*ppp-2.4.4-r6 (09 Jun 2007)
+
+  09 Jun 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r6.ebuild:
+  Kill children instead process group when pppd is still attached to the
+  controlling terminal (#181145). Add auth-fail script, thanks to Jaco Kroon
+  <jaco at kroon dot co dot za> (#180180).
 
 *ppp-2.4.4-r5 (28 May 2007)
 
