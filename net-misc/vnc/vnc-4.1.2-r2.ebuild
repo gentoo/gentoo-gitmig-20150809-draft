@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r2.ebuild,v 1.8 2007/05/20 23:44:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r2.ebuild,v 1.9 2007/06/09 19:05:29 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -93,18 +93,21 @@ src_unpack() {
 	eautoreconf
 
 	if use server ; then
-		cp -a xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
+		cp -RPp xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
 			xc/programs/Xserver/Xvnc.man \
 			xc/programs/Xserver/vnc/*.{h,cc} \
 			xorg-x11-server-source/hw/vnc
-		cp -a xorg-x11-server-source/{cfb/cfb.h,hw/vnc}
-		cp -a xorg-x11-server-source/{fb/fb.h,hw/vnc}
-		cp -a xorg-x11-server-source/{fb/fbrop.h,hw/vnc}
+		cp -RPp xorg-x11-server-source/{cfb/cfb.h,hw/vnc}
+		cp -RPp xorg-x11-server-source/{fb/fb.h,hw/vnc}
+		cp -RPp xorg-x11-server-source/{fb/fbrop.h,hw/vnc}
 		sed -i -e 's,xor,c_xor,' -e 's,and,c_and,' \
 			xorg-x11-server-source/hw/vnc/{cfb,fb,fbrop}.h
 		cd xorg-x11-server-source
 		eautoreconf
 	fi
+
+        cd "${S}"
+        epatch "${FILESDIR}"/${PN}-${PV}-freebsd.patch
 }
 
 src_compile() {
