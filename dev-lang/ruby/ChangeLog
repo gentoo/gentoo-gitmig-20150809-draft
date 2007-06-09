@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.277 2007/06/07 17:12:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.278 2007/06/09 13:27:14 armin76 Exp $
+
+  09 Jun 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6-r1.ebuild:
+  alpha/ia64/x86 stable wrt #181110
 
   07 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> ruby-1.8.6-r1.ebuild:
   Stable on sparc wrt #181110
