@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.460 2007/06/07 21:41:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.461 2007/06/09 02:16:47 dirtyepic Exp $
+
+  09 Jun 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Removed wxruby mask since it has been deleted from the tree.
 
   07 Jun 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove removed packages, bugs 173064 142838 154645 168565 73987
