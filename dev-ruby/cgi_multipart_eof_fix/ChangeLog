@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/cgi_multipart_eof_fix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgi_multipart_eof_fix/ChangeLog,v 1.15 2007/06/07 17:14:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgi_multipart_eof_fix/ChangeLog,v 1.16 2007/06/09 13:34:21 armin76 Exp $
+
+  09 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  cgi_multipart_eof_fix-2.1.ebuild:
+  x86 stable wrt #181110
 
   07 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   cgi_multipart_eof_fix-2.1.ebuild:

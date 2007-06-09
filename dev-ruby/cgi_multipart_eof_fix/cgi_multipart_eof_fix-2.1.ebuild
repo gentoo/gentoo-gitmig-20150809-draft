@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgi_multipart_eof_fix/cgi_multipart_eof_fix-2.1.ebuild,v 1.4 2007/06/07 17:14:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgi_multipart_eof_fix/cgi_multipart_eof_fix-2.1.ebuild,v 1.5 2007/06/09 13:34:21 armin76 Exp $
 
 inherit ruby gems
 
@@ -12,5 +12,5 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
