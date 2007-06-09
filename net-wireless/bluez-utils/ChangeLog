@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.97 2007/06/01 17:36:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.98 2007/06/09 11:33:55 betelgeuse Exp $
+
+*bluez-utils-3.11-r2 (09 Jun 2007)
+
+  09 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/3.11/bluetooth-conf.d, +files/3.11/bluetooth-init.d,
+  +bluez-utils-3.11-r2.ebuild:
+  Add back the abilitity to run rfcomm bind all to the init script because the
+  service architechture is not mature enough to handle that stuff yet. Fixes
+  bug #181176.
 
 *bluez-utils-3.11-r1 (01 Jun 2007)
 
