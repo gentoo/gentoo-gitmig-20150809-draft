@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.295 2007/06/01 18:13:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.296 2007/06/09 07:47:33 dev-zero Exp $
+
+  09 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/3.0.24-sid2name_elevation.patch, -files/3.0.24-heap_overflow.patch,
+  -samba-3.0.22-r3.ebuild, -samba-3.0.24-r1.ebuild, -samba-3.0.24-r2.ebuild:
+  Dropped old versions and patches.
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> samba-3.0.24-r3.ebuild:
   Stable on ppc wrt bug 179867
