@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r2.ebuild,v 1.1 2007/06/06 19:11:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r2.ebuild,v 1.2 2007/06/09 10:39:52 drac Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -24,8 +24,7 @@ RDEPEND="x11-libs/libXxf86misc
 	>=dev-libs/glib-2
 	pam? ( virtual/pam )
 	jpeg? ( media-libs/jpeg )
-	opengl? ( virtual/opengl
-		>=media-libs/gle-3.0.1 )
+	opengl? ( virtual/opengl )
 	xinerama? ( x11-libs/libXinerama )
 	new-login? ( gnome-base/gdm )"
 DEPEND="${RDEPEND}
@@ -87,11 +86,12 @@ src_compile() {
 		--enable-locking \
 		--with-gtk \
 		--without-kerberos \
+		--without-gle \
 		$(use_with insecure-savers setuid-hacks) \
 		$(use_with new-login login-manager) \
 		$(use_with xinerama xinerama-ext) \
 		$(use_with pam) \
-		$(use_with opengl gl) $(use_with opengl gle) \
+		$(use_with opengl gl) \
 		$(use_with jpeg)
 
 	# bug 155049
