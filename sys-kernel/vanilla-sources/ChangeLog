@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.315 2007/06/07 17:06:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.316 2007/06/09 08:45:58 phreak Exp $
+
+*vanilla-sources-2.6.21.4 (09 Jun 2007)
+*vanilla-sources-2.6.20.13 (09 Jun 2007)
+
+  09 Jun 2007; Christian Heim <phreak@gentoo.org>
+  +vanilla-sources-2.6.20.13.ebuild, +vanilla-sources-2.6.21.4.ebuild:
+  Bumping Linux 2.6.20 and Linux 2.6.21 for CVE-2007-2453.
 
   07 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.21.1.ebuild:
