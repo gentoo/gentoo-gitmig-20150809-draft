@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20050206.ebuild,v 1.12 2007/02/28 22:09:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20050206.ebuild,v 1.13 2007/06/09 10:37:35 truedfx Exp $
 
 inherit eutils
 
