@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.62 2007/06/09 14:56:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.63 2007/06/09 16:44:58 yoswink Exp $
+
+  09 Jun 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  festival-1.95_beta-r4.ebuild:
+  Stable on alpha wrt security bug #170477. Thanks to Brian Evans (grknight)
+  for testing.
 
   09 Jun 2007; Markus Rothe <corsair@gentoo.org>
   festival-1.95_beta-r4.ebuild:
