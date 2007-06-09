@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7347 2007/06/09 02:41:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7348 2007/06/09 09:43:53 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -265,17 +265,6 @@ app-vim/sudo
 # open security issues, no longer supported upstream.
 <net-misc/asterisk-1.2
 
-# Petteri Räty <betelgeuse@gentoo.org> (7 May 2007)
-# Two open bugs about the launcher script:
-# https://bugs.gentoo.org/show_bug.cgi?id=166974
-# https://bugs.gentoo.org/show_bug.cgi?id=166976
-# Way behind in versions. The latest upstream is 4.1.
-# Please submit a working ebuild for 4.1 if you want to
-# keep this. dev-util/eclipse-sdk has a working open source
-# debugger as an alternative to this package. In Java junkyard
-# in 30 days.
-dev-java/jswat
-
 # Mike Frysinger <vapier@gentoo.org> (5 May 2007)
 # Unsupported upstream; doesnt build with current cm3
 dev-util/cvsup
@@ -298,21 +287,6 @@ dev-java/openjgraph
 # Masked for testing.
 =www-apps/mediawiki-1.10.0_rc1
 
-# Petteri Räty <betelgeuse@gentoo.org> (30 Apr 2007)
-# Please use the Eclipse update manager to install these.
-# The ebuilds are for Eclipse <3.2 and those versions are going to be
-# removed. If you want these to be installable via emerge, please submit from
-# source ebuilds that work with 3.2. (Might not be as easy as it sounds). In
-# Java junkyard after 30 days. If there is a compelling reason to keep these,
-# please mail gentoo-java mailing list or java@gentoo.org.
-dev-util/eclipse-cbg-editor
-dev-util/eclipse-cdt-bin
-dev-util/eclipse-emf-bin
-dev-util/eclipse-gef-bin
-dev-util/eclipse-pydev-bin
-dev-util/eclipse-subclipse-bin
-dev-util/eclipse-ve-bin
-
 # Donnie Berkholz <dberkholz@gentoo.org> (29 Apr 2007)
 # Masked for testing
 ~media-libs/mesa-6.5.3
@@ -326,12 +300,6 @@ app-pda/plucker
 # Masked until it works with current baselayout and
 # application locations.
 app-admin/bastille
-
-# Petteri Räty <betelgeuse@gentoo.org> (25 Apr 2007)
-# TLS support is included in the JDK since 1.4. If you want
-# spare this package mail to the gentoo-java mailing list.
-# Otherwise going to the junkyard after 30 days.
-dev-java/puretls
 
 # Tristan Heaven <nyhm@gentoo.org> (25 Apr 2007)
 # Masked until it's updated to use >=wxpython-2.6
