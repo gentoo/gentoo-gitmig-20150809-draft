@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.51 2007/05/23 16:21:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.52 2007/06/09 00:10:25 vapier Exp $
+
+*crossdev-0.9.18-r2 (09 Jun 2007)
+
+  09 Jun 2007; Mike Frysinger <vapier@gentoo.org> files/crossdev,
+  +crossdev-0.9.18-r2.ebuild:
+  Have targets set default stage which user can override via --stage.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
   crossdev-0.9.17-r3.ebuild, crossdev-0.9.18-r1.ebuild:
