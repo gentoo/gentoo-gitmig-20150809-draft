@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.120 2007/06/09 13:31:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.121 2007/06/09 13:38:45 dev-zero Exp $
+
+  09 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/libpq-7.4.13-gentoo.patch, -files/libpq-7.4.14-gentoo.patch,
+  -libpq-7.4.13.ebuild, -libpq-7.4.14.ebuild:
+  ... and dropped some more.
 
   09 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/libpq-7.3.15-gentoo.patch, -files/libpq-7.3.16-gentoo.patch,
