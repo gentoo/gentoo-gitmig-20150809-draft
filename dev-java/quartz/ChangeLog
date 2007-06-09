@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/quartz
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.20 2007/01/25 08:59:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.21 2007/06/09 22:06:32 caster Exp $
+
+*quartz-1.4.5-r1 (09 Jun 2007)
+
+  09 Jun 2007; Vlastimil Babka <caster@gentoo.org> +quartz-1.4.5-r1.ebuild:
+  Revbump to use the new jdbc-oracle-bin instead of jdbc3-oracle.
 
   25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   st_lim is being retired so removing him from metadata.xml.
