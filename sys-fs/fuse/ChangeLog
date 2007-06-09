@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.92 2007/05/20 20:29:24 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.93 2007/06/09 17:52:09 corsair Exp $
+
+  09 Jun 2007; Markus Rothe <corsair@gentoo.org> fuse-2.6.4-r1.ebuild:
+  Stable on ppc64; bug #181412
 
   20 May 2007; Timothy Redaelli <drizzt@gentoo.org> files/fuse-2.6.22.patch:
   Fix kernel 2.6.22 patch.
