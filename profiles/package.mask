@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7349 2007/06/09 10:22:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7350 2007/06/09 11:16:21 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (09 Jun 2006)
+# Deprecated by JDO (not packaged currently). File a request
+# for that to bugs.gentoo.org if you need it. The ebuild still
+# uses generation 1 and nothing depends on it. For other persistance
+# related packages take a look at for example dev-java/hibernate and
+# dev-java/glassfish-persistence. After 30 days moved to java-experimental
+# because some ebuilds there are using this.
+dev-java/odmg
 
 # Samuli Suominen <drac@gentoo.org> (06 Jun 2006)
 # Masked for removal in 30 days. Uncompatible with
