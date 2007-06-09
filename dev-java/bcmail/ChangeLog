@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.6 2007/06/09 08:18:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.7 2007/06/09 20:34:01 nixnut Exp $
+
+  09 Jun 2007; nixnut <nixnut@gentoo.org> bcmail-1.36.ebuild:
+  Stable on ppc wrt bug 181086
 
   09 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> bcmail-1.36.ebuild:
   Marked stable on x86 for bug #181086.

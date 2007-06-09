@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.15 2007/06/09 08:19:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.16 2007/06/09 20:32:50 nixnut Exp $
+
+  09 Jun 2007; nixnut <nixnut@gentoo.org> bcprov-1.36-r1.ebuild:
+  Stable on ppc wrt bug 181086
 
   09 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> bcprov-1.36-r1.ebuild:
   Add -encoding to ejavac arguments to silence the warnings about encoding.
