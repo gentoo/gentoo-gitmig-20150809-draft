@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rzip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.20 2007/05/05 14:11:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.21 2007/06/09 17:14:22 welp Exp $
+
+  09 Jun 2007; Peter Weller <welp@gentoo.org> rzip-2.1.ebuild:
+  Stable on amd64 wrt bug 181410
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> rzip-2.1.ebuild:
   ppc stable
