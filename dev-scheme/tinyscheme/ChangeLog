@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/tinyscheme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.2 2007/02/11 10:36:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.3 2007/06/09 18:24:32 hkbst Exp $
+
+*tinyscheme-1.38 (09 Jun 2007)
+
+  09 Jun 2007; Marijn Schouten <hkBst@gentoo.org> -tinyscheme-1.37.ebuild,
+  +tinyscheme-1.38.ebuild:
+  bump, make sure CFLAGS and LDFLAGS are respected and DEBUG is not on by
+  default, install init file which it complained about
 
   11 Feb 2007; Matti Bickel <mabi@gentoo.org> tinyscheme-1.37.ebuild:
   keyworded ~ppc (bug #161578)
