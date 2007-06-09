@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r3.ebuild,v 1.3 2007/06/09 19:05:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r3.ebuild,v 1.4 2007/06/09 19:49:35 lavajoe Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="server"
 
 RDEPEND="sys-libs/zlib
@@ -105,8 +105,8 @@ src_unpack() {
 		eautoreconf
 	fi
 
-        cd "${S}"
-        epatch ${FILESDIR}/${P}-freebsd.patch
+	cd "${S}"
+	epatch ${FILESDIR}/${P}-freebsd.patch
 }
 
 src_compile() {
