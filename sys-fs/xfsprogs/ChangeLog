@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.64 2007/05/31 06:50:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.65 2007/06/09 15:52:31 corsair Exp $
+
+  09 Jun 2007; Markus Rothe <corsair@gentoo.org>
+  +files/xfsprogs-2.8.21-kern-types.patch, xfsprogs-2.8.21.ebuild:
+  Added patch for bug #131483; upstream fixed the fix ... and broke it
 
 *xfsprogs-2.8.21 (31 May 2007)
 

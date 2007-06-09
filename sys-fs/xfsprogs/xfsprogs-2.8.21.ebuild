@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.21.ebuild,v 1.1 2007/05/31 06:50:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.21.ebuild,v 1.2 2007/06/09 15:52:31 corsair Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 MY_P="${PN}_${PV}-1"
 DESCRIPTION="xfs filesystem utilities"
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.8.18-symlinks.patch #166729
+	epatch "${FILESDIR}"/${P}-kern-types.patch #131483
 	# Inject our own CFLAGS / docpath
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
@@ -33,6 +34,7 @@ src_unpack() {
 	# We'll handle /lib versus /usr/lib install
 	sed -i -e '/INSTALL.* -S .*LIBNAME/d' \
 		include/buildmacros || die "sed symlinks"
+	eautoconf
 }
 
 src_compile() {
