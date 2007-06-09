@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/ccrypt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.8 2006/08/16 00:16:50 squinky86 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.9 2007/06/09 15:51:16 alonbl Exp $
+
+*ccrypt-1.7-r1 (09 Jun 2007)
+
+  09 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/ccrypt-1.7-emacs.patch, +ccrypt-1.7-r1.ebuild:
+  Fix emacs issue, bug#181397, thanks to Andre Kuehne
 
   16 Aug 2006; Jon Hood <squinky86@gentoo.org> ccrypt-1.7.ebuild:
   Stable on amd64, bug #143865. Thanks postmodern <brodigan@pdx.edu>.
