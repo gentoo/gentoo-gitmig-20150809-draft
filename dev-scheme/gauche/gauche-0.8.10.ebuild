@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.8.10.ebuild,v 1.1 2007/06/04 09:55:57 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.8.10.ebuild,v 1.2 2007/06/09 12:32:57 hattya Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -41,7 +41,7 @@ src_compile() {
 		--enable-multibyte=utf8 \
 		--with-slib=/usr/share/slib \
 		|| die
-	emake || die
+	emake -j1 || die
 
 }
 
@@ -53,8 +53,7 @@ src_test() {
 
 src_install() {
 
-	emake DESTDIR="${D}" install || die
-
+	emake DESTDIR="${D}" install-pkg install-doc || die
 	dodoc AUTHORS ChangeLog HACKING README
 
 }

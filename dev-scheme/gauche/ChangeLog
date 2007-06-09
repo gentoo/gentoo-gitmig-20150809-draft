@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.7 2007/06/04 09:55:57 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.8 2007/06/09 12:32:57 hattya Exp $
+
+  09 Jun 2007; Akinori Hattori <hattya@gentoo.org> gauche-0.8.10.ebuild:
+  fixes bug #110817 and bug #180971.
 
 *gauche-0.8.10 (04 Jun 2007)
 
