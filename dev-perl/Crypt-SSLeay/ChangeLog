@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.45 2007/05/05 17:38:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.46 2007/06/09 11:36:16 mcummings Exp $
+
+*Crypt-SSLeay-0.55 (09 Jun 2007)
+
+  09 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  +Crypt-SSLeay-0.55.ebuild:
+  Version bump; bug 181400 for keywording
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Crypt-SSLeay-0.53.ebuild:
