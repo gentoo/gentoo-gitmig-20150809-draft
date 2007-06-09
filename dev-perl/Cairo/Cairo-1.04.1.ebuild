@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.04.1.ebuild,v 1.3 2007/06/09 14:43:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.04.1.ebuild,v 1.4 2007/06/09 14:53:29 corsair Exp $
 
 inherit perl-module versionator
 
@@ -15,7 +15,7 @@ IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 
 SRC_TEST="do"
 

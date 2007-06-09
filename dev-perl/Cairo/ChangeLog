@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.28 2007/06/09 14:43:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.29 2007/06/09 14:53:29 corsair Exp $
+
+  09 Jun 2007; Markus Rothe <corsair@gentoo.org> Cairo-1.04.1.ebuild:
+  Added ~ppc64; bug #181400
 
   09 Jun 2007; Raúl Porcel <armin76@gentoo.org> Cairo-1.04.1.ebuild:
   Re-add ~alpha/~ia64 wrt #181400
