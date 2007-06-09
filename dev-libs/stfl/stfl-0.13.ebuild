@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.9.ebuild,v 1.1 2007/05/31 08:01:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.13.ebuild,v 1.1 2007/06/09 17:30:05 ticho Exp $
 
 inherit perl-module toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	sed -i \
-		-e "s!-O0 -ggdb!!" \
+		-e "s!-Os -ggdb!!" \
 		-e "s!^all:.*!all: libstfl.a!" \
 		Makefile
 
