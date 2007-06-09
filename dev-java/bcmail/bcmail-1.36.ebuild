@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.36.ebuild,v 1.5 2007/06/07 11:26:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.36.ebuild,v 1.6 2007/06/09 08:18:46 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.bouncycastle.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 
 COMMON_DEPEND="~dev-java/bcprov-${PV}
 		dev-java/junit
