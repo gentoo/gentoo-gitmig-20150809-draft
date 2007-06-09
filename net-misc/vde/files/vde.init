@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/files/vde.init,v 1.1 2006/06/26 09:10:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/files/vde.init,v 1.2 2007/06/09 15:38:23 genstef Exp $
 
 depend() {
 	before net.${VDE_TAP}
@@ -13,14 +13,14 @@ start() {
 	[ "${VDE_MODPROBE_TUN}" == "yes" ] && modprobe tun
 	start-stop-daemon --start --quiet \
 		--exec /usr/bin/vde_switch -- -tap ${VDE_TAP} -daemon
+	eend $? "Failed to start vde"
 	chmod -R ${VDE_SOCK_CHMOD} /var/run/vde.ctl
 	chown -R ${VDE_SOCK_CHOWN} /var/run/vde.ctl
-	eend $? "Failed to start vde"
 }
 
 stop() {
 	ebegin "Stopping vde"
-	start-stop-daemon --stop --quiet --exec /usr/bin/vde_switch
 	[ "${VDE_MODPROBE_TUN}" == "yes" ] && modprobe -r tun
+	start-stop-daemon --stop --quiet --exec /usr/bin/vde_switch
 	eend $? "Failed to stop vde"
 }
