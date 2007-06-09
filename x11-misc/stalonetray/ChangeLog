@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/stalonetray
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.1 2007/06/09 19:51:52 lucass Exp $
+
+*stalonetray-0.6.5 (09 Jun 2007)
+
+  09 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
+  +stalonetray-0.6.5.ebuild:
+  Initial commit, bug #151432.
+
