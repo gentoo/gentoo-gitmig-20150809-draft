@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.4 2007/04/28 22:19:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.5 2007/06/09 10:28:25 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,15 +14,13 @@ HOMEPAGE="http://prefuse.org"
 LICENSE="BSD"
 SLOT="2006"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="doc examples source"
+IUSE=""
 
 COMMON_DEP="=dev-java/lucene-1*"
 
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}
-	>=dev-java/ant-core-1.4
-	>=app-arch/unzip-5.50-r1
-	source? ( app-arch/zip )"
+	>=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
@@ -28,7 +28,7 @@ S=${WORKDIR}/${PN}-beta
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	find lib/ -name "*.jar" | xargs rm -v
 }
@@ -44,11 +44,8 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/*.jar
 
-	dodoc readme.txt
-	use doc && java-pkg_dohtml -r doc/api
+	dodoc readme.txt || die
+	use doc && java-pkg_dojavadoc doc/api
 	use source && java-pkg_dosrc src/*
-	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins -r demos/*
-	fi
+	use examples && java-pkg_doexamples demos/*
 }
