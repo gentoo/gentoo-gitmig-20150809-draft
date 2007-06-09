@@ -29,6 +29,6 @@ Exec=xemacs %f
 Icon=xemacs
 Type=Application
 Terminal=false
-Categories=Application;Development;TextEditor;
+Categories=Development;TextEditor;
 Encoding=UTF-8
 StartupWMClass=Emacs

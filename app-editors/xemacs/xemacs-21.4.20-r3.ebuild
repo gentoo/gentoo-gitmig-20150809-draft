@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r3.ebuild,v 1.4 2007/04/30 23:04:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r3.ebuild,v 1.5 2007/06/09 18:13:59 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -145,7 +145,7 @@ src_compile() {
 
 	# This determines how these sounds should be played
 	use nas	&& soundconf="${soundconf},nas"
-	use esd && soundconf="${soundcond},esd"
+	use esd && soundconf="${soundconf},esd"
 
 	myconf="${myconf} --with-sound=${soundconf}"
 
