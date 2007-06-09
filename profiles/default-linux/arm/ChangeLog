@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.6 2007/06/09 09:37:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.7 2007/06/09 10:22:16 remi Exp $
+
+  09 Jun 2007; Rémi Cardona <remi@gentoo.org> +package.mask:
+  Move Gnome 2.18 mask to arm subprofile
 
   09 Jun 2007; Samuli Suominen <drac@gentoo.org> +package.use.mask:
   Mask cpufreq on xfce4-extras.

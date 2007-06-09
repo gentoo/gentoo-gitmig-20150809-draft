@@ -81,26 +81,3 @@
 =dev-python/gnome-python-extras-2.14.2-r1
 # End of GNOME 2.18.0 mask
 
-# Raúl Porcel <armin76@gentoo.org> (2 Jun 2007)
-# Doesn't compile, needs newer linux-headers
-media-libs/libgii
-media-libs/libggi
-
-# needs libggi
-games-action/koth
-
-# Raúl Porcel <armin76@gentoo.org> (30 May 2007)
-# Doesn't work, segfaults
-dev-util/ltrace
-
-# Jose Luis Rivero <yoswink@gentoo.org> (7 Jul 2006)
-# Masked by lost of virtual java/{jdk,jre} providers see Bug #138747
-# also compaq java is dead upstream and buggy: Bug #84306, and others.
-dev-java/compaq-jdk
-dev-java/compaq-jre
-app-arch/dczip
-app-misc/jitac
-app-misc/openjnlp
-dev-tex/ppower4
-net-p2p/xnap
-dev-util/jarwizard
