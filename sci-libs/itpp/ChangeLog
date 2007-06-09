@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.37 2007/06/06 14:27:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.38 2007/06/09 08:37:39 corsair Exp $
+
+  09 Jun 2007; Markus Rothe <corsair@gentoo.org> itpp-3.10.10.ebuild:
+  Stable on ppc64; bug #181252
 
   06 Jun 2007; Markus Dittrich <markusle@gentoo.org> itpp-3.10.10.ebuild,
   itpp-3.10.11.ebuild, itpp-3.99.1.ebuild:
