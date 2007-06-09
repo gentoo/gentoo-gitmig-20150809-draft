@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.4 2004/12/28 17:09:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.5 2007/06/09 14:25:50 armin76 Exp $
 
 depend() {
 	use net logger
@@ -27,7 +27,7 @@ start() { # copied from /etc/usermin/start
 
 	unset PERLIO
 	export PERLIO
-	start-stop-daemon --start --quiet \
+	start-stop-daemon --start --quiet --name webmin --oknodo \
 		--exec /usr/libexec/webmin/miniserv.pl /etc/webmin/miniserv.conf
 	eend $?
 }
