@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.57 2007/05/05 17:46:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.58 2007/06/10 07:02:59 graaff Exp $
+
+*rmagick-1.15.7 (10 Jun 2007)
+
+  10 Jun 2007; Hans de Graaff <graaff@gentoo.org> +rmagick-1.15.7.ebuild:
+  Version bump:
+    * Fix upstream bug #11033, make distclean misses some files
+    * Work around SetMagickRegistry problem in ImageMagick 6.3.4-7
 
   05 May 2007; nixnut <nixnut@gentoo.org> rmagick-1.15.5.ebuild:
   Stable on ppc wrt bug 176595
