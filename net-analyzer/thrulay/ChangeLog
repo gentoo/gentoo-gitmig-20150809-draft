@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/thrulay
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.8 2007/04/09 17:31:23 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.9 2007/06/10 19:17:53 robbat2 Exp $
+
+  10 Jun 2007; Robin H. Johnson <robbat2@gentoo.org> thrulay-0.6.ebuild,
+  thrulay-0.8.ebuild:
+  Fix HOMEPAGE in SRC_URI.
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> thrulay-0.8.ebuild:
   Stable on amd64 wrt bug 173857
