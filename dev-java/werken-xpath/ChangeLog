@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/werken-xpath
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.10 2007/06/10 14:55:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.11 2007/06/10 15:07:08 betelgeuse Exp $
+
+  10 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -werken-xpath-0.9.4_beta.ebuild:
+  Remove generation 1 ebuild.
 
   10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   werken-xpath-0.9.4_beta-r1.ebuild:
