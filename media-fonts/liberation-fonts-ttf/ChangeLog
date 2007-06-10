@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/liberation-fonts-ttf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/ChangeLog,v 1.11 2007/06/10 04:42:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/ChangeLog,v 1.12 2007/06/10 05:00:02 je_fro Exp $
+
+*liberation-fonts-ttf-3-r1 (10 Jun 2007)
+
+  10 Jun 2007; Jeff Gardner <je_fro@gentoo.org>
+  liberation-fonts-ttf-3.ebuild, +liberation-fonts-ttf-3-r1.ebuild:
+  Bumping to -r1 with addition of fontconfig file.
 
   10 Jun 2007; Jeff Gardner <je_fro@gentoo.org>
   +files/liberation-fonts-ttf-fontconfig.txt, liberation-fonts-ttf-3.ebuild:
