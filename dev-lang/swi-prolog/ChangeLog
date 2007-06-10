@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.89 2007/06/09 06:09:09 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.90 2007/06/10 06:51:14 keri Exp $
+
+  10 Jun 2007; keri <keri@gentoo.org> swi-prolog-5.6.32.ebuild,
+  swi-prolog-5.6.33.ebuild, swi-prolog-5.6.34.ebuild:
+  Build jpltest.jar before running jpl prolog testsuite.
 
 *swi-prolog-5.6.34 (09 Jun 2007)
 
