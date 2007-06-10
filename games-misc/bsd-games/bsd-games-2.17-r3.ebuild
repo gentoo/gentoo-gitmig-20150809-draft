@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r3.ebuild,v 1.1 2007/05/16 18:35:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r3.ebuild,v 1.2 2007/06/10 14:56:46 nyhm Exp $
 
 inherit eutils games
 
@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="!games-misc/wtf
 	!app-misc/banner
+	!games-board/ace
 	sys-libs/ncurses
 	sys-apps/miscfiles"
 DEPEND="${RDEPEND}

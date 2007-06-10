@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.30 2007/05/16 18:35:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.31 2007/06/10 14:56:46 nyhm Exp $
+
+  10 Jun 2007; Tristan Heaven <nyhm@gentoo.org> bsd-games-2.17-r2.ebuild,
+  bsd-games-2.17-r3.ebuild:
+  Block games-board/ace because they collide on /usr/games/bin/canfield
 
 *bsd-games-2.17-r3 (16 May 2007)
 
