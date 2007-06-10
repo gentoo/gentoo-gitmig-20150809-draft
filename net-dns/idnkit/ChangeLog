@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.18 2007/02/14 13:40:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.19 2007/06/10 23:42:55 kumba Exp $
+
+  10 Jun 2007; Joshua Kinard <kumba@gentoo.org> idnkit-1.0.ebuild:
+  Stable on mips.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> idnkit-1.0.ebuild:
   Stable on IA64, bug 163692.
