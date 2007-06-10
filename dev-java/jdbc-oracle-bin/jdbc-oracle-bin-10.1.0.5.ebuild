@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/jdbc-oracle-bin-10.1.0.5.ebuild,v 1.1 2007/06/09 21:23:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/jdbc-oracle-bin-10.1.0.5.ebuild,v 1.2 2007/06/10 17:12:24 caster Exp $
 
 inherit java-pkg-2
 
@@ -98,7 +98,10 @@ src_unpack() {
 	determine_files
 	cp "${DISTDIR}/${file_main_used}" ${PN}.jar || die
 	cp "${DISTDIR}/${file_rowset}" ${file_rowset_orig} || die
-	use nls && cp "${DISTDIR}/${file_nls}" ${file_nls_orig} || die
+
+	if use nls; then
+		cp "${DISTDIR}/${file_nls}" ${file_nls_orig} || die
+	fi
 
 	if use doc; then
 		mkdir "${S}/javadoc" && cd "${S}/javadoc"

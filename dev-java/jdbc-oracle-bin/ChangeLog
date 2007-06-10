@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-oracle-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.2 2007/06/10 15:23:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.3 2007/06/10 17:12:24 caster Exp $
+
+  10 Jun 2007; Vlastimil Babka <caster@gentoo.org>
+  jdbc-oracle-bin-10.1.0.5.ebuild:
+  Fix nls flag usage also in 10.1 slot.
 
   10 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   jdbc-oracle-bin-10.2.0.3.ebuild:
