@@ -3,11 +3,8 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-	<email>malverian@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>ramereth@gentoo.org</email>
-	<name>Lance Albertson</name>
+	<email>dertobi123@gentoo.org</email>
+	<name>Tobias Scherbaum</name>
 </maintainer> 
 <longdescription>
 	A daemon for allowing Nagios to connect directly to servers and 
