@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.17 2007/06/09 02:10:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.18 2007/06/10 02:22:49 williamh Exp $
+
+*espeak-1.26-r1 (10 Jun 2007)
+
+  10 Jun 2007; William Hubbs <williamh@gentoo.org>
+  +files/espeak-1.26-ppc64-segfault.patch, +espeak-1.26-r1.ebuild:
+  Rev bump to fix a seg fault on ppc64 for bug #163285.
 
 *espeak-1.26 (09 Jun 2007)
 
@@ -74,7 +80,7 @@
   New release, as required by the latest gnome-speech. Honour CXXFLAGS. Use
   the Makefile to install instead of doing it manually.
 
-  06 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> espeak-1.16.ebuild:
+  06 Nov 2006; Piotr JaroszyÅski <peper@gentoo.org> espeak-1.16.ebuild:
   Add ~amd64 wrt bug #154245.
 
 *espeak-1.16 (29 Oct 2006)
