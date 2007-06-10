@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.30 2007/06/09 14:03:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.31 2007/06/10 13:33:26 armin76 Exp $
+
+  10 Jun 2007; Raúl Porcel <armin76@gentoo.org> font-bh-ttf-1.0.0.ebuild:
+  x86 stable wrt #181091
 
   09 Jun 2007; nixnut <nixnut@gentoo.org> font-bh-ttf-1.0.0.ebuild:
   Stable on ppc wrt bug 181091
