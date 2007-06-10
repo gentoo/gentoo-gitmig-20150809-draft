@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/linux-igd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.26 2007/06/05 17:53:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.27 2007/06/10 13:35:09 armin76 Exp $
+
+  10 Jun 2007; Raúl Porcel <armin76@gentoo.org> linux-igd-1.0-r2.ebuild:
+  x86 stable wrt #168279
 
   05 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   linux-igd-1.0-r2.ebuild:
