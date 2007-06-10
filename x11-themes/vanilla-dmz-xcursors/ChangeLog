@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/vanilla-dmz-xcursors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-xcursors/ChangeLog,v 1.1 2007/06/05 06:32:12 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-xcursors/ChangeLog,v 1.2 2007/06/10 18:13:17 corsair Exp $
+
+  10 Jun 2007; Markus Rothe <corsair@gentoo.org>
+  vanilla-dmz-xcursors-0.4.ebuild:
+  Added ~ppc64
 
 *vanilla-dmz-xcursors-0.4 (05 Jun 2007)
 
