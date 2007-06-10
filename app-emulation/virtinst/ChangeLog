@@ -1,0 +1,15 @@
+# ChangeLog for app-emulation/virtinst
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.1 2007/06/10 06:07:02 dberkholz Exp $
+
+*virtinst-0.103.0 (10 Jun 2007)
+
+  10 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/virtinst-0.103.0-accelerate.patch,
+  +files/virtinst-0.103.0-default-net.patch,
+  +files/virtinst-0.103.0-features-xml.patch,
+  +files/virtinst-0.103.0-rhel5-client.patch,
+  +files/virtinst-0.103.0-urlgrabber-import.patch, +metadata.xml,
+  +virtinst-0.103.0.ebuild:
+  Add Python modules for starting virtualized guest installations.
+
