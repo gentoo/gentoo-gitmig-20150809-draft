@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5.ebuild,v 1.10 2006/10/29 20:20:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5.ebuild,v 1.11 2007/06/10 19:41:15 dirtyepic Exp $
 
 DESCRIPTION="Just Another Make - advanced make replacement"
 HOMEPAGE="http://www.perforce.com/jam/jam.html"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos x86"
 IUSE=""
 
-DEPEND="sys-devel/bison"
+DEPEND="sys-devel/bison
+		!dev-util/ftjam"
 
 src_compile() {
 	# The bootstrap makefile assumes ${S} is in the path

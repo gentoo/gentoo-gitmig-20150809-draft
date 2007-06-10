@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.8 2007/05/16 20:44:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.9 2007/06/10 19:41:15 dirtyepic Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
-DEPEND="sys-devel/bison"
+DEPEND="sys-devel/bison
+		!dev-util/ftjam"
 
 src_unpack() {
 	unpack ${A}
