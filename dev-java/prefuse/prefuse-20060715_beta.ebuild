@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.6 2007/06/10 08:54:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.7 2007/06/10 11:45:12 fordfrog Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar build/*.jar
+	java-pkg_dojar build/${PN}.jar
 
 	dodoc readme.txt || die
 	use doc && java-pkg_dojavadoc doc/api
