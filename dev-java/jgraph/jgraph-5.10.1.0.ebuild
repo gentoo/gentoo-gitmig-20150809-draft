@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/jgraph-5.10.1.0.ebuild,v 1.1 2007/05/12 11:07:42 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/jgraph-5.10.1.0.ebuild,v 1.2 2007/06/10 08:48:25 philantrop Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 S="${WORKDIR}"
 
