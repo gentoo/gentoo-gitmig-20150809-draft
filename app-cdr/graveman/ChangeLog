@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.41 2007/01/27 17:27:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.42 2007/06/10 15:42:12 corsair Exp $
+
+  10 Jun 2007; Markus Rothe <corsair@gentoo.org>
+  graveman-0.3.12_p5-r1.ebuild:
+  Stable on ppc64; bug #181518
 
 *graveman-0.3.12_p5-r1 (27 Jan 2007)
 
