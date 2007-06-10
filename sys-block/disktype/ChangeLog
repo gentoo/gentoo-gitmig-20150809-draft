@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/disktype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.10 2007/04/17 17:31:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.11 2007/06/10 01:10:45 dragonheart Exp $
+
+  10 Jun 2007; Daniel Black <dragonheart@gentoo.org> disktype-9.ebuild:
+  install man page
 
   17 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> disktype-9.ebuild:
   Stable on sparc

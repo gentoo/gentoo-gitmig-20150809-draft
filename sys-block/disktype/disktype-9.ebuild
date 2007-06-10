@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/disktype-9.ebuild,v 1.7 2007/04/17 17:31:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/disktype-9.ebuild,v 1.8 2007/06/10 01:10:45 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -22,4 +22,5 @@ src_compile() {
 src_install() {
 	dobin disktype
 	dodoc README HISTORY TODO
+	doman disktype.1
 }
