@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.217 2007/06/08 14:01:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.218 2007/06/10 22:54:48 flameeyes Exp $
+
+*amarok-9999-r2 (10 Jun 2007)
+
+  10 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> -amarok-9999-r1.ebuild,
+  +amarok-9999-r2.ebuild:
+  Bump the live Subversion ebuild to abide to the changes added in 1.4.5-r2
+  (python useflag).
 
 *amarok-1.4.6_pre20070608 (08 Jun 2007)
 
