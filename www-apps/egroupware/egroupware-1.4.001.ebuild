@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.001.ebuild,v 1.1 2007/06/10 01:11:45 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.001.ebuild,v 1.2 2007/06/10 14:36:24 jer Exp $
 
 inherit webapp depend.php
 
@@ -57,7 +57,7 @@ src_install() {
 
 	webapp_serverowned ${MY_HTDOCSDIR}/phpgwapi/images
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en-1.4.txt
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en-1.2.txt
 	webapp_src_install
 }
 
