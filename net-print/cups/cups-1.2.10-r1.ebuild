@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.10-r1.ebuild,v 1.8 2007/06/07 16:20:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.10-r1.ebuild,v 1.9 2007/06/10 07:35:46 dertobi123 Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${PV}/${MY_P}-s
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ldap ssl slp pam php samba nls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
