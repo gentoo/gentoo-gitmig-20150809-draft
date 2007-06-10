@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pymsn
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.1 2007/06/10 18:41:33 peper Exp $
+
+*telepathy-butterfly-0.1.4 (10 Jun 2007)
+
+  10 Jun 2007; Santiago M. Mola <gentoo@coldwind.org> +telepathy-butterfly-0.1.4.ebuild:
+  Initial import from the voip overlay.
+
