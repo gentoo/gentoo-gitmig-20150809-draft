@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.3.ebuild,v 1.13 2007/06/09 19:11:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.3.ebuild,v 1.14 2007/06/10 20:08:35 dirtyepic Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -27,6 +27,11 @@ RDEPEND="${DEPEND}
 	!<www-client/mozilla-firefox-1.0-r3
 	!<mail-client/mozilla-thunderbird-0.9-r3
 	!<media-libs/libwmf-0.2.8.2"
+
+# We need a recent fontconfig to prevent segfaulting,
+# however, adding it to RDEPEND creates a circular dependency
+# which is why we use a PDEPEND here.
+PDEPEND=">=media-libs/fontconfig-2.3.2-r2"
 
 src_unpack() {
 	unpack ${A}
