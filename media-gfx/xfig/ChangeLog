@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.41 2007/04/02 18:13:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.42 2007/06/10 21:24:23 armin76 Exp $
+
+  10 Jun 2007; Raúl Porcel <armin76@gentoo.org> xfig-3.2.4-r3.ebuild:
+  alpha stable wrt #169475
 
   02 Apr 2007; <pva@gentoo.org> -xfig-3.2.5_alpha5.ebuild:
   Cleaning ebuild for alpha release.
