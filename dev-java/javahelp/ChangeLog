@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.9 2007/05/23 17:11:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.10 2007/06/10 10:49:51 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  javahelp-2.0.02_p46.ebuild:
+  Marked stable on amd64 as per bug 176971.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
   javahelp-2.0.02_p46.ebuild:
