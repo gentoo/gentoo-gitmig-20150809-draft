@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r3.ebuild,v 1.1 2007/04/13 18:28:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r3.ebuild,v 1.2 2007/06/10 00:49:48 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -161,6 +161,6 @@ src_install() {
 pkg_postinst() {
 	# cheat to keep users happy
 	if [[ -e ${ROOT}/etc/init.d/modules ]] ; then
-		sed -i 's:modules-update:update-modules:' /etc/init.d/modules
+		sed -i 's:modules-update:update-modules:' "${ROOT}"/etc/init.d/modules
 	fi
 }
