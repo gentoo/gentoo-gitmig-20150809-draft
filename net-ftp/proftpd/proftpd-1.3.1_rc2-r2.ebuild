@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2.ebuild,v 1.2 2007/05/08 22:34:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r2.ebuild,v 1.1 2007/06/10 19:34:49 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
@@ -52,6 +52,12 @@ src_unpack() {
 	unpack ${P/_/}.tar.bz2
 
 	cd "${S}"
+
+	# Fix bugs #164612, #167003, #175082 and #178866
+	epatch "${FILESDIR}/${P}-bug164612.patch"
+	epatch "${FILESDIR}/${P}-bug167003.patch"
+	epatch "${FILESDIR}/${P}-bug175082.patch"
+	epatch "${FILESDIR}/${P}-bug178866.patch"
 
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
