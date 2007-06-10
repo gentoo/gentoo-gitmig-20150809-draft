@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/werken-xpath
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.9 2007/05/07 07:43:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.10 2007/06/10 14:55:57 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  werken-xpath-0.9.4_beta-r1.ebuild:
+  Marked stable on amd64 as per bug 176167.
 
   07 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   werken-xpath-0.9.4_beta-r1.ebuild:
