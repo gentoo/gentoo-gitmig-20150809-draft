@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.54 2007/06/08 11:03:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.55 2007/06/10 21:09:54 jer Exp $
+
+*sysstat-7.1.4 (10 Jun 2007)
+
+  10 Jun 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml,
+  +sysstat-7.1.4.ebuild:
+  Made myself maintainer. Version bump.
 
   08 Jun 2007; Jeroen Roovers <jer@gentoo.org> sysstat-7.0.4-r2.ebuild:
   Do not install the cron.d file (bug #172548 comment #5).
