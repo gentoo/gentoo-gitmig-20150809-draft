@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.90 2007/06/02 06:41:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.91 2007/06/10 17:11:07 kumba Exp $
 
 # 22 May 2007; Christian Heim <phreak@gentoo.org>
 # unmask ip28 and ip32r10k only on mips
@@ -141,10 +141,6 @@ xine
 # Stephen P. Becker <geoman@gentoo.org>
 # remasking hal because of numerous dependency issues
 hal
-
-# Aaron Walker <ka0ttic@gentoo.org>
-# Temporarily masking until net-nds/c-ares can be tested properly
-ares
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masking mono because it doesn't work on mips
