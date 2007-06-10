@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.4 2006/09/15 06:26:43 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.5 2007/06/10 21:20:15 armin76 Exp $
+
+  10 Jun 2007; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.5.ebuild:
+  Add ~ia64 wrt #159512
 
 *libsmi-0.4.5 (15 Sep 2006)
 
