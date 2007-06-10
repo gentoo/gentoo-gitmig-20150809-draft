@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.10 2007/06/09 00:14:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.11 2007/06/10 14:29:31 drizzt Exp $
+
+  10 Jun 2007; Timothy Redaelli <drizzt@gentoo.org> powertop-1.6.ebuild:
+  Add ~ppc keyword.
 
 *powertop-1.6 (09 Jun 2007)
 
