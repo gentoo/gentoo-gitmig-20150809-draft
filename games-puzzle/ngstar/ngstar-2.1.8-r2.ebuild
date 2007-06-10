@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.2 2006/06/29 16:03:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.3 2007/06/10 16:07:25 nyhm Exp $
 
 inherit eutils games
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
+DEPEND="sys-libs/ncurses
+	sys-libs/gpm"
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS Changelog README TODO
 	prepgamesdirs
 }
