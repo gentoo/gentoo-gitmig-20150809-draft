@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.16 2007/06/01 20:00:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.17 2007/06/10 12:06:08 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> jline-0.9.91.ebuild:
+  Marked stable on amd64 as per bug 179940.
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> jline-0.9.91.ebuild:
   Stable on ppc wrt bug 179940
