@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.2 2007/06/06 08:14:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.3 2007/06/10 16:33:18 dertobi123 Exp $
 
-inherit eutils apache-module toolchain-funcs gnuconfig
+inherit eutils apache-module toolchain-funcs
 
 MY_P=${PN/-core}-${PV/_}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
@@ -45,11 +45,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	epatch ${FILESDIR}/2.x-series-nsca.patch
+
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
-	# ppc64 needs this
-	gnuconfig_update
 }
 
 src_compile() {
@@ -75,14 +75,12 @@ src_compile() {
 		myconf="${myconf} --with-command-grp=apache"
 	fi
 
-	./configure ${myconf} \
-		--host=${CHOST} \
+	econf ${myconf} \
 		--prefix=/usr/nagios \
 		--localstatedir=/var/nagios \
 		--sysconfdir=/etc/nagios \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		${myconf} || die "./configure failed"
+		--datadir=/usr/nagios/share \
+		|| die "./configure failed"
 
 	emake CC=$(tc-getCC) nagios || die "make failed"
 
