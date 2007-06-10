@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.92 2007/05/21 17:19:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.93 2007/06/10 16:16:32 eradicator Exp $
+
+*squirrelmail-1.5.1-r5 (10 Jun 2007)
+
+  10 Jun 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/squirrelmail-1.5.1-sqimap_get_message.patch,
+  -squirrelmail-1.5.1-r4.ebuild, +squirrelmail-1.5.1-r5.ebuild:
+  Fixed typo in sqimap_get_message() which resulted in php warnings in 5.2.x
 
   21 May 2007; Jeremy Huddleston <eradicator@gentoo.org>
   -squirrelmail-1.4.9a.ebuild:
