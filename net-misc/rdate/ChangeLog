@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.37 2007/04/10 10:00:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.38 2007/06/10 21:08:02 jer Exp $
+
+  10 Jun 2007; Jeroen Roovers <jer@gentoo.org> rdate-1.4-r3.ebuild:
+  Stable for HPPA (bug #181604).
 
   10 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> -rdate-0.990821.ebuild,
   -rdate-0.990821-r1.ebuild, -rdate-0.990821-r2.ebuild, -rdate-1.4.ebuild:
