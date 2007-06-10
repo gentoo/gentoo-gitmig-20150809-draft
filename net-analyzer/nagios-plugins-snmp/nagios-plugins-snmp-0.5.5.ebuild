@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.5.5.ebuild,v 1.1 2007/06/07 06:43:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.5.5.ebuild,v 1.2 2007/06/10 08:57:27 dertobi123 Exp $
 
 inherit eutils
 
@@ -38,4 +38,11 @@ src_install() {
 	chmod -R o-rwx ${D}/usr/nagios/libexec || "Failed Chmod of ${D}usr/nagios/libexec"
 
 	dodoc README NEWS AUTHORS
+
+cat << EOF > "${T}"/55-nagios-plugins-snmp-revdep
+SEARCH_DIRS="/usr/nagios/libexec"
+EOF
+
+	insinto /etc/revdep-rebuild
+	doins "${T}"/55-nagios-plugins-snmp-revdep
 }
