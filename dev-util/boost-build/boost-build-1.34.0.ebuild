@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.34.0.ebuild,v 1.1 2007/06/06 19:24:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.34.0.ebuild,v 1.2 2007/06/10 19:37:04 dirtyepic Exp $
 
-inherit toolchain-funcs versionator
+inherit flag-o-matic toolchain-funcs versionator
 
 KEYWORDS="~amd64 ~x86"
 
@@ -51,6 +51,8 @@ src_compile() {
 		# Using boost's generic toolset here, which respects CC and CFLAGS
 		toolset=cc
 	fi
+
+	append-flags -fno-strict-aliasing
 
 	CC=$(tc-getCC) ./build.sh ${toolset} || die "building bjam failed"
 }
