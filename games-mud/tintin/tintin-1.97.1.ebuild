@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.97.1.ebuild,v 1.1 2007/05/23 17:04:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.97.1.ebuild,v 1.2 2007/06/10 15:21:56 nyhm Exp $
 
 inherit games
 
@@ -21,11 +21,13 @@ S=${WORKDIR}/tt/src
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	sed -i \
 		-e '/^CC/d' \
 		-e '/^MAKE/d' \
-		-e '/^CFLAGS/s/=/+=/' "${S}/Makefile.in" \
+		-e '/^CFLAGS/s/=/+=/' Makefile.in \
 		|| die "sed failed"
+	chmod +x configure
 }
 
 src_install () {
