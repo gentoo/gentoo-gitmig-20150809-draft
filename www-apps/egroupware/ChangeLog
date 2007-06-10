@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.71 2007/06/10 14:36:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.72 2007/06/10 15:26:29 jer Exp $
+
+  10 Jun 2007; Jeroen Roovers <jer@gentoo.org> egroupware-1.4.001.ebuild:
+  Stable for HPPA (bug #181339).
 
   10 Jun 2007; Jeroen Roovers <jer@gentoo.org> egroupware-1.4.001.ebuild:
   Fixed reference to files/postinstall-en-1.2.txt.
