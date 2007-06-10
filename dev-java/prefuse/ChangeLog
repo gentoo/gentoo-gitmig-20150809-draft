@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/prefuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/ChangeLog,v 1.10 2007/06/09 10:28:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/ChangeLog,v 1.11 2007/06/10 08:54:52 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  prefuse-20060715_beta.ebuild:
+  Marked stable on amd64 as per bug 181398.
 
   09 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   prefuse-20060715_beta.ebuild:

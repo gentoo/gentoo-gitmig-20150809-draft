@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.5 2007/06/09 10:28:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.6 2007/06/10 08:54:52 philantrop Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/prefuse/${MY_P}.zip"
 HOMEPAGE="http://prefuse.org"
 LICENSE="BSD"
 SLOT="2006"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="=dev-java/lucene-1*"
