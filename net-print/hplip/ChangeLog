@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.64 2007/06/07 14:39:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.65 2007/06/10 07:32:48 dertobi123 Exp $
+
+  10 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  hplip-1.7.4a-r1.ebuild:
+  ppc stable, bug #181108
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> hplip-1.7.4a-r1.ebuild:
   Added ~ppc64
