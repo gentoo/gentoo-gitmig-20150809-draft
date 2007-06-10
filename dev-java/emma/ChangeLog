@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/emma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.9 2007/05/28 10:55:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.10 2007/06/10 14:01:01 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  emma-2.0.5312-r1.ebuild:
+  Marked stable on amd64 as per bug 178938.
 
   28 May 2007; nixnut <nixnut@gentoo.org> emma-2.0.5312-r1.ebuild:
   Stable on ppc wrt bug 178938
