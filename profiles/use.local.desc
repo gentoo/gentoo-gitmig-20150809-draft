@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2857 2007/06/09 21:32:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2858 2007/06/10 01:10:07 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1892,6 +1892,7 @@ www-apps/Embperl:modperl - Enable modperl support
 www-apps/bugzilla:extras - optional Perl modules
 www-apps/bugzilla:modperl - Enable modperl support
 www-apps/egroupware:contrib - Install all contributed modules
+www-apps/egroupware:ical - Add ical support
 www-apps/egroupware:jpgraph - Add jpgraph support
 www-apps/gallery:dcraw - Add dcraw support
 www-apps/gallery:netpbm - Add NetPBM support
