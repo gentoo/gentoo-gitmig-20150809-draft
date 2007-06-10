@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.28 2007/06/10 15:03:57 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.29 2007/06/10 16:00:49 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  checkstyle-4.2.ebuild:
+  Marked stable on amd64 as per bug 178938.
 
   10 Jun 2007; Miroslav Šulc <fordfrog@gentoo.org> checkstyle-4.2.ebuild:
   Fixed missing app-arch/zip in DEPEND
