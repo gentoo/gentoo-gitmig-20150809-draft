@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jexl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.7 2007/06/01 20:23:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.8 2007/06/10 10:23:53 philantrop Exp $
+
+  10 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  commons-jexl-1.1.ebuild:
+  Marked stable on amd64 as per bug 179944.
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> commons-jexl-1.1.ebuild:
   Stable on ppc wrt bug 179944
