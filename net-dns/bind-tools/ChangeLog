@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.74 2007/06/02 22:35:39 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.75 2007/06/10 23:55:55 kumba Exp $
+
+  10 Jun 2007; Joshua Kinard <kumba@gentoo.org> ChangeLog:
+  Marked unstable on mips, per #181554.
 
 *bind-tools-9.4.1-r1 (02 Jun 2007)
 *bind-tools-9.3.4-r1 (02 Jun 2007)
