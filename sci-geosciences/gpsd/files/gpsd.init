@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init,v 1.5 2007/01/14 23:01:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init,v 1.6 2007/06/11 03:04:29 nerdboy Exp $
 
 # You can use this init script to manage a serial port GPS or other
 # non-hotplug device (or any device for that matter).  By design,
 # USB devices should use the hotplug script instead.
 
 depend() {
-	after serial hotplug
+	after serial hotplug dbus bluetooth
 	before ntpd
 }
 
