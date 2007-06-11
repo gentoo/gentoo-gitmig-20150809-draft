@@ -1,6 +1,14 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.20 2007/02/22 01:32:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.21 2007/06/11 23:52:41 matsuu Exp $
+
+*tcllib-1.9 (11 Jun 2007)
+
+  11 Jun 2007; MATSUU Takuto <matsuu@gentoo.org> -tcllib-1.3.ebuild,
+  +tcllib-1.9.ebuild:
+  Version bumped, bug #181658.
+  Added examples USE flag.
+  Removed old version.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
