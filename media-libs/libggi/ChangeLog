@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.50 2007/06/07 11:47:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.51 2007/06/11 17:43:37 drac Exp $
+
+  11 Jun 2007; Samuli Suominen <drac@gentoo.org> libggi-2.2.2.ebuild:
+  Stable on arm wrt #180569.
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> libggi-2.2.2.ebuild:
   Stable on ppc64; bug #180569

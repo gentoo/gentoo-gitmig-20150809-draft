@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.2.2.ebuild,v 1.6 2007/06/07 11:47:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.2.2.ebuild,v 1.7 2007/06/11 17:43:37 drac Exp $
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ggi/${P}.src.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="X aalib svga fbcon directfb 3dfx debug mmx vis"
 
 RDEPEND=">=media-libs/libgii-1.0.2
