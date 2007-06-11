@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/poink-2.03.ebuild,v 1.4 2005/08/29 20:10:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/poink-2.03.ebuild,v 1.5 2007/06/11 19:05:04 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,6 +12,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PN}-2.03-signed-char-fixup.patch
+}
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
