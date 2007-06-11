@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.121 2007/06/11 16:49:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.122 2007/06/11 18:09:27 pebenito Exp $
+
+  11 Jun 2007; Chris PeBenito <pebenito@gentoo.org>
+  +files/findutils-4.3.7-selinux.diff, findutils-4.3.7.ebuild:
+  Update SELinux patch for 4.3.7.
 
   11 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   findutils-4.2.31.ebuild:
