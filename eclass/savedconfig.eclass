@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.6 2007/06/11 04:48:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.7 2007/06/11 04:52:42 dragonheart Exp $
 
 # Original Author: Daniel Black <dragonheart@gentoo.org>
 #
@@ -98,12 +98,14 @@ restore_config() {
 		fi
 	done
 	if [[ -f ${found} ]]; then
+		elog "Building using saved configfile ${found}"
 		if [ $# -gt 0 ]; then
 			cp -pPR	"${found}" "$1" || die "Failed to restore ${found} to $1"
 		else
 			die "need to know the restoration filename"
 		fi
 	elif [[ -d ${found} ]]; then
+		elog "Building using saved config directory ${found}"
 		dest=${PWD}
 		pushd "${found}"
 		treecopy . "${dest}" \
