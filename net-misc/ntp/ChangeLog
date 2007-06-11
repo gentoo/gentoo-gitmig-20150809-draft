@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.102 2007/05/05 07:42:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.103 2007/06/11 04:33:08 vapier Exp $
+
+  11 Jun 2007; Mike Frysinger <vapier@gentoo.org> ntp-4.2.4_p0.ebuild:
+  Move to USE=zeroconf #177413 by Jakub Moc.
 
   05 May 2007; Mike Frysinger <vapier@gentoo.org> ntp-4.2.4_p0.ebuild:
   Add support for USE=mdnsresponder #176333 by Carsten Lohrke.

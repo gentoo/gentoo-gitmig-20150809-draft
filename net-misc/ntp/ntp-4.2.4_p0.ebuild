@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p0.ebuild,v 1.3 2007/05/06 08:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p0.ebuild,v 1.4 2007/06/11 04:33:08 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,12 +13,12 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-${PV:0:3}/${MY_P}.tar
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="caps debug ipv6 mdnsresponder openntpd parse-clocks selinux ssl"
+IUSE="caps debug ipv6 openntpd parse-clocks selinux ssl zeroconf"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
 	kernel_linux? ( caps? ( sys-libs/libcap ) )
-	mdnsresponder? ( net-misc/mDNSResponder )
+	zeroconf? ( || ( net-dns/avahi net-misc/mDNSResponder ) )
 	!openntpd? ( !net-misc/openntpd )
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
@@ -39,6 +39,11 @@ hax_bitkeeper() {
 pkg_setup() {
 	enewgroup ntp 123
 	enewuser ntp 123 -1 /dev/null ntp
+
+	if use zeroconf && has_version net-dns/avahi && ! built_with_use net-dns/avahi mdnsresponder-compat ; then
+		eerror "You need to recompile net-dns/avahi with mdnsresponder-compat USE flag"
+		die "net-dns/avahi is missing required mdnsresponder-compat support"
+	fi
 }
 
 src_unpack() {
@@ -58,7 +63,7 @@ src_unpack() {
 src_compile() {
 	hax_bitkeeper
 	# blah, no real configure options #176333
-	export ac_cv_header_dns_sd_h=$(use mdnsresponder && echo yes || echo no)
+	export ac_cv_header_dns_sd_h=$(use zeroconf && echo yes || echo no)
 	export ac_cv_lib_dns_sd_DNSServiceRegister=${ac_cv_header_dns_sd_h}
 	econf \
 		$(use_enable caps linuxcaps) \
@@ -126,10 +131,10 @@ pkg_postinst() {
 	ewarn "Review /etc/ntp.conf to setup server info."
 	ewarn "Review /etc/conf.d/ntpd to setup init.d info."
 	echo
-	einfo "The way ntp sets and maintains your system time has changed."
-	einfo "Now you can use /etc/init.d/ntp-client to set your time at"
-	einfo "boot while you can use /etc/init.d/ntpd to maintain your time"
-	einfo "while your machine runs"
+	elog "The way ntp sets and maintains your system time has changed."
+	elog "Now you can use /etc/init.d/ntp-client to set your time at"
+	elog "boot while you can use /etc/init.d/ntpd to maintain your time"
+	elog "while your machine runs"
 	if [[ -n $(egrep '^[^#].*notrust' "${ROOT}"/etc/ntp.conf) ]] ; then
 		echo
 		eerror "The notrust option was found in your /etc/ntp.conf!"
