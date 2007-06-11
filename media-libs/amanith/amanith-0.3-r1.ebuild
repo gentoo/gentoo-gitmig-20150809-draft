@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r1.ebuild,v 1.1 2006/11/11 00:47:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r1.ebuild,v 1.2 2007/06/11 04:40:45 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples jpeg opengl png truetype"
 
-DEPEND="truetype? ( >=media-libs/freetype-2.1.10 )
+DEPEND="truetype? ( >=media-libs/freetype-2.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	png? ( >=media-libs/libpng-1.2.10 )
 	opengl? ( media-libs/glew )
@@ -27,6 +27,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-freetype.patch #179734
 
 	rm -rf 3rdpart include/GL || die
 	sed -i -e '/SUBDIRS/s:3rdpart::' amanith.pro || die
