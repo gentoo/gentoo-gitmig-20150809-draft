@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.1_rc1.ebuild,v 1.1 2007/06/08 10:18:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.1_rc2.ebuild,v 1.1 2007/06/11 10:27:53 armin76 Exp $
 
 inherit eutils distutils
 
-MY_P="${PN}-0.5.0.99.1"
+MY_P="${PN}-0.5.0.99.2"
 
 DESCRIPTION="BitTorrent client in Python and PyGTK."
 HOMEPAGE="http://deluge-torrent.org/"
