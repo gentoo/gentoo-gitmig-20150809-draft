@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.27 2007/04/10 09:23:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.28 2007/06/11 05:22:30 vapier Exp $
+
+*nbd-2.9.3 (11 Jun 2007)
+
+  11 Jun 2007; Mike Frysinger <vapier@gentoo.org> +nbd-2.9.3.ebuild:
+  Version bump #180884 by Tom Lloyd.
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org> nbd-2.9.2.ebuild:
   revert to ~x86, see bug 173738
