@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.6 2007/05/28 14:26:47 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.7 2007/06/11 17:38:21 betelgeuse Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -20,6 +20,7 @@ RDEPEND="mpi? ( virtual/mpi )
 	python? ( >=dev-lang/python-2.0 )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
+	java? ( >=virtual/jre-1.5 )
 	dev-libs/expat
 	media-libs/freetype
 	media-libs/jpeg
@@ -35,7 +36,6 @@ DEPEND="${RDEPEND}
 		qt4? ( >=x11-libs/qt-4.1.0 )"
 
 S="${WORKDIR}"/VTK
-
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
@@ -61,9 +61,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-lammpi.patch
 }
 
-
 src_compile() {
-	# gcc versions 3.2.x seem to have sse-related bugs that are 
+	# gcc versions 3.2.x seem to have sse-related bugs that are
 	# triggered by VTK when compiling for pentium3/4
 	if [ "$(gcc-major-version)" -eq 3 -a "$(gcc-minor-version)" -eq 2 -a \
 		"$(get-flag -march)" == "-march=pentium4" ]; then
@@ -176,7 +175,7 @@ src_compile() {
 }
 
 src_install() {
-	# remove portage paths from dynamically created Type 
+	# remove portage paths from dynamically created Type
 	# headers
 	sed -e "s:${S}/Common/::" \
 		-e "s:${S}/Rendering/::" \
