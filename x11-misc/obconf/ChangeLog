@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.35 2007/06/05 23:51:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.36 2007/06/11 03:30:58 omp Exp $
+
+*obconf-2.0.1 (11 Jun 2007)
+
+  11 Jun 2007; David Shakaryan <omp@gentoo.org> +obconf-2.0.1.ebuild:
+  Version bump.
 
   05 Jun 2007; David Shakaryan <omp@gentoo.org> obconf-2.0.0.ebuild:
   Add post-install updating of desktop and mime databases.
