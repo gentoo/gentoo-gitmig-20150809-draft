@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/altermime-0.3.7.ebuild,v 1.1 2006/12/10 18:16:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/altermime-0.3.7.ebuild,v 1.2 2007/06/11 06:22:22 opfer Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.pldaniels.com/altermime/${P}.tar.gz"
 HOMEPAGE="http://pldaniels.com/altermime/"
 
 LICENSE="Sendmail"
-KEYWORDS="~x86 ~s390 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~s390 x86"
 IUSE=""
 SLOT="0"
 
