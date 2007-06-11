@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.5 2007/06/10 21:20:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.6 2007/06/11 13:25:33 gustavoz Exp $
+
+  11 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> libsmi-0.4.5.ebuild:
+  Restricted tests and ~sparc wrt #159512
 
   10 Jun 2007; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.5.ebuild:
   Add ~ia64 wrt #159512
