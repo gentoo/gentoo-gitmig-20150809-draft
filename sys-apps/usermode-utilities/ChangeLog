@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/usermode-utilities
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.21 2006/08/14 00:54:09 dang Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.22 2007/06/11 16:10:24 dang Exp $
+
+*usermode-utilities-20060323 (11 Jun 2007)
+
+  11 Jun 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/usermode-utilities-20060323-nostrip.patch,
+  +usermode-utilities-20060323.ebuild:
+  Bump to 20060323
+  	- include fix for prestriped files (bug #181480)
 
 *usermode-utilities-20060216 (14 Aug 2006)
 
