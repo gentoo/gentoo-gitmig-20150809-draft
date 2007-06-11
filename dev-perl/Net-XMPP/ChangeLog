@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-XMPP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.16 2007/04/06 20:41:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.17 2007/06/11 15:25:01 ranger Exp $
+
+  11 Jun 2007; Brent Baude <ranger@gentoo.org> Net-XMPP-1.02.ebuild:
+  Marking Net-XMPP-1.02 ~ppc64 for bug #181650
 
 *Net-XMPP-1.02 (06 Apr 2007)
 
