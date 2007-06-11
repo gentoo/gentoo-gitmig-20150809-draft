@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.4 2007/01/09 23:57:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.5 2007/06/11 13:51:25 nyhm Exp $
 
 inherit eutils games
 
@@ -11,30 +11,47 @@ SRC_URI="mirror://sourceforge/rhino/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="gnome gtp"
+IUSE="gnome gtp nls"
 
-DEPEND="gnome? ( =gnome-base/libgnomeui-2* )"
+RDEPEND="gnome? ( =gnome-base/libgnomeui-2* )
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i '/^(\|locale\|help\|omf\|icon\|)/s:@datadir@:/usr/share:' \
+		Makefile.in \
+		|| die "sed failed"
+}
 
 src_compile() {
 	if use gnome || use gtp; then
 		egamesconf \
+			--localedir=/usr/share/locale \
 			$(use_enable gnome) \
 			$(use_enable gtp) \
-			|| die "egamesconf failed"
+			$(use_enable nls) \
+			|| die
 	else
-		egamesconf --enable-gtp || die "egamesconf failed"
+		egamesconf \
+			--enable-gtp \
+			--disable-gnome \
+			--localedir=/usr/share/locale \
+			$(use_enable nls) \
+			|| die
 	fi
 	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc ChangeLog NEWS README TODO || die "installing docs failed"
+	dodoc ChangeLog NEWS README TODO
 
 	if use gnome; then
-		doicon ${PN}.png
-		make_desktop_entry ${PN} "GRhino" ${PN}.png
+		make_desktop_entry ${PN} GRhino
 	fi
 
 	prepgamesdirs
