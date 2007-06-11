@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.2.ebuild,v 1.13 2007/05/27 08:22:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.2-r1.ebuild,v 1.1 2007/06/11 11:47:40 armin76 Exp $
 
 inherit eutils versionator gnome2
 
@@ -43,6 +43,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PV}-fe-text-vartype.patch
+	epatch "${FILESDIR}"/xc282-fixtrayzombies.diff
 }
 
 src_compile() {

@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.249 2007/05/28 18:24:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.250 2007/06/11 11:47:40 armin76 Exp $
+
+*xchat-2.8.2-r1 (11 Jun 2007)
+
+  11 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/xc282-fixtrayzombies.diff, -xchat-2.8.2.ebuild,
+  +xchat-2.8.2-r1.ebuild:
+  Revbump straight to stable to add a patch from upstream
 
   28 May 2007; Raúl Porcel <armin76@gentoo.org>
   -files/xchat-2.6.6-suffix.patch, -files/xc280-fix-back.diff,
