@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.8.ebuild,v 1.2 2007/06/04 23:30:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.8.ebuild,v 1.3 2007/06/11 04:54:02 vapier Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.2.1-only-symlink-when-needed.patch
+	epatch "${FILESDIR}"/${PN}-2.2.8-symlinks.patch #180672
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		include/builddefs.in \
@@ -36,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DIST_ROOT="${D}" install install-dev || die
+	emake DIST_ROOT="${D}" install install-dev || die
 	prepalldocs
 
 	# move shared libs to /
