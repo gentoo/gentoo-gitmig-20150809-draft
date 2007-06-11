@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2859 2007/06/10 05:59:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2860 2007/06/11 04:33:21 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1471,7 +1471,7 @@ net-misc/hylafax:html - Adds HTML documentation
 net-misc/hylafax:mgetty - Adds support for mgetty and vgetty
 net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/kvpnc:cisco - Adds support for Cisco client
-net-misc/ntp:mdnsresponder - Add support for multicast dns
+net-misc/ntp:zeroconf - Add support for multicast dns
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/nx-x11-bin:vnc - Add support for connecting to VNC servers
