@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.6.0.ebuild,v 1.1 2007/06/11 04:14:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.6.0.ebuild,v 1.2 2007/06/11 05:10:56 dragonheart Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic savedconfig
 
 ################################################################################
 # BUSYBOX ALTERNATE CONFIG MINI-HOWTO
@@ -13,7 +13,7 @@ inherit eutils flag-o-matic
 #     get erased afterwards. Add a definition like ROOT=/my/root/path to the
 #     start of the line if you're installing to somewhere else than the root
 #     directory. This command will save the default configuration to
-#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not
+#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not 
 #     defined), and it will tell you that it has done this. Note the location
 #     where the config file was saved.
 #
@@ -25,25 +25,21 @@ inherit eutils flag-o-matic
 #     cd /var/tmp/portage/busybox*/work
 #     make menuconfig
 #
-#
 # (3) Save your configuration to the default location and copy it to the
-#     savedconfig location as follows. Replace X.X.X by the version of
-#     busybox, and change the path if you're overriding ${ROOT} or
-#     ${PORTAGE_CONFIGROOT}. The file should overwrite the default config
-#     file that was written by the ebuild during step 1.
+#     one of the locations listed in /usr/portage/eclass/savedconfig.eclass
 #
-#     cp .config /etc/portage/savedconfig/busybox-X.X.X.config
-#
-# (4) Execute the same command as in step 1 to build the new busybox config;
-#     the FEATURES=keepwork option is probably no longer necessary unless you
-#     want to modify the configuration further.
+# (4) Emerge busybox with USE=savedconfig to use the configuration file you
+#     just generated.
 #
 ################################################################################
 #
-# (1) Alternatively skip the above steps and simply emerge busybox with
-#     USE=savedconfig and edit the file it saves by hand. Then remerge bb as
-#     needed.
+# (1) Alternatively skip the above steps and simply emerge busybox without
+#     USE=savedconfig.
 #
+# (2) Edit the file it saves by hand. ${ROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF}
+#
+# (3) Remerge busybox as using USE=savedconfig.
+#     
 ################################################################################
 
 
@@ -107,25 +103,12 @@ src_unpack() {
 
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.
-	# fine grained config control for user defined busybox configs.
-	# [package]-[version]-[revision].config
-	# [package]-[version].config
-	# [package].config
 
-	if use savedconfig ; then
-		local conf root
-		[[ -r .config ]] && rm .config
-		for conf in {${PF},${P},${PN}}{,-${CHOST}} ; do
-			for root in "${PORTAGE_CONFIGROOT}" "${ROOT}" / ; do
-				configfile=${root}etc/portage/savedconfig/${conf}.config
-				if [[ -r ${configfile} ]] ; then
-					einfo "Found your ${configfile} and using it."
-					cp ${configfile} "${S}"/.config
-					yes "" | make oldconfig > /dev/null
-					return 0
-				fi
-			done
-		done
+	restore_config .config
+	if [ -f .config ]; then
+		yes "" | make oldconfig > /dev/null
+		return 0
+	else
 		ewarn "Could not locate user configfile, so we will save a default one"
 	fi
 
@@ -176,6 +159,7 @@ src_compile() {
 
 src_install() {
 	unset KBUILD_OUTPUT #88088
+	save_config .config
 
 	into /
 	newbin busybox_unstripped busybox || die
@@ -225,9 +209,6 @@ pkg_preinst() {
 	if use make-symlinks ; then
 		mv "${D}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
 	fi
-	if use savedconfig ; then
-		mv "${D}"/usr/share/${PN}/${PF}.config "${T}"/ || die
-	fi
 }
 
 pkg_postinst() {
@@ -238,14 +219,6 @@ pkg_postinst() {
 		cp -vpPR _install/* "${ROOT}"/ || die "copying links for ${x} failed"
 	fi
 
-	if use savedconfig ; then
-		local config_dir="${PORTAGE_CONFIGROOT:-${ROOT}}/etc/portage/savedconfig"
-		einfo "Saving this build config to ${config_dir}/${PF}.config"
-		einfo "Read this ebuild for more info on how to take advantage of this option"
-		mkdir -p "${config_dir}"
-		cp "${T}"/${PF}.config "${config_dir}"/${PF}.config
-		return 0
-	fi
 	echo
 	einfo "This ebuild has support for user defined configs"
 	einfo "Please read this ebuild for more details and re-emerge as needed"
