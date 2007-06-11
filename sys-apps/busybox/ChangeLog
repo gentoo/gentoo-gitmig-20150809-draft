@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.143 2007/05/18 10:16:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.144 2007/06/11 04:14:51 vapier Exp $
+
+*busybox-1.6.0 (11 Jun 2007)
+*busybox-1.5.1 (11 Jun 2007)
+
+  11 Jun 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.6.0-bb.patch, +files/busybox-1.6.0-echo.patch,
+  +files/busybox-1.6.0-hushdep.patch, +busybox-1.5.1.ebuild,
+  +busybox-1.6.0.ebuild:
+  Version bumps #180226.
 
   18 May 2007; Bryan Østergaard <kloeri@gentoo.org> busybox-1.4.2.ebuild:
   Stable on Alpha, bug 169830.
