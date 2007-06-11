@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.4 2007/05/12 16:41:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.5 2007/06/11 11:58:59 voyageur Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,11 @@ RDEPEND="dev-libs/glib
 	x11-libs/libXaw
 	x11-libs/libXp
 	x11-libs/libXpm
-	x11-libs/libXext"
+	x11-libs/libXext
+
+	media-fonts/font-misc-misc
+	media-fonts/font-cursor-misc
+	x11-apps/xauth"
 
 DEPEND="${RDEPEND}
 	app-text/rman
