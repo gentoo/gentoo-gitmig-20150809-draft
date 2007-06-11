@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.16 2007/05/27 06:56:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.17 2007/06/11 14:43:36 drac Exp $
 
 inherit xfce44 python
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/perl-5.6
 	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-plugins-${XFCE_MASTER_VERSION}
 	libnotify? ( x11-libs/libnotify )
-	hal? ( sys-apps/hal )
+	hal? ( >=sys-apps/hal-0.5.7.1 )
 	python? ( dev-python/pygtk )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
