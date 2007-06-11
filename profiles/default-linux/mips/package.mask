@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.10 2007/02/02 21:30:58 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.11 2007/06/11 05:05:58 kumba Exp $
 
 # Mask pam_ldap and nss_ldap - openldap dep missing.
 sys-auth/pam_ldap
@@ -20,6 +20,10 @@ sys-auth/nss_ldap
 ###################################################################
 sys-devel/gcc-mips64
 
+
+# newer iproute2's need newer -headers, so unmask
+# only on 2007.1 and greater profiles.
+>=sys-apps/iproute2-2.6.18
 
 # Shouldn't be merging these SELinux packages on this profile
 # but this keeps repoman happy since they require >=glibc-2.4
