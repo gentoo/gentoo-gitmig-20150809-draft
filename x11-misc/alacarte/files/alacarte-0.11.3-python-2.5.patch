@@ -1,0 +1,12 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN alacarte-0.11.3.orig/configure.ac alacarte-0.11.3/configure.ac
+--- alacarte-0.11.3.orig/configure.ac	2007-02-12 16:16:54.000000000 -0500
++++ alacarte-0.11.3/configure.ac	2007-06-11 13:34:23.000000000 -0400
+@@ -19,7 +19,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GE
+ AM_GLIB_GNU_GETTEXT
+ IT_PROG_INTLTOOL([0.35.0])
+ 
+-AM_PATH_PYTHON_VERSION(2.4, 2.4.0, 2.5, 2.5.0)
++AM_PATH_PYTHON_VERSION(2.5, 2.5.0, 2.4, 2.4.0)
+ 
+ PKG_CHECK_MODULES(ALACARTE, libgnome-menu >= 2.15)
+ 
