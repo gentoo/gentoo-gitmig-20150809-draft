@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.35 2007/06/11 17:38:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.36 2007/06/11 17:41:45 betelgeuse Exp $
+
+  11 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -vtk-5.0.2.ebuild:
+  Remove old version.
 
   11 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> vtk-5.0.3.ebuild:
   Add java? ( >=virtual/jre-1.5 ) to RDEPEND.
