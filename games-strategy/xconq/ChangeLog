@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/xconq
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.9 2007/02/22 00:07:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.10 2007/06/11 16:42:06 nyhm Exp $
+
+  11 Jun 2007; Tristan Heaven <nyhm@gentoo.org> xconq-7.4.1.ebuild:
+  Don't use egamesinstall
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
