@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/springgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/ChangeLog,v 1.18 2007/06/11 17:55:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/ChangeLog,v 1.19 2007/06/11 18:01:17 nixnut Exp $
+
+  11 Jun 2007; nixnut <nixnut@gentoo.org> springgraph-88.ebuild:
+  Stable on ppc wrt bug 181584
 
   11 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> springgraph-88.ebuild:
   Stable on sparc wrt #181584

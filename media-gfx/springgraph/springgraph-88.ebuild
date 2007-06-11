@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/springgraph-88.ebuild,v 1.5 2007/06/11 17:55:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/springgraph-88.ebuild,v 1.6 2007/06/11 18:01:17 nixnut Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.chaosreigns.com/code/springgraph/dl/${PN}.pl.${PV}
 		 mirror://debian/pool/main/${PN:0:1}/${PN}/${SRC_DEBIAN_PATCH}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 mips ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 mips ppc sparc x86"
 IUSE=""
 DEPEND=""
 RDEPEND="dev-perl/GD"
