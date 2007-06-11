@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.28 2007/02/25 01:57:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.29 2007/06/11 19:26:02 aballier Exp $
+
+*cinelerra-cvs-20070607 (11 Jun 2007)
+
+  11 Jun 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/recentffmpeg.patch, +cinelerra-cvs-20070607.ebuild:
+  Version bump, closing bug #181626 and bug #174159
 
   25 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   -cinelerra-cvs-20061020.ebuild:
