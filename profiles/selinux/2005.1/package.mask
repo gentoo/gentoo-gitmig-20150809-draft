@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/package.mask,v 1.5 2006/10/09 07:14:00 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/package.mask,v 1.6 2007/06/11 09:44:31 kaiowas Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (19 Mar 2006)
 # Requires a new profile
@@ -16,6 +16,7 @@
 >=sec-policy/selinux-clamav-20060101
 >=sec-policy/selinux-clockspeed-20060101
 >=sec-policy/selinux-courier-imap-20060101
+sec-policy/selinux-cups
 >=sec-policy/selinux-cyrus-sasl-20060219
 >=sec-policy/selinux-daemontools-20060101
 >=sec-policy/selinux-dante-20060101
@@ -23,8 +24,10 @@
 >=sec-policy/selinux-distcc-20060101
 >=sec-policy/selinux-djbdns-20060101
 >=sec-policy/selinux-ftpd-20060101
+sec-policy/selinux-games
 >=sec-policy/selinux-gnupg-20060101
 >=sec-policy/selinux-gpm-20060101
+sec-policy/selinux-inetd
 >=sec-policy/selinux-ipsec-tools-20060101
 >=sec-policy/selinux-jabber-server-20060101
 >=sec-policy/selinux-kerberos-20060101
@@ -40,10 +43,13 @@
 >=sec-policy/selinux-portmap-20060101
 >=sec-policy/selinux-postfix-20060101
 >=sec-policy/selinux-postgresql-20060101
+sec-policy/selinux-ppp
 >=sec-policy/selinux-privoxy-20060101
 >=sec-policy/selinux-procmail-20060101
 >=sec-policy/selinux-publicfile-20060101
+sec-policy/selinux-pyzor
 >=sec-policy/selinux-qmail-20060101
+sec-policy/selinux-razor
 >=sec-policy/selinux-samba-20060101
 >=sec-policy/selinux-screen-20060101
 >=sec-policy/selinux-snmpd-20060101
@@ -52,6 +58,7 @@
 >=sec-policy/selinux-squid-20060101
 >=sec-policy/selinux-stunnel-20060101
 >=sec-policy/selinux-sudo-20060101
+sec-policy/selinux-tcpd
 >=sec-policy/selinux-tftpd-20060101
 >=sec-policy/selinux-ucspi-tcp-20060101
 >=sec-policy/selinux-wireshark-20060721

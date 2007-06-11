@@ -30,6 +30,7 @@ sec-policy/selinux-bluez
 >=sec-policy/selinux-clamav-20060101
 >=sec-policy/selinux-clockspeed-20060101
 >=sec-policy/selinux-courier-imap-20060101
+sec-policy/selinux-cups
 >=sec-policy/selinux-cyrus-sasl-20060101
 >=sec-policy/selinux-daemontools-20060101
 >=sec-policy/selinux-dante-20060101
@@ -39,9 +40,11 @@ sec-policy/selinux-desktop
 >=sec-policy/selinux-distcc-20060101
 >=sec-policy/selinux-djbdns-20060101
 >=sec-policy/selinux-ftpd-20060101
+sec-policy/selinux-games
 >=sec-policy/selinux-gnupg-20060101
 >=sec-policy/selinux-gpm-20060101
 sec-policy/selinux-hal
+sec-policy/selinux-inetd
 >=sec-policy/selinux-ipsec-tools-20060101
 >=sec-policy/selinux-jabber-server-20060101
 >=sec-policy/selinux-kerberos-20060101
@@ -58,10 +61,13 @@ sec-policy/selinux-pcmcia
 >=sec-policy/selinux-portmap-20060101
 >=sec-policy/selinux-postfix-20060101
 >=sec-policy/selinux-postgresql-20060101
+sec-policy/selinux-ppp
 >=sec-policy/selinux-privoxy-20060101
 >=sec-policy/selinux-procmail-20060101
 >=sec-policy/selinux-publicfile-20060101
+sec-policy/selinux-pyzor
 >=sec-policy/selinux-qmail-20060101
+sec-policy/selinux-razor
 >=sec-policy/selinux-samba-20060101
 >=sec-policy/selinux-screen-20060101
 >=sec-policy/selinux-snmpd-20060101
@@ -70,6 +76,7 @@ sec-policy/selinux-pcmcia
 >=sec-policy/selinux-squid-20060101
 >=sec-policy/selinux-stunnel-20060101
 >=sec-policy/selinux-sudo-20060101
+sec-policy/selinux-tcpd
 >=sec-policy/selinux-tftpd-20060101
 >=sec-policy/selinux-ucspi-tcp-20060101
 >=sec-policy/selinux-wireshark-20060101
