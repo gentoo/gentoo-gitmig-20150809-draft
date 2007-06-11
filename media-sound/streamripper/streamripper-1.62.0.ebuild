@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.61.26.ebuild,v 1.9 2007/06/11 20:32:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.62.0.ebuild,v 1.1 2007/06/11 20:32:00 aballier Exp $
 
 inherit eutils
 
@@ -10,27 +10,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="vorbis"
 
 DEPEND="media-libs/libmad
 	vorbis? ( media-libs/libogg
-	media-libs/libvorbis )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# Force package to use system libmad
-	rm -rf libmad*
-	sed -i -e 's/libmad//' Makefile.in || die "sed failed"
-
-	# for some reason the install-sh file is not executable on OSX...
-	chmod a+x install-sh
-}
+	media-libs/libvorbis )
+	>=dev-libs/tre-0.7.2"
 
 src_compile() {
-	econf $(use_with vorbis ogg) || die "econf failed"
+	econf $(use_with vorbis ogg) \
+		--without-included-libmad \
+		--without-included-tre || die "econf failed"
 	emake || die "emake failed"
 }
 

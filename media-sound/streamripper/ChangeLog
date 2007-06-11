@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/streamripper
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.44 2007/04/16 07:41:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.45 2007/06/11 20:32:00 aballier Exp $
+
+*streamripper-1.62.0 (11 Jun 2007)
+
+  11 Jun 2007; Alexis Ballier <aballier@gentoo.org>
+  +streamripper-1.62.0.ebuild:
+  Version bump, bug #180969
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org>
   streamripper-1.61.27.ebuild:
