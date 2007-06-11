@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.18.1.ebuild,v 1.3 2007/05/01 16:05:23 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.18.1.ebuild,v 1.4 2007/06/11 19:36:48 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa eds esd gstreamer hal"
+IUSE="alsa eds esd hal"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=media-libs/fontconfig-1
@@ -54,10 +54,8 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 	)
 	eds? ( >=gnome-extra/evolution-data-server-1.7 )
 	!arm? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
-	gstreamer?	(
-		>=media-libs/gst-plugins-base-0.10.2
-		>=media-libs/gstreamer-0.10.2
-	)"
+	>=media-libs/gst-plugins-base-0.10.2
+	>=media-libs/gstreamer-0.10.2"
 
 DEPEND="${RDEPEND}
 	x11-proto/kbproto
@@ -80,16 +78,11 @@ pkg_setup() {
 		--disable-update-mimedb \
 		--disable-scrollkeeper  \
 		--enable-vfs-methods    \
+		--enable-gstreamer=0.10 \
 		$(use_enable esd)       \
 		$(use_enable alsa)      \
 		$(use_enable hal)       \
 		$(use_enable eds aboutme)"
-
-	if use gstreamer ; then
-		G2CONF="${G2CONF} --enable-gstreamer=0.10"
-	else
-		G2CONF="${G2CONF} --enable-gstreamer=no"
-	fi
 }
 
 src_unpack() {
