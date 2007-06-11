@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.9-r1.ebuild,v 1.3 2007/06/11 06:53:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.9-r1.ebuild,v 1.4 2007/06/11 13:12:39 jer Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="acl nls selinux static xattr"
 RESTRICT="confcache"
 
@@ -62,6 +62,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/generic
 	chmod a+rx tests/sort/sort-mb-tests
+	chmod a+rx tests/ls/x-option
 
 	# Since we've patched many .c files, the make process will
 	# try to re-build the manpages by running `./bin --help`.
