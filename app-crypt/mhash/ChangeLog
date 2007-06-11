@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.41 2007/06/10 21:32:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.42 2007/06/11 08:55:41 grobian Exp $
+
+  11 Jun 2007; Fabian Groffen <grobian@gentoo.org> mhash-0.9.8.1.ebuild,
+  mhash-0.9.9.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   10 Jun 2007; Jeroen Roovers <jer@gentoo.org> mhash-0.9.9.ebuild:
   Stable for HPPA (bug #181563).
