@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7356 2007/06/10 18:30:22 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7357 2007/06/11 13:45:50 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,12 +25,6 @@
 # Temporary mask of fluxbox svn snapshot, until more thorough testing can be
 # done.
 >=x11-wm/fluxbox-1.0_rc3-r493700
-
-# Vlastimil Babka <caster@gentoo.org> (10 Jun 2007)
-# Proprietary binary package, library that nothing in tree uses. 
-# Will be moved after 30 days into java-overlay
-# unless users show the general need for it.
-dev-java/jdbc-mssqlserver
 
 # Vlastimil Babka <caster@gentoo.org> (10 Jun 2007)
 # Outdated version, proprietary binary package, library that nothing in tree
