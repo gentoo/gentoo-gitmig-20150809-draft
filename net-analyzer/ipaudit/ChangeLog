@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipaudit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.5 2006/11/23 19:48:11 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.6 2007/06/11 17:36:12 nixnut Exp $
+
+  11 Jun 2007; nixnut <nixnut@gentoo.org> ipaudit-1.0_beta2.ebuild:
+  Stable on ppc wrt bug 181590
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ipaudit-1.0_beta1.ebuild,
   ipaudit-1.0_beta2.ebuild:
