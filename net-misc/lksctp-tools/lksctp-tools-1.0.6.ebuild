@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.6.ebuild,v 1.1 2006/09/28 20:05:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.6.ebuild,v 1.2 2007/06/11 17:14:02 nixnut Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lksctp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lksctp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 # I don't known if *BSD has the support needed at all
 # hence the lockdown to glibc and linux26-headers
