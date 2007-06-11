@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.3 2007/05/23 17:30:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.4 2007/06/11 09:19:50 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -38,16 +38,16 @@ src_unpack() {
 	mkdir bin || die
 }
 
-ANT_TASKS="emma"
+EANT_ANT_TASKS="emma"
 EANT_BUILD_TARGET="package"
 EANT_GENTOO_CLASSPATH="commons-logging,commons-codec,commons-lang-2.1"
-EANT_EXTRA_ARGS="-Demma.dir=/usr/share/ant-core/lib/"
+EANT_EXTRA_ARGS="-Demma.dir=/usr/share/emma/lib/"
 
 RESTRICT="test"
 # two tests fail with maven, they work in HEAD
 src_test() {
 	local dcp="$(java-pkg_getjars --with-dependencies ${EANT_GENTOO_CLASSPATH})"
-	ANT_TASKS="ant-junit emma" eant run-tests \
+	ANT_TASKS="ant-junit emma" eant ${EANT_EXTRA_ARGS} run-tests \
 		-Dproject.classpath="${dcp}"
 }
 
