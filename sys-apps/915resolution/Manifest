@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 915resolution-0.5.3-freebsd.patch 2279 RMD160 3d9ea969c18041c881142f41741d1446a6b8bb8c SHA1 5ac9e2f01aa13470d935217bf5183b6a25e499ca SHA256 7a9ba1e0bdc123ea5dc661633dd7b660be9b35be7cae087b991fcf68ad90bb15
 MD5 33d92952b9038007f2037188edada840 files/915resolution-0.5.3-freebsd.patch 2279
 RMD160 3d9ea969c18041c881142f41741d1446a6b8bb8c files/915resolution-0.5.3-freebsd.patch 2279
@@ -37,3 +40,10 @@ SHA256 977bd888b239c8b0ce49a141d97478a6ce96e55bdc62b6c6630194b5b61df117 files/di
 MD5 e384f115c3773085943ac8408d14e5d2 files/digest-915resolution-0.5.3-r1 256
 RMD160 699b6640c9d4cc1a932c60f46627aac294aa5f2e files/digest-915resolution-0.5.3-r1 256
 SHA256 977bd888b239c8b0ce49a141d97478a6ce96e55bdc62b6c6630194b5b61df117 files/digest-915resolution-0.5.3-r1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGbK9IWt/XSf2CZdkRAtKuAJ9t5aOD/gyttNrQZi6T742ynbM5IACeMwqi
+x+rc9Ruc9v7IGn2axSkHutY=
+=Bq3o
+-----END PGP SIGNATURE-----
