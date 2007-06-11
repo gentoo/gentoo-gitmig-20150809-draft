@@ -3,10 +3,6 @@ EBUILD xfce4-sensors-0.10.0-r1.ebuild 825 RMD160 ea125b93e1c3a0bbbdf67631b6aecf0
 MD5 f66b21248f3a4526e26187c73b4f3d84 xfce4-sensors-0.10.0-r1.ebuild 825
 RMD160 ea125b93e1c3a0bbbdf67631b6aecf0577186d6c xfce4-sensors-0.10.0-r1.ebuild 825
 SHA256 5fc03466e7f69d3fe18bf7f124307d79bda83b1e3ec729ed6c8b14f05427a19c xfce4-sensors-0.10.0-r1.ebuild 825
-EBUILD xfce4-sensors-0.10.0.ebuild 463 RMD160 7f92f0f319d605e22445624db4d274c8afc7e196 SHA1 b47474233e896bb089ddd3b064080a2020a4c9d4 SHA256 7fdc180cbbfc823d11c3c796f3a82532817b764ed4f4361dcf576d5a426fe9bb
-MD5 23ca837f4efa3673517951d5bdfc9e83 xfce4-sensors-0.10.0.ebuild 463
-RMD160 7f92f0f319d605e22445624db4d274c8afc7e196 xfce4-sensors-0.10.0.ebuild 463
-SHA256 7fdc180cbbfc823d11c3c796f3a82532817b764ed4f4361dcf576d5a426fe9bb xfce4-sensors-0.10.0.ebuild 463
 MISC ChangeLog 3203 RMD160 7cc3fae4f6bd3b9b6135efc80b4f65e8cdb150f8 SHA1 325aa1fb9c582fff143a0928359e05552d45da4b SHA256 67c1bb737f325d4a6c0bb16f2507f0643d5cb3b33a49869d326b1cafa9679e02
 MD5 b1bec0091d41530caff2d205f7ce7ac6 ChangeLog 3203
 RMD160 7cc3fae4f6bd3b9b6135efc80b4f65e8cdb150f8 ChangeLog 3203
@@ -15,9 +11,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 1fe074a47a7c1c8c1ec2b725cb1f938c files/digest-xfce4-sensors-0.10.0 286
-RMD160 3fe1cf1bbfdfd0662eb9480f15459dc81bc4870d files/digest-xfce4-sensors-0.10.0 286
-SHA256 86164ed19698e0e1beda19e3f4a203e6d0f73111589c548eeb59a7efc5b99afc files/digest-xfce4-sensors-0.10.0 286
 MD5 1fe074a47a7c1c8c1ec2b725cb1f938c files/digest-xfce4-sensors-0.10.0-r1 286
 RMD160 3fe1cf1bbfdfd0662eb9480f15459dc81bc4870d files/digest-xfce4-sensors-0.10.0-r1 286
 SHA256 86164ed19698e0e1beda19e3f4a203e6d0f73111589c548eeb59a7efc5b99afc files/digest-xfce4-sensors-0.10.0-r1 286
