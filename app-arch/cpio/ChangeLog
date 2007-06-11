@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.58 2007/05/11 06:26:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.59 2007/06/11 03:50:37 vapier Exp $
+
+*cpio-2.8 (11 Jun 2007)
+
+  11 Jun 2007; Mike Frysinger <vapier@gentoo.org> +cpio-2.8.ebuild:
+  Version bump #181516 by teidakankan.
 
   11 May 2007; Joshua Kinard <kumba@gentoo.org> cpio-2.7-r1.ebuild:
   Stable on mips.
