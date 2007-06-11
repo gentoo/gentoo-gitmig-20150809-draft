@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.77 2007/06/11 11:40:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.78 2007/06/11 17:20:53 nixnut Exp $
+
+  11 Jun 2007; nixnut <nixnut@gentoo.org> man-pages-2.53.ebuild:
+  Stable on ppc wrt bug 181624
 
   11 Jun 2007; Jeroen Roovers <jer@gentoo.org> man-pages-2.53.ebuild:
   Stable for HPPA (bug #181624).
