@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/cksfv-1.3.9.ebuild,v 1.7 2007/05/05 14:09:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/cksfv-1.3.9.ebuild,v 1.8 2007/06/11 21:17:22 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://zakalwe.fi/~shd/foss/cksfv/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
