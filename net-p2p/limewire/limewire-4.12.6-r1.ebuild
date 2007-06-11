@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.12.6-r1.ebuild,v 1.4 2007/04/29 11:20:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.12.6-r1.ebuild,v 1.5 2007/06/11 17:03:43 betelgeuse Exp $
 
 inherit eutils java-pkg-2
 
@@ -22,7 +22,7 @@ COMMON_DEP="
 DEPEND="app-arch/unzip
 	${COMMON_DEP}"
 
-RDEPEND="virtual/jre
+RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
 S="${WORKDIR}/LimeWire"

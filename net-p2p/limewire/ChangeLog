@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.30 2007/04/29 11:20:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.31 2007/06/11 17:03:43 betelgeuse Exp $
+
+  11 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  limewire-4.12.6-r1.ebuild:
+  limewire needs >=virtual/jre-1.4 to run.
 
   29 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   limewire-4.12.6-r1.ebuild:
