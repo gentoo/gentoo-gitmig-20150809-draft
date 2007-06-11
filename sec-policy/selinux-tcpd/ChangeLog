@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-tcpd
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-tcpd/ChangeLog,v 1.1 2007/06/11 12:40:26 kaiowas Exp $
+
+*selinux-tcpd-20070329 (11 Jun 2007)
+
+  11 Jun 2007; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-tcpd-20070329.ebuild:
+  initial commit
+

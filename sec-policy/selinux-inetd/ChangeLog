@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-inetd
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-inetd/ChangeLog,v 1.1 2007/06/11 12:29:32 kaiowas Exp $
+
+*selinux-inetd-20070329 (11 Jun 2007)
+
+  11 Jun 2007; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-inetd-20070329.ebuild:
+  initial commit
+
