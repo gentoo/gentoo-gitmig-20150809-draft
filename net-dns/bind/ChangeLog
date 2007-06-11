@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.166 2007/06/10 23:52:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.167 2007/06/11 09:37:33 corsair Exp $
+
+  11 Jun 2007; Markus Rothe <corsair@gentoo.org> bind-9.4.1-r1.ebuild:
+  Stable on ppc64; bug #181556
 
   10 Jun 2007; Joshua Kinard <kumba@gentoo.org> bind-9.4.1-r1.ebuild:
   Marked unstable on mips, per #181556.
