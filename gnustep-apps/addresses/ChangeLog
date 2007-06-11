@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/addresses
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.6 2007/02/06 14:10:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.7 2007/06/11 15:49:08 voyageur Exp $
+
+  11 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -addresses-0.4.6.ebuild:
+  Remove old ebuild
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
