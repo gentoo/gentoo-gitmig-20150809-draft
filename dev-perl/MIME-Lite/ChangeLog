@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Lite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.14 2007/01/19 14:08:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.15 2007/06/11 15:26:03 ranger Exp $
+
+  11 Jun 2007; Brent Baude <ranger@gentoo.org> MIME-Lite-3.01.ebuild:
+  Marking MIME-Lite-3.01.ebuild for bug #181650
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   MIME-Lite-3.01.ebuild:
