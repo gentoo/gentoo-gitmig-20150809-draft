@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.7-r1.ebuild,v 1.3 2007/06/02 18:26:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.7-r1.ebuild,v 1.4 2007/06/11 21:04:32 dang Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://henplus.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 COMMON_DEPEND="=dev-java/commons-cli-1*
