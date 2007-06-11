@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/files/varnishd.initd,v 1.3 2007/05/19 12:00:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/files/varnishd.initd,v 1.4 2007/06/11 22:59:25 bangert Exp $
 
 depend() {
 	need net
@@ -9,12 +9,12 @@ depend() {
 
 start() {
 	ebegin "Starting varnish"
-	start-stop-daemon --quiet --start --exec /usr/sbin/varnishd -- ${VARNISHD_OPTS} &> /dev/null
+	start-stop-daemon --quiet --start --pidfile /var/run/varnishd.pid --exec /usr/sbin/varnishd -- -P /var/run/varnishd.pid ${VARNISHD_OPTS} &> /dev/null
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping varnish"
-	start-stop-daemon --quiet --stop --name varnishd
+	start-stop-daemon --quiet --stop --pidfile /var/run/varnishd.pid
 	eend $?
 }

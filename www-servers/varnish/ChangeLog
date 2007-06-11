@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.8 2007/05/21 07:14:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.9 2007/06/11 22:59:25 bangert Exp $
+
+  11 Jun 2007; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd,
+  -varnish-1.0.3.ebuild:
+  remove old version - init script creates a pidfile
 
 *varnish-1.0.4 (21 May 2007)
 
