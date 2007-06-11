@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.7.12.ebuild,v 1.1 2007/05/07 17:17:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.7.12.ebuild,v 1.2 2007/06/11 18:25:20 dang Exp $
 
 inherit gnome2 eutils
 
@@ -35,4 +35,10 @@ pkg_setup() {
 	G2CONF="$(use_with nvidia) \
 			$(use_with lm_sensors libsensors) \
 			$(use_enable libnotify)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-test-fix.patch
 }
