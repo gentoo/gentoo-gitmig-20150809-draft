@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dcetest/dcetest-2.0.ebuild,v 1.4 2005/05/10 11:16:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dcetest/dcetest-2.0.ebuild,v 1.5 2007/06/11 17:02:40 nixnut Exp $
 
 DESCRIPTION="dcetest is a clone of the Windows rpcinfo"
 HOMEPAGE="http://www.atstake.com/research/tools/info_gathering/"
 SRC_URI="http://www.atstake.com/research/tools/info_gathering/dcetest.tar"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 DEPEND="sys-apps/sed virtual/libc"
 RDEPEND="virtual/libc"
