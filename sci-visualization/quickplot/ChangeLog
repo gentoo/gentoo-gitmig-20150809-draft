@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/quickplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.3 2007/01/06 20:11:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.4 2007/06/11 08:39:33 cryos Exp $
+
+  11 Jun 2007; Marcus D. Hanwell <cryos@gentoo.org> quickplot-0.8.13.ebuild:
+  Marked stable on amd64.
 
 *quickplot-0.8.13 (06 Jan 2007)
 
