@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.80 2007/06/05 10:31:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.81 2007/06/11 22:10:43 phreak Exp $
+
+*git-sources-2.6.22_rc4-r3 (11 Jun 2007)
+
+  11 Jun 2007; Christian Heim <phreak@gentoo.org>
+  +git-sources-2.6.22_rc4-r3.ebuild:
+  Linux 2.6.22-rc4-git3.
 
 *git-sources-2.6.22_rc4 (05 Jun 2007)
 
