@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.66 2007/05/23 17:36:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.67 2007/06/11 15:50:20 betelgeuse Exp $
+
+  11 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> netbeans-5.5-r6.ebuild:
+  Remove build requirement on sun-jmx as Netbeans builds just fine with the
+  jar deleted.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> netbeans-5.5-r6.ebuild:
   Add ~x86-fbsd keyword. Bug #176906.

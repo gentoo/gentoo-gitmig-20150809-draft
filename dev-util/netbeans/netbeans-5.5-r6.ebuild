@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.6 2007/05/23 17:36:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.7 2007/06/11 15:50:20 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -76,7 +76,6 @@ DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 	>=dev-java/prefuse-20060715_beta
 	>=dev-java/rome-0.6
 	=dev-java/servletapi-2.3*
-	dev-java/sun-jmx
 	=dev-java/xml-xmlbeans-1*
 	>=dev-util/pmd-1.3
 	${COMMON_DEPEND}"
@@ -139,7 +138,7 @@ src_compile() {
 		-name "*.exe" -o \
 		-name "*.cmd" -o \
 		-name "*.bat" -o \
-		-name "*.dll"	  \
+		-name "*.dll" \
 		| xargs rm -f
 
 	# Removing external stuff. They are api docs from external libs.
@@ -286,9 +285,10 @@ place_unpack_symlinks() {
 	cd ${S}/nbbuild/external
 	java-pkg_jar-from javahelp jhall.jar jhall-2.0_03.jar
 
-	einfo "Symlinking jars for serverplugins"
-	cd ${S}/serverplugins/external
-	java-pkg_jar-from --build-only sun-jmx jmxri.jar jmxremote.jar
+	cd "${S}/serverplugins/external"
+	# Builds just fine without this. Maybe lefover from times when NB could be
+	# built with 1.4?
+	rm -v jmxremote.jar || die
 
 	einfo "Symlinking jars for tasklist"
 	cd ${S}/tasklist/external
