@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.35 2007/03/18 04:20:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.36 2007/06/11 05:46:57 opfer Exp $
+
+  11 Jun 2007; Christian Faulhammer <opfer@gentoo.org> gld-1.7.ebuild:
+  stable x86, bug 160067
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> gld-1.5.2.ebuild,
   gld-1.6.ebuild, gld-1.7.ebuild:
