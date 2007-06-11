@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.185 2007/06/02 04:59:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.186 2007/06/11 18:31:33 dang Exp $
+
+*gedit-2.18.1-r1 (11 Jun 2007)
+
+  11 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> +gedit-2.18.1-r1.ebuild:
+  Add proper use flags for python and spell; bug #181419
 
   02 Jun 2007; <leio@gentoo.org> -gedit-2.16.2.ebuild, -gedit-2.18.0.ebuild:
   Remove old
