@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.15 2007/04/17 09:43:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.16 2007/06/12 11:29:48 zzam Exp $
+
+  12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-weatherng-0.0.8_pre3.ebuild:
+  Added missing inherit eutils.
 
   17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/rc-addon-0.0.8.sh, files/rc-addon.sh:
