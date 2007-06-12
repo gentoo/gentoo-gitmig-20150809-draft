@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/cultivation-7.ebuild,v 1.3 2007/05/22 02:04:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cultivation/cultivation-7.ebuild,v 1.4 2007/06/12 13:04:43 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_P=Cultivation_${PV}_UnixSource
 DESCRIPTION="A game about the interactions within a gardening community"
