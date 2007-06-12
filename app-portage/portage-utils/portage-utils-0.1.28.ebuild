@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.28.ebuild,v 1.1 2007/06/03 19:44:31 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.28.ebuild,v 1.2 2007/06/12 15:10:45 flameeyes Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="small and fast portage helper tools written in C"
 HOMEPAGE="http://www.gentoo.org/"
@@ -14,6 +14,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/qmerge-posix-180871.patch"
+}
 
 src_compile() {
 	tc-export CC
