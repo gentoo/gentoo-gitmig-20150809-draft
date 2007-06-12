@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/charva
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.10 2006/07/06 03:39:54 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.11 2007/06/12 11:38:23 betelgeuse Exp $
+
+  12 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> charva-1.0.1-r1.ebuild:
+  Use java-pkg_dojavadoc and add source and examples use flags.
 
 *charva-1.0.1-r1 (06 Jul 2006)
 
