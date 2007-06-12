@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.3.ebuild,v 1.3 2007/06/11 19:07:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.3.ebuild,v 1.4 2007/06/12 22:01:26 jokey Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://orbis-terrarum.net/~robbat2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE="samba irixpasswd automount test"
 DEPEND="net-nds/openldap
 	sys-apps/gawk

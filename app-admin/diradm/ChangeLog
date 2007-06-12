@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.29 2007/06/11 19:07:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.30 2007/06/12 22:01:26 jokey Exp $
+
+  12 Jun 2007; Markus Ullmann <jokey@gentoo.org> diradm-2.9.3.ebuild:
+  Stable on x86 wrt bug #181562
 
   11 Jun 2007; Markus Rothe <corsair@gentoo.org> diradm-2.9.3.ebuild:
   Stable on ppc64; bug #181562
