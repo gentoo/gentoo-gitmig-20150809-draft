@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.12.ebuild,v 1.4 2007/01/03 19:13:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.12.ebuild,v 1.5 2007/06/12 12:55:54 genone Exp $
 
 inherit eutils
 
@@ -41,9 +41,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "mlmmj comes with serveral webinterfaces:"
-	einfo "- One for user subscribing/unsubscribing"
-	einfo "- One for admin tasks"
-	einfo "both available in a php and perl module."
-	einfo "For more info have a look in /usr/share/mlmmj"
+	elog "mlmmj comes with serveral webinterfaces:"
+	elog "- One for user subscribing/unsubscribing"
+	elog "- One for admin tasks"
+	elog "both available in a php and perl module."
+	elog "For more info have a look in /usr/share/mlmmj"
 }

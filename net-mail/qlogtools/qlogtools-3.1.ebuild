@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.6 2006/12/02 21:49:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.7 2007/06/12 13:01:30 genone Exp $
 
 inherit eutils toolchain-funcs
 
@@ -36,5 +36,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please see /usr/share/doc/${PF}/README for configuration information"
+	elog "Please see /usr/share/doc/${PF}/README for configuration information"
 }

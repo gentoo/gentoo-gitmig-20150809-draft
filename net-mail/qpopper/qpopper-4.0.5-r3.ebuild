@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.2 2005/06/05 18:04:06 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.3 2007/06/12 13:06:20 genone Exp $
 
 inherit eutils
 
@@ -114,28 +114,28 @@ src_install() {
 }
 
 pkg_postinst () {
-	einfo "PS. If you use APOP service to authenticate "
-	einfo "the users you have to follow these steps: "
-	einfo ""
-	einfo "1) create a new account named pop"
-	einfo "2) change the owner and permissions of"
-	einfo "   /usr/sbin/popauth:"
-	einfo "   # chown pop /usr/sbin/popauth"
-	einfo "   # chmod u+s /usr/sbin/popauth"
-	einfo "3) initialize the authentication database:"
-	einfo "   # popauth -init"
-	einfo "4) new users can be added by root:"
-	einfo "   # popauth -user <user>"
-	einfo "   or removed:"
-	einfo "   # popauth -delete <user>"
-	einfo "   Other users can add themeselves or change their"
-	einfo "   password with the command popauth"
-	einfo "5) scripts or other non-interactive processes can add or change"
-	einfo "   the passwords with the following command:"
-	einfo "   # popauth -user <user> <password>"
-	einfo ""
-	einfo "to enable qpopper in netkit-inetd just add this in one line"
-	einfo "pop-3 stream tcp nowait root	/usr/sbin/tcpd
+	elog "PS. If you use APOP service to authenticate "
+	elog "the users you have to follow these steps: "
+	elog ""
+	elog "1) create a new account named pop"
+	elog "2) change the owner and permissions of"
+	elog "   /usr/sbin/popauth:"
+	elog "   # chown pop /usr/sbin/popauth"
+	elog "   # chmod u+s /usr/sbin/popauth"
+	elog "3) initialize the authentication database:"
+	elog "   # popauth -init"
+	elog "4) new users can be added by root:"
+	elog "   # popauth -user <user>"
+	elog "   or removed:"
+	elog "   # popauth -delete <user>"
+	elog "   Other users can add themeselves or change their"
+	elog "   password with the command popauth"
+	elog "5) scripts or other non-interactive processes can add or change"
+	elog "   the passwords with the following command:"
+	elog "   # popauth -user <user> <password>"
+	elog ""
+	elog "to enable qpopper in netkit-inetd just add this in one line"
+	elog "pop-3 stream tcp nowait root	/usr/sbin/tcpd
 		/usr/sbin/in.qpopper -f /etc/qpopper.conf"
-	einfo "into your /etc/inetd.conf"
+	elog "into your /etc/inetd.conf"
 }

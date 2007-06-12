@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.6 2007/01/14 22:39:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.7 2007/06/12 13:10:31 genone Exp $
 
 inherit toolchain-funcs eutils
 
@@ -56,11 +56,11 @@ pkg_postinst() {
 	ewarn "CAUTION: courier-authlib does not support vmailmgr!"
 	ewarn "If you want to use vmailmgr in conjuction with courier-imap,"
 	ewarn "you should use imapfront-auth found in net-mail/mailfront package."
-	echo
+	ewarn
 	ewarn "vcheckquota and vpopbull are now available through vmailmgr-tools package."
 	ewarn "If you need them, run the following command:"
 	ewarn "   emerge net-mail/vmailmgr-tools"
 	echo
-	einfo "To start vmailmgrd you need to link"
-	einfo "/var/lib/supervise/vmailmgrd to /service"
+	elog "To start vmailmgrd you need to link"
+	elog "/var/lib/supervise/vmailmgrd to /service"
 }

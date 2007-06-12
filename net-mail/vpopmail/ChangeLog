@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.79 2007/04/28 17:34:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.80 2007/06/12 13:14:46 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> vpopmail-5.4.16.ebuild:
+  Replacing einfo with elog
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> vpopmail-5.4.16.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)

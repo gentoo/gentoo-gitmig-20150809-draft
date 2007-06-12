@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/relay-ctrl
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.24 2006/06/06 01:37:00 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.25 2007/06/12 13:07:32 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> relay-ctrl-3.1.1-r2.ebuild:
+  Replacing einfo with elog
 
   06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   relay-ctrl-3.1.1-r2.ebuild:

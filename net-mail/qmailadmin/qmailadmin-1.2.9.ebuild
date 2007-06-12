@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.9.ebuild,v 1.2 2006/04/12 00:42:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.9.ebuild,v 1.3 2007/06/12 13:04:10 genone Exp $
 
 inherit eutils
 
@@ -83,6 +83,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you would like support for ezmlm mailing lists inside qmailadmin,"
-	einfo "please emerge some variant of ezmlm-idx."
+	elog "If you would like support for ezmlm mailing lists inside qmailadmin,"
+	elog "please emerge some variant of ezmlm-idx."
 }

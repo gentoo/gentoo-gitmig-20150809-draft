@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.8 2006/02/20 20:56:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.9 2007/06/12 13:02:46 genone Exp $
 
 inherit toolchain-funcs
 
@@ -39,7 +39,7 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "Edit qmail-notify.cron in /etc/cron.hourly"
-	einfo "to activate qmail-notify!"
+	elog "Edit qmail-notify.cron in /etc/cron.hourly"
+	elog "to activate qmail-notify!"
 	echo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.12 2007/04/28 17:34:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.13 2007/06/12 13:14:46 genone Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -205,20 +205,20 @@ pkg_postinst() {
 
 	if use mysql ; then
 		echo
-		einfo "You have 'mysql' turned on in your USE"
-		einfo "Vpopmail needs a VALID MySQL USER. Let's call it 'vpopmail'"
-		einfo "You MUST add it and then specify its passwd in the /etc/vpopmail.conf file"
-		echo
-		einfo "First log into mysql as your mysql root user and pass. Then:"
-		einfo "> create database vpopmail;"
-		einfo "> use mysql;"
-		einfo "> grant select, insert, update, delete, create, drop on vpopmail.* to"
-		einfo "	 vpopmail@localhost identified by 'your password';"
-		einfo "> flush privileges;"
-		echo
-		einfo "If you have problems with vpopmail not accepting mail properly,"
-		einfo "please ensure that /etc/vpopmail.conf is chmod 640 and"
-		einfo "owned by root:vpopmail"
+		elog "You have 'mysql' turned on in your USE"
+		elog "Vpopmail needs a VALID MySQL USER. Let's call it 'vpopmail'"
+		elog "You MUST add it and then specify its passwd in the /etc/vpopmail.conf file"
+		elog
+		elog "First log into mysql as your mysql root user and pass. Then:"
+		elog "> create database vpopmail;"
+		elog "> use mysql;"
+		elog "> grant select, insert, update, delete, create, drop on vpopmail.* to"
+		elog "	 vpopmail@localhost identified by 'your password';"
+		elog "> flush privileges;"
+		elog
+		elog "If you have problems with vpopmail not accepting mail properly,"
+		elog "please ensure that /etc/vpopmail.conf is chmod 640 and"
+		elog "owned by root:vpopmail"
 	fi
 	# do this for good measure
 	if [ -e /etc/vpopmail.conf ] ; then
@@ -232,8 +232,8 @@ pkg_postinst() {
 pkg_postrm() {
 	vpopmail_set_homedir
 
-	einfo "The vpopmail DATA will NOT be removed automatically."
-	einfo "You can delete them manually by removing the ${VPOP_HOME} directory."
+	elog "The vpopmail DATA will NOT be removed automatically."
+	elog "You can delete them manually by removing the ${VPOP_HOME} directory."
 }
 
 upgradewarning() {

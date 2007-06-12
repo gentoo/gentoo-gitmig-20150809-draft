@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.13 2007/04/28 17:34:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.14 2007/06/12 13:08:38 genone Exp $
 
 inherit eutils
 
@@ -84,6 +84,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Read the tpop3d.conf manpage"
-	einfo "Please create /etc/tpop3d/tpop3d.conf to fit your Configuration"
+	elog "Read the tpop3d.conf manpage"
+	elog "Please create /etc/tpop3d/tpop3d.conf to fit your Configuration"
 }

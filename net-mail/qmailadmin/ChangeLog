@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmailadmin
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.16 2006/11/15 16:10:45 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.17 2007/06/12 13:04:10 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> qmailadmin-1.2.1.ebuild,
+  qmailadmin-1.2.1-r1.ebuild, qmailadmin-1.2.9.ebuild,
+  qmailadmin-1.2.10.ebuild:
+  Replacing einfo with elog
 
   15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   qmailadmin-1.2.10.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1.ebuild,v 1.8 2007/03/29 14:59:59 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1.ebuild,v 1.9 2007/06/12 12:51:20 genone Exp $
 
 inherit toolchain-funcs
 
@@ -32,9 +32,9 @@ src_install() {
 pkg_postinst() {
 	if [[ -e /etc/mailer.conf ]]
 	then
-		einfo
-		einfo "The mailwrapper config file has moved to /etc/mail/mailer.conf,"
-		einfo "so the /etc/mailer.conf file on your system is no longer used."
-		einfo
+		elog
+		elog "The mailwrapper config file has moved to /etc/mail/mailer.conf,"
+		elog "so the /etc/mailer.conf file on your system is no longer used."
+		elog
 	fi
 }

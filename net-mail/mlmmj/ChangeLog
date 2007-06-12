@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mlmmj
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.21 2007/04/11 00:18:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.22 2007/06/12 12:55:54 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> mlmmj-1.2.4.ebuild,
+  mlmmj-1.2.8.ebuild, mlmmj-1.2.9.ebuild, mlmmj-1.2.10.ebuild,
+  mlmmj-1.2.11.ebuild, mlmmj-1.2.11-r1.ebuild, mlmmj-1.2.12.ebuild,
+  mlmmj-1.2.13.ebuild, mlmmj-1.2.14.ebuild:
+  Replacing einfo with elog
 
 *mlmmj-1.2.14 (11 Apr 2007)
 
