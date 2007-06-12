@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.11 2007/05/16 17:37:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.12 2007/06/12 12:36:11 zzam Exp $
 
 IUSE="doc"
 
@@ -20,6 +20,23 @@ DEPEND="doc? (
 		media-gfx/graphviz
 	)"
 RDEPEND=""
+
+pkg_setup() {
+	if use doc; then
+		# Making the documentation requires that /usr/bin/dot from
+		# media-libs/graphviz supports PNG output.
+		# This is an automagic dependency :(, Bug #181147
+		# Check that /usr/bin/dot supports png by calling it with
+		# an unsupported format (-Txxx) to get a list of supported formats
+
+		if /usr/bin/dot -Txxx 2>&1 | grep -q png ; then
+			# dot supports png
+			:
+		else
+			die "You need to recompile media-gfx/graphviz with png support."
+		fi
+	fi
+}
 
 src_compile() {
 	econf --enable-release || die "econf failed"
