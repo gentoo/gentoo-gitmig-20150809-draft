@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-init.d,v 1.2 2007/05/18 07:39:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-init.d,v 1.3 2007/06/12 08:52:16 zzam Exp $
 
 checkconfig() {
 	if [ ! -f /etc/conf.d/lm_sensors ]; then
@@ -23,11 +23,11 @@ start() {
 	if [ "${LOADMODULES}" = "yes" -a -f /proc/modules ]; then
 		einfo "Loading lm_sensors modules..."
 
-		mount | grep sysfs &> /dev/null
+		mount | grep sysfs >/dev/null 2>&1
 		if [ ${?} = 0 ]; then
 			if ! ( [ -e /sys/i2c ] || [ -e /sys/bus/i2c ] ); then
 				ebegin "  Loading i2c-core"
-				modprobe i2c-core &> /dev/null
+				modprobe i2c-core >/dev/null 2>&1
 				if [ ${?} != 0 ]; then
 					eerror "    Could not load i2c-core!"
 					eend 1
@@ -37,7 +37,7 @@ start() {
 			fi
 		elif ! [ -e /proc/sys/dev/sensors ]; then
 			ebegin "  Loading i2c-proc"
-			modprobe i2c-proc &> /dev/null
+			modprobe i2c-proc >/dev/null 2>&1
 			if [ ${?} != 0 ]; then
 				eerror "    Could not load i2c-proc!"
 				eend 1
@@ -54,7 +54,7 @@ start() {
 				break
 			fi
 			ebegin "  Loading ${module}"
-			modprobe ${module} ${module_args} &> /dev/null
+			modprobe ${module} ${module_args} >/dev/null 2>&1
 			eend $?
 			i=$(($i+1))
 		done
@@ -67,7 +67,7 @@ start() {
 		fi
 
 		ebegin "Initializing sensors"
-		/usr/bin/sensors -s &> /dev/null
+		/usr/bin/sensors -s >/dev/null 2>&1
 		eend ${?}
 	fi
 }
@@ -92,13 +92,13 @@ stop() {
 			i=$(($i-1))
 			module=`eval echo '$'MODULE_${i}`
 			ebegin "  Unloading ${module}"
-			rmmod ${module} &> /dev/null
+			rmmod ${module} >/dev/null 2>&1
 			eend $?
 		done
 
 		if [ -e /proc/sys/dev/sensors ] ; then
 			ebegin "  Unloading i2c-proc"
-			rmmod i2c-proc &> /dev/null
+			rmmod i2c-proc >/dev/null 2>&1
 			eend $?
 		fi
 	fi

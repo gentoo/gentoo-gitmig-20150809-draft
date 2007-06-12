@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.72 2007/06/05 18:43:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.73 2007/06/12 08:52:16 zzam Exp $
+
+  12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/lm_sensors-init.d:
+  Last piece in init-script busybox/dash compatibility, replacing &>
+  redirections.
 
   05 Jun 2007; Marien Zwart <marienz@gentoo.org> lm_sensors-2.10.1.ebuild,
   lm_sensors-2.10.2.ebuild, lm_sensors-2.10.3.ebuild:
