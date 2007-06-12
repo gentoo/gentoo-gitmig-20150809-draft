@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.99 2007/06/12 16:25:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.100 2007/06/12 17:24:37 alonbl Exp $
+
+  12 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/suspend2-2.2.9-fixups.patch,
+  -files/suspend2-sources-2.6.19-vesafb.patch,
+  -suspend2-sources-2.6.18-r1.ebuild, -suspend2-sources-2.6.18-r3.ebuild,
+  -suspend2-sources-2.6.19-r2.ebuild, -suspend2-sources-2.6.19-r3.ebuild,
+  -suspend2-sources-2.6.20-r5.ebuild, -suspend2-sources-2.6.21-r4.ebuild:
+  Cleanup
 
   12 Jun 2007; Markus Ullmann <jokey@gentoo.org>
   suspend2-sources-2.6.20-r6.ebuild:
