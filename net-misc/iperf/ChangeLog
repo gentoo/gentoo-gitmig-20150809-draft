@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.22 2007/04/16 07:57:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.23 2007/06/12 17:54:39 lavajoe Exp $
+
+  12 Jun 2007; Joe Peterson <lavajoe@gentoo.org> iperf-2.0.2.ebuild:
+  Add ~x86-fbsd keyword
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> iperf-2.0.2.ebuild:
   Stable on ppc64
