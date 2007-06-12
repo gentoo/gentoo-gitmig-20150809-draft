@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-1.9.1.ebuild,v 1.1 2007/05/30 22:22:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-1.9.1.ebuild,v 1.2 2007/06/12 13:29:09 nyhm Exp $
 
-inherit autotools gnome2-utils games
+inherit autotools eutils gnome2-utils games
 
 DESCRIPTION="A rewrite for GNOME of the Windows card game WUNO"
 HOMEPAGE="http://sourceforge.net/projects/gnono/"
@@ -10,10 +10,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="gnome-base/libgnomeui"
+RDEPEND="gnome-base/libgnomeui
+	virtual/libintl"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
