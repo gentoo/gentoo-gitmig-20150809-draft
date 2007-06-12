@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.22 2007/06/12 03:56:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.23 2007/06/12 13:55:14 armin76 Exp $
+
+  12 Jun 2007; Raúl Porcel <armin76@gentoo.org> tre-0.7.4.ebuild:
+  Add ~alpha wrt #180969
 
   12 Jun 2007; Jeroen Roovers <jer@gentoo.org> tre-0.7.4.ebuild:
   Marked ~hppa (bug #180969).
