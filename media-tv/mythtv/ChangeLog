@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.155 2007/06/12 15:48:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.156 2007/06/12 15:49:37 cardoe Exp $
+
+  12 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  files/mythbackend-0.18.2.rc:
+  de-bashify by Matthias Schwarzott <zzam@gentoo.org>
 
   12 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.20.1_p13344.ebuild:
