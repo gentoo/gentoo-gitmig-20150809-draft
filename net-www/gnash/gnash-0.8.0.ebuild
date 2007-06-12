@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.1 2007/06/11 19:57:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.2 2007/06/12 11:15:09 opfer Exp $
 
 inherit nsplugins kde-functions qt3 multilib
 set-kdedir
@@ -54,7 +54,7 @@ RDEPEND="
 
 pkg_setup() {
 	if use agg && use kde; then
-		eerror "Building klash with the agg based renderer is not supportet"
+		eerror "Building klash with the agg based renderer is not supported"
 		eerror "Please USE -kde or -agg"
 		die "kde and agg not supported at the same time"
 	fi
@@ -112,9 +112,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	use nsplugin && inst_plugin /opt/netscape/plugins/libgnashplugin.so \
-		|| rm -rf ${D}/opt
+		|| rm -rf "${D}/opt"
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
