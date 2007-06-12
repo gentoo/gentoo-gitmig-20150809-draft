@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.14 2007/06/12 20:05:36 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.15 2007/06/12 20:12:30 lack Exp $
+
+*rox-lib-2.0.4 (12 Jun 2007)
+
+  12 Jun 2007; Jim Ramsay <lack@gentoo.org> +rox-lib-2.0.4.ebuild:
+  Version bump - Rox-Lib-2.0.4 is released
 
 *rox-lib-2.0.3-r3 (12 Jun 2007)
 
