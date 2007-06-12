@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.27 2007/06/12 15:54:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.28 2007/06/12 16:04:19 zzam Exp $
+
+  12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/0.6.0-r7/record-50-noad.sh:
+  Corrected last bash specific part.
 
   12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/0.6.0-r7/record-50-noad.sh:

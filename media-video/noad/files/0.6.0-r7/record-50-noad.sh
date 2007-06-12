@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r7/record-50-noad.sh,v 1.4 2007/06/12 15:54:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r7/record-50-noad.sh,v 1.5 2007/06/12 16:04:19 zzam Exp $
 #
 # Joerg Bornkessel <hd_brummy@gentoo.org>
 # Mathias Schwarzott <zzam@gentoo.org>
@@ -58,7 +58,7 @@ fi
 
 : ${NOAD_NICE_LEVEL:=18}
 if [ "${NOAD_NICE_LEVEL}" != "no" ]; then
-	NOAD_NICE_LEVEL=$((NOAD_NICE_LEVEL+0))
+	NOAD_NICE_LEVEL=$(($NOAD_NICE_LEVEL+0))
 	CMD="nice -n ${NOAD_NICE_LEVEL} ${CMD}"
 fi
 
