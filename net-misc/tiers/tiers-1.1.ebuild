@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.6 2007/06/10 22:28:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.7 2007/06/12 21:21:39 jokey Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.isi.edu/nsnam/dist/topogen/${MY_P}.tar.gz
 		 http://www.isi.edu/nsnam/dist/topogen/tiers2ns-lan.awk"
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 DEPEND="sys-devel/gcc virtual/libc"
 RDEPEND="sys-apps/gawk sci-visualization/gnuplot virtual/libc"
