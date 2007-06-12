@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.5.ebuild,v 1.4 2007/06/07 11:17:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.5.ebuild,v 1.5 2007/06/12 00:52:31 angelos Exp $
 
 inherit apache-module
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="Apache2 bandwidth quota and throttling module."
 HOMEPAGE="http://cband.linux.pl/"
