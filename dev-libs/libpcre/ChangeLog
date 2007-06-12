@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.91 2007/06/12 13:24:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.92 2007/06/12 13:36:44 gustavoz Exp $
+
+  12 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> libpcre-7.1.ebuild:
+  Keyworded ~sparc wrt #181670
 
   12 Jun 2007; Raúl Porcel <armin76@gentoo.org> libpcre-7.1.ebuild:
   Add ~alpha/~ia64 wrt #181670
