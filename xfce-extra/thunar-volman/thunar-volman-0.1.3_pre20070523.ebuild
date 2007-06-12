@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.1.3_pre20070523.ebuild,v 1.3 2007/05/23 15:08:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.1.3_pre20070523.ebuild,v 1.4 2007/06/12 19:26:19 drac Exp $
 
 inherit eutils xfce44
 
@@ -10,7 +10,7 @@ DESCRIPTION="Thunar volume management"
 HOMEPAGE="http://foo-projects.org/~benny/projects/thunar-volman"
 SRC_URI="http://dev.gentooexperimental.org/~drac/distfiles/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND="dev-libs/dbus-glib
