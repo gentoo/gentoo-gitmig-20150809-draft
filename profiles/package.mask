@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7359 2007/06/11 15:35:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7360 2007/06/12 08:56:19 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Christian Faulhammer <opfer@gentoo.org> (12 Jun 2007)
+# mask for removal:
+# upstream dead, does not work with current Emacs 22
+# replacement is app-emacs/slime{,-cvs}
+app-emacs/ilisp
+app-emacs/ilisp-cvs
 
 # MATSUU Takuto <matsuu@gentoo.org> (12 Jun 2007)
 # Mask alpha versions
