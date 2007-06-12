@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.1 2007/06/10 05:00:02 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.2 2007/06/12 05:41:56 lu_zero Exp $
 
 inherit font
 
@@ -9,7 +9,7 @@ MY_PV="0.2"
 DESCRIPTION="A GPL-2 TrueType font replacement, courtesy of Red Hat."
 SRC_URI="https://www.redhat.com/f/fonts/${P}.tar.gz"
 HOMEPAGE="http://www.redhat.com"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="GPL-2-with-exceptions"
 IUSE="X"
