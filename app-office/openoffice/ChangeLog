@@ -1,6 +1,16 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.324 2007/06/07 09:54:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.325 2007/06/12 13:58:38 suka Exp $
+
+*openoffice-2.2.1 (12 Jun 2007)
+
+  12 Jun 2007; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.2.1/disable-regcomp-java.diff,
+  +files/2.2.1/disable-regcomp-python.diff, +files/2.2.1/ooo-env_log.diff,
+  +files/2.2.1/gentoo-2.2.1.diff, +files/2.2.1/regcompapply.diff,
+  +openoffice-2.2.1.ebuild:
+  Update to OpenOffice.org 2.2.1, this is a bugfix release, so no new features
+  to see
 
   07 Jun 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.2.0.ebuild:
