@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/wop-0.4.3-r1.ebuild,v 1.1 2007/04/27 17:20:57 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/wop-0.4.3-r1.ebuild,v 1.2 2007/06/12 13:00:00 nyhm Exp $
 
-inherit eutils toolchain-funcs games 
+inherit eutils toolchain-funcs games
 
 MY_DATA_V="2005-12-21"
 MY_DATA_P="${PN}data-${MY_DATA_V}"
