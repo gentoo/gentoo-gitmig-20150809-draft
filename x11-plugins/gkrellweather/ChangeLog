@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellweather
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.29 2007/06/02 17:02:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.30 2007/06/12 21:32:02 lack Exp $
+
+  12 Jun 2007; Jim Ramsay <lack@gentoo.org> -gkrellweather-2.0.6.ebuild:
+  Old version cleanup
 
   02 Jun 2007; Raúl Porcel <armin76@gentoo.org> gkrellweather-2.0.7.ebuild:
   alpha stable wrt #176144
