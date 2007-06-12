@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.151 2007/06/11 13:02:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.152 2007/06/12 23:20:25 angelos Exp $
+
+  12 Jun 2007; Christoph Mende <angelos@gentoo.org> webmin-1.350.ebuild:
+  Stable on amd64 wrt security bug 181385
 
   11 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> webmin-1.350.ebuild:
   Stable on sparc wrt security #181385
