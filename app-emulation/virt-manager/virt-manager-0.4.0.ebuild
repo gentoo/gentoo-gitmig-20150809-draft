@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.4.0.ebuild,v 1.1 2007/06/10 06:08:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.4.0.ebuild,v 1.2 2007/06/12 06:45:26 dberkholz Exp $
 
 inherit eutils gnome2
 
@@ -39,6 +39,12 @@ pkg_setup() {
 
 	if ! built_with_use dev-libs/libxml2 python; then
 		local msg="You must install libxml2 with USE=python."
+		eerror "$msg"
+		die "$msg"
+	fi
+
+	if ! built_with_use x11-libs/vte python; then
+		local msg="You must install vte with USE=python."
 		eerror "$msg"
 		die "$msg"
 	fi
