@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2-r1.ebuild,v 1.1 2007/04/07 01:08:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2-r1.ebuild,v 1.2 2007/06/12 12:12:32 genone Exp $
 
 inherit autotools eutils multilib
 
@@ -250,10 +250,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Authdaemond is no longer provided by this package."
-	einfo "Authentication libraries are now in courier-authlib."
-	einfo "For a quick-start howto please refer to:"
-	einfo "/usr/share/doc/${P}/${PN}-gentoo.readme.gz"
+	elog "Authdaemond is no longer provided by this package."
+	elog "Authentication libraries are now in courier-authlib."
+	elog "For a quick-start howto please refer to:"
+	elog "/usr/share/doc/${P}/${PN}-gentoo.readme.gz"
 	# Some users have been reporting that permissions on this directory were
 	# getting scrambled, so let's ensure that they are sane.
 	chmod 0755 "${ROOT}/usr/$(get_libdir)/${PN}" || die "Failed to ensure sane permissions on ${ROOT}/usr/$(get_libdir)/${PN}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.14 2007/01/05 08:51:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.15 2007/06/12 12:12:32 genone Exp $
 
 inherit eutils
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -296,10 +296,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Authdaemond is no longer provided this package."
-	einfo "athentication libraries are from courier-authlib"
-	einfo "for a quick start please refer to"
-	einfo "/usr/share/doc/${P}/courier-imap-gentoo.readme.gz"
+	elog "Authdaemond is no longer provided this package."
+	elog "authentication libraries are from courier-authlib"
+	elog "for a quick start please refer to"
+	elog "/usr/share/doc/${P}/courier-imap-gentoo.readme.gz"
 	# some users have been reporting that permissions on this directory were getting
 	# scrambled, so let's ensure that they are sane.
 	chmod 755 ${ROOT}/usr/$(get_libdir)/courier-imap || die "Failed to ensure sane permissions"

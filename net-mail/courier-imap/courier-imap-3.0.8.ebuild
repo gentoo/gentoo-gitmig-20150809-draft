@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.21 2007/01/05 08:51:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.22 2007/06/12 12:12:32 genone Exp $
 
 inherit eutils
 
@@ -309,9 +309,9 @@ src_install() {
 pkg_postinst() {
 	# rebuild init deps to include deps on authdaemond
 	/etc/init.d/depscan.sh
-	einfo "Make sure to change /etc/courier-imap/authdaemond.conf if"
-	einfo "you would like to use something other than the"
-	einfo "authdaemond.plain authenticator"
+	elog "Make sure to change /etc/courier-imap/authdaemond.conf if"
+	elog "you would like to use something other than the"
+	elog "authdaemond.plain authenticator"
 }
 
 src_test() {

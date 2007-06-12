@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1-r1.ebuild,v 1.4 2007/01/05 08:51:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1-r1.ebuild,v 1.5 2007/06/12 12:12:32 genone Exp $
 
 inherit eutils
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -316,10 +316,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Authdaemond is no longer provided this package."
-	einfo "athentication libraries are from courier-authlib"
-	einfo "for a quick start please refer to"
-	einfo "/usr/share/doc/${P}/courier-imap-gentoo.readme.gz"
+	elog "Authdaemond is no longer provided this package."
+	elog "athentication libraries are from courier-authlib"
+	elog "for a quick start please refer to"
+	elog "/usr/share/doc/${P}/courier-imap-gentoo.readme.gz"
 }
 
 src_test() {
