@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.2-r1.ebuild,v 1.4 2006/10/24 03:30:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.2-r1.ebuild,v 1.5 2007/06/12 12:31:31 nelchael Exp $
 
 DESCRIPTION="Gadu-Gadu transport for Jabber"
 HOMEPAGE="http://jggtrans.jajcus.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="net-im/jabberd
+DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/glib-2.6.4
 	net-dns/libidn"
 
@@ -21,8 +21,12 @@ src_install() {
 
 	make DESTDIR="${D}" install || die "install failed"
 
-	keepdir /var/spool/jabber/gg/
+	keepdir /var/spool/jabber/gg
+	keepdir /var/run/jabber
+	keepdir /var/log/jabber
 	fowners jabber:jabber /var/spool/jabber/gg
+	fowners jabber:jabber /var/run/jabber
+	fowners jabber:jabber /var/log/jabber
 
 	newinitd ${FILESDIR}/jggtrans-${PVR} jggtrans
 
