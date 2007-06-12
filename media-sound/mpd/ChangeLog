@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.99 2007/05/31 20:05:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.100 2007/06/12 22:49:02 ticho Exp $
+
+  12 Jun 2007; Andrej Kacian <ticho@gentoo.org> files/mpd.rc:
+  Point mpd to correct config file when stopping the service. Bug #181730, by
+  Alexey B. <acore at ngs.ru>.
 
   31 May 2007; Andrej Kacian <ticho@gentoo.org> mpd-0.13.0.ebuild:
   Move enewuser call back to pkg_setup().
