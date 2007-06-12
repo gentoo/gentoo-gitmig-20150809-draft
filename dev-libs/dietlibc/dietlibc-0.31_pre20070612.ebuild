@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.31_pre20070611.ebuild,v 1.1 2007/06/11 12:13:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.31_pre20070612.ebuild,v 1.1 2007/06/12 07:00:16 hollow Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,6 +15,8 @@ IUSE="debug"
 
 DEPEND=""
 
+DIETHOME=/usr/diet
+
 pkg_setup() {
 	# Replace sparc64 related C[XX]FLAGS (see bug #45716)
 	use sparc && replace-sparc64-flags
@@ -27,14 +29,13 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "make failed"
+	emake prefix=${DIETHOME} CFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {
-	local prefix=/usr/diet
-	emake prefix=${prefix} DESTDIR="${D}" install || die "make install failed"
-	dobin "${D}"${prefix}/bin/* || die "dobin failed"
-	doman "${D}"${prefix}/man/*/* || die "doman failed"
-	rm -r "${D}"${prefix}/{man,bin}
+	emake prefix=${DIETHOME} DESTDIR="${D}" install || die "make install failed"
+	dobin "${D}"${DIETHOME}/bin/* || die "dobin failed"
+	doman "${D}"${DIETHOME}/man/*/* || die "doman failed"
+	rm -r "${D}"${DIETHOME}/{man,bin}
 	dodoc AUTHOR BUGS CAVEAT CHANGES README THANKS TODO PORTING
 }
