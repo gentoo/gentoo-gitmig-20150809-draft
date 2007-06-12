@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ascal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ascal/ChangeLog,v 1.1 2007/05/13 11:36:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ascal/ChangeLog,v 1.2 2007/06/12 14:57:42 nyhm Exp $
+
+  12 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/ascal-0.1.1-install.patch, ascal-0.1.1.ebuild:
+  Add ~x86 keyword
 
 *ascal-0.1.1 (13 May 2007)
 
