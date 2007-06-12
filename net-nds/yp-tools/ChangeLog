@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.30 2007/02/06 01:21:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.31 2007/06/12 04:46:18 jer Exp $
+
+  12 Jun 2007; Jeroen Roovers <jer@gentoo.org> yp-tools-2.9.ebuild:
+  Marked ~hppa (bug #181672).
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
