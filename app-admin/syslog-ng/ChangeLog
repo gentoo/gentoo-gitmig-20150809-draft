@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.160 2007/06/07 19:12:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.161 2007/06/12 21:15:34 mr_bones_ Exp $
+
+  12 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.conf.gentoo:
+  set max-connections to 256 per upstream (bug #181661)
 
   07 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
   -syslog-ng-1.6.9.ebuild, -syslog-ng-2.0.3.ebuild, syslog-ng-2.0.4.ebuild:
