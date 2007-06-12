@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.3.ebuild,v 1.7 2007/06/07 11:12:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.3.ebuild,v 1.8 2007/06/12 01:11:58 angelos Exp $
 
 inherit base java-pkg-2
 
@@ -10,7 +10,7 @@ MY_P="${P//-}"
 SRC_URI="mirror://sourceforge/tcljava/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/tcl-8.4.5
