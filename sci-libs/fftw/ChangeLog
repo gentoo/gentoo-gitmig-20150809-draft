@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.59 2007/06/09 19:31:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.60 2007/06/12 13:20:44 angelos Exp $
+
+  12 Jun 2007; Christoph Mende <angelos@gentoo.org> fftw-3.1.2.ebuild:
+  Stable on amd64 wrt bug 180963
 
   09 Jun 2007; nixnut <nixnut@gentoo.org> fftw-3.1.2.ebuild:
   Stable on ppc wrt bug 180963
