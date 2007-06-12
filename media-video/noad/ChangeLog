@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.26 2007/05/27 16:46:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.27 2007/06/12 15:54:56 zzam Exp $
+
+  12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/0.6.0-r7/record-50-noad.sh:
+  Replace bash source command.
 
   27 May 2007; Matthias Schwarzott <zzam@gentoo.org> noad-0.6.0-r9.ebuild:
   No longer depend on vdr nor gentoo-vdr-scripts.
