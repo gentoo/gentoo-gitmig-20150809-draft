@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/memonix-bin-1.6.ebuild,v 1.1 2007/06/07 22:50:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/memonix-bin-1.6.ebuild,v 1.2 2007/06/12 13:03:46 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_PN=${PN%-bin}
 DESCRIPTION="Brain teasers, puzzle and memory games for kid's in one pack"

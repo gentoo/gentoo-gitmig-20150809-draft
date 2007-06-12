@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.85.1.ebuild,v 1.4 2007/04/09 18:26:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.85.1.ebuild,v 1.5 2007/06/12 13:07:33 nyhm Exp $
 
-inherit games python
+inherit eutils python games
 
 DESCRIPTION="A suite of educational games for young children"
 HOMEPAGE="http://childsplay.sourceforge.net/"
