@@ -1,0 +1,11 @@
+--- src/common/nmv-proc-mgr.cc.orig	2007-06-06 21:53:54.000000000 +0200
++++ src/common/nmv-proc-mgr.cc	2007-06-06 20:51:46.000000000 +0200
+@@ -85,7 +85,7 @@
+ {
+     glibtop_proclist buf_desc ;
+     memset (&buf_desc, 0, sizeof (buf_desc)) ;
+-    unsigned int *pids=NULL;
++    pid_t *pids=NULL;
+ 
+     m_process_list.clear () ;
+ 
