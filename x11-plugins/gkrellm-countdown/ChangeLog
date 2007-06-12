@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-countdown
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-countdown/ChangeLog,v 1.7 2007/03/12 17:49:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-countdown/ChangeLog,v 1.8 2007/06/12 20:50:02 lack Exp $
+
+*gkrellm-countdown-0.1.2 (12 Jun 2007)
+
+  12 Jun 2007; Jim Ramsay <lack@gentoo.org> +gkrellm-countdown-0.1.2.ebuild:
+  Bug 173619, new version (0.1.2) and homepage change
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gkrellm-countdown-0.1.1.ebuild:
