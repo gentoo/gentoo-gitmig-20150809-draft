@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.78 2007/06/11 16:28:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.79 2007/06/12 13:39:19 trapni Exp $
+
+  12 Jun 2007; <trapni@gentoo.org> bind-tools-9.4.1-r1.ebuild:
+  marking stable on amd64
 
   11 Jun 2007; Raúl Porcel <armin76@gentoo.org> bind-tools-9.4.1-r1.ebuild:
   alpha/ia64/x86 stable wrt #181554
