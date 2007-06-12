@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.13.ebuild,v 1.3 2007/05/24 08:43:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.13.ebuild,v 1.4 2007/06/12 12:42:00 genone Exp $
 
 inherit eutils webapp
 
@@ -107,43 +107,43 @@ pkg_postinst() {
 			chown mgraph:adm /var/run/mailgraph
 		fi
 	fi
-	einfo ""
-	einfo "Mailgraph will run as user mgraph with group adm by default."
-	einfo "This can be changed in /etc/conf.d/mailgraph if it doesn't fit."
-	einfo "Remember to adjust MG_DAEMON_LOG, MG_DAEMON_PID and MG_DAEMON_RRD"
-	einfo "as well!"
-	einfo ""
-	echo
-	ewarn ""
+	elog
+	elog "Mailgraph will run as user mgraph with group adm by default."
+	elog "This can be changed in /etc/conf.d/mailgraph if it doesn't fit."
+	elog "Remember to adjust MG_DAEMON_LOG, MG_DAEMON_PID and MG_DAEMON_RRD"
+	elog "as well!"
+	elog
+	elog
+	ewarn
 	ewarn "Please make sure the MG_LOGFILE (default: /var/log/messages) is readable"
 	ewarn "by group adm or change MG_DAEMON_GID in /etc/conf.d/mailgraph accordingly!"
-	ewarn ""
+	ewarn
 	ewarn "Please make sure *all* mail related logs (MTA, spamfilter, virus scanner)"
 	ewarn "go to the file /var/log/messages or change MG_LOGFILE in"
 	ewarn "/etc/conf.d/mailgraph accordingly! Otherwise mailgraph won't get to know"
 	ewarn "the corresponding events (virus/spam mail found etc.)."
-	ewarn ""
-	echo
-	einfo
-	einfo "Checking for user apache"
+	ewarn
+	ewarn
+	elog
+	elog "Checking for user apache"
 	if egetent passwd apache >&/dev/null; then
-		einfo
-		einfo "Adding user apache to group mgraph so the included"
-		einfo "CGI script is able to read the mailgraph RRD files"
-		einfo
+		elog
+		elog "Adding user apache to group mgraph so the included"
+		elog "CGI script is able to read the mailgraph RRD files"
+		elog
 		if ! gpasswd -a apache mgraph >&/dev/null; then
 			eerror "Failed to add user apache to group mgraph!"
 			eerror "Please check manually."
 		fi
 	else
-		einfo
-		einfo "User apache not found, maybe we will be running a"
-		einfo "webserver with a different UID?"
-		einfo "If that's the case, please add that user to the"
-		einfo "group mgraph manually to enable the included"
-		einfo "CGI script to read the mailgraph RRD files:"
-		einfo
-		einfo "\tgpasswd -a <user> mgraph"
-		einfo
+		elog
+		elog "User apache not found, maybe we will be running a"
+		elog "webserver with a different UID?"
+		elog "If that's the case, please add that user to the"
+		elog "group mgraph manually to enable the included"
+		elog "CGI script to read the mailgraph RRD files:"
+		elog
+		elog "\tgpasswd -a <user> mgraph"
+		elog
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.91 2007/05/12 04:08:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.92 2007/06/12 12:44:10 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> mailman-2.1.9_rc1.ebuild,
+  mailman-2.1.9.ebuild:
+  Replacing einfo with elog
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> mailman-2.1.9_rc1.ebuild,
   mailman-2.1.9.ebuild:

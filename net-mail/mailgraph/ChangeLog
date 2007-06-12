@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.20 2007/05/24 08:43:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.21 2007/06/12 12:42:00 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> mailgraph-1.13.ebuild:
+  Replacing einfo with elog
 
   24 May 2007; Andrej Kacian <ticho@gentoo.org> mailgraph-1.13.ebuild:
   Stable on x86.

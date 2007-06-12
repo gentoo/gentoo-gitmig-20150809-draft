@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9_rc1.ebuild,v 1.7 2007/05/12 04:08:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9_rc1.ebuild,v 1.8 2007/06/12 12:44:10 genone Exp $
 
 inherit eutils depend.apache
 IUSE="postfix sendmail qmail courier exim xmail"
@@ -98,8 +98,8 @@ src_install () {
 		if [ -f ${i}/Mailman/mm_cfg.py ]; then
 			cp ${i}/Mailman/mm_cfg.py \
 				${ID}/Mailman/mm_cfg.py
-			einfo "Your old config has been saved as mm_cfg.py"
-			einfo "A new config has been installed as mm_cfg.dist"
+			elog "Your old config has been saved as mm_cfg.py"
+			elog "A new config has been installed as mm_cfg.dist"
 		fi
 	done
 
@@ -114,18 +114,18 @@ pkg_postinst() {
 	enewuser mailman 280 -1 ${INSTALLDIR} mailman -G cron -c "mailman"
 	cd ${INSTALLDIR}
 	bin/update
-	einfo "Running \`${INSTALLDIR}/bin/check_perms -f\` *"
+	elog "Running \`${INSTALLDIR}/bin/check_perms -f\` *"
 	bin/check_perms -f
-	einfo ""
-	einfo "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
-	einfo "Setup information, mailman will NOT run unless you follow"
-	einfo "those instructions!"
-	einfo ""
+	elog
+	elog "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
+	elog "Setup information, mailman will NOT run unless you follow"
+	elog "those instructions!"
+	elog
 
-	einfo "An example Mailman configuration file for Apache has been installed into:"
-	einfo "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
-	einfo ""
-	einfo "To enable, you will need to add \"-D MAILMAN\" to"
-	einfo "/etc/conf.d/apache2."
-	einfo ""
+	elog "An example Mailman configuration file for Apache has been installed into:"
+	elog "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
+	elog
+	elog "To enable, you will need to add \"-D MAILMAN\" to"
+	elog "/etc/conf.d/apache2."
+	elog
 }
