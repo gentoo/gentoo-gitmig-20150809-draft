@@ -13,10 +13,6 @@ AUX mythbackend-0.18.2.rc 1128 RMD160 0297452b3d9fe09479c737d136a73171a35eb643 S
 MD5 813c8ad35ac7c1f299efd05afd2228f1 files/mythbackend-0.18.2.rc 1128
 RMD160 0297452b3d9fe09479c737d136a73171a35eb643 files/mythbackend-0.18.2.rc 1128
 SHA256 be994a8b6690e830820e82316f4ccce5b7f84ce68213de75e3740818227f6f3c files/mythbackend-0.18.2.rc 1128
-AUX mythbackend-0.18.2.rc.orig 1130 RMD160 3f29580168e6c291bae3f219c9b71fa869369b5a SHA1 fa14f1cbc9134a904ba92d8bbedaa3e8bfb8f388 SHA256 f3c628d9146bb7eee7da60e886b2063c169c2623da987f862fa12cd4c6c9c593
-MD5 84fc00ae3aeb46fdf81af8a24bb3d617 files/mythbackend-0.18.2.rc.orig 1130
-RMD160 3f29580168e6c291bae3f219c9b71fa869369b5a files/mythbackend-0.18.2.rc.orig 1130
-SHA256 f3c628d9146bb7eee7da60e886b2063c169c2623da987f862fa12cd4c6c9c593 files/mythbackend-0.18.2.rc.orig 1130
 AUX mythfilldatabase.cron 73 RMD160 ce57516fe3ac3f339ebaad6b88c85366d4dbbc5b SHA1 7ae24184f931336f317eaefaa7c27a8e4531e0ee SHA256 fc5a3b094fd403e9076fbb1903e826ddc97bd579cb0ba7ef6fc11940099fca3d
 MD5 3632cf0ce1fad88f806ae8801316a6fc files/mythfilldatabase.cron 73
 RMD160 ce57516fe3ac3f339ebaad6b88c85366d4dbbc5b files/mythfilldatabase.cron 73
@@ -132,7 +128,7 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFGbsCXoeSe8B0zEfwRApvDAJ9Ftci2/LqJot2v0DEfamui2WDHSQCff/GS
-WPJ6phpUfZQhY9oqFvogYsA=
-=HDo5
+iD8DBQFGbuzBoeSe8B0zEfwRAjTDAJ9WmyloAOUfTIiN8aHSg7+pSy7GpQCffP0c
+hWJvQP77fpChHfJ24xGTuDc=
+=AjFB
 -----END PGP SIGNATURE-----
