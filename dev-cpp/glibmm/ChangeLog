@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.77 2007/04/27 20:33:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.78 2007/06/12 20:04:15 flameeyes Exp $
+
+  12 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> glibmm-2.12.8.ebuild:
+  Add ~x86-fbsd keyword.
 
 *glibmm-2.12.8 (27 Apr 2007)
 
