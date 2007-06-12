@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailer-config/mailer-config-0.1.ebuild,v 1.5 2005/07/09 17:11:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailer-config/mailer-config-0.1.ebuild,v 1.6 2007/06/12 12:36:27 genone Exp $
 
 DESCRIPTION="Utility to switch between mailers using mailwrapper"
 HOMEPAGE="http://www.gentoo.org"
@@ -22,14 +22,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Because /etc/mail/mailer.conf is now handled for you, it will"
-	einfo "save time if you add:"
-	einfo "    CONFIG_PROTECT_MASK=\"/etc/mail/mailer.conf\""
-	einfo "to your /etc/make.conf file."
-	einfo
-	einfo "With this, when a new profile is installed, it will be switched to"
-	einfo "automatically, and you will not be prompted to etc-update"
-	einfo "mailer.conf manually. Instead, you should always use mailer-config."
-	einfo
+	elog
+	elog "Because /etc/mail/mailer.conf is now handled for you, it will"
+	elog "save time if you add:"
+	elog "    CONFIG_PROTECT_MASK=\"/etc/mail/mailer.conf\""
+	elog "to your /etc/make.conf file."
+	elog
+	elog "With this, when a new profile is installed, it will be switched to"
+	elog "automatically, and you will not be prompted to etc-update"
+	elog "mailer.conf manually. Instead, you should always use mailer-config."
+	elog
 }

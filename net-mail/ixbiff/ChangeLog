@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ixbiff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ChangeLog,v 1.5 2007/04/28 17:31:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ChangeLog,v 1.6 2007/06/12 12:31:41 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> ixbiff-0.03b.ebuild:
+  Replacing einfo with elog
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> ixbiff-0.03b.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)

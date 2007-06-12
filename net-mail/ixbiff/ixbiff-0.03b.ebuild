@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ixbiff-0.03b.ebuild,v 1.3 2007/04/28 17:31:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ixbiff-0.03b.ebuild,v 1.4 2007/06/12 12:31:41 genone Exp $
 
 inherit eutils
 
@@ -39,5 +39,5 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "Use rc-update to add ixbiff to the startup sequence."
+	elog "Use rc-update to add ixbiff to the startup sequence."
 }

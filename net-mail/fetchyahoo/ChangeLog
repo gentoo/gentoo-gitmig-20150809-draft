@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.42 2007/03/30 00:17:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.43 2007/06/12 12:28:24 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> fetchyahoo-2.10.5.ebuild,
+  fetchyahoo-2.10.6.ebuild, fetchyahoo-2.10.7.ebuild:
+  Replacing einfo with elog
 
 *fetchyahoo-2.10.7 (30 Mar 2007)
 

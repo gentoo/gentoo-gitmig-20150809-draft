@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.22 2007/02/22 01:44:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.23 2007/06/12 12:30:46 genone Exp $
+
+  12 Jun 2007; Marius Mauch <genone@gentoo.org> hotwayd-0.8.4.ebuild:
+  Replacing einfo with elog
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

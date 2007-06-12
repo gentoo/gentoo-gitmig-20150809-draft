@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.7-r1.ebuild,v 1.1 2007/03/07 06:14:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.7-r1.ebuild,v 1.2 2007/06/12 12:27:08 genone Exp $
 
 inherit eutils
 
@@ -70,16 +70,16 @@ src_install() {
 pkg_postinst() {
 	if ! python -c "import Tkinter" >/dev/null 2>&1
 	then
-		einfo
-		einfo "You will not be able to use fetchmailconf(1), because you"
-		einfo "don't seem to have Python with tkinter support."
-		einfo
-		einfo "If you want to be able to use fetchmailconf(1), do the following:"
-		einfo "  1.  Add 'tk' to the USE variable in /etc/make.conf."
-		einfo "  2.  (Re-)merge Python."
-		einfo
+		elog
+		elog "You will not be able to use fetchmailconf(1), because you"
+		elog "don't seem to have Python with tkinter support."
+		elog
+		elog "If you want to be able to use fetchmailconf(1), do the following:"
+		elog "  1.  Add 'tk' to the USE variable in /etc/make.conf."
+		elog "  2.  (Re-)merge Python."
+		elog
 	fi
 
-	einfo "Please see /etc/conf.d/fetchmail if you want to adjust"
-	einfo "the polling delay used by the fetchmail init script."
+	elog "Please see /etc/conf.d/fetchmail if you want to adjust"
+	elog "the polling delay used by the fetchmail init script."
 }

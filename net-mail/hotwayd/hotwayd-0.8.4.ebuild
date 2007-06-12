@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.4.ebuild,v 1.3 2006/02/28 01:26:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.4.ebuild,v 1.4 2007/06/12 12:30:46 genone Exp $
 
 inherit eutils
 
@@ -56,19 +56,19 @@ src_install () {
 pkg_postinst () {
 	hotmail_greed_warning
 	echo
-	einfo " By default daemons that use xinetd are not started automatically in gentoo"
-	einfo " To activate do the following steps: "
-	einfo " - Edit the file /etc/xinetd.d/hotwayd and change disable "
-	einfo "   from yes to no "
-	einfo " - Restart xinetd with \`/etc/init.d/xinetd restart\` "
-	echo
+	elog " By default daemons that use xinetd are not started automatically in gentoo"
+	elog " To activate do the following steps: "
+	elog " - Edit the file /etc/xinetd.d/hotwayd and change disable "
+	elog "   from yes to no "
+	elog " - Restart xinetd with \`/etc/init.d/xinetd restart\` "
+	elog
 	if use smtp; then
-		einfo "You chose to install hotsmtpd, a SMTP proxy for hotmail. Please"
-		einfo "Configure /etc/xinetd.d/hotsmtpd and restart xinetd to start using it."
-		echo
+		elog "You chose to install hotsmtpd, a SMTP proxy for hotmail. Please"
+		elog "Configure /etc/xinetd.d/hotsmtpd and restart xinetd to start using it."
+		elog
 	fi
-	einfo "Set your e-mail applications to use port 1100 for receiving email."
+	elog "Set your e-mail applications to use port 1100 for receiving email."
 	if use smtp; then
-		einfo "Use port 2500 for sending email."
+		elog "Use port 2500 for sending email."
 	fi
 }

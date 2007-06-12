@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.3 2005/06/23 08:38:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.4 2007/06/12 12:35:19 genone Exp $
 
 inherit eutils webapp
 
@@ -118,27 +118,27 @@ pkg_postinst() {
 	ewarn "If you installed lurker into any directory other than /"
 	ewarn "you must also edit the .htaccess file installed into the"
 	ewarn "lurker directory"
-	einfo
-	einfo "The following is an example virtual host definition "
-	einfo
-	einfo "<VirtualHost *>"
-	einfo "	ServerAdmin webmaster@domain.com"
-	einfo "	ServerName  server.domain.com"
-	einfo "	DocumentRoot /var/www/<hostname>/htdocs"
-	einfo "		<Directory \"/var/www/lists.worcesterapa.org/htdocs\"> "
-	einfo "			AllowOverride All"
-	einfo "			Order allow,deny"
-	einfo "			Allow from all"
-	einfo "		</Directory>"
-	einfo
-	einfo "	ScriptAlias /cgi-bin/ \"/var/www/<hostname>/cgi-bin/\""
-	einfo
-	einfo "		<Directory \"/var/www/<hostname>/cgi-bin\">"
-	einfo "			Options None"
-	einfo "			AllowOverride None"
-	einfo "			Order allow,deny"
-	einfo "			Allow from all"
-	einfo "		</Directory>"
-	einfo "</Virtualhost>"
-	einfo
+	elog
+	elog "The following is an example virtual host definition "
+	elog
+	elog "<VirtualHost *>"
+	elog "	ServerAdmin webmaster@domain.com"
+	elog "	ServerName  server.domain.com"
+	elog "	DocumentRoot /var/www/<hostname>/htdocs"
+	elog "		<Directory \"/var/www/lists.worcesterapa.org/htdocs\"> "
+	elog "			AllowOverride All"
+	elog "			Order allow,deny"
+	elog "			Allow from all"
+	elog "		</Directory>"
+	elog
+	elog "	ScriptAlias /cgi-bin/ \"/var/www/<hostname>/cgi-bin/\""
+	elog
+	elog "		<Directory \"/var/www/<hostname>/cgi-bin\">"
+	elog "			Options None"
+	elog "			AllowOverride None"
+	elog "			Order allow,deny"
+	elog "			Allow from all"
+	elog "		</Directory>"
+	elog "</Virtualhost>"
+	elog
 }
