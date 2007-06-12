@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.47 2007/02/24 12:19:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.48 2007/06/12 14:01:27 zzam Exp $
+
+  12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> xdtv-2.2.0-r1.ebuild,
+  xdtv-2.3.3.ebuild:
+  Added missing inherit eutils.
 
 *xdtv-2.4.0 (23 Feb 2007)
 
