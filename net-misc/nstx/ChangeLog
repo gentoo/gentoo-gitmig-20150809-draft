@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nstx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.4 2007/02/22 11:13:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.5 2007/06/12 21:48:58 jokey Exp $
+
+  12 Jun 2007; Markus Ullmann <jokey@gentoo.org> nstx-1.1_beta6-r2.ebuild:
+  Stable on x86 wrt bug #181603
 
   22 Feb 2007; Robin H. Johnson <robbat2@gentoo.org>
   files/digest-nstx-1.1_beta6, files/digest-nstx-1.1_beta6-r1, Manifest:
