@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.39 2007/05/23 07:20:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.40 2007/06/12 04:45:59 jer Exp $
+
+  12 Jun 2007; Jeroen Roovers <jer@gentoo.org> ypbind-1.19.1-r1.ebuild:
+  Marked ~hppa (bug #181672).
 
   23 May 2007; Jeremy Huddleston <eradicator@gentoo.org> files/ypbind.initd:
   Fixed bug #176125 thanks to DominikBuerkle <dominik.buerkle@webde.de>.
