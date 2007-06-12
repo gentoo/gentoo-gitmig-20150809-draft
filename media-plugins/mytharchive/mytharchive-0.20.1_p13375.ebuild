@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.20.1_p13375.ebuild,v 1.1 2007/05/01 21:05:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.20.1_p13375.ebuild,v 1.2 2007/06/12 15:52:49 cardoe Exp $
 
 inherit mythtv-plugins
 
@@ -8,7 +8,7 @@ SRC_URI="${SRC_URI}
 		http://dev.gentoo.org/~cardoe/files/mythtv/mytharchive-newfiles-11564.tar.bz2"
 DESCRIPTION="Allows for archiving your videos to DVD."
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND=">=dev-lang/python-2.3.5
 		dev-python/mysql-python
