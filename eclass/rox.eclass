@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.21 2007/06/12 16:39:01 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.22 2007/06/12 20:15:22 lack Exp $
 
 # ROX eclass Version 2
 
@@ -39,7 +39,7 @@
 
 # need python to byte compile modules, if any
 # need autotools to run autoreconf, if required
-inherit python autotools eutils
+inherit python autotools eutils multilib
 
 if [[ -z "${ROX_VER}" ]]; then
 	ROX_VER="2.1.0"
@@ -68,8 +68,8 @@ b=${a/rox-rox*}
 WRAPPERNAME=${b:-${PN}}
 
 # This is the location where all applications are installed
-APPDIR="/usr/lib/rox"
-LIBDIR="/usr/lib"
+APPDIR="/usr/$(get_libdir)/rox"
+LIBDIR="/usr/$(get_libdir)"
 
 # Utility Functions
 
