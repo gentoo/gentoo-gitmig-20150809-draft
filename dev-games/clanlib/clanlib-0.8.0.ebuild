@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.0.ebuild,v 1.1 2006/09/23 12:19:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.0.ebuild,v 1.2 2007/06/12 23:38:03 nyhm Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,6 +32,12 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto"
 
 S=${WORKDIR}/ClanLib-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc42.patch
+}
 
 src_compile() {
 	#clanSound only controls mikmod/vorbis so there's
