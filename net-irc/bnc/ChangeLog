@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.27 2007/02/09 04:22:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.28 2007/06/12 22:14:52 jokey Exp $
+
+  12 Jun 2007; Markus Ullmann <jokey@gentoo.org> bnc-2.9.4.ebuild:
+  Stable on x86 wrt bug #181754
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
