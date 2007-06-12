@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.16 2006/05/23 19:56:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.17 2007/06/12 18:11:11 aballier Exp $
 
 IUSE=""
 
@@ -18,7 +18,8 @@ RDEPEND="media-sound/cdparanoia
 	virtual/eject
 	dev-lang/perl
 	>=dev-perl/CDDB_get-2.10
-	>=dev-perl/MP3-Info-0.91"
+	>=dev-perl/MP3-Info-0.91
+	|| ( media-sound/vorbis-tools media-sound/lame media-libs/flac media-sound/bladeenc media-sound/gogo )"
 
 src_compile() {
 	#the thing itself is just a perl script

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.21 2007/02/03 20:13:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.22 2007/06/12 18:11:11 aballier Exp $
+
+  12 Jun 2007; Alexis Ballier <aballier@gentoo.org> -rip-1.01-r1.ebuild,
+  rip-1.07.ebuild:
+  Remove old version, add encoders as rdepends, bug #181447
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
