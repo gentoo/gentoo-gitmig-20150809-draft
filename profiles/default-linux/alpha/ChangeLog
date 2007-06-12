@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.48 2007/06/09 10:22:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.49 2007/06/12 16:59:12 ferdy Exp $
+
+  12 Jun 2007; Fernando J. Pereda <ferdy@gentoo.org> use.mask:
+  use.mask d as per bug #178896
 
   09 Jun 2007; Rémi Cardona <remi@gentoo.org> package.mask:
   Move Gnome 2.18 mask to alpha subprofile

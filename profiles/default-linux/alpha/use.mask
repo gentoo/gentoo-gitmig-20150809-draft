@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.64 2007/06/02 18:57:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.65 2007/06/12 16:59:12 ferdy Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -149,3 +149,6 @@ hddtemp
 
 # libemf not ported
 emf
+
+# USE=d seems to break gcc-4.1.2 (#178896)
+d
