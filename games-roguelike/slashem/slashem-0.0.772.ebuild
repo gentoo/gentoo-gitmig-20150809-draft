@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.5 2007/04/09 20:50:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.6 2007/06/12 12:59:00 nyhm Exp $
 
 inherit eutils flag-o-matic games
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/slashem/${SE_PN}
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="X sdl opengl"
 
 XDEPEND="x11-libs/libXaw
@@ -42,13 +42,6 @@ DEPEND="${RDEPEND}
 
 HACKDIR=${GAMES_STATEDIR}/${PN}
 S=${WORKDIR}/slashem-${SE_FIXVER}
-
-#pkg_setup() {
-#	if use opengl && ! use sdl
-#	then
-#		die "You must enable SDL for OpenGL support."
-#	fi
-#}
 
 src_unpack() {
 	unpack ${SE_PN}
@@ -100,9 +93,9 @@ src_unpack() {
 }
 
 src_compile() {
-	make all || die "make all"
+	emake all || die "emake all"
 	cd "${S}"/util
-	make recover || die "make recover"
+	emake recover || die "emake recover"
 }
 
 src_install() {
