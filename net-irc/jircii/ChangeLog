@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/jircii
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.29 2007/05/04 18:15:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.30 2007/06/12 15:25:13 armin76 Exp $
+
+  12 Jun 2007; Raúl Porcel <armin76@gentoo.org> -jircii-40.ebuild,
+  jircii-41.ebuild:
+  x86 stable and remove old
 
 *jircii-41 (04 May 2007)
 
