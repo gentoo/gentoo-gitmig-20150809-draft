@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.164 2007/04/30 20:14:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.165 2007/06/12 14:08:38 suka Exp $
+
+*openoffice-bin-2.2.1 (12 Jun 2007)
+
+  12 Jun 2007; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.2.1/50-openoffice-bin, +files/2.2.1/ooo-wrapper2,
+  +openoffice-bin-2.2.1.ebuild:
+  Update to OpenOffice.org 2.2.1, this is a bugfix release, so no new features
+  to see.
 
   30 Apr 2007; Marius Mauch <genone@gentoo.org> openoffice-bin-2.2.0.ebuild:
   Replacing einfo with elog
