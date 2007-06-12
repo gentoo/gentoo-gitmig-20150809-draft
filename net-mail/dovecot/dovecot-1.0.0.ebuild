@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.0.ebuild,v 1.1 2007/04/13 12:15:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.0.ebuild,v 1.2 2007/06/12 12:17:55 genone Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -174,9 +174,9 @@ pkg_postinst() {
 		touch "${ROOT}"/etc/ssl/dovecot/server.{key,pem}
 	fi
 
-	einfo "The dovecot configuration has vastly changed since 0.99."
-	einfo "You are encouraged to start afresh with a new configuration file."
-	einfo "see http://wiki.dovecot.org/ for configuration examples."
+	elog "The dovecot configuration has vastly changed since 0.99."
+	elog "You are encouraged to start afresh with a new configuration file."
+	elog "see http://wiki.dovecot.org/ for configuration examples."
 
 	if [[ -e ${ROOT}etc/dovecot.conf ]] ; then
 		ewarn
@@ -187,12 +187,12 @@ pkg_postinst() {
 	base_dir="${basedir:-/var/run/dovecot}"
 	if use ssl \
 		&& [[ ! -e "${ROOT}/${base_dir}/login/ssl-parameters.dat" ]] ; then
-		einfo
-		einfo "Dovecot requires DH SSL Parameters if you use SSL connections"
-		einfo "These take some time to make, and dovecot will create them before"
-		einfo "it allows any SSL connections."
-		einfo "You can create them now before starting dovecot like so"
-		einfo "   emerge --config =${PF}"
+		elog
+		elog "Dovecot requires DH SSL Parameters if you use SSL connections"
+		elog "These take some time to make, and dovecot will create them before"
+		elog "it allows any SSL connections."
+		elog "You can create them now before starting dovecot like so"
+		elog "   emerge --config =${PF}"
 	fi
 }
 
