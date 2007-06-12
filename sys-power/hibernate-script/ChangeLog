@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.57 2007/06/04 17:57:51 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.58 2007/06/12 16:21:14 jokey Exp $
+
+  12 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  hibernate-script-1.95-r2.ebuild:
+  Stable on x86 wrt bug #180645
 
 *hibernate-script-1.95-r3 (04 Jun 2007)
 
