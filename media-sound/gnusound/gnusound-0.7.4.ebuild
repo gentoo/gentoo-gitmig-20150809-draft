@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.5 2007/02/24 13:10:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.6 2007/06/12 20:37:48 aballier Exp $
 
 WANT_ATUOMAKE=1.8
 WANT_AUTOCONF=2.5
@@ -11,10 +11,12 @@ IUSE="3dnow alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
 ogg oss sse vorbis"
 
 PATCHLEVEL="1"
+M4TARBALL_REV="1"
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
-	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2
+	mirror://gentoo/${P}-m4-${M4TARBALL_REV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -46,6 +48,7 @@ src_unpack() {
 	cd "${S}" || die "workdir not found"
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	cp "${WORKDIR}"/m4/* config/
 	AT_M4DIR="config" eautoreconf
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.16 2007/02/24 13:10:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.17 2007/06/12 20:37:48 aballier Exp $
+
+  12 Jun 2007; Alexis Ballier <aballier@gentoo.org> gnusound-0.7.4.ebuild:
+  Ship gtk.m4 to avoid autoconf failures on systems without gtk 1 installed
 
   24 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   -files/gnusound-0.7.4-amd64.patch, -files/gnusound-0.7.4-automagic.patch,
