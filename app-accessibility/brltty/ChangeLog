@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.54 2007/06/01 06:54:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.55 2007/06/12 03:02:09 williamh Exp $
+
+*brltty-3.8 (12 Jun 2007)
+
+  12 Jun 2007; William Hubbs <williamh@gentoo.org> metadata.xml,
+  +brltty-3.8.ebuild:
+  Version bump.
 
   01 Jun 2007; William Hubbs <williamh@gentoo.org>
   +files/brltty-3.7.2-linux-compiler-h.patch, brltty-3.7.2-r1.ebuild:
