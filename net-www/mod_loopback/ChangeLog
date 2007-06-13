@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_loopback
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_loopback/ChangeLog,v 1.21 2007/01/14 17:37:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_loopback/ChangeLog,v 1.22 2007/06/13 14:08:07 chtekk Exp $
+
+  13 Jun 2007; Luca Longinotti <chtekk@gentoo.org>
+  -mod_loopback-1.04-r1.ebuild:
+  Remove Apache1.
 
   14 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
   -files/1.04-r1/28_mod_loopback.conf, -files/2.01-r1/28_mod_loopback.conf,

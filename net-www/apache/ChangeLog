@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.534 2007/06/05 23:34:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.535 2007/06/13 14:20:19 chtekk Exp $
+
+  13 Jun 2007; Luca Longinotti <chtekk@gentoo.org>
+  -apache-1.3.34-r14.ebuild, -apache-1.3.37.ebuild:
+  Remove Apache1.
 
   05 Jun 2007; Markus Ullmann <jokey@gentoo.org> -apache-2.2.4-r5.ebuild
   +apache-2.2.4-r6.ebuild:
