@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.13 2007/06/08 13:57:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.0.ebuild,v 1.14 2007/06/13 13:11:47 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -167,7 +167,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake -j1 || die
+	emake || die
 }
 
 pkg_preinst() {
