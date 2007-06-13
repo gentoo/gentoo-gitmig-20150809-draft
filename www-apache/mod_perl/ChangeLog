@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.51 2007/04/10 11:47:57 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.52 2007/06/13 12:49:28 chtekk Exp $
+
+  13 Jun 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/1.29/75_mod_perl.conf, -files/1.30/75_mod_perl.conf,
+  -files/2.0.2/75_mod_perl.conf, -files/2.0.2/apache2-mod_perl-startup.pl,
+  -files/75_mod_perl.conf, -files/apache2-mod_perl-startup.pl, metadata.xml,
+  -mod_perl-1.27-r4.ebuild, -mod_perl-1.30.ebuild:
+  Remove Apache1. Cleanup filesdir. Update metadata.
 
   10 Apr 2007; Christian Hartmann <ian@gentoo.org> mod_perl-1.27-r4.ebuild,
   -mod_perl-1.29.ebuild, -mod_perl-2.0.2.ebuild, -mod_perl-2.0.3.ebuild:
