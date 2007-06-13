@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.14 2006/12/01 20:02:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.15 2007/06/13 15:16:52 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
+RESTRICT="test"
 
 DEPEND="virtual/glut
 	x11-libs/libXi
@@ -22,7 +23,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:textures/:${GAMES_DATADIR}/${PN}/:" \
 		includes/textureLoader.h || die "sed failed"
