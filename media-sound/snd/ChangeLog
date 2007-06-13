@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.33 2007/03/14 20:09:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.34 2007/06/13 18:26:10 aballier Exp $
+
+*snd-9.1 (13 Jun 2007)
+
+  13 Jun 2007; Alexis Ballier <aballier@gentoo.org> +snd-9.1.ebuild:
+  version bump
 
   14 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org> -snd-7.10.ebuild:
   clean out non-modX ebuild
