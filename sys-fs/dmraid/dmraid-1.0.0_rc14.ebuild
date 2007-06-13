@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc13.ebuild,v 1.2 2006/12/05 06:17:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc14.ebuild,v 1.1 2007/06/13 14:16:16 genstef Exp $
 
 inherit linux-info flag-o-matic
 
@@ -45,7 +45,7 @@ src_compile() {
 		$(use_enable selinux libselinux) \
 		$(use_enable selinux libsepol) \
 		|| die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

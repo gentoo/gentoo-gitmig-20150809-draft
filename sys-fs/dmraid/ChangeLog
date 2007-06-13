@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.9 2007/05/13 18:33:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.10 2007/06/13 14:16:16 genstef Exp $
+
+  13 Jun 2007; Ian Stakenvicius (_AxS_) <ian@syndicated-productions.com>
+  -dmraid-1.0.0_rc13.ebuild:
+  version bump: removed v1.0.0_rc13
+
+  13 Jun 2007; Ian Stakenvicius (_AxS_) <ian@syndicated-productions.com>
+  dmraid-1.0.0_rc14.ebuild:
+  v1.0.0_rc14: Added -j1 to emake to improve emerge consistency on amd64;
+  tested with and without MAKEOPTS=-s (bug 164572)
+
+  13 Jun 2007; Ian Stakenvicius (_AxS_) <ian@syndicated-productions.com>
+  +dmraid-1.0.0_rc13.ebuild, +dmraid-1.0.0_rc14.ebuild,
+  +files/dmraid-destdir-fix.patch, +metadata.xml:
+  Trivial version bump
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
