@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.ebuild,v 1.1 2007/06/11 09:32:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1.ebuild,v 1.1 2007/06/13 21:12:47 leio Exp $
 
 inherit python gnome2 eutils
 
@@ -27,9 +27,6 @@ DOCS="AUTHORS README.CVS changelog help/"
 
 src_unpack() {
 	gnome2_src_unpack
-
-	# Fix the .desktop icon name
-	#sed -i -e "s:Icon=meld:Icon=/usr/share/pixmaps/meld.png:" ./meld.desktop.in
 
 	# fix the prefix so its not in */local/*
 	sed -i -e 's:/usr/local:/usr:' INSTALL
