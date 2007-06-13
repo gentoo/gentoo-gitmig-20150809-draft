@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.3.ebuild,v 1.1 2007/05/25 15:52:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.3.ebuild,v 1.2 2007/06/13 14:38:45 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -139,12 +139,13 @@ src_test() {
 	    config_fc \
 	    --fcompiler=${NUMPY_FC} \
 	    --opt="${FFLAGS}" || die "install test failed"
+
 	pushd "${S}"/test/lib*/python
-	PYTHONPATH=. "${python}" -c \
-		"import numpy as n;import sys;sys.exit(n.test(10,3))"  \
-		> test.log 2>&1
+	PYTHONPATH=. "${python}" -c "import numpy; numpy.test(10,3)" 2>&1 \
+		| tee test.log
 	grep -q OK test.log || die "test failed"
 	popd
+
 	rm -rf test
 }
 
