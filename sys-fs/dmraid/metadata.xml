@@ -4,6 +4,8 @@
 <herd>no-herd</herd>
 	<maintainer>
 		<email>ian@syndicated-productions.com</email>
+		<description>Indirectly maintaining through
+			genstef@gentoo.org</description>
 	</maintainer>
 	<longdescription>This software discovers, activates, deactivates and displays properties of software RAID sets eg: ATARAID and contained DOS partitions.</longdescription>
 </pkgmetadata>
