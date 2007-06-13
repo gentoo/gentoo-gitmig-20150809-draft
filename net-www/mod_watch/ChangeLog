@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_watch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.17 2007/04/11 14:33:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.18 2007/06/13 14:00:45 chtekk Exp $
+
+  13 Jun 2007; Luca Longinotti <chtekk@gentoo.org>
+  -mod_watch-3.18-r2.ebuild:
+  Remove Apache1.
 
   11 Apr 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   mod_watch-3.18-r2.ebuild, mod_watch-4.03-r2.ebuild:
