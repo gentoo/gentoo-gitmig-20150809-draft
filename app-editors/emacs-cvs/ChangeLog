@@ -1,12 +1,13 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.135 2007/06/13 15:39:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.136 2007/06/13 17:40:42 ulm Exp $
 
   13 Jun 2007; Ulrich Mueller <ulm@gentoo.org> -files/emacs.desktop.in,
   -files/emacs-cvs-nofink.patch, -files/emacs-subdirs-el-gentoo.diff,
   emacs-cvs-22.1.50.ebuild, -emacs-cvs-23.0.0-r1.ebuild,
   emacs-cvs-23.0.0-r6.ebuild:
-  Remove unnecessary gif/ungif patch. Add support for gpm USE flag. Clean up.
+  Remove unnecessary gif/ungif patch. Configure now supports "use_with hesiod"
+  properly. Add support for gpm USE flag. Clean up.
 
   12 Jun 2007; Ulrich Mueller <ulm@gentoo.org> -emacs-cvs-22.0.97.ebuild:
   Remove old version.

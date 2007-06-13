@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.21 2007/06/13 15:39:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.22 2007/06/13 17:40:42 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -149,9 +149,7 @@ src_compile() {
 		myconf="${myconf} --without-x"
 	fi
 
-	# $(use_with hesiod) is not possible, as "--without-hesiod" breaks
-	# the build system (has been reported upstream)
-	use hesiod && myconf="${myconf} --with-hesiod"
+	myconf="${myconf} $(use_with hesiod)"
 	myconf="${myconf} $(use_with gpm)"
 
 	econf \
