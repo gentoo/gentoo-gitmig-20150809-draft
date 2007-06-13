@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.4.ebuild,v 1.5 2007/04/11 14:24:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.4.ebuild,v 1.6 2007/06/13 23:57:25 opfer Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 IUSE="ldb source threads unicode doc"
 
@@ -87,9 +87,9 @@ src_unpack() {
 	cat >${S}/customize-target-features.lisp <<'EOF'
 (lambda (list)
   (flet ((enable (x)
-           (pushnew x list))
-         (disable (x)
-           (setf list (remove x list))))
+		   (pushnew x list))
+		 (disable (x)
+		   (setf list (remove x list))))
 EOF
 	if use x86 || use amd64; then
 		use threads && echo '(enable :sb-thread)' \
@@ -109,7 +109,7 @@ EOF
 		&& echo '(disable :sb-unicode)' \
 		>>${S}/customize-target-features.lisp
 	cat >>${S}/customize-target-features.lisp <<'EOF'
-    )
+	)
   list)
 EOF
 	cat ${S}/customize-target-features.lisp
@@ -145,8 +145,8 @@ src_install() {
 ;;; work in SLIME, for example.
 
 (setf (logical-pathname-translations "SYS")
-    '(("SYS:SRC;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/src/**/*.*")
-      ("SYS:CONTRIB;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/**/*.*")))
+	'(("SYS:SRC;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/src/**/*.*")
+	  ("SYS:CONTRIB;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/**/*.*")))
 EOF
 	dodir /usr/share/man
 	dodir /usr/share/doc/${PF}
@@ -159,7 +159,7 @@ EOF
 		doinfo ${S}/doc/manual/*.info*
 	fi
 
-	if ! use nosource; then
+	if  use source; then
 		# install the SBCL source
 		cp -pPR ${S}/src ${D}/usr/$(get_libdir)/sbcl
 		find ${D}/usr/$(get_libdir)/sbcl/src -type f -name \*.fasl -print0 | xargs -0 rm -f
