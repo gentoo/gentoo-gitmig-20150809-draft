@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.45 2007/05/26 14:46:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.46 2007/06/13 06:35:40 corsair Exp $
+
+  13 Jun 2007; Markus Rothe <corsair@gentoo.org> jsch-0.1.33.ebuild:
+  Stable on ppc64; bug #181721
 
   26 May 2007; Petteri Räty <betelgeuse@gentoo.org> -jsch-0.1.18.ebuild:
   Remove generation 1 ebuild.
