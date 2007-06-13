@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.68 2007/06/07 22:37:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.69 2007/06/13 13:54:33 armin76 Exp $
+
+  13 Jun 2007; Raúl Porcel <armin76@gentoo.org> -seamonkey-1.0.8.ebuild,
+  -seamonkey-1.1.1.ebuild, seamonkey-1.1.2.ebuild:
+  Remove forced MAKEOPTS, bug 181722, remove old
 
   07 Jun 2007; Jeroen Roovers <jer@gentoo.org> seamonkey-1.1.2.ebuild:
   Stable for HPPA (bug #180436).

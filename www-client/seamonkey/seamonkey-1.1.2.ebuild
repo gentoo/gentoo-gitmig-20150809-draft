@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.2.ebuild,v 1.7 2007/06/07 22:37:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.2.ebuild,v 1.8 2007/06/13 13:54:33 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -165,7 +165,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake -j1 || die
+	emake || die
 
 	####################################
 	#
