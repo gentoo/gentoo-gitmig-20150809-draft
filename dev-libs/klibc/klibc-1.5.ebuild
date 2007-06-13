@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.ebuild,v 1.1 2007/05/17 11:31:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.ebuild,v 1.2 2007/06/13 18:10:34 phreak Exp $
 
 inherit eutils linux-info multilib toolchain-funcs
 
@@ -103,8 +103,8 @@ src_compile() {
 	if tc-is-cross-compiler ; then
 		einfo "ARCH = \"$(guess_arch)\""
 		einfo "CROSS = \"${CTARGET}-\""
-		emake ARCH=$(guess_arch) \
-			CROSS="${CTARGET}-" \
+		emake KLIBCARCH=$(guess_arch) \
+			CROSS_COMPILE="${CTARGET}-" \
 			EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
 			EXTRA_KLIBCLDFLAGS="-z,noexecstack" \
 			libdir="/usr/$(get_libdir)" \
@@ -140,8 +140,8 @@ src_install() {
 			EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
 			EXTRA_KLIBCLDFLAGS="-z,noexecstack" \
 			INSTALLROOT="${D}" \
-			ARCH=$(guess_arch) \
-			CROSS="${CTARGET}-" \
+			KLIBCARCH=$(guess_arch) \
+			CROSS_COMPILE="${CTARGET}-" \
 			libdir="/usr/$(get_libdir)" \
 			SHLIBDIR="/$(get_libdir)" \
 			mandir="/usr/share/man" \
