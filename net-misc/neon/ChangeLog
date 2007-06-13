@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.83 2007/06/09 15:02:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.84 2007/06/13 17:13:43 gustavoz Exp $
+
+  13 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> neon-0.26.3.ebuild:
+  Stable on sparc wrt #178264
 
   09 Jun 2007; Markus Rothe <corsair@gentoo.org> neon-0.26.3.ebuild:
   Stable on ppc64; bug #178264
