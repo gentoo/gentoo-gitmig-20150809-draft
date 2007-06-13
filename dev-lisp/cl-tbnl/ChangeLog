@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-tbnl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.42 2007/05/19 21:02:41 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.43 2007/06/13 12:30:29 chtekk Exp $
+
+  13 Jun 2007; Luca Longinotti <chtekk@gentoo.org> -cl-tbnl-0.8.9.ebuild:
+  Remove Apache1.
 
   19 May 2007; Peter Weller <welp@gentoo.org> cl-tbnl-0.11.2.ebuild:
   Keyworded ~amd64 wrt bug 178192
