@@ -1,10 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.203 2007/06/13 13:11:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.204 2007/06/13 13:13:46 armin76 Exp $
 
   13 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-thunderbird-2.0.0.0.ebuild:
-  Remove forced MAKEOPTS, bug 169155
+  Remove forced MAKEOPTS, bug 181722
 
   08 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-thunderbird-1.5.0.12.ebuild, mozilla-thunderbird-2.0.0.0.ebuild:
