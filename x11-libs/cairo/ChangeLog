@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.122 2007/05/30 13:30:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.123 2007/06/13 22:53:47 cardoe Exp $
+
+*cairo-1.4.8 (13 Jun 2007)
+
+  13 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  -files/cairo-1.0.4-ssp-nonsense.patch, -cairo-1.0.4.ebuild,
+  -cairo-1.0.4-r1.ebuild, -cairo-1.2.4.ebuild, -cairo-1.4.0.ebuild,
+  -cairo-1.4.2.ebuild, +cairo-1.4.8.ebuild:
+  remove old version. rev bump to 1.4.8
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> cairo-1.4.4.ebuild:
   alpha stable wrt #176367
