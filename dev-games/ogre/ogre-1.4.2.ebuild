@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.0.ebuild,v 1.1 2007/04/04 01:44:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.2.ebuild,v 1.1 2007/06/13 11:55:15 nyhm Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
-SRC_URI="mirror://sourceforge/ogre/ogre-linux_osx-v${PV//./-}.tar.bz2"
+SRC_URI="mirror://sourceforge/ogre/ogre-linux-osx-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc cegui cg double-precision examples freeimage gtk openexr threads"
+IUSE="doc cegui cg devil double-precision examples freeimage gtk openexr threads"
 RESTRICT="test" #139905
 
 RDEPEND="dev-libs/zziplib
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/zziplib
 	x11-libs/libX11
 	cegui? ( >=dev-games/cegui-0.5 )
 	cg? ( media-gfx/nvidia-cg-toolkit )
+	devil? ( media-libs/devil )
 	freeimage? ( media-libs/freeimage )
 	gtk? (
 		>=dev-cpp/gtkmm-2.4
@@ -38,17 +39,10 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/ogrenew
 
 pkg_setup() {
-	if use threads ; then
-		if ! built_with_use dev-libs/boost threads ; then
-			die "Please emerge dev-libs/boost with USE=threads"
-		fi
-		ewarn "Threads support is experimental in ${PN} and is not recommended."
-		ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=144819"
-		ewarn "Read the man page for portage by typing \"man portage\""
-		ewarn "and read about /etc/portage/package.use for disabling"
-		ewarn "the threads use flag for ${PN} without affecting other packages."
-		ebeep
-		epause 10
+	if use threads && has_version "<dev-libs/boost-1.34" && \
+		! built_with_use dev-libs/boost threads
+	then
+		die "Please emerge dev-libs/boost with USE=threads"
 	fi
 }
 
@@ -77,6 +71,7 @@ src_compile() {
 		--with-gui=$(usev gtk || echo Xt) \
 		$(use_enable cegui) \
 		$(use_enable cg) \
+		$(use_enable devil) \
 		$(use_enable double-precision double) \
 		$(use_enable freeimage) \
 		$(use_enable openexr) \
