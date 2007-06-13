@@ -1,4 +1,8 @@
 # Samuli Suominen <drac@gentoo.org>
+# sci-visualization/grace not tested.
+grace
+
+# Samuli Suominen <drac@gentoo.org>
 # media-gfx/gimp not tested.
 gimp
 
