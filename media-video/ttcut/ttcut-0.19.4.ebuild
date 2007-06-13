@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.4.ebuild,v 1.2 2007/06/01 16:51:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.4.ebuild,v 1.3 2007/06/13 15:26:16 zzam Exp $
 
 inherit eutils qt4
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 		media-video/mplayer
 		media-video/transcode"
 
-S=${WORKDIR}
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	if ! built_with_use media-video/transcode mjpeg ; then

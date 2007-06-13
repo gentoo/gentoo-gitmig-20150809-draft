@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.5 2007/06/01 16:51:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.6 2007/06/13 15:26:16 zzam Exp $
+
+  13 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> ttcut-0.19.4.ebuild:
+  Adapted to changed source tarball, thanks to Daniel Pielmeier.
 
   01 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> ttcut-0.19.4.ebuild:
   Do not install copying and install files.
