@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425-r2.ebuild,v 1.8 2007/03/18 12:06:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425-r2.ebuild,v 1.9 2007/06/13 16:53:56 armin76 Exp $
 
 inherit font font-ebdftopcf
 
@@ -25,7 +25,7 @@ SRC_URI="${SRC_BASE1}/jiskan16-2004-1.bdf.gz
 LICENSE="public-domain"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd"
 
 S="${WORKDIR}"
 FONT_S="${S}"
