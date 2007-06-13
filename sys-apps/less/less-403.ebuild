@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-394.ebuild,v 1.15 2007/06/13 23:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-403.ebuild,v 1.1 2007/06/13 23:14:17 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
 
 LICENSE="|| ( GPL-2 less )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2"
@@ -33,13 +33,11 @@ src_compile() {
 }
 
 src_install() {
-	dobin less lessecho lesskey code2color || die "dobin"
+	emake install DESTDIR="${D}" || die
+
+	dobin code2color || die "dobin"
 	newbin "${FILESDIR}"/lesspipe.sh lesspipe.sh || die "newbin"
 	newenvd "${FILESDIR}"/less.envd 70less
-
-	for m in *.nro ; do
-		newman ${m} ${m/nro/1}
-	done
 
 	dodoc NEWS README* "${FILESDIR}"/README.Gentoo
 }
