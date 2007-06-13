@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_console
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.16 2007/03/26 15:43:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.17 2007/06/13 18:56:44 armin76 Exp $
+
+  13 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  pam_console-0.99.7.0.2.7.ebuild:
+  Add ~alpha #152713
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   pam_console-0.99.7.0.2.7.ebuild:

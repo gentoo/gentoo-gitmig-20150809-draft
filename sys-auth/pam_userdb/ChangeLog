@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_userdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.9 2007/01/26 15:59:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.10 2007/06/13 18:59:00 armin76 Exp $
+
+  13 Jun 2007; Raúl Porcel <armin76@gentoo.org> pam_userdb-0.99.6.3.ebuild:
+  Add ~alpha #152713
 
   26 Jan 2007; Jeroen Roovers <jer@gentoo.org> pam_userdb-0.99.6.3.ebuild:
   Marked ~hppa (bug #152713).
