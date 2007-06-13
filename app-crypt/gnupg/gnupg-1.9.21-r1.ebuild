@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21-r1.ebuild,v 1.6 2007/01/24 17:05:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21-r1.ebuild,v 1.7 2007/06/13 08:05:52 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -21,7 +21,6 @@ COMMON_DEPEND="
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.15
 	>=dev-libs/libgpg-error-1.0
-	~dev-libs/libassuan-0.6.10
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
 	openct? ( >=dev-libs/openct-0.5.0 )
 	ldap? ( net-nds/openldap )"
@@ -29,6 +28,7 @@ COMMON_DEPEND="
 #	X? ( app-crypt/pinentry )
 
 DEPEND="${COMMON_DEPEND}
+	~dev-libs/libassuan-0.6.10
 	nls? ( sys-devel/gettext )"
 
 RDEPEND="${COMMON_DEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.15 2007/01/25 20:30:47 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.16 2007/06/13 08:05:52 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -25,11 +25,11 @@ COMMON_DEPEND="
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.15
 	>=dev-libs/libgpg-error-1.0
-	~dev-libs/libassuan-0.6.10
 	ldap? ( net-nds/openldap )"
 #	caps? ( sys-libs/libcap )"
 
 DEPEND="${COMMON_DEPEND}
+	~dev-libs/libassuan-0.6.10
 	nls? ( sys-devel/gettext )"
 
 RDEPEND="${COMMON_DEPEND}
