@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.22 2007/06/11 18:25:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.23 2007/06/13 06:21:51 opfer Exp $
+
+  13 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  sensors-applet-1.7.12.ebuild:
+  stable x86, bug 181487
 
   11 Jun 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/sensors-applet-1.7.12-test-fix.patch, sensors-applet-1.7.12.ebuild:

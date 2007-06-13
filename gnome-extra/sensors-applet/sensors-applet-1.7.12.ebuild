@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.7.12.ebuild,v 1.2 2007/06/11 18:25:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.7.12.ebuild,v 1.3 2007/06/13 06:21:51 opfer Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sensors-applet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="hddtemp libnotify lm_sensors nvidia"
 
 RDEPEND="
