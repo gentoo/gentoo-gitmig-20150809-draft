@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/noscript
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/ChangeLog,v 1.38 2007/06/12 00:05:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/ChangeLog,v 1.39 2007/06/13 12:13:20 armin76 Exp $
+
+  13 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  noscript-1.1.4.8.070430.ebuild, noscript-1.1.4.8.070602.ebuild:
+  Make it usable with firefox-bin, bug 179098
 
   12 Jun 2007; Christoph Mende <angelos@gentoo.org>
   noscript-1.1.4.8.070430.ebuild:
