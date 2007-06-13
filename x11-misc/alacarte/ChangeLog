@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.31 2007/06/11 17:40:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.32 2007/06/13 16:40:29 dang Exp $
+
+  13 Jun 2007; Daniel Gryniewicz <dang@gentoo.org>
+  alacarte-0.11.3-r1.ebuild:
+  Oops, forgot autotools...
 
 *alacarte-0.11.3-r1 (11 Jun 2007)
 
