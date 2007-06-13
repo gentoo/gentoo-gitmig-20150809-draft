@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.40 2007/06/07 15:38:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.41 2007/06/13 08:21:47 voyageur Exp $
+
+  13 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  nxclient-1.5.0-r5.ebuild:
+  Drop qt dependency (statically linked binary)
 
   07 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
   nxclient-2.1.0-r1.ebuild:

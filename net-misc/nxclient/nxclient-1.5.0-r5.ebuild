@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r5.ebuild,v 1.3 2007/04/26 09:48:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r5.ebuild,v 1.4 2007/06/13 08:21:47 voyageur Exp $
 
 inherit rpm
 
@@ -23,13 +23,11 @@ DEPEND="
 		app-emulation/emul-linux-x86-compat
 		>=app-emulation/emul-linux-x86-baselibs-2.1.4
 		>=app-emulation/emul-linux-x86-xlibs-2.2.1
-		>=app-emulation/emul-linux-x86-qtlibs-2.1.1
 	)
 	x86? (
 		>=dev-libs/expat-1.95.7
 		>=media-libs/fontconfig-2.2.2
 		>=media-libs/freetype-2.1.9
-		=x11-libs/qt-3*
 		sys-libs/lib-compat
 	)
 	!net-misc/nxclient-2xterminalserver"
