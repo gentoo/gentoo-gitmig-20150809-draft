@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110-r1.ebuild,v 1.4 2007/03/07 16:51:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110-r1.ebuild,v 1.5 2007/06/13 18:53:14 nyhm Exp $
 
 #ECVS_PASS="anonymous"
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -39,7 +39,7 @@ src_unpack() {
 	rm -rf Data/Textures
 	mv "${WORKDIR}"/Textures Data/ || die "mv failed"
 	sed -i \
-		-e "/^CFLAGS/s:$: ${CFLAGS}:" Makefile \
+		-e "/^CFLAGS/s:-O2 -Wall -g:-Wall ${CXXFLAGS}:" Makefile \
 		|| die "sed Makefile failed"
 	find "${S}" -type d -name CVS -exec rm -rf \{\} \; 2> /dev/null
 	find "${S}/Data/Textures" -type f -name ".*" -exec rm -f \{\} \;
@@ -49,7 +49,9 @@ src_unpack() {
 	sed -i \
 		-e "/glut.h/d" Source/Decals.h \
 		|| die "removing glut include failed"
-	epatch "${FILESDIR}"/${PN}-freealut.patch
+	epatch \
+		"${FILESDIR}"/${PN}-freealut.patch \
+		"${FILESDIR}"/${PN}-gcc42.patch
 }
 
 src_install() {
