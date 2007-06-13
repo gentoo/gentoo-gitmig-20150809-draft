@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.12 2007/04/04 20:20:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.13 2007/06/13 23:57:51 nyhm Exp $
 
 inherit flag-o-matic eutils games
 
@@ -37,7 +37,8 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-makefile-cflags.patch \
 		"${FILESDIR}"/${PV}-remove-root.patch \
 		"${FILESDIR}"/${PV}-gentoo-paths.patch \
-		"${FILESDIR}"/${P}-gcc4.patch
+		"${FILESDIR}"/${P}-gcc4.patch \
+		"${FILESDIR}"/${P}-gcc42.patch
 	sed -i \
 		-e "s:GENTOO_LOGDIR:${GAMES_LOGDIR}:" \
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}/${PN}/:" \

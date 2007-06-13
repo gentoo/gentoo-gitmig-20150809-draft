@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freecnc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.10 2007/03/12 18:05:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.11 2007/06/13 23:57:51 nyhm Exp $
+
+  13 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/freecnc-0.2.1.31072003-gcc42.patch, freecnc-0.2.1.31072003.ebuild:
+  Patch for gcc-4.2
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org>
   freecnc-0.2.1.31072003.ebuild:
