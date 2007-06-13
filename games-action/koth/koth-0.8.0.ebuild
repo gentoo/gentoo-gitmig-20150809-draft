@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation and Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2007 Gentoo Foundation and Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.13 2005/06/15 17:31:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.14 2007/06/13 16:22:28 nyhm Exp $
 
 inherit eutils games
 
@@ -15,16 +15,23 @@ IUSE=""
 
 DEPEND="media-libs/libggi"
 
-src_unpack(){
-	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/koth-0.8.0-gcc-3.4.patch
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	sed -i 's:-g -O2::' configure \
+		|| die "sed configure failed"
+	cd src
+	epatch "${FILESDIR}"/${P}-gcc-3.4.patch
+	sed -i "s:/etc/koth:${GAMES_SYSCONFDIR}:" cfgfile.h \
+		|| die "sed cfgfile.h failed"
+	sed -i 's:(uint16):(uint16_t):' gfx.c gfx.h \
+		|| die "sed gfx.c gfx.h failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	insinto /etc/koth
-	doins src/koth.cfg
+	emake DESTDIR="${D}" install || die "emake install failed"
+	insinto "${GAMES_SYSCONFDIR}"
+	doins src/koth.cfg || die "doins failed"
 	dodoc AUTHORS ChangeLog NEWS README doc/*.txt
 	prepgamesdirs
 }
