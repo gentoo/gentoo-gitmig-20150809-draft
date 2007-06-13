@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r1.ebuild,v 1.2 2007/05/22 13:06:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r1.ebuild,v 1.3 2007/06/13 17:23:34 tsunam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 	virtual/logger
 	logrotate? ( app-admin/logrotate )"
 
-KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
 
 # some FHS-like structure
 HOMEDIR="/var/spool/dspam"
