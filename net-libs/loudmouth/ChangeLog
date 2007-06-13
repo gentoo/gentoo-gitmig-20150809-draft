@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.47 2007/06/05 20:17:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.48 2007/06/13 17:08:46 foser Exp $
+
+*loudmouth-1.2.3 (13 Jun 2007)
+
+  13 Jun 2007; Marinus Schraal <foser@gentoo.org> loudmouth-1.2.3.ebuild :
+  New release
 
   05 Jun 2007; Stefan Schweizer <genstef@gentoo.org> loudmouth-1.2.2.ebuild:
   Add check depend for tests thanks to graaff in bug 180613
