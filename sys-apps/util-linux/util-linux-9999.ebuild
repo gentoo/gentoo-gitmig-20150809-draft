@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.2 2007/04/30 17:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.3 2007/06/13 03:27:24 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils git
@@ -61,4 +61,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS DEPRECATED NEWS README TODO
+	# required by autotools
+	dosym /bin/arch /usr/bin/arch
 }

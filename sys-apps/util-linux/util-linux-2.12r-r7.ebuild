@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.6 2007/05/19 11:23:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.7 2007/06/13 03:27:24 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -163,6 +163,8 @@ src_install() {
 	dosym ../man8/agetty.8 /usr/share/man/man1/getty.1
 	dosbin partx/{addpart,delpart,partx} || die "dosbin"
 	use perl || rm -f "${D}"/usr/bin/chkdupexe
+	# required by autotools
+	dosym /bin/arch /usr/bin/arch
 
 	newinitd "${FILESDIR}"/crypto-loop.initd crypto-loop
 	newconfd "${FILESDIR}"/crypto-loop.confd crypto-loop
