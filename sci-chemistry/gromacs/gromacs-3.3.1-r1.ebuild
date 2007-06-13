@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.8 2007/03/17 12:09:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.9 2007/06/13 18:15:51 armin76 Exp $
 
 inherit eutils fortran multilib
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gromacs.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc64 sparc x86"
 
 DEPEND=">=sci-libs/fftw-3.0.1
 	mpi? ( virtual/mpi )
@@ -34,10 +34,6 @@ src_unpack() {
 	unpack ${A}
 	if use ppc64 && use altivec ; then
 		epatch "${FILESDIR}"/${PN}-ppc64-altivec.patch
-	fi
-
-	if use alpha ; then
-		epatch ${FILESDIR}/${PN}-alpha-axp_asm.patch
 	fi
 
 	cd "${S}"
@@ -140,7 +136,7 @@ src_compile() {
 			;;
 
 		alpha)
-				myconf="$myconf --enable-axp-asm"
+				myconf="$myconf --enable-axp-asm --disable-fortran"
 			;;
 
 	esac
