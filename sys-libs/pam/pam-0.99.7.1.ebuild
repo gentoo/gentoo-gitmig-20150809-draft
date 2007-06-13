@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.2 2007/01/26 15:47:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.3 2007/06/13 19:00:15 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/linux/libs/pam/pre/library/${MY_P}.tar.bz2
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls elibc_FreeBSD selinux vim-syntax"
 
 RDEPEND="nls? ( virtual/libintl )
