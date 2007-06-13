@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.36 2007/06/13 18:50:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.37 2007/06/13 18:54:05 aballier Exp $
+
+  13 Jun 2007; Alexis Ballier <aballier@gentoo.org> -moc-2.1.4-r1.ebuild,
+  -moc-2.2.0-r1.ebuild:
+  cleanup old versions
 
 *moc-2.4.2 (13 Jun 2007)
 
