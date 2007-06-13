@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.57 2007/06/08 06:05:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.58 2007/06/13 12:40:04 chtekk Exp $
+
+  13 Jun 2007; Luca Longinotti <chtekk@gentoo.org>
+  -mod_python-2.7.11.ebuild:
+  Remove Apache1.
 
   08 Jun 2007; Joshua Kinard <kumba@gentoo.org> mod_python-3.3.1.ebuild:
   Marked unstable on mips, per #181068.
