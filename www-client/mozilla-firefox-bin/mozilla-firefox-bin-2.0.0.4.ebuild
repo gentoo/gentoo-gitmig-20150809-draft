@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.4.ebuild,v 1.6 2007/06/08 13:51:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.4.ebuild,v 1.7 2007/06/13 12:23:09 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -15,7 +15,7 @@ RESTRICT="nostrip"
 KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE=""
+IUSE="restrict-javascript"
 
 for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
@@ -44,7 +44,9 @@ RDEPEND="x11-libs/libXrender
 	)
 	>=www-client/mozilla-launcher-1.41"
 
-S=${WORKDIR}/firefox
+PDEPEND="restrict-javascript? ( x11-plugins/noscript )"
+
+S="${WORKDIR}/firefox"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
