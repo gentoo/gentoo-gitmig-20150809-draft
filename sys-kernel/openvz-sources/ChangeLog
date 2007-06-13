@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.68 2007/06/04 17:08:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.69 2007/06/13 19:26:55 phreak Exp $
+
+*openvz-sources-028.035 (13 Jun 2007)
+
+  13 Jun 2007; Christian Heim <phreak@gentoo.org>
+  +openvz-sources-028.035.ebuild:
+  Version bump, including security fixes from mainstream, sparc/ppc related
+  fixes and checkpointing fixes for nfs in VE's, veth and ext3.
 
 *openvz-sources-028.033 (04 Jun 2007)
 
