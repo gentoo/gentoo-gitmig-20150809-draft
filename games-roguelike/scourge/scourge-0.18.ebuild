@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.18.ebuild,v 1.1 2007/06/01 01:23:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.18.ebuild,v 1.2 2007/06/13 22:44:18 nyhm Exp $
 
 inherit autotools eutils wxwidgets games
 
@@ -41,6 +41,7 @@ src_unpack() {
 			-e "/WXWIDGET_LIBS/s:wx-config:${WX_CONFIG}:" \
 			configure.in || die "sed failed"
 	fi
+	epatch "${FILESDIR}"/${P}-gcc42.patch
 	eautoreconf
 }
 

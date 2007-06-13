@@ -1,0 +1,22 @@
+--- src/sdlhandler.cpp
++++ src/sdlhandler.cpp
+@@ -163,7 +163,7 @@
+ }
+ 
+ /* general OpenGL initialization function */
+-int SDLHandler::initGL( GLvoid ) {
++int SDLHandler::initGL( void ) {
+   /* Enable Texture Mapping */
+     glEnable( GL_TEXTURE_2D );
+       
+--- src/sdlhandler.h
++++ src/sdlhandler.h
+@@ -231,7 +231,7 @@
+ protected:	
+ 	bool popHandlers();
+ 	int resizeWindow( int width, int height );
+-	int initGL( GLvoid );  
++	int initGL( void );  
+ 	void drawCursor();
+ 
+ 	void drawScreenInternal();
