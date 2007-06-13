@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r4.ebuild,v 1.3 2007/04/23 11:52:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r4.ebuild,v 1.4 2007/06/13 21:31:11 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -41,7 +41,8 @@ src_unpack() {
 		"${FILESDIR}"/${P}-anisotropic.patch \
 		"${FILESDIR}"/${P}-gentoo3.patch \
 		"${FILESDIR}"/${PN}-glN64-ucode.patch \
-		"${FILESDIR}"/${PN}-glN64-noasmfix.patch
+		"${FILESDIR}"/${PN}-glN64-noasmfix.patch \
+		"${FILESDIR}"/${P}-gcc42.patch
 
 	sed -i \
 		-e "s:#undef WITH_HOME:#define WITH_HOME \"$(games_get_libdir)/\":" \

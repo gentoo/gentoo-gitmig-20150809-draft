@@ -18,8 +18,8 @@ diff -ruN mupen64_src-0.5.orig/Makefile mupen64_src-0.5/Makefile
  #CFLAGS		=-DX86 -Wall -pipe -g
  
 -CXXFLAGS	=$(CFLAGS)
-+CFLAGS		+= -fPIC
-+CXXFLAGS	+= -fPIC
++CFLAGS		+= -fPIC -fno-strict-aliasing
++CXXFLAGS	+= -fPIC -fno-strict-aliasing
 +
 +CXXFLAGS	?=$(CFLAGS)
  
