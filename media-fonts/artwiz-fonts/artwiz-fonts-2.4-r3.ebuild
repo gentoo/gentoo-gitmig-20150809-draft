@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r3.ebuild,v 1.12 2007/04/21 21:01:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r3.ebuild,v 1.13 2007/06/13 16:32:55 armin76 Exp $
 
 inherit font font-ebdftopcf
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://fluxbox.sourceforge.net/docs/artwiz-fonts.php"
 
 SLOT=0
 LICENSE="ZBL"
-KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 FONT_PN="artwiz"
