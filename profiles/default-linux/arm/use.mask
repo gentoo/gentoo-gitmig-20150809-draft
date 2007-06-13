@@ -1,3 +1,11 @@
+# Samuli Suominen <drac@gentoo.org>
+# media-gfx/gimp not tested.
+gimp
+
+# Samuli Suominen <drac@gentoo.org>
+# CPU Frequency Scaling not supported.
+cpufreq
+
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # With vapier's permission masking this.
 mozilla

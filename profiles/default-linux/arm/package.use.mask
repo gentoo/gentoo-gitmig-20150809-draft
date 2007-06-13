@@ -1,8 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.3 2007/06/09 09:37:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.4 2007/06/13 14:42:25 drac Exp $
 
-# Samuli Suominen <drac@gentoo.org> (09 Jun 2007)
-# cpu frequency scaling not tested
-xfce-base/xfce4-extras cpufreq
+# Samuli Suominen <drac@gentoo.org> (13 Jun 2007)
+# >=media-video/ffmpeg-20070330 required which fails.
+# Error: selected processor does not support pld [r1].
+# Mask until new snapshot gets unmasked and tested.
+xfce-extra/thunar-thumbnailers ffmpeg
 
 # Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
 # media-sound/twolame not tested
