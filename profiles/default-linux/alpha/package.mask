@@ -1,3 +1,8 @@
+# Jose Luis Rivero <yoswink@gentoo.org> (13 Jun 2006)
+# Alpha arch team doesn't want to keep this alive due to
+# the rare existance of systems using it.
+sys-power/acpid
+
 # Remi Cardona <remi@gentoo.org> (09 Jun 2007)
 # The Great GNOME 2.18.0 mask (moved from global)
 >=gnome-base/gnome-2.18.0
