@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.45.ebuild,v 1.5 2007/06/03 18:37:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.45.ebuild,v 1.6 2007/06/13 23:41:42 vapier Exp $
 
 inherit eutils autotools
 
@@ -22,7 +22,7 @@ DEPEND="sys-fs/e2fsprogs
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.2.33-no-compress-docs.patch
+	epatch "${FILESDIR}"/${PN}-2.2.45-LDFLAGS.patch
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		-e '/^GCFLAGS/s:-O1::' \

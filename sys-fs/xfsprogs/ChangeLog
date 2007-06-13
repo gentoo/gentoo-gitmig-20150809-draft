@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.65 2007/06/09 15:52:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.66 2007/06/13 23:41:20 vapier Exp $
+
+  13 Jun 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/xfsprogs-2.8.21-LDFLAGS.patch, xfsprogs-2.8.21.ebuild:
+  Respect LDFLAGS while linking the library.
 
   09 Jun 2007; Markus Rothe <corsair@gentoo.org>
   +files/xfsprogs-2.8.21-kern-types.patch, xfsprogs-2.8.21.ebuild:

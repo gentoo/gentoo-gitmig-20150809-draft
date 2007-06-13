@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.21.ebuild,v 1.2 2007/06/09 15:52:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.21.ebuild,v 1.3 2007/06/13 23:41:20 vapier Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.8.18-symlinks.patch #166729
+	epatch "${FILESDIR}"/${PN}-2.8.21-LDFLAGS.patch
 	epatch "${FILESDIR}"/${P}-kern-types.patch #131483
 	# Inject our own CFLAGS / docpath
 	sed -i \
