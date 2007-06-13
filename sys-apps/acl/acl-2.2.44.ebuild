@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.44.ebuild,v 1.1 2007/05/31 05:59:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.44.ebuild,v 1.2 2007/06/13 23:37:32 vapier Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -30,6 +30,7 @@ src_unpack() {
 			acl-2.2.41-CITI_NFS4_ALL-3.dif
 	fi
 	epatch "${FILESDIR}"/${PN}-2.2.32-only-symlink-when-needed.patch
+	epatch "${FILESDIR}"/${PN}-2.2.44-LDFLAGS.patch
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		-e '/HAVE_ZIPPED_MANPAGES/s:=.*:=false:' \

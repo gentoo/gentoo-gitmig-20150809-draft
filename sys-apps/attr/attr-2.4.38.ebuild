@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.38.ebuild,v 1.1 2007/05/31 06:03:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.38.ebuild,v 1.2 2007/06/13 23:34:07 vapier Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.4.24-only-symlink-when-needed.patch
+	epatch "${FILESDIR}"/${PN}-2.4.38-LDFLAGS.patch
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		-e '/HAVE_ZIPPED_MANPAGES/s:=.*:=false:' \
