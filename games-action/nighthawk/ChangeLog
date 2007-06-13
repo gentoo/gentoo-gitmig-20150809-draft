@@ -1,6 +1,10 @@
 # ChangeLog for games-action/nighthawk
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.11 2006/10/06 21:55:25 wolf31o2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.12 2007/06/13 15:00:14 nyhm Exp $
+
+  13 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/nighthawk-2.2-gcc42.patch, nighthawk-2.2.ebuild:
+  Patch for gcc-4.2
 
   06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> nighthawk-2.2.ebuild:
   Removed reference to virtual/x11.
