@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.24 2007/06/12 15:09:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.25 2007/06/13 06:30:37 corsair Exp $
+
+  13 Jun 2007; Markus Rothe <corsair@gentoo.org> tre-0.7.4.ebuild:
+  Added ~ppc64; bug #180969
 
   12 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> tre-0.7.4.ebuild:
   Keyworded ~sparc
