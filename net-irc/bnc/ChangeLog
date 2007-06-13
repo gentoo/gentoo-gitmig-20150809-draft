@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.30 2007/06/13 10:54:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.31 2007/06/13 12:57:44 angelos Exp $
+
+  13 Jun 2007; Christoph Mende <angelos@gentoo.org> bnc-2.9.4.ebuild:
+  Stable on amd64 wrt bug 181754
 
   13 Jun 2007; Raúl Porcel <armin76@gentoo.org> bnc-2.9.4.ebuild:
   alpha stable wrt #181754

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.4.ebuild,v 1.4 2007/06/13 10:54:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.4.ebuild,v 1.5 2007/06/13 12:57:44 angelos Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://gotbnc.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 arm ~ppc ~sparc x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
