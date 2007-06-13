@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r1.ebuild,v 1.1 2007/05/18 22:46:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r1.ebuild,v 1.2 2007/06/13 21:14:13 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -46,6 +46,8 @@ src_unpack() {
 	cd ${PN}
 
 	unpack ./${P}-src.tar.gz
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc42.patch
 }
 
 src_compile() {
