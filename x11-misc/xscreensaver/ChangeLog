@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.186 2007/06/09 10:39:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.187 2007/06/13 18:44:46 drac Exp $
+
+  13 Jun 2007; Samuli Suominen <drac@gentoo.org> xscreensaver-5.02.ebuild,
+  xscreensaver-5.02-r1.ebuild, xscreensaver-5.02-r2.ebuild:
+  Stop using hypertorus.xml patch since it was fixed differently. Bug 154444.
 
   09 Jun 2007; Samuli Suominen <drac@gentoo.org>
   xscreensaver-5.02-r2.ebuild:

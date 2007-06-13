@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r2.ebuild,v 1.2 2007/06/09 10:39:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r2.ebuild,v 1.3 2007/06/13 18:44:46 drac Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -48,9 +48,6 @@ src_unpack() {
 
 	# disable not-safe-for-work xscreensavers
 	use offensive || epatch "${FILESDIR}/${P}-nsfw.patch"
-
-	# Fix bug #154444 - hypertorus hack:
-	epatch "${FILESDIR}/${PN}-5.01-hypertorus.xml.patch"
 
 	epatch "${FILESDIR}"/${P}-gdmflexiserver.patch
 
