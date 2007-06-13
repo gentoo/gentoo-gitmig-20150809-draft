@@ -1,48 +1,28 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/files/serial,v 1.2 2007/06/05 20:56:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/files/serial,v 1.3 2007/06/13 07:51:51 vapier Exp $
 
 depend() {
 	need localmount
 }
 
-moduleinserted() {
-	local res=$(grep 'serial' /proc/modules | cut -f1 -d" ")
-	[ "${res}" = "serial" ] && return 1
-}
-
-setports() {
-	#if serial module exists, and it's not inserted, insert it permanently
-	if [ -f "/lib/modules/$(uname -r)/misc/serial.o" ] ; then
-		moduleinserted
-		if [ $? -eq 0 ] ; then
-			/sbin/insmod serial 1>&2
-		fi
-	fi
-
-	if [ -e /etc/serial.conf ] ; then
-		grep -v "^#\|^ \|^$" /etc/serial.conf | while read device args
-		do
-			ebegin "Setting $device to $args"
-			${SETSERIAL} -b $device $args 1>&2
-			if [ $? -gt 0 ] ; then
-				eend 1 "Error setting serial port $device $args"
-				no_errs=0
-			else
-				eend 0
-				done="${done} /dev/$1"
-			fi
-		done
-	fi
-}
-
 start() {
-	SETSERIAL="/bin/setserial"
-	no_errs=1
-	done=""
-	setports
-	return
+	[ ! -e /etc/serial.conf ] && return 0
+
+	# load the module if need be
+	if [ -e /proc/modules ] ; then
+		modprobe -q serial
+	fi
+
+	grep -v "^#\|^ \|^$" /etc/serial.conf | while read device args
+	do
+		ebegin "Setting ${device} to $args"
+		setserial -b ${device} ${args}
+		eend $?
+	done
+
+	return 0
 }
 
 
