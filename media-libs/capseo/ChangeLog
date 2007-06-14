@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/capseo
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.1 2007/06/14 14:30:57 trapni Exp $
+
+*capseo-0.3.0_pre200706031 (14 Jun 2007)
+
+  14 Jun 2007; <trapni@gentoo.org> +metadata.xml,
+  +capseo-0.3.0_pre200706031.ebuild:
+  initial import
+
