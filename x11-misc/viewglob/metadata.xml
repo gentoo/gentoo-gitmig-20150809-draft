@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>shell-tools</herd>
-	<maintainer>
-		<email>slarti@gentoo.org</email>
-		<name>Tom Martin</name>
-	</maintainer>
 	<longdescription lang="en">
 		Viewglob is a package that graphically displays the results of a shell
 		glob, helping beginners of shell usage become acclimitised to filename
