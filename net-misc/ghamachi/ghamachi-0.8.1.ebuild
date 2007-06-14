@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ghamachi-0.8.1.ebuild,v 1.1 2007/05/18 12:37:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ghamachi-0.8.1.ebuild,v 1.2 2007/06/14 12:49:29 angelos Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.penguinbyte.com/software/ghamachi/"
 LICENSE="as-is"
 SRC_URI="http://purebasic.myftp.org/files/3/projects/hamachi/v.${PV}/gHamachi_${PV}.tar.gz"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RESTRICT="nostrip nomirror"
 RDEPEND="net-misc/hamachi
