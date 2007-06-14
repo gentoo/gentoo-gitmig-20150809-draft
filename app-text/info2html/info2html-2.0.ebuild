@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-2.0.ebuild,v 1.5 2007/06/14 09:20:13 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-2.0.ebuild,v 1.6 2007/06/14 13:16:57 angelos Exp $
 
 inherit eutils webapp
 
@@ -12,7 +12,7 @@ LICENSE="freedist"
 # webapp.eclass deals with SLOTting
 #SLOT="0"
 IUSE=""
-KEYWORDS="alpha ~amd64 hppa sparc x86"
+KEYWORDS="alpha amd64 hppa sparc x86"
 
 RDEPEND="dev-lang/perl"
 
