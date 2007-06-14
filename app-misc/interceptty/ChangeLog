@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/interceptty
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/interceptty/ChangeLog,v 1.4 2007/04/09 13:27:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/interceptty/ChangeLog,v 1.5 2007/06/14 01:56:46 angelos Exp $
+
+  14 Jun 2007; Christoph Mende <angelos@gentoo.org> interceptty-0.6.ebuild:
+  Stable on amd64 wrt bug 181568
 
   09 Apr 2007; Raúl Porcel <armin76@gentoo.org> interceptty-0.6.ebuild:
   x86 stable wrt bug 173844
