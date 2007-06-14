@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r1.ebuild,v 1.1 2007/05/02 19:25:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r1.ebuild,v 1.2 2007/06/14 07:06:34 mrness Exp $
 
 inherit fixheadtails eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 		|| die "bad ./configure"
 	# the comments in the source say this is only useful for 2.0 kernels ...
 	# well it may fix 2.0 but it breaks with 2.6 :)
-	[ "${KV:0:3}" == "2.6" ] && sed -i 's:if HAVE_LINUX_ECCENTRICITIES:if 0:' include/common.h
+	sed -i 's:if HAVE_LINUX_ECCENTRICITIES:if 0:' include/common.h
 	emake || die "compile problem"
 }
 

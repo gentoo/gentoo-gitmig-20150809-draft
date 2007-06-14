@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.37 2007/05/02 19:25:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.38 2007/06/14 07:06:34 mrness Exp $
+
+  14 Jun 2007; Alin Năstac <mrness@gentoo.org> dante-1.1.19-r1.ebuild:
+  Disable hack for 2.0 kernels (bug #174115 comment #8).
 
 *dante-1.1.19-r1 (02 May 2007)
 
