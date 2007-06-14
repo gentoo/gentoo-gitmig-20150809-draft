@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.24 2007/06/13 14:38:45 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.25 2007/06/14 12:51:29 gustavoz Exp $
+
+  14 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> numpy-1.0.3.ebuild:
+  Keyworded ~sparc wrt #181888
 
   13 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> numpy-1.0.3.ebuild:
   Fixed src_test to be more verbose.
