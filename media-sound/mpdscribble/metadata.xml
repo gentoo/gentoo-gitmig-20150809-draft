@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>slarti@gentoo.org</email>
-		<name>Tom Martin</name>
-	</maintainer>
 	<longdescription lang="en">
 		A client for the Music Player Daemon that sends information to
 		Audioscrobbler -- a website (www.last.fm) displaying what various people
