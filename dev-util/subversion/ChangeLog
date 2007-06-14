@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.259 2007/06/13 17:17:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.260 2007/06/14 17:46:11 phreak Exp $
+
+*subversion-1.4.4 (14 Jun 2007)
+
+  14 Jun 2007; Christian Heim <phreak@gentoo.org> +subversion-1.4.4.ebuild:
+  Version bump (fixing #181838 - thanks to Timothy Stotts <devel at
+  tstotts.net>). Subversion 1.4.4 is merly a bugfix release, for a detailed
+  list see http://svn.collab.net/repos/svn/tags/1.4.4/CHANGES.
 
   13 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   subversion-1.3.2-r4.ebuild:
