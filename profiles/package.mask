@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7364 2007/06/13 14:25:40 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7365 2007/06/14 07:35:42 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -198,11 +198,6 @@ dev-scheme/mzscheme
 # Live CVS ebuilds for Emacs
 >=app-editors/emacs-cvs-23
 >=virtual/emacs-23
-
-# Christian Faulhammer <opfer@gentoo.org> (13 May 2007)
-# removal on 14 Jun 2007
-# functionality provided in >=app-emacs/auctex-11.80
-dev-tex/preview-latex
 
 # Ryan Hill <dirtyepic@gentoo.org> (13 May 2007)
 #   Mask for testing.
