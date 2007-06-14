@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.44 2007/05/13 16:49:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.45 2007/06/14 08:00:36 phreak Exp $
+
+  14 Jun 2007; Christian Heim <phreak@gentoo.org> raptor-1.4.7.ebuild,
+  raptor-1.4.8.ebuild, raptor-1.4.9.ebuild, raptor-1.4.12.ebuild,
+  raptor-1.4.15.ebuild:
+  LICENSE update (#181981 thanks to Carsten for noticing).
 
   13 May 2007; Steve Dibb <beandog@gentoo.org> raptor-1.4.12.ebuild:
   amd64 stable

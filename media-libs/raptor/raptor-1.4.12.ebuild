@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.12.ebuild,v 1.3 2007/05/13 16:49:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.12.ebuild,v 1.4 2007/06/14 08:00:36 phreak Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="The RDF Parser Toolkit"
 HOMEPAGE="http://librdf.org/raptor/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
-LICENSE="LGPL-2 Apache-2.0"
+LICENSE="LGPL-2.1 Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="curl xml gnome ssl"
