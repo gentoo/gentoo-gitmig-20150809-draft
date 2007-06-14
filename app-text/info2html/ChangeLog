@@ -1,6 +1,11 @@
 # ChangeLog for app-text/info2html
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.22 2007/06/14 13:16:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.23 2007/06/14 13:27:59 rl03 Exp $
+
+  14 Jun 2007; Renat Lumpau <rl03@gentoo.org> -files/info2html-xss.patch,
+  -files/info2html-gentoo.patch, -info2html-1.4.ebuild,
+  -info2html-1.4-r1.ebuild, -info2html-1.4-r2.ebuild:
+  Cleaned out old cruft
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> info2html-2.0.ebuild:
   Stable on amd64 wrt bug 181657
