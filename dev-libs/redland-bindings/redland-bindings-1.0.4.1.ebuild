@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.4.1.ebuild,v 1.4 2007/05/12 12:59:56 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.4.1.ebuild,v 1.5 2007/06/14 07:56:17 phreak Exp $
 
 inherit eutils mono
 
@@ -8,7 +8,7 @@ DESCRIPTION="Language bindings for Redland"
 HOMEPAGE="http://librdf.org/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
-LICENSE="LGPL-2 MPL-1.1"
+LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl python java tcl php ruby mono"

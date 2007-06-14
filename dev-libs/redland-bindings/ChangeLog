@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/redland-bindings
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.9 2007/05/14 20:18:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.10 2007/06/14 07:56:17 phreak Exp $
+
+  14 Jun 2007; Christian Heim <phreak@gentoo.org>
+  redland-bindings-1.0.4.1.ebuild, redland-bindings-1.0.5.1.ebuild,
+  redland-bindings-1.0.6.1.ebuild:
+  LICENSE update (#181981 thanks to Carsten for noticing).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
