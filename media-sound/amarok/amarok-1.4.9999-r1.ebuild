@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9999.ebuild,v 1.1 2007/06/14 13:30:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9999-r1.ebuild,v 1.1 2007/06/14 14:01:56 flameeyes Exp $
 
 inherit kde subversion
 
@@ -21,6 +21,8 @@ visualization ipod ifp real njb mtp musicbrainz daap
 python"
 # kde: enables compilation of the konqueror sidebar plugin
 
+SQLITEVER="3.3.17"
+
 RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	>=media-libs/xine-lib-1.1.2_pre20060328-r8
 	>=media-libs/taglib-1.4
@@ -36,7 +38,8 @@ RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	njb? ( >=media-libs/libnjb-2.2.4 )
 	mtp? ( >=media-libs/libmtp-0.1.1 )
 	musicbrainz? ( media-libs/tunepimp )
-	=dev-lang/ruby-1.8*"
+	=dev-lang/ruby-1.8*
+	>=dev-db/sqlite-${SQLITEVER}"
 
 DEPEND="${RDEPEND}"
 
@@ -48,6 +51,16 @@ RDEPEND="${RDEPEND}
 need-kde 3.3
 
 S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	if built_with_use ">=dev-db/sqlite-${SQLITEVER}" nothreadsafe; then
+		eerror "SQLite was built without thread safety."
+		eerror "Amarok requires thread safety enabled in SQLite."
+		eerror "Please rebuild >=dev-db/sqlite-${SQLITEVER} with the"
+		eerror "nothreadsafe USE flag disabled."
+		die "SQLite built with nothreadsafe USE flag."
+	fi
+}
 
 src_unpack() {
 	ESVN_UPDATE_CMD="svn update -N" \
@@ -81,7 +94,8 @@ src_compile() {
 				  $(use_with daap)
 				  --with-xine
 				  --without-mas
-				  --without-nmm"
+				  --without-nmm
+				  --without-included-sqlite"
 
 	kde_src_compile
 }
