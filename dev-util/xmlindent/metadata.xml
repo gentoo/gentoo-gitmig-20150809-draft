@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>dev-tools</herd>
-	<maintainer>
-		<email>slarti@gentoo.org</email>
-		<name>Tom Martin</name>
-	</maintainer>
 	<longdescription lang="en">
 	</longdescription>
 </pkgmetadata>
