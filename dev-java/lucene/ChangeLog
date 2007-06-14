@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.32 2007/06/09 20:25:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.33 2007/06/14 00:32:06 angelos Exp $
+
+  14 Jun 2007; Christoph Mende <angelos@gentoo.org> lucene-2.1.0.ebuild:
+  Stable on amd64 wrt bug 181086
 
   09 Jun 2007; nixnut <nixnut@gentoo.org> lucene-2.1.0.ebuild:
   Stable on ppc wrt bug 181086

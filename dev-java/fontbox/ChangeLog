@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fontbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.5 2007/06/09 20:23:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.6 2007/06/14 00:33:14 angelos Exp $
+
+  14 Jun 2007; Christoph Mende <angelos@gentoo.org> fontbox-0.1.0.ebuild:
+  Stable on amd64 wrt bug 181086
 
   09 Jun 2007; nixnut <nixnut@gentoo.org> fontbox-0.1.0.ebuild:
   Stable on ppc wrt bug 181086

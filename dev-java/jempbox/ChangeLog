@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jempbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/ChangeLog,v 1.6 2007/06/09 20:19:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/ChangeLog,v 1.7 2007/06/14 00:37:33 angelos Exp $
+
+  14 Jun 2007; Christoph Mende <angelos@gentoo.org> jempbox-0.2.0.ebuild:
+  Stable on amd64 wrt bug 181086
 
   09 Jun 2007; nixnut <nixnut@gentoo.org> jempbox-0.2.0.ebuild:
   Stable on ppc wrt bug 181086
