@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.218 2007/06/10 22:54:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.219 2007/06/14 13:30:24 flameeyes Exp $
+
+*amarok-1.4.9999 (14 Jun 2007)
+
+  14 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +amarok-1.4.9999.ebuild, -amarok-9999-r2.ebuild:
+  Rename amarok-9999-r2 to amarok-1.4.9999 to make explicit that it's a live
+  subversion for the current stable (1.4) branch. Frees up the 9999 slot for
+  2.0 when it will be feasible.
 
 *amarok-9999-r2 (10 Jun 2007)
 
