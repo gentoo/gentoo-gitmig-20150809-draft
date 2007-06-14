@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.34 2007/06/12 21:45:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.35 2007/06/14 13:11:06 drac Exp $
+
+  14 Jun 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  KDE package.
 
   12 Jun 2007; Markus Ullmann <jokey@gentoo.org> basket-1.0.2.ebuild:
   Stable on x86 wrt bug #181639
