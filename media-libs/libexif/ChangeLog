@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.79 2007/06/13 18:42:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.80 2007/06/14 03:48:30 jer Exp $
+
+  14 Jun 2007; Jeroen Roovers <jer@gentoo.org> libexif-0.6.16.ebuild:
+  Stable for HPPA (bug #181922 ).
 
 *libexif-0.6.16 (13 Jun 2007)
 
