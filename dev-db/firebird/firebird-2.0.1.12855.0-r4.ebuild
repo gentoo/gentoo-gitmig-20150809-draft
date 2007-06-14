@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r3.ebuild,v 1.1 2007/05/14 14:28:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.1.12855.0-r4.ebuild,v 1.1 2007/06/14 04:33:53 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -101,6 +101,7 @@ src_install() {
 	doexe UDF/*.so
 	exeinto /opt/firebird/intl
 	doexe intl/*.so
+	newexe intl/libfbintl.so fbintl
 
 	diropts -m 755 -o firebird -g firebird
 	dodir /var/log/firebird
@@ -115,6 +116,7 @@ src_install() {
 	dosym /etc/firebird/aliases.conf /opt/firebird/aliases.conf
 	dosym /etc/firebird/security2.fdb /opt/firebird/security2.fdb
 	dosym /etc/firebird/firebird.conf /opt/firebird/firebird.conf
+	dosym /etc/firebird/fbintl.conf /opt/firebird/intl/fbintl.conf
 	dosym /var/log/firebird/firebird.log /opt/firebird/firebird.log
 
 	local my_lib=$(get_libdir)
@@ -190,22 +192,6 @@ pkg_config() {
 		chown firebird:firebird $FileName
 		chmod ug=rw,o= $FileName
 	done
-
-	# Create log
-	if [ ! -h firebird.log ]
-	then
-		if [ -f firebird.log ]
-		then
-			mv firebird.log /var/log
-		else
-			touch /var/log/firebird.log
-			chown firebird:firebird /var/log/firebird.log
-			chmod ug=rw,o= /var/log/firebird.log
-		fi
-
-		# symlink the log to /var/log
-		ln -s /var/log/firebird.log firebird.log
-	fi
 
 	# if found /etc/security.gdb from previous install, backup, and restore as
 	# /etc/security2.fdb
