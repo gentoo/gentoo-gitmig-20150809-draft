@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.150 2007/06/14 17:31:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.151 2007/06/14 17:37:58 betelgeuse Exp $
+
+  14 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  sqlite-2.8.16-r4.ebuild, sqlite-3.3.5-r1.ebuild, sqlite-3.3.12.ebuild:
+  Fix the rest of the ebuilds wrt tcl and test suite.
 
   14 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.3.17.ebuild:
   Fix the test broken RESTRICT atom that Cardoe added. The tcl use flag must
