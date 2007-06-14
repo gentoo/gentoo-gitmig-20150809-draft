@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.104 2007/06/14 00:48:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.105 2007/06/14 02:41:16 kumba Exp $
+
+  14 Jun 2007; Joshua Kinard <kumba@gentoo.org> hdparm-7.3.ebuild:
+  Stable on mips, per #181965.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> hdparm-7.3.ebuild:
   Stable on amd64 wrt bug 181965
