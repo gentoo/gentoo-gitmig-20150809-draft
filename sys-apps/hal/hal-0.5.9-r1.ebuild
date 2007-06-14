@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.3 2007/05/07 16:18:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.4 2007/06/14 20:59:38 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -134,6 +134,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/95_gentoo_man_page.patch
 	epatch ${FILESDIR}/${PV}/96_plugdev_allow_send.patch
 	epatch ${FILESDIR}/${PV}/97_ignore_fixed_drives.patch
+	epatch ${FILESDIR}/${PV}/98_hald_cache_test_path.patch
 
 	eautoreconf
 }

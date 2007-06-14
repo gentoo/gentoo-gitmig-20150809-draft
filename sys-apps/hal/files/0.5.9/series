@@ -23,3 +23,4 @@
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch
 97_ignore_fixed_drives.patch
+98_hald_cache_test_path.patch

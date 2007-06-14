@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.182 2007/05/08 03:17:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.183 2007/06/14 20:59:38 cardoe Exp $
+
+  14 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.5.9/98_hald_cache_test_path.patch, files/0.5.9/series,
+  hal-0.5.9-r1.ebuild:
+  fix make test. bug #176535
 
   08 May 2007; Doug Goldstein <cardoe@gentoo.org>
   files/0.5.9/13_detect_newer_macbooks.patch,
