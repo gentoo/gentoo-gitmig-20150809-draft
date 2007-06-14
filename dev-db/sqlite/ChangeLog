@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.145 2007/05/23 01:14:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.146 2007/06/14 09:43:43 yoswink Exp $
+
+  14 Jun 2007; Jose Luis Rivero <yoswink@gentoo.org> sqlite-3.3.12.ebuild:
+  Stable on alpha wrt bug #176942
 
   23 May 2007; Doug Goldstein <cardoe@gentoo.org> sqlite-2.8.16-r4.ebuild,
   sqlite-3.3.5-r1.ebuild, sqlite-3.3.12.ebuild, sqlite-3.3.17.ebuild:
