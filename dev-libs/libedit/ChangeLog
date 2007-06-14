@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.22 2007/03/16 12:11:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.23 2007/06/14 11:29:22 fmccor Exp $
+
+  14 Jun 2007; Ferris McCormick <fmccor@gentoo.org>
+  libedit-20061103-r1.ebuild:
+  Add ~sparc keyword --- required for testing Bug #181811
 
 *libedit-20061103-r1 (16 Mar 2007)
 

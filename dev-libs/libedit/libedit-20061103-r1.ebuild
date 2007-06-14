@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20061103-r1.ebuild,v 1.1 2007/03/16 12:11:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20061103-r1.ebuild,v 1.2 2007/06/14 11:29:22 fmccor Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="elibc_glibc"
 
 DEPEND="sys-libs/ncurses
