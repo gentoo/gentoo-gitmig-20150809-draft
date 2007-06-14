@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bitscope
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bitscope/ChangeLog,v 1.8 2007/02/03 18:48:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bitscope/ChangeLog,v 1.9 2007/06/14 15:17:32 drac Exp $
+
+  14 Jun 2007; Samuli Suominen <drac@gentoo.org> bitscope-1.1.ebuild:
+  Block bitmeter as it replaces bitscope.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
