@@ -1,8 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.4 2006/10/14 15:52:42 nichoj Exp $
-
-inherit java-pkg-2 eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.5 2007/06/14 13:47:04 betelgeuse Exp $
 
 jcefile="jce_policy-1_5_0.zip"
 
@@ -17,6 +15,7 @@ RESTRICT="fetch"
 IUSE=""
 
 DEPEND="app-arch/unzip"
+RDEPEND=""
 
 FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce_policy-1.5.0-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
