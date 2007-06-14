@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.48 2007/06/13 17:08:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.49 2007/06/14 05:45:06 genstef Exp $
+
+  14 Jun 2007; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  loudmouth-1.2.3.ebuild:
+  Fix DEPEND, bug 181823 thanks to Daniel Díaz <yosoy@danieldiaz.org> and
+  drop myself from metadata again.
 
 *loudmouth-1.2.3 (13 Jun 2007)
 
