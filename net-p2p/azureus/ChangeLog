@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.47 2007/05/20 23:22:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.48 2007/06/14 00:41:43 angelos Exp $
+
+  14 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  azureus-2.5.0.4-r1.ebuild:
+  Stable on amd64 wrt bug 172657
 
   20 May 2007; Vlastimil Babka <caster@gentoo.org>
   azureus-2.5.0.4-r1.ebuild:
