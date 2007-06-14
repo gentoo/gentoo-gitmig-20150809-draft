@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/jlex-1.2.6-r1.ebuild,v 1.2 2007/06/14 14:34:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/jlex-1.2.6-r1.ebuild,v 1.3 2007/06/14 19:44:34 dertobi123 Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -9,7 +9,7 @@ inherit java-pkg-2
 DESCRIPTION="JLex: a lexical analyzer generator for Java"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.cs.princeton.edu/~appel/modern/java/JLex/"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 LICENSE="jlex"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4"
