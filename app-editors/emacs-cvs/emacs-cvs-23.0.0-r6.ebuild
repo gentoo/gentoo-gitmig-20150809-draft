@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.22 2007/06/13 17:40:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.23 2007/06/14 18:53:24 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -88,6 +88,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-Xaw3d-headers.patch"
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
+	epatch "${FILESDIR}/${PN}-temacs-prerequisite.patch"
 	# ALSA is detected and used even if not requested by the USE=alsa flag.
 	# So remove the automagic check
 	use alsa || epatch "${FILESDIR}/${PN}-disable_alsa_detection-r1.patch"
