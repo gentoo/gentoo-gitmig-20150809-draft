@@ -6,8 +6,4 @@
 		<email>ferdy@gentoo.org</email>
 		<name>Fernando J. Pereda</name>
 	</maintainer>
-	<maintainer>
-		<email>slarti@gentoo.org</email>
-		<name>Tom Martin</name>
-	</maintainer>
 </pkgmetadata>
