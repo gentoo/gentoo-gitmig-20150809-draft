@@ -1,6 +1,5 @@
-SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/access"
-SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/context"
-SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/create"
-SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/member"
-SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/relabel"
-SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/user"
+# SELinux-aware progams write to entries here
+SANDBOX_WRITE="${SANDBOX_WRITE}:/selinux/"
+
+# for setfscreatecon
+SANDBOX_WRITE="${SANDBOX_WRITE}:/proc/self/"
