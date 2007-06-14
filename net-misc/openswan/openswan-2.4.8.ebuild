@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.8.ebuild,v 1.1 2007/06/05 07:07:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.8.ebuild,v 1.2 2007/06/14 18:52:33 mrness Exp $
 
 inherit eutils linux-info
 
@@ -11,10 +11,11 @@ SRC_URI="http://www.openswan.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="extra-algorithms weak-algorithms"
+IUSE="smartcard extra-algorithms weak-algorithms"
 
 COMMON_DEPEND="!net-misc/strongswan
-	>=dev-libs/gmp-4.2.1"
+	>=dev-libs/gmp-4.2.1
+	smartcard? ( dev-libs/opensc )"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources"
 RDEPEND="${COMMON_DEPEND}
@@ -51,6 +52,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-type-punned.patch
+	epatch "${FILESDIR}"/${P}-smartcard-typo.patch
 }
 
 get_make_options() {
@@ -60,6 +62,9 @@ get_make_options() {
 		INC_MANDIR=share/man \
 		FINALEXAMPLECONFDIR=/usr/share/doc/${P} \
 		FINALDOCDIR=/usr/share/doc/${P}"
+	if use smartcard ; then
+		MY_MAKE_OPTIONS="${MY_MAKE_OPTIONS} USE_SMARTCARD=true"
+	fi
 	if use extra-algorithms ; then
 		MY_MAKE_OPTIONS="${MY_MAKE_OPTIONS} USE_EXTRACRYPTO=true"
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.37 2007/06/05 07:07:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.38 2007/06/14 18:52:33 mrness Exp $
+
+  14 Jun 2007; Alin Năstac <mrness@gentoo.org>
+  +files/openswan-2.4.8-smartcard-typo.patch, openswan-2.4.8.ebuild:
+  Add smartcard support (#181483).
 
 *openswan-2.4.8 (05 Jun 2007)
 

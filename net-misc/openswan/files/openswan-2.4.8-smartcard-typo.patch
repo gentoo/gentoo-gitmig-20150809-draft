@@ -1,0 +1,13 @@
+diff -Naupr openswan-2.4.8-old/programs/pluto/smartcard.c openswan-2.4.8/programs/pluto/smartcard.c
+--- openswan-2.4.8-old/programs/pluto/smartcard.c	2007-01-22 19:42:02.000000000 +0100
++++ openswan-2.4.8/programs/pluto/smartcard.c	2007-06-09 20:50:48.000000000 +0200
+@@ -381,8 +381,7 @@ scx_sign_hash(smartcard_t *sc UNUSED
+     sc_pkcs15_hex_string_to_id(sc->id, &id);
+ 
+     /* get private key by id */
+-    r = sc_pkcs15_find_prkey_by_id_usage(p15card, &id, SC_PKCS15_PRKEY_USAGE_SI
+-GN | SC_PKCS15_PRKEY_USAGE_SIGNRECOVER, &key);
++    r = sc_pkcs15_find_prkey_by_id_usage(p15card, &id, SC_PKCS15_PRKEY_USAGE_SIGN | SC_PKCS15_PRKEY_USAGE_SIGNRECOVER, &key);
+ 
+     if (r < 0)
+     {
