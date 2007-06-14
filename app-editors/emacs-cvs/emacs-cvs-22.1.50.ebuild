@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.18 2007/06/13 17:40:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.19 2007/06/14 18:27:35 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -89,7 +89,6 @@ src_unpack() {
 			|| die "unable to sed configure.in"
 	fi
 
-	epatch "${FILESDIR}/${PN}-Xaw3d-headers.patch"
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
 	# ALSA is detected and used even if not requested by the USE=alsa flag.
 	# So remove the automagic check

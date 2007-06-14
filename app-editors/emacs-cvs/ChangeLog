@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.136 2007/06/13 17:40:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.137 2007/06/14 18:27:35 ulm Exp $
+
+  14 Jun 2007; Ulrich Mueller <ulm@gentoo.org> emacs-cvs-22.1.50.ebuild:
+  Skip Xaw3d headers patch since it was applied upstream.
 
   13 Jun 2007; Ulrich Mueller <ulm@gentoo.org> -files/emacs.desktop.in,
   -files/emacs-cvs-nofink.patch, -files/emacs-subdirs-el-gentoo.diff,
