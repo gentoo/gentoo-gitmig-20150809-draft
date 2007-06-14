@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.10.ebuild,v 1.6 2007/05/11 08:24:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.10.ebuild,v 1.7 2007/06/14 08:02:20 phreak Exp $
 
 DESCRIPTION="library that handles Resource Description Framework (RDF)"
 HOMEPAGE="http://librdf.org/rasqal/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
-LICENSE="LGPL-2 Apache-2.0"
+LICENSE="LGPL-2.1 Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ia64 ppc x86"
 IUSE="pcre xml"

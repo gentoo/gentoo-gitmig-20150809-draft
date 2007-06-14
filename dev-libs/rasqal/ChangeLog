@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.10 2007/05/14 20:18:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.11 2007/06/14 08:02:20 phreak Exp $
+
+  14 Jun 2007; Christian Heim <phreak@gentoo.org> rasqal-0.9.10.ebuild,
+  rasqal-0.9.12.ebuild, rasqal-0.9.14.ebuild:
+  LICENSE update (#181981 thanks to Carsten for noticing).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
