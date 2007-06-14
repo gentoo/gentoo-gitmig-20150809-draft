@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.111 2007/06/14 11:57:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.112 2007/06/14 20:59:41 dertobi123 Exp $
+
+  14 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> ntp-4.2.4_p0.ebuild:
+  ppc stable, bug #180806
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> ntp-4.2.4_p0.ebuild:
   Stable on amd64 wrt bug 180806
