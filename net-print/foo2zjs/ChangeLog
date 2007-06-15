@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.24 2007/04/29 09:24:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.25 2007/06/15 06:51:11 genstef Exp $
+
+  15 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
+  files/digest-foo2zjs-20070424, Manifest:
+  fix digest thanks to Charles Duffy <cduffy+gentoo@spamcop.net> in bug 182090
 
   29 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
   -files/foo2zjs-Makefile-20070204.diff,
