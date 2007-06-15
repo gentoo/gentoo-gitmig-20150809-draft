@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-AIO
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.1 2007/05/09 19:52:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.2 2007/06/15 03:08:33 mcummings Exp $
+
+  15 Jun 2007; Michael Cummings <mcummings@gentoo.org> IO-AIO-2.33.ebuild:
+  Marking amd64 stable
 
 *IO-AIO-2.33 (09 May 2007)
 

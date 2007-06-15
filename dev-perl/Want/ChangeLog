@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.24 2007/05/12 15:12:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.25 2007/06/15 03:21:27 mcummings Exp $
+
+  15 Jun 2007; Michael Cummings <mcummings@gentoo.org> Want-0.14.ebuild:
+  Marking amd64 stable
 
 *Want-0.14 (12 May 2007)
 

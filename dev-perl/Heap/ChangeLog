@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Heap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Heap/ChangeLog,v 1.22 2007/05/12 02:05:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Heap/ChangeLog,v 1.23 2007/06/15 03:07:10 mcummings Exp $
+
+  15 Jun 2007; Michael Cummings <mcummings@gentoo.org> Heap-0.80.ebuild:
+  Marking amd64 stable
 
 *Heap-0.80 (12 May 2007)
 
