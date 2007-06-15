@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7366 2007/06/15 10:21:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7367 2007/06/15 14:30:21 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (15 Jun 2007)
+# Causes crashes for some people with mplayer and openoffice
+# bug #182127 bug #182058
+# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=243811
+=x11-libs/cairo-1.4.8
 
 # Raúl Porcel <armin76@gentoo.org> (15 Jun 2007)
 # Mask livesvn ebuild
