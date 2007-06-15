@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2862 2007/06/15 08:04:54 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2863 2007/06/15 19:02:43 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1980,6 +1980,7 @@ x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-libs/cairo:glitz - Build with glitz support
+x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware opengl support
 x11-libs/cairo:xcb - Support the X C-language Binding, a replacement for Xlib
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable t1lib support
