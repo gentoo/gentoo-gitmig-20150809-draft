@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.71 2007/05/03 05:42:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.72 2007/06/15 18:42:27 flameeyes Exp $
+
+  15 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  qscintilla-1.7.1.ebuild:
+  Fix the copy of shared libraries to use standard posix cp options.
 
   03 May 2007; Jeroen Roovers <jer@gentoo.org> qscintilla-1.7.1.ebuild:
   Stable for HPPA (bug #176471).

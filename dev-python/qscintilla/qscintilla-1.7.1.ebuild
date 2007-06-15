@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.7.1.ebuild,v 1.3 2007/05/03 05:42:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.7.1.ebuild,v 1.4 2007/06/15 18:42:27 flameeyes Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -53,7 +53,7 @@ src_install() {
 	cp qextscintilla*.h "${D}/usr/include"
 	cp qscintilla*.qm "${D}/usr/share/qscintilla/translations"
 	cp lib/libqscintilla.a* "${D}/usr/$(get_libdir)"
-	cp -d lib/libqscintilla.so.* "${D}/usr/$(get_libdir)"
+	cp -R lib/libqscintilla.so.* "${D}/usr/$(get_libdir)"
 	dodir ${QTDIR}/translations/
 	for I in $(ls -1 qscintilla*.qm) ; do
 		dosym "/usr/share/qscintilla/translations/${I}" "${QTDIR}/translations/${I}"
