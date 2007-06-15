@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.10 2007/05/12 02:11:52 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.11 2007/06/15 13:18:56 gustavoz Exp $
+
+  15 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> avfs-0.9.7-r1.ebuild:
+  Stable on sparc
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd
