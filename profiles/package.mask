@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7367 2007/06/15 14:30:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7368 2007/06/15 21:50:43 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (16 Jun 2007)
+# We like our stuff GPL so use dev-java/javahelp instead
+dev-java/javahelp-bin
 
 # Doug Goldstein <cardoe@gentoo.org> (15 Jun 2007)
 # Causes crashes for some people with mplayer and openoffice
@@ -403,17 +407,6 @@ app-pda/libopensync-plugin-synce
 # Joshua Baergen <joshuabaergen@gentoo.org> (27 Mar 2007)
 # Release candidate ATI driver
 >=x11-drivers/xf86-video-ati-6.6.191
-
-# Petteri Räty <betelgeuse@gentoo.org> (27 Mar 2007)
-# Last upstream releases a couple of years ago. Not migrated to
-# generation 2 and there are alternatives:
-# dev-util/jcvs: dev-util/cvs
-# dev-java/j2ssh: dev-java/jsch
-# If you need these packages for something, please mail java@gentoo.org
-# and we know that these are actively used and will give them the care
-# they need. Otherwise you can find them in our junkyard after 30 days.
-dev-util/jcvs
-dev-java/j2ssh
 
 # Stefan Schweizer <genstef@gentoo.org> (25 Mar 2007)
 # Please use modular Xorg now

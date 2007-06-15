@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.468 2007/06/15 08:04:54 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.469 2007/06/15 21:50:43 betelgeuse Exp $
+
+  15 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  pmask dev-java/javahelp-bin and remove mask for dev-util/jcvs and
+  dev-java/j2ssh as they have been removed from the tree some time ago.
 
   15 Jun 2007; Jeff Gardner <je_fro@gentoo.org> use.local.desc:
   Add vhosts and client-only USE flags for sci-chemistry/jmol.
