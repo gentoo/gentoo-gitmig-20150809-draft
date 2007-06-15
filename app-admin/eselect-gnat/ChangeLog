@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.12 2007/05/25 13:26:01 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.13 2007/06/15 21:02:39 george Exp $
+
+*eselect-gnat-1.0-r1 (15 Jun 2007)
+
+  15 Jun 2007; George Shapovalov <george@gentoo.org>
+  +files/gnat.eselect-1.0-r1, +eselect-gnat-1.0-r1.ebuild:
+  added LIBDIR/adalib to LDPATH and refactored creation of env file. Now all
+  the libs should be picked up (fixes some issues with asis)
 
   25 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
   -files/gnat.eselect-0.7, -files/gnat.eselect-0.8,
