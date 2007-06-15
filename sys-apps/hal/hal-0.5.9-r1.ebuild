@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.7 2007/06/15 19:59:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.8 2007/06/15 21:39:11 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -160,7 +160,7 @@ src_compile() {
 	fi
 
 	econf --disable-policy-kit \
-		  --with-doc-dir=/usr/share/doc/${PF} \
+		  --with-docdir=/usr/share/doc/${PF} \
 		  --with-os-type=gentoo \
 		  --with-pid-file=/var/run/hald.pid \
 		  --with-socket-dir=/var/run/hald \
