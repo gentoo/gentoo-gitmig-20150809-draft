@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.4.ebuild,v 1.2 2007/06/15 09:04:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.4.ebuild,v 1.3 2007/06/15 09:09:34 phreak Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -113,8 +113,8 @@ src_compile() {
 		$(use_with berkdb berkeley-db) \
 		$(use_with python) \
 		$(use_enable nls) \
-		--with-apr="${ROOT}usr/bin/apr${apr_suffix}-config" \
-		--with-apr-util="${ROOT}usr/bin/apu${apr_suffix}-config" \
+		--with-apr="/usr/bin/apr${apr_suffix}-config" \
+		--with-apr-util="/usr/bin/apu${apr_suffix}-config" \
 		--disable-experimental-libtool \
 		--disable-mod-activation || die "econf failed"
 
