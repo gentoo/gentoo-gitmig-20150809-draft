@@ -1,18 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1-r1.ebuild,v 1.1 2007/05/31 19:11:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1-r1.ebuild,v 1.2 2007/06/15 19:46:46 nyhm Exp $
 
 inherit eutils games
 
 MY_P=${P/project-/}
 DESCRIPTION="A space themed shooter"
 HOMEPAGE="http://www.parallelrealities.co.uk/starfighter.php"
-# FIXME: Parallel Realities uses a lame download script.
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl
@@ -48,6 +47,6 @@ src_install() {
 	doins starfighter.pak || die "doins failed"
 	dohtml -r docs/
 	newicon docs/rocketAmmo.png ${PN}.png
-	make_desktop_entry starfighter "Project: Starfighter" ${PN}.png
+	make_desktop_entry starfighter "Project: Starfighter"
 	prepgamesdirs
 }
