@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.4.ebuild,v 1.1 2007/06/14 17:46:11 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.4.ebuild,v 1.2 2007/06/15 09:04:53 phreak Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -336,6 +336,11 @@ pkg_postinst() {
 pkg_postrm() {
 	use emacs && elisp-site-regen
 	use perl && perl-module_pkg_postrm
+
+	if use python ; then
+		python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages/svn
+		python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages/libsvn
+	fi
 }
 
 pkg_config() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.261 2007/06/14 18:37:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.262 2007/06/15 09:04:53 phreak Exp $
+
+  15 Jun 2007; Christian Heim <phreak@gentoo.org>
+  subversion-1.4.3-r1.ebuild, subversion-1.4.4.ebuild:
+  Cleaning out the bytecompiled python modules on postrm (#177536, thanks to
+  Jakub).
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org>
   subversion-1.3.2-r4.ebuild:
