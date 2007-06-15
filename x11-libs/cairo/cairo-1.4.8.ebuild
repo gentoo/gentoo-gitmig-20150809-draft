@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.8.ebuild,v 1.3 2007/06/15 19:00:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.8.ebuild,v 1.4 2007/06/15 21:55:05 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -45,6 +45,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-directfb.patch
+	epatch "${FILESDIR}"/${P}-XError.patch
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
