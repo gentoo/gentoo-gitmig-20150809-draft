@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc1.ebuild,v 1.1 2007/06/15 03:10:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc2.ebuild,v 1.1 2007/06/15 10:46:04 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-lang/python-2.4
 	elibc_FreeBSD? ( dev-python/py-freebsd )
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
-	!userland_Darwin? ( >=app-misc/pax-utils-0.1.13 )
+	>=app-misc/pax-utils-0.1.13
 	userland_GNU? ( >=sys-apps/coreutils-6.4 )
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	doc? ( app-portage/portage-manpages )
@@ -42,7 +42,7 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER=${PVR}
+PATCHVER="2.1.3_rc1"
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
@@ -70,6 +70,8 @@ src_unpack() {
 		cd "${S}"
 		epatch "${WORKDIR}/${PN}-${PATCHVER}.patch"
 	fi
+	sed -i "s/fdpipes=/fd_pipes=/" pym/output.py || \
+		die "Failed to patch output.py for bug #182105"
 	einfo "Setting portage.VERSION to ${PVR} ..."
 	sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
 		die "Failed to patch portage.VERSION"
