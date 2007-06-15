@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.1 2007/06/12 13:58:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.2 2007/06/15 12:51:23 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -27,7 +27,6 @@ SRC_URI="mirror://openoffice/stable/${PV}/${SRC}_core.tar.bz2
 	http://go-oo.org/packages/SRC680/hunspell_UNO_1.1.tar.gz
 	http://go-oo.org/packages/xt/xt-20051206-src-only.zip
 	http://go-oo.org/packages/SRC680/lp_solve_5.5.tar.gz
-	http://go-oo.org/packages/libwpd/libwpd-0.8.8.tar.gz
 	http://go-oo.org/packages/SRC680/libwps-0.1.0~svn20070129.tar.gz
 	http://go-oo.org/packages/SRC680/libwpg-0.1.0~cvs20070507.tar.gz"
 

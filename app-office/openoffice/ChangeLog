@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.325 2007/06/12 13:58:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.326 2007/06/15 12:51:23 suka Exp $
+
+  15 Jun 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.2.1.ebuild:
+  Don't download the libwpd-tarball, we use the external package...
 
 *openoffice-2.2.1 (12 Jun 2007)
 
