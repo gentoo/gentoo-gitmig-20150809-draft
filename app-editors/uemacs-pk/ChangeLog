@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/uemacs-pk
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.1 2007/06/15 08:59:35 ulm Exp $
+
+*uemacs-pk-4.0.18 (15 Jun 2007)
+
+  15 Jun 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/uemacs-pk-4.0.18-gentoo.patch, +metadata.xml,
+  +uemacs-pk-4.0.18.ebuild:
+  Initial import.
+
