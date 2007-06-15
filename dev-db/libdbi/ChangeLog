@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.17 2007/02/22 01:05:49 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.18 2007/06/15 01:56:44 angelos Exp $
+
+  15 Jun 2007; Christoph Mende <angelos@gentoo.org> libdbi-0.8.1.ebuild:
+  Stable on amd64 wrt bug 181577
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
