@@ -1,0 +1,12 @@
+# ChangeLog for sci-chemistry/jmol
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.1 2007/06/15 08:21:59 je_fro Exp $
+
+*jmol-11.0.3 (15 Jun 2007)
+
+  15 Jun 2007; Jeff Gardner <je_fro@gentoo.org>
+  +files/jmol-11.0.3-manifest.patch, +files/jmol-11.0.3-nointl.patch,
+  +files/caffeine.xyz, +files/index.html,
+  +files/selfSignedCertificate.store, +jmol-11.0.3.ebuild:
+  Initial import of jmol-11.0.3.
+
