@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xtrs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.20 2007/06/14 20:51:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.21 2007/06/15 01:21:26 lavajoe Exp $
+
+  15 Jun 2007; Joe Peterson <lavajoe@gentoo.org>
+  -files/xtrs-4.9-gentoo.diff, -xtrs-4.9-r1.ebuild:
+  Remove 4.9-r1 ebuild (4.9c is stable)
 
   14 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> xtrs-4.9c.ebuild:
   ppc stable, bug #181320
