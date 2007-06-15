@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.0.3.ebuild,v 1.3 2007/03/18 02:09:47 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.0.3.ebuild,v 1.4 2007/06/15 20:57:20 anant Exp $
 
 PHP_EXT_NAME="php_qt"
 PHP_EXT_INI="yes"
@@ -17,7 +17,8 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
 
-DEPEND="=x11-libs/qt-4*"
+DEPEND="=x11-libs/qt-4*
+	>=x11-libs/libXinerama-1.0.1"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/php_qt"
