@@ -1,3 +1,6 @@
+# Dell does not ship or sell PPC systems
+dell
+
 mmx
 3dfx
 acpi
