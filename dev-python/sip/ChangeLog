@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.96 2007/06/01 13:57:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.97 2007/06/15 20:48:53 flameeyes Exp $
+
+  15 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> sip-4.6.ebuild:
+  Add ~x86-fbsd keyword.
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> sip-4.5.2-r1.ebuild:
   Stable on ppc wrt bug 174413
