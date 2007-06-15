@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.4.ebuild,v 1.6 2007/06/13 20:54:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.4.ebuild,v 1.7 2007/06/15 10:25:11 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -114,7 +114,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
