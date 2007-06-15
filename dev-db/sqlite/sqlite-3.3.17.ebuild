@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.17.ebuild,v 1.8 2007/06/15 10:28:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.17.ebuild,v 1.9 2007/06/15 12:53:55 armin76 Exp $
 
 inherit flag-o-matic eutils alternatives libtool
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 
 DESCRIPTION="SQLite: an SQL Database Engine in a C Library."
 HOMEPAGE="http://www.sqlite.org/"
