@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mppenc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.9 2007/05/15 14:43:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.10 2007/06/15 13:20:19 gustavoz Exp $
+
+  15 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> mppenc-1.16.ebuild:
+  Stable on sparc
 
   15 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> mppenc-1.16.ebuild:
   Keyworded ~sparc wrt #178214
