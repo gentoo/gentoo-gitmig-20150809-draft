@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/devel-chroots
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.28 2007/04/25 18:47:07 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.29 2007/06/15 14:53:30 pappy Exp $
+
+  15 Jun 2007; Alexander Gabert <pappy@gentoo.org>
+  +devel-chroots-2.1.0.ebuild:
+  --help
+
+*devel-chroots-2.1.0 (15 Jun 2007)
+
+  15 Jun 2007; Alexander Gabert <pappy@gentoo.org>
+  +devel-chroots-2.1.0.ebuild:
+  added a central config file, no directory structure needed any more, fixed
+  major bugs
 
   25 Apr 2007; Alexander Gabert <pappy@gentoo.org>
   devel-chroots-1.0.1.ebuild, devel-chroots-2.0.0.ebuild:
