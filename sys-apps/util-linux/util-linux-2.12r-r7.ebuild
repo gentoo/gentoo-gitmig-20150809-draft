@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.7 2007/06/13 03:27:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.8 2007/06/15 23:30:31 lavajoe Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,7 +24,8 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2
 	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )
 	crypt? ( app-crypt/hashalot )
-	perl? ( dev-lang/perl )"
+	perl? ( dev-lang/perl )
+	!sys-apps/more"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/os-headers"
