@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.9.9.ebuild,v 1.1 2007/06/15 12:38:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.9.9.ebuild,v 1.2 2007/06/15 19:37:20 malc Exp $
 
 inherit eutils
 
@@ -17,12 +17,6 @@ DEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	app-arch/bzip2"
 RDEPEND="${DEPEND}"
 
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/eix-0.9.8-gcc-3.patch 
-}
 
 src_compile() {
 	econf --with-bzip2 $(use_with sqlite) || die "econf failed"
