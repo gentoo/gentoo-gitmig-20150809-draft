@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.21 2007/02/10 04:17:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.22 2007/06/15 16:14:32 aballier Exp $
+
+  15 Jun 2007; Alexis Ballier <aballier@gentoo.org> -mserv-0.35.ebuild:
+  remove version using obsolete webapp-apache eclass, bug #182129
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> mserv-0.35-r1.ebuild:
   amd64 stable, bug 134758
