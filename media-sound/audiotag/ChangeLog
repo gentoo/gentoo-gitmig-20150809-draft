@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audiotag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.14 2007/02/03 18:39:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.15 2007/06/15 15:36:33 drac Exp $
+
+*audiotag-0.16 (15 Jun 2007)
+
+  15 Jun 2007; Samuli Suominen <drac@gentoo.org> +audiotag-0.16.ebuild:
+  Version bump for bug 182084.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
