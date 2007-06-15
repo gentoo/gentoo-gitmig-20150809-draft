@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.23 2007/05/01 22:44:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.24 2007/06/15 22:47:46 angelos Exp $
+
+  15 Jun 2007; Christoph Mende <angelos@gentoo.org> vnstat-1.4-r2.ebuild:
+  Stable on amd64 wrt bug 182180
 
   01 May 2007; Marius Mauch <genone@gentoo.org> vnstat-1.4.ebuild,
   vnstat-1.4-r1.ebuild, vnstat-1.4-r2.ebuild:
