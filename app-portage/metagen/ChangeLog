@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.14 2007/04/06 08:39:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.15 2007/06/16 15:18:18 angelos Exp $
+
+  16 Jun 2007; Christoph Mende <angelos@gentoo.org> metagen-0.5.ebuild:
+  Stable on amd64 wrt bug 182226
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org> metagen-0.5.ebuild:
   ppc stable
