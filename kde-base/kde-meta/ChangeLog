@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.73 2007/05/22 22:54:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.74 2007/06/16 14:46:19 dertobi123 Exp $
+
+  16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  kde-meta-3.5.7.ebuild:
+  Added ~ppc, bug #180400
 
 *kde-meta-3.5.7 (22 May 2007)
 
