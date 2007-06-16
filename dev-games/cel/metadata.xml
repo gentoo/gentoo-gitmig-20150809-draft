@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-  <email>malverian@gentoo.org</email>
-</maintainer>
 <longdescription>
 Crystal Entity Layer is a layer that sits on top of Crystal 
 Space 3D Engine. It provides the notion of entities and 
