@@ -1,0 +1,11 @@
+--- vice-1.21/src/video.h~	2006-06-11 23:23:36.000000000 +0100
++++ vice-1.21/src/video.h	2007-05-13 17:20:09.000000000 +0100
+@@ -78,7 +78,7 @@
+ };
+ typedef struct cap_render_s cap_render_t;
+ 
+-#define FULLSCREEN_MAXDEV 3
++#define FULLSCREEN_MAXDEV 4
+ 
+ struct cap_fullscreen_s {
+     unsigned int device_num;
