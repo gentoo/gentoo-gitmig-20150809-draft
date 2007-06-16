@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.27 2007/06/13 00:49:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.28 2007/06/16 11:19:18 dertobi123 Exp $
+
+  16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  pkgcore-checks-0.4.ebuild:
+  Added ~ppc, bug #181133
 
   13 Jun 2007; Christoph Mende <angelos@gentoo.org>
   pkgcore-checks-0.4.ebuild:
