@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.2.0-r3.ebuild,v 1.2 2005/08/08 13:42:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.2.0-r3.ebuild,v 1.3 2007/06/16 07:02:19 vapier Exp $
 
-inherit eutils libtool
+inherit eutils libtool toolchain-funcs
 
 DESCRIPTION="System Utilities Based on Sysfs"
 HOMEPAGE="http://linux-diag.sourceforge.net/Sysfsutils.html"

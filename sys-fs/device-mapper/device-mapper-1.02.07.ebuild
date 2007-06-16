@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.07.ebuild,v 1.9 2006/08/23 17:23:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.07.ebuild,v 1.10 2007/06/16 07:03:56 vapier Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Device mapper ioctl library for use with LVM2 utilities"
 HOMEPAGE="http://sources.redhat.com/dm/"
