@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.3-r5.ebuild,v 1.7 2007/06/15 10:58:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.3-r5.ebuild,v 1.8 2007/06/16 17:25:22 jer Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc ipv6 kerberos keyring krb4 ldap nntp ssl"
 
 RDEPEND=">=dev-libs/glib-2.4
