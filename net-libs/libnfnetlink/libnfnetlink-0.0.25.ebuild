@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-0.0.25.ebuild,v 1.6 2007/06/16 08:53:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-0.0.25.ebuild,v 1.7 2007/06/16 08:55:03 cedk Exp $
 
 inherit linux-info
 
@@ -27,8 +27,8 @@ pkg_setup() {
 	if kernel_is lt 2 6 20 ; then
 		CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
 	else
-		CONFIG_CHECK="NF_CT_NETLINK_FOO"
-		ERROR_NF_CT_NETLINK_FOO="CONFIG_NF_CT_NETLINK:\t is not set when it should be. You can activate it in the Core Netfilter Configuration"
+		CONFIG_CHECK="NF_CT_NETLINK"
+		ERROR_NF_CT_NETLINK="CONFIG_NF_CT_NETLINK:\t is not set when it should be. You can activate it in the Core Netfilter Configuration"
 	fi
 
 	check_extra_config
