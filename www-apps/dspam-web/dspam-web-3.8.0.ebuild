@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.4 2007/06/13 17:25:54 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.5 2007/06/16 04:35:29 mrness Exp $
 
 inherit webapp eutils autotools
 
@@ -25,6 +25,14 @@ HOMEDIR="/var/spool/dspam"
 CONFDIR="/etc/mail/dspam"
 
 S="${WORKDIR}/dspam-${PV}"
+
+pkg_setup() {
+	if built_with_use mail-filter/dspam user-homedirs; then
+		eerror "The DSPAM web interface requires that dspam be installed without user-homedirs USE flag."
+		eerror "Please disable this flag and re-emerge dspam."
+		die "Incompatible mail-filter/dspam installation"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
