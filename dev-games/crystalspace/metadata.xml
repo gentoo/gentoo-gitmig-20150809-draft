@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-  <email>malverian@gentoo.org</email>
-</maintainer>
 <longdescription>
 Crystal Space is a free (LGPL) and portable 3D Game 
 Development Kit written in C++. It supports: true six degrees 
