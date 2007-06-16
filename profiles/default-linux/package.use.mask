@@ -1,5 +1,7 @@
 # Note that this requires portage-2.1.1+ so if you need this functionality,
 # make sure your package forces a new-enough portage.
 
+sys-apps/pciutils zlib
+
 sys-devel/gcc hardened
 sys-libs/glibc hardened
