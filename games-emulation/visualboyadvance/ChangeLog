@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.31 2007/03/07 16:49:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.32 2007/06/16 18:08:58 nyhm Exp $
+
+*visualboyadvance-1.7.2-r2 (16 Jun 2007)
+
+  16 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/visualboyadvance-1.7.2-uninit.patch,
+  +visualboyadvance-1.7.2-r2.ebuild:
+  Patch from William Page for bug #171293
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   files/visualboyadvance:
