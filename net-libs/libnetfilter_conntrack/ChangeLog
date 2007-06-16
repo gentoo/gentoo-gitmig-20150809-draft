@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.9 2007/06/16 09:26:38 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.10 2007/06/16 16:52:32 dertobi123 Exp $
+
+  16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  libnetfilter_conntrack-0.0.75.ebuild:
+  Added ~ppc, bug #176568
 
 *libnetfilter_conntrack-0.0.75 (16 Jun 2007)
 
