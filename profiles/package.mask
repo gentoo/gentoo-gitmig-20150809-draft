@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7371 2007/06/16 15:37:19 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7372 2007/06/16 23:54:52 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -213,11 +213,6 @@ dev-scheme/mzscheme
 # Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
 # development version
 =media-sound/lilypond-2.11*
-
-# Roy Marples <uberlord@gentoo.org> (14 May 2007)
-# debianutils-2.18 requires update-grub which vanilla grub does not supply
-# See bug #177576
-=sys-apps/debianutils-2.18
 
 # Ulrich Mueller <ulm@gentoo.org> (13 May 2007)
 # Live CVS ebuilds for Emacs
