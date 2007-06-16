@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.1.6.ebuild,v 1.2 2007/06/07 18:01:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.1.6.ebuild,v 1.3 2007/06/16 15:34:02 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.xiaoka.com/${PN}2/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug memdebug ipv6 ldap mysql pam pipe postgres sqlite"
 
 DEPEND=">=net-im/jabber-base-0.01
