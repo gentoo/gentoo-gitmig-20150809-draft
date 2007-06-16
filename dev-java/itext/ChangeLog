@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.46 2007/06/07 11:20:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.47 2007/06/16 12:29:04 dertobi123 Exp $
+
+  16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> itext-2.0.4.ebuild:
+  Added ~ppc, bug #180394
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> itext-2.0.4.ebuild:
   Added ~ppc64; bug #180394
