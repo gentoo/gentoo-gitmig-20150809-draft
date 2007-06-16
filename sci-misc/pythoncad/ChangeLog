@@ -1,0 +1,11 @@
+# ChangeLog for sci-misc/pythoncad
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.1 2007/06/16 17:01:34 cedk Exp $
+
+*pythoncad-1.36 (16 Jun 2007)
+
+  16 Jun 2007; Cédric Krier <cedk@gentoo.org> +metadata.xml,
+  +pythoncad-1.36.ebuild:
+  New ebuild thanks to Mr. Bones., Rob Cakebread, Lukasz Strzygowski, r0g1,
+  David Grant, Alastair Tse
+
