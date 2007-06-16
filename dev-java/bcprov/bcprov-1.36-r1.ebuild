@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.36-r1.ebuild,v 1.6 2007/06/14 00:34:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.36-r1.ebuild,v 1.7 2007/06/16 23:04:06 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -28,7 +28,8 @@ src_unpack() {
 
 	# so that we don't need junit
 	echo "Removing testcases' sources:"
-	find . -path '*test/*.java' -print -delete
+	find . -path '*test/*.java' -print -delete \
+		|| die "Failed to delete testcases."
 }
 
 src_compile() {

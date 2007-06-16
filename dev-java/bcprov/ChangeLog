@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.17 2007/06/14 00:34:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.18 2007/06/16 23:04:06 betelgeuse Exp $
+
+  16 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> bcprov-1.36-r1.ebuild:
+  Add || die for the find in src_unpack.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> bcprov-1.36-r1.ebuild:
   Stable on amd64 wrt bug 181086
