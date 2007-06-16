@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.21 2007/04/11 19:14:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.22 2007/06/16 23:01:39 anant Exp $
+
+*hamlib-1.2.6.1 (16 Jun 2007)
+
+  16 Jun 2007; Anant Narayanan <anant@gentoo.org> +hamlib-1.2.6.1.ebuild:
+  vBump to 1.2.6.1, close bug #178994
 
   11 Apr 2007; Christian Heim <phreak@gentoo.org> hamlib-1.2.4.ebuild,
   hamlib-1.2.5.ebuild:
