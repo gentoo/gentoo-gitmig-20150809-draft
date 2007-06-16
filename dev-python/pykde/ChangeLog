@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.30 2007/04/16 08:05:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.31 2007/06/16 22:42:07 philantrop Exp $
+
+  16 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> pykde-3.16.0.ebuild:
+  Added the -i switch to the configure options and a DEPEND on either konsole
+  or kdebase which was missing. Fixes bugs 132950 and 179135.
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org> pykde-3.16.0.ebuild:
   keyworded ~amd64, bug 166411
