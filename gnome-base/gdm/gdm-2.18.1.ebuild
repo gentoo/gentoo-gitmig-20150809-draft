@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.1.ebuild,v 1.3 2007/04/30 20:55:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.1.ebuild,v 1.4 2007/06/16 14:10:44 eva Exp $
 
 inherit eutils pam gnome2
 
@@ -43,7 +43,7 @@ RDEPEND="pam?	(
 	x11-libs/libXdmcp
 	x11-libs/libXi
 	x11-libs/libXext
-	x11-libs/libXinerama
+	xinerama? ( x11-libs/libXinerama )
 	x11-libs/libdmx
 	x11-libs/libXau
 	x11-apps/sessreg"
