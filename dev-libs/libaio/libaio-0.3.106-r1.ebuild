@@ -1,14 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106-r1.ebuild,v 1.8 2006/12/20 18:43:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106-r1.ebuild,v 1.9 2007/06/16 23:16:48 vapier Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="Asynchronous input/output library that uses the kernels native interface"
-HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/andrea/libaio/
-	http://lse.sourceforge.net/io/aio.html"
+HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/andrea/libaio/ http://lse.sourceforge.net/io/aio.html"
 # Rip out of src rpm that Redhat uses:
-# http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/
+# http://download.fedora.redhat.com/pub/fedora/linux/core/development/source/SRPMS/
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="LGPL-2"
