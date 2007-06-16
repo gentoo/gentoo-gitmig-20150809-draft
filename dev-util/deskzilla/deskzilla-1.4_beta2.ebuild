@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4_beta2.ebuild,v 1.1 2007/06/09 11:16:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4_beta2.ebuild,v 1.2 2007/06/16 11:06:26 dertobi123 Exp $
 
 inherit java-pkg-2 versionator
 
@@ -16,7 +16,7 @@ LICENSE="ALMWorks-1.2"
 # distfiles...
 RESTRICT="mirror"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=""
 RDEPEND=">=virtual/jre-1.5
