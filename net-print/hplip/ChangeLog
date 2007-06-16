@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.66 2007/06/11 21:44:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.67 2007/06/16 15:21:45 calchan Exp $
+
+  16 Jun 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-1.7.3.ebuild,
+  -hplip-1.7.4.ebuild, -hplip-1.7.4a.ebuild:
+  Post-stabilization cleanup. Kept version 1.6.10 due to bug #161926.
 
   11 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> hplip-1.7.4a-r1.ebuild:
   Marked stable on amd64 for bug #181108
