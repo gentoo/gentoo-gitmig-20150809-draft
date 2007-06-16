@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7369 2007/06/16 11:12:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7370 2007/06/16 13:49:22 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1279,11 +1279,6 @@ games-fps/unreal-tournament-infiltration
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
-
-# <robbat2@gentoo.org> (10 Jan 2004)
-# blocked for testing
-# Update - 2006/02/25 - This is a possible removal.
-=mail-mta/qmail-ldap-1.03-r3
 
 # <robbat2@gentoo.org> (29 Nov 2003)
 # Need external testing
