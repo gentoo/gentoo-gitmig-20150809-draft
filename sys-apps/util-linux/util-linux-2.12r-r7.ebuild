@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.8 2007/06/15 23:30:31 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.9 2007/06/16 23:50:31 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -167,8 +167,10 @@ src_install() {
 	# required by autotools
 	dosym /bin/arch /usr/bin/arch
 
-	newinitd "${FILESDIR}"/crypto-loop.initd crypto-loop
-	newconfd "${FILESDIR}"/crypto-loop.confd crypto-loop
+	if use crypt || use old-crypt ; then
+		newinitd "${FILESDIR}"/crypto-loop.initd crypto-loop
+		newconfd "${FILESDIR}"/crypto-loop.confd crypto-loop
+	fi
 
 	# man-pages installs renice(1p) but util-linux does renice(8)
 	dosym ../man8/renice.8 /usr/share/man/man1/renice.1
