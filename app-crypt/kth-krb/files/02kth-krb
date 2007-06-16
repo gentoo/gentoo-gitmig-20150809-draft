@@ -1,5 +1,0 @@
-PATH=/usr/athena/bin
-ROOTPATH=/usr/athena/sbin
-LDPATH=/usr/athena/lib
-MANPATH=/usr/athena/man
-INFOPATH=/usr/athena/info
