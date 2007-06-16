@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070616.ebuild,v 1.1 2007/06/16 11:54:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070616.ebuild,v 1.2 2007/06/16 13:38:01 drac Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -105,7 +105,7 @@ src_compile() {
 	use a52 && myconf="${myconf} --enable-liba52"
 	use ieee1394 && myconf="${myconf} --enable-dc1394"
 	use threads && myconf="${myconf} --enable-pthreads"
-	use xvid && myconf="${myconf} --enable-xvid"
+	use xvid && myconf="${myconf} --enable-libxvid"
 	use X && myconf="${myconf} --enable-x11grab"
 	use ogg && myconf="${myconf} --enable-libogg"
 	use x264 && myconf="${myconf} --enable-libx264"
