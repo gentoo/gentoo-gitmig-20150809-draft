@@ -17,6 +17,10 @@ AUX mod_caucho-3.0.22-ssl.patch 707 RMD160 89025739f8bc910ec584c3c4d3ade5422e3db
 MD5 c013ff79b1e3cf3cf3db58805e8e38dd files/mod_caucho-3.0.22-ssl.patch 707
 RMD160 89025739f8bc910ec584c3c4d3ade5422e3db2e2 files/mod_caucho-3.0.22-ssl.patch 707
 SHA256 f33096f6783a4d06e9d1ba6d77eba7bf32597a5adb1e6e2eb4617ec43f9d0d1e files/mod_caucho-3.0.22-ssl.patch 707
+AUX mod_caucho-3.0.23-disable-sticky-sessions.patch 1030 RMD160 7046a41960792b3efa622f612d211ddf6ffd705b SHA1 7faf81d727d2f3ade4d2383558818ec65bcb9667 SHA256 75e8b2ad9672e3041da1e9489d0f76b3ff789a42f6237a9e0d196ab1ecca838d
+MD5 c834b541cc71fe34b9ee62d1dfa5fafd files/mod_caucho-3.0.23-disable-sticky-sessions.patch 1030
+RMD160 7046a41960792b3efa622f612d211ddf6ffd705b files/mod_caucho-3.0.23-disable-sticky-sessions.patch 1030
+SHA256 75e8b2ad9672e3041da1e9489d0f76b3ff789a42f6237a9e0d196ab1ecca838d files/mod_caucho-3.0.23-disable-sticky-sessions.patch 1030
 AUX mod_caucho-3.0.23-gentoo.patch 783 RMD160 4362f450b26e90361b16b3cd7295a78f6e859e79 SHA1 6f76e99964099ae99e25d3924cc846f2c318358a SHA256 c6412640f60bbfa5120b1b79115e4e5484d5a954b174239a8790ae3dab215435
 MD5 3f5a1c54cf61d9f4196f263067bd5966 files/mod_caucho-3.0.23-gentoo.patch 783
 RMD160 4362f450b26e90361b16b3cd7295a78f6e859e79 files/mod_caucho-3.0.23-gentoo.patch 783
@@ -29,6 +33,10 @@ AUX mod_caucho-3.0.23-ssl.patch 707 RMD160 30476dd9da2a56dd72bf2a7480f92d2323ab1
 MD5 72dc4154957921f21e505a12223d6d9c files/mod_caucho-3.0.23-ssl.patch 707
 RMD160 30476dd9da2a56dd72bf2a7480f92d2323ab1df0 files/mod_caucho-3.0.23-ssl.patch 707
 SHA256 17e3de2a4bf95ac985297a62f791267f28817f1773bd3c9cc773144c09284ee3 files/mod_caucho-3.0.23-ssl.patch 707
+AUX mod_caucho-3.1.1-disable-sticky-sessions.patch 1026 RMD160 070c62a01a7befb14eabf158803ca11b7134b2aa SHA1 29cbefc35f9923a3a649612bcc194a732f22d6c6 SHA256 7d93fae16bccc89a3c9963135975e423faf4ad7ced9b03115530f294f88eab51
+MD5 06dfa78cf33e51feb5cf901a455faff8 files/mod_caucho-3.1.1-disable-sticky-sessions.patch 1026
+RMD160 070c62a01a7befb14eabf158803ca11b7134b2aa files/mod_caucho-3.1.1-disable-sticky-sessions.patch 1026
+SHA256 7d93fae16bccc89a3c9963135975e423faf4ad7ced9b03115530f294f88eab51 files/mod_caucho-3.1.1-disable-sticky-sessions.patch 1026
 AUX mod_caucho-3.1.1-gentoo.patch 779 RMD160 da1c5cbaa2fe8205f39c389a602b9868ccd183f7 SHA1 c75fa342fca8ff0bb0227cfaf78d1c108ed2cf4c SHA256 07229349185774ac92d8e6c0ceb19e50432095b980a9c11f7a5d179be7cb8ff0
 MD5 63fbf2a8efb79ede6a357e730a6b7961 files/mod_caucho-3.1.1-gentoo.patch 779
 RMD160 da1c5cbaa2fe8205f39c389a602b9868ccd183f7 files/mod_caucho-3.1.1-gentoo.patch 779
@@ -48,18 +56,18 @@ EBUILD mod_caucho-3.0.22.ebuild 1246 RMD160 bad458fdde146b79dab8517b907584804fe6
 MD5 079233ffa74ed3f3c7f97ff7da53edc3 mod_caucho-3.0.22.ebuild 1246
 RMD160 bad458fdde146b79dab8517b907584804fe6bd8e mod_caucho-3.0.22.ebuild 1246
 SHA256 36e2597015ccdd9627cb1ae1aed83bdbe718965c5d92513128d1581204f36dbd mod_caucho-3.0.22.ebuild 1246
-EBUILD mod_caucho-3.0.23.ebuild 1248 RMD160 55da78214beb9840d3c3d1e5fa245bbffcefbf25 SHA1 c5edce4c30fca806bf99b170884e82bf04f71a5b SHA256 b1a99ded7611fb5cd42e5814d71aaa1ed59101ccfa3a3c92cae68643c64d2c85
-MD5 1ca271d1f06b12f8de65ca88f5d3112c mod_caucho-3.0.23.ebuild 1248
-RMD160 55da78214beb9840d3c3d1e5fa245bbffcefbf25 mod_caucho-3.0.23.ebuild 1248
-SHA256 b1a99ded7611fb5cd42e5814d71aaa1ed59101ccfa3a3c92cae68643c64d2c85 mod_caucho-3.0.23.ebuild 1248
-EBUILD mod_caucho-3.1.1.ebuild 1269 RMD160 f83714e8601619010309a0e54382df5b5188a990 SHA1 f79dbd16cb2410f425571f88d9d29d93bf22db38 SHA256 300b8b7d89615b4cc9c7b75f1416cadf4273bd0406a0bc767ff5e691415b688f
-MD5 cc16952f43ed4b52635dece6cbd4440e mod_caucho-3.1.1.ebuild 1269
-RMD160 f83714e8601619010309a0e54382df5b5188a990 mod_caucho-3.1.1.ebuild 1269
-SHA256 300b8b7d89615b4cc9c7b75f1416cadf4273bd0406a0bc767ff5e691415b688f mod_caucho-3.1.1.ebuild 1269
-MISC ChangeLog 3434 RMD160 afa95638259bd052c85ec5c5fc09749bea98e605 SHA1 06fb45b24c1a752b7c44f84f375440da38573a97 SHA256 0e7356668c237b53f9c9712a24138c120846eaec40791535cd30dfed0a7344a0
-MD5 af72b1b8227a594f0f279583e331d4ae ChangeLog 3434
-RMD160 afa95638259bd052c85ec5c5fc09749bea98e605 ChangeLog 3434
-SHA256 0e7356668c237b53f9c9712a24138c120846eaec40791535cd30dfed0a7344a0 ChangeLog 3434
+EBUILD mod_caucho-3.0.23-r1.ebuild 1308 RMD160 4312bf6940d43f7886ea997d664264f35762e0e0 SHA1 2d30b920d87e5261b6803e9322c319a1ebf3beda SHA256 fbf3abe3dbe61aa308a7b09fc8054ce38625c168de546663d32a3d12a4767415
+MD5 67725e4aa504f6fde64a55fa1c6d4f67 mod_caucho-3.0.23-r1.ebuild 1308
+RMD160 4312bf6940d43f7886ea997d664264f35762e0e0 mod_caucho-3.0.23-r1.ebuild 1308
+SHA256 fbf3abe3dbe61aa308a7b09fc8054ce38625c168de546663d32a3d12a4767415 mod_caucho-3.0.23-r1.ebuild 1308
+EBUILD mod_caucho-3.1.1-r1.ebuild 1329 RMD160 d256f52eed9b68cd7d8b1fe810db28619f5c7071 SHA1 b9b625409837ad499858b95f0d982ddc86416de7 SHA256 47de9673e818b25983596489d069f7a6a0dae77df3dd44900f3747c676eef27b
+MD5 fe06fbf369c0dde5a4c59a7bef5f7f41 mod_caucho-3.1.1-r1.ebuild 1329
+RMD160 d256f52eed9b68cd7d8b1fe810db28619f5c7071 mod_caucho-3.1.1-r1.ebuild 1329
+SHA256 47de9673e818b25983596489d069f7a6a0dae77df3dd44900f3747c676eef27b mod_caucho-3.1.1-r1.ebuild 1329
+MISC ChangeLog 3849 RMD160 0ae0ed842b4d8321036accf2fd9fe12b7b6a06ff SHA1 88e4411514a39c4896d26101fd6a7f9e87568bea SHA256 d70d02f74e2258c1c49024968470efdc3c8608144f7ca613999605c0d0bff4fd
+MD5 47953284d729f1a67beb3d7ebd108e02 ChangeLog 3849
+RMD160 0ae0ed842b4d8321036accf2fd9fe12b7b6a06ff ChangeLog 3849
+SHA256 d70d02f74e2258c1c49024968470efdc3c8608144f7ca613999605c0d0bff4fd ChangeLog 3849
 MISC metadata.xml 245 RMD160 ab2afa1527b94d2776eb4cff88ab06b86f4da8d4 SHA1 e75506fde1ffe1aab92c624c3299957c9819fafe SHA256 2934a1d824233ffc25ba694782ed7386f899e39e3020cc5fa82f5a0e371b1957
 MD5 2beccfb509fa2c8b2489d1278d021b4e metadata.xml 245
 RMD160 ab2afa1527b94d2776eb4cff88ab06b86f4da8d4 metadata.xml 245
@@ -67,16 +75,16 @@ SHA256 2934a1d824233ffc25ba694782ed7386f899e39e3020cc5fa82f5a0e371b1957 metadata
 MD5 1df6f758925c19f33df250705d01755e files/digest-mod_caucho-3.0.22 253
 RMD160 bd3fd0cce1c7cccefb0440cd6520d7d58f3625eb files/digest-mod_caucho-3.0.22 253
 SHA256 22df3f8469cc556d0c7f3e0238eb0a7bfc0ebf2f64fdf30fee739e286e1505cb files/digest-mod_caucho-3.0.22 253
-MD5 a4e0893dd1c60cd73ce6f28a4ccc8ae6 files/digest-mod_caucho-3.0.23 253
-RMD160 43ab80dd8eff83f564cb02b725ab6c287f7edb60 files/digest-mod_caucho-3.0.23 253
-SHA256 325bcbc92c222e3a387af37a3313ebcd4be2d8fba1f97b936e487580741db7b3 files/digest-mod_caucho-3.0.23 253
-MD5 7c0a009cc263c0f8e753ffebd4d4dd90 files/digest-mod_caucho-3.1.1 250
-RMD160 343df1f7d1981283f5e2f3b0564949bc5ab9d505 files/digest-mod_caucho-3.1.1 250
-SHA256 13233a3d52b314e7f3392c9012a48c289b7f61c2378b80257f92a19265fdc32a files/digest-mod_caucho-3.1.1 250
+MD5 a4e0893dd1c60cd73ce6f28a4ccc8ae6 files/digest-mod_caucho-3.0.23-r1 253
+RMD160 43ab80dd8eff83f564cb02b725ab6c287f7edb60 files/digest-mod_caucho-3.0.23-r1 253
+SHA256 325bcbc92c222e3a387af37a3313ebcd4be2d8fba1f97b936e487580741db7b3 files/digest-mod_caucho-3.0.23-r1 253
+MD5 539247f0e2125ccb81f4929aa5c2eeac files/digest-mod_caucho-3.1.1-r1 182
+RMD160 2a1be65a281dc9435c3c83ec87a7b5c80d9bf335 files/digest-mod_caucho-3.1.1-r1 182
+SHA256 43e2892252a5760070fa8cd6ba0cb409dccfb56fc7d1d69a2c0f8189e2f3400b files/digest-mod_caucho-3.1.1-r1 182
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFGSeIjgo/w9rxVVVERAk0JAJ4l85JukjShjRRMRa2jm3H75whI1QCgrYuq
-2tlDjzM6OlLHMKxGiBruWQM=
-=pyCt
+iD8DBQFGdGiJgo/w9rxVVVERAoF+AJ9MWmnC+EJAKqGXv2dBE2pvivv+VQCeJ7kH
+NfpZGn2Hb0YqCi1cNsHBWTc=
+=EL9+
 -----END PGP SIGNATURE-----

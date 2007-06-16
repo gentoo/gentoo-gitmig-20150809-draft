@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.23.ebuild,v 1.1 2007/05/15 16:37:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.23-r1.ebuild,v 1.1 2007/06/16 22:46:57 nelchael Exp $
 
 inherit eutils apache-module autotools
 
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-ssl.patch"
 	epatch "${FILESDIR}/${P}-java.patch"
+	epatch "${FILESDIR}/${P}-disable-sticky-sessions.patch"
 	eautoreconf
 	chmod 755 ./configure
 }
