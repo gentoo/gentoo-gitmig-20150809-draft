@@ -1,30 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX 1.0.1.19317/000_all_initd-location.patch 1131 RMD160 3ab69d825994cc3bb177143d27091fc292cec46a SHA1 14264460c8500f1ead267059e2b9b9a5dc8c057f SHA256 b4055370b0092e71a2b2b0f27edeb7bc063ad265f95ab4530e52c3ab3167ad62
-MD5 23d97e5e436a0d827b48db3ed9948aa7 files/1.0.1.19317/000_all_initd-location.patch 1131
-RMD160 3ab69d825994cc3bb177143d27091fc292cec46a files/1.0.1.19317/000_all_initd-location.patch 1131
-SHA256 b4055370b0092e71a2b2b0f27edeb7bc063ad265f95ab4530e52c3ab3167ad62 files/1.0.1.19317/000_all_initd-location.patch 1131
-AUX 1.0.1.19317/001_all_fix-permissions.patch 647 RMD160 0f25f7dd60dfcb5a72b1f7b9cf344d6f431143a9 SHA1 cabd3dd071ef62d4c70f52d1a3e02334ec7f3a73 SHA256 41492cde60da6d449c0f427ac7bd65598838ec17ac0e3a5f545feeb1d29ea391
-MD5 3df74f4dfaa783b6a2f9eba3f0030afa files/1.0.1.19317/001_all_fix-permissions.patch 647
-RMD160 0f25f7dd60dfcb5a72b1f7b9cf344d6f431143a9 files/1.0.1.19317/001_all_fix-permissions.patch 647
-SHA256 41492cde60da6d449c0f427ac7bd65598838ec17ac0e3a5f545feeb1d29ea391 files/1.0.1.19317/001_all_fix-permissions.patch 647
-AUX 1.0.1.19317/002_all_pagebreak-detection-fix.patch 671 RMD160 9e8a46b76621b67be28cba60524bc4dea0dbd068 SHA1 9ff01452cc40dc0570e727b75f415b5c779e9086 SHA256 df96cf12b9e7ab2578c134c94e43f11fb8a187a3a0ddf8f645a8aa126020caab
-MD5 c97a07443c0b9124d7cecec1e15bee07 files/1.0.1.19317/002_all_pagebreak-detection-fix.patch 671
-RMD160 9e8a46b76621b67be28cba60524bc4dea0dbd068 files/1.0.1.19317/002_all_pagebreak-detection-fix.patch 671
-SHA256 df96cf12b9e7ab2578c134c94e43f11fb8a187a3a0ddf8f645a8aa126020caab files/1.0.1.19317/002_all_pagebreak-detection-fix.patch 671
-AUX 1.0.1.19317/004_all_do-not-build-modules.patch 589 RMD160 b2153579c65a232de9c2e6dbd9bbe108d85f95e5 SHA1 394a67a30f1f29084836183303641915ce982bfd SHA256 916754b0616ea330490b9572be1a9216bb7dd441ba328b1e01e777b29fac4e1e
-MD5 8b7edbd7b3b93bf2b437f88cfa375f28 files/1.0.1.19317/004_all_do-not-build-modules.patch 589
-RMD160 b2153579c65a232de9c2e6dbd9bbe108d85f95e5 files/1.0.1.19317/004_all_do-not-build-modules.patch 589
-SHA256 916754b0616ea330490b9572be1a9216bb7dd441ba328b1e01e777b29fac4e1e files/1.0.1.19317/004_all_do-not-build-modules.patch 589
-AUX 1.0.1.19317/007_all_use-modprobe-over-insmod.patch 448 RMD160 136dfcfe2df7a7ebf2844749f473a6c6d0bb3084 SHA1 0ad152b3cb738521296322b56e9f247926690e67 SHA256 9497f8ad6acb2460e27bd5430670e79129ec2ffbf6f5b8dae62084e5e56059ee
-MD5 f5a4bba93e2ef942332dbe7105f2b204 files/1.0.1.19317/007_all_use-modprobe-over-insmod.patch 448
-RMD160 136dfcfe2df7a7ebf2844749f473a6c6d0bb3084 files/1.0.1.19317/007_all_use-modprobe-over-insmod.patch 448
-SHA256 9497f8ad6acb2460e27bd5430670e79129ec2ffbf6f5b8dae62084e5e56059ee files/1.0.1.19317/007_all_use-modprobe-over-insmod.patch 448
-AUX 1.0.1.19317/009_all_init.d-modules-warning.patch 991 RMD160 6205e976db47cd3361b5eca8593414d411a2ab8d SHA1 3742749baa606a57d447931f0af791696a49e660 SHA256 5fbc9f101abb3816a732f64a75e90ce7fcb6783c3cd7bae521d8785e88634498
-MD5 9689ef9d197dcc43dc2f390e6de4ec21 files/1.0.1.19317/009_all_init.d-modules-warning.patch 991
-RMD160 6205e976db47cd3361b5eca8593414d411a2ab8d files/1.0.1.19317/009_all_init.d-modules-warning.patch 991
-SHA256 5fbc9f101abb3816a732f64a75e90ce7fcb6783c3cd7bae521d8785e88634498 files/1.0.1.19317/009_all_init.d-modules-warning.patch 991
 AUX 1.0.2.29634/000_all_initd-location.patch 1131 RMD160 3ab69d825994cc3bb177143d27091fc292cec46a SHA1 14264460c8500f1ead267059e2b9b9a5dc8c057f SHA256 b4055370b0092e71a2b2b0f27edeb7bc063ad265f95ab4530e52c3ab3167ad62
 MD5 23d97e5e436a0d827b48db3ed9948aa7 files/1.0.2.29634/000_all_initd-location.patch 1131
 RMD160 3ab69d825994cc3bb177143d27091fc292cec46a files/1.0.2.29634/000_all_initd-location.patch 1131
@@ -49,6 +25,30 @@ AUX 1.0.2.29634/009_all_init.d-modules-warning.patch 991 RMD160 6205e976db47cd33
 MD5 9689ef9d197dcc43dc2f390e6de4ec21 files/1.0.2.29634/009_all_init.d-modules-warning.patch 991
 RMD160 6205e976db47cd3361b5eca8593414d411a2ab8d files/1.0.2.29634/009_all_init.d-modules-warning.patch 991
 SHA256 5fbc9f101abb3816a732f64a75e90ce7fcb6783c3cd7bae521d8785e88634498 files/1.0.2.29634/009_all_init.d-modules-warning.patch 991
+AUX 1.0.3.34682/000_all_initd-location.patch 1131 RMD160 3ab69d825994cc3bb177143d27091fc292cec46a SHA1 14264460c8500f1ead267059e2b9b9a5dc8c057f SHA256 b4055370b0092e71a2b2b0f27edeb7bc063ad265f95ab4530e52c3ab3167ad62
+MD5 23d97e5e436a0d827b48db3ed9948aa7 files/1.0.3.34682/000_all_initd-location.patch 1131
+RMD160 3ab69d825994cc3bb177143d27091fc292cec46a files/1.0.3.34682/000_all_initd-location.patch 1131
+SHA256 b4055370b0092e71a2b2b0f27edeb7bc063ad265f95ab4530e52c3ab3167ad62 files/1.0.3.34682/000_all_initd-location.patch 1131
+AUX 1.0.3.34682/001_all_fix-permissions.patch 647 RMD160 0f25f7dd60dfcb5a72b1f7b9cf344d6f431143a9 SHA1 cabd3dd071ef62d4c70f52d1a3e02334ec7f3a73 SHA256 41492cde60da6d449c0f427ac7bd65598838ec17ac0e3a5f545feeb1d29ea391
+MD5 3df74f4dfaa783b6a2f9eba3f0030afa files/1.0.3.34682/001_all_fix-permissions.patch 647
+RMD160 0f25f7dd60dfcb5a72b1f7b9cf344d6f431143a9 files/1.0.3.34682/001_all_fix-permissions.patch 647
+SHA256 41492cde60da6d449c0f427ac7bd65598838ec17ac0e3a5f545feeb1d29ea391 files/1.0.3.34682/001_all_fix-permissions.patch 647
+AUX 1.0.3.34682/002_all_pagebreak-detection-fix.patch 800 RMD160 f21a51e552d025a5120519d6dcd41efc3835a432 SHA1 06133c332b6b1f57476b1154de108a9dfc35435d SHA256 d327d7cb2166b9ef4c8c286568c3a7eb64542212164d58b8a7a3c5e51e19ed6d
+MD5 759c85359279fd8cc6b7065034546121 files/1.0.3.34682/002_all_pagebreak-detection-fix.patch 800
+RMD160 f21a51e552d025a5120519d6dcd41efc3835a432 files/1.0.3.34682/002_all_pagebreak-detection-fix.patch 800
+SHA256 d327d7cb2166b9ef4c8c286568c3a7eb64542212164d58b8a7a3c5e51e19ed6d files/1.0.3.34682/002_all_pagebreak-detection-fix.patch 800
+AUX 1.0.3.34682/004_all_do-not-build-modules.patch 589 RMD160 b2153579c65a232de9c2e6dbd9bbe108d85f95e5 SHA1 394a67a30f1f29084836183303641915ce982bfd SHA256 916754b0616ea330490b9572be1a9216bb7dd441ba328b1e01e777b29fac4e1e
+MD5 8b7edbd7b3b93bf2b437f88cfa375f28 files/1.0.3.34682/004_all_do-not-build-modules.patch 589
+RMD160 b2153579c65a232de9c2e6dbd9bbe108d85f95e5 files/1.0.3.34682/004_all_do-not-build-modules.patch 589
+SHA256 916754b0616ea330490b9572be1a9216bb7dd441ba328b1e01e777b29fac4e1e files/1.0.3.34682/004_all_do-not-build-modules.patch 589
+AUX 1.0.3.34682/007_all_use-modprobe-over-insmod.patch 448 RMD160 136dfcfe2df7a7ebf2844749f473a6c6d0bb3084 SHA1 0ad152b3cb738521296322b56e9f247926690e67 SHA256 9497f8ad6acb2460e27bd5430670e79129ec2ffbf6f5b8dae62084e5e56059ee
+MD5 f5a4bba93e2ef942332dbe7105f2b204 files/1.0.3.34682/007_all_use-modprobe-over-insmod.patch 448
+RMD160 136dfcfe2df7a7ebf2844749f473a6c6d0bb3084 files/1.0.3.34682/007_all_use-modprobe-over-insmod.patch 448
+SHA256 9497f8ad6acb2460e27bd5430670e79129ec2ffbf6f5b8dae62084e5e56059ee files/1.0.3.34682/007_all_use-modprobe-over-insmod.patch 448
+AUX 1.0.3.34682/009_all_init.d-modules-warning.patch 991 RMD160 6205e976db47cd3361b5eca8593414d411a2ab8d SHA1 3742749baa606a57d447931f0af791696a49e660 SHA256 5fbc9f101abb3816a732f64a75e90ce7fcb6783c3cd7bae521d8785e88634498
+MD5 9689ef9d197dcc43dc2f390e6de4ec21 files/1.0.3.34682/009_all_init.d-modules-warning.patch 991
+RMD160 6205e976db47cd3361b5eca8593414d411a2ab8d files/1.0.3.34682/009_all_init.d-modules-warning.patch 991
+SHA256 5fbc9f101abb3816a732f64a75e90ce7fcb6783c3cd7bae521d8785e88634498 files/1.0.3.34682/009_all_init.d-modules-warning.patch 991
 AUX 90vmware-player 91 RMD160 025ff93348f5a838183e4f6108d7030168ca5ed5 SHA1 54c316adaafce41771eb26513c960dabbed61ce9 SHA256 9aee16313163bd9e161e81ef2876d086fb8972489100c4f8f0a4695ff16578f9
 MD5 40cfaf639df38a7cb04073555992d31e files/90vmware-player 91
 RMD160 025ff93348f5a838183e4f6108d7030168ca5ed5 files/90vmware-player 91
@@ -70,14 +70,14 @@ EBUILD vmware-player-1.0.2.29634.ebuild 2876 RMD160 aed7c0f6c717c7cbebfd9a176ab7
 MD5 6fbcaa4909b91a032a5456889c2bccef vmware-player-1.0.2.29634.ebuild 2876
 RMD160 aed7c0f6c717c7cbebfd9a176ab79c03a018df09 vmware-player-1.0.2.29634.ebuild 2876
 SHA256 0cfe4d39c20e42f61732de40986c1c49b7dbb73f51eb1ab6e63905da205f86c3 vmware-player-1.0.2.29634.ebuild 2876
-EBUILD vmware-player-1.0.3.34682.ebuild 2731 RMD160 c4bbf1ad5ce84fd8564fffbe3d021899f3bb023b SHA1 a68264daf9bfe416c5fa958d4b29a5e33fbb134a SHA256 51f21471ce75aba3145d4081fdf6862abfe1a260304138839c180ca0949cf793
-MD5 a8b3d5c5628eb104b103bcb71a791508 vmware-player-1.0.3.34682.ebuild 2731
-RMD160 c4bbf1ad5ce84fd8564fffbe3d021899f3bb023b vmware-player-1.0.3.34682.ebuild 2731
-SHA256 51f21471ce75aba3145d4081fdf6862abfe1a260304138839c180ca0949cf793 vmware-player-1.0.3.34682.ebuild 2731
-MISC ChangeLog 7747 RMD160 3b8dd10805bd33c567dbeff03de0eafcebd719fa SHA1 71aa2a021f02adcfa2283668d6e9472effb79c9c SHA256 fa38e062f15e3064280ad8e42f99771e933cbce5a8222e7f73b214018526c605
-MD5 1b9d7e77d28782a441a9f8a8ae083fec ChangeLog 7747
-RMD160 3b8dd10805bd33c567dbeff03de0eafcebd719fa ChangeLog 7747
-SHA256 fa38e062f15e3064280ad8e42f99771e933cbce5a8222e7f73b214018526c605 ChangeLog 7747
+EBUILD vmware-player-1.0.3.34682-r1.ebuild 2732 RMD160 f3b40ae9fee8f7ed3bf912bb610173d823951d41 SHA1 b2a53f4261363af7c2582c9927abc46bf1b96d80 SHA256 c2a9226bf103f6c64c2cda34547ba0aa6ec7a0b058574461be5d45eea01fefaa
+MD5 dda2a0121887792ddca0c9621776215f vmware-player-1.0.3.34682-r1.ebuild 2732
+RMD160 f3b40ae9fee8f7ed3bf912bb610173d823951d41 vmware-player-1.0.3.34682-r1.ebuild 2732
+SHA256 c2a9226bf103f6c64c2cda34547ba0aa6ec7a0b058574461be5d45eea01fefaa vmware-player-1.0.3.34682-r1.ebuild 2732
+MISC ChangeLog 8645 RMD160 2c13206ea7fec3532b152b36c5565c40d0440eff SHA1 726e8523090104a3c960255f0eac29d207116bdc SHA256 af79b12a0ede8aca77b0be5c1f7300ee77cf0e2ce9b01503827f458c92685e69
+MD5 e8a7bea75c3f3be2b1cddcdf2ab1e337 ChangeLog 8645
+RMD160 2c13206ea7fec3532b152b36c5565c40d0440eff ChangeLog 8645
+SHA256 af79b12a0ede8aca77b0be5c1f7300ee77cf0e2ce9b01503827f458c92685e69 ChangeLog 8645
 MISC metadata.xml 159 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 SHA1 f46b02a39bcd0165558de67ff4256cfc812418a3 SHA256 8581ae1c90a48f50fa0542c7fb28cb8984baaf12f50fa18f33e467081effb215
 MD5 7cc95faad4185e8ed375248bc73a17fc metadata.xml 159
 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 metadata.xml 159
@@ -85,13 +85,13 @@ SHA256 8581ae1c90a48f50fa0542c7fb28cb8984baaf12f50fa18f33e467081effb215 metadata
 MD5 9b04fac5c578db76ea058035bb4813f4 files/digest-vmware-player-1.0.2.29634 1111
 RMD160 c496b1c7fc9f32dd5eb4899ca9ab374ef5d9781f files/digest-vmware-player-1.0.2.29634 1111
 SHA256 6b3dcd364b30ffe5a9ce4bc8e4106cb353beb03a1a482fca7fc56e52077ef768 files/digest-vmware-player-1.0.2.29634 1111
-MD5 d394e1d10287fc1b4ece4ecd87905bf6 files/digest-vmware-player-1.0.3.34682 1111
-RMD160 be2cc94f8ffedd178b25e9dad93c4934257e9efd files/digest-vmware-player-1.0.3.34682 1111
-SHA256 65a243740179cc6cdca736c9d18c524f3deb59f83eec8963fe0177b282ca5502 files/digest-vmware-player-1.0.3.34682 1111
+MD5 d394e1d10287fc1b4ece4ecd87905bf6 files/digest-vmware-player-1.0.3.34682-r1 1111
+RMD160 be2cc94f8ffedd178b25e9dad93c4934257e9efd files/digest-vmware-player-1.0.3.34682-r1 1111
+SHA256 65a243740179cc6cdca736c9d18c524f3deb59f83eec8963fe0177b282ca5502 files/digest-vmware-player-1.0.3.34682-r1 1111
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFGMxoyu7rWomwgFXoRAo74AJ9zsu7PjyssxR9J2y+Q7rOvE2wHewCeMpJk
-X7Lqnq/uFzkHsaMH7bM0g/U=
-=XGkR
+iD8DBQFGc95vu7rWomwgFXoRAkJqAKCdKVPZi463CZgsf+J3phoFUpMWdQCgpL2l
+IG7q4IsosvkXmX625CMoF4U=
+=CUYv
 -----END PGP SIGNATURE-----
