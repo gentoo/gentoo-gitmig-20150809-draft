@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.20.ebuild,v 1.2 2007/06/07 18:09:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.20.ebuild,v 1.3 2007/06/16 13:18:22 drac Exp $
 
 inherit eutils gnome2-utils
 
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
 	addwrite "/root/.gnome2"
 
-	emake DESTDIR=${D} install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
