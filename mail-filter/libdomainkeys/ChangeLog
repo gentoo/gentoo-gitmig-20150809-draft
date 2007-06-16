@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libdomainkeys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.6 2007/05/07 03:48:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.7 2007/06/16 00:51:16 angelos Exp $
+
+  16 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  libdomainkeys-0.68-r1.ebuild:
+  Added ~amd64 wrt bug 176487
 
   07 May 2007; Jeroen Roovers <jer@gentoo.org> libdomainkeys-0.68-r1.ebuild:
   Marked ~hppa (bug #176487).
