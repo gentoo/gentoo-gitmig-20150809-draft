@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_cband
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/ChangeLog,v 1.10 2007/06/12 00:52:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/ChangeLog,v 1.11 2007/06/16 22:38:07 nelchael Exp $
+
+  16 Jun 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -mod_cband-0.9.7.2.ebuild:
+  Remove old version.
 
   12 Jun 2007; Christoph Mende <angelos@gentoo.org>
   mod_cband-0.9.7.5.ebuild:
