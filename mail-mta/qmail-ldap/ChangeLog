@@ -1,6 +1,64 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.15 2007/04/28 16:53:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.16 2007/06/16 13:48:10 hollow Exp $
+
+*qmail-ldap-1.03-r5 (16 Jun 2007)
+
+  16 Jun 2007; Benedikt Böhm <hollow@gentoo.org>
+  -files/1.03-r2/samples.ldif, -files/1.03-r4/qmail.schema,
+  -files/1.03-r3/99qmail, -files/1.03-r4/qmail-genrsacert.sh,
+  -files/1.03-r3/conf-common, -files/1.03-r4/rc, -files/1.03-r3/conf-pop3d,
+  -files/1.03-r4/run-qmailpop3d, -files/1.03-r3/conf-qmqpd,
+  -files/1.03-r3/conf-qmtpd, -files/1.03-r3/conf-smtpd,
+  -files/1.03-r3/config-sanity-check, -files/1.03-r3/dot_qmail,
+  -files/1.03-r3/mkservercert, -files/1.03-r3/qmail-control,
+  -files/1.03-r3/qmail-genrsacert.sh, -files/1.03-r3/rc,
+  -files/1.03-r3/run-qmailpop3d, -files/1.03-r3/run-qmailpop3dlog,
+  -files/1.03-r3/run-qmailqmqpd, -files/1.03-r3/run-qmailqmqpdlog,
+  -files/1.03-r3/run-qmailqmtpd, -files/1.03-r3/run-qmailqmtpdlog,
+  -files/1.03-r3/run-qmailsend, -files/1.03-r3/run-qmailsendlog,
+  -files/1.03-r3/run-qmailsmtpd, -files/1.03-r3/run-qmailsmtpdlog,
+  -files/1.03-r3/servercert.cnf, -files/1.03-r4/99qmail,
+  -files/1.03-r4/conf-common, -files/1.03-r4/conf-pop3d,
+  -files/1.03-r4/conf-qmqpd, -files/1.03-r4/conf-qmtpd,
+  -files/1.03-r4/conf-smtpd, -files/1.03-r4/config-sanity-check,
+  -files/1.03-r4/dot_qmail, -files/1.03-r4/gentoo.patch,
+  -files/1.03-r4/mkservercert, -files/1.03-r4/pipehack.patch.bz2,
+  -files/1.03-r4/qmail-control, -files/1.03-r4/run-qmailpop3dlog,
+  -files/1.03-r4/run-qmailqmqpd, -files/1.03-r4/run-qmailqmqpdlog,
+  -files/1.03-r4/run-qmailqmtpd, -files/1.03-r4/run-qmailqmtpdlog,
+  -files/1.03-r4/run-qmailsend, -files/1.03-r4/run-qmailsendlog,
+  -files/1.03-r4/run-qmailsmtpd, -files/1.03-r4/run-qmailsmtpdlog,
+  -files/1.03-r4/servercert.cnf, -files/1.03-r4/tls.patch.bz2,
+  +files/99qmail, +files/conf-common, +files/conf-pop3d, +files/conf-qmqpd,
+  +files/conf-qmtpd, +files/conf-send, +files/conf-smtpd,
+  -files/control/defaultdelivery, -files/control/defaultdomain,
+  -files/control/defaulthost, -files/control/dirmaker, -files/control/file,
+  -files/control/ldapbasedn, -files/control/ldapgid,
+  -files/control/ldaplocaldelivery, -files/control/ldaplogin,
+  -files/control/ldapmessagestore, -files/control/ldappassword,
+  -files/control/ldapserver, -files/control/ldapuid, +files/dot-qmail,
+  -files/dot_qmail, -files/errno.patch, -files/gentoo.patch,
+  -files/homedir.patch, +files/mailer.conf, +files/mkservercert,
+  +files/qmail-config-system, -files/qmail-control,
+  +files/qmail-genrsacert.sh, -files/qmail-link-sync-gentoo.patch,
+  -files/qmail-linksync.patch, -files/qmail-queue.patch, -files/rc,
+  +files/run-qmail-pop3d, +files/run-qmail-pop3d-log,
+  +files/run-qmail-qmqpd, +files/run-qmail-qmqpd-log,
+  +files/run-qmail-qmtpd, +files/run-qmail-qmtpd-log, +files/run-qmail-send,
+  +files/run-qmail-send-log, +files/run-qmail-smtpd,
+  +files/run-qmail-smtpd-log, +files/servercert.cnf, +files/smtpplugins,
+  -files/supervise/run-qmailpop3d, -files/supervise/run-qmailpop3dlog,
+  -files/supervise/run-qmailsend, -files/supervise/run-qmailsendlog,
+  -files/supervise/run-qmailsmtpd, -files/supervise/run-qmailsmtpdlog,
+  files/tcp.pop3.sample, files/tcp.qmqp.sample, files/tcp.qmtp.sample,
+  files/tcp.smtp.sample, +files/tcprules.d-Makefile.qmail, -files/tls.patch,
+  -qmail-ldap-1.03-r1.ebuild, -qmail-ldap-1.03-r2.ebuild,
+  -qmail-ldap-1.03-r3.ebuild, -qmail-ldap-1.03-r4.ebuild,
+  +qmail-ldap-1.03-r5.ebuild:
+  sync with netqmail-1.05-r8 ebuild; fix #62734, #65456, #82089, #97957,
+  #125162 and hopefully #83092; old versions are completely broken, therefore
+  removed
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> qmail-ldap-1.03-r4.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)
