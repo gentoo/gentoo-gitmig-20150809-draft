@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.31 2007/02/22 02:30:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.32 2007/06/16 14:28:18 drac Exp $
+
+*swh-plugins-0.4.15 (16 Jun 2007)
+
+  16 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  -files/swh-plugins-0.4.3-compile.patch,
+  -files/swh-plugins-0.4.3-ppc.patch, -files/swh-plugins-quickfixes.patch,
+  -swh-plugins-0.4.11.ebuild, -swh-plugins-0.4.13.ebuild,
+  +swh-plugins-0.4.15.ebuild:
+  Version bump for bug 181185.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
