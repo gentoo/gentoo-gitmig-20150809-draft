@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80_rc1.ebuild,v 1.1 2007/06/12 02:59:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80_rc1.ebuild,v 1.2 2007/06/16 08:42:08 drac Exp $
 
 inherit eutils autotools versionator
 
@@ -83,9 +83,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" docdir="${D}/usr/share/doc/${PF}" install \
 		|| die "make install failed"
-
-	make_desktop_entry ${PN} "Alsaplayer" ${PN} \
-		"AudioVideo;Audio;Player"
 
 	dodoc AUTHORS ChangeLog README TODO
 	dodoc docs/wishlist.txt
