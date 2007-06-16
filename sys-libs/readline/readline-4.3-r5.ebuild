@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.27 2007/01/13 19:36:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.28 2007/06/16 07:06:47 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 # Official patches
 PLEVEL="x001 x002 x003 x004 x005"
