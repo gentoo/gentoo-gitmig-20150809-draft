@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r6.ebuild,v 1.2 2007/01/24 14:58:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r6.ebuild,v 1.3 2007/06/16 07:08:19 vapier Exp $
 
-inherit flag-o-matic ccc eutils
+inherit flag-o-matic ccc eutils toolchain-funcs
 
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.sparc.spb.su/solaris/skey/"
