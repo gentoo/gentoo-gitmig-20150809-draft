@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>emacs</herd>
-	<maintainer>
-		<email>seemant@gentoo.org</email>
-		<name>Seemant Kulleen</name>
-	</maintainer>
 </pkgmetadata>
