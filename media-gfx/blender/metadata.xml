@@ -5,10 +5,6 @@
 
 	<herd>graphics</herd>
 
-	<maintainer>
-		<email>malverian@gentoo.org</email>
-		<name>Philip Walls</name>
-	</maintainer>
 
 	<maintainer>
 		<email>lu_zero@gentoo.org</email>
