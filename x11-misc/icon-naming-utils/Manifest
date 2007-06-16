@@ -1,9 +1,4 @@
-DIST icon-naming-utils-0.8.1.tar.gz 63132 RMD160 f023b4d5d003b69c79dcfcef249fff5a5e193f35 SHA1 0e69f29f294de6d84dd0f1dff3824510cdcde06f SHA256 d0e92792954160afa7c137068548804dcd76321b883dcc78967a937e07ffd4d8
 DIST icon-naming-utils-0.8.2.tar.gz 66393 RMD160 8fc999afcc5d50d47282272ef858403bc3e36251 SHA1 b69e6fd89d7ccdc4dfe335a78e7bd8fd34cde019 SHA256 87fe398d5f4853400afb6afbb41835db3cde954845369e406d739d66b3058056
-EBUILD icon-naming-utils-0.8.1.ebuild 776 RMD160 4b62f3f7203df894610d8f8c35ad7b6271ffbd2b SHA1 de1d337ab65bc83522e889dfe6b48657a32e5246 SHA256 e0d93eea440dd092f69bc8b8f4a60deb73b779797bfc800838ec6b541cb40e9d
-MD5 5a161b39bc500af7b7432fc2f8566ce6 icon-naming-utils-0.8.1.ebuild 776
-RMD160 4b62f3f7203df894610d8f8c35ad7b6271ffbd2b icon-naming-utils-0.8.1.ebuild 776
-SHA256 e0d93eea440dd092f69bc8b8f4a60deb73b779797bfc800838ec6b541cb40e9d icon-naming-utils-0.8.1.ebuild 776
 EBUILD icon-naming-utils-0.8.2.ebuild 809 RMD160 6d250c5495eaf907bcbdb9d7202051797cd44799 SHA1 c2819b00a6f54a1c2243613205776538064fed9e SHA256 e1ff47650bf8f98d3b601cafdc55d42a7f909b95b476c1b40a06fb4b10f15635
 MD5 1cff353c2004e41ebf41188826c781c8 icon-naming-utils-0.8.2.ebuild 809
 RMD160 6d250c5495eaf907bcbdb9d7202051797cd44799 icon-naming-utils-0.8.2.ebuild 809
@@ -16,9 +11,6 @@ MISC metadata.xml 292 RMD160 d7b7e392ab66db5f5de20f64ef160ec568ff9116 SHA1 8fb6e
 MD5 635e35abfc7eb9b1e9ff08c8e3cb58cc metadata.xml 292
 RMD160 d7b7e392ab66db5f5de20f64ef160ec568ff9116 metadata.xml 292
 SHA256 cc7269e67766389989322d16941a59b398b90e46c0a302b18a547e6549563754 metadata.xml 292
-MD5 4a1ac2327277d3bb50bcf7988cce6615 files/digest-icon-naming-utils-0.8.1 268
-RMD160 ce2415246266e9e1d65b2f10bca39884a8a842bd files/digest-icon-naming-utils-0.8.1 268
-SHA256 b1ec653fe72ccb84a52e253b7f5de48952f82467a73d1c89077a80e74f1b5099 files/digest-icon-naming-utils-0.8.1 268
 MD5 acdf894fc346c9810c111e27870754cf files/digest-icon-naming-utils-0.8.2 268
 RMD160 60d0c21bd1ab8755fe16815fc5fa8a1d6d23c3e9 files/digest-icon-naming-utils-0.8.2 268
 SHA256 fc7de4daf2b93eba5713f1f36cda49e4342f5335b499e7ec88bc69a61399b5eb files/digest-icon-naming-utils-0.8.2 268
