@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.6 2007/05/21 22:46:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.7 2007/06/16 08:53:20 cedk Exp $
+
+  16 Jun 2007; Cédric Krier <cedk@gentoo.org> libnfnetlink-0.0.25.ebuild:
+  Improve error message for bug #180789
 
   21 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libnfnetlink-0.0.25.ebuild:
