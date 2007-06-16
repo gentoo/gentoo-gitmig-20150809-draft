@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.3 2007/03/09 08:19:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.4 2007/06/16 04:29:48 drac Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ DEPEND="${RDEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${PN}-2.06-configure.patch
-	epatch ${FILESDIR}/${PN}-2.06-Make.include.in.patch
+	epatch "${FILESDIR}"/${PN}-2.06-configure.patch
+	epatch "${FILESDIR}"/${PN}-2.06-Make.include.in.patch
 }
 
 src_compile() {
@@ -35,6 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc README TODO
 }
