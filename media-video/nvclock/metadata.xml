@@ -3,10 +3,6 @@
 
 <pkgmetadata>
 <herd>no-herd</herd>
-	<maintainer>
-		<email>malverian@gentoo.org</email>
-		<name>Philip Walls</name>
-	</maintainer>
 
 	<longdescription>A utility for overclocking NVidia based video cards</longdescription>
 </pkgmetadata>
