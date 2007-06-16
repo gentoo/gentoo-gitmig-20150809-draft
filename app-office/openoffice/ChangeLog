@@ -1,6 +1,20 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.329 2007/06/16 12:00:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.330 2007/06/16 13:24:25 suka Exp $
+
+  16 Jun 2007; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.1.0/detect-db4.5.diff, -files/2.1.0/disable-regcomp-python.diff,
+  -files/2.1.0/ooo-wrapper.in, -files/2.1.0/gentoo-2.1.0.diff,
+  -files/2.1.0/regcompapply.diff,
+  -files/2.1.0/ooo-build-2.1.6-hyperlinks-quotes.diff,
+  -files/2.1.0/wrapper-readd.diff,
+  -files/2.1.0/ooo-build-2.1.6-starcalc-file-format-parser-2.2.diff,
+  -files/2.2.0/disable-regcomp-java.diff,
+  -files/2.1.0/disable-regcomp-java.diff,
+  -files/2.2.0/disable-regcomp-python.diff, -files/2.2.0/ooo-env_log.diff,
+  -files/2.2.0/gentoo-2.2.0.diff, -files/2.2.0/regcompapply.diff,
+  -openoffice-2.1.0-r1.ebuild, -openoffice-2.2.0.ebuild:
+  Remove vulnerable ebuilds for security bug #181921
 
   16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   openoffice-2.2.1.ebuild:
