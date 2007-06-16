@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX microcode_ctl.conf.d 210 RMD160 0c261a3d2e806ddc3b2ac34b27fccada6574e1db SHA1 38d6d7ce1f837346bcb3c5f1d1e35f4a917341e5 SHA256 4297faf0863cd7dd952c666641d67eac196a8521ff17ab95574f299df71758bd
 MD5 6458858fff894d2d77aae536c697ebf5 files/microcode_ctl.conf.d 210
 RMD160 0c261a3d2e806ddc3b2ac34b27fccada6574e1db files/microcode_ctl.conf.d 210
@@ -6,13 +9,8 @@ AUX microcode_ctl.rc 761 RMD160 a83d77d1a13fb1dca7cd38990eddd1f40c3b74f0 SHA1 0f
 MD5 44cffc4c0ce1036aa22076db246dbd14 files/microcode_ctl.rc 761
 RMD160 a83d77d1a13fb1dca7cd38990eddd1f40c3b74f0 files/microcode_ctl.rc 761
 SHA256 c9589225863d44c9fd3b382764138cc5e57a775e40a27055af85f1f98605ddf9 files/microcode_ctl.rc 761
-DIST microcode_ctl-1.15.tar.gz 281325 RMD160 65ba46c8de2b90a0745db5dcb7165e932d0dbf3f SHA1 0d4314d96e4ea843a00fd40109e4e894b30a8de4 SHA256 46bceb8b7d96fc645f980780ff3526f3bc63e5b18e4bb0d9326d4840b64a6f81
 DIST microcode_ctl-1.16.tar.gz 318239 RMD160 52263a54a6ba1c8a5937bd03b3c9262e7baee3a6 SHA1 ce97133a68a380dd48221ee47ac8f04b51a95f69 SHA256 bbfdc69e0f599ff655c79b1e652bce4cb167940f660b9c3b1d57a04caa0f65e1
 DIST microcode_ctl-1.17.tar.gz 326921 RMD160 d5dba99ed89365fef51f9493a10fbb02bd1fb94a SHA1 3c32cf0b3658018a4d0de203aebdb96dce6f68d6 SHA256 41ef081c3a2649ca012714a3e2034d748612b1a8f007aa275f395f81cb230bb7
-EBUILD microcode-ctl-1.15.ebuild 1168 RMD160 36a8607140e817dcca8c82c659b301d8031bb92e SHA1 78ce4a2a891b08a9eaf3928d3a649ea199f5a7fc SHA256 fdb6dcecc3b65168733c09a5fbc2cbe811055ecd9e9724bf597b19646147edd0
-MD5 fc07e490e15b7047fbcdc98dbfa5adf0 microcode-ctl-1.15.ebuild 1168
-RMD160 36a8607140e817dcca8c82c659b301d8031bb92e microcode-ctl-1.15.ebuild 1168
-SHA256 fdb6dcecc3b65168733c09a5fbc2cbe811055ecd9e9724bf597b19646147edd0 microcode-ctl-1.15.ebuild 1168
 EBUILD microcode-ctl-1.16.ebuild 1112 RMD160 868c62d5d5d02295aa534e8673bf507eaf4208ca SHA1 0596021c66e8fac7bb5a67b26e378feaf1c8acb7 SHA256 22e21f916c6859fb6e0dffdc5f38cb2ee7234b5ffb321f39ee4b094e473bc699
 MD5 7a2b89ba6851d21816d4f5c97d2b640f microcode-ctl-1.16.ebuild 1112
 RMD160 868c62d5d5d02295aa534e8673bf507eaf4208ca microcode-ctl-1.16.ebuild 1112
@@ -29,12 +27,16 @@ MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 709f06f6817b5a304e23c9e9e24490b7 files/digest-microcode-ctl-1.15 256
-RMD160 28561ff700f4f82ba4349a5dddca82cf70181813 files/digest-microcode-ctl-1.15 256
-SHA256 0e13861d27a5adba30248d1ce688a55e824fa44367ef9c86468f1c6ccec5ea69 files/digest-microcode-ctl-1.15 256
 MD5 9a6733c152c0dc51f9c37310294a5a53 files/digest-microcode-ctl-1.16 256
 RMD160 cfeb74b4d78515789ef7af5e1e7ccbf49ae04065 files/digest-microcode-ctl-1.16 256
 SHA256 dd734cd7b43361643de7d7abe45d22c64269293995d8fc31553c84976de752ee files/digest-microcode-ctl-1.16 256
 MD5 06cf5bf89b5908229ade3a74e74e8070 files/digest-microcode-ctl-1.17 256
 RMD160 205204c71c141c85cb046d0c87dab11e8a14e273 files/digest-microcode-ctl-1.17 256
 SHA256 58675285856cba8d5ef4e9b998ba0a66c428c4f973199e9b0d0df31722a92c69 files/digest-microcode-ctl-1.17 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGdFcP8bi6rjpTunYRAhxaAKCwBoOWT1FooM8PJT/Ga3FCFEA8AwCfdAnM
+ZADpwlnyIQfcIqDosM7Yxyw=
+=LcoG
+-----END PGP SIGNATURE-----
