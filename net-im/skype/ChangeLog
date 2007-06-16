@@ -1,6 +1,11 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.72 2007/05/24 09:51:21 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.73 2007/06/16 15:31:20 humpback Exp $
+
+*skype-1.4.0.74 (16 Jun 2007)
+
+  16 Jun 2007; <humpback@gentoo.org> +skype-1.4.0.74.ebuild:
+  Added new release.
 
   24 May 2007; Timothy Redaelli <drizzt@gentoo.org> -files/99skype,
   skype-1.4.0.64_alpha.ebuild:

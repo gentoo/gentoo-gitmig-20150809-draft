@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.64_alpha.ebuild,v 1.3 2007/05/24 09:51:21 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.74.ebuild,v 1.1 2007/06/16 15:31:20 humpback Exp $
 
 inherit eutils qt4
 
@@ -9,12 +9,15 @@ RESTRICT="mirror strip"
 AVATARV="1.0"
 DESCRIPTION="${PN} is a P2P-VoiceIP client."
 MY_PN=${PN}
-MY_PV=${PV%_alpha}
+MY_PV=${PV}
 HOMEPAGE="http://www.skype.com/"
+
+SFILENAME=${MY_PN}-${MY_PV}-static.tar.bz2
+DFILENAME=${MY_PN}-${MY_PV}.bz2
 SRC_URI="
-		!static? ( http://download.skype.com/linux/${MY_PN}-alpha-${MY_PV}-generic.tar.bz2 )
+		!static? ( http://download.skype.com/linux/${DFILENAME} )
 		static? (
-		http://download.skype.com/linux/${MY_PN}-alpha_staticQT-${MY_PV}-generic.tar.bz2 )
+		http://download.skype.com/linux/${SFILENAME} )
 		amd64? ( http://felisberto.net/~humpback/libsigc++20-2.0.17-1-from-fc5.rf.i386.tar.gz )"
 
 LICENSE="skype-eula"
@@ -44,19 +47,21 @@ pkg_setup() {
 		die "There is no pre-built qt4 for amd64. Please turn the static flag on"
 	fi
 
-	if ! use static && ! built_with_use ">=x11-libs/qt-4.0" accessibility;
-	then
-		eerror "Rebuild qt-4 with USE=accessibility or try again with USE=static"
-		die "USE=-static only works with qt-4 built with USE=accessibility."
-	fi
+#	if ! use static && ! built_with_use ">=x11-libs/qt-4.0" accessibility;
+#	then
+#		eerror "Rebuild qt-4 with USE=accessibility or try again with USE=static"
+#		die "USE=-static only works with qt-4 built with USE=accessibility."
+#	fi
 }
 
 src_unpack() {
 	if use static;
 	then
-		unpack ${MY_PN}-alpha_staticQT-${MY_PV}-generic.tar.bz2
+		unpack ${SFILENAME}
 	else
-		unpack ${MY_PN}-alpha-${MY_PV}-generic.tar.bz2
+		unpack ${DFILENAME}
+		#Hack around bug in filename
+		tar xf skype-1.4.0.74
 	fi
 	if use amd64;
 	then
