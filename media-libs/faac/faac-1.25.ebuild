@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.25.ebuild,v 1.2 2007/03/25 13:18:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.25.ebuild,v 1.3 2007/06/16 14:09:21 flameeyes Exp $
 
-inherit libtool eutils autotools
+inherit libtool eutils autotools flag-o-matic
 
 DESCRIPTION="Free MPEG-4 audio codecs by AudioCoding.com"
 HOMEPAGE="http://www.audiocoding.com/"
@@ -29,6 +29,13 @@ src_unpack() {
 	eautoreconf
 	elibtoolize
 	epunt_cxx
+}
+
+src_compile() {
+	filter-flags -ftree-vectorize
+
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
