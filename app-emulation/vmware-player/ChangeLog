@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.33 2007/04/28 09:55:51 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.34 2007/06/16 12:57:54 ikelos Exp $
+
+*vmware-player-1.0.3.34682-r1 (16 Jun 2007)
+
+  16 Jun 2007; Mike Auty <ikelos@gentoo.org>
+  -files/1.0.1.19317/000_all_initd-location.patch,
+  -files/1.0.1.19317/002_all_pagebreak-detection-fix.patch,
+  +files/1.0.3.34682/000_all_initd-location.patch,
+  -files/1.0.1.19317/001_all_fix-permissions.patch,
+  -files/1.0.1.19317/004_all_do-not-build-modules.patch,
+  -files/1.0.1.19317/007_all_use-modprobe-over-insmod.patch,
+  -files/1.0.1.19317/009_all_init.d-modules-warning.patch,
+  +files/1.0.3.34682/001_all_fix-permissions.patch,
+  +files/1.0.3.34682/002_all_pagebreak-detection-fix.patch,
+  +files/1.0.3.34682/004_all_do-not-build-modules.patch,
+  +files/1.0.3.34682/007_all_use-modprobe-over-insmod.patch,
+  +files/1.0.3.34682/009_all_init.d-modules-warning.patch,
+  -vmware-player-1.0.3.34682.ebuild, +vmware-player-1.0.3.34682-r1.ebuild:
+  Version bump to fix missing patchset, bug 175778.
 
   28 Apr 2007; Mike Auty <ikelos@gentoo.org> files/vmware-player.rc:
   Redigest for vmware-any-any109, and fix rc file for baselayout-2.

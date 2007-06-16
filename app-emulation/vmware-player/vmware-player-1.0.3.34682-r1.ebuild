@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.3.34682.ebuild,v 1.1 2006/12/14 18:38:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.3.34682-r1.ebuild,v 1.1 2007/06/16 12:57:54 ikelos Exp $
 
 inherit eutils vmware
 
