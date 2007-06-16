@@ -1,40 +1,93 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.18 2007/01/04 23:11:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.19 2007/06/16 21:59:33 dirtyepic Exp $
 
-# Author Diego Pettenò <flameeyes@gentoo.org>
-# Maintained by wxwidgets herd
+# Original author:  Diego Pettenò <flameeyes@gentoo.org>
+# Rewritten by:     Ryan Hill <dirtyepic@gentoo.org>
+#
+# Currently maintained by the wxWidgets team <wxwindows@gentoo.org>
 
-# This eclass is used by wxlib-based packages (wxGTK, wxMotif, wxBase, wxMac) to share code between
-# them.
+# This eclass contains build logic and helper functions for wxWidgets ebuilds
+# (currently only wxGTK).
 
-inherit flag-o-matic eutils multilib toolchain-funcs
+inherit eutils flag-o-matic
 
-IUSE="debug doc odbc unicode"
+IUSE="debug unicode"
 
-LICENSE="wxWinLL-3"
+build_wx() {
+	local build_wx_conf
 
-# Note 1: Gettext is not runtime dependency even if nls? because wxWidgets
-#         has its own implementation of it
-# Note 2: PCX support is enabled if the correct libraries are detected.
-#         There is no USE flag for this.
+	case "$1" in
+		ansi)
+			build_wx_conf="${build_wx_conf}
+			--disable-unicode
+			--disable-debug
+			--disable-debug_gdb"
+		;;
 
-DEPEND="${RDEPEND}
-	sys-libs/zlib
-	sys-apps/sed"
+		ansi-debug)
+			build_wx_conf="${build_wx_conf}
+			--disable-unicode
+			--enable-debug
+			--enable-debug_gdb"
+		;;
 
-HOMEPAGE="http://www.wxwidgets.org"
-SRC_URI="mirror://sourceforge/wxwindows/wxWidgets-${PV}.tar.bz2
-	doc? ( mirror://sourceforge/wxwindows/wxWidgets-${PV}-HTML.tar.gz )"
-S=${WORKDIR}/wxWidgets-${PV}
+		unicode)
+			build_wx_conf="${build_wx_conf}
+			--enable-unicode
+			--disable-debug
+			--disable-debug_gdb"
+		;;
 
+		unicode-debug)
+			build_wx_conf="${build_wx_conf}
+			--enable-unicode
+			--enable-debug
+			--enable-debug_gdb"
+		;;
 
-# Configure a build.
-# It takes three parameters;
-# $1: prefix for the build directory (used for wxGTK which has two
-#     builds needed.
-# $2: "unicode" if it must be build with else ""
-# $3: all the extra parameters to pass to configure script
+		*)
+			eerror "wxlib.class: build_wx called with invalid argument(s)."
+			die "wxlib.class: build_wx called with invalid argument(s)."
+		;;
+	esac
+
+	mkdir -p build_$1
+	cd build_$1
+
+	ECONF_SOURCE="${S}" \
+		econf ${myconf} ${build_wx_conf} || die "Failed to configure $1."
+
+	emake || die "Failed to make $1."
+
+	if [[ -e contrib/src ]]; then
+		cd contrib/src
+		emake || die "Failed to make $1 contrib."
+	fi
+
+	cd "${S}"
+}
+
+install_wx() {
+	if [[ -d build_$1 ]]; then
+		cd build_$1
+		emake DESTDIR="${D}" install || die "Failed to install $1."
+		if [[ -e contrib/src ]]; then
+			cd contrib/src
+			emake DESTDIR="${D}" install || die "Failed to install $1 contrib."
+		fi
+	else
+		eerror "wxlib.eclass: install_wx called with invalid argument(s)."
+		die "wxlib.class: build_wx called with invalid argument(s)."
+	fi
+
+	cd "${S}"
+}
+
+### Stuff below this line is only here for backwards compatibility
+### ie. ebuilds using the old eclasses functions
+### DO NOT USE THESE FUNCTIONS
+
 configure_build() {
 	export LANG='C'
 
@@ -61,10 +114,6 @@ configure_build() {
 	fi
 }
 
-# This is a commodity function which calls configure script
-# with the default parameters plus extra parameters. It's used
-# as building the unicode version required redoing it.
-# It takes all the params and passes them to the script
 subconfigure() {
 	ECONF_SOURCE="${S}" \
 		econf \
@@ -74,9 +123,6 @@ subconfigure() {
 			$* || die "./configure failed"
 }
 
-# Installs a build
-# It takes only a parameter: the prefix for the build directory
-# see configure_build function
 install_build() {
 	cd ${S}/$1_build
 	einstall libdir="${D}/usr/$(get_libdir)" || die "Install failed"
@@ -92,7 +138,6 @@ install_build() {
 	fi
 }
 
-# To be called at the end of src_install to perform common cleanup tasks
 wxlib_src_install() {
 
 	cp ${D}/usr/bin/wx-config ${D}/usr/bin/wx-config-2.6 || die "Failed to cp wx-config"
@@ -118,7 +163,3 @@ wxlib_src_install() {
 	fi
 
 }
-
-
-EXPORT_FUNCTIONS src_install
-
