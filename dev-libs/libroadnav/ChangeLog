@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libroadnav
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.4 2007/05/31 01:55:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.5 2007/06/16 00:57:11 dirtyepic Exp $
+
+  16 Jun 2007; Ryan Hill <dirtyepic@gentoo.org> libroadnav-0.16.ebuild:
+  Use wxwidgets.eclass, bug #175632.
 
   31 May 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove myself as I'm retiring.
