@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-4.0.ebuild,v 1.2 2007/04/22 18:47:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-4.0.ebuild,v 1.3 2007/06/16 19:56:51 ulm Exp $
 
 inherit elisp
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc-macos ~amd64"
 IUSE=""
+RESTRICT="test"
 
 SITEFILE=51${PN}-gentoo.el
 
