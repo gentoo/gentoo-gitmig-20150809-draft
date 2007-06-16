@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.70 2007/06/16 20:05:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.71 2007/06/16 22:55:35 fmccor Exp $
+
+  16 Jun 2007; Ferris McCormick <fmccor@gentoo.org> pysqlite-2.3.3.ebuild:
+  Sparc stable --- Bug #182244 --- Runs tests and installs fine.
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org> pysqlite-2.3.3.ebuild:
   Stable on amd64 wrt bug 182244
