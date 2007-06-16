@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r1.ebuild,v 1.1 2005/05/17 22:53:22 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r1.ebuild,v 1.2 2007/06/16 12:00:35 flameeyes Exp $
 
 inherit eutils
 
@@ -23,6 +23,15 @@ DEPEND=">=x11-libs/fltk-1.1.2
 #	portaudio? ( media-libs/portaudio )"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ZynAddSubFx with ALSA support you need"
+		eerror "to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2 || die
