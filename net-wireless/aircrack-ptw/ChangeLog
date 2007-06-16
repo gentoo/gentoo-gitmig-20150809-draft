@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/aircrack-ptw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ptw/ChangeLog,v 1.1 2007/04/06 21:02:37 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ptw/ChangeLog,v 1.2 2007/06/16 18:43:15 dertobi123 Exp $
+
+  16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  aircrack-ptw-1.0.0.ebuild:
+  Added ~ppc, bug #175380
 
   06 Apr 2007; Lars Weiler <pylon@gentoo.org> ChangeLog:
   Improved WLAN tool for breaking 802.11 WEP keys
