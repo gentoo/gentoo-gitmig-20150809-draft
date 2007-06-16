@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.15 2007/05/29 21:43:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.16 2007/06/16 13:23:32 dertobi123 Exp $
+
+  16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnuserv-3.12.7-r1.ebuild:
+  Added ~ppc, bug #180292
 
 *gnuserv-3.12.7-r1 (29 May 2007)
 
