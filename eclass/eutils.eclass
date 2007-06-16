@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.281 2007/06/05 15:59:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.282 2007/06/16 07:11:43 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -37,54 +37,6 @@ ebeep() {
 		done
 	fi
 }
-
-# This function generate linker scripts in /usr/lib for dynamic
-# libs in /lib.	 This is to fix linking problems when you have
-# the .so in /lib, and the .a in /usr/lib.	What happens is that
-# in some cases when linking dynamic, the .a in /usr/lib is used
-# instead of the .so in /lib due to gcc/libtool tweaking ld's
-# library search path.	This cause many builds to fail.
-# See bug #4411 for more info.
-#
-# To use, simply call:
-#
-#	gen_usr_ldscript libfoo.so
-#
-# Note that you should in general use the unversioned name of
-# the library, as ldconfig should usually update it correctly
-# to point to the latest version of the library present.
-#
-# <azarah@gentoo.org> (26 Oct 2002)
-#
-gen_usr_ldscript() {
-	if [[ $(type -t _tc_gen_usr_ldscript) == "function" ]] ; then
-		_tc_gen_usr_ldscript "$@"
-		return $?
-	fi
-
-	ewarn "QA Notice: Please upgrade your ebuild to use toolchain-funcs"
-	ewarn "QA Notice:  rather than gen_usr_ldscript() from eutils"
-
-	local lib libdir=$(get_libdir)
-	# Just make sure it exists
-	dodir /usr/${libdir}
-
-	for lib in "${@}" ; do
-		cat > "${D}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
-		/* GNU ld script
-		   Since Gentoo has critical dynamic libraries
-		   in /lib, and the static versions in /usr/lib,
-		   we need to have a "fake" dynamic lib in /usr/lib,
-		   otherwise we run into linking problems.
-
-		   See bug http://bugs.gentoo.org/4411 for more info.
-		 */
-		GROUP ( /${libdir}/${lib} )
-		END_LDSCRIPT
-		fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
-	done
-}
-
 
 # Default directory where patches are located
 EPATCH_SOURCE="${WORKDIR}/patch"
