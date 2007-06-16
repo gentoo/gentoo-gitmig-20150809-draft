@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-4.0.ebuild,v 1.3 2007/06/16 19:56:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-4.0.ebuild,v 1.4 2007/06/16 20:14:54 dertobi123 Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.iro.umontreal.ca/~monnier/elisp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc-macos ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~x86"
 IUSE=""
 RESTRICT="test"
 
