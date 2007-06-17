@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2867 2007/06/17 10:20:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2868 2007/06/17 11:45:47 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -813,6 +813,14 @@ mail-filter/dspam:user-homedirs - Build with user homedir support
 mail-filter/dspam:virtual-users - Build with virtual-users support
 mail-filter/maildrop:authlib - Add courier-authlib suport
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
+mail-filter/simscan:attachment - Enable attachment scanning
+mail-filter/simscan:dropmsg - Drop messages in case of virus/spam
+mail-filter/simscan:passthru - Passthru messages in case of virus/spam
+mail-filter/simscan:per-domain - Enable support for per-domain settings
+mail-filter/simscan:quarantine - Enable quarantine support
+mail-filter/simscan:regex - Enable regular expression matching
+mail-filter/simscan:received - Add Received: line to mail headers
+mail-filter/simscan:spamassassin - Use spamassassin for spam checking
 mail-filter/spamassassin-fuzzyocr:amavis - Enable support for amavis
 mail-filter/spamassassin-fuzzyocr:gocr - Enable support for the gocr OCR engine
 mail-filter/spamassassin-fuzzyocr:logrotate - Install support files for logrotate
