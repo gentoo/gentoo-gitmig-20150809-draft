@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.20 2007/06/17 11:38:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.21 2007/06/17 12:05:04 dertobi123 Exp $
+
+  17 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  kanatest-0.4.2.ebuild:
+  ppc stable, bug #181640
 
   17 Jun 2007; Raúl Porcel <armin76@gentoo.org> kanatest-0.4.2.ebuild:
   x86 stable wrt #181640
