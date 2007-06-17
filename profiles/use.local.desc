@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2864 2007/06/16 13:49:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2865 2007/06/17 02:06:07 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1730,7 +1730,6 @@ sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
-sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
 sys-apps/paludis:contrarius - Build the contrarius client, for building cross toolchains.
 sys-apps/paludis:cran - Enable CRAN repository support.
 sys-apps/paludis:glsa - Enable parsing of GLSA files

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.356 2007/06/17 00:41:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.357 2007/06/17 02:06:07 vapier Exp $
 
 # Keep them sorted
 
@@ -240,6 +240,7 @@ odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
+old-linux - Add support for linux-2.4 and older
 openal - Adds support for the Open Audio Library
 openexr - Support for the OpenEXR graphics file format
 opengl - Adds support for OpenGL (3D graphics)
