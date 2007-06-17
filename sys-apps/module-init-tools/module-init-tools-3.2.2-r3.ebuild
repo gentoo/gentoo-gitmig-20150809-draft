@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r3.ebuild,v 1.2 2007/06/10 00:49:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r3.ebuild,v 1.3 2007/06/17 02:06:27 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -11,12 +11,12 @@ DESCRIPTION="Kernel module tools for the 2.6 kernel"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MY_P}.tar.bz2
 	mirror://kernel/linux/kernel/people/rusty/modules/old/${MY_P}.tar.bz2
-	!no-old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )"
+	old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="no-old-linux"
+IUSE="old-linux"
 # The test code runs `make clean && configure` and screws up src_compile()
 RESTRICT="test"
 
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Patches for old modutils
-	if ! use no-old-linux ; then
+	if use old-linux ; then
 		cd "${WORKDIR}"/modutils-${MODUTILS_PV}
 		epatch "${FILESDIR}"/modutils-2.4.27-alias.patch
 		epatch "${FILESDIR}"/modutils-2.4.27-gcc.patch
@@ -74,7 +74,7 @@ src_compile() {
 	export BUILDCFLAGS=-pipe
 	export BUILDCC="$(tc-getBUILD_CC)"
 
-	if ! use no-old-linux ; then
+	if use old-linux ; then
 		einfo "Building modutils ..."
 		cd "${WORKDIR}"/modutils-${MODUTILS_PV}
 		econf \
@@ -137,7 +137,7 @@ modutils_src_install() {
 }
 
 src_install() {
-	use no-old-linux || modutils_src_install
+	use old-linux && modutils_src_install
 
 	cd "${S}"
 	emake install DESTDIR="${D}" || die
@@ -145,7 +145,7 @@ src_install() {
 
 	# Install compat symlink
 	dosym ../bin/lsmod /sbin/lsmod
-	use no-old-linux || dosym ../sbin/insmod.old /bin/lsmod.old
+	use old-linux && dosym ../sbin/insmod.old /bin/lsmod.old
 	# Install the modules.conf2modprobe.conf tool, so we can update
 	# modprobe.conf.
 	into /
