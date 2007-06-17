@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.18 2007/06/17 11:15:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.19 2007/06/17 13:27:12 hollow Exp $
+
+  17 Jun 2007; Benedikt Böhm <hollow@gentoo.org> qmail-ldap-1.03-r6.ebuild:
+  enabled controldb unconditionally (doesn't compile otherwise, and falls back
+  anyway)
 
   17 Jun 2007; Benedikt Böhm <hollow@gentoo.org> qmail-ldap-1.03-r6.ebuild:
   install qmailControl.schema if controldb is in USE

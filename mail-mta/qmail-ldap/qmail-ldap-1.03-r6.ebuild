@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.2 2007/06/17 11:15:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.3 2007/06/17 13:27:12 hollow Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -25,7 +25,7 @@ SRC_URI="
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cluster controldb gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
+IUSE="cluster gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -97,13 +97,12 @@ src_unpack() {
 	local INCLUDES="-I/usr/include"
 	local LDAPLIBS="-L/usr/lib -lldap -llber"
 	local LDAPFLAGS="-DALTQUEUE -DEXTERNAL_TODO -DDASH_EXT -DSMTPEXECCHECK"
-	local SECUREBIND= CONTROLDB= RFCFLAGS=
+	local CONTROLDB="-DUSE_CONTROLDB -DQLDAP_BAILOUT"
+	local SECUREBIND= RFCFLAGS=
 
 	use cluster    && LDAPFLAGS="${LDAPFLAGS} -DQLDAP_CLUSTER"
 	use highvolume && LDAPFLAGS="${LDAPFLAGS} -DBIGTODO"
 	use zlib       && LDAPFLAGS="${LDAPFLAGS} -DDATA_COMPRESS -D QMQP_COMPRESS"
-
-	use controldb  && CONTROLDB="-DUSE_CONTROLDB -DQLDAP_BAILOUT"
 
 	use rfc2307    && RFCFLAGS="${RFCFLAGS} -DRFC2307"
 	use rfc822     && RFCFLAGS="${RFCFLAGS} -DRFC822"
