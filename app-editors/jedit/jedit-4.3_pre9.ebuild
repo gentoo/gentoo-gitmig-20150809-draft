@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.2 2007/05/29 09:21:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.3 2007/06/17 10:48:19 betelgeuse Exp $
+
+WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -23,7 +25,6 @@ DEPEND=">=virtual/jdk-1.5
 		>=app-text/docbook-xsl-stylesheets-1.65.1
 		dev-libs/libxslt
 	)
-	>=dev-java/ant-1.5.4
 	=dev-java/gnu-regexp-1*"
 
 S="${WORKDIR}/jEdit"
