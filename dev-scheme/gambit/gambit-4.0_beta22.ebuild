@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.4 2007/05/11 16:08:45 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.5 2007/06/17 12:19:46 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -95,7 +95,7 @@ src_install() {
 	dosym gsc-gambit usr/bin/gambit-compiler
 	dosym gsi usr/bin/gambit-interpreter
 
-	# automatically load syntx-case for r5rs+ goodness
+	# automatically load syntax-case for r5rs+ goodness
 	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/\"" > ${D}/etc/env.d/50gambit
 	echo "(load \"/usr/$(get_libdir)/syntax-case\")" > ${D}/usr/gambcext
 }
