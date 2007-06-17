@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.5 2007/06/17 12:19:46 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.6 2007/06/17 17:09:52 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -30,7 +30,7 @@ pkg_setup() {
 		ewarn "approximately 0.5GB ram will be needed"
 		ewarn "if you experience thrashing, try disabling parallel building"
 		# need this much memory in MBytes (does *not* check swap)
-		CHECKREQS_MEMORY="768"check_reqs
+		CHECKREQS_MEMORY="768" check_reqs
 	else
 		ewarn "using gcc specific optimizations and compiling syntax-case macro system"
 		ewarn "this will cause approximately 2GB ram to be used instead of 0.5GB."
