@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.29 2007/05/15 14:03:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.30 2007/06/17 14:04:01 angelos Exp $
+
+  17 Jun 2007; Christoph Mende <angelos@gentoo.org> yafc-1.1.1-r1.ebuild:
+  Stable on amd64 wrt bug 173646
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
