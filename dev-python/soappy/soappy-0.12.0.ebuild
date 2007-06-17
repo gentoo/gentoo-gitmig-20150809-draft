@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.0.ebuild,v 1.4 2007/04/08 11:05:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.0.ebuild,v 1.5 2007/06/17 15:03:13 armin76 Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="SOAP implementation for Python"
 HOMEPAGE="http://pywebsvcs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pywebsvcs/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="BSD"
 IUSE="examples ssl"
