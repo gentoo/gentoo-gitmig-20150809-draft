@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.8 2007/06/14 13:31:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.9 2007/06/17 11:20:20 armin76 Exp $
+
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.5.ebuild:
+  x86 stable wrt #181599
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> libsmi-0.4.5.ebuild:
   Stable on amd64 wrt bug 181599
