@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.33.ebuild,v 1.3 2007/06/14 20:29:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.33.ebuild,v 1.4 2007/06/17 11:46:14 opfer Exp $
 
 JAVA_PKG_IUSE="doc source examples"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.jcraft.com/jsch/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jdk-1.4
