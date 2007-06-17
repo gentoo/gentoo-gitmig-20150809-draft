@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.469 2007/06/15 21:50:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.470 2007/06/17 00:41:27 leio Exp $
+
+  17 Jun 2007; Mart Raudsepp <leio@gentoo.org> use.desc:
+  Rename wxWindows to wxWidgets in the wxwindows USE flag description for now
+  - later can think about USE flag renaming
 
   15 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   pmask dev-java/javahelp-bin and remove mask for dev-util/jcvs and
