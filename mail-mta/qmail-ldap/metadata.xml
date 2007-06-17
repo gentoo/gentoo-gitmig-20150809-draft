@@ -3,8 +3,7 @@
 <pkgmetadata>
     <herd>qmail</herd>
     <maintainer>
-        <email>robbat2@gentoo.org</email>
-        <name>Robin H. Johnson</name>
-        <description>maintainer for the standard qmail part</description>
+        <email>hollow@gentoo.org</email>
+        <name>Benedikt Böhm</name>
     </maintainer>
 </pkgmetadata>
