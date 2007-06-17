@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.470 2007/06/17 00:41:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.471 2007/06/17 13:48:33 welp Exp $
+
+  17 Jun 2007; Peter Weller <welp@gentoo.org> package.mask:
+  Masked dev-util/larch wrt bug 180577
 
   17 Jun 2007; Mart Raudsepp <leio@gentoo.org> use.desc:
   Rename wxWindows to wxWidgets in the wxwindows USE flag description for now
