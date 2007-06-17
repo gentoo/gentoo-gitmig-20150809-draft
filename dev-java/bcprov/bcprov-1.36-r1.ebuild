@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.36-r1.ebuild,v 1.7 2007/06/16 23:04:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.36-r1.ebuild,v 1.8 2007/06/17 08:46:43 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,9 +15,14 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
 
+# The src_unpack find needs a new find
+# https://bugs.gentoo.org/show_bug.cgi?id=182276
 DEPEND=">=virtual/jdk-1.4
+	userland_GNU? ( >=sys-apps/findutils-4.3 )
 	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
+
+IUSE="userland_GNU"
 
 S="${WORKDIR}/${MY_P}"
 

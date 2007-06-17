@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.18 2007/06/16 23:04:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.19 2007/06/17 08:46:43 betelgeuse Exp $
+
+  17 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> bcprov-1.36-r1.ebuild:
+  Depend on >=sys-apps/findutils-4.3 when the userland is GNU to fix bug #182276.
 
   16 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> bcprov-1.36-r1.ebuild:
   Add || die for the find in src_unpack.
