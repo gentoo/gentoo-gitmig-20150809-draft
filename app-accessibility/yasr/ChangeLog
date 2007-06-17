@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/yasr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.14 2007/02/21 19:25:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.15 2007/06/17 22:05:08 williamh Exp $
+
+*yasr-0.6.7 (17 Jun 2007)
+
+  17 Jun 2007; William Hubbs <williamh@gentoo.org> +yasr-0.6.7.ebuild:
+  Version bump and fix for #143967.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
