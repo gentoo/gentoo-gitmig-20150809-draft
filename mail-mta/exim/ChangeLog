@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.95 2007/06/16 00:52:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.96 2007/06/17 07:14:26 dertobi123 Exp $
+
+  17 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> exim-4.67-r1.ebuild:
+  Added ~ppc, bug #176487
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org> exim-4.67-r1.ebuild:
   Added ~amd64 wrt bug 176487
