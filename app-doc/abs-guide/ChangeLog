@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.37 2007/06/16 21:08:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.38 2007/06/17 01:24:07 angelos Exp $
+
+  17 Jun 2007; Christoph Mende <angelos@gentoo.org> abs-guide-4.2.ebuild:
+  Stable on amd64 wrt bug 182268
 
 *abs-guide-4.3 (16 Jun 2007)
 
