@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r1.ebuild,v 1.3 2007/06/14 14:52:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r1.ebuild,v 1.4 2007/06/17 06:17:39 mrness Exp $
 
 inherit fixheadtails eutils
 
@@ -57,7 +57,7 @@ src_install() {
 	# default configuration files
 	insinto /etc/socks
 	doins "${FILESDIR}"/sock?.conf
-	cd ${D}/etc/socks && {
+	cd "${D}/etc/socks" && {
 		use pam && epatch "${FILESDIR}/sockd.conf-with-pam.patch"
 		use tcpd && epatch "${FILESDIR}/sockd.conf-with-libwrap.patch"
 	}
