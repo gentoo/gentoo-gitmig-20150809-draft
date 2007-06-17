@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.1-r1.ebuild,v 1.1 2007/06/11 18:31:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.1-r1.ebuild,v 1.2 2007/06/17 11:26:43 eva Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A text editor for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -47,3 +47,14 @@ fi
 pkg_setup() {
 	G2CONF="$(use_enable python) $(use_enable spell)"
 }
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Remove symbols that are not meant to be part of the docs, and
+	# break compilation if USE="doc -python" (bug #158638).
+	if use !python && use doc; then
+		epatch "${FILESDIR}"/${PN}-2.16.2-no_python_module_docs.patch
+	fi
+}
+
