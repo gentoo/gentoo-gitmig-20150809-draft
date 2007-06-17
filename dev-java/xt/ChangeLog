@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.18 2007/06/17 19:40:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.19 2007/06/17 19:53:03 caster Exp $
+
+  17 Jun 2007; Vlastimil Babka <caster@gentoo.org> -xt-20020426a-r1.ebuild:
+  Remove gen-1 version.
 
   17 Jun 2007; Christoph Mende <angelos@gentoo.org> xt-20051206-r1.ebuild:
   Stable on amd64 wrt bug 180795
