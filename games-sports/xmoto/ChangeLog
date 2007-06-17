@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.14 2007/04/23 12:23:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.15 2007/06/17 21:54:13 genstef Exp $
+
+*xmoto-0.3.0 (17 Jun 2007)
+
+  17 Jun 2007; Stefan Schweizer <genstef@gentoo.org> +xmoto-0.3.0.ebuild:
+  version bump
 
   23 Apr 2007; Tristan Heaven <nyhm@gentoo.org> xmoto-0.2.7.ebuild:
   Fix collision with media-gfx/inkscape
