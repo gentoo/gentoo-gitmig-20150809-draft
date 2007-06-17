@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ecs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.20 2007/06/17 14:58:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.21 2007/06/17 15:35:48 caster Exp $
+
+  17 Jun 2007; Vlastimil Babka <caster@gentoo.org> -ecs-1.4.1-r1.ebuild,
+  -ecs-1.4.2.ebuild:
+  Remove gen-1 versions.
 
   17 Jun 2007; Christoph Mende <angelos@gentoo.org> ecs-1.4.2-r1.ebuild:
   Stable on amd64 wrt bug 180794
