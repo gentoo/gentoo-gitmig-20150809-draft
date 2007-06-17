@@ -1,0 +1,10 @@
+diff -NurpP simscan-1.1.orig/cdb/cdb_seek.c simscan-1.1/cdb/cdb_seek.c
+--- simscan-1.1.orig/cdb/cdb_seek.c	2004-10-10 17:59:53.000000000 +0200
++++ simscan-1.1/cdb/cdb_seek.c	2007-04-14 13:52:05.175047317 +0200
+@@ -1,5 +1,6 @@
+ #include <sys/types.h>
+ #include <errno.h>
++#include <stdio.h>
+ extern int errno;
+ #include "cdb.h"
+
