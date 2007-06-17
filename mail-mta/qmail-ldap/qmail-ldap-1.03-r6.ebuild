@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.3 2007/06/17 13:27:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.4 2007/06/17 15:44:40 hollow Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
 QMAIL_LDAP_PATCH=20060201
 QMAIL_SPP_PATCH=0.42
-CONTROLS_PATCH=20060401b
+CONTROLS_PATCH=20060401c
 
 DESCRIPTION="qmail -- a secure, reliable, efficient, simple message transfer agent"
 HOMEPAGE="
@@ -25,7 +25,7 @@ SRC_URI="
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cluster gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
+IUSE="cluster debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -104,8 +104,8 @@ src_unpack() {
 	use highvolume && LDAPFLAGS="${LDAPFLAGS} -DBIGTODO"
 	use zlib       && LDAPFLAGS="${LDAPFLAGS} -DDATA_COMPRESS -D QMQP_COMPRESS"
 
-	use rfc2307    && RFCFLAGS="${RFCFLAGS} -DRFC2307"
-	use rfc822     && RFCFLAGS="${RFCFLAGS} -DRFC822"
+	use rfc2307    && RFCFLAGS="${RFCFLAGS} -DUSE_RFC2307"
+	use rfc822     && RFCFLAGS="${RFCFLAGS} -DUSE_RFC822"
 
 	use ssl        && SECUREBIND="-DSECUREBIND_TLS -DSECUREBIND_SSL"
 
@@ -127,7 +127,8 @@ src_unpack() {
 	EXP="${EXP} s|^#\(MDIRMAKE=.*\)|\1|;"
 	EXP="${EXP} s|^#\(HDIRMAKE=.*\)|\1|;"
 
-	use zlib && EXP="${EXP} s|^#ZLIB=.*|ZLIB=-lz|;"
+	use debug && EXP="${EXP} s|^#\(DEBUG=.*\)|\1|;"
+	use zlib  && EXP="${EXP} s|^#ZLIB=.*|ZLIB=-lz|;"
 
 	if use ssl; then
 		EXP="${EXP} s|^#\(TLS=.*\)|\1|;"
