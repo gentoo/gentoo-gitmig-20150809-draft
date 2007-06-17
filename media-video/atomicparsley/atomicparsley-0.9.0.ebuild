@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/atomicparsley/atomicparsley-0.9.0.ebuild,v 1.2 2007/06/16 11:11:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/atomicparsley/atomicparsley-0.9.0.ebuild,v 1.3 2007/06/17 08:16:34 corsair Exp $
 
 DESCRIPTION="command line program for reading, parsing and setting iTunes-style metadata in MPEG4 files"
 HOMEPAGE="http://atomicparsley.sourceforge.net"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${my_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 DEPEND=""
 
