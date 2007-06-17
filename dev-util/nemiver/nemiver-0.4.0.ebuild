@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0.ebuild,v 1.1 2007/06/12 21:11:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0.ebuild,v 1.2 2007/06/17 08:43:27 remi Exp $
 
 inherit gnome2 eutils
 
@@ -34,12 +34,12 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 G2CONF="${G2CONF} --enable-symbolsvisibilitycontrol=no"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch "${FILESDIR}/${PN}-0.4.0-libgtop.patch"
-
-	# Prevent scrollkeeper access violations
-	gnome2_omf_fix
-}
+#src_unpack() {
+#	unpack ${A}
+#	cd ${S}
+#
+#	epatch "${FILESDIR}/${PN}-0.4.0-libgtop.patch"
+#
+#	# Prevent scrollkeeper access violations
+#	gnome2_omf_fix
+#}
