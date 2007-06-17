@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.09.00.ebuild,v 1.4 2007/05/06 04:51:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.09.00.ebuild,v 1.5 2007/06/17 10:56:46 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mwiacek.com/zips/gsm/${PN}/stable/${MY_MAJOR_VER/./_}x/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="debug bluetooth irda mysql"
 
 RDEPEND="bluetooth? ( net-wireless/bluez-libs )
