@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-2.13.ebuild,v 1.1 2007/06/17 21:56:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-2.13.ebuild,v 1.2 2007/06/17 22:07:29 drac Exp $
 
 DESCRIPTION="DVD Video Creator"
 HOMEPAGE="http://www.rastersoft.com/programas/devede.html"
@@ -19,16 +19,10 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	media-video/vcdimager
 	dev-python/psyco
 	virtual/cdrtools"
-DEPEND="${RDEPEND}
-	sys-apps/sed"
-
-src_unpack() {
-	unpack ${A}
-	sed -i -e 's:usr/local:usr:g' "${S}"/install.sh
-}
+DEPEND="${RDEPEND}"
 
 src_install() {
-	./install.sh DESTDIR="${D}" || die "install.sh failed."
+	DESTDIR="${D}" ./install.sh || die "install.sh failed."
 	rm -rf "${D}"/usr/share/doc/devede
 	use doc && dohtml docs/*
 }
