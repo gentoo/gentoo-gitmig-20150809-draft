@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.1 2007/06/17 10:24:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.2 2007/06/17 11:15:00 hollow Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -288,6 +288,7 @@ src_install() {
 	einfo "Installing OpenLDAP schema ..."
 	insinto /etc/openldap/schema
 	doins qmail.schema
+	use controldb && doins qmail-ldap-control/qmailControl.schema
 
 	einfo "Installing some stock configuration files"
 	insinto /var/qmail/control
