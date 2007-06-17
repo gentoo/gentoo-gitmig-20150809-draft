@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libxdg-basedir
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.1 2007/06/17 18:47:47 flameeyes Exp $
+
+*libxdg-basedir-0.1.3 (17 Jun 2007)
+
+  17 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +libxdg-basedir-0.1.3.ebuild:
+  Initial import of libxdg-basedir, that will be needed for xine-lib-1.2
+  series and probably new xine-ui too.
+
