@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.11.26.ebuild,v 1.1 2007/06/11 15:55:10 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.11.26.ebuild,v 1.2 2007/06/17 13:36:58 swegener Exp $
 
 inherit eutils autotools versionator toolchain-funcs elisp-common
 
@@ -51,7 +51,7 @@ DEPEND="${RDEPEND}
 #		media-gfx/imagemagick )"
 
 pkg_setup() {
-	if has_version =guile-1.8*; then
+	if has_version =dev-scheme/guile-1.8*; then
 		local flags="deprecated regex"
 		built_with_use dev-scheme/guile ${flags} || die "guile must be built with \"${flags}\" use flags"
 	fi
