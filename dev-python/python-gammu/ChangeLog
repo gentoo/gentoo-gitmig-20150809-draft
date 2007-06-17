@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.25 2007/05/19 04:28:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.26 2007/06/17 10:58:23 armin76 Exp $
+
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> python-gammu-0.15.ebuild,
+  python-gammu-0.17.ebuild, python-gammu-0.19.ebuild,
+  python-gammu-0.20.ebuild:
+  Drop ia64 keyword as nobody has hardware to test
 
   19 May 2007; Alin Năstac <mrness@gentoo.org> python-gammu-0.15.ebuild,
   python-gammu-0.17.ebuild, python-gammu-0.19.ebuild:
