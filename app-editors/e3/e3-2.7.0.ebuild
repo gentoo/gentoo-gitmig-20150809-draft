@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.7.0.ebuild,v 1.5 2007/06/17 15:16:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.7.0.ebuild,v 1.6 2007/06/17 17:17:29 ulm Exp $
 
 DESCRIPTION="Very tiny editor in x86 ASM with emacs, pico, wordstar, and vi keybindings"
 HOMEPAGE="http://www.sax.de/~adlibit/"
@@ -17,8 +17,7 @@ RDEPEND=""
 PROVIDE="virtual/editor"
 
 src_install() {
-	use amd64 && newbin "${S}/bin/Linux_x86-64/e3-64" e3
-	use x86 && newbin "${S}/bin/Linux/e3" e3
+	dobin e3
 	dosym e3 /usr/bin/e3vi
 	dosym e3 /usr/bin/e3em
 	dosym e3 /usr/bin/e3ws
