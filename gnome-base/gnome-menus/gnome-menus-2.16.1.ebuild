@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.1.ebuild,v 1.12 2007/02/09 22:16:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.1.ebuild,v 1.13 2007/06/17 15:25:00 dang Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 python multilib
 
 DESCRIPTION="The GNOME menu system, implementing the F.D.O cross-desktop spec"
 HOMEPAGE="http://www.gnome.org"
@@ -28,4 +28,14 @@ src_unpack() {
 
 	# Add a couple of important LegacyDir entries. See bug #97839.
 	epatch "${FILESDIR}"/${PN}-2.10.2-legacy_dirs.patch
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_mod_cleanup "${ROOT}"usr/$(get_libdir)/python*/site-packages
 }

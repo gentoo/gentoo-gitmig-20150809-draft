@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.18.0.ebuild,v 1.1 2007/03/24 19:37:25 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.18.0.ebuild,v 1.2 2007/06/17 15:25:00 dang Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 python multilib
 
 DESCRIPTION="The GNOME menu system, implementing the F.D.O cross-desktop spec"
 HOMEPAGE="http://www.gnome.org"
@@ -26,4 +26,14 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_setup() {
 	G2CONF="--enable-inotify $(use_enable debug) $(use_enable python)"
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	use python && python_mod_optimize "${ROOT}"usr/$(get_libdir)/python*/site-packages
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	use python && python_mod_cleanup "${ROOT}"usr/$(get_libdir)/python*/site-packages
 }
