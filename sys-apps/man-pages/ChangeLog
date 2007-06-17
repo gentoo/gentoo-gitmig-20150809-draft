@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.84 2007/06/14 09:47:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.85 2007/06/17 21:34:36 vapier Exp $
+
+*man-pages-2.57 (17 Jun 2007)
+
+  17 Jun 2007; Mike Frysinger <vapier@gentoo.org> +man-pages-2.57.ebuild:
+  Version bump.
 
 *man-pages-2.56 (14 Jun 2007)
 
