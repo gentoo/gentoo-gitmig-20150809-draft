@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.6.ebuild,v 1.7 2007/04/24 18:38:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.6.ebuild,v 1.8 2007/06/17 07:06:38 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -61,7 +61,7 @@ pkg_preinst() {
 
 src_install () {
 	dosbin privoxy
-	newinitd "${FILESDIR}/privoxy.rc7" privoxy
+	newinitd "${FILESDIR}/privoxy.initd" privoxy
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/privoxy.logrotate" privoxy
 

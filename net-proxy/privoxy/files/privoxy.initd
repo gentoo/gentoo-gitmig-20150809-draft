@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/files/privoxy.rc7,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/files/privoxy.initd,v 1.1 2007/06/17 07:06:38 mrness Exp $
 
 depend() {
 	need net
