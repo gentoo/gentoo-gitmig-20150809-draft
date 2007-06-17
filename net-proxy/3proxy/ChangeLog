@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/3proxy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.15 2007/04/14 15:17:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.16 2007/06/17 05:16:05 mrness Exp $
+
+*3proxy-0.5.3i (17 Jun 2007)
+
+  17 Jun 2007; Alin Năstac <mrness@gentoo.org> -3proxy-0.5.2.ebuild,
+  -3proxy-0.5.3g.ebuild, +3proxy-0.5.3i.ebuild:
+  Remove old versions. Add FTP proxy to the list of installed programs.
 
   14 Apr 2007; Raúl Porcel <armin76@gentoo.org> 3proxy-0.5.3h.ebuild:
   x86 stable wrt security bug 174429
