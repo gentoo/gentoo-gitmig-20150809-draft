@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.5.2.ebuild,v 1.4 2006/11/13 15:15:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.5.2.ebuild,v 1.5 2007/06/17 09:13:44 eva Exp $
 
 IUSE="gtk gtkhtml spell sqlite svg"
 
@@ -8,7 +8,7 @@ inherit
 
 DESCRIPTION="GTK2-based LiveJournal client"
 HOMEPAGE="http://logjam.danga.com/"
-SRC_URI="http://logjam.danga.com/download//${P}.tar.bz2"
+SRC_URI="http://logjam.danga.com/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +18,9 @@ RDEPEND=">=dev-libs/libxml2-2.0
 	net-misc/curl
 	>=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2.4 )
-	gtkhtml? ( >=gnome-extra/gtkhtml-3 )
+	gtkhtml? ( || (
+		=gnome-extra/gtkhtml-3.6*
+		=gnome-extra/gtkhtml-3.0* ) )
 	spell? ( app-text/gtkspell )
 	svg? ( >=gnome-base/librsvg-2.2.3 )
 	sqlite? ( >=dev-db/sqlite-3 )"
