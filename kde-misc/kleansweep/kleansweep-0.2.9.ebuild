@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleansweep/kleansweep-0.2.9.ebuild,v 1.2 2007/06/17 07:33:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleansweep/kleansweep-0.2.9.ebuild,v 1.3 2007/06/17 11:15:22 armin76 Exp $
 
 inherit kde python
 
@@ -11,7 +11,7 @@ SRC_URI="http://linux.bydg.org/~yogin/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="imagemagick"
 
 RDEPEND="dev-lang/perl
