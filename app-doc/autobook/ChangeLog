@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/autobook
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.8 2006/11/26 12:27:56 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.9 2007/06/17 01:21:00 angelos Exp $
+
+  17 Jun 2007; Christoph Mende <angelos@gentoo.org> autobook-1.5.ebuild:
+  Stable on amd64 wrt bug 182266
 
   26 Nov 2006; Mike Frysinger <vapier@gentoo.org> autobook-1.5.ebuild:
   Add support for installing examples via USE=examples.
