@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/tsocks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.20 2007/04/22 08:26:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.21 2007/06/17 16:03:03 mrness Exp $
+
+  17 Jun 2007; Alin Năstac <mrness@gentoo.org> -tsocks-1.8_beta5.ebuild,
+  -tsocks-1.8_beta5-r1.ebuild:
+  Remove old revisions.
 
   22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   tsocks-1.8_beta5-r2.ebuild:
