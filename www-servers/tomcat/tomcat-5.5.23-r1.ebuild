@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r1.ebuild,v 1.4 2007/04/29 13:06:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r1.ebuild,v 1.5 2007/06/17 15:53:56 wltjr Exp $
 
 #WANT_ANT_TASKS="ant-trax"
 
@@ -280,6 +280,14 @@ pkg_postinst() {
 	elog
 	ewarn "naming-factory-dbcp.jar is not built at this time. Please fetch"
 	ewarn "jar from upstream binary if you need it. Gentoo Bug # 144276"
+	elog
+	ewarn "The manager webapps have known exploits, please refer to"
+	ewarn "http://cve.mitre.org/cgi-bin/cvename.cgi?name=2007-2450"
+	if use examples ; then
+		elog
+		ewarn "The examples webapp has a known exploit, please refer to"
+		ewarn "http://cve.mitre.org/cgi-bin/cvename.cgi?name=2007-2449"
+	fi
 	elog
 	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	elog " may not get seen.  Thank you."

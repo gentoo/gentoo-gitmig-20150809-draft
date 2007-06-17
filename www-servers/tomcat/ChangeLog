@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.149 2007/06/07 07:40:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.150 2007/06/17 15:53:56 wltjr Exp $
+
+  17 Jun 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-5.5.23-r1.ebuild, tomcat-5.5.23-r6.ebuild,
+  -tomcat-6.0.13-r1.ebuild, tomcat-6.0.13-r3.ebuild:
+  Added warnings in pkg_postinst about the two vulnerabilities, per bug #182262
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> tomcat-6.0.13-r3.ebuild:
   Added ~ppc64; bug #178701

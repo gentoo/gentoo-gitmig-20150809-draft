@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r3.ebuild,v 1.2 2007/06/07 07:40:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r3.ebuild,v 1.3 2007/06/17 15:53:56 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -182,6 +182,14 @@ pkg_postinst() {
 	elog
 	ewarn "tomcat-dbcp.jar is not built at this time. Please fetch jar"
 	ewarn "from upstream binary if you need it. Gentoo Bug # 144276"
+	elog
+	ewarn "The manager webapps have known exploits, please refer to"
+	ewarn "http://cve.mitre.org/cgi-bin/cvename.cgi?name=2007-2450"
+	if use examples ; then
+		elog
+		ewarn "The examples webapp has a known exploit, please refer to"
+		ewarn "http://cve.mitre.org/cgi-bin/cvename.cgi?name=2007-2449"
+	fi
 	elog
 	elog " Please report any bugs to http://bugs.gentoo.org/"
 	elog
