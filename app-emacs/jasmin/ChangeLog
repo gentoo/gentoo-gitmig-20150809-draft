@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jasmin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/ChangeLog,v 1.9 2007/05/03 19:08:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/ChangeLog,v 1.10 2007/06/17 11:55:48 opfer Exp $
+
+  17 Jun 2007; Christian Faulhammer <opfer@gentoo.org> jasmin-1.2-r1.ebuild:
+  stable x86, bug 182256
 
 *jasmin-1.2-r1 (03 May 2007)
 
