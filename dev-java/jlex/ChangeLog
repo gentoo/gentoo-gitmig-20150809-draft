@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jlex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/ChangeLog,v 1.14 2007/06/17 12:07:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/ChangeLog,v 1.15 2007/06/17 13:13:05 caster Exp $
+
+  17 Jun 2007; Vlastimil Babka <caster@gentoo.org> -jlex-1.2.6.ebuild:
+  Remove gen-1 revision.
 
   17 Jun 2007; Christian Faulhammer <opfer@gentoo.org> jlex-1.2.6-r1.ebuild:
   stable x86, bug 182030
