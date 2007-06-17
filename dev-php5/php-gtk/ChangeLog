@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/php-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.7 2007/04/18 22:59:14 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.8 2007/06/17 04:48:37 anant Exp $
+
+*php-gtk-2.0.0_beta (17 Jun 2007)
+
+  17 Jun 2007; Anant Narayanan <anant@gentoo.org> -files/gtkmozembed.patch,
+  +files/no-cli-check.patch, -php-gtk-2.0.0_alpha.ebuild,
+  +php-gtk-2.0.0_beta.ebuild:
+  bump to 2.0.0beta.
 
   18 Apr 2007; Anant Narayanan <anant@gentoo.org>
   php-gtk-2.0.0_alpha.ebuild:
