@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audiotag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.16 2007/06/16 11:12:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.17 2007/06/17 08:14:47 corsair Exp $
+
+  17 Jun 2007; Markus Rothe <corsair@gentoo.org> audiotag-0.16.ebuild:
+  Added ~ppc64; bug #182084
 
   16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   audiotag-0.16.ebuild:
