@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.77 2007/06/05 18:49:04 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.78 2007/06/17 14:02:12 marienz Exp $
+
+  17 Jun 2007; Marien Zwart <marienz@gentoo.org>
+  ati-drivers-8.37.6-r1.ebuild:
+  Add multilib to IUSE, fixes bug #182123, thanks to jakub for reporting.
 
 *ati-drivers-8.37.6-r1 (05 Jun 2007)
 
