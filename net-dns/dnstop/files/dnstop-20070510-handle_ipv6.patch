@@ -1,0 +1,25 @@
+diff -uNr dnstop-20070510/dnstop.c dnstop-20070510-r1/dnstop.c
+--- dnstop-20070510/dnstop.c	2007-05-11 00:51:12.000000000 -0400
++++ dnstop-20070510-r1/dnstop.c	2007-06-17 18:57:26.000000000 -0400
+@@ -825,8 +825,10 @@
+     memcpy(&family, pkt, sizeof(family));
+     if (AF_INET == family)
+ 	return handle_ipv4((struct ip *)(pkt + 4), len - 4);
++#if USE_IPV6
+     if (AF_INET6 == family)
+ 	return handle_ipv6((struct ip6_hdr *)(pkt + 4), len - 4);
++#endif
+     return 0;
+ }
+ 
+@@ -838,8 +840,10 @@
+     memcpy(&family, pkt, sizeof(family));
+     if (AF_INET == ntohl(family))
+ 	return handle_ipv4((struct ip *)(pkt + 4), len - 4);
++#if USE_IPV6
+     if (AF_INET6 == ntohl(family))
+ 	return handle_ipv6((struct ip6_hdr *)(pkt + 4), len - 4);
++#endif
+     return 0;
+ }
+ 
