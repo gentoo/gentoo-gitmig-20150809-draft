@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/autobook
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.9 2007/06/17 01:21:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.10 2007/06/17 06:42:56 dertobi123 Exp $
+
+  17 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> autobook-1.5.ebuild:
+  ppc stable, bug #182266
 
   17 Jun 2007; Christoph Mende <angelos@gentoo.org> autobook-1.5.ebuild:
   Stable on amd64 wrt bug 182266
