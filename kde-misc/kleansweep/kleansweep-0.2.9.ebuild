@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleansweep/kleansweep-0.2.9.ebuild,v 1.1 2006/10/30 21:06:56 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleansweep/kleansweep-0.2.9.ebuild,v 1.2 2007/06/17 07:33:15 philantrop Exp $
 
 inherit kde python
 
@@ -11,7 +11,7 @@ SRC_URI="http://linux.bydg.org/~yogin/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 IUSE="imagemagick"
 
 RDEPEND="dev-lang/perl
@@ -25,7 +25,7 @@ need-kde 3.3
 src_compile() {
 	local myconf="prefix=`kde-config --prefix`"
 
-	use debug && myconf="${myconf} debug=full"
+	use debug && myconf="${myconf} debug=1"
 
 	scons configure \
 		${myconf} || die "configure failed"
