@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0_beta7.ebuild,v 1.5 2007/06/08 18:16:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0_beta7.ebuild,v 1.6 2007/06/17 11:22:45 armin76 Exp $
 
 inherit eutils wxwidgets
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://wxsvg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}_1.tar.gz"
 
 LICENSE="wxWinLL-3"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.5 2007/06/08 18:16:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.6 2007/06/17 11:22:45 armin76 Exp $
+
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> wxsvg-1.0_beta7.ebuild:
+  x86 stable wrt #181365
 
   08 Jun 2007; Matti Bickel <mabi@gentoo.org> wxsvg-1.0_beta7.ebuild:
   ~ppc added (bug #177363)
