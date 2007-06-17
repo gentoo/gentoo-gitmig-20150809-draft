@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.50 2007/06/17 07:25:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.51 2007/06/17 18:02:22 compnerd Exp $
+
+  17 Jun 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/gpm-2.18.3-slotted-gstreamer.patch,
+  gnome-power-manager-2.18.3.ebuild:
+  Add a patch to use the correct gst-launch command on Gentoo
 
 *gnome-power-manager-2.18.3 (17 Jun 2007)
 

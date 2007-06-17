@@ -1,0 +1,11 @@
+--- src/gpm-sound.c.orig	2007-06-17 12:55:53.000000000 -0500
++++ src/gpm-sound.c	2007-06-17 12:56:39.000000000 -0500
+@@ -78,7 +78,7 @@
+ 		g_error ("enum %i not known", action);
+ 	}
+ 
+-	command = g_strdup_printf ("gst-launch filesrc location=%s%s ! "
++	command = g_strdup_printf ("gst-launch-0.10 filesrc location=%s%s ! "
+ 				   "decodebin ! audioconvert ! gconfaudiosink",
+ 				   GPM_DATA, filename);
+ 

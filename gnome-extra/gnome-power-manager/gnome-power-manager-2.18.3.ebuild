@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.18.3.ebuild,v 1.1 2007/06/17 07:25:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.18.3.ebuild,v 1.2 2007/06/17 18:02:22 compnerd Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome Power Manager"
 HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 		 >=x11-libs/cairo-1.0.0
 		 >=gnome-base/gnome-panel-2
 		 >=gnome-base/gconf-2
-		   media-libs/gstreamer
+		  =media-libs/gstreamer-0.10*
 		   x11-libs/libX11
 		   x11-libs/libXext"
 DEPEND="${RDEPEND}
@@ -58,6 +58,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# Use gst-launch-0.10 rather than gst-launch
+	epatch ${FILESDIR}/gpm-2.18.3-slotted-gstreamer.patch
 
 	if use doc; then
 		# Actually install all html files, not just the index
