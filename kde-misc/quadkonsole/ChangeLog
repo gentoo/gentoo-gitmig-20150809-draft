@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/quadkonsole
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.1 2007/06/17 20:27:41 philantrop Exp $
+
+*quadkonsole-2.0.2 (17 Jun 2007)
+
+  17 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +quadkonsole-2.0.2.ebuild:
+  Initial ebuild, submitted by TheOmega and Hanni Ali on bug 157500. Thanks to
+  both of you!
+
