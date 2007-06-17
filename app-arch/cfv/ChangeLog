@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/cfv
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.25 2006/11/27 22:28:24 drizzt Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.26 2007/06/17 13:19:57 swegener Exp $
+
+  17 Jun 2007; Sven Wegener <swegener@gentoo.org>
+  +files/cfv-1.18.1-modulefix.patch, cfv-1.18.1.ebuild:
+  Add a patch to make cfv work with bittorrent-5. Thanks to Kalidarn in bug
+  #169228.
 
   27 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> cfv-1.18.1.ebuild:
   Added ~x86-fbsd keyword.

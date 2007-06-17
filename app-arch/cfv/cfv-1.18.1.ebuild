@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/cfv-1.18.1.ebuild,v 1.7 2006/11/27 22:28:24 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/cfv-1.18.1.ebuild,v 1.8 2007/06/17 13:19:57 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="Utility to test and create .sfv, .csv, .crc and md5sum files"
 HOMEPAGE="http://cfv.sourceforge.net/"
@@ -14,6 +16,17 @@ KEYWORDS="amd64 ~hppa ppc ~ppc-macos ~sparc x86 ~x86-fbsd"
 DEPEND=""
 RDEPEND="dev-lang/python
 	dev-python/python-fchksum"
+
+src_unpack()  {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-modulefix.patch
+}
+
+src_compile() {
+	true
+}
 
 src_install() {
 	dobin cfv || die "dobin failed"
