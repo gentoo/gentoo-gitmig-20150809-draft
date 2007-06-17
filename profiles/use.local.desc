@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2869 2007/06/17 12:58:03 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2870 2007/06/17 18:52:21 ulm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -93,6 +93,7 @@ app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in
 app-editors/gvim:aqua - Include support for the Aqua / Carbon GUI
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
+app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/jove:unix98 - Use the Unix98 pty's instead of the BSD pts's
 app-editors/katoob:highlight - Enable source code highlighting
