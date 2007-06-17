@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.14 2007/06/15 10:32:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.15 2007/06/17 16:51:53 ulm Exp $
+
+  17 Jun 2007; Ulrich Mueller <ulm@gentoo.org> -jove-4.16.0.69.5.ebuild:
+  Remove old ebuild owing to distfile fetch failure.
 
 *jove-4.16.0.70.3 (15 Jun 2007)
 
