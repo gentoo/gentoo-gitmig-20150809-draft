@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.86.ebuild,v 1.1 2007/05/13 16:56:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.86.ebuild,v 1.2 2007/06/17 09:55:32 mrness Exp $
+
+inherit eutils
 
 DESCRIPTION="HTTP AntiVirus Proxy"
 HOMEPAGE="http://www.server-side.de/"
