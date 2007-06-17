@@ -1,0 +1,74 @@
+diff -Nru squidGuard-1.2.1.orig/test/requests squidGuard-1.2.1/test/requests
+--- squidGuard-1.2.1.orig/test/requests	1999-08-09 15:20:06.000000000 +0300
++++ squidGuard-1.2.1/test/requests	2007-06-17 11:51:48.000000000 +0300
+@@ -954,7 +954,7 @@
+ http://www.oslo-energi.no/gifs/nav5off.gif 10.0.5.15/- - GET
+ http://www.oslo-energi.no/gifs/tittel_1_fade.gif 10.0.5.15/- - GET
+ http://www.fotball.no/_img/toppframe_bg.gif 10.0.3.125/- gurr GET
+-http://c1.thecounter.com/id=118474&size=800&colors=8&referer=http%3a//www.uib.no/guide/index.html&java=true 10.0.3.144/- - GET
++http://c1.thecounter.com/id=118474&size=800&colors=8&referer=http://www.uib.no/guide/index.html&java=true 10.0.3.144/- - GET
+ http://www.pornodungeon.com/pics/samp27.jpg 10.0.3.174/- foo GET
+ http://www.sportnews.gr/_img/polo/image2223.jpg 10.0.2.130/- - GET
+ http://www.sol.no/no/www.sol.no/graphics/partner/cnn_norge.gif 10.0.3.144/- - GET
+diff -Nru squidGuard-1.2.1.orig/test/test1.expected squidGuard-1.2.1/test/test1.expected
+--- squidGuard-1.2.1.orig/test/test1.expected	2000-03-27 14:08:14.000000000 +0300
++++ squidGuard-1.2.1/test/test1.expected	2007-06-17 11:52:40.000000000 +0300
+@@ -954,7 +954,7 @@
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.5.15&clientname=&clientuser=&clientgroup=default&targetgroup=none&url=http://www.oslo-energi.no/gifs/nav5off.gif 10.0.5.15/- - GET
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.5.15&clientname=&clientuser=&clientgroup=default&targetgroup=none&url=http://www.oslo-energi.no/gifs/tittel_1_fade.gif 10.0.5.15/- - GET
+ 
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.3.144&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://c1.thecounter.com/id=118474&size=800&colors=8&referer=http%3a//www.uib.no/guide/index.html&java=true 10.0.3.144/- - GET
++http://info.foo.bar/cgi/blocked?clientaddr=10.0.3.144&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://c1.thecounter.com/id=118474&size=800&colors=8&referer=http://www.uib.no/guide/index.html&java=true 10.0.3.144/- - GET
+ 
+ 
+ 
+diff -Nru squidGuard-1.2.1.orig/test/test2.expected squidGuard-1.2.1/test/test2.expected
+--- squidGuard-1.2.1.orig/test/test2.expected	2000-03-27 14:09:17.000000000 +0300
++++ squidGuard-1.2.1/test/test2.expected	2007-06-17 11:53:08.000000000 +0300
+@@ -6,8 +6,8 @@
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.1.23&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.book-mark.net/Mark.gif 10.0.1.23/- - GET
+ 
+ 
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.1.23&clientname=&clientuser=gurr&clientgroup=kids&targetgroup=blacklist&url=http://www.angrydragon.com/sexing/sex/tn_316_jpg.jpg 10.0.1.23/- gurr GET
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.1.23&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.angrydragon.com/sexing/sex/phc057.gif 10.0.1.23/- - GET
++
++
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.1.23&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.freesexsites.net/book-mark/22/tn_09.jpg 10.0.1.23/- - GET
+ 
+ 
+@@ -251,7 +251,7 @@
+ 
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://counter10.sextracker.com/c5/id/0/109497 10.0.0.64/- - GET
+ 
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.angrydragon.com/sexing/sex/tn_536_jpg.jpg 10.0.0.64/- - GET
++
+ 
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.freesexsites.net/book-mark/tartban2.gif 10.0.0.64/- - GET
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://the-strip.porncity.net/866/fritz/buttons/germ.gif 10.0.0.64/- - GET
+@@ -261,7 +261,7 @@
+ 
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.ultrasexe.com/image/tnoire6.jpg 10.0.0.64/- - GET
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://artemis.porntrack.com/0/20807/? 10.0.0.64/- - GET
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.amateur-space.com/aec/images/hardcore/tn_sunshine35_jpg.jpg 10.0.0.64/- - GET
++
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=gurr&clientgroup=kids&targetgroup=blacklist&url=http://amateur.freepictures.com/amateur/images/tn_fpcheer017_jpg.jpg 10.0.0.64/- gurr GET
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.0.64&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://amateur.freepictures.com/amateur/images/fpcheer018.jpg 10.0.0.64/- - GET
+ 
+@@ -330,7 +330,7 @@
+ 
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.1.39&clientname=&clientuser=gurr&clientgroup=kids&targetgroup=blacklist&url=http://c1.xxxcounter.com/c7/id/16/44847/0/ 10.0.1.39/- gurr GET
+ 
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.1.39&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://www.pinkswap.com/teen/folder.gif 10.0.1.39/- - GET
++
+ 
+ 
+ 
+@@ -954,7 +954,7 @@
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.5.15&clientname=&clientuser=&clientgroup=default&targetgroup=none&url=http://www.oslo-energi.no/gifs/nav5off.gif 10.0.5.15/- - GET
+ http://info.foo.bar/cgi/blocked?clientaddr=10.0.5.15&clientname=&clientuser=&clientgroup=default&targetgroup=none&url=http://www.oslo-energi.no/gifs/tittel_1_fade.gif 10.0.5.15/- - GET
+ 
+-http://info.foo.bar/cgi/blocked?clientaddr=10.0.3.144&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://c1.thecounter.com/id=118474&size=800&colors=8&referer=http%3a//www.uib.no/guide/index.html&java=true 10.0.3.144/- - GET
++http://info.foo.bar/cgi/blocked?clientaddr=10.0.3.144&clientname=&clientuser=&clientgroup=kids&targetgroup=blacklist&url=http://c1.thecounter.com/id=118474&size=800&colors=8&referer=http://www.uib.no/guide/index.html&java=true 10.0.3.144/- - GET
+ 
+ 
+ 

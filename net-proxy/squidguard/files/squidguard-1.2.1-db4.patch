@@ -1,0 +1,54 @@
+diff -Nru squidGuard-1.2.1.orig/configure.in squidGuard-1.2.1/configure.in
+--- squidGuard-1.2.1.orig/configure.in	2007-06-17 11:24:29.000000000 +0300
++++ squidGuard-1.2.1/configure.in	2007-06-17 11:24:55.000000000 +0300
+@@ -85,7 +85,7 @@
+ AC_HEADER_STDC
+ AC_CHECK_HEADERS(db.h regex.h unistd.h)
+ 
+-+AC_CHECK_HEADER(db.h,,[
++AC_CHECK_HEADER(db.h,,[
+ 	echo
+ 	echo "** No db.h found"
+ 	echo "   The Berkley DB library is required for squidGuard"
+@@ -141,15 +141,7 @@
+        ])
+ 
+ dnl Check DB
+-AC_CHECK_LIB(db,db_version,,[
+-       echo
+-       echo "** The Berkley DB library is required for squidGuard"
+-       echo "   to compile. Get it from http://www.sleepycat.com"
+-       echo "   use --with-db=DIR or --with-db-lib=DIR to specify"
+-       echo "   its location. (default is $dbprefix/BerkeleyDB)"
+-       echo
+-       exit 1
+-       ])
++LIBS="$LIBS -ldb"
+ AC_RUN_IFELSE([
+ 	#include <db.h>
+ 	int main() 
+diff -Nru squidGuard-1.2.1.orig/src/sgDb.c squidGuard-1.2.1/src/sgDb.c
+--- squidGuard-1.2.1.orig/src/sgDb.c	2007-06-17 11:24:29.000000000 +0300
++++ squidGuard-1.2.1/src/sgDb.c	2007-06-17 11:15:27.000000000 +0300
+@@ -101,13 +101,21 @@
+     if(createdb)
+       flag = flag | DB_TRUNCATE;
+     if ((ret = 
++#if DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
++	 Db->dbp->open(Db->dbp, NULL, dbfile, NULL, DB_BTREE, flag, 0664)) != 0) {
++#else
+ 	 Db->dbp->open(Db->dbp, dbfile, NULL, DB_BTREE, flag, 0664)) != 0) {
++#endif
+       (void) Db->dbp->close(Db->dbp, 0);
+       sgLogFatalError("Error db_open: %s", strerror(ret));
+     }
+   } else {
+     if ((ret = 
++#if DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
++	 Db->dbp->open(Db->dbp, NULL, dbfile, NULL, DB_BTREE, DB_CREATE, 0664)) != 0) {
++#else
+ 	 Db->dbp->open(Db->dbp, dbfile, NULL, DB_BTREE, DB_CREATE, 0664)) != 0) {
++#endif
+       sgLogFatalError("Error db_open: %s", strerror(ret));
+     }
+   }

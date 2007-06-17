@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.8 2007/04/11 13:41:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.9 2007/06/17 15:59:01 mrness Exp $
+
+*squidguard-1.2.1 (17 Jun 2007)
+
+  17 Jun 2007; Alin Năstac <mrness@gentoo.org>
+  +files/squidguard-1.2.1-db4.patch, +files/squidguard-1.2.1-makefile.patch,
+  +files/squidguard-1.2.1-tests.patch, +squidguard-1.2.1.ebuild:
+  Version bump.
 
   11 Apr 2007; Alin Năstac <mrness@gentoo.org> squidguard-1.2.0-r1.ebuild:
   Simplify postinst info messages.
