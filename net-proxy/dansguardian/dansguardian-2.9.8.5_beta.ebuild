@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.8.5_beta.ebuild,v 1.2 2007/04/28 16:50:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.8.5_beta.ebuild,v 1.3 2007/06/17 06:01:15 mrness Exp $
 
 inherit eutils autotools
 
@@ -81,7 +81,7 @@ src_install() {
 	newinitd "${FILESDIR}/dansguardian.init" dansguardian
 
 	if use clamav; then
-		sed -r -i -e 's/[ \t]+need net.*/& clamd/' "${D}/etc/init.d/dansguardian"
+		sed -r -i -e 's/[ \t]+use dns/& clamd/' "${D}/etc/init.d/dansguardian"
 		sed -r -i -e 's/^#( *contentscanner *=.*clamdscan[.]conf.*)/\1/' "${D}/etc/dansguardian/dansguardian.conf"
 		sed -r -i -e 's/^#( *clamdudsfile *=.*)/\1/' "${D}/etc/dansguardian/contentscanners/clamdscan.conf"
 	elif use kaspersky; then
@@ -89,8 +89,8 @@ src_install() {
 	fi
 
 	# Copying logrotation file
-	exeinto /etc/logrotate.d
-	newexe "${FILESDIR}/dansguardian.logrotate" dansguardian
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/dansguardian.logrotate" dansguardian
 
 	keepdir /var/log/dansguardian
 	fperms o-rwx /var/log/dansguardian
