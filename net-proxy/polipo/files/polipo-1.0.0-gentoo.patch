@@ -1,7 +1,7 @@
-diff -Nru polipo-0.9.10.orig/Makefile polipo-0.9.10/Makefile
---- polipo-0.9.10.orig/Makefile	2006-09-02 17:33:44.000000000 +0000
-+++ polipo-0.9.10/Makefile	2006-10-09 07:18:58.000000000 +0000
-@@ -82,11 +82,6 @@
+diff -Nru polipo-1.0.0.orig/Makefile polipo-1.0.0/Makefile
+--- polipo-1.0.0.orig/Makefile	2007-03-06 21:29:05.000000000 +0200
++++ polipo-1.0.0/Makefile	2007-06-17 09:43:17.000000000 +0300
+@@ -97,11 +97,6 @@
  	cp -f localindex.html $(TARGET)$(LOCAL_ROOT)/index.html
  
  install.man: all
@@ -13,10 +13,10 @@ diff -Nru polipo-0.9.10.orig/Makefile polipo-0.9.10/Makefile
  
  
  polipo.info: polipo.texi
-diff -Nru polipo-0.9.10.orig/polipo.h polipo-0.9.10/polipo.h
---- polipo-0.9.10.orig/polipo.h	2006-09-02 17:33:44.000000000 +0000
-+++ polipo-0.9.10/polipo.h	2006-10-09 07:16:39.000000000 +0000
-@@ -62,7 +62,9 @@
+diff -Nru polipo-1.0.0.orig/polipo.h polipo-1.0.0/polipo.h
+--- polipo-1.0.0.orig/polipo.h	2007-03-06 21:29:05.000000000 +0200
++++ polipo-1.0.0/polipo.h	2007-06-17 09:43:17.000000000 +0300
+@@ -65,7 +65,9 @@
  #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
  /* nothing */
  #elif defined(__GNUC__)
