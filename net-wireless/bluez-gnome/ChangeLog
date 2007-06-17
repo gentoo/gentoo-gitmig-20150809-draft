@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.9 2007/06/09 11:22:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.10 2007/06/17 07:01:09 dertobi123 Exp $
+
+  17 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  bluez-gnome-0.8.ebuild:
+  Added ~ppc, bug #178071
 
   09 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   -bluez-gnome-0.6.ebuild:
