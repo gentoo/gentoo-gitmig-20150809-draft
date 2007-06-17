@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.264 2007/06/15 15:54:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.265 2007/06/17 16:37:31 phreak Exp $
+
+*subversion-1.4.4-r1 (17 Jun 2007)
+
+  17 Jun 2007; Christian Heim <phreak@gentoo.org>
+  +subversion-1.4.4-r1.ebuild:
+  Fix the usage of /usr/bin/apr-${apr_suffix}-config --cppflags in src_compile
+  (thanks to Arfrever Frehtes Taifersar Arahesis <Arfrever.FTA at gmail.com>
+  in #182168).
+
+  17 Jun 2007; Christian Heim <phreak@gentoo.org> subversion-1.4.4.ebuild:
+  Adding apr_suffix to the apr-config call in src_compile, as apr-config is in
+  fact called apr-1-config w/ apr-1.2.8.
 
   15 Jun 2007; Raúl Porcel <armin76@gentoo.org> subversion-1.3.2-r4.ebuild:
   alpha/ia64/x86 stable wrt #178264
