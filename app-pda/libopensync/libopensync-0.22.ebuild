@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22.ebuild,v 1.6 2007/06/16 14:41:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22.ebuild,v 1.7 2007/06/17 12:32:32 peper Exp $
+
+inherit eutils
 
 DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
@@ -26,6 +28,13 @@ RDEPEND=">=dev-db/sqlite-3
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-fbsd.patch"
+}
 
 src_compile() {
 	econf \
