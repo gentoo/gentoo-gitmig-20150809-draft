@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jlex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/ChangeLog,v 1.13 2007/06/15 15:56:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/ChangeLog,v 1.14 2007/06/17 12:07:34 opfer Exp $
+
+  17 Jun 2007; Christian Faulhammer <opfer@gentoo.org> jlex-1.2.6-r1.ebuild:
+  stable x86, bug 182030
 
   15 Jun 2007; Christoph Mende <angelos@gentoo.org> jlex-1.2.6-r1.ebuild:
   Stable on amd64 wrt bug 182030
