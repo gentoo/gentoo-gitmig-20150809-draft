@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2866 2007/06/17 04:47:38 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2867 2007/06/17 10:20:07 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -838,10 +838,13 @@ mail-mta/netqmail:noauthcram - If you do NOT want AUTHCRAM to be available
 mail-mta/netqmail:qmail-spp - Add support for the qmail SMTP plugin patch
 mail-mta/postfix:dovecot-sasl - Enable Dovecot protocol version 1 (server only) SASL implementation
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
+mail-mta/qmail-ldap:controldb - Add support for the QmailLDAP/Control patch (stores control files in ldap)
 mail-mta/qmail-ldap:gencertdaily - Generate SSL certificates daily instead of hourly
-mail-mta/qmail-ldap:highvolume - Prepare netqmail for high volume servers
+mail-mta/qmail-ldap:highvolume - Prepare qmail for high volume servers
 mail-mta/qmail-ldap:cluster - Enable this if you want to have cluster support in qmail-ldap
 mail-mta/qmail-ldap:qmail-spp - Add support for the qmail SMTP plugin patch
+mail-mta/qmail-ldap:rfc822 - Add support for RFC822 compliant mail attributes
+mail-mta/qmail-ldap:rfc2307 - Add support for RFC2307 compliant uid/gid attributes
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
