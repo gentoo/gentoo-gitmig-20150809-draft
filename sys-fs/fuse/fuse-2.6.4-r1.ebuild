@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.8 2007/06/14 20:47:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.9 2007/06/17 11:52:17 opfer Exp $
 
 inherit linux-mod eutils libtool
 
@@ -9,7 +9,7 @@ DESCRIPTION="An interface for filesystems implemented in userspace."
 HOMEPAGE="http://fuse.sourceforge.net"
 SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ~ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kernel_linux kernel_FreeBSD"
 S=${WORKDIR}/${MY_P}
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
@@ -59,7 +59,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS ChangeLog Filesystems README \                                
+	dodoc AUTHORS ChangeLog Filesystems README \
 		README.NFS NEWS doc/how-fuse-works \
 		doc/kernel.txt FAQ
 	docinto example
