@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p11.ebuild,v 1.4 2007/05/03 16:55:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p11.ebuild,v 1.5 2007/06/17 12:57:28 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -25,11 +25,13 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2.6.2
 	=dev-cpp/glibmm-2.12*
 	=dev-cpp/gtkmm-2.10*
-	=gnome-extra/gtkhtml-3.12*
 	>=virtual/mysql-5.0
 	workbench? (
 		=dev-lang/lua-5.0*
 		virtual/opengl
+	)
+	query-browser? (
+		=gnome-extra/gtkhtml-3.12*
 	)"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
