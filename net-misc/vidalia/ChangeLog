@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.5 2007/01/16 03:29:50 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.6 2007/06/17 15:58:52 humpback Exp $
+
+*vidalia-0.0.12 (17 Jun 2007)
+
+  17 Jun 2007; <humpback@gentoo.org> -vidalia-0.0.7.ebuild,
+  -vidalia-0.0.8.ebuild, -vidalia-0.0.10.ebuild, +vidalia-0.0.12.ebuild:
+  Removed obsolete versions and added 0.0.12. This closes bug #174630. Thanks
+  to those that helped there.
 
 *vidalia-0.0.10 (16 Jan 2007)
 
