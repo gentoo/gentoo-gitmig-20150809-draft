@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/ChangeLog,v 1.7 2007/05/08 21:29:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/ChangeLog,v 1.8 2007/06/17 15:01:33 angelos Exp $
+
+  17 Jun 2007; Christoph Mende <angelos@gentoo.org> libnxml-0.17.1.ebuild:
+  Stable on amd64 wrt bug 177184
 
   08 May 2007; Markus Ullmann <jokey@gentoo.org> libnxml-0.17.1.ebuild:
   Stable wrt bug #177184
