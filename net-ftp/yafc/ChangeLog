@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.30 2007/06/17 14:04:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.31 2007/06/17 14:44:11 armin76 Exp $
+
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> -yafc-1.1.1.ebuild,
+  yafc-1.1.1-r1.ebuild:
+  x86 stable wrt #173646
 
   17 Jun 2007; Christoph Mende <angelos@gentoo.org> yafc-1.1.1-r1.ebuild:
   Stable on amd64 wrt bug 173646
