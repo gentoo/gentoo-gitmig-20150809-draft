@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.19 2007/06/14 01:24:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.20 2007/06/17 11:38:20 armin76 Exp $
+
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> kanatest-0.4.2.ebuild:
+  x86 stable wrt #181640
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> kanatest-0.4.2.ebuild:
   Stable on amd64 wrt bug 181640
