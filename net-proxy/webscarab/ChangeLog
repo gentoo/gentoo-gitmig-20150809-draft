@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/webscarab
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.11 2007/04/11 14:52:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.12 2007/06/17 16:14:46 mrness Exp $
+
+*webscarab-20070504 (17 Jun 2007)
+
+  17 Jun 2007; Alin Năstac <mrness@gentoo.org> +webscarab-20070504.ebuild:
+  Version bump. Add ~amd64 keyword.
 
   11 Apr 2007; Alin Năstac <mrness@gentoo.org> -webscarab-20051017.ebuild:
   Remove old version.
