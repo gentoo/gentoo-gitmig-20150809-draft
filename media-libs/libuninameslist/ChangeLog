@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libuninameslist
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.15 2007/02/22 02:02:28 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.16 2007/06/17 19:54:29 dirtyepic Exp $
+
+*libuninameslist-20060907 (17 Jun 2007)
+
+  17 Jun 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +libuninameslist-20060907.ebuild:
+  Version bump, bug #160921.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
