@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.22 2007/06/17 21:00:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.23 2007/06/18 11:33:36 armin76 Exp $
+
+  18 Jun 2007; Raúl Porcel <armin76@gentoo.org> libpaper-1.1.21.ebuild:
+  ia64/x86 stable and add ~alpha wrt #182363
 
   17 Jun 2007; Christoph Mende <angelos@gentoo.org> libpaper-1.1.21.ebuild:
   Stable on amd64 wrt bug 182363
