@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.34.0.ebuild,v 1.4 2007/06/18 03:38:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.34.0.ebuild,v 1.5 2007/06/18 05:47:02 corsair Exp $
 
 inherit flag-o-matic toolchain-funcs versionator
 
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~sparc ~x86"
 
 MY_PV=$(replace_all_version_separators _)
 
