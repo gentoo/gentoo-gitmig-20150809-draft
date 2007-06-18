@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20070402.ebuild,v 1.6 2007/04/16 17:30:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20070618.ebuild,v 1.1 2007/06/18 18:33:31 cardoe Exp $
 
 inherit eutils
 
