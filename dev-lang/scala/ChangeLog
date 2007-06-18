@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.3 2007/06/18 13:52:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.4 2007/06/18 19:30:26 caster Exp $
+
+  18 Jun 2007; Vlastimil Babka <caster@gentoo.org> scala-2.5.1.ebuild:
+  Increase thread stack size for compilation on x86 - was getting stack
+  overflows wi.
 
 *scala-2.5.1 (18 Jun 2007)
 

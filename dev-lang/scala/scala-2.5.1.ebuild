@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.5.1.ebuild,v 1.1 2007/06/18 13:52:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.5.1.ebuild,v 1.2 2007/06/18 19:30:26 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -52,7 +52,7 @@ src_compile() {
 	if use amd64; then
 		export ANT_OPTS="-Xmx1024M -Xms1024M"
 	else
-		export ANT_OPTS="-Xmx512M -Xms512M"
+		export ANT_OPTS="-Xmx512M -Xms512M -Xss1024k"
 	fi
 	local target
 	if [[ "$(get_version_component_range 3)"  == "0" ]];
