@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.6 2007/05/11 03:36:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.7 2007/06/18 11:54:19 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE=""
 # Note to arch maintainers: you'll need to add to src_install() for your
 # arch, since the app's Makefile does strange things with different
 # directories for each arch. -- ciaranm, 27 June 2004
-KEYWORDS="~alpha ~amd64 mips ~ppc ~ppc-macos sparc x86"
+KEYWORDS="~alpha amd64 mips ~ppc ~ppc-macos sparc x86"
 
 DEPEND="=sys-libs/slang-1.4*
 	>=sys-libs/ncurses-5.2-r2"
