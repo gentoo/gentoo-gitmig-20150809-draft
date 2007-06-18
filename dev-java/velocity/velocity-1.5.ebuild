@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.5.ebuild,v 1.1 2007/05/05 20:53:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.5.ebuild,v 1.2 2007/06/18 15:53:51 flameeyes Exp $
 
 JAVA_PKG_IUSE="examples doc source test"
 
@@ -56,7 +56,7 @@ src_compile () {
 }
 
 src_test() {
-	mkdir bin/test-lib -p || die
+	mkdir -p bin/test-lib || die
 	cd bin/test-lib || die
 	java-pkg_jar-from junit,hsqldb,servletapi-2.3
 	cd "${S}/build"

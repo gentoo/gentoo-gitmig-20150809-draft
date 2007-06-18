@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.31 2007/05/07 07:44:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.32 2007/06/18 15:53:51 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> velocity-1.5.ebuild:
+  Reorder mkdir parameters to follow POSIX. Fixes build on Gentoo/FreeBSD.
 
   07 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   velocity-1.4-r4.ebuild:
