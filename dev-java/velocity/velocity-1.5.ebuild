@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.5.ebuild,v 1.2 2007/06/18 15:53:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.5.ebuild,v 1.3 2007/06/18 17:38:54 flameeyes Exp $
 
 JAVA_PKG_IUSE="examples doc source test"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/${PN}/engine/${PV}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 CDEPEND="

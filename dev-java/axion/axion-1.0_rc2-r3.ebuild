@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r3.ebuild,v 1.1 2007/04/28 14:31:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r3.ebuild,v 1.2 2007/06/18 17:28:09 flameeyes Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -12,7 +12,7 @@ HOMEPAGE="http://axion.tigris.org/"
 SRC_URI="http://axion.tigris.org/releases/1.0M2/axion-1.0-M2-src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="dev-java/javacc

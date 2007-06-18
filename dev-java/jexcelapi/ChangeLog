@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jexcelapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.7 2007/03/16 20:47:35 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.8 2007/06/18 17:25:53 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> jexcelapi-2.6.3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *jexcelapi-2.6.3 (16 Mar 2007)
 

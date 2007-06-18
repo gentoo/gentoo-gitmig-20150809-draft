@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.18 2007/05/05 18:41:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.19 2007/06/18 17:21:17 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  commons-primitives-1.0-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 May 2007; nixnut <nixnut@gentoo.org> commons-primitives-1.0-r2.ebuild:
   Stable on ppc wrt bug 176012

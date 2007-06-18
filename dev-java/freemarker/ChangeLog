@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/freemarker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.12 2007/05/06 10:12:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.13 2007/06/18 17:29:04 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  freemarker-2.3.10.ebuild:
+  Add ~x86-fbsd keyword.
 
 *freemarker-2.3.10 (06 May 2007)
 

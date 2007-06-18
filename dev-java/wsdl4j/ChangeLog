@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.13 2007/06/12 07:18:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.14 2007/06/18 17:23:45 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> wsdl4j-1.6.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   12 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   wsdl4j-1.5.1-r1.ebuild:

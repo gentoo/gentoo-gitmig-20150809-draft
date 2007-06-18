@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/axion
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.17 2007/04/28 14:31:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.18 2007/06/18 17:28:09 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  axion-1.0_rc2-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *axion-1.0_rc2-r3 (28 Apr 2007)
 
