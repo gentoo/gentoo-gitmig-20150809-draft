@@ -3,7 +3,8 @@
 depend() {
 	need net
 	use logger
-        before mta
+	use antivirus
+	before mta
 }
 
 start() {
