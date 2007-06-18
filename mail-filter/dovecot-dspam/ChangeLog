@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/ChangeLog,v 1.1 2007/06/18 12:26:07 hollow Exp $
+
+*dovecot-dspam-0_beta7 (18 Jun 2007)
+
+  18 Jun 2007; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +dovecot-dspam-0_beta7.ebuild:
+  Initial ebuild for the dovecot dspam plugin
+
