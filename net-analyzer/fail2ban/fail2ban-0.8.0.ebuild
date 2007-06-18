@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0.ebuild,v 1.1 2007/05/13 13:52:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0.ebuild,v 1.2 2007/06/18 12:34:52 falco Exp $
 
 inherit distutils
 
@@ -38,3 +38,11 @@ pkg_postinst() {
 	elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
 }
 
+pkg_setup() {
+	if ! built_with_use dev-lang/python readline ; then
+		echo
+		eerror "dev-lang/python is missing readline support. Please add"
+		eerror "'readline' to your USE flags, and re-emerge dev-lang/python."
+		die "dev-lang/python needs readline support"
+	fi
+}

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.31 2007/06/10 13:23:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.32 2007/06/18 12:34:52 falco Exp $
+
+  18 Jun 2007; Raphael Marichez <falco@gentoo.org>
+  -files/fail2ban-0.7.6.init.d.patch, fail2ban-0.6.2-r1.ebuild,
+  -fail2ban-0.7.5-r1.ebuild, -fail2ban-0.7.6.ebuild,
+  -fail2ban-0.7.6-r1.ebuild, -fail2ban-0.7.8.ebuild, fail2ban-0.7.9.ebuild,
+  fail2ban-0.8.0.ebuild, fail2ban-0.8.0-r1.ebuild:
+  Ensure python is compiled with readline support, thanks to Friedrich Oslage
+  <bluebird@mnet-online.de>, bug 182220. Prune old ~arched versions.
 
   10 Jun 2007; Raúl Porcel <armin76@gentoo.org> fail2ban-0.8.0-r1.ebuild:
   x86 stable wrt security #181214

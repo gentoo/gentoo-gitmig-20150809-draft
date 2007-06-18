@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.2-r1.ebuild,v 1.3 2007/04/22 10:27:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.2-r1.ebuild,v 1.4 2007/06/18 12:34:52 falco Exp $
+
+inherit distutils
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://fail2ban.sourceforge.net/"
@@ -31,4 +33,13 @@ src_install() {
 pkg_postinst() {
 	einfo "Please edit /etc/fail2ban.conf with parameters"
 	einfo "that correspond to your system."
+}
+
+pkg_setup() {
+	if ! built_with_use dev-lang/python readline ; then
+		echo
+		eerror "dev-lang/python is missing readline support. Please add"
+		eerror "'readline' to your USE flags, and re-emerge dev-lang/python."
+		die "dev-lang/python needs readline support"
+	fi
 }

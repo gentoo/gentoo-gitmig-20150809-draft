@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.7.9.ebuild,v 1.1 2007/04/28 23:46:29 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.7.9.ebuild,v 1.2 2007/06/18 12:34:52 falco Exp $
 
 inherit distutils
 
@@ -36,3 +36,11 @@ pkg_postinst() {
 	elog
 }
 
+pkg_setup() {
+	if ! built_with_use dev-lang/python readline ; then
+		echo
+		eerror "dev-lang/python is missing readline support. Please add"
+		eerror "'readline' to your USE flags, and re-emerge dev-lang/python."
+		die "dev-lang/python needs readline support"
+	fi
+}
