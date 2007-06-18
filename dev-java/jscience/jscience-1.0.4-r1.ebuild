@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4-r1.ebuild,v 1.3 2007/06/01 06:30:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4-r1.ebuild,v 1.4 2007/06/18 13:55:49 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -32,6 +32,11 @@ src_unpack() {
 }
 
 EANT_BUILD_TARGET="jarfile"
+
+src_test() {
+	# this works here as javolution is in lib/ and referenced in jar's manifest
+	java -jar jscience.jar test || die "test failed"
+}
 
 src_install() {
 	java-pkg_dojar jscience.jar

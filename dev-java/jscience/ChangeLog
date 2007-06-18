@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jscience
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.9 2007/06/05 21:40:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.10 2007/06/18 13:55:49 caster Exp $
+
+  18 Jun 2007; Vlastimil Babka <caster@gentoo.org> jscience-1.0.4-r1.ebuild:
+  Add src_test
 
   05 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -jscience-1.0.4.ebuild:
   Remove generation 1 ebuild.
