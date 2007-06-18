@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.9-r2.ebuild,v 1.2 2007/01/06 15:47:48 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.1 2007/06/18 10:52:08 dragonheart Exp $
 
-inherit eutils qt3
+
+ARTS_REQUIRED="never"
+inherit eutils qt3 kde
 
 DESCRIPTION="a soft phone for your VOIP communcations using SIP"
 HOMEPAGE="http://www.twinklephone.com/"
@@ -11,13 +13,12 @@ SRC_URI="http://www.xs4all.nl/~mfnboer/twinkle/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="arts speex ilbc zrtp"
+IUSE="arts speex ilbc zrtp kdehiddenvisibility"
 
 # Requires libqt-mt actually...  Is that *always* built, or do we need to check?
 RDEPEND=">=net-libs/ccrtp-1.5.0
-	>=dev-cpp/commoncpp2-1.4.1
+	>=dev-cpp/commoncpp2-1.4.2
 	$(qt_min_version 3.3.0)
-	arts? ( kde-base/arts )
 	media-libs/libsndfile
 	dev-libs/boost
 	speex? ( media-libs/speex )
@@ -31,27 +32,27 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.4.1-badcflags.patch
-	epatch "${FILESDIR}"/${P}-dtmf.patch
-	epatch "${FILESDIR}"/${P}-invite4xx.patch
-	epatch "${FILESDIR}"/${P}-memman.patch
+	epatch "${FILESDIR}"/${P}-icmp.patch
 }
 
 src_compile() {
-	econf \
+	local myconf=" \
 			$(use_with ilbc) \
 			$(use_with arts) \
 			$(use_with zrtp) \
-			$(use_with speex) || die 'Error: conf failed'
-	emake || die "Error: emake failed!"
+			$(use_with speex)"
+	set-kdedir
+	kde_src_compile
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS NEWS README THANKS
+	kde_src_install
+	dodoc THANKS
 	domenu twinkle.desktop
 }
 
 pkg_postinst() {
 	elog "if you get crashes on startup re-emerge commoncpp2 ccrtp and	twinkle"
 	elog "see http://www.xs4all.nl/~mfnboer/twinkle/faq.html#crash_startup"
+	kde_pkg_postinst
 }

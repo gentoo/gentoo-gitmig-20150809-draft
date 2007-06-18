@@ -1,6 +1,15 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.29 2007/05/19 23:56:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.30 2007/06/18 10:52:08 dragonheart Exp $
+
+*twinkle-1.0.1-r1 (18 Jun 2007)
+
+  18 Jun 2007; Daniel Black <dragonheart@gentoo.org>
+  -files/twinkle-0.9-dtmf.patch, -files/twinkle-0.9-invite4xx.patch,
+  -files/twinkle-0.9-memman.patch, +files/twinkle-1.0.1-icmp.patch,
+  -twinkle-0.9-r2.ebuild, -twinkle-1.0.ebuild, -twinkle-1.0.1.ebuild,
+  +twinkle-1.0.1-r1.ebuild:
+  upstream patch and cleaned out old versions
 
 *twinkle-1.0.1 (19 May 2007)
 
