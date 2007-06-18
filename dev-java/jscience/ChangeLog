@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jscience
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.10 2007/06/18 13:55:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.11 2007/06/18 14:22:43 angelos Exp $
+
+  18 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  jscience-1.0.4-r1.ebuild:
+  Stable on amd64 wrt bug 180288
 
   18 Jun 2007; Vlastimil Babka <caster@gentoo.org> jscience-1.0.4-r1.ebuild:
   Add src_test
