@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r6.ebuild,v 1.4 2007/06/17 15:44:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.1 2007/06/18 08:33:32 hollow Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
 QMAIL_LDAP_PATCH=20060201
 QMAIL_SPP_PATCH=0.42
-CONTROLS_PATCH=20060401c
+CONTROLS_PATCH=20060401d
 
 DESCRIPTION="qmail -- a secure, reliable, efficient, simple message transfer agent"
 HOMEPAGE="
