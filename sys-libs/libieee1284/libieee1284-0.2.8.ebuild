@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.5 2007/01/05 09:18:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.6 2007/06/18 01:04:28 angelos Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.58
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="doc"
 
 RDEPEND="virtual/libc"
