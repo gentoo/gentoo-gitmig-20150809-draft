@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.2 2007/05/07 16:56:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.3 2007/06/18 12:18:59 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -16,14 +16,16 @@ IUSE=""
 # see http://sourceforge.net/tracker/index.php?func=detail&aid=1614984&group_id=23187&atid=377768
 # Also docs cannot be built with jdk > 1.5
 CDEPEND="=dev-java/junit-3*"
-DEPEND="=virtual/jdk-1.4*
+DEPEND="
 	app-arch/unzip
+	!test? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
 	test? (
+		=virtual/jdk-1.4*
 		dev-java/ant-junit
 		dev-java/ant-trax
 	)
 	${CDEPEND}"
-RDEPEND="=virtual/jre-1.4*
+RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -34,7 +36,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-${PVR}-build.xml.patch"
 	rm -v ${S}/lib/*.jar || die
-	
+
 	java-ant_rewrite-classpath
 }
 

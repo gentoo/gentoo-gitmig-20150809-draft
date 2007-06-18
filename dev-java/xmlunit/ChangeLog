@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.10 2007/05/07 16:56:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.11 2007/06/18 12:18:59 caster Exp $
+
+  18 Jun 2007; Vlastimil Babka <caster@gentoo.org> xmlunit-1.0-r2.ebuild:
+  Pull and build with 1.4 JDK only when USE=test as only tests fail with 1.5,
+  not whole compile.
 
   07 May 2007; Vlastimil Babka <caster@gentoo.org> xmlunit-1.0-r2.ebuild:
   Migrate to split-ant, fix compiling with java-strict.
