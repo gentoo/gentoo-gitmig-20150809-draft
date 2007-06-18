@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p36.ebuild,v 1.1 2007/06/12 18:23:41 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p36-r1.ebuild,v 1.1 2007/06/18 12:41:09 rbrown Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -50,6 +50,8 @@ src_unpack() {
 #	fi
 
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-rb_thread_status_prototype.patch"
 
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
