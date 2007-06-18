@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.6 2007/06/18 05:47:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.7 2007/06/18 11:15:15 armin76 Exp $
+
+  18 Jun 2007; Raúl Porcel <armin76@gentoo.org> boost-build-1.34.0.ebuild:
+  Add ~alpha/~ia64 wrt #182196
 
   18 Jun 2007; Markus Rothe <corsair@gentoo.org> boost-build-1.34.0.ebuild:
   Added ~ppc64; bug #182196
