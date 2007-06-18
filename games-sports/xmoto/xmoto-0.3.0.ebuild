@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.3.0.ebuild,v 1.1 2007/06/17 21:54:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.3.0.ebuild,v 1.2 2007/06/18 18:04:03 genstef Exp $
 
 inherit eutils games
 
@@ -28,6 +28,7 @@ RDEPEND="media-libs/jpeg
 	nls? ( virtual/libintl )
 	editor? ( >=media-gfx/inkscape-0.45 )"
 DEPEND="${RDEPEND}
+	>=dev-db/sqlite-3
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
