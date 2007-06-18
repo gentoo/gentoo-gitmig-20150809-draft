@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.20 2007/05/15 14:27:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.21 2007/06/18 18:38:07 flameeyes Exp $
+
+  18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gtk-engines-qt-0.7_p20070327-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
