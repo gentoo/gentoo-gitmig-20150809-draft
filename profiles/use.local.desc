@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2871 2007/06/18 20:10:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2872 2007/06/18 20:31:10 sekretarz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -877,7 +877,7 @@ media-gfx/gwenview:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/hugin:enblend - Pull media-gfx/enblend as a dependency
 media-gfx/hugin:sift - Pull media-gfx/autopano-sift as a dependency
 media-gfx/imagemagick:fpx - enable libfpx support
-media-gfx/imagemagick:hdri - Enables hdri support
+media-gfx/imagemagick:hdri - Enables High Dynamic Range Images formats
 media-gfx/imagemagick:gs - enable ghostscript support
 media-gfx/imagemagick:q32 - choose quantum depth to 32
 media-gfx/imagemagick:q8 - choose quantum depth to 8
