@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.0.ebuild,v 1.5 2007/04/28 17:48:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.0.ebuild,v 1.6 2007/06/18 22:39:18 pylon Exp $
 
 inherit autotools flag-o-matic
 
@@ -87,7 +87,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "If you need extra security, you can tell pbbuttonsd to only accept"
 	ewarn "input from one user.  You can set the userallowed option in"
-	ewarn "/etc/pbbuttonsd.conf to limit access."
+	ewarn "/etc/pbbuttonsd.cnf to limit access."
 	ewarn
 
 	if use ibam; then
