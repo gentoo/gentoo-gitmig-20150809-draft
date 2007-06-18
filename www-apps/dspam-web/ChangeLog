@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.35 2007/06/16 04:35:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.36 2007/06/18 13:39:35 mrness Exp $
+
+  18 Jun 2007; Alin Năstac <mrness@gentoo.org> dspam-web-3.8.0.ebuild:
+  Call webapp_pkg_setup() at the end of pkg_setup() (#182402).
 
   16 Jun 2007; Alin Năstac <mrness@gentoo.org> dspam-web-3.8.0.ebuild:
   Die in pkg_setup if dspam is installed with user-homedirs enabled (bug

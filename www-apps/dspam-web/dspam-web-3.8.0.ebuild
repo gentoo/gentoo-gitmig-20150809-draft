@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.5 2007/06/16 04:35:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.6 2007/06/18 13:39:35 mrness Exp $
 
 inherit webapp eutils autotools
 
@@ -32,6 +32,8 @@ pkg_setup() {
 		eerror "Please disable this flag and re-emerge dspam."
 		die "Incompatible mail-filter/dspam installation"
 	fi
+
+	webapp_pkg_setup
 }
 
 src_unpack() {
