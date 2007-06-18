@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.10.0.ebuild,v 1.1 2007/03/27 14:16:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.10.2.ebuild,v 1.1 2007/06/18 07:38:05 leio Exp $
 
 inherit gnome2
 
