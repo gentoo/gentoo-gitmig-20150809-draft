@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta2.ebuild,v 1.1 2007/04/08 07:34:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta2.ebuild,v 1.2 2007/06/18 20:15:34 philantrop Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ IUSE="kde"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="kde? ( || ( ( kde-base/libkcal kde-base/kontact ) kde-base/kdepim ) )
-        >=net-wireless/kdebluetooth-1.0_beta2"
+		>=net-wireless/kdebluetooth-1.0_beta2"
 
 need-kde 3.4
 

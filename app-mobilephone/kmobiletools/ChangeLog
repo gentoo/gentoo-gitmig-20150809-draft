@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.15 2007/04/08 07:34:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.16 2007/06/18 20:15:34 philantrop Exp $
+
+*kmobiletools-0.5.0_beta3 (18 Jun 2007)
+
+  18 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kmobiletools-0.5.0_beta3-no-automagic-deps.patch,
+  kmobiletools-0.5.0_beta2.ebuild, +kmobiletools-0.5.0_beta3.ebuild:
+  Version bump as per bug 181553. Ebuild submitted by Matěj Laitl. Thanks,
+  Matěj! Fixed whitespace error in beta2.
 
 *kmobiletools-0.5.0_beta2 (08 Apr 2007)
 
