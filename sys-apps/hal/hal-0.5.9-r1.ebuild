@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.9 2007/06/18 13:54:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.10 2007/06/18 14:04:06 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -37,9 +37,11 @@ RDEPEND=">=dev-libs/glib-2.6
 #		pam? ( sys-auth/consolekit )"
 
 DEPEND="${RDEPEND}
-		  dev-util/pkgconfig
+		dev-util/pkgconfig
 		>=dev-util/intltool-0.35
-		doc? ( app-doc/doxygen app-text/docbook-sgml-utils )"
+		doc? ( app-doc/doxygen
+				app-text/docbook-sgml-utils
+				app-text/xmlto )"
 
 PDEPEND="app-misc/hal-info"
 
