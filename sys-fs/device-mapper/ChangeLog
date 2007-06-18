@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.63 2007/05/21 14:05:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.64 2007/06/18 00:36:20 angelos Exp $
+
+  18 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  device-mapper-1.02.19.ebuild:
+  Stable on amd64 wrt bug 182367
 
   21 May 2007; Doug Goldstein <cardoe@gentoo.org> files/dm-start.sh:
   de-bash-ification by Uberlord
