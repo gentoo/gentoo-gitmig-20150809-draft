@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.472 2007/06/17 18:52:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.473 2007/06/18 20:10:10 philantrop Exp $
+
+  18 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
+  Added gammu and obex for app-mobilephone/kmobiletools.
 
   17 Jun 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Add local nanoemacs flag for app-editors/jasspa-microemacs.
