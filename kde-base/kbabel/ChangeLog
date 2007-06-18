@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.56 2007/05/22 21:20:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.57 2007/06/18 17:28:04 philantrop Exp $
+
+  18 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> kbabel-3.5.7.ebuild:
+  Allow sys-libs/db-4* to satisfy kbabel's dependencies as all of them work
+  fine. Removed the DEPEND on sys-devel/flex as it is a part of the official
+  BASE system profile.
 
 *kbabel-3.5.7 (22 May 2007)
 

@@ -1,31 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/kbabel-3.5.7.ebuild,v 1.1 2007/05/22 21:20:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/kbabel-3.5.7.ebuild,v 1.2 2007/06/18 17:28:04 philantrop Exp $
 
 KMNAME=kdesdk
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
-inherit kde-meta eutils
+inherit db-use kde-meta eutils
 
 DESCRIPTION="KBabel - An advanced PO file editor"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb kdehiddenvisibility"
 
-DEPEND="sys-devel/flex
-	berkdb? ( || ( =sys-libs/db-4.3*
-	               =sys-libs/db-4.2* ) )"
+DEPEND="berkdb? ( =sys-libs/db-4* )"
 
 src_compile() {
 	local myconf=""
 
 	if use berkdb; then
-		if has_version "=sys-libs/db-4.3*"; then
-			myconf="${myconf} --with-berkeley-db --with-db-name=db-4.3
-			        --with-db-include-dir=/usr/include/db4.3"
-		elif has_version "=sys-libs/db-4.2*"; then
-			myconf="${myconf} --with-berkeley-db --with-db-name=db-4.2
-			        --with-db-include-dir=/usr/include/db4.2"
-		fi
+		myconf="${myconf} --with-berkeley-db --with-db-lib="$(db_libname)"
+			--with-extra-includes=$(db_includedir)"
 	else
 		myconf="${myconf} --without-berkeley-db"
 	fi
