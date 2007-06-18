@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kate-symbolviewer-plugin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kate-symbolviewer-plugin/ChangeLog,v 1.1 2007/06/17 09:15:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kate-symbolviewer-plugin/ChangeLog,v 1.2 2007/06/18 05:46:43 philantrop Exp $
+
+  18 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kate-symbolviewer-plugin-1.10.0.ebuild:
+  Moved need-kde to its correct position after (R)DEPEND.
 
 *kate-symbolviewer-plugin-1.10.0 (17 Jun 2007)
 

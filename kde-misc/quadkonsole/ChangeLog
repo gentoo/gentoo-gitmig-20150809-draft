@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/quadkonsole
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.1 2007/06/17 20:27:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.2 2007/06/18 05:42:59 philantrop Exp $
+
+  18 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  quadkonsole-2.0.2.ebuild:
+  Moved need-kde to its correct position after (R)DEPEND.
 
 *quadkonsole-2.0.2 (17 Jun 2007)
 
