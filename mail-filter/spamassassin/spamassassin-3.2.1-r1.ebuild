@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r1.ebuild,v 1.1 2007/06/18 19:37:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r1.ebuild,v 1.2 2007/06/18 22:51:58 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -10,10 +10,11 @@ DESCRIPTION="SpamAssassin is an extensible email filter which is used to identif
 HOMEPAGE="http://spamassassin.apache.org/"
 SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
-SRC_TEST="do"
+#SRC_TEST="do"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+#KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite tools ipv6"
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
@@ -25,7 +26,6 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 	>=dev-perl/Net-DNS-0.53
 	dev-perl/Digest-SHA1
 	dev-perl/libwww-perl
-	dev-perl/Tie-Cache
 	>=dev-perl/Archive-Tar-1.26
 	app-crypt/gnupg
 	>=dev-perl/IO-Zlib-1.04
