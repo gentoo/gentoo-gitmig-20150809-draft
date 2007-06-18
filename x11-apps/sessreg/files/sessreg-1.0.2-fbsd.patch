@@ -1,0 +1,20 @@
+commit 136525f01e4ce8e60e8c78b44654d8f6861233d2
+Author: Alan Coopersmith <alan.coopersmith@sun.com>
+Date:   Mon Jun 11 16:38:00 2007 -0700
+
+    X.Org Bug #9887: sessreg should include sys/types.h on FreeBSD
+    
+    X.Org Bugzilla #9887: <https://bugs.freedesktop.org/show_bug.cgi?id=9887>
+
+diff --git a/sessreg.h b/sessreg.h
+index 84f8bab..9765e17 100644
+--- a/sessreg.h
++++ b/sessreg.h
+@@ -55,6 +55,7 @@
+ 
+ #include "config.h"
+ 
++#include <sys/types.h>
+ #include <time.h>
+ #include <utmp.h>
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.33 2007/05/20 22:03:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.34 2007/06/18 01:06:26 joshuabaergen Exp $
+
+  18 Jun 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/sessreg-1.0.2-fbsd.patch, sessreg-1.0.2.ebuild:
+  Bug #157916 - Fix building on FreeBSD.
 
   20 May 2007; Jeroen Roovers <jer@gentoo.org> sessreg-1.0.2.ebuild:
   Stable for HPPA (bug #175465).
