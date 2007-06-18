@@ -39,3 +39,7 @@ dev-python/imaging scanner X
 
 # Uses consolekit, which currently doesn't build
 gnome-base/gdm pam
+
+# Diego Pettenò <flameeyes@gentoo.org> (18 June 2007)
+# The tests requires JDK 1.4, we don't have it.
+=dev-java/xmlunit-1.0* test 
