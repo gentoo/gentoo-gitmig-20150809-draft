@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r1.ebuild,v 1.6 2007/06/18 12:01:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r2.ebuild,v 1.1 2007/06/18 12:01:21 caleb Exp $
 
 inherit eutils java-pkg-2
 
@@ -72,15 +72,28 @@ src_compile() {
 
 	# Step 5, compiling java files
 	einfo "Compiling java files"
-	cd ${S} && ejavac @java_files
+	mkdir -p ${S}/class
+	cd ${S} && ejavac -d class @java_files
 
 	# Step 6, build the jar file
-	cd ${S} && jar cf qtjambi.jar com
+	cd ${S}/class && jar cf ../qtjambi.jar com/trolltech/qt com/trolltech/tools
+	# copy built classes for demos and examples
+	cd ${S}/class && cp -r com/trolltech/demos com/trolltech/examples com/trolltech/launcher ../com/trolltech
+	cd ${S} && jar cf qtjambi-src.jar com
+
+	# generate start scripts
+	jcp="/usr/share/qtjambi-4/lib"
+	cd ${S} && echo "#!/bin/sh" > bin/jambi-designer
+	cd ${S} && echo "LD_LIBRARY_PATH=/usr/lib/qt4 CLASSPATH=${jcp}/qtjambi.jar:${jcp}/qtjambi-src.jar:$CLASSPATH /usr/bin/designer" >> bin/jambi-designer
+
+	cd ${S} && echo "#!/bin/sh" > bin/jambi
+	cd ${S} && echo "LD_LIBRARY_PATH=/usr/lib/qt4 java -cp ${jcp}/qtjambi.jar:${jcp}/qtjambi-src.jar com.trolltech.launcher.Launcher" >> bin/jambi
 }
 
 src_install() {
 	# Install built jar
 	java-pkg_dojar qtjambi.jar
+	java-pkg_dojar qtjambi-src.jar
 
 	# Install designer plugins
 	insinto /usr/$(get_libdir)/qt4/plugins/designer
@@ -92,4 +105,8 @@ src_install() {
 	# Install binaries
 	dobin bin/*
 
+	einfo "eclipse - Project->Properties->Java Build Path->Libraries:"
+	einfo "library:                        /usr/share/qtjambi-4/lib/qtjambi.jar"
+	einfo "source (& demos):                /usr/share/qtjambi-4/lib/qtjambi-src.jar"
+	einfo "native library location:        /usr/$(get_libdir)/qt4/"
 }
