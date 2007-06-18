@@ -1,0 +1,79 @@
+--- build.xml.orig	2007-06-18 09:19:50.000000000 -0400
++++ build.xml	2007-06-18 09:20:19.000000000 -0400
+@@ -85,11 +85,13 @@
+   <!-- Setting-up Ant contrib tasks -->
+     <taskdef resource="net/sf/antcontrib/antlib.xml"
+              classpath="${ant-contrib.jar}"/>
++       <!--
+     <fail message="External library ${ant-contrib.jar} requires the optional Ant tasks to be installed">
+       <condition><not><and>
+         <available file="${ant.home}/lib/ant-nodeps.jar"/>
+       </and></not></condition>
+     </fail>
++       -->
+   </target>
+ 
+ <!-- ===========================================================================
+@@ -784,7 +786,7 @@
+ DOCUMENTATION
+ ============================================================================ -->
+ 
+-  <target name="docs" depends="setup.quick"
++  <target name="docs" depends="setup.quick" if="do.docs"
+     description="Generated the API for library sources">
+     <mkdir dir="${api-lib.dir}"/>
+     <quickdoc
+@@ -802,7 +804,7 @@
+     </quickdoc>
+   </target>
+ 
+-  <target name="docs.compiler" depends="setup.quick"
++  <target name="docs.compiler" depends="setup.quick" if="do.docs"
+     description="Generated the API for compiler sources">
+     <mkdir dir="${api-comp.dir}"/>
+     <quickdoc
+@@ -886,7 +888,7 @@
+ 
+   <target name="dist.patch" depends="init">
+     <propertyfile file="${number.file}">
+-      <entry key="version.patch" type="int" default="0" operation="+"/>
++      <entry key="version.patch" type="int" default="0"/>
+     </propertyfile>
+     <property file="${number.file}"/>
+     <property name="version.number"
+@@ -896,7 +898,7 @@
+ 
+   <target name="dist.minor" depends="init">
+     <propertyfile file="${number.file}">
+-      <entry key="version.minor" type="int" default="0" operation="+"/>
++      <entry key="version.minor" type="int" default="0"/>
+       <entry key="version.patch" type="int" value="0"/>
+     </propertyfile>
+     <property file="${number.file}"/>
+@@ -1045,7 +1047,7 @@
+     <copy todir="${dist.current.dir}/doc/scala">
+       <fileset dir="${docs.dir}" includes="README,LICENSE"/>
+     </copy>
+-    <copy todir="${dist.current.dir}/doc/scala/api">
++    <copy todir="${dist.current.dir}/doc/scala/api" failonerror="false">
+       <fileset dir="${api-lib.dir}"/>
+     </copy>
+     <copy todir="${dist.current.dir}/doc/scala/examples">
+@@ -1066,7 +1068,7 @@
+   </target>
+ 
+   <!-- Create the SBaz packages -->
+-  <target name="build.sbaz" depends="build.dist">
++  <target name="build.sbaz" depends="build.dist" if="do.archive">
+     <property name="sbaz.universe" value="http://scala.epfl.ch/downloads/packages"/>
+     <mkdir dir="${dist.dir}"/>
+   <!-- Create the Scala library package -->
+@@ -1120,7 +1122,7 @@
+     </quicksbaz>
+   </target>
+ 
+-  <target name="build.archive" depends="build.dist">
++  <target name="build.archive" depends="build.dist" if="do.archive">
+     <tar
+       destfile="${dist.dir}/scala-${version.number}.tgz"
+       compression="gzip">
