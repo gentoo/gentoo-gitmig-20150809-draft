@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.22 2007/02/21 23:28:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.23 2007/06/18 01:07:31 angelos Exp $
+
+  18 Jun 2007; Christoph Mende <angelos@gentoo.org> gsview-4.8.ebuild:
+  Stable on amd64 wrt bug 182403
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
