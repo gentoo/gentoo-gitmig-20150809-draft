@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0.ebuild,v 1.4 2007/06/18 05:45:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0.ebuild,v 1.5 2007/06/18 11:16:30 armin76 Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 
 MY_P=${PN}_$(replace_all_version_separators _)
 
