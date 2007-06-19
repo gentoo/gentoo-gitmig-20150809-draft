@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.51 2007/06/09 22:18:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.52 2007/06/19 17:40:37 armin76 Exp $
+
+  19 Jun 2007; Raúl Porcel <armin76@gentoo.org> g-wrap-1.9.8.ebuild:
+  Add ~alpha wrt #162010
 
   09 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; g-wrap-1.9.8.ebuild:
   Add http:// to SRC_URI for patch (Jakub Moc).

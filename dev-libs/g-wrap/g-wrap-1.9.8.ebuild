@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.8.ebuild,v 1.2 2007/06/09 22:18:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.8.ebuild,v 1.3 2007/06/19 17:40:37 armin76 Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="A tool for exporting C libraries into Scheme"
 HOMEPAGE="http://www.nongnu.org/g-wrap/"
 SRC_URI="http://download.savannah.gnu.org/releases/g-wrap/${P}.tar.gz
 	http://dev.gentoo.org/~dberkholz/distfiles/${P}-gcc-4.2.0.patch.bz2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~alpha ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
