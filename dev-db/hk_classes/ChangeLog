@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.52 2007/04/07 13:29:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.53 2007/06/19 20:29:30 philantrop Exp $
+
+  19 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  hk_classes-0.8.3.ebuild:
+  The tests this package provides are broken and have thus been disabled.
+  Fixes bug 182568.
 
 *hk_classes-0.8.3 (20 Mar 2007)
 
