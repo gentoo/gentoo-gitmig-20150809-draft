@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.28 2007/03/13 00:25:20 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.29 2007/06/19 11:25:08 pylon Exp $
+
+*latex-beamer-3.07 (19 Jun 2007)
+
+  19 Jun 2007; Lars Weiler <pylon@gentoo.org> +latex-beamer-3.07.ebuild:
+  Version bump and installation change for tetex-3.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
