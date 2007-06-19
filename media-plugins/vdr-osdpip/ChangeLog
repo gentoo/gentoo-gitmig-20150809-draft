@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-osdpip
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.1 2006/07/06 13:51:29 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.2 2007/06/19 12:02:40 zzam Exp $
+
+  19 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdpip-0.0.8-r1.ebuild:
+  Marked stable on x86.
 
 *vdr-osdpip-0.0.8-r1 (06 Jul 2006)
 
