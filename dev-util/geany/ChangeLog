@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/geany
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.1 2007/06/19 17:19:11 drac Exp $
+
+*geany-0.11 (19 Jun 2007)
+
+  19 Jun 2007; Samuli Suominen <drac@gentoo.org> +geany-0.11.ebuild:
+  Initial commit for bug 114815. Thanks to Mathieu Bonnet, Paul Bredbury, Yura
+  Semashko, Lucas Chiesa, Steev Klimaszewski, Pacho Ramos and many others.
+
