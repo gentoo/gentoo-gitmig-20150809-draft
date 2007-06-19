@@ -2,3 +2,6 @@
 # upstream forces sse2 on regardless of what the use flag is
 dev-libs/openssl sse2
 media-libs/libsoundtouch sse
+
+# Gustavo Felisberto <humpback@gentoo.org> 19-06-2007
+net-im/skype qt-static
