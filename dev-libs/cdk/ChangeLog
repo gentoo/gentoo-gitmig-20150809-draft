@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.49 2007/03/28 21:13:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.50 2007/06/19 11:03:18 armin76 Exp $
+
+  19 Jun 2007; Raúl Porcel <armin76@gentoo.org> cdk-5.0.20060507.ebuild:
+  alpha stable wrt #168106
 
   28 Mar 2007; Raúl Porcel <armin76@gentoo.org> cdk-5.0.20060507.ebuild:
   ia64 stable wrt bug 168106
