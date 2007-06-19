@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.17 2007/06/19 06:12:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.18 2007/06/19 06:18:02 opfer Exp $
+
+  19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> gnuplot-4.2.0.ebuild:
+  use_enable instead of use_with for wxwindows, fixes bug 172701 reported by
+  Petr Pisar <petr.pisar@atlas.cz>
 
   19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
   gnuplot-4.2.0.ebuild:

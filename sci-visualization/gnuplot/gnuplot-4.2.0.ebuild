@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0.ebuild,v 1.2 2007/06/19 06:12:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0.ebuild,v 1.3 2007/06/19 06:18:02 opfer Exp $
 
 inherit eutils elisp-common wxwidgets
 
@@ -66,7 +66,7 @@ src_compile() {
 	myconf="${myconf} $(use_with X x)"
 	myconf="${myconf} $(use_with svga linux-vga)"
 	myconf="${myconf} $(use_with gd)"
-	myconf="${myconf} $(use_with wxwindows wxwidgets)"
+	myconf="${myconf} $(use_enable wxwindows wxwidgets)"
 	myconf="${myconf} $(use_with plotutils plot /usr/lib)"
 	myconf="${myconf} $(use_with png png /usr/lib)"
 	myconf="${myconf} $(use_with pdf pdf /usr/lib)"
