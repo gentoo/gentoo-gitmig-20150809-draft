@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX emacs-cvs-Xaw3d-headers.patch 2045 RMD160 96b8ce942b83a5177c965a9a3a485496eb672c67 SHA1 a04c98c22ed9608ac6d81db0b9031da9a5b115db SHA256 ed1ad532e6476a0c2311e2c76db82035455948ace4dffb17b3e6493ec22af59c
 MD5 2f28d7e33295c25205c50466d3deac65 files/emacs-cvs-Xaw3d-headers.patch 2045
 RMD160 96b8ce942b83a5177c965a9a3a485496eb672c67 files/emacs-cvs-Xaw3d-headers.patch 2045
@@ -44,3 +47,11 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-23.0.0-r6 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-emacs-cvs-23.0.0-r6 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-emacs-cvs-23.0.0-r6 0
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFGd47MOeoy/oIi7uwRAqv3AKCwPdtVTfpAH8eqWIcz9pLCqhHlJgCdEcvg
+Yw50DhewOvPuRH9oO4auRhc=
+=vyPO
+-----END PGP SIGNATURE-----
