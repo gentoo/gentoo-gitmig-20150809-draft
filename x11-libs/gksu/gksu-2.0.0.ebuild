@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.18 2007/05/27 04:07:11 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.19 2007/06/19 21:45:38 dang Exp $
 
 inherit gnome2 fixheadtails
 
@@ -39,4 +39,14 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 	einfo 'updating configuration'
 	"${ROOT}"/usr/share/gksu/gksu-migrate-conf.sh
+	einfo ""
+	einfo "A note on gksudo:  It actually runs sudo to get it's work done"
+	einfo "However, by default, Gentoo's sudo wipes your envinronment."
+	einfo "This means that gksudo will fail to run any X-based programs."
+	einfo "You need to either add yourself to wheel and uncomment this line"
+	einfo "in your /etc/sudoers:"
+	einfo "Defaults:%wheel   !env_reset"
+	einfo "Or remove the env_reset line entirely.  This can cause security"
+	einfo "problems; if you don't trust your users, don't do this, use gksu"
+	einfo "instead."
 }
