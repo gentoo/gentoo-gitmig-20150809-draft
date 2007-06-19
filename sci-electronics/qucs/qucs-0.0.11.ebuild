@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.11.ebuild,v 1.1 2007/03/18 16:19:05 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.11.ebuild,v 1.2 2007/06/19 06:54:20 cryos Exp $
 
 inherit qt3
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://qucs.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="$(qt_min_version 3.3.4)"
 
