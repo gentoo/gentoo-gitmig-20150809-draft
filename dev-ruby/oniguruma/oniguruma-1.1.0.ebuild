@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oniguruma/oniguruma-1.1.0.ebuild,v 1.1 2007/06/19 01:32:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oniguruma/oniguruma-1.1.0.ebuild,v 1.2 2007/06/19 01:40:49 nichoj Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ DESCRIPTION="Ruby bindings to the Oniguruma"
 HOMEPAGE="http://oniguruma.rubyforge.org/"
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
-LICENSE="MIT"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86" 
 IUSE=""
