@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.73 2007/06/06 20:21:26 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.74 2007/06/19 07:50:22 genstef Exp $
+
+  19 Jun 2007; Stefan Schweizer <genstef@gentoo.org> hostapd-0.4.9.ebuild,
+  hostapd-0.5.8.ebuild, hostapd-0.6.0.ebuild:
+  New madwifi-ng-tools depends thanks to Gordon Malm
+  <bugs-gentoo-org-01@bumpin.org> in bug 179348
 
 *hostapd-0.5.8 (06 Jun 2007)
 

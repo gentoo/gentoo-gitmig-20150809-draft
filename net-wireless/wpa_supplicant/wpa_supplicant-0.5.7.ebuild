@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.7.ebuild,v 1.5 2007/02/23 12:24:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.7.ebuild,v 1.6 2007/06/19 07:54:17 genstef Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,8 +16,10 @@ IUSE="dbus gnutls gsm madwifi qt3 qt4 readline ssl kernel_linux kernel_FreeBSD"
 RDEPEND="dbus? ( sys-apps/dbus )
 		kernel_linux? (
 			gsm? ( sys-apps/pcsc-lite )
-		 	madwifi? (
-				|| ( net-wireless/madwifi-ng net-wireless/madwifi-old )
+		 	madwifi? ( ||
+				( >net-wireless/madwifi-ng-tools-0.9.3
+				<net-wireless/madwifi-ng-0.9.3-r4
+				net-wireless/madwifi-old )
 			)
 		)
 		!kernel_linux? ( net-libs/libpcap )
@@ -205,8 +207,8 @@ pkg_postinst() {
 
 	if use madwifi; then
 		echo
-		einfo "This package now compiles against the headers installed by"
-		einfo "the madwifi driver. You should reemerge ${PN} after"
-		einfo "upgrading your madwifi driver."
+		einfo "This package compiles against the headers installed by"
+		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
+		einfo "You should remerge ${PN} after upgrading these packages."
 	fi
 }

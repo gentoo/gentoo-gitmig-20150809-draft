@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.4 2007/03/11 00:50:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.5 2007/06/19 07:50:22 genstef Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,10 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="ipv6 logwatch madwifi ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
-		madwifi? ( || ( net-wireless/madwifi-ng net-wireless/madwifi-old ) )"
+	madwifi? ( ||
+		( >net-wireless/madwifi-ng-tools-0.9.3
+		<net-wireless/madwifi-ng-0.9.3-r4
+		net-wireless/madwifi-old ) )"
 DEPEND="${RDEPEND}
 		sys-apps/sed"
 
@@ -109,9 +112,9 @@ pkg_postinst() {
 	einfo "mode_wlan0=\"master\""
 	einfo
 	if use madwifi; then
-		einfo "This package now compiles against the headers installed by"
-		einfo "the madwifi driver. You should remerge ${PN} after"
-		einfo "upgrading your madwifi driver."
+		einfo "This package compiles against the headers installed by"
+		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
+		einfo "You should remerge ${PN} after upgrading these packages."
 		einfo
 	fi
 }
