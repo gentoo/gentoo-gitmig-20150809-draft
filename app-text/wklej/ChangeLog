@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.1 2007/04/23 23:57:13 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.2 2007/06/19 22:10:54 jurek Exp $
+
+  19 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> wklej-0.0.5.ebuild:
+  Added ~x86-fbsd keyword
 
 *wklej-0.0.5 (23 Apr 2007)
 
