@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.192 2007/06/19 20:10:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.193 2007/06/19 20:12:00 cardoe Exp $
+
+  19 Jun 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9.1.ebuild:
+  oops. Committed straight to stable
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> hal-0.5.7.1-r5.ebuild:
   alpha stable wrt #166790, thanks to Tobias Klausmann for testing
