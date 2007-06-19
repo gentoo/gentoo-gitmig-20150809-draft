@@ -1,0 +1,4 @@
+default-linux/hppa/2007.0
+# This profile is deprecated and will be removed on or after July 19, 2007.
+# Please upgrade your system packages and then set the make.profile symlink to
+# default-linux/hppa/2007.0 or use app-admin/eselect (eselect profile help).
