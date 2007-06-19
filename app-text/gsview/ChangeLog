@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.23 2007/06/18 01:07:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.24 2007/06/19 07:08:00 opfer Exp $
+
+  19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> gsview-4.8.ebuild:
+  stable x86, bug 182403
 
   18 Jun 2007; Christoph Mende <angelos@gentoo.org> gsview-4.8.ebuild:
   Stable on amd64 wrt bug 182403
