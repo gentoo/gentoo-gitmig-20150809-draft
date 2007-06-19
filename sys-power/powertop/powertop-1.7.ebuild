@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.6.ebuild,v 1.2 2007/06/10 14:29:31 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.7.ebuild,v 1.1 2007/06/19 21:06:11 drizzt Exp $
 
 inherit toolchain-funcs eutils
 
