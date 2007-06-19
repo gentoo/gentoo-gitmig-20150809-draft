@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.29 2007/06/19 11:25:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.30 2007/06/19 12:06:34 pylon Exp $
+
+  19 Jun 2007; Lars Weiler <pylon@gentoo.org> latex-beamer-3.07.ebuild:
+  Introduce doc and lyx USE-flags.  Without doc install a minimal version only.
 
 *latex-beamer-3.07 (19 Jun 2007)
 
