@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.26 2007/06/19 18:06:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.27 2007/06/19 18:08:36 wolf31o2 Exp $
+
+  19 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild, libkudzu-1.2.57.1.ebuild:
+  Added append-ldflags -lz so we can build and work against pciutils with
+  USE=zlib.
 
   19 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -libkudzu-1.2.41.ebuild:

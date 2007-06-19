@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.16 2007/05/02 06:50:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.17 2007/06/19 18:08:36 wolf31o2 Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="http://www.ibiblio.org/onebase/devbase/app-packs/kudzu-${PV}.tar.bz2"
@@ -30,6 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
+	append-ldflags -lz
 	# Fix the modules directory to match Gentoo layout.
 	perl -pi -e 's|/etc/modutils/kudzu|/etc/modules.d/kudzu|g' *.*
 
