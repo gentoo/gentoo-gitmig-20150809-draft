@@ -3,3 +3,8 @@
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
+
+# Alexander "eroyf" Færøy <alexander.faeroey@gmail.com>
+# Temporary masked due to QA issues with HAL (bug #166790).
+# Removal of this entry is only allowed by the QA team. See GLEP 48.
+sys-apps/pciutils zlib
