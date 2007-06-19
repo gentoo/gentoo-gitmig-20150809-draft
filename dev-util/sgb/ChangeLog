@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sgb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.5 2007/02/09 07:47:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.6 2007/06/19 23:25:54 opfer Exp $
+
+  19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> sgb-20030623.ebuild:
+  stable x86, bug 181580
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
