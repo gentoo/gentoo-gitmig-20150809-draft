@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.191 2007/06/19 20:02:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.192 2007/06/19 20:10:09 cardoe Exp $
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> hal-0.5.7.1-r5.ebuild:
   alpha stable wrt #166790, thanks to Tobias Klausmann for testing
@@ -303,6 +303,12 @@
 
   14 Feb 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.7.1-r5.ebuild:
   ACPI stuff didn't work for -r5. Waiting until 0.5.8.1
+
+*hal-0.5.7.1-r5 (13 Feb 2007)
+
+  13 Feb 2007; Doug Goldstein <cardoe@gentoo.org> +hal-0.5.7.1-r5.ebuild:
+  Turn dmi on always for amd64, ia64, and x86. Fix ACPI support, prefering
+  ACPI proc vs ACPId. bug #165822, bug #157220, bug #164652, & bug #152923
 
   13 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> hal-0.5.7.1-r3.ebuild:
   Stable on Alpha + IA64.
