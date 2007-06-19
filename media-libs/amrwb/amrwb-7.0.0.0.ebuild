@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/amrwb-7.0.0.0.ebuild,v 1.2 2007/05/26 06:30:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/amrwb-7.0.0.0.ebuild,v 1.3 2007/06/19 16:57:36 jer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.penguin.cz/pub/users/utx/amr/${P}.tar.bz2
 RESTRICT="mirror"
 LICENSE="LGPL-2 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amrnb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.2 2007/05/26 06:28:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.3 2007/06/19 16:54:26 jer Exp $
+
+  19 Jun 2007; Jeroen Roovers <jer@gentoo.org> amrnb-6.1.0.3.ebuild:
+  Marked ~hppa.
 
   26 May 2007; Luca Barbato <lu_zero@gentoo.org> amrnb-6.1.0.3.ebuild:
   Marked ~ppc and ~ppc64
