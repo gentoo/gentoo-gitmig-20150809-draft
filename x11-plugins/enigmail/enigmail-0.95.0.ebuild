@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.0.ebuild,v 1.12 2007/06/15 17:25:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.0.ebuild,v 1.13 2007/06/19 21:31:47 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -10,7 +10,7 @@ LANGS="de el es-ES nb-NO pt-BR zh-CN"
 SHORTLANGS="ca-AD es-ES fi-FI fr-FR hu-HU it-IT ja-JP nb-NO pl-PL pt-PT ru-RU sl-SI sv-SE"
 
 EMVER=${PV}
-TBVER="2.0.0.0"
+TBVER="2.0.0.4"
 TBPVER="0.1"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
