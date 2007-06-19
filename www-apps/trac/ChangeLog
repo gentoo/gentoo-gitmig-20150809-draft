@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.57 2007/04/23 12:51:26 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.58 2007/06/19 12:23:25 dju Exp $
+
+  19 Jun 2007; Julien Allanos <dju@gentoo.org> files/tracd.initd:
+  Fixed tracd init script, closing bug #179197.
 
 *trac-0.10.4 (23 Apr 2007)
 
