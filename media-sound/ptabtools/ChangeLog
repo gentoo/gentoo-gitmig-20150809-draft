@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ptabtools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.9 2007/02/22 01:21:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.10 2007/06/19 23:11:58 angelos Exp $
+
+  19 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  ptabtools-0.3.1-r2.ebuild:
+  Added ~amd64
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
