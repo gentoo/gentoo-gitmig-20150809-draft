@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ink-0.4.0.ebuild,v 1.1 2007/05/01 11:34:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ink-0.4.1.ebuild,v 1.1 2007/06/19 07:34:24 genstef Exp $
 
 DESCRIPTION="A command line utility to display the ink level of your printer"
 SRC_URI="mirror://sourceforge/ink/${P/_}.tar.gz"
