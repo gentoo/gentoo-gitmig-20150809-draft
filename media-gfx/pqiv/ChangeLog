@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.4 2007/06/01 00:02:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.5 2007/06/19 13:59:33 drac Exp $
+
+*pqiv-0.2 (19 Jun 2007)
+
+  19 Jun 2007; Samuli Suominen <drac@gentoo.org> -pqiv-0.1.ebuild,
+  +pqiv-0.2.ebuild:
+  Version bump.
 
   01 Jun 2007; Christoph Mende <angelos@gentoo.org> pqiv-0.1.ebuild:
   Added ~amd64
