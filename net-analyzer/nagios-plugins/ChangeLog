@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.66 2007/06/16 13:38:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.67 2007/06/19 07:04:18 opfer Exp $
+
+  19 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  nagios-plugins-1.4.8-r1.ebuild:
+  stable x86, bug 154418
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org>
   nagios-plugins-1.4.8-r1.ebuild:
