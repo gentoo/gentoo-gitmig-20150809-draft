@@ -1,0 +1,8 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2006.1/package.mask,v 1.1 2007/06/19 15:41:10 jer Exp $
+
+# Jeroen Roovers <jer@gentoo.org> (18 Jun 2007)
+# If you want to upgrade sys-libs/glibc to 2.5, please upgrade all system
+# packages first, and then switch to the default-linux/hppa/2007.0 profile
+>sys-libs/glibc-2.4
