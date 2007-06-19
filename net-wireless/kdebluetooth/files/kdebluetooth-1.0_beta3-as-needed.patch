@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!-- git web interface version 1.5.0.1.GIT, (C) 2005-2006, Kay Sievers <kay.sievers@vrfy.org>, Christian Gierke -->
+<!-- git core binaries version 1.5.1.2.GIT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="gitweb/1.5.0.1.GIT git/1.5.1.2.GIT"/>
+<meta name="robots" content="index, nofollow"/>
+<title>git.altlinux.org - kdebluetooth.git/summary</title>
+<link rel="stylesheet" type="text/css" href="/gitweb.css"/>
+<link rel="alternate" title="kdebluetooth.git log RSS feed" href="/people/wrar/packages/?p=kdebluetooth.git;a=rss" type="application/rss+xml" />
+<link rel="alternate" title="kdebluetooth.git log Atom feed" href="/people/wrar/packages/?p=kdebluetooth.git;a=atom" type="application/atom+xml" />
+<link rel="shortcut icon" href="/icons/git-favicon.png" type="image/png"/>
+</head>
+<body>
+<div class="page_header">
+<a title="git homepage" href="http://git.or.cz/"><img src="/icons/git-logo.png" width="72" height="27" alt="git" class="logo"/></a><a href="/people/wrar/packages/">http://git.altlinux.org/people/wrar/packages</a> / <a href="/people/wrar/packages/?p=kdebluetooth.git;a=summary">kdebluetooth.git</a> / summary
+<form method="get" action="/people/wrar/packages/" enctype="application/x-www-form-urlencoded">
+<div class="search">
+<input type="hidden" name="p" value="kdebluetooth.git"  />
+<input type="hidden" name="a" value="search"  />
+<input type="hidden" name="h" value="HEAD"  />
+<select name="st" >
+<option selected="selected" value="commit">commit</option>
+<option value="author">author</option>
+<option value="committer">committer</option>
+</select><sup><a href="/people/wrar/packages/?p=kdebluetooth.git;a=search_help">?</a></sup> search:
+<input type="text" name="s"  />
+</div>
+</form>
+</div>
+<div class="page_nav">
+summary | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log">log</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree">tree</a><br/>
+<br/>
+</div>
+<div class="title">&nbsp;</div>
+<table cellspacing="0">
+<tr><td>description</td><td>packages/kdebluetooth</td></tr>
+<tr><td>last change</td><td>Sat, 16 Jun 2007 14:14:32 +0000</td></tr>
+</table>
+<div class="header">
+<a class="title" href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog">shortlog</a>
+</div>
+<table class="shortlog" cellspacing="0">
+<tr class="dark">
+<td title="2007-06-16"><i>3 days ago</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">1.0-alt8.beta3 <span class="refs"> <span class="head" title="heads/master">master</span> <span class="tag" title="tags/1.0-alt8.beta3">1.0-alt8.beta3</span></span></a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d;hb=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="2007-06-16"><i>3 days ago</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=be555000b58c03863e3b88aa0389b8f6e3474faf">1.0 beta3</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=be555000b58c03863e3b88aa0389b8f6e3474faf">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=be555000b58c03863e3b88aa0389b8f6e3474faf">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=be555000b58c03863e3b88aa0389b8f6e3474faf;hb=be555000b58c03863e3b88aa0389b8f6e3474faf">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=be555000b58c03863e3b88aa0389b8f6e3474faf">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="2007-06-16"><i>3 days ago</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=8b205b516f8dfbcc77edab9a35754039d066469d">Merge branch 'zergimport'</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=8b205b516f8dfbcc77edab9a35754039d066469d">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=8b205b516f8dfbcc77edab9a35754039d066469d">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=8b205b516f8dfbcc77edab9a35754039d066469d;hb=8b205b516f8dfbcc77edab9a35754039d066469d">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=8b205b516f8dfbcc77edab9a35754039d066469d">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="2007-06-16"><i>3 days ago</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=e179d70aab22b2fd860bfb6321638b074d72cbd8">1.0-alt7.beta2 <span class="refs"> <span class="tag" title="tags/1.0-alt7.beta2">1.0-alt7.beta2</span></span></a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=e179d70aab22b2fd860bfb6321638b074d72cbd8">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=e179d70aab22b2fd860bfb6321638b074d72cbd8">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=e179d70aab22b2fd860bfb6321638b074d72cbd8;hb=e179d70aab22b2fd860bfb6321638b074d72cbd8">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=e179d70aab22b2fd860bfb6321638b074d72cbd8">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="6 months ago"><i>2006-12-16</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=60a58631fad880db8cc8f3e1c4f26e9324763d08">make --enable-irmcsynckonnector build option</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=60a58631fad880db8cc8f3e1c4f26e9324763d08">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=60a58631fad880db8cc8f3e1c4f26e9324763d08">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=60a58631fad880db8cc8f3e1c4f26e9324763d08;hb=60a58631fad880db8cc8f3e1c4f26e9324763d08">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=60a58631fad880db8cc8f3e1c4f26e9324763d08">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="7 months ago"><i>2006-11-11</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=90d54a524bf2083551a752044de763ca2ee9b67d">1.0-alt6.beta2 <span class="refs"> <span class="tag" title="tags/1.0-alt6.beta2">1.0-alt6.beta2</span> <span class="tag" title="tags/sisyphus">sisyphus</span></span></a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=90d54a524bf2083551a752044de763ca2ee9b67d">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=90d54a524bf2083551a752044de763ca2ee9b67d">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=90d54a524bf2083551a752044de763ca2ee9b67d;hb=90d54a524bf2083551a752044de763ca2ee9b67d">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=90d54a524bf2083551a752044de763ca2ee9b67d">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 months ago"><i>2006-11-08</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=4cd0063e825dd956e2d1ed9b7ce4cf1e63ffe558">fix default linkkeys file path</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=4cd0063e825dd956e2d1ed9b7ce4cf1e63ffe558">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=4cd0063e825dd956e2d1ed9b7ce4cf1e63ffe558">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=4cd0063e825dd956e2d1ed9b7ce4cf1e63ffe558;hb=4cd0063e825dd956e2d1ed9b7ce4cf1e63ffe558">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=4cd0063e825dd956e2d1ed9b7ce4cf1e63ffe558">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="7 months ago"><i>2006-11-06</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">1.0-alt5.beta2 <span class="refs"> <span class="tag" title="tags/1.0-alt5.beta2">1.0-alt5.beta2</span></span></a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890;hb=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 months ago"><i>2006-11-06</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=fea4b3cc62c255e5f35c92ff0cb570e2832cf518">remove obsolete patches</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=fea4b3cc62c255e5f35c92ff0cb570e2832cf518">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=fea4b3cc62c255e5f35c92ff0cb570e2832cf518">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=fea4b3cc62c255e5f35c92ff0cb570e2832cf518;hb=fea4b3cc62c255e5f35c92ff0cb570e2832cf518">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=fea4b3cc62c255e5f35c92ff0cb570e2832cf518">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="7 months ago"><i>2006-11-06</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=5f510ddf6925e0b06c8a24cf6e07151381631cd1">import 1.0 beta2 tarball</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=5f510ddf6925e0b06c8a24cf6e07151381631cd1">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=5f510ddf6925e0b06c8a24cf6e07151381631cd1">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=5f510ddf6925e0b06c8a24cf6e07151381631cd1;hb=5f510ddf6925e0b06c8a24cf6e07151381631cd1">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=5f510ddf6925e0b06c8a24cf6e07151381631cd1">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 months ago"><i>2006-11-06</i></td>
+<td><i>Andrey Rahmatullin</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=7a83714565cb1878007cdae85e3ebc0ae2d9ca6e">rename source dir</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=7a83714565cb1878007cdae85e3ebc0ae2d9ca6e">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=7a83714565cb1878007cdae85e3ebc0ae2d9ca6e">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=7a83714565cb1878007cdae85e3ebc0ae2d9ca6e;hb=7a83714565cb1878007cdae85e3ebc0ae2d9ca6e">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=7a83714565cb1878007cdae85e3ebc0ae2d9ca6e">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="8 months ago"><i>2006-09-19</i></td>
+<td><i>Eugene Suchkov</i></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7">1.0-alt4.beta1 <span class="refs"> <span class="head" title="heads/srpms">srpms</span> <span class="tag" title="tags/1.0-alt4.beta1">1.0-alt4.beta1</span></span></a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commitdiff;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7">commitdiff</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7;hb=f8efeb26ea62d2edb41c8a615734ea6c951385e7">tree</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=snapshot;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7">snapshot</a></td>
+</tr>
+</table>
+<div class="header">
+<a class="title" href="/people/wrar/packages/?p=kdebluetooth.git;a=tags">tags</a>
+</div>
+<table class="tags" cellspacing="0">
+<tr class="dark">
+<td><i>3 days ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">1.0-alt8.beta3</a></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=fd4f54e69caaed57a3d905e2e530e5ba3f24dac8">1.0-alt8.beta3</a></td>
+<td class="selflink"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=fd4f54e69caaed57a3d905e2e530e5ba3f24dac8">tag</a></td>
+<td class="link"> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9b72a38f760a0ec2168192c7bb91a9f0b1b7cf3d">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=1.0-alt8.beta3">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=1.0-alt8.beta3">log</a></td>
+</tr><tr class="light">
+<td><i>3 days ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=e179d70aab22b2fd860bfb6321638b074d72cbd8">1.0-alt7.beta2</a></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=71a684b4450281faa8377d39e2252c78bb34a7ba">1.0-alt7.beta2</a></td>
+<td class="selflink"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=71a684b4450281faa8377d39e2252c78bb34a7ba">tag</a></td>
+<td class="link"> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=e179d70aab22b2fd860bfb6321638b074d72cbd8">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=1.0-alt7.beta2">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=1.0-alt7.beta2">log</a></td>
+</tr><tr class="dark">
+<td><i>7 months ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=4bc3c618c25436f8f62e850a031051ce5dc263c7">sisyphus</a></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=cf563a3cc24d47e9080331ddc522d67e35f367bd">Package name: kdebluetooth</a></td>
+<td class="selflink"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=cf563a3cc24d47e9080331ddc522d67e35f367bd">tag</a></td>
+<td class="link"> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=4bc3c618c25436f8f62e850a031051ce5dc263c7">tag</a></td>
+</tr><tr class="light">
+<td><i>7 months ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=90d54a524bf2083551a752044de763ca2ee9b67d">1.0-alt6.beta2</a></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=4bc3c618c25436f8f62e850a031051ce5dc263c7">1.0-alt6.beta2</a></td>
+<td class="selflink"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=4bc3c618c25436f8f62e850a031051ce5dc263c7">tag</a></td>
+<td class="link"> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=90d54a524bf2083551a752044de763ca2ee9b67d">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=1.0-alt6.beta2">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=1.0-alt6.beta2">log</a></td>
+</tr><tr class="dark">
+<td><i>7 months ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">1.0-alt5.beta2</a></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=c61377d5fad0df02379341a0b88733430d53f9a9">1.0-alt5.beta2</a></td>
+<td class="selflink"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=c61377d5fad0df02379341a0b88733430d53f9a9">tag</a></td>
+<td class="link"> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=9f4ca4f493cb70bf11b07f720f84dac0b2f6e890">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=1.0-alt5.beta2">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=1.0-alt5.beta2">log</a></td>
+</tr><tr class="light">
+<td><i>8 months ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7">1.0-alt4.beta1</a></td>
+<td><a class="list subject" href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=2ffd2707b42ed7bca31a1e4128726d3376ac5c83">kdebluetooth 1.0-alt4.beta1</a></td>
+<td class="selflink"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=tag;h=2ffd2707b42ed7bca31a1e4128726d3376ac5c83">tag</a></td>
+<td class="link"> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=commit;h=f8efeb26ea62d2edb41c8a615734ea6c951385e7">commit</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=1.0-alt4.beta1">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=1.0-alt4.beta1">log</a></td>
+</tr></table>
+<div class="header">
+<a class="title" href="/people/wrar/packages/?p=kdebluetooth.git;a=heads">heads</a>
+</div>
+<table class="heads" cellspacing="0">
+<tr class="dark">
+<td><i>3 days ago</i></td>
+<td class="current_head"><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=master">master</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=master">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=master">log</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=master;hb=master">tree</a></td>
+</tr><tr class="light">
+<td><i>8 months ago</i></td>
+<td><a class="list name" href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=srpms">srpms</a></td>
+<td class="link"><a href="/people/wrar/packages/?p=kdebluetooth.git;a=shortlog;h=srpms">shortlog</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=log;h=srpms">log</a> | <a href="/people/wrar/packages/?p=kdebluetooth.git;a=tree;h=srpms;hb=srpms">tree</a></td>
+</tr></table>
+<div class="page_footer">
+<div class="page_footer_text">packages/kdebluetooth</div>
+<a class="rss_logo" href="/people/wrar/packages/?p=kdebluetooth.git;a=rss">RSS</a> <a class="rss_logo" href="/people/wrar/packages/?p=kdebluetooth.git;a=atom">Atom</a>
+</div>
+</body>
+</html>

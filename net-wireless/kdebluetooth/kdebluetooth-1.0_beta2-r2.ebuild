@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta2-r2.ebuild,v 1.1 2007/04/08 11:02:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta2-r2.ebuild,v 1.2 2007/06/19 20:49:53 deathwing00 Exp $
 
 inherit kde autotools
 
@@ -26,7 +26,7 @@ DEPEND=">=dev-libs/openobex-1.1
 RDEPEND="${DEPEND}
 	|| ( ( kde-base/kdialog kde-base/konqueror )  kde-base/kdebase )
 	net-wireless/bluez-utils"
-	
+
 PATCHES="${FILESDIR}/better-menu-names.diff
 	 ${FILESDIR}/kcm-btpaired-fix.diff
 	 ${FILESDIR}/kcm-no-dcop-error.diff
