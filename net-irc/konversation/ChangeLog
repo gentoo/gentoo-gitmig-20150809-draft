@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.49 2007/04/15 00:18:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.50 2007/06/19 19:14:20 gustavoz Exp $
+
+  19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  konversation-1.0.1-r1.ebuild:
+  Stable on sparc wrt #182589
 
   15 Apr 2007; Sven Wegener <swegener@gentoo.org>
   -files/konversation-0.19-gcc41.patch,
