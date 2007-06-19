@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.16 2007/06/19 06:04:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.17 2007/06/19 06:12:38 opfer Exp $
+
+  19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
+  gnuplot-4.2.0.ebuild:
+  add myself to metadata; fix bug 171045: check if media-libs/gd has been
+  built with PNG support, reported by Michael Benedict <mbenedict@twacs.com>
 
 *gnuplot-4.2.0 (19 Jun 2007)
 
@@ -8,6 +13,9 @@
   +gnuplot-4.2.0.ebuild:
   version bump to release, fixes bug 169943, reported by Sebastian Schubert
   <sebastian-schubert@gmx.de>
+  change latex USE flag with tetex
+  add some messages to die statements
+  clean up dependencies a bit
 
   27 Apr 2007; Jeroen Roovers <jer@gentoo.org> gnuplot-4.0-r1.ebuild:
   Stable for HPPA too.

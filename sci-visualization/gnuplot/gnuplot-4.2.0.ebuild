@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0.ebuild,v 1.1 2007/06/19 06:04:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0.ebuild,v 1.2 2007/06/19 06:12:38 opfer Exp $
 
 inherit eutils elisp-common wxwidgets
 
@@ -38,6 +38,13 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 E_SITEFILE="50gnuplot-gentoo.el"
+
+pkg_setup() {
+	if use gd && ! built_with_use media-libs/gd png; then
+		eerror "media-libs/gd needs to be built with PNG support"
+		die "please rebuilt media-libs/gd with USE=png"
+	fi
+}
 
 src_compile() {
 	# See bug #156427.
