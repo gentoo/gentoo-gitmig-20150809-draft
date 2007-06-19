@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ufo/ufo-0.8.4.ebuild,v 1.4 2007/06/02 22:23:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ufo/ufo-0.8.4.ebuild,v 1.5 2007/06/19 01:44:12 angelos Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libufo/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="virtual/opengl
