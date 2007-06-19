@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.18.1.ebuild,v 1.1 2007/04/25 01:48:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.18.1.ebuild,v 1.2 2007/06/19 12:49:47 armin76 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/orca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.10
