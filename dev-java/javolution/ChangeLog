@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javolution
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.10 2007/06/17 15:36:48 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.11 2007/06/19 06:32:23 opfer Exp $
+
+  19 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  javolution-2.2.4-r1.ebuild:
+  stable x86, bug 180288; filter jikes
 
   17 Jun 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   javolution-2.2.4-r1.ebuild:
