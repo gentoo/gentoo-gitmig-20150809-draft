@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/zoom-1.0.5.ebuild,v 1.1 2006/12/20 23:02:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/zoom-1.0.5.ebuild,v 1.2 2007/06/19 01:42:43 angelos Exp $
 
 inherit flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.logicalshift.co.uk/unix/zoom/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libSM
