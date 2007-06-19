@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.31 2007/06/17 14:44:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.32 2007/06/19 13:28:07 gustavoz Exp $
+
+  19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> yafc-1.1.1-r1.ebuild:
+  Stable on sparc wrt #173646
 
   17 Jun 2007; Raúl Porcel <armin76@gentoo.org> -yafc-1.1.1.ebuild,
   yafc-1.1.1-r1.ebuild:
