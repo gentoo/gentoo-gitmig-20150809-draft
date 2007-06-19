@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4_beta1.ebuild,v 1.1 2007/05/27 12:05:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4.ebuild,v 1.1 2007/06/19 13:48:00 caster Exp $
 
 inherit java-pkg-2 versionator
 
 DESCRIPTION="A desktop client for Mozilla's Bugzilla bug tracking system."
 HOMEPAGE="http://almworks.com/deskzilla"
 
-MY_PV=$(replace_all_version_separators '_' ${PV/beta/b})
+MY_PV=$(replace_all_version_separators '_') #${PV/beta/b})
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 SRC_URI="http://d1.almworks.com/.files/${MY_P}_without_jre.tar.gz"
@@ -16,7 +16,7 @@ LICENSE="ALMWorks-1.2"
 # distfiles...
 RESTRICT="mirror"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=""
 RDEPEND=">=virtual/jre-1.5
