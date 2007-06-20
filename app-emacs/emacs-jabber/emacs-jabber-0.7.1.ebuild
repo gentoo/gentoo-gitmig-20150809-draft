@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7.1.ebuild,v 1.1 2007/06/17 17:20:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7.1.ebuild,v 1.2 2007/06/20 19:12:01 ulm Exp $
 
 inherit distutils elisp
 
@@ -24,15 +24,9 @@ RDEPEND="${DEPEND}"
 
 SITEFILE=70${PN}-gentoo.el
 
-src_unpack() {
-	unpack ${A}
-	rm "${S}"/{sha1,hex-util}.el
-	use sasl || rm "${S}/jabber-sasl.el"
-}
 src_compile() {
 	elisp-comp *.el || die "elisp-comp failed"
 	makeinfo jabber.texi || die "makeinfo failed"
-	elisp-make-autoload-file
 }
 
 src_install() {
