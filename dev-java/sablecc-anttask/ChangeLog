@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sablecc-anttask
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc-anttask/ChangeLog,v 1.6 2007/02/09 02:12:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc-anttask/ChangeLog,v 1.7 2007/06/20 17:52:38 betelgeuse Exp $
+
+*sablecc-anttask-1.1.0-r1 (20 Jun 2007)
+
+  20 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +sablecc-anttask-1.1.0-r1.ebuild:
+  Migrate to generation 2.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
