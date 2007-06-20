@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mailody
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/ChangeLog,v 1.9 2007/06/20 17:34:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/ChangeLog,v 1.10 2007/06/20 17:52:45 philantrop Exp $
+
+  20 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> mailody-0.4.0.ebuild:
+  Marked stable on amd64.
 
 *mailody-0.5.0 (20 Jun 2007)
 
