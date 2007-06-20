@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libvserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvserver/ChangeLog,v 1.11 2007/05/22 16:22:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvserver/ChangeLog,v 1.12 2007/06/20 18:09:28 hollow Exp $
+
+*libvserver-2.0_rc1 (20 Jun 2007)
+
+  20 Jun 2007; Benedikt Böhm <hollow@gentoo.org> -libvserver-1.0.ebuild,
+  -libvserver-1.0.1.ebuild, -libvserver-1.0.2.ebuild,
+  +libvserver-2.0_rc1.ebuild:
+  version bump; remove old crap which depends on dietlibc
 
   22 May 2007; Christian Heim <phreak@gentoo.org> libvserver-1.0.ebuild,
   libvserver-1.0.1.ebuild, libvserver-1.0.2.ebuild:
