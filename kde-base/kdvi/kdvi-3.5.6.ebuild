@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.6.ebuild,v 1.2 2007/01/27 22:09:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.6.ebuild,v 1.3 2007/06/20 16:12:33 philantrop Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -45,7 +45,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	kde_pkg_postrm
-	# regenerate site-gentoo if we are merged USE=emacs and unmerged
-	# USE=-emacs
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 }
