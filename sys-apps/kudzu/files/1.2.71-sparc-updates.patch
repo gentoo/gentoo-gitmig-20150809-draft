@@ -1,0 +1,174 @@
+revision 1.19
+date: 2007/06/13 02:33:34;  author: notting;  state: Exp;  lines: +24 -38
+sparc updates (<tcallawa@redhat.com>)
+
+Index: sbus.c
+===================================================================
+RCS file: /usr/local/CVS/kudzu/sbus.c,v
+retrieving revision 1.18
+retrieving revision 1.19
+diff -u -b -B -r1.18 -r1.19
+--- sbus.c	15 Sep 2005 15:33:07 -0000	1.18
++++ sbus.c	13 Jun 2007 02:33:34 -0000	1.19
+@@ -162,6 +162,7 @@
+ 		    	devClass = CLASS_NETWORK;
+ 		} else if (!strcmp(prop, "le")) {
+ 			type = "Sun Lance Ethernet";
++			module = "sunlance";
+ 		    	devClass = CLASS_NETWORK;
+ 		} else if (!strcmp(prop, "qe")) {
+ 			prop = prom_getproperty("channel#", &len);
+@@ -206,9 +207,11 @@
+ 		    	devClass = CLASS_SCSI;
+ 		} else if (!strcmp(prop, "esp")) {
+ 			type = "Sun Enhanced SCSI Processor (ESP)";
++			module = "esp";
+ 		    	devClass = CLASS_SCSI;
+ 		} else if (!strcmp(prop, "fas")) {
+ 			type = "Sun Swift (ESP)";
++			module = "esp";
+ 		    	devClass = CLASS_SCSI;
+ 		} else if (!strcmp(prop, "ptisp")) {
+ 			type = "Performance Technologies ISP";
+@@ -232,19 +235,19 @@
+ 			while ((*prop >= 'A' && *prop <= 'Z') || *prop == ',')
+ 				if (*prop++ == ',') break;
+ 		if (!strcmp(prop, "audio")) {
+-			type = "AMD7930";
+-			module = "amd7930";
++			type = "Sun|AMD7930";
++			module = "snd-sun-amd7930";
+ 		    	devClass = CLASS_AUDIO;
+ 		} else if (!strcmp(prop, "CS4231")) {
+ 			if (ebus)
+-				type = "CS4231 EB2 DMA (PCI)";
++				type = "Sun|CS4231 EB2 DMA (PCI)";
+ 			else
+-				type = "CS4231 APC DMA (SBUS)";
+-			module = "cs4231";
++				type = "Sun|CS4231 APC DMA (SBUS)";
++			module = "snd-sun-cs4231";
+ 		    	devClass = CLASS_AUDIO;
+ 		} else if (!strcmp(prop, "DBRIe")) {
+-			type = "SS10/SS20 DBRI";
+-			module = "dbri";
++			type = "Sun|SS10/SS20 DBRI";
++			module = "snd-sun-dbri";
+ 		    	devClass = CLASS_AUDIO;
+ 		}
+ 	    	prop = prom_getproperty("device_type", &len);
+@@ -268,9 +271,11 @@
+ 		if (!strcmp(prop, "bwtwo")) {
+ 			type = "Sun|Monochrome (bwtwo)";
+ 			depth = 1;
++			module = "sunbw2";
+ 		} else if (!strcmp(prop, "cgthree")) {
+ 			type = "Sun|Color3 (cgthree)";
+ 			depth = 8;
++			module = "suncg3";
+ 		} else if (!strcmp(prop, "cgeight")) {
+ 			type = "Sun|CG8/RasterOps";
+ 			depth = 8;
+@@ -314,6 +319,7 @@
+ 				}
+ 			}
+ 			depth = 8;
++			module = "suncg6";
+ 		} else if (!strcmp(prop, "cgfourteen")) {
+ 			int size = 0;
+ 			prop = prom_getproperty("vfreq", &len);
+@@ -328,6 +334,7 @@
+ 			default: type = "Sun|SX";
+ 			}
+ 			depth = 24;
++			module = "suncg14";
+ 		} else if (!strcmp(prop, "leo")) {
+ 			prop = prom_getproperty("model", &len);
+ 			if (prop && len > 0 && !strstr(prop, "501-2503"))
+@@ -335,6 +342,7 @@
+ 			else
+ 				type = "Sun|ZX or Turbo ZX";
+ 			depth = 24;
++			module = "sunleo";
+ 		} else if (!strcmp(prop, "tcx")) {
+ 			if (prom_getbool("tcx-8-bit")) {
+ 				type = "Sun|TCX (8bit)";
+@@ -343,6 +351,7 @@
+ 				type = "Sun|TCX (S24)";
+ 				depth = 24;
+ 			}
++			module = "suntcx";
+ 		} else if (!strcmp(prop, "afb")) {
+ 			int btype = 0;
+ 			prop = prom_getproperty("vfreq", &len);
+@@ -356,6 +365,7 @@
+ 			else
+ 				type = "Sun|Elite3D";
+ 			depth = 24;
++			module = "sunffb";
+ 		} else if (!strcmp(prop, "ffb")) {
+ 			int btype = 0;
+ 			prop = prom_getproperty("vfreq", &len);
+@@ -381,6 +391,7 @@
+ 			default: type = "Sun|FFB"; break;
+ 			}
+ 			depth = 24;
++			module = "sunffb";
+ 		}
+ 		if (type) {
+ 			prop = prom_getproperty("width", &len);
+@@ -402,26 +413,17 @@
+ 		newDev->height = height;
+ 		newDev->freq = freq;
+ 		newDev->monitor = sense;
++		if (module) {
++		    newDev->driver = strdup(module);
++		    newDev->classprivate = (void *)strdup(module);
+ 	    }
+-	    newDev->desc = strdup(type);
+-	    switch (depth) {
+-	     case 1: 
+-		newDev->driver = strdup("Server:SunMono"); 
+-		newDev->type = CLASS_VIDEO;
+-		break;
+-	     case 8: 
+-		newDev->driver = strdup("Server:Sun");
+-		newDev->type = CLASS_VIDEO;
+-		break;
+-	     case 24: 
+-		newDev->driver = strdup("Server:Sun24");
+ 		newDev->type = CLASS_VIDEO;
+-		break;
+-	     default:
++	    } else {
+ 		if (module)
+ 		    newDev->driver = strdup(module);
+ 		newDev->type = devClass;
+ 	    }
++	    newDev->desc = strdup(type);
+ 	    if (newDev->type == CLASS_NETWORK)
+ 		  newDev->device = strdup("eth");
+ 	    if (port) newDev->device = strdup(port);
+@@ -452,22 +454,6 @@
+ 
+ struct device *sbusProbe( enum deviceClass probeClass, int probeFlags,
+ 		    struct device *devlist) {
+-    if (probeClass & CLASS_MOUSE) {
+-	int fd;
+-	struct sbusDevice *mousedev;
+-
+-	if ((fd = open("/dev/sunmouse", O_RDONLY)) != -1) {
+-	    /* FIXME: Should probably talk to the mouse to see
+-	       if the connector is not empty. */
+-	    close (fd);
+-	    mousedev = sbusNewDevice(NULL);
+-	    mousedev->type = CLASS_MOUSE;
+-	    mousedev->device = strdup("sunmouse");
+-	    mousedev->desc = strdup("Sun Mouse");
+-	    mousedev->next = devlist;
+-	    devlist = (struct device *)mousedev;
+-	}
+-    }
+     if (
+ 	(probeClass & CLASS_OTHER) ||
+ 	(probeClass & CLASS_NETWORK) ||

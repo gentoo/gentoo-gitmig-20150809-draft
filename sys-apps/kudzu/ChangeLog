@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.25 2007/05/02 06:46:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.26 2007/06/20 06:19:16 dberkholz Exp $
+
+*kudzu-1.2.71 (20 Jun 2007)
+
+  20 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.2.71-sparc-updates.patch, +kudzu-1.2.71.ebuild:
+  Bump. Should fix #164329 zlib linking issue. Also respects CC, LDFLAGS, etc,
+  might even crosscompile, and removes patches required for pre-2.2.4
+  pciutils. Incorporate the sparc patch from upstream instead of our own.
+  Compile the Python module.
 
   02 May 2007; Donnie Berkholz <dberkholz@gentoo.org>; kudzu-1.2.52.ebuild:
   Update homepage, since the old one vanished.
