@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.8.ebuild,v 1.1 2007/06/19 18:33:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.8.ebuild,v 1.2 2007/06/20 11:59:12 caleb Exp $
 
 inherit toolchain-funcs eutils qt4
 
@@ -17,6 +17,12 @@ RDEPEND="${DEPEND}
 	>=dev-util/cmake-2.4.6"
 
 SLOT="0"
+
+QT4_BUILT_WITH_USE_CHECK="opengl dbus"
+
+pkg_setup() {
+	qt4_pkg_setup
+}
 
 src_unpack() {
 	unpack $A
