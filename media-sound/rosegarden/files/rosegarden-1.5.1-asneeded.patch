@@ -1,0 +1,36 @@
+Index: rosegarden-1.5.1/src/CMakeLists.txt
+===================================================================
+--- rosegarden-1.5.1.orig/src/CMakeLists.txt
++++ rosegarden-1.5.1/src/CMakeLists.txt
+@@ -74,6 +74,7 @@ IF(USE_PCH)
+ ENDIF(USE_PCH)
+ 
+ TARGET_LINK_LIBRARIES(rosegardensequencer 
++    RosegardenCommon
+     ${QT_AND_KDECORE_LIBS} 
+     ${ALSA_LIBS} 
+     ${JACK_LIBS}
+@@ -81,7 +82,6 @@ TARGET_LINK_LIBRARIES(rosegardensequence
+     ${LRDF_LIBS}
+     ${FFTW3F_LIBS}
+     kdeui
+-    RosegardenCommon
+ )
+ 
+ # gui executable
+@@ -105,6 +105,7 @@ IF(USE_PCH)
+ ENDIF(USE_PCH)
+ 
+ TARGET_LINK_LIBRARIES(rosegarden
++    RosegardenCommon
+     ${QT_AND_KDECORE_LIBS} 
+     ${LIBLO_LIBS}
+     ${LRDF_LIBS}
+@@ -115,7 +116,6 @@ TARGET_LINK_LIBRARIES(rosegarden
+     kio
+     kdeui
+     kdeprint
+-    RosegardenCommon
+ )
+ 
+ # Install targets
