@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sgrep
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgrep/ChangeLog,v 1.6 2007/03/12 23:29:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgrep/ChangeLog,v 1.7 2007/06/20 12:07:37 angelos Exp $
+
+  20 Jun 2007; Christoph Mende <angelos@gentoo.org> sgrep-1.92a.ebuild:
+  Added ~amd64 wrt bug 182659
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
