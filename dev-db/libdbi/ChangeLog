@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.18 2007/06/15 01:56:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.19 2007/06/20 07:43:03 opfer Exp $
+
+  20 Jun 2007; Christian Faulhammer <opfer@gentoo.org> libdbi-0.8.1.ebuild:
+  stable x86, bug 181577
 
   15 Jun 2007; Christoph Mende <angelos@gentoo.org> libdbi-0.8.1.ebuild:
   Stable on amd64 wrt bug 181577
