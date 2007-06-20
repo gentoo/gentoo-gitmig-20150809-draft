@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0a_p2.ebuild,v 1.1 2007/06/05 14:38:39 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0a_p2.ebuild,v 1.2 2007/06/20 15:03:52 hkbst Exp $
 
-inherit elisp-common
+inherit elisp-common multilib
 
 MY_P=${PN}${PV/_p/-}
 
@@ -28,7 +28,8 @@ src_compile() {
 
 	# Bigloo doesn't use autoconf and consequently a lot of options used by econf give errors
 	# Manuel Serrano says: "Please, dont talk to me about autoconf. I simply dont want to hear about it..."
-	./configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --libdir=/usr/lib \
+	./configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info \
+		--libdir=/usr/$(get_libdir) \
 		--docdir=/usr/share/doc/${PF} \
 		--benchmark=yes \
 		--sharedbde=no \
@@ -54,7 +55,7 @@ src_test() {
 
 src_install () {
 #	dodir /etc/env.d
-#	echo "LDPATH=/usr/lib/bigloo/${PV}/" > ${D}/etc/env.d/25bigloo
+#	echo "LDPATH=/usr/$(get_libdir)/bigloo/${PV}/" > ${D}/etc/env.d/25bigloo
 
 	# make the links created not point to DESTDIR, since that is only a temporary home
 	sed 's/ln -s $(DESTDIR)/ln -s /' -i Makefile.misc

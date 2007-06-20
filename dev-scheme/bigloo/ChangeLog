@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.13 2007/06/05 14:38:39 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.14 2007/06/20 15:03:52 hkbst Exp $
+
+  20 Jun 2007; Marijn Schouten <hkBst@gentoo.org> -bigloo-2.4c.ebuild,
+  -bigloo-2.5a.ebuild, -bigloo-2.5c.ebuild, -bigloo-2.6a.ebuild,
+  bigloo-2.9a.ebuild, bigloo-3.0a_p2.ebuild:
+  fix multilib issue bug 182677, thanks to José Romildo Malaquias
+  <j.romildo@gmail.com> and remove old versions
 
 *bigloo-3.0a_p2 (05 Jun 2007)
 
