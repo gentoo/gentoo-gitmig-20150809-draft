@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.17 2007/06/20 11:53:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.18 2007/06/20 11:57:28 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -55,7 +55,7 @@ EXPORT_FUNCTIONS pkg_setup
 
 qt4_pkg_setup() {
 	for x in $QT4_BUILT_WITH_USE_CHECK; do
-		if !built_with_use =x11-libs/qt-4* $x; then
+		if ! built_with_use =x11-libs/qt-4* $x; then
 			die "This package requires Qt4 to be built with the ${x} use flag."
 		fi
 	done
