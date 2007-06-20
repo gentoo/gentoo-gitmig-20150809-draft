@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.66 2007/05/25 06:57:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.67 2007/06/20 20:52:58 corsair Exp $
+
+  20 Jun 2007; Markus Rothe <corsair@gentoo.org> pbbuttonsd-0.7.4.ebuild,
+  pbbuttonsd-0.7.8.ebuild, pbbuttonsd-0.7.9.ebuild, pbbuttonsd-0.8.0.ebuild:
+  I thought I've used this previously for my apple keyboard. Doesn't seem to
+  work (and more?). Dropping ppc64 keywords
 
   25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   corrected ChangeLog, so it conforms to our standards
