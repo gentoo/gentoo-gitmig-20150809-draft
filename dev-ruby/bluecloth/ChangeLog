@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.9 2007/03/04 21:00:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.10 2007/06/20 12:13:30 angelos Exp $
+
+  20 Jun 2007; Christoph Mende <angelos@gentoo.org> bluecloth-1.0.0.ebuild:
+  Stable on amd64 wrt bug 182537
 
   04 Mar 2007; Tom Gall <tgall@gentoo.org> bluecloth-1.0.0.ebuild:
   added ~ppc64
