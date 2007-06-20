@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.14 2007/06/18 17:23:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.15 2007/06/20 16:31:35 betelgeuse Exp $
+
+  20 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> wsdl4j-1.5.1-r1.ebuild:
+  Added missing dev-java/ant-junit dependency for the test use flag.
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> wsdl4j-1.6.2.ebuild:
   Add ~x86-fbsd keyword.
