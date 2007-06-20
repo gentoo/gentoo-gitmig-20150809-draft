@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.7 2007/06/17 17:20:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.8 2007/06/20 16:26:43 ulm Exp $
+
+  20 Jun 2007; Ulrich Mueller <ulm@gentoo.org>
+  files/70emacs-jabber-gentoo.el:
+  Make site-init file work with 0.7-r1 again.
 
 *emacs-jabber-0.7.1 (17 Jun 2007)
 

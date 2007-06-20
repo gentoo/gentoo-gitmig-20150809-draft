@@ -2,4 +2,6 @@
 ;;; emacs-jabber site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
-(load "emacs-jabber-autoloads" nil t)
+(autoload 'jabber-customize "jabber" "customize jabber options" t)
+(autoload 'jabber-connect "jabber-core"
+  "connect to the jabber server and start a jabber xml stream" t)
