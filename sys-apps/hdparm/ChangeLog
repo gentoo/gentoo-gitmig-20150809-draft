@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.110 2007/06/14 20:41:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.111 2007/06/20 09:56:44 vapier Exp $
+
+*hdparm-7.6 (20 Jun 2007)
+
+  20 Jun 2007; Mike Frysinger <vapier@gentoo.org> +hdparm-7.6.ebuild:
+  Version bump.
 
   14 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> hdparm-7.3.ebuild:
   ppc stable, bug #181965
