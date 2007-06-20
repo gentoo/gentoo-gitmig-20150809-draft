@@ -1,6 +1,20 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.94 2007/06/20 07:36:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.95 2007/06/20 08:04:24 keri Exp $
+
+  20 Jun 2007; keri <keri@gentoo.org> -files/swi-prolog-5.6.18-CFLAGS.patch,
+  -files/swi-prolog-5.6.18-PLBASE.patch,
+  -files/swi-prolog-5.6.18-portage.patch, -files/swi-prolog-CFLAGS-r1.patch,
+  -files/swi-prolog-PLBASE-r1.patch, -files/swi-prolog-cppproxy.patch,
+  -files/swi-prolog-db-docs.patch, -files/swi-prolog-db-versioned.patch,
+  -files/swi-prolog-gmp-sparc-alignment.patch,
+  -files/swi-prolog-jpl-install.patch, -files/swi-prolog-jpl-ppc.patch,
+  -files/swi-prolog-libtai.patch, -files/swi-prolog-parallel-build.patch,
+  -files/swi-prolog-portage.patch,
+  -files/swi-prolog-semweb-sparc-alignment.patch,
+  -files/swi-prolog-test_date.patch, -files/swi-prolog-thread-tests.patch,
+  -files/swi-prolog-xpce-test.patch, -swi-prolog-5.6.17-r1.ebuild:
+  Remove old version.
 
 *swi-prolog-5.6.35 (20 Jun 2007)
 
