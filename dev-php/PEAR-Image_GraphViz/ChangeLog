@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_GraphViz
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_GraphViz/ChangeLog,v 1.1 2006/11/19 18:15:17 sebastian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_GraphViz/ChangeLog,v 1.2 2007/06/20 13:19:47 angelos Exp $
+
+  20 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  PEAR-Image_GraphViz-1.2.1.ebuild:
+  Added ~amd64
 
 *PEAR-Image_GraphViz-1.2.1 (19 Nov 2006)
 
