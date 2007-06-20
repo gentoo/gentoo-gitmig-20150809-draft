@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.30 2007/06/18 11:54:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.31 2007/06/20 15:17:03 josejx Exp $
+
+  20 Jun 2007; Joseph Jezak <josejx@gentoo.org> most-4.10.2-r1.ebuild:
+  Marked ppc stable for bug #182435.
 
   18 Jun 2007; Christoph Mende <angelos@gentoo.org> most-4.10.2-r1.ebuild:
   Stable on amd64 wrt bug 182435
