@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.32 2007/06/20 16:04:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.33 2007/06/20 17:09:54 betelgeuse Exp $
+
+*bluez-hcidump-1.36 (20 Jun 2007)
+
+  20 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +bluez-hcidump-1.36.ebuild:
+  Version bump for bug #182653.
 
   20 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   -bluez-hcidump-1.21.ebuild, -bluez-hcidump-1.29.ebuild:
