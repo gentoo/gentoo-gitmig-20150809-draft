@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.23 2007/05/19 22:06:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.24 2007/06/20 20:43:26 angelos Exp $
+
+  20 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  freqtweak-0.7.0_pre20070214.ebuild:
+  Stable on amd64 wrt bug 176428
 
   19 May 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/freqtweak-0.7.0_pre20070214-amd64-fixes.patch,
