@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.74 2007/05/19 21:23:58 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.75 2007/06/20 19:47:25 armin76 Exp $
+
+  20 Jun 2007; Raúl Porcel <armin76@gentoo.org> grip-3.3.1.ebuild:
+  alpha/ia64 stable wrt #136137, thanks to Tobias Klausmann for testing
 
   19 May 2007; Peter Weller <welp@gentoo.org> grip-3.3.1.ebuild:
   Keyworded ~x86-fbsd wrt bug 178236
