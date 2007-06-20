@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta3.ebuild,v 1.1 2007/06/19 20:49:53 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta3.ebuild,v 1.2 2007/06/20 18:25:48 deathwing00 Exp $
 
 inherit kde autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kde-bluetooth/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-libs/openobex-1.1

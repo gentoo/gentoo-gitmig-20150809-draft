@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.58 2007/06/19 20:49:53 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.59 2007/06/20 18:25:48 deathwing00 Exp $
+
+  20 Jun 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kdebluetooth-1.0_beta3.ebuild:
+  Added ~x86 keyword. See bug #182611 for details.
 
   19 Jun 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
   kdebluetooth-1.0_beta2-r2.ebuild:
