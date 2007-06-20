@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.18 2007/04/24 15:46:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.19 2007/06/20 16:40:01 armin76 Exp $
+
+  20 Jun 2007; Raúl Porcel <armin76@gentoo.org> netkit-rwho-0.17-r2.ebuild:
+  alpha stable wrt #168158
 
   24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
   netkit-rwho-0.17-r2.ebuild:
