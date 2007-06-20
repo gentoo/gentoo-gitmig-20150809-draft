@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.29 2007/06/08 14:26:20 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.30 2007/06/20 17:05:40 kang Exp $
+
+*rsbac-admin-1.3.4-r1 (20 Jun 2007)
+
+  20 Jun 2007; Guillaume Destuynder <kang@gentoo.org>
+  +rsbac-admin-1.3.4-r1.ebuild:
+  Fixed FHS compliance for libtool archives, changed website url to
+  www.rsbac.org instead of rsbac.org.
 
 *rsbac-admin-1.3.4 (08 Jun 2007)
 
