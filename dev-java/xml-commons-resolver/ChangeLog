@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-resolver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.29 2007/06/19 07:41:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.30 2007/06/20 19:50:46 corsair Exp $
+
+  20 Jun 2007; Markus Rothe <corsair@gentoo.org>
+  xml-commons-resolver-1.2.ebuild:
+  Stable on ppc64; bug #182399
 
   19 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   xml-commons-resolver-1.2.ebuild:
