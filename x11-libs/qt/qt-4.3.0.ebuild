@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.8 2007/06/04 15:07:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.9 2007/06/20 20:34:42 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -172,6 +172,10 @@ src_compile() {
 	if [[ "$(gcc-major-version)" != "4" ]]; then
 		myconf="${myconf} -no-reduce-exports"
 	fi
+
+	# Add a switch that will attempt to use recent binutils to reduce relocations.  Should be harmless for other
+	# cases.  From bug #178535
+	myconf="${myconf} -reduce-relocations"
 
 	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
