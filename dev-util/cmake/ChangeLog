@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.53 2007/06/07 16:25:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.54 2007/06/20 20:03:56 corsair Exp $
+
+  20 Jun 2007; Markus Rothe <corsair@gentoo.org> cmake-2.4.6-r1.ebuild:
+  Stable on ppc64; bug #182724
 
 *cmake-2.4.6-r1 (07 Jun 2007)
 

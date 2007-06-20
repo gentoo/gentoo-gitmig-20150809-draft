@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.4.6-r1.ebuild,v 1.1 2007/06/07 16:25:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.4.6-r1.ebuild,v 1.2 2007/06/20 20:03:56 corsair Exp $
 
 inherit elisp-common toolchain-funcs eutils versionator qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${P}.tar
 
 LICENSE="CMake"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="emacs vim-syntax"
 
 DEPEND="emacs? ( virtual/emacs )
