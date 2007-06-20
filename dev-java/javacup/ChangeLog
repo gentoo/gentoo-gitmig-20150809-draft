@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.20 2007/02/28 08:24:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.21 2007/06/20 17:23:10 betelgeuse Exp $
+
+  20 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  javacup-0.10k-r1.ebuild:
+  Change HOMEPAGE from http://www.cs.princeton.edu/~appel/modern/java/CUP/ to
+  http://www2.cs.tum.edu/projects/cup.
 
   28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -javacup-0.10k.ebuild,
   javacup-0.10k-r1.ebuild:

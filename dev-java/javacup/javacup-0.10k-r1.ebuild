@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.10k-r1.ebuild,v 1.9 2007/02/28 08:24:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.10k-r1.ebuild,v 1.10 2007/06/20 17:23:10 betelgeuse Exp $
 
 inherit java-pkg-2
 
 DESCRIPTION="CUP Parser Generator for Java"
 
-HOMEPAGE="http://www.cs.princeton.edu/~appel/modern/java/CUP/"
+HOMEPAGE="http://www2.cs.tum.edu/projects/cup/"
 SRC_URI="http://www.cs.princeton.edu/~appel/modern/java/CUP/java_cup_v10k.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
