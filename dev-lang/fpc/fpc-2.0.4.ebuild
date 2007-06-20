@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.4 2007/01/04 00:00:20 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.5 2007/06/20 22:01:26 truedfx Exp $
 
 inherit eutils
 
@@ -117,7 +117,8 @@ src_install() {
 	fi
 
 	if ! has nodoc ${FEATURES} && use doc ; then
-		dodoc "${WORKDIR}"/${P}/*.pdf
+		insinto /usr/share/doc/${PF}
+		doins "${WORKDIR}"/${P}/*.pdf
 		#cd "${S}"/../fpcdocs
 		#emake -j1 "$@" pdfinstall || die "make pdfinstall failed"
 	fi
