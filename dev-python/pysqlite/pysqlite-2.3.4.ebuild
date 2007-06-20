@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.3.1.ebuild,v 1.9 2006/10/20 20:36:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.3.4.ebuild,v 1.1 2007/06/20 10:46:15 lucass Exp $
+
+NEED_PYTHON=2.3
 
 inherit distutils
 
@@ -8,19 +10,23 @@ DESCRIPTION="Python wrapper for the local database Sqlite"
 SRC_URI="http://initd.org/pub/software/pysqlite/releases/${PV:0:3}/${PV}/pysqlite-${PV}.tar.gz"
 HOMEPAGE="http://initd.org/tracker/pysqlite/"
 
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 LICENSE="pysqlite"
 SLOT="2"
-IUSE=""
+IUSE="examples"
 
-DEPEND=">=dev-lang/python-2.3
-	>=dev-db/sqlite-3.1"
+DEPEND=">=dev-db/sqlite-3.1"
 
 src_install() {
+	DOCS="doc/usage-guide.txt"
 	distutils_src_install
 
-	mv "${D}"/usr/pysqlite2-doc/* "${D}"/usr/share/doc/${PF}
 	rm -rf "${D}"/usr/pysqlite2-doc
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r doc/code
+	fi
 }
 
 src_test() {
