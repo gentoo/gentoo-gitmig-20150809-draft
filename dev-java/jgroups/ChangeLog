@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgroups
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.20 2007/06/20 15:08:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.21 2007/06/20 15:24:22 caster Exp $
+
+  20 Jun 2007; Vlastimil Babka <caster@gentoo.org> -jgroups-2.2.7-r1.ebuild,
+  -jgroups-2.2.7-r2.ebuild, -jgroups-2.4.1_p1.ebuild:
+  Remove old versions.
 
   20 Jun 2007; Christoph Mende <angelos@gentoo.org>
   jgroups-2.4.1_p1-r1.ebuild:
