@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2872 2007/06/18 20:31:10 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2873 2007/06/20 13:55:56 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1037,6 +1037,7 @@ media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:daap - support for daap
 media-sound/rhythmbox:keyring - gnome-keyring support for daap share passwords
 media-sound/rhythmbox:tagwriting - support for tag writing in certain audio files
+media-sound/rosegarden:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/shntool:wavpack - Add support for wavpack
 media-sound/slimserver:alac - Enable support for alac
 media-sound/sonata:lyrics - Support for lyrics fetching
