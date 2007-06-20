@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian-bindings
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.4 2006/11/28 21:35:54 marienz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.5 2007/06/20 21:03:04 angelos Exp $
+
+  20 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  xapian-bindings-0.9.9.ebuild:
+  Added ~amd64 wrt bug 177807
 
 *xapian-bindings-0.9.9 (28 Nov 2006)
 

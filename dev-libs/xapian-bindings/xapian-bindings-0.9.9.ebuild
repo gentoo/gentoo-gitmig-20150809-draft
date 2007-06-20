@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.9.ebuild,v 1.1 2006/11/28 21:35:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.9.ebuild,v 1.2 2007/06/20 21:03:04 angelos Exp $
 
 inherit mono java-pkg-opt-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="python php tcl mono java ruby"
 
 COMMONDEPEND="=dev-libs/xapian-${PV}
