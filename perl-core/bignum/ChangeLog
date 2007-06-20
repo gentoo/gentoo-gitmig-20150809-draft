@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.10 2007/04/24 08:58:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.11 2007/06/20 16:23:40 armin76 Exp $
+
+  20 Jun 2007; Raúl Porcel <armin76@gentoo.org> bignum-0.21.ebuild:
+  Add ~alpha wrt #173295
 
   24 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> bignum-0.21.ebuild:
   Add ~mips keyword, bug 173295.
