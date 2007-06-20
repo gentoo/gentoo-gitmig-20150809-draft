@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.43 2007/06/20 15:01:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.44 2007/06/20 19:47:52 corsair Exp $
+
+  20 Jun 2007; Markus Rothe <corsair@gentoo.org> netkit-rsh-0.17-r8.ebuild:
+  Stable on ppc64; bug #182395
 
   20 Jun 2007; Jeroen Roovers <jer@gentoo.org> netkit-rsh-0.17-r8.ebuild:
   Stable for HPPA (bug #182395).
