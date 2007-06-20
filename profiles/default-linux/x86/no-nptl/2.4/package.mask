@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.93 2007/06/10 07:08:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.94 2007/06/20 18:21:55 deathwing00 Exp $
+
+# Ioannis Aslanidis <deathwing00@gentoo.org> (20 Jun 2007)
+# Requires bluez-utils-3* and bluez-libs-3*
+>=net-wireless/kdebluetooth-1.0_beta3
 
 # Daniel Black <dragonheart@gentoo.org> (10 June 2007)
 # Needs media-libs/wxsvg
