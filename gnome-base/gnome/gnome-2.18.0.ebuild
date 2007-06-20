@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.0.ebuild,v 1.4 2007/05/01 18:05:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.0.ebuild,v 1.5 2007/06/20 01:50:03 dang Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -172,7 +172,7 @@ pkg_postinst() {
 	elog "gamin, a File Alteration Monitor."
 	elog "Make sure you have inotify enabled in your kernel ( >=2.6.13 )"
 	elog
-	elog "Make sure you rc-update del famd and emerge unmerge fam if you"
+	elog "Make sure you rc-update del famd and emerge --unmerge fam if you"
 	elog "are switching from fam to gamin."
 	elog
 	elog "If you have problems, you may want to try using fam instead."
