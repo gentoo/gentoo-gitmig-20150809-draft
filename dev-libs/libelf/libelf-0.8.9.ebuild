@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.9.ebuild,v 1.1 2007/06/17 21:02:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.9.ebuild,v 1.2 2007/06/20 04:17:29 kanaka Exp $
 
 inherit multilib eutils
 
@@ -16,6 +16,11 @@ IUSE="debug nls"
 DEPEND="!dev-libs/elfutils
 	nls? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-parallelmakefix.patch
+}
 
 src_compile() {
 	econf \

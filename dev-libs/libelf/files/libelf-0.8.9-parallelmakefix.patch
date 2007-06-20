@@ -1,0 +1,29 @@
+--- libelf-0.8.9/lib/Makefile.in.orig	2007-06-20 00:09:41.876160240 -0400
++++ libelf-0.8.9/lib/Makefile.in	2007-06-20 00:10:13.601337280 -0400
+@@ -174,7 +174,7 @@ installdirs: $(top_srcdir)/mkinstalldirs
+ 	    $(SHELL) $(top_srcdir)/mkinstalldirs $(instroot)$$dir; \
+ 	done
+ 
+-install-data:
++install-data: installdirs
+ 	$(INSTALL_DATA) libelf.a $(instroot)$(libdir)
+ 	-cd $(instroot)$(libdir) && $(RANLIB) libelf.a
+ 	files="$(HDRS) $(AUXHDRS) elf_repl.h"; for file in $$files; do \
+@@ -194,7 +194,7 @@ uninstall-data:
+ 
+ install-shared-yes: install-shared
+ install-shared-no:
+-install-shared: $(SHLIB)
++install-shared: installdirs $(SHLIB)
+ 	$(INSTALL_SHLIB) $(SHLIB) $(instroot)$(libdir)
+ 	if test "$(SONAME)" = "$(SHLIB)"; then true; else \
+ 	  cd $(instroot)$(libdir) && $(RM) $(SONAME) && $(LN_S) $(SHLIB) $(SONAME); \
+@@ -210,7 +210,7 @@ uninstall-shared:
+ 
+ install-compat-yes: install-compat
+ install-compat-no:
+-install-compat:
++install-compat: installdirs
+ 	files="$(HDRS)"; for file in $$files; do \
+ 	  if test -f $(instroot)$(includedir)/$$file; then true; else \
+ 	    echo "#include <libelf/$$file>" > $(instroot)$(includedir)/$$file; \
