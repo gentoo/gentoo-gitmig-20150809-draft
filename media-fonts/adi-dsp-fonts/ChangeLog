@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/adi-dsp-fonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/adi-dsp-fonts/ChangeLog,v 1.6 2007/06/20 15:57:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/adi-dsp-fonts/ChangeLog,v 1.7 2007/06/20 19:52:11 corsair Exp $
+
+  20 Jun 2007; Markus Rothe <corsair@gentoo.org> adi-dsp-fonts-1.ebuild:
+  Stable on ppc64; bug #182481
 
   20 Jun 2007; Jeroen Roovers <jer@gentoo.org> adi-dsp-fonts-1.ebuild:
   Stable for HPPA (bug #182481).
