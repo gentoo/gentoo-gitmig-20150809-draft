@@ -1,7 +1,7 @@
 diff -NurpP simscan-1.1.orig/Makefile.am simscan-1.1/Makefile.am
 --- simscan-1.1.orig/Makefile.am	2004-11-04 16:27:45.000000000 +0100
 +++ simscan-1.1/Makefile.am	2007-04-14 14:37:54.830898454 +0200
-@@ -14,13 +14,12 @@ simscanmk_SOURCES = simscanmk.c 
+@@ -14,13 +14,12 @@
  simscanmk_LDADD =  $(CDB_LIBS)
  
  install-simscanbinPROGRAMS:
@@ -16,7 +16,7 @@ diff -NurpP simscan-1.1.orig/Makefile.am simscan-1.1/Makefile.am
 +	$(INSTALL) -m 750 -d $(DESTDIR)@workdir@
 +	$(INSTALL) simscan $(DESTDIR)@qmaildir@/bin/simscan
 +	$(INSTALL) simscanmk $(DESTDIR)@qmaildir@/bin/simscanmk
-+	chown @ENABLE_USER@ $(DESTDIR)@workdir@ @qmaildir@/bin/simscan
++	chown @ENABLE_USER@ $(DESTDIR)@workdir@ $(DESTDIR)@qmaildir@/bin/simscan
 +	chmod 4711 $(DESTDIR)@qmaildir@/bin/simscan
  
  AUTOMAKE_OPTIONS = foreign no-dependencies 
