@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mailody
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/ChangeLog,v 1.8 2007/02/04 01:39:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/ChangeLog,v 1.9 2007/06/20 17:34:20 philantrop Exp $
+
+*mailody-0.5.0 (20 Jun 2007)
+
+  20 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +mailody-0.5.0.ebuild:
+  Version bump as per bug 182649. Localisation support has been added to the
+  ebuild. (The new manual only exists in English, sorry.)
 
 *mailody-0.4.0 (04 Feb 2007)
 
