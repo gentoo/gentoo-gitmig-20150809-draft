@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-ibm-type1
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-ibm-type1/ChangeLog,v 1.22 2007/06/19 12:49:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-ibm-type1/ChangeLog,v 1.23 2007/06/21 14:04:04 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> font-ibm-type1-1.0.0.ebuild:
+  Stable for HPPA (bug #182207).
 
   19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   font-ibm-type1-1.0.0.ebuild:
