@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.23 2007/04/17 06:23:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.24 2007/06/21 14:38:47 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org> Carp-Clan-5.9.ebuild:
+  Marking sparc stable
 
   17 Apr 2007; Markus Rothe <corsair@gentoo.org> Carp-Clan-5.9.ebuild:
   Added ~ppc64; bug #174785
