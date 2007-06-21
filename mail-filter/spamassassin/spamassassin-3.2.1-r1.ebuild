@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r1.ebuild,v 1.2 2007/06/18 22:51:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r1.ebuild,v 1.3 2007/06/21 17:25:11 armin76 Exp $
 
 inherit perl-module eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 #SRC_TEST="do"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 #KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite tools ipv6"
 
