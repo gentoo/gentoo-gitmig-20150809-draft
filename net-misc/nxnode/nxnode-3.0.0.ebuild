@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0.ebuild,v 1.1 2007/06/21 20:19:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0.ebuild,v 1.2 2007/06/21 22:36:22 voyageur Exp $
 
 inherit eutils
 
@@ -32,12 +32,16 @@ RDEPEND="=net-misc/nxclient-3*
 S=${WORKDIR}/NX
 
 pkg_setup() {
-	if has_version net-misc/vnc && ! built_with_use net-misc/vnc server; then
-		die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
-	fi
+	if use vnc; then
+		if has_version net-misc/vnc && ! built_with_use net-misc/vnc server;
+		then
+			die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
+		fi
 
-	if has_version net-misc/tightvnc && ! built_with_use net-misc/tightvnc server; then
-		die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
+		if has_version net-misc/tightvnc && ! built_with_use net-misc/tightvnc server;
+		then
+			die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
+		fi
 	fi
 }
 
