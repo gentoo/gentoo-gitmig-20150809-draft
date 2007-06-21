@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Term-ReadLine-Gnu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.1 2007/01/15 20:04:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.2 2007/06/21 18:02:00 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Term-ReadLine-Gnu-1.16.ebuild:
+  Marking sparc stable; disabling tests since they require a display on :0,
+  which isnt always available
 
 *Term-ReadLine-Gnu-1.16 (15 Jan 2007)
 
