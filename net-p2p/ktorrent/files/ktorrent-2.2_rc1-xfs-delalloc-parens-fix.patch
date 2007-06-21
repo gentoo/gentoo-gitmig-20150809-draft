@@ -1,0 +1,12 @@
+diff -urN orig/libktorrent/torrent/multifilecache.cpp mod/libktorrent/torrent/multifilecache.cpp
+--- orig/libktorrent/torrent/multifilecache.cpp	2007-06-13 18:30:12.000000000 +0200
++++ mod/libktorrent/torrent/multifilecache.cpp	2007-06-16 03:05:44.200263999 +0200
+@@ -570,7 +570,7 @@
+ 			#ifdef HAVE_XFS_XFS_H
+ 				if( (! res) && (Settings::fullDiskPreallocMethod() == 1) )
+ 				{
+-					res = XfsPreallocate(output_file, tf->getSize()) );
++					res = XfsPreallocate( output_file, tf->getSize() );
+ 				}
+ 			#endif
+ 			

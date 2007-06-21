@@ -1,0 +1,25 @@
+diff -urN orig/libktorrent/torrent/multifilecache.h mod/libktorrent/torrent/multifilecache.h
+--- orig/libktorrent/torrent/multifilecache.h	2007-06-13 18:30:12.000000000 +0200
++++ mod/libktorrent/torrent/multifilecache.h	2007-06-16 02:55:27.294376902 +0200
+@@ -23,6 +23,7 @@
+ 
+ #include <util/ptrmap.h>
+ #include "cache.h"
++#include "settings.h"
+ 
+ namespace bt
+ {
+diff -urN orig/libktorrent/util/fileops.h mod/libktorrent/util/fileops.h
+--- orig/libktorrent/util/fileops.h	2007-06-13 18:30:12.000000000 +0200
++++ mod/libktorrent/util/fileops.h	2007-06-16 02:32:04.508380700 +0200
+@@ -20,6 +20,10 @@
+ #ifndef BTFILEOPS_H
+ #define BTFILEOPS_H
+ 
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
+ #include <util/constants.h>
+ class QString;
+ 

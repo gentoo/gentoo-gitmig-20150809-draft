@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.49 2007/06/19 17:52:56 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.50 2007/06/21 19:30:33 philantrop Exp $
+
+  21 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/ktorrent-2.2_rc1-xfs-delalloc-confighdrs-fix.patch,
+  +files/ktorrent-2.2_rc1-xfs-delalloc-parens-fix.patch,
+  ktorrent-2.2_rc1.ebuild:
+  Added two upstream patches which fix bug 182727.
 
 *ktorrent-2.2_rc1 (19 Jun 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2_rc1.ebuild,v 1.1 2007/06/19 17:52:56 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2_rc1.ebuild,v 1.2 2007/06/21 19:30:33 philantrop Exp $
 
 inherit kde
 
@@ -30,6 +30,10 @@ done
 
 src_unpack() {
 	kde_src_unpack
+
+	# Patches provided by upstream. Fix bug 182727.
+	epatch ${FILESDIR}/${P}-xfs-delalloc-parens-fix.patch
+	epatch ${FILESDIR}/${P}-xfs-delalloc-confighdrs-fix.patch
 
 	local MAKE_LANGS
 	cd "${WORKDIR}/${MY_P}/translations"
