@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.10 2005/10/18 16:36:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.11 2007/06/21 17:34:34 hkbst Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -134,13 +134,14 @@ reregister-all-common-lisp-implementations() {
 	# Written by Kevin Rosenberg <kmr@debian.org>
 	# GPL-2 license
 	local clc_bin_dir=/usr/$(get_libdir)/common-lisp/bin
-	shopt -s nullglob
+	local opt=$(shopt nullglob); shopt -s nullglob
 	cd $clc_bin_dir
 	for impl_bin in *.sh; do
 		impl=$(echo $impl_bin | sed 's/\(.*\).sh/\1/')
 		unregister-common-lisp-implementation $impl
 		register-common-lisp-implementation $impl
 	done
+	[[ $opt = *off ]] && shopt -u nullglob
 }
 
 # BIG FAT HACK: Since the Portage emerge step kills file timestamp
