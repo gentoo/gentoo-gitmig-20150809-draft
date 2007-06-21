@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r1.ebuild,v 1.2 2007/06/11 02:12:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r1.ebuild,v 1.3 2007/06/21 19:43:14 angelos Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.geocities.com/stomljen/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
