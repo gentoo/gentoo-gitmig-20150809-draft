@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.3 2007/06/20 12:25:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.4 2007/06/21 06:45:39 opfer Exp $
+
+  21 Jun 2007; Christian Faulhammer <opfer@gentoo.org> wklej-0.0.5.ebuild:
+  stable x86, bug 173282
 
   20 Jun 2007; Christoph Mende <angelos@gentoo.org> wklej-0.0.5.ebuild:
   Stable on amd64 wrt bug 173282
