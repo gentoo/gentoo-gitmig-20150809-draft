@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.30 2007/05/13 08:34:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.31 2007/06/21 14:01:06 gustavoz Exp $
+
+  21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  texmaker-1.50-r1.ebuild:
+  Stable on sparc
 
   13 May 2007; Markus Ullmann <jokey@gentoo.org> texmaker-1.50-r1.ebuild:
   Stable on x86
