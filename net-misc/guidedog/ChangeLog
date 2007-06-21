@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/guidedog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.13 2007/02/22 02:24:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.14 2007/06/21 15:43:42 angelos Exp $
+
+  21 Jun 2007; Christoph Mende <angelos@gentoo.org> guidedog-1.0.0.ebuild:
+  Added ~amd64 and missing arts dependency wrt bug 180592
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
