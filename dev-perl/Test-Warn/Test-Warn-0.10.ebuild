@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/Test-Warn-0.10.ebuild,v 1.1 2007/05/12 14:46:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/Test-Warn-0.10.ebuild,v 1.2 2007/06/21 17:50:48 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/C/CH/CHORNY/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.23 2007/05/24 16:53:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.24 2007/06/21 18:00:11 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  WWW-Bugzilla-0.9.ebuild:
+  Marking sparc stable
 
 *WWW-Bugzilla-1.0 (24 May 2007)
 
