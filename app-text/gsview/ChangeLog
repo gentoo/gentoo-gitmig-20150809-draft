@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.25 2007/06/19 07:26:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.26 2007/06/21 15:25:48 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> gsview-4.8.ebuild:
+  Stable for HPPA (bug #182403) (and removed the moronic arch conditional).
 
   19 Jun 2007; Stefan Schweizer <genstef@gentoo.org> gsview-4.8.ebuild:
   Add app-text/pstotext RDEPEND for searching thanks to Kenneth Prugh
