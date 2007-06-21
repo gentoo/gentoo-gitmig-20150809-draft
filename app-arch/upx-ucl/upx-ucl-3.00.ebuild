@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-2.93.ebuild,v 1.1 2007/04/26 20:07:05 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.00.ebuild,v 1.1 2007/06/21 16:34:08 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ LZMA_VER=4.43
 MY_P="${P/-ucl/}-src"
 DESCRIPTION="upx is the Ultimate Packer for eXecutables."
 HOMEPAGE="http://upx.sourceforge.net"
-SRC_URI="http://upx.sourceforge.net/download/unstable/${MY_P}.tar.bz2
+SRC_URI="http://upx.sourceforge.net/download/${MY_P}.tar.bz2
 	mirror://sourceforge/sevenzip/lzma${LZMA_VER/.}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -28,12 +28,10 @@ src_unpack() {
 	mkdir "${WORKDIR}"/lzma-${LZMA_VER}
 	cd "${WORKDIR}"/lzma-${LZMA_VER}
 	unpack lzma${LZMA_VER/.}.tar.bz2
-	cd "${S}"
 }
 
 src_compile() {
 	tc-export CXX
-	#make -C src UPX_UCLDIR=/usr || die "Failed compiling"
 	emake UPX_LZMADIR="${WORKDIR}"/lzma-${LZMA_VER} all || die
 }
 
