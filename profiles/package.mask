@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7384 2007/06/21 15:47:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7385 2007/06/21 16:35:16 drizzt Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -757,10 +757,6 @@ net-fs/curlftpfs
 # Patrick Kursawe <phosphan@gentoo.org> (06 Dec 2006)
 # Only partially working, see bug #153667
 media-tv/nuppelvideo
-
-# Timothy Redaelli <drizzt@gentoo.org> (01 Dec 2006)
-# Beta versions
-=app-arch/upx-ucl-2.9*
 
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.

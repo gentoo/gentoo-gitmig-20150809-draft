@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.476 2007/06/21 15:29:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.477 2007/06/21 16:35:16 drizzt Exp $
+
+  21 Jun 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
+  Stable version of UPX released, beta version removed.
 
   21 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add mp4 useflag for Amarok (replaces AAC).
