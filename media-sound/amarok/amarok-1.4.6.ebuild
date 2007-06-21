@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.6_rc2.ebuild,v 1.1 2007/06/17 21:15:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.6.ebuild,v 1.1 2007/06/21 15:35:32 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds nl nn pa pl
@@ -35,7 +35,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="aac kde mysql noamazon opengl postgres
+IUSE="mp4 kde mysql noamazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"
 # kde: enables compilation of the konqueror sidebar plugin
@@ -51,7 +51,7 @@ RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	visualization? ( media-libs/libsdl
 					 =media-plugins/libvisual-plugins-0.4* )
 	ipod? ( >=media-libs/libgpod-0.4.2 )
-	aac? ( media-libs/libmp4v2 )
+	mp4? ( media-libs/libmp4v2 )
 	ifp? ( media-libs/libifp )
 	real? ( media-video/realplayer )
 	njb? ( >=media-libs/libnjb-2.2.4 )
@@ -86,7 +86,7 @@ src_compile() {
 				  $(use_with visualization libvisual)
 				  $(use_enable !noamazon amazon)
 				  $(use_with ipod libgpod)
-				  $(use_with aac mp4v2)
+				  $(use_with mp4 mp4v2)
 				  $(use_with ifp)
 				  $(use_with real helix)
 				  $(use_with njb libnjb)

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.221 2007/06/17 21:15:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.222 2007/06/21 15:35:32 flameeyes Exp $
+
+*amarok-1.4.6 (21 Jun 2007)
+
+  21 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -amarok-1.4.6_rc2.ebuild, +amarok-1.4.6.ebuild:
+  Bump to 1.4.6 final; same tarball, but the ebuild replaced aac useflag with
+  the more descriptive mp4 useflag.
 
 *amarok-1.4.6_rc2 (17 Jun 2007)
 
