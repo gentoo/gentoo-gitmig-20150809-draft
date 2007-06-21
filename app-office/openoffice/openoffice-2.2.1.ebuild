@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.5 2007/06/16 12:00:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.6 2007/06/21 07:05:41 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter branding cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono sound odk pam seamonkey webdav"
 
-MY_PV="2.2.0.2"
+MY_PV="2.2.1"
 PATCHLEVEL="OOF680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -28,7 +28,7 @@ SRC_URI="mirror://openoffice/stable/${PV}/${SRC}_core.tar.bz2
 	http://go-oo.org/packages/xt/xt-20051206-src-only.zip
 	http://go-oo.org/packages/SRC680/lp_solve_5.5.tar.gz
 	http://go-oo.org/packages/SRC680/libwps-0.1.0~svn20070129.tar.gz
-	http://go-oo.org/packages/SRC680/libwpg-0.1.0~cvs20070507.tar.gz"
+	http://go-oo.org/packages/SRC680/libwpg-0.1.0~cvs20070608.tar.gz"
 
 LANGS1="af ar as_IN be_BY bg bn br bs ca cs cy da de dz el en_GB en_ZA eo es et fa fi fr ga gl gu_IN he hi_IN hr hu it ja km ko ku lt lv mk ml_IN mr_IN nb ne nl nn nr ns or_IN pa_IN pl pt pt_BR ru rw sh_YU sk sl sr_CS ss st sv sw_TZ ta_IN te_IN tg th ti_ER tn tr ts uk ur_IN ve vi xh zh_CN zh_TW zu"
 LANGS="${LANGS1} en en_US"
@@ -215,6 +215,7 @@ src_unpack() {
 	if use java ; then
 		echo "--with-ant-home=${ANT_HOME}" >> ${CONFFILE}
 		echo "--with-jdk-home=$(java-config --jdk-home 2>/dev/null)" >> ${CONFFILE}
+		echo "--with-java-target-version=$(java-pkg_get-target)" >> ${CONFFILE}
 		echo "--with-system-beanshell" >> ${CONFFILE}
 		echo "--with-system-xalan" >> ${CONFFILE}
 		echo "--with-system-xerces" >> ${CONFFILE}

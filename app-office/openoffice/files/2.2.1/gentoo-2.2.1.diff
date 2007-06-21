@@ -8,15 +8,4 @@
  EOT
      chmod 755 $1
  }
---- configure.in	2007/06/04 16:01:58	9518
-+++ configure.in	2007/06/11 09:46:34	9559
-@@ -941,7 +941,7 @@
-    UPSTREAM_NAME="OOo_2.2.0_src"
-    UPSTREAM_VERSION=2.2.0
- elif test "$with_tag" = "OOF680_m18"; then
--   UPSTREAM_NAME="OOo_2_2_1_src"
-+   UPSTREAM_NAME="OOo_2.2.1_src"
-    UPSTREAM_VERSION=2.2.1
- fi
- if test "z$with_mirror" != "z" ; then
 
