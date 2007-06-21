@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epstool
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.21 2007/02/21 23:25:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.22 2007/06/21 15:17:01 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> epstool-3.08.ebuild:
+  Stable for HPPA (bug #182403).
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
