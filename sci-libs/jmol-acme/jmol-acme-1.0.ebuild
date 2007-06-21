@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/jmol-acme-1.0.ebuild,v 1.1 2007/05/22 05:45:17 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/jmol-acme-1.0.ebuild,v 1.2 2007/06/21 23:21:15 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.acme.com/resources/classes/${MY_P}.tar.gz"
 
 LICENSE="ACME"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"
@@ -23,17 +23,19 @@ RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	mkdir -p "${S}/classes"
 	unpack ${A}
+	cd "${S}"
+
+	mkdir -p classes
+	find . -name \*.class -delete
 }
 
 src_compile() {
-	cp "${FILESDIR}/src.list" "${T}"
+	cp "${FILESDIR}/src.list" "${T}" || die
 	ejavac -sourcepath "" -d "${S}/classes" "@${T}/src.list"
-	cd "${S}/classes"
-	jar -cf "${PN}.jar" * || die "failed to create jar"
+	jar cf "${PN}.jar" -C classes . || die "failed to create jar"
 }
 
 src_install() {
-	java-pkg_dojar "${S}/classes/${PN}.jar"
+	java-pkg_dojar ${PN}.jar
 }
