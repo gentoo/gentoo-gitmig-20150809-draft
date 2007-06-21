@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.41 2007/06/19 13:15:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.42 2007/06/21 15:28:45 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> abs-guide-4.2.ebuild:
+  Stable for HPPA (bug #182268).
 
   19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> abs-guide-4.2.ebuild:
   Stable on sparc wrt #182268
