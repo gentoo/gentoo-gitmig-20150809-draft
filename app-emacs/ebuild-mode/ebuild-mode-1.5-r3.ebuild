@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ebuild-mode-1.5-r2.ebuild,v 1.1 2007/06/04 22:30:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ebuild-mode-1.5-r3.ebuild,v 1.1 2007/06/21 05:16:34 ulm Exp $
 
 inherit elisp eutils
 
