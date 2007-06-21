@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.24 2007/05/01 06:29:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.25 2007/06/21 13:18:26 gustavoz Exp $
+
+  21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> obexftp-0.21.ebuild:
+  Keyworded ~sparc wrt #182611
 
   01 May 2007; Alin Năstac <mrness@gentoo.org>
   files/obexftp-0.21-as-needed.patch:
