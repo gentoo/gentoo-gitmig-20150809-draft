@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnopaster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnopaster/ChangeLog,v 1.6 2007/06/21 21:10:44 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnopaster/ChangeLog,v 1.7 2007/06/21 21:41:47 angelos Exp $
+
+  21 Jun 2007; Christoph Mende <angelos@gentoo.org> gnopaster-0.0.9.ebuild:
+  Stable on amd64 wrt bug 182823
 
   21 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> -gnopaster-0.0.7.ebuild:
   Clean out old version.
