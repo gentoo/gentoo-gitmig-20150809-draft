@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.59 2007/06/14 21:00:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.60 2007/06/21 20:15:34 angelos Exp $
+
+  21 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  hibernate-script-1.95-r2.ebuild:
+  Stable on amd64 wrt bug 180645
 
   14 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   hibernate-script-1.95-r2.ebuild:
