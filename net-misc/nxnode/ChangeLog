@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.5 2007/05/27 17:10:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.6 2007/06/21 20:19:37 voyageur Exp $
+
+*nxnode-3.0.0 (21 Jun 2007)
+
+  21 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxnode-3.0.0-setup.patch, +nxnode-3.0.0.ebuild:
+  Version bump, thanks to Timo Gurr <psy@monsterserver.de> in bug #182779
 
   27 May 2007; Bernard Cafarelli <voyageur@gentoo.org> nxnode-2.1.0.ebuild:
   Dropped glib-1.2 dependency

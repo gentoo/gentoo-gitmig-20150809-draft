@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.6 2007/06/11 11:55:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.7 2007/06/21 20:21:30 voyageur Exp $
+
+*nxserver-freeedition-3.0.0 (21 Jun 2007)
+
+  21 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-3.0.0-setup.patch, +nxserver-freeedition-3.0.0.ebuild:
+  Version bump, thanks to Timo Gurr <psy@monsterserver.de> in bug #182779
 
   11 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
   nxserver-freeedition-2.1.0.ebuild:
