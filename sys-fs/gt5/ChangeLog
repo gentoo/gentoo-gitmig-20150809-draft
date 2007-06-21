@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/gt5
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.1 2007/06/21 18:38:45 angelos Exp $
+
+*gt5-1.3d (21 Jun 2007)
+
+  21 Jun 2007; Christoph Mende <angelos@gentoo.org> +gt5-1.3d.ebuild:
+  Initial import, thanks to tsattler@gmx.de
+
