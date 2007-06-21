@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnopaster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnopaster/ChangeLog,v 1.7 2007/06/21 21:41:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnopaster/ChangeLog,v 1.8 2007/06/21 21:55:00 gustavoz Exp $
+
+  21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnopaster-0.0.9.ebuild:
+  Nuking ~sparc keyword, see #182823
 
   21 Jun 2007; Christoph Mende <angelos@gentoo.org> gnopaster-0.0.9.ebuild:
   Stable on amd64 wrt bug 182823
