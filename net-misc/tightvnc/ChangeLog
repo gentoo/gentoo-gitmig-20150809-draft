@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.107 2007/06/21 14:23:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.108 2007/06/21 14:25:07 gustavoz Exp $
+
+  21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> tightvnc-1.3.9.ebuild:
+  Stable on sparc wrt #182789
 
   21 Jun 2007; Christoph Mende <angelos@gentoo.org> tightvnc-1.3.9.ebuild:
   Stable on amd64 wrt bug 182789
