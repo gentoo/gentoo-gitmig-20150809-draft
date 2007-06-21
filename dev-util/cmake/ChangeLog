@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.55 2007/06/20 20:41:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.56 2007/06/21 00:59:49 kumba Exp $
+
+  21 Jun 2007; Joshua Kinard <kumba@gentoo.org> cmake-2.4.6-r1.ebuild:
+  Stable on mips, per #182724.
 
   20 Jun 2007; Christoph Mende <angelos@gentoo.org> cmake-2.4.6-r1.ebuild:
   Stable on amd64 wrt bug 182724
