@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7385 2007/06/21 16:35:16 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7386 2007/06/21 18:34:48 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Wulf C. Krueger <philantrop@gentoo.org> (21 Jun 2007)
+# Masked for removal wrt bug #176857
+net-print/kink
 
 # Daniel Black <dragonheart@gentoo.org> (21 Jun 2007)
 # Masked for removal wrt bug #154763
