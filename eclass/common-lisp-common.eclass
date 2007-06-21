@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.11 2007/06/21 17:34:34 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.12 2007/06/21 17:46:30 hkbst Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -141,6 +141,7 @@ reregister-all-common-lisp-implementations() {
 		unregister-common-lisp-implementation $impl
 		register-common-lisp-implementation $impl
 	done
+	cd - >/dev/null
 	[[ $opt = *off ]] && shopt -u nullglob
 }
 
