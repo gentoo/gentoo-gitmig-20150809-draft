@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.31 2007/03/12 23:59:53 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.32 2007/06/21 15:24:28 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> pstotext-1.9-r2.ebuild:
+  Stable for HPPA (bug #182403).
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
