@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/kwave
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.1 2007/06/21 06:00:51 philantrop Exp $
+
+*kwave-0.7.9 (21 Jun 2007)
+
+  21 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +kwave-0.7.9.ebuild:
+  Initial ebuild, based on Thomas Eschenbacher's (upstream). Thanks, Thomas!
+  Fixes bug 96345.
+
