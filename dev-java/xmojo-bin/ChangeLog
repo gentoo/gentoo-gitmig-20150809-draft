@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmojo-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/ChangeLog,v 1.8 2007/01/05 23:45:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/ChangeLog,v 1.9 2007/06/21 22:58:51 caster Exp $
+
+  21 Jun 2007; Vlastimil Babka <caster@gentoo.org> -xmojo-bin-5.0.0.ebuild,
+  xmojo-bin-5.0.0-r1.ebuild:
+  Remove gen-1 revision and unused gnu-jaxp dependency.
 
   05 Jan 2007; Vlastimil Babka <caster@gentoo.org> xmojo-bin-5.0.0.ebuild,
   xmojo-bin-5.0.0-r1.ebuild:

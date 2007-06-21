@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0-r1.ebuild,v 1.2 2007/01/05 23:45:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0-r1.ebuild,v 1.3 2007/06/21 22:58:51 caster Exp $
 
 inherit java-pkg-2
 
@@ -14,8 +14,7 @@ IUSE="doc"
 DEPEND=""
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/crimson-1.1*
-	>=dev-java/xalan-2.5
-	>=dev-java/gnu-jaxp-1.0"
+	>=dev-java/xalan-2.5"
 #	=dev-java/jetty-4.2*
 S=${WORKDIR}/XMOJO
 
