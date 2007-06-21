@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.62 2007/06/14 04:33:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.63 2007/06/21 05:37:23 wltjr Exp $
+
+  21 Jun 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  firebird-1.5.4-r2.ebuild, firebird-1.5.4-r3.ebuild:
+  Dropped sparc keyword down to -sparc per bug #181811
 
 *firebird-2.0.1.12855.0-r4 (14 Jun 2007)
 
