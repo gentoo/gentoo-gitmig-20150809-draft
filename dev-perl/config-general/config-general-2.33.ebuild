@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/config-general-2.33.ebuild,v 1.2 2007/06/15 02:56:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/config-general-2.33.ebuild,v 1.3 2007/06/21 14:52:08 mcummings Exp $
 
 
 inherit perl-module
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="Artistic"
 SRC_TEST="do"
 
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 
