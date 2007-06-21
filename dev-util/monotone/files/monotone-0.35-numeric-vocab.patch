@@ -1,0 +1,10 @@
+--- monotone-0.35.orig/numeric_vocab.hh	2007-06-20 14:17:12.689221923 -0300
++++ monotone-0.35/numeric_vocab.hh	2007-06-20 14:15:41.297802806 -0300
+@@ -12,6 +12,7 @@
+ 
+ #include <cstddef>
+ #include <limits>
++#include <climits> 
+ 
+ #include "mt-stdint.h"
+ #include <boost/static_assert.hpp>

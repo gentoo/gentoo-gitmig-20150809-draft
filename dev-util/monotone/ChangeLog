@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.42 2007/05/15 09:10:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.43 2007/06/21 08:52:24 dragonheart Exp $
+
+*monotone-0.35 (21 Jun 2007)
+
+  21 Jun 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/monotone-0.35-numeric-vocab.patch, +monotone-0.35.ebuild:
+  version bump and patch as per bug #177147 thanks to Cameron Brunner
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
