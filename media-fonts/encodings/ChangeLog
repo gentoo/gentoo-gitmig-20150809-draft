@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/encodings
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.34 2007/06/20 19:45:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.35 2007/06/21 14:12:57 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> encodings-1.0.2.ebuild:
+  Stable for HPPA (bug #182387).
 
   20 Jun 2007; Markus Rothe <corsair@gentoo.org> encodings-1.0.2.ebuild:
   Stable on ppc64; bug #182387
