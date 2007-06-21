@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.02.93.ebuild,v 1.6 2007/06/21 17:19:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.03.ebuild,v 1.1 2007/06/21 17:19:24 ulm Exp $
 
 inherit elisp
 
@@ -22,8 +22,8 @@ src_compile() {
 src_install() {
 	elisp-install ${PN} lisp/*.el lisp/*.elc
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	doinfo muse.info
-	dodoc README
+	doinfo texi/muse.info
+	dodoc AUTHORS NEWS README ChangeLog* || die "dodoc failed"
 	insinto /usr/share/doc/${PF}
-	doins -r examples contrib experimental scripts
+	doins -r contrib etc examples experimental scripts
 }
