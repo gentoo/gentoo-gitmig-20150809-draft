@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.74-r1.ebuild,v 1.1 2007/06/17 16:31:35 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.74-r2.ebuild,v 1.1 2007/06/21 22:33:30 humpback Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -99,6 +99,9 @@ src_install() {
 		dosym libsigc-2.0.so.0.0.0 /opt/${PN}/libsigc-2.0.so.0
 		doexe "${WORKDIR}"/libsigc-2.0.so.0.0.0
 	fi
+
+	#Fix for no sound notifications
+	dosym /opt/${PN} /usr/share/${PN}
 
 	# TODO: avatars
 	# insinto /opt/${PN}/avatars
