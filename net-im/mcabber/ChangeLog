@@ -1,6 +1,11 @@
 # ChangeLog for net-im/mcabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/ChangeLog,v 1.15 2007/06/12 23:28:27 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/ChangeLog,v 1.16 2007/06/21 06:10:52 wschlich Exp $
+
+*mcabber-0.9.3 (20 Jun 2007)
+
+  20 Jun 2007; Wolfram Schlich <wschlich@gentoo.org> +mcabber-0.9.3.ebuild:
+  version bump
 
 *mcabber-0.9.2 (12 Jun 2007)
 
