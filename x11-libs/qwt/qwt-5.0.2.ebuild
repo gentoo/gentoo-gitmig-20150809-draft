@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.2.ebuild,v 1.1 2007/06/19 18:36:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.2.ebuild,v 1.2 2007/06/21 17:41:02 caleb Exp $
 
 inherit multilib eutils
 
@@ -36,9 +36,6 @@ src_unpack () {
 
 	echo >> ${qwtconfig} "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"
 	echo >> ${qwtconfig} "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}"
-
-	# They got the version wrong
-	sed -e "s/5.0.0/5.0.1/g" -i "${S}/src/src.pro"
 
 	if ! useq doc; then
 		echo >> "${S}/src/src.pro" "INSTALLS = target headers"
