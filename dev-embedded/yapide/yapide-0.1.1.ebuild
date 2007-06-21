@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/yapide/yapide-0.1.ebuild,v 1.4 2005/07/07 04:32:44 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/yapide/yapide-0.1.1.ebuild,v 1.1 2007/06/21 12:05:19 dragonheart Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Yet Another PIC IDE: a Microchip PIC simulator"
 HOMEPAGE="http://www.mtoussaint.de/yapide.html"
@@ -17,33 +17,24 @@ RDEPEND="virtual/libc
 	=x11-libs/qt-3*
 	dev-embedded/gputils"
 
-DEPEND="${RDEPEND}
-	sys-devel/gcc
-	>=sys-apps/sed-4"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/YaPIDE-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.1-configure.patch
-	epatch ${FILESDIR}/${PN}-0.1-nocflags.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-make.patch
 }
 
 
 
 src_compile() {
-
-	REALHOME="${HOME}"
-	mkdir -p ${T}/fakehome/.kde
-	mkdir -p ${T}/fakehome/.qt
-	export HOME="${T}/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 
-	# things that should access the real homedir
-	[ -d "${REALHOME}/.ccache" ] && ln -sf "${REALHOME}/.ccache" "${HOME}/"
-
-	econf || die
+#	this isn't autoconf
+	tc-export CXX
+	./configure || die
 	emake src/Makefile || die
 	sed -i -e "s:^CFLAGS.*-D_REENTRANT:CFLAGS = ${CFLAGS} -D_REENTRANT:" \
 		-e "s:^CXXFLAGS.*-D_REENTRANT:CXXFLAGS = ${CXXFLAGS} -D_REENTRANT:" \
@@ -54,7 +45,7 @@ src_compile() {
 
 
 src_install() {
-	dobin bin/yapide
-	dodoc AUTHORS COPYING KNOWNBUGS README
+	dobin src/yapide
+	dodoc KNOWNBUGS README
 }
 
