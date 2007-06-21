@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6-r1.ebuild,v 1.11 2007/06/21 17:56:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6-r1.ebuild,v 1.12 2007/06/21 19:04:11 ferdy Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/$(get_version_component_range 1-2)/${P
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug doc examples ipv6 rubytests socks5 threads tk" # cjk
 RESTRICT="confcache"
 
