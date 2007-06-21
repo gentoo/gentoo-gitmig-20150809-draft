@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.56 2007/06/12 21:35:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.57 2007/06/21 12:57:24 jer Exp $
+
+*sysstat-7.1.5 (21 Jun 2007)
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> +sysstat-7.1.5.ebuild:
+  Version bump (bug #182756).
 
   12 Jun 2007; Jeroen Roovers <jer@gentoo.org>
   +files/sysstat-7.1.4-strip.patch, sysstat-7.1.4.ebuild:
