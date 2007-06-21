@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.172 2007/06/17 19:35:36 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.173 2007/06/21 05:13:50 kumba Exp $
+
+  21 Jun 2007; Joshua Kinard <kumba@gentoo.org> bind-9.4.1-r1.ebuild:
+  Stable on mips, per #131337.
 
   17 Jun 2007; René Nussbaumer <killerfox@gentoo.org> bind-9.4.1-r1.ebuild:
   Stable on hppa. See bug #181556.
