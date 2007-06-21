@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/xml-simple-1.0.8.ebuild,v 1.1 2006/04/19 17:24:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/xml-simple-1.0.8.ebuild,v 1.2 2007/06/21 18:27:28 graaff Exp $
 
 inherit ruby gems
 
@@ -12,4 +12,4 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~ia64 ~x86"
 IUSE=""
-USE_RUBY="any"
+USE_RUBY="ruby18"
