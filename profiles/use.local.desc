@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2876 2007/06/21 20:08:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2877 2007/06/21 22:31:51 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1402,6 +1402,7 @@ net-im/psi:jingle - Enables voice calls for jabber
 net-im/psi:plugins - Enables plugins support in psi
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
+net-im/skype:qt-static - Installs binaries statically linked to Qt
 net-im/tkabber:extras - Enables extra non official patches
 net-im/tkabber:plugins - Enables instalation the extra plugins
 net-im/tmsnc:talkfilters - Enables Talkfilters support on tmsnc
