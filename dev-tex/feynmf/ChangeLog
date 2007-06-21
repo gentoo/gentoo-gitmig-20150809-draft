@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/feynmf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.7 2007/06/20 12:16:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.8 2007/06/21 06:33:01 opfer Exp $
+
+  21 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  feynmf-1.08-r1.ebuild:
+  stable x86, bug 106909
 
   20 Jun 2007; Christoph Mende <angelos@gentoo.org> feynmf-1.08-r1.ebuild:
   Stable on amd64 wrt bug 106909
