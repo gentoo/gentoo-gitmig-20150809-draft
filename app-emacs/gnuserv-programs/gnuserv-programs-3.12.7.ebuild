@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/gnuserv-programs-3.12.7.ebuild,v 1.3 2007/06/16 13:25:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/gnuserv-programs-3.12.7.ebuild,v 1.4 2007/06/21 17:45:03 angelos Exp $
 
 DESCRIPTION="Binary programs for app-emacs/gnuserv"
 HOMEPAGE="http://meltin.net/hacks/emacs/"
@@ -8,7 +8,7 @@ SRC_URI="http://meltin.net/hacks/emacs/src/gnuserv-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
 
 DEPEND="!app-editors/xemacs

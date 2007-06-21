@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.16 2007/06/16 13:23:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.17 2007/06/21 17:43:00 angelos Exp $
+
+  21 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  gnuserv-3.12.7-r1.ebuild:
+  Added ~amd64 wrt bug 180292
 
   16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gnuserv-3.12.7-r1.ebuild:
