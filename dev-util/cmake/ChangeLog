@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.57 2007/06/21 12:52:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.58 2007/06/21 13:02:09 jer Exp $
+
+  21 Jun 2007; Jeroen Roovers <jer@gentoo.org> cmake-2.4.6-r1.ebuild:
+  Stable for HPPA (bug #182724).
 
   21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> cmake-2.4.6-r1.ebuild:
   Stable on sparc wrt #182724
