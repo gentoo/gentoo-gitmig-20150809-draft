@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-Creator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/ChangeLog,v 1.7 2007/04/22 13:40:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/ChangeLog,v 1.8 2007/06/21 16:01:14 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Email-MIME-Creator-1.451.ebuild:
+  Marking sparc stable
 
 *Email-MIME-Creator-1.453 (22 Apr 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ListDetector
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.9 2007/04/06 20:15:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.10 2007/06/21 16:24:11 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Mail-ListDetector-1.01.ebuild:
+  Marking sparc stable
 
 *Mail-ListDetector-1.01 (06 Apr 2007)
 

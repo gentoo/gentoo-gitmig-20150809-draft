@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDGraph
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.27 2007/05/12 13:34:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.28 2007/06/21 16:11:26 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org> GDGraph-1.44.ebuild:
+  Marking sparc stable
 
 *GDGraph-1.44 (12 May 2007)
 

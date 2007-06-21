@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.18 2007/03/11 01:07:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.19 2007/06/21 16:20:29 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  IO-Multiplex-1.09.ebuild:
+  Marking sparc stable
 
 *IO-Multiplex-1.09 (11 Mar 2007)
 

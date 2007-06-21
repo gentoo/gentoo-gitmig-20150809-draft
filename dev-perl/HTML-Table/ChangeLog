@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Table
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Table/ChangeLog,v 1.16 2007/06/12 18:47:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Table/ChangeLog,v 1.17 2007/06/21 16:17:41 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  HTML-Table-2.05.ebuild:
+  Marking sparc stable
 
 *HTML-Table-2.06 (12 Jun 2007)
 

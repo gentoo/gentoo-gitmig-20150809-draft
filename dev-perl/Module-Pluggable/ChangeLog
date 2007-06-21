@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Pluggable
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/ChangeLog,v 1.27 2007/05/05 17:57:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/ChangeLog,v 1.28 2007/06/21 16:30:02 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Module-Pluggable-3.6.ebuild:
+  Marking sparc stable
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Module-Pluggable-3.5.ebuild:

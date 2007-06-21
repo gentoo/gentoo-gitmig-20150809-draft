@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Address
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.31 2007/06/15 03:05:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.32 2007/06/21 15:58:08 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Email-Address-1.88.6.ebuild, Email-Address-1.88.7.ebuild:
+  Marking sparc stable
 
   15 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   Email-Address-1.88.7.ebuild:

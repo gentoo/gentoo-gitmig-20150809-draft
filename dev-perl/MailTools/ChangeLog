@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.54 2007/05/12 13:59:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.55 2007/06/21 16:25:51 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  MailTools-1.76.ebuild, MailTools-1.77.ebuild:
+  Marking sparc stable
 
 *MailTools-1.77 (12 May 2007)
 

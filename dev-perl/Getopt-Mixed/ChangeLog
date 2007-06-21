@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Getopt-Mixed
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.14 2007/04/04 14:53:08 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.15 2007/06/21 16:13:20 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Getopt-Mixed-1.09.ebuild, Getopt-Mixed-1.10.ebuild:
+  Marking sparc stable
 
 *Getopt-Mixed-1.10 (04 Apr 2007)
 
