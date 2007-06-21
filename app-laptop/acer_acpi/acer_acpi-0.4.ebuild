@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.4.ebuild,v 1.1 2007/04/04 20:30:47 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.4.ebuild,v 1.2 2007/06/21 19:46:05 angelos Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://aceracpi.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 MODULE_NAMES="acer_acpi(extra:)"
