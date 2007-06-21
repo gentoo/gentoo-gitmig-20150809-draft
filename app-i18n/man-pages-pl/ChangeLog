@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.6 2007/05/06 14:25:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.7 2007/06/21 19:05:50 spock Exp $
+
+  21 Jun 2007; Michał Januszewski <spock@gentoo.org>
+  man-pages-pl-20051024.ebuild, man-pages-pl-20070126.ebuild:
+  Don't install a manpage for mc (bug #182535).
 
 *man-pages-pl-20070126 (06 May 2007)
 
