@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.3.ebuild,v 1.3 2007/04/04 20:30:47 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.1 2007/06/21 19:29:19 jurek Exp $
 
 inherit linux-mod
 
 DESCRIPTION="A kernel module to allow hardware control on newer Acer laptops"
 HOMEPAGE="http://code.google.com/p/aceracpi"
-SRC_URI="http://aceracpi.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://aceracpi.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
