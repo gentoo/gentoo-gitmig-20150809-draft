@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.37 2007/05/08 13:34:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.38 2007/06/21 17:12:45 armin76 Exp $
+
+  21 Jun 2007; Raúl Porcel <armin76@gentoo.org> re2c-0.12.0.ebuild:
+  Add ~alpha wrt #177144
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> re2c-0.12.0.ebuild:
   Add ~ia64 wrt bug 177144
