@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2875 2007/06/21 15:29:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2876 2007/06/21 20:08:16 voyageur Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1502,9 +1502,8 @@ net-misc/kvpnc:cisco - Adds support for Cisco client
 net-misc/ntp:zeroconf - Add support for multicast dns
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
-net-misc/nx-x11-bin:vnc - Add support for connecting to VNC servers
-net-misc/nx-x11:vnc - Add support for connecting to VNC servers
 net-misc/nx:vnc - Add support for vnc to remote servers
+net-misc/nxnode:vnc - Add support for vnc to remote servers
 net-misc/nxserver-2xterminalserver:vnc - Add support for vnc to remote servers
 net-misc/nxserver-freenx:nxclient - Add support for the commercial nxclient
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
