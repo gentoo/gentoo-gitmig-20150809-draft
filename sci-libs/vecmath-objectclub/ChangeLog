@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vecmath-objectclub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vecmath-objectclub/ChangeLog,v 1.1 2007/05/22 05:58:01 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vecmath-objectclub/ChangeLog,v 1.2 2007/06/21 23:11:48 caster Exp $
+
+  21 Jun 2007; Vlastimil Babka <caster@gentoo.org>
+  vecmath-objectclub-1.14.ebuild:
+  Add ~x86 keyword.
 
 *vecmath-objectclub-1.14 (22 May 2007)
 
