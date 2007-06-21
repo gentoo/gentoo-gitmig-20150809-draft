@@ -3,11 +3,7 @@
 <pkgmetadata>
   <herd>python</herd>
   <maintainer>
-    <email>python@gentoo.org</email>
-    <description>Proxy maintainer</description>
-  </maintainer>
-  <maintainer>
-    <email>polatel@nerdshack.com</email>
-    <name>Ali Polatel (hawking)</name>
+    <email>hawking@gentoo.org</email>
+    <name>Ali Polatel</name>
   </maintainer>
 </pkgmetadata>
