@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-print
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/ChangeLog,v 1.22 2007/04/09 15:17:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/ChangeLog,v 1.23 2007/06/21 18:05:10 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  gnome2-print-1.000.ebuild:
+  Added missing dep - stops building at the start, so no bump (either it
+  worked for you or not)
 
   09 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   gnome2-print-1.000.ebuild:
