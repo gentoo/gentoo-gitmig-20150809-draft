@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.31 2007/02/04 18:49:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.32 2007/06/21 23:44:19 dberkholz Exp $
+
+*fish-1.22.3 (21 Jun 2007)
+
+  21 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.22.3.ebuild:
+  (#167281) Bump to latest. The doxygen dep is mandatory.
 
   04 Feb 2007; Steve Dibb <beandog@gentoo.org> fish-1.22.1.ebuild:
   amd64 stable, bug 151899
