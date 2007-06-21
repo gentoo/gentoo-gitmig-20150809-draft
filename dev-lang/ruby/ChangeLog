@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.286 2007/06/21 17:30:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.287 2007/06/21 17:56:09 angelos Exp $
+
+  21 Jun 2007; Christoph Mende <angelos@gentoo.org> ruby-1.8.6-r1.ebuild:
+  Back to ~amd64 wrt bug 181110
 
   21 Jun 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6-r1.ebuild:
   Mark 1.8.6 unstable on alpha/ia64/x86 wrt #181110
