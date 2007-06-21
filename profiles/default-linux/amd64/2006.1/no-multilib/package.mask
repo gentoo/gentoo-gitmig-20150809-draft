@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.31 2007/05/20 21:32:52 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.32 2007/06/21 20:05:41 voyageur Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -173,10 +173,9 @@ net-im/skype
 net-im/ymessenger
 net-misc/icaclient
 net-misc/nx
-net-misc/nx-x11-bin
-net-misc/nxclient
-net-misc/nxnode
-net-misc/nxserver-freeedition
+<net-misc/nxclient-3.0.0
+<net-misc/nxnode-3.0.0
+<net-misc/nxserver-freeedition-3.0.0
 net-misc/nxserver-freenx
 net-p2p/sancho-bin
 net-www/netscape-flash

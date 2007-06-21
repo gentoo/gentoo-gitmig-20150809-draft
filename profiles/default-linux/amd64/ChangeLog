@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.97 2007/06/12 20:31:01 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.98 2007/06/21 20:05:41 voyageur Exp $
+
+  21 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
+  2007.0/no-multilib/package.mask:
+  Unmask >=3.0 ebuilds for NX binary packages on no-multilib
 
   12 Jun 2007; Jim Ramsay <lack@gentoo.org> make.defaults:
   Removing multilib-strict exemption for Rox-Clib, since bug 164816 is fixed
