@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.77 2007/06/15 02:41:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.78 2007/06/21 15:19:58 mcummings Exp $
+
+  21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  DBD-mysql-4.00.1.ebuild, DBD-mysql-4.00.3.ebuild,
+  DBD-mysql-4.00.4-r1.ebuild:
+  Marking sparc stable
 
 *DBD-mysql-4.00.5 (15 Jun 2007)
 
