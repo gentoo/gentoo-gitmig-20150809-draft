@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.0.1.ebuild,v 1.1 2007/06/19 21:23:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.0.1.ebuild,v 1.2 2007/06/21 14:58:03 ribosome Exp $
 
 MY_PN="autodocksuite"
 MY_P="${MY_PN}-${PV}"
@@ -31,4 +31,17 @@ src_compile() {
 src_install() {
 	dobin autodock/autodock4
 	dobin autogrid/autogrid4
+}
+
+pkg_postinst() {
+	echo
+	einfo "The AutoDock development team requests all users to fill out the"
+	einfo "registration form at:"
+	einfo
+	einfo "\thttp://autodock.scripps.edu/downloads/autodock-registration"
+	einfo
+	einfo "The number of unique users of AutoDock is used by Prof. Arthur J."
+	einfo "Olson and the Scripps Research Institude to support grant"
+	einfo "applications."
+	echo
 }
