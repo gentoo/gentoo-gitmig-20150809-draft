@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.77 2007/06/14 11:02:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.78 2007/06/21 06:52:56 kumba Exp $
+
+  21 Jun 2007; Joshua Kinard <kumba@gentoo.org> metalog-0.8.ebuild:
+  Stable on mips, per #181622.
 
   14 Jun 2007; Raúl Porcel <armin76@gentoo.org> metalog-0.8.ebuild:
   alpha stable wrt #181622
