@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.12 2007/03/15 15:38:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.13 2007/06/21 13:25:18 gustavoz Exp $
+
+  21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> webfs-1.21.ebuild:
+  Stable on sparc
 
   15 Mar 2007; Raúl Porcel <armin76@gentoo.org> webfs-1.21.ebuild:
   x86 stable
