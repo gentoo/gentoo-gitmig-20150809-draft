@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.12 2007/01/22 08:35:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.13 2007/06/22 03:53:01 dirtyepic Exp $
 
 inherit font
 
@@ -14,6 +14,8 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd"
+
+DEPEND="x11-apps/bdftopcf"
 
 src_compile() {
 	cd ${S}
