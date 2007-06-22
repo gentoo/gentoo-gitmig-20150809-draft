@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-2.7a_p2.ebuild,v 1.4 2007/01/15 11:28:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-2.7a_p2.ebuild,v 1.5 2007/06/22 10:59:55 hkbst Exp $
 
 inherit elisp-common
 
@@ -17,7 +17,7 @@ IUSE="java emacs"
 
 DEPEND=">=sys-apps/sed-4
 	emacs? ( virtual/emacs )
-	java? ( virtual/jdk )"
+	java? ( virtual/jdk app-arch/zip )"
 
 S=${WORKDIR}/${MY_P}
 
