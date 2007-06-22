@@ -32,9 +32,6 @@ sms
 # No apm support on ia64
 apm
 
-# tcc is x86-only
-tcc
-
 # I don't think that openafs really works on other architectures,
 # despite some internal Gentoo efforts (mine) to port it
 afs

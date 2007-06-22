@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.67 2007/06/21 18:37:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.68 2007/06/22 18:53:02 wolf31o2 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -55,9 +55,6 @@ apm
 java
 java-internal
 java-external
-
-# tcc is x86-only
-tcc
 
 hardened
 hal

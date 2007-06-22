@@ -9,7 +9,6 @@ hdf
 ip28
 lm_sensors
 real
-tcc
 fmod
 #keep and eye on firebird and interbase as pair
 interbase

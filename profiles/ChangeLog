@@ -1,6 +1,31 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.483 2007/06/22 15:17:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.484 2007/06/22 18:53:02 wolf31o2 Exp $
+
+  22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org> base/use.mask,
+  default-linux/alpha/use.mask, default-linux/amd64/use.mask,
+  default-linux/ia64/use.mask, default-linux/mips/use.mask,
+  default-linux/ppc/1.0/use.mask, default-linux/ppc/1.0_rc/use.mask,
+  default-linux/ppc/1.2/use.mask, default-linux/ppc/1.4/use.mask,
+  default-linux/ppc/2004.0/use.mask, default-linux/ppc/2004.1/use.mask,
+  default-linux/ppc/2004.2/use.mask, default-linux/ppc/2004.3/use.mask,
+  default-linux/ppc/2005.0/use.mask, default-linux/ppc/2005.1/ppc/use.mask,
+  default-linux/ppc/dev/ppc32/use.mask,
+  default-linux/ppc/dev/ppc64/2007.0/32bit-userland/use.mask,
+  default-linux/ppc/ppc32/use.mask,
+  default-linux/ppc/ppc64/2006.0/32bit-userland/use.mask,
+  default-linux/ppc/ppc64/2006.1/32bit-userland/use.mask,
+  default-linux/ppc/ppc64/2007.0/32bit-userland/use.mask,
+  default-linux/sparc/use.mask, default-linux/use.mask,
+  default-linux/x86/use.mask, hardened/amd64/use.mask,
+  hardened/ppc/use.mask, hardened/ppc64/use.mask, hardened/use.mask,
+  hardened/x86/use.mask, selinux/2005.1/alpha/use.mask,
+  selinux/alpha/use.mask, selinux/amd64/use.mask, selinux/mips/use.mask,
+  selinux/ppc/ppc32/use.mask, selinux/sparc/use.mask, selinux/use.mask,
+  selinux/x86/use.mask:
+  Moved clvm and tcc USE flags masking to the highest possible parent and
+  unmasking at highest possible point, rather than in leaf profiles. This is
+  for bug #159832.
 
   22 Jun 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add amrnb, amrwb local use flags for mplayer

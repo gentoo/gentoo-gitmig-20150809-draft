@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.26 2007/01/04 21:49:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.27 2007/06/22 18:53:03 wolf31o2 Exp $
 
 -3dnow
 -3dnowext
@@ -33,6 +33,9 @@ ipod
 uml
 cman
 gulm
+
+# lvm2 cluster
+-clvm
 
 # 2006/06/22 Chris Gianelloni <wolf31o2@gentoo.org>
 # # Masking for bug #136866
@@ -67,3 +70,7 @@ ibm
 -oracle7
 -firebird
 -db2
+
+# dev-lang/tcc won't build
+-tcc
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.17 2007/06/03 01:07:26 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.18 2007/06/22 18:53:03 wolf31o2 Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -35,7 +35,6 @@ pcmcia
 pmount
 rar
 real
-tcc
 trusted
 uml
 voodoo3

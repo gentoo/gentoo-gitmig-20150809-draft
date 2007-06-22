@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.115 2007/06/03 01:07:26 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.116 2007/06/22 18:53:03 wolf31o2 Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -37,7 +37,6 @@ rar
 real
 reiser4
 reiserfs
-tcc
 tordns
 trusted
 uml

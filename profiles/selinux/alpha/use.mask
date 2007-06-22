@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.9 2007/04/07 13:37:10 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.10 2007/06/22 18:53:03 wolf31o2 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -36,9 +36,7 @@ java-internal
 java-external
 
 # firebird appears to be x86-only (the db, not the browser)
-
-# tcc is x86-only
-tcc
+firebird
 
 # I don't think that openafs really works on other architectures,
 # despite some internal Gentoo efforts (mine) to port it

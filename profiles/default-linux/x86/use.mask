@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.31 2007/06/03 01:50:47 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.32 2007/06/22 18:53:03 wolf31o2 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
@@ -91,3 +91,6 @@ video_cards_newport
 # George Shapovalov <george@gentoo.org> (8 Apr 2007)
 # supported on x86
 -ada
+
+# tcc is x86 only
+-tcc

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.15 2007/03/10 09:55:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.16 2007/06/22 18:53:03 wolf31o2 Exp $
 
 # Samuli Suominen <drac@gentoo.org>
 # no battery support on mips. bug 157881
@@ -250,7 +250,6 @@ dvdr
 ibm
 ggi
 lirc
-tcc
 trusted
 voodoo3
 smartcard

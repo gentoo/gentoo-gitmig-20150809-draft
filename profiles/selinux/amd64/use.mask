@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/amd64/use.mask,v 1.9 2007/04/07 01:26:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/amd64/use.mask,v 1.10 2007/06/22 18:53:03 wolf31o2 Exp $
 
 # SECTION: Unmask
 
@@ -53,7 +53,6 @@ afs
 asm
 drac
 multitarget
-tcc
 vidix
 
 # 2006/06/07 - Danny van Dyk <kugelfang@gentoo.org>

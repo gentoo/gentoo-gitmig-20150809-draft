@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.91 2007/06/10 17:11:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.92 2007/06/22 18:53:02 wolf31o2 Exp $
 
 # 22 May 2007; Christian Heim <phreak@gentoo.org>
 # unmask ip28 and ip32r10k only on mips
@@ -255,7 +255,6 @@ dvdr
 ibm
 ggi
 lirc
-tcc
 trusted
 voodoo3
 smartcard
