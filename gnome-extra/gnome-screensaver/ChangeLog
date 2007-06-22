@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.39 2007/05/25 20:36:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.40 2007/06/22 21:33:02 jer Exp $
+
+  22 Jun 2007; Jeroen Roovers <jer@gentoo.org>
+  gnome-screensaver-2.18.0.ebuild, gnome-screensaver-2.18.1.ebuild:
+  Marked ~hppa (bug #182551).
 
 *gnome-screensaver-2.16.3 (25 May 2007)
 
