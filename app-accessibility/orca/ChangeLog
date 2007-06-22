@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.5 2007/06/19 12:49:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.6 2007/06/22 21:37:55 jer Exp $
+
+  22 Jun 2007; Jeroen Roovers <jer@gentoo.org> orca-2.18.0.ebuild,
+  orca-2.18.1.ebuild:
+  Marked ~hppa (bug #182551).
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> orca-2.18.1.ebuild:
   Add ~ia64
