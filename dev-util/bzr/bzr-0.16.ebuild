@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.16.ebuild,v 1.2 2007/06/04 23:11:06 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.16.ebuild,v 1.3 2007/06/22 00:02:35 marienz Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -75,9 +75,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	distutils_pkg_postrm
-	# regenerate site-gentoo if we are merged USE=emacs and unmerged
-	# USE=-emacs
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 }
 
 src_test() {

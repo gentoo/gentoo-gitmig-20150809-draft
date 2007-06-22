@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.15.ebuild,v 1.2 2007/06/04 23:11:06 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.17.ebuild,v 1.1 2007/06/22 00:02:35 marienz Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -30,7 +30,7 @@ RDEPEND=">=dev-lang/python-2.4
 
 PYTHON_MODNAME="bzrlib"
 
-DOCS="HACKING NEWS NEWS.developers doc/*"
+DOCS="doc/*.txt"
 
 
 src_unpack() {
@@ -38,7 +38,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Install the manpage in /usr/share/man instead of /usr/man
-	epatch "${FILESDIR}/${PN}-0.10-fix-manpage-location.patch"
+	epatch "${FILESDIR}/${PN}-0.16-fix-manpage-location.patch"
 }
 
 src_compile() {
@@ -50,6 +50,8 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
+	docinto developers
+	dodoc doc/developers/*
 	if use emacs; then
 		insinto "${SITELISP}"
 		doins contrib/emacs/bzr-mode.el*
@@ -64,17 +66,11 @@ pkg_postinst() {
 	distutils_pkg_postinst
 	use emacs && elisp-site-regen
 	bash-completion_pkg_postinst
-
-	elog "If you just upgraded from a version of bzr older than 0.9"
-	elog "you should rename your ~/.bazaar/branches.conf to locations.conf"
-	elog "(see /usr/share/doc/${PF}/NEWS.gz)"
 }
 
 pkg_postrm() {
 	distutils_pkg_postrm
-	# regenerate site-gentoo if we are merged USE=emacs and unmerged
-	# USE=-emacs
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 }
 
 src_test() {
