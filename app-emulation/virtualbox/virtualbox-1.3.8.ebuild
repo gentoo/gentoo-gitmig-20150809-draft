@@ -22,13 +22,13 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/xerces-c
 	media-libs/libsdl
 	x11-libs/libXcursor
-	$(qt_min_version 3.3.5)
-	=virtual/libstdc++-3.3"
+	$(qt_min_version 3.3.5)"
 DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
-	alsa? ( >=media-libs/alsa-lib-1.0.13 )"
+	alsa? ( >=media-libs/alsa-lib-1.0.13 )
+	=virtual/libstdc++-3.3"
 RDEPEND="${RDEPEND}
 	additions? ( ~app-emulation/virtualbox-additions-${PV} )"
 

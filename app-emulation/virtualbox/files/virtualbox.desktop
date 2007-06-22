@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Version=1.3.4
-Name=InnoTek VirtualBox
+Version=
+Name=Innotek VirtualBox
 Type=Application
 Comment=Run several virtual systems on a single host computer
 Exec=virtualbox

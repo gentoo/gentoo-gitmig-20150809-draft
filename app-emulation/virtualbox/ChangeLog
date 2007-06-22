@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.19 2007/06/06 19:55:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.20 2007/06/22 13:29:33 masterdriverz Exp $
+
+  22 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  files/virtualbox.desktop, virtualbox-1.3.8.ebuild,
+  virtualbox-1.4.0.ebuild:
+  Port changes from jokey's overlay; thanks to x-drum: minor changes to
+  desktop entry; fix missing fperms; adjust perms for VirtualBox's
+  executables; remove virtual/libstdc++ from DEPEND, no longer required by
+  kBuild; fix USE flag hal in src_compile
 
   06 Jun 2007; Markus Ullmann <jokey@gentoo.org>
   +files/virtualbox-1.4.0-remove-alsa.patch,
