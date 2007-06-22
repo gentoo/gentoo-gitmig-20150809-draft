@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.2 2007/01/31 18:11:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.3 2007/06/22 18:22:38 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,9 +13,10 @@ SRC_URI="http://debian-knoppix.alioth.debian.org/sources/${PN}_${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
-IUSE=""
+IUSE="zlib"
 
 DEPEND="sys-libs/libkudzu
+	zlib? ( sys-libs/zlib )
 	sys-apps/pciutils"
 RDEPEND="${DEPEND}
 	sys-apps/hwdata-gentoo"
@@ -29,7 +30,13 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -lz
+	if use zlib
+	then
+		append-ldflags -lz
+	elif built_with_use sys-apps/pciutils zlib
+	then
+		die "You need to build with USE=zlib to match sys-apps/pcituils"
+	fi
 	emake LDFLAGS="${LDFLAGS}" OPT="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
