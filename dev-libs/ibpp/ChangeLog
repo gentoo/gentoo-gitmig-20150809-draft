@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ibpp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.15 2007/03/26 08:10:40 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.16 2007/06/22 19:33:25 sekretarz Exp $
+
+*ibpp-2.5.3.1 (22 Jun 2007)
+
+  22 Jun 2007; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/ibpp-2.5.3.1-gentoo.patch, +ibpp-2.5.3.1.ebuild:
+  Version bump, bug #106206
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> ibpp-1.0.5.2-r1.ebuild:
   Remove dependency on portage: ref bug 162516
