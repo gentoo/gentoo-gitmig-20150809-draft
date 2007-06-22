@@ -12,7 +12,7 @@ diff -urN unix.orig/configure.ac unix/configure.ac
 +
 +# Checks for programs.
 +AC_PROG_FC
-+
++AC_PROG_F77
 +AC_OUTPUT([Makefile])
 diff -urN unix.orig/Makefile.am unix/Makefile.am
 --- unix.orig/Makefile.am	1969-12-31 16:00:00.000000000 -0800
