@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.4 2007/06/22 07:01:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.ebuild,v 1.1 2007/06/22 07:01:13 dberkholz Exp $
 
 inherit eutils fortran toolchain-funcs
 
@@ -9,15 +9,14 @@ MY_P="${MY_PN}_${PV}"
 
 DESCRIPTION="Crystallography and NMR System"
 HOMEPAGE="http://cns.csb.yale.edu/"
-SRC_URI="${MY_P}_basic_inputs.tar.gz
-	${MY_P}_data.tar.gz
-	test? ( ${MY_P}_test.tar.gz )"
+SRC_URI="${MY_P}_all.tar.gz"
 RESTRICT="fetch"
 LICENSE="cns"
 SLOT="0"
-KEYWORDS="ppc x86"
-IUSE="test"
-RDEPEND="|| ( app-shells/tcsh app-shells/csh )"
+KEYWORDS="~ppc ~x86"
+IUSE=""
+RDEPEND="|| ( app-shells/tcsh app-shells/csh )
+	!app-text/dos2unix"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
@@ -32,10 +31,11 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	# The length of time must be at least 10, not 9
 	# http://gcc.gnu.org/ml/fortran/2006-02/msg00198.html
-	epatch "${FILESDIR}"/${PV}-time-length-10.patch
+	epatch "${FILESDIR}"/1.1-time-length-10.patch
 
 	# Set up location for the build directory
 	# Uses obsolete `sort` syntax, so we set _POSIX2_VERSION
@@ -116,9 +116,6 @@ src_install() {
 		-A iq,cgi,csh,cv,def,fm,gif,hkl,inp,jpeg,lib,link,list,mask,mtf,param,pdb,pdf,pl,ps,sc,sca,sdb,seq,tbl,top \
 		-f all_cns_info_template,omac,def \
 		-r doc/html/*
-
-	# Conflits with app-text/dos2unix
-	rm -f "${D}"/usr/bin/dos2unix
 }
 
 pkg_postinst() {
