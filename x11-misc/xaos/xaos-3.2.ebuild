@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.5 2006/09/29 23:59:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.6 2007/06/22 07:05:55 dberkholz Exp $
 
 inherit eutils
 
@@ -19,14 +19,11 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
 RDEPEND="X? (
-			 || (
-					virtual/x11
-					(
-					x11-libs/libX11
-					x11-libs/libXxf86dga
-					x11-libs/libXext
-					x11-libs/libXxf86vm
-					)
+				(
+				x11-libs/libX11
+				x11-libs/libXxf86dga
+				x11-libs/libXext
+				x11-libs/libXxf86vm
 				)
 		   )
 	svga? ( >=media-libs/svgalib-1.4.3 )
@@ -38,14 +35,11 @@ RDEPEND="X? (
 
 DEPEND="${RDEPEND}
 		X? (
-			|| (
-					virtual/x11
-					(
-					x11-proto/xf86vidmodeproto
-					x11-proto/xextproto
-					x11-proto/xf86dgaproto
-					x11-proto/xproto
-					)
+				(
+				x11-proto/xf86vidmodeproto
+				x11-proto/xextproto
+				x11-proto/xf86dgaproto
+				x11-proto/xproto
 				)
 			)"
 
