@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1.ebuild,v 1.2 2007/06/22 15:19:53 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1.ebuild,v 1.3 2007/06/22 15:28:00 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="examples"
 
-RDEPEND="virtual/libpcap"
-DEPEND="${RDEPEND}
+DEPEND="virtual/libpcap
 	>=dev-python/pyrex-0.9.5.1a"
 
 src_compile() {
