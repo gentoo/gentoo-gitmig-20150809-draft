@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.3.1.ebuild,v 1.3 2007/05/30 22:03:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.3.1.ebuild,v 1.4 2007/06/22 22:33:19 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -17,10 +17,18 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE=""
+IUSE="new-interface"
 RDEPEND=">=sci-libs/gsl-1.3
-	=dev-libs/glib-1.2*
-	=x11-libs/gtkglarea-1.2*
+	new-interface? (
+		>=x11-libs/gtk+-2.2
+		gnome-base/libgnomecanvas
+		=x11-libs/guile-gtk-2*
+	)
+	!new-interface? (
+		=dev-libs/glib-1.2*
+		=x11-libs/gtkglarea-1.2*
+		=x11-libs/guile-gtk-1*
+	)
 	x11-libs/gtkglext
 	virtual/glut
 	virtual/opengl
@@ -28,7 +36,6 @@ RDEPEND=">=sci-libs/gsl-1.3
 	dev-lang/python
 	>=x11-libs/gtk-canvas-0.1.1-r2
 	dev-lang/python
-	x11-libs/guile-gtk
 	dev-scheme/guile-gui
 	dev-scheme/net-http
 	dev-scheme/goosh
@@ -42,8 +49,11 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${PV}-as-needed.patch
+	epatch "${FILESDIR}"/${PV}-fix-compilation-with-guile-1.8.patch
+	epatch "${FILESDIR}"/${PV}-link-against-guile-gtk-properly.patch
 
 	# Link against single-precision fftw
 	sed -i \
@@ -82,6 +92,8 @@ src_compile() {
 		--with-ssmlib-prefix=/usr \
 		--with-guile=/usr \
 		--with-python=/usr \
+		--with-guile-gtk \
+		$(use_with new-interface gtk2) \
 		|| die "econf failed"
 
 	# Parallel build's broken
@@ -89,7 +101,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake -j1 DESTDIR="${D}" install || die "install failed"
 
 	# Install misses this
 	insinto /usr/share/coot/python
