@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1.ebuild,v 1.1 2007/02/28 00:40:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1.ebuild,v 1.2 2007/06/22 15:19:53 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,10 +15,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="examples"
 
-DEPEND="virtual/libpcap"
-RDEPEND="${DEPEND}"
+RDEPEND="virtual/libpcap"
+DEPEND="${RDEPEND}
+	>=dev-python/pyrex-0.9.5.1a"
 
 src_compile() {
+	# pcap.c was generated with pyrex-0.9.3
+	# and <=pyrex-0.9.5.1a is incompatible with python-2.5.
+	# So we regenerate it. Bug #180039
+	pyrexc pcap.pyx || die "pyrexc failed"
 	"${python}" setup.py config || die "config failed"
 	distutils_src_compile
 }
