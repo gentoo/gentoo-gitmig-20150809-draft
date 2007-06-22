@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/thumbs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/ChangeLog,v 1.4 2006/11/20 18:17:15 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/ChangeLog,v 1.5 2007/06/22 17:38:26 lack Exp $
+
+  22 Jun 2007; Jim Ramsay <lack@gentoo.org> thumbs-0.1.3.ebuild:
+  Adding ~amd64 keyword
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org> thumbs-0.1.3.ebuild:
   stable x86, bug #155521
