@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-fuse
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/ChangeLog,v 1.4 2006/10/22 18:47:20 jurek Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/ChangeLog,v 1.5 2007/06/22 17:46:04 jurek Exp $
+
+  22 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> mono-fuse-0.4.0.ebuild:
+  Making fuse dependency more restrictive
 
   22 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> mono-fuse-0.4.0.ebuild:
   Added a required >=dev-util/monodoc-1.1.13 dependency
