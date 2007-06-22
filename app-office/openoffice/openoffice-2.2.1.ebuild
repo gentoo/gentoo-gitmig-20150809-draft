@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.6 2007/06/21 07:05:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.7 2007/06/22 11:22:42 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -50,7 +50,6 @@ KEYWORDS="~amd64 ppc -sparc x86"
 COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXaw
 	x11-libs/libXinerama
-	virtual/libc
 	>=dev-lang/perl-5.0
 	dbus? ( || (
 				>=dev-libs/dbus-glib-0.71
@@ -102,7 +101,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
-RDEPEND="java? ( || ( =virtual/jre-1.5* =virtual/jre-1.4* )  )
+RDEPEND="java? ( >=virtual/jre-1.4 )
 	${COMMON_DEPEND}"
 
 DEPEND="${COMMON_DEPEND}
