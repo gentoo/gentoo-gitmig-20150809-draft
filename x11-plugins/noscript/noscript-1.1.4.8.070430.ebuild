@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/noscript-1.1.4.8.070430.ebuild,v 1.7 2007/06/13 12:13:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/noscript-1.1.4.8.070430.ebuild,v 1.8 2007/06/22 06:24:49 mr_bones_ Exp $
 
 inherit mozextension multilib
 
