@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070622.ebuild,v 1.1 2007/06/22 15:26:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070622.ebuild,v 1.2 2007/06/22 19:18:31 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -287,7 +287,6 @@ src_compile() {
 	use a52 || myconf="${myconf} --disable-liba52"
 	use amrnb || myconf="${myconf} --disable-libamr_nb"
 	use amrwb || myconf="${myconf} --disable-libamr_wb"
-	use dts || myconf="${myconf} --disable-libdts"
 	! use png && ! use gtk && myconf="${myconf} --disable-png"
 	use lzo || myconf="${myconf} --disable-liblzo"
 	use encode && use mp2 || myconf="${myconf} --disable-twolame \
