@@ -1,6 +1,11 @@
 # ChangeLog for net-print/kink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/kink/ChangeLog,v 1.6 2007/01/06 19:50:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/kink/ChangeLog,v 1.7 2007/06/22 05:54:33 philantrop Exp $
+
+  22 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kink-0.2.1-api-update.patch, metadata.xml, kink-0.2.1-r1.ebuild:
+  Added Joerg Plate's patch from bug 176857 to make it compile using
+  libinklevel's new API. Thanks, Joerg! Minor whitespace fixes.
 
 *kink-0.2.1-r1 (06 Jan 2007)
 
