@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.2-r4.ebuild,v 1.6 2007/06/22 08:21:43 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.2-r4.ebuild,v 1.7 2007/06/22 15:19:39 chtekk Exp $
 
 inherit elisp-common libtool python eutils multilib bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -41,7 +41,8 @@ S=${WORKDIR}/${P/_rc/-rc}
 
 discover_apr_suffix() {
 	if use apache2 ; then
-		if has_version '=net-www/apache-2.0*' ; then
+		if has_version '=net-www/apache-2.0*' \
+		&& has_version '=dev-libs/apr-util-0.9*' ; then
 			aprsuffix=""
 		else
 			aprsuffix="-1"
