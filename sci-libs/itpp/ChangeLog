@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.42 2007/06/14 15:36:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.43 2007/06/22 14:48:26 markusle Exp $
+
+*itpp-3.99.2 (22 Jun 2007)
+
+  22 Jun 2007; Markus Dittrich <markusle@gentoo.org> itpp-3.10.11.ebuild,
+  +itpp-3.99.2.ebuild:
+  Version bump.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> itpp-3.10.10.ebuild:
   Stable on amd64 wrt bug 181252
