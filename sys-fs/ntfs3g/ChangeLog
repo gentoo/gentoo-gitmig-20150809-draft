@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.34 2007/06/22 15:20:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.35 2007/06/22 19:29:21 chutzpah Exp $
+
+  22 Jun 2007; Patrick McLean <chutzpah@gentoo.org> ntfs3g-1.616.ebuild:
+  Move *.a and *.la files to /usr (fixes bug #182922).
 
 *ntfs3g-1.616 (22 Jun 2007)
 
