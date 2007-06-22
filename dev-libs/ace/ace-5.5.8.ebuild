@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.8.ebuild,v 1.1 2007/06/22 22:24:51 dragonheart Exp $
-
-inherit eutils autotools
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.8.ebuild,v 1.2 2007/06/22 22:37:59 dragonheart Exp $
 
 S="${WORKDIR}/ACE_wrappers"
 DESCRIPTION="The Adaptive Communications Environment"
@@ -15,40 +13,27 @@ SRC_URI="!tao? (
 				)
 		 )"
 
-# tao currently has upstream bug
-# http://deuce.doc.wustl.edu/bugzilla/show_bug.cgi?id=2684
-
-# ciao currently isn't autoconf and depends of tao
-# http://www.dre.vanderbilt.edu/~schmidt/DOC_ROOT/CIAO/CIAO-INSTALL.html
-
 HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
 
 SLOT="0"
 LICENSE="BSD as-is"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
 IUSE="X ipv6 tao ciao"
-#IUSE="X ipv6"
 
-DEPEND="dev-libs/openssl"
-
-RDEPEND="${DEPEND}
+COMMON_DEPEND="dev-libs/openssl"
+# TODO probably more
+RDEPEND="${COMMON_DEPEND}
 	X? ( || (
 	( x11-libs/libXt
 	x11-libs/libXaw )
 	virtual/x11 )
 	)"
 
-DEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
 	X? ( || (
 	( x11-proto/xproto )
 	virtual/x11 )
 	)"
-
-src_unpack() {
-	unpack ${A}
-#	cd "${S}"
-#	AT_M4DIR=m4 eautoreconf
-}
 
 src_compile() {
 	export ACE_ROOT="${S}"
@@ -63,9 +48,8 @@ src_compile() {
 
 
 src_test() {
-	cd ${S}/build
+	cd "${S}"/build
 	make ACE_ROOT=${S} check || die "self test failed"
-	#einfo "src_test currently stalls after Process_Mutex_Test"
 }
 
 src_install() {
