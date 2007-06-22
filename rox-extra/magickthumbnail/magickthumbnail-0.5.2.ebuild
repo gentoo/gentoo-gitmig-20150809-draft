@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/magickthumbnail-0.5.2.ebuild,v 1.2 2007/02/09 22:08:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/magickthumbnail-0.5.2.ebuild,v 1.3 2007/06/22 22:02:15 lack Exp $
 
 ROX_LIB="2.0.0"
 inherit rox eutils
@@ -14,7 +14,7 @@ SRC_URI="http://rox.maczewski.dyndns.org/prog/${MY_PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="xcf"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="media-gfx/imagemagick
 	xcf? ( media-gfx/gimp )"

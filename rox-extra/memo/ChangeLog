@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/memo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.17 2007/05/28 16:25:10 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.18 2007/06/22 22:03:01 lack Exp $
+
+  22 Jun 2007; Jim Ramsay <lack@gentoo.org> memo-2.0-r1.ebuild:
+  Adding ~amd64 keyword
 
   28 May 2007; Jim Ramsay <lack@gentoo.org> memo-2.0-r1.ebuild:
   Changed to depend on libnotify instead of notification-daemon directly, to

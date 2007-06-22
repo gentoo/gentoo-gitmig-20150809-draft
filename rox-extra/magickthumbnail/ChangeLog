@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/magickthumbnail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.6 2007/04/19 13:52:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.7 2007/06/22 22:02:15 lack Exp $
+
+  22 Jun 2007; Jim Ramsay <lack@gentoo.org> magickthumbnail-0.5.2.ebuild:
+  Adding ~amd64 keyword
 
   19 Apr 2007; Jim Ramsay <lack@gentoo.org> -magickthumbnail-0.5.1.ebuild:
   Version cleanup
