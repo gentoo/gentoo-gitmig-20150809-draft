@@ -1,18 +1,33 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.ebuild,v 1.1 2006/05/06 14:51:27 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.8.ebuild,v 1.1 2007/06/22 22:24:51 dragonheart Exp $
 
-inherit eutils
+inherit eutils autotools
 
 S="${WORKDIR}/ACE_wrappers"
 DESCRIPTION="The Adaptive Communications Environment"
-SRC_URI="http://deuce.doc.wustl.edu/old_distribution/ACE-${PV}.tar.bz2"
+SRC_URI="!tao? (
+			http://download.dre.vanderbilt.edu/previous_versions/ACE-${PV}.tar.bz2 )
+		tao? ( !ciao? (
+				http://download.dre.vanderbilt.edu/previous_versions/ACE+TAO-${PV}.tar.bz2 )
+			ciao? (
+				http://download.dre.vanderbilt.edu/previous_versions/ACE+TAO+CIAO-${PV}.tar.bz2
+				)
+		 )"
+
+# tao currently has upstream bug
+# http://deuce.doc.wustl.edu/bugzilla/show_bug.cgi?id=2684
+
+# ciao currently isn't autoconf and depends of tao
+# http://www.dre.vanderbilt.edu/~schmidt/DOC_ROOT/CIAO/CIAO-INSTALL.html
+
 HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
 
 SLOT="0"
 LICENSE="BSD as-is"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
-IUSE="X ipv6"
+IUSE="X ipv6 tao ciao"
+#IUSE="X ipv6"
 
 DEPEND="dev-libs/openssl"
 
@@ -29,12 +44,19 @@ DEPEND="${DEPEND}
 	virtual/x11 )
 	)"
 
+src_unpack() {
+	unpack ${A}
+#	cd "${S}"
+#	AT_M4DIR=m4 eautoreconf
+}
+
 src_compile() {
 	export ACE_ROOT="${S}"
 	mkdir build
 	cd build
 	ECONF_SOURCE="${S}"
-	econf --enable-lib-all $(use_with X) $(use_enable ipv6)
+	econf --enable-lib-all $(use_with X) $(use_enable ipv6) || \
+		die "econf died"
 	# --with-qos needs ACE_HAS_RAPI
 	emake static_libs=1 || die
 }
@@ -49,6 +71,11 @@ src_test() {
 src_install() {
 	cd build
 	make ACE_ROOT="${S}" DESTDIR="${D}" install || die "failed to install"
+	insinto /usr/include/ace
+	doins "${S}"/ace/OS.inl
+	doins "${S}"/ace/Select_Reactor.h
+	# punt gperf stuff
+	rm -rf "${D}"/usr/bin "${D}"/usr/share
 }
 
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.46 2007/04/22 11:44:40 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.47 2007/06/22 22:24:51 dragonheart Exp $
+
+*ace-5.5.8 (22 Jun 2007)
+
+  22 Jun 2007; Daniel Black <dragonheart@gentoo.org> -ace-5.4-r2.ebuild,
+  -ace-5.4.6.ebuild, -ace-5.5.ebuild, +ace-5.5.8.ebuild:
+  version bump hopefully fixing bug #169647 thanks to Patrizio Bassi
 
   22 Apr 2007; Jose Luis Rivero <yoswink@gentoo.org> ace-5.5-r1.ebuild:
   Stable on alpha wrt bug #148898
