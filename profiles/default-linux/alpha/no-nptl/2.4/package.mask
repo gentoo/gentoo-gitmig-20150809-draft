@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.17 2007/05/14 05:13:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.18 2007/06/22 12:41:35 armin76 Exp $
 
 # Gnome-2.18 masks (bug 176517)
 >=gnome-extra/at-spi-1.18
@@ -166,6 +166,7 @@ x11-drivers/xf86-input-evdev
 >=gnome-extra/gnome2-user-docs-2.16.0
 >=gnome-base/gconf-2.16.0
 >=gnome-base/gnome-light-2.16.0
+>=app-crypt/seahorse-1.0
 
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # Since this is a 2.4-only profile, we cannot have any 2.6-based headers/kernels

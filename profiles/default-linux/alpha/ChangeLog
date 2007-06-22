@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.51 2007/06/21 18:37:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.52 2007/06/22 12:41:35 armin76 Exp $
+
+  22 Jun 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  Package.mask >=app-crypt/seahorse-1.0 since it needs
+  >=app-editors/gedit-2.16 on 2.4 profiles
 
   21 Jun 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask ipod use-flag as nobody has hardware to test
