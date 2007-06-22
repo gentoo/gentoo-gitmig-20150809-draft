@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/smcinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.5 2007/04/28 17:49:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.6 2007/06/22 18:10:51 wolf31o2 Exp $
+
+  22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org> smcinit-0.4.ebuild:
+  Added a check for USE=zlib and checking if sys-apps/pciutils was built with
+  USE=zlib. This closes bug #171022.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> smcinit-0.4.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)

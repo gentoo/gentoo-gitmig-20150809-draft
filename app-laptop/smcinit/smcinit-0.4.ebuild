@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.5 2007/04/28 17:49:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.6 2007/06/22 18:10:51 wolf31o2 Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="zlib"
 
 MY_PV="0.4-1"
 MY_P="${PN}-${MY_PV}"
@@ -32,8 +32,15 @@ src_unpack()
 
 src_compile()
 {
+	if use zlib
+	then
+		LIBS="-lpci -lz"
+	elif built_with_use sys-apps/pciutils zlib
+	then
+		die "You need to build with USE=zlib to match sys-apps/pcituils"
+	fi
 	econf || die "Configuration failed"
-	emake CFLAGS="${CFLAGS}" || die "Compilation failed"
+	emake LIBS="${LIBS}" CFLAGS="${CFLAGS}" || die "Compilation failed"
 }
 
 src_install()
