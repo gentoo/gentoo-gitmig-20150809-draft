@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.4 2007/05/04 17:25:15 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.5 2007/06/22 12:42:18 armin76 Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="avahi dbus debug gedit gnome keyring ldap libnotify nautilus"
 
 RDEPEND=">=gnome-base/libgnome-2.14
