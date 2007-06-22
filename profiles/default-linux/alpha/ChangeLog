@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.52 2007/06/22 12:41:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.53 2007/06/22 18:30:55 armin76 Exp $
+
+  22 Jun 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  P.mask >=dev-python/dbus-python-0.80.2 on 2.4 profiles since it needs
+  dev-python/pygobject
 
   22 Jun 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Package.mask >=app-crypt/seahorse-1.0 since it needs
