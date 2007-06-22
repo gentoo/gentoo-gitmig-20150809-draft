@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile-gtk/"
 SRC_URI="ftp://ftp.gnu.org/gnu/guile-gtk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-scheme/guile
