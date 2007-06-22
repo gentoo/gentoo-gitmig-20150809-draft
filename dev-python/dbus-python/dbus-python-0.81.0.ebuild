@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.81.0.ebuild,v 1.1 2007/05/13 14:58:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.81.0.ebuild,v 1.2 2007/06/22 18:27:24 cardoe Exp $
 
 inherit distutils
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-lang/python-2.4
 	>=sys-apps/dbus-0.91"
 
 DEPEND="${RDEPEND}
+	test? ( dev-python/pygobject )
 	dev-util/pkgconfig"
 
 src_compile() {
