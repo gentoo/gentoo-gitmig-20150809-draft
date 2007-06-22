@@ -13,7 +13,7 @@ SRC_URI="amd64? ( http://www.virtualbox.org/download/${PV}/VirtualBox_${PV}_Linu
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="additions nowrapper sdk"
 
 RDEPEND="!app-emulation/virtualbox
@@ -41,7 +41,7 @@ RDEPEND="!app-emulation/virtualbox
 	media-libs/freetype
 	media-libs/fontconfig
 	$(qt_min_version 3.3.5)
-	=virtual/libstdc++-3.3
+	x86? ( =virtual/libstdc++-3.3 )
 	sdk? ( dev-libs/libIDL )"
 
 S=${WORKDIR}
@@ -77,26 +77,32 @@ src_install() {
 	dosed -e "5d" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/VirtualBox/virtualbox/" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/VBox.png/virtualbox.png/" /usr/share/applications/virtualbox.desktop
+	dosed -e "s/innotek virtualbox/Innotek VirtualBox/" /usr/share/applications/virtualbox.desktop
+	dosed -e "s/X-MandrivaLinux-System;//" /usr/share/applications/virtualbox.desktop
 
 	insinto /opt/VirtualBox
 	doins UserManual.pdf
+
 	if use additions; then
 		doins -r additions
 	fi
 	if use sdk; then
 		doins -r sdk
-		fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
+		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
+		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 		pax-mark -m "${D}"/opt/VirtualBox/sdk/bin/xpidl
 		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 	fi
 
 	rm -rf src sdk tst* UserManual.pdf rdesktop-vrdp.tar.gz deffiles install.sh \
 	routines.sh runlevel.sh vboxdrv.sh VBox.sh VBox.png kchmviewer additions \
-	VirtualBox.desktop VirtualBox.chm VirtualBox.tar.bz2 vditool LICENSE
+	VirtualBox.desktop VirtualBox.chm VirtualBox.tar.bz2 vditool VBoxAddIF.sh \
+	vboxnet.sh LICENSE
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,VRDP} VirtualBox ; do
-		fperms 0755 /opt/VirtualBox/${each}
+		fowners root:vboxusers /opt/VirtualBox/${each}
+		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
 	done
 
@@ -109,6 +115,9 @@ src_install() {
 	else
 		exeinto /opt/VirtualBox
 		newexe "${FILESDIR}/${PN}-wrapper" "wrapper.sh"
+		fowners root:vboxusers /opt/VirtualBox/wrapper.sh
+		fperms 0750 /opt/VirtualBox/wrapper.sh
+
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/virtualbox
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxmanage
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl

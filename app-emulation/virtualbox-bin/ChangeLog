@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.10 2007/06/06 14:41:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.11 2007/06/22 14:55:53 masterdriverz Exp $
+
+*virtualbox-bin-1.4.0-r1 (22 Jun 2007)
+
+  22 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  virtualbox-bin-1.4.0.ebuild, +virtualbox-bin-1.4.0-r1.ebuild:
+  Port changes from jokey's overlay; thanks to x-drum: minor changes to
+  desktop entry; libstdc++-3.3 is only needed for x86 binaries, adjusted perms
+  for executables, removed unneeded files; fixed SRC_URI (bug 181161)
 
 *virtualbox-bin-1.4.0 (06 Jun 2007)
 
