@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.6 2007/06/22 18:10:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.7 2007/06/22 18:14:15 wolf31o2 Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=">=sys-apps/pciutils-2.2.0-r1"
+DEPEND=">=sys-apps/pciutils-2.2.0-r1 zlib? ( sys-libs/zlib )"
 
 S=${WORKDIR}/${MY_P}
 
