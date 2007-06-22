@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/jmol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.1 2007/06/15 08:21:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.2 2007/06/22 08:30:25 caster Exp $
+
+*jmol-11.0.3-r1 (22 Jun 2007)
+
+  22 Jun 2007; Vlastimil Babka <caster@gentoo.org> jmol-11.0.3.ebuild,
+  +jmol-11.0.3-r1.ebuild:
+  Revbump for java-related fixes - install jars we've built and not the
+  bundled ones, don't absorb dependencies' classes, depend only on what's
+  actually needed, use java dolauncher instead of supplied one. Keyword ~x86.
 
 *jmol-11.0.3 (15 Jun 2007)
 
