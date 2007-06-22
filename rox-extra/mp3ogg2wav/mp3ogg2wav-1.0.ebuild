@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/mp3ogg2wav/mp3ogg2wav-1.0.ebuild,v 1.4 2007/02/09 22:06:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/mp3ogg2wav/mp3ogg2wav-1.0.ebuild,v 1.5 2007/06/22 22:09:39 lack Exp $
 
 ROX_LIB_VER=1.9.13
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="http://kymatica.com/uploads/Software/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pyogg-1.3
