@@ -1,36 +1,36 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.2-r4.ebuild,v 1.5 2007/06/15 15:54:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.2-r4.ebuild,v 1.6 2007/06/22 08:21:43 chtekk Exp $
 
-inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
+inherit elisp-common libtool python eutils multilib bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
-DESCRIPTION="A compelling replacement for CVS"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+
+DESCRIPTION="A compelling replacement for CVS."
 HOMEPAGE="http://subversion.tigris.org/"
 SRC_URI="http://subversion.tigris.org/downloads/${P/_rc/-rc}.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
-IUSE="apache2 berkdb python emacs perl java nls nowebdav zlib ruby"
+IUSE="apache2 berkdb emacs java nls nowebdav perl python ruby zlib"
 RESTRICT="test"
 
 COMMONDEPEND="apache2? ( ${APACHE2_DEPEND} )
-	>=dev-libs/apr-util-1.2.8
-	python? ( >=dev-lang/python-2.0 )
-	perl? ( >=dev-lang/perl-5.8.6-r6
-		!=dev-lang/perl-5.8.7 )
-	ruby? ( >=dev-lang/ruby-1.8.2 )
-	!nowebdav? ( >=net-misc/neon-0.26 )
-	berkdb? ( =sys-libs/db-4* )
-	zlib? ( sys-libs/zlib )
-	java? ( >=virtual/jdk-1.4 )
-	emacs? ( virtual/emacs )"
+			>=dev-libs/apr-util-1.2.8
+			perl? ( >=dev-lang/perl-5.8.6-r6 !=dev-lang/perl-5.8.7 )
+			python? ( >=dev-lang/python-2.0 )
+			ruby? ( >=dev-lang/ruby-1.8.2 )
+			!nowebdav? ( >=net-misc/neon-0.26 )
+			berkdb? ( =sys-libs/db-4* )
+			emacs? ( virtual/emacs )
+			zlib? ( sys-libs/zlib )"
+
 RDEPEND="${COMMONDEPEND}
-	java? ( >=virtual/jre-1.4 )"
+		java? ( >=virtual/jre-1.4 )"
 
 DEPEND="${COMMONDEPEND}
-	java? ( >=virtual/jdk-1.4 )
-	>=sys-devel/autoconf-2.59"
+		java? ( >=virtual/jdk-1.4 )
+		>=sys-devel/autoconf-2.59"
 
 S=${WORKDIR}/${P/_rc/-rc}
 
@@ -39,10 +39,24 @@ S=${WORKDIR}/${P/_rc/-rc}
 # pkg_config.
 : ${SVN_REPOS_LOC:=/var/svn}
 
+discover_apr_suffix() {
+	if use apache2 ; then
+		if has_version '=net-www/apache-2.0*' ; then
+			aprsuffix=""
+		else
+			aprsuffix="-1"
+		fi
+	else
+		aprsuffix="-1"
+	fi
+
+	echo "${aprsuffix}"
+}
+
 pkg_setup() {
-	if use berkdb && has_version '<dev-util/subversion-0.34.0' && [[ -z ${SVN_DUMPED} ]]; then
+	if use berkdb && has_version '<dev-util/subversion-0.34.0' && [[ -z ${SVN_DUMPED} ]] ; then
 		echo
-		ewarn "Presently you have $(best_version dev-util/subversion)"
+		ewarn "Presently you have $(best_version dev-util/subversion) installed."
 		ewarn "Subversion has changed the repository filesystem schema from 0.34.0."
 		ewarn "So you MUST dump your repositories before upgrading."
 		ewarn
@@ -53,27 +67,29 @@ pkg_setup() {
 		echo
 		die "Ensure that you dump your repository first"
 	fi
+
 	java-pkg-opt-2_pkg_setup
 }
 
 src_unpack() {
-	unpack $A
-	cd ${S}
+	unpack ${A}
+	cd "${S}"
 
 	# assure we don't use the included libs by accident
-	rm -rf neon apr apr-util
+	rm -Rf neon apr apr-util
 
-	epatch ${FILESDIR}/subversion-db4.patch
-	epatch ${FILESDIR}/subversion-1.1.1-perl-vendor.patch
-	epatch ${FILESDIR}/subversion-hotbackup-config.patch
-	epatch ${FILESDIR}/subversion-1.3.1-neon-config.patch
-	epatch ${FILESDIR}/subversion-apr_cppflags.patch
-	# rapidsvn developers work with 1.3.2
-	epatch ${FILESDIR}/subversion-1.3.2-neon-0.26.patch
+	epatch "${FILESDIR}"/subversion-db4.patch
+	epatch "${FILESDIR}"/subversion-1.1.1-perl-vendor.patch
+	epatch "${FILESDIR}"/subversion-hotbackup-config.patch
+	epatch "${FILESDIR}"/subversion-1.3.1-neon-config.patch
+	epatch "${FILESDIR}"/subversion-apr_cppflags.patch
+	epatch "${FILESDIR}"/subversion-1.3.2-neon-0.26.patch
 
-	sed -e s:apu-config:apu-1-config:g \
-		-e s:apr-config:apr-1-config:g \
-		-i build/ac-macros/{find_,}ap*
+	if [[ "$(discover_apr_suffix)" == "-1" ]] ; then
+		sed -e s:apu-config:apu-1-config:g \
+			-e s:apr-config:apr-1-config:g \
+			-i build/ac-macros/{find_,}ap*
+	fi
 
 	export WANT_AUTOCONF=2.5
 	autoconf
@@ -82,42 +98,42 @@ src_unpack() {
 
 	elibtoolize
 
-	use emacs && cp ${FILESDIR}/vc-svn.el ${S}/contrib/client-side/vc-svn.el
+	use emacs && cp "${FILESDIR}"/vc-svn.el "${S}"/contrib/client-side/vc-svn.el
 }
 
 src_compile() {
-	local myconf
-	myconf="--with-apr=/usr --with-apr-util=/usr"
-
-	use apache2 && myconf="${myconf} --with-apxs=${APXS2}"
-	use apache2 || myconf="${myconf} --without-apxs"
+	local myconf=""
 
 	myconf="${myconf} $(use_enable java javahl)"
 	use java && myconf="${myconf} --without-jikes --with-jdk=${JAVA_HOME}"
 
-	if use python || use perl || use ruby; then
+	if use python || use perl || use ruby ; then
 		myconf="${myconf} --with-swig"
 	else
 		myconf="${myconf} --without-swig"
 	fi
 
-	if use nowebdav; then
+	if use nowebdav ; then
 		myconf="${myconf} --without-neon"
 	else
 		myconf="${myconf} --with-neon=/usr"
 	fi
 
-	append-flags `/usr/bin/apr-1-config --cppflags`
+	use apache2 && myconf="${myconf} --with-apxs=${APXS2}"
+	use apache2 || myconf="${myconf} --without-apxs"
+
+	apr_suffix="$(discover_apr_suffix)"
+	myconf="${myconf} --with-apr=/usr/bin/apr${apr_suffix}-config --with-apr-util=/usr/bin/apu${apr_suffix}-config"
+	append-flags $(/usr/bin/apr${apr_suffix}-config --cppflags)
 
 	econf ${myconf} \
 		$(use_with berkdb berkeley-db) \
-		$(use_with zlib) \
 		$(use_with python) \
+		$(use_with zlib) \
 		$(use_enable nls) \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
 		--disable-experimental-libtool \
-		--disable-mod-activation || die "econf failed"
+		--disable-mod-activation \
+		|| die "econf failed"
 
 	# Respect the user LDFLAGS
 	export EXTRA_LDFLAGS="${LDFLAGS}"
@@ -126,87 +142,81 @@ src_compile() {
 	# Also apparently the included apr has a libtool that doesn't like -L flags.
 	# So not specifying it at all when not building apache modules and only
 	# specify it for internal parts otherwise.
-	( emake external-all && emake LT_LDFLAGS="-L${D}/usr/$(get_libdir)" local-all ) || die "make of subversion failed"
+	( emake external-all && emake LT_LDFLAGS="-L${D}/usr/$(get_libdir)" local-all ) || die "Compilation of ${PN} failed"
 
-	if use python; then
+	if use python ; then
 		# Building fails without the apache apr-util as includes are wrong.
-		emake swig-py || die "subversion python bindings failed"
+		emake swig-py || die "Compilation of ${PN} Python bindings failed"
 	fi
 
-	if use perl; then
+	if use perl ; then
 		# Work around a buggy Makefile.PL, bug 64634
 		mkdir -p subversion/bindings/swig/perl/native/blib/arch/auto/SVN/{_Client,_Delta,_Fs,_Ra,_Repos,_Wc}
-		make swig-pl || die "Perl library building failed"
+		make swig-pl || die "Compilation of ${PN} Perl bindings failed"
 	fi
 
-	if use ruby; then
-		make swig-rb || die "Ruby library building failed"
+	if use ruby ; then
+		make swig-rb || die "Compilation of ${PN} Ruby bindings failed"
 	fi
 
-	if use java; then
+	if use java ; then
 		# ensure that the destination dir exists, else some compilation fails
-		mkdir -p ${S}/subversion/bindings/java/javahl/classes
+		mkdir -p "${S}"/subversion/bindings/java/javahl/classes
 		# Compile javahl
-		make JAVAC_FLAGS="$(java-pkg_javac-args) -encoding iso8859-1" javahl || die "Compilation failed"
+		make JAVAC_FLAGS="$(java-pkg_javac-args) -encoding iso8859-1" javahl || die "make javahl failed"
 	fi
 
-	if use emacs; then
-		einfo "compiling emacs support"
-		elisp-compile ${S}/contrib/client-side/psvn/psvn.el || die "emacs modules failed"
-		elisp-compile ${S}/contrib/client-side/vc-svn.el || die "emacs modules failed"
+	if use emacs ; then
+		einfo "Compiling emacs support"
+		elisp-compile "${S}"/contrib/client-side/psvn/psvn.el || die "emacs modules failed"
+		elisp-compile "${S}"/contrib/client-side/vc-svn.el || die "emacs modules failed"
 	fi
 
-	# svn-config isn't quite built correctly; it contains references to
-	# @SVN_DB_LIBS@ and @SVN_DB_INCLUDES@.  It appears the best thing is to remove that.  #64634
-	sed -i 's/@SVN_DB_[^@]*@//g' svn-config || die "sed failed"
+	# svn-config isn't quite built correctly: it contains references to
+	# @SVN_DB_LIBS@ and @SVN_DB_INCLUDES@. It appears the best thing is to remove that. #64634
+	sed -i 's/@SVN_DB_[^@]*@//g' svn-config || die "svn-config sed failed"
 }
-
 
 src_install () {
 	python_version
 	PYTHON_DIR=/usr/$(get_libdir)/python${PYVER}
 
-	make DESTDIR=${D} install || die "Installation of subversion failed"
-
-#	This might not be necessary with the new install
-#	if [[ -e ${D}/usr/$(get_libdir)/apache2 ]]; then
-#		if [ "${APACHE2_MODULESDIR}" != "/usr/$(get_libdir)/apache2/modules" ]; then
-#			mkdir -p ${D}/`dirname ${APACHE2_MODULESDIR}`
-#			mv ${D}/usr/$(get_libdir)/apache2/modules ${D}/${APACHE2_MODULESDIR}
-#			rmdir ${D}/usr/$(get_libdir)/apache2 2>/dev/null
-#		fi
-#	fi
-
+	make DESTDIR="${D}" install || die "Installation of ${PN} failed"
 
 	dobin svn-config
-	if use python; then
-		make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/$(get_libdir)" || die "Installation of subversion python bindings failed"
+
+	if use python ; then
+		make DESTDIR="${D}" DISTUTIL_PARAM="--prefix=${D}" LD_LIBRARY_PATH="-L${D}/usr/$(get_libdir)" install-swig-py \
+			|| die "Installation of ${PN} Python bindings failed"
 
 		# move python bindings
-		mkdir -p ${D}${PYTHON_DIR}/site-packages
-		mv ${D}/usr/$(get_libdir)/svn-python/svn ${D}${PYTHON_DIR}/site-packages
-		mv ${D}/usr/$(get_libdir)/svn-python/libsvn ${D}${PYTHON_DIR}/site-packages
-		rmdir ${D}/usr/$(get_libdir)/svn-python
-	fi
-	if use perl; then
-		make DESTDIR=${D} install-swig-pl || die "Perl library building failed"
-		fixlocalpod
-	fi
-	if use ruby; then
-		make DESTDIR=${D} install-swig-rb || die "Installation of subversion ruby bindings failed"
-	fi
-	if use java; then
-		make DESTDIR="${D}" install-javahl || die "installation failed"
-		java-pkg_regso ${D}/usr/$(get_libdir)/libsvnjavahl*.so
-		java-pkg_dojar ${D}/usr/$(get_libdir)/svn-javahl/svn-javahl.jar
-		rm -r ${D}/usr/$(get_libdir)/svn-javahl/*.jar
+		mkdir -p "${D}${PYTHON_DIR}/site-packages"
+		mv "${D}"/usr/$(get_libdir)/svn-python/svn "${D}${PYTHON_DIR}/site-packages"
+		mv "${D}"/usr/$(get_libdir)/svn-python/libsvn "${D}${PYTHON_DIR}/site-packages"
+		rm -Rf "${D}"/usr/$(get_libdir)/svn-python
 	fi
 
-	# Install apache module config
-	if useq apache2; then
+	if use perl ; then
+		make DESTDIR="${D}" install-swig-pl || die "Installation of ${PN} Perl bindings failed"
+		fixlocalpod
+	fi
+
+	if use ruby ; then
+		make DESTDIR="${D}" install-swig-rb || die "Installation of ${PN} Ruby bindings failed"
+	fi
+
+	if use java ; then
+		make DESTDIR="${D}" install-javahl || die "make install-javahl failed"
+		java-pkg_regso "${D}"/usr/$(get_libdir)/libsvnjavahl*.so
+		java-pkg_dojar "${D}"/usr/$(get_libdir)/svn-javahl/svn-javahl.jar
+		rm -Rf "${D}"/usr/$(get_libdir)/svn-javahl/*.jar
+	fi
+
+	# Install apache2 module config
+	if use apache2 ; then
 		MOD="${APACHE2_MODULESDIR/${APACHE2_BASEDIR}\//}"
-		mkdir -p ${D}/${APACHE2_MODULES_CONFDIR}
-		cat <<EOF >${D}/${APACHE2_MODULES_CONFDIR}/47_mod_dav_svn.conf
+		mkdir -p "${D}/${APACHE2_MODULES_CONFDIR}"
+		cat <<EOF >"${D}/${APACHE2_MODULES_CONFDIR}"/47_mod_dav_svn.conf
 <IfDefine SVN>
 	<IfModule !mod_dav_svn.c>
 		LoadModule dav_svn_module	${MOD}/mod_dav_svn.so
@@ -239,19 +249,18 @@ EOF
 	newbin contrib/client-side/svn_load_dirs.pl svn-load-dirs
 
 	# Install svnserve init-script and xinet.d snippet, bug 43245
-	newinitd ${FILESDIR}/svnserve.initd svnserve
-	newconfd ${FILESDIR}/svnserve.confd svnserve
-	insinto /etc/xinetd.d ; newins ${FILESDIR}/svnserve.xinetd svnserve
+	newinitd "${FILESDIR}"/svnserve.initd svnserve
+	newconfd "${FILESDIR}"/svnserve.confd svnserve
+	insinto /etc/xinetd.d ; newins "${FILESDIR}"/svnserve.xinetd svnserve
 
 	# Install documentation
-
 	dodoc BUGS COMMITTERS COPYING HACKING INSTALL README
 	dodoc CHANGES
 	dodoc tools/xslt/svnindex.css tools/xslt/svnindex.xsl
 	find contrib tools -name \*.in -print0 | xargs -0 rm -f
-	mkdir -p ${D}/usr/share/doc/${PF}/
-	cp -r tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
-	cp -r contrib/hook-scripts ${D}/usr/share/doc/${PF}/
+	mkdir -p "${D}/usr/share/doc/${PF}/"
+	cp -R tools/{client-side,examples,hook-scripts} "${D}/usr/share/doc/${PF}/"
+	cp -R contrib/hook-scripts "${D}/usr/share/doc/${PF}/"
 
 	docinto notes
 	for f in notes/*
@@ -260,17 +269,17 @@ EOF
 	done
 
 	# Install emacs lisps
-	if use emacs; then
+	if use emacs ; then
 		insinto /usr/share/emacs/site-lisp/subversion
 		doins contrib/client-side/psvn/psvn.el*
 		doins contrib/client-side/vc-svn.el*
 
-		elisp-site-file-install ${FILESDIR}/70svn-gentoo.el
+		elisp-site-file-install "${FILESDIR}"/70svn-gentoo.el
 	fi
 }
 
 src_test() {
-	ewarn "Testing does not work for subversion"
+	ewarn "Testing disabled for ${PN}"
 }
 
 pkg_postinst() {
@@ -317,7 +326,7 @@ pkg_postinst() {
 	elog "         exec /usr/bin/svnserve \"\$@\""
 	elog
 
-	if use apache2 >/dev/null; then
+	if use apache2 ; then
 		elog " - http-based server:"
 		elog "   1. edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
 		elog "   2. create an htpasswd file:"
@@ -330,7 +339,7 @@ pkg_postinst() {
 	elog "If you want to keep e.g. 2 backups, do the following:"
 	elog "echo '# hot-backup: Keep that many repository backups around' > /etc/env.d/80subversion"
 	elog "echo 'SVN_HOTBACKUP_NUM_BACKUPS=2' >> /etc/env.d/80subversion"
-	elog ""
+	elog
 }
 
 pkg_postrm() {
@@ -339,22 +348,23 @@ pkg_postrm() {
 }
 
 pkg_config() {
-	if [[ ! -x /usr/bin/svnadmin ]]; then
-		die "You seem to only have built the subversion client"
+	if [[ ! -x /usr/bin/svnadmin ]] ; then
+		die "You seem to only have built the ${PN} client"
 	fi
 
-	einfo ">>> Initializing the database in ${SVN_REPOS_LOC}..."
-	if [[ -e ${SVN_REPOS_LOC}/repos ]]; then
+	einfo ">>> Initializing the database in ${SVN_REPOS_LOC} ..."
+	if [[ -e "${SVN_REPOS_LOC}/repos" ]] ; then
 		echo "A subversion repository already exists and I will not overwrite it."
 		echo "Delete ${SVN_REPOS_LOC}/repos first if you're sure you want to have a clean version."
 	else
-		mkdir -p ${SVN_REPOS_LOC}/conf
+		mkdir -p "${SVN_REPOS_LOC}/conf"
+
 		einfo ">>> Populating repository directory ..."
 		# create initial repository
-		/usr/bin/svnadmin create ${SVN_REPOS_LOC}/repos
+		/usr/bin/svnadmin create "${SVN_REPOS_LOC}/repos"
 
 		einfo ">>> Setting repository permissions ..."
-		chown -Rf apache:apache ${SVN_REPOS_LOC}/repos
-		chmod -Rf 755 ${SVN_REPOS_LOC}/repos
+		chown -Rf apache:apache "${SVN_REPOS_LOC}/repos"
+		chmod -Rf 755 "${SVN_REPOS_LOC}/repos"
 	fi
 }
