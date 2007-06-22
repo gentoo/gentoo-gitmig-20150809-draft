@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2879 2007/06/22 22:29:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2880 2007/06/22 22:35:14 dberkholz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1666,6 +1666,7 @@ sci-biology/hmmer:pvm - Add support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities
 sci-chemistry/caver:pymol - Install the PyMol plugin
+sci-chemistry/coot:new-interface - Build with the experimental GTK+-2 interface instead of GTK+-1
 sci-chemistry/eden:double-precision - more precise calculations at the expense of speed
 sci-chemistry/ghemical:gamess - Add GAMESS interface for QM/MM.
 sci-chemistry/ghemical:mopac7 - Apply compilation fix for mopac7 support.
