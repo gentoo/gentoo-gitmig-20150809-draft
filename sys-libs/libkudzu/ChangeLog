@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.27 2007/06/19 18:08:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.28 2007/06/22 18:19:11 wolf31o2 Exp $
+
+  22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild, libkudzu-1.2.57.1.ebuild:
+  Modified the zlib linking to use USE=zlib and also check if
+  sys-apps/pciutils was built with zlib support or not.
 
   19 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   libkudzu-1.1.62-r1.ebuild, libkudzu-1.2.57.1.ebuild:

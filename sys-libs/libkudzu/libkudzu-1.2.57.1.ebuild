@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.4 2007/06/19 18:08:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.5 2007/06/22 18:19:11 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -11,9 +11,10 @@ SRC_URI="mirror://gentoo/kudzu-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 -mips ~ppc ~ppc64 sparc ~x86"
-IUSE=""
+IUSE="zlib"
 
 DEPEND="dev-libs/popt
+	zlib? ( sys-libs/zlib )
 	>=sys-apps/pciutils-2.2.4"
 RDEPEND="${DEPEND}
 	sys-apps/hwdata-gentoo
@@ -31,7 +32,13 @@ src_unpack() {
 
 
 src_compile() {
-	append-ldflags -lz
+	if use zlib
+	then
+		append-ldflags -lz
+	elif built_with_use sys-apps/pciutils zlib
+	then
+		die "You need to build with USE=zlib to match sys-apps/pcituils"
+	fi
 	# Fix the modules directory to match Gentoo layout.
 	perl -pi -e 's|/etc/modutils/kudzu|/etc/modules.d/kudzu|g' *.*
 
