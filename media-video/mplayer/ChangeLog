@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.485 2007/06/10 00:56:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.486 2007/06/22 15:26:57 beandog Exp $
+
+*mplayer-1.0.20070622 (22 Jun 2007)
+
+  22 Jun 2007; Steve Dibb <beandog@gentoo.org> +mplayer-1.0.20070622.ebuild:
+  Version bump, security bug 181097
 
   10 Jun 2007; Luca Barbato <lu_zero@gentoo.org>
   mplayer-1.0.20070427.ebuild:
