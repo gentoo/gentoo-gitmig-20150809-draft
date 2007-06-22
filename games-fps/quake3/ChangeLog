@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.46 2007/01/30 22:20:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.47 2007/06/22 02:06:59 vapier Exp $
+
+  22 Jun 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/quake3-1.34_rc3-gcc42.patch, quake3-1.34_rc3.ebuild:
+  Fix by nyhm for gcc-4.2 issues #179649 by Philipp.
 
   30 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -quake3-1.34_rc2.ebuild, quake3-1.34_rc3.ebuild, quake3-9999.ebuild:
