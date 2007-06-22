@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta2-r2.ebuild,v 1.2 2007/06/19 20:49:53 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta2-r2.ebuild,v 1.3 2007/06/22 20:43:25 philantrop Exp $
 
 inherit kde autotools
 
@@ -28,12 +28,11 @@ RDEPEND="${DEPEND}
 	net-wireless/bluez-utils"
 
 PATCHES="${FILESDIR}/better-menu-names.diff
-	 ${FILESDIR}/kcm-btpaired-fix.diff
-	 ${FILESDIR}/kcm-no-dcop-error.diff
-	 ${FILESDIR}/kdebluetooth-dbuspasskeyagent.diff
-	 ${FILESDIR}/kdebluetooth-sdp-bitop.diff
-	 ${FILESDIR}/kdebluetooth.diff"
-
+		${FILESDIR}/kcm-btpaired-fix.diff
+		${FILESDIR}/kcm-no-dcop-error.diff
+		${FILESDIR}/kdebluetooth-dbuspasskeyagent.diff
+		${FILESDIR}/kdebluetooth-sdp-bitop.diff
+		${FILESDIR}/kdebluetooth.diff"
 
 LANGS="bg br ca cs cy da de el en_GB es et fi fr ga gl hu is it ja ka lt
 mt nb nl nn pa pl pt pt_BR ro ru rw sk sr sr@Latn sv ta tr uk zh_CN"

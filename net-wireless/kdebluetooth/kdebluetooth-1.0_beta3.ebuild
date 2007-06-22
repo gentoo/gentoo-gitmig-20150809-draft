@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta3.ebuild,v 1.3 2007/06/21 13:20:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta3.ebuild,v 1.4 2007/06/22 20:43:25 philantrop Exp $
 
 inherit kde autotools
 
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/openobex-1.1
 	app-mobilephone/obexftp
-	"
+	>=dev-libs/dbus-qt3-old-0.70"
 
 RDEPEND="${DEPEND}
 	|| ( ( kde-base/kdialog kde-base/konqueror )  kde-base/kdebase )
@@ -38,12 +38,3 @@ src_unpack() {
 src_compile() {
 	kde_src_compile
 }
-
-pkg_postinst() {
-	einfo 'This version of kde-bluetooth provides a replacement for the'
-	einfo 'standard bluepin program "kbluepin". If you want to use this version,'
-	einfo 'you have to edit "/etc/bluetooth/hcid.conf" and change the line'
-	einfo '"pin_helper oldbluepin;" to "pin_helper /usr/lib/kdebluetooth/kbluepin;".'
-	einfo 'Then restart hcid to make the change take effect.'
-}
-
