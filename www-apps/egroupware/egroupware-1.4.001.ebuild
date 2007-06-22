@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.001.ebuild,v 1.5 2007/06/13 19:10:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.001.ebuild,v 1.6 2007/06/22 13:38:06 angelos Exp $
 
 inherit webapp depend.php
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${MY_PV}.tar.bz2
 	ical? ( mirror://sourceforge/${PN}/${MY_PN}-icalsrv-${MY_PV}.tar.bz2 )"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 hppa ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
 IUSE="gd ical jpgraph ldap mysql postgres"
 
 RDEPEND="
