@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20031224.ebuild,v 1.7 2007/03/03 13:08:41 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20031224.ebuild,v 1.8 2007/06/22 22:30:23 dberkholz Exp $
 
 DESCRIPTION="A waveform viewer analog data, such as SPICE simulations."
 LICENSE="GPL-2"
@@ -11,10 +11,10 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 SLOT="0"
 
-DEPEND=">=x11-libs/gtk+-1.2.10
+DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-scheme/guile-1.6.3
 	<dev-scheme/guile-1.8
-	>=x11-libs/guile-gtk-1.2.0.31"
+	=x11-libs/guile-gtk-1.2*"
 
 src_compile() {
 	econf || die "econf failed"
