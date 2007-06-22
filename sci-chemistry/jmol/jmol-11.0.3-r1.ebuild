@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.1 2007/06/22 08:30:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.2 2007/06/22 22:43:14 je_fro Exp $
 
 inherit eutils webapp java-pkg-2 java-ant-2
 
 DESCRIPTION="Jmol is a java molecular viever for 3-D chemical structures."
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
 HOMEPAGE="http://jmol.sourceforge.net/"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 LICENSE="LGPL-2.1"
 
 IUSE="client-only vhosts"
