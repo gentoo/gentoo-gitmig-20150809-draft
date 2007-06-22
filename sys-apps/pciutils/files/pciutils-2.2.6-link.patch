@@ -1,0 +1,11 @@
+--- pciutils-2.2.4/lib/configure
++++ pciutils-2.2.4/lib/configure
+@@ -119,7 +119,7 @@
+ 	echo >>$c '#define PCI_COMPRESSED_IDS'
+ 	echo >>$c '#define PCI_IDS "pci.ids.gz"'
+ 	echo >>$m 'LIBZ=-lz'
+-	echo >>$m 'LDFLAGS+=$(LIBZ)'
++	echo >>$m 'LDLIBS+=$(LIBZ)'
+ else
+ 	echo >>$c '#define PCI_IDS "pci.ids"'
+ fi
