@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-0.7.ebuild,v 1.1 2006/09/28 19:56:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-0.7.ebuild,v 1.2 2007/06/22 17:59:15 wolf31o2 Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Run real-mode video BIOS code to alter hardware state (i.e. reinitialize video card)"
 HOMEPAGE="http://www.srcf.ucam.org/~mjg59/vbetool/"
@@ -12,8 +12,8 @@ SRC_URI="http://www.srcf.ucam.org/~mjg59/${PN}/${P//-/_}-1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
-RDEPEND="sys-apps/pciutils"
+IUSE="zlib"
+RDEPEND="zlib? ( sys-libs/zlib ) sys-apps/pciutils"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}-0.7"
 
@@ -23,6 +23,13 @@ S="${WORKDIR}/${PN}-0.7"
 #}
 
 src_compile() {
+	if use zlib
+	then
+		append-ldflags -lz
+	elif built_with_use sys-apps/pciutils zlib
+	then
+		die "You need to build with USE=zlib to match sys-apps/pcituils"
+	fi
 	# when on non-x86 machines, we need to use the x86 emulator
 	LIBS="-lpci" econf `use_with !x86 x86emu` || die "could not configure"
 	emake || die "emake failed"
