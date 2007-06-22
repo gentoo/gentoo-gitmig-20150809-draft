@@ -24,6 +24,10 @@ pkg_setup() {
 	check_license
 }
 
+src_unpack() {
+	return 0
+}
+
 src_install() {
 	insinto /opt/VirtualBox/additions
 	newins "${DISTDIR}"/${MY_P}.iso ${MY_PN}.iso
