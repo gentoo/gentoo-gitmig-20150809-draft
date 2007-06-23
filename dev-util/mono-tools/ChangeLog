@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.28 2007/06/21 23:56:58 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.29 2007/06/23 01:48:10 jurek Exp $
+
+  23 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> mono-tools-1.2.4.ebuild:
+  Updated gecko-sharp dependency (fixing bug #169897)
 
 *mono-tools-1.2.4 (21 Jun 2007)
 
