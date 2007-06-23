@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.35 2007/06/22 19:29:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.36 2007/06/23 16:12:20 flameeyes Exp $
+
+*ntfs3g-1.616-r1 (23 Jun 2007)
+
+  23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +ntfs3g-1.616-r1.ebuild:
+  Fix library presence, the previous commit broke it for those using multilib
+  systems (amd64), as econf was passing --libdir=/usr/lib64 on its own.
 
   22 Jun 2007; Patrick McLean <chutzpah@gentoo.org> ntfs3g-1.616.ebuild:
   Move *.a and *.la files to /usr (fixes bug #182922).
