@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-1.3.8.ebuild,v 1.3 2007/06/23 19:36:12 masterdriverz Exp $
 
 inherit eutils
 
@@ -16,12 +16,17 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-RDEPEND="!app-emulation/virtualbox-bin"
+RDEPEND="!app-emulation/virtualbox-bin
+	!=app-emulation/virtualbox-9999"
 
 RESTRICT="primaryuri"
 
 pkg_setup() {
 	check_license
+}
+
+src_unpack() {
+	return 0
 }
 
 src_install() {

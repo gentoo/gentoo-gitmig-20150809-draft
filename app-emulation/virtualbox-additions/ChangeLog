@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-additions
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.7 2007/06/22 14:50:04 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.8 2007/06/23 19:36:12 masterdriverz Exp $
+
+  23 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  virtualbox-additions-1.3.8.ebuild, virtualbox-additions-1.4.0.ebuild:
+  Port fixes from jokey's overlay; thanks to x-drum: add blocker for
+  virtualbox-9999; force src_unpack to skip; fix header
 
   22 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   virtualbox-additions-1.4.0.ebuild:
