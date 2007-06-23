@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ies4linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ChangeLog,v 1.1 2007/06/21 18:34:07 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ChangeLog,v 1.2 2007/06/23 03:08:57 jurek Exp $
+
+*ies4linux-2.5_beta6 (23 Jun 2007)
+
+  23 Jun 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/ies4linux-2.5_beta6-Installation_directory_discovery.patch,
+  +ies4linux-2.5_beta6.ebuild:
+  Added 2.5_beta6 version for testing purposes {fixing bug #182855)
 
 *ies4linux-2.0.5 (21 Jun 2007)
 
