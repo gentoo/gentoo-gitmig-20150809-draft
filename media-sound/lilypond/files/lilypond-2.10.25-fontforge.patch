@@ -1,0 +1,11 @@
+--- buildscripts/pfx2ttf.fontforge	2007/05/15 21:18:30	1.1
++++ buildscripts/pfx2ttf.fontforge	2007/05/15 21:27:34
+@@ -21,7 +21,7 @@ SelectIf("trademark", "trademark", \
+          "afii61352", "afii61352", \
+          "ij", "ij", \
+          "IJ", "IJ");
+-RemoveATT("Ligature", "*", "*");
++RemovePosSub("*");
+ 
+ Generate($3 + $fontname + ".otf");
+ 

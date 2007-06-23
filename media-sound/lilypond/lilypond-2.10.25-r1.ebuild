@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.10.25-r1.ebuild,v 1.3 2007/06/17 13:36:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.10.25-r1.ebuild,v 1.4 2007/06/23 16:23:28 flameeyes Exp $
 
 inherit eutils autotools versionator toolchain-funcs elisp-common
 
@@ -37,7 +37,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=media-gfx/fontforge-20060406
-	<=media-gfx/fontforge-20070312
 	>=app-text/mftrace-1.2.9
 	>=sys-apps/texinfo-4.8
 	sys-devel/make
@@ -53,6 +52,13 @@ pkg_setup() {
 		local flags="deprecated regex"
 		built_with_use dev-scheme/guile ${flags} || die "guile must be built with \"${flags}\" use flags"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-fontforge.patch"
 }
 
 src_compile() {

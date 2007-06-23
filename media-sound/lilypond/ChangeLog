@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.57 2007/06/22 11:17:11 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.58 2007/06/23 16:23:28 flameeyes Exp $
+
+  23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/lilypond-2.10.25-fontforge.patch, lilypond-2.10.25-r1.ebuild:
+  Add patch from Ed Catmur in bug #178629 to allow building with newer
+  fontforge versions.
 
 *lilypond-2.11.27 (22 Jun 2007)
 
