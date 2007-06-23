@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/molden
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.19 2007/03/13 00:19:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.20 2007/06/23 01:37:27 markusle Exp $
+
+*molden-4.6 (23 Jun 2007)
+
+  23 Jun 2007; Markus Dittrich <markusle@gentoo.org> +molden-4.6.ebuild, +files/molden-4.6-gfortran.patch:
+  Version bump.
 
   13 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> molden-4.3.ebuild:
   QA: which -> type -P

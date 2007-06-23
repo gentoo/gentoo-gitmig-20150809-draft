@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.4.ebuild,v 1.2 2007/06/23 01:37:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.6.ebuild,v 1.1 2007/06/23 01:37:27 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic fortran
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
 HOMEPAGE="http://www.cmbi.kun.nl/~schaft/molden/molden.html"
-SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.Z"
+SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
@@ -27,7 +27,10 @@ FORTRAN="g77 gfortran"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gfortran-gentoo.patch
+
+	if [[ "${FORTRANC}" = "gfortran" ]]; then
+		epatch "${FILESDIR}"/${P}-gfortran.patch
+	fi
 }
 
 src_compile() {
@@ -50,10 +53,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin molden
-	use opengl && dobin moldenogl
-	dodoc HISTORY README REGISTER
+	dobin molden || die "failed to install molden executable."
+	use opengl && dobin moldenogl || \
+		die "failed to install moldenogl."
+	dodoc HISTORY README REGISTER || die "failed to install docs."
 	cd doc
-	uncompress *
-	dodoc *
+	uncompress * && dodoc * || die "failed to install docs."
 }
