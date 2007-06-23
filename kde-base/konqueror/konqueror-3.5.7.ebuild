@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.7.ebuild,v 1.2 2007/05/27 14:56:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.7.ebuild,v 1.3 2007/06/23 18:08:23 philantrop Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -33,9 +33,24 @@ pkg_preinst() {
 	dosym ../../applnk/konqueror.desktop ${PREFIX}/share/applications/kde/konqueror.desktop
 }
 
+src_install() {
+	kde_src_install
+
+	dodir ${PREFIX}/share/services/searchproviders
+	insinto ${PREFIX}/share/services/searchproviders
+	doins ${FILESDIR}/*.desktop
+}
+
 pkg_postinst() {
 	kde_pkg_postinst
 
+	echo
+	elog "We've added three Gentoo-related web shortcuts:"
+	elog "- gb           Gentoo Bugzilla searching"
+	elog "- gf           Gentoo Forums searching"
+	elog "- gp           Gentoo Package searching"
+	echo
+	elog "You'll have to activate them in 'Configure Konqueror...'."
 	echo
 	elog "If you can't open new ${PN} windows and get something like"
 	elog "'WARNING: Outdated database found' when starting ${PN} in a console, run"

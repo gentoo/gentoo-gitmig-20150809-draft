@@ -1,0 +1,8 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=gb
+Name=Gentoo Bugzilla
+Query=http://bugs.gentoo.org/buglist.cgi?query_format=&short_desc_type=allwords&short_desc=\\{@}&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED
+ServiceTypes=SearchProvider
+Type=Service
