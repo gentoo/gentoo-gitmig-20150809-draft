@@ -1,9 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.486 2007/06/23 22:40:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.487 2007/06/23 22:43:12 swegener Exp $
 
   23 Jun 2007; Sven Wegener <swegener@gentoo.org> use.local.desc:
-  Add local USE flag system-libvncserver for net-dns/avahi.
+  Add local USE flag system-libvncserver for x11-misc/x11vnc.
 
   23 Jun 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
   q8/q32: Improve descriptions.
