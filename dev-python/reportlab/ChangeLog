@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.35 2007/04/21 15:18:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.36 2007/06/23 08:50:30 dev-zero Exp $
+
+*reportlab-2.1 (23 Jun 2007)
+
+  23 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> -files/1.14/setup.py,
+  -files/1.17/setup.py, +files/2.1-test_fix.patch,
+  +files/2.1-tests_report_failure.patch, +reportlab-2.1.ebuild:
+  Version bump (with cleanup and enabled tests). Removed some old files.
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> reportlab-2.0.ebuild:
   ia64 stable

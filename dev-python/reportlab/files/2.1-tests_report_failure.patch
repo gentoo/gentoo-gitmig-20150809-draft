@@ -1,0 +1,26 @@
+--- reportlab_2_1/reportlab/test/runAll.py.orig	2007-05-24 13:08:05.000000000 +0200
++++ reportlab_2_1/reportlab/test/runAll.py	2007-06-21 20:38:12.000000000 +0200
+@@ -59,7 +59,7 @@
+     cleanOnly = '--clean' in sys.argv
+     if not cleanOnly:
+         testSuite = makeSuite(folder,nonImportable=NI,pattern=pattern+(not haveSRC and 'c' or ''))
+-        unittest.TextTestRunner().run(testSuite)
++        result = unittest.TextTestRunner().run(testSuite)
+     if haveSRC: cleanup(folder,patterns=('*.pyc','*.pyo'))
+     if not cleanOnly:
+         if NI:
+@@ -67,6 +67,7 @@
+             for f,tb in NI:
+                 print 'file: "%s"\n%s\n' % (f,string.join(tb,''))
+         printLocation()
++    return result
+ 
+ def mainEx():
+     '''for use in subprocesses'''
+@@ -90,4 +91,5 @@
+     return '\nFAILED' in outerr
+ 
+ if __name__ == '__main__': #noruntests
+-    main()
++    if not main().wasSuccessful():
++		sys.exit(-1)

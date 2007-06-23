@@ -1,0 +1,12 @@
+diff -Naur reportlab_2_1.orig/reportlab/test/test_platypus_pleaseturnover.py reportlab_2_1/reportlab/test/test_platypus_pleaseturnover.py
+--- reportlab_2_1.orig/reportlab/test/test_platypus_pleaseturnover.py	2007-06-23 10:28:17.000000000 +0200
++++ reportlab_2_1/reportlab/test/test_platypus_pleaseturnover.py	2007-06-23 10:28:45.000000000 +0200
+@@ -113,7 +113,7 @@
+     pto.alignment = TA_RIGHT
+     pto.fontSize -= 1
+     def ColorParagraph(c,text,style):
+-        return Paragraph('<para color=%s>%s</para>' % (c,text),style)
++        return Paragraph('<para color="%s">%s</para>' % (c,text),style)
+ 
+     def ptoblob(blurb,content,trailer=None,header=None, story=story, H1=H1):
+         if type(content) not in (type([]),type(())): content = [content]
