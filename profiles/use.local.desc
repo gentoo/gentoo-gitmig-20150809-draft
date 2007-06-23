@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2882 2007/06/23 22:40:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2883 2007/06/23 23:50:53 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1010,6 +1010,7 @@ media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on 
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-audio-connection-kit:netjack - Build with support for Realtime Audio Transport over generic IP
+media-sound/kid3:taglib - Enable tagging support with taglib
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
 media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservices
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
