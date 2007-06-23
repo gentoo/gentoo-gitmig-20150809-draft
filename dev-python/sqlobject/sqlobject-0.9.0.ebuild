@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.8.1.ebuild,v 1.4 2007/05/05 13:27:11 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.9.0.ebuild,v 1.1 2007/06/23 21:17:40 lucass Exp $
 
-NEED_PYTHON=2.2
+NEED_PYTHON=2.3
 
 inherit distutils
 
@@ -25,7 +25,7 @@ RDEPEND="postgres? ( dev-python/psycopg )
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -49,3 +49,12 @@ src_install() {
 		doins -r europython
 	fi
 }
+
+#src_test() {
+#	cd sqlobject/tests
+#	sed -i \
+#		-e "s/\('-transactions': 'mysql\)',/\1 sqlite',/" \
+#		sqlobject/tests/dbtest.py
+#	py.test | tee pytest.log
+#	tail -n 1 pytest.log | grep -q "failed" && die "tests failed"
+#}
