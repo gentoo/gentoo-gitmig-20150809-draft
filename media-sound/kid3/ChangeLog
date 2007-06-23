@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.26 2007/02/13 10:10:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.27 2007/06/23 23:57:25 philantrop Exp $
+
+*kid3-0.9 (23 Jun 2007)
+
+  23 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> +kid3-0.9.ebuild:
+  Version bump as per bug 182997. Added localisation support.
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> kid3-0.8.1.ebuild:
   Stable on ppc64; bug #164580
