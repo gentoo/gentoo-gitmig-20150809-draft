@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.12 2007/06/21 13:18:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.13 2007/06/23 14:06:36 angelos Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://triq.net/obex"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="bluetooth debug nls perl python swig tcl"
 
 RDEPEND=">=dev-libs/openobex-1.1

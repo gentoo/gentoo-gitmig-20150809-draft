@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.25 2007/06/21 13:18:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.26 2007/06/23 14:06:36 angelos Exp $
+
+  23 Jun 2007; Christoph Mende <angelos@gentoo.org> obexftp-0.21.ebuild:
+  Stable on amd64 wrt bug 179505
 
   21 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> obexftp-0.21.ebuild:
   Keyworded ~sparc wrt #182611
