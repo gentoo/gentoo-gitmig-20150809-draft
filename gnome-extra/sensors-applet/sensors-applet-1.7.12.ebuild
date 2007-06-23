@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.7.12.ebuild,v 1.5 2007/06/14 21:01:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.7.12.ebuild,v 1.6 2007/06/23 01:49:58 dang Exp $
 
 inherit gnome2 eutils
 
@@ -23,7 +23,10 @@ RDEPEND="
 	hddtemp? ( >=app-admin/hddtemp-0.3_beta13 )
 	libnotify? ( >=x11-libs/libnotify-0.4.0 )
 	lm_sensors? ( sys-apps/lm_sensors )
-	nvidia? ( media-video/nvidia-settings )"
+	nvidia? ( || (
+		>=x11-drivers/nvidia-drivers-100.14.09
+		media-video/nvidia-settings
+	) )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12

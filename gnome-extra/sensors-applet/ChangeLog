@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.25 2007/06/14 21:01:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.26 2007/06/23 01:49:58 dang Exp $
+
+  23 Jun 2007; Daniel Gryniewicz <dang@gentoo.org>
+  sensors-applet-1.7.12.ebuild:
+  nvidia-settings is now part of nvidia-drivers; bug #182638
 
   14 Jun 2007; Daniel Gryniewicz <dang@gentoo.org>
   sensors-applet-1.7.12.ebuild:
