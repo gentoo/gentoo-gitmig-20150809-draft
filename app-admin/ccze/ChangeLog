@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ccze
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.23 2007/06/23 15:57:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.24 2007/06/23 20:26:05 joker Exp $
+
+  23 Jun 2007; Christian Birchinger <joker@gentoo.org>
+  -ccze-0.2.1-r1.ebuild:
+  Removing -r1 version because it segfaults.
 
   23 Jun 2007; Christoph Mende <angelos@gentoo.org> ccze-0.2.1-r2.ebuild:
   Stable on amd64 wrt bug 182941
