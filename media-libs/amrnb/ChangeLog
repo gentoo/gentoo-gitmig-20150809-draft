@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amrnb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.4 2007/06/19 20:36:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.5 2007/06/23 10:46:45 corsair Exp $
+
+  23 Jun 2007; Markus Rothe <corsair@gentoo.org> amrnb-6.1.0.3.ebuild:
+  Stable on ppc64; bug #181097
 
   19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> amrnb-6.1.0.3.ebuild:
   Keyworded ~sparc

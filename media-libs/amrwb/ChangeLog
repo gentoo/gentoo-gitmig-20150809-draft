@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amrwb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/ChangeLog,v 1.4 2007/06/19 20:35:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/ChangeLog,v 1.5 2007/06/23 10:47:48 corsair Exp $
+
+  23 Jun 2007; Markus Rothe <corsair@gentoo.org> amrwb-7.0.0.0.ebuild:
+  Stable on ppc64; bug #181097
 
   19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> amrwb-7.0.0.0.ebuild:
   Keyworded ~sparc
