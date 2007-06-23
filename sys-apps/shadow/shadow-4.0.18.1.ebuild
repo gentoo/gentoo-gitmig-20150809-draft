@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.13 2007/03/03 06:02:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.14 2007/06/23 02:36:07 dsd Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -8,7 +8,7 @@ DESCRIPTION="Utilities to deal with user accounts"
 HOMEPAGE="http://shadow.pld.org.pl/"
 SRC_URI="ftp://ftp.pld.org.pl/software/${PN}/${P}.tar.bz2"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls pam selinux skey nousuid cracklib"
