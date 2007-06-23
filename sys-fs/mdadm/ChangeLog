@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.70 2007/05/24 08:08:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.71 2007/06/23 18:39:23 kumba Exp $
+
+  23 Jun 2007; Joshua Kinard <kumba@gentoo.org> mdadm-2.6.2.ebuild:
+  Stable on mips, per #182993.
 
 *mdadm-2.6.2 (24 May 2007)
 
