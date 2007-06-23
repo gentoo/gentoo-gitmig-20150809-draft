@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.26 2007/04/15 17:29:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.27 2007/06/23 17:28:21 flameeyes Exp $
+
+*noteedit-2.8.1-r1 (23 Jun 2007)
+
+  23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/noteedit-2.8.1-desktop-file.patch, +noteedit-2.8.1-r1.ebuild:
+  Revision bump: add a de LINGUAS support, and fix the .desktop file category
+  and icon so that NoteEdit appears correctly in the Multimedia menu with its
+  own icon.
 
   15 Apr 2007; Matti Bickel <mabi@gentoo.org> noteedit-2.8.1.ebuild:
   ppc stable (bug #148951)

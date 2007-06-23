@@ -1,0 +1,31 @@
+Index: noteedit-2.8.1/noteedit/icons/Makefile.am
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/icons/Makefile.am
++++ noteedit-2.8.1/noteedit/icons/Makefile.am
+@@ -1,5 +1,9 @@
+ # Add all of your pixmaps here
+-data_ICON = 128thnote 32ndnote 64thnote arpegg beamednote breve chordnames cleficon cross dottednote doublebar doublecross doubledottednote doubleflat editicon eightnote endbar fermatenote flat fullnote halfnote hiddenrest kbicon keyicon midikeyboard natur noteedit pedofficon pedonicon perccross perccross2 perccrosscirc percrect perctrian portatonote quarternote recordicon redkbicon repclose repntimes repopen repopenclose rivet selector sforzandonote sforzatonote singlekey sixteenthnote slurednote speaker staccatonote stemdownicon stemupicon strpizzicatonote tiednote timeicon tinyeight tinysixteenth tinystroke tripletnotes voichange
++data_ICON = 128thnote 32ndnote 64thnote arpegg beamednote breve chordnames cleficon cross dottednote doublebar doublecross doubledottednote doubleflat editicon eightnote endbar fermatenote flat fullnote halfnote hiddenrest kbicon keyicon midikeyboard natur pedofficon pedonicon perccross perccross2 perccrosscirc percrect perctrian portatonote quarternote recordicon redkbicon repclose repntimes repopen repopenclose rivet selector sforzandonote sforzatonote singlekey sixteenthnote slurednote speaker staccatonote stemdownicon stemupicon strpizzicatonote tiednote timeicon tinyeight tinysixteenth tinystroke tripletnotes voichange
+ 
+ # This is where it will all be installed
+ datadir = ${prefix}/share/apps/noteedit/icons
++
++appicon_ICON = noteedit
++
++appicondir = ${prefix}/share/icons
+Index: noteedit-2.8.1/noteedit/noteedit.desktop
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/noteedit.desktop
++++ noteedit-2.8.1/noteedit/noteedit.desktop
+@@ -12,9 +12,9 @@ Comment[de]=Noteneditor
+ Comment[sv]=Notredigerare
+ Comment[pl]=Edytor nut
+ Comment[sl]=Urejevalnik glasbenih dokumentov
+-Terminal=0
++Terminal=false
+ Icon=noteedit
+ ServiceTypes=Browser/View
+ X-KDE-Library=libnoteedit
+-Categories=Qt;KDE;Audio;
++Categories=Qt;KDE;AudioVideo;Audio;Midi;
+ Encoding=UTF-8
