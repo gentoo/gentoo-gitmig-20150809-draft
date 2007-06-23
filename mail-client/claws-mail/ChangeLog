@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.33 2007/06/23 14:15:52 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.34 2007/06/23 18:05:54 genone Exp $
+
+  23 Jun 2007; Marius Mauch <genone@gentoo.org> claws-mail-2.9.1.ebuild,
+  claws-mail-2.9.2.ebuild, claws-mail-2.10.0_rc1.ebuild:
+  Check that pinentry was merged with USE=gtk or USE=qt3 (bug #170967)
 
 *claws-mail-2.10.0_rc1 (23 Jun 2007)
 

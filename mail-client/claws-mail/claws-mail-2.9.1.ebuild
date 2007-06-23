@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.9.1.ebuild,v 1.9 2007/05/26 01:34:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.9.1.ebuild,v 1.10 2007/06/23 18:05:54 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -46,6 +46,18 @@ RDEPEND="${COMMONDEPEND}
 	x11-misc/shared-mime-info"
 
 PLUGIN_NAMES="acpi-notifier att-remover cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
+
+pkg_setup() {
+	# we have to make sure that pinentry has gtk support for GPG support
+	if use crypt && ! built_with_use --missing true -o app-crypt/pinentry gtk qt3; then
+		eerror "You need to merge app-crypt/pinentry with USE=gtk or USE=qt3"
+		eerror "for working GPG support. You have the following options:"
+		eerror " - remerge app-crypt/pinentry with USE=gtk"
+		eerror " - remerge app-crypt/pinentry with USE=qt3"
+		eerror " - disable GPG support by setting USE=-crypt for this package"
+		die "missing gtk/qt support in app-crypt/pinentry"
+	fi
+}
 
 src_compile() {
 	local myconf
