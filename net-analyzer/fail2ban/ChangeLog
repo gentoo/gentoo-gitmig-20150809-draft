@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.32 2007/06/18 12:34:52 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.33 2007/06/23 19:19:32 angelos Exp $
+
+  23 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  fail2ban-0.8.0-r1.ebuild:
+  Stable on amd64 wrt bug 181214
 
   18 Jun 2007; Raphael Marichez <falco@gentoo.org>
   -files/fail2ban-0.7.6.init.d.patch, fail2ban-0.6.2-r1.ebuild,
