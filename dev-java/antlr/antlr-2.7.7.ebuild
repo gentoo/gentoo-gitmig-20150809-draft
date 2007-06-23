@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.7 2007/03/16 03:53:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.8 2007/06/23 16:50:14 betelgeuse Exp $
 
 inherit java-pkg-2 mono distutils multilib
 
@@ -26,7 +26,8 @@ src_compile() {
 	# across the various JDKs
 	JAVACFLAGS="+ ${JAVACFLAGS}"
 
-	econf $(use_enable !nojava java) \
+	# mcs for https://bugs.gentoo.org/show_bug.cgi?id=172104
+	CSHARPC="mcs" econf $(use_enable !nojava java) \
 		$(use_enable python) \
 		$(use_enable mono csharp) \
 		$(use_enable debug) \
