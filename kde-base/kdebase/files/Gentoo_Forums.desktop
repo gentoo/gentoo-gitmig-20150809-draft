@@ -1,0 +1,8 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=gf
+Name=Gentoo Forums
+Query=http://forums.gentoo.org/search.php?search_terms=all&show_results=topics&search_keywords=\\{@}&mode=results
+ServiceTypes=SearchProvider
+Type=Service

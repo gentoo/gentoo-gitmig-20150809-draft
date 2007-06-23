@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.7.ebuild,v 1.4 2007/05/27 15:19:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.7.ebuild,v 1.5 2007/06/23 20:02:02 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -165,6 +165,10 @@ EOF
 		"${D}/${KDEDIR}/share/config/kdm/kdmrc" || die
 
 	rmdir "${D}/${KDEDIR}/share/templates/.source/emptydir"
+
+	dodir ${PREFIX}/share/services/searchproviders
+	insinto ${PREFIX}/share/services/searchproviders
+	doins ${FILESDIR}/*.desktop
 }
 
 pkg_preinst() {
@@ -197,6 +201,13 @@ pkg_postinst() {
 	elog "To enable gpg-agent and/or ssh-agent in KDE sessions,"
 	elog "edit ${KDEDIR}/env/agent-startup.sh and"
 	elog "${KDEDIR}/shutdown/agent-shutdown.sh"
+	echo
+	elog "We've added three Gentoo-related web shortcuts to Konqueror:"
+	elog "- gb           Gentoo Bugzilla searching"
+	elog "- gf           Gentoo Forums searching"
+	elog "- gp           Gentoo Package searching"
+	echo
+	elog "You'll have to activate them in 'Configure Konqueror...'."
 	echo
 	elog "If you can't open new konqueror windows and get something like"
 	elog "'WARNING: Outdated database found' when starting konqueror in a console, run"
