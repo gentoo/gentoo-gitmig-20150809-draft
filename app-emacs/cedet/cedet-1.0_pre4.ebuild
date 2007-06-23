@@ -1,38 +1,35 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.8 2007/06/23 09:41:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4.ebuild,v 1.1 2007/06/23 09:41:06 ulm Exp $
 
-inherit elisp eutils
+inherit elisp eutils versionator
 
-MY_PV=${PV:0:3}${PV:4:5}
-
-IUSE=""
+MY_PV=$(delete_version_separator 2)
 DESCRIPTION="CEDET: Collection of Emacs Development Tools"
 HOMEPAGE="http://cedet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cedet/${PN}-${MY_PV}.tar.gz"
+
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-DEPEND="virtual/emacs
-	!app-emacs/semantic
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
+
+DEPEND="!app-emacs/semantic
 	!app-emacs/eieio
 	!app-emacs/speedbar"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-SITEFILE="60cedet-gentoo.el"
+SITEFILE=60${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	epatch "${FILESDIR}/1.0_pre3-eieio-tests-gentoo.patch" # Bug #124598
-	epatch "${FILESDIR}/1.0_pre3-sb-info-circular-dep-gentoo.patch" # Bug #138190
-	epatch "${FILESDIR}/1.0_pre3-idle-gentoo.patch" # Bug #149842
 }
 
 src_compile() {
-	make EMACS=/usr/bin/emacs || die
+	emake EMACS=/usr/bin/emacs || die "emake failed"
 }
 
 src_install() {
@@ -41,10 +38,10 @@ src_install() {
 			local directory=`dirname $target` file=`basename $target`
 			local sub_directory=`echo $directory | sed "s%^${S}/*%%;s/^$/./"`
 			case $file in
-				*~ | Makefile | *.texi | *-script | PRERELEASE_CHECKLIST | Project.ede)
+				*~ | Makefile | *.texi | *-script | PRERELEASE_CHECKLIST | Project.ede | INSTALL)
 					rm -f ${file}
 					;;
-				ChangeLog | README | AUTHORS | *NEWS | INSTALL)
+				ChangeLog | README | AUTHORS | *NEWS)
 					docinto ${sub_directory}
 					dodoc ${target}
 					;;
@@ -68,5 +65,6 @@ src_install() {
 					;;
 			esac
 		done
+
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
