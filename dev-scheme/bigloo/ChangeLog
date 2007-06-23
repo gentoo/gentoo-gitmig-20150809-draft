@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.15 2007/06/22 10:59:55 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.16 2007/06/23 14:22:56 angelos Exp $
+
+  23 Jun 2007; Christoph Mende <angelos@gentoo.org> bigloo-2.9a.ebuild:
+  Stable on amd64 wrt bug 182690
 
   22 Jun 2007; Marijn Schouten <hkBst@gentoo.org> bigloo-2.7a_p2.ebuild:
   java needs zip installed, found by Tiago Cunha <me@tiagocunha.org>
