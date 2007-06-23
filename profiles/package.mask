@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7390 2007/06/22 12:34:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7391 2007/06/23 03:00:35 jurek Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jurek Bartuszek <jurek@gentoo.org> (23 Jun 2007)
+# Beta versions, testing required
+=app-emulation/ies4linux-2.5*
 
 # Luca Longinotti <chtekk@gentoo.org> (22 Jun 2007)
 # Old Subversion versions masked for removal:
