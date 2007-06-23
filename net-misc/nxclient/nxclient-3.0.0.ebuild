@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0.ebuild,v 1.1 2007/06/21 20:15:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0.ebuild,v 1.2 2007/06/23 14:25:24 voyageur Exp $
 
 inherit eutils
 
@@ -53,8 +53,8 @@ src_install()
 	cp -R share ${D}/usr/NX
 
 	# Add icons/desktop entries (missing in the tarball)
-	doicon share/icons/*.png
-	make_desktop_entry "nxclient" "NX Client" nx-desktop.png
+	doicon share/icons/48x48/*.png
+	make_desktop_entry "nxclient" "NX Client" nxclient-icon.png
 	make_desktop_entry "nxclient -admin" "NX Session Administrator" nxclient-admin.png
 	make_desktop_entry "nxclient -wizard" "NX Connection Wizard" nxclient-wizard.png
 }
