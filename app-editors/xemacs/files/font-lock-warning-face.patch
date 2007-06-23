@@ -1,0 +1,19 @@
+Index: font-lock.el
+===================================================================
+RCS file: /pack/xemacscvs/XEmacs/xemacs/lisp/font-lock.el,v
+retrieving revision 1.31
+diff -u -B -r1.31 font-lock.el
+--- lisp/font-lock.el	2006/11/01 23:14:33	1.31
++++ lisp/font-lock.el	2007/06/23 07:14:17
+@@ -721,6 +721,11 @@
+ It is present only for horrid FSF compatibility reasons.
+ The corresponding face should be set using `edit-faces' or the
+ `set-face-*' functions.")
++(defvar font-lock-warning-face 'font-lock-warning-face
++  "This variable should not be set.
++It is present only for horrid FSF compatibility reasons.
++The corresponding face should be set using `edit-faces' or the
++`set-face-*' functions.")
+ 
+ (defconst font-lock-face-list
+   '(font-lock-comment-face

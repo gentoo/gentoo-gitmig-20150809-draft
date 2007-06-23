@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.90 2007/06/09 18:13:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.91 2007/06/23 11:27:18 graaff Exp $
+
+*xemacs-21.4.20-r4 (23 Jun 2007)
+
+  23 Jun 2007; Hans de Graaff <graaff@gentoo.org>
+  +files/font-lock-warning-face.patch, +xemacs-21.4.20-r4.ebuild:
+  Add patch to make font-lock-warning-face available, needed for gentoo-syntax.
+  Has been reported to upstream.
 
   09 Jun 2007; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.30-r3.ebuild:
   Fix silly typo that may affect esd sound configuration.
