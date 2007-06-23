@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.42 2007/02/22 02:07:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.43 2007/06/23 12:29:09 dev-zero Exp $
+
+*eric-3.9.5 (23 Jun 2007)
+
+  23 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.9.5-disable_compilation.patch, +eric-3.9.5.ebuild:
+  Version bump, cleanup & ebuild rework.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

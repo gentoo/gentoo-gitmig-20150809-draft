@@ -1,0 +1,74 @@
+--- eric-3.9.5/install.py.orig	2007-06-23 14:21:07.000000000 +0200
++++ eric-3.9.5/install.py	2007-06-23 14:21:57.000000000 +0200
+@@ -15,8 +15,8 @@
+ import os
+ import string
+ import re
+-import compileall
+-import py_compile
++#import compileall
++#import py_compile
+ import glob
+ import shutil
+ import fnmatch
+@@ -195,7 +195,7 @@
+             os.remove(rwname)
+     
+     # Cleanup our config file
+-    for name in ['eric3config.py', 'eric3config.pyc']:
++    for name in ['eric3config.py']:
+         e3cfile = os.path.join(pyModDir, name)
+         if os.path.exists(e3cfile):
+             os.remove(e3cfile)
+@@ -263,18 +263,14 @@
+     # copy the new sitecustomize.py
+     if distDir:
+         shutil.copy('sitecustomize.py', cfg['mdir'])
+-        shutil.copy('sitecustomize.pyc', cfg['mdir'])
+     else:
+         shutil.copy('sitecustomize.py', pyModDir)
+-        shutil.copy('sitecustomize.pyc', pyModDir)
+     
+     # copy the eric3 config file
+     if distDir:
+         shutil.copy('eric3config.py', cfg['mdir'])
+-        shutil.copy('eric3config.pyc', cfg['mdir'])
+     else:
+         shutil.copy('eric3config.py', pyModDir)
+-        shutil.copy('eric3config.pyc', pyModDir)
+     
+     # copy the various parts of eric3
+     copyTree('eric', cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 
+@@ -611,19 +607,19 @@
+ 
+     # Create/modify the sitecustomize file
+     createSitecustomize()
+-    print "Compiling debugger files."
+-    if distDir:
+-        compileall.compile_dir("eric", ddir=os.path.join(distDir, modDir, cfg['ericDir']))
+-        py_compile.compile("eric3config.py", 
+-                           dfile = os.path.join(distDir, modDir, "eric3config.py"))
+-        py_compile.compile("sitecustomize.py", 
+-                           dfile = os.path.join(distDir, modDir, "sitecustomize.py"))
+-    else:
+-        compileall.compile_dir("eric", ddir=os.path.join(modDir, cfg['ericDir']))
+-        py_compile.compile("eric3config.py", 
+-                           dfile = os.path.join(modDir, "eric3config.py"))
+-        py_compile.compile("sitecustomize.py", 
+-                           dfile = os.path.join(modDir, "sitecustomize.py"))
++#    print "Compiling debugger files."
++#    if distDir:
++#        compileall.compile_dir("eric", ddir=os.path.join(distDir, modDir, cfg['ericDir']))
++#        py_compile.compile("eric3config.py", 
++#                           dfile = os.path.join(distDir, modDir, "eric3config.py"))
++#        py_compile.compile("sitecustomize.py", 
++#                           dfile = os.path.join(distDir, modDir, "sitecustomize.py"))
++#    else:
++#        compileall.compile_dir("eric", ddir=os.path.join(modDir, cfg['ericDir']))
++#        py_compile.compile("eric3config.py", 
++#                           dfile = os.path.join(modDir, "eric3config.py"))
++#        py_compile.compile("sitecustomize.py", 
++#                           dfile = os.path.join(modDir, "sitecustomize.py"))
+     print "\nInstalling eric3 ..."
+     installEric()
+     print "\nInstallation complete."
