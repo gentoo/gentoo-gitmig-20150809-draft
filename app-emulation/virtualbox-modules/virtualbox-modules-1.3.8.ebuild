@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.3.8.ebuild,v 1.3 2007/06/23 16:07:33 masterdriverz Exp $
 
 inherit eutils linux-mod
 
