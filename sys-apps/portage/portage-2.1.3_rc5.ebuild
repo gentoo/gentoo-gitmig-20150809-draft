@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc5.ebuild,v 1.1 2007/06/23 05:25:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc5.ebuild,v 1.2 2007/06/23 22:18:49 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -15,7 +15,7 @@ IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
 IUSE="build doc epydoc selinux linguas_pl userland_GNU ${IUSE_ELIBC}"
 DEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5 )
-	doc? ( app-text/xmlto )
+	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 )"
 RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
