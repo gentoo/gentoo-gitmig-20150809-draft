@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.222 2007/06/21 15:35:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.223 2007/06/23 17:44:55 flameeyes Exp $
+
+*amarok-1.4.6-r1 (23 Jun 2007)
+
+  23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +amarok-1.4.6-r1.ebuild:
+  Disable system sqlite usage again, produces freezes for some people, it's
+  better avoiding it again.
 
 *amarok-1.4.6 (21 Jun 2007)
 
