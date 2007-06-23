@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.22 2007/06/23 15:46:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.23 2007/06/23 19:21:09 armin76 Exp $
+
+  23 Jun 2007; Raúl Porcel <armin76@gentoo.org> log4cxx-0.9.7-r4.ebuild:
+  x86 stable
 
   23 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
   log4cxx-0.9.7-r4.ebuild:
