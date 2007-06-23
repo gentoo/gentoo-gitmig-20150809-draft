@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/realpath
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.26 2007/04/24 18:17:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.27 2007/06/23 14:27:57 angelos Exp $
+
+  23 Jun 2007; Christoph Mende <angelos@gentoo.org> realpath-1.9.28.ebuild:
+  Stable on amd64 wrt bug 182979
 
   24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   realpath-1.9.28.ebuild:
