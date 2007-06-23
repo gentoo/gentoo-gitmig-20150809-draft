@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/reticker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.4 2007/01/31 01:06:24 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.5 2007/06/23 00:27:26 lack Exp $
+
+  23 Jun 2007; Jim Ramsay <lack@gentoo.org> reticker-0.4.5k-r1.ebuild:
+  Adding ~amd64 keyword
 
 *reticker-0.4.5k-r1 (31 Jan 2007)
 
