@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hgsvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgsvn/ChangeLog,v 1.1 2007/06/23 13:08:04 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgsvn/ChangeLog,v 1.2 2007/06/23 22:30:50 cedk Exp $
+
+  23 Jun 2007; Cédric Krier <cedk@gentoo.org> hgsvn-0.1.3.ebuild:
+  Fix RDEPEND on elementtre for python-2.5
 
 *hgsvn-0.1.3 (23 Jun 2007)
 
