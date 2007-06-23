@@ -1,13 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.21 2007/06/23 15:56:20 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.22 2007/06/23 15:59:27 masterdriverz Exp $
 
   23 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   virtualbox-1.3.8.ebuild, virtualbox-1.4.0.ebuild, virtualbox-9999.ebuild:
-  Port fixes from jokey's overay; thanks to x-drum: fix missing fperms; adjust
-  perms for VirtualBox's executables; remove virtual/libstdc++ from DEPEND, no
-  longer required by kBuild; remove USE flag additions, there are no matching
-  additions available
+  Port fixes from jokey's overay; thanks to x-drum: remove USE flag additions,
+  there are no matching additions available for the live ebuild, remove
+  vditool, fix headers
 
   22 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   files/virtualbox.desktop, virtualbox-1.3.8.ebuild,
