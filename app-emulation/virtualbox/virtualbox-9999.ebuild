@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.17 2007/06/23 15:56:20 masterdriverz Exp $
 
 inherit eutils flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions hal nowrapper sdk vboxbfe vditool"
+IUSE="hal nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
@@ -26,10 +26,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
-	>=media-libs/alsa-lib-1.0.13
-	=virtual/libstdc++-3.3"
-RDEPEND="${RDEPEND}
-	additions? ( app-emulation/virtualbox-additions )"
+	>=media-libs/alsa-lib-1.0.13"
 
 BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
@@ -81,16 +78,13 @@ src_install() {
 	if use sdk; then
 		doins -r sdk
 		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
-	fi
-	if use vditool; then
-		doins vditool
-		make_wrapper vditool "./vditool" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		fperms 0755 /opt/VirtualBox/vditool
+		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
+		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 	fi
 	if use vboxbfe; then
 		doins VBoxBFE
-		fperms 0755 /opt/VirtualBox/VBoxBFE
+		fowners root:vboxusers /opt/VirtualBox/VBoxBFE
+		fperms 0750 /opt/VirtualBox/VBoxBFE
 
 		if use nowrapper ; then
 			make_wrapper vboxbfe "./VBoxBFE" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
@@ -103,7 +97,8 @@ src_install() {
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD} VirtualBox ; do
-		fperms 0755 /opt/VirtualBox/${each}
+		fowners root:vboxusers /opt/VirtualBox/${each}
+		fperms 0750 /opt/VirtualBox/${each}
 	done
 
 	if use nowrapper ; then
@@ -114,6 +109,9 @@ src_install() {
 	else
 		exeinto /opt/VirtualBox
 		newexe "${FILESDIR}/${PN}-wrapper" "wrapper.sh"
+		fowners root:vboxusers /opt/VirtualBox/wrapper.sh
+		fperms 0750 /opt/VirtualBox/wrapper.sh
+
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/virtualbox
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxmanage
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl
@@ -128,6 +126,7 @@ src_install() {
 	newins "${S}"/src/VBox/Frontends/VirtualBox/images/ico32x01.png ${PN}.png
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/${PN}.desktop
+	dosed -e "s/Version=/Version=${PV}/" /usr/share/applications/${PN}.desktop
 }
 
 pkg_preinst() {
@@ -155,5 +154,8 @@ pkg_postinst() {
 	elog ""
 	elog "The last user manual is available for download at:"
 	elog "http://www.virtualbox.org/download/UserManual.pdf"
+	elog ""
+	elog "Due to the nature of the build process, there are not"
+	elog "additions available for the live ebuild"
 	elog ""
 }
