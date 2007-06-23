@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/dclog
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dclog/ChangeLog,v 1.1 2007/06/23 13:24:52 jmglov Exp $
+
+*dclog-1.1.1 (23 Jun 2007)
+
+  23 Jun 2007; Josh Glover <jmglov@gentoo.org> +metadata.xml,
+  +dclog-1.1.1.ebuild:
+  This package was submitted by Josh Glover in bug #83490
+
