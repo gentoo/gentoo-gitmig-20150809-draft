@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20070303-r1.ebuild,v 1.1 2007/05/06 11:33:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20070303-r1.ebuild,v 1.2 2007/06/23 02:38:57 dsd Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Common CA Certificates PEM files"
 HOMEPAGE="http://www.cacert.org/"
 SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}_all.deb"
 
-LICENSE="freedist"
+LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
