@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.395 2007/06/17 23:31:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.396 2007/06/23 05:25:54 zmedico Exp $
+
+*portage-2.1.3_rc5 (23 Jun 2007)
+
+  23 Jun 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3_rc5.ebuild:
+  2.1.3_rc5 bump.  This fixes bugs #143340, #180165, #182428, and #182571.
+  The "save_summary" and "echo" elog modules are now enabled by default.
+  Setting PORTAGE_ELOG_SYSTEM in make.conf will override this, so if you
+  don't want elog set PORTAGE_ELOG_SYSTEM="" in make.conf.
 
 *portage-2.1.3_rc4 (17 Jun 2007)
 
