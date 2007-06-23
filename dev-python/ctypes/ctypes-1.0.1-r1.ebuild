@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ctypes-1.0.1-r1.ebuild,v 1.6 2007/06/04 14:25:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ctypes-1.0.1-r1.ebuild,v 1.7 2007/06/23 19:19:17 armin76 Exp $
 
 NEED_PYTHON=2.3
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://starship.python.net/crew/theller/ctypes/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="doc"
 
 DEPEND=""

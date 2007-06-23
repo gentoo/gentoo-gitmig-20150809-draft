@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.24 2007/06/04 14:25:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.25 2007/06/23 19:19:17 armin76 Exp $
+
+  23 Jun 2007; Raúl Porcel <armin76@gentoo.org> ctypes-1.0.1-r1.ebuild:
+  alpha stable wrt #171021
 
   04 Jun 2007; Brent Baude <ranger@gentoo.org> ctypes-1.0.1-r1.ebuild:
   Marking  ctypes-1.0.1-r1 ppc64 stable for bug 171021
