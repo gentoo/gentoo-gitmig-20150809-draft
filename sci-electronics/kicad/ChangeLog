@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.23 2007/06/07 11:09:39 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.24 2007/06/23 20:12:59 corsair Exp $
+
+  23 Jun 2007; Markus Rothe <corsair@gentoo.org> kicad-20070525.ebuild:
+  Added ~ppc
 
   07 Jun 2007; Denis Dupeyron <calchan@gentoo.org> -kicad-20060828.ebuild:
   Removed old version.
