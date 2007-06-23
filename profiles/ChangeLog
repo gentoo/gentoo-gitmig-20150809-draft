@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.484 2007/06/22 18:53:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.485 2007/06/23 19:44:30 jer Exp $
+
+  23 Jun 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
+  q8/q32: Improve descriptions.
 
   22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org> base/use.mask,
   default-linux/alpha/use.mask, default-linux/amd64/use.mask,

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2880 2007/06/22 22:35:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2881 2007/06/23 19:44:30 jer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -880,8 +880,8 @@ media-gfx/hugin:sift - Pull media-gfx/autopano-sift as a dependency
 media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:hdri - Enables High Dynamic Range Images formats
 media-gfx/imagemagick:gs - enable ghostscript support
-media-gfx/imagemagick:q32 - choose quantum depth to 32
-media-gfx/imagemagick:q8 - choose quantum depth to 8
+media-gfx/imagemagick:q32 - Set quantum depth to 32
+media-gfx/imagemagick:q8 - Set quantum depth to 8
 media-gfx/inkscape:boost - use external boost
 media-gfx/inkscape:dia - Pull in app-office/dia for dia import extension
 media-gfx/inkscape:inkjar - enables inkjar support
