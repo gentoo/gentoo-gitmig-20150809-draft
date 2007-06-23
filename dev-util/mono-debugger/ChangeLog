@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/mono-debugger
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.11 2007/06/23 02:17:35 jurek Exp $
+
+*mono-debugger-0.50 (23 Jun 2007)
+
+  23 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> +metadata.xml,
+  +mono-debugger-0.50.ebuild:
+  Initial version (fixing bug #96652)
+
