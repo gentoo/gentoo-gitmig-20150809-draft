@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.3.ebuild,v 1.1 2006/03/16 17:27:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.3.ebuild,v 1.2 2007/06/23 11:21:59 dev-zero Exp $
 
-inherit eutils qt3
+NEED_PYTHON=2.3
+
+inherit eutils python qt3
 
 DESCRIPTION="Luma is a graphical utility for accessing and managing data stored on LDAP servers."
 HOMEPAGE="http://luma.sourceforge.net/"
@@ -14,15 +16,20 @@ KEYWORDS="~ppc ~sparc ~x86 ~amd64"
 IUSE="samba"
 
 RDEPEND="$(qt_min_version 3.2)
-	>=dev-lang/python-2.3
 	>=dev-python/PyQt-3.10
 	>=dev-python/python-ldap-2.0.1
 	samba? ( >=dev-python/py-smbpasswd-1.0 )"
-DEPEND="$(qt_min_version 3.2)
-	>=dev-lang/python-2.3
-	>=dev-python/PyQt-3.10
-	>=dev-python/python-ldap-2.0.1
-	samba? ( >=dev-python/py-smbpasswd-1.0 )"
+DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# We do the optimization seperately
+	sed -i \
+		-e '/^doCompile/d' \
+		install.py || "sed failed"
+}
 
 src_install() {
 	# if $QTDIR/etc/settings/qtrc file exists, the qt build tools try to create
@@ -30,6 +37,19 @@ src_install() {
 	addpredict "$QTDIR/etc/settings"
 
 	dodir /usr
-	python install.py --prefix=${D}/usr
+
+	python_version
+	${python} install.py --prefix="${D}/usr"
 	make_desktop_entry "luma" Luma "/usr/share/luma/icons/luma-128.png" "System;Qt"
+}
+
+# Maintainer-Info:
+# Luma installs it's stuff to /usr/lib/luma, even on 64bit-systems.
+
+pkg_postinst() {
+	python_mod_optimize "${ROOT}/usr/lib/luma"
+}
+
+pkg_postrm() {
+	python_mod_cleanup "${ROOT}/usr/lib/luma"
 }
