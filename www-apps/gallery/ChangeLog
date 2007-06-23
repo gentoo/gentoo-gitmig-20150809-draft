@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.113 2007/05/26 23:47:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.114 2007/06/23 23:00:11 wrobel Exp $
+
+*gallery-2.2.2 (23 Jun 2007)
+
+  23 Jun 2007; wrobel +gallery-2.2.2.ebuild:
+  Added gallery-2.2.2 to the tree.
 
   26 May 2007; Renat Lumpau <rl03@gentoo.org> gallery-2.2.1.ebuild:
   Fix bug #174534
