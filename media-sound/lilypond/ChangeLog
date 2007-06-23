@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.58 2007/06/23 16:23:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.59 2007/06/23 16:52:55 flameeyes Exp $
+
+  23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  lilypond-2.10.23.ebuild, lilypond-2.10.25.ebuild,
+  lilypond-2.10.25-r1.ebuild, lilypond-2.11.23.ebuild,
+  lilypond-2.11.26.ebuild, lilypond-2.11.27.ebuild:
+  Remove autotools eclass inheritance from ebuilds that don't use eauto*
+  functions nor run autotools on their own.
 
   23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   +files/lilypond-2.10.25-fontforge.patch, lilypond-2.10.25-r1.ebuild:
