@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dpkt/dpkt-1.6.ebuild,v 1.1 2007/02/28 00:37:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dpkt/dpkt-1.6.ebuild,v 1.2 2007/06/23 07:24:31 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 DEPEND=""
