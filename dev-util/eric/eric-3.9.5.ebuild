@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.5.ebuild,v 1.1 2007/06/23 12:29:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.5.ebuild,v 1.2 2007/06/23 21:07:44 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/eric-ide/${P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="idl"
+IUSE="doc examples idl"
 
 DEPEND=">=dev-python/PyQt-3.13
 	>=dev-python/pyxml-0.8.4
@@ -30,16 +30,22 @@ LANGS="de fr ru"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${FILESDIR}/${PV}-disable_compilation.patch"
+
+	use doc || rm -rf eric/Documentation/Source
+	use examples || rm -rf eric/Examples
 }
 
 src_install() {
 	python_version
 
-cat >> gentoo_config.py <<- _EOF_
+	local sitedir="usr/$(get_libdir)/python${PYVER}/site-packages"
+
+cat > gentoo_config.py <<- _EOF_
 
 cfg = {
-	'ericDir': r"/usr/$(get_libdir)/python${PYVER}/site-packages/eric3",
+	'ericDir': r"/${sitedir}/eric3",
 	'ericPixDir': r"/usr/share/eric3/pixmaps",
 	'ericIconDir': r"/usr/share/eric3/icons",
 	'ericDTDDir': r"/usr/share/eric3/DTDs",
@@ -47,26 +53,27 @@ cfg = {
 	'ericDocDir': r"/usr/share/doc/${PF}/Documentation",
 	'ericExamplesDir': r"/usr/share/doc/${PF}/Examples",
 	'ericTranslationsDir': r"/usr/share/eric3/i18n",
-	'ericWizardsDir': r"/usr/$(get_libdir)/python${PYVER}/site-packages/Wizards",
+	'ericWizardsDir': r"/${sitedir}/Wizards",
 	'ericTemplatesDir': r"/usr/share/eric3/DesignerTemplates",
-	'ericOthersDir': r"/usr/lib/python2.4/site-packages/eric3",
+	'ericOthersDir': r"/${sitedir}/eric3",
 	'bindir': r"/usr/bin",
-	'mdir': r"/usr/$(get_libdir)/python${PYVER}/site-packages"
+	'mdir': r"/${sitedir}"
 }
 _EOF_
 
 
-	${python} install.py \
+	"${python}" install.py \
 		-f "gentoo_config.py" \
 		-b "${ROOT}usr/bin" \
 		-i "${D}" \
-		-d "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages" \
+		-d "${ROOT}${sitedir}" \
 		-c || die "${python} install.py failed"
 
 	dodoc ChangeLog THANKS eric/README*
+
 	make_desktop_entry "eric3 --nosplash" \
 			eric3 \
-			"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric3/icons/default/eric.png" \
+			"${ROOT}usr/share/eric3/icons/default/eric.png" \
 			"Development;IDE;Qt"
 }
 
@@ -75,10 +82,10 @@ pkg_postinst() {
 	elog "  \"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric3/patch_modpython.py\"."
 
 	python_version
-	python_mod_optimize "/usr/$(get_libdir)/python${PYVER}/site-packages/eric3"
+	python_mod_optimize "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric3"
 }
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup "/usr/$(get_libdir)/python${PYVER}/site-packages/eric3"
+	python_mod_cleanup "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric3"
 }
