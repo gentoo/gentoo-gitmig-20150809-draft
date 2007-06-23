@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/osdt
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osdt/ChangeLog,v 1.1 2007/06/23 08:56:14 jmglov Exp $
+
+*osdt-1.1.0 (23 Jun 2007)
+
+  23 Jun 2007; Josh Glover <jmglov@gentoo.org> +metadata.xml,
+  +osdt-1.1.0.ebuild:
+  This package was submitted by Josh Glover in bug #79136
+
