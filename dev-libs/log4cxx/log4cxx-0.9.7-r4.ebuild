@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r4.ebuild,v 1.1 2007/03/15 22:48:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r4.ebuild,v 1.2 2007/06/23 15:46:44 dev-zero Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -14,16 +14,16 @@ HOMEPAGE="http://logging.apache.org/log4cxx/"
 SRC_URI="http://www.apache.org/dist/logging/${PN}/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="doc iodbc unicode odbc smtp threads"
+IUSE="doc iodbc unicode odbc smtp test threads"
 
-RDEPEND="dev-libs/boost
-		dev-libs/libxml2
-		odbc? (
-			iodbc? ( >=dev-db/libiodbc-3.52.4 )
-			!iodbc? ( dev-db/unixODBC ) )
-		smtp? ( dev-libs/libsmtp )"
+RDEPEND="dev-libs/libxml2
+	odbc? (
+		iodbc? ( >=dev-db/libiodbc-3.52.4 )
+		!iodbc? ( dev-db/unixODBC ) )
+	smtp? ( dev-libs/libsmtp )"
 DEPEND="${RDEPEND}
-		doc? ( app-doc/doxygen media-gfx/graphviz )"
+	doc? ( app-doc/doxygen media-gfx/graphviz )
+	test? ( dev-libs/boost dev-util/cppunit )"
 
 pkg_setup() {
 	if use iodbc && ! use odbc ; then
@@ -46,15 +46,15 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-tchar.patch"
+
+	# Fix a bug in the tests
+	sed -i -e 's/regex.hpp/cregex.hpp/' \
+		tests/src/util/filter.cpp || die "sed failed"
+
 	eautoreconf
 }
 
 src_compile() {
-	# has cppunit support, but make check builds nothing...
-	local myconf="--disable-cppunit"
-	use doc && myconf="${myconf} --enable-doxygen --enable-dot
-		--enable-html-docs" || \
-		myconf="${myconf} --disable-doxygen --disable-dot --disable-html-docs"
 	use smtp && myconf="${myconf} --with-SMTP=libsmtp"
 	if use odbc ; then
 		if use iodbc ; then
@@ -65,6 +65,7 @@ src_compile() {
 	fi
 	# it's broken, so we must do this rather than use_enable
 	use unicode && myconf="${myconf} --enable-unicode"
+	use test && myconf="${myconf} --enable-cppunit"
 	use threads && myconf="${myconf} --with-thread=pthread"
 
 	if use unicode && use odbc ; then
@@ -75,6 +76,9 @@ src_compile() {
 
 	econf \
 		--with-XML=libxml2 \
+		$(use_enable doc doxygen) \
+		$(use_enable doc dot) \
+		$(use_enable doc html-docs) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }

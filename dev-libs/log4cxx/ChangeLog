@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.21 2007/03/15 22:48:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.22 2007/06/23 15:46:44 dev-zero Exp $
+
+  23 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
+  log4cxx-0.9.7-r4.ebuild:
+  Boost is only a dependency for running tests (bug #167016), added them and
+  made them work.
 
 *log4cxx-0.9.7-r4 (15 Mar 2007)
 
