@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.8.0_pre20070512.ebuild,v 1.1 2007/05/13 02:38:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.8.0_pre20070512.ebuild,v 1.2 2007/06/23 22:54:14 dirtyepic Exp $
 
 inherit autotools
 
@@ -45,6 +45,8 @@ src_compile() {
 		--with-gmp=/usr \
 		--with-gnuld \
 		|| die "econf failed"
+
+	emake
 }
 
 src_install() {

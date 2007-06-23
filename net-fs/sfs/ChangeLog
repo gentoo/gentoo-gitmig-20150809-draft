@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/sfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.16 2007/05/13 02:38:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.17 2007/06/23 22:54:14 dirtyepic Exp $
+
+  23 Jun 2007; Ryan Hill <dirtyepic@gentoo.org>
+  sfs-0.8.0_pre20070512.ebuild:
+  Actually commit the finished ebuild this time.
 
 *sfs-0.8.0_pre20070512 (13 May 2007)
 
