@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.11.ebuild,v 1.1 2007/01/09 00:37:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.11.ebuild,v 1.2 2007/06/24 18:00:21 peper Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -24,7 +24,7 @@ SRC_URI="mirror://sourceforge/mingw/${P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE=""
 RESTRICT="strip"
 
