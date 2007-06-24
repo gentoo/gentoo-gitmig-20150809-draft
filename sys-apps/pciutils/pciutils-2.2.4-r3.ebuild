@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4-r3.ebuild,v 1.12 2007/06/24 20:14:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4-r3.ebuild,v 1.13 2007/06/24 22:49:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,7 +44,7 @@ src_install() {
 			-e '/^PCI_COMPRESSED_IDS=/s:=.*:=:' \
 			"${D}"/usr/sbin/update-pciids
 		cd "${D}"/usr/share/misc
-		gunzip pci.ids.gz || die
+		use zlib && { gunzip pci.ids.gz || die ; }
 	fi
 
 	use network-cron || return 0
