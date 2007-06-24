@@ -1,0 +1,451 @@
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/PDFCore.cc ./PDFCore.cc
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/PDFCore.cc	2006-12-15 10:25:24.000000000 +0000
++++ ./PDFCore.cc	2007-06-24 00:56:10.000000000 +0100
+@@ -81,7 +81,6 @@ PDFCore::PDFCore(SplashColorMode colorMo
+   int i;
+ 
+   doc = NULL;
+-  continuousMode = globalParams->getContinuousView();
+   drawAreaWidth = drawAreaHeight = 0;
+   maxPageW = totalDocH = 0;
+   pageY = NULL;
+@@ -791,7 +790,7 @@ void PDFCore::needTile(PDFCorePage *page
+   memcpy(tile->ctm, out->getDefCTM(), 6 * sizeof(double));
+   memcpy(tile->ictm, out->getDefICTM(), 6 * sizeof(double));
+   if (!page->links) {
+-    page->links = doc->takeLinks();
++    page->links = doc->getLinks(page->page);
+   }
+   if (!page->text) {
+     if ((textOut = new TextOutputDev(NULL, gTrue, gFalse, gFalse))) {
+@@ -851,7 +850,7 @@ GBool PDFCore::gotoPrevPage(int dec, GBo
+   return gTrue;
+ }
+ 
+-GBool PDFCore::gotoNamedDestination(UGooString *dest) {
++GBool PDFCore::gotoNamedDestination(GooString *dest) {
+   LinkDest *d;
+ 
+   if (!doc) {
+@@ -1213,7 +1212,7 @@ void PDFCore::xorRectangle(int pg, int x
+     for (i = 0; i < page->tiles->getLength(); ++i) {
+       tile = (PDFCoreTile *)page->tiles->get(i);
+       if (!oneTile || tile == oneTile) {
+-	splash = new Splash(tile->bitmap);
++	splash = new Splash(tile->bitmap, gFalse);
+ 	splash->setFillPattern(pattern->copy());
+ 	xx0 = (SplashCoord)(x0 - tile->xMin);
+ 	yy0 = (SplashCoord)(y0 - tile->yMin);
+@@ -1584,7 +1583,7 @@ void PDFCore::cvtUserToDev(int pg, doubl
+ 		tile->ctm[3] * yu + tile->ctm[5] + 0.5);
+   } else {
+     doc->getCatalog()->getPage(pg)->getDefaultCTM(ctm, dpi, dpi, rotate,
+-						  out->upsideDown());
++												  gFalse, out->upsideDown());
+     *xd = (int)(ctm[0] * xu + ctm[2] * yu + ctm[4] + 0.5);
+     *yd = (int)(ctm[1] * xu + ctm[3] * yu + ctm[5] + 0.5);
+   }
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/PDFCore.h ./PDFCore.h
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/PDFCore.h	2006-12-15 10:25:24.000000000 +0000
++++ ./PDFCore.h	2007-06-24 00:57:36.000000000 +0100
+@@ -16,7 +16,7 @@
+ #include <stdlib.h>
+ #include "SplashTypes.h"
+ #include "CharTypes.h"
+-#include "UGooString.h"
++#include "GooString.h"
+ 
+ class GooString;
+ class GooList;
+@@ -156,7 +156,7 @@ public:
+ 
+   virtual GBool gotoNextPage(int inc, GBool top);
+   virtual GBool gotoPrevPage(int dec, GBool top, GBool bottom);
+-  virtual GBool gotoNamedDestination(UGooString *dest);
++  virtual GBool gotoNamedDestination(GooString *dest);
+   virtual GBool goForward();
+   virtual GBool goBackward();
+   virtual void scrollLeft(int nCols = 1);
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFApp.cc ./XPDFApp.cc
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFApp.cc	2006-12-15 10:25:24.000000000 +0000
++++ ./XPDFApp.cc	2007-06-24 00:42:27.000000000 +0100
+@@ -236,7 +236,7 @@ XPDFViewer *XPDFApp::open(GooString *fil
+   return viewer;
+ }
+ 
+-XPDFViewer *XPDFApp::openAtDest(GooString *fileName, UGooString *dest,
++XPDFViewer *XPDFApp::openAtDest(GooString *fileName, GooString *dest,
+ 				GooString *ownerPassword,
+ 				GooString *userPassword) {
+   XPDFViewer *viewer;
+@@ -324,7 +324,7 @@ void XPDFApp::remoteOpen(GooString *file
+   XFlush(display);
+ }
+ 
+-void XPDFApp::remoteOpenAtDest(GooString *fileName, UGooString *dest, GBool raise) {
++void XPDFApp::remoteOpenAtDest(GooString *fileName, GooString *dest, GBool raise) {
+   char cmd[remoteCmdSize];
+ 
+   sprintf(cmd, "%c +%.256s %.200s",
+@@ -362,7 +362,7 @@ void XPDFApp::remoteMsgCbk(Widget widget
+   char *p, *q;
+   GooString *fileName;
+   int page;
+-  UGooString *destName;
++  GooString *destName;
+ 
+   if (event->xproperty.atom != app->remoteAtom) {
+     *cont = True;
+@@ -393,7 +393,7 @@ void XPDFApp::remoteMsgCbk(Widget widget
+     page = 1;
+     destName = NULL;
+     if (*p == '+') {
+-      destName = new UGooString(p + 1);
++      destName = new GooString(p + 1);
+     } else {
+       page = atoi(p);
+     }
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFApp.h ./XPDFApp.h
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFApp.h	2006-12-15 10:25:24.000000000 +0000
++++ ./XPDFApp.h	2007-06-24 00:41:59.000000000 +0100
+@@ -18,7 +18,7 @@
+ #undef Object
+ #include "gtypes.h"
+ #include "SplashTypes.h"
+-#include "UGooString.h"
++#include "GooString.h"
+ 
+ class GooString;
+ class GooList;
+@@ -41,7 +41,7 @@ public:
+   XPDFViewer *open(GooString *fileName, int page = 1,
+ 		   GooString *ownerPassword = NULL,
+ 		   GooString *userPassword = NULL);
+-  XPDFViewer *openAtDest(GooString *fileName, UGooString *dest,
++  XPDFViewer *openAtDest(GooString *fileName, GooString *dest,
+ 			 GooString *ownerPassword = NULL,
+ 			 GooString *userPassword = NULL);
+   void close(XPDFViewer *viewer, GBool closeLast);
+@@ -53,7 +53,7 @@ public:
+   void setRemoteName(char *remoteName);
+   GBool remoteServerRunning();
+   void remoteOpen(GooString *fileName, int page, GBool raise);
+-  void remoteOpenAtDest(GooString *fileName, UGooString *dest, GBool raise);
++  void remoteOpenAtDest(GooString *fileName, GooString *dest, GBool raise);
+   void remoteReload(GBool raise);
+   void remoteRaise();
+   void remoteQuit();
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/xpdf.cc ./xpdf.cc
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/xpdf.cc	2006-12-15 10:25:24.000000000 +0000
++++ ./xpdf.cc	2007-06-24 00:55:50.000000000 +0100
+@@ -127,7 +127,7 @@ int main(int argc, char *argv[]) {
+   XPDFApp *app;
+   GooString *fileName;
+   int pg;
+-  UGooString *destName;
++  GooString *destName;
+   GooString *userPasswordStr, *ownerPasswordStr;
+   GBool ok;
+   int exitCode;
+@@ -148,26 +148,8 @@ int main(int argc, char *argv[]) {
+   }
+ 
+   // read config file
+-  globalParams = new GlobalParams(cfgFileName);
++  globalParams = new GlobalParams();
+   //globalParams->setupBaseFonts(NULL);
+-  if (contView) {
+-    globalParams->setContinuousView(contView);
+-  }
+-  if (psFileArg[0]) {
+-    globalParams->setPSFile(psFileArg);
+-  }
+-  if (paperSize[0]) {
+-    if (!globalParams->setPSPaperSize(paperSize)) {
+-      fprintf(stderr, "Invalid paper size\n");
+-    }
+-  } else {
+-    if (paperWidth) {
+-      globalParams->setPSPaperWidth(paperWidth);
+-    }
+-    if (paperHeight) {
+-      globalParams->setPSPaperHeight(paperHeight);
+-    }
+-  }
+   if (level1) {
+     globalParams->setPSLevel(psLevel1);
+   }
+@@ -179,11 +161,6 @@ int main(int argc, char *argv[]) {
+       fprintf(stderr, "Bad '-eol' value on command line\n");
+     }
+   }
+-  if (enableT1libStr[0]) {
+-    if (!globalParams->setEnableT1lib(enableT1libStr)) {
+-      fprintf(stderr, "Bad '-t1lib' value on command line\n");
+-    }
+-  }
+   if (enableFreeTypeStr[0]) {
+     if (!globalParams->setEnableFreeType(enableFreeTypeStr)) {
+       fprintf(stderr, "Bad '-freetype' value on command line\n");
+@@ -204,12 +181,6 @@ int main(int argc, char *argv[]) {
+   // create the XPDFApp object
+   app = new XPDFApp(&argc, argv);
+ 
+-  // the initialZoom parameter can be set in either the config file or
+-  // as an X resource (or command line arg)
+-  if (app->getInitialZoom()) {
+-    globalParams->setInitialZoom(app->getInitialZoom()->getCString());
+-  }
+-
+   // check command line
+   ok = ok && argc >= 1 && argc <= 3;
+   if (doRemoteReload) {
+@@ -239,7 +210,7 @@ int main(int argc, char *argv[]) {
+   destName = NULL;
+   if (argc == 3) {
+     if (argv[2][0] == '+') {
+-      destName = new UGooString(&argv[2][1]);
++      destName = new GooString(&argv[2][1]);
+     } else {
+       pg = atoi(argv[2]);
+       if (pg < 0) {
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFCore.cc ./XPDFCore.cc
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFCore.cc	2006-12-15 10:25:24.000000000 +0000
++++ ./XPDFCore.cc	2007-06-24 00:57:05.000000000 +0100
+@@ -148,19 +148,7 @@ XPDFCore::XPDFCore(Widget shellA, Widget
+   drawAreaFrame = NULL;
+   drawArea = NULL;
+ 
+-  // get the initial zoom value
+-  initialZoom = globalParams->getInitialZoom();
+-  if (!initialZoom->cmp("page")) {
+-    zoom = zoomPage;
+-  } else if (!initialZoom->cmp("width")) {
+-    zoom = zoomWidth;
+-  } else {
+-    zoom = atoi(initialZoom->getCString());
+-    if (zoom <= 0) {
+       zoom = defZoom;
+-    }
+-  }
+-  delete initialZoom;
+ 
+   linkAction = NULL;
+ 
+@@ -442,7 +430,7 @@ GBool XPDFCore::doLink(int pg, int x, in
+ void XPDFCore::doAction(LinkAction *action) {
+   LinkActionKind kind;
+   LinkDest *dest;
+-  UGooString *namedDest;
++  GooString *namedDest;
+   char *s;
+   GooString *fileName, *fileName2;
+   GooString *cmd;
+@@ -462,7 +450,7 @@ void XPDFCore::doAction(LinkAction *acti
+       if ((dest = ((LinkGoTo *)action)->getDest())) {
+ 	dest = dest->copy();
+       } else if ((namedDest = ((LinkGoTo *)action)->getNamedDest())) {
+-	namedDest = new UGooString(*namedDest);
++	namedDest = new GooString(*namedDest);
+       }
+     } else {
+       dest = NULL;
+@@ -470,7 +458,7 @@ void XPDFCore::doAction(LinkAction *acti
+       if ((dest = ((LinkGoToR *)action)->getDest())) {
+ 	dest = dest->copy();
+       } else if ((namedDest = ((LinkGoToR *)action)->getNamedDest())) {
+-	namedDest = new UGooString(*namedDest);
++	namedDest = new GooString(*namedDest);
+       }
+       s = ((LinkGoToR *)action)->getFileName()->getCString();
+       //~ translate path name for VMS (deal with '/')
+@@ -548,12 +536,8 @@ void XPDFCore::doAction(LinkAction *acti
+ 
+   // URI action
+   case actionURI:
+-    if (!(cmd = globalParams->getURLCommand())) {
+       error(-1, "No urlCommand defined in config file");
+       break;
+-    }
+-    runCommand(cmd, ((LinkURI *)action)->getURI());
+-    break;
+ 
+   // Named action
+   case actionNamed:
+@@ -585,52 +569,8 @@ void XPDFCore::doAction(LinkAction *acti
+ 
+   // Movie action
+   case actionMovie:
+-    if (!(cmd = globalParams->getMovieCommand())) {
+       error(-1, "No movieCommand defined in config file");
+       break;
+-    }
+-    if (((LinkMovie *)action)->hasAnnotRef()) {
+-      doc->getXRef()->fetch(((LinkMovie *)action)->getAnnotRef()->num,
+-			    ((LinkMovie *)action)->getAnnotRef()->gen,
+-			    &movieAnnot);
+-    } else {
+-      //~ need to use the correct page num here
+-      doc->getCatalog()->getPage(topPage)->getAnnots(&obj1);
+-      if (obj1.isArray()) {
+-	for (i = 0; i < obj1.arrayGetLength(); ++i) {
+-	  if (obj1.arrayGet(i, &movieAnnot)->isDict()) {
+-	    if (movieAnnot.dictLookup("Subtype", &obj2)->isName("Movie")) {
+-	      obj2.free();
+-	      break;
+-	    }
+-	    obj2.free();
+-	  }
+-	  movieAnnot.free();
+-	}
+-	obj1.free();
+-      }
+-    }
+-    if (movieAnnot.isDict()) {
+-      if (movieAnnot.dictLookup("Movie", &obj1)->isDict()) {
+-	if (obj1.dictLookup("F", &obj2)) {
+-	  if ((fileName = LinkAction::getFileSpecName(&obj2))) {
+-	    if (!isAbsolutePath(fileName->getCString())) {
+-	      fileName2 = appendToPath(
+-			      grabPath(doc->getFileName()->getCString()),
+-			      fileName->getCString());
+-	      delete fileName;
+-	      fileName = fileName2;
+-	    }
+-	    runCommand(cmd, fileName);
+-	    delete fileName;
+-	  }
+-	  obj2.free();
+-	}
+-	obj1.free();
+-      }
+-    }
+-    movieAnnot.free();
+-    break;
+ 
+   // unknown action type
+   case actionUnknown:
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFViewer.cc ./XPDFViewer.cc
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFViewer.cc	2006-12-15 10:25:24.000000000 +0000
++++ ./XPDFViewer.cc	2007-06-24 00:57:28.000000000 +0100
+@@ -111,7 +111,7 @@ static ZoomMenuInfo zoomMenuInfo[nZoomMe
+ //------------------------------------------------------------------------
+ 
+ XPDFViewer::XPDFViewer(XPDFApp *appA, GooString *fileName,
+-		       int pageA, UGooString *destName,
++		       int pageA, GooString *destName,
+ 		       GooString *ownerPassword, GooString *userPassword) {
+   LinkDest *dest;
+   int pg;
+@@ -185,7 +185,7 @@ XPDFViewer::~XPDFViewer() {
+ #endif
+ }
+ 
+-void XPDFViewer::open(GooString *fileName, int pageA, UGooString *destName) {
++void XPDFViewer::open(GooString *fileName, int pageA, GooString *destName) {
+   LinkDest *dest;
+   int pg;
+   double z;
+@@ -267,7 +267,7 @@ void XPDFViewer::displayDest(LinkDest *d
+   core->displayDest(dest, zoomA, rotateA, addToHist);
+ }
+ 
+-void XPDFViewer::getPageAndDest(int pageA, UGooString *destName,
++void XPDFViewer::getPageAndDest(int pageA, GooString *destName,
+ 				int *pageOut, LinkDest **destOut) {
+   Ref pageRef;
+ 
+@@ -2299,16 +2299,6 @@ void XPDFViewer::initPrintDialog() {
+   XtSetArg(args[n], XmNcancelButton, cancelBtn); ++n;
+   XtSetValues(printDialog, args, n);
+ 
+-  //----- initial values
+-  if ((psFileName = globalParams->getPSFile())) {
+-    if (psFileName->getChar(0) == '|') {
+-      XmTextFieldSetString(printCmdText,
+-			   psFileName->getCString() + 1);
+-    } else {
+-      XmTextFieldSetString(printFileText, psFileName->getCString());
+-    }
+-    delete psFileName;
+-  }
+ }
+ 
+ void XPDFViewer::setupPrintDialog() {
+@@ -2318,34 +2308,10 @@ void XPDFViewer::setupPrintDialog() {
+   char *p;
+ 
+   doc = core->getDoc();
+-  psFileName = globalParams->getPSFile();
+-  if (!psFileName || psFileName->getChar(0) == '|') {
+-    pdfFileName = doc->getFileName();
+-    p = pdfFileName->getCString() + pdfFileName->getLength() - 4;
+-    if (!strcmp(p, ".pdf") || !strcmp(p, ".PDF")) {
+-      psFileName2 = new GooString(pdfFileName->getCString(),
+-				pdfFileName->getLength() - 4);
+-    } else {
+-      psFileName2 = pdfFileName->copy();
+-    }
+-    psFileName2->append(".ps");
+-    XmTextFieldSetString(printFileText, psFileName2->getCString());
+-    delete psFileName2;
+-  }
+-  if (psFileName && psFileName->getChar(0) == '|') {
+-    XmToggleButtonSetState(printWithCmdBtn, True, False);
+-    XmToggleButtonSetState(printToFileBtn, False, False);
+-    XtVaSetValues(printCmdText, XmNsensitive, True, NULL);
+-    XtVaSetValues(printFileText, XmNsensitive, False, NULL);
+-  } else {
+     XmToggleButtonSetState(printWithCmdBtn, False, False);
+     XmToggleButtonSetState(printToFileBtn, True, False);
+     XtVaSetValues(printCmdText, XmNsensitive, False, NULL);
+     XtVaSetValues(printFileText, XmNsensitive, True, NULL);
+-  }
+-  if (psFileName) {
+-    delete psFileName;
+-  }
+ 
+   sprintf(buf, "%d", doc->getNumPages());
+   XmTextFieldSetString(printFirstPage, "1");
+@@ -2419,11 +2385,11 @@ void XPDFViewer::printPrintCbk(Widget wi
+   }
+ 
+   psOut = new PSOutputDev(psFileName->getCString(), doc->getXRef(),
+-			  doc->getCatalog(), firstPage, lastPage,
+-			  psModePS);
++			  doc->getCatalog(), NULL, firstPage, lastPage,
++			  psModePS, 0, 0, gFalse, 0, 0, 0, 0, gFalse, gFalse);
+   if (psOut->isOk()) {
+     doc->displayPages(psOut, firstPage, lastPage, 72, 72,
+-		      0, gTrue, globalParams->getPSCrop(), gFalse);
++		      0, gTrue, gFalse, gFalse);
+   }
+   delete psOut;
+   delete psFileName;
+diff -up /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFViewer.h ./XPDFViewer.h
+--- /usr/src/debug/app-text/xpdf-3.01-r8/xpdf-3.01-poppler/XPDFViewer.h	2006-12-15 10:25:24.000000000 +0000
++++ ./XPDFViewer.h	2007-06-24 00:42:16.000000000 +0100
+@@ -48,12 +48,12 @@ class XPDFViewer {
+ public:
+ 
+   XPDFViewer(XPDFApp *appA, GooString *fileName,
+-	     int pageA, UGooString *destName,
++	     int pageA, GooString *destName,
+ 	     GooString *ownerPassword, GooString *userPassword);
+   GBool isOk() { return ok; }
+   ~XPDFViewer();
+ 
+-  void open(GooString *fileName, int pageA, UGooString *destName);
++  void open(GooString *fileName, int pageA, GooString *destName);
+   void clear();
+   void reloadFile();
+ 
+@@ -68,7 +68,7 @@ private:
+                    GBool scrollToTop, GBool addToHist);
+   void displayDest(LinkDest *dest, double zoomA, int rotateA,
+ 		   GBool addToHist);
+-  void getPageAndDest(int pageA, UGooString *destName,
++  void getPageAndDest(int pageA, GooString *destName,
+ 		      int *pageOut, LinkDest **destOut);
+ 
+   //----- actions
