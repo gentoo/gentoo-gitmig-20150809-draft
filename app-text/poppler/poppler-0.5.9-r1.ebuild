@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.9.ebuild,v 1.1 2007/05/31 13:38:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.9-r1.ebuild,v 1.1 2007/06/24 09:13:51 genstef Exp $
 
 inherit libtool eutils
 
@@ -21,6 +21,12 @@ RDEPEND=">=media-libs/freetype-2.1.8
 	!app-text/pdftohtml"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/poppler-0.5.9-header.patch
+}
 
 src_compile() {
 	econf \
