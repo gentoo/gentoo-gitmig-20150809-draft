@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/pypam-0.5.0.ebuild,v 1.1 2007/05/28 19:04:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/pypam-0.5.0.ebuild,v 1.2 2007/06/24 14:18:26 angelos Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pangalactic.org/PyPAM/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-libs/pam-0.64"
