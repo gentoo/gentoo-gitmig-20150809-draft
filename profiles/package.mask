@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7393 2007/06/24 04:48:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7394 2007/06/24 17:15:13 peper Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Piotr Jaroszyński <peper@gentoo.org> (24 Jun 2007)
+# Masked for removal. bug #165898
+x11-drivers/mtxdrivers-pro
 
 # Ryan Hill <dirtyepic@gentoo.org> (23 Jun 2007)
 # Broken, bug #115110.
