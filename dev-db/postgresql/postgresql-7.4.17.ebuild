@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.17.ebuild,v 1.8 2007/05/06 22:17:43 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.17.ebuild,v 1.9 2007/06/24 21:20:59 vapier Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 
 DESCRIPTION="Sophisticated and powerful Object-Relational DBMS."
 HOMEPAGE="http://www.postgresql.org/"

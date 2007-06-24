@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.13.ebuild,v 1.9 2007/06/11 01:45:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.13.ebuild,v 1.10 2007/06/24 21:20:43 vapier Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 
 DESCRIPTION="PostgreSQL libraries."
 HOMEPAGE="http://www.postgresql.org/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.38.ebuild,v 1.11 2007/04/22 08:20:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.38.ebuild,v 1.12 2007/06/24 21:20:25 vapier Exp $
 
 MY_EXTRAS_VER="20070415"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -8,7 +8,7 @@ SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
 inherit mysql
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 
 src_test() {
 	make check || die "make check failed"
