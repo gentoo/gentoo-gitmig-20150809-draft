@@ -1,0 +1,12 @@
+# ChangeLog for dev-dotnet/monocalendar
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monocalendar/ChangeLog,v 1.1 2007/06/24 17:28:32 jurek Exp $
+
+*monocalendar-0.7.2 (24 Jun 2007)
+
+  24 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> +metadata.xml,
+  +monocalendar-0.7.2.ebuild:
+  Initial version (fixing bug #88921). Credit goes to Borja Sánchez
+  Zamorano <borsanza@gmail.com> and Peter Ansell <p_ansell@yahoo.com>
+  for providing the ebuilds with some modifications by yours truly.
+
