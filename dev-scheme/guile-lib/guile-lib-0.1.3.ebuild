@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.3.ebuild,v 1.3 2007/06/19 17:30:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.3.ebuild,v 1.4 2007/06/24 22:40:24 angelos Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="home.gna.org/guile-lib/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND="dev-scheme/guile"
 DEPEND="${RDEPEND}"
