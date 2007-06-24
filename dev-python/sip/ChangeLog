@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.97 2007/06/15 20:48:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.98 2007/06/24 21:48:17 dev-zero Exp $
+
+  24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> sip-4.2.1.ebuild,
+  sip-4.2.1-r1.ebuild, sip-4.3.2.ebuild, sip-4.5.2-r1.ebuild,
+  sip-4.6.ebuild:
+  Fixed $ROOT abuse (bug #167271)
 
   15 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> sip-4.6.ebuild:
   Add ~x86-fbsd keyword.

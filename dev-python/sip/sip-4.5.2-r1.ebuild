@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.5.2-r1.ebuild,v 1.7 2007/06/01 13:57:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.5.2-r1.ebuild,v 1.8 2007/06/24 21:48:17 dev-zero Exp $
 
 NEED_PYTHON=2.3
 
-inherit python toolchain-funcs versionator
+inherit python toolchain-funcs versionator multilib
 
 MY_P=${P/_}
 
@@ -29,10 +29,10 @@ src_compile(){
 	use debug && myconf="${myconf} -u"
 
 	python configure.py \
-		-b "${ROOT}usr/bin" \
-		-d "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages" \
-		-e "${ROOT}usr/include/python${PYVER}" \
-		-v "${ROOT}usr/share/sip" \
+		-b "/usr/bin" \
+		-d "/usr/$(get_libdir)/python${PYVER}/site-packages" \
+		-e "/usr/include/python${PYVER}" \
+		-v "/usr/share/sip" \
 		${myconf} \
 		CXXFLAGS_RELEASE="" CFLAGS_RELEASE="" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \

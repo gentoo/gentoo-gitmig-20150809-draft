@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.3.2.ebuild,v 1.3 2007/03/05 03:08:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.3.2.ebuild,v 1.4 2007/06/24 21:48:17 dev-zero Exp $
 
-inherit distutils
+inherit distutils multilib
 
 MY_P=${P/"?.?.?_pre"/"snapshot-"}
 MY_P=${MY_P/_/}
@@ -26,7 +26,7 @@ DEPEND="virtual/libc
 src_compile(){
 	distutils_python_version
 
-	local myconf="-l qt-mt -b ${ROOT}usr/bin -d ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages -e ${ROOT}usr/include/python${PYVER}"
+	local myconf="-l qt-mt -b /usr/bin -d /usr/$(get_libdir)/python${PYVER}/site-packages -e /usr/include/python${PYVER}"
 	use debug && myconf="${myconf} -u"
 
 	python configure.py ${myconf} "CFLAGS+=${CFLAGS}" "CXXFLAGS+=${CXXFLAGS}"
