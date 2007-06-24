@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.5 2004/12/07 02:46:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.6 2007/06/24 20:29:31 dev-zero Exp $
 
 inherit eutils distutils
 
@@ -18,7 +18,6 @@ KEYWORDS="x86 ~ppc"
 IUSE="debug doc kjs"
 
 RDEPEND="virtual/libc
-	virtual/python
 	>=dev-python/sip-3.10.2
 	>=dev-python/PyQt-3.12
 	kde-base/kdelibs
@@ -40,11 +39,11 @@ src_compile() {
 	use kjs && myconf="${myconf} -m"
 
 	python configure.py ${myconf}
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	einstall DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die "emake install failed"
 	find ${D}/usr/share/sip -not -type d -not -iname *.sip -exec rm '{}' \;
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS
 	use doc && ( cp -r examples ${D}/usr/share/doc/${PF}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0.ebuild,v 1.3 2007/06/16 22:42:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0.ebuild,v 1.4 2007/06/24 20:29:31 dev-zero Exp $
 
 inherit eutils distutils
 
@@ -27,28 +27,29 @@ RDEPEND=">=dev-python/sip-4.4.5
 src_compile() {
 	distutils_python_version
 
-	local myconf="-d ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages \
-			-v ${ROOT}/usr/share/sip \
+	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages \
+			-v /usr/share/sip \
 			-k $(kde-config --prefix)
 			-L $(get_libdir)"
 
 	use debug && myconf="${myconf} -u"
 	myconf="${myconf} -i"
 
-	python configure.py ${myconf}
-	emake || die
+	"${python}" configure.py ${myconf}
+	emake || die "emake install failed"
 }
 
 src_install() {
 	dodir /usr/kde/3.5/lib/
 	sed -i -e 's:/usr/kde/3.5/lib/libkonsolepart.so:$(DESTDIR)/usr/kde/3.5/lib/libkonsolepart.so:' Makefile
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 #	find ${D}/usr/share/sip -not -type d -not -iname *.sip -exec rm '{}' \;
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 	use doc && dohtml -r doc/*
 	if use examples ; then
-		cp -r examples ${D}/usr/share/doc/${PF}
-		cp -r templates ${D}/usr/share/doc/${PF}
+		insinto "/usr/share/doc/${PF}"
+		doins -r examples
+		doins -r templates
 	fi
 }
