@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>hardened</herd>
+<herd>no-herd</herd>
 <maintainer>
-  <email>method@gentoo.org</email>
+  <name>Christoph Mende</email>
+  <email>angelos@gentoo.org</email>
 </maintainer>
 <longdescription>Audio-entropyd generates entropy-data for the /dev/random device.</longdescription> 
 </pkgmetadata>
