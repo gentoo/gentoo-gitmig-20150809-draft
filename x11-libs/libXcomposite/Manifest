@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX drop-extra-unlockdisplay.patch 298 RMD160 5b927a9d45e3528d28dd433e3d1bd05283fc15b6 SHA1 0e05eb35ee866fcad5dbcc2a12d5dd72bb3cc39a SHA256 03c0be87e935cf6a14cfe258b191e42bc8806013fd7ad43f6ee2aac1ec8d07b5
 MD5 f7f2d176c3eb909b2dc9c83f99c43fa7 files/drop-extra-unlockdisplay.patch 298
 RMD160 5b927a9d45e3528d28dd433e3d1bd05283fc15b6 files/drop-extra-unlockdisplay.patch 298
@@ -9,10 +12,10 @@ EBUILD libXcomposite-0.3-r1.ebuild 636 RMD160 8605b909ecfa5c914deb9c25f6a1dd757c
 MD5 c4d41747f91f777ae917378126615e31 libXcomposite-0.3-r1.ebuild 636
 RMD160 8605b909ecfa5c914deb9c25f6a1dd757cc9e07a libXcomposite-0.3-r1.ebuild 636
 SHA256 202c7f4ec9b09774d9f13f043e05114362f3477ac5ff4638cd0d16a259193ca1 libXcomposite-0.3-r1.ebuild 636
-EBUILD libXcomposite-0.3.1.ebuild 564 RMD160 1c33255419b1859af03bcd2d77935ba30da71b5d SHA1 060c48b60bdbadc75d7733531d70bfe9551b35ef SHA256 0af022780829c30d10d0fd9abdb5bfa91879d3c69940cd5c6d6975acda7aa198
-MD5 dfc509d2092e36444f0ec4a81661cd04 libXcomposite-0.3.1.ebuild 564
-RMD160 1c33255419b1859af03bcd2d77935ba30da71b5d libXcomposite-0.3.1.ebuild 564
-SHA256 0af022780829c30d10d0fd9abdb5bfa91879d3c69940cd5c6d6975acda7aa198 libXcomposite-0.3.1.ebuild 564
+EBUILD libXcomposite-0.3.1.ebuild 564 RMD160 4fe4621a2cc53630a2293bdf059d3ff3b9fcaf37 SHA1 bc7252164ba93e39e149aadbc10ca74de742e8ab SHA256 754b51558ad95f9b901b9495f63c0a1d33a7a61b5cddab58a6dc65bbb269e765
+MD5 53ce9bfa1e02cee2247cd372bf22074f libXcomposite-0.3.1.ebuild 564
+RMD160 4fe4621a2cc53630a2293bdf059d3ff3b9fcaf37 libXcomposite-0.3.1.ebuild 564
+SHA256 754b51558ad95f9b901b9495f63c0a1d33a7a61b5cddab58a6dc65bbb269e765 libXcomposite-0.3.1.ebuild 564
 EBUILD libXcomposite-0.3.2.ebuild 581 RMD160 de26238b3b63b0b0ac6459683c831418e0954764 SHA1 02f8cb90a7beaf7eddaa139ab6fa7bd9d88190f6 SHA256 172ce79599909cd1bc87009c4e0ac5cc30dc5ed704300dd4fca233579d5321de
 MD5 948011596abe2b3e65f0ad7b80987f0e libXcomposite-0.3.2.ebuild 581
 RMD160 de26238b3b63b0b0ac6459683c831418e0954764 libXcomposite-0.3.2.ebuild 581
@@ -41,3 +44,10 @@ SHA256 6f7fecf992e5ffb9ae2e23bcf03d942ac8cb783e7d380cabd4caa94faafc658f files/di
 MD5 f6cce3fbbdeef92a95923b0e293183df files/digest-libXcomposite-0.3.2 262
 RMD160 8e8b5b9524756ec9dca2cbcbfe31a921ac3a3b0b files/digest-libXcomposite-0.3.2 262
 SHA256 0c60f32ca26e94df8993d4c3b798d59f61d960e93199251dea3553f6d8e1a3aa files/digest-libXcomposite-0.3.2 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGfvHSp/wUKkr7RBoRAqBcAKCcdKo2hk6P9hbcY1CpXKIi3m8PuwCgne7G
+IAdm428E2ZS0IWZp9ruSnkU=
+=q5WX
+-----END PGP SIGNATURE-----
