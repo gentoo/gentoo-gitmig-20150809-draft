@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgsvn/hgsvn-0.1.3.ebuild,v 1.3 2007/06/24 10:21:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgsvn/hgsvn-0.1.3.ebuild,v 1.4 2007/06/24 11:50:51 cedk Exp $
 
 NEED_PYTHON=2.4
 
@@ -16,5 +16,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
-RDEPEND="dev-util/subversion
+RDEPEND="${DEPEND}
+	dev-util/subversion
 	|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
