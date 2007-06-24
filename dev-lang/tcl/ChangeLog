@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.79 2007/05/25 15:15:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.80 2007/06/24 23:36:14 peper Exp $
+
+  24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> tcl-8.4.9.ebuild,
+  tcl-8.4.14.ebuild:
+  (QA) Fix ${ROOT} abuse. bug #167271.
 
   25 May 2007; Brent Baude <ranger@gentoo.org> tcl-8.4.14.ebuild:
   Marking tcl-8.4.14 ppc64 stable for bug 178320
