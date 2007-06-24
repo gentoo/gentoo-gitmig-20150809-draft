@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.30.ebuild,v 1.4 2007/06/21 14:37:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.30.ebuild,v 1.5 2007/06/24 21:18:00 vapier Exp $
 
 inherit eutils perl-app
 
@@ -11,7 +11,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/1864/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~m68k ~ppc ~s390 ~sh sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~ppc s390 sh sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-perl/SGMLSpm

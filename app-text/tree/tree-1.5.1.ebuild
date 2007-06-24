@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.1.ebuild,v 1.4 2007/06/21 13:31:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.1.ebuild,v 1.5 2007/06/24 21:18:12 vapier Exp $
 
 inherit toolchain-funcs bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://mama.indstate.edu/linux/tree/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 
 src_compile() {

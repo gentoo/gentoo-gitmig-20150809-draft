@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.21.ebuild,v 1.9 2007/06/20 14:58:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.21.ebuild,v 1.10 2007/06/24 21:17:23 vapier Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/libp/libpaper/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 src_unpack() {
