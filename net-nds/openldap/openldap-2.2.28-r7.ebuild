@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.13 2007/02/16 20:55:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.14 2007/06/24 23:28:38 vapier Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -15,7 +15,7 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc perl readline samba sasl slp ssl tcpd selinux"
 
 # note that the 'samba' USE flag pulling in OpenSSL is NOT an error.  OpenLDAP
