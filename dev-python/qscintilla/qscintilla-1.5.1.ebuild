@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.5.1.ebuild,v 1.11 2006/02/17 15:36:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.5.1.ebuild,v 1.12 2007/06/24 20:58:01 dev-zero Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,7 +25,7 @@ DEPEND="virtual/libc
 	sys-apps/sed
 	=x11-libs/qt-3*"
 
-LIBDIR="${ROOT}/usr/$(get_libdir)"
+LIBDIR="/usr/$(get_libdir)"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/qt
