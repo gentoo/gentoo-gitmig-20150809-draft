@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-trident/xf86-video-trident-1.2.3.ebuild,v 1.4 2007/05/05 18:32:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-trident/xf86-video-trident-1.2.3.ebuild,v 1.5 2007/06/24 22:55:00 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ XDPVER=3
 inherit x-modular
 
 DESCRIPTION="Trident video driver"
-KEYWORDS="amd64 ~arm ia64 ~ppc ~sh x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ia64 ~ppc sh x86 ~x86-fbsd"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
