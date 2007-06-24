@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.12 2006/01/29 19:45:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.13 2007/06/24 18:09:08 peper Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://tcng.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 # block this to phase it out very shortly
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE="doc tcsim"
 DEPEND="doc? ( virtual/ghostscript virtual/tetex media-gfx/transfig )
 	dev-lang/perl

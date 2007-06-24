@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tcng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.17 2007/02/22 01:32:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.18 2007/06/24 18:09:08 peper Exp $
+
+  24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> tcng-9h.ebuild:
+  (QA) Don't use KEYWORDS="-*". bug #160519.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.10 2006/06/17 21:32:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.11 2007/06/24 18:06:38 peper Exp $
 
 ESVN_REPO_URI="http://svn.initng.org/initng/trunk"
 ESVN_PROJECT="initng"
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=""

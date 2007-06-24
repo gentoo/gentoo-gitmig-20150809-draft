@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/initng
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.40 2006/08/31 02:22:13 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.41 2007/06/24 18:06:38 peper Exp $
+
+  24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> initng-9999.ebuild:
+  (QA) Don't use KEYWORDS="-*". bug #160519.
 
   31 Aug 2006; Mike Frysinger <vapier@gentoo.org>
   +files/initng-0.6.7-inotify-ppc.patch, initng-0.6.7.ebuild:
