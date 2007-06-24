@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.1.ebuild,v 1.1 2007/05/18 07:26:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.1.ebuild,v 1.2 2007/06/24 15:44:08 pva Exp $
 
 MY_P="${P/_}"
 
@@ -22,5 +22,5 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README TODO
+	dodoc README TODO RELEASE_NOTES
 }
