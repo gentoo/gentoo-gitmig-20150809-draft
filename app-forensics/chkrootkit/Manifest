@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX chkrootkit-0.44-coreutils-static-falsepositive.patch 793 RMD160 476ad936624ea622e89e0ca231885c209e69c0f2 SHA1 f29c45a58374ae993a5afb4ee87968b2a47896f4 SHA256 68b783a18a9e2c246a6daf45bc6ae13fd251cac00bf34d6fe315504ae8720fc7
 MD5 99d10c59971b4836291ff235c6f480a6 files/chkrootkit-0.44-coreutils-static-falsepositive.patch 793
 RMD160 476ad936624ea622e89e0ca231885c209e69c0f2 files/chkrootkit-0.44-coreutils-static-falsepositive.patch 793
@@ -40,10 +43,10 @@ EBUILD chkrootkit-0.46a.ebuild 1841 RMD160 2f8bb02d49e33e5fb5c2afdc342f1a003ae76
 MD5 25dbdcfff6f93f1ce1728fbb83f14d4f chkrootkit-0.46a.ebuild 1841
 RMD160 2f8bb02d49e33e5fb5c2afdc342f1a003ae7657d chkrootkit-0.46a.ebuild 1841
 SHA256 e7c5e7cbecf4e536bc9933f1b7939f99fc6466673889e33b21455d712a7e2bd1 chkrootkit-0.46a.ebuild 1841
-EBUILD chkrootkit-0.47.ebuild 1728 RMD160 e931abd4f283ac23fd8863baf02ffbcc6afcc3eb SHA1 f1f1a81cdf7c63a266ca7ff1078a238bc349b025 SHA256 239e8b06987b4d81a501ac92deeb25314c5cf38cbbc3aa323b6992f592a5f82c
-MD5 c44bfbc333d02953918eac2926ed9c4e chkrootkit-0.47.ebuild 1728
-RMD160 e931abd4f283ac23fd8863baf02ffbcc6afcc3eb chkrootkit-0.47.ebuild 1728
-SHA256 239e8b06987b4d81a501ac92deeb25314c5cf38cbbc3aa323b6992f592a5f82c chkrootkit-0.47.ebuild 1728
+EBUILD chkrootkit-0.47.ebuild 1732 RMD160 a01de8a106fd460668e11d2443dd54e7cef6b87a SHA1 ddd02869aa3b65ea592340e3bcd89de1b9c8c404 SHA256 0363cf50aab5fef3d6959fcb58b7ee21a01c18b708cae9e60e9a2abb2aa0a5e6
+MD5 29732101e050a88adb78bf77e4bd9c66 chkrootkit-0.47.ebuild 1732
+RMD160 a01de8a106fd460668e11d2443dd54e7cef6b87a chkrootkit-0.47.ebuild 1732
+SHA256 0363cf50aab5fef3d6959fcb58b7ee21a01c18b708cae9e60e9a2abb2aa0a5e6 chkrootkit-0.47.ebuild 1732
 MISC ChangeLog 11725 RMD160 c29c4f35b4116dfa9923e0c4834854edff337793 SHA1 87001bd0aa16f5719868f45110d4ba471d2f68a9 SHA256 65514d03718bd02ff7e80f1ee74b9eb4799710a7ff30980324bfae8ab6864f42
 MD5 a6c12037c3f39c34adaf3f4d964d2cd4 ChangeLog 11725
 RMD160 c29c4f35b4116dfa9923e0c4834854edff337793 ChangeLog 11725
@@ -64,3 +67,10 @@ SHA256 b6f8dd3847b6f7c98b7108c5b3d3bb56401ecc9c68b80bf608c687b220d8d31d files/di
 MD5 7c6df59645193d49550a2dbc660a240b files/digest-chkrootkit-0.47 512
 RMD160 c100cb06588c30db1430e3ac70d0dbd53b77d5a3 files/digest-chkrootkit-0.47 512
 SHA256 53f2899ca69e6e722e0f6e1fd1945f3082d0bbff9bb8ac03314eb0c9f0ce1c04 files/digest-chkrootkit-0.47 512
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGft7mp/wUKkr7RBoRAlhfAKC+7QZHXCzTObSv2NshMC3yt3M6TQCgz2TP
+yFu8HDO3GAj92VxH0m7ul8E=
+=8vUe
+-----END PGP SIGNATURE-----
