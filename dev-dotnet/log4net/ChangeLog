@@ -1,0 +1,13 @@
+# ChangeLog for dev-dotnet/log4net
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/ChangeLog,v 1.1 2007/06/24 20:40:19 jurek Exp $
+
+*log4net-1.2.10 (24 Jun 2007)
+
+  24 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> +files/log4net-1.2.10.pc,
+  +metadata.xml, +log4net-1.2.10.ebuild:
+  Initial version (fixing bug #63395). Credit goes to Tim Rädisch
+  <tim.raedisch@udo.edu>, Travis Hansen <travisghansen@yahoo.com> and Toffanin
+  [WiredTEK] <equilibrium@gechi.it> for providing the ebuilds slightly modified
+  by yours truly
+
