@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX desktop_entries/screensaver-properties.desktop 1000 RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 SHA1 f55ab9f6430ee339edc6aab428bc277d1b84e03d SHA256 b2a5d44a6a6463beab7cb1d3b9d9f5613c765b48ce319232517b6097afad1fbd
 MD5 51377e1938cf119bd11972b3c30c0a25 files/desktop_entries/screensaver-properties.desktop 1000
 RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 files/desktop_entries/screensaver-properties.desktop 1000
@@ -9,14 +6,6 @@ AUX xscreensaver-5.01-gentoo.patch 6361 RMD160 39a88128072ce5a16e14ef92ceb8a5b10
 MD5 ace9e196f6ff547af4d792225ad50597 files/xscreensaver-5.01-gentoo.patch 6361
 RMD160 39a88128072ce5a16e14ef92ceb8a5b106e92eef files/xscreensaver-5.01-gentoo.patch 6361
 SHA256 f8398a05d1b17a35a4247e2c24ea36d90b63f0772e2bcacc3482879c15073fe2 files/xscreensaver-5.01-gentoo.patch 6361
-AUX xscreensaver-5.01-hypertorus.xml.patch 681 RMD160 7b45181f7bc68f4545cdf60dbe2941eefab3353c SHA1 93b851f4097dc9a3efabf433dc711bf61ada95b0 SHA256 86dbb79f434281f83c95fd701540fa50098af60973ed1346fdc4df7578133bc9
-MD5 56c73f13853fa3f6d23b2404622fc5c7 files/xscreensaver-5.01-hypertorus.xml.patch 681
-RMD160 7b45181f7bc68f4545cdf60dbe2941eefab3353c files/xscreensaver-5.01-hypertorus.xml.patch 681
-SHA256 86dbb79f434281f83c95fd701540fa50098af60973ed1346fdc4df7578133bc9 files/xscreensaver-5.01-hypertorus.xml.patch 681
-AUX xscreensaver-5.01-nsfw.patch 6673 RMD160 511aa5ce86beca16896e6657fe07f3d54519c9ad SHA1 eb2465eb92bc8ad696cb6413cfd0d8c211ad1df6 SHA256 74d5ed26063ba56af8a912ddd19bed2ebf65d45f39a4a7b9b742d6e6b775f91d
-MD5 ea86cf0c30999d0d79519d2b3573b2ff files/xscreensaver-5.01-nsfw.patch 6673
-RMD160 511aa5ce86beca16896e6657fe07f3d54519c9ad files/xscreensaver-5.01-nsfw.patch 6673
-SHA256 74d5ed26063ba56af8a912ddd19bed2ebf65d45f39a4a7b9b742d6e6b775f91d files/xscreensaver-5.01-nsfw.patch 6673
 AUX xscreensaver-5.02-gdmflexiserver.patch 502 RMD160 0464f2947b45a35fa5637b2a2a9844643ee0abd5 SHA1 d9816a534afdc7aaf29ea85ec5ccfcf25e90fafb SHA256 be09476349915072b2ebf6343aff9557b556a90bcb599b63e1f90ce1a85c58ae
 MD5 bd96031a45071588407c6a224ba35fd1 files/xscreensaver-5.02-gdmflexiserver.patch 502
 RMD160 0464f2947b45a35fa5637b2a2a9844643ee0abd5 files/xscreensaver-5.02-gdmflexiserver.patch 502
@@ -33,12 +22,7 @@ AUX xscreensaver-5.02-pam.patch 358 RMD160 94fe95bd7c37afd5917cff9e313cbbf90e553
 MD5 77f3bc0683305f7f2312b5b64d36d4f7 files/xscreensaver-5.02-pam.patch 358
 RMD160 94fe95bd7c37afd5917cff9e313cbbf90e553efb files/xscreensaver-5.02-pam.patch 358
 SHA256 2bd73cdea88eed6fa2ee31de2a9eaf76435a0110ac3c12bdb0062e74cca4c958 files/xscreensaver-5.02-pam.patch 358
-DIST xscreensaver-5.01.tar.gz 5270954 RMD160 f301d9091f9f6e6cc05360c0d453dc4f6b2b489b SHA1 c371241c54f4c4cc2dd670852e39f212da3ca991 SHA256 3e34657a9180c3355a2bc81cec993bf8417daf6f8968d93bcb26751db9c9b0cf
 DIST xscreensaver-5.02.tar.gz 5371759 RMD160 b70fcfb0d4958134823a9fd7a288297c53fef270 SHA1 3e02f516efc25755f1a89f5af3983423f639f82b SHA256 0cb7e7653196701c31c2ee66f276f467bd8a9889a71c378aedc3b1fa2b8e879d
-EBUILD xscreensaver-5.01-r2.ebuild 4795 RMD160 eba906ba1899b08a68f853120a86f48df0cce921 SHA1 140439c49b713f47a5af3ddaa182356c7d910cc1 SHA256 326dde6bb3df4672f82cce43dafe7bafcf74b3abe76ced06ab7b84f5bce79f53
-MD5 0c4b5906c3e34accbd9aa89563932cce xscreensaver-5.01-r2.ebuild 4795
-RMD160 eba906ba1899b08a68f853120a86f48df0cce921 xscreensaver-5.01-r2.ebuild 4795
-SHA256 326dde6bb3df4672f82cce43dafe7bafcf74b3abe76ced06ab7b84f5bce79f53 xscreensaver-5.01-r2.ebuild 4795
 EBUILD xscreensaver-5.02-r1.ebuild 4572 RMD160 39b2de5bb79b060353ac12399c6a2219b15da9df SHA1 f3fc65dfb47dd50273f00e96403e793f8ed2488f SHA256 961900e8a5eaeff16c54014a5788ffd6db1043c0e665d8da9a2de562611654c1
 MD5 63d019e2a96b0f5e2d599ea821baf36c xscreensaver-5.02-r1.ebuild 4572
 RMD160 39b2de5bb79b060353ac12399c6a2219b15da9df xscreensaver-5.02-r1.ebuild 4572
@@ -59,9 +43,6 @@ MISC metadata.xml 387 RMD160 c34d8cf1f88cf45e7d0b6503f403ab8b8db11b20 SHA1 debca
 MD5 44efda022b0c02da6c8b2096905feae9 metadata.xml 387
 RMD160 c34d8cf1f88cf45e7d0b6503f403ab8b8db11b20 metadata.xml 387
 SHA256 5ae2b87a5da10d0ec7099d2f48602c4d9c09e0247c0ff85856cf4b944d761360 metadata.xml 387
-MD5 89fc92ae4e5d4497f70455ee093619f0 files/digest-xscreensaver-5.01-r2 256
-RMD160 53c251e5b5844a380105b5fdb5a61bab05723fa2 files/digest-xscreensaver-5.01-r2 256
-SHA256 373fdb9ab0176f3509fbeeffdb25e3b2266e496475024636029574913943f921 files/digest-xscreensaver-5.01-r2 256
 MD5 36502656b074298bd4f82303278ce293 files/digest-xscreensaver-5.02 256
 RMD160 91196636c0d193376f6ce7a21720ae4385d60e64 files/digest-xscreensaver-5.02 256
 SHA256 2fe607acbd85f0d6d4fcad4d3f7339d9635beb16204735d3592886159383e584 files/digest-xscreensaver-5.02 256
@@ -71,10 +52,3 @@ SHA256 2fe607acbd85f0d6d4fcad4d3f7339d9635beb16204735d3592886159383e584 files/di
 MD5 36502656b074298bd4f82303278ce293 files/digest-xscreensaver-5.02-r2 256
 RMD160 91196636c0d193376f6ce7a21720ae4385d60e64 files/digest-xscreensaver-5.02-r2 256
 SHA256 2fe607acbd85f0d6d4fcad4d3f7339d9635beb16204735d3592886159383e584 files/digest-xscreensaver-5.02-r2 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGeyPp8bi6rjpTunYRAufwAJ0UAq9hV6iWBQxjDA+inM1CHMIMTgCgjEmf
-6LRs2wdFIshNNVGUWnHPIas=
-=oKC5
------END PGP SIGNATURE-----
