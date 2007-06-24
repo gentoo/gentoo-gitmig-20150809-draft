@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.9.1.ebuild,v 1.1 2006/03/25 22:32:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.9.1.ebuild,v 1.2 2007/06/24 18:03:06 peper Exp $
 
 inherit gnustep
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnustep.org/experience/StepTalk.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P/steptalk/StepTalk}.tar.gz"
 
 # it doesn' compile!  ~ppc ~x86
-KEYWORDS="-*"
+KEYWORDS=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 
