@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.4-r2.ebuild,v 1.3 2007/03/18 23:28:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.4-r2.ebuild,v 1.4 2007/06/24 21:58:58 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,7 +14,7 @@ HOMEPAGE="http://modplug-xmms.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc: 1.0 - Bus Error on play
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh -sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 sh -sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
