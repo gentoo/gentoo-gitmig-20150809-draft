@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ml-pnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ChangeLog,v 1.32 2007/04/14 12:10:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ChangeLog,v 1.33 2007/06/24 00:30:31 jurek Exp $
+
+  24 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> ml-pnet-0.7.4.ebuild:
+  Replacing absolute paths with relative paths in Makefiles (fixing bug #167442)
 
   14 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -ml-pnet-0.6.10.ebuild,
   -ml-pnet-0.7.0.ebuild:

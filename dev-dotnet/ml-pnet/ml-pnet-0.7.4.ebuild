@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.7.4.ebuild,v 1.7 2007/04/18 13:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.7.4.ebuild,v 1.8 2007/06/24 00:30:31 jurek Exp $
 
 DESCRIPTION="Mono C# libraries for Portable.NET"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -18,6 +18,10 @@ src_compile() {
 	elog "Using profile: ${lib_profile}"
 
 	econf --with-profile=${lib_profile} || die "econf failed"
+
+	# Prevents build failure due to length of argument list (bug #167442)
+	find ${S} -name Makefile | xargs sed -i -e "s#${WORKDIR}#\${top_srcdir}/..#"
+
 	emake || die "emake failed"
 }
 
