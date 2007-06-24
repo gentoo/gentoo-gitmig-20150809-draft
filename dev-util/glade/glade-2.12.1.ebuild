@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.7 2007/03/12 18:55:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.8 2007/06/24 09:15:27 eva Exp $
 
 inherit gnome2
 
@@ -21,8 +21,8 @@ RDEPEND=">=dev-libs/libxml2-2.4.1
 		>=gnome-base/libbonoboui-2
 		accessibility? ( gnome-extra/libgail-gnome ) )"
 #	gnomedb? (
-#		>=gnome-extra/libgnomedb-1.3
-#		>=gnome-extra/libgda-1.3 )"
+#		=gnome-extra/libgnomedb-1*
+#		=gnome-extra/libgda-1* )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9

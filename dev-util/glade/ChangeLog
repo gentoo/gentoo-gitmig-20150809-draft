@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.71 2007/06/01 16:51:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.72 2007/06/24 09:15:27 eva Exp $
+
+  24 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org> glade-2.6.8.ebuild,
+  glade-2.12.1.ebuild:
+  Preparing for lib{gda,gnomedb} 3.0, fixing dependencies (bug #172106)
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> glade-3.2.0.ebuild:
   Stable on ppc wrt bug 180132
