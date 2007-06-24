@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.19.ebuild,v 1.2 2007/04/01 20:58:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.19.ebuild,v 1.3 2007/06/24 22:09:13 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rpcurnow.force9.co.uk/mairix/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="~amd64 arm ~ppc s390 sh ~sparc x86"
 
 IUSE="zlib bzip2"
 
