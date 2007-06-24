@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.19 2007/05/20 08:47:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.20 2007/06/24 20:35:14 dev-zero Exp $
+
+  24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/astng-0.16.0-revert-test.patch, -astng-0.16.0.ebuild,
+  -astng-0.16.1.ebuild, -astng-0.16.3.ebuild, astng-0.17.0.ebuild:
+  Fixed $ROOT abuse (bug #167271), cleanup, dropped old versions
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org> astng-0.17.0.ebuild:
   stable amd64, bug 176201
