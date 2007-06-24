@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.1 2007/01/19 11:26:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.2 2007/06/24 15:55:33 matsuu Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -172,8 +172,8 @@ pkg_postrm() {
 
 	has_multilib_profile && chost=${CHOST}
 	use gtk && gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/${chost}/gtk.immodules
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 
 }
 
-# $Id: uim-svn-1.5.ebuild,v 1.1 2007/01/19 11:26:03 hattya Exp $
+# $Id: uim-svn-1.5.ebuild,v 1.2 2007/06/24 15:55:33 matsuu Exp $

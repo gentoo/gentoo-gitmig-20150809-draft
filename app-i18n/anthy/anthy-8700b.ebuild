@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-8700b.ebuild,v 1.5 2007/05/06 04:49:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-8700b.ebuild,v 1.6 2007/06/24 15:50:07 matsuu Exp $
 
 inherit elisp-common eutils
 
@@ -66,6 +66,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 
 }

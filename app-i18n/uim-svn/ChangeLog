@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.27 2007/01/19 11:26:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.28 2007/06/24 15:55:33 matsuu Exp $
+
+  24 Jun 2007; MATSUU Takuto <matsuu@gentoo.org> uim-svn-1.5.ebuild:
+  Fixed to use the right condition for calling elisp-site-regen, bug #182639.
 
 *uim-svn-1.5 (19 Jan 2007)
 
