@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.9 2007/05/19 22:29:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.10 2007/06/24 22:27:17 philantrop Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -51,6 +51,7 @@ src_unpack() {
 src_compile() {
 	elibtoolize
 
+	filter-ldflags -Wl,--as-needed
 	append-ldflags $(bindnow-flags)
 
 	econf \
