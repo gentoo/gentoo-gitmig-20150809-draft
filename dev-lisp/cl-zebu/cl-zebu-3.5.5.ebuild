@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zebu/cl-zebu-3.5.5.ebuild,v 1.1 2004/11/08 02:55:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zebu/cl-zebu-3.5.5.ebuild,v 1.2 2007/06/24 17:59:29 peper Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cliki.net/Zebu"
 SRC_URI="http://constantly.at/lisp/zebu-${PV}-asdf.tgz"
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="virtual/commonlisp
