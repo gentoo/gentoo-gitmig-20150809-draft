@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-0.7.4.ebuild,v 1.2 2007/03/04 10:02:04 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-0.7.4.ebuild,v 1.3 2007/06/24 19:15:11 armin76 Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pymssql/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-db/freetds-0.63"

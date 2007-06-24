@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.7.ebuild,v 1.4 2007/06/15 18:38:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.7.ebuild,v 1.5 2007/06/24 19:16:58 armin76 Exp $
 
 NEED_PYTHON=2.4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 IUSE="doc examples firebird mssql mysql postgres sqlite test"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 # note: if you use psycopg-1, then you need egenix-mx-base
 RDEPEND="firebird? ( dev-python/kinterbasdb )
