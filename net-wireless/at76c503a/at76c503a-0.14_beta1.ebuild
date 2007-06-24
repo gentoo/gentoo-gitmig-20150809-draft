@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.4 2007/05/09 19:22:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.5 2007/06/24 09:52:12 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -31,6 +31,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/at76c503a-2.6.20-init_work.patch
 	epatch ${FILESDIR}/at76c503a-2.6.20.patch
 }
 

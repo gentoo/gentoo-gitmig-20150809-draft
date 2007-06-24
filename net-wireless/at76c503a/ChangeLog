@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.15 2007/05/09 19:22:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.16 2007/06/24 09:52:12 genstef Exp $
+
+  24 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/at76c503a-2.6.20-init_work.patch, at76c503a-0.14_beta1.ebuild:
+  Add init work patch thanks to Ryan Hendrickson <rhendric@mit.edu> in bug 182866
 
   09 May 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/at76c503a-2.6.20.patch, at76c503a-0.14_beta1.ebuild:
