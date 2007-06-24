@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.2.ebuild,v 1.2 2006/12/03 23:19:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.2.ebuild,v 1.3 2007/06/24 17:24:05 wltjr Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kinterbasdb/${P}.src.tar.gz"
 
 
 IUSE=""
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 -sparc ~x86"
 LICENSE="kinterbasdb"
 SLOT="0"
 
