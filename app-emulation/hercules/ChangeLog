@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/hercules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.18 2007/06/24 21:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.19 2007/06/24 21:37:55 angelos Exp $
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org> hercules-3.04.ebuild:
+  Stable on amd64 wrt bug 183080
 
 *hercules-3.05 (24 Jun 2007)
 
