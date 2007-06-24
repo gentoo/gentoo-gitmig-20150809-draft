@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r1.ebuild,v 1.3 2007/06/13 17:23:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r1.ebuild,v 1.4 2007/06/24 09:08:38 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -10,7 +10,7 @@ inherit eutils autotools flag-o-matic multilib
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20070418.tar.gz
+	mirror://gentoo/${P}-patches-20070624.tar.gz
 	http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 
 LICENSE="GPL-2"
@@ -56,6 +56,15 @@ pkg_setup() {
 	if use virtual-users && use user-homedirs ; then
 		eerror "If the users are virtual, then they probably should not have home directories."
 		die "Incompatible USE flag selection"
+	fi
+
+	if ! ( use mysql || use postgres || use sqlite || use sqlite3 ) ; then
+		echo
+		ewarn "You didn't selected any database backend, therefore hash backend will be used."
+		ewarn "Be advised that hash backend has some issues (see http://bugs.gentoo.org/show_bug.cgi?id=179400),"
+		ewarn "Hit Ctrl-C now and select one database backend through the corespondent USE flag."
+		echo
+		ebeep
 	fi
 
 	create_dspam_usergroup

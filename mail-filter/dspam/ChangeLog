@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.90 2007/06/13 17:23:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.91 2007/06/24 09:08:38 mrness Exp $
+
+  24 Jun 2007; Alin Năstac <mrness@gentoo.org> -dspam-3.6.8-r3.ebuild,
+  dspam-3.8.0-r1.ebuild:
+  Remove obsolete version. Fix QA notice and add warning in pkg_setup about
+  hash backend (#179400).
 
   13 Jun 2007; Joshua Jackson <tsunam@gentoo.org> dspam-3.8.0-r1.ebuild:
   Stable x86
