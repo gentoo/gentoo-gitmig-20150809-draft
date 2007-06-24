@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-ffnetdev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.9 2007/06/08 10:02:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.10 2007/06/24 12:53:55 zzam Exp $
+
+  24 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-ffnetdev-0.1.0-uint64.diff, vdr-ffnetdev-0.1.0.ebuild:
+  Added uint64 patch.
 
   08 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-ffnetdev-0.1.0.ebuild:
