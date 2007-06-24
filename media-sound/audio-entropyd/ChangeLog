@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.14 2007/02/03 18:38:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.15 2007/06/24 20:57:50 angelos Exp $
+
+*audio-entropyd-1.0.0 (24 Jun 2007)
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  files/audio-entropyd.init, audio-entropyd-0.0.6.ebuild,
+  +audio-entropyd-1.0.0.ebuild:
+  Taking over maintainership
+  Version bump to 1.0.0, thanks Jakub Moc
+  Stable on amd64
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

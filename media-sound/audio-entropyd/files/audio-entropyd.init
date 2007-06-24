@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/files/audio-entropyd.init,v 1.4 2004/07/14 22:44:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/files/audio-entropyd.init,v 1.5 2007/06/24 20:57:50 angelos Exp $
 
 depend() {
 	need modules
@@ -15,7 +15,8 @@ start() {
 	[ -n "$SAMPLERATE" ] && params="$params -N $SAMPLERATE"
 
 	ebegin "Starting audio entropy gathering daemon"
-	start-stop-daemon --start --quiet --exec /usr/sbin/audio-entropyd -- ${params}
+	start-stop-daemon --start --quiet --pidfile /var/run/audio-entropyd.pid \
+		--exec /usr/sbin/audio-entropyd -- ${params}
 	eend ${?}
 }
 
@@ -24,4 +25,3 @@ stop() {
 	start-stop-daemon --stop --quiet --pidfile /var/run/audio-entropyd.pid
 	eend ${?}
 }
-

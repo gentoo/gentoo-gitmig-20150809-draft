@@ -1,13 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-0.0.6.ebuild,v 1.13 2007/06/24 20:57:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-1.0.0.ebuild,v 1.1 2007/06/24 20:57:50 angelos Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Audio-entropyd generates entropy-data for the /dev/random device."
 HOMEPAGE="http://www.vanheusden.com/aed/"
 SRC_URI="http://www.vanheusden.com/aed/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="selinux"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
@@ -24,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
