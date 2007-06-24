@@ -1,0 +1,47 @@
+Index: osdpip-0.0.8/osd.c
+===================================================================
+--- osdpip-0.0.8.orig/osd.c
++++ osdpip-0.0.8/osd.c
+@@ -71,7 +71,11 @@ void cOsdPipObject::SwapChannels(void)
+ 	if (chan) {
+ 		Stop();
+ 		Channels.SwitchTo(m_Channel->Number());
++#if VDRVERSNUM >= 10500
++		cDevice *dev = cDevice::GetDevice(chan, 1, false);
++#else
+ 		cDevice *dev = cDevice::GetDevice(chan, 1);
++#endif
+ 		if (dev) {
+ 			DELETENULL(m_Receiver);
+ 			m_Channel = chan;
+Index: osdpip-0.0.8/osdpip.c
+===================================================================
+--- osdpip-0.0.8.orig/osdpip.c
++++ osdpip-0.0.8/osdpip.c
+@@ -89,7 +89,11 @@ cOsdObject *cPluginOsdpip::MainMenuActio
+ 	chan = cDevice::CurrentChannel() != 0 
+ 		? Channels.GetByNumber(cDevice::CurrentChannel()) : NULL;
+ 	if (chan != NULL) {
++#if VDRVERSNUM >= 10500
++		dev = cDevice::GetDevice(chan, 1, false);
++#else
+ 		dev = cDevice::GetDevice(chan, 1); 
++#endif
+ 		if (dev)
+ 			return new cOsdPipObject(dev, chan);
+ 	}
+Index: osdpip-0.0.8/receiver.c
+===================================================================
+--- osdpip-0.0.8.orig/receiver.c
++++ osdpip-0.0.8/receiver.c
+@@ -14,7 +14,9 @@
+ 
+ cOsdPipReceiver::cOsdPipReceiver(const cChannel *Channel,
+ 	cRingBufferFrame *ESBuffer):
+-#if VDRVERSNUM >= 10319
++#if VDRVERSNUM >= 10500
++	cReceiver(Channel->GetChannelID(), 0, Channel->Vpid())
++#elif VDRVERSNUM >= 10319
+ 	cReceiver(Channel->Ca(), 0, Channel->Vpid())
+ #else
+ 	cReceiver(Channel->Ca(), 0, 1, Channel->Vpid())
