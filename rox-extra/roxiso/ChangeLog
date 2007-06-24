@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/roxiso
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/ChangeLog,v 1.10 2007/01/31 14:05:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/ChangeLog,v 1.11 2007/06/24 17:33:16 lack Exp $
+
+  24 Jun 2007; Jim Ramsay <lack@gentoo.org> roxiso-061007-r1.ebuild:
+  Adding ~amd64 keyword
 
 *roxiso-061007-r1 (31 Jan 2007)
 
