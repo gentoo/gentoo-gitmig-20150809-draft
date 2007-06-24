@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mel-base/cl-mel-base-0.5.11.ebuild,v 1.3 2007/02/03 09:12:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mel-base/cl-mel-base-0.5.11.ebuild,v 1.4 2007/06/24 17:38:19 peper Exp $
 
 inherit common-lisp eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://codeartist.org/mel/"
 SRC_URI="http://dataheaven.dnsalias.net/asdf-install/mel-base_${MY_PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller
