@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX bittorrent-tracker.confd 565 RMD160 9a21fec4c8b654ed71ac0a1425943622cd1b525f SHA1 031d21178924dee7370fa9e5965d1d017001626d SHA256 c994ddd1670a274289043380db70f2f08829cf7c7747be9805ba31dce0e2bc86
 MD5 81c2d75d74ef8b0914346e4483164d68 files/bittorrent-tracker.confd 565
 RMD160 9a21fec4c8b654ed71ac0a1425943622cd1b525f files/bittorrent-tracker.confd 565
@@ -17,10 +20,10 @@ EBUILD bittorrent-5.0.5.ebuild 2420 RMD160 bbfe35a9a412e69e7a27a069c46a35e6a8ea2
 MD5 710493aa0e9b1410a8189cb916f1ee80 bittorrent-5.0.5.ebuild 2420
 RMD160 bbfe35a9a412e69e7a27a069c46a35e6a8ea22de bittorrent-5.0.5.ebuild 2420
 SHA256 44d72ecbea76b646695bd8c31ae818a9f0f69cea2c3f5037d1c456c5e5fca23a bittorrent-5.0.5.ebuild 2420
-EBUILD bittorrent-5.0.7.ebuild 2440 RMD160 c9a3c5e9ebd2bf8de42995cdfdf970db959ed4c6 SHA1 9a321a15fc892ff350d05cad755f32a175035efc SHA256 366334c6f4bc4d8331f5c1dbc3a3dfa338f01647cdd269b11dd514793ae3c6d3
-MD5 ffd219d85d605d585d061fd08fcbbfac bittorrent-5.0.7.ebuild 2440
-RMD160 c9a3c5e9ebd2bf8de42995cdfdf970db959ed4c6 bittorrent-5.0.7.ebuild 2440
-SHA256 366334c6f4bc4d8331f5c1dbc3a3dfa338f01647cdd269b11dd514793ae3c6d3 bittorrent-5.0.7.ebuild 2440
+EBUILD bittorrent-5.0.7.ebuild 2436 RMD160 4c25220f82c4793d9359db6e5a4ccb4cdef79913 SHA1 ea19bedc82080f5ea868d6426c5b63e38ccd2ab8 SHA256 46edf14e47438fae37a284c6b44148d0ef7a8c6832aa2142df49ecb37eecc8a2
+MD5 2071ef9faf48c7008ffeabe1cdd414d1 bittorrent-5.0.7.ebuild 2436
+RMD160 4c25220f82c4793d9359db6e5a4ccb4cdef79913 bittorrent-5.0.7.ebuild 2436
+SHA256 46edf14e47438fae37a284c6b44148d0ef7a8c6832aa2142df49ecb37eecc8a2 bittorrent-5.0.7.ebuild 2436
 MISC ChangeLog 16928 RMD160 86c6ff04ab8e0a66a0974d7dcd2e7fae33af9bec SHA1 9e6aac9c036aff57e1c73db94cf8cbc63271e551 SHA256 db0462b2db4959cc0033d417512fcd6e147b6401c6e3f09da6503ebe81c0a93e
 MD5 8c4edeecf0ae69a78543cd3df4e9eba5 ChangeLog 16928
 RMD160 86c6ff04ab8e0a66a0974d7dcd2e7fae33af9bec ChangeLog 16928
@@ -38,3 +41,10 @@ SHA256 0d7919211ecd6b198d5e034be8e89087b93bf37dcf31ce8427df91ac768a3af8 files/di
 MD5 0a29b038655994dfa6c7a4529a4ba0f0 files/digest-bittorrent-5.0.7 253
 RMD160 bf286df7872c2f7d75e1cfb34c8b2710f204c2d6 files/digest-bittorrent-5.0.7 253
 SHA256 2dae95c42b06ef49009d22d29b08ed7d8480192f084d6521167113734b2b0224 files/digest-bittorrent-5.0.7 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGfuy9p/wUKkr7RBoRAp9nAJ9KmSzZRBn7uRrX1BUbmJlNBPCa4wCeOwRe
+oitkI3LbqgoNZjP06YtYnt0=
+=Qmgk
+-----END PGP SIGNATURE-----
