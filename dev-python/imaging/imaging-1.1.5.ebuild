@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.13 2007/02/05 20:15:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.14 2007/06/24 20:23:38 dev-zero Exp $
 
 inherit distutils eutils multilib
 
@@ -54,12 +54,12 @@ src_install() {
 
 	# install headers required by media-gfx/sketch
 	distutils_python_version
-	insinto "${ROOT}/usr/include/python${PYVER}"
+	insinto "/usr/include/python${PYVER}"
 	doins libImaging/Imaging.h
 	doins libImaging/ImPlatform.h
 
 	if use doc ; then
-		insinto "${ROOT}/usr/share/doc/${PF}"
+		insinto "/usr/share/doc/${PF}"
 		doins -r Docs
 	fi
 }
