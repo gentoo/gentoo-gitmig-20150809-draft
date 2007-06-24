@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.90 2007/06/16 09:53:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.91 2007/06/24 19:23:36 dev-zero Exp $
+
+  24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> PyQt-3.14.1-r1.ebuild,
+  PyQt-3.14.1-r2.ebuild, PyQt-3.17.ebuild, PyQt-3.17.2.ebuild:
+  Fixed $ROOT abuse (bug #167271)
 
   16 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> PyQt-3.17.2.ebuild:
   Add ~x86-fbsd keyword.

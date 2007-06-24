@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.ebuild,v 1.6 2007/06/01 13:59:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.ebuild,v 1.7 2007/06/24 19:23:36 dev-zero Exp $
 
 inherit distutils
 
@@ -34,11 +34,11 @@ src_compile() {
 	distutils_python_version
 	addpredict ${QTDIR}/etc/settings
 
-	local myconf="-d ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages \
-			-b ${ROOT}/usr/bin \
-			-v ${ROOT}/usr/share/sip \
-			-n ${ROOT}/usr/include \
-			-o ${ROOT}/usr/$(get_libdir) \
+	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages \
+			-b /usr/bin \
+			-v /usr/share/sip \
+			-n /usr/include \
+			-o /usr/$(get_libdir) \
 			-w -y qt-mt"
 	use debug && myconf="${myconf} -u"
 
