@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.63.ebuild,v 1.2 2007/06/21 18:00:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.63.ebuild,v 1.3 2007/06/24 21:29:32 vapier Exp $
 
 inherit perl-module eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/P/PA/PAJAS/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 s390 sh sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-perl/XML-SAX-0.12
