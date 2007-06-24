@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.2.1.ebuild,v 1.9 2007/06/15 20:10:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.2.1.ebuild,v 1.10 2007/06/24 20:55:26 dev-zero Exp $
 
 inherit distutils
 
@@ -26,8 +26,8 @@ src_unpack() {
 
 	# Note: we can't add /usr/lib and /usr/lib/sasl2 to library_dirs due to a bug in py2.4
 	sed -e "s:^library_dirs =.*:library_dirs =:" \
-		-e "s:^include_dirs =.*:include_dirs = ${ROOT}usr/include:" \
-		-e "s:\(extra_compile_args =\).*:\1\nextra_link_args = -Wl,-rpath=${ROOT}usr/lib -Wl,-rpath=${ROOT}usr/lib/sasl2:" \
+		-e "s:^include_dirs =.*:include_dirs = /usr/include:" \
+		-e "s:\(extra_compile_args =\).*:\1\nextra_link_args = -Wl,-rpath=/usr/lib -Wl,-rpath=/usr/lib/sasl2:" \
 		-i setup.cfg || die "error fixing setup.cfg"
 
 	local mylibs="ldap"
