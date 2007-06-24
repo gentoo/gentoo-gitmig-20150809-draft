@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.36 2007/06/06 18:13:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.37 2007/06/24 21:31:11 angelos Exp $
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org> yafray-0.0.9.ebuild:
+  Stable on amd64 wrt bug 160021
 
   06 Jun 2007; Luca Barbato <lu_zero@gentoo.org> yafray-0.0.9.ebuild:
   fix openexr dep
