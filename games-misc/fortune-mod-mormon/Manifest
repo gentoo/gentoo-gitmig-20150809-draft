@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST fortune-mod-mormon-1.1.0.tar.bz2 4750745 RMD160 a58c4643e661de7e6d1285522e58633204a725f9 SHA1 e42c7ff3d974efc0d5c04c90d0dcc0634c63d48c SHA256 a8e13023fb3f9b7097f0a72d6dcb8b0b553a20b8062f069ef4fc291fff597089
-EBUILD fortune-mod-mormon-1.1.0.ebuild 1102 RMD160 2b4a203350a196f9ecaac759d1fbea5a3873a74e SHA1 4932b35db7b0bcb9ad1ee291a4f2ec2dab19953f SHA256 7409718ffabd662b065c1f7529c2d4f800f2785f4b529594f6acf3a60d99e54f
-MD5 beea2f68576da6b14bea537cc223d622 fortune-mod-mormon-1.1.0.ebuild 1102
-RMD160 2b4a203350a196f9ecaac759d1fbea5a3873a74e fortune-mod-mormon-1.1.0.ebuild 1102
-SHA256 7409718ffabd662b065c1f7529c2d4f800f2785f4b529594f6acf3a60d99e54f fortune-mod-mormon-1.1.0.ebuild 1102
+EBUILD fortune-mod-mormon-1.1.0.ebuild 832 RMD160 b7487f3f654caba06db261c805bc6a448df4de9e SHA1 9c7bf6bbcb3a6541cb1fe3e7cdd74631ff6a0816 SHA256 ea4fe37a300d06cecce463bb2ff5c97e94191833c1d688ce4cac93d6c44de66f
+MD5 35245763c28af77fc7af335912827dd1 fortune-mod-mormon-1.1.0.ebuild 832
+RMD160 b7487f3f654caba06db261c805bc6a448df4de9e fortune-mod-mormon-1.1.0.ebuild 832
+SHA256 ea4fe37a300d06cecce463bb2ff5c97e94191833c1d688ce4cac93d6c44de66f fortune-mod-mormon-1.1.0.ebuild 832
 MISC ChangeLog 700 RMD160 d27e3fb262ff92b5eee5e6e4a9eb711141739987 SHA1 1f0d92b819dce5a4dd4b4e63ba583de803dfba6b SHA256 94c60b48d9f589d800e4d9575a3edea18001ef7b85f6a33563c10c02c5428aec
 MD5 2aa49af68b42f64f13ba0a827b82d11d ChangeLog 700
 RMD160 d27e3fb262ff92b5eee5e6e4a9eb711141739987 ChangeLog 700
@@ -14,3 +17,10 @@ SHA256 26e657d93fa622a2198f7be0c5095de978630edb3410bc799fdba90e212a0605 metadata
 MD5 cd373462fac3dc4e92a2145765c34e08 files/digest-fortune-mod-mormon-1.1.0 280
 RMD160 6b13e22277cb7b6b756bed3fb279ed6ae40ff980 files/digest-fortune-mod-mormon-1.1.0 280
 SHA256 496d2016d6e2af3641428df463a6a99e201a197dec031eb22d5cd164d8aeea9f files/digest-fortune-mod-mormon-1.1.0 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGfuZAp/wUKkr7RBoRAt0SAJ0Rb5ml/Ju+k15/O2uITzbrxydfPQCcCx/z
+a14jmoTz6TKwhPiR1gNNP9s=
+=Jwku
+-----END PGP SIGNATURE-----
