@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.111 2007/04/18 15:41:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.112 2007/06/24 22:46:57 peper Exp $
+
+  24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> usermin-1.220.ebuild,
+  usermin-1.230.ebuild, usermin-1.270.ebuild:
+  (QA) Fix ${ROOT} abuse. bug #167240.
 
   18 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   usermin-1.270.ebuild:

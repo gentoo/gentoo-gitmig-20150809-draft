@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.220.ebuild,v 1.6 2007/01/24 15:07:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.220.ebuild,v 1.7 2007/06/24 22:46:57 peper Exp $
 
 IUSE="ssl"
 
@@ -17,8 +17,8 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 DEPEND="dev-lang/perl"
 
 RDEPEND="${DEPEND}
-	 sys-process/lsof
-	 ssl? ( dev-perl/Net-SSLeay )"
+	sys-process/lsof
+	ssl? ( dev-perl/Net-SSLeay )"
 
 #	 pam? ( dev-perl/Authen-PAM )
 
@@ -54,7 +54,7 @@ src_install() {
 
 	config_dir=${D}/etc/usermin
 	var_dir=${D}/var/log/usermin
-	perl=${ROOT}/usr/bin/perl
+	perl=/usr/bin/perl
 	autoos=1
 	port=20000
 	login=root
@@ -72,8 +72,8 @@ src_install() {
 	${D}/usr/libexec/usermin/setup.sh > ${T}/usermin-setup.out 2>&1 || die "Failed to create initial usermin configuration."
 
 	# Fixup the config files to use their real locations
-	sed -i -e "s:^pidfile=.*$:pidfile=${ROOT}/var/run/usermin.pid:" ${D}/etc/usermin/miniserv.conf
-	find ${D}/etc/usermin -type f | xargs sed -i -e "s:${D}:${ROOT}:g"
+	sed -i -e "s:^pidfile=.*$:pidfile=/var/run/usermin.pid:" ${D}/etc/usermin/miniserv.conf
+	find ${D}/etc/usermin -type f | xargs sed -i -e "s:${D}:/:g"
 
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/usermin
@@ -83,8 +83,4 @@ src_install() {
 pkg_postinst() {
 	elog "To make usermin start at boot time, run: 'rc-update add usermin default'."
 	elog "Point your web browser to http://localhost:20000 to use usermin."
-}
-
-pkg_prerm() {
-	${ROOT}/etc/init.d/usermin stop >& /dev/null
 }
