@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.1.ebuild,v 1.1 2007/06/17 15:59:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.1-r1.ebuild,v 1.1 2007/06/24 10:43:34 mrness Exp $
 
 inherit eutils autotools
 
@@ -11,10 +11,11 @@ SRC_URI="http://www.squidguard.org/Downloads/squidGuard-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="ldap"
 
 RDEPEND="net-proxy/squid
-	>=sys-libs/db-2"
+	>=sys-libs/db-2
+	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
@@ -25,14 +26,14 @@ src_unpack() {
 	unpack ${A} || die "unpack problem"
 
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-db4.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-tests.patch"
-	epatch "${FILESDIR}/${P}-makefile.patch"
 	eautoconf
 }
 
 src_compile() {
 	econf \
+		$(use_with ldap) \
 		--with-sg-config=/etc/squidGuard/squidGuard.conf \
 		--with-sg-logdir=/var/log/squidGuard \
 		|| die "configure has failed"
