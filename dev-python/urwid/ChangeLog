@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.22 2007/03/26 09:12:55 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.23 2007/06/24 19:11:17 lucass Exp $
+
+*urwid-0.9.8.1 (24 Jun 2007)
+
+  24 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/urwid-0.9.8-nosetuptools.diff, -urwid-0.9.8.ebuild,
+  +urwid-0.9.8.1.ebuild:
+  Version bump, added dep on setuptools. Dropped old version.
 
 *urwid-0.9.8 (26 Mar 2007)
 
