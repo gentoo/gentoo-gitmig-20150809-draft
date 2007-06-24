@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p5.ebuild,v 1.10 2007/04/28 17:02:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p5.ebuild,v 1.11 2007/06/24 23:48:03 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/a/apmd/${MY_P}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 arm ppc ppc64 x86"
 IUSE="X nls"
 
 RDEPEND=">=sys-apps/debianutils-1.16
