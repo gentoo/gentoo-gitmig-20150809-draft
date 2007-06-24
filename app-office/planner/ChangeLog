@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.26 2007/01/25 05:37:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.27 2007/06/24 09:12:55 eva Exp $
+
+  24 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org> planner-0.12.1.ebuild,
+  planner-0.13.ebuild, planner-0.14.ebuild:
+  Preparing for lib{gda,gnomedb} 3.0, fixing dependencies (bug #172106)
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> planner-0.12.1.ebuild:
   Replacing einfo with elog

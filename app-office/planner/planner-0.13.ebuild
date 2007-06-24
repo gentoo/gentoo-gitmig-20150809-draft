@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.13.ebuild,v 1.3 2006/10/27 14:52:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.13.ebuild,v 1.4 2007/06/24 09:12:55 eva Exp $
 
 inherit gnome2 fdo-mime
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.4
 	>=gnome-base/gconf-2.6
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/libxslt-1.1
-	libgda? ( >=gnome-extra/libgda-1.0 )
+	libgda? ( =gnome-extra/libgda-1* )
 	python? ( >=dev-python/pygtk-2.0.0-r1 )"
 # disable eds backend for now, its experimental
 #	eds? ( >=gnome-extra/evolution-data-server-1.1 )"
