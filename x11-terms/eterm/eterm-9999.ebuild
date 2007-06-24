@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.8 2007/01/19 04:36:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.9 2007/06/24 18:22:41 peper Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -18,7 +18,7 @@ SRC_URI=""
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE="escreen etwin minimal mmx sse2 unicode"
 
 DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM x11-proto/xextproto x11-proto/xproto ) virtual/x11 )
