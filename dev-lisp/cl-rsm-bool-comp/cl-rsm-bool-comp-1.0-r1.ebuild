@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-bool-comp/cl-rsm-bool-comp-1.0-r1.ebuild,v 1.5 2007/02/03 17:41:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-bool-comp/cl-rsm-bool-comp-1.0-r1.ebuild,v 1.6 2007/06/24 17:47:39 peper Exp $
 
 inherit common-lisp eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/cl-rsm-bool-comp_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 # Compilation problems on SBCL and runtime SEGV on CMUCL
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller
