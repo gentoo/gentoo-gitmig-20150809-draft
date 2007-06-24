@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.7 2007/05/01 01:47:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.8 2007/06/24 21:51:02 drac Exp $
 
 
 inherit linux-info toolchain-funcs eutils
@@ -50,11 +50,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
-	then
+	if [ "${ROOT}" = "/" ] ; then
 		# Update module dependency
-		/sbin/modules-update
-		depmod -a
+		[ -x /sbin/update-modules ] && /sbin/update-modules || /sbin/modules-update
 	fi
 	elog "If you have problems loading the module, please check the \"dmesg\" output."
 }

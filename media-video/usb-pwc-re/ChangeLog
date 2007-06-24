@@ -1,6 +1,10 @@
 # ChangeLog for media-video/usb-pwc-re
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.32 2007/05/01 01:47:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.33 2007/06/24 21:51:02 drac Exp $
+
+  24 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  usb-pwc-re-10.0.12_rc1.ebuild:
+  Apply patch from bug 174751 by Jakub Moc, thanks.
 
   01 May 2007; Marius Mauch <genone@gentoo.org>
   usb-pwc-re-10.0.12_rc1.ebuild, usb-pwc-re-20061023.042702-r1.ebuild:
