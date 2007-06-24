@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.34 2007/06/23 18:05:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.35 2007/06/24 20:19:51 ticho Exp $
+
+  24 Jun 2007; Andrej Kacian <ticho@gentoo.org> claws-mail-2.9.1.ebuild,
+  claws-mail-2.9.2.ebuild, claws-mail-2.10.0_rc1.ebuild:
+  Add a runtime dependency on app-crypt/pinentry as well. Bug #183069, by
+  Markus Rothe <corsair at gentoo.org>.
 
   23 Jun 2007; Marius Mauch <genone@gentoo.org> claws-mail-2.9.1.ebuild,
   claws-mail-2.9.2.ebuild, claws-mail-2.10.0_rc1.ebuild:
