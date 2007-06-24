@@ -1,16 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.2.ebuild,v 1.3 2007/05/30 11:51:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.2.ebuild,v 1.4 2007/06/24 20:11:22 dev-zero Exp $
 
 inherit distutils
 
-MY_P="PyQt-x11-gpl-${PV}"
-S="${WORKDIR}/${MY_P}"
+MY_P=PyQt-x11-gpl-${PV}
 
 DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit."
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt4/GPL/${MY_P}.tar.gz"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -21,6 +19,7 @@ RDEPEND="=x11-libs/qt-4*
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -34,24 +33,21 @@ src_compile() {
 	distutils_python_version
 	addpredict ${QTDIR}/etc/settings
 
-	local myconf="-d ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/PyQt4 \
-			-b ${ROOT}/usr/bin \
-			-v ${ROOT}/usr/share/sip" #\
-#			-n ${ROOT}/usr/include \
-#			-o ${ROOT}/usr/$(get_libdir) \
-#			-w -y qt-mt"
+	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages/PyQt4 \
+			-b /usr/bin \
+			-v /usr/share/sip"
 	use debug && myconf="${myconf} -u"
 
-	python configure.py ${myconf}
+	"${python}" configure.py ${myconf}
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} INSTALL_ROOT=${D} install || die "install failed"
-	dodoc ChangeLog LICENSE NEWS README THANKS
+	emake DESTDIR="${D}" INSTALL_ROOT="${D}" install || die "install failed"
+	dodoc ChangeLog NEWS README THANKS
 	use doc && dohtml -r doc/html/*
 	if use examples ; then
-		dodir /usr/share/doc/${PF}/examples
-		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
+		insinto /usr/share/doc/${PF}
+		doins -r examples
 	fi
 }
