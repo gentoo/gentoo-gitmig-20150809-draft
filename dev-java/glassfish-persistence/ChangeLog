@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-persistence
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/ChangeLog,v 1.3 2007/05/23 17:12:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/ChangeLog,v 1.4 2007/06/24 10:58:57 ali_bush Exp $
+
+  24 Jun 2007; Alistair John Bush <ali_bush@gentoo.org>
+  glassfish-persistence-1.0.ebuild:
+  Fix install of xsd files.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Add ~x86-fbsd keyword. Bug #176906.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/glassfish-persistence-1.0.ebuild,v 1.2 2007/01/21 18:04:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/glassfish-persistence-1.0.ebuild,v 1.3 2007/06/24 10:58:57 ali_bush Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -30,5 +30,5 @@ src_install() {
 	java-pkg_newjar lib/javaee.jar
 
 	dodir /usr/share/${PN}/lib/schemas
-	cp schemas/*.xsd ${D}/usr/share/${PN}/lib/schemas
+	cp lib/schemas/*.xsd ${D}/usr/share/${PN}/lib/schemas
 }
