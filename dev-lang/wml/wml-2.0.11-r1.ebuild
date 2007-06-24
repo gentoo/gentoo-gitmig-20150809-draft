@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r1.ebuild,v 1.5 2007/04/19 00:12:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r1.ebuild,v 1.6 2007/06/24 23:10:56 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="http://www.engelschall.com/sw/wml/distrib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ~s390 sparc x86"
+KEYWORDS="amd64 ia64 ppc s390 sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/libpcre
