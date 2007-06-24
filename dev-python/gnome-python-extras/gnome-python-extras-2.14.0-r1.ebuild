@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.0-r1.ebuild,v 1.11 2007/01/08 04:47:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.0-r1.ebuild,v 1.12 2007/06/24 09:12:27 eva Exp $
 
 NEED_PYTHON=2.4
 WANT_AUTOCONF=latest
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	=gnome-extra/gtkhtml-2.6*
 	firefox? ( >=www-client/mozilla-firefox-1.0 )
 	!firefox? ( seamonkey? ( >=www-client/seamonkey-1.0 ) )
-	>=gnome-extra/libgda-1.2.0
+	=gnome-extra/libgda-1*
 	>=app-text/gtkspell-2"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.54 2007/06/02 02:55:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.55 2007/06/24 09:12:27 eva Exp $
+
+  24 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-python-extras-2.14.0-r1.ebuild, gnome-python-extras-2.14.2.ebuild,
+  gnome-python-extras-2.14.2-r1.ebuild:
+  Preparing for lib{gda,gnomedb} 3.0, fixing dependencies (bug #172106)
 
   02 Jun 2007; Brent Baude <ranger@gentoo.org>
   gnome-python-extras-2.14.2.ebuild:
