@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX mozilla-launcher-1.35-multilib.patch 1297 RMD160 66ab62d893c62031c0580b3ba91d58e19f096b01 SHA1 3c4e5c39b24e84f1d67eadcd444ca46a4be9ce33 SHA256 022c666ec7d2dd80b8c3a6e6a8cc31feaac85ac7c422c3313609a44e489ae276
 MD5 5f2388f082f553879f178d465eb546a3 files/mozilla-launcher-1.35-multilib.patch 1297
 RMD160 66ab62d893c62031c0580b3ba91d58e19f096b01 files/mozilla-launcher-1.35-multilib.patch 1297
@@ -30,10 +33,10 @@ EBUILD mozilla-launcher-1.55.ebuild 890 RMD160 d88951e713dd3692936c5e1630c8ce9c6
 MD5 a75a74d58dd2da6fe322aeae83e25124 mozilla-launcher-1.55.ebuild 890
 RMD160 d88951e713dd3692936c5e1630c8ce9c6dca98f6 mozilla-launcher-1.55.ebuild 890
 SHA256 a2a34117b344ee7a21024c0efc6bc0332f243e196132976e5cf93d40d686e1eb mozilla-launcher-1.55.ebuild 890
-EBUILD mozilla-launcher-1.56.ebuild 901 RMD160 5202aae645fdcdbffe0a9adef4277b4ebc88265d SHA1 06f1f446f9e46fb7ae2aada11654d29a7ca21a93 SHA256 2235c753603d47ac8f8f28684f5d71a3ca1cdf1acaeecee9bafc2c4c4c72684a
-MD5 af5e7d4b3a05009a0a9ce3bb27fa4845 mozilla-launcher-1.56.ebuild 901
-RMD160 5202aae645fdcdbffe0a9adef4277b4ebc88265d mozilla-launcher-1.56.ebuild 901
-SHA256 2235c753603d47ac8f8f28684f5d71a3ca1cdf1acaeecee9bafc2c4c4c72684a mozilla-launcher-1.56.ebuild 901
+EBUILD mozilla-launcher-1.56.ebuild 899 RMD160 b6476a1b0a0edeb6d1a736cb5ad8b32d4acd305c SHA1 f55f4db70a6693a21e851f8f45c65fc29f9758bb SHA256 1764a3404a8e28e24f22fc66b95b12f2241ab0d238f8d069854630e7adc4a68b
+MD5 1bc869303e86ee9d70e05a4332a0a546 mozilla-launcher-1.56.ebuild 899
+RMD160 b6476a1b0a0edeb6d1a736cb5ad8b32d4acd305c mozilla-launcher-1.56.ebuild 899
+SHA256 1764a3404a8e28e24f22fc66b95b12f2241ab0d238f8d069854630e7adc4a68b mozilla-launcher-1.56.ebuild 899
 MISC ChangeLog 20404 RMD160 048a48f01158a157cbb9bd991191335eae224534 SHA1 19f89a87a307122e1844984041a99c08a58d1be8 SHA256 3d1772c9047b88ed9aa7feb0978f407bab1c29d9b78e728604950cbdb8510b73
 MD5 19dd538b2fdd77a41107bf911ef085b2 ChangeLog 20404
 RMD160 048a48f01158a157cbb9bd991191335eae224534 ChangeLog 20404
@@ -54,3 +57,10 @@ SHA256 904efd82430d344b92f4350417863a0e93d9011f5c2f27b45bc97af1abbc6827 files/di
 MD5 28140b0fa35544f77eefab2f692a3985 files/digest-mozilla-launcher-1.56 250
 RMD160 72ea879f8ccf12871114182370ba9c5babfd69db files/digest-mozilla-launcher-1.56 250
 SHA256 ea246c8f41e4bcac679cd70e20e827c5b5424b0da4e5ea41ef9758a63f992c6d files/digest-mozilla-launcher-1.56 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGfwE2p/wUKkr7RBoRAt8eAKDRglkKicXsRhYJETl/wL/JRmva/ACgz9VK
+j11+nMjm24ayUTC8yWLCCbg=
+=7oet
+-----END PGP SIGNATURE-----
