@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.34 2007/04/05 16:36:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.35 2007/06/24 14:11:01 angelos Exp $
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org> transfig-3.2.5.ebuild:
+  Stable on amd64 wrt bug 183040
 
   05 Apr 2007; <pva@gentoo.org> metadata.xml:
   Added myself to metadata - do not want to miss bugs.
