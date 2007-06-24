@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0.ebuild,v 1.2 2007/02/23 20:11:37 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0.ebuild,v 1.3 2007/06/24 16:47:49 philantrop Exp $
 
 inherit kde
 
@@ -19,4 +19,12 @@ need-kde 3.4
 src_unpack() {
 	kde_src_unpack
 	sed -i -e 's/Generic Name/GenericName/' ${S}/misc/${PN}.desktop
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	echo
+	elog "If you want localisation support for ${PN}, please emerge kde-misc/filelight-i18n."
+	echo
 }
