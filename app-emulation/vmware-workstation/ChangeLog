@@ -1,6 +1,31 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.158 2007/05/15 01:47:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.159 2007/06/24 19:32:23 ikelos Exp $
+
+*vmware-workstation-6.0.0.45731 (24 Jun 2007)
+
+  24 Jun 2007; Mike Auty <ikelos@gentoo.org>
+  -files/5.5.1.19175/000_all_initd-location.patch,
+  -files/5.5.1.19175/001_all_fix-permissions.patch,
+  -files/5.5.1.19175/002_all_pagebreak-detection-fix.patch,
+  -files/5.5.1.19175/004_all_do-not-build-modules.patch,
+  -files/5.5.1.19175/007_all_use-modprobe-over-insmod.patch,
+  -files/5.5.1.19175/009_all_init.d-modules-warning.patch,
+  -files/5.5.2.29772/000_all_initd-location.patch,
+  -files/5.5.2.29772/001_all_fix-permissions.patch,
+  -files/5.5.2.29772/002_all_pagebreak-detection-fix.patch,
+  -files/5.5.2.29772/004_all_do-not-build-modules.patch,
+  -files/5.5.2.29772/007_all_use-modprobe-over-insmod.patch,
+  -files/5.5.2.29772/009_all_init.d-modules-warning.patch,
+  +files/6.0.0.45731/000_all_initd-location.patch,
+  +files/6.0.0.45731/001_all_fix-permissions.patch,
+  +files/6.0.0.45731/002_all_pagebreak-detection-fix.patch,
+  +files/6.0.0.45731/004_all_do-not-build-modules.patch,
+  +files/6.0.0.45731/007_all_use-modprobe-over-insmod.patch,
+  +files/6.0.0.45731/009_all_init.d-modules-warning.patch,
+  +vmware-workstation-6.0.0.45731.ebuild:
+  Version bump, the new version features a native 64-bit version, USB 2.0 and
+  some speed improvements too.
 
 *vmware-workstation-5.5.4.44386 (15 May 2007)
 

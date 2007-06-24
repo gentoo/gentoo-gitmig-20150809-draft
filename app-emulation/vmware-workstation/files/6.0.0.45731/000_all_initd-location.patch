@@ -23,7 +23,7 @@
 @@ -8532,7 +8532,7 @@
    db_save();
    # Then start VMware's services
-   if (!$gOption{'skipstopstart'}) {
+   if (!$gOption{'skip-stop-start'}) {
 -    system(shell_string(db_get_answer('INITSCRIPTSDIR') . '/vmware') . ' start');
 +    system(shell_string('/etc/init.d' . '/vmware') . ' start');
      print "\n";
