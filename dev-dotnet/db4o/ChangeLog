@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/db4o
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.5 2007/02/21 23:06:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.6 2007/06/24 17:58:59 jurek Exp $
+
+*db4o-6.1 (24 Jun 2007)
+
+  24 Jun 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/db4o-6.1-makefile.patch, +db4o-6.1.ebuild:
+  Version bump (fixing bug #168738).
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> files/digest-db4o-4.6,
   files/digest-db4o-5.0, ChangeLog:
