@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3.ebuild,v 1.1 2006/12/04 21:56:35 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3.ebuild,v 1.2 2007/06/24 14:42:05 angelos Exp $
 
 inherit eutils
 
@@ -21,6 +21,13 @@ DEPEND="app-arch/bzip2
 	x11-libs/libX11
 	virtual/opengl
 	joystick? ( media-libs/libjsw )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-amd64-gtk-flags.patch"
+}
 
 src_compile() {
 	./configure Linux --prefix=/usr $(use_enable joystick libjsw) || die

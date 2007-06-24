@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.25 2007/01/06 00:23:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.26 2007/06/24 14:42:05 angelos Exp $
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  +files/endeavour-2.7.3-amd64-gtk-flags.patch, endeavour-2.7.3.ebuild:
+  Fixed compilation on amd64, thanks to Torgny Nyblom
 
   06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -endeavour-2.3.6.ebuild:
   QA: Removed unused versions.
