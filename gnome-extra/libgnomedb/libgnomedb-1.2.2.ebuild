@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.13 2007/03/19 21:32:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.14 2007/06/24 09:12:44 eva Exp $
 
 inherit eutils gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
-RDEPEND=">=gnome-extra/libgda-1.1.99
+RDEPEND="=gnome-extra/libgda-1*
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-1.103
