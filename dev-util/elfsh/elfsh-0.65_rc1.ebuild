@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.65_rc1.ebuild,v 1.1 2006/03/04 06:13:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.65_rc1.ebuild,v 1.2 2007/06/24 17:48:30 peper Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/elfsh-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE="readline"
 
 DEPEND=">=dev-libs/expat-1.95
