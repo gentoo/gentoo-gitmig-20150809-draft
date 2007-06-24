@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.3.2,v 1.1 2005/03/09 12:51:34 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.3.2,v 1.2 2007/06/24 20:23:45 vapier Exp $
 #
 # 08 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> run-crons:
 #     Ignore the error messages from find caused by race conditions, since
@@ -34,7 +34,7 @@ mkdir -p ${LOCKDIR}
 # Make sure we're not running multiple instances at once.
 # Try twice to lock, otherwise give up.
 for ((i = 0; i < 2; i = i + 1)); do
-    ln -sn $$ ${LOCKFILE} 2>/dev/null && break
+	ln -sn $$ ${LOCKFILE} 2>/dev/null && break
 
 	# lock failed, check for a running process.
 	# handle both old- and new-style locking.
@@ -62,44 +62,41 @@ fi
 trap "rm -f ${LOCKFILE}" 0 1 2 3 15
 
 
-for BASE in hourly daily weekly monthly
-do
-    CRONDIR=/etc/cron.${BASE}
+for BASE in hourly daily weekly monthly ; do
+	CRONDIR=/etc/cron.${BASE}
 
-    test -d $CRONDIR || continue
+	test -d $CRONDIR || continue
 
-    if [ -e ${LOCKDIR}/cron.$BASE ]
-    then
-	case $BASE in
-	    hourly)
-		#>= 1 hour, 5 min -=> +65 min
-		TIME="-cmin +65" ;;
-	    daily)
-		#>= 1 day, 5 min -=> +1445 min
-		TIME="-cmin +1445"  ;;
-	    weekly)
-		#>= 1 week, 5 min -=> +10085 min
-		TIME="-cmin +10085"  ;;
-	    monthly)
-		#>= 31 days, 5 min -=> +44645 min
-		TIME="-cmin +44645" ;;
-	esac
-        find ${LOCKDIR} -name cron.$BASE $TIME -exec rm {} \; &>/dev/null || true
-    fi
+	if [ -e ${LOCKDIR}/cron.$BASE ] ; then
+		case $BASE in
+		hourly)
+			#>= 1 hour, 5 min -=> +65 min
+			TIME="-cmin +65" ;;
+		daily)
+			#>= 1 day, 5 min -=> +1445 min
+			TIME="-cmin +1445"  ;;
+		weekly)
+			#>= 1 week, 5 min -=> +10085 min
+			TIME="-cmin +10085"  ;;
+		monthly)
+			#>= 31 days, 5 min -=> +44645 min
+			TIME="-cmin +44645" ;;
+		esac
 
-    # if there is no touch file, make one then run the scripts
-    if [ ! -e ${LOCKDIR}/cron.$BASE ]
-    then
-        touch ${LOCKDIR}/cron.$BASE
+		find ${LOCKDIR} -name cron.$BASE $TIME -exec rm {} \; &>/dev/null || true
+	fi
 
-        set +e
-        for SCRIPT in $CRONDIR/*
-        do
-            if [[ -x $SCRIPT && ! -d $SCRIPT ]]; then
-                $SCRIPT
-            fi
-        done
-    fi
+	# if there is no touch file, make one then run the scripts
+	if [ ! -e ${LOCKDIR}/cron.$BASE ] ; then
+		touch ${LOCKDIR}/cron.$BASE
+
+		set +e
+		for SCRIPT in $CRONDIR/* ; do
+			if [[ -x $SCRIPT && ! -d $SCRIPT ]]; then
+				$SCRIPT
+			fi
+		done
+	fi
 done
 
 # Clean out bogus cron.$BASE files with future times
