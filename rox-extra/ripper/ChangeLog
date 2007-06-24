@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/ripper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.10 2007/04/07 13:08:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.11 2007/06/24 17:20:21 lack Exp $
+
+  24 Jun 2007; Jim Ramsay <lack@gentoo.org> ripper-007-r1.ebuild:
+  Adding ~amd64 keyword
 
   07 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ripper-007-r1.ebuild:
