@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.488 2007/06/23 23:50:53 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.489 2007/06/24 04:48:36 dirtyepic Exp $
+
+  24 Jun 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask media-fonts/twmoefonts for bug #115110.
 
   23 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
   Added local USE flag taglib for media-sound/kid3.
