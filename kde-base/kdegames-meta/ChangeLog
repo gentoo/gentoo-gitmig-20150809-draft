@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.64 2007/05/22 22:45:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.65 2007/06/24 22:58:39 philantrop Exp $
+
+  24 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdegames-meta-3.5.7.ebuild:
+  Removed unnecessary arts dependency for kbounce. Fixes bug 166541.
 
 *kdegames-meta-3.5.7 (22 May 2007)
 
