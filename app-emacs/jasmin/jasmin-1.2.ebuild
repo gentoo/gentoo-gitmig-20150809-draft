@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/jasmin-1.2.ebuild,v 1.8 2005/09/09 16:01:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/jasmin-1.2.ebuild,v 1.9 2007/06/24 12:54:43 grobian Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.neilvandyke.org/jasmin-emacs/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc-macos s390 x86"
+KEYWORDS="alpha ~amd64 s390 x86"
 IUSE=""
 
 SITEFILE=50jasmin-gentoo.el
