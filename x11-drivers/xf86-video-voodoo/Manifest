@@ -13,10 +13,10 @@ EBUILD xf86-video-voodoo-1.1.0.ebuild 616 RMD160 ce9486f50773603e3359efda066a2b6
 MD5 41ace5b56d5001e29457b302959a4cc9 xf86-video-voodoo-1.1.0.ebuild 616
 RMD160 ce9486f50773603e3359efda066a2b6cee46bd01 xf86-video-voodoo-1.1.0.ebuild 616
 SHA256 dd9bb1fd8eb1be3d87dce22f8ebf5a2b9c97739db6c6f466fbbc6f522ee5e17b xf86-video-voodoo-1.1.0.ebuild 616
-EBUILD xf86-video-voodoo-1.1.1.ebuild 621 RMD160 1999443c6cb6ea44b1e310e68c8d6a71ad9fee8f SHA1 8749fa414552a8f361b3629c340541e77f0083dc SHA256 048bd297a21fdd4a00496810433842c650bc631091b3376a17a9eb6aac24d0f4
-MD5 ebf09294fa139cd73b54bcf910e193b2 xf86-video-voodoo-1.1.1.ebuild 621
-RMD160 1999443c6cb6ea44b1e310e68c8d6a71ad9fee8f xf86-video-voodoo-1.1.1.ebuild 621
-SHA256 048bd297a21fdd4a00496810433842c650bc631091b3376a17a9eb6aac24d0f4 xf86-video-voodoo-1.1.1.ebuild 621
+EBUILD xf86-video-voodoo-1.1.1.ebuild 621 RMD160 76223407c46389d57f3c45bc950b70d7e9a1c219 SHA1 59a3f4a37c602b6f0e684426c5dd29885b947ec2 SHA256 a8dc590f45f34ff5117c9f3ba6872ab30013ecc5a50fd7042735cbd22c3c7188
+MD5 b6393faaadff8c625cacb83b5436a2be xf86-video-voodoo-1.1.1.ebuild 621
+RMD160 76223407c46389d57f3c45bc950b70d7e9a1c219 xf86-video-voodoo-1.1.1.ebuild 621
+SHA256 a8dc590f45f34ff5117c9f3ba6872ab30013ecc5a50fd7042735cbd22c3c7188 xf86-video-voodoo-1.1.1.ebuild 621
 MISC ChangeLog 4130 RMD160 f7bc28a35681132b89566ce4d995ee7df3e71bb0 SHA1 cf994a2f9859947a5ee55021393ad55e0c752262 SHA256 53cc31fff41ea13a78f0717bfe44b76cdb665dc1028a45d647c5d7d48ddefcb2
 MD5 dc7e7154bfd8f669f4d9bdec1365ac4f ChangeLog 4130
 RMD160 f7bc28a35681132b89566ce4d995ee7df3e71bb0 ChangeLog 4130
@@ -32,9 +32,9 @@ MD5 94534673f4dbfd72a4b5ddc2e4d334f2 files/digest-xf86-video-voodoo-1.1.1 530
 RMD160 ca52cb0ef06a8b3d77f0989db43ebbbe7a137e29 files/digest-xf86-video-voodoo-1.1.1 530
 SHA256 392f2d34921e22d56fc065e1d8d6abe487a259bd4236334b2db24bd0f34f88f7 files/digest-xf86-video-voodoo-1.1.1 530
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFGPM5nomPajV0RnrERAk7nAJoDeJkKcvSntaj2sYj6KEdR80hxowCdFrzG
-lxiOdD0Jafg52F1jTdSZJyg=
-=Oo+x
+iD8DBQFGfvZZp/wUKkr7RBoRAtrCAJsFnaNUqTOTeNoH5g+b86vTyzdRUACgwRyu
+1u8ngkxlnS2UyQGffncygeE=
+=pI6k
 -----END PGP SIGNATURE-----
