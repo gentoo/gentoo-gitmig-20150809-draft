@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.350.ebuild,v 1.8 2007/06/24 21:09:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.350.ebuild,v 1.9 2007/06/24 23:04:04 peper Exp $
 
 inherit eutils pam
 
@@ -9,8 +9,8 @@ VM_V="3.23"
 DESCRIPTION="Webmin, a web-based system administration interface"
 HOMEPAGE="http://www.webmin.com/"
 SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
-	 !webmin-minimal? ( mirror://sourceforge/webadmin/${P}.tar.gz
-	                   http://www.webmin.com/download/virtualmin/virtual-server-${VM_V}.gpl.wbm.gz )"
+	!webmin-minimal? ( mirror://sourceforge/webadmin/${P}.tar.gz
+			http://www.webmin.com/download/virtualmin/virtual-server-${VM_V}.gpl.wbm.gz )"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,10 +20,10 @@ IUSE="apache2 pam postgres ssl webmin-minimal"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
-	 ssl? ( dev-perl/Net-SSLeay )
-	 postgres? ( dev-perl/DBD-Pg )
-	 pam? ( dev-perl/Authen-PAM )
-	 dev-perl/XML-Generator"
+	ssl? ( dev-perl/Net-SSLeay )
+	postgres? ( dev-perl/DBD-Pg )
+	pam? ( dev-perl/Authen-PAM )
+	dev-perl/XML-Generator"
 
 src_unpack() {
 	unpack ${A}
@@ -89,7 +89,7 @@ src_install() {
 
 	config_dir=${D}/etc/webmin
 	var_dir=${D}/var/log/webmin
-	perl=${ROOT}/usr/bin/perl
+	perl=/usr/bin/perl
 	autoos=1
 	port=10000
 	login=root
@@ -107,8 +107,8 @@ src_install() {
 	${D}/usr/libexec/webmin/setup.sh > ${T}/webmin-setup.out 2>&1 || die "Failed to create initial webmin configuration."
 
 	# Fixup the config files to use their real locations
-	sed -i -e "s:^pidfile=.*$:pidfile=${ROOT}/var/run/webmin.pid:" ${D}/etc/webmin/miniserv.conf
-	find ${D}/etc/webmin -type f | xargs sed -i -e "s:${D}:${ROOT}:g"
+	sed -i -e "s:^pidfile=.*$:pidfile=/var/run/webmin.pid:" ${D}/etc/webmin/miniserv.conf
+	find ${D}/etc/webmin -type f | xargs sed -i -e "s:${D}:/:g"
 
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
@@ -123,14 +123,9 @@ pkg_postinst() {
 	local crypt=$(grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :)
 	crypt=${crypt//\\/\\\\}
 	crypt=${crypt//\//\\\/}
-	sed -i -e "s/root:XXX/root:${crypt}/" /etc/webmin/miniserv.users
+	sed -i -e "s/root:XXX/root:${crypt}/" "${ROOT}/etc/webmin/miniserv.users"
 
 	einfo "To make webmin start at boot time, run: 'rc-update add webmin default'."
 	use ssl && einfo "Point your web browser to https://localhost:10000 to use webmin."
 	use ssl || einfo "Point your web browser to http://localhost:10000 to use webmin."
-}
-
-pkg_prerm() {
-	# XXX: this is wrong ... prerm is called during upgrades as well
-	"${ROOT}"/etc/init.d/webmin stop >& /dev/null
 }
