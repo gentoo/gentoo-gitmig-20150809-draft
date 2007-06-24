@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.24 2007/06/24 15:44:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.25 2007/06/24 20:29:31 angelos Exp $
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org> xdg-utils-1.0.1.ebuild:
+  Stable on amd64 wrt bug 183052
 
   24 Jun 2007; <pva@gentoo.org> xdg-utils-1.0.1.ebuild:
   Added RELEASE_NOTES to dodoc.
