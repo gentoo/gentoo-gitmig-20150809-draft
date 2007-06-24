@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/filelight-i18n
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight-i18n/ChangeLog,v 1.1 2007/06/24 16:38:30 philantrop Exp $
+
+*filelight-i18n-1.0 (24 Jun 2007)
+
+  24 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +filelight-i18n-1.0.ebuild:
+  Initial ebuild to add localisation support to kde-misc/filelight as
+  requested in bug 182565.
+
