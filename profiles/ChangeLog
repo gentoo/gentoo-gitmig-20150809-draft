@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.492 2007/06/24 14:46:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.493 2007/06/24 14:58:21 armin76 Exp $
+
+  24 Jun 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  Remove unused use-flag for www-client/mozilla-launcher, bug 134491
 
   24 Jun 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Remove unused aqua USE flag for app-editors/emacs-cvs, bug #134491.
