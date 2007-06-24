@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/xcb-util-0.2.ebuild,v 1.12 2007/06/24 06:04:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/xcb-util-0.2.ebuild,v 1.13 2007/06/24 22:28:22 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://xcb.freedesktop.org/"
 SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 
 LICENSE="X11"
-KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 
 RDEPEND=">=x11-libs/libxcb-1"
 DEPEND="${RDEPEND}
