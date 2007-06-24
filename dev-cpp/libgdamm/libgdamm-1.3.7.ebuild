@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-1.3.7.ebuild,v 1.2 2005/10/27 02:45:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-1.3.7.ebuild,v 1.3 2007/06/24 09:10:54 eva Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="~ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-cpp/glibmm-2.4
-	>=gnome-extra/libgda-1.1.4"
+	=gnome-extra/libgda-1*"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 

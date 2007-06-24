@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgdamm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.5 2007/02/09 01:09:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.6 2007/06/24 09:10:54 eva Exp $
+
+  24 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org> libgdamm-1.3.6.ebuild,
+  libgdamm-1.3.7.ebuild:
+  Preparing for lib{gda,gnomedb} 3.0, fixing dependencies (bug #172106)
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
