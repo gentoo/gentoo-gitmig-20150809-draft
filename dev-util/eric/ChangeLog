@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.44 2007/06/23 21:07:44 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.45 2007/06/24 21:55:36 dev-zero Exp $
+
+  24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> eric-3.7.2-r1.ebuild,
+  -eric-3.9.4.ebuild, eric-3.9.5.ebuild:
+  Fixed $ROOT abuse (bug #167271)
 
   23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> eric-3.9.5.ebuild:
   Added doc/examples use-flags. Cleanup.
