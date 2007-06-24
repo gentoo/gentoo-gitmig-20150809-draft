@@ -1,6 +1,6 @@
-diff -u libixp-0.2_orig/config.mk libixp-0.2/config.mk
---- libixp-0.2_orig/config.mk	2006-12-27 17:59:09.000000000 +0600
-+++ libixp-0.2/config.mk	2007-01-09 10:57:38.699888388 +0600
+diff -uN libixp-0.2.bak/config.mk libixp-0.2/config.mk
+--- libixp-0.2.bak/config.mk	2006-12-27 03:59:09.000000000 -0800
++++ libixp-0.2/config.mk	2007-06-24 11:45:59.000000000 -0700
 @@ -14,6 +14,7 @@
  # flags
  CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
@@ -9,10 +9,10 @@ diff -u libixp-0.2_orig/config.mk libixp-0.2/config.mk
  #CFLAGS = -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
  #LDFLAGS = -g ${LIBS}
  
-diff -u libixp-0.2_orig/Makefile libixp-0.2/Makefile
---- libixp-0.2_orig/Makefile	2006-12-27 17:59:09.000000000 +0600
-+++ libixp-0.2/Makefile	2007-01-09 11:06:30.926977572 +0600
-@@ -9,13 +9,14 @@
+diff -uN libixp-0.2.bak/Makefile libixp-0.2/Makefile
+--- libixp-0.2.bak/Makefile	2006-12-27 03:59:09.000000000 -0800
++++ libixp-0.2/Makefile	2007-06-24 11:45:59.000000000 -0700
+@@ -9,18 +9,23 @@
  OBJ = ${SRC:.c=.o}
  OBJIXPC = ${SRCIXPC:.c=.o}
  
@@ -27,8 +27,18 @@ diff -u libixp-0.2_orig/Makefile libixp-0.2/Makefile
 +	@echo "SOFLAGS  = ${SOFLAGS}"
  	@echo "LD       = ${LD}"
  
++${OBJIXPC}: 
++	@echo CC ${@:.o=.c}
++	@${CC} -c ${CFLAGS} ${@:.o=.c}
++
  .c.o:
-@@ -29,6 +30,10 @@
+ 	@echo CC $<
+-	@${CC} -c ${CFLAGS} $<
++	@${CC} ${SOFLAGS} -c ${CFLAGS} $<
+ 
+ ${OBJ}: config.mk ixp.h
+ 
+@@ -29,6 +34,10 @@
  	@${AR} $@ ${OBJ}
  	@${RANLIB} $@
  
@@ -39,7 +49,7 @@ diff -u libixp-0.2_orig/Makefile libixp-0.2/Makefile
  ixpc: ${OBJIXPC}
  	@echo LD $@
  	@${LD} -o $@ ${OBJIXPC} ${LDFLAGS} -lixp
-@@ -36,7 +41,7 @@
+@@ -36,7 +45,7 @@
  
  clean:
  	@echo cleaning
@@ -48,7 +58,7 @@ diff -u libixp-0.2_orig/Makefile libixp-0.2/Makefile
  
  dist: clean
  	@echo creating dist tarball
-@@ -55,6 +60,9 @@
+@@ -55,6 +64,9 @@
  	@mkdir -p ${DESTDIR}${PREFIX}/lib
  	@cp -f libixp.a ${DESTDIR}${PREFIX}/lib
  	@chmod 644 ${DESTDIR}${PREFIX}/lib/libixp.a
@@ -58,7 +68,7 @@ diff -u libixp-0.2_orig/Makefile libixp-0.2/Makefile
  	@echo installing ixpc to ${DESTDIR}${PREFIX}/bin
  	@mkdir -p ${DESTDIR}${PREFIX}/bin
  	@cp -f ixpc ${DESTDIR}${PREFIX}/bin
-@@ -67,8 +75,12 @@
+@@ -67,8 +79,12 @@
  uninstall:
  	@echo removing header file from ${DESTDIR}${PREFIX}/include
  	@rm -f ${DESTDIR}${PREFIX}/include/ixp.h
