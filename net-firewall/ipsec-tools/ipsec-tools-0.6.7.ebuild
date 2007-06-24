@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.7 2007/05/03 18:40:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.8 2007/06/24 14:55:21 peper Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
-IUSE="idea ipv6 pam rc5 readline selinux ldap kerberos nat hybrid"
+IUSE="idea ipv6 pam rc5 readline selinux ldap kerberos nat hybrid iconv"
 
 
 # FIXME: what is the correct syntax for ~sparc ???
@@ -236,25 +236,25 @@ src_install() {
 
 pkg_postinst() {
 	if use nat; then
-	  elog ""
-	  elog " You have enabled the nat traversal functionnality."
-	  elog " Nat versions wich are enabled by default are 00,02,rfc"
-	  elog " you can find those drafts in the CVS repository:"
-	  elog "cvs -d anoncvs@anoncvs.netbsd.org:/cvsroot co ipsec-tools"
-	  elog ""
-	  elog "If you feel brave enough and you know what you are"
-	  elog "doing, you can consider emerging this ebuild"
-	  elog "with"
-	  elog "EXTRA_ECONF=\"--enable-natt-versions=08,07,06\""
-	  elog ""
+		elog ""
+		elog " You have enabled the nat traversal functionnality."
+		elog " Nat versions wich are enabled by default are 00,02,rfc"
+		elog " you can find those drafts in the CVS repository:"
+		elog "cvs -d anoncvs@anoncvs.netbsd.org:/cvsroot co ipsec-tools"
+		elog ""
+		elog "If you feel brave enough and you know what you are"
+		elog "doing, you can consider emerging this ebuild"
+		elog "with"
+		elog "EXTRA_ECONF=\"--enable-natt-versions=08,07,06\""
+		elog ""
 	fi;
 
 	if use ldap; then
-	  elog ""
-	  elog " You have enabled ldap support with {$PN}."
-	  elog " The man page does NOT contain any information on it yet."
-	  elog " Consider to use a more recent version or CVS"
-	  elog ""
+		elog ""
+		elog " You have enabled ldap support with {$PN}."
+		elog " The man page does NOT contain any information on it yet."
+		elog " Consider to use a more recent version or CVS"
+		elog ""
 	fi;
 
 
