@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.4.ebuild,v 1.9 2006/06/13 10:31:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.4.ebuild,v 1.10 2007/06/24 21:41:34 drac Exp $
 
 
 inherit linux-info
@@ -39,10 +39,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
-	then
+	if [ "${ROOT}" = "/" ] ; then
 		# Update module dependancy
-		/sbin/modules-update
-		depmod -a
+		[ -x /sbin/update-modules ] && /sbin/update-modules || /sbin/modules-update
 	fi
 }

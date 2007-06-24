@@ -1,6 +1,10 @@
 # ChangeLog for media-video/usb-pwcx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.16 2007/02/22 01:55:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.17 2007/06/24 21:41:34 drac Exp $
+
+  24 Jun 2007; Samuli Suominen <drac@gentoo.org> usb-pwcx-8.2.2.ebuild,
+  usb-pwcx-8.4.ebuild:
+  Apply patch from bug 174752 by Jakub Moc, thanks.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
