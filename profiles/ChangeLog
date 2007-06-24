@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.491 2007/06/24 12:25:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.492 2007/06/24 14:46:18 ulm Exp $
+
+  24 Jun 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Remove unused aqua USE flag for app-editors/emacs-cvs, bug #134491.
 
   24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
   Removed pg-hier and pg-vacuum USE flags for dev-db/postgresql (bug ##134491)
