@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/hunkyfonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.9 2007/03/12 19:28:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.10 2007/06/24 16:23:09 angelos Exp $
+
+  24 Jun 2007; Christoph Mende <angelos@gentoo.org> hunkyfonts-0.3.1.ebuild:
+  Stable on amd64 wrt bug 175155
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> hunkyfonts-0.3.1.ebuild:
   x86 stable
