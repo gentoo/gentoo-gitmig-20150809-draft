@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070622.ebuild,v 1.5 2007/06/23 18:22:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070622.ebuild,v 1.6 2007/06/24 17:01:02 drac Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -465,11 +465,6 @@ src_install() {
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
 		dosym mplayer /usr/bin/gmplayer
-
-		insinto /usr/share/pixmaps
-		newins ${D}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
-		insinto /usr/share/applications
-		doins ${FILESDIR}/mplayer.desktop
 	fi
 
 	if ! use srt && ! use truetype; then

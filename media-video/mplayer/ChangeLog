@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.490 2007/06/23 18:22:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.491 2007/06/24 17:01:02 drac Exp $
+
+  24 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  mplayer-1.0.20070622.ebuild:
+  Makefile allready installs both pixmap and desktop file so stop doing that
+  inside ebuild.
 
   23 Jun 2007; Christoph Mende <angelos@gentoo.org>
   mplayer-1.0.20070622.ebuild:
