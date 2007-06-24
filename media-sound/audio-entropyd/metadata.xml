@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <name>Christoph Mende</email>
   <email>angelos@gentoo.org</email>
+  <name>Christoph Mende</name>
 </maintainer>
 <longdescription>Audio-entropyd generates entropy-data for the /dev/random device.</longdescription> 
 </pkgmetadata>
