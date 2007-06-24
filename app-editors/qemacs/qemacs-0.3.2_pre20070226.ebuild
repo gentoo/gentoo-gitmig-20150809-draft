@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.2_pre20070226.ebuild,v 1.2 2007/05/14 13:11:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.2_pre20070226.ebuild,v 1.3 2007/06/24 21:05:54 ulm Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -12,6 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X png unicode xv"
+RESTRICT="strip"
 
 # For those so inclined, the libXv dep can probably
 # be made conditional on the xv USE flag somehow.
@@ -20,7 +21,7 @@ RDEPEND="X? ( x11-libs/libXv )
 DEPEND="${RDEPEND}
 	X? ( x11-libs/libXft
 				x11-proto/xextproto )"
-RESTRICT="strip"
+PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack ${A}

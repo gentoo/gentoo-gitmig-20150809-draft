@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.6 2006/11/29 16:00:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.7 2007/06/24 21:05:54 ulm Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	X? ( || ( ( x11-libs/libXft
 				x11-proto/xextproto )
 			virtual/x11 ) )"
+PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack ${A}
@@ -67,7 +68,7 @@ src_test() {
 	# There are some files purporting to be tests in the tarball, however
 	# there is no defined way to use them and I imagine even if there was
 	# it would require user interaction.
-	# The toplevel Makefile calls the test target from the non-existant 
+	# The toplevel Makefile calls the test target from the non-existant
 	# tests/Makefile, so just noop to stop errors if maketest is set.
 	:
 }

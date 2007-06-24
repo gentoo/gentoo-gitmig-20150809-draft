@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.26 2007/05/14 13:11:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.27 2007/06/24 21:05:54 ulm Exp $
+
+  24 Jun 2007; Ulrich Mueller <ulm@gentoo.org> qemacs-0.3.1-r3.ebuild,
+  qemacs-0.3.2_pre20070226.ebuild:
+  Provide virtual/editor.
 
   14 May 2007; Christian Faulhammer <opfer@gentoo.org>
   qemacs-0.3.2_pre20070226.ebuild:
