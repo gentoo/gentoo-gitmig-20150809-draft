@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-newport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-newport/ChangeLog,v 1.18 2007/01/24 07:03:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-newport/ChangeLog,v 1.19 2007/06/24 07:11:15 kumba Exp $
+
+  24 Jun 2007; Joshua Kinard <kumba@gentoo.org>
+  xf86-video-newport-0.2.1.ebuild:
+  Stable on mips, per #175465.
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-newport-0.1.4.1.ebuild:
