@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.5.ebuild,v 1.9 2007/02/10 20:52:11 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.5.ebuild,v 1.10 2007/06/24 09:11:08 eva Exp $
 
 inherit eutils
 
@@ -27,8 +27,8 @@ RDEPEND="=app-office/abiword-${PV}*
 	grammar? ( >=dev-libs/link-grammar-4.2.2 )
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
 	libgda? (
-		>=gnome-extra/libgda-1.2
-		>=gnome-extra/libgnomedb-1.2 )
+		=gnome-extra/libgda-1*
+		=gnome-extra/libgnomedb-1* )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
 	!ia64? ( !ppc64? ( !sparc? ( ots? ( >=app-text/ots-0.4.1 ) ) ) )
 	pdf? ( >=app-text/poppler-0.5.0-r1 )

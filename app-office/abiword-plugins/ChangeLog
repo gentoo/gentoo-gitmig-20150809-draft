@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.29 2007/05/23 15:35:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.30 2007/06/24 09:11:08 eva Exp $
+
+  24 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  abiword-plugins-2.4.5.ebuild, abiword-plugins-2.4.6.ebuild:
+  Preparing for lib{gda,gnomedb} 3.0, fixing dependencies (bug #172106)
 
   23 May 2007; Jeroen Roovers <jer@gentoo.org> abiword-plugins-2.4.6.ebuild:
   Stable for HPPA too.
