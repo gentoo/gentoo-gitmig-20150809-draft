@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.493 2007/06/24 14:58:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.494 2007/06/24 15:36:56 pva Exp $
+
+  24 Jun 2007; Peter Volkov <pva@gentoo.org> use.local.desc:
+  Updated description of sms USE flag for app-mobilephone/gnokii.
 
   24 Jun 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Remove unused use-flag for www-client/mozilla-launcher, bug 134491
