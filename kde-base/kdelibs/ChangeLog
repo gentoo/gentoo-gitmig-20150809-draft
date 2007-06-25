@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.466 2007/06/18 17:46:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.467 2007/06/25 17:00:31 philantrop Exp $
+
+  25 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdelibs-3.5.5-r4.ebuild, kdelibs-3.5.5-r10.ebuild,
+  kdelibs-3.5.6-r7.ebuild, kdelibs-3.5.6-r8.ebuild, kdelibs-3.5.6-r9.ebuild,
+  kdelibs-3.5.7.ebuild:
+  All ebuilds are now replacing -O3 with -O2 because of printing-related
+  failures (cf. bug 148180).
 
   18 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> kdelibs-3.5.7.ebuild:
   Raise dependency on libpcre to >=dev-libs/libpcre-6.6. Fixes bug 182438.
