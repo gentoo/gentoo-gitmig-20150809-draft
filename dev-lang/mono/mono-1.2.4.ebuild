@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.6 2007/06/16 11:58:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.7 2007/06/25 21:30:23 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -86,7 +86,15 @@ src_compile() {
 
 	# Force LC_ALL=C and the use of internal mcs/mono to prevent issues with
 	# I18N.dll (bug #146424)
-	LC_ALL=C emake EXTERNAL_MCS=false EXTERNAL_MONO=false || die "compile failed"
+	LC_ALL=C emake EXTERNAL_MCS=false EXTERNAL_MONO=false
+
+	if [[ "$?" -ne "0" ]]; then
+		ewarn "If you are using any hardening features such as"
+		ewarn "PIE+SSP/SELinux/grsec/PAX then most probably this is the reason"
+		ewarn "why build has failed. In this case turn any active security"
+		ewarn "enhancements off and try emerging the package again"
+		die
+	fi
 }
 
 src_install() {
