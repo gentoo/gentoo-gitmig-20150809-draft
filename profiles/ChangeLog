@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.496 2007/06/25 00:23:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.497 2007/06/25 04:42:15 alonbl Exp $
+
+  25 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
+  Fix ccid, hibernate-script, suspend2-sources, bug#134491
 
   25 Jun 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add ssse3 local use flag for media-video/mplayer

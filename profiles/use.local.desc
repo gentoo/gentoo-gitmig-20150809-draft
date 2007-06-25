@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2890 2007/06/25 00:23:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2891 2007/06/25 04:42:15 alonbl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -62,7 +62,6 @@ app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:emovix - Enable burning support for eMoviX images
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
-app-crypt/ccid:chipcard2 - Enable libchipcard support
 app-crypt/ccid:nousb - Disable USB support via pcsc-lite
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
@@ -1884,7 +1883,6 @@ sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/mips-sources:ip32r10k - Enables experimental support for IP32 R10K kernels (SGI O2, 'Moosehead')
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
-sys-kernel/suspend2-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:glibc-compat20 - Enable the glibc-compat addon.
 sys-libs/glibc:glibc-omitfp - Configure glibc with --enable-omitfp which lets the build system determine when it is safe to use -fomit-frame-pointer
@@ -1910,7 +1908,6 @@ sys-power/cpufreqd:nforce2 - Enable for nforce2 voltage settings plug-in
 sys-power/cpufreqd:nvidia - Enable nvidia overclocking (nvclock) plug-in
 sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
 sys-power/hibernate-script:logrotate - Use logrotate for rotating logs
-sys-power/hibernate-script:vim - Install vim support files
 sys-power/nut:cgi - Add CGI script support
 sys-power/powersave:pam_console - Adds support for pam console from PAM
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
