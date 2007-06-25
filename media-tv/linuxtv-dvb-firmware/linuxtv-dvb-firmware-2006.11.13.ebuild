@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.4 2007/04/25 00:29:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.5 2007/06/25 12:57:12 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -143,7 +143,7 @@ FW_URLS=(
 	"http://home.arcor.de/efocht/dvb-usb-wt220u-fc03.fw"
 	"http://vaasa.wi-bw.tfh-wildau.de/~pboettch/home/files/dvb-usb-dib0700-01.fw"
 # get_dvb_firmware
-	"http://www.technotrend.de/new/217g/tt_Premium_217g.zip"
+	"http://www.softwarepatch.pl/9999ccd06a4813cb827dbb0005071c71/tt_Premium_217g.zip"
 	"http://www.avermedia.com/software/Dvbt1.3.57.6.zip"
 	"http://www.technotrend.de/new/217g/tt_budget_217g.zip"
 	"http://www.technotrend.de/new/217g/tt_budget_217g.zip"
