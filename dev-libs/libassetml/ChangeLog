@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libassetml
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/ChangeLog,v 1.7 2007/02/09 02:29:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/ChangeLog,v 1.8 2007/06/25 17:15:24 peper Exp $
+
+  25 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> libassetml-1.1.ebuild,
+  libassetml-1.2.1.ebuild:
+  (QA) Fix deps. bug #151727.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
