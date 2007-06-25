@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.22.3.ebuild,v 1.1 2007/06/21 23:44:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.22.3.ebuild,v 1.2 2007/06/25 02:16:03 dberkholz Exp $
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://fishshell.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://fishshell.org/files/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc X"
+IUSE="X"
 RDEPEND="sys-libs/ncurses
 	sys-devel/bc
 	www-client/htmlview

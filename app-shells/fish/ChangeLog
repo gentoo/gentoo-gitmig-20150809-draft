@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.32 2007/06/21 23:44:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.33 2007/06/25 02:16:03 dberkholz Exp $
+
+  25 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; fish-1.22.3.ebuild:
+  (#172586) Remove unused doc USE flag (James Rowe).
 
 *fish-1.22.3 (21 Jun 2007)
 
