@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cisco-Reconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.7 2007/04/01 20:27:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.8 2007/06/25 15:12:34 mcummings Exp $
+
+  25 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  Cisco-Reconfig-0.9.ebuild:
+  Marking amd64 stable
 
 *Cisco-Reconfig-0.9 (01 Apr 2007)
 
