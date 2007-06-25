@@ -1,10 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9.ebuild,v 1.5 2007/03/05 02:40:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9.ebuild,v 1.6 2007/06/25 07:21:06 hawking Exp $
 
 inherit distutils
 mydoc="NEWS DESIGN"
-
 
 DESCRIPTION="Bicycle Repair Man is the Python Refactoring Browser,"
 HOMEPAGE="http://bicyclerepair.sourceforge.net/"
@@ -40,4 +39,3 @@ pkg_postinst() {
 	elog "mode and add this to your .emacs or .init.el:"
 	elog "(load-library '/usr/share/bicyclerepair/bike.el')"
 }
-
