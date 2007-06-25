@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xml-simple
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.6 2007/06/21 18:27:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.7 2007/06/25 15:55:42 angelos Exp $
+
+  25 Jun 2007; Christoph Mende <angelos@gentoo.org> xml-simple-1.0.8.ebuild:
+  Added ~amd64 wrt bug 179696
 
   21 Jun 2007; Hans de Graaff <graaff@gentoo.org> xml-simple-1.0.8.ebuild:
   Change USE_RUBY to ruby18, fixes #179696.
