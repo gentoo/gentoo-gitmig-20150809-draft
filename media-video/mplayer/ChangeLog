@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.493 2007/06/24 23:16:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.494 2007/06/25 00:26:59 beandog Exp $
+
+  25 Jun 2007; Steve Dibb <beandog@gentoo.org>
+  mplayer-1.0.20070622-r1.ebuild:
+  Add support for SSSE3
 
 *mplayer-1.0.20070622-r1 (24 Jun 2007)
 

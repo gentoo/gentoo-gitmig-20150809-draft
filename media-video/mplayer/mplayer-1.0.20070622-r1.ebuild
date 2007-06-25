@@ -1,11 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070622-r1.ebuild,v 1.1 2007/06/24 23:16:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070622-r1.ebuild,v 1.2 2007/06/25 00:26:59 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
 RESTRICT="nostrip"
-IUSE="3dnow 3dnowext a52 aac aalib alsa altivec amrnb amrwb arts bidi bl bindist cddb cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dvdnav dv enca encode esd fbcon ftp gif ggi gtk iconv ipv6 ivtv jack joystick jpeg libcaca lirc live livecd lzo mad md5sum mmx mmxext mp2 mp3 musepack nas unicode vorbis opengl openal oss png pnm quicktime radio rar real rtc samba sdl speex srt sse sse2 svga tga theora tivo truetype v4l v4l2 vidix win32codecs X x264 xanim xinerama xv xvid xvmc zoran"
+IUSE="3dnow 3dnowext a52 aac aalib alsa altivec amrnb amrwb arts bidi bl bindist
+cddb cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd
+dvdnav dv enca encode esd fbcon ftp gif ggi gtk iconv ipv6 ivtv jack joystick
+jpeg libcaca lirc live livecd lzo mad md5sum mmx mmxext mp2 mp3 musepack nas
+unicode vorbis opengl openal oss png pnm quicktime radio rar real rtc samba sdl
+speex srt sse sse2 ssse3 svga tga theora tivo truetype v4l v4l2 vidix win32codecs X x264 xanim xinerama xv xvid xvmc zoran"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
 
@@ -370,12 +375,13 @@ src_compile() {
 		fi
 	fi
 	if use mmx; then
-		for x in 3dnow 3dnowext mmxext sse sse2; do
+		for x in 3dnow 3dnowext mmxext sse sse2 ssse3; do
 			use ${x} || myconf="${myconf} --disable-${x}"
 		done
 	else
 		myconf="${myconf} --disable-mmx --disable-mmxext --disable-sse \
-		--disable-sse2 --disable-3dnow --disable-3dnowext"
+		--disable-sse2 --disable-ssse3 --disable-3dnow \
+		--disable-3dnowext"
 	fi
 	use debug && myconf="${myconf} --enable-debug=3"
 
