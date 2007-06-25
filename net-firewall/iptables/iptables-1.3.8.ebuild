@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8.ebuild,v 1.1 2007/06/25 17:00:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8.ebuild,v 1.2 2007/06/25 17:01:42 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -69,9 +69,6 @@ src_unpack() {
 	sed -i \
 		-e "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" \
 		extensions/Makefile || die "failed to enable stealth extension"
-
-	EPATCH_OPTS="-p1" \
-	epatch "${FILESDIR}"/1.3.1-files/${PN}-1.3.1-compilefix.patch
 
 	if use imq ; then
 		EPATCH_OPTS="-p1" epatch "${DISTDIR}"/${IMQ_PATCH}
