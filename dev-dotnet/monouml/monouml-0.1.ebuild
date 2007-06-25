@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/monouml-0.1.ebuild,v 1.2 2007/06/25 19:18:50 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/monouml-0.1.ebuild,v 1.3 2007/06/25 20:31:36 jurek Exp $
 
 inherit mono eutils
 
@@ -17,6 +17,8 @@ LICENSE="GPL-2"
 IUSE=""
 DEPEND=">=dev-lang/mono-1.1.4
 	    >=dev-dotnet/gtk-sharp-1.9.2
+		>=dev-dotnet/gnome-sharp-1.9.2
+		>=dev-dotnet/glade-sharp-1.9.2
 		app-arch/unzip"
 
 KEYWORDS="~amd64 ~x86"
