@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.497 2007/06/25 04:42:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.498 2007/06/25 14:20:59 flameeyes Exp $
+
+  25 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Fix typo in mask.
 
   25 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
   Fix ccid, hibernate-script, suspend2-sources, bug#134491
