@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.4.ebuild,v 1.1 2007/06/25 00:04:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.4.ebuild,v 1.2 2007/06/25 00:27:20 angelos Exp $
+
+inherit linux-info
 
 DESCRIPTION="tail replacement using inotify"
 HOMEPAGE="http://distanz.ch/inotail/"
@@ -13,6 +15,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+CONFIG_CHECK="INOTIFY"
 
 src_install() {
 	make prefix="${D}usr" install || die "install failed"
