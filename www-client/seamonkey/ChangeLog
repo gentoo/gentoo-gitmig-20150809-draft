@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.70 2007/06/15 18:05:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.71 2007/06/25 10:57:59 armin76 Exp $
+
+  25 Jun 2007; Raúl Porcel <armin76@gentoo.org> -seamonkey-1.0.7.ebuild:
+  old
 
   15 Jun 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.2.ebuild:
   Use enigmail-0.95.0
