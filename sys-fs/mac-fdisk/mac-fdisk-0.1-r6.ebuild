@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1-r6.ebuild,v 1.8 2007/04/12 17:08:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1-r6.ebuild,v 1.9 2007/06/25 15:58:51 josejx Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DEBRV=13
 DESCRIPTION="Mac/PowerMac disk partitioning utility"
@@ -31,6 +31,10 @@ src_unpack() {
 
 	### Patch for building on amd64
 	epatch ${FILESDIR}/${PN}-amd64.patch
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed!"
 }
 
 src_install() {

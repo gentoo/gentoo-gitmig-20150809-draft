@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mac-fdisk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.20 2007/04/12 17:08:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.21 2007/06/25 15:58:51 josejx Exp $
+
+  25 Jun 2007; Joseph Jezak <josejx@gentoo.org>
+  -files/mac-fdisk-0.1-r3-ppc64.patch, -mac-fdisk-0.1-r3.ebuild,
+  mac-fdisk-0.1-r6.ebuild:
+  Fixed distcc issue and removed old version.
 
   12 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   mac-fdisk-0.1-r6.ebuild:
