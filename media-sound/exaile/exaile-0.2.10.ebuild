@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10.ebuild,v 1.1 2007/06/25 06:24:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10.ebuild,v 1.2 2007/06/25 06:47:30 drac Exp $
 
 inherit eutils fdo-mime python
 
@@ -64,15 +64,17 @@ src_unpack() {
 
 
 src_compile() {
-	emake mmkeys.so || die "emake mmkeys.so failed."
+	emake -j1 mmkeys.so || die "emake mmkeys.so failed."
 	emake translations || die "emake translations failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc TODO changelog
-	exeinto /usr/share/${PN}
-	doexe -r scripts/*
+
+	insinto /usr/share/${PN}
+	doins -r scripts
+	fperms 755 /usr/share/${PN}/scripts
 }
 
 pkg_postinst() {

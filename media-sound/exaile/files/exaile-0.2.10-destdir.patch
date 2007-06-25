@@ -1,9 +1,21 @@
 diff -ur exaile_0.2.10.orig/Makefile exaile_0.2.10/Makefile
 --- exaile_0.2.10.orig/Makefile	2007-06-21 06:17:04.000000000 +0300
-+++ exaile_0.2.10/Makefile	2007-06-25 09:07:36.000000000 +0300
++++ exaile_0.2.10/Makefile	2007-06-25 09:41:46.000000000 +0300
 @@ -1,4 +1,4 @@
 -PREFIX ?= /usr/local
 +PREFIX = /usr
  LIBDIR ?= $(PREFIX)/lib
  FIREFOX ?= /usr/lib/firefox
  
+@@ -44,11 +44,8 @@
+ 	install -m 644 images/default_theme/*.png \
+ 	$(DESTDIR)$(PREFIX)/share/exaile/images/default_theme
+ 	install -m 644 xl/*.py $(DESTDIR)$(PREFIX)/share/exaile/xl
+-	-install -m 644 xl/*.pyc $(DESTDIR)$(PREFIX)/share/exaile/xl
+ 	install -m 644 xl/media/*.py $(DESTDIR)$(PREFIX)/share/exaile/xl/media
+-	-install -m 644 xl/media/*.pyc $(DESTDIR)$(PREFIX)/share/exaile/xl/media
+ 	install -m 644 lib/*.py $(DESTDIR)$(PREFIX)/share/exaile/lib
+-	-install -m 644 lib/*.pyc $(DESTDIR)$(PREFIX)/share/exaile/lib
+ 	install -m 644 plugins/*.py $(DESTDIR)$(PREFIX)/share/exaile/plugins
+ 	install -m 644 plugins/*.glade $(DESTDIR)$(PREFIX)/share/exaile/plugins
+ 	install -m 644 images/largeicon.png \
