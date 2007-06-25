@@ -1,35 +1,33 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.8.ebuild,v 1.13 2007/02/21 15:11:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.12.ebuild,v 1.1 2007/06/25 21:41:23 armin76 Exp $
+
+WANT_AUTOCONF="2.1"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-# All: ar bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW
-# New:    bg                                  eu       fy-NL       gu-IN                lt             pa-IN
-# Ignored: fy-NL (due to repoman griping about it)
-LANGS="ar bg ca cs da de el en-GB es-AR es-ES eu fi fr       ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW"
+LANGS="ar bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW"
 SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
-PVER="0.1"
+PATCH="${PN}-1.5.0.10-patches-0.1"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
-	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
+	mirror://gentoo/${PATCH}.tar.bz2"
 
-KEYWORDS="-* amd64 arm hppa ia64 ~mips ppc sparc x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="java mozdevelop"
 
 for X in ${LANGS} ; do
-	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( mirror://gentoo/${P}-${X}.xpi )"
+	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
 done
 
 for X in ${SHORTLANGS} ; do
-	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( mirror://gentoo/${P}-${X}.xpi )"
+	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X%%-*}"
 done
 
@@ -37,8 +35,7 @@ RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.39
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.10
-	>=dev-libs/nspr-4.6.1
-	~sys-devel/autoconf-2.13"
+	>=dev-libs/nspr-4.6.1"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -89,7 +86,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack firefox-${PV}-source.tar.bz2  ${P}-patches-${PVER}.tar.bz2
+	unpack ${A}
 
 	linguas
 	for X in ${linguas}; do
@@ -112,8 +109,7 @@ src_unpack() {
 			${S}/security/coreconf/arch.mk
 	fi
 
-	WANT_AUTOCONF="2.1" \
-		eautoreconf || die "failed  running eautoreconf"
+	eautoreconf || die "failed  running eautoreconf"
 }
 
 src_compile() {
@@ -196,10 +192,10 @@ pkg_preinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	echo ""
-	einfo "Removing old installs though some really ugly code.  It potentially"
-	einfo "eliminates any problems during the install, however suggestions to"
-	einfo "replace this are highly welcome.  Send comments and suggestions to"
-	einfo "mozilla@gentoo.org"
+	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "eliminates any problems during the install, however suggestions to"
+	elog "replace this are highly welcome.  Send comments and suggestions to"
+	elog "mozilla@gentoo.org"
 	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
 	echo ""
 }
@@ -294,8 +290,8 @@ pkg_postinst() {
 	ewarn "Thank you! mozilla@gentoo.org."
 
 	echo     ""
-	einfo "Any regchrome errors can be ignored right now, this is due to"
-	einfo "mozilla-firefox-1.0.x. being unregistered with mozilla-launcher."
+	elog "Any regchrome errors can be ignored right now, this is due to"
+	elog "mozilla-firefox-1.0.x. being unregistered with mozilla-launcher."
 
 	epause 15
 }
