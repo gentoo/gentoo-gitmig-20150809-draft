@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrytemplate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrytemplate/ChangeLog,v 1.5 2007/02/22 00:21:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrytemplate/ChangeLog,v 1.6 2007/06/25 07:35:26 hawking Exp $
+
+  25 Jun 2007; Ali Polatel <hawking@gentoo.org> cherrytemplate-1.0.0.ebuild:
+  use NEED_PYTHON, removed unneeded lines
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
