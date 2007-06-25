@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.109 2007/06/25 02:55:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.110 2007/06/25 04:11:39 kumba Exp $
+
+  25 Jun 2007; Joshua Kinard <kumba@gentoo.org> libtool-1.5.23b.ebuild:
+  Stable on mips, per #183102.
 
   25 Jun 2007; Christoph Mende <angelos@gentoo.org> libtool-1.5.23b.ebuild:
   Stable on amd64 wrt bug 183102
