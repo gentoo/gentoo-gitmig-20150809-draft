@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.46.ebuild,v 1.1 2007/06/12 11:17:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.46.ebuild,v 1.2 2007/06/25 10:34:19 peper Exp $
 
 inherit linux-mod
 
@@ -102,14 +102,17 @@ pkg_postinst() {
 	elog "See ${HOMEPAGE} for details."
 	echo
 
-	einfo "Attempting to automatically reinstall any Windows drivers"
-	einfo "you might already have."
-	echo
+	if [[ ${ROOT} == "/" ]]; then
 
-	local driver
-	for driver in $(ls /etc/ndiswrapper) ; do
-		einfo "Driver: ${driver}"
-		mv "/etc/ndiswrapper/${driver}" "${T}"
-		ndiswrapper -i "${T}/${driver}/${driver}.inf"
-	done
+		einfo "Attempting to automatically reinstall any Windows drivers"
+		einfo "you might already have."
+		echo
+
+		local driver
+		for driver in $(ls /etc/ndiswrapper) ; do
+			einfo "Driver: ${driver}"
+			mv "/etc/ndiswrapper/${driver}" "${T}"
+			ndiswrapper -i "${T}/${driver}/${driver}.inf"
+		done
+	fi
 }
