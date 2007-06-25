@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.3.ebuild,v 1.4 2007/06/25 09:14:40 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.3.ebuild,v 1.5 2007/06/25 10:25:57 hkbst Exp $
 
 inherit versionator eutils
 
@@ -44,6 +44,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	[ "${ROOT}" == "/" ] && pkg_config
+}
+
+pkg_config() {
 	einfo "Regenerating catalog..."
 	scm -e "(require 'new-catalog)"
 }
