@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.11.ebuild,v 1.3 2007/04/21 07:27:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.11.ebuild,v 1.4 2007/06/25 00:00:56 vapier Exp $
 
 inherit flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.schleef.org/${PN}/download/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0.3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="=dev-libs/glib-2*"
