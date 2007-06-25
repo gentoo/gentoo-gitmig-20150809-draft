@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.145 2007/06/07 15:40:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.146 2007/06/25 10:52:20 peper Exp $
+
+  25 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> kdevelop-3.3.5.ebuild,
+  kdevelop-3.3.6.ebuild, kdevelop-3.4.0-r2.ebuild, kdevelop-3.4.1.ebuild:
+  (QA) Fix ${ROOT} abuse. bug #167271.
 
   07 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kdevelop-3.4.1.ebuild:

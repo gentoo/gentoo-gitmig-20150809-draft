@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.7.2-r1.ebuild,v 1.7 2007/06/24 21:55:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.7.2-r1.ebuild,v 1.8 2007/06/25 10:58:21 peper Exp $
 
 inherit python eutils multilib
 
@@ -45,7 +45,7 @@ src_install() {
 	dodoc HISTORY LICENSE.GPL THANKS eric/README*
 	make_desktop_entry "eric3 --nosplash" \
 			eric3 \
-			"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/icons/default/eric.png" \
+			"/usr/$(get_libdir)/python${PYVER}/site-packages/icons/default/eric.png" \
 			"Development;IDE;Qt"
 }
 

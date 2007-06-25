@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.6 2007/04/28 18:02:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.7 2007/06/25 10:54:44 peper Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -123,8 +123,8 @@ src_compile() {
 		einfo "Configuring TVision ..."
 		CC=$(tc-getCC) CXX=$(tc-getCXX) \
 		./configure --prefix="/usr" \
-			--x-include="${ROOT}/usr/include" \
-			--x-lib="${ROOT}/usr/$(get_libdir)" \
+			--x-include="/usr/include" \
+			--x-lib="/usr/$(get_libdir)" \
 			--fhs \
 			--without-dynamic || die
 
