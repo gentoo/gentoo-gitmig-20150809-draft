@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# 2007/06/25 - Wulf C. Krueger <philantrop@gentoo.org>
+# Missing keyword for app-laptop/pbbuttonsd.
+kde-base/kdeutils pbbuttonsd
+
 =dev-java/ibm-jdk-bin-1.5* nsplugin 
 =dev-java/ibm-jre-bin-1.5* nsplugin
 net-wireless/wpa_supplicant madwifi
