@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.22 2007/06/24 19:11:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.23 2007/06/25 04:49:44 dirtyepic Exp $
+
+  25 Jun 2007; Ryan Hill <dirtyepic@gentoo.org>
+  -files/digest-urw-fonts-2.0-r1:
+  Remove stray digest.
 
   24 Jun 2007; Samuli Suominen <drac@gentoo.org> urw-fonts-2.1-r2.ebuild,
   urw-fonts-2.3.6.ebuild:
