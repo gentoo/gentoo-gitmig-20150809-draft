@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.38 2007/06/25 16:06:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.39 2007/06/25 19:43:15 lucass Exp $
+
+  25 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> -pygame-1.5.3.ebuild,
+  -pygame-1.5.5.ebuild, -pygame-1.5.6.ebuild, -pygame-1.6.ebuild:
+  Dropped old versions.
 
   25 Jun 2007; Joseph Jezak <josejx@gentoo.org> pygame-1.7.1.ebuild:
   Marked ppc stable for bug #175532.
