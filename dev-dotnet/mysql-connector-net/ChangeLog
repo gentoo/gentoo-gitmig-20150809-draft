@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mysql-connector-net
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/ChangeLog,v 1.8 2007/06/25 00:10:09 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/ChangeLog,v 1.9 2007/06/25 23:58:22 jurek Exp $
+
+  25 Jun 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/mysql-connector-net.pc.in, mysql-connector-net-1.0.4.ebuild,
+  mysql-connector-net-1.0.9.ebuild:
+  mysql-connector-net.pc is now being generated (fixing bug #103856)
 
 *mysql-connector-net-1.0.9 (25 Jun 2007)
 

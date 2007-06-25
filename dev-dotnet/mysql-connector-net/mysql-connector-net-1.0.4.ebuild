@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.7 2007/02/03 02:05:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.8 2007/06/25 23:58:22 jurek Exp $
 
 inherit eutils multilib mono
 
@@ -36,6 +36,11 @@ src_compile() {
 }
 
 src_install() {
+	dodir /usr/$(get_libdir)/pkgconfig
+	sed -e "s:@VERSION@:${PV}:" \
+		-e "s:@LIBDIR@:$(get_libdir):" \
+		${FILESDIR}/${PN}.pc.in > ${D}/usr/$(get_libdir)/pkgconfig/${PN}.pc
+
 	# Install dll into the GAC
 	ebegin "Installing dlls into the GAC"
 	gacutil -i bin/mono-1.0/release/MySql.Data.dll -root ${D}/usr/$(get_libdir) \
@@ -53,5 +58,5 @@ src_install() {
 pkg_postinst() {
 	elog "Adding the path for this connector in your mod_mono"
 	elog "configuration may be needed:"
-	elog "MonoPath \"/usr/lib/mono/1.0/mysql-connector-net/\""
+	elog "MonoPath \"/usr/$(get_libdir)/mono/mysql-connector-net/\""
 }
