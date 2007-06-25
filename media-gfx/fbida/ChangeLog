@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.38 2007/05/07 19:12:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.39 2007/06/25 18:41:30 armin76 Exp $
+
+  25 Jun 2007; Raúl Porcel <armin76@gentoo.org> fbida-2.05.ebuild:
+  alpha stable wrt #177324
 
   07 May 2007; Daniel Gryniewicz <dang@gentoo.org> fbida-2.05.ebuild:
   Marked stable on amd64 for bug #177324
