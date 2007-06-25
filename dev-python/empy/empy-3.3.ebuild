@@ -1,9 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.8 2006/07/12 15:18:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.9 2007/06/25 07:40:06 hawking Exp $
 
 inherit distutils
-
 
 DESCRIPTION="A powerful and robust templating system for Python"
 HOMEPAGE="http://www.alcyone.com/software/empy/"
@@ -35,4 +34,3 @@ src_install() {
 	dohtml doc/home/max/projects/empy/doc/em.html
 	dohtml doc/index.html
 }
-
