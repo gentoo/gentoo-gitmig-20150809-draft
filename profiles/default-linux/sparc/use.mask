@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.116 2007/06/22 18:53:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.117 2007/06/25 18:18:42 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -46,6 +46,7 @@ wifi
 wlan
 xfs
 xvmc
+zoran
 
 # Steve Dibb <beandog@gentoo.org> (21 Mar 2007)
 # media-video/mplayer use flag masking

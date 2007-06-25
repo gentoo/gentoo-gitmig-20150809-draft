@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.69 2007/05/21 17:54:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.70 2007/06/25 18:18:42 gustavoz Exp $
+
+  25 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
+  Masking zoran USE since it's completely untested
 
   21 May 2007; Ferris McCormick <fmccor@gentoo.org> sparc64/package.mask:
   Mask fxruby-1.2 for removal (Bug #165352).
