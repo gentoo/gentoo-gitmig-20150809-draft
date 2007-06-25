@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2891 2007/06/25 04:42:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2892 2007/06/25 12:20:45 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1144,7 +1144,7 @@ media-video/mplayer:rar - Enable Unique RAR File Library
 media-video/mplayer:real - Adds real video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock.  The alternative is software emulation of rtc
 media-video/mplayer:srt - Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
-media-video/mplayer:ssse3 - faster floating point optimization for SSSE3 capable chips
+media-video/mplayer:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/mplayer:tga - Enables Targa video output
 media-video/mplayer:tivo - Enables TiVo vstream client support
 media-video/mplayer:v4l2 - Enables video4linux2 support
