@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.7.ebuild,v 1.3 2007/05/28 22:23:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.7.ebuild,v 1.4 2007/06/25 06:04:58 philantrop Exp $
 
 inherit kde-dist eutils
 
@@ -29,7 +29,8 @@ DEPEND="${BOTH_DEPEND}
 	x11-proto/xproto
 	virtual/os-headers"
 
-PATCHES="${FILESDIR}/klaptopdaemon-3.5.7-libXss-linking.patch"
+PATCHES="${FILESDIR}/klaptopdaemon-3.5.7-libXss-linking.patch
+		${FILESDIR}/superkaramba-3.5.7-network_sensor.patch"
 EPATCH_EXCLUDE="klaptopdaemon-3.5-suspend2+xsession-errors.diff"
 
 src_unpack() {
