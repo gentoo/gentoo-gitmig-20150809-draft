@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.23b.ebuild,v 1.6 2007/06/25 07:36:07 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.23b.ebuild,v 1.7 2007/06/25 15:14:04 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
-SRC_URI="ftp://alpha.gnu.org/gnu/libtool/libtool-1.5.23b.tar.gz
+SRC_URI="ftp://alpha.gnu.org/gnu/libtool/${P}.tar.gz
 	mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
