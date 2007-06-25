@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r8.ebuild,v 1.3 2007/05/15 15:03:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r8.ebuild,v 1.4 2007/06/25 07:22:42 ulm Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
 DESCRIPTION="An incredibly powerful, extensible text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs"
 SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
+	mirror://gentoo/emacs-21-patches.tar.bz2
 	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
@@ -50,16 +51,16 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/emacs-21.3-xorg.patch"
-	epatch "${FILESDIR}/emacs-21.3-amd64.patch"
-	epatch "${FILESDIR}/emacs-21.3-hppa.patch"
-	epatch "${FILESDIR}/emacs-21.2-sh.patch"
-	epatch "${FILESDIR}/emacs-21.4-libungif-gif-gentoo.patch"
+	epatch "${WORKDIR}/emacs-21.3-xorg.patch"
+	epatch "${WORKDIR}/emacs-21.3-amd64.patch"
+	epatch "${WORKDIR}/emacs-21.3-hppa.patch"
+	epatch "${WORKDIR}/emacs-21.2-sh.patch"
+	epatch "${WORKDIR}/emacs-21.4-libungif-gif-gentoo.patch"
 
-	use ppc64 && epatch "${FILESDIR}/emacs-21.3-ppc64.patch"
+	use ppc64 && epatch "${WORKDIR}/emacs-21.3-ppc64.patch"
 
-	epatch "${FILESDIR}/emacs-21.4-autosave-tmp.patch"
-	epatch "${FILESDIR}/emacs-21.4-blessmail-build.patch"
+	epatch "${WORKDIR}/emacs-21.4-autosave-tmp.patch"
+	epatch "${WORKDIR}/emacs-21.4-blessmail-build.patch"
 
 	# This will need to be updated for X-Compilation
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
