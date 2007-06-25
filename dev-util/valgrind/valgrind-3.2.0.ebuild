@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.0.ebuild,v 1.5 2006/08/25 21:13:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.0.ebuild,v 1.6 2007/06/25 21:59:52 mr_bones_ Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -44,7 +44,7 @@ src_compile() {
 	#                       while compiling insn_sse.c in none/tests/x86
 	# -fpie                 valgrind seemingly hangs when built with pie on
 	#                       amd64 (bug #102157)
-	# -fstack-protector     more undefined references to __guard and __stack_smash_handler 
+	# -fstack-protector     more undefined references to __guard and __stack_smash_handler
 	#                       because valgrind doesn't link to glibc (bug #114347)
 	# -ggdb3                segmentation fault on startup
 	filter-flags -fomit-frame-pointer
@@ -73,4 +73,3 @@ src_install() {
 	make DESTDIR="${D}" install || die "Install failed!"
 	dodoc ACKNOWLEDGEMENTS AUTHORS FAQ.txt NEWS README*
 }
-
