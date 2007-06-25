@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.15 2007/06/15 20:16:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.16 2007/06/25 17:25:57 opfer Exp $
+
+  25 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  ruby-gd-0.7.4-r1.ebuild:
+  stable x86, bug 181688
 
   15 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> ruby-gd-0.7.4-r1.ebuild:
   Marked stable on amd64 for bug #181688

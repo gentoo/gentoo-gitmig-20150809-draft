@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4-r1.ebuild,v 1.3 2007/06/15 20:16:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4-r1.ebuild,v 1.4 2007/06/25 17:25:57 opfer Exp $
 
 inherit ruby
 USE_RUBY="ruby16 ruby18 ruby19"
@@ -15,7 +15,7 @@ PATCHES="${FILESDIR}/ruby-gd-0.7.4-fix-interlace.patch"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86"
 IUSE="jpeg truetype X"
 
 DEPEND="virtual/ruby
