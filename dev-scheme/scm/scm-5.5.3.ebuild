@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.3.ebuild,v 1.3 2007/05/28 11:46:22 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.3.ebuild,v 1.4 2007/06/25 09:14:40 hkbst Exp $
 
 inherit versionator eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 	#parallel make fails sometimes
 	emake -j1 scmlit
 	einfo "Building"
-	echo "srcdir=${ROOT}/usr/share/scm/" > srcdir.mk
+	echo "srcdir=/usr/share/scm/" > srcdir.mk
 	./build --compiler-options="${CFLAGS}" --linker-options="${LDFLAGS}" -F macro
 	emake
 }
