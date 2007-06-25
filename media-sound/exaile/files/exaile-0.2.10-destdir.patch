@@ -1,0 +1,9 @@
+diff -ur exaile_0.2.10.orig/Makefile exaile_0.2.10/Makefile
+--- exaile_0.2.10.orig/Makefile	2007-06-21 06:17:04.000000000 +0300
++++ exaile_0.2.10/Makefile	2007-06-25 09:07:36.000000000 +0300
+@@ -1,4 +1,4 @@
+-PREFIX ?= /usr/local
++PREFIX = /usr
+ LIBDIR ?= $(PREFIX)/lib
+ FIREFOX ?= /usr/lib/firefox
+ 

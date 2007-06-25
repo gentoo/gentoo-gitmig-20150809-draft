@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r2.ebuild,v 1.4 2007/06/08 16:18:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10.ebuild,v 1.1 2007/06/25 06:24:34 drac Exp $
 
-inherit eutils fdo-mime python toolchain-funcs
+inherit eutils fdo-mime python
 
 GVER="0.10"
 
@@ -22,7 +22,6 @@ RDEPEND=">=dev-python/pygtk-2.8.6
 	>=dev-python/pysqlite-2
 	>=media-libs/mutagen-1.6
 	dev-python/elementtree
-	>=gnome-base/librsvg-2
 	dev-python/dbus-python
 	libnotify? ( dev-python/notify-python )
 	libsexy? ( dev-python/sexy-python )
@@ -60,29 +59,30 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.2.x-strip.patch
-	epatch "${FILESDIR}"/${P}-amazon.patch
-	python_version
-	sed -i -e "s:hon2.4:hon${PYVER}:" mmkeys/Makefile
+	epatch "${FILESDIR}"/${P}-destdir.patch
 }
 
+
 src_compile() {
-	emake -j1 CC="$(tc-getCC)" || die "emake failed."
+	emake mmkeys.so || die "emake mmkeys.so failed."
+	emake translations || die "emake translations failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc testing TODO
+	dodoc TODO changelog
 	exeinto /usr/share/${PN}
-	doexe scripts/*
+	doexe -r scripts/*
 }
 
 pkg_postinst() {
+	python_mod_optimize /usr/share/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
 
 pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
