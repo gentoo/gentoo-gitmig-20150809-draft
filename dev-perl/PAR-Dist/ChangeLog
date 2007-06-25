@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.22 2007/06/21 16:32:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.23 2007/06/25 10:41:04 mcummings Exp $
+
+*PAR-Dist-0.23 (25 Jun 2007)
+
+  25 Jun 2007; Michael Cummings <mcummings@gentoo.org>
+  +PAR-Dist-0.23.ebuild:
+  Version bump
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org> PAR-Dist-0.22.ebuild:
   Marking sparc stable
