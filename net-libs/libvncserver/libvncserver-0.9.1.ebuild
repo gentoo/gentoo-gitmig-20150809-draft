@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.1.ebuild,v 1.3 2007/06/25 03:49:26 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.1.ebuild,v 1.4 2007/06/25 14:11:10 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="library for creating vnc servers"
 HOMEPAGE="http://libvncserver.sourceforge.net/"
@@ -29,6 +29,8 @@ src_unpack() {
 	sed -i \
 		-e '/^AM_CFLAGS/s: -g : :' \
 		*/Makefile.in || die
+
+	elibtoolize
 }
 
 src_compile() {
