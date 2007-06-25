@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.57 2007/06/21 06:06:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.58 2007/06/25 04:29:54 kumba Exp $
+
+  25 Jun 2007; Joshua Kinard <kumba@gentoo.org> id3lib-3.8.3-r5.ebuild:
+  Stable on mips, per #130992.
 
   21 Jun 2007; Samuli Suominen <drac@gentoo.org> id3lib-3.8.3-r5.ebuild:
   Stable on arm wrt bug 130922.
