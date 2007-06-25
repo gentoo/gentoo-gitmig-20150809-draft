@@ -3,11 +3,11 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>latexer@gentoo.org</email>
-  <name>Peter Johanson</name>
+	<email>latexer@gentoo.org</email>
+	<name>Peter Johanson</name>
 </maintainer>
 <maintainer>
-  <email>twp@gentoo.org</email>
-  <name>Tom Payne</name>
+	<email>twp@gentoo.org</email>
+	<name>Tom Payne</name>
 </maintainer>
 </pkgmetadata>
