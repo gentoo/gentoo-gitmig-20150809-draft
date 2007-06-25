@@ -1,0 +1,7 @@
+# ChangeLog for sys-fs/zfs-fuse
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.1 2007/06/25 15:24:17 trapni Exp $
+
+  25 Jun 2007; <trapni@gentoo.org> ChangeLog:
+  initial import. Thanks to Alex Elsayed for the ebuild. Closes #177010
+

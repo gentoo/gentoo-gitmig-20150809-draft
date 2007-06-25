@@ -1,0 +1,11 @@
+--- a/src/cmd/ztest/ztest.c	2007-01-08 17:17:51.000000000 +0000
++++ b/src/cmd/ztest/ztest.c	2007-01-09 10:39:43.000000000 +0000
+@@ -2758,7 +2758,7 @@ ztest_verify_blocks(char *pool)
+ 
+ 	/* LINTED */
+ 	/* zfs-fuse: ztest is never installed, so zdb should be in ../zdb/ */
+-	(void) sprintf(zdb, "../zdb/zdb -bc%s%s -U -O %s %s",
++	(void) sprintf(zdb, "/usr/sbin/zdb -bc%s%s -U -O %s %s",
+ 	    zopt_verbose >= 3 ? "s" : "",
+ 	    zopt_verbose >= 4 ? "v" : "",
+ 	    ztest_random(2) == 0 ? "pre" : "post", pool);
