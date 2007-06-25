@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.498 2007/06/25 14:20:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.499 2007/06/25 18:34:40 ulm Exp $
+
+  25 Jun 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Add local use flags bbdb and planner for app-emacs/remember.
 
   25 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Fix typo in mask.

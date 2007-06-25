@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2892 2007/06/25 12:20:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2893 2007/06/25 18:34:40 ulm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -111,6 +111,8 @@ app-emacs/auctex:preview-latex - Use bundled preview-latex
 app-emacs/chess:festival - Enable festival support
 app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emacs/easypg:gnus - Include support for the Gnus newsreader
+app-emacs/remember:bbdb - Include support for app-emacs/bbdb
+app-emacs/remember:planner - Include support for app-emacs/planner
 app-emacs/vm:bbdb - Include support for app-emacs/bbdb
 app-emacs/wanderlust:bbdb - Include support for app-emacs/bbdb
 app-emulation/bochs:debugger - Enable the bochs debugger
