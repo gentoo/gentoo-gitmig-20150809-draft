@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.24 2007/06/15 14:55:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.25 2007/06/25 03:49:26 lavajoe Exp $
+
+  25 Jun 2007; Joe Peterson <lavajoe@gentoo.org> libvncserver-0.9.1.ebuild:
+  Add ~x86-fbsd keyword
 
   15 Jun 2007; Christoph Mende <angelos@gentoo.org> libvncserver-0.9.ebuild:
   Stable on amd64 wrt bug 180174
