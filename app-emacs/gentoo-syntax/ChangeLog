@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.3 2007/06/25 15:10:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.4 2007/06/25 17:07:53 opfer Exp $
+
+  25 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  gentoo-syntax-1.6-r1.ebuild:
+  install ChangeLog file with a different name to avoid collisions with
+  app-xemacs/gentoo-syntax (not yet in the tree)
 
   25 Jun 2007; Ulrich Mueller <ulm@gentoo.org> -gentoo-syntax-1.6.ebuild,
   gentoo-syntax-1.6-r1.ebuild:
