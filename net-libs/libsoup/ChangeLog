@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.124 2007/06/02 02:53:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.125 2007/06/25 11:24:53 leio Exp $
+
+  25 Jun 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/libsoup-2.2.99-fix-tests.patch, -libsoup-2.2.98.ebuild,
+  -libsoup-2.2.99.ebuild:
+  Remove old
 
   02 Jun 2007; Brent Baude <ranger@gentoo.org> libsoup-2.2.100.ebuild:
   Marking libsoup-2.2.100 ppc stable for bug #171107
