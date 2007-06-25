@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.16 2007/06/07 19:26:08 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.17 2007/06/25 17:52:05 armin76 Exp $
+
+  25 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  cblas-reference-20030223-r3.ebuild:
+  Add ~alpha wrt #159002
 
   07 Jun 2007; Joe Peterson <lavajoe@gentoo.org>
   cblas-reference-20030223-r3.ebuild:
