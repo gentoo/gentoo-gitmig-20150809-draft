@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.4_p1.ebuild,v 1.1 2007/05/02 04:27:24 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.4_p1.ebuild,v 1.2 2007/06/25 22:27:57 marineam Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 	# xen tries to be smart and filter out CFLAGs not supported by gcc.
 	# It doesn't handle no* flags though, but flag-o-matic's test-flag-CC does.
-	for FLAG in -nopie -fno-stack-protector -fno-stack-protector-all; do
+	for FLAG in -fno-pie -fno-stack-protector -fno-stack-protector-all; do
 		test-flag-CC ${FLAG} && HARDFLAGS="${HARDFLAGS} ${FLAG}"
 	done
 	sed  -i "s/^CFLAGS-y.*__XEN__.*$/& ${HARDFLAGS}/" \
