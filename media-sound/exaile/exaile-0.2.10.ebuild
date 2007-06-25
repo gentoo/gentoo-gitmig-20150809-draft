@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10.ebuild,v 1.2 2007/06/25 06:47:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10.ebuild,v 1.3 2007/06/25 07:02:41 drac Exp $
 
 inherit eutils fdo-mime python
 
@@ -74,7 +74,8 @@ src_install() {
 
 	insinto /usr/share/${PN}
 	doins -r scripts
-	fperms 755 /usr/share/${PN}/scripts
+	fperms 755 /usr/share/${PN}/scripts/{exailecover,*.py,*.pl}
+	fperms 755 /usr/share/${PN}/scripts/exaile_system/*.py
 }
 
 pkg_postinst() {
