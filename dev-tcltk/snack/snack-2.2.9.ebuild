@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.7 2006/09/14 23:38:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.8 2007/06/25 10:40:53 peper Exp $
 
 inherit eutils multilib
 
@@ -28,8 +28,8 @@ src_compile() {
 	use threads && myconf="${myconf} --enable-threads"
 
 	if use vorbis ; then
-		myconf="${myconf} --with-ogg-include=${ROOT}/usr/include"
-		myconf="${myconf} --with-ogg-lib=${ROOT}/usr/$(get_libdir)"
+		myconf="${myconf} --with-ogg-include=/usr/include"
+		myconf="${myconf} --with-ogg-lib=/usr/$(get_libdir)"
 	fi
 
 	cd ${S}/unix
