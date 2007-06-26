@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.3-r1.ebuild,v 1.4 2007/04/21 20:54:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.3-r1.ebuild,v 1.5 2007/06/26 02:50:06 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,7 +40,7 @@ src_unpack() {
 	# Do not try to read the partition table on LVM2
 	epatch ${FILESDIR}/${P}-lvm2-not-partionable.patch
 
-	# this patch is needed when booting PXE and the device you're using 
+	# this patch is needed when booting PXE and the device you're using
 	# emulates vga console via serial console.
 	# IE..  B.B.o.o.o.o.t.t.i.i.n.n.g.g....l.l.i.i.n.n.u.u.x.x and stair stepping.
 	use pxeserial && epatch ${FILESDIR}/${P}-novga.patch

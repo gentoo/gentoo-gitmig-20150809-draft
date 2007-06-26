@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.6-r1.ebuild,v 1.1 2005/06/13 19:26:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.6-r1.ebuild,v 1.2 2007/06/26 02:49:41 mr_bones_ Exp $
 
 inherit eutils
 
@@ -88,7 +88,7 @@ src_install() {
 	dodir /usr/lib/arcboot
 	cp ext2load/ext2load ${D}/usr/lib/arcboot/arcboot.${SGITYPE_L}
 
-	# Technically, we don't need tip[2|3]2 (attaches initrd to kernel), as 
+	# Technically, we don't need tip[2|3]2 (attaches initrd to kernel), as
 	# MIPS kernels support embedding initrd's into kernels at build time,
 	# But maybe this will be useful one day.  Until then, we leave it out.
 	dodir /usr/lib/tip22
@@ -101,7 +101,7 @@ src_install() {
 
 	# Calling scripts for arcboot/tip22
 	# We also exclude these, since the logic in the debian script may not
-	# work correctly with a gentoo installation.  All the information a 
+	# work correctly with a gentoo installation.  All the information a
 	# user needs is provided in the example arcboot.conf, and in pkg_postinst().
 ##	dosbin scripts/arcboot
 	dosbin tip22/t${SGITYPE_L}
@@ -111,7 +111,7 @@ src_install() {
 	cp etc/arcboot.conf ${D}/etc/arcboot.conf.example
 
 	# Man pages
-	# The arcboot manpage is more for the excluded arcboot script above, but 
+	# The arcboot manpage is more for the excluded arcboot script above, but
 	# also has info on setting the PROM option properly as well as arcboot.conf
 	# examples.
 	doman debian/arcboot.8

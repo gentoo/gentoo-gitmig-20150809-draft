@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.3 2005/07/10 00:58:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.4 2007/06/26 02:49:41 mr_bones_ Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_unpack() {
 	# Set the version
 	echo "#define __ARCSBOOT_VERSION__ \"${PV}\"" >> common/version.h
 
-	# Last time we tested, the O2's PROM did not like an ECOFF formatted 
+	# Last time we tested, the O2's PROM did not like an ECOFF formatted
 	# arcboot binary.
 	epatch ${FILESDIR}/${P}-gentoo.patch
 }
@@ -72,7 +72,7 @@ src_install() {
 	dodir /usr/lib/arcboot
 	cp ext2load/ext2load ${D}/usr/lib/arcboot/arcboot.${SGI_TARGET}
 
-	# Technically, we don't need tip22 (attaches initrd to kernel), as 
+	# Technically, we don't need tip22 (attaches initrd to kernel), as
 	# MIPS kernels support embedding initrd's into kernels at build time,
 	# But maybe this will be useful one day.  Until then, we leave it out.
 	dodir /usr/lib/tip22
@@ -85,7 +85,7 @@ src_install() {
 
 	# Calling scripts for arcboot/tip22
 	# We also exclude these, since the logic in the debian script may not
-	# work correctly with a gentoo installation.  All the information a 
+	# work correctly with a gentoo installation.  All the information a
 	# user needs is provided in the example arcboot.conf, and in pkg_postinst().
 ##	dosbin scripts/arcboot
 	dosbin tip22/tip22
@@ -95,7 +95,7 @@ src_install() {
 	cp etc/arcboot.conf ${D}/etc/arcboot.conf.example
 
 	# Man pages
-	# The arcboot manpage is more for the excluded arcboot script above, but 
+	# The arcboot manpage is more for the excluded arcboot script above, but
 	# also has info on setting the PROM option properly as well as arcboot.conf
 	# examples.
 	doman debian/arcboot.8
