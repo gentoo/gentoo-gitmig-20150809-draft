@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.14.2.ebuild,v 1.10 2006/10/20 20:48:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.14.2.ebuild,v 1.11 2007/06/26 03:00:33 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -35,7 +35,7 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 src_unpack() {
 	gnome2_src_unpack
 
-	# Use login shell by default (#12900) 
+	# Use login shell by default (#12900)
 	epatch ${FILESDIR}/${PN}-2-default_shell.patch
 
 	# terminal enhancement, inserts a space after a DND URL
